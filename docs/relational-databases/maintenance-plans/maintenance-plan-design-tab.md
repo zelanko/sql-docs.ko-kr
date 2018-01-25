@@ -17,20 +17,20 @@ f1_keywords:
 - sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e2c7e920b4f0a4ca5933efafce3dc09b2b5924b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e425cd4e4901b396ae08cc9586381120ab225745
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-design-tab"></a>유지 관리 계획(디자인 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **유지 관리 계획(디자인 탭)**을 사용하여 유지 관리 계획 및 해당 하위 계획의 속성을 지정할 수 있습니다. 도구 상자에서 계획 디자이너로 태스크를 끌어다 놓은 다음 태스크 그룹을 마우스 오른쪽 단추로 클릭하여 분기 실행 경로를 만듭니다. 유지 관리 계획은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에이전트 작업으로 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지로 저장됩니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **하위 계획 추가**  
  구성할 수 있는 하위 계획을 추가합니다.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
  **디자이너 화면**  
  유지 관리 계획을 디자인 및 유지 관리합니다. 디자이너 화면을 사용하여 계획에 유지 관리 태스크를 추가하거나 제거하고, 작업 간의 선행 링크를 지정하며 작업 분기와 병렬 처리를 나타낼 수 있습니다.  
   
- 두 태스크 간의 선행 링크는 작업 간의 관계를 설정합니다. 두 번째 태스크( *종속 태스크*)는 첫 번째 태스크( *선행 태스크*)의 실행 결과가 지정한 조건과 일치하는 경우에만 실행됩니다. 대개 지정되는 실행 결과는 **성공**, **실패**또는 **완료**입니다. 유지 관리 계획의 디자이너 화면은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너 화면을 기반으로 합니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을 참조하세요.  
+ 두 태스크 간의 선행 링크는 작업 간의 관계를 설정합니다. 두 번째 태스크( *종속 태스크*)는 첫 번째 태스크( *선행 태스크*)의 실행 결과가 지정한 조건과 일치하는 경우에만 실행됩니다. 대개 지정되는 실행 결과는 **성공**, **실패**또는 **완료**입니다. 유지 관리 계획의 디자이너 화면은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너 화면을 기반으로 합니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을(를) 참조하세요.  
   
  예를 들어 이전 데이터베이스 무결성 검사 작업이 성공적으로 완료된 경우에만 인덱스 조각 모음 태스크가 실행되도록 지정할 수 있습니다. 태스크 선행 링크 기능을 사용하여 계획에서 오류 조건이나 실패 조건을 처리할 수도 있습니다. 예를 들어 데이터베이스 무결성 검사 태스크가 실패한 경우 운영자에게 알림 작업을 통해 사용자나 운영자에게 실패를 알릴 수 있습니다.  
   

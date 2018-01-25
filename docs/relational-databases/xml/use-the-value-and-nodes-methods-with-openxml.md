@@ -17,15 +17,15 @@ helpviewer_keywords:
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82e2e1da18b277dc23ab249505e27907ab8d39e0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 56771eba840963660eb0160e6c5e5c45e98980b4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML에서 value() 및 nodes() 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] **SELECT** 절에서 **xml** 데이터 형식에 여러 **value()** 메서드를 사용하여 추출된 값의 행 집합을 생성할 수 있습니다. **nodes()** 메서드는 추가 쿼리에 사용할 수 있는 선택된 각 노드에 대해 내부 참조를 생성합니다. **nodes()** 메서드와 **value()** 메서드를 조합하면 일부 행이 있고 해당 생성 시 사용된 경로 식이 복잡한 경우 행 집합을 더욱 효율적으로 생성할 수 있습니다.  

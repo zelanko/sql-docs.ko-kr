@@ -16,15 +16,15 @@ helpviewer_keywords:
 - 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11fb2808ac4f99f9778a7ab12c81e91a379d4ef7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 626e2db49945df2262db203dde46f78d5b5bde81
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer, Resource Pool Stats 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQLServer:Resource Pool Stats 개체는 리소스 관리자 리소스 풀 통계에 대한 정보를 보고하는 성능 카운터를 포함합니다.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 |**Used memory (KB)**|리소스 풀에 사용되는 최대 메모리 양((KB)입니다.|  
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Workload Group Stats 개체](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  

@@ -18,13 +18,13 @@ ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baa79600bb9e617b5275c623e610688209d90c56
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35155a319dfe1e1565a7e6b1c0ac435b952bd7de
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-existing-items-to-a-project"></a>프로젝트에 기존 항목 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 프로젝트에 새 항목을 추가하여 응용 프로그램 기능을 확장할 수 있습니다. 기존 항목은 쿼리나 기타 파일이 될 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스크립트 프로젝트 및 Analysis Services 스크립트 프로젝트의 두 가지 프로젝트 형식이 있습니다. 프로젝트 형식에 따라 프로젝트에 추가할 수 있는 쿼리 파일이 결정됩니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql_md.md)] 스크립트 프로젝트에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 쿼리(확장명이 .sql인 파일)를 추가할 수 있지만 Analysis Services 스크립트 프로젝트에는 추가할 수 없습니다. 추가 파일 확장명을 프로젝트 형식에 연결하려면 [방법: 파일 확장명을 코드 편집기에 연결](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)을 참조하세요.  

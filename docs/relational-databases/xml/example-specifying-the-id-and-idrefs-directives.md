@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 889780ede86e06d81145609b30949e33d602664a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 239642c8f742192db94c6131411bf1bfa047fbcd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>예제: ID 및 IDREFS 지시어 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 요소 특성을 **ID** 유형의 특성으로 지정한 다음 **IDREFS** 특성을 사용하여 이 특성을 참조할 수 있습니다. 이러한 방식은 문서 간 연결을 설정하며 관계형 데이터베이스의 기본 키 및 외래 키 관계와 비슷합니다.  

@@ -23,13 +23,13 @@ ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4651d6e75744ce33f7e8eb1062de0f2b8daf396
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 565760167336f38c1bbb2f1eaee1734801eb90c9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>이전 버전에서 데이터베이스 다이어그램 업그레이드(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스를 기반으로 만든 데이터베이스 다이어그램을 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]의 데이터베이스 다이어그램으로 설정하면 자동으로 업그레이드됩니다. 다이어그램을 설정하는 자세한 단계는 [데이터베이스 다이어그램 디자이너 설정(Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)을 참조하세요.  

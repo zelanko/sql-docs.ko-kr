@@ -30,15 +30,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caa7d7966fee784794884d7e840f0802c4a7774d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a687248919676d1193682a983f8ba71b1827cc3c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="programmatically-monitor-replication"></a>프로그래밍 방식으로 복제 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 모니터는 복제 토폴로지를 모니터링하는 데 사용할 수 있는 그래픽 도구입니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 복제 저장 프로시저 또는 RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 동일한 모니터링 데이터에 액세스할 수 있습니다. 이러한 개체를 사용하면 다음 태스크를 프로그래밍할 수 있습니다.  
@@ -271,7 +271,7 @@ ms.lasthandoff: 11/17/2017
   
     -   *metricID* - 다음 테이블에서 모니터링 임계값 메트릭을 나타내는 <xref:System.Int32> 값입니다.  
   
-        |값|설명|  
+        |값|Description|  
         |-----------|-----------------|  
         |@shouldalert|**expiration** - 트랜잭션 게시에 대한 구독의 만료가 임박했는지 모니터링합니다.|  
         |2|**latency** - 트랜잭션 게시에 대한 구독의 성능을 모니터링합니다.|  

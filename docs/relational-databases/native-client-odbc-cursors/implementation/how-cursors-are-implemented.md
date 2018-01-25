@@ -18,15 +18,15 @@ helpviewer_keywords:
 - cursors [ODBC], about ODBC cursors
 ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 235d2afc64ef3e7b58340c7e33760eba187325e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 74e0e6396db2bd5a460c69ba5bec8b1caa828698
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="how-cursors-are-implemented"></a>커서 구현 방법
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,6 +57,6 @@ ms.lasthandoff: 01/08/2018
 -   [ODBC 커서 라이브러리](../../../relational-databases/native-client-odbc-cursors/implementation/odbc-cursor-library.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [커서 & #40; ODBC & #41;를 사용 하 여](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [커서 &#40; ODBC &#41;를 사용 하 여](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

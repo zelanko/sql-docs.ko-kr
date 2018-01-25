@@ -19,15 +19,15 @@ helpviewer_keywords:
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e1d8a0a29b6d92aeab9c1c6e4afa01a2665add6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ffde4891d1481b628012a64d58b73f904e131f7e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML에 메타 속성 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] XML 문서의 메타 속성 특성은 요소, 특성, 그 밖의 모든 DOM 노드와 같은 XML 항목의 속성을 설명하는 특성입니다. 이러한 특성은 물리적으로 XML 문서 텍스트에 존재하지 않습니다. 하지만 OPENXML은 모든 XML 항목에 대해 이러한 메타 속성을 제공합니다. 이러한 메타 속성을 사용하면 로컬 위치 및 네임스페이스 정보와 같은 XML 노드 정보를 추출할 수 있습니다. 이 정보는 텍스트에 명시적으로 표현된 것보다 자세한 정보를 제공합니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  XPath 탐색에서는 이러한 메타 속성을 참조할 수 없습니다.  
   
-|메타 속성 특성|설명|  
+|메타 속성 특성|Description|  
 |----------------------------|-----------------|  
 |**@mp:id**|DOM 노드에 대해 시스템에서 생성된 문서 차원의 식별자를 제공합니다. 문서가 다시 구문 분석되지 않는 한 이 ID는 동일한 XML 노드를 참조합니다.<br /><br /> XML ID가 **0** 이면 해당 요소가 루트 요소임을 나타냅니다. 해당 부모 XML ID는 NULL입니다.|  
 |**@mp:localname**|노드 이름의 로컬 부분을 저장합니다. 이 특성은 접두사 및 네임스페이스 URI와 함께 사용되어 요소 또는 특성 노드 이름을 지정합니다.|  

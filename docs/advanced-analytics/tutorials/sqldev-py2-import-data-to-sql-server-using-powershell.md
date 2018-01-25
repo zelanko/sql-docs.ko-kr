@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: d39e391e494e37c63731431579e82900ef3dbeeb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 80b40209f7287a7710a9dcd8022a3dd203aa8305
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>2 단계: PowerShell을 사용 하 여 SQL Server로 데이터 가져오기
 
@@ -56,7 +56,7 @@ PowerShell 스크립트를 다운로드 한 파일 중에서 나타나야 `RunSQ
     - 이름 또는 주소는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] python 컴퓨터 학습 서비스 설치 되어 있는 인스턴스.
     - 인스턴스의 계정에 대한 사용자 이름 및 암호. 사용 하는 계정에는 데이터베이스를 만들 테이블 및 저장된 프로시저를 만들고 로드 테이블에 데이터를 대량으로 수가 있어야 합니다. 
     - 사용자 이름 및 암호를 제공 하지 않으면 경우에 Windows id는 SQL Server에 로그인 하는 데 사용 되 고 암호를 입력 하 승격 됩니다.
-    - 방금 다운로드한 샘플 데이터 파일의 경로 및 파일 이름. 예를 들어 IPv4 주소를 사용하는 경우 `C:\temp\pysql\nyctaxi1pct.csv`
+    - 방금 다운로드한 샘플 데이터 파일의 경로 및 파일 이름. 예를 들면 다음과 같습니다. `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > 데이터를 성공적으로 로드 하려면 라이브러리 xmlrw.dll bcp.exe와 같은 폴더에 있어야 합니다.

@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords: Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e023115d959322e0e870d6ef43c7ffcdcc82f21f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bfb3322c176c068f37d2bd52a7f5721244d1d324
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **아티클 속성** 대화 상자는 새 게시 마법사 및 **게시 속성** 대화 상자에서 사용할 수 있습니다. 이 대화 상자를 사용하여 모든 아티클 유형에 대한 속성을 보고 설정할 수 있습니다. 게시가 생성된 경우에만 설정할 수 있거나 게시에 활성 구독이 없는 경우에만 설정할 수 있는 속성이 있습니다. 설정할 수 없는 속성은 읽기 전용으로 표시됩니다.  
@@ -176,7 +176,7 @@ ms.lasthandoff: 11/17/2017
   
 -   일부 형식의 경우 두 개 이상의 매핑을 선택할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 응용 프로그램에 다른 매핑이 필요 하지 않는 한 기본 매핑을 사용할 것을 권장합니다. 자세한 내용은 [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [초기 스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

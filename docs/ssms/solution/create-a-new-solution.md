@@ -16,13 +16,13 @@ ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2039725f0db2279c6385a64c68ed661366b4a80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 73b2175e4ed0e47c78f957f19123a5b33354d1a3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-new-solution"></a>새 솔루션 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 프로젝트를 만들 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]는 해당 프로젝트를 포함하는 솔루션을 만듭니다. 공간 인덱스는 한 번에 하나씩만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 프로젝트 내에서 폴더를 만드는 것이 허용되지 않습니다. 작업을 구성하려면 여러 프로젝트를 만듭니다.  

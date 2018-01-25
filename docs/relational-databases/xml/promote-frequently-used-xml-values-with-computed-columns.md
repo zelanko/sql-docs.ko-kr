@@ -16,15 +16,15 @@ helpviewer_keywords:
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0280a49bf91f078355dedab297ffd75102f5faa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7374751ae2fd74f93ed0744853eb472689538347
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>계산 열을 사용하여 자주 사용되는 XML 값 승격
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 쿼리가 주로 적은 수의 요소 및 특성 값으로 작성된 경우 이러한 수량을 관계형 열로 승격시킬 수 있습니다. 이 방식은 전체 XML 인스턴스를 검색하는 동안 XML 데이터의 일부에 대해서 쿼리가 실행된 경우에 유용합니다. XML 열에 XML 인덱스를 만들 필요는 없습니다. 대신 승격된 열을 인덱싱할 수 있습니다. 승격된 열을 사용하도록 쿼리를 작성해야 합니다. 즉, 쿼리 최적화 프로그램은 XML 열에 있는 쿼리를 승격된 열로 다시 대상화하지 않습니다.  
@@ -161,7 +161,7 @@ end
 ```  
   
 ### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>예: 저자의 이름이 같은 XML 인스턴스 찾기  
- XML 열에 쿼리를 만들 수 있습니다. 또는 속성 테이블에서 "David"라는 이름을 검색하고 기본 테이블에서 역 조인을 수행하여 XML 인스턴스를 반환할 수 있습니다. 예를 들어  
+ XML 열에 쿼리를 만들 수 있습니다. 또는 속성 테이블에서 "David"라는 이름을 검색하고 기본 테이블에서 역 조인을 수행하여 XML 인스턴스를 반환할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SELECT xCol   

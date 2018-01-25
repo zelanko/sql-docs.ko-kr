@@ -17,22 +17,22 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6f2cbe04cf18cb3b649993c1349645900a56aa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba5139f4e42806e2cee949a626acf75a9e3de181
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 매개 변수가 있는 필터로 병합 게시에 대한 스냅숏을 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [권장 사항](#Recommendations)  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 11/17/2017
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   매개 변수가 있는 필터를 사용하여 병합 게시에 대한 스냅숏을 만들 때는 게시된 데이터 및 구독에 대한 구독자 메타데이터를 모두 포함하는 표준(스키마) 스냅숏을 먼저 생성해야 합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요. 스키마 스냅숏을 만든 다음에는 게시된 데이터의 구독자별 파티션을 포함하는 스냅숏을 만들 수 있습니다.  
+-   매개 변수가 있는 필터를 사용하여 병합 게시에 대한 스냅숏을 만들 때는 게시된 데이터 및 구독에 대한 구독자 메타데이터를 모두 포함하는 표준(스키마) 스냅숏을 먼저 생성해야 합니다. 자세한 내용은 [초기 스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요. 스키마 스냅숏을 만든 다음에는 게시된 데이터의 구독자별 파티션을 포함하는 스냅숏을 만들 수 있습니다.  
   
 -   게시에 있는 여러 아티클에 대한 필터링 시 각 구독에 고유하면서도 겹치지 않는 파티션이 생성될 경우 메타데이터는 병합 에이전트가 실행될 때마다 정리됩니다. 따라서 분할된 스냅숏은 더 빨리 만료됩니다. 이 옵션을 사용할 경우 구독자가 스냅숏 생성 및 배달을 시작하도록 허용하는 것을 고려해야 합니다. 필터링 옵션에 대한 자세한 내용은 [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅숏](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)에서 "'partition options' 설정" 섹션을 참조하세요.  
   
@@ -139,9 +139,9 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
-3.  [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 게시에 아티클을 추가합니다. 이 저장 프로시저는 게시의 각 아티클에 대해 한 번씩만 실행해야 합니다. 매개 변수가 있는 필터를 사용할 경우 **@subset_filterclause** 매개 변수를 사용하여 하나 이상의 아티클에 대해 매개 변수가 있는 행 필터를 지정해야 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
+3.  [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 게시에 아티클을 추가합니다. 이 저장 프로시저는 게시의 각 아티클에 대해 한 번씩만 실행해야 합니다. 매개 변수가 있는 필터를 사용할 경우 **@subset_filterclause** 매개 변수를 사용하여 하나 이상의 아티클에 대해 매개 변수가 있는 행 필터를 지정해야 합니다. 자세한 내용은 [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
-4.  다른 아티클이 매개 변수가 있는 행 필터에 따라 필터링되면 [sp_addmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)를 실행하여 아티클 간의 조인 또는 논리 레코드 관계를 정의합니다. 이 저장 프로시저는 정의되는 각 관계에 대해 한 번씩만 실행해야 합니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
+4.  다른 아티클이 매개 변수가 있는 행 필터에 따라 필터링되면 [sp_addmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)를 실행하여 아티클 간의 조인 또는 논리 레코드 관계를 정의합니다. 이 저장 프로시저는 정의되는 각 관계에 대해 한 번씩만 실행해야 합니다. 자세한 내용은 [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
 5.  게시 데이터베이스의 게시자에서 1단계의 **@publication** 값을 지정하여 [sp_helpmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)을 실행합니다. 결과 집합에서 **snapshot_jobid** 값을 확인합니다.  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
-3.  [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 게시에 아티클을 추가합니다. 이 저장 프로시저는 게시의 각 아티클에 대해 한 번씩만 실행해야 합니다. 매개 변수가 있는 필터를 사용할 경우 **@subset_filterclause** 매개 변수를 사용하여 하나 이상의 아티클에 대해 매개 변수가 있는 행 필터를 지정해야 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
+3.  [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 게시에 아티클을 추가합니다. 이 저장 프로시저는 게시의 각 아티클에 대해 한 번씩만 실행해야 합니다. 매개 변수가 있는 필터를 사용할 경우 **@subset_filterclause** 매개 변수를 사용하여 하나 이상의 아티클에 대해 매개 변수가 있는 행 필터를 지정해야 합니다. 자세한 내용은 [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
 4.  다른 아티클이 매개 변수가 있는 행 필터에 따라 필터링되면 [sp_addmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)를 실행하여 아티클 간의 조인 또는 논리 레코드 관계를 정의합니다. 이 저장 프로시저는 정의되는 각 관계에 대해 한 번씩만 실행해야 합니다. 자세한 내용은 [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
@@ -323,13 +323,13 @@ PAUSE
   
 #### <a name="to-create-a-publication-and-pregenerate-or-automatically-refresh-snapshots"></a>게시를 만들고 스냅숏을 미리 생성하거나 자동으로 새로 고치려면  
   
-1.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 사용하여 병합 게시를 정의합니다. 자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)을 참조하세요.  
+1.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 사용하여 병합 게시를 정의합니다. 자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.MergeArticle> 속성을 사용하여 게시에 아티클을 추가합니다. 매개 변수가 있는 필터를 정의하는 하나 이상의 아티클에 대해 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성을 지정하고 아티클 간 조인 필터를 정의하는 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 만듭니다. 자세한 내용은 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 3.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 **false**이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
   
-4.  4단계에서 만든 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 개체의 <xref:Microsoft.SqlServer.Replication.MergePublication> 메서드를 호출합니다. 그러면 초기 스냅숏을 생성하는 에이전트 작업이 시작됩니다. 초기 스냅숏을 생성하고 스냅숏 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)를 참조하십시오.  
+4.  4단계에서 만든 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 개체의 <xref:Microsoft.SqlServer.Replication.MergePublication> 메서드를 호출합니다. 그러면 초기 스냅숏을 생성하는 에이전트 작업이 시작됩니다. 초기 스냅숏을 생성하고 스냅숏 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [초기 스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)를 참조하십시오.  
   
 5.  <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 속성이 **true** 값인지 확인하여 초기 스냅숏을 사용할 준비가 되었는지 확인합니다.  
   
@@ -363,7 +363,7 @@ PAUSE
   
 #### <a name="to-create-a-publication-and-manually-create-snapshots-for-each-partition"></a>게시를 만들고 각 파티션에 대한 스냅숏을 수동으로 만들려면  
   
-1.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 사용하여 병합 게시를 정의합니다. 자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)을 참조하세요.  
+1.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 사용하여 병합 게시를 정의합니다. 자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.MergeArticle> 속성을 사용하여 게시에 아티클을 추가합니다. 매개 변수가 있는 필터를 정의하는 하나 이상의 아티클에 대해 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성을 지정하고 아티클 간 조인 필터를 정의하는 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 만듭니다. 자세한 내용은 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
@@ -414,9 +414,9 @@ PAUSE
   
  [!code-vb[HowTo#rmo_vb_GenerateFilteredSnapshot](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_generatefilteredsnapshot)]  
   
-## <a name="see-also"></a>관련 항목:  
- [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [복제 시스템 저장 프로시저 개념](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a>참고 항목  
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅숏](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   

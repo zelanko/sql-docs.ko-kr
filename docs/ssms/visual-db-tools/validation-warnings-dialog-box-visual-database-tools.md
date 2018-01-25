@@ -18,13 +18,13 @@ ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b5aaee99afbfe7eb4a5bb3ad3fd3f16ffd40d1b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a32d24abfb608d41e83e58ee9be10d0144fa6cee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>유효성 검사 경고 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자는 잠재적인 손상의 위험이 있는 수정 내용을 저장하려는 경우나 데이터베이스 커밋 작업이 실패할 가능성이 있는 경우에 나타납니다. 이 대화 상자에는 위험 요소가 잠재된 사항이 무엇인지 또는 커밋 작업이 실패하는 이유가 무엇인지에 대한 정보가 표시됩니다. 이러한 정보를 확인하고 그 결과에 따라 수정 작업을 계속 진행하거나 작업을 취소할 수 있습니다.  

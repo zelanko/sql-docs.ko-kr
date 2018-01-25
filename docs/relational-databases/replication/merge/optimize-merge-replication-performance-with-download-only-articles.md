@@ -17,15 +17,15 @@ helpviewer_keywords:
 - download-only articles
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9af82e7051c7dae3a16bd420dfe923d88a08cfac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cf9009385126a41283ce8044acba2bd35d08867
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>다운로드 전용 아티클로 병합 복제 성능 최적화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 병합 복제에서는 다양한 응용 프로그램의 요구 사항을 해결할 수 있도록 두 가지 아티클 유형을 제공합니다. 게시에는 이러한 아티클 유형 중 해당 응용 프로그램에 적합한 하나 이상의 아티클 유형이 포함될 수 있습니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="using-different-article-types-in-your-applications"></a>응용 프로그램에서 다른 아티클 유형 사용  
  응용 프로그램의 요구 사항을 이해하면 최대 유연성과 최적 성능 간 균형을 유지할 수 있습니다. 예를 들어 게시자와 구독자에서 충돌이 자주 발생하고 내용이 자주 변경되는 응용 프로그램의 경우 표준 아티클로 구성된 응용 프로그램을 사용합니다. SFA(Sales Force Automation) 응용 프로그램과 같은 일부 응용 프로그램에는 충돌 가능성이 있는 아티클과 다운로드 전용으로 지정할 수 있는 조회 테이블의 기능을 하는 다른 아티클이 있을 수 있습니다. POS(Point of Sale) 시스템 및 FFA(Field Force Automation) 응용 프로그램과 같은 데이터 항목 응용 프로그램은 충돌을 제거하고 한 구독자의 데이터가 다른 구독자로 이동하지 않는 방식으로 데이터를 엄격하게 분할하는 경우가 많습니다. 이러한 경우 겹치지 않는 파티션, 다운로드 전용 아티클 및 사전 계산 파티션을 잘 조합하여 성능과 확장성을 최적화할 수 있습니다. 겹치지 않는 파티션 및 사전 계산 파티션에 대한 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [병합 복제를 위한 아티클 옵션](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [조건부 삭제 추적으로 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   

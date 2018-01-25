@@ -16,15 +16,15 @@ helpviewer_keywords:
 - replication [SQL Server], filtering published data
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8b02dc4f90db95034df79a341aacf4b346dc3ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ed6d8575d2dfbcc6f6ad29c8910346eb5ef27b41
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-published-data-for-merge-replication"></a>병합 복제의 게시된 데이터 필터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 다른 복제 유형으로 정의할 수 있는 정적 행 필터와 열 필터 이외에 병합 복제는 매개 변수가 있는 행 필터 및 조인 필터를 제공합니다. 정적 행 필터와 열 필터에 대한 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Replication Monitor, refreshing
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a564b6b253365200f1cfeeee61750f945c84bc88
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2aa377789758d9a21eb07bf0c68edf8993454849
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>캐싱, 새로 고침 및 복제 모니터 성능
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 프로덕션 시스템 내의 많은 컴퓨터를 효율적으로 모니터링하도록 설계되었습니다. 계산을 수행하고 데이터를 수집하기 위해 복제 모니터가 사용하는 쿼리는 정기적으로 캐시되며 새로 고쳐집니다. 캐싱을 사용하면 복제 모니터에서 여러 페이지를 볼 때 필요한 쿼리 및 계산의 수를 줄일 수 있고 여러 사용자에 대해 모니터링을 확장할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 -   많은 배포자를 등록한 다음 복제 모니터가 자동으로 이러한 모든 배포자에 연결하도록 설정하지 마십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 유지 관리 작업 실행&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

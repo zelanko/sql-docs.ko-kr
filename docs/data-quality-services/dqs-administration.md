@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d4b4f34938bd72e325394d12bdf0c955d480c14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7c9c8c5a3098e03da579f2bd043ec9675a8c1adb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dqs-administration"></a>dqs 관리
   DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 사용하면 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 여러 DQS 활동을 관리하고, DQS 활동과 관련된 서버 수준의 속성을 구성하고, 참조 데이터 서비스 설정을 구성하고, DQS 로그 설정을 구성할 수 있습니다. 이러한 작업은 **의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]기능을 통해 수행됩니다. DQS의 보안 액세스(역할)에 따라 사용자에게는 이 영역의 특정 기능에 대한 액세스 권한이 부여되거나 거부됩니다.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
  자세한 내용은 [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)을 참조하세요.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
 |DQS 데이터베이스를 백업 및 복원하는 방법을 설명합니다.|[DQS 데이터베이스 백업 및 복원](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |DQS 데이터베이스를 분리하고 연결하는 방법을 설명합니다.|[DQS 데이터베이스 분리 및 연결](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DQS의 참조 데이터 서비스](../data-quality-services/reference-data-services-in-dqs.md)   
  [DQS 로그 파일 관리](../data-quality-services/manage-dqs-log-files.md)   
  [DQS 데이터베이스 관리](../data-quality-services/manage-dqs-databases.md)  

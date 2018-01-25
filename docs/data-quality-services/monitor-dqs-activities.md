@@ -17,15 +17,15 @@ helpviewer_keywords:
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73bc05ebd57a2e530dd98988824544238e7ba141
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7edd36b5b50eabac2cfa609a06aef2638d5b6dfd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="monitor-dqs-activities"></a>DQS 작업 모니터링
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료 검색, 도메인 관리, 일치 정책, 데이터 정리, 데이터 일치 및 SSIS 정리 작업을 중앙에서 모니터링하는 방법에 대해 설명합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
   
 -   DQS 작업을 보려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_kb_operator 역할이 있어야 합니다.  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Excel 파일을 저장할 이름과 위치를 지정하라는 메시지가 나타납니다. 내보낸 Excel 파일에는 다음과 같은 시트가 있습니다.  
   
-    |시트 이름|설명|  
+    |시트 이름|Description|  
     |----------------|-----------------|  
     |동작|작업 표에서와 같이 작업에 대한 정보(열)가 포함됩니다.|  
     |프로세스|**작업 단계** 탭에서와 같이 작업의 프로세스에 대한 정보(열)가 포함됩니다.|  

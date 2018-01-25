@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: SQLSetDescRec function
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f05f9909793298f2eba15a647ac24f0d232c1205
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 26821deb5f1d2404d1ea41ede439cfde403c265b
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +38,9 @@ ms.lasthandoff: 01/08/2018
 |매개 변수|테이블 반환 매개 변수 열을 비롯한 테이블 반환 매개 변수가 아닌 유형에 대한 관련 특성|테이블 반환 매개 변수에 대한 관련 특성|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*형식*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*하위 유형*|무시됨|SQL_DATETIME 또는 SQL_INTERVAL 유형의 레코드에 대해 이 값을 SQL_DESC_DATETIME_INTERVAL_CODE로 설정합니다.|  
+|*SubType*|무시됨|SQL_DATETIME 또는 SQL_INTERVAL 유형의 레코드에 대해 이 값을 SQL_DESC_DATETIME_INTERVAL_CODE로 설정합니다.|  
 |*길이*|SQL_DESC_OCTET_LENGTH|테이블 반환 매개 변수 유형 이름의 길이입니다. 유형 이름이 null로 끝나는 경우 SQL_NTS이고, 테이블 반환 매개 변수 유형 이름이 필요하지 않은 경우 0입니다.|  
-|*전체 자릿수*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
+|*정밀도*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*소수 자릿수*|SQL_DESC_SCALE|사용되지 않습니다. 이 매개 변수는 0이어야 합니다.|  
 |*DataPtr*|APD의 SQL_DESC_DATA_PTR|SQL_CA_SS_TYPE_NAME<br /><br /> 저장 프로시저 호출에서 이 매개 변수는 선택 사항이며, 필요하지 않은 경우 NULL을 지정할 수 있습니다. 프로시저 호출이 아닌 SQL 문에 대해서는 이 매개 변수를 지정해야 합니다.<br /><br /> *DataPtr* 응용 프로그램 가변 행 바인딩을 사용 하는 경우이 테이블 반환 매개 변수를 식별 하는 데 사용할 수 있는 고유한 값으로도 사용 합니다.|  
 |*StringLengthPtr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> 테이블 반환 매개 변수의 경우 이 값은 전송할 행 수나 SQL_DATA_AT_EXEC입니다. 이것이 SQLExecDirect으로 전송할 행 수를 포함 하는 값에 대 한 포인터입니다.|  
@@ -51,13 +51,13 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLSetDescRec 지원  
  날짜/시간 유형에 대해 허용되는 값은 다음과 같습니다.  
   
-||*형식*|*하위 유형*|*길이*|*전체 자릿수*|*소수 자릿수*|  
+||*형식*|*SubType*|*길이*|*정밀도*|*소수 자릿수*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
-|DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|날짜|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
-|Time|SQL_SS_TIME2|0|10|0..7|0..7|  
-|Datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|time|SQL_SS_TIME2|0|10|0..7|0..7|  
+|datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
  자세한 내용은 참조 [날짜 및 시간 기능 향상 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  

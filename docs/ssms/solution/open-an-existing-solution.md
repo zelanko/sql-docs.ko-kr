@@ -18,13 +18,13 @@ ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1233e0e0000e7e44a6221ad94e1f08532fd2617a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1942e89d7e13cc6b18e6a4161eee166699b3c59c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-an-existing-solution"></a>기존 솔루션 열기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 솔루션 탐색기에서 한 번에 하나의 솔루션만 열 수 있습니다.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], pull
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3dd3a3b7d1f584d3d9684530fe0480e74d90d3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e62ec241b92a0ed90bf04ef6f451d3441d623613
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-pull-subscription"></a>끌어오기 구독 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 끌어오기 구독을 삭제하는 방법에 대해 설명합니다.  
@@ -71,15 +71,15 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 끌어오기 구독을 삭제하려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_droppullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)을 실행합니다. **@publication**, **@publisher** 및 **@publisher_db**를 지정합니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_droppullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)을 실행합니다. **@publication**, **@publisher**및 **@publisher_db**를 지정합니다.  
   
 2.  게시 데이터베이스의 게시자에서 [sp_dropsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)을 실행합니다. 이때 **@publication** 및 **@subscriber**에서 사용 가능합니다. **@article**에 **all** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없으면 **@ignore_distributor** 에 **@ignore_distributor** 을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독을 삭제하려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_dropmergepullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)을 실행합니다. **@publication**, **@publisher** 및 **@publisher_db**를 지정합니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_dropmergepullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)을 실행합니다. **@publication**, **@publisher**및 **@publisher_db**를 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_dropmergesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)을 실행합니다. **@publication**, **@subscriber** 및 **@subscriber_db**를 지정합니다. **@subscription_type**에 **pull** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없으면 **@ignore_distributor** 에 **@ignore_distributor** 을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_dropmergesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)을 실행합니다. **@publication**, **@subscriber**및 **@subscriber_db**를 지정합니다. **@subscription_type**에 **pull** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없으면 **@ignore_distributor** 에 **@ignore_distributor** 을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음은 트랜잭션 게시에 대한 끌어오기 구독을 삭제하는 예입니다. 첫 번째 일괄 처리는 구독자에서 실행되고 두 번째 일괄 처리는 게시자에서 실행됩니다.  
@@ -142,7 +142,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_DropMergePullSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropmergepullsub)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   

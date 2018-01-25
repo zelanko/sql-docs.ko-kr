@@ -20,20 +20,20 @@ helpviewer_keywords:
 - index creation [SQL Server], tempdb database
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d0d85ca3709065461adb4615e9da09410c6d6650
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca84d493ede9087ec3e41db12e2d7da6cc8e1e13
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sortintempdb-option-for-indexes"></a>인덱스에 대한 SORT_IN_TEMPDB 옵션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  인덱스를 만들거나 다시 만들 때 SORT_IN_TEMPDB 옵션을 ON으로 설정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 **tempdb** 를 사용하여 인덱스를 만드는 데 사용되는 중간 정렬 결과를 저장하도록 지시할 수 있습니다. 이 옵션을 사용하면 인덱스를 만드는 데 사용되는 임시 디스크 공간이 늘어나지만 **tempdb** 가 사용자 데이터베이스와 다른 디스크 집합에 있을 때 인덱스를 만들거나 다시 만드는 데 필요한 시간이 줄어듭니다. **tempdb**에 대한 자세한 내용은 [인덱스 생성 메모리 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)를 참조하십시오.  
+  인덱스를 만들거나 다시 만들 때 SORT_IN_TEMPDB 옵션을 ON으로 설정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 **tempdb** 를 사용하여 인덱스를 만드는 데 사용되는 중간 정렬 결과를 저장하도록 지시할 수 있습니다. 이 옵션을 사용하면 인덱스를 만드는 데 사용되는 임시 디스크 공간이 늘어나지만 **tempdb** 가 사용자 데이터베이스와 다른 디스크 집합에 있을 때 인덱스를 만들거나 다시 만드는 데 필요한 시간이 줄어듭니다. **tempdb**에 대한 자세한 내용은 [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)를 참조하십시오.  
   
 ## <a name="phases-of-index-building"></a>인덱스를 만드는 단계  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 인덱스를 만들 때 다음 단계가 수행됩니다.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
 -   SORT_IN_TEMPDB를 OFF로 설정한 경우 대상 파일 그룹에는 최종 테이블을 저장하기 위한 빈 공간이 충분히 있어야 합니다. 여기에는 모든 인덱스의 구조가 포함됩니다. 테이블 및 인덱스 익스텐트의 근접성은 사용 가능한 빈 공간이 늘어날 때 향상될 수 있습니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="related-content"></a>관련 내용  
  [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
- [인덱스 생성 메모리 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
  [인덱스 DDL 작업의 디스크 공간 요구 사항](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   

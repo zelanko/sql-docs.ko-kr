@@ -16,13 +16,13 @@ ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a30c75098d6c3211ae0b961867d156356566dba6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1bacc1904e7a509c98653683211b9d0cbeda86d7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-designers---maintenance-plans-page"></a>옵션(디자이너 - 유지 관리 계획 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **옵션** 대화 상자를 사용하여 디자인 화면에 새 셰이프를 추가할 때의 디자이너 기본 동작을 결정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **디자이너**를 확장한 다음 **유지 관리 계획**을 선택합니다.  

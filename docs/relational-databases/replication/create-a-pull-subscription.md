@@ -19,17 +19,17 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bca4071c25a248b235b59e71957f7ecbe0149de1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b05513645f78b39129d9d738c344e049f532a7ba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="create-a-pull-subscription"></a>끌어오기 구독 만들기
+# <a name="create-a-pull-subscription"></a>Create a Pull Subscription
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 끌어오기 구독을 만드는 방법에 대해 설명합니다.  
   
  P2P 복제에 대한 끌어오기 구독 설정은 스크립트를 통해서는 가능하지만 마법사를 통해서는 사용할 수 없습니다.  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **allow_pull**의 값이 **0**이면 **@property**에 **allow_pull**을, **@value**에 **true**를 지정하여 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다.  
   
-2.  구독자에서 [sp_addpullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. **@publisher** 및 **@publication**을 지정합니다. 구독 업데이트에 대한 자세한 내용은 [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx)을 참조하세요.   
+2.  구독자에서 [sp_addpullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. 이때 **@publisher** 및 **@publication**에서 사용 가능합니다. 구독 업데이트에 대한 자세한 내용은 [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx)을 참조하세요.   
   
 3.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.  
   
@@ -1125,11 +1125,11 @@ Finally
 End Try  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 관리 개체 개념](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>참고 항목  
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
- [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

@@ -42,17 +42,17 @@ f1_keywords:
 helpviewer_keywords: New Publication Wizard
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80994381f27306e178ac85b942d544e49c28433b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1be53dfe84e9731339dabdc68c67cf9d161fae69
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="new-publication-wizard"></a>새 게시 마법사
+# <a name="new-publication-wizard"></a>New Publication Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 새 게시 마법사의 다음 페이지에 대한 정보를 제공합니다.  
   
 -   [Oracle 게시자](../../relational-databases/replication/oracle-publisher.md)  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [스냅숏 에이전트&#40;새 게시 마법사&#41;](../../relational-databases/replication/snapshot-agent-new-publication-wizard.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [속성 참조&#40;복제&#41;](../../relational-databases/replication/properties-reference-replication.md)  

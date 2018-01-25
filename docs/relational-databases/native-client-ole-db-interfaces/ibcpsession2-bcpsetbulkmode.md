@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 386d898dd1adb1df7e01beba6c1ce71a214f3329
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3b3b66909225f1628376b03fc060523446a492b5
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ HRESULT BCPSetBulkMode (
   
 |||  
 |-|-|  
-|**S_OK이 고**|메서드가 성공했습니다.|  
+|**S_OK**|메서드가 성공했습니다.|  
 |**E_FAIL**|ISQLServerErrorInfo 인터페이스를 사용 하 여 자세한 정보에 대 한 공급자 관련 오류가 발생 합니다.|  
 |**E_UNEXPECTED**|예기치 않은 메서드가 호출되었습니다. 예를 들어는 **IBCPSession2::BCPInit** ibcpsession2:: Bcpsetbulkmode를 호출 하기 전에 메서드를 호출 하지 않았습니다.|  
 |**E_INVALIDARG**|잘못된 인수입니다.|  
@@ -366,7 +366,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [IBCPSession2 &#40; OLE db&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

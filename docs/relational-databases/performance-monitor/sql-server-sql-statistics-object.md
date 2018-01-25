@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7290b3701425411f0ba7d05e6790737057274762
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL Statistics 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **SQLServer:SQL Statistics** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보낸 컴파일과 요청 유형을 모니터링하는 카운터를 제공합니다. 쿼리 컴파일 및 다시 컴파일 수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 받은 일괄 처리 수를 모니터링하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용자 쿼리를 처리하는 속도와 쿼리 최적화 프로그램이 쿼리를 처리하는 효율을 알 수 있습니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** 카운터에 대한 설명입니다.  
   
-|SQL Server SQL Statistics 카운터|설명|  
+|SQL Server SQL Statistics 카운터|Description|  
 |----------------------------------------|-----------------|  
 |**Auto-Param Attempts/sec**|초당 자동 매개 변수화 시도 수입니다. 합계는 자동 매개 변수화의 실패한 횟수, 안전한 횟수 그리고 안전하지 않은 횟수의 합과 같습니다. 자동 매개 변수화는 유사한 여러 요청을 처리할 때 캐시된 결과 실행 계획을 다시 사용하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 일부 리터럴을 매개 변수로 바꾸어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 요청을 매개 변수화할 때 일어납니다. 새로운 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 자동 매개 변수화를 단순 매개 변수화라고도 합니다. 이 카운터에는 강제 매개 변수화는 포함되지 않습니다.|  
 |**Batch Requests/sec**|초당 받는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령 일괄 처리 수입니다. 이 통계는 모든 제약 조건(I/O, 사용자 수, 캐시 크기, 요청의 복잡도 등)의 영향을 받습니다. 높은 일괄 처리 수치는 높은 처리 효율을 의미합니다.|  

@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: rowset binding [ODBC]
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd9305eccd49f8ec7277b2285d56a439f7cb776d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 91d372fbb5e63bff8782eaeef1fe21e510f8578b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-rowset-binding-odbc"></a>행 집합 바인딩 사용(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
     -   필요에 따라 데이터 길이를 저장할 R개 이상의 열 버퍼 배열을 할당합니다.  
   
-    -   호출 [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) 을 열의 데이터 값과 데이터 길이 배열을 행 집합의 열에 바인딩합니다.  
+    -   [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) 을 호출하여 열의 데이터 값 및 데이터 길이 배열을 행 집합의 열에 바인딩합니다.  
   
 2.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 을 호출하여 다음 특성을 설정합니다.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  해당 문을 실행합니다.  
   
-4.  호출할 때마다 [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) 또는 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) R 개의 행을 검색 하 고 바인딩된 열에 데이터를 전송 합니다.  
+4.  [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) 또는 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 에 대한 각 호출에서 R개의 행을 검색하여 데이터를 바인딩된 열로 전송합니다.  
   
 ### <a name="to-use-row-wise-binding"></a>행 단위 바인딩을 사용하려면  
   
@@ -71,11 +71,11 @@ ms.lasthandoff: 01/08/2018
   
     -   SQL_ATTR_PARAMS_STATUS_PTR을 행 상태 표시를 보유하는 SQLUSSMALLINT 변수의 배열[R]을 가리키도록 설정합니다.  
   
-3.  결과 집합의 각 열에 대해 호출 [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) 데이터 값과 열 데이터 길이 포인터가 1 단계에서에서 할당 한 구조 배열의 첫 번째 요소에 있는 해당 변수를 가리키도록 합니다.  
+3.  결과 집합의 각 열에 대해 [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) 을 호출하여 열의 데이터 값 및 데이터 길이 포인터가 1단계에서 할당한 구조 배열의 첫 번째 요소에 있는 해당 변수를 가리키도록 합니다.  
   
 4.  해당 문을 실행합니다.  
   
-5.  호출할 때마다 [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) 또는 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) R 개의 행을 검색 하 고 바인딩된 열에 데이터를 전송 합니다.  
+5.  [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) 또는 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 에 대한 각 호출에서 R개의 행을 검색하여 데이터를 바인딩된 열로 전송합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [커서 방법 도움말 항목 &#40; ODBC &#41;를 사용 하 여](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - rowsets [OLE DB]
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8efb55f96b30bab334c6a29b2412a4c424e16dfc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fe964e8e0cadaee2118540714f6e8a9c43763748
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="rowsets"></a>행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 
   행 집합은 데이터 열이 포함된 행의 집합입니다. 행 집합은 모든 OLE DB 데이터 공급자가 결과 집합 데이터를 테이블 형식으로 노출할 수 있도록 하는 중앙 개체입니다.  
   
- 소비자가 사용 하 여 세션을 만든 후의 **idbcreatesession:: Createsession** 메서드를 소비자 중 하나를 사용할 수는 **IOpenRowset** 또는 **IDBCreateCommand** 인터페이스는 행 집합을 만드는 세션입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 이러한 인터페이스의 모두 지원 합니다. 여기서는 두 메서드에 대해 모두 설명합니다.  
+ 소비자가 사용 하 여 세션을 만든 후의 **idbcreatesession:: Createsession** 메서드를 소비자 하나를 사용할 수는 **IOpenRowset** 또는 **IDBCreateCommand** 인터페이스에는 행 집합을 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 이러한 인터페이스의 모두 지원 합니다. 여기서는 두 메서드에 대해 모두 설명합니다.  
   
 -   호출 하 여 행 집합을 만듭니다는 **iopenrowset:: Openrowset** 메서드.  
   
@@ -55,17 +55,17 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [IOpenRowset을 사용하여 행 집합 만들기](../../relational-databases/native-client-ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
+-   [IOpenRowset를 사용 하 여 행 집합 만들기](../../relational-databases/native-client-ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
   
--   [ICommand::Execute를 사용하여 행 집합 만들기](../../relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
+-   [Icommand:: Execute를 사용 하 여 행 집합 만들기](../../relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
 -   [행 집합 속성 및 동작](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
 -   [행 집합 및 SQL Server 커서](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)  
   
--   [행 페치](../../relational-databases/native-client-ole-db-rowsets/fetching-rows.md)  
+-   [행 인출](../../relational-databases/native-client-ole-db-rowsets/fetching-rows.md)  
   
--   [IRow를 사용하여 단일 행 페치](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+-   [IRow와 단일 행 인출](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
 -   [책갈피](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
   

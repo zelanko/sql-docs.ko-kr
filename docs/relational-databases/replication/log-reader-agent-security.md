@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.security.LRA.f1
 helpviewer_keywords: Log Reader Agent Security dialog box
 ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d0b0d080908d50d0546c0bed9af79041c7b3499
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5972b9932cd0d30e1695e35ff816df38e40e1e96
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-reader-agent-security"></a>로그 판독기 에이전트 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **로그 판독기 에이전트 보안** 대화 상자에서 다음을 지정할 수 있습니다.  
@@ -39,8 +39,8 @@ ms.lasthandoff: 11/17/2017
   
  모든 계정이 유효해야 하며 각 계정에 대해 올바른 암호를 지정해야 합니다. 계정 및 암호의 유효성은 에이전트를 실행할 때 검사합니다.  
   
-## <a name="options"></a>옵션  
- **Process account**  
+## <a name="options"></a>변수  
+ **프로세스 계정**  
  배포자에서 로그 판독기 에이전트를 실행하는 Windows 계정을 입력합니다. 지정한 Windows 계정은 적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
  **암호** 및 **암호 확인**  

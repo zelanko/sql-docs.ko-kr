@@ -18,22 +18,22 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8c204e1ed53a4969b903d7821e151dd6cb183848
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c267615cb7970d7833821662cfd97662093a2edb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rebuild-system-databases"></a>시스템 데이터베이스 다시 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md) 또는 [resource](../../relational-databases/databases/resource-database.md) 시스템 데이터베이스의 손상 문제를 수정하거나 기본 서버 수준 데이터 정렬을 변경하려면 시스템 데이터베이스를 다시 작성해야 합니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 시스템 데이터베이스를 다시 작성하는 단계별 지침을 제공합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -51,12 +51,12 @@ ms.lasthandoff: 11/17/2017
   
      [다시 작성 오류 문제 해결](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  master, model, msdb 및 tempdb 시스템 데이터베이스를 다시 작성하면 해당 데이터베이스가 삭제된 후 원래 위치에 다시 만들어집니다. REBUILD 문에 새로운 데이터 정렬이 지정되면 해당 데이터 정렬 설정을 사용하여 시스템 데이터베이스가 만들어집니다. 이러한 데이터베이스에 사용자들이 변경한 내용은 손실됩니다. 예를 들어, master 데이터베이스에 사용자 정의 개체가 있거나, msdb에 예약된 작업이 있거나 model 데이터베이스에서 기본 데이터베이스 설정을 변경했을 수 있습니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  시스템 데이터베이스를 다시 작성하기 전에 다음 태스크를 수행하면 시스템 데이터베이스를 현재 설정으로 복원할 수 있습니다.  
   
 1.  서버 차원의 모든 구성 값을 기록합니다.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |매개 변수 이름|설명|  
+    |매개 변수 이름|Description|  
     |--------------------|-----------------|  
     |/QUIET 또는 /Q|설치 프로그램이 사용자 인터페이스 없이 실행되도록 지정합니다.|  
     |/ACTION=REBUILDDATABASE|설치 시 시스템 데이터베이스를 다시 작성하도록 지정합니다.|  

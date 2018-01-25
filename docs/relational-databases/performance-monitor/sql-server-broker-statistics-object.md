@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9c0829d863a9f42516385ac8f50c12813ed4524
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4dfb78d1b381649353ef872ed22e0bb4725d65cc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, Broker Statistics 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQLServer:Broker Statistics 성능 개체는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 대한 일반 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 정보를 보고하는 성능 카운터를 포함합니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
-|SQL Server Broker Statistics 카운터|설명|  
+|SQL Server Broker Statistics 카운터|Description|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 활성화 저장 프로시저가 오류로 인해 종료된 횟수입니다.|  
 |**Broker Transaction Rollbacks**|DML 문과 관련된 [!INCLUDE[ssSB](../../includes/sssb-md.md)](예: SEND 및 RECEIVE)를 포함하는 롤백된 트랜잭션의 수입니다.|  

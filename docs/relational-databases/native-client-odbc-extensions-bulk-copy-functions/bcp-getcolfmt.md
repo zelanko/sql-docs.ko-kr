@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_getcolfmt function
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8056470fbe4f5ce7c6c78bf0e595a738354d0a37
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 642290f1093c1f0730417e4bcbed259322c3e630
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpgetcolfmt"></a>bcp_getcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ RETCODE bcp_getcolfmt (
  *hdbc*  
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
- *필드*  
+ *field*  
  속성을 검색할 열 번호입니다.  
   
  *속성*  
@@ -71,7 +71,7 @@ RETCODE bcp_getcolfmt (
 ## <a name="remarks"></a>주의  
  열 형식 속성 값에 나열 된는 [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) 항목입니다. 열 형식 속성 값은 **bcp_setcolfmt** 함수를 호출하여 설정되고 **bcp_getcolfmt** 함수는 열 형식 속성 값을 찾는 데 사용됩니다.  
   
- 동작 변경 내용에 연결할 때 관찰 될 수 있습니다는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (또는 이후 버전) 서버 컴퓨터를 이전에 비해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전입니다. 자세한 내용은 참조 [메타 데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)합니다.  
+ 동작 변경 내용에 연결할 때 관찰 될 수 있습니다는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (또는 이후 버전) 서버 컴퓨터를 이전에 비해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전입니다. 자세한 내용은 [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md)를 참조하십시오.  
   
 ## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_getcolfmt 지원  
  와 사용 되는 형식에서 **BCP_FMT_TYPE** 날짜/시간 형식에 대 한 속성에 지정 된 대로 [향상 된 날짜 및 시간 형식 &#40; OLE DB 및 ODBC &#41;에 대 한 대량 복사 변경 사항](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다.  

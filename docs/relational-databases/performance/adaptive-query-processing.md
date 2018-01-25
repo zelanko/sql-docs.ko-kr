@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack;monicar
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6be92bfbfdd149eb51c4151c3f4ff0d8fe0b4e91
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 139d73430346cdad7baa27d90c14ad692be5bbeb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 데이터베이스의 적응 쿼리 처리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/28/2017
 ![적응 쿼리 처리 기능](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>적응 쿼리 처리를 사용하도록 설정하는 방법
-데이터베이스에 대해 호환성 수준 140을 사용하도록 설정하여 워크로드가 적응 쿼리 처리에 자동으로 적합하도록 만들 수 있습니다.  Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어
+데이터베이스에 대해 호환성 수준 140을 사용하도록 설정하여 워크로드가 적응 쿼리 처리에 자동으로 적합하도록 만들 수 있습니다.  Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
@@ -224,7 +224,7 @@ OPTION(RECOMPILE)을 사용하는 문은 인터리브 실행을 사용하는 새
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>인터리브 실행 및 쿼리 저장소 상호 운용성
 인터리브 실행을 사용하는 계획을 강제로 적용할 수 있습니다. 계획은 초기 실행에 따라 카디널리티 예상치를 수정한 버전입니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 

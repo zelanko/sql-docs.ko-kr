@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLAgent:JobSteps
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6d6953a342ab24540da33464962712ea43579f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6c2bfb8f1b628ba4515f3668b2a226e44b5c8fe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server 에이전트, JobSteps 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 **JobSteps** 성능 개체에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에 대한 정보를 보고하는 성능 카운터가 포함되어 있습니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
  아래 표에는 **SQLAgent:JobSteps** 카운터가 있습니다.  
   
-|이름|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |**Active steps**|이 카운터는 현재 실행 중인 작업 단계 수를 보고합니다.|  
 |**Queued steps**|이 카운터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행될 준비가 되어 있지만 아직 실행이 시작되지 않은 작업 단계 수를 보고합니다.|  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|인스턴스|설명|  
+|인스턴스|Description|  
 |--------------|-----------------|  
 |**_Total**|모든 작업 단계에 대한 정보입니다.|  
 |**ActiveScripting**|**ActiveScripting** 하위 시스템을 사용하는 작업 단계에 대한 정보입니다.|  

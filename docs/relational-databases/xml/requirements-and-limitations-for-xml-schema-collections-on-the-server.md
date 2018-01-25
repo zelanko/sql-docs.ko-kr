@@ -27,15 +27,15 @@ helpviewer_keywords:
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: "84"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cd69a363f823d5d5ef197524d2fe5a3f393d438
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d12b4ae5ef18aadaf580945f5326dc08f00c11ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] XSD(XML 스키마 정의 언어) 유효성 검사에는 **xml** 데이터 형식을 사용하는 SQL 열에 대한 몇 가지 제한 사항이 있습니다. 다음 표에서는 이러한 제한 사항과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 작동할 수 있도록 XSD 스키마를 수정하는 지침을 제공합니다. 이 섹션의 다음 항목에서는 특정 제한 사항 및 이에 따른 작업 수행 지침에 대한 추가 정보를 제공합니다.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|정규 형식 및 패턴 제한 사항을 설명합니다.|  
 |[와일드카드 구성 요소 및 콘텐츠 유효성 검사](../../relational-databases/xml/wildcard-components-and-content-validation.md)|와일드카드 문자, lax 유효성 검사 및 anyType 요소를 XML 스키마 컬렉션과 함께 사용할 경우 제한 사항을 설명합니다.|  

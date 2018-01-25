@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b78b311ea716abd5ca52a1f561f648a29a27199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7917c67c302800a23ed20c974115641f644b513f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-table-rows"></a>테이블 행 필터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **테이블 행 필터** 페이지를 사용하여 다음 작업을 수행할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  필터는 행 식별을 위해 복제에 사용된 **rowguidcol** 을 포함하지 않아야 합니다. 기본적으로 이 열은 병합 복제를 설정할 때 추가된 열이며 이름은 **rowguid**입니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **필터링된 테이블**  
  이 창은 게시의 테이블 아티클에 필터를 추가하면 추가된 필터로 채워집니다. 행 필터가 있는 테이블은 창에서 최상위 노드로 표시됩니다. 병합 게시의 경우 조인 필터를 통해 필터링이 확장된 테이블은 자식 노드로 표시됩니다.  
   
@@ -81,14 +81,14 @@ ms.lasthandoff: 11/17/2017
   
  창에서 바로 가기 노드를 선택하고 **테이블 찾기**를 클릭합니다. 창이 확장되고 해당 테이블이 강조 표시됩니다. 바로 가기 노드를 선택하지 않고 **테이블 찾기** 를 클릭하면 **테이블 찾기** 대화 상자가 시작됩니다.  
   
- **필터**  
+ **Assert**  
  필터 창에서 선택한 필터의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의를 포함합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [게시된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)   
- [조인 필터](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

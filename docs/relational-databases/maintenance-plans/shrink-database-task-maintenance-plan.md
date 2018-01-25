@@ -18,15 +18,15 @@ f1_keywords:
 helpviewer_keywords: Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 977d851af5e4b044527a196417ea32504a44a65f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b71a3f5cf438b4ac5f3cce071329a81cff88d25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>데이터베이스 축소 태스크(유지 관리 계획)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **데이터베이스 축소 태스크** 대화 상자를 사용하여 선택한 데이터베이스의 크기를 줄이는 작업을 만들 수 있습니다. 아래 옵션을 사용하면 데이터베이스를 축소한 후 사용되지 않는 상태로 데이터베이스에 유지할 공간의 양을 결정할 수 있습니다. 이 비율이 커질수록 데이터베이스를 축소할 수 있는 비율이 줄어듭니다. 이 값은 데이터베이스에 있는 실제 데이터의 비율에 따라 결정됩니다. 예를 들어 60MB의 데이터와 40MB의 사용 가능한 공간이 있는 100MB의 데이터베이스에서 사용 가능한 공간의 비율을 50%로 설정하면 60MB의 50%는 30MB이기 때문에 데이터 공간은 60MB가 되고 사용 가능한 공간은 30MB가 됩니다. 데이터베이스에서 남는 공간만 제거됩니다. 유효한 값은 0에서 100까지입니다.  
@@ -38,8 +38,8 @@ ms.lasthandoff: 11/17/2017
   
  이 태스크는 DBCC SHRINKDATABASE 문을 실행합니다.  
   
-## <a name="options"></a>옵션  
- **연결**  
+## <a name="options"></a>변수  
+ **대량 삽입 태스크 편집기**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   
  **새로 만들기**  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
  **특정 사용자 이름 및 암호 사용**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
- **사용자 이름**  
+ **User name**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
  **암호**  

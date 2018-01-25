@@ -18,13 +18,13 @@ ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d756b3dac37c11172a186dc4683ba15c958a482b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2011789bbecd15c199049e1a50335b77885c9efb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="browse-for-objects-object-explorer"></a>개체 찾아보기(개체 탐색기)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 선택한 유형의 개체 목록을 표시합니다. 해당 확인란을 선택하여 이 목록에서 하나 이상의 개체를 선택합니다. **개체 찾아보기** 상자에는 동작에 해당하는 항목만 표시되며 보기 권한이 있는 항목만 표시됩니다.  

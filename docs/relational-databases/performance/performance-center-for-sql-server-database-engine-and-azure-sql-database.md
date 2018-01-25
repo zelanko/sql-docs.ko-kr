@@ -25,13 +25,13 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 caps.latest.revision: "14"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8dee082c3a77c230616492823c6df889d0f3fc1a
-ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+ms.openlocfilehash: a4f769cf73abdb85749cd7104a74602dd5863e9a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 성능 센터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]의 성능에 대해 필요한 정보를 찾는 데 도움이 되는 링크를 제공합니다.  

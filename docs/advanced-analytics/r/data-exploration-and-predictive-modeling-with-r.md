@@ -14,13 +14,13 @@ ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
 caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a64db58ce05675a3a2ac30e0bcea0d3924731a08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f700b865e2ee353872e8e0e67adf9e7c78060570
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>데이터 탐색 및 R을 통한 예측 모델링
 

@@ -15,15 +15,15 @@ f1_keywords: vs.toolbox
 helpviewer_keywords: Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d1295c3b760386380c626e1afde9b98401ef3bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a339068c7fe7f467a40f0b04bb3f08a6eecaefa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="toolbox-component-f1-help"></a>도구 상자 구성 요소 F1 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **도구 상자**에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트에 사용할 다양한 항목이 표시됩니다. **도구 상자** 는 **보기** 메뉴에서 열 수 있으며 원하는 경우 이 창을 도킹할 수 있습니다. 창을 도킹하면 **도구 상자** 를 열린 채로 고정하거나 **자동 숨기기** 를 설정하여 사용하지 않을 때 숨길 수 있습니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="add-azure-components-to-the-toolbox"></a>도구 상자에 Azure 구성 요소 추가  
  Integration Services용 Azure 기능 팩에는 Azure 데이터 원본 및 태스크에 연결하여 일반적인 Azure 작업을 수행할 수 있는 연결 관리자가 포함되어 있습니다. 도구 상자에 이러한 항목을 추가하려면 기능 팩을 설치하세요. 자세한 내용은 [Integration Services용 Azure 기능 팩&#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [도구 상자 사용](http://msdn.microsoft.com/library/16733e39-4dc5-416f-ab10-c1d823f79d2d)   
  [도구 상자 항목 선택&#40;유지 관리 태스크 페이지&#41;](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
   

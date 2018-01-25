@@ -17,15 +17,15 @@ helpviewer_keywords:
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2de231ff458d52de6aa4caf4ecda59eb6785490
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 528537bd5cf2e1b0d3020b8a22fe532e5c616cbb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다. 트랜잭션 복제와 스냅숏 복제는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자로의 데이터 게시를 지원합니다. 지원되는 구독자 플랫폼에 대한 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다.  
@@ -188,7 +188,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  게시자에서 원격 배포자를 사용하여 밀어넣기 구독을 만드는 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
  [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)   
  [다른 SQL Server 이외 구독자](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)   

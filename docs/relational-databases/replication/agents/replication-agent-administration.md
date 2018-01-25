@@ -25,15 +25,15 @@ helpviewer_keywords:
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 634f38525ab7809da0ade7f002312cb203b767ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86cebd3ab2286cc34ff25d45ec1837d75716c16f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-administration"></a>복제 에이전트 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 에이전트는 스키마와 데이터의 복사본 만들기, 게시자 또는 구독자에서 업데이트 검색, 서버 간에 변경 내용 전파 등 복제와 관련된 많은 태스크를 수행합니다. 기본적으로 복제 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행됩니다. 에이전트는 단순히 실행 파일이므로 명령줄 및 일괄 처리 스크립트에서 직접 호출할 수도 있습니다. 각 응용 프로그램 에이전트는 실행 방식을 제어하는 데 사용되는 일련의 런타임 매개 변수를 지원합니다. 이러한 매개 변수는 에이전트 프로필 또는 명령줄에서 지정됩니다.  
@@ -46,10 +46,10 @@ ms.lasthandoff: 11/17/2017
 |에이전트 실행 파일|파일 이름|  
 |----------------------|---------------|  
 |[복제 스냅숏 에이전트](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
-|[복제 배포 에이전트](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
+|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[복제 로그 판독기 에이전트](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[복제 큐 판독기 에이전트](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
-|[복제 병합 에이전트](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
+|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
   
  복제 에이전트뿐만 아니라 복제에서도 여러 작업을 통해 예약 유지 관리와 요청 시 유지 관리를 수행할 수 있습니다.  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="replication-maintenance-jobs"></a>복제 유지 관리 작업  
  복제는 다음 작업을 통해 예약 유지 관리와 요청 시 유지 관리를 수행합니다.  
   
-|정리 작업|설명|기본 일정|  
+|정리 작업|Description|기본 일정|  
 |------------------|-----------------|----------------------|  
 |에이전트 기록 정리: 배포|배포 데이터베이스에서 복제 에이전트 기록을 제거합니다.|10분마다 실행|  
 |배포 정리: 배포|배포 데이터베이스에서 복제된 트랜잭션을 제거합니다. 최대 배포 보존 기간 내에 동기화되지 않은 구독을 비활성화합니다.|10분마다 실행|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/17/2017
 |복제 에이전트 점검|기록을 로깅하지 않는 복제 에이전트를 검색합니다. 작업 단계가 실패하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 이벤트 로그에 기록합니다.|10분마다 실행|  
 |배포에 대한 복제 모니터링 리프레셔|복제 모니터에서 사용한 캐시된 쿼리를 새로 고칩니다.|계속 실행|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

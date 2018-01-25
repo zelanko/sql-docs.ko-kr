@@ -17,15 +17,15 @@ helpviewer_keywords:
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: decd82111d3cb541af7aaaf61bb516582b31cfb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b5386bdd5334bf07c936812cbb1ffa163bf15a7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-nested-for-xml-queries"></a>중첩 FOR XML 쿼리 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] **xml** 데이터 형식 및 [FOR XML 쿼리의 TYPE 지시어](../../relational-databases/xml/type-directive-in-for-xml-queries.md)를 사용하여 FOR XML 쿼리로 반환되는 XML을 클라이언트는 물론 서버에서도 처리할 수 있습니다.  
@@ -89,7 +89,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>내부 FOR XML 쿼리 결과를 외부 쿼리에 xml 유형 인스턴스로 반환  
- 내부 쿼리 결과가 `FOR XML` 유형으로 외부 쿼리로 반환되는 중첩 **xml** 쿼리를 작성할 수 있습니다. 예를 들어  
+ 내부 쿼리 결과가 `FOR XML` 유형으로 외부 쿼리로 반환되는 중첩 **xml** 쿼리를 작성할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SELECT Col1,   

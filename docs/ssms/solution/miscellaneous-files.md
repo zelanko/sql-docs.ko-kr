@@ -20,13 +20,13 @@ ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d514ea136d42bfdf39123028fd20937290a429f2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4aec93b0f1ce7322087205bdbe9f44dabdfdcd58
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="miscellaneous-files"></a>기타 파일
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 프로젝트의 외부에 있는 파일을 *기타 파일*이라고 합니다. 솔루션이 열려 있는 경우 프로젝트와 연관된 기타 파일을 열고 수정할 수 있습니다. 파일 확장명이 프로젝트 코드 편집기와 연결되지 않은 경우 파일은 기타 파일로 분류됩니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스크립트 프로젝트에서는 .txt 또는 .mdx 확장명을 가진 파일이 기타 파일로 간주됩니다. MDX 프로젝트에서는 .txt 또는 .sql 확장명을 가진 파일이 기타 파일로 간주됩니다. 파일 확장명을 코드 편집기에 연결하려면 [방법: 파일 확장명을 코드 편집기에 연결](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)을 참조하세요.  

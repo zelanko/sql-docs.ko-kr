@@ -17,13 +17,13 @@ ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f40b2c05b2868c83c0a80d1fab2de85fe35d381
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f7df416a20f8b8bae22e10e72fd35904c460808b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-with-new-file"></a>연결 프로그램(새 파일)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **파일** 메뉴에서 **열기**를 클릭한 다음 **파일**을 클릭하여 하나 이상의 편집기로 문서를 열 수 있습니다. **파일 열기** 대화 상자에서 파일을 선택하고 **열기** 화살표를 클릭한 다음 **연결 프로그램**을 클릭합니다. **연결 프로그램** 대화 상자의 **열려는 프로그램을 선택하십시오.** 목록에서 원하는 프로그램을 클릭한 다음 **열기**를 클릭합니다.  

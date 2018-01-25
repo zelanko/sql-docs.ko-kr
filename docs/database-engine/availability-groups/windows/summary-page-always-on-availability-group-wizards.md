@@ -20,13 +20,13 @@ ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9710a9b31855482af443a95c7504897be4f0f48
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1de53b861d56ed57ccc9243896ca628af5331299
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>요약 페이지(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;맨 위로 이동&#93;](#Top)  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [&#91;맨 위로 이동&#93;](#Top)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

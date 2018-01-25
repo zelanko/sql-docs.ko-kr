@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.maint.historycleanup.f1
 helpviewer_keywords: History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d88b3e5b54b2ede47272d58717b7088f0e0825f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aeace432c78f5a8179997697e316e874767b57fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>기록 정리 태스크(유지 관리 계획)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **기록 정리 태스크** 대화 상자를 사용하여 msdb 데이터베이스의 테이블에서 오래된 기록 정보를 삭제할 수 있습니다. 이 태스크는 백업 및 복원 기록, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 및 유지 관리 계획 기록의 삭제를 지원합니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
  이 문은 **sp_purge_jobhistory** 문과 **sp_delete_backuphistory** 문을 사용합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
- **연결**  
+ **대량 삽입 태스크 편집기**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   
  **새로 만들기**  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
  **특정 사용자 이름 및 암호 사용**  
  SQL Server 인증을 사용하여 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
- **사용자 이름**  
+ **User name**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
  **암호**  

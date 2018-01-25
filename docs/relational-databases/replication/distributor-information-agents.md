@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c2b4b54ae1494a72bf86d56f50ace2da6b0a5e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a60816a7220a5d1c2b9f15aeeac98e1a74da21ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-information-agents"></a>배포자 정보, 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **에이전트** 탭에는 게시자 및 구독자와 연결된 에이전트 및 유지 관리 작업에 대한 정보가 표시됩니다.  
@@ -31,14 +31,14 @@ ms.lasthandoff: 11/17/2017
   
  스냅숏, 로그 판독기 및 큐 판독기 에이전트와 유지 관리 작업에 대한 자세한 내용은 [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)를 참조하십시오. 배포자에 대한 **에이전트** 탭에 있는 에이전트 정보를 표시하면 스냅숏 및 로그 판독기 에이전트에 대한 게시자 정보가 제공됩니다. 그러나 배포자 뷰의 배포자에 대한 **에이전트** 탭에서는 **배포자 에이전트** 및 **병합 에이전트**를 선택할 수도 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  다음 섹션에서는 이 탭에서 배포자 에이전트 및 병합 에이전트에 대해 표시되는 데이터를 설명합니다.  
   
 ### <a name="distributor-agent"></a>배포자 에이전트  
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   오류  
+-   Error  
   
 -   다시 시도  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   오류  
+-   Error  
   
 -   다시 시도  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 11/17/2017
  **구독자 충돌**  
  병합 프로세스 중에 구독자에서 발생한 충돌 수입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
  [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   

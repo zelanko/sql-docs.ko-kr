@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: New Subscription Wizard
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f896ec3aef62e23f25ba58c34c54e1fe447e613a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3dfa511ecb0302be2417dbffb0c4b794261b4668
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>새 구독 마법사(UI 참조)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 섹션에서는 새 구독 마법사의 다음 페이지에 대한 정보를 제공합니다.  
@@ -47,10 +47,10 @@ ms.lasthandoff: 11/18/2017
   
 -   [HOST_NAME 값](../../relational-databases/replication/host-name-values.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>참고 항목  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [속성 참조&#40;복제&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

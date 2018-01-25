@@ -16,15 +16,15 @@ helpviewer_keywords:
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0603aa186c900e60cc17bc388d439738fd41a95a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 532a6809dc01c3122efa5e46665c77569ebf060d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 서식 파일에 대해 설명합니다. 필드가 데이터 파일에 없는 경우 서식 파일을 사용하여 테이블 열 가져오기를 건너뛸 수 있습니다. 건너뛴 열이 Null을 허용하거나 기본값을 가질 경우에만 데이터 파일에 테이블의 열 수보다 적은 수의 필드가 있을 수 있습니다.  

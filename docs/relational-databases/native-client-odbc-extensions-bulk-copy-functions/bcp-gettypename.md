@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f452b3c5e12b76ba2d1327b59f1cfa17f16bb46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccb5d8652421aa0d52fd941e99cbcd01a0cfb6b2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,10 +43,10 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>인수  
- *토큰*  
+ *token*  
  BCP 유형 토큰을 나타내는 값입니다.  
   
- *필드*  
+ *field*  
  요청된 토큰이 max 유형인지 여부를 나타냅니다.  
   
 ## <a name="returns"></a>반환 값  
@@ -67,7 +67,7 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|모두|**money**|  
 |**SQLFLT8**|모두|**float**|  
 |**SQLDATETIME**|모두|**datetime**|  
-|**SQLBITN**|모두|**null 비트**|  
+|**SQLBITN**|모두|**bit-null**|  
 |**SQLBIT**|모두|**bit**|  
 |**SQLBIGCHAR**|아니요|**char**|  
 |**SQLCHARACTER**|아니요|**char**|  
@@ -79,11 +79,11 @@ RETCODE bcp_gettypename (
 |**SQLBIGVARBINARY**|아니요|**Varbinary**|  
 |**SQLVARBINARY**|아니요|**Varbinary**|  
 |**SQLIMAGE**|모두|**이미지**|  
-|**SQLINTN**|모두|**int null**|  
-|**SQLDATETIMN**|모두|**null이 datetime**|  
-|**SQLMONEYN**|모두|**money null**|  
-|**SQLFLTN**|모두|**float null**|  
-|**SQLAOPSUM**|모두|**Sum**|  
+|**SQLINTN**|모두|**int-null**|  
+|**SQLDATETIMN**|모두|**datetime-null**|  
+|**SQLMONEYN**|모두|**money-null**|  
+|**SQLFLTN**|모두|**float-null**|  
+|**SQLAOPSUM**|모두|**합계**|  
 |**SQLAOPAVG**|모두|**Avg**|  
 |**SQLAOPCNT**|모두|**개수**|  
 |**SQLAOPMIN**|모두|**Min**|  

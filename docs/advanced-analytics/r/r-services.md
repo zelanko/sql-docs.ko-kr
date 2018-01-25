@@ -13,15 +13,15 @@ ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
 caps.latest.revision: "23"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 46912d3c96c55f07d54cc319f3d397e93e2d4da2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bc3d80c01bc16d6d89bbf3e97ddf88089e9379fd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="microsoft-machine-learning-services"></a>Microsoft 기계 학습 서비스
+# <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning Services
 
 Microsoft 컴퓨터 학습 서비스 목표 기계 학습 작업 및 도구 컴퓨터 학습 서비스를 사용 하는 응용 프로그램과 통합 하기 위한 확장 가능 하 고 확장 가능한 플랫폼을 제공 하는 것입니다. 플랫폼 제공 해야 모든 사용자의 요구 사항을 데이터 개발 및 분석 프로세스에 관련 된 데이터 과학자에서 설계자와 데이터베이스 관리자에 게 합니다.
 
@@ -62,7 +62,7 @@ SQL Server에 대 한 기계 학습을 설치 하면 오픈 소스 R 또는 Pyth
 시작 하려면 다음이 리소스를 참조 합니다.
 
 + [SQL Server R Services](sql-server-r-services.md)
-+ [SQL Server Python 서비스](../python/sql-server-python-services.md)
++ [SQL Server Python Services](../python/sql-server-python-services.md)
 + [기계 학습 자습서](../tutorials/machine-learning-services-tutorials.md)
 
 > [!NOTE]
@@ -91,7 +91,7 @@ Visual Studio에는 뛰어난 Python 개발 환경입니다. SQL 데이터베이
 + [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)
 + [Python-Visual Studio](https://www.visualstudio.com/vs/python/)
 
-### <a name="azure-machine-learning"></a>Azure 기계 학습
+### <a name="azure-machine-learning"></a>Azure Machine Learning
 
 Azure 기계 학습 스튜디오에 사용자의 작업 영역을 만들 때 미리 400 개 이상의 R 패키지에 액세스할 수 있게 합니다. 표준 CRAN R 배포 또는 Microsoft R Open을 사용 하 여 R을 배포 하기 위해 R을 사용 하는 실험을 만들 때 선택할 수 있습니다. 도 자신만 R 패키지 만들고 사용자 지정 모듈로 실행 하는 Azure에 업로드할 수 있습니다.
 

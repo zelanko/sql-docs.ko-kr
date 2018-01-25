@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28f18fd090691e5aae6023fe7282ef235b12778c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 534d9cd96831bfc79475f99111580e36f3603add
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>데이터베이스 복사 마법사 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 복사 마법사는 서버 가동을 중지시키지 않고 데이터베이스 및 특정 서버 개체를 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 다른 인스턴스로 이동하거나 복사합니다. 이 마법사를 사용하여 다음을 수행할 수 있습니다. 
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
 > **중요!!** **분리 및 연결** 방법은 원본 및 대상 데이터베이스 소유권을 **데이터베이스 복사 마법사**를 실행 중인 로그인으로 설정합니다.  데이터베이스 소유권을 변경하려면 [ALTER AUTHORIZATION(Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) 을 참조하세요.
   
   
-##  <a name="Prerequisites"></a> 필수 구성 요소  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
 -   대상 서버에서 SQL Server 에이전트가 시작되었는지 확인합니다.  
 
 -   대상 서버에서 원본 서버의 데이터 및 로그 파일 디렉터리에 연결할 수 있는지 확인합니다.
@@ -98,11 +98,11 @@ ms.lasthandoff: 11/17/2017
   
 -   업그레이드한 데이터베이스가 최적의 성능을 낼 수 있도록 업그레이드한 데이터베이스에 대해 [sp_updatestats(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (통계 업데이트)를 실행하세요.  
   
--   데이터베이스를 다른 서버 인스턴스로 이동 또는 복사하는 경우 사용자와 응용 프로그램에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조하세요.  
+-   데이터베이스를 다른 서버 인스턴스로 이동 또는 복사하는 경우 사용자와 응용 프로그램에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
   
 
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> Permissions  
  원본 서버와 대상 서버 모두에서 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 ##  <a name="Overview"></a> 데이터베이스 복사 마법사 페이지 
@@ -121,7 +121,7 @@ SQL Server Management Studio의 **데이터베이스 복사 마법사** 를 시�
 -    **SQL Server 인증 사용**  
 사용자가 SQL Server 인증 사용자 이름 및 암호를 제공하여 연결하도록 합니다.
 
-     -    **사용자 이름**  
+     -    **User name**  
 연결할 사용자 이름을 입력하는 데 사용됩니다. 이 옵션은 **SQL Server 인증**을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.
 
      -    **암호**  
@@ -141,7 +141,7 @@ SQL Server Management Studio의 **데이터베이스 복사 마법사** 를 시�
 -    **SQL Server 인증 사용**  
 사용자가 SQL Server 인증 사용자 이름 및 암호를 제공하여 연결하도록 합니다.
 
-     -    **사용자 이름**  
+     -    **User name**  
 연결할 사용자 이름을 입력하는 데 사용됩니다. 이 옵션은 **SQL Server 인증**을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.
 
      -    **암호**  
@@ -241,7 +241,7 @@ SQL Server Management Studio의 **데이터베이스 복사 마법사** 를 시�
 ###   <a name="location-of-source-database-files"></a>원본 데이터베이스 파일 위치
 이 페이지는 원본 서버와 대상 서버가 다를 때만 사용할 수 있습니다.  원본 서버의 데이터베이스 파일이 포함된 파일 시스템 공유를 지정합니다.
   
--    **데이터베이스**  
+-    **데이터베이스 백업**  
      이동 중인 각 데이터베이스의 이름을 표시합니다.  
   
 -    **폴더 위치**  

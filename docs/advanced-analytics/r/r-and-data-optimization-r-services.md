@@ -14,13 +14,13 @@ ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9455eef75df9e802d797b67da0454d36e11def2d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 265f66c0dfba28e1f3c35fa560098b3a2d13cb0c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-데이터 최적화에 대 한 성능
 
@@ -168,7 +168,7 @@ RevoScaleR의 최적화에서 추가 지침은 다음이 문서를 참조 합니
 
 + 함수에 대 한 참조 [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
 
-### <a name="use-microsoftml"></a>MicrosoftML 사용
+### <a name="use-microsoftml"></a>Use MicrosoftML
 
 또한 좋습니다 새 보면 **MicrosoftML** 계산 컨텍스트 및 RevoScaleR에서 제공 하는 변환에 사용할 수 있는 확장 가능한 기계 학습 알고리즘을 제공 하는 패키지입니다.
 

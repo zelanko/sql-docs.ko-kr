@@ -17,15 +17,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 309d63222c4863c7a8a85fc7d36f1d19bcc2cc32
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb54d609ebaafeab5c358d0cbf089d0d71194337
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 게시 및 배포를 구성하는 방법에 대해 설명합니다.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
     -   필요에 따라 배포자를 사용할 수 있도록 다른 게시자를 설정합니다. 배포자를 사용할 수 있도록 다른 게시자를 설정한 경우 **배포자 암호** 페이지에서 이러한 게시자에서 배포자로 연결할 때 사용될 암호를 입력해야 합니다.  
   
-    -   필요에 따라 구성 설정을 스크립팅합니다. 자세한 내용은 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
+    -   필요에 따라 구성 설정을 스크립팅합니다. 자세한 내용은 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)를 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 복제 게시 및 배포를 프로그래밍 방식으로 구성할 수 있습니다.  
@@ -168,7 +168,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [배포 구성](../../relational-databases/replication/configure-distribution.md)   

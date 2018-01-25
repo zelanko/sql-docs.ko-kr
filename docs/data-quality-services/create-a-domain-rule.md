@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9bdf255f25c8b23dc4a34e882716fe87a14a1c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5c7e6f027352d3d8fbd79304d6454340a438d9b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-domain-rule"></a>도메인 규칙 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 규칙을 만드는 방법에 대해 설명합니다. 도메인 규칙은 도메인 값의 유효성 검사, 수정 및 표준화를 수행하는 데 사용되는 조건입니다. 도메인 값이 정확하고 비즈니스 요구 사항에 맞는 것으로 간주되려면 도메인 규칙이 도메인 전체에서 유효해야 합니다. 도메인 규칙은 도메인 값의 유효성을 검사하는 데 사용되는 유효성 검사 규칙을 포함할 수 있지만 데이터 품질 프로젝트의 데이터를 수정하는 데 사용되지는 않습니다. 규칙은 또한 유효한 데이터에 대해 적용되고 데이터 수정에 사용되는 표준화 규칙을 포함합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  도메인 규칙을 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Build"></a> 도메인 규칙 작성  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  **모든 변경 내용 취소** 를 클릭하면 도메인 규칙에 대한 모든 변경 내용이 제거되고 이전에 적용된 규칙을 되돌리므로 규칙의 마지막 적용 이후에 변경된 내용이 더 이상 적용되지 않습니다. 각 도메인 값의 유효성은 취소된 변경 내용이 아니라 이전에 적용된 규칙에 따라 업데이트됩니다.  
   
-3.  **마침** 을 클릭하여 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+3.  **마침** 을 클릭하여 [도메인 관리 작업 종료](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 도메인 규칙을 만든 후  
  도메인 규칙을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/20/2017
   
  도메인 규칙을 만들 때 대체 방법 중 하나를 선택할 수 있습니다. 예를 들어 값이 A, B 또는 C 문자로 시작하는지 확인하려면 복잡한 조건이 하나 있는 단순한 규칙(예: 파이프 문자가 있는 정규식)을 만들거나 단순한 조건이 여러 개 포함된 복잡한 규칙을 만들면 됩니다. 첫 번째 규칙의 예는 "값이 다음을 포함 정규식 (^A|^B|^C)"입니다. 두 번째 규칙의 예는 "'값이 다음으로 시작 A' OR '값이 다음으로 시작 B' OR '값이 다음으로 시작 C'"입니다.  
   
-|조건|설명|예제|  
+|조건|Description|예제|  
 |---------------|-----------------|-------------|  
 |길이가 다음 값과 같음|피연산자에 지정된 문자 수로 구성된 값만 유효합니다.|피연산자 예: 3<br /><br /> 유효한 값: BB1<br /><br /> 유효하지 않은 값: AA|  
 |길이가 다음 값보다 크거나 같음|피연산자에 지정된 문자 수 또는 그보다 큰 문자 수로 구성된 값만 유효합니다.|피연산자 예: 3<br /><br /> 유효한 값: BB1, BBAA<br /><br /> 유효하지 않은 값: AA|  

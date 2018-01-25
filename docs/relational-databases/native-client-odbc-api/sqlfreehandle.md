@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLFreeHandle function
 ms.assetid: d374e5c8-ed35-43bf-8dd6-c37e38d9b5f1
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2d516d21ad9f0ad349a5ff5feb3c2662dc8f740
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4008f18549faedee2e6ebdc00c2f2531f95dc19f
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

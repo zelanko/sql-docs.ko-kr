@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fdedf349961105e1c979b87c0876150acbf04dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: feff3e58f4069175fa2e12b617a40aa92043dcc2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 복제 충돌 뷰어(병합 게시)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 충돌 뷰어를 사용하면 복제 동기화를 수행하는 동안 발생한 모든 충돌을 볼 수 있습니다. 충돌은 게시자와 구독자 또는 두 구독자 등 두 위치에서 같은 데이터를 동시에 변경할 때 발생합니다. 복제는 아티클을 만들 때 선택한 충돌 해결 프로그램을 사용하여 충돌을 자동으로 해결합니다. 그러나 필요한 경우 복제 충돌 뷰어를 사용하여 충돌 해결에 다른 해결 방법을 선택할 수 있습니다. 다음과 같은 두 가지 충돌이 일어날 수 있습니다.  
@@ -38,14 +38,14 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  논리적 레코드와 관련된 충돌은 충돌 뷰어에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)을 참조하세요.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  복제 충돌 뷰어는 두 개의 섹션으로 나뉘어져 있습니다. 대화 상자의 위쪽 섹션에 선택한 테이블의 충돌 목록이 표시됩니다. 충돌 목록에서 항목을 클릭하면 대화 상자의 아래쪽 섹션에 해당 충돌에 대한 세부 정보가 표시됩니다.  
   
  충돌이 발생한 원인(예: 게시자 및 구독자 모두에서 같은 행 업데이트)에 대한 정보는 대화 상자의 아래쪽 섹션에 표시됩니다. 아래쪽 섹션에서 충돌 데이터는**충돌 시 적용되는 내용** 및 **충돌 시 변경 내용 무시**중 해당하는 열에 표시됩니다. 업데이트된 데이터와 삭제된 데이터 간에 충돌이 있다면 충돌 시 삭제된 쪽을 표시하는 데이터는 없습니다. 이 경우 복제 충돌 뷰어에서는 행이 한 위치에서 삭제되었고 다른 위치에서는 업데이트되었음을 나타내는 메시지를 열 중 하나에 표시합니다. 권장 해결 방법도 표시됩니다.  
   
  복제 충돌 뷰어에서 편집할 수 없는 데이터(예: **rowguid** 데이터)는 회색으로 표시되며 읽기 전용으로 표시됩니다.  
   
- **데이터베이스**  
+ **데이터베이스 백업**  
  충돌이 발생한 게시가 포함된 데이터베이스를 선택합니다.  
   
  **게시**  

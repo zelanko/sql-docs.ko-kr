@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.generatesqlscript.f1
 helpviewer_keywords: Generate SQL Script dialog box
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8538fc5e066056e8b62e2aa7c65ad593a093125
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f5e7ca45098dba4c4145f36fc81a0eb2e963cbe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="generate-sql-script-replication-objects"></a>SQL 스크립트 생성(복제 개체)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 스크립트에는 게시 또는 구독과 같이 스크립팅된 복제 구성 요소를 구현하는 데 필요한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 시스템 저장 프로시저가 포함되어 있습니다. 토폴로지의 모든 복제 구성 요소는 재해 복구 계획의 일부로 스크립팅되어야 하며 반복 태스크를 자동화하는 데도 스크립트를 사용할 수 있습니다. 복제에서는 복제 개체를 스크립팅할 수 있는 다음 두 개의 대화 상자를 제공합니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  **복제 작업**  
  이 옵션은 **SQL 스크립트 생성** 대화 상자에서만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 스크립팅](../../relational-databases/replication/scripting-replication.md)  
   
   

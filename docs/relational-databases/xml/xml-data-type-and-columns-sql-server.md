@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 401b870e8a40b2d451bf7b17aa0eb7c4f7a304f0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 68e9e9a97b9a601bad62750b2092f2bea66441c0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **xml** 데이터 형식을 사용할 때의 장점과 제한 사항을 설명하며, XML 데이터의 저장 방법을 선택할 수 있도록 도와 줍니다.  

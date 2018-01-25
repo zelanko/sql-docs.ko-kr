@@ -22,13 +22,13 @@ ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e7ab7fc0efacbcd2f777c7c64154d98661d8318
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a4ed95b7a25ccf553de9e37d12cef8d7d65436fc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>쿼리 및 뷰 디자이너 창 표시(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 및 뷰 디자이너는 다이어그램 창, 조건 창, SQL 창, 결과 창이라는 네 개의 별도 창으로 구성되어 있습니다. 일반적으로 뷰를 열거나 새 쿼리를 만들 때는 네 개의 창이 모두 열리지만 쿼리 및 뷰 디자이너가 열려 있는 상태에서 이러한 창을 임의로 선택하여 열 수도 있습니다.  

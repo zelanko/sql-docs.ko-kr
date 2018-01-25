@@ -18,15 +18,15 @@ helpviewer_keywords:
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 582bbfff7ca3c786cca8aadfdb3c2709da9ed496
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e566dc836eb323c2ffcc5250f3c376123922870c
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 구현 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -140,8 +140,8 @@ ms.lasthandoff: 01/08/2018
   
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client &#40; ODBC &#41; 참조](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
- [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [SQL Server Native Client 사용한 응용 프로그램 작성](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

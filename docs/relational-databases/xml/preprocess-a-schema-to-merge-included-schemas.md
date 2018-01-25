@@ -22,15 +22,15 @@ helpviewer_keywords:
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d74cb58d143170bcef3c0e976ef786d87e92d1f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: de002920f313d9a8ce61c1eccde0e02b67468510
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>포함된 스키마를 병합하기 위해 스키마 전처리
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] W3C XSD **include** 요소는 XML 스키마를 두 개 이상의 실제 파일로 분할할 수 있는 스키마 모듈화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 이 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.  

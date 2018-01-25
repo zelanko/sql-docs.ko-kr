@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Text in row 테이블 옵션|'text in row' 테이블 옵션에 대한 참조가 발견되었습니다. 대신 sp_tableoption 'large value types out of row'를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |TEXTPTR|TEXTPTR 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |TEXTVALID|TEXTVALID 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|TIMESTAMP|사용되지 않는 **timestamp** 데이터 형식이 DDL 문에서 발견된 총 횟수입니다. 대신 **rowversion** 데이터 형식을 사용해야 합니다.|  
+|timestamp|사용되지 않는 **timestamp** 데이터 형식이 DDL 문에서 발견된 총 횟수입니다. 대신 **rowversion** 데이터 형식을 사용해야 합니다.|  
 |UPDATETEXT 또는 WRITETEXT|UPDATETEXT 또는 WRITETEXT 문이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |USER_ID|USER_ID 함수에 대한 참조가 발견되었습니다. 대신 DATABASE_PRINCIPAL_ID 함수를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |연결된 서버에 OLEDB 사용||  
@@ -284,7 +284,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |xp_loginconfig|xp_loginconfig 프로시저가 발견되었습니다. 대신 SERVERPROPERTY의 IsIntegratedSecurityOnly 인수를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |xp_revokelogin|xp_revokelogin 프로시저가 발견되었습니다. 대신 ALTER LOGIN DISABLE 또는 DROP LOGIN을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement 이벤트 클래스](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   

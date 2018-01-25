@@ -16,13 +16,13 @@ ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 611d94675e29ae28938bf4051721a6551d06e90f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95c4039cd1baeeea2d3d3039e069d97126cecba5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-1---create-the-finance-name-policy"></a>2-1단원 - Finance Name 정책 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 태스크에서는 Finance라는 데이터베이스를 만든 다음 모든 테이블이 **fintbl**로 시작하도록 지정하는 조건을 만듭니다. 그런 다음 Finance 데이터베이스의 테이블에 대한 명명 표준을 적용하는 정책 및 정책 범주를 만듭니다.  

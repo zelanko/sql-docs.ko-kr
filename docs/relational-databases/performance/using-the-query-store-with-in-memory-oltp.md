@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec175f1001d01e8935308bf875e033a318a454e4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cebb96214648a7c763912d2fbead40bdbe9dd48f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>메모리 내 OLTP와 쿼리 저장소 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

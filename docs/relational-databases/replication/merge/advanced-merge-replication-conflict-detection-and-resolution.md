@@ -22,15 +22,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47790c69d2f3fbfaf2af2d86b5bc6c6d3baf79fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c52b8aa34c3f384e9ab1f638e6f6e9dac3bdf04
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>고급 병합 복제 - 충돌 감지 및 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 게시자와 구독자가 연결되고 동기화가 이루어지면 병합 에이전트는 충돌이 있는지 감지합니다. 충돌이 감지되면 병합 에이전트는 게시에 아티클을 추가할 때 지정한 충돌 해결 프로그램을 사용해서 수락하여 다른 사이트로 전파할 데이터를 확인합니다.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [병합 구독 유형 및 충돌 해결 우선 순위 지정  &#40;SQL Server Management Studio &#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 복제 프로그래밍 및 RMO(복제 관리 개체) 프로그래밍: [끌어오기 구독 만들기](../../../relational-databases/replication/create-a-pull-subscription.md) 및 [밀어넣기 구독 만들기](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 복제 프로그래밍 및 RMO(복제 관리 개체) 프로그래밍: [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) 및 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>대화형 해결 프로그램  
  복제는 기본 우선 순위 기반 충돌 해결 프로그램이나 아티클 해결 프로그램과 함께 사용할 수 있는 대화형 해결 프로그램 사용자 인터페이스를 제공합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 동기화 관리자를 통해 요청 시 동기화를 수행할 때 대화형 해결 프로그램은 런타임 시 충돌 데이터를 표시하고 충돌 해결 방법을 선택할 수 있습니다. 대화형 해결 기능 설정 방법 및 대화형 해결 프로그램 시작 방법은 [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하십시오.  
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/17/2017
   
 -   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 동기화](../../../relational-databases/replication/synchronize-data.md)  
   
   

@@ -14,13 +14,13 @@ ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
 caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d52eb12f7985f4a7ee5561767ecdb6ffb981e1cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 14bfba68925f357c39fc192ae7852055a7e91f4f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 라이브러리 및 R 데이터 형식
 
@@ -54,7 +54,7 @@ Microsoft R Server의 특정 버전에 포함 된 R 버전을 찾으려면 참�
 
 다음 표는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터를 R 스크립트에 사용한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 반환할 때 데이터 형식 및 값의 변화를 보여줍니다.
 
-|SQL 유형|R 클래스|RESULT SET 형식|주석|
+|SQL 유형|R 클래스|RESULT SET 형식|설명|
 |-|-|-|-|
 |**bigint**|`numeric`|**float**||
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|입력 매개 변수 및 출력으로만 허용됨|
@@ -155,8 +155,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|1.|1.|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|1.|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 R에서 `str` 함수를 사용할 경우 출력 데이터의 스키마를 가져옵니다. 이 함수는 다음 정보를 반환합니다.
 

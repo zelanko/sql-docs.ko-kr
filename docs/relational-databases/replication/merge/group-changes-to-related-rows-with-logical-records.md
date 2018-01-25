@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logical records [SQL Server replication]
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026199b68479b9219984123bcc5958b037474986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2ae5beed7a724e7baa9783e411f8b2f656e3f8a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  ![값을 포함하는 3개의 테이블 논리적 레코드](../../../relational-databases/replication/merge/media/logical-records-02.gif "Three table logical record with values")  
   
- 아티클 간 논리적 레코드 관계를 정의하려면 [병합 테이블 기사 간의 논리적 레코드 관계 정의](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)를 참조하십시오.  
+ 아티클 간 논리적 레코드 관계를 정의하려면 [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)를 참조하십시오.  
   
 ## <a name="benefits-of-logical-records"></a>논리적 레코드의 장점  
  논리적 레코드 기능에는 다음과 같은 두 가지 주요 장점이 있습니다.  
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
     -   겹치지 않는 매개 변수가 있는 필터는 사용할 수 없습니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)의 "'partition options' 설정" 섹션을 참조하십시오.  
   
--   게시에서 조인 필터를 사용하는 경우 논리적 레코드 관계에 관련된 모든 조인 필터에 대해 **join unique key** 속성을 **true** 로 설정해야 합니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)을 참조하세요.  
+-   게시에서 조인 필터를 사용하는 경우 논리적 레코드 관계에 관련된 모든 조인 필터에 대해 **join unique key** 속성을 **true** 로 설정해야 합니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)를 참조하세요.  
   
 ### <a name="relationships-between-tables"></a>테이블 간 관계  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
   
  논리적 레코드를 사용하는 경우 복제 에이전트는 각각의 전체 논리적 레코드에 대한 변경 내용을 한 번에 처리해야 합니다. 이 방식은 병합 에이전트가 행을 복제하는 데 걸리는 시간에 영향을 미칩니다. 또한 에이전트가 각 논리적 레코드에 대해 별도의 트랜잭션을 열기 때문에 잠금 요구 사항이 증가할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
+## <a name="see-also"></a>참고 항목  
+ [병합 복제를 위한 아티클 옵션](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   

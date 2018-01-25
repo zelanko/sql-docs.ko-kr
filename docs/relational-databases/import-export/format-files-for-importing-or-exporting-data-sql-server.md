@@ -17,20 +17,20 @@ helpviewer_keywords:
 - format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c37783bc1baedf61b61553ad46066b0730b2f18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dbc0e4d2b87b277479796aa99235dc1f47921db6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>데이터를 가져오거나 내보내기 위한 서식 파일(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 데이터를 대량으로 가져오거나 테이블의 데이터를 대량으로 내보내는 경우 *서식 파일*을 사용하여 데이터를 대량으로 내보내거나 가져오는 데 필요한 모든 서식 정보를 저장할 수 있습니다. 여기에는 해당 테이블을 기준으로 하는 데이터 파일의 각 필드에 대한 서식 정보가 포함됩니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 두 유형의 서식 파일, 즉 XML 서식 및 비 XML 서식 파일을 지원합니다. 비 XML 서식 파일과 XML 서식 파일은 모두 데이터 파일의 각 필드에 대한 설명을 포함하며, XML 서식 파일의 경우에는 해당하는 테이블 열에 대한 설명도 포함합니다. 일반적으로 XML 서식 파일과 비 XML 서식 파일은 서로 전환이 가능하지만 새 서식 파일에는 비 XML 서식 파일에 비해 여러 가지 장점이 있는 XML 구문을 사용하는 것이 좋습니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)을 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 두 유형의 서식 파일, 즉 XML 서식 및 비 XML 서식 파일을 지원합니다. 비 XML 서식 파일과 XML 서식 파일은 모두 데이터 파일의 각 필드에 대한 설명을 포함하며, XML 서식 파일의 경우에는 해당하는 테이블 열에 대한 설명도 포함합니다. 일반적으로 XML 서식 파일과 비 XML 서식 파일은 서로 전환이 가능하지만 새 서식 파일에는 비 XML 서식 파일에 비해 여러 가지 장점이 있는 XML 구문을 사용하는 것이 좋습니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
   
   
 ##  <a name="Benefits"></a> 서식 파일의 이점  

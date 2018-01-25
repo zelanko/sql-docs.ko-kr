@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec7f470e35734361e5c4fe5fab126bbb544344d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68fafc8b215fa71f07cae30b0c19839fdd7261ab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, Plan Cache 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Plan Cache** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 저장 프로시저, 임시 및 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 트리거와 같은 개체를 저장하기 위해 메모리를 사용하는 방법을 모니터링하는 카운터를 제공합니다. **Plan Cache** 개체의 여러 인스턴스를 한 번에 모니터링할 수 있으며 각 인스턴스는 모니터링할 다양한 유형의 계획을 나타냅니다.  
   
  다음 표에서는 **SQLServer:Plan Cache**카운터에 대해 설명합니다.  
   
-|SQL Server Plan Cache 카운터|설명|  
+|SQL Server Plan Cache 카운터|Description|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|캐시 적중 횟수와 조회 간 비율입니다.|  
 |**Cache Hit Ratio**|내부용으로만 사용할 수 있습니다.| 
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|Plan Cache 인스턴스|설명|  
+|Plan Cache 인스턴스|Description|  
 |-------------------------|-----------------|  
 |**_Total**|모든 유형의 캐시 인스턴스에 대한 정보입니다.|  
 |**Sql Plans**|자동으로 매개 변수가 있는 쿼리를 포함하여 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 생성되는 쿼리 계획이거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **또는** sp_cursorprepare **를 사용하여 준비된**문으로 생성되는 쿼리 계획입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 동일한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 나중에 실행되는 경우 다시 사용하기 위해 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 계획을 캐시합니다. 사용자가 매개 변수가 있는 쿼리(명시적으로 준비하지 않은 경우 포함)도 Prepared SQL Plans로 모니터링됩니다.|  

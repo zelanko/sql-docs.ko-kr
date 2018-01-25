@@ -17,15 +17,15 @@ helpviewer_keywords:
 - comparing replicated tables
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be07de93b08b656b8ead2beb0a2a2c0873baebda
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 225c0d7352cc1f70bee986b0d7b49c02bf743517
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>복제된 테이블의 차이점 비교(복제 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 아티클 유효성 검사는 게시자 및 구독자에서 테이블 아티클의 게시된 데이터가 일치하지 않는지 여부를 확인하는 데 사용됩니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-replicated-data.md)를 참조하세요. 그러나 유효성 검사를 통해서는 성공 또는 실패 정보만 반환되고 원본 테이블과 대상 테이블의 차이점에 대한 정보는 제공되지 않습니다. **tablediff** 명령 프롬프트 유틸리티는 두 테이블 간의 세부 차이점 정보를 반환하며 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 생성하여 구독이 게시자의 데이터와 일치하게 할 수도 있습니다.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **-strict** (옵션) - 원본 테이블과 대상 테이블 간의 엄격한 스키마 비교를 적용하려는 경우에 사용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구독자에서 데이터 유효성 검사](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 377fe0363d6884f7912cc67afecaa25af6ab2d6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dd30fb239fa8d57609321af659eb461008ca80a4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>복제 모니터에 임계값 및 경고 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독에 대한 상태 정보가 표시됩니다. 기본적으로 복제 모니터는 초기화되지 않은 구독에 대해서만 경고를 표시하지만 다른 조건에 대한 경고를 활성화할 수 있습니다. 토폴로지에 대한 경고를 활성화하여 상태 및 성능 정보를 적시에 받아보는 것이 좋습니다.  
@@ -167,7 +167,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  **닫기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

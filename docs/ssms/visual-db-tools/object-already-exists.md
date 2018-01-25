@@ -18,13 +18,13 @@ ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d12ad3f6d43440aefc8beeb8f815fba28f65dbef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b5aa7b70862a06b7c2817783917b8d61012f3b1e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="object-already-exists"></a>이미 존재하는 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 저장하려는 개체의 이름이 데이터베이스에 이미 있는 개체의 이름과 같습니다. 다른 이름을 선택한 다음 계속하십시오.  

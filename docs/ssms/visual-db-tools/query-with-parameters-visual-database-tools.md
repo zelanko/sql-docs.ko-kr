@@ -19,13 +19,13 @@ ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66b72b4a855628c20ba06afa465be5ee7997fb6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0db1311d470614c5ab30b960bbfe05d1bf86e5d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>매개 변수를 사용하여 쿼리(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 매번 서로 다른 입력으로 응용 프로그램에서 여러 차례 다시 사용할 수 있는 쿼리를 만드는 것이 유용한 경우가 많습니다. 이 섹션에서는 이와 같은 일반적인 목적을 위해 매개 변수 쿼리를 만드는 방법에 대해 설명합니다.  

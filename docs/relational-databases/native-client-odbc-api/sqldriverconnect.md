@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLDriverConnect function
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bcaeeb96fdc8ca97d1afbf9eb9cc14189f4a091
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 449cd44ff1561d95aeab80eca6ca18c0efde5f70
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,11 +37,11 @@ ms.lasthandoff: 01/08/2018
   
  에 대 한 연결 문자열 키워드에 대해 유효한 설명은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client를 [Connection String Keywords with SQL Server Native Client를 사용 하 여](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)합니다.  
   
- 경우는 **SQLDriverConnect***DriverCompletion* 매개 변수 값이 SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE 또는 SQL_DRIVER_COMPLETE_REQUIRED 이면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 표시 되는 대화 상자에서 키워드 값을 검색합니다. 키워드 값이 연결 문자열에서 전달되었고 사용자가 대화 상자에서 키워드 값을 변경하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 연결 문자열의 값을 사용합니다. 키워드 값이 연결 문자열에서 설정되지 않았고 사용자가 대화 상자에서 키워드 값을 지정하지 않은 경우 드라이버는 기본값을 사용합니다.  
+ 경우는 **SQLDriverConnect * * * DriverCompletion* 매개 변수 값이 SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE 또는 SQL_DRIVER_COMPLETE_REQUIRED 이면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 키워드 값을 검색 하는 Native Client ODBC 드라이버는 표시 되는 대화 상자입니다. 키워드 값이 연결 문자열에서 전달되었고 사용자가 대화 상자에서 키워드 값을 변경하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 연결 문자열의 값을 사용합니다. 키워드 값이 연결 문자열에서 설정되지 않았고 사용자가 대화 상자에서 키워드 값을 지정하지 않은 경우 드라이버는 기본값을 사용합니다.  
   
  **SQLDriverConnect** 유효한 제공 해야 *WindowHandle* 경우 *DriverCompletion* 값 필요 (또는 채워야) 드라이버의 연결 대화 상자를 표시 합니다. 잘못된 핸들을 지정하면 SQL_ERROR가 반환됩니다.  
   
- DRIVER 또는 DSN 키워드 중 하나를 지정합니다. 둘 모두 지정한 경우 ODBC 드라이버는 이 두 키워드 중 왼쪽의 키워드를 사용하고 다른 하나는 무시합니다. 드라이버가 지정 되거나 둘 중에서 가장 왼쪽을 하는 경우 및 **SQLDriverConnect***DriverCompletion* 매개 변수 값이 SQL_DRIVER_NOPROMPT 이면 SERVER 키워드와 적절 한 값은 필수입니다.  
+ DRIVER 또는 DSN 키워드 중 하나를 지정합니다. 둘 모두 지정한 경우 ODBC 드라이버는 이 두 키워드 중 왼쪽의 키워드를 사용하고 다른 하나는 무시합니다. 드라이버가 지정 되거나 둘 중에서 가장 왼쪽을 하는 경우와 **SQLDriverConnect * * * DriverCompletion* 매개 변수 값이 SQL_DRIVER_NOPROMPT 이면 SERVER 키워드와 적절 한 값은 필수입니다.  
   
  SQL_DRIVER_NOPROMPT를 지정하는 경우에는 사용자 인증 키워드를 값과 함께 제공해야 합니다. 드라이버는 문자열 "Trusted_Connection=yes" 또는 UID와 PWD 키워드가 제공되었는지 확인합니다.  
   

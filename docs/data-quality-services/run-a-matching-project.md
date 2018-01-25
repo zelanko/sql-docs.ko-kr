@@ -17,15 +17,15 @@ f1_keywords:
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 284e081f53fe047a257d22020d0792897c8623ed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9874323ad1bef8199d2ebc969bb3673826b946fb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="run-a-matching-project"></a>일치 프로젝트 실행
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 데이터 일치를 수행하는 방법에 대해 설명합니다. 일치 프로세스에서는 일치 정책의 일치 규칙에 따라 일치 레코드 클러스터를 확인하고 Survivorship 규칙에 따라 각 클러스터에서 하나의 레코드를 존속 레코드로 지정한 후 결과를 내보냅니다. 일치 프로세스(중복 제거라고도 함)는 DQS의 컴퓨터 기반 프로세스에서 수행되지만, 대화형으로 일치 규칙을 만들고 여러 선택 항목에서 Survivorship 규칙을 선택하여 일치 프로세스를 제어할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   하나 이상의 일치 규칙으로 구성된 일치 정책을 사용하여 만든 기술 자료가 있어야 합니다.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  일치 프로젝트를 실행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="StartingaMatchingProject"></a> 1단계: 일치 프로젝트 시작  

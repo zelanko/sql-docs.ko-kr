@@ -16,19 +16,19 @@ helpviewer_keywords:
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.openlocfilehash: 5c4b0e6d0830e1addce4f3bc586aa4c09029314c
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 3a06dc9f01b2cf889605770beb57940b7f10558b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="how-online-index-operations-work"></a>온라인 인덱스 작동 방식
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/28/2017
 |-----------|---------------------|------------------|  
 |준비|새 인덱스가 작성되고 쓰기 전용으로 설정됩니다.|IS|  
 |빌드|원본의 데이터가 삽입됩니다.<br /><br /> 원본에 적용된 사용자 수정 사항(삽입, 업데이트, 삭제)이 적용됩니다.<br /><br /> 사용자는 이 작업을 인식하지 못합니다.|IS|  
-|최종|인덱스 메타데이터가 업데이트됩니다.<br /><br /> 인덱스가 읽기/쓰기 상태로 설정됩니다.|S<br /><br /> 또는<br /><br /> SCH-M|  
+|최종|인덱스 메타데이터가 업데이트됩니다.<br /><br /> 인덱스가 읽기/쓰기 상태로 설정됩니다.|S<br /><br /> 로 구분하거나 여러<br /><br /> SCH-M|  
   
  인덱스 작업이 완료될 때까지 사용자가 실행한 SELECT 문은 대상에 액세스할 수 없습니다.  
   

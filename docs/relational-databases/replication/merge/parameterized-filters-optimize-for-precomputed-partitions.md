@@ -17,15 +17,15 @@ helpviewer_keywords:
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bb142518ea996d1344c71aed46e06645fb0d957
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5e5341614b3da26ec21f84017b0e776000a3bb5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>매개 변수가 있는 필터 - 사전 계산된 파티션에 최적화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 사전 계산 파티션을 필터링된 병합 게시에 사용하여 성능을 최적화할 수 있습니다. 또한 사전 계산 파티션은 필터링된 게시에서 논리 레코드를 사용하기 위한 요구 사항입니다. 논리적 레코드에 대한 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="performance-of-precomputed-partitions"></a>사전 계산 파티션의 성능  
  구독자에서 게시자로 변경 내용이 업로드될 경우 사전 계산 파티션에서 성능 손실이 적게 발생하지만 병합 처리 시간의 대부분이 파티션을 평가하고 게시자에서 구독자로 변경 내용을 다운로드하는 데 소비되므로 성능을 향상시키는 것이 중요합니다. 동시에 동기화하는 구독자의 수와 한 파티션에서 다른 파티션으로 행을 이동하는 동기화당 업데이트 수에 따라 성능상의 이점이 달라집니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

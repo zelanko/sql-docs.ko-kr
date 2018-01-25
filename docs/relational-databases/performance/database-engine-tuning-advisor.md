@@ -14,17 +14,17 @@ ms.topic: article
 f1_keywords: sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c0c43bf59c4b45990c491f129598fe4210a8494b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11720ea18ba01bd0cdaec11e4500dc5cba5ef24c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자
+# <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTA(데이터베이스 엔진 튜닝 관리자)는 데이터베이스를 분석하고 쿼리 성능을 최적화하는 데 필요한 사항을 권장합니다. 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스 구조나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 구조를 전문적으로 파악하지 못해도 인덱스, 인덱싱된 뷰 또는 테이블 파티션의 최적 집합을 선택 및 작성할 수 있습니다. DTA를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
   
 -   특정 문제 쿼리의 성능 문제 해결  

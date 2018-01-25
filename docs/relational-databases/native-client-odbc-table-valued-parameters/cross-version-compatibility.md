@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: table-valued parameters (ODBC), cross-version compatibility
 ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38f2a11a0926b53dad729137d602281cc17bf64a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3fd2c2240e014fa4b7ff9d51ce94419b6cde839a
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="cross-version-compatibility"></a>버전 간 호환성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

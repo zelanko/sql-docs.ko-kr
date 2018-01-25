@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing subscription information
 ms.assetid: 54aac83b-6f29-40d7-8901-cf059749867f
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16c003c313d19db7597c309db9bceeda88719780
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4472b4fd63f2447e0ba8602c6bb2ae0cf59e2dd2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-information-and-perform-tasks-for-a-subscription-replication-monitor"></a>구독에 대한 정보 보기 및 태스크 수행(복제 모니터)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 모니터는 구독에 대한 정보가 들어 있는 다음 탭을 제공합니다.  

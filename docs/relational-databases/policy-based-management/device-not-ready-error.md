@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dffc42e358023b7011e54e1794cfcb9c3db920ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68d66ab4bf588130b6278322ed131c0305791e48
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="device-not-ready-error"></a>장치 준비 안 됨 오류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 규칙은 시스템 이벤트 로그에서 EventId 15를 검사합니다. 이 오류는 SCSI 호스트 어댑터 구성 문제 또는 이와 관련된 문제로 인해 발생할 수 있습니다.  

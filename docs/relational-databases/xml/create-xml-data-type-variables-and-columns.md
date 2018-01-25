@@ -16,15 +16,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 204c9ecf128f9aea3b520a63f4d001c09e9e9b19
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 71657218912add2fd3b44297e0a4b82cb7b655a5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML 데이터 형식 변수 및 열 만들기
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 유형과 마찬가지로 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 **CAST 및 CONVERT** 로 테이블을 만들 때 [xml](../../t-sql/functions/cast-and-convert-transact-sql.md)데이터 형식을 열 유형으로 사용할 수 있습니다.  
@@ -72,7 +72,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **xml** 유형의 열에서 NULL과 NOT NULL 제약 조건도 지원합니다. 예를 들어  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **xml** 유형의 열에서 NULL과 NOT NULL 제약 조건도 지원합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  

@@ -19,13 +19,13 @@ ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe0d00e66789e1971df2db603cc90213c31067de
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5669c143e5e8c0f8da376b59d8e17a77a42a54dd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>사후 저장 알림 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자는 테이블에 대한 변경 내용을 저장하려 할 때 오류가 발생하면 나타납니다. 이 대화 상자에는 데이터베이스에 성공적으로 저장된 개체와 저장되지 않은 개체 및 발생한 오류가 표시됩니다.  

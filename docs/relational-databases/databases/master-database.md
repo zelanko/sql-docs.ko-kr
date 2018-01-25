@@ -16,14 +16,14 @@ helpviewer_keywords:
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: 69ac660e66f9d997d2b7227d13f9c007dc68d7ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 179ae8ba7d0a420863397caa080f1dd98b7b4dd9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="master-database"></a>master 데이터베이스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **master** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 대한 모든 시스템 수준 정보를 기록합니다. 이 정보에는 로그온 계정, 끝점, 연결된 서버 및 시스템 구성 설정 등 인스턴스 차원의 메타데이터가 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 시스템 개체가 **master** 데이터베이스에 저장되지 않고 [리소스 데이터베이스](../../relational-databases/databases/resource-database.md)에 저장됩니다. **master** 는 다른 모든 데이터베이스의 존재 여부와 해당 데이터베이스 파일의 위치를 기록하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 초기화 정보를 기록하는 데이터베이스이기도 합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **데이터베이스를 사용할 수 없는 경우에는** 를 시작할 수 없습니다.  
@@ -43,39 +43,39 @@ ms.lasthandoff: 11/17/2017
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|아니요|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|아니오|  
 |ANSI_NULL_DEFAULT|OFF|예|  
 |ANSI_NULLS|OFF|예|  
 |ANSI_PADDING|OFF|예|  
 |ANSI_WARNINGS|OFF|예|  
 |ARITHABORT|OFF|예|  
-|AUTO_CLOSE|OFF|아니요|  
+|AUTO_CLOSE|OFF|아니오|  
 |AUTO_CREATE_STATISTICS|ON|예|  
-|AUTO_SHRINK|OFF|아니요|  
+|AUTO_SHRINK|OFF|아니오|  
 |AUTO_UPDATE_STATISTICS|ON|예|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
-|CHANGE_TRACKING|OFF|아니요|  
+|CHANGE_TRACKING|OFF|아니오|  
 |CONCAT_NULL_YIELDS_NULL|OFF|예|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|예|  
 |CURSOR_DEFAULT|GLOBAL|예|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 아니오<br /><br /> 아니요|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니오<br /><br /> 아니오<br /><br /> 아니오|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|예|  
-|DB_CHAINING|ON|아니요|  
-|ENCRYPTION|OFF|아니요|  
-|MIXED_PAGE_ALLOCATION|ON|아니요|  
+|DB_CHAINING|ON|아니오|  
+|ENCRYPTION|OFF|아니오|  
+|MIXED_PAGE_ALLOCATION|ON|아니오|  
 |NUMERIC_ROUNDABORT|OFF|예|  
 |PAGE_VERIFY|CHECKSUM|예|  
 |PARAMETERIZATION|SIMPLE|예|  
 |QUOTED_IDENTIFIER|OFF|예|  
-|READ_COMMITTED_SNAPSHOT|OFF|아니요|  
+|READ_COMMITTED_SNAPSHOT|OFF|아니오|  
 |RECOVERY|SIMPLE|예|  
 |RECURSIVE_TRIGGERS|OFF|예|  
-|Service Broker 옵션|DISABLE_BROKER|아니요|  
+|Service Broker 옵션|DISABLE_BROKER|아니오|  
 |TRUSTWORTHY|OFF|예|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
-## <a name="restrictions"></a>제한 사항  
+## <a name="restrictions"></a>Restrictions  
  **master** 데이터베이스에서는 다음 작업을 수행할 수 없습니다.  
   
 -   파일이나 파일 그룹 추가  

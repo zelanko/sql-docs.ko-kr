@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: ISSAsynchStatus interface
 ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f97d1ca363452b6f8b91cc1d70794df200539e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9055e0410deed0d77c1bf14554789e753d229ef7
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,11 +43,11 @@ ms.lasthandoff: 11/17/2017
   
  다음 메서드를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 비동기적인 실행을 사용할 수 있습니다.  
   
--   **Icommand:: Execute**  
+-   **ICommand::Execute**  
   
--   **Iopenrowset:: Openrowset**  
+-   **IOpenRowset::OpenRowset**  
   
--   **Imultipleresults:: Getresult**  
+-   **IMultipleResults::GetResult**  
   
 ## <a name="see-also"></a>관련 항목:  
  [인터페이스 &#40; OLE db&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   

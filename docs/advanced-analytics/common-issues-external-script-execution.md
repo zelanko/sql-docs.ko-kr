@@ -14,13 +14,13 @@ ms.topic: article
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6ce80d7ca50b9410120bdb61a347d4b8a90c39b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2920cfae6e23845a9ac1643a17d6f133adaaf70d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>일반적인 문제를 SQL Server의 외부 스크립트 실행
 
@@ -191,9 +191,9 @@ R 사용자 (Python에도 사용)에 대 한 Windows 그룹 R 서비스를 실�
 
 4. 일반적으로 서비스를 다시 시작 컴퓨터 학습 스크립트 실행 될 수 있도록 하며 문제를 해결 합니다. 경로 인수에 기록해 둡니다 다시 시작이 문제를 해결 하지 않는 경우는 **이진 경로** 속성을 선택한 다음을 수행 합니다.
 
-    1. 실행 프로그램의.config 파일을 검토 하 고 작업 디렉터리가 올바른지 확인 하십시오.
+    a. 실행 프로그램의.config 파일을 검토 하 고 작업 디렉터리가 올바른지 확인 하십시오.
 
-    2. 에 설명 된 대로 Windows 그룹 실행 패드에서 사용 되는 SQL Server 인스턴스에 연결할 수 있는지를 확인는 [이전 섹션](#bkmk_LaunchpadTS)합니다.
+    b. 에 설명 된 대로 Windows 그룹 실행 패드에서 사용 되는 SQL Server 인스턴스에 연결할 수 있는지를 확인는 [이전 섹션](#bkmk_LaunchpadTS)합니다.
 
     c. 서비스 속성을 변경 하는 경우에 실행 패드 서비스 다시 시작 합니다.
 
@@ -319,7 +319,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 *[1] "c:\\프로그램 파일\\Microsoft SQL Server\\MSSQL13 합니다. SQL2016\\R_SERVICES "*
 
-*[1] "c: / Program 파일/Microsoft SQL Server/MSSQL13 합니다. SQL2016/R_SERVICES/라이브러리 "*
+*[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 
 문제를 해결 하려면 SQL Server 인스턴스 라이브러리에 패키지를 다시 설치 해야 합니다.
 

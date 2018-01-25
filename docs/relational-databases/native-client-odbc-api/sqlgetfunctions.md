@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLGetFunctions function
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b0c1637dc1d0638d893fc2bfaa214eb49e4e5ff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d787b7ac3ef1625e92a72a25a9ad7be6515df805
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/08/2018
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 인터페이스는 ODBC에 대해 정의된 세 가지 호환성 수준(ISO, Open Group 및 ODBC 수준 2)으로 컴파일됩니다. **SQLGetFunctions** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 모든 ODBC 함수가 지원된다는 것을 보고합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQLGetFunctions 함수](http://go.microsoft.com/fwlink/?LinkId=59353)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

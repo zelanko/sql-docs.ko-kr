@@ -16,20 +16,20 @@ helpviewer_keywords:
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 caps.latest.revision: "58"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ebcff5d0d885fe580af9ac0b14d81e7b4ad2746
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅숏으로 되돌리기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 온라인 데이터베이스의 데이터가 손상되면 일부 경우 데이터베이스를 손상 발생 이전의 데이터베이스 스냅숏으로 되돌리는 작업이 백업에서 온라인 데이터베이스를 복원하는 방법에 대한 대체 방법이 될 수 있습니다. 예를 들어 데이터베이스 되돌리기 작업은 테이블 삭제와 같은 최근의 심각한 사용자 오류 발생 전의 상황으로 돌아가는 데 유용할 수 있습니다. 그러나 스냅숏을 만든 후의 모든 변경 내용은 손실됩니다.  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
      [보안](#Security)  
   
--   **데이터베이스를 데이터베이스 스냅숏으로 되돌리려면:**  [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
  데이터베이스를 되돌리기 전에 다음 제한 사항을 고려합니다.  
   
--   되돌리기는 미디어 복구용으로 사용할 수 없습니다. . 데이터베이스 스냅숏은 데이터베이스 파일의 불완전한 복사본이므로 데이터베이스나 데이터베이스 스냅숏이 손상된 경우 스냅숏에서 되돌릴 수 없는 경우가 많습니다. 가능하다고 해도 손상된 경우에는 되돌리기를 수행해도 문제가 해결되지 않습니다. 따라서 데이터베이스를 보호하려면 정기적으로 백업하고 복원 계획을 테스트해야 합니다. 자세한 내용은 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
+-   되돌리기는 미디어 복구용으로 사용할 수 없습니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 데이터베이스 스냅숏은 데이터베이스 파일의 불완전한 복사본이므로 데이터베이스나 데이터베이스 스냅숏이 손상된 경우 스냅숏에서 되돌릴 수 없는 경우가 많습니다. 가능하다고 해도 손상된 경우에는 되돌리기를 수행해도 문제가 해결되지 않습니다. 따라서 데이터베이스를 보호하려면 정기적으로 백업하고 복원 계획을 테스트해야 합니다. 자세한 내용은 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
   
     > [!NOTE]  
     >  데이터베이스 스냅숏을 만든 시점까지 원본 데이터베이스를 복원해야 하는 경우 전체 복구 모델을 사용하고 이 작업을 수행할 수 있는 백업 정책을 구현합니다.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
 -   되돌리면 전체 텍스트 카탈로그가 모두 삭제됩니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  원본 데이터베이스 및 데이터베이스 스냅숏은 다음 사전 요구 사항을 충족해야 합니다.  
   
 -   데이터베이스가 손상되지 않았어야 합니다.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  원본 데이터베이스에 대한 RESTORE DATABASE 권한을 가진 사용자는 해당 데이터베이스를 데이터베이스 스냅숏을 만들었을 때의 상태로 되돌릴 수 있습니다.  
   
 ##  <a name="TsqlProcedure"></a> 데이터베이스를 데이터베이스 스냅숏으로 되돌리는 방법(Transact-SQL 사용)  

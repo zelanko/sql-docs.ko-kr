@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: OLE DB, how-to topics
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cea73ca80f4f022543be4d1b6130439133e54bc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3a8332117457dd90f5eb6210ac03b55401ac8b3b
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 방법 도움말 항목
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

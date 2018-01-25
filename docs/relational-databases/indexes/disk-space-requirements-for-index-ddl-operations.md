@@ -19,17 +19,17 @@ helpviewer_keywords:
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddf19430350de7403cc3c9d46416cbc6cfa409c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5479835a035a5a70a58463c3ed04f5540fdb1554
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="disk-space-requirements-for-index-ddl-operations"></a>인덱스 DDL 작업의 디스크 공간 요구 사항
+# <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   디스크 공간은 인덱스를 생성, 다시 작성 또는 삭제할 때 고려해야 할 주요 사항입니다. 디스크 공간이 부족하면 성능이 저하되거나 인덱스 작업이 실패할 수도 있습니다. 이 항목에서는 인덱스 DDL(데이터 정의 언어) 작업에 필요한 디스크 공간을 결정하는 데 도움이 되는 일반 정보를 제공합니다.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
  온라인 인덱스 작업은 행 버전 관리를 사용하여 다른 트랜잭션에서 수정하는 내용의 영향을 받지 않습니다. 따라서 이미 읽은 행에 대한 공유 잠금을 요청할 필요가 없습니다. 온라인 인덱스 작업 중 여러 사용자가 동시에 업데이트 및 삭제 작업을 수행하려면 **tempdb**의 버전 레코드를 위한 공간이 필요합니다. 자세한 내용은 [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md) 을 참조하세요.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [인덱스 작업에 필요한 트랜잭션 로그 디스크 공간](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1ec4e5b55560085a0de3036bbc877b2dc7425467
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 50e25190819d71c8972613c1e31879fdffaf16ff
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-using-auto-mode"></a>예제: AUTO 모드 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 다음 예에서는 AUTO 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 ProductModel 테이블에 있는 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
@@ -208,7 +208,7 @@ FOR XML AUTO, BINARY BASE64;
   
  기본적으로 이진 데이터를 검색하기 위해 AUTO 모드를 사용하는 경우 쿼리가 실행되는 데이터베이스의 가상 루트에 대한 상대 URL 참조가 이진 데이터 대신 반환됩니다. 이 경우는 BINARY BASE64 옵션이 지정되지 않은 경우에 해당합니다.  
   
- AUTO 모드가 쿼리에 지정된 테이블 또는 열 이름이 데이터베이스에 있는 테이블 또는 열 이름과 일치하지 않는 대/소문자를 구분하지 않는 데이터베이스에 있는 이진 데이터에 대한 URL 참조를 반환하는 경우 쿼리가 실행됩니다. 하지만 참조에 반환된 대/소문자가 일관적이지 않습니다. 예를 들어  
+ AUTO 모드가 쿼리에 지정된 테이블 또는 열 이름이 데이터베이스에 있는 테이블 또는 열 이름과 일치하지 않는 대/소문자를 구분하지 않는 데이터베이스에 있는 이진 데이터에 대한 URL 참조를 반환하는 경우 쿼리가 실행됩니다. 하지만 참조에 반환된 대/소문자가 일관적이지 않습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  

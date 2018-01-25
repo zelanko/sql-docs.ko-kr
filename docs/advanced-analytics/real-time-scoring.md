@@ -13,13 +13,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dcd65909bf896e97bba715db6318b459b06fc015
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3fce545d18876014e577b1f4e67800d4940881f3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="realtime-scoring"></a>실시간 점수 매기기
 
@@ -41,7 +41,7 @@ SQL Server 2016과 거의 실시간에 기계 학습 모델에서 점수 매기�
 3. 모델의 입력으로 새 입력된 데이터를 테이블 형식 또는 단일 행을 제공 합니다.
 4. 점수를 생성 하려면 sp_rxPredict 저장 프로시저를 호출 합니다.
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작 하기
 
 코드 예제 및 지침에 대 한 참조 [기본 점수 매기기 또는 실시간 점수 매기기를 수행 하는 방법을](r/how-to-do-realtime-scoring.md)합니다.
 
@@ -62,7 +62,7 @@ SQL Server에서 기능을 미리 점수 매기기 실시간 사용 하도록 �
 
 실시간 대 한 자세한 내용은 Microsoft R Server에 기반 하 여 분산된 환경에서 점수 매기기를 참조 하십시오는 [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) 함수에서 사용할 수는 [mrsDeploy 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)를 지 원하는 실시간 새 점수 매기기 R 서버에서 실행 되는 웹 서비스에 대 한 모델을 게시 합니다.
 
-### <a name="restrictions"></a>Restrictions
+### <a name="restrictions"></a>제한 사항
 
 + 사전에 지원 되는 중 하나를 사용 하 여 모델을 학습 해야 **rx** 알고리즘입니다. 자세한 내용은 참조 [알고리즘 지원](#bkmk_rt_supported_algos)합니다. 실시간 점수 매기기 `sp_rxPredict` RevoScaleR와 MicrosoftML 알고리즘을 지원 합니다.
 
@@ -80,11 +80,11 @@ SQL Server에서 기능을 미리 점수 매기기 실시간 사용 하도록 �
 
 + RevoScaleR 모델
 
-  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)\*
-  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)\*
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
-  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)\*
-  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)\*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
   으로 표시 된 모델 \* 도 PREDICT 함수 기본 점수 매기기를 지원 합니다.
 
@@ -101,7 +101,7 @@ SQL Server에서 기능을 미리 점수 매기기 실시간 사용 하도록 �
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [범주](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 

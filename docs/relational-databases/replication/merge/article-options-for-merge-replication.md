@@ -16,15 +16,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], merge replication options
 ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68ab30b01e18384622231ba0c0c5e05b06b77efd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ddef0bdc5d08fadc7d232417ffc7579671e8c2c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-options-for-merge-replication"></a>병합 복제를 위한 아티클 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 응용 프로그램의 요구에 맞게 복제 동작을 사용자 지정할 수 있는 여러 가지 병합 테이블 아티클 옵션이 있습니다. 병합 복제를 사용하여 다음을 수행할 수 있습니다.  

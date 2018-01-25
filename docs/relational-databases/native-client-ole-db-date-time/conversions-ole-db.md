@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53aaa725e9d8a5079cb6a7a76d060ba4aaf64c56
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d714a9c5ee8e05fde0b4ec327823cdebeb5116f6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="conversions-ole-db"></a>변환 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,11 +37,11 @@ ms.lasthandoff: 01/08/2018
   
 -   형식은 **datetime** 및 **datetimeoffset** 문자열:  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*의*[. *9999999*] [± *hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   형식은 **시간** 문자열:  
   
-     *hh*:*mm*:*ss*[. *9999999*]  
+     *hh*:*mm*:*ss*[.*9999999*]  
   
 -   형식은 **날짜** 문자열:  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/08/2018
  [서버에서 클라이언트로 수행되는 변환](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB를 사용하여 작성된 클라이언트 응용 프로그램 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [날짜 및 시간 기능 향상 &#40; OLE db&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

@@ -22,22 +22,22 @@ helpviewer_keywords:
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0dc05a4ed58aaaa3daca198491f71825a896dfae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5121d6d12b0c009a6463f461204da027f67f16ef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>성능 모니터링 및 튜닝 도구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이벤트를 모니터링하고 물리적 데이터베이스 디자인을 튜닝하는 여러 가지 도구를 제공합니다. 도구를 선택하는 기준은 수행된 모니터링 또는 튜닝 유형과 모니터링할 이벤트에 따라 결정됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모니터링 및 튜닝 도구는 다음과 같습니다.  
   
-|도구|설명|  
+|도구|Description|  
 |----------|-----------------|  
 |[sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 일괄 처리나 트랜잭션 시작 같은 엔진 프로세스 이벤트를 추적하므로 서버와 데이터베이스 작업(예: 교착 상태, 치명적 오류 또는 로그인 작업)을 모니터링할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블이나 파일에 캡처하여 나중에 분석할 수 있으며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 캡처된 이벤트를 단계별로 재생하여 발생한 이벤트를 정확히 확인할 수도 있습니다.|  
 |[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay를 사용하면 여러 컴퓨터를 사용해 추적 데이터를 재생하여 중요한 작업을 효율적으로 시뮬레이트할 수 있습니다.|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="windows-monitoring-tools"></a>Windows 모니터링 도구  
  Windows 운영 체제와 Windows Server 2003에서도 다음과 같은 모니터링 도구를 제공합니다.  
   
-|도구|설명|  
+|도구|Description|  
 |----------|-----------------|  
 |작업 관리자|시스템에서 실행 중인 프로세스 및 응용 프로그램의 개요를 보여 줍니다.|  
 |네트워크 모니터 에이전트|네트워크 트래픽을 모니터링합니다.|  

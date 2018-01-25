@@ -14,17 +14,17 @@ ms.topic: article
 helpviewer_keywords: xs:QName type
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bba3c1e92460d99fd458cd9e5f6ebb4c9dc56969
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dde17130b73aa1038d2feb091e51e3351caeff94
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="the-xsqname-type"></a>xs:QName 형식
+# <a name="the-xsqname-type"></a>The xs:QName Type
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XML 스키마 제한 요소를 사용하는 **xs:QName**에서 파생된 형식을 지원하지 않습니다. 또한 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 멤버 유형이 **QName** 인 공용 구조체 유형을 사용할 수 없습니다.  
   
 ## <a name="example"></a>예제  
