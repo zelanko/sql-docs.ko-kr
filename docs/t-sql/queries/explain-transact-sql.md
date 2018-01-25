@@ -15,13 +15,13 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="explain-transact-sql"></a>설명 (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -68,11 +68,11 @@ EXPLAIN SQL_statement
   
 |XML 태그|요약, 특성 및 콘텐츠|  
 |-------------|--------------------------------------|  
-|\<dsql_query >|최상위 수준/문서 요소입니다.|
-|\<sql >|에코 *SQL_statement*합니다.|  
-|\<매개 변수 >|이 태그는이 이번에는 사용 되지 않습니다.|  
-|\<dsql_operations >|요약 하 고 쿼리 단계를 포함 하 고 쿼리에 대 한 비용 정보가 포함 됩니다. 또한 모든 포함 된 `<dsql_operation>` 블록. 이 태그에는 전체 쿼리에 대 한 개수 정보가 포함 됩니다.<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* ms에서 실행할 쿼리에 대 한 총 예상된 시간입니다.<br /><br /> *total_number_operations* 쿼리에 대 한 작업의 총 수입니다. 평행 화 되 고 여러 노드에서 실행 되는 작업은 한 번의 작업으로 간주 됩니다.|  
-|\<dsql_operation >|쿼리 계획 내 단일 작업에 설명합니다. \<dsql_operation > 태그에 특성으로 작업 유형을 포함 합니다.<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* 에 있는 값 중 하나는 [데이터 쿼리 (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)합니다.<br /><br /> 콘텐츠는 `\<dsql_operation>` 블록은 작업 유형에 따라 다릅니다.<br /><br /> 아래 표를 참조 합니다.|  
+|\<dsql_query>|최상위 수준/문서 요소입니다.|
+|\<sql>|에코 *SQL_statement*합니다.|  
+|\<params>|이 태그는이 이번에는 사용 되지 않습니다.|  
+|\<dsql_operations>|요약 하 고 쿼리 단계를 포함 하 고 쿼리에 대 한 비용 정보가 포함 됩니다. 또한 모든 포함 된 `<dsql_operation>` 블록. 이 태그에는 전체 쿼리에 대 한 개수 정보가 포함 됩니다.<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* ms에서 실행할 쿼리에 대 한 총 예상된 시간입니다.<br /><br /> *total_number_operations* 쿼리에 대 한 작업의 총 수입니다. 평행 화 되 고 여러 노드에서 실행 되는 작업은 한 번의 작업으로 간주 됩니다.|  
+|\<dsql_operation>|쿼리 계획 내 단일 작업에 설명합니다. \<dsql_operation > 태그에 특성으로 작업 유형을 포함 합니다.<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* 에 있는 값 중 하나는 [데이터 쿼리 (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)합니다.<br /><br /> 콘텐츠는 `\<dsql_operation>` 블록은 작업 유형에 따라 다릅니다.<br /><br /> 아래 표를 참조 합니다.|  
   
 |작업 유형|콘텐츠|예제|  
 |--------------------|-------------|-------------|  

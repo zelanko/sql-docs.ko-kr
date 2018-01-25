@@ -15,13 +15,13 @@ ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
 caps.latest.revision: "37"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e8d0df617bef08305166f4112fcb4f4d371137d2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -201,7 +201,7 @@ ALTER DATABASE { database_name }
  CURRENT  
  현재 사용 중인 데이터베이스를 변경하도록 지정합니다.  
   
- MODIFY NAME  **=**  *new_database_name*  
+ MODIFY NAME **= * * * new_database_name*  
  로 지정 된 이름의 데이터베이스를 이름을 바꿉니다. *new_database_name*합니다. 다음 예에서는 데이터베이스의 이름을 변경 `db1` 를 `db2`:   
 
 ```  
@@ -222,7 +222,7 @@ ALTER DATABASE current
  수정 (MAXSIZE  **=**  [100MB | 500MB | 1 | 1024... 4096] GB)  
  데이터베이스의 최대 크기를 지정합니다. 최대 크기는 데이터베이스의 EDITION 속성에 대한 유효한 값 집합을 따라야 합니다. 데이터베이스의 최대 크기를 변경하면 데이터베이스 EDITION이 변경될 수 있습니다. 다음 표에서는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서비스 계층에 대해 지원되는 MAXSIZE 값 및 기본값(D)을 보여 줍니다.  
   
-|**MAXSIZE**|**Basic**|**S0 S2**|**S3 S12**|**P1 P6 및 PRS1 PRS6**|**P11 P15**|  
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1 P6 및 PRS1 PRS6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100MB|√|√|√|√|√|  
 |250MB|√|√|√|√|√|  
@@ -258,7 +258,7 @@ ALTER DATABASE current
 -   MAXSIZE 또는 EDITION이 모두를 지정 EDITION 표준 (S0)로 설정 되 고 MAXSIZE는 250GB를 설정 됩니다.  
  
 
- 수정 (SERVICE_OBJECTIVE = \<서비스 목표 >)  
+ MODIFY (SERVICE_OBJECTIVE = \<service-objective>)  
  성능 수준을 지정합니다. 다음 예제에서는 변경 내용에 premium 데이터베이스의 서비스 `P6`:
  
 ```  
@@ -276,7 +276,7 @@ ALTER DATABASE current
  ALLOW_CONNECTIONS와 {모든 | **아니요** }  
  ALLOW_CONNECTIONS를 지정 하지 않으면 기본적으로 NO로 설정 됩니다. 모두에 설정 된 경우 연결 하는 데 적절 한 권한이 있는 모든 로그인을 허용 하는 읽기 전용 데이터베이스입니다.  
   
- SERVICE_OBJECTIVE와 {'S0' | 'S1' | 'S 2' | ' S3 "| 'S4' | 'S6' | 'S7' | 'S9' | 'S12' | 'P1' | 'P 2' | 'P4' | 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | PRS6'}  
+ WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' }  
  SERVICE_OBJECTIVE를 지정 하지 않으면 보조 데이터베이스가 주 데이터베이스와 같은 서비스 수준에서 생성 됩니다. SERVICE_OBJECTIVE를 지정 하면 보조 데이터베이스는 지정된 된 수준에서 생성 됩니다. 이 옵션 보다 저렴 서비스 수준이 있는 지리적 복제 보조를 만들 수 있도록 지원 합니다. 지정 된 SERVICE_OBJECTIVE를 소스로 같은 버전 내에 있어야 합니다. 예를 들어 버전은 premium 경우 S0를 지정할 수 없습니다.  
   
  ELASTIC_POOL (이름 = \<elastic_pool_name)  
@@ -395,13 +395,13 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ALTER DATABASE db1 FAILOVER  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE database&#40; Azure SQL 데이터베이스 &#41;](../../t-sql/statements/create-database-azure-sql-database.md)   
  [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [SET TRANSACTION ISOLATION level&#40; Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_spaceused&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

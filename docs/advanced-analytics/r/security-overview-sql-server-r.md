@@ -14,13 +14,13 @@ ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
 caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5bd185361feb8c7dee88bd0e85d08762543931ec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b0024885ee71a5df0d36c29d2759b1d0ea3bcdc6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="security-for-sql-server-machine-learning-and-r"></a>SQL Server 기계 학습 및 R에 대 한 보안
 
@@ -95,6 +95,6 @@ R 스크립트가 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] �
  
 컴퓨터의 관리자는 각 프로세스에 대해 만들어진 디렉터리를 볼 수 있습니다. 각 디렉터리는 세션 GUID로 식별됩니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Server 기계 학습에 대 한 아키텍처 개요](../../advanced-analytics/r/architecture-overview-sql-server-r.md)

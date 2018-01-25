@@ -15,13 +15,13 @@ dev_langs: TSQL
 caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb41140783d4c334e7ee701f44d523ec68e41435
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fa9c4e335fddbe4851562f4aada8d55011d99b98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ```  
   
 ## <a name="arguments"></a>인수  
- [ *database_name* 합니다. [ *schema_name* ]. | *schema_name* 합니다. ] *table_name*  
+ [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  한, 두 또는 표시 될 테이블의 세 부분으로 이루어진 이름입니다.  두 또는 세 부분으로 구성 테이블 이름, 이름을 큰따옴표로 묶어야 합니다 (""). 한 부분으로 이루어진 테이블 이름 묶는 따옴표를 사용 하는 것은 선택 사항입니다.  
   
 ## <a name="permissions"></a>Permissions

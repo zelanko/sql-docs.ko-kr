@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d48e17d03ea0b224487b115faf407c3d43b5fc95
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0ba0d2473ed054e9d356f84fdf5a698cae4c201a
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]각각 XML 스키마 컬렉션 이름, 스키마 이름 및 카탈로그 이름을 나타내는 추가 정보를 제공 하기 드라이버 관련 설명자 필드도를 도입 되었습니다. 이러한 속성에는 영숫자가 아닌 문자가 포함된 경우 따옴표나 이스케이프 문자가 필요하지 않습니다. 다음 표에는 새로 도입된 설명자 필드가 나와 있습니다.  
   
-|열 이름|형식|Description|  
+|열 이름|유형|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|XML 스키마 컬렉션 이름이 정의된 카탈로그의 이름입니다. 카탈로그 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.<br /><br /> 이 정보는 읽기/쓰기 필드인 IRD의 SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME 레코드 필드에서 반환됩니다.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|XML 스키마 컬렉션 이름이 정의된 스키마의 이름입니다. 스키마 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.<br /><br /> 이 정보는 읽기/쓰기 필드인 IRD의 SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME 레코드 필드에서 반환됩니다.|  

@@ -13,12 +13,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a252feae8b3e3cdb049278d2e60234dda8f14319
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 0f728b0e15372f9027dac84c3f58b09438444f95
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="native-scoring"></a>기본 점수 매기기
 
@@ -110,7 +110,7 @@ _점수 매기기_ 은 두 단계로 이루어집니다. 먼저, 미리 학습 �
 
 MicrosoftML에서 모델을 사용 해야 하는 경우 실시간 sp_rxPredict 점수 매기기를 사용 합니다.
 
-### <a name="restrictions"></a>Restrictions
+### <a name="restrictions"></a>제한 사항
 
 다음 모델 유형에 지원 되지 않습니다.
 

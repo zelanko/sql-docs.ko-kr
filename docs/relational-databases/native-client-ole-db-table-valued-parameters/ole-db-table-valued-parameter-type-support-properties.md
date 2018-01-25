@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2e0b2668ef115fb507d13bfffa6f094f94d9edc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 365ed52a0ea01d2ec62c001eda9de5ec9874c4de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 테이블 반환 매개 변수 형식 지원(속성)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
  테이블 반환 매개 변수 행 집합 개체에 구현되지 않은 속성은 다음 목록에 없습니다. 전체 속성 목록을 보려면 Windows Data Access Components의 OLE DB 설명서를 참조하십시오.  
   
-|속성 ID|값|  
+|속성 ID|Value|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -98,8 +98,8 @@ ms.lasthandoff: 01/08/2018
 |SSPROP_PARAM_TYPE_TYPENAME|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자가 테이블 반환 매개 변수 형식 이름을 가져오거나 설정 하려면이 속성을 사용 합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다.<br /><br /> 이 속성은 필요한 경우 테이블 반환 매개 변수의 테이블 형식 이름을 제공하기 위해 지정할 수 있습니다(ODBC 호출 구문 명령의 경우). 매개 변수가 있는 임시 SQL 쿼리에는 이 속성을 반드시 지정해야 합니다.|  
 |SSPROP_PARAM_TYPE_SCHEMANAME|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자가 테이블 반환 매개 변수 형식 스키마 이름을 가져오거나 설정 하려면이 속성을 사용 합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다.|  
 |SSPROP_PARAM_TYPE_CATALOGNAME|R/w: 읽기 전용<br /><br /> 기본값: VT_EMPTY<br /><br /> 유형: VT_BSTR<br /><br /> 설명: 소비자가이 속성 테이블 반환 매개 변수 형식 카탈로그 이름을 가져오는 데 사용 합니다.<br /><br /> 이 속성은 CLR 사용자 정의 형식에도 사용할 수 있습니다. 이 속성을 설정하면 오류가 발생합니다. 사용자 정의 테이블 형식은 해당 형식을 사용하는 테이블 반환 매개 변수와 같은 데이터베이스에 있어야 합니다.|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 형식: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명: 소비자가이 속성을 사용 지정 행 집합의 열 집합을 기본적으로 간주 됩니다. 이러한 열에 대해서는 값이 전송되지 않습니다. 공급자가 소비자 행 집합 개체에서 데이터를 인출하는 동안 이러한 열에 대해서는 바인딩이 필요하지 않습니다.<br /><br /> 배열의 각 요소는 행 집합 개체에서 열의 순서를 나타내는 서수여야 합니다. 잘못된 서수를 지정하면 명령 실행 시 오류가 발생합니다.|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> 형식: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명:이 속성은 사용 소비자가 정렬을 나타내기 위해 서버에 대 한 힌트를 제공 하 여 열 데이터의 순서입니다. 공급자는 소비자가 지정된 사양을 따른다고 가정하고 어떠한 유효성 검사도 수행하지 않습니다. 서버에서는 이 속성을 사용하여 최적화를 수행합니다.<br /><br /> 각 열에 대한 열 순서 정보는 배열에서 한 쌍의 요소로 나타납니다. 이 쌍의 첫 번째 요소는 열 번호이고 두 번째 요소는 오름차순의 경우 1이고 내림차순의 경우 2입니다.|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명: 소비자가이 속성을 사용 지정 행 집합의 열 집합을 기본적으로 간주 됩니다. 이러한 열에 대해서는 값이 전송되지 않습니다. 공급자가 소비자 행 집합 개체에서 데이터를 인출하는 동안 이러한 열에 대해서는 바인딩이 필요하지 않습니다.<br /><br /> 배열의 각 요소는 행 집합 개체에서 열의 순서를 나타내는 서수여야 합니다. 잘못된 서수를 지정하면 명령 실행 시 오류가 발생합니다.|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/w: 읽기/쓰기<br /><br /> 기본값: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> 설명:이 속성은 사용 소비자가 정렬을 나타내기 위해 서버에 대 한 힌트를 제공 하 여 열 데이터의 순서입니다. 공급자는 소비자가 지정된 사양을 따른다고 가정하고 어떠한 유효성 검사도 수행하지 않습니다. 서버에서는 이 속성을 사용하여 최적화를 수행합니다.<br /><br /> 각 열에 대한 열 순서 정보는 배열에서 한 쌍의 요소로 나타납니다. 이 쌍의 첫 번째 요소는 열 번호이고 두 번째 요소는 오름차순의 경우 1이고 내림차순의 경우 2입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [OLE DB 테이블 반환 매개 변수 형식 지원](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   

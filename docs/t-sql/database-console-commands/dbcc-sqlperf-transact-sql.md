@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1a4efef1269d85483b098e98a03b913306088f68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cd615cd56860138d2e9afa7e2d7090ed27ba8e3a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ LOGSPACE
 > [!IMPORTANT]
 > 로 시작 하는 트랜잭션 로그에 대 한 공간 사용 정보에 대 한 자세한 내용은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 참조는 [주의](#Remarks) 이 항목의 섹션입니다.
   
-**"sys.dm_os_latch_stats"**, 지우기  
+**"sys.dm_os_latch_stats"**, CLEAR  
 래치 통계를 다시 설정합니다. 자세한 내용은 참조 [sys.dm_os_latch_stats &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 이 옵션을 사용할 수 없습니다.  
   
-**"sys.dm_os_wait_stats"**, 지우기  
+**"sys.dm_os_wait_stats"**, CLEAR  
 대기 통계를 다시 설정합니다. 자세한 내용은 [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조하세요. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 이 옵션을 사용할 수 없습니다.  
   
 WITH NO_INFOMSGS  
@@ -76,7 +76,7 @@ WITH NO_INFOMSGS
   
 |열 이름|정의|  
 |---|---|
-|**Database Name**|로그 통계가 표시될 데이터베이스의 이름입니다.|  
+|**데이터베이스 이름**|로그 통계가 표시될 데이터베이스의 이름입니다.|  
 |**로그 크기 (MB)**|로그에 할당된 현재 크기입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부 헤더 정보용으로 적은 양의 디스크 공간을 예약하므로 이 값은 원래 로그 공간을 위해 할당된 크기보다 작습니다.|  
 |**Log Space Used (%)**|트랜잭션 로그 정보를 저장 하는 사용 중인 현재 로그 파일의 비율입니다.|  
 |**상태**|로그 파일의 상태이며 항상 0입니다.|  
@@ -125,7 +125,7 @@ DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);
 [sys.dm_os_latch_stats &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
 [sys.dm_os_wait_stats&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
 [sp_spaceused&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
-[sys.dm_db_log_info &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
-[sys.dm_db_log_stats &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
 

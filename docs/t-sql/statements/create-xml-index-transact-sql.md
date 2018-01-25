@@ -31,13 +31,13 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7949376e26e184013b9a31258ff757991f4bdd19
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 133c957937d1c05cd108eeb2deb0847cd7944771
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -112,13 +112,13 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *xml_column_name*  
  이 **xml** 인덱스의 기반이 되는 열입니다. 하나의 **xml** 을 단일 XML 인덱스 정의에 열을 지정할 수 있습니다; 그러나에 여러 개의 보조 XML 인덱스를 만들 수 있습니다는 **xml** 열입니다.  
   
- XML 인덱스를 사용 하 여 *xml_index_name*  
+ USING XML INDEX *xml_index_name*  
  보조 XML 인덱스를 만들 때 사용할 기본 XML 인덱스를 지정합니다.  
   
  FOR { VALUE | PATH | PROPERTY }  
  보조 XML 인덱스의 유형을 지정합니다.  
   
- Value  
+ VALUE  
  키 열이 기본 XML 인덱스의 노드 값 및 경로인 열에 보조 XML 인덱스를 만듭니다.  
   
  PATH  
@@ -127,7 +127,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PROPERTY  
  PK가 기본 테이블의 기본 키인 기본 XML 인덱스의 열(PK, 경로 및 노드 값)에 보조 XML 인덱스를 만듭니다.  
   
- **\<개체 >:: =**  
+ **\<object>::=**  
   
  인덱스할 정규화되거나 정규화되지 않은 개체입니다.  
   
@@ -140,7 +140,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *table_name*  
  인덱싱할 테이블 이름입니다.  
   
- **\<xml_index_option >:: =** 
+ **\<xml_index_option> ::=** 
   
  인덱스를 만들 때 사용할 옵션을 지정합니다.  
   
@@ -155,7 +155,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  PAD_INDEX는 FILLFACTOR에 지정된 비율을 사용하므로 FILLFACTOR가 지정된 경우에만 PAD_INDEX 옵션을 사용할 수 있습니다. FILLFACTOR에 지정된 비율이 한 행을 저장하기에도 부족하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부적으로 허용된 최소 비율을 무시합니다. 중간 인덱스 페이지의 행 수는 두 개 이상, 어떻게 낮은 값에 관계 없이 되지 않는 *fillfactor*합니다.  
   
- FILLFACTOR  **=**  *fillfactor*  
+ FILLFACTOR **= * * * fillfactor*  
  인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor* 100 1 까지의 정수 값 이어야 합니다. 기본값은 0입니다. 경우 *fillfactor* 가 100 또는 0 일에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 리프 페이지가 꽉 찬 인덱스를 만듭니다.  
   
 > [!NOTE]  
@@ -179,7 +179,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  사용자 데이터베이스에서 인덱스를 만드는 데 필요한 공간 외에도 **tempdb** 거의 같은 양의 중간 정렬 결과를 저장할 추가 공간이 있어야 합니다. 자세한 내용은 참조 [인덱스에 대 한 SORT_IN_TEMPDB 옵션](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)합니다.  
   
- IGNORE_DUP_KEY **= OFF**  
+ IGNORE_DUP_KEY **=OFF**  
  인덱스 유형은 고유할 수 없으므로 XML 인덱스에 영향을 미치지 않습니다. 이 옵션을 ON으로 설정하지 마세요. ON으로 설정하면 오류가 발생합니다.  
   
  DROP_EXISTING  **=**  {ON | **OFF** }  
@@ -219,7 +219,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  페이지 잠금이 사용되지 않습니다.  
   
- MAXDOP  **=**  *max_degree_of_parallelism*  
+ MAXDOP **=***max_degree_of_parallelism*  
  재정의 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 인덱스 작업의 기간에 대 한 구성 옵션입니다. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
 > [!IMPORTANT]  

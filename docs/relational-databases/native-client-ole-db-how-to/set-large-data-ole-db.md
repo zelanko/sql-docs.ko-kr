@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1a4811af052af8ce7dccd90a00fe678f3e47973
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d80c7a2a09bd258662ae64481980b628a6480b0a
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="set-large-data-ole-db"></a>대형 데이터 설정(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  행 집합 업데이트가 가능하도록 DBPROPSET_ROWSET 속성 그룹의 속성을 설정합니다.  
   
-3.  DBBINDING 구조의 배열을 사용하여 각 열에 대해 하나씩 바인딩 집합을 만듭니다. DBBINDING 구조의 **wType** 요소를 DBTYPE_IUNKNOWN으로 설정하고 **pObject** 요소를 앞에서 만든 DBOBJECT 구조를 가리키도록 설정합니다.  
+3.  DBBINDING 구조의 배열을 사용하여 각 열에 대해 하나씩 바인딩 집합을 만듭니다. 설정의 **wType** dbtype_iunknown으로 DBBINDING 구조에는 요소 및 **pObject** 요소 만든 DBOBJECT 구조를 가리키도록 합니다.  
   
 4.  구조의 DBBINDINGS 배열에 있는 바인딩 정보를 사용하여 접근자를 만듭니다.  
   

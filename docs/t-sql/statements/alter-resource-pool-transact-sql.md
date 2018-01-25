@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 357dab163aca094928f5c417c605dcb699c922b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +71,13 @@ ALTER RESOURCE POOL { pool_name | "default" }
 > [!NOTE]  
 >  미리 정의된 작업 그룹과 리소스 풀의 이름은 "default"와 같이 소문자를 사용합니다. 대/소문자 구분 데이터 정렬을 사용하는 서버의 경우 이러한 사항을 고려해야 합니다. 대/소문자 구분 데이터 정렬(예: SQL_Latin1_General_CP1_CI_AS)을 사용하는 서버는 "default"와 "Default"를 똑같이 처리합니다.  
   
- MIN_CPU_PERCENT =*값*  
+ MIN_CPU_PERCENT =*value*  
  CPU 경합이 있을 때 리소스 풀의 모든 요청에 대해 보장되는 평균 CPU 대역폭을 지정합니다. *값* 는 정수 이며 기본 설정은 0입니다. 허용된 범위 *값* 은 0에서 100 까지입니다.  
   
- MAX_CPU_PERCENT =*값*  
+ MAX_CPU_PERCENT =*value*  
  CPU 경합이 있을 때 이 리소스 풀의 모든 요청이 받는 최대 평균 CPU 대역폭을 지정합니다. *값* 는 정수 이며 기본 설정은 100입니다. 허용된 범위 *값* 는 1에서 100 까지입니다.  
   
- CAP_CPU_PERCENT =*값*  
+ CAP_CPU_PERCENT =*value*  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  리소스 풀의 요청에 대 한 대상 최대 CPU 용량을 지정합니다. *값* 는 정수 이며 기본 설정은 100입니다. 허용된 범위 *값* 는 1에서 100 까지입니다.  
@@ -102,18 +102,18 @@ INNER JOIN sys.dm_os_schedulers AS sc
       AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*값*  
+ MIN_MEMORY_PERCENT =*value*  
  다른 리소스 풀과 공유할 수 없으며 이 리소스 풀에 예약된 최소 메모리 양을 지정합니다. *값* 는 정수 이며 기본 설정은 0입니다. 허용된 범위 *값* 은 0에서 100 까지입니다.  
   
  MAX_MEMORY_PERCENT =*값*  
  이 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리를 지정합니다. *값* 는 정수 이며 기본 설정은 100입니다. 허용된 범위 *값* 는 1에서 100 까지입니다.  
   
- MIN_IOPS_PER_VOLUME =*값*  
+ MIN_IOPS_PER_VOLUME =*value*  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  리소스 풀에 예약할 디스크 볼륨당 최소 IOPS(초당 IO 작업)를 지정합니다. 허용된 범위 *값* 은 0에서 2 ^31-1 (2147483647). 풀에 대한 최소 임계값이 없음을 나타내려면 0을 지정합니다.  
   
- MAX_IOPS_PER_VOLUME =*값*  
+ MAX_IOPS_PER_VOLUME =*value*  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  리소스 풀에 대해 허용할 디스크 볼륨당 최대 IOPS(초당 IO 작업)를 지정합니다. 허용된 범위 *값* 은 0에서 2 ^31-1 (2147483647). 풀에 대한 무제한 임계값을 설정하려면 0을 지정합니다. 기본값은 0입니다.  

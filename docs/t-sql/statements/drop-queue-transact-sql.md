@@ -23,15 +23,15 @@ helpviewer_keywords:
 - removing queues
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c1fafebb5960563a3165e8ac00afd1dbdbfdf49
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3be4f36943d6e25bb520a28593d009e7a8373c48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DROP QUEUE <object>
  *database_name*  
  삭제할 큐가 있는 데이터베이스의 이름입니다. No *database_name* 제공 되는 현재 데이터베이스에 대 한 기본값입니다.  
   
- *schema_name (개체)*  
+ *schema_name (object)*  
  삭제할 큐를 소유하는 스키마의 이름입니다. No *schema_name* 제공 되는 현재 사용자의 기본 스키마는 기본값입니다.  
   
  *queue_name*  

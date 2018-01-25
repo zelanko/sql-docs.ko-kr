@@ -24,15 +24,15 @@ helpviewer_keywords:
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 caps.latest.revision: "95"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ea17d9f848a47639b748e6f243f604e0e3e2bb2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 840793c4bbfee8282676cf90d42d6e7a6c4d6b42
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 문-HEADERONLY (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,23 +88,23 @@ FROM <backup_device>
  지정한 장치의 각 백업에 대해 서버는 다음 열을 가진 헤더 정보 행을 보냅니다.  
   
 > [!NOTE]  
->  RESTORE HEADERONLY는 미디어에 있는 모든 백업 세트를 확인합니다. 따라서 고용량 테이프 드라이브를 사용할 때 이 결과 집합을 생성하면 시간이 오래 걸릴 수 있습니다. 모든 백업 세트에 대 한 정보를 가져오지 않고 미디어를 빠르게 확인 하려면 RESTORE LABELONLY를 사용 하거나 파일을 지정  **=**  *backup_set_file_number*합니다.  
+>  RESTORE HEADERONLY는 미디어에 있는 모든 백업 세트를 확인합니다. 따라서 고용량 테이프 드라이브를 사용할 때 이 결과 집합을 생성하면 시간이 오래 걸릴 수 있습니다. 모든 백업 세트에 대 한 정보를 가져오지 않고 미디어 빠르게 확인 하려면 RESTORE LABELONLY를 사용 하거나 파일을 지정 **=** *backup_set_file_number*합니다.  
   
 > [!NOTE]  
 >  특성으로 인해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 있기 동일한 미디어에서 공간을 차지에 사용할 다른 소프트웨어 프로그램에서 백업 세트에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 세트입니다. RESTORE HEADERONLY에서 반환한 결과 집합에는 각각의 다른 백업 세트에 대한 행이 포함되어 있습니다.  
   
 |열 이름|데이터 형식|SQL Server 백업 세트에 대한 설명|  
 |-----------------|---------------|--------------------------------------------|  
-|**BackupName**|**nvarchar (128)**|백업 세트 이름|  
+|**BackupName**|**nvarchar(128)**|백업 세트 이름|  
 |**BackupDescription**|**nvarchar(255)**|백업 세트 설명입니다.|  
 |**BackupType**|**smallint**|백업 유형:<br /><br /> **1** = 데이터베이스<br /><br /> **2** = 트랜잭션 로그<br /><br /> **4** = 파일<br /><br /> **5** = 차등 데이터베이스<br /><br /> **6** = 차등 파일<br /><br /> **7** = 부분<br /><br /> **8** = 차등 부분|  
 |**ExpirationDate**|**datetime**|백업 세트에 대한 만료 일자|  
 |**압축**|**BYTE(1)**|소프트웨어 기반 압축을 사용하여 백업 세트를 압축했는지 여부<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
 |**위치**|**smallint**|볼륨에 있는 백업 세트의 위치(FILE = 옵션과 함께 사용)|  
-|**장치 유형**|**tinyint**|백업 작업에 사용된 장치 번호<br /><br /> 디스크:<br /><br /> **2** = 논리적<br /><br /> **102** = 물리적<br /><br /> 테이프<br /><br /> **5** = 논리적<br /><br /> **105** = 물리적<br /><br /> 가상 장치<br /><br /> **7** = 논리적<br /><br /> **107** = 물리적<br /><br /> 논리적 장치 이름과 장치 번호는 **sys.backup_devices**; 자세한 내용은 참조 [sys.backup_devices&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
-|**UserName**|**nvarchar (128)**|백업 작업을 수행한 사용자 이름|  
-|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar (128)**|백업 세트를 작성한 서버 이름|  
-|**DatabaseName**|**nvarchar (128)**|백업한 데이터베이스 이름|  
+|**DeviceType**|**tinyint**|백업 작업에 사용된 장치 번호<br /><br /> 디스크:<br /><br /> **2** = 논리적<br /><br /> **102** = 물리적<br /><br /> 테이프<br /><br /> **5** = 논리적<br /><br /> **105** = 물리적<br /><br /> 가상 장치<br /><br /> **7** = 논리적<br /><br /> **107** = 물리적<br /><br /> 논리적 장치 이름과 장치 번호는 **sys.backup_devices**; 자세한 내용은 참조 [sys.backup_devices&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**UserName**|**nvarchar(128)**|백업 작업을 수행한 사용자 이름|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar(128)**|백업 세트를 작성한 서버 이름|  
+|**DatabaseName**|**nvarchar(128)**|백업한 데이터베이스 이름|  
 |**DatabaseVersion**|**int**|백업을 만든 데이터베이스의 버전|  
 |**DatabaseCreationDate**|**datetime**|데이터베이스를 만든 날짜와 시간|  
 |**BackupSize**|**numeric(20,0)**|바이트 단위의 백업 크기|  
@@ -123,11 +123,11 @@ FROM <backup_device>
 |**SoftwareVersionMajor**|**int**|백업 세트를 만든 서버의 주 버전 번호|  
 |**SoftwareVersionMinor**|**int**|백업 세트를 만든 서버의 부 버전 번호|  
 |**SoftwareVersionBuild**|**int**|백업 세트를 만든 서버의 빌드 번호|  
-|**MachineName**|**nvarchar (128)**|백업 작업을 수행한 컴퓨터의 이름|  
+|**MachineName**|**nvarchar(128)**|백업 작업을 수행한 컴퓨터의 이름|  
 |**플래그**|**int**|개별 플래그 비트의 의미 하는 경우로 설정 **1**:<br /><br /> **1** = 로그 백업에 대량 로그 작업을 포함 합니다.<br /><br /> **2** = 스냅숏 백업 합니다.<br /><br /> **4** = 데이터베이스 백업 시 읽기 전용 이었습니다.<br /><br /> **8** = 데이터베이스가 단일 사용자 모드로 백업 되었습니다.<br /><br /> **16** = 백업이 백업 체크섬을 포함 합니다.<br /><br /> **32** = 백업 중 데이터베이스가 손상 되어 있지만 백업 작업 오류가 있어도 계속 하려면 요청 했습니다.<br /><br /> **64** = 비상 로그 백업입니다.<br /><br /> **128** = 메타 데이터가 완전 하지 비상 로그 백업입니다.<br /><br /> **256** = NORECOVERY로 비상 로그 백업입니다.<br /><br /> **중요:** 대신 하는 것이 좋습니다 **플래그** 개별 Boolean 열을 사용 하면 (부터는 아래에 나열 된 **HasBulkLoggedData** 끝나는  **IsCopyOnly**).|  
-|**BindingID**|**uniqueidentifier**|데이터베이스에 대한 바인딩 ID. 이에 해당 **sys.database_recovery_status***database_guid**합니다. 데이터베이스를 복원하면 새 값이 할당됩니다. 또한 참조 **FamilyGUID** (아래 참조).|  
+|**BindingID**|**uniqueidentifier**|데이터베이스에 대한 바인딩 ID. 이에 해당 **sys.database_recovery_status****database_guid**합니다. 데이터베이스를 복원하면 새 값이 할당됩니다. 또한 참조 **FamilyGUID** (아래 참조).|  
 |**RecoveryForkID**|**uniqueidentifier**|복구 분기 끝 지점의 ID. 이 열에 해당 **last_recovery_fork_guid** 에 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 테이블입니다.<br /><br /> 데이터 백업의 **RecoveryForkID** equals **FirstRecoveryForkID**합니다.|  
-|**데이터 정렬**|**nvarchar (128)**|데이터베이스에서 사용한 데이터 정렬|  
+|**데이터 정렬**|**nvarchar(128)**|데이터베이스에서 사용한 데이터 정렬|  
 |**FamilyGUID**|**uniqueidentifier**|생성된 원본 데이터베이스의 ID. 이 값은 데이터베이스가 복구될 때와 동일하게 유지됩니다.|  
 |**HasBulkLoggedData**|**bit**|**1** = 대량 로그 작업이 포함 된 로그 백업입니다.|  
 |**IsSnapshot**|**bit**|**1** = 스냅숏 백업 합니다.|  
@@ -141,19 +141,19 @@ FROM <backup_device>
 |**IsCopyOnly**|**bit**|**1** = 복사 전용 백업입니다.<br /><br /> 복사 전용 백업은 백업 전체에 영향을 주지 않고 데이터베이스에 대한 프로시저를 복원합니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요.|  
 |**FirstRecoveryForkID**|**uniqueidentifier**|복구 분기 시작 지점의 ID. 이 열에 해당 **first_recovery_fork_guid** 에 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 테이블입니다.<br /><br /> 데이터 백업의 **FirstRecoveryForkID** equals **RecoveryForkID**합니다.|  
 |**ForkPointLSN**|**numeric(25,0)** NULL|경우 **FirstRecoveryForkID** 과 같지 않은 **RecoveryForkID**, 분기 지점의 로그 시퀀스 번호입니다. 그렇지 않은 경우 이 값은 NULL입니다.|  
-|**RecoveryModel**|**nvarchar (60)**|데이터베이스의 복구 모델이며 다음 중 하나입니다.<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
+|**RecoveryModel**|**nvarchar(60)**|데이터베이스의 복구 모델이며 다음 중 하나입니다.<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
 |**DifferentialBaseLSN**|**numeric(25,0)** NULL|단일 기반 차등 백업에 대 한 값과 일치는 **FirstLSN** 의; 차등 기반 Lsn 보다 크거나을 변경 **DifferentialBaseLSN** 차등에 포함 됩니다.<br /><br /> 여러 백업을 기반으로 하는 차등 백업의 경우 값은 NULL이며 기본 LSN은 파일 수준에서 결정해야 합니다. 자세한 내용은 [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)를 참조하세요.<br /><br /> 비 차등 백업 유형의 경우 값은 항상 NULL입니다.<br /><br /> 자세한 내용은 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.|  
 |**DifferentialBaseGUID**|**uniqueidentifier**|단일 백업을 기준으로 하는 차등 백업의 경우 값은 차등 기반의 고유 식별자입니다.<br /><br /> 여러 백업을 기반으로 하는 차등 백업의 경우 값은 NULL이며 기본 차등 백업은 파일 단위로 결정해야 합니다.<br /><br /> 비 차등 백업 유형의 경우 값은 NULL입니다.|  
-|**BackupTypeDescription**|**nvarchar (60)**|백업 유형이 문자열인 경우 다음 중 하나입니다.<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
+|**BackupTypeDescription**|**nvarchar(60)**|백업 유형이 문자열인 경우 다음 중 하나입니다.<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|미디어에서 식별의 기준이 되는 백업 세트의 고유 ID|  
 |**CompressedBackupSize**|**bigint**|백업 세트의 바이트 수. 이 값은 동일 압축 되지 않은 백업의 **BackupSize**합니다.<br /><br /> 압축 비율을 계산 하려면 **CompressedBackupSize** 및 **BackupSize**합니다.<br /><br /> 동안는 **msdb** 업그레이드,이 값은 설정의 값과 일치 하도록는 **BackupSize** 열입니다.|  
-|**포함**|**tinyint** not NULL|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 데이터베이스의 포함 상태를 나타냅니다.<br /><br /> 0 = 데이터베이스가 포함되지 않습니다.<br /><br /> 1 = 데이터베이스가 부분적으로 포함됩니다.|  
-|**KeyAlgorithm**|**nvarchar (32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)부터 현재 버전입니다.<br /><br /> 백업을 암호화하는 데 사용되는 암호화 알고리즘입니다. NO_Encryption은 백업이 암호화되지 않았음을 나타냅니다. 올바른 값을 확인할 수 없는 경우 값은 NULL 이어야 합니다.|  
+|**containment**|**tinyint** not NULL|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 데이터베이스의 포함 상태를 나타냅니다.<br /><br /> 0 = 데이터베이스가 포함되지 않습니다.<br /><br /> 1 = 데이터베이스가 부분적으로 포함됩니다.|  
+|**KeyAlgorithm**|**nvarchar(32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)부터 현재 버전입니다.<br /><br /> 백업을 암호화하는 데 사용되는 암호화 알고리즘입니다. NO_Encryption은 백업이 암호화되지 않았음을 나타냅니다. 올바른 값을 확인할 수 없는 경우 값은 NULL 이어야 합니다.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)부터 현재 버전입니다.<br /><br /> 데이터베이스에서 인증서나 비대칭 키를 찾는 데 사용할 수 있는 암호기의 지문입니다. 백업이 암호화되지 않은 경우이 값은 NULL입니다.|  
-|**EncryptorType**|**nvarchar (32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)부터 현재 버전입니다.<br /><br /> 사용 되는 암호기 유형입니다: 인증서 또는 비대칭 키입니다. 백업이 암호화되지 않은 경우이 값은 NULL입니다.|  
+|**EncryptorType**|**nvarchar(32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)부터 현재 버전입니다.<br /><br /> 사용 되는 암호기 유형입니다: 인증서 또는 비대칭 키입니다. 백업이 암호화되지 않은 경우이 값은 NULL입니다.|  
   
 > [!NOTE]  
->  백업 세트에 대한 암호를 정의한 경우 RESTORE HEADERONLY는 명령의 지정한 PASSWORD 옵션과 일치하는 암호의 백업 세트에 대한 정보만 모두 표시합니다. RESTORE HEADERONLY는 보호되지 않은 백업 세트에 대한 정보도 모두 표시합니다. **BackupName** 열 미디어에 있는 다른 암호로 보호 된 백업 세트에 대 한로 설정 된 ' * * * 암호로 보호 된\*\*\*', 고 다른 모든 열은 NULL입니다.  
+>  백업 세트에 대한 암호를 정의한 경우 RESTORE HEADERONLY는 명령의 지정한 PASSWORD 옵션과 일치하는 암호의 백업 세트에 대한 정보만 모두 표시합니다. RESTORE HEADERONLY는 보호되지 않은 백업 세트에 대한 정보도 모두 표시합니다. **BackupName** 열 다른 암호로 보호 된 백업 세트는 미디어에 대 한로 설정 된 ' *** 암호로 보호 된\*\*\*', 고 다른 모든 열은 NULL입니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  클라이언트는 RESTORE HEADERONLY를 사용하여 특정 백업 장치의 모든 백업에 대한 백업 헤더 정보를 모두 검색합니다. 서버는 백업 장치의 각 백업에 대한 헤더 정보를 행으로 보냅니다.  

@@ -16,13 +16,13 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 caps.latest.revision: "14"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69f4f470cf049deb3ce3b38a2bcb75f37265b31b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4957b8d665f9aa887a5ad4ab18a2e8441ea4cc2d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-function-sql-data-warehouse"></a>함수 (SQL 데이터 웨어하우스) 만들기
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ RETURNS return_data_type
 > [!NOTE]  
 >  매개 변수를 지정하지 않은 경우에도 함수 이름 뒤에 괄호를 사용해야 합니다.  
   
- @*p a r a*  
+ @*parameter_name*  
  사용자 정의 함수의 매개 변수입니다. 하나 이상의 매개 변수를 선언할 수 있습니다.  
   
  하나의 함수에 최대 2,100개의 매개 변수를 지정할 수 있습니다. 매개 변수에 기본값이 정의되지 않은 경우 함수를 실행할 때 사용자가 선언된 각 매개 변수의 값을 지정해야 합니다.  
@@ -91,7 +91,7 @@ RETURNS return_data_type
  *parameter_data_type*  
  매개 변수 데이터 형식이입니다. 에 대 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서 지원 되는 모든 스칼라 데이터 형식 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 허용 됩니다. 타임 스탬프 (rowversion) 데이터 형식이 지원 되는 형식이 아닙니다.  
   
- [=*기본* ]  
+ [ =*default* ]  
  매개 변수의 기본값입니다. 경우는 *기본* 값이 정의 해당 매개 변수에 대해 값을 지정 하지 않고 함수를 실행할 수 있습니다.  
   
  함수의 매개 변수에 기본값을 지정한 경우 기본값을 가져오는 함수를 호출할 때 DEFAULT 키워드를 지정해야 합니다. 이 동작은 매개 변수를 생략할 경우 자동으로 기본값이 사용되는 저장 프로시저에서 기본값이 있는 매개 변수를 사용하는 것과는 다릅니다.  
@@ -107,7 +107,7 @@ RETURNS return_data_type
  *scalar_expression*  
  스칼라 함수가 반환하는 스칼라 값을 지정합니다.  
   
- **\<function_option >:: =** 
+ **\<function_option>::=** 
   
  함수에 다음 옵션 중 하나 이상이 포함되도록 지정합니다.  
   

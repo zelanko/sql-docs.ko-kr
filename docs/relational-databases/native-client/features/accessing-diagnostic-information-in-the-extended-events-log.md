@@ -13,14 +13,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d6b5b55218e1728761e7cd0865940f0dc6c8083
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cd7e5b1caf584654339e2e63464b015714c25a53
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그의 진단 정보 액세스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  이 기능은 문제 해결 및 진단 용도로만 제공되며 감사 또는 보안 용도에는 적합하지 않을 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>주의  
  연결 작업의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 클라이언트 연결 ID를 전송합니다. 연결이 실패하는 경우 연결 링 버퍼에 액세스할 수 있으며([연결 링 버퍼가 있는 SQL Server 2008의 연결 문제 해결](http://go.microsoft.com/fwlink/?LinkId=207752)) **ClientConnectionID** 필드를 찾아서 연결 실패에 대한 진단 정보를 얻을 수 있습니다. 클라이언트 연결 ID는 오류가 발생하는 경우에만 링 버퍼에 기록됩니다. 로그인 전 패킷을 전송하기 전에 연결이 실패하는 경우 클라이언트 연결 ID는 생성되지 않습니다. 클라이언트 연결 ID는 16바이트 GUID입니다. 확장 이벤트 세션에서 **client_connection_id** 동작을 이벤트에 추가한 경우 확장 이벤트 출력 대상에서 클라이언트 연결 ID를 찾을 수도 있습니다. 추가 진단 지원이 필요한 경우 데이터 액세스 추적을 활성화하고 연결 명령을 다시 실행한 다음 실패한 작업에 대한 데이터 액세스 추적에서 **ClientConnectionID** 필드를 관찰할 수 있습니다.  
   
  ODBC를 사용 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 고 연결이 성공, 클라이언트를 얻을 수 있습니다를 사용 하 여 연결 ID는 **SQL_COPT_SS_CLIENT_CONNECTION_ID** 특성이 [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md).  
@@ -219,7 +219,7 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
 };  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [오류 및 메시지 처리](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

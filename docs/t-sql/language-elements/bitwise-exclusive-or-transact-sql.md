@@ -28,13 +28,13 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 897e37f19765ac43c881f2646e0bf0cc91d3205a
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: b5833bd94dd28f6c09b2f1c05d4a59a8a137ddad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^(배타적 비트 OR)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ expression ^ expression
  **tinyint** 입력된 값이 **tinyint**합니다.  
   
 ## <a name="remarks"></a>주의  
-  **^**  비트 연산자를 각 해당 양쪽 식에 비트 받아서 두 식 간에 비트 논리 배타적 OR를 수행 합니다. 결과 비트는 입력 식에 있는 두 비트(확인 중인 현재 비트) 중 하나의 값이 1이면 1로 설정됩니다. 양쪽 비트 값이 모두 0 또는 1이면 결과 비트는 0으로 처리됩니다.  
+ **^**  비트 연산자를 각 해당 양쪽 식에 비트 받아서 두 식 간에 비트 논리 배타적 OR를 수행 합니다. 결과 비트는 입력 식에 있는 두 비트(확인 중인 현재 비트) 중 하나의 값이 1이면 1로 설정됩니다. 양쪽 비트 값이 모두 0 또는 1이면 결과 비트는 0으로 처리됩니다.  
   
  왼쪽 및 오른쪽 식의 경우에 다른 정수 데이터 형식 (예를 들어 왼쪽 *식* 은 **smallint** 및 오른쪽 *식* 은  **int**), 더 작은 데이터 형식의 인수를 더 큰 데이터 형식으로 변환 합니다. 이 경우에 **smallint * * * 식* 변환할는 **int**합니다.  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e07f7c4c42f51ca31de3eb636d5cde65f3817380
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 42a40a161a901ab036eb58c8743b461c88df155d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>대량 복사 서식 파일 만들기(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  SQL Server에 연결합니다.  
   
-4.  호출 [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 다음 정보를 설정 하려면:  
+4.  [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 다음 정보를 설정합니다.  
   
     -   대량 복사를 수행할 원본 또는 대상 테이블/뷰의 이름을 지정합니다.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/08/2018
   
 7.  호출 [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) 데이터 파일을 대량 복사 작업으로 만들어야를 설명 하는 서식 파일을 만들려고 합니다.  
   
-8.  호출 [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 대량 복사 작업을 실행 합니다.  
+8.  [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 를 호출하여 대량 복사 작업을 실행합니다.  
   
  이러한 방식으로 실행된 대량 복사 작업은 대량 복사된 데이터가 들어 있는 데이터 파일과 데이터 파일의 레이아웃을 설명하는 서식 파일을 모두 만듭니다.  
   
@@ -222,6 +222,6 @@ GO
   
 ## <a name="see-also"></a>관련 항목:  
  [대량 복사와 SQL Server ODBC 드라이버 방법 도움말 항목 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
- [데이터 파일 및 서식 파일 사용](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
+ [데이터 파일과 서식 파일을 사용 하 여](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

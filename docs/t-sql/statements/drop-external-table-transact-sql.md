@@ -16,13 +16,13 @@ ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
 caps.latest.revision: "12"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3de77f0fd34519d29222dd4c16fb7ae353db1806
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e29508550528b1f98318bec26676707c72f0b5fc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-external-table-transact-sql"></a>외부 테이블 삭제 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## <a name="arguments"></a>인수  
- [ *database_name* 합니다. [*schema_name*]. | *schema_name* 합니다. ] *table_name*  
+ [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
  제거할 외부 테이블의 한 부분으로 3 구성 이름입니다. 테이블 이름, 스키마 또는 데이터베이스 및 스키마 포함 될 수 있습니다.  
   
 ## <a name="permissions"></a>Permissions  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85703d6fdc0e68b8ea0a28989f8871a804a5ae5d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 13b28e4359333c800b8780e9a125722315e67991
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stored-procedures---running"></a>저장된 프로시저-실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,6 +60,6 @@ ms.lasthandoff: 01/08/2018
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 반환 코드 및 출력 매개 변수는 반환 되지 않습니다는 결과 집합 처리 또는 해제 될 때까지 나타내려면 DBPROPVAL_OA_ATROWRELEASE로 DBPROP_OUTPUTPARAMETERAVAILABILITY 속성을 설정 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [저장 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [저장된 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

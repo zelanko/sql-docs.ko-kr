@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3f6005104620c3a55d34c39b114517dab6750d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9efa0570e0ffe698fccb7decb6eafbf5877842db
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -134,7 +134,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>주의  
  사용 하 여 **bcp_bind** 프로그램 변수에서의 테이블로 데이터를 복사 하는 빠르고 효율적인 방법에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
- 호출 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 이 또는 다른 대량 복사 함수를 호출 하기 전에. 호출 **bcp_init** 설정의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사의 대상 테이블입니다. 호출할 때 **bcp_init** 와 함께 사용할 **bcp_bind** 및 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), **bcp_init** *szDataFile*매개 변수를 데이터 파일을 나타내는 NULL;로 설정 됩니다 **bcp_init***eDirection* 매개 변수가 DB_IN으로 설정 됩니다.  
+ 호출 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 이 또는 다른 대량 복사 함수를 호출 하기 전에. 호출 **bcp_init** 설정의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사의 대상 테이블입니다. 호출할 때 **bcp_init** 와 함께 사용할 **bcp_bind** 및 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), **bcp_init** *szDataFile*매개 변수를 데이터 파일을 나타내는 NULL;로 설정 됩니다 **bcp_init * * * eDirection* 매개 변수가 DB_IN으로 설정 됩니다.  
   
  별도 확인 **bcp_bind** 의 모든 열에 대 한 호출의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복사 하려는 대상 테이블입니다. 필요한 **bcp_bind** 호출 적용 된 다음 호출 **bcp_sendrow** 하 여 프로그램 변수의 데이터 행을 보낼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 열을 다시 바인딩하는 것은 지원되지 않습니다.  
   

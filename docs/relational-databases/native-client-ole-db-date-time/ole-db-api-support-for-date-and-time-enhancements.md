@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adfe174cd86bc99880d6942b8c83910f759eec38
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5a1f79a88bf56c53457f6b0547bbcdfa54dec7e1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>날짜 및 시간 기능 향상에 대 한 OLE DB API 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,15 +31,15 @@ ms.lasthandoff: 01/08/2018
   
 |함수|Description|  
 |--------------|-----------------|  
-|Iaccessor:: Createaccessor|응용 프로그램 구분에 사용할 수 있도록 DBBINDING 구조에 플래그가 추가 됩니다 **datetime**, **datetime2**, 및 **smalldatetime** 값입니다. 자세한 내용은 참조 [매개 변수 및 행 집합 메타 데이터](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)합니다.|  
-|Ibcpsession:: Bcpcolfmt|자세한 내용은 참조 [향상 된 날짜 및 시간 형식 &#40; OLE DB 및 ODBC &#41;에 대 한 대량 복사 변경 사항](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다.|  
+|IAccessor::CreateAccessor|응용 프로그램 구분에 사용할 수 있도록 DBBINDING 구조에 플래그가 추가 됩니다 **datetime**, **datetime2**, 및 **smalldatetime** 값입니다. 자세한 내용은 참조 [매개 변수 및 행 집합 메타 데이터](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)합니다.|  
+|IBCPSession::BCPColFmt|자세한 내용은 참조 [향상 된 날짜 및 시간 형식 &#40; OLE DB 및 ODBC &#41;에 대 한 대량 복사 변경 사항](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다.|  
 |ICommandWithParameters::GetParameterInfo|자세한 내용은 참조[매개 변수 및 행 집합 메타 데이터](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)합니다.|  
-|Icommandwithparameters::|자세한 내용은 참조[매개 변수 및 행 집합 메타 데이터](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)합니다.|  
+|ICommandWithParameters::SetParameterinfo|자세한 내용은 참조[매개 변수 및 행 집합 메타 데이터](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)합니다.|  
 |IColumnsRowset::GetColumnsRowset|자세한 내용은 참조[매개 변수 및 행 집합 메타 데이터](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)합니다.|  
 |IColumnsInfo::GetColumnInfo|자세한 내용은 참조[매개 변수 및 행 집합 메타 데이터](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)합니다.|  
-|Idbschemarowset:: Getrowset|영향을 받는 스키마 행 집합의 세부 정보를 참조 하십시오.[날짜 및 시간과 스키마 행 집합](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)합니다.|  
+|IDBSchemaRowset::GetRowset|영향을 받는 스키마 행 집합의 세부 정보를 참조 하십시오.[날짜 및 시간과 스키마 행 집합](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)합니다.|  
 |IRowsetFastLoad|이 인터페이스는 새 날짜/시간 형식을 지원하지만 인터페이스 변경 사항은 없습니다.|  
-|Itabledefinition:: Createtable|자세한 내용은 참조 [OLE DB 날짜 및 시간 기능 향상에 대 한 데이터 형식 지원](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)합니다.|  
+|ITableDefinition::CreateTable|자세한 내용은 참조 [OLE DB 날짜 및 시간 기능 향상에 대 한 데이터 형식 지원](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [날짜 및 시간 기능 향상 &#40; OLE db&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

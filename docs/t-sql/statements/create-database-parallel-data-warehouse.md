@@ -15,13 +15,13 @@ ms.assetid: 40cacde4-ac72-45f7-9564-d76e2b4a741a
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 622dd3433ad5cb900dbbcb23777add948ea5474b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4e9ff76a4d260604a93f59baa3b61f5c37b4952f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-parallel-data-warehouse"></a>(병렬 데이터 웨어하우스) 데이터베이스 만들기
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -55,14 +55,14 @@ WITH (
   
  자동 증가 모든 크기에 대 한 ON 또는 OFF 모든 크기에 대 한 합니다. 에 대 한 자동 증가 ON을 설정 하는 예를 들어 *log_size*, 하지만 대해 설정 되지 *replicated_size*합니다.  
   
- *replicated_size* [GB]  
+ *replicated_size* [ GB ]  
  양수입니다. 복제 된 테이블 및 해당 데이터에 할당 된 총 공간에 대 한 크기 (기가바이트) 정수나 10 진수 설정 *각 계산 노드에*합니다. 최소 및 최대 *replicated_size* 에서 "최소 및 최대 값"를 참조 하는 요구 사항는 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]합니다.  
   
  자동 증가 옵션이 ON 이면 경우 복제 된 테이블이이 제한을 초과 하 게 허용 됩니다.  
   
  자동 증가 옵션이 OFF 이면 오류가 반환 됩니다 데이터를 기존 복제 된 테이블을 쿼리하거나 기존 업데이트 삽입 테이블 보다 더 증가 하 게 하는 방식으로 복제 사용자를 새 복제 된 테이블을 만드는 경우 *replicated_size*.  
   
- *distributed_size* [GB]  
+ *distributed_size* [ GB ]  
  양수입니다. 분산된 테이블 (및 해당 되는 데이터)에 할당 된 총 공간에 대 한 정수 또는 10 진수 기가바이트 단위로 크기 *기기에서*합니다. 최소 및 최대 *distributed_size* 에서 "최소 및 최대 값"를 참조 하는 요구 사항는 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]합니다.  
   
  자동 증가 옵션이 ON 이면 하는 경우이 제한을 초과 하 게 분산된 테이블 허용 됩니다.  

@@ -12,13 +12,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0cf2c1c43b3c83ea01cd7ef6708ff1f708320ad2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7708aa6a1db5ddc5f8b45f571c2a111cd50ebbe0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-a-resource-pool-for-python"></a>Python에 대 한 리소스 풀을 만드는 방법
 

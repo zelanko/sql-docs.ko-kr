@@ -15,13 +15,13 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 caps.latest.revision: "15"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee5395145b72108b63256a7e3742eca6a9289e06
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rename-transact-sql"></a>이름 바꾸기 (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/20/2017
   사용자가 만든 테이블의 이름을 바꿉니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다. 사용자가 만든 테이블 또는 데이터베이스의 이름을 바꿉니다 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다.  
   
 > [!NOTE]  
->  데이터베이스의 이름을 바꾸려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 저장된 프로시저를 사용 하 여 [sp_renamedb &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Azure SQL 데이터베이스의 데이터베이스 이름을 바꾸려면 사용는 [ALTER DATABASE (Azure SQL 데이터베이스)](/statements/alter-database-azure-sql-database.md) 문. 
+>  데이터베이스의 이름을 바꾸려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 저장된 프로시저를 사용 하 여 [sp_renamedb &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Azure SQL Database에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Database)](/statements/alter-database-azure-sql-database.md) 문을 사용합니다. 
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 ## <a name="arguments"></a>인수  
  개체 [:] 이름 바꾸기   
-          [[*database_name* 합니다. [ *schema_name* ]. ] | [ *schema_name* 합니다. ]]*table_name* TO *new_table_name*  
+          [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
  **적용 대상:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  사용자 정의 테이블의 이름을 변경 합니다. 1, 2 개 또는 세 부분으로 된 이름으로 이름을 변경 하려면 테이블을 지정 합니다.    새 테이블을 지정 *new_table_name* 한 부분 이름으로 합니다.  

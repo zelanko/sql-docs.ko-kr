@@ -26,13 +26,13 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5bd0f8234088fbb358740d5c9b4e753d9ecaa11d
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: bc129a0a62c393cb8aee03edca3e0c2b567f9488
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-not-transact-sql"></a>~(비트 NOT)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 01/19/2018
  **비트** 입력된 값이 **비트**합니다.  
   
 ## <a name="remarks"></a>주의  
-  **~**  비트 논리 NOT을 수행 하는 비트 or 연산자에 대 한는 *식*, 각 비트를 차례로 합니다. 경우 *식* 값 0을 결과 집합의 비트가 1로 설정 됩니다; 값 0 결과에서 비트는 해제 하는 그렇지 않은 경우. 즉, 1은 0으로 변경되고 0은 1로 변경됩니다.  
+ **~**  비트 논리 NOT을 수행 하는 비트 or 연산자에 대 한는 *식*, 각 비트를 차례로 합니다. 경우 *식* 값 0을 결과 집합의 비트가 1로 설정 됩니다; 값 0 결과에서 비트는 해제 하는 그렇지 않은 경우. 즉, 1은 0으로 변경되고 0은 1로 변경됩니다.  
   
 > [!IMPORTANT]  
 >  비트 연산을 수행할 때는 연산에 사용되는 식의 저장 길이가 중요합니다. 값을 저장할 때는 동일한 바이트 수를 사용하는 것이 좋습니다. 예를 들어 5로 10 진수 값을 저장 한 **tinyint**, **smallint**, 또는 **int** 함께 바이트 수가 다르게 저장 된 값이 생성: **tinyint** 1 바이트,를 사용 하 여 데이터를 저장 합니다. **smallint** 2 바이트를 사용 하 여 데이터를 저장 하 고 **int** 4 바이트를 사용 하 여 데이터를 저장 합니다. 따라서에 비트 연산을 수행는 **int** 10 진수 값에서 직접 이진 또는 16 진수 변환을 사용 하 여 다른 결과 산출 특히 경우는  **~**  드 ( 비트 NOT) 연산자를 사용 합니다. 비트 NOT 연산은 길이가 짧은 변수에서 발생할 수 있습니다. 이 경우 길이가 짧은 변수를 길이가 긴 데이터 형식 변수로 변환할 때 상위 8비트는 예상된 값으로 설정되지 않을 수 있습니다. 작은 데이터 형식 변수를 큰 데이터 형식 변수로 변환한 다음 그 결과에서 NOT 연산을 수행하는 것이 좋습니다.  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d8de08d636104294453187fee964212284bb66e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 94ccda73ec77c00e77f99f8a11405be40cc876dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>대량 복사 작업 수행(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [데이터 파일 및 서식 파일 사용](../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
+-   [데이터 파일과 서식 파일을 사용 하 여](../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
 -   [프로그램 변수에서 대량 복사](../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   

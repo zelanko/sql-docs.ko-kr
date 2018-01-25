@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c01a4e7098524e14c8198894a4f282b602cb1166
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 553681c7e0e56978f5df44b23041e52a66f129a9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,13 +53,13 @@ RETCODE bcp_setcolfmt (
  *hdbc*  
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
- *필드*  
+ *field*  
  속성을 설정할 서수 열 번호입니다.  
   
  *속성*  
  속성 상수 중 하나입니다. 다음 표에는 속성 상수가 정의되어 있습니다.  
   
-|속성|값|Description|  
+|속성|Value|Description|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|사용자 파일에 있는 이 열의 데이터 형식입니다. 데이터베이스 테이블에 있는 해당 열의 데이터 형식과 다를 경우 대량 복사에서 가능한 경우 데이터를 변환합니다.<br /><br /> BCP_FMT_TYPE 매개 변수는 ODBC C 데이터 형식 열거자가 아닌 sqlncli.h의 SQL Server 데이터 형식 토큰에 의해 열거됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 SQLCHARACTER 형식을 사용하여 ODBC 형식의 SQL_C_CHAR라는 문자열을 지정할 수 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 기본 데이터 표현을 지정하려면 이 매개 변수를 0으로 설정합니다.<br /><br /> SQL Server에서 BCP_FMT_TYPE이 SQLDECIMAL 또는 SQLNUMERIC, 원본 열이이 파일로 대량 복사에 대 한 **10 진수** 또는 **숫자**, 기본 전체 자릿수 및 소수 자릿수가 사용 됩니다. 그렇지 않으면 원본 열이 **10 진수** 또는 **숫자**, 전체 자릿수와 소수 자릿수가 원본 열이 사용 됩니다.|  
 |BCP_FMT_INDICATOR_LEN|INT|표시기(접두사)의 길이(바이트)입니다.<br /><br /> 열 데이터의 길이 또는 null 표시기의 길이(바이트)입니다. 올바른 표시기 길이 값은 0(표시기를 사용하지 않을 경우), 1, 2 또는 4입니다.<br /><br /> 기본 대량 복사 표시기를 사용하도록 지정하려면 이 매개 변수를 SQL_VARLEN_DATA로 설정합니다.<br /><br /> 표시기는 메모리에서는 임의의 데이터 바로 앞에 나타나고 데이터 파일에서는 표시기가 적용되는 데이터 바로 앞에 나타납니다.<br /><br /> 표시기와 최대 열 길이를 사용하거나 표시기와 종결자 시퀀스를 사용하는 등 두 가지 이상의 방법을 사용하여 데이터 파일 열 길이를 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 선택됩니다.<br /><br /> 사용자 개입을 통해 데이터 형식이 조정되지 않는 대량 복사로 생성된 데이터 파일에는 열 데이터의 길이가 변경될 수 있거나 열이 NULL 값을 허용할 수 있는 경우 표시기가 포함됩니다.|  

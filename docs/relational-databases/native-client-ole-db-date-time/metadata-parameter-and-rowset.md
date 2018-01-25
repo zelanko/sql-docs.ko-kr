@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dfe465757a4182803609ec24f3b2b28510ffb61
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0de69450f5aecceb87e56a76b9edb0e46a146d35
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="metadata---parameter-and-rowset"></a>메타 데이터-매개 변수 및 행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,24 +32,24 @@ ms.lasthandoff: 01/08/2018
   
 -   DBBINDING 구조  
   
--   **Icommandwithparameters:: Getparameterinfo**  
+-   **ICommandWithParameters::GetParameterInfo**  
   
--   **Icommandwithparameters::**  
+-   **ICommandWithParameters::SetParameterInfo**  
   
--   **Icolumnsrowset:: Getcolumnsrowset**  
+-   **IColumnsRowset::GetColumnsRowset**  
   
--   **Icolumnsinfo:: Getcolumninfo**  
+-   **IColumnsInfo::GetColumnInfo**  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  다음 정보를 통해 DBPARAMINFO 구조에 반환 됩니다 *prgParamInfo*:  
   
 |매개 변수 유형|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
-|Time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|date|DBTYPE_DBDATE|6|10|0|지우기|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|Datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Set|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Set|  
   
  값 범위가 연속되지 않을 수도 있습니다. 이러한 경우는 소수 부분 자릿수가 0보다 커서 소수점을 추가했을 때 발생합니다.  
@@ -62,11 +62,11 @@ ms.lasthandoff: 01/08/2018
 |*pwszDataSourceType*<br /><br /> (공급자별로 다름)|*pwszDataSourceType*<br /><br /> (OLE DB 일반)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|무시됨|  
-|날짜|DBTYPE_DBDATE|6|무시됨|  
+|date|DBTYPE_DBDATE|6|무시됨|  
 ||DBTYPE_DBTIME|10|무시됨|  
-|Time|DBTYPE_DBTIME2|10|0..7|  
+|time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|무시됨|  
-|DATETIME||16|무시됨|  
+|datetime||16|무시됨|  
 |datetime2 또는 DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |바인딩 유형|*pwszDataSourceType*<br /><br /> (공급자별로 다름)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|날짜|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -90,11 +90,11 @@ ms.lasthandoff: 01/08/2018
   
 |열 유형|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
-|Time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|date|DBTYPE_DBDATE|6|10|0|지우기|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|Datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  DBCOLUMN_FLAGS에서 날짜/시간 유형에 대해 DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 true이지만 다음과 같은 플래그는 항상 false입니다.  
@@ -124,11 +124,11 @@ ms.lasthandoff: 01/08/2018
   
 |매개 변수 유형|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
+|date|DBTYPE_DBDATE|6|10|0|지우기|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|Datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  *dwFlags*, DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 날짜/시간 형식에 대 한 true 및 다음과 같은 플래그는 항상 false:  

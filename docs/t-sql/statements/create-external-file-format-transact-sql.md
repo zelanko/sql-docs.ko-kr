@@ -23,13 +23,13 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: "25"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d7b64d907e0474361a342dbdbc6e581f2c898ed
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: ab389a5c811f915ff497057a5daf12374f1cedb7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>외부 파일 형식 (Transact SQL) 만들기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -117,9 +117,9 @@ WITH (
   
  PolyBase는 두 SerDe 메서드를 사용 하 여 RCFile 지정의 예제입니다.
   
--   FORMAT_TYPE RCFILE, SERDE_METHOD = = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+-   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
   
--   FORMAT_TYPE RCFILE, SERDE_METHOD = = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+-   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
   
  에서는 DELIMITEDTEXT 지정, 열 구분 기호를 사용 하는 텍스트 형식 라고도 필드 종결자입니다.
   
@@ -134,7 +134,7 @@ WITH (
   
 -   FIELD_TERMINATOR ꞌ\tꞌ =  
   
--   FIELD_TERMINATOR = ' ~ | ~'  
+-   FIELD_TERMINATOR = '~|~'  
   
  STRING_DELIMITER = *string_delimiter*  
  텍스트 구분 파일에 형식 문자열의 데이터에 대 한 필드 종결자를 지정합니다. 문자열 구분 기호 길이에 하나 이상의 문자 이며 작은따옴표로 묶여 있습니다. 기본값은 빈 문자열 ""입니다. 보장 된 지원에 대 한 하나 이상의 ascii 문자를 사용 하는 것이 좋습니다.
@@ -148,7 +148,7 @@ WITH (
   
 -   STRING_DELIMITER = ' *'  
   
--   STRING_DELIMITER Ꞌ, Ꞌ =  
+-   STRING_DELIMITER = ꞌ,ꞌ  
   
 -   STRING_DELIMITER 두 물결표 ' 0x7E0x7E'-= (예를 들어 ~ ~)
   
@@ -166,7 +166,7 @@ PolyBase는 데이터를 가져오기 위한 사용자 지정 날짜 형식을 �
   
 -   DateTime2: ' yyyy-월-일 h:mm: ss '  
   
--   DateTimeOffset: ' yyyy-월-일 h:mm: ss '  
+-   DateTimeOffset: 'yyyy-MM-dd HH:mm:ss'  
   
 -   시간: ' h:mm: ss '  
   
@@ -182,34 +182,34 @@ PolyBase는 데이터를 가져오기 위한 사용자 지정 날짜 형식을 �
   
 |날짜 형식|예제|Description|  
 |---------------|-------------|-----------------|  
-|DateTime|DATE_FORMAT 'yyyy-월-일 HH:mm:ss.fff' =|년, 월, 일, 외에도이 날짜 형식 포함 00-24 시간, 00-59 00-59 분 초 및 밀리초에 대 한 3 자리 숫자입니다.|  
-|DateTime|DATE_FORMAT 'yyyy-월-일 hh:mm:ss.ffftt' =|년, 월, 일, 외에도이 날짜 형식 포함 00-12 00-59 시간 동안 00-59 분 초, 밀리초 및 AM, 3 자리 숫자 am, PM, 또는 pm입니다. |  
+|과 같이 지원되는|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|년, 월, 일, 외에도이 날짜 형식 포함 00-24 시간, 00-59 00-59 분 초 및 밀리초에 대 한 3 자리 숫자입니다.|  
+|과 같이 지원되는|DATE_FORMAT 'yyyy-월-일 hh:mm:ss.ffftt' =|년, 월, 일, 외에도이 날짜 형식 포함 00-12 00-59 시간 동안 00-59 분 초, 밀리초 및 AM, 3 자리 숫자 am, PM, 또는 pm입니다. |  
 |SmallDateTime|DATE_FORMAT ' yyyy-월-일 hh: mm ' =|연도, 월 및 일, 외에도이 날짜 형식 포함 00-23 시간, 00-59 분입니다.|  
 |SmallDateTime|DATE_FORMAT 'yyyy-월-일 hh:mmtt' =|연도, 월 및 일, 외에도이 날짜 형식에 00-11 포함 시간, 00-59 분 없습니다 초 및 AM, am, PM, 또는 pm입니다.|  
-|날짜|DATE_FORMAT ' yyyy-월-일 ' =|연도, 월 및 일 합니다. 시간 요소가 포함 됩니다.|  
-|날짜|DATE_FORMAT ' yyyy-MMM-일 ' =|연도, 월 및 일 합니다. 월을 3 분으로 지정 하는 경우 한 개 또는 1 월, 2 월, 3 월, 일, 년 5 월, 6 월, 년 7 월, 년 9 월, 년 10 월, 년 11 월, 또는 년 12 월 8 문자열 입력된 값이 있습니다.|  
-|datetime2|DATE_FORMAT 'yyyy-월-일 HH:mm:ss.fffffff' =|연도, 월 및 일, 외에도이 날짜 형식 포함 00-23 시간, 00-59 00-59 분 초 및 밀리초에 대 한 7 자리입니다.|  
+|날짜|DATE_FORMAT =  'yyyy-MM-dd'|연도, 월 및 일 합니다. 시간 요소가 포함 됩니다.|  
+|날짜|DATE_FORMAT = 'yyyy-MMM-dd'|연도, 월 및 일 합니다. 월을 3 분으로 지정 하는 경우 한 개 또는 1 월, 2 월, 3 월, 일, 년 5 월, 6 월, 년 7 월, 년 9 월, 년 10 월, 년 11 월, 또는 년 12 월 8 문자열 입력된 값이 있습니다.|  
+|datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|연도, 월 및 일, 외에도이 날짜 형식 포함 00-23 시간, 00-59 00-59 분 초 및 밀리초에 대 한 7 자리입니다.|  
 |datetime2|DATE_FORMAT 'yyyy-월-일 hh:mm:ss.ffffffftt' =|연도, 월 및 일, 외에도이 날짜 형식에 00-11 포함 00-59 시간 동안 00-59 분 초, 밀리초 및 AM에 대 한 7 자리 am, PM, 또는 pm입니다.|  
-|DateTimeOffset|DATE_FORMAT 'yyyy-월-일 HH:mm:ss.fffffff zzz' =|연도, 월 및 일, 외에도이 날짜 형식 포함 00-23 시간, 00-59 00-59 분 초와 밀리초 및 표준 시간대 오프셋으로 입력된 파일에 배치할 수 있는 대 한 7 자리 `{+&#124;-}HH:ss`합니다. 예를 들어-08의 값을 UTC 보다 8 시간은 절약 일광 없이 로스앤젤레스 시간 이후: 입력된 파일에 00 로스앤젤레스에 대 한 표준 시간대를 지정 합니다.|  
+|DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|연도, 월 및 일, 외에도이 날짜 형식 포함 00-23 시간, 00-59 00-59 분 초와 밀리초 및 표준 시간대 오프셋으로 입력된 파일에 배치할 수 있는 대 한 7 자리 `{+&#124;-}HH:ss`합니다. 예를 들어-08의 값을 UTC 보다 8 시간은 절약 일광 없이 로스앤젤레스 시간 이후: 입력된 파일에 00 로스앤젤레스에 대 한 표준 시간대를 지정 합니다.|  
 |DateTimeOffset|DATE_FORMAT 'yyyy-월-일 hh:mm:ss.ffffffftt zzz' =|연도, 월 및 일, 이외에이 날짜 형식에는 00-11이 포함 되어 00-59 시간 동안 분 00-59 초, 밀리초, (AM, 오전, 오후 또는 pm)에 대 한 7 개의 자릿수 및 표준 시간대 오프셋 합니다. 이전 행의 설명을 참조 하십시오.|  
-|Time|DATE_FORMAT 'hh: mm:' =|값이 없는 날짜만 00-23 시간, 00-59 분 및 00-59 초입니다.|  
+|Time|DATE_FORMAT = 'HH:mm:ss'|값이 없는 날짜만 00-23 시간, 00-59 분 및 00-59 초입니다.|  
   
  모든 지원 되는 날짜 형식:
   
 |datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
-|[[M] M] M-[d] d-[yy] yy hh: mm: [.fff]|[[M] M] M-[d] d-[yy] yy hh: mm [: 00]|[[M] M] M-[d] d-[yy] yy|[[M] M] M-[d] d-[yy] yy h:mm: ss [.fffffff]|[[M] M] M-[d] d-[yy] yy h:mm: ss [.fffffff] zzz|  
-|[[M] M] M-[d] d-[yy] yy hh: mm: [.fff] [tt]|[[M] M] M-[d] d-[yy] yy hh: mm [: 00] [tt]||[[M] M] M-[d] d-[yy] yy h:mm: ss [.fffffff] [tt]|[[M] M] M-[d] d-[yy] yy h:mm: ss [.fffffff] [tt] zzz|  
-|[[M] M] M-[yy] yy-[d] d hh: mm: [.fff]|[[M] M] M-[yy] yy-[d] d hh: mm [: 00]|[[M] M] M-[yy] yy-[d] d|[[M] M] M [yy] yy-[d] 차원 h:mm: ss [.fffffff]|[[M] M] M [yy] yy-[d] 차원 h:mm: ss [.fffffff] zzz|  
-|[[M] M] M-[yy] yy-[d] d hh: mm: [.fff] [tt]|[[M] M] M-[yy] yy-[d] d hh: mm [: 00] [tt]||[[M] M] M-[yy] yy-[d] d h:mm: ss [.fffffff] [tt]|[[M] M] M-[yy] yy-[d] d h:mm: ss [.fffffff] [tt] zzz|  
-|[yy] yy-[[M] M] M-[d] d hh: mm: [.fff]|[yy] yy-[[M] M] M-[d] d hh: mm [: 00]|[yy] yy-[[M] M] M-[d] d|[yy] yy-[[M] M] M-[d] d h:mm: ss [.fffffff]|[yy] yy-[[M] M] M-[d] d h:mm: ss [.fffffff] zzz|  
-|[yy] yy-[[M] M] M-[d] d hh: mm: [.fff] [tt]|[yy] yy-[[M] M] M-[d] d hh: mm [: 00] [tt]||[yy] yy-[[M] M] M-[d] d h:mm: ss [.fffffff] [tt]|[yy] yy-[[M] M] M-[d] d h:mm: ss [.fffffff] [tt] zzz|  
-|[yy] yy-[d] d-[[M] M] M h:mm: ss [.fff]|[yy] yy-[d] d-[[M] M] M hh: mm [: 00]|[yy] yy-d [d]-[[M] M] M|[yy] yy-[d] d-[[M] M] M h:mm: ss [.fffffff]|[yy] yy-[d] d-[[M] M] M h:mm: ss [.fffffff] zzz|  
-|[yy] yy-[d] d-[[M] M] M h:mm: ss [.fff] [tt]|[yy] yy-[d] d-[[M] M] M hh: mm [: 00] [tt]||[yy] yy-[d] d-[[M] M] M h:mm: ss [.fffffff] [tt]|[yy] yy-[d] d-[[M] M] M h:mm: ss [.fffffff] [tt] zzz|  
-|[d] d-[[M] M] M-[yy] yy hh: mm: [.fff]|[d] d-[[M] M] M-[yy] yy hh: mm [: 00]|[d] d-[[M] M] M-[yy] yy|[d] d-[[M] M] M-[yy] yy h:mm: ss [.fffffff]|[d] d-[[M] M] M-[yy] yy h:mm: ss [.fffffff] zzz|  
-|[d] d-[[M] M] M-[yy] yy hh: mm: [.fff] [tt]|[d] d-[[M] M] M-[yy] yy hh: mm [: 00] [tt]||[d] d-[[M] M] M-[yy] yy h:mm: ss [.fffffff] [tt]|[d] d-[[M] M] M-[yy] yy h:mm: ss [.fffffff] [tt] zzz|  
-|[d] d-[yy] yy-[[M] M] M h:mm: ss [.fff]|[d] d-[yy] yy-[[M] M] M hh: mm [: 00]|[d] d-[yy] yy-[[M] M] M|[d] d-[yy] yy-[[M] M] M h:mm: ss [.fffffff]|[d] d-[yy] yy-[[M] M] M h:mm: ss [.fffffff] zzz|  
-|[d] d-[yy] yy-[[M] M] M h:mm: ss [.fff] [tt]|[d] d-[yy] yy-[[M] M] M hh: mm [: 00] [tt]||[d] d-[yy] yy-[[M] M] M h:mm: ss [.fffffff] [tt]|[d] d-[yy] yy-[[M] M] M h:mm: ss [.fffffff] [tt] zzz|  
+|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
+|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fff]|[M[M]]M-[yy]yy-[d]d HH:mm[:00]|[M[M]]M-[yy]yy-[d]d|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff]|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fff][tt]|[M[M]]M-[yy]yy-[d]d hh:mm[:00][tt]||[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt]|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt] zzz|  
+|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fff]|[yy]yy-[M[M]]M-[d]d HH:mm[:00]|[yy]yy-[M[M]]M-[d]d|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fff][tt]|[yy]yy-[M[M]]M-[d]d hh:mm[:00][tt]||[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt]|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt] zzz|  
+|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fff]|[yy]yy-[d]d-[M[M]]M HH:mm[:00]|[yy]yy-[d]d-[M[M]]M|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm[:00][tt]||[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
+|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fff]|[d]d-[M[M]]M-[yy]yy HH:mm[:00]|[d]d-[M[M]]M-[yy]yy|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff]|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fff][tt]|[d]d-[M[M]]M-[yy]yy hh:mm[:00][tt]||[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fffffff][tt]|[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
+|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fff]|[d]d-[yy]yy-[M[M]]M HH:mm[:00]|[d]d-[yy]yy-[M[M]]M|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm[:00][tt]||[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
   
  상세 정보:  
   
@@ -256,13 +256,13 @@ PolyBase는 데이터를 가져오기 위한 사용자 지정 날짜 형식을 �
   
 -   데이터 압축 'org.apache.hadoop.io.compress.DefaultCodec' =
   
--   데이터 압축 'org.apache.hadoop.io.compress.SnappyCodec' =
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
  PARQUET 파일 형식 유형에서는 다음 압축 방법을 지원합니다.
   
 -   데이터 압축 'org.apache.hadoop.io.compress.GzipCodec' =
   
--   데이터 압축 'org.apache.hadoop.io.compress.SnappyCodec' =
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
 ## <a name="permissions"></a>Permissions  
  ANY EXTERNAL FILE FORMAT ALTER 권한이 필요합니다.

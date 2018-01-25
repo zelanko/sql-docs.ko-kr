@@ -20,12 +20,12 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: f52205803e3ab44e7c72808255dbe93fd61de336
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-library-transact-sql"></a>외부 라이브러리 (Transact SQL) 만들기  
 
@@ -189,7 +189,7 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 > [!NOTE]
 > 다른 달리 `DROP` 에 문을 [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)],이 문은 사용자 권한을 지정 하는 선택적 매개 변수를 지원 합니다. 이 옵션을 사용 하면 일반 사용자가 업로드 되는 라이브러리를 삭제 하려면 소유권 역할이 할당 된 사용자입니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [ALTER 외부 라이브러리 (Transact SQL)](alter-external-library-transact-sql.md)  
 [DROP 외부 라이브러리 (Transact SQL)](drop-external-library-transact-sql.md)  

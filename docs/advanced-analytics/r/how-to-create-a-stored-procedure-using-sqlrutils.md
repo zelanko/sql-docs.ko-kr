@@ -15,13 +15,13 @@ ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
 caps.latest.revision: "10"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3e1223ded4b8ef7107a0a565b751b31d12ff6f3e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c86b39e8c6c9aad23c9059482f1e33ec7ba3621b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>저장 프로시저를 사용 하 여 sqlrutils 만들기
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 
 함수의 다른 모든 입력 매개 변수뿐만 아니라 데이터 프레임 내의 개체는 다음과 같은 R 데이터 형식이어야 합니다.
 - POSIXct
-- NUMERIC
+- numeric
 - character
 - integer
 - 논리
@@ -89,7 +89,7 @@ R 코드 그룹이 정리 되 고 단일 함수로 호출할 수 있습니다, �
 
 모든 입력 및 출력 매개 변수 준비 되 면 확인에 대 한 호출에서 `StoredProcedure` 생성자입니다.
 
-**Usage**
+**사용법**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

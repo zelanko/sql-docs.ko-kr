@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd1b3396b763d6ca8eb8c3f3f6f2559f3ef4c44e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a6bdb5767937e4fbfdf7dd92cc683fe7830e066a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ ms.lasthandoff: 01/08/2018
   
  다음 표에서는 매개 변수 및 행 집합의 데이터 형식 매핑을 보여 줍니다.  
   
-|SQL Server 데이터 형식|OLE DB 데이터 형식|메모리 레이아웃|값|  
+|SQL Server 데이터 형식|OLE DB 데이터 형식|메모리 레이아웃|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR UDT|DBTYPE_UDT|BYTE] (바이트 배열\)|132 (oledb.h)|  
+|CLR UDT|DBTYPE_UDT|BYTE[](byte array\)|132 (oledb.h)|  
   
  UDT 값은 바이트 배열로 나타납니다. 16진수 문자열로의 변환 및 그 반대의 변환이 지원됩니다. 리터럴 값은 접두사 "0x"를 사용하여 16진수 문자열로 나타납니다. 16진수 문자열은 밑수가 16인 이진 데이터의 텍스트 표현입니다. 예제는 서버 유형으로 변환 되기 **varbinary(10)** 를 DBTYPE_STR로 줄어들고 결과적 모든 문자 쌍이 단일 바이트를 나타내는 20 자의 16 진수 표현입니다.  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 01/08/2018
   
 |기호|의미|  
 |------------|-------------|  
-|1|서버 이외의 유형이 DBTYPE_UDT로 지정 **icommandwithparameters:: Setparameterinfo** 접근자 유형이 DBTYPE_UDT 인 이며 문이 실행 될 때 오류가 발생 합니다.  오류는 DB_E_ERRORSOCCURRED이고 매개 변수 상태는 DBSTATUS_E_BADACCESSOR가 됩니다.<br /><br /> UDT가 아닌 서버 매개 변수에 대해 UDT 유형의 매개 변수를 지정하는 것은 오류입니다.|  
+|1.|서버 이외의 유형이 DBTYPE_UDT로 지정 **icommandwithparameters:: Setparameterinfo** 접근자 유형이 DBTYPE_UDT 인 이며 문이 실행 될 때 오류가 발생 합니다.  오류는 DB_E_ERRORSOCCURRED이고 매개 변수 상태는 DBSTATUS_E_BADACCESSOR가 됩니다.<br /><br /> UDT가 아닌 서버 매개 변수에 대해 UDT 유형의 매개 변수를 지정하는 것은 오류입니다.|  
 |2|데이터가 16진수 문자열에서 이진 데이터로 변환됩니다.|  
 |3|데이터가 이진 데이터에서 16진수 문자열로 변환됩니다.|  
 |4|유효성 검사 사용 시 발생할 수 **CreateAccessor** 또는 **GetNextRows**합니다. 오류는 DB_E_ERRORSOCCURRED이고 바인딩 상태는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 설정됩니다.|  

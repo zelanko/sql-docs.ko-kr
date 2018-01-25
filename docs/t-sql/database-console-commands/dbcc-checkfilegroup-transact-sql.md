@@ -27,15 +27,15 @@ helpviewer_keywords:
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3ee32ac764afd0e350fe094eb8e18a24589026e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc36aa0cfddcceefda1aefc6f4e7dc040f9a4b5f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]할당 및 구조적 무결성 모든 테이블 및 인덱싱된 뷰는 현재 데이터베이스의 지정 된 파일 그룹에서을 확인합니다.

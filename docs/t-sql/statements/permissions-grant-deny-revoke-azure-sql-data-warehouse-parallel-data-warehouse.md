@@ -16,13 +16,13 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a21ee8a4a525e2b8c522de140a3f482915cdb361
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE (Azure SQL 데이터 웨어하우스, 병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,15 +86,15 @@ REVOKE
   
  ON [ \<class_type >::] *보안* 는 **ON** 절에 권한을 부여, 거부 또는 사용 권한을 취소 하는 보안 개체 매개 변수를 설명 합니다.  
   
- \<class_type > 보안 개체의 클래스 형식입니다. 이 수 **로그인**, **데이터베이스**, **개체**, **스키마**, **역할**, 또는 **사용자** . 에 사용 권한을 부여할 수도 있습니다는 **서버***class_type*, 하지만 **서버** 이러한 사용 권한은 지정 되지 않았습니다. **데이터베이스** 권한을 단어를 포함 하는 시기를 지정 하지 않으면 **데이터베이스** (예를 들어 **ALTER ANY DATABASE**). No *class_type* 지정 된 사용 권한 유형을 서버 또는 데이터베이스 클래스에 제한 되지 않습니다, 클래스 것으로 간주 되 고 **개체**합니다.  
+ \<class_type > 보안 개체의 클래스 형식입니다. 이 수 **로그인**, **데이터베이스**, **개체**, **스키마**, **역할**, 또는 **사용자** . 에 사용 권한을 부여할 수도 있습니다는 **서버 * * * class_type*, 하지만 **서버** 이러한 사용 권한은 지정 되지 않았습니다. **데이터베이스** 권한을 단어를 포함 하는 시기를 지정 하지 않으면 **데이터베이스** (예를 들어 **ALTER ANY DATABASE**). No *class_type* 지정 된 사용 권한 유형을 서버 또는 데이터베이스 클래스에 제한 되지 않습니다, 클래스 것으로 간주 되 고 **개체**합니다.  
   
- *보안 개체*  
+ *securable*  
  로그인, 데이터베이스, 테이블, 뷰, 스키마, 프로시저, 역할 또는 사용자에 게 부여 하려면 이름, 거부 또는 사용 권한을 취소 합니다. 개체 이름에 설명 된의 세 부분으로 이루어진 명명 규칙을 지정할 수 있습니다 [TRANSACT-SQL 구문 표기 규칙 &#40; Transact SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  *주* [ **,**... *n* ]  
  하나 이상의 보안 주체 권한을 부여 하기 거부 또는 사용 권한을 취소 합니다. 보안 주체에는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다.  
   
- *주* [ **,**... *n* ]  
+ FROM *principal* [ **,**...*n* ]  
  사용 권한을 해지 하려면 하나 이상의 보안 주체입니다.  보안 주체에는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다. **에** 사용할 수는 **해지** 문. **함께** 사용할 수 있습니다 **GRANT** , **DENY** , 또는 **해지** 합니다.  
   
  WITH GRANT OPTION  
@@ -230,7 +230,7 @@ REVOKE
   
 -   DELETE  
   
--   EXECUTE  
+-   CREATE 문을 실행하기 전에  
   
 -   INSERT  
   

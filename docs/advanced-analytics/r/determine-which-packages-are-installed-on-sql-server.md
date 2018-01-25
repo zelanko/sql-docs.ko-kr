@@ -14,13 +14,13 @@ ms.assetid: 9a7f7e43-b568-406c-9434-5a2ec64ec5f5
 caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e3f906e0c5290b6aa2cab375e4761390f84e718d
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: e76a42ead115c8ee4fa89599b192d722ecfbb2ee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="determine-which-r-packages-are-installed-on-sql-server"></a>R 패키지는 SQL Server에 설치 된 확인
 
@@ -109,6 +109,6 @@ STDOUT message(s) from external script:
 [1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER1000/R_SERVICES/library"
 [1] '9.2.1'
 ```
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Server에 추가 R 패키지를 설치 합니다.](install-additional-r-packages-on-sql-server.md)

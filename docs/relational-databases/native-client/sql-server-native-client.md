@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 977a231f14b85a6f27fbdfbfdbdb9c1700fc7277
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7474d620d96880396e8fe7dc44e55b4cdcf7f440
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ SQL Server 용 ODBC 드라이버에 자세한 내용은 참조 [Microsoft ODBC D
   
 -   [SQL Server Native Client 11.0의 UTF-16 지원](../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
   
--   [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
+-   [고가용성, 재해 복구에 대 한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
 -   [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
   
@@ -63,7 +63,7 @@ ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Win
   
 -   [문자 변환을 처리 시 ODBC 드라이버 동작 변경](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [SQL Server Native Client 기능](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   

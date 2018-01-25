@@ -23,15 +23,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 caps.latest.revision: "83"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54e5a186bc7beaa13cfb1fef8d69cc1fbf34cbf0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 문-FILELISTONLY (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +88,10 @@ FROM <backup_device>
   
 |열 이름|데이터 형식|Description|  
 |-|-|-|  
-|LogicalName|**nvarchar (128)**|파일의 논리적 이름입니다.|  
-|PhysicalName|**nvarchar (260)**|물리적 파일 이름 또는 운영 체제 이름입니다.|  
+|LogicalName|**nvarchar(128)**|파일의 논리적 이름입니다.|  
+|PhysicalName|**nvarchar(260)**|물리적 파일 이름 또는 운영 체제 이름입니다.|  
 |형식|**char(1)**|다음 중 하나에 해당하는 파일 유형입니다.<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일<br /><br /> **F** = 전체 텍스트 카탈로그<br /><br /> **S** = FileStream, FileTable 또는 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 컨테이너|  
-|FileGroupName|**nvarchar (128)**|파일이 있는 파일 그룹의 이름입니다.|  
+|FileGroupName|**nvarchar(128)**|파일이 있는 파일 그룹의 이름입니다.|  
 |크기|**numeric(20,0)**|현재 크기(바이트)입니다.|  
 |MaxSize|**numeric(20,0)**|허용되는 최대 크기(바이트)입니다.|  
 |FileID|**bigint**|데이터베이스 내에서 고유한 파일 식별자입니다.|  

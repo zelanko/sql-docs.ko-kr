@@ -24,15 +24,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 caps.latest.revision: "94"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,12 +67,12 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  권한 부여 *owner_name*  
  어셈블리 소유자인 사용자 또는 역할의 이름을 지정합니다. *owner_name* 는 현재 사용자가 멤버, 또는 현재 사용자 대 한 IMPERSONATE 권한이 있어야 하는 역할의 이름 이어야 합니다. *owner_name*합니다. 값을 지정하지 않으면 현재 사용자에게 소유권이 부여됩니다.  
   
- \<client_assembly_specifier >  
+ \<client_assembly_specifier>  
 업로드할 어셈블리가 있는 로컬 경로나 네트워크 위치와 어셈블리에 해당하는 매니페스트 파일 이름을 지정합니다.  \<client_assembly_specifier >는 고정된 문자열 또는 변수는 고정 문자열 식 평가로 표현할 수 있습니다. CREATE ASSEMBLY로는 다중 모듈 어셈블리를 로드할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 동일한 위치에서 이 어셈블리의 모든 종속 어셈블리를 찾은 다음 동일한 소유자를 사용하여 해당 종속 어셈블리를 루트 수준 어셈블리로 업로드합니다. 이러한 종속 어셈블리를 찾을 수 없으며 현재 데이터베이스에 종속 어셈블리가 로드되어 있지 않은 경우 CREATE ASSEMBLY는 실패합니다. 종속 어셈블리가 현재 데이터베이스에 로드되어 있는 경우 해당 어셈블리의 소유자는 새로 만든 어셈블리의 소유자와 동일해야 합니다.
   
  \<client_assembly_specifier > 로그인된 한 사용자의 가장 하는 경우 지정할 수 없습니다.  
   
- \<assembly_bits >  
+ \<assembly_bits>  
  어셈블리와 어셈블리의 종속 어셈블리를 구성하는 이진 값 목록입니다. 목록에서 첫 번째 값은 루트 수준 어셈블리로 간주됩니다. 종속 어셈블리에 해당하는 값은 순서에 관계없이 입력할 수 있습니다. 루트 어셈블리의 종속성에 해당하지 않는 값은 모두 무시됩니다.  
   
 > [!NOTE]  

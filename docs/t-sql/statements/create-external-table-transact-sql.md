@@ -24,13 +24,13 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 caps.latest.revision: "30"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
-ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.openlocfilehash: 97381b5381491b98c81a6863b3cfcdc6a340c79e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-transact-sql"></a>외부 테이블 (Transact SQL) 만들기
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -135,7 +135,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ```  
   
 ## <a name="arguments"></a>인수  
- *a s e _* 합니다. [schema_name]입니다. | schema_name 합니다. ] *table_name*  
+ *database_name* . [ schema_name ] . | schema_name 합니다. ] *table_name*  
  1 ~ 3 년 부분 이름 만들 테이블의입니다. 따라서 외부 테이블에 대 한 테이블 메타 데이터 파일 및 또는 Hadoop 또는 Azure blob 저장소에서 참조 되는 폴더에 대 한 기본 통계와 함께 SQL에 저장 됩니다. 실제 데이터가 없는 옮겨졌거나에 저장 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
  \<column_definition > [,...  *n*  ] CREATE EXTERNAL TABLE이 하나 이상의 열 정의 허용 합니다. CREATE EXTERNAL TABLE과 CREATE TABLE 모두 열을 정의 하기 위한 동일한 구문을 사용 합니다. 이 예외를 외부 테이블에서 기본 제약 조건을 사용할 수 없습니다. 열 정 및 데이터 형식에 대 한 전체 세부 정보를 참조 하세요. [CREATE table&#40; Transact SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) 및 [Azure SQL 데이터베이스에 새 테이블 만들기](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)합니다.  
@@ -159,20 +159,20 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |real|단일|float|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
 |smallmoney|Decimal|double|DoubleWritable||  
-|nchar|문자열<br /><br /> Char]|string|text||  
-|nvarchar|문자열<br /><br /> Char]|string|텍스트||  
-|char|문자열<br /><br /> Char]|string|텍스트||  
-|varchar|문자열<br /><br /> Char]|string|텍스트||  
-|binary|Byte[]|binary|BytesWritable|하이브 0.8 이상에 적용 됩니다.|  
-|varbinary|Byte[]|binary|BytesWritable|하이브 0.8 이상에 적용 됩니다.|  
-|date|DateTime|timestamp|TimestampWritable||  
-|smalldatetime|DateTime|timestamp|TimestampWritable||  
-|datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
+|NCHAR|문자열<br /><br /> Char[]|string|text||  
+|nvarchar|문자열<br /><br /> Char[]|string|텍스트||  
+|char|문자열<br /><br /> Char[]|string|텍스트||  
+|varchar|문자열<br /><br /> Char[]|string|텍스트||  
+|BINARY|Byte[]|BINARY|BytesWritable|하이브 0.8 이상에 적용 됩니다.|  
+|varbinary|Byte[]|BINARY|BytesWritable|하이브 0.8 이상에 적용 됩니다.|  
+|date|과 같이 지원되는|timestamp|TimestampWritable||  
+|smalldatetime|과 같이 지원되는|timestamp|TimestampWritable||  
+|datetime2|과 같이 지원되는|timestamp|TimestampWritable||  
+|datetime|과 같이 지원되는|timestamp|TimestampWritable||  
 |time|TimeSpan|timestamp|TimestampWritable||  
 |decimal|Decimal|decimal|BigDecimalWritable|이상 Hive0.11에 적용 됩니다.|  
   
- 위치 = '*folder_or_filepath*'  
+ LOCATION =  '*folder_or_filepath*'  
  Hadoop 또는 Azure blob 저장소의 폴더 또는 파일 경로 실제 데이터에 대 한 파일 이름을 지정합니다. 위치에서 루트 폴더에서 시작 됩니다. 루트 폴더에는 외부 데이터 원본에 지정 된 데이터 위치입니다.  
   
  위치를 폴더 수를 지정 하는 경우 외부 테이블에서 선택 하는 PolyBase 쿼리 폴더와 모든 하위 폴더에서 파일을 검색 합니다. Hadoop, 마찬가지로 PolyBase는 숨겨진된 폴더를 반환 하지 않습니다. 파일을 파일 이름은 밑줄 (_) 또는 마침표 (.)로 시작 반환 하지 않습니다.  

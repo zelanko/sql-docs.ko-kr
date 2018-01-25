@@ -19,15 +19,15 @@ helpviewer_keywords:
 - CreateTable function
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c6c5e697044275940ac62cf9174f86f29370dc8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b1e7dbe9bee95c52ac0e34a79c92e93fd51f48e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-sql-server-tables"></a>SQL Server 테이블 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/08/2018
   
  DBCOLUMNDESC의 열 속성이 나타내는 의미는 다음과 같습니다.  
   
-|속성 ID|Description|  
+|속성 ID|설명|  
 |-----------------|-----------------|  
 |DBPROP_COL_AUTOINCREMENT|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE 설명: 만든 열에 identity 속성을 설정 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ID 속성은 테이블 내의 단일 열에 대해서만 유효합니다. 두 개 이상의 오류를 생성 하는 단일 열에 대 한 속성을 variant_true로 설정 하면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 서버에서 테이블을 만들려고 합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identity 속성에 대 한 에서만 유효는 **정수**, **숫자**, 및 **10 진수** 는 소수 자릿수가 0 인 경우 형식입니다. 다른 데이터 형식의 열에 속성을 variant_true로 설정 하면 오류가 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 서버에서 테이블을 만들려고 합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBPROP_COL_AUTOINCREMENT 및 DBPROP_COL_NULLABLE이 모두 VARIANT_TRUE Native Client OLE DB 공급자가 DB_S_ERRORSOCCURRED를 반환 및 *dwOption* dbprop_col_nullable이 dbpropoptions_required가 아니면 합니다. DBPROP_COL_AUTOINCREMENT 및 DBPROP_COL_NULLABLE이 모두 VARIANT_TRUE DB_E_ERRORSOCCURRED가 반환 및 *dwOption* 이 dbpropoptions_required 이면 dbprop_col_nullable 합니다. 열이 정의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identity 속성과 고 DBPROP_COL_NULLABLE *dwStatus* 멤버가 DBPROPSTATUS_CONFLICTING으로 설정 됩니다.|  
 |DBPROP_COL_DEFAULT|R/w: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명: 만듭니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열에 대 한 DEFAULT 제약 조건입니다.<br /><br /> *vValue* DBPROP 멤버 많은 형식 중 하나일 수 있습니다. *vValue.vt* 멤버에는 열의 데이터 형식과 호환 되는 유형을 지정 해야 합니다. 예를 들어 DBTYPE_WSTR로 정의된 열의 기본값으로 BSTR N/A를 정의하는 것은 서로 호환되므로 가능합니다. DBTYPE_R8 오류가 발생 하는 대로 정의 된 열에서 정의 하는 동일한 기본 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 서버에서 테이블을 만들려고 합니다.|  

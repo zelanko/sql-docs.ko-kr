@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 caps.latest.revision: "55"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b57f77a051e2490238d88f8bc336ce34fb0e380b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 63e362b186725b5e9adf15721fcfd4154be3148d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-database-mirroring"></a>데이터베이스 미러링 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/08/2018
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 대신 사용합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]사용 하 여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 대신 합니다.  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 데이터베이스 미러링은 데이터베이스 가용성과 데이터 중복을 높이는 솔루션입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client는 개발자가 데이터베이스에 대해 구성 되 면 다른 작업을 수행 하거나 코드를 작성 하지 않아도 되므로 데이터베이스 미러링에 대 한 암시적으로 지원을 제공 합니다.  
   

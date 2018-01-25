@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: d69c5272f52dc77ff1027e1bc127f413ebd01d44
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 7613115f014ff2c53ce63ef883798b06f2e5d270
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>6 단계: SQL Server를 사용 하 여 Python 모델을 운용
 
@@ -373,6 +373,6 @@ GO
 
 [5 단계: 학습 및 Python 모델 저장](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [기계 학습 Python 사용 하 여 서비스](../python/sql-server-python-services.md)

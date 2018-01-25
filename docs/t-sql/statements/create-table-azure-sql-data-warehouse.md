@@ -16,13 +16,13 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 caps.latest.revision: "59"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42b3f397fa93b2134594e10476138d5d30e0015f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>테이블 (Azure SQL 데이터 웨어하우스) 만들기
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -109,7 +109,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
    
 ### <a name="ColumnOptions"></a>열 옵션
 
- `COLLATE`*Windows_collation_name*  
+ `COLLATE` *Windows_collation_name*  
  식에 대 한 데이터 정렬을 지정합니다. 데이터 정렬에서 지 원하는 Windows 데이터 정렬 중 하나 여야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 지 원하는 Windows 데이터 정렬의 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [Windows 데이터 정렬 이름 (Transact SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/)합니다.  
   
  `NULL` | `NOT NULL`  
@@ -120,7 +120,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
   
  | 인수 | 설명 |
  | -------- | ----------- |
- | *제약 조건 이름* | 제약 조건에 대 한 선택적 이름입니다. 제약 조건 이름은 데이터베이스 내에서 고유 합니다. 이름은 다른 데이터베이스에서 다시 사용할 수 있습니다. |
+ | *constraint_name* | 제약 조건에 대 한 선택적 이름입니다. 제약 조건 이름은 데이터베이스 내에서 고유 합니다. 이름은 다른 데이터베이스에서 다시 사용할 수 있습니다. |
  | *constant_expression* | 열에 대 한 기본값입니다. 식에 리터럴 값 이어야 합니다. 또는 상수입니다. 이러한 상수 식이 허용 되는 예를 들어: `'CA'`, `4`합니다. 이 허용 되지 않습니다: `2+3`, `CURRENT_TIMESTAMP`합니다. |
   
 
@@ -447,7 +447,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a>7. 복제 된 테이블 만들기  
+### <a name="Replicated"></a> G. 복제 된 테이블 만들기  
  다음 예제에서는 이전 예제와 비슷한 복제 된 테이블을 만듭니다. 복제 된 테이블은 각 계산 노드에 전체가 복사 됩니다. 각 계산 노드에 대해이 복사본을 쿼리에 대 한 데이터 이동을 줄어듭니다. 이 예에서는 클러스터형 인덱스를 사용 하면 힙 보다 더 나은 데이터 압축을 제공 하 고 CLUSTERED COLUMNSTORE INDEX 압축을 달성 하기 위해 충분 한 행이 포함 되지 않을 수 있습니다는 만들어집니다.  
   
 ```  
@@ -467,7 +467,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>테이블 분할에 대 한 예제
 
-###  <a name="PartitionedTable"></a>8. 분할된 된 테이블 만들기  
+###  <a name="PartitionedTable"></a> H. 분할된 된 테이블 만들기  
  다음 예에서는 예 1에서 RANGE LEFT 분할을 추가 하 여 표시 된 것 처럼 동일한 테이블을 만듭니다는 `id` 열입니다. 5 개의 파티션을 줄어들고 결과적 4 개의 파티션 경계 값을 지정 합니다.  
   
 ```  
@@ -501,7 +501,7 @@ WITH
 -   파티션 4시 30분 < = col < 40   
 -   파티션 5시 40분 < = 열  
   
-### <a name="OnePartition"></a>I입니다. 하나의 파티션 분할된 된 테이블 만들기  
+### <a name="OnePartition"></a> I. 하나의 파티션 분할된 된 테이블 만들기  
  다음 예제에서는 하나의 파티션 분할된 된 테이블을 만듭니다. 지정 하지 않습니다 경계 값을 하나의 파티션을 생성 합니다.  
   
 ```  
@@ -517,7 +517,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a>10. 분할 날짜 테이블 만들기  
+### <a name="DatePartition"></a> J. 분할 날짜 테이블 만들기  
  다음 예에서는 라는 새 테이블을 만들어 `myTable`와 분할을 `date` 열입니다. 경계 값에 대 한 날짜 및 RANGE RIGHT를 사용 하 여 각 파티션에 있는 데이터의 월을 배치 합니다.  
   
 ```  

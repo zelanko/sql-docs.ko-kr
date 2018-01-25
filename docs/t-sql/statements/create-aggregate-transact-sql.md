@@ -23,15 +23,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 877e72a18d11fbf31a6ea61f6abed515f5b746f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 07509e36b76aad995297cfae0147df7e8db41c20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  만들려는 집계 함수의 이름입니다.  
   
- **@***param_name*  
+ **@** *param_name*  
  사용자 정의 집계에 포함된 하나 이상의 매개 변수입니다. 매개 변수의 값은 집계 함수를 실행할 때 사용자가 제공해야 합니다. "At" 기호를 사용 하 여 매개 변수 이름 지정 (**@**) 첫 번째 문자로 합니다. 매개 변수 이름에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다. 매개 변수는 함수에서 로컬로 사용됩니다.  
   
  *system_scalar_type*  
@@ -83,7 +83,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  현재 데이터베이스에 생성되어 있는 CLR 사용자 정의 형식의 이름입니다. 경우 *udt_schema_name* 를 지정 하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 형식이 현재 사용자의 스키마에 속하는 것으로 가정 합니다.  
   
- *assembly_name* [ **.** *class_name* ]  
+ *assembly_name* [ **.***class_name* ]  
  사용자 정의 집계 함수와 바인딩할 어셈블리를 지정하고 필요에 따라 어셈블리가 속한 스키마의 이름과 사용자 정의 집계를 구현하는 어셈블리의 클래스 이름을 지정합니다. 어셈블리는 CREATE ASSEMBLY 문을 사용하여 데이터베이스에 이미 생성되어 있어야 합니다. *class_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자와 일치 하는 어셈블리에 있는 클래스의 이름입니다. *class_name* 는 클래스를 작성 하는 데 사용 하 여 프로그래밍 언어 C#과 같은 네임 스페이스를 사용 하는 경우 네임 스페이스로 한정 이름일 수 있습니다. 경우 *class_name* 를 지정 하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 같은 것으로 간주 *aggregate_name*합니다.  
   
 ## <a name="remarks"></a>주의  

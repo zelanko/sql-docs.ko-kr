@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: d8c20752d69b066934d1981025633dffd740318e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 07777ff0752a68e574c5f7f1a0021a8817eb7ea0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>5 단계: 학습 및 T-SQL을 사용 하 여 Python 모델 저장
 
@@ -124,14 +124,14 @@ ms.lasthandoff: 01/08/2018
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    데이터를 처리 하 고 모델을 맞출 분 정도 걸릴 수 있습니다. Python의 파이프 될 메시지 **stdout** 스트림에 표시 되는 **메시지** 의 창 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+    데이터를 처리 하 고 모델을 맞출 분 정도 걸릴 수 있습니다. Python의 파이프 될 메시지 **stdout** 스트림에 표시 되는 **메시지** 의 창 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. 예를 들어
 
-    *외부 스크립트의 STDOUT 메시지:*
-  *C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
+    *STDOUT message(s) from external script:*
+  *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. 테이블을 열고 *nyc\_taxi_models*합니다. _모델_열에 직렬화된 모델을 포함하는 하나의 새 행이 추가된 것을 확인할 수 있습니다.
 
-    *linear_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *linear_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -189,14 +189,14 @@ ms.lasthandoff: 01/08/2018
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    데이터를 처리 하 고 모델을 맞출 시간이 걸릴 수 있습니다. Python의 파이프 될 메시지 **stdout** 스트림에 표시 되는 **메시지** 의 창 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+    데이터를 처리 하 고 모델을 맞출 시간이 걸릴 수 있습니다. Python의 파이프 될 메시지 **stdout** 스트림에 표시 되는 **메시지** 의 창 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. 예를 들어
 
-    *외부 스크립트의 STDOUT 메시지:*
-  *C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
+    *STDOUT message(s) from external script:*
+  *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. *nyc_taxi_models*테이블을 엽니다. _모델_열에 직렬화된 모델을 포함하는 하나의 새 행이 추가된 것을 확인할 수 있습니다.
 
-    *rx_model* *0x8003637265766F7363616c...*
+    *rx_model* *0x8003637265766F7363616c....*
 
 다음 단계에서는 학습된 된 모델을 사용 하 여 예측을 만듭니다.
 

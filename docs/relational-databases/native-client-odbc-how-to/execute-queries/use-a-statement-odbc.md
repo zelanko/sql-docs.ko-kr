@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0122ee0c8436bd2c597fc73e901287154d56bad7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3ff3c37923f2b4d6d81f8e7e1e61c39d030b7168
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-a-statement-odbc"></a>문 사용(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,11 +43,11 @@ ms.lasthandoff: 01/08/2018
   
 5.  SQLExecDirect를 사용하여 문을 직접 실행합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      문이 준비되어 있는 경우 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)를 사용하여 여러 번 실행합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      카탈로그 함수를 호출하여 결과가 반환되도록 합니다.  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 01/08/2018
   
      문의 결과 집합을 한 번에 한 행씩 인출합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      블록 커서를 사용하여 결과 집합을 한 번에 여러 행씩 인출합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md)를 호출하여 INSERT, UPDATE 또는 DELETE 문의 영향을 받는 행 수를 확인합니다.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  SQL_HANDLE_STMT의 *HandleType*으로 [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md)을 호출하여 문 핸들을 해제합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [실행 중인 쿼리 방법 도움말 항목 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

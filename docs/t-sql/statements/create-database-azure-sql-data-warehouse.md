@@ -14,12 +14,12 @@ ms.topic: language-reference
 dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 51db5c7cbaa2932cfcb819538d743fe1368f6442
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>(Azure SQL 데이터 웨어하우스) 데이터베이스 만들기
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -52,7 +52,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 *database_name*  
 새 데이터베이스의 이름입니다. 이 이름은 둘 다 포함할 수 있는 SQL server에서 고유 해야 합니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스 및 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스, 준수 및는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자에 대 한 규칙입니다. 자세한 내용은 참조 [식별자](http://go.microsoft.com/fwlink/p/?LinkId=180386)합니다.  
   
-*데이터 정렬 이름*  
+*collation_name*  
 데이터베이스의 기본 데이터 정렬을 지정합니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 지정 하지 않으면 기본 데이터 정렬 sql_latin1_general_cp1_ci_as는 데이터베이스에 할당 됩니다.  
   
 Windows 및 SQL 데이터 정렬 이름에 대 한 자세한 내용은 참조 [COLLATE (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)합니다.  

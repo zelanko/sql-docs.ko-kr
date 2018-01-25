@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1940375cc3d822d994c673d965e1fb7e23385596
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fd805562b60d37b9988b9afeb84d81e2cb2f5125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQL Server Native Client 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ ms.lasthandoff: 01/08/2018
   
  해당하는 연결 속성은 다음과 같습니다.  
   
--   **된 SQL_COPT_SS_APPLICATION_INTENT**  
+-   **SQL_COPT_SS_APPLICATION_INTENT**  
   
 -   **SQL_COPT_SS_MULTISUBNET_FAILOVER**  
   
@@ -151,7 +151,7 @@ ms.lasthandoff: 01/08/2018
  **IDBProperties::GetProperties**  
  **IDBProperties::GetProperties**는 현재 데이터 원본에 설정된 속성의 값을 검색합니다.  DBPROP_INIT_PROVIDERSTRING 속성과 SSPROP_INIT_APPLICATIONINTENT 속성을 통해 **응용 프로그램 의도** 값을 검색할 수 있습니다.  
   
- **Idbproperties:: Setproperties**  
+ **IDBProperties::SetProperties**  
  **ApplicationIntent** 속성 값을 설정하려면 값이 "**ReadWrite**" 또는 "**ReadOnly**"인 **SSPROP_INIT_APPLICATIONINTENT** 속성이나 값이 "**ApplicationIntent=ReadOnly**" 또는 "**ApplicationIntent=ReadWrite**"를 포함하는 **DBPROP_INIT_PROVIDERSTRING** 속성을 전달하여 **IDBProperties::SetProperties**를 호출합니다.  
   
  **데이터 연결 속성** 대화 상자의 모두 탭에 있는 응용 프로그램 의도 속성 필드에서 응용 프로그램 의도를 지정할 수 있습니다.  
@@ -160,6 +160,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [SQL Server Native Client에서 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+ [SQL Server Native Client 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

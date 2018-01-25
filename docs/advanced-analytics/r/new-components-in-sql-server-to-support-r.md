@@ -14,13 +14,13 @@ ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
 caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5c2e2459a3cf95090b0ca408eceae505086b6118
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5efdde73d0b2f880d62927b9b96b3eee7fadfe5f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>R 지원 하도록 SQL Server의 구성 요소
 
@@ -38,8 +38,8 @@ SQL Server 2016 및 2017에서 데이터베이스 엔진 확장성을 지 원하
 
 실행 패드 서비스는 Microsoft에서 게시하거나 성능 및 리소스 관리 요구 사항을 충족시키는 것으로 Microsoft에서 인증한 신뢰할 수 있는 시작 관리자만 시작합니다. 언어별 아이콘에 대 한 이름을 지정 하는 간단 합니다.
 
-  + R-RLauncher.dll
-  + Python-PythonLauncher.dll
+  + R -  RLauncher.dll
+  + Python - PythonLauncher.dll
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 자체 사용자 계정으로 실행됩니다. 특정 언어 런타임에 대한 각 위성 프로세스는 실행 패드의 사용자 계정을 상속받습니다. 구성 및 실행 패드의 보안 컨텍스트에 대 한 자세한 내용은 참조 하십시오. [보안 개요](../../advanced-analytics/r/security-overview-sql-server-r.md)합니다.
 

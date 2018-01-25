@@ -20,15 +20,15 @@ helpviewer_keywords:
 - indexes [OLE DB]
 ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6acad9c102a8884391449c151314969945757753
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9398c26930243753e17727925c9bcf614176163b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dropping-a-sql-server-index"></a>SQL Server 인덱스 삭제
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
  인덱스 이름을 유니코드 문자열에으로 지정 하는 소비자는 *pwszName* 의 멤버는 *uName* 공용 구조체의 *pIndexID* 매개 변수. *eKind* 소속 *pIndexID* DBKIND_NAME 이어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 테이블에서 모든 인덱스를 삭제 하는 OLE DB 기능을 지원 하지 않습니다 때 *pIndexID* null입니다. 경우 *pIndexID* 가 null 이면 E_INVALIDARG가 반환 됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [테이블 및 인덱스](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [DROP INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - cursors [OLE DB]
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e0546fe394d34b9a06bed38b0277192ca8f9ff8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 94f02b59dacb2ded2cc5597a3438be025a8ac678
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>행 집합 및 SQL Server 커서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
  다음과 같은 행 집합 속성을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서를 사용합니다. 일부 속성은 다른 속성과 안전하게 조합할 수 있습니다. 예를 들어 DBPROP_IRowsetScroll 및 DBPROP_IRowsetChange 속성을 나타내는 행 집합은 즉시 업데이트 동작을 표시하는 책갈피 행 집합이 됩니다. 다른 속성은 함께 사용할 수 없습니다. 예를 들어 DBPROP_OTHERINSERT를 나타내는 행 집합은 책갈피를 포함할 수 없습니다.  
   
-|속성 ID|값|행 집합 동작|  
+|속성 ID|Value|행 집합 동작|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 순차적이며 정방향으로만 스크롤하거나 인출할 수 있습니다. 상대적인 행 위치 지정은 지원됩니다. 명령 텍스트에는 ORDER BY 절이 포함될 수 있습니다.|  
 |DBPROP_CANSCROLLBACKWARDS 또는 DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 어느 방향으로든 스크롤하거나 인출할 수 있습니다. 상대적인 행 위치 지정은 지원됩니다. 명령 텍스트에는 ORDER BY 절이 포함될 수 있습니다.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/08/2018
   
  특정 유형의 커서 모델을 사용하려면 커서 모델에 해당하는 열을 찾아 열에 값 'T'가 포함된 행 집합 속성을 모두 찾습니다. 특정 커서 모델을 사용하려면 이러한 행 집합 속성을 VARIANT_TRUE로 설정합니다. 값이 '-'인 행 집합 속성은 VARIANT_TRUE 또는 VARIANT_FALSE로 설정할 수 있습니다.  
   
-|행 집합 속성/커서 모델|Default<br /><br /> result<br /><br /> 집합<br /><br /> (RO)|빠름<br /><br /> 정방향<br /><br /> 전용<br /><br /> (RO)|정적<br /><br /> (RO)|Keyset<br /><br /> 집합<br /><br /> (RO)|  
+|행 집합 속성/커서 모델|기본값<br /><br /> result<br /><br /> 집합<br /><br /> (RO)|빠름<br /><br /> 정방향<br /><br /> 전용<br /><br /> (RO)|정적<br /><br /> (RO)|Keyset<br /><br /> 집합<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

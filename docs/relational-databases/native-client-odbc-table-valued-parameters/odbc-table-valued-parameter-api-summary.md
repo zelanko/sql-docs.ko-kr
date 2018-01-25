@@ -16,15 +16,15 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), API support
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f77016af19e37dbd899a02f5c8eab23f49d04c63
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 68ebd38f66804fdeda4a502df79ad0dac28e3b61
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>ODBC 테이블 반환 매개 변수 API 요약
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

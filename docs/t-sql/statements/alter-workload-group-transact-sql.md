@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0103b63c883e1d3f9a263cf5fdb4e4ef4ca9521f
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>인수  
- *group_name* | "**기본**"  
+ *group_name* | "**default**"  
  기존의 사용자 정의 작업 그룹 또는 리소스 관리자 기본 작업 그룹의 이름입니다.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  IMPORTANCE는 리소스 풀에 대해 로컬입니다. 같은 리소스 풀 내에 있는 다른 중요도의 작업 그룹은 서로 영향을 주지만 다른 리소스 풀의 작업 그룹에는 영향을 주지 않습니다.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*값*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  단일 요청이 풀에서 사용할 수 있는 최대 메모리 양을 지정합니다. 이 비율은 MAX_MEMORY_PERCENT에서 지정한 리소스 풀 크기에 따라 바뀝니다.  
   
 > [!NOTE]  
@@ -98,7 +98,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  두 경우 모두 서버에 실제 메모리가 부족하면 시간 초과 오류 8645가 발생할 수 있습니다.  
   
- REQUEST_MAX_CPU_TIME_SEC =*값*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  요청이 사용할 수 있는 최대 CPU 시간(초)을 지정합니다. *값* 0 또는 양의 정수 여야 합니다. 에 대 한 기본 설정은 *값* 0은 무제한을 의미 합니다.  
   
 > [!NOTE]  
@@ -107,7 +107,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!IMPORTANT]
 > 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, 및를 사용 하 여 [추적 플래그 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), 최대 시간을 초과 하는 경우 리소스 관리자 요청을 중단 됩니다.
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*값*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  메모리(작업 버퍼 메모리)가 부여될 때까지 쿼리가 대기할 수 있는 최대 시간(초)을 지정합니다.  
   
 > [!NOTE]  
@@ -192,7 +192,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [관리](../../relational-databases/resource-governor/resource-governor.md)   
+ [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

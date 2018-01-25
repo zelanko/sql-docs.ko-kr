@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f848879bad5f150eef232eb9bd1c5e53d8b1b25d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 336208cd9f4380cbbe2d4c4f169cf9e28511e9cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client에 대한 지원 정책
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,6 +61,6 @@ ms.lasthandoff: 01/08/2018
  OLE DB Service Component를 사용하는 OLE DB 응용 프로그램은 연결 문자열에 `DataTypeCompatibility=80`을 지정하는 경우에만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용할 수 있습니다. 그러나 이후에 추가 된 기능은 없습니다 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이 경우에 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [SQL Server Native Client 사용한 응용 프로그램 작성](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

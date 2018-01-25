@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ODBC, date/time improvements
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 815e877698cef9b672ea29dc10f31dcf2ed9a565
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4aeb11ff29e82ff48147ee5346f7b1f864cdee32
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="date-and-time-improvements-odbc"></a>날짜 및 시간 기능 향상 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

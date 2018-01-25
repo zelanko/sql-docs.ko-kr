@@ -16,15 +16,15 @@ helpviewer_keywords:
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cbcc9fd355a75a690fd77914340212362f34766
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4da32a24c00ca9539cca04c3886d19f73f9ab578
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
  다음 표에서는 매개 변수 및 결과 집합의 데이터 형식 매핑을 보여 줍니다.  
   
-|SQL Server 데이터 형식|SQL 데이터 형식|값|  
+|SQL Server 데이터 형식|SQL 데이터 형식|Value|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151(sqlncli.h)|  
   

@@ -14,12 +14,12 @@ ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
 caps.latest.revision: "12"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 6777a47d9f2078b662990c2597f84cc41222de63
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: a5277d975380f135003bb7f8a11eec8641374f07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Azure 기계 학습에 대 한 가상 컴퓨터를 프로 비전
 
@@ -135,7 +135,7 @@ RevoScaleR 또는 MicrosoftML 같은 패키지를 사용 하려는 경우에 추
 
 현재 가상 컴퓨터는 SQL Server와 함께 기계 학습에 사용할 수 있습니다.
 
-|속성| 주석|
+|이름| 설명|
 |----|----|----|
 | **SQL Server 2016**| ***  |
 |Windows에서 SQL Server 2016 SP1 Enterprise|통합된 고급 분석을 위해 R 서비스입니다.|

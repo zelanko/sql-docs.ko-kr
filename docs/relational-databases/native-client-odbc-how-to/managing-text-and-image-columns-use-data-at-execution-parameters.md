@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1191b32fa0c405df5852eb45e7f7a00e9fa8009a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 905837a475b3407f05821f519ea3daa282fe6562
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Text 및 image 열-사용 데이터 실행 시 매개 변수 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -229,7 +229,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [관리 텍스트 및 이미지 열에 대 한 방법 도움말 항목 &#40; ODBC &#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

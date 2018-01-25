@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4553dc8370c2c8e7eee82e9d15a6dab17e8039cc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 39817debb4c61657af78127c22e6bca498680786
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>서식 파일을 사용하여 대량 복사(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Microsoft  SQL Server™에 연결합니다.  
   
-4.  호출 [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 다음 정보를 설정 하려면:  
+4.  [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 다음 정보를 설정합니다.  
   
     -   대량 복사를 수행할 원본 또는 대상 테이블/뷰의 이름을 지정합니다.  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 01/08/2018
   
     -   복사 방향을 지정합니다. DB_IN이면 파일에서 테이블 또는 뷰로 복사됩니다.  
   
-5.  호출 [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) 대량 복사 작업에서 사용할 데이터 파일을 설명 하는 서식 파일을 읽을 수 있습니다.  
+5.  [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) 를 호출하여 대량 복사 작업에 사용할 데이터 파일을 설명하는 서식 파일을 만듭니다.  
   
-6.  호출 [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 대량 복사 작업을 실행 합니다.  
+6.  [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 를 호출하여 대량 복사 작업을 실행합니다.  
   
 ## <a name="example"></a>예제  
  이 예제는 IA64에서 지원되지 않습니다.  
@@ -195,6 +195,6 @@ GO
   
 ## <a name="see-also"></a>관련 항목:  
  [대량 복사와 SQL Server ODBC 드라이버 방법 도움말 항목 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
- [데이터 파일 및 서식 파일 사용](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
+ [데이터 파일과 서식 파일을 사용 하 여](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

@@ -20,15 +20,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ CREATE WORKLOAD GROUP group_name
 ```  
   
 ## <a name="arguments"></a>인수  
- *o u p _*  
+ *group_name*  
  작업 그룹에 대한 사용자 정의 이름입니다. *group_name* 은 영숫자로 최대 128 자를 사용할 수의 인스턴스 내에서 고유 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
   
  중요도 = {LOW | **보통** | 높은}  
@@ -72,7 +72,7 @@ CREATE WORKLOAD GROUP group_name
   
  IMPORTANCE는 리소스 풀에 대해 로컬입니다. 같은 리소스 풀 내에 있는 다른 중요도의 작업 그룹은 서로 영향을 주지만 다른 리소스 풀의 작업 그룹에는 영향을 주지 않습니다.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*값*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  단일 요청이 풀에서 사용할 수 있는 최대 메모리 양을 지정합니다. 이 비율은 MAX_MEMORY_PERCENT에서 지정한 리소스 풀 크기에 따라 바뀝니다.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ CREATE WORKLOAD GROUP group_name
 >   
 >  두 경우 모두 서버에 실제 메모리가 부족하면 시간 초과 오류 8645가 발생할 수 있습니다.  
   
- REQUEST_MAX_CPU_TIME_SEC =*값*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  요청이 사용할 수 있는 최대 CPU 시간(초)을 지정합니다. *값* 0 또는 양의 정수 여야 합니다. 에 대 한 기본 설정은 *값* 0은 무제한을 의미 합니다.  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ CREATE WORKLOAD GROUP group_name
 > [!IMPORTANT]
 > 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, 및를 사용 하 여 [추적 플래그 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), 최대 시간을 초과 하는 경우 리소스 관리자 요청을 중단 됩니다. 
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*값*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  메모리(작업 버퍼 메모리)가 부여될 때까지 쿼리가 대기할 수 있는 최대 시간(초)을 지정합니다.  
   
 > [!NOTE]  

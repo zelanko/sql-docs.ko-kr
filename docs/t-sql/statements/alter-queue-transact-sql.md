@@ -25,15 +25,15 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2774da9a0a75c4645a4bd64237ec99a7cf92d771
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7f97bd0a341ecc5e960c94c4c8bdabe30b572fd9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ WITH
  STATUS (Activation)  
  큐에서 저장 프로시저의 활성화 여부를 지정합니다. STATUS = ON이면 현재 실행 중인 프로시저 수가 MAX_QUEUE_READERS보다 작고, 큐에 도착하는 메시지가 저장 프로시저의 메시지 수신 속도보다 빠른 경우 큐에서 PROCEDURE_NAME에 지정된 저장 프로시저를 시작합니다. STATUS = OFF이면 큐에서 저장 프로시저를 활성화하지 않습니다.  
   
- REBUILD [WITH \<queue_rebuild_options >]  
+ REBUILD [ WITH \<queue_rebuild_options> ]  
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  큐 내부 테이블의 모든 인덱스 다시 작성합니다. 과부하로 인해 조각화 문제가 발생 하는 경우이 기능을 사용 합니다. MAXDOP만 지원 되는 큐 rebuild 옵션입니다. 다시 작성은 항상 오프 라인 작업입니다.  
@@ -133,7 +133,7 @@ WITH
   
  사용자가 지정한 파일 그룹의 큐 내부 테이블 (인덱스)으로 이동합니다.  새 파일 그룹이 읽기 전용으로 설정 되지 않아야 합니다.  
   
- PROCEDURE_NAME = \<프로시저 >  
+ PROCEDURE_NAME = \<procedure>  
  큐에 처리할 메시지가 포함된 경우 활성화할 저장 프로시저의 이름을 지정합니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 합니다.  
   
  *a s e _* (프로시저)  
@@ -264,6 +264,6 @@ ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]
  [CREATE QUEUE&#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [DROP queue&#40; Transact SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+ [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   
   

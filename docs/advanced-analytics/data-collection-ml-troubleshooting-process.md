@@ -15,13 +15,13 @@ dev_langs: R
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4225b87b8aab3bac5e023ef194cf7a2bc35c8dc2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3eec9220734a2e13cb4d355422b5d8c957bf9264
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>기계 학습에 대 한 데이터 수집 문제 해결
 
@@ -342,6 +342,6 @@ R 런타임 작동 하는 경우 오류를 반환 하는 스크립트는 전용�
 * [Sqlrutils 패키지를 사용 하 여 R 코드에 대 한 저장된 프로시저를 생성 합니다.](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 * [Sqlrutils를 사용 하 여 저장된 프로시저 만들기](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Server의 기계 학습 문제 해결](machine-learning-troubleshooting-faq.md)

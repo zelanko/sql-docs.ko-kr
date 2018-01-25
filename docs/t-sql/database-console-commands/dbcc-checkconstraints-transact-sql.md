@@ -25,15 +25,15 @@ helpviewer_keywords:
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 358dddc25f1265f344387cc75ef12f79182c27e3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2ff75ba3c32d138d9124eba5cfe170cf146d5778
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,10 +99,10 @@ DBCC CHECKCONSTRAINTS는 FOREIGN KEY와 CHECK 제약 조건의 무결성을 검�
   
 |확인|실패 한 경우 출력에서 추가 정보|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (현재)|[sys_end] = ' {'이 (0) 및 MAX(DATETIME2) = ' 9999-12-31 23:59:59.99999'|  
-|PeriodEndColumn ≥ PeriodStartColumn (현재, 기록)|[sys_start] = ' {'이 (0) AND [sys_end] = '{1 \}'|  
+|PeriodEndColumn ≥ PeriodStartColumn (현재)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (현재, 기록)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
 |PeriodStartColumn < current_utc_time (현재)|[sys_start] = ' {'이 (0) 및 SYSUTCTIME|  
-|PeriodEndColumn < current_utc_time (기록)|[sys_end] = ' {'이 (0) 및 SYSUTCTIME|  
+|PeriodEndColumn < current_utc_time (기록)|[sys_end] = '{0}' AND SYSUTCTIME|  
 |겹치는 항목이 있습니다|(sys_start1, sys_end1), (sys_start2 sys_end2) 두에 대 한 레코드를 중첩 합니다.<br /><br /> 겹치는 레코드 2 개 이상의 출력에 각 겹침 쌍을 보여 주는 여러 행 포함 됩니다.|  
   
 제약 조건 이름 또는 constraint_id만 임시 일관성 검사를 실행 하기 위해 지정할 방법이 없습니다.

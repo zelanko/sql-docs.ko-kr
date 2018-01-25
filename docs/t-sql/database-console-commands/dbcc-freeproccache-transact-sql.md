@@ -26,15 +26,15 @@ helpviewer_keywords:
 - clearing procedure cache
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae416ab23f27a7f71951ac05a6c69d0abb00a90d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b5fd65fa2a764d87d2c5481a7c20560551ca3311
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ```  
   
 ## <a name="arguments"></a>인수  
- ({ *plan_handle* | *sql_handle* | *pool_name 이라는* })  
+ ( { *plan_handle* | *sql_handle* | *pool_name* } )  
 *plan_handle* 일괄 처리를 실행 하며 해당 계획은 계획 캐시에 대 한 쿼리 계획을 고유 하 게 식별 합니다. *plan_handle* 은 **varbinary(64)** 이며 다음 동적 관리 개체에서 가져올 수 있습니다.  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
@@ -221,6 +221,6 @@ GO
 ## <a name="see-also"></a>관련 항목:  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  
-[ALTER DATABASE SCOPED configuration&#40; Transact SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
+[데이터베이스 범위 구성 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   

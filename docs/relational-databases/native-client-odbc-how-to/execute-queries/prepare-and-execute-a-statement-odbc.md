@@ -16,15 +16,15 @@ helpviewer_keywords:
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3894f47ecd4a368a36e1b03dae89e2ce32993d9f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ea42cfdc65bec4580a08856b349e4f11437f60c2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>문 준비 및 실행(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/08/2018
   
 3.  필요에 따라 준비된 문의 각 매개 변수에 대해 다음 작업을 수행합니다.  
   
-    -   호출 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 매개 변수 정보를 가져올 수 있습니다.  
+    -   [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 을 호출하여 매개 변수 정보를 얻습니다.  
   
-    -   각 매개 변수를 사용 하 여 프로그램 변수에 바인딩합니다 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)합니다. 실행 시 데이터 매개 변수를 설정합니다.  
+    -   [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)를 사용하여 각 매개 변수를 프로그램 변수에 바인딩합니다. 실행 시 데이터 매개 변수를 설정합니다.  
   
 4.  준비된 문을 실행할 때마다 다음 작업을 수행합니다.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
     -   [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 를 호출하여 준비된 문을 실행합니다.  
   
-    -   실행 시 데이터 입력 매개 변수를 사용하는 경우 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 는 SQL_NEED_DATA를 반환합니다. 사용 하 여 데이터를 청크로 보냅니다 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)합니다.  
+    -   실행 시 데이터 입력 매개 변수를 사용하는 경우 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>열 단위 매개 변수 바인딩을 사용하여 문을 준비하려면  
   

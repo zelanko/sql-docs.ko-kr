@@ -19,15 +19,15 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e4f42a1288119c4557e2e045943b71da700b483
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 03eb28507a7fa0fdc2bf8df55dbb39356f24109c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,9 +69,9 @@ ms.lasthandoff: 01/08/2018
   
 -   [대규모 데이터 설정](../../relational-databases/native-client-ole-db-blobs/setting-large-data.md)  
   
--   [BLOB 출력 매개 변수에 대한 스트리밍 지원](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
+-   [BLOB 출력 매개 변수에 대 한 스트리밍 지원](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client &#40; OLE db&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [큰 값 형식 사용](../../relational-databases/native-client/features/using-large-value-types.md)  
   

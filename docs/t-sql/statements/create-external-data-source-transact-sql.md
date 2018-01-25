@@ -23,13 +23,13 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>외부 데이터 원본 (Transact SQL) 만들기
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -135,7 +135,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>인수  
  *data_source_name* 데이터 원본에 대 한 사용자 정의 이름을 지정 합니다. 이름에 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 데이터베이스 내에서 고유 해야 합니다. 이름 서버에 병렬 데이터 웨어하우스 내에서 고유 해야 합니다.
   
- 형식 = [HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
+ TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
  데이터 소스 유형을 지정합니다. HADOOP에 사용할 외부 데이터 소스는 Hadoop 또는 Azure 저장소 blob Hadoop에 대 한 합니다. Azure SQL 데이터베이스에서 분할에 대 한 탄력적 데이터베이스 쿼리에 대 한 외부 데이터 원본을 만들 때 SHARD_MAP_MANAGER를 사용 합니다. 외부 데이터 원본과 RDBMS를 사용 하 여 Azure SQL 데이터베이스 탄력적 데이터베이스 쿼리를 사용 하 여 데이터베이스 간 쿼리.  사용 하 여 대량 작업을 수행할 때 BLOB_STORAGE를 사용 하 여 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 또는 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 와 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]합니다.
   
 위치 = \<location_path > **HADOOP**    
@@ -211,7 +211,7 @@ RDBMS에 대 한 단계별 자습서를 참조 하십시오. [데이터베이스
 
 |Hadoop 연결|리소스 관리자 기본 포트|
 |-------------------|-----------------------------|
-|1|50300|
+|1.|50300|
 |2|50300|
 |3|8021|
 |4|8032|
@@ -256,7 +256,7 @@ Hadoop 배포와 각 연결 값에서 지 원하는 버전의 전체 목록은 �
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
     ```  
   
- 자격 증명 = *credential_name*  
+ CREDENTIAL = *credential_name*  
  외부 데이터 원본에 대 한 인증에 대 한 데이터베이스 범위 자격 증명을 지정 합니다. 예를 들어 참조 [3. Azure blob 저장소 외부 데이터 원본 만들기](../../t-sql/statements/create-external-data-source-transact-sql.md#credential)합니다. 자격 증명을 만들려면 참조 [CREATE CREDENTIAL (TRANSACT-SQL)](../../t-sql/statements/create-credential-transact-sql.md)합니다. 자격 증명이 익명 액세스를 허용 하는 공용 데이터 집합에 대 한 필요 하지 않음을 참고 합니다. 
   
  DATABASE_NAME = *'QueryDatabaseName'*  
@@ -485,7 +485,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 [CREATE EXTERNAL TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
 [외부 TABLE AS SELECT &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
 [TABLE AS SELECT &#40; 만들기 Azure SQL 데이터 웨어하우스 &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[sys.external_data_sources (Transact SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
+[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
 

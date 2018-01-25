@@ -41,15 +41,15 @@ helpviewer_keywords:
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 caps.latest.revision: "248"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b5f6424589d13652095b43ffcefa63e8916ecf39
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -262,11 +262,11 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   Always On 가용성 그룹에 대 한 가용성 데이터베이스 준비  
   
-     자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
+     자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)를 참조하세요.  
   
 -   데이터베이스 미러링을 위한 미러 데이터베이스 준비  
   
-     자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
+     자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)의 몇 가지 기능에 대한 백업 및 복원 고려 사항에 대해 설명합니다.  
   
 -   온라인 복원  
   
@@ -448,7 +448,7 @@ RESTORE DATABASE AdventureWorks2012
   
 > **참고:** 전체 또는 대량 로그 복구 모델을 사용 하 여 데이터베이스에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 복원 하기 전에 비상 로그를 백업 하는 대부분의 경우 필요 합니다. 자세한 내용은 [비상 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)을 참조하세요.  
   
- [&#91; 위 예제 &#93;](#examples)  
+ [&#91;이 고, 이러한 예 &#93;의 맨 위에](#examples)  
   
 ###  <a name="restoring_full_n_differential_db_backups"></a> 2. 전체 및 차등 데이터베이스 백업 복원  
  다음 예에서는 `Z:\SQLServerBackups\AdventureWorks2012.bak` 백업 장치에서 전체 데이터베이스 백업을 복원한 다음 차등 백업을 복원합니다. 이 백업 장치에는 전체 데이터베이스 백업 및 차등 백업이 모두 포함되어 있습니다. 이 백업 장치에는 전체 데이터베이스 백업 및 차등 백업이 모두 포함되어 있습니다. 복원할 전체 데이터베이스 백업은 장치의 6번째 백업 세트(`FILE = 6`)이고 차등 데이터베이스 백업은 장치의 9번째 백업 세트(`FILE = 9`)입니다. 차등 백업이 복구되면 바로 데이터베이스가 복구됩니다.  
@@ -464,7 +464,7 @@ RESTORE DATABASE AdventureWorks2012
       RECOVERY;  
 ```  
   
- [&#91; 위 예제 &#93;](#examples)  
+ [&#91;이 고, 이러한 예 &#93;의 맨 위에](#examples)  
   
 ###  <a name="restoring_db_using_RESTART"></a> 3. RESTART 구문을 사용하여 데이터베이스 복원  
  다음 예에서는 `RESTART` 옵션을 사용하여 서버 전원 고장으로 중단된 `RESTORE` 작업을 다시 시작합니다.  
@@ -478,7 +478,7 @@ RESTORE DATABASE AdventureWorks2012
    FROM AdventureWorksBackups WITH RESTART;  
 ```  
   
- [&#91; 위 예제 &#93;](#examples)  
+ [&#91;이 고, 이러한 예 &#93;의 맨 위에](#examples)  
   
 ###  <a name="restoring_db_n_move_files"></a> 4. 데이터베이스 복원 및 파일 이동  
  다음 예에서는 전체 데이터베이스와 트랜잭션 로그를 복원하고 복원된 데이터베이스를 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` 디렉터리로 이동합니다.  
@@ -496,7 +496,7 @@ RESTORE LOG AdventureWorks2012
    WITH RECOVERY;  
 ```  
   
- [&#91; 위 예제 &#93;](#examples)  
+ [&#91;이 고, 이러한 예 &#93;의 맨 위에](#examples)  
   
 ###  <a name="copying_db_using_bnr"></a> 5. BACKUP 및 RESTORE를 사용하여 데이터베이스 복사  
  다음 예에서는 `BACKUP` 및 `RESTORE` 문을 사용하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 복사본을 만듭니다. `MOVE` 문을 사용하면 데이터와 로그 파일이 지정한 위치로 복원됩니다. `RESTORE FILELISTONLY` 문은 복원할 데이터베이스에 있는 파일의 수와 이름을 확인하는 데 사용합니다. 데이터베이스의 새 복사본 이름은 `TestDB`입니다. 자세한 내용은 [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)를 참조하세요.  
@@ -515,7 +515,7 @@ RESTORE DATABASE TestDB
 GO  
 ```  
   
- [&#91; 위 예제 &#93;](#examples)  
+ [&#91;이 고, 이러한 예 &#93;의 맨 위에](#examples)  
   
 ###  <a name="restoring_to_pit_using_STOPAT"></a> 6. STOPAT를 사용하여 지정 시간으로 복원  
  다음 예에서는 `12:00 AM` , `April 15, 2020` 상태로 데이터베이스를 복원하고 여러 로그 백업이 연관된 복원 작업을 보여 줍니다. 백업 장치 `AdventureWorksBackups`에서 복원할 전체 데이터베이스 백업은 해당 장치의 세 번째 백업 세트(`FILE = 3`)이고, 첫 번째 로그 백업은 네 번째 백업 세트(`FILE = 4`)이고, 두 번째 로그 백업은 다섯 번째 백업 세트(`FILE = 5`)입니다.  
@@ -536,9 +536,9 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
 ```  
   
- [&#91; 위 예제 &#93;](#examples)  
+ [&#91;이 고, 이러한 예 &#93;의 맨 위에](#examples)  
   
-###  <a name="restoring_transaction_log_to_mark"></a>7. 트랜잭션 로그를 표시까지 복원  
+###  <a name="restoring_transaction_log_to_mark"></a> G. 트랜잭션 로그를 표시까지 복원  
  다음 예에서는 트랜잭션 로그를 복원하여 `ListPriceUpdate`라는 표시된 트랜잭션에 나타냅니다.  
   
 ```  
@@ -574,9 +574,9 @@ RESTORE LOG AdventureWorks2012
    STOPATMARK = 'UPDATE Product list prices';  
 ```  
   
- [&#91; 위 예제 &#93;](#examples)  
+ [&#91;이 고, 이러한 예 &#93;의 맨 위에](#examples)  
   
-###  <a name="restoring_using_TAPE"></a>8. TAPE 구문을 사용하여 복원  
+###  <a name="restoring_using_TAPE"></a> H. TAPE 구문을 사용하여 복원  
  다음 예에서는 `TAPE` 백업 장치에서 전체 데이터베이스 백업을 복원합니다.  
   
 ```  
@@ -584,9 +584,9 @@ RESTORE DATABASE AdventureWorks2012
    FROM TAPE = '\\.\tape0';  
 ```  
   
- [&#91; 위 예제 &#93;](#examples)  
+ [&#91;이 고, 이러한 예 &#93;의 맨 위에](#examples)  
   
-###  <a name="restoring_using_FILE_n_FG"></a>I입니다. FILE 및 FILEGROUP 구문을 사용하여 복원  
+###  <a name="restoring_using_FILE_n_FG"></a> I. FILE 및 FILEGROUP 구문을 사용하여 복원  
  다음 예에서는 하나의 보조 파일 그룹과 하나의 트랜잭션 로그인 두 파일이 있는 `MyDatabase`라는 데이터베이스를 복원합니다. 이 데이터베이스는 전체 복구 모델을 사용합니다.  
   
  데이터베이스 백업은 `MyDatabaseBackups`라는 논리적 백업 장치에 있는 미디어 세트의 9번째 백업 세트입니다. 그런 다음 `10` 장치의 다음 3개 백업 세트(`11`, `12` 및 `MyDatabaseBackups`)에 있는 3개 로그 백업이 `WITH NORECOVERY`를 사용하여 복원됩니다. 마지막 로그 백업을 복원한 다음 데이터베이스가 복구됩니다.  
@@ -626,9 +626,9 @@ RESTORE DATABASE MyDatabase WITH RECOVERY;
 GO  
 ```  
   
- [&#91; 위 예제 &#93;](#examples)  
+ [&#91;이 고, 이러한 예 &#93;의 맨 위에](#examples)  
   
-###  <a name="reverting_from_db_snapshot"></a>10. 데이터베이스 스냅숏으로 되돌리기  
+###  <a name="reverting_from_db_snapshot"></a> J. 데이터베이스 스냅숏으로 되돌리기  
  다음 예에서는 데이터베이스를 데이터베이스 스냅숏으로 되돌립니다. 이 예에서는 현재 하나의 스냅숏만 데이터베이스에 있는 것으로 가정합니다. 이 데이터베이스 스냅숏을 만드는 방법의 예제를 보려면 [데이터베이스 스냅숏 &#40; 만들기 Transact SQL &#41; ](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 > **참고:** 스냅숏으로 되돌리기 모든 전체 텍스트 카탈로그를 삭제 합니다.  
@@ -640,12 +640,12 @@ GO
 ```  
  자세한 내용은 참조 [데이터베이스를 데이터베이스 스냅숏으로 되돌리기](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)합니다.  
 
- [&#91; 위 예제 &#93;](#examples)  
+ [&#91;이 고, 이러한 예 &#93;의 맨 위에](#examples)  
   
-###  <a name="Azure_Blob"></a>11. Microsoft Azure Blob 저장소 서비스에서 복원  
+###  <a name="Azure_Blob"></a> K. Microsoft Azure Blob 저장소 서비스에서 복원  
 아래 세 가지 예제에는 Microsoft Azure 저장소 서비스 사용 작업이 포함 됩니다.  저장소 계정 이름은 `mystorageaccount`입니다.  데이터 파일에 대 한 컨테이너 라고 `myfirstcontainer`합니다.  백업 파일에 대 한 컨테이너 라고 `mysecondcontainer`합니다.  각 컨테이너에 대 한 읽기, 쓰기, 삭제 및 목록으로 저장된 된 액세스 정책을 만들었습니다.  저장 된 액세스 정책은 연관 된 공유 액세스 서명을 사용 하 여 SQL Server 자격 증명을 만들었습니다.  Microsoft Azure Blob 저장소로 SQL Server 백업 및 복원에 관련 된 정보를 참조 하십시오. [SQL Server 백업 및 Microsoft Azure Blob 저장소 서비스로 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)합니다.  
 
-**K1 합니다.  Microsoft Azure 저장소 서비스에서 전체 데이터베이스 백업 복원**  
+**K1.  Microsoft Azure 저장소 서비스에서 전체 데이터베이스 백업 복원**  
 전체 데이터베이스 백업에 있는 `mysecondcontainer`의 `Sales` 으로 복원 됩니다 `myfirstcontainer`합니다.  `Sales`서버에 현재 존재 하지 않습니다. 
 ```
 RESTORE DATABASE Sales
@@ -655,7 +655,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-**K2 합니다. 로컬 저장소에 Microsoft Azure 저장소 서비스에서 전체 데이터베이스 백업 복원**  
+**K2. 로컬 저장소에 Microsoft Azure 저장소 서비스에서 전체 데이터베이스 백업 복원**  
 전체 데이터베이스 백업에 있는 `mysecondcontainer`의 `Sales` 로컬 저장소에 복원 됩니다.  `Sales`서버에 현재 존재 하지 않습니다.
 ```
 RESTORE DATABASE Sales
@@ -665,7 +665,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
   
-**K3 합니다. Microsoft Azure 저장소 서비스에 로컬 저장소에서 전체 데이터베이스 백업 복원**  
+**K3. Microsoft Azure 저장소 서비스에 로컬 저장소에서 전체 데이터베이스 백업 복원**  
 ```
 RESTORE DATABASE Sales
   FROM DISK = 'E:\BAK\Sales.bak'
@@ -676,7 +676,7 @@ RESTORE DATABASE Sales
   
 
   
- [&#91; 위 예제 &#93;](#examples)  
+ [&#91;이 고, 이러한 예 &#93;의 맨 위에](#examples)  
   
 ## <a name="much-more-information"></a>훨씬 더 많은 정보!!  
  - [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 

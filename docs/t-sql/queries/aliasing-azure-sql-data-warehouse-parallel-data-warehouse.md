@@ -15,13 +15,13 @@ ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 caps.latest.revision: "11"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b5d66e6a78de33403961b1f991aab34124e862a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 65d5799c33afabe8ebbdb212c13661699b9fea9e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>별칭 (Azure SQL 데이터 웨어하우스, 병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ object_source [ AS ] alias
  AS  
  선택적인 별칭 전치사 합니다. 범위 변수 앨리어싱을 작업할 때 AS 키워드는 금지 됩니다.  
   
- *별칭*  
+ *alias*  
  테이블 또는 열에 대 한 원하는 임시 참조 이름입니다. 올바른 개체 이름을 사용할 수 있습니다. 자세한 내용은 "개체 이름 지정 규칙"의 참조는 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]합니다.  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

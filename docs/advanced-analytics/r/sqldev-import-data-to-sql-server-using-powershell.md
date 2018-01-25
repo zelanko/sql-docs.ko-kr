@@ -18,13 +18,13 @@ ms.assetid: 3c5b5145-fa57-455a-b153-0400fc062dc0
 caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 720ef1ea70566b2b18febef3146aab9755a7ac5c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b526c291fe101210188554b872ace0577670f3fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>2 단원: SQL server PowerShell을 사용 하 여 데이터 가져오기
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
     - 인스턴스의 계정에 대한 사용자 이름 및 암호. 계정에는 데이터베이스를 만들 테이블 및 저장된 프로시저를 만들고 테이블에 데이터를 업로드 하는 권한이 있어야 합니다. 사용자 이름 및 암호를 제공 하지 않으면 Windows id에 SQL Server 로그인에 사용 됩니다.
   
-    - 방금 다운로드한 샘플 데이터 파일의 경로 및 파일 이름. 예를 들어 다음과 같이 사용할 수 있습니다.
+    - 방금 다운로드한 샘플 데이터 파일의 경로 및 파일 이름. 예를 들어
   
         `C:\tempRSQL\nyctaxi1pct.csv`
   

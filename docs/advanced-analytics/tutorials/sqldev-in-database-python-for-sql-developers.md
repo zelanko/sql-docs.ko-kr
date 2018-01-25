@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 970298c59b7b48c5579125ef163785801db676ee
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 6d7e49a6074e342f51595e9b1cdb10227761f670
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 개발자를 위해 데이터베이스에서 Python 분석
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 + 컴퓨터 학습 서비스 및 Python 사용 하도록 설정 된 SQL Server 2017의 인스턴스를 설치 합니다. 자세한 내용은 참조 [python SQL Server 컴퓨터 학습 서비스 설정](../python/setup-python-machine-learning-services.md)합니다.
 + 이 연습에 사용하는 로그인에 데이터베이스 및 기타 개체를 만들고, 데이터를 업로드하고, 데이터를 선택하고, 저장 프로시저를 실행할 수 있는 권한이 있어야 합니다.
@@ -121,6 +121,6 @@ PowerShell에 대 한 지식이 도움이 됩니다.
 |학습 및 T-SQL을 사용 하 여 모델 저장|0:15|
 |모델을 운용|0:40|
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작 하기
 
   [1단계: 샘플 데이터 다운로드](sqldev-py1-download-the-sample-data.md)

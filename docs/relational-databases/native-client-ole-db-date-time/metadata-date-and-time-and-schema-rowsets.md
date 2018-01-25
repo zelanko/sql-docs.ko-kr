@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa7700c8743fde8d0818c896d510e23f035a1448
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 07f24e30d416f8c66218dfe7f2294d90a91c8c06
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>메타 데이터-날짜 및 시간과 스키마 행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/08/2018
   
 |열 유형|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|날짜|DBTYPE_DBDATE|지우기|0|  
-|Time|DBTYPE_DBTIME2|Set|0..7|  
+|date|DBTYPE_DBDATE|지우기|0|  
+|time|DBTYPE_DBTIME2|Set|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|지우기|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|지우기|3|  
-|Datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
+|datetime|DBTYPE_DBTIMESTAMP|지우기|3|  
+|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
   
  COLUMN_FLAGS에서 날짜/시간 형식에 대해 DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 true이지만 다음과 같은 플래그는 항상 false입니다.  
@@ -72,9 +72,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="providertypes-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
-|형식 -><br /><br /> Column|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|형식 -><br /><br /> 열|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 01/08/2018
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/08/2018
   
  OLE DB는 numeric 및 decimal 형식의 MINIMUM_SCALE 및 MAXIMUM_SCALE만 정의하므로 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 time, datetime2 및 datetimeoffset에 이러한 열을 사용하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [메타 데이터 &#40; OLE db&#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

@@ -20,13 +20,13 @@ ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d73cd5f12601cfc3abab5cb6dee736fd805ad8a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7a8ffbc542c9a9490f497ff590f6bcf995979ed4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE XML 스키마 컬렉션 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -58,10 +58,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>인수  
- *사용 권한*  
+ *permission*  
  XML 스키마 컬렉션에 대해 취소할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- XML 스키마 컬렉션 ON:: [ *schema_name***합니다.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
  사용 권한을 취소할 XML 스키마 컬렉션을 지정합니다. 범위 한정자 (:)가 필요 합니다. 경우 *schema_name* 를 지정 하지 않으면 기본 스키마가 사용 됩니다. 경우 *schema_name* 지정, 스키마 범위 한정자 (.)가 필요 합니다.  
   
  GRANT OPTION  
@@ -76,7 +76,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  WITH GRANT OPTION을 부여 받은 사용 권한이 연계되어 취소되면 해당 사용 권한의 GRANT 및 DENY가 모두 취소됩니다.  
   
- {를 | FROM} \< *데이터베이스 _ 보안 주체*>  
+ { TO | FROM } \<*database_principal*>  
  사용 권한을 취소할 보안 주체를 지정합니다.  
   
  AS \<데이터베이스 _ 보안 주체 >이 쿼리를 실행 하는 보안 주체는 권한을 부여할 권한을 취소 파생 되는 보안 주체를 지정 합니다.  

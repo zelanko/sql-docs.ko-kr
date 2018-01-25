@@ -18,15 +18,15 @@ helpviewer_keywords:
 - adding columns
 ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0305b23280170613daa17d0f04c3b585edbe6618
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 48f1471efa0c2edd80dc867eb93571ec4b8deb67
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>SQL Server 테이블에 열 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

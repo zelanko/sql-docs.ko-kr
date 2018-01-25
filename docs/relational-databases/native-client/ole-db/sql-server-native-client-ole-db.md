@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed7e27232f57c829efcff478805567e812334bdf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 91ec3d738f8a718a2af7415a6f204be3c204201a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 데이터에 액세스 하기 위해 사용 되는 낮은 수준의 COM API입니다. 고성능이 필요한 도구, 유틸리티 및 하위 수준 구성 요소 개발에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TDS(Tabular Data Stream) 프로토콜에 직접적으로 액세스하는 고성능 네이티브 공급자입니다.  
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/08/2018
   
 -   [행 집합](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
--   [저장 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+-   [저장된 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
--   [BLOB 및 OLE 개체](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
+-   [Blob 및 OLE 개체](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
 -   [테이블 및 인덱스](../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [FILESTREAM 지원 &#40; OLE db&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [의](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+-   [트랜잭션](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 -   [오류](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   

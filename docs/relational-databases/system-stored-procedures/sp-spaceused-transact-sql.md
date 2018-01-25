@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2ed6f3bfcb2e034dd782ed477ebcd75e9a43a483
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 670fc2eaf7d6e5c4e499ff57c3a5564bec903ac1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,9 +47,9 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>인수  
 
-에 대 한 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)], `sp_spacedused` 명명 된 매개 변수를 지정 해야 합니다 (예를 들어 `sp_spacedused (@objname= N'Table1');` 매개 변수의 서 수 위치에 사용 하는 대신 합니다. 
+에 대 한 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 및 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spacedused` 명명 된 매개 변수를 지정 해야 합니다 (예를 들어 `sp_spacedused (@objname= N'Table1');` 매개 변수의 서 수 위치에 사용 하는 대신 합니다. 
 
- [  **@objname=**] **'***objname***'** 
+ [ **@objname=**] **'***objname***'** 
    
  공간 사용 정보가 요청된 테이블, 인덱싱된 뷰 또는 큐의 정규화되거나 정규화되지 않은 이름입니다. 정규화된 개체 이름이 지정된 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함하는 정규화된 개체 이름인 경우 데이터베이스 이름이 반드시 현재 데이터베이스의 이름이어야 합니다.  
 경우 *objname* 를 지정 하지 않으면 전체 데이터베이스에 대 한 결과가 반환 됩니다.  
@@ -57,15 +57,15 @@ sp_spaceused [[ @objname = ] 'objname' ]
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]및 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 만 데이터베이스 및 테이블 개체를 지원 합니다.
   
- [  **@updateusage=**] **'***updateusage***'**  
+ [ **@updateusage=**] **'***updateusage***'**  
  공간 사용 정보를 업데이트하려면 DBCC UPDATEUSAGE를 실행해야 함을 나타냅니다. 때 *objname* 는 명령문을 실행 하는 전체 데이터베이스에 지정 되지 않으면 명령문을 실행 하는 그렇지 않은 경우 *objname*합니다. 값은 가능 **true** 또는 **false**합니다. *updateusage* 은 **varchar(5)**, 기본값은 **false**합니다.  
   
- [  **@mode=**] **'***모드***'**  
+ [ **@mode=**] **'***mode***'**  
  결과의 범위를 나타냅니다. 스트레치 사용 테이블 또는 데이터베이스에 대 한는 *모드* 매개 변수를 포함 하거나 제외 된 개체의 원격 부분 수 있습니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
   
  *모드* 인수는 다음 값을 가질 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ALL|개체 또는 로컬 부분과 원격 부분이 모두 포함 하 여 데이터베이스의 저장소 통계를 반환 합니다.|  
 |LOCAL_ONLY|개체 또는 데이터베이스의 로컬 부분에 저장소 통계를 반환합니다. 개체 또는 데이터베이스 스트레치 사용 데이터베이스를 없으면 때와 동일한 통계를 반환 합니다. @mode = ALL입니다.|  
@@ -73,17 +73,17 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *모드* 은 **varchar(11)**, 기본값은 **N'ALL'**합니다.  
   
- [  **@oneresultset=**] *oneresultset*  
+ [ **@oneresultset=**] *oneresultset*  
  단일 결과 집합을 반환할 것인지를 나타냅니다. *oneresultset* 인수는 다음 값을 가질 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |0|때  *@objname*  null 이거나 지정 하지 않으면 두 개의 결과 집합이 반환 됩니다. 두 개의 결과 집합은 기본 동작입니다.|  
 |1.|때  *@objname*  아니거나 = null을 지정 하지는 단일 결과 집합이 반환 됩니다.|  
   
  *oneresultset* 은 **비트**, 기본값은 **0**합니다.  
 
-[  **@include_total_xtp_storage** ] **'***include_total_xtp_storage***'**  
+[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
 **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)]합니다.  
   
  때 @oneresultset= 1, 매개 변수 @include_total_xtp_storage MEMORY_OPTIMIZED_DATA 저장소에 대 한 열이 단일 결과 집합에 포함 되어 있는지 여부를 결정 합니다. 기본값은 0, 즉, 기본적으로 (매개 변수는 생략 됨) 하는 경우 XTP 열 결과 집합에 포함 되지 않습니다.  
@@ -96,56 +96,56 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|현재 데이터베이스의 이름입니다.|  
+|**database_name**|**nvarchar(128)**|현재 데이터베이스의 이름입니다.|  
 |**database_size**|**varchar(18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 데이터와 로그 파일이 포함 되어 있습니다.|  
-|**할당 되지 않은 공간**|**varchar(18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다.|  
+|**unallocated space**|**varchar(18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다.|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**예약**|**varchar(18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터**|**varchar(18)**|데이터가 사용하는 총 공간입니다.|  
+|**reserved**|**varchar(18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
+|**data**|**varchar(18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar(18)**|인덱스가 사용하는 총 공간입니다.|  
-|**사용 하지 않는**|**varchar(18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|  
+|**unused**|**varchar(18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|  
   
  경우 *objname* 생략 된 값과 *oneresultset* 는 1, 현재 데이터베이스 크기 정보를 제공 하는 다음과 같은 단일 결과 집합이 반환 됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|현재 데이터베이스의 이름입니다.|  
+|**database_name**|**nvarchar(128)**|현재 데이터베이스의 이름입니다.|  
 |**database_size**|**varchar(18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 데이터와 로그 파일이 포함 되어 있습니다.|  
-|**할당 되지 않은 공간**|**varchar(18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다.|  
-|**예약**|**varchar(18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터**|**varchar(18)**|데이터가 사용하는 총 공간입니다.|  
+|**unallocated space**|**varchar(18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다.|  
+|**reserved**|**varchar(18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
+|**data**|**varchar(18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar(18)**|인덱스가 사용하는 총 공간입니다.|  
-|**사용 하지 않는**|**varchar(18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|  
+|**unused**|**varchar(18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|  
   
  경우 *objname* 지정, 지정 된 개체는 다음 결과 집합이 반환 됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (128)**|공간 사용 정보가 필요한 개체의 이름입니다.<br /><br /> 개체의 스키마 이름은 반환되지 않습니다. 스키마 이름이 필요한 경우 사용 하 여는 [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 또는 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰인 해당 크기 정보를 가져옵니다.|  
-|**행**|**char(20)**|테이블에 있는 행 수입니다. 지정된 개체가 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐일 경우 이 열은 큐에 있는 메시지 수를 나타냅니다.|  
-|**예약**|**varchar(18)**|에 대 한 예약 된 공간의 전체 크기 *objname*합니다.|  
-|**데이터**|**varchar(18)**|데이터에 의해 사용 되는 공간의 전체 크기 *objname*합니다.|  
+|**name**|**nvarchar(128)**|공간 사용 정보가 필요한 개체의 이름입니다.<br /><br /> 개체의 스키마 이름은 반환되지 않습니다. 스키마 이름이 필요한 경우 사용 하 여는 [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 또는 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰인 해당 크기 정보를 가져옵니다.|  
+|**rows**|**char(20)**|테이블에 있는 행 수입니다. 지정된 개체가 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐일 경우 이 열은 큐에 있는 메시지 수를 나타냅니다.|  
+|**reserved**|**varchar(18)**|에 대 한 예약 된 공간의 전체 크기 *objname*합니다.|  
+|**data**|**varchar(18)**|데이터에 의해 사용 되는 공간의 전체 크기 *objname*합니다.|  
 |**index_size**|**varchar(18)**|인덱스에 사용 된 공간의 전체 크기 *objname*합니다.|  
-|**사용 하지 않는**|**varchar(18)**|에 대 한 예약 된 공간의 전체 크기 *objname* 되었지만 아직 사용 합니다.|  
+|**unused**|**varchar(18)**|에 대 한 예약 된 공간의 전체 크기 *objname* 되었지만 아직 사용 합니다.|  
  
 지정 된 매개 변수가 없는 경우 기본 모드입니다. 다음 결과 집합에는 세부 디스크에 데이터베이스 크기 정보를 반환 됩니다. 
 
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|현재 데이터베이스의 이름입니다.|  
+|**database_name**|**nvarchar(128)**|현재 데이터베이스의 이름입니다.|  
 |**database_size**|**varchar(18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 데이터와 로그 파일이 포함 되어 있습니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹, 경우에 파일 그룹에 모든 검사점 파일의 총 디스크 크기 포함 됩니다.|  
-|**할당 되지 않은 공간**|**varchar(18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹, 경우에 파일 그룹에 PRECREATED 상태와 검사점 파일의 총 디스크 크기 포함 됩니다.|  
+|**unallocated space**|**varchar(18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹, 경우에 파일 그룹에 PRECREATED 상태와 검사점 파일의 총 디스크 크기 포함 됩니다.|  
 
 데이터베이스의 테이블에서 사용 중인 공간: (이 결과 집합 반영 되지 않는 메모리 액세스에 최적화 된 테이블을 그대로 디스크 사용량의 테이블당 계정 없음) 
 
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**예약**|**varchar(18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터**|**varchar(18)**|데이터가 사용하는 총 공간입니다.|  
+|**reserved**|**varchar(18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
+|**data**|**varchar(18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar(18)**|인덱스가 사용하는 총 공간입니다.|  
-|**사용 하지 않는**|**varchar(18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|
+|**unused**|**varchar(18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|
 
 다음 결과 집합이 반환 됩니다 **경우에만** 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹이 하나 이상의 컨테이너를 사용 합니다. 
 
@@ -159,13 +159,13 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar (128)**|현재 데이터베이스의 이름입니다.|  
+|**database_name**|**nvarchar(128)**|현재 데이터베이스의 이름입니다.|  
 |**database_size**|**varchar(18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 데이터와 로그 파일이 포함 되어 있습니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹, 경우에 파일 그룹에 모든 검사점 파일의 총 디스크 크기 포함 됩니다.|
-|**할당 되지 않은 공간**|**varchar(18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹, 경우에 파일 그룹에 PRECREATED 상태와 검사점 파일의 총 디스크 크기 포함 됩니다.|  
-|**예약**|**varchar(18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터**|**varchar(18)**|데이터가 사용하는 총 공간입니다.|  
+|**unallocated space**|**varchar(18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹, 경우에 파일 그룹에 PRECREATED 상태와 검사점 파일의 총 디스크 크기 포함 됩니다.|  
+|**reserved**|**varchar(18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
+|**data**|**varchar(18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar(18)**|인덱스가 사용하는 총 공간입니다.|  
-|**사용 하지 않는**|**varchar(18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|
+|**unused**|**varchar(18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|
 |**xtp_precreated**|**varchar(18)**|PRECREATED kb에서 상태와 검사점 파일의 총 크기입니다. 전체 데이터베이스에 할당 되지 않은 공간으로 계산합니다. 데이터베이스에 하나 이상의 컨테이너와 memory_optimized_data 파일 그룹이 없는 경우 NULL을 반환 합니다. *이 열은만 포함 된 if @include_total_xtp_storage= 1*합니다.| 
 |**xtp_used**|**varchar(18)**|UNDER CONSTRUCTION, 활성, 및 kb에서 MERGE TARGET 상태가 있는 검사점 파일의 총 크기입니다. 메모리 액세스에 최적화 된 테이블의 데이터에 적극적으로 사용 하는 디스크 공간입니다. 데이터베이스에 하나 이상의 컨테이너와 memory_optimized_data 파일 그룹이 없는 경우 NULL을 반환 합니다. *이 열은만 포함 된 if @include_total_xtp_storage= 1*합니다.| 
 |**xtp_pending_truncation**|**varchar(18)**|KB 단위로 WAITING_FOR_LOG_TRUNCATION 상태와 검사점 파일의 총 크기입니다. 로그 잘림이 발생 한 후 정리를 대기 하는 검사점 파일에 사용 되는 디스크 공간입니다. 데이터베이스에 하나 이상의 컨테이너와 memory_optimized_data 파일 그룹이 없는 경우 NULL을 반환 합니다. 이 열은만 포함 된 if `@include_total_xtp_storage=1`합니다.|

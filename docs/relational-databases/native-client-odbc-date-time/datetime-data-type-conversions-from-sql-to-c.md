@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36a60d790397b34ee66020fc3a174ba6df18ce63
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3a29e6ce735286d2d864fdb30fc468c02b58846a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>SQL에서 C 데이터 형식 변환을 날짜/시간
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,8 +35,8 @@ ms.lasthandoff: 01/08/2018
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
+|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1.|1|1.|  
+|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1.|1|1.|  
 |SQL_TYPE_DATE|확인|12|13|12|13,23|14|16|16|  
 |SQL_SS_TIME2|12|8|15|확인|10,23|17|16|16|  
 |SQL_TYPE_TIMESTAMP|18|7,8|확인|7|23|19|16|16|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |기호|의미|  
 |------------|-------------|  
 |확인|변환 문제가 발생하지 않습니다.|  
-|1|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 규칙이 적용됩니다.|  
+|1.|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 규칙이 적용됩니다.|  
 |2|선행 공백과 후행 공백이 무시됩니다.|  
 |3|문자열이 날짜, 시간, 표준 시간대 또는 표준 시간대 오프셋으로 구문 분석되고 소수 자릿수 초에 대해 9자리까지 허용합니다. 표준 시간대 오프셋이 구문 분석되는 경우 시간이 클라이언트 표준 시간대로 변환됩니다. 이 변환 중에 오류가 발생 하는 경우 SQLSTATE 22018 및 "Datetime 필드 오버플로" 메시지가 포함 된 진단 레코드가 생성 됩니다.|  
 |4|값이 유효한 날짜, 타임스탬프 또는 타임스탬프 오프셋 값이 아니면 SQLSTATE 22018 및 "캐스트 사양의 문자 값이 올바르지 않습니다"라는 메시지가 포함된 진단 레코드가 생성됩니다.|  

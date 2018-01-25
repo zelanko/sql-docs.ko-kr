@@ -35,13 +35,13 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55415758711cb93b7c0da560a5935df679e36096
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 075cce0d10d02d5566f4a370b28466a4f79ab9c0
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="using-xml-data-types"></a>XML 데이터 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,13 +91,13 @@ ms.lasthandoff: 01/08/2018
 |데이터 형식|SQL Server의<br /><br /> **XML**|SQL Server의<br /><br /> **비-XML**|SQL Server의<br /><br /> **XML**|SQL Server의<br /><br /> **비-XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|통과<sup>6,7</sup>|오류<sup>1</sup>|정상<sup>11, 6</sup>|오류<sup>8</sup>|  
-|DBTYPE_BYTES|통과<sup>6,7</sup>|해당 없음<sup>2</sup>|정상 <sup>11, 6</sup>|해당 없음 <sup>2</sup>|  
-|DBTYPE_WSTR|통과<sup>6, 10</sup>|해당 없음 <sup>2</sup>|정상<sup>4, 6, 12</sup>|해당 없음 <sup>2</sup>|  
-|DBTYPE_BSTR|통과<sup>6, 10</sup>|해당 없음 <sup>2</sup>|정상 <sup>3</sup>|해당 없음 <sup>2</sup>|  
-|DBTYPE_STR|정상<sup>6, 9, 10</sup>|해당 없음 <sup>2</sup>|정상<sup>5, 6, 12</sup>|해당 없음 <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|통한 바이트 스트림 **ISequentialStream**<sup>7</sup>|해당 없음 <sup>2</sup>|통한 바이트 스트림 **ISequentialStream**<sup>11</sup>|해당 없음 <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|통과<sup>6,7</sup>|해당 없음 <sup>2</sup>|해당 사항 없음|해당 없음 <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|통과<sup>6, 10</sup>|해당 없음 <sup>2</sup>|정상<sup>3</sup>|해당 없음 <sup>2</sup>|  
+|DBTYPE_BYTES|통과<sup>6,7</sup>|N/A<sup>2</sup>|정상 <sup>11, 6</sup>|N/A <sup>2</sup>|  
+|DBTYPE_WSTR|통과<sup>6, 10</sup>|N/A <sup>2</sup>|정상<sup>4, 6, 12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|통과<sup>6, 10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_STR|정상<sup>6, 9, 10</sup>|N/A <sup>2</sup>|정상<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|통한 바이트 스트림 **ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|통한 바이트 스트림 **ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|통과<sup>6,7</sup>|N/A <sup>2</sup>|해당 사항 없음|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|통과<sup>6, 10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>서버 이외의 유형이 DBTYPE_XML가 지정 된 **icommandwithparameters:: Setparameterinfo** 고 접근자 유형이 DBTYPE_XML 이면 문이 실행 될 때 오류가 발생 (DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR); 그렇지 않으면 데이터 서버에 전송 되지만 매개 변수의 데이터 형식으로 XML에서 암시적 변환이 중임을 나타내는 오류를 반환 하는 서버입니다.  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 및 PROCEDURE_PARAMETERS 스키마 행 집합  
  COLUMNS 및 PROCEDURE_PARAMETERS 스키마 행 집합에 추가된 열은 다음과 같습니다.  
   
-|열 이름|형식|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 스키마 컬렉션이 정의된 카탈로그의 이름입니다. 비XML 열 또는 형식화되지 않은 XML 열에 대해서는 NULL입니다.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 스키마 컬렉션이 정의된 스키마의 이름입니다. 비XML 열 또는 형식화되지 않은 XML 열에 대해서는 NULL입니다.|  
@@ -156,7 +156,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA 스키마 행 집합  
  새로운 스키마 행 집합인 SS_XMLSCHEMA는 클라이언트가 XML 스키마 정보를 검색할 수 있도록 도입되었습니다. SS_XMLSCHEMA 행 집합에는 다음 열이 포함됩니다.  
   
-|열 이름|형식|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 컬렉션이 속한 카탈로그입니다.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 컬렉션이 속한 스키마입니다.|  
@@ -176,7 +176,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  지원 하기 위해는 **xml** OLE DB를 통해 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 다음 값을 포함 된 새로운 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현 합니다.  
   
-|속성|형식|Description|  
+|이름|유형|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 스키마 컬렉션이 정의된 카탈로그(데이터베이스)의 이름입니다. 일부 SQL 세 부분으로 된 이름 식별자입니다.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|스키마 컬렉션 내 XML 스키마의 이름입니다. SQL의 세 부분으로 구성된 이름 식별자의 일부입니다.|  
@@ -185,7 +185,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
  테이블 생성을 지원 하기 위해는 **ITableDefinition** 인터페이스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DBPROPSET_SQLSERVERCOLUMN 속성 집합을 3 개의 새 열을 추가 합니다.  
   
-|속성|형식|Description|  
+|이름|유형|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|형식화된 XML 열에 대해서는 이 속성이 XML 스키마가 저장된 카탈로그의 이름을 지정하는 문자열입니다. 다른 열 유형에 대해서는 이 속성이 빈 문자열을 반환합니다.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|형식화된 XML 열에 대해서는 이 속성이 이 열을 정의하는 XML 스키마의 이름을 지정하는 문자열입니다.|  
@@ -205,7 +205,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 인터페이스  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client는 다음 항목을 추가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-특정 열에서 반환 된 행 집합에는 **icolumnrowset::** 메서드. 이러한 열에는 XML 스키마 컬렉션의 세 부분으로 구성된 이름이 포함됩니다. 비XML 열이나 형식화되지 않은 XML 열에 대해서는 이 세 열 모두 기본값인 NULL을 사용합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 스키마 컬렉션이 속한 카탈로그입니다.<br /><br /> 그렇지 않으면 NULL입니다.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 스키마 컬렉션이 속한 스키마입니다. 그렇지 않으면 NULL입니다.|  

@@ -16,13 +16,13 @@ ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 870d6391732d87c08f64d016ea6325107c791c88
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b0cd1c2dd0c77409768e8ea7838724ca4d6b827e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX(선택적 XML 인덱스)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  *xml_column_name*  
  인덱싱할 경로가 포함된 XML 열의 이름입니다.  
   
- XML 인덱스를 사용 하 여 *sxi_index_name*  
+ USING XML INDEX *sxi_index_name*  
  기존 선택적 XML 인덱스의 이름입니다.  
   
  에 대 한 **(** \<xquery_or_sql_values_path > **)** 보조 선택적 XML 인덱스를 만들 인덱싱된 경로의 이름입니다. 인덱싱할 경로는 CREATE SELECTIVE XML INDEX 문에서 할당된 이름입니다. 자세한 내용은 [CREATE SELECTIVE XML INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md)를 참조하세요.  
@@ -100,7 +100,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  

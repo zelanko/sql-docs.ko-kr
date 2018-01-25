@@ -21,13 +21,13 @@ ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16014643fc638cf9c9422694f44627487d2d6d89
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9bd3cf031a884da51cd15b0e78c8d2c242c3f9e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT XML 스키마 컬렉션 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>인수  
- *사용 권한*  
+ *permission*  
  XML 스키마 컬렉션에 대해 부여할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  XML 스키마 컬렉션 ON:: [ *schema_name*합니다. ] *XML_schema_collection_name*  

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ending conversations [SQL Server]
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5f7f2dd42fd3d34073bbdfc223af339f2e867539
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d68dcecf84cb24b0c06876d40742c8f5ffe8124d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ END CONVERSATION conversation_handle
  *conversation_handle*  
  종료할 대화의 대화 핸들입니다.  
   
- 오류와 함께 =*failure_code*  
+ WITH ERROR =*failure_code*  
  오류 코드입니다. *failure_code* 유형의 **int**합니다. 오류 코드는 대화의 다른 쪽으로 보낸 오류 메시지에 포함되는 사용자 정의 코드입니다. 오류 코드는 0보다 커야 합니다.  
   
- 설명 =*failure_text*  
+ DESCRIPTION =*failure_text*  
  오류 메시지입니다. *failure_text* 유형의 **nvarchar (3000)**합니다. 오류 텍스트는 다른 쪽의 대화로 보낸 오류 메시지에 포함되는 사용자 정의 텍스트입니다.  
   
  WITH CLEANUP  

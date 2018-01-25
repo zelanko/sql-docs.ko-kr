@@ -12,12 +12,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aa07f181ef8a17b79bd978ffd58174bf28d870f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: dd64f680a288f144e14104aedc99d4c6eda85934
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="introducing-revoscalepy"></a>Revoscalepy 소개
 
@@ -162,7 +162,7 @@ SQL Server에서 Python 코드를 실행 하려면 먼저 설치 해야 SQL Serv
 
 이러한 Api에 대 한 전체 설명서는 제품 해제 될 때 사용할 수 있습니다. 한편, RevoScaleR 또는 MicrosoftML 라이브러리에는 해당 함수가 참조 하는 것이 좋습니다.
 
-+ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler)합니다.
++ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
 + [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)
 
 모듈을 내보내고 다음 호출 하는 모든 Python 함수에 도움말을 가져와서 `help()`합니다. 예를 들면 `help(revoscalepy)` Python IDE에서 모든 함수 목록이 revoscalepy 모듈 서명으로 반환 합니다.

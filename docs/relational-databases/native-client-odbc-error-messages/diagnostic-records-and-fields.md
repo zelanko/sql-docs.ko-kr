@@ -23,15 +23,15 @@ helpviewer_keywords:
 - status information [ODBC]
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ced62a96f94fa4cb929f295f7a390c60b42e15d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b2c800550b992735c0af6854a83d5ea28a2c597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="diagnostic-records-and-fields"></a>진단 레코드 및 필드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
  상태 레코드의 필드에는 SQLSTATE, 원시 오류 번호, 진단 메시지, 열 번호 및 행 번호를 비롯하여 ODBC 드라이버 관리자, 드라이버 또는 데이터 원본에서 반환된 특정 오류 또는 경고에 대한 정보가 포함됩니다. 상태 레코드는 함수에서 SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA 또는 SQL_STILL_EXECUTING을 반환하는 경우에만 생성됩니다. 상태 레코드의 필드의 전체 목록은 참조 하십시오. **SQLGetDiagField**합니다.  
   
- **SQLGetDiagRec** 해당 ODBC SQLSTATE, 원시 오류 번호 및 진단 메시지 필드와 함께 단일 진단 레코드를 검색 합니다. 이 기능은 ODBC 2와 비슷합니다. *x***SQLError** 함수입니다. ODBC 3의 가장 간단한 오류 처리 함수입니다. *x* 반복 해 서 호출 **SQLGetDiagRec** 부터는 *RecNumber* 매개 변수를 증가 및 1로 설정 *RecNumber* 될 때까지 1 씩 **SQLGetDiagRec** SQL_NO_DATA를 반환 합니다. 이것은 ODBC 2입니다. *x* 응용 프로그램 호출 **SQLError** SQL_NO_DATA_FOUND가 반환 될 때까지 합니다.  
+ **SQLGetDiagRec** 해당 ODBC SQLSTATE, 원시 오류 번호 및 진단 메시지 필드와 함께 단일 진단 레코드를 검색 합니다. 이 기능은 ODBC 2와 비슷합니다. *x * * * SQLError** 함수입니다. ODBC 3의 가장 간단한 오류 처리 함수입니다. *x* 반복 해 서 호출 **SQLGetDiagRec** 부터는 *RecNumber* 매개 변수를 증가 및 1로 설정 *RecNumber* 될 때까지 1 씩 **SQLGetDiagRec** SQL_NO_DATA를 반환 합니다. 이것은 ODBC 2입니다. *x* 응용 프로그램 호출 **SQLError** SQL_NO_DATA_FOUND가 반환 될 때까지 합니다.  
   
  ODBC 3입니다. *x* ODBC 2 보다 훨씬 더 많은 진단 정보를 지원 합니다. *x*합니다. 이 정보를 사용 하 여 검색 된 진단 레코드의 추가 필드에 저장 됩니다 **SQLGetDiagField**합니다.  
   

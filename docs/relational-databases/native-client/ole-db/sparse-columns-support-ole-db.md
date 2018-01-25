@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ccfb47c8663f482b7c6c7ab95b7957381f43d010
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 83781fb2194f5ef94ea7a73a8c32017ceb25424a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sparse-columns-support-ole-db"></a>스파스 열 지원(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,10 +58,10 @@ ms.lasthandoff: 01/08/2018
   
 |유형 또는 멤버 함수|Description|  
 |-----------------------------|-----------------|  
-|Icolumnsinfo:: Getcolumnsinfo|새 DBCOLUMNFLAGS 플래그 값인 DBCOLUMNFLAGS_SS_ISCOLUMNSET이에 대해 설정 된 **column_set** 열 *dwFlags*합니다.<br /><br /> 에 대해 설정 된 DBCOLUMNFLAGS_WRITE **column_set** 열입니다.|  
+|IColumnsInfo::GetColumnsInfo|새 DBCOLUMNFLAGS 플래그 값인 DBCOLUMNFLAGS_SS_ISCOLUMNSET이에 대해 설정 된 **column_set** 열 *dwFlags*합니다.<br /><br /> 에 대해 설정 된 DBCOLUMNFLAGS_WRITE **column_set** 열입니다.|  
 |IColumsRowset::GetColumnsRowset|에 새 DBCOLUMNFLAGS 플래그 값인 dbcolumnflags_ss_iscolumnset이 설정 되어 **column_set** DBCOLUMN_FLAGS의 열입니다.<br /><br /> DBCOLUMN_COMPUTEMODE에 DBCOMPUTEMODE_DYNAMIC로 설정 되어 **column_set** 열입니다.|  
 |IDBSchemaRowset::GetSchemaRowset|Dbschema_columns는 두 개의 새 열: SS_IS_COLUMN_SET과 ss_is_sparse를 반환 합니다.<br /><br /> DBSCHEMA_COLUMNS의 멤버가 아닌 열만 반환는 **column_set**합니다.<br /><br /> 추가 된 두 개의 새로운 스키마 행 집합: DBSCHEMA_COLUMNS_EXTENDED는의 스파스 여부에 관계 없이 모든 열을 반환 **column_set** 멤버 자격입니다. DBSCHEMA_SPARSE_COLUMN_SET의 멤버인 열만 반환는 **column_set**합니다. 이러한 새 행 집합은 DBSCHEMA_COLUMNS와 동일한 열과 제한 사항을 갖습니다.|  
-|Idbschemarowset:: Getschemas|Idbschemarowset:: Getschemas 사용 가능한 스키마 행 집합 목록에 새 행 집합, DBSCHEMA_COLUMNS_EXTENDED 및 DBSCHEMA_SPARSE_COLUMN_SET에 대 한 Guid를 포함합니다.|  
+|IDBSchemaRowset::GetSchemas|Idbschemarowset:: Getschemas 사용 가능한 스키마 행 집합 목록에 새 행 집합, DBSCHEMA_COLUMNS_EXTENDED 및 DBSCHEMA_SPARSE_COLUMN_SET에 대 한 Guid를 포함합니다.|  
 |ICommand::Execute|경우 **선택 \* 에서** *테이블* 은 스파스의 멤버가 아닌 모든 열의 반환을 사용 하는 **column_set**, 모든 값이 포함 된 XML 열 null이 아닌 열은 스파스의 구성원 인 **column_set**있을 경우.|  
 |IOpenRowset::OpenRowset|Iopenrowset:: Openrowset와 icommand:: Execute, 같은 열이 있는 행 집합 반환을 **선택 \***  동일한 테이블에 대 한 쿼리 합니다.|  
 |ITableDefinition|이 인터페이스 또는 스파스 열에 변경 내용이 없는지 **column_set** 열입니다. 스키마를 수정해야 하는 응용 프로그램에서는 적절한 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 직접 실행해야 합니다.|  

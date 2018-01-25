@@ -14,13 +14,13 @@ ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 19ecd44707cd6a94b9a521184b0c588806a63869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 35194b08e43c98985e0ae0d03f1e470fe8370383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>명령줄에서 컴퓨터 학습 Server (독립 실행형) 또는 Microsoft R Server (독립 실행형) 설치
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/08/2018
 
 **자동** 설치의 경우 동일한 인수를 제공하고 **/q** 스위치를 추가합니다. 어떠한 프롬프트도 제공 되며 상호 작용이 필요 합니다. 그러나 모든 필수 인수를 생략 하면 설치가 실패 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 SQL Server의 명령줄 설치를 수행 하 고 스크립팅 인수를 잘 알고 있어야 하는 방법을 알아야 합니다.
 
@@ -95,8 +95,8 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /
 
 기본적으로 SQL Server에 대 한 로그 및 요약 모든 설치 하 고 관련된 기능 다음 폴더에 만들어집니다.
 
-+ SQL Server 2017:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQL Server 2016의 경우:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ SQL Server 2017: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 별도 하위 폴더는 설치 된 각 기능에 대해 생성 됩니다.
 

@@ -16,13 +16,13 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bda2e9c6813e53bffeab974e5e01b475cdfebe26
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d869ed18b07f824ffa4cc3fc8b746ded5242ed99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>진단 세션 (Transact SQL) 만들기
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -67,7 +67,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *max_item_count_num*  
  보기에서 유지할 이벤트 수를 지정 합니다. 예를 들어 100을 지정 하는 경우 필터 조건과 일치 하는 최신 이벤트 100은 진단 세션에 유지 됩니다. 이벤트를 일치 하는 100 보다 작은 경우 진단 세션 100 개 미만의 이벤트 포함 됩니다. *max_item_count_num* 100 이상 이어야 합니다 및 100, 000입니다.  
   
- *e n t _*  
+ *event_name*  
  진단 세션에서 수집 될 실제 이벤트를 정의 합니다.  *e n t _* 에 나열 된 이벤트 중 하나는 [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) 여기서 `sys.pdw_diag_events.is_enabled='True'`합니다.  
   
  *filter_property_name*  
@@ -90,7 +90,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |CommandType|명령 유형입니다.|  
 |CommandText|처리 명령 텍스트입니다.|  
 |OperationType|이벤트에 대 한 작업 유형입니다.|  
-|기간|이벤트의 기간입니다.|  
+|Duration|이벤트의 기간입니다.|  
 |SPID|서비스 프로세스 id입니다.|  
   
 ## <a name="remarks"></a>주의  

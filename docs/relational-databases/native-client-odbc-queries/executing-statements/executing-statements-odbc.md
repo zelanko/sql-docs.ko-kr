@@ -18,14 +18,14 @@ helpviewer_keywords:
 - statements [ODBC], executing
 ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69e80a1b0f8b27e42bb19dc53e2d59f4ae01fe82
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e94cefd52d5c5e1a13efd2dcd66d045126a7329f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="executing-statements-odbc"></a>문 실행(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

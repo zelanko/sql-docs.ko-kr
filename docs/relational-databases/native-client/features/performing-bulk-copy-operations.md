@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQLNCLI, bulk copy operations
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c6070899aab81b6e3cef56a7c6320934d57a21d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ea17b70786b4b059417c8cf0f8b514fc6a6208e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performing-bulk-copy-operations"></a>대량 복사 작업 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **ISupportErrorInfo**  
   
- 공급자별 속성 SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS 및 SSPROP_FASTLOADKEEPIDENTITY는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 대량 복사 행 집합의 동작을 제어합니다. 속성에 지정 된 된 *rgProperties* 의 멤버는 *rgPropertySets***IOpenRowset**매개 변수 멤버입니다.  
+ 공급자별 속성 SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS 및 SSPROP_FASTLOADKEEPIDENTITY는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 대량 복사 행 집합의 동작을 제어합니다. 속성에 지정 된 된 *rgProperties* 의 멤버는 * rgPropertySets ***IOpenRowset**매개 변수 멤버입니다.  
   
 |속성 ID|Description|  
 |-----------------|-----------------|  

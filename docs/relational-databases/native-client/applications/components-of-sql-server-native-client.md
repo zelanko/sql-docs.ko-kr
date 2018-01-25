@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
 ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8339663370635d9ff191d06aa2df13e416d75647
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3405727d9d62ccb68fa5e4b66f262f1279991338
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="components-of-sql-server-native-client"></a>SQL Server Native Client의 구성 요소
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,6 +42,6 @@ ms.lasthandoff: 01/08/2018
 |sqlncli11.lib|라이브러리 파일 하는 데 필요한 직접 호출 된 **bcp** 의 일부인 유틸리티 함수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버.<br /><br /> 참고: 프로그래밍 코드에서 sqlncli11.lib 파일 참조를 하는 경우 필요한 sqlncli11.dll 파일이 해당 시스템 경로 및 확인 하는 사용자의 시스템 경로에 있는지 확인 하려면 응용 프로그램을 사용 합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [SQL Server Native Client 사용한 응용 프로그램 작성](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

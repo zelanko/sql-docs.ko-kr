@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: SQL Server Native Client, updating applications
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea8bd24944008b1301f02024f9aa77910a7dbe37
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7a0765a262b2775f81b35969a638ff6f3583357e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client에서 응용 프로그램 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/08/2018
 |SQLGetDescRec 더 이상 설명자 일관성 검사지 않습니다.|이전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 SQLGetDescRec 설명자 일관성 검사 수행 SQL_DESC_DATA_PTR 필드가 설정 된 경우. ODBC 사양과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 이상 버전에서는 필요하지 않으므로 이 일관성 검사는 더 이상 수행되지 않습니다.|  
 |데이터가 범위를 벗어날 때 서로 다른 오류가 반환되었습니다.|에 대 한는 **datetime** 형식에서 다른 오류 번호가 반환 됩니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (부터는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])는의 범위 밖에 대 한 보다 이전 버전에서 반환 된 날짜입니다.<br /><br /> 특히, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 벗어난 모든 연도 값 문자열 변환에 범위에 대해 22007을 반환 **datetime**, 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 버전 10.0부터 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 경우에 22008을 반환 합니다. 지 원하는 범위 내에서 날짜가 **datetime2** 에서 지 원하는 범위 외부에 있으면 서 **datetime** 또는 **smalldatetime**합니다.|  
 |**날짜/시간** if 라운드 하지 반올림이 일을 변경 및 소수 자릿수 초 값이 잘립니다.|이전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0에 대 한 클라이언트 동작 **datetime** 서버로 전송 하는 값 1에 가깝게 반올림 됩니다/300 초입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0부터 이 시나리오를 사용하면 반올림으로 인해 일이 변경되는 경우 소수 자릿수 초가 잘립니다.|  
-|에 대 한 초가 잘릴 수 있습니다 **datetime** 값입니다.|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client 이상 버전을 사용하여 빌드한 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 서버에 연결할 경우 유형 식별자인 DBTYPE_DBTIMESTAMP(OLE DB) 또는 SQL_TIMESTAMP(ODBC) 및 소수 자릿수 0을 사용하여 datetime 열에 바인딩하면 서버에 전송된 시간 데이터 부분에서 초 및 초의 소수 자리 부분이 잘립니다.<br /><br /> 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> 입력 데이터: 1994-08-21 21:21:36.000<br /><br /> 데이터 삽입: 1994-08-21 21:21:00.000|  
+|에 대 한 초가 잘릴 수 있습니다 **datetime** 값입니다.|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client 이상 버전을 사용하여 빌드한 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 서버에 연결할 경우 유형 식별자인 DBTYPE_DBTIMESTAMP(OLE DB) 또는 SQL_TIMESTAMP(ODBC) 및 소수 자릿수 0을 사용하여 datetime 열에 바인딩하면 서버에 전송된 시간 데이터 부분에서 초 및 초의 소수 자리 부분이 잘립니다.<br /><br /> 예를 들어<br /><br /> 입력 데이터: 1994-08-21 21:21:36.000<br /><br /> 데이터 삽입: 1994-08-21 21:21:00.000|  
 |DBTYPE_DBTIME에서 DBTYPE_DATE로 OLE DB 데이터 변환을 수행할 때 더 이상 일이 변경되지 않습니다.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 이전에는 DBTYPE_DATE의 시간 부분이 자정의 1/2초 내에 있는 경우 OLE DB 변환 코드로 인해 일이 변경되었습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0부터 일이 변경되지 않습니다(소수 자릿수 초가 잘리고 반올림되지 않음).|  
 |IBCPSession::BCColFmt 변환이 변경 됩니다.|부터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0에서는 IBCPSession::BCOColFmt를 사용 하 여 SQLDATETIME 또는 SQLDATETIME을 문자열 형식, 소수 자릿수 값으로 변환할 때 내보내집니다. 예를 들어 SQLDATETIME 유형을 SQLNVARCHARMAX 유형으로 변환할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 이전 버전에서는 다음을 반환했습니다.<br /><br /> 1989-02-01 00:00:00. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 이상 버전에서 1989-02-01 00:00:00.0000000을 반환합니다.|  
 |전송된 데이터 크기가 SQL_LEN_DATA_AT_EXEC에 지정된 길이와 일치해야 합니다.|SQL_LEN_DATA_AT_EXEC를 사용하는 경우 데이터 크기가 SQL_LEN_DATA_AT_EXEC로 지정한 길이와 일치해야 합니다. SQL_DATA_AT_EXEC를 사용할 수도 있지만 SQL_LEN_DATA_AT_EXEC를 사용하면 성능이 향상됩니다.|  

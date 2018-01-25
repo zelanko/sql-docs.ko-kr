@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26ca8c53b6b5aae6f0eb75287abcd1076468634b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 42eb24a2536f388e13e04892246e917f277ef408
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/08/2018
  [SQL Server Native Client 11.0의 UTF-16 지원](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 도입된 동작 변경 사항에 대해 설명합니다. 열 결과 또는 출력 매개 변수를 바인딩할 때 고정 길이 버퍼를 제공 하는 경우는 **wchar** 문자 버퍼에 기록 하는 경우 및 종결 문자에 서로게이트 쌍의 상위 서로게이트 코드 포인트 크기를 다음 **wchar** 문자 하위 서로게이트 코드 포인트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 상위 서로게이트 코드 포인트 버퍼에 추가 되지 않습니다.  
   
- [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
+ [고가용성, 재해 복구에 대 한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  고가용성, 재해 복구에 추가 된 기능을 활용 하도록 응용 프로그램을 구성할 수 있는 방법을 설명 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]합니다.  
   
  [확장 이벤트 로그의 진단 정보 액세스](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  

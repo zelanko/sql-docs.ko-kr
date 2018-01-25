@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a06e868a26e0da160e70e7f2923496e73f136ff7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ ALTER DATABASE database_name
  SET HADR  
  지정한 데이터베이스에 대해 지정한 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 명령을 실행합니다.  
   
- {가용성 그룹  **=**  *group_name* | OFF}  
+ { AVAILABILITY GROUP **=***group_name* | OFF }  
  다음과 같이 지정한 데이터베이스를 지정한 가용성 그룹에 조인하거나 그룹에서 제거합니다.  
   
- *o u p _*  
+ *group_name*  
  명령을 실행한 서버 인스턴스에서 호스팅되는 보조 복제본의 지정한 데이터베이스를 group_name에 지정한 가용성 그룹에 조인합니다.  
   
  이 작업을 수행하려면 다음 선행 조건이 충족되어야 합니다.  
@@ -81,7 +81,7 @@ ALTER DATABASE database_name
     > [!NOTE]  
     >  데이터베이스를 가용성 그룹을 추가 하려면 주 복제본을 호스팅하는 서버 인스턴스에 연결 하 고 사용 하 여는 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* 데이터베이스 추가 *database_name*  문.  
   
- 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
+ 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)을 참조하세요.  
   
  OFF  
  지정한 보조 데이터베이스를 가용성 그룹에서 제거합니다.  
@@ -133,7 +133,7 @@ ALTER DATABASE database_name
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  데이터베이스에 대한 ALTER 권한이 필요합니다. 멤버 자격이 필요 하는 데이터베이스를 가용성 그룹에 조인 된 **db_owner** 고정된 데이터베이스 역할입니다.  
   
 ## <a name="examples"></a>예  
@@ -149,7 +149,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 ## <a name="see-also"></a>관련 항목:  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [가용성 그룹 만들기&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [AlwaysOn 가용성 그룹 &#40; 개요 SQL Server &#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn 가용성 그룹 구성 &#40; 문제 해결 SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   

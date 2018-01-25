@@ -28,15 +28,15 @@ helpviewer_keywords:
 - dropping columns
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af5d7e7dab04bf6999b8c8085a4f154a4192d96c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dbc034e7ed5dd1d6f4704376adf73d517d3b5c47
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]테이블 또는 인덱싱된 뷰의 삭제 된 가변 길이 열에서 공간을 회수합니다.
@@ -56,7 +56,7 @@ DBCC CLEANTABLE
 ```  
   
 ## <a name="arguments"></a>인수  
- *a s e _* | *database_id* | 0  
+ *database_name* | *database_id* | 0  
  정리될 테이블이 속한 데이터베이스입니다. 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름에 대 한 규칙을 따라야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
   
  *table_name* | *table_id* | *view_name*| *view_id*  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c147dcd51706f9b67b6154ffc15bd449b0b27332
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 63d848005d0a1745070caf209f52f49dd80db1d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>새로운 날짜 및 시간 기능과 이전 SQL Server 버전 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
 |OLE DB 클라이언트 형식|SQL Server 2005 형식|SQL Server 2008(또는 이후 버전) 형식|결과 변환(서버에서 클라이언트로)|매개 변수 변환(클라이언트에서 서버로)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DATETIME|date|확인|확인|  
+|DBTYPE_DBDATE|날짜/시간|날짜|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 IRowsetChange 문자열 잘림으로 인해 실패 합니다.|  
 |DBTYPE_DBTIME||Time(0)|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|IRowsetChange 소수 자릿수 초는 0이 아닌 경우 문자열 잘림으로 인해 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 |DBTYPE_DBTIMESTAMP|||실패 - 시간 리터럴이 잘못되었습니다.|확인|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|확인|확인|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (7)|확인|확인|  
-|DBTYPE_DBDATE|Smalldatetime|date|확인|확인|  
+|DBTYPE_DBDATE|Smalldatetime|날짜|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 IRowsetChange 문자열 잘림으로 인해 실패 합니다.|  
 |DBTYPE_DBTIME||Time(0)|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|IRowsetChange 소수 자릿수 초는 0이 아닌 경우 문자열 잘림으로 인해 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
@@ -72,11 +72,11 @@ ms.lasthandoff: 01/08/2018
   
 |매개 변수 유형|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|날짜|DBTYPE_WSTR|10|~0|~0|  
-|Time|DBTYPE_WSTR|8, 10..16|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
+|time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
-|Datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
  이러한 값 범위 중 일부는 연속되지 않습니다. 예를 들어 8, 10..16에서는 9가 누락되어 있습니다. 이러한 경우는 소수 부분 자릿수가 0보다 커서 소수점을 추가했을 때 발생합니다.  
@@ -86,11 +86,11 @@ ms.lasthandoff: 01/08/2018
   
 |열 유형|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|날짜|DBTYPE_WSTR|10|NULL|NULL|  
-|Time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
+|date|DBTYPE_WSTR|10|NULL|NULL|  
+|time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
-|Datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|NULL|NULL|  
   
 #### <a name="columnsinfogetcolumninfo"></a>ColumnsInfo::GetColumnInfo  
@@ -98,11 +98,11 @@ ms.lasthandoff: 01/08/2018
   
 |매개 변수 유형|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|날짜|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
-|Datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>스키마 행 집합  
@@ -113,11 +113,11 @@ ms.lasthandoff: 01/08/2018
   
 |열 유형|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|날짜|DBTYPE_WSTR|10|20|NULL|  
-|Time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
+|date|DBTYPE_WSTR|10|20|NULL|  
+|time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
-|Datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
+|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
+|datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
   
 #### <a name="procedureparameters-rowset"></a>PROCEDURE_PARAMETERS 행 집합  
@@ -125,19 +125,19 @@ ms.lasthandoff: 01/08/2018
   
 |열 유형|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|날짜|DBTYPE_WSTR|10|20|날짜|  
-|Time|DBTYPE_WSTR|8, 10..16|16,20..32|Time|  
+|date|DBTYPE_WSTR|10|20|date|  
+|time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
-|Datetime2|DBTYPE_WSTR|19,21..27|38,42..54|Datetime2|  
+|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
+|datetime2|DBTYPE_WSTR|19,21..27|38,42..54|datetime2|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|datetimeoffset|  
   
 #### <a name="providertypes-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
-|형식 -><br /><br /> Column|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|형식 -><br /><br /> 열|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -149,7 +149,7 @@ ms.lasthandoff: 01/08/2018
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

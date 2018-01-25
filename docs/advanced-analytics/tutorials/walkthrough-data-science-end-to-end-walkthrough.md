@@ -16,12 +16,12 @@ ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5ff7287937e2bddd57d4b155c254bcd29bfc0d68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 2fc213534da32bf529acdb85fd5b0288bf686068
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R 및 SQL Server에 대 한 종단 간 데이터 과학 연습
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 + 모든 SQL과 R 스크립트가 포함 되어 있습니다.
 + 사용자 환경에서 실행 하는 스크립트에서 문자열을 수정 해야 합니다. 이렇게 하려면 코드 편집기와 같은 [Visual Studio Code](https://code.visualstudio.com/Download)합니다.
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 + SQL Server 2016의 인스턴스 또는 SQL Server 2017의 평가 버전에 액세스할 수 있어야 합니다.
 + 하나 이상의 SQL Server 컴퓨터 인스턴스에 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]이 설치되어 있어야 합니다.

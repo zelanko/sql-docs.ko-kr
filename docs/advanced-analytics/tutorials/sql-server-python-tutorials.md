@@ -7,12 +7,12 @@ dev_langs: Python
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 60b17dd267e5b6bbb940a335aa89b74585b24dcc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 7fc78e8055e72066925b1c9dee8534aea681933c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server Python 자습서
 
@@ -78,6 +78,6 @@ SQL Server 설치 프로그램을 실행 한 후 이러한 중요 한 단계를 
 
 문제를 실행 하면 몇 가지 일반적인 문제에 대 한이 문서를 참조 하세요.: [컴퓨터 학습 서비스 문제 해결](../machine-learning-troubleshooting-faq.md)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Server용 R 자습서](sql-server-r-tutorials.md)

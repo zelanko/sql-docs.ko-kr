@@ -23,13 +23,13 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b1fb1d28c4bddb679bd4aab8ce6cb11f21caca5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *rowpattern*  
  노드를 식별 하는 데 사용 하는 XPath 패턴은 (해당 핸들을 전달 하는 XML 문서에는 *idoc* 매개 변수) 행으로 처리 합니다.  
   
- *플래그*  
+ *flags*  
  XML 데이터와 관계형 행 집합 사이에 사용해야 하는 매핑과 남는 열을 채우는 방법을 나타냅니다. *플래그* 선택적 입력된 매개 변수 이며 다음 값 중 하나일 수 있습니다.  
   
 |바이트 값|Description|  
@@ -64,7 +64,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|XML_ATTRIBUTES 또는 XML_ELEMENTS와 결합(논리적 OR 연산을 수행)할 수 있습니다. 검색 상황에서이 플래그 오버플로 속성에 소비 된 데이터를 복사 하지 해야 함을 나타냅니다  **@mp:xmltext** 합니다.|  
   
  *SchemaDeclaration*  
- 폼의 스키마 정의: *ColName**ColType* [*ColPattern* | *메타 속성*] [**,***ColNameColType* [*ColPattern* | *메타 속성*]...]  
+ 폼의 스키마 정의: *ColName * * ColType* [*ColPattern* | *메타 속성*] [**, * * * ColNameColType* [*ColPattern * | *메타 속성*]...]  
   
  *ColName*  
  행 집합의 열 이름입니다.  
@@ -79,10 +79,10 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  으로 지정 된 일반 XPath 패턴 *ColPattern* 은 메타 속성도 지원 합니다.  
   
- *메타 속성*  
+ *MetaProperty*  
  OPENXML이 제공하는 메타 속성 중 하나입니다. 경우 *메타 속성* 지정, 열에 메타 속성이 제공 하는 정보를 포함 합니다. 메타 속성을 통해 상대적 위치 및 네임스페이스 정보 등 XML 노드에 대한 정보를 추출할 수 있습니다. 텍스트 형태로 표시되는 것보다 많은 정보를 제공합니다.  
   
- *테이블 이름*  
+ *TableName*  
  제공할 수 있는 테이블 이름입니다 (대신 *SchemaDeclaration*) 하는 경우 원하는 스키마가 있는 테이블이 이미 존재 하 고 열 패턴은 필수입니다.  
   
 ## <a name="remarks"></a>주의  
@@ -90,7 +90,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  다음 표에서 설명의 구조는 **가장자리** 테이블입니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|문서 노드의 고유 ID입니다.<br /><br /> 루트 요소의 ID 값은 0입니다. 음수 ID 값은 예약된 값입니다.|  
 |**parentid**|**bigint**|노드의 부모를 나타냅니다. 이 ID가 나타내는 부모가 반드시 부모 요소일 필요는 없지만 해당 노드는 이 ID가 나타내는 부모 노드의 NodeType에 종속됩니다. 예를 들어 노드가 텍스트 노드인 경우 해당 부모는 특성 노드일 수 있습니다.<br /><br /> 노드가 XML 문서의 최상위 수준에 있으면 해당 **ParentID** 는 NULL입니다.|  

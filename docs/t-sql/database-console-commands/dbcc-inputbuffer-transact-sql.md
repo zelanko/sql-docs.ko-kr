@@ -25,15 +25,15 @@ helpviewer_keywords:
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23ac916dccb2f8d4c6511f9e672aa07834001cad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ DBCC INPUTBUFFER는 다음과 같은 열이 있는 행 집합을 반환합니다
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**이벤트 유형**|**nvarchar (30)**|이벤트 유형입니다. 이 수 **RPC 이벤트** 또는 **언어 이벤트**합니다. 출력 됩니다 **No Event** 마지막 이벤트가 발견 된 경우.|  
+|**EventType**|**nvarchar(30)**|이벤트 유형입니다. 이 수 **RPC 이벤트** 또는 **언어 이벤트**합니다. 출력 됩니다 **No Event** 마지막 이벤트가 발견 된 경우.|  
 |**매개 변수**|**smallint**|0 = 텍스트<br /><br /> 1-  *n*  = 매개 변수|  
 |**EventInfo**|**nvarchar(4000)**|에 대 한 프로그램 **EventType** RPC의 **EventInfo** 프로시저 이름만 포함 합니다. 에 대 한 프로그램 **EventType** 언어에서의 이벤트의 첫 4000 자만 표시 됩니다.|  
   
@@ -126,6 +126,6 @@ DBCC INPUTBUFFER (52);
 ## <a name="see-also"></a>관련 항목:  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-[sys.dm_exec_input_buffer&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+[sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   

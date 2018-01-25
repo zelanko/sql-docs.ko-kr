@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7cc579d5f4c5d84dcec335e69d12334725f60741
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="collations"></a>데이터 정렬
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,14 +40,13 @@ ms.lasthandoff: 01/02/2018
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 COLLATE { <collation_name> | database_default }  
 <collation_name> :: =   
      { Windows_collation_name } | { SQL_collation_name }  
 ```  
   
 ## <a name="arguments"></a>인수  
- *데이터 정렬 이름*  
+ *collation_name*  
  식, 열 정의 또는 데이터베이스 정의에 적용할 데이터 정렬의 이름입니다. *데이터 정렬 이름* 수만 지정 *Windows_collation_name* 또는 *SQL_collation_name*합니다. *데이터 정렬 이름* 리터럴 값 이어야 합니다. *데이터 정렬 이름* 변수나 식으로 표현할 수 없습니다.  
   
  *Windows_collation_name* 에 대 한 데이터 정렬 이름는 [Windows 데이터 정렬 이름](../../t-sql/statements/windows-collation-name-transact-sql.md)합니다.  
@@ -87,11 +86,11 @@ COLLATE { <collation_name> | database_default }
   
  COLLATE 사용 하 여 *collate_name* SQL Server 데이터 정렬 또는 식, 열 정의 또는 데이터베이스 정의에 적용 될 Windows 데이터 정렬의 이름을 참조 하도록 합니다. *데이터 정렬 이름* 수만 지정 된 *Windows_collation_name* 또는 *SQL_collation_name* 하며 매개 변수는 리터럴 값을 포함 해야 합니다. *데이터 정렬 이름* 변수나 식으로 표현할 수 없습니다.  
   
- 데이터 정렬은 설치할 때를 제외하고 일반적으로 데이터 정렬 이름으로 식별됩니다. 설치할 때는 Windows 데이터 정렬에 대해 루트 데이터 정렬 지정자(데이터 정렬 로캘)를 지정한 다음 대소문자와 악센트를 구분하거나 구분하지 않는 정렬 옵션을 지정합니다.  
+ 데이터 정렬은 설치할 때를 제외하고 일반적으로 데이터 정렬 이름으로 식별됩니다. 설치 프로그램을 대신 Windows 데이터 정렬에 대 한 루트 데이터 정렬 지정자 (데이터 정렬 로캘)를 지정 하 고 감지 하거나 대/소문자 또는 악센트를 구분 하지 않는 정렬 옵션을 지정 합니다.  
   
  시스템 함수를 실행할 수 [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) Windows 데이터 정렬 및 SQL Server 데이터 정렬에 대 한 모든 유효한 데이터 정렬 이름의 목록을 검색 하려면:  
   
-```  
+```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
@@ -104,9 +103,11 @@ FROM fn_helpcollations();
   
 -   복원 하거나 데이터베이스, 데이터베이스의 기본 데이터 정렬 및 모든 데이터 정렬에 연결할 때 **char**, **varchar**, 및 **텍스트** 열 또는 데이터베이스에 대 한 매개 변수 운영 체제에서 지원 되어야 합니다.  
   
-     코드 페이지 변환이 지원 되는 **char** 및 **varchar** 데이터 형식에 대 한 **텍스트** 데이터 형식입니다. 코드 페이지 변환 중 데이터가 손실되어도 보고되지 않습니다.  
+> [!NOTE]
+> 코드 페이지 변환이 지원 되는 **char** 및 **varchar** 데이터 형식에 대 한 **텍스트** 데이터 형식입니다. 코드 페이지 변환 중 데이터가 손실되어도 보고되지 않습니다.  
   
- 지정 된 데이터 정렬 또는 참조 된 개체가 사용 되는 데이터 정렬에는 Windows에서 지원 되지 않습니다 코드 페이지를 사용 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류를 표시 합니다.  
+> [!NOTE]
+> 지정 된 데이터 정렬 또는 참조 된 개체가 사용 되는 데이터 정렬에는 Windows에서 지원 되지 않습니다 코드 페이지를 사용 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류를 표시 합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -132,39 +133,39 @@ COLLATE Traditional_Spanish_ci_ai ASC;
 GO  
 ```  
 
- 다음은 첫 번째 쿼리의 결과입니다.  
+다음은 첫 번째 쿼리의 결과입니다.  
   
- ```
- Place 
- ------------- 
- California 
- Chiapas 
- Cinco Rios 
- Colima
- ```  
+```
+Place 
+------------- 
+California 
+Chiapas 
+Cinco Rios 
+Colima
+```  
   
- 다음은 두 번째 쿼리의 결과입니다.  
-  
- ```
- Place 
- ------------- 
- California 
- Cinco Rios 
- Colima 
- Chiapas
- ```  
+다음은 두 번째 쿼리의 결과입니다.  
+ 
+```
+Place 
+------------- 
+California 
+Cinco Rios 
+Colima 
+Chiapas
+```  
   
 ### <a name="b-additional-examples"></a>2. 추가 예  
- 사용 하는 추가 예제를 보려면 **COLLATE**, 참조 [CREATE database&#40; SQL Server transact-sql&#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md) 예제 **G. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정**, 및 [ALTER table&#40; Transact SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) 예제 **열 데이터 정렬 변경 V.**합니다.  
+ 사용 하는 추가 예제를 보려면 **COLLATE**, 참조 [CREATE database&#40; SQL Server transact-sql&#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) 예제 **G. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정**, 및 [ALTER table&#40; Transact SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 예제 **열 데이터 정렬 변경 V.**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)   
- [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [상수 &#40; Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [테이블 &#40; Transact SQL &#41;](../../t-sql/data-types/table-transact-sql.md)  
+ [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [상수 &#40; Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
+ [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [테이블 &#40; Transact SQL &#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   

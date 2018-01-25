@@ -21,15 +21,15 @@ helpviewer_keywords:
 - endpoints [SQL Server], modifying
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a035e71325993e088b9910d6538c8bdd61e03f7e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f33dfa3c49397a5f69a59420b74e3cfdeae25857
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ FOR DATABASE_MIRRORING (
  **권한 부여** *로그인*  
  **권한 부여** 옵션에서 사용할 수 없는 **ALTER ENDPOINT**합니다. 소유권은 끝점이 생성된 경우에만 할당될 수 있습니다.  
   
- **에 대 한** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
+ **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  페이로드 형식으로 변경할 수 없습니다 **ALTER ENDPOINT**합니다.  
   
 ## <a name="remarks"></a>주의  
@@ -132,10 +132,10 @@ FOR DATABASE_MIRRORING (
   
  기존 끝점의 소유권을 변경하려면 ALTER AUTHORIZATION 문을 사용해야 합니다. 자세한 내용은 참조 [ALTER authorization&#40; Transact SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
- 자세한 내용은 [GRANT 끝점 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
+ 자세한 내용은 [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [DROP ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP endpoint&#40; Transact SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

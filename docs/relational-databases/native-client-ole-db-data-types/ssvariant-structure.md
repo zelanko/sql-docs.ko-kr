@@ -15,15 +15,15 @@ f1_keywords: SSVARIANT
 helpviewer_keywords: SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b8c1bc781701f4991db80ac68a99dc6940ec7e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0f5df988e6f0a12fa5b5c2cebd9f5ce7b937104
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 구조
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,10 +59,10 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  멤버를 설명 하는 다음 표에서 **SSVARIANT** 구조:  
   
-|멤버|OLE DB 유형 표시기|OLE DB C 데이터 형식|vt 값|설명|  
+|멤버|OLE DB 유형 표시기|OLE DB C 데이터 형식|vt 값|주석|  
 |------------|---------------------------|------------------------|--------------|--------------|  
 |vt|SSVARTYPE|||에 포함 된 값의 형식을 지정 된 **SSVARIANT** 구조체입니다.|  
-|bTinyIntVal|DBTYPE_UI1|**바이트**|**VT_SS_UI1**|지원 된 **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
+|bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|지원 된 **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
 |sShortIntVal|DBTYPE_I2|**짧은**|**VT_SS_I2**|지원 된 **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
 |lIntVal|DBTYPE_I4|**긴**|**VT_SS_I4**|지원 된 **int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|지원 된 **bigint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
@@ -77,13 +77,13 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|지원 된 **시간** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**바이트**)에 대 한 소수 자릿수를 지정 *tTime2Val* 값입니다.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|지원 된 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**바이트**)에 대 한 소수 자릿수를 지정 *tsDataTimeVal* 값입니다.|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|지원 된 **datetimeoffset** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**바이트**)에 대 한 소수 자릿수를 지정 *tsoDateTimeOffsetVal* 값입니다.|  
-|NCharVal|해당하는 OLE DB 유형 표시기 없음|**구조체 _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|지원 된 **nchar** 및 **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (**짧은**) 문자열에 대 한 실제 길이 지정 *pwchNCharVal* 포인트입니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength* (**짧은**) 문자열에 대 한 최대 길이 지정 *pwchNCharVal* 포인트입니다.<br /><br /> *pwchNCharVal* (**WCHAR** \*) 문자열에 대 한 포인터입니다.<br /><br /> 사용 되지 않은 멤버: *rgbReserved*, *dwReserved*, 및 *pwchReserved*합니다.|  
-|CharVal|해당하는 OLE DB 유형 표시기 없음|**구조체 _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|지원 된 **char** 및 **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (**짧은**) 하는 문자열에 대 한 실제 길이 지정 *pchCharVal* 포인트입니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength* (**짧은**) 하는 문자열에 대 한 최대 길이 지정 *pchCharVal* 포인트입니다.<br /><br /> *pchCharVal* (**CHAR** \*) 문자열에 대 한 포인터입니다.<br /><br /> 사용되지 않은 멤버:<br /><br /> *rgbReserved*, *dwReserved*, 및 *pwchReserved*합니다.|  
-|BinaryVal|해당하는 OLE DB 유형 표시기 없음|**구조체 _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|지원 된 **이진** 및 **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (**짧은**)를 데이터에 대 한 실제 길이 지정 *prgbBinaryVal* 포인트입니다.<br /><br /> *sMaxLength* (**짧은**)를 데이터에 대 한 최대 길이 지정 *prgbBinaryVal* 포인트입니다.<br /><br /> *prgbBinaryVal* (**바이트** \*) 이진 데이터에 대 한 포인터입니다.<br /><br /> 사용 되지 않은 멤버: *dwReserved*합니다.|  
+|NCharVal|해당하는 OLE DB 유형 표시기 없음|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|지원 된 **nchar** 및 **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (**짧은**) 문자열에 대 한 실제 길이 지정 *pwchNCharVal* 포인트입니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength* (**짧은**) 문자열에 대 한 최대 길이 지정 *pwchNCharVal* 포인트입니다.<br /><br /> *pwchNCharVal* (**WCHAR** \*) 문자열에 대 한 포인터입니다.<br /><br /> 사용 되지 않은 멤버: *rgbReserved*, *dwReserved*, 및 *pwchReserved*합니다.|  
+|CharVal|해당하는 OLE DB 유형 표시기 없음|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|지원 된 **char** 및 **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (**짧은**) 하는 문자열에 대 한 실제 길이 지정 *pchCharVal* 포인트입니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength* (**짧은**) 하는 문자열에 대 한 최대 길이 지정 *pchCharVal* 포인트입니다.<br /><br /> *pchCharVal* (**CHAR** \*) 문자열에 대 한 포인터입니다.<br /><br /> 사용되지 않은 멤버:<br /><br /> *rgbReserved*, *dwReserved*, 및 *pwchReserved*합니다.|  
+|BinaryVal|해당하는 OLE DB 유형 표시기 없음|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|지원 된 **이진** 및 **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (**짧은**)를 데이터에 대 한 실제 길이 지정 *prgbBinaryVal* 포인트입니다.<br /><br /> *sMaxLength* (**짧은**)를 데이터에 대 한 최대 길이 지정 *prgbBinaryVal* 포인트입니다.<br /><br /> *prgbBinaryVal* (**바이트** \*) 이진 데이터에 대 한 포인터입니다.<br /><br /> 사용 되지 않은 멤버: *dwReserved*합니다.|  
 |알려지지 않은 유형|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 형식 &#40; OLE db&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
   

@@ -29,15 +29,15 @@ helpviewer_keywords:
 - reducing database size
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
-ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
+ms.openlocfilehash: b8ca8cceddccd4066b7c1762bc75dffee02be842
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC SHRINKDATABASE
 ```  
   
 ## <a name="arguments"></a>인수  
- *a s e _* | *database_id* | 0  
+ *database_name* | *database_id* | 0  
  축소할 데이터베이스의 이름 또는 ID입니다. 0을 지정하면 현재 데이터베이스가 사용됩니다.  
   
  *target_percent*  
@@ -170,7 +170,7 @@ GO
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKFILE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  

@@ -25,15 +25,15 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63c3d62d0104642953545da75b0f7fa1b988eb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,25 +59,25 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>인수  
- *사용 권한*  
+ *permission*  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 보안 개체에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- 계약 **::***contract_name*  
+ CONTRACT **::***contract_name*  
  사용 권한을 거부할 계약을 지정합니다. 범위 한정자 **::** 가 필요 합니다.  
   
- 메시지 유형 **::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  사용 권한을 거부할 메시지 유형을 지정합니다. 범위 한정자 **::** 가 필요 합니다.  
   
  REMOTE SERVICE BINDING **::***remote_binding_name*  
  사용 권한을 거부할 원격 서비스 바인딩을 지정합니다. 범위 한정자 **::** 가 필요 합니다.  
   
- 경로 **::***route_name*  
+ ROUTE **::***route_name*  
  사용 권한을 거부할 경로를 지정합니다. 범위 한정자 **::** 가 필요 합니다.  
   
- 서비스 **::***message_type_name*  
+ SERVICE **::***message_type_name*  
  사용 권한을 거부할 서비스를 지정합니다. 범위 한정자 **::** 가 필요 합니다.  
   
- *데이터베이스 _ 보안 주체*  
+ *database_principal*  
  사용 권한을 거부할 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
   
 -   데이터베이스 사용자  

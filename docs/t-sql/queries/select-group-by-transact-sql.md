@@ -35,13 +35,13 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 caps.latest.revision: "80"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---group-by--transact-sql"></a>선택-그룹 BY-TRANSACT-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ GROUP BY {
   
 ## <a name="arguments"></a>인수 
  
-### <a name="column-expression"></a>*열 식*  
+### <a name="column-expression"></a>*column-expression*  
 열에는 열 또는 비 집계 계산을 지정합니다. 이 열은 테이블, 파생된 테이블 또는 뷰에 속할 수 있습니다. 열 SELECT 문의 FROM 절에 표시 되어야 하지만 SELECT 목록에 표시 하는 데 필요 하지 않습니다. 
 
 유효한 식에 대 한 참조 [식](~/t-sql/language-elements/expressions-transact-sql.md)합니다.    
@@ -347,7 +347,7 @@ GROUP BY 절에서는 모든 GROUP BY 기능에는 다음과 같은 구문 예�
 |기능|SQL Server Integration Services|SQL Server 호환성 수준 100 이상|SQL Server 2008 이상(호환성 수준 90).|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 집계|WITH CUBE 또는 WITH ROLLUP에 대해 지원되지 않습니다.|WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE 또는 ROLLUP에 대해 지원됩니다.|호환성 수준 100과 같습니다.|  
-|GROUP BY 절에서 이름이 CUBE 또는 ROLLUP인 사용자 정의 함수|사용자 정의 함수 **dbo.cube (***arg1***,***...argN***)** 또는  **dbo.rollup (***arg1***,**... *argN***)** GROUP by 절을 사용할 수 있습니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|사용자 정의 함수 **dbo.cube (***arg1***,**...argN**)** 또는 **dbo.rollup (**arg1**,***...argN***)** GROUP by 절은 허용 되지 않습니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 다음과 같은 오류 메시지가 반환 됩니다: "'큐브의' 키워드 &#124; 근처의 구문이 잘못 되었습니다 ' 롤업 '. "<br /><br /> 이 문제를 방지하려면 `dbo.cube`를 `[dbo].[cube]`로 바꾸거나 `dbo.rollup`을 `[dbo].[rollup]`으로 바꿉니다.<br /><br /> 다음 예제는 허용 됩니다.`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|사용자 정의 함수 **dbo.cube (***arg1***,***...argN*) 또는 **dbo.rollup (** *arg1***,***...argN***)** GROUP by 절을 사용할 수<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 절에서 이름이 CUBE 또는 ROLLUP인 사용자 정의 함수|사용자 정의 함수 **dbo.cube (***arg1***,***...argN***)** 또는 **dbo.rollup (***arg1***,**... *argN * * *)* * GROUP by 절을 사용할 수 있습니다.<br /><br /> 예를 들어 `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|사용자 정의 함수 **dbo.cube (***arg1***,**...argN**)** 또는 **dbo.rollup (**arg1**,***...argN*** )** GROUP by 절은 허용 되지 않습니다.<br /><br /> 예를 들어 `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 다음과 같은 오류 메시지가 반환 됩니다: "'큐브의' 키워드 &#124; 근처의 구문이 잘못 되었습니다 ' 롤업 '. "<br /><br /> 이 문제를 방지하려면 `dbo.cube`를 `[dbo].[cube]`로 바꾸거나 `dbo.rollup`을 `[dbo].[rollup]`으로 바꿉니다.<br /><br /> 다음 예제는 허용 됩니다.`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|사용자 정의 함수 **dbo.cube (***arg1***, * * *...argN*) 또는 **dbo.rollup (***arg1***,***...argN***)**GROUP by 절을 사용할 수<br /><br /> 예를 들어 `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|지원되지 않음|지원됨|지원됨|  
 |CUBE|지원되지 않음|지원됨|지원되지 않음|  
 |ROLLUP|지원되지 않음|지원됨|지원되지 않음|  

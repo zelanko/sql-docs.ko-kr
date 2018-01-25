@@ -34,15 +34,15 @@ helpviewer_keywords:
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 caps.latest.revision: "75"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c6b82cb2c44d049f44378cd86955373004bb0cb5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 66f00526254a3592c3bb980ecf22c390b88cb687
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +90,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
- STAT_HEADER | DENSITY_VECTOR | 히스토그램 | STATS_STREAM [ **,**  *n*  ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
  이 옵션 중 하나 이상을 지정하면 문에서 반환하는 결과 집합이 지정한 옵션으로 제한됩니다. 옵션을 지정하지 않으면 모든 통계 정보가 반환됩니다.  
   
  STATS_STREAM은 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]입니다.  
@@ -100,7 +100,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 |열 이름|Description|  
 |-----------------|-----------------|  
-|속성|통계 개체의 이름입니다.|  
+|이름|통계 개체의 이름입니다.|  
 |업데이트|통계가 마지막으로 업데이트된 날짜와 시간입니다. [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 함수는이 정보를 검색 하는 대체 방법입니다. 자세한 내용은 참조는 [주의](#Remarks) 이 페이지의 섹션입니다.|  
 |행|통계가 마지막으로 업데이트되었을 때 테이블 또는 인덱싱된 뷰의 전체 행 수입니다. 통계가 필터링되거나 필터링된 인덱스에 해당하는 경우 행 수가 테이블의 행 수보다 적을 수 있습니다. 자세한 내용은 참조[통계](../../relational-databases/statistics/statistics.md)합니다.|  
 |샘플링한 행|통계 계산을 위해 샘플링된 전체 행 수입니다. 샘플링된 행 수가 전체 행 수보다 적은 경우 표시되는 히스토그램과 밀도 결과는 샘플링된 행을 기준으로 하는 예상치입니다.|  
@@ -159,7 +159,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |(CustomerId, ItemId)|CustomerId 및 ItemId의 값이 일치하는 행|  
 |(CustomerId, ItemId, Price)|CustomerId, ItemId 및 Price의 값이 일치하는 행|  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한 사항  
  DBCC SHOW_STATISTICS는 공간 인덱스 또는 xVelocity 메모리 최적화 columnstore 인덱스에 대한 통계를 제공하지 않습니다.  
   
 ## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>에 대 한 권한을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
@@ -227,5 +227,5 @@ GO
 [sp_createstats &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
 [STATS_DATE &#40; Transact SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
 [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
-[sys.dm_db_stats_properties (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
-[sys.dm_db_stats_histogram (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

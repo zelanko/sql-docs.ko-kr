@@ -14,13 +14,13 @@ ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
 caps.latest.revision: "34"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 856d3edb24dfad2177b4c48d30124c41c22172a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8a6e15767282d347fc92b7decf2963d85827cf6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>SQL Server 시작 기계 학습
 
@@ -82,7 +82,7 @@ SQL Server의 컴퓨터 학습 서비스를이 프로세스를 변경할 필요�
 
 + **RevoScaleR**.:이 R 패키지에 일부 병렬 처리 및 확장성을 제공 하도록 다시 설계 하는 가장 인기 있는 R 함수를 구현 합니다. 또한 일반적으로는 훨씬 큰 메모리와 계산력을 갖춘 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 계산을 푸시하여 성능과 확장을 더 증대하는 함수도 포함되어 있습니다.
 
-+ **revoscalepy**합니다. 분산 처리를 지 원하는 대부분의 알고리즘을이 Python 라이브러리를 새로 추가 되거나 SQL Server 2017 CTP 2.0 에서만 사용할 수 RevoScaleR의 원격 계산 컨텍스트 등 가장 인기 있는 기능을 구현.
++ **revoscalepy**. 분산 처리를 지 원하는 대부분의 알고리즘을이 Python 라이브러리를 새로 추가 되거나 SQL Server 2017 CTP 2.0 에서만 사용할 수 RevoScaleR의 원격 계산 컨텍스트 등 가장 인기 있는 기능을 구현.
 
 + 작업에 대 한 적합 한 언어를 선택 합니다.  R은 SQL을 사용 하 여 구현 하기 어려운 통계적 계산에 가장 적합 합니다. 데이터에 대해 집합 기반 작업에 대 한 성능을 활용해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 최대 성능을 얻을 수 있도록 합니다. 열에 대해 매우 빠른 계산을 위한 메모리 내 데이터베이스 엔진을 사용 합니다.
 

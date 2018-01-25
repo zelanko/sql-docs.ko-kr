@@ -21,15 +21,15 @@ helpviewer_keywords:
 - native data access [SQL Server Native Client]
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
 caps.latest.revision: "66"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a60ee91484043192ee6998266b04f9b73b9f5424
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 80e90fe4e92edb1cc3cd7dd60e8f948b00cf4377
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 프로그래밍
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/08/2018
  [SQL Server Native Client 기능](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 지원하는 기능을 설명합니다.  
   
- [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [SQL Server Native Client 사용한 응용 프로그램 작성](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 Windows DAC와 다른 점, 사용되는 구성 요소, ADO와 연동하는 방법 등 개발에 대한 개요를 제공합니다.  
   
  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 설치 및 배포에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 라이브러리를 재배포하는 방법을 포함하여 설명합니다.  

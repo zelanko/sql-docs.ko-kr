@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f939afc47e0ca7bcd6286dd0d090a088c5d6458a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f0a6530f658011ce4ef38cbf4220af5994846611
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,14 +38,14 @@ ms.lasthandoff: 01/08/2018
 |대상 -><br /><br /> 보낸 사람|DBDATE(date)|DBTIME(time)|DBTIME2(time)|DBTIMESTAMP(smalldatetime)|DBTIMESTAMP(datetime)|DBTIMESTAMP(datetime2)|DBTIMESTAMPOFFSET(datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> 날짜|  
-|DBTIME|-|1|1|1,7|1,7|1,7|1,5, 7|1,10|1,10|1<br /><br /> Time(0)|  
-|DBTIME2|-|1,3|1|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1<br /><br /> Time(7)|  
+|DBDATE|1.|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1.<br /><br /> date|  
+|DBTIME|-|1.|1|1,7|1,7|1,7|1,5, 7|1,10|1,10|1.<br /><br /> Time(0)|  
+|DBTIME2|-|1,3|1.|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1.<br /><br /> Time(7)|  
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
 |BYTES|-|-|-|-|-|-|-|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|해당 사항 없음|해당 사항 없음|1,10|  
+|VARIANT|1.|1|1.|1,10|1,10|1,10|1,10|해당 사항 없음|해당 사항 없음|1,10|  
 |SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|해당 사항 없음|해당 사항 없음|1,16|  
 |BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
 |STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 |------------|-------------|  
 |-|변환이 지원되지 않습니다. 에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환 바인딩이 확인 되 면 iaccessor:: Createaccessor를 호출할 때 *rgStatus*합니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
 |해당 사항 없음|이 오류에는 이 작업을 적용할 수 없습니다.|  
-|1|지정한 데이터가 유효하지 않으면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 입력 데이터는 변환이 적용되기 전에 유효성이 검사되므로 이후 변환에서 구성 요소를 무시하더라도 계속 유효해야 변환에 성공할 수 있습니다.|  
+|1.|지정한 데이터가 유효하지 않으면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 입력 데이터는 변환이 적용되기 전에 유효성이 검사되므로 이후 변환에서 구성 요소를 무시하더라도 계속 유효해야 변환에 성공할 수 있습니다.|  
 |2|시간 필드가 무시됩니다.|  
 |3|소수 자릿수 초가 0이어야 하며 그렇지 않으면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다.|  
 |4|날짜 구성 요소가 무시됩니다.|  

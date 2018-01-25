@@ -13,12 +13,12 @@ ms.topic: tutorial
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: e4fb52ba8597b2499cc3ea094ae1c4b0c9421237
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: b85213fee582bc240f83446f911c4d16056f997e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Revoscalepy로 Python을 사용 하 여 모델을 만들려면
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/08/2018
 
 자세한 내용은 참조 [revoscalepy 란?](../python/what-is-revoscalepy.md) 및 [Python 함수 참조](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 > [!IMPORTANT]
 > SQL Server에서 Python 코드를 실행 하려면 먼저 설치 해야 SQL Server 2017 CTP 2.0 이상 및 설치 하 고 기능을 활성화 해야 **컴퓨터 학습 서비스** python 합니다. 다른 버전의 SQL Server는 Python 통합을 지원 하지 않습니다.

@@ -25,15 +25,15 @@ helpviewer_keywords:
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1a0a6da27bc534e22da2995fa592d6b430d418
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ALTER ASSEMBLY assembly_name
  *assembly_name*  
  수정하려는 어셈블리의 이름입니다. *assembly_name* 데이터베이스에 이미 있어야 합니다.  
   
- \<client_assembly_specifier > | \<assembly_bits >  
+ FROM \<client_assembly_specifier> | \<assembly_bits>  
  어셈블리의 구현을 유지하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 어셈블리를 업데이트합니다. 지정한 어셈블리와 관련된 파일이 없는 경우에만 이 옵션을 사용할 수 있습니다.  
   
  \<client_assembly_specifier > 네트워크 또는 새로 고칠 어셈블리가 있는 로컬 위치를 지정 합니다. 네트워크 위치에는 컴퓨터 이름, 공유 이름 및 해당 공유 내의 경로가 포함됩니다. *manifest_file_name* 어셈블리의 매니페스트가 포함 된 파일의 이름을 지정 합니다.  
@@ -115,7 +115,7 @@ ALTER ASSEMBLY assembly_name
   
  자세한 내용은 참조 [구현 어셈블리](../../relational-databases/clr-integration/assemblies-implementing.md)합니다.  
   
- [DROP FILE { *file_name*[ **,***...n*] | 모든}]  
+ [ DROP FILE { *file_name*[ **,***...n*] | ALL } ]  
  어셈블리와 관련된 특정 파일이나 모든 파일을 데이터베이스에서 제거합니다. ADD FILE이 뒤따를 경우 DROP FILE이 먼저 실행됩니다. 이 기능을 사용하여 같은 파일 이름의 파일을 대체할 수 있습니다.  
   
 > [!NOTE]  

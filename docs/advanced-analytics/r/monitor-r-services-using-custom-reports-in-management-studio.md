@@ -14,13 +14,13 @@ ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: bc294fafecfa2a74d8e97be386e5be32a18ff8d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 141d0e3114a59a9b280ceee6d599f97ef16919c7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Management Studio에서 사용자 지정 보고서를 사용 하 여 컴퓨터 학습 서비스 모니터링
 
@@ -115,7 +115,7 @@ GitHub에서 제품 샘플 리포지토리에는 현재 다음과 같은 보고�
 
   이 보고서를 사용 하 여 외부 스크립트 실행 하 여 CPU, 메모리 및 I/O 리소스 사용량을 볼 수 있습니다. 또한 외부 리소스 풀의 메모리 설정도 볼 수 있습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [R Services 모니터링](../../advanced-analytics/r-services/monitoring-r-services.md)
 

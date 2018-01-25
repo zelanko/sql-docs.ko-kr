@@ -19,15 +19,15 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08cca5788a9e3908fd72fd415feaab72533b1480
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 218228de964e75a7d67961ba7d8cd812497d8729
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>초기화 및 권한 부여 속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 OLE DB 초기화 및 권한 부여 속성을 다음과 같이 해석합니다.  
   
-|속성 ID|Description|  
+|속성 ID|설명|  
 |-----------------|-----------------|  
 |DBPROP_AUTH_CACHE_AUTHINFO|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 인증 정보를 캐시하지 않습니다.<br /><br /> 속성 값을 설정하려고 시도하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DB_S_ERRORSOCCURRED를 반환합니다. *dwStatus* DBPROP 구조의 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
 |DBPROP_AUTH_ENCRYPT_PASSWORD|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 표준 Native Client OLE DB 공급자에 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 메커니즘 암호를 숨깁니다.<br /><br /> 속성 값을 설정하려고 시도하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DB_S_ERRORSOCCURRED를 반환합니다. *dwStatus* DBPROP 구조의 멤버는 DBPROPSTATUS_NOTSUPPORTED를 나타냅니다.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/08/2018
  공급자별 속성 집합 DBPROPSET_SQLSERVERDATASOURCEINFO는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 추가 속성을 정의; 참조 [데이터 원본 정보 속성](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md) 자세한 정보에 대 한 합니다.  
   
 ## <a name="the-sql-server-native-client-ole-db-provider-string"></a>SQL Server Native Client OLE DB 공급자 문자열  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 공급자 문자열 속성 값에서 ODBC 유사 구문을 인식합니다. 공급자 문자열 속성은 OLE DB 데이터 원본에 대한 연결이 설정될 때 OLE DB 초기화 속성 DBPROP_INIT_PROVIDERSTRING의 값으로 제공됩니다. 이 속성은 OLE DB 데이터 원본에 대한 연결을 구현하기 위해 필요한 OLE DB 공급자별 연결 데이터를 지정합니다. 문자열 내에서 요소는 세미콜론으로 구분됩니다. 문자열의 마지막 요소는 세미콜론으로 끝나야 합니다. 각 요소는 키워드, 등호 문자, 그리고 초기화 시 전달되는 값으로 구성됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 공급자 문자열 속성 값에서 ODBC 유사 구문을 인식합니다. 공급자 문자열 속성은 OLE DB 데이터 원본에 대한 연결이 설정될 때 OLE DB 초기화 속성 DBPROP_INIT_PROVIDERSTRING의 값으로 제공됩니다. 이 속성은 OLE DB 데이터 원본에 대한 연결을 구현하기 위해 필요한 OLE DB 공급자별 연결 데이터를 지정합니다. 문자열 내에서 요소는 세미콜론으로 구분됩니다. 문자열의 마지막 요소는 세미콜론으로 끝나야 합니다. 각 요소는 키워드, 등호 문자, 그리고 초기화 시 전달되는 값으로 구성됩니다. 예를 들어  
   
 ```  
 Server=MyServer;UID=MyUserName;  

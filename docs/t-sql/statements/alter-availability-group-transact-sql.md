@@ -26,13 +26,13 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 caps.latest.revision: "152"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d9f18ee709fde7c9f239b08f553eaf43fad6e9d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ ALTER AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>인수  
- *o u p _*  
+ *group_name*  
  새 가용성 그룹의 이름을 지정합니다. *group_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자이에서 고유 해야 WSFC 클러스터의 모든 가용성 그룹입니다.  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {기본 | SECONDARY_ONLY | 보조 | NONE}  
@@ -199,7 +199,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |Level|오류 상태|  
 |-----------|-----------------------|  
-|1|다음과 같은 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 다운된 경우<br /><br /> 서버 인스턴스로부터 ACK를 받지 못해 WSFC 클러스터에 연결할 가용성 그룹의 임대가 만료된 경우. 자세한 내용은 [작동 방법: SQL Server Always On 임대 시간 제한](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)을 참조하세요.|  
+|1.|다음과 같은 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 다운된 경우<br /><br /> 서버 인스턴스로부터 ACK를 받지 못해 WSFC 클러스터에 연결할 가용성 그룹의 임대가 만료된 경우. 자세한 내용은 [작동 방법: SQL Server Always On 임대 시간 제한](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)을 참조하세요.|  
 |2|다음과 같은 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 클러스터에 연결되어 있지 않고 가용성 그룹의 사용자 지정 HEALTH_CHECK_TIMEOUT 임계값이 초과된 경우<br /><br /> 가용성 복제본이 오류 상태에 있는 경우|  
 |3|분리된 spinlock, 중대한 쓰기 액세스 위반 또는 과도한 덤프와 같이 심각한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> 이것이 기본 동작입니다.|  
 |4|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 리소스 풀에서 지속적인 메모리 부족 상태와 같은 일반적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.|  
@@ -229,7 +229,7 @@ ALTER AVAILABILITY GROUP group_name
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  SQL Server 2017에서에서 도입 되었습니다. 기본 트랜잭션을 커밋합니다 하기 전에 커밋하는 데 필요한 동기 보조 복제본의 최소 수를 설정 하는 데 사용 합니다. 트랜잭션 로그는 보조 복제본의 최소 수에서 업데이트 될 때까지 SQL Server 트랜잭션이 됩니다 대기 함을 보장 합니다. 기본값은 0으로 SQL Server 2016으로 동일한 동작을 제공 합니다. 최소값은 0입니다. 최대값은 1 뺀 값 복제본의 수입니다. 이 옵션은 동기 커밋 모드에 있는 복제본 관련이 있습니다. 복제본이 동기 커밋 모드에 있는 경우 주 복제본에서 쓰기가 복제본 데이터베이스 트랜잭션 로그에 쓰기 동기 보조 복제본에 커밋됩니다 때까지 기다립니다. 동기 보조 복제본을 호스팅하는 SQL Server 응답 하지 않는 경우에 주 복제본을 호스팅하는 SQL Server 대로 동기화 되지 않은 한 계속 해당 보조 복제본에 표시 됩니다. 응답 하지 않는 데이터베이스를 다시 온라인 상태가 되 면 "동기화 되지 않음" 상태에 됩니다 및 주 수 있도록 동기 다시 될 때까지 복제본이 비정상으로 표시 됩니다. 이 설정은 주 복제본은 최소한 복제본의 커밋된 각 트랜잭션에 될 때까지 진행 되지 않습니다 보장 합니다. 복제본의 최소 수를 사용할 수 없는 경우 주 서버에서 커밋이 실패 합니다. 클러스터 형식에 대 한 `EXTERNAL` 가용성 그룹 클러스터 리소스에 추가 될 때 설정이 변경 됩니다. 참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](../../linux/sql-server-linux-availability-group-ha.md)합니다.
   
- 데이터베이스 추가 *database_name*  
+ ADD DATABASE *database_name*  
  가용성 그룹에 추가할 하나 이상의 사용자 데이터베이스 목록을 지정합니다. 이러한 데이터베이스는 현재 주 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있어야 합니다. 하나의 가용성 그룹에 여러 개의 데이터베이스를 지정할 수 있지만 각 데이터베이스는 하나의 가용성 그룹에만 속할 수 있습니다. 가용성 그룹에서 지원할 수 있는 데이터베이스의 유형에 대 한 정보를 참조 하십시오. [필수 구성 요소, 제한 사항 및 Always On 가용성 그룹 &#40;에 대 한 권장 사항 SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). 로컬 데이터베이스를 가용성 그룹에 이미 속해를 확인 하려면 참조는 **replica_id** 열에는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰.  
   
  주 복제본에서만 지원되며,  
@@ -237,7 +237,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  가용성 그룹을 만든 다음에는 보조 복제본을 호스팅하는 각 서버 인스턴스에 연결하여 각각의 보조 데이터베이스를 준비하고 이를 가용성 그룹에 조인해야 합니다. 자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)를 참조하세요.  
   
- 데이터베이스 제거 *database_name*  
+ REMOVE DATABASE *database_name*  
  지정된 주 데이터베이스 및 해당 보조 데이터베이스를 가용성 그룹에서 제거합니다. 주 복제본에서만 지원되며,  
   
  가용성 그룹에서 가용성 데이터베이스를 제거한 후 추가 권장된 작업에 대 한 정보를 참조 하세요. [가용성 그룹 &#40;에서 주 데이터베이스 제거 SQL Server &#41; ](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
@@ -249,7 +249,7 @@ ALTER AVAILABILITY GROUP group_name
   
  모든 새 보조 복제본을 가용성 그룹에 조인해야 합니다. 자세한 내용은 이 섹션의 뒷부분에 나오는 JOIN 옵션에 대한 설명을 참조하십시오.  
   
- \<서버 인스턴스 >  
+ \<server_instance>  
  인스턴스 주소를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제본에 대 한 호스트입니다. 주소 형식은 인스턴스가 기본 인스턴스이거나 명명된 인스턴스인지 그리고 독립형 인스턴스이거나 FCI(장애 조치(failover) 클러스터 인스턴스)인지에 따라 달라집니다. 구문은 다음과 같습니다.  
   
  { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
@@ -263,19 +263,19 @@ ALTER AVAILABILITY GROUP group_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터에 액세스하는 데 사용되는 네트워크 이름입니다. 서버 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]장애 조치(failover) 파트너로 참여하는 경우 이 인수를 사용합니다. 선택 실행 [@@SERVERNAME ](../../t-sql/functions/servername-transact-sql.md) FCI에서 서버 인스턴스는 전체가 반환 '*FCI_network_name*[\\*instance_name*]' 문자열 (되는 전체 복제 데이터베이스 이름)입니다.  
   
  *instance_name*  
- 인스턴스 이름는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 호스팅되고 *system_name* 또는 *FCI_network_name* 되었으며 Always On을 사용 합니다. 기본 서버 인스턴스의 경우 *instance_name* 은 선택 사항입니다. 인스턴스 이름은 대/소문자를 구분하지 않습니다. 독립 실행형 서버 인스턴스에서이 값 이름은 SELECT를 실행 하 여 반환 된 값과 동일한 [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)합니다.  
+ 인스턴스 이름는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 호스팅되고 *system_name* 또는 *FCI_network_name* 되었으며 Always On을 사용 합니다. 기본 서버 인스턴스의 경우 *instance_name*은 선택 사항입니다. 인스턴스 이름은 대/소문자를 구분하지 않습니다. 독립 실행형 서버 인스턴스에서이 값 이름은 SELECT를 실행 하 여 반환 된 값과 동일한 [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)합니다.  
   
  \  
  구분 기호를 지정 하는 경우에 사용할 *instance_name*에서 구분 하기 위해서 *system_name* 또는 *FCI_network_name*합니다.  
   
  WSFC 노드 및 서버 인스턴스에 대 한 필수 구성 요소에 대 한 정보를 참조 하십시오. [필수 구성 요소, 제한 사항 및 Always On 가용성 그룹 &#40;에 대 한 권장 사항 SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL ='TCP: / /*시스템 주소*:*포트*'  
+ ENDPOINT_URL ='TCP://*system-address*:*port*'  
  에 대 한 URL 경로 지정 된 [데이터베이스 미러링 끝점](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추가 또는 수정 하는 가용성 복제본을 호스팅할 합니다.  
   
- ENDPOINT_URL은 ADD REPLICA ON 절에서는 필수적이고 MODIFY REPLICA ON 절에서는 선택적입니다.  자세한 내용은 [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다.  
+ ENDPOINT_URL은 ADD REPLICA ON 절에서는 필수적이고 MODIFY REPLICA ON 절에서는 선택적입니다.  자세한 내용은 [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
- **'**TCP**://***시스템 주소***:***포트***'**  
+ **'**TCP**://***system-address***:***port***'**  
  끝점 URL 또는 읽기 전용 라우팅 URL을 지정하기 위한 URL을 지정합니다. URL 매개 변수는 다음과 같습니다.  
   
  *system-address*  
@@ -330,7 +330,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  수동 시드 (기본값)을 지정합니다. 이 메서드를 사용 하면 주 복제본에 데이터베이스의 백업을 만들고 보조 복제본에서 해당 백업을 수동으로 복원 해야 합니다.  
   
- BACKUP_PRIORITY**=***n*  
+ BACKUP_PRIORITY **=***n*  
  이 복제본에 대한 백업을 수행하기 위한 우선 순위를 지정하며 동일한 가용성 그룹의 다른 복제본을 기준으로 합니다. 이 값은 0에서 100 사이의 정수입니다. 이러한 값에는 다음과 같은 의미가 있습니다.  
   
 -   1..100은 가용성 복제본이 백업 수행을 위해 선택될 수 있음을 나타냅니다. 1은 가장 낮은 우선 순위를 나타내고 100은 가장 높은 우선 순위를 나타냅니다. BACKUP_PRIORITY = 1이면 현재 사용 가능한 더 높은 우선 순위의 가용성 복제본이 없는 경우에만 해당 가용성 복제본이 백업 수행을 위해 선택됩니다.  
@@ -358,7 +358,7 @@ ALTER AVAILABILITY GROUP group_name
   
  자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***시스템 주소***:***포트***'**  
+ READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
  이 가용성 복제본에 대한 읽기 전용 연결 요청을 라우팅하는 데 사용할 URL을 지정합니다. 이 URL은 SQL Server 데이터베이스 엔진이 수신하는 URL입니다. 일반적으로 SQL Server 데이터베이스 엔진의 기본 인스턴스는 TCP 포트 1433에서 수신합니다.  
   
  명명 된 인스턴스의 포트 번호를 쿼리하여 가져올 수 있습니다는 **포트** 및 **type_desc** 의 열은 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 동적 관리 뷰. TRANSACT-SQL 수신기를 사용 하는 서버 인스턴스 (**type_desc = 't s q L'**).  
@@ -382,7 +382,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이것이 기본 동작입니다.  
   
- READ_ONLY_ROUTING_LIST  **=**  { **('**\<서버 인스턴스 >**'** [ **,**... *n* ] **)** | NONE}  
+ READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE }  
  보조 역할로 실행 중일 때 다음과 같은 요구 사항을 충족하는 이 가용성 그룹에 대한 가용성 복제본을 호스팅하는 서버 인스턴스의 쉼표로 구분된 목록을 지정합니다.  
   
 -   모든 연결 또는 읽기 전용 연결을 허용하도록 구성되어야 합니다(위에서 SECONDARY_ROLE 옵션의 ALLOW_CONNECTIONS 인수 참조).  
@@ -391,7 +391,7 @@ ALTER AVAILABILITY GROUP group_name
   
  READ_ONLY_ROUTING_LIST 값은 다음과 같습니다.  
   
- \<서버 인스턴스 >  
+ \<server_instance>  
  보조 역할로 실행 중일 때 읽기 가능한 보조 복제본인 가용성 그룹에 대한 호스트인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 주소를 지정합니다.  
   
  읽기 가능한 보조 복제본을 호스팅할 수도 있는 모든 서버 인스턴스를 지정하려면 쉼표로 구분된 목록을 사용합니다. 읽기 전용 라우팅은 서버 인스턴스가 목록에 지정된 순서에 따릅니다. 복제본의 읽기 전용 라우팅 목록에 복제본의 호스트 서버 인스턴스를 포함한 경우 읽기 전용 연결이 보조 복제본(사용 가능한 경우)으로 이동할 수 있도록 일반적으로 이 서버 인스턴스를 목록 끝에 두는 것이 좋습니다.  
@@ -401,7 +401,7 @@ ALTER AVAILABILITY GROUP group_name
  없음  
  이 가용성 복제본이 주 복제본인 경우 읽기 전용 라우팅이 지원되지 않도록 지정합니다. 이것이 기본 동작입니다. 이 값에 MODIFY REPLICA ON을 사용하면 기존 목록(있는 경우)이 비활성화됩니다.  
   
- SESSION_TIMEOUT  **=**  *초*  
+ SESSION_TIMEOUT **= * * * 초*  
  세션 제한 시간(초)을 지정합니다. 이 옵션을 지정하지 않으면 기본적으로 제한 시간은 10초로 설정됩니다. 최소값은 5초입니다.  
   
 > [!IMPORTANT]  
@@ -427,7 +427,7 @@ ALTER AVAILABILITY GROUP group_name
   
  가용성 그룹에 아직 조인되지 않은 보조 복제본에서만 지원됩니다.  
   
- 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
+ 자세한 내용은 [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
  FAILOVER  
  데이터 손실 없이 연결된 보조 복제본으로 가용성 그룹의 수동 장애 조치(failover)를 시작합니다. 장애 조치 대상 장애 조치 명령은 입력 하는 복제본 라고는 합니다.  장애 조치(failover) 대상이 주 역할을 맡고 각 데이터베이스의 복사본을 복구하여 이를 온라인 상태의 새 주 데이터베이스로 만듭니다. 이전 주 복제본은 동시에 보조 역할로 전환되고 해당 데이터베이스는 보조 데이터베이스가 되고 즉시 일시 정지됩니다. 잠재적으로 이러한 역할은 일련의 오류로 인해 상태가 앞뒤로 전환될 수 있습니다.  
@@ -452,7 +452,7 @@ ALTER AVAILABILITY GROUP group_name
   
  제한 사항에 대 한 정보에 대 한 필수 구성 요소 및 가용성 그룹의 이전 주 데이터베이스에 장애 조치 및 강제 장애 조치의 효과 적용 하는 것에 대 한 권장 사항 참조 [가용성 강제 수동 장애 조치 그룹 &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **'***dns_name***' (** \<add_listener_option > **)**  
+ ADD LISTENER **‘***dns_name***’(** \<add_listener_option> **)**  
  이 가용성 그룹의 새 가용성 그룹 수신기를 정의합니다. 주 복제본에서만 지원되며,  
   
 > [!IMPORTANT]  
@@ -471,12 +471,12 @@ ALTER AVAILABILITY GROUP group_name
  의미 있는 문자열을 지정하는 것이 좋습니다. 예를 들어, `AG1`이라는 가용성 그룹의 경우 `ag1-listener`와 같은 의미 있는 DNS 호스트 이름을 지정합니다.  
   
 > [!IMPORTANT]  
->  NetBIOS는 dns_name에서 처음 15자만 인식합니다. 두 WSFC 클러스터가 동일한 Active Directory에 의해 제어될 때 15자 이상의 이름과 동일한 15자 접두사를 사용하여 두 클러스터 모두에서 가용성 그룹 수신기를 만들려고 하면Virtual Network 이름 리소스를 온라인으로 전환할 수 없다는 오류 메시지가 표시됩니다. DNS 이름의 접두사 명명 규칙에 대한 자세한 내용은 [도메인 이름 할당](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)을 참조하세요.  
+>  NetBIOS는 dns_name에서 처음 15자만 인식합니다. 두 WSFC 클러스터가 동일한 Active Directory에 의해 제어될 때 15자 이상의 이름과 동일한 15자 접두사를 사용하여 두 클러스터 모두에서 가용성 그룹 수신기를 만들려고 하면 가상 네트워크 이름 리소스를 온라인으로 전환할 수 없다는 오류 메시지가 표시됩니다. DNS 이름의 접두사 명명 규칙에 대한 자세한 내용은 [도메인 이름 할당](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)을 참조하세요.  
   
  가용성 그룹에 조인  
  조인 하는 *분산형된 가용성 그룹*합니다. 분산형된 가용성 그룹을 만들 때 만들어지는 클러스터의 가용성 그룹에 주 가용성 그룹이입니다. 분산형된 가용성 그룹에 조인 된 가용성 그룹은 보조 가용성 그룹입니다.  
   
- \<ag_name >  
+ \<ag_name>  
  하나를 구성 하는 가용성 그룹의 이름을 지정 분산형된 가용성 그룹의 절반입니다.  
   
  수신기 **='**TCP**://***시스템 주소***:***포트***'**  
@@ -484,7 +484,7 @@ ALTER AVAILABILITY GROUP group_name
   
  수신기 절이 필요 합니다.  
   
- **'**TCP**://***시스템 주소***:***포트***'**  
+ **'**TCP**://***system-address***:***port***'**  
  연결 된 가용성 그룹 수신기에 대 한 URL을 지정 합니다. URL 매개 변수는 다음과 같습니다.  
   
  *system-address*  
@@ -533,23 +533,23 @@ ALTER AVAILABILITY GROUP group_name
  거부 모든 데이터베이스 만들기  
  가용성 그룹의 주 복제본을 대신 하 여 데이터베이스를 만들 수 있는 기능을 제거 합니다.  
   
- \<add_listener_option >  
+ \<add_listener_option>  
  ADD LISTENER는 다음 옵션 중 하나를 사용합니다.  
   
- DHCP 사용 [ON { **('***four_part_ipv4_address***','***four_part_ipv4_mask***')** }]  
+ WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
  가용성 그룹 수신기가 DHCP(동적 호스트 구성 프로토콜)를 사용할지 여부를 지정합니다.  필요할 경우 ON 절을 사용하여 이 수신기를 만들 네트워크를 식별합니다. DHCP는 가용성 그룹의 가용성 복제본을 호스팅하는 모든 서버 인스턴스에 사용되는 단일 서브넷으로 제한됩니다.  
   
 > [!IMPORTANT]  
 >  프로덕션 환경에서는 DHCP를 사용하지 않는 것이 좋습니다. 중단 시간이 있고 DHCP IP 임대가 만료되는 경우 수신기 DNS 이름과 연결되고 클라이언트 연결에 영향을 주는 새 DHCP 네트워크 IP 주소를 등록하기 위해 추가 시간이 필요합니다. 그러나 가용성 그룹의 기본 기능을 확인하고 응용 프로그램과 통합하기 위해 DHCP를 개발 및 테스트 환경에 설정하는 것은 좋습니다.  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- IP **(** { **('***four_part_ipv4_address***','***four_part_ipv4_mask* **')** | **('***ipv6_address***')** } [ **,** ...  *n*  ] **)** [ **,** 포트  **=**  *listener_port* ]  
+ WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
  DHCP를 사용하는 대신 가용성 그룹 수신기가 하나 이상의 고정 IP 주소를 사용할지 여부를 지정합니다. 여러 서브넷에서 가용성 그룹을 만들려면 각 서브넷의 수신기 구성에 하나의 고정 IP 주소가 필요합니다. 지정된 서브넷에 대해 고정 IP 주소는 IPv4 주소이거나 IPv6 주소일 수 있습니다. 새 가용성 그룹에 대한 가용성 복제본을 호스팅할 각 서브넷의 고정 IP 주소를 얻으려면 네트워크 관리자에게 문의하십시오.  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
@@ -562,23 +562,23 @@ ALTER AVAILABILITY GROUP group_name
  *ipv6_address*  
  가용성 그룹 수신기의 IPv6 주소를 지정합니다. `2001::4898:23:1002:20f:1fff:feff:b3a3`)을 입력합니다.  
   
- 포트  **=**  *listener_port*  
+ PORT **=** *listener_port*  
  포트 번호를 지정-*listener_port*-WITH IP 절에 지정 된 가용성 그룹 수신기가 사용할 수 있습니다. PORT는 선택적입니다.  
   
  기본 포트 번호 1433이 지원됩니다. 그러나 보안이 중요한 경우에는 다른 포트 번호를 사용하는 것이 좋습니다.  
   
- 예: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
+ 예를 들어 `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
  MODIFY LISTENER **'***dns_name***' (** \<modify_listener_option > **)**  
  이 가용성 그룹의 기존 가용성 수신기를 수정합니다. 주 복제본에서만 지원되며,  
   
- \<modify_listener_option >  
+ \<modify_listener_option>  
  MODIFY LISTENER는 다음 옵션 중 하나를 사용합니다.  
   
- ADD IP { **('***four_part_ipv4_address***','***four_part_ipv4_mask***')**  |  **('**dns_name*ipv6_address***')** }  
+ ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  
  로 지정 된 가용성 그룹 수신기에 지정 된 IP 주소를 추가 *dns_name*합니다.  
   
- 포트  **=**  *listener_port*  
+ PORT **=** *listener_port*  
  이 섹션 앞에 나온 이 인수에 대한 설명을 참조하십시오.  
   
  수신기를 다시 시작 **'***dns_name***'**  
@@ -623,7 +623,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [가용성 그룹 만들기&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [가용성 그룹 &#40; Transact SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [sys.availability_replicas&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   

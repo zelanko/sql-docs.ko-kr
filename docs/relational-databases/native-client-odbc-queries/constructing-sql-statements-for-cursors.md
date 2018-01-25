@@ -20,15 +20,15 @@ helpviewer_keywords:
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e15452378461c3799d82b3a204bda9c3893dcd5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 88b1652b77827fc00fed7d396ccaf72a06a6a585
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>쿼리에 대한 SQL 문 생성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.lasthandoff: 01/08/2018
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 서버 커서를 사용 하 여 ODBC 사양에 정의 된 커서 기능을 구현 합니다. 사용 하 여 커서 동작을 제어 하는 ODBC 응용 프로그램 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 다른 문 특성을 설정 합니다. 다음은 이러한 특성과 해당 기본값에 대한 설명입니다.  
   
-|attribute|Default|  
+|Attribute|기본값|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
 |SQL_ATTR_CURSOR_SCROLLABLE|SQL_NONSCROLLABLE|  
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_ATTR_ROW_ARRAY_SIZE|1|  
+|SQL_ATTR_ROW_ARRAY_SIZE|1.|  
   
  SQL 문을 실행할 때 이러한 옵션을 기본값으로 설정 된 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 결과 집합을 구현 하는 서버 커서를 사용 하지 않습니다; 대신, 기본 결과 집합을 사용 합니다. 이러한 옵션 중 하나라도 SQL 문이 실행 된 시간에 기본값이 아닌 값으로 변경 되는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 서버 커서를 사용 하 여 결과 집합을 구현 하려고 합니다.  
   

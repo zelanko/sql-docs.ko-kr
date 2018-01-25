@@ -32,15 +32,15 @@ helpviewer_keywords:
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4ca1959c247aedd2e49c38a870621d440a089f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a2ece31010207b6044504f099c11443a2fec0fa2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## <a name="arguments"></a>인수  
- **@***dialog_handle*  
+ **@** *dialog_handle*  
  BEGIN DIALOG CONVERSATION 문에서 반환하는 새 대화에 대한 시스템 생성 대화 핸들을 저장하는 데 사용되는 변수입니다. 변수 형식 이어야 합니다 **uniqueidentifier**합니다.  
   
- 서비스에서 *initiator_service_name*  
+ FROM SERVICE *initiator_service_name*  
  대화를 시작하는 서비스를 지정합니다. 지정된 이름은 현재 데이터베이스에 있는 서비스의 이름이어야 합니다. 시작자 서비스에 지정된 큐는 대상 서비스에서 반환하는 메시지와 이 대화에 대해 Service Broker에서 생성하는 메시지를 받습니다.  
   
- 서비스에 **'***target_service_name***'**  
+ TO SERVICE **'***target_service_name***'**  
  대화를 시작하는 데 사용할 대상 서비스를 지정합니다. *target_service_name* 유형의 **nvarchar (256)**합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]바이트 단위 비교를 사용 하 여 일치 하는 *target_service_name* 문자열입니다. 즉, 비교 시 대/소문자가 구분되고 현재 데이터 정렬은 고려되지 않습니다.  
   
  *service_broker_guid*  
@@ -96,13 +96,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  이 대화가 따르는 계약을 지정합니다. 계약은 현재 데이터베이스에 있어야 합니다. 대상 서비스가 지정된 계약에서 새 대화를 수락하지 않으면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화에 대한 오류 메시지를 반환합니다. 이 절을 생략 하는 경우 대화 라는 계약을 따릅니다. **기본**합니다.  
   
- RELATED_CONVERSATION  **=**  *related_conversation_handle*  
+ RELATED_CONVERSATION **=***related_conversation_handle*  
  기존 대화 그룹에서 새 대화를 추가할 그룹을 지정합니다. 이 절이 있으면 새 대화 상자로 지정한 대화와 같은 대화 그룹에 속하게 *related_conversation_handle*합니다. *related_conversation_handle*형식으로 암시적으로 변환할 유형 이어야 **uniqueidentifier**합니다. 문이 실패 하는 경우는 *related_conversation_handle* 기존 대화를 참조 하지 않습니다.  
   
- RELATED_CONVERSATION_GROUP  **=**  *related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
  기존 대화 그룹에서 새 대화를 추가할 그룹을 지정합니다. 이 절이 있으면 새 대화 상자에서 지정한 대화 그룹에 추가 됩니다 *related_conversation_group_id*합니다. *related_conversation_group_id*형식으로 암시적으로 변환할 유형 이어야 **uniqueidentifier**합니다. 경우 *related_conversation_group_id*가 기존 대화 그룹, service broker 참조 하지 않습니다 새 대화 그룹을 만듭니다 지정 된 *related_conversation_group_id* 및 해당 대화 그룹을 새 대화를 연결합니다.  
   
- 수명  **=**  *dialog_lifetime*  
+ LIFETIME **=***dialog_lifetime*  
  대화가 열려 있는 최대 시간을 지정합니다. 대화를 완료하려면 수명이 만료되기 전에 두 끝점에서 대화를 명시적으로 종료해야 합니다. *dialog_lifetime* 값을 초 단위로 표시 해야 합니다. 형식의 수명은 **int**합니다. 대화 수명은의 최대값 없음 수명 절을 지정 하는 경우는 **int** 데이터 형식입니다.  
   
  ENCRYPTION  
