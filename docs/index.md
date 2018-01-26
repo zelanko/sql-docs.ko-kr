@@ -1,17 +1,18 @@
 ---
 layout: HubPage
-hide_bc: True
+hide_bc: 
 title: "Microsoft SQL 문서 | Microsoft 문서"
 description: "SQL에 대한 자세한 정보"
 author: barbkess
 ms.author: barbkess
 ms.topic: article
-ms.technology: database-engine
-ms.openlocfilehash: f9a888d52c31ca2c5133b70a00e8d25f6e04c29e
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
+ms.technology:
+- database-engine
+ms.openlocfilehash: 0c31054b67eb93594f015dcb2fa6377bcb7d2be2
+ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/26/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/29/2017
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/t-sql/language-reference">T-SQL</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMV</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/powershell/sql-server/overview?view=sqlserver-ps">PowerShell</a></li>
+                                                    <li><a class="barLink" href="/sql/powershell/sql-server-powershell">PowerShell</a></li>
                                                     <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
                                                 </ul>
                                                 <h4>GitHub 샘플</h4>

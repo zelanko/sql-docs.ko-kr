@@ -17,16 +17,16 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - SQL Server Native Client, building applications
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1cd3cda7249c3ac85ca0672547fb973b7692e24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 834eb3d75a973b46255d690a504c2a3d17a68c48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>SQL Server Native Client를 사용하여 응용 프로그램 빌드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,10 +41,10 @@ ms.lasthandoff: 01/08/2018
  [SQL Server Native Client의 구성 요소](../../../relational-databases/native-client/applications/components-of-sql-server-native-client.md)  
  라이브러리, 리소스, 도움말 및 헤더 파일을 비롯하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 구성하는 구성 요소에 대해 설명합니다.  
   
- [SQL Server Native Client에서 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+ [SQL Server Native Client 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 통해 데이터베이스에 연결할 때 사용할 수 있는 다양한 연결 문자열 유형에 대해 설명합니다.  
   
- [SQL Server Native Client 헤더 및 라이브러리 파일 사용](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)  
+ [SQL Server Native Client 헤더 및 라이브러리 파일을 사용 하 여](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)  
  응용 프로그램 내에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 헤더 및 라이브러리 파일을 사용하는 방법에 대해 설명합니다.  
   
  [MDAC에서 SQL Server Native Client로 응용 프로그램 업데이트](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)  
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
  [SQL Server Native Client와 함께 ADO 사용](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)  
  ADO에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능에 액세스하고 사용하는 방법에 대해 설명합니다.  
   
- [SQL Server Native Client에 대한 지원 정책](../../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)  
+ [SQL Server Native Client에 대 한 지원 정책](../../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 여러 버전에서 다양한 데이터 액세스 구성 요소를 사용하는 방법에 대해 설명합니다.  
   
  [SQL Server Native Client를 사용하여 Microsoft Azure SQL Database에 연결](../../../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  

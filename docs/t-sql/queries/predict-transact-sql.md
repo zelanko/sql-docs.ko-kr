@@ -14,16 +14,18 @@ ms.topic: language-reference
 f1_keywords:
 - PREDICT
 - PREDICT_TSQL
-dev_langs: TSQL
-helpviewer_keywords: PREDICT clause
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predict-transact-sql"></a>예측 (Transact SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +67,7 @@ R 또는 Python 또는 다른 도구를 사용 하 여 모델 개체를 만들 �
 
 DATA 매개 변수는 점수 매기기 이나 예측에 사용 되는 데이터를 지정 하는 데 사용 됩니다. 데이터 형식 쿼리에서 테이블 원본으로 지정 됩니다. 테이블, 테이블 별칭, CTE 별칭, 뷰 또는 테이블 반환 함수 테이블 원본 될 수 있습니다.
 
-**매개 변수**
+**parameters**
 
 매개 변수가 매개 변수는 선택적 사용자 정의 매개 변수 예측 점수 매기기에 사용 되는 지정 하는 데 사용 됩니다.
 

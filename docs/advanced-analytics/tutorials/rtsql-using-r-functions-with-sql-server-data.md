@@ -14,16 +14,16 @@ dev_langs:
 - R
 - SQL
 ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 689bc7409258de4f16dd6dd1b4717bb3af603fd6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: debb4ebeb6f0257a17c64e675fd20a88a215afe3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>R 함수를 사용 하 여 SQL Server 데이터 (SQL 빠른 시작에서 R)
 
