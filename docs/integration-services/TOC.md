@@ -25,11 +25,11 @@
 
 # [SSIS 패키지를 Azure로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [자습서 - Azure에서 패키지를 배포, 실행 및 모니터링](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Azure에서 SSIS 카탈로그에 연결](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Azure에서 패키지 실행 예약](lift-shift/ssis-azure-schedule-packages.md)
-## [Azure에 배포된 패키지 유효성 검사](lift-shift/ssis-azure-validate-packages.md)
 ## [Windows 인증을 사용하여 데이터 원본에 연결](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [파일 및 파일 공유에 연결](lift-shift/ssis-azure-files-file-shares.md)
+## [Azure에 배포된 패키지 유효성 검사](lift-shift/ssis-azure-validate-packages.md)
+## [Azure에서 SSIS 카탈로그에 연결](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Azure에서 패키지 실행 예약](lift-shift/ssis-azure-schedule-packages.md)
 
 # [설치 또는 업그레이드](../integration-services/install-windows/install-integration-services.md)
 
@@ -175,11 +175,8 @@
 #### [3-3단원 - 배포된 패키지 테스트](lesson-3-3-testing-the-deployed-packages.md)
 
 # 리소스
-## 블로그 팔로우
-### [SSIS 팀 블로그](https://blogs.msdn.microsoft.com/ssis/)
-## 도움말 보기
-### [MSDN의 SSIS 포럼](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-### [Stack Overflow의 SSIS 태그](http://stackoverflow.com/questions/tagged/ssis)  
-## 사용자 의견 제공
-### [SQL Server 피드백 포럼](https://feedback.azure.com/forums/908035-sql-server)  
+## [SSIS 포럼에서 도움말 보기](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Stack Overflow에서 도움말 보기](http://stackoverflow.com/questions/tagged/ssis)  
+## [SSIS 팀 블로그 수행](https://blogs.msdn.microsoft.com/ssis/)
+## [문제 보고 및 기능 요청](https://feedback.azure.com/forums/908035-sql-server)
 ## [PC의 문서 가져오기](../sql-server/sql-server-help-installation.md)

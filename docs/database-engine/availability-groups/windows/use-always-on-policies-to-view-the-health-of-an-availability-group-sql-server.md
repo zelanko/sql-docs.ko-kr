@@ -8,21 +8,23 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], policies
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c9c56119d0de3f13cc44622d312cb1b64142c78
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 15ce6e641cf6c5e8f060910a6eb38aa0f2e97587
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Always On 정책을 사용하여 가용성 그룹의 상태 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  Always On 정책의 경우 범주 이름이 ID로 사용됩니다. Always On 범주의 이름을 변경하면 상태 평가 기능이 작동하지 않으므로 따라서 Always On 범주의 이름을 수정해서는 안 됩니다.  
   
--   **시작하기 전 주의 사항:** [보안](#Security)  
+-   **시작하기 전에:** [보안](#Security)  
   
 -   **Always On 정책을 사용하여 가용성 그룹의 상태를 보려면:**  
   
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  연결, 서버 상태 보기 및 모든 정의 보기 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> Always On 대시보드 사용  
@@ -101,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
      이러한 cmdlet은 다음 옵션을 사용합니다.  
   
-    |옵션|설명|  
+    |옵션|Description|  
     |------------|-----------------|  
     |**AllowUserPolicies**|Always On 정책 범주에 있는 사용자 정책을 실행합니다.|  
     |**InputObject**|사용 중인 cmdlet에 따라 가용성 그룹, 가용성 복제본 또는 가용성 데이터베이스 상태를 나타내는 개체 모음입니다. cmdlet은 지정된 개체의 상태를 계산합니다.|  

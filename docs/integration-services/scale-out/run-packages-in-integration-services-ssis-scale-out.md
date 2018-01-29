@@ -9,20 +9,22 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
 manager: craigg
-f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords:
+- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.openlocfilehash: 091d67122b07e8787ccfce914236a4ff9f793b27
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: 40bc7489efca9139dd83489452610f64b84a90bf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services(SSIS) Scale Out에서 패키지 실행
 Integration Services 서버에 패키지를 배포한 후 다음 방법 중 하나를 사용하여 Scale Out에서 패키지를 실행할 수 있습니다.
@@ -66,7 +68,7 @@ Integration Services 서버에 패키지를 배포한 후 다음 방법 중 하�
 
 1.  실행을 만듭니다.
 
-    각 패키지에 `[catalog].[create_execution]`을 호출합니다. **@runinscaleout** 매개 변수를 `True`로 설정합니다. 일부 Scale Out 작업자 컴퓨터에서 패키지를 실행할 수 없는 경우 **@useanyworker** 매개 변수를 `False`로 설정합니다.   
+    각 패키지에 `[catalog].[create_execution]`을 호출합니다. **@runinscaleout** 매개 변수를 `True`로 설정합니다. 일부 Scale Out 작업자 컴퓨터에서 패키지를 실행할 수 없는 경우 **@useanyworker** 매개 변수를 `False`로 설정합니다. 이 저장 프로시저 및 **@useanyworker** 매개 변수에 대한 자세한 내용은 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)을 참조합니다. 
 
 2. 실행 매개 변수를 설정합니다.
 

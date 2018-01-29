@@ -9,7 +9,8 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -18,18 +19,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26aed92ee48c2dfd13605a9b830d1b33b4fd7f66
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 0ee36f96183a8b2e2a099402b500523345585460
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server 또는 SQL 데이터베이스에 JSON 문서 저장
 SQL Server 및 Azure SQL Database에는 표준 SQL 언어를 사용하여 JSON 문서를 구문 분석할 수 있는 네이티브 JSON 함수가 있습니다. 이제 JSON 문서를 SQL Server 또는 SQL Database에 저장하고 JSON 데이터를 NoSQL 데이터베이스에서처럼 쿼리할 수 있습니다. 이 문서에서는 JSON 문서를 SQL Server 또는 SQL Database에 저장하는 옵션에 대해 설명합니다.
 
 ## <a name="classic-tables"></a>클래식 테이블
 
-SQL Server 또는 SQL Database에 JSON 문서를 저장하는 가장 간단한 방법은 문서의 ID와 문서의 내용을 포함하는 간단한 2열 테이블을 만드는 것입니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+SQL Server 또는 SQL Database에 JSON 문서를 저장하는 가장 간단한 방법은 문서의 ID와 문서의 내용을 포함하는 2열 테이블을 만드는 것입니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```sql
 create table WebSite.Logs (
@@ -40,13 +41,13 @@ create table WebSite.Logs (
 
 이 구조는 클래식 문서 데이터베이스에서 찾을 수 있는 컬렉션과 같습니다. 기본 키 `_id`는 모든 문서에 고유 식별자를 제공하고 빠른 검색을 가능하게 하는 자동 증분 값입니다. 이 구조는 ID로 문서를 검색하거나 저장된 문서를 ID로 업데이트하려는 고전적인 NoSQL 시나리오에 적합한 선택입니다.
 
-nvarchar (max) 데이터 형식을 사용하면 최대 2GB 크기의 JSON 문서를 저장할 수 있습니다. 그러나 JSON 문서가 8KB보다 크지 않은 것으로 확인되면 성능상의 이유로 NVARCHAR (max) 대신 NVARCHAR (4000)을 사용하는 것이 좋습니다.
+nvarchar(max) 데이터 형식을 사용하면 최대 2GB 크기의 JSON 문서를 저장할 수 있습니다. 그러나 JSON 문서가 8KB보다 크지 않은 것으로 확인되면 성능상의 이유로 NVARCHAR(max) 대신 NVARCHAR(4000)을 사용하는 것이 좋습니다.
 
 앞의 예에서 만든 샘플 테이블은 유효한 JSON 문서가 `log` 열에 저장되어 있다고 가정합니다. 유효한 JSON이 `log` 열에 저장되었는지 확인하려는 경우 열에 CHECK 제약 조건을 추가할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```sql
 ALTER TABLE WebSite.Logs
-    ADD CONSTRAINT \[Log record should be formatted as JSON\]
+    ADD CONSTRAINT [Log record should be formatted as JSON]
                    CHECK (ISJSON(log)=1)
 ```
 
@@ -55,7 +56,7 @@ ALTER TABLE WebSite.Logs
 JSON 문서를 테이블에 저장하면 표준 Transact-SQL 언어를 사용하여 문서를 쿼리할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```sql
-SELECT TOP 100 JSON\_VALUE(log, ‘$.severity’), AVG( CAST( JSON\_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
  FROM WebSite.Logs
  WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
  GROUP BY JSON_VALUE(log, ‘$.severity’)
@@ -65,7 +66,7 @@ SELECT TOP 100 JSON\_VALUE(log, ‘$.severity’), AVG( CAST( JSON\_VALUE(log,�
 
 *아무* T-SQL 함수 및 쿼리 절을 사용하여 JSON 문서를 쿼리할 수 있다는 것이 큰 이점입니다. SQL Server 및 SQL Database는 JSON 문서를 분석하는 데 사용할 수 있는 쿼리에 어떠한 제약 조건을 도입하지 않습니다. `JSON_VALUE` 함수를 사용하여 JSON 문서에서 값을 추출하고 다른 값처럼 쿼리에서 사용할 수 있습니다.
 
-이것이 SQL Server, SQL Database, 클래식 NoSQL 데이터베이스 간의 주요 차이점입니다. Transact-SQL에서는 JSON 데이터를 처리하는 데 필요한 기능이 있을 것입니다.
+다양한 T-SQL 쿼리 구문을 사용하는 이 기능은 SQL Server, SQL Database, 클래식 NoSQL 데이터베이스 간의 주요 차이점입니다. Transact-SQL에서는 JSON 데이터를 처리하는 데 필요한 기능이 있을 것입니다.
 
 ## <a name="indexes"></a>인덱스
 
@@ -91,7 +92,7 @@ FROM Website.Logs
 WHERE JSON_VALUE(log, '$.severity') = 'P4'
 ```
 
-이 인덱스의 한 가지 중요한 특징은 데이터 정렬을 인식한다는 것입니다. 원래 NVARCHAR 열에 COLLATION 속성(예: 대/소문자 구분 또는 일본어)이 있으면 인덱스는 NVARCHAR 열과 관련된 언어 규칙 또는 대/소문자 구분 규칙에 따라 정렬됩니다. 이는 JSON 문서를 처리할 때 사용자 정의 언어 규칙을 사용해야 하는 글로벌 시장용 애플리케이션을 개발하는 경우 중요한 기능입니다.
+이 인덱스의 한 가지 중요한 특징은 데이터 정렬을 인식한다는 것입니다. 원래 NVARCHAR 열에 COLLATION 속성(예: 대/소문자 구분 또는 일본어)이 있으면 인덱스는 NVARCHAR 열과 관련된 언어 규칙 또는 대/소문자 구분 규칙에 따라 정렬됩니다. 이 데이터 정렬 인식은 JSON 문서를 처리할 때 사용자 정의 언어 규칙을 사용해야 하는 글로벌 시장용 응용 프로그램을 개발하는 경우 중요한 기능입니다.
 
 ## <a name="large-tables--columnstore-format"></a>큰 테이블 및 columnstore 형식
 
@@ -108,7 +109,7 @@ create table WebSite.Logs (
 );
 ```
 
-CLUSTERED COLUMNSTORE 인덱스는 최대 25배의 높은 데이터 압축률을 제공하므로 저장소 공간 요구 사항을 크게 줄이고 저장소 비용을 낮추며 워크로드의 I/O 성능을 높일 수 있습니다. 또한 CLUSTERED COLUMNSTORE 인덱스는 JSON 문서의 테이블 스캔 및 분석에 최적화되어 있으므로 로그 분석에 가장 적합한 옵션이 될 수 있습니다.
+CLUSTERED COLUMNSTORE 인덱스는 최대 25배의 높은 데이터 압축률을 제공하므로 저장소 공간 요구 사항을 크게 줄이고 저장소 비용을 낮추며 워크로드의 I/O 성능을 높일 수 있습니다. 또한 CLUSTERED COLUMNSTORE 인덱스는 JSON 문서의 테이블 스캔 및 분석에 최적화되어 있으므로 이 형식의 인덱스는 로그 분석에 가장 적합한 옵션이 될 수 있습니다.
 
 앞의 예에서는 시퀀스 개체를 사용하여 `_id` 열에 값을 할당합니다. 시퀀스 및 ID 모두 이 ID 열에 대해 유효한 옵션입니다.
 
@@ -116,7 +117,7 @@ CLUSTERED COLUMNSTORE 인덱스는 최대 25배의 높은 데이터 압축률을
 
 컬렉션에서 많은 업데이트, 삽입 및 삭제 작업이 실행되도록 하려면 JSON 문서를 메모리 최적화 테이블에 저장할 수 있습니다. 메모리 최적화 JSON 컬렉션은 항상 데이터를 메모리에 저장하기 때문에 저장소 I/O 오버헤드가 없습니다. 또한 메모리 최적화 JSON 컬렉션은 완전히 잠금 해제되어 있습니다. 즉, 문서 작업이 다른 작업을 방해하지 않습니다.
 
-클래식 컬렉션을 메모리 최적화 컬렉션으로 변환해야 하는 유일한 경우는 다음 예제와 같이 테이블 정의 뒤에 **(memory_optimized = on)** 옵션을 지정하는 것입니다. 그러면 JSON 컬렉션의 메모리 최적화 버전이 생깁니다.
+클래식 컬렉션을 메모리 최적화 컬렉션으로 변환해야 하는 유일한 경우는 다음 예제와 같이 테이블 정의 뒤에 **with(memory_optimized=on)** 옵션을 지정하는 것입니다. 그러면 JSON 컬렉션의 메모리 최적화 버전이 생깁니다.
 
 ```sql
 create table WebSite.Logs (
@@ -159,11 +160,11 @@ AS BEGIN
 END
 ```
 
-이 네이티브 컴파일 프로시저는 쿼리를 실행하고 쿼리를 실행하는 .DLL 코드를 만듭니다. 이는 데이터를 쿼리하고 업데이트하기 위한 보다 빠른 방법입니다.
+이 네이티브 컴파일 프로시저는 쿼리를 실행하고 쿼리를 실행하는 .DLL 코드를 만듭니다. 고유하게 컴파일된 프로시저는 데이터를 쿼리하고 업데이트하기 위한 보다 빠른 방법입니다.
 
 ## <a name="conclusion"></a>결론
 
-SQL Server 및 SQL Database의 기본 JSON 기능을 사용하면 NoSQL 데이터베이스처럼 JSON 문서를 처리할 수 있습니다. 모든 데이터베이스(관계형 또는 NoSQL)에는 JSON 데이터 처리에 대한 장단점이 있습니다. JSON 문서를 SQL Server 또는 SQL Database에 저장하는 주요 이점은 완전한 SQL 언어 지원입니다. 다양한 Transact-SQL 언어를 사용하여 데이터를 처리하고 다양한 저장 옵션을 구성할 수 있습니다(압축률이 높고 빠른 분석을 위한 columnstore 인덱스부터 잠금 해제 처리를 위한 메모리 최적화 테이블까지). 동시에 NoSQL 시나리오에서 재사용할 수 있는 성숙한 보안 및 국제화 기능의 이점을 누릴 수 있습니다. 따라서 SQL Server 또는 SQL Database에 JSON 문서를 저장하는 것이 좋습니다.
+SQL Server 및 SQL Database의 기본 JSON 기능을 사용하면 NoSQL 데이터베이스처럼 JSON 문서를 처리할 수 있습니다. 모든 데이터베이스(관계형 또는 NoSQL)에는 JSON 데이터 처리에 대한 장단점이 있습니다. JSON 문서를 SQL Server 또는 SQL Database에 저장하는 주요 이점은 완전한 SQL 언어 지원입니다. 다양한 Transact-SQL 언어를 사용하여 데이터를 처리하고 다양한 저장 옵션을 구성할 수 있습니다(압축률이 높고 빠른 분석을 위한 columnstore 인덱스부터 잠금 해제 처리를 위한 메모리 최적화 테이블까지). 동시에 NoSQL 시나리오에서 쉽게 재사용할 수 있는 성숙한 보안 및 국제화 기능의 이점을 누릴 수 있습니다. 이 문서에서 설명한 이유로 인해 SQL Server 또는 SQL Database에 JSON 문서를 저장하는 것이 좋습니다.
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server의 기본 제공 JSON 지원에 대한 자세한 정보  
 많은 특정 솔루션, 사용 사례 및 권장 사항은 Microsoft 프로그램 관리자인 Jovan Popovic이 제공하는 SQL Server 및 Azure SQL Database의 [기본 제공 JSON 지원에 대한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.

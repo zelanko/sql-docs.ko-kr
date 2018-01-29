@@ -1,14 +1,15 @@
 ---
 title: "명령 프롬프트에서 SQL Server 설치 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 01/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -86,15 +87,15 @@ helpviewer_keywords:
 - nodes [Faillover Clustering], command prompt
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-caps.latest.revision: "255"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: dcb4878399af227359b995d43fbc83b96b168194
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+manager: craigg
+ms.openlocfilehash: 1c275c5f9df33587f18eb791e92012d7aefa13c1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 설치 프로그램을 실행하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)을 검토하세요.  
@@ -273,7 +274,7 @@ ms.lasthandoff: 01/16/2018
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 시작 계정을 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택**|[의](#Accounts) 시작 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]모드를 지정합니다.|  
-|R Services(In-Database)|MRCACHEDIRECTORY|[이 섹션](https://msdn.microsoft.com/library/mt695942.aspx)에 설명된 대로 이 매개 변수를 사용하여 Microsoft R Open 및 Microsoft R Server 구성 요소에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 인터넷에 액세스할 수 없는 컴퓨터의 명령줄에서 SQL Server R Services를 설치하는 경우에 사용됩니다.|  
+|R Services(In-Database)|MRCACHEDIRECTORY|[이 문서](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)에 설명된 대로 이 매개 변수를 사용하여 Microsoft R Open 및 Microsoft R Server 또는 Machine Learning Server 구성 요소에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 인터넷에 액세스할 수 없는 컴퓨터의 명령줄에서 SQL Server 기계 학습을 설치하는 경우에 사용됩니다.|  
   
 ###### <a name="sample-syntax"></a>예제 구문:  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], 복제 및 전체 텍스트 Search 구성 요소가 포함된 새로운 독립 실행형 인스턴스를 설치하고 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 빠른 파일 초기화를 사용하도록 설정합니다. 
@@ -542,7 +543,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/SQMREPORTING<br /><br /> **선택**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 아무런 영향이 없습니다. <br/><br/>Microsoft로 오류 피드백을 전송하는 방법을 관리하려면 [Microsoft에 피드백을 보내도록 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 구성하는 방법](http://support.microsoft.com/kb/3153756)을 참조하세요. <br/><br/>이전 버전에서는 SQL Server의 기능 사용 보고를 지정합니다.<br /><br />지원되는 값:<br /><br /> 1 = 사용<br /><br /> 0 = 사용 안 함|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/HIDECONSOLE<br /><br /> **선택**|콘솔 창을 숨기거나 닫도록 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERDISKS<br /><br /> **선택**|공유 디스크 목록이 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터 리소스 그룹에 포함되도록 지정합니다.<br /><br /> 기본값: 첫 번째 드라이브가 모든 데이터베이스의 기본 드라이브로 사용됩니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예를 참조하십시오.<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예를 참조하십시오.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **필수**|새 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터의 네트워크 이름을 지정합니다. 이 이름은 네트워크에서 새 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 식별하는 데 사용됩니다.|  
 |SQL Server 에이전트|/AGTSVCACCOUNT<br /><br /> **필수**|SQL Server 에이전트 서비스의 계정을 지정합니다.|  
 |SQL Server 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다.|  
@@ -680,7 +681,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/SQMREPORTING<br /><br /> **선택**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 아무런 영향이 없습니다. <br/><br/>Microsoft로 오류 피드백을 전송하는 방법을 관리하려면 [Microsoft에 피드백을 보내도록 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 구성하는 방법](http://support.microsoft.com/kb/3153756)을 참조하세요. <br/><br/>이전 버전에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기능 사용 보고를 지정합니다.<br /><br />지원되는 값:<br /><br /> 1 = 사용<br /><br /> 0 = 사용 안 함|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/HIDECONSOLE<br /><br /> **선택**|콘솔 창을 숨기거나 닫도록 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERDISKS<br /><br /> **선택**|공유 디스크 목록이 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터 리소스 그룹에 포함되도록 지정합니다.<br /><br /> 기본값:<br /><br /> 첫 번째 드라이브가 모든 데이터베이스의 기본 드라이브로 사용됩니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예를 참조하십시오.<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예를 참조하십시오.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **필수**|새 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터의 네트워크 이름을 지정합니다. 이 이름은 네트워크에서 새 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 식별하는 데 사용됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/CONFIRMIPDEPENDENCYCHANGE|다중 서브넷 장애 조치(Failover) 클러스터의 IP 주소 리소스 종속성을 OR로 설정하는 데 대한 동의를 나타냅니다. 자세한 내용은 [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)를 참조하세요. 지원되는 값:<br /><br /> 0 = False(기본값)<br /><br /> 1 = True|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **선택**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
@@ -777,7 +778,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/Q<br /><br /> **선택**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/QS<br /><br /> **선택**|설치 프로그램이 UI를 통해 실행되고 진행률을 표시하지만 입력을 받거나 오류 메시지를 표시하지 않도록 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/HIDECONSOLE<br /><br /> **선택**|콘솔 창을 숨기거나 닫도록 지정합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예를 참조하십시오.<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1<br /><br /> <br /><br /> 자세한 내용은 [[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **필수**|인코딩된 IP 주소를 지정합니다. 인코딩은 세미콜론(;)으로 구분되며, \<IP 유형>;\<주소>;\<네트워크 이름>;\<서브넷 마스크> 형식을 따릅니다. 지원되는 IP 유형에는 DHCP, IPv4 및 IPv6이 있습니다.<br />주소 사이에 공백을 넣어 여러 장애 조치(failover) 클러스터 IP 주소를 지정할 수 있습니다. 다음 예를 참조하십시오.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`<br /><br /> <br /><br /> 자세한 내용은 [[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/CONFIRMIPDEPENDENCYCHANGE<br /><br /> **필수**|다중 서브넷 장애 조치(Failover) 클러스터의 IP 주소 리소스 종속성을 OR로 설정하는 데 대한 동의를 나타냅니다. 자세한 내용은 [[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요. 지원되는 값:<br /><br /> 0 = False(기본값)<br /><br /> 1 = True|  
 |SQL Server 에이전트|/AGTSVCACCOUNT<br /><br /> **필수**|SQL Server 에이전트 서비스의 계정을 지정합니다.|  
 |SQL Server 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 에이전트 서비스 계정의 암호를 지정합니다.|  

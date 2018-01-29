@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 8306f3c4fb55d441eef744ff1ef9a84256b9eb76
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="database-files-and-filegroups"></a>데이터베이스 파일 및 파일 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 최소한 두 개의 운영 체제 파일인 데이터 파일과 로그 파일이 있습니다. 데이터 파일은 테이블, 인덱스, 저장 프로시저 및 뷰 등의 개체와 데이터를 포함합니다. 로그 파일은 데이터베이스의 모든 트랜잭션을 복구하는 데 필요한 정보를 포함합니다. 데이터 파일은 할당 및 관리를 간편하게 수행하기 위해 파일 그룹으로 그룹화할 수 있습니다.  
@@ -102,19 +103,29 @@ ms.lasthandoff: 01/09/2018
 ## <a name="filegroups"></a>파일 그룹  
  모든 데이터베이스에는 주 파일 그룹이 한 개씩 있습니다. 주 파일 그룹은 주 데이터 파일과 다른 파일 그룹에 배치되지 않은 보조 파일을 포함합니다. 사용자 정의 파일 그룹을 만들어 데이터 파일을 그룹화함으로써 관리, 데이터 할당 및 배치를 간편하게 수행할 수 있습니다.  
   
- 예를 들어 3개의 파일(Data1.ndf, Data2.ndf 및 Data3.ndf)을 3개의 디스크 드라이브에 하나씩 만들어서 **fgroup1**이라는 파일 그룹에 할당할 수 있습니다. 그런 다음 **fgroup1**파일 그룹에 한 개의 테이블을 만들 수 있습니다. 이렇게 하면 해당 테이블의 데이터에 대한 쿼리가 3개의 디스크로 분산되므로 성능이 향상됩니다. RAID(Redundant Array of Independent Disks) 스트라이프 세트에 단일 파일을 만들어 사용해도 이와 동일한 수준으로 성능이 향상될 수 있습니다. 그러나 파일과 파일 그룹을 사용하면 새 디스크에 새 파일을 쉽게 추가할 수 있습니다.  
+ `Data1.ndf`, `Data2.ndf` 및 `Data3.ndf`이라는 세 개 파일을 세 개의 디스크 드라이브에 하나씩 만들어서 `fgroup1`이라는 파일 그룹에 할당할 수 있습니다. 그런 다음 `fgroup1` 파일 그룹에 한 개의 테이블을 만들 수 있습니다. 이렇게 하면 해당 테이블의 데이터에 대한 쿼리가 3개의 디스크로 분산되므로 성능이 향상됩니다. RAID(Redundant Array of Independent Disks) 스트라이프 세트에 단일 파일을 만들어 사용해도 이와 동일한 수준으로 성능이 향상될 수 있습니다. 그러나 파일과 파일 그룹을 사용하면 새 디스크에 새 파일을 쉽게 추가할 수 있습니다.  
   
  모든 데이터 파일은 다음 표에 나열된 파일 그룹에 저장됩니다.  
   
 |파일 그룹|Description|  
 |---------------|-----------------|  
 |주|주 파일을 포함하는 파일 그룹. 주 파일 그룹에는 모든 시스템 테이블이 할당됩니다.|  
+|메모리 최적화 데이터|메모리 최적화 파일 그룹은 파일 스트림 파일 그룹을 기반으로 합니다.|  
+|Filestream||    
 |사용자 정의|사용자가 데이터베이스를 처음 만들 때 또는 나중에 수정할 때 만드는 파일 그룹|  
   
-### <a name="default-filegroup"></a>기본 파일 그룹  
+### <a name="default-primary-filegroup"></a>기본(주) 파일 그룹  
  데이터베이스에서 개체를 만들 때 어떤 파일 그룹에 속하는지 지정하지 않으면 기본 파일 그룹에 할당됩니다. 언제든지 정확하게 하나의 파일 그룹이 기본 파일 그룹으로 지정됩니다. 기본 파일 그룹의 파일은 다른 파일 그룹에 할당되지 않은 모든 새로운 개체를 보관할 수 있을 만큼 크기가 커야 합니다.  
   
  PRIMARY 파일 그룹은 ALTER DATABASE 문을 사용하여 변경하지 않으면 기본 파일 그룹입니다. 시스템 개체 및 테이블에 대한 할당은 새 기본 파일 그룹이 아니라 PRIMARY 파일 그룹에 남게 됩니다.  
+ 
+### <a name="memory-optimized-data-filegroup"></a>메모리 최적화 데이터 파일 그룹
+
+메모리 최적화 파일 그룹에 대한 자세한 내용은 [메모리 최적화 파일 그룹](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)을 참조하세요.
+
+### <a name="filestream-filegroup"></a>파일 스트림 파일 그룹
+
+파일 스트림 파일 그룹에 대한 자세한 내용은 [파일 스트림](../../relational-databases/blob/filestream-sql-server.md#filestream-storage) 및 [파일 스트림 사용 데이터베이스 만들기](../../relational-databases/blob/create-a-filestream-enabled-database.md)를 참조하세요.
 
 ### <a name="file-and-filegroup-example"></a>파일 및 파일 그룹 예
  다음 예에서는 SQL Server 인스턴스에서 데이터베이스를 만듭니다. 데이터베이스에는 주 데이터 파일, 사용자 정의 파일 그룹 및 로그 파일이 있습니다. 주 데이터 파일은 주 파일 그룹에 있으며 사용자 정의 파일 그룹에는 보조 데이터 파일이 두 개 있습니다. ALTER DATABASE 문을 통해 사용자 정의 그룹 파일이 기본 파일 그룹으로 지정됩니다. 그런 다음 사용자 정의 파일 그룹을 지정하여 테이블이 생성됩니다. (이 예에서는 일반 경로 `c:\Program Files\Microsoft SQL Server\MSSQL.1` 을 사용하여 SQL Server 버전 지정을 방지합니다.)
@@ -123,7 +134,7 @@ ms.lasthandoff: 01/09/2018
 USE master;
 GO
 -- Create the database with the default data
--- filegroup and a log file. Specify the
+-- filegroup, filstream filegroup and a log file. Specify the
 -- growth increment and the max size for the
 -- primary data file.
 CREATE DATABASE MyDB
@@ -146,7 +157,10 @@ FILEGROUP MyDB_FG1
        'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\data\MyDB_FG1_2.ndf',
     SIZE = 1MB,
     MAXSIZE=10MB,
-    FILEGROWTH=1MB)
+    FILEGROWTH=1MB),
+FILEGROUP FileStreamGroup1 CONTAINS FILESTREAM
+  ( NAME = 'MyDB_FG_FS',
+    FILENAME = 'c:\Data\filestream1')
 LOG ON
   ( NAME='MyDB_log',
     FILENAME =
@@ -166,9 +180,17 @@ CREATE TABLE MyTable
     colb char(8) )
 ON MyDB_FG1;
 GO
+
+-- Create a table in the filestream filegroup
+CREATE TABLE MyFSTable
+(
+    cola int PRIMARY KEY,
+  colb VARBINARY(MAX) FILESTREAM NULL
+)
+GO
 ```
 
-다음 그림에서는 위 예제의 결과를 요약하여 보여 줍니다.
+다음 그림에서는 위 예제의 결과를 요약하여 보여줍니다(파일 스트림 데이터 제외).
 
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
 

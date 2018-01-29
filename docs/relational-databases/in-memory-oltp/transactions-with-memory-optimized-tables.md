@@ -1,27 +1,28 @@
 ---
 title: "메모리 액세스에 최적화된 테이블의 트랜잭션 | Microsoft 문서"
 ms.custom: 
-ms.date: 12/20/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4d3cbfc5f72207d546649621190ac7ad61e6d9be
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be3196d22df849eb8509b921a251ee0f5f0a8270
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -170,6 +171,7 @@ ALTER DATABASE CURRENT
 | **41305**| 반복 가능한 읽기 유효성 검사 오류. 메모리 최적화 테이블에서 행을 읽었는데 이 트랜잭션을 커밋하기 전에 커밋된 다른 트랜잭션에 의해 이 트랜잭션이 업데이트되었습니다. | 이 오류는 REPEATABLE READ 또는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 FOREIGN KEY 제약 조건의 위반이 발생하는 경우에도 발생할 수 있습니다. <br/><br/>이러한 외래 키 제약 조건의 동시 위반은 드물게 발생하며 일반적으로 응용 프로그램 논리 또는 데이터 입력에 문제가 있다는 것을 나타냅니다. 그러나 FOREIGN KEY 제약 조건과 관련된 열에 인덱스가 없는 경우에도 오류가 발생할 수 있습니다. 따라서 항상 메모리 최적화 테이블의 외래 키 열에 인덱스를 만들어야 합니다. <br/><br/> 외래 키 위반으로 인해 발생한 유효성 검사 오류에 대한 자세한 고려 사항은 SQL Server 고객 자문 팀의 [이 블로그 게시물](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 을 참조하세요. |  
 | **41325** | 직렬화 유효성 검사 오류. 현재 트랜잭션에서 이전에 검색한 범위에 새 행을 삽입했습니다. 이를 가상 행이라고 합니다. | 이 오류는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 PRIMARY KEY, UNIQUE 또는 FOREIGN KEY 제약 조건의 위반이 발생하는 경우 발생할 수 있습니다. <br/><br/> 이러한 동시 제약 조건의 위반은 드물게 발생하며 일반적으로 응용 프로그램 논리 또는 데이터 입력에 문제가 있다는 것을 의미합니다. 그러나 이 오류는 반복 읽기 유효성 검사 오류와 마찬가지로 관련 열에 인덱스가 없는 FOREIGN KEY 제약 조건이 있는 경우에도 발생할 수 있습니다. |  
 | **41301** | 종속성 오류: 나중에 커밋이 실패한 다른 트랜잭션에 종속되어 있습니다. | 이 트랜잭션(Tx1)은 다른 트랜잭션(Tx2)에 종속되어 있는데 해당 트랜잭션(Tx2)이 Tx2에서 쓰여진 데이터를 읽어 유효성 검사 또는 커밋 처리 단계였습니다. 이후에 Tx2 커밋에 실패했습니다. Tx2가 커밋에 실패하는 가장 일반적인 원인은 반복 읽기(41305) 및 직렬화(41325) 유효성 검사 실패이며 그 외에 로그 IO 실패 등이 있습니다. |
+| **41823** 및 **41840** | 메모리 최적화 테이블 및 테이블 변수의 사용자 데이터 할당량에 도달했습니다. | 오류 41823은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]의 독립 실행형 데이터베이스뿐만 아니라 SQL Server Express/Web/Standard Edition에도 적용됩니다. 오류 41840은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]의 탄력적 풀에 적용됩니다. <br/><br/> 대부분의 경우 이러한 오류는 최대 사용자 데이터 크기에 도달했음을 나타내며, 오류를 해결하는 방법은 메모리 최적화 테이블에서 데이터를 삭제하는 것입니다. 그러나 이 오류가 일시적인 경우는 거의 없습니다. 따라서 이러한 오류가 처음 발생할 때 다시 시도하는 것이 좋습니다.<br/><br/> 이 목록의 다른 오류와 같이 오류 41823 및 41840은 활성 트랜잭션을 중단시킵니다. |
 | **41839** | 트랜잭션이 최대 커밋 종속성 수를 초과했습니다. |**적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 참조하세요. [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]의 이후 버전에는 커밋 종속성 수에 제한이 없습니다.<br/><br/> 지정된 트랜잭션(Tx1)이 종속될 수 있는 트랜잭션 수는 제한됩니다. 이러한 트랜잭션은 보내는 종속성입니다. 또한 지정된 트랜잭션(Tx1)에 종속될 수 있는 트랜잭션 수도 제한됩니다. 이러한 트랜잭션은 들어오는 종속성입니다. 두 제한 모두 8입니다. <br/><br/> 이 오류는 일반적으로 단일 쓰기 트랜잭션에서 쓴 데이터에 액세스하는 읽기 트랜잭션 수가 많은 경우 발생합니다. 읽기 트랜잭션이 모두 동일한 데이터의 대량 스캔을 수행하고 쓰기 트랜잭션의 커밋 처리 또는 유효성 검사 시간이 긴 경우 이 조건을 만족시킬 가능성이 높아집니다. 예를 들어 쓰기 트랜잭션이 직렬화 격리에서 많은 스캔을 수행하거나(유효성 검사 단계의 길이가 늘어남) 트랜잭션 로그가 속도가 느린 로그 IO 장치에 저장될 때(커밋 처리 길이가 길어짐) 발생합니다. 읽기 트랜잭션이 대량 스캔을 수행하고 몇 개의 행에만 액세스해야 하는 경우 인덱스가 누락될 수 있습니다. 마찬가지로 쓰기 트랜잭션에서 직렬화 격리를 사용하고 대량 스캔을 수행하지만 몇 개의 행만 액세스해야 하는 경우에도 인덱스 누락을 의미할 수 있습니다. <br/><br/> 커밋 종속성 수에 대한 제한은 추적 플래그 **9926**을 사용하여 늘릴 수 있습니다. 위에서 언급한 경우에서 이러한 문제를 마스킹할 수 있으므로 이 추적 플래그는 인덱스 누락이 없는 것을 확인한 후 이 오류 조건을 만족하는 경우에만 사용합니다. 또 다른 주의 사항은 복잡한 종속성 그래프입니다. 각 트랜잭션에 들어오는 종속성과 나가는 종속성이 많고 개별 트랜잭션에 많은 종속성 계층이 있으면 시스템의 효율성이 저하될 수 있습니다.  |
  
   
@@ -219,7 +221,7 @@ BEGIN
             SET @retry -= 1;
 
             IF (@retry > 0 AND
-                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)
+                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41823, 41840, 41839, 1205)
                 )
             BEGIN
                 IF XACT_STATE() = -1

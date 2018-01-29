@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 69637be0ea958bf908210df298b210959e3afc17
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,14 +86,16 @@ ms.lasthandoff: 01/12/2018
 >    -  증가가 64MB에서 최대 1GB인 경우 증가 크기에 충분한 8개의 VLF를 만듭니다(예: 512MB 증가의 경우 64MB VLF 8개 생성).
 >    -  증가가 1GB보다 큰 경우 증가 크기에 충분한 16개의 VLF를 만듭니다(예: 8GB 증가의 경우 512MB VLF 16개 생성).
 
-수많은 작은 증가값으로 인해 로그 파일이 크게 증가하는 경우 가상 로그 파일이 많이 생성됩니다. **이로 인해 데이터베이스 시작뿐 아니라 로그 백업 및 복원 작업이 느려질 수 있습니다.** 필요한 최종 크기에 가까운 *size* 값을 로그 파일에 할당하고 *growth_increment* 값을 비교적 크게 지정하는 것이 좋습니다. 현재 트랜잭션 로그 크기에 대해 최적의 VLF 분포를 결정하려면 아래 팁을 참조하세요.
+수많은 작은 증가값에서 로그 파일이 크게 증가하는 경우 가상 로그 파일이 많이 생성됩니다. **이로 인해 데이터베이스 시작뿐 아니라 로그 백업 및 복원 작업이 느려질 수 있습니다.** 반대로 로그 파일이 적거나 하나의 증분인 큰 크기로 설정된 경우 적은 수의 매우 큰 가상 로그 파일이 포함됩니다. 트랜잭션 로그의 **필수 크기** 및 **자동 증가** 설정을 올바르게 예측하는 방법에 대한 자세한 내용은 [트랜잭션 로그 파일의 크기 관리](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations) 중 *권장 사항* 섹션을 참조하세요.
+
+최적의 VLF 배포를 수행하기 위한 필수 증분을 사용하여 필요한 최종 크기에 가까운 *크기* 값을 로그 파일에 할당하고 *growth_increment* 값을 비교적 크게 지정하는 것이 좋습니다. 현재 트랜잭션 로그 크기에 대해 최적의 VLF 분포를 결정하려면 아래 팁을 참조하세요. 
  - `ALTER DATABASE`의 `SIZE` 인수로 설정된 *크기* 값은 로그 파일의 초기 크기입니다.
- - *growth_increment* 값은 `ALTER DATABASE`의 `FILEGROWTH` 인수로 설정된 대로 새로운 공간이 필요할 때마다 파일에 추가되는 공간입니다. 
+ - *growth_increment* 값(자동 증가 값이라고도 함)은 `ALTER DATABASE`의 `FILEGROWTH` 인수로 설정된 대로 새로운 공간이 필요할 때마다 파일에 추가되는 공간입니다. 
  
 `ALTER DATABASE`의 `FILEGROWTH` 및 `SIZE` 인수에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41; 파일 및 파일 그룹 옵션](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
 
 > [!TIP]
-> 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포를 결정하려면 이 [스크립트](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요.
+> 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포 및 필수 크기를 수행할 필수 성장 증분을 결정하려면 이 [스크립트](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요.
   
  트랜잭션 로그는 순환 파일입니다. 예를 들어 데이터베이스에 4개의 VLF로 나뉜 물리 로그 파일이 한 개 있다고 가정합니다. 이 데이터베이스가 생성될 때 물리 로그 파일의 시작 부분에서 논리 로그 파일이 시작됩니다. 새 로그 레코드는 논리 로그의 끝 부분에 추가되며 물리 로그의 끝 방향으로 확장됩니다. 로그 잘림을 수행하면 모든 레코드가 MinLSN(최소 복구 로그 시퀀스 번호) 앞에 있는 가상 로그에 대한 공간이 확보됩니다. *MinLSN* 은 성공적인 데이터베이스 차원의 롤백에 필요한 가장 오래된 로그 레코드의 로그 시퀀스 번호입니다. 예제 데이터베이스의 트랜잭션 로그는 다음 그림의 로그와 유사합니다.  
   

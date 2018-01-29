@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.status.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 658cb8a6783afc9b01259e8cf2e8915659550867
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7b0ad2d6c9773860640bbf25ecac671dfae2dbe1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-monitor-status-page"></a>데이터베이스 미러링 모니터(상태 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 읽기 전용 페이지는 탐색 트리에서 현재 선택한 데이터베이스의 주 서버 인스턴스와 미러 서버 인스턴스에 대한 최신 미러링 상태를 표시합니다. 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 인스턴스에 해당하는 **상태** 표의 일부 셀은 회색으로 나타나고 **알 수 없음**을 표시합니다.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **상태**  
  각 주 서버 인스턴스와 미러 서버 인스턴스의 최신 상위 수준 미러링 상태를 포함하는 표를 표시합니다. **상태** 표의 행은 다음 순서를 가집니다.  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
  열은 다음과 같습니다.  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |**서버 인스턴스**|**상태** 행에 해당 상태가 표시되는 서버 인스턴스의 이름입니다.|  
 |**현재 역할**|서버 인스턴스의 현재 역할( **주 서버** 또는 **미러 서버**)입니다.|  
@@ -97,8 +99,8 @@ ms.lasthandoff: 11/20/2017
   
 -   **자동 장애 조치(Failover)가 있는 보호 우선(동기)**  
   
-## <a name="remarks"></a>주의  
- **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 이러한 사용자는 **데이터베이스 미러링 모니터 작업**에 따라 상태 테이블을 정기적으로 업데이트합니다. 표시된 상태의 기간을 알아보려면 사용자가 **주 로그(***\<시간>***)** 및 **미러 로그(***\<시간>***)** 레이블의 시간을 확인하면 됩니다.  
+## <a name="remarks"></a>Remarks  
+ **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 이러한 사용자는 **데이터베이스 미러링 모니터 작업**에 따라 상태 테이블을 정기적으로 업데이트합니다. 표시된 상태의 기간을 알아보려면 사용자가 **보안 주체 로그(***\<time>***)** 및 **미러 로그(***\<time>***)** 레이블의 시간을 확인하면 됩니다.  
   
  이 작업이 존재하지 않거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 중지된 경우 상태는 점점 더 오래되어 미러링 세션의 구성을 더 이상 반영하지 않을 수 있습니다. 예를 들어 장애 조치(failover) 후에 파트너가 동일한 역할(주 서버 또는 미러 서버)을 공유하는 것으로 표시되거나 현재 주 서버가 미러 서버로 표시되고 현재 미러 서버가 주 서버로 표시될 수 있습니다.  
   

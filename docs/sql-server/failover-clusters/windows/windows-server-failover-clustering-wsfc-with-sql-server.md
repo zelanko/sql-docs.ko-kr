@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5fdd2a6aed90983a38c4a34cd48588d157c036df
-ms.sourcegitcommit: 719bcc010dd1ca6f2acfcdf6f9bd9f73451ca8ca
+ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>SQL Server의 Windows Server 장애 조치(Failover) 클러스터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] WSFC(*Windows Server 장애 조치(Failover) 클러스터*)는 응용 프로그램 및 서비스의 가용성 향상을 위해 함께 작동하는 독립 서버 그룹입니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서는 WSFC 서비스와 기능을 활용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 지원합니다.  
@@ -42,7 +43,8 @@ ms.lasthandoff: 12/20/2017
  클러스터 리소스  
  노드에서 소유하고, 온라인 또는 오프라인으로 전환하고, 노드 간에 이동하고, 클러스터 개체로 관리할 수 있는 물리적 엔터티 또는 논리적 엔터티입니다. 클러스터 리소스는 항상 하나의 노드에서만 소유할 수 있습니다.  
   
- 역할 - 특정 기능을 제공하기 위해 단일 클러스터 개체로 관리되는 클러스터 리소스 모음입니다. SQL Server에서는 Always On 가용성 그룹(AG) 또는 Always On 장애 조치(failover) 클러스터 인스턴스(FCI)가 역할에 해당합니다. 역할에는 AG 또는 FCI에 필요한 모든 클러스터 리소스가 포함됩니다. 장애 조치(Failover) 및 장애 복구(failback)는 항상 역할 컨텍스트에서 적용됩니다. FCI의 경우 역할에 IP 주소 리소스, 네트워크 이름 리소스 및 SQL Server 리소스가 포함됩니다. AG 역할에는 AG 리소스가 포함되며 수신기가 구성된 경우 네트워크 이름 및 IP 리소스가 포함됩니다. 
+ Role  
+ 특정 기능을 제공하기 위해 단일 클러스터 개체로 관리되는 클러스터 리소스 모음입니다. SQL Server에서는 Always On 가용성 그룹(AG) 또는 Always On 장애 조치(failover) 클러스터 인스턴스(FCI)가 역할에 해당합니다. 역할에는 AG 또는 FCI에 필요한 모든 클러스터 리소스가 포함됩니다. 장애 조치(Failover) 및 장애 복구(failback)는 항상 역할 컨텍스트에서 적용됩니다. FCI의 경우 역할에 IP 주소 리소스, 네트워크 이름 리소스 및 SQL Server 리소스가 포함됩니다. AG 역할에는 AG 리소스가 포함되며 수신기가 구성된 경우 네트워크 이름 및 IP 리소스가 포함됩니다. 
 
  네트워크 이름 리소스  
  클러스터 리소스로 관리되는 논리 서버 이름입니다. 네트워크 이름 리소스는 IP 주소 리소스와 함께 사용해야 합니다. 이러한 항목에는 Active Directory Domain Services 및/또는 DNS의 개체가 필요할 수 있습니다. 

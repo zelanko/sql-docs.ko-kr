@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: "83"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7df7cad2ce05a9f18f9950b769e4f3b62aa7c984
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21e6296382acf84d5ca1aa6a7ec84cd1e171c321
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publish-data-and-database-objects"></a>데이터 및 데이터베이스 개체 게시
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 게시를 만들 때 게시할 테이블 및 다른 데이터베이스 개체를 선택할 수 있습니다. 복제를 사용하여 다음 데이터베이스 개체를 게시할 수 있습니다.  
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  스키마 옵션을 지정하려면 [스키마 옵션 지정](../../../relational-databases/replication/publish/specify-schema-options.md) 또는 <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>을 참조하세요.  
   
-### <a name="partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스  
+### <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes  
  복제는 분할된 테이블 및 인덱스의 게시를 지원합니다. 지원 수준은 사용하는 복제 유형, 지정하는 게시 옵션 및 분할된 테이블과 연결된 아티클에 의해 결정됩니다. 자세한 내용은 [분할 테이블 및 인덱스 복제](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)를 참조하세요.  
   
 ## <a name="publishing-stored-procedures"></a>저장 프로시저 게시  
@@ -253,9 +254,9 @@ ms.lasthandoff: 11/17/2017
   
      이러한 매개 변수에 대한 자세한 내용은 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 및 [sp_addmergefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)를 참조하세요.  
   
--   트랜잭션 복제 및 필터링되지 않은 병합 복제에서는 여러 게시에 테이블을 게시한 다음 구독 데이터베이스의 단일 테이블 내에서 구독할 수 있습니다. 이를 일반적으로 롤업 시나리오라고 합니다. 롤업은 중앙 구독자의 한 테이블에서 여러 위치에 있는 데이터 하위 집합을 집계하는 데 주로 사용됩니다. 필터링된 병합 게시는 중앙 구독자 시나리오를 지원하지 않습니다. 병합 복제의 경우 롤업은 일반적으로 매개 변수가 있는 행 필터가 포함된 단일 게시를 통해 구현됩니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요.  
+-   트랜잭션 복제 및 필터링되지 않은 병합 복제에서는 여러 게시에 테이블을 게시한 다음 구독 데이터베이스의 단일 테이블 내에서 구독할 수 있습니다. 이를 일반적으로 롤업 시나리오라고 합니다. 롤업은 중앙 구독자의 한 테이블에서 여러 위치에 있는 데이터 하위 집합을 집계하는 데 주로 사용됩니다. 필터링된 병합 게시는 중앙 구독자 시나리오를 지원하지 않습니다. 병합 복제의 경우 롤업은 일반적으로 매개 변수가 있는 행 필터가 포함된 단일 게시를 통해 구현됩니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [배포 구성](../../../relational-databases/replication/configure-distribution.md)   
  [구독 초기화](../../../relational-databases/replication/initialize-a-subscription.md)   

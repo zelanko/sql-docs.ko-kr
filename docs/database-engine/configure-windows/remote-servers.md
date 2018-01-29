@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c4d0ac2fa7d02ed8b0e75a1f0ab6347b1e5506a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="remote-servers"></a>원격 서버
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이전 버전과의 호환성을 위해서만 원격 서버를 지원합니다. 새 응용 프로그램은 그 대신 연결된 서버를 사용해야 합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/20/2017
 >  가능하면 Windows 인증을 사용하세요.  
   
 ### <a name="remote-server-security-example"></a>원격 서버 보안 예  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverSend **및** serverReceive **와 같은**설치를 고려합니다. **serverReceive** 는 **serverSend**로부터의 **Sales_Mary**라는 수신 로그인을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive **의**Alice **라는**인증 로그인에 매핑하도록 구성되어 있습니다. **serverSend**로부터의 **Joe**라는 또 다른 수신 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive *****의* Joe **라는**인증 로그인에 매핑됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverSend **및** serverReceive **와 같은**설치를 고려합니다. **serverReceive** 는 **serverSend**로부터의 **Sales_Mary**라는 수신 로그인을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive **의**Alice **라는**인증 로그인에 매핑하도록 구성되어 있습니다. **serverSend**로부터의 **Joe**라는 또 다른 수신 로그인은 **serverReceive****에서 **Joe**라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인에 매핑됩니다.  
   
  다음 Transact-SQL 코드 예제는 `serverSend` 에 대해 RPC를 수행하도록 `serverReceive`를 구성합니다.  
   
@@ -101,7 +102,7 @@ GO
 ## <a name="viewing-local-or-remote-server-properties"></a>로컬 서버 또는 원격 서버 속성 보기  
  **xp_msver** 확장 저장 프로시저를 사용하여 로컬 서버 또는 원격 서버의 특성을 검토할 수 있습니다. 이러한 특성에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전 번호, 컴퓨터의 프로세서 유형과 개수 및 운영 체제 버전이 포함됩니다. 로컬 서버에서는 원격 서버의 데이터베이스, 파일, 로그인 및 도구를 볼 수 있습니다. 자세한 내용은 [xp_msver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)을 참조하세요.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>관련 내용  

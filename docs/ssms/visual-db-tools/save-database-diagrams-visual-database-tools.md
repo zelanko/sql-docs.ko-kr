@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-visual-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,23 @@ helpviewer_keywords:
 - database diagrams [SQL Server], saving
 - diagrams [SQL Server], saving
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6da23abe1967901dad49287cb757bf1832369fa9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2c3a0745ab34f997bd614b091cb8d2c6a0b1aa80
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 저장(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램을 저장하면 테이블, 열 및 기타 데이터베이스 개체에 대한 변경 내용을 비롯하여 데이터베이스에 대한 모든 변경 내용을 저장할 수 있습니다.  
   
 ### <a name="to-save-the-database-diagram"></a>데이터베이스 다이어그램을 저장하려면  
   
-1.  **파일** 메뉴에서 **\<***tablename***> 저장**을 선택합니다.  
+1.  **파일** 메뉴에서 **Save \<***tablename***>**을 선택합니다.  
   
 2.  저장하려는 다이어그램을 이전에 한번도 저장한 적이 없으면 **다른 이름으로 저장** 대화 상자가 열립니다. 다이어그램의 이름을 입력합니다.  
   

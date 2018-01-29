@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51429ad63e04893c26a6bf9213809060780aebba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe26c36dc6b8b5c5cdcde7013764246275f5ae6f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Always On 가용성 그룹 구성 문제 해결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
  **항목 내용:**  
   
-|섹션|설명|  
+|섹션|Description|  
 |-------------|-----------------|  
 |[Always On 가용성 그룹을 사용할 수 없음](#IsHadrEnabled)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 인스턴스를 사용할 수 없는 경우 해당 인스턴스는 가용성 그룹 만들기를 지원하지 않고 가용성 복제본을 호스팅할 수 없습니다.|  
 |[계정](#Accounts)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 실행되고 있는 계정을 올바르게 구성하기 위한 요구 사항에 대해 설명합니다.|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/20/2017
     GO  
     ```  
   
-     자세한 내용은 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md)를 참조하세요.  
+     자세한 내용은 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md)을 참조하세요.  
   
 5.  다른 서버에서 로그인할 경우 CONNECT 권한이 있는지 확인합니다. 끝점에 대한 CONNECT 권한이 있는 사용자를 파악하려면 각 서버 인스턴스에서 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
   
@@ -138,7 +139,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="ROR"></a> 읽기 전용 라우팅이 올바르게 작동하지 않음  
  다음 구성 값 설정을 확인하고 필요한 경우 수정합니다.  
   
-||위치…|동작|설명|링크|  
+||위치…|작업|주석|링크|  
 |------|---------|------------|--------------|----------|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|현재 주 복제본|가용성 그룹 수신기가 온라인 상태인지 확인합니다.|**수신기가 온라인 상태인지 여부를 확인하려면:**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **오프라인 수신기를 다시 시작하려면:**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states&#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|현재 주 복제본|READ_ONLY_ROUTING_LIST에 읽기 가능한 보조 복제본을 호스팅하는 서버 인스턴스만 포함되어 있는지 확인합니다.|**읽기 가능한 보조 복제본을 확인하려면:** sys.availability_replicas(**secondary_role_allow_connections_desc** 열)<br /><br /> **읽기 전용 라우팅 목록을 보려면:** sys.availability_read_only_routing_lists<br /><br /> **읽기 전용 라우팅 목록을 변경하려면:** ALTER AVAILABILITY GROUP|[sys.availability_replicas&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 -   [실패한 파일 추가 작업 문제 해결&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   

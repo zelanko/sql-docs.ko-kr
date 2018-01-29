@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.warningsandalerts.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c99baee0acea3b6a05f15b5c2ae33cdb347ee1bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f150d44a28915741ffd45b4e8c4506deb41a5a51
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>데이터베이스 미러링 모니터(경고 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 미러링 이벤트에서 지원되는 경고와 지정된 경고 임계값(사용 가능한 경우)의 읽기 전용 목록을 표시합니다.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
  자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  서버 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 해당 **임계값** 열의 셀에 회색 배경과 워터마크 텍스트가 표시됩니다. 모니터가 서버 인스턴스에 연결되지 않은 경우 인스턴스가 기본 인스턴스인지 명명된 인스턴스인지에 따라 *<SYSTEM_NAME>***에 연결되지 않음** 또는 *<SYSTEM_NAME>***\\***<instance_name>***에 연결되지 않음**이 표의 모든 셀에 표시됩니다. 모니터에서 쿼리 반환을 기다리고 있는 경우 표의 모든 셀에 **데이터를 기다리는 중...** 이 표시됩니다.  
   
  정보를 사용할 수 있는 경우 각 경고의 셀에 지정된 임계값과 측정 단위 또는 **사용 안 함**이 표시됩니다.  

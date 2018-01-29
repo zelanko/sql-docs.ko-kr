@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6383f0bdcbd230c5bd4868084ae2fd06f4003269
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 65b1141e3d47a947f9b1c90b25c6ba875373c266
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>파일 및 파일 그룹 백업(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 파일 및 파일 그룹을 백업하는 방법에 대해 설명합니다. 데이터베이스 크기와 성능 요구 사항으로 인해 전체 데이터베이스 백업이 불가능할 경우 이를 대신하여 파일 백업을 만들 수 있습니다. *파일 백업* 에는 하나 이상의 파일(또는 파일 그룹)에 있는 모든 데이터가 포함됩니다. 파일 백업에 대한 자세한 내용은 [전체 파일 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 및 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  
@@ -201,9 +202,9 @@ GO
   
 1.  **Backup-SqlDatabase** cmdlet을 사용하고 **-BackupAction** 매개 변수의 값으로 **Files** 를 지정합니다. 또한 다음 매개 변수 중 하나를 지정합니다.  
   
-    -   특정 파일을 백업하려면 **-DatabaseFile***String* 매개 변수를 지정합니다. 여기서 *String* 은 백업할 하나 이상의 데이터베이스 파일입니다.  
+    -   특정 파일을 백업하려면 **-DatabaseFile***String* 매개 변수를 지정합니다. 여기서 *String*은 백업할 하나 이상의 데이터베이스 파일입니다.  
   
-    -   지정된 파일 그룹의 모든 파일을 백업하려면 **-DatabaseFileGroup***String* 매개 변수를 지정합니다. 여기서 *String* 은 백업할 하나 이상의 데이터베이스 파일 그룹입니다.  
+    -   지정된 파일 그룹의 모든 파일을 백업하려면 **-DatabaseFileGroup***String* 매개 변수를 지정합니다. 여기서 *String*은 하나 이상의 백업할 데이터베이스 파일 그룹입니다.  
   
      다음 예에서는 `MyDB` 데이터베이스의 보조 파일 그룹 'FileGroup1' 및 'FileGroup2'에 있는 모든 파일의 전체 파일 백업을 만듭니다. 백업은 서버 인스턴스 `Computer\Instance`의 기본 백업 위치에 만들어집니다.  
   

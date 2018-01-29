@@ -1,14 +1,15 @@
 ---
 title: CREATE SERVER AUDIT (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - SERVER AUDIT
 - SERVER_AUDIT_TSQL
 - CREATE SERVER AUDIT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - server audit [SQL Server]
 - CREATE SERVER AUDIT statement
 - audits [SQL Server], creating
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 436cca29066a1fc9e296dca2c66f1503189102a2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b6e637bec3ddcfd7b24bb4f4adb87011bbbe2471
+ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,16 +83,16 @@ CREATE SERVER AUDIT audit_name
  TO { FILE | APPLICATION_LOG | SECURITY_LOG }  
  감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 응용 프로그램 로그 또는 Windows 보안 로그입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Windows 보안 로그에 쓸 수 없습니다. 자세한 내용은 [보안 로그에 SQL Server Audit 이벤트 쓰기](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요.  
   
- 파일 경로 ='*os_file_path*'  
+ FILEPATH ='*os_file_path*'  
  감사 로그의 경로입니다. 파일 이름은 감사 이름과 감사 GUID를 기준으로 생성됩니다.  
   
- MAXSIZE = { *max_size}*  
+ MAXSIZE = { *max_size }*  
  감사 파일이 증가할 수 있는 최대 크기를 지정합니다. *max_size* 값 뒤에 MB, GB, TB 또는 UNLIMITED는 정수 여야 합니다. 에 지정할 수 있는 최소 크기 *max_size* 2mb이 고 최대값은 2147483647 TB입니다. UNLIMITED를 지정하는 경우 디스크가 꽉 찰 때까지 파일이 증가합니다. 0도 UNLIMITED를 나타냅니다. 2MB 보다 작은 값을 지정 하면 MSG_MAXSIZE_TOO_SMALL 오류가 발생 합니다. 기본값은 UNLIMITED입니다.  
   
  MAX_ROLLOVER_FILES =*{정수* | 무제한}  
  현재 파일 외에 파일 시스템에 보관할 최대 파일 수를 지정합니다. *MAX_ROLLOVER_FILES* 값은 정수 또는 UNLIMITED 여야 합니다. 기본값은 UNLIMITED입니다. 이 매개 변수는 감사를 다시 시작 될 때마다 계산 됩니다 (발생할 수 있는 경우의 인스턴스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 다시 시작 되거나 감사가 설정 되어 있을 때 해제 한 다음 다시) MAXSIZE에 도달 했으므로 새 파일이 필요할 때 또는 합니다. 때 *MAX_ROLLOVER_FILES* 파일 수를 초과 하는 경우 계산 되는 *MAX_ROLLOVER_FILES* 설정, 가장 오래 된 파일은 삭제 됩니다. 결과적으로 때의 설정 *MAX_ROLLOVER_FILES* 때마다 새 파일을 만들 0는 *MAX_ROLLOVER_FILES* 설정이 평가 됩니다. 하나의 파일은 자동으로 삭제 *MAX_ROLLOVER_FILES* 설정이 계산 될 있으므로의 값 *MAX_ROLLOVER_FILES* 은 감소 하 고, 파일 수가 줄어들지 않습니다 오래 된 파일 도달 하지 못할 경우 수동으로 삭제 됩니다. 지정할 수 있는 최대 파일 수는 2,147,483,647입니다.  
   
- MAX_FILES =*정수*  
+ MAX_FILES =*integer*  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  만들 수 있는 최대 감사 파일 수를 지정합니다. 이 제한에 도달하는 경우 첫 파일로 롤오버하지 않습니다. MAX_FILES 제한에 도달 하면 추가 감사 이벤트를 생성 하도록 하는 모든 작업 오류와 함께 실패 합니다.  
@@ -98,7 +100,7 @@ CREATE SERVER AUDIT audit_name
  RESERVE_DISK_SPACE = { ON | OFF }  
  이 옵션은 디스크의 파일을 MAXSIZE 값으로 미리 할당하며, MAXSIZE가 UNLIMITED가 아닌 경우에만 적용됩니다. 기본값은 OFF입니다.  
   
- QUEUE_DELAY =*정수*  
+ QUEUE_DELAY =*integer*  
  감사 동작이 강제 처리되기 전까지 허용되는 시간(밀리초)을 지정합니다. 값이 0인 경우 동기 배달을 나타냅니다. 설정 가능한 최소 쿼리 지연 값은 1000입니다. 이 값은 1초에 해당하며 기본값입니다. 최대값은 2,147,483,647로 2,147,483.647초 또는 24일, 20시간, 31분, 23.647초에 해당합니다. 잘못 된 수를 지정 하는 MSG_INVALID_QUEUE_DELAY 오류가 발생 했습니다.  
   
  ON_FAILURE = {계속 | 종료 | FAIL_OPERATION}  
@@ -125,8 +127,18 @@ SHUTDOWN
  event_field_name  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 조건자 원본을 식별하는 이벤트 필드의 이름입니다. 감사 필드에 설명 된 [sys.fn_get_audit_file&#40; Transact SQL &#41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). `file_name` 및 `audit_file_offset`을 제외한 모든 필드를 감사할 수 있습니다.  
-  
+ 조건자 원본을 식별하는 이벤트 필드의 이름입니다. 감사 필드에 설명 된 [sys.fn_get_audit_file&#40; Transact SQL &#41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). 모든 필드를 제외 하 고 필터링 할 수 `file_name`, `audit_file_offset`, 및 `event_time`합니다.  
+
+> [!NOTE]  
+>  반면는 `action_id` 및 `class_type` 형식의 필드는 **varchar** sys.fn_get_audit_file, 있습니다만 사용할 수 번호로 필터링에 대 한 조건자 원본이 될 때입니다. 함께 사용 되는 값의 목록을 가져오려면 `class_type`, 다음 쿼리를 실행 합니다.  
+> ```sql
+> SELECT spt.[name], spt.[number]
+> FROM   [master].[dbo].[spt_values] spt
+> WHERE  spt.[type] = N'EOD'
+> ORDER BY spt.[name];
+> ```
+
+
  number  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
@@ -225,7 +237,7 @@ GO
  [sys.database_audit_specification_details&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
  [sys.dm_server_audit_status&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [서버 감사 및 서버 감사 사양 만들기](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

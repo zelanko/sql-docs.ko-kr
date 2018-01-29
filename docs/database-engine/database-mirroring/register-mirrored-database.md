@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.registermirroreddb.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e967a036c5dd230c2ea5c84d0a69b98b368a0ec7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d670b9efc8bcbe67bb12758318fb72cf99c2218f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="register-mirrored-database"></a>미러된 데이터베이스 등록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하면 데이터베이스 미러링 모니터에 데이터베이스를 추가하여 지정된 서버 인스턴스에서 하나 이상의 미러된 데이터베이스를 등록할 수 있습니다. 데이터베이스가 추가되면 데이터베이스 미러링 모니터는 데이터베이스, 해당 파트너, 파트너에 연결되는 방법 등에 대한 정보를 로컬로 캐시합니다.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **서버 인스턴스**  
  데이터베이스 미러링 모니터에 이미 저장된 연결이 있는 서버 인스턴스가 포함된 목록에서 서버 인스턴스를 선택하거나 **연결**을 클릭합니다. 나열된 서버 인스턴스에 대해 새 자격 증명을 지정하려면 **연결** 을 클릭하고 새 자격 증명을 사용하여 연결합니다.  
   
@@ -49,10 +51,10 @@ ms.lasthandoff: 11/20/2017
   
  표에는 다음 열이 있습니다.  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |**등록**|등록할 각 데이터베이스를 검사합니다. 데이터베이스가 현재 모니터링되고 있는 경우 해당 확인란은 선택된 상태로 비활성화되어 있습니다.<br /><br /> 참고: 데이터베이스 등록을 취소하려면 **미러된 데이터베이스 등록** 대화 상자를 닫고 탐색 트리에서 데이터베이스를 선택한 다음 **동작** 메뉴에서 **등록 취소** 를 선택합니다.|  
-|**데이터베이스**|선택한 서버 인스턴스에 있는 미러된 데이터베이스의 이름입니다.|  
+|**데이터베이스 백업**|선택한 서버 인스턴스에 있는 미러된 데이터베이스의 이름입니다.|  
 |**현재 역할**|선택한 서버 인스턴스에 있는 데이터베이스의 현재 미러링 역할(주 서버 또는 미러 서버)입니다.|  
 |**파트너(연결 대상)**|데이터베이스에 대한 장애 조치(Failover) 파트너의 이름입니다. 괄호 안에 **콘솔 사용자의 Windows 인증** 또는 **'***\<로그인 이름>***' 로그인의 SQL Server 인증**이 표시됩니다. 이것은 인스턴스가 이전에 추가된 경우에는 현재 사용되는 인증 정보이고 인스턴스가 모니터에 추가되지 않은 경우에는 사용될 인증 정보입니다.|  
   

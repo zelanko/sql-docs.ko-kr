@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.fn_get_audit_file_TSQL
 - fn_get_audit_file
 - sys.fn_get_audit_file
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: de090736f4ddbf1ab2191b887fe8ea034af2b5f9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4ac4372d753bdc9fde231d2ec08daa957771dc46
+ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,13 +89,13 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 표에서는 이 함수가 반환할 수 있는 감사 파일 내용에 대해 설명합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|유형|Description|  
 |-----------------|----------|-----------------|  
 |event_time|**datetime2**|감사 가능한 동작이 발생한 날짜 및 시간입니다. Null을 허용하지 않습니다.|  
 |sequence_number|**int**|너무 커서 감사에 대한 쓰기 버퍼에 맞지 않는 단일 감사 레코드 내의 레코드 시퀀스를 추적합니다. Null을 허용하지 않습니다.|  
 |action_id|**varchar(4)**|동작의 ID입니다. Null을 허용하지 않습니다.|  
 |succeeded|**bit**|이벤트를 발생시킨 동작의 성공 여부를 나타냅니다. Null을 허용하지 않습니다. 로그인 이벤트를 제외한 모든 이벤트의 경우 작업이 아닌 권한 검사의 성공 또는 실패 여부만 보고합니다.<br /> 1 = 성공<br /> 0 = 실패|  
-|permission_bitmask|**varbinary (16)**|일부 동작에서 이는 허용, 거부 또는 취소된 사용 권한입니다.|  
+|permission_bitmask|**varbinary(16)**|일부 동작에서 이는 허용, 거부 또는 취소된 사용 권한입니다.|  
 |is_column_permission|**bit**|열 수준 사용 권한임을 나타내는 플래그입니다. Null을 허용하지 않습니다. permission_bitmask가 0이면 0을 반환합니다.<br /> 1 = true<br /> 0 = false|  
 |session_id|**smallint**|이벤트가 발생한 세션의 ID입니다. Null을 허용하지 않습니다.|  
 |server_principal_id|**int**|동작을 수행한 로그인 컨텍스트의 ID입니다. Null을 허용하지 않습니다.|  
@@ -120,10 +122,10 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자 정의 이벤트 id에 대 한 인수로 전달 된 **sp_audit_write**합니다. **NULL** 시스템 이벤트 (기본값)에 대 한 및 0이 아닌 사용자 정의 이벤트에 대 한 합니다. 자세한 내용은 참조 [sp_audit_write &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자가을에 기록 하려는 추가 정보를 기록 하는 데 사용 |사용 하 여 감사 로그는 **sp_audit_write** 저장 프로시저입니다.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**nvarbinary** | SQL Server만 (2016부터 시작) |  
+|sequence_group_id |**varbinary** | SQL Server만 (2016부터 시작) |  
 |transaction_id |**bigint** | SQL Server만 (2016부터 시작) |  
-|client_ip |**nvarchar (128)** | Azure SQL DB + SQL Server (2017부터 시작) |  
-|application_name |**nvarchar (128)** | Azure SQL DB + SQL Server (2017부터 시작) |  
+|client_ip |**nvarchar(128)** | Azure SQL DB + SQL Server (2017부터 시작) |  
+|application_name |**nvarchar(128)** | Azure SQL DB + SQL Server (2017부터 시작) |  
 |duration_milliseconds |**bigint** | Azure SQL DB에만 |  
 |response_rows |**bigint** | Azure SQL DB에만 |  
 |affected_rows |**bigint** | Azure SQL DB에만 |  
@@ -197,7 +199,7 @@ Azure SQL 데이터베이스 감사를 설정에 대 한 자세한 내용은 참
  [sys.database_audit_specification_details&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
  [sys.dm_server_audit_status&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [서버 감사 및 서버 감사 사양 만들기](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

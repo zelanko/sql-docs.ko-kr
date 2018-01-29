@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - IFI [SQL Server]
 - database instant file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cf0f0006186bde39228ac9b0039e5a45b42431b7
-ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
+ms.openlocfilehash: 43b4084e91c08bfe870807196261e4be9b934872
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="database-file-initialization"></a>데이터베이스 파일 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터 및 로그 파일이 초기화되어 이전에 삭제한 파일의 디스크에 남아 있는 기존 데이터를 덮어씁니다. 데이터 및 로그 파일은 사용자가 다음 작업 중 하나를 수행할 때 파일을 비워(0으로 채워져) 초기화됩니다.  
@@ -89,6 +90,10 @@ Database Instant File Initialization: disabled. For security and performance con
 
 ## <a name="security-considerations"></a>보안 고려 사항  
 삭제된 디스크 내용은 새 데이터가 파일에 기록될 때만 덮어쓰기 때문에 인스턴트 파일 초기화(IFI)를 사용하는 경우 데이터 파일의 해당하는 특정 영역에 다른 데이터를 쓸 때까지 권한 없는 사용자가 삭제된 내용에 액세스할 수 있습니다. 데이터베이스 파일이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 연결되어 있는 동안 파일의 DACL(임의 액세스 제어 목록)에 의해 이러한 정보 공개 위협이 줄어듭니다. 이 DACL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 로컬 관리자에게만 파일 액세스를 허용합니다. 그러나 파일이 분리되면 *SE_MANAGE_VOLUME_NAME*이 없는 사용자 또는 서비스가 액세스할 수 있습니다. 데이터베이스를 백업할 때도 유사한 사항을 고려해야 합니다. 즉, 백업 파일이 적절한 DACL로 보호되지 않는 경우 권한이 없는 사용자 또는 서비스가 삭제된 내용을 사용할 수 있게 됩니다.  
+
+또 다른 고려 사항은 파일이 IFI를 사용하여 증가하는 경우입니다. SQL Server 관리자는 잠재적으로 원시 페이지 콘텐츠에 엑세스하고 이전에 삭제된 내용을 확인할 수 있습니다.
+
+데이터베이스 파일을 저장 영역 네트워크에서 호스트하는 경우 저장 영역 네트워크는 항상 미리 초기화된 새 페이지를 표시하고 운영 체제에서 페이지를 다시 초기화하는 경우 불필요한 오버헤드가 발생할 수 있습니다.
  
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 보안 물리적 환경에 설치되어 있는 경우 인스턴스 파일 초기화를 사용할 때 성능 이점이 보안 위험을 능가하므로 이렇게 하는 것이 좋습니다.

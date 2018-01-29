@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - manage log size
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 23aaaed04bfb552865cf9eb95b3150d520499dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>트랜잭션 로그 파일의 크기 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그 크기 모니터링, 트랜잭션 로그 축소, 트랜잭션 로그 파일에 추가 또는 파일 확장, **tempdb** 트랜잭션 로그 증가율 최적화, 트랜잭션 로그 파일 증가 제어 등을 수행하는 방법에 대해 설명합니다.  
@@ -105,9 +106,9 @@ ms.lasthandoff: 01/08/2018
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 시작|데이터는 1MB입니다. 로그 파일은 10%입니다.|  
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전|데이터는 10%입니다. 로그 파일은 10%입니다.|  
 
--   작은 확장 증분은 너무 많은 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)가 생성되어 성능이 저하될 수 있습니다. 
+-   작은 확장 증분은 너무 많은 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)가 생성되어 성능이 저하될 수 있습니다. 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포 및 필수 크기를 수행할 필수 성장 증분을 결정하려면 이 [스크립트](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요.
 
--   큰 확장 증분은 너무 적고 큰 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)가 생성되어 이 또한 성능에 영향을 줄 수 있습니다. 
+-   큰 확장 증분은 너무 적고 큰 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)가 생성되어 이 또한 성능에 영향을 줄 수 있습니다. 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포 및 필수 크기를 수행할 필수 성장 증분을 결정하려면 이 [스크립트](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요. 
 
 -   자동 증가를 사용하는 경우에도 쿼리의 요구 사항을 충족시킬 정도로 빠르게 커질 수 없는 경우 트랜잭션 로그가 꽉 찼다는 메시지를 받을 수 있습니다. 확장 증분 변경에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41; 파일 및 파일 그룹 옵션](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
 

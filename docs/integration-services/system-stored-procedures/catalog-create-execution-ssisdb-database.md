@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 5c557108a98a0063cb0dad14e0d40f10deb03698
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +66,9 @@ catalog.create_execution [@folder_name = folder_name
 [@useanyworker =] *useanyworker*  
 Scale Out 작업자에서 실행을 수행할 수 있는지 여부를 나타냅니다.
 
--   Scale Out 작업자를 사용하여 패키지를 실행하려면 1 값을 사용합니다. `@useanyworker`를 true로 설정하면 최대 작업 수 (작업자 구성 파일에 지정된 대로)에 아직 도달하지 않은 작업자가 패키지를 실행할 수 있습니다.
+-   Scale Out 작업자를 사용하여 패키지를 실행하려면 1 값을 사용합니다. `@useanyworker`를 true로 설정하면 최대 작업 수 (작업자 구성 파일에 지정된 대로)에 아직 도달하지 않은 작업자가 패키지를 실행할 수 있습니다. 작업자 구성 파일에 대한 정보는 [Integration Services(SSIS) Scale Out 작업자](../scale-out/integration-services-ssis-scale-out-worker.md)를 참조합니다.
 
--   일부 Scale Out 작업자에서 패키지를 실행할 수 있음을 나타내려면 0 값을 사용합니다. `@useanyworker`를 false로 설정하면 Scale Out 관리자를 사용하거나 저장 프로시저 `[catalog].[add_execution_worker]`를 호출하여 패키지를 실행할 수 있는 작업자를 지정해야 합니다.
+-   일부 Scale Out 작업자에서 패키지를 실행할 수 있음을 나타내려면 0 값을 사용합니다. `@useanyworker`를 false로 설정하면 Scale Out 관리자를 사용하거나 저장 프로시저 `[catalog].[add_execution_worker]`를 호출하여 패키지를 실행할 수 있는 작업자를 지정해야 합니다. 이미 다른 패키지를 실행 중인 작업자를 지정하면, 작업자가 다른 패키지 실행을 요청하기 전에 현재 패키지 실행을 완료합니다. 
 
 이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 1로 설정됩니다. *useanyworker*는 **bit**입니다. 
   

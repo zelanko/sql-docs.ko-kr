@@ -8,10 +8,12 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: SSIS
+keywords:
+- SSIS
 helpviewer_keywords:
 - SSIS
 - DTS [Integration Services]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - data integration [Integration Services]
 - Data Transformation Services
 ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f1580e8d59c391b5721fc89ea2b58712ec34364
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cc7137128954a11774bfa99b66ac3ca27621b67c
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -43,12 +45,9 @@ ms.lasthandoff: 12/21/2017
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 도움말 보기
- 
-- [SSIS에 대한 MSDN 포럼 - 질문하기](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-- [SSDT 및 SSMS에 대한 MSDN 포럼 - 질문하기](https://social.msdn.microsoft.com/Forums/home?forum=sqltool)
-- [Stack Overflow(*ssis* 태그) - 질문하기](http://stackoverflow.com/questions/tagged/ssis)
-- [Microsoft Connect - 버그 보고 및 기능 요청](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - SSIS에 대한 일반 토론](https://www.reddit.com/r/SQLServer/search?q=ssis&restrict_sr=on)
-- [비즈니스 사용자에 대한 Microsoft 지원 옵션](https://support.microsoft.com/gp/support-options-for-business)
-- [비즈니스 사용자를 위한 Microsoft 고객지원센터 옵션](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
+##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) 리소스
+-   [SSIS 포럼에서 도움말 보기](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+-   [Stack Overflow에서 도움말 보기](http://stackoverflow.com/questions/tagged/ssis)  
+-   [SSIS 팀 블로그 수행](https://blogs.msdn.microsoft.com/ssis/)
+-   [문제 보고 및 기능 요청](https://feedback.azure.com/forums/908035-sql-server)
+-   [PC의 문서 가져오기](../sql-server/sql-server-help-installation.md)
