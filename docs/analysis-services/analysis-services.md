@@ -1,6 +1,6 @@
 ---
 title: Analysis Services | Microsoft Docs
-ms.date: 05/11/2017
+ms.date: 01/26/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 00b88b320118df9649b546b35259ec1c8acdc7cf
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: d4bdda48d7518d0560e3b5dff8d0a7139de700ae
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="what-is-analysis-services"></a>Analysis Services 란?
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/22/2018
 일반에서 Azure Analysis Services에 대 한 설명서 Azure 문서 포함 되어 있습니다. 및 SQL Server Analysis Services에 대 한 설명서는 SQL 설명서에 포함 되어 있습니다. 그러나 이상 테이블 형식 모델에 대 한 만들고 프로젝트를 배포할은 사용 중인 어떤 플랫폼에 관계 없이 거의 동일 합니다.  
    
 *  [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)
-*  [SQL Server Analysis Services의 새로운 기능](../analysis-services/what-s-new-in-analysis-services.md)   
+*  [SQL Server Analysis Services의 새로운 기능](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)   
 *  [테이블 형식 및 다차원 솔루션 비교](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
 *  [테이블 형식 모델](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [다차원 모델](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  

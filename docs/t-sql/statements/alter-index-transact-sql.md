@@ -8,13 +8,15 @@ ms.service:
 ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: t-sql
+dev_langs:
+- t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -46,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -211,7 +213,7 @@ ALTER INDEX { index_name | ALL }
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]세 부분으로 된 이름 형식 database_name을 지원합니다. [schema_name].table_or_view_name database_name이 현재 데이터베이스 또는 database_name이 tempdb 및 고 table_or_view_name이 #로 시작 합니다.  
   
- REBUILD [WITH **(**\<rebuild_index_option > [ **,**... *n*]**)** ]  
+ REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
  동일한 열, 인덱스 유형, 고유성 특성 및 정렬 순서를 사용하여 인덱스가 다시 작성되도록 지정합니다. 이 절은 [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)합니다. REBUILD는 비활성 인덱스를 활성화합니다. ALL 키워드를 지정하지 않으면 클러스터형 인덱스를 다시 작성해도 관련 비클러스터형 인덱스는 다시 작성되지 않습니다. 기존 인덱스 옵션에 저장 된 값이 인덱스 옵션이 지정 되지 않은 경우 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 적용 됩니다. 인덱스 옵션 값에 저장 되지 않으므로 **sys.indexes**, 옵션의 인수 정의에 표시 된 기본값이 적용 됩니다.  
   
  ALL을 지정한 경우 기본 테이블이 힙이면 다시 작성 작업을 수행해도 테이블에는 아무 영향이 없습니다. 테이블에 연결된 비클러스터형 인덱스는 모두 다시 작성됩니다.  
@@ -250,7 +252,7 @@ PARTITION
   
  다시 작성하거나 다시 구성할 분할된 인덱스의 파티션 번호입니다. *partition_number* 변수를 참조할 수 있는 상수 식입니다. 여기에는 사용자 정의 형식 변수 또는 함수와 사용자 정의 함수가 포함될 수 있지만 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 참조할 수 없습니다. *partition_number* 있어야 또는 문이 실패 합니다.  
   
- 와 **(**\<single_partition_rebuild_index_option >**)**  
+ WITH **(**\<single_partition_rebuild_index_option>**)**  
    
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
@@ -307,13 +309,16 @@ columnstore 인덱스에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 -   행 중 10% 이상이 있는 논리적으로 삭제 된 행 그룹, SQL Server는이 행 그룹 하나 이상의 rowgroup으로 결합 하려고 합니다.    예를 들어 500, 000 행을 사용 하 여 압축 행 그룹 1 및 21 그룹이 compressed 임을 1048576 행의 최대 합니다.  행 그룹 21 409,830 행 생략 삭제 된 행의 60%에 있습니다. SQL Server 우선으로 이러한 두 909,830 행이 새 행 그룹을 압축 rowgroup을 결합 합니다.  
   
 다시 구성 (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 COMPRESS_ALL_ROW_GROUPS OPEN 또는 CLOSED 델타 행 그룹을 columnstore로 강제 하는 방법을 제공 합니다. 이 옵션을 델타 행 그룹 비워지도록 columnstore 인덱스 다시 작성 하는 데 필요한있지 않습니다.  이 함께 다른 제거 및 병합 조각 모음 기능을 통해 더 이상 트랜젹션 대부분의 경우에서 인덱스를 다시 작성 됩니다.    
+
+ **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 및[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+COMPRESS_ALL_ROW_GROUPS는 OPEN 또는 CLOSED 델타 행 그룹을 columnstore로 강제 하는 방법을 제공 합니다. 이 옵션을 델타 행 그룹 비워지도록 columnstore 인덱스 다시 작성 하는 데 필요한있지 않습니다.  이 함께 다른 제거 및 병합 조각 모음 기능을 통해 더 이상 트랜젹션 대부분의 경우에서 인덱스를 다시 작성 됩니다.    
 
 -   ON 크기와 상태 (닫혀 있지 않거나 열)에 관계 없이 columnstore로 모든 rowgroup을 강제로 수행 합니다.  
   
 -   OFF 모든 CLOSED 행 그룹이 columnstore로 강제로 수행합니다.  
   
-설정 **(** \<set_index 옵션 > [ **,**... *n*] **)**  
+SET **(** \<set_index option> [ **,**... *n*] **)**  
  인덱스를 다시 작성하거나 다시 구성하지 않고 인덱스 옵션을 지정합니다. 비활성 인덱스에는 SET을 지정할 수 없습니다.  
   
 PAD_INDEX = { ON | OFF }  
@@ -533,7 +538,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}
   
  압축에 대 한 자세한 내용은 참조 [데이터 압축](../../relational-databases/data-compression/data-compression.md)합니다.  
   
- ON PARTITIONS **(** { \<partition_number_expression > | \<범위 >} [**,**… n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
     
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다. 
   
@@ -584,7 +589,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  DDL 명령을 실행할 때 온라인 인덱스 다시 작성 잠금이 낮은 우선 순위로 대기하는 시간(분 단위로 지정된 정수 값)입니다. 작업에 대 한 차단 된 경우는 **MAX_DURATION** 시간 중 하나는 **ABORT_AFTER_WAIT** 작업 실행 됩니다. **MAX_DURATION** 시간은 항상 분 단위 이며 단어 **분** 생략할 수 있습니다.  
  
- ABORT_AFTER_WAIT = [**NONE** | **자체** | **블로 커가** }]  
+ ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
    
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.
   
@@ -880,9 +885,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>3. 모든 열린 및 닫힌 델타 행 그룹이 columnstore로 압축  
- 에 적용 되지 않습니다: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+ **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 및[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], REORGANIZE를 실행할 수 있습니다 (COMPRESS_ALL_ROW_GROUPS = ON) 각 열리고 닫힌 델타 행 그룹으로 압축된 된 행 그룹이 columnstore로 압축 합니다. deltastore가 비우고 모든 행을 columnstore로 압축 되도록 합니다. 이러한 작업에 하나 이상의 deltastore가 행을 저장 하므로 많은 삽입 작업을 수행 하는 후에 특히 유용 합니다.  
+ 다른 이름으로 다시 구성 명령을 (COMPRESS_ALL_ROW_GROUPS = ON) compreses 열고 각 닫은 델타 행 그룹으로 압축된 된 행 그룹이 columnstore로 합니다. deltastore가 비우고 모든 행을 columnstore로 압축 되도록 합니다. 이러한 작업에 하나 이상의 deltastore가 행을 저장 하므로 많은 삽입 작업을 수행 하는 후에 특히 유용 합니다.  
   
  REORGANIZE 결합 rowgroup이 최대 행 수 까지의 행 그룹을 채우는 \<1,024,576 = 합니다. 따라서 모든 열기 및 CLOSED 행 그룹이 압축 하면 않습니다 /fd만 행을 몇 개 압축 된 rowgroup 많이 합니다. 원하는 rowgroup이 수를 채움 압축 된 크기를 줄이고 쿼리 성능을 향상 시킬 수 있습니다.  
   

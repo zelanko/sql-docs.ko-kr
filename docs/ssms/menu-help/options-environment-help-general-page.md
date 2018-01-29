@@ -8,21 +8,23 @@ ms.service:
 ms.component: ssms-menu
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.ToolsOptionsPages.Environment.Help.General
+f1_keywords:
+- VS.ToolsOptionsPages.Environment.Help.General
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b12f4599658f6e9c3a330e96aa87b65090092478
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d5b9be182f2af8ab60469591d63fb847da20f244
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---help---general-page"></a>옵션(환경 - 도움말 - 일반 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **옵션** 대화 상자를 사용하여 설명서 집합을 선택하고 항목을 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 내부에 표시할지 또는 별도의 창으로 외부에 표시할지 여부를 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 노드의 **도움말** 을 확장한 다음 **일반**을 클릭합니다.  

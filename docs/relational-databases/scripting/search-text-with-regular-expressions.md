@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
@@ -32,7 +33,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **** 찾기 및 바꾸기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **찾기 및 바꾸기** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
   
 #### <a name="to-find-using-regular-expressions"></a>정규식을 사용하여 검색하려면  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 |이스케이프|\|백슬래시(\\) 뒤에 리터럴로 오는 문자와 대응합니다. 이렇게 하면 정규식 표기법에 사용된 문자(예: { 및 ^)를 찾을 수 있습니다. 예를 들어 \\^은 ^ 문자를 검색합니다.|  
 |태그가 지정된 식|{}|괄호로 묶은 식으로 태그가 지정된 식과 대응합니다.|  
 |C/C++ 식별자|:i|([a-zA-Z_$][a-zA-Z0-9_$]*) 식과 대응합니다.|  
-|따옴표 붙은 문자열|:q|(("[^"]*")&#124;('[^']\*')) 식과 대응합니다.|  
+|따옴표 붙은 문자열|:q|(("[^"]\*")&#124;('[^']\*')) 식과 대응합니다.|  
 |공백 또는 탭|:b|공백 또는 탭 문자와 대응합니다.|  
 |정수|:z|([0-9]+) 식과 대응합니다.|  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 12/21/2017
 |영문자|:c|([a-zA-Z]) 식과 대응합니다.|  
 |십진수|:d|([0-9]) 식과 대응합니다.|  
 |16진수|:h|([0-9a-fA-F]+) 식과 대응합니다.|  
-|유리수|:n|(([0-9]+.[0-9]*)&#124;([0-9]\*.[0-9]+)&#124;([0-9]+)) 식과 대응합니다.|  
+|유리수|:n|(([0-9]+.[0-9]\*)&#124;([0-9]\*.[0-9]+)&#124;([0-9]+)) 식과 대응합니다.|  
 |영문자열|:w|([a-zA-Z]+) 식과 대응합니다.|  
 |이스케이프|\e|유니코드 U+001B입니다.|  
 |Bell|\g|유니코드 U+0007입니다.|  
