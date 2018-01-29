@@ -8,22 +8,25 @@ ms.service:
 ms.component: ssms-menu
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.saveas
-helpviewer_keywords: Save As dialog box
+f1_keywords:
+- vs.saveas
+helpviewer_keywords:
+- Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8957cd743dd7f358d7f451f5d6e0879d040974d4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 16e9002516156238be7eac9faa203b64f0d23318
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-as"></a>다른 이름으로 저장
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장하는 데 사용됩니다. **파일** *<file>* ****  **저장** ( *<file>* 은 현재 항목의 이름)을 클릭하거나 코드 편집기에서 Alt+F, A를 누릅니다.  
