@@ -11,15 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: a5277d975380f135003bb7f8a11eec8641374f07
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 781622d51b7112d3a501652b7c320ab27e74ae35
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Azure 기계 학습에 대 한 가상 컴퓨터를 프로 비전
 
@@ -85,9 +85,7 @@ Azure Vm을 사용 하 여 처음 하려는 경우에 포털을 사용 하 고 �
 
 ### <a name="using-machine-learning-in-azure-sql-database"></a>기계 학습을 사용 하 여 Azure SQL 데이터베이스에서
 
-시작 하는 대체 2017, Azure SQL 데이터베이스 R을 사용 하 여 모델을 학습 하 고 예측 사용을 지원 합니다. 
-
-데이터베이스에서 R Services만, 미리 보기 기능으로 사용할 수 있는 이며 SQL Server의 온-프레미스 버전에 비해 몇 가지 제한 사항이 있습니다. 자세한 내용은 참조 [Azure SQL DB](../r/using-r-in-azure-sql-database.md)합니다.
+현재 Azure SQL에서는 R 지원의 미리 보기는 개발 작업에 대 한 일시 중단 됩니다. 자세한 내용은 참조 [Azure SQL DB](../r/using-r-in-azure-sql-database.md)합니다.
 
 ### <a name="can-i-upgrade-the-sql-server-version-on-a-virtual-machine"></a>가상 컴퓨터에서 SQL Server 버전을 업그레이드할 수 있습니까?
 

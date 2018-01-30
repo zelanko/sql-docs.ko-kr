@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a8a5e6517b0bbd44d17f07d5185722914ecfc51
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c2f754a253e2c33555712dd456002ed69b608188
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>SharePoint용 Power Pivot 추가 기능 설치 또는 제거(SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 응용 프로그램 서버 구성 요소 및 제공 하는 백 엔드 서비스의 컬렉션인 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스는 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 팜 합니다. SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 추가 기능(**spPowerpivot16.msi**)은 응용 프로그램 서버 구성 요소를 설치하는 데 사용되는 설치 관리자 패키지입니다.  
@@ -29,23 +29,6 @@ ms.lasthandoff: 01/08/2018
  **참고:** 이 항목에서는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 솔루션 파일 및 SharePoint 2016용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구 설치에 대해 설명합니다. 설치 후 구성 도구와 추가 기능에 대한 자세한 내용은 [파워 피벗 구성 및 솔루션 배포&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md) 항목을 참조하세요.  
   
  **spPowerPivot16.msi**를 다운로드하는 방법은 [Microsoft® SQL Server® 2016 Power Pivot® for Microsoft SharePoint®](https://www.microsoft.com/download/details.aspx?id=52675)를 참조하세요.  
-  
- **항목 내용**  
-  
--   [배경](#bkmk_background)  
-  
--   [spPowerPivot16.msi 설치 위치](#bkmk_where_to_install)  
-  
--   [요구 사항 및 필수 구성 요소](#bkmk_prereq)  
-  
--   [SharePoint용 Power Pivot을 설치하려면](#bkmk_install)  
-  
--   [SharePoint 2016용 Power Pivot 구성 도구를 사용하여 SharePoint 솔루션 파일 배포](#bkmk_deploy_solution)  
-  
--   [추가 기능 제거 또는 복구](#bkmk_remove_addin)  
-  
-
-**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 
   
 ##  <a name="bkmk_background"></a> 배경  
   
@@ -110,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 6.  **설치** 를 선택하여 설치하고 설치를 완료합니다.  
   
 ### <a name="command-line-installation"></a>명령줄 설치  
- 명령줄 설치의 경우 관리 권한으로 명령 프롬프트를 연 다음 **spPowerPivot16.msi**를 실행합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 명령줄 설치의 경우 관리 권한으로 명령 프롬프트를 연 다음 **spPowerPivot16.msi**를 실행합니다. 예를 들어  
   
  `Msiexec.exe /i spPowerPivot16.msi`항목을 참조하세요.  
   
@@ -203,7 +186,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
     msiexec.exe /f spPowerPivot16.msi  
     ```  
   
- 또는  
+ OR  
   
 -   제거하려면 다음 명령을 실행합니다.  
   

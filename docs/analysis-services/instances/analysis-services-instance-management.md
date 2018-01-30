@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cec454c2fe5dc832879a8a320b3e921c4f71ceb2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1540e9a5422b3a15081b1a25c813ef87ed8d6c0c
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services 인스턴스 관리
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services의 인스턴스는의 복사본은 **msmdsrv.exe** 운영 체제 서비스로 실행 되는 실행 파일입니다. 각 인스턴스는 동일한 서버에서 완전히 독립적이며 고유한 구성 설정, 사용 권한, 포트, 시작 계정, 파일 저장소 및 서버 모드 속성을 가지고 있습니다.  
+
+  Analysis Services 인스턴스는 운영 체제 서비스로 실행되는 **msmdsrv.exe** 실행 파일의 복사본입니다. 각 인스턴스는 동일한 서버에서 완전히 독립적이며 고유한 구성 설정, 사용 권한, 포트, 시작 계정, 파일 저장소 및 서버 모드 속성을 가지고 있습니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 각 인스턴스는 정의된 로그온 계정의 보안 컨텍스트에서 Windows 서비스인 Msmdsrv.exe로 실행됩니다.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 |링크|태스크 설명|  
 |----------|----------------------|  
-|[설치 후 구성&#40;Analysis Services&#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Analysis Services의 설치를 완료하거나 수정하는 필수 태스크와 선택적 태스크에 대해 설명합니다.|  
+|[설치 후 구성 &#40; Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Analysis Services의 설치를 완료하거나 수정하는 필수 태스크와 선택적 태스크에 대해 설명합니다.|  
 |[Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)|연결 문자열 속성, 클라이언트 라이브러리, 인증 방법 및 연결을 설정하거나 해제하는 단계에 대해 설명합니다.|  
 |[Analysis Services 인스턴스 모니터](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|성능 모니터 및 SQL Server Profiler를 사용하는 방법을 비롯하여 서버 인스턴스를 모니터링하는 데 유용한 도구와 기술에 대해 설명합니다.|  
 |[고가용성 및 확장성](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|Analysis Services 데이터베이스를 항상 사용 가능하고 확장 가능하도록 만드는 가장 일반적으로 사용되는 기술을 설명합니다. |  

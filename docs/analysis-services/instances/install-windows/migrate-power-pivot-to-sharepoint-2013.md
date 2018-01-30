@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aee364c04f3f9531948a834d555e34f34d838a6b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 518715f0084ac44b72f40eaabe95e21c8022e77d
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>SharePoint 2013으로 파워 피벗 마이그레이션
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,13 +31,9 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 응용 프로그램 데이터베이스를 SharePoint 2013 팜으로 마이그레이션할 수 있습니다. 이 항목에서는 데이터베이스 연결 업그레이드 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]관련 마이그레이션을 완료하기 위해 수행해야 하는 단계를 대략적으로 설명합니다.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
 ### <a name="migration-overview"></a>마이그레이션 개요  
   
-|1|2|3|4|  
+|1.|2|3|4|  
 |-------|-------|-------|-------|  
 |SharePoint 2013 팜 준비|데이터베이스 백업, 복사 및 복원|콘텐츠 데이터베이스 탑재|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 일정 마이그레이션|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|-SharePoint 중앙 관리<br /><br /> -Windows PowerShell|-SharePoint 응용 프로그램 페이지<br /><br /> -Windows PowerShell|  

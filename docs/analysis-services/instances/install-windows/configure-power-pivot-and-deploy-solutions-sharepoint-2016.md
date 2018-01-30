@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cfa636d3fcf08410ecaf2062aa7cd68d1e4aeaec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>파워 피벗 구성 및 솔루션 배포(SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에 배포 하 고 중간 계층 고급 기능을 구성에 설명 된 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능에서 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 포함 하 여 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 일정 데이터 새로 고침, 관리 대시보드 및 데이터 공급자. 구체적으로는 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성** 도구를 실행하여 다음 작업을 완료하는 방법을 설명합니다.  
@@ -33,18 +33,6 @@ ms.lasthandoff: 01/08/2018
 -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버를 설치하는 방법과 백 엔드 서비스에 대한 자세한 내용은 [파워 피벗 모드에서 Analysis Services 설치](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)를 참조하세요.  
   
  설치에 대 한 내용은 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구에 대 한 참조 [설치 또는 파워 피벗에 대 한 SharePoint 추가 기능 (SharePoint 2016) 제거](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)합니다.  
-  
- 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
-  
- [SharePoint 2016용 파워 피벗 구성 실행](#bkmk_run_configuration_tool)  
-  
- [파워 피벗 구성 확인](#bkmk_verify_powerpivot)  
-  
- [문제 해결](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> SharePoint 2016용 파워 피벗 구성 실행  
  **참고:** 다음 단계를 완료하려면 팜 관리자여야 합니다. 다음과 유사한 오류 메시지가 표시되는 경우  

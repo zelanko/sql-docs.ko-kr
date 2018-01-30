@@ -12,77 +12,77 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 14c64237e32d433592f44fcbd0d56bd661cc4940
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 버전에서 지원하는 Analysis Services 기능
+# <a name="analysis-services-features-supported-by-sql-server-editions"></a>SQL Server 버전에서 지 원하는 analysis Services 기능
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 이 항목에서는 SQL Server 2016 Analysis Services의 다양 한 버전에서 지 원하는 기능에 대 한 세부 정보를 제공 합니다. Evaluation 및 Developer 버전에서 지 원하는 기능, Enterprise edition을 참조 하십시오.
 
 ## <a name="analysis-services-servers"></a>Analysis Services (서버)
   
-|기능|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |확장 가능 공유 데이터베이스|예||||||예|  
-|데이터베이스 백업/복원 및 연결/분리|예|예|||||예|  
+|데이터베이스 백업/복원 및 연결/분리|예|사용자 계정 컨트롤|||||예|  
 |데이터베이스 동기화|예||||||예|  
 |Always On 장애 조치(failover) 클러스터 인스턴스|예<br /><br /> 운영 체제가 지원하는 최대 크기의 노드 수|예<br /><br /> 노드 2개 지원|||||예<br /><br /> 운영 체제가 지원하는 최대 크기의 노드 수|  
-|프로그래밍 기능(AMO, ADOMD.Net, OLEDB, XML/A, ASSL, TMSL)|예|예|||||예|  
+|프로그래밍 기능(AMO, ADOMD.Net, OLEDB, XML/A, ASSL, TMSL)|예|사용자 계정 컨트롤|||||예|  
   
 ## <a name="tabular-models"></a>테이블 형식 모델 
   
-|기능|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|계층 구조|예|예|||||예|  
-|KPI|예|예|||||예|  
+|계층 구조|예|사용자 계정 컨트롤|||||예|  
+|KPI|예|사용자 계정 컨트롤|||||예|  
 |큐브 뷰|예||||||예|  
-|Translations|예|예|||||예|  
-|DAX 계산, DAX 쿼리, MDX 쿼리|예|예|||||예|  
-|행 수준 보안|예|예|||||예|  
+|번역|예|사용자 계정 컨트롤|||||예|  
+|DAX 계산, DAX 쿼리, MDX 쿼리|예|사용자 계정 컨트롤|||||예|  
+|행 수준 보안|예|사용자 계정 컨트롤|||||예|  
 |여러 파티션|예||||||예|  
-|메모리 내 저장소 모드|예|예|||||예|  
+|메모리 내 저장소 모드|예|사용자 계정 컨트롤|||||예|  
 |DirectQuery 저장소 모드|예||||||예|  
 
 ## <a name="multidimensional-models"></a>다차원 모델 
   
-|기능|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |반가산적 측정값|예|아니오 <sup>1</sup>|||||예|  
-|계층|예|예|||||예|  
-|KPI|예|예|||||예|  
+|계층|예|사용자 계정 컨트롤|||||예|  
+|KPI|예|사용자 계정 컨트롤|||||예|  
 |큐브 뷰|예||||||예|  
-|동작|예|예|||||예|  
-|계정 인텔리전스|예|예|||||예|  
-|시간 인텔리전스|예|예|||||예|  
-|사용자 지정 롤업|예|예|||||예|  
-|큐브 쓰기 저장(writeback)|예|예|||||예|  
+|작업|예|사용자 계정 컨트롤|||||예|  
+|계정 인텔리전스|예|사용자 계정 컨트롤|||||예|  
+|시간 인텔리전스|예|사용자 계정 컨트롤|||||예|  
+|사용자 지정 롤업|예|사용자 계정 컨트롤|||||예|  
+|큐브 쓰기 저장(writeback)|예|사용자 계정 컨트롤|||||예|  
 |차원 쓰기 저장(Writeback)|예||||||예|  
-|셀 쓰기 저장(writeback)|예|예|||||예|  
-|드릴스루|예|예|||||예|  
-|고급 계층 유형(부모-자식 및 비정형 계층 구조)|예|예|||||예|  
-|고급 차원(참조 차원, 다 대 다 차원)|예|예|||||예|  
+|셀 쓰기 저장(writeback)|예|사용자 계정 컨트롤|||||예|  
+|드릴스루|예|사용자 계정 컨트롤|||||예|  
+|고급 계층 유형(부모-자식 및 비정형 계층 구조)|예|사용자 계정 컨트롤|||||예|  
+|고급 차원(참조 차원, 다 대 다 차원)|예|사용자 계정 컨트롤|||||예|  
 |연결된 측정값 및 차원|예|예  <sup>2</sup> |||||예|  
-|Translations|예|예|||||예|  
-|Aggregations|예|예|||||예|  
+|번역|예|사용자 계정 컨트롤|||||예|  
+|Aggregations|예|사용자 계정 컨트롤|||||예|  
 |여러 파티션|예|예, 최대 3|||||예|  
 |자동 관리 캐싱|예||||||예|  
-|사용자 지정 어셈블리(저장 프로시저)|예|예|||||예|  
-|MDX 쿼리 및 스크립트|예|예|||||예|  
-|DAX 쿼리|예|예|||||예|  
-|역할 기반 보안 모델|예|예|||||예|  
-|차원 및 셀 수준 보안|예|예|||||예|  
-|확장 가능 문자열 저장소|예|예|||||예|  
-|MOLAP, ROLAP 및 HOLAP 저장소 모델|예|예|||||예|  
-|이진 및 압축 XML 전송|예|예|||||예|  
+|사용자 지정 어셈블리(저장 프로시저)|예|사용자 계정 컨트롤|||||예|  
+|MDX 쿼리 및 스크립트|예|사용자 계정 컨트롤|||||예|  
+|DAX 쿼리|예|사용자 계정 컨트롤|||||예|  
+|역할 기반 보안 모델|예|사용자 계정 컨트롤|||||예|  
+|차원 및 셀 수준 보안|예|사용자 계정 컨트롤|||||예|  
+|확장 가능 문자열 저장소|예|사용자 계정 컨트롤|||||예|  
+|MOLAP, ROLAP 및 HOLAP 저장소 모델|예|사용자 계정 컨트롤|||||예|  
+|이진 및 압축 XML 전송|예|사용자 계정 컨트롤|||||예|  
 |밀어넣기 모드 처리|예||||||예|  
 |직접 쓰기 저장|예||||||예|  
 |측정값 식|예||||||예|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="power-pivot-for-sharepoint"></a>SharePoint용 PowerPivot  
   
-|기능|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |공유 서비스 아키텍처를 기반으로 하는 SharePoint 팜 통합|예||||||예|  
 |사용 보고|예||||||예|  
@@ -103,10 +103,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-mining"></a>데이터 마이닝  
   
-|기능 이름|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|기능 이름|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|표준 알고리즘|예|예|||||예|  
-|데이터 마이닝 도구(마법사, 편집기, 쿼리 작성기)|예|예|||||예|  
+|표준 알고리즘|예|사용자 계정 컨트롤|||||예|  
+|데이터 마이닝 도구(마법사, 편집기, 쿼리 작성기)|예|사용자 계정 컨트롤|||||예|  
 |교차 유효성 검사|예||||||예|  
 |마이닝 구조 데이터의 필터링된 하위 집합에 대한 모델|예||||||예|  
 |시계열: ARTXP 및 ARIMA 방식 간의 사용자 지정 혼합|예||||||예|  
@@ -120,8 +120,8 @@ ms.lasthandoff: 01/08/2018
 |시퀀스 예측|예||||||예|  
 |naïve Bayes, 신경망, 로지스틱 회귀 분석을 위한 다중 예측 대상|예||||||예|  
   
- ## <a name="see-also"></a>관련 항목:  
+ ## <a name="see-also"></a>참고 항목  
  [SQL Server 2016 제품 사양](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [SQL Server 2016 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [SQL Server 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

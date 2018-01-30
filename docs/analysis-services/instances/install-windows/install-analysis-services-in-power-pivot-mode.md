@@ -14,41 +14,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7528721b65101ee32285d57f18f93f98eeec9dae
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>파워 피벗 모드에서 Analysis Services 설치
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목의 절차를 안내해 단일 서버에 설치 하는 단계는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 배포 모드입니다. 이 단계에는 SharePoint 중앙 관리를 사용하는 구성 태스크 및 SQL Server 설치 마법사의 실행이 포합됩니다.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
-  
- **항목 내용**  
-  
- [배경](#bkmk_background)  
-  
- [필수 구성 요소](#bkmk_prereq)  
-  
- [1단계: SharePoint용 Power Pivot 설치](#InstallSQL)  
-  
- [2단계: Basic Analysis Services SharePoint 통합 구성](#bkmk_config)  
-  
- [3단계 통합 확인](#bkmk_verify)  
-  
- [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](#bkmk_firewall)  
-  
- [통합 문서 업그레이드 및 예약된 데이터 새로 고침](#bkmk_upgrade_workbook)  
-  
- [단일 서버 설치 그 이상 – Microsoft SharePoint용 Power Pivot](#bkmk_multiple_servers)  
   
 ##  <a name="bkmk_background"></a> 배경  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] (SharePoint용)은 SharePoint 2016 또는 SharePoint 2013 팜에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스를 제공하는 중간 계층 및 백 엔드 서비스의 모음입니다.  

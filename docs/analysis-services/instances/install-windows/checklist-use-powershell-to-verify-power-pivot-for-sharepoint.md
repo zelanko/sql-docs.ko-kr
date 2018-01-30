@@ -8,37 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b3c2fc5eb3c70f65c8453bd844a61db71464d39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 10f572b6bb4dc81e2fb2ad87af058b3a114bd711
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>검사 목록: PowerShell을 사용하여 SharePoint용 PowerPivot 확인
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]더 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치 또는 복구 작업이 서비스를 확인 하는 견고한 확인 테스트 성공 하지 않고 완료 되 고 데이터 모두 제대로 작동 합니다. 이 문서에서는 Windows PowerShell을 사용하여 이러한 단계를 수행하는 방법을 보여줍니다. 각 단계를 고유한 섹션에 포함하여 특정 태스크로 바로 이동할 수 있습니다. 예를 들어 유지 관리 또는 백업에 서비스 응용 프로그램 및 콘텐츠 데이터베이스를 예약하려면 이 항목의 [데이터베이스](#bkmk_databases) 섹션에서 스크립트를 실행하여 이름을 확인합니다.  
   
-|||  
-|-|-|  
-|![PowerShell 관련 콘텐츠](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")|전체 PowerShell 스크립트가 항목 맨 아래에 포함되어 있습니다. 전체 스크립트를 시작점으로 사용하여 전체 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 배포를 제작하는 데 사용자 지정 스크립트를 만듭니다.|  
+![PowerShell 관련 내용](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용") 전체 PowerShell 스크립트가 항목 맨 아래에 포함 되어 있습니다. 전체 스크립트를 시작점으로 사용하여 전체 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 배포를 제작하는 데 사용자 지정 스크립트를 만듭니다.
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
-  
- **이 주제에서**: 다음 목차의 문자 항목이 다이어그램 영역에 해당합니다. 다이어그램에서는 다음을 보여 줍니다.  
-  
-|||  
-|-|-|  
-|[PowerShell 환경 준비](#bkmk_prerequisites)<br /><br /> [증상 및 권장되는 작업](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows 서비스](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService 및 PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [파워 피벗 서비스 응용 프로그램 및 프록시](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [데이터베이스](#bkmk_databases)<br /><br /> [SharePoint 기능](#bkmk_features)<br /><br /> [타이머 작업](#bkmk_timer_jobs)<br /><br /> [상태 규칙](#bkmk_health_rules)<br /><br /> **(E)** [Windows 및 ULS 로그](#bkmk_logs)<br /><br /> [MSOLAP 공급자](#bkmk_msolap)<br /><br /> [ADOMD.Net 클라이언트 라이브러리](#bkmk_adomd)<br /><br /> [상태 데이터 수집 규칙](#bkmk_health_collection)<br /><br /> [솔루션](#bkmk_solutions)<br /><br /> [수동 확인 단계](#bkmk_manual)<br /><br /> [추가 리소스](#bkmk_more_resources)<br /><br /> [전체 PowerShell 스크립트](#bkmk_full_script)|![powerpivot의 powershell 확인](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "powerpivot의 powershell 확인")|  
   
 ##  <a name="bkmk_prerequisites"></a> PowerShell 환경 준비  
  이 섹션의 단계에서는 PowerShell 환경을 준비합니다. 현재 스크립트 환경에 구성된 방법에 따라 단계를 수행하지 않아도 될 수 있습니다.  
