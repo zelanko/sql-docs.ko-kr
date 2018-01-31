@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19af45b2e69490b3573dde39a81fabe103bcf4a0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 43a96940ba28fc76ae271ff0f10b2b3177635346
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT(SSIS 식)
   문자 식에서 가장 왼쪽 문자의 유니코드 코드 포인트를 반환합니다.  
@@ -43,7 +44,7 @@ CODEPOINT(character_expression)
 ## <a name="result-types"></a>결과 형식  
  DT_UI2  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *character_expression* 인수는 DT_WSTR 데이터 형식이어야 합니다.  
   
  *character_expression* 이 Null이거나 빈 문자열이면 CODEPOINT 결과도 Null이 됩니다.  
@@ -61,7 +62,7 @@ CODEPOINT("Mountain Bike")
 CODEPOINT(@Name)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.savedtspackage.f1
+f1_keywords:
+- sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b938ef910a1c1e8c302529364ab6cfddfec54fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS 패키지 저장(SQL Server 가져오기 및 내보내기 마법사)
   **패키지 저장 및 실행** 페이지에서 SSIS(SQL Server Integration Services) 패키지로 설정을 저장하도록 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **SSIS 패키지 저장**을 표시합니다. 이 페이지에서 마법사에서 만든 패키지를 저장하기 위한 추가 옵션을 지정합니다.  
@@ -66,7 +68,7 @@ Windows 통합 인증을 사용하여 서버에 연결합니다. 이 방법은 �
  **SQL Server 인증 사용**  
 SQL Server 인증을 사용하여 서버에 연결합니다.  
   
- **사용자 이름**  
+ **User name**  
 SQL Server 인증을 지정한 경우 사용자 이름을 입력합니다.  
   
  **암호**  
@@ -115,7 +117,7 @@ SQL Server 인증을 지정한 경우 암호를 입력합니다.
 ## <a name="whats-next"></a>다음 단계  
  패키지 저장 옵션을 추가로 지정한 후 다음 페이지는 **마법사 완료**입니다. 이 페이지에서는 마법사에서 선택한 내용을 검토하고 작업을 시작합니다. 자세한 내용은 [마법사 완료](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)를 참조하세요.  
  
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [패키지 저장](../../integration-services/save-packages.md)  
 [Integration Services(SSIS) 패키지 실행](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)

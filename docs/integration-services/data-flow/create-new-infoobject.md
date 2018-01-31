@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 142607d2ea3486749c0233c2d35692c682fd50e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 50f319341ba89890f67b77f698ff3411c9ab820e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-new-infoobject"></a>새 InfoObject 만들기
   **새 InfoObject 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 새 InfoObject를 만들 수 있습니다.  
@@ -129,13 +130,13 @@ ms.lasthandoff: 11/20/2017
  **InfoObject**  
  InfoObject의 이름을 표시합니다.  
   
- **Description**  
+ **설명**  
  InfoObject에 대한 설명을 표시합니다.  
   
  **InfoObject 유형**  
  InfoObject의 유형을 표시합니다. 다음 표에서는 유형에 사용할 수 있는 값을 나열합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |CHA|특징|  
 |KYF|주요 수치|  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
  **제거**  
  선택한 InfoObject를 **특성** 목록에서 제거합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 데이터용 InfoCube 만들기](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [InfoSource 만들기](../../integration-services/data-flow/create-infosource.md)   
  [트랜잭션 데이터용 InfoSource 만들기](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

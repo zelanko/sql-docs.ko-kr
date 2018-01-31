@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cbf125c6e69af8faac15d0aa0fe5a11afe72e41
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e625abfc3e1defea478c62a024587b4fe126866
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/20/2017
 |end_time|**datetimeoffset(7)**|단계가 종료된 시간입니다.|  
 |execution_path|**nvarchar(max)**|데이터 흐름 태스크의 실행 경로입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 뷰는 데이터 흐름 구성 요소의 각 실행 단계(예: 유효성 검사, 실행 전, 실행 후, PrimeOutput, ProcessInput)에 대한 행을 표시합니다. 각 행은 특정 실행 단계의 시작 및 종료 시간을 표시합니다.  
   
 ## <a name="example"></a>예제  
@@ -60,7 +61,7 @@ group by package_name, task_name, subcomponent_name, execution_path
 order by package_name, task_name, subcomponent_name, execution_path  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스에 대한 READ 권한  

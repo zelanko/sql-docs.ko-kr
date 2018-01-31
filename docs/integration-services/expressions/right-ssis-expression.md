@@ -8,21 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RIGHT function
+helpviewer_keywords:
+- RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dec985a3df57fead2a3b2462ba523fe6c29e615e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8927e53f0cb8bf082211a7f35a112c7ca626d83c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="right-ssis-expression"></a>RIGHT(SSIS 식)
   지정한 문자 식의 오른쪽에서부터 지정한 개수의 문자를 반환합니다.  
@@ -44,7 +46,7 @@ RIGHT(character_expression,integer_expression)
 ## <a name="result-types"></a>결과 형식  
  DT_WSTR  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *integer_expression* 이 *character_expression*의 길이보다 큰 경우 함수는 *character_expression*을 반환합니다.  
   
  *integer_expression* 이 0인 경우 함수는 길이가 0인 문자열을 반환합니다.  
@@ -76,7 +78,7 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [LEFT&#40;SSIS 식&#41;](../../integration-services/expressions/left-ssis-expression.md)   
  [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

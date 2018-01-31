@@ -8,7 +8,8 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 035483d63bdd8e28a5d0089f5a7dc783917aeacf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odata-source"></a>OData 원본
 SSIS 패키지의 OData 원본 구성 요소를 사용하여 Open Data Protocol(OData) 서비스에서 데이터를 사용할 수 있습니다. 구성 요소는 OData v3 및 v4 프로토콜을 지원합니다.  
@@ -97,7 +98,7 @@ OData 원본에는 다음 데이터 원본에 대한 지원이 포함됩니다.
 ## <a name="odata-source-editor-columns-page"></a>OData 원본 편집기(열 페이지)
   **OData 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력에 포함될 외부(원본) 열을 선택하고 출력 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **사용 가능한 외부 열**  
  데이터 원본에서 사용 가능한 원본 열의 목록을 표시합니다. 목록의 확인란을 사용하여 페이지의 아래쪽에 있는 테이블에 열을 추가하거나 제거할 수 있습니다. 선택한 열이 출력에 추가됩니다.  
   
@@ -110,7 +111,7 @@ OData 원본에는 다음 데이터 원본에 대한 지원이 포함됩니다.
 ## <a name="odata-source-editor-error-output-page"></a>OData 원본 편집기(오류 출력 페이지)
   **OData 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   
@@ -125,7 +126,7 @@ OData 원본에는 다음 데이터 원본에 대한 지원이 포함됩니다.
  **잘림**  
  잘림이 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
- **Description**  
+ **설명**  
  오류에 대한 설명을 표시합니다.  
   
  **이 값을 선택한 셀에 설정**  
@@ -134,7 +135,7 @@ OData 원본에는 다음 데이터 원본에 대한 지원이 포함됩니다.
  **적용**  
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OData 연결 관리자](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   

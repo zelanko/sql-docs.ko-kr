@@ -8,25 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f5a7d1211c5b3451b353a579551931e5e3cf538
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9dfd4fa6aecb1769a5e7ed2838cc1fb0b39f04f1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="look-up-infoobject"></a>InfoObject 조회
   **InfoObject 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 InfoObject를 조회할 수 있습니다. 사용할 수 있는 InfoObject 목록이 표시될 때 원하는 InfoObject를 선택하면 관련 옵션이 SAP BW 대상의 값으로 채워집니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 대상은 **InfoObject 조회** 대화 상자를 사용합니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하십시오.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 대상은 **InfoObject 조회** 대화 상자를 사용합니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  SAP BW용 Microsoft Connector 1.1 설명서는 SAP Netweaver BW 환경에 익숙한 것으로 가정합니다. SAP Netweaver BW 또는 SAP Netweaver BW 개체 및 프로세스 구성 방법에 대한 자세한 내용은 SAP 설명서를 참조하십시오.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/20/2017
  **이름**  
  조회할 InfoObject의 이름을 입력하거나 이름의 일부와 별표 와일드카드 문자(*)를 입력합니다. 모든 InfoObject를 포함하려면 별표 와일드카드 문자만 사용합니다.  
   
- **Description**  
+ **설명**  
  설명을 입력하거나 설명의 일부와 별표 와일드카드 문자(*)를 함께 입력합니다. 설명에 관계없이 모든 InfoObject를 포함하려면 별표 와일드카드 문자만 입력합니다.  
   
  **조회**  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/20/2017
   
  사용할 수 있는 InfoObject 목록이 표시될 때 원하는 InfoObject를 선택하면 관련 옵션이 대상의 값으로 채워집니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 데이터용 InfoCube 만들기](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [InfoSource 만들기](../../integration-services/data-flow/create-infosource.md)   
  [트랜잭션 데이터용 InfoSource 만들기](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

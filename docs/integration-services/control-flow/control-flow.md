@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 22d33e386fb522b7b01c65d4ed87b1dac7d47e14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 588f1ea0f1c61b6d0d6b793fac41409aa7933964
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="control-flow"></a>제어 흐름
   패키지는 제어 흐름과 하나 이상의 데이터 흐름(선택적)으로 구성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지의 구조를 제공하는 컨테이너, 기능을 제공하는 태스크 및 실행 개체, 컨테이너, 태스크를 정렬된 제어 흐름으로 연결하는 선행 제약 조건 등 3가지 유형의 제어 흐름 요소를 제공합니다.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/20/2017
   
      **제어 흐름** 탭의 디자인 화면에 태스크나 컨테이너를 추가하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 해당 항목에 연결선을 자동으로 추가합니다. 패키지에 두 개 이상의 항목, 태스크 또는 컨테이너가 포함된 경우 해당 연결선을 서로 연결하여 이를 하나의 제어 흐름으로 결합시킬 수 있습니다.  
   
-     두 항목 간의 연결선을 선행 제약 조건이라고 합니다. 선행 제약 조건은 연결된 두 항목 간의 관계를 정의합니다. 선행 제약 조건은 런타임에 태스크 및 컨테이너가 실행되는 순서와 태스크 및 컨테이너가 실행되는 조건을 지정합니다. 예를 들어 선행 제약 조건을 사용하면 특정 태스크가 성공해야 제어 흐름의 다음 태스크가 실행되도록 지정할 수 있습니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을 참조하세요.  
+     두 항목 간의 연결선을 선행 제약 조건이라고 합니다. 선행 제약 조건은 연결된 두 항목 간의 관계를 정의합니다. 선행 제약 조건은 런타임에 태스크 및 컨테이너가 실행되는 순서와 태스크 및 컨테이너가 실행되는 조건을 지정합니다. 예를 들어 선행 제약 조건을 사용하면 특정 태스크가 성공해야 제어 흐름의 다음 태스크가 실행되도록 지정할 수 있습니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을(를) 참조하세요.  
   
 -   연결 관리자 추가  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에는 디자인 화면을 관리하고 제어 흐름을 이해하기 쉽게 만드는 데 사용할 수 있는 여러 디자인 타임 기능도 포함됩니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 -   [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

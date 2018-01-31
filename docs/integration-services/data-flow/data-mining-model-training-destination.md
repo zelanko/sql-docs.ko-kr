@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe2df40e58f7a4164655d4b7970797c697fcff37
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: de320d943bf8159b211af64caa32cb37d09a7da9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-model-training-destination"></a>데이터 마이닝 모델 학습 대상
   데이터 마이닝 모델 학습 대상은 데이터 마이닝 모델 알고리즘을 통해 대상에서 수신하는 데이터를 전달함으로써 데이터 마이닝 모델을 학습합니다. 동일 데이터 마이닝 구조를 기반으로 모델을 작성한 경우에는 하나의 대상에서 여러 데이터 마이닝 모델의 성향을 습득할 수 있습니다. 자세한 내용은 [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) 및 [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md)를 참조하세요.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [데이터 마이닝 모델 학습 대상 사용자 지정 속성](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   
@@ -58,11 +59,11 @@ ms.lasthandoff: 11/20/2017
 ## <a name="data-mining-model-training-editor-connection-tab"></a>데이터 마이닝 모델 학습 편집기(연결 탭)
   **데이터 마이닝 모델 학습 편집기** 대화 상자의 **연결** 페이지를 사용하여 성향을 습득할 마이닝 모델을 선택할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **ODBC 대상 편집기**  
  기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 목록에서 선택하거나 아래에서 설명하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 새로 만들기 **단추를 사용하여 새** 연결을 만듭니다.  
   
- **단추를 사용하여 새**  
+ **새로 만들기**  
  **Analysis Services 연결 관리자 추가** 대화 상자를 사용하면 새 연결을 만들 수 있습니다.  
   
  **마이닝 구조**  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="data-mining-model-training-editor-columns-tab"></a>데이터 마이닝 모델 학습 편집기(열 탭)
   **데이터 마이닝 모델 학습 편집기** 대화 상자의 **열** 페이지를 사용하여 입력 열을 마이닝 구조의 열에 매핑할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 입력 열을 끌어 마이닝 구조 열에 매핑합니다.  
   

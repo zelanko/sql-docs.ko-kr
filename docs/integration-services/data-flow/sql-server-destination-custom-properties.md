@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61f7caddb59fc68399b274a71db5ee740d0f21c9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b591be99afa39117d61454b0cad2a2124d88ee2b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 대상 사용자 지정 속성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
@@ -38,8 +39,8 @@ ms.lasthandoff: 11/20/2017
 |BulkInsertKeepNulls|Boolean|대량 삽입 시 Null 값을 유지하는지 여부를 지정하는 값입니다. 이 속성의 기본값은 **False**입니다.|  
 |BulkInsertLastRow|정수|삽입할 마지막 행을 지정하는 값입니다. 이 속성의 기본값은 값이 할당되지 않음을 나타내는 **-1**입니다.|  
 |BulkInsertMaxErrors|정수|대량 삽입이 중지되기 전에 발생할 수 있는 오류 수를 지정하는 값입니다. 이 속성의 기본값은 값이 할당되지 않음을 나타내는 **-1**입니다.|  
-|BulkInsertOrder|문자열|정렬 열의 이름입니다. 각 열을 오름차순이나 내림차순으로 정렬할 수 있습니다. 여러 정렬 열을 사용하는 경우 열 이름을 쉼표로 구분합니다.|  
-|BulkInsertTableName|문자열|데이터를 복사할 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 또는 뷰입니다.|  
+|BulkInsertOrder|String|정렬 열의 이름입니다. 각 열을 오름차순이나 내림차순으로 정렬할 수 있습니다. 여러 정렬 열을 사용하는 경우 열 이름을 쉼표로 구분합니다.|  
+|BulkInsertTableName|String|데이터를 복사할 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 또는 뷰입니다.|  
 |BulkInsertTablock|Boolean|대량 삽입 작업을 수행하는 동안 테이블을 잠글지 여부를 지정하는 값입니다. 이 속성의 기본값은 **True**입니다.|  
 |DefaultCodePage|정수|데이터 원본에서 코드 페이지 정보를 사용할 수 없을 경우 사용할 코드 페이지입니다.|  
 |MaxInsertCommitSize|정수|일괄 처리 시 삽입할 최대 행 수를 지정하는 값입니다. 값이 0인 경우 모든 행이 단일 일괄 처리로 삽입됩니다.|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
  자세한 내용은 [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+## <a name="see-also"></a>참고 항목  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

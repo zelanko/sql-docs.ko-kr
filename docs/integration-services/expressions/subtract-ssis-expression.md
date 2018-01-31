@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5a677e5a997f1b6d4bb440a60afdfbd65f25d3e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db4e68bbba91309b7ab46889d88e79a5c230a5b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="--subtract-ssis-expression"></a>-(빼기)(SSIS 식)
   첫 번째 숫자 식에서 두 번째 식을 뺍니다.  
@@ -44,10 +45,10 @@ numeric_expression1 – numeric_expression2
 ## <a name="result-types"></a>결과 형식  
  두 인수의 데이터 형식에 따라 결정됩니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  식이 올바른 순서로 계산되도록 단항 빼기 식을 괄호로 묶으십시오.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  두 피연산자 중 하나가 Null이면 결과도 Null입니다.  
   
 ## <a name="expression-examples"></a>식 예  
@@ -69,7 +70,7 @@ ListPrice - StandardCost
 ListPrice - (ListPrice * @[Discount%])  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [연산자 우선 순위 및 계산 방향](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

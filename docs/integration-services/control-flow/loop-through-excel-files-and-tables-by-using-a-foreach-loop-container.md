@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41d1bbd66cb2dc73441e95cfa9573f60ced3358b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8344f5e7ec975af0dea3b35a218347b8c1d6224f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
   이 항목의 절차에서는 적절한 열거자와 함께 Foreach 루프 컨테이너를 사용하여 폴더 내의 Excel 통합 문서 또는 Excel 통합 문서 내의 테이블을 루핑하는 방법에 대해 설명합니다.  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/20/2017
   
 9. Excel 연결 관리자를 사용하는 Foreach 루프 컨테이너 내에 태스크를 만들어 지정된 통합 문서의 각 Excel 테이블에 같은 작업을 수행합니다. 스크립트 태스크를 사용하여 열거된 테이블 이름을 검사하거나 각 테이블을 작업할 경우에는 스크립트 태스크의 ReadOnlyVariables 속성에 문자열 변수를 추가해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [속성 식 추가 또는 변경](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)   

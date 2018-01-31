@@ -8,21 +8,23 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016)
+applies_to:
+- SQL Server (starting with 2016)
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fea00f80ddaa43ee5bcd5d26ddcc515d2f6e849a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>사용자 지정 구성 요소에서 멀티 타기팅 지원
  이제 SSDT(SQL Server Data Tools)에서 SSIS 디자이너를 사용하여 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로 하는 패키지를 만들고, 유지 관리하고, 실행할 수 있습니다. Visual Studio 2015용 SSDT를 다운로드하려면 [최신 SQL Server Data Tools 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요. 
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 -   로그 공급자
 -   데이터 흐름 구성 요소
 
-관리되는 확장의 경우 SSIS 디자이너는 지정된 대상 버전에 대한 확장 버전을 로드합니다. 예를 들어
+관리되는 확장의 경우 SSIS 디자이너는 지정된 대상 버전에 대한 확장 버전을 로드합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 -   대상 버전이 SQL Server 2012인 경우 디자이너는 2012 버전의 확장을 로드합니다.
 -   대상 버전이 SQL Server 2016인 경우 디자이너는 2016 버전의 확장을 로드합니다.
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: "67"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 83f4682136c01e29f034800656ee4bb27a8d62da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 02febb9ffc5fd20842bff97edc231005a64c30dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-task"></a>스크립트 태스크
   스크립트 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 제공하는 기본 제공 태스크와 변환에서 사용할 수 없는 기능을 수행하는 코드를 제공합니다. 또한 여러 개의 태스크와 변환을 사용하는 대신 여러 기능을 하나의 스크립트에 결합할 수 있습니다. 스크립트 태스크는 데이터 행마다 한 번 수행하는 대신 패키지에서 한 번 또는 열거된 개체마다 한 번 수행해야 하는 작업에 사용합니다.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
  스크립트 태스크를 패키지에 적합한 선택 항목으로 결정한 후에는 태스크에서 사용하는 스크립트를 개발하고 태스크 자체를 구성해야 합니다.  
   
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>태스크에서 사용하는 스크립트 작성 및 실행  
- 스크립트 태스크는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 를 스크립트 작성 환경과 스크립트 실행 엔진으로 사용합니다.  
+ 스크립트 태스크는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) as the environment in which you write the scripts and the engine that runs those scripts.  
   
  VSTA는 색 구분 기능이 포함된 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 편집기, IntelliSense, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 개체 탐색기 **등**환경의 모든 표준 기능을 제공합니다. 또한 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 개발 도구에서 사용하는 것과 동일한 디버거를 사용합니다. 스크립트 작업의 중단점이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 태스크 및 컨테이너의 중단점과 문제 없이 작동합니다. VSTA는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 프로그래밍 언어를 지원합니다.  
   
@@ -100,14 +101,14 @@ ms.lasthandoff: 11/20/2017
   
  스크립트 태스크에 대한 자세한 내용은 [Script Task](../../integration-services/control-flow/script-task.md) 및 [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)을 참조하십시오. 스크립트 태스크 프로그래밍 방법은 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)을 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **이름**  
  스크립트 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
 > [!NOTE]  
 >  태스크 이름은 패키지 내에서 고유해야 합니다.  
   
- **Description**  
+ **설명**  
  스크립트 태스크에 대한 설명을 입력합니다.  
   
 ## <a name="script-task-editor-script-page"></a>스크립트 태스크 편집기(스크립트 페이지)
@@ -118,7 +119,7 @@ ms.lasthandoff: 11/20/2017
   
  스크립트 태스크에 대한 자세한 내용은 [Script Task](../../integration-services/control-flow/script-task.md) 및 [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)을 참조하십시오. 스크립트 태스크 프로그래밍 방법은 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)을 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **ScriptLanguage**  
  태스크에 대한 스크립트 언어를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 중에서 선택합니다.  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d0287dd164b06ac94cadf264c35be1d2708e26d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5ff3fcef1362333dc1ac2de5774d63ce025b8557
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="multiple-files-connection-manager"></a>다중 파일 연결 관리자
   다중 파일 연결 관리자를 사용하면 패키지에서 기존 파일 및 폴더를 참조하거나 런타임에 파일 및 폴더를 만들 수 있습니다.  
@@ -41,10 +42,10 @@ ms.lasthandoff: 11/20/2017
   
  다음 표에서는 **FileUsageType**값을 나열합니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|다중 파일 연결 관리자에서 기존 파일을 사용합니다.|  
-|**1.**|다중 파일 연결 관리자에서 파일을 만듭니다.|  
+|**1**|다중 파일 연결 관리자에서 파일을 만듭니다.|  
 |**2**|다중 파일 연결 관리자에서 기존 폴더를 사용합니다.|  
 |**3**|다중 파일 연결 관리자에서 폴더를 만듭니다.|  
   

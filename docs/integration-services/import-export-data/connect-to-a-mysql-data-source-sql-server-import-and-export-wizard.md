@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fb97dd247146cd2535e4eee72c448fdd94c10de
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d011a5b39f6aded3bc305c922b5d2788026559e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>MySQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **MySQL** 데이터 원본에 연결하는 방법을 보여 줍니다. MySQL에 연결하는 데 사용할 수 있는 데이터 공급자는 여러 개입니다.
@@ -33,15 +34,15 @@ ms.lasthandoff: 11/20/2017
 [MySQL 커넥터](https://dev.mysql.com/downloads/connector/) 페이지에서 이 문서에 설명된 공급자 및 드라이버를 다운로드합니다.
 
 ## <a name="connect-to-mysql-with-the-net-framework-data-provider-for-mysql"></a>.NET Framework Data Provider for MySQL을 사용하여 MySQL에 연결
-마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **.NET Framework Data Provider for MySQL**을 선택하면 페이지에 공급자에 대한 옵션의 그룹화된 목록이 표시됩니다. 이들 중 대부분은 이해하기 어려운 이름이거나 생소한 설정입니다. 여기에서는 몇 가지 정보만 제공하면 됩니다. 다른 설정의 기본값은 무시할 수 있습니다.
+마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **.NET Framework Data Provider for MySQL**을 선택하면 페이지에 공급자에 대한 옵션의 그룹화된 목록이 표시됩니다. 이러한 속성 중 대부분은 이해하기 어려운 이름이거나 생소한 설정입니다. 여기에서는 몇 가지 정보만 제공하면 됩니다. 다른 설정의 기본값은 무시할 수 있습니다.
 
 > [!NOTE]
-> 이 데이터 공급자에 대한 연결 옵션은 MySQL이 원본 또는 대상인지 여부에 관계없이 동일합니다. 즉, 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지에 똑같은 옵션이 표시됩니다.
+> 이 데이터 공급자에 대한 연결 옵션은 MySQL이 원본 또는 대상인지 여부에 관계없이 동일합니다. 즉 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지 모두에서 동일한 옵션이 표시됩니다.
 
 |필수 정보|.Net Framework Data Provider for MySQL 속성|
 |---|---|
 |서버 이름|**Server**|
-|데이터베이스 이름|**데이터베이스**|
+|데이터베이스 이름|**데이터베이스 백업**|
 |인증(로그인) 정보|**사용자 ID** 및 **암호**|
 
 목록의 **ConnectionString** 필드에 연결 문자열을 입력할 필요가 없습니다. MySQL 서버 이름(**Server**) 및 로그인 정보에 대한 개별 값을 입력하면 마법사는 개별 속성과 값에서 연결 문자열을 어셈블합니다. 
@@ -60,7 +61,7 @@ ODBC 드라이버는 데이터 원본의 드롭다운 목록에 표시되지 않
 ### <a name="options-to-specify-mysql-odbc-driver"></a>지정할 옵션(MySQL ODBC 드라이버)
 
 > [!NOTE]
-> 이 데이터 공급자 및 ODBC 드라이버의 연결 옵션은 MySQL이 원본이건 대상이건 관계없이 동일합니다. 즉, 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지에 똑같은 옵션이 표시됩니다.
+> 이 데이터 공급자 및 ODBC 드라이버의 연결 옵션은 MySQL이 원본이건 대상이건 관계없이 동일합니다. 즉 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지 모두에서 동일한 옵션이 표시됩니다.
 
 MySQL ODBC 드라이버를 사용하여 MySQL에 연결하려면 다음 설정 및 값을 포함하는 연결 문자열을 조합합니다. 전체 연결 문자열의 형식은 설정 목록 바로 뒤에 나옵니다.
 
@@ -73,7 +74,7 @@ ODBC 드라이버의 이름입니다.
 **Server**  
 MySQL 서버의 이름입니다. 
 
-**데이터베이스**  
+**데이터베이스 백업**  
 MySQL 데이터베이스의 이름입니다.
 
 **UID** 및 **PWD**   
@@ -102,7 +103,7 @@ MySQL 데이터베이스의 이름입니다.
 ## <a name="other-data-providers-and-more-info"></a>다른 데이터 공급자 및 추가 정보
 여기에 나열되지 않은 데이터 공급자를 사용하여 MySQL에 연결하는 방법에 대한 내용은 [MySQL 연결 문자열](https://www.connectionstrings.com/mysql/)을 참조하세요. 또한 이러한 타사 사이트에는 이 페이지에서 설명하는 데이터 공급자 및 연결 매개 변수에 대한 자세한 정보가 포함되어 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

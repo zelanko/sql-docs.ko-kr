@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da7bf1509d8c49bfcd10b03e38b41f87ea80580c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6fb4c80904f506c28ad4a67e6df6c476a354a7cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="for-loop-container"></a>For 루프 컨테이너
   For 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **For** 루프 구조와 유사합니다. For 루프 컨테이너는 각 루프를 반복할 때마다 식을 계산하고 식이 **False**가 될 때까지 워크플로를 반복합니다.  
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
  For 루프 컨테이너 및 패키지에서의 해당 컨테이너 사용 방법은 [For Loop Container](../../integration-services/control-flow/for-loop-container.md)를 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **InitExpression**  
  필요에 따라 루프에서 사용하는 값을 초기화하는 식을 제공합니다.  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  개체 이름은 패키지 내에서 고유해야 합니다.  
   
- **Description**  
+ **설명**  
  For 루프 컨테이너에 대한 설명을 제공합니다.  
  
 ## <a name="use-expressions-with-the-for-loop-container"></a>For 루프 컨테이너와 함께 식 사용  
@@ -130,7 +131,7 @@ ms.lasthandoff: 11/20/2017
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 식 문법에는 평가, 초기화 및 대입에 사용되는 복잡한 식을 구현할 수 있는 완벽한 연산자 및 함수가 제공됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [제어 흐름](../../integration-services/control-flow/control-flow.md)   
  [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   

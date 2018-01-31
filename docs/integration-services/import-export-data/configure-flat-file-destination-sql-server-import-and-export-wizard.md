@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.configureflatfiledest.f1
+f1_keywords:
+- sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e312251291cbf2e8850b7900793b8d32e7c3d53b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9384b498ea78369278261a3334504e5d1b29b58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>플랫 파일 대상 구성(SQL Server 가져오기 및 내보내기 마법사)
   플랫 파일 대상을 선택한 경우 테이블을 복사하도록 지정하거나 쿼리를 지정한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **플랫 파일 대상 구성**을 표시합니다. 이 페이지에서 대상 플랫 파일에 대한 서식 옵션을 지정합니다. 필요에 따라 개별 열의 매핑을 검토하고 샘플 데이터를 미리 봅니다.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 11/20/2017
 |**탭 {t}**|열을 탭으로 구분합니다.|  
 |**세로 막대{&#124;}**|열을 세로 막대로 구분합니다.|  
 
-## <a name="optionally-review-column-mappings-and-preview-data"></a>필요에 따라 열 매핑을 검토하고 데이터 미리 보기
+## <a name="optionally-review-column-mappings-and-preview-data"></a>필요에 따라 열 매핑 검토 및 데이터 미리 보기
 
 **매핑 편집**   
 필요에 따라 **매핑 편집**을 클릭하여 선택한 테이블에 대한 **열 매핑** 대화 상자를 표시합니다. **열 매핑** 대화 상자를 사용하여 다음을 수행할 수 있습니다.

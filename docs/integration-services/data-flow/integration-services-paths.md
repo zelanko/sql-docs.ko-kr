@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-paths"></a>Integration Services 경로
   경로는 하나의 데이터 흐름 구성 요소의 출력을 다른 구성 요소의 입력에 연결함으로써 데이터 흐름의 두 구성 요소를 연결합니다. 경로에는 원본과 대상이 있습니다. 예를 들어 경로가 OLE DB 원본과 정렬 변환을 연결하는 경우 OLE DB 원본은 경로의 원본이며, 정렬 변환은 경로의 대상입니다. 원본은 경로가 시작되는 구성 요소이며, 대상은 경로가 끝나는 구성 요소입니다.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/20/2017
   
  **데이터 흐름 경로 편집기** 대화 상자의 **일반** 노드를 사용하여 경로의 이름을 지정하고 경로를 설명할 수 있을 뿐만 아니라 경로 주석 옵션을 지정할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **이름**  
  경로에 사용할 고유 이름을 제공합니다.  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
  **IdentificationString**  
  경로를 식별하는 문자열입니다. 위에서 입력한 이름으로 자동으로 생성됩니다.  
   
- **Description**  
+ **설명**  
  경로에 대한 설명을 입력합니다.  
   
  **PathAnnotation**  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="metadata-page---data-flow-path-editor"></a>메타데이터 페이지 - 데이터 흐름 경로 편집기
 **데이터 흐름 경로 편집기** 대화 상자의 **메타데이터** 페이지를 사용하여 경로 열의 메타데이터를 볼 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **경로 메타데이터**  
  열 메타데이터를 나열합니다. 열 데이터를 정렬하려면 열 제목을 클릭합니다.  
   
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="data-viewers-page---data-flow-path-editor"></a>데이터 뷰어 페이지 - 데이터 흐름 경로 편집기
 **데이터 흐름 경로 편집기** 대화 상자의 **데이터 뷰어** 페이지를 사용하여 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **이름**  
  데이터 뷰어를 나열합니다.  
   

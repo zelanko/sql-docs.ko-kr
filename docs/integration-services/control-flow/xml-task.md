@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 198bea7d4f2b566d34185156477179359eaf82bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d8826d464d7cdbfab3e17e2cca9b61ceed0ae304
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-task"></a>XML 태스크
   XML 태스크는 XML 데이터를 통한 작업 시 사용됩니다. 패키지는 이 태스크를 사용하여 XML 문서를 검색하고, XSLT(Extensible Stylesheet Language Transformations) 스타일시트 및 XPath 식을 통해 문서에 작업을 적용하고, 여러 문서를 병합하거나 업데이트된 문서를 파일 및 변수에 대해 유효성을 검사하고, 비교 및 저장할 수 있습니다.  
@@ -151,7 +152,7 @@ ms.lasthandoff: 11/20/2017
  **OperationType**  
  목록에서 작업 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**유효성 검사**|DTD(문서 유형 정의) 또는 XSD(XML 스키마 정의) 스키마와 비교하여 XML 문서의 유효성을 검사합니다. 이 옵션을 선택하면 아래의 **Validate**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**XSLT**|XML 문서에 대해 XSL 변환을 수행합니다. 이 옵션을 선택하면 아래의 **XSLT**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -163,14 +164,14 @@ ms.lasthandoff: 11/20/2017
  **SourceType**  
  XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **원본**  
- **Source** 를 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **Source**를 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추**(…)**를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **Source**를 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
@@ -199,7 +200,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -207,7 +208,7 @@ ms.lasthandoff: 11/20/2017
  **ValidationType**  
  유효성 검사 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**DTD**|DTD(문서 유형 정의)를 사용합니다.|  
 |**XSD**|XSD(XML 스키마 정의) 스키마를 사용합니다. 이 옵션을 선택하면 아래의 **ValidationType**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -224,14 +225,14 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  두 번째 XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **SecondOperand**  
- **SecondOperandType** 을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추**(…)**를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -270,14 +271,14 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  두 번째 XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **SecondOperand**  
- **SecondOperandType** 을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추**(…)**를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
@@ -308,7 +309,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -316,14 +317,14 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  두 번째 XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **SecondOperand**  
- **SecondOperandType** 을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추**(…)**를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
@@ -339,7 +340,7 @@ ms.lasthandoff: 11/20/2017
  **XPathOperation**  
  XPath 결과 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**Evaluation**|XPath 함수의 결과를 반환합니다.|  
 |**노드 목록**|선택한 노드를 XML 조각으로 반환합니다.|  
@@ -351,14 +352,14 @@ ms.lasthandoff: 11/20/2017
  **XPathStringSourceType**  
  XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **XPathStringSource**  
- **XPathStringSourceType** 을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **XPathStringSourceType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추**(…)**를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **XPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
@@ -388,7 +389,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -396,7 +397,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  두 번째 XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -419,7 +420,7 @@ ms.lasthandoff: 11/20/2017
  **DiffAlgorithm**  
  문서를 비교할 때 사용할 비교 알고리즘을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**자동**|XML 태스크에서 처리 속도가 빠른 알고리즘을 사용할 것인지 아니면 정확도가 높은 알고리즘을 사용할 것인지 결정합니다.|  
 |**빠름**|빠르지만 정확도가 떨어지는 비교 알고리즘을 사용합니다.|  
@@ -428,7 +429,7 @@ ms.lasthandoff: 11/20/2017
  **DiffOptions**  
  비교 작업에 적용할 비교 옵션을 설정합니다. 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|XML 선언을 비교할지 여부를 지정합니다.|  
 |**IgnoreDTD**|DTD(문서 유형 정의)를 무시할지 여부를 지정합니다.|  
@@ -463,7 +464,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -471,7 +472,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -509,7 +510,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -517,7 +518,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  

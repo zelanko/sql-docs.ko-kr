@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.previewdata.f1
+f1_keywords:
+- sql13.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3800757837068ba6a1608d1138399c79b84cae98
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4d0f0772336614e81e1b29c8a4e54fb73d2ed5c2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>데이터 미리 보기 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
   복사할 데이터를 지정한 후 필요에 따라 **미리 보기** 를 클릭하여 **데이터 미리 보기** 대화 상자를 열 수 있습니다. 이 페이지에서는 데이터 원본의 샘플 데이터 행을 최대 200개까지 미리 볼 수 있습니다. 이를 통해 원하는 데이터를 마법사가 복사하는지 확인할 수 있습니다.
@@ -48,5 +50,5 @@ ms.lasthandoff: 11/20/2017
 ## <a name="whats-next"></a>다음 단계  
  복사할 데이터를 미리 보고 **확인**을 클릭하면 **데이터 미리 보기** 대화 상자가 **원본 테이블 및 뷰 선택** 페이지 또는 **플랫 파일 대상 구성** 페이지로 돌아갑니다. 자세한 내용은 [원본 테이블 및 뷰 선택](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 또는 [플랫 파일 대상 구성](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)을 참조하세요.  
  
- ## <a name="see-also"></a>참고 항목
+ ## <a name="see-also"></a>관련 항목:
 [가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-destination"></a>ODBC 대상
   ODBC 대상은 ODBC 지원 데이터베이스 테이블로 데이터를 대량 로드합니다. ODBC 대상은 ODBC 연결 관리자를 사용하여 데이터 원본에 연결합니다.  
@@ -101,12 +102,12 @@ ms.lasthandoff: 11/20/2017
   
 -   **ODBC 대상 편집기**에서 **연결 관리자**를 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
   
 #### <a name="connection-manager"></a>ODBC 대상 편집기  
  목록에서 기존 ODBC 연결 관리자를 선택하거나 새로 만들기를 클릭하여 새 연결을 만듭니다. 어느 ODBC 지원 데이터베이스에나 연결할 수 있습니다.  
   
-#### <a name="new"></a>새로 만들기  
+#### <a name="new"></a>단추를 사용하여 새  
  **새로 만들기**를 클릭합니다. 새 연결 관리자를 만들 수 있는 **ODBC 연결 관리자 편집기 구성** 대화 상자가 열립니다.  
   
 #### <a name="data-access-mode"></a>데이터 액세스 모드  
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="odbc-destination-editor-mappings-page"></a>ODBC 대상 편집기(매핑 페이지)
   **ODBC 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
   
 #### <a name="available-input-columns"></a>사용 가능한 입력 열  
  사용 가능한 입력 열 목록입니다. 입력 열을 사용 가능한 대상 열에 끌어 놓아 열을 매핑할 수 있습니다.  
@@ -152,15 +153,15 @@ ms.lasthandoff: 11/20/2017
   
 -   **ODBC 대상 편집기**에서 **오류 출력**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
   
 #### <a name="inputoutput"></a>입/출력  
  데이터 원본의 이름을 표시합니다.  
   
-#### <a name="column"></a>열  
+#### <a name="column"></a>Column  
  사용되지 않습니다.  
   
-#### <a name="error"></a>오류  
+#### <a name="error"></a>Error  
  ODBC 대상에서 흐름 오류를 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
 #### <a name="truncation"></a>잘림  
