@@ -72,7 +72,7 @@ direct_distance*
 
 ## <a name="use-the-logistic-regression-model-for-scoring"></a>로지스틱 회귀 모델을 사용하여 채점하기
 
-이제 모델이 작성되었으므로 운전사가 특정 드라이브에서 팁을 받을 가능성이 있는지 여부를 예측할 수 있습니다.
+이제 모델이 작성되었으므로 드라이버가 특정 드라이브에서 팁을 받을 가능성이 있는지 여부를 예측할 수 있습니다.
 
 1. 우선 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 함수를 사용해서 채점 결과를 저장하기 위한 데이터 원본 개체를 정의합니다. (역주. 원본에 “scoring resul” 이라는 단어로 끝나는 문장을 가지고 있으며 이를 역자는 “scoring result” 라고 판단해 해석에 적용했습니다.)
 
@@ -84,7 +84,7 @@ direct_distance*
 
     + 예제를 더 간단하게 만들기 위해 로지스틱 회귀 모델의 입력은 모델 훈련에 사용했던 같은 특성 데이터 원본(`sql_feature_ds`)입니다. 보다 일반적으로는 채점을 위해 새로운 데이터를 가지고 있거나 혹은 검증용(test)과 훈련용(training)으로 일부 데이터를 따로 준비했을 것입니다.
   
-    + 예측 결과는 _taxiscoreOutput_ 테이블에 저장 됩니다. 이 테이블에 스키마는 rxSqlServerData를 사용할 때 정의되지 않습니다. rxPredict 출력에서 스키마를 가져옵니다.
+    + 예측 결과는 _taxiscoreOutput_ 테이블에 저장 됩니다. 이 테이블에 대한 스키마는 rxSqlServerData를 사용하여 생성될 때 정의되지 않았습니다. rxPredict 출력에서 스키마를 가져옵니다.
   
     + 예측된 값을 저장하는 테이블을 만들려면 rxSqlServer 데이터 함수를 실행하는 SQL 로그인에 데이터베이스의 DDL 권한이 있어야 합니다. 로그인이 테이블을 만들 수 없는 경우 문이 실패합니다.
 
@@ -99,21 +99,21 @@ direct_distance*
         writeModelVars = TRUE, overwrite = TRUE)
     ```
     
-    문이 성공하면 실행하는데 약간의 시간이 걸립니다. 완료되면 SQL Server Management Studio을 열어서 해당 테이블의 생성 여부 그리고 Score 열과 기타 예상되는 결과가 포함되어 있는지 확인합니다.
+    문이 성공하면 실행하는 데 약간의 시간이 걸립니다. 완료되면 SQL Server Management Studio를 열어서 해당 테이블의 생성 여부 그리고 Score 열과 기타 예상되는 결과가 포함되어 있는지 확인합니다.
 
 ## <a name="plot-model-accuracy"></a>모델 정확도 그리기
 
-모델의 정확도에 대한 아이디어를 얻으려면 Receiver Operating Curve를 그리기 위해 [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc)는 원격 계산 컨텍스트를 지원하는 RevoScaleR 패키지가 제공하는 새로운 기능 중 하나이므로 원격 다음 두 가지 옵션이 있습니다.
+모델의 정확도에 대한 아이디어를 얻기 위해 rxRoc(https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수를 사용하여 Receiver Operating Curve를 그릴 수 있습니다. rxRoc는 원격 계산 컨택스트를 지원하는 RevoScaleR에서 제공된 새 함수 중 하나이며 두 가지 옵션이 있습니다.
 
 + rxRoc 함수를 사용하여 원격 계산 컨텍스트에서 플롯을 실행한 다음 로컬 클라이언트에 플롯을 반환합니다.
 
-+ 데이터를 R 클라이언트 컴퓨터로 가져온 후 다른 R 플로팅 함수를 사용해서 성능 그래프를 만듭니다.
++ 데이터를 R 클라이언트 컴퓨터로 가져온 후 다른 R 플로팅 함수를 사용해서 성능 그래프를 만들 수도 있습니다.
 
 이 절에서는 두 가지 방법을 모두 시험합니다.
 
 ### <a name="execute-a-plot-in-the-remote-sql-server-compute-context"></a>원격(SQL Server) 계산 컨텍스트에서 플롯 실행
 
-1. rxRoc함수를 호출하고 앞에서 정의한 데이터를 입력으로 제공합니다.
+1. rxRoc 함수를 호출하고 앞에서 정의한 데이터를 입력으로 제공합니다.
 
     ```R
     scoredOutput = rxImport(scoredOutput);
@@ -172,7 +172,7 @@ direct_distance*
 
 그러나 외부 응용 프로그램에서 모델을 호출하려면 프로덕션에서 사용되는 데이터베이스에 모델을 저장해야 합니다. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에서는 학습된 모델이 **varbinary(max)** 형식의 단일 열에 이진 형식으로 저장됩니다.
 
-따라서 훈련된 모델을 R에서 SQL Server로 이동하는 단계는 다음과 같습니다:
+따라서 훈련된 모델을 R에서 SQL Server로 이동하는 단계는 다음과 같습니다.
 
 + 모델을 16진수 문자열로 직렬화
 
@@ -206,14 +206,14 @@ direct_distance*
     sqlQuery (conn, q);
     ```
 
-    테이블에 모델을 저장하는데 INSERT 문만 있으면 되지만 _PersistModel_ 처럼 저장 프로시저로 구성하는 것이 더 용이합니다.
+    테이블에 모델을 저장하는데 INSERT 문만 있으면 되지만 _PersistModel_처럼 저장 프로시저로 구성하는 것이 더 용이합니다.
 
     > [!NOTE]
     > 만일 "PersistModel 개체에 EXECUTE 권한이 거부되었습니다" 같은 오류가 발생하는 경우 로그인에 권한이 있는지 확인하세요. `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>` 같은 T-SQL 문을 실행하여 저장 프로시저에 명시적으로 권한을 줄 수 있습니다
 
 4. 모델을 만들고 데이터베이스에 저장한 후에는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 시스템 저장 프로시저를 사용해서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드로부터 모델을 직접 호출할 수 있습니다.
 
-    그런데 자주 사용하는 모델이라면 사용자 저장 프로시저 내에서 입력 쿼리와 모델 호출을 다른 매개변수와 함께 구성하는 것 더 용이합니다.
+    그런데 자주 사용하는 모델이라면 사용자 저장 프로시저 내에서 입력 쿼리와 모델 호출을 다른 매개변수와 함께 구성하는 것이 더 용이합니다.
 
     다음은 그러한 저장 프로시저의 전체 코드입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 R 모델을 보다 쉽게 관리하고 업데이트할 수 있도록 이와 같은 저장된 프로시저를 만드는 것이 좋습니다.
 
@@ -238,6 +238,6 @@ direct_distance*
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[R과 SQL을 사용 하 여 데이터 특성 만들기](walkthrough-create-data-features.md)
+[R과 SQL을 사용하여 데이터 특성 만들기](walkthrough-create-data-features.md)
 
 
