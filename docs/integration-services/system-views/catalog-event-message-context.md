@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb3d3f706bba3e6c0c6cbf88b5c2145e73fdaaeb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593931ad7aa343229cfac934cd2ce2648bdddb99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,17 +31,17 @@ ms.lasthandoff: 11/20/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|Context_id|bigint|오류 컨텍스트의 고유 ID입니다.|  
-|Event_message_id|bigint|컨텍스트와 관련된 메시지의 고유 ID입니다.|  
-|Context_depth|int|수준이 증가함에 따라 컨텍스트가 오류에서 더 멀어집니다. 오류가 발생하면 컨텍스트 수준이 1에서 시작합니다. 값 0은 실행이 시작되기 전의 패키지 상태를 나타냅니다.|  
+|Context_id|BIGINT|오류 컨텍스트의 고유 ID입니다.|  
+|Event_message_id|BIGINT|컨텍스트와 관련된 메시지의 고유 ID입니다.|  
+|Context_depth|ssNoversion|수준이 증가함에 따라 컨텍스트가 오류에서 더 멀어집니다. 오류가 발생하면 컨텍스트 수준이 1에서 시작합니다. 값 0은 실행이 시작되기 전의 패키지 상태를 나타냅니다.|  
 |Package_path|Nvarchar(max)|컨텍스트 원본의 패키지 경로입니다.|  
-|Context_type|smallint|컨텍스트의 원본인 개체의 유형입니다. 컨텍스트 유형 목록은 **주의** 섹션을 참조하십시오.|  
+|Context_type|SMALLINT|컨텍스트의 원본인 개체의 유형입니다. 컨텍스트 유형 목록은 **주의** 섹션을 참조하십시오.|  
 |Context_source_name|Nvarchar(4000)|컨텍스트의 원본인 개체의 이름입니다.|  
 |Context_source_id|Nvarchar(38)|컨텍스트의 원본인 개체의 고유 ID입니다.|  
 |Property_name|Nvarchar(4000)|컨텍스트의 원본에 연결된 속성의 이름입니다.|  
 |Property_value|Sql_variant|컨텍스트의 원본에 연결된 속성 값입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 표에서는 컨텍스트 유형을 나열합니다.  
   
 ||||  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 |70|변수|변수 값|  
 |80|ODBC 대상 편집기|연결 관리자의 속성입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  
   
 -   작업에 대한 READ 권한  

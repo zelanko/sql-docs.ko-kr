@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: edb3360d05e44131d6f30b510ed5dd120e2aeae7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b76a46e4946bcdcfb9431df9799de6a1aeff6030
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,17 +32,17 @@ ms.lasthandoff: 11/20/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |environment_id|**bigint**|환경의 고유 식별자(ID)입니다.|  
-|name|**sysname**|환경의 이름입니다.|  
+|NAME|**sysname**|환경의 이름입니다.|  
 |folder_id|**bigint**|환경이 있는 폴더의 고유 ID입니다.|  
 |description|**nvarchar(1024)**|환경에 대한 설명입니다. 이 값은 선택 사항입니다.|  
 |created_by_sid|**varbinary(85)**|환경을 만든 사용자의 보안 식별자(SID)입니다.|  
 |created_by_name|**nvarchar(128)**|환경을 만든 사용자의 이름입니다.|  
 |created_time|**datetimeoffset**|환경을 만든 날짜 및 시간입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 뷰는 카탈로그에 있는 각 환경에 대한 행을 표시합니다. 환경 이름은 해당 환경이 있는 폴더와 관련하여 고유해야 합니다. 예를 들어 `E1`이라는 환경은 카탈로그의 여러 폴더에 존재할 수 있지만 각 폴더에는 `E1`이라는 환경이 하나만 있어야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  
   
 -   환경에 대한 READ 권한  

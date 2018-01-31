@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7edd093ee4804c8c0c01a5638fd7df519f4564bc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6d1f8926d398a90214a5ad1903f04ac1e29d8854
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +46,9 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 저장 프로시저는 *property_value*가 각 *property_name*에 대해 유효한지 확인합니다.  
   
  이 저장 프로시저는 보류 중이거나, 지연되거나, 실행 중이거나, 일시 중지된 실행과 같은 활성 실행이 없는 경우에만 수행할 수 있습니다.  
@@ -56,7 +57,7 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
   
  카탈로그가 구성되면 작업 로그에 항목이 기록됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16fa5f45b6d4368816e7d5ea115d7f4cff6aa9cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ccb26f47a44f02f17cc0b17df078d7daf0b43977
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 |property_name|**nvarchar(256)**|카탈로그 속성의 이름입니다.|  
 |property_value|**nvarchar(256)**|카탈로그 속성 값입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 뷰는 각 카탈로그 속성에 대한 행을 표시합니다.
   
 |속성 이름|Description|  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 |**VERSION_CLEANUP_ENABLED**|값이 `TRUE`이면 **MAX_PROJECT_VERSIONS**에 해당하는 개수의 프로젝트 버전만 카탈로그에 저장되고 다른 모든 프로젝트 버전은 삭제됩니다. 값이 **FALSE**이면 모든 프로젝트 버전이 카탈로그에 저장됩니다. 참고: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업은 작업 정리를 수행합니다.|
 |||
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  
   
 -   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  

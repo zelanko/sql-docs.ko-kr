@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55b42783b60fbdb748a9102c2a703a9a6fa35d2d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6933aa64b1a2c660e7328238ad52442d500bd496
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ catalog.restore_project [ @folder_name = ] folder_name
   
  프로젝트를 지정된 폴더로 복원할 수 없는 경우 **NO RESULT SET**이 반환됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 READ 및 MODIFY 권한  
@@ -73,7 +74,7 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 -   사용자에게 적절한 권한이 없는 경우  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  프로젝트가 복원되면 모든 매개 변수에 기본값이 할당되고 모든 환경 참조가 변경되지 않은 상태로 유지됩니다. 카탈로그에 유지되는 프로젝트 버전의 최대 수는 [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 보기에 표시된 대로 **MAX_VERSIONS_PER_PROJECT** 카탈로그 속성에 따라 결정됩니다.  
   
 > [!WARNING]  

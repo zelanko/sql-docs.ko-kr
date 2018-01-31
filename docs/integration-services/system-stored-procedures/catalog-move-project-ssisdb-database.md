@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a7cc5e2b529f503c0a4182f43e1436fc355ab4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c59650d75d9abc212bedbb8a147592760049674
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - SSISDB 데이터베이스
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +51,9 @@ catalog.move_project [ @source_folder = ] source_folder
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   이동할 프로젝트에 대한 READ 및 MODIFY 권한과 대상 폴더에 대한 CREATE_OBJECTS 권한  
@@ -72,7 +73,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   사용자에게 적절한 권한이 없는 경우  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  프로젝트가 원본 폴더에서 대상 폴더로 이동되면 원본 폴더 및 해당 환경 참조에서 프로젝트가 삭제됩니다. 대상 폴더에는 동일한 프로젝트 및 환경 참조가 생성됩니다. 상대 환경 참조는 이동 후 다른 폴더로 확인되고, 절대 참조는 이동 후 같은 폴더로 확인됩니다.  
   
 > [!NOTE]  

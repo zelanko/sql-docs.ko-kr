@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efd64e5612f10b3521849ff2da6103d2975f4830
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9aa8e325ae43e1de7c5e29045caf465102966f52
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutablestatistics"></a>catalog.executable_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,17 +33,17 @@ ms.lasthandoff: 11/20/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|Statistics_id|bigint|데이터의 고유 ID입니다.|  
-|Execution_id|bigint|실행 인스턴스의 고유 ID입니다.<br /><br /> catalog.executions 뷰는 실행에 대한 추가 정보를 제공합니다. 자세한 내용은 [catalog.executions &#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)를 참조하세요.|  
-|Executable_id|bigint|패키지 구성 요소의 고유 ID입니다.<br /><br /> catalog.executables 뷰는 실행 파일에 대한 추가 정보를 제공합니다. 자세한 내용은 [catalog.executables](../../integration-services/system-views/catalog-executables.md)를 참조하세요.|  
+|Statistics_id|BIGINT|데이터의 고유 ID입니다.|  
+|Execution_id|BIGINT|실행 인스턴스의 고유 ID입니다.<br /><br /> catalog.executions 뷰는 실행에 대한 추가 정보를 제공합니다. 자세한 내용은 [catalog.executions &#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)를 참조하세요.|  
+|Executable_id|BIGINT|패키지 구성 요소의 고유 ID입니다.<br /><br /> catalog.executables 뷰는 실행 파일에 대한 추가 정보를 제공합니다. 자세한 내용은 [catalog.executables](../../integration-services/system-views/catalog-executables.md)를 참조하세요.|  
 |Execution_path|nvarchar(max)|구성 요소의 각 반복을 포함하는 패키지 구성 요소의 전체 실행 경로입니다.|  
 |Start_time|datetimeoffset(7)|실행 파일이 실행 전 단계에 진입하는 시간입니다.|  
 |End_time|datetimeoffset(7)|실행 파일이 실행 후 단계에 진입하는 시간입니다.|  
-|Execution_duration|int|실행 파일이 실행에 소비한 시간입니다. 값은 밀리초 단위입니다.|  
-|Execution_result|smallint|가능한 값은 다음과 같습니다.<br /><br /> 0(성공)<br /><br /> 1(실패)<br /><br /> 2(완료)<br /><br /> 3(취소됨)|  
+|Execution_duration|ssNoversion|실행 파일이 실행에 소비한 시간입니다. 값은 밀리초 단위입니다.|  
+|Execution_result|SMALLINT|가능한 값은 다음과 같습니다.<br /><br /> 0(성공)<br /><br /> 1(실패)<br /><br /> 2(완료)<br /><br /> 3(취소됨)|  
 |Execution_value|sql_variant|실행에 의해 반환되는 값입니다. 사용자 정의 값입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스에 대한 READ 권한  

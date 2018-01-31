@@ -8,7 +8,8 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 패키지를 완성 및 배포한 후 실행할 때 패키지 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="troubleshoot-errors-without-a-description"></a>설명이 없는 오류 문제 해결  
  설명이 없는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류가 발생할 경우 [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md) 에서 오류 번호로 조회하여 해당 오류에 대한 설명을 찾을 수 있습니다. 이 목록에는 현재 문제 해결 정보는 들어 있지 않습니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [데이터 흐름 디버깅](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>관련 내용  

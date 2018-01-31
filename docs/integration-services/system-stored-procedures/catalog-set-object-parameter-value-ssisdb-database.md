@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fe142dd0fdf6e896c6930528b563514c3aa2fb8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 216f5e4e3a68ead9a8353b2b35fef0b3d1717cba
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +67,9 @@ catalog.set_object_parameter_value [@object_type =] object_type
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 READ 및 MODIFY 권한  
@@ -90,7 +91,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   사용자에게 적절한 권한이 없는 경우  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 -   *value_type*이 지정되지 않으면 *parameter_value*에 대한 리터럴 값이 기본적으로 사용됩니다. 리터럴 값이 사용되는 경우 [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 뷰의 *value_set*가 `1`로 설정됩니다. NULL 매개 변수 값은 허용되지 않습니다.  
   

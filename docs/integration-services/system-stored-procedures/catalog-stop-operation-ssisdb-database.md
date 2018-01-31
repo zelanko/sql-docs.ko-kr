@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf33675e591fbb16417bc3b251a1a47693b59673
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5be9cd2a8687a85e4d66a323d347b59a180de5d0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogstopoperation-ssisdb-database"></a>catalog.stop_operation(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +43,9 @@ catalog.stop_operation [ @operation_id = ] operation_id
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스 또는 유효성 검사에 대한 READ 및 MODIFY 권한  
@@ -62,7 +63,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   작업이 이미 중지된 경우  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  한 번에 한 명의 사용자만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 작업을 중지해야 합니다. 여러 사용자가 작업을 중지하려고 하면 첫 번째 시도에 대해서는 저장 프로시저에서 성공(값 `0`)을 반환하지만 후속 시도에는 오류가 발생합니다.  
   
   

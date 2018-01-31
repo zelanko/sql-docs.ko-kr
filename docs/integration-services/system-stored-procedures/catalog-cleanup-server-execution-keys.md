@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1540c3396879dc12a5af6e321ec009700d7c658
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35ad9901e974ffa4283aed56b03e2cb75a66f178
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 READ 및 EXECUTE 권한과 해당되는 경우 참조된 환경에 대한 READ 권한  
@@ -68,10 +69,10 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 -   SSISDB 데이터베이스가 단일 사용자 모드가 아닙니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SQL Server 2012 서비스 팩 2에는 SERVER_OPERATION_ENCRYPTION_LEVEL 속성이 **internal.catalog_properties** 테이블에 추가되었습니다. 이 속성에는 두 가지 가능한 값이 있습니다.  
   
--   **PER_EXECUTION (1)** – 중요한 실행 매개 변수 및 실행 로그를 보호하는 데 사용되는 인증서 및 대칭 키는 각 실행에 대해 만들어집니다. 이 값은 기본값입니다. 각 실행에 대해 인증서/키가 생성되기 때문에 프로덕션 환경에서 성능 문제(교착 상태, 유지 관리 작업 실패 등…)가 발생할 수 있습니다. 하지만 이 설정은 다른 값(2)보다 높은 수준의 보안을 제공합니다.  
+-   **PER_EXECUTION (1)** – 중요한 실행 매개 변수 및 실행 로그를 보호하는 데 사용되는 인증서 및 대칭 키는 각 실행에 대해 만들어집니다. 이것은 기본값입니다. 각 실행에 대해 인증서/키가 생성되기 때문에 프로덕션 환경에서 성능 문제(교착 상태, 유지 관리 작업 실패 등…)가 발생할 수 있습니다. 하지만 이 설정은 다른 값(2)보다 높은 수준의 보안을 제공합니다.  
   
 -   **PER_PROJECT (2)** – 중요한 매개 변수를 보호하는 데 사용되는 인증서 및 대칭 키가 각 프로젝트에 대해 만들어집니다. 이것은 키와 인증서가 각 실행에 대해서 생성되지 않고 프로젝트에 대해 한 번 생성되기 때문에 PER_EXECUTION 수준보다 높은 성능을 제공합니다.  
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e020fef5d484af024ef822cf6fcc654e547b7b68
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e7bd491ec0bc33dbcc35a309208b37cf3893d062
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +67,9 @@ catalog.create_environment_variable [@folder_name =] folder_name
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   환경에 대한 READ 및 MODIFY 권한  
@@ -86,7 +87,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   사용자에게 적절한 권한이 없는 경우  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  환경 변수를 사용하면 패키지 실행 시 사용할 프로젝트 매개 변수나 패키지 매개 변수에 효율적으로 값을 할당할 수 있습니다. 환경 변수는 매개 변수 값이 구성을 활성화합니다. 변수 이름은 환경 내에서 고유해야 합니다.  
   
  이 저장 프로시저는 변수의 데이터 형식에 대한 유효성을 검사하여 해당 변수가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에서 지원되는지 확인합니다.  
@@ -106,7 +107,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
 |**단일**|정밀 숫자: **decimal**, **numeric**, 근사 숫자: **float**, **real**|  
-|**문자열**|**varchar**, **nvarchar**, **char**|  
+|**String**|**varchar**, **nvarchar**, **char**|  
 |**UInt32**|**int**(**int**는 **Uint32**에 사용할 수 있는 가장 가까운 매핑입니다.)|  
 |**UInt64**|**bigint**(**int**는 **Uint64**에 사용할 수 있는 가장 가까운 매핑입니다.)|  
   

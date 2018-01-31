@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="package-management-ssis-service"></a>패키지 관리(SSIS 서비스)
   패키지 관리에는 모니터링, 관리, 패키지 가져오기 및 내보내기가 포함됩니다.  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
   
     -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에서 가져오려면 **SSIS 패키지 저장소** 옵션을 선택하고 서버를 지정합니다.  
   
-         찾아보기 단추 **(…)**를 클릭하고 가져올 패키지를 선택한 후 **확인**을 클릭합니다.  
+         찾아보기 단추**(…)**를 클릭하고 가져올 패키지를 선택한 후 **확인**을 클릭합니다.  
   
 7.  선택적으로 패키지 이름을 업데이트합니다.  
   
@@ -190,14 +191,14 @@ ms.lasthandoff: 11/20/2017
   
          찾아보기 단추 **(…)**를 클릭하고 **SSIS 패키지** 폴더를 확장하여 패키지를 저장하려는 폴더를 선택합니다. 선택적으로 **패키지 이름** 입력란에 패키지의 새 이름을 입력합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  패키지의 보호 수준을 업데이트하려면 찾아보기 단추 **(…)** 를 클릭하고 **패키지 보호 수준** 대화 상자를 사용하여 다른 보호 수준을 선택합니다. **암호로 중요한 데이터 암호화** 또는 **암호로 모든 데이터 암호화** 옵션을 선택한 경우 암호를 입력하고 확인합니다.  
+7.  패키지의 보호 수준을 업데이트하려면 찾아보기 단추**(…)**를 클릭하고 **패키지 보호 수준** 대화 상자를 사용하여 다른 보호 수준을 선택합니다. **암호로 중요한 데이터 암호화** 또는 **암호로 모든 데이터 암호화** 옵션을 선택한 경우 암호를 입력하고 확인합니다.  
   
 8.  **확인** 을 클릭하여 내보내기를 완료합니다.  
 
 ## <a name="import-package-dialog-box-ui-reference"></a>패키지 가져오기 대화 상자 UI 참조
   **에서 사용 가능한** 패키지 가져오기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 가져오고 해당 패키지의 보호 수준을 설정 또는 수정할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **패키지 위치**  
  가져온 패키지를 저장할 저장소 위치 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
@@ -219,7 +220,7 @@ ms.lasthandoff: 11/20/2017
  **인증 유형**  
  인증 유형을 선택합니다.  
   
- **사용자 이름**  
+ **User name**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름을 입력합니다.  
   
  **암호**  
@@ -237,7 +238,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="export-package-dialog-box-ui-reference"></a>패키지 내보내기 대화 상자 UI 참조
   **에서 사용 가능한** 패키지 내보내기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 다른 위치로 내보내고 필요에 따라 패키지의 보호 수준을 수정할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **패키지 위치**  
  패키지를 내보낼 저장소 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
@@ -259,7 +260,7 @@ ms.lasthandoff: 11/20/2017
  **인증 유형**  
  인증 유형을 선택합니다.  
   
- **사용자 이름**  
+ **User name**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름을 입력합니다.  
   
  **암호**  
@@ -289,7 +290,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="packages-stored-in-the-file-system"></a>파일 시스템에 저장된 패키지  
  파일 시스템에 저장한 패키지의 백업은 서버의 파일 시스템 백업 계획에 포함되어야 합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 구성 파일의 기본 이름은 MsDtsSrvr.ini.xml이며 서비스에서 모니터링하는 서버의 폴더를 나열합니다. 이러한 폴더는 백업해야 합니다. 또한 패키지를 서버의 다른 폴더에 저장할 수 있으며 이러한 폴더도 백업에 포함해야 합니다.  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   

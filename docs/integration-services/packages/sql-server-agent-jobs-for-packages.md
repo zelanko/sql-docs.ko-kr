@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4b24dfbb66204f7506cac9612f46e04836f70e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6b43c3a8b3d438bb211570921e06bb2085c0d022
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 실행을 자동화하고 예약할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장된 패키지를 예약할 수 있습니다.  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/20/2017
   
      **패키지 원본**: SSIS 카탈로그  
   
-    |탭|옵션|  
+    |탭|변수|  
     |---------|-------------|  
     |**패키지**|**Server**<br /><br /> SSISDB 카탈로그를 호스팅하는 데이터베이스 서버 인스턴스의 이름을 입력하거나 선택합니다.<br /><br /> **SSIS 카탈로그** 가 패키지 원본이면 Microsoft Windows 사용자 계정을 사용하여 서버에 로그온할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용할 수 없습니다.|  
     ||**패키지**<br /><br /> 줄임표 단추를 클릭하고 패키지를 선택합니다.<br /><br /> **개체 탐색기** 에서 **Integration Services 카탈로그**노드의 하위 폴더에 있는 패키지를 선택합니다.|  
@@ -155,11 +156,11 @@ ms.lasthandoff: 11/20/2017
     ||**오류 덤프**<br /><br /> 패키지 실행 시 오류가 발생할 때 덤프 파일을 생성할지 여부를 지정합니다. 이 파일은 문제를 해결하는 데 도움이 될 수 있는 패키지 실행에 대한 정보를 제공합니다. 이 옵션을 선택하고 실행 중에 오류가 발생하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 .mdmp 파일(이진 파일) 및 .tmp 파일(텍스트 파일)을 만듭니다. 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 *\<drive>:*\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 파일을 저장합니다.|  
     ||**32비트 런타임**<br /><br /> 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 64비트 컴퓨터에서 32비트 버전의 dtexec 유틸리티를 사용하는 패키지의 실행 여부를 나타냅니다.<br /><br /> 예를 들어 64비트 버전에서 사용할 수 없는 네이티브 OLE DB 공급자를 패키지에서 사용하는 경우 32비트 버전의 dtexec를 사용하여 패키지를 실행해야 합니다. 자세한 내용은 [Integration Services에 대한 64비트 고려 사항](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)을 참조하십시오.<br /><br /> 기본적으로 **SQL Server Integration Services 패키지** 작업 단계 유형을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시스템에서 자동으로 호출된 dtexec 유틸리티 버전을 사용하여 패키지를 실행합니다. 시스템은 컴퓨터 프로세서와 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 버전에 따라 32비트 또는 64비트 버전 유틸리티를 호출합니다.|  
   
-     **패키지 원본**: SQL서버, SSIS 패키지 저장소 또는 파일 시스템  
+     **패키지 원본**:  SQL서버, SSIS 패키지 저장소 또는 파일 시스템  
   
      패키지에 설정하는 대부분의 옵션이 SQL Server, SSIS 패키지 저장소 또는 파일 시스템에 저장되며 **dtexec** 명령 프롬프트 유틸리티의 명령줄 옵션에 해당합니다. 유틸리티와 명령줄 옵션에 대한 자세한 내용은 [dtexec 유틸리티](../../integration-services/packages/dtexec-utility.md)를 참조하세요.  
   
-    |탭|옵션|  
+    |탭|변수|  
     |---------|-------------|  
     |**패키지**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지의 탭 옵션입니다.|**Server**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대해 데이터베이스 서버 인스턴스의 이름을 입력하거나 선택합니다.|  
     ||**Windows 인증 사용**<br /><br /> Microsoft Windows 사용자 계정으로 서버에 로그온하려면 이 옵션을 선택합니다.|  
@@ -190,7 +191,7 @@ ms.lasthandoff: 11/20/2017
     > [!TIP]  
     >  일정에 이름을 지정할 때 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 일정과 쉽게 구분할 수 있도록 고유하고 설명이 포함된 이름을 사용하는 것이 좋습니다.  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [프로젝트 및 패키지 실행](deploy-integration-services-ssis-projects-and-packages.md)  
 
 ## <a name="external-resources"></a>외부 리소스  

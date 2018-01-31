@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233eed5038eb8a2f63e89cbadc5ea738398b8d8b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3d621273b3b45b25158d494fd9bee3d7241e1d3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,17 +73,17 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  매개 변수의 값입니다. *parameter_value*는 **sql_variant**입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  주어진 실행에 사용된 매개 변수 값을 확인하려면 catalog.execution_parameter_values 뷰를 쿼리하십시오.  
   
  패키지 실행 중에 기록되는 정보의 범위를 지정하려면, *parameter_name*을 LOGGING_LEVEL로 설정하고 *parameter_value*를 다음 값 중 하나로 설정합니다.  
   
  *object_type* 매개 변수를 50으로 설정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|0|없음<br /><br /> 로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
-|1.|Basic<br /><br /> 사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 이 값은 기본값입니다.|  
+|0|InclusionThresholdSetting<br /><br /> 로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
+|1|Basic<br /><br /> 사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 이것은 기본값입니다.|  
 |2|성능<br /><br /> 성능 통계와 OnError 및 OnWarning 이벤트만 기록됩니다.|  
 |3|자세히<br /><br /> 사용자 지정 이벤트 및 진단 이벤트를 포함한 모든 이벤트가 기록됩니다. <br />사용자 지정 이벤트는 Integration Services 태스크에 의해 기록되는 이벤트를 포함합니다. 자세한 내용은 [사용자 지정된 로깅 메시지](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)를 참조하세요.|  
 |4|런타임 계보<br /><br /> 데이터 흐름에서 계보를 추적하는 데 필요한 데이터를 수집합니다.|  
@@ -95,7 +96,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*execution_id*|실행 인스턴스의 고유 식별자|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_ERROR|  
-|*parameter_value*|1.|  
+|*parameter_value*|1|  
   
  패키지 실행 도중 이벤트 발생 시 Integration Services 서버가 덤프 파일을 생성하도록 지정하려면 실행되지 않은 실행 인스턴스에 대해 다음 매개 변수 값을 설정하십시오.  
   
@@ -104,7 +105,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*execution_id*|실행 인스턴스의 고유 식별자|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_EVENT|  
-|*parameter_value*|1.|  
+|*parameter_value*|1|  
   
  패키지 실행 도중 Integration Services 서버에서 덤프 파일이 생성되도록 하는 이벤트를 지정하려면 실행되지 않은 실행 인스턴스에 대해 다음 매개 변수 값을 설정하십시오. 세미콜론을 사용하여 여러 이벤트 코드를 구분합니다.  
   
@@ -139,9 +140,9 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스에 대한 READ 및 MODIFY 권한  
@@ -161,7 +162,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
   
 -   매개 변수 값의 데이터 형식이 매개 변수의 데이터 형식과 일치하지 않는 경우  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [catalog.execution_parameter_values&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)   
  [패키지 실행을 위한 덤프 파일 생성](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   

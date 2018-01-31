@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9fa0b3192455d022288100f2997309598dae774b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8ab77d362f9758e21a1bce78c31bc066d39f51c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **플랫 파일**(텍스트 파일) 데이터 원본에 연결하는 방법을 보여 줍니다. 플랫 파일의 경우, 마법사의 이 두 페이지는 다양한 옵션 집합을 제시하므로 이 항목에서는 플랫 파일 원본과 플랫 파일 대상을 별도로 설명합니다.
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
  **머리글 행 구분 기호**  
  구분 기호 목록에서 머리글 행 구분 기호를 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|머리글 행을 캐리지 리턴-줄 바꿈 조합으로 구분합니다.|  
 |**{CR}**|머리글 행을 캐리지 리턴으로 구분합니다.|  
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/20/2017
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|행이 캐리지 리턴으로 구분됩니다.|  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/20/2017
  **열 구분 기호**  
  사용 가능한 열 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|열이 캐리지 리턴으로 구분됩니다.|  
@@ -181,7 +182,7 @@ ms.lasthandoff: 11/20/2017
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|행이 캐리지 리턴으로 구분됩니다.|  
@@ -222,7 +223,7 @@ ms.lasthandoff: 11/20/2017
 **새로 만들기**  
  **새로 만들기**를 클릭하여 새 열을 추가합니다. 기본적으로 **새로 만들기** 단추는 목록 끝에 새 열을 추가합니다. 이 단추에는 드롭다운 목록에서 사용할 수 있는 다음 옵션도 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**열 추가**|목록 끝에 새 열을 추가합니다.|  
 |**앞에 삽입**|선택한 열 앞에 새 열을 삽입합니다.|  
@@ -302,7 +303,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE] 
 > 텍스트 한정자를 선택한 후에는 **없음** 옵션을 다시 선택할 수 없습니다. 텍스트 한정자의 선택을 취소하려면 **없음** 을 입력합니다.  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

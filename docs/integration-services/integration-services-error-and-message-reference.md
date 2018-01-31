@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f3b9bd353109d4e9d96597ad7ac944423b4d9b54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 16f1793a182cf762882a90889ec8576c9fc6d99e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
   다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
@@ -2082,8 +2083,8 @@ ms.lasthandoff: 12/21/2017
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|태스크 "%1"을(를) 실행하지 못했습니다.|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|파일/프로세스 "%1"이(가) 경로에 없습니다.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|제목이 비어 있습니다.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|"받는 사람" 줄의 주소 형식이 잘못되었습니다. "\@" 기호가 없거나 잘못되었습니다.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|"보낸 사람" 줄의 주소 형식이 잘못되었습니다. "\@" 기호가 없거나 잘못되었습니다.|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|"받는 사람" 줄의 주소 형식이 잘못되었습니다. "@" 기호가 없거나 잘못되었습니다.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|"보낸 사람" 줄의 주소 형식이 잘못되었습니다. "@" 기호가 없거나 잘못되었습니다.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|두 XML 문서가 다릅니다.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|DTD 유효성 검사에서는 XML 문서의 DOCTYPE 줄에 정의된 DTD 파일이 사용됩니다. 속성 "%1"에 할당된 문서는 사용되지 않습니다.|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|"%1"의 유효성을 검사하지 못했습니다.|  

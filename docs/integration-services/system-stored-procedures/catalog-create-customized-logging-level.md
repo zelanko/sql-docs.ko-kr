@@ -8,25 +8,26 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94b0b41b2f6d7e87bccbd53a58a50c44c0ee29e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 027e2790bc59e3e9839de83c98984c19df1a982e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  새 사용자 지정된 로깅 수준을 만듭니다. 사용자 지정된 로깅 수준에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
+  새 사용자 지정된 로깅 수준을 만듭니다. 사용자 지정 로깅 수준에 대한 자세한 내용은 [Integration Services &#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -78,7 +79,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  *level_id*는 **bigint**입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  Transact-SQL에서 *profile_value* 또는 *event_value* 인수에 여러 값을 결합하려면 다음 예제를 따릅니다. 예를 들어 OnError (8) 및 DiagnosticEx (15) 이벤트를 캡처하기 위해 *event_value*를 계산하는 수식은 `2^8 + 2^15 = 33024`입니다.  
   
 ## <a name="return-codes"></a>반환 코드  
@@ -87,9 +88,9 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  저장 프로시저가 실패하면 오류를 반환합니다.  
   
 ## <a name="result-set"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   **ssis_admin** 데이터베이스 역할의 멤버 자격  

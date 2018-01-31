@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28f72cd6a5ea50bdc310d89bf16dbe498e06a638
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a46e7c75cc67eefe81329eebe943fca862dfbb48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 |property_name|**nvarchar(256)**|scale out 마스터 속성의 이름입니다.|  
 |property_value|**nvarchar(max)**|scale out 마스터 속성의 값입니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
 이 보기는 각 scale out 마스터 속성의 행을 표시합니다. 이 뷰에 표시되는 속성은 다음과 같습니다.
 
 |속성 이름|Description|  
@@ -46,5 +47,5 @@ ms.lasthandoff: 11/20/2017
 |**MASTER_SERVICE_PORT**|Scale Out 마스터 엔드포인트의 포트입니다.|
 |**SSLCERT_THUMBPRINT**|Scale Out 마스터 인증서의 지문입니다.|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 공용 데이터베이스 역할의 모든 구성원은 이 보기에 대한 읽기 권한을 갖습니다. 

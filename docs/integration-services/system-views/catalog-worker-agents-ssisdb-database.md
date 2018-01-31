@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a74c1d81b2defff8b3d5566c221e1df102c136e2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5b3d7ae2666a6adc774093a8496863685457e7e6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +40,10 @@ ms.lasthandoff: 11/20/2017
 |UserAccount|**nvarchar(256)**|Scale Out Worker 서비스를 실행하는 사용자 계정입니다.|
 |LastOnlineTime|**datetimeoffset(7)**|Scale Out Worker가 마지막으로 온라인 상태인 시간입니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
 이 보기는 SSISDB 카탈로그와 함께 작동하는 Scale Out 마스터에 연결하는 각 Scale Out Worker의 행을 표시합니다.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 이 뷰를 보려면 다음 권한 중 하나가 필요합니다.
 
 - **ssis_admin** 데이터베이스 역할에 대한 멤버 자격
