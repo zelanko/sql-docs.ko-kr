@@ -1,12 +1,13 @@
-# [Analysis Services란?](analysis-services.md)
+# [SQL Server Analysis Services 정보](analysis-services.md)
 
 # 개요
 ## [SQL Server Analysis Services 2016의 새로운 기능](what-s-new-in-analysis-services.md)  
 ## [SQL Server Analysis Services 2017의 새로운 기능](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [새로운 또는 업데이트 된 문서](new-updated-analysis-services.md)
 ## [도구 및 응용 프로그램](tools-and-applications-used-in-analysis-services.md)   
+## [클라이언트 라이브러리(데이터 공급자)](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [테이블 형식 및 다차원 솔루션 비교](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [SQL Server 2016 버전에서 지원하는 Analysis Services 기능](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [SQL Server 버전에서 지원하는 Analysis Services 기능](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 ## [이전 버전과의 호환성(SQL Server 2016 Analysis Services)](analysis-services-backward-compatibility.md)  
 ## [이전 버전과 호환성(SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)  
 ## [세계화 및 번역](globalization-scenarios-for-analysis-services.md)  
@@ -14,9 +15,6 @@
 ### [번역](translation-support-in-analysis-services.md)  
 ### [통화 변환](currency-conversions-analysis-services.md)  
 ### [팁과 모범 사례](globalization-tips-and-best-practices-analysis-services.md) 
-
-# 샘플
-## [Analysis Services 샘플](analysis-services-samples.md)
 
 # 자습서
 ## [테이블 형식 모델링(1200 호환성 수준)](tabular-modeling-adventure-works-tutorial.md)  
@@ -112,6 +110,8 @@
 ## [스키마 행 집합](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services Scripting Language(XMLA용 ASSL)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
+# 샘플
+## [Analysis Services 샘플](analysis-services-samples.md)
 
 # 참조
 ## [MSDN의 DAX(Data Analysis Expressions)](https://msdn.microsoft.com/library/gg413422.aspx)

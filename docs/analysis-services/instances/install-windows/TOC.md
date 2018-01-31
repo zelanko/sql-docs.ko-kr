@@ -13,4 +13,4 @@
 ## [검사 목록: PowerShell을 사용하여 SharePoint용 Power Pivot 확인](checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)  
 ## [SharePoint 2016에서 SQL Server 2016 Power Pivot 및 Power View 배포](deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)  
 ## [다층 계층 SharePoint 2016 팜에서 SQL Server 2016 Power Pivot 및 Power View 배포](deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)  
-# [Analysis Services 데이터 공급자(AMO, ADOMD.NET, MSOLAP) 설치](install-analysis-services-data-providers-amo-adomd-net-msolap.md)  
+# [클라이언트 라이브러리(AMO, ADOMD.NET, MSOLAP) 설치](../data-providers-used-for-analysis-services-connections.md)  
