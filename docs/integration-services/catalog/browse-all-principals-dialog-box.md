@@ -8,21 +8,23 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.ssms.browseprincipals.f1
+f1_keywords:
+- sql13.ssis.ssms.browseprincipals.f1
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb1af890ad8c92bd32e7250bde4210f78c419545
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 786755b091353cb03ad2c0a098be930b3bbcaf3f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="browse-all-principals-dialog-box"></a>모든 보안 주체 찾아보기 대화 상자
   **모든 보안 주체 찾아보기** 대화 상자를 사용하여 데이터베이스 보안 주체를 선택한 후 선택한 프로젝트 또는 선택한 폴더에 포함된 모든 프로젝트에 대해 보안 주체가 가지는 권한을 변경할 수 있습니다.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/12/2017
  **이름**  
  보안 주체의 이름입니다.  
   
- **유형**  
+ **형식**  
  보안 주체의 유형입니다. 일반적인 유형은 다음과 같습니다.  
   
 -   SQL 사용자  

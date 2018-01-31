@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,18 +23,18 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07c73cd80417c61f8231932376173adb304cf1af
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a9ce999e727a77b303b9978f59dc980b7d2ca21
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="raw-file-destination"></a>원시 파일 대상
+# <a name="raw-file-destination"></a>Raw File Destination
   원시 파일 대상은 원시 데이터를 파일에 기록합니다. 대상의 기본 데이터 형식을 사용하므로 데이터를 변환하거나 구문 분석할 필요도 거의 없습니다. 따라서 원시 파일 대상은 플랫 파일 및 OLE DB 대상과 같은 다른 대상보다 빨리 데이터를 기록할 수 있습니다.  
   
  원시 데이터를 파일에 기록하는 것 외에도 패키지를 실행할 필요 없이 원시 파일 대상을 사용하여 열만 포함된 비어 있는 원시 파일(메타데이터 전용 파일)을 생성할 수 있습니다. 원시 파일 원본을 사용하면 대상이 이전에 기록한 원시 데이터를 검색할 수 있습니다. 또한 원시 파일 원본이 메타데이터 전용 파일을 가리키도록 설정할 수 있습니다.  
@@ -130,7 +131,7 @@ ms.lasthandoff: 11/20/2017
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [원시 파일 사용자 지정 속성](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -224,7 +225,7 @@ ms.lasthandoff: 11/20/2017
  **출력 별칭**  
  출력 열에 사용할 대체 이름을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [원시 파일 원본](../../integration-services/data-flow/raw-file-source.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
   

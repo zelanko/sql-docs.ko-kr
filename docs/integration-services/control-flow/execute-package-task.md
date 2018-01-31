@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 703f8c2dbcc954c4603ec0ff73b0928c6afaf70c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
   패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  태스크 이름은 패키지 내에서 고유해야 합니다.  
   
- **Description**  
+ **설명**  
  패키지 실행 태스크에 대한 설명을 입력합니다.  
   
 ###  <a name="package"></a> 패키지 페이지에서 옵션 설정  
@@ -174,12 +175,12 @@ ms.lasthandoff: 11/20/2017
  **위치**  
  자식 패키지의 위치를 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**SQL Server**|위치를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 설정합니다.|  
 |**파일 시스템**|파일 시스템에 위치를 설정합니다.|  
   
- **연결**  
+ **대량 삽입 태스크 편집기**  
  자식 패키지의 저장소 위치 유형을 선택합니다.  
   
  **PackageNameReadOnly**  
@@ -192,7 +193,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="location-dynamic-options"></a>Location 동적 옵션  
   
 ##### <a name="location--sql-server"></a>Location = SQL Server  
- **연결**  
+ **대량 삽입 태스크 편집기**  
  목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [OLE DB 연결 관리자 구성](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -201,7 +202,7 @@ ms.lasthandoff: 11/20/2017
  자식 패키지의 이름을 입력하거나 줄임표 (...)를 클릭하여 패키지를 찾습니다.  
   
 ##### <a name="location--file-system"></a>Location = 파일 시스템  
- **연결**  
+ **대량 삽입 태스크 편집기**  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md)  

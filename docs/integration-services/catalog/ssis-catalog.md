@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a05b62e5c2ffb8c5a268ac8030e703d3a192742
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 SSIS([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) 프로젝트의 작업을 수행할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -178,7 +179,7 @@ ms.lasthandoff: 12/12/2017
 |프로젝트당 최대 버전 수|MAX_PROJECT_VERSIONS|  
 |서버 차원의 기본 로깅 수준|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> Permissions  
  프로젝트, 환경 및 패키지는 보안 개체인 폴더에 포함됩니다. MANAGE_OBJECT_PERMISSIONS 권한을 포함하여 폴더에 대한 사용 권한을 부여할 수 있습니다. MANAGE_OBJECT_PERMISSIONS는 ssis_admin 역할에 대한 사용자 멤버 자격을 부여하지 않고도 사용자에게 폴더 내용에 대한 관리를 위임할 수 있습니다. 프로젝트, 환경 및 작업에 사용 권한을 부여할 수도 있습니다. 작업에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]초기화, 프로젝트 배포, 실행 만들기 및 시작, 프로젝트 및 패키지 유효성 검사, **SSISDB** 카탈로그 구성 등이 있습니다.  
   
  데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  
@@ -379,7 +380,7 @@ ms.lasthandoff: 12/12/2017
   
 ###  <a name="options"></a> 옵션 구성  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  다음 표에서는 대화 상자의 특정 속성과 catalog.catalog_property 뷰의 해당 속성에 대해 설명합니다.  
   
 |속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_property 뷰)|Description|  
@@ -464,7 +465,7 @@ ms.lasthandoff: 12/12/2017
   
     ```  
   
-3.  **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 백업에서 SSISDB 데이터베이스를 복원합니다. 자세한 내용은 다음 항목을 참조하세요.  
+3.  **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 백업에서 SSISDB 데이터베이스를 복원합니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
     -   [데이터베이스 복원&#40;일반 페이지&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -528,7 +529,7 @@ ms.lasthandoff: 12/12/2017
      Integration Services(SSIS) 관련 개체가 SSISDB 카탈로그가 아직 만들어지지 않은 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 만들어졌는지 확인합니다.  
 
 ## <a name="upgrade-the-ssis-catalog-ssisdb"></a>SSIS 카탈로그(SSISDB) 업그레이드
-  데이터베이스가 SQL Server 인스턴스의 최신 버전보다 오래된 상태이면 SSISDB 업그레이드 마법사를 실행하여 SSIS 카탈로그 데이터베이스인 SSISDB를 업그레이드합니다. 다음 조건 중 하나에 해당하는 경우 데이터베이스가 오래되었을 수 있습니다.  
+  데이터베이스가 SQL Server 인스턴스의 최신 버전보다 오래된 상태이면 SSISDB 업그레이드 마법사를 사용하여 SSIS 카탈로그 데이터베이스인 SSISDB를 업그레이드합니다. 다음 조건 중 하나에 해당하는 경우 데이터베이스가 오래되었을 수 있습니다.  
   
 -   이전 버전의 SQL Server에서 데이터베이스를 복원한 경우  
   
@@ -638,7 +639,7 @@ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 �
 3.  SQL Server 버전이 13.0 이상인지 확인합니다. SSIS는 SQL Server 2016 이상 버전에 대해서만 Always On을 지원합니다.
 
 ###  <a name="Upgrade"></a> 가용성 그룹에서 SSISDB 업그레이드  
- 이전 버전에서 SQL Server를 업그레이드하고 SSISDB가 Always On 가용성 그룹에 있는 경우 업그레이드는 “Always On 가용성 그룹의 SSISDB 검사” 규칙에 따라 차단될 수 있습니다. 이 차단은 업그레이드는 단일 사용자 모드에서 실행되는 반면 가용성 데이터베이스는 다중 사용자 데이터베이스여야 하기 때문에 발생합니다. 따라서 업그레이드 또는 패치되는 동안 SSISDB를 포함하는 모든 가용성 데이터베이스는 오프라인으로 전환되고 업그레이드 또는 패치되지 않습니다. 업그레이드를 계속하려면 먼저 가용성 그룹에서 SSISDB를 제거한 다음 각 노드를 업그레이드 또는 패치하고 가용성 그룹에 SSISDB를 다시 추가합니다.  
+ 이전 버전에서 SQL Server를 업그레이드하고 SSISDB가 Always On 가용성 그룹에 있는 경우 업그레이드는 "Always On 가용성 그룹의 SSISDB 검사" 규칙에 의해 차단될 수 있습니다. 이 차단은 업그레이드는 단일 사용자 모드에서 실행되는 반면 가용성 데이터베이스는 다중 사용자 데이터베이스여야 하기 때문에 발생합니다. 따라서 업그레이드 또는 패치되는 동안 SSISDB를 포함하는 모든 가용성 데이터베이스는 오프라인으로 전환되고 업그레이드 또는 패치되지 않습니다. 업그레이드를 계속하려면 먼저 가용성 그룹에서 SSISDB를 제거한 다음 각 노드를 업그레이드 또는 패치하고 가용성 그룹에 SSISDB를 다시 추가합니다.  
   
  “Always On 가용성 그룹의 SSISDB 검사” 규칙에 따라 차단되는 경우 SQL Server를 업그레이드하려면 다음 단계를 수행합니다.  
   

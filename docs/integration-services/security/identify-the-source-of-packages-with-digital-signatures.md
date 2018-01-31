@@ -8,10 +8,12 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.digitalsigning.f1
+f1_keywords:
+- sql13.dts.digitalsigning.f1
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43734906c7c48c3747c88c10583a30af097d6706
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9356463b29b1a4971ddd336a9b44d47f3983f83
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>디지털 서명을 사용하여 패키지 원본 확인
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 해당 원본을 식별하는 디지털 인증서를 사용하여 서명할 수 있습니다. 디지털 인증서를 사용하여 패키지에 서명하면 패키지를 로드하기 전에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 디지털 서명을 확인하도록 할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 서명을 확인하도록 하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 **dtexec** 유틸리티(dtexec.exe)에서 옵션을 설정하거나 선택적 레지스트리 값을 설정합니다.  
@@ -63,10 +65,10 @@ ms.lasthandoff: 11/20/2017
   
  다음 표에서는 DWORD 데이터의 유효한 값 및 연관된 정책을 나열합니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|관리 제한이 없습니다.|  
-|1.|잘못된 서명을 차단합니다.<br /><br /> 이 설정은 서명되지 않은 패키지를 차단하지 않습니다.|  
+|1|잘못된 서명을 차단합니다.<br /><br /> 이 설정은 서명되지 않은 패키지를 차단하지 않습니다.|  
 |2|잘못된 서명과 신뢰할 수 없는 서명을 차단합니다.<br /><br /> 이 설정은 서명되지 않은 패키지를 차단하지 않지만 자체 생성된 서명은 차단합니다.|  
 |3|잘못된 서명과 신뢰할 수 없는 서명, 서명되지 않은 패키지를 차단합니다.<br /><br /> 이 설정은 자체 생성된 서명도 차단합니다.|  
   
@@ -143,14 +145,14 @@ ms.lasthandoff: 11/20/2017
   
  자세한 내용은 [디지털 인증서를 사용하여 패키지 서명](#cert)을 참조하세요.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **서명**  
  클릭하여 **인증서 선택** 대화 상자를 열고 사용할 인증서를 선택합니다.  
   
  **제거**  
  디지털 서명을 제거하려면 클릭합니다.  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services&#40;SSIS&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)   
  [보안 개요&#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
   

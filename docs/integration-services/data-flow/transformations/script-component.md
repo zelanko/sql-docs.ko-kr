@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1bbe58e6c0503a7def766dc59d5911ecb4ef61f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82aad5cf36717e374cdb3e45d231504efac16549
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-component"></a>스크립트 구성 요소
   스크립트 구성 요소는 스크립트를 호스팅하고 패키지에서 사용자 지정 스크립트 코드를 포함시키고 실행할 수 있도록 합니다. 패키지의 스크립트 구성 요소는 다음 용도로 사용할 수 있습니다.  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="configuring-the-script-component-programmatically"></a>프로그래밍 방식으로 스크립트 구성 요소 구성  
  **속성** 창을 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/20/2017
   
  스크립트 구성 요소에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **원본**, **대상**또는 **변환** 에서 선택한 내용에 따라 스크립트 변환 편집기의 페이지와 스크립트 변환 구성이 달라집니다.  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>스크립트 변환 편집기(연결 관리자 페이지)
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/20/2017
   
  스크립트 구성 요소에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **Connection managers**  
  스크립트에 사용할 수 있는 연결 목록을 표시합니다.  
   
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **연결 관리자**  
  사용 가능한 연결 관리자 목록에서 선택하거나 **\<새 연결>**을 선택하여 **SSIS 연결 관리자 추가** 대화 상자를 엽니다.  
   
- **Description**  
+ **설명**  
  연결에 대한 설명을 입력합니다.  
   
  **추가**  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/20/2017
   
  스크립트 구성 요소에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **입력 이름**  
  사용 가능한 입력 목록에서 선택합니다.  
   
@@ -178,11 +179,11 @@ ms.lasthandoff: 11/20/2017
   
  스크립트 구성 요소에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **Inputs and outputs**  
  왼쪽에서 입력 또는 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다. 편집할 수 있는 속성은 선택하는 입력 또는 출력에 따라 다릅니다. 표시된 속성 중 다수는 읽기 전용입니다. 개별 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
- [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -203,13 +204,13 @@ ms.lasthandoff: 11/20/2017
   
  스크립트 구성 요소에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
-### <a name="options"></a>옵션  
- **속성**  
+### <a name="options"></a>변수  
+ **Properties**  
  스크립트 변환 속성을 보고 수정합니다. 표시된 속성 중 다수는 읽기 전용입니다. 다음 속성을 수정할 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
-|**Description**|스크립트 변환의 목적을 기준으로 스크립트 변환을 설명합니다.|  
+|**설명**|스크립트 변환의 목적을 기준으로 스크립트 변환을 설명합니다.|  
 |**LocaleID**|정렬과 날짜 및 시간 변환에 사용할 지역별 정보를 제공하는 로캘을 지정합니다.|  
 |**이름**|구성 요소에 대한 설명이 포함된 이름을 입력합니다.|  
 |**ValidateExternalMetadata**|스크립트 변환이 디자인 타임에서 외부 데이터 원본에 대해 열 메타데이터의 유효성을 검사할 것인지 여부를 나타냅니다. 값 **false** 는 실행 시간까지 유효성 검사를 지연합니다.|  

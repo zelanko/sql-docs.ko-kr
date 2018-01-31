@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: "115"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
   SQL 실행 태스크는 패키지에서 SQL 문이나 저장 프로시저를 실행합니다. 이 태스크는 단일 SQL 문 또는 순서대로 실행되는 여러 SQL 문을 포함할 수 있습니다. SQL 실행 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="create-sql-statements"></a>SQL 문 만들기  
  이 태스크에 사용되는 SQL 문의 원본은 문이 포함된 작업 속성, 하나 이상의 문이 포함된 파일에 대한 연결 또는 문이 포함된 변수 이름일 수 있습니다. SQL 문은 원본 DBMS(데이터베이스 관리 시스템) 언어로 기록되어야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 쿼리](../../integration-services/integration-services-ssis-queries.md)를 참조하세요.  
   
- SQL 문이 파일에 저장되어 있을 경우 SQL 실행 태스크는 파일 연결 관리자를 사용하여 해당 파일에 연결합니다. 자세한 내용은 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)을 참조하세요.  
+ SQL 문이 파일에 저장되어 있을 경우 SQL 실행 태스크는 파일 연결 관리자를 사용하여 해당 파일에 연결합니다. 자세한 내용은 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)를 참조하세요.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서는 **SQL 실행 태스크 편집기** 대화 상자를 사용하여 SQL 문을 입력하거나 SQL 쿼리 작성용 그래픽 사용자 인터페이스인 **쿼리 작성기**를 사용할 수 있습니다. 
   
@@ -123,7 +124,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **이름**  
  워크플로의 SQL 실행 태스크에 사용할 고유 이름을 제공합니다. 제공한 이름은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 표시됩니다.  
   
- **Description**  
+ **설명**  
  SQL 실행 태스크를 설명합니다. 해당 태스크의 용도를 설명하여 패키지를 이해하기 쉽고 유지 관리하기 편하도록 만드는 것이 가장 좋습니다.  
   
  **TimeOut**  
@@ -149,7 +150,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
   
  **관련 항목:** [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md), [ODBC 연결 관리자](../../integration-services/connection-manager/odbc-connection-manager.md), [ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md), [ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **연결**  
+ **대량 삽입 태스크 편집기**  
  정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 설정하려면 \<**새 연결...**>을 선택합니다.  
   
  **SQLSourceType**  
@@ -159,7 +160,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 Transact-SQL 문으로 설정합니다. 이 값을 선택하면 동적 옵션 **SQLStatement**가 표시됩니다.|  
 |**파일 연결**|Transact-SQL 문이 포함된 파일을 선택합니다. 이 옵션을 설정하면 동적 옵션 **FileConnection**이 표시됩니다.|  
@@ -205,7 +206,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>매개 변수 매핑 페이지 - SQL 실행 태스크 편집기
 **SQL 실행 태스크 편집기** 대화 상자의 **매개 변수 매핑** 페이지를 사용하여 변수를 SQL 문의 매개 변수에 매핑할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **변수 이름**  
  **추가**를 클릭하여 매개 변수 매핑을 추가했으면 **변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 추가합니다.  
   
@@ -236,7 +237,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
 ## <a name="result-set-page---execute-sql-task-editor"></a>결과 집합 페이지 - SQL 실행 태스크 편집기
 **SQL 실행 태스크 편집기** 대화 상자의 **결과 집합** 페이지를 사용하여 SQL 문의 결과를 새 변수 또는 기존 변수로 매핑할 수 있습니다. 일반 페이지의 **ResultSet** 을 **없음**으로 설정한 경우에는 이 대화 상자의 옵션을 사용할 수 없습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **결과 이름**  
  **추가**를 클릭하여 결과 집합 매핑 집합을 추가한 다음 결과를 설명하는 이름을 제공합니다. 결과 집합 유형에 따라 특정 결과 이름을 사용해야 합니다.  
   
@@ -529,7 +530,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 |---------------------|---------------------------|--------------------|  
 |단일 행|결과 집합의 유형 열과 호환되는 모든 형식|해당 사항 없음|  
 |전체 결과 집합|**개체**|태스크에서 ADO, OLE DB, Excel 및 ODBC 연결 관리자를 비롯한 네이티브 연결 관리자를 사용하는 경우 반환되는 개체는 ADO **Recordset**입니다.<br /><br /> 태스크에서 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자와 같이 관리되는 연결 관리자를 사용하는 경우 반환되는 개체는 **System.Data.DataSet**입니다.<br /><br /> 다음 예제에서처럼 스크립트 태스크를 사용하여 **System.Data.DataSet** 개체에 액세스할 수 있습니다.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
-|XML|**문자열**|**문자열**|  
+|XML|**String**|**String**|  
 |XML|**개체**|태스크에서 ADO, OLE DB, Excel 및 ODBC 연결 관리자 등의 네이티브 연결 관리자를 사용하는 경우 반환되는 개체는 **MSXML6.IXMLDOMDocument**입니다.<br /><br /> 태스크에서 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자와 같이 관리되는 연결 관리자를 사용하는 경우 반환되는 개체는 **System.Xml.XmlDocument**입니다.|  
   
  변수는 SQL 실행 태스크나 패키지 범위에서 정의할 수 있습니다. 변수 범위가 패키지이면 해당 패키지 내의 다른 태스크와 컨테이너는 물론 패키지 실행 또는 DTS 2000 패키지 실행 태스크가 실행한 모든 패키지에서 결과 집합을 사용할 수 있습니다.  

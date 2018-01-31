@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc582d705e699d4c91c6bf89a51df444db00a04d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 20277b2aee209f1632100615d94a1fc3caec27d9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="partition-processing-destination"></a>파티션 처리 대상
   파티션 처리 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파티션을 로드하고 처리합니다. 파티션에 대한 자세한 내용은 [파티션&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)을 참조하세요.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [파티션 처리 대상 사용자 지정 속성](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  여기에서 설명하는 태스크는 Analysis Services 테이블 형식 모델에 적용되지 않습니다.  테이블 형식 모델의 경우 입력 열을 파티션 열에 매핑할 수 없습니다. 대신 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 를 사용하여 파티션을 처리할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **Connection manager**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
  **처리 방법**  
  처리 방법을 선택합니다. 이 옵션의 기본값은 **전체**입니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |추가(증분)|파티션의 증분 처리를 수행합니다.|  
 |전체|파티션의 전체 처리를 수행합니다.|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  여기에서 설명하는 태스크는 Analysis Services 테이블 형식 모델에 적용되지 않습니다.  테이블 형식 모델의 경우 입력 열을 파티션 열에 매핑할 수 없습니다. 대신 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 를 사용하여 파티션을 처리할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 입력 열을 대상 열에 매핑합니다.  
   
@@ -113,14 +114,14 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  여기에서 설명하는 태스크는 Analysis Services 테이블 형식 모델에 적용되지 않습니다.  테이블 형식 모델의 경우 입력 열을 파티션 열에 매핑할 수 없습니다. 대신 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 를 사용하여 파티션을 처리할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **기본 오류 구성 사용**  
  기본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 오류 처리를 사용할지 여부를 지정합니다. 기본적으로 이 값은 **True**입니다.  
   
  **키 오류 동작**  
  사용할 수 없는 키 값이 있는 레코드의 처리 방법을 지정합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|사용할 수 없는 키 값을 Unknown 값으로 변환합니다.|  
 |**DiscardRecord**|레코드를 삭제합니다.|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **오류 시 수행할 동작**  
  **오류 발생 시 중지**를 선택한 경우 오류 임계값에 도달했을 때 수행할 동작을 지정합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|처리를 중지합니다.|  
 |**StopLogging**|오류 기록을 중지합니다.|  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/20/2017
  **키를 찾을 수 없는 경우**  
  키를 찾을 수 없을 때 수행할 동작을 지정합니다. 기본적으로 이 값은 **ReportAndContinue**입니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/20/2017
  **중복 키**  
  중복 키 오류가 발생할 때 수행할 동작을 지정합니다. 기본적으로 이 값은 **IgnoreError**입니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **Null 키가 알 수 없는 상태로 변환된 경우**  
  Null 키가 Unknown 값으로 변환된 경우 수행할 동작을 지정합니다. 기본적으로 이 값은 **IgnoreError**입니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -172,7 +173,7 @@ ms.lasthandoff: 11/20/2017
  **Null 키가 허용되지 않는 경우**  
  Null 키가 허용되지 않는데 Null 키가 있는 경우에 수행할 동작을 지정합니다. 기본적으로 이 값은 **ReportAndContinue**입니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -184,5 +185,5 @@ ms.lasthandoff: 11/20/2017
  **찾아보기(...)**  
  오류 로그의 경로를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ee5bd643443aca136883e94a768fca60960c869
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be3ad15259560b7b69a9a375affab2940376a22e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-destination"></a>Excel 대상
   Excel 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서의 워크시트 또는 범위로 데이터를 로드합니다.  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 모든 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Excel 사용자 지정 속성](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -172,7 +173,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="excel-destination-editor-mappings-page"></a>Excel 대상 편집기(매핑 페이지)
   **Excel 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 입력 열을 대상 열에 매핑합니다.  
   
@@ -188,7 +189,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="excel-destination-editor-error-output-page"></a>Excel 대상 편집기(오류 출력 페이지)
   **Excel 대상 편집기** 대화 상자의 **고급** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **입력 또는 출력**  
  데이터 원본의 이름을 표시합니다.  
   
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/20/2017
  **잘림**  
  잘림이 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
- **Description**  
+ **설명**  
  오류에 대한 설명을 표시합니다.  
   
  **이 값을 선택한 셀에 설정**  
@@ -212,7 +213,7 @@ ms.lasthandoff: 11/20/2017
  **적용**  
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Excel 원본](../../integration-services/data-flow/excel-source.md)   
  [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)   

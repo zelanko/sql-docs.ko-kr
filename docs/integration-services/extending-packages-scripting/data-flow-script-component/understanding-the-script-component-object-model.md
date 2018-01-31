@@ -11,20 +11,23 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
-helpviewer_keywords: Script component [Integration Services], object model
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
+helpviewer_keywords:
+- Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c80de58c7c5f7e972d3c908499f9c4973728963e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bd0397a7dd336f10d91f51b6094e8d42a630d214
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="understanding-the-script-component-object-model"></a>스크립트 구성 요소 개체 모델 이해
   [스크립트 구성 요소 코딩 및 디버깅](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)에서 설명한 대로 스크립트 구성 요소 프로젝트에는 다음 세 개의 프로젝트 항목이 있습니다.  

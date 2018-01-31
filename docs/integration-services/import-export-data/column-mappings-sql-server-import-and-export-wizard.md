@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.columnmapandtransform.f1
+f1_keywords:
+- sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 350b2694806d617fa81eba1020828816101aceba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d4658903e7454c5a001f27b3bda781be34e6a55b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>열 매핑(SQL Server 가져오기 및 내보내기 마법사)
   복사할 기존 테이블 및 뷰를 선택하거나 제공한 쿼리를 검토한 후 **매핑 편집**을 클릭하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사가 **열 매핑** 대화 상자를 표시합니다. 이 페이지에서는 원본 열에서 복사한 데이터를 받을 대상 열을 지정하고 구성합니다. 종종 이 페이지에서 아무 것도 변경할 필요가 없습니다.
@@ -118,7 +120,7 @@ ms.lasthandoff: 11/20/2017
   
  **매핑** 목록에서 성공하지 않을 수 있는 매핑을 지정한 경우 **열 매핑** 대화 상자가 **데이터 형식 매핑 검토** 페이지를 표시합니다. 이 페이지에서는 경고를 검토하고 변환 옵션을 지정하고 오류 처리 방법도 지정합니다. 자세한 내용은 [데이터 형식 매핑 검토](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)를 참조하세요.  
  
- ## <a name="see-also"></a>참고 항목
+ ## <a name="see-also"></a>관련 항목:
 [SQL Server 가져오기 및 내보내기 마법사에서 데이터 형식 매핑](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)  
 [가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 

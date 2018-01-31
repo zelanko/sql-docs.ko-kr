@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ff6aab3608b1bebd61e9750ea8769dda0fbf2f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-source"></a>ADO.NET 원본
   ADO.NET 원본은 .NET 공급자의 데이터를 사용하며 데이터 흐름에서 해당 데이터를 사용할 수 있도록 합니다.  
@@ -138,7 +139,7 @@ ms.lasthandoff: 11/20/2017
  **SQL 명령 텍스트**  
  SQL 쿼리 텍스트를 입력하고 **쿼리 작성**을 클릭하여 쿼리를 작성하거나 **찾아보기**를 클릭하여 쿼리 텍스트가 포함된 파일을 찾습니다.  
   
- **Build query**  
+ **쿼리 작성**  
  **쿼리 작성기** 대화 상자를 사용하여 시각적으로 SQL 쿼리를 생성할 수 있습니다.  
   
  **찾아보기**  
@@ -157,7 +158,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **ADO NET 원본 편집기**에서 **열**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **사용 가능한 외부 열**  
  데이터 원본에서 사용 가능한 외부 열의 목록을 표시합니다. 이 테이블을 사용하여 열을 추가하거나 삭제할 수 없습니다.  
   
@@ -180,7 +181,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **ADO NET 원본 편집기**에서 **오류 출력**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   
@@ -195,7 +196,7 @@ ms.lasthandoff: 11/20/2017
  **잘림**  
  잘림이 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
- **Description**  
+ **설명**  
  오류에 대한 설명을 표시합니다.  
   
  **이 값을 선택한 셀에 설정**  
@@ -204,7 +205,7 @@ ms.lasthandoff: 11/20/2017
  **적용**  
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DataReader 대상](../../integration-services/data-flow/datareader-destination.md)   
  [ADO.NET 대상](../../integration-services/data-flow/ado-net-destination.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  

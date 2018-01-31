@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling task [Integration Services], using output in workflow
+helpviewer_keywords:
+- Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3712f432207551dac0d14666b01ad8d8e2f8fc0e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f7e2cbac0c5a86c4792991dc1634721ac1cb635
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>패키지 워크플로에 데이터 프로파일링 태스크 포함
   데이터 프로파일링과 정리는 초기 단계의 자동 처리 대상이 아닙니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 태스크의 출력을 통해 보고된 위반이 의미 있거나 과도한지 확인하려면 일반적으로 시각적 분석과 사람의 판단이 필요합니다. 데이터 품질 문제를 인지한 이후에도 정리를 위한 최선의 방법을 찾기 위한 신중한 계획이 필요합니다.  
@@ -332,7 +334,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  워크플로의 다운스트림 분기에 스크립트 태스크를 연결하는 선행 제약 조건에서 변수의 값을 사용하여 워크플로를 제어하는 식을 작성합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
  [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)  
   

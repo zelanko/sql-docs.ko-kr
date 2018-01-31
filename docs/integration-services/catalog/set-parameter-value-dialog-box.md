@@ -8,20 +8,21 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 537e5e3ca57a706ad3267a3a445263c8772dd984
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: dce5f02e95af39f3a9b4e579c87d333941c483eb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-parameter-value-dialog-box"></a>매개 변수 값 설정 대화 상자
   **매개 변수 값 설정** 대화 상자를 사용하여 패키지 및 프로젝트에 대한 매개 변수 및 연결 관리자 속성 값을 설정할 수 있습니다.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/12/2017
  **형식**  
  매개 변수 값의 데이터 형식을 나열합니다.  
   
- **Description**  
+ **설명**  
  매개 변수에 대한 선택적 설명을 표시합니다.  
   
  **값 편집**  

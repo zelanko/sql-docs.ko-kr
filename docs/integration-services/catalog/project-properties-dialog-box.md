@@ -8,23 +8,24 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isprojectprop.general.f1
 - sql13.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54942f340731079a2eb1f4b98b6b868524567577
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 663312637cef120825522b4dad36f0623a8f872a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="project-properties-dialog-box"></a>프로젝트 속성 대화 상자
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트는 하나의 배포 단위입니다. 각 프로젝트는 패키지, 매개 변수 및 환경 참조를 포함할 수 있습니다. 프로젝트는 검색 가능한 개체이며 데이터베이스 보안 주체의 사용 권한을 정의할 수 있습니다. 프로젝트를 다시 배포하는 경우 이전 버전의 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 저장할 수 있습니다.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/12/2017
  **ID**  
  프로젝트 ID를 나열합니다.  
   
- **Description**  
+ **설명**  
  프로젝트에 대한 설명(옵션)을 표시합니다.  
   
  **프로젝트 버전**  

@@ -8,24 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.filesystemtask.f1
 - sql13.dts.designer.filesystemtask.general.f1
-helpviewer_keywords: File System task [Integration Services]
+helpviewer_keywords:
+- File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a72870b1591218161de2253c65bdb6f290941481
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 176f39cf7a5df57fad08a464212815f41affb1a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="file-system-task"></a>파일 시스템 태스크
   파일 시스템 태스크는 파일 시스템의 파일 및 디렉터리에 대해 작업을 수행합니다. 예를 들어 파일 시스템 태스크를 사용하면 패키지가 디렉터리와 파일을 만들거나 이동 또는 삭제할 수 있습니다. 파일 시스템 태스크를 사용하여 파일과 디렉터리의 특성을 설정할 수도 있습니다. 예를 들어 파일 시스템 태스크는 파일에 숨김 또는 읽기 전용 특성을 설정할 수 있습니다.  
@@ -96,11 +98,11 @@ ms.lasthandoff: 11/20/2017
   
  식을 사용하여 다른 변수를 사용할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **IsDestinationPathVariable**  
  대상 경로가 변수에 저장되는지 여부를 나타냅니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **DestinationVariable**이 표시됩니다.|  
 |**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **DestinationConnection**이 표시됩니다.|  
@@ -114,13 +116,13 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  태스크 이름은 패키지 내에서 고유해야 합니다.  
   
- **Description**  
+ **설명**  
  파일 시스템 태스크에 대한 설명을 입력합니다.  
   
  **연산**  
  수행할 파일 시스템 작업을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**디렉터리 복사**|디렉터리를 복사합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.|  
 |**파일 복사**|파일을 복사합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.|  
@@ -136,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **IsSourcePathVariable**  
  대상 경로가 변수에 저장되는지 여부를 나타냅니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value||  
+|값||  
 |-----------|-|  
 |**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **SourceVariable**이 표시됩니다.|  
 |**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **DestinationVariable**이 표시됩니다.|  
@@ -188,7 +190,7 @@ ms.lasthandoff: 11/20/2017
  **UseDirectoryIfExists**  
  **디렉터리 만들기** 작업이 새 디렉터리를 만들지 않고 지정된 이름의 기존 디렉터리를 사용하는지 여부를 나타냅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
   

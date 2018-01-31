@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 57635218bc2e657b5d6f08076a572fa5caf2a2b3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 836ecde7ff2cb458b2f93aeb239d0ab83c51cb6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functions-ssis-expression"></a>함수(SSIS 식)
   식 언어에는 식에 사용할 함수 집합이 포함되어 있습니다. 식은 단일 함수를 사용할 수도 있지만 일반적으로 연산자와 함수를 결합하여 여러 개의 함수를 사용합니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 |[LN&#40;SSIS 식&#41;](../../integration-services/expressions/ln-ssis-expression.md)|숫자 식의 자연 로그를 반환합니다.|  
 |[LOG&#40;SSIS 식&#41;](../../integration-services/expressions/log-ssis-expression.md)|숫자 식의 상용 로그를 반환합니다.|  
 |[POWER&#40;SSIS 식&#41;](../../integration-services/expressions/power-ssis-expression.md)|숫자 식의 거듭제곱을 반환합니다.|  
-|[ROUND&#40;SSIS 식&#41;](../../integration-services/expressions/round-ssis-expression.md)|특정 길이나 전체 자릿수로 반올림한 숫자 식을 반환합니다. .|  
+|[ROUND&#40;SSIS 식&#41;](../../integration-services/expressions/round-ssis-expression.md)|특정 길이나 전체 자릿수로 반올림한 숫자 식을 반환합니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
 |[SIGN&#40;SSIS 식&#41;](../../integration-services/expressions/sign-ssis-expression.md)|숫자 식의 양수(+), 음수(-) 또는 영(0) 부호를 반환합니다.|  
 |[SQUARE&#40;SSIS 식&#41;](../../integration-services/expressions/square-ssis-expression.md)|숫자 식의 제곱을 반환합니다.|  
 |[SQRT&#40;SSIS 식&#41;](../../integration-services/expressions/sqrt-ssis-expression.md)|숫자 식의 제곱근을 반환합니다.|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/20/2017
 |[FINDSTRING&#40;SSIS 식&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|식에서 지정한 문자열 항목의 인덱스(1부터 시작)를 반환합니다.|  
 |[HEX&#40;SSIS 식&#41;](../../integration-services/expressions/hex-ssis-expression.md)|정수의 16진수 값을 나타내는 문자열을 반환합니다.|  
 |[LEN&#40;SSIS 식&#41;](../../integration-services/expressions/len-ssis-expression.md)|문자 식에 포함된 문자의 수를 반환합니다.|  
-|[LEFT&#40;SSIS 식&#41;](../../integration-services/expressions/left-ssis-expression.md)|지정한 문자 식의 왼쪽에서부터 지정한 개수의 문자를 반환합니다.|  
+|[LEFT&#40;SSIS 식&#41;](../../integration-services/expressions/left-ssis-expression.md)|지정한 문자 식의 왼쪽부터 지정한 개수의 문자를 반환합니다.|  
 |[LOWER&#40;SSIS 식&#41;](../../integration-services/expressions/lower-ssis-expression.md)|대문자를 소문자로 변환한 후에 문자 식을 반환합니다.|  
 |[LTRIM&#40;SSIS 식&#41;](../../integration-services/expressions/ltrim-ssis-expression.md)|선행 공백을 제거하고 문자 식을 반환합니다.|  
 |[REPLACE&#40;SSIS 식&#41;](../../integration-services/expressions/replace-ssis-expression.md)|식 내의 문자열을 다른 문자열이나 빈 문자열로 바꾼 후 문자 식을 반환합니다.|  
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
  식 이름은 대문자로 표시되지만 대/소문자를 구분하지 않습니다. 예를 들어 "null"은 "NULL"과 동일한 기능을 수행합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
  [고급 Integration Services 식의 예](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
  [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)  
