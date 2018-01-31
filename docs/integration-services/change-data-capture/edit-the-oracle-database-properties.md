@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: oraProp
+f1_keywords:
+- oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3519bfc323bc4a9b19e32a171b5aa08f719062fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a83a04c01a48b85395949c9277f77b3d1ede632
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="edit-the-oracle-database-properties"></a>Oracle 데이터베이스 속성 편집
   속성 편집기에서 Oracle 탭을 사용하여 새 인스턴스 마법사의 CDC 데이터베이스 만들기 페이지에 제공한 설명을 변경하고 Oracle 로그 마이닝 데이터베이스 연결 정보를 변경할 수 있습니다.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 11/20/2017
  **이름**  
  새 인스턴스 마법사의 CDC 데이터베이스 만들기 페이지에 입력한 CDC 인스턴스의 이름입니다. 이 필드는 읽기 전용이므로 이 정보를 편집할 수 없습니다.  
   
- **Description**  
+ **설명**  
  CDC 인스턴스를 만들 때 새 인스턴스에 대한 설명을 편집하거나 추가하지 않은 경우 설명을 편집하거나 추가할 수 있습니다.  
   
  **Oracle 연결 문자열**  
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
  뷰어에서 Oracle 데이터베이스 속성을 볼 수 있습니다. 뷰어를 사용할 때 정보는 읽기 전용입니다. 또한 뷰어에는 테이블에서 캡처된 열 목록이 포함되어 있습니다. 뷰어에 액세스하는 방법은 [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CDC Designer 콘솔에서 CDC Service를 관리하는 방법](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Oracle 원본 데이터베이스에 연결](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
  [Oracle에 연결](../../integration-services/change-data-capture/connect-to-oracle.md)  

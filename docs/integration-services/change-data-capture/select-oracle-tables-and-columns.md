@@ -8,26 +8,28 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: selTabCol
+f1_keywords:
+- selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d40cf26ccb543039e6ae0b20523bd2b531918459
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5b771c9eccbae877fcc073fcb0075629460343fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle 테이블 및 열 선택
   Oracle 테이블 및 열 선택 페이지를 사용하여 변경이 캡처되는 Oracle 원본 데이터베이스에서 테이블을 선택할 수 있습니다. 이 페이지는 다음과 같은 요소로 구성되어 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **테이블 목록**  
  테이블 목록은 다음과 같은 세 개의 열이 있습니다.  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
  올바른 대화 상자를 사용하여 [변경 내용을 캡처할 Oracle 테이블을 선택](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md) 하고 [변경 캡처를 위해 선택된 테이블을 변경](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md) 한 후에는 **다음** 을 클릭하여 [보완 로깅 스크립트를 생성 및 실행](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 변경 데이터베이스 인스턴스를 만드는 방법](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [테이블 편집](../../integration-services/change-data-capture/edit-tables.md)   
  [CDC 인스턴스에 테이블 추가](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)   

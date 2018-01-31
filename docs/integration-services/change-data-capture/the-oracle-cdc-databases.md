@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdce8273a2a1ed7cfa725f1933ab99de40cfe3f6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
   Oracle CDC 인스턴스는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동일한 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 데이터베이스를 Oracle CDC 데이터베이스 또는 CDC 데이터베이스라고 합니다.  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/20/2017
   
  다음 표에서는 사용 가능한 옵션에 대해 설명합니다.  
   
-|이름|기본값|Min|최대값|정적|Description|  
+|속성|Default|최소값|최대값|정적|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |추적|False|-|-|False|사용 가능한 값은<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|트랜잭션에 대해 할당된 메모리 청크의 크기(KB)입니다. 트랜잭션 하나가 둘 이상의 청크를 할당할 수 있습니다. [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) 테이블의 memory_limit 열을 참조하세요.|  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
 |active|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 활성 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스 프로세스가 활성 상태입니다.|  
 |error|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 오류 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스가 오류 상태입니다.|  
 |status_message|오류 또는 상태에 대해 설명하는 문자열입니다.|  
-|timestamp|캡처 상태를 마지막으로 업데이트한 시간(UTC)이 포함된 타임스탬프입니다.|  
+|TIMESTAMP|캡처 상태를 마지막으로 업데이트한 시간(UTC)이 포함된 타임스탬프입니다.|  
 |active_capture_node|Oracle 트랜잭션 로그를 처리 중인 Oracle CDC Service 및 Oracle CDC 인스턴스를 현재 실행 중인 호스트의 이름입니다. 호스트는 클러스터 내의 노드일 수 있습니다.|  
 |last_transaction_timestamp|마지막 트랜잭션이 변경 테이블에 기록된 시간(UTC)이 포함된 타임스탬프입니다.|  
 |last_change_timestamp|원본 Oracle 트랜잭션 로그에서 최신 변경 레코드를 읽은 시간(UTC)이 포함된 타임스탬프입니다. 이 타임스탬프를 통해 CDC 프로세스의 현재 대기 시간을 식별할 수 있습니다.|  
@@ -170,13 +171,13 @@ ms.lasthandoff: 11/20/2017
   
 |항목|Description|  
 |----------|-----------------|  
-|timestamp|추적 레코드가 기록된 정확한 UTC 타임스탬프입니다.|  
+|TIMESTAMP|추적 레코드가 기록된 정확한 UTC 타임스탬프입니다.|  
 |유형|다음 값 중 하나가 포함됩니다.<br /><br /> error<br /><br /> INFO<br /><br /> 추적|  
 |node|레코드가 기록된 노드의 이름입니다.|  
 |상태|상태 테이블에서 사용되는 상태 코드입니다.|  
 |sub_status|상태 테이블에서 사용되는 하위 상태 코드입니다.|  
 |status_message|상태 테이블에서 사용되는 상태 메시지입니다.|  
-|데이터|오류 또는 추적 레코드에 페이로드가 포함되는 사례에 대한 추가 데이터입니다(예: 손상된 로그 레코드).|  
+|data|오류 또는 추적 레코드에 페이로드가 포함되는 사례에 대한 추가 데이터입니다(예: 손상된 로그 레코드).|  
   
 ###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  이 테이블에는 큰 트랜잭션 또는 장기 실행 트랜잭션에 대한 변경 레코드가 트랜잭션 커밋 또는 롤백 이벤트가 캡처될 때까지 저장됩니다. Oracle CDC Service는 캡처된 로그 레코드를 트랜잭션 커밋 시간을 기준으로 정렬한 다음 각 트랜잭션에 대한 시간순으로 정렬합니다. 동일한 트랜잭션에 대한 로그 레코드는 트랜잭션이 종료될 때까지 메모리에 저장되었다가 대상 변경 테이블에 기록되거나 삭제(롤백의 경우)됩니다. 사용 가능한 메모리 양이 제한되므로 대형 트랜잭션은 트랜잭션이 완료될 때까지 **cdc.xdbcdc_staged_transactions** 테이블에 기록됩니다. 트랜잭션은 오래 동안 실행될 경우 준비 테이블에도 기록됩니다. 따라서 Oracle CDC 인스턴스를 다시 시작할 때 Oracle 트랜잭션 로그에서 이전 변경 사항을 다시 읽을 필요가 없습니다.  
@@ -189,7 +190,7 @@ ms.lasthandoff: 11/20/2017
 |seq_num|현재 트랜잭션에 대한 **xcbcdc_staged_transactions** 행의 번호입니다(0부터 시작).|  
 |data_start_cn|이 행에 있는 데이터의 첫 번째 변경에 대한 CN(변경 번호)입니다.|  
 |data_end_cn|이 행에 있는 데이터의 마지막 변경에 대한 CN(변경 번호)입니다.|  
-|데이터|트랜잭션에 대해 준비된 변경 사항이며 BLOB 형태입니다.|  
+|data|트랜잭션에 대해 준비된 변경 사항이며 BLOB 형태입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  

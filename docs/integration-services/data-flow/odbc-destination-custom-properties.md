@@ -8,22 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dacb3a2eea675e85b23fc2b05443d14a95983c6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dfeeaa38de94dfe2f1d716cda8eee0e5e5faf6f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="odbc-destination-custom-properties"></a>ODBC 대상 사용자 지정 속성
+# <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
   다음 표에서는 ODBC 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 SSIS 속성 식에서 설정할 수 있습니다.  
   
 |속성 이름|데이터 형식|Description|  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 |DefaultCodePage|정수|문자열 열에 사용할 코드 페이지입니다.<br /><br /> **참고**: 이 속성은 **ODBC 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |InsertMethod|Integer(열거형)|데이터 삽입에 사용되는 메서드입니다. 가능한 값은 행 단위(0) 및 일괄 처리(1)입니다. 기본값은 일괄 처리(1)입니다.<br /><br /> 이러한 옵션에 대한 자세한 내용은 [ODBC Destination](../../integration-services/data-flow/odbc-destination.md)의 "로드 옵션"을 참조하십시오.|  
 |StatementTimeout|정수|오류가 발생하여 응용 프로그램으로 반환되기 전에 SQL 문이 실행되기를 기다릴 시간(초)입니다. 기본값은 120입니다.|  
-|TableName|문자열|데이터가 삽입되는 대상 테이블의 이름입니다.|  
+|TableName|String|데이터가 삽입되는 대상 테이블의 이름입니다.|  
 |TransactionSize|정수|단일 트랜잭션의 삽입 수입니다. 기본값은 ODBC 대상이 자동 커밋 모드에서 작동함을 의미하는 0입니다.<br /><br /> ODBC 연결 관리자는 분산 트랜잭션을 지원하지 않으므로 이 속성을 0 이외의 값으로 설정할 수 있습니다. 그러나 연결 관리자 **RetainSameConnection** 속성이 **true** 로 설정된 경우에는 이 속성을 0으로 설정해야 합니다.<br /><br /> **참고**: 이 속성은 **ODBC 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |LobChunkSize|정수|LOB 열에 대한 청크 크기 할당입니다.|  
   

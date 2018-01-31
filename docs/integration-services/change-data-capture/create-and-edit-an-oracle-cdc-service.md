@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: createSrv
+f1_keywords:
+- createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집
   CDC Service 구성 콘솔에서 새 Oracle CDC Windows 서비스를 만들고 편집합니다.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 > 서비스를 편집하는 경우 이 옵션을 사용할 수 없습니다. 이미 존재하는 Windows 서비스의 이름을 변경할 수 없습니다.  
   
- **Description**  
+ **설명**  
  식별에 도움이 되도록 서비스에 대한 설명을 입력합니다.  
   
  **서비스 계정**  
@@ -92,7 +94,7 @@ ms.lasthandoff: 11/20/2017
   
  동일한 서비스의 다른 인스턴스가 고가용성 구성에서 한 클러스터의 다른 노드에 대해 구성된 경우에도 동일한 마스터 암호를 사용해야 합니다. 마스터 암호를 잃어버리거나 수정할 경우 CDC Designer 콘솔을 사용하여 Oracle CDC 인스턴스 데이터베이스에 저장된 모든 로그 마이닝 암호를 다시 입력해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CDC Service를 만들고 편집하는 방법](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

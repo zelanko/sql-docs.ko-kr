@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.backupdatabasetask.f1
+f1_keywords:
+- sql13.dts.designer.backupdatabasetask.f1
 helpviewer_keywords:
 - database backups [Integration Services]
 - Back Up Database task [Integration Services]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa514189f6201b9f5126be6e88830dfa7f4c27cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a78526022b2d3cc16adb8f4706d30a8f430da8f1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="back-up-database-task"></a>데이터베이스 백업 태스크
   데이터베이스 백업 태스크는 여러 가지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업을 수행합니다. 자세한 내용은 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
@@ -40,9 +42,9 @@ ms.lasthandoff: 11/20/2017
   
 |복구 모델|데이터베이스|데이터베이스 - 차등|트랜잭션 로그|파일 또는 파일 차등|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|간단|필수임|선택 사항|지원되지 않음|지원되지 않음|  
-|전체|필수임|선택 사항|필수임|선택 사항|  
-|대량 로그|필수임|선택 사항|필수임|선택 사항|  
+|간단|필수|선택 사항|지원되지 않음|지원되지 않음|  
+|전체|필수|선택 사항|필수|선택 사항|  
+|대량 로그|필수|선택 사항|필수|선택 사항|  
   
  데이터베이스 백업 태스크는 Transact-SQL BACKUP 문을 캡슐화합니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  
   

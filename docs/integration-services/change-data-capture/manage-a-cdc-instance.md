@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: manIns
+f1_keywords:
+- manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db85e4aee5ede4a62a660c6adc5d87fde6b89bd7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b61e0362a4b29f1721a08469f8df529861e10174
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-instance"></a>CDC 인스턴스 관리
   CDC Designer 콘솔을 사용하여 직접 만든 인스턴스에 대한 정보를 보고 인스턴스 작업을 관리할 수 있습니다.  
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/20/2017
  **CDC 인스턴스 배포 스크립트**  
  이 링크를 클릭하면 CDC 인스턴스 배포 스크립트가 표시된 CDC 인스턴스 배포 스크립트 대화 상자가 표시됩니다. 이 대화 상자에 대한 자세한 내용은 [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)를 참조하십시오.  
   
- **속성**  
+ **Properties**  
  이 링크를 클릭하여 속성 편집기를 열 수 있습니다. 속성 편집기를 사용하여 CDC 인스턴스 구성을 편집합니다. CDC 인스턴스에 대한 속성을 편집하는 방법은 [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)을 참조하십시오.  
   
  **뷰어 탭**  
@@ -122,7 +124,7 @@ ms.lasthandoff: 11/20/2017
   
  이러한 속성에 대한 자세한 내용과 속성을 편집하는 방법은 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 변경 데이터베이스 인스턴스를 만드는 방법](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [CDC 인스턴스 속성을 보는 방법](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [CDC 인스턴스 속성을 편집하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
