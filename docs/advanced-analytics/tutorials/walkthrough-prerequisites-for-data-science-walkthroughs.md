@@ -29,11 +29,11 @@ ms.lasthandoff: 09/01/2017
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>SQL Server 및 R용 데이터 과학 연습을 위한 필수 구성 요소
 
-랩톱 또는 Microsoft R 라이브러리가 설치된 다른 컴퓨터에서 이 연습을 수행하길 권장합니다. 동일한 네트워크에서 기계 학습 서비스와 R 언어를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 연결할 수 있어야 합니다.
+랩톱 또는 Microsoft R 라이브러리가 설치된 다른 컴퓨터에서 이 연습을 수행하길 권장합니다. 동일한 네트워크에서 Machine Learning 서비스와 R 언어를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 연결할 수 있어야 합니다.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 R 개발 환경을 모두 가진 컴퓨터에서 이 연습을 실행할 수 있지만 프로덕션 환경에서는 그러한 구성을 권장하지 않습니다.
 
-## <a name="install-machine-learning-for-sql-server"></a>SQL Server에 기계 학습 설치
+## <a name="install-machine-learning-for-sql-server"></a>SQL Server에 머신 러닝(Machine Learning) 설치
 
 설치된 R을 지원하는 SQL Server의 인스턴스에 접근할 수 있어야 합니다. 이 연습은 원래 SQL Server 2016용으로 개발되고 2017에서 시험했으므로 다음 SQL Server 버전 중 하나를 사용할 수 있어야 합니다. (각 릴리스에서 RevoScaleR 기능에 약간의 차이가 있습니다.)
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 
 이 연습을 위해 R 개발 환경을 사용하길 권장합니다. 아래 몇 가지 제안이 있습니다.
 
-- **R Tools for Visual Studio** (RTVS)Microsoft R 지원, 인텔리센스, 디버깅을 제공하는 무료 플러그 인입니다. R 서버와 SQL Server 기계 학습 서비스 모두에 사용할 수 있습니다. 다운로드하려면 [R Tools for Visual Studio](https://www.visualstudio.com/features/rtvs-vs.aspx)를 참조하세요.
+- **R Tools for Visual Studio** (RTVS)Microsoft R 지원, 인텔리센스, 디버깅을 제공하는 무료 플러그 인입니다. R 서버와 SQL Server Machine Learning 서비스 모두에 사용할 수 있습니다. 다운로드하려면 [R Tools for Visual Studio](https://www.visualstudio.com/features/rtvs-vs.aspx)를 참조하세요.
 
 - **Microsoft R Client** 는 RevoScaleR 패키지를 사용하여 R 개발을 지원하는 경량 개발 도구입니다. 사용하려면 [Microsoft R Client 시작](https://msdn.microsoft.com/microsoft-r/r-client-get-started)을 참조하세요.
 
