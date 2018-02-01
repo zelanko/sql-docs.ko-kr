@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **트랜잭션을 사용하여 데이터 무결성 유지** 자세한 내용은 [Integration Services 트랜잭션](../../integration-services/integration-services-transactions.md)을 참조하세요.  
   
--   **검사점을 사용하여 실패한 지점에서 패키지 다시 시작** 자세한 내용은 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
+-   **검사점을 사용하여 실패한 지점에서 패키지 다시 시작** 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>이벤트 처리기를 사용하여 패키지 오류 파악 및 처리  
  이벤트 처리기를 사용하여 패키지 및 패키지의 개체에서 발생한 여러 이벤트에 대응할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **오류 출력을 사용하여 잘못된 데이터 캡처** 오류가 들어 있는 행을 오류 테이블이나 텍스트 파일과 같은 별도의 대상으로 보냅니다. 오류 출력에는 행이 거부되도록 한 오류의 번호와 오류가 발생한 열의 ID가 들어 있는 두 개의 숫자 열이 자동으로 추가됩니다.  
   
--   **오류 출력에 정보 추가** 오류 출력에 제공되는 두 개의 숫자 식별자 외에 오류 메시지 및 열 이름을 추가하여 오류 출력을 분석하기 쉽게 만들 수 있습니다. 스크립트를 사용하여 이러한 두 개의 추가 열을 추가하는 방법에 대한 예는 [Enhancing an Error Output with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)을 참조하세요.  
+-   **오류 출력에 정보 추가** 오류 출력에 제공되는 두 개의 숫자 식별자 외에 오류 메시지 및 열 이름을 추가하여 오류 출력을 분석하기 쉽게 만들 수 있습니다. 스크립트를 사용하여 이러한 두 개의 추가 열을 추가하는 방법에 대한 예는 [스크립트 구성 요소를 사용하여 오류 출력 향상](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)을 참조하세요.  
   
 -   **또는 DiagnosticEx 이벤트를 로깅하여 열 이름을 가져옵니다**. 이 이벤트는 로그에 데이터 흐름 계보 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 계보 맵에서 열 이름을 조회할 수 있습니다.  자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>작업 보고서를 사용하여 패키지 실행 문제 해결  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 모니터링하는 데 도움이 되는 표준 작업 보고서가 제공됩니다. 이러한 패키지 보고서는 패키지 상태 및 기록을 보고 필요한 경우 실패 원인을 파악하는 데 도움이 됩니다.  
   
- 자세한 내용은 [Troubleshooting Reports for Package Execution](../../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md)을 참조하세요.  
+ 자세한 내용은 [패키지 실행 보고서 문제 해결](../../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md)을 참조하세요.  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>SSISDB 뷰를 사용하여 패키지 실행 문제 해결  
  패키지 실행 및 기타 작업 정보를 모니터링하기 위해 쿼리할 수 있는 다양한 SSISDB 데이터베이스 뷰가 제공됩니다. 자세한 내용은 [실행 중인 패키지 및 기타 작업 모니터링](../../integration-services/performance/monitor-running-packages-and-other-operations.md)을 참조하세요.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **로깅 설정** 캡처할 이벤트와 정보 항목만 선택하여 로깅 출력을 구체화할 수 있습니다. 자세한 내용은 [SSIS(Integration Services) 로깅](../performance/integration-services-ssis-logging.md)을 참조하세요.  
   
--   **패키지의 Diagnostic 이벤트를 선택하여 공급자 문제 해결.** 외부 데이터 원본과의 패키지 상호 작용 문제를 해결하는 데 유용한 로깅 메시지가 있습니다. 자세한 내용은 [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md)을 참조하세요.  
+-   **패키지의 Diagnostic 이벤트를 선택하여 공급자 문제 해결.** 외부 데이터 원본과의 패키지 상호 작용 문제를 해결하는 데 유용한 로깅 메시지가 있습니다. 자세한 내용은 [패키지 연결 문제 해결 도구](troubleshooting-tools-for-package-connectivity.md)을 참조하세요.  
   
 -   **기본 로깅 출력 향상**. 로깅 기능은 일반적으로 패키지가 실행될 때마다 로깅 대상에 행을 추가합니다. 로깅 출력의 각 행이 패키지를 이름과 고유 식별자로 식별하고 패키지 실행을 고유 ExecutionID로 식별하더라도 단일 목록에 많은 양의 로깅 출력이 있으면 분석하기가 어려울 수 있습니다.  
   
@@ -84,14 +84,14 @@ ms.lasthandoff: 01/25/2018
   
     1.  **각 패키지 실행을 기록하는 부모 테이블 만들기** 이 부모 테이블은 각 패키지 실행에 대한 단일 행만 포함하며, ExecutionID를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 로깅 테이블의 자식 레코드에 연결합니다. 각 패키지가 시작될 때 SQL 실행 태스크를 사용하여 이 새 행을 만들고 시작 시간을 기록할 수 있습니다. 그런 다음 패키지가 끝날 때 다른 SQL 실행 태스크를 사용하여 해당 행을 종료 시간, 기간 및 상태로 업데이트할 수 있습니다.  
   
-    2.  **데이터 흐름에 감사 정보 추가** 감사 변환을 사용하여 데이터 흐름의 행에 각 행을 만들었거나 수정한 패키지 실행에 대한 정보를 추가할 수 있습니다. 감사 변환을 통해 PackageName 및 ExecutionInstanceGUID를 비롯한 9가지 정보를 사용할 수 있습니다. 자세한 내용은 [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md)을 참조하세요. 감사를 위해 각 행에도 포함할 사용자 지정 정보가 있는 경우 파생 열 변환을 사용하여 이 정보를 데이터 흐름의 행에 추가할 수 있습니다. 자세한 내용은 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)을 참조하세요.  
+    2.  **데이터 흐름에 감사 정보 추가** 감사 변환을 사용하여 데이터 흐름의 행에 각 행을 만들었거나 수정한 패키지 실행에 대한 정보를 추가할 수 있습니다. 감사 변환을 통해 PackageName 및 ExecutionInstanceGUID를 비롯한 9가지 정보를 사용할 수 있습니다. 자세한 내용은 [감사 변환](../../integration-services/data-flow/transformations/audit-transformation.md)을 참조하세요. 감사를 위해 각 행에도 포함할 사용자 지정 정보가 있는 경우 파생 열 변환을 사용하여 이 정보를 데이터 흐름의 행에 추가할 수 있습니다. 자세한 내용은 [파생 열 변환](../../integration-services/data-flow/transformations/derived-column-transformation.md)을 참조하세요.  
   
     3.  **행 개수 데이터 캡처** 행 개수 정보에 대한 별도의 테이블을 만듭니다. 이 테이블에서 패키지 실행의 각 인스턴스는 ExecutionID로 식별됩니다. 행 개수 변환을 사용하여 데이터 흐름의 중요 지점에서 일련의 변수에 행 개수를 저장합니다. 데이터 흐름이 끝난 후에는 나중에 분석 및 보고할 수 있도록 SQL 실행 태스크를 사용하여 일련의 값을 이 테이블의 행에 삽입합니다.  
   
      이 방법에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](http://go.microsoft.com/fwlink/?LinkId=96602)의 "ETL 감사 및 로깅" 섹션을 참조하십시오.  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>디버그 덤프 파일을 사용하여 패키지 실행 문제 해결  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지 실행에 대한 정보를 제공하는 디버그 덤프 파일을 만들 수 있습니다. 자세한 내용은 [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)을 참조하세요.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지 실행에 대한 정보를 제공하는 디버그 덤프 파일을 만들 수 있습니다. 자세한 내용은 [패키지 실행을 위한 덤프 파일 생성](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)을 참조하세요.  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>런타임 유효성 검사 문제 해결  
  데이터 원본에 연결할 수 없거나 패키지의 이전 태스크가 실행 완료되기 전까지 패키지의 일부에 대해 유효성을 검사할 수 없는 경우가 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 이러한 경우에 발생하는 유효성 검사 오류를 방지하는 데 유용한 다음과 같은 기능이 있습니다.  
