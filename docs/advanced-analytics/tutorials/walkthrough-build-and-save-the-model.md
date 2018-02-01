@@ -28,7 +28,7 @@ ms.lasthandoff: 10/10/2017
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 작성하고 SQL Server에 저장하기
 
-이 단계에서는 기계 학습 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 그 모델을 저장하는 방법을 학습합니다.
+이 단계에서는 머신 러닝 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 그 모델을 저장하는 방법을 학습합니다.
 
 ## <a name="create-a-classification-model-using-rxlogit"></a>RxLogit를 사용하여 분류 모델 만들기
 
