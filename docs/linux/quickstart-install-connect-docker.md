@@ -3,7 +3,7 @@ title: "Docker에서 SQL Server 2017 시작 | Microsoft Docs"
 description: "이 빠른 시작에서는 Docker를 사용 하 여 SQL Server 2017 컨테이너 이미지를 실행 하는 방법을 보여 줍니다. 그런 다음 만들고 sqlcmd 사용 하 여 데이터베이스를 쿼리 합니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/31/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 0cfea0b32221f6aa1ebb8cb947640de3b670c79c
-ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.openlocfilehash: ecb76bb243edae6423d3605ef83a17040ceba720
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Docker가 있는 SQL Server 2017 컨테이너 이미지를 실행 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 퀵 스타트를 사용 하 여 Docker pull 및 SQL Server 2017 컨테이너 이미지를 실행 [mssql-서버-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
 

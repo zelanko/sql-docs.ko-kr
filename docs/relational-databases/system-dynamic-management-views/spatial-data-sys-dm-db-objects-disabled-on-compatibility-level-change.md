@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_objects_disabled_on_compatibility_level_change_TSQL
 - sys.dm_db_objects_disabled_on_compatibility_level_change
 - sys.dm_db_objects_disabled_on_compatibility_level_change_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0f725b1725442ec7853bc4ac130b3d3e1d10fe2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f52daf2257ac6a2d8ea34d61ed2dd869b0363bce
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>공간 데이터 요금-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -52,10 +55,10 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**class**|**int**|1 = 제약 조건<br /><br /> 7 = 인덱스 및 힙|  
-|**class_desc**|**nvarchar (60)**|제약 조건의 경우 OBJECT 또는 COLUMN<br /><br /> 인덱스 및 힙의 경우 INDEX|  
+|**class_desc**|**nvarchar(60)**|제약 조건의 경우 OBJECT 또는 COLUMN<br /><br /> 인덱스 및 힙의 경우 INDEX|  
 |**major_id**|**int**|제약 조건의 개체 ID<br /><br /> 인덱스 및 힙을 포함하는 테이블의 개체 ID|  
 |**minor_id**|**int**|제약 조건의 경우 NULL<br /><br /> 인덱스 및 힙의 경우 Index_id|  
-|**종속성**|**nvarchar (60)**|제약 조건 또는 인덱스의 비활성을 야기하는 종속성에 대한 설명입니다. 업그레이드 중 발생하는 경고에도 동일한 값이 사용됩니다. 이러한 데이터의 예는 다음과 같습니다.<br /><br /> 내장 함수의 경우 "space"<br /><br /> 시스템 UDT의 경우 "geometry"<br /><br /> 시스템 UDT의 메서드의 경우 "geography::Parse"|  
+|**dependency**|**nvarchar(60)**|제약 조건 또는 인덱스의 비활성을 야기하는 종속성에 대한 설명입니다. 업그레이드 중 발생하는 경고에도 동일한 값이 사용됩니다. 이러한 데이터의 예는 다음과 같습니다.<br /><br /> 내장 함수의 경우 "space"<br /><br /> 시스템 UDT의 경우 "geometry"<br /><br /> 시스템 UDT의 메서드의 경우 "geography::Parse"|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  호환성 수준을 변경하면 일부 내장 함수를 사용하는 지속형 계산 열이 비활성화됩니다. 또한 Geometry나 Geography 메서드를 사용하는 지속형 계산 열은 데이터베이스 업그레이드 시 비활성화됩니다.  

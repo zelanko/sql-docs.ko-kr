@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - assembly_files_TSQL
 - assembly_files
 - sys.assembly_files_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.assembly_files catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.assembly_files catalog view
 ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dcb6fd653e2fc9811d3153e7c547c0497560684f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8c86f6a570fbbd8a3f06a63716baa64a4a87441b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysassemblyfiles-transact-sql"></a>sys.assembly_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +41,9 @@ ms.lasthandoff: 11/17/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|이 파일이 속한 어셈블리의 ID입니다.|  
-|**name**|**nvarchar (260)**|어셈블리 파일의 이름입니다.|  
+|**name**|**nvarchar(260)**|어셈블리 파일의 이름입니다.|  
 |**file_id**|**int**|파일의 ID입니다. 어셈블리 내에서 고유한 ID이며 파일 ID 번호 1은 어셈블리 DLL을 나타냅니다.|  
-|**콘텐츠**|**varbinary(max)**|파일의 내용입니다.|  
+|**content**|**varbinary(max)**|파일의 내용입니다.|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

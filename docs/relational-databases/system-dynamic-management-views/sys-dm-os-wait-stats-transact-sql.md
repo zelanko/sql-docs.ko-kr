@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_wait_stats
 - sys.dm_os_wait_stats
 - sys.dm_os_wait_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_wait_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: "111"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 355aefa1b0cb4d8acbc215a3afc72709d8b811e9
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
-ms.translationtype: MT
+ms.openlocfilehash: c7e4859e69328535a89d0c2abc3122340176eaec
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,12 +43,12 @@ ms.lasthandoff: 01/12/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|대기 유형의 이름입니다. 자세한 내용은 참조 [대기 유형](#WaitTypes)이 항목의 뒷부분에 나오는 합니다.|  
+|wait_type|**nvarchar(60)**|대기 유형의 이름입니다. 자세한 내용은 참조 [대기 유형](#WaitTypes)이 항목의 뒷부분에 나오는 합니다.|  
 |waiting_tasks_count|**bigint**|이 대기 유형의 대기 수입니다. 이 카운터는 각 대기가 시작될 때 증가합니다.|  
 |wait_time_ms|**bigint**|이 대기 유형의 총 대기 시간(밀리초)입니다. 이 시간은 signal_wait_time_ms를 포함합니다.|  
 |max_wait_time_ms|**bigint**|이 대기 유형의 최대 대기 시간입니다.|  
 |signal_wait_time_ms|**bigint**|대기 스레드가 신호를 받은 시간과 실행을 시작한 시간 사이의 차이입니다.|  
-|pdw_node_id|**int**|이 배포에 있는 노드에 대 한 식별자입니다. <br/> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|이 배포에 있는 노드에 대 한 식별자입니다. <br/> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
@@ -127,7 +130,7 @@ GO
 |BROKER_FORWARDER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BROKER_INIT |각 활성 데이터베이스에서 Service Broker를 초기화할 때 발생 합니다. 자주 발생하면 안 됩니다.| 
 |BROKER_MASTERSTART |태스크가 대기 하는 시작 하는 Service Broker의 기본 이벤트 처리기에 대 한 경우 발생 합니다. 매우 짧게 발생해야 합니다.| 
-|BROKER_RECEIVE_WAITFOR |RECEIVE WAITFOR가 대기 중인 경우에 발생합니다. 받을 준비가 된 메시지가 없는 경우에 주로 발생합니다.| 
+|BROKER_RECEIVE_WAITFOR |RECEIVE WAITFOR가 대기 중인 경우에 발생합니다. 이 메시지가 큐에 받을 준비가 중 하나 또는 잠금 경합이 인해 큐에서 메시지를 받지 못하도록 의미할 수 있습니다.| 
 |BROKER_REGISTERALLENDPOINTS |Service Broker 연결 끝점을 초기화 하는 동안 발생합니다. 매우 짧게 발생해야 합니다.| 
 |BROKER_SERVICE |대상 서비스와 연결 된 Service Broker 대상 목록이 업데이트 되거나 우선 순위가 다시 매겨지는 경우 발생 합니다.| 
 |BROKER_SHUTDOWN |Service Broker의 계획된 된 종료 있을 때 발생 합니다. 가능하면 매우 짧게 발생해야 합니다.| 
@@ -169,7 +172,7 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |COUNTRECOVERYMGR |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |CREATE_DATINISERVICE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|CXCONSUMER |병렬 쿼리 계획에서 소비자 스레드 행 보낼 공급자 스레드를 대기할 때 발생 합니다. 이 병렬 쿼리 실행의 정상적인 일부입니다. <br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 및[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXCONSUMER |병렬 쿼리 계획에서 소비자 스레드 행 보낼 공급자 스레드를 대기할 때 발생 합니다. 이 병렬 쿼리 실행의 정상적인 일부입니다. <br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
 |CXPACKET |병렬 쿼리 계획 생성 하 고 행을 사용 하는 경우 및 쿼리 프로세서 교환 반복기를 동기화 할 때 발생 합니다. 대기 시간이 너무 길고 쿼리 튜닝(예: 인덱스 추가)으로 시간을 줄일 수 없는 경우에는 병렬 처리 비용 임계값을 조정하거나 병렬 처리 수준을 낮추세요.<br /> **참고:** 에 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET 쿼리 프로세서 교환 반복기를 동기화 하 고 제작 및 소비자 스레드에 대 한 행만 참조 합니다. 소비자 스레드는 CXCONSUMER 대기 유형의에서 개별적으로 추적 됩니다.| 
 |CXROWSET_SYNC |병렬 범위 검색 중에 발생합니다.| 
 |DAC_INIT |관리자 전용 연결이 초기화되는 동안 발생합니다.| 

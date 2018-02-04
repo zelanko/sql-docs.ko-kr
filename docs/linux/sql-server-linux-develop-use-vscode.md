@@ -3,7 +3,7 @@ title: "SQL Server에 대 한 Visual Studio Code mssql 확장을 사용 하 여 
 description: "이 자습서에서는 VS Code에 mssql 확장명을 사용 하는 방법을 보여 줍니다. 이 확장을 사용 하면 편집 하 고 VS Code에서 Transact SQL 스크립트를 실행할 수 있습니다."
 author: erickangMSFT
 ms.author: erickang
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: 
 ms.workload: Active
-ms.openlocfilehash: f7620db7f18c07544158ba49efbead9025c7a19a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 14119be0cc95be9f7acb324553b0c0598896c5d9
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio 코드를 사용 하 여 만들고 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 항목에서는 사용 하는 **mssql** Visual Studio 코드 (VS) SQL Server 데이터베이스를 개발 하기에 대 한 확장입니다.
 
@@ -80,7 +80,7 @@ Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그
 
 다음 단계에는 SQL server VS Code로 연결 하는 방법을 보여 줍니다.
 
-1. VS Code에서 눌러 **CTRL + SHIFT + P** (또는 **F1**) 명령 팔레트를 엽니다.
+1. VS Code에서 **Ctrl+Shift+P**(또는 **F1** 키)를 눌러 명령 팔레트를 엽니다.
 
 2. 형식 **sql** mssql 명령이 표시 됩니다.
 
@@ -91,7 +91,7 @@ Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그
 
 4. 선택 **연결 프로필을 만들려면**합니다. SQL Server 인스턴스에 대 한 연결 프로필을 만듭니다.
 
-5. 지시에 따라 새 연결 프로필에 대 한 연결 속성을 지정 합니다. 각 값을 지정한 후 눌러 **ENTER** 를 계속 합니다. 
+5. 프롬프트에 따라 새 연결 프로필에 대한 연결 속성을 지정합니다. 각 값을 지정한 후 **Enter** 키를 눌러 계속합니다. 
 
    다음 표에서 연결 프로필 속성을 설명 합니다.
 
@@ -100,19 +100,19 @@ Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그
    | **서버 이름** | SQL Server 인스턴스 이름입니다. 이 자습서에서 사용 하 여 **localhost** 컴퓨터에 로컬 SQL Server 인스턴스에 연결할 수 있습니다. 원격 SQL Server에 연결 된 경우에 대상 SQL Server 컴퓨터 또는 IP 주소 이름을 입력 합니다. |
    | **[선택 사항] 데이터베이스 이름** | 이 데이터베이스에 사용 하려는입니다. 이 자습서에는 데이터베이스와 키를 눌러 지정 하지 않으면 **ENTER** 를 계속 합니다. |
    | **사용자 이름** | 서버에서 데이터베이스에 액세스할 수 있는 사용자의 이름을 입력 합니다. 이 자습서에서는 기본값을 사용 하 여 **SA** SQL Server 설치를 사용 하는 동안 만든 계정. |
-   | **암호 (SQL 로그인)** | 지정된 사용자의 암호를 입력합니다. | 
-   | **암호를 저장 하 시겠습니까?** | 형식 **예** 암호를 저장 합니다. 그렇지 않으면 입력 **아니요** 연결 프로필을 사용할 때마다 암호를 입력 합니다. |
+   | **암호(SQL 로그인)** | 지정된 사용자의 암호를 입력합니다. | 
+   | **암호를 저장하시겠습니까?** | 형식 **예** 암호를 저장 합니다. 그렇지 않으면 입력 **아니요** 연결 프로필을 사용할 때마다 암호를 입력 합니다. |
    | **[선택 사항] 이 프로필의 이름을 입력 합니다.** | 연결 프로필 이름입니다. 예를 들어 프로필 이름이 있습니다 **localhost 프로필**합니다. 
 
    > [!Tip] 
    > 수 만들고 사용자 설정 파일 (settings.json)의 연결 프로필을 편집 합니다. 선택 하 여 설정 파일을 열고 **기본 설정** 차례로 **사용자 설정** VS Code 메뉴에서. 자세한 내용은 참조 하십시오. [연결 프로필을 관리]합니다.
 
-6. 키를 눌러는 **ESC** 키 프로필 생성 되어 연결 된 사용자에 게 알려 주는 정보 메시지를 닫습니다.
+6. **Esc** 키를 눌러 프로필이 만들어지고 연결되었음을 알리는 정보 메시지를 닫습니다.
 
    > [!TIP]
    > 연결 실패 시 발생 하는 경우에 오류 메시지에서 문제를 진단 하려면 먼저 시도 **출력** VS Code의 패널 (선택 **출력** 에 **보기** 메뉴). 그런 다음 [connection troubleshooting recommendations](연결 문제 해결 권장 사항)를 검토합니다.
 
-7. 상태 표시줄에 대 한 연결을 확인 합니다.
+7. 상태 표시줄에서 연결을 확인합니다.
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png" alt="Connection status" style="width: 500px;" />
 

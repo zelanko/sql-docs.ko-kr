@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_connections_TSQL
 - sys.dm_exec_connections
 - dm_exec_connections
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_connections dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c8bee848550fb2120fd02c31b505fc0b8da90b5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ef46c3c9ffdf534b2ef76154498a4da8b11fa197
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,12 +46,12 @@ ms.lasthandoff: 01/02/2018
 |session_id|**int**|이 연결과 연관된 세션을 식별합니다. Null을 허용합니다.|  
 |most_recent_session_id|**int**|이 연결과 연관된 가장 최근 요청의 세션 ID를 나타냅니다. SOAP 연결은 다른 세션에서 다시 사용될 수 있습니다. Null을 허용합니다.|  
 |connect_time|**datetime**|연결이 설정된 타임스탬프입니다. Null을 허용하지 않습니다.|  
-|net_transport|**nvarchar (40)**|항상 반환 **세션** 연결 multiple active result sets (MARS) 설정 하는 경우.<br /><br /> **참고:** 이 연결에서 사용 되는 물리적 전송 프로토콜에 설명 합니다. Null을 허용하지 않습니다.|  
-|protocol_type|**nvarchar (40)**|페이로드의 프로토콜 유형을 지정합니다. 현재 TDS(TSQL)와 SOAP을 구분합니다. Null을 허용합니다.|  
+|net_transport|**nvarchar(40)**|항상 반환 **세션** 연결 multiple active result sets (MARS) 설정 하는 경우.<br /><br /> **참고:** 이 연결에서 사용 되는 물리적 전송 프로토콜에 설명 합니다. Null을 허용하지 않습니다.|  
+|protocol_type|**nvarchar(40)**|페이로드의 프로토콜 유형을 지정합니다. 현재 TDS(TSQL)와 SOAP을 구분합니다. Null을 허용합니다.|  
 |protocol_version|**int**|이 연결과 연관된 데이터 액세스 프로토콜의 버전입니다. Null을 허용합니다.|  
 |endpoint_id|**int**|연결 유형을 설명하는 식별자입니다. 이 endpoint_id를 사용하여 sys.endpoints 뷰를 쿼리할 수 있습니다. Null을 허용합니다.|  
-|encrypt_option|**nvarchar (40)**|이 연결에 대해 암호화가 설정되었는지 여부를 설명하는 부울 값입니다. Null을 허용하지 않습니다.|  
-|auth_scheme|**nvarchar (40)**|이 연결에 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 인증 체계를 지정합니다. Null을 허용하지 않습니다.|  
+|encrypt_option|**nvarchar(40)**|이 연결에 대해 암호화가 설정되었는지 여부를 설명하는 부울 값입니다. Null을 허용하지 않습니다.|  
+|auth_scheme|**nvarchar(40)**|이 연결에 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 인증 체계를 지정합니다. Null을 허용하지 않습니다.|  
 |node_affinity|**smallint**|이 연결에서 선호도가 설정된 메모리 노드를 식별합니다. Null을 허용하지 않습니다.|  
 |num_reads|**int**|이 연결 중에 발생 한 바이트 읽기 수입니다. Null을 허용합니다.|  
 |num_writes|**int**|이 연결 중에 발생 한 바이트 쓰기 수입니다. Null을 허용합니다.|  
@@ -62,7 +65,7 @@ ms.lasthandoff: 01/02/2018
 |connection_id|**uniqueidentifier**|각 연결을 고유하게 식별합니다. Null을 허용하지 않습니다.|  
 |parent_connection_id|**uniqueidentifier**|MARS 세션이 사용하고 있는 주 연결을 식별합니다. Null을 허용합니다.|  
 |most_recent_sql_handle|**varbinary(64)**|이 연결에서 실행된 마지막 요청의 SQL 핸들입니다. most_recent_sql_handle 열은 항상 most_recent_session_id 열과 동기화됩니다. Null을 허용합니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.traces_TSQL
 - sys.traces
 - traces_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.traces catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.traces catalog view
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a105a7fbfcac2213f422144b431574cdd543426
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a846bac5a610bac22c9b00712df5ea04c2779df1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systraces-transact-sql"></a>sys.traces(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +41,13 @@ ms.lasthandoff: 11/27/2017
  지원 되는 추적 이벤트의 전체 목록은 참조 하십시오. [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 확장 이벤트 카탈로그 뷰를 사용하십시오.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 확장 이벤트 카탈로그 뷰를 대신 사용 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|추적 ID입니다.|  
 |**상태**|**int**|추적 상태입니다.<br /><br /> 0 = 중지됨<br /><br /> 1 = 실행 중|  
-|**경로**|**nvarchar (260)**|추적 파일의 경로입니다. 이 값은 행 집합 추적의 경우 Null입니다.|  
+|**path**|**nvarchar(260)**|추적 파일의 경로입니다. 이 값은 행 집합 추적의 경우 Null입니다.|  
 |**max_size**|**bigint**|최대 추적 파일 크기 한도(MB)입니다. 이 값은 행 집합 추적의 경우 Null입니다.|  
 |**stop_time**|**datetime**|실행 중인 추적을 중지할 시간입니다.|  
 |**max_files**|**int**|최대 롤오버 파일 수입니다. 최대값을 설정하지 않으면 이 값은 Null입니다.|  

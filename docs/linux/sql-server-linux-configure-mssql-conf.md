@@ -3,7 +3,7 @@ title: "Linux에서 SQL Server 설정 구성 | Microsoft Docs"
 description: "이 항목에서는 Linux에서 SQL Server 2017 설정을 구성 하는 mssql conf 도구를 사용 하는 방법을 설명 합니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 9aca5fe7905f06269bd07b7946c3bb6ef4e37492
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fe0a3bc095e1dcd76f9fdc98e1621974dca6693e
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf 도구와 함께 Linux에서 SQL Server 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 **mssql conf** 은 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu에 대 한 SQL Server 2017와 함께 설치 되는 구성 스크립트입니다. 이 유틸리티를 사용 하 여 다음 매개 변수를 설정할 수 있습니다.
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/01/2017
 | [메모리 제한](#memorylimit) | SQL Server에 대 한 메모리 제한을 설정 합니다. |
 | [TCP 포트](#tcpport) | SQL Server 연결에 대 한 수신 위치는 포트를 변경 합니다. |
 | [TLS](#tls) | 전송 수준 보안을 구성 합니다. |
-| [Traceflag](#traceflags) | 서비스를 사용 하려고 합니다. traceflag를 설정 합니다. |
+| [Traceflags](#traceflags) | 서비스를 사용 하려고 합니다. traceflag를 설정 합니다. |
 
 > [!TIP]
 > 이러한 설정 중 일부를 환경 변수와 구성할 수도 있습니다. 자세한 내용은 참조 [환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다.
@@ -221,10 +221,10 @@ SQL Server를 수집 덤프 메모리의 형식을 제어에 대 한 두 가지 
 
     | 형식 | Description |
     |-----|-----|
-    | **미니** | 미니는 가장 작은 덤프 파일 형식입니다. 스레드 및 프로세스에서 모듈을 확인 하려면 Linux 시스템 정보를 사용 합니다. 호스트 환경 스레드 스택 및 모듈 덤프에 포함 되어 있습니다. 간접 메모리 참조 또는 전역 변수는 포함 되지 않습니다. |
+    | **mini** | 미니는 가장 작은 덤프 파일 형식입니다. 스레드 및 프로세스에서 모듈을 확인 하려면 Linux 시스템 정보를 사용 합니다. 호스트 환경 스레드 스택 및 모듈 덤프에 포함 되어 있습니다. 간접 메모리 참조 또는 전역 변수는 포함 되지 않습니다. |
     | **miniplus** | MiniPlus 미니, 유사 하지만 추가 메모리를 포함 합니다. 내부 SQLPAL와 덤프에는 다음과 같은 메모리 영역을 추가 하는 호스트 환경을 이해:</br></br> -다양 한 전역 변수</br> -64TB 이상의 모든 메모리</br> -모든 영역에는 명명 된 **/proc/$ pid/매핑**</br> 스레드 및 스택 간접 메모리</br> 스레드 정보</br> -관련 Teb의 및 Peb의</br> 모듈 정보</br> VMM 및 VAD 트리 |
-    | **필터링** | 여기서는 프로세스의 모든 메모리는 구체적으로 제외 되지 않은 경우 포함 빼기 기반 필터링된 사용 하 여 디자인 합니다. 디자인은 호스트 환경에 특정 지역 덤프에서 제외 하 고 SQLPAL의 내부를 이해 합니다.
-    | **전체** | 에 모든 영역을 포함 하는 전체 프로세스 덤프 있는 전체 **/proc/$ pid/매핑**합니다. 에 의해 제어 되지이 **coredump.captureminiandfull** 설정 합니다. |
+    | **filtered** | 여기서는 프로세스의 모든 메모리는 구체적으로 제외 되지 않은 경우 포함 빼기 기반 필터링된 사용 하 여 디자인 합니다. 디자인은 호스트 환경에 특정 지역 덤프에서 제외 하 고 SQLPAL의 내부를 이해 합니다.
+    | **full** | 에 모든 영역을 포함 하는 전체 프로세스 덤프 있는 전체 **/proc/$ pid/매핑**합니다. 에 의해 제어 되지이 **coredump.captureminiandfull** 설정 합니다. |
 
 ## <a id="dbmail"></a>Linux에서 SQL Server에 대 한 기본 데이터베이스 메일 프로필 설정
 

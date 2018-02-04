@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_io_virtual_file_stats_TSQL
 - sys.dm_io_virtual_file_stats
 - dm_io_virtual_file_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_virtual_file_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6890eda5969d783a6d40b27493b07e8831146aa8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ab0b534ceea8712c9c197ea52f2da66065d3167
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -81,7 +84,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**database_name**|**sysname**|데이터베이스 이름입니다.</br></br>SQL 데이터 웨어하우스에 대 한 pdw_node_id로 식별 되는 노드에 저장 된 데이터베이스의 이름입니다. 각 노드에 13 파일이 들어 있는 한 tempdb 데이터베이스를 있습니다. 또한 각 노드에 배포, 당 하나의 데이터베이스만 있으며 각 배포 데이터베이스는 5 파일. 예를 들어, 각 노드에 4 분포 들어 있는 경우는 결과 pdw_node_id 당 20 개의 배포 데이터베이스 파일을 보여 줍니다. 
 |**database_id**|**smallint**|데이터베이스의 ID입니다.|  
 |**file_id**|**smallint**|파일의 ID입니다.|  
-|**sample_ms**|**bigint**|컴퓨터가 시작된 이후로 경과한 시간(밀리초)입니다. 이 열은 이 함수의 다양한 출력을 비교하는 데 사용할 수 있습니다.</br></br>데이터 형식이 **int** 에 대 한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|컴퓨터가 시작된 이후로 경과한 시간(밀리초)입니다. 이 열은 이 함수의 다양한 출력을 비교하는 데 사용할 수 있습니다.</br></br>데이터 형식이 **int** 에 대 한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|파일에 대해 읽기가 실행된 횟수입니다.|  
 |**num_of_bytes_read**|**bigint**|파일에 대해 실행된 읽기의 총 바이트 수입니다.|  
 |**io_stall_read_ms**|**bigint**|사용자가 파일에 대한 읽기가 실행될 때까지 대기한 총 시간(밀리초)입니다.|  
@@ -89,11 +92,11 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**num_of_bytes_written**|**bigint**|파일에 대해 실행된 쓰기의 총 바이트 수입니다.|  
 |**io_stall_write_ms**|**bigint**|사용자가 파일에 대한 쓰기가 완료될 때까지 대기한 총 시간(밀리초)입니다.|  
 |**io_stall**|**bigint**|사용자가 파일에 대한 I/O가 완료될 때까지 대기한 총 시간(밀리초)입니다.|  
-|**확인**|**bigint**|이 파일에 대해 디스크에서 사용된 바이트 수입니다. 스파스 파일의 경우 데이터베이스 스냅숏에 사용된 디스크의 실제 바이트 수입니다.|  
+|**size_on_disk_bytes**|**bigint**|이 파일에 대해 디스크에서 사용된 바이트 수입니다. 스파스 파일의 경우 데이터베이스 스냅숏에 사용된 디스크의 실제 바이트 수입니다.|  
 |**file_handle**|**varbinary**|이 파일에 대한 Windows 파일 핸들입니다.|  
 |**io_stall_queued_read_ms**|**bigint**|**에 적용 되지 않습니다:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]합니다.<br /><br /> 읽기용 IO 리소스 관리에서 사용하는 총 IO 대시 시간입니다. Null을 허용하지 않습니다. 자세한 내용은 참조 [sys.dm_resource_governor_resource_pools &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**에 적용 되지 않습니다:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]합니다.<br /><br />  쓰기용 IO 리소스 관리에서 사용하는 총 IO 대시 시간입니다. Null을 허용하지 않습니다.|
-|**pdw_node_id**|**int**|**적용 대상:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>분포에 대 한 노드의 식별자입니다.
+|**pdw_node_id**|**int**|**적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>분포에 대 한 노드의 식별자입니다.
  
   
 ## <a name="permissions"></a>Permissions  

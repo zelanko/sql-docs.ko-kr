@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - fulltext_indexes_TSQL
 - sys.fulltext_indexes_TSQL
 - sys.fulltext_indexes
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fulltext_indexes catalog view
 - full-text indexes [SQL Server], properties
 ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b076a1b71cf60974fae4d18c7736be9f2d33b1d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6f19f05239629553594f52f30fe2eb4ef0854cb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,13 +46,13 @@ ms.lasthandoff: 11/17/2017
 |**fulltext_catalog_id**|**int**|전체 텍스트 인덱스가 있는 전체 텍스트 카탈로그의 ID입니다.|  
 |**is_enabled**|**bit**|1 = 전체 텍스트 인덱스가 현재 활성화되었습니다.|  
 |**change_tracking_state**|**char(1)**|변경 내용 추적의 상태입니다.<br /><br /> M = 수동<br /><br /> A = 자동<br /><br /> O = 추적 안 함|  
-|**change_tracking_state_desc**|**nvarchar (60)**|변경 내용 추적 상태에 대한 설명입니다.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
+|**change_tracking_state_desc**|**nvarchar(60)**|변경 내용 추적 상태에 대한 설명입니다.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
 |**has_crawl_completed**|**bit**|전체 텍스트 인덱스가 완료한 마지막 탐색(채우기)입니다.|  
 |**crawl_type**|**char(1)**|현재 또는 마지막 탐색의 유형입니다.<br /><br /> F = 전체 탐색<br /><br /> I = 타임스탬프 기반 증분 탐색<br /><br /> U = 알림 기반 업데이트 탐색<br /><br /> P = 전체 탐색이 일시 중지됨|  
-|**crawl_type_desc**|**nvarchar (60)**|현재 또는 마지막 탐색 유형에 대한 설명입니다.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
+|**crawl_type_desc**|**nvarchar(60)**|현재 또는 마지막 탐색 유형에 대한 설명입니다.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
 |**crawl_start_date**|**datetime**|현재 또는 마지막 탐색의 시작 날짜와 시간입니다.<br /><br /> NULL = 없음|  
 |**crawl_end_date**|**datetime**|현재 또는 마지막 탐색의 종료 날짜와 시간입니다.<br /><br /> NULL = 없음|  
-|**incremental_timestamp**|**binary (8)**|다음 증분 탐색에 사용할 타임스탬프 값입니다.<br /><br /> NULL = 없음|  
+|**incremental_timestamp**|**binary(8)**|다음 증분 탐색에 사용할 타임스탬프 값입니다.<br /><br /> NULL = 없음|  
 |**stoplist_id**|**int**|ID는 [stoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) 이 전체 텍스트 인덱스와 연결 된 합니다.|  
 |**data_space_id**|**int**|이 전체 텍스트 인덱스가 있는 파일 그룹입니다.|  
 |**property_list_id**|**int**|이 전체 텍스트 인덱스와 연결된 검색 속성 목록의 ID입니다. NULL은 전체 텍스트 인덱스와 연결된 검색 속성 목록이 없음을 나타냅니다. 이 검색 속성 목록에 대 한 자세한 정보를 가져오려면는 [sys.registered_search_property_lists&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) 카탈로그 뷰에 있습니다.|  
@@ -79,7 +81,7 @@ GO
  [개체 카탈로그 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [DROP FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
+ [DROP FULLTEXT index&#40; Transact SQL &#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   

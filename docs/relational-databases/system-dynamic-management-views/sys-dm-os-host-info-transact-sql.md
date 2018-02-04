@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_host_info_TSQL
 - dm_os_host_info
 - dm_os_host_info_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_host_info dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63238f4148fd57f05aa0c07bb1fad92a41368c06
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 35c0163abffc8103164cc31d0d730db1a0aebb95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/18/2017
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |운영 체제의 유형: Windows 또는 Linux |
 |**host_distribution** |**nvarchar(256)** |운영 체제의 설명입니다. |
-|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제 릴리스(버전 번호)입니다. 값 및 설명 목록은 참조 하세요. [운영 체제 버전 (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx)합니다. <br> Linux 용 빈 문자열을 반환 합니다. |  
+|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제 릴리스 (버전 번호)입니다. 값 및 설명 목록은 참조 하세요. [운영 체제 버전 (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx)합니다. <br> Linux 용 빈 문자열을 반환 합니다. |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 운영 체제의 서비스 팩 수준입니다. <br> Linux 용 빈 문자열을 반환 합니다. |  
 |**host_sku**|**int**|Windows SKU(Stock Keeping Unit) ID입니다. SKU Id 및 설명의 목록에 대 한 참조 [GetProductInfo 함수](http://msdn.microsoft.com/library/ms724358.aspx)합니다. Null을 허용합니다. <br> Linux에서 NULL을 반환합니다. |  
 |**os_language_version**|**int**|운영 체제의 Windows LCID(로캘 ID)입니다. LCID 값 및 설명의 목록에 대 한 참조 [Microsoft에서 할당 한 로캘 Id](http://go.microsoft.com/fwlink/?LinkId=208080)합니다. null일 수 없습니다.|  
@@ -69,7 +72,7 @@ Windows에 설정 하는 예제 결과 다음과 같습니다.
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |창   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
 Linux에서 설정 하는 예제 결과 다음과 같습니다.
  
@@ -80,6 +83,6 @@ Linux에서 설정 하는 예제 결과 다음과 같습니다.
   
 ## <a name="see-also"></a>관련 항목:  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_os_windows_info (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
+ [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  
 

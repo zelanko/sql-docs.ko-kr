@@ -3,7 +3,7 @@ title: "VDI 백업 사양-Linux에서 SQL Server | Microsoft Docs"
 description: "SQL Server 가상 백업 장치 인터페이스 사양입니다."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 31fc2a5d96f38cbbcd0c4b616bcfc75c552c1340
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fc2fa01902fee76b85c4b348d701166845a6d95e
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI 클라이언트 SDK 사양에서 SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Linux 가상 장치 인터페이스 (VDI) 클라이언트 SDK에는 SQL Server에서 제공 하는 인터페이스에 설명 합니다. 독립 소프트웨어 공급 업체 (Isv) SQL Server의 제품에 통합 하는 가상 백업 장치 API 응용 프로그래밍 인터페이스 ()를 사용할 수 있습니다. 일반적으로 Linux에서 VDI 유사 하 게 작동 VDI Windows에서 다음과 같이 변경 된:
 
@@ -110,7 +110,7 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 
 | 매개 변수 | 인수 | 설명
 | ----- | ----- | ------ |
-| | **제한 시간** | 제한 시간 (밀리초)입니다. 제한 시간을 방지 하기 위해 무한 또는 모든 음의 정수를 사용 합니다.
+| | **timeout** | 제한 시간 (밀리초)입니다. 제한 시간을 방지 하기 위해 무한 또는 모든 음의 정수를 사용 합니다.
 | | **cfg** | 실행이 완료 되는 서버에서 선택한 구성에 포함 되어이 있습니다. 자세한 내용은이 문서의 뒷부분에 나오는 "구성"을 참조 합니다.
 
 | 반환 값 | 인수 | 설명
@@ -165,14 +165,14 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 
 | 매개 변수 | 인수 | 설명
 | ----- | ----- | ------ |
-| |**제한 시간** |밀리초에서 대기 하는 시간입니다. INFINTE를 사용 하 여 무기한 대기를 나타냅니다. 명령에 대 한 폴링 0을 사용 합니다. 명령이 현재 사용 가능한 경우 VD_E_TIMEOUT 반환 됩니다. 제한 시간이 발생 하는 경우 클라이언트는 다음 동작을 결정 합니다.
+| |**timeout** |밀리초에서 대기 하는 시간입니다. INFINTE를 사용 하 여 무기한 대기를 나타냅니다. 명령에 대 한 폴링 0을 사용 합니다. 명령이 현재 사용 가능한 경우 VD_E_TIMEOUT 반환 됩니다. 제한 시간이 발생 하는 경우 클라이언트는 다음 동작을 결정 합니다.
 | |**Timeout** |밀리초에서 대기 하는 시간입니다. INFINTE 또는 음수 값을 사용 하 여 무기한 대기를 나타냅니다. 명령에 대 한 폴링 0을 사용 합니다. VD_E_TIMEOUT 제한 시간이 만료 되기 전에 명령이 없습니다. 사용할 수 있는 경우 반환 됩니다. 제한 시간이 발생 하는 경우 클라이언트는 다음 동작을 결정 합니다.
 | |**ppCmd** |명령을 성공적으로 반환 되 면 매개 변수는 명령이 실행의 주소를 반환 합니다. 반환 되는 메모리는 읽기 전용입니다. 명령이 완료 되 면이 포인터가 CompleteCommand 루틴에 전달 됩니다. 각 명령에 대 한 내용은이 문서의 뒷부분에 나오는 "Commands"를 참조 하십시오.
         
 | 반환 값 | 인수 | 설명
 | ----- | ----- | ------ |
 | |**NOERROR** |명령을 인출 되었습니다.
-| |**했습니다** |장치가 서버에 의해 종료 되었습니다.
+| |**VD_E_CLOSE** |장치가 서버에 의해 종료 되었습니다.
 | |**VD_E_TIMEOUT** |명령이 없습니다. 제공 되었으며 제한 시간이 만료 되었습니다.
 | |**VD_E_ABORT** |클라이언트나 서버 어느 한쪽을 종료할는 SignalAbort 사용 했습니다.
 
@@ -199,7 +199,7 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 | |**pCmd** |ClientVirtualDevice::GetCommand에서 이전에 반환 되는 명령의 주소입니다.
 | |**completionCode** |완료 상태를 나타내는 상태 코드입니다. 이 매개 변수는 모든 명령에 대 한 반환 되어야 합니다. 반환 되는 코드는 수행 중인 명령에 적합 해야 합니다. ERROR_SUCCESS 모든 경우에에서 성공적으로 실행 된 명령을 나타내는 데 사용 됩니다. 참조 파일을 가능한 코드의 전체 목록은 vdierror.h 합니다. 각 명령에 대 한 일반적인 상태 코드 목록은이 문서의 뒷부분에 나오는 "명령"에 나타납니다.
 | |**bytesTransferred** |성공적으로 전송 된 바이트 수입니다. 데이터 전송 명령을 읽기 및 쓰기에 대해서만 반환 됩니다.
-| |**위치** |이것이 GetPosition 명령에 대 한 응답입니다.
+| |**position** |이것이 GetPosition 명령에 대 한 응답입니다.
         
 | 반환 값 | 인수 | 설명
 | ----- | ----- | ------ |
@@ -222,7 +222,7 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 
 | 매개 변수 | 인수 | 설명
 | ----- | ----- | ------ |
-| |없음 | 해당 사항 없음
+| |InclusionThresholdSetting | 해당 사항 없음
         
 | 반환 값 | 인수 | 설명
 | ----- | ----- | ------ |
@@ -242,7 +242,7 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 
 | 매개 변수 | 인수 | 설명
 | ----- | ----- | ------ |
-| |없음 |해당 사항 없음
+| |InclusionThresholdSetting |해당 사항 없음
         
 | 반환 값 | 인수 | 설명
 | ----- | ----- | ------ |

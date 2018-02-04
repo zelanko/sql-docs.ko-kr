@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referencing_entities_TSQL
 - sys.dm_sql_referencing_entities_TSQL
 - dm_sql_referencing_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referencing_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,7 +86,7 @@ sys.dm_sql_referencing_entities (
 |referencing_entity_name|**sysname**|참조 엔터티의 이름입니다. Null을 허용하지 않습니다.|  
 |referencing_id|**int**|참조 엔터티의 ID입니다. Null을 허용하지 않습니다.|  
 |referencing_class|**tinyint**|참조 엔터티의 클래스입니다. Null을 허용하지 않습니다.<br /><br /> 1 = 개체<br /><br /> 12 = 데이터베이스 수준 DDL 트리거<br /><br /> 13 = 서버 수준 DDL 트리거|  
-|referencing_class_desc|**nvarchar (60)**|참조 엔터티 클래스에 대한 설명입니다.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar(60)**|참조 엔터티 클래스에 대한 설명입니다.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|참조된 엔터티 ID 확인은 호출자의 스키마에 종속되기 때문에 런타임에 발생함을 나타냅니다.<br /><br /> 1 = 참조 엔터티는 엔터티를 참조할 수 있습니다. 그러나 참조된 엔터티 ID의 확인은 호출자에 종속되므로 확인할 수 없습니다. 이는 EXECUTE 문에서 호출되는 저장 프로시저, 확장 저장 프로시저 또는 사용자 정의 함수에 대한 비스키마 바운드 참조에서만 발생합니다.<br /><br /> 0 = 참조된 엔터티는 호출자에 종속되지 않습니다.|  
   
 ## <a name="exceptions"></a>예외  
@@ -104,22 +107,22 @@ sys.dm_sql_referencing_entities (
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|Table|예*|예|  
+|테이블|예*|예|  
 |보기|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
-|CLR 저장 프로시저|아니오|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|아니오|예|  
-|CLR 트리거(DML 및 DDL)|아니오|아니오|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니오|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니오|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니오|  
-|확장 저장 프로시저|아니오|예|  
-|큐|아니오|예|  
-|동의어|아니오|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니오|예|  
-|XML 스키마 컬렉션|아니오|예|  
-|파티션 함수|아니오|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 * *|예|예|  
+|CLR 저장 프로시저|아니요|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수(user-defined function)|예|예|  
+|CLR 사용자 정의 함수|아니요|예|  
+|CLR 트리거(DML 및 DDL)|아니요|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거(DML trigger)|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
+|확장 저장 프로시저|아니요|예|  
+|큐|아니요|예|  
+|동의어|아니요|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
+|XML 스키마 컬렉션|아니요|예|  
+|파티션 함수|아니요|예|  
   
  \*한 테이블에서 참조 하는 경우에 참조 엔터티로 추적 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   

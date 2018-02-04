@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_cached_plan_dependent_objects_TSQL
 - sys.dm_exec_cached_plan_dependent_objects_TSQL
 - dm_exec_cached_plan_dependent_objects
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_cached_plan_dependent_objects dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_cached_plan_dependent_objects dynamic management function
 ms.assetid: 9b6cf5f7-b267-44fb-aac8-f49c9aa10cc1
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6e044c20434b7aa8a0f927d4c626984309f7a29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 57b9fbc97e11dd7470f5c83ebfc534aeb1ee1f0e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +60,7 @@ dm_exec_cached_plan_dependent_objects(plan_handle)
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**usecounts**|**int**|실행 컨텍스트 또는 커서가 사용된 횟수입니다.<br /><br /> 열은 Null을 허용하지 않습니다.|  
-|**memory_object_address**|**varbinary (8)**|실행 컨텍스트 또는 커서의 메모리 주소입니다.<br /><br /> 열은 Null을 허용하지 않습니다.|  
+|**memory_object_address**|**varbinary(8)**|실행 컨텍스트 또는 커서의 메모리 주소입니다.<br /><br /> 열은 Null을 허용하지 않습니다.|  
 |**cacheobjtype**|**nvarchar(50)**|계획 캐시 개체 형식입니다. 열은 Null을 허용하지 않습니다. 가능한 값은 아래와 같습니다.<br /><br /> 실행 계획<br /><br /> CLR 컴파일 함수<br /><br /> CLR 컴파일 프로시저<br /><br /> 커서|  
   
 ## <a name="permissions"></a>Permissions  
@@ -68,7 +71,7 @@ dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|위치|관계|  
+|보낸 사람|수행할 작업|위치|관계|  
 |----------|--------|--------|------------------|  
 |**dm_exec_cached_plan_dependent_objects**|**dm_os_memory_objects**|**memory_object_address**|일 대 일|  
   

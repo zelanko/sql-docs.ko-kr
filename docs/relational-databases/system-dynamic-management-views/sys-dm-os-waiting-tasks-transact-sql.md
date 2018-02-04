@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_waiting_tasks_TSQL
 - dm_os_waiting_tasks_TSQL
 - sys.dm_os_waiting_tasks
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_waiting_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_waiting_tasks dynamic management view
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 52f867ccc301a710656739bf49ec1a11a50fcee1
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5b3a3122f9f0908e063685941f58bb03281659e0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,30 +43,30 @@ ms.lasthandoff: 01/02/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**waiting_task_address**|**varbinary (8)**|대기 중인 태스크의 주소입니다.|  
+|**waiting_task_address**|**varbinary(8)**|대기 중인 태스크의 주소입니다.|  
 |**session_id**|**smallint**|태스크와 연결된 세션의 ID입니다.|  
 |**exec_context_id**|**int**|태스크와 연결된 실행 컨텍스트의 ID입니다.|  
 |**wait_duration_ms**|**bigint**|이 대기 유형에 대한 총 대기 시간(밀리초)입니다. 이 시간은 포함 **signal_wait_time**합니다.|  
-|**wait_type**|**nvarchar (60)**|대기 유형의 이름입니다.|  
-|**resource_address**|**varbinary (8)**|태스크가 대기 중인 리소스의 주소입니다.|  
-|**blocking_task_address**|**varbinary (8)**|현재 이 리소스를 보유하고 있는 태스크입니다.|  
+|**wait_type**|**nvarchar(60)**|대기 유형의 이름입니다.|  
+|**resource_address**|**varbinary(8)**|태스크가 대기 중인 리소스의 주소입니다.|  
+|**blocking_task_address**|**varbinary(8)**|현재 이 리소스를 보유하고 있는 태스크입니다.|  
 |**blocking_session_id**|**smallint**|요청을 차단하고 있는 세션의 ID입니다. 이 열이 NULL이면 요청이 차단되지 않거나 차단 세션의 세션 정보를 사용할 수 없습니다(또는 식별할 수 없음).<br /><br /> -2 = 분리된 분산 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -3 = 지연된 복구 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -4 = 내부 래치 상태 전환 때문에 차단 래치 소유자의 세션 ID를 확인할 수 없습니다.|  
 |**blocking_exec_context_id**|**int**|차단 태스크의 실행 컨텍스트 ID입니다.|  
 |**resource_description**|**nvarchar(3072)**|사용 중인 리소스에 대한 설명입니다. 자세한 내용은 아래 목록을 참조하십시오.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="resourcedescription-column"></a>resource_description 열  
  Resource_description 열은 다음 값에 있습니다.  
   
  **스레드 풀 리소스 소유자:**  
   
--   스레드 풀 id = 스케줄러\<16 진수 주소 >  
+-   threadpool id=scheduler\<hex-address>  
   
  **병렬 쿼리 리소스 소유자:**  
   
--   exchangeEvent id = {포트 | 파이프}\<16 진수 주소 > WaitType =\<exchange-wait-유형 > nodeId =\<exchange 노드 id >  
+-   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
   
- **Exchange-대기 유형:**  
+ **Exchange-wait-type:**  
   
 -   e_waitNone  
   
@@ -81,7 +84,7 @@ ms.lasthandoff: 01/02/2018
   
  **잠금 리소스 소유자:**  
   
--   \<형식 관련 설명 > id = 잠금\<잠금 16 진수 주소 > 모드 =\<모드 > associatedObjectId =\<연결-o b j-i d >  
+-   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
   
      **\<형식 관련 설명 > 일 수 있습니다.**  
   
@@ -113,11 +116,11 @@ ms.lasthandoff: 01/02/2018
   
  **외부 리소스 소유자:**  
   
--   외부 ExternalResource =\<대기 유형 >  
+-   External ExternalResource=\<wait-type>  
   
  **일반 리소스 소유자:**  
   
--   TransactionMutex TransactionInfo 작업 영역 =\<작업 영역 id >  
+-   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
   
 -   Mutex  
   
@@ -131,9 +134,9 @@ ms.lasthandoff: 01/02/2018
   
  **래치 리소스 소유자:**  
   
--   \<->:\<파일-i d >:\<페이지 파일 >  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
--   \<GUID >  
+-   \<GUID>  
   
 -   \<래치 클래스 > (\<래치 주소 >)  
   

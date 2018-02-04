@@ -8,30 +8,32 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_COMPUTE_NODES_TSQL
 - DM_EXEC_COMPUTE_NODES
 - SYS.DM_EXEC_COMPUTE_NODES_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_exec_compute_nodes management view
 - PolyBase, views
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4affdf5cdcab66ffacab6bb40596855938ad1b98
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cdd765d5f7b46e1189357e588d8b28ddd7acd029
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -43,9 +45,9 @@ ms.lasthandoff: 11/17/2017
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|노드와 연결 된 고유 숫자 id입니다. 이 보기에 대 한 키입니다.|형식에 관계 없이 스케일 아웃 클러스터 전체에서 고유 합니다.|  
-|형식|**nvarchar (32)**|노드의 유형입니다.|' COMPUTE', '헤드'|  
-|name|**nvarchar (32)**|노드의 논리적 이름입니다.|적절 한 길이의 문자열입니다.|  
-|address|**nvarchar (32)**|이 노드의 P 주소입니다.|IP 주소 범위|  
+|유형|**nvarchar(32)**|노드의 유형입니다.|' COMPUTE', '헤드'|  
+|name|**nvarchar(32)**|노드의 논리적 이름입니다.|적절 한 길이의 문자열입니다.|  
+|address|**nvarchar(32)**|이 노드의 P 주소입니다.|IP 주소 범위|  
   
 ## <a name="see-also"></a>관련 항목:  
  [PolyBase 동적 관리 뷰를 사용한 문제 해결](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

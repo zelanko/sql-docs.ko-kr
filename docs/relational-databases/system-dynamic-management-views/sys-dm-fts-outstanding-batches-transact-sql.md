@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_fts_outstanding_batches_TSQL
 - sys.dm_fts_outstanding_batches_TSQL
 - sys.dm_fts_outstanding_batches
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - sys.dm_fts_outstanding_batches dynamic management view
 ms.assetid: c4d697ed-c906-4c28-b137-036a25e13c84
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab9d21dfa1c3aefb34f59dde7d4af5141e483682
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 06490fd099957c3636f05dcfe4e8f0ba9deab8d3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,9 +45,9 @@ ms.lasthandoff: 11/17/2017
 |catalog_id|**int**|전체 텍스트 카탈로그의 ID입니다.|  
 |table_id|**int**|전체 텍스트 인덱스를 포함하는 테이블 ID의 ID입니다.|  
 |batch_id|**int**|일괄 처리 ID|  
-|memory_address|**varbinary (8)**|일괄 처리 개체의 메모리 주소입니다.|  
-|crawl_memory_address|**varbinary (8)**|탐색 개체의 메모리 주소입니다(부모 개체).|  
-|memregion_memory_address|**varbinary (8)**|필터 데몬 호스트(fdhost.exe)에 대한 아웃바운드 공유 메모리의 메모리 영역 메모리 주소입니다.|  
+|memory_address|**varbinary(8)**|일괄 처리 개체의 메모리 주소입니다.|  
+|crawl_memory_address|**varbinary(8)**|탐색 개체의 메모리 주소입니다(부모 개체).|  
+|memregion_memory_address|**varbinary(8)**|필터 데몬 호스트(fdhost.exe)에 대한 아웃바운드 공유 메모리의 메모리 영역 메모리 주소입니다.|  
 |hr_batch|**int**|일괄 처리에 대한 가장 최근의 오류 코드입니다.|  
 |is_retry_batch|**bit**|다시 시도 일괄 처리인지 여부를 나타냅니다.<br /><br /> 0 = 아니요<br /><br /> 1 = 예|  
 |retry_hints|**int**|일괄 처리에 필요한 다시 시도 작업의 유형입니다.<br /><br /> 0 = 다시 시도 안 함<br /><br /> 1 = 다중 스레드 다시 시도<br /><br /> 2 = 단일 스레드 다시 시도<br /><br /> 3 = 단일 및 다중 스레드 다시 시도<br /><br /> 5 = 다중 스레드 마지막 다시 시도<br /><br /> 6 = 단일 스레드 마지막 다시 시도<br /><br /> 7 = 단일 및 다중 스레드 마지막 다시 시도|  

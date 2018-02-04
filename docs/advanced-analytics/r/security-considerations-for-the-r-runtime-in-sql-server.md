@@ -1,6 +1,6 @@
 ---
 title: "SQL Server의 기계 학습에 대 한 보안 고려 사항 | Microsoft Docs"
-ms.date: 11/16/2017
+ms.date: 02/01/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -10,16 +10,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 67beebd9c35ddddbfbc56f606ec1b7df3671ae64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7262b804c1712e7ea962feefd88f3b2f64146a9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>SQL Server의 기계 학습에 대 한 보안 고려 사항
 
@@ -37,7 +37,7 @@ Python 또는 R 런타임에 무제한 네트워크 액세스를 방지 하기 �
 
 ## <a name="authentication-methods-supported-for-remote-compute-contexts"></a>원격 계산 컨텍스트를 지 원하는 인증 방법
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]Windows 통합 인증 및 SQL 로그인 간의 연결을 만들 때 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 원격 데이터 과학 클라이언트입니다.
+[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] Windows 통합 인증 및 SQL 로그인 간의 연결을 만들 때 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 원격 데이터 과학 클라이언트입니다.
 
 예를 들어 랩톱에서 R 솔루션을 개발 하는 및를 SQL Server 컴퓨터에 계산을 수행 합니다. 사용 하 여 R에서 SQL Server 데이터 소스를 만드는 것은 **rx** Windows 자격 증명을 기반으로 함수 및 연결 문자열을 정의 합니다.
 
@@ -50,9 +50,9 @@ SQL 로그인을 사용 하는이 시나리오 에서도 지원 됩니다. 그�
  일반적으로 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 외부 스크립트 런타임을 시작 하 고는 자체 계정에서 스크립트를 실행 합니다. 그러나, 외부 런타임은 ODBC 호출을 수행 하는 경우는 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] ODBC 호출 발생 하지 않도록 하는 명령을 전송 하는 사용자의 자격 증명을 가장 합니다. 이를 *암시적 인증*이라고 합니다.
  
  > [!IMPORTANT]
- > 암시적 인증이 성공하려면 작업자 계정(기본적으로 **SQLRUser**)이 포함된 Windows 사용자 그룹에는 인스턴스에 대한 마스터 데이터베이스의 계정이 있어야 하고 이 계정에는 인스턴스에 연결할 권한이 부여되어야 합니다.
+ > 묵시적된 인증을 성공적으로 작업자 계정이 포함 된 Windows 사용자 그룹에 대 한 (기본적으로 **SQLRUserGroup**) 해야 수 있는 권한이 부여 되어야 인스턴스와이 계정에 대 한 계정이 master 데이터베이스에 있어야 인스턴스에 연결 합니다.
  > 
- > 그룹 **SQLRUser** Python 스크립트를 실행 하는 경우에 사용 됩니다. 
+ > 그룹 **SQLRUserGroup** Python 스크립트를 실행 하는 경우에 사용 됩니다. 
 
 일반적으로 RODBC 또는 다른 라이브러리를 사용 하 여 데이터 읽기를 시도 하기 보다는 먼저 SQL Server에 더 큰 데이터 집합을 이동 하는 것이 좋습니다. 또한 사용 하 여 SQL Server 쿼리 또는 뷰, 주 데이터 원본으로 성능 향상을 위해 합니다. 
 

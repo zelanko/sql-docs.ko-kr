@@ -1,10 +1,10 @@
 ---
 title: "Linux에서 SQL Server로 데이터베이스 마이그레이션 자동화 | Microsoft Docs"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
-ms.date: 08/23/2017
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,19 +15,19 @@ ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.custom: 
 ms.workload: Inactive
-ms.openlocfilehash: 99215749aa9b827018e822b759c24cbf9bb1e4e2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7c2e20d2c7742a40916c010f1fca17f06398caa8
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant를 사용 하 여 Linux로 데이터베이스 마이그레이션 자동화
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 항목에서는 소개 [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) 쉽게 Microsoft Access, DB2, MySQL, Oracle 및 Sybase에서 SQL Server 2017 linux에 데이터베이스를 마이그레이션할 수 있습니다. SSMA는 Windows 응용 프로그램, 따라서 SSMA를 사용 하 여 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터에 있는 경우. 
+이 문서에서는 소개 [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) 쉽게 Microsoft Access, DB2, MySQL, Oracle 및 Sybase에서 SQL Server 2017 linux에 데이터베이스를 마이그레이션할 수 있습니다. SSMA는 Windows 응용 프로그램, 따라서 SSMA를 사용 하 여 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터에 있는 경우. 
 
-SSMA는 Oracle, MySQL, Sybase, DB2 및 Microsoft SQL Server 2017 linux에 대 한 액세스를 포함 하 여 원본 데이터베이스의 다양 한을 지원 하 고와 같은 마이그레이션 작업을 자동화 하는 데 도움이 됩니다.
+SSMA는 Oracle, MySQL, Sybase, DB2, 및 Microsoft SQL Server 2017 linux에 대 한 액세스를 포함 하 여 원본 데이터베이스의 다양 한을 지원 하 고와 같은 마이그레이션 작업을 자동화 하는 데 도움이 됩니다.
 
 - 원본 데이터베이스를 평가 합니다.
 - Microsoft SQL Server 스키마를 원본 데이터베이스 스키마 변환
@@ -35,7 +35,7 @@ SSMA는 Oracle, MySQL, Sybase, DB2 및 Microsoft SQL Server 2017 linux에 대 �
 - 데이터 마이그레이션
 - 마이그레이션 테스트
 
-시작 하려면 아래 목록에서 원본 데이터베이스에 대 한 SQL Server Migration Assistant (SSMA)를 다운로드 합니다.
+시작 하려면 다음 목록에서 원본 데이터베이스에 대 한 SQL Server Migration Assistant (SSMA)를 다운로드 합니다.
 - [SSMA for Access](http://aka.ms/ssmaforaccess)
 - [SSMA for DB2](http://aka.ms/ssmafordb2)
 - [MySQL용 SSMA](http://aka.ms/ssmaformysql) 

@@ -3,7 +3,7 @@ title: "환경 변수를 SQL Server 설정 구성 | Microsoft Docs"
 description: "이 항목에서는 환경 변수를 사용 하 여 Linux에서 특정 SQL Server 2017 설정을 구성 하는 방법에 설명 합니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 07/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 44c33e0f5619349dfa32b48d7745ae6f9ddcc155
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b32330aee4fcd427ecd05d27fba3ffb8539bffa6
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux에서 환경 변수를 SQL Server 설정 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 2017 Linux에서 구성 하려면 몇 가지 서로 다른 환경 변수를 사용할 수 있습니다. 이러한 변수는 두 가지 시나리오에서 사용 됩니다.
 
@@ -39,7 +39,7 @@ SQL Server 2017 Linux에서 구성 하려면 몇 가지 서로 다른 환경 변
 |-----|-----|
 | **ACCEPT_EULA** | 모든 값 (예를 들어, ' Y')로 설정 된 경우 SQL Server 사용권 계약에 동의 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 암호를 구성 합니다. |
-| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**웹**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우에 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
+| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우에 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
 | **MSSQL_LCID** | SQL Server에 사용할 언어 ID를 설정 합니다. 예를 들어 1036 프랑스어입니다. |
 | **MSSQL_COLLATION** | SQL Server에 대 한 기본 데이터 정렬을 설정합니다. 이 언어 id (LCID) 데이터 정렬의 기본 매핑을 재정의합니다. |
 | **MSSQL_MEMORY_LIMIT_MB** | 메모리 (MB) SQL Server에서 사용할 수 있는 최대 크기를 설정 합니다. 기본적으로 것은 총 실제 메모리의 80%입니다. |

@@ -3,7 +3,7 @@ title: "만들기 및 Linux에서 SQL Server에 대 한 가용성 그룹 구성 
 description: "이 자습서에는 만들고 Linux에서 SQL Server에 대 한 가용성 그룹을 구성 하는 방법을 보여 줍니다."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들기 및 Linux에서 SQL Server에 대 한 가용성 그룹 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 자습서에서는 가용성 그룹 (AG) 만들기 및 구성 하는 방법에 설명 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] linux. 와 달리 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] 이전 버전 windows에서 사용할 수 있습니다 Ag 또는 먼저 기반이 되는 Pacemaker 클러스터를 만들지 않고도 합니다. 클러스터와의 통합 필요에 따라 수행 되지 않으므로 나중에 다시.
 

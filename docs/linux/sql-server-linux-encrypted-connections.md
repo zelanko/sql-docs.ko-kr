@@ -2,9 +2,9 @@
 title: "Linux에서 SQL Server 연결 암호화 | Microsoft Docs"
 description: "이 항목에서는 Linux에서 SQL Server 연결 암호화를 설명 합니다."
 author: tmullaney
-ms.date: 10/02/2017
-ms.author: meetb;rickbyh
-manager: jhubbard
+ms.date: 01/30/2018
+ms.author: meetb
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,29 +14,30 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords: Linux, encrypted connections
+helpviewer_keywords:
+- Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: 57fe1aac60bdb888ccbc47ebee33687dd309c8b7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c8d57e65d060ff6958f07fbb57ab97806d99402c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux에서 SQL Server 연결 암호화
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux 수를 사용 하 여 보안 TLS (전송 계층)의 인스턴스와 클라이언트 응용 프로그램 간에 네트워크를 통해 전송 되는 데이터를 암호화 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows와 Linux 모두에서 동일한 TLS 프로토콜을 지원: TLS 1.2, 1.1 및 1.0입니다. 그러나 TLS를 구성 하는 단계는 운영 체제를 관련이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 합니다.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux 수를 사용 하 여 보안 TLS (전송 계층)의 인스턴스와 클라이언트 응용 프로그램 간에 네트워크를 통해 전송 되는 데이터를 암호화 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows와 Linux 모두에서 동일한 TLS 프로토콜을 지원: TLS 1.2, 1.1 및 1.0입니다. 그러나 TLS를 구성 하는 단계는 운영 체제를 관련이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 합니다.  
 
 ## <a name="requirements-for-certificates"></a>인증서에 대 한 요구 사항 
-시작 하기 전에 인증서 이러한 요구 사항을 따라야 할 있습니다.
+시작 하기 전에 인증서를 이러한 요구 사항을 수행 되도록 해야 합니다.
 - 현재 시스템 시간을 인증서의 속성 및 유효 기간 전에 인증서의 속성에서 유효 기간 이후 여야 합니다.
 - 인증서는 서버 인증용이어야 합니다. 이 서버 인증 (1.3.6.1.5.5.7.3.1)을 지정 하려면 인증서의 확장 된 키 사용 속성이 필요 합니다.
 - 인증서에 AT_KEYEXCHANGE KeySpec 옵션을 사용 하 여 만들어야 합니다. 일반적으로 인증서의 키 용도 속성 (KEY_USAGE) 키 암호화 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)도 포함 됩니다.
 - 인증서의 주체 속성과 CN (일반 이름) 호스트 이름이 나 서버 컴퓨터의 정규화 된 도메인 이름 (FQDN)으로 동일한 인지 지정 해야 합니다. 참고: 와일드 카드 인증서 지원 됩니다. 
 
 ## <a name="overview"></a>개요
-TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호화 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 올바르게 구성 된 경우 개인 정보 및 클라이언트와 서버 간의 통신에 대 한 데이터 무결성 모두 TLS를 제공 합니다.  TLS 연결의 클라이언트 intiated 또는 서버 initited 수 있습니다. 
+TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호화 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 올바르게 구성 된 경우 개인 정보 및 클라이언트와 서버 간의 통신에 대 한 데이터 무결성 모두 TLS를 제공 합니다.  TLS 연결의 시작 하는 클라이언트 또는 서버에서 시작 된 일 수 있습니다. 
 
 
 ## <a name="client-initiated-encryption"></a>클라이언트는 암호화 시작 
@@ -63,10 +64,10 @@ TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호
 - **(Windows, Linux 또는 macOS) 클라이언트 컴퓨터의 인증서 등록**
 
     -   CA 서명된 인증서를 사용 하는 경우 클라이언트 컴퓨터에는 사용자 인증서 대신 CA (인증 기관) 인증서를 복사 해야 합니다. 
-    -   방금 자체 서명 된 인증서를 사용 하는 경우에 다음 폴더를 배포 하려면 각.pem 파일을 복사 하 고 사용할 수 있도록 하려면 명령을 실행합니다 
-        - **Ubuntu** : 인증서를 복사 ```/usr/share/ca-certificates/``` .crt에 이름 바꾸기 확장 dpkg reconfigure ca 인증서를 사용 하 여 시스템 CA 인증서로 사용 하도록 설정 합니다. 
-        - **RHEL** : 인증서를 복사 ```/etc/pki/ca-trust/source/anchors/``` 사용 ```update-ca-trust``` 시스템 CA 인증서로 사용 하도록 설정 합니다.
-        - **SUSE** : 인증서를 복사 ```/usr/share/pki/trust/anchors/``` 사용 ```update-ca-certificates``` 해당으로 사용할 수 있도록 시스템 CA 인증서입니다.
+    -   자체 서명 된 인증서를 사용 하는 경우 방금.pem 파일을 배포 각각 다음 폴더에 복사 및 사용할 수 있도록 하기 위해 명령 실행 
+        - **Ubuntu**: 인증서를 복사 ```/usr/share/ca-certificates/``` .crt에 이름 바꾸기 확장 dpkg reconfigure ca 인증서를 사용 하 여 시스템 CA 인증서로 사용 하도록 설정 합니다. 
+        - **RHEL**: 인증서를 복사 ```/etc/pki/ca-trust/source/anchors/``` 사용 ```update-ca-trust``` 시스템 CA 인증서로 사용 하도록 설정 합니다.
+        - **SUSE**: 인증서를 복사 ```/usr/share/pki/trust/anchors/``` 사용 ```update-ca-certificates``` 시스템 CA 인증서로 사용 하도록 설정 합니다.
         - **Windows**:-> 인증서 루트 인증 기관 트러스트 된-> 현재 사용자 인증서로.pem 파일 가져오기
         - **macOS**: 
            - 인증서를 복사 합니다.```/usr/local/etc/openssl/certs```

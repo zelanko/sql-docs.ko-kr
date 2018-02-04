@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.dm_os_child_instances_TSQL
 - dm_os_child_instances
 - dm_os_child_instances_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - server state information [SQL Server]
 - sys.dm_os_child_instances dynamic management view
 - monitoring server health
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d13a86c17d95f31d2ffe99fa6675a0e0fe877ecd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d33bda7b901600598446cdea45d434df84b6e7f0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +53,12 @@ ms.lasthandoff: 11/17/2017
 |**owning_principal_name**|**nvarchar(256)**|이 사용자 인스턴스의 사용자 이름입니다.|  
 |owning_principal_sid|nvarchar(256)|이 사용자 인스턴스를 소유하는 보안 주체의 SID(보안 ID)입니다. 이는 Windows SID와 일치합니다.|  
 |owning_principal_sid_binary|varbinary(85)|사용자 인스턴스를 소유하는 사용자에 대한 SID 이진 버전입니다.|  
-|**instance_name**|**nvarchar (128)**|사용자 인스턴스의 이름입니다.|  
-|**instance_pipe_name**|**nvarchar (260)**|사용자 인스턴스를 만들 때 응용 프로그램 연결을 위해 명명된 파이프를 만듭니다. 이 이름은 이 사용자 인스턴스에 연결할 연결 문자열에서 사용할 수 있습니다.|  
+|**instance_name**|**nvarchar(128)**|사용자 인스턴스의 이름입니다.|  
+|**instance_pipe_name**|**nvarchar(260)**|사용자 인스턴스를 만들 때 응용 프로그램 연결을 위해 명명된 파이프를 만듭니다. 이 이름은 이 사용자 인스턴스에 연결할 연결 문자열에서 사용할 수 있습니다.|  
 |**os_process_id**|**Int**|이 사용자 인스턴스에 대한 Windows 프로세스의 프로세스 번호입니다.|  
 |**os_process_creation_date**|**날짜/시간**|이 사용자 인스턴스 프로세스가 마지막으로 시작된 날짜 및 시간입니다.|  
-|**heart_beat**|**nvarchar (5)**|이 사용자 인스턴스의 현재 상태(연결 또는 연결 끊김)입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|**heart_beat**|**nvarchar(5)**|이 사용자 인스턴스의 현재 상태(연결 또는 연결 끊김)입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>Permissions  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  

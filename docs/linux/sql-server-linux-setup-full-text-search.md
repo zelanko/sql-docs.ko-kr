@@ -3,7 +3,7 @@ title: "SQL Server 전체 텍스트 검색 linux 설치 | Microsoft Docs"
 description: "이 항목에서는 Linux에서 SQL Server 전체 텍스트 검색을 설치 하는 방법에 설명 합니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 68704db01975a26b028d2ebc5b7f0d166793d6bc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8b1f14ca454582ee85506cd68b07a38f17ada1b4
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 다음 단계 설치 [SQL Server 전체 텍스트 검색](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-서버-fts**) linux. 전체 텍스트 검색을 사용 하면 SQL Server 테이블의 문자 기반 데이터에 대 한 전체 텍스트 쿼리를 실행할 수 있습니다. 이 릴리스의 알려진된 문제에 대 한 참조는 [릴리스 정보](sql-server-linux-release-notes.md)합니다.
 
@@ -97,7 +97,7 @@ sudo zypper update mssql-server-fts
 | 중립 | 0 |
 | 아랍어 | 1025 |
 | 벵골어(인도) | 1093 |
-| 복말 | 1044 |
+| Bokmål | 1044 |
 | 브라질어 | 1046 |
 | 영어(영국) | 2057 |
 | 불가리아어 | 1026 |
@@ -230,7 +230,7 @@ sudo zypper update mssql-server-fts
 |.rgs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.rtf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.rul | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|인스턴스입니다. | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.scc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.shtm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.shtml | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |

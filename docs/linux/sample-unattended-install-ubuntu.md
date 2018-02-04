@@ -14,22 +14,22 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 55cafd4b779faf5cd3a77b24800682ec3b6c5bb5
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 412479dcabf34e7dfc8ec5d2576d8a2ff40213dc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu 용 SQL Server 무인된 설치 스크립트 샘플:
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 샘플 Bash 스크립트 대화형 입력이 없는 Ubuntu 16.04에 SQL Server 2017를 설치합니다. 데이터베이스 엔진, SQL Server Agent, SQL Server 명령줄 도구를 설치 하는 방식의 예제를 제공 하 고 설치 후 단계를 수행 합니다. 필요에 따라 전체 텍스트 검색을 설치 하 고 관리 사용자를 만들 수 있습니다.
 
 > [!TIP]
 > SQL Server를 설치 하는 가장 빠른 방법은 따라야 하는 무인된 설치 스크립트를 필요 하지 않은 경우는 [Ubuntu 용 퀵 스타트](quickstart-install-connect-ubuntu.md)합니다. 다른 설정 정보를 참조 하십시오. [Linux에서 SQL Server에 대 한 설치 지침](sql-server-linux-setup.md)합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - 최소 2GB의 메모리 Linux에서 SQL Server를 실행 해야 합니다.
 - 파일 시스템을 해야 **XFS** 또는 **EXT4**합니다. 와 같은 다른 파일 시스템, **BTRFS**, 지원 되지 않습니다.

@@ -15,15 +15,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2ecd66763b0fbcdff8eb0d776b9c7b7df98e60b0
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 40213ffd43b629e3679cd8d4549aeb147db97f67
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>추출, 변환 및 SSIS와 Linux에서 데이터 로드
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Linux에서 SQL Server Integration Services (SSIS) 패키지를 실행 하는 방법을 설명 합니다. 여러 소스 및 형식 중에서 데이터를 추출 하 여 복잡 한 데이터 통합 문제를 해결 하는 SSIS 변환 및 데이터를 정리 하 고 여러 대상에 데이터를 로드 합니다. 
 
@@ -31,7 +31,7 @@ Linux에서 실행 되는 SSIS 패키지는 linux 또는 Docker에서 클라우�
 
 SSIS의 기능에 대 한 자세한 내용은 참조 하십시오. [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 Linux 컴퓨터에서 SSIS 패키지를 실행 하려면 먼저 SQL Server Integration Services를 설치 해야 합니다. SSIS는 Linux 컴퓨터의 SQL Server 설치에 포함 되지 않습니다. 설치 지침을 참조 하십시오. [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)합니다.
 
@@ -111,7 +111,7 @@ SSIS에는 다음과 같은 기능이 포함 됩니다.
 
 SSIS와 시작 하려면 최신 버전의 다운로드 [SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md)합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 - [SQL Server Integration Services에 대 한 자세한 정보](../integration-services/sql-server-integration-services.md)
 - [SQL Server Integration Services (SSIS) 개발 및 관리 도구](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [SQL Server Integration Services 자습서](../integration-services/integration-services-tutorials.md)

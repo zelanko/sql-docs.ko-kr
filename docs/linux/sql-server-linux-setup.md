@@ -3,7 +3,7 @@ title: "SQL Server 2017 linux 설치 | Microsoft Docs"
 description: "설치, 업데이트 및 Linux에서 SQL Server를 제거 합니다. 이 항목에서는 온라인, 오프 라인 및 무인 시나리오에 설명 합니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 설치 지침
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 항목에서는 설치, 업데이트 및 SQL Server 2017 Linux에서 제거 하는 방법에 설명 합니다. SQL Server 2017 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 및 Ubuntu에서 지원 됩니다. Linux 또는 Docker에 대 한 Windows/Mac. Docker 엔진에서 실행할 수 있는 Docker 이미지 형식으로 제공 됩니다.
 
@@ -158,7 +158,7 @@ sudo rm -rf /var/opt/mssql/
 리포지토리 URL의 끝을 저장소 유형을 확인합니다.
 
 - **mssql 서버**: 미리 보기 저장소입니다.
-- **mssql-서버-2017**: CU 저장소입니다.
+- **mssql-server-2017**: CU repository.
 - **mssql 서버-2017 gdr**: GDR 저장소입니다.
 
 ### <a name="change-the-source-repository"></a>소스 저장소 변경

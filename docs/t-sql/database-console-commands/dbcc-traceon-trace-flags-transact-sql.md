@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - trace flags [SQL Server], about trace flags
 - trace flags [SQL Server]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 - debugging [SQL Server], trace flags
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: "171"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6011c66716e96347b295325ab020739e41c04370
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 396216c00fc4c474164d98e47d0185f479e61b48
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-추적 플래그 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,6 +145,7 @@ ms.lasthandoff: 01/25/2018
 |**9567**|자동 시드 중 Always On 가용성 그룹에 대 한 데이터 스트림을 압축을 사용 하도록 설정 합니다. 자동 시드 중 전송 시간이 크게 줄일 수 압축과 프로세서 부하 증가 합니다. 자세한 내용은 참조 [Always On 가용성 그룹 자동 초기화](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) 및 [가용성 그룹에 대 한 압축 조정](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)합니다.<br /><br />**범위**: 전역 또는 세션|
 |**9591**|Always On 가용성 그룹에 로그 블록 압축을 사용 하지 않도록 설정 합니다. 로그 블록 압축은의 동기 및 비동기 복제본과 사용 되는 기본 동작 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], 압축은 비동기 복제에만 사용 됩니다. <br /><br />**범위**: 전역 또는 세션|
 |**9592**|로그 동기 가용성 그룹에 대 한 스트림 압축을 사용 하도록 설정 합니다. 이 기능은 압축 대기 시간을 추가 하기 때문에 동기 가용성 그룹에 기본적으로 불가능 합니다. 자세한 내용은 [가용성 그룹에 대한 압축 조정](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)을 참조하세요.<br /><br />**범위**: 전역 또는 세션| 
+|**9929**|메모리 검사점 파일을 1로 줄입니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/3147012)합니다.<br /><br />**범위**: 글로벌만|  
 |**9939**|수 있도록 병렬 계획 및 메모리 액세스에 최적화 된 테이블 및 테이블 변수에서 메모리 액세스에 최적화 된 테이블 또는 테이블 변수를 참조 하는 DML 작업의 병렬 검색에는 DML 작업의 대상이 되지 않기으로 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/4013877)합니다.<br /><br />**참고:** 추적 플래그 4199 명시적으로 사용 하도록 설정 하는 경우 추적 플래그 9939 필요 하지 않습니다.<br /><br />**범위**: 전역 또는 세션 또는 쿼리|   
 |**10204**|사용 하지 않도록 설정 병합/다시 압축 하는 동안 columnstore 인덱스 다시 구성 합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]columnstore 인덱스 다시 구성 하는 경우 새로운 기능은 자동으로 더 큰 압축 된 행 그룹으로,도 삭제 된 행을 다 수의 모든 rowgroup을 다시 압축 하는 대로 모든 크기가 작은 압축된 rowgroup을 병합 합니다.<br /><br />**참고:** 추적 플래그 10204 메모리 액세스에 최적화 된 테이블에서 생성 하는 columnstore 인덱스에 적용 되지 않습니다.<br /><br />**범위**: 전역 또는 세션|   
 |**10316**|추가 인덱스를 만들 수 있음에 [내부 메모리 액세스에 최적화 된 준비 임시 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), 기본 옆에 있는 합니다. 기본 인덱스에서 다루지 않는 있는 열이 포함 된 특정 쿼리 패턴이 있는 경우 추가 작업을 추가 하는 것이 좋습니다.<br /><br />**참고:** 시스템 버전 임시 테이블 메모리 최적화 된 테이블은 높은 트랜잭션 처리량을 제공 하도록 설계에 대 한 합니다. 추가 인덱스를 만드는 업데이트 하거나 현재 테이블의 행을 삭제 하는 DML 작업에 대 한 오버 헤드가 발생할 수 있습니다 주의 하십시오. 추가 인덱스와 함께 임시 쿼리 성능 및 추가 DML 오버 헤드 간에 적절 한 균형을 찾을 수를 목표로 해야 합니다.<br /><br />**범위**: 전역 또는 세션|

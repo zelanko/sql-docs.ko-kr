@@ -3,7 +3,7 @@ title: "Linux에서 SQL Server에 대 한 성능 모범 사례 | Microsoft Docs"
 description: "이 항목에서는 SQL Server 2017 Linux에서 실행 하기 위한 성능 모범 사례 및 지침 제공."
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>성능에 대 한 유용한 정보 및 SQL Server 2017 linux에 대 한 구성 지침
 
@@ -64,7 +64,7 @@ Linux 응용 프로그램에 대 한 최상의 성능을 얻으려면 SQL Server
 
 다음 표에서 CPU 설정에 대 한 권장 사항을 제공합니다.
 
-| 설정 | 값 | 자세한 정보 |
+| 설정 | Value | 자세한 정보 |
 |---|---|---|
 | CPU 주기 관리자 | 성능 | 참조는 **cpupower** 명령 |
 | ENERGY_PERF_BIAS | 성능 | 참조는 **x86_energy_perf_policy** 명령 |
@@ -73,10 +73,10 @@ Linux 응용 프로그램에 대 한 최상의 성능을 얻으려면 SQL Server
 
 다음 표에서 디스크 설정에 대 한 권장 사항을 제공합니다.
 
-| 설정 | 값 | 자세한 정보 |
+| 설정 | Value | 자세한 정보 |
 |---|---|---|
 | 미리 읽기가 디스크 | 4096 | 참조는 **blockdev** 명령 |
-| sysctl 설정 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns 15000000 =<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 참조는 **sysctl** 명령 |
+| sysctl 설정 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 참조는 **sysctl** 명령 |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>다중 노드 NUMA 시스템에 대 한 분산 커널 설정 자동 numa
 
@@ -102,7 +102,7 @@ sysctl -w vm.max_map_count=262144
 
 대부분의 Linux 설치 기본적으로의이 옵션을 해야 합니다. 이 구성 옵션을 사용 하도록 설정 하려면 가장 일관 된 성능 경험에 대 한 것이 좋습니다.
 
-### <a name="swapfile"></a>스왑 파일
+### <a name="swapfile"></a>swapfile
 
 모든 메모리가 부족 한 문제를 방지 하기 위해는 올바르게 구성 된 스왑 파일 확인 합니다. 만들고 제대로 스왑 파일 크기를 하는 방법에 대 한 Linux 설명서를 참조 하십시오.
 

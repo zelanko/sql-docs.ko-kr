@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - conversation_endpoints
 - sys.conversation_endpoints
 - sys.conversation_endpoints_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.conversation_endpoints catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c748d55f2de1ddfdda1edbf1465e4874faec5a73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5cbfc13a807b2ec7c61ab2f12ec6f6cfe9f4ae82
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +48,9 @@ ms.lasthandoff: 11/17/2017
 |service_id|**int**|이 대화 상대에 대한 서비스 식별자입니다. NULL을 허용하지 않습니다.|  
 |lifetime|**datetime**|이 대화의 만료 날짜/시간입니다. NULL을 허용하지 않습니다.|  
 |state|**char(2)**|대화의 현재 상태입니다. NULL을 허용하지 않습니다. 다음 중 하나입니다.<br /><br /> 따라서 아웃 바운드가 시작 되었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 대화에 대해 BEGIN CONVERSATION을 처리했지만 아직 보낸 메시지가 없습니다.<br /><br /> SI 인바운드가 시작 되었습니다. 다른 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 새 대화를 시작했지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 첫 번째 메시지를 완전히 받지 못했습니다. 첫 번째 메시지가 조각화되었거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 순서가 잘못된 메시지를 받는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 대화를 이 상태로 만들 수 있습니다. 하지만 대화에 대해 받은 첫 번째 전송에 첫 번째 메시지가 모두 포함된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 대화를 CO 상태로 만들 수 있습니다.<br /><br /> CO 나눌 수 있습니다. 대화가 설정되고 대화의 양쪽 모두 메시지를 보낼 수 있습니다. 일반 서비스에 대한 통신의 대부분은 대화가 이 상태일 때 수행됩니다.<br /><br /> 연결 끊김 DI 인바운드 합니다. 원격 대화 상대가 END CONVERSATION을 실행했습니다. 로컬 대화 상대가 END CONVERSATION을 실행할 때까지 대화는 이 상태로 유지됩니다. 응용 프로그램은 계속해서 대화 메시지를 받을 수 있습니다. 원격 대화 상대가 대화를 종료했기 때문에 응용 프로그램에서 이 대화 메시지를 보낼 수는 없습니다. 응용 프로그램이 END CONVERSATION을 실행하면 대화가 CD(닫힘) 상태로 전환됩니다.<br /><br /> 아웃 바운드 연결 끊김을 수행 합니다. 로컬 대화 상대가 END CONVERSATION을 실행했습니다. 원격 대화 상대가 END CONVERSATION을 승인할 때까지 대화는 이 상태로 유지됩니다. 응용 프로그램에서 대화 메시지를 보내거나 받을 수 없습니다. 원격 대화 상대가 END CONVERSATION을 승인하면 대화가 CD(닫힘) 상태로 전환됩니다.<br /><br /> ER 오류가 발생 했습니다. 이 끝점에서 오류가 발생했습니다. 오류 메시지가 응용 프로그램 큐에 들어갑니다. 비어 있는 응용 프로그램 큐는 응용 프로그램이 이미 오류 메시지를 사용했음을 나타냅니다.<br /><br /> CD 닫힙니다. 대화 끝점은 더 이상 사용되지 않습니다.|  
-|state_desc|**nvarchar (60)**|끝점 대화 상태에 대 한 설명입니다. 이 열은 NULL을 허용합니다. 다음 중 하나입니다.<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **했으므로**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **종료**<br /><br /> **ERROR**|  
+|state_desc|**nvarchar(60)**|끝점 대화 상태에 대 한 설명입니다. 이 열은 NULL을 허용합니다. 다음 중 하나입니다.<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSING**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **CLOSED**<br /><br /> **ERROR**|  
 |far_service|**nvarchar(256)**|원격 대화 상대에 있는 서비스의 이름입니다. NULL을 허용하지 않습니다.|  
-|far_broker_instance|**nvarchar (128)**|원격 대화 상대에 대한 Broker 인스턴스입니다. NULL을 허용합니다.|  
+|far_broker_instance|**nvarchar(128)**|원격 대화 상대에 대한 Broker 인스턴스입니다. NULL을 허용합니다.|  
 |principal_id|**int**|로컬 대화 상대가 사용하는 인증서를 소유한 보안 주체의 식별자입니다. NULL을 허용하지 않습니다.|  
 |far_principal_id|**int**|원격 대화 상대가 사용하는 인증서를 소유한 보안 주체의 식별자입니다. NULL을 허용하지 않습니다.|  
 |outbound_session_key_identifier|**uniqueidentifier**|이 대화에 대한 아웃바운드 암호화 키의 식별자입니다. NULL을 허용하지 않습니다.|  

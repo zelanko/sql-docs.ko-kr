@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - fulltext_semantic_language_statistics_database_TSQL
 - fulltext_semantic_language_statistics_database
 - sys.fulltext_semantic_language_statistics_database
-dev_langs: TSQL
-helpviewer_keywords: sys.fulltext_semantic_language_statistics_database catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fulltext_semantic_language_statistics_database catalog view
 ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3aa0d4e32e5356d9e0472f2278c8cb5a94096193
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b37db7d715f878156e44c76909d4b0d5c645c199
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextsemanticlanguagestatisticsdatabase-transact-sql"></a>sys.fulltext_semantic_language_statistics_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +43,11 @@ ms.lasthandoff: 11/17/2017
   
 ||||  
 |-|-|-|  
-|**열 이름**|**형식**|**Description**|  
+|**열 이름**|**형식**|**설명**|  
 |**database_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유한 데이터베이스 ID입니다.|  
 |**register_date**|**datetime**|의미 체계 처리를 위해 데이터베이스가 등록된 날짜입니다.|  
 |**registered_by**|**int**|의미 체계 처리를 위해 데이터베이스를 등록한 서버 보안 주체의 ID입니다.|  
-|**version**|**nvarchar (128)**|의미 체계 언어 통계 데이터베이스와 관련된 최신 버전 정보입니다.|  
+|**version**|**nvarchar(128)**|의미 체계 언어 통계 데이터베이스와 관련된 최신 버전 정보입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  자세한 내용은 [의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)을 참조하세요.  

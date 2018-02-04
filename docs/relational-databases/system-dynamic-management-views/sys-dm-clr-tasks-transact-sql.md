@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_tasks_TSQL
 - dm_clr_tasks
 - dm_clr_tasks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_tasks dynamic management view
 ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45aad56182dd79b9b5787e78964b23d7469344d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2a3c99ffd172c97c5738ed2dd19bc8b07f303470
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrtasks-transact-sql"></a>sys.dm_clr_tasks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,12 +40,12 @@ ms.lasthandoff: 11/17/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**task_address**|**varbinary (8)**|CLR 태스크의 주소입니다.|  
-|**sos_task_address**|**varbinary (8)**|기본 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 태스크의 주소입니다.|  
-|**appdomain_address**|**varbinary (8)**|이 태스크가 실행되고 있는 응용 프로그램 도메인의 주소입니다.|  
-|**상태**|**nvarchar (128)**|태스크의 현재 상태입니다.|  
-|**abort_state**|**nvarchar (128)**|태스크가 취소된 경우 중단의 현재 상태입니다. 작업을 중단한 동안 여러 상태가 관련되어 있습니다.|  
-|**유형**|**nvarchar (128)**|태스크 유형입니다.|  
+|**task_address**|**varbinary(8)**|CLR 태스크의 주소입니다.|  
+|**sos_task_address**|**varbinary(8)**|기본 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 태스크의 주소입니다.|  
+|**appdomain_address**|**varbinary(8)**|이 태스크가 실행되고 있는 응용 프로그램 도메인의 주소입니다.|  
+|**상태**|**nvarchar(128)**|태스크의 현재 상태입니다.|  
+|**abort_state**|**nvarchar(128)**|태스크가 취소된 경우 중단의 현재 상태입니다. 작업을 중단한 동안 여러 상태가 관련되어 있습니다.|  
+|**type**|**nvarchar(128)**|태스크 유형입니다.|  
 |**affinity_count**|**int**|태스크의 선호도입니다.|  
 |**forced_yield_count**|**int**|태스크가 강제로 생성된 횟수입니다.|  
   

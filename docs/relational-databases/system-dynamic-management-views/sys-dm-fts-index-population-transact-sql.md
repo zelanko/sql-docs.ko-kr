@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_index_population
 - sys.dm_fts_index_population_TSQL
 - dm_fts_index_population_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_index_population dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 719da7d41ba34adcf7a3aa7ccc53a14217e657ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f118b1be30119e7328ee20477a0c18808fbdc3e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |**database_id**|**int**|채우기가 진행되고 있는 전체 텍스트 인덱스를 포함하는 데이터베이스의 ID입니다.|  
 |**catalog_id**|**int**|이 전체 텍스트 인덱스를 포함하는 전체 텍스트 카탈로그의 ID입니다.|  
 |**table_id**|**int**|전체 텍스트 인덱스가 채워지고 있는 테이블의 ID입니다.|  
-|**memory_address**|**varbinary (8)**|활성 채우기를 나타내는 데 사용되는 내부 데이터 구조의 메모리 주소입니다.|  
+|**memory_address**|**varbinary(8)**|활성 채우기를 나타내는 데 사용되는 내부 데이터 구조의 메모리 주소입니다.|  
 |**population_type**|**int**|채우기 유형으로, 다음 중 하나일 수 있습니다.<br /><br /> 1 = 전체 채우기<br /><br /> 2 = 증분 타임스탬프 기반 채우기<br /><br /> 3 = 추적된 변경 내용의 수동 업데이트<br /><br /> 4 = 추적된 변경 내용의 백그라운드 업데이트|  
 |**population_type_description**|**nvarchar(120)**|채우기 유형에 대한 설명입니다.|  
 |**is_clustered_index_scan**|**bit**|채우기에 클러스터형 인덱스에 대한 스캔이 수반되는지 여부를 나타냅니다.|  
@@ -69,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|보낸 사람|수행할 작업|관계|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|일 대 일|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|일 대 일|  

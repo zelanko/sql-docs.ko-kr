@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_log_stats
 - sys.dm_db_log_stats_TSQL
 - dm_db_log_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_log_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_log_stats dynamic management function
 ms.assetid: 
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa7b169b3ff6887616346a8324854ab10aceab07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 281e3c2c74361698ddf67a4e9a607c559bd74ccb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact SQL)   
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="arguments"></a>인수  
 
-*database_id* | NULL | **기본값**
+*database_id* | NULL | **DEFAULT**
 
 데이터베이스의 ID입니다. `database_id`은 `int`입니다. 올바른 입력은 데이터베이스의 ID 번호 `NULL`, 또는 `DEFAULT`합니다. 기본값은 `NULL`입니다. `NULL`및 `DEFAULT` 는 현재 데이터베이스의 컨텍스트에서 동등한 값입니다.  
 기본 제공 함수 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 지정할 수 있습니다. 사용 하는 경우 `DB_ID` 데이터베이스 이름을 지정 하지 않고 현재 데이터베이스의 호환성 수준은 90 이상 이어야 합니다.
@@ -56,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |데이터베이스 ID |  
-|recovery_model |**nvarchar (60)**   |   데이터베이스의 복구 모델입니다. 가능한 값은 다음과 같습니다. <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
+|recovery_model |**nvarchar(60)**   |   데이터베이스의 복구 모델입니다. 가능한 값은 다음과 같습니다. <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   현재 시작 [로그 시퀀스 번호 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 트랜잭션 로그에 있습니다.|  
 |log_end_lsn    |**nvarchar(24)**   |   [로그 시퀀스 번호 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 트랜잭션 로그의 마지막 로그 레코드의 합니다.|  
 |current_vlf_sequence_number    |**bigint** |   현재 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 시퀀스 번호는 실행 시간입니다.|  
@@ -65,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |total_log_size_mb  |**float**  |   총 트랜잭션 로그 크기 (MB)입니다. |  
 |active_vlf_count   |**bigint** |   총 활성 [가상 로그 파일 (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 트랜잭션 로그에 있습니다.|  
 |active_log_size_mb |**float**  |   총 활성 트랜잭션 로그 크기 (MB)입니다.|  
-|log_truncation_holdup_reason   |**nvarchar (60)**   |   로그 잘림은 남기는 이유입니다. 값이 동일 `log_reuse_wait_desc` 열 `sys.databases`합니다.  (이러한 값에 대 한 설명과 자세한 [트랜잭션 로그](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />가능한 값은 다음과 같습니다. <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />복제<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />기타 일시적 |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   로그 잘림은 남기는 이유입니다. 값이 동일 `log_reuse_wait_desc` 열 `sys.databases`합니다.  (이러한 값에 대 한 설명과 자세한 [트랜잭션 로그](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />가능한 값은 다음과 같습니다. <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />복제<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />기타 일시적 |  
 |log_backup_time    |**datetime**   |   마지막 트랜잭션 로그 백업 시간입니다.|   
 |log_backup_lsn |**nvarchar(24)**   |   마지막 트랜잭션 로그 백업 [로그 시퀀스 번호 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)합니다.|   
 |log_since_last_log_backup_mb   |**float**  |   마지막 트랜잭션 로그 백업 이후에 로그 크기 (MB) [로그 시퀀스 번호 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)합니다.|  

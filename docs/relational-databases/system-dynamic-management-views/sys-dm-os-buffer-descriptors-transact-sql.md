@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_buffer_descriptors_TSQL
 - sys.dm_os_buffer_descriptors
 - dm_os_buffer_descriptors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_buffer_descriptors dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 225d94ec7bf9b8a74289f52462f64d6d444e1d44
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e35b3cd5c0b10bce5ed66f8c68babcebc96ae95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,14 +49,14 @@ ms.lasthandoff: 11/17/2017
 |page_id|**int**|파일 내 페이지의 ID입니다. Null을 허용합니다.|  
 |page_level|**int**|페이지의 인덱스 수준입니다. Null을 허용합니다.|  
 |allocation_unit_id|**bigint**|페이지 할당 단위의 ID입니다. 이 값은 sys.allocation_units를 조인하는 데 사용할 수 있습니다. Null을 허용합니다.|  
-|page_type|**nvarchar (60)**|같은 페이지의 입력: 데이터 페이지 또는 인덱스 페이지입니다. Null을 허용합니다.|  
+|page_type|**nvarchar(60)**|같은 페이지의 입력: 데이터 페이지 또는 인덱스 페이지입니다. Null을 허용합니다.|  
 |row_count|**int**|페이지의 행 수입니다. Null을 허용합니다.|  
 |free_space_in_bytes|**int**|페이지의 사용 가능한 공간(바이트)입니다. Null을 허용합니다.|  
 |is_modified|**bit**|1 = 디스크에서 읽은 후 페이지가 수정되었습니다. Null을 허용합니다.|  
 |numa_node|**int**|버퍼에 대한 Nonuniform Memory Access 노드입니다. Null을 허용합니다.|  
 |read_microsec|**bigint**|페이지를 버퍼로 읽어 오는 데 필요한 실제 시간(밀리초)입니다 이 값은 버퍼를 다시 사용하면 다시 설정됩니다. Null을 허용합니다.|  
 |is_in_bpool_extension|**bit**|1 = 페이지는 버퍼 풀 확장에 있습니다. Null을 허용합니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
@@ -65,8 +68,8 @@ ms.lasthandoff: 11/17/2017
 |보낸 사람|수행할 작업|위치|관계|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|다 대 일|  
-|sys.dm_os_buffer_descriptors|\<userdb >. sys.allocation_units|allocation_unit_id|다 대 일|  
-|sys.dm_os_buffer_descriptors|\<userdb >. sys.database_files|file_id|다 대 일|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|다 대 일|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|다 대 일|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|다 대 일|  
   
 ## <a name="examples"></a>예  
@@ -119,7 +122,7 @@ ORDER BY cached_pages_count DESC;
  
  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Resource 데이터베이스](../../relational-databases/databases/resource-database.md)   
- [sys.dm_os_buffer_pool_extension_configuration&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_full
 - syscollector_execution_log_full_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector view
 - syscollector_execution_log_full view
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 588e225a87d92f35903564f97c3c6ef17252aa2b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 93ff62b9c91fee116679d0fb9ffe7d6b28f61024
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syscollectorexecutionlogfull-transact-sql"></a>syscollector_execution_log_full(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +48,8 @@ ms.lasthandoff: 11/17/2017
 |last_iteration_time|**datetime**|패키지를 계속 실행하기 위해 패키지에서 마지막으로 스냅숏을 캡처한 시간입니다. Null을 허용합니다.|  
 |finish_time|**datetime**|종료된 패키지 및 컬렉션 집합의 실행 완료 시간입니다. Null을 허용합니다.|  
 |duration|**int**|패키지 또는 컬렉션 집합이 시작된 이후부터의 실행 시간(초)입니다. Null을 허용합니다.|  
-|failure_message|**nvarchar (2048)**|컬렉션 집합 또는 패키지가 실패한 경우 해당 구성 요소에 대한 가장 최근의 오류 메시지입니다. Null을 허용합니다. 자세한 오류 정보를 가져오려면는 [fn_syscollector_get_execution_details &#40; Transact SQL &#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) 함수입니다.|  
-|적용한 후|**nvarchar (128)**|컬렉션 집합 또는 패키지를 시작한 사용자를 식별합니다. Null을 허용합니다.|  
+|failure_message|**nvarchar(2048)**|컬렉션 집합 또는 패키지가 실패한 경우 해당 구성 요소에 대한 가장 최근의 오류 메시지입니다. Null을 허용합니다. 자세한 오류 정보를 가져오려면는 [fn_syscollector_get_execution_details &#40; Transact SQL &#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) 함수입니다.|  
+|적용한 후|**nvarchar(128)**|컬렉션 집합 또는 패키지를 시작한 사용자를 식별합니다. Null을 허용합니다.|  
 |package_execution_id|**uniqueidentifier**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 로그 테이블에 대한 링크를 제공합니다. Null을 허용합니다.|  
 |collection_set_id|**int**|msdb의 데이터 컬렉션 구성 테이블에 대한 링크를 제공합니다. Null을 허용합니다.|  
   

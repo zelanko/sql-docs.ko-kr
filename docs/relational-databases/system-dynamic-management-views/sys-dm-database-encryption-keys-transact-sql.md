@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_database_encryption_keys_TSQL
 - dm_database_encryption_keys
 - dm_database_encryption_keys_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_database_encryption_keys dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_database_encryption_keys dynamic management view
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bb177f781bee54b908624e1f940c12d5bdaf5a13
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 17a04ced274e92e3b787ba677ae3b2dbbb07593e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,10 +47,10 @@ ms.lasthandoff: 11/17/2017
 |modify_date|**datetime**|암호화 키를 수정한 날짜를 표시합니다.|  
 |set_date|**datetime**|암호화 키가 데이터베이스에 적용된 날짜를 표시합니다.|  
 |opened_date|**datetime**|데이터베이스 키가 마지막으로 열린 시간을 표시합니다.|  
-|key_algorithm|**nvarchar (32)**|키에 사용된 알고리즘을 표시합니다.|  
+|key_algorithm|**nvarchar(32)**|키에 사용된 알고리즘을 표시합니다.|  
 |key_length|**int**|키의 길이를 표시합니다.|  
 |encryptor_thumbprint|**varbinary(20)**|암호기의 손도장을 표시합니다.|  
-|encryptor_type|**nvarchar (32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 암호기를 설명합니다.|  
+|encryptor_type|**nvarchar(32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 암호기를 설명합니다.|  
 |percent_complete|**real**|데이터베이스 암호화 상태 변경의 완료 비율입니다. 상태 변경이 없으면 0이 됩니다.|  
   
 ## <a name="permissions"></a>Permissions  

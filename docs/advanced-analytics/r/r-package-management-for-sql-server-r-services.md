@@ -10,24 +10,25 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 576178e53a28f877ac91d99f14ce9ba6a44e506d
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: cebafeabd73260f166244e963754a2bd740bfe0f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="r-package-management-for-sql-server"></a>SQL Server에 대 한 R 패키지 관리
 
 이 문서에서는 SQL Server 2016 및 SQL Server 2017에서 R 패키지의 관리에 대 한 기능을 설명 합니다.
 
-+ R 패키지 (및 Python 패키지)를 관리 하기 위한 권장된 방법
++ R 패키지를 관리 하기 위한 권장된 방법 
 + SQL Server 2016 및 2017 사이의 패키지 관리의 변경 내용
 
 **적용 대상:** SQL Server 2016 R Services, SQL Server 2017 기계 학습 서비스

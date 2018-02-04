@@ -3,7 +3,7 @@ title: "장애 조치 클러스터 인스턴스 저장소 NFS-Linux에서 SQL Se
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 1b944d36e968234d5ea77a861c595e440cbbb15b
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 25bcc2fb0ddb60198208d88ce9c19be139d6ec2f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-NFS-Linux에서 SQL Server 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서는 Linux에서 장애 조치 클러스터 인스턴스 (FCI)에 대 한 NFS 저장소를 구성 하는 방법을 설명 합니다. 
 
@@ -232,7 +232,7 @@ NFS 서버에서 공유 하는 폴더를 구성할 때 이러한 지침 일반 �
 
    * 를 테스트 하려면 해당 폴더에 데이터베이스를 만듭니다. Sqlcmd를 사용 하 여 데이터베이스 만들기, 컨텍스트를 전환할 OS 수준에 있는 파일과 임시 위치를 삭제 한 다음 확인는 아래 표시 된 예제입니다. SSMS를 사용할 수 있습니다.
 
-    ![15 createtestdatabase][4]
+    ![15-createtestdatabase][4]
  
    * 공유를 마운트 해제 
 

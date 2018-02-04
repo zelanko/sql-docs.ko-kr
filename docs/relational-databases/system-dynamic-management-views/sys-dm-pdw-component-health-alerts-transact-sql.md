@@ -8,20 +8,21 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f8a0a4af0fafa03492217a72626c17e394c3afc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 51360614a6939c64b005a93cd178b2e6ff22e4e2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmpdwcomponenthealthalerts-transact-sql"></a>sys.dm_pdw_component_health_alerts (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -30,14 +31,14 @@ ms.lasthandoff: 11/17/2017
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|고유 식별자는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 노드.<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id, 및 alert_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT  NULL|  
-|component_id|**int**|구성 요소의 ID입니다. 참조 [sys.pdw_health_components &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id, 및 alert_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT  NULL|  
-|component_instance_id|**nvarchar(255)**|pdw_node_id, component_id, component_instance_id, alert_id, 및 alert_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT  NULL|  
-|alert_id|**int**|경고 유형에 대 한 ID입니다. 참조 [sys.pdw_health_alerts &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md).<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id, 및 alert_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT  NULL|  
-|alert_instance_id|**nvarchar(36)**|지정된 된 경고의 인스턴스를 식별합니다.<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id, 및 alert_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT  NULL|  
+|pdw_node_id|**int**|고유 식별자는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 노드.<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id, 및 alert_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT NULL|  
+|component_id|**int**|구성 요소의 ID입니다. 참조 [sys.pdw_health_components &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id, 및 alert_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT NULL|  
+|component_instance_id|**nvarchar(255)**|pdw_node_id, component_id, component_instance_id, alert_id, 및 alert_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT NULL|  
+|alert_id|**int**|경고 유형에 대 한 ID입니다. 참조 [sys.pdw_health_alerts &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md).<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id, 및 alert_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT NULL|  
+|alert_instance_id|**nvarchar(36)**|지정된 된 경고의 인스턴스를 식별합니다.<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id, 및 alert_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT NULL|  
 |previous_value|**nvarchar(255)**|경고가 StatusChange 유형의 경우 사용 합니다. 이전 구성 요소 상태입니다. 값은 임계값 유형의 경고에 대 한 NULL입니다. 참조 [sys.pdw_health_alerts &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md) 경고 유형 목록에 대 한 합니다.|NULL|  
 |current_value|**nvarchar(255)**|경고가 StatusChange 유형의 경우 사용 합니다. 현재 구성 요소 상태입니다. 값은 임계값 유형의 경고에 대 한 NULL입니다. 참조 [sys.pdw_health_alerts &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md) 경고 유형 목록에 대 한 합니다.|NULL|  
-|create_time|**datetime**|경고가 생성 된 날짜 및 시간입니다.|NOT  NULL|  
+|create_time|**datetime**|경고가 생성 된 날짜 및 시간입니다.|NOT NULL|  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

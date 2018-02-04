@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_query_optimizer_info
 - sys.dm_exec_query_optimizer_info_TSQL
 - sys.dm_exec_query_optimizer_info
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_optimizer_info dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_optimizer_info dynamic management view
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d954f21d2cfe9a99701f81a9439c9b4a82bd30a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c7b87cc0b34d33abd8f658a7ff20852200b93a2c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,10 +43,10 @@ ms.lasthandoff: 11/17/2017
   
 |이름|데이터 형식|Description|  
 |----------|---------------|-----------------|  
-|**카운터**|**nvarchar(4000)**|최적화 프로그램 통계 이벤트의 이름입니다.|  
-|**항목**|**bigint**|이 카운터에 대한 최적화 이벤트의 발생 횟수입니다.|  
-|**값**|**float**|이벤트 발생당 평균 속성 값입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|**counter**|**nvarchar(4000)**|최적화 프로그램 통계 이벤트의 이름입니다.|  
+|**occurrence**|**bigint**|이 카운터에 대한 최적화 이벤트의 발생 횟수입니다.|  
+|**value**|**float**|이벤트 발생당 평균 속성 값입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 대 한 VIEW SERVER STATE 권한이 필요 합니다.  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>주의  
  **sys.dm_exec_query_optimizer_info** 다음 속성 (counter)를 포함 합니다. 모든 occurrence 값은 누적 값이며 시스템을 다시 시작할 때 0으로 설정됩니다. value 필드의 모든 값은 시스템을 다시 시작할 때 NULL로 설정됩니다. 평균을 지정하는 모든 값 열의 값은 평균 계산의 분모와 같은 행에서 얻은 occurrence 값을 사용합니다. 모든 쿼리 최적화 때 측정 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결정에 대 한 변경 **dm_exec_query_optimizer_info**, 두 사용자 및 시스템에서 생성 된 쿼리를 포함 합니다. 이미 캐시 된 계획의 실행 값에 변경 되지 않습니다 **dm_exec_query_optimizer_info**, 최적화만 의미가 있습니다.  
   
-|카운터|발생 빈도|값|  
+|카운터|발생 빈도|Value|  
 |-------------|----------------|-----------|  
 |optimizations|총 최적화 수입니다.|해당 사항 없음|  
 |elapsed time|총 최적화 수입니다.|개별 문(쿼리)의 최적화당 평균 경과 시간(초)입니다.|  

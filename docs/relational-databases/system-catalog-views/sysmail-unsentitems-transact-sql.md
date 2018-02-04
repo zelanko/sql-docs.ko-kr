@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_unsentitems_TSQL
 - sysmail_unsentitems
-dev_langs: TSQL
-helpviewer_keywords: sysmail_unsentitems database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85b7db39b03913b735ebde53571675fd9235a7e8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d3a05add3c6c490a0b45e664389e6a49c59959d1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +52,17 @@ ms.lasthandoff: 11/27/2017
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|메일 큐의 메일 항목 식별자입니다.|  
 |**profile_id**|**int**|메시지 전송에 사용된 프로필의 식별자입니다.|  
-|**받는 사람**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
+|**recipients**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
 |**copy_recipients**|**varchar(max)**|메시지 복사본을 받는 사람의 전자 메일 주소입니다.|  
 |**blind_copy_recipients**|**varchar(max)**|메시지 복사본을 받지만 메시지 머리글에 이름이 표시되지 않는 사람의 전자 메일 주소입니다.|  
-|**제목**|**nvarchar(510)**|메시지의 제목 줄입니다.|  
-|**본문**|**varchar(max)**|메시지의 본문입니다.|  
-|**body_format**|**varchar (20)**|메시지 본문의 형식입니다. 가능한 값은 **텍스트** 및 **HTML**합니다.|  
-|**중요도**|**varchar(6)**|**중요도** 메시지의 매개 변수입니다.|  
-|**민감도**|**varchar(12)**|**민감도** 메시지의 매개 변수입니다.|  
+|**subject**|**nvarchar(510)**|메시지의 제목 줄입니다.|  
+|**body**|**varchar(max)**|메시지의 본문입니다.|  
+|**body_format**|**varchar(20)**|메시지 본문의 형식입니다. 가능한 값은 **텍스트** 및 **HTML**합니다.|  
+|**importance**|**varchar(6)**|**중요도** 메시지의 매개 변수입니다.|  
+|**sensitivity**|**varchar(12)**|**민감도** 메시지의 매개 변수입니다.|  
 |**file_attachments**|**varchar(max)**|전자 메일 메시지에 첨부되는 파일 이름 목록으로 각 파일 이름은 세미콜론으로 구분되어 있습니다.|  
-|**attachment_encoding**|**varchar (20)**|메일 첨부 파일의 유형입니다.|  
-|**쿼리**|**varchar(max)**|메일 프로그램이 실행하는 쿼리입니다.|  
+|**attachment_encoding**|**varchar(20)**|메일 첨부 파일의 유형입니다.|  
+|**query**|**varchar(max)**|메일 프로그램이 실행하는 쿼리입니다.|  
 |**execute_query_database**|**sysname**|메일 프로그램이 쿼리를 실행한 데이터베이스 컨텍스트입니다.|  
 |**attach_query_result_as_file**|**bit**|값이 0이면 쿼리 결과가 전자 메일 메시지 본문의 내용 뒤에 포함됩니다. 값이 1이면 결과가 첨부 파일로 반환됩니다.|  
 |**query_result_header**|**bit**|값이 1이면 쿼리 결과에 열 머리글이 포함됩니다. 값이 0이면 쿼리 결과에 열 머리글이 포함되지 않습니다.|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_memory_clerks
 - dm_os_memory_clerks_TSQL
 - sys.dm_os_memory_clerks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_clerks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_clerks dynamic management view
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d79b1fada58e02416afe4bbbebd56a7553ccc1ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 042afaa050206507b09508ce43900ec7c993d707
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,10 +43,10 @@ ms.lasthandoff: 11/17/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**memory_clerk_address**|**varbinary (8)**|메모리 클럭의 고유 메모리 주소를 지정합니다. 이것은 기본 키 열입니다. Null을 허용하지 않습니다.|  
-|**유형**|**nvarchar (60)**|메모리 클럭의 유형을 지정합니다. 모든 클럭은 CLR 클럭 MEMORYCLERK_SQLCLR와 같은 특정한 유형을 가지고 있습니다. Null을 허용하지 않습니다.|  
+|**memory_clerk_address**|**varbinary(8)**|메모리 클럭의 고유 메모리 주소를 지정합니다. 이것은 기본 키 열입니다. Null을 허용하지 않습니다.|  
+|**type**|**nvarchar(60)**|메모리 클럭의 유형을 지정합니다. 모든 클럭은 CLR 클럭 MEMORYCLERK_SQLCLR와 같은 특정한 유형을 가지고 있습니다. Null을 허용하지 않습니다.|  
 |**name**|**nvarchar(256)**|이 메모리 클럭의 내부적으로 할당된 이름을 지정합니다. 구성 요소에는 특정 유형의 여러 메모리 클럭이 있을 수 있습니다. 따라서 구성 요소에서 이름을 지정하여 같은 유형의 메모리 클럭을 구분하도록 선택할 수 있습니다. Null을 허용하지 않습니다.|  
-|**되어**|**smallint**|메모리 노드의 ID를 지정합니다. Null을 허용하지 않습니다.|  
+|**memory_node_id**|**smallint**|메모리 노드의 ID를 지정합니다. Null을 허용하지 않습니다.|  
 |**single_pages_kb**|**bigint**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]까지|  
 |**pages_kb**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 메모리 클럭에 할당되는 페이지 메모리의 양(KB)를 지정합니다. Null을 허용하지 않습니다.|  
 |**multi_pages_kb**|**bigint**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]까지<br /><br /> 할당된 다중 페이지 메모리(KB)입니다. 이것은 메모리 노드의 다중 페이지 할당자를 사용하여 할당된 메모리입니다. 이 메모리는 버퍼 풀 외부에 할당되며 메모리 노드의 가상 할당자를 사용합니다. Null을 허용하지 않습니다.|  
@@ -53,9 +56,9 @@ ms.lasthandoff: 11/17/2017
 |**shared_memory_reserved_kb**|**bigint**|메모리 클럭이 예약한 공유 메모리의 양을 지정합니다. 공유 메모리와 파일 매핑에 사용하도록 예약된 메모리입니다. Null을 허용하지 않습니다.|  
 |**shared_memory_committed_kb**|**bigint**|메모리 클럭이 커밋한 공유 메모리의 양을 지정합니다. Null을 허용하지 않습니다.|  
 |**page_size_in_bytes**|**bigint**|이 메모리 클럭에 대한 페이지 할당의 세분성을 지정합니다. Null을 허용하지 않습니다.|  
-|**page_allocator_address**|**varbinary (8)**|페이지 할당자의 주소를 지정합니다. 이 주소는 메모리 클럭에 대 한 고유 및에서 사용할 수 있습니다 **sys.dm_os_memory_objects** 이 클럭에 바인딩된 메모리 개체를 찾을 수 있습니다. Null을 허용하지 않습니다.|  
-|**host_address**|**varbinary (8)**|이 메모리 클럭에 대한 호스트의 메모리 주소를 지정합니다. 자세한 내용은 참조 [sys.dm_os_hosts &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). 구성 요소와 같은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호스트 인터페이스를 통해 메모리 리소스입니다.<br /><br /> 0x00000000 = 메모리 클럭이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 속합니다.<br /><br /> Null을 허용하지 않습니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|**page_allocator_address**|**varbinary(8)**|페이지 할당자의 주소를 지정합니다. 이 주소는 메모리 클럭에 대 한 고유 및에서 사용할 수 있습니다 **sys.dm_os_memory_objects** 이 클럭에 바인딩된 메모리 개체를 찾을 수 있습니다. Null을 허용하지 않습니다.|  
+|**host_address**|**varbinary(8)**|이 메모리 클럭에 대한 호스트의 메모리 주소를 지정합니다. 자세한 내용은 참조 [sys.dm_os_hosts &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). 구성 요소와 같은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호스트 인터페이스를 통해 메모리 리소스입니다.<br /><br /> 0x00000000 = 메모리 클럭이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 속합니다.<br /><br /> Null을 허용하지 않습니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
@@ -74,7 +77,7 @@ ms.lasthandoff: 11/17/2017
  [sys.dm_exec_query_memory_grants &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [sys.dm_exec_requests &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys.dm_exec_query_plan &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   
   
 

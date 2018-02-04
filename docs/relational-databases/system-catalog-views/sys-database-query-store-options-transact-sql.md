@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +17,29 @@ f1_keywords:
 - DATABASE_QUERY_STORE_OPTIONS
 - SYS.DATABASE_QUERY_STORE_OPTIONS_TSQL
 - SYS.DATABASE_QUERY_STORE_OPTIONS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a48af2e0a4bef456091385b047685c074097200
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46710eb543ae038d22052cd55b356df9458201e3
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 데이터베이스에 대 한 쿼리 저장소 옵션을 반환합니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -53,11 +55,11 @@ ms.lasthandoff: 11/21/2017
 |**stale_query_threshold_days**|**bigint**|정책 설정이 없는지를 쿼리 하는 일 수는 쿼리 저장소에 유지 됩니다. 기본값은 30입니다. 보존 정책을 사용 하지 않으려면 0으로 설정 합니다.<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 7일입니다.<br /><br /> 사용 하 여 변경 된 `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` 문.|  
 |**max_plans_per_query**|**bigint**|저장 된 계획의 최대 수를 제한합니다. 기본값은 200입니다. 최대값에 도달 하면 쿼리 저장소는 해당 쿼리에 대 한 새 계획을 캡처를 중지 합니다. 설정을 0으로 캡처된 계획의 수와 관련 한 제한 사항을 제거합니다.<br /><br /> 사용 하 여 변경 된 `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` 문.|  
 |**query_capture_mode**|**smallint**|현재 활성 쿼리 캡처 모드:<br /><br /> 1 = ALL-모든 쿼리가 캡처됩니다. 이 기본 구성 값에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 2 = 자동-실행 횟수 및 리소스 소비량에 따른 캡처 관련 쿼리 합니다. 이 기본 구성 값에 대 한 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.<br /><br /> 3 = NONE-새 쿼리 캡처가 중지 됩니다. 쿼리 저장소는 이미 캡처된 쿼리에 대 한 컴파일 및 런타임 통계를 수집 하도록 계속 됩니다. 사용 하 여이 구성을 신중 하 게 하므로 중요 한 쿼리 캡처를 놓칠 수 있습니다.|  
-|**query_capture_mode_desc**|**nvarchar (60)**|쿼리 저장소의 기본 캡처 모드에 대 한 텍스트 설명을:<br /><br /> 모든 (에 대 한 기본 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> 자동 (에 대 한 기본 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> 없음|  
+|**query_capture_mode_desc**|**nvarchar(60)**|쿼리 저장소의 기본 캡처 모드에 대 한 텍스트 설명을:<br /><br /> 모든 (에 대 한 기본 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> 자동 (에 대 한 기본 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> 없음|  
 |**size_based_cleanup_mode**|**smallint**|여부 정리를 자동으로 활성화할지 총 데이터 양이 최대 크기에 가까워 하는 경우를 제어 합니다.<br /><br /> 1 = OFF – 크기 기반된 정리를 자동으로 활성화 되지 않습니다.<br /><br /> 2 = 자동-크기 기반된 정리를 자동으로 활성화할지 디스크 사용률이 90%의 도달에 크기가 때 **max_storage_size_mb**합니다. 이것이 기본 구성 값입니다.<br /><br />크기 기반 정리 가장 비용이 많이 드는 주문과 가장 오래 된 쿼리를 먼저 제거합니다. Max_storage_size_mb의 약 80%로 중지합니다.|  
 |**size_based_cleanup_mode_desc**|**smallint**|쿼리 저장소의 실제 크기 기반 정리 모드에 대 한 텍스트 설명을:<br /><br /> OFF <br /><br /> 자동 (기본값)|  
-|**wait_stats_capture_mode**|**smallint**|쿼리 저장소 대기 통계의 캡처를 수행 하는지 여부를 제어 합니다. <br /><br /> 0 = OFF <br /><br /> 1 = ON|
-|**wait_stats_mode_capture_desc**|**nvarchar (60)**|실제 대기 통계 캡처 모드에 대 한 텍스트 설명을: <br /><br /> OFF <br /><br /> ON (기본값)| 
+|**wait_stats_capture_mode**|**smallint**|쿼리 저장소 대기 통계의 캡처를 수행 하는지 여부를 제어 합니다. <br /><br /> 0 = OFF <br /><br /> 1 = ON<br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|
+|**wait_stats_mode_capture_desc**|**nvarchar(60)**|실제 대기 통계 캡처 모드에 대 한 텍스트 설명을: <br /><br /> OFF <br /><br /> ON (기본값)<br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
   
 ## <a name="permissions"></a>Permissions  
  필요는 **VIEW DATABASE STATE** 권한.  
@@ -70,9 +72,9 @@ ms.lasthandoff: 11/21/2017
  [sys.query_store_runtime_stats&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys.query_store_runtime_stats_interval&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.fn_stmt_sql_handle_from_sql_stmt&#40; Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [쿼리 저장소 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

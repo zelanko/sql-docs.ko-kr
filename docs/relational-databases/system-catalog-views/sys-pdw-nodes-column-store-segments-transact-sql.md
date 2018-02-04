@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b10564c7736dce2ab21cc83bed819606230e7b9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c5982fa99effc211d23c7e92557d96e20d131ad4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,13 +41,13 @@ ms.lasthandoff: 01/02/2018
 |**encoding_type**|**int**|세그먼트에 사용되는 인코딩 형식입니다.|  
 |**row_count**|**int**|행 그룹의 행 수입니다.|  
 |**has_nulls**|**int**|열 세그먼트에 Null 값이 있으면 1입니다.|  
-|**않으면 base_id**|**bigint**|인코딩 유형 1 기준 값 id는 사용 중입니다.  인코딩 유형 1은 사용 되지 않으면 base_id가 1로 설정 됩니다.|  
-|**크기**|**float**|인코딩 유형 1 경우 magnitude는 사용 중입니다.  인코딩 유형 1은 사용 되지 크기가 1로 설정 됩니다.|  
+|**base_id**|**bigint**|인코딩 유형 1 기준 값 id는 사용 중입니다.  인코딩 유형 1은 사용 되지 않으면 base_id가 1로 설정 됩니다.|  
+|**magnitude**|**float**|인코딩 유형 1 경우 magnitude는 사용 중입니다.  인코딩 유형 1은 사용 되지 크기가 1로 설정 됩니다.|  
 |**primary__dictionary_id**|**int**|기본 사전의 ID입니다.|  
 |**secondary_dictionary_id**|**int**|보조 사전의 ID입니다. 보조 사전이 없는 경우 -1을 반환합니다.|  
 |**min_data_id**|**bigint**|열 세그먼트의 최소 데이터 ID입니다.|  
 |**max_data_id**|**bigint**|열 세그먼트의 최대 데이터 ID입니다.|  
-|**반환**|**bigint**|Null을 나타내는 데 사용되는 값입니다.|  
+|**null_value**|**bigint**|Null을 나타내는 데 사용되는 값입니다.|  
 |**on_disk_size**|**bigint**|세그먼트의 크기(바이트)입니다.|  
 |**pdw_node_id**|**int**|고유 식별자는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 참고 합니다.|  
   
@@ -87,7 +89,7 @@ ORDER BY css.hobt_id, css.column_id;
 ## <a name="see-also"></a>관련 항목:  
  [SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [COLUMNSTORE index&#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_row_groups &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
+ [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
  [sys.pdw_nodes_column_store_dictionaries &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

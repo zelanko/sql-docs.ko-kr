@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_checkpoint_stats_TSQL
 - sys.dm_db_xtp_checkpoint_stats
 - sys.dm_db_xtp_checkpoint_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_checkpoint_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a9dff499f4e0fd7182ee7d018532a386233f42c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a3bce2f4337894c86e251e53c9fc0546f2e69253
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 ## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]이상  
  다음 표에서 열을 설명 `sys.dm_db_xtp_checkpoint_stats`부터  **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|유형|Description|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|컨트롤러에 의해 표시 된 마지막 LSN입니다.|  
 |end_of_log_lsn|**numeric(38)**|로그의 끝의 LSN입니다.|  
@@ -88,7 +91,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  다음 표에서 열을 설명 `sys.dm_db_xtp_checkpoint_stats`에 대 한  **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|유형|Description|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|스레드의 현재 LSN(로그 시퀀스 번호) 및 로그 끝 사이의 로그 바이트 수입니다.|  
 |total_log_blocks_processed|**bigint**|서버 시작 후 처리된 총 로그 블록 수입니다.|  
@@ -104,7 +107,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |checkpoint_lsn|**숫자 (38)**|마지막으로 완료된 메모리 내 OLTP 검사점과 연결된 복구 LSN(로그 시퀀스 번호)입니다.|  
 |current_lsn|**숫자 (38)**|현재 처리 중인 로그 레코드의 LSN입니다.|  
 |end_of_log_lsn|**숫자 (38)**|로그 끝의 LSN입니다.|  
-|task_address|**varbinary (8)**|SOS_Task의 주소입니다. sys.dm_os_tasks에 조인해서 추가 정보를 찾을 수 있습니다.|  
+|task_address|**varbinary(8)**|SOS_Task의 주소입니다. sys.dm_os_tasks에 조인해서 추가 정보를 찾을 수 있습니다.|  
   
 ## <a name="permissions"></a>Permissions  
  서버에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.  

@@ -3,7 +3,7 @@ title: "Red Hat Enterprise Linux 공유 클러스터 SQL Server에 대 한 구�
 description: "SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 하 여 높은 가용성을 구현 합니다."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 1d2731e55c9add5cfa06d70297793f4f7d5fef48
-ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
+ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 가이드를 Red Hat Enterprise Linux에서 SQL Server에 대 한 공유 디스크 2 개 노드 클러스터를 만드는 지침을 제공 합니다. Red Hat Enterprise Linux (RHEL)를 기반으로 클러스터링 레이어 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. SQL Server 인스턴스는 하나의 노드 또는 다른에서 활성입니다.
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/06/2018
 
 다음 섹션에서는 장애 조치 클러스터 솔루션을 설정 하는 단계를 안내 합니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 아래 종단 간 시나리오를 완료 하려면 두 노드 클러스터와 NFS 서버를 구성 하려면 다른 서버를 배포 하려면 두 컴퓨터 해야 합니다. 아래 단계 이러한 서버는 구성 하는 방법에 대해 간략하게 설명 합니다.
 
@@ -143,7 +143,7 @@ NFS 서버에서 다음을 수행 합니다.
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  편집 `/etc/exports` 내보내려면 공유 하려는 디렉터리입니다. 원하는 각 공유에 대 한 1 줄이 필요 합니다. 예를 들어 다음과 같이 사용할 수 있습니다. 
+1.  편집 `/etc/exports` 내보내려면 공유 하려는 디렉터리입니다. 원하는 각 공유에 대 한 1 줄이 필요 합니다. 예를 들어 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)

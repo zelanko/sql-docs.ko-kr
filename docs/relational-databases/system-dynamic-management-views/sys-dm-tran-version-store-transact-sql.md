@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_version_store
 - dm_tran_version_store
 - dm_tran_version_store_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_version_store dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_version_store dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea010f2430dc839e05074e49c5854d796fd49071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: be8779d40624e9f88ee74ea85a1126c1b4b76ebf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,9 +60,9 @@ sys.dm_tran_version_store
 |**상태**|**tinyint**|버전이 지정된 레코드가 두 개 레코드로 분할되었는지 여부를 나타냅니다. 값이 0이면 레코드가 한 페이지에 저장됩니다. 값이 1이면 레코드가 두 개 레코드로 분할되어 서로 다른 두 페이지에 저장됩니다.|  
 |**min_length_in_bytes**|**smallint**|레코드의 최소 길이(바이트)입니다.|  
 |**record_length_first_part_in_bytes**|**smallint**|버전 레코드에서 첫 번째 부분의 길이(바이트)입니다.|  
-|**record_image_first_part**|**varbinary (8000)**|버전 레코드에서 첫 번째 부분의 이진 이미지입니다.|  
+|**record_image_first_part**|**varbinary(8000)**|버전 레코드에서 첫 번째 부분의 이진 이미지입니다.|  
 |**record_length_second_part_in_bytes**|**smallint**|버전 레코드에서 두 번째 부분의 길이(바이트)입니다.|  
-|**record_image_second_part**|**varbinary (8000)**|버전 레코드에서 두 번째 부분의 이진 이미지입니다.|  
+|**record_image_second_part**|**varbinary(8000)**|버전 레코드에서 두 번째 부분의 이진 이미지입니다.|  
   
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   

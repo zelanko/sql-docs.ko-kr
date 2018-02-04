@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: 
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: Azure SQL Database
+applies_to:
+- Azure SQL Database
 ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: deb6b14739b47dda369c457ad7a2bddc70ca3fcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62552b796e4d2207ccb97c30e2d3244b409fc4d6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>sys.database_event_session_events (Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,8 +42,8 @@ ms.lasthandoff: 11/17/2017
 |name|**sysname**|이벤트의 이름입니다. Null을 허용하지 않습니다.|  
 |패키지|**sysname**|이벤트가 포함된 이벤트 패키지의 이름입니다. Null을 허용하지 않습니다.|  
 |module|**sysname**|이벤트가 포함된 모듈의 이름입니다. Null을 허용하지 않습니다.|  
-|predicate|**nvarchar (3000)**|이벤트에 적용되는 조건자 식입니다. Null을 허용합니다.|  
-|predicate_xml|**nvarchar (3000)**|이벤트에 적용되는 XML 조건자 식입니다. Null을 허용합니다.|  
+|predicate|**nvarchar(3000)**|이벤트에 적용되는 조건자 식입니다. Null을 허용합니다.|  
+|predicate_xml|**nvarchar(3000)**|이벤트에 적용되는 XML 조건자 식입니다. Null을 허용합니다.|  
   
 ## <a name="permissions"></a>Permissions  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  

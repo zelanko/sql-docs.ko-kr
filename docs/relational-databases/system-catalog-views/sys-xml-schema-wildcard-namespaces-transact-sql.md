@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - xml_schema_wildcard_namespaces
 - sys.xml_schema_wildcard_namespaces_TSQL
 - sys.xml_schema_wildcard_namespaces
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_wildcard_namespaces catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_wildcard_namespaces catalog view
 ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a268090c284b12142de49d133ece2fbb95dbe4c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 624ab710967fb62f31d36c170bf0492274a21093
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysxmlschemawildcardnamespaces-transact-sql"></a>sys.xml_schema_wildcard_namespaces(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|이 문이 적용될 XML 스키마 구성 요소(와일드카드)의 ID입니다.|  
-|**네임 스페이스**|**nvarchar(4000)**|XML 와일드카드에서 사용하는 네임스페이스의 이름이나 URI입니다.|  
+|**namespace**|**nvarchar(4000)**|XML 와일드카드에서 사용하는 네임스페이스의 이름이나 URI입니다.|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

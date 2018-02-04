@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 37bb0b6c2252a213824e24c51178711a704d2e85
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/14/2017
 |역할(role)|**tinyint**|지리적 복제 역할 중 하나:<br /><br /> 0 = 기본 합니다. database_id 지리적 복제 파트너 관계의 주 데이터베이스를 가리킵니다.<br /><br /> 1 = 보조 합니다.  database_id 지리적 복제 파트너 관계의 주 데이터베이스를 가리킵니다.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|중 보조 유형:<br /><br /> 0 = 직접 연결이 보조 데이터베이스에 허용 되지 않으며 데이터베이스를 읽기 액세스용으로 사용할 수 없습니다.<br /><br /> 2 = all; 보조 복제에서 데이터베이스에 연결할 수 있습니다 ication 읽기 전용 액세스 합니다.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|아니오<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|아니요<br /><br /> 모두|  
 |last_commit|**datetimeoffset**|데이터베이스에 커밋된 마지막 트랜잭션의 시간입니다. 주 데이터베이스에서 검색 하는 경우 주 데이터베이스에서 마지막 커밋 시간을 나타냅니다. 보조 데이터베이스에서 검색 하는 경우 보조 데이터베이스에서 마지막 커밋 시간을 나타냅니다. 복제 링크의 기본 중지 되는 경우 보조 데이터베이스에서 검색을 따라 잡으면 보조 어떤 지점까지 나타냅니다.|
   
 > [!NOTE]  

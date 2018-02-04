@@ -3,7 +3,7 @@ title: "장애 조치 클러스터 인스턴스 저장소 SMB-Linux에서 SQL Se
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8043cd57758749399500b206410694c1735b30e8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 53c1bf7265cc15b9dd9401958317d4f14ea400d1
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>SMB-Linux에서 SQL Server 장애 조치 클러스터 인스턴스-를 구성 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서는 Linux에서 장애 조치 클러스터 인스턴스 (FCI)에 대 한 SMB 저장소를 구성 하는 방법을 설명 합니다. 
  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/01/2017
 - SMB 공유를 항상 사용 가능 해야 합니다.
 - 보안을 설정 해야 SMB 공유에 적절 합니다. 다음은 예 /etc/samba/smb.conf에서 SQLData1은 공유의 이름입니다.
 
-![05 smbsource][1]
+![05-smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 

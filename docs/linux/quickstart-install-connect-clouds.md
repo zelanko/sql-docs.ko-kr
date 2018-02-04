@@ -3,7 +3,7 @@ title: "클라우드의 SQL Server 2017 시작 | Microsoft Docs"
 description: "이 빠른 시작 자습서에는 SQL Server 2017 linux 원하는 클라우드에서 실행 하는 방법을 보여 줍니다."
 author: annashres
 ms.author: annashres
-manager: jhubbard
+manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -11,15 +11,15 @@ ms.prod_service: database-engine
 ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 9fa5f2751b515b86574165e6f6cda8f0b9e6661a
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>SQL Server 2017은 클라우드에서 실행
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 빠른 시작 자습서에서는 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 또는 사용자가 선택한 클라우드에 Ubuntu에 SQL Server 2017을 설치 합니다. 로 이동 [Azure 포털에서 Linux SQL Server 가상 컴퓨터를 프로 비전](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) Azure에서 Linux에서 SQL Server를 실행 합니다.
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/13/2017
 
 ## <a name="amazon-web-services"></a>Amazon 웹 서비스
 1.  Linux a m I 최소 2GB의 마켓플레이스에서 메모리를 사용 하 여 만들기 
-    * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  에 연결 된 a m I s s h
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/13/2017
     
 ## <a name="google-cloud-platform"></a>Google 클라우드 플랫폼
 1.  최소 2GB의 메모리 클라우드 시작 관리자와 Linux 이미지를 만들려면 
-    * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  이미지에 연결 된 ssh

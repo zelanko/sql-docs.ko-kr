@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_TSQL
 - syscollector_execution_log
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df1ddcc6306078075821af7cfd1a1176a2e31861
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5beb35aa769b1c4755481a187c765fa62068ae2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +48,11 @@ ms.lasthandoff: 11/17/2017
 |finish_time|**datetime**|종료된 패키지 및 컬렉션 집합의 실행 완료 시간입니다. Null을 허용합니다.|  
 |runtime_execution_mode|**smallint**|컬렉션 집합 활동이 데이터 수집이었는지 데이터 업로드였는지를 나타냅니다. Null을 허용합니다.<br /><br /> 값은 다음과 같습니다.<br /><br /> 0 = 컬렉션<br /><br /> 1 = 업로드|  
 |상태|**smallint**|컬렉션 집합 또는 패키지의 현재 상태를 나타냅니다. Null을 허용하지 않습니다.<br /><br /> 값은 다음과 같습니다.<br /><br /> 0 = 실행 중<br /><br /> 1 = 완료<br /><br /> 2 = 실패|  
-|적용한 후|**nvarchar (128)**|컬렉션 집합 또는 패키지를 시작한 사용자를 식별합니다. Null을 허용하지 않습니다.|  
+|적용한 후|**nvarchar(128)**|컬렉션 집합 또는 패키지를 시작한 사용자를 식별합니다. Null을 허용하지 않습니다.|  
 |package_id|**uniqueidentifier**|이 로그를 생성한 컬렉션 집합 또는 패키지를 식별합니다. Null을 허용합니다.|  
 |package_name|**nvarchar(4000)**|이 로그를 생성한 패키지의 이름입니다. Null을 허용합니다.|  
 |package_execution_id|**uniqueidentifier**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 로그 테이블에 대한 링크를 제공합니다. Null을 허용합니다.|  
-|failure_message|**nvarchar (2048)**|컬렉션 집합 또는 패키지가 실패한 경우 해당 구성 요소에 대한 가장 최근의 오류 메시지입니다. Null을 허용합니다. 자세한 오류 정보를 가져오려면는 [fn_syscollector_get_execution_details &#40; Transact SQL &#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) 함수입니다.|  
+|failure_message|**nvarchar(2048)**|컬렉션 집합 또는 패키지가 실패한 경우 해당 구성 요소에 대한 가장 최근의 오류 메시지입니다. Null을 허용합니다. 자세한 오류 정보를 가져오려면는 [fn_syscollector_get_execution_details &#40; Transact SQL &#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) 함수입니다.|  
   
 ## <a name="permissions"></a>Permissions  
  dc_operator에 대한 SELECT가 필요합니다.  

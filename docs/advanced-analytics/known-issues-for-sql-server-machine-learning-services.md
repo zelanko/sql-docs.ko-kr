@@ -1,6 +1,6 @@
 ---
 title: "컴퓨터 학습 서비스의 알려진 문제 | Microsoft Docs"
-ms.date: 01/19/2018
+ms.date: 01/31/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 197bfc48d000246b59b983fbf890e998cc2b5beb
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
-ms.translationtype: MT
+ms.openlocfilehash: a0cbdbed1f1563c888a383c8901288ace8ddad67
+ms.sourcegitcommit: 553bcfbee67a510c2c0b055ce1d7673504941d11
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>컴퓨터 학습 서비스의 알려진된 문제
 
@@ -165,6 +165,41 @@ Enterprise Edition에서 리소스 풀을 사용하여 외부 스크립트 프�
 이 섹션에는 RevoScaleR를 포함 하 여 Microsoft에서 게시 하는 도구 및 R 라이브러리에 관련 된 몇 가지 문제 뿐 아니라 SQL Server에서 R을 실행 하는 관련 된 알려진된 문제가 포함 되어 있습니다.
 
 R 솔루션에 영향을 줄 수 있는 기타 알려진된 문제에 대 한 참조는 [컴퓨터 학습 서버](https://docs.microsoft.com/machine-learning-server/resources-known-issues) 사이트입니다.
+
+### <a name="access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>기본이 아닌 위치에서 SQL Server에서 R 스크립트를 실행 하는 경우 경고를 거부 하는 액세스
+
+와 같은 기본이 아닌 위치에 설치 된 SQL Server 인스턴스의 경우 외부에서 `Program Files` 폴더에는 경고 ACCESS_DENIED가 패키지를 설치 하는 스크립트를 실행 하려고 할 때 발생 합니다. 예를 들어
+
+```text
+In normalizePath(path.expand(path), winslash, mustWork) :
+  path[2]="E:/SQL17.data/MSSQL14.SQL17/MSSQL/ExternalLibraries/R/8/1": Access is denied
+```
+
+R 함수는 경로 읽으려고 시도 및 실패 이유는 기본 제공 users 그룹 **SQLRUserGroup**, 읽기 권한이 없습니다. 경고 발생 하는 현재 R 스크립트 실행을 차단 하지 않습니다 되지만 사용자는 다른 R 스크립트를 실행할 때마다 경고가 반복적으로 되풀이 수 있습니다.
+
+SQL Server의 기본 위치에 설치한 경우이 오류가 발생 하지 않습니다, 모든 Windows 사용자 읽기 권한이에 있어야 하기 때문에 `Program Files` 폴더입니다.
+
+이 문제는 향후 서비스 릴리스에서 해결 될 예정입니다. 이 문제를 해결 제공 그룹 **SQLRUserGroup**의 모든 상위 폴더에 대 한 읽기 권한이 있는 `ExternalLibraries`합니다.
+
+### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>RevoScaleR의 이전 및 새 버전 간 serialization 오류
+
+원격 SQL Server 인스턴스를 serialize 된 형식을 사용 하 여 모델을 전달 하는 경우 오류가 발생할 수 있습니다: "memDecompress의 오류 (데이터, 유형 = 압축 해제) memDecompress(2) 내부 오류-3."
+
+최신 버전의 serialization 함수를 사용 하 여 모델을 저장 한 경우이 오류는 발생 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), 모델을 역직렬화 하는 SQL Server 인스턴스는 이전 버전의 SQL에서 RevoScaleR Api에는 있지만 서버 2017 CU2 또는 이전 버전입니다.
+
+이 문제를 해결 RevoScaleR의 최신 버전을 사용 하도록 SQL Server 인스턴스를 업그레이드할 수 있습니다. 또한 SQL Server 인스턴스에 설치 된 클라이언트에서 RevoScaleR의 동일한 버전을 설치할 수 있습니다. 
+
+API 버전은 동일 하거나 최신 버전의 API 사용 하 여 서버에 이전 serialization 함수에 함께 저장 하는 모델을 이동 하는 경우에 오류가 표시 되지 않습니다.
+
+즉, serialization 및 deserialization 작업에 대 한 RevoScaleR의 동일한 버전을 사용 합니다.
+
+### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>실시간 점수 매기기 제대로 처리 하지 않습니다 트리 및 포리스트 모델 learningRate 매개 변수
+
+의사 결정 트리 또는 의사 결정 포리스트 메서드를 사용 하 여 모델을 만들고 학습 속도 지정 하는 경우 사용 하는 경우 일관성 없는 결과가 표시 될 수 있습니다 `sp_rxpredict` 또는 SQL `PREDICT` 함수를 사용 하 여 비교할 때 `rxPredict`합니다.
+
+원인을 API에서 오류 직렬화 프로세스 모델링 하 한으로 제한 됩니다는 `learningRate` 매개 변수: 예를 들어 [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees), 또는
+
+이 문제는 향후 서비스 릴리스에서 수정 될 예정입니다.
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>R 작업에 대한 프로세서 선호도 제한
 

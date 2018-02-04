@@ -3,7 +3,7 @@ title: "SQL Server에 대 한 SLES 공유 디스크 클러스터를 구성 | Mic
 description: "SQL Server에 대 한 SUSE Linux Enterprise Server (SLES) 공유 디스크 클러스터를 구성 하 여 높은 가용성을 구현 합니다."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 71671e0103916d6a539b730ce4bac141d29c417e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 SLES 공유 디스크 클러스터를 구성 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 가이드를 SQL Server SUSE Linux Enterprise Server (SLES)에 대 한 2 노드 공유 디스크 클러스터를 만드는 지침을 제공 합니다. 클러스터링 레이어 SUSE 기반 [높은 가용성 확장 (HAE)](https://www.suse.com/products/highavailability) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. 
 
@@ -254,7 +254,7 @@ Full list of resources:
 
 클러스터 리소스를 관리 하려면 다음 SUSE 항목을 참조: [클러스터 리소스 관리](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
-### <a name="manual-failover"></a>수동 장애 조치(Failover)
+### <a name="manual-failover"></a>수동 장애 조치(manual failover)
 
 자동으로 장애 조치 (또는 마이그레이션)을 하드웨어 또는 소프트웨어 오류가 발생할 경우 클러스터의 다른 노드로 구성 된 리소스가 있지만 Pacemaker GUI 또는 명령줄을 사용 하는 클러스터의 다른 노드로 리소스를 직접 이동할 수 있습니다. 
 

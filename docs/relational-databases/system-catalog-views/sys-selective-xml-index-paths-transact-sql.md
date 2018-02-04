@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - xml_schema_attributes
 - sys.xml_schema_attributes_TSQL
 - sys.xml_schema_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_attributes catalog view
 ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c2f8156f9821bb6d4d0f70ae1af200a33ce3cb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f71e46667c56b628965eab154af0c3e15c421f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +55,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**object_id**|**int**|XML 열이 포함된 테이블의 ID입니다.|  
 |**index_id**|**int**|선택적 XML 인덱스의 고유한 ID입니다.|  
 |**path_id**|**int**|승격 XML 경로 ID입니다.|  
-|**경로**|**nvarchar(4000)**|승격 경로입니다. 예를 들어 '/a/b/c/d/e'입니다.|  
+|**path**|**nvarchar(4000)**|승격 경로입니다. 예를 들어 '/a/b/c/d/e'입니다.|  
 |**name**|**sysname**|경로 이름입니다.|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|에 따라 **path_type** 값 'XQUERY' 또는 'SQL'.|  
@@ -66,8 +69,8 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**user_type_id**|**tinyint**|열의 사용자 유형 ID입니다.|  
 |**max_length**|**smallint**|유형의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 varchar(max), nvarchar(max), varbinary(max) 또는 xml입니다.|  
 |**전체 자릿수**|**tinyint**|숫자 기반 형식인 경우에는 형식의 최대 전체 자릿수이고 그렇지 않으면 0입니다.|  
-|**크기 조정**|**tinyint**|숫자 기반 형식인 경우에는 형식의 최대 소수 자릿수이고 그렇지 않으면 0입니다.|  
-|**데이터 정렬 이름**|**sysname**|문자 기반인 경우에는 형식의 데이터 정렬 이름이고 그렇지 않으면 NULL입니다.|  
+|**소수 자릿수**|**tinyint**|숫자 기반 형식인 경우에는 형식의 최대 소수 자릿수이고 그렇지 않으면 0입니다.|  
+|**collation_name**|**sysname**|문자 기반인 경우에는 형식의 데이터 정렬 이름이고 그렇지 않으면 NULL입니다.|  
 |**is_singleton**|**bit**|0 = SINGLETON 힌트가 없음<br /><br /> 1 = SINGLETON 최적화 힌트가 적용됨|  
   
 ## <a name="permissions"></a>Permissions  

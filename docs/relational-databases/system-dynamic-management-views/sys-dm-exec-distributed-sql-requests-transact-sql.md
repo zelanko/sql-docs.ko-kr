@@ -8,30 +8,32 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_DISTRIBUTED_SQL_REQUESTS_TSQL
 - SYS.DM_EXEC_DISTRIBUTED_SQL_REQUESTS_TSQL
 - DM_EXEC_DISTRIBUTED_SQL_REQUESTS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - sys.dm_exec_distributed_requests management view
 - dm_exec_distributed_requests management view
 ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 922f2ce79dbabe3670b3488299a530b2a28e0cc2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ae66757f7d7977ab91420267d6c45be205d72c4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,11 +42,11 @@ ms.lasthandoff: 11/17/2017
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar (32)**|execution_id 및 step_index이이 보기에 대 한 키를 구성 합니다. 이 요청과 관련 된 고유 숫자 id입니다.|참조 ID에 [sys.dm_exec_requests &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|execution_id|**nvarchar(32)**|execution_id 및 step_index이이 보기에 대 한 키를 구성 합니다. 이 요청과 관련 된 고유 숫자 id입니다.|참조 ID에 [sys.dm_exec_requests &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|이 배포의 일부인 쿼리 단계의 인덱스입니다.|참조에서 step_index [sys.dm_exec_distributed_request_steps&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
 |compute_node_id|**int**|이 단계에서 표시 된 작업의 형식입니다.|참조에서 compute_node_id [sys.dm_exec_compute_nodes&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|**int**|여기서 단계 실행 중입니다.|배포 범위 하지 노드 범위에서 실행 되는 요청에 대 한-1로 설정 합니다.|  
-|상태|**nvarchar (32)**|이 단계는 상태|활성, 취소 됨, 완료, 실패, 큐에 대기 중인|  
+|상태|**nvarchar(32)**|이 단계는 상태|활성, 취소 됨, 완료, 실패, 큐에 대기 중인|  
 |error_id|**nvarchar(36)**|있는 경우이 단계와 관련 된 오류의 고유 id|id를 참조 하십시오. [sys.dm_exec_compute_node_errors&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), 오류가 발생 하지 않은 경우 NULL입니다.|  
 |start_time|**datetime**|단계 실행 시작 된 시간|더 작은 또는 현재 시간 및 크거나 end_compile_time이이 단계 속해 있는 쿼리 합니다.|  
 |end_time|**datetime**|이 단계 실행을 완료, 취소 되었거나 실패 시간입니다.|더 작은 또는 현재 시간 및 크거나 start_time, 실행의 현재 단계에 대 한 NULL로 설정 하거나 큐에 대기 합니다.|  

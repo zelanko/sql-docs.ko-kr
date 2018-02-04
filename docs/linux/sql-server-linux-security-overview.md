@@ -4,7 +4,7 @@ description: "이 항목에서는 Linux 제한 사항에 대 한 SQL Server를 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.workload: Inactive
-ms.openlocfilehash: a120ed0cf8de077c3d1de6d695554b2585a7d9da
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c197741feeec4e583272b9ef845ee4d337e742c2
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 보안 제한 사항
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 현재 Linux에서 SQL Server에는 다음과 같은 제한 사항이 있습니다.
 
@@ -36,5 +36,4 @@ SQL Server에서 사용할 수 있는 보안 기능에 대 한 자세한 내용�
 
 ## <a name="next-steps"></a>다음 단계
 
-일반적인 보안 작업에 대 한 참조 [Linux에서 SQL Server의 보안 기능을 시작](sql-server-linux-security-get-started.md)합니다.   
-TCP를 변경 하는 스크립트에 대 한 포트 번호, SQL Server 디렉터리 및 traceflag 또는 데이터 정렬 구성, 참조 [mssql conf와 Linux에서 SQL Server 구성](sql-server-linux-configure-mssql-conf.md)합니다.
+일반적인 보안 작업에 대 한 참조 [Linux에서 SQL Server의 보안 기능을 시작](sql-server-linux-security-get-started.md)합니다. TCP를 변경 하는 스크립트에 대 한 포트 번호, SQL Server 디렉터리 및 traceflag 또는 데이터 정렬 구성, 참조 [mssql conf와 Linux에서 SQL Server 구성](sql-server-linux-configure-mssql-conf.md)합니다.

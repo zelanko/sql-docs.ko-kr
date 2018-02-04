@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb9462ad5ab281d6178ccf33270e759b569825b1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7199f2d29c59d93c28ce5c5dca81a7a0b812f1b6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -48,13 +50,13 @@ ms.lasthandoff: 11/17/2017
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>각 배포 내에서 각 파티션에 있는 예 1: 디스플레이 행 
 
-적용 대상: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 사용 하 여 각 배포 내에서 각 파티션에 있는 행의 수를 표시 하려면 [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) 합니다.
 
 ### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>예 2: 테이블의 각 배포의 각 파티션에 있는 행을 표시 하려면 시스템 뷰를 사용 하 여
 
-적용 대상:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+적용 대상: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 이 쿼리는 테이블의 각 배포의 각 파티션에 있는 행의 수를 반환 `myTable`합니다.  
  

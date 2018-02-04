@@ -3,7 +3,7 @@ title: "Linux SSMS로 SQL Server 관리 | Microsoft Docs"
 description: "이 자습서에서는 Linux에서 실행 중인 Windows에서 SQL Server Management Studio를 사용 하 여 SQL Server에 연결 하는 방법을 보여 줍니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
-ms.openlocfilehash: 784c2c01365eba64fb8e19925c176033af9a1339
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 98fdce174be9f7a3dc67d910a84f8558ede1b317
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Windows에서 SQL Server Management Studio (SSMS)를 사용 하 여 Linux에서 SQL Server 관리
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 항목에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) SQL Server 2017 Linux에서 연결할 수 있습니다. SSMS는 Windows 응용 프로그램, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 경우 SSMS를 사용 합니다.
 

@@ -8,30 +8,32 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_DISTRIBUTED_REQUESTS
 - DM_EXEC_DISTRIBUTED_REQUESTS_TSQL
 - SYS.DM_EXEC_DISTRIBUTED_REQUESTS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - sys.dm_exec_distributed_sql_requests management view
 - PolyBase
 - dm_exec_distributed_sql_requests management view
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39b16d051c3300599a220f4f2ce21904db208571
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 539bf6f6e4df5860977fdd0703a9bc11a5923d31
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -43,8 +45,8 @@ ms.lasthandoff: 11/17/2017
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|이 보기에 대 한 키입니다. 이 요청과 관련 된 고유 숫자 id입니다.|시스템의 모든 요청에 대해 고유 합니다.|  
-|execution_id|**nvarchar (32**|이 쿼리가 실행 된 세션에 연결 된 고유 숫자 id입니다.||  
-|상태|**nvarchar (32**|요청의 현재 상태입니다.|'보류 중', '승인', 'AcquireSystemResources', 'Initializing', '구문 분석', 'AquireResources', '실행 중', '취소', ' 계획' 'Complete', ' 실패 ', '취소'.|  
+|execution_id|**nvarchar(32**|이 쿼리가 실행 된 세션에 연결 된 고유 숫자 id입니다.||  
+|상태|**nvarchar(32**|요청의 현재 상태입니다.|'Pending', 'Authorizing', 'AcquireSystemResources', 'Initializing', 'Plan', 'Parsing', 'AquireResources', 'Running', 'Cancelling', 'Complete', 'Failed', 'Cancelled'.|  
 |error_id|**nvarchar(36)**|있는 경우 요청을와 연결 된 오류의 고유 id입니다.|오류가 발생 하지 않은 경우 NULL로 설정 합니다.|  
 |start_time|**datetime**|요청 실행을 시작한 시간입니다.|큐에 대기 중인된 요청;에 대 한 0 현재 시간 보다 작거나의 경우는 올바른 datetime입니다.|  
 |end_time|**datetime**|엔진은 완료 된 시간입니다 컴파일 요청 합니다.|활성 또는 대기 중인 요청;에 대 한 null 그렇지 않은 경우 현재 시간 보다 작거나 유효한 datetime입니다.|  

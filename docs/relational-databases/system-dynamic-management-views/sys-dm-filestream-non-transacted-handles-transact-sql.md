@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_filestream_non_transacted_handles
 - dm_filestream_non_transacted_handles_TSQL
 - sys.dm_filestream_non_transacted_handles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_filestream_non_transacted_handles dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_filestream_non_transacted_handles dynamic management view
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f366cde5a82aa7fc7c198f13bb5fb0ff6d2a8309
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bb4ba44df1372fbad89ac21e24d1e27233a99b27
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  자세한 내용은 [FileTables 관리](../../relational-databases/blob/manage-filetables.md)를 참조하세요.  
   
-|**열**|**형식**|**Description**|  
+|**열**|**형식**|**설명**|  
 |----------------|--------------|---------------------|  
 |database_id|int|핸들과 연결된 데이터베이스의 ID입니다.|  
 |object_id|int|핸들이 연결된 FileTable의 개체 ID입니다.|  

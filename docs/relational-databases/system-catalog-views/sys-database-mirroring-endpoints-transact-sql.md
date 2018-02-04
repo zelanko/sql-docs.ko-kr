@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - database_mirroring_endpoints
 - sys.database_mirroring_endpoints
 - database_mirroring_endpoints_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database mirroring [SQL Server], endpoint
 - HADR [SQL Server], endpoint
 - database mirroring [SQL Server], catalog views
 - sys.database_mirroring_endpoints catalog view
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f39698e49986744c0cefa1c6cf251b7eea9fc4e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9bc0c2229fe72265957d39991f2b67a1b395f0b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +47,14 @@ ms.lasthandoff: 11/17/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**\<열을 상속 >**|—|열을 상속 **sys.endpoints** (자세한 내용은 참조 [sys.endpoints &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
-|**역할**|**tinyint**|미러링 역할. 다음 중 하나입니다.<br /><br /> **0** = 없음<br /><br /> **1** = partner<br /><br /> **2** = 미러링 모니터<br /><br /> **3** = all<br /><br /> 참고:이 값은 데이터베이스 미러링과 관련이 있습니다.|  
-|**role_desc**|**nvarchar (60)**|미러링 역할 설명. 다음 중 하나입니다.<br /><br /> **NONE**<br /><br /> **파트너**<br /><br /> **미러링 모니터 서버**<br /><br /> **ALL**<br /><br /> 참고:이 값은 데이터베이스 미러링과 관련이 있습니다.|  
+|**role**|**tinyint**|미러링 역할. 다음 중 하나입니다.<br /><br /> **0** = 없음<br /><br /> **1** = partner<br /><br /> **2** = 미러링 모니터<br /><br /> **3** = All<br /><br /> 참고:이 값은 데이터베이스 미러링과 관련이 있습니다.|  
+|**role_desc**|**nvarchar(60)**|미러링 역할 설명. 다음 중 하나입니다.<br /><br /> **NONE**<br /><br /> **파트너**<br /><br /> **WITNESS**<br /><br /> **ALL**<br /><br /> 참고:이 값은 데이터베이스 미러링과 관련이 있습니다.|  
 |**is_encryption_enabled**|**bit**|**1** 암호화는 사용 됨을 의미 합니다.<br /><br /> **0** 암호화는 사용 되지 않는지를 의미 합니다.|  
-|**connection_auth**|**tinyint**|이 끝점에 연결하는 데 필요한 연결 인증 유형. 다음 중 하나입니다.<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -협상<br /><br /> **4** -인증서<br /><br /> **5** -NTLM, CERTIFICATE<br /><br /> **6** -KERBEROS, CERTIFICATE<br /><br /> **7** -NEGOTIATE, CERTIFICATE<br /><br /> **8** -CERTIFICATE, NTLM<br /><br /> **9** -CERTIFICATE, KERBEROS<br /><br /> **10** -CERTIFICATE, NEGOTIATE|  
+|**connection_auth**|**tinyint**|이 끝점에 연결하는 데 필요한 연결 인증 유형. 다음 중 하나입니다.<br /><br /> **1** - NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -협상<br /><br /> **4** -인증서<br /><br /> **5** -NTLM, CERTIFICATE<br /><br /> **6** -KERBEROS, CERTIFICATE<br /><br /> **7** -NEGOTIATE, CERTIFICATE<br /><br /> **8** -CERTIFICATE, NTLM<br /><br /> **9** - CERTIFICATE, KERBEROS<br /><br /> **10** -CERTIFICATE, NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|이 끝점에 연결하는 데 필요한 인증 유형 설명. 다음 중 하나입니다.<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**certificate_id**|**int**|인증에 사용된 인증서 ID<br /><br /> 0 = Windows 인증 사용 중|  
-|**encryption_algorithm**|**tinyint**|암호화 알고리즘. 다음 중 하나입니다.<br /><br /> **0** -NONE<br /><br /> **1** -RC4<br /><br /> **2** – AES<br /><br /> **3** -NONE, RC4<br /><br /> **4** -NONE, AES<br /><br /> **5** -RC4, AES<br /><br /> **6** – AES, RC4<br /><br /> **7** -NONE, RC4, AES<br /><br /> **8** -NONE, AES, RC4|  
-|**encryption_algorithm_desc**|**nvarchar (60)**|암호화 알고리즘에 대한 설명. 다음 중 하나입니다.<br /><br /> 없음<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
+|**encryption_algorithm**|**tinyint**|암호화 알고리즘. 다음 중 하나입니다.<br /><br /> **0** -NONE<br /><br /> **1** – RC4<br /><br /> **2** – AES<br /><br /> **3** -NONE, RC4<br /><br /> **4** -NONE, AES<br /><br /> **5** -RC4, AES<br /><br /> **6** – AES, RC4<br /><br /> **7** -NONE, RC4, AES<br /><br /> **8** -NONE, AES, RC4|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|암호화 알고리즘에 대한 설명. 다음 중 하나입니다.<br /><br /> 없음<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>주의  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 11/17/2017
  [sys.availability_replicas&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [sys.database_mirroring &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 끝점 &#40; SQL Server &#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

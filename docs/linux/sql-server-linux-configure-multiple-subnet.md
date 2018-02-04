@@ -3,7 +3,7 @@ title: "Linux에서 다중 서브넷 Always On 가용성 그룹 및 장애 조�
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/1/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2af1b8a50d446fee46418302a598de7a37f79bda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>다중 서브넷 Always On 가용성 그룹 및 장애 조치 클러스터 인스턴스 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 때 항상에 가용성 그룹 (AG) 또는 장애 조치 클러스터 인스턴스 (FCI)에 걸쳐 있는 사이트가 둘 이상, 각 사이트 일반적으로 자체 네트워킹을 있습니다. 종종 즉, 각 사이트에 고유한 IP 주소를 지정 합니다. 예를 들어 사이트 A의 주소 192.168.1로 시작 합니다. *x* 사이트 B의 주소 192.168.2로 시작 하 고. *x*여기서 *x* 서버에 고유한 IP 주소의 일부입니다. 네트워킹 계층에서 현재 위치에서 라우팅의 일종 없이 이러한 서버 됩니다 서로 통신할 수 있습니다. 이 시나리오를 처리 하는 방법은 두 가지가: VLAN을 라는 두 개의 다른 서브넷에 연결 하는 네트워크를 설정 하거나 서브넷 간 라우팅을 구성 합니다.
 

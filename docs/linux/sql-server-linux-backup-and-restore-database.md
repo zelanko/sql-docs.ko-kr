@@ -3,7 +3,7 @@ title: "Linux에서 SQL Server 데이터베이스 백업 및 복원 | Microsoft 
 description: "Linux에서 SQL Server 데이터베이스 백업 및 복원 하는 방법에 알아봅니다."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: 0b12200da9b4e0967c8057d807d19919fb07f331
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9a0a1243ede149ada6a1042a246006929370a4b2
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux에서 SQL Server 데이터베이스 백업 및 복원
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 다른 플랫폼으로 같은 도구를 사용 SQL Server 2017 linux에서 데이터베이스의 백업을 수행할 수 있습니다. Linux 서버에서 사용할 수 있습니다 **sqlcmd** SQL Server에 연결 하 고 백업을 수행 합니다. Windows에서는 Linux에서 SQL Server에 연결할 수 있으며 사용자 인터페이스와 백업을 수행할 수 있습니다. 백업 기능은 플랫폼에서 동일 합니다. 로컬, 원격 드라이브 또는 데이터베이스를 백업할 수 예를 들어 [Microsoft Azure Blob 저장소 서비스](../relational-databases/backup-restore/sql-server-backup-to-url.md)합니다.
 

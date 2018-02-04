@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4cdf51b635fb1b7e29ab20a65704fc560ce8496
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f345dbbdda12ade363b4d5f8a52f5cca80e564f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmpdwsqlrequests-transact-sql"></a>sys.dm_pdw_sql_requests (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,11 +33,11 @@ ms.lasthandoff: 11/17/2017
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|이 SQL 쿼리 분배 속해 있는 쿼리의 고유 식별자입니다.<br /><br /> request_id, step_index, 및 distribution_id이이 보기에 대 한 키를 형성합니다.|참조에서 request_id [sys.dm_pdw_exec_requests &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|이 SQL 쿼리 분배 속해 있는 쿼리의 고유 식별자입니다.<br /><br /> request_id, step_index, 및 distribution_id이이 보기에 대 한 키를 형성합니다.|참조에서 request_id [sys.dm_pdw_exec_requests &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|이 배포의 일부인 쿼리 단계의 인덱스입니다.<br /><br /> request_id, step_index, 및 distribution_id이이 보기에 대 한 키를 형성합니다.|참조에서 step_index [sys.dm_pdw_request_steps &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |pdw_node_id|**int**|이 쿼리 분배 실행 되는 노드의 고유 식별자입니다.|에 대 한 node_id를 참조 하십시오. [sys.dm_pdw_nodes &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**int**|이 쿼리 분배 실행 되는 배포의 고유 식별자입니다.<br /><br /> request_id, step_index, 및 distribution_id이이 보기에 대 한 키를 형성합니다.|참조에서 distribution_id [sys.pdw_distributions &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md). 노드 범위 하지 배포 범위에서 실행 되는 요청에 대 한-1로 설정 합니다.|  
-|상태|**nvarchar (32)**|쿼리 분포의 현재 상태입니다.|보류 중, 실행, 실패, 취소 됨, 완료, 중단, CancelSubmitted|  
+|상태|**nvarchar(32)**|쿼리 분포의 현재 상태입니다.|보류 중, 실행, 실패, 취소 됨, 완료, 중단, CancelSubmitted|  
 |error_id|**nvarchar(36)**|오류의 고유 식별자 연관 된 쿼리 분배가 있는 경우.|참조에서 error_id [sys.dm_pdw_errors &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). 오류가 발생 하지 않은 경우 NULL로 설정 합니다.|  
 |start_time|**datetime**|배포에는 쿼리 실행을 시작한 시간입니다.|이 쿼리 분배 속한 작은 또는 현재 시간 및 크거나 start_time 쿼리 단계|  
 |end_time|**datetime**|이 쿼리 분배 실행을 완료, 취소 되었거나 실패 시간입니다.|보다 크거나 시작 시간, 또는 진행 중이거나 대기 중인 쿼리 분포는 경우 NULL로 설정 합니다.|  

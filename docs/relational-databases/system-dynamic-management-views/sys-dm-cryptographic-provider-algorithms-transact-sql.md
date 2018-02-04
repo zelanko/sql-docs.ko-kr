@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_cryptographic_provider_algorithms
 - sys.dm_cryptographic_provider_algorithms_TSQL
 - dm_cryptographic_provider_algorithms
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_cryptographic_provider_algorithms dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_cryptographic_provider_algorithms dynamic management function
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 265fba19bee60b37f5c79b113d620c1df0031202
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e728edc7b3e246917343bdcae834a104875ed00
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcryptographicprovideralgorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +56,8 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|알고리즘의 ID 번호입니다.|  
-|algorithm_tag|**nvarchar (60)**|알고리즘의 ID 태그입니다.|  
-|key_type|**nvarchar (128)**|키 입력을 표시합니다. ASYMMETRIC KEY 또는 SYMMETRIC KEY를 반환합니다.|  
+|algorithm_tag|**nvarchar(60)**|알고리즘의 ID 태그입니다.|  
+|key_type|**nvarchar(128)**|키 입력을 표시합니다. ASYMMETRIC KEY 또는 SYMMETRIC KEY를 반환합니다.|  
 |key_length|**int**|키 길이(비트)를 나타냅니다.|  
   
 ## <a name="permissions"></a>Permissions  

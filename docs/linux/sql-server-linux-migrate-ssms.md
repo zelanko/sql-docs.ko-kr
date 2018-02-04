@@ -1,9 +1,9 @@
 ---
 title: "내보내기 및 가져오기 Linux에서 데이터베이스 | Microsoft Docs"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: ea882010f49c19237c7dc7d21a2211a7b0c16e54
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 6daf9f5293e30d5a42439920850b5abfe1ad83a0
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>내보내기 및 SSMS 또는 SqlPackage.exe windows와 Linux에서 데이터베이스 가져오기
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 항목에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 및 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) 내보내고 SQL Server 2017 linux에서 데이터베이스를 가져옵니다. Windows 응용 프로그램은 SSMS 및 SqlPackage.exe, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 하는 경우이 방법을 사용 합니다.
 

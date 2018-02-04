@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_appdomains
 - dm_clr_appdomains_TSQL
 - sys.dm_clr_appdomains_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_appdomains dynamic management dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 16f729bc78a42984716d2f30fc2bf30badc1ade5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +44,17 @@ ms.lasthandoff: 11/27/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary (8)**|주소는 **AppDomain**합니다. 관리 되는 모든 데이터베이스 사용자가 소유 하는 개체가 동일한 항상 로드 됩니다 **AppDomain**합니다. 이 열을 사용 하 여이에 현재 로드 된 모든 어셈블리를 조회 **AppDomain** 에 **sys.dm_clr_loaded_assemblies**합니다.|  
+|**appdomain_address**|**varbinary(8)**|주소는 **AppDomain**합니다. 관리 되는 모든 데이터베이스 사용자가 소유 하는 개체가 동일한 항상 로드 됩니다 **AppDomain**합니다. 이 열을 사용 하 여이에 현재 로드 된 모든 어셈블리를 조회 **AppDomain** 에 **sys.dm_clr_loaded_assemblies**합니다.|  
 |**appdomain_id**|**int**|ID는 **AppDomain**합니다. 각 **AppDomain** 고유 ID를 가집니다.|  
 |**appdomain_name**|**varchar(386)**|이름에서 **AppDomain** 가 할당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |**creation_time**|**datetime**|시간는 **AppDomain** 만들었습니다. 때문에 **Appdomain** 캐시 되어 성능 향상을 위해 다시 사용 **creation_time** 코드를 실행 하는 경우 시간 필요는 없습니다.|  
 |**db_id**|**int**|이 데이터베이스의 ID **AppDomain** 만들었습니다. 서로 다른 두 데이터베이스에 저장 된 코드를 공유할 수 없습니다 하나 **AppDomain**합니다.|  
 |**user_id**|**int**|이 실행할 수 있는 개체 사용자의 ID **AppDomain**합니다.|  
-|**상태**|**nvarchar (128)**|현재 상태에 대 한 설명자는 **AppDomain**합니다. AppDomain은 생성부터 삭제까지 여러 가지 상태를 가질 수 있습니다. 자세한 내용은 이 항목의 주의 섹션을 참조하십시오.|  
+|**상태**|**nvarchar(128)**|현재 상태에 대 한 설명자는 **AppDomain**합니다. AppDomain은 생성부터 삭제까지 여러 가지 상태를 가질 수 있습니다. 자세한 내용은 이 항목의 주의 섹션을 참조하십시오.|  
 |**strong_refcount**|**int**|이에 대 한 강력한 참조 수가 **AppDomain**합니다. 이 현재 실행 중인이 사용 하는 일괄 처리의 수를 반영 **AppDomain**합니다. 이 보기의 실행을 만들 됩니다는 **강력한 refcount**경우에; 현재 실행 중인 코드가 없는 **strong_refcount** 1의 값은입니다.|  
 |**weak_refcount**|**int**|이에 대 한 약한 참조 수가 **AppDomain**합니다. 내부 개체 수를 나타내는이 **AppDomain** 캐시 됩니다. 관리 되는 데이터베이스 개체를 실행할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 캐시는 **AppDomain** 나중에 다시 사용에 대 한 합니다. 성능이 향상 됩니다.|  
-|**비용**|**int**|비용는 **AppDomain**합니다. 비용이 높을수록, 가능성이이 **AppDomain** 언로드될 메모리가 중 됩니다. 비용 일반적으로 다시이 만드는 데 필요한 메모리 크기에 따라 달라 집니다 **AppDomain**합니다.|  
-|**값**|**int**|값은 **AppDomain**합니다. 값이 작을수록, 가능성이이 **AppDomain** 언로드될 메모리가 중 됩니다. 값이 일반적으로 연결 수 나 일괄 처리 사용 하는이에 종속 **AppDomain**합니다.|  
+|**cost**|**int**|비용는 **AppDomain**합니다. 비용이 높을수록, 가능성이이 **AppDomain** 언로드될 메모리가 중 됩니다. 비용 일반적으로 다시이 만드는 데 필요한 메모리 크기에 따라 달라 집니다 **AppDomain**합니다.|  
+|**value**|**int**|값은 **AppDomain**합니다. 값이 작을수록, 가능성이이 **AppDomain** 언로드될 메모리가 중 됩니다. 값이 일반적으로 연결 수 나 일괄 처리 사용 하는이에 종속 **AppDomain**합니다.|  
 |**total_processor_time_ms**|**bigint**|프로세스가 시작된 후 현재 응용 프로그램 도메인에서 실행되는 동안 모든 스레드에서 사용되는 총 프로세서 시간(밀리초)입니다. 이에 해당 하는 **System.AppDomain.MonitoringTotalProcessorTime**합니다.|  
 |**total_allocated_memory_kb**|**bigint**|응용 프로그램 도메인이 만들어진 후 수집된 메모리를 포함하여 해당 도메인에서 할당한 모든 메모리의 총 크기(KB)입니다. 이에 해당 하는 **System.AppDomain.MonitoringTotalAllocatedMemorySize**합니다.|  
 |**survived_memory_kb**|**bigint**|마지막 전체 차단 수집 후에도 유지되고 현재 응용 프로그램 도메인에서 참조하는 것으로 알려진 KB 수입니다. 이에 해당 하는 **System.AppDomain.MonitoringSurvivedMemorySize**합니다.|  
@@ -79,7 +82,7 @@ ms.lasthandoff: 11/27/2017
   
 |State|Description|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR가 언로드를 요청 했습니다는 **AppDomain**관리 되는 데이터베이스 개체를 포함 하는 어셈블리가 변경 되거나 삭제 되었으므로 때문에 일반적으로 합니다.|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR가 언로드를 요청 했습니다는 **AppDomain**관리 되는 데이터베이스 개체를 포함 하는 어셈블리가 변경 되거나 삭제 되었으므로 때문에 일반적으로 합니다.|  
 |E_APPDOMAIN_UNLOADED|CLR가 언로드 되었음을 **AppDomain**합니다. 이로 인해는 에스컬레이션 프로시저의 결과 일반적으로 **ThreadAbort**, **OutOfMemory**, 또는 사용자 코드에서 처리 되지 않은 예외가 있습니다.|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** CLR에서 언로드 되었으며 의해 소멸 설정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |E_APPDOMAIN_DESTROY|**AppDomain** 의해 소멸 되 고은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  

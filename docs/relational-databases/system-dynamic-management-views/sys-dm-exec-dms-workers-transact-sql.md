@@ -8,30 +8,32 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SYS.DM_EXEC_DMS_WORKERS_TSQL
 - DM_EXEC_DMS_WORKERS_TSQL
 - DM_EXEC_DMS_WORKERS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - dm_exec_dms_workers management view
 - sys.dm_exec_dms_workers management view
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5677eb04a9a5809c2caf25d37edd288e4b1efbc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ec7edcfc352e2addf3ba69d5915a11b25f483eba
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -42,13 +44,13 @@ ms.lasthandoff: 11/17/2017
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar (32)**|쿼리이 DMS 작업자는 일부 of.request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 형성 합니다.||  
+|execution_id|**nvarchar(32)**|쿼리이 DMS 작업자는 일부 of.request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 형성 합니다.||  
 |step_index|**int**|이 DMS 작업자의 일부인 단계를 쿼리 합니다.|단계 인덱스를 참조 하십시오. [sys.dm_exec_distributed_request_steps&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|이 작업 자가 실행 되는 DMS 계획의 단계입니다.|참조 [sys.dm_exec_dms_workers (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|**int**|작업자에서 실행 되는 노드.|참조 [sys.dm_exec_compute_nodes&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|**int**|||  
-|형식|**nvarcha(32)**|||  
-|상태|**nvarchar (32)**|이 단계는 상태|'보류 중인', '실행 중', 'Complete', '실패', 'UndoFailed', 'PendingCancel', ' 취소 ', '취소', '중단'|  
+|유형|**nvarcha(32)**|||  
+|상태|**nvarchar(32)**|이 단계는 상태|‘Pending', ‘Running', ‘Complete', ‘Failed', ‘UndoFailed', ‘PendingCancel', ‘Cancelled', ‘Undone', ‘Aborted'|  
 |bytes_per_sec|**bigint**|||  
 |bytes_processed|**bigint**|||  
 |rows_processed|**bigint**|||  
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |dms_cpid|**int**|||  
 |sql_spid|**int**|||  
 |error_id|**nvarchar(36)**|||  
-|가 source_info|**nvarchar(4000)**|||  
+|source_info|**nvarchar(4000)**|||  
 |destination_info|**nvarchar(4000)**|||  
 |command|**nvarchar(4000)**|||  
   

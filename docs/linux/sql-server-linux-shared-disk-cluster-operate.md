@@ -3,7 +3,7 @@ title: "장애 조치 클러스터 인스턴스-Linux에서 SQL Server 작동 | 
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: aba3ca214a1ea96d18aa17285ed40235bf2f7bdb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 6f8ba6ed2e56ea4dc97ab68fa85601d94edfe1fc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스에 SQL Server Linux에서 작동 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서는 Linux에서 SQL Server 장애 조치 클러스터 인스턴스 (FCI) 작동 하는 방법을 설명 합니다. Linux에서 SQL Server FCI를 만들지 않은 경우 참조 [구성 장애 조치 클러스터 인스턴스-Linux에서 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)합니다. 
 

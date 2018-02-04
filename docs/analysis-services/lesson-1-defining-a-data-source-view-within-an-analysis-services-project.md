@@ -1,7 +1,7 @@
 ---
 title: "1 단원: Services 프로젝트 내의 분석 데이터 원본 뷰 정의 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/02/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0fe40b4deeb6fa929be969a0d84a61bcad85f9a1
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 0bd1ef5ce2bd0c10e025e74e39ffde313b0dfc1f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,15 +36,14 @@ ms.lasthandoff: 01/22/2018
 이 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델 템플릿을 기반으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 만듭니다.  
   
 [데이터 원본 정의](../analysis-services/lesson-1-2-defining-a-data-source.md)  
-이 태스크에서는 **AdventureWorksDW2012** 데이터베이스를 이후 단원에서 정의할 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 차원 및 큐브의 데이터 원본으로 지정합니다.  
+이 작업에서는 지정 된 **AdventureWorksDW** 데이터베이스에 대 한 데이터 원본으로는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 차원 및 큐브 이후 단원에서 정의 하는 합니다.  
   
 [데이터 원본 뷰 정의](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
-이 태스크에서는 **AdventureWorksDW2012** 데이터베이스의 선택한 테이블에서 메타데이터의 단일 통합 뷰를 정의합니다.  
+이 태스크에서는 선택 된 테이블에 대 한 메타 데이터의 단일 통합된 뷰를 정의 고 **AdventureWorksDW** 데이터베이스입니다.  
   
 [기본 테이블 이름 수정](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
 이 태스크에서는 이후 정의할 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체 이름이 사용자에게 더 친숙하도록 데이터 원본 뷰에서 테이블 이름을 수정합니다.  
   
-이 단원용으로 작성된 샘플 프로젝트 파일과 결과를 비교하십시오. 이 자습서와 함께 제공되는 예제 프로젝트를 다운로드하는 방법은 codeplex의 제품 예제 페이지에서 [SQL Server 2012용 SSAS 다차원 모델 프로젝트](http://go.microsoft.com/fwlink/p/?LinkID=221866) 를 참조하십시오.  
   
 ## <a name="next-lesson"></a>다음 단원  
 [2 단원: 정의 및 큐브를 배포 합니다.](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  

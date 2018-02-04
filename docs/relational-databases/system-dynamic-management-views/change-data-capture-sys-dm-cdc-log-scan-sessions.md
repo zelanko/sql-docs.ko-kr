@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_cdc_log_scan_sessions_TSQL
 - sys.dm_cdc_log_scan_sessions_TSQL
 - sys.dm_cdc_log_scan_sessions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6db4f34391cf36757ed086b24ddfe3618ebbe529
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7d81782bac9590aac7fb1905304aec53f531db1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>변경 데이터 캡처-sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |**first_begin_cdc_lsn**|**nvarchar(23)**|변경 데이터 캡처 트랜잭션을 포함하는 첫 번째 LSN입니다.<br /><br /> 때 **session_id** = 0, 변경 데이터 캡처 트랜잭션을 포함 하는 첫 번째 LSN입니다.|  
 |**last_commit_cdc_lsn**|**nvarchar(23)**|변경 데이터 캡처 트랜잭션을 포함하는 마지막 커밋 로그 레코드의 LSN입니다.<br /><br /> 때 **session_id** 세션이 포함 된 변경 데이터 캡처 트랜잭션을 대 한이 0 이면 마지막 커밋 로그 레코드 LSN|  
 |**last_commit_cdc_time**|**datetime**|변경 데이터 캡처 트랜잭션을 포함하는 마지막 커밋 로그 레코드가 처리된 시간입니다.<br /><br /> 때 **session_id** = 0, 세션이 포함 된 변경 데이터 캡처 트랜잭션을 대 한 마지막 커밋 로그 레코드 시간입니다.|  
-|**대기 시간**|**int**|차이 (초) 사이 **end_time** 및 **last_commit_cdc_time** 세션에서 합니다. 이 카운터는 7단계의 마지막에 채워집니다.<br /><br /> 때 **session_id** = 0 인 세션에 기록 된 마지막 대기 시간은 0이 아닌 값입니다.|  
+|**latency**|**int**|차이 (초) 사이 **end_time** 및 **last_commit_cdc_time** 세션에서 합니다. 이 카운터는 7단계의 마지막에 채워집니다.<br /><br /> 때 **session_id** = 0 인 세션에 기록 된 마지막 대기 시간은 0이 아닌 값입니다.|  
 |**empty_scan_count**|**int**|변경 데이터 캡처 트랜잭션을 포함하지 않은 연속적인 세션 수입니다.|  
 |**failed_sessions_count**|**int**|실패한 세션 수입니다.|  
   

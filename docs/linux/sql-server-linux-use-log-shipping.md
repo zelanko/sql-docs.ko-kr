@@ -3,7 +3,7 @@ title: "Linux에서 SQL Server에 대 한 로그 전달을 구성 | Microsoft Do
 description: "이 자습서를 보조 인스턴스로 로그 전달을 사용 하 여 Linux에서 SQL Server 인스턴스를 복제 하는 방법의 기본 예제를 보여 줍니다."
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.date: 04/19/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 4317dd2b7dc32f552988eb3c33c33b8bbe8a3dfb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 48f1782ca1da3e730181402ed947453b6eeefc35
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달 작업 시작
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 로그 전달이를 하나 이상의 보조 서버는 주 서버에서 데이터베이스는 복제 하는 HA 구성. 간단히 말해서 원본 데이터베이스의 백업은 보조 서버에 복원 됩니다. 그런 다음 주 서버 트랜잭션 로그 백업을 주기적으로 만들고 보조 서버 복원할 데이터베이스의 보조 복사본을 업데이트 합니다. 
 

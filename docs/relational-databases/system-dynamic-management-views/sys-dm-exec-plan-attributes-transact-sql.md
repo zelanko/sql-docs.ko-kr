@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_plan_attributes_TSQL
 - dm_exec_plan_attributes
 - sys.dm_exec_plan_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_plan_attributes dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c9a90a964bd8c1fce911e62ac9081b47d349e0a5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +54,13 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|attribute|**varchar (128)**|이 계획과 연결된 특성의 이름입니다. 이 바로 아래 표에서 가능한 특성, 해당 데이터 형식 및 해당 설명을 나열합니다.|  
+|attribute|**varchar(128)**|이 계획과 연결된 특성의 이름입니다. 이 바로 아래 표에서 가능한 특성, 해당 데이터 형식 및 해당 설명을 나열합니다.|  
 |value|**sql_variant**|이 계획과 연결된 특성의 값입니다.|  
 |is_cache_key|**bit**|특성이 계획에 대한 캐시 조회 키의 일부로 사용되는지 여부를 나타냅니다.|  
 
 위의 테이블에서 **특성** 다음 값을 가질 수 있습니다.
 
-|attribute|데이터 형식|Description|  
+|Attribute|데이터 형식|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|계획을 컴파일할 때 사용하는 옵션 값을 나타냅니다.|  
 |objectid|**int**|캐시에서 개체를 찾는 데 사용되는 기본 키 중 하나입니다. ID에 저장 하는 개체 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 데이터베이스 개체 (프로시저, 뷰, 트리거, 및 등)에 대 한 합니다. 계획 유형이 "임시" 또는 "준비됨"일 경우 일괄 처리 텍스트의 내부 해시입니다.|  
@@ -96,9 +99,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-set-options"></a>SET 옵션 평가  
  반환 된 값을 변환할 **set_options** 계획 컴파일 시 사용 된 옵션의 값을 뺄는 **set_options** 할 때까지 가능한 가장 큰 값으로 시작 하는 값 0에 도달 합니다. 뺀 각 값은 쿼리 계획에 사용된 옵션에 해당합니다. 예를 들어 경우 값 **set_options** 이 251 인 계획으로 컴파일된 옵션은 ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), 병렬 Plan(2) 및 ANSI_PADDING (1)입니다.  
   
-|옵션|값|  
+|옵션|Value|  
 |------------|-----------|  
-|ANSI_PADDING|1|  
+|ANSI_PADDING|1.|  
 |Parallel Plan|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
@@ -116,7 +119,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> 계획을 컴파일할 때 데이터베이스 옵션 PARAMETERIZATION이 FORCED로 설정됨을 나타냅니다.|131072|  
-|ROWCOUNT|**적용 대상:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 를[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**적용 대상:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>커서  
  비활성 커서가 컴파일된 계획에서 캐시되어 커서의 동시 사용자가 커서 저장에 사용된 메모리를 다시 사용할 수 있습니다. 예를 들어 일괄 처리가 커서를 할당 취소하지 않고 선언 및 사용한다고 가정합니다. 두 사용자가 동일한 일괄 처리를 실행하는 경우에는 두 활성 커서가 있습니다. 커서가 다른 일괄 처리에서 잠재적으로 할당 취소되면 커서 저장에 사용된 메모리가 캐시되고 해제되지 않습니다. 이 비활성 커서 목록은 컴파일된 계획에서 유지됩니다. 이후에 사용자가 일괄 처리를 실행하면 캐시된 커서 메모리가 다시 사용되고 활성 커서로 적절히 초기화됩니다.  
@@ -124,10 +127,10 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-cursor-options"></a>커서 옵션 평가  
  반환 된 값을 변환할 **required_cursor_options** 및 **acceptable_cursor_options** 계획 컴파일 시 사용 된 옵션으로 시작 된 열 값에서 값 빼기 가능한 가장 큰 값을 0에 도달할 때까지 합니다. 뺀 각 값은 쿼리 계획에 사용된 커서 옵션에 해당합니다.  
   
-|옵션|값|  
+|옵션|Value|  
 |------------|-----------|  
 |InclusionThresholdSetting|0|  
-|INSENSITIVE|1|  
+|INSENSITIVE|1.|  
 |SCROLL|2|  
 |READ ONLY|4|  
 |FOR UPDATE|8|  
@@ -174,7 +177,7 @@ GO
 ## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [실행 관련 동적 관리 뷰 및 함수 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   

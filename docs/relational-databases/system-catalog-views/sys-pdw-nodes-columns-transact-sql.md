@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1095ccfc9838062f0612502a422398309242491
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3316f6325cda3ad7683337ef4d5929e1e5369fb2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwnodescolumns-transact-sql"></a>sys.pdw_nodes_columns (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |rule_object_id|**int**|열에 바인딩된 독립 실행형 규칙의 ID입니다. <br />0 = 독립 실행형 규칙이 없습니다.|항상 0입니다.|  
 |is_sparse|**bit**|1 = 열이 스파스 열입니다.|항상 0입니다.|  
 |is_column_set|**bit**|1 = 열이 열 집합입니다.|항상 0입니다.|  
-|pdw_node_id|**int**|고유 식별자는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|NOT  NULL|  
+|pdw_node_id|**int**|고유 식별자는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|NOT NULL|  
   
 ## <a name="permissions"></a>Permissions  
  CONTROL SERVER 권한이 필요합니다.  

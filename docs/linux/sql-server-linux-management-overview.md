@@ -3,7 +3,7 @@ title: "Linux에서 SQL Server 관리 | Microsoft Docs"
 description: "이 항목에서는 Linux에서 실행 중인 SQL Server에 대 한 일반 관리 작업 및 도구에 대 한 링크."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,19 +15,19 @@ ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 0f775666ae0ba3e5bc9140e52ec2f532d6b92e0c
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: f6710b3e7bd40a2589333cebbf94c8b07f9aaa5d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Linux에서 SQL Server를 관리 하는 적절 한 도구 선택
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 2017 linux를 관리 하는 방법은 여러 가지가 있습니다. 다음 섹션의 다른 관리 도구와 기술을 더 많은 리소스에 대 한 포인터와 간략 한 개요를 제공합니다.
 
-## <a name="mssql-conf"></a>mssql conf 
+## <a name="mssql-conf"></a>mssql-conf 
 **mssql conf** 도구는 Linux에서 SQL Server를 구성 합니다. 자세한 내용은 참조 [mssql conf와 Linux에서 SQL Server 구성](sql-server-linux-configure-mssql-conf.md)합니다.
 
 ## <a name="transact-sql"></a>Transact-SQL

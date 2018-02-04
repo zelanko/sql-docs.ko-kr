@@ -3,7 +3,7 @@ title: "만들기 및 Linux에서 SQL Server에 대 한 작업을 실행 | Micro
 description: "이 자습서에서는 Linux에서 SQL Server 에이전트 작업을 실행 하는 방법을 보여 줍니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: fe2705d9d1bfefd9953ff03da123621dd4ef95f3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 526375f9f9f96c9ea0402dcb84f20a2c214fd13f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>만들기 및 Linux에서 SQL Server 에이전트 작업 실행
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 작업이 정기적으로 SQL Server 데이터베이스에 동일한 명령 시퀀스를 수행 하는 데 사용 됩니다. 이 자습서에서는 TRANSACT-SQL 및 SQL Server Management Studio (SSMS)를 모두 사용 하 여 Linux에서 SQL Server 에이전트 작업을 만드는 방법의 예를 제공 합니다.
 

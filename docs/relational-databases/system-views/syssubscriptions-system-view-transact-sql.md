@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - syssubscriptions_TSQL
 - syssubscriptions
-dev_langs: TSQL
-helpviewer_keywords: syssubscriptions view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- syssubscriptions view
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81135d7c10ac1c9404837015740d74b71e65817d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2ecb2619d2cbb7aed9f4bee294ef5fe0b672234f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions(시스템 뷰)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +44,10 @@ ms.lasthandoff: 11/17/2017
 |**srvid**|**smallint**|구독자의 서버 ID입니다.|  
 |**dest_db**|**sysname**|구독 데이터베이스의 이름입니다.|  
 |**상태**|**tinyint**|구독 상태입니다.<br /><br /> **0** = 비활성입니다.<br /><br /> **1** = 구독 합니다.<br /><br /> **2** = 활성 합니다.|  
-|**sync_type**|**tinyint**|초기 동기화의 유형입니다.<br /><br /> **1** = 자동입니다.<br /><br /> **2** = none입니다.|  
+|**sync_type**|**tinyint**|초기 동기화의 유형입니다.<br /><br /> **1** = Automatic.<br /><br /> **2** = none입니다.|  
 |**login_name**|**sysname**|구독을 추가하기 위해 구독자에 연결할 때 사용하는 로그인 이름입니다.|  
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = 밀어넣기-배포 에이전트가 배포자에서 실행 합니다.<br /><br /> **1** = 끌어오기-배포 에이전트가 구독자에서 실행 합니다.|  
-|**distribution_jobid**|**binary (16)**|구독을 동기화하는 데 사용되는 배포 에이전트 작업을 식별합니다.|  
+|**distribution_jobid**|**binary(16)**|구독을 동기화하는 데 사용되는 배포 에이전트 작업을 식별합니다.|  
 |**timestmap**|**timestamp**|구독을 만든 날짜와 시간입니다.|  
 |**update_mode**|**tinyint**|업데이트 모드입니다.<br /><br /> **0** = 읽기 전용입니다.<br /><br /> **1** = 즉시 업데이트 합니다.|  
 |**loopback_detection**|**bit**|양방향 트랜잭션 복제 토폴로지에 속한 구독에 적용됩니다. 루프백 검색은 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자에게 보낼지 여부를 결정합니다.<br /><br /> **0** = 다시 보냅니다.<br /><br /> **1** = 다시 보내지 않았습니다.|  

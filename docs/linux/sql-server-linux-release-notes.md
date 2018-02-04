@@ -3,7 +3,7 @@ title: "SQL Server 2017 linux에 대 한 릴리스 정보 | Microsoft Docs"
 description: "이 항목 릴리스 정보를 포함 하 고 SQL Server 2017 Linux에서 실행 중인 지원 되는 기능. 릴리스 정보는 최신 버전 및 몇 가지 이전 릴리스에 포함 되어 있습니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 5b66fa7db6547bfbb9340ce5738dff064f6a48c9
-ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
+ms.openlocfilehash: 661c3797ef0881efd49921231c2899f5391e4e27
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
 
@@ -51,8 +51,8 @@ ms.lasthandoff: 01/10/2018
 
 | 릴리스 | 버전 | 릴리스 날짜 |
 |-----|-----|-----|
-| [C U 3](#CU3) | 14.0.3015.40| 1-2018 |
-| [C U 2](#CU2) | 14.0.3008.27 | 11-2017 |
+| [CU3](#CU3) | 14.0.3015.40| 1-2018 |
+| [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 

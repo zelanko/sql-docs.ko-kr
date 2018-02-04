@@ -12,20 +12,20 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Linux 서버에 SQL Server Always On 가용성 그룹에 대 한 지원 되는 배포 구성을 제공 합니다. 가용성 그룹에는 고가용성 및 데이터 보호 지원합니다. 자동 실패 감지, 자동 장애 조치 및 장애 조치 후 투명 하 게 다시 연결할 고가용성을 제공합니다. 동기화 된 복제본 데이터 보호를 제공합니다. 
 
@@ -65,7 +65,7 @@ SQL Server 2017 소개는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 
 세 개의 동기 복제본이 포함 된 가용성 그룹 읽기 확장성, 고가용성 및 데이터 보호를 제공할 수 있습니다. 다음 표에서 가용성 문제를 설명합니다. 
 
-| |읽기 비율|고가용성 & </br> 데이터 보호 | 데이터 보호
+| |read-scale|고가용성 & </br> 데이터 보호 | 데이터 보호
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 파일 그룹은 R /w |자동 장애 조치(failover). 새 주 파일 그룹은 R /w |자동 장애 조치(failover). 새로운 주 이전의 주 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 사용자 트랜잭션에 사용할 수 없는 경우 
@@ -82,7 +82,7 @@ SQL Server 2017 소개는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 
 2 개의 동기 복제본이 포함 된 가용성 그룹 읽기 규모 및 데이터 보호를 제공합니다. 다음 표에서 가용성 문제를 설명합니다. 
 
-| |읽기 비율 |데이터 보호
+| |read-scale |데이터 보호
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1.
 |주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 파일 그룹은 R /w| 자동 장애 조치(failover). 새로운 주 이전의 주 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 사용자 트랜잭션에 사용할 수 없는 경우

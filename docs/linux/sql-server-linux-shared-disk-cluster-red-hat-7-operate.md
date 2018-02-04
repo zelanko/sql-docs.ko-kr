@@ -3,7 +3,7 @@ title: "SQL Server에 대 한 공유 클러스터 Red Hat Enterprise Linux 작�
 description: "SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 하 여 높은 가용성을 구현 합니다."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: e0a7c5078526b46a8cfa518eeb1d0b5708343115
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Red Hat Enterprise Linux 공유 디스크 클러스터 SQL Server에 대 한 작동
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Red Hat Enterprise Linux를 사용 하 여 공유 디스크 장애 조치 클러스터에서 SQL Server에 대 한 다음 작업을 수행 하는 방법에 설명 합니다.
 
@@ -265,7 +265,7 @@ pacemaker: active/enabled
 
     다음 포트가 열려 Pacemaker 통신할 수에 대 한 모든 노드에 있어야 합니다.
     
-    - * * TCP: 2224 3121, 21064
+    - **TCP: 2224, 3121, 21064
 
 - **Pacemaker 또는 Corosync 서비스 실행**
 

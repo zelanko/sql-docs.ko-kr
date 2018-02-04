@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - trace_categories_TSQL
 - sys.trace_categories
 - sys.trace_categories_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.trace_categories catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.trace_categories catalog view
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c686db19c3c9136cbd50e83b34a7b542721df95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ece89c2798d35648e4d247ab3a56e19101341027
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systracecategories-transact-sql"></a>sys.trace_categories(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +45,8 @@ ms.lasthandoff: 11/17/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**smallint**|이 범주의 고유 ID입니다. 이 열은 또한에 **sys.trace_events** 카탈로그 뷰에 있습니다.|  
-|**name**|**nvarchar (128)**|이 범주의 고유 이름입니다. 이 매개 변수는 지역화되지 않았습니다.|  
-|**유형**|**tinyint**|범주 유형:<br /><br /> 0 = 보통<br /><br /> 1 = 연결<br /><br /> 2 = 오류|  
+|**name**|**nvarchar(128)**|이 범주의 고유 이름입니다. 이 매개 변수는 지역화되지 않았습니다.|  
+|**type**|**tinyint**|범주 유형:<br /><br /> 0 = 보통<br /><br /> 1 = 연결<br /><br /> 2 = 오류|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

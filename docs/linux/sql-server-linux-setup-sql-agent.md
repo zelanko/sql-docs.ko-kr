@@ -3,7 +3,7 @@ title: "Linux에서 SQL Server 에이전트를 설치 합니다. | Microsoft Doc
 description: "이 항목에서는 Linux에서 SQL Server 에이전트를 설치 하는 방법에 설명 합니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: 7ba7f55064542f2650584a87888214052b8d74f4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 873c2da961db577889a3fca4139e325083d609e9
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux에서 SQL Server 에이전트를 설치 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 에이전트를 설치 하는 다음 단계를 수행 (**mssql 서버 에이전트**) linux. [SQL Server 에이전트](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) 예약 된 SQL Server 작업을 실행 합니다. 이 버전의 SQL Server 에이전트에 대 한 지원 되는 기능에 대 한 자세한 내용은 참조는 [릴리스 정보](sql-server-linux-release-notes.md)합니다.
 
@@ -79,7 +79,7 @@ sudo systemctl restart mssql-server
 
 설치 하려면 다음 단계를 사용 하 여는 **mssql 서버 에이전트** SUSE Linux Enterprise Server에 있습니다. 
 
-설치 **mssql 서버 에이전트** 
+Install **mssql-server-agent** 
 
 ```bash
 sudo zypper install mssql-server-agent

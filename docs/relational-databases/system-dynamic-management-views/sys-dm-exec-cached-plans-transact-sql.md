@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_cached_plans
 - dm_exec_cached_plans_TSQL
 - sys.dm_exec_cached_plans_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_cached_plans dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_cached_plans dynamic management view
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 816fcb7a7fbf362f2f531b93629508ab3ab2b76f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9ef3927340e8fc87e8d25796ae331273556c43a6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,12 +49,12 @@ ms.lasthandoff: 11/17/2017
 |refcounts|**int**|이 캐시 개체를 참조하는 캐시 개체의 수입니다. **Refcounts** 항목이 캐시에 있으려면 1 이상 이어야 합니다.|  
 |usecounts|**int**|캐시 개체를 조회한 횟수입니다. 매개 변수가 있는 쿼리가 캐시에서 계획을 찾는 경우에는 증가하지 않습니다. 실행 계획을 사용하는 경우에는 여러 번 증가할 수 있습니다.|  
 |size_in_bytes|**int**|캐시 개체가 사용한 바이트 수입니다.|  
-|memory_object_address|**varbinary (8)**|캐시된 항목의 메모리 주소입니다. 이 값을 함께 사용할 수 있습니다 [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) 및 캐시 된 계획의 메모리 분석을 가져올 수 [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)사용 하 여 항목 캐시 비용을 구할 합니다.|  
+|memory_object_address|**varbinary(8)**|캐시된 항목의 메모리 주소입니다. 이 값을 함께 사용할 수 있습니다 [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) 및 캐시 된 계획의 메모리 분석을 가져올 수 [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)사용 하 여 항목 캐시 비용을 구할 합니다.|  
 |cacheobjtype|**nvarchar(34)**|캐시에 있는 개체의 유형입니다. 이 값은<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
 |objtype|**nvarchar(16)**|개체의 유형입니다. 다음은 가능한 값 및 해당 설명을입니다.<br /><br /> Proc: 저장된 프로시저<br />준비 된 문을 준비 합니다.<br />Adhoc: 임시 쿼리 합니다. 가리키는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용 하 여 언어 이벤트로 제출 된 **osql** 또는 **sqlcmd** 대신 원격 프로시저 호출 합니다.<br />ReplProc: 복제 필터 프로시저<br />트리거: 트리거<br />보기: 보기<br />기본값: 기본값<br />UsrTab: 사용자 테이블<br />SysTab: 시스템 테이블<br />CHECK 제약 조건을 검사:<br />규칙: 규칙|  
 |plan_handle|**varbinary(64)**|메모리 내 계획의 식별자입니다. 이 식별자는 일시적이며 계획이 캐시에 있는 동안에만 일정하게 유지됩니다. 이 값은 다음 동적 관리 함수와 함께 사용할 수 있습니다.<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|이 계획 메모리 사용량이 계산된 리소스 풀의 ID입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
  <sup>1</sup>  
   

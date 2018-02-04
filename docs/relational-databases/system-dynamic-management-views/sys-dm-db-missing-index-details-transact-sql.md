@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_db_missing_index_details
 - sys.dm_db_missing_index_details_TSQL
 - dm_db_missing_index_details_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view
 - sys.dm_db_missing_index_details dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9c23f2c1d045b50261abd067c7c6860972b433aa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c10432f27701da1b3a99176df6797317051d2ec2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbmissingindexdetails-transact-sql"></a>sys.dm_db_missing_index_details(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +47,8 @@ ms.lasthandoff: 11/17/2017
 |**index_handle**|**int**|특정 누락된 인덱스를 식별합니다. 이 식별자는 서버에서 고유합니다. **index_handle** 은이 테이블의 키입니다.|  
 |**database_id**|**smallint**|누락된 인덱스가 있는 테이블이 위치한 데이터베이스를 식별합니다.|  
 |**object_id**|**int**|인덱스가 없는 테이블을 식별합니다.|  
-|**equality_columns**|**nvarchar(4000)**|다음 형식의 같음 조건자에 적용되는 쉼표로 구분된 열 목록입니다.<br /><br /> *열* =*상수 _ 값*|  
-|**inequality_columns**|**nvarchar(4000)**|다음 형식의 같지 않음 조건자에 적용되는 쉼표로 구분된 열 목록입니다.<br /><br /> *열* > *상수 _ 값*<br /><br /> "="가 아닌 모든 비교 연산자는 같지 않음을 표시합니다.|  
+|**equality_columns**|**nvarchar(4000)**|다음 형식의 같음 조건자에 적용되는 쉼표로 구분된 열 목록입니다.<br /><br /> *table.column* =*constant_value*|  
+|**inequality_columns**|**nvarchar(4000)**|다음 형식의 같지 않음 조건자에 적용되는 쉼표로 구분된 열 목록입니다.<br /><br /> *table.column* > *constant_value*<br /><br /> "="가 아닌 모든 비교 연산자는 같지 않음을 표시합니다.|  
 |**included_columns**|**nvarchar(4000)**|쿼리에 대한 포함 열로서 필요한 쉼표로 구분된 열 목록입니다. 에 대 한 자세한 내용은 포함 된 열 참조 또는 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)합니다.<br /><br /> 메모리 액세스에 최적화 된 인덱스에 대 한 (둘 다 해시 및 메모리 액세스에 최적화 된 비클러스터형)를 무시 **included_columns**합니다. 테이블의 모든 열은 모든 메모리 최적화 인덱스에 포함됩니다.|  
 |**statement**|**nvarchar(4000)**|인덱스가 없는 테이블의 이름입니다.|  
   
@@ -70,6 +72,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>관련 항목:  
  [sys.dm_db_missing_index_columns &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys.dm_db_missing_index_group_stats &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

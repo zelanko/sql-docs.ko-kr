@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_missing_index_columns_TSQL
 - sys.dm_db_missing_index_columns
 - dm_db_missing_index_columns
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_missing_index_columns dynamic management function
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f2f358532d43453242fea591ab9ac12024230f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f0778fe8698d486d8535eb17fe1d10e6fd812984
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +52,7 @@ sys.dm_db_missing_index_columns(index_handle)
   
  [sys.dm_db_missing_index_details &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
   
- [sys.dm_db_missing_index_groups &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -58,7 +60,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|열의 ID입니다.|  
 |**column_name**|**sysname**|테이블 열의 이름입니다.|  
-|**column_usage**|**varchar (20)**|열이 쿼리에 사용되는 방법입니다. 가능한 값 및 해당 설명을 보려면은 합니다.<br /><br /> 동등 열 형식으로 같음을 표시 하는 조건자에 적용 됩니다.: <br />                        *열* = *상수 _ 값*<br /><br /> 같지 않음: 열에 기여 같지 않음, 예를 들어 표시 하는 조건자 폼의 조건자: *열* > *상수 _ 값*합니다. "="가 아닌 모든 비교 연산자는 같지 않음을 표시합니다.<br /><br /> INCLUDE: 열을 사용 하지 않고 조건자를 계산 않고 쿼리를 포함 하 예를 들어 또 다른 이유로 사용 됩니다.|  
+|**column_usage**|**varchar(20)**|열이 쿼리에 사용되는 방법입니다. 가능한 값 및 해당 설명을 보려면은 합니다.<br /><br /> 동등 열 형식으로 같음을 표시 하는 조건자에 적용 됩니다.: <br />                        *table.column* = *constant_value*<br /><br /> 같지 않음: 열에 기여 같지 않음, 예를 들어 표시 하는 조건자 폼의 조건자: *열* > *상수 _ 값*합니다. "="가 아닌 모든 비교 연산자는 같지 않음을 표시합니다.<br /><br /> INCLUDE: 열을 사용 하지 않고 조건자를 계산 않고 쿼리를 포함 하 예를 들어 또 다른 이유로 사용 됩니다.|  
   
 ## <a name="remarks"></a>주의  
  반환 된 정보 **sys.dm_db_missing_index_columns** 쿼리는 쿼리 최적화 프로그램이 쿼리 최적화 되 고 지속 되지 않는 때 업데이트 됩니다. 누락된 인덱스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 누락된 인덱스 정보를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
@@ -91,6 +93,6 @@ GO
 ## <a name="see-also"></a>관련 항목:  
  [sys.dm_db_missing_index_details &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys.dm_db_missing_index_group_stats &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_mailattachments_TSQL
 - sysmail_mailattachments
-dev_langs: TSQL
-helpviewer_keywords: sysmail_mailattachments database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_mailattachments database mail view
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 382106752e64701d0e31d7a41056a66767750b1d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 028ecfcb41a46c1a218d63fcb298dd2af9719678
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +40,9 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|첨부 파일의 ID입니다.|  
 |**mailitem_id**|**int**|첨부 파일을 포함하는 메일 항목의 식별자입니다.|  
-|**파일 이름**|**nvarchar(520)**|첨부 파일의 파일 이름입니다. 때 **attach_query_result** 는 1 및 **query_attachment_filename** 가 NULL 이면 데이터베이스 메일에서 임의로 파일 이름을 만듭니다.|  
-|**파일 크기**|**int**|첨부 파일의 크기(바이트)입니다.|  
-|**첨부 파일**|**varbinary(max)**|첨부 파일의 내용입니다.|  
+|**filename**|**nvarchar(520)**|첨부 파일의 파일 이름입니다. 때 **attach_query_result** 는 1 및 **query_attachment_filename** 가 NULL 이면 데이터베이스 메일에서 임의로 파일 이름을 만듭니다.|  
+|**filesize**|**int**|첨부 파일의 크기(바이트)입니다.|  
+|**attachment**|**varbinary(max)**|첨부 파일의 내용입니다.|  
 |**last_mod_date**|**datetime**|행을 마지막으로 수정한 날짜와 시간입니다.|  
 |**last_mod_user**|**sysname**|행을 마지막으로 수정한 사용자입니다.|  
   

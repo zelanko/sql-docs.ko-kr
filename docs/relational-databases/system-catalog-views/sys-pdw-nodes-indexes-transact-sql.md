@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9dcf0c5cc21d01359c13f13b33914d73a0a7b5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77d90e50801abe9a8d9bd6c9ed67223486630b9e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -34,8 +36,8 @@ ms.lasthandoff: 11/17/2017
 |object_id|**int**|이 인덱스가 속한 개체의 id입니다.||  
 |name|**sysname**|인덱스의 이름입니다. 이름은 해당 개체 내 에서만 고유 합니다. NULL = 힙||  
 |index_id|**int**|인덱스의 id입니다. index_id는 해당 개체 내 에서만 고유 합니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형 인덱스<br /><br /> > 1 = 비클러스터형 인덱스||  
-|형식|**tinyint**|인덱스의 유형입니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형<br /><br /> 2 = 비클러스터형<br /><br /> 5 = 클러스터형 xVelocity 메모리 최적화 columnstore 인덱스|  
-|type_desc|**nvarchar (60)**|인덱스 유형의 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> 클러스터형된 COLUMNSTORE||  
+|유형|**tinyint**|인덱스의 유형입니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형<br /><br /> 2 = 비클러스터형<br /><br /> 5 = 클러스터형 xVelocity 메모리 최적화 columnstore 인덱스|  
+|type_desc|**nvarchar(60)**|인덱스 유형의 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> 클러스터형된 COLUMNSTORE||  
 |is_unique|**bit**|0 = 인덱스가 고유하지 않습니다.|항상 0입니다.|  
 |data_space_id|**int**|이 인덱스에 대 한 데이터 공간의 id입니다. 데이터 공간은 파일 그룹 또는 파티션 구성표입니다.<br /><br /> 0 = object_id가 테이블 반환 함수입니다.||  
 |ignore_dup_key|**bit**|0 = IGNORE_DUP_KEY가 OFF입니다.|항상 0입니다.|  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |allow_page_locks|**bit**|1 = 인덱스에서 페이지 잠금을 허용합니다.|항상 1입니다.|  
 |has_filter|**bit**|0 = 인덱스에 필터가 없습니다.|항상 0입니다.|  
 |filter_definition|**nvarchar(max)**|필터링된 인덱스에 포함된 행 하위 집합에 대한 식입니다.|항상 NULL입니다.|  
-|pdw_node_id|**int**|고유 식별자는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|NOT  NULL|  
+|pdw_node_id|**int**|고유 식별자는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|NOT NULL|  
   
 ## <a name="permissions"></a>Permissions  
  CONTROL SERVER 권한이 필요합니다.  

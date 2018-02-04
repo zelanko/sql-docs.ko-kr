@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_active_catalogs
 - dm_fts_active_catalogs_TSQL
 - sys.dm_fts_active_catalogs
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_active_catalogs dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_active_catalogs dynamic management view
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3712a9cb104058d46cc0f2b9b21d1ad0f5bf062c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c6031073091f63185f58cd256900719c25d8a7ae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,8 +46,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|활성 전체 텍스트 카탈로그를 포함하는 데이터베이스의 ID입니다.|  
 |**catalog_id**|**int**|활성 전체 텍스트 카탈로그의 ID입니다.|  
-|**memory_address**|**varbinary (8)**|이 전체 텍스트 카탈로그와 관련된 채우기 작업에 할당된 메모리 버퍼의 주소입니다.|  
-|**name**|**nvarchar (128)**|활성 전체 텍스트 카탈로그의 이름입니다.|  
+|**memory_address**|**varbinary(8)**|이 전체 텍스트 카탈로그와 관련된 채우기 작업에 할당된 메모리 버퍼의 주소입니다.|  
+|**name**|**nvarchar(128)**|활성 전체 텍스트 카탈로그의 이름입니다.|  
 |**is_paused**|**bit**|활성 전체 텍스트 카탈로그 채우기가 일시 중지되었는지 나타냅니다.|  
 |**상태**|**int**|전체 텍스트 카탈로그의 현재 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 0 = 초기화하는 중입니다.<br /><br /> 1 = 준비되었습니다.<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 임시 오류입니다.<br /><br /> 4 = 다시 탑재해야 합니다.<br /><br /> 5 = 종료<br /><br /> 6 = 백업을 위해 정지되었습니다.<br /><br /> 7 = 카탈로그를 통해 백업이 완료되었습니다.<br /><br /> 8 = 카탈로그가 손상되었습니다.|  
 |**status_description**|**nvarchar(120)**|활성 전체 텍스트 카탈로그의 현재 상태에 대한 설명입니다.|  
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|보낸 사람|수행할 작업|관계|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|일 대 일|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|일 대 일|  

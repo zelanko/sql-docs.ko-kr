@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - trace_events
 - sys.trace_events
 - sys.trace_events_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.trace_events catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.trace_events catalog view
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dde83548228baaaa8e33fe30485e62476ed6c42a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1d067dc13fbaeecac2b20ee771b8fd9bd2e283b0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|이벤트의 고유 ID입니다. 이 열은 또한에 **sys.trace_event_bindings** 및 **sys.trace_subclass_values** 카탈로그 뷰.|  
 |**category_id**|**smallint**|이벤트의 범주 ID입니다. 이 열은 또한에 **sys.trace_categories** 카탈로그 뷰에 있습니다.|  
-|**name**|**nvarchar (128)**|이 이벤트의 고유 이름입니다. 이 매개 변수는 지역화되지 않았습니다.|  
+|**name**|**nvarchar(128)**|이 이벤트의 고유 이름입니다. 이 매개 변수는 지역화되지 않았습니다.|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

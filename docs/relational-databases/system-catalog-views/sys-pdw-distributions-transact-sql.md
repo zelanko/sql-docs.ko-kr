@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 572b5187-9753-4063-adf8-65dea87d11f8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3018a1c7ef35aa2c1308a37f8d84de4a61d0d6d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 07694ebc741c769e97991e81de40fe73023106a0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwdistributions-transact-sql"></a>sys.pdw_distributions (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|-----------|  
 |distribution_id|**int**|분포에 관련 된 고유 숫자 id입니다.<br /><br /> 이 보기에 대 한 키입니다.|1부터 계산 노드당의 수를 곱한 어플라이언스의 계산 노드 수입니다.|  
 |pdw_node_id|**int**|이 분포에는 노드의 ID입니다.|참조에서 pdw_node_id [sys.dm_pdw_nodes &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|name|**nvarchar (32)**|분산된 테이블에 대 한 접미사로 사용 되는 배포와 관련 된 식별자는 문자열입니다.|문자열 구성의 ' Z', ' a ~ z', ' 0-9', '_','-'.|  
+|name|**nvarchar(32)**|분산된 테이블에 대 한 접미사로 사용 되는 배포와 관련 된 식별자는 문자열입니다.|문자열 구성의 ' Z', ' a ~ z', ' 0-9', '_','-'.|  
 |position|**int**|해당 노드에서 다른 배포에 각 노드 내에서 배포의 위치입니다.|노드당의 수는 1입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  

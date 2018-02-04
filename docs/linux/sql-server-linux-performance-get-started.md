@@ -3,7 +3,7 @@ title: "Linux에서 SQL Server의 성능 기능을 시작 | Microsoft Docs"
 description: "이 항목에서는 SQL Server를 처음 접하는 Linux 사용자에 대 한 SQL Server 성능 기능 소개를 제공 합니다. 이러한 예 중 많은 모든 플랫폼에서 작동 하지만이 문서의 컨텍스트가 Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: 
 ms.workload: Inactive
-ms.openlocfilehash: d7fdf285c7ab6a19dd4367c38745008e83167a9a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: d31f07a9ef05f056fe0887a3873f972b0683da5f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux에서 SQL Server의 성능 기능에 대 한 연습
 

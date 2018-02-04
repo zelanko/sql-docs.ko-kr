@@ -3,7 +3,7 @@ title: "Linux 배포에 대 한 SQL Server 가용성 기본 사항 | Microsoft D
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: b137d8badf44bf1c7d181b490bcf6d06e2bd087f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포에 대 한 SQL Server 가용성 기본 사항
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 부터는 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 및 Windows에서 지원 됩니다. Windows 기반 같은 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux에서 항상 사용 가능한 데이터베이스와 인스턴스 필요 합니다. 이 문서에서는 계획 하 고 항상 사용 가능한 배포의 기술적인 측면도 Linux 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 데이터베이스 및 인스턴스도 Windows 기반 설치 간의 차이점 중 일부입니다. 때문에 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 전문가 및 Linux에 대 한 새 수에 대 한 새로울 수도 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 전문가 위한 문서 때때로 개념을 소개 일부에 대 한 친숙 하 고 다른 사용자에 게 생소 한 될 수 있습니다.
 
@@ -96,12 +96,12 @@ SMB 공유 Windows 기반을 사용할 수도 있습니다. SMB 공유를 호스
 | 138         | UDP      | (사용) 하는 경우 samba – NetBIOS 데이터 그램                                                                                          |
 | 139         | TCP      | (사용) 하는 경우 samba – NetBIOS 세션                                                                                           |
 | 445         | TCP      | (사용) 하는 경우 samba – TCP 통한 SMB                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]– 기본 포트입니다. 원하는 경우 변경할 수 있습니다.`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 기본 포트입니다. 원하는 경우 변경할 수 있습니다.`mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (사용 된 경우)                                                                                                               |
 | 2224        | TCP      | Pacemaker-에서 사용 하는`pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker – Pacemaker 원격 노드 필수                                                                    |
 | 3260        | TCP      | iSCSI 초기자 (사용) 하는 경우 – 변경 될 수 있습니다 `/etc/iscsi/iscsid.config` (RHEL), iscsi 대상 포트와 일치 해야 하지만 |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-기본 AG 끝점;에 사용 되는 포트 끝점을 만들 때에 변경할 수 있습니다.                                |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -기본 AG 끝점;에 사용 되는 포트 끝점을 만들 때에 변경할 수 있습니다.                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
 | 5404        | UDP      | UDP 멀티 캐스트를 사용 하는 경우 Corosync에 필요한 pacemaker –                                                                     |
 | 5405        | UDP      | Pacemaker – Corosync에 필요한                                                                                            |

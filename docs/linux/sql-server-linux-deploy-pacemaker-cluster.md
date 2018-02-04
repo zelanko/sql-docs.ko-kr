@@ -3,7 +3,7 @@ title: "Linux에서 SQL Server에 대 한 Pacemaker 클러스터 배포 | Micros
 description: "이 자습서에는 Linux에서 SQL Server에 대 한 Pacemaker 클러스터를 배포 하는 방법을 보여 줍니다."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 4a014c0b7eedb96375f027674d9eb2374f38c85e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 Pacemaker 클러스터 배포
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 자습서에서는 대 한 Linux Pacemaker 클러스터를 배포 하는 데 필요한 작업을 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On 가용성 그룹 (AG) 또는 장애 조치 클러스터 인스턴스 (FCI). 밀접 하 게 결합 된 Windows 서버와 달리 /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 스택, Pacemaker 클러스터 생성 뿐만 아니라 Linux에서 가용성 그룹 (AG) 구성 가능 전이나 설치 후 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 통합 및 Pacemaker 부분의 AG 또는 FCI 배포에 대 한 리소스의 구성에서 클러스터를 구성한 후 수행 됩니다.
 > [!IMPORTANT]

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_index_physical_stats_TSQL
 - sys.dm_db_index_physical_stats
 - dm_db_index_physical_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: "95"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f04fd96c367fc01225b57db6d04831748a618ed2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bdad59aebb96a2afd2f11172c6068d54213c095
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,26 +61,26 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>인수  
- *database_id* | NULL | 0 | 기본값  
+ *database_id* | NULL | 0 | DEFAULT  
  데이터베이스의 ID입니다. *database_id* 은 **smallint**합니다. 올바른 입력은 데이터베이스의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다. NULL을 지정 하는 경우 *database_id*, NULL을 지정 해야 *object_id*, *index_id*, 및 *partition_number*합니다.  
   
  기본 제공 함수 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 지정할 수 있습니다. 데이터베이스 이름을 지정하지 않고 DB_ID를 사용하는 경우 현재 데이터베이스의 호환성 수준은 90 이상이어야 합니다.  
   
- *object_id* | NULL | 0 | 기본값  
+ *object_id* | NULL | 0 | DEFAULT  
  인덱스가 있는 테이블 또는 뷰의 개체 ID입니다. *object_id* 는 **int**입니다.  
   
  올바른 입력은 테이블 및 뷰의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다. 일부로 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], service broker 큐 이름이 나 큐 내부 테이블 이름이 유효한 입력 포함 합니다. 기본 매개 변수를 적용 하는 경우 (즉, 모든 개체를 모든 인덱스, 등), 모든 큐에 대 한 조각화 정보 결과 집합에 포함 됩니다.  
   
  지정된 데이터베이스에 있는 모든 테이블 및 뷰에 대한 정보를 반환하려면 NULL을 지정합니다. NULL을 지정 하는 경우 *object_id*, NULL을 지정 해야 *index_id* 및 *partition_number*합니다.  
   
- *index_id* | 0 | NULL | -1 | 기본값  
+ *index_id* | 0 | NULL | -1 | DEFAULT  
  인덱스의 ID입니다. *index_id* 은 **int**합니다. 유효한 입력은 인덱스 0의 ID 번호 경우 *object_id* 힙, NULL,-1 또는 DEFAULT입니다. 기본값은-1입니다. NULL,-1 및 DEFAULT는 동등한 값이 있습니다.  
   
  기본 테이블 또는 뷰에 대한 모든 인덱스 정보를 반환하려면 NULL을 지정합니다. NULL을 지정 하는 경우 *index_id*, NULL을 지정 해야 *partition_number*합니다.  
   
- *partition_number* | NULL | 0 | 기본값  
+ *partition_number* | NULL | 0 | DEFAULT  
  개체의 파티션 번호입니다. *partition_number* 은 **int**합니다. 유효한 입력은는 *partion_number* 인덱스 또는 힙의 NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
   
  소유하는 개체의 모든 파티션에 대한 정보를 반환하려면 NULL을 지정합니다.  
@@ -96,9 +98,9 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|인덱스가 있는 테이블 또는 뷰의 개체 ID입니다.|  
 |index_id|**int**|인덱스의 인덱스 ID입니다.<br /><br /> 0 = 힙|  
 |partition_number|**int**|테이블, 뷰 또는 인덱스 등의 소유하는 개체 내의 1부터 시작하는 파티션 번호입니다.<br /><br /> 1 = 분할되지 않은 인덱스 또는 힙|  
-|index_type_desc|**nvarchar (60)**|인덱스 유형에 대한 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED  INDEX<br /><br /> NONCLUSTERED  INDEX<br /><br /> PRIMARY  XML  INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> COLUMNSTORE 매핑 인덱스 (내부)<br /><br /> COLUMNSTORE DELETEBUFFER 인덱스 (내부)<br /><br /> COLUMNSTORE DELETEBITMAP 인덱스 (내부)|  
+|index_type_desc|**nvarchar(60)**|인덱스 유형에 대한 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED  INDEX<br /><br /> NONCLUSTERED  INDEX<br /><br /> PRIMARY  XML  INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> COLUMNSTORE 매핑 인덱스 (내부)<br /><br /> COLUMNSTORE DELETEBUFFER 인덱스 (내부)<br /><br /> COLUMNSTORE DELETEBITMAP 인덱스 (내부)|  
 |hobt_id|**bigint**|힙 또는 B-트리 ID 파티션 또는 인덱스입니다.<br /><br /> 사용자 정의 인덱스 hobt_id, 반환할 뿐 아니라 내부 columnstore 인덱스의 hobt_id도 반환 합니다.|  
-|alloc_unit_type_desc|**nvarchar (60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> 형식의 열에 저장 된 데이터를 포함 하는 LOB_DATA 할당 단위 **텍스트**, **ntext**, **이미지**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, 및 **xml**합니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.<br /><br /> 형식의 열에 저장 된 데이터를 포함 하는 ROW_OVERFLOW_DATA 할당 단위 **varchar (n)**, **nvarchar (n)**, **varbinary (n)**, 및 **sql_ variant** 행 외부로 밀어낸입니다.|  
+|alloc_unit_type_desc|**nvarchar(60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> 형식의 열에 저장 된 데이터를 포함 하는 LOB_DATA 할당 단위 **텍스트**, **ntext**, **이미지**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, 및 **xml**합니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.<br /><br /> 형식의 열에 저장 된 데이터를 포함 하는 ROW_OVERFLOW_DATA 할당 단위 **varchar (n)**, **nvarchar (n)**, **varbinary (n)**, 및 **sql_ variant** 행 외부로 밀어낸입니다.|  
 |index_depth|**tinyint**|인덱스 수준의 수입니다.<br /><br /> 1 = 힙 또는 LOB_DATA나 ROW_OVERFLOW_DATA 할당 단위|  
 |index_level|**tinyint**|인덱스의 현재 수준입니다.<br /><br /> 인덱스 리프 수준, 힙 및 LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위에 대해 0입니다.<br /><br /> 리프가 아닌 인덱스 수준의 경우 0보다 큽니다. *index_level* 인덱스의 루트 수준에서 가장 높은 수 있습니다.<br /><br /> 리프가 아닌 인덱스 수준은 해도 처리 *모드* = DETAILED입니다.|  
 |avg_fragmentation_in_percent|**float**|인덱스의 논리적 조각화 또는 IN_ROW_DATA 할당 단위에서 힙의 익스텐트 조각화입니다.<br /><br /> 값은 여러 파일을 고려하여 백분율로 측정됩니다. 논리적 조각화 및 익스텐트 조각화에 대한 정의는 주의를 참조하세요.<br /><br /> LOB_DATA 및 ROW_OVERFLOW_DATA 할당 단위에 대해 0입니다.<br /><br /> 에 대 한 NULL 경우 힙에 *모드* = SAMPLED 합니다.|  
@@ -429,10 +431,10 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [인덱스 관련 동적 관리 뷰 및 함수 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_db_index_operational_stats&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [시스템 뷰 &#40; Transact SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

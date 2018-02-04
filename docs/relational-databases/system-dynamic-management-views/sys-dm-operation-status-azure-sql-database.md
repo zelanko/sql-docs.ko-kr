@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_operation_status
 - sys.dm_operation_status
 - sys.dm_operation_status_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6d6096c5a32f4c7cbcd2ddd99a8990545c552c1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 59e6d4c26fe241cc9137b55a75854396a224064f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -41,15 +43,15 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|작업의 ID입니다. Null이 아닙니다.|  
 |resource_type|**int**|작업이 수행된 리소스의 유형을 나타냅니다. Null이 아닙니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업을 추적하며 해당 정수 값은 0입니다.|  
-|resource_type_desc|**nvarchar (2048)**|작업이 수행된 리소스 유형에 대한 설명입니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서만 수행된 작업을 추적합니다.|  
+|resource_type_desc|**nvarchar(2048)**|작업이 수행된 리소스 유형에 대한 설명입니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서만 수행된 작업을 추적합니다.|  
 |major_resource_id|**sql_variant**|작업이 수행된 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 이름입니다. Null이 아닙니다.|  
 |minor_resource_id|**sql_variant**|내부용으로만 사용할 수 있습니다. Null이 아닙니다.|  
-|operation(작업)|**nvarchar (60)**|CREATE 또는 ALTER와 같이 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업입니다.|  
+|operation(작업)|**nvarchar(60)**|CREATE 또는 ALTER와 같이 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업입니다.|  
 |state|**tinyint**|작업의 상태입니다.<br /><br /> 0 = 보류 중<br />1 = 진행 중<br />2 = 완료됨<br />3 = 실패<br />4 = 취소됨|  
 |state_desc|**nvarchar(120)**|PENDING = 작업이 리소스나 할당량을 사용할 수 있을 때까지 대기 중입니다.<br /><br /> IN_PROGRESS = 작업이 시작되었고 진행 중입니다.<br /><br /> COMPLETED = 작업이 성공적으로 완료되었습니다.<br /><br /> FAILED = 작업이 실패했습니다. 참조는 **error_desc** 내용은 열입니다.<br /><br /> CANCELLED = 작업이 사용자 요청으로 중지되었습니다.|  
 |percent_complete|**int**|완료된 작업의 백분율입니다. 값 연속 하지 않으며 유효한 값은 다음과 같습니다. NULL이 아닙니다.<br/><br/>0 = 작업이 시작 되지 않음<br/>50 = 작업이 진행 중<br/>100 = 작업 완료|  
 |error_code|**int**|실패한 작업 중에 발생한 오류를 나타내는 코드입니다. 값이 0이면 작업이 성공적으로 완료되었음을 나타냅니다.|  
-|error_desc|**nvarchar (2048)**|실패한 작업 중에 발생한 오류에 대한 설명입니다.|  
+|error_desc|**nvarchar(2048)**|실패한 작업 중에 발생한 오류에 대한 설명입니다.|  
 |error_severity|**int**|실패한 작업 중에 발생한 오류의 심각도 수준입니다. 오류 심각도 대 한 자세한 내용은 참조 [데이터베이스 엔진 오류 심각도](http://go.microsoft.com/fwlink/?LinkId=251052)합니다.|  
 |error_state|**int**|나중에 사용하도록 예약되어 있습니다. 향후 호환성은 보장되지 않습니다.|  
 |start_time|**datetime**|작업이 시작된 타임스탬프입니다.|  

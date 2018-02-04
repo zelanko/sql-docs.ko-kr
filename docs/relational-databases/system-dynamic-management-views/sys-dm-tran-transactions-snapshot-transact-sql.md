@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_tran_transactions_snapshot
 - sys.dm_tran_transactions_snapshot_TSQL
 - dm_tran_transactions_snapshot_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_transactions_snapshot dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_transactions_snapshot dynamic management view
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab16132fd9b9bca0b0c2e0f12eedfbfe87fae530
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f73b2955b25e17cd9c4aea963acb277f11bc3351
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +79,7 @@ dm_tran_transactions_snapshot
 |**snapshot_id**|**int**|행 버전 관리를 사용하여 커밋된 읽기 스냅숏으로 시작된 각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 스냅숏 ID입니다. 이 값은 행 버전 관리를 사용하여 커밋된 읽기로 실행되는 각 쿼리를 지원하는 트랜잭션이 일관된 데이터베이스 뷰를 생성하는 데 사용됩니다.|  
 |**snapshot_sequence_num**|**bigint**|스냅숏 트랜잭션 시작 당시 활성화된 트랜잭션의 트랜잭션 시퀀스 번호입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 대 한 VIEW SERVER STATE 권한이 필요 합니다.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층 데이터베이스에서 VIEW DATABASE STATE 권한이 필요 합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준 및 기본 계층 필요는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정.  

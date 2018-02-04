@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_nodes_TSQL
 - dm_os_nodes
 - sys.dm_os_nodes_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_nodes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_nodes dynamic management view
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cf36f7156f9297231fc232e8fecafee5e77427c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2abdd42300c8264f87513f428c7c6f4aa22645d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +46,9 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|노드의 ID입니다.|  
 |node_state_desc|**nvarchar(256)**|노드 상태에 대한 설명입니다. 함께 사용할 수 없는 값이 먼저 표시되고 함께 사용할 수 있는 값이 그 다음에 표시됩니다. 예를 들어<br /><br /> Online, Thread Resources Low, Lazy Preemptive<br /><br /> 4 개의 상호 배타적인 node_state_desc 값은. 와 해당 설명을 보려면 아래 나열 되어 있습니다.<br /><br /> 온라인: 노드가 온라인 상태입니다.<br /><br /> 오프 라인: 노드는 오프 라인<br /><br /> 유휴: 노드에 보류 중인 작업 요청이 없으면 있으며 유휴 상태가 되었습니다.<br /><br /> IDLE_READY: 노드에 보류 중인 작업 요청이 더는 있으며 유휴 상태로 진입할 준비가 되었습니다.<br /><br /> 아래 나열 된 해당 설명을 보려면 5 combinable node_state_desc 값은.<br /><br /> DAC: 전용 관리 연결에 대 한이 노드에서 예약 됩니다.<br /><br /> THREAD_RESOURCES_LOW: 없음 새 스레드를 만들 수이 노드에서 메모리 부족 상태로 인해 합니다.<br /><br /> HOT ADDED: 대 한 응답으로 노드가 추가 되었음을 나타냅니다는 hot add CPU 이벤트입니다.|  
-|memory_object_address|**varbinary (8)**|이 노드와 연관된 메모리 개체의 주소입니다. sys.dm_os_memory_objects.memory_object_address에 대해 일 대 일 관계입니다.|  
-|memory_clerk_address|**varbinary (8)**|이 노드와 연관된 메모리 클럭의 주소입니다. sys.dm_os_memory_clerks.memory_clerk_address에 대해 일 대 일 관계입니다.|  
-|io_completion_worker_address|**varbinary (8)**|이 노드에 대한 IO 완료가 할당된 작업자의 주소입니다. sys.dm_os_workers.worker_address에 대해 일 대 일 관계입니다.|  
+|memory_object_address|**varbinary(8)**|이 노드와 연관된 메모리 개체의 주소입니다. sys.dm_os_memory_objects.memory_object_address에 대해 일 대 일 관계입니다.|  
+|memory_clerk_address|**varbinary(8)**|이 노드와 연관된 메모리 클럭의 주소입니다. sys.dm_os_memory_clerks.memory_clerk_address에 대해 일 대 일 관계입니다.|  
+|io_completion_worker_address|**varbinary(8)**|이 노드에 대한 IO 완료가 할당된 작업자의 주소입니다. sys.dm_os_workers.worker_address에 대해 일 대 일 관계입니다.|  
 |memory_node_id|**smallint**|이 노드가 속한 메모리 노드의 ID입니다. sys.dm_os_memory_nodes.memory_node_id에 대해 다 대 일 관계입니다.|  
 |cpu_affinity_mask|**bigint**|이 노드와 연관된 CPU를 식별하는 비트맵입니다.|  
 |online_scheduler_count|**smallint**|이 노드에서 관리 되는 온라인 스케줄러 수입니다.|  
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |online_scheduler_mask|**bigint**|이 노드에 대한 프로세스 선호도 마스크를 식별합니다.|  
 |processor_group|**smallint**|이 노드에 대한 프로세서 그룹을 식별합니다.|  
 |cpu_count |**int** |이 노드에 대 한 사용 가능한 Cpu의 수입니다. |
-|pdw_node_id|**int**|이 배포에 있는 노드에 대 한 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|이 배포에 있는 노드에 대 한 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   

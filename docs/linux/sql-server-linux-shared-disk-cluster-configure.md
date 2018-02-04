@@ -3,7 +3,7 @@ title: "장애 조치 클러스터 인스턴스-Linux (RHEL)에서 SQL Server �
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
-ms.openlocfilehash: 20fe315ed12d8b510b03a82d2f8b77a08c840607
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ccb754ce5b37e3364ebe68b7b2065ce7b68d050f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>장애 조치 클러스터 인스턴스-Linux (RHEL)에서 SQL Server 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 공유 디스크 2 개 노드 장애 조치 클러스터 인스턴스의 가용성을 높이기 위한 서버 수준 중복을 제공합니다. 이 자습서에서는 Linux에서 SQL Server의 2 개 노드 장애 조치 클러스터 인스턴스를 만들려고 하는 방법에 설명 합니다. 작업을 완성 하는 구체적인 단계는 다음과 같습니다.
 

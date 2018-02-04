@@ -3,7 +3,7 @@ title: "Docker에서 SQL Server 2017에 대 한 구성 옵션 | Microsoft Docs"
 description: "및 SQL Server 2017 컨테이너 이미지 Docker에서 상호 작용에 사용 하 여 다양 한 방법을 탐색 합니다. 여기에 영구 데이터 파일을 복사 하 고 문제를 해결 합니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 416a05397580e6b9c609307f8b25c8014099f999
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 30ac0b58a439af47504c94669af581f5e81fd17c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker에서 SQL Server 2017 컨테이너 이미지를 구성 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 항목에서는 구성 및 사용 하는 방법에 설명 된 [mssql-서버-linux 컨테이너 이미지](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker가 있는 합니다. 이 이미지는 Ubuntu 16.04에 따라 Linux에서 실행 중인 SQL Server 구성 됩니다. Mac/Windows 용 Docker 엔진 1.8 + linux 또는 Docker에서 사용할 수 있습니다.
 
@@ -87,7 +87,7 @@ Docker 허브에서 무료 개발자 버전의 SQL Server를 실행 하는 이�
 SQL 연결을 지 원하는 모든 외부 Linux, Windows 또는 macOS 도구에서 Docker 컴퓨터에 SQL Server 인스턴스에 연결할 수 있습니다. 몇 가지 일반적인 도구는 다음과 같습니다.
 
 - [sqlcmd](sql-server-linux-setup-tools.md)
-- [Visual Studio 코드](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [Windows에서 SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
 
 다음 예제에서는 **sqlcmd** Docker 컨테이너에서 실행 되는 SQL Server에 연결 합니다. 연결 문자열에 IP 주소는 컨테이너를 실행 하 여 호스트 컴퓨터의 IP 주소입니다.
@@ -213,7 +213,7 @@ docker volume ls
 > [!WARNING]
 > 컨테이너의 모든 SQL Server 데이터는 데이터 볼륨 컨테이너를 삭제 하면 *영구적으로* 삭제 합니다.
 
-### <a name="backup-and-restore"></a>Backup 및 Restore 메서드
+### <a name="backup-and-restore"></a>백업 및 복원
 
 이러한 컨테이너 기술 외에도 표준 SQL Server 백업을 사용 하 고 복원 기술 수도 있습니다. 데이터를 보호 하거나 데이터를 다른 SQL Server 인스턴스로 이동 하려면 백업 파일을 사용할 수 있습니다. 자세한 내용은 참조 [Linux에서 SQL Server 데이터베이스 백업 및 복원](sql-server-linux-backup-and-restore-database.md)합니다.
 
@@ -351,7 +351,7 @@ Windows에서는 시작 하는 PowerShell 또는 관리자 권한으로 명령 �
 
 SQL Server 컨테이너 실행이 실패 하면 다음 테스트 하세요.
 
-- 와 같은 오류가 발생할 경우 **' 네트워크 브리지에서 CONTAINER_NAME 끝점을 만들지 못했습니다. 프록시를 시작 하지 못했습니다: 수신 대기 tcp 0.0.0.0:1433 바인딩할: 이미 사용 중인 주소입니다.'** , 컨테이너 포트 1433은 이미 사용 하는 포트를 매핑하려면 하려고 합니다. 이 호스트 컴퓨터에서 로컬로 SQL Server를 실행 하는 경우에 발생할 수 있습니다. 두 SQL Server 컨테이너를 시작 하 고 모두 동일한 호스트 포트 매핑을 시도 하는 경우에 발생할 수 있습니다. 사용 하 여 이런 경우는 `-p` 컨테이너 포트 1433 포트를 다른 호스트를 매핑하려면 매개 변수입니다. 예를 들어 다음과 같이 사용할 수 있습니다. 
+- 와 같은 오류가 발생할 경우 **' 네트워크 브리지에서 CONTAINER_NAME 끝점을 만들지 못했습니다. 프록시를 시작 하지 못했습니다: 수신 대기 tcp 0.0.0.0:1433 바인딩할: 이미 사용 중인 주소입니다.'** , 컨테이너 포트 1433은 이미 사용 하는 포트를 매핑하려면 하려고 합니다. 이 호스트 컴퓨터에서 로컬로 SQL Server를 실행 하는 경우에 발생할 수 있습니다. 두 SQL Server 컨테이너를 시작 하 고 모두 동일한 호스트 포트 매핑을 시도 하는 경우에 발생할 수 있습니다. 사용 하 여 이런 경우는 `-p` 컨테이너 포트 1433 포트를 다른 호스트를 매핑하려면 매개 변수입니다. 예를 들어 
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.

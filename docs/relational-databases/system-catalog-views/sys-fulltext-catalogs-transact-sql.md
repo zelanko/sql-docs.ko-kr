@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.fulltext_catalogs
 - fulltext_catalogs
 - fulltext_catalogs_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.fulltext_catalogs catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fulltext_catalogs catalog view
 ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bebdf8510393ea10076a405f585c3414d0afcca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4c3f1c279176dea69b27a2c1416af3d15338924
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextcatalogs-transact-sql"></a>sys.fulltext_catalogs(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |fulltext_catalog_id|**int**|전체 텍스트 카탈로그의 ID입니다. 데이터베이스의 전체 텍스트 카탈로그에서 고유합니다.|  
 |name|**sysname**|카탈로그의 이름입니다. 데이터베이스 내에서 고유합니다.|  
-|path|**nvarchar (260)**|파일 시스템에 있는 카탈로그 디렉터리의 이름입니다.|  
+|path|**nvarchar(260)**|파일 시스템에 있는 카탈로그 디렉터리의 이름입니다.|  
 |is_default|**bit**|기본 전체 텍스트 카탈로그입니다.<br /><br /> True = 기본값<br /><br /> False = 기본값이 아님|  
 |is_accent_sensitivity_on|**bit**|카탈로그의 악센트 구분 설정입니다.<br /><br /> True = 악센트 구분<br /><br /> False = 악센트 구분 안 함|  
 |data_space_id|**int**|이 카탈로그가 만들어진 파일 그룹입니다.|  

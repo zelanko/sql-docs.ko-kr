@@ -3,7 +3,7 @@ title: "SLES 클러스터 SQL Server 가용성 그룹에 대 한 구성 | Micros
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: 7bb98b8da1af1b97b9c06b58e5b8264a653547d3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c33c1cea948e64c69e52475e8c63ecce0c52bd6d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 SLES 클러스터를 구성 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 가이드를 SQL Server에서 SUSE Linux Enterprise Server (SLES) 12 s p 2에 대 한 3 개 노드 클러스터를 만드는 지침을 제공 합니다. 고가용성을 위해 Linux에서 가용성 그룹에 노드가 3 개 필요-참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. 클러스터링 레이어 SUSE 기반 [높은 가용성 확장 (HAE)](https://www.suse.com/products/highavailability) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. 
 
@@ -147,7 +147,7 @@ Linux 서버에 가용성 그룹을 구성 하 고 클러스터 리소스를 구
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>기존 클러스터에 노드 추가
 
-하나 이상의 노드를 실행 하는 클러스터를 설정한 경우 ha 클러스터-조인 부트스트랩 스크립트와 함께 더 많은 클러스터 노드를 추가 합니다. 만 필요한 스크립트는 기존 클러스터 노드에 대 한 액세스 하 고 현재 컴퓨터에 기본 설치를 자동으로 완료 됩니다. 다음 단계를 수행 합니다.
+하나 이상의 노드를 실행 하는 클러스터를 설정한 경우 ha 클러스터-조인 부트스트랩 스크립트와 함께 더 많은 클러스터 노드를 추가 합니다. 만 필요한 스크립트는 기존 클러스터 노드에 대 한 액세스 하 고 현재 컴퓨터에 기본 설치를 자동으로 완료 됩니다. 다음 단계를 수행합니다.
 
 사용 하 여 기존 클러스터 노드를 구성한 경우는 `YaST` 모듈 클러스터를 실행 하기 전에 다음 선행 조건을 충족 되는지 확인 `ha-cluster-join`:
 - 기존 노드에서 상의 루트 사용자에 SSH 키에 대 한 passwordless 로그인 합니다. 

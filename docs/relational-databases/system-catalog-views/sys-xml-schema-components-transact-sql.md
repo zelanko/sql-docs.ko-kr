@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.xml_schema_components_TSQL
 - sys.xml_schema_components
 - xml_schema_components_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_components catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_components catalog view
 ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a3e5b71a36df056dbba198a86af316d32fb9eaf
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d4fc4e3ee794cf427959b1c1860fe013340cd883
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +47,9 @@ ms.lasthandoff: 11/27/2017
 |**name**|**nvarchar**<br /><br /> **(4000)**|XML 스키마 구성 요소의 고유 이름입니다. 구성 요소 이름이 없으면 NULL입니다.|  
 |**symbol_space**|**char(1)**|이 기호 이름이 고유한 지 인 공간에 따라 **종류**:<br /><br /> N = 없음<br /><br /> T = 유형<br /><br /> E = 요소<br /><br /> M = 모델 그룹<br /><br /> A = 특성<br /><br /> G = 특성 그룹|  
 |**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|이 기호 이름이 고유한 지 인 공간의 설명에 따라 **종류**:<br /><br /> 없음<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
-|**종류**|**char(1)**|XML 스키마 구성 요소의 종류입니다.<br /><br /> N = 모든 유형(특수 기본 제공 구성 요소)<br /><br /> Z = 모든 단순 유형(특수 기본 제공 구성 요소)<br /><br /> P = 기본 유형(기본 제공 유형)<br /><br /> S = 단순 유형<br /><br /> L = 목록 유형<br /><br /> U = 공용 구조체 유형<br /><br /> C = 복합 단순 유형(단순 유형에서 파생됨)<br /><br /> K = 복합 유형<br /><br /> E = 요소<br /><br /> M = 모델 그룹<br /><br /> W = 요소 와일드카드<br /><br /> A = 특성<br /><br /> G = 특성 그룹<br /><br /> V = 특성 와일드카드|  
+|**kind**|**char(1)**|XML 스키마 구성 요소의 종류입니다.<br /><br /> N = 모든 유형(특수 기본 제공 구성 요소)<br /><br /> Z = 모든 단순 유형(특수 기본 제공 구성 요소)<br /><br /> P = 기본 유형(기본 제공 유형)<br /><br /> S = 단순 유형<br /><br /> L = 목록 유형<br /><br /> U = 공용 구조체 유형<br /><br /> C = 복합 단순 유형(단순 유형에서 파생됨)<br /><br /> K = 복합 유형<br /><br /> E = 요소<br /><br /> M = 모델 그룹<br /><br /> W = 요소 와일드카드<br /><br /> A = 특성<br /><br /> G = 특성 그룹<br /><br /> V = 특성 와일드카드|  
 |**kind_desc**|**nvarchar**<br /><br /> **(60)**|XML 스키마 구성 요소의 종류에 대한 설명입니다.<br /><br /> ANY_TYPE<br /><br /> ANY_SIMPLE_TYPE<br /><br /> PRIMITIVE_TYPE<br /><br /> SIMPLE_TYPE<br /><br /> LIST_TYPE<br /><br /> UNION_TYPE<br /><br /> COMPLEX_SIMPLE_TYPE<br /><br /> COMPLEX_TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ELEMENT_WILDCARD<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP<br /><br /> ATTRIBUTE_WILDCARD|  
-|**파생**|**char(1)**|파생 유형에 대한 파생 방법입니다.<br /><br /> N = 없음(파생되지 않음)<br /><br /> X = 확장<br /><br /> R = 제한<br /><br /> S = 대체|  
+|**derivation**|**char(1)**|파생 유형에 대한 파생 방법입니다.<br /><br /> N = 없음(파생되지 않음)<br /><br /> X = 확장<br /><br /> R = 제한<br /><br /> S = 대체|  
 |**derivation_desc**|**nvarchar**<br /><br /> **(60)**|파생 유형의 파생 방법에 대한 설명입니다.<br /><br /> 없음<br /><br /> EXTENSION<br /><br /> RESTRICTION<br /><br /> SUBSTITUTION|  
 |**base_xml_component_id**|**int**|이 구성 요소가 파생된 원래 구성 요소의 ID입니다. 없으면 NULL입니다.|  
 |**scoping_xml_component_id**|**int**|범위 지정 구성 요소의 고유 ID입니다. 없으면 NULL입니다(전역 범위).|  

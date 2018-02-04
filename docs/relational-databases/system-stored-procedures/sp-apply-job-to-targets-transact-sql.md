@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
 - sp_apply_job_to_targets_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_apply_job_to_targets
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0b538c726a324709c35807c8e0f6bdc8bc3b607
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 341a14b2ae6aa3d551ab90d4ff2f931d617aa3f2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +49,22 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  지정한 대상 서버 또는 대상 서버 그룹에 적용할 작업의 ID입니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  지정된 연결 대상 서버 또는 대상 서버 그룹에 적용할 작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@target_server_groups =**] **'***target_server_groups***'**  
+ [ **@target_server_groups =**]  **'***target_server_groups***'**  
  지정된 작업을 적용할 대상 서버 그룹의 쉼표로 구분된 목록입니다. *target_server_groups* 은 **nvarchar (2048)**, 기본값은 NULL입니다.  
   
- [  **@target_servers=** ] **'***target_servers***'**  
+ [ **@target_servers=** ] **'***target_servers***'**  
  지정된 작업을 적용할 대상 서버의 쉼표로 구분된 목록입니다. *target_servers*은 **nvarchar (2048)**, 기본값은 NULL입니다.  
   
- [  **@operation=** ] **'***작업***'**  
+ [ **@operation=** ]  **'***operation***'**  
  지정된 대상 서버 또는 대상 서버 그룹에서 지정된 작업을 적용할지 아니면 제거할지 여부를 나타냅니다. *작업*은 **varchar(7)**, 기본값은 APPLY입니다. 올바른 작업은 **적용** 및 **제거**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
-caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58e8428bc016975594105b842c75fca1304d0695
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fc56165753b0ee2344826ee87c6c049a8ad1dda
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysperiods-transact-sql"></a>sys.periods (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 |-------------------|---------------|-----------------|  
 |period_type|**sysname**|기간 이름|  
 |period_type_desc|**tinyint**|기간 유형을 나타내는 숫자 값입니다.<br /><br /> 1 = 시스템 시간 기간|  
-|object_id|**nvarchar (60)**|열의 유형의 텍스트 설명:<br /><br /> SYSTEM_TIME_PERIOD|  
+|object_id|**nvarchar(60)**|열의 유형의 텍스트 설명:<br /><br /> SYSTEM_TIME_PERIOD|  
 |object_id|**int**|Period_type 열이 포함 된 테이블의 id|  
 |start_column_id|**int**|하위 기간 경계를 정의 하는 열 id|  
 |end_column_id|**int**|상위 기간 경계를 정의 하는 열 id|  

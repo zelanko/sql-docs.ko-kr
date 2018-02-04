@@ -9,7 +9,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,17 +18,19 @@ f1_keywords:
 - dm_exec_query_optimizer_memory_gateways
 - sys.dm_exec_query_optimizer_memory_gateways_TSQL
 - sys.dm_exec_query_optimizer_memory_gateways
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_optimizer_memory_gateways dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf31a066798e1c88d0d6d475edda87f2df08ba05
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b65e22d1cd2f403e2ed3aa1bd1dc14faa90079b9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**active_count**|**int**|이 게이트에서 컴파일하여의 현재 수|
 |**waiter_count**|**int**|이 게이트에 대 한 대기자 수|
 |**threshold_factor**|**bigint**|쿼리 최적화에서 사용 하는 최대 메모리 부분을 정의 하는 임계값 비율입니다.  작은 게이트웨이에 대 한 threshold_factor 작은 게이트웨이에 액세스 하는 데 필요한 되기 전에 하나의 쿼리를 바이트 단위로 최대 최적화 프로그램 메모리 사용을 나타냅니다.  중간 규모 및 큰 게이트웨이에 대 한 threshold_factor이이 게이트에 사용할 수 있는 총 서버 메모리 부분을 보여 줍니다. 성문에 대 한 메모리 사용 임계값을 계산할 때 제수로 사용 됩니다.|
-|**임계값**|**bigint**|다음 임계값 메모리 바이트입니다.  메모리 소비가이 임계값에 도달 하면이 게이트웨이에 대 한 액세스 권한을 얻으려고 쿼리가 필요 합니다.  "-1"이 게이트웨이에 대 한 액세스 권한을 얻으려고 쿼리가 필요 하지 않은 경우입니다.|
+|**threshold**|**bigint**|다음 임계값 메모리 바이트입니다.  메모리 소비가이 임계값에 도달 하면이 게이트웨이에 대 한 액세스 권한을 얻으려고 쿼리가 필요 합니다.  "-1"이 게이트웨이에 대 한 액세스 권한을 얻으려고 쿼리가 필요 하지 않은 경우입니다.|
 |**is_active**|**bit**|쿼리 여부 현재 게이트를 전달 하려면 필요한 지 여부.|
 
 

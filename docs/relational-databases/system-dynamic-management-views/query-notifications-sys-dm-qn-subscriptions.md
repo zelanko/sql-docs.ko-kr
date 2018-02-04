@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,38 +17,40 @@ f1_keywords:
 - dm_qn_subscriptions_TSQL
 - sys.dm_qn_subscriptions
 - sys.dm_qn_subscriptions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_qn_subscriptions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd318140e5c3eed17a5440ebf1a3135e7e01dc90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2fdc34ae033de8baf0173bc7c86bd0fe05c7668f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>쿼리 알림-sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   서버에서 활성 쿼리 알림 구독에 관한 정보를 반환합니다. 이 뷰를 사용하여 서버 또는 지정된 데이터베이스의 활성 구독을 확인하거나 지정된 서버 보안 주체를 확인할 수 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|구독의 ID입니다.|  
 |**database_id**|**int**|알림 쿼리가 실행된 데이터베이스의 ID입니다. 이 데이터베이스에 이 구독과 관련된 정보가 저장됩니다.|  
 |**sid**|**varbinary(85)**|이 구독을 만들고 소유하는 서버 보안 주체의 보안 ID입니다.|  
 |**object_id**|**int**|구독 매개 변수에 관한 정보를 저장하는 내부 테이블의 ID입니다.|  
-|**만든**|**datetime**|구독을 만든 날짜와 시간입니다.|  
-|**제한 시간**|**int**|구독의 제한 시간(초)입니다. 이 시간이 경과하면 알림이 발생하도록 플래그가 지정됩니다.<br /><br /> 참고: 실제 발생 시간은 지정된 된 제한 시간 보다 클 수 있습니다. 그러나 지정된 제한 시간이 경과한 후 구독이 발생되기 전에 구독을 무효화하는 변경이 나타나면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 변경이 수행된 시간에 구독이 발생하게 됩니다.|  
+|**created**|**datetime**|구독을 만든 날짜와 시간입니다.|  
+|**timeout**|**int**|구독의 제한 시간(초)입니다. 이 시간이 경과하면 알림이 발생하도록 플래그가 지정됩니다.<br /><br /> 참고: 실제 발생 시간은 지정된 된 제한 시간 보다 클 수 있습니다. 그러나 지정된 제한 시간이 경과한 후 구독이 발생되기 전에 구독을 무효화하는 변경이 나타나면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 변경이 수행된 시간에 구독이 발생하게 됩니다.|  
 |**상태**|**int**|구독의 상태를 나타냅니다. 코드 목록은 설명 아래의 표를 참조하십시오.|  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|위치|형식|  
+|보낸 사람|수행할 작업|위치|형식|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|다 대 일|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|다 대 일|  
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |코드|보조 상태|정보|  
 |----------|------------------|----------|  
 |65798|데이터가 변경되어 구독이 발생했습니다.|삽입으로 인해 구독이 트리거되었습니다.|  
-|65799|데이터가 변경되어 구독이 발생했습니다.|DELETE|  
+|65799|데이터가 변경되어 구독이 발생했습니다.|Delete|  
 |65800|데이터가 변경되어 구독이 발생했습니다.|Update|  
 |65801|데이터가 변경되어 구독이 발생했습니다.|병합|  
 |65802|데이터가 변경되어 구독이 발생했습니다.|테이블 자르기|  

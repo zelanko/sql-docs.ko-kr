@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_os_sys_info
 - dm_os_sys_info_TSQL
 - sys.dm_os_sys_info
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_os_sys_info dynamic management view
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7cc99a6d0f31d19909d41bde4dcd354d1e045215
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -71,11 +73,11 @@ ms.lasthandoff: 11/17/2017
 |**process_kernel_time_ms**|**bigint**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통해 [! INCLUDE [ssCurrent]**(... /Token/ssCurrent_md.md)].<br /><br /> 커널 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드에 걸린 총 시간(밀리초)입니다. 이 값은 서버에 있는 모든 프로세서의 시간을 포함하므로 단일 프로세서 클럭보다 클 수 있습니다. Null을 허용하지 않습니다.|  
 |**process_user_time_ms**|**bigint**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> 사용자 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드에 걸린 총 시간(밀리초)입니다. 이 값은 서버에 있는 모든 프로세서의 시간을 포함하므로 단일 프로세서 클럭보다 클 수 있습니다. Null을 허용하지 않습니다.|  
 |**time_source**|**int**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 벽시계 시간(wall clock time)을 검색하는 데 사용하는 API를 나타냅니다. Null을 허용하지 않습니다.<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
-|**time_source_desc**|**nvarchar (60)**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> 설명의 **time_source** 열입니다. Null을 허용하지 않습니다.<br /><br /> QUERY_PERFORMANCE_COUNTER =는 [QueryPerformanceCounter](http://go.microsoft.com/fwlink/?LinkId=163095) API가 벽 시계 시간을 검색 합니다.<br /><br /> MULTIMEDIA_TIMER =는 [멀티미디어 타이머](http://go.microsoft.com/fwlink/?LinkId=163094) 벽 시계 시간을 검색 하는 API입니다.|  
+|**time_source_desc**|**nvarchar(60)**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> 설명의 **time_source** 열입니다. Null을 허용하지 않습니다.<br /><br /> QUERY_PERFORMANCE_COUNTER =는 [QueryPerformanceCounter](http://go.microsoft.com/fwlink/?LinkId=163095) API가 벽 시계 시간을 검색 합니다.<br /><br /> MULTIMEDIA_TIMER =는 [멀티미디어 타이머](http://go.microsoft.com/fwlink/?LinkId=163094) 벽 시계 시간을 검색 하는 API입니다.|  
 |**virtual_machine_type**|**int**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 가상화된 환경에서 실행되고 있는지 여부를 나타냅니다.  Null을 허용하지 않습니다.<br /><br /> 0 = 없음<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
-|**virtual_machine_type_desc**|**nvarchar (60)**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> 설명의 **virtual_machine_type** 열입니다. Null을 허용하지 않습니다.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가상 컴퓨터 내 실행 중이 아닙니다.<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 하이퍼바이저 내에서 실행되고 있습니다(하드웨어 지원 가상화를 의미함). Hyper_V 역할을 설치한 경우 하이퍼바이저가 OS를 호스팅하므로 호스트 OS에서 실행되는 인스턴스는 하이퍼바이저에서 실행됩니다.<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 Microsoft Virtual PC와 같이 하드웨어 길잡이가 적용되지 않는 가상 컴퓨터 내에서 실행되고 있습니다.|  
+|**virtual_machine_type_desc**|**nvarchar(60)**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> 설명의 **virtual_machine_type** 열입니다. Null을 허용하지 않습니다.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가상 컴퓨터 내 실행 중이 아닙니다.<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 하이퍼바이저 내에서 실행되고 있습니다(하드웨어 지원 가상화를 의미함). Hyper_V 역할을 설치한 경우 하이퍼바이저가 OS를 호스팅하므로 호스트 OS에서 실행되는 인스턴스는 하이퍼바이저에서 실행됩니다.<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 Microsoft Virtual PC와 같이 하드웨어 길잡이가 적용되지 않는 가상 컴퓨터 내에서 실행되고 있습니다.|  
 |**softnuma_configuration**|**int**|**적용 대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> 구성 된 방식으로 NUMA 노드를 지정 합니다. Null을 허용하지 않습니다.<br /><br /> 0 = OFF 하드웨어 기본값을 나타냅니다.<br /><br /> 1 = 자동 SOFT-NUMA<br /><br /> 2 = 레지스트리를 통해 수동 SOFT-NUMA|  
-|**softnuma_configuration_desc**|**nvarchar (60)**|**적용 대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> 소프트 NUMA를 OFF = 기능은 해제<br /><br /> SQL Server를 자동으로 ON = 소프트 NUMA에 대 한 NUMA 노드 크기를 결정 합니다.<br /><br /> 수동 SOFT-NUMA 수동으로 구성 된 =|
+|**softnuma_configuration_desc**|**nvarchar(60)**|**적용 대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> 소프트 NUMA를 OFF = 기능은 해제<br /><br /> SQL Server를 자동으로 ON = 소프트 NUMA에 대 한 NUMA 노드 크기를 결정 합니다.<br /><br /> 수동 SOFT-NUMA 수동으로 구성 된 =|
 |**process_physical_affinity**|**nvarchar(3072)** |**적용 대상: 부터는 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]** 합니다.<br /><br />정보 아직 제공 합니다. |
 |**sql_memory_model**|**int**|**적용 대상: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 및부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**합니다.<br /><br />SQL Server에서 메모리를 할당할 사용 하는 메모리 내 모델을 지정 합니다. Null을 허용하지 않습니다.<br /><br />1 = 기본 메모리 모델<br />2 = 메모리의 페이지 잠금<br /> 3 = 메모리의 큰 페이지|
 |**sql_memory_model_desc**|**nvarchar(120)**|**적용 대상: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 및부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**합니다.<br /><br />SQL Server에서 메모리를 할당할 사용 하는 메모리 내 모델을 지정 합니다. Null을 허용하지 않습니다.<br /><br />**규칙에 따른** = SQL Server 기본 메모리 모델을 사용 하는 메모리를 할당 합니다. SQL Server 서비스 계정에 없을 때 페이지 잠금 메모리 권한에서 시작 하는 동안 기본 sql 메모리 모델입니다.<br />**LOCK_PAGES** = SQL server 메모리를 할당할 메모리의 페이지 잠금에 사용은 합니다. SQL Server 서비스 계정 SQL Server 시작 하는 동안 Lock Pages in Memory 권한 소유 하는 경우 기본 sql 메모리 관리자입니다.<br /> **LARGE_PAGES** = SQL Server 메모리를 할당할 메모리의 큰 페이지에 사용 됩니다. SQL Server SQL Server 서비스 계정을 보유 하 고 Lock Pages in Memory 권한 서버 시작 시와 추적 플래그 834 상태에서 Enterprise edition에만 메모리를 할당 하는 큰 페이지 할당자를 사용 합니다.|

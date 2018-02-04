@@ -8,22 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sp_polybase_join_group
-helpviewer_keywords: PolyBase
+f1_keywords:
+- sp_polybase_join_group
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5c9529c61e5f89b5bf049b36279cb8b7611af60
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7f6e4a77e5ce1341269bf9220c5d2a5305b4c314
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="polybase-stored-procedures---sppolybasejoingroup"></a>PolyBase 저장 프로시저-sp_polybase_join_group
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +47,13 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>인수  
- *@head_node_address*= N'*head_node_address*'  
+ *@head_node_address* = N'*head_node_address*'  
  PolyBase 규모 확장 그룹의 헤드 노드 SQL Server를 호스팅하는 컴퓨터의 이름입니다. *@head_node_address*nvarchar (255)가입니다.  
   
- *@dms_control_channel_port*dms_control_channel_port =  
+ *@dms_control_channel_port* = dms_control_channel_port  
  헤드 노드에서 PolyBase 데이터 이동 서비스에 대 한 컨트롤 채널 실행 되 고 있는 포트입니다. *@dms_control_channel_port*부호 없는 __int16이입니다. 기본값은 **16450**합니다.  
   
- *@head_node_sql_server_instance_name*head_node_sql_server_instance_name =  
+ *@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
  PolyBase 확장 그룹의 헤드 노드에 SQL Server 인스턴스의 이름입니다. *@head_node_sql_server_instance_name*nvarchar(16)가입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

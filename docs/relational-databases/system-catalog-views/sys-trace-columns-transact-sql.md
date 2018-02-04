@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - trace_columns
 - trace_columns_TSQL
 - sys.trace_columns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.trace_columns catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.trace_columns catalog view
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7405b51d9071238a237a11ef7c0ceef78e2e7119
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 382cafec0dd9ad1bb9451408277b4dd8ebb6f05d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systracecolumns-transact-sql"></a>sys.trace_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +41,13 @@ ms.lasthandoff: 11/27/2017
  지원 되는 추적 이벤트의 전체 목록은 참조 하십시오. [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 확장 이벤트 카탈로그 뷰를 사용하십시오.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 확장 이벤트 카탈로그 뷰를 대신 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|이 열의 고유 ID입니다.|  
-|**name**|**nvarchar (128)**|이 열의 고유 이름입니다. 이 매개 변수는 지역화되지 않았습니다.|  
-|**type_name**|**nvarchar (128)**|이 열의 데이터 형식 이름입니다.|  
+|**name**|**nvarchar(128)**|이 열의 고유 이름입니다. 이 매개 변수는 지역화되지 않았습니다.|  
+|**type_name**|**nvarchar(128)**|이 열의 데이터 형식 이름입니다.|  
 |**max_size**|**int**|이 열의 최대 데이터 크기(바이트)입니다.|  
 |**is_filterable**|**bit**|필터 사양에서 열을 사용할 수 있는지 여부를 나타냅니다.<br /><br /> 0 = false<br /><br /> 1 = true|  
 |**is_repeatable**|**bit**|"반복되는 열" 데이터에서 열을 참조할 수 있는지 여부를 나타냅니다.<br /><br /> 0 = false<br /><br /> 1 = true|  

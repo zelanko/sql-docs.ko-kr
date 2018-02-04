@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_server_audit_status
 - dm_server_audit_status
 - sys.dm_server_audit_status_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_server_audit_status dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d03cb21f4fd401236c9719b4bf1ab3f3b2accdd4
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d68ebb103eb0407692fe875f7a40b390dbdc54f5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/27/2017
 |**상태**|**smallint**|서버 감사의 숫자 상태입니다.<br /><br /> 0 = 시작<br /><br /> 1 =<br />        시작됨<br /><br /> 2 =<br />      런타임 오류<br /><br /> 3 = = target 만들기 실패<br /><br /> 4 = 종료|  
 |**status_desc**|**nvarchar(256)**|서버 감사의 상태를 보여 주는 문자열입니다.<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|감사의 마지막 상태 변경에 대한 UTC의 타임스탬프입니다.|  
-|**event_session_address**|**varbinary (8)**|감사와 연결된 확장 이벤트 세션의 주소입니다. 에 관련 된 **sys.db_xe_sessions.address** 카탈로그 뷰.|  
+|**event_session_address**|**varbinary(8)**|감사와 연결된 확장 이벤트 세션의 주소입니다. 에 관련 된 **sys.db_xe_sessions.address** 카탈로그 뷰.|  
 |**audit_file_path**|**nvarchar(256)**|현재 사용되고 있는 감사 파일 대상의 전체 경로 및 파일 이름입니다. 파일 감사에 대해서만 채워집니다.|  
 |**audit_file_size**|**bigint**|감사 파일의 대략적인 크기(바이트)입니다. 파일 감사에 대해서만 채워집니다.|  
   
@@ -71,7 +74,7 @@ ms.lasthandoff: 11/27/2017
  [sys.database_audit_specification_details&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
  [sys.dm_server_audit_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [서버 감사 및 서버 감사 사양 만들기](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

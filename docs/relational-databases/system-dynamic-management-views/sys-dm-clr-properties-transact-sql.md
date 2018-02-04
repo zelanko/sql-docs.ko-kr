@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_properties_TSQL
 - dm_clr_properties_TSQL
 - dm_clr_properties
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_properties dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5c73dafd26f9ddd4da885b77c8649df13c3d2d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 77f8652347f0093b84be4853880bb504defc3b6c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -39,8 +42,8 @@ ms.lasthandoff: 11/27/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (128)**|속성의 이름입니다.|  
-|**값**|**nvarchar (128)**|속성의 값입니다.|  
+|**name**|**nvarchar(128)**|속성의 이름입니다.|  
+|**value**|**nvarchar(128)**|속성의 값입니다.|  
   
 ## <a name="properties"></a>속성  
  **디렉터리** 속성은 서버에서.NET Framework를 설치 된 디렉터리를 나타냅니다. 서버 컴퓨터에 여러 .NET Framework 설치가 있을 수 있으며 이 속성 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 설치를 식별합니다.  

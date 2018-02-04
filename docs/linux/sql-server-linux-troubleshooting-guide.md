@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: da16bc7126d39bcdf86152b3ae8b21d7b58805eb
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 2771b3bc37eccf9fd24eecea3c716ea6d6b7b749
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Docker 컨테이너에서 또는 Linux에서 실행 중인 Microsoft SQL Server 문제를 해결 하는 방법을 설명 합니다. Linux에서 SQL Server의 문제를 해결할 때의 알려진된 제한은 지원 되는 기능을 검토 해야는 [Linux 릴리스 정보에서 SQL Server](sql-server-linux-release-notes.md)합니다.
 

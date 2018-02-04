@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_persisted_sku_features
 - dm_db_persisted_sku_features_TSQL
 - dm_db_persisted_sku_features
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - editions [SQL Server], feature restrictions
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dc796f006abde19b0441cb9dba27d29f27c1b7e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c0af6dc4a6c8031be8a33a44d2c00265d5c58ed0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/02/2018
   
 -   **상태로 분할 됩니다.** 데이터베이스에 분할된 테이블, 분할된 인덱스, 파티션 구성표 또는 파티션 함수가 포함되도록 지정합니다. 데이터베이스가 Enterprise 또는 Developer 이외의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 이동하도록 설정하는 경우 테이블이 단일 파티션에 있도록 수정하는 것만으로는 충분하지 않습니다. 분할된 테이블을 제거해야 합니다. 테이블에 데이터가 포함된 경우 각 파티션을 분할되지 않은 테이블로 변환하려면 SWITCH PARTITION을 사용합니다. 그런 다음 분할된 테이블, 파티션 구성표 및 파티션 함수를 삭제합니다.  
   
--   **TransparentDataEncryption 합니다.** 투명한 데이터 암호화를 사용하여 데이터베이스를 암호화함을 나타냅니다. 투명한 데이터 암호화를 제거하려면 ALTER DATABASE 문을 사용합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.  
+-   **TransparentDataEncryption.** 투명한 데이터 암호화를 사용하여 데이터베이스를 암호화함을 나타냅니다. 투명한 데이터 암호화를 제거하려면 ALTER DATABASE 문을 사용합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.  
 
 > [!NOTE]
 > 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 서비스 팩 1에서는 이러한 기능을 사용할 수를 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전, 아니라 논리도 Enterprise 또는 Developer Edition만 합니다.

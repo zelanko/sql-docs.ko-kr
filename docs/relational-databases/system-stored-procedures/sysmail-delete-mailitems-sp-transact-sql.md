@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_mailitems_sp_TSQL
 - sysmail_delete_mailitems_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_mailitems_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a0142e48fba0338c1271da1eb7aa0edc13a4847f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a7843e44e42de868c3748dbf31794d4c69e361e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +47,10 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@sent_before=** ] **'***sent_before***'**  
+ [ **@sent_before=** ] **'***sent_before***'**  
  날짜와으로 제공 된 시간 까지의 전자 메일을 삭제는 *sent_before* 인수입니다. *sent_before* 은 **datetime** 기본값으로 null입니다. NULL은 모든 날짜를 나타냅니다.  
   
- [  **@sent_status=** ] **'***sent_status***'**  
+ [ **@sent_status=** ] **'***sent_status***'**  
  지정 된 형식의 전자 메일을 삭제 *sent_status*합니다. *sent_status* 은 **varchar(8)** 이며 기본값은 없습니다. 유효한 항목은 **전송**, **보내지 않은**, **다시 시도**, 및 **실패**합니다. NULL은 모든 상태를 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

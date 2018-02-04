@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_repl_tranhash_TSQL
 - dm_repl_tranhash_TSQL
 - dm_repl_tranhash
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_tranhash dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_tranhash dynamic management view
 ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a294cc70ded39ed12f07e16eada7b90a9a3e9b89
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 34de8de4ffeb2e9cc6d2ce84ae5df81570ea9911
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmrepltranhash-transact-sql"></a>sys.dm_repl_tranhash(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/27/2017
   
 |column_name|data_type|description|  
 |------------------|----------------|-----------------|  
-|**버킷**|**bigint**|해시 테이블의 버킷 수입니다.|  
+|**buckets**|**bigint**|해시 테이블의 버킷 수입니다.|  
 |**hashed_trans**|**bigint**|현재 일괄 처리에서 복제된 커밋된 트랜잭션 수입니다.|  
 |**completed_trans**|**bigint**|지금까지 완료된 트랜잭션 수입니다.|  
 |**compensated_trans**|**bigint**|부분 롤백을 포함하는 트랜잭션 수입니다.|  

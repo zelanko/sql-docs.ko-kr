@@ -3,8 +3,8 @@ title: "SQL Server 가용성 그룹에 클러스터를 Ubuntu 구성 | Microsoft
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.date: 03/17/2017
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,26 +15,26 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu 클러스터와 가용성 그룹 리소스 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 ubuntu 3 개 노드 클러스터를 만들고 이전에 만든된 가용성 그룹에 클러스터 리소스로 추가 하는 방법을 설명 합니다. 고가용성을 위해 Linux에서 가용성 그룹에 노드가 3 개 필요-참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다.
 
 > [!NOTE] 
-> 이 시점에서 linux Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. sql에서 클러스터의 존재에 대 한 지식이 없는, 외부 모든 오케스트레이션은 되며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에는 동일한 동등한 옵션이 없습니다. Always On 동적 관리 뷰 클러스터 정보를 쿼리 하는 빈 행을 반환 합니다. 장애 조치 후 투명 하 게 다시 연결에 사용할 수신기를 만들 수 있지만 (아래 설명 됨) 가상 IP 리소스를 만드는 데 IP와 함께 DNS 서버에서 수신기 이름은 수동으로 등록 해야 합니다.
+> 이 시점에서 linux Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. sql에서 클러스터의 존재에 대 한 지식이 없는, 모든 오케스트레이션은 외부 in 않으며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에는 동일한 동등한 옵션이 없습니다. Always On 동적 관리 뷰 클러스터 정보를 쿼리 하는 빈 행을 반환 합니다. 장애 조치 후 투명 하 게 다시 연결에 사용할 수신기를 만들 수 있지만 (아래 설명 됨) 가상 IP 리소스를 만드는 데 IP와 함께 DNS 서버에서 수신기 이름은 수동으로 등록 해야 합니다.
 
 다음 섹션에서는 장애 조치 클러스터 솔루션을 설정 하는 단계를 안내 합니다. 
 
 ## <a name="roadmap"></a>로드맵
 
-고가용성을 위해 Linux 서버에 가용성 그룹을 만드는 단계는 Windows Server 장애 조치 클러스터에는 단계와에서 다릅니다. 다음 목록에서는 고급 단계를 설명합니다. 
+고가용성을 위해 Linux 서버에 가용성 그룹을 만드는 단계는 Windows Server 장애 조치 클러스터에는 단계와에서 다릅니다. 다음 목록에서는 단계를 간략히 설명합니다. 
 
 1. [SQL Server 클러스터 노드에서 구성](sql-server-linux-setup.md)합니다.
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. 클러스터를 만듭니다. 
 
    >[!WARNING]
-   >클러스터링 공급 업체는 조사 하 고, 시작 하는 알려진된 문제로 인해 클러스터 ('pc 클러스터 start') 아래의 오류 하면서 실패 합니다. 해당 하는 클러스터 설치 명령을 실행 하는 때 만들어지는 잘못 /etc/corosync/corosync.conf에 구성 된 로그 파일 때문입니다. 이 문제를 해결 하려면 로그 파일을 변경할: /var/log/corosync/corosync.log 합니다. 또는 /var/log/cluster/corosync.log 파일을 만들 수 있습니다.
+   >클러스터링 공급 업체는 조사 하 고, 시작 하는 알려진된 문제로 인해 클러스터 ('pc 클러스터 start') 아래의 오류 하면서 실패 합니다. 해당 하는 클러스터 설치 명령을 실행 하는 때 만들어지는 잘못 /etc/corosync/corosync.conf에 구성 된 로그 파일 때문입니다. 이 문제를 해결 하려면 로그 파일을 변경: /var/log/corosync/corosync.log 합니다. 또는 /var/log/cluster/corosync.log 파일을 만들 수 있습니다.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -139,7 +139,7 @@ sudo systemctl enable pacemaker
 
 Pacemaker 클러스터 공급 업체를 사용 하도록 설정할 STONITH와 지원 되는 클러스터 설치에 대해 구성 된 펜싱 장치에 필요 합니다. 클러스터 리소스 관리자 상태 노드 또는 노드에 있는 리소스의을 확인할 수 없는 경우 펜싱 클러스터도 알려진 상태로 다시 전환 하는 데 사용 됩니다. 리소스 수준 펜싱 하면 주로 리소스를 구성 하 여 중단 시 데이터 손상 되지 않습니다. 리소스 수준 펜싱을 사용할 수 있습니다 예를 들어, 오래 된 경우 처럼 노드에서 디스크를 표시 하려면 (복제 블록 장치 Distributed) DRBD와 통신 링크의 작동이 중지 합니다. 노드 수준 펜싱 하면 노드 모든 리소스를 실행 하지 않습니다. 노드를 다시 설정 하 여 이렇게 및는 Pacemaker 구현의 STONITH (있음 "헤드에 있는 다른 노드가 해결"에 대 한 의미) 라고 합니다. 예를 들어 무정전 전원 공급 장치 또는 관리 서버에 대 한 카드 인터페이스, pacemaker 매우 다양 한 펜싱 장치를 지원 합니다. 자세한 내용은 참조 하십시오. [처음부터 Pacemaker 클러스터](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) 및 [펜싱 및 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
-노드 수준 구성 방어 사용자 환경에 따라 크게 달라 집니다, 때문에 중이지만 (구성할 수 있습니다는 나중에)이이 자습서에 대 한 비활성화 됩니다. 주 노드에서 다음 스크립트를 실행 합니다. 
+노드 수준 구성 방어 사용자 환경에 따라 크게 달라 집니다, 있으므로 (구성할 수 있습니다는 나중에)이이 자습서에 대 한 비활성화 했습니다. 주 노드에서 다음 스크립트를 실행 합니다. 
 
 ```bash
 sudo pcs property set stonith-enabled=false
@@ -160,7 +160,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 
 >[!WARNING]
->자동 장애 조치 후 때 `start-failure-is-fatal = true` 리소스 관리자 리소스를 시작 하려고 합니다. 수동으로 실행 해야 하는 첫 번째 시도에 실패 하면 `pcs resource cleanup <resourceName>` 정리 리소스 오류 발생 횟수 및 구성 다시 설정 합니다.
+>자동 장애 조치 후 때 `start-failure-is-fatal = true` 리소스 관리자 리소스를 시작 하려고 합니다. 수동으로 실행 해야 하는 첫 번째 시도에 실패 하면 `pcs resource cleanup <resourceName>` 하는 리소스 실패 횟수를 정리 하 고 구성을 다시 설정 합니다.
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Pacemaker와 통합에 대 한 SQL Server 리소스 에이전트를 설치 합니다.
 

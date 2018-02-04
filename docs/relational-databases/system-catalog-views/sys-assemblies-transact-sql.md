@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - assemblies_TSQL
 - sys.assemblies_TSQL
 - assemblies
-dev_langs: TSQL
-helpviewer_keywords: sys.assemblies catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.assemblies catalog view
 ms.assetid: e321753f-293f-42ab-b225-d118713df40b
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a63900187f0e2726f40b4c85e82a3fe5dd41c6ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e539377bf1c0d7c4060238baf26a152f02dbbdd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysassemblies-transact-sql"></a>sys.assemblies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**assembly_id**|**int**|어셈블리 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |**clr_name**|**nvarchar(4000)**|어셈블리의 단순한 이름, 버전 번호, culture, 공개 키, 아키텍처 등을 인코딩하는 정식 문자열입니다. 이 값은 CLR(공용 언어 런타임) 측에서 어셈블리를 고유하게 식별합니다.|  
 |**permission_set**|**tinyint**|어셈블리에 대한 권한 집합/보안 수준입니다.<br /><br /> 1 = 안전한 액세스<br /><br /> 2 = 외부 액세스<br /><br /> 3 = 안전하지 않은 액세스|  
-|**permission_set_desc**|**nvarchar (60)**|어셈블리에 대한 권한 집합/보안 수준의 설명입니다.<br /><br /> SAFE_ACCESS<br /><br /> EXTERNAL_ACCESS<br /><br /> UNSAFE_ACCESS|  
+|**permission_set_desc**|**nvarchar(60)**|어셈블리에 대한 권한 집합/보안 수준의 설명입니다.<br /><br /> SAFE_ACCESS<br /><br /> EXTERNAL_ACCESS<br /><br /> UNSAFE_ACCESS|  
 |**is_visible**|**bit**|1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 진입점을 등록할 수 있도록 표시되는 어셈블리입니다.<br /><br /> 0 = 관리되는 호출자 전용 어셈블리입니다. 즉, 이 어셈블리는 데이터베이스의 다른 어셈블리에 내부 구현을 제공합니다.|  
 |**create_date**|**datetime**|어셈블리가 작성되거나 등록된 날짜입니다.|  
 |**modify_date**|**datetime**|어셈블리가 수정된 날짜입니다.|  

@@ -3,7 +3,7 @@ title: "SQL Server 컨테이너를 Kubernetes에서 고가용성을 위해 구�
 description: "이 자습서는 Azure 컨테이너 서비스에서 Kubernetes와 SQL Server 고가용성 솔루션을 배포 하는 방법을 보여 줍니다."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 1220c85a539cdaed855d6dfd44ea4afffdd927b2
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.openlocfilehash: 4ada1034b64f710f4eeae995b771ef8be5bf4fe2
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>고가용성을 위해 Kubernetes에서 SQL Server 컨테이너 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 고가용성 (HA)에 대 한 영구 저장소가 Kubernetes Azure 컨테이너 서비스 (AKS)에 SQL Server 인스턴스를 구성 하는 방법을 알아봅니다. 솔루션은 복원 력을 제공 합니다. SQL Server 인스턴스가 실패 하면 Kubernetes 자동으로 다시 만듭니다 새 pod입니다. AKS는 Kubernetes 노드 장애 시에도 제공합니다. 
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/24/2018
 
 ## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>HA 솔루션 사용 하 여 Azure 컨테이너 서비스에서 실행 되는 Kubernetes
 
-에 대 한 지원이 Kubernetes 1.6 이상 [저장소 클래스](http://kubernetes.io/docs/concepts/storage/storage-classes/), [영구 볼륨 클레임](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), 및 [Azure 디스크 볼륨 드라이버](http://github.com/Azure/azurefile-dockervolumedriver)합니다. 만들 수 있으며 사용자의 SQL Server 인스턴스가 Kubernetes에서 고유 하 게 관리. 이 문서의 예제 만드는 방법을 보여 줍니다.는 [배포](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) 달성 유사한 공유 디스크 장애 조치 클러스터 인스턴스의 고가용성 구성을 하기. 이 구성에서는 Kubernetes 클러스터 orchestrator의 역할을 수행 합니다. 컨테이너에서 SQL Server 인스턴스에 오류가 발생 하는 경우 orchestrator 같은 영구 저장소에 연결 하는 컨테이너의 다른 인스턴스가 시작 되도록 합니다.
+Kubernetes 1.6 이상에 대 한 지원이 [저장소 클래스](http://kubernetes.io/docs/concepts/storage/storage-classes/), [영구 볼륨 클레임](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), 및 [Azure 디스크의 볼륨 종류가](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)합니다. 만들 수 있으며 사용자의 SQL Server 인스턴스가 Kubernetes에서 고유 하 게 관리. 이 문서의 예제 만드는 방법을 보여 줍니다.는 [배포](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) 달성 유사한 공유 디스크 장애 조치 클러스터 인스턴스의 고가용성 구성을 하기. 이 구성에서는 Kubernetes 클러스터 orchestrator의 역할을 수행 합니다. 컨테이너에서 SQL Server 인스턴스에 오류가 발생 하는 경우 orchestrator 같은 영구 저장소에 연결 하는 컨테이너의 다른 인스턴스가 시작 되도록 합니다.
 
 ![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
@@ -251,6 +251,8 @@ Kubernetes 클러스터에서 SA 암호를 생성 합니다. Kubernetes 암호 �
    pod의 상태를 확인 하려면 입력 `kubectl get pod`합니다.
 
    ![Get pod 명령의 스크린 샷](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
+
+   위 그림에는 pod 상태가 `Running`합니다. 이 상태는 컨테이너 준비 되었음을 나타냅니다. 몇 분 정도 걸릴 수 있습니다.
 
    >[!NOTE]
    >배포를 만든 후에 pod 표시 되기 전에 몇 분이 걸릴 수 있습니다. 지연은 클러스터 끌어와서 때문에 [mssql-서버-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 허브에서 이미지입니다. 이미지를 처음으로 끌어온, 후에 캐시 된 이미지를 이미가지고 있는 노드를 배포할 경우에 후속 배포 빠를 수 있습니다. 
