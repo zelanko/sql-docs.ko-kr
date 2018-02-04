@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PathName_TSQL
 - PathName
-dev_langs: TSQL
-helpviewer_keywords: PathName FILESTREAM [SQL Server]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f37b03f60063643472b325c4c3f61e87078794f8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 38687ee01f37cd3e7e8d15a4137dbdbb2c7ee82f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="pathname-transact-sql"></a>PathName(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +54,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  정수 [식](../../t-sql/language-elements/expressions-transact-sql.md) 경로의 서버 구성 요소를 포맷 해야 하는 방법을 정의 하는 합니다. *@option*다음 값 중 하나일 수 있습니다. 기본값은 0입니다.  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |0|BIOS로 변환 된 서버 이름을 반환 형식, 예:`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
-|1|예를 들어 서버 이름을 변환 하지 않고 반환합니다.`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
+|1.|예를 들어 서버 이름을 변환 하지 않고 반환합니다.`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
 |2|예를 들어 전체 서버 경로를 반환합니다.`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
@@ -64,11 +67,11 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  데이터베이스는 Always On 가용성에 속해 있는 경우 그룹의 값 *use_replica_computer_name* 의 출력에 다음과 같은 결과가 **PathName** 함수:  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |지정 안 됨|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
 |0|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
-|1|함수가 경로에 컴퓨터 이름을 반환합니다.|  
+|1.|함수가 경로에 컴퓨터 이름을 반환합니다.|  
   
 ## <a name="return-type"></a>반환 형식  
  **nvarchar(max)**  
@@ -152,7 +155,7 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [Binary Large Object &#40;Blob&#41; 데이터 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [Get_filestream_transaction_context&#40; Transact SQL &#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

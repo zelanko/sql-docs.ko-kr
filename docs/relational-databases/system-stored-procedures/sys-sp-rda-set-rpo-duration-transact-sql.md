@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_set_rpo_duration
 - sys.sp_rda_set_rpo_duration_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_set_rpo_duration stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_set_rpo_duration stored procedure
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0dad47cf39ac55848d36a05430d21006bc3089e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 82a07f1a75cc35aa05fe47c3a5c1324c0c1c0af4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ```    
     
 ## <a name="arguments"></a>인수    
- [ @duration_hrs =] *duration_hrs*    
+ [ @duration_hrs = ] *duration_hrs*    
  시간 수입니다 (null이 아닌 정수 값)를 유지 하려면 SQL Server는 현재 스트레치 사용 데이터베이스에 대 한 마이그레이션된 데이터의 합니다. 기본값 및 최소값은 8 시간입니다.    
  
  > [!NOTE]

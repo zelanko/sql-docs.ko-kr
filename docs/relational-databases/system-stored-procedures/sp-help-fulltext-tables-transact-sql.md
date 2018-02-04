@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_tables
 - sp_help_fulltext_tables_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_tables
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_tables
 ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 587fb2495e065d00a9031c198704af6ede6e80d5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5398d465c2368ae216e05aa3232c5c2dcd1790f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   전체 텍스트 인덱싱용으로 등록된 테이블의 목록을 반환합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]사용 하 여 **sys.fulltext_indexes** 카탈로그 뷰를 대신 합니다. 자세한 내용은 참조 [sys.fulltext_indexes&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 **sys.fulltext_indexes** 카탈로그 뷰를 대신 합니다. 자세한 내용은 참조 [sys.fulltext_indexes&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,10 +50,10 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
+ [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
  전체 텍스트 카탈로그의 이름입니다. *fulltext_catalog_name* 은 **sysname**, 기본값은 NULL입니다. 경우 *fulltext_catalog_name* 생략 되거나 null 인 경우 데이터베이스와 연관 된 모든 전체 텍스트 인덱싱된 테이블이 반환 됩니다. 경우 *fulltext_catalog_name* 를 지정 하지만 *table_name* 생략 되거나 null 인 경우이 카탈로그와 연결 된 모든 전체 텍스트 인덱싱된 테이블에 대 한 전체 텍스트 인덱스 정보가 검색 됩니다. 두 *fulltext_catalog_name* 및 *table_name* 를 지정 하는 경우 행이 반환 *table_name* 관련 된 *fulltext_catalog_name*; 그렇지 않으면 오류가 발생 합니다.  
   
- [  **@table_name=**] **'***table_name***'**  
+ [ **@table_name=**] **'***table_name***'**  
  전체 텍스트 메타데이터를 요청한 대상이 되는 한 부분 또는 두 부분으로 구성된 테이블 이름입니다. *table_name* 은 **nvarchar (517)**, 기본값은 NULL입니다. 경우에 *table_name* 지정 된 행에만 관련이 *table_name* 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

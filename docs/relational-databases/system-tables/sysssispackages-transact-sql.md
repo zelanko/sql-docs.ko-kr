@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdtspackages90_TSQL
 - sysdtspackages90
-dev_langs: TSQL
-helpviewer_keywords: sysssispackages system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysssispackages system table
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: spelluru
 ms.author: spelluru
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b694a277a235b373f1051878551ccca9537623f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 067fdf60b735cc1aad15b2fbfa3b5a7361a9f734
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |**id**|**uniqueidentifier**|패키지의 GUID입니다.|  
 |**설명**|**nvarchar**|패키지에 대한 설명(옵션)입니다.|  
 |**createdate**|**datetime**|패키지를 만든 날짜입니다.|  
-|**폴더 id**|**uniqueidentifier**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 패키지를 나열하는 논리적 폴더의 GUID입니다.|  
+|**folderid**|**uniqueidentifier**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 패키지를 나열하는 논리적 폴더의 GUID입니다.|  
 |**ownersid**|**varbinary**|패키지를 만든 사용자의 고유 보안 식별자입니다.|  
 |**packagedata**|**image**|패키지입니다.|  
 |**packageformat**|**int**|패키지가 저장되는 형식입니다.<br /><br /> 값이 2 이면 패키지에 저장 됩니다는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 형식입니다.<br /><br /> 값이 3 이면의 형식으로 패키지를 저장할 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]이상.|  
@@ -55,6 +58,6 @@ ms.lasthandoff: 11/17/2017
 |**writerolesid**|**varbinary**|패키지를 저장할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [Integration Services&#40;SSIS&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)  
+ [Integration Services &#40; Ssis&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)  
   
   

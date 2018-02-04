@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.fn_validate_plan_guide_TSQL
 - fn_validate_plan_guide
 - fn_validate_plan_guide_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_validate_plan_guide function
 - sys.fn_validate_plan_guide function
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ddde4fe4ff510058ff1a70a329a8939de0808a3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 712d9b5a5bea199823d83f24ad6f0f68e63223ef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +60,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |msgnum|**int**|오류 메시지 ID입니다.|  
 |severity|**tinyint**|1에서 25 사이의 메시지 심각도입니다.|  
 |state|**smallint**|오류가 발생한 코드의 지점을 나타내는 오류의 상태 번호입니다.|  
-|message|**nvarchar (2048)**|오류의 메시지 텍스트입니다.|  
+|message|**nvarchar(2048)**|오류의 메시지 텍스트입니다.|  
   
 ## <a name="permissions"></a>Permissions  
  OBJECT 범위 계획 지침에는 참조된 개체에 대한 VIEW DEFINITION 또는 ALTER 권한이 필요하고 계획 지침에 제공된 쿼리나 일괄 처리에 대한 권한이 필요합니다. 예를 들어 일괄 처리에 SELECT 문이 있으면 참조 개체의 SELECT 권한이 필요합니다.  

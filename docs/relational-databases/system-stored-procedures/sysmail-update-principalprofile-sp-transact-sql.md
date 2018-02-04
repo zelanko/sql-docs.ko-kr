@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
 - sysmail_update_principalprofile_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_update_principalprofile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_update_principalprofile_sp
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b988aa656b4285218b51ce1bcd091f5381ffc411
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7539eb785bc0ae03a68b8a734b89012a29590d3d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,26 +48,26 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@principal_id**  =] *principal_id*  
+ [ **@principal_id** = ] *principal_id*  
  데이터베이스 사용자 또는 역할의 ID는 **msdb** 변경 하려면 연결에 대 한 데이터베이스입니다. *principal_id* 은 **int**, 기본값은 NULL입니다. 어느 *principal_id* 또는 *principal_name* 지정 해야 합니다.  
   
- [  **@principal_name**  =] **'***principal_name***'**  
+ [ **@principal_name** = ] **'***principal_name***'**  
  데이터베이스 사용자 또는 역할의 이름에서 **msdb** 업데이트할 연결에 대 한 데이터베이스입니다. *principal_name* 은 **sysname**, 기본값은 NULL입니다. 어느 *principal_id* 또는 *principal_name* 지정할 수 있습니다.  
   
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  연결을 변경할 프로필의 ID입니다. *profile_id* 은 **int**, 기본값은 NULL입니다. 어느 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
   
- [  **@profile_name**  =] **'***profile_name***'**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  연결을 변경할 프로필의 이름입니다. *profile_name* 은 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
   
- [  **@is_default**  =] **'***is_default***'**  
+ [ **@is_default** = ] **'***is_default***'**  
  이 프로필이 데이터베이스 사용자의 기본 프로필인지 여부입니다. 데이터베이스 사용자는 하나의 기본 프로필만 가질 수 있습니다. *is_default* 은 **비트**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  이 저장 프로시저는 지정된 프로필이 데이터베이스 사용자의 기본 프로필인지 여부를 변경합니다. 데이터베이스 사용자는 기본 개인 프로필을 하나만 가질 수 있습니다.  

@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collector_type_TSQL
 - sp_syscollector_update_collector_type
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e8f2dbc3024ee7349774c1bccd10d75c0bfffb7
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 484acd19197e5df0cdf8f8b342d67a5e18b66c63
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +51,19 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
+ [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
  수집기 유형의 GUID입니다. *collector_type_uid* 은 **uniqueidentifier**, 것은 자동으로 만들어지고 OUTPUT으로 반환 하는 NULL입니다.  
   
- [  **@name =** ] **'***이름***'**  
+ [ **@name =** ] **'***name***'**  
  수집기 유형의 이름입니다. *이름* 은 **sysname** 반드시 지정 해야 합니다.  
   
- [  **@parameter_schema =** ] **'***parameter_schema***'**  
+ [ **@parameter_schema =** ] **'***parameter_schema***'**  
  이 수집기 유형의 XML 스키마입니다. *parameter_schema* 은 **xml** 이며 특정 수집기 유형에 필요할 수 있습니다. 필요하지 않은 경우 이 인수는 NULL일 수 있습니다.  
   
- [  **@collection_package_id =** ] *collection_package_id*  
+ [ **@collection_package_id =** ] *collection_package_id*  
  컬렉션 집합에 사용되는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 패키지를 가리키는 고유한 로컬 식별자입니다. *collection_package_id* 은 **uniqueidentifer** 필요 합니다. 에 대 한 값을 얻기 위해 *collection_package_id*, msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
   
- [  **@upload_package_id =** ] *upload_package_id*  
+ [ **@upload_package_id =** ] *upload_package_id*  
  컬렉션 집합에 사용되는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 업로드 패키지를 가리키는 고유한 로컬 식별자입니다. *upload_package_id* 은 **uniqueidentifier** 필요 합니다. 에 대 한 값을 얻기 위해 *upload_package_id*, msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

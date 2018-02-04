@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2381dff2f63662f17712271be6327aeed73d26c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8ddad06a483f1f33d6e140a6f72c779cd70e6a72
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxedatabasesessionevents-azure-sql-database"></a>sys.dm_xe_database_session_events (Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,17 +35,17 @@ ms.lasthandoff: 11/17/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|이벤트 세션의 메모리 주소입니다. Null을 허용하지 않습니다.|  
-|event_name|**nvarchar (60)**|동작이 바인딩된 이벤트의 이름입니다. Null을 허용하지 않습니다.|  
+|event_session_address|**varbinary(8)**|이벤트 세션의 메모리 주소입니다. Null을 허용하지 않습니다.|  
+|event_name|**nvarchar(60)**|동작이 바인딩된 이벤트의 이름입니다. Null을 허용하지 않습니다.|  
 |event_package_guid|**uniqueidentifier**|이벤트가 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
-|event_predicate|**nvarchar (2048)**|이벤트에 적용되는 조건자 트리의 XML 표현입니다. Null을 허용합니다.|  
+|event_predicate|**nvarchar(2048)**|이벤트에 적용되는 조건자 트리의 XML 표현입니다. Null을 허용합니다.|  
   
 ## <a name="permissions"></a>Permissions  
  VIEW DATABASE STATE 권한이 필요합니다.  
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|보낸 사람|수행할 작업|관계|  
 |----------|--------|------------------|  
 |sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|다 대 일|  
 |sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|다 대 일|  

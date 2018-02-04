@@ -8,21 +8,23 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1dc3339403f7f39fef0e8fee4e3dbb05ea0a94b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 46bffa49e3d1586fe0639758b8d38c340f8933ea
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="snapshot-backup---spdeletebackup"></a>스냅숏 백업-sp_delete_backup
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +43,7 @@ sys.sp_delete_backup
 ```  
   
 ## <a name="arguments"></a>인수  
- *[ @backup_url =] backup_meta_file_url*  
+ *[ @backup_url = ] backup_meta_file_url*  
  지정 된 백업 세트는 백업 파일 자체를 포함 하 여 구성 하는 모든 스냅숏 삭제, 삭제에 대 한 백업의 URL입니다.  
   
  *[ @db_name =] database_name*  

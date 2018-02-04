@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_configure
 - sp_syspolicy_configure_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_configure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_configure
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40462cdd0cce0725bf9fbf42d3efb33480530a8c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e4ff49cd5be072fb288bb721b781474da93b7ba9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@name =** ] **'***이름***'**  
+ [ **@name =** ] **'***name***'**  
  구성할 설정의 이름입니다. *이름* 은 **sysname**가 필요 하며, NULL 또는 빈 문자열일 수 없습니다.  
   
  *이름* 다음 값 중 하나일 수 있습니다.  
@@ -55,7 +58,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - 정책 기반 관리에서 성공한 정책 평가를 로깅할지 여부를 지정합니다.  
   
- [  **@value =** ] *값*  
+ [ **@value =** ] *value*  
  지정 된 값에 대 한 연결 된 값은 *이름*합니다. *값* 은 **sql_variant**, 이며 필수입니다.  
   
 -   에 대 한 'Enabled'를 지정 하는 경우 *이름*, 다음 값 중 하나를 사용할 수 있습니다.  

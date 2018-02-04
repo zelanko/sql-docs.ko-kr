@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_remove_job_from_targets_TSQL
 - sp_remove_job_from_targets
-dev_langs: TSQL
-helpviewer_keywords: sp_remove_job_from_targets
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_remove_job_from_targets
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8748e6968197faeb3809cf8adef59bc9b2452d57
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d27f90f6b4ec53b0bf68bd052c17483990205cfe
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +49,16 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  지정한 대상 서버 또는 대상 서버 그룹을 제거할 대상이 되는 작업의 ID입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  지정한 대상 서버 또는 대상 서버 그룹을 제거할 대상이 되는 작업 이름입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@target_server_groups =**] **'***target_server_groups***'**  
+ [ **@target_server_groups =**] **'***target_server_groups***'**  
  지정된 작업에서 제거할 대상 서버 그룹의 쉼표로 구분된 목록입니다. *target_server_groups* 은 **nvarchar (1024)**, 기본값은 NULL입니다.  
   
- [  **@target_servers =**] **'***target_servers***'**  
+ [ **@target_servers =**] **'***target_servers***'**  
  지정된 작업에서 제거할 대상 서버의 쉼표로 구분된 목록입니다. *target_servers* 은 **nvarchar (1024)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

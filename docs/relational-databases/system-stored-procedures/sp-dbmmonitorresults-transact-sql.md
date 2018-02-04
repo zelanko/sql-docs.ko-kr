@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
 - sp_dbmmonitorresults_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9dd87ba18696c5787c3ee2220846a3dde857b660
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ce88354c3d378dbfa2e7bc71acd57ed52aaf5131
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +83,7 @@ sp_dbmmonitorresults database_name
  1 = 호출 하 여 데이터베이스에 대 한 상태 업데이트 **sp_dbmmonitorupdate** 결과 계산 하기 전에. 그러나 상태 테이블이 이전 15 초 또는 사용자 내에서 업데이트 된 경우 구성원이 아니므로의 **sysadmin** 고정 서버 역할, **sp_dbmmonitorresults** 상태를 업데이트 하지 않고 실행 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>결과 집합  
  지정한 데이터베이스에 대해 요청된 개수의 기록 상태 행을 반환합니다. 각 행에는 다음 정보가 들어 있습니다.  
@@ -89,7 +91,7 @@ sp_dbmmonitorresults database_name
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|미러된 데이터베이스의 이름입니다.|  
-|**역할**|**int**|서버 인스턴스의 현재 미러링 역할입니다.<br /><br /> 1 = 주 서버<br /><br /> 2 = 미러 서버|  
+|**role**|**int**|서버 인스턴스의 현재 미러링 역할입니다.<br /><br /> 1 = 주 서버<br /><br /> 2 = 미러 서버|  
 |**mirroring_state**|**int**|데이터베이스의 상태입니다.<br /><br /> 0 = 일시 중지됨<br /><br /> 1 = 연결 끊김<br /><br /> 2 = 동기화 중<br /><br /> 3 = 장애 조치(Failover) 보류 중<br /><br /> 4 = 동기화됨|  
 |**witness_status**|**int**|데이터베이스의 데이터베이스 미러링 세션에서 미러링 모니터 서버의 연결 상태로, 다음 값을 가질 수 있습니다.<br /><br /> 0 = 알 수 없음<br /><br /> 1 = 연결됨<br /><br /> 2 = 연결 끊김|  
 |**log_generation_rate**|**int**|이 데이터베이스의 이전 미러링 상태 업데이트 이후 생성된 로그의 양(KB/초)입니다.|  

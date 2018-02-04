@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_create_TSQL
 - sp_trace_create
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_create
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ca00a949b0fe0122f6aba9b8fecfa072374e96f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d370ebe5730f9b87d7303c067b9edc1a14d27509
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +54,10 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  가 할당 한 번호는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 추적 합니다. 모든 사용자 제공 입력은 무시됩니다. *trace_id* 은 **int**, 기본값은 NULL입니다. 사용자가 사용 된 *trace_id* 식별, 수정 및이 저장된 프로시저에 의해 정의 된 추적을 제어 하는 값입니다.  
   
- [  **@options=** ] *option_value*  
+ [ **@options=** ] *option_value*  
  추적에 대한 옵션 집합을 지정합니다. *option_value* 은 **int**, 기본값은 없습니다. 선택한 옵션 값의 합계를 지정하여 이러한 옵션의 조합을 선택할 수 있습니다. 예를 들어 TRACE_FILE_ROLLOVER와 shutdown_on_error 두 두 옵션을 설정 하려면 지정 **6** 에 대 한 *option_value*합니다.  
   
  다음 표에서는 옵션, 설명 및 해당 값을 나열합니다.  
@@ -65,14 +68,14 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|어떤 이유에서건 추적을 파일에 쓸 수 없으면 SQL Server가 시스템을 종료하도록 지정합니다. 이 옵션은 보안 감사 추적을 수행할 때 유용합니다.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|서버가 만든 마지막 5MB 추적 정보의 기록은 서버에 의해 저장됨을 지정합니다. TRACE_PRODUCE_BLACKBOX는 다른 모든 옵션과 호환되지 않습니다.|  
   
- [  **@tracefile=** ] *'**trace_file**'*  
+ [ **@tracefile=** ] *'**trace_file**'*  
  추적을 기록할 위치와 파일 이름을 지정합니다. *trace_file* 은 **nvarchar(245)** 이며 기본값은 없습니다. *trace_file* 로컬 디렉터리 (예: N 'C:\MSSQL\Trace\trace.trc') 또는 공유 또는 경로의 UNC 일 수 있습니다 (N'\\\\*Servername*\\*Sharename* \\ *디렉터리*\trace.trc').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]추가 되 고 한 **.trc** 모든 추적 파일 이름에는 확장 합니다. 경우 TRACE_FILE_ROLLOVER 옵션 및 *max_file_size* 지정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원래 추적 파일의 최대 크기에 이르면 새 추적 파일을 만듭니다. 새 파일에 원본 파일을 하지만 _와 같은 이름이 *n*  부터 순서를 나타내는 추가 **1**합니다. 예를 들어, 첫 번째 추적 파일 이름이 **filename.trc**, 두 번째 추적 파일 이름이 **filename_1.trc**합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추가 되 고 한 **.trc** 모든 추적 파일 이름에는 확장 합니다. 경우 TRACE_FILE_ROLLOVER 옵션 및 *max_file_size* 지정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원래 추적 파일의 최대 크기에 이르면 새 추적 파일을 만듭니다. 새 파일에 원본 파일을 하지만 _와 같은 이름이 *n*  부터 순서를 나타내는 추가 **1**합니다. 예를 들어, 첫 번째 추적 파일 이름이 **filename.trc**, 두 번째 추적 파일 이름이 **filename_1.trc**합니다.  
   
  TRACE_FILE_ROLLOVER 옵션을 사용하는 경우 원래 추적 파일 이름에 밑줄 문자를 사용하지 않는 것이 좋습니다. 밑줄을 사용할 경우 다음 동작이 발생합니다.  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)](이러한 파일 롤오버 옵션 중 하나는 구성) 하는 경우 롤오버 파일을 로드 하 라는 메시지가 표시 하거나 부하를 자동으로 않습니다.  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (이러한 파일 롤오버 옵션 중 하나는 구성) 하는 경우 롤오버 파일을 로드 하 라는 메시지가 표시 하거나 부하를 자동으로 않습니다.  
   
 -   Fn_trace_gettable 함수 롤오버 파일을 로드 하지 않습니다 (사용 하 여 지정 된 경우는 *number_files* 인수)는 원래 파일 이름이 밑줄과 숫자 값으로 끝나는 합니다. 이는 파일이 롤오버될 때 자동으로 추가된 밑줄과 숫자에는 적용되지 않습니다.  
   
@@ -81,17 +84,17 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *trace_file* TRACE_PRODUCE_BLACKBOX 옵션을 사용 하는 경우 지정할 수 없습니다.  
   
- [  **@maxfilesize=** ] *max_file_size*  
+ [ **@maxfilesize=** ] *max_file_size*  
  추적 파일의 최대 크기(MB)를 지정합니다. *max_file_size* 은 **bigint**의 기본값은 **5**합니다.  
   
  추적이 사용 된 디스크 공간으로 지정 된 크기를 초과 하는 경우의 파일 기록이 중지 TRACE_FILE_ROLLOVER 옵션 없이이 매개 변수를 지정 하십시오 *max_file_size*합니다.  
   
- [  **@stoptime=** ] **'***stop_time***'**  
+ [ **@stoptime=** ] **'***stop_time***'**  
  추적을 중지할 날짜 및 시간을 지정합니다. *stop_time* 은 **datetime**, 기본값은 NULL입니다. NULL일 경우 추적은 수동으로 중지하거나 서버가 시스템을 종료할 때까지 계속 실행됩니다.  
   
  두 *stop_time* 및 *max_file_size* 지정 된 TRACE_FILE_ROLLOVER 아니며 추적 위쪽 지정 하면 지정 된 중지 시간 또는 최대 파일 크기에 도달 합니다. 경우 *stop_time*, *max_file_size*, 및 TRACE_FILE_ROLLOVER를 지정 하면, 지정 된 중지 시간에서 중지 추적 추적 드라이브를 꽉 채우지는지 않습니다 것으로 가정 합니다.  
   
- [  **@filecount=** ] **'***max_rollover_files***'**  
+ [ **@filecount=** ] **'***max_rollover_files***'**  
  같은 기본 파일 이름으로 유지할 최대 추적 파일 수를 지정합니다. *max_rollover_files* 은 **int**1 보다 큰 합니다. 이 매개 변수는 TRACE_FILE_ROLLOVER 옵션을 지정한 경우에만 유효합니다. 때 *max_rollover_files* 지정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유지 하려고 이상 *max_rollover_files* 새 추적 파일을 열기 전에 가장 오래 된 추적 파일을 삭제 하 여 추적 파일입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 기본 파일 이름에 숫자를 추가하여 추적 파일의 보존 기간을 추적합니다.  
   
  예를 들어는 *trace_file* "c:\mytrace" 이름이 "c:\mytrace_123.trc"은 "c:\mytrace_124.trc" 이름 가진 파일 보다 오래 된 하는 매개 변수를 지정 합니다. 경우 *max_rollover_files* 로 설정 되어 2, SQL Server "c:\mytrace_123.trc" 파일을 삭제 한 다음 추적 파일 "c:\mytrace_125.trc"를 만들기 전에 합니다.  

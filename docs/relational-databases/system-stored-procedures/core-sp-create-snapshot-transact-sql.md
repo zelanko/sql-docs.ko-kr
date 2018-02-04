@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - management data warehouse, data collector stored procedures
 - data collector [SQL Server], stored procedures
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 674968b7b981755ea0f67f8657116537d2a5791c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 559eed3c2ae0a5bada1453e21347fee791625eb5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,16 +60,16 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  [ @collector_type_uid =] '*collector_type_uid*'  
  수집기 유형의 GUID입니다. *collector_type_uid* 은 **uniqueidentifier** 기본값은 없습니다. GUID를 확인하려면 msdb 데이터베이스에서 dbo.syscollector_collector_types 뷰를 쿼리합니다.  
   
- [ @machine_name=] '*이며 여기에서 machine_name*'  
+ [ @machine_name= ] '*machine_name*'  
  컬렉션 집합이 있는 서버의 이름입니다. *이며 여기에서 machine_name* 은 **sysname**, 기본값은 없습니다.  
   
- [ @named_instance=] '*named_instance*'  
+ [ @named_instance= ] '*named_instance*'  
  컬렉션 집합의 인스턴스 이름입니다. *named_instance* 은 **sysname**, 기본값은 없습니다.  
   
- [ @log_id =] *log_id*  
+ [ @log_id = ] *log_id*  
  데이터를 수집한 서버의 컬렉션 집합 이벤트 로그에 매핑되는 고유 식별자입니다. *log_id* 은 **bigint** 기본값은 없습니다. 에 대 한 값을 얻기 위해 *log_id*, msdb 데이터베이스에서 dbo.syscollector_execution_log 뷰를 쿼리 합니다.  
   
- [ @snapshot_id =] *snapshot_id*  
+ [ @snapshot_id = ] *snapshot_id*  
  core.snapshots 뷰에 삽입 된 행에 대 한 고유 식별자입니다. *snapshot_id* 은 **int** 이며 OUTPUT으로 반환 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

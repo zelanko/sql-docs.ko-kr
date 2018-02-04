@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_job
 - sp_update_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 772cfb0f8f4a05c2db42e650601f837d12ffeb81
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 03171bfdee98063c9bf460b9555c1a7c5d02568d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,64 +63,64 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id =**] *job_id*  
- 업데이트할 작업의 ID입니다. *job_id*은 **uniqueidentifier**합니다.  
+ [ **@job_id =**] *job_id*  
+ 업데이트할 작업의 ID입니다. *job_id*is **uniqueidentifier**.  
   
- [  **@job_name =**] **'***job_name***'**  
- 작업의 이름입니다. *job_name*은 **nvarchar (128)**합니다.  
+ [ **@job_name =**] **'***job_name***'**  
+ 작업의 이름입니다. *job_name*is **nvarchar(128)**.  
   
 > **참고:** 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@new_name =**] **'***new_name***'**  
- 작업의 새 이름입니다. *new_name*은 **nvarchar (128)**합니다.  
+ [ **@new_name =**] **'***new_name***'**  
+ 작업의 새 이름입니다. *new_name*is **nvarchar(128)**.  
   
- [  **@enabled =**] *사용 하도록 설정*  
+ [ **@enabled =**] *enabled*  
  작업이 사용 되는지 여부를 지정 합니다 (**1**) 또는 사용 안 함 (**0**). *활성화*은 **tinyint**합니다.  
   
- [  **@description =**] **'***설명***'**  
+ [ **@description =**] **'***description***'**  
  작업에 대한 설명입니다. *설명* 은 **nvarchar (512)**합니다.  
   
- [  **@start_step_id =**] *step_id*  
+ [ **@start_step_id =**] *step_id*  
  작업을 실행하기 위한 첫 단계의 ID입니다. *step_id*은 **int**합니다.  
   
- [  **@category_name =**] **'***범주***'**  
- 작업 범주입니다. *범주*은 **nvarchar (128)**합니다.  
+ [ **@category_name =**] **'***category***'**  
+ 작업 범주입니다. *category*is **nvarchar(128)**.  
   
- [  **@owner_login_name =**] **'***로그인***'**  
+ [ **@owner_login_name =**] **'***login***'**  
  작업을 소유하는 로그인의 이름입니다. *로그인*은 **nvarchar (128)** 의 구성원만는 **sysadmin** 고정된 서버 역할 작업 소유권을 변경할 수 있습니다.  
   
- [  **@notify_level_eventlog =**] *eventlog_level*  
+ [ **@notify_level_eventlog =**] *eventlog_level*  
  Microsoft Windows 응용 프로그램 로그에 이 작업에 대한 항목을 저장하는 시기를 지정합니다. *eventlog_level*은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명(동작)|  
+|Value|설명(동작)|  
 |-----------|----------------------------|  
 |**0**|안 함|  
 |**1**|성공한 경우|  
 |**2**|실패한 경우|  
 |**3**|항상|  
   
- [  **@notify_level_email =**] *email_level*  
+ [ **@notify_level_email =**] *email_level*  
  해당 작업이 완료될 때 전자 메일을 보낼 시기를 지정합니다. *email_level*은 **int**합니다. *email_level*같은 값을 사용 하 여 *eventlog_level*합니다.  
   
- [  **@notify_level_netsend =**] *netsend_level*  
+ [ **@notify_level_netsend =**] *netsend_level*  
  해당 작업이 완료되었을 때 네트워크 메시지를 보낼 시기를 지정합니다. *netsend_level*은 **int**합니다. *netsend_level*같은 값을 사용 하 여 *eventlog_level*합니다.  
   
- [  **@notify_level_page =**] *page_level*  
+ [ **@notify_level_page =**] *page_level*  
  해당 작업이 완료될 때 페이지를 보낼 시기를 지정합니다. *page_level*은 **int**합니다. *page_level*같은 값을 사용 하 여 *eventlog_level*합니다.  
   
- [  **@notify_email_operator_name =**] **'***operator_name***'**  
+ [ **@notify_email_operator_name =**] **'***operator_name***'**  
  에 전자 메일을 받을 때 운영자의 이름 *email_level* 에 도달 합니다. *email_name* 은 **nvarchar (128)**합니다.  
   
- [  **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
+ [ **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
  네트워크 메시지를 받을 운영자의 이름입니다. *netsend_operator* 은 **nvarchar (128)**합니다.  
   
- [  **@notify_page_operator_name =**] **'***page_operator***'**  
+ [ **@notify_page_operator_name =**] **'***page_operator***'**  
  페이지를 받을 운영자의 이름입니다. *page_operator* 은 **nvarchar (128)**합니다.  
   
- [  **@delete_level =**] *delete_level*  
+ [ **@delete_level =**] *delete_level*  
  작업 삭제 시기를 지정합니다. *delete_value*은 **int**합니다. *delete_level*같은 값을 사용 하 여 *eventlog_level*합니다.  
   
- [  **@automatic_post =**] *automatic_post*  
+ [ **@automatic_post =**] *automatic_post*  
  예약되어 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

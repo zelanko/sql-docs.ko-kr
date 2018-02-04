@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_database_transactions_TSQL
 - dm_tran_database_transactions_TSQL
 - sys.dm_tran_database_transactions
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_database_transactions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_database_transactions dynamic management view
 ms.assetid: 82a44295-4cbc-4a5b-891a-8ebaf307b8f5
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 56421d77a4ca75f75f87667d6a52c42de4f817b6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f503b0a6253cfe3ee63ed1249afd6daa6408dbd2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtrandatabasetransactions-transact-sql"></a>sys.dm_tran_database_transactions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |database_transaction_commit_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 데이터베이스 로그에서 트랜잭션 커밋 로그 레코드의 LSN입니다.|  
 |database_transaction_last_rollback_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 가장 최근에 롤백된 LSN입니다. 어떤 롤백이 수행 하는 경우 값이 MaxLSN 합니다.|  
 |database_transaction_next_undo_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 실행 취소할 다음 레코드의 LSN입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   

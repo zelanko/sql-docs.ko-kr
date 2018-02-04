@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collection_set_TSQL
 - sp_syscollector_delete_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collecton_set
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b72d161f9f0d613e42413ca1b37301a137ae069b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b731d14f7b0dc8e583ad5625ac3d7bf013be013d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +48,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @collection_set_id =] *collection_set_id*  
+ [ @collection_set_id = ] *collection_set_id*  
  컬렉션 집합의 고유 식별자입니다. *collection_set_id* 은 **int** 경우 값이 있어야 하 고 *이름* 은 NULL입니다.  
   
  [ @name =] '*이름*'  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
 - sp_help_jobs_in_schedule
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobs_in_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff12f4e1ee3f994a74360969cacd51d9e479a70e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: aac7c4d1cb1199f17e060c9c9d0d4437d8a3220c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +48,10 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@schedule_id =** ] *schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  정보를 나열할 일정의 식별자입니다. *schedule_id* 은 **int**, 기본값은 없습니다. 어느 *schedule_id* 또는 *schedule_name* 지정할 수 있습니다.  
   
- [  **@schedule_name =** ] **'***schedule_name***'**  
+ [ **@schedule_name =** ] **'***schedule_name***'**  
  정보를 나열할 일정의 이름입니다. *schedule_name* 은 **sysname**, 기본값은 없습니다. 어느 *schedule_id* 또는 *schedule_name* 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -60,12 +63,12 @@ sp_help_jobs_in_schedule
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|작업의 고유 ID입니다.|  
-|**originating_server**|**nvarchar (30)**|작업을 가져온 서버의 이름입니다.|  
+|**originating_server**|**nvarchar(30)**|작업을 가져온 서버의 이름입니다.|  
 |**name**|**sysname**|작업의 이름입니다.|  
-|**사용 하도록 설정**|**tinyint**|작업을 실행할 수 있는지를 표시합니다.|  
+|**enabled**|**tinyint**|작업을 실행할 수 있는지를 표시합니다.|  
 |**설명**|**nvarchar(512)**|작업 설명입니다.|  
 |**start_step_id**|**int**|실행을 시작해야 하는 작업 단계의 ID입니다.|  
-|**범주**|**sysname**|작업 범주입니다.|  
+|**category**|**sysname**|작업 범주입니다.|  
 |**소유자**|**sysname**|작업 소유자입니다.|  
 |**notify_level_eventlog**|**int**|Microsoft Windows 응용 프로그램 로그에 알림 이벤트를 기록해야 하는 상황을 나타내는 비트 마스크입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **0** = 안 함<br /><br /> **1** = 작업이 성공할 경우<br /><br /> **2** = 작업이 실패할 경우<br /><br /> **3** (작업의 결과)에 관계 없이 작업이 완료 될 때마다 =|  
 |**notify_level_email**|**int**|작업을 완료했을 때, 어떤 상황에서 알림 전자 메일을 전달해야 할지를 지정하는 비트 마스크입니다. 가능한 값은 동일 **notify_level_eventlog**합니다.|  
@@ -90,7 +93,7 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|작업이 갖고 있는 단계 수입니다.|  
 |**has_schedule**|**int**|작업이 갖고 있는 작업 일정 수입니다.|  
 |**has_target**|**int**|작업이 갖고 있는 대상 서버 수입니다.|  
-|**유형**|**int**|작업의 유형입니다.<br /><br /> **1** = 로컬 작업 합니다.<br /><br /> **2** = 다중 서버 작업입니다.<br /><br /> **0** = 작업에 대상 서버가 없습니다.|  
+|**type**|**int**|작업의 유형입니다.<br /><br /> **1** = 로컬 작업 합니다.<br /><br /> **2** = 다중 서버 작업입니다.<br /><br /> **0** = 작업에 대상 서버가 없습니다.|  
   
 ## <a name="remarks"></a>주의  
  이 프로시저는 지정한 일정에 연결된 작업에 대한 정보를 나열합니다.  

@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FREETEXTTABLE_TSQL
 - FREETEXTTABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - search conditions [SQL Server], meaning matches
 - meaning matches [full-text search]
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - ranked results [full-text search]
 - column searches [full-text search]
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32d2f6ab0ec5faf5603504824ec6917f0297ef72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 412de75f061da97a82e8494c442e17ba00b03ab7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  전체 텍스트 검색에서 지원 되는 형식에 대 한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)합니다.  
   
-(http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
+(http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,10 +83,10 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  WEIGHT, FORMSOF, 와일드카드, NEAR 및 기타 구문은 사용할 수 없습니다. *freetext_string* 단어가 형태소가 분석 되며 동의어 사전을 통해 전달 합니다.  
   
- 언어 *language_term*  
+ LANGUAGE *language_term*  
  쿼리의 일부로 단어 분리, 형태소 분석, 동의어 사전 및 중지 단어 제거에 리소스를 사용할 언어입니다. 이 매개 변수는 선택적이며 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. 경우 *language_term* , 지정한 언어는 검색 조건의 모든 요소에 적용 됩니다. 값을 지정하지 않으면 열의 전체 텍스트 언어가 사용됩니다.  
   
- 언어가 다른 문서가 단일 열에 BLOB(Binary Large Object)으로 함께 저장된 경우 지정된 문서의 LCID(로캘 ID)에 따라 해당 내용을 인덱싱하는 데 사용할 언어가 결정됩니다. 이러한 열을 쿼리할 때 지정 *언어**language_term* 가장 잘 맞는의 확률을 높일 수 있습니다.  
+ 언어가 다른 문서가 단일 열에 BLOB(Binary Large Object)으로 함께 저장된 경우 지정된 문서의 LCID(로캘 ID)에 따라 해당 내용을 인덱싱하는 데 사용할 언어가 결정됩니다. 이러한 열을 쿼리할 때 지정 *언어 * * language_term* 가장 잘 맞는의 확률을 높일 수 있습니다.  
   
  문자열로 지정 하는 경우 *language_term* 에 해당 하는 **별칭** 열 값에는 [sys.syslanguages&#40; Transact SQL &#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 보기.  와 같이 하나의 따옴표로 묶어야 합니다 문자열 '*language_term*'. 정수로 지정 된 경우 *language_term* 는 언어를 식별 하는 실제 LCID입니다. 16 진수 값으로 지정 하는 경우 *language_term* 된 LCID의 16 진수 값은 0x 시작 합니다. 16진수 값은 선행 0을 포함하여 8자리 수를 초과할 수 없습니다.  
   

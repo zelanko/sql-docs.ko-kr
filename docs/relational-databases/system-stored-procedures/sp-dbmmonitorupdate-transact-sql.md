@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorupdate
 - sp_dbmmonitorupdate_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_dbmmonitorupdate
 - database mirroring [SQL Server], monitoring
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a65e87f9bfc26f23e819f1794cb9ce892dc844b6
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e2970c0c6f75755e295fae32a1a5ceab046bb75d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +54,10 @@ sp_dbmmonitorupdate [ database_name ]
  미러링 상태를 업데이트할 데이터베이스의 이름입니다. 경우 *database_name* 을 지정 하지 않으면 프로시저는 서버 인스턴스의 모든 미러된 데이터베이스에 대 한 상태 테이블을 업데이트 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_dbmmonitorupdate** 의 컨텍스트에서만 실행할 수는 **msdb** 데이터베이스입니다.  

@@ -8,26 +8,28 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 340fa0342b627cc672ec0ee97fafee63cd5b7ac0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f3b3e5f9acdd5bcdc6b21dee93ce5e63431d8316
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL 데이터 웨어하우스 저장된 프로시저
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]데이터베이스 역할에 관련 된 작업을 수행 하는 데 사용할 수 있는 기본 제공 된 절차를 제공 합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]다음과 같은 시스템 프로시저에 포함 됩니다.  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스 역할에 관련 된 작업을 수행 하는 데 사용할 수 있는 기본 제공 된 절차를 제공 합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]다음과 같은 시스템 프로시저에 포함 됩니다.  
   
 ##  <a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40; SQL 데이터 웨어하우스 &#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   

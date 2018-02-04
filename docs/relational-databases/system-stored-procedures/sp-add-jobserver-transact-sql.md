@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobserver
 - sp_add_jobserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_jobserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_jobserver
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 218df38c0ba4bb1583560f483e488c8898925496
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6b132644593bd62cc9830ffd61490253e1a89ae2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,23 +47,23 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id =** ] *job_id*  
+ [ **@job_id =** ] *job_id*  
  작업 ID입니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@server_name =** ] **'***서버***'**  
+ [ **@server_name =** ] **'***server***'**  
  작업의 대상 서버 이름입니다. *서버* 은 **nvarchar (30)**, N'(LOCAL) 기본값 '. *서버*일 수 있습니다 **(LOCAL)** 로컬 서버 또는 기존 대상 서버의 이름입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **@automatic_post**에 있는 **sp_add_jobserver**, 되지만 인수에서 표시 되지 않으면 합니다. **@automatic_post**내부 용도로 예약 되어 있습니다.  

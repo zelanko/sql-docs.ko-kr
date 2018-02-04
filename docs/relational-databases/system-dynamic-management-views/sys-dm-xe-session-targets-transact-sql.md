@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_xe_session_targets_TSQL
 - dm_xe_session_targets
 - sys.dm_xe_session_targets_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_session_targets dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 762d4e48f158d112cf7b1e20ca269afa8333dd72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cdc4dd3ffa39c7d245b25a895f189aaaaa6cd332
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxesessiontargets-transact-sql"></a>sys.dm_xe_session_targets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +41,8 @@ ms.lasthandoff: 11/17/2017
   
   |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|이벤트 세션의 메모리 주소입니다. sys.dm_xe_sessions.address와 다 대 일 관계를 갖습니다. Null을 허용하지 않습니다.|  
-|target_name|**nvarchar (60)**|세션 내에 있는 대상의 이름입니다. Null을 허용하지 않습니다.|  
+|event_session_address|**varbinary(8)**|이벤트 세션의 메모리 주소입니다. sys.dm_xe_sessions.address와 다 대 일 관계를 갖습니다. Null을 허용하지 않습니다.|  
+|target_name|**nvarchar(60)**|세션 내에 있는 대상의 이름입니다. Null을 허용하지 않습니다.|  
 |target_package_guid|**uniqueidentifier**|대상이 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
 |execution_count|**bigint**|세션에 대해 대상이 실행된 횟수입니다. Null을 허용하지 않습니다.|  
 |execution_duration_ms|**bigint**|대상이 실행된 총 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
@@ -51,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|보낸 사람|수행할 작업|관계|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_targets.event_session_address|sys.dm_xe_sessions.address|다 대 일|  
   

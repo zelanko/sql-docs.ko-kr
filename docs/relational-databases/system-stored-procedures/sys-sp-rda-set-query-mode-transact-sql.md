@@ -8,27 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_set_query_mode
 - sys.sp_rda_set_query_mode_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_set_query_mode stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a98d67b6d6cec581cdfcff31f7f9c0fd692b2520
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 75040d59b21772d4089fce38074ff22895937e48
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact SQL)
+# <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   로컬 및 원격 데이터 (기본값) 또는 로컬 데이터만 현재 스트레치 사용 데이터베이스 및 해당 테이블에 대 한 쿼리를 반환 하는지 여부를 지정 합니다.  

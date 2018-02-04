@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_update_policy_category_TSQL
 - sp_syspolicy_update_policy_category
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_update_policy_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_update_policy_category
 ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b64fb1140227cb1acf94fdf061118d0988fcbee
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 066af38360505bfb65c328c8f02da3b020d81404
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategory-transact-sql"></a>sp_syspolicy_update_policy_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +47,13 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@name=** ] **'***이름***'**  
+ [ **@name=** ] **'***name***'**  
  정책 범주의 이름입니다. *이름* 은 **sysname**, 이면 반드시 지정 해야 *policy_category_id* 은 NULL입니다.  
   
- [  **@policy_category_id=** ] *policy_category_id*  
+ [ **@policy_category_id=** ] *policy_category_id*  
  정책 범주의 식별자입니다. *policy_category_id* 은 **int**, 이면 반드시 지정 해야 *이름* 은 NULL입니다.  
   
- [  **@mandate_database_subscriptions=** ] *mandate_database_subscriptions*  
+ [ **@mandate_database_subscriptions=** ] *mandate_database_subscriptions*  
  정책 범주에 대해 데이터베이스 구독이 위임되는지 여부를 결정합니다. *mandate_database_subscriptions* 는 **비트** 값 이며 기본값은 NULL입니다. 다음 값 중 하나를 사용할 수 있습니다.  
   
 -   0 = 위임되지 않음  

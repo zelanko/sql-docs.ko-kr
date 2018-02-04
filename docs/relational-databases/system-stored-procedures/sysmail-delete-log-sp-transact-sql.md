@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_log_sp_TSQL
 - sysmail_delete_log_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_log_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_log_sp
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5201706b619eea432dbe8e267a80fd2ceec0750c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4887304daf13f925201640ff89a87011f878ad01
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +51,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
  [  **@logged_before**  =] **'***logged_before***'**  
  날짜 및 지정 된 시간 까지의 항목을 삭제는 *logged_before* 인수입니다. *logged_before* 은 **datetime** 기본값으로 null입니다. NULL은 모든 날짜를 나타냅니다.  
   
- [  **@event_type**  =] **'***event_type***'**  
+ [ **@event_type** = ] **'***event_type***'**  
  로그로 지정 된 형식의 항목을 삭제는 *event_type*합니다. *event_type* 은 **varchar(15)** 이며 기본값은 없습니다. 유효한 항목은 **성공**, **경고**, **오류**, 및 **정보**합니다. NULL은 모든 이벤트 유형을 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

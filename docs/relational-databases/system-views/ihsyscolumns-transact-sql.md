@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - IHsyscolumns
 - IHsyscolumns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: IHsyscolumns view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IHsyscolumns view
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 347a3b691f2933cc4e3fbedcb3ddb59171da0108
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 416b4256f162ee76c10f56aa06a3f952b77e872b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,32 +45,32 @@ ms.lasthandoff: 11/17/2017
 |**xtype**|**tinyint**|물리적 저장소 유형 [sys.systypes &#40; Transact SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|확장 사용자 정의 데이터 형식의 ID입니다.|  
-|**길이**|**bigint**|최대 물리적 저장 길이 [sys.systypes &#40; Transact SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**length**|**bigint**|최대 물리적 저장 길이 [sys.systypes &#40; Transact SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**열 id**|**int**|열 또는 매개 변수의 ID입니다.|  
-|**사분면**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**colid**|**int**|열 또는 매개 변수의 ID입니다.|  
+|**xoffset**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**예약**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**reserved**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|이 열에 대한 기본값의 ID입니다.|  
-|**도메인**|**int**|이 열에 대한 CHECK 제약 조건 또는 규칙의 ID입니다.|  
-|**번호**|**int**|그룹화 될 때의 하위 프로시저 번호 (**0** 프로시저가 아닌 항목에 대 한).|  
+|**domain**|**int**|이 열에 대한 CHECK 제약 조건 또는 규칙의 ID입니다.|  
+|**number**|**int**|그룹화 될 때의 하위 프로시저 번호 (**0** 프로시저가 아닌 항목에 대 한).|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**오프셋**|**int**|이 열이 나타나는 행으로의 오프셋입니다.|  
+|**offset**|**int**|이 열이 나타나는 행으로의 오프셋입니다.|  
 |**collationid**|**int**|열의 데이터 정렬 ID입니다. NULL이 아닌 문자에 대 한 열을 기반 으로합니다.|  
-|**언어**|**int**|열에 대한 언어 식별자입니다.|  
+|**language**|**int**|열에 대한 언어 식별자입니다.|  
 |**상태**|**int**|열 또는 매개 변수의 속성을 설명하는 데 사용하는 비트맵입니다.<br /><br /> **0x08** = 열 null 값을 허용 합니다.<br /><br /> **0x10** = ANSI 패딩을 설정할 때 적용 된 **varchar** 또는 **varbinary** 열이 추가 되었습니다. 에 대 한 후행 공백을 유지 하며 **varchar** 후행 0을 유지 하 고 **varbinary** 열입니다.<br /><br /> **0x40** = 매개 변수가 출력 매개 변수입니다.<br /><br /> **0x80** = 열이 id 열입니다.|  
-|**유형**|**int**|물리적 저장소 유형 [sys.systypes &#40; Transact SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**type**|**int**|물리적 저장소 유형 [sys.systypes &#40; Transact SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**usertype**|**tinyint**|사용자 정의 데이터 형식의 ID [sys.systypes &#40; Transact SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|이 열의 전체 자릿수 수준입니다.|  
-|**크기 조정**|**int**|이 열의 소수 자릿수입니다.|  
-|**계산 됨**|**int**|열이 계산되었는지 표시하는 플래그입니다.<br /><br /> **0** = 조합이 있습니다.<br /><br /> **1** = 계산 합니다.|  
+|**소수 자릿수**|**int**|이 열의 소수 자릿수입니다.|  
+|**iscomputed**|**int**|열이 계산되었는지 표시하는 플래그입니다.<br /><br /> **0** = 조합이 있습니다.<br /><br /> **1** = 계산 합니다.|  
 |**isoutparam**|**int**|프로시저 매개 변수가 출력 매개 변수인지 여부를 나타냅니다.<br /><br /> **1** = true입니다.<br /><br /> **0** = false.|  
 |**isnullable**|**int**|열에 Null 값이 허용되는지 여부를 나타냅니다.<br /><br /> **1** = true입니다.<br /><br /> **0** = false.|  
-|**데이터 정렬**|**int**|열의 데이터 정렬 이름입니다. NULL이 아닌 문자에 대 한 열을 기반 으로합니다.|  
+|**collation**|**int**|열의 데이터 정렬 이름입니다. NULL이 아닌 문자에 대 한 열을 기반 으로합니다.|  
 |**tdscollation**|**int**|TDS(tabular data stream)가 반환한 열의 데이터 정렬 이름입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  

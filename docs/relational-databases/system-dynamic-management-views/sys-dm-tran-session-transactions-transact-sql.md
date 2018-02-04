@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_session_transactions
 - sys.dm_tran_session_transactions_TSQL
 - dm_tran_session_transactions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_session_transactions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_session_transactions dynamic management view
 ms.assetid: c7157491-58c2-49fe-87d7-0c9723113adf
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b247ada006579e642a6ce4c9c4b7b17b153e69c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d5c2c3d24b3e3282a2f91038b2989d30679be4f1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtransessiontransactions-transact-sql"></a>sys.dm_tran_session_transactions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,14 +45,14 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |session_id|**int**|트랜잭션을 실행하고 있는 세션의 ID입니다.|  
 |transaction_id|**bigint**|트랜잭션 ID입니다.|  
-|transaction_descriptor|**binary (8)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트 드라이버와 통신할 때 사용하는 트랜잭션 식별자입니다.|  
+|transaction_descriptor|**binary(8)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트 드라이버와 통신할 때 사용하는 트랜잭션 식별자입니다.|  
 |enlist_count|**int**|트랜잭션에서 작동 중인 세션의 활성 요청 수입니다.|  
 |is_user_transaction|**bit**|1 = 사용자 요청에 의해 시작된 트랜잭션<br /><br /> 0 = 시스템 트랜잭션|  
 |is_local|**bit**|1 = 로컬 트랜잭션<br /><br /> 0 = 분산 트랜잭션 또는 참여한 바운드 세션 트랜잭션|  
 |is_enlisted|**bit**|1 = 참여한 분산 트랜잭션<br /><br /> 0 = 참여한 분산 트랜잭션 아님|  
 |is_bound|**bit**|1 = 바운드 세션을 통해 세션에서 활성화된 트랜잭션<br /><br /> 0 = 바운드 세션을 통해 세션에서 활성화되지 않은 트랜잭션|  
 |open_transaction_count||각 세션에 대해 열린 트랜잭션 수입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   

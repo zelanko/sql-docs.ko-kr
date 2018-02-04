@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
 - sp_trace_generateevent
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_generateevent
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28512a66275000a1d185dabdb1ce96a5ed242165
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f02fbb7e401740f6720fd8a654a38f3a9408e07
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +51,13 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@eventid=**] *event_id*  
+ [ **@eventid=**] *event_id*  
  설정할 이벤트의 ID입니다. *event_id* 은 **int**, 기본값은 없습니다. ID는 82에서 91 설정 된 대로 사용자 정의 이벤트를 나타내는 사이의 이벤트 번호 중 하나 여야 합니다 [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)합니다.  
   
- [  **@userinfo** =] **'***user_info***'**  
+ [ **@userinfo**= ] **'***user_info***'**  
  이벤트 발생 이유를 나타내는 선택적 사용자 정의 문자열입니다. *user_info* 은 **nvarchar (128)**, 기본값은 NULL입니다.  
   
- [  **@userdata** =] *user_data*  
+ [ **@userdata**= ] *user_data*  
  이벤트에 대한 선택적 사용자 지정 데이터입니다. *user_data* 은 **varbinary (8000)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

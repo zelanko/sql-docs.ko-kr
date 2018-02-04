@@ -8,7 +8,8 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98a5f763d57c6cfb3a6c11d308fbe71e53ded7f4
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5018082d7a9ee06c1015925e3efad92eecc5133b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser 서비스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]브라우저는 다음과 같은 작업에 적용 됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]브라우저는 다음과 같은 작업에 적용 됩니다.  
   
 -   사용할 수 있는 서버 목록 찾아보기  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 서비스(sqlbrowser)는 [!INCLUDE[ssAS](../../includes/ssas-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스에 대해 인스턴스 이름과 버전 번호를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]브라우저와 함께 설치 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 하는 동안 또는 사용 하 여 브라우저를 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 자동으로 시작됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 구성하거나 설치 중에 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 자동으로 시작됩니다.  
   
 -   설치를 업그레이드하는 경우  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/17/2018
 -   각 인스턴스에 대해 선택한 포트를 서버의 다른 서비스나 응용 프로그램에서 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용할 수 없게 됩니다.  
   
 ## <a name="clustering"></a>Clustering  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]브라우저는 클러스터형된 리소스가 아니며와 다른 클러스터 노드 간에서 장애 조치를 지원 하지 않습니다. 클러스터의 경우 클러스터의 노드마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 설치하고 튜닝해야 합니다. 클러스터에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 IP_ANY에서 수신합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 클러스터형 리소스가 아니며 클러스터 노드 간 장애 조치(Failover)를 지원하지 않으므로 클러스터의 경우 클러스터의 노드마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 설치하고 튜닝해야 합니다. 클러스터에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 IP_ANY에서 수신합니다.  
   
 > [!NOTE]  
 >  IP_ANY에서 수신할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 처음 발견되는 IP/포트 쌍을 반환하므로 사용자가 IP마다 같은 TCP 포트를 구성해야 하는 특정 IP에서 수신하도록 설정할 수 있습니다.  
@@ -98,7 +100,7 @@ ms.lasthandoff: 01/17/2018
   
  마지막 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스도 제거됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]사용 하 여 문제 해결을 위해 명령 프롬프트에서 브라우저를 시작할 수는 **-c** 전환:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 **-c** 스위치를 사용하여 명령 프롬프트에서 시작하여 문제를 해결할 수 있습니다.  
   
 ```  
 <drive>\<path>\sqlbrowser.exe -c  
@@ -107,7 +109,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="security"></a>보안  
   
 ### <a name="account-privileges"></a>계정 권한  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 UDP 포트에서 수신하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol(SSRP)을 사용하여 인증되지 않은 요청을 허용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]브라우저는 악의적 공격을 최대한 차단 하려면 권한이 낮은 사용자의 보안 컨텍스트에서 실행 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 로그온 계정을 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser의 최소 사용자 권한은 다음과 같습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 UDP 포트에서 수신하고 SSRP( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol)를 사용하여 인증되지 않은 요청을 허용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]브라우저는 악의적 공격을 최대한 차단 하려면 권한이 낮은 사용자의 보안 컨텍스트에서 실행 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 로그온 계정을 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser의 최소 사용자 권한은 다음과 같습니다.  
   
 -   네트워크에서 이 컴퓨터 액세스 거부  
   

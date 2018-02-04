@@ -8,11 +8,14 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: TSQL
+applies_to:
+- SQL Server
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - distribution databases [SQL Server replication], system views
 - metadata [SQL Server], views
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], system views
 - system views [SQL Server], replication
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b73dfed7709b76d20856fe03648a7e0c6db0d258
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 98cf79d757e639a1187becbb9cfaa63c0fe7ff4f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="replication-views-transact-sql"></a>복제 뷰(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

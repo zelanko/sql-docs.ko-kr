@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorchangealert_TSQL
 - sp_dbmmonitorchangealert
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 276f3b3f6f3194a311874db3724f07bf8ab053d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41132fa5fd69036e9bc504628cd353d809d6a0bf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +58,7 @@ sp_dbmmonitorchangealert database_name
  *alert_id*  
  추가되거나 변경될 경고를 식별하는 정수 값입니다. 다음 값 중 하나를 지정합니다.  
   
-|값|성능 메트릭|경고 임계값|  
+|Value|성능 메트릭|경고 임계값|  
 |-----------|------------------------|-----------------------|  
 |1.|보내지 않은 가장 오래된 트랜잭션|주 서버 인스턴스에서 경고가 생성되기까지 Send Queue에 누적될 수 있는 트랜잭션에 해당하는 시간(분)을 지정합니다. 이 경고는 시간을 기준으로 발생 가능한 데이터 손실을 측정하는 데 도움이 되며 특히 성능 우선 모드와 관련이 있습니다. 그러나 파트너의 연결이 끊어져 미러링이 일시 중지되거나 일시 중단되면 이 경고는 보호 우선 모드와도 관련이 있습니다.|  
 |2|보내지 않은 로그|주 서버 인스턴스에서 경고를 생성하는 보내지 않은 로그 크기(KB)를 지정합니다. 이 경고는 KB를 기준으로 발생 가능한 데이터 손실을 측정하는 데 도움이 되며 특히 성능 우선 모드와 관련이 있습니다. 그러나 파트너의 연결이 끊어져 미러링이 일시 중지되거나 일시 중단되면 이 경고는 보호 우선 모드와도 관련이 있습니다.|  
@@ -72,7 +74,7 @@ sp_dbmmonitorchangealert database_name
 > [!NOTE]  
 >  현재 값을 보려면 실행는 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) 저장 프로시저입니다.  
   
- *사용 하도록 설정*  
+ *enabled*  
  경고 사용 여부  
   
  0 = 경고를 사용하지 않습니다.  
@@ -83,10 +85,10 @@ sp_dbmmonitorchangealert database_name
 >  보존 기간은 항상 사용됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Permissions  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  

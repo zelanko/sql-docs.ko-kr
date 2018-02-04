@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - system stored procedures [SQL Server], log shipping
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7342eb818d7a607d7c7d6a03a62c92c3e9c6bd7c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 676307a8bc856bfb1fe1becbca42153697b09912
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>로그 전달 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이상 버전에서는 구성, 수정 및 로그 전달 구성을 모니터링 하는 데 사용 되는 다음 시스템 저장 프로시저를 지원 합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 이상 버전에서 지원, 구성 하는 데 사용 되는 다음과 같은 시스템 저장 프로시저 수정 및 로그 전달 구성을 모니터링 합니다.  
   
 |||  
 |-|-|  
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |[sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)||  
   
 ## <a name="see-also"></a>관련 항목:  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;에 대 한 SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

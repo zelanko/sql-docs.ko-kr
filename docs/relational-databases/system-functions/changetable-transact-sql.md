@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
 - CHANGETABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: fd13db35ee0a53d1c752b3ed891ed6c0fedeb557
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +90,7 @@ CHANGETABLE (
  *table_alias*  
  CHANGETABLE에서 반환하는 테이블의 별칭 이름입니다. *table_alias* 필수 항목이 며은 유효한 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
   
- *column_alias를 사용할*  
+ *column_alias*  
  CHANGETABLE에서 반환하는 열에 대한 선택적 열 별칭 또는 열 별칭의 목록입니다. 결과에 중복 이름이 있는 경우 열 이름을 사용자 지정할 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  

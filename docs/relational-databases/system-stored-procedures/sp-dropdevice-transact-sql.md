@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dropdevice_TSQL
 - sp_dropdevice
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup devices [SQL Server], deleting
 - sp_dropdevice
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbc7324d26e19d03472d759db8845035ea5a4dd8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1286184ef82308ed12c8c8209b14eeb2a83f86a9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdropdevice-transact-sql"></a>sp_dropdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +48,17 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@logicalname=** ] **'***장치***'**  
+ [ **@logicalname=** ] **'***device***'**  
  에 나열 된 데이터베이스 장치 또는 백업 장치의 논리적 이름입니다 **master.dbo.sysdevices.name**합니다. *장치* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@delfile=** ] **'***delfile***'**  
+ [ **@delfile=** ] **'***delfile***'**  
  물리적 백업 장치 파일의 삭제 여부를 지정합니다. *delfile* 은 **varchar(7)**합니다. 로 지정 하는 경우 **DELFILE**, 물리적 백업 장치 디스크 파일이 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_dropdevice** 트랜잭션 내에서는 사용할 수 없습니다.  

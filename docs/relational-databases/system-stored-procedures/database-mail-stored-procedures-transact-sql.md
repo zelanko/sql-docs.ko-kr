@@ -8,31 +8,33 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Database Mail [SQL Server], stored procedures
 - mail [SQL Server], stored procedures
 - e-mail [SQL Server], stored procedures
 - system stored procedures [SQL Server], mail
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4303d99e37aa30edb5bde9e5d9dd9ca05a95791c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 253201cfa918dc6d4f3590af7e5cc09c3e7b3999
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>데이터베이스 메일 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음과 같은 시스템 저장 프로시저의 인스턴스 내에서 전자 메일 작업을 수행 하는 데 사용 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음과 같은 시스템 저장 프로시저의 인스턴스 내에서 전자 메일 작업을 수행 하는 데 사용 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="database-mail-procedures"></a>데이터베이스 메일 프로시저  
   

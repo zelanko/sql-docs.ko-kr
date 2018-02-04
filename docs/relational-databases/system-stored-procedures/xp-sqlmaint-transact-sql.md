@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - xp_sqlmaint
 - xp_sqlmaint_TSQL
-dev_langs: TSQL
-helpviewer_keywords: xp_sqlmaint
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- xp_sqlmaint
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b32c6c32d3af26713713d513fa3c8255cfd3ef9d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b39c93aa08d46dd31b2a063631ce567593319df4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +58,7 @@ xp_sqlmaint 'switch_string'
  없음 오류를 반환 된 **sqlmaint** 유틸리티 실패 합니다.  
   
 ## <a name="remarks"></a>주의  
- SQL Server 인증으로 로그온 한 사용자가이 프로시저를 호출 하는 경우는 **-U "***login_id***"** 및 **-P "**  *암호***"** 스위치 앞에 놓이게 됩니다 *switch_string* 실행 하기 전에. 사용자가 Windows 인증으로 로그온 하는 경우 *switch_string* 를 변경 하지 않고 전달 **sqlmaint**합니다.  
+ SQL Server 인증으로 로그온 한 사용자가이 프로시저를 호출 하는 경우는 **-U "***login_id***"** 및 **-P "***암호***"** 스위치 앞에 놓이게 됩니다 *switch_string* 실행 하기 전에. 사용자가 Windows 인증으로 로그온 하는 경우 *switch_string* 를 변경 하지 않고 전달 **sqlmaint**합니다.  
   
 ## <a name="permissions"></a>Permissions  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  

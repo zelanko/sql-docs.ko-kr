@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - smart_admin.fn_backup_db_config_TSQL
 - fn_backup_db_config
 - fn_backup_db_config_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - smart_admin.fn_backup_db_config
 - fn_backup_db_config
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a5c1d76f634a7d6304a17b5017d46c14022116d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d18a24bdf8021fd27df0ec51e4937e80ae9c0516
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +64,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |credential_name|SYSNAME|저장소 계정 인증에 사용되는 SQL 자격 증명의 이름입니다. NULL 값은 SQL 자격 증명이 설정되지 않았음을 나타냅니다.|  
 |retention_days|INT|현재 보존 기간(일)입니다. NULL 값은 이 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 구성되지 않았음을 나타냅니다.|  
 |is_smart_backup_enabled|INT|이 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 현재 사용하도록 설정되었는지 여부를 나타냅니다. 값 1은 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 현재 사용하도록 설정되었음을 나타내고 값 0은 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 이 데이터베이스에 대해 사용하도록 설정되지 않았음을 나타냅니다.|  
-|storage_url|NVARCHAR (1024)|저장소 계정의 URL입니다.|  
+|storage_url|NVARCHAR(1024)|저장소 계정의 URL입니다.|  
 |Encryption_algorithm|NCHAR(20)|백업을 암호화할 때 사용할 현재 암호화 알고리즘을 반환합니다.|  
 |Encryptor_type|NCHAR(15)|암호기 설정인: 인증서 또는 비대칭 키입니다.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|인증서 또는 비대칭 키의 이름입니다.|  

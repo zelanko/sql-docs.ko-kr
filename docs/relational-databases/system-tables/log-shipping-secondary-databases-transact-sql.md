@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_secondary_databases_TSQL
 - log_shipping_secondary_databases
-dev_langs: TSQL
-helpviewer_keywords: log_shipping_secondary_databases system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- log_shipping_secondary_databases system table
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60237602284820c646513b0ff6d8c1fcc8002cce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dce0ca2449d33f23061e2d005d22a9c9f450edcd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="logshippingsecondarydatabases-transact-sql"></a>log_shipping_secondary_databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +47,11 @@ ms.lasthandoff: 11/17/2017
 |**block_size**|**int**|백업 장치의 블록 크기로 사용되는 크기(바이트)입니다.|  
 |**buffer_count**|**int**|백업 또는 복원 작업에 사용되는 버퍼의 총 개수입니다.|  
 |**max_transfer_size**|**int**|최대 입력 또는 출력 요청의 발행를 바이트 단위로 크기 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 장치에 있습니다.|  
-|**last_restored_file**|**nvarchar (500)**|보조 데이터베이스에 복원된 마지막 백업 파일의 이름입니다.|  
+|**last_restored_file**|**nvarchar(500)**|보조 데이터베이스에 복원된 마지막 백업 파일의 이름입니다.|  
 |**last_restored_date**|**datetime**|보조 데이터베이스에 수행된 마지막 복원 작업의 시간과 날짜입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;에 대 한 SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_secondary_database &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [sp_help_log_shipping_secondary_database&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   

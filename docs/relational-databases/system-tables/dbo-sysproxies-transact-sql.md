@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysproxies_TSQL
 - dbo.sysproxies
 - sysproxies
-dev_langs: TSQL
-helpviewer_keywords: sysproxies system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysproxies system table
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b28fdf8c7cee40fa088ee0d7634e4ea17aba91c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9a1e16809177b6bec502493d03527343fecf6923
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |**proxy_id**|**int**|프록시 계정의 ID입니다.|  
 |**name**|**sysname**|프록시 계정의 이름입니다.|  
 |**credential_id**|**int**|프록시 계정이 사용하는 자격 증명의 ID입니다.|  
-|**사용 하도록 설정**|**tinyint**|프록시 계정의 상태입니다.<br /><br /> **0** = 사용 안 함. **1** = 사용 하도록 설정 합니다.|  
+|**enabled**|**tinyint**|프록시 계정의 상태입니다.<br /><br /> **0** = 사용 안 함. **1** = 사용 하도록 설정 합니다.|  
 |**설명**|**nvarchar(512)**|프록시 계정을 만들 때 사용자가 입력한 설명입니다.|  
 |**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* 사용자 또는 그룹에 연결 된 프록시 자격 증명의 합니다.|  
 |**credential_date_created**|**datetime**|자격 증명을 작성한 날짜와 시간입니다.|  

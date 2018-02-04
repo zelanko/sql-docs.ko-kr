@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_item
 - sp_syscollector_update_collection_item_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2adc56a28af1216b1eaca3b7bcdd48365812dc2c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 680a82e86a1d958a81c9b5c238ac4015307ce51c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +53,13 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  컬렉션 항목을 식별하는 고유한 식별자입니다. *collection_item_id* 은 **int** 이며 기본값은 NULL입니다. *collection_item_id* 경우 값이 있어야 *이름* 은 NULL입니다.  
   
  [ @name =] '*이름*'  
  컬렉션 항목의 이름입니다. *이름* 은 **sysname** 이며 기본값은 NULL입니다. *이름* 경우 값이 있어야 *collection_item_id* 은 NULL입니다.  
   
- [ @new_name =] '*new_name*'  
+ [ @new_name = ] '*new_name*'  
  컬렉션 항목의 새 이름입니다. *new_name* 은 **sysname**를 사용 하는 경우 빈 문자열일 수 없습니다.  
   
  *new_name* 고유 해야 합니다. 현재 컬렉션 항목 이름의 목록을 보려면 syscollector_collection_items 시스템 뷰를 쿼리합니다.  

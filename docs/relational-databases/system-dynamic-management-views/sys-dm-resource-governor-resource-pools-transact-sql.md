@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_resource_governor_resource_pools_TSQL
 - sys.dm_resource_governor_resource_pools
 - dm_resource_governor_resource_pools
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_resource_governor_resource_pools dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d98b1faa8a39ae5b347fd6dbe9a35db1b4ce9097
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a66fe36785d2f54e265144df3b9fa1d454fd305c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -79,7 +82,7 @@ ms.lasthandoff: 11/17/2017
 |write_io_stall_queued_ms|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 쓰기 IO 도착과 완료 사이의 총 시간(밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.<br /><br /> IO 리소스 관리로 인해 발생한 지연 시간입니다.|  
 |io_issue_violations_total|**int**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 총 IO 실행 위반 수입니다. 즉, IO 실행 속도가 예약된 속도보다 낮았던 횟수입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.|  
 |io_issue_delay_total_ms|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 예약된 IO 실행과 실제 IO 실행 사이의 총 시간(밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="remarks"></a>주의  
  리소스 관리자 작업 그룹 및 리소스 관리자 리소스 풀에는 다 대 일 매핑이 있습니다. 따라서 리소스 풀 통계의 대부분은 작업 그룹 통계에서 파생됩니다.  

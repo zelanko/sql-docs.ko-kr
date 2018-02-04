@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_proxy_for_subsystem_TSQL
 - sp_enum_proxy_for_subsystem
-dev_langs: TSQL
-helpviewer_keywords: sp_enum_proxy_for_subsystems
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b708d467cf246a221d14802abb839c96de85ffe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bf94c94aed1f43e747703d5f82a7b842252dafef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +50,16 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@proxy_id**  =] *proxy_id*  
+ [ **@proxy_id** = ] *proxy_id*  
  정보를 나열할 프록시의 ID입니다. *proxy_id* 은 **int**, 기본값은 NULL입니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
   
- [  **@proxy_name**  =] **'***proxy_name***'**  
+ [ **@proxy_name** = ] **'***proxy_name***'**  
  정보를 나열할 프록시의 이름입니다. *proxy_name* 은 **sysname**, 기본값은 NULL입니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
   
- [  **@subsystem_id**  =] *subsystem_id*  
+ [ **@subsystem_id** = ] *subsystem_id*  
  정보를 나열할 하위 시스템의 ID입니다. *subsystem_id* 은 **int**, 기본값은 NULL입니다. 중 하나는 *subsystem_id* 또는 *subsystem_name* 지정할 수 있습니다.  
   
- [  **@subsystem_name**  =] **'***subsystem_name***'**  
+ [ **@subsystem_name** = ] **'***subsystem_name***'**  
  정보를 나열할 하위 시스템의 이름입니다. *subsystem_name* 은 **sysname**, 기본값은 NULL입니다. 중 하나는 *subsystem_id* 또는 *subsystem_name* 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

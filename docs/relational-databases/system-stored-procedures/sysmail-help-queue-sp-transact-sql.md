@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
 - sysmail_help_queue_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_queue_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 233187d223f7d22c5a950fcb2d29063f37be7c7d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e83aba8601f4329a496229eca329035a95b283c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@queue_type**  =] **'***queue_type***'**  
+ [ **@queue_type** = ] **'***queue_type***'**  
  로 지정 된 유형의 전자 메일을 삭제 하는 선택적 인수는 *queue_type*합니다. *queue_type* 은 **nvarchar(6)** 이며 기본값은 없습니다. 유효한 항목은 **메일** 및 **상태**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -54,10 +57,10 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar(6)**|큐의 유형입니다. 가능한 값은 **메일** 및 **상태**합니다.|  
-|**길이**|**int**|지정된 큐의 메일 항목 수입니다.|  
+|**length**|**int**|지정된 큐의 메일 항목 수입니다.|  
 |**상태**|**nvarchar(64)**|모니터의 상태입니다. 가능한 값은 **비활성** (큐가 비활성 상태인), **NOTIFIED** (큐 되었습니다 되려면 확인 메일 알림을), 및 **RECEIVES_OCCURRING** (큐 수신) 합니다.|  
-|**last_empty_rowset_time**|**날짜/시간**|쿼리가 마지막으로 비워진 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
-|**last_activated_time**|**날짜/시간**|큐가 마지막으로 활성화된 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
+|**last_empty_rowset_time**|**DATETIME**|쿼리가 마지막으로 비워진 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
+|**last_activated_time**|**DATETIME**|큐가 마지막으로 활성화된 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
   
 ## <a name="remarks"></a>주의  
  데이터베이스 메일 문제를 해결할 때 사용 하 여 **sysmail_help_queue_sp** 마지막 및 큐의 상태 큐에 있는 항목 수를 보려면 활성화 합니다.  

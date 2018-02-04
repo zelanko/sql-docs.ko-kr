@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_add_policy_category_subscription
 - sp_syspolicy_add_policy_category_subscription_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_add_policy_category_subscription
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_add_policy_category_subscription
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec357296ce840bad84b6a0f1985858684f610a2b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bf76a1f42289d52919605c85733304ba58024ca1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +49,18 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@target_type=** ] **'***target_type***'**  
+ [ **@target_type=** ] **'***target_type***'**  
  범주 구독의 대상 유형입니다. *target_type* 은 **sysname**필요 하 고 'DATABASE'로 설정 되어야 합니다.  
   
- [  **@target_object=** ] **'***target_object***'**  
+ [ **@target_object=** ] **'***target_object***'**  
  범주를 구독할 데이터베이스의 이름이입니다. *target_object* 은 **sysname**, 이며 필수입니다.  
   
- [  **@policy_category=** ] **'***policy_category***'**  
+ [ **@policy_category=** ] **'***policy_category***'**  
  구독할 정책 범주의 이름이입니다. *policy_category* 은 **sysname**, 이며 필수입니다.  
   
  에 대 한 값을 가져오려면 *policy_category*, msdb.dbo.syspolicy_policy_categories 시스템 뷰를 쿼리 합니다.  
   
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
+ [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  범주 구독의 식별자입니다. *policy_category_subscription_id* 은 **int**를 출력으로 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - trace_xe_action_map_TSQL
 - trace_xe_action_map
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - extended events [SQL Server], tables
 - trace_xe_action_map
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
-caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b732518ba70a92001be72a6b86ec7408581e263
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: eb400cc72fbe965575b42355f407d35c260d58e9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="extended-events-tables---tracexeactionmap"></a>확장 이벤트 테이블-trace_xe_action_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +41,8 @@ ms.lasthandoff: 11/17/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|매핑될 SQL 추적 열의 ID입니다.|  
-|package_name|**nvarchar (60)**|매핑된 동작이 있는 Extended Events 패키지의 이름입니다.|  
-|xe_action_name|**nvarchar (60)**|SQL 추적 열에 매핑된 Extended Events 동작의 이름입니다.|  
+|package_name|**nvarchar(60)**|매핑된 동작이 있는 Extended Events 패키지의 이름입니다.|  
+|xe_action_name|**nvarchar(60)**|SQL 추적 열에 매핑된 Extended Events 동작의 이름입니다.|  
   
 ## <a name="remarks"></a>주의  
  다음 쿼리를 사용하여 SQL 추적 열에 해당하는 Extended Events 동작을 식별할 수 있습니다.  

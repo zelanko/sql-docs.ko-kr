@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GetFileNamespacePath
 - GetFileNamespacePath_TSQL
-dev_langs: TSQL
-helpviewer_keywords: GetFileNamespacePath function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7ba6d9582a0eb3660f206dc68087f4fa4852a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ccab7d6345d49490f936c5080e9e034be7c79855
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 01/02/2018
 ```  
   
 ## <a name="arguments"></a>인수  
- *열 이름*  
+ *column-name*  
  varbinary (max) 열 이름을 **file_stream** FileTable의 열입니다.  
   
  *열 이름* 값 유효한 열 이름 이어야 합니다. 식이나 다른 데이터 형식의 열에서 변환 또는 캐스팅된 값은 사용할 수 없습니다.  
@@ -49,7 +52,7 @@ ms.lasthandoff: 01/02/2018
  *is_full_path*  
  상대 경로를 반환할지 절대 경로를 반환할지 지정하는 정수 식입니다. *is_full_path* 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|데이터베이스 수준 디렉터리 내에서의 상대 경로를 반환합니다.<br /><br /> 기본값입니다.|  
 |**1**|`\\computer_name`으로 시작하는 전체 UNC 경로를 반환합니다.|  
@@ -57,9 +60,9 @@ ms.lasthandoff: 01/02/2018
  *@option*  
  경로에 있는 서버 구성 요소의 형식을 지정하는 방법을 정의하는 정수 식입니다. *@option*다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
-|**0**|NetBIOS 형식으로 변환된 서버 이름을 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> 이것은 기본값입니다.|  
+|**0**|NetBIOS 형식으로 변환된 서버 이름을 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> 이 값은 기본값입니다.|  
 |**1**|서버 이름을 변환하지 않고 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
 |**2**|전체 서버 경로를 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDB`|  
   

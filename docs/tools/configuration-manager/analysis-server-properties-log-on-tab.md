@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39ed54ceae41ef4399cdbcaf3c42b077590d180e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 915d8b9b06d30ce7690b177f71f14d3ce8f38ca8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>분석 서버 속성(로그온 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **로그온에** 탭은 **분석 서버 속성** 대화 상자에서 사용할 계정을 지정 하려면는 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 서비스를 선택한를 시작 및 서비스를 중지 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**분석 서버 속성** 대화 상자의 **로그온** 탭을 사용하여 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  
   
 > [!NOTE]  
 >  클러스터형 인스턴스의 서비스에서 사용하는 **계정 이름** 을 변경하는 경우 새 계정은 변경되는 서비스의 설치 중에 지정한 도메인 그룹의 멤버여야 합니다. 그렇지 않으면 해당 그룹에 멤버를 추가할 수 있는 권한이 있어야 합니다. 그룹 멤버 자격을 수정할 권한이 없을 경우 도메인 관리자에게 문의하십시오.  

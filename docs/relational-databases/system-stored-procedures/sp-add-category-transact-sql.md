@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_category
 - sp_add_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_category
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a180b1719f11b19097d2599847f1167f15ce7424
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7df42005cfd21c4030990784c7efd482c9312118
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +49,32 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@class =** ] **'***클래스***'**  
+ [ **@class =** ] **'***class***'**  
  추가할 범주의 클래스입니다. *클래스* 은 **varchar(8)** , 작업의 기본 값 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |JOB|작업 범주를 추가합니다.|  
 |ALERT|경고 범주를 추가합니다.|  
 |OPERATOR|운영자 범주를 추가합니다.|  
   
- [  **@type =** ] **'***형식***'**  
+ [ **@type =** ] **'***type***'**  
  추가할 범주의 유형입니다. *형식* 은 **varchar(12)**의 기본값은 **로컬**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |LOCAL|로컬 작업 범주|  
 |다중 서버|다중 서버 작업 범주|  
 |없음|JOB이 아닌 다른 클래스에 대 한 범주**합니다.**|  
   
- [  **@name =** ] **'***이름***'**  
+ [ **@name =** ] **'***name***'**  
  추가할 범주의 이름입니다. 이름은 지정한 클래스 내에서 고유해야 합니다. *이름* 은 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_add_category** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  

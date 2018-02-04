@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - sys.fn_builtin_permissions_TSQL
 - fn_builtin_permissions_TSQL
 - sys.fn_builtin_permissions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - compact permissions types
 - viewing permission hierarchy
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - displaying permission hierarchy
 - sys.fn_builtin_permissions function
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a52966aaa6bd8cc58c58eeb7fbf16bc6ab31afa
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 659efe9cd24a9040101f48e0e42f65355fe6d077
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,19 +73,19 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  DEFAULT와 동일합니다.  
   
- **'**< l e _ >**'**  
- 특정 보안 개체 클래스의 이름으로 호출할 때 sys.fn_builtin_permissions 클래스에 적용 되는 모든 사용 권한을 반환 합니다. < l e _ >는 따옴표로 묶어야 하는 문자열 리터럴입니다. **nvarchar (60)**  
+ **'**<securable_class>**'**  
+ 특정 보안 개체 클래스의 이름으로 호출할 때 sys.fn_builtin_permissions 클래스에 적용 되는 모든 사용 권한을 반환 합니다. < l e _ >는 따옴표로 묶어야 하는 문자열 리터럴입니다. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
 |열 이름|데이터 형식|데이터 정렬|Description|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar (60)**|서버의 데이터 정렬|보안 개체 클래스에 대한 설명입니다.|  
-|permission_name|**nvarchar (60)**|서버의 데이터 정렬|사용 권한 이름입니다.|  
+|class_desc|**nvarchar(60)**|서버의 데이터 정렬|보안 개체 클래스에 대한 설명입니다.|  
+|permission_name|**nvarchar(60)**|서버의 데이터 정렬|사용 권한 이름입니다.|  
 |유형|**varchar(4)**|서버의 데이터 정렬|단축 사용 권한 유형 코드입니다. 다음 표를 참조하십시오.|  
-|covering_permission_name|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 이 클래스에 대한 다른 사용 권한을 포함하는 사용 권한의 이름입니다.|  
-|parent_class_desc|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 현재 클래스를 포함하는 부모 클래스의 이름입니다.|  
-|parent_covering_permission_name|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 부모 클래스에 대한 다른 모든 사용 권한을 포함하는 사용 권한의 이름입니다.|  
+|covering_permission_name|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 이 클래스에 대한 다른 사용 권한을 포함하는 사용 권한의 이름입니다.|  
+|parent_class_desc|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 현재 클래스를 포함하는 부모 클래스의 이름입니다.|  
+|parent_covering_permission_name|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 부모 클래스에 대한 다른 모든 사용 권한을 포함하는 사용 권한의 이름입니다.|  
   
 ### <a name="permission-types"></a>사용 권한 유형  
   
@@ -117,7 +119,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
-|AL|ALTER|User|  
+|AL|ALTER|USER|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
 |ALAG|ALTER ANY AVAILABILITY GROUP<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
@@ -184,7 +186,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
-|CL|CONTROL|User|  
+|CL|CONTROL|USER|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
 |CO|CONNECT|DATABASE|  
 |CO|CONNECT|ENDPOINT|  
@@ -224,9 +226,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **적용 대상**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|Delete|DATABASE|  
-|DL|Delete|OBJECT|  
-|DL|Delete|SCHEMA|  
+|DL|DELETE|DATABASE|  
+|DL|DELETE|OBJECT|  
+|DL|DELETE|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|CREATE 문을 실행하기 전에|DATABASE|  
 |EX|CREATE 문을 실행하기 전에|OBJECT|  
@@ -235,7 +237,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |EX|CREATE 문을 실행하기 전에|XML SCHEMA COLLECTION|  
 |IAL|IMPERSONATE ANY LOGIN<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |IM|IMPERSONATE|Login|  
-|IM|IMPERSONATE|User|  
+|IM|IMPERSONATE|USER|  
 |IN|INSERT|DATABASE|  
 |IN|INSERT|OBJECT|  
 |IN|INSERT|SCHEMA|  
@@ -313,7 +315,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
-|VW|VIEW DEFINITION|User|  
+|VW|VIEW DEFINITION|USER|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_account_sp
 - sysmail_add_account_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_add_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_add_account_sp
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e24d90b20c91ab6dfb510faad46ceb2b5f8cc19b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 837e8e5035e69b3e8a35d14acce71d02d549d6a7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,34 +58,34 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  추가할 계정의 이름입니다. *account_name* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@email_address**  =] **'***email_address***'**  
+ [ **@email_address** = ] **'***email_address***'**  
  메시지를 보낼 전자 메일 주소입니다. 이 주소는 인터넷 전자 메일 주소여야 합니다. *email_address* 은 **nvarchar (128)**, 기본값은 없습니다. 예를 들어에 대 한 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 주소에서 전자 메일을 보낼 수 있습니다  **SqlAgent@Adventure-Works.com** 합니다.  
   
- [  **@display_name**  =] **'***display_name***'**  
+ [ **@display_name** = ] **'***display_name***'**  
  이 계정에서 보내는 전자 메일 메시지에 사용할 표시 이름입니다. *display_name* 은 **nvarchar (128)**, 기본값은 NULL입니다. 예를 들어에 대 한 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 이름을 표시할 수 있습니다 **SQL Server Agent Automated Mailer** 전자 메일 메시지에 있습니다.  
   
- [  **@replyto_address**  =] **'***replyto_address***'**  
+ [ **@replyto_address** = ] **'***replyto_address***'**  
  이 계정에서 보낸 메시지에 대한 응답이 전달되는 주소입니다. *replyto_address* 은 **nvarchar (128)**, 기본값은 NULL입니다. 예를 들어 계정에 대 한 회신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 관리자 인 에이전트를 실행할 수 있습니다  **danw@Adventure-Works.com** 합니다.  
   
- [  **@description**  =] **'***설명***'**  
+ [ **@description** = ] **'***description***'**  
  계정에 대한 설명입니다. *설명* 은 **nvarchar (256)**, 기본값은 NULL입니다.  
   
- [  **@mailserver_name**  =] **'***server_name***'**  
+ [ **@mailserver_name** = ] **'***server_name***'**  
  이 계정에 사용할 SMTP 메일 서버의 이름 또는 IP 주소입니다. 실행 하는 컴퓨터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확인할 수 있어야는 *server_name* IP 주소입니다. *server_name* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@mailserver_type**  =] '*server_type*'  
+ [ **@mailserver_type** = ] '*server_type*'  
  전자 메일 서버의 유형입니다. *server_type* 은 **sysname**, 기본값은 **'SMTP'**...  
   
- [  **@port**  =] *port_number*  
+ [ **@port** = ] *port_number*  
  전자 메일 서버의 포트 번호입니다. *port_number* 은 **int**, 기본값은 25입니다.  
   
- [  **@username**  =] **'***username***'**  
+ [ **@username** = ] **'***username***'**  
  전자 메일 서버에 로그온하는 데 사용할 사용자 이름입니다. *사용자 이름* 은 **nvarchar (128)**, 기본값은 NULL입니다. 이 매개 변수가 NULL이면 데이터베이스 메일은 이 계정에 대한 인증을 사용하지 않습니다. 메일 서버에 인증이 필요하지 않은 경우 username에 NULL을 사용합니다.  
   
- [  **@password**  =] **'***암호***'**  
+ [ **@password** = ] **'***password***'**  
  전자 메일 서버에 로그온하는 데 사용할 암호입니다. *암호* 은 **nvarchar (128)**, 기본값은 NULL입니다. username을 지정하지 않으면 암호를 제공할 필요가 없습니다.  
   
  [  **@use_default_credentials**  =] use_default_credentials  
@@ -91,7 +94,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  [  **@enable_ssl**  =] enable_ssl  
  데이터베이스 메일에서 SSL(Secure Sockets Layer)을 사용하여 통신을 암호화할지 여부를 지정합니다. **Enable_ssl** 는 bit 이며 기본값은 0입니다.  
   
- [  **@account_id**  =] *account_id* 출력  
+ [ **@account_id** = ] *account_id* OUTPUT  
  새 계정의 계정 ID를 반환합니다. *account_id* 은 **int**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

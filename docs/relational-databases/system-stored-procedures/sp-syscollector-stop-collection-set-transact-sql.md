@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_stop_collection_set_TSQL
 - sp_syscollector_stop_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f91cbec86a4799a6172525ba2633be9f34dcdd9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 828d097a749fd1c0db89d24d2079fed5a5fd2ce9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +50,13 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @collection_set_id =] *collection_set_id*  
+ [ @collection_set_id = ] *collection_set_id*  
  컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 이며 기본값은 NULL입니다. *collection_set_id* 경우 값이 있어야 *이름* 은 NULL입니다.  
   
  [ @name =] '*이름*'  
  컬렉션 집합의 이름입니다. *이름* 은 **sysname** 이며 기본값은 NULL입니다. *이름* 경우 값이 있어야 *collection_set_id* 은 NULL입니다.  
   
- [ @stop_collection_job =] *stop_collection_job*  
+ [ @stop_collection_job = ] *stop_collection_job*  
  컬렉션 집합의 컬렉션 작업이 실행 중인 경우 중단하도록 지정합니다. *stop_collection_job* 은 **비트** 기본값은 1입니다.  
   
  *stop_collection_job* 컬렉션 모드가 캐시 된 컬렉션 집합에만 적용 됩니다. 자세한 내용은 참조 [sp_syscollector_create_collection_set &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  

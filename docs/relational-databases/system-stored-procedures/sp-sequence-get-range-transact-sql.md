@@ -8,30 +8,32 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_sequence_get_range
 - sp_sequence_get_range_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2af750abc8715d2bcf2240ef08f765c6d2d7bff3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 58c36ec947eab4fbcc9511c67efae1af858ab6d0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   시퀀스 개체에서 시퀀스 값의 범위를 반환합니다. 시퀀스 개체는 요청한 값의 수를 생성 및 실행하고 범위와 관련된 메타데이터를 응용 프로그램에 제공합니다.  
   
@@ -58,13 +60,13 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  [  **@sequence_name**  =] **N**'*시퀀스*'  
  시퀀스 개체의 이름입니다. 스키마는 선택 사항입니다. *sequence_name* 은 **nvarchar(776)**합니다.  
   
- [  **@range_size**  =] *range_size*  
+ [ **@range_size** = ] *range_size*  
  시퀀스에서 인출할 값의 수입니다. **@range_size****bigint**합니다.  
   
- [  **@range_first_value**  =] *range_first_value*  
+ [ **@range_first_value** = ] *range_first_value*  
  출력 매개 변수는 요청한 범위를 계산하는 데 사용된 시퀀스 개체의 첫 번째(최소 또는 최대) 값을 반환합니다. **@range_first_value****sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
   
- [  **@range_last_value**  =] *range_last_value*  
+ [ **@range_last_value** = ] *range_last_value*  
  선택적 출력 매개 변수는 요청한 범위의 마지막 값을 반환합니다. **@range_last_value****sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
   
  [  **@range_cycle_count**  =] range_cycle_count  
@@ -76,7 +78,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  [  **@sequence_min_value**  =] *sequence_min_value*  
  선택적 출력 매개 변수는 시퀀스 개체의 최소값을 반환합니다. **@sequence_min_value****sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
   
- [  **@sequence_max_value**  =] *sequence_max_value*  
+ [ **@sequence_max_value** = ] *sequence_max_value*  
  선택적 출력 매개 변수는 시퀀스 개체의 최대값을 반환합니다. **@sequence_max_value****sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

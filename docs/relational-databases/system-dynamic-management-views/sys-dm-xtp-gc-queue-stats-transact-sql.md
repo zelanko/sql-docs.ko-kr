@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_xtp_gc_stats_TSQL
 - sys.dm_xtp_gc_stats_TSQL
 - sys.dm_xtp_gc_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_xtp_gc_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f5af0d350c90067c75a8f26d2fbf429d018acff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6d1cdfd2d31a438fb97a0b495eb28852cf3663fa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
 
-|열 이름|형식|Description|  
+|열 이름|유형|Description|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|큐의 고유 식별자입니다.|  
 |total_enqueues|**bigint**|서버 시작 후 이 큐에 배치된 가비지 수집 작업 항목의 총 수입니다.|  

@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
 - sp_syscollector_delete_collector_type_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9aff09b2400158d36f590422c2ec7883bc24d99
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 14bfab3376da20b677414106e293ad21103e52dc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +48,10 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
+ [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
  수집기 유형의 GUID입니다. *collector_type_uid* 은 **uniqueidentifier** 경우 값이 있어야 하 고 *이름* 은 NULL입니다.  
   
- [  **@name =** ] **'***이름***'**  
+ [ **@name =** ] **'***name***'**  
  수집기 유형의 이름입니다. *이름* 은 **sysname** 경우 값이 있어야 하 고 *collector_type_uid* 은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

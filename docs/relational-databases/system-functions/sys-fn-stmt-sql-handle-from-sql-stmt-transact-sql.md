@@ -8,23 +8,25 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fc9b145fe662092039a5470cd4a8a0aee459177
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4d6fc3d543f7fd8e6e4d03c5a24257f9bb4036b1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact SQL)
+# <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   가져옵니다는 **stmt_sql_handle** 에 대 한 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 문을 매개 변수화 유형 (단순 또는 강제)를 제공 합니다. 사용 하 여 쿼리 저장소에 저장 된 쿼리를 참조할 수 있습니다 자신의 **stmt_sql_handle** 해당 텍스트를 알고 있는 경우.  
@@ -61,7 +63,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>반환되는 열  
  다음 표에서 열이 나열 되어 해당 sys.fn_stmt_sql_handle_from_sql_stmt 반환 합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|유형|Description|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|SQL 핸들입니다.|  
 |**query_sql_text**|**nvarchar(max)**|텍스트는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문.|  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_get_rpo_duration
 - sys.sp_rda_get_rpo_duration_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_get_rpo_duration stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_get_rpo_duration stored procedure
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a36d1b1e04e53098710a1cacc8c463653f82710
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a2a8877f7e101241399db2132b02d6e5a41b31b5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syssprdagetrpoduration-transact-sql"></a>sys.sp_rda_get_rpo_duration (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

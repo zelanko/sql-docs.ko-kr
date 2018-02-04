@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_components_TSQL
 - sp_help_fulltext_components
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_system_components
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54f529fcb0130479ef30af742fe58fd05b4bc4d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8bb8278204aa3b710875d3bab91a41abfe43a553
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,10 +51,10 @@ sp_help_fulltext_system_components
  'all'  
  전체 텍스트 구성 요소에 대한 정보를 반환합니다.  
   
- [  **@component_type=** ] *component_type*  
+ [ **@component_type=** ] *component_type*  
  구성 요소 유형을 지정합니다. *component_type* 다음 중 하나일 수 있습니다.  
   
--   **단어 분리기**  
+-   **wordbreaker**  
   
 -   **filter**  
   
@@ -61,7 +64,7 @@ sp_help_fulltext_system_components
   
  전체 경로를 지정하는 경우 구성 요소 DLL의 전체 경로에도 *param* 을 지정해야 하며 그렇지 않으면 오류 메시지가 반환됩니다.  
   
- [  **@param=** ] *param*  
+ [ **@param=** ] *param*  
  구성 요소 유형에 따라 LCID(로캘 ID), "." 접두사가 있는 LCID(로캘 ID), "." 접두사가 있는 파일 확장명, 프로토콜 처리기의 전체 구성 요소 이름 또는 구성 요소 DLL의 전체 경로 중 하나일 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -73,11 +76,11 @@ sp_help_fulltext_system_components
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|구성 요소의 유형입니다. 다음 중 하나일 수 있습니다.<br /><br /> filter<br /><br /> 프로토콜 처리기<br /><br /> 단어 분리기|  
-|**구성 요소 이름**|**sysname**|구성 요소의 이름입니다.|  
+|**componentname**|**sysname**|구성 요소의 이름입니다.|  
 |**clsid**|**uniqueidentifier**|구성 요소의 클래스 식별자입니다.|  
 |**fullpath**|**nvarchar(256)**|구성 요소 위치에 대한 경로입니다.<br /><br /> NULL = 호출자의 구성원이 아닌 **serveradmin** 고정된 서버 역할입니다.|  
-|**version**|**nvarchar (30)**|구성 요소 버전입니다.|  
-|**제조업체**|**sysname**|구성 요소 제조업체의 이름입니다.|  
+|**version**|**nvarchar(30)**|구성 요소 버전입니다.|  
+|**manufacturer**|**sysname**|구성 요소 제조업체의 이름입니다.|  
   
  경우에 다음 결과 집합 반환 되거나 둘 이상의 전체 텍스트 카탈로그를 사용 하는 존재 *component_type*합니다.  
   

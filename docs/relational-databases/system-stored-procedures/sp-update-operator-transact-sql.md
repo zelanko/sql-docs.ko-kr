@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_operator_TSQL
 - sp_update_operator
-dev_langs: TSQL
-helpviewer_keywords: sp_update_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a297d3a5dd0252dce89a5cf5a779c8b3fa06d8d5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 38da9010e434570fbcd75e026f11c50450e10691
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +60,13 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @name=] '*이름*'  
+ [ @name=] '*name*'  
  수정할 운영자의 이름입니다. *이름* 은 **sysname**, 기본값은 없습니다.  
   
  [ @new_name=] '*new_name*'  
  운영자의 새 이름입니다. 이 이름은 고유해야 합니다. *new_name* 은 **sysname**, 기본값은 NULL입니다.  
   
- [ @enabled=] *사용 하도록 설정*  
+ [ @enabled=] *enabled*  
  운영자의 현재 상태를 나타내는 숫자 (**1** 현재 설정 되어 있으면 **0** 하지 않은 경우). *활성화* 은 **tinyint**, 기본값은 NULL입니다. 설정되어 있지 않으면 운영자는 경고 알림을 받을 수 없습니다.  
   
  [ @email_address=] '*email_address*'  
@@ -93,7 +96,7 @@ sp_update_operator
  [ @pager_days=] *pager_days*  
  지정한 시작/종료 시간에 따라 운영자가 호출을 받을 수 있는 날을 지정합니다. *pager_days*은 **tinyint**, 기본값은 NULL이 고 사이의 값 이어야 하 고 **0** 통해 **127**합니다. *pager_days* 는 필요한 요일에 대 한 개별 값을 더하여 계산 합니다. 예를 들어 월요일부터 금요일까지 **2**+**4**+**8**+**16** + **32** = **64**합니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|일요일|  
 |**2**|월요일|  

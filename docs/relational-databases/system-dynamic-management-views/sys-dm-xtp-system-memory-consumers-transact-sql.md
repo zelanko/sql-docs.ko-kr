@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_xtp_system_memory_consumers_TSQL
 - sys.dm_xtp_system_memory_consumers
 - dm_xtp_system_memory_consumers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_xtp_system_memory_consumers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e48ffede3b2aea0ff69c9dce9fc7abd2fe4bc4f9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a7b5e11f35e5ae6665d32355da60fb7e1e2b5f6d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-|열 이름|형식|Description|  
+|열 이름|유형|Description|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|메모리 소비자의 내부 ID입니다.|  
 |memory_consumer_type|**int**|다음 값 중 하나가 지정 된 메모리 소비자의 유형을 나타내는 정수:<br /><br /> 0 – 표시되어서는 안 됩니다. 둘 이상 소비자의 메모리 사용량을 집계합니다.<br /><br /> 1 – LOOKASIDE: 시스템 할당 준비에 대 한 메모리 소비량을 추적 합니다.<br /><br /> 2-VARHEAP: 가변 길이 힙에 대 한 메모리 소비량을 추적합니다.<br /><br /> 4-IO 페이지 풀: IO 작업에 사용 되는 시스템 페이지 풀에 대 한 메모리 소비량을 추적 합니다.|  

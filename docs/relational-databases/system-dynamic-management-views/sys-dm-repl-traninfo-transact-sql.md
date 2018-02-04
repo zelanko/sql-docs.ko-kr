@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_traninfo
 - sys.dm_repl_traninfo_TSQL
 - dm_repl_traninfo_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_traninfo dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8667321964f457ae05c6b7768be4b22220b50da
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 45fd6246b7a98f16c86a6f7e2c7052c70b2af039
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,20 +42,20 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|트랜잭션이 피어 투 피어 트랜잭션 복제를 통해 게시된 데이터베이스에 있는지 여부를 지정합니다. true이면 값이 1이고, 그렇지 않으면 0입니다.|  
 |**db_ver**|**int**|데이터베이스 버전입니다.|  
-|**comp_range_address**|**varbinary (8)**|건너 뛰어야 할 부분 롤백 범위를 정의합니다.|  
-|**textinfo_address**|**varbinary (8)**|캐시된 텍스트 정보 구조의 메모리 내 주소입니다.|  
-|**fsinfo_address**|**varbinary (8)**|캐시된 파일 스트림 정보 구조의 메모리 내 주소입니다.|  
+|**comp_range_address**|**varbinary(8)**|건너 뛰어야 할 부분 롤백 범위를 정의합니다.|  
+|**textinfo_address**|**varbinary(8)**|캐시된 텍스트 정보 구조의 메모리 내 주소입니다.|  
+|**fsinfo_address**|**varbinary(8)**|캐시된 파일 스트림 정보 구조의 메모리 내 주소입니다.|  
 |**begin_lsn**|**nvarchar(64)**|트랜잭션에 대한 시작 로그 레코드의 LSN(로그 시퀀스 번호)입니다.|  
 |**commit_lsn**|**nvarchar(64)**|트랜잭션에 대한 커밋 로그 레코드의 LSN입니다.|  
 |**dbid**|**smallint**|데이터베이스 ID입니다.|  
-|**행**|**int**|트랜잭션 내 복제된 명령의 ID입니다.|  
+|**rows**|**int**|트랜잭션 내 복제된 명령의 ID입니다.|  
 |**xdesid**|**nvarchar(64)**|트랜잭션 ID입니다.|  
-|**artcache_table_address**|**varbinary (8)**|이 트랜잭션에 대해 마지막으로 사용된 캐시된 테이블 아티클 구조의 메모리 내 주소입니다.|  
-|**서버**|**nvarchar(514)**|서버 이름입니다.|  
+|**artcache_table_address**|**varbinary(8)**|이 트랜잭션에 대해 마지막으로 사용된 캐시된 테이블 아티클 구조의 메모리 내 주소입니다.|  
+|**server**|**nvarchar(514)**|서버 이름입니다.|  
 |**server_len_in_bytes**|**smallint**|서버 이름의 문자 길이(바이트)입니다.|  
-|**database**|**nvarchar(514)**|데이터베이스 이름입니다.|  
+|**데이터베이스**|**nvarchar(514)**|데이터베이스 이름입니다.|  
 |**db_len_in_bytes**|**smallint**|데이터베이스 이름의 문자 길이(바이트)입니다.|  
-|**보낸 사람**|**nvarchar(514)**|트랜잭션이 시작된 서버의 이름입니다.|  
+|**originator**|**nvarchar(514)**|트랜잭션이 시작된 서버의 이름입니다.|  
 |**originator_len_in_bytes**|**smallint**|트랜잭션이 시작된 서버의 문자 길이(바이트)입니다.|  
 |**orig_db**|**nvarchar(514)**|트랜잭션이 시작된 데이터베이스의 이름입니다.|  
 |**orig_db_len_in_bytes**|**smallint**|트랜잭션이 시작된 데이터베이스의 문자 길이(바이트)입니다.|  

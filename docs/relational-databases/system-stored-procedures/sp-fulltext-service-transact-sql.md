@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_service
 - sp_fulltext_service_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], properties
 - sp_fulltext_service
 - Full-Text Search Upgrade Option
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac28028d1e888724417d1a313e229beb479e8ea2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c51847237598fcd1e493fec3194463359198d929
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +49,10 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@action=**] **'***동작***'**  
+ [ **@action=**] **'***action***'**  
  변경하거나 다시 설정할 속성입니다. *동작* 은 **nvarchar (100),** 이며 기본값은 없습니다. 목록은 한*c*속성, 해당 설명 및 설정할 수 있는 값의 표를 참고는 *값* 인수입니다. 이 인수는 데이터 형식, 현재 실행 값, 최소값 또는 최대값, 사용 중단 상태(해당되는 경우)와 같은 속성을 반환합니다.  
   
- [  **@value=**] *값*  
+ [ **@value=**] *value*  
  지정한 속성의 값입니다. *값* 은 **sql_variant**, 기본값은 NULL입니다. 경우 @value 매개 변수가 null 이면 **sp_fulltext_service** 현재 설정을 반환 합니다. 이 표에서는 동작 속성, 설명 및 설정할 수 있는 값 목록을 보여 줍니다.  
   
 > [!NOTE]  
@@ -73,7 +75,7 @@ sp_fulltext_service [ [@action=] 'action'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Permissions  
  구성원만는 **serveradmin** 고정된 서버 역할 또는 시스템 관리자를 실행할 수 **sp_fulltext_service**합니다.  

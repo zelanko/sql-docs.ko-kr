@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_stop_sp_TSQL
 - sysmail_stop_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_stop_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_stop_sp
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f707d12e77f366d34f48663f623145867bff5c5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: eddddd99576f27cc0252ab77a8b71098915526fc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailstopsp-transact-sql"></a>sysmail_stop_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sysmail_stop_sp
 ```  
   
 ## <a name="arguments"></a>인수  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - pipes [SQL Server], listening on pipes
 - Named Pipes [SQL Server], listening on pipes
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72fecdede46024eae399d9a762b0f8cdf7bb3a6b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 7a8a88c3d7f54d4bf31cb5256e52d8257297ae91
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="named-pipes-properties"></a>명명된 파이프 속성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **프로토콜**페이지에 **명명 된 파이프 속성** 대화 상자 보기 또는 변경 된 명명 된 파이프를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 수신 하는 명명 된 파이프 프로토콜을 사용 하는 경우.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+명명된 파이프 프로토콜을 사용하는 경우 **명명된 파이프 속성** 대화 상자의 **프로토콜** 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 수신 대기하는 명명된 파이프를 보거나 변경할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]활성화 또는 프로토콜을 사용 하지 않도록 설정 하거나 명명 된 파이프를 변경 하려면 다시 시작 해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작해야 합니다.  
   
 ## <a name="options"></a>옵션  
  **Enabled**  

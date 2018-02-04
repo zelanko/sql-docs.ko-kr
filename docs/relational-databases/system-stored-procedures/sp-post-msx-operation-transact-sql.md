@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_post_msx_operation
 - sp_post_msx_operation_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_post_msx_operation
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f24eec6894314859df8d8d8343e0095448d2517c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b54a5b8dbf5539adb2d87ef6a095f4f78f767aff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,35 +52,35 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@operation =**] **'***작업***'**  
+ [ **@operation =**] **'***operation***'**  
  게시된 연산의 유형입니다. *작업*은 **varchar(64)**, 기본값은 없습니다. 올바른 작업을 종속 *object_type*합니다.  
   
 |개체 유형|연산|  
 |-----------------|---------------|  
-|**작업**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
-|**서버**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**일정**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
+|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
+|**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
+|**SCHEDULE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
- [  **@object_type =**] **'***개체***'**  
+ [ **@object_type =**] **'***object***'**  
  연산을 게시할 대상이 되는 개체의 유형입니다. 올바른 유형은 **작업**, **서버**, 및 **일정**합니다. *개체* 은 **varchar(64)**, 기본값은 **작업**합니다.  
   
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  연산을 적용할 작업의 ID입니다. *job_id* 은 **uniqueidentifier**, 기본값은 없습니다. **0x00** 모든 작업을 나타냅니다. 경우 *개체* 은 **서버**, 다음 *job_id*필요 하지 않습니다.  
   
- [  **@specific_target_server =**] **'***target_server***'**  
+ [ **@specific_target_server =**] **'***target_server***'**  
  지정한 연산을 적용할 대상이 되는 대상 서버의 이름입니다. 경우 *job_id* 를 지정 하지만 *target_server* 를 지정 하지 않으면 모든 작업의 서버 작업에 대해 연산이 게시 됩니다. *target_server* 은 **nvarchar (30)**, 기본값은 NULL입니다.  
   
- [  **@value =**] *값*  
+ [ **@value =**] *value*  
  폴링 간격(초)입니다. *value* 는 **int**이며 기본값은 NULL입니다. 경우에만이 매개 변수 지정 *작업* 은 **SET-POLL**합니다.  
   
- [  **@schedule_uid=** ] *schedule_uid*  
+ [ **@schedule_uid=** ] *schedule_uid*  
  연산을 적용할 일정의 고유 식별자입니다. *schedule_uid* 은 **uniqueidentifier**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_post_msx_operation** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  

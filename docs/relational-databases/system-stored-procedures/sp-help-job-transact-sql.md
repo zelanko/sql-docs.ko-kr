@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_job_TSQL
 - sp_help_job
-dev_langs: TSQL
-helpviewer_keywords: sp_help_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae0dc39a2fe09d6dd4441f378d225a0f4e6ddf67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9d91594f032409dbe2597dd859a549c17b795e04
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,45 +59,45 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  작업 ID입니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@job_aspect =**] **'***job_aspect***'**  
+ [ **@job_aspect =**] **'***job_aspect***'**  
  표시할 작업 특성입니다. *job_aspect* 은 **varchar(9)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**ALL**|작업 항목 정보입니다.|  
-|**작업**|작업 정보입니다.|  
-|**일정**|일정 정보입니다.|  
-|**단계**|작업 단계 정보입니다.|  
-|**대상**|대상 정보입니다.|  
+|**JOB**|작업 정보입니다.|  
+|**SCHEDULES**|일정 정보입니다.|  
+|**STEPS**|작업 단계 정보입니다.|  
+|**TARGETS**|대상 정보입니다.|  
   
- [  **@job_type =**] **'***job_type***'**  
+ [ **@job_type =**] **'***job_type***'**  
  보고서에 포함할 작업 유형입니다. *job_type* 은 **varchar(12)**, 기본값은 NULL입니다. *job_type* 수 **로컬** 또는 **MULTI-SERVER**합니다.  
   
- [  **@owner_login_name =**] **'***login_name***'**  
+ [ **@owner_login_name =**] **'***login_name***'**  
  작업 소유자의 로그인 이름입니다. *login_name* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@subsystem =**] **'***하위 시스템***'**  
+ [ **@subsystem =**] **'***subsystem***'**  
  하위 시스템의 이름입니다. *하위 시스템* 은 **nvarchar (40)**, 기본값은 NULL입니다.  
   
- [  **@category_name =**] **'***범주***'**  
+ [ **@category_name =**] **'***category***'**  
  범주의 이름입니다. *범주* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@enabled =**] *사용 하도록 설정*  
+ [ **@enabled =**] *enabled*  
  사용하는 작업 또는 사용하지 않는 작업에 대해 정보를 표시할지 여부를 나타내는 번호입니다. *활성화* 은 **tinyint**, 기본값은 NULL입니다. **1** 사용된 하는 작업을 나타내는 및 **0** 사용 하지 않는 작업을 나타냅니다.  
   
- [  **@execution_status =**] *상태*  
+ [ **@execution_status =**] *status*  
  작업의 실행 상태입니다. *상태* 은 **int**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|유휴 또는 일시 중지 상태가 아닌 작업만 반환합니다.|  
 |**1**|실행 중입니다.|  
@@ -104,16 +107,16 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|일시 중지 상태입니다.|  
 |**7**|동작을 완전히 수행하였습니다.|  
   
- [  **@date_comparator =**] **'***date_comparison***'**  
+ [ **@date_comparator =**] **'***date_comparison***'**  
  비교 연산자의 비교에 사용할 *date_created* 및 *date_modified*합니다. *date_comparison* 은 **char(1)**, = 될 수 있도록 \<, 또는 >.  
   
- [  **@date_created =**] *date_created*  
+ [ **@date_created =**] *date_created*  
  작업을 만든 날짜입니다. *date_created*은 **datetime**, 기본값은 NULL입니다.  
   
- [  **@date_last_modified =**] *date_modified*  
+ [ **@date_last_modified =**] *date_modified*  
  작업을 마지막으로 수정한 날짜입니다. *date_modified* 은 **datetime**, 기본값은 NULL입니다.  
   
- [  **@description =**] **'***description_pattern***'**  
+ [ **@description =**] **'***description_pattern***'**  
  작업에 대한 설명입니다. *description_pattern* 은 **nvarchar (512)**, 기본값은 NULL입니다. *description_pattern* 패턴 일치를 위해 SQL Server 와일드 카드 문자를 포함할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -125,12 +128,12 @@ sp_help_job { [ @job_id = ] job_id
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|작업의 고유 ID입니다.|  
-|**originating_server**|**nvarchar (30)**|작업을 가져온 서버의 이름입니다.|  
+|**originating_server**|**nvarchar(30)**|작업을 가져온 서버의 이름입니다.|  
 |**name**|**sysname**|작업의 이름입니다.|  
-|**사용 하도록 설정**|**tinyint**|작업을 실행할 수 있는지를 표시합니다.|  
+|**enabled**|**tinyint**|작업을 실행할 수 있는지를 표시합니다.|  
 |**설명**|**nvarchar(512)**|작업 설명입니다.|  
 |**start_step_id**|**int**|실행을 시작해야 하는 작업 단계의 ID입니다.|  
-|**범주**|**sysname**|작업 범주입니다.|  
+|**category**|**sysname**|작업 범주입니다.|  
 |**소유자**|**sysname**|작업 소유자입니다.|  
 |**notify_level_eventlog**|**int**|**비트 마스크** 나타내는 어떤 상황에서 Microsoft Windows 응용 프로그램 로그에 알림 이벤트를 기록 합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **0** = 안 함<br /><br /> **1** = 작업이 성공할 경우<br /><br /> **2** = 작업이 실패할 경우<br /><br /> **3** (작업의 결과)에 관계 없이 작업이 완료 될 때마다 =|  
 |**notify_level_email**|**int**|**비트 마스크** 어떤 상황에서 알림 전자 메일을 보낼지 작업 완료를 나타내는입니다. 가능한 값은 동일 **notify_level_eventlog**합니다.|  
@@ -155,7 +158,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|작업이 갖고 있는 단계 수입니다.|  
 |**has_schedule**|**int**|작업이 갖고 있는 작업 일정 수입니다.|  
 |**has_target**|**int**|작업이 갖고 있는 대상 서버 수입니다.|  
-|**유형**|**int**|작업의 유형입니다.<br /><br /> 1 = 로컬 작업<br /><br /> **2** = 다중 서버 작업입니다.<br /><br /> **0** = 작업에 대상 서버가 없습니다.|  
+|**type**|**int**|작업의 유형입니다.<br /><br /> 1 = 로컬 작업<br /><br /> **2** = 다중 서버 작업입니다.<br /><br /> **0** = 작업에 대상 서버가 없습니다.|  
   
  경우 *job_id* 또는 *job_name* 지정 된 **sp_help_job** 작업 단계, 작업 일정 및 작업 대상 서버에 대 한 추가 결과 집합을 반환 합니다.  
   
@@ -165,15 +168,15 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|해당 작업에 관한 단계의 고유 ID입니다.|  
 |**step_name**|**sysname**|단계의 이름입니다.|  
-|**하위 시스템**|**nvarchar (40)**|단계 명령을 실행할 하위 시스템입니다.|  
+|**subsystem**|**nvarchar(40)**|단계 명령을 실행할 하위 시스템입니다.|  
 |**명령**|**nvarchar(3200)**|실행할 명령입니다.|  
-|**플래그**|**nvarchar(4000)**|**비트 마스크** 단계 동작을 제어 하는 값입니다.|  
+|**flags**|**nvarchar(4000)**|**비트 마스크** 단계 동작을 제어 하는 값입니다.|  
 |**cmdexec_success_code**|**int**|에 대 한는 **CmdExec** 단계 성공한 명령의 프로세스 종료 코드입니다.|  
 |**on_success_action**|**nvarchar(4000)**|단계가 성공할 경우 수행되는 작업입니다.<br /><br /> **1** = 성공으로 종료 합니다.<br /><br /> **2** = 실패로 종료 합니다.<br /><br /> **3** = 다음 단계로 이동 합니다.<br /><br /> **4** = 단계로 이동 합니다.|  
 |**on_success_step_id**|**int**|경우 **on_success_action** 은 **4**,이 실행 하는 다음 단계를 나타냅니다.|  
 |**on_fail_action**|**nvarchar(4000)**|단계가 실패한 경우에 수행할 동작입니다. 값은 동일 **on_success_action**합니다.|  
 |**on_fail_step_id**|**int**|경우 **on_fail_action** 은 **4**,이 실행 하는 다음 단계를 나타냅니다.|  
-|**서버**|**sysname**|예약되어 있습니다.|  
+|**server**|**sysname**|예약되어 있습니다.|  
 |**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령이 실행될 데이터베이스입니다.|  
 |**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령이 실행되는 데이터베이스 사용자 컨텍스트입니다.|  
 |**retry_attempts**|**int**|단계가 성공하지 못한 경우에 해당 단계를 실패로 간주하기 전에 명령을 재시도할 최대 횟수입니다.|  
@@ -193,8 +196,8 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|모든 작업에서 고유한 일정의 ID입니다.|  
 |**schedule_name**|**sysname**|해당 작업에 대해서만 고유한 일정의 이름입니다.|  
-|**사용 하도록 설정**|**int**|일정이 활성 상태 인지 여부 (**1**) 아닌지 (**0**).|  
-|**freq_type**|**int**|작업을 실행할 때를 표시하는 값입니다.<br /><br /> **1** = 한 번<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** 기준으로 = 매월는 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스가 시작 합니다.|  
+|**enabled**|**int**|일정이 활성 상태 인지 여부 (**1**) 아닌지 (**0**).|  
+|**freq_type**|**int**|작업을 실행할 때를 표시하는 값입니다.<br /><br /> **1** = Once<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** 기준으로 = 매월는 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스가 시작 합니다.|  
 |**freq_interval**|**int**|작업이 실행되는 요일입니다. 값의 값에 따라 **freq_type**합니다. 자세한 내용은 참조 [sp_add_schedule &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|에 대 한 단위 **freq_subday_interval**합니다. 자세한 내용은 참조 [sp_add_schedule &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_interval**|**int**|수가 **freq_subday_type** 작업의 실행 사이 발생 하는 기간. 자세한 내용은 참조 [sp_add_schedule &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
@@ -216,14 +219,14 @@ sp_help_job { [ @job_id = ] job_id
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|대상 서버의 ID입니다.|  
-|**server_name**|**nvarchar (30)**|대상 서버의 컴퓨터 이름입니다.|  
+|**server_name**|**nvarchar(30)**|대상 서버의 컴퓨터 이름입니다.|  
 |**enlist_date**|**datetime**|대상 서버가 마스터 서버에 참여한 날짜입니다.|  
 |**last_poll_date**|**datetime**|대상 서버가 마지막으로 마스터 서버를 폴링한 날짜입니다.|  
 |**last_run_date**|**int**|해당 대상 서버에서 작업이 마지막으로 실행을 시작한 날짜입니다.|  
 |**last_run_time**|**int**|해당 대상 서버에서 작업이 마지막으로 실행을 시작한 시간입니다.|  
 |**last_run_duration**|**int**|해당 서버에서 작업이 마지막으로 실행되었을 때의 기간입니다.|  
 |**last_run_outcome**|**tinyint**|해당 서버에서 작업이 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **3** = 취소<br /><br /> **5** = 알 수 없음|  
-|**last_outcome_message**|**nvarchar (1024)**|해당 대상 서버에서 작업이 마지막으로 실행되었을 때의 결과 메시지입니다.|  
+|**last_outcome_message**|**nvarchar(1024)**|해당 대상 서버에서 작업이 마지막으로 실행되었을 때의 결과 메시지입니다.|  
   
 ## <a name="permissions"></a>Permissions  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  

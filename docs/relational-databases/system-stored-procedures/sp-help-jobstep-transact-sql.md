@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobstep_TSQL
 - sp_help_jobstep
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobstep
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 316436c8c2607ef6c759efaa444d7f78e2de6834
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bb316ee70ad1cf1f98898fd08edbb7cfb9622f56
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +49,22 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id =**] **'***job_id***'**  
+ [ **@job_id =**] **'***job_id***'**  
  작업 정보를 반환할 작업 ID입니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@step_id =**] *step_id*  
+ [ **@step_id =**] *step_id*  
  작업 단계의 ID입니다. 지정하지 않은 경우 작업의 모든 단계가 포함됩니다. *step_id* 은 **int**, 기본값은 NULL입니다.  
   
- [  **@step_name =**] **'***step_name***'**  
+ [ **@step_name =**] **'***step_name***'**  
  작업 단계의 이름입니다. *step_name* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@suffix =**] *접미사*  
+ [ **@suffix =**] *suffix*  
  에 대 한 텍스트 설명을 추가 되는지 여부를 나타내는 플래그는 **플래그** 출력 열에에서 있습니다. *접미사*은 **비트**, 기본값은 **0**합니다. 경우 *접미사* 은 **1**, 설명이 추가 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -73,15 +76,15 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|단계의 고유 식별자입니다.|  
 |**step_name**|**sysname**|작업 단계의 이름입니다.|  
-|**하위 시스템**|**nvarchar (40)**|단계 명령을 실행할 하위 시스템입니다.|  
+|**subsystem**|**nvarchar(40)**|단계 명령을 실행할 하위 시스템입니다.|  
 |**명령**|**nvarchar(max)**|단계에서 실행할 명령입니다.|  
-|**플래그**|**int**|단계 동작을 제어하는 값의 비트 마스크입니다.|  
+|**flags**|**int**|단계 동작을 제어하는 값의 비트 마스크입니다.|  
 |**cmdexec_success_code**|**int**|에 대 한는 **CmdExec** 단계 성공한 명령의 프로세스 종료 코드입니다.|  
 |**on_success_action**|**tinyint**|단계가 성공할 경우 수행되는 동작입니다.<br /><br /> **1** = 성공 보고 작업을 종료 합니다.<br /><br /> **2** = 실패를 보고 작업을 종료 합니다.<br /><br /> **3** = 다음 단계로 이동 합니다.<br /><br /> **4** = 단계로 이동 합니다.|  
 |**on_success_step_id**|**int**|경우 **on_success_action** 는 4,이 실행 하는 다음 단계를 나타냅니다.|  
 |**on_fail_action**|**tinyint**|단계가 실패할 경우 수행되는 작업입니다. 값은 동일 **on_success_action**합니다.|  
 |**on_fail_step_id**|**int**|경우 **on_fail_action** 는 4,이 실행 하는 다음 단계를 나타냅니다.|  
-|**서버**|**sysname**|예약되어 있습니다.|  
+|**server**|**sysname**|예약되어 있습니다.|  
 |**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령이 실행되는 데이터베이스입니다.|  
 |**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령이 실행되는 데이터베이스 사용자 컨텍스트입니다.|  
 |**retry_attempts**|**int**|단계가 성공하지 못한 경우에 명령을 재시도할 최대 횟수입니다.|  

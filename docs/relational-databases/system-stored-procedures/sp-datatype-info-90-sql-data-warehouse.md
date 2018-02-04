@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71d31ffc47781bac881e8d1af0116d3adf0731d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0989c6224160fdad3059083358eb2ef84b5990e3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,14 +43,14 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@data_type=** ] *data_type*  
+ [ **@data_type=** ] *data_type*  
  지정된 데이터 형식의 코드 번호입니다. 모든 데이터 형식의 목록을 가져오려면 이 매개 변수를 생략하세요. *data_type* 은 **int**, 기본값은 0입니다.  
   
- [  **@ODBCVer=** ] *odbc_version*  
+ [ **@ODBCVer=** ] *odbc_version*  
  사용하고 있는 ODBC의 버전입니다. *odbc_version* 은 **tinyint**, 기본값은 2입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -57,9 +59,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS에 종속된 데이터 형식입니다.|  
 |DATA_TYPE|**smallint**|ODBC 형식의 열이 모두 매핑되는 해당 형식의 코드입니다.|  
 |PRECISION|**int**|데이터 원본에 있는 데이터 형식의 최대 전체 자릿수입니다. 전체 자릿수가 적용되지 않는 데이터 형식에 대해서는 NULL이 반환됩니다. PRECISION 열의 값은 10진수로 반환됩니다.|  
-|LITERAL_PREFIX|**varchar (**32**)**|상수 앞에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은 따옴표 (**'**) 문자 형식 및 이진에 대해 0 x에 대 한 합니다.|  
-|LITERAL_SUFFIX|**varchar (**32**)**|상수 끝에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은 따옴표 (**'**) 문자 형식 및 이진에 따옴표가 사용 되지 않습니다.|  
-|CREATE_PARAMS|**varchar (**32**)**|해당 데이터 형식에 대한 매개 변수 만들기에 대한 설명입니다. 예를 들어 **10 진수** 는 "precision, scale", **float** 이 NULL 이면 및 **varchar** 는 "max_length"입니다.|  
+|LITERAL_PREFIX|**varchar(**32**)**|상수 앞에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은 따옴표 (**'**) 문자 형식 및 이진에 대해 0 x에 대 한 합니다.|  
+|LITERAL_SUFFIX|**varchar(**32**)**|상수 끝에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은 따옴표 (**'**) 문자 형식 및 이진에 따옴표가 사용 되지 않습니다.|  
+|CREATE_PARAMS|**varchar(**32**)**|해당 데이터 형식에 대한 매개 변수 만들기에 대한 설명입니다. 예를 들어 **10 진수** 는 "precision, scale", **float** 이 NULL 이면 및 **varchar** 는 "max_length"입니다.|  
 |NULLABLE|**smallint**|NULL 허용 여부를 지정합니다.<br /><br /> 1 = NULL 값을 허용합니다.<br /><br /> 0 = NULL 값을 허용하지 않습니다.|  
 |CASE_SENSITIVE|**smallint**|대/소문자 구분 여부를 지정합니다.<br /><br /> 1 = 이 형식의 열은 모두 데이터 정렬 시 대/소문자를 구분합니다.<br /><br /> 0 = 이 형식의 열은 모두 대/소문자를 구분하지 않습니다.|  
 |SEARCHABLE|**smallint**|열 형식에 대한 검색 기능을 지정합니다.<br /><br /> 1 = 검색할 수 없습니다.<br /><br /> 2 = LIKE를 사용하여 검색할 수 있습니다.<br /><br /> 3 = WHERE를 사용하여 검색할 수 있습니다.<br /><br /> 4 = WHERE 또는 LIKE를 사용하여 검색할 수 있습니다.|  

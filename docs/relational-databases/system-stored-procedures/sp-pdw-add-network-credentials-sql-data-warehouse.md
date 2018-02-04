@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b1a964e2d026f93ec26a34b2cb7ba5e114886ec
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 87034c1db40e5762441871cc347eaf37d2c56ea3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppdwaddnetworkcredentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -52,7 +54,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
  *user_name* nvarchar (513)로 정의 됩니다.  
   
- '*암호*ꞌ  
+ '*password*ꞌ  
  암호를 지정 *user_name*합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

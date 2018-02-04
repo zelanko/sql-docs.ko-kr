@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_table_TSQL
 - sp_fulltext_table
-dev_langs: TSQL
-helpviewer_keywords: sp_fulltext_table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6ca014dd3d76c57402fe8a3af7bb8bb33fa4fce
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1827d90dab1dc4be8acbc3cf3e00bfe97d4b1bae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   테이블을 전체 텍스트 인덱싱에 표시하거나 표시하지 않습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]사용 하 여 [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), 및 [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) 대신 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), 및 [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) 대신 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,13 +55,13 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@tabname=**] **'***qualified_table_name***'**  
+ [ **@tabname=**] **'***qualified_table_name***'**  
  한 부분 또는 두 부분으로 구성된 테이블 이름입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. *qualified_table_name* 은 **nvarchar (517)**, 기본값은 없습니다.  
   
- [  **@action=**] **'***동작***'**  
+ [ **@action=**] **'***action***'**  
  수행할 동작입니다. *동작* 은 **nvarchar (50)**이며 기본값은 없고 수 있습니다 이러한 값 중 하나 여야 합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**만들기**|참조 하는 테이블에 대 한 전체 텍스트 인덱스에 대 한 메타 데이터를 만듭니다 *qualified_table_name* 하 고이 테이블에 대 한 전체 텍스트 인덱스 데이터에 존재 해야 하며 지정 *fulltext_catalog_name*합니다. 이 작업의 사용을 지정 합니다 *unique_index_name* 전체 텍스트 키 열으로 합니다. 이 고유한 인덱스는 반드시 이미 존재해야 하며, 테이블의 한 열에서 정의되어야 합니다.<br /><br /> 전체 텍스트 카탈로그가 채워질 때까지는 해당 테이블에 대해 전체 텍스트 검색을 수행할 수 없습니다.|  
 |**Drop**|메타 데이터에 대 한 전체 텍스트 인덱스를 삭제 *qualified_table_name*합니다. 전체 텍스트 인덱스가 활성화된 경우에는 삭제되기 전에 자동으로 비활성화됩니다. 전체 텍스트 인덱스를 삭제하기 전에 열을 제거할 필요는 없습니다.|  
@@ -73,17 +76,17 @@ sp_fulltext_table
 |**start_incremental**|테이블에 대한 전체 텍스트 인덱스의 증분 채우기를 시작합니다.|  
 |**중지**|전체 또는 증분 채우기를 중단합니다.|  
   
- [  **@ftcat=**] **'***fulltext_catalog_name***'**  
+ [ **@ftcat=**] **'***fulltext_catalog_name***'**  
  에 대 한 유효 하 고 기존 전체 텍스트 카탈로그 이름이 **만들** 동작 합니다. 다른 모든 동작에 대해서는 이 매개 변수가 반드시 NULL이어야 합니다. *fulltext_catalog_name* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@keyname=**] **'***unique_index_name***'**  
+ [ **@keyname=**] **'***unique_index_name***'**  
  에 한 유효한 단일 키 열, 고유한 null이 아닌 인덱스 *qualified_table_name* 에 대 한는 **만들** 동작 합니다. 다른 모든 동작에 대해서는 이 매개 변수가 반드시 NULL이어야 합니다. *unique_index_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  기존 전체 텍스트 인덱스는 다음 전체 채우기; 될 때까지 위치에 유지 특정 테이블에 대 한 전체 텍스트 인덱스를 비활성화 한 후 그러나이 인덱스가 사용 되지 않습니다 때문에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비활성화 된 테이블에 대 한 쿼리를 차단 합니다.  

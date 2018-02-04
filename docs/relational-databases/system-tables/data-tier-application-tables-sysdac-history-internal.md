@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdac_history_internal
 - sysdac_history_internal_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysdac_history_internal
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b8b8d735800315011eea29b123c8dc3e1652732a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>데이터 계층 응용 프로그램 테이블 sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,18 +42,18 @@ ms.lasthandoff: 01/02/2018
 |**sequence_id**|**int**|동작 내의 단계를 식별합니다.|  
 |**instance_id**|**uniqueidentifier**|DAC 인스턴스의 식별자입니다. 이 열에 조인할 수는 **instance_id** 열에 [dbo.sysdac_instances &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|동작 유형의 식별자입니다.<br /><br /> **0** = 배포<br /><br /> **1** = 만들기<br /><br /> **2** = 이름 바꾸기<br /><br /> **3** = 분리<br /><br /> **4** = 삭제|  
-|**action_type_name**|**varchar (19)**|동작 유형의 이름입니다.<br /><br /> **배포**<br /><br /> **만들기**<br /><br /> **이름 바꾸기**<br /><br /> **분리**<br /><br /> **삭제**|  
+|**action_type_name**|**varchar(19)**|동작 유형의 이름입니다.<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|동작의 영향을 받는 개체의 유형에 대한 식별자입니다.<br /><br /> **0** dacpac =<br /><br /> **1** = 로그인<br /><br /> **2** = 데이터베이스|  
-|**dac_object_type_name**|**varchar(8)**|동작의 영향을 받는 개체의 유형에 대한 이름입니다.<br /><br /> **dacpac** = DAC 인스턴스<br /><br /> **로그인**<br /><br /> **데이터베이스**|  
+|**dac_object_type_name**|**varchar(8)**|동작의 영향을 받는 개체의 유형에 대한 이름입니다.<br /><br /> **dacpac** = DAC 인스턴스<br /><br /> **login**<br /><br /> **데이터베이스**|  
 |**action_status**|**tinyint**|동작의 현재 상태를 식별하는 코드입니다.<br /><br /> **0** = 보류 중<br /><br /> **1** = 성공<br /><br /> **2** = 실패|  
-|**action_status_name**|**varchar(11)**|동작의 현재 상태입니다.<br /><br /> **보류 중**<br /><br /> **성공**<br /><br /> **실패**|  
+|**action_status_name**|**varchar(11)**|동작의 현재 상태입니다.<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
 |**필수**|**bit**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 DAC 작업을 롤백할 때 사용됩니다.|  
 |**dac_object_name_pretran**|**sysname**|동작이 포함된 트랜잭션이 커밋되기 전의 개체 이름입니다. 데이터베이스 및 로그인에만 사용됩니다.|  
 |**dac_object_name_posttran**|**sysname**|동작이 포함된 트랜잭션이 커밋된 후의 개체 이름입니다. 데이터베이스 및 로그인에만 사용됩니다.|  
-|**sqlscript**|**nvarchar(max)**|데이터베이스 또는 로그인에서 동작을 구현하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트입니다.|  
-|**페이로드**|**varbinary(max)**|인코딩된 이진 문자열에 저장된 DAC 패키지 정의입니다.|  
+|**sqlscript**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 또는 로그인에서 동작을 구현 하는 스크립트입니다.|  
+|**payload**|**varbinary(max)**|인코딩된 이진 문자열에 저장된 DAC 패키지 정의입니다.|  
 |**주석**|**varchar(max)**|DAC 업그레이드 시 잠재적인 데이터 손실을 허용한 사용자의 로그인을 기록합니다.|  
-|**두**|**nvarchar(max)**|동작에 오류가 발생한 경우 생성되는 오류 메시지입니다.|  
+|**error_string**|**nvarchar(max)**|동작에 오류가 발생한 경우 생성되는 오류 메시지입니다.|  
 |**created_by**|**sysname**|이 항목을 만든 동작을 시작한 로그인입니다.|  
 |**date_created**|**datetime**|이 항목을 만든 날짜와 시간입니다.|  
 |**date_modified**|**datetime**|이 항목을 마지막으로 수정한 날짜와 시간입니다.|  
@@ -62,9 +65,9 @@ ms.lasthandoff: 01/02/2018
 |-|-|-|-|  
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|만들기|dacpac|  
-|12|1|만들기|로그인|  
-|12|2|만들기|database|  
-|12|3|이름 바꾸기|database|  
+|12|1.|만들기|로그인|  
+|12|2|만들기|데이터베이스|  
+|12|3|이름 바꾸기|데이터베이스|  
   
  Delete 등의 DAC 작업에서 행을 제거 하지 마십시오 **sysdac_history_internal**합니다. 다음 쿼리를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 더 이상 배포되지 않는 DAC의 행을 수동으로 삭제할 수 있습니다.  
   

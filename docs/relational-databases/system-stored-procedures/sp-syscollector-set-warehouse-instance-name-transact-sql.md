@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_instance_name_TSQL
 - sp_syscollector_set_warehouse_instance_name
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_warehouse_instance_name
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 569ad6a22134ae8da3568b56b2190ae9fbdf9645
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6d82ac58a086f09b104515300d92704e62b6aea1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +50,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*instance_name*'  
  인스턴스 이름입니다. *instance_name* 은 **sysname** 이며 null 인 경우 로컬 인스턴스가 기본값으로 합니다.  
   
-> **참고:***instance_name* 컴퓨터 이름과 인스턴스 이름을 형태로 구성 된 정규화 된 인스턴스 이름 이어야 합니다 *computerName* \\ *instanceName*합니다.    
+> **참고:***instance_name* 컴퓨터 이름과 인스턴스 이름을 형태로 구성 된 정규화 된 인스턴스 이름 이어야 합니다 *computerName* \\ *instanceName*합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

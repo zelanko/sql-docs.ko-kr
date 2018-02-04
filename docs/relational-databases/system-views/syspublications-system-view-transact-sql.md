@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - syspublications
 - syspublications_TSQL
-dev_langs: TSQL
-helpviewer_keywords: syspublications view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- syspublications view
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afd6e57ed8c17dc74b24320808e8502a679bf152
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6b67197861029cbd9b16e1c829e4570540ca377f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications(시스템 뷰)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +46,8 @@ ms.lasthandoff: 11/17/2017
 |**repl_freq**|**tinyint**|복제 빈도<br /><br /> **0** = 트랜잭션 기반 (트랜잭션).<br /><br /> **1** = 예약 된 테이블 새로 고침 (스냅숏).|  
 |**상태**|**tinyint**|게시 상태<br /><br /> **0** = 비활성입니다.<br /><br /> **1** = 활성 합니다.|  
 |**sync_method**|**tinyint**|동기화 메서드<br /><br /> **0** = 네이티브 대량 복사 프로그램 유틸리티 (BCP).<br /><br /> **1** = character BCP 합니다.<br /><br /> **3** = concurrent. native BCP를 사용 하지만 스냅숏 동안 테이블이 잠기지 않음을 의미 합니다.<br /><br /> **4** = Concurrent_c. character BCP를 사용 하지만 테이블 스냅숏 동안 잠기지 않습니다 것을 의미 합니다.|  
-|**snapshot_jobid**|**binary (16)**|초기 스냅숏을 생성하기 위해 예약한 에이전트 작업을 식별합니다.|  
-|**독립 에이전트**|**bit**|해당 게시에 독립 실행형 배포 에이전트가 있는지 여부를 지정합니다.<br /><br /> **0** = 게시는 공유 배포 에이전트를 사용 하며 각 게시자 데이터베이스/구독자 데이터베이스 쌍에는 공유 에이전트가 있습니다.<br /><br /> **1** =이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다.|  
+|**snapshot_jobid**|**binary(16)**|초기 스냅숏을 생성하기 위해 예약한 에이전트 작업을 식별합니다.|  
+|**independent_agent**|**bit**|해당 게시에 독립 실행형 배포 에이전트가 있는지 여부를 지정합니다.<br /><br /> **0** = 게시는 공유 배포 에이전트를 사용 하며 각 게시자 데이터베이스/구독자 데이터베이스 쌍에는 공유 에이전트가 있습니다.<br /><br /> **1** =이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다.|  
 |**immediate_sync**|**bit**|동기화 파일이 생성 되거나 스냅숏 에이전트가 실행 될 때마다 다시 생성 여부를 나타내는 여기서 **1** 의미는 에이전트가 실행 될 때마다 생성 됩니다.|  
 |**enabled_for_internet**|**bit**|게시용 동기화 파일은 파일 전송 프로토콜 (FTP) 및 기타 서비스를 통해 인터넷에 노출 되는지 여부를 나타냅니다. 여기서 **1** 인터넷에서 액세스할 수 있습니다.|  
 |**allow_push**|**bit**|게시에서 밀어넣기 구독을 허용 하는지 여부를 나타냅니다. 여기서 **1** 는 사용할 수 있다는 것을 의미 합니다.|  
@@ -52,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |**immediate_sync_ready**|**bit**|스냅숏 에이전트가 스냅숏을 생성하여 새 구독에서 사용하도록 준비하였는지 여부를 나타냅니다. 즉시 업데이트 게시에서만 의미가 있습니다. **1** 스냅숏이 준비 되었음을 나타냅니다.|  
 |**allow_sync_tran**|**bit**|게시에서 즉시 업데이트 구독이 허용되는지 여부를 지정합니다. **1** 즉시 업데이트 구독을 허용 합니다.|  
 |**autogen_sync_procs**|**bit**|게시자에서 즉시 업데이트 구독에 대한 동기화 저장 프로시저가 생성되는지 여부를 지정합니다. **1** 게시자에서 생성 된 것을 의미 합니다.|  
-|**보존**|**int**|게시에 대한 변경 사항을 배포 데이터베이스에서 유지하는 시간(시간)을 나타냅니다.|  
+|**retention**|**int**|게시에 대한 변경 사항을 배포 데이터베이스에서 유지하는 시간(시간)을 나타냅니다.|  
 |**allow_queued_tran**|**bit**|구독자의 변경 내용이 게시자에 적용될 수 있을 때까지 변경 지연이 설정되었는지 여부를 지정합니다. 경우 **1**, 구독자의 변경 내용을 큐에 대기 됩니다.|  
 |**snapshot_in_defaultfolder**|**bit**|스냅숏 파일을 기본 폴더에 저장할지 여부를 지정합니다. 경우 **0**로 지정한 대체 위치에 스냅숏 파일을 저장 *alternate_snapshot_folder*합니다. 1인 경우 스냅숏 파일이 기본 폴더에 있습니다.|  
 |**alt_snapshot_folder**|**nvarchar(510)**|스냅숏의 대체 폴더 위치를 지정합니다.|  
@@ -75,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 |**allow_initialize_from_backup**|**bit**|구독자가 초기 스냅숏이 아닌 백업으로부터 이 게시에 대한 구독을 초기화할 수 있는지 여부를 지정합니다. **1** 백업에서 구독을 초기화 해야 한다는 것을 의미 하 고 **0** 변환할 수 없는 있다는 것을 의미 합니다. 자세한 내용은 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.|  
 |**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|게시에 대해 스키마 복제가 지원될지 여부를 나타냅니다.<br /><br /> **1** DDL = 게시자에서 실행 하는 문이 복제 됩니다.<br /><br /> **0** = DDL 문이 복제 되지 않음을 나타냅니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.|  
-|**옵션**|**int**|추가 게시 옵션을 지정하는 비트맵이며, 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 사용할 수 있습니다.<br /><br /> **0x2** -피어 투 피어 복제에 대 한 로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** -사용에 대 한 비-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.<br /><br /> **0x8** -피어 투 피어 충돌 검색에 사용할 수 있습니다.|  
+|**options**|**int**|추가 게시 옵션을 지정하는 비트맵이며, 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 사용할 수 있습니다.<br /><br /> **0x2** -피어 투 피어 복제에 대 한 로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** -사용에 대 한 비-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.<br /><br /> **0x8** -피어 투 피어 충돌 검색에 사용할 수 있습니다.|  
 |**originator_id**|**smallint**|충돌 감지를 위해 피어 투 피어 복제 토폴로지의 각 노드를 식별합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을(를) 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목:  

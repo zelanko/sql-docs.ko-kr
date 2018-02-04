@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87645b4a48c157c65876ecfad89a4fef4dcd62c2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c8ca29178e6465a162f6e19cabb307e6e742ae28
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 속성(Always On 고가용성 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **Always On 고가용성** 탭은 **SQL Server 속성** 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의AlwaysOn가용성그룹기능을사용하지않도록설정하거나설정하려면구성관리자[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 고가용성 및 재해 복구 솔루션으로 가용성 그룹을 사용하려면 먼저 Always On 가용성 그룹을 사용하도록 설정해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**구성 관리자에서** SQL Server 속성 **대화 상자의** Always On 고가용성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 탭을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 고가용성 및 재해 복구 솔루션으로 가용성 그룹을 사용하려면 먼저 Always On 가용성 그룹을 사용하도록 설정해야 합니다.  
   
 ##  <a name="Prerequisites"></a> 필수 구성 요소  
  Always On 가용성 그룹을 사용하도록 설정하려면 서버 인스턴스가 다음과 같은 사전 요구 사항을 충족해야 합니다.  

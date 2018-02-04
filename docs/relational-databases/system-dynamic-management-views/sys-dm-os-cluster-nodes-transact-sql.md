@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_cluster_nodes_TSQL
 - dm_os_cluster_nodes
 - sys.dm_os_cluster_nodes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_cluster_nodes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_cluster_nodes dynamic management view
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 72e71c2b008116fe352fbf3c827ac638077eae61
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d70e6512f4018c7cf5283e2cf3b93972edae6878
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +44,9 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스(가상 서버) 구성에 있는 노드의 이름입니다.|  
 |상태|**int**|에 있는 노드의 상태는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스의: 0, 1, 2, 3,-1입니다. 자세한 내용은 참조 [GetClusterNodeState 함수](http://go.microsoft.com/fwlink/?LinkId=204794)합니다.|  
-|status_description|**nvarchar (20)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 노드의 상태에 대한 설명입니다.<br /><br /> 0 = 가동 중<br /><br /> 1 = 중지됨<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 조인 중<br /><br /> -1 = 알 수 없음|  
+|status_description|**nvarchar(20)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 노드의 상태에 대한 설명입니다.<br /><br /> 0 = 가동 중<br /><br /> 1 = 중지됨<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 조인 중<br /><br /> -1 = 알 수 없음|  
 |is_current_owner|bit|1은 이 노드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 리소스의 현재 소유자임을 의미합니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="remarks"></a>주의  
  장애 조치(failover) 클러스터링을 사용하도록 설정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스(가상 서버) 구성의 일부로 지정된 모든 장애 조치(failover) 클러스터 노드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행할 수 있습니다.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_cursors
 - dm_exec_cursors_TSQL
 - sys.dm_exec_cursors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_cursors dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b2978fe15394ed17d63c5c98b562a332a629866
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e659c10857c8a5248707e592738375fc5c7c483
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +58,7 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**int**|이 커서를 보유하는 세션의 ID입니다.|  
 |**cursor_id**|**int**|커서 개체의 ID입니다.|  
 |**name**|**nvarchar(256)**|사용자가 정의한 커서의 이름입니다.|  
-|**속성**|**nvarchar(256)**|커서의 속성을 지정합니다. 다음 속성의 값은 이 열의 값을 구성하도록 연결됩니다.<br />선언 인터페이스<br />커서 유형 <br />커서 동시성<br />커서 범위<br />커서 중첩 수준<br /><br /> 예,이 열에 반환 된 값 "TSQL &#124; 될 수 있습니다. 동적 &#124; 낙관적 &#124; Global (0) "입니다.|  
+|**properties**|**nvarchar(256)**|커서의 속성을 지정합니다. 다음 속성의 값은 이 열의 값을 구성하도록 연결됩니다.<br />선언 인터페이스<br />커서 유형 <br />커서 동시성<br />커서 범위<br />커서 중첩 수준<br /><br /> 예,이 열에 반환 된 값 "TSQL &#124; 될 수 있습니다. 동적 &#124; 낙관적 &#124; Global (0) "입니다.|  
 |**sql_handle**|**varbinary(64)**|커서를 선언한 일괄 처리의 텍스트에 대한 핸들입니다.|  
 |**statement_start_offset**|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 시작되는 위치까지의 문자 수입니다. 와 함께 사용할 수는 **sql_handle**, **statement_end_offset**, 및 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 검색 하려면 동적 관리 함수는 현재 요청에 대 한 명령문을 실행 합니다.|  
 |**statement_end_offset**|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 종료되는 위치까지의 문자 수입니다. 와 함께 사용할 수는 **sql_handle**, **statement_start_offset**, 및 **sys.dm_exec_sql_text** 검색 하려면 동적 관리 함수는 현재 요청에 대 한 명령문을 실행 합니다.|  
@@ -68,9 +71,9 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_size**|**int**|인출 버퍼 크기에 대한 정보를 반환합니다.<br /><br /> 1 = Transact-SQL 커서입니다. API 커서의 경우 더 높은 값으로 설정할 수 있습니다.|  
 |**fetch_buffer_start**|**int**|FAST_FORWARD 및 DYNAMIC 커서의 경우, 커서가 열려 있지 않거나 첫 번째 행 앞에 있으면 0을 반환합니다. 그렇지 않으면 -1을 반환합니다.<br /><br /> STATIC 및 KEYSET 커서의 경우, 커서가 열려 있지 않으면 0을 반환하고 커서가 마지막 행 뒤에 있으면 -1을 반환합니다.<br /><br /> 그렇지 않으면 커서가 있는 행 번호를 반환합니다.|  
 |**ansi_position**|**int**|인출 버퍼 내의 커서 위치입니다.|  
-|**되는 worker_time**|**bigint**|이 커서를 실행하는 작업자가 사용한 시간(마이크로초)입니다.|  
-|**읽기**|**bigint**|커서에 의해 수행된 읽기 수입니다.|  
-|**쓰기**|**bigint**|커서에 의해 수행된 쓰기 수입니다.|  
+|**worker_time**|**bigint**|이 커서를 실행하는 작업자가 사용한 시간(마이크로초)입니다.|  
+|**reads**|**bigint**|커서에 의해 수행된 읽기 수입니다.|  
+|**writes**|**bigint**|커서에 의해 수행된 쓰기 수입니다.|  
 |**dormant_duration**|**bigint**|이 커서에 대한 마지막 쿼리(열기 또는 인출)가 시작된 이후 경과한 시간(밀리초)입니다.|  
   
 ## <a name="permissions"></a>Permissions  
@@ -90,7 +93,7 @@ dm_exec_cursors (session_id | 0 )
 |----------|-----------------|  
 |Keyset|키 집합 커서로 선언되었습니다.|  
 |Dynamic|동적 커서로 선언되었습니다.|  
-|Snapshot|스냅숏 또는 정적 커서로 선언되었습니다.|  
+|스냅숏|스냅숏 또는 정적 커서로 선언되었습니다.|  
 |Fast_Forward|빠른 정방향 커서로 선언되었습니다.|  
   
  다음 표에서는 커서 동시성에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  

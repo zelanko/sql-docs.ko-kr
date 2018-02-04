@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_job
 - sp_delete_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 323029d08f890a7013691090f6478b65dc6e3274
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc32f2328e4153f79a7eb1c7e4115e455078791c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,31 +49,31 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  삭제할 작업의 ID입니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  삭제할 작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name*지정 해야 하며 둘 다 지정할 수 없습니다.  
   
- [  **@originating_server=** ] **'***서버***'**  
+ [ **@originating_server=** ] **'***server***'**  
  내부적으로만 사용할 수 있습니다.  
   
- [  **@delete_history=** ] *delete_history*  
+ [ **@delete_history=** ] *delete_history*  
  작업 기록 삭제 여부를 지정합니다. *delete_history* 은 **비트**, 기본값은 **1**합니다. 때 *delete_history* 은 **1**, 작업에 대 한 작업 기록이 삭제 됩니다. 때 *delete_history* 은 **0**, 작업 기록 삭제 되지 않습니다.  
   
  작업이 삭제 되 고 기록은 삭제 되지 않은 경우 작업에 대 한 기록 정보는 표시 되지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 그래픽 사용자 인터페이스 작업 기록 하지만 정보에 여전히에 상주할는 **sysjobhistory**테이블에 **msdb** 데이터베이스입니다.  
   
- [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
+ [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
  이 작업에 연결된 일정이 다른 작업에 연결되어 있지 않은 경우 해당 일정의 삭제 여부를 지정합니다. *delete_unused_schedule* 은 **비트**, 기본값은 **1**합니다. 때 *delete_unused_schedule* 은 **1**, 다른 작업이 일정을 참조 하는 경우이 작업에 연결 된 일정 삭제 됩니다. 때 *delete_unused_schedule* 은 **0**, 일정은 삭제 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **@originating_server**  인수는 내부 용도로 예약 되어 있습니다.  

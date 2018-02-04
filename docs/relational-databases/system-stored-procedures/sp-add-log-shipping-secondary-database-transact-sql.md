@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
 - sp_add_log_shipping_secondary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_shipping_secondary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_shipping_secondary_database
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e66faa24b29b3d3279b3d85b5c834f7420b96abf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 965f2191ba9dbdbba5be91412c1459064972c22c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +63,7 @@ sp_add_log_shipping_secondary_database
  [  **@secondary_database**  =] '*secondary_database*'  
  보조 데이터베이스의 이름입니다. *secondary_database* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@primary_server**  =] '*primary_server*'  
+ [ **@primary_server** = ] '*primary_server*'  
  기본 인스턴스 이름을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로그 전달 구성의 합니다. *primary_server* 은 **sysname** NULL 일 수 없습니다.  
   
  [  **@primary_database**  =] '*primary_database*'  
@@ -87,10 +90,10 @@ sp_add_log_shipping_secondary_database
  [  **@block_size**  =] '*block_size*'  
  백업 장치의 블록 크기로 사용되는 크기(바이트)입니다. *block_size* 은 **int** 기본값은-1입니다.  
   
- [  **@buffer_count**  =] '*buffer_count*'  
+ [ **@buffer_count** = ] '*buffer_count*'  
  백업 또는 복원 작업에 사용되는 버퍼의 총 개수입니다. *buffer_count* 은 **int** 기본값은-1입니다.  
   
- [  **@max_transfer_size**  =] '*max_transfer_size*'  
+ [ **@max_transfer_size** = ] '*max_transfer_size*'  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 장치로 발급하는 최대 입력 또는 출력 요청의 크기(바이트)입니다. *max_transfersize* 은 **int** NULL 일 수 있습니다.  
   
  [  **@restore_threshold**  =] '*restore_threshold*'  
@@ -102,14 +105,14 @@ sp_add_log_shipping_secondary_database
  [  **@threshold_alert_enabled**  =] '*threshold_alert_enabled*'  
  경고가 발생 하는지 여부를 지정 하면 *backup_threshold* 을 초과 합니다. 기본값인 1은 경고가 발생된다는 의미입니다. *threshold_alert_enabled* 은 **비트**합니다.  
   
- [  **@history_retention_period**  =] '*history_retention_period*'  
+ [ **@history_retention_period** = ] '*history_retention_period*'  
  기록이 보존되는 기간(분)입니다. *history_retention_period* 은 **int**, 기본값은 NULL입니다. 지정된 값이 없으면 14420을 사용합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_add_log_shipping_secondary_database** 에서 실행 되어야 합니다는 **마스터** 보조 서버에서 데이터베이스. 이 저장 프로시저는 다음을 수행합니다.  
@@ -143,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;에 대 한 SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_delete_policy_category_TSQL
 - sp_syspolicy_delete_policy_category
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_delete_policy_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_delete_policy_category
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9872ac6107af895f648c72697f767411ce0a660e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 49bfa4aa420b69aa4e6c123f4317d63668f35a4f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicydeletepolicycategory-transact-sql"></a>sp_syspolicy_delete_policy_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +46,10 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@name=** ] **'***이름***'**  
+ [ **@name=** ] **'***name***'**  
  정책 범주의 이름입니다. *이름* 은 **sysname**, 이면 반드시 지정 해야 *policy_category_id* 은 NULL입니다.  
   
- [  **@policy_category_id=** ] *policy_category_id*  
+ [ **@policy_category_id=** ] *policy_category_id*  
  정책 범주의 식별자입니다. *policy_category_id* 은 **int**, 이면 반드시 지정 해야 *이름* 은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_account_sp
 - sysmail_delete_account_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_account_sp
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07fa3cf161402be928b2744512206472b88e385c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 14667f101dbb77571a3da7bb162285efe0596656
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeleteaccountsp-transact-sql"></a>sysmail_delete_account_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +46,17 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  삭제할 계정의 ID 번호입니다. *account_id* 은 **int**, 기본값은 없습니다. 어느 *account_id* 또는 *account_name* 지정 해야 합니다.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  삭제할 계정의 이름입니다. *account_name* 은 **sysname**, 기본값은 없습니다. 어느 *account_id* 또는 *account_name* 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  이 프로시저는 프로필의 계정 사용 여부에 관계없이 지정된 계정을 삭제합니다. 계정이 없는 프로필은 전자 메일을 보낼 수 없습니다.  

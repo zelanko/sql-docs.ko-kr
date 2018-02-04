@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_merge_checkpoint_files_TSQL
 - sys.sp_xtp_merge_checkpoint_files
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_xtp_merge_checkpoint_files
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_xtp_merge_checkpoint_files
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2034ab3fc7118a0e93aabaed345fa17407b7539
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2ea57de40e24824a71d4d89ad954fb19fe21e29
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +63,10 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  에 표시 된 대로 데이터 파일에 대 한 트랜잭션 (bigint) 상한 [sys.dm_db_xtp_checkpoint_files&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). 트랜잭션 ID 값이 잘못된 경우 오류가 생성됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="cursors-returned"></a>반환되는 커서  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Permissions  
  sysadmin 고정 서버 역할 및 db_owner 고정 데이터베이스 역할이 필요합니다.  

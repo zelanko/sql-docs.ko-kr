@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHANGE_TRACKING_IS_COLUMN_IN_MASK_TSQL
 - CHANGE_TRACKING_IS_COLUMN_IN_MASK
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - change tracking [SQL Server], CHANGE_TRACKING_IS_COLUMN_IN_MASK
 - CHANGE_TRACKING_IS_COLUMN_IN_MASK
 ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ca1e489937aba92270fe73978f017c35b4fca99
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 88deb96a5f27568b8cfcfa3fc7ddcc6d43019d76
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +62,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |반환 값|Description|  
 |------------------|-----------------|  
 |0|지정된 된 열에 없는 *change_columns* 목록입니다.|  
-|1|지정 된 열에이 *change_columns* 목록입니다.|  
+|1.|지정 된 열에이 *change_columns* 목록입니다.|  
   
 ## <a name="remarks"></a>주의  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK 유효성을 검사 하는 검사를 수행 하지 않습니다는 *column_id* 값 이나 하는 *change_columns* 에서 테이블을 얻는 데 사용 된 매개 변수는  *column_id* 을 받았습니다.  

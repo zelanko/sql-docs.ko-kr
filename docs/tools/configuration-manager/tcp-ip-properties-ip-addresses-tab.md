@@ -8,26 +8,28 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6f40f56dcf2f46f78ebad2e8095e21cd5e012b3c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 78513a9ebe1a0418a5dac367dc49b790d3197019
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 속성(IP 주소 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **TCP/IP 속성 (IP 주소 탭)** 대화 상자를 특정 IP 주소에 대 한 TCP/IP 프로토콜 옵션을 구성할 수 있습니다. **IPAll** 을 선택하면 모든 주소에 대해 **TCP 동적 포트** 및 **TCP 포트**만 동시에 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**TCP/IP 속성(IP 주소 탭)** 대화 상자를 사용하여 특정 IP 주소에 대한 TCP/IP 프로토콜 옵션을 구성할 수 있습니다. **IPAll** 을 선택하면 모든 주소에 대해 **TCP 동적 포트** 및 **TCP 포트**만 동시에 구성할 수 있습니다.  
   
  변경 내용은 SQL Server를 다시 시작할 때 적용됩니다. SQL Server Browser 서비스를 시작 및 중지하는 방법은 [SQL Server Browser 서비스 시작 및 중지](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)를 참조하세요.  
   

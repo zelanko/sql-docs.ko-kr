@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
 - sp_trace_setfilter_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_setfilter
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 659544a47bc142ed430ac6406e2bfde0f60f6845
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +53,19 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  필터를 설정한 추적의 ID입니다. *trace_id* 은 **int**, 기본값은 없습니다. 사용자가이 사용 *trace_id* 식별, 수정 및 추적 제어 하는 값입니다.  
   
- [  **@columnid=** ] *column_id*  
+ [ **@columnid=** ] *column_id*  
  필터를 적용한 열의 ID입니다 *column_id* 은 **int**, 기본값은 없습니다. 경우 *column_id* 이 NULL 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정된 된 추적에 대 한 모든 필터를 지웁니다.  
   
- [  **@logical_operator**  =] *logical_operator*  
+ [ **@logical_operator** = ] *logical_operator*  
  지정 하는지 여부를 AND (**0**) 또는 OR (**1**) 연산자가 적용 됩니다. *logical_operator* 은 **int**, 기본값은 없습니다.  
   
- [  **@comparison_operator=** ] *comparison_operator*  
+ [ **@comparison_operator=** ] *comparison_operator*  
  비교 유형을 지정합니다. *comparison_operator* 은 **int**, 기본값은 없습니다. 비교 연산자 및 나타내는 값이 표에 나와 있습니다.  
   
-|값|비교 연산자|  
+|Value|비교 연산자|  
 |-----------|-------------------------|  
 |**0**|=(같음)|  
 |**1**|<>(같지 않음)|  

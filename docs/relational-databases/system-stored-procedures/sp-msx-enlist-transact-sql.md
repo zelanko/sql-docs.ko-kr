@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_enlist_TSQL
 - sp_msx_enlist
-dev_langs: TSQL
-helpviewer_keywords: sp_msx_enlist
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_msx_enlist
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cfa391a6fd5874b1b9c9edc99d14904e76874cd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b7984972ac467403114b62e30390e86d007eb401
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +50,17 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@msx_server_name =**] **'***msx_server***'**  
+ [ **@msx_server_name =**] **'***msx_server***'**  
  다중 서버 관리(마스터) 서버의 이름입니다. *msx_server* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@location =**] **'***위치***'**  
+ [ **@location =**] **'***location***'**  
  추가할 대상 서버의 위치입니다. *위치* 은 **nvarchar (100)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Permissions  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  

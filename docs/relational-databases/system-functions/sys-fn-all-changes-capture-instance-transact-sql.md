@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - fn_all_changes
 - sys.fn_all_changes
 - fn_all_changes_TSQL
 - sys.fn_all_changes_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_all_changes_<capture_instance>
 - sys.fn_all_changes_<capture_instance>
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29f9560f7308fef45468c7ce67a6f8a15e120a3b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 381609e65ed354ee61d059da2e92d8fe3b7c114b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +96,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|변경 내용과 관련된 트랜잭션의 커밋 LSN입니다. 동일한 트랜잭션에서 커밋된 모든 변경 내용은 같은 커밋 LSN을 공유합니다.|  
 |__CDC_SEQVAL|**binary(10)**|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
-|\<열을 @column_list>|**달라 집니다.**|식별 되는 열은 *column_list* 인수 sp_cdc_generate_wrapper_function 래퍼 함수를 만드는 스크립트를 생성 하는 호출 될 때입니다.|  
+|\<열을 @column_list>|**varies**|식별 되는 열은 *column_list* 인수 sp_cdc_generate_wrapper_function 래퍼 함수를 만드는 스크립트를 생성 하는 호출 될 때입니다.|  
 |__CDC_OPERATION|**nvarchar(2)**|대상 환경에 행을 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 인수 값에 따라 달라 집니다 *row_filter_option* 하면 호출에 제공 합니다.<br /><br /> *row_filter_option* = '모두'<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> *row_filter_option* 'all update old' =<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> 'UO' - 업데이트 작업 이전 값|  
 |\<열을 @update_flag_list>|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. 플래그는 항상 NULL로 설정 \__CDC_OPERATION에는 ', 'I' 또는 'u o'. 때 \__CDC_OPERATION이 ' u N ', 업데이트를 해당 열이 변경 되 면 1로 설정 됩니다. 그렇지 않으면 0입니다.|  
   
@@ -118,6 +121,6 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>관련 항목:  
  [sys.sp_cdc_generate_wrapper_function &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60; capture_instance& &#62;  &#40; Transact SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

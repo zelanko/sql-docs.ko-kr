@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobstep
 - sp_delete_jobstep_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_jobstep
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_jobstep
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9134c1f50a3ce1e9aaee8456db4f076193271ca9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0b1ee59a093948b839618c1127ce2ca290397e64
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +48,22 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  단계를 제거할 작업의 ID입니다. *job_id*은 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  단계를 제거할 작업의 이름입니다. *job_name*은 **sysname**, 기본값은 NULL입니다.  
   
 > **참고:** 어느 *job_id* 또는 *job_name* 지정 해야 하며 둘 다 지정할 수 없습니다.  
   
- [  **@step_id=** ] *step_id*  
+ [ **@step_id=** ] *step_id*  
  제거할 단계의 ID입니다. *step_id*은 **int**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  작업 단계를 제거하면 자동으로 삭제된 단계를 참조하는 다른 작업 단계가 업데이트됩니다.  

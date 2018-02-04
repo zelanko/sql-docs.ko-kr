@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
 - sp_detach_db_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c50a0b30d69e88047ea614052cebc0105ed7c4a7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +52,15 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@dbname =** ] **'***database_name***'**  
+ [ **@dbname =** ] **'***database_name***'**  
  분리할 데이터베이스의 이름입니다. *a s e _* 는 **sysname** 값 이며 기본값은 NULL입니다.  
   
- [  **@skipchecks =** ] **'***skipchecks***'**  
+ [ **@skipchecks =** ] **'***skipchecks***'**  
  UPDATE STATISTICS를 건너뛰거나 실행할지를 지정합니다. *skipchecks* 는 **nvarchar (10)** 값 이며 기본값은 NULL입니다. UPDATE STATISTICS를 건너뛰려면 지정 **true**합니다. UPDATE STATISTICS를 명시적으로 실행 하려면 지정 **false**합니다.  
   
  기본적으로 UPDATE STATISTICS는 테이블과 인덱스에 있는 데이터에 관한 정보를 업데이트하기 위해 수행됩니다. UPDATE STATISTICS는 읽기 전용 미디어로 이동할 데이터베이스에 수행하면 유용합니다.  
   
- [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
+ [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  분리되는 데이터베이스와 연결된 전체 텍스트 인덱스 파일이 데이터베이스 분리 작업 동안 삭제되지 않도록 지정합니다. *KeepFulltextIndexFile* 는 **nvarchar (10)** 값 이며 기본값은 **true**합니다. 경우 *KeepFulltextIndexFile* 은 **false**, 데이터베이스와 관련 된 모든 전체 텍스트 인덱스 파일 및 전체 텍스트 인덱스의 메타 데이터 데이터베이스가 읽기 전용으로 설정 하지 않으면 삭제 됩니다. Null 인 경우 또는 **true**, 전체 텍스트 관련 메타 데이터가 유지 됩니다.  
   
 > [!IMPORTANT]  
@@ -68,7 +70,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  데이터베이스가 분리되면 모든 해당 메타데이터가 삭제됩니다. 데이터베이스 로그인 계정의 기본 데이터베이스 경우 **마스터** 해당 계정의 기본 데이터베이스가 됩니다.  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_rename_policy_category_TSQL
 - sp_syspolicy_rename_policy_category
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_rename_policy_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_rename_policy_category
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff154fae3a8e89c90ffd832d7f5f12a7d99cef1c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 53a9859c13f198d25bfd392ca3fa40e7a6159ddc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyrenamepolicycategory-transact-sql"></a>sp_syspolicy_rename_policy_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +47,13 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@name =** ] **'***이름***'**  
+ [ **@name =** ] **'***name***'**  
  이름을 바꿀 정책 범주의 이름입니다. *이름* 은 **sysname**, 이면 반드시 지정 해야 *policy_category_id* 은 NULL입니다.  
   
- [  **@policy_category_id=** ] *policy_category_id*  
+ [ **@policy_category_id=** ] *policy_category_id*  
  이름을 바꿀 정책 범주의 식별자입니다. *policy_category_id* 은 **int**, 이면 반드시 지정 해야 *이름* 은 NULL입니다.  
   
- [  **@new_name=** ] **'***new_name***'**  
+ [ **@new_name=** ] **'***new_name***'**  
  정책 범주의 새 이름이입니다. *new_name* 은 **sysname**, 이며 필수입니다. NULL 또는 빈 문자열일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

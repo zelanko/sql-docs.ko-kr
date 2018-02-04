@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efec4c1ef04ef95e74ef13479b5f51cfe2d84bdb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +49,28 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@class=**] **'***클래스***'**  
+ [ **@class=**] **'***class***'**  
  정보를 요청한 대상 클래스입니다. *클래스* 은 **varchar(8)**의 기본값은 **작업**합니다. *클래스* 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**작업**|작업 범주에 관한 정보를 제공합니다.|  
-|**경으십시오**|경고 범주에 관한 정보를 제공합니다.|  
-|**연산자**|운영자 범주에 관한 정보를 제공합니다.|  
+|**JOB**|작업 범주에 관한 정보를 제공합니다.|  
+|**ALERT**|경고 범주에 관한 정보를 제공합니다.|  
+|**OPERATOR**|운영자 범주에 관한 정보를 제공합니다.|  
   
- [  **@type=** ] **'***형식***'**  
+ [ **@type=** ] **'***type***'**  
  정보를 요청한 대상 범주의 유형입니다. *형식* 은 **varchar(12)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**로컬**|로컬 작업 범주입니다.|  
-|**다중-서버**|다중 서버 작업 범주입니다.|  
+|**LOCAL**|로컬 작업 범주입니다.|  
+|**MULTI -SERVER**|다중 서버 작업 범주입니다.|  
 |**NONE**|이외의 다른 클래스에 대 한 범주 **작업**합니다.|  
   
- [  **@name=** ] **'***이름***'**  
+ [ **@name=** ] **'***name***'**  
  정보를 요청한 대상 범주의 이름입니다. *이름* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@suffix=** ] *접미사*  
+ [ **@suffix=** ] *suffix*  
  지정 여부는 **category_type** 결과 집합의 열은 ID 또는 이름이 있습니다. *접미사* 은 **비트**, 기본값은 **0**합니다. **1** 표시는 **category_type** 를 이름으로 및 **0** ID로 표시 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -79,7 +82,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|범주 ID입니다.|  
-|**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = 로컬<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
+|**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = Local<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
 |**name**|**sysname**|범주의 이름입니다.|  
   
  때  **@suffix**  은 **1**, **sp_help_category** 다음 결과 집합을 반환 합니다.  

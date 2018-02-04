@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24c2acb97db0241f1f9ee061196e48e8f5c45086
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b9f0024d74d44cafaa46f03571f74bf644d0f63e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>SQL Server Integration Services 속성(로그온 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **로그온에** 탭은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **속성** 대화 상자에서 사용할 계정을 지정 하려면는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 선택한를 시작 및 서비스를 중지 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**속성** 대화 상자의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **로그온** 탭을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **로컬 시스템 계정**  

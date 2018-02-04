@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_category
 - sp_update_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fad21c3db995f5eaa57d3f31c6ed057b7c9790b8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: fab5ea9aea708af028114ef59e9274931c8257f9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@class =**] **'***클래스***'**  
+ [ **@class =**] **'***class***'**  
  업데이트할 범주의 클래스입니다. *클래스*은 **varchar(8)**, 기본값은 없고 수와 이러한 값 중 하나 여야 합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**경으십시오**|경고 범주를 업데이트합니다.|  
-|**작업**|작업 범주를 업데이트합니다.|  
-|**연산자**|연산자 범주를 업데이트합니다.|  
+|**ALERT**|경고 범주를 업데이트합니다.|  
+|**JOB**|작업 범주를 업데이트합니다.|  
+|**OPERATOR**|연산자 범주를 업데이트합니다.|  
   
- [  **@name =**] **'***old_name***'**  
+ [ **@name =**] **'***old_name***'**  
  범주의 현재 이름입니다. *old_name*은 **sysname**, 기본값은 없습니다.  
   
- [  **@new_name =**] **'***new_name***'**  
+ [ **@new_name =**] **'***new_name***'**  
  범주의 새 이름입니다. *new_name*은 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_principalprofile_sp_TSQL
 - sysmail_delete_principalprofile_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_principalprofile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_principalprofile_sp
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02e8d78d6807a2432b0b94f208f532bcd5279c21
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 204daab0d90b050237d864c23729cf2544d68fe4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@principal_id**  =] *principal_id*  
+ [ **@principal_id** = ] *principal_id*  
  데이터베이스 사용자 또는 역할의 id는 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_id* 은 **int**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 하려면 보안 주체 ID를 제공 **0** 또는 사용자 이름 **'public'**합니다. 어느 *principal_id* 또는 *principal_name* 지정 해야 합니다.  
   
- [  **@principal_name**  =] **'***principal_name***'**  
+ [ **@principal_name** = ] **'***principal_name***'**  
  데이터베이스 사용자 또는 역할의 이름인는 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_name* 은 **sysname**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 하려면 보안 주체 ID를 제공 **0** 또는 사용자 이름 **'public'**합니다. 어느 *principal_id* 또는 *principal_name* 지정 해야 합니다.  
   
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  삭제할 연결에 대한 프로필의 ID입니다. *profile_id* 은 **int**, 기본값은 NULL입니다. 어느 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
   
- [  **@profile_name**  =] **'***profile_name***'**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  삭제할 연결에 대한 프로필의 이름입니다. *profile_name* 은 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

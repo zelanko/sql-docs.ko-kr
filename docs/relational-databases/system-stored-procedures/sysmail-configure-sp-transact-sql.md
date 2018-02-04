@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_configure_sp_TSQL
 - sysmail_configure_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_configure_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56f348ef849e98cf0e9445382d00ec6b66e5b81
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 934f108783b76e070a15723543cafae59b80b705
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +48,20 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@parameter_name**  =] **'***p a r a***'**  
+ [**@parameter_name** = ] **'***parameter_name***'**  
  변경할 매개 변수의 이름입니다.  
   
- [ **@parameter_value**  =] **'***parameter_value***'**  
+ [**@parameter_value** = ] **'***parameter_value***'**  
  매개 변수의 새 값입니다.  
   
- [ **@description**  =] **'***설명***'**  
+ [**@description** = ] **'***description***'**  
  매개 변수에 대한 설명입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  데이터베이스 메일은 다음과 같은 매개 변수를 사용합니다.  
@@ -71,7 +74,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*DatabaseMailExeMinimumLifeTime*|외부 메일 프로세스가 활성 상태로 유지되는 최소 시간(초)입니다. 데이터베이스 메일에서 많은 메시지를 보내려면 이 값을 늘려 데이터베이스 메일을 활성 상태로 유지하고 자주 시작하고 중지하는 오버헤드를 방지합니다.|**600**|  
 |*DefaultAttachmentEncoding*|전자 메일 첨부 파일의 기본 인코딩입니다.|MIME|  
 |*MaxFileSize*|첨부 파일의 최대 크기(바이트)입니다.|**1000000**|  
-|*ProhibitedExtensions*|전자 메일 메시지에 대한 첨부 파일로 보낼 수 없는 쉼표로 구분된 확장명 목록입니다.|**exe, dll, vbs, js**|  
+|*ProhibitedExtensions*|전자 메일 메시지에 대한 첨부 파일로 보낼 수 없는 쉼표로 구분된 확장명 목록입니다.|**exe,dll,vbs,js**|  
 |*LoggingLevel*|데이터베이스 메일 로그에 기록할 메시지를 지정합니다. 다음 숫자 값 중 하나입니다.<br /><br /> 1 - 표준 모드입니다. 오류만 기록합니다.<br /><br /> 2 - 확장 모드입니다. 오류, 경고 및 정보 메시지를 기록합니다.<br /><br /> 3 - 세부 정보 표시 모드입니다. 오류, 경고, 정보 메시지, 성공 메시지 및 추가 내부 메시지를 기록합니다. 이 모드는 문제 해결을 위해 사용합니다.|**2**|  
   
  저장된 프로시저 **sysmail_configure_sp** 에 **msdb** 데이터베이스에 있으며가 소유 하 고는 **dbo** 스키마입니다. 현재 데이터베이스 없는 경우 세 부분으로 이루어진 이름으로 프로시저를 실행 해야 **msdb**합니다.  

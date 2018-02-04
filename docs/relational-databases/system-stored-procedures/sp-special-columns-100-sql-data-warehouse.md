@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6f344eb67b56558467303535964b5ca97d172bb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 64aafbee1cae4cbdf8a2d43c7367fdbae6e40b27
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -55,13 +57,13 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. 경우 *소유자* 지정 하지 않으면 현재 사용자는 지정 된 테이블을 소유 하지 않는 및 *이름*,이 프로시저는 지정 된 테이블을 찾습니다 *이름* 데이터베이스 소유 소유자입니다. 테이블이 있으면 해당 열이 반환됩니다.  
   
- [ @qualifier=] '*한정자*'  
+ [ @qualifier=] '*qualifier*'  
  테이블 한정자의 이름입니다. *한정자* 은 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대 한 세 부분으로 구성 된 이름 (*qualifier.owner.name*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
  [ @col_type=] '*col_type*'  
  열 유형입니다. *col_type* 은 **char (**1**)**, 기본값은 R 유형은 최적 열 또는 열 집합을 반환 된 열 또는 열에서 값을 검색 하 여,의 지정 된 모든 행에 대해 허용 고유 하 게 식별 하는 테이블입니다. 열은 이 목적을 위해 특별히 구성된 의사 열 또는 테이블의 고유한 인덱스 열이 될 수 있습니다. V 유형은 지정된 테이블에 열이 있는 경우 해당 열을 반환합니다. 이 열은 트랜잭션에 의해 행의 값이 업데이트될 때 데이터 원본에 의해 자동으로 업데이트됩니다.  
   
- [ @scope=] '*범위*'  
+ [ @scope=] '*scope*'  
  ROWID에 필요한 최소 범위입니다. *범위* 은 **char (**1**)**, c 기본값 지정는 ROWID가 해당 행에 있는 경우에 유효 합니다. T 범위는 전체 트랜잭션에 대해 ROWID가 유효하도록 지정합니다.  
   
  [ @nullable=] '*nullable*'  
@@ -71,7 +73,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  사용하고 있는 ODBC 버전입니다. *ODBCVer* 은 **int (**4**)**, 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타냅니다. ODBC 버전 2.0과 ODBC 버전 3.0의 차이 대 한 자세한 내용은 ODBC 버전 3.0 ODBC SQLSpecialColumns 사양을 참조 하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>결과 집합  
   

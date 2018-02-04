@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_operator
 - sp_delete_operator_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_operator
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 153bd09ac6ed79ef0f46286a94dc2b6b120974c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 91dd37ec3f69d31798d8e943a7a4f0d1c4b70d31
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeleteoperator-transact-sql"></a>sp_delete_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +47,17 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@name=** ] **'***이름***'**  
+ [ **@name=** ] **'***name***'**  
  삭제할 운영자의 이름입니다. *이름* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@reassign_to_operator=** ] **'***reassign_operator***'**  
+ [ **@reassign_to_operator=** ]  **'***reassign_operator***'**  
  지정된 운영자의 경고를 다시 할당할 운영자의 이름입니다. *reassign_operator* 은 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  운영자가 제거되면 그 운영자와 연관된 알림도 모두 함께 제거됩니다.  

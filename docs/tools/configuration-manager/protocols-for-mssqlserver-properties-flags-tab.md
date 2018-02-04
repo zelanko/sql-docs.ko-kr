@@ -8,24 +8,27 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: MSSQLSERVER property protocols
+helpviewer_keywords:
+- MSSQLSERVER property protocols
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db816ac16fa53afeb3c7f8f5434d3123f5a4dc00
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: eeca5f9ce24cd9ff24663a05344bd8543b1141b7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(플래그 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]인증서가 서버에 설치를 사용 하 여는 **플래그** 탭에 **MSSQLSERVER 속성에 대 한 프로토콜** 대화 상자를 확인 하거나 프로토콜 암호화를 지정할 수 있으며 인스턴스 옵션을 숨길입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용할지 여부를 다시 시작 해야는 **ForceEncryption** 설정 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+서버에 인증서가 설치되어 있으면 **MSSQLSERVER에 대한 프로토콜 속성** 대화 상자의 **플래그** 탭을 사용하여 프로토콜 암호화를 확인 또는 지정할 수 있으며 인스턴스 옵션을 숨길 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용할지 여부를 다시 시작 해야는 **ForceEncryption** 설정 합니다.  
   
  연결을 암호화하려면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 인증서를 제공해야 합니다. 인증서를 설치하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 인스턴스가 시작될 때 자체 서명된 인증서를 생성합니다. 자체 서명된 이 인증서는 신뢰할 수 있는 인증 기관의 인증서 대신 사용될 수 있지만 인증이나 거부할 수 없음 기능을 제공하지 않습니다.  
   

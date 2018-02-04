@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff041f428b3b5558e0378f54785da88115c9f7c0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 61c90f8579a4656ba3bc5be5e111afd2dabf7487
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>SQL 전체 텍스트 필터 데몬 시작 관리자(서비스 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]부터는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQL 전체 텍스트 필터 데몬 시작 관리자 (FDHOST Launcher) 서비스가 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트입니다. 전체 텍스트 검색을 사용할 경우 이 서비스를 실행해야 합니다. 필터 디먼 호스트 프로세스에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "전체 텍스트 검색 아키텍처"를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트에서 SQL 전체 텍스트 필터 데몬 시작 관리자(FDHOST Launcher) 서비스가 사용됩니다. 전체 텍스트 검색을 사용할 경우 이 서비스를 실행해야 합니다. 필터 디먼 호스트 프로세스에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "전체 텍스트 검색 아키텍처"를 참조하세요.  
   
  **SQL 전체 텍스트 필터 디먼 시작 관리자 속성**대화 상자의 **서비스** 탭을 사용하여 다음 옵션을 보거나 지정할 수 있습니다.  
   

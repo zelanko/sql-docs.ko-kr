@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semantickeyphrasetable
 - semantickeyphrasetable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semantickeyphrasetable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5b6f184c3ea2a455c59f221f4156e5ab7ce5210
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a88d9739edae602d00ec22123d19eb5861a9f744
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,8 +78,8 @@ SEMANTICKEYPHRASETABLE
 |------------------|----------|-----------------|  
 |**column_id**|**int**|현재 키 구가 추출되고 인덱싱된 원본 열의 ID입니다.<br /><br /> column_id에서 열 이름을 검색하거나 열 이름에서 column_id를 검색하는 방법에 대한 자세한 내용은 COL_NAME 및 COLUMNPROPERTY 함수를 참조하십시오.|  
 |**document_key**|**\***<br /><br /> 이 키는 원본 테이블의 고유 키 유형과 일치합니다.|현재 키 구가 인덱싱된 문서 또는 행의 고유 키 값입니다.|  
-|**키 구**|**NVARCHAR**|column_id로 식별되는 열에 있고 document_key에 지정된 문서와 연관된 키 구입니다.|  
-|**점수**|**실제**|동일한 문서의 인덱싱된 열에 있는 다른 모든 키 구를 기준으로 한 이 키 구의 상대적 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
+|**keyphrase**|**NVARCHAR**|column_id로 식별되는 열에 있고 document_key에 지정된 문서와 연관된 키 구입니다.|  
+|**score**|**REAL**|동일한 문서의 인덱싱된 열에 있는 다른 모든 키 구를 기준으로 한 이 키 구의 상대적 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  자세한 내용은 참조 [의미 체계 검색 하 여 문서의 키 구 찾기](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)합니다.  

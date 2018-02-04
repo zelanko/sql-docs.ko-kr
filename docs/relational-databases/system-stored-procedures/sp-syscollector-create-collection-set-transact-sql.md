@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
 - sp_syscollector_create_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23015f77f4d2bc9dafe10fb12b660cec31484985
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 50e5c77d8af3ae4ab42ef74ee18f7b49db2a7c57
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +62,15 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@name =** ] '*이름*'  
+ [ **@name =** ] '*name*'  
  컬렉션 집합의 이름입니다. *이름* 은 **sysname** 이며 빈 문자열 이거나 NULL 일 수 없습니다.  
   
  *이름* 고유 해야 합니다. 현재 컬렉션 집합 이름의 목록을 보려면 syscollector_collection_sets 시스템 뷰를 쿼리합니다.  
   
- [  **@target =** ] '*대상*'  
+ [ **@target =** ] '*target*'  
  나중에 사용하도록 예약되어 있습니다. *이름* 은 **nvarchar (128)** 이며 기본값은 NULL입니다.  
   
- [  **@collection_mode =** ] *collection_mode*  
+ [ **@collection_mode =** ] *collection_mode*  
  데이터를 수집하고 저장하는 방식을 지정합니다. *collection_mode* 은 **smallint** 다음 값 중 하나일 수 있습니다.  
   
  0 - 캐시된 모드. 데이터 컬렉션과 업로드가 별도의 일정에 속해 있습니다. 연속 컬렉션을 위해 캐시된 모드를 지정합니다.  
@@ -77,24 +79,24 @@ sp_syscollector_create_collection_set
   
  에 대 한 기본값 *collection_mode* 은 0입니다. 때 *collection_mode* 은 0으로, *schedule_uid* 또는 *schedule_name* 지정 해야 합니다.  
   
- [  **@days_until_expiration =** ] *days_until_expiration*  
+ [ **@days_until_expiration =** ] *days_until_expiration*  
  수집된 데이터가 관리 데이터 웨어하우스에 저장되는 일 수입니다. *days_until_expiration* 은 **smallint** 기본값은 730 (2 년)입니다. *days_until_expiration* 0 또는 양의 정수 여야 합니다.  
   
- [  **@proxy_id =** ] *proxy_id*  
+ [ **@proxy_id =** ] *proxy_id*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 고유 식별자입니다. *proxy_id* 은 **int** 이며 기본값은 NULL입니다. 를 지정 하는 경우 *proxy_name* NULL 이어야 합니다. 얻으려고 *proxy_id*, sysproxies 시스템 테이블을 쿼리 합니다. dc_admin 고정 데이터베이스 역할에는 프록시에 액세스할 권한이 있어야 합니다. 자세한 내용은 참조 [SQL Server 에이전트 프록시 만들기](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)합니다.  
   
- [  **@proxy_name =** ] '*proxy_name*'  
+ [ **@proxy_name =** ] '*proxy_name*'  
  프록시 계정의 이름입니다. *proxy_name* 은 **sysname** 이며 기본값은 NULL입니다. 를 지정 하는 경우 *proxy_id* NULL 이어야 합니다. 얻으려고 *proxy_name*, sysproxies 시스템 테이블을 쿼리 합니다.  
   
- [  **@schedule_uid =** ] '*schedule_uid*'  
+ [ **@schedule_uid =** ] '*schedule_uid*'  
  일정을 가리키는 GUID입니다. *schedule_uid* 은 **uniqueidentifier** 이며 기본값은 NULL입니다. 를 지정 하는 경우 *schedule_name* NULL 이어야 합니다. 얻으려고 *schedule_uid*, sysschedules 시스템 테이블을 쿼리 합니다.  
   
  때 *collection_mode* 0으로 설정 *schedule_uid* 또는 *schedule_name* 지정 해야 합니다. 때 *collection_mode* 1로 설정 되어 *schedule_uid* 또는 *schedule_name* 지정 해도 무시 됩니다.  
   
- [  **@schedule_name =** ] '*schedule_name*'  
+ [ **@schedule_name =** ] '*schedule_name*'  
  일정의 이름입니다. *schedule_name* 은 **sysname** 이며 기본값은 NULL입니다. 를 지정 하는 경우 *schedule_uid* NULL 이어야 합니다. 얻으려고 *schedule_name*, sysschedules 시스템 테이블을 쿼리 합니다.  
   
- [  **@logging_level =** ] *logging_level*  
+ [ **@logging_level =** ] *logging_level*  
  로깅 수준입니다. *logging_level* 은 **smallint** 다음 값 중 하나를 사용 합니다.  
   
  0 - 실행 정보 및 다음 항목을 추적하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 이벤트 기록  
@@ -111,19 +113,19 @@ sp_syscollector_create_collection_set
   
 -   지속적으로 실행되는 컬렉션 프로세스  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 경고 이벤트  
+-   경고 이벤트 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
- 2 - 수준 1 로깅 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 세부 이벤트 정보  
+ 2-수준 1 로깅 및의 세부 이벤트 정보 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  에 대 한 기본값 *logging_level* 는 1입니다.  
   
  [  **@description =** ] '*설명*'  
  컬렉션 집합에 대한 설명입니다. *설명* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다.  
   
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 출력을 제공 하며 필요 합니다.  
   
- [  **@collection_set_uid =** ] '*collection_set_uid*'  
+ [ **@collection_set_uid =** ] '*collection_set_uid*'  
  컬렉션 집합의 GUID입니다. *collection_set_uid* 은 **uniqueidentifier** 이며 기본값은 NULL 출력을 제공 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

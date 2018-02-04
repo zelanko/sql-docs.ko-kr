@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.fn_hadr_distributed_ag_database_replica_TSQL
 - fn_hadr_distributed_ag_database_replica
 - fn_hadr_distributed_ag_database_replica_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.fn_hadr_distributed_ag_database_replica
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fn_hadr_distributed_ag_database_replica
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 415600ca830f5ba1b4b1930b486e423057ec9c62
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 89480a854ec65a0894fcaf0cf912d0d3eb68ea24
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +78,7 @@ GO
  [함수 &#40; always On 가용성 그룹 Transact SQL &#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [분산된 된 가용성 그룹 &#40; Always On 가용성 그룹 &#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
- [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
+ [가용성 그룹 만들기&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [ALTER AVAILABILITY GROUP &#40;입니다. TRANSACT-SQL &#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_run_collection_set_TSQL
 - sp_syscollector_run_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_run_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fd7d701381b45e25640df2ba79316c6f6b9efb3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 749ab839921de15a534be8a091f98dee64197ae7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +53,10 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 경우 값이 있어야 하 고 *이름* 은 NULL입니다.  
   
- [  **@name =** ] **'***이름***'**  
+ [ **@name =** ] **'***name***'**  
  컬렉션 집합의 이름입니다. *이름* 은 **sysname** 경우 값이 있어야 하 고 *collection_set_id* 은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

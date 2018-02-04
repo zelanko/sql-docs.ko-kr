@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_stop_job_TSQL
 - sp_stop_job
-dev_langs: TSQL
-helpviewer_keywords: sp_stop_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_stop_job
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7e84b7df3ec1ae8d504a026569d75ee8fa379715
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1276a936bece39cc875e5f80e8da5465f51bb4ee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +51,26 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  중지할 작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  중지할 작업의 ID입니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@originating_server =**] **'***master_server***'**  
+ [ **@originating_server =**] **'***master_server***'**  
  마스터 서버의 이름입니다. 지정된 경우 모든 다중 서버 작업이 중지됩니다. *master_server* 은 **nvarchar (128)**, 기본값은 NULL입니다. 호출 하는 경우에이 매개 변수를 지정 **sp_stop_job** 대상 서버에 있습니다.  
   
 > [!NOTE]  
 >  처음 세 매개 변수 중 하나만 지정할 수 있습니다.  
   
- [  **@server_name =**] **'***target_server***'**  
+ [ **@server_name =**] **'***target_server***'**  
  다중 서버 작업을 중지할 특정 대상 서버의 이름입니다. *target_server* 은 **nvarchar (128)**, 기본값은 NULL입니다. 호출 하는 경우에이 매개 변수를 지정 **sp_stop_job** 다중 서버 작업에 대 한 마스터 서버에 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_stop_job** 데이터베이스에 중지 신호를 보냅니다. 일부 프로세스를 즉시 중지 될 수 있으며 안정적인 지점 (또는 코드 경로에 대 한 진입점)에 도달 해야 일부 전에 중지할 수 있습니다. BACK, RESTORE 및 일부 DBCC 명령과 같은 일부 장기 실행 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 완료되려면 시간이 오래 걸릴 수 있습니다. 작업을 취소 하기 전에, 실행 되는 시간이 걸릴 수 있습니다. 작업을 중지하면 작업 기록에 "취소된 작업" 항목이 기록됩니다.  

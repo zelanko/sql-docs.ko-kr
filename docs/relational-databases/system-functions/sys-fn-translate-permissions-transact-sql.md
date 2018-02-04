@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.fn_translate_permissions_TSQL
 - fn_translate_permissions
 - fn_translate_permissions_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - permissions bitmask [SQL Server]
 - sys.fn_translate_permissions function
 - fn_translate_permissions function
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed217e60301c2ee877381a3aebc7b9f3d6fcf7bc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 042f32252a4e3ade0b7027b2f83204f99007da60
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +50,10 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>인수  
- *수준*  
+ *level*  
  사용 권한이 적용되는 보안 개체 종류입니다. *수준* 은 **nvarchar (60)**합니다.  
   
- *사용 권한을 확인 하십시오*  
+ *perms*  
  사용 권한 열에 반환되는 비트 마스크입니다. *사용 권한을 확인 하십시오* 은 **varbinary (16)**합니다.  
   
 ## <a name="returns"></a>반환 값  

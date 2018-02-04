@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_cache_directory_TSQL
 - sp_syscollector_set_cache_directory
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d43024a0e094e3f5f59c8929db30ed809884cb5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 504a7b7c769910fafa8b598c5a3f20714a50dcd6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +47,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@cache_directory =** ] **'***cache_directory***'**  
+ [ **@cache_directory =** ] **'***cache_directory***'**  
  수집된 데이터가 임시로 저장되는 파일 시스템의 디렉터리입니다. *cache_directory* 은 **nvarchar (255)**, 기본값은 NULL입니다. 값을 지정하지 않으면 기본 임시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리가 사용됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

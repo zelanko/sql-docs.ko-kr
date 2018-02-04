@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_secondary_primary
 - sp_change_log_shipping_secondary_primary_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_change_log_shipping_secondary_primary
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_change_log_shipping_secondary_primary
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3971444d93a2cb9c57ecce4a278410135a9aaf32
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 26e82dc23da2641019fc0b6215dd633479ae0272
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +54,7 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@primary_server**  =] '*primary_server*'  
+ [ **@primary_server** = ] '*primary_server*'  
  기본 인스턴스 이름을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로그 전달 구성의 합니다. *primary_server* 은 **sysname** NULL 일 수 없습니다.  
   
  [  **@primary_database**  =] '*primary_database*'  
@@ -73,17 +76,17 @@ sp_change_log_shipping_secondary_primary
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다. *monitor_server_security_mode* 은 **비트** NULL 일 수 없습니다.  
   
- [  **@monitor_server_login**  =] '*monitor_server_login*'  
+ [ **@monitor_server_login** = ] '*monitor_server_login*'  
  모니터 서버에 액세스하는 데 사용되는 계정의 사용자 이름입니다.  
   
- [  **@monitor_server_password**  =] '*monitor_server_password*'  
+ [ **@monitor_server_password** = ] '*monitor_server_password*'  
  모니터 서버에 액세스하는 데 사용되는 계정의 암호입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_change_log_shipping_secondary_primary** 에서 실행 되어야 합니다는 **마스터** 보조 서버에서 데이터베이스. 이 저장 프로시저는 다음을 수행합니다.  
@@ -96,7 +99,7 @@ sp_change_log_shipping_secondary_primary
  구성원만는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;에 대 한 SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

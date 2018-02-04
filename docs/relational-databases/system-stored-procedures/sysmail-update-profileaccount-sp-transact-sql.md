@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_profileaccount_sp_TSQL
 - sysmail_update_profileaccount_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_update_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_update_profileaccount_sp
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d88e4c11359e5861e1f3758a9397ccbef5209ffa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc4c797f149d3139beede4617a7b81721397615c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +49,26 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  업데이트할 프로필의 ID입니다. *profile_id* 은 **int**, 기본값은 NULL입니다. 중 하나는 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
   
- [  **@profile_name**  =] **'***profile_name***'**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  업데이트할 프로필의 이름입니다. *profile_name* 은 **sysname**, 기본값은 NULL입니다. 중 하나는 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
   
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  업데이트할 계정 ID입니다. *account_id* 은 **int**, 기본값은 NULL입니다. 중 하나는 *account_id* 또는 *account_name* 지정 해야 합니다.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  업데이트할 계정 이름입니다. *account_name* 은 **sysname**, 기본값은 NULL입니다. 중 하나는 *account_id* 또는 *account_name* 지정 해야 합니다.  
   
- [  **@sequence_number**  =] *sequence_number*  
+ [ **@sequence_number** = ] *sequence_number*  
  계정의 새 시퀀스 번호입니다. *sequence_number* 은 **int**, 기본값은 없습니다. 시퀀스 번호는 프로필의 계정이 사용되는 순서를 결정합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  지정된 계정과 프로필이 연관되어 있지 않으면 오류를 반환합니다.  

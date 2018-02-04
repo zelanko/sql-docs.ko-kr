@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
 - sysmail_help_configure_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_configure_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d799b3d4d319bfda84014e8b520008acdb2c6a30
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 13f768cd5e1cbbbcfa3f5b74d7ae52d2e9f357e1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@parameter_name**  =] **'***p a r a***'**  
+ [**@parameter_name** = ] **'***parameter_name***'**  
  검색할 구성 설정의 이름입니다. 을 지정 구성 설정의 값에 반환 되는  **@parameter_value**  출력 매개 변수입니다. No  **@parameter_name**  지정,이 저장된 프로시저 결과 인스턴스에서 데이터베이스 메일 구성 설정의 모든 포함 된 집합을 반환 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

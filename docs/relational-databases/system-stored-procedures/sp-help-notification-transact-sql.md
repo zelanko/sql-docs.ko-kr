@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
 - sp_help_notification_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_notification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e54750ac4174f054d87c5a1994f40bd3b5cfeec0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 542ffbb8b2bf6c51b31da93dc654a3a71b3fa401
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,32 +51,32 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@object_type =**] **'***object_type***'**  
+ [ **@object_type =**] **'***object_type***'**  
  반환할 정보 유형입니다. *object_type*은 **char (9)**, 기본값은 없습니다. *object_type* 수 경고를 제공된 된 운영자 이름에 할당 된 경고를 나열 하*,* 또는 제공된 된 경고 이름을 담당 운영자를 나열 하는 연산자*합니다.*  
   
- [  **@name =**] **'***이름***'**  
+ [ **@name =**]  **'***name***'**  
  운영자 이름 (경우 *object_type* 운영자) 또는 경고 이름 (경우 *object_type* 가 경고). *이름* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@enum_type =**] **'***enum_type***'**  
+ [ **@enum_type =**] **'***enum_type***'**  
  *object_type*반환 되는 정보입니다. *enum_type* 은 대부분의 경우에서 ACTUAL입니다. *enum_type*은 **char (10)**이며 기본값은 없고 수 있습니다 이러한 값 중 하나 여야 합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ACTUAL|만 나열 된 *object_types* 연관 *이름*합니다.|  
 |ALL|모든 나열 된*object_types* 에 연결 되지 않은 것을 비롯 하 *이름*합니다.|  
 |TARGET|만 나열 된 *object_types* 제공 된 일치 하는 *target_name*와 관계 없이*이름*합니다.|  
   
- [  **@notification_method =**] *notification_method*  
+ [ **@notification_method =**] *notification_method*  
  반환할 알림 방법 열을 결정하는 숫자 값입니다. *notification_method* 은 **tinyint**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|전자 메일:만 반환 된 **use_email** 열입니다.|  
 |**2**|페이징:만 반환 된 **use_pager** 열입니다.|  
 |**4**|NetSend:만 반환 된 **use_netsend** 열입니다.|  
 |**7**|All: 모든 열을 반환합니다.|  
   
- [  **@target_name =**] **'***target_name***'**  
+ [ **@target_name =**] **'***target_name***'**  
  검색할 경고 이름 (경우 *object_type* 가 경고) 또는 검색할 운영자 이름 (경우 *object_type* is 연산자). *target_name* 경우에 필요 *enum_type* 대상입니다. *target_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-valves"></a>반환 코드 값  

@@ -8,25 +8,29 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.computermgr.cert.general.f1
-helpviewer_keywords: MSSQLSERVER property protocols
+f1_keywords:
+- sql13.swb.computermgr.cert.general.f1
+helpviewer_keywords:
+- MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 811489d75af39d9b7cd33eb3f8aaadec5ae045cf
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 64211b457a280ff14a9891e9885a7f224bb46419
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(인증서 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **인증서** 탭에 **MSSQLSERVER 속성에 대 한 프로토콜** 대화 상자에 대 한 인증서를 선택할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 하거나 인증서의 속성을 볼 수 있습니다. 인증서를 선택하기 전에는 모든 필드가 비어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**MSSQLSERVER에 대한 프로토콜 속성** 대화 상자의 **인증서** 탭을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 인증서를 선택하거나 인증서 속성을 확인할 수 있습니다. 인증서를 선택하기 전에는 모든 필드가 비어 있습니다.  
   
  인증서는 사용자 컴퓨터에 로컬로 저장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 인증서를 로드하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스와 동일한 사용자 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 실행해야 합니다.  
   

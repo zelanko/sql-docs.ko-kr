@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referenced_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +71,7 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>인수  
- [ *schema_name*합니다. ] *referencing_entity_name*  
+ [ *schema_name*. ] *referencing_entity_name*  
  참조 엔터티의 이름입니다. *schema_name* 은 참조 클래스가 개체인 경우 필요 합니다.  
   
  *schema_name.referencing_entity_name* 은 **nvarchar (517)**합니다.  
@@ -91,7 +94,7 @@ sys.dm_sql_referenced_entities (
 |referenced_id|**int**|참조된 엔터티의 ID입니다. referenced_minor_id가 0이 아닌 경우 referenced_id는 열이 정의된 엔터티입니다.<br /><br /> 서버 간 참조의 경우 항상 NULL입니다.<br /><br /> 데이터베이스 간 참조의 경우 데이터베이스가 오프라인 상태이거나 엔터티를 바인딩할 수 없어 ID를 확인할 수 없으면 NULL입니다.<br /><br /> 데이터베이스 내 참조의 경우 ID를 확인할 수 없으면 NULL입니다. 비 스키마 바운드 참조에 대 한 이름 확인은 호출자에 종속 하는 경우 또는 데이터베이스에 참조 된 엔터티가 존재 하지 않을 경우에 ID 확인할 수 없습니다.  후자의 경우 is_caller_dependent는 1로 설정 됩니다.<br /><br /> 스키마 바운드 참조의 경우 NULL일 수 없습니다.|  
 |referenced_minor_id|**int**|참조된 엔터티가 열인 경우 열 ID이며 그렇지 않은 경우 0입니다. 예를 들어 참조된 엔터티 자체를 나열하는 행에서 referenced_minor_is는 0입니다.<br /><br /> 비스키마 바운드 참조의 경우 모든 참조된 엔터티를 바인딩할 수 있는 경우에만 열 종속성이 보고됩니다. 바인딩할 수 없는 참조된 엔터티가 있는 경우 열 수준 종속성이 보고되지 않으며 referenced_minor_id는 0입니다. 예 4를 참조하십시오.|  
 |referenced_class|**tinyint**|참조된 엔터티의 클래스입니다.<br /><br /> 1 = 개체 또는 열<br /><br /> 6 = 형식<br /><br /> 10 = XML 스키마 컬렉션<br /><br /> 21 = 파티션 함수|  
-|referenced_class_desc|**nvarchar (60)**|참조된 엔터티의 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
+|referenced_class_desc|**nvarchar(60)**|참조된 엔터티의 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|참조된 엔터티에 대한 스키마 바인딩이 런타임에 발생하며 따라서 엔터티 ID 확인은 호출자의 스키마에 종속됨을 나타냅니다. 이는 참조된 엔터티가 EXECUTE 문 내에서 호출되는 저장 프로시저, 확장 저장 프로시저 또는 사용자 정의 함수인 경우 발생합니다.<br /><br /> 1 = 참조된 엔터티가 호출자에 종속되고 런타임에 확인됩니다. 이 경우 referenced_id는 NULL입니다.<br /><br /> 0 = 참조된 엔터티 ID가 호출자에 종속되지 않습니다. 스키마 이름을 명시적으로 지정하는 스키마 바운드 참조와 데이터베이스 간 및 서버 간 참조의 경우 항상 0입니다. 예를 들어 `EXEC MyDatabase.MySchema.MyProc` 형식의 엔터티에 대한 참조는 호출자에 종속되지 않습니다. 하지만 `EXEC MyDatabase..MyProc` 형식의 참조는 호출자에 종속됩니다.|  
 |is_ambiguous|**bit**|대 한 참조가 모호 하며 런타임에 사용자 정의 함수, 사용자 정의 형식 (UDT) 또는 형식의 열에 대 한 xquery 참조로 확인할 수 나타냅니다 **xml**합니다. 예를 들어 저장 프로시저에 `SELECT Sales.GetOrder() FROM Sales.MySales` 문이 정의된 경우 `Sales.GetOrder()`가 `Sales` 스키마의 사용자 정의 함수인지, 아니면 `Sales`라는 메서드가 있는 UDT 형식의 `GetOrder()` 열인지는 저장 프로시저가 실행될 때까지 알 수 없습니다.<br /><br /> 1 = 사용자 정의 함수 또는 열 UDT(사용자 정의 형식) 메서드에 대한 참조가 모호합니다.<br /><br /> 0 = 참조가 분명하거나 함수가 호출될 때 엔터티를 성공적으로 바인딩할 수 있습니다.<br /><br /> 스키마 바운드 참조의 경우 항상 0입니다.|  
 |is_selected|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체 또는 열이 선택됩니다.|  
@@ -123,22 +126,22 @@ sys.dm_sql_referenced_entities (
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|Table|예*|예|  
+|테이블|예*|예|  
 |보기|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
-|CLR 저장 프로시저|아니오|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|아니오|예|  
-|CLR 트리거(DML 및 DDL)|아니오|아니오|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니오|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니오|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니오|  
-|확장 저장 프로시저|아니오|예|  
-|큐|아니오|예|  
-|동의어|아니오|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니오|예|  
-|XML 스키마 컬렉션|아니오|예|  
-|파티션 함수|아니오|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 * *|예|예|  
+|CLR 저장 프로시저|아니요|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수(user-defined function)|예|예|  
+|CLR 사용자 정의 함수|아니요|예|  
+|CLR 트리거(DML 및 DDL)|아니요|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거(DML trigger)|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
+|확장 저장 프로시저|아니요|예|  
+|큐|아니요|예|  
+|동의어|아니요|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
+|XML 스키마 컬렉션|아니요|예|  
+|파티션 함수|아니요|예|  
   
  \*한 테이블에서 참조 하는 경우에 참조 엔터티로 추적 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   

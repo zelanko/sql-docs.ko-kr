@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-data-warehouse
+ms.technology:
+- sql-data-warehouse
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b1c9e31e5a5d3d2e31bdecce6eafda1a22ee302
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e401596add887d6bfc3f7fc7bd6b5255128b251c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -45,7 +47,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- [  **@masking_mode=** ] *masking_mode*  
+ [ **@masking_mode=** ] *masking_mode*  
  투명 한 데이터 암호화 로그 사용자 데이터 마스킹 사용 되는지 여부를 결정 합니다. *masking_mode* 은 **int**, 다음 값 중 하나가 될 수 있습니다.  
   
 -   0 = 사용 안 함, 사용자 데이터에 표시 된 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그 합니다.  

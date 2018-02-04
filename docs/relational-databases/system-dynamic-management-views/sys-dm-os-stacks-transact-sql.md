@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_stacks_TSQL
 - sys.dm_os_stacks
 - sys.dm_os_stacks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_stacks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_stacks dynamic management view
 ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e3e292fbafbee9586d377f133af7f9d3ee520d5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0887f12a5e70a6d9a277593ba08633ad9101139d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosstacks-transact-sql"></a>sys.dm_os_stacks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,9 +44,9 @@ ms.lasthandoff: 11/17/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**stack_address**|**varbinary (8)**|이 스택 할당의 고유한 주소입니다. Null을 허용하지 않습니다.|  
+|**stack_address**|**varbinary(8)**|이 스택 할당의 고유한 주소입니다. Null을 허용하지 않습니다.|  
 |**frame_index**|**int**|각 줄 함수를 나타냅니다. 특정 작업에 대해 프레임 인덱스로 오름차순 정렬 될 때 호출 **stack_address**, 전체 호출 스택을 반환 합니다. Null을 허용하지 않습니다.|  
-|**frame_address**|**varbinary (8)**|함수 호출 주소입니다. Null을 허용하지 않습니다.|  
+|**frame_address**|**varbinary(8)**|함수 호출 주소입니다. Null을 허용하지 않습니다.|  
   
 ## <a name="remarks"></a>주의  
  **sys.dm_os_stacks** 는 기호 서버와 다른 구성 요소 정보를 올바르게 표시 하려면 서버에 있어야 합니다.  

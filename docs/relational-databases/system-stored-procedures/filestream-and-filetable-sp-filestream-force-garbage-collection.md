@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
 - sp_filestream_force_garbage_collection_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba1b60621e23160ce9e951e17cf4777b016fe90f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>Filestream 및 FileTable-sp_filestream_force_garbage_collection
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>인수  
- **@dbname** = *a s e _***'**  
+ **@dbname** = *database_name***'**  
  가비지 수집기를 실행할 데이터베이스 이름을 표시합니다.  
   
 > [!NOTE]  
@@ -60,15 +62,15 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|값|설명|  
+|Value|설명|  
 |0|작업 성공|  
 |1.|작업 실패|  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|*i l e _*|FILESTREAM 컨테이너 이름을 나타냅니다.|  
+|*file_name*|FILESTREAM 컨테이너 이름을 나타냅니다.|  
 |*num_collected_items*|이 컨테이너에서 가비지 수집된(삭제된) FILESTREAM 항목(파일/디렉터리) 수를 나타냅니다.|  
 |*num_marked_for_collection_items*|이 컨테이너에서 가비지 수집을 위해 표시된 FILESTREAM 항목(파일/디렉터리) 수를 나타냅니다. 이러한 항목은 아직 삭제 되지 않았으므로 되지만 가비지 수집 단계를 수행 하는 삭제할 수 있습니다.|  
 |*num_unprocessed_items*|이 FILESTREAM 컨테이너에서 가비지 수집을 위해 처리되지 적합한 FILESTREAM 항목(파일 또는 디렉터리) 수를 나타냅니다. 다음을 비롯하여 다양한 이유로 항목이 처리되지 않을 수 있습니다.<br /><br /> 로그 백업 또는 검사점을 가져오지 않아 파일이 고정되어야 하는 경우<br /><br /> FULL 또는 BULK_LOGGED 복구 모델의 파일인 경우<br /><br /> 장기 실행 활성 트랜잭션이 있는 경우<br /><br /> 복제 로그 판독기 작업이 실행 되지 않았습니다. 백서를 참조 [SQL Server 2008의 FILESTREAM 저장소](http://go.microsoft.com/fwlink/?LinkId=209156) 자세한 정보에 대 한 합니다.|  

@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1fabc150e92d9ca23196fbc838e5691267e9f38
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  [ @data_source_name =] *datasourcename*  
  문이 실행 되는 외부 데이터 원본을 식별 합니다. 참조 [외부 데이터 원본 만들기 &#40; Transact SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md). 외부 데이터 원본 "RDBMS" 또는 "SHARD_MAP_MANAGER" 유형일 수 있습니다.  
   
- [ @stmt=] *문*  
+ [ @stmt= ] *statement*  
  포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 합니다. @stmt유니코드 상수 또는 유니코드 변수 여야 합니다. + 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하는 경우 그 앞에 **N**합니다. 예를 들어 유니코드 상수 **N'sp_who '** 유효 하지만 **'sp_who'** 않습니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버에서 문자열의 크기는 최대 크기인 2GB로 제한 **nvarchar (max)**합니다.  
   
 > [!NOTE]  
@@ -61,7 +62,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  @stmt에 포함된 각 매개 변수에는 @params 매개 변수 정의 목록과 매개 변수 값 목록 모두에 해당되는 항목이 있어야 합니다.  
   
- [ @params=] N'@*p a r a**data_type* [,... *n* ] '  
+ [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
  @stmt에 포함된 모든 매개 변수의 정의를 포함하는 하나의 문자열입니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n*추가 매개 변수 정의 나타내는 자리 표시자가입니다. 에 지정 된 모든 매개 변수에 @stmtmust 에 정의 되어야 @params합니다. @stmt의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없으면 @params가 필요 없습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
  [ @param1=] '*value1*'  

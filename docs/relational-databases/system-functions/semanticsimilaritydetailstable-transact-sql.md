@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritydetailstable
 - semanticsimilaritydetailstable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semanticsimilaritydetailstable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c602d6119bba1b828c9c68853c2ed60249e33c60
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 69d13d3b16d1b58062cd93dc18e2f20f3fd01b42
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +80,8 @@ SEMANTICSIMILARITYDETAILSTABLE
   
 |Column_name|형식|Description|  
 |------------------|----------|-----------------|  
-|**키 구**|**NVARCHAR**|원본 문서와 대응 문서 간의 유사성에 기여하는 키 구.|  
-|**점수**|**실제**|두 문서 간에 유사성이 있는 다른 모든 키 구를 기준으로 한 이 키 구의 상대적 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
+|**keyphrase**|**NVARCHAR**|원본 문서와 대응 문서 간의 유사성에 기여하는 키 구.|  
+|**score**|**REAL**|두 문서 간에 유사성이 있는 다른 모든 키 구를 기준으로 한 이 키 구의 상대적 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  자세한 내용은 참조 [유사한 찾기 및 의미 체계 검색을 사용 하 여 관련 문서](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)합니다.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_tran_active_snapshot_database_transactions
 - sys.dm_tran_active_snapshot_database_transactions
 - dm_tran_active_snapshot_database_transactions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_active_snapshot_database_transactions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_active_snapshot_database_transactions dynamic management view
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58cd17e6d7a5a71ae2e922a492d6e52598954140
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cd3b38057150bbc8768169c362ec643b13a30c14
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +75,7 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|트랜잭션 측면에서 일관된 버전을 찾기 위해 이동한 버전 체인의 최대 길이입니다.|  
 |**average_version_chain_traversed**|**real**|이동한 버전 체인의 평균 행 버전 수입니다.|  
 |**elapsed_time_seconds**|**bigint**|트랜잭션이 트랜잭션 시퀀스 번호를 받은 이후 경과된 시간입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 대 한 VIEW SERVER STATE 권한이 필요 합니다.  

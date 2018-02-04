@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_proxy
 - sp_add_proxy_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE PROXY statement
 - sp_add_proxy
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7cf6fb206ab8500ce334b11e9e78ddb9e5d1cee
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3bc9f2a111a69be48a2fb4f67cd4ec6e48f27926
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,29 +53,29 @@ sp_add_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@proxy_name** =] **'***proxy_name***'**  
+ [ **@proxy_name**= ] **'***proxy_name***'**  
  만들 프록시의 이름입니다. *proxy_name* 은 **sysname**, 기본값은 NULL입니다. 경우는 *proxy_name* NULL 또는 빈 문자열인 경우에 기본 프록시 이름은 *user_name* 제공 합니다.  
   
- [  **@enabled**  =] *is_enabled*  
+ [ **@enabled** = ] *is_enabled*  
  프록시 활성화 여부를 지정합니다. *is_enabled* 플래그는 **tinyint**, 기본값은 1입니다. 때 *is_enabled* 은 **0**, 프록시는 사용 되지 않으며 작업 단계에서 사용할 수 없습니다.  
   
- [  **@description** =] **'***설명***'**  
+ [ **@description**= ] **'***description***'**  
  프록시에 대한 설명입니다. 설명은 **nvarchar (512)**, 기본값은 NULL입니다. 설명을 통해 프록시를 문서화할 수 있으며 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용되지 않습니다. 그러므로 이 인수는 선택 사항입니다.  
   
- [  **@credential_name**  =] **'***credential_name***'**  
+ [ **@credential_name** = ] **'***credential_name***'**  
  프록시에 대한 자격 증명의 이름입니다. *credential_name* 은 **sysname**, 기본값은 NULL입니다. 어느 *credential_name* 또는 *credential_id* 지정 해야 합니다.  
   
- [  **@credential_id**  =] *credential_id*  
+ [ **@credential_id** = ] *credential_id*  
  프록시에 대한 자격 증명의 ID입니다. *credential_id* 은 **int**, 기본값은 NULL입니다. 어느 *credential_name* 또는 *credential_id* 지정 해야 합니다.  
   
- [  **@proxy_id** =] *id* 출력  
+ [ **@proxy_id**= ] *id* OUTPUT  
  프록시를 성공적으로 만든 경우 프록시에 할당되는 프록시 ID입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  이 저장된 프로시저를 실행 해야 합니다는 **msdb** 데이터베이스입니다.  
@@ -103,6 +105,6 @@ GO
 ## <a name="see-also"></a>관련 항목:  
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_grant_login_to_proxy &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

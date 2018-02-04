@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_targetservergroup_TSQL
 - sp_help_targetservergroup
-dev_langs: TSQL
-helpviewer_keywords: sp_help_targetservergroup
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_targetservergroup
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a814f05cda311cd57c23b1b9a272797b22c8c32
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 16d7277b8a2f02c0c7b44c428806101fd5788305
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>인수  
- [  **@name=** ] **'***이름***'**  
+ [ **@name=** ] **'***name***'**  
  정보를 반환할 대상 서버 그룹의 이름입니다. *이름* 은 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

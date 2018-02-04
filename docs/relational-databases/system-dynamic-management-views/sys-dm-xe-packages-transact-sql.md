@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_xe_packages_TSQL
 - dm_xe_packages
 - sys.dm_xe_packages
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d44f313bcb4f199d43305cd9752dda71db5da980
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d33b1703f517fbedb746d1a0185e960764603ff5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +40,15 @@ ms.lasthandoff: 11/17/2017
   확장 이벤트 엔진에 등록된 패키지를 모두 나열합니다.  
   
  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar (60)**|패키지의 이름입니다. 설명은 패키지 자체에서 표시됩니다. Null을 허용하지 않습니다.|  
+|name|**nvarchar(60)**|패키지의 이름입니다. 설명은 패키지 자체에서 표시됩니다. Null을 허용하지 않습니다.|  
 |guid|**uniqueidentifier**|패키지를 식별하는 GUID입니다. Null을 허용하지 않습니다.|  
 |description|**nvarchar(256)**|패키지 설명입니다. descriptionis는 패키지 작성자가 설정 하며 null을 허용 하지 않습니다.|  
 |capabilities|**int**|해당 패키지의 기능을 설명하는 비트맵입니다. Null을 허용합니다.|  
 |capabilities_desc|**nvarchar(256)**|이 패키지에 사용할 수 있는 모든 기능 목록입니다. Null을 허용합니다.|  
 |module_guid|**uniqueidentifier**|이 패키지를 표시하는 모듈의 GUID입니다. Null을 허용하지 않습니다.|  
-|module_address|**varbinary (8)**|패키지를 포함하는 모듈이 로드된 기준 주소입니다. 한 개의 모듈이 여러 개의 패키지를 표시할 수 있습니다. Null을 허용하지 않습니다.|  
+|module_address|**varbinary(8)**|패키지를 포함하는 모듈이 로드된 기준 주소입니다. 한 개의 모듈이 여러 개의 패키지를 표시할 수 있습니다. Null을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>Permissions  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
 ||||  
 |-|-|-|  
-|원본|수행할 작업|관계|  
+|보낸 사람|수행할 작업|관계|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|다 대 일|  
   
 ## <a name="see-also"></a>참고 항목  

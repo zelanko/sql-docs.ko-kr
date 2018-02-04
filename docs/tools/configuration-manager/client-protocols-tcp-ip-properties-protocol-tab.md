@@ -8,26 +8,28 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
 - client protocols [SQL Server]
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 238c3e5c75ed1fafe9e6fbdc600212d1ba1eb934
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1fa2175534441ab464452a1f549833742daaa185
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>클라이언트 프로토콜 - TCP/IP 속성(프로토콜 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용 하 여는 **프로토콜** 탭에 **TCP/IP 속성** 대화 상자를 보거나 다음 옵션을 지정 합니다. 다른 포트에 연결하려면 **기본 포트** 입력란에 포트 번호를 입력하십시오. 연결 문자열에 대한 자세한 내용은 [TCP/IP를 사용하여 유효한 연결 문자열 만들기](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **TCP/IP 속성** 대화 상자의 **프로토콜** 탭을 사용하여 다음 옵션을 확인 또는 지정할 수 있습니다. 다른 포트에 연결하려면 **기본 포트** 입력란에 포트 번호를 입력하십시오. 연결 문자열에 대한 자세한 내용은 [TCP/IP를 사용하여 유효한 연결 문자열 만들기](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)를 참조하세요.  
   
 ## <a name="options"></a>옵션  
  **기본 포트**  

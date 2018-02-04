@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3386a798bc29742f55da658d2e0117575b2ebd27
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b932a110e49ededd17a3895eb7aeb3efee3e106c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-services"></a>SQL Server 서비스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 섹션에 대 한 F1 도움말 항목이 포함 되어는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 대화 상자에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager입니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 대화 상자에 대한 F1 도움말 항목을 제공합니다.  
   
 > [!NOTE]  
 >  리소스를 호스트하지 않는 클러스터의 노드에서 **SQL Server 구성 관리자** 를 열면 서비스가 중지된 상태로 표시됩니다.  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_schedule
 - sp_delete_schedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_schedule
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b01f4f3c3487fbd9f68c899e2c9e71dae7efd0b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc8bc8efb8d9382a0e7c1ab1c24b5534ff6786f0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,24 +47,24 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@schedule_id=** ] *schedule_id*  
+ [ **@schedule_id=** ] *schedule_id*  
  삭제할 일정의 ID입니다. *schedule_id* 은 **int**, 기본값은 NULL입니다.  
   
 > **참고:** 어느 *schedule_id* 또는 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@schedule_name=** ] **'***schedule_name***'**  
+ [ **@schedule_name=** ] **'***schedule_name***'**  
  삭제할 일정의 이름입니다. *schedule_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 > **참고:** 어느 *schedule_id* 또는 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@force_delete**  =] *force_delete*  
+ [ **@force_delete** = ] *force_delete*  
  일정을 작업에 연결할 경우 프로시저의 실패 여부를 지정합니다. *Force_delete* 는 bit 이며 기본값은 **0**합니다. 때 *force_delete* 은 **0**, 일정을 작업에 연결 된 경우 저장된 프로시저가 실패 합니다. 때 *force_delete* 은 **1**, 일정을 작업에 연결 되었는지 여부에 관계 없이 일정이 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  기본적으로 작업에 연결된 일정은 삭제할 수 없습니다. 작업에 연결 하는 일정을 삭제 하려면 값을 지정 **1** 에 대 한 *force_delete*합니다. 일정을 삭제해도 현재 실행 중인 작업은 중지되지 않습니다.  

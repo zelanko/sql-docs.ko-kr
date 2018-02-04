@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysjobs_TSQL
 - dbo.sysjobs
 - dbo.sysjobs_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobs system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobs system table
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1fd6e90a9e823e38a83f5b218027e15183ab76ae
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 37562aba8f3582eb58ece88dcad8ca72e080db18
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |**job_id**|**uniqueidentifier**|작업의 고유 ID입니다.|  
 |**originating_server_id**|**int**|작업을 가져온 서버의 ID입니다.|  
 |**name**|**sysname**|작업의 이름입니다.|  
-|**사용 하도록 설정**|**tinyint**|작업을 실행할 수 있는지를 표시합니다.|  
+|**enabled**|**tinyint**|작업을 실행할 수 있는지를 표시합니다.|  
 |**설명**|**nvarchar(512)**|작업 설명입니다.|  
 |**start_step_id**|**int**|실행을 시작해야 하는 작업 단계의 ID입니다.|  
 |**category_id**|**int**|작업 범주의 ID입니다.|  

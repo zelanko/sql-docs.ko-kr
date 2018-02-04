@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - fn_my_permissions_TSQL
 - sys.fn_my_permissions
 - fn_my_permissions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f2928be2c8d444283e54e4e4b5a305ca8671c02c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9eb23a2de7fda489b205f1eaf89c124068be63b3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +49,16 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>인수  
- *보안 개체*  
+ *securable*  
  보안 개체의 이름입니다. 보안 개체가 서버 또는 데이터베이스인 경우 이 값은 NULL로 설정해야 합니다. *보안 개체* 형식의 스칼라 식 **sysname**합니다. *보안 개체* 다중 부분 이름일 수 있습니다.  
   
- '*b l e _*'  
+ '*securable_class*'  
  권한을 나열할 보안 개체의 클래스 이름입니다. *b l e _* 는 **sysname**합니다. *b l e _* 다음 중 하나 여야 합니다: 응용 프로그램 역할, 어셈블리, 비대칭 키, 인증서, 계약, 데이터베이스, ENDPOINT, FULLTEXT CATALOG, 로그인, 메시지 유형, 개체, REMOTE SERVICE BINDING, 역할, 경로, 스키마, 서버, 서비스 대칭 키, 형식, 사용자, XML 스키마 컬렉션입니다.  
   
 ## <a name="columns-returned"></a>반환되는 열  
  다음 표에서 열을 나열 하는 **fn_my_permissions** 반환 합니다. 반환되는 각 행은 해당 보안 개체에 대해 현재 보안 컨텍스트가 가지는 사용 권한을 설명합니다. 쿼리가 실패하는 경우 NULL을 반환합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|유형|Description|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|나열된 사용 권한이 유효하게 부여되는 보안 개체의 이름입니다.|  
 |subentity_name|**sysname**|보안 개체가 열인 경우 열 이름이며 그렇지 않은 경우에는 NULL입니다.|  

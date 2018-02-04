@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_xe_sessions
 - sys.dm_xe_sessions_TSQL
 - sys.dm_xe_sessions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d16dbc718232a6c3953e391d255986340d4f011
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6c871158b5085d14eda8974530e392b5ed24baf5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
     
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|address|**varbinary (8)**|세션의 메모리 주소입니다. 주소는 로컬 시스템에서 고유 합니다. Null을 허용하지 않습니다.|  
+|address|**varbinary(8)**|세션의 메모리 주소입니다. 주소는 로컬 시스템에서 고유 합니다. Null을 허용하지 않습니다.|  
 |name|**nvarchar(256)**|세션의 이름입니다. name은 로컬 시스템에서 고유 합니다. Null을 허용하지 않습니다.|  
 |pending_buffers|**int**|처리가 보류된 가득 찬 버퍼의 수입니다. Null을 허용하지 않습니다.|  
 |total_regular_buffers|**int**|세션과 연결된 정규 버퍼의 총 수입니다. Null을 허용하지 않습니다.<br /><br /> 참고: 정규 버퍼는 대부분의 경우 사용 됩니다. 이러한 버퍼는 충분한 크기를 가지고 있어 많은 이벤트를 보유할 수 있습니다. 일반적으로 세션당 3개 이상의 버퍼가 있습니다. 정규 버퍼의 수는 MEMORY_PARTITION_MODE 옵션을 통해 설정된 메모리 분할을 기반으로 서버에 의해 자동으로 결정됩니다. 정규 버퍼의 크기는 MAX_MEMORY 옵션(기본값: 4MB) 값을 버퍼 수로 나눈 것과 동일합니다. MEMORY_PARTITION_MODE 및 MAX_MEMORY 옵션에 대 한 자세한 내용은 참조 [CREATE EVENT session&#40; Transact SQL &#41; ](../../t-sql/statements/create-event-session-transact-sql.md).|  

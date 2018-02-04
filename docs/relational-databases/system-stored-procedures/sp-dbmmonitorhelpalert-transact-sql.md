@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorhelpalert_TSQL
 - sp_dbmmonitorhelpalert
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66d80f6b202be75f1e3dd66bf1f9ab48a0829c13
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aa31d747ebfd9fbf56aee874f477468212bc161b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +56,7 @@ sp_dbmmonitorhelpalert database_name
   
  특정 경고를 반환하려면 다음 값 중 하나를 지정합니다.  
   
-|값|성능 메트릭|경고 임계값|  
+|Value|성능 메트릭|경고 임계값|  
 |-----------|------------------------|-----------------------|  
 |1.|보내지 않은 가장 오래된 트랜잭션|주 서버 인스턴스에서 경고가 생성되기까지 Send Queue에 누적될 수 있는 트랜잭션에 해당하는 시간(분)을 지정합니다. 이 경고는 시간을 기준으로 발생 가능한 데이터 손실을 측정하는 데 도움이 되며 특히 성능 우선 모드와 관련이 있습니다. 그러나 파트너의 연결이 끊어져 미러링이 일시 중지되거나 일시 중단되면 이 경고는 보호 우선 모드와도 관련이 있습니다.|  
 |2|보내지 않은 로그|주 서버 인스턴스에서 경고를 생성하는 보내지 않은 로그 크기(KB)를 지정합니다. 이 경고는 KB를 기준으로 발생 가능한 데이터 손실을 측정하는 데 도움이 되며 특히 성능 우선 모드와 관련이 있습니다. 그러나 파트너의 연결이 끊어져 미러링이 일시 중지되거나 일시 중단되면 이 경고는 보호 우선 모드와도 관련이 있습니다.|  
@@ -65,7 +67,7 @@ sp_dbmmonitorhelpalert database_name
  경고에 해당 하는 이벤트 Id에 대 한 정보를 참조 하십시오. [미러링 성능 메트릭에 &#40;에 대해 사용 하 여 경고 임계값 및 경고 SQL Server &#41; ](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>결과 집합  
  반환되는 각 경고에 대해 다음 열이 포함된 행을 반환합니다.  
@@ -73,10 +75,10 @@ sp_dbmmonitorhelpalert database_name
 |열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|목록은 아래 표는 **alert_id** 각 성능 메트릭 및에 표시 되는 메트릭의 측정 단위에 대 한 값은 **sp_dbmmonitorresults** 결과 집합:|  
-|**임계값**|**int**|경고에 대한 임계값입니다. 미러링 상태를 업데이트할 때 이 임계값 위의 값이 반환되면 Windows 이벤트 로그에 항목이 입력됩니다. 이 값은 경고에 따라 KB, 분 또는 밀리초를 나타냅니다. 임계값이 현재 설정되어 있지 않으면 이 값은 NULL입니다.<br /><br /> **참고:** 실행의 현재 값을 보려면는 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) 저장 프로시저입니다.|  
-|**사용 하도록 설정**|**bit**|0 = 이벤트를 사용할 수 없습니다.<br /><br /> 1 = 이벤트를 사용할 수 있습니다.<br /><br /> **참고:** 보존 기간은 항상 사용 합니다.|  
+|**threshold**|**int**|경고에 대한 임계값입니다. 미러링 상태를 업데이트할 때 이 임계값 위의 값이 반환되면 Windows 이벤트 로그에 항목이 입력됩니다. 이 값은 경고에 따라 KB, 분 또는 밀리초를 나타냅니다. 임계값이 현재 설정되어 있지 않으면 이 값은 NULL입니다.<br /><br /> **참고:** 실행의 현재 값을 보려면는 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) 저장 프로시저입니다.|  
+|**enabled**|**bit**|0 = 이벤트를 사용할 수 없습니다.<br /><br /> 1 = 이벤트를 사용할 수 있습니다.<br /><br /> **참고:** 보존 기간은 항상 사용 합니다.|  
   
-|값|성능 메트릭|단위|  
+|Value|성능 메트릭|단위|  
 |-----------|------------------------|----------|  
 |1.|보내지 않은 가장 오래된 트랜잭션|분|  
 |2|보내지 않은 로그|KB|  

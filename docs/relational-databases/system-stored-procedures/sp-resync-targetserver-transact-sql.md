@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_resync_targetserver
 - sp_resync_targetserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_resync_targetserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_resync_targetserver
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be9c9f6346be5ca9fbbec34e8f9eb146cb36e85a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 93125c5747fc6f4b66c18ac6702721aaf4db6806
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@server_name =**] **'***서버***'**  
+ [ **@server_name =**] **'***server***'**  
  다시 동기화하려는 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다. 경우 **모든** 지정, 모든 대상 서버가 다시 동기화 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

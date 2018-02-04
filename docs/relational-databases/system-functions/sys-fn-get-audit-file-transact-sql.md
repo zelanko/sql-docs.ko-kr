@@ -26,13 +26,13 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ac4372d753bdc9fde231d2ec08daa957771dc46
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: efaffab66cba6d95d76d7c5371e43db1aca9f744
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
  initial_file_name에 지정된 파일 기준의 오프셋을 지정합니다. 이 인수를 사용하면 함수가 지정된 오프셋 바로 다음에 있는 버퍼의 첫 번째 레코드에서 읽기를 시작합니다.  
   
 > [!NOTE]  
->  *audit_record_offset* 인수에 유효한 항목이 또는 기본 있어야 합니다. | NULL 값입니다. 형식이 **bitint**합니다.  
+>  *audit_record_offset* 인수에 유효한 항목이 또는 기본 있어야 합니다. | NULL 값입니다. 형식이 **bigint**합니다.  
   
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 표에서는 이 함수가 반환할 수 있는 감사 파일 내용에 대해 설명합니다.  

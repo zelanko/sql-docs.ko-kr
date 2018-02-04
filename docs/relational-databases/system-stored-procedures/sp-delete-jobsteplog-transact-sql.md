@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobsteplog
 - sp_delete_jobsteplog_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_jobsteplog
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c06ba83c4a9c501d6533e63fa439df92025e790
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c5f5bf88c8b02b51dac095dcd0445d3324e23e5e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,33 +50,33 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id =**] **'***job_id***'**  
+ [ **@job_id =**] **'***job_id***'**  
  제거할 작업 단계 로그가 포함된 작업의 ID입니다. *job_id* 은 **int**, 기본값은 NULL입니다.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 > **참고:** 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@step_id =**] *step_id*  
+ [ **@step_id =**] *step_id*  
  작업 단계 로그를 삭제할 작업 단계의 ID입니다. 하지 않으면 작업의 모든 작업 단계 로그가 삭제 됩니다 하지 않은 경우  **@older_than**  또는  **@larger_than**  지정 됩니다. *step_id* 은 **int**, 기본값은 NULL입니다.  
   
- [  **@step_name =**] **'***step_name***'**  
+ [ **@step_name =**] **'***step_name***'**  
  작업 단계 로그를 삭제할 작업 단계의 이름입니다. *step_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 > **참고:** 어느 *step_id* 또는 *step_name* 지정할 수 있습니다 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@older_than =**] **'***날짜***'**  
+ [ **@older_than =**] **'***date***'**  
  유지할 가장 오래된 작업 단계 로그의 날짜와 시간입니다. 이 날짜와 시간보다 오래된 모든 작업 단계 로그는 제거됩니다. *날짜* 은 **datetime**, 기본값은 NULL입니다. 둘 다  **@older_than**  및  **@larger_than**  지정할 수 있습니다.  
   
- [  **@larger_than =**] **'***size_in_bytes***'**  
+ [ **@larger_than =**] **'***size_in_bytes***'**  
  유지할 가장 큰 작업 단계 로그의 크기(바이트)입니다. 이 크기보다 큰 모든 작업 단계 로그는 제거됩니다. 둘 다  **@larger_than**  및  **@older_than**  지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_delete_jobsteplog** 에 **msdb** 데이터베이스입니다.  

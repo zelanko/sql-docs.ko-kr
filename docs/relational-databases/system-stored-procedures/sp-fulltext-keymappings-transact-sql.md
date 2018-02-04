@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_keymappings_TSQL
 - sp_fulltext_keymappings
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text indexes [SQL Server], key column
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0f99180f5b55808bc1bb7602d7dec7800febe68
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9d0a2bb541e1984e8d992ae00303d47838204ed5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +54,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  *docid*  
  키 값에 해당하는 내부 문서 ID(DocId)입니다. 잘못된 *docid* 값은 결과를 반환하지 않습니다.  
   
- *키*  
+ *key*  
  지정한 테이블의 전체 텍스트 키 값입니다. 잘못된 *key* 값은 결과를 반환하지 않습니다. 전체 텍스트 키 값에 대 한 정보를 참조 하십시오. [전체 텍스트 인덱스 관리](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)합니다.  
   
 > [!IMPORTANT]  
@@ -80,7 +82,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |--------------------------|----------------------|  
 |*table_id*|만 사용 하 여 호출 하는 경우는 *table_id* 매개 변수를 sp_fulltext_keymappings는 함께 각 키에 해당 하는 DocId 지정된 된 기본 테이블에서 모든 전체 텍스트 키 (키) 값을 반환 합니다. 여기에는 삭제가 보류된 키가 포함됩니다.<br /><br /> 이 함수는 다양한 문제를 해결하는 데 유용합니다. 특히, 선택한 전체 텍스트 키가 정수 데이터 형식이 아닐 경우 전체 텍스트 인덱스 내용을 보는 데 유용합니다. 이렇게 하려면 결과 함께 sp_fulltext_keymappings의 결과 조인 해야 **sys.dm_fts_index_keywords_by_document**합니다. 자세한 내용은 참조 [sys.dm_fts_index_keywords_by_document&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> 그러나 일반적으로는 가능하면 sp_fulltext_keymappings를 특정 전체 텍스트 키나 DocId를 지정하는 매개 변수와 함께 실행하는 것이 좋습니다. 이 방법은 전체 키 맵을 반환하는 것보다 훨씬 효율적입니다. 특히 매우 큰 테이블의 경우 전체 키 맵을 반환하기 위한 성능 비용이 상당히 크므로 더욱 효율적입니다.|  
 |*table_id*, *docid*|경우에는 *table_id* 및 *docid* 지정 된 *docid* null이 아니어야 하 고 지정된 된 테이블의 올바른 DocId를 지정 해야 합니다. 이 함수는 특정 전체 텍스트 인덱스의 DocId에 해당하는 기본 테이블에서 사용자 지정 전체 텍스트 키를 분리하는 데 유용합니다.|  
-|*table_id*, NULL, *키*|두 번째 매개 변수는 NULL 이어야 세 개의 매개 변수가 있는 경우 및 *키* null이 아니어야 하 고 지정된 된 테이블의 유효한 전체 텍스트 키 값을 지정 해야 합니다. 이 함수는 특정 전체 텍스트 키에 해당하는 DocId를 기본 테이블에서 분리하는 데 유용합니다.|  
+|*table_id*, NULL, *key*|두 번째 매개 변수는 NULL 이어야 세 개의 매개 변수가 있는 경우 및 *키* null이 아니어야 하 고 지정된 된 테이블의 유효한 전체 텍스트 키 값을 지정 해야 합니다. 이 함수는 특정 전체 텍스트 키에 해당하는 DocId를 기본 테이블에서 분리하는 데 유용합니다.|  
   
  다음과 같은 경우 오류가 반환됩니다.  
   

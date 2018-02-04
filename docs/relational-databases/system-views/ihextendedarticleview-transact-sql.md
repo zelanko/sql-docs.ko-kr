@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - IHextendedArticleView_TSQL
 - IHextendedArticleView
-dev_langs: TSQL
-helpviewer_keywords: IHextendedArticleView view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IHextendedArticleView view
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae81693a4b74614bd4cb9024b91ce69ac15f4d09
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 413a95e5d39b5a335381f25a8214df9a0b3be779
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|게시자에 대한 고유 식별자입니다.|  
 |**publication_id**|**int**|게시에 대한 고유 식별자입니다.|  
-|**문서**|**sysname**|아티클의 이름입니다.|  
+|**article**|**sysname**|아티클의 이름입니다.|  
 |**destination_object**|**sysname**|구독자에 게시된 개체의 이름입니다.|  
 |**source_owner**|**sysname**|게시자에 게시된 개체의 소유자입니다.|  
 |**source_object**|**sysname**|게시자에 게시된 개체의 이름입니다.|  
@@ -48,9 +52,9 @@ ms.lasthandoff: 11/17/2017
 |**filter**|**int**|수평 분할을 정의하는 데 사용되는 저장 프로시저에 대한 식별자입니다.|  
 |**filter_clause**|**ntext**|아티클을 수평 분할하는 데 사용되는 WHERE 절입니다.|  
 |**ins_cmd**|**nvarchar(255)**|INSERT를 위해 실행되는 명령입니다.|  
-|**pre_creation_cmd**|**tinyint**|DROP TABLE, DELETE TABLE 또는 TRUNCATE에 대한 사전 생성 명령입니다.<br /><br /> **0** = none입니다.<br /><br /> **1** = 삭제 합니다.<br /><br /> **2** = 삭제 합니다.<br /><br /> **3** = TRUNCATE입니다.|  
+|**pre_creation_cmd**|**tinyint**|DROP TABLE, DELETE TABLE 또는 TRUNCATE에 대한 사전 생성 명령입니다.<br /><br /> **0** = none입니다.<br /><br /> **1** = DROP.<br /><br /> **2** = DELETE.<br /><br /> **3** = TRUNCATE.|  
 |**상태**|**tinyint**|아티클 옵션 및 상태의 비트 마스크이며 다음 값 중 하나 이상에 대한 논리 비트 OR 연산의 결과일 수 있습니다.<br /><br /> **1** = 아티클이 활성 상태입니다.<br /><br /> **8** = INSERT 문에 열 이름을 포함 합니다.<br /><br /> **16** = 문을 매개 변수화 사용 합니다.<br /><br /> **24** = INSERT 문에 열 이름을 포함 하 고 매개 변수가 있는 문을 사용 하 여 둘 다 있습니다.<br /><br /> 예를 들어 매개 변수가 있는 문을 사용 하는 활성 아티클은 값을 갖기 **17** 이 열에 있습니다. 값이 **0** 문서 아니기 때문에 하 고 추가 속성이 정의 된 것을 의미 합니다.|  
-|**유형**|**tinyint**|아티클 유형입니다.<br /><br /> **1** = 로그 기반 아티클입니다.<br /><br /> **3** = 수동 필터가 있는 로그 기반 아티클입니다.<br /><br /> **5** = 수동 뷰가 있는 로그 기반 아티클입니다.<br /><br /> **7** = 수동 필터 및 수동 뷰가 있는 로그 기반 아티클입니다.|  
+|**type**|**tinyint**|아티클 유형입니다.<br /><br /> **1** = 로그 기반 아티클입니다.<br /><br /> **3** = 수동 필터가 있는 로그 기반 아티클입니다.<br /><br /> **5** = 수동 뷰가 있는 로그 기반 아티클입니다.<br /><br /> **7** = 수동 필터 및 수동 뷰가 있는 로그 기반 아티클입니다.|  
 |**upd_cmd**|**nvarchar(255)**|UPDATE를 위해 실행되는 명령입니다.|  
 |**schema_option**|**binary**|스크립팅할 것을 표시합니다. 참조 [sp_addarticle &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 지원 되는 스키마 옵션 목록은 합니다.|  
 |**dest_owner**|**sysname**|대상 데이터베이스에 게시된 개체의 소유자입니다.|  

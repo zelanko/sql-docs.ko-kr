@@ -8,25 +8,28 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_wait_for_database_copy_sync_TSQL
 - sp_wait_for_database_copy_sync
-dev_langs: TSQL
-helpviewer_keywords: sp_wait_for_database_copy_sync
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_wait_for_database_copy_sync
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7b2d41c9c87b483ab500ad351361a511ca66004
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ca693b57fe2178a1b817ca76579ad3e7194f7c0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>활성 지리적 복제-sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,10 +48,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @target_server =] 'server_name'  
+ [ @target_server = ] 'server_name'  
  활성 보조 데이터베이스를 호스트하는 SQL Database 서버의 이름입니다. server_name은 sysname이며 기본값은 없습니다.  
   
- [ @target_database =] 's e _'  
+ [ @target_database = ] 'database_name'  
  활성 보조 데이터베이스의 이름입니다. database_name은 sysname이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

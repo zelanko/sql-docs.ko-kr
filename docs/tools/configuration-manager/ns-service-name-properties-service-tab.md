@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23e82062abc0441e70fd8e97b3c2adcb37eeb83e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 59203f010913252abf05201df0f92a2d1b639c18
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;서비스 이름&gt; 속성 (서비스 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 서비스는는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 서비스입니다. 밝은 회색으로 표시된 속성 값은 이 응용 프로그램을 사용하여 변경할 수 없습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+이 서비스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 서비스입니다. 밝은 회색으로 표시된 속성 값은 이 응용 프로그램을 사용하여 변경할 수 없습니다.  
   
 ## <a name="options"></a>옵션  
  **이진 경로**  

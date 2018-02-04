@@ -8,22 +8,25 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: dynamic management objects [SQL Server], transactions
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- dynamic management objects [SQL Server], transactions
 ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9770ba30c9a66ed7abdb2bd8eda63b7a62df9365
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 82110ff0ccb7333739eeb47cd5343e4e121e561f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="transaction-related-dynamic-management-views-and-functions-transact-sql"></a>트랜잭션 관련 동적 관리 뷰 및 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

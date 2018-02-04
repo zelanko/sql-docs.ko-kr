@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_account_sp_TSQL
 - sysmail_help_account_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfc032a279abad7949e67f4c232cbe30219baa30
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b811fef9f1c2a89590e1e03f4fbe1b214ddc902d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +46,10 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  정보를 나열할 계정의 ID입니다. *account_id* 은 **int**, 기본값은 NULL입니다.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  정보를 나열할 계정의 이름입니다. *account_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -61,13 +64,13 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**account_id**|**int**|계정의 ID입니다.|  
 |**name**|**sysname**|계정 이름입니다.|  
 |**설명**|**nvarchar(256)**|계정에 대한 설명입니다.|  
-|**email_address**|**nvarchar (128)**|메시지를 보내는 전자 메일 주소입니다.|  
-|**display_name**|**nvarchar (128)**|계정의 표시 이름입니다.|  
-|**replyto_address**|**nvarchar (128)**|이 계정에서 보낸 메시지에 회신하는 주소입니다.|  
-|**서버 유형**|**sysname**|계정에 대한 전자 메일 서버의 유형입니다.|  
-|**서버 이름**|**sysname**|계정에 대한 전자 메일 서버의 이름입니다.|  
+|**email_address**|**nvarchar(128)**|메시지를 보내는 전자 메일 주소입니다.|  
+|**display_name**|**nvarchar(128)**|계정의 표시 이름입니다.|  
+|**replyto_address**|**nvarchar(128)**|이 계정에서 보낸 메시지에 회신하는 주소입니다.|  
+|**servertype**|**sysname**|계정에 대한 전자 메일 서버의 유형입니다.|  
+|**servername**|**sysname**|계정에 대한 전자 메일 서버의 이름입니다.|  
 |**port**|**int**|사용되는 전자 메일 서버의 포트 번호입니다.|  
-|**사용자 이름**|**nvarchar (128)**|전자 메일 서버에서 인증을 사용하는 경우 전자 메일 서버 로그인에 사용할 사용자 이름입니다. 때 **username** 가 null 인 경우 데이터베이스 메일이이 계정에 대 한 인증을 사용 하지 않습니다.|  
+|**username**|**nvarchar(128)**|전자 메일 서버에서 인증을 사용하는 경우 전자 메일 서버 로그인에 사용할 사용자 이름입니다. 때 **username** 가 null 인 경우 데이터베이스 메일이이 계정에 대 한 인증을 사용 하지 않습니다.|  
 |**use_default_credentials**|**bit**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 자격 증명을 사용하여 메일을 SMTP 서버로 보낼지 여부를 지정합니다. **use_default_credentials** 는 bit 이며 기본값은 없습니다. 이 매개 변수가 1이면 데이터베이스 메일에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스의 자격 증명을 사용합니다. 이 매개 변수가 0 이면 데이터베이스 메일 사용 하는  **@username**  및  **@password**  SMTP 서버에 인증 합니다. 경우  **@username**  및  **@password**  가 NULL 이면 데이터베이스 메일 익명 인증을 사용 하 여 합니다. 이 매개 변수를 지정하기 전에 해당 SMTP 관리자에게 문의하십시오.|  
 |**enable_ssl**|**bit**|데이터베이스 메일에서 SSL(Secure Sockets Layer)을 사용하여 통신을 암호화할지 여부를 지정합니다. SMTP 서버에 SSL이 필요한 경우 이 옵션을 사용합니다. **enable_ssl** 는 bit 이며 기본값은 없습니다. 1은 데이터베이스 메일에서 SSL을 사용하여 통신을 암호화함을 나타냅니다. 0은 데이터베이스 메일에서 SSL 암호화 없이 메일을 보냄을 나타냅니다.|  
   

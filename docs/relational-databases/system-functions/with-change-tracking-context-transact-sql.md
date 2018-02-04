@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WITH_CHANGE_TRACKING_CONTEXT_TSQL
 - WITH CHANGE_TRACKING_CONTEXT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - WITH CHANGE_TRACKING_CONTEXT
 - change tracking [SQL Server], WITH CHANGE_TRACKING_CONTEXT
 ms.assetid: 885e33a1-602a-4b94-8380-a63ac935a683
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64df0abada886ed2e9b928efe447e40a34bdedce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3f43a422ba3e1cecb51d8199eb10a6220e7c3315
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="with-changetrackingcontext-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +47,7 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *컨텍스트*  
+ *context*  
  호출 응용 프로그램에서 제공되고 변경에 대한 변경 내용 추적 정보와 함께 저장되는 컨텍스트 정보입니다. *상황에 맞는* 은 **varbinary(128)**합니다.  
   
  값은 상수 또는 변수가 될 수 있지만 NULL이 될 수는 없습니다.  

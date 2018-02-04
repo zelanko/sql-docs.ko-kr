@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
 - sp_help_jobhistory
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobhistory
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c927767e00429c9ccdbe3143ade99cbe363950d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: de1836ee52354e96341386db5dfd33297f2d9be6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,40 +60,40 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  작업 ID입니다. *job_id* 은 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@step_id=** ] *step_id*  
+ [ **@step_id=** ] *step_id*  
  단계 ID입니다. *step_id* 은 **int**, 기본값은 NULL입니다.  
   
- [  **@sql_message_id=** ] *sql_message_id*  
+ [ **@sql_message_id=** ] *sql_message_id*  
  작업을 실행할 때 Microsoft SQL Server에서 반환하는 오류 메시지의 ID입니다. *sql_message_id* 은 **int**, 기본값은 NULL입니다.  
   
- [  **@sql_severity=** ] *sql_severity*  
+ [ **@sql_severity=** ] *sql_severity*  
  작업을 실행할 때 Microsoft SQL Server에서 반환하는 오류 메시지의 심각도입니다. *sql_severity* 은 **int**, 기본값은 NULL입니다.  
   
- [  **@start_run_date=** ] *start_run_date*  
+ [ **@start_run_date=** ] *start_run_date*  
  작업이 시작된 날짜입니다. *start_run_date*은 **int**, 기본값은 NULL입니다. *start_run_date* 해야 합니다. 입력 YYYYMMDD, 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 일입니다.  
   
- [  **@end_run_date=** ] *end_run_date*  
+ [ **@end_run_date=** ] *end_run_date*  
  작업이 완료된 날짜입니다. *end_run_date* 은 **int**, 기본값은 NULL입니다. *end_run_date*해야 합니다. 입력 YYYYMMDD, 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 일입니다.  
   
- [  **@start_run_time=** ] *start_run_time*  
+ [ **@start_run_time=** ] *start_run_time*  
  작업이 시작된 시간입니다. *start_run_time* 은 **int**, 기본값은 NULL입니다. *start_run_time*해야 형식으로 입력 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 자정 SS는 두 자리 초입니다.  
   
- [  **@end_run_time=** ] *end_run_time*  
+ [ **@end_run_time=** ] *end_run_time*  
  작업 실행이 완료된 시간입니다. *end_run_time* 은 **int**, 기본값은 NULL입니다. *end_run_time*해야 형식으로 입력 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 자정 SS는 두 자리 초입니다.  
   
- [  **@minimum_run_duration=** ] *minimum_run_duration*  
+ [ **@minimum_run_duration=** ] *minimum_run_duration*  
  작업 완료에 필요한 최소 시간의 길이입니다. *minimum_run_duration* 은 **int**, 기본값은 NULL입니다. *minimum_run_duration*해야 형식으로 입력 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 자정 SS는 두 자리 초입니다.  
   
- [  **@run_status=** ] *run_status*  
+ [ **@run_status=** ] *run_status*  
  작업의 실행 상태입니다. *run_status* 은 **int**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|실패|  
 |**1**|성공|  
@@ -99,13 +102,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|메시지 처리 중|  
 |**5**|Unknown|  
   
- [  **@minimum_retries=** ] *minimum_retries*  
+ [ **@minimum_retries=** ] *minimum_retries*  
  작업 실행을 다시 시도해야 하는 최소 횟수입니다. *minimum_retries* 은 **int**, 기본값은 NULL입니다.  
   
- [  **@oldest_first=** ] *oldest_first*  
+ [ **@oldest_first=** ] *oldest_first*  
  가장 오래된 작업에 대한 결과를 먼저 표시할지 여부입니다. *oldest_first* 은 **int**, 기본값은 **0**, 최신 작업을 먼저 표시를 합니다. **1** 가장 오래 된 작업을 먼저 표시 합니다.  
   
- [  **@server=** ] **'***서버***'**  
+ [ **@server=** ] **'***server***'**  
  작업이 수행된 서버의 이름입니다. *서버* 은 **nvarchar (30)**, 기본값은 NULL입니다.  
   
  [  **@mode=** ] **'***모드***'**  
@@ -126,16 +129,16 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**step_name**|**sysname**|단계 이름입니다. 작업 기록의 경우 NULL입니다.|  
 |**sql_message_id**|**int**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령 실행 중에 발생한 오류 중 가장 최근의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류 번호입니다.|  
 |**sql_severity**|**int**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령 실행 중에 발생한 오류 중 가장 높은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류 심각도입니다.|  
-|**메시지**|**nvarchar (1024)**|작업 또는 단계 기록 메시지입니다.|  
+|**message**|**nvarchar(1024)**|작업 또는 단계 기록 메시지입니다.|  
 |**run_status**|**int**|작업 또는 단계의 결과입니다.|  
 |**run_date**|**int**|작업 또는 단계가 실행을 시작한 날짜입니다.|  
 |**run_time**|**int**|작업 또는 단계가 실행을 시작한 시간입니다.|  
 |**run_duration**|**int**|HHMMSS 형식의 작업 또는 단계 실행의 경과 시간입니다.|  
-|**operator_emailed**|**nvarchar (20)**|해당 작업에 관한 전자 메일을 받는 운영자입니다. 단계 기록의 경우에는 NULL입니다.|  
-|**operator_netsent**|**nvarchar (20)**|해당 작업에 관한 네트워크 메시지를 받는 운영자입니다. 단계 기록의 경우에는 NULL입니다.|  
-|**operator_paged**|**nvarchar (20)**|해당 작업에 관한 호출을 받는 운영자입니다. 단계 기록의 경우에는 NULL입니다.|  
+|**operator_emailed**|**nvarchar(20)**|해당 작업에 관한 전자 메일을 받는 운영자입니다. 단계 기록의 경우에는 NULL입니다.|  
+|**operator_netsent**|**nvarchar(20)**|해당 작업에 관한 네트워크 메시지를 받는 운영자입니다. 단계 기록의 경우에는 NULL입니다.|  
+|**operator_paged**|**nvarchar(20)**|해당 작업에 관한 호출을 받는 운영자입니다. 단계 기록의 경우에는 NULL입니다.|  
 |**retries_attempted**|**int**|단계를 다시 시도하는 횟수입니다. 작업 기록의 경우에는 항상 0입니다.|  
-|**서버**|**nvarchar (30)**|단계 또는 작업을 실행하는 서버입니다. 항상 (**로컬**).|  
+|**server**|**nvarchar(30)**|단계 또는 작업을 실행하는 서버입니다. 항상 (**로컬**).|  
   
 ## <a name="remarks"></a>주의  
  **sp_help_jobhistory** 지정한 예약 된 작업의 기록 사용 하 여 보고서를 반환 합니다. 매개 변수를 지정하지 않은 경우에는 보고서에 예정된 모든 작업에 관한 기록이 포함됩니다.  

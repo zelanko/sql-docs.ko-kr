@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
 - sp_purge_data
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_purge_data
 - management data warehouse, data collector stored procedures
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b03e5ef5984431f3fe2867e2dc303ca2ba710435
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb74c4993f7a7d013e56061e3a572052c2939a99
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,15 +56,15 @@ core.sp_purge_data
  [@retention_days =] *retention_days*  
  데이터를 관리 데이터 웨어하우스 테이블에 보관하는 일 수입니다. 다음 보다 오래 된 타임 스탬프를 사용 하 여 데이터 *retention_days* 제거 됩니다. *retention_days* 은 **smallint**, 기본값은 NULL입니다. 지정된 경우 값은 양수여야 합니다. NULL인 경우 core.snapshots 뷰의 valid_through 열에 있는 값에 따라 제거에 적합한 행이 결정됩니다.  
   
- [@instance_name =] '*instance_name*'  
+ [@instance_name = ] '*instance_name*'  
  컬렉션 집합의 인스턴스 이름입니다. *instance_name* 은 **sysname**, 기본값은 NULL입니다.  
   
  *instance_name* 컴퓨터 이름과 인스턴스 이름을 형태로 구성 된 정규화 된 인스턴스 이름 이어야 합니다 *computername*\\*instancename*합니다. NULL인 경우 로컬 서버의 기본 인스턴스가 사용됩니다.  
   
- [@collection_set_uid =] '*collection_set_uid*'  
+ [@collection_set_uid = ] '*collection_set_uid*'  
  컬렉션 집합에 대한 GUID입니다. *collection_set_uid* 은 **uniqueidentifier**, 기본값은 NULL입니다. NULL인 경우 모든 컬렉션 집합에서 한정하는 행이 제거됩니다. 이 값을 확인하려면 syscollector_collection_sets 카탈로그 뷰를 쿼리합니다.  
   
- [@duration =] *기간*  
+ [@duration = ] *duration*  
  제거 작업을 실행해야 하는 최대 시간(분)입니다. *기간* 은 **smallint**, 기본값은 NULL입니다. 지정된 경우 값은 0 또는 양의 정수여야 합니다. NULL인 경우 한정된 모든 행이 제거될 때까지 작업이 실행되거나 작업이 수동으로 중지됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - fn_cdc_is_bit_set
 - sys.fn_cdc_is_bit_set_TSQL
 - sys.fn_cdc_is_bit_set
 - fn_cdc_is_bit_set_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fn_cdc_is_bit_set
 - fn_cdc_is_bit_set
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eea5c3c645bdd8ab6a1c0d9a8e18b430d2aa5871
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 920a853813cce683d42fb319e5eae7043300c5f0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfncdcisbitset-transact-sql"></a>sys.fn_cdc_is_bit_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

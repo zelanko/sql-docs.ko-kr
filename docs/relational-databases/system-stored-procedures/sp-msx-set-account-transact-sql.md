@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_set_account
 - sp_msx_set_account_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_msx_set_account
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_msx_set_account
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2ca4cb5e7d8ae5b390a1abcc161a5c567d1392a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7d463863e71a0ba2899a987fdb425d08c8f5245a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +46,10 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@credential_name=** ] **'***credential_name***'**  
+ [ **@credential_name=** ] **'***credential_name***'**  
  마스터 서버에 로그인하는 데 사용할 자격 증명의 이름입니다. 제공된 이름은 기존 자격 증명의 이름이어야 합니다. 어느 *credential_name* 또는 *credential_id* 지정 해야 합니다.  
   
- [  **@credential_id=** ] *credential_id*  
+ [ **@credential_id=** ] *credential_id*  
  마스터 서버에 로그인하는 데 사용할 자격 증명의 식별자입니다. 식별자는 기존 자격 증명의 식별자여야 합니다. 어느 *credential_name* 또는 *credential_id* 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -56,7 +59,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
  없음  
   
 ## <a name="remarks"></a>주의  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 자격 증명을 사용하여 대상 서버가 마스터 서버에 로그인하는 데 사용하는 사용자 이름 및 암호 정보를 저장합니다. 이 프로시저는 이 대상 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 마스터 서버에 로그인하는 데 사용하는 자격 증명을 설정합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 사용 하 여 대상 서버를 마스터 서버에 로그인을 사용 하 여 사용자 이름 및 암호 정보를 저장 합니다. 이 프로시저는 이 대상 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 마스터 서버에 로그인하는 데 사용하는 자격 증명을 설정합니다.  
   
  지정된 자격 증명은 기존 자격 증명이어야 합니다. 자격 증명을 만드는 방법에 대 한 자세한 내용은 참조 [CREATE credential&#40; Transact SQL &#41; ](../../t-sql/statements/create-credential-transact-sql.md).  
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_schedule
 - sp_update_schedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_schedule
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: caeb6cf9ecf16a77b25bbb9b6a42ae865b077792
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 23d1d4b4cfdc7fb19cffff63de8cae84b2606d6e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,22 +62,22 @@ sp_update_schedule
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@schedule_id =** ] *schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  수정할 일정의 식별자입니다. *schedule_id* 은 **int**, 기본값은 없습니다. 어느 *schedule_id* 또는 *schedule_name* 지정 해야 합니다.  
   
- [  **@name =** ] **'***schedule_name***'**  
+ [ **@name =** ]  **'***schedule_name***'**  
  수정할 일정의 이름입니다. *schedule_name*은 **sysname**, 기본값은 없습니다. 어느 *schedule_id* 또는 *schedule_name* 지정 해야 합니다.  
   
- [  **@new_name** =] *new_name*  
+ [ **@new_name**= ] *new_name*  
  일정의 새 이름입니다. *new_name* 은 **sysname**, 기본값은 NULL입니다. 때 *new_name* 가 NULL 이면 일정의 이름은 변경 되지 않습니다.  
   
  [  **@enabled =** ] *사용 하도록 설정*  
  일정의 현재 상태를 나타냅니다. *활성화*은 **tinyint**, 기본값은 **1** (사용). 경우 **0**, 일정을 사용할 수 없습니다. 일정을 사용할 수 없는 경우 이 일정에 따라 어떠한 작업도 실행되지 않습니다.  
   
- [  **@freq_type =** ] *freq_type*  
+ [ **@freq_type =** ] *freq_type*  
  작업이 실행될 시기를 나타내는 값입니다. *freq_type*은 **int**, 기본값은 **0**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**4**|일별|  
@@ -84,7 +87,7 @@ sp_update_schedule
 |**64**|SQLServerAgent 서비스를 시작할 때 실행|  
 |**128**|컴퓨터가 유휴 상태일 때 실행|  
   
- [  **@freq_interval =** ] *freq_interval*  
+ [ **@freq_interval =** ] *freq_interval*  
  작업이 실행되는 날짜입니다. *freq_interval* 은 **int**, 기본값은 **0**의 값에 따라 달라 집니다 *freq_type*합니다.  
   
 |값 *freq_type*|에 영향을 *freq_interval*|  
@@ -93,27 +96,27 @@ sp_update_schedule
 |**4** (매일)|모든 *freq_interval* 일 수 있습니다.|  
 |**8** (매주)|*freq_interval* 은 다음 중 하나 이상을 (함께 **OR** 논리 연산자).<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **4** = 화요일<br /><br /> **8** = 수요일<br /><br /> **16** = 목요일<br /><br /> **32** = 금요일<br /><br /> **64** = 토요일|  
 |**16** (매월)|에 *freq_interval* 해당 월의 일 합니다.|  
-|**32** (매월 상대적)|*freq_interval* 다음 중 하나입니다.<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **3** = 화요일<br /><br /> **4** = 수요일<br /><br /> **5** = 목요일<br /><br /> **6** = 금요일<br /><br /> **7** = 토요일<br /><br /> **8** = 일<br /><br /> **9** = 평일<br /><br /> **10** = 주말|  
+|**32** (매월 상대적)|*freq_interval* 다음 중 하나입니다.<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **3** = 화요일<br /><br /> **4** = 수요일<br /><br /> **5** = 목요일<br /><br /> **6** = 금요일<br /><br /> **7** = 토요일<br /><br /> **8** = 일<br /><br /> **9** = Weekday<br /><br /> **10** = 주말|  
 |**64** (SQLServerAgent 서비스가 시작할 때)|*freq_interval* 는 사용 되지 않습니다.|  
 |**128**|*freq_interval* 는 사용 되지 않습니다.|  
   
- [  **@freq_subday_type =** ] *freq_subday_type*  
- 단위를 지정 *freq_subday_interval**합니다.* *freq_subday_type*은 **int**, 기본값은 **0**, 다음이 값 중 하나일 수 있습니다.  
+ [ **@freq_subday_type =** ] *freq_subday_type*  
+ 단위를 지정 *freq_subday_interval * *입니다.* *freq_subday_type*은 **int**, 기본값은 **0**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명(단위)|  
+|Value|설명(단위)|  
 |-----------|--------------------------|  
-|**0 x 1**|지정된 시간|  
+|**0x1**|지정된 시간|  
 |**0x2**|초|  
 |**0x4**|분|  
 |**0x8**|시간|  
   
- [  **@freq_subday_interval =** ] *freq_subday_interval*  
+ [ **@freq_subday_interval =** ] *freq_subday_interval*  
  수가 *freq_subday_type* 각 작업 실행 간에 발생 하는 기간. *freq_subday_interval*은 **int**, 기본값은 **0**합니다.  
   
- [  **@freq_relative_interval =** ] *freq_relative_interval*  
+ [ **@freq_relative_interval =** ] *freq_relative_interval*  
  작업의 발생 *freq_interval* 각 월에 경우 *freq_interval* 은 **32** (매월 상대)입니다. *freq_relative_interval*은 **int**, 기본값은 **0**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명(단위)|  
+|Value|설명(단위)|  
 |-----------|--------------------------|  
 |**1**|첫째|  
 |**2**|둘째|  
@@ -121,27 +124,27 @@ sp_update_schedule
 |**8**|넷째|  
 |**16**|마지막|  
   
- [  **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
+ [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
  예약된 작업 실행 간에 발생하는 주 또는 월의 수입니다. *freq_recurrence_factor* 경우에 사용 *freq_type* 은 **8**, **16**, 또는 **32**합니다. *freq_recurrence_factor*은 **int**, 기본값은 **0**합니다.  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ]  *active_start_date*  
  작업 실행이 시작되는 날짜입니다. *active_start_date*은 **int**, 기본값은 NULL 이며 오늘 날짜를 나타내는입니다. 날짜 형식은 YYYYMMDD입니다. 경우 *active_start_date* NULL이 아니면 날짜 보다 크거나 19900101 이어야 합니다.  
   
  일정을 만든 다음 시작 날짜를 검토하여 날짜가 제대로 되어 있는지 확인하십시오. 자세한 내용은 "시작 날짜 예약" 섹션을 참조 [만들기 및 작업에 일정 연결](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)합니다.  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  작업 실행이 중지되는 날짜입니다. *active_end_date*은 **int**, 기본값은 **99991231**를 나타내는 12 월 31 일에서 9999입니다. 날짜 형식은 YYYYMMDD입니다.  
   
- [  **@active_start_time =** ] *active_start_time*  
+ [ **@active_start_time =** ] *active_start_time*  
  시간 사이의 임의의 날짜에서 *active_start_date* 및 *active_end_date* 작업의 실행을 시작 합니다. *active_start_time*은 **int**, 오전 12시: 00을 나타내는 000000 기본값 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
- [  **@active_end_time =** ] *active_end_time*  
+ [ **@active_end_time =** ] *active_end_time*  
  시간 사이의 임의의 날짜에서 *active_start_date* 및 *active_end_date* 하는 작업의 실행을 종료 합니다. *active_end_time*은 **int**, 기본값은 **235959**, 오후 11시 59분: 59를 나타냄 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
- [  **@owner_login_name** =] **'***owner_login_name***'**]  
+ [ **@owner_login_name**= ] **'***owner_login_name***'**]  
  일정을 소유하는 서버 보안 주체의 이름입니다. *owner_login_name* 은 **sysname**, 기본값은 NULL, 만든이가 일정을 소유 나타냅니다.  
   
- [  **@automatic_post =**] *automatic_post*  
+ [ **@automatic_post =**] *automatic_post*  
  예약되어 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

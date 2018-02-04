@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_load_thesaurus_file
 - sp_fulltext_load_thesaurus_file_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_fulltext_load_thesaurus_file
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bb9a1b28c321e65bb6e03e6ba99c70d555069e3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: de4468120488b4f7d8942ecf540c36370a36de7f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +54,16 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  **@loadOnlyIfNotLoaded** = *작업*  
  동의어 사전 파일이 이미 로드된 경우에도 내부 동의어 사전 테이블로 로드되는지 여부를 지정합니다. *동작* 중 하나입니다.  
   
-|값|정의|  
+|Value|정의|  
 |-----------|----------------|  
 |**0**|이미 로드되었는지 여부와 관계없이 동의어 사전 파일을 로드합니다. 이것이 기본 동작의 **sp_fulltext_load_thesaurus_file**합니다.|  
 |1.|아직 로드되지 않은 경우에만 동의어 사전 파일을 로드합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  동의어 사전 파일은 해당 동의어 사전을 사용하는 전체 텍스트 쿼리에 의해 자동으로 로드됩니다. 전체 텍스트 쿼리에 미치는이 첫 번째 성능 영향을 방지 하려면 실행 하는 권장 **sp_fulltext_load_thesaurus_file**합니다.  

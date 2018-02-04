@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_db_TSQL
 - sp_attach_db
-dev_langs: TSQL
-helpviewer_keywords: sp_attach_db
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-caps.latest.revision: "69"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4257c57416e62af917eaf243f4a11f5edd957a48
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b17a11f31faff52e2519d2c10d34af88108f0399
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   서버에 데이터베이스를 연결합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]CREATE DATABASE를 사용 하는 것이 좋습니다 *database_name* FOR ATTACH 대신. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] CREATE DATABASE를 사용 하는 것이 좋습니다 *database_name* FOR ATTACH 대신. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
   
 > [!NOTE]  
 >  하나 이상의 새 위치가 있는 경우 여러 로그 파일이 다시 작성 하려면 CREATE DATABASE를 사용 하 여 *database_name* FOR ATTACH_REBUILD_LOG 합니다.  
@@ -51,10 +54,10 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@dbname=** ] **'***dbnam* **'**  
+ [ **@dbname=** ] **'***dbnam* **'**  
  서버에 연결될 데이터베이스의 이름입니다. 이름은 고유해야 합니다. *dbname* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@filename1=** ] **'***filename_n***'**  
+ [ **@filename1=** ] **'***filename_n***'**  
  경로를 포함한 데이터베이스 파일의 물리적 이름입니다. *filename_n* 은 **nvarchar (260)**, 기본값은 NULL입니다. 파일 이름은 16개까지 지정할 수 있습니다. 시작 하는 매개 변수 이름이  **@filename1**  으로 증가 하 고  **@filename16** 합니다. 파일 이름 목록에는 적어도 주 파일이 포함되어야 합니다. 주 파일에는 데이터베이스의 다른 파일을 가리키는 시스템 테이블이 포함됩니다. 또한 목록은 데이터베이스가 분리된 다음 이동된 모든 파일을 포함해야 합니다.  
   
 > [!NOTE]  
@@ -66,7 +69,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_attach_db** 이전에 명시적를 사용 하 여 데이터베이스 서버에서 분리 된 데이터베이스에서에 저장된 프로시저를 실행 해야 **sp_detach_db** 작업 데이터베이스나 복사 합니다. CREATE DATABASE를 사용 하 여 16 개 이상의 파일을 지정 해야 할 경우 *a s e _* FOR ATTACH 또는 CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG 합니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  

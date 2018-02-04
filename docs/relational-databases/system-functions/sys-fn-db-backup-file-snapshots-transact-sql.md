@@ -8,21 +8,23 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30988d44e03a40ffcb8317a603b99633c21c8068
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 03b11b44515e2b04081235e2bd2547e6e0fc144f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfndbbackupfilesnapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +42,7 @@ sys.fn_db_backup_file_snapshots
 ```  
   
 ## <a name="arguments"></a>인수  
- *A s e _*  
+ *Database_name*  
  쿼리 중인 데이터베이스의 이름입니다. NULL 인 경우이 함수는 현재 데이터베이스 범위에서 실행 됩니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
@@ -48,7 +50,7 @@ sys.fn_db_backup_file_snapshots
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |file_id|**int**|데이터베이스에 대 한 파일 ID입니다. Null을 허용하지 않습니다.|  
-|snapshot_time|**nvarchar (260)**|그대로 스냅숏의 타임 스탬프는 REST API에서 반환 됩니다. 스냅숏이 없는 경우 NULL을 반환 합니다.|  
+|snapshot_time|**nvarchar(260)**|그대로 스냅숏의 타임 스탬프는 REST API에서 반환 됩니다. 스냅숏이 없는 경우 NULL을 반환 합니다.|  
 |snapshot_url|**nvarchar(360)**|파일 스냅숏 전체 URL입니다. 스냅숏이 없는 경우 NULL을 반환 존재 합니다.|  
   
 ## <a name="permissions"></a>Permissions  

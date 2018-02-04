@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_manage_jobs_by_login
 - sp_manage_jobs_by_login_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_manage_jobs_by_login
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_manage_jobs_by_login
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6957acef65b68ca955e14fb6c01d83bde01bc5d3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2575a298f71475452dffe05b75adeaf41ac8f2fa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +52,17 @@ sp_manage_jobs_by_login
  [  **@action=** ] **'***동작***'**  
  지정된 로그인에 대해 수행할 동작입니다. *동작* 은 **varchar (10)**, 기본값은 없습니다. 때 *동작*은 **삭제**, **sp_manage_jobs_by_login** 가 소유 하는 모든 작업을 삭제 *current_owner_login_name*합니다. 때 *동작* 은 **재할당**, 모든 작업에 할당 된 *new_owner_login_name*합니다.  
   
- [  **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
+ [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
  현재 작업 소유자의 로그인 이름입니다. *current_owner_login_name* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
+ [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
  새 작업 소유자의 로그인 이름입니다. 경우에만이 매개 변수를 사용 하 여 *동작* 은 **재할당**합니다. *new_owner_login_name* 은 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Permissions  
  이 저장된 프로시저를 실행 하려면 사용자에 게 부여 해야 합니다는 **sysadmin** 고정된 서버 역할입니다.  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setevent_TSQL
 - sp_trace_setevent
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_setevent
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f47656c08b4cdf835a9f7d6dc7e9ae0b84dbdca9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f4d36c6512a23d69371767e75d179fbdbf5d695d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +52,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  수정할 추적의 ID입니다. *trace_id* 은 **int**, 기본값은 없습니다. 사용자가이 사용 *trace_id* 식별, 수정 및 추적 제어 하는 값입니다.  
   
- [  **@eventid=** ] *event_id*  
+ [ **@eventid=** ] *event_id*  
  설정할 이벤트의 ID입니다. *event_id* 은 **int**, 기본값은 없습니다.  
   
  다음 표에서는 추적에서 추가 또는 제거될 수 있는 이벤트를 보여 줍니다.  
@@ -81,7 +84,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|Degree of Parallelism Event(7.0 Insert)|SELECT, INSERT 또는 UPDATE 문이 실행되기 전에 발생합니다.|  
 |29-31|예약됨|이벤트 28을 대신 사용합니다.|  
 |32|예약됨|예약됨|  
-|33|Exception|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 예외가 발생했음을 나타냅니다.|  
+|33|예외|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 예외가 발생했음을 나타냅니다.|  
 |34|SP:CacheMiss|저장 프로시저가 프로시저 캐시에서 발견되지 않는 때를 나타냅니다.|  
 |35|SP:CacheInsert|항목이 프로시저 캐시에 삽입되는 때를 나타냅니다.|  
 |36|SP:CacheRemove|항목이 프로시저 캐시에서 제거되는 때를 나타냅니다.|  
@@ -124,7 +127,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |78|CursorClose|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 ODBC, OLE DB 또는 DB-Library에 의해 이전에 열린 커서가 닫혔습니다.|  
 |79|Missing Column Statistics|최적화 프로그램에 사용하는 열 통계를 사용할 수 없습니다.|  
 |80|Missing Join Predicate|조인 술어가 없는 쿼리가 실행 중입니다. 이 결과 실행 시간이 긴 쿼리가 나타날 수 있습니다.|  
-|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용량이 1MB와 최대 서버 메모리의 5%에 해당하는 값 중 큰 값만큼 증가 또는 감소했습니다.|  
+|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용이 증가 또는 감소 1 메가바이트 (MB) 또는 최대 서버 메모리의 5% 중 더 큰 합니다.|  
 |82-91|User Configurable(0-9)|사용자가 정의한 이벤트 데이터입니다.|  
 |92|Data File Auto Grow|데이터 파일이 서버에 의해 자동으로 확장되었음을 나타냅니다.|  
 |93|Log File Auto Grow|로그 파일이 서버에 의해 자동으로 확장되었음을 나타냅니다.|  
@@ -242,7 +245,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 생성하지 못했음을 나타냅니다. SQL Server에서 계획 지침을 적용하지 않고 이 쿼리 또는 일괄 처리의 실행 계획을 생성하려고 했습니다. 이러한 문제는 계획 지침이 잘못되어 발생할 수 있습니다. sys.fn_validate_plan_guide 시스템 함수를 사용하여 계획 지침의 유효성을 검사할 수 있습니다.|  
 |235|Audit Fulltext||  
   
- [  **@columnid=** ] *column_id*  
+ [ **@columnid=** ] *column_id*  
  이벤트에 대해 추가할 열의 ID입니다. *column_id* 은 **int**, 기본값은 없습니다.  
   
  다음 표에서는 이벤트에 추가될 수 있는 열을 나열합니다.  
@@ -259,7 +262,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |8|**HostName**|요청을 처음에 시작한 클라이언트 컴퓨터의 이름입니다.|  
 |9|**ClientProcessID**|클라이언트 응용 프로그램이 실행 중인 프로세스에 클라이언트 컴퓨터가 할당한 ID입니다.|  
 |10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|  
-|11|**LoginName**|클라이언트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
+|11|**LoginName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트의 로그인 이름입니다.|  
 |12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|  
 |13|**기간**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
 |14|**StartTime**|사용 가능한 경우 이벤트가 시작된 시간입니다.|  
@@ -270,7 +273,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |19|**사용 권한**|보안 감사에 의해 사용된 사용 권한의 비트맵을 나타냅니다.|  
 |20|**Severity**|예외적인 심각도입니다.|  
 |21|**EventSubClass**|이벤트 하위 클래스의 유형입니다. 이 데이터 열은 모든 이벤트 클래스에 대해 채워지지는 않습니다.|  
-|22|**ObjectID**|시스템이 할당한 개체의 ID입니다.|  
+|22|**Exchange Spill**|시스템이 할당한 개체의 ID입니다.|  
 |23|**성공**|감사에 사용한 권한 사용 시도의 성공입니다.<br /><br /> **1** = 성공**0** = 실패.|  
 |24|**IndexID**|이벤트에 의해 영향 받는 개체의 인덱스 ID입니다. 개체의 인덱스 ID를 확인하려면 **sysindexes** 시스템 테이블의 **indid** 열을 사용하십시오.|  
 |25|**IntegerData**|추적에서 캡처된 이벤트 클래스에 의존하는 정수 값입니다.|  
@@ -288,7 +291,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |37|**OwnerName**|참조된 개체의 소유자 이름입니다.|  
 |38|**RoleName**|문의 대상이 되는 데이터베이스 또는 서버 차원 역할의 이름입니다.|  
 |39|**TargetUserName**|일부 동작 대상의 사용자 이름입니다.|  
-|40|**DBUserName**|클라이언트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 사용자 이름입니다.|  
+|40|**DBUserName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트의 데이터베이스 사용자 이름입니다.|  
 |41|**LoginSid**|로그인한 사용자의 SID(보안 ID)입니다.|  
 |42|**TargetLoginName**|일부 동작 대상의 로그인 이름입니다.|  
 |43|**TargetLoginSid**|일부 동작 대상의 로그인 SID입니다.|  
@@ -314,7 +317,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|임시 쿼리 또는 데이터베이스의 텍스트 및 SQL 개체의 개체 ID를 기반으로 하는 64비트 해시입니다. 이 값은 **sys.dm_exec_sql_text()** 에 전달되어 연관된 SQL 텍스트를 검색할 수 있습니다.|  
 |64|**SessionLoginName**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **을 사용하여** 에 연결하고 **Login2**로 문을 실행하는 경우 **SessionLoginName** 은 **Login1**을 표시하고 **LoginName** 은 **Login2**를 표시합니다. 이 데이터 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|  
   
- **[ @on=]** *에*  
+ **[ @on=]** *on*  
  이벤트를 ON(1)으로 설정할지, 아니면 OFF(0)로 설정할지를 지정합니다.  은 **비트**, 기본값은 없습니다.  
   
  경우 *에* 로 설정 된 **1**, 및 *column_id* 가 NULL 인 이벤트를 ON으로 설정 하 고 모든 열이 지워집니다. 경우 *column_id* null이 아니면 열은 해당 이벤트에 대해 ON으로 설정 합니다.  
@@ -326,9 +329,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 |@on|@columnid|결과|  
 |---------|---------------|------------|  
 |ON(**1**)|NULL|이벤트를 ON으로 설정합니다.<br /><br /> 모든 열은 지워집니다.|  
-||NOT  NULL|지정한 이벤트에 대한 열을 ON으로 설정합니다.|  
+||NOT NULL|지정한 이벤트에 대한 열을 ON으로 설정합니다.|  
 |OFF(**0**)|NULL|이벤트를 OFF로 설정합니다.<br /><br /> 모든 열은 지워집니다.|  
-||NOT  NULL|지정한 이벤트에 대한 열을 OFF로 설정합니다.|  
+||NOT NULL|지정한 이벤트에 대한 열을 OFF로 설정합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  아래 표에서는 저장 프로시저가 완료된 후 사용자가 얻을 수 있는 코드 값을 설명합니다.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - fn_check_object_signatures_TSQL
 - fn_check_object_signatures
 - sys.fn_check_object_signatures
-dev_langs: TSQL
-helpviewer_keywords: sys.fn_check_object_signatures function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fn_check_object_signatures function
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4f237723380c7220086f4b6642609f6e9177315
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: edc1fde552b2ce71fa6f58b69b7c0a6e878385fd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +68,7 @@ fn_ check_object_signatures (
   
 |열|형식|Description|  
 |------------|----------|-----------------|  
-|형식|**nvarchar(120)**|유형 설명 또는 어셈블리를 반환합니다.|  
+|유형|**nvarchar(120)**|유형 설명 또는 어셈블리를 반환합니다.|  
 |entity_id|**int**|평가 중인 개체의 개체 ID를 반환합니다.|  
 |is_signed|**int**|개체가 제공된 지문으로 서명되지 않은 경우 0을 반환합니다. 개체가 제공된 지문으로 서명된 경우 1을 반환합니다.|  
 |is_signature_valid|**int**|is_signed 값이 1일 때 서명이 유효하지 않으면 0을 반환하고, 서명이 유효하면 1을 반환합니다.<br /><br /> is_signed 값이 0일 때는 항상 0을 반환합니다.|  

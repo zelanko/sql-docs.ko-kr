@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_catalog_components_TSQL
 - sp_help_fulltext_catalog_components
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_catalog_components
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31499ac19523f66c39ef08039816494ec9045718
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 144443acbf2cd4195bacf71a4b1fce5a1ba3eb33
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,11 +55,11 @@ sp_help_fulltext_catalog_components
 |**전체 텍스트 카탈로그 이름**|**int**|전체 텍스트 카탈로그의 이름입니다.|  
 |**전체 텍스트 카탈로그 id**|**sysname**|전체 텍스트 카탈로그의 ID입니다.|  
 |**componenttype**|**sysname**|구성 요소의 유형입니다. 다음 중 하나일 수 있습니다.<br /><br /> 필터<br /><br /> 프로토콜 처리기<br /><br /> 단어 분리기|  
-|**구성 요소 이름**|**sysname**|구성 요소의 이름입니다.|  
+|**componentname**|**sysname**|구성 요소의 이름입니다.|  
 |**clsid**|**uniqueidentifier**|구성 요소의 클래스 식별자입니다.|  
 |**fullpath**|**nvarchar(256)**|구성 요소 위치에 대한 경로입니다.<br /><br /> NULL = 호출자의 구성원이 아닌 **serveradmin** 고정된 서버 역할입니다.|  
-|**version**|**nvarchar (30)**|구성 요소 버전입니다.|  
-|**제조업체**|**sysname**|구성 요소 제조업체의 이름입니다.|  
+|**version**|**nvarchar(30)**|구성 요소 버전입니다.|  
+|**manufacturer**|**sysname**|구성 요소 제조업체의 이름입니다.|  
   
 ## <a name="permissions"></a>Permissions  
  **public** 역할의 멤버 자격이 필요합니다.  

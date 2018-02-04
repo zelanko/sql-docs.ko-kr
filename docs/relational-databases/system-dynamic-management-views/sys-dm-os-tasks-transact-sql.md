@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_tasks_TSQL
 - dm_os_tasks_TSQL
 - dm_os_tasks
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_tasks dynamic management view
 ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dfd9c411f7de1e40eb035ac4d7c8de1b949e6f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b2fd7607fb0e22206ce309bd30427ba3f8dc7631
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +43,8 @@ ms.lasthandoff: 11/17/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**task_address**|**varbinary (8)**|개체의 메모리 주소입니다.|  
-|**task_state**|**nvarchar (60)**|태스크의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 보류 중: 작업자 스레드를 기다리고 있습니다.<br /><br /> RUNNABLE: 가능 하지만 퀀텀 수신 대기 합니다.<br /><br /> 실행 중: 현재 스케줄러에서 실행 합니다.<br /><br /> 일시 중단 됨: 작업 자가 있지만 이벤트를 대기 합니다.<br /><br /> 완료: 완료 합니다.<br /><br /> SPINLOOP: spinlock에 걸려 있습니다.|  
+|**task_address**|**varbinary(8)**|개체의 메모리 주소입니다.|  
+|**task_state**|**nvarchar(60)**|태스크의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 보류 중: 작업자 스레드를 기다리고 있습니다.<br /><br /> RUNNABLE: 가능 하지만 퀀텀 수신 대기 합니다.<br /><br /> 실행 중: 현재 스케줄러에서 실행 합니다.<br /><br /> 일시 중단 됨: 작업 자가 있지만 이벤트를 대기 합니다.<br /><br /> 완료: 완료 합니다.<br /><br /> SPINLOOP: spinlock에 걸려 있습니다.|  
 |**context_switches_count**|**int**|이 태스크로 완료된 스케줄러 컨텍스트 전환 수입니다.|  
 |**pending_io_count**|**int**|이 태스크로 수행된 실제 I/O 수입니다.|  
 |**pending_io_byte_count**|**bigint**|이 태스크로 수행된 I/O의 총 바이트 수입니다.|  
@@ -50,10 +53,10 @@ ms.lasthandoff: 11/17/2017
 |**session_id**|**smallint**|태스크와 연결된 세션의 ID입니다.|  
 |**exec_context_id**|**int**|태스크와 연결된 실행 컨텍스트 ID입니다.|  
 |**request_id**|**int**|태스크 요청 ID입니다. 자세한 내용은 참조 [sys.dm_exec_requests &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|**worker_address**|**varbinary (8)**|태스크를 실행하고 있는 작업자의 메모리 주소입니다.<br /><br /> NULL = 작업자가 실행할 수 있을 때까지 태스크가 기다리고 있거나 방금 작업 실행이 완료되었습니다.<br /><br /> 자세한 내용은 참조 [sys.dm_os_workers &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|**host_address**|**varbinary (8)**|호스트의 메모리 주소입니다.<br /><br /> 0 = 호스팅이 태스크 만들기에 사용되지 않았습니다. 이 값은 이 태스크를 만드는 데 사용된 호스트를 식별하는 데 유용합니다.<br /><br /> 자세한 내용은 참조 [sys.dm_os_hosts &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
-|**parent_task_address**|**varbinary (8)**|개체의 부모인 태스크의 메모리 주소입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|**worker_address**|**varbinary(8)**|태스크를 실행하고 있는 작업자의 메모리 주소입니다.<br /><br /> NULL = 작업자가 실행할 수 있을 때까지 태스크가 기다리고 있거나 방금 작업 실행이 완료되었습니다.<br /><br /> 자세한 내용은 참조 [sys.dm_os_workers &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|**host_address**|**varbinary(8)**|호스트의 메모리 주소입니다.<br /><br /> 0 = 호스팅이 태스크 만들기에 사용되지 않았습니다. 이 값은 이 태스크를 만드는 데 사용된 호스트를 식별하는 데 유용합니다.<br /><br /> 자세한 내용은 참조 [sys.dm_os_hosts &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
+|**parent_task_address**|**varbinary(8)**|개체의 부모인 태스크의 메모리 주소입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   

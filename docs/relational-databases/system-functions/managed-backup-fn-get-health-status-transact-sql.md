@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - smart_admin.fn_get_health_status_TSQL
 - smart_admin.fn_get_health_status
 - fn_get_health_status
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - smart_admin.fn_get_health_status
 - fn_get_health_status
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4314d23f344df87d270f526a64e4d6d0f033dab
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 35cc393aa4521079e44c1dffee403b693a020b23
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +61,13 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|ssNoversion|프로그램에서 Windows Azure 저장소 계정에 연결할 때의 연결 오류 수입니다.|  
-|number_of_sql_errors|ssNoversion|프로그램에서 SQL Server 엔진에 연결할 때 반환되는 오류 수입니다.|  
-|number_of_invalid_credential_errors|ssNoversion|프로그램에서 SQL 자격 증명을 사용하여 인증하려고 할 때 반환되는 오류 수입니다.|  
-|number_of_other_errors|ssNoversion|연결, SQL 또는 자격 증명 이외의 다른 범주에 속하는 오류 수입니다.|  
-|number_of_corrupted_or_deleted_backups|ssNoversion|삭제되거나 손상된 백업 파일 수입니다.|  
-|number_of_backup_loops|ssNoversion|백업 에이전트가 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 구성된 모든 데이터베이스를 검색하는 횟수입니다.|  
-|number_of_retention_loops|ssNoversion|설정된 보존 기간을 평가하기 위해 데이터베이스가 검색되는 횟수입니다.|  
+|number_of_storage_connectivity_errors|int|프로그램에서 Windows Azure 저장소 계정에 연결할 때의 연결 오류 수입니다.|  
+|number_of_sql_errors|int|프로그램에서 SQL Server 엔진에 연결할 때 반환되는 오류 수입니다.|  
+|number_of_invalid_credential_errors|int|프로그램에서 SQL 자격 증명을 사용하여 인증하려고 할 때 반환되는 오류 수입니다.|  
+|number_of_other_errors|int|연결, SQL 또는 자격 증명 이외의 다른 범주에 속하는 오류 수입니다.|  
+|number_of_corrupted_or_deleted_backups|int|삭제되거나 손상된 백업 파일 수입니다.|  
+|number_of_backup_loops|int|백업 에이전트가 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 구성된 모든 데이터베이스를 검색하는 횟수입니다.|  
+|number_of_retention_loops|int|설정된 보존 기간을 평가하기 위해 데이터베이스가 검색되는 횟수입니다.|  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
  이 집계 수는 시스템 상태를 모니터링하는 데 사용될 수 있습니다. 예를 들어 number_of_retention_loops 열이 30분 동안 0인 경우 보존 관리가 시간이 오래 걸리고 있거나 제대로 작동하지 않고 있을 가능성이 있습니다. 0이 아닌 오류 열은 문제를 나타낼 수 있으며 문제에 대해 알아보려면 확장 이벤트 로그를 확인해야 합니다. 또는 저장된 프로시저를 사용 하 여 **managed_backup.sp_get_backup_diagnostics** 오류의 세부 정보를 확장 이벤트의 목록을 가져올 수 있습니다.  

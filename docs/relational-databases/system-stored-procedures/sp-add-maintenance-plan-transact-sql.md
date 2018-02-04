@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_maintenance_plan
 - sp_add_maintenance_plan_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_maintenance_plan
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_maintenance_plan
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed1cd1c66e277e9705a89b07cee5e6564455040d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 44a663e97610514204c6209c13be4d515197af33
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +52,10 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@plan_name =**] **'***plan_name***'**  
+ [ **@plan_name =**] **'***plan_name***'**  
  추가할 유지 관리 계획의 이름을 지정합니다. *plan_name* 은 **varchar (128)**합니다.  
   
- **@plan_id= '** *plan_id* **'**  
+ **@plan_id = '** *plan_id* **'**  
  유지 관리 계획의 ID를 지정합니다. *plan_id* 은 **uniqueidentifier**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

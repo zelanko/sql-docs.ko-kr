@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_grant_login_to_subsystem_TSQL
 - sp_grant_login_to_subsystem
-dev_langs: TSQL
-helpviewer_keywords: sp_grant_proxy_to_subsystem
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_grant_proxy_to_subsystem
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30b4d86a7700033d64e1288b846156dd4dfbcac3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: df9499f7c562cf353e5bf2a71ba50b8ff6b33a36
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +48,16 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@proxy_id =** ] *id*  
+ [ **@proxy_id =** ] *id*  
  액세스 권한을 부여할 프록시의 프록시 ID입니다. *proxy_id* 은 **int**, 기본값은 NULL입니다. 어느 *proxy_id* 또는 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@proxy_name =** ] **'***proxy_name***'**  
+ [ **@proxy_name =** ] **'***proxy_name***'**  
  액세스 권한을 부여하려는 프록시 이름입니다. *proxy_name* 은 **sysname**, 기본값은 NULL입니다. 어느 *proxy_id* 또는 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@subsystem_id =** ] *id*  
+ [ **@subsystem_id =** ] *id*  
  액세스 권한을 부여할 하위 시스템의 ID입니다. *subsystem_id* 은 **int**, 기본값은 NULL입니다. 어느 *subsystem_id* 또는 *subsystem_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 스크립트<br /><br /> **\*\*중요 한 \* \***  The ActiveX 스크립팅 하위 시스템에서 제거 될 예정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서 에이전트 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.|  
 |**3**|운영 체제(**CmdExec**)|  
@@ -68,10 +71,10 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 실행|  
 |**12**|PowerShell 스크립트|  
   
- [  **@subsystem_name =** ] **'***subsystem_name***'**  
+ [ **@subsystem_name =** ] **'***subsystem_name***'**  
  액세스 권한을 부여할 하위 시스템의 이름입니다. **subsystem_name** 은 **sysname**, 기본값은 NULL입니다. 어느 *subsystem_id* 또는 *subsystem_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX 스크립트|  
 |**CmdExec**|운영 체제(**CmdExec**)|  

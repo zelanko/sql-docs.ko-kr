@@ -8,32 +8,35 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
 - sp_certify_removable
-dev_langs: TSQL
-helpviewer_keywords: sp_certify_removable
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab84edebdbc4a8775e9ce4a50e3236b1377b3932
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4ca484db8104c1c1e817d08be0cf2a72ada76822
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이동식 미디어에 배포할 수 있도록 데이터베이스가 제대로 구성되었는지 확인하고 사용자에게 발생한 모든 문제를 보고합니다.  
   
-> **중요!!** [! 포함[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) 대신 합니다.  
+> **중요!!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -47,10 +50,10 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@dbname=**] **'***dbname***'**  
+ [ **@dbname=**] **'***dbname***'**  
  데이터베이스를 확인하도록 지정합니다. *dbname* 은 **sysname**합니다.  
   
- [  **@autofix=**] **'auto'**  
+ [ **@autofix=**] **'auto'**  
  데이터베이스 및 모든 데이터베이스 개체의 소유권을 시스템 관리자에게 부여하며 사용자가 만든 데이터베이스 사용자 및 기본 권한이 아닌 권한을 모두 삭제합니다. *자동* 은 **nvarchar (4)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -83,7 +86,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   방금 실행 **sp_certify_removable** 와 **자동** 값입니다.  
   
- 이 저장 프로시저는 사용자 및 사용자 권한에 관한 것만 확인합니다. 데이터베이스에 그룹을 추가하고 이 그룹에 권한을 부여할 수 있습니다. 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)를 참조하세요.  
+ 이 저장 프로시저는 사용자 및 사용자 권한에 관한 것만 확인합니다. 데이터베이스에 그룹을 추가하고 이 그룹에 권한을 부여할 수 있습니다. 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
 ## <a name="permissions"></a>Permissions  
  실행 권한은의 멤버로 제한 된 **sysadmin** 고정된 서버 역할입니다.  

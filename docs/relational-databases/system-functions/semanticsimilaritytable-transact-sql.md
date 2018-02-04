@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
 - semanticsimilaritytable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semanticsimilaritytable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2944708e70d9cc71cddcad33ff060df8a223530d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8ba25daf71db106e5ecd8877e83edda6e43a5286
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +81,7 @@ SEMANTICSIMILARITYTABLE
 |**source_column_id**|**int**|유사한 문서를 찾는 데 사용된 원본 문서의 열 ID입니다.<br /><br /> column_id에서 열 이름을 검색하거나 열 이름에서 column_id를 검색하는 방법에 대한 자세한 내용은 COL_NAME 및 COLUMNPROPERTY 함수를 참조하십시오.|  
 |**matched_column_id**|**int**|유사한 문서를 찾은 열의 ID입니다.<br /><br /> column_id에서 열 이름을 검색하거나 열 이름에서 column_id를 검색하는 방법에 대한 자세한 내용은 COL_NAME 및 COLUMNPROPERTY 함수를 참조하십시오.|  
 |**matched_document_key**|**\***<br /><br /> 이 키는 원본 테이블의 고유 키 유형과 일치합니다.|쿼리에서 지정된 문서와 유사한 것으로 확인된 문서나 행의 전체 텍스트 및 의미 체계 추출 고유 키 값입니다.|  
-|**점수**|**실제**|유사한 다른 모든 문서를 기준으로 한 이 문서의 상대적 유사성 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
+|**score**|**REAL**|유사한 다른 모든 문서를 기준으로 한 이 문서의 상대적 유사성 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  자세한 내용은 참조 [유사한 찾기 및 의미 체계 검색을 사용 하 여 관련 문서](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)합니다.  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
 - sp_help_jobschedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobschedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f111a04bfe27fad284157082ec1bbbeadfb92c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 87131f3a5347f24593798bbb81e9f81494897593
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +50,21 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  작업 ID입니다. *job_id*은 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  작업의 이름입니다. *job_name*은 **sysname**, 기본값은 NULL입니다.  
   
 > **참고:** 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@schedule_name=** ] **'***schedule_name***'**  
+ [ **@schedule_name=** ] **'***schedule_name***'**  
  작업에 대한 일정 항목의 이름입니다. *schedule_name*은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@schedule_id=** ] *schedule_id*  
+ [ **@schedule_id=** ] *schedule_id*  
  작업에 대한 일정 항목의 ID입니다. *schedule_id*은 **int**, 기본값은 NULL입니다.  
   
- [  **@include_description=** ] *include_description*  
+ [ **@include_description=** ] *include_description*  
  결과 집합에 일정에 대한 설명을 포함할지 여부를 지정합니다. *include_description* 은 **비트**, 기본값은 **0**합니다. 때 *include_description* 은 **0**는 일정 설명이 결과 집합에 포함 되지 않습니다. 때 *include_description* 은 **1**는 일정 설명이 결과 집합에 포함 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -73,8 +76,8 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|일정 ID입니다.|  
 |**schedule_name**|**sysname**|일정 이름입니다.|  
-|**사용 하도록 설정**|**int**|일정을 사용할지 (**1**) 또는 사용 안 함 (**0**).|  
-|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = 한 번<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** 기준으로 = 매월는 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스가 시작 합니다.|  
+|**enabled**|**int**|일정을 사용할지 (**1**) 또는 사용 안 함 (**0**).|  
+|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = Once<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** 기준으로 = 매월는 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스가 시작 합니다.|  
 |**freq_interval**|**int**|작업이 실행되는 요일입니다. 값의 값에 따라 **freq_type**합니다. 자세한 내용은 참조 [sp_add_schedule &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|에 대 한 단위 **freq_subday_interval**합니다. 자세한 내용은 참조 [sp_add_schedule &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_interval**|**int**|수가 **freq_subday_type** 작업의 실행 사이 발생 하는 기간. 자세한 내용은 참조 [sp_add_schedule &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -91,7 +94,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|일정에 대한 식별자입니다.|  
 |**job_count**|**int**|반환된 작업 수입니다.|  
   
-> **참고:****sp_help_jobschedule** 에서 값을 반환 된 **dbo.sysjobschedules** 및 **dbo.sysschedules** 시스템 테이블 **msdb** .   **sysjobschedules** 20 분 마다 업데이트 됩니다. 이는 저장 프로시저에서 반환하는 값에 영향을 줄 수 있습니다.  
+> **참고:****sp_help_jobschedule** 에서 값을 반환 된 **dbo.sysjobschedules** 및 **dbo.sysschedules** 시스템 테이블 **msdb** . **sysjobschedules** 20 분 마다 업데이트 됩니다. 이는 저장 프로시저에서 반환하는 값에 영향을 줄 수 있습니다.  
   
 ## <a name="remarks"></a>주의  
  매개 변수 **sp_help_jobschedule** 특정 조합에만 사용할 수 있습니다. 경우 *schedule_id* 지정한 경우에 *job_id* 나 *job_name* 지정할 수 있습니다. 그렇지 않은 경우는 *job_id* 또는 *job_name* 매개 변수는 함께 사용할 수 있습니다 *schedule_name*합니다.  

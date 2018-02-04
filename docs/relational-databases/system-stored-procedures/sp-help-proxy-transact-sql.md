@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_proxy
 - sp_help_proxy_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_proxy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf5dd28e001919a43d39685e2e50eaeb03e877af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 19f4df348037b923ac5e7daf643b5ed114256324
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +50,10 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@proxy_id**  =] *id*  
+ [ **@proxy_id** = ] *id*  
  정보를 나열할 프록시의 프록시 ID입니다. *proxy_id* 은 **int**, 기본값은 NULL입니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
   
- [  **@proxy_name**  =] **'***proxy_name***'**  
+ [ **@proxy_name** = ] **'***proxy_name***'**  
  정보를 나열할 프록시의 이름입니다. *proxy_name* 은 **sysname**, 기본값은 NULL입니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
   
  [  **@subsystem_name**  =] '*subsystem_name*'  
@@ -58,7 +61,7 @@ sp_help_proxy
   
  다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX 스크립트|  
 |CmdExec|운영 체제(CmdExec)|  
@@ -85,8 +88,8 @@ sp_help_proxy
 |**proxy_id**|**int**|프록시 ID입니다.|  
 |**name**|**sysname**|프록시 이름입니다.|  
 |**credential_identity**|**sysname**|프록시와 연관된 자격 증명의 Microsoft Windows 도메인 이름 및 사용자 이름입니다.|  
-|**사용 하도록 설정**|**tinyint**|이 프록시가 사용되는지 여부입니다. { **0** = 사용 안 함, **1** = 사용}|  
-|**설명**|**nvarchar (1024)**|이 프록시에 대한 설명입니다.|  
+|**enabled**|**tinyint**|이 프록시가 사용되는지 여부입니다. { **0** = 사용 안 함, **1** = 사용}|  
+|**설명**|**nvarchar(1024)**|이 프록시에 대한 설명입니다.|  
 |**user_sid**|**varbinary(85)**|이 프록시에 대한 Windows 사용자의 Windows 보안 ID입니다.|  
 |**credential_id**|**int**|이 프록시와 연관된 자격 증명의 식별자입니다.|  
 |**credential_identity_exists**|**int**|credential_identity가 있는지 여부입니다. { 0 = 없음, 1 = 있음 }|  

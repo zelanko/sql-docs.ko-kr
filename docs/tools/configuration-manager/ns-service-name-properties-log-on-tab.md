@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe580f038bce9676e30249765ccc02fe43696b38
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 512d1281ca516256631845d0283b50f8f58f82d5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;서비스 이름&gt; 속성 (로그 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **로그온에** 탭은 **Notification Services 속성** 대화 상자에서 사용할 계정을 지정 하려면는 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 서비스를 선택한를 시작 및 서비스를 중지 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**Notification Services 속성** 대화 상자의 **로그온** 탭을 사용하여 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **로컬 시스템 계정**  

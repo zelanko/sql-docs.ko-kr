@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_index_keywords_position_by_document_TSQL
 - dm_fts_index_keywords_position_by_document
 - sys.dm_fts_index_keywords_position_by_document
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_index_keywords_position_by_document dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_index_keywords_position_by_document dynamic management view
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9fc96c8db1521ac99601312869146290a622147
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: afb129fac832bafca777747b078d4f44e18f2422
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +49,10 @@ OBJECT_ID('table_name')
 ```  
   
 ## <a name="arguments"></a>인수  
- db_id ('*database_name*')  
+ db_id('*database_name*')  
  에 대 한 호출에서 [db_id ()](../../t-sql/functions/db-id-transact-sql.md) 함수입니다. 이 함수는 데이터베이스 이름을 받아서 하 고 지정된 된 데이터베이스를 찾는 데 사용 하는 sys.dm_fts_index_keywords_position_by_document 데이터베이스 ID를 반환 합니다.  
   
- object_id ('*table_name*')  
+ object_id('*table_name*')  
  에 대 한 호출에서 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 함수입니다. 이 함수는 테이블 이름을 받아서 검사할 전체 텍스트 인덱스가 들어 있는 테이블의 테이블 ID를 반환합니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
 - sp_add_log_shipping_secondary_primary
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_shipping_secondary_primary
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5e5058e0403c06d722b29f0ff68d20240724a42
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c83d0a0062f7f7affc19e91b929bb16831a8946d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +60,7 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@primary_server**  =] '*primary_server*'  
+ [ **@primary_server** = ] '*primary_server*'  
  기본 인스턴스 이름을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로그 전달 구성의 합니다. *primary_server* 은 **sysname** NULL 일 수 없습니다.  
   
  [  **@primary_database**  =] '*primary_database*'  
@@ -69,10 +72,10 @@ sp_add_log_shipping_secondary_primary
  [  **@backup_destination_directory**  =] '*backup_destination_directory*'  
  백업 파일이 복사되는 보조 서버의 디렉터리입니다. *backup_destination_directory* 은 **nvarchar (500)** NULL 일 수 없습니다.  
   
- [  **@copy_job_name**  =] '*copy_job_name*'  
+ [ **@copy_job_name** = ] '*copy_job_name*'  
  트랜잭션 로그 백업을 보조 서버에 복사하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 생성하는 데 사용할 이름입니다. *copy_job_name* 은 **sysname** NULL 일 수 없습니다.  
   
- [  **@restore_job_name**  =] '*restore_job_name*'  
+ [ **@restore_job_name** = ] '*restore_job_name*'  
  이름인는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보조 데이터베이스에 백업을 복원 하는 보조 서버의 에이전트 작업입니다. *restore_job_name* 은 **sysname** NULL 일 수 없습니다.  
   
  [  **@file_retention_period**  =] '*file_retention_period*'  
@@ -90,16 +93,16 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode* 은 **비트** NULL 일 수 없습니다.  
   
- [  **@monitor_server_login**  =] '*monitor_server_login*'  
+ [ **@monitor_server_login** = ] '*monitor_server_login*'  
  모니터 서버에 액세스하는 데 사용되는 계정의 사용자 이름입니다.  
   
- [  **@monitor_server_password**  =] '*monitor_server_password*'  
+ [ **@monitor_server_password** = ] '*monitor_server_password*'  
  모니터 서버에 액세스하는 데 사용되는 계정의 암호입니다.  
   
- [  **@copy_job_id**  =] '*copy_job_id*' 출력  
+ [ **@copy_job_id** = ] '*copy_job_id*' OUTPUT  
  보조 서버의 복사 작업과 연관된 ID입니다. *copy_job_id* 은 **uniqueidentifier** NULL 일 수 없습니다.  
   
- [  **@restore_job_id**  =] '*restore_job_id*' 출력  
+ [ **@restore_job_id** = ] '*restore_job_id*' OUTPUT  
  보조 서버의 복원 작업과 연관된 ID입니다. *restore_job_id* 은 **uniqueidentifier** NULL 일 수 없습니다.  
   
  [  **@secondary_id**  =] '*secondary_id*' 출력  
@@ -109,7 +112,7 @@ sp_add_log_shipping_secondary_primary
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_add_log_shipping_secondary_primary** 에서 실행 되어야 합니다는 **마스터** 보조 서버에서 데이터베이스. 이 저장 프로시저는 다음을 수행합니다.  
@@ -152,7 +155,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;에 대 한 SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

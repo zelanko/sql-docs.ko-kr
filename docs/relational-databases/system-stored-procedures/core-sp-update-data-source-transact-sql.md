@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
 - sp_update_data_source_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_update_data_source
 - management data warehouse, data collector stored procedures
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 959c9cc843480a3f1d5d4b5ca414b67ac27807d4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 913701521f913542356ea11bc916e6af3a971fe8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +56,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
  [ @collection_set_uid =] '*collection_set_uid*'  
  컬렉션 집합에 대한 GUID입니다. *collection_set_uid* 은 **uniqueidentifier**, 기본값은 없습니다. GUID를 확인하려면 msdb 데이터베이스에서 dbo.syscollector_collection_sets 뷰를 쿼리합니다.  
   
- [ @machine_name =] '*이며 여기에서 machine_name*'  
+ [ @machine_name = ] '*machine_name*'  
  컬렉션 집합이 있는 서버의 이름입니다. *이며 여기에서 machine_name* 은 **sysname** 기본값은 없습니다.  
   
  [ @named_instance =] '*named_instance*'  
@@ -63,10 +65,10 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 > [!NOTE]  
 >  *named_instance* 컴퓨터 이름과 인스턴스 이름을 형태로 구성 된 정규화 된 인스턴스 이름 이어야 합니다 *computername*\\*instancename*합니다.  
   
- [ @days_until_expiration =] *days_until_expiration*  
+ [ @days_until_expiration = ] *days_until_expiration*  
  스냅숏 데이터 보존 기간 중 남은 일수입니다. *days_until_expiration* 은 **smallint**합니다.  
   
- [ @source_id =] *source_id*  
+ [ @source_id = ] *source_id*  
  업데이트 원본의 고유 식별자입니다. *source_id* 은 **int** 이며 OUTPUT으로 반환 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

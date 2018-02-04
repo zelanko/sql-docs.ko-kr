@@ -8,32 +8,35 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_net_changes_TSQL
 - fn_net_changes_TSQL
 - fn_net_changes
 - sys.fn_net_changes
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_net_changes_<capture_instance>
 - sys.fn_net_changes_<capture_instance>
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be3cd4da4aa890624dc33f36af135bd96dbc3057
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a822cb52d98fec1e0d531c09fa3d138d07757cb8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact SQL)
+# <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   에 대 한 래퍼는 **순 변경 내용을** 함수를 쿼리 합니다. 이러한 함수를 만드는 데 필요한 스크립트는 sys.sp_cdc_generate_wrapper_function 저장 프로시저에 의해 생성됩니다.  
@@ -101,7 +104,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |열 이름|열 유형|Description|  
 |-----------------|-----------------|-----------------|  
-|\<열을 @column_list>|**달라 집니다.**|식별 되는 열은 **column_list** sp_cdc_generate_wrapper_function 래퍼를 만드는 스크립트를 생성 하 라고 하는 경우에 인수입니다. 경우 *column_list* 가 null 인 경우 모든 추적 된 원본 열은 결과 집합에 표시 됩니다.|  
+|\<열을 @column_list>|**varies**|식별 되는 열은 **column_list** sp_cdc_generate_wrapper_function 래퍼를 만드는 스크립트를 생성 하 라고 하는 경우에 인수입니다. 경우 *column_list* 가 null 인 경우 모든 추적 된 원본 열은 결과 집합에 표시 됩니다.|  
 |__CDC_OPERATION|**nvarchar(2)**|행을 대상 환경에 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 작업 인수의 값에 따라 달라 집니다 *row_filter_option* 다음 호출에 제공 되는:<br /><br /> *row_filter_option* 'all', 'all with mask' =<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업<br /><br /> *row_filter_option* 'all with merge' =<br /><br /> 'D' - 삭제 작업<br /><br /> 'M' - 삭제 작업 또는 업데이트 작업|  
 |\<열을 @update_flag_list>|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. 플래그는 null이 아닌 값에는 경우에만 *row_filter_option* **'all with mask' =** 및 \__CDC_OPERATION **= ' u N '**합니다. 쿼리 창 내에서 해당 열이 수정된 경우 이 플래그는 1로 설정됩니다. 그렇지 않으면 0입니다.|  
   

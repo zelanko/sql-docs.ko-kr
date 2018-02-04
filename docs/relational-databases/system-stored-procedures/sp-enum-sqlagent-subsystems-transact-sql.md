@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_sqlagent_subsystems
 - sp_enum_sqlagent_subsystems_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_enum_sqlagent_subsystems
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_enum_sqlagent_subsystems
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a088866b645cacad3813ce7c2ae15e9e9831f299
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 946c623004db5efaeb470b26b74daaba9f5271bb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>인수  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -52,13 +55,13 @@ sp_enum_sqlagent_subsystems
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**하위 시스템**|**nvarchar (40)**|하위 시스템의 이름입니다.|  
+|**subsystem**|**nvarchar(40)**|하위 시스템의 이름입니다.|  
 |**설명**|**nvarchar(512)**|하위 시스템에 대한 설명입니다.|  
 |**subsystem_dll**|**nvarchar(510)**|하위 시스템을 포함하는 DLL 모듈입니다.|  
 |**agent_exe**|**nvarchar(510)**|하위 시스템이 사용하는 실행 모듈입니다.|  
-|**start_entry_point**|**nvarchar (30)**|작업 단계 실행 중 SQL Server 에이전트가 호출하는 프로시저입니다.|  
-|**event_entry_point**|**nvarchar (30)**|작업 단계 실행 중 SQL Server 에이전트가 호출하는 프로시저입니다.|  
-|**stop_entry_point**|**nvarchar (30)**|작업 단계 실행 중 SQL Server 에이전트가 호출하는 프로시저입니다.|  
+|**start_entry_point**|**nvarchar(30)**|작업 단계 실행 중 SQL Server 에이전트가 호출하는 프로시저입니다.|  
+|**event_entry_point**|**nvarchar(30)**|작업 단계 실행 중 SQL Server 에이전트가 호출하는 프로시저입니다.|  
+|**stop_entry_point**|**nvarchar(30)**|작업 단계 실행 중 SQL Server 에이전트가 호출하는 프로시저입니다.|  
 |**max_worker_threads**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 이 하위 시스템에 대해 시작할 최대 스레드 수입니다.|  
 |**subsystem_id**|**int**|하위 시스템에 대한 식별자입니다.|  
   

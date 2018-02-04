@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_trigger_stats_TSQL
 - sys.dm_exec_trigger_stats_TSQL
 - sys.dm_exec_trigger_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_trigger_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_trigger_stats dynamic management function
 ms.assetid: 863498b4-849c-434d-b748-837411458738
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f0c102ba4f43cbd81d228945dc3e27143f7ce5a
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 63430240cfd518ce38567d10fbebbf258a37d872
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 01/12/2018
 |**database_id**|**int**|이 트리거가 있는 데이터베이스 ID입니다.|  
 |**object_id**|**int**|이 트리거의 개체 ID입니다.|  
 |**type**|**char(2)**|개체의 유형입니다.<br /><br /> TA = 어셈블리(CLR) 트리거<br /><br /> TR = SQL 트리거|  
-|**Type_desc**|**nvarchar (60)**|개체 유형에 대한 설명:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**Type_desc**|**nvarchar(60)**|개체 유형에 대한 설명:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**sql_handle**|**varbinary(64)**|이 쿼리는 상관 관계를 사용할 수 있습니다 **sys.dm_exec_query_stats** 이 트리거 내에서 실행 된 합니다.|  
 |**plan_handle**|**varbinary(64)**|메모리 내 계획의 식별자입니다. 이 식별자는 일시적이며 계획이 캐시에 있는 동안에만 일정하게 유지됩니다. 이 값을 함께 사용할 수 있습니다는 **sys.dm_exec_cached_plans** 동적 관리 뷰.|  
 |**cached_time**|**datetime**|이 트리거가 캐시에 추가된 시간입니다.|  
@@ -95,10 +98,10 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
-[실행 관련 동적 관리 뷰 및 함수 & #40; Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys.dm_exec_sql_text & #40; Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[sys.dm_exec_query_stats& #40; Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
-[sys.dm_exec_procedure_stats& #40; Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
-[sys.dm_exec_cached_plans& #40; Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+[실행 관련 동적 관리 뷰 및 함수 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+[sys.dm_exec_sql_text &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[sys.dm_exec_query_stats&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+[sys.dm_exec_procedure_stats&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
+[sys.dm_exec_cached_plans&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
   

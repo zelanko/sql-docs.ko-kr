@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_proxy
 - sp_update_proxy_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER PROXY statement
 - sp_update_proxy
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ad72013399fed71e934aaf8c628e6f8269d23d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: be0c172698bd3fa45b124f40aab261c5840304bb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,25 +54,25 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@proxy_id** =] *id*  
+ [ **@proxy_id**= ] *id*  
  변경할 프록시의 프록시 ID입니다. *proxy_id* 은 **int**, 기본값은 NULL입니다.  
   
- [  **@proxy_name** =] **'***proxy_name***'**  
+ [ **@proxy_name**= ] **'***proxy_name***'**  
  변경할 프록시의 이름입니다. *proxy_name* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@credential_name**  =] **'***credential_name***'**  
+ [ **@credential_name** = ] **'***credential_name***'**  
  프록시에 대한 새 자격 증명의 이름입니다. *credential_name* 은 **sysname**, 기본값은 NULL입니다. 어느 *credential_name* 또는 *credential_id* 지정할 수 있습니다.  
   
- [  **@credential_id**  =] *credential_id*  
+ [ **@credential_id** = ] *credential_id*  
  프록시에 대한 새 자격 증명의 ID입니다. *credential_id* 은 **int**, 기본값은 NULL입니다. 어느 *credential_name* 또는 *credential_id* 지정할 수 있습니다.  
   
- [  **@new_name** =] **'***new_name***'**  
+ [ **@new_name**= ] **'***new_name***'**  
  프록시의 새 이름입니다. *new_name* 은 **sysname**, 기본값은 NULL입니다. 프로시저가 변경 프록시의 이름을 제공 하면 *new_name*합니다. 이 인수가 NULL이면 프록시의 이름은 변경되지 않은 상태로 유지됩니다.  
   
- [  **@enabled**  =] *is_enabled*  
+ [ **@enabled** = ] *is_enabled*  
  프록시 설정 여부입니다. *is_enabled* 플래그는 **tinyint**, 기본값은 NULL입니다. 때 *is_enabled* 은 **0**, 프록시는 사용 되지 않으며 작업 단계에서 사용할 수 없습니다. 이 인수가 NULL이면 프록시의 상태는 변경되지 않은 상태로 유지됩니다.  
   
- [  **@description** =] **'***설명***'**  
+ [ **@description**= ] **'***description***'**  
  프록시에 대한 새로운 설명입니다. *설명* 은 **nvarchar (512)**, 기본값은 NULL입니다. 이 인수가 NULL이면 프록시에 대한 설명은 변경되지 않은 상태로 유지됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -105,6 +107,6 @@ GO
  [sp_add_proxy &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

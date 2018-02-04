@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_start_sp
 - sysmail_start_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_start_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_start_sp
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: abfda7b6f83e30a0d19706fc2182b9f2352435c9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b4bc8f6fda47c152127f4f3ae289a8d4f4b07a56
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +46,13 @@ sysmail_start_sp
 ```  
   
 ## <a name="arguments"></a>인수  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  데이터베이스 메일 하지 않을 지 설치 된[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 합니다. 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일 개체를 설정하고 설치할 수 있습니다.  

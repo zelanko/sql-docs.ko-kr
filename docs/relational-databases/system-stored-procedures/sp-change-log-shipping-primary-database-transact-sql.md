@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_primary_database
 - sp_change_log_shipping_primary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_change_log_shipping_primary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_change_log_shipping_primary_database
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8ceffb4fc8cc9c58b9bc455685d2f9dc383e041
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9ea80f811016ec3502bea583c20edf4894753e83
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,16 +60,16 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  [  **@database =** ] '*데이터베이스*'  
  주 서버의 데이터베이스 이름입니다. *primary_database* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@backup_directory =** ] '*backup_directory*'  
+ [ **@backup_directory =** ] '*backup_directory*'  
  주 서버의 백업 폴더에 대한 경로입니다. *backup_directory* 은 **nvarchar (500)**, 기본값은 없고 NULL 일 수 없습니다.  
   
- [  **@backup_share =** ] '*backup_share*'  
+ [ **@backup_share =** ] '*backup_share*'  
  주 서버의 백업 디렉터리에 대한 네트워크 경로입니다. *backup_share* 은 **nvarchar (500)**, 기본값은 없고 NULL 일 수 없습니다.  
   
- [  **@backup_retention_period =** ] '*backup_retention_period*'  
+ [ **@backup_retention_period =** ] '*backup_retention_period*'  
  주 서버에서 백업 디렉터리에 로그 백업 파일이 보관되는 시간(분)입니다. *backup_retention_period* 은 **int**, 기본값은 없고 NULL 일 수 없습니다.  
   
- [  **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
  모니터 서버 연결에 사용되는 보안 모드입니다.  
   
  1 = Windows 인증  
@@ -75,10 +78,10 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *monitor_server_security_mode* 은 **비트** NULL 일 수 없습니다.  
   
- [  **@monitor_server_login =** ] '*monitor_server_login*'  
+ [ **@monitor_server_login =** ] '*monitor_server_login*'  
  모니터 서버에 액세스하는 데 사용되는 계정의 사용자 이름입니다.  
   
- [  **@monitor_server_password =** ] '*monitor_server_password*'  
+ [ **@monitor_server_password =** ] '*monitor_server_password*'  
  모니터 서버에 액세스하는 데 사용되는 계정의 암호입니다.  
   
  [  **@backup_threshold =** ] '*backup_threshold*'  
@@ -87,7 +90,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  [  **@threshold_alert =** ] '*threshold_alert*'  
  백업 임계값이 초과될 때 발생하는 경고입니다. *threshold_alert* 은 **int** NULL 일 수 없습니다.  
   
- [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
+ [ **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
  경고가 발생 하는지 여부를 지정 하면 *backup_threshold* 을 초과 합니다.  
   
  1 = 사용  
@@ -96,10 +99,10 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *threshold_alert_enabled* 은 **비트** NULL 일 수 없습니다.  
   
- [  **@history_retention_period =** ] '*history_retention_period*'  
+ [ **@history_retention_period =** ] '*history_retention_period*'  
  기록이 보존되는 기간(분)입니다. *history_retention_period* 은 **int**합니다. 지정된 값이 없으면 14420을 사용합니다.  
   
- [  **@backup_compression** =] *backup_compression_option*  
+ [ **@backup_compression**= ] *backup_compression_option*  
  로그 전달 구성을 사용할지 여부 지정 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)합니다. 이 매개 변수는 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서만 지원됩니다.  
   
  0 = 사용 안 함. 로그 백업을 압축하지 않습니다.  
@@ -112,7 +115,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_change_log_shipping_primary_database** 에서 실행 되어야 합니다는 **마스터** 주 서버의 데이터베이스입니다. 이 저장 프로시저는 다음을 수행합니다.  
@@ -144,7 +147,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;에 대 한 SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases&#40; Transact SQL &#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   

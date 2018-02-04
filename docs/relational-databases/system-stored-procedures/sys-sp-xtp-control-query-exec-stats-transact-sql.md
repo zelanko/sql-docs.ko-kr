@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_control_query_exec_stats_TSQL
 - sys.sp_xtp_control_query_exec_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_xtp_control_query_exec_stats
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_xtp_control_query_exec_stats
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeae0a552d2df0c911b2a95a4578c3b835192612
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 86ab826d23f50868259edc5ae3b2bffa55359ce2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +55,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
   
  @new_collection_value때 0으로 설정 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 합니다.  
   
- @database_id= = *database_id*, @xtp_object_id = *procedure_id*  
+ @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
  고유하게 컴파일된 저장 프로시저에 대한 데이터베이스 ID 및 개체 ID입니다. 인스턴스에 대 한 통계 컬렉션을 설정 하는 경우 ([sys.sp_xtp_control_proc_exec_stats&#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), 고유 하 게 컴파일된 저장된 프로시저에 대 한 통계가 수집 됩니다. 인스턴스에 대해 통계 컬렉션을 해제하는 경우 개별적으로 고유하게 컴파일된 저장 프로시저에 대한 통계 컬렉션은 해제되지 않습니다.  
   
  사용 하 여 [sys.databases&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [sys.procedures &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40; Transact SQL &#41; ](../../t-sql/functions/db-id-transact-sql.md), 또는 [OBJECT_ID &#40; Transact SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md) 데이터베이스와 저장된 프로시저에 대 한 Id를 가져오려는 합니다.  

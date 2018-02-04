@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_backuphistory
 - sp_delete_backuphistory_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_backuphistory
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_backuphistory
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e45359c1c38684e5d197e81295af0ede11cfe3a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 23843bf7829491c13061b9f2ba6f4063a82d9f9b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +49,14 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@oldest_date=** ] **'***oldest_date***'**  
+ [ **@oldest_date=** ] **'***oldest_date***'**  
  백업 및 복원 기록 테이블에서 보유하고 있는 가장 오래된 날짜입니다. *oldest_date* 은 **datetime**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_delete_backuphistory** 에서 실행 되어야 합니다는 **msdb** 데이터베이스에 있으며 다음 테이블에 영향을 줍니다.  

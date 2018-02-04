@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_account_sp
 - sysmail_update_account_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_update_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 312d700fce5cc48950b531a2a524bfee0d56aa8e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4be8c0c87771f89d92cc0344c207149467c4554c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,40 +59,40 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  업데이트할 계정 ID입니다. *account_id* 은 **int**, 기본값은 NULL입니다. 중 하나 이상을 *account_id* 또는 *account_name* 지정 해야 합니다. 둘 다 지정할 경우 프로시저가 계정 이름을 변경합니다.  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  업데이트할 계정 이름입니다. *account_name* 은 **sysname**, 기본값은 NULL입니다. 중 하나 이상을 *account_id* 또는 *account_name* 지정 해야 합니다. 둘 다 지정할 경우 프로시저가 계정 이름을 변경합니다.  
   
- [  **@email_address**  =] **'***email_address***'**  
+ [ **@email_address** = ] **'***email_address***'**  
  메시지를 보낼 새 전자 메일 주소입니다. 이 주소는 인터넷 전자 메일 주소여야 합니다. 주소의 서버 이름은 데이터베이스 메일이 이 계정에서 메일을 보낼 때 사용하는 서버입니다. *email_address* 은 **nvarchar (128)**, 기본값은 NULL입니다.  
   
- [  **@display_name**  =] **'***display_name***'**  
+ [ **@display_name** = ] **'***display_name***'**  
  이 계정에서 보내는 전자 메일 메시지에 사용할 새 표시 이름입니다. *display_name* 은 **nvarchar (128)**, 기본값은 없습니다.  
   
- [  **@replyto_address**  =] **'***replyto_address***'**  
+ [ **@replyto_address** = ] **'***replyto_address***'**  
  이 계정에서 보내는 전자 메일 메시지의 회신 머리글에 사용할 새 주소입니다. *replyto_address* 은 **nvarchar (128)**, 기본값은 없습니다.  
   
- [  **@description**  =] **'***설명***'**  
+ [ **@description** = ] **'***description***'**  
  계정에 대한 새 설명입니다. *설명* 은 **nvarchar (256)**, 기본값은 NULL입니다.  
   
- [  **@mailserver_name**  =] **'***server_name***'**  
+ [ **@mailserver_name** = ] **'***server_name***'**  
  이 계정에 사용할 SMTP 메일 서버의 새 이름입니다. 실행 하는 컴퓨터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확인할 수 있어야는 *server_name* IP 주소입니다. *server_name* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@mailserver_type**  =] **'***server_type***'**  
+ [ **@mailserver_type** = ] **'***server_type***'**  
  전자 메일 서버의 새 유형입니다. *server_type* 은 **sysname**, 기본값은 없습니다. 값만 **'SMTP'** 지원 됩니다.  
   
- [  **@port**  =] *port_number*  
+ [ **@port** = ] *port_number*  
  전자 메일 서버의 새 포트 번호입니다. *port_number* 은 **int**, 기본값은 없습니다.  
   
  [  **@timeout**  =] **'***timeout***'**  
  단일 전자 메일 메시지의 SmtpClient.Send에 대한 시간 제한 매개 변수입니다. *제한 시간* 은 **int** (초) 이며 기본값은 없습니다.  
   
- [  **@username**  =] **'***username***'**  
+ [ **@username** = ] **'***username***'**  
  전자 메일 서버에 로그온하는 데 사용할 새 사용자 이름입니다. *사용자 이름* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@password**  =] **'***암호***'**  
+ [ **@password** = ] **'***password***'**  
  전자 메일 서버에 로그온하는 데 사용할 새 암호입니다. *암호* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@use_default_credentials**  =] use_default_credentials  

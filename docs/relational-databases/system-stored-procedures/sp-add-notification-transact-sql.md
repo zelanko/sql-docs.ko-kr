@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_notification_TSQL
 - sp_add_notification
-dev_langs: TSQL
-helpviewer_keywords: sp_add_notification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5bd95d4aee45046410211e77213fe4dcbc43fc3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 22e6f2373ba35b24d74b7045350c7cb78a504c05
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@alert_name=** ] **'***경고***'**  
+ [ **@alert_name=** ] **'***alert***'**  
  이 알림에 대한 경고입니다. *경고* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@operator_name=** ] **'***연산자***'**  
+ [ **@operator_name=** ] **'***operator***'**  
  경고가 발생할 경우 알림을 받을 운영자입니다. *연산자* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@notification_method=** ] *notification_method*  
  운영자에게 알림을 보내는 방법입니다. *notification_method* 은 **tinyint**, 기본값은 없습니다. *notification_method* 와 함께 다음이 값 중 하나 이상이 될 수는 **OR** 논리 연산자입니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|전자 메일|  
 |**2**|호출기|  
@@ -63,7 +66,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sp_add_notification** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  

@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_cdc_get_net_changes_<capture_instance>
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_net_changes_<capture_instance>
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36b5e622dd49e4d78af749859a56ce19e898f9f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 853392a1a2db64c832c93d633def5dff30acceb6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact SQL)
+# <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   에 대 한 지정된 된 로그 시퀀스 번호 (LSN) 범위 내에서 변경 된 각 원본 행당 하나의 순 변경 행을 반환 합니다.  
@@ -88,7 +90,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |__$start_lsn|**binary(10)**|변경에 대한 커밋 트랜잭션과 연관된 LSN입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어 업데이트 작업의 원본 테이블에 두 행의 두 열이 수정, 변경 테이블에 동일한 __ $start_lsnvalue는 4 개 행 포함 됩니다.|  
 |__$operation|**int**|변경 데이터의 행을 대상 데이터 원본에 적용하는 데 필요한 DML(데이터 조작 언어) 작업을 식별합니다.<br /><br /> row_filter_option 매개 변수의 값이 all 또는 all with mask일 경우 이 열의 값은 다음 값 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 4 = 업데이트<br /><br /> row_filter_option 매개 변수의 값이 all with merge일 경우 이 열의 값은 다음 값 중 하나일 수 있습니다.<br /><br /> 1 = 삭제|  
 |__$update_mask|**varbinary(128)**|캡처 인스턴스에 대해 식별된 각 캡처된 열에 해당하는 비트가 있는 비트 마스크입니다. 이 값에는 __$operation이 1 또는 2인 경우 모두 1로 설정되는 정의된 비트가 있습니다. 때 \_ \_$operation = 3 또는 4, 변경 된 열에 해당 하는 비트만 1로 설정 됩니다.|  
-|*\<캡처된 원본 테이블 열 >*|다양함|함수에서 반환되는 나머지 열은 캡처 인스턴스 생성 시 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 아무 열도 지정하지 않으면 원본 테이블의 모든 열이 반환됩니다.|  
+|*\<captured source table columns>*|다양함|함수에서 반환되는 나머지 열은 캡처 인스턴스 생성 시 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 아무 열도 지정하지 않으면 원본 테이블의 모든 열이 반환됩니다.|  
   
 ## <a name="permissions"></a>Permissions  
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다. 다른 모든 사용자의 경우 원본 테이블에서 캡처된 모든 열에 대한 SELECT 권한이 필요하며 캡처 인스턴스에 대한 제어 역할이 정의된 경우 해당 데이터베이스 역할의 멤버 자격이 필요합니다. 호출자에게 원본 데이터를 볼 수 있는 권한이 없으면 함수는 오류 208(개체 이름이 잘못되었습니다)을 반환합니다.  
@@ -130,7 +132,7 @@ SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all'
   
 ## <a name="see-also"></a>관련 항목:  
  [cdc.fn_cdc_get_all_changes_&#60; capture_instance& &#62;  &#40; Transact SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys.fn_cdc_map_time_to_lsn &#40; Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
  [sys.sp_cdc_enable_table &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_help_change_data_capture &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [변경 데이터 캡처 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  

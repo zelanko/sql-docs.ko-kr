@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobschedule
 - sp_delete_jobschedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_jobschedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_jobschedule
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0787326286ef9cccf6f7b7b771256d0bc4b1d2ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c03e34bb2cd4fcbbf2ad379d7fad374f77290dab
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>주의  
  이제 작업 일정을 작업과 독립적으로 관리할 수 있습니다. 작업에서 일정을 제거 하려면 사용 하 여 **sp_detach_schedule**합니다. 일정을 삭제 하려면 사용 **sp_delete_schedule**합니다.  
   
-> **참고:****sp_delete_jobschedule** 여러 작업에 연결 된 일정을 지원 하지 않습니다.   기존 스크립트를 호출 하는 경우 **sp_delete_jobschedule** 둘 이상의 작업에 연결 된 일정을 제거 하는 프로시저가 오류를 반환 합니다.  
+> **참고:****sp_delete_jobschedule** 여러 작업에 연결 된 일정을 지원 하지 않습니다. 기존 스크립트를 호출 하는 경우 **sp_delete_jobschedule** 둘 이상의 작업에 연결 된 일정을 제거 하는 프로시저가 오류를 반환 합니다.  
   
 ## <a name="permissions"></a>Permissions  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  

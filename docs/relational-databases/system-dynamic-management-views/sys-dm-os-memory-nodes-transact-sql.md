@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_memory_nodes
 - sys.dm_os_memory_nodes_TSQL
 - dm_os_memory_nodes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_nodes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_nodes dynamic management view
 ms.assetid: bf4032fe-7db1-40e9-a62e-d69cebff4b44
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5284229fd7c102ceb23e8123cd355b8be29190f0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f62dcdc2b05ce1a5e738297cdf533371ca776a37
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemorynodes-transact-sql"></a>sys.dm_os_memory_nodes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**되어**|**smallint**|메모리 노드의 ID를 지정합니다. 관련 된 **되어** 의 **sys.dm_os_memory_clerks**합니다. Null을 허용하지 않습니다.|  
+|**memory_node_id**|**smallint**|메모리 노드의 ID를 지정합니다. 관련 된 **되어** 의 **sys.dm_os_memory_clerks**합니다. Null을 허용하지 않습니다.|  
 |**virtual_address_space_reserved_kb**|**bigint**|물리적 페이지에 커밋 또는 매핑되지 않은 가상 주소 예약의 크기(KB)를 나타냅니다. Null을 허용하지 않습니다.|  
 |**virtual_address_space_committed_kb**|**bigint**|물리적 페이지에 커밋 또는 매핑된 가상 주소 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
 |**locked_page_allocations_kb**|**bigint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 잠긴 물리적 메모리 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |**processor_group**|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 내부적으로만 사용됩니다. Null을 허용하지 않습니다.|  
 |**foreign_committed_kb**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 다른 메모리 노드에서 커밋된 메모리 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
 |**target_kb** |**bigint** |**적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]합니다.<br /><br /> KB 단위로 메모리 노드에 대 한 메모리 목표를 지정 합니다. |   
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   

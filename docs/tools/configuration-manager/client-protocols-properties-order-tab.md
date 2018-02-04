@@ -8,24 +8,27 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: client protocols [SQL Server]
+helpviewer_keywords:
+- client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ebba597240d5e456b8c132a6b5c52be81ed6b73
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b00026954339af65d3730c91a24ec4f16505c682
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="client-protocols-properties-order-tab"></a>클라이언트 프로토콜 속성(순서 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **순서**페이지에 **클라이언트 프로토콜 속성** 대화 상자를 보고 하 여 클라이언트 프로토콜을 사용 하도록 설정 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+사용 하 여는 **순서** 페이지에 **클라이언트 프로토콜 속성** 대화 상자를 보고 하 여 클라이언트 프로토콜을 사용 하도록 설정 합니다.  
   
  선택한 프로토콜을 **사용할 수 없는 프로토콜** 또는 **사용할 수 있는 프로토콜** 목록으로 이동하려면 해당 프로토콜을 클릭한 다음 **사용** 또는 **사용 안 함** 을 클릭합니다.  
   
@@ -36,10 +39,10 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="options"></a>옵션  
  **사용**  
- 설치되어 있지만 현재 사용되지 않는 프로토콜을 나열합니다.  
+ 설치 되어 있지만 현재 사용 되지 않는 프로토콜 목록을 표시 합니다.  
   
  **사용 안 함**  
- 이 컴퓨터의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트가 사용할 수 있는 프로토콜을 나열합니다.  
+ 에 사용할 수 있는 프로토콜 나열 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 컴퓨터에 있는 클라이언트입니다.  
   
  **>**  
  **사용할 수 없는 프로토콜** 상자에서 선택한 프로토콜을 **사용할 수 있는 프로토콜** 상자로 이동하여 사용할 수 있도록 만듭니다.  
