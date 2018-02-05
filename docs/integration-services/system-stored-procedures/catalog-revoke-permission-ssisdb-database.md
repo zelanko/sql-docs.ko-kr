@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc46123d3d395080f6bc5252bfccd63e597a3612
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a2c71f38fd26b56cedc2b3309067b26b1a161966
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>인수  
  [ @object_type = ] *object_type*  
- 보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다. *object_type*은 **smallint***입니다.*  
+ 보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다. *object_type*은 **smallint****입니다.  
   
  [ @object_id = ] *object_id*  
  보안 개체의 고유 식별자(ID)입니다. *object_id*는 **bigint**입니다.  
@@ -67,12 +68,12 @@ catalog.revoke_permission [ @object_type = ] object_type
  5(기타 오류)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="remarks"></a>주의  
- 없음  
+## <a name="remarks"></a>Remarks  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   개체에 대한 ASSIGN_PERMISSIONS 권한  
@@ -81,7 +82,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   **sysadmin** 서버 역할에 대한 멤버 자격  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  permission_type을 지정한 경우 저장 프로시저는 개체의 보안 주체에 명시적으로 할당된 사용 권한을 제거합니다. 해당 인스턴스가 없는 경우에도 프로시저에서 성공 코드 값(`0`)을 반환합니다. permission_type을 생략한 경우에는 저장 프로시저에서 개체의 보안 주체에 대한 모든 사용 권한을 제거합니다.  
   
 > [!NOTE]  

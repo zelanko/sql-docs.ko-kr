@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,26 +24,26 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2df07e1916b5ec0f62bf788940524c8b8831bebd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 80531a48b65578c296d79318735e60d7fb203840
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>실행 계획 및 버퍼 할당
   실행 전에 데이터 흐름 태스크에서는 구성 요소를 검사하고 각 구성 요소 시퀀스에 대한 실행 계획을 생성합니다. 이 섹션에서는 실행 계획, 실행 계획을 보는 방법 및 실행 계획에 따라 입력 및 출력 버퍼가 할당되는 방식에 대해 자세히 설명합니다.  
   
 ## <a name="understanding-the-execution-plan"></a>실행 계획 이해  
- 실행 계획에는 원본 스레드와 작업 스레드가 포함되며 각 스레드에는 원본 스레드에 대한 출력 작업 목록이나 작업 스레드에 대한 입력 및 출력 작업 목록이 포함됩니다. 실행 계획의 원본 스레드는 데이터 흐름의 원본 구성 요소를 나타내며 실행 계획에서 *SourceThread**n*로 식별됩니다. 여기서 *n*은 0부터 시작하는 원본 스레드 번호입니다.  
+ 실행 계획에는 원본 스레드와 작업 스레드가 포함되며 각 스레드에는 원본 스레드에 대한 출력 작업 목록이나 작업 스레드에 대한 입력 및 출력 작업 목록이 포함됩니다. 실행 계획의 원본 스레드는 데이터 흐름의 원본 구성 요소를 나타내며 실행 계획에서 *SourceThread**n*으로 식별됩니다. 여기서 *n*은 0부터 시작하는 원본 스레드 번호입니다.  
   
  각 원본 스레드에서는 버퍼를 만들고, 수신기를 설정하고, 원본 구성 요소에 대해 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 메서드를 호출합니다. 이 지점에서 원본 구성 요소는 데이터 흐름 태스크에서 해당 구성 요소에 제공한 출력 버퍼에 행을 추가하기 시작하므로 이 지점이 실행이 시작되고 데이터가 시작되는 지점입니다. 원본 스레드가 실행된 후 잔여 작업은 여러 작업 스레드 간에 분산됩니다.  
   
- 작업 스레드는 입력 작업 목록과 출력 작업 목록을 모두 포함할 수 있으며 실행 계획에서 *WorkThread**n*로 식별됩니다. 여기서 *n*은 0부터 시작하는 작업 스레드 번호입니다. 그래프에 비동기 출력을 사용하는 구성 요소가 포함된 경우 이러한 스레드에는 출력 작업 목록이 포함됩니다.  
+ 작업 스레드는 입력 작업 목록과 출력 작업 목록을 모두 포함할 수 있으며 실행 계획에서 *WorkThread**n*으로 식별됩니다. 여기서 *n*은 0부터 시작하는 작업 스레드 번호입니다. 그래프에 비동기 출력을 사용하는 구성 요소가 포함된 경우 이러한 스레드에는 출력 작업 목록이 포함됩니다.  
   
  다음 예제 실행 계획이 나타내는 데이터 흐름에서는 원본 구성 요소가 비동기 출력을 사용하는 변환에 연결되어 있고 이 변환은 대상 구성 요소에 연결되어 있습니다. 이 예에서 변환 구성 요소에는 비동기 출력이 있으므로 WorkThread0에는 출력 작업 목록이 포함됩니다.  
   

@@ -1,8 +1,12 @@
 ---
 title: "Windows Server 2008/2008 R2/2012 클러스터에서 실행 중인 SQL Server 인스턴스 업그레이드 | Microsoft Docs"
-ms.date: 11/10/2017
-ms.prod: sql-server-2017
-ms.technology: dbe-high-availability
+ms.date: 1/25/2018
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: database engine
+ms.component: failover-clustuers
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,20 +17,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91fe880168482d29e796c2bbe23c278c60bfa6c1
-ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
+ms.openlocfilehash: 3337f1c438f303775d923ec12b14891c13b36c03
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 클러스터에서 실행 중인 SQL Server 인스턴스 업그레이드
 
-[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)], 및 [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)]에서는 Windows Server 장애 조치(failover) 클러스터가 운영 체제 바로 업그레이드를 수행하지 못하게 방지하여 클러스터에 허용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 버전을 제한합니다. 클러스터가 [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 이상으로 업그레이드되면 클러스터가 최신 상태로 유지될 수 있습니다.
+[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)], 및 [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)]에서는 Windows Server 장애 조치(failover) 클러스터가 운영 체제 바로 업그레이드를 수행하지 못하게 방지하여 클러스터에 허용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 버전을 제한합니다. 클러스터가 [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 이상으로 업그레이드되면 클러스터가 최신으로 유지될 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 -   마이그레이션 전략을 수행하기 전에 Windows Server 2016/2012 R2를 사용한 병렬 Windows Server 장애 조치(failover) 클러스터를 준비해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] FCI(장애 조치 클러스터 인스턴스)를 구성하는 모든 노드는 병렬 FCI가 설치된 Windows 클러스터에 조인되어 있어야 합니다. 모든 독립 실행형 컴퓨터는 마이그레이션 전에 Windows Server 장애 조치 클러스터에 조인되어 있지 **않아야 합니다**. 사용자 데이터베이스는 마이그레이션 전에 새 환경에서 동기화해야 합니다.
-
 -   모든 대상 인스턴스는 원본 환경의 병렬 인스턴스와 버전, 인스턴스 이름 및 ID가 동일하고, 동일한 기능이 설치된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]을(를) 실행 중이어야 합니다. 설치 경로 및 디렉터리 구조는 대상 컴퓨터에서 동일해야 합니다. 하지만 FCI 가상 네트워크 이름은 예외적으로 마이그레이션 전에 동일하지 않아야 합니다. 원본 인스턴스에서 활성화한 모든 기능(Always On, FILESTREAM 등)은 대상 인스턴스에서 활성화되어야 합니다.
 
 -   마이그레이션 전에는 병렬 클러스터에 [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]이(가) 설치되어 있지 않아야 합니다.
@@ -38,7 +41,6 @@ ms.lasthandoff: 12/19/2017
 -   원본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 클러스터 환경에서 사용된 네트워크 파일 공유 및 네트워크 매핑 드라이브는 계속 존재해야 하며, 대상 클러스터가 원본 인스턴스와 동일한 권한을 사용하여 액세스할 수 있어야 합니다.
 
 -   원본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 인스턴스에서 수신 대기하는 모든 TCP/IP 포트는 사용 중이지 않아야 하며, 대상 컴퓨터에서 인바운드 트래픽을 허용해야 합니다.
-
 -   모든 SQL 관련 서비스는 동일한 Windows 사용자가 설치하고 실행해야 합니다.
 
 -   대상 인스턴스는 원본 인스턴스와 동일한 로캘을 사용하여 설치해야 합니다.
@@ -54,8 +56,8 @@ ms.lasthandoff: 12/19/2017
 | **클러스터에서 독립 실행형 인스턴스 사용** | [시나리오 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [시나리오 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [시나리오 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [시나리오 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* 가용성 그룹 수신기 이름 제외
 
-## <a name="scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1"></a>시나리오 1: 마이그레이션하려는 클러스터가 엄격하게 가용성 그룹을 사용함(Windows Server 2008 R2 SP1 이상)
-엄격하게 가용성 그룹(AG)을 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 설치 프로그램이 있는 경우 Windows Server 2016/2012 R2를 사용하는 다른 Windows 클러스터에 병렬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 설치 프로그램을 만들어 새 클러스터로 마이그레이션할 수 있습니다. 이후에 대상 클러스터가 현재 프로덕션 클러스터에 대한 보조 클러스터인 분산 AG를 만들 수 있습니다. 이를 위해서는 사용자가 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 이상으로 업그레이드해야 합니다.
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>시나리오 1: SQL Server 가용성 그룹이 있고 FCI(장애 조치(Failover) 클러스터 인스턴스)가 없는 Windows 클러스터
+AG(가용성 그룹)를 사용하고 장애 조치(failover) 클러스터 인스턴스를 사용하지 않는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]이 설치되어 있는 경우, Windows Server 2016/2012 R2가 설치된 다른 Windows 클러스터에 병렬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 배포를 만들어서 새 클러스터로 마이그레이션할 수 있습니다. 이후에 대상 클러스터가 현재 프로덕션 클러스터에 대한 보조 클러스터인 분산 AG를 만들 수 있습니다. 이를 위해서는 사용자가 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 이상으로 업그레이드해야 합니다.
 
 ###  <a name="to-perform-the-upgrade"></a>업그레이드를 수행하려면
 
@@ -66,7 +68,7 @@ ms.lasthandoff: 12/19/2017
 3.  대상 클러스터가 보조 가용성 그룹인 분산 가용성 그룹을 형성합니다.
 
     >[!NOTE]
-    >기본 인스턴스 역할을 하는 FCI 포함 AG의 경우 create distributed AG 쿼리의 LISTENER\_URL 매개 변수가 다르게 작동합니다. 기본 또는 보조 AG 시나리오의 경우 수신기의 네트워크 이름 대신 기본 SQL FCI의 VNN을 수신기 URL로 사용합니다. 각 시나리오에서는 여전히 데이터베이스 미러링 엔드포인트 포트를 사용합니다.
+    >create distributed AG T-SQL에 대한 LISTENER\_URL 매개 변수는 SQL FCI가 주 인스턴스인 AG와 다르게 작동합니다. 기본 또는 보조 AG가 이런 경우라면 데이터베이스 미러링 엔드포인트 포트와 함께 주 SQL FCI의 VNN을 수신기의 네트워크 이름 대신 수신기 URL로 사용합니다.
 
 4.  보조 가용성 그룹을 분산 AG에 조인합니다.
 
@@ -75,9 +77,9 @@ ms.lasthandoff: 12/19/2017
     >[!NOTE]
     >이는 대상 가용성 그룹이 자동 시드를 사용하는 경우에 자동으로 수행됩니다. 이는 모든 복제본에서 데이터 및 로그 경로가 동일한 경우에만 가능합니다.
 
-6.  기본 AG에 대한 모든 트래픽을 차단하고 보조 AG의 동기화를 허용합니다.
+6.  기본 AG에 대한 모든 트래픽을 차단하고 보조 AG가 동기화되도록 합니다.
 
-7.  두 가용성 그룹에 대한 커밋 정책을 SYNCHRONOUS\_COMMIT으로 변경하고 상태가 SYNCHRONIZED가 되면 대상 클러스터로 장애 조치(failover)를 수행합니다.
+7.  두 가용성 그룹에 대한 커밋 정책을 SYNCHRONOUS_COMMIT으로 변경하고 상태가 SYNCHRONIZED가 되면 대상 클러스터로 장애 조치(failover)를 수행합니다.
 
 8.  분산 AG를 삭제합니다.
 
@@ -90,9 +92,9 @@ ms.lasthandoff: 12/19/2017
 
 11. 수신기에 대한 트래픽을 다시 시작합니다.
 
-## <a name="scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag"></a>시나리오 2: 마이그레이션하려는 클러스터에 SQL FCI만 있고 AG가 없음
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>시나리오 2: SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)가 없는 Windows 클러스터
 
-독립 실행형 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 인스턴스(SQL FCI만 해당)를 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 설치 프로그램이 있는 경우 Windows Server 2016/2012 R2를 사용하는 다른 Windows 클러스터에 병렬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 설치 프로그램을 만들어 새 클러스터로 마이그레이션할 수 있습니다. 이전 SQL FCI의 VNN을 "도용"하고 새로운 클러스터에서 입수하여 대상 클러스터로 마이그레이션할 수 있습니다. 그러면 DNS 전파 시간에 따라 추가 가동 중지 시간이 발생합니다.
+SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 환경의 경우, Windows Server 2016/2012 R2가 설치된 다른 Windows 클러스터에 병렬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 환경을 만들어서 새 클러스터로 마이그레이션할 수 있습니다. 이전 SQL FCI의 VNN을 "도용"하고 새로운 클러스터에서 입수하여 대상 클러스터로 마이그레이션할 수 있습니다. 그러면 DNS 전파 시간에 따라 추가 가동 중지 시간이 발생합니다.
 
 ###  <a name="to-perform-the-upgrade"></a>업그레이드를 수행하려면
 
@@ -123,11 +125,11 @@ ms.lasthandoff: 12/19/2017
 
 12. 재시작 후 컴퓨터가 다시 온라인 상태가 되면 장애 조치(failover) 클러스터 관리자에서 각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] FCI 역할을 시작합니다.
 
-## <a name="scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups"></a>시나리오 3: 클러스터가 SQL FCI만 포함하고 있고 가용성 그룹을 사용하는 경우
+## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>시나리오 3: SQL FCI와 SQL Server 가용성 그룹이 모두 있는 Windows 클러스터
 
 독립 실행형 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 인스턴스를 사용하지 않고 하나 이상의 가용성 그룹에 포함된 SQL FCI만 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 설치 프로그램이 있는 경우 이를 “가용성 그룹 없음, 독립 실행형 인스턴스 없음” 시나리오와 유사한 방법을 사용하여 새 클러스터로 마이그레이션할 수 있습니다. 시스템 테이블을 대상 FCI 공유 디스크에 복사하기 전에 원본 환경의 모든 가용성 그룹을 삭제해야 합니다. 모든 데이터베이스가 대상 컴퓨터로 마이그레이션되면 동일한 스키마와 수신기 이름으로 가용성 그룹을 다시 만듭니다. 이렇게 하면 Windows Server 장애 조치(failover) 클러스터 리소스가 대상 클러스터에서 올바르게 형식이 지정되고 관리됩니다. **마이그레이션 전에 대상 환경의 각 컴퓨터의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager에서 Always On을 활성화해야 합니다.**
 
-###  <a name="to-perform-the-upgrade"></a>업그레이드를 수행하려면
+### <a name="to-perform-the-upgrade"></a>업그레이드를 수행하려면
 
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]에 대한 트래픽을 중지합니다.
 
@@ -161,7 +163,7 @@ ms.lasthandoff: 12/19/2017
 
 16. 원본 가용성 그룹의 수신기 이름을 사용하여 새로운 AG에 수신기를 만듭니다.
 
-## <a name="scenario-4-cluster-has-some-non-fci-and-no-availability-groups"></a>시나리오 4: 클러스터가 FCI 이외의 인스턴스를 일부 포함하고 있고 가용성 그룹이 없는 경우
+## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>시나리오 4: 독립 실행형 SQL Server 인스턴스가 있고 가용성 그룹이 없는 Windows 클러스터
 
 독립 실행형 인스턴스를 사용하여 클러스터를 마이그레이션하는 것은 FCI만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 클러스터를 마이그레이션하는 프로세스와 유사하지만 FCI의 네트워크 이름 클러스터 리소스의 VNN을 변경하지 않고 원본 독립 실행형 컴퓨터의 컴퓨터 이름을 변경한 후 대상 컴퓨터에서 이전 컴퓨터의 이름을 “도용”한다는 점이 다릅니다. 이전 컴퓨터의 네트워크 이름을 입수해야만 대상 독립 실행형 컴퓨터를 WSFC로 조인할 수 있으므로 이 시나리오는 독립 실행형이 아닌 시나리오보다 가동 중지 시간이 더 길어집니다.
 
@@ -197,9 +199,9 @@ ms.lasthandoff: 12/19/2017
 
 15. 재시작 후 컴퓨터가 다시 온라인 상태가 되면 장애 조치(failover) 클러스터 관리자에서 각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] FCI 역할을 시작합니다.
 
-## <a name="scenario-5-cluster-has-some-non-fci-and-uses-availability-groups"></a>시나리오 5: 클러스터가 FCI 이외의 인스턴스를 일부 포함하고 있고 가용성 그룹을 사용하는 경우
+## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>시나리오 5: 독립 실행형 SQL Server 인스턴스와 가용성 그룹이 있는 Windows 클러스터
 
-독립 실행형 복제본을 사용하여 가용성 그룹을 사용하는 클러스터를 마이그레이션하는 것은 가용성 그룹을 사용하여 엄격하게 FCI로 클러스터를 마이그레이션하는 프로세스와 유사합니다. 여전히 원본 가용성 그룹을 삭제하고 대상 클러스터에 재구성해야 하지만 독립 실행형 인스턴스 마이그레이션 시 추가 비용으로 인해 추가 가동 중지 시간이 발생합니다. **마이그레이션 전에 대상 환경의 각 FCI에서 Always On을 활성화해야 합니다.**
+독립 실행형 복제본으로 가용성 그룹을 사용하는 클러스터를 마이그레이션하는 것은 가용성 그룹을 사용하여 FCI로 클러스터를 마이그레이션하는 프로세스와 유사합니다. 여전히 원본 가용성 그룹을 삭제하고 대상 클러스터에 재구성해야 하지만 독립 실행형 인스턴스 마이그레이션 시 추가 비용으로 인해 추가 가동 중지 시간이 발생합니다. **마이그레이션 전에 대상 환경의 각 FCI에서 Always On을 활성화해야 합니다.**
 
 ###  <a name="to-perform-the-upgrade"></a>업그레이드를 수행하려면
 

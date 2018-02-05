@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ba6cb8b0d185ce5c669fd33f563a9bb5754baa2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a04ae959af4c0a23b3a954e590df424aa1536949
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>인수  
  [ @object_type = ] *object_type*  
- 보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다. *object_type*은 **smallint***입니다.*  
+ 보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다. *object_type*은 **smallint****입니다.  
   
  [ @object_id = ] *object_id*  
  보안 개체의 고유 식별자(ID) 또는 기본 키입니다. *object_id*는 **bigint**입니다.  
@@ -64,9 +65,9 @@ catalog.deny_permission [ @object_type = ] object_type
  5(기타 오류)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   개체에 대한 MANAGE_PERMISSIONS 권한  
@@ -75,7 +76,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   **sysadmin** 서버 역할에 대한 멤버 자격  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 저장 프로시저를 통해 다음 표에 설명된 사용 권한 유형을 거부할 수 있습니다.  
   
 |permission_type 값|사용 권한 이름|사용 권한 설명|적용할 수 있는 개체 유형|  

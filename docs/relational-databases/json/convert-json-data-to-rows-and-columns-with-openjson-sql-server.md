@@ -1,5 +1,5 @@
 ---
-title: "OPENJSON을 사용하여 JSON 데이터를 행과 열로 변환(SQL Server) | Microsoft 문서"
+title: "OPENJSON을 사용하여 JSON 데이터 구문 분석 및 변환(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -7,7 +7,8 @@ ms.prod_service: database-engine, sql-database
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,24 +16,24 @@ helpviewer_keywords:
 - JSON, importing
 - importing JSON
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8cef7629fe382a5011e71e371c999e0aef84c35e
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 7b3a7da165234ed59fdadef6b2e3972525d81821
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>OPENJSON을 사용하여 JSON 데이터를 행과 열로 변환(SQL Server)
+# <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>OPENJSON을 사용하여 JSON 데이터 구문 분석 및 변환(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON** 행 집합 함수는 JSON 텍스트를 일련의 행과 열로 변환합니다. **OPENJSON**을 사용하여 JSON 컬렉션을 행 집합으로 변환한 후 반환된 데이터에 대해 SQL 쿼리를 실행하거나 SQL Server 테이블에 삽입할 수 있습니다. 
   
 **OPENJSON** 함수는 단일 JSON 개체 또는 JSON 개체 컬렉션을 받아서 하나 또는 여러 개의 행으로 변환합니다. 기본적으로 **OPENJSON** 함수는 다음 데이터를 반환합니다.
--   JSON 개체에서 이 함수는 첫 번째 수준에서 발견된 모든 키:값 쌍을 반환합니다.
+-   JSON 개체에서 이 함수는 첫 번째 수준에서 발견된 모든 키/값 쌍을 반환합니다.
 -   JSON 배열에서 이 함수는 모든 요소 및 해당 인덱스를 반환합니다.  
 
 선택적 **WITH** 절을 추가하여 출력의 구조를 명시적으로 정의하는 스키마를 제공할 수 있습니다.  
