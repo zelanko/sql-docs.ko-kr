@@ -32,7 +32,7 @@ ms.lasthandoff: 10/10/2017
 
 ## <a name="create-a-classification-model-using-rxlogit"></a>rxLogit을 사용해서 분류모델(classification model) 만들기
 
-이번에 만들 모델은 이진분류기(binary classifier)로서, 택시운전사가 승객의 목적지에 도착한 후 승객으로 부터 팁을 받을 수 있을 지 없을 지를 예측하는 모델입니다. 지난 과정(lesson)에서 만들었던 데이터 소스(data source)를  사용하여 이 팁 예측 모델을 학습시킬 것인데, 이 때 로지스틱 회귀(logistic regression)를 사용할 것입니다.
+이번에 만들 모델은 이진분류기(binary classifier)로서, 택시운전사가 승객의 목적지에 도착한 후 승객으로부터 팁을 받을 수 있는지를 예측하는 모델입니다. 지난 과정(lesson)에서 만들었던 데이터 소스(data source)를 사용하여 이 팁 예측 모델을 학습하고, 이때 로지스틱 회귀(logistic regression)를 사용합니다.
 
 1. [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 패키지에 들어있는 **rxLogit** 함수를 호출하여 로지스틱 회귀 모델을 만들어 봅시다. 
 
@@ -40,10 +40,10 @@ ms.lasthandoff: 10/10/2017
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = sql_feature_ds));
     ```
 
-    모델을 빌드하는 호출을 system.time 함수의 파라미터로 입력합니다. 이 함수로 모델을 빌드하는 데에 필요한 시간을 구할 수 있습니다.
+    모델을 빌드하는 호출은 system.time 함수 내에 포함되어 있습니다. 이것으로 모델을 빌드하는 데 필요한 시간을 구할 수 있습니다.
 
 
-2. 모델을 만든 후에 `summary` 함수를 사용해서 모델을 점검해보고 계수(coefficients)들을 확인해 볼 수 있습니다.
+2. 모델을 빌드한 후에 `summary` 함수를 사용해서 모델을 점검하고 계수를 확인할 수 있습니다.
 
     ```R
     summary(logitObj);
@@ -85,7 +85,7 @@ direct_distance*
 
     + 예제를 간단하게 하기 위해, 모델을 학습시키는 데에 사용되었던 특성값 데이터(`sql_feature_ds`)을 그대로 로지스틱 회귀 모델의 입력값으로 사용할 것입니다. 하지만 보통 테스트 때에 사용하는 데이터는 학습 때와는 다른 새로운 데이터인 경우가 대부분이며, 테스트용 데이터와 학습용 테이터를 따로 준비해서 사용하는 것이 보다 일반적입니다.
   
-    + 예측 결과는 _taxiscoreOutput_ 테이블에 저장됩니다. 이 테이블의 스키마는 이 테이블이 RxSqlServerData 함수를 통해 생성될 때 만들어지는 것이 아니라 rxPredict의 출력값으로 부터 오는 것입니다. 이 부분을 눈여겨 보세요.
+    + 예측 결과는 _taxiscoreOutput_ 테이블에 저장됩니다. 이 테이블의 스키마는 이 테이블이 RxSqlServerData 함수를 통해 생성될 때 만들어지는 것이 아니라 rxPredict의 출력값으로부터 오는 것입니다. 이 부분을 눈여겨 보세요.
   
     + 예측된 값을 저장하기 위한 테이블을 만들려면, RxSqlServerData 함수를 실행하는 SQL 데이터베이스의 계정에 DDL 권한이 있어야 합니다. 만약 현재 사용되는 계정이 테이블을 만들 수 없는 경우라면 실행문은 실패하게 됩니다.
 
@@ -100,15 +100,15 @@ direct_distance*
         writeModelVars = TRUE, overwrite = TRUE)
     ```
     
-    실행문이 실행되는 데에 성공할 경우 실행문이 처리되는 동안 약간의 시간이 걸립니다. 실행이 완료되면 SQL Server Management Studio를 열어서 해당 테이블이 생성되었는지 그리고 Score 열과 다른 것들도 예상대로 잘 생성되었는지 확인할 수 있습니다.
+    문이 성공하면 실행하는 데 약간의 시간이 걸립니다. 실행이 완료되면 SQL Server Management Studio를 열고 해당 테이블이 생성되었으며 Score 열과 기타 예상되는 결과가 포함되어 있는지 확인할 수 있습니다.
 
 ## <a name="plot-model-accuracy"></a>모델 정확도 그리기
 
-rxRoc(https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수를 사용하여 Receiver Operating Curve를 그릴 수 있고 이것을 통해서 모델이 얼마나 정확한지를 알아볼 수 있습니다. RevoScaleR 패키지는 원격 계산 컨텍스트 (remote compute context)를 지원하며 rxRoc는 RevoScaleR 패키지에서 제공하는 새로운 함수들 중 하나이기 때문에, 여러분은 다음의 둘 중 하나를 선택할 수 있습니다:
+rxRoc(https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수를 사용하여 Receiver Operating Curve를 그릴 수 있고 이것을 통해서 모델이 얼마나 정확한지를 알아볼 수 있습니다. RevoScaleR 패키지는 원격 계산 컨텍스트(remote compute context)를 지원하며 rxRoc는 RevoScaleR 패키지에서 제공하는 새로운 함수들 중 하나이기 때문에, 여러분은 다음의 둘 중 하나를 선택할 수 있습니다.
 
-+ rxRoc 함수를 사용하여 원격 계산 컨텍스트에서 Receiver Operating Curve 그래프를 생성한 후 그 그래프를 로컬 클라이언트로 반환시키는 방법
++ rxRoc 함수를 사용하여 원격 계산 컨텍스트에서 플롯을 실행한 다음 로컬 클라이언트에 플롯을 반환합니다.
 
-+ 데이터를 R환경의 로컬 클라이언트 컴퓨터로 불러온 후 다른 종류의 R 그래프 함수를 사용해서 성능 그래프를 만드는 방법
++ 데이터를 R 클라이언트 컴퓨터로 가져온 후 다른 R 플로팅 함수를 사용해서 성능 그래프를 만들 수도 있습니다.
 
 이 절에서는 두 가지 방법을 모두 시도해 봅니다.
 
