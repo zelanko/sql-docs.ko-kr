@@ -10,10 +10,12 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
@@ -26,7 +28,7 @@ ms.lasthandoff: 01/25/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 작성 하 고 SQL Server에 저장
 
-이 단계에서는 기계 학습 모델을 빌드하고에서 모델을 저장 하는 방법을 알아봅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
+이 단계에서는 머신 러닝 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 그 모델을 저장하는 방법을 학습합니다.
 
 ## <a name="create-a-classification-model-using-rxlogit"></a>RxLogit를 사용 하 여 분류 모델 만들기
 
