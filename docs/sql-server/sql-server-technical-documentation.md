@@ -11,7 +11,8 @@ ms.custom:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.portal.f1
+f1_keywords:
+- sql13.portal.f1
 helpviewer_keywords:
 - documentation [SQL Server], home page
 - Help [SQL Server]
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15e4d0a993dbc4b97413f94ccdb2620fc2baf24a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e6b2ffe7735bf8c7cb2fe7e9f76b7d4b675ceef
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
     
 |||    
 |-|-|    
-|![SQL 데이터베이스 엔진](../sql-server/media/sql-database-engine.png "SQL 데이터베이스 엔진")|**[데이터베이스 엔진](../database-engine/configure-windows/sql-server-database-engine.md)**<br /><br /> 데이터베이스 엔진은 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. 데이터베이스 엔진에서는 기업 내에서 가장 다루기 어려운 데이터 소비형 응용 프로그램의 요구 사항을 충족시키기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다. 또한 데이터베이스 엔진은 고가용성을 유지하기 위한 다각적인 지원을 제공합니다.|
+|![SQL 데이터베이스 엔진](../sql-server/media/sql-database-engine.png "SQL 데이터베이스 엔진")|**[데이터베이스 엔진](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> 데이터베이스 엔진은 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. 데이터베이스 엔진에서는 기업 내에서 가장 다루기 어려운 데이터 소비형 응용 프로그램의 요구 사항을 충족시키기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다. 또한 데이터베이스 엔진은 고가용성을 유지하기 위한 다각적인 지원을 제공합니다.|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 데이터 웨어하우징을 위해 추출, 변환 및 로드하는 ETL 패키지를 비롯하여 고성능 데이터 통합 솔루션을 작성하기 위한 플랫폼입니다.|    
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] 는 개인, 팀 및 기업의 비즈니스 인텔리전스를 위한 분석 데이터 플랫폼 및 도구 집합입니다. 서버 및 클라이언트 디자이너는 기존의 OLAP 솔루션, 새 테이블 형식 모델링 솔루션, 그리고 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], Excel 및 SharePoint Server 환경을 사용하는 셀프 서비스 분석과 공동 작업을 지원합니다. 또한[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에는 많은 양의 데이터 내에 숨겨진 패턴과 관계를 확인할 수 있도록 데이터 마이닝 기능이 포함되어 있습니다.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services는 엔터프라이즈에 웹 사용이 가능한 보고 기능을 제공합니다.  다양한 데이터 원본에서 내용을 가져오고 다양한 형식으로 보고서를 게시하며 중앙에서 보안 및 구독을 관리하는 보고서를 만들 수 있습니다.|

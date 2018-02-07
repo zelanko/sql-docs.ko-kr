@@ -8,24 +8,27 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ole
+ms.technology:
+- dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: OLE Automation [SQL Server], examples
+helpviewer_keywords:
+- OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99b9e3c7e3bd0e75e80418f26cfbc9f9bafb8562
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d2a76d1009cede00b373eac16b143743332d8fe
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ole-automation-sample-script"></a>OLE 자동화 예제 스크립트
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에는 OLE 자동화 저장 프로시저를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 로컬 인스턴스에서 SQL-DMO SQLServer 개체를 만들고 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 일괄 처리의 예가 포함되어 있습니다. 코드의 일부는 OLE 자동화 시스템 저장 프로시저에 대한 참조 항목에서 예로 사용됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+이 항목에는 OLE 자동화 저장 프로시저를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 로컬 인스턴스에서 SQL-DMO SQLServer 개체를 만들고 사용하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]문 일괄 처리의 예가 포함되어 있습니다. 코드의 일부는 OLE 자동화 시스템 저장 프로시저에 대한 참조 항목에서 예로 사용됩니다.  
   
 ```  
 USE AdventureWorks2012;  

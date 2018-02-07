@@ -8,26 +8,28 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], parameters
 - user-defined functions [SQL Server], parameters
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 697268f348d50079d2d3f740ea56b9dd28944792
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab101583f2e16a13dc42d8b8800c2befec2f536f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="parameters"></a>매개 변수
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 매개 변수는 저장 프로시저나 함수를 호출하는 도구 또는 응용 프로그램, 함수 및 저장 프로시저 간에 데이터를 교환하는 데 사용됩니다. 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+매개 변수는 저장 프로시저나 함수를 호출하는 도구 또는 응용 프로그램, 함수 및 저장 프로시저 간에 데이터를 교환하는 데 사용됩니다. 
 
 *  입력 매개 변수를 사용하면 호출자가 저장 프로시저나 함수에 데이터 값을 전달할 수 있습니다.
 *  출력 매개 변수를 사용하면 저장 프로시저가 저장 프로시저나 함수에 데이터 값이나 커서 변수를 다시 전달할 수 있습니다. 사용자 정의 함수는 출력 매개 변수를 지정할 수 없습니다.
