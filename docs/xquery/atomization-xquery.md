@@ -8,24 +8,26 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, atomization
 - atomization [XQuery]
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b35d5e55a2d0e913586e7c60d161e4e2e85c6cb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 266a592860894ac255f7d01647e1f4caabbe88a3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="atomization-xquery"></a>원자화(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +52,7 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 암시적 원자화의 다른 예는 산술 연산자를 사용할 경우입니다.  **+**  연산자에 원자 값이 필요 하 고 **data ()** LaborHours 특성의 원자 값을 검색 하는 암시적으로 적용 됩니다. Instructions 열에 대해 쿼리가 지정 됩니다는 **xml** ProductModel 테이블의 유형입니다. 다음 쿼리는 LaborHours 특성을 3번 반환합니다. 쿼리에서 다음에 유의하십시오.  
+ 암시적 원자화의 다른 예는 산술 연산자를 사용할 경우입니다. **+**  연산자에 원자 값이 필요 하 고 **data ()** LaborHours 특성의 원자 값을 검색 하는 암시적으로 적용 됩니다. Instructions 열에 대해 쿼리가 지정 됩니다는 **xml** ProductModel 테이블의 유형입니다. 다음 쿼리는 LaborHours 특성을 3번 반환합니다. 쿼리에서 다음에 유의하십시오.  
   
 -   OrignialLaborHours 특성을 구성할 때 원자화는 (`$WC/@LaborHours`)에서 반환된 단일 시퀀스에 암시적으로 적용됩니다. LaborHours 특성의 유형 값은 OrignialLaborHours에 할당됩니다.  
   

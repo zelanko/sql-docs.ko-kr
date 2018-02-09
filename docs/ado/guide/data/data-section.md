@@ -4,30 +4,32 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: data section [ADO]
+helpviewer_keywords:
+- data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 486c936681adca59a90dae6a5e304be6f8b4dba5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8da8004ffc31efb53db196e37f48ae0942a872f6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-section"></a>데이터 섹션
 데이터 섹션 업데이트, 삽입 또는 삭제 보류 중인 함께 행 집합의 데이터를 정의합니다. 데이터 섹션에는 0 개 이상의 행 포함 될 수 있습니다. 행이 스키마에 정의 되어 있는 행 집합에서 데이터를 포함할 수 있습니다. 또한 앞에서 설명한 것 처럼 모든 데이터가 없는 열을 생략할 수 있습니다. 특성 또는 하위 요소 데이터 섹션에 사용 하는 경우 해당 구문이 스키마 섹션에 정의 되지 않은 자동으로 무시 됩니다.  
   
-## <a name="string"></a>String  
+## <a name="string"></a>문자열  
  적절 한 문자 엔터티가 포함 된 텍스트 데이터에서 예약 된 XML 문자를 바꾸어야 합니다. 예를 들어 "조의 차고" 회사 이름에는 작은따옴표 엔터티에 의해 교체 해야 합니다. 실제 행은 다음과 유사 합니다.  
   
 ```  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="binary"></a>이진  
  이진 데이터 (즉, 두 개의 문자를 1 바이트 맵, 한 문자를 니블) 인코딩된 bin.hex입니다.  
   
-## <a name="datetime"></a>DateTime  
+## <a name="datetime"></a>과 같이 지원되는  
  Variant VT_DATE 형식 XML 데이터 데이터 형식으로 직접 지원 되지 않습니다. 올바른 데이터와 시간 구성 요소를 포함 하는 날짜 형식은 yyyy-m m-ddThh:mm:ss 합니다.  
   
  XML에 지정 된 날짜 형식에 대 한 자세한 내용은 참조는 [W3C XML 데이터 사양](https://go.microsoft.com/fwlink/?LinkId=5692)합니다.  

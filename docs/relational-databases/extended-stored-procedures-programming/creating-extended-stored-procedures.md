@@ -17,16 +17,16 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], creating
 - messages [SQL Server], extended stored procedures
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66111dcdc5c69df0edbda0f57143873c89e12ac1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2f70abd5174790d445e4b3854bcb6efd8576ff83
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-extended-stored-procedures"></a>확장 저장 프로시저 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
  확장 저장 프로시저는 프로토타입이 다음과 같은 함수입니다.  
   
- SRVRETCODE *xp_extendedProcName* **(**SRVPROC  **\*);**  
+ SRVRETCODE *xp_extendedProcName* **(**SRVPROC **\*);**  
   
  접두사 xp_는 필요에 따라 사용할 수 있습니다. 확장 저장 프로시저의 이름은 서버에 설치된 코드 페이지/정렬 순서에 관계없이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 참조할 때는 대/소문자를 구분합니다. DLL을 빌드하는 경우 다음 작업을 수행합니다.  
   

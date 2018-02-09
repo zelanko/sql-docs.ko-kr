@@ -8,10 +8,12 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XQuery
 - XQuery, about XQuery
@@ -19,21 +21,21 @@ helpviewer_keywords:
 - XML [SQL Server], XQuery
 - queries [XML in SQL Server], XQuery
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c13cc549ad05caf3f866f5e1574033b350bdd47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5c242348870d6b6862e02cc8d14ec1fdc184d62e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 언어 참조(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[tsql](../includes/tsql-md.md)]쿼리에 사용 되는 XQuery 언어의 하위 집합을 지원는 **xml** 데이터 형식입니다. 이 XQuery 구현은 XQuery에 대한 2004년 7월 초안을 따릅니다. 이 언어는 Microsoft를 비롯한 주요 데이터베이스 공급업체의 참여 하에 W3C(World Wide Web Consortium)에서 개발 중에 있습니다. W3C 사양은 W3C 권장 사양이 되기 전에 향후 개정을 거칠 수 있기 때문에 이 구현은 최종 권장 사양과 다를 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되는 XQuery의 하위 집합에 대한 의미 및 구문에 대해 간단히 설명합니다.  
+  [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리에 사용 되는 XQuery 언어의 하위 집합을 지원는 **xml** 데이터 형식입니다. 이 XQuery 구현은 XQuery에 대한 2004년 7월 초안을 따릅니다. 이 언어는 Microsoft를 비롯한 주요 데이터베이스 공급업체의 참여 하에 W3C(World Wide Web Consortium)에서 개발 중에 있습니다. W3C 사양은 W3C 권장 사양이 되기 전에 향후 개정을 거칠 수 있기 때문에 이 구현은 최종 권장 사양과 다를 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되는 XQuery의 하위 집합에 대한 의미 및 구문에 대해 간단히 설명합니다.  
   
  자세한 내용은 참조는 [W3C XQuery 1.0 언어 사양](http://go.microsoft.com/fwlink/?LinkId=48846)합니다.  
   

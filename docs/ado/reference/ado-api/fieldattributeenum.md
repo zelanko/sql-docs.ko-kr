@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FieldAttributeEnum
-helpviewer_keywords: FieldAttributeEnum enumeration [ADO]
+f1_keywords:
+- FieldAttributeEnum
+helpviewer_keywords:
+- FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b5a1783b5906b53f1c092418ea22d2cbc0f51e6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e2b737b179a47aa28196bf8ff334dfe3256f91ef
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="fieldattributeenum"></a>파생
+# <a name="fieldattributeenum"></a>FieldAttributeEnum
 하나 이상의 특성을 지정 하는 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|공급자 필드 값을 캐시 하는 캐시에서 후속 읽기 했는지 나타냅니다.|  
 |**adFldFixed**|0x10|고정 길이 데이터 필드에 포함 되어 있음을 나타냅니다.|  
@@ -50,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 |**adFldUpdatable**|0x4|필드에 쓸 수 있는지를 나타냅니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  

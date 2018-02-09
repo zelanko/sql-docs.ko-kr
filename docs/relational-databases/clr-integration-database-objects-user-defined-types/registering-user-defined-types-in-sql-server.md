@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - UDTs [CLR integration], maintaining
 - user-defined types [CLR integration], maintaining
@@ -34,19 +35,20 @@ helpviewer_keywords:
 - UDTs [CLR integration], registering
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7402b0f36f4d8b5ea0a554d7c82f1ff2cbaad19
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 49a0a9d7c9bf8d023b748a34b622ba15e6406233
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server의 사용자 정의 형식 등록
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 정의 형식 (UDT)를 사용 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 등록 해야 합니다. UDT를 등록하려면 해당 형식을 사용할 데이터베이스에 어셈블리를 등록하고 형식을 만듭니다. UDT는 범위가 단일 데이터베이스로 한정되며, 데이터베이스마다 동일한 어셈블리와 UDT를 등록하지 않는 한 여러 데이터베이스에 사용할 수 없습니다. UDT 어셈블리가 등록되고 형식이 만들어지면 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 클라이언트 코드에 UDT를 사용할 수 있습니다. 자세한 내용은 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+사용자 정의 형식 (UDT)를 사용 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 등록 해야 합니다. UDT를 등록하려면 해당 형식을 사용할 데이터베이스에 어셈블리를 등록하고 형식을 만듭니다. UDT는 범위가 단일 데이터베이스로 한정되며, 데이터베이스마다 동일한 어셈블리와 UDT를 등록하지 않는 한 여러 데이터베이스에 사용할 수 없습니다. UDT 어셈블리가 등록되고 형식이 만들어지면 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 클라이언트 코드에 UDT를 사용할 수 있습니다. 자세한 내용은 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Visual Studio를 사용하여 UDT 배포  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio를 사용하면 UDT를 간편하게 배포할 수 있습니다. 그러나 배포 시나리오가 복잡하거나 높은 유연성이 요구되는 경우에는 이 항목에서 설명하는 대로 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해야 합니다.  
@@ -182,7 +184,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  와 연결 된 첫 번째 개체와 각 개체를 식별 하는 번호는 주어진 **assembly_id** 1의 값이 지정 되 고 있습니다. 같은 연결 개체가 여러 개 있는 경우 **assembly_id**차례로 **file_id** 값은 1 씩 증가 합니다.  
   
- **콘텐츠**  
+ **content**  
  어셈블리 또는 파일의 16진수 표현입니다.  
   
  콘텐츠를 변환 하려면 CAST 또는 CONVERT 함수를 사용할 수는 **콘텐츠** 읽기 쉬운 텍스트로 변환할 열입니다. 다음 쿼리는 WHERE 절에 이름을 사용하여 결과 집합을 단일 행으로 제한함으로써 Point.cs 파일의 내용을 읽기 쉬운 텍스트로 변환합니다.  
@@ -220,7 +222,7 @@ SELECT CAST(content AS varchar(8000))
   
  Udt를 사용 하기 위한 조치를 취할 필요가 없습니다 참고 때 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 작업 테이블을 만듭니다는 **tempdb** 시스템 데이터베이스입니다. 테이블 변수, 커서의 처리가 포함 및 사용자 정의 테이블 반환 함수 등이 포함 된 Udt를 투명 하 게 활용 **tempdb**합니다. 그러나의 임시 테이블을 명시적으로 만들면 **tempdb** UDT 열을 정의 하는 다음에 UDT를 등록 합니다 **tempdb** 사용자 데이터베이스의 경우와 동일 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Stream::Charset
-helpviewer_keywords: Charset property [ADO]
+f1_keywords:
+- _Stream::Charset
+helpviewer_keywords:
+- Charset property [ADO]
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efa963c26617a382270ccf2ed25f1aeb5c9785d4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 43d23eda107933ab659324de412db0e101f8da00
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="charset-property-ado"></a>문자 집합 속성 (ADO)
 문자 집합을 나타냅니다는 텍스트의 내용을 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 의 내부 버퍼에 저장 하기 위해 변환 되어야 합니다는 **스트림** 개체입니다.  

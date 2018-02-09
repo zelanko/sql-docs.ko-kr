@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Connect property [ADO]
+helpviewer_keywords:
+- Connect property [ADO]
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd828ee21628a5c0b00566c47b9b7dedcb5b0b65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd6987efb685449d5decde777d4f67ba465a545e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-property-rds"></a>속성 (RDS) 연결
 쿼리 및 업데이트 작업은 실행 하는 데이터베이스 이름을 나타냅니다.  
@@ -42,7 +44,7 @@ Run time: DataControl.Connect = "ConnectionString"
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *연결 문자열*  
+ *ConnectionString*  
  유효한 연결 문자열입니다. 연결 문자열에 대 한 자세한 내용은 참조는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성 또는 공급자 설명서입니다.  
   
 > [!NOTE]

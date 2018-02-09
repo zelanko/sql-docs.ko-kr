@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0cb92bcd2ea9580fa8824a50b15a1f60cdf35c3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 06b3a79e97c50df8c7eed17b1343030ca2280426
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-sql-section"></a>사용자 지정 파일 SQL 섹션
 **sql** 섹션에는 클라이언트 명령 문자열을 대체 하는 새로운 SQL 문자열 포함 될 수 있습니다. 섹션에서 SQL 문자열이 없는 섹션 무시 됩니다.  
@@ -48,7 +49,7 @@ SQL = " "
 ## <a name="syntax"></a>구문  
  대체 SQL 문자열 항목 형식입니다.  
   
- **SQL =**   
+ **SQL=**   
  ***sqlString***  
   
 |부분|Description|  

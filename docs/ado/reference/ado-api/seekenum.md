@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: SeekEnum
-helpviewer_keywords: SeekEnum enumeration [ADO]
+f1_keywords:
+- SeekEnum
+helpviewer_keywords:
+- SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6f60ed06b2f23bceec62822f43b77f5c10c3ce1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 40c15bd116b4e0a7ba13127dc48ec18421b5924b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="seekenum"></a>SeekEnum
 유형을 지정 [Seek](../../../ado/reference/ado-api/seek-method.md) 실행할 수 있습니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
-|**adSeekFirstEQ**|1|같은 첫 번째 키를 찾고 *KeyValues*합니다.|  
+|**adSeekFirstEQ**|1.|같은 첫 번째 키를 찾고 *KeyValues*합니다.|  
 |**adSeekLastEQ**|2|검색 (seek)의 마지막 키와 같지 *KeyValues*합니다.|  
 |**adSeekAfterEQ**|4|같은 중 하나는 키를 찾고 *KeyValues* 위나 바로 뒤와 일치 하는 었어야 합니다.|  
 |**adSeekAfter**|8|키를 where 직후 검색 (seek) 일치 하는 *KeyValues* 발생 합니다.|  
@@ -39,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 |**adSeekBefore**|32|일치 하는 경우 키 바로 앞 seek *KeyValues* 발생 합니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  

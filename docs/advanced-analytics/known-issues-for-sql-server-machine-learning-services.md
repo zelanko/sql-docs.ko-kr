@@ -1,6 +1,6 @@
 ---
 title: "컴퓨터 학습 서비스의 알려진 문제 | Microsoft Docs"
-ms.date: 01/31/2018
+ms.date: 02/05/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5a262bb73d5989ebf3ad961ee7c2e84e75415f26
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2c3bd4ada6d234015ef1ab4d8b474f7ab45c4b85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>컴퓨터 학습 서비스의 알려진된 문제
 
@@ -71,17 +71,31 @@ R 패키지 문제를 방지 하려면 업그레이드할 수 있습니다에 �
 
 **적용 대상:** R server 9.0.0 버전 SQL Server 2016 R Services 또는 이전 버전
 
+### <a name="r-components-missing-from-cu3-setup"></a>C u 3 설치 프로그램에서 누락 된 R 구성 요소
+
+Azure 가상 컴퓨터 수가 제한 된 SQL Server와 함께 포함 되어야 하는 R 설치 파일 없이 프로 비전 됩니다. 이 문제는 2018-01-23 2018-01-05에서 기간에 프로 비전 된 가상 컴퓨터에 적용 됩니다. 또한이 문제를 적용 한 경우 SQL Server 2017 CU3 업데이트 기간 동안 2018-01-05에서 2018-01-23 온-프레미스 설치를 달라질 수 있습니다.
+
+서비스 릴리스는 올바른 버전의 R 설치 파일이 포함 된 제공 되었습니다.
+
++ [SQL Server 2017 KB4052987 용 누적 업데이트 패키지 3](https://www.microsoft.com/en-us/download/details.aspx?id=56128)합니다.
+
+구성 요소를 설치 하 고 SQL Server 2017 CU3를 복구 하려면 CU3를 제거 하 고 업데이트 된 버전을 다시 설치 해야:
+
+1. R 설치 관리자를 포함 하는 업데이트 된 CU3 설치 파일을 다운로드 합니다.
+2. C u 3을 제거 합니다. 제어판에서 검색 **업데이트 제거**, 한 다음 "SQL Server 2017 (KB4052987) (64 비트)에 대 한 핫픽스 3015"를 선택 합니다. 제거 단계를 진행 합니다.
+3. 방금 다운로드 한 KB4052987에 대 한 업데이트를 두 번 클릭 하 여 CU3 업데이트를 다시 설치: `SQLServer2017-KB4052987-x64.exe`합니다. 설치 지침을 따릅니다.
+
 ### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>SQL Server 2017 CTP 2.0 이상 오프 라인 설치에서 Python 구성 요소를 설치할 수 없습니다.
 
 인터넷 액세스가 없는 컴퓨터에서 SQL Server 2017의 시험판 버전을 설치 하는 경우 설치 관리자 다운로드 된 Python 구성 요소 위치를 묻는 페이지를 표시 하려면 실패할 수 있습니다. 이러한 상황에서 컴퓨터 학습 서비스 기능을 사용 하지만 Python 구성 요소가 아닌를 설치할 수 있습니다.
 
-릴리스 버전에서이 문제는 해결 됩니다. 에 대 한 해결책으로이 문제를 발생 하는 경우 설치 프로그램의 기간에 대 한 인터넷 액세스를 일시적으로 사용할 수 있습니다. 오른쪽에 이러한 제한이 적용 되지 않습니다.
+릴리스 버전에서이 문제는 해결 됩니다. 또한이 제한은 R 구성 요소에 적용 되지 않습니다.
 
 **적용 대상:** python 2017 SQL Server
 
 ### <a name="bkmk_sqlbindr"></a>사용 하 여 클라이언트는 이전 버전의 SQL Server R Services에 연결 하는 경우 호환 되지 않는 버전의 경고[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-SQL Server 2016 계산 컨텍스트에서 R 코드를 실행 하면 다음과 같은 오류가 표시 될 수 있습니다.
+R 코드를 실행 하면 SQL Server 2016 계산 컨텍스트, 다음과 같은 오류가 표시 될 수 있습니다.
 
 > *컴퓨터에서 Microsoft R Server 버전 8.0.3과 호환되지 않는 Microsoft R Client 버전 9.0.0을 실행 중입니다. 호환되는 버전을 다운로드하여 설치하세요.*
 
@@ -170,13 +184,13 @@ R 솔루션에 영향을 줄 수 있는 기타 알려진된 문제에 대 한 �
 
 와 같은 기본이 아닌 위치에 설치 된 SQL Server 인스턴스의 경우 외부에서 `Program Files` 폴더에는 경고 ACCESS_DENIED가 패키지를 설치 하는 스크립트를 실행 하려고 할 때 발생 합니다. 예를 들어
 
-> *In normalizePath(path.expand(path), winslash, mustWork) : path[2]="~ExternalLibraries/R/8/1": Access is denied*
+> *`normalizePath(path.expand(path), winslash, mustWork)` : 경로 [2] = "~ExternalLibraries/R/8/1": 액세스가 거부 되었습니다.*
 
 R 함수는 경로 읽으려고 시도 및 실패 이유는 기본 제공 users 그룹 **SQLRUserGroup**, 읽기 권한이 없습니다. 경고 발생 하는 현재 R 스크립트 실행을 차단 하지 않습니다 되지만 사용자는 다른 R 스크립트를 실행할 때마다 경고가 반복적으로 되풀이 수 있습니다.
 
 SQL Server의 기본 위치에 설치한 경우이 오류가 발생 하지 않습니다, 모든 Windows 사용자 읽기 권한이에 있어야 하기 때문에 `Program Files` 폴더입니다.
 
-이 문제는 향후 서비스 릴리스에서 해결 될 예정입니다. 이 문제를 해결 제공 그룹 **SQLRUserGroup**의 모든 상위 폴더에 대 한 읽기 권한이 있는 `ExternalLibraries`합니다.
+이 문제는 향후 서비스 릴리스에서 ia 해결 합니다. 이 문제를 해결 제공 그룹 **SQLRUserGroup**의 모든 상위 폴더에 대 한 읽기 권한이 있는 `ExternalLibraries`합니다.
 
 ### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>RevoScaleR의 이전 및 새 버전 간 serialization 오류
 
@@ -192,13 +206,13 @@ API 버전은 동일 하거나 오래 된 serialization 함수로 serialization 
 
 즉, serialization 및 deserialization 작업에 대 한 RevoScaleR의 동일한 버전을 사용 합니다.
 
-### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>실시간 점수 매기기 제대로 처리 하지 않습니다 트리 및 포리스트 모델 learningRate 매개 변수
+### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>실시간 점수 매기기 제대로 처리 하지 않습니다는 _learningRate_ 트리 및 포리스트 모델의 매개 변수
 
 의사 결정 트리 또는 의사 결정 포리스트 메서드를 사용 하 여 모델을 만들고 학습 속도 지정 하는 경우 사용 하는 경우 일관성 없는 결과가 표시 될 수 있습니다 `sp_rxpredict` 또는 SQL `PREDICT` 함수를 사용 하 여 비교할 때 `rxPredict`합니다.
 
 원인을 API에서 오류 직렬화 프로세스 모델링 하 한으로 제한 됩니다는 `learningRate` 매개 변수: 예를 들어 [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees), 또는
 
-이 문제는 향후 서비스 릴리스에서 수정 될 예정입니다.
+이 문제는 향후 서비스 버전에서입니다.
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>R 작업에 대한 프로세서 선호도 제한
 
@@ -376,7 +390,7 @@ R --max-ppsize=500000
 
 + 미리 학습 된 모델을 설치 하면 사용자 지정 위치를 선택 합니다.
 + 가능 하면 C:\SQL\MSSQL14 같은 더 짧은 경로 사용 하 여 사용자 지정 설치 경로에서 SQL Server 인스턴스를 설치 합니다. MSSQLSERVER입니다.
-+ Windows 유틸리티를 사용 하 여 [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) 모델 파일을 경로가 더 짧은 매핑되는 하드 링크를 합니다. 
++ Windows 유틸리티를 사용 하 여 [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) 모델 파일을 경로가 더 짧은 매핑되는 하드 링크를 만들려고 합니다.
 + 최신 서비스 릴리스 버전으로 업데이트 합니다.
 
 ### <a name="error-when-saving-serialized-model-to-sql-server"></a>저장 하는 동안 오류가 발생 했습니다. SQL Server에는 모델을 직렬화

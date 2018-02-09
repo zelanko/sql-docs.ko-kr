@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 924542a970ac63df74e7bb725b4f7a171f74e95a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 설치 지침
 
@@ -73,6 +73,13 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 - [Ubuntu 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-docker.md)
 - [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+
+## <a id="repositories"></a>소스 저장소 구성
+
+를 설치 하거나 SQL Server를 업그레이드 하는 경우 구성 된 Microsoft 리포지토리에서 SQL Server 2017의 최신 버전을 가져옵니다. 퀵 스타트를 사용 하 여 **CU (누적 업데이트)** 리포지토리 합니다. 하지만 대신 구성할 수 있습니다는 **GDR** 저장소입니다. 저장소 및 구성 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Linux에서 SQL Server에 대 한 저장소를 구성](sql-server-linux-change-repo.md)합니다.
+
+> [!IMPORTANT]
+> CTP 또는 SQL Server 2017의 RC 버전을 이전에 설치한 경우 미리 보기 리포지토리를 제거 하 고는 GA (일반 공급) 하나를 등록 해야 합니다. 자세한 내용은 참조 [Linux에서 SQL Server에 대 한 저장소를 구성](sql-server-linux-change-repo.md)합니다.
 
 ## <a id="upgrade"></a>SQL Server를 업데이트 합니다.
 
@@ -130,77 +137,6 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 ```bash
 sudo rm -rf /var/opt/mssql/
 ```
-
-## <a id="repositories"></a>소스 저장소 구성
-
-를 설치 하거나 SQL Server를 업그레이드 하는 경우 구성 된 Microsoft 리포지토리에서 SQL Server의 최신 버전을 가져옵니다.
-
-### <a name="repository-options"></a>저장소 옵션
-
-같은 두 가지 유형의 각 배포에 대 한 저장소는
-
-- **CU (누적 업데이트)**: The CU (누적 업데이트) 저장소 해당 릴리스 이후 기본 SQL Server 릴리스 및 버그 수정 또는 향상 된 기능에 대 한 패키지를 포함 합니다. 누적 업데이트는 SQL Server 2017 등의 릴리스 버전에 고유 합니다. 일반 주기로 릴리스되는 합니다.
-
-- **GDR**: The GDR 리포지토리 해당 릴리스 이후는 기본 SQL Server 릴리스만 주요 수정 프로그램 및 보안 업데이트에 대 한 패키지를 포함 합니다. 이러한 업데이트는 다음 CU 릴리스로 추가 됩니다.
-
-각 CU 및 GDR 릴리스에 전체 SQL Server 패키지 및 해당 저장소에 대 한 모든 이전 업데이트를 포함합니다. CU 릴리스에 GDR 릴리스의 업데이트는 SQL Server에 대 한 구성된 저장소를 변경 하 여 지원 됩니다. 수도 있습니다 [다운 그레이드](#rollback) 주요 버전 내에서 모든 릴리스를 (예: 2017). 업데이트 CU에서 릴리스를 GDR 릴리스 지원 되지 않습니다.
-
-### <a name="check-your-configured-repository"></a>구성 된 저장소를 확인 합니다.
-
-어떤 저장소 구성 되어 있는지 확인 하려는 경우 다음 플랫폼에 종속 된 기술을 사용 합니다.
-
-| 플랫폼 | 절차 |
-|-----|-----|
-| RHEL | 1. 파일을 볼는 **/etc/yum.repos.d** 디렉터리:`sudo ls /etc/yum.repos.d`<br/>2. 와 같은 SQL Server 디렉터리를 구성 하는 파일을 찾도록 **mssql server.repo**합니다.<br/>3. 파일의 내용을 출력.`sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4. **이름** 속성은 구성된 저장소입니다.|
-| SLES | 1. `sudo zypper info mssql-server` 명령을 실행합니다.<br/>2. **리포지토리** 속성은 구성된 저장소입니다. |
-| Ubuntu | 1. `sudo cat /etc/apt/sources.list` 명령을 실행합니다.<br/>2. Mssql 서버에 대 한 패키지 URL을 검사 합니다. |
-
-리포지토리 URL의 끝을 저장소 유형을 확인합니다.
-
-- **mssql 서버**: 미리 보기 저장소입니다.
-- **mssql-server-2017**: CU repository.
-- **mssql 서버-2017 gdr**: GDR 저장소입니다.
-
-### <a name="change-the-source-repository"></a>소스 저장소 변경
-
-CU 또는 GDR 저장소를 구성 하려면 다음 단계를 사용 합니다.
-
-> [!NOTE]
-> [퀵 스타트](#platforms) CU 리포지토리를 구성 합니다. 이러한 자습서를 수행 하는 경우 다음 단계를 사용 하 여 CU 저장소를 사용 하 여 계속 필요가 없습니다. 이러한 단계는만 구성 된 저장소를 변경 하는 데 필요 합니다.
-
-1. 필요한 경우 이전에 구성 된 저장소를 제거 합니다.
-
-   | 플랫폼 | 리포지토리 | 저장소 제거 명령 |
-   |---|---|---|
-   | RHEL | **모두** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | **CTP** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-   | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
-   | Ubuntu | **CTP** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
-   | | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
-   | | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
-
-1. 에 대 한 **Ubuntu만**, 공용 리포지토리 GPG 키를 가져옵니다.
-
-   ```bash
-   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-   ```
-
-1. 새 저장소를 구성 합니다.
-
-   | 플랫폼 | 리포지토리 | Command |
-   |-----|-----|-----|
-   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-   | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-   | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
-
-1. [설치](#platforms) 또는 [업데이트](#upgrade) 새 저장소에서 SQL Server 및 모든 관련 패키지 합니다.
-
-   > [!IMPORTANT]
-   > 와 같은 설치 자습서 중 하나를 사용 하기로 선택한 경우이 시점에서 [빠른 시작 자습서](#platforms), 대상 저장소 방금 구성한 기억 합니다. 이 자습서에서 해당 단계를 반복 하지 않습니다. 이 빠른 시작 자습서 CU 리포지토리를 사용 하기 때문에 GDR 저장소를 구성 하는 경우에 특히 그렇습니다.
 
 ## <a id="unattended"></a>무인된 설치
 

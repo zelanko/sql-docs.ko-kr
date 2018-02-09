@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: DeleteRule property [ADOX], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- DeleteRule property [ADOX], VC++ example
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39e22b86ce68f3fdb4a608097d4da3683cef120b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 263a6d420d29925a48b467eab12ecb7f36676ed6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 속성 예제 (VC + +)
 이 예제에서는 [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) 속성은 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체입니다. 새 코드 추가 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 설정 하는 새 기본 키를 다음 정의 **DeleteRule** 를 **adRICascade**합니다.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - syslogins
 - sys.syslogins
 - sys.syslogins_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.syslogins compatibility view
 - syslogins system table
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea9ceaa622c6ad7b39bed9c3e3d2439e56a57210
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b5b0d9ec9b28236816062fefdb0d022a0c9a498
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +58,8 @@ ms.lasthandoff: 11/17/2017
 |**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|사용자의 로그인 이름입니다.|  
 |**dbname**|**sysname**|연결 시 사용자의 기본 데이터베이스 이름입니다.|  
-|**암호**|**nvarchar (128)**|NULL을 반환합니다.|  
-|**언어**|**sysname**|사용자의 기본 언어입니다.|  
+|**password**|**nvarchar(128)**|NULL을 반환합니다.|  
+|**language**|**sysname**|사용자의 기본 언어입니다.|  
 |**denylogin**|**int**|1 = 로그인이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 또는 그룹이며 액세스가 거부되었습니다.|  
 |**hasaccess**|**int**|1 = 로그인에 대한 서버 액세스가 허용되었습니다.|  
 |**isntname**|**int**|1 = 로그인이 Windows 사용자 또는 그룹입니다.<br /><br /> 0 = 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인입니다.|  
@@ -71,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |**diskadmin**|**int**|1 = 로그인이의 멤버는 **diskadmin** 고정된 서버 역할입니다.|  
 |**dbcreator**|**int**|1 = 로그인이의 멤버는 **dbcreator** 고정된 서버 역할입니다.|  
 |**bulkadmin**|**int**|1 = 로그인이의 멤버는 **bulkadmin** 고정된 서버 역할입니다.|  
-|**loginname**|**nvarchar (128)**|사용자의 로그인 이름입니다. 이전 버전과의 호환성을 위해 제공됩니다.|  
+|**loginname**|**nvarchar(128)**|사용자의 로그인 이름입니다. 이전 버전과의 호환성을 위해 제공됩니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [시스템 뷰 &#40; 시스템 테이블 매핑 Transact SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

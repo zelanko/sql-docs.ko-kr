@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a09bacb8adeabaefd925e34b613bef3d2dad5097
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 24b1cac0950ec41087998edfe2c1393509cac8ab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="running-the-address-book-sample-application"></a>주소 주소록 샘플 응용 프로그램 실행
 > [!IMPORTANT]
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  Internet Explorer 4.0 이상 버전에서는 다음 주소를 입력 합니다.  
   
-     **http://** *웹 서버* **/RDS/AddressBook/AddrBook.asp**  
+     **http://** *webserver* **/RDS/AddressBook/AddrBook.asp**  
   
      여기서 *웹 서버* RDS 서버 구성 요소 설치 되어 있는 웹 서버 이름입니다.  
   

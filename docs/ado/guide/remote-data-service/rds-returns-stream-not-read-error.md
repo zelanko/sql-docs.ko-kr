@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: stream not read error in RDS [ADO]
+helpviewer_keywords:
+- stream not read error in RDS [ADO]
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40ddc0352e3964b3a2cb654c0feb01ed3a13175a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a14606f5ac503494159a70129e13b53b51758e72
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>반환 &quot;하지 읽기 스트림&quot; 오류
 "Stream 개체 로드할 수 비어 있는 경우 또는 현재 위치가 스트림 끝에 때문입니다. 비어 있지 않은 스트림에 대 한 현재 위치를 위치 속성으로 설정 합니다. 스트림을 비어 있는지를 확인 하려면 크기 속성을 확인 합니다. "  

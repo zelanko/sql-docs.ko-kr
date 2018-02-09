@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Schema section [ADO]
+helpviewer_keywords:
+- Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65b56003d7fd7723dce57a0c8c6fae2ecee6da06
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 51c10f0fb21bdab8c83d799d635153b62c2c6e58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schema-section"></a>스키마 섹션
 스키마 섹션이 필요 합니다. 이전 예제와 같이 ADO 업데이트에 대 한 가능한 한 데이터 값의 의미 체계를 유지 하기 위해 각 열에 대 한 메타 데이터를 작성 합니다. 그러나 XML을 로드 하려면 ADO 하기만 열과 소속 된 행 집합의 이름을 합니다. 다음은 최소한의 스키마의 예가입니다.  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/21/2017
  마찬가지로, 있기 때문에 없는 별칭에 대해 정의 `CompanyName` 이전 예에서 `CompanyName` 문서 전체에서 일관 되 게 사용 해야 합니다.  
   
 ## <a name="data-types"></a>데이터 형식  
- Dt: type 특성을 가진 열에는 데이터 형식에 적용할 수 있습니다. 허용 되는 XML 형식은 하기 위한 최선의 가이드의 데이터 형식 섹션을 참조 하십시오.는 [W3C XML 데이터 사양](http://www.w3.org/TR/1998/NOTE-XML-data/)합니다. 두 가지 방법으로 데이터 형식을 지정할 수 있습니다: 열 정의 자체에서 직접 dt: type 특성을 지정 하거나 열 정의의 중첩 요소로 방법 사용 합니다. 예:  
+ Dt: type 특성을 가진 열에는 데이터 형식에 적용할 수 있습니다. 허용 되는 XML 형식은 하기 위한 최선의 가이드의 데이터 형식 섹션을 참조 하십시오.는 [W3C XML 데이터 사양](http://www.w3.org/TR/1998/NOTE-XML-data/)합니다. 두 가지 방법으로 데이터 형식을 지정할 수 있습니다: 열 정의 자체에서 직접 dt: type 특성을 지정 하거나 열 정의의 중첩 요소로 방법 사용 합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 <s:AttributeType name="Phone" >  

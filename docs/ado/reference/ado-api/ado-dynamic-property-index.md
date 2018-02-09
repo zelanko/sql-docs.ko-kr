@@ -1,24 +1,26 @@
 ---
 title: "ADO 동적 속성 인덱스 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: dynamic properties [ADO], index
+helpviewer_keywords:
+- dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: f126cc040174725ded02bd320e54a76536c0d516
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: 5c56ef6d6a146d1613bdd11618fadb3b11296fe7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 동적 Property 인덱스
 데이터 공급자, 서비스 공급자 및 서비스 구성 요소에는 동적 속성을 추가할 수는 **속성** 는 열려 있지 않은 각종 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 또한 지정 된 공급자는 이러한 개체를 열 때 추가 속성을 삽입할 수 있습니다. 에 나열 된 이러한 속성 중 일부는 [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md) 섹션. 자세히가 특정 공급자에 나열 된 [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) 섹션.  
@@ -36,63 +38,63 @@ ms.lasthandoff: 11/09/2017
 |비동기 가능 커밋|DBPROP_ASYNCTNXCOMMIT|  
 |격리 수준 자동 커밋|DBPROP_SESS_AUTOCOMMITISOLEVELS|  
 |카탈로그 위치|DBPROP_CATALOGLOCATION과 같습니다|  
-|카탈로그 용어가|DBPROP_CATALOGTERM과 같습니다|  
-|열 정의|DBPROP_COLUMNDEFINITION과 같습니다|  
+|카탈로그 용어가|DBPROP_CATALOGTERM|  
+|열 정의|DBPROP_COLUMNDEFINITION|  
 |연결 제한 시간|DBPROP_INIT_TIMEOUT|  
 |현재 카탈로그|DBPROP_CURRENTCATALOG|  
 |데이터 원본|DBPROP_INIT_DATASOURCE|  
 |Data Source Name|DBPROP_DATASOURCENAME|  
 |데이터 소스 개체 스레딩 모델|DBPROP_DSOTHREADMODEL|  
-|DBMS 이름|DBPROP_DBMSNAME과 같습니다|  
-|DBMS 버전|DBPROP_DBMSVER와 같습니다|  
+|DBMS 이름|DBPROP_DBMSNAME|  
+|DBMS 버전|DBPROP_DBMSVER|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|  
-|지원 기준으로 그룹화|DBPROP_GROUPBY와 같습니다|  
+|지원 기준으로 그룹화|DBPROP_GROUPBY|  
 |유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES와 같습니다|  
-|식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE와 같습니다|  
+|식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE|  
 |초기 카탈로그|DBPROP_INIT_CATALOG|  
 |격리 수준|DBPROP_SUPPORTEDTXNISOLEVELS|  
-|격리 보존|DBPROP_SUPPORTEDTXNISORETAIN과 같습니다|  
+|격리 보존|DBPROP_SUPPORTEDTXNISORETAIN|  
 |로캘 ID|DBPROP_INIT_LCID|  
 |위치|DBPROP_INIT_LOCATION|  
-|최대 인덱스 크기|DBPROP_MAXINDEXSIZE와 같습니다|  
-|최대 행 크기|DBPROP_MAXROWSIZE와 같습니다|  
-|BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB와 같습니다|  
-|SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT와 같습니다|  
+|최대 인덱스 크기|DBPROP_MAXINDEXSIZE|  
+|최대 행 크기|DBPROP_MAXROWSIZE|  
+|BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB|  
+|SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|  
 |모드|DBPROP_INIT_MODE|  
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|  
 |여러 결과|DBPROP_MULTIPLERESULTS|  
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|  
-|여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE와 같습니다|  
-|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION과 같습니다|  
-|NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR와 같습니다|  
+|여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE|  
+|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION|  
+|NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR|  
 |OLE DB 서비스|DBPROP_INIT_OLEDBSERVICES|  
 |OLE DB 버전|DBPROP_PROVIDEROLEDBVER|  
 |OLE 개체 지원|DBPROP_OLEOBJECTS|  
 |열린 행 집합 지원|DBPROP_OPENROWSETSUPPORT|  
-|선택 목록의 열으로 정렬|DBPROP_ORDERBYCOLUMNSINSELECT와 같습니다|  
+|선택 목록의 열으로 정렬|DBPROP_ORDERBYCOLUMNSINSELECT|  
 |출력 매개 변수 가용성|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
 |Ref 접근자로 전달|DBPROP_BYREFACCESSORS|  
 |암호|DBPROP_AUTH_PASSWORD|  
 |보안 정보 유지|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
-|영구 ID 유형|DBPROP_PERSISTENTIDTYPE과 같습니다|  
-|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR와 같습니다|  
+|영구 ID 유형|DBPROP_PERSISTENTIDTYPE|  
+|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR|  
 |커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR와 같습니다|  
-|프로시저 용어가|DBPROP_PROCEDURETERM과 같습니다|  
+|프로시저 용어가|DBPROP_PROCEDURETERM|  
 |프롬프트|DBPROP_INIT_PROMPT|  
 |공급자 이름|DBPROP_PROVIDERFRIENDLYNAME|  
 |Provider Name|DBPROP_PROVIDERFILENAME|  
 |공급자 버전|DBPROP_PROVIDERVER|  
-|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY와 같습니다|  
+|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY|  
 |명령 시 행 집합 변환|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
 |스키마 용어|DBPROP_SCHEMATERM|  
-|스키마 사용|DBPROP_SCHEMAUSAGE와 같습니다|  
+|스키마 사용|DBPROP_SCHEMAUSAGE|  
 |SQL 지원|DBPROP_SQLSUPPORT|  
 |구조적된 저장소|DBPROP_STRUCTUREDSTORAGE|  
-|하위 쿼리 지원|DBPROP_SUBQUERIES와 같습니다|  
-|테이블 용어|DBPROP_TABLETERM과 같습니다|  
-|트랜잭션 DDL|DBPROP_SUPPORTEDTXNDDL과 같습니다|  
+|하위 쿼리 지원|DBPROP_SUBQUERIES|  
+|테이블 용어|DBPROP_TABLETERM|  
+|트랜잭션 DDL|DBPROP_SUPPORTEDTXNDDL|  
 |사용자 ID|DBPROP_AUTH_USERID|  
-|사용자 이름|DBPROP_USERNAME과 같습니다|  
+|사용자 이름|DBPROP_USERNAME|  
 |창 핸들|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>레코드 집합 동적 속성  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05191a1797a2aa09f7c7f740401655febcead998
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a25f9697d00a234bb98fe65eaaa2cd85520b45db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-errors"></a>ADO 오류
 **ErrorValueEnum** 상수는 ADO 오류 값을 설명 합니다. 이러한 값을 포함 하 여 열거 상수의 전체 목록은 참조 [부록 b: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)합니다. 이 섹션은 더 흥미로운 오류 중 일부를 검토 하 고, 또는 문제를 해결 하려면 솔루션을 발생 시킬 수 있는 특정 한 상황을 설명 합니다. 두는 **ErrorValueEnum** 상수 및 짧은 10 진수 양수 나열 됩니다.

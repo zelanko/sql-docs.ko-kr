@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: StayInSync property [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- StayInSync property [ADO], Visual Basic example
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da5fd23b485851ead589dc241c96dfc34a8c3556
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d67fd1c7399e79575f76da16e91cf972bf954b57
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 속성 예제 (VB)
 이 예제에서는 방법을 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성에 액세스 하는 중 행을 계층적 용이 하 게 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

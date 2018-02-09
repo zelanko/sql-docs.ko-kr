@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: CreateObject method [ADO]
+helpviewer_keywords:
+- CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba9c2d9ee2c2cf0a646155e5d184640d1aa0283b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aeca3cd5d525a3712511a3d7fd59f82210c041e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createobject-method-rds"></a>CreateObject 메서드 (RDS)
 대상 비즈니스 개체에 대 한 프록시를 만들고에 대 한 포인터를 반환 합니다. 인터넷을 통해 요청 및 데이터를 보낼 비즈니스 개체와의 통신에 대 한 서버 쪽 스텁에 프록시 패키징하고 데이터입니다. In-process 구성 요소 개체에 대 한 프록시가 사용 되, 개체에 대 한 포인터만 제공 됩니다.  
@@ -36,16 +38,16 @@ ms.lasthandoff: 12/21/2017
   
 |프로토콜|구문|  
 |--------------|------------|  
-|HTTP|집합 개체 = DataSpace.CreateObject ("ProgId", "http://awebsrvr")|  
-|HTTPS|집합 개체 = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
-|DCOM|집합 개체 = DataSpace.CreateObject ("ProgId", "computername")|  
-|In-process|집합 개체 DataSpace.CreateObject = ("ProgId", "")|  
+|HTTP|Set object = DataSpace.CreateObject("ProgId", "http://awebsrvr")|  
+|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https://awebsrvr")|  
+|DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
+|In-process|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>매개 변수  
  *개체*  
  에 지정 된 형식의 개체로 계산 하는 개체 변수 *ProgID*합니다.  
   
- *데이터 공간*  
+ *DataSpace*  
  개체 변수를 나타내는 [.rds입니다 DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체를 새 개체의 인스턴스를 만드는 데 사용 합니다.  
   
  *ProgID*  

@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Optimize property [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Optimize property [ADO], Visual Basic example
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4fa44c4dcc87fb644b42d6b57439a6926dca83b5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0cbc84bfbbd4f6f26bf82bc9fe373606c965451a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="optimize-property-example-vb"></a>속성 예제 (VB)를 최적화 합니다.
 이 예제에서는 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 동적 **최적화** 속성입니다. ***zip*** 필드는 ***작성자*** 테이블에 ***Pubs*** 데이터베이스 인덱싱되지 않았습니다. 설정의 [최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 속성을 **True** 에 ***zip*** 의 성능을 개선 하는 인덱스를 작성 하는 ADO를 인증 하는 필드는 [찾을](../../../ado/reference/ado-api/find-method-ado.md)메서드.  

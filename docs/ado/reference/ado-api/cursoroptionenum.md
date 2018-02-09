@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: CursorOptionEnum
-helpviewer_keywords: CursorOptionEnum enumeration [ADO]
+f1_keywords:
+- CursorOptionEnum
+helpviewer_keywords:
+- CursorOptionEnum enumeration [ADO]
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c63c915bddd54bafecb20ac7d02595b6d18da84
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 93999724b38f670f8462ae62c9052b10028bf929
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 어떤 기능을 지정 된 [지원](../../../ado/reference/ado-api/supports-method.md) 메서드를 테스트 해야 합니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|지원 된 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드 새 레코드를 추가 합니다.|  
 |**adApproxPosition**|0x4000|지원 된 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 및 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) 속성입니다.|  
@@ -46,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 |**adUpdateBatch**|0x10000|에서는 일괄 처리 업데이트를 지원 ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 및 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 메서드)를 공급자에 대 한 변경의 그룹을 전송 합니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  

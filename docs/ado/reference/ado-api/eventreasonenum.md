@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: EventReasonEnum
-helpviewer_keywords: EventReasonEnum enumeration [ADO]
+f1_keywords:
+- EventReasonEnum
+helpviewer_keywords:
+- EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f4f863b81149b2cc8e6166be3cf61621fc1cc98
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a49c3aac3b2f37421df9a68ae01b16770c696993
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 발생할 이벤트를 발생 시킨 이유를 지정 합니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1|새 레코드를 추가 하는 작업입니다.|  
+|**adRsnAddNew**|1.|새 레코드를 추가 하는 작업입니다.|  
 |**adRsnClose**|9|작업 종료는 **레코드 집합**합니다.|  
 |**adRsnDelete**|2|작업 레코드를 삭제 합니다.|  
 |**adRsnFirstChange**|11|레코드에 첫 번째 변경 내용을 적용 하는 작업입니다.|  
@@ -48,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 |**adRsnUpdate**|3|기존 레코드를 업데이트 한 작업입니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  

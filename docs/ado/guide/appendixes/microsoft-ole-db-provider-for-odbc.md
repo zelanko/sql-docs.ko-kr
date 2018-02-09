@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44f3131bff34d35b334495c7c718eb513f5d88bf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 개요
 ADO 또는 RDS 프로그래머가 이상적인 것 모든 데이터에서 원본에서 OLE DB 인터페이스를 제공 ADO 데이터 원본으로 직접 호출할 수 있도록 합니다. 하지만 점점 더 많은 데이터베이스 공급 업체 OLE DB 인터페이스를 구현 하는 경우 일부 데이터 원본은이 방식으로 아직 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템 ODBC를 통해 액세스할 수 있습니다.
@@ -184,14 +185,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|사용할 수 없음|사용할 수 없음|읽기/쓰기|읽기/쓰기|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
-|[책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md)|사용할 수 없음|사용할 수 없음|읽기/쓰기|읽기/쓰기|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|사용할 수 없음|사용할 수 없음|읽기/쓰기|읽기/쓰기|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
-|[앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
-|[모두](../../../ado/reference/ado-api/cursortype-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
-|[Assert](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
+|[필터](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
-|[마샬링](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|읽기/쓰기|사용할 수 없음|읽기 전용|읽기 전용|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
@@ -206,26 +207,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |메서드|ForwardOnly|Dynamic|Keyset|정적|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|예|예|예|예|
-|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|예|예|예|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|예|예|예|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|예|예|예|
-|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니오|아니오|예|예|
-|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|예|예|예|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|예|예|예|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|예|예|예|
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|예|예|예|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니오|예|예|예|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니오|예|예|예|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|예|예|예|예|
-|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|예|예|예|
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|예|예|예|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니오|아니오|예|예|
-|[지원](../../../ado/reference/ado-api/supports-method.md)|예|예|예|예|
-|[Update](../../../ado/reference/ado-api/update-method.md)|예|예|예|예|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|예|예|예|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|아니오|사용자 계정 컨트롤|예|
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니오|사용자 계정 컨트롤|예|
+|[지원](../../../ado/reference/ado-api/supports-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[업데이트](../../../ado/reference/ado-api/update-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
 
  * Microsoft Access 데이터베이스에 지원 되지 않습니다.
 
@@ -244,63 +245,63 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |비동기 가능 커밋|DBPROP_ASYNCTNXCOMMIT|
 |격리 수준 자동 커밋|DBPROP_SESS_AUTOCOMMITISOLEVELS|
 |카탈로그 위치|DBPROP_CATALOGLOCATION과 같습니다|
-|카탈로그 용어가|DBPROP_CATALOGTERM과 같습니다|
-|열 정의|DBPROP_COLUMNDEFINITION과 같습니다|
+|카탈로그 용어가|DBPROP_CATALOGTERM|
+|열 정의|DBPROP_COLUMNDEFINITION|
 |연결 제한 시간|DBPROP_INIT_TIMEOUT|
 |현재 카탈로그|DBPROP_CURRENTCATALOG|
 |데이터 원본|DBPROP_INIT_DATASOURCE|
 |Data Source Name|DBPROP_DATASOURCENAME|
 |데이터 소스 개체 스레딩 모델|DBPROP_DSOTHREADMODEL|
-|DBMS 이름|DBPROP_DBMSNAME과 같습니다|
-|DBMS 버전|DBPROP_DBMSVER와 같습니다|
+|DBMS 이름|DBPROP_DBMSNAME|
+|DBMS 버전|DBPROP_DBMSVER|
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|
-|지원 기준으로 그룹화|DBPROP_GROUPBY와 같습니다|
+|지원 기준으로 그룹화|DBPROP_GROUPBY|
 |유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES와 같습니다|
-|식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE와 같습니다|
+|식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE|
 |초기 카탈로그|DBPROP_INIT_CATALOG|
 |격리 수준|DBPROP_SUPPORTEDTXNISOLEVELS|
-|격리 보존|DBPROP_SUPPORTEDTXNISORETAIN과 같습니다|
+|격리 보존|DBPROP_SUPPORTEDTXNISORETAIN|
 |로캘 ID|DBPROP_INIT_LCID|
 |위치|DBPROP_INIT_LOCATION|
-|최대 인덱스 크기|DBPROP_MAXINDEXSIZE와 같습니다|
-|최대 행 크기|DBPROP_MAXROWSIZE와 같습니다|
-|BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB와 같습니다|
-|SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT와 같습니다|
+|최대 인덱스 크기|DBPROP_MAXINDEXSIZE|
+|최대 행 크기|DBPROP_MAXROWSIZE|
+|BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB|
+|SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
 |모드|DBPROP_INIT_MODE|
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|
-|여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE와 같습니다|
-|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION과 같습니다|
-|NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR와 같습니다|
+|여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE|
+|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION|
+|NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR|
 |OLE DB 서비스|DBPROP_INIT_OLEDBSERVICES|
 |OLE DB 버전|DBPROP_PROVIDEROLEDBVER|
 |OLE 개체 지원|DBPROP_OLEOBJECTS|
 |열린 행 집합 지원|DBPROP_OPENROWSETSUPPORT|
-|선택 목록의 열으로 정렬|DBPROP_ORDERBYCOLUMNSINSELECT와 같습니다|
+|선택 목록의 열으로 정렬|DBPROP_ORDERBYCOLUMNSINSELECT|
 |출력 매개 변수 가용성|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |암호|DBPROP_AUTH_PASSWORD|
 |Ref 접근자로 전달|DBPROP_BYREFACCESSORS|
 |보안 정보 유지|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
-|영구 ID 유형|DBPROP_PERSISTENTIDTYPE과 같습니다|
-|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR와 같습니다|
+|영구 ID 유형|DBPROP_PERSISTENTIDTYPE|
+|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR|
 |커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR와 같습니다|
-|프로시저 용어가|DBPROP_PROCEDURETERM과 같습니다|
+|프로시저 용어가|DBPROP_PROCEDURETERM|
 |프롬프트|DBPROP_INIT_PROMPT|
 |공급자 이름|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |공급자 버전|DBPROP_PROVIDERVER|
-|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY와 같습니다|
+|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY|
 |명령 시 행 집합 변환|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |스키마 용어|DBPROP_SCHEMATERM|
-|스키마 사용|DBPROP_SCHEMAUSAGE와 같습니다|
+|스키마 사용|DBPROP_SCHEMAUSAGE|
 |SQL 지원|DBPROP_SQLSUPPORT|
 |구조적된 저장소|DBPROP_STRUCTUREDSTORAGE|
-|하위 쿼리 지원|DBPROP_SUBQUERIES와 같습니다|
-|테이블 용어|DBPROP_TABLETERM과 같습니다|
-|트랜잭션 DDL|DBPROP_SUPPORTEDTXNDDL과 같습니다|
+|하위 쿼리 지원|DBPROP_SUBQUERIES|
+|테이블 용어|DBPROP_TABLETERM|
+|트랜잭션 DDL|DBPROP_SUPPORTEDTXNDDL|
 |사용자 ID|DBPROP_AUTH_USERID|
-|사용자 이름|DBPROP_USERNAME과 같습니다|
+|사용자 이름|DBPROP_USERNAME|
 |창 핸들|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>레코드 집합 동적 속성

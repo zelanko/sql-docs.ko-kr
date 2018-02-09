@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: dd997e9d3f235d841cd5706b9c81b9335360540d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 860d3571aa1edf7c467125de1cc2920a968eb704
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 RHEL 클러스터를 구성 합니다.
 
@@ -160,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 
 ## <a name="create-virtual-ip-resource"></a>가상 IP 리소스 만들기
 
-가상 IP 주소 리소스를 만들려면 노드 하나에서 다음 명령을 실행 합니다. 네트워크에서 사용 가능한 고정 IP 주소를 사용 합니다. 사이의 IP 주소를 교체 `**<10.128.16.240>**` 유효한 IP 주소입니다.
+가상 IP 주소 리소스를 만들려면 노드 하나에서 다음 명령을 실행 합니다. 네트워크에서 사용 가능한 고정 IP 주소를 사용 합니다. 사이의 IP 주소를 교체 `<10.128.16.240>` 유효한 IP 주소입니다.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 Pacemaker에서 지정 된 동일한 가상 서버 이름이 없습니다. IP 주소 대신 문자열 서버 이름이를 가리키는 연결 문자열을 사용 하려면 DNS에서 원하는 가상 서버 이름과 가상 IP 리소스 주소를 등록 합니다. DR 구성에 대 한 주 데이터베이스와 DR 사이트 모두에서 DNS 서버와 함께 원하는 가상 서버 이름 및 IP 주소를 등록 합니다.

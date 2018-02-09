@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO, programming
+helpviewer_keywords:
+- ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0799cdcc0c1b833b004de6f556c142534007fc14
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ce6030b4e039cf88ac22bc85dd5c2aba46ded7b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>부록 c: 개발 환경에서 ADO를 사용한 프로그래밍
 ADO는 Microsoft Visual Basic, VBScript, JScript 및 Visual c + +를 포함 하 여 많은 프로그래밍 언어를 사용할 수 있는 COM 자동화 인터페이스 구성 요소입니다. ADO의 버전은 각 이러한 도구 및 Microsoft Office 및 Microsoft SQL Server와 같은 다른 응용 프로그램에 함께 설치 됩니다.

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - WillExecute
 - Connection::WillExecute
-helpviewer_keywords: WillExecute event [ADO]
+helpviewer_keywords:
+- WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dafc71b9f9da6dde5cf9ef7acf7909236441f656
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 이벤트 (ADO)
 **WillExecute** 이벤트는 연결에서 보류 중인 명령이 실행 되기 전에 호출 됩니다.  
@@ -42,7 +44,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *원본*  
  A **문자열** SQL 명령 또는 저장된 프로시저 이름이 들어 있는입니다.  
   
- *모두*  
+ *CursorType*  
  A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) 에 대 한 커서의 형식을 포함 하는 **레코드 집합** 는 열립니다. 이 매개 변수를 사용 하는 동안 모든 형식에 커서를 변경할 수는 **레코드 집합**[Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) 작업 합니다. *모두* 다른 작업에 대해 무시 됩니다.  
   
  *LockType*  
@@ -69,7 +71,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** 검사 하 고 보류 중인 실행 매개 변수를 수정할 수 있습니다. 이 이벤트는 보류 중인 명령을 취소 요청을 반환할 수 있습니다.  
   
 > [!NOTE]
->  원본에 대 한 소스는 **명령** 은으로 지정 된 스트림은 [CommandStream 속성 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) 속성을 새 문자열을 할당는 **WillExecute** *소스* 의 원본을 변경 하는 매개 변수는 **명령**합니다. **CommandStream** 속성이 지워집니다 및 [CommandText 속성 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) 새 원본과 속성이 업데이트 됩니다. 로 지정 된 원래 스트림에 **CommandStream** 출시 될 예정 이므로 액세스할 수 없습니다.  
+>  원본에 대 한 소스는 **명령** 은으로 지정 된 스트림은 [CommandStream 속성 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) 속성을 새 문자열을 할당는 **WillExecute * * * 소스* 매개 변수 변경의 소스는 **명령**합니다. **CommandStream** 속성이 지워집니다 및 [CommandText 속성 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) 새 원본과 속성이 업데이트 됩니다. 로 지정 된 원래 스트림에 **CommandStream** 출시 될 예정 이므로 액세스할 수 없습니다.  
   
  원래 설정으로 인해 새 소스 문자열의 언어와 다른 경우는 [Dialect 속성](../../../ado/reference/ado-api/dialect-property.md) 속성 (에 상응 하는 **CommandStream**)을 설정 하 여 올바른 언어를 지정 해야 합니다 **언어** 참조 하는 명령 개체의 속성 *pCommand*합니다.  
   

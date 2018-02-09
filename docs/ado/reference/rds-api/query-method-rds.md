@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Query method [ADO]
+helpviewer_keywords:
+- Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ceedab6dd52492c5660165b3b1377def3a51f253
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 01174a253f5157cf43f577ebf495819f557f2d4a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="query-method-rds"></a>Query 메서드 (RDS)
 유효한 SQL 쿼리 문자열을 사용 하 여 반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -48,7 +50,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *연결*  
  A **문자열** 서버 연결 정보를 포함 하는 값입니다. 이 비슷합니다는 [연결](../../../ado/reference/rds-api/connect-property-rds.md) 속성입니다.  
   
- *쿼리*  
+ *데이터 집합 속성*  
  A **문자열** SQL 쿼리 포함 합니다.  
   
 ## <a name="remarks"></a>주의  

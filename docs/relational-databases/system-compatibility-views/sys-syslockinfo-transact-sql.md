@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syslockinfo_TSQL
 - sys.syslockinfo
 - syslockinfo
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 410d07a73d4a5b96c3fa5805208735055bc36174
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4b58420c47d73e1eff9bb895ccab1fab0be82844
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +48,8 @@ ms.lasthandoff: 11/27/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|잠금 리소스에 관한 문자 설명입니다. 리소스 이름의 일부를 포함합니다.|  
-|**rsc_bin**|**binary (16)**|이진 잠금 리소스입니다. 잠금 관리자에 있는 실제 잠금 리소스를 포함합니다. 도구에서 알 수 있는 잠금 리소스 형식을 생성 하기 위한 자체 형식의 잠금 리소스에 대 한이 열이 포함 하 고 수행 하기 위한에서 자체 조인을 **syslockinfo**합니다.|  
-|**rsc_valblk**|**binary (16)**|잠금 값 블록입니다. 일부 리소스 유형은 잠금 관리자가 해시하지 않은 잠금 리소스에 추가 데이터를 포함하여 특정 잠금 리소스의 소유권을 결정할 수 있습니다. 예를 들어 특정 개체 ID가 잠금 에스컬레이션 및 기타 목적을 위해 페이지 잠금을 소유할 수 없습니다. 그러나 페이지 잠금의 개체 ID를 잠금 값 블록에 포함할 수는 있습니다.|  
+|**rsc_bin**|**binary(16)**|이진 잠금 리소스입니다. 잠금 관리자에 있는 실제 잠금 리소스를 포함합니다. 도구에서 알 수 있는 잠금 리소스 형식을 생성 하기 위한 자체 형식의 잠금 리소스에 대 한이 열이 포함 하 고 수행 하기 위한에서 자체 조인을 **syslockinfo**합니다.|  
+|**rsc_valblk**|**binary(16)**|잠금 값 블록입니다. 일부 리소스 유형은 잠금 관리자가 해시하지 않은 잠금 리소스에 추가 데이터를 포함하여 특정 잠금 리소스의 소유권을 결정할 수 있습니다. 예를 들어 특정 개체 ID가 잠금 에스컬레이션 및 기타 목적을 위해 페이지 잠금을 소유할 수 없습니다. 그러나 페이지 잠금의 개체 ID를 잠금 값 블록에 포함할 수는 있습니다.|  
 |**rsc_dbid**|**smallint**|리소스와 연관된 데이터베이스 ID입니다.|  
 |**rsc_indid**|**smallint**|필요한 경우 사용할 수 있는 리소스와 연관된 인덱스 ID입니다.|  
 |**rsc_objid**|**int**|리소스와 연관된 개체 ID입니다. 해당되는 경우에 한합니다.|  

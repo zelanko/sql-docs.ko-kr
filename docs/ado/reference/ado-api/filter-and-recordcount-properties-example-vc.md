@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5f1761690d5d1a2a77273b620613fbcaa3ebedd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2432adfdd2a4d4a66a3ccf0379a653ad4bb95f50
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>필터 및 RecordCount 속성 예제 (VC + +)
 사용 하 여이 예제는 [필터](../../../ado/reference/ado-api/filter-property.md) 속성을 새 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기존에 적용 된 지정 된 조건에 따라 **레코드 집합**합니다. 사용 하 여는 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 두에서 레코드의 수를 표시 하는 속성 **레코드 집합**합니다. FilterField 함수는이 절차를 실행 하려면 필요 합니다.  

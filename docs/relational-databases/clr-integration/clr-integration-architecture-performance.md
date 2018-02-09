@@ -16,19 +16,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5dd392ca57706e595b6df5f44b512cf11dacdff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 통합 아키텍처-성능
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는의 성능을 개선할 수 있는 디자인 선택 사항 중 일부에 대해 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 통합은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 공용 언어 런타임 (CLR).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는의 성능을 개선할 수 있는 디자인 선택 사항 중 일부에 대해 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 통합은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 공용 언어 런타임 (CLR).  
   
 ## <a name="the-compilation-process"></a>컴파일 프로세스  
  SQL 식을 컴파일하는 중에 관리되는 루틴에 대한 참조가 발견되면 MSIL([!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language) 스텁이 생성됩니다. 이 스텁에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR로의 루틴 매개 변수 마샬링, 함수 호출 및 결과 반환을 위한 코드가 포함됩니다. 이러한 "글루" 코드는 매개 변수의 형식과 매개 변수 방향(입력, 출력 또는 참조)에 기반을 둡니다.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서가 배열로 쉽게 표현할 수 있는 데이터를 트래버스해야 하는 경우 관리 코드를 사용하면 성능을 크게 높일 수 있습니다.  
   
 ### <a name="string-data"></a>문자열 데이터  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]과 같은 데이터를 문자 **varchar**, 관리 되는 함수에서 SqlString 또는 SqlChars 형식일 수 있습니다. SqlString 변수는 메모리에 전체 값의 인스턴스를 만듭니다. SqlChars 변수는 메모리에 전체 값의 인스턴스를 만들지 않고도 성능 및 확장성을 개선하는 데 사용할 수 있는 스트리밍 인터페이스를 제공합니다. LOB(큰 개체) 데이터의 경우 이러한 기능은 특히 중요합니다. 반환 되는 스트리밍 인터페이스를 통해 서버 XML 데이터에 액세스할 수 또한 **SqlXml.CreateReader()**합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 과 같은 데이터를 문자 **varchar**, 관리 되는 함수에서 SqlString 또는 SqlChars 형식일 수 있습니다. SqlString 변수는 메모리에 전체 값의 인스턴스를 만듭니다. SqlChars 변수는 메모리에 전체 값의 인스턴스를 만들지 않고도 성능 및 확장성을 개선하는 데 사용할 수 있는 스트리밍 인터페이스를 제공합니다. LOB(큰 개체) 데이터의 경우 이러한 기능은 특히 중요합니다. 반환 되는 스트리밍 인터페이스를 통해 서버 XML 데이터에 액세스할 수 또한 **SqlXml.CreateReader()**합니다.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR 및 확장 저장 프로시저  
  관리되는 프로시저가 결과 집합을 클라이언트로 다시 보낼 수 있도록 지원하는 Microsoft.SqlServer.Server API(응용 프로그래밍 인터페이스)는 확장 저장 프로시저에서 사용되는 ODS(개방형 Data Services) API보다 성능이 우수합니다. 또한 System.Data.SqlServer Api 지원 데이터와 같은 형식은 **xml**, **varchar (max)**, **nvarchar (max)**, 및 **varbinary (max)**에 도입 된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]반면 ODS Api 새로운 데이터 형식을 지원 하도록 확장 되지 않았습니다.  

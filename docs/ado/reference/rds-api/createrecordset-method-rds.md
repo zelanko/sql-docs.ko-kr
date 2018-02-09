@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - CreateRecordset
 - RDSServer.DataFactory::CreateRecordset
 - DataFactory::CreateRecordset
-helpviewer_keywords: CreateRecordset method [RDS]
+helpviewer_keywords:
+- CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ce2c6eed7dbb7e68277c054693aec089b802892
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 메서드 (RDS)
 비어 있는 만듭니다 연결이 끊어진 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -51,9 +53,9 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  A **Variant** 특성의 각 열을 정의 하는 배열을 **레코드 집합** 생성 합니다. 각 열 정의는 4 개의 필수 특성와 하나의 선택적 특성의 배열을 포함합니다.  
   
-|attribute|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
-|속성|열 머리글의 이름입니다.|  
+|이름|열 머리글의 이름입니다.|  
 |형식|정수 데이터 형식입니다.|  
 |크기|데이터 형식에 관계 없이 문자 너비의 정수입니다.|  
 |Null 허용 여부|부울 값입니다.|  
@@ -94,13 +96,13 @@ object.CreateRecordset(ColumnInfos)
 |고정|**adDBTimestamp**|135|7|  
 |변수|**adBSTR**|8|130|  
 |변수|**adChar**|129|200|  
-|변수|**집합이 있으므로 필요**|200||  
+|변수|**adVarChar**|200||  
 |변수|**adLongVarChar**|201|200|  
 |변수|**adWChar**|130||  
 |변수|**adVarWChar**|202|130|  
 |변수|**adLongVarWChar**|203|130|  
 |변수|**adBinary**|128||  
-|변수|**제외할 수**|204||  
+|변수|**adVarBinary**|204||  
 |변수|**adLongVarBinary**|205|204|  
   
 ## <a name="applies-to"></a>적용 대상  

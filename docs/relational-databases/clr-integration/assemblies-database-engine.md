@@ -16,19 +16,20 @@ helpviewer_keywords:
 - assemblies [CLR integration], about assemblies
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: daad8dc42b5bf8825ce20ce631a3dedc37f7f303
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a7e6626da65db973b6d8726518be357985a164b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies-database-engine"></a>어셈블리(데이터베이스 엔진)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 섹션의 항목을 이해 하 고 디자인 하 고 어셈블리를 구현 하는 데 유용한 정보를 제공 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 섹션의 항목에서는 어셈블리를 이해하고 어셈블리를 디자인 및 구현하는 데 도움이 되는 정보를 제공합니다.  
   
  어셈블리는 DLL 파일의 인스턴스에 사용 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수, 저장된 프로시저, 트리거, 사용자 정의 집계 및로 호스팅되는 관리 코드 언어 중 하나에 작성 된 사용자 정의 형식을 배포 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 대신에 공용 언어 런타임 (CLR) [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다.  
   

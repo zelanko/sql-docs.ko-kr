@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_Write
 - _Stream::Write
-helpviewer_keywords: Write method [ADO]
+helpviewer_keywords:
+- Write method [ADO]
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aad21aef150d1ea9a176122eb3a0ddfb7dec9708
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e89d24e276e8d8e4cf442c713501f721612a47ff
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="write-method"></a>Write 메서드
 이진 데이터를 쓰는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -39,7 +41,7 @@ Stream.Write Buffer
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *버퍼*  
+ *Buffer*  
  A **Variant** 쓸 바이트의 배열을 포함 하는 합니다.  
   
 ## <a name="remarks"></a>주의  

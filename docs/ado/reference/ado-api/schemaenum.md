@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: SchemaEnum
-helpviewer_keywords: SchemaEnum enumeration [ADO]
+f1_keywords:
+- SchemaEnum
+helpviewer_keywords:
+- SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75e8380ba12f6390f8db4661fc570b40f18e7c49
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc84741e1963b2c484e82eea7bc3de08cf12da13
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schemaenum"></a>SchemaEnum
 스키마의 유형을 지정 **레코드 집합** 하는 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 메서드를 검색 합니다.  
@@ -38,10 +41,10 @@ ms.lasthandoff: 12/21/2017
   
  상수에 대 한 스키마와 비슷한 결과 생성 하는 ADO **adSchemaDBInfoKeywords** 및 **adSchemaDBInfoLiterals**합니다. ADO 만듭니다는 **레코드 집합**, 후 각 행에서 각각 반환 값으로 채우는 **IDBInfo::GetKeywords** 및 **IDBInfo::GetLiteralInfo** 메서드. 이러한 메서드에 대 한 추가 정보를 찾을 수는 [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) OLE DB 프로그래머 참조 섹션에 있습니다.  
   
-|상수|값|Description|제약 조건 열|  
+|상수|Value|Description|제약 조건 열|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|카탈로그에 정의 된 지정된 된 사용자가 소유 하 고 있는 어설션을 반환 합니다.<br /><br /> (어설션 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA 제약 조건 이름|  
-|**adSchemaCatalogs**|1|DBMS에서 액세스 가능한 카탈로그와 관련 된 물리적 특성을 반환 합니다.<br /><br /> (카탈로그 행 집합)|CATALOG_NAME|  
+|**adSchemaCatalogs**|1.|DBMS에서 액세스 가능한 카탈로그와 관련 된 물리적 특성을 반환 합니다.<br /><br /> (카탈로그 행 집합)|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|지정된 된 사용자에 액세스할 수 있는 카탈로그에 정의 된 문자 집합을 반환 합니다.<br /><br /> (CHARACTER_SETS 행 집합)|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
 |**adSchemaCheckConstraints**|5|지정된 된 사용자가 소유 하는 카탈로그에 정의 된 check 제약을 반환 합니다.<br /><br /> (CHECK_CONSTRAINTS) 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA 제약 조건 이름|  
 |**adSchemaCollations**|3|문자 데이터 정렬을 카탈로그에 정의 된 지정된 된 사용자에 액세스할 수 있는 반환 합니다.<br /><br /> (데이터 정렬 행 집합)|COLLATION_CATALOG COLLATION_SCHEMA 데이터 정렬 이름|  
@@ -83,7 +86,7 @@ ms.lasthandoff: 12/21/2017
 |**adSchemaViewTableUsage**|25|종속 된 테이블이 표시 카탈로그에 정의 하 고 지정된 된 사용자가 소유 하 고 반환 됩니다.<br /><br /> (VIEW_TABLE_USAGE 행 집합)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  

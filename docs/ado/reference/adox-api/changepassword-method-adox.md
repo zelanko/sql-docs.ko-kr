@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _User25::raw_ChangePassword
 - _User25::ChangePassword
-helpviewer_keywords: ChangePassword method [ADOX]
+helpviewer_keywords:
+- ChangePassword method [ADOX]
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4df8c533048ae51662369b66361fb6b642c97f03
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 76814245ef5e41e12774df25ea23283f98fd9100
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword 메서드 (ADOX)
 암호를 변경 하면는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 계정.  
@@ -42,7 +44,7 @@ User.ChangePassword OldPassword, NewPassword
  *OldPassword*  
  A **문자열** 기존 사용자의 암호를 지정 하는 값입니다. 없으면 사용자 현재 암호를 사용 하 여 빈 문자열 ("")에 대 한 *OldPassword*합니다.  
   
- *새 암호*  
+ *NewPassword*  
  A **문자열** 새 암호를 지정 하는 값입니다.  
   
 ## <a name="remarks"></a>주의  

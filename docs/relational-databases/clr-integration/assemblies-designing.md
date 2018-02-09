@@ -15,19 +15,20 @@ helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9273db56dfc99f76325ee9938678d2dc24aad8e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---designing"></a>어셈블리-디자인
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 어셈블리를 디자인할 때 고려해 야 할 다음 요소를 설명 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 어셈블리를 디자인할 때 고려해야 할 다음 요소들에 대해 설명합니다.  
   
 -   어셈블리 패키징  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
  또한 UNSAFE를 지정하면 어셈블리에 있는 코드에서 CLR 확인 프로그램에 의해 안전하지 않은 유형으로 간주되는 작업을 수행할 수 있습니다. 이러한 작업은 제어되지 않는 방식으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 공간에서 메모리 버퍼에 액세스할 가능성이 있습니다. UNSAFE 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 공용 언어 런타임 중 하나의 보안 시스템을 손상시킬 수도 있습니다. UNSAFE 권한은 숙련된 개발자 또는 관리자가 가장 신뢰할 수 있는 어셈블리에만 부여해야 합니다. 구성원만는 **sysadmin** 고정된 서버 역할에서 안전 하지 않은 어셈블리를 만들 수 있습니다.  
   
 ## <a name="restrictions-on-assemblies"></a>어셈블리에 대한 제한  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 어셈블리를 안정적이고 확장 가능한 방식으로 실행할 수 있도록 보장하기 위해 어셈블리에 있는 관리 코드에 특정 제한을 지정합니다. 즉, 서버의 견고성을 손상시킬 수 있는 작업은 SAFE 및 EXTERNAL_ACCESS 어셈블리에서 허용되지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 제한 사항을 안정적이 고 확장 가능한 방식으로 실행할 수 있는지 확인 하는 어셈블리에 관리 코드에 배치 합니다. 즉, 서버의 견고성을 손상시킬 수 있는 작업은 SAFE 및 EXTERNAL_ACCESS 어셈블리에서 허용되지 않습니다.  
   
 ### <a name="disallowed-custom-attributes"></a>허용되지 않는 사용자 지정 특성  
  다음과 같은 사용자 지정 특성으로는 어셈블리에 주석을 지정할 수 없습니다.  

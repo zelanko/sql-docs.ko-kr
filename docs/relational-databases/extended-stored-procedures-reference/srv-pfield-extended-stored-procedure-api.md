@@ -8,31 +8,36 @@ ms.service:
 ms.component: extended-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: srv_pfield
-apilocation: opends60.dll
+apiname:
+- srv_pfield
+apilocation:
+- opends60.dll
 apitype: DLLExport
-dev_langs: C++
-helpviewer_keywords: srv_pfield
+dev_langs:
+- C++
+helpviewer_keywords:
+- srv_pfield
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a8a1b74d86f3ca5143c6925767ab2aee70eb030
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 157bf19237d3b2dcf64a1401823c746fd2849cf0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
   
  데이터베이스 연결에 대한 정보를 반환합니다.  
   
@@ -59,7 +64,7 @@ len
  *field*  
  반환할 연결 데이터를 지정합니다.  
   
-|값|반환 값|  
+|Value|반환 값|  
 |-----------|-------------|  
 |SRV_APPLNAME|연결을 설정할 때 클라이언트가 제공한 응용 프로그램 이름입니다.|  
 |SRV_BCPFLAG|플래그로, 클라이언트가 대량 복사 작업을 준비 중이면 TRUE이고, 그렇지 않으면 FALSE입니다.|  

@@ -11,21 +11,23 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: assemblies [CLR integration], implementing
+helpviewer_keywords:
+- assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c37fa6946f4b400b666d43040fe805c50053a2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---implementing"></a>어셈블리-구현
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목을 구현 하 고 데이터베이스에서 어셈블리를 작업할 수 있도록 다음과 같은 영역에 대 한 정보를 제공 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 사용자가 데이터베이스에서 어셈블리를 구현하고 사용하는 데 도움이 되는 다음 영역에 대해 설명합니다.  
   
 -   어셈블리 만들기  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 01/08/2018
   
  구성원만는 **db_owner** 및 **db_ddlowner** 고정된 데이터베이스 역할 WITH UNCHECKED DATA 절을 사용 하 여 ALTER ASSEMBLY를 실행할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 어셈블리가 테이블의 검사하지 않은 데이터로 수정되었다는 메시지를 Windows 응용 프로그램 이벤트 로그에 게시합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 어셈블리에 종속된 데이터가 들어 있는 테이블에 검사하지 않은 데이터가 있다고 표시합니다. **has_unchecked_assembly_data** 의 열은 **sys.tables** 카탈로그 뷰에 선택 되지 않은 데이터 및 검사 하지 않은 데이터가 없는 테이블에 대해 0이 포함 된 테이블에 대 한 값 1을 포함 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 어셈블리 테이블에 검사 하지 않은 데이터로 수정 되었다는 사실을 Windows 응용 프로그램 이벤트 로그에 메시지를 게시 합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 어셈블리에 종속된 데이터가 들어 있는 테이블에 검사하지 않은 데이터가 있다고 표시합니다. **has_unchecked_assembly_data** 의 열은 **sys.tables** 카탈로그 뷰에 선택 되지 않은 데이터 및 검사 하지 않은 데이터가 없는 테이블에 대해 0이 포함 된 테이블에 대 한 값 1을 포함 합니다.  
   
  검사 되지 않은 데이터의 무결성을 해결 하려면 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS를 실행 된 각 테이블에 대해 검사 되지 않은 데이터입니다. 오류가 발생 하면 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS 하거나 잘못 된 하거나 문제를 해결 하는 어셈블리 코드를 수정 하는 테이블 행을 삭제 하며 다음 추가 ALTER ASSEMBLY 문을 실행 합니다.  
   

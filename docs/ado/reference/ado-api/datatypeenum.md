@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: DataTypeEnum
-helpviewer_keywords: DataTypeEnum enumeration [ADO]
+f1_keywords:
+- DataTypeEnum
+helpviewer_keywords:
+- DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 70e44dc6ea6eb3622b43f241827ad5cae7a7df44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f99476b2ccbf9e405d29eca6adbf49ce22fc3f85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 데이터 형식을 지정 된 [필드](../../../ado/reference/ado-api/field-object.md), [매개 변수](../../../ado/reference/ado-api/parameter-object.md), 또는 [속성](../../../ado/reference/ado-api/property-object-ado.md)합니다. 해당 OLE DB 유형 표시기는 다음 표의 설명 열에 대 한 괄호 안에 표시 됩니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|다른 데이터 형식의 배열을 나타내는 다른 데이터 형식 상수와 결합 항상 플래그 값입니다. ADOX에 적용 되지 않습니다.|  
 |**adBigInt**|20|8 비트 부호 있는 정수 (DBTYPE_I8)을 나타냅니다.|  
@@ -65,15 +68,15 @@ ms.lasthandoff: 12/21/2017
 |**adUnsignedSmallInt**|18|2 바이트 부호 없는 정수 (DBTYPE_UI2)를 나타냅니다.|  
 |**adUnsignedTinyInt**|17|1 바이트 부호 없는 정수 (DBTYPE_UI1)를 나타냅니다.|  
 |**adUserDefined**|132|사용자 정의 변수 (DBTYPE_UDT)을 나타냅니다.|  
-|**제외할 수**|204|이진 값을 나타냅니다.|  
-|**집합이 있으므로 필요**|200|문자열 값을 나타냅니다.|  
+|**adVarBinary**|204|이진 값을 나타냅니다.|  
+|**adVarChar**|200|문자열 값을 나타냅니다.|  
 |**adVariant**|12|자동화 나타냅니다 **Variant** (DBTYPE_VARIANT).<br /><br /> **참고** 이 데이터 형식은 현재 ADO에서 지원 되지 않습니다. 사용 하면 예기치 않은 결과가 발생할 수 있습니다.|  
 |**adVarNumeric**|139|숫자 값을 나타냅니다.|  
 |**adVarWChar**|202|Null로 끝나는 유니코드 문자열을 나타냅니다.|  
 |**adWChar**|130|Null로 끝나는 유니코드 문자열 (DBTYPE_WSTR)을 나타냅니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  

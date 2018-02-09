@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdb4d1847a2a55c57235a88979b19f7370169b9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ce82243dda984375bef3a1630650ff27c68dd09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="provider-errors"></a>공급자 오류 정보
 공급자 오류가 발생 하는 경우에-2147467259 런타임에 오류가 반환 됩니다. 이 오류를 받으면 확인는 **오류** 활성의 컬렉션 **연결** 하나 이상의 오류가 발생 한 문제를 설명 하는 포함 하는 개체입니다.  
@@ -73,9 +74,9 @@ End Function
 |속성 이름|Description|  
 |-------------------|-----------------|  
 |**설명**|발생 한 오류의 텍스트 설명입니다.|  
-|**HelpContext, 도움말 파일**|발생 한 오류에 대 한 설명을 포함 하는 도움말 항목 및 도움말 파일을 가리킵니다.|  
+|**HelpContext, HelpFile**|발생 한 오류에 대 한 설명을 포함 하는 도움말 항목 및 도움말 파일을 가리킵니다.|  
 |**NativeError**|공급자 특정 오류 번호입니다.|  
-|**번호**|한 수를 나타내는 정수 (Long) (에 나열 된는 **ErrorValueEnum**)에 발생 한 오류입니다.|  
+|**Number**|한 수를 나타내는 정수 (Long) (에 나열 된는 **ErrorValueEnum**)에 발생 한 오류입니다.|  
 |**원본**|개체 또는 오류를 생성 한 응용 프로그램의 이름을 나타냅니다.|  
 |**SQLState**|공급자는 SQL 문의 과정을 반환 하는 5 자의 오류 코드입니다.|  
   

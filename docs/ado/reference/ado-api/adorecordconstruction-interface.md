@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,21 +13,23 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ADORecordConstruction
-helpviewer_keywords: ADORecordConstruction interface [ADO]
+f1_keywords:
+- ADORecordConstruction
+helpviewer_keywords:
+- ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cedc7639b0b5c1559fe137be96c822287a3ff82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7bfe02588a73f6c896b8947298483766c6a8a01e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="adorecordconstruction-interface"></a>ADORecordConstruction 인터페이스
+# <a name="adorecordconstruction-interface"></a>ADORecordConstruction Interface
 **ADORecordConstruction**인터페이스 사용 하는 ADO 생성 **레코드** OLE DB에서 개체 **행** C/c + + 응용 프로그램의 개체입니다.  
   
  이 인터페이스는 다음 속성을 지원합니다.  

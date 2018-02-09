@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Recordset dynamic properties in XML [ADO]
+helpviewer_keywords:
+- Recordset dynamic properties in XML [ADO]
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b05609621af12607d11448028fc48a940f531ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 221ecdff804539bf8ff80335c71f762cbe7b28de
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML에서 레코드 집합 동적 속성
 (Client Cursor Engine)에서 다음 레코드 집합 공급자별 속성이 현재 XML 형식으로 유지 됩니다.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   IRowsetUpdate  
   
--   CommandTimeout  
+-   CommandTimeOut  
   
 -   BatchSize  
   

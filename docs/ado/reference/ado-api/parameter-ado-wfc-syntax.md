@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,21 +13,22 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Parameter collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 370528b6a58ab987f95ae551ab5473f3b8e549e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05f3e2f6f6b3985c1c68604e6e9829c1b1f3eef1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-ado---wfc-syntax"></a>매개 변수 (ADO-WFC 구문)
-## <a name="package-commswfcdata"></a>패키지 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructor"></a>생성자  
   
@@ -74,7 +76,7 @@ public AdoProperties getProperties()
   
  ADO/WFC 구현는 **값** 속성을는 **getValue** 는 VARIANT 개체를 반환 하는 메서드 및 **setValue** 메서드는 VARIANT를 인수로 사용 합니다. Variant는 특정 언어의 경우 Microsoft Visual Basic 등의 매우 효율적입니다.  
   
- 이외에 **값** 속성, ADO/WFC 제공 *접근자* Java 데이터 형식 가져오기 및 설정의 내용을 사용 하는 메서드 **매개 변수** 개체입니다. 대부분의 이러한 메서드가 폼의 이름이 **가져오기***DataType* 또는 **설정***DataType*합니다.  
+ 이외에 **값** 속성, ADO/WFC 제공 *접근자* Java 데이터 형식 가져오기 및 설정의 내용을 사용 하는 메서드 **매개 변수** 개체입니다. 대부분의 이러한 메서드가 폼의 이름이 **가져오기 * * * DataType* 또는 **설정 * * * DataType*합니다.  
   
  가지 주목할 만한 예외:는 없는 **getNull** 속성 대신는 **isNull** 필드가 null 인지 여부를 나타내는 부울 값을 반환 하는 속성입니다.  
   

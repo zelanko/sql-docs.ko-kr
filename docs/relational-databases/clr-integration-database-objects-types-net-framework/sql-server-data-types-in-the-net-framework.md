@@ -21,23 +21,24 @@ helpviewer_keywords:
 - building database objects [CLR integration], data types
 - mapping data types [CLR integration]
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf47c53748e56fa455a62e8489839321e960493b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a5b47f3caa1e500664560ff8e6683e6064575699
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework의 SQL Server 데이터 형식
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**SqlTypes** 라이브러리는 기본 클래스 라이브러리의 일부는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터 형식과 의미 체계 및 전체 자릿수가 동일한 데이터 형식을 제공하도록 디자인되었습니다. 이 항목.NET Framework 프로그래머에 게 새로운 의미 체계에 설명 하 고에서 구현 하는 형식을 소개는 **System.Data.SqlTypes** 에 포함 된 네임 스페이스는 **System.Data** 라이브러리입니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**SqlTypes** 라이브러리는 기본 클래스 라이브러리의 일부는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터 형식과 의미 체계 및 전체 자릿수가 동일한 데이터 형식을 제공하도록 디자인되었습니다. 이 항목.NET Framework 프로그래머에 게 새로운 의미 체계에 설명 하 고에서 구현 하는 형식을 소개는 **System.Data.SqlTypes** 에 포함 된 네임 스페이스는 **System.Data** 라이브러리입니다.  
   
  다음 표에서는 이 섹션에서 다루는 항목을 나열합니다.  
   
- [Null 허용 여부 및 3개의 값 논리 비교](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
+ [Null 허용 여부 및 3 값 논리 비교](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
  CLR(공용 언어 런타임) 통합 데이터 형식에서 NULL 값이 처리되는 방법에 대해 설명합니다.  
   
  [데이터 정렬 및 CLR 통합 데이터 형식](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  

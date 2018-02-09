@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysusers_TSQL
 - sysusers_TSQL
 - sysusers
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysusers system table
 - sys.sysusers compatibility view
 ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4c732149e7b7b2aaeb92a6d8930b3f3ecfae388
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 661d42fbc8b55250ac38fb84e44faa33701c20b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -50,9 +52,9 @@ ms.lasthandoff: 11/17/2017
 |**createdate**|**datetime**|계정이 추가된 날짜입니다.|  
 |**updatedate**|**datetime**|계정을 마지막으로 변경한 날짜입니다.|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
-|**암호**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**gid**|**smallint**|해당 사용자가 속한 그룹의 ID입니다. 경우 **uid** 동일 **gid**,이 항목 그룹을 정의 합니다. 그룹과 사용자를 합한 수가 32,767을 초과하면 오버플로되거나 NULL을 반환합니다.|  
-|**environ**|**varchar (255)**|예약되어 있습니다.|  
+|**environ**|**varchar(255)**|예약되어 있습니다.|  
 |**hasdbaccess**|**int**|1 = 계정에 데이터베이스 액세스가 있습니다.|  
 |**islogin**|**int**|1 = 계정이 로그인 계정이 있는 Windows 그룹, Windows 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자입니다.|  
 |**isntname**|**int**|1 = 계정이 Windows 사용자 또는 Windows 그룹입니다.|  

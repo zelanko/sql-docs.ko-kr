@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - cursor service for ole db [ADO]
 - cursors [ADO], cursor service for OLE DB
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a84e9774120241d8d3813068a979a04aa27b236
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5dd9f4b279bd38028bb529dcdd0a49f32ffd7cc7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>OLE DB에 대 한 Microsoft 커서 서비스
 클라이언트 쪽 커서를 선택 하거나 설정 하면는 **앞** 속성을 **adUseClient**, OLE DB에 대 한 Microsoft 커서 서비스를 호출 하는 합니다. 또한 표시는 "클라이언트 커서"는 엔진을 ADO의 컨텍스트에서 동일한 작업에 대 한 참조가 있습니다. 이 서비스는 데이터 공급자의 커서 지원 기능을 보완합니다. 결과적으로, 모든 데이터 공급자의 기능을 비교적 안정적으로 인식할 수 있습니다.  

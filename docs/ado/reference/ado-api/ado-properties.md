@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f77f31c7dcb3a52e25b359d146669284d43b1dce
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 22d01847cb4d2a4bc6e1019fda0d29458af751c8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-properties"></a>ADO 속성
 |||  
@@ -36,10 +37,10 @@ ms.lasthandoff: 12/21/2017
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|필드 값의 실제 길이 나타냅니다.|  
 |[특성](../../../ado/reference/ado-api/attributes-property-ado.md)|개체의 한 하나 이상의 특성을 나타냅니다.|  
 |[BOF 및 EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF** Recordset 개체의 첫 번째 레코드 바로 앞에 현재 레코드 위치 임을 나타냅니다.<br /><br /> **EOF** Recordset 개체의 마지막 레코드 뒤에 현재 레코드 위치 임을 나타냅니다.|  
-|[책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md)|현재 레코드를 고유 하 게 식별 하는 책갈피를 나타냅니다는 **레코드 집합** 개체에 현재 레코드를 설정 하거나는 **레코드 집합** 유효한 책갈피로 식별 되는 레코드에는 개체입니다.|  
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|현재 레코드를 고유 하 게 식별 하는 책갈피를 나타냅니다는 **레코드 집합** 개체에 현재 레코드를 설정 하거나는 **레코드 집합** 유효한 책갈피로 식별 되는 레코드에는 개체입니다.|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|레코드 수를 나타내는 **레코드 집합** 메모리에 로컬로 캐시 된 개체입니다.|  
 |[장](../../../ado/reference/ado-api/chapter-property-ado.md)|OLE DB를 가져오거나 설정 합니다. **장** 에/에서 개체는 **ADORecordsetConstruction** 개체입니다.|  
-|[문자 집합](../../../ado/reference/ado-api/charset-property-ado.md)|문자 집합을 나타냅니다는 텍스트의 내용을 **스트림** 변환 되어야 합니다.|  
+|[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|문자 집합을 나타냅니다는 텍스트의 내용을 **스트림** 변환 되어야 합니다.|  
 |[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)|에 대 한 입력으로 사용 되는 스트림과 나타냅니다는 **명령** 개체입니다.|  
 |[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|공급자에 대해 실행할 명령의 텍스트를 나타냅니다.|  
 |[CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|시도 종료 하 고 오류를 생성 하기 전에 명령을 실행 하는 동안 대기 시간을 나타냅니다.|  
@@ -47,30 +48,30 @@ ms.lasthandoff: 12/21/2017
 |[ConnectionString 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md)|데이터 원본에 대 한 연결을 설정 하는 데 사용 되는 정보를 나타냅니다.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|시도 종료 하 고 오류를 생성 하기 전에 연결을 설정 하는 동안 대기 시간을 나타냅니다.|  
 |[개수](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
-|[앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|커서 서비스의 위치를 나타냅니다.|  
-|[모두](../../../ado/reference/ado-api/cursortype-property-ado.md)|사용 되는 커서 유형을 나타냅니다는 **레코드 집합** 개체입니다.|  
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|커서 서비스의 위치를 나타냅니다.|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|사용 되는 커서 유형을 나타냅니다는 **레코드 집합** 개체입니다.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|참조 하는 개체에서 검색할 수 있는 데이터 멤버의 이름을 나타냅니다는 **DataSource** 속성입니다.|  
-|[데이터 원본](../../../ado/reference/ado-api/datasource-property-ado.md)|로 나타낼 수 있는 데이터를 포함 하는 개체를 나타냅니다는 **레코드 집합** 개체입니다.|  
+|[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|로 나타낼 수 있는 데이터를 포함 하는 개체를 나타냅니다는 **레코드 집합** 개체입니다.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|에 대 한 기본 데이터베이스를 나타내지는 **연결** 개체입니다.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|데이터 용량 나타냅니다는 **필드** 개체입니다.|  
-|[Description](../../../ado/reference/ado-api/description-property.md)|에 대해 설명 된 **오류** 개체입니다.|  
+|[설명](../../../ado/reference/ado-api/description-property.md)|에 대해 설명 된 **오류** 개체입니다.|  
 |[언어](../../../ado/reference/ado-api/dialect-property.md)|구문 및 구문 분석 하는 공급자가 사용 되는 일반 규칙 나타냅니다는 **CommandText** 또는 **CommandStream** 속성입니다.|  
-|[Direction](../../../ado/reference/ado-api/direction-property.md)|나타냅니다 여부는 **매개 변수** 입력된 매개 변수, 출력 매개 변수 또는 둘 다 나타냅니다 또는 저장된 프로시저에서 반환 값 매개 변수가 없는 경우.|  
+|[방향](../../../ado/reference/ado-api/direction-property.md)|나타냅니다 여부는 **매개 변수** 입력된 매개 변수, 출력 매개 변수 또는 둘 다 나타냅니다 또는 저장된 프로시저에서 반환 값 매개 변수가 없는 경우.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|현재 레코드의 편집 상태를 나타냅니다.|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|현재 위치가 스트림 끝에 있는지 여부를 나타냅니다.|  
-|[Assert](../../../ado/reference/ado-api/filter-property.md)|데이터에 대 한 필터 나타냅니다는 **레코드 집합**합니다.|  
+|[필터](../../../ado/reference/ado-api/filter-property.md)|데이터에 대 한 필터 나타냅니다는 **레코드 집합**합니다.|  
 |[HelpContext 및 도움말 파일](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|도움말 파일 및 관련 된 항목을 나타냅니다는 **오류** 개체입니다.<br /><br /> **HelpContextID** 로 컨텍스트 ID를 반환는 **긴** 도움말 파일의 항목에 대 한 값입니다.<br /><br /> **HelpFile** 반환는 **문자열** 도움말 파일의 확인 된 경로를 계산 하는 값입니다.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|현재에 적용 된 인덱스의 이름을 표시 한 **레코드 집합** 개체입니다.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|에 대 한 격리 수준을 나타냅니다는 **연결** 개체입니다.|  
 |[항목](../../../ado/reference/ado-api/item-property-ado.md)|이름 또는 서 수는 컬렉션의 특정 멤버를 나타냅니다.|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|텍스트에 줄 구분 기호로 사용할 이진 문자 나타냅니다 **스트림** 개체입니다.|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|편집 중 레코드에 적용 되는 잠금 유형을 나타냅니다.|  
-|[마샬링](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|서버에 다시 마샬링해야 하는 레코드를 나타냅니다.|  
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|서버에 다시 마샬링해야 하는 레코드를 나타냅니다.|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|반환 하는 레코드의 최대 수를 나타내는 **레코드 집합** 쿼리에서 합니다.|  
 |[모드](../../../ado/reference/ado-api/mode-property-ado.md)|데이터 수정에 대 한 사용할 수 있는 권한을 나타냅니다는 **연결**, **레코드**, 또는 **스트림** 개체입니다.|  
 |[이름](../../../ado/reference/ado-api/name-property-ado.md)|개체의 이름을 나타냅니다.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|특정에 대 한 공급자 관련 오류 코드 나타냅니다 **오류** 개체입니다.|  
-|[번호](../../../ado/reference/ado-api/number-property-ado.md)|고유 하 게 식별 하는 번호 나타냅니다는 **오류** 개체입니다.|  
+|[Number](../../../ado/reference/ado-api/number-property-ado.md)|고유 하 게 식별 하는 번호 나타냅니다는 **오류** 개체입니다.|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|숫자 값의 소수 자릿수를 나타냅니다는 **매개 변수** 또는 **필드** 개체입니다.|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|값을 나타냅니다는 **필드** 는 전의 레코드에서 변경 작업을 수행 합니다.|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|데이터 페이지 수를 나타냅니다는 **레코드 집합** 개체에 포함 되어 있습니다.|  

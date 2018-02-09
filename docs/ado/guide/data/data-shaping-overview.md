@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: data shaping [ADO], overview
+helpviewer_keywords:
+- data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9720e3312332fe0c4a00bac01cbaa82908125dfb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5ebd3d67ffc5c3f3aba0f481182c5812f4523a5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-shaping-overview"></a>데이터 셰이핑 개요
 *데이터 모양 지정* 쿼리에서 둘 이상의 논리 엔터티 간의 계층 관계를 수립을 의미 합니다. 하나의 레코드 간의 부모-자식 관계에서 계층 구조를 볼 수 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 하나 이상의 레코드 (장 라고도 함) 다른 **레코드 집합**합니다. 부모-자식 관계에서는 부모 **레코드 집합** 자식을 포함 **레코드 집합**합니다. 계층 관계의 예로 고객과 주문이 합니다. 모든 고객 데이터베이스에 대해 0 개 이상의 주문이 있을 수 있습니다. 계층 관계는 재귀 손자 레코드 자식 레코드에 중첩 될 수 있습니다 수 있습니다. 원칙적으로 계층적 레코드 깊이에 관계 없이 중첩 될 수 있습니다. 실제로, ADO는 512의 최대 재귀를 제한 **레코드 집합**s입니다.  

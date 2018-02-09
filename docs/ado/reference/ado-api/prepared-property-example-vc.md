@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Prepared property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c26fafc763f75a8ff46ce3b170ad898dc49017a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 759a516062ea81e173690c2f55364cf32fff72a0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prepared-property-example-vc"></a>준비 속성 예제 (VC + +)
 이 예제에서는 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) 열어 두는 속성 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체-준비 및 준비 되지 않았습니다.  

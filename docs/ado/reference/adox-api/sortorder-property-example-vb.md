@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: SortOrder property [ADOX]
+dev_langs:
+- VB
+helpviewer_keywords:
+- SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77ac31157edfe36af85b112fffeaca6bb6cca86b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c65caf4436eead9a18df18b29b5d509691c0240
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 속성 예제 (VB)
 이 예제에서는 [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) 속성의는 [열](../../../ado/reference/adox-api/column-object-adox.md) 에 추가 된는 [열](../../../ado/reference/adox-api/columns-collection-adox.md) 컬렉션은 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 에 국가 열에 오름차순 인덱스를 추가 하는 코드는 **직원** 레코드를 표시 합니다. 다음 테이블입니다. 코드에는 국가 열을 내림차순 인덱스를 추가 하는 다음의 **직원** 테이블을 레코드를 다시 표시 됩니다. 오름차순과 내림차순 인덱스 간의 차이점 표시 됩니다.  

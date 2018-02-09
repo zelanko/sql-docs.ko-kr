@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu 클러스터와 가용성 그룹 리소스 구성
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/01/2018
 이 문서에서는 ubuntu 3 개 노드 클러스터를 만들고 이전에 만든된 가용성 그룹에 클러스터 리소스로 추가 하는 방법을 설명 합니다. 고가용성을 위해 Linux에서 가용성 그룹에 노드가 3 개 필요-참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다.
 
 > [!NOTE] 
-> 이 시점에서 linux Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. sql에서 클러스터의 존재에 대 한 지식이 없는, 모든 오케스트레이션은 외부 in 않으며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에는 동일한 동등한 옵션이 없습니다. Always On 동적 관리 뷰 클러스터 정보를 쿼리 하는 빈 행을 반환 합니다. 장애 조치 후 투명 하 게 다시 연결에 사용할 수신기를 만들 수 있지만 (아래 설명 됨) 가상 IP 리소스를 만드는 데 IP와 함께 DNS 서버에서 수신기 이름은 수동으로 등록 해야 합니다.
+> 이 시점에서 linux Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. sql에서 클러스터의 존재에 대 한 지식이 없는, 모든 오케스트레이션은 외부 in 않으며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에는 동일한 동등한 옵션이 없습니다. Always On 동적 관리 뷰 클러스터 정보를 쿼리 하는 빈 행을 반환 합니다. 장애 조치 후 투명 하 게 다시 연결에 사용할 수신기를 만들 수 있지만 수동으로 (아래 설명 됨) 가상 IP 리소스를 만드는 데 ip에서 수신기 이름을 DNS 서버에 등록 해야 합니다.
 
 다음 섹션에서는 장애 조치 클러스터 솔루션을 설정 하는 단계를 안내 합니다. 
 
@@ -95,18 +95,18 @@ sudo systemctl start pcsd
 sudo systemctl enable pacemaker
 ```
 >[!NOTE]
->'기본 시작 pacemaker 중단 없는 runlevels를 포함 합니다.' 사용 pacemaker 명령을 오류와 함께 완료 됩니다. 이 무시 해도, 클러스터 구성을 계속 수 있습니다. 우리는 다음과 같습니다. 클러스터 공급 업체와이 문제를 해결 합니다.
+>사용 pacemaker 명령을 'pacemaker 기본 시작 중단 없는 runlevels를 포함 합니다.' 오류가 발생 하 여 완료 될 수 있습니다. 이 무시 해도, 클러스터 구성을 계속 수 있습니다. 
 
 ## <a name="create-the-cluster"></a>클러스터 만들기
 
 1. 모든 노드의 모든 기존 클러스터를 구성을 제거 합니다. 
 
-   실행 중인 'sudo apt get 설치 pc' pacemaker, corosync, 및 pc를 동시에 설치 하 고 서비스의 모든 3을 실행을 시작 합니다.  템플릿이 생성 corosync 시작 ' / etc/cluster/corosync.conf' 파일입니다.  다음 단계가 성공이 파일에 존재할 수 없는 – pacemaker 중지 하려면이 문제를 해결 하도록 / corosync 삭제 ' / etc/cluster/corosync.conf', 다음 단계 성공적으로 완료 됩니다. 동일한 작업을 수행 pc 클러스터 destroy 하 고 한으로 사용할 수 있습니다 시간 초기 클러스터 설치 단계입니다.
+   실행 중인 'sudo apt get 설치 pc' pacemaker, corosync, 및 pc를 동시에 설치 하 고 서비스의 모든 3을 실행을 시작 합니다.  템플릿이 생성 corosync 시작 ' / etc/cluster/corosync.conf' 파일입니다.  다음 단계가 성공이 파일에 존재할 수 없는 – pacemaker 중지 하려면이 문제를 해결 하도록 / corosync 삭제 ' / etc/cluster/corosync.conf', 한 다음 다음 단계를 성공적으로 완료 합니다. 동일한 작업을 수행 pc 클러스터 destroy 하 고 한으로 사용할 수 있습니다 시간 초기 클러스터 설치 단계입니다.
    
    다음 명령은 기존 클러스터 구성 파일을 제거 하 고 모든 클러스터 서비스를 중지 합니다. 이 클러스터를 영구적으로 제거합니다. 사전 프로덕션 환경에서 첫 번째 단계로 실행 합니다. 참고로 'pc 클러스터 손상' pacemaker 서비스와 다시 활성화할 수 있습니다에 사용할 수 없습니다. 모든 노드에서 다음 명령을 실행합니다.
    
    >[!WARNING]
-   >이 명령은 모든 기존 클러스터 리소스 삭제 됩니다.
+   >이 명령은 모든 기존 클러스터 리소스를 제거합니다.
 
    ```bash
    sudo pcs cluster destroy 
@@ -116,18 +116,18 @@ sudo systemctl enable pacemaker
 1. 클러스터를 만듭니다. 
 
    >[!WARNING]
-   >클러스터링 공급 업체는 조사 하 고, 시작 하는 알려진된 문제로 인해 클러스터 ('pc 클러스터 start') 아래의 오류 하면서 실패 합니다. 해당 하는 클러스터 설치 명령을 실행 하는 때 만들어지는 잘못 /etc/corosync/corosync.conf에 구성 된 로그 파일 때문입니다. 이 문제를 해결 하려면 로그 파일을 변경: /var/log/corosync/corosync.log 합니다. 또는 /var/log/cluster/corosync.log 파일을 만들 수 있습니다.
+   >클러스터링 공급 업체는 조사 하 고, 시작 하는 알려진된 문제로 인해 클러스터 ('pc 클러스터 start')는 아래의 오류와 함께 실패 합니다. 해당 하는 클러스터 설치 명령을 실행 하는 때 만들어지는 잘못 /etc/corosync/corosync.conf에 구성 된 로그 파일 때문입니다. 이 문제를 해결 하려면 로그 파일을 변경: /var/log/corosync/corosync.log 합니다. 또는 /var/log/cluster/corosync.log 파일을 만들 수 있습니다.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-다음 명령은 세 개 노드 클러스터를 만듭니다. 스크립트를 실행하기 전에 `**< ... >**` 사이의 값을 바꿉니다. 주 노드에서 다음 명령을 실행 합니다. 
+다음 명령은 세 개 노드 클러스터를 만듭니다. 스크립트를 실행하기 전에 `< ... >` 사이의 값을 바꿉니다. 주 노드에서 다음 명령을 실행 합니다. 
 
    ```bash
-   sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
-   sudo pcs cluster setup --name **<clusterName>** **<node1>** **<node2…>** **<node3>**
+   sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
    sudo pcs cluster start --all
    ```
    
@@ -146,11 +146,11 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->테스트 목적으로 하는 데 않습니다 STONITH를 사용 하지 않도록 설정 합니다. Pacemaker 프로덕션 환경에서 사용 하려는 경우 환경에 따라 STONITH 구현을 계획 하 고 사용 하도록 설정 유지 해야 합니다. 이 시점에서 펜스 에이전트가 없는 모든 클라우드 환경 (Azure 포함) 또는 Hyper-v에 대 한 참고 합니다. 검사가 클러스터 공급 업체는 이러한 환경에서 실행 중인 프로덕션 클러스터에 대 한 지원을 제공 하지 않습니다. 제작 하는 이후 릴리스에서 사용할 수 있는 이러한 차이 대 한 솔루션입니다.
+>테스트 목적으로 하는 데 않습니다 STONITH를 사용 하지 않도록 설정 합니다. Pacemaker 프로덕션 환경에서 사용 하려는 경우 환경에 따라 STONITH 구현을 계획 하 고 사용 하도록 설정 유지 해야 합니다. 이 시점에서 펜스 에이전트가 없는 모든 클라우드 환경 (Azure 포함) 또는 Hyper-v에 대 한 참고 합니다. 검사가 클러스터 공급 업체는 이러한 환경에서 실행 중인 프로덕션 클러스터에 대 한 지원을 제공 하지 않습니다. 
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>클러스터 속성을 false 시작 실패-은-치명적이 지 설정
 
-`start-failure-is-fatal`노드의 리소스를 시작 하지 해당 노드에서 시작 시도 하면 추가 하는지 여부를 나타냅니다. 로 설정 하면 `false`, 클러스터 리소스의 현재 오류 개수 및 마이그레이션 임계값에 따라 다시 동일한 노드에서 시작을 시도할 것인지 결정 합니다. 따라서 장애 조치 발생 후 Pacemaker로 다시 시작의 가용성 그룹 리소스가 이전에 기본 SQL 인스턴스를 사용할 수 있는 합니다. Pacemaker 보조 복제본 내리고 가용성 그룹 자동으로 다시 연결 됩니다. 
+`start-failure-is-fatal`노드의 리소스를 시작 하지 해당 노드에서 시작 시도 하면 추가 하는지 여부를 나타냅니다. 로 설정 하면 `false`, 클러스터 리소스의 현재 오류 개수 및 마이그레이션 임계값에 따라 다시 동일한 노드에서 시작 여부를 결정 합니다. 따라서 장애 조치 발생 후 Pacemaker 다시 시도 시작 하는 가용성 그룹 리소스에 기본 전자 SQL 인스턴스를 사용할 수 있는 합니다. 보조 복제본을 보조로 강등 pacemaker 하 고 가용성 그룹 하는 자동으로 다시 참여 합니다. 
 
 속성 값을 업데이트 하려면 `false` 다음 스크립트를 실행 합니다.
 
@@ -187,17 +187,17 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>가상 IP 리소스 만들기
 
-가상 IP 주소 리소스를 만들려면 노드 하나에서 다음 명령을 실행 합니다. 네트워크에서 사용 가능한 고정 IP 주소를 사용 합니다. 스크립트를 실행 하기 전에 사이의 값을 대체 `**< ... >**` 유효한 IP 주소입니다.
+가상 IP 주소 리소스를 만들려면 노드 하나에서 다음 명령을 실행 합니다. 네트워크에서 사용 가능한 고정 IP 주소를 사용 합니다. 스크립트를 실행 하기 전에 사이의 값을 대체 `< ... >` 유효한 IP 주소입니다.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 Pacemaker에서 지정 된 동일한 가상 서버 이름이 없습니다. 문자열 서버 이름이를 가리키는 연결 문자열을 사용 하는 IP 주소를 사용 하지 IP 리소스 주소와 원하는 가상 서버 이름이 DNS에 등록 합니다. DR 구성에 대 한 주 데이터베이스와 DR 사이트 모두에서 DNS 서버와 함께 원하는 가상 서버 이름 및 IP 주소를 등록 합니다.
 
 ## <a name="add-colocation-constraint"></a>공동 배치 제약 조건 추가
 
-Pacemaker 클러스터에서 리소스를 실행할 위치를 선택 하는 등 거의 모든 의사 결정은 점수를 비교 하 여 수행 됩니다. 리소스 당 점수가 계산 되 고 클러스터 리소스 관리자가 특정 리소스에 대 한 점수가 가장 높은 있는 노드를 선택 합니다. (한 노드에 리소스에 대 한 음수 점수 있으면 리소스 실행할 수 없습니다 해당 노드에서.) 제약 조건 사용 하 여 클러스터의 결정을 조작할 수 있습니다. 제한에는 점수는. 제약 조건에 무한대 보다 낮은 점수를 경우만 권장 사항입니다. 무한대의 점수는 필수 사항 의미 합니다. 원하는 실행 되도록 하기 위해 주 가용성 그룹 및 가상 ip 리소스는 동일한 호스트에 있으므로 무한대의 점수는 공동 배치 제약 조건을 정의 합니다. 공동 배치 제약 조건에 추가 하려면 노드 하나에서 다음 명령을 실행 합니다. 
+Pacemaker 클러스터에서 리소스를 실행할 위치를 선택 하는 등 거의 모든 의사 결정은 점수를 비교 하 여 수행 됩니다. 리소스 당 점수가 계산 되 고 클러스터 리소스 관리자가 특정 리소스에 대 한 점수가 가장 높은 있는 노드를 선택 합니다. (한 노드에 리소스에 대 한 음수 점수 있으면 리소스 실행할 수 없습니다 해당 노드에서.) 클러스터의 한 결정을 구성 하려면 제약 조건을 사용 합니다. 제한에는 점수는. 제약 조건에 무한대 보다 낮은 점수를 경우만 권장 사항입니다. 무한대의 점수는 필수 의미 합니다. 주 복제본과 가상 ip 리소스를 동일한 호스트에 지를 무한대의 점수와 공동 배치 제약 조건을 정의 합니다. 공동 배치 제약 조건에 추가 하려면 노드 하나에서 다음 명령을 실행 합니다. 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master

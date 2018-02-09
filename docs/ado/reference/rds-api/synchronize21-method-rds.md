@@ -1,6 +1,7 @@
 ---
 title: "Synchronize21 메서드 (RDS) | Microsoft Docs"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Synchronize21 method [ADO]
+helpviewer_keywords:
+- Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f48789fef088affdfa664ead4da2bd379aa51b7
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c973d97465963ba865bb768569bf70f70366a1b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 메서드 (RDS)
 지정 된 레코드 집합 2.1 ADO와 함께 사용할 연결 문자열에 지정 된 데이터베이스와 동기화 합니다.  
@@ -38,7 +40,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *연결 문자열*  
+ *ConnectionString*  
  요청 보낼 수 있는 OLE DB 공급자에 연결 하는 데 사용 하는 문자열입니다. 처리기를 사용 하는 경우 처리기를 편집 하거나 연결 문자열을 바꿀 수 있습니다.  
   
  *HandlerString*  

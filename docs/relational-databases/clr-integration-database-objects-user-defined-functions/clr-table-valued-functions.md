@@ -20,19 +20,20 @@ helpviewer_keywords:
 - table-valued functions [CLR integration]
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: "88"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 220c83c7378e634745a7edc71f521d30c3f812b6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b39532e93eba5784bbc9925f3140c26ced977ede
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-table-valued-functions"></a>CLR 테이블 반환 함수
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]테이블 반환 함수는 테이블을 반환 하는 사용자 정의 함수가입니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+테이블 반환 함수는 테이블을 반환하는 사용자 정의 함수입니다.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모든 관리 언어에서 테이블 반환 함수를 정의할 수 있도록 하여 테이블 반환 함수의 기능을 확장하고 있습니다. 데이터를 통해 테이블 반환 함수에서 반환 되는 **IEnumerable** 또는 **IEnumerator** 개체입니다.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
  CLR 테이블 반환 함수에 대 한 자세한 내용은 체크 아웃 MSSQLTips' [소개 SQL Server CLR 테이블 반환된 함수!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL과 CLR 테이블 반환 함수의 차이  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수는 함수 호출의 결과를 중간 테이블로 구체화합니다. TVF는 중간 테이블을 사용하므로 결과에 대해 제약 조건 및 고유 인덱스를 지원할 수 있습니다. 이러한 기능은 대규모의 결과가 반환할 때 매우 유용합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수를 중간 테이블로 함수 호출의 결과 구체화 합니다. TVF는 중간 테이블을 사용하므로 결과에 대해 제약 조건 및 고유 인덱스를 지원할 수 있습니다. 이러한 기능은 대규모의 결과가 반환할 때 매우 유용합니다.  
   
  반면 CLR 테이블 반환 함수는 스트리밍 방식을 사용합니다. 전체 결과 집합을 단일 테이블로 구체화할 필요가 없습니다. **IEnumerable** 는 결과 사용 하 여 증분 방식에서 및 관리 되는 함수에서 반환 된 개체를 직접 테이블 반환 함수를 호출 하는 쿼리의 실행 계획에서 호출 됩니다. 이 스트리밍 모델은 전체 테이블이 채워질 때까지 기다리지 않고 첫 번째 행을 사용할 수 있게 된 직후부터 결과를 사용할 수 있도록 합니다. 반환되는 행의 수가 매우 많은 경우에도 이러한 행을 메모리에서 전체적으로 구체화할 필요가 없는 이 방법이 더 효율적입니다. 예를 들어 관리 테이블 반환 함수는 텍스트 파일을 구문 분석하고 각 줄을 하나의 행으로 반환하는 데 사용할 수 있습니다.  
   
@@ -62,7 +63,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Transact-SQL에서 테이블 반환 함수 정의  
- CLR 테이블 반환 함수를 정의 하기 위한 구문은 유사 하지만 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 추가 하 여 테이블 반환 함수는 **외부 이름** 절. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ CLR 테이블 반환 함수를 정의 하기 위한 구문은 유사 하지만 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 추가 하 여 테이블 반환 함수는 **외부 이름** 절. 예를 들어  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  

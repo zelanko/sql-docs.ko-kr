@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sysremotelogins_TSQL
 - sys.sysremotelogins
 - sys.sysremotelogins_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysremotelogins system table
 - sys.sysremotelogins compatibility view
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7ec25d1f3cead5ed8be5f486bec009afff4ab5c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9bfc2d1bcedfcc32864c55b90a46782cc0e8f2a5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/27/2017
 |**remoteserverid**|**smallint**|원격 서버 ID입니다.|  
 |**remoteusername**|**sysname**|원격 서버상에서 사용자의 로그인 이름입니다.|  
 |**상태**|**smallint**|0을 반환합니다.|  
-|**sid**|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 보안 ID입니다.|  
+|**sid**|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 보안 id입니다.|  
 |**changedate**|**datetime**|원격 사용자가 추가된 날짜 및 시간입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  

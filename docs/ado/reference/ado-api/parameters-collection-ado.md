@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Command15::get_Parameters
 - Command15::Parameters
 - Command15::GetParameters
-helpviewer_keywords: Parameters collection [ADO]
+helpviewer_keywords:
+- Parameters collection [ADO]
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1cceeccbcca886b151dd505881be25687fd26e37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 96d30086b4c05455ef7d4fd5fdd82674979c205d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameters-collection-ado"></a>Parameters 컬렉션 (ADO)
 모든 포함 된 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 의 개체는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  

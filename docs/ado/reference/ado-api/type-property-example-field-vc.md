@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Type property [field] [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85d88e81cb53eefe6534c8621b7df5002c9bb1ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d50cc9fb72a1ac9ba30bc2903fc553d7574736c2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-example-field-vc"></a>형식 속성 예제 (필드) (VC + +)
 이 예제에서는 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성의 값에 해당 하는 상수 이름을 표시 하 여는 **형식** 모든 속성은 [필드](../../../ado/reference/ado-api/field-object.md) 개체에 ***직원*** 테이블입니다. FieldType 함수는이 절차를 실행 하려면 필요 합니다.  
@@ -158,22 +161,22 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Employee 테이블의 필드:**  
- **이름: emp_id**  
+ **Name: emp_id**  
  **형식: adChar**  
  **이름: fname**  
- **형식: 집합이 있으므로 필요**  
+ **Type: adVarChar**  
  **이름: minit**  
  **형식: adChar**  
  **이름: lname**  
- **형식: 집합이 있으므로 필요**  
- **이름: job_id**  
- **형식: adSmallInt**  
- **이름: job_lvl**  
- **형식: adUnsignedTinyInt**  
- **이름: pub_id**  
+ **Type: adVarChar**  
+ **Name: job_id**  
+ **Type: adSmallInt**  
+ **Name: job_lvl**  
+ **Type: adUnsignedTinyInt**  
+ **Name: pub_id**  
  **형식: adChar**  
  **이름: hire_date**  
- **형식: adDBTimeStamp**   
+ **Type: adDBTimeStamp**   
 ## <a name="see-also"></a>관련 항목:  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
  [Type 속성(ADO)](../../../ado/reference/ado-api/type-property-ado.md)

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d59ce82d8c0d451495b229cc285e25286f5d197
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 18bfbc4a2e18e0232380edf157410fbd4eb3b12c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>중간으로 매개 변수화 된 명령을 계산 명령
 일반적으로 매개 변수가 있는 shape APPEND 명령에는 부모 만드는 **레코드 집합** 쿼리 명령 및 절 자식 **레코드 집합** 매개 변수가 있는 쿼리 명령- 즉, 매개 변수 자리 표시자를 포함 하는 명령 (매개 변수 "?"). 명령의 결과로 만들어지는 셰이핑된 **레코드 집합** 부모는 상위 수준 차지 하는 두 개의 수준이 및 자식 하위 수준을 차지 합니다.  

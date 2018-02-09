@@ -8,25 +8,28 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - relational data [XQuery]
 - XQuery, relational data
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 447ffa853f8a5b6a257cc7e2918feaddcbde8a0f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 420caf1620974293f279e72892f0da2cad6a140b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xqueries-handling-relational-data"></a>관계형 데이터에 대한 XQuery 처리
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +38,9 @@ ms.lasthandoff: 12/05/2017
   
  XQuery 실행으로 생성된 XML에는 다른 Transact-SQL 변수 또는 행 집합 열로부터 검색된 값이 포함될 수 있습니다. 비-XML 관계형 데이터를 결과 XML에 바인딩하기 위해 SQL Server는 XQuery 확장으로 다음과 같은 의사 함수를 제공합니다.  
   
--   **sql: column** 함수  
+-   **sql:column()** function  
   
--   **variable ()** 함수  
+-   **sql:variable()** function  
   
  XQuery를 지정할 때 이러한 XQuery 확장을 사용할 수 있습니다는 **query ()** 의 메서드는 **xml** 데이터 형식입니다. 결과적으로 **query ()** 메서드는 XML 및 비 데이터를 결합 하는 XML을 만들 수 있습니다-**xml** 데이터 형식입니다.  
   

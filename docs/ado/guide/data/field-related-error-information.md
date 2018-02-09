@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,21 +16,21 @@ helpviewer_keywords:
 - field-related errors [ADO]
 - errors [ADO], field-related
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67404e4d66983c3cf64bd44a2d80c77c4eb99790
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6513328c3d26d794e3881f8a29fb3ecf51feee15
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-related-error-information"></a>필드와 관련 된 오류 정보
 필드와 관련이 직접 오류가 발생 하는 경우-예를 들어 데이터가 누락 되어 또는 필드에 대 한 잘못 된 형식이 된 경우-검사 하 여 문제의 원인에 대 한 자세한 정보를 검색할 수 있습니다는 **필드** 개체의 **상태**  속성입니다. 이 속성의 문제에 대 한 특정 정보를 제공 하도록 향상 되었습니다. 따라서, 예를 들어를 호출할 때 **UpdateBatch** 실패 하면 문제의 원인을 검토 하 여 확인할 수 있습니다는 **상태** 의 속성은 **필드** 는 영향을 받는 각 레코드가 있습니다. 속성의 값 중 하나가 포함 됩니다는 **FieldStatusEnum** 상수입니다. 다음 표에서 오류가 발생 한 경우 특정 관심 있는 해당 값을 포함 합니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|필드 검색 하거나 데이터의 손실 없이 저장할 수 없습니다 나타냅니다.|  
 |**adFieldDataOverflow**|6|공급자에서 반환 되는 데이터 필드의 데이터 형식을 오버플로 있는지를 나타냅니다.|  

@@ -15,21 +15,21 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1eab2fac5e1d2f944228e75f00fb8ecc8596b9c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0a245945c5dbe9262d251af67a138739b1888da
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-programming-task-table"></a>ADO 프로그래밍 작업 테이블
 다음 표에서에 포함 된 프로그래밍 작업의 *ADO Programmer's Guide* 하 고 각 작업에 대 한 참조를 제공 합니다. 이러한 참조는 텍스트 설명 또는 코드 예제에서는 작업을 수행 하는 ADO 기능에 대 한 정보를 찾을 수 있습니다 수 있습니다.
 
-|ADO 작업|References|
+|ADO 작업|참조|
 |--------------|----------------|
 |데이터 공급자에 연결|[데이터 원본에 연결](../../ado/guide/data/connecting-to-data-sources.md)|
 |명령 실행 및 저장된 프로시저 호출|[준비 및 실행 명령을](../../ado/guide/data/preparing-and-executing-commands.md)|

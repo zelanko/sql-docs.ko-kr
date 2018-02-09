@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b667a5ebb190ddd7c3507bc04e5f2fbcd25dca19
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f737d3b05e27eff7aae0aa95ee336a054c38f29f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="immediate-mode"></a>직접 실행 모드
 직접 실행 모드 적용 되는 경우는 **LockType** 속성이로 설정 되어 **adLockOptimistic** 또는 **adLockPessimistic**합니다. 직접 실행 모드에서 변경 내용이 레코드에 전파 되는 데이터 소스에 호출 하 여 행에 대 한 작업 완료를 선언 하는 즉시는 **업데이트** 메서드.  

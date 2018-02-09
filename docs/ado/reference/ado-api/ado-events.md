@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - events [ADO]
 - ADO, events
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dec529bcbc7130ea29fac793a82a5979974f396e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4315048296c450e1365874e021725c8160612313
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-events"></a>ADO 이벤트
 |||  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|에 현재으로 가져온 행 수를 보고 하기 위해 시간이 오래 걸리는 비동기 작업을 하는 동안에 주기적으로 호출 된 **레코드 집합**합니다.|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|하나 이상의 값 다음에 호출 **필드** 개체 변경 되었습니다.|  
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|경고 하는 동안 발생할 때마다 호출 됩니다는 **ConnectionEvent** 작업 합니다.|  
-|[두](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|현재 위치에 다음에 호출 된 **레코드 집합** 변경 합니다.|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|현재 위치에 다음에 호출 된 **레코드 집합** 변경 합니다.|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|하나 이상의 레코드 변경 후 호출 됩니다.|  
 |[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|다음에 호출 된 **레코드 집합** 변경 되었습니다.|  
 |[RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|다음에 호출 된 **RollbackTrans** 작업 합니다.|  

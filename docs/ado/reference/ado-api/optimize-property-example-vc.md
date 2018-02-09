@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Optimize property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b7ef91419c5891d4f49aacfb0c50712609aeec8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 927448414395ded11b0896b0f0e692ef05c13ce1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="optimize-property-example-vc"></a>최적화 속성 예제 (VC + +)
 이 예제에서는 [필드](../../../ado/reference/ado-api/field-object.md) 개체 동적 **최적화** 속성입니다. **zip** 필드는 **작성자** 테이블에 **Pubs** 데이터베이스 인덱싱되지 않았습니다. 설정의 [최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 속성을 **True** 에 **zip** 의 성능을 개선 하는 인덱스를 작성 하는 ADO를 인증 하는 필드는 [찾을](../../../ado/reference/ado-api/find-method-ado.md)메서드.  
@@ -136,7 +139,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto 3 실버 Ct. 호두로 크릭 CA**   
+ **Akiko Yokomoto    3 Silver Ct. 호두로 크릭 CA**   
 ## <a name="see-also"></a>관련 항목:  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
  [Optimize 속성-동적(ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

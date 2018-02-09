@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset20::DataMember
-helpviewer_keywords: DataMember property
+f1_keywords:
+- Recordset20::DataMember
+helpviewer_keywords:
+- DataMember property
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdb6c6dbb5d7bb7c5c10a968cffe759edb9309f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c41fe1184908e3e46866d9405859a18d2181d187
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datamember-property"></a>DataMember 속성
 검색할 수 있는 데이터 멤버의 이름을 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 으로 참조 되는 [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) 속성입니다.  

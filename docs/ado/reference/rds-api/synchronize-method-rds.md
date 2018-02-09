@@ -1,6 +1,7 @@
 ---
 title: "Synchronize 메서드 (RDS) | Microsoft Docs"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Synchronize method [ADO]
+helpviewer_keywords:
+- Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c933cbb0a39486ea1ed04b645057bdc31011b05b
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d223df00d0b32c3f608bcd61207de23da77e15cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 메서드 (RDS)
 2.5 이상 ADO에서 사용 하기 위해 연결 문자열에 지정 된 데이터베이스와 지정 된 레코드 집합을 동기화 합니다.  
@@ -38,7 +40,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *연결 문자열*  
+ *ConnectionString*  
  요청 보낼 수 있는 OLE DB 공급자에 연결 하는 데 사용 하는 문자열입니다. 처리기를 사용 하는 경우 처리기 편집 하거나 연결 문자열을 바꿀 수 있습니다.  
   
  *HandlerString*  

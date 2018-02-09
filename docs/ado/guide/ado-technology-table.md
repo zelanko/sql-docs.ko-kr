@@ -11,23 +11,24 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, technologies
+helpviewer_keywords:
+- ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a03ed3b7537d81fac8045ceaad2c1c9a1afcaa0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d6ab214b72913118e12d1ce1a7db67e0e00dc118
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="products-and-technologies-table"></a>제품 및 기술 테이블
 다음 표에서 Microsoft 제품, 도구 및 ADO Programmer's Guide에 설명 된 기술을 나열 합니다. 가능한 경우이 가이드의 관련 항목에 링크를 제공 합니다.
 
-|Microsoft 제품 또는 기술|References|
+|Microsoft 제품 또는 기술|참조|
 |-------------------------------------|----------------|
 |Access/Jet|[레코드 집합 작업](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [ADOX 기본 사항](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Microsoft OLE DB Provider for Microsoft Jet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Active Directory 서비스 인터페이스 ADSI)|[Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provider](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|

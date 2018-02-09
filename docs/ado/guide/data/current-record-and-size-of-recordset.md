@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d6b4bab8061c7343d303dcd322ae2ae7fef2fd42
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6cc6f4bbded2e78203d95820cc590f6c69380fcd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="current-record-and-size-of-recordset"></a>현재 레코드와 레코드 집합의 크기
 이 섹션에서는 샘플에는 커서의 현재 위치를 찾는 방법을 설명 **레코드 집합** 에 [JScript 코드 예제에서는 레코드 집합을 반환 하려면](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)합니다.  

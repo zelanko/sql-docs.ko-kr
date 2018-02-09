@@ -11,17 +11,18 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, glossary
+helpviewer_keywords:
+- ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary"></a>ADO 용어집
 이 항목에서는 ADO와 관련 된 용어를 정의 합니다.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/21/2017
  바인딩 항목  
  테이블의 필드와 변수 간의 매핑. ADO Visual c + + 확장에 **레코드 집합** 필드는 C/c + + 변수에 매핑됩니다.  
   
- 비트 마스크  
+ bitmask  
  숫자 값을 위한 다른 숫자 값을 비트 단위로 값 비교 일반적으로 매개 변수 또는 반환 값의 옵션 플래그를 설정 하려면. 일반적으로이 비교 작업을 완료 비트 논리 연산자와 같은 **및** 및 **또는** Visual Basic의  **&**  및 **&#124;** c + +입니다.  
   
  예를 들어 ADO **파생** 필드의 특성을 결정 하로 나타내는 비트 마스크 값을 사용할 수 있습니다. 필드를 업데이트할 수 있는지 확인 하 고 한다고 가정 합니다. Visual Basic에서 다음 식을 사용 하 여이 테스트할 수 있습니다.`Field.Attributes AND adFldUpdatable`  
@@ -120,7 +121,7 @@ ms.lasthandoff: 12/21/2017
  cursor  
  레코드 탐색, 데이터의 updateability 및 다른 사용자가 데이터베이스에 대 한 변경 내용의 표시 유형을 제어 하는 데이터베이스 요소입니다.  
   
-## <a name="d"></a>d  
+## <a name="d"></a>D  
  데이터 바인딩  
  개체 또는 데이터 원본에 응용 프로그램의 컨트롤을 연결 하 합니다. 데이터 원본에 연결 된 컨트롤 이라고는 *데이터 바인딩된 컨트롤*합니다.  
   
@@ -250,7 +251,7 @@ ms.lasthandoff: 12/21/2017
  ProgID (프로그래밍 id)  
  Windows 레지스트리에 COM 응용 프로그램에 의해 매핑되는 고유 이름입니다. ADO 연결에 대 한 ProgID가 "ADODB 합니다. 연결 "입니다. CLSID, COM.를 참조 하십시오.  
   
- 프록시  
+ proxy  
  매개 변수 마샬링 제공 하는 인터페이스 관련 개체 및 다른 스레드가 다른 프로세스와 같은 다른 실행 환경에서 실행 되는 응용 프로그램 개체를 호출 하는 클라이언트에 필요한 통신 합니다. 프록시는 클라이언트와 호출 되는 응용 프로그램 개체에 있는 해당 스텁 통신 합니다. 스텁을 참고 하십시오.  
   
 ## <a name="r"></a>R  
@@ -282,17 +283,17 @@ ms.lasthandoff: 12/21/2017
  저장 프로시저  
  이름으로 저장 하 고 하나의 단위로 처리 하는 미리 컴파일된 모음 SQL 문과 선택적 흐름 제어 문이 같은 코드입니다. 저장된 프로시저는 데이터베이스 내에 저장 됩니다. 이러한 응용 프로그램에서 호출 하 여 실행할 수 있습니다 및 사용자 지정 변수, 조건부 실행 및 기타 강력한 프로그래밍 기능을 허용 합니다.  
   
- 스텁  
+ stub  
  매개 변수 마샬링 제공 하는 인터페이스 관련 개체 및 호출을 받을 다른 스레드가 다른 프로세스와 같은 다른 실행 환경에서 실행 되는 클라이언트에서 응용 프로그램 개체에 필요한 통신 합니다. 스텁은 응용 프로그램 개체에 있으며 호출 하는 클라이언트에 있는 해당 프록시와와 통신 합니다. 프록시를 참조 하십시오.  
   
- 하위 노드  
+ sub-node  
  자식을 참조 하십시오.  
   
  동기 작업  
  다음 작업이 시작 되기 전에 완료 하는 코드에 의해 시작 되는 작업입니다. 비동기 작업을 참조 하십시오.  
   
 ## <a name="t-z"></a>T-Z  
- trEE  
+ 트리  
  요소 (노드) 간의 계층 관계를 나타내는 구조입니다. 트리 (루트)의 최상위 수준에서 노드 하나 있습니다. 서비스의 루트를 아래에 자식이 여러 개 있을 수 있습니다. 각 자식 트리와 같이 분기 되므로, 다른 하위 항목의 부모 요소일 수 있습니다. 문서 및 기타 폴더가 들어 있는 폴더는 일반적인 예는 트리 구조입니다. 계층, 노드, 루트, 자식, 부모를 참조 하십시오.  
   
  웹 서버  

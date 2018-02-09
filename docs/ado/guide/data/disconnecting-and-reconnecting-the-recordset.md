@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Recordset object [ADO], disconnecting and reconnecting
+helpviewer_keywords:
+- Recordset object [ADO], disconnecting and reconnecting
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d9d1dd91e7ebfb17c0ddc759a0a55d2368efd1e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 66ef21ccf6826edf78847c0fc2c6d043f3960ea2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>연결을 끊고 다시 연결 하는 레코드 집합
 ADO에서 볼 수 있는 가장 강력한 기능 중 하나에 데이터 원본에서 클라이언트 레코드 집합을 연 다음 데이터 원본에서 레코드 집합을 분리 하는 기능입니다. 레코드 집합의 연결이 끊어지면 데이터 원본에 대 한 연결 종료 되므로 유지 관리 하는 데 사용 하는 서버에 있는 리소스를 해제 합니다. 보고 연결이 끊어져도 레코드 집합의 데이터를 편집 하 계속 지정 하 고 나중에 데이터 원본에 연결 한 일괄 처리 모드에서 업데이트를 보냅니다.  

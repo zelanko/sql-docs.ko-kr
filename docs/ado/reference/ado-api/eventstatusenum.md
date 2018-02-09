@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,33 +13,35 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: EventStatusEnum
-helpviewer_keywords: EventStatusEnum enumeration [ADO]
+f1_keywords:
+- EventStatusEnum
+helpviewer_keywords:
+- EventStatusEnum enumeration [ADO]
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82518cbfd6572f03cbe0b742b52bb5e4acd3d8e9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 213d511098daa616043e7dd3078025d63ba2333c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 이벤트의 실행의 현재 상태를 지정합니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|이벤트를 발생 시킨 작업의 취소를 요청 합니다.|  
 |**adStatusCantDeny**|3|작업을 보류 중인 작업의 취소를 요청할 수 없습니다 것을 나타냅니다.|  
 |**adStatusErrorsOccurred**|2|이벤트를 발생 시킨 작업 오류로 인해 실패 했음을 나타냅니다.|  
-|**adStatusOK**|1|이벤트를 발생 시킨 작업에 성공 했음을 나타냅니다.|  
+|**adStatusOK**|1.|이벤트를 발생 시킨 작업에 성공 했음을 나타냅니다.|  
 |**adStatusUnwantedEvent**|5|이벤트 메서드에서 실행이 끝나면 전에 알림 메시지가 방지 합니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  

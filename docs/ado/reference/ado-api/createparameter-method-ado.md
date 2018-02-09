@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Command15::raw_CreateParameter
 - Command15::CreateParameter
-helpviewer_keywords: CreateParameter method [RDS]
+helpviewer_keywords:
+- CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 070b1fed1f5d38da0a3f8275abf9933339a8f5dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c293e3a6e337e3c0331884bf1ee1eed57ad36003
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 메서드 (ADO)
 새 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 속성을 지정 합니다.  
@@ -48,7 +50,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *형식*  
  (선택 사항) A [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 값의 데이터 형식을 지정 하는 **매개 변수** 개체입니다.  
   
- *Direction*  
+ *방향*  
  (선택 사항) A [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) 의 유형을 지정 하는 값 **매개 변수** 개체입니다.  
   
  *크기*  

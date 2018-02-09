@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae662529fc9297fa709d1a185b63d0648b0af903
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 995c833e24f23c7a30ea8c4e5893215222e0867a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-ado-programming"></a>Visual c + + ADO 프로그래밍
 ADO API 참조는 ADO 응용 프로그램 프로그래밍 인터페이스의 (API) Microsoft Visual Basic과 유사한 구문을 사용 하 여 기능을 설명 합니다. ADO 프로그래머 Visual Basic, Visual c + + 등의 다양 한 언어를 사용 하지만 사용자는 모든 사용자, (하거나 사용 하지 않고는 **#import** 지시문), 및 Visual J++ (ADO/WFC 클래스 패키지)와 함께 합니다.  
@@ -44,7 +46,7 @@ ADO API 참조는 ADO 응용 프로그램 프로그래밍 인터페이스의 (AP
   
  클래스 (즉, 메서드 또는 속성이 호출) 내에서 각 작업에는 해당 작업을 직접 (즉, "원시"의 형태 작업)를 호출 하는 선언 및 원시 작업을 호출 하 고 succ를 실행 하는 작업이 실패 한 경우 COM 오류를 throw 하는 선언 essfully 합니다. 작업 속성 인 경우는 일반적으로 컴파일러 지시문 Visual Basic 같은 구문이 있는 작업에 대 한 대체 구문을 만드는입니다.  
   
- 속성의 값을 검색 하는 작업 이름이 양식의 **가져오기***속성*합니다. 속성의 값을 설정 하는 작업 이름이 양식의 **배치***속성*합니다. ADO 개체에 대 한 포인터를 사용 하 여 속성의 값을 설정 하는 작업 이름이 양식의 **PutRef***속성*합니다.  
+ 속성의 값을 검색 하는 작업 이름이 양식의 **가져오기 * * * 속성*합니다. 속성의 값을 설정 하는 작업 이름이 양식의 **배치 * * * 속성*합니다. ADO 개체에 대 한 포인터를 사용 하 여 속성의 값을 설정 하는 작업 이름이 양식의 **PutRef * * * 속성*합니다.  
   
  이러한 형식으로 호출 하 여 속성을 설정 또는 얻을 수 있습니다.  
   
@@ -69,13 +71,13 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```  
   
- 컴파일러는 적절 한 생성 **가져오기***-*, **배치**-, 또는 **PutRef***속성* 호출 되는 대체 구문을 선언 및 속성이 되 고 있는지 여부에 따라 읽기 또는 쓰기 합니다.  
+ 컴파일러는 적절 한 생성 **Get * * *-*, **배치**-, 또는 **PutRef * * * 속성* 호출 되는 대체 구문을 선언 되었고 속성 인지에 따라 읽기 또는 쓰기 대상입니다.  
   
  **__declspec**  컴파일러 지시문만 선언할 수 **가져오기**, **배치**, 또는 **가져오기** 및 **배치** 함수에 대 한 대체 구문입니다. 읽기 전용 작업을 하나만 **가져오기** 선언; 쓰기 전용 작업을 하나만 **배치** 선언; 읽기는 모두 및 쓰기 둘 다 있어야 하는 작업 **가져오기** 및 **배치** 선언 합니다.  
   
- 두 개의 선언이이 지시문; 가능있지 않습니다. 그러나 각 속성 구문이 있을 수: **가져오기***속성*, **배치***속성*, 및 **PutRef**  *속성*합니다. 이 경우에 두 가지 형태의 속성은 대체 구문이 있습니다.  
+ 두 개의 선언이이 지시문; 가능있지 않습니다. 그러나 각 속성 구문이 있을 수: **가져오기 * * * 속성*, **배치 * * * 속성*, 및 **PutRef * * * 속성*합니다. 이 경우에 두 가지 형태의 속성은 대체 구문이 있습니다.  
   
- 예를 들어는 **명령** 개체 **ActiveConnection** 속성에 대 한 대체 구문이 선언 **가져오기***ActiveConnection*및 **PutRef***ActiveConnection*합니다. **PutRef**-구문은 실제로 일반적으로 배치 하려면 열려 있는 하므로 좋은 선택 **연결** 개체 (즉, 한 **연결** 개체 포인터)이 속성입니다. 반면에 **레코드 집합** 개체에 **가져오기**-, **배치**-, 및 **PutRef***ActiveConnection*작업 하지만 대체 구문은 없습니다.  
+ 예를 들어는 **명령** 개체 **ActiveConnection** 속성에 대 한 대체 구문이 선언 **가져오기 * * * ActiveConnection* 및 **PutRef * * * ActiveConnection*합니다. **PutRef**-구문은 실제로 일반적으로 배치 하려면 열려 있는 하므로 좋은 선택 **연결** 개체 (즉, 한 **연결** 개체 포인터)이 속성입니다. 반면에 **레코드 집합** 개체에 **가져오기**-, **배치**-, 및 **PutRef * * * ActiveConnection* 작업 하지만 대안이 없는 구문입니다.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>컬렉션, GetItem 메서드 및 항목 속성  
  포함 하는 여러 컬렉션을 정의 하는 ADO **필드**, **매개 변수**, **속성**, 및 **오류**합니다. Visual c + +에서는 **GetItem (***인덱스***)** 메서드가 컬렉션의 멤버를 반환 합니다. *인덱스* 는 **Variant**, 해당 값은 컬렉션에서 멤버의 숫자 인덱스 또는 멤버의 이름을 포함 하는 문자열입니다.  
@@ -437,7 +439,7 @@ cn.Close
 End Sub  
 ```  
   
- 이 Visual c + + 예제는 **가져오기**/**배치**/**PutRef***속성*합니다.  
+ 이 Visual c + + 예제는 **가져오기**/**배치**/**PutRef * * * 속성*합니다.  
   
 #### <a name="notes"></a>참고  
  다음 참고 코드 예제에서 주석 처리 된 섹션에 해당합니다.  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f3e79fcbef3c9a07ac43de13865632fef2ca6ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e35be40ea3023338048bf729b9f4cea5b6048449
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-methods"></a>ADO 메서드
 |||  
@@ -39,18 +40,18 @@ ms.lasthandoff: 12/21/2017
 |[지우기](../../../ado/reference/ado-api/clear-method-ado.md)|모든 제거는 **오류** 에서 개체는 **오류** 컬렉션입니다.|  
 |[복제](../../../ado/reference/ado-api/clone-method-ado.md)|복제를 만들어 **레코드 집합** 기존 개체 **레코드 집합** 개체입니다. 필요에 따라 읽기 전용 복제 되도록 지정 합니다.|  
 |[닫기](../../../ado/reference/ado-api/close-method-ado.md)|열려 있는 개체와 모든 종속 개체를 닫습니다.|  
-|[불일치](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|두 개의 책갈피를 비교 하 고 상대 값의 표시를 반환 합니다.|  
-|[범위란](../../../ado/reference/ado-api/copyrecord-method-ado.md)|파일 또는 디렉터리와 해당 콘텐츠를 다른 위치로 복사합니다.|  
+|[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|두 개의 책갈피를 비교 하 고 상대 값의 표시를 반환 합니다.|  
+|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|파일 또는 디렉터리와 해당 콘텐츠를 다른 위치로 복사합니다.|  
 |[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|지정한 개수의 문자 또는 바이트 복사 (에 따라 **형식**)에 **스트림** 다른 **스트림** 개체입니다.|  
 |[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)|새 **매개 변수** 지정 된 속성이 있는 개체입니다.|  
 |[Delete (ADO Parameters 컬렉션)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)|개체를 삭제는 **매개 변수** 컬렉션입니다.|  
 |[삭제 (ADO Fields 컬렉션)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)|개체를 삭제는 **필드** 컬렉션입니다.|  
 |[Delete (ADO 레코드 집합)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|현재 레코드 또는 레코드의 그룹을 삭제합니다.|  
-|[참여할 수 있는](../../../ado/reference/ado-api/deleterecord-method-ado.md)|파일 또는 디렉터리와 모든 하위 디렉터리를 삭제합니다.|  
+|[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|파일 또는 디렉터리와 모든 하위 디렉터리를 삭제합니다.|  
 |[(ADO 명령)를 실행 합니다.](../../../ado/reference/ado-api/execute-method-ado-command.md)|쿼리, SQL 문 또는 저장된 프로시저에 지정 된 실행 되는 **CommandText** 속성입니다.|  
 |[(ADO 연결)를 실행 합니다.](../../../ado/reference/ado-api/execute-method-ado-connection.md)|지정 된 쿼리, SQL 문, 저장된 프로시저 또는 공급자 특정 텍스트를 실행합니다.|  
 |[찾기](../../../ado/reference/ado-api/find-method-ado.md)|검색 한 **레코드 집합** 지정된 된 조건을 만족 시키는 행에 대 한 합니다.|  
-|[플러시](../../../ado/reference/ado-api/flush-method-ado.md)|내용을 강제로 **스트림** 원본 개체는 ADO 버퍼에에서 남아 있는 **스트림** 연결 합니다.|  
+|[Flush](../../../ado/reference/ado-api/flush-method-ado.md)|내용을 강제로 **스트림** 원본 개체는 ADO 버퍼에에서 남아 있는 **스트림** 연결 합니다.|  
 |[get_OLEDBCommand 메서드](../../../ado/reference/ado-api/get-oledbcommand-method.md)|먼저 OLEDB 명령에 ADO 명령에 설정 하는 모든 매개 변수 정보를 전파 기본 OLEDB 명령의 반환 합니다.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|반환 된 **레코드 집합** 파일 및이 나타내는 디렉터리에 하위 디렉터리를 나타내는 행이 있는 **레코드**합니다.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|큰 텍스트 또는 이진 데이터의 내용 중 일부 또는 모두 반환 **필드** 개체입니다.|  
@@ -69,9 +70,9 @@ ms.lasthandoff: 12/21/2017
 |[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)|공급자에서 데이터베이스 스키마 정보를 가져옵니다.|  
 |[put_OLEDBCommand 메서드](../../../ado/reference/ado-api/put-oledbcommand-method.md)|이 메서드에서 아무런 작업도 수행-항상 S_OK를 반환 합니다.|  
 |[읽기](../../../ado/reference/ado-api/read-method.md)|지정된 된 수의 바이트에서 읽어는 **스트림** 개체입니다.|  
-|[Readtext 문](../../../ado/reference/ado-api/readtext-method.md)|텍스트에서 지정 된 수의 문자를 읽어 **스트림** 개체입니다.|  
+|[ReadText](../../../ado/reference/ado-api/readtext-method.md)|텍스트에서 지정 된 수의 문자를 읽어 **스트림** 개체입니다.|  
 |[새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md)|공급자에 게,에서 사용할 수 있는 개체를 반영 하도록 컬렉션 및 관련 개체를 업데이트 합니다.|  
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|데이터를 업데이트 한 **레코드 집합** 다시 개체의 기반이 되는 쿼리를 실행 하 여 개체입니다.|  
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|데이터를 업데이트 한 **레코드 집합** 다시 개체의 기반이 되는 쿼리를 실행 하 여 개체입니다.|  
 |[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|현재에서 데이터를 새로 고칩니다 **레코드 집합** 개체 또는 **필드** 의 컬렉션은 **레코드** 기본 데이터베이스에서 개체입니다.|  
 |[저장](../../../ado/reference/ado-api/save-method.md)|저장 된 **레코드 집합** 파일에 또는 **스트림** 개체입니다.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|이진 내용을 저장 한 **스트림** 파일에 있습니다.|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/21/2017
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|텍스트 스트림의 읽을 때 한 줄 전체를 건너뜁니다.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|열린 스트림에 대 한 통계 정보를 가져옵니다.|  
 |[지원](../../../ado/reference/ado-api/supports-method.md)|지정 된 있는지 여부를 결정 **레코드 집합** 개체는 특정 종류의 기능을 지원 합니다.|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|현재 행에 수행한 변경 내용을 저장 하는 **레코드 집합** 개체 또는 **필드** 컬렉션은 **레코드** 개체입니다.|  
+|[업데이트](../../../ado/reference/ado-api/update-method.md)|현재 행에 수행한 변경 내용을 저장 하는 **레코드 집합** 개체 또는 **필드** 컬렉션은 **레코드** 개체입니다.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|모든 보류 중인 일괄 처리 업데이트를 디스크에 기록 합니다.|  
 |[쓰기](../../../ado/reference/ado-api/write-method.md)|이진 데이터를 쓰는 **스트림** 개체입니다.|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|에 지정 된 텍스트 문자열을 쓰고는 **스트림** 개체입니다.|  

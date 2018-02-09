@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset20::ActiveCommand
-helpviewer_keywords: ActiveCommand property [ADO]
+f1_keywords:
+- Recordset20::ActiveCommand
+helpviewer_keywords:
+- ActiveCommand property [ADO]
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e5384aff9ee8646493d26272cdeaae33ab49157
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eee93cce3f7868ff9c71a83a462e5073d3e2d722
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 속성 (ADO)
 나타냅니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 만든 연결 된 개체를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  

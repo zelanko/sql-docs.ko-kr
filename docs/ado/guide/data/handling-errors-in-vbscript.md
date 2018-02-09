@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - VBScript error handling [ADO]
 - errors [ADO], VBScript
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 362e34cdb8c5b4ae5d9e6fc33ae20dca4b25bf60
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df4db3ae987690fdf27212e71a726cff2f636e88
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handling-errors-in-vbscript"></a>VBScript의 오류 처리
 VBScript로 사용 되 고 Visual Basic에서 사용 하는 방법 간에 약간의 차이가 있습니다. 주요 차이점은 VBScript 레이블의 계속 실행 하 여 오류 처리의 개념을 지원 하지 않습니다. 즉, 사용할 수 없습니다 `On Error GoTo` vbscript에서입니다. 대신를 사용 하 여 `On Error Resume Next` 모두를 선택 하 고 **Err.Number** 및 **개수** 속성의는 **오류** 다음 예제와 같이 컬렉션:  

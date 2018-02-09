@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: MarshalOptions property [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- MarshalOptions property [ADO], Visual Basic example
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66303cf1b144086d3bc3f3ef4b7f3d4743343e18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 52b47718ea0fdc01f768b460e5f18f1773353bee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="marshaloptions-property-example-vb"></a>마샬링 예제 (VB)
 사용 하 여이 예제는 [마샬링](../../../ado/reference/ado-api/marshaloptions-property-ado.md) 속성을 서버에 다시 전송 되는 행 지정할-모든 행 또는 행만 수정 합니다.  

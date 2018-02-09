@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d278b3fd6a2460471195e5744baef93292dfbc30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 861d5d18c3a3ba72d4f4b5ef6fc01f0e6a0e9fc8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 인덱싱 서비스 개요
 Microsoft OLE DB Provider for Microsoft Indexing Service 파일 시스템 및 Microsoft 인덱싱 서비스에 의해 인덱싱된 웹 데이터에 대 한 프로그래밍 방식으로 읽기 전용 액세스를 제공 합니다. ADO 응용 프로그램 콘텐츠 및 파일 속성 정보를 검색할 SQL 쿼리를 실행할 수 있습니다.
@@ -78,15 +79,15 @@ MSIDXS
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|읽기/쓰기|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|읽기 전용|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|읽기 전용|
-|[책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md)*|읽기/쓰기|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)*|읽기/쓰기|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|읽기/쓰기|
-|[앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|항상 **가 adUseServer**|
-|[모두](../../../ado/reference/ado-api/cursortype-property-ado.md)|항상 **adOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|항상 **adEditNone**|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|읽기 전용|
-|[Assert](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|
+|[필터](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|읽기/쓰기|
-|[마샬링](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|사용할 수 없음|
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|사용할 수 없음|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|읽기/쓰기|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|읽기 전용|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|읽기/쓰기|
@@ -101,23 +102,23 @@ MSIDXS
 
 |메서드|사용 가능 여부|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|아니오|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|아니요|
 |[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니오|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니오|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니요|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니요|
 |[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|
 |[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니오|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|
 |[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|예|
 |[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|예|
 |[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|
-|[Update](../../../ado/reference/ado-api/update-method.md)|아니오|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니오|
+|[업데이트](../../../ado/reference/ado-api/update-method.md)|아니요|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|
 
  특정 구현 세부 정보 및 Microsoft 인덱싱 서비스용 Microsoft OLE DB Provider에 대 한 기능 정보에 대 한 참조는 [OLE DB Programmer's Guide](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), Windows NT Server 웹의 웹 서비스 페이지를 방문 하 여 사이트입니다.
 

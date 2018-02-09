@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Stream::Flush
 - _Stream::raw_Flush
-helpviewer_keywords: Flush method [ADO]
+helpviewer_keywords:
+- Flush method [ADO]
 ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50abb3583435f9240a5904733e4103ba994bd79c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 94a5e1ced6f0b302253298dcbfb9cd345b9f5bfe
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="flush-method-ado"></a>Flush 메서드 (ADO)
 내용을 강제로 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 원본 개체는 ADO 버퍼에에서 남아 있는 **스트림** 연결 합니다.  

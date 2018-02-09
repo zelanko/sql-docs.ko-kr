@@ -16,19 +16,20 @@ helpviewer_keywords:
 - status information [SQL Server], assemblies
 - metadata [SQL Server], assemblies
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: faae880f2751179d5cc0903714062b47893e2dfe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c96fde4198ff475f53aa94e09a400e62f26fc8b3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---getting-information"></a>어셈블리-정보 가져오기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]어셈블리에 대 한 메타 데이터에 대 한 다음 함수와 카탈로그 뷰를 쿼리할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+다음 카탈로그 뷰와 함수에서 어셈블리에 대한 메타데이터를 쿼리할 수 있습니다.  
   
  **개별 어셈블리에 대 한 정보를 가져오려면**  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [어셈블리 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [어셈블리 디자인](../../relational-databases/clr-integration/assemblies-designing.md)   
  [어셈블리 구현](../../relational-databases/clr-integration/assemblies-implementing.md)  

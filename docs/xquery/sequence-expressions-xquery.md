@@ -8,30 +8,32 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence [XQuery]
 - expressions [XQuery], sequence
 - filtering sequences [XQuery]
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 199db55ebfbdb701dfc805ab64d09e1336a772cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 50ed3ac28bad010247c8d117c950bb898305807a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sequence-expressions-xquery"></a>시퀀스 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 항목의 시퀀스를 생성, 필터링 및 조합하는 데 사용되는 XQuery 연산자를 지원합니다. 항목은 원자 값이거나 노드일 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 생성, 필터링 및 항목의 시퀀스를 결합 하는 데 사용 되는 XQuery 연산자를 지원 합니다. 항목은 원자 값이거나 노드일 수 있습니다.  
   
 ## <a name="constructing-sequences"></a>시퀀스 생성  
  쉼표 연산자를 사용하여 항목을 단일 시퀀스로 연결하는 시퀀스를 생성할 수 있습니다.  

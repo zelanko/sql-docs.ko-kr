@@ -25,19 +25,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fae91b291c11e3993b2182414bf4845fb91969fb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac456dc7617804afbc78ca423ff8e4651c5ccef5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Dataadapter로 UDT 열을 업데이트 하는 사용자 정의 형식-액세스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 정의 형식 (Udt)를 사용 하 여 사용할 수는 **System.Data.DataSet** 및 **System.Data.SqlClient.SqlDataAdapter** 검색 하 고 데이터를 수정 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+사용자 정의 형식 (Udt)를 사용 하 여 사용할 수는 **System.Data.DataSet** 및 **System.Data.SqlClient.SqlDataAdapter** 검색 하 고 데이터를 수정 합니다.  
   
 ## <a name="populating-a-dataset"></a>데이터 집합 채우기  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문을 사용하여 UDT 열 값을 선택하면 데이터 어댑터를 사용하여 데이터 집합을 채울 수 있습니다. 다음 예제에서는 있다고 가정 합니다.는 **포인트** 테이블은 다음과 같은 구조와 예제 데이터를 사용 하 여 정의 합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 만듭니다는 **포인트** 테이블 및 행을 몇 개 삽입 합니다.  
@@ -376,6 +377,6 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [ADO.NET의 사용자 정의 형식 액세스](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+ [ADO.NET에서 사용자 정의 형식 액세스](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

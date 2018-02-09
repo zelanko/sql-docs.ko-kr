@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,33 +13,35 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FilterGroupEnum
-helpviewer_keywords: FilterGroupEnum enumeration [ADO]
+f1_keywords:
+- FilterGroupEnum
+helpviewer_keywords:
+- FilterGroupEnum enumeration [ADO]
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3b80757a0836fd11757c9e80c2b1650b0cb983f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 64a9701680876231d0051789aec0fc43be4c0ad3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 필터링 할 레코드의 그룹을 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFilterAffectedRecords**|2|마지막 영향을 받는 레코드만 보기에 대 한 필터 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), 또는 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 호출 합니다.|  
 |**adFilterConflictingRecords**|5|마지막 일괄 처리 업데이트를 실패 한 레코드를 보기 위한 필터입니다.|  
 |**adFilterFetchedRecords**|3|현재 캐시에서 레코드를 보기 위한 필터-즉, 데이터베이스에서 레코드를 검색 한 마지막 호출의 결과입니다.|  
 |**adFilterNone**|0|현재 필터를 제거 하 고 보기에 대 한 모든 레코드를 복원 합니다.|  
-|**그**|1|레코드에만 보기에 대 한 필터를 변경 되었지만 서버로 아직 보내지 않았습니다. 일괄 업데이트 모드에만 적용할 수 있습니다.|  
+|**adFilterPendingRecords**|1.|레코드에만 보기에 대 한 필터를 변경 되었지만 서버로 아직 보내지 않았습니다. 일괄 업데이트 모드에만 적용할 수 있습니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  

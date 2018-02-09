@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62ee8c5da51de28eff001b2056e738653db5b813
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9ba0513f0a450a57e4d25088f16d96398af9f936
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 개요에 대 한 Microsoft 커서 서비스
 OLE DB에 대 한 Microsoft 커서 서비스의 데이터 공급자 커서 지원 기능을 보완합니다. 결과적으로 사용자에 게 기능을 모든 데이터 공급자 비교적 안정적입니다.
@@ -90,9 +91,9 @@ rs.Properties("Optimize") = True
 
 |속성 이름|Description|
 |-------------------|-----------------|
-|[모두](../../../ado/reference/ado-api/cursortype-property-ado.md)|에 사용할 수 있는 커서 유형을 보완는 **레코드 집합**합니다.|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|에 사용할 수 있는 커서 유형을 보완는 **레코드 집합**합니다.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|에 사용할 수 있는 잠금의 종류 보완는 **레코드 집합**합니다. 일괄 업데이트를 사용 하도록 설정 합니다.|
-|[Sort](../../../ado/reference/ado-api/sort-property.md)|하나 이상의 필드에 있는 이름 지정는 **레코드 집합** 정렬 되어 각 필드가 오름차순 또는 내림차순 정렬 되 고 있는지 여부.|
+|[정렬](../../../ado/reference/ado-api/sort-property.md)|하나 이상의 필드에 있는 이름 지정는 **레코드 집합** 정렬 되어 각 필드가 오름차순 또는 내림차순 정렬 되 고 있는지 여부.|
 
 ## <a name="method-behavior"></a>동작 메서드
  OLE DB에 대 한 커서 서비스 사용 하거나의 동작에 영향을 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 [Append](../../../ado/reference/ado-api/append-method-ado.md) 메서드가 및 **레코드 집합** 개체의 [열고](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), 및 [저장](../../../ado/reference/ado-api/save-method.md) 메서드.

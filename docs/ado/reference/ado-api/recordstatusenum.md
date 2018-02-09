@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RecordStatusEnum
-helpviewer_keywords: RecordStatusEnum enumeration [ADO]
+f1_keywords:
+- RecordStatusEnum
+helpviewer_keywords:
+- RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 979193ebce93f2cc7fee232f5928c898e4f15b30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2315d18add9b25aab826d47346d8725aaa2af6e7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 지정 된 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 일괄 업데이트 및 다른 대량 작업과 관련 된 레코드의 합니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|작업이 취소 된 레코드가 저장 되지 않았음을 나타냅니다.|  
 |**adRecCantRelease**|0x400|기존 레코드 잠 겼으 새 레코드가 저장 되지 않았음을 나타냅니다.|  
@@ -51,9 +54,9 @@ ms.lasthandoff: 12/21/2017
 |**adRecUnmodified**|0x8|레코드가 수정 되지 않았음을 나타냅니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- AdoEnums.RecordStatus 합니다.  
+ AdoEnums.RecordStatus.  
   
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  

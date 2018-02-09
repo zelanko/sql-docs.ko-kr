@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - samples [ADO]
 - ADO, samples
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a96f520962dc06cb61815a6c9932cd04fcd35695
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ebaa64517591b9ea89700557f02c9e17dfa3c72e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Windows SDK의에서 부록 d: ADO 예제
 Windows SDK ADO 및 RDS 코드의 사용을 보여 주는 몇 가지 예제 응용 프로그램을 포함 합니다. 이 샘플은 ADO 및 RDS를 사용 하는 방법을 배울 수 있도록 만들어졌으나 프로덕션 서버에 배포할 수는 없습니다.

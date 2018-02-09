@@ -22,19 +22,20 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 - UDTs [CLR integration], user-defined aggregates
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 158b2aaa95f289a558f0d186e359903252f6d90e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 204a01f25e90be1885bad41361aa41d919159bd0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>CLR 사용자 정의 집계-요구 사항
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]필요한 집계 계약을 구현 하 고 공용 언어 런타임 (CLR) 어셈블리의 형식으로 사용자 정의 집계 함수를 등록할 수 있습니다. 이 계약은 이루어져는 **SqlUserDefinedAggregate** 특성과 집계 계약 메서드로 합니다. 집계 계약은 집계의 중간 상태를 저장 하는 메커니즘 및 메커니즘과 새 값을 누적 하는 메커니즘을 포함: **Init**, **Accumulate**,  **병합**, 및 **종료**합니다. 이러한 요구 사항을 충족할 경우에 사용자 정의 집계를 완전히 활용 할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 항목의 다음 섹션에서는 사용자 정의 집계를 만드는 방법과 사용하는 방법에 대한 자세한 정보를 제공합니다. 예를 들어 참조 [Invoking CLR User-Defined 집계 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+공용 언어 런타임(CLR) 어셈블리의 형식이 필요한 집계 계약을 구현한다면 해당 형식을 사용자 정의 집계 함수로 등록할 수 있습니다. 이 계약은 이루어져는 **SqlUserDefinedAggregate** 특성과 집계 계약 메서드로 합니다. 집계 계약은 집계의 중간 상태를 저장 하는 메커니즘 및 메커니즘과 새 값을 누적 하는 메커니즘을 포함: **Init**, **Accumulate**,  **병합**, 및 **종료**합니다. 이러한 요구 사항을 충족할 경우에 사용자 정의 집계를 완전히 활용 할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 항목의 다음 섹션에서는 사용자 정의 집계를 만드는 방법과 사용하는 방법에 대한 자세한 정보를 제공합니다. 예를 들어 참조 [Invoking CLR User-Defined 집계 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)합니다.  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
  자세한 내용은 참조 [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626)합니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 |메서드|구문|Description|  
 |------------|------------|-----------------|  
-|**초기화**|`public void Init();`|쿼리 프로세서는 이 메서드를 사용하여 집계 계산을 초기화합니다. 이 메서드는 쿼리 프로세서가 집계하는 각 그룹에 대해 한 번씩 호출됩니다. 쿼리 프로세서는 여러 그룹의 집계를 계산할 때 집계 클래스의 동일한 인스턴스를 다시 사용할 수 있습니다. **Init** 메서드가 인스턴스의 이전 사용에서 필요에 따라 정리를 수행 하 고 새 집계 계산을 다시 시작 되도록 설정 합니다.|  
+|**Init**|`public void Init();`|쿼리 프로세서는 이 메서드를 사용하여 집계 계산을 초기화합니다. 이 메서드는 쿼리 프로세서가 집계하는 각 그룹에 대해 한 번씩 호출됩니다. 쿼리 프로세서는 여러 그룹의 집계를 계산할 때 집계 클래스의 동일한 인스턴스를 다시 사용할 수 있습니다. **Init** 메서드가 인스턴스의 이전 사용에서 필요에 따라 정리를 수행 하 고 새 집계 계산을 다시 시작 되도록 설정 합니다.|  
 |**누적**|`public void Accumulate ( input-type value[, input-type value, ...]);`|함수의 매개 변수를 나타내는 1개 이상의 매개 변수. *input_type* 관리 되는 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 해당 하는 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지정한 데이터 형식 *input_sqltype* 에 **CREATE AGGREGATE** 문 . 자세한 내용은 참조 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)합니다.<br /><br /> UDT(사용자 정의 형식)의 경우 input-type이 UDT 형식과 동일합니다. 쿼리 프로세서는 이 메서드를 사용하여 집계 값을 누적시킵니다. 이 메서드는 집계되는 그룹의 각 값에 대해 한 번씩 호출됩니다. 쿼리 프로세서는 항상이 호출 호출한 후에는 **Init** 집계 클래스의 특정 인스턴스에서 메서드. 이 메서드 구현은 전달되는 인수 값의 누적을 반영하도록 인스턴스 상태를 업데이트해야 합니다.|  
 |**병합**|`public void Merge( udagg_class value);`|이 메서드를 사용하여 이 집계 클래스의 다른 인스턴스를 현재 인스턴스와 병합할 수 있습니다. 쿼리 프로세서는 이 메서드를 사용하여 집계의 다중 부분 계산을 병합합니다.|  
 |**종료**|`public return_type Terminate();`|이 메서드는 집계 계산을 완료하고 집계 결과를 반환합니다. *return_type* 관리 되는 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 해당 하는 관리 되는 *return_sqltype* 에 지정 된는 **CREATE AGGREGATE** 문. *return_type* 사용자 정의 형식을 수도 있습니다.|  

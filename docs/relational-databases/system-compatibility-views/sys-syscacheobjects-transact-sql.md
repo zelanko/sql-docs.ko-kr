@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syscacheobjects
 - syscacheobjects
 - syscacheobjects_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syscacheobjects system table
 - sys.syscacheobjects compatibility view
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aee1092010168413f316e3b42083bb752f2d9cfa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: afc20f732375a4ecd04075c1dbd228139b0005d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/27/2017
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|버킷 ID입니다. 값은 0에서 디렉터리 크기 - 1까지의 범위를 나타냅니다. 디렉터리 크기는 해시 테이블의 크기입니다.|  
 |**cacheobjtype**|**nvarchar(17)**|캐시에 있는 개체의 유형입니다.<br /><br /> 컴파일된 계획<br /><br /> 실행 계획<br /><br /> 구문 분석 트리<br /><br /> 커서<br /><br /> 확장 저장 프로시저|  
-|**objtype**|**nvarchar (8)**|개체의 유형입니다.<br /><br /> 저장 프로시저<br /><br /> 준비된 문<br /><br /> 임시 쿼리 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 언어 이벤트로 제출 된 **sqlcmd** 또는 **osql** 원격 프로시저 호출 대신 유틸리티)<br /><br /> ReplProc(복제 프로시저)<br /><br /> 트리거<br /><br /> 보기<br /><br /> 기본값<br /><br /> 사용자 테이블<br /><br /> 시스템 테이블<br /><br /> 확인<br /><br /> 규칙|  
+|**objtype**|**nvarchar(8)**|개체의 유형입니다.<br /><br /> 저장 프로시저<br /><br /> 준비된 문<br /><br /> 임시 쿼리 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 언어 이벤트로 제출 된 **sqlcmd** 또는 **osql** 원격 프로시저 호출 대신 유틸리티)<br /><br /> ReplProc(복제 프로시저)<br /><br /> 트리거<br /><br /> 보기<br /><br /> 기본값<br /><br /> 사용자 테이블<br /><br /> 시스템 테이블<br /><br /> 확인<br /><br /> 규칙|  
 |**objid**|**int**|캐시에서 개체를 찾는 데 사용되는 기본 키 중 하나입니다. ID에 저장 하는 개체 **sysobjects** 데이터베이스 개체 (프로시저, 뷰, 트리거, 및 등)에 대 한 합니다. 임시 또는 준비 된 SQL과 같은 캐시 개체에 대 한 **objid** 내부적으로 생성 된 값입니다.|  
 |**dbid**|**smallint**|캐시 개체가 컴파일된 데이터베이스의 ID입니다.|  
 |**dbidexec**|**smallint**|쿼리를 실행할 데이터베이스 ID입니다.<br /><br /> 대부분의 개체에 대 한 **dbidexec** 동일한 값을 가지 **dbid**합니다.<br /><br /> 시스템 뷰에 대 한 **dbidexec** 쿼리를 실행할 데이터베이스 ID입니다.<br /><br /> 임시 쿼리에 대해 **dbidexec** 은 0입니다. 즉, **dbidexec** 동일한 값을 가지 **dbid**합니다.|  
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/27/2017
 |**langid**|**smallint**|언어 ID입니다. 캐시 개체를 만든 연결의 언어 ID입니다.|  
 |**dateformat**|**smallint**|캐시 개체를 만든 연결의 날짜 형식입니다.|  
 |**상태**|**int**|캐시 개체가 커서 계획인지 여부를 나타냅니다. 현재는 가장 중요하지 않은 비트만 사용됩니다.|  
-|**마지막 시간**|**bigint**|이전 버전과의 호환성을 위해서만 지원됩니다. 항상 0을 반환합니다.|  
+|**lasttime**|**bigint**|이전 버전과의 호환성을 위해서만 지원됩니다. 항상 0을 반환합니다.|  
 |**maxexectime**|**bigint**|이전 버전과의 호환성을 위해서만 지원됩니다. 항상 0을 반환합니다.|  
 |**avgexectime**|**bigint**|이전 버전과의 호환성을 위해서만 지원됩니다. 항상 0을 반환합니다.|  
 |**lastreads**|**bigint**|이전 버전과의 호환성을 위해서만 지원됩니다. 항상 0을 반환합니다.|  

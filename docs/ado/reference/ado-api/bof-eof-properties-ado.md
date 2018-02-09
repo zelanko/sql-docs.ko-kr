@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c2b827856eac7ec2eed9ca4f3580b2a12418933
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9eb298b7bc18a959a6cd7d044a4c166ee77065eb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF 속성 (ADO)
 -   **BOF** 현재 레코드 위치에 있는 첫 번째 레코드 앞에 있는 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -55,9 +56,9 @@ ms.lasthandoff: 12/21/2017
   
 ||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> < 0 이동|Move 0|MoveNext<br /><br /> > 0 이동|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|허용함|Error|Error|허용함|  
-|**BOF**=**False**, **EOF**=**True**|허용함|허용함|Error|Error|  
-|둘 다 **True**|Error|Error|Error|Error|  
+|**BOF**=**True**, **EOF**=**False**|허용함|오류|오류|허용함|  
+|**BOF**=**False**, **EOF**=**True**|허용함|허용함|오류|오류|  
+|둘 다 **True**|오류|오류|오류|오류|  
 |둘 다 **False**|허용함|허용함|허용함|허용함|  
   
  허용는 **이동** 메서드 메서드는 레코드를 제대로 찾는 것은 보증 하지 않습니다; 지정 된 호출만 의미 **이동** 메서드 오류가 발생 하지 것입니다.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 12/21/2017
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|로 설정 **True**|로 설정 **True**|  
 |**이동** 0|변경 내용 없음|변경 내용 없음|  
-|**MovePrevious**, **이동** < 0|로 설정 **True**|변경 내용 없음|  
+|**MovePrevious**, **Move** < 0|로 설정 **True**|변경 내용 없음|  
 |**MoveNext**, **이동** > 0|변경 내용 없음|로 설정 **True**|  
   
 ## <a name="applies-to"></a>적용 대상  

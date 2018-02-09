@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c29eacc0e556f82458cf313f1c0fc93d7ab83d3b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f68a67e0eafaf7bbb9d89ddd151b73dd5d0bbb75
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adding-records-using-addnew-method"></a>AddNew 메서드를 사용 하 여 레코드를 추가 합니다.
 기본 구문은 **AddNew** 메서드:
 
- *레코드 집합*합니다. AddNew *FieldList*, *값*
+ *recordset*.AddNew *FieldList*, *Values*
 
  *FieldList* 및 *값* 인수는 선택 사항입니다. *FieldList* 단일 이름 이거나 새 레코드의 필드의 서 수 위치 또는 이름 배열입니다.
 

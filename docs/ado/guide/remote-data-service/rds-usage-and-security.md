@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 659be3fb60dc311c4fa2d2076cbc90841399c9f9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f4bf63dba64d4c30ca29629a1a385df45a9f79b1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-usage-and-security"></a>RDS 사용량 및 보안
 이 단원의 정보를 사용 하 여 서버를 설정 및 RDS를 신속 하 게 사용 합니다. 이 섹션에서는 일부 RDS와 다른 기술 간의 키 관계에 설명 RDS를 구현 하는 경우 수행 해야 할 수 있는 특정 구성 단계 및 솔루션을 설정할 때 발생할 수 있는 문제를 식별할 수 있는 RDS 솔루션입니다.  

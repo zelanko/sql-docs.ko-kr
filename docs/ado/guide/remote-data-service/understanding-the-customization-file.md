@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: customization file in RDS [ADO]
+helpviewer_keywords:
+- customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f630817b87a464d3f02e5fdad6c88c161a081b23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
 사용자 지정 파일의 각 섹션 헤더 대괄호로 구성 됩니다 (**[]**) 형식 및 매개 변수를 포함 합니다. 4 개의 섹션 형식 리터럴 문자열으로 표시 됩니다 **연결**, **sql**, **userlist**, 또는 **로그**합니다. 리터럴 문자열, 기본값, 사용자 지정 식별자 또는 nothing입니다.  
@@ -48,18 +50,18 @@ identifier
   
 |부분|Description|  
 |----------|-----------------|  
-|**연결**|연결 문자열을 수정 하는 리터럴 문자열입니다.|  
+|**connect**|연결 문자열을 수정 하는 리터럴 문자열입니다.|  
 |**sql**|명령 문자열을 수정 하는 리터럴 문자열입니다.|  
 |**userlist**|특정 사용자의 액세스 권한을 수정 하는 리터럴 문자열입니다.|  
-|**로그**|작업 오류를 기록 하는 로그 파일을 지정 하는 리터럴 문자열입니다.|  
-|**기본값**|없는 식별자가 지정 되지 않았거나 경우 사용 되는 리터럴 문자열입니다.|  
-|*식별자*|문자열에서 일치 하는 문자열은 **연결** 또는 **명령** 문자열입니다.<br /><br /> -섹션 헤더를 포함 하는 경우이 섹션에서는 **연결** 식별자 문자열이 연결 문자열에서 발견 되 고 있습니다.<br />-섹션 헤더를 포함 하는 경우이 섹션에서는 **sql** 식별자 문자열이 명령 문자열에서 발견 되 고 있습니다.<br />-섹션 헤더를 포함 하는 경우이 섹션에서는 **userlist** 식별자 문자열이 일치는 **연결** 섹션 식별자입니다.|  
+|**logs**|작업 오류를 기록 하는 로그 파일을 지정 하는 리터럴 문자열입니다.|  
+|**default**|없는 식별자가 지정 되지 않았거나 경우 사용 되는 리터럴 문자열입니다.|  
+|*identifier*|문자열에서 일치 하는 문자열은 **연결** 또는 **명령** 문자열입니다.<br /><br /> -섹션 헤더를 포함 하는 경우이 섹션에서는 **연결** 식별자 문자열이 연결 문자열에서 발견 되 고 있습니다.<br />-섹션 헤더를 포함 하는 경우이 섹션에서는 **sql** 식별자 문자열이 명령 문자열에서 발견 되 고 있습니다.<br />-섹션 헤더를 포함 하는 경우이 섹션에서는 **userlist** 식별자 문자열이 일치는 **연결** 섹션 식별자입니다.|  
   
  **DataFactory** 클라이언트 매개 변수를 전달 하는 처리기를 호출 합니다. 처리기를 적절 한 섹션 헤더에는 식별자와 일치 하는 클라이언트 매개 변수에서 전체 문자열을 검색 합니다. 일치 하는 항목이 있으면 해당 섹션의 내용은 클라이언트 매개 변수에 적용 됩니다.  
   
  특정 섹션은 다음과 같은 상황에서 사용 됩니다.  
   
--   A **연결** 섹션을 사용 하는 클라이언트의 값 부분 연결 문자열 키워드 "**데이터 원본 =***값*", 일치 하는 **연결** 섹션 식별자*합니다.*  
+-   A **연결** 섹션을 사용 하는 클라이언트의 값 부분 연결 문자열 키워드 "**데이터 원본 = * * * 값*", 일치 하는 **연결** 섹션 식별자*.*  
   
 -   **sql** 섹션을 사용 하는 클라이언트 명령 문자열 일치 하는 문자열을 포함 하는 경우는 **sql** 섹션 식별자입니다.  
   

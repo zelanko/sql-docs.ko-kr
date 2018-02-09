@@ -11,18 +11,19 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, what's new
+helpviewer_keywords:
+- ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8be523be459914814d7e92541dd5cca21da006eb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-features-for-each-release"></a>각 릴리스에 대 한 ADO 기능
 이 항목에서는 ADO, ADO MD 및 ADOX의 각 버전에서 도입 된 새로운 기능을 나열 합니다.
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="ado-60"></a>ADO 6.0
  ADO 6.0 Windows Vista, Windows Data Access Components (Windows DAC) 6.0의 일부로 포함 됩니다. ADO 6.0 ADO 2.8 기능적으로 같습니다.
 
-## <a name="ado-28"></a>2.8 ADO
+## <a name="ado-28"></a>ADO 2.8
  Windows XP 및 Windows Server 2003의 Microsoft 데이터 액세스 구성 요소 (MDAC) 2.8 일부로 ADO 2.8 포함 되었습니다. MDAC 2.8 재배포 가능 버전도 있습니다. 참고가 재배포 가능 버전 Windows 2000에만 설치 해야 합니다. ADO 2.8 몇 가지 보안 관련 문제를 해결합니다.
 
  *신뢰할 수 있는 영역 외부 하드 드라이브 액세스가 허용 되지 않습니다.*

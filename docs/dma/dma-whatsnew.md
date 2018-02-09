@@ -1,33 +1,40 @@
 ---
 title: "데이터 마이그레이션 길잡이 (SQL Server)의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/03/2017
+ms.date: 02/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, new features
+helpviewer_keywords:
+- Data Migration Assistant, new features
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b72ea21423b96a1dbd19eb5fb8f0a3b99c59e0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>데이터 마이그레이션 길잡이의 새로운 기능
 
 이 항목에서는 각 릴리스에 추가 데이터 마이그레이션 길잡이 (DMA)의 오류가 나열 됩니다.
+
+## <a name="dma-v34"></a>DMA v3.4
+DMA v3.4 출시에 다음과 같은 추가 기능에 포함 됩니다.
+- Azure SQL 데이터베이스의 마이그레이션 위한 원본으로 SQL Server 2017 지원 합니다.
+- 안정성, 성능 및 평가 규칙 정확성 향상.
 
 ## <a name="dma-v33"></a>DMA v3.3
 DMA의 v3.3 릴리스를 통해 온-프레미스 SQL Server 인스턴스를 사용 하 여 새 버전의 Windows와 Linux 모두에서 SQL Server 2017를 마이그레이션이 가능 합니다. Windows 및 Linux에 대 한 전체 마이그레이션 워크플로 동일 이지만, Linux에 대 한 SQL Server 2017로 이동 하는 몇 가지 추가 고려 사항 필요 합니다.
@@ -51,7 +58,7 @@ DMA의 경우 v3.2 릴리스는 다음과 같은 추가 기능에 포함 됩니�
 
 - Azure SQL 데이터베이스에 스키마 마이그레이션 중 DMA 원본 데이터베이스 개체 스크립팅, 잠재적인 호환성 문제를 해결 하는 방법에 지침을 제공 및 다음 스키마를 Azure에 배포 합니다.
 
-## <a name="dma-v31"></a>DMA v 3.1
+## <a name="dma-v31"></a>DMA v3.1
 V 3.1 릴리스의 DMA 다음과 같은 추가 기능에 포함 됩니다.
 
 - 지원 되지 않는 시스템 저장 프로시저 및 CLR 개체를 활용 하는 데이터베이스 데이터 정렬 기준으로 Azure SQL 데이터베이스에 대 한 개선 된 평가 권장 합니다.
@@ -65,7 +72,7 @@ DMA v3.0 릴리스의 Azure SQL 데이터베이스 평가 관련 된 문제 해�
 
 - 부분적으로 또는 특징과 기능을 지원 되지 않습니다.
 
-## <a name="dma-v21"></a>DMA (v2.1)
+## <a name="dma-v21"></a>DMA v2.1
 DMA (v2.1) 릴리스의 다음과 같은 추가 기능에 포함 됩니다.
 - 최대 규모로 평가 실행 하는 데 도움이 무인된 모드에서 평가 실행 하기 위한 명령줄 지원 합니다. 추가 세부 정보에 대 한 항목을 참조 [실행 데이터 마이그레이션 길잡이 명령줄에서](dma-commandline.md)합니다.
 
@@ -90,6 +97,6 @@ DMA의 v1.0 릴리스는 초기 릴리스 및에 대 한 제공:
 
 -   평가 수행 하려면 최신 사용자 경험 합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [데이터 마이그레이션 길잡이 개요](../dma/dma-overview.md)

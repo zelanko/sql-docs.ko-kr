@@ -1,6 +1,22 @@
-각 가용성 그룹에는 하나의 주 복제본만 있습니다. 주 복제본은 읽기 및 쓰기를 허용합니다. 복제본은 주를 변경 하려면 조치할 수 있습니다. 고가용성을 위한 가용성 그룹에서 클러스터 관리자는 장애 조치 프로세스를 자동화합니다. 읽기 확장 가용성 그룹에서는 장애 조치 프로세스가 수동입니다. 
+---
+title: "SQL Server 가용성 그룹에 대 한 장애 조치를 강제로"
+description: "강제 장애 조치 클러스터 유형 none 가용성 그룹에 대 한"
+services: 
+author: MikeRayMSFT
+ms.service: 
+ms.topic: include
+ms.date: 02/05/2018
+ms.author: mikeray
+ms.custom: include file
+ms.openlocfilehash: 10a2af2cb5bc9e98605a3ee988439e3c3be60c1e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
+---
+각 AG에 주 복제본이 하나만 있습니다. 주 복제본은 읽기 및 쓰기를 허용합니다. 복제본은 주를 변경 하려면 조치할 수 있습니다. 고가용성을 위한 AG, 클러스터 관리자는 장애 조치 프로세스를 자동화합니다. 클러스터 유형 NONE AG의 장애 조치 프로세스는 수동입니다. 
 
-두 가지 방법으로 읽기 확장성이 가용성 그룹에서 주 복제본 장애 조치할 수 있습니다.
+두 가지 방법으로 클러스터 유형 NONE AG의 주 복제본 장애 조치할 수 있습니다.
 
 - 데이터 손실 강제 수동 장애 조치
 - 데이터 손실 없이 수동 장애 조치
@@ -25,7 +41,7 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        MODIFY REPLICA ON N'**<node2>*' 
+        MODIFY REPLICA ON N'<node2>' 
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
@@ -46,7 +62,7 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 
 3. 업데이트 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 1입니다.
 
-   다음 스크립트 집합 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 라는 가용성 그룹에 1로 `ag1`합니다. 다음 스크립트를 실행 하기 전에 대체 `ag1` 가용성 그룹의 이름으로:
+   다음 스크립트 집합 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 1 이라는 AG에 `ag1`합니다. 다음 스크립트를 실행 하기 전에 대체 `ag1` 프로그램 AG의 이름으로:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -69,4 +85,4 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
    ```  
 
    > [!NOTE] 
-   > 가용성 그룹을 삭제 하려면 사용 [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql)합니다. CLUSTER_TYPE 없음 또는 외부를 사용 하 여 만든 가용성 그룹에 대 한이 명령은 가용성 그룹의 일부가 되는 모든 복제본에서 실행 되어야 합니다.
+   > AG를 삭제 하려면 사용 하 여 [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql)합니다. 클러스터를 사용 하 여 만든 AG에 대 한 유형 NONE 또는 외부, 명령을 해야 AG의 일부인 모든 복제본에서 실행할 수 있습니다.

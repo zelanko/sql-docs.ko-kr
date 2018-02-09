@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syslanguages_TSQL
 - syslanguages
 - syslanguages_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syslanguages system table
 - sys.syslanguages compatibility view
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d0a0b2a001f40b8884faa1c8c22415708ba377f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 47eb77543c650a16650680435e5d0db7d395eade
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,8 +50,8 @@ ms.lasthandoff: 11/17/2017
 |months|**nvarchar(372)**|1월에서 12월까지의 순서로 쉼표로 구분된 전체 길이의 월 이름 목록이며 각 이름은 20자까지 사용할 수 있습니다.|  
 |shortmonths|**nvarchar(132)**|1월에서 12월까지의 순서로 쉼표로 구분된 짧은 길이의 월 이름 목록이며 각 이름은 9자까지 사용할 수 있습니다.|  
 |일|**nvarchar(217)**|월요일에서 일요일까지의 순서로 쉼표로 구분된 요일 이름의 목록이며 각 이름은 30자까지 사용할 수 있습니다.|  
-|lcid|**int**|해당 언어용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로캘 ID입니다.|  
-|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 메시지 그룹 ID입니다.|  
+|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 언어의 Windows 로캘 ID입니다.|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 메시지 그룹 id입니다.|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 설치된 언어는 다음과 같습니다.  
   

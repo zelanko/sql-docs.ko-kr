@@ -8,24 +8,26 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - fn:avg function
 - avg function [XQuery]
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bdc56fac5ad9b478a1b24ec06bc97d6ad2aece9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ee1d24bc4b28b7a041baa42ac829424e5daa6f8b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="aggregate-functions---avg"></a>Avg 집계 함수-
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +52,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  **avg ()** 함수 계산 된 숫자의 평균을 반환 합니다. 예를 들어  
   
- **sum (** *$arg* **) div count (** *$arg* **)**  
+ **sum(** *$arg* **) div count(** *$arg* **)**  
   
  경우 *$arg* 이 빈 시퀀스인 경우 빈 시퀀스가 반환 됩니다.  
   

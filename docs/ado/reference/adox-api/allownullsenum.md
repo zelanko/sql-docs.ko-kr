@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,27 +13,29 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: AllowNullsEnum
-helpviewer_keywords: AllowNullsEnum enumeration [ADOX]
+f1_keywords:
+- AllowNullsEnum
+helpviewer_keywords:
+- AllowNullsEnum enumeration [ADOX]
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8dd42fbac84831c2b31247ee5b5279c97ba2ba5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 75bb6aa82ec26e74675a2ccf6ff803abd9d24f6c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 Null 값이 있는 레코드는 인덱싱되어 있는지 여부를 지정 합니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adIndexNullsAllow**|0|인덱스에서 항목 키 열이 null을 허용 합니다. Null 값을 키 열에 입력 하는 경우 항목의 인덱스에 삽입 됩니다.|  
-|**adIndexNullsDisallow**|1|기본. 인덱스 키 열이 null 항목 수 없습니다. Null 값을 키 열에 입력 하는 경우 오류가 발생 합니다.|  
+|**adIndexNullsDisallow**|1.|기본. 인덱스 키 열이 null 항목 수 없습니다. Null 값을 키 열에 입력 하는 경우 오류가 발생 합니다.|  
 |**adIndexNullsIgnore**|2|인덱스는 null 키를 포함 하는 항목을 삽입 하지 않습니다. 키 열에 입력 된 값에 null 값 항목이 무시 되 고 오류가 발생 하지 않습니다.|  
 |**adIndexNullsIgnoreAny**|4|인덱스 항목 일부 키 열에 null 값을 삽입 하지 않습니다. 여러 열이 있는 인덱스에 대 한 일부 열에 null 값을 입력 하는 경우에 키 항목 무시 되 고 오류가 발생 하지 않습니다.|  
   

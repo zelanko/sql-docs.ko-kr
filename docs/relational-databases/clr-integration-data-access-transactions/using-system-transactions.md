@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e365b0ffd041b8457fff3035fbbe4e19f5bcee6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-systemtransactions"></a>System.Transactions 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**System.Transactions** 네임 스페이스는 ADO.NET와 완전히 통합 하는 트랜잭션 프레임 워크를 제공 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공용 언어 런타임 (CLR) 통합 합니다. **System.Transactions.TransactionScope** 클래스는 연결을 암시적으로 분산 트랜잭션에 등록함으로써 코드 블록에 트랜잭션을 적용합니다. **Complete** 로 표시된 코드 블록의 끝에서 **TransactionScope**메서드를 호출해야 합니다. **Dispose** 메서드는 프로그램 실행이 코드 블록을 종료할 때 호출되며 **Complete** 메서드가 호출되지 않으면 트랜잭션이 중단되도록 합니다. 예외가 발생하여 코드가 범위를 벗어나게 되면 트랜잭션이 중단된 것으로 볼 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**System.Transactions** 네임스페이스는 이미 통합된 ADO.NET 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과 완전히 통합되는 트랜잭션 프레임워크를 제공합니다. **System.Transactions.TransactionScope** 클래스는 연결을 암시적으로 분산 트랜잭션에 등록함으로써 코드 블록에 트랜잭션을 적용합니다. **Complete** 로 표시된 코드 블록의 끝에서 **TransactionScope**메서드를 호출해야 합니다. **Dispose** 메서드는 프로그램 실행이 코드 블록을 종료할 때 호출되며 **Complete** 메서드가 호출되지 않으면 트랜잭션이 중단되도록 합니다. 예외가 발생하여 코드가 범위를 벗어나게 되면 트랜잭션이 중단된 것으로 볼 수 있습니다.  
   
  **using** 블록이 종료될 때 **Dispose** 개체에 대해 **TransactionScope** 메서드가 호출되도록 **using** 블록을 사용하는 것이 좋습니다. **TransactionScope** 의 기본 제한 시간은 1분이므로 보류 중인 트랜잭션을 커밋 또는 롤백하지 못하면 성능이 매우 저하됩니다. **using** 문을 사용하지 않는 경우 **Try** 블록에서 모든 작업을 수행하고 **Dispose** 블록에서 명시적으로 **Finally** 메서드를 호출해야 합니다.  
   

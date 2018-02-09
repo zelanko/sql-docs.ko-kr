@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,18 +18,19 @@ f1_keywords:
 - User25::raw_SetPermissions
 - _Group25::SetPermissions
 - _Group25::raw_SetPermissions
-helpviewer_keywords: SetPermissions method [ADOX]
+helpviewer_keywords:
+- SetPermissions method [ADOX]
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a3aad4675415b4366c612960d78bc003061bb10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7987ce08f242421d2c84766c575e4867e7e1b8c8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 메서드 (ADOX)
 에 대 한 사용 권한을 지정는 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 또는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체에 있습니다.  
@@ -47,13 +49,13 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *ObjectType*  
  A **긴** 하나일 수 있는 값의는 [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) 권한을 얻을 수 있는 작업에 대 한 개체의 유형을 지정 하는 상수입니다.  
   
- *동작*  
+ *작업*  
  A **긴** 하나일 수 있는 값의는 [ActionEnum](../../../ado/reference/adox-api/actionenum.md) 권한을 설정할 때 수행할 작업의 유형을 지정 하는 상수입니다.  
   
  *권한*  
  A **긴** 비트 마스크 될 수 있는 값의 하나 이상의 [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) 설정에 대 한 권한을 나타내는 상수입니다.  
   
- *상속*  
+ *Inherit*  
  (선택 사항) A **긴** 하나일 수 있는 값의는 [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) 개체는 이러한 사용 권한을 상속 하는 방법을 지정 하는 상수입니다. 기본값은 **adInheritNone**합니다.  
   
  *ObjectTypeId*  

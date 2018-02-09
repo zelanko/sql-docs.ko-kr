@@ -1,39 +1,34 @@
 ---
 title: "업데이트 됨-T-SQL docs | Microsoft Docs"
 description: "가져온 조각을 TRANSACT-SQL에 대 한 최근에 변경 된 설명서에 대 한 업데이트 된 콘텐츠를 표시 합니다."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: BYHAM
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: t-sql
-ms.openlocfilehash: 33c50454f34c1902ea7f7dedc9ecb0a54f99ce24
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: t-sql
+ms.date: 02/03/2018
+ms.openlocfilehash: c1f1ce751bd4bca781644e7e2f5282320c8c88a8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>신규 / 최근에 업데이트: Transact SQL docs
 
 
 
-Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/) 설명서 웹 사이트에서 기존 문서 일부를 업데이트합니다. 이 문서에는 최근 업데이트된 문서에서 발췌한 내용이 표시됩니다. 새 문서로 연결되는 링크도 나열될 수 있습니다.
+거의 매일 Microsoft 업데이트 기존 아티클 중 일부에 해당 [Docs.Microsoft.com](http://docs.microsoft.com/) 설명서 웹 사이트입니다. 이 문서에는 최근에 업데이트 된 문서에서 발췌 한 내용 표시 됩니다. 새 문서와 연결도 나열 되어 있습니다.
 
-이 문서는 주기적으로 다시 실행되는 프로그램에 의해 생성됩니다. 경우에 따라 발췌한 내용의 형식이 완전하지 않거나 원본 문서의 표식(markdown)으로 표시될 수 있습니다. 이미지는 여기에 표시되지 않습니다.
+이 문서는 주기적으로 다시 실행 하는 프로그램에서 생성 됩니다. 경우에 따라 발췌 한 구문을 소스 문서에서 불완전 한 서식을 사용 하 여 또는 마크 다운으로 나타날 수 있습니다. 이미지는 여기에 표시 되지 않습니다.
 
-다음 날짜 범위 및 주제에 대한 최근 업데이트가 보고됩니다.
+다음 날짜 범위 및 주체에 대 한 최신 업데이트가 보고 됩니다.
 
 
 
-- *날짜 범위 업데이트:* &nbsp; **2017-09-28** &nbsp; 을 아래와 같이 &nbsp; **2017-12-02**
+- *날짜 범위 업데이트:* &nbsp; **2017-12-03** &nbsp; 을 아래와 같이 &nbsp; **2018-02-03**
 - *주제 영역:* &nbsp; **T-SQL**합니다.
 
 
@@ -41,7 +36,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>최근에 만든 새로운 문서
+## <a name="new-articles-created-recently"></a>최근에 만든 새로운 기사
 
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
@@ -52,13 +47,13 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>업데이트된 문서의 발췌 내용
+## <a name="updated-articles-with-excerpts"></a>부분 업데이트 되는 문서
 
 이 섹션에는 최근에 많이 업데이트된 문서에서 발췌한 업데이트 내용이 표시됩니다.
 
-여기에 표시된 발췌 내용은 적절한 의미 체계 맥락과 분리되어 표시됩니다. 또한 발췌 내용은 때때로 실제 문서에서 이 내용의 주변에 있는 중요한 markdown 구문과도 분리되어 표시됩니다. 따라서 이러한 발췌 내용은 일반적인 지침을 제공하기 위한 것입니다. 이 발췌 내용에서는 관심 내용을 클릭하여 실제 문서를 참조할 가치가 있을지 여부만 파악할 수 있습니다.
+여기에 표시 된 부분 적절 한 의미 체계 컨텍스트에서 분리 된 나타납니다. 또한 때로는 실제 문서의 주위에 있는 중요 한 마크 다운 구문에서 발췌 한 구문을 분리 됩니다. 따라서 이러한 발췌 한이 내용에 대 한 일반적인 지침만 됩니다. 발췌 한 내용 관심 분야를 클릭 하 고 실제 문서를 참조 하는 데 시간이 걸리는 보증 있는지 여부를 알 수 있습니다에 사용 합니다.
 
-따라서 이러한 발췌 내용에서 코드를 복사하거나 발췌 내용을 정확한 사실로 간주하지 마세요. 대신 실제 문서를 참조하세요.
+이러한 및 기타 이유로 이러한 부분에서 코드를 복사 하지 않으려면 및 사용 하지 않습니다 정확한 진리도 모든 텍스트 발췌문 합니다. 대신 실제 문서를 참조 합니다.
 
 
 
@@ -68,12 +63,12 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
+### <a name="compact-list-of-articles-updated-recently"></a>Compact를 최근에 업데이트 하는 문서 목록
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
-1. [백슬래시 (줄 연속 문자) (Transact SQL)](#TitleNum_1)
-2. [선택-ORDER BY 절 (Transact SQL)](#TitleNum_2)
+1. [통계 (Transact SQL) 만들기](#TitleNum_1)
+2. [UPDATE STATISTICS (TRANSACT-SQL)](#TitleNum_2)
 
 
 
@@ -84,37 +79,33 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-backslash-line-continuation-transact-sqllanguage-elementssql-server-utilities-statements-backslashmd"></a>1. &nbsp;[백슬래시 (줄 연속 문자) (Transact SQL)](language-elements/sql-server-utilities-statements-backslash.md)
+### <a name="1-nbsp-create-statistics-transact-sqlstatementscreate-statistics-transact-sqlmd"></a>1. &nbsp;[CREATE STATISTICS (TRANSACT-SQL)](statements/create-statistics-transact-sql.md)
 
-*업데이트 됨된: 2017-11-15* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([다음](#TitleNum_2))
+*업데이트 됨된: 2018-01-04* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([다음](#TitleNum_2))
 
-<!-- Source markdown line 83.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 200.  ms.author= "edmaca".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 9484441710ac9a083a554ffadb59a3b7e92484b3 19b9c37c65ba462a32067c80e81a920eeb339851  (PR=3966  ,  Filename=sql-server-utilities-statements-backslash.md  ,  Dirpath=docs\t-sql\language-elements\  ,  MergeCommitSha40=b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1) -->
+<!-- git diff --ignore-all-space --unified=0 384e68493597bcc36876a3c7bada2630106256e2 c22168ea59b6020e8ebe1ccac5fa6a6049e6db4d  (PR=4460  ,  Filename=create-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
 
 
 
-**B. 이진 문자열 분**
+MAXDOP = *max_degree_of_parallelism*
+**적용할**: SQL Server (SQL Server 2017 CU3 다음으로 시작)입니다.
 
+ 재정의 **x degree of** 통계 작업의 기간에 대 한 구성 옵션입니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.
 
-다음 예제에서는 백슬래시 및 캐리지 리턴을 사용 하 여 이진 문자열 선을 두 선으로 분할 합니다.
+ *max_degree_of_parallelism* 될 수 있습니다.
 
-```
-SELECT 0xabc\
-def AS [ColumnResult];
+ 1 않습니다 병렬 계획을 생성 합니다.
 
-```
+ \>현재 시스템 작업에 따라 보다 적은 또는 1을 지정 된 병렬 통계 작업에 사용 되는 프로세서의 최대 수를 제한 합니다.
 
- ..! 포함 NotShown-ssResult... /.. /includes/ssresult-md.md)]
+ 현재 시스템 작업에 따라 보다 적은 또는 0 (기본값) 실제 프로세서 수를 사용 합니다.
 
-```
- ColumnResult
- ------------
- 0xABCDEF
-```
+ \<update_stats_stream_option > 정보 제공 용 으로만 식별 합니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.
 
 
 
@@ -127,39 +118,32 @@ def AS [ColumnResult];
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-select---order-by-clause-transact-sqlqueriesselect-order-by-clause-transact-sqlmd"></a>2. &nbsp;[선택-ORDER BY 절 (Transact SQL)](queries/select-order-by-clause-transact-sql.md)
+### <a name="2-nbsp-update-statistics-transact-sqlstatementsupdate-statistics-transact-sqlmd"></a>2. &nbsp;[UPDATE STATISTICS (TRANSACT-SQL)](statements/update-statistics-transact-sql.md)
 
-*업데이트 됨된: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([이전](#TitleNum_1))
+*업데이트 됨된: 2018-01-04* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([이전](#TitleNum_1))
 
-<!-- Source markdown line 481.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 167.  ms.author= "edmaca".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 b8d7bc7bab46e914eb2facf6c654a5944383077e de7e4f3f7826011e273120a2b6b08af4d263a510  (PR=3663  ,  Filename=select-order-by-clause-transact-sql.md  ,  Dirpath=docs\t-sql\queries\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
+<!-- git diff --ignore-all-space --unified=0 5721e21a9f43fa784fe9357c47cb2a814385e63d 24ae47c553635f389a182e5e643bf9bd6bf59e78  (PR=4460  ,  Filename=update-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
 
 
 
-**<a name="Union"></a>제외 UNION과 함께 ORDER BY를 사용 하 여, 및 INTERSECT**
+MAXDOP = *max_degree_of_parallelism*
 
- 쿼리에서 UNION, EXCEPT 또는 INTERSECT 연산자를 사용하는 경우 문의 끝 부분에 ORDER BY 절을 지정해야 하며 조합된 쿼리 결과가 정렬됩니다. 다음 예에서는 빨간색 또는 노란색 제품을 모두 반환하고 이 조합된 목록을 `ListPrice` 열을 기준으로 정렬합니다.
+**적용 대상**: SQL Server (SQL Server 2017 CU3부터 시작)입니다.
 
-```sql
-USE AdventureWorks2012;
-GO
-SELECT Name, Color, ListPrice
-FROM Production.Product
-WHERE Color = 'Red'
--- ORDER BY cannot be specified here.
-UNION ALL
-SELECT Name, Color, ListPrice
-FROM Production.Product
-WHERE Color = 'Yellow'
-ORDER BY ListPrice ASC;
+ 재정의 **x degree of** 통계 작업의 기간에 대 한 구성 옵션입니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.
 
-```
+ *max_degree_of_parallelism* 될 수 있습니다.
 
-**예: ~! 포함 NotShown-ssSDWfull... /.. /includes/sssdwfull-md.md)] 및..! 포함 NotShown-ssPDW... /.. /includes/sspdw-md.md)]**
+ 1 않습니다 병렬 계획을 생성 합니다.
+
+ \>현재 시스템 작업에 따라 보다 적은 또는 1을 지정 된 병렬 통계 작업에 사용 되는 프로세서의 최대 수를 제한 합니다.
+
+ 현재 시스템 작업에 따라 보다 적은 또는 0 (기본값) 실제 프로세서 수를 사용 합니다.
 
 
 
@@ -168,46 +152,45 @@ ORDER BY ListPrice ASC;
 
 
 
-## <a name="similar-articles"></a>유사한 문서
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>신규 또는 업데이트 된 문서에 대 한 유사한 문서
 
 이 섹션에는 공용 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새 + 업데이트 (3 + 14): **SQL에 대 한 고급 분석** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
-- [새 + 업데이트 (87 + 0): **SQL에 대 한 분석 플랫폼 시스템** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [새 + 업데이트 (5 + 4): **SQL에 연결** docs](../connect/new-updated-connect.md)
-- [새 + 업데이트 (0 + 1): **SQL에 대 한 데이터베이스 엔진** docs](../database-engine/new-updated-database-engine.md)
-- [새 + 업데이트 (2 + 2): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [새 + 업데이트 (10 + 9): **SQL에 대 한 Linux** docs](../linux/new-updated-linux.md)
-- [새 + 업데이트 (2 + 4): **SQL에 대 한 관계형 데이터베이스** docs](../relational-databases/new-updated-relational-databases.md)
-- [새 + 업데이트 (4 + 2): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [새 + 업데이트 (0 + 1): **SQL에 대 한 샘플** docs](../sample/new-updated-sample.md)
-- [새 + 업데이트 (21 + 0): **SQL 작업 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [새 + 업데이트 (5 + 1): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새 + 업데이트 (1 + 0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새 + 업데이트 (0 + 2): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>주제 영역은 *않습니다* 새로 추가 되거나 최근에 업데이트 문서
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
-- [새 + 업데이트 (0 + 0): **데이터 마이그레이션 길잡이 (DMA) sql** docs](../dma/new-updated-dma.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
+- [새 + 업데이트 (1 + 3):&nbsp; **SQL에 대 한 고급 분석** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새 + 업데이트 (0 + 1):&nbsp; **SQL에 대 한 분석 플랫폼 시스템** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [새 + 업데이트 (0 + 1):&nbsp; **SQL에 연결** docs](../connect/new-updated-connect.md)
+- [새 + 업데이트 (0 + 1):&nbsp; **SQL에 대 한 데이터베이스 엔진** docs](../database-engine/new-updated-database-engine.md)
+- [새 + 업데이트 (12 + 1): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
+- [새 + 업데이트 (6 + 2):&nbsp; **SQL에 대 한 Linux** docs](../linux/new-updated-linux.md)
+- [새 + 업데이트 (15 + 0): **SQL에 대 한 PowerShell** docs](../powershell/new-updated-powershell.md)
+- [새 + 업데이트 (2 + 9):&nbsp; **SQL에 대 한 관계형 데이터베이스** docs](../relational-databases/new-updated-relational-databases.md)
+- [새 + 업데이트 (1 + 0):&nbsp; **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
+- [새 + 업데이트 (1 + 1):&nbsp; **SQL 작업 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새 + 업데이트 (1 + 1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [새 + 업데이트 (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [새 + 업데이트 (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [새 + 업데이트 (0 + 2):&nbsp; **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>영역을 수행 하는 주체 *하지* 가 새로 추가 되거나 최근에 업데이트 문서
+
+
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMA(Data Migration Assistant)** 문서](../dma/new-updated-dma.md)
+- [새 + 업데이트 (0 + 0): **ADO ActiveX Data Objects ()에 대 한 SQL** docs](../ado/new-updated-ado.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새 + 업데이트 (0 + 0): **SQL에 대 한 데이터 품질 서비스** docs](../data-quality-services/new-updated-data-quality-services.md)
+- [새 + 업데이트 (0 + 0): **확장 DMX (Data Mining) sql** docs](../dmx/new-updated-dmx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
+- [새 + 업데이트 (0 + 0): **MDX (Multidimensional Expressions)에 대 한 SQL** docs](../mdx/new-updated-mdx.md)
+- [새 + 업데이트 (0 + 0): **SQL에 대 한 ODBC (Open Database Connectivity)** docs](../odbc/new-updated-odbc.md)
+- [새 + 업데이트 (0 + 0): **SQL에 대 한 샘플** docs](../sample/new-updated-sample.md)
+- [새 + 업데이트 (0 + 0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
+- [새 + 업데이트 (0 + 0): **SQL에 대 한 XQuery** docs](../xquery/new-updated-xquery.md)
 
 

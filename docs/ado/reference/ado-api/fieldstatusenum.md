@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FieldStatusEnum
-helpviewer_keywords: FieldStatusEnum enumeration [ADO]
+f1_keywords:
+- FieldStatusEnum
+helpviewer_keywords:
+- FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12e543a4baa7bbcc46ea39e906d57d001ea5f078
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e04f98c5691a66b02a4c5daa8d745f529a9820e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 지정 된 [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 의 [Field 개체](../../../ado/reference/ado-api/field-object.md)합니다.  
   
  **adFieldPending\***  값 나타냅니다 작업을 설정할 수 상태 발생 한 다른 상태 값과 결합 될 수 있습니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|지정된 된 필드 이미 있음을 나타냅니다.|  
 |**adFieldBadStatus**|12|잘못 된 상태 값 보냈음을 ADO에서 OLE DB 공급자를 나타냅니다. OLE DB 1.0 또는 1.1 공급자 또는의 잘못 된 조합이 원인일 [값](../../../ado/reference/ado-api/value-property-ado.md) 및 [상태](../../../ado/reference/ado-api/status-property-ado-field.md)합니다.|  

@@ -22,19 +22,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04ee34b1a2474e97111d42be84954dc4c0987dd1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a075d6c4c4cc5ccd0477bb33159cf319fb0754b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>사용자 정의 형식-요구 사항 작성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 정의 형식 (UDT)에 설치를 만들 때 몇 가지 중요 한 디자인 결정을 내려야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 대부분의 UDT는 구조로 만드는 것이 좋지만 클래스로 만드는 방법도 고려해 볼 수 있습니다. UDT 정의가 UDT 생성 사양에 맞아야만 UDT 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+사용자 정의 형식 (UDT)에 설치를 만들 때 몇 가지 중요 한 디자인 결정을 내려야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 대부분의 UDT는 구조로 만드는 것이 좋지만 클래스로 만드는 방법도 고려해 볼 수 있습니다. UDT 정의가 UDT 생성 사양에 맞아야만 UDT 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 있습니다.  
   
 ## <a name="requirements-for-implementing-udts"></a>UDT 구현을 위한 요구 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 UDT를 실행하려면 UDT 정의에서 다음 요구 사항을 구현해야 합니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="native-serialization"></a>네이티브 직렬화  
  만들려는 UDT의 종류에 따라 UDT에 적합한 직렬화 특성을 선택해야 합니다. **네이티브** 수 있도록 하는 매우 간단한 구조를 활용 하는 직렬화 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] udt는 효율적인 네이티브 표현을 디스크에 저장할 수 있습니다. **네이티브** 는 UDT가 간단 하며 다음 유형의 필드만 포함 하는 경우 형식을 것이 좋습니다.  
   
- **bool**, **바이트**, **sbyte**, **짧은**, **ushort**, **int**,  **uint**, **긴**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  값 형식이 있는 필드는 위의 형식에 대 한 구성에 적합 한 후보인 **네이티브** 형식 **구조체** Visual C#, (또는 **구조** 에 알려져 됩니다 Visual Basic)입니다. 예를 들어 여 지정한 UDT는 **네이티브** 직렬화 형식으로도 지정한 다른 udt 필드가 포함 될 수 있습니다는 **네이티브** 형식입니다. 지정 해야 하는 경우 UDT 정의 더 복잡 하 고 위의 목록에 없는 데이터 형식이 포함 된는 **UserDefined** serialization 형식 대신 합니다.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="userdefined-serialization"></a>UserDefined 직렬화  
  **UserDefined** 형식에 대 한 설정에서 **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** 특성은 이진 형식에 대해 전체 개발자 제어 합니다. 지정 하는 경우는 **형식** 특성의 속성으로 **UserDefined**, 사용자 코드에서 다음을 수행 해야 합니다.  
   
--   선택적 지정 **IsByteOrdered** 특성의 속성입니다. 기본 값은 **false**입니다.  
+-   선택적 지정 **IsByteOrdered** 특성의 속성입니다. 기본값은 **false**입니다.  
   
 -   지정 된 **MaxByteSize** 속성은 **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**합니다.  
   
@@ -171,7 +172,7 @@ ms.lasthandoff: 01/08/2018
   
  FOR XML 쿼리에서는 UDT가 직렬화되지 않습니다. Udt의 XML 직렬화를 표시 하는 FOR XML 쿼리를 실행 하려면 각 UDT 열을 명시적으로 변환 된 **xml** SELECT 문에서 데이터 형식입니다. 열을 명시적으로 변환할 수 있습니다 **varbinary**, **varchar**, 또는 **nvarchar**합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [사용자 정의 형식 만들기](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   
