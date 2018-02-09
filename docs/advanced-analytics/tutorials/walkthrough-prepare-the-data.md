@@ -141,7 +141,7 @@ SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니
   
 3. 다음 각 매개변수마다 프롬프트가 표시됩니다.
   
-    **데이터베이스 서버 이름**: 기계 학습 서비스 또는 R Services가 설치된 SQL Server 인스턴스의 이름입니다.
+    **데이터베이스 서버 이름**: Machine Learning Services 또는 R Services가 설치된 SQL Server 인스턴스의 이름입니다.
 
     네트워크 요구 사항에 따라 인스턴스 이름에 하나 이상의 서브넷 이름이 필요할 수도 있습니다. 예를 들어 MYSERVER가 작동하지 않으면  myserver.subnet.mycompany.com을 시도해 보세요.
     
