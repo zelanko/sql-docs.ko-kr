@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - output parameters [SQL Server]
 - input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0b580149c946b88eafc138dc69e55ef673aafc9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 029b4f8eab1af6ebbd26c1d8fe877d38420e7f5c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 프로시저 매개 변수를 지정하여 호출 프로그램이 값을 프로시저 본문에 전달할 수 있습니다. 이러한 값은 프로시저 실행 시 다양한 목적으로 쓰일 수 있습니다. 프로시저 매개 변수는 매개 변수가 OUTPUT 매개 변수로 표시된 경우 호출 프로그램에 값을 반환할 수도 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+프로시저 매개 변수를 지정하여 호출 프로그램이 값을 프로시저 본문에 전달할 수 있습니다. 이러한 값은 프로시저 실행 시 다양한 목적으로 쓰일 수 있습니다. 프로시저 매개 변수는 매개 변수가 OUTPUT 매개 변수로 표시된 경우 호출 프로그램에 값을 반환할 수도 있습니다.  
   
  프로시저는 최대 2100개의 매개 변수를 사용할 수 있으며 각각 이름, 데이터 형식, 방향이 할당됩니다. 필요에 따라 매개 변수가 기본값으로 할당될 수 있습니다.  
   

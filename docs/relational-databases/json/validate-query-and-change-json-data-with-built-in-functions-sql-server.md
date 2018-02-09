@@ -7,23 +7,24 @@ ms.prod_service: database-engine, sql-database
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, built-in functions
 - functions (JSON)
 ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 737ed53b4c69a797a11b38c59a4939c244af7b98
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: c6803992992cf2a62afe741df536c0fa87a5fe2d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>기본 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ ORDER BY LastName
 |**$.c**|hi|NULL 또는 오류|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>AdventureWorks 예제 데이터베이스로 JSON_VALUE 및 JSON_QUERY 테스트  
-AdventureWorks 예제 데이터베이스로 다음 예제를 실행하여 이 항목에서 설명하는 기본 제공 함수를 테스트합니다. AdventureWorks를 다운로드할 수 있는 위치에 대한 정보와 스크립트를 실행하여 테스트용 JSON 데이터를 추가하는 방법은 [기본 제공 JSON 지원 시험 사용](json-data-sql-server.md#test-drive-built-in-json-support)을 참조하세요.
+AdventureWorks 예제 데이터베이스로 다음 예제를 실행하여 이 항목에서 설명하는 기본 제공 함수를 테스트합니다. AdventureWorks를 다운로드할 수 있는 위치에 대한 정보와 스크립트를 실행하여 테스트용 JSON 데이터를 추가하는 방법은 [기본 제공 JSON 지원 시험 사용](json-data-sql-server.md#test-drive-built-in-json-support-with-the-adventureworks-sample-database)을 참조하세요.
   
 다음 예제에서 `SalesOrder_json` 테이블의 `Info` 열에는 JSON 텍스트가 포함되어 있습니다.  
   
@@ -167,10 +168,23 @@ HAVING SUM(SubTotal)>1000
 SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')    
 ```  
   
- 자세한 내용은 [JSON_MODIFY&#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)을 참조하세요.  
+ 자세한 내용은 [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)을 참조하세요.  
   
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server의 기본 제공 JSON 지원에 대한 자세한 정보  
-많은 특정 솔루션, 사용 사례 및 권장 사항은 Microsoft 프로그램 관리자인 Jovan Popovic이 제공하는 SQL Server 및 Azure SQL Database의 [기본 제공 JSON 지원에 대한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 JSON에 대한 자세한 정보  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft 블로그 게시물  
+  
+특정 솔루션, 사용 사례 및 권장 사항은 SQL Server 및 Azure SQL Database의 기본 제공 JSON 지원에 대한 [블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.  
+
+### <a name="microsoft-videos"></a>Microsoft 비디오
+
+SQL Server 및 Azure SQL Database에서 기본 제공 JSON 지원에 대한 시각적 소개는 다음 비디오를 참조하세요.
+
+-   [SQL Server 2016 및 JSON 지원](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [SQL Server 2016 및 Azure SQL Database에서 JSON 사용](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [NoSQL과 관계형 간에 브리지인 JSON](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## <a name="see-also"></a>참고 항목  
  [ISJSON&#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)   

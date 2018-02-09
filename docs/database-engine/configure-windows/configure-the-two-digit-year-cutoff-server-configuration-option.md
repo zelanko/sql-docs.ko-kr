@@ -8,23 +8,24 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - two digit year cutoff option
 - four-digit years [SQL Server]
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea6f7de3504b806b46c9c9e36284993e5786708
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6c04eb2a0831bb5dd2c5c143dbd293cebce414fc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>two digit year cutoff 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +52,11 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 지원 담당자만 변경해야 합니다.  
+-   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전문가만이 변경해야 합니다.  
   
--   OLE 자동화 개체는 2030을 두 자리 구분 연도로 사용합니다. **두 자리 연도 구분** 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 클라이언트 응용 프로그램 간 날짜 값의 일관성을 유지할 수 있습니다. 그러나 날짜를 명확하게 구분하려면 데이터에 네 자리 연도를 사용하세요.  
+-   OLE 자동화 개체는 2030을 두 자리 구분 연도로 사용합니다. **두 자리 연도 구분** 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 클라이언트 응용 프로그램 간 날짜 값의 일관성을 유지할 수 있습니다. 
+
+-   날짜를 명확하게 구분하려면 데이터에서 항상 네 자리 연도를 사용하세요.  
   
 ###  <a name="Security"></a> 보안  
   

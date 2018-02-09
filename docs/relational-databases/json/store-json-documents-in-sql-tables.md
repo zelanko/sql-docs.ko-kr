@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ee36f96183a8b2e2a099402b500523345585460
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: 9042b6cf7cb7298e5f327ab96c77cf625eee3872
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server 또는 SQL 데이터베이스에 JSON 문서 저장
 SQL Server 및 Azure SQL Database에는 표준 SQL 언어를 사용하여 JSON 문서를 구문 분석할 수 있는 네이티브 JSON 함수가 있습니다. 이제 JSON 문서를 SQL Server 또는 SQL Database에 저장하고 JSON 데이터를 NoSQL 데이터베이스에서처럼 쿼리할 수 있습니다. 이 문서에서는 JSON 문서를 SQL Server 또는 SQL Database에 저장하는 옵션에 대해 설명합니다.
@@ -166,5 +166,18 @@ END
 
 SQL Server 및 SQL Database의 기본 JSON 기능을 사용하면 NoSQL 데이터베이스처럼 JSON 문서를 처리할 수 있습니다. 모든 데이터베이스(관계형 또는 NoSQL)에는 JSON 데이터 처리에 대한 장단점이 있습니다. JSON 문서를 SQL Server 또는 SQL Database에 저장하는 주요 이점은 완전한 SQL 언어 지원입니다. 다양한 Transact-SQL 언어를 사용하여 데이터를 처리하고 다양한 저장 옵션을 구성할 수 있습니다(압축률이 높고 빠른 분석을 위한 columnstore 인덱스부터 잠금 해제 처리를 위한 메모리 최적화 테이블까지). 동시에 NoSQL 시나리오에서 쉽게 재사용할 수 있는 성숙한 보안 및 국제화 기능의 이점을 누릴 수 있습니다. 이 문서에서 설명한 이유로 인해 SQL Server 또는 SQL Database에 JSON 문서를 저장하는 것이 좋습니다.
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server의 기본 제공 JSON 지원에 대한 자세한 정보  
-많은 특정 솔루션, 사용 사례 및 권장 사항은 Microsoft 프로그램 관리자인 Jovan Popovic이 제공하는 SQL Server 및 Azure SQL Database의 [기본 제공 JSON 지원에 대한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 JSON에 대한 자세한 정보  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft 블로그 게시물  
+  
+특정 솔루션, 사용 사례 및 권장 사항은 SQL Server 및 Azure SQL Database의 기본 제공 JSON 지원에 대한 [블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.  
+
+### <a name="microsoft-videos"></a>Microsoft 비디오
+
+SQL Server 및 Azure SQL Database에서 기본 제공 JSON 지원에 대한 시각적 소개는 다음 비디오를 참조하세요.
+
+-   [SQL Server 2016 및 JSON 지원](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [SQL Server 2016 및 Azure SQL Database에서 JSON 사용](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [NoSQL과 관계형 간에 브리지인 JSON](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)

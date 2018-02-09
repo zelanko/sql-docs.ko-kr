@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: cursor threshold option
+helpviewer_keywords:
+- cursor threshold option
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09edc2b444c6c5f49e913b6c60f72f3d490c5e6f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c758a083bea646322bae5654b521d9f187020b04
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>cursor threshold 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 지원 담당자만 변경해야 합니다.  
+-   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전문가만이 변경해야 합니다.  
   
 -   **커서 임계값** 을 -1로 설정하면 모든 키 집합이 동기적으로 생성되므로 작은 커서 집합에 유리합니다. **cursor threshold** 를 0으로 설정하면 모든 커서 키 집합이 비동기적으로 생성됩니다. 다른 값을 사용하면 쿼리 최적화 프로그램이 커서 집합에 있는 예상 행 개수를 비교하여 이 값이 **cursor threshold**에 설정된 수를 초과하면 비동기적으로 키 집합을 작성합니다. 결과 집합이 작을수록 동기적 작성 성능이 향상되므로 **커서 임계값** 를 너무 낮게 설정하지 않는 것이 좋습니다.  
   

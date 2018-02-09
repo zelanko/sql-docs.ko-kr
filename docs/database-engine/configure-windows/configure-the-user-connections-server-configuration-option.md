@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - maximum number of simultaneous user connections
 - connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b800031c9467a8b57851675b3e99e10b41c0b21f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 51eb56b34a8f3aa18ab0a115954e7a4004aca74e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>user connections 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 지원 담당자만 변경해야 합니다.  
+-   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전문가만이 변경해야 합니다.  
   
 -   **사용자 연결** 옵션을 사용하면 동시 연결이 너무 많아 서버가 과부하되는 것을 방지할 수 있습니다. 시스템과 사용자 요구 사항에 따라 연결 수를 계산할 수 있습니다. 예를 들어, 사용자가 많은 시스템에서는 각 사용자가 고유하게 연결할 필요는 없습니다. 여러 사용자 간에 연결을 공유할 수 있습니다. OLE DB 응용 프로그램을 실행 중인 사용자는 각 열린 연결 개체당 하나의 연결이 필요하며 ODBC 응용 프로그램을 실행 중인 사용자는 응용 프로그램에 있는 각 활성 연결 핸들당 하나의 연결이 필요합니다. 또한 DB-Library 응용 프로그램을 실행 중인 사용자는 DB-Library **dbopen** 함수를 호출하는 시작된 각 프로세스당 하나의 연결이 필요합니다.  
   

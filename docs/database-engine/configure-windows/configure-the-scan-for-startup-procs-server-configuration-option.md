@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: scan for startup procs option
+helpviewer_keywords:
+- scan for startup procs option
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1500c7127094e2eba01eab371d959e094ca2c041
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 98b2f35277937e7be184363e2f4579fe54bd7adc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>scan for startup procs 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 지원 담당자만 변경해야 합니다.  
+-   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전문가만이 변경해야 합니다.  
   
 -   이 옵션의 값은 **sp_configure**를 사용하여 설정할 수 있지만 자동 실행 저장 프로시저를 설정하거나 설정을 해제하는 데 사용되는 **sp_procoption**을 사용하면 자동으로 설정됩니다. **sp_procoption** 을 사용하여 첫 번째 저장 프로시저를 autoproc로 설정하면 이 옵션의 값이 자동으로 1로 설정됩니다. **sp_procoption** 을 사용하여 마지막 저장 프로시저의 autoproc 설정을 해제하면 이 옵션의 값이 자동으로 0으로 설정됩니다. **sp_procoption** 을 사용하여 autoprocs를 설정하거나 해제하고 autoprocs를 삭제하기 전에 항상 해제하면 이 옵션을 수동으로 설정할 필요가 없습니다.  
   

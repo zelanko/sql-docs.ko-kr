@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 31bab8e6bf0207b740d89fbaec1b1b97ea7db585
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 29ba7f266a86e53f95668b8bf8ca4ce879bb62f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/18/2018
 1.  개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
     > [!NOTE]  
-    >  최소한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 버전 16이 필요합니다.  
+    > 최소한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 버전 16이 필요합니다.  
   
 2.  **데이터베이스 속성** 대화 상자에서 **쿼리 저장소** 페이지를 선택합니다.  
   
@@ -49,18 +50,18 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용  
   
-1.  **ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+**ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
-    ```sql  
-    ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
-    ```  
+```sql  
+ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
+```  
   
-     쿼리 저장소와 관련된 구문 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
+쿼리 저장소와 관련된 구문 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
   
 > [!NOTE]  
 >  **마스터** 또는 **tempdb** 데이터베이스에 대해서는 쿼리 저장소를 사용하도록 설정할 수 없습니다.  
  
-##  <a name="About"></a> 쿼리 저장소에 있는 정보  
+## <a name="About"></a> 쿼리 저장소에 있는 정보  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 쿼리에 대한 실행 계획은 일반적으로 통계 변경, 스키마 변경, 인덱스 생성/삭제 등과 같은 여러 이유로 인해 시간에 따라 변경됩니다. 프로시저 캐시(캐시된 쿼리 계획이 저장되는 위치)에는 최신 실행 계획만 저장됩니다. 또한 메모리 부족으로 인해 계획 캐시에서 계획이 제거됩니다. 따라서 실행 계획 변경으로 인한 쿼리 성능 저하는 간단한 문제가 아니며 해결하는 데 시간이 걸릴 수 있습니다.  
   
  쿼리 저장소에서는 쿼리당 여러 실행 계획을 유지하므로 쿼리 프로세서가 쿼리에 대해 특정 실행 계획을 사용하도록 하는 정책을 적용할 수 있습니다. 이를 계획 강제 적용이라고 합니다. 쿼리 저장소의 계획 강제 적용은 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) 쿼리 힌트와 유사한 메커니즘을 사용하여 제공되지만 사용자 응용 프로그램을 변경할 필요는 없습니다. 계획 강제 적용은 계획 변경으로 인한 쿼리 성능 저하를 짧은 시간 내에 해결할 수 있습니다.  
@@ -70,32 +71,28 @@ ms.lasthandoff: 01/18/2018
  쿼리 저장소 기능을 사용하는 일반적인 시나리오는 다음과 같습니다.  
   
 -   이전 쿼리 계획을 적용하여 계획 성능 저하를 빠르게 찾고 해결합니다. 실행 계획 변경으로 최근에 성능이 저하된 쿼리를 수정합니다.  
-  
 -   지정된 기간 내에 쿼리가 실행된 횟수를 확인하여 DBA의 성능 리소스 문제 해결을 지원합니다.  
-  
 -   실행 시간, 메모리 사용 등을 기준으로 이전 *n* 시간 동안의 상위 *n* 개 쿼리를 식별합니다.  
-  
 -   지정된 쿼리에 대한 쿼리 계획의 기록을 감사합니다.  
-  
 -   특정 데이터베이스에 대한 리소스(CPU, I/O 및 메모리) 사용 패턴을 분석합니다.  
 -   리소스에서 대기 중인 상위 n개 쿼리를 식별합니다. 
 -   특정 쿼리 또는 계획에 대한 대기 특성을 이해합니다.
   
 쿼리 저장소에는 다음 3개의 저장소가 있습니다.
-- **계획 저장소** - 실행 계획 정보 유지
-- **런타임 통계 저장소** - 실행 통계 정보 유지
-- **대기 통계 저장소** - 대기 통계 정보 유지
+- **계획 저장소** - 실행 계획 정보 유지     
+- **런타임 통계 저장소** - 실행 통계 정보 유지    
+- **대기 통계 저장소** - 대기 통계 정보 유지     
  
- 쿼리 저장소에서 쿼리에 대해 저장할 수 있는 고유한 계획의 수는 **max_plans_per_query** 구성 옵션으로 제한됩니다. 성능 향상을 위해 저장소에 비동기적으로 정보가 기록됩니다. 공간 사용을 최소화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이러한 저장소의 정보는 쿼리 저장소 카탈로그 뷰를 쿼리하여 볼 수 있습니다.  
+쿼리 저장소에서 쿼리에 대해 저장할 수 있는 고유한 계획의 수는 **max_plans_per_query** 구성 옵션으로 제한됩니다. 성능 향상을 위해 저장소에 비동기적으로 정보가 기록됩니다. 공간 사용을 최소화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이러한 저장소의 정보는 쿼리 저장소 카탈로그 뷰를 쿼리하여 볼 수 있습니다.  
   
- 다음 쿼리는 쿼리 저장소의 쿼리 및 계획에 대한 정보를 반환합니다.  
+다음 쿼리는 쿼리 저장소의 쿼리 및 계획에 대한 정보를 반환합니다.  
   
 ```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
-JOIN sys.query_store_query AS Qry  
+INNER JOIN sys.query_store_query AS Qry  
     ON Pl.query_id = Qry.query_id  
-JOIN sys.query_store_query_text AS Txt  
+INNER JOIN sys.query_store_query_text AS Txt  
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
@@ -111,7 +108,7 @@ JOIN sys.query_store_query_text AS Txt
  계획을 강제 적용하려면 쿼리 및 계획을 선택한 다음 **계획 강제 적용**을 클릭합니다. 쿼리 계획 기능으로 저장하고 쿼리 계획 캐시에 아직 보존되어 있는 계획만 강제 적용할 수 있습니다.  
 ##  <a name="Waiting"></a> 대기 쿼리 찾기
 
-SQL Server 2017 CTP 2.0부터 및 Azure SQL Database에서 쿼리 저장소 고객에 대한 시간별 쿼리당 대기 통계를 확인할 수 있습니다. 쿼리 저장소에서 대기 유형이 **대기 범주**에 결합됩니다. 전체 매핑은 [sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)에서 확인할 수 있습니다.
+[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]부터 시간에 따라 쿼리당 대기 통계는 쿼리 저장소에서 제공됩니다. 쿼리 저장소에서 대기 유형이 **대기 범주**에 결합됩니다. 대기 범주를 대기 형식에 매핑하는 작업은 [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table)에서 제공됩니다.
 
 **대기 범주**는 다양한 대기 유형을 본질적으로 유사한 버킷으로 결합합니다. 대기 범주마다 문제 해결을 위해 다른 후속 분석이 필요하지만 동일한 범주의 대기 유형은 매우 유사한 문제 해결 경험을 생성하므로 대기를 기반으로 해서 영향을 받는 쿼리를 제공하면 대부분의 조사를 성공적으로 완료할 수 있습니다.
 
@@ -129,38 +126,38 @@ SQL Server 2017 CTP 2.0부터 및 Azure SQL Database에서 쿼리 저장소 고�
 
 다음 옵션을 사용하여 쿼리 저장소 매개 변수를 구성할 수 있습니다.
 
- `OPERATION_MODE`  
- **READ_WRITE**(기본값) 또는 READ_ONLY일 수 있습니다.  
+*OPERATION_MODE*  
+**READ_WRITE**(기본값) 또는 READ_ONLY일 수 있습니다.  
   
- `CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)`  
- STALE_QUERY_THRESHOLD_DAYS 인수를 구성하여 쿼리 저장소에 데이터를 보존할 일수를 지정합니다. 기본값은 30입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 **7**일입니다.
+*CLEANUP_POLICY(STALE_QUERY_THRESHOLD_DAYS)*  
+`STALE_QUERY_THRESHOLD_DAYS` 인수를 구성하여 쿼리 저장소에 데이터를 보존할 일수를 지정합니다. 기본값은 30입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 **7**일입니다.
   
- `DATA_FLUSH_INTERVAL_SECONDS`  
- 쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 이 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS를 통해 구성됩니다. 기본값은 **900**(15분)입니다.  
+*DATA_FLUSH_INTERVAL_SECONDS*  
+쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 이 비동기 전송이 발생되는 빈도가 `DATA_FLUSH_INTERVAL_SECONDS`를 통해 구성됩니다. 기본값은 **900**(15분)입니다.  
   
- `MAX_STORAGE_SIZE_MB`  
- 쿼리 저장소의 최대 크기를 구성합니다. 쿼리 저장소의 데이터가 MAX_STORAGE_SIZE_MB 제한에 도달하는 경우 쿼리 저장소에서는 자동으로 상태를 읽기/쓰기에서 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다.  기본값은 100Mb입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition의 경우 기본값은 **1GB**이고, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition의 경우 기본값은 **10MB**입니다.
+*MAX_STORAGE_SIZE_MB*  
+쿼리 저장소의 최대 크기를 구성합니다. 쿼리 저장소의 데이터가 `MAX_STORAGE_SIZE_MB` 제한에 도달하는 경우 쿼리 저장소에서는 자동으로 상태를 읽기/쓰기에서 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다.  기본값은 100MB입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition의 경우 기본값은 **1GB**이고, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition의 경우 기본값은 **10MB**입니다.
   
- `INTERVAL_LENGTH_MINUTES`  
- 런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이 고정된 기간은 INTERVAL_LENGTH_MINUTES를 통해 구성됩니다. 기본값은 **60**입니다. 
+*INTERVAL_LENGTH_MINUTES*  
+런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이 고정된 기간은 `INTERVAL_LENGTH_MINUTES`를 통해 구성됩니다. 기본값은 **60**입니다. 
   
- `SIZE_BASED_CLEANUP_MODE`  
- 총 데이터 양이 최대 크기에 가까워졌을 때 정리 프로세스를 자동으로 활성화할지의 여부를 제어합니다. **AUTO**(기본값) 또는 OFF일 수 있습니다.  
+*SIZE_BASED_CLEANUP_MODE*  
+총 데이터 양이 최대 크기에 가까워졌을 때 정리 프로세스를 자동으로 활성화할지의 여부를 제어합니다. **AUTO**(기본값) 또는 OFF일 수 있습니다.  
   
- `QUERY_CAPTURE_MODE`  
- 쿼리 저장소가 모든 쿼리 또는 실행 횟수 및 리소스 소비량에 따른 관련 쿼리를 캡처하거나 새 쿼리 추가 및 현재 쿼리 추적을 중지할지의 여부를 지정합니다. ALL(모든 쿼리 캡처), AUTO(자주 발생하지 않은 쿼리 및 컴파일/실행 기간이 의미 없는 쿼리 무시) 또는 NONE(새 쿼리 캡처 중지)일 수 있습니다. Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 AUTO인 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본값([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)은 **ALL**입니다.
+*QUERY_CAPTURE_MODE*  
+쿼리 저장소가 모든 쿼리 또는 실행 횟수 및 리소스 소비량에 따른 관련 쿼리를 캡처하거나 새 쿼리 추가 및 현재 쿼리 추적을 중지할지의 여부를 지정합니다. **ALL**(모든 쿼리 캡처), AUTO(자주 발생하지 않은 쿼리 및 컴파일/실행 기간이 의미 없는 쿼리 무시) 또는 NONE(새 쿼리 캡처 중지)일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본값([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)은 ALL인 반면 Azure에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 AUTO입니다.
   
- `MAX_PLANS_PER_QUERY`  
- 각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 **200**입니다.  
+*MAX_PLANS_PER_QUERY*  
+각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 **200**입니다.  
  
- `WAIT_STATS_CAPTURE_MODE`  
- 쿼리 저장소에서 대기 통계 정보를 캡처할지 여부를 제어합니다. OFF 또는 **ON**(기본값)일 수 있습니다.  
+*WAIT_STATS_CAPTURE_MODE*  
+쿼리 저장소에서 대기 통계 정보를 캡처할지 여부를 제어합니다. OFF 또는 **ON**(기본값)일 수 있습니다.  
  
- **sys.database_query_store_options** 뷰를 쿼리하여 쿼리 저장소의 현재 옵션을 확인할 수 있습니다. 값에 대한 자세한 내용은 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)를 참조하세요.  
+**sys.database_query_store_options** 뷰를 쿼리하여 쿼리 저장소의 현재 옵션을 확인할 수 있습니다. 값에 대한 자세한 내용은 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)를 참조하세요.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 옵션을 설정하는 방법에 대한 자세한 내용은 [옵션 관리](#OptionMgmt)를 참조하세요.  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 옵션을 설정하는 방법에 대한 자세한 내용은 [옵션 관리](#OptionMgmt)를 참조하세요.  
   
-##  <a name="Related"></a> 관련된 뷰, 함수 및 프로시저  
+## <a name="Related"></a> 관련된 뷰, 함수 및 프로시저  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 을(를) 통해 또는 다음 뷰 및 프로시저를 사용하여 쿼리 저장소를 보고 관리할 수 있습니다.  
 
 ### <a name="query-store-functions"></a>쿼리 저장소 함수  
@@ -311,9 +308,8 @@ DEALLOCATE adhoc_queries_cursor;
   
  위의 예제에서는 필요 없는 데이터를 제거하는 **sp_query_store_remove_query** 확장 저장 프로시저를 사용합니다. 또한, 다음을 사용 가능:  
   
--   **sp_query_store_reset_exec_stats** – 지정된 계획에 대한 런타임 통계를 지웁니다.  
-  
--   **sp_query_store_remove_plan** – 단일 계획을 제거합니다.  
+-   **sp_query_store_reset_exec_stats**는 지정된 계획에 대한 런타임 통계를 지웁니다.  
+-   **sp_query_store_remove_plan**은 단일 계획을 제거합니다.  
  
   
 ###  <a name="Peformance"></a> 성능 감사 및 문제해결  
@@ -554,7 +550,6 @@ ORDER BY additional_duration_workload DESC
 OPTION (MERGE JOIN);  
 ```  
  
-  
 ###  <a name="Stability"></a> 쿼리 성능 안정성 유지 관리  
  여러 번 실행되는 쿼리의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 다른 계획을 사용하여 리소스 사용률 및 기간이 달라짐을 알 수 있습니다. 쿼리 저장소를 사용하면 쿼리 성능이 저하되는 시기를 확인하고 관심 있는 기간 내에 최적의 계획을 결정할 수 있습니다. 그런 다음 향후 쿼리 실행에 해당하는 최적의 계획을 적용할 수 있습니다.  
   
