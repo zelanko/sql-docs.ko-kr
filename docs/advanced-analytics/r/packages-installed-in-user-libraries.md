@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0708a96a8ee4e22f3eec5587f87ac09c8408301a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f58cb0fbc6ca62bbd4fe02e0c29d71569140fde2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>사용자 라이브러리에 설치 된 R 패키지에서 오류를 방지 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 숙련 된 R 사용자가 차단 되거나 사용할 수 없는 기본 라이브러리는 때마다 사용자 라이브러리에서 R 패키지를 설치 하는 데 익숙한 합니다. 그러나이 방법은 SQL Server에서 지원 되지 않습니다 및 "패키지를 찾을 수 없음" 오류 일반적으로 끝나는 사용자 라이브러리를 설치 합니다.
 

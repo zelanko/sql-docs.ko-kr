@@ -1,6 +1,7 @@
 ---
 title: "SQL Server R 자습서 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 08/29/2017
 ms.reviewer: 
 ms.suite: sql
@@ -10,20 +11,23 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
-caps.latest.revision: "1"
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5cd3c997dbcda9df95b62eb1c0c75967c77a3f83
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a2fd60a40950710972c6e9507b3c9545e86840ff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server R 자습서
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 자습서 및 SQL Server 2016 또는 SQL Server 2017 R의 사용을 보여 주는 샘플의 목록을 제공 합니다. 이러한 샘플 및 데모를 통해에 대해 설명 합니다.
 

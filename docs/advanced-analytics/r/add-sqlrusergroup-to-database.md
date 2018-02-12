@@ -14,18 +14,19 @@ keywords:
 - "묵시적된 인증"
 - SQLRUserGroup
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: c1d52c4ee2d9c09aeb8493b68e0aeb6dfe418b52
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8e448e665044b1b8f63d30b7c99adf62419ae283
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>SQLRUserGroup 데이터베이스 사용자로 추가
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 여러 작업자 계정 SQL Server의 컴퓨터 학습 서비스에서 사용 하는 데이터베이스에 연결 하 고 사용자 대신 Python 또는 R 작업을 실행 하는 데 필요한 사용 권한을 부여 하는 방법에 설명 합니다.
 

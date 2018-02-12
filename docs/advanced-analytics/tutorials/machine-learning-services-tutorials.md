@@ -16,18 +16,19 @@ dev_langs:
 - Python
 - R
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 64723e2882fd645be6627eb7781a10324117019a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2d15f47fd148cb7b1f0edf399e94502c3570eabd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 자습서
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에는 자습서, 데모 및 SQL Server 2016 또는 SQL Server 2017 컴퓨터 학습 기능을 사용 하는 예제 응용 프로그램의 한 포괄적인 목록을 제공 합니다. 시작 하려면 SQL 프로덕션 환경에 대 한 R 및 Python 코드를 최적화 하는 방법, 원격 및 로컬 계산 컨텍스트를 사용 하는 방법 및 T-SQL에서 R, Python을 실행 하는 방법을 설명 합니다.
 

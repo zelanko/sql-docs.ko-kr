@@ -14,18 +14,19 @@ dev_langs:
 - R
 - SQL
 ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 1cc68eb62feb999dbce64b6ca29cfc3c40a56a4c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 593e102e75624ae2b36a56e528284bdcf47027e1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>작업에 입 / 출력 (SQL 빠른 시작에서 R)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server에서 R 코드를 실행 하려는 경우 R 스크립트는 시스템 저장 프로시저에서 래핑해야 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)합니다. 이 저장 프로시저는 SQL Server의 컨텍스트에서 R 런타임을 시작하는 데 사용되어 데이터를 R에 전달하고, R 사용자 세션을 안전하게 관리하고, 결과를 클라이언트로 반환합니다.
 

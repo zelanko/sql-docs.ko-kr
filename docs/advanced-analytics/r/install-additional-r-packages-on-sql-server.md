@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2821983b39dcd4c301ea4b49713de0cdd3550a65
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 530745918dfd4808694b401be55e40bac00f3cce
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server에 추가 R 패키지를 설치 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 기계 학습 사용 하도록 설정 하는 SQL Server 인스턴스에 새 R 패키지를 설치 하는 방법을 설명 합니다.
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/09/2018
 + [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 + [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 + 패키지의 Windows 버전 인지 확인: [올바른 패키지 버전 및 형식 가져오기](#packageVersion)
 
@@ -85,15 +86,15 @@ SQL Server 2016 또는 SQL Server 2017의 인스턴스에서 새 패키지를 �
 
     **기본 인스턴스**
 
-    SQL Server 2017:`C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
-    SQL Server 2016의 경우:`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
     **명명된 인스턴스**
 
-    SQL Server 2017:`C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
-    SQL Server 2016의 경우:`C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
     바인딩 기계 학습 구성 요소 업그레이드를 사용 하 여 경로 변경 수 있습니다. 항상 새 패키지를 설치 하기 전에 인스턴스 경로 확인 합니다. 
 
@@ -129,15 +130,15 @@ SQL Server 2016 또는 SQL Server 2017의 인스턴스에서 새 패키지를 �
 
     **기본 인스턴스**
 
-    SQL Server 2017:`C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
-    SQL Server 2016의 경우:`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
     **명명된 인스턴스**
 
-    SQL Server 2017:`C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
-    SQL Server 2016의 경우:`C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
 3. 관리자 권한으로 R 명령 프롬프트를 엽니다.
 

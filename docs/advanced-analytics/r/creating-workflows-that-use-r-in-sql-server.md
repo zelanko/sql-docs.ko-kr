@@ -1,6 +1,7 @@
 ---
 title: "R을 사용 하 여 BI 워크플로 만들기 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 53359b392f1936fa968d22b8ae58c1f3816771d8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>R을 사용 하 여 BI 워크플로 만들기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 관계형 데이터베이스는 데이터 쿼리, 저장소, 트랜잭션 처리에 사용되는 확장 가능한 솔루션을 제공하기 위한 고도로 최적화된 기술입니다.
 
@@ -67,7 +69,7 @@ Transact-SQL 및 저장 프로시저를 통해 [!INCLUDE[rsql_productname](../..
 
 이 블로그 게시물에 사용 하 여 R 코드를 조작 하는 기본적인 기술을 보여 줍니다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: 
 
-+ SQL 실행 태스크를 사용 하 여 데이터를 생성 하 고로 저장 하는 R을 호출[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ SQL 실행 태스크를 사용 하 여 데이터를 생성 하 고로 저장 하는 R을 호출 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 + 저장 프로시저를 사용하여 R 모델을 학습하고 데이터베이스에 저장
 
@@ -79,7 +81,7 @@ R로 차트와 흥미로운 시각화를 만들 수 있지만, 외부 데이터 
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]을 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 통해 R로 복잡한 작업을 실행할 수 있기 때문에, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 Power BI를 비롯한 다양한 엔터프라이즈 보고 도구에서 쉽게 사용할 수 있습니다.
 
-+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++ 사용 하 여 R 스크립트에서 반환 된 그래픽 개체 시각화 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 + Power BI에서 테이블 사용
 
 ### <a name="examples"></a>예

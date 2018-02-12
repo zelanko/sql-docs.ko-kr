@@ -8,21 +8,36 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 895280e7c7c8924ec2ec5eea55049f87d9206c4f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5aecc3796565d4c32d91fe28304bdd04f5793980
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Microsoft ODBC Driver for Linux와 macOS에서 SQL Server에 대 한 릴리스 정보
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>에 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux와 macOS에서
+
+Azure SQL 인스턴스 (확장 비공개 미리 보기)를 관리 합니다. 참고는 여러 가지 차이의 관리 되는 인스턴스를 사용 하는 경우:
+-   FILESTREAM 지원 되지 않습니다. 
+-   로컬 파일 시스템 액세스는 지원 되지만 tracefiles 등의 작업에 필요 하지 
+-   지원 되지 않습니다는 로컬 경로에서 UDT를 만들기 
+-   Windows 통합 인증이 지원 되지 않습니다 
+-   DTC 지원 되지 않습니다 
+-   'sa' 계정 나타나지 않습니다. (기본 계정 라고 'cloudSA')
+-   잘못 된 서버 이름을 반환 하는 TDS 토큰 오류 (0xAA)
+-   데이터베이스 이름에 특수 문자는 지원 되지 않습니다. 
+-   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] 지원 되지 않습니다
+-   오류 메시지는 항상 언어에 관계 없이 영어로 표시 됩니다 (Azure와 같음) 설정 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>에 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 에 대 한 ODBC Driver 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux와 macOS에서  
 

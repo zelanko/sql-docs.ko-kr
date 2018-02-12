@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e384893-04da-43f9-b100-bfe99888f085
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3c3dab54416d680e0d021a2edf9fbe33d5a0d81f
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 35bcae1e29e9b640d2e04b9adc788e382b18b6e8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="enable-or-disable-r-package-management-for-sql-server"></a>SQL Server에 대 한 R 패키지 관리를 사용할지 설정 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 데이터베이스 관리자가 오른쪽 것이 아니라 T-SQL을 사용 하 여 인스턴스에서 패키지 설치를 제어할 수 있도록 설계 되었습니다. SQL Server 2017 년의 새로운 패키지 관리 기능 설명
 
@@ -108,6 +109,6 @@ ms.lasthandoff: 01/09/2018
 
     이 명령은 인스턴스에서 패키지 관리 기능을 제거 합니다. 변경 내용을 확인할 수는 한 번 더 실행 패드 서비스를 수동으로 다시 시작 해야 합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Server에 대한 R 패키지 관리](r-package-management-for-sql-server-r-services.md)

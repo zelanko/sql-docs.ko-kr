@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 001e66b9-6c3f-41b3-81b7-46541e15f9ea
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 130c52d56e45dae5da5f50ef0d5d96ea87c31d3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3e259fcc1332d614cf1e3427f6a927613493bd31
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning"></a>SQL Server 기계 학습에 대 한 업그레이드 및 설치 FAQ
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에서는 SQL Server의 기능을 학습 하는 컴퓨터의 설치에 대 한 몇 가지 일반적인 질문에 대 한 답을 제공 합니다. 또한 업그레이드에 대 한 일반적인 질문을 다룹니다.
 
@@ -100,7 +101,7 @@ SQL Server 2016의 시험판 버전에서 업그레이드 이상 지원 되지 �
 
 다음 버전 시험판 버전의 SQL Server 2016 설치 되었습니다.
 
-| 버전 옵션 | 빌드         |
+| 버전 | 빌드         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |
@@ -185,7 +186,7 @@ SQL Server 2016의 이전 버전의 경우에 따라 같은 시간에 R Server (
 
 일반적으로 권장 R Services (In-database)와 R Server (독립 실행형) 설치 하지 않으면 같은 컴퓨터에 있습니다. 그러나 서버에 충분 한 용량을 가정할 서버 독립 실행형 R 개발 도구로 유용할 수 있습니다 발견할 수 있습니다. 다른 시나리오를 R Server의 화 기능을 사용 하 고 싶을 데이터 이동 없이 SQL Server 데이터에 액세스 해야 하는입니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [SQL Server R Services 시작](../r/getting-started-with-sql-server-r-services.md)
 

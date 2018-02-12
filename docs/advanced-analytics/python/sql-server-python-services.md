@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f777419d1b60dec5034c9b55d79c46842a99a501
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7051781664efd2924dcb187d456197bc9bc88686
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="machine-learning-services-with-python"></a>기계 학습 Python 사용 하 여 서비스
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python은 뛰어난 유연성과 다양 한 기계 학습 작업에 대 한 기능을 제공 하는 언어입니다. Python 용 오픈 소스 라이브러리 사용자 지정 가능한 신경망에 대 한 여러 플랫폼 물론 자연어 처리에 대 한 인기 있는 라이브러리를 포함합니다. 이제 SQL Server 2017 CTP 2.0 이상에서 널리 사용 되는이 언어는 지원 됩니다.
 

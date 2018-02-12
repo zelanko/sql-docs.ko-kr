@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 10760026ef04284f6d0838af8ba81b0c7613645b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="resource-governance-for-python"></a>Python 용 리소스 관리
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python을 통해 설정 되었기 때문에 SQL Server 2016에서는 R 언어에 대 한 구현 된 동일한 확장성 아키텍처 도구 사용할 수 있습니다 기존 리소스 관리자, Dmv, 확장된 이벤트와 같은 SQL Server에서 Python의 실행을 모니터링 하려면 SQL Server의 스크립트입니다.
 

@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 737087692cff4d5b76336b1a31b58e2f9390abfc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 아키텍처 개요 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에서는 SQL Server에서 Python 및 R 스크립트 실행을 지 원하는 확장 프레임 워크의 목표를 설명 합니다.
 
@@ -101,7 +102,7 @@ SQL Server에서 관리 보안 프레임 워크 내에서 신뢰할 수 있는 �
   
   새 시도 [Windows 2016 미리 보기 버전이](http://aka.ms/dsvm/win2016), CNTK mxNet를 제공할 뿐 아니라 Windows 컨테이너에 대 한 지원 같은 인기 있는 심층 학습 프레임 워크의 GPU 버전이 포함 된!
 
-+ [Azure Cognitive 서비스](https://azure.microsoft.com/services/cognitive-services/)
++ [Azure Cognitive Services](https://azure.microsoft.com/services/cognitive-services/)
 
   다양 한 AI 및 ML 자연어 비디오, 얼굴 인식의 인덱싱 등 응용 프로그램에 추가 하기 위한 클라우드 서비스의 emotion 감지, 텍스트 분석 기계 번역 고 더
 + [Azure Machine Learning](https://azure.microsoft.com/services/machine-learning/)

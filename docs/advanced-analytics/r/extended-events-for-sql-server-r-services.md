@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d5e8d61735b5a40f178c76ccb6549150a2e9f0ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 확장된 이벤트
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 문제 해결 관련 된 작업에 사용할 확장된 이벤트를 집합이 제공 된 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], Python 또는 R 작업에 전송 하는 것은 물론 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
 
@@ -184,6 +185,6 @@ SQL Server 컴퓨터 학습 서비스는 SQL Server 프로세스 외부에서 �
 + BXLServer 실행 파일과 같은 디렉터리에 *.config* 파일을 배치합니다.
 + 이 파일 이름을 지정 해야 `bxlserver.xevents.xml`합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [컴퓨터 학습 서비스에 대 한 사용자 지정 관리 Studio 보고서](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c04ae30-d391-4369-9742-d2b275e14c0d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b45c1a9c58ede0342953caae58c3bd6822501c24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8178f4a1347ef58fd7ee143fbe843e3525ac4cf0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-tools-included-with-sql-server-setup"></a>SQL Server 설치 프로그램에 포함 된 R 도구
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 함께 설치 된 동일한 R 도구를 가져오는 R SQL Server를 설치 하면 **기본** 관리자 권한, rterm이, 등의 r을 설치 합니다. 따라서 기술적으로 개발 하 고 R 코드를 테스트 하는 데 필요한 모든 도구.
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 
 이러한 도구를 찾으려면 SQL Server 또는 독립 실행형 기계 학습 기능을 설정할 때 설치 된 R 라이브러리를 확인 합니다. 예를 들어 기본 설치의 경우 R 도구가 이러한 폴더에 있습니다.
 
-+ SQL Server 2016 R Services:`~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
 + Microsoft R Server 독립 실행형:`~\Program Files\Microsoft R\R_SERVER\bin\x64`
 + SQL Server 2017 컴퓨터 학습 서비스:`~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
 + 서버 (독립 실행형)를 학습 하는 컴퓨터:`~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`

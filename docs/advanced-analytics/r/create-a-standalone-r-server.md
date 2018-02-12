@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 408e2503-5c7d-4ec4-9d3d-bba5a8c7661d
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5c27e75bf6248ebb403235e339750cf935ee3a3d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 275bda79d9c8cb74d871a4d13612847dc58592e8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>학습 Server 컴퓨터 (독립 실행형) 또는 R Server (독립 실행형) 설치
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 설치 프로그램에는 기계 학습 SQL Server 외부에서 실행 하는 서버를 설치 하는 옵션이 포함 되어 있습니다. 이 옵션은 원격 계산 컨텍스트를 사용할 수 있는 또는 포함 하 여 여러 플랫폼에 배포할 수 있는 고성능 시스템 학습 솔루션을 개발 하는 경우에 유용할 수 있습니다.
   
@@ -146,14 +147,14 @@ R 서버를 설치할 때 또는 SQL Server 설치 프로그램을 사용 하 �
 
 다음 표에서 각 설치에 대 한 경로 나열합니다.
 
-|버전 옵션| 설치 방법 | 기본 폴더|
+|버전| 설치 방법 | 기본 폴더|
 |----|----|----|
 |R Server (Standalone) |SQL Server 2016 설치 마법사|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R Server (Standalone) |독립 실행형 응용 프로그램|`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |Machine Learning Server(독립 실행형) |  SQL Server 2017 설치 마법사 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
 |Machine Learning Server(독립 실행형) |  독립 실행형 응용 프로그램 |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |R Services(In-Database) |SQL Server 2016 설치 마법사|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Machine Learning Services(데이터베이스 내) |SQL Server 2017 설치 마법사|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES` 또는 `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|Machine Learning Services(데이터베이스 내) |SQL Server 2017 설치 마법사|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`또는`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 
 ### <a name="development-tools"></a>개발 도구
 
@@ -217,6 +218,6 @@ Revolution Analytics 제품의 이전 설치 또는 SQL Server R Services 시험
   
     -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (7.5.0의 경우)
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [Machine Learning Server(독립 실행형)](../../advanced-analytics/r/r-server-standalone.md)

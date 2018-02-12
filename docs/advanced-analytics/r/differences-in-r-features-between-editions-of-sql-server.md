@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b33a3e2-04d3-4bad-9335-9568ae09db0b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 839f9fbb2216a153ce1171f57e4021d9c0a43544
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f4fd73dd213b004916fb99dcb95146221116da8e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="differences-in-machine-learning-features-between-editions-of-sql-server"></a>SQL Server의 버전 간에 시스템 학습 기능 차이점
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  기계 학습에 대 한 지원은 SQL Server 2016 및 SQL Server 2017에서 제공 됩니다. 이 문서 기능을 지 원하는 버전을 나열 하 고, 특정 버전에 적용 되는 추가 제한 사항에 설명, 특정 버전에만 사용할 수 있는 기능을 나열 합니다.
 

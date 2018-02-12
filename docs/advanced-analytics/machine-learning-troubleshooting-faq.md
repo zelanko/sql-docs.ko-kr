@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 640dde0a2faf43c7c5cda39789eaba759959bb99
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>기계 학습 문제 해결
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 SQL Server의 컴퓨터 학습 기능의 설정 및 구성 관련 문제 해결 정보를 제공 합니다. 정보에는 설치 가이드를, 알려진된 문제 및 릴리스 정보 링크가 포함 됩니다. 다른 문서는이 문서에서 SQL Server의 시스템 학습 솔루션에 대 한 성능 최적화에 대 한 조언을 제공에 연결 합니다.
 

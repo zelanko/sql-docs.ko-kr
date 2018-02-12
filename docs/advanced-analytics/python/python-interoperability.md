@@ -14,19 +14,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 71b578fb47a7bd7881f2681206a0f69f5c37facb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>SQL Server와 Python의 상호 운용성
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목의 기능을 사용 하면 설치 된 Python 구성 요소를 설명 **컴퓨터 학습 Services (In-database)** Python를 언어로 선택 합니다.
 
 ## <a name="python-components"></a>Python 구성 요소
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]Python 실행 파일을 수정 하지 않습니다. Python 런타임의 SQL 도구와 독립적으로 설치 되어 있고 외부에서 실행 되는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 프로세스입니다.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Python 실행 파일을 수정 하지 않습니다. Python 런타임의 SQL 도구와 독립적으로 설치 되어 있고 외부에서 실행 되는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 프로세스입니다.
 
 연결 된 특정 배포 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인스턴스는 인스턴스와 연결 된 폴더에서 찾을 수 있습니다.
 

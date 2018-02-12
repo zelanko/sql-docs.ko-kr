@@ -8,20 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8803b1a18ce1a0987c9ebfcbd718345cfc3ef60
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-source-wizard-screen-3"></a>데이터 원본 마법사 화면 3
 
@@ -82,6 +83,10 @@ Ansi_padding이 설정, 후행 공백과 **varchar** 값 및 후행 0 **varbinar
 ### <a name="column-encryption"></a>열 암호화 합니다.
 
 자동 암호 해독 및 암호화로 암호화 된 열에서 데이터 전송의 활성화는 [항상 암호화](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) 기능 이상 SQL Server 2016에서 사용할 수 있습니다.
+
+### <a name="use-fmtonly-metadata-discovery"></a>FMTONLY 메타 데이터 검색을 사용 합니다.
+
+최신 또는 SQL Server 2012에 연결 하는 경우 레거시 SET FMTONLY 메타 데이터 검색 메서드를 사용 합니다. 지원 되지 않는 쿼리를 사용 하는 경우에이 기능을 사용 [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), u 임시 테이블을 포함 합니다. 
 
 ### <a name="next"></a>다음
 

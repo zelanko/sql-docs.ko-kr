@@ -15,13 +15,14 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 781622d51b7112d3a501652b7c320ab27e74ae35
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Azure 기계 학습에 대 한 가상 컴퓨터를 프로 비전
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Azure에서 가상 컴퓨터는 기계 학습 솔루션에 대 한 전체 서버 환경을 신속 하 게 구성 하는 데 편리한 옵션입니다.
 

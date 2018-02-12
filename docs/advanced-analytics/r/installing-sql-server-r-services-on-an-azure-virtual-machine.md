@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0f1e597d4b6ddda30938108badc0bf31b0108bc4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Azure 가상 컴퓨터에서 기능을 학습 하는 SQL Server 컴퓨터 설치
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 포함 된 Azure 가상 컴퓨터를 배포 하는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], 기계 학습의 VM이 만들어지면 인스턴스에 추가할 기능으로 선택할 수 있습니다.
 
@@ -106,7 +107,7 @@ SQL Server VM 제품 목록은이 문서를 참조: [개요 SQL Server의 Azure 
 
 + 명명된 파이프 사용
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]는 클라이언트와 서버 컴퓨터 간의 연결 및 일부 인터넷 연결을 위해 명명된 파이프 프로토콜을 사용합니다. 명명된 파이프를 사용하지 않는 경우 Azure 가상 컴퓨터 및 서버에 연결된 데이터 과학 클라이언트에서 둘 다 명명된 파이프를 설치하고 사용하도록 설정해야 합니다.
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 클라이언트와 서버 컴퓨터 간의 연결에 대 한 및 일부 내부 연결에 명명 된 파이프 프로토콜을 사용합니다. 명명된 파이프를 사용하지 않는 경우 Azure 가상 컴퓨터 및 서버에 연결된 데이터 과학 클라이언트에서 둘 다 명명된 파이프를 설치하고 사용하도록 설정해야 합니다.
   
 + TCP/IP 사용
 

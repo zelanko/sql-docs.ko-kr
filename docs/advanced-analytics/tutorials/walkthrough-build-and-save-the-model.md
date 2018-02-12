@@ -20,13 +20,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e2fc182a273a9b6adee4a59729b023d3113507a8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: aec87866d4bf22b5e1f685ba5fdf41fd259fc6e3
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 작성 하 고 SQL Server에 저장
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 단계에서는 머신 러닝 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 그 모델을 저장하는 방법을 학습합니다.
 

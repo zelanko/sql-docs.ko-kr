@@ -14,18 +14,19 @@ dev_langs:
 - R
 - SQL
 ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: d329bc157af5fd8f9f5fa6445dfaa5452255a719
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b0b0f8bd5502dfd70c690dc64d1881c057a97962
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R 및 SQL 데이터 형식과 데이터 개체 (SQL 빠른 시작에서 R)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 단계에서는 R 및 SQL Server 간에 데이터를 이동할 때 발생 하는 몇 가지 일반적인 문제에 대 한 방법을 배웁니다.
 

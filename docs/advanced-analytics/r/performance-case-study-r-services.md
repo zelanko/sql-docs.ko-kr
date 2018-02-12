@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 65e3ca0b62da2a8412b92485316074a5f52fa080
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R 서비스에 대 한 성능: 결과 및 리소스
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 네 번째 및 R 서비스에 대 한 성능 최적화를 설명 하는 일련의 최종 합니다. 이 문서에는 메서드, 결과, 및 다양 한 최적화 메서드를 테스트 하는 두 개의 사례 연구 결론 요약 되어 있습니다.
 
@@ -97,7 +98,7 @@ metric time pct
 
 첫 번째 테스트 압축 및 데이터의 크기를 줄이려면 열 테이블의 사용을 비교 합니다.
 
-| 테이블 이름            | 행     | 예약됨   | data       | index_size | 사용 안 함  | 단축 비율(%)(예약됨) |
+| 테이블 이름            | 행     | 예약됨   | Data       | index_size | 사용 안 함  | 단축 비율(%)(예약됨) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816KB | 2972160KB | 6128KB    | 528KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784KB  | 623744KB  | 1352KB    | 688KB  | 79%                 |
@@ -114,11 +115,11 @@ metric time pct
 
 | 테이블 이름            | 테스트 이름       | numTasks | 평균 시간 |
 |-----------------------|-----------------|----------|--------------|
-| *airlineWithIndex*    | NoCompression   | 1        | 5.6775       |
+| *airlineWithIndex*    | NoCompression   | 1.        | 5.6775       |
 |                       | NoCompression-병렬| 4        | 5.1775       |
-| *airlineWithPageComp* | PageCompression | 1        | 6.7875       |
+| *airlineWithPageComp* | PageCompression | 1.        | 6.7875       |
 |                       | PageCompression-병렬 | 4        | 5.3225       |
-| *airlineWithRowComp*  | RowCompression  | 1        | 6.1325       |
+| *airlineWithRowComp*  | RowCompression  | 1.        | 6.1325       |
 |                       | RowCompression-병렬  | 4        | 5.2375       |
 
 **결론을 내리기**
@@ -137,14 +138,14 @@ metric time pct
 
 | 테스트 이름 | \#을 실행합니다. | 경과 시간 | 평균 시간 |
 |-----------|--------|--------------|--------------|
-| IntCol    | 1      | 3.57초 |              |
+| IntCol    | 1.      | 3.57초 |              |
 |           | 2      | 3.45초 |              |
 |           | 3      | 3.45초 |              |
 |           | 4      | 3.55초 |              |
 |           | 5      | 3.55초 |              |
 |           | 6      | 3.45초 |              |
 |           |        |              | 3.475        |
-|           | 1      | 3.45초 |              |
+|           | 1.      | 3.45초 |              |
 |           | 2      | 3.53초 |              |
 |           | 3      | 3.63초 |              |
 |           | 4      | 3.49초 |              |
@@ -156,14 +157,14 @@ metric time pct
 
 | 테스트 이름 | \#을 실행합니다. | 경과 시간 | 평균 시간 |
 |-----------|--------|--------------|--------------|
-| IntCol    | 1      | 3.89초 |              |
+| IntCol    | 1.      | 3.89초 |              |
 |           | 2      | 4.15초 |              |
 |           | 3      | 3.77초 |              |
 |           | 4      | 5초    |              |
 |           | 5      | 3.92초 |              |
 |           | 6      | 3.8초  |              |
 |           |        |              | 3.91         |
-|           | 1      | 3.82초 |              |
+|           | 1.      | 3.82초 |              |
 |           | 2      | 3.84초 |              |
 |           | 3      | 3.86초 |              |
 |           | 4      | 4.07초 |              |
@@ -240,9 +241,9 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 | 테스트 이름     | 큐브 매개 변수 | numTasks | 평균 시간 | 단일 행 예측 (ArrDelay_Pred) |
 |---------------|----------------|----------|--------------|---------------------------------|
-| CubeArgEffect | `cube = F`     | 1        | 91.0725      | 9.959204                        |
+| CubeArgEffect | `cube = F`     | 1.        | 91.0725      | 9.959204                        |
 |               |                | 4        | 44.09        | 9.959204                        |
-|               | `cube = T`     | 1        | 21.1125      | 9.959204                        |
+|               | `cube = T`     | 1.        | 21.1125      | 9.959204                        |
 |               |                | 4        | 8.08         | 9.959204                        |
 
 **결론을 내리기**
@@ -255,7 +256,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 | 테스트 이름       | maxDepth | 평균 시간 |
 |-----------------|----------|--------------|
-| TreeDepthEffect | 1        | 10.1975      |
+| TreeDepthEffect | 1.        | 10.1975      |
 |                 | 2        | 13.2575      |
 |                 | 4        | 19.27        |
 |                 | 8        | 45.5775      |
@@ -290,7 +291,7 @@ MicrosoftML와 RevoScaleR 패키지는 큰 데이터 집합과 관련 된 복잡
 
 - 메모리 내 테이블
 - Soft-NUMA
-- 관리
+- 리소스 관리자
 
 R 스크립트 실행에 소프트 NUMA의 영향을 평가 하기 위해 데이터 과학 팀 20 개의 실제 코어를 Azure 가상 컴퓨터에서 솔루션을 테스트 했습니다. 이러한 물리적 코어에서 4 개의 소프트 NUMA 노드 각 노드에 5 개의 코어를 포함 자동으로 생성 되었습니다.
 
@@ -368,7 +369,7 @@ Resume 일치 하는 모델에 대 한 외부 스크립트 사용 하 여 많은
 
 + [SQL Server의 NUMA 지원 방법](https://technet.microsoft.com/library/ms180954.aspx)
 
-+ [소프트 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
 ### <a name="learn-about-sql-server-optimizations"></a>SQL Server 최적화에 대 한 자세한 내용은
 
