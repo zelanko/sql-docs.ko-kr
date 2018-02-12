@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3fce545d18876014e577b1f4e67800d4940881f3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a8a37b57e5704136280360258223927c7d960eea
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="realtime-scoring"></a>실시간 점수 매기기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2016과 거의 실시간에 기계 학습 모델에서 점수 매기기를 지 원하는 SQL Server 2017에서 제공 되는 기능에 설명 합니다.
 

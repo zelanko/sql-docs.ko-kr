@@ -1,6 +1,7 @@
 ---
 title: "데이터 탐색 및 R을 통한 예측 모델링 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f700b865e2ee353872e8e0e67adf9e7c78060570
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d7c5430e585d7324e94ebe64e5138246e26049c4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>데이터 탐색 및 R을 통한 예측 모델링
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server와의 통합을 통해 사용할 수 있는 데이터 과학 프로세스에 향상 된 기능에 설명 합니다.
 

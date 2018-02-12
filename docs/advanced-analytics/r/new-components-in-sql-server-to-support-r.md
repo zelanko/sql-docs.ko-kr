@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5efdde73d0b2f880d62927b9b96b3eee7fadfe5f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>R 지원 하도록 SQL Server의 구성 요소
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2016 및 2017에서 데이터베이스 엔진 확장성을 지 원하는 R 및 Python 등의 외부 스크립트 언어에 대 한 선택적 구성 요소를 포함 합니다. SQL Server 2016;에서 R 언어에 대 한 지원이 추가 되었습니다. SQL Server 2017 컴퓨터 학습 서비스에서 추가 된 Python을 지원 합니다.
 
@@ -111,7 +112,7 @@ SQL Satellite는 확장 이벤트를 사용하여 모니터링할 수 있습니�
 4. BxlServer는 R 런타임과 함께 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]과 데이터 교환 및 작업 결과 저장소를 관리합니다.
 5. SQL 위성 관련된 작업에 대 한 통신을 관리 하 고와 처리 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]합니다.
 6. BxlServer는 SQL Satellite를 사용하여 상태 및 결과를 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]로 전달합니다.
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 결과를 얻고 관련 작업과 프로세스를 닫습니다.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 결과 가져오고 관련된 작업 및 프로세스를 닫습니다.
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>원격 클라이언트에서 실행되는 R 스크립트
 
@@ -127,7 +128,7 @@ SQL Satellite는 확장 이벤트를 사용하여 모니터링할 수 있습니�
 6. RLauncher가 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 컴퓨터에 설치된 R 런타임의 인스턴스를 호출합니다.
 7. 결과가 BxlServer로 반환됩니다.
 8. SQL Satellite가 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]와의 통신 및 관련 작업 개체의 정리를 관리합니다.
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]가 클라이언트에 결과를 다시 전달합니다.
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 클라이언트에 결과 전달합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

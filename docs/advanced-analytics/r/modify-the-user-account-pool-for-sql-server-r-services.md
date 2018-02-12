@@ -10,24 +10,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2e31ecde894070c9b7b38dbe5e2c9e310ad71c5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>SQL Server 기계 학습에 대 한 사용자 계정 풀 수정
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]에 대한 설치 프로세스의 일부로 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 서비스를 통해 태스크 실행을 지원하기 위해 새 Windows *사용자 계정 풀*이 생성됩니다. 이러한 작업자 계정의 목적은 다른 SQL 사용자가 외부 스크립트의 동시 실행을 격리 하는 것입니다.
 
 이 문서에서는 기본 구성, 보안 및 작업자 계정과 기본 구성을 변경 하는 방법에 대 한 용량을 설명 합니다.
 
-**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-accounts-used-for-external-script-execution"></a>외부 스크립트 실행에 사용 되는 작업자 계정
 

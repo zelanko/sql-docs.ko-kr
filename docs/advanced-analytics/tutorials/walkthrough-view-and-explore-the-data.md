@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 49b3174910ca8b5ce1b590f1205bc3d134b76f4b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 97d1e0b468222162644e98f5813d4e4d97fd5add
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>보기 및 SQL (연습)를 사용 하 여 데이터를 탐색 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 데이터 탐색은 데이터 모델링의 중요한 부분이며 분석에 사용할 데이터 개체의 요약 및 데이터 시각화 검토를 포함합니다. 이 단원에서는 데이터 개체를 탐색 하 고이 모두 사용 하 여 플롯을 생성할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 R 함수에 포함 된 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]합니다.
 

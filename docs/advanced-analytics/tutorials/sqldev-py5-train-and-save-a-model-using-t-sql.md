@@ -10,22 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 07777ff0752a68e574c5f7f1a0021a8817eb7ea0
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a2f0ffafb466030802b87dc96f905e9c875dd548
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>5 단계: 학습 및 T-SQL을 사용 하 여 Python 모델 저장
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 자습서의 일부는 [SQL 개발자를 위해 데이터베이스에서 Python 분석](sqldev-in-database-python-for-sql-developers.md)합니다. 
 

@@ -10,20 +10,22 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c86b39e8c6c9aad23c9059482f1e33ec7ba3621b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ad0cf99c59bcd3295acf0e1c29b14c8523f6f925
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>저장 프로시저를 사용 하 여 sqlrutils 만들기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에서는 R 코드를 변환하여 T-SQL 저장 프로시저로 실행하는 단계에 대해 설명합니다. 최상의 결과를 얻으려면 모든 입력을 매개 변수화할 수 있도록 코드를 약간 수정해야 할 수 있습니다.
 

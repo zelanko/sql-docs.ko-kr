@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b0024885ee71a5df0d36c29d2759b1d0ea3bcdc6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9ee0460e1e6a14e1d40c4e4f4bb3cf084c7d5b85
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="security-for-sql-server-machine-learning-and-r"></a>SQL Server 기계 학습 및 R에 대 한 보안
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에 연결 하는 데 사용 되는 전반적인 보안 아키텍처에 설명 된 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 데이터베이스 엔진 및 R 런타임에 관련된 구성 요소입니다. 엔터프라이즈 환경에서 R을 사용 하는 이러한 일반적인 시나리오에 대 한 보안 프로세스의 예로 제공 됩니다.
 

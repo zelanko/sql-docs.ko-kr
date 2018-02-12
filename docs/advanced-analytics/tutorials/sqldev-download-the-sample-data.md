@@ -10,23 +10,25 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 32a5d5ad-c58a-4669-a90d-ef296b48fcd8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b5a284de9bd18ffa8dee640476ae51091b3e738a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: aa58a4f64717b7ccf2be335a58ae4838b283dd44
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="lesson-1-download-the-sample-data"></a>1 단원: 예제 데이터 다운로드
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
 

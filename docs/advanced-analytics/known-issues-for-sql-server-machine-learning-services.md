@@ -16,13 +16,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2c3bd4ada6d234015ef1ab4d8b474f7ab45c4b85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2143b576e3104ba2cf707e8fada75471a007a987
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>컴퓨터 학습 서비스의 알려진된 문제
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 기계 학습에서 SQL Server 2016 및 SQL Server 2017 옵션으로 제공 되는 구성 요소와 알려진된 문제 또는 제한을 설명 합니다.
 

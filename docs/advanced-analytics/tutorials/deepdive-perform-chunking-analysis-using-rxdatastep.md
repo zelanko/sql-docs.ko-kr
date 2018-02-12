@@ -13,20 +13,22 @@ ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 4290ee5f-be90-446a-91e8-3095d694bd82
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d80562b286c5e1051892a1b5d222e47483822e57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b5ba8c59ca5dfb84a7c062a8c09b40e0528fb5d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-and-r-deep-dive"></a>RxDataStep (SQL과 R 심층 분석)를 사용 하 여 청크 분석 수행
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 데이터 과학 심층 분석 자습서를 사용 하는 방법에 대 한 일부 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server와 함께 합니다.
 
@@ -100,9 +102,9 @@ ms.lasthandoff: 01/08/2018
 
 **일부 결과**
 
-|      |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
+|      |    1.  |   2   |  3   |  4   |  5  |   6   |  7 |
 | --- | ---  | --- | ---  |  ---  | ---  | ---  | --- |
-| 1 | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
+| 1. | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
 | 2  | 8321  | 5351 | 7329 | 7411 | 7409 | 6487 | 7692 |
 
 9. 모든 청크의 최종 결과를 계산하려면 열의 합계를 구한 다음 결과를 콘솔에 표시합니다.
@@ -113,7 +115,7 @@ ms.lasthandoff: 01/08/2018
     ```
 
  **결과**
-  1  |   2  |   3  |   4  |   5  |   6  |   7
+  1.  |   2  |   3  |   4  |   5  |   6  |   7
 ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
 97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 

@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 1a38808a619a658bed6cef12d20b52e1f98ad429
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c4e77abfb68c30a1eac32b514c3987774bd5759d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server의 R에 대 한 성능 조정
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 두 개의 사례에 따라 R 서비스에 대 한 성능 최적화를 설명 하는 4 문서 시리즈의 첫 번째:
 

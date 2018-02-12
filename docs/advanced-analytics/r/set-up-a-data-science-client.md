@@ -11,17 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 58a86d2268e318470d1d05799e9146e877966263
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>SQL Server와 함께 사용 하기 위해 데이터 과학 클라이언트 설정
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 인스턴스를 구성 하 고 나면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기계 학습을 지원 하려면 원격 실행 및 배포에 대 한 서버에 연결할 수 있는 개발 환경을 설정 해야 합니다.
 

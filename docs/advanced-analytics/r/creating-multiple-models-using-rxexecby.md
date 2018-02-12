@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 55d194bf888defeebba64eeb4bb87ac04363cefb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 685833317453c1ed5765385a73ff892a85989c2c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>RxExecBy를 사용 하 여 여러 모델 만들기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 새 함수를 포함 하는 SQL Server 2017 CTP 2.0 **rxExecBy**를 지 원하는 여러 관련된 모델의 병렬 처리 합니다. 매우 큰 모델 데이터를에서 기반으로 여러 비슷한 엔터티 하나는 기차를 하는 대신 데이터 과학자 매우 빠르게 만들 수 여러 관련된 모델 엔터티 하나에 고유한 데이터를 사용 하 여 각 합니다.
 

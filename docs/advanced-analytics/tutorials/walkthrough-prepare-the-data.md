@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 743d7159bd8937fe90be4016ad361d13b7a15c36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell (연습)를 사용 하 여 데이터를 준비 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 시점에서는 있어야 다음을 설치 중 하나:
 
@@ -139,7 +142,7 @@ R 워크스테이션 및 서버에서 몇 가지 추가 R 패키지를 설치 �
   
 3.  다음 매개 변수 마다 라는 메시지가 표시 됩니다.
   
-    **데이터베이스 서버 이름**: 기계 학습 서비스 또는 R 서비스를 설치한 SQL Server 인스턴스의 이름입니다.
+    **데이터베이스 서버 이름**: Machine Learning Services 또는 R Services가 설치된 SQL Server 인스턴스의 이름입니다.
 
     네트워크 요구 사항에 따라 하나 이상의 서브넷 이름을 사용하여 인스턴스 이름을 한정해야 할 수도 있습니다.  예를 들어 MYSERVER가 작동하지 않는 경우 myserver.subnet.mycompany.com을 사용해 보세요.
     

@@ -10,20 +10,22 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3ac889212aaccb25d0c738195e2e2e04c3c1a5d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>OlapR를 사용 하 여 MDX 쿼리를 만드는 방법
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) 패키지 SQL Server Analysis Services에서 호스트 되는 큐브에 대해 MDX 쿼리를 지원 합니다. 기존 큐브에 대 한 쿼리를 작성 하 고, 차원 및 기타 큐브 개체를 탐색 하 고, 데이터를 검색 하는 기존 MDX 쿼리에 붙여 넣는 수 있습니다.
 
@@ -207,6 +209,6 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |-> Assembly Components|
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [OLAP 큐브에서 데이터를 사용 하 여 R에서](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)

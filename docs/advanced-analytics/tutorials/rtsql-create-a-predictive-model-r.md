@@ -14,18 +14,19 @@ dev_langs:
 - R
 - SQL
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: ca19904893d328c7eaadc95b7762904df3f5d9eb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1b40295452da5b7da34a31e6825630da9c6c4861
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>예측 모델 (SQL 빠른 시작에서 R) 만들기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 단계에서는 R을 사용하여 모델을 학습한 다음 SQL Server의 테이블에 모델을 저장하는 방법을 알아봅니다. 모델은 속도에 따라 자동차의 정지 거리를 예측하는 간단한 회귀 모델입니다. 사용 하 여는 `cars` 작고 쉽게 이해할 수 있기 때문에 R을에 포함 된 데이터 집합입니다.
 

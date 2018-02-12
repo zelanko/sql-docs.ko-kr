@@ -10,19 +10,21 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: e10435c2a0cdc5ed181aeab9bdd0bbfefa9a7f25
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ef4b9cb14b9cf4428307596a4775574ace084501
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 함수를 사용 하 여 찾거나 SQL Server에서 R 패키지를 설치 하는 방법
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft R Server 릴리스 9.0.1 작업에 사용할 SQL Server 계산 컨텍스트에서의 패키지를 설치 하는 새로운 RevoScaleR 함수를 도입 합니다. 이러한 새 함수는 데이터 과학자가 서버에 대 한 직접 액세스 하지 않고 SQL Server에서 R 코드 실행을 쉽게 있습니다.
 

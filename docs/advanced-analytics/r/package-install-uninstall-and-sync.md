@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4b2f5a3e4f4ad8cc2ea2ba1d2d0dcdcf23d03e52
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: efb0477481e47af1ace78b938a64e72bace6d81f
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server에 대 한 R 패키지 동기화
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017에 포함 하는 RevoScaleR의 버전에는 파일 시스템 및 인스턴스와 데이터베이스 간의 패키지를 사용 하는 R 패키지의 컬렉션을 동기화 하는 기능이 포함 됩니다.
 

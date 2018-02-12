@@ -9,21 +9,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 1c84c0c8373f90d2fde8ca94ccf81814481f8f4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2a1572cf1bc6f8e3f6aff99255e5805bf977978d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>그래프 및 플롯 SQL과 R (연습)를 사용 하 여 만들기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 연습 부분에서는 점도 SQL Server 데이터를 R을 사용 하 여 맵을 생성 하는 기술을 배웁니다. 일부 연습 하는 간단한 히스토그램을 만들고 보다 복잡 한 맵을 플롯을 개발 합니다.
 

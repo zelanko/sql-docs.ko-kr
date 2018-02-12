@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ec10bd25b3709a578ea5dee6c109da69ff7d3327
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Python 컴퓨터 학습 services (In-database) 무인된 설치
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에서는 컴퓨터 학습 서비스 및 자동 모드를 사용 하 여 Python을 사용 하 여 SQL Server 데이터베이스 엔진을 설치 하려면 SQL Server 2017 설치 프로그램에서 명령줄 인수를 사용 하는 방법에 설명 합니다.
 

@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 76b0c3cd2b472b0d4794a171510906cf05e34d5c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5d9f60684cc749c35674233fbdaaa222953396d9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 컴퓨터를 설치 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에는 어떻게 인스턴스에 SQL Server의 미리 학습 된 모델을 추가할 이미 R 서비스 또는 컴퓨터 학습 서비스 설치 설명 합니다.
 
@@ -41,9 +42,9 @@ SQL Server 데이터를 미리 학습 된 모델을 사용 하는 방법의 예�
 
 각 네트워크의 구성 된 다음 참조 구현이 기반으로 합니다.
 
-+ ResNet 18
-+ ResNet 50
-+ ResNet 101
++ ResNet-18
++ ResNet-50
++ ResNet-101
 + AlexNet
 
 이러한 모델에 대 한 자세한 내용은 참조 [미리 학습 된 기계 학습 감성 분석 및 이미지 검색에 대 한 모델](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)

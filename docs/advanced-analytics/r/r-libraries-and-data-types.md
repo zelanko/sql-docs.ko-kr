@@ -1,6 +1,7 @@
 ---
 title: "R 데이터 형식 사용 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 01/31/2017
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 14bfba68925f357c39fc192ae7852055a7e91f4f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 977d358981e3382a0ea8ee224362098627424e88
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 라이브러리 및 R 데이터 형식
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에 포함 된 R 라이브러리와는 다음과 같은 제품에서 지원 되는 데이터 형식을 설명 합니다.
 

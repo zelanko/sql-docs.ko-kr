@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52ad3f10-6d24-477a-aeb6-110456b2ed1c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a39a9061df724175d72e4b38c883fdf2495234ad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 27a80fa7dddf5066e87a60998a691c07acfb40ab
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>가상 사용자 및 컴퓨터 학습 수명 주기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 기술 및 전문가의 서로 다른 집합의 공동 작업을 필요 하기 때문에 컴퓨터 학습 프로젝트 복잡할 수 있습니다. 이 문서에서는 기계 학습 및 SQL Server 요구를 지원 하는 방법에 관련 된 데이터 전문가 유형의 시스템 학습 주기에서 주 작업 설명입니다.
 

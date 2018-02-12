@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 141d0e3114a59a9b280ceee6d599f97ef16919c7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 565041e140178055b4839985c10ba4633b5f0334
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Management Studio에서 사용자 지정 보고서를 사용 하 여 컴퓨터 학습 서비스 모니터링
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 쉽게 기계 학습에 사용 되는 인스턴스 관리 제품 팀은 다양 한 SQL Server Management Studio에 추가할 수 있는 샘플 사용자 지정 보고서를 제공 했습니다. 이러한 보고서에서와 같은 세부 정보를 볼 수 있습니다.
 

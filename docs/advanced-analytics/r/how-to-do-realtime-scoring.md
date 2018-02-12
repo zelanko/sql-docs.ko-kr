@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 500c942f3583990e7b5d2b6cdf30f30d6729891f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>실시간 점수 매기기 또는 SQL Server의 기본 점수 매기기를 수행 하는 방법
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에서는 실시간 점수 매기기를 실행 하는 방법 및 SQL Server 2017 및 SQL Server 2016에서 네이티브 점수 매기기 기능에 대 한 지침 및 샘플 코드를 제공 합니다. 작은 규모로 일괄 처리 점수 매기기 작업의 성능을 개선 하기 위해 실시간 점수 매기기와 기본 점수 매기기의 목표가입니다.
 
@@ -218,7 +219,7 @@ Sp에서 요구 하는 이진 형식\_rxPredict PREDICT 함수를 사용 하는 
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### <a name="step-3-call-sprxpredict"></a>3단계. Sp_rxPredict 호출
+### <a name="step-3-call-sprxpredict"></a>3단계. Call sp_rxPredict
 
 Sp 호출\_rxPredict와는 다른 저장 프로시저입니다. 현재 릴리스에서 저장된 프로시저는 두 개의 매개 변수를 사용:  _@model_  이진 형식으로 모델에 대 한 및  _@inputData_  상태 평가에 사용 하는 데이터에 대 한 유효한 SQL 쿼리로 정의 .
 

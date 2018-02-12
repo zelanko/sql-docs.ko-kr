@@ -11,20 +11,22 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: "132"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7bbf9d5101ea0e613d0a8843f9c3a3cd91b250b1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>SQL Server MicrosoftML 패키지 사용
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) Microsoft R Server 및 SQL Server 2017와 함께 제공 되는 패키지에 여러 기계 학습 알고리즘을 포함 합니다. 이러한 Api 응용 프로그램을 학습 하는 내부 컴퓨터에 대 한 Microsoft에서 개발 된 및 했을 구체화 고성능 빅 데이터를 지원 하기 위해 수 년에 걸쳐 멀티 코어 처리 및 빠른 데이터 스트리밍를 사용 하 여 합니다. MicrosoftML에는 텍스트 및 이미지 처리를 위한 다양 한 변환이 포함 됩니다.
 

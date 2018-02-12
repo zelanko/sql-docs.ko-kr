@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 99f42ddd8d906799c02b05d856597db7c44a8eb6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 37362b8a3f6d8b41fe6b52f8445b9ba08ca54aa3
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning 서비스
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 컴퓨터 학습 서비스 (이전에 SQL Server 2016 R Services)는 개발 및 새로운 발견 하는 지능형 응용 프로그램을 배포 하기 위한 플랫폼을 제공 합니다. 기계 학습 통합 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 분석 데이터에 가까이 유지 하 고 비용 및 데이터 이동과 관련 된 보안 위험을 제거할 수 있습니다.
   

@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 519422bad57d384466b2ff705b331a0731506caf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Python 통합을 지원 하도록 SQL Server의 구성 요소
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 년 부터는 컴퓨터 학습 서비스 T-SQL에서 실행할 수 또는 원격으로 SQL Server를 사용 하 여 계산 컨텍스트로 써 실행 하는 외부 언어도 Python을 지원 합니다.
 
@@ -116,7 +117,7 @@ Python "내부"를 실행 하는 경우 [!INCLUDE[ssNoVersion_md](../../includes
 
 스크립트 저장된 프로시저에 포함 되었으면, 후 저장된 프로시저 호출을 만들 수 있는 모든 응용 프로그램 Python 코드의 실행을 시작할 수 있습니다.  그 후 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 다음 다이어그램에 요약 된 것 처럼 코드 실행을 관리 합니다.
 
-![스크립트에서 db python](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. Python 런타임의 대 한 요청은 매개 변수가 가리키는 `@language='Python'` 저장된 프로시저에 전달 합니다. SQL Server 실행 패드 서비스에이 요청을 보냅니다.
 2. 실행 패드 서비스 시작 적절 한 실행 프로그램입니다. 이 경우 PythonLauncher입니다.
@@ -124,7 +125,7 @@ Python "내부"를 실행 하는 경우 [!INCLUDE[ssNoVersion_md](../../includes
 4. BxlServer 데이터 교환 및 작업 결과의 저장소를 관리 하는 Python 런타임의 협력 합니다.
 5. SQL 위성 관련된 작업에 대 한 통신을 관리 하 고와 처리 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]합니다.
 6. BxlServer는 SQL Satellite를 사용하여 상태 및 결과를 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]로 전달합니다.
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 결과를 얻고 관련 작업과 프로세스를 닫습니다.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 결과 가져오고 관련된 작업 및 프로세스를 닫습니다.
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>원격 클라이언트에서 실행 하는 Python 스크립트
 
@@ -135,7 +136,7 @@ Python "내부"를 실행 하는 경우 [!INCLUDE[ssNoVersion_md](../../includes
 
 다음 다이어그램은 원격 컴퓨터에서 스크립트를 보낼 경우 전체 워크플로 요약 합니다.
 
-![python에서 원격 sqlcc](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. 지원 되는 함수에 대 한 **revoscalepy**는 Python 런타임의 BxlServer를 호출 하는 연결 함수를 호출 합니다.
 2. BxlServer는 컴퓨터 학습 services (In-database) 포함 되어 있으며는 Python 런타임의에서 별도 프로세스로 실행 됩니다.
@@ -145,7 +146,7 @@ Python "내부"를 실행 하는 경우 [!INCLUDE[ssNoVersion_md](../../includes
 6. PythonLauncher Python에 설치 된 인스턴스에 대 한 호출에서 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 컴퓨터입니다.
 7. 결과가 BxlServer로 반환됩니다.
 8. SQL Satellite가 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]와의 통신 및 관련 작업 개체의 정리를 관리합니다.
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]가 클라이언트에 결과를 다시 전달합니다.
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 클라이언트에 결과 전달합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

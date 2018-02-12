@@ -16,18 +16,19 @@ keywords:
 - "R 서비스 설정"
 - "SQL 기계 학습 설치"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 04f2502853e21968f2edaac927247eb45730d000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>SQL Server 컴퓨터 학습 Services (In-database) 설치
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에는 설치 하 고 SQL Server의 데이터베이스에서 분석을 지 원하는 기능을 학습 한 다음 컴퓨터를 구성 하는 방법을 설명 합니다.
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
 
 + 사용 하 여 컴퓨터 학습 서버 **없는** SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설정에는 컴퓨터의 구성 요소를 학습 데이터베이스 엔진에 필요 하지 않으며 SQL Server에서는 실행 되지 않습니다 "독립 실행형" 버전을 설치 하는 옵션이 포함 됩니다.  일반적으로 SQL Server를 호스트 하는 컴퓨터와 다른 컴퓨터에이 옵션을 설치 하는 것이 좋습니다.
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정에는 컴퓨터의 구성 요소를 학습 데이터베이스 엔진에 필요 하지 않으며 SQL Server에서는 실행 되지 않습니다 "독립 실행형" 버전을 설치 하는 옵션이 포함 됩니다.  일반적으로 SQL Server를 호스트 하는 컴퓨터와 다른 컴퓨터에이 옵션을 설치 하는 것이 좋습니다.
     
     [기계 학습 독립 실행형 서버를 설정](create-a-standalone-r-server.md)합니다.
 
@@ -231,7 +232,7 @@ ms.lasthandoff: 01/08/2018
 
     | hello |
     |----|
-    | 1|
+    | 1.|
 
 
 8. 오류가 발생 하는 경우 설치가 완료 된 후 확인 또는 문제 해결 가이드를 참조 해야 할 수 있는 선택적, 기타 변경 내용을 설명 하는 섹션으로 진행 합니다.

@@ -12,18 +12,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs: 
 ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e8aa8d51c54fb98b3851676ddedd367f476dd1fa
-ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
+ms.openlocfilehash: 256a8a58a61f679cd5b2981134403cc389733e75
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>OLAP 큐브에서 데이터를 사용 하 여 R에서
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **olapR** 패키지에 R 패키지가 제공 됩니다 컴퓨터 학습 서버와 SQL Server와 함께 사용할 microsoft에서 OLAP 큐브에서 데이터를 가져오려면 MDX 쿼리를 실행할 수 있습니다. 이 패키지와 연결 된 서버를 만들거나 평면화 된 행 집합; 정리 필요 하지 않습니다. 오른쪽에서 직접 OLAP 데이터를 가져올 수 있습니다.
 

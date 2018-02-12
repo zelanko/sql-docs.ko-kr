@@ -12,20 +12,22 @@ ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: c2efb3f2-cad5-4188-b889-15d68b742ef5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a8fe18a578391beaae79259440779b0a76336ee2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 003434a055ab73afb288ea5801130ce1c06aa9c5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>데이터 과학 심층 분석: RevoScaleR 패키지를 사용 하 여 SQL Server와 함께
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 자습서에 제공 된 향상 된 R 패키지를 사용 하는 방법을 보여 줍니다 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 고성능 빅 데이터 분석에 대 한 계산 컨텍스트는 서버를 사용 하 여 확장 가능한 R 솔루션을 만들고 SQL Server 데이터로 작업할 수 있습니다.
 
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/08/2018
 > [!TIP]
 > 중단한 위치부터 다시 시작하기 쉽도록 다음 단원으로 넘어가기 전에 R 작업 영역을 저장하세요.
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 - **R에 대 한 지원과 함께 SQL Server**
   

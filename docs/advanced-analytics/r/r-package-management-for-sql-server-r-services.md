@@ -18,13 +18,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: cebafeabd73260f166244e963754a2bd740bfe0f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: f40bc2a4f17914423eeea944a45c79ae3d259a76
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-package-management-for-sql-server"></a>SQL Server에 대 한 R 패키지 관리
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 SQL Server 2016 및 SQL Server 2017에서 R 패키지의 관리에 대 한 기능을 설명 합니다.
 

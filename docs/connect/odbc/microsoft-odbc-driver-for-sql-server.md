@@ -8,20 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3081be03ffb4b8291a9d27c5eb2049f38d0ae4fc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 44d62e94b53d1599a0fcfb3f5815719bdbc2986d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -43,13 +44,21 @@ ODBC를 사용 하 여 c + + 프로그램의 소스 코드를 포함 하는 작�
 
 ## <a name="documentation"></a>설명서  
 
+### <a name="features"></a>기능
+
+- [사용자 지정 키 저장소 공급자](../../connect/odbc/custom-keystore-providers.md)
+- [DSN 및 연결 문자열 키워드 및 특성](dsn-connection-string-attribute.md)
+- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (사용할 수 있는 기능 적용 됨, OLEDB, ODBC Driver for SQL Server에 없이)
+- [사용 하 여 항상 암호화](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Azure Active Directory를 사용 하 여](../../connect/odbc/using-azure-active-directory.md)
+- [투명 네트워크 IP 확인을 사용 하 여](../../connect/odbc/using-transparent-network-ip-resolution.md)
+
 ### <a name="linux-and-macos"></a>Linux와 macOS
 
 - [드라이버 설치](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [SQL Server에 연결](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [사용 하 여 연결 **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [사용 하 여 연결 **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
-- [통합된 인증 (Kerberos)을 사용 하 여](../../connect/odbc/linux-mac/using-integrated-authentication.md)
-- [연결 문자열 키워드 및 데이터 원본 이름](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [데이터 액세스 추적](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
 - [질문과 대답](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 - [드라이버 관리자 설치](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
@@ -57,8 +66,9 @@ ODBC를 사용 하 여 c + + 프로그램의 소스 코드를 포함 하는 작�
 - [프로그래밍 지침](../../connect/odbc/linux-mac/programming-guidelines.md)
 - [릴리스 정보](../../connect/odbc/linux-mac/release-notes.md)
 - [고가용성 및 재해 복구에 대 한 지원](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
+- [통합된 인증 (Kerberos)을 사용 하 여](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 
-### <a name="windows"></a>Windows
+### <a name="windows"></a>창
 
 - [비동기 실행(알림 메서드) 샘플](../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)
 - [Windows ODBC 드라이버의 연결 복원](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
@@ -67,13 +77,7 @@ ODBC를 사용 하 여 c + + 프로그램의 소스 코드를 포함 하는 작�
 - [릴리스 정보](../../connect/odbc/windows/release-notes.md)
 - [시스템 요구 사항, 설치 및 드라이버 파일](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
-### <a name="features"></a>기능
 
-- [사용자 지정 키 저장소 공급자](../../connect/odbc/custom-keystore-providers.md)
-- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (사용할 수 있는 기능 적용 됨, OLEDB, ODBC Driver for SQL Server에 없이)
-- [사용 하 여 항상 암호화](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
-- [Azure Active Directory를 사용 하 여](../../connect/odbc/using-azure-active-directory.md)
-- [투명 네트워크 IP 확인을 사용 하 여](../../connect/odbc/using-transparent-network-ip-resolution.md)
 
 ## <a name="community"></a>커뮤니티  
 - [Microsoft ODBC Driver for SQL Server 팀 블로그](http://blogs.msdn.com/sqlnativeclient/default.aspx)  

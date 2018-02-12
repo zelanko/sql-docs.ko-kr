@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 422b1e72c38493b2092a8682ade5077069af24f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c4fc8ef42cf38e908aca8dbbfeacbfd5fdf0ece4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="security-overview-for-python-in-sql-server"></a>SQL Server에서 Python에 대 한 보안 개요
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에 연결 하는 데 사용 되는 보안 아키텍처에 설명 된 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 데이터베이스 엔진 및 Python 구성 요소입니다. 보안 프로세스의 예는 두 가지 일반적인 시나리오에 대해 제공 됩니다: SQL Server 저장된 프로시저를 사용 하 고 원격 연산 컨텍스트로 SQL Server와 Python 실행에서 Python을 실행 합니다.
 

@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abc79124569635f3aafaaa309e25e2c827fa5d9b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Python 컴퓨터 학습 Services (In-database) 설치
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   이 문서에서는 실행 하 여 Python에 필요한 구성 요소를 설치 하는 방법을 설명는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사 및 대화형 프롬프트를 수행 합니다.
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 01/08/2018
 
 설치가 완료 된 후에 외부 실행 파일을 사용 하는 스크립트의 실행을 허용 하도록 인스턴스를 다시 구성 합니다. 컴퓨터 학습 작업을 지원 하려면 서버에 대 한 추가 변경을 해야 할 수 있습니다. 구성 변경에는 일반적으로 인스턴스를 다시 시작 또는 실행 패드 서비스를 다시 시작 해야합니다.
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 + SQL Server 2017가 필요 합니다. Python 통합 이전 버전의 SQL Server에서 지원 되지 않습니다.
 + 데이터베이스 엔진을 설치 해야 합니다. SQL Server 인스턴스의 데이터베이스에서 Python 스크립트를 실행 하려면 필요 합니다.
@@ -273,7 +274,7 @@ SQL Server Enterprise Edition의 경우 Python에 대 한 외부 리소스 풀�
   
      [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
   
--   에 의해 시작 될 수 있는 작업자 계정의 수를 변경 합니다.[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
+-   에 의해 시작 될 수 있는 작업자 계정의 수를 변경 합니다. [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
   
      [SQL Server R Services에 대 한 사용자 계정 풀 수정](../r/modify-the-user-account-pool-for-sql-server-r-services.md)
 

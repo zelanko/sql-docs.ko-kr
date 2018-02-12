@@ -10,23 +10,25 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e1bb6f2e586bb2a4b8b2a92c8099dc33603e8475
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0062a75b92fc633e61b0aa73ae2c955ccd60cec5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>SQL 개발자 (자습서)에 대 한 데이터베이스에서 R 분석
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 자습서의 목표는 기계 학습에서 SQL Server 솔루션을 구축 하는 실습 환경과 SQL 프로그래머를 제공 하는 것입니다. 이 자습서에서는 저장된 프로시저에 R 코드를 래핑하여 R 응용 프로그램 또는 BI 솔루션에 통합 하는 방법을 설명 합니다.
 

@@ -10,22 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 6d7e49a6074e342f51595e9b1cdb10227761f670
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 개발자를 위해 데이터베이스에서 Python 분석
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 연습의 목표 기계 학습에서 SQL Server를 실행 하는 Python을 사용 하 여 솔루션을 구축 하는 실습 환경과 SQL 프로그래머를 제공 하는 것입니다. 이 연습에서는 저장된 프로시저에 Python 코드를 추가 하 고 저장된 프로시저를 작성 하 고 모델에서 예측을 실행 하는 방법을 설명 합니다.
 
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 
 잘 알려진 NYC 택시 데이터 집합의 데이터입니다. 이 연습에서는 쉽고 빠르게 하도록 하려면 데이터 샘플링 됩니다. 특정 여행 인지 여부, 팁은 발생할 가능성이 시간, 거리 및 위치 선정 등의 열에 따라 예측 하는 이진 분류 모델을 만들게 됩니다.
 
-모든 작업을 수행할 수 있습니다 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 익숙한 환경에서 저장 프로시저[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+모든 작업을 수행할 수 있습니다 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 익숙한 환경에서 저장 프로시저 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [1단계: 샘플 데이터 다운로드](sqldev-py1-download-the-sample-data.md)
 

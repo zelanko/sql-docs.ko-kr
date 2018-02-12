@@ -1,6 +1,7 @@
 ---
 title: "Revoscalepy로 Python을 사용 하 여 모델을 만드는 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 09/19/2017
 mms.reviewer: 
 ms.suite: sql
@@ -10,17 +11,18 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: b85213fee582bc240f83446f911c4d16056f997e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1ced0d05a74f43c6b80be6717826ab288ee25374
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Revoscalepy로 Python을 사용 하 여 모델을 만들려면
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 알고리즘을 사용 하 여 SQL Server에서 선형 회귀 모델을 만들 수는 방법을 보여 주는이 예제는 **revoscalepy** 패키지 합니다.
 

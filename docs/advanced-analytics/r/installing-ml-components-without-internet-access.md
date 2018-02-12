@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: b84c15fba4b363eee589b6ff1d2a19d142100c32
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 1c4a63077cf9801a6c83502f2fdea6f88c063227
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 R 및 Python 구성 요소는 SQL Server 2016 및 SQL Server 2017와 함께 제공 되는 오픈 소스 이기 때문에 Microsoft는 기본적으로 Python 또는 R 구성 요소 설치 하지 않습니다. 대신, 관련 된 설치 관리자를 제공 하 고 패키지는 Microsoft 다운로드 센터 및 신뢰할 수 있는 다른 사이트에 편리한으로 제공 됩니다. 적절 한 라이선스에 동의 해야 하 고 SQL Server 설치 프로그램 사용자에 대 한 Python 또는 R 구성 요소를 설치 하는 합니다.
 
@@ -109,37 +110,37 @@ Microsoft R Server     |[SRS_9.0.2.100_1033.cab](https://go.microsoft.com/fwlink
 Microsoft R Open     |[SRO_3.3.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842800)
 Microsoft R Server     |[SRS_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842799)
 Microsoft Python 열기     |[SPO_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842828)
-Microsoft Python 서버    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
+Microsoft Python Server    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
 **SQL Server 2017 RC1** |
 Microsoft R Open     |[SRO_3.3.3.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851503)|
 Microsoft R Server     |[SRS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851498)|
 Microsoft Python 열기     |[SPO_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851499)|
-Microsoft Python 서버    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
+Microsoft Python Server    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
 **SQL Server 2017 RC 2** |
 Microsoft R Open     |[SRO_3.3.3.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851493)|
 Microsoft R Server     |[SRS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851505)|
 Microsoft Python 열기     |[SPO_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851506)|
-Microsoft Python 서버    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
+Microsoft Python Server    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
 **SQL Server 2017 RTM** |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Microsoft Python 열기     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python 서버    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
 Microsoft R Open     |변경 없음 이전에 사용 하 여|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 Microsoft Python 열기     |변경 없음 이전에 사용 하 여 |
-Microsoft Python 서버    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+Microsoft Python Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
 **SQL Server 2017 CU2** |
 Microsoft R Open     |변경 없음 이전에 사용 하 여|
 Microsoft R Server      |변경 없음 이전에 사용 하 여|
 Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
-Microsoft Python 서버    |변경 없음 이전에 사용 하 여|
+Microsoft Python Server    |변경 없음 이전에 사용 하 여|
 **SQL Server 2017 CU3** |
 Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
-Microsoft Python 서버    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
+Microsoft Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
 
 ### <a name="bkmk_2016Installers"></a>SQL Server 2016에 대 한 다운로드
 
@@ -176,10 +177,10 @@ Microsoft R Server     |변경 없음 이전에 사용 하 여 |
 **SQL Server 2016 SP 1**     |
 Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)
 Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)
-**SQL Server 2016 SP 1 c u 1**     |
+**SQL Server 2016 SP 1 CU1**     |
 Microsoft R Open     |변경 없음 이전에 사용 하 여|
 Microsoft R Server     |변경 없음 이전에 사용 하 여|
-**SQL Server 2016 SP 1 c u 2**     |
+**SQL Server 2016 SP 1 CU2**     |
 Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
 **SQL Server 2016 SP 1 CU3**     |
@@ -198,7 +199,7 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 
 사용자 환경에 따라 다음 필수 구성 요소에 대한 설치 관리자의 로컬 복사본을 만들어야 할 수 있습니다.
 
-구성 요소  |버전 옵션
+구성 요소  |버전
 ---------|---------
 [SQL Server 2016용 Microsoft AS OLE DB 공급자](https://go.microsoft.com/fwlink/?linkid=834405)     |  13.0.1601.5
 [Microsoft .NET Core](https://go.microsoft.com/fwlink/?linkid=834319)     | 1.0.1
@@ -267,7 +268,7 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 > [!NOTE]
 > SQL Server 설치 프로그램에서 매개 변수를 사용 하 여 실행 패드에 대 한 서비스 계정을 변경할 수 없습니다. 기본 서비스 계정을 사용 하 여 설치 하 고 다음 SQL Server 구성 관리자를 사용 하 여 서비스 계정을 수정 하는 것이 좋습니다. 이렇게 하면 실행 패드 서비스를 다시 시작 해야 합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [Microsoft R Server 설치](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 

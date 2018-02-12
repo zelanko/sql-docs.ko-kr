@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 801a29c07d55b9388d5be0edab33690399f2dde9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>시스템 학습 services (In-database) 무인된 설치
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 기계 학습 구성 요소를 설치 하려면 SQL Server 설치 프로그램을 명령줄 인수를 사용 하는 방법을 설명 합니다.
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 
 **적용 대상: SQL Server 2017 기계 학습 Services (In-database) SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 + 기계 학습 사용할지 각 인스턴스에서 데이터베이스 엔진을 설치 해야 합니다.
 

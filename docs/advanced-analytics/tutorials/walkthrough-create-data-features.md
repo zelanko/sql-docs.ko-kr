@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 79cc7e334c3aab4fb7702e368a3188db98eaaced
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>R 및 SQL (연습)를 사용 하 여 데이터 기능 만들기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 데이터 엔지니어링은 Machine Learning의 중요한 부분입니다. 데이터는 종종 예측 모델링에 사용 하려면 먼저 변환을 필요 합니다. 데이터에 필요한 기능이 없는 경우 기존 값에서 구성할 수 있습니다.
 
@@ -33,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 이 단계에서는 데이터에서 기능을 만들기 위한 두 가지 방법을 비교 합니다.
 
 - 사용자 지정 R 함수를 사용 하 여
-- 사용자 지정 T-SQL 함수를 사용 하 여[!INCLUDE[tsql](../../includes/tsql-md.md)]
+- 사용자 지정 T-SQL 함수를 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 목표는 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원래 열 및 새 숫자 기능을 포함 하는 데이터 집합이 *direct_distance*합니다.
 

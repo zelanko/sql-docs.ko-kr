@@ -10,20 +10,22 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2783d4ce6ca9cd25b41c1e658f5e3bf2a4f05f24
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 082aea3b1cde3c335dd7fa51b8ef219fc30f7efd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-packages-installed-with-sql-server"></a>SQL Server와 함께 설치 된 R 패키지
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 설치 하 고 컴퓨터 학습 기능을 사용 하는 경우 SQL Server와 함께 설치 된 R 패키지를 설명 합니다. 관리 및 기존 패키지를 확인 하거나 SQL Server 인스턴스를 새 패키지를 추가 하는 방법에 대해서도 설명 합니다.
 
@@ -35,15 +37,15 @@ SQL Server에서 실행 되는 모든 R 솔루션 인스턴스와 연결 된 기
 
 + 기본 인스턴스 *MSSQLSERVER* 
 
-    SQL Server 2017:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` 
+    SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` 
     
-    SQL Server 2016의 경우:`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
+    SQL Server 2016: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
 
 + 명명 된 인스턴스 *인스턴스 MyNamedInstance* 
 
-    SQL Server 2017:`C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` 
+    SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` 
     
-    SQL Server 2016의 경우:`C:\Program Files\Microsoft SQL Server\MSSQL13.MyNamedInstance\R_SERVICES\library`
+    SQL Server 2016: `C:\Program Files\Microsoft SQL Server\MSSQL13.MyNamedInstance\R_SERVICES\library`
 
 다음 문을 실행하여 R의 현재 인스턴스에 대한 기본 라이브러리를 확인할 수 있습니다.
 

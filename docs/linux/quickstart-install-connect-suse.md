@@ -4,7 +4,7 @@ description: "이 퀵 스타트의 SUSE Linux Enterprise Server에 SQL Server 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: 068cf3c1bb3bad2a42f5673f17d0067b0bd019f2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a01e66bb8f7b223762c7f3aa4b22d9646e5f8304
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server에서 데이터베이스를 만들고 SQL Server 설치
 
@@ -52,12 +52,17 @@ SLES에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명령�
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
-   sudo zypper --gpg-auto-import-keys refresh
    ```
 
    > [!NOTE]
    > CU (누적 업데이트) 저장소입니다. 저장소 옵션 및 간 차이점에 대 한 자세한 내용은 참조 [Linux에서 SQL Server에 대 한 저장소를 구성](sql-server-linux-change-repo.md)합니다.
 
+1. 사용자 저장소를 새로 고칩니다.
+
+   ```bash
+   sudo zypper --gpg-auto-import-keys refresh 
+   ```
+   
 1. SQL Server를 설치 하려면 다음 명령을 실행 합니다.
 
    ```bash

@@ -13,20 +13,22 @@ ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 40887cb3-ffbb-4769-9f54-c006d7f4798c
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 10be63f32a197134e4979dc976dd84919fde9e1f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 19502fbed507fff36c038145d0e4dbd683d7acdc
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-and-r-deep-dive"></a>SQL Server 및 XDF 파일 (SQL과 R 심층 분석) 간 데이터 이동
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 데이터 과학 심층 분석 자습서를 사용 하는 방법에 대 한 일부 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server와 함께 합니다.
 
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/08/2018
     ```
     **결과**
     
-    CA|또는|WA
+    CA|OR|WA
     ----|----|----
     5|38|48
     

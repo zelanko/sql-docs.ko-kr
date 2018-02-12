@@ -1,6 +1,7 @@
 ---
 title: "R Server(독립 실행형) | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 06/22/2017
 ms.reviewer: 
 ms.suite: sql
@@ -10,19 +11,21 @@ ms.component: r
 vms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: d7136f051317f7ffeb26d779b3cf611edef13592
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-server-standalone"></a>R Server (Standalone)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft SQL Server 2016에서 릴리스 **R Server (독립 실행형)**, 엔터프라이즈 수준의 분석을 지원 하기 위한 해당 플랫폼의 일부로 합니다.  Microsoft R Server는 R 언어에 대 한 확장성 및 보안을 제공 하 고 오픈 소스 오른쪽의 메모리 내 한계를 해결 SQL Server R 서비스와 같은 Microsoft R Server (독립 실행형)는 데이터의 병렬 및 청크 처리에 R 사용자가 메모리에 들어갈 수 있는 것 보다 훨씬 더 큰 데이터를 사용할 수 있도록 제공 합니다.
 

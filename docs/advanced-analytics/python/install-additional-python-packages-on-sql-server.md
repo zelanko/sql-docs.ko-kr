@@ -6,28 +6,30 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology:
+- r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 78a76403f3212c7619afbf02577075161699fbd6
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 68c3c0c3699455854ac23fed7befb042eaf17155
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server에 새 Python 패키지 설치
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 SQL Server 2017의 인스턴스에서 새 Python 패키지를 설치 하는 방법을 설명 합니다.
 
 또한 현재 환경에 설치 된 패키지를 나열 하는 방법을 설명 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 새 패키지를 설치 하기 위한 프로세스를 대부분 그렇게 표준 Python 환경에 합니다. 그러나 서버에 인터넷 연결이 없는 경우 몇 가지 추가 단계는 필요 합니다.
 

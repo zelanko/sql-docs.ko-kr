@@ -11,18 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f7f613516ce1cdad72c9bb07c6201e5f19421b36
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3aecbcf80a76fdfd84cca277f5f0de0f8dc7bb4e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-code-profiling-functions"></a>R 코드 프로파일링 함수 사용
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 SQL Server 리소스 및 도구를 사용하여 R 스크립트 실행을 모니터링할 뿐 아니라 다른 R 패키지에서 제공된 성능 도구를 사용하여 내부 함수 호출에 대한 추가 정보를 가져올 수 있습니다. 이 항목에서는 시작하기 위한 몇 가지 기본 리소스 목록을 제공합니다. 전문가인 경우에는 Hadley Wickham의 서적 ""Advanced R""에서 [Performance](http://adv-r.had.co.nz/Performance.html) 장을 참조하는 것이 좋습니다.
 
 ## <a name="using-rprof"></a>RPROF 사용

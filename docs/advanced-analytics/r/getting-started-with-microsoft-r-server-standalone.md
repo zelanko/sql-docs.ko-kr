@@ -11,17 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52347d0d-ce60-4bb8-98d2-6163e87716b0
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 7c68e4a44ea410d3ad54ee39a103695eb47b6473
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b7a9ec054b512e8825bf5cf9208a0c1deb3abbb8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="getting-started-with-machine-learning-server-standalone"></a>컴퓨터 학습 Server (독립 실행형) 시작
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 SQL Server 2016의 Microsoft R Server (독립 실행형) 작업 고성능 분석 솔루션 및 다른 비즈니스 응용 프로그램과 통합을 사용 하도록 설정 하려면 엔터프라이즈도 인기 있는 오픈 소스 R 언어를 가져올 수 있습니다.  
 
@@ -83,6 +84,6 @@ SQL Server 2017 년 1 이름은 반영 Python 언어에 대 한 지원 추가 �
 
     MicrosoftML 패키지는 새 컴퓨터 학습 알고리즘은 빠르고 확장 가능한 Microsoft에서 개발 변환의 집합입니다. Python 또는 R에서 사용할 수 있습니다. 자세한 내용은 참조 [Python에 대 한 MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 및 [R에 대 한 MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Server 컴퓨터 학습 서비스 시작](../../advanced-analytics/r/getting-started-with-sql-server-r-services.md)

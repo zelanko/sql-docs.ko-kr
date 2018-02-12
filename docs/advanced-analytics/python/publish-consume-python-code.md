@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 281f3beb3678d74fb03b3dc68a4a9b58d44f261e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8720440872fb0b41a76d4ac644fd3b60d52a095e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>게시 및 Python 웹 서비스를 사용 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft 학습 서버 컴퓨터의에서 화 기능을 사용 하 여 웹 서비스에 작업 중인 Python 솔루션을 배포할 수 있습니다. 이 항목에서는 성공적으로 게시 한 후 솔루션을 실행 하는 단계를 설명 합니다.
 
