@@ -35,7 +35,7 @@
 ### [SQL Server 에이전트 설치](sql-server-linux-setup-sql-agent.md)
 ### [SQL Server 전체 텍스트 검색 설치](sql-server-linux-setup-full-text-search.md)
 ### [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
-### [GA 리포지토리 등록](sql-server-linux-change-repo.md)
+### [리포지토리 구성](sql-server-linux-change-repo.md)
 
 ## 구성
 ### [mssql-conf를 사용하여 구성](sql-server-linux-configure-mssql-conf.md)
@@ -85,6 +85,7 @@
 ##### [운영](sql-server-linux-availability-group-failover-ha.md)
 #### [읽기 배율 전용으로 만들기]()
 ##### [AG 구성](sql-server-linux-availability-group-configure-rs.md)
+#### [플랫폼 간(Windows 및 Linux) 구성](sql-server-linux-availability-group-cross-platform.md)
 
 ## [보안](sql-server-linux-security-overview.md)
 ### [보안 기능 시작](sql-server-linux-security-get-started.md)
