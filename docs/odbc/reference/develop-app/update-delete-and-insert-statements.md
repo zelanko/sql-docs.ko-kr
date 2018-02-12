@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,35 +19,35 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 592d135ccf66f8a9fde2cc064a51dc25617cf127
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE 및 INSERT 문
 SQL 기반 응용 프로그램을 실행 하 여 테이블에 변경 내용을 확인는 **업데이트**, **삭제**, 및 **삽입** 문. 이러한 문은 최소 SQL 문법의 규칙 수준과의 일부 이며 모든 드라이버 및 데이터 원본에서 지원 되어야 합니다.  
   
  이러한 문의 구문은 다음과 같습니다.  
   
- **업데이트***테이블 이름*   
+ **UPDATE**  *table-name*  
   
- **설정** *열 식별자*  **=**  {*식* &#124; **NULL**}  
+ **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**,** *열 식별자*  **=**  {*식* &#124; **NULL**}]...  
+ [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
   
- [**여기서** *검색 조건*]  
+ [**WHERE** *search-condition*]  
   
- **DELETE FROM** *테이블 이름*[**여기서** *검색 조건*]  
+ **DELETE FROM** *table-name*[**WHERE** *search-condition*]  
   
- **INSERT INTO** *테이블 이름*[**(***열 식별자* [**,** *열 식별자*] ... **)**]  
+ **INSERT INTO** *table-name*[**(***column-identifier* [**,** *column-identifier*]...**)**]  
   
- {*쿼리 사양* &#124; **값 (***삽입 값* [**,** *삽입 값*]... **)**}  
+ {*쿼리 사양* &#124;  **값 (* * * 삽입 값* [* *,** *삽입 값*]... **)**}  
   
  *쿼리 사양* 요소는 핵심 및 확장 SQL 문법을 지정 하 고 있는 경우에 유효는 *식* 및 *검색 조건* 요소 정하여 핵심 및 확장 SQL 문법에 복잡 한 합니다.  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>부록 b: ODBC 상태 전환 테이블
 이 부록의 표에서 ODBC 함수 환경, 연결, 문 및 설명자 상태 전환을 발생 하는 방법을 보여줍니다. 환경, 연결, 문 또는 설명자의 상태는 일반적으로 해당 형식의 핸들 (환경, 연결, 문 또는 설명자)를 사용 하는 함수를 호출할 수 있습니다 결정 합니다. 환경, 연결, 문 및 설명자 상태는 다음 그림에 나와 있는 것 처럼 대략 겹칩니다. 예를 들어 연결의 정확한 겹치는 C5 내용과 C6 하 문 S12 통해 S1을 데이터 원본 – 종속 트랜잭션이 서로 다른 데이터 원본에 대해 서로 다른 시간에 시작 하 고 D1i (암시적으로 할당 된 설명자) 설명자 상태에 따라 달라 집니다. 설명자와 관련 된 문의 상태 state D1e (명시적으로 할당 된 설명자)는 모든 문은의 상태와 무관입니다. 각 상태에 대 한 참조 [환경이 전환](../../../odbc/reference/appendixes/environment-transitions.md), [연결 전환](../../../odbc/reference/appendixes/connection-transitions.md), [문을 전환](../../../odbc/reference/appendixes/statement-transitions.md), 및 [설명자 전환 ](../../../odbc/reference/appendixes/descriptor-transitions.md)이 부록의 뒷부분에 나오는 합니다.  
@@ -51,13 +52,13 @@ ms.lasthandoff: 12/21/2017
 -   **--**-함수를 실행 한 후 상태 변경 되지 않습니다.  
   
 -   **E**  
-     ***n*** **C*n***,  **S*n***, 또는  **D*n** *-환경, 연결, 문 또는 설명자 상태 지정 된 상태로 이동 합니다.  
+     ***n*****C*n * * *, **S*n***, 또는 **D * n***  -환경, 연결, 문 또는 설명자 상태를 이동 지정 된 상태입니다.  
   
 -   **(면)**  -잘못 된 핸들이 함수에 전달 되었습니다. 핸들이 핸들을 null 이거나 잘못 된 형식의 유효한 핸들 경우-문 핸들을 필요한 경우에 연결 핸들 전달 된 예를 들어-함수에서 SQL_INVALID_HANDLE;을 반환 그렇지 않으면 동작이 정의 되지 않은 및 아마도 치명적있지 않습니다. 이 오류는 지정된 된 상태에는 함수 호출의 가능한 결과 경우에 표시 됩니다. 이 오류 상태를 변경 하지 않으며는 괄호로 표시 된 대로 드라이버 관리자에 의해 항상 검색 됩니다.  
   
 -   **NS** -다음 상태입니다. 문 전환 명령문에는 비동기 상태 검사를 하지 마치 같습니다. 예를 들어 결과 집합을 만드는 문을 상태가 S11 S1 상태에서 때문에 **SQLExecDirect** SQL_STILL_EXECUTING을 반환 합니다. S11 상태의 NS 표기법 도구 문에 대 한 전환 동일 S1 상태일에서 문에 대 한 결과 집합을 만드는 있습니다. 경우 **SQLExecDirect** 은 오류를 반환할 문이 S1 상태로 유지 됩니다; 성공 하면 문이 S5 상태; 문을 이동 S8; 상태 데이터를 해야 하는 경우 이동한 S11 상태로 남아 아직 실행 되는 경우.  
   
--   ***XXXXX*** 또는  **(*XXXXX*) * *-; 전환 테이블에 관련 된 SQLSTATE 드라이버 관리자에서 검색 하는 Sqlstate는 괄호로 구분 됩니다. SQL_ERROR와 지정 된 SQLSTATE 함수 반환 하지만 상태 변경 되지 않습니다. 예를 들어 경우 **SQLExecute** 하기 전에 호출 **SQLPrepare**, SQLSTATE HY010 반환 (함수 시퀀스 오류).  
+-   ***XXXXX*** 또는 **(*XXXXX*)** —; 전환 테이블에 관련 된 SQLSTATE 드라이버 관리자에서 검색 하는 Sqlstate는 괄호로 구분 됩니다. SQL_ERROR와 지정 된 SQLSTATE 함수 반환 하지만 상태 변경 되지 않습니다. 예를 들어 경우 **SQLExecute** 하기 전에 호출 **SQLPrepare**, SQLSTATE HY010 반환 (함수 시퀀스 오류).  
   
 > [!NOTE]  
 >  테이블에서 상태를 변경 하지 않는 전환 테이블에 관련 되지 않은 오류를 표시 하지 않습니다. 예를 들어 **SQLAllocHandle** E1 환경 상태에서 호출 되 고 SQLSTATE HY001 반환 (메모리 할당 오류) 환경 E1 상태로 유지 됩니다;이 대 한 환경 전환 테이블에 표시 되지 않습니다  **SQLAllocHandle**합니다.  
@@ -86,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
 |E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당 된|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
-|(면)|E0|(HY010)|  
+|(IH)|E0|(HY010)|  
   
  경우 **SQLFreeHandle** 환경 상태가 E0 라고 *HandleType* SQL_HANDLE_ENV로 설정 하면 드라이버 관리자에서 SQL_INVALID_HANDLE을 반환 합니다. 상태가 E1 호출 되 면 *HandleType* E0 함수는 성공 하 고 함수가 실패 하면 E1 상태를 유지 하도록 환경 이동 SQL_HANDLE_ENV로 설정 합니다. 상태가 E2 호출 되 면 *HandleType* SQL_HANDLE_ENV로 설정 하면 드라이버 관리자 항상 반환 SQL_ERROR 및 SQLSTATE HY010 (함수 시퀀스 오류입니다.) 환경 상태 E2에에서 유지 됩니다.  
   

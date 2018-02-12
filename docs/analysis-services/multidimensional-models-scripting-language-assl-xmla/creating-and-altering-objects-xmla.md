@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [XML for Analysis]
 - subordinate objects [XML for Analysis]
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - deleting objects
 - XMLA, objects
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6906c6dbab99923983cbfa4e75c35c6f3c0f5073
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="creating-and-altering-objects-xmla"></a>개체 만들기 및 변경(XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]주요 개체 독립적으로 작성, 변경 및 삭제 합니다. 주요 개체에는 다음과 같은 개체가 포함됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+주요 개체는 독립적으로 만들고 변경하고 삭제할 수 있습니다. 주요 개체에는 다음과 같은 개체가 포함됩니다.  
   
 -   서버  
   
@@ -149,12 +151,12 @@ ms.lasthandoff: 01/08/2018
 </Alter>  
 ```  
   
-### <a name="comments"></a>주석  
+### <a name="comments"></a>설명  
  **ObjectExpansion** 특성에는 **Alter** 명령으로 설정 된 *ObjectProperties*합니다. 이 설정을 사용 하면는 [ImpersonationInfo](../../analysis-services/scripting/properties/impersonationinfo-element-assl.md) , 요소에 정의 된 데이터 원본에서 제외할 보조 개체인 **ObjectDefinition**합니다. 따라서 해당 데이터 원본에 대한 가장 정보가 첫 번째 예제에서 지정한 대로 서비스 계정으로 설정된 채 유지됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [방법 &#40; 실행 XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
  [스크립팅 언어 &#40; Analysis Services를 사용 하 여 개발 ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [Analysis Services에서 XMLA를 사용하여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services에서 XMLA를 사용 하 여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

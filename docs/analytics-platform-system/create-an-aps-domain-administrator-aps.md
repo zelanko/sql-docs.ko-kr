@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
-caps.latest.revision: "7"
+caps.latest.revision: 
 ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>APS 도메인 관리자 만들기
 일부 작업에는 분석 플랫폼 시스템 도메인 관리자 권한이 필요 합니다. 이 추가 기기 도메인 관리자를 만드는 방법을 설명 합니다.  
@@ -30,7 +30,7 @@ APS 노드를 모두 실행 하는 사용자를 구성할 수 있는 충분 한 
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Domain Admins 그룹에 사용자를 추가 하려면  
   
-1.  로그 활성 AD 노드로  **(*appliance_domain*-AD01 * * 또는  ***appliance_domain*-AD02**) 기존 어플라이언스 도메인을 사용 하 여 관리자 계정입니다.  
+1.  활성 AD 노드에 로그인 **(*appliance_domain*-AD01** 또는 ***appliance_domain *-AD02**) 기존 어플라이언스 도메인 관리자 계정을 사용 합니다.  
   
 2.  시작 메뉴에서 **실행**을 클릭합니다. 에 **열려** 상자에서 입력 **dsa.msc**합니다. **확인**을 클릭합니다.  
   
