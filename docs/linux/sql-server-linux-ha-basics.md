@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포에 대 한 SQL Server 가용성 기본 사항
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/12/2018
 -   Always On 장애 조치 클러스터 인스턴스 (Fci)
 -   [로그 전달](sql-server-linux-use-log-shipping.md)
 
-Windows에서 Fci는 기본 Windows Server 장애 조치 클러스터 (WSFC) 항상 필요 합니다. 배포 시나리오에 따라 AG 일반적으로 기본 WSFC와 함께 필요 새 것을 제외 하 고 없음에서 variant [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]합니다. WSFC는 Linux에서 존재 하지 않습니다. Linux에서 구현에 대해서는 설명 아래 [Linux에서 Always On 가용성 그룹 및 장애 조치 클러스터에 대 한 Pacemaker 인스턴스](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux)합니다.
+Windows에서 Fci는 기본 Windows Server 장애 조치 클러스터 (WSFC) 항상 필요 합니다. 배포 시나리오에 따라 AG 일반적으로 기본 WSFC와 함께 필요 새 것을 제외 하 고 없음에서 variant [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]합니다. WSFC는 Linux에서 존재 하지 않습니다. 섹션에 설명 되어 Linux에서 구현 [Linux에서 Always On 가용성 그룹 및 장애 조치 클러스터에 대 한 Pacemaker 인스턴스](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux)합니다.
 
 ## <a name="a-quick-linux-primer"></a>빠른 Linux 입문서
 일부 Linux 설치 인터페이스와 함께 설치할 수 있습니다, 대부분은 그렇지 명령줄을 통해 운영 체제 계층에 거의 모든 항목을 수행할지를 의미 합니다. Linux 상황에서이 명령줄에 대 한 일반적인 용어는 *bash 셸은*합니다.
@@ -59,9 +59,9 @@ Linux에서 많은 명령을 많은 요소에서 관리자 권한으로 Windows 
 이 섹션에서는 모든 Linux 기반에 공통적인 작업 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포 합니다.
 
 ### <a name="ensure-that-files-can-be-copied"></a>파일을 복사할 수 있는지 확인 하십시오.
-한 가지는 누구 든 지 사용 하 여 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux에 수 작업을 수행 하는 다른 서버 간에 파일을 복사 합니다. 이 작업은 AG 구성에 대 한 매우 중요 합니다.
+다른 서버 간에 파일을 복사는 누구 든 지 사용 하 여 작업은 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] linux 해야을 수행할 수 있습니다. 이 작업은 AG 구성에 대 한 매우 중요 합니다.
 
-Linux와 Windows 기반 설치에 사용 권한 문제 등으로 존재할 수 있습니다. 그러나 Windows에서 서버 간에 복사 하는 방법에 익숙한 아니어야 Linux에서 수행 되는 방법에 대해 잘 알고 합니다. 명령줄 유틸리티를 사용 하는 일반적인 메서드가 `scp`, 나타내는 안전한 복사 합니다. 내부적으로 `scp` OpenSSH를 사용 합니다. SSH는 보안 셸을 나타냅니다. Linux 배포에 따라 자체 OpenSSH는 설치할 수 있습니다. 그럴 경우 OpenSSH를 먼저 설치 해야 합니다. OpenSSH를 구성 하는 방법에 대 한 자세한 내용은 각 배포에 대 한 다음 링크에서 정보를 참조 합니다.
+Linux와 Windows 기반 설치에 사용 권한 문제 등으로 존재할 수 있습니다. 그러나 Windows에서 서버 간에 복사 하는 방법에 익숙한 아니어야 Linux에서 수행 되는 방법에 대해 잘 알고 합니다. 명령줄 유틸리티를 사용 하는 일반적인 메서드가 `scp`, 나타내는 안전한 복사 합니다. 내부적으로 `scp` OpenSSH를 사용 합니다. SSH는 보안 셸을 나타냅니다. Linux 배포에 따라 자체 OpenSSH는 설치할 수 있습니다. 그렇지 않은 경우 OpenSSH 먼저 설치 되어 있어야 합니다. OpenSSH를 구성 하는 방법에 대 한 자세한 내용은 각 배포에 대 한 다음 링크에서 정보를 참조 합니다.
 -   [Red Hat Enterprise Linux(RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
 -   [SUSE Linux Enterprise Server(SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
@@ -112,7 +112,7 @@ SMB 공유 Windows 기반을 사용할 수도 있습니다. SMB 공유를 호스
 | 변수    | TCP/UDP  | 에 대 한 NFS – 포트 `MOUNTD_PORT` (에 `/etc/sysconfig/nfs` RHEL에서)                                                |
 | 변수    | TCP/UDP  | 에 대 한 NFS – 포트 `STATD_PORT` (에 `/etc/sysconfig/nfs` RHEL에서)                                                 |
 
-Samba에서 사용할 수 있는 추가 포트에 대 한 참조 [Samba 포트 사용](https://wiki.samba.org/index.php/Samba_Port_Usage)합니다.
+Samba에서 사용할 수 있는 추가 포트를 참조 하십시오. [Samba 포트 사용](https://wiki.samba.org/index.php/Samba_Port_Usage)합니다.
 
 반대로, linux 서비스 이름으로도으로 추가할 수 있습니다 포트; 대신 예외 예를 들어 `high-availability` Pacemaker에 대 한 합니다. 방향 관점에서 해결 하려는 경우 이름에 대 한 배포를 참조 하십시오. 예를 들어 RHEL Pacemaker에 추가할 명령을
 
@@ -135,7 +135,7 @@ Ag Fci 구성 되어 있는 Windows 기반 구성에서 클러스터 인식 됩�
 에 대 한 다른 선택적 패키지 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 전체 텍스트 검색 (*mssql-서버-fts*) 및 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql 서버는*), 되지 않습니다 높은 가용성, FCI는 또는 AG에 필요합니다.
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Always On 가용성 그룹 및 Linux에서 장애 조치 클러스터 인스턴스에 대 한 pacemaker
-위에서 언급 한 대로 Ag 및 Fci에 대 한 Microsoft에서 현재 지 원하는 유일한 클러스터링 메커니즘 Corosync와 Pacemaker입니다. 이 섹션에서는 솔루션을 계획 하 고 배포에 대 하는 방법을 이해 하는 기본 정보를 다룹니다 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 구성 합니다.
+이전 설명이 없는 한, Ag 및 Fci에 대 한 Microsoft에서 현재 지 원하는 유일한 클러스터링 메커니즘은 Pacemaker Corosync 사용 합니다. 이 섹션에서는 솔루션을 계획 하 고 배포에 대 하는 방법을 이해 하는 기본 정보를 다룹니다 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 구성 합니다.
 
 ### <a name="ha-add-onextension-basics"></a>HA 추가 시/확장 기본 사항
 모든 현재 지원 되는 배포는 항상 사용 가능한 추가-시/확장을 스택 클러스터링 Pacemaker에 따라 제공 됩니다. 이 스택 두 가지 주요 구성 요소를 통합: Pacemaker 및 Corosync 합니다. 스택의 모든 구성 요소는.
@@ -247,7 +247,7 @@ STONITH가 지원 되는 Pacemaker 클러스터에 대 한 필요 합니다. 분
 -   분산된 AG, 즉 두 개의 서로 다른 Ag 자신의 가용성 그룹으로 구성할 수 있는 가용성 그룹의 특별 한 형식입니다. 분산된 Ag에 대 한 자세한 내용은 설명서를 참조 하십시오. [분산형 가용성 그룹](../database-engine/availability-groups/windows/distributed-availability-groups.md)합니다.
 
 #### <a name="other-linux-distributions"></a>다른 Linux 배포판
-Linux에서 Pacemaker 클러스터의 모든 노드에 동일한 배포에 있어야 합니다. 예를 들어, 즉, RHEL 노드는 SLES 노드에 있는 Pacemaker 클러스터의 일부가 될 수 없습니다. 이 주요 이유는 위에 명시 된: 때문에 작업이 제대로 작동 하지 못했습니다가 배포는 서로 다른 버전 및 기능에 있을 수 있습니다. WSFCs와 Linux와 같은 영역에 분포 혼합: None을 사용 하거나 Ag 분산 합니다.
+Linux에서 Pacemaker 클러스터의 모든 노드에 동일한 배포에 있어야 합니다. 예를 들어, 즉, RHEL 노드는 SLES 노드에 있는 Pacemaker 클러스터의 일부가 될 수 없습니다. 이 주요 이유를 설명한: 때문에 작업이 제대로 작동 하지 못했습니다가 배포는 서로 다른 버전 및 기능에 있을 수 있습니다. WSFCs와 Linux와 같은 영역에 분포 혼합: None을 사용 하거나 Ag 분산 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 [Linux에서 SQL Server에 대 한 Pacemaker 클러스터 배포](sql-server-linux-deploy-pacemaker-cluster.md)
