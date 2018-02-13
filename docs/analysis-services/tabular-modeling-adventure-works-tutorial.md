@@ -1,7 +1,7 @@
 ---
 title: "테이블 형식 모델링 (호환성 수준 1200) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/17/2018
+ms.date: 02/10/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,23 +11,24 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 keywords:
 - Analysis Services
 - "테이블 형식 모델"
 - "자습서"
 - SSAS
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>테이블 형식 모델링 (호환성 수준 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/18/2018
 SQL Server 2017 또는 Azure Analysis Services를 사용 하는 모델 수준에서 1400 호환성 생성, 사용 하려는 경우는 [Azure Analysis Services-Adventure Works 자습서](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master)합니다. 이 업데이트 된 버전 새, 최신 데이터 가져오기 기능을 사용 하 여 연결 하 고 원본 데이터를 가져올 하 고 파티션을 구성 하는 M 언어를 사용 합니다.
  
   
-## <a name="what-youll-learn"></a>학습 내용   
+## <a name="what-you-learn"></a>정보   
   
 -   SSDT에서 새 테이블 형식 모델 프로젝트를 만들 하는 방법.
   
@@ -47,7 +48,7 @@ SQL Server 2017 또는 Azure Analysis Services를 사용 하는 모델 수준에
   
 -   사용자가 모델 데이터를 분석하는 데 도움을 주는 계산, 측정값 및 핵심 성과 지표를 만들고 관리하는 방법  
   
--   비즈니스 및 응용 프로그램별 뷰포인트를 통해 사용자가 모델 데이터를 쉽게 탐색할 수 있도록 도움을 주는 큐브 뷰와 계층을 만들고 관리하는 방법  
+-   큐브 뷰 및 사용자가 더 많은 비즈니스 및 응용 프로그램별 뷰포인트를 제공 하 여 모델 데이터를 쉽게 찾아볼 수 있도록 계층 만들기 및 관리 하는 방법.  
   
 -   다른 파티션과 독립적으로 처리할 수 있도록 테이블 데이터를 더 작은 논리적 부분으로 나누는 파티션을 만드는 방법  
   
@@ -60,22 +61,22 @@ SQL Server 2017 또는 Azure Analysis Services를 사용 하는 모델 수준에
   
 영업과 마케팅 팀 및 경영 관리에 필요한 데이터 분석을 지원하기 위해 사용자가 AdventureWorksDW 예제 데이터베이스의 인터넷 매출 데이터를 분석할 수 있도록 테이블 형식 모델을 만들려고 합니다.  
   
-자습서를 완료하고 Adventure Works Internet Sales 테이블 형식 모델을 완성하려면 여러 단원을 완료해야 합니다. 각 단원 내에는 많은 태스크가 포함되어 있으며 단원을 완료하려면 각 태스크를 순서대로 완료해야 합니다. 특정 단원에 있을 수 있습니다는 비슷한 결과 수행 하는 몇 가지 작업 동안 각 작업을 완료 하는 방법은 약간 다릅니다. 이 여러 가지 방법으로 특정 작업을 완료 하 고 이전 작업에서 배운 기술을 사용해 보도록 하기 종종 임을 나타낼 수 있습니다.  
+자습서를 완료하고 Adventure Works Internet Sales 테이블 형식 모델을 완성하려면 여러 단원을 완료해야 합니다. 각 단원에서 다양 한 작업은 순서로 각 작업을 완료 하는 단원을 완료 해야 합니다. 특정 단원에 있을 수 있습니다는 비슷한 결과 수행 하는 몇 가지 작업 동안 각 작업을 완료 하는 방법은 약간 다릅니다. 이 여러 가지 방법으로 특정 작업을 완료 하 고 이전 작업에서 배운 기술을 사용해 보도록 하기 종종 임을 나타낼 수 있습니다.  
   
-단원의 목적은 여러 SSDT에 포함 된 기능을 사용 하 여 메모리 내 모드로 실행 되는 기본 테이블 형식 모델 제작 하는 과정을 안내 하는 합니다. 각 단원은 이전 단원에 기반을 두고 있으므로 단원을 순서대로 완료해야 합니다. 모든 단원을 완료 했으면, 작성 및 Analysis Services 서버에서 Adventure Works Internet Sales 예제 테이블 형식 모델 배포 있어야 합니다.  
+단원의 목적은 여러 SSDT에 포함 된 기능을 사용 하 여 메모리 내 모드로 실행 되는 기본 테이블 형식 모델 제작 하는 과정을 안내 하는 합니다. 각 단원은 이전 단원에 기반을 두고 있으므로 단원을 순서대로 완료해야 합니다. 모든 단원을 작업을 마친 후 작성 있고 Analysis Services 서버에서 Adventure Works Internet Sales 예제 테이블 형식 모델을 배포 합니다.  
   
 이 자습서에서는 배포한 테이블 형식 모델 데이터베이스를 SQL Server Management Studio를 사용하여 관리하거나 보고 클라이언트 응용 프로그램을 사용하여 배포된 모델에 연결하여 모델 데이터를 탐색하는 과정을 안내하는 단원이나 정보는 제공하지 않습니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
 이 자습서를 완료 하려면 다음 필수 구성 요소가 필요 합니다.  
   
--   최신 버전의 [! 포함[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md)합니다.
+-   최신 버전의 [SSDT](../ssdt/download-sql-server-data-tools-ssdt.md)합니다.
 
 -   SQL Server Management Studio의 최신 버전입니다. [최신 버전 가져오기](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다. 
   
--   와 같은 클라이언트 응용 프로그램 [Power BI Desktop](https://powerbi.microsoft.com/desktop/) 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel입니다.    
+-   와 같은 클라이언트 응용 프로그램 [Power BI Desktop](https://powerbi.microsoft.com/desktop/) 또는 Excel입니다.    
   
--   Adventure Works DW 2014 샘플 데이터베이스에서 SQL Server 인스턴스. 이 예제 데이터베이스에는 이 자습서를 완료하는 데 필요한 데이터가 포함되어 있습니다. [최신 버전 가져오기](http://go.microsoft.com/fwlink/?LinkID=335807)합니다.  
+-   Adventure Works DW 예제 데이터베이스를 포함 하는 SQL Server 인스턴스. 이 예제 데이터베이스에는 이 자습서를 완료하는 데 필요한 데이터가 포함되어 있습니다. [최신 버전 가져오기](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)합니다.  
   
 
 -   Azure Analysis Services 또는 SQL Server 2016 또는 이상의 Analysis Services 인스턴스에서 사용자 모델을 배포 합니다. [Azure Analysis Services에 무료 평가판에 등록](https://azure.microsoft.com/services/analysis-services/)합니다.

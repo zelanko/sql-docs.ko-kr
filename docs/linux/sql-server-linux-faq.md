@@ -9,18 +9,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 2da90e6cdf49531980e9014075d7b094b61271fd
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: b5dd38c166f869cfff730d091cee091582507114
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux에서 SQL Server가 질문과 대답 (FAQ)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 다음 섹션에서는 일반적인 질문 및 답변 SQL Server에 대 한 Linux에서 실행 합니다.
 
@@ -94,7 +96,7 @@ ms.lasthandoff: 02/01/2018
 
 1. **Linux에서 SQL Server는 동일한 호스트에 여러 인스턴스를 지원 합니까?**
 
-   여러 가지 인스턴스를 호스트에서 여러 컨테이너를 실행 하는 것이 좋습니다. 각 컨테이너는 다른 포트에서 수신 하도록 해야 합니다. 자세한 내용은 참조 [여러 SQL Server 컨테이너 실행](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)합니다.
+   여러 가지 인스턴스를 호스트에서 여러 컨테이너를 실행 하는 것이 좋습니다. 각 컨테이너는 다른 포트에서 수신 대기 해야 합니다. 자세한 내용은 참조 [여러 SQL Server 컨테이너 실행](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)합니다.
 
 1. **Active Directory 인증은 Linux에서 지원 되나요?**
 

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: f50be15e4d778ffb9c77caa375dc6b963b5821cd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Linux 백업 및 복원을 사용 하 여 Windows에서 SQL Server 데이터베이스 마이그레이션
 
@@ -88,7 +88,7 @@ SQL Server Always On 가용성 그룹 Linux로 Windows에서 SQL Server 데이�
 
 1. Windows에서 Bash 세션을 엽니다.
 
-## <a id="scp"></a>Linux 백업 파일 복사
+## <a id="scp"></a> Linux 백업 파일 복사
 
 1. Bash 세션에서는 백업 파일에 포함 된 디렉터리로 이동 합니다. 예를 들어
 

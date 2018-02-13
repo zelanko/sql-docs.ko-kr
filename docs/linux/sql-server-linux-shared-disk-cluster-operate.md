@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 6f8ba6ed2e56ea4dc97ab68fa85601d94edfe1fc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5e557c2ef6005a9e2822b973748928bae991875c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스에 SQL Server Linux에서 작동 합니다.
 
@@ -38,7 +38,7 @@ Fci에 대 한 장애 조치가 Windows Server 장애 조치 클러스터 (WSFC)
 - [RHEL 또는 Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
-## <a name = "#rhelFailover"></a>수동 장애 조치 (RHEL 또는 Ubuntu)
+## <a name = "#rhelFailover"></a> 수동 장애 조치 (RHEL 또는 Ubuntu)
 
 Red Hat Enterprise Linux (RHEL) onn 또는 Ubuntu 서버는 수동 장애 조치를 수행 하려면 다음 단계를 실행 합니다.
 1.  다음 명령을 실행 합니다. 
@@ -59,7 +59,7 @@ Red Hat Enterprise Linux (RHEL) onn 또는 Ubuntu 서버는 수동 장애 조치
 
 \<FCIResourceName > FCI에 대 한 Pacemaker 리소스 이름입니다. 
 
-## <a name = "#slesFailover"></a>수동 장애 조치 (SLES)
+## <a name = "#slesFailover"></a> 수동 장애 조치 (SLES)
 
 
 Suse Linux Enterprise Server (SLES)를 사용 하 여는 `migrate` SQL Server FCI를 수동으로 장애 조치가 가능 하도록 명령 합니다. 예를 들어

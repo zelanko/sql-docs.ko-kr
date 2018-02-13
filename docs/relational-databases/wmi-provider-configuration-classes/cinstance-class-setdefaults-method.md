@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetDefaults Method (CInstance Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetDefaults Method (CInstance Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetDefaults method
+helpviewer_keywords:
+- SetDefaults method
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 744bfa80ab7207dc8b9178f4266b58ce7328d1c5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ea75930319239ca7e14a1f840b4cfad3b04226b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance 클래스-SetDefaults 메서드
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]인스턴스에 대 한 모든 기본값을 설정는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 데이터 덮어쓰기 옵션을 사용 하 여 클라이언트입니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+인스턴스에 대 한 모든 기본값을 설정는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 데이터 덮어쓰기 옵션을 사용 하 여 클라이언트입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +57,7 @@ object.SetDefaults(OverwriteAll)
   
 ## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [클라이언트 프로토콜 구성](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

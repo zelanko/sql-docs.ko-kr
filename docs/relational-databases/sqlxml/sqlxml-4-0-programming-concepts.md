@@ -8,28 +8,30 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, about SQLXML
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3e47e3a55ebc0bf94dabbb2ca71c78f42ce3231
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 99780e4985f2406d5f0a394ae427ad6342106bb6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 프로그래밍 개념
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]제공 된 SQLXML 3.0 웹 릴리스로 제공 추가 클라이언트 쪽 XML 기능과 주석이 추가 된 XSD 스키마 등 기존 기능에 대 한 향상 XML 대량 로드, 웹 서비스 (SOAP) 지원, updategram입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SQLXML 3.0은 웹 릴리스로 제공되어 추가 클라이언트 쪽 XML 기능과 주석이 추가된 XSD 스키마, XML 대량 로드, 웹 서비스(SOAP) 지원, Updategram 등 기존 기능에 대한 향상된 기능을 제공했습니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 SQLXML 3.0과 동일한 기능뿐 아니라 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 새로운 기능을 수용하기 위해 제공된 추가 업데이트를 제공하는 SQLXML 4.0을 소개했습니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에 도입 된 새로운 기능을 수용 하기 위해 제공 된 추가 업데이트 및 SQLXML 3.0과 같은 기능을 제공 하는 SQLXML 4.0에서 도입 된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다.  
   
  이 섹션에서는 SQLXML 4.0에 대한 정보를 제공합니다.  
   
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  [SQLXML 4.0의 XPath 쿼리 사용](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  XPath 언어의 하위 집합을 사용하여 주석이 추가된 XSD 스키마로 만든 XML 뷰를 쿼리하는 방법에 대해 설명하고 예를 제공합니다.  
   
- [SQLXML 4.0에서 updategram을 사용하여 데이터 수정](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Updategram을 사용 하 여 SQLXML 4.0에서에서 데이터를 수정 하려면](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  주석이 추가된 XSD(또는 XDR) 스키마가 제공하는 XML 뷰에서 작업하여 데이터베이스의 데이터를 수정하는 Updategram에 대한 정보를 제공합니다.  
   
  [XML 데이터 &#40; 대량 로드 수행 SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  

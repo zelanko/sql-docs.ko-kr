@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 358a75a6cbc2ddd716c14297daa21881ea5c3304
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c4c5d33454cebe84fb14a5bb154f7ee30a57de51
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>데이터 형식 강제 변환 및 sql:datatype 주석(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XSD 스키마에서는 **xsd: type** 특성은 요소 또는 특성의 XSD 데이터 형식을 지정 합니다. XSD 스키마를 사용하여 데이터베이스에서 데이터를 추출할 경우 지정된 데이터 형식이 데이터 서식 지정에 사용됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XSD 스키마에서는 **xsd: type** 특성은 요소 또는 특성의 XSD 데이터 형식을 지정 합니다. XSD 스키마를 사용하여 데이터베이스에서 데이터를 추출할 경우 지정된 데이터 형식이 데이터 서식 지정에 사용됩니다.  
   
  XSD 형식 스키마에서를 지정 하는 것 외에도 지정할 수도 있습니다는 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용 하 여는 **sql: datatype** 주석입니다. **xsd: type** 및 **sql: datatype** 특성에 XSD 데이터 형식 간의 매핑을 제어 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.  
   
@@ -62,32 +64,32 @@ ms.lasthandoff: 11/17/2017
   
 |SQL Server 데이터 형식|XSD 데이터 형식|  
 |--------------------------|-------------------|  
-|**bigint**|**긴**|  
+|**bigint**|**long**|  
 |**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
-|**char**|**string**|  
+|**char**|**문자열**|  
 |**datetime**|**dateTime**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
 |**image**|**base64Binary**|  
 |**int**|**int**|  
 |**money**|**decimal**|  
-|**nchar**|**string**|  
-|**ntext**|**string**|  
-|**nvarchar**|**string**|  
+|**nchar**|**문자열**|  
+|**ntext**|**문자열**|  
+|**nvarchar**|**문자열**|  
 |**numeric**|**decimal**|  
 |**real**|**float**|  
 |**smalldatetime**|**dateTime**|  
-|**smallint**|**짧은**|  
+|**smallint**|**short**|  
 |**smallmoney**|**decimal**|  
-|**sql_variant**|**string**|  
-|**sysname**|**string**|  
-|**text**|**string**|  
+|**sql_variant**|**문자열**|  
+|**sysname**|**문자열**|  
+|**text**|**문자열**|  
 |**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**string**|  
-|**uniqueidentifier**|**string**|  
+|**varchar**|**문자열**|  
+|**uniqueidentifier**|**문자열**|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 주석  
  **sql: datatype** 주석은 지정 하는 데 사용 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식이 아니므로이 주석은 때 지정 해야 합니다:  

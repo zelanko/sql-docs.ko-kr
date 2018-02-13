@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ServiceName Property (SqlServiceAdvancedProperty Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- ServiceName Property (SqlServiceAdvancedProperty Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: ServiceName property
+helpviewer_keywords:
+- ServiceName property
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee122124d4b87eea0147b3da59456b795c7422df
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3af55be1227be99c7c36026e0013569c5f40813a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName 속성(SqlServiceAdvancedProperty 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]고급 속성과 연결 된 관리 되는 서비스의 이름을 가져옵니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+고급 속성과 연결된 관리되는 서비스의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

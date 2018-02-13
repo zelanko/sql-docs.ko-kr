@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b839baf4614d89b29d5244859735f1b3ccf1df19
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a56878e9a37195e63e03b04b84c4a8d296844ff2
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="about-change-data-capture-sql-server"></a>변경 데이터 캡처 정보(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 변경 데이터 캡처는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 적용되는 삽입, 업데이트 및 삭제 작업을 기록합니다. 이로 인해 변경 세부 정보가 쉽게 사용할 수 있는 관계형 형식으로 제공됩니다. 대상 환경에 변경 내용을 적용하는 데 필요한 열 정보 및 메타데이터가 수정된 행에 대해 캡처되고 추적된 원본 테이블의 열 구조를 반영하는 변경 테이블에 저장됩니다. 소비자가 변경 데이터에 체계적으로 액세스할 수 있도록 테이블 반환 함수가 제공됩니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+변경 데이터 캡처는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 적용되는 삽입, 업데이트 및 삭제 작업을 기록합니다. 이로 인해 변경 세부 정보가 쉽게 사용할 수 있는 관계형 형식으로 제공됩니다. 대상 환경에 변경 내용을 적용하는 데 필요한 열 정보 및 메타데이터가 수정된 행에 대해 캡처되고 추적된 원본 테이블의 열 구조를 반영하는 변경 테이블에 저장됩니다. 소비자가 변경 데이터에 체계적으로 액세스할 수 있도록 테이블 반환 함수가 제공됩니다.  
   
  이 기술의 대상이 될 수 있는 좋은 데이터 소비자 예로 ETL(추출, 변환 및 로드) 응용 프로그램을 들 수 있습니다. ETL 응용 프로그램은 증분식으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 테이블의 변경 데이터를 데이터 웨어하우스 또는 데이터 마트로 로드합니다. 데이터 웨어하우스 내에서 원본 테이블의 표현은 해당 원본 테이블의 변경 내용을 반영해야 하지만 원본 복제본을 새로 고치는 종단 간 기술은 적합하지 않습니다. 대신 소비자가 다른 종류의 데이터 대상 표현에 적용할 수 있도록 구조화된 안정적인 변경 데이터 스트림이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 데이터 캡처는 이러한 기술을 제공합니다.  
   

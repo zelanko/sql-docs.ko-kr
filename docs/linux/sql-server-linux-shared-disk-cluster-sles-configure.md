@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 SLES 공유 디스크 클러스터를 구성 합니다.
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-아래 종단 간 시나리오를 완료 하려면 두 노드 클러스터와 NFS 공유를 구성 하려면 다른 서버를 배포 하려면 두 컴퓨터 해야 합니다. 아래 단계 이러한 서버는 구성 하는 방법에 대해 간략하게 설명 합니다.
+다음과 같은 종단 간 시나리오를 완료 하려면 두 노드 클러스터와 NFS 공유를 구성 하려면 다른 서버를 배포 하는 두 개의 컴퓨터가 필요 합니다. 아래 단계 이러한 서버는 구성 하는 방법에 대해 간략하게 설명 합니다.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>설정 하 고 각 클러스터 노드에서 운영 체제를 구성 합니다.
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/01/2018
 
     > [!NOTE]
     > 설치 시 서버 마스터 키가 생성 된 SQL Server 인스턴스에 대 한 후 배치에 `/var/opt/mssql/secrets/machine-key`합니다. Linux에서 SQL Server는 항상 mssql 라는 로컬 계정으로 실행 됩니다. 로컬 계정을 이기 때문에 해당 id 노드 간에 공유 되지 않습니다. 따라서 서버 마스터 키를 해독 하 여 각 로컬 mssql 계정에 액세스할 수 있도록 암호화 키를 주 노드에서 각 보조 노드로 복사 해야 합니다.
-4. 주 노드에서 Pacemaker에 대 한 SQL server 로그인을 만들고 실행에 로그인 권한을 부여 `sp_server_diagnostics`합니다. Pacemaker는 SQL Server를 실행 하는 노드를 확인 하려면이 계정을 사용 합니다.
+4. 주 노드에서 Pacemaker에 대 한 SQL server 로그인을 만들고 실행에 로그인 권한을 부여 `sp_server_diagnostics`합니다. SQL Server를 실행 하는 노드를 확인 하려면이 계정을 사용 하는 pacemaker 합니다.
 
     ```bash
     sudo systemctl start mssql-server
@@ -203,7 +203,7 @@ SQL Server 데이터베이스 파일 경로 탑재 하도록 NFS를 공유 저�
 - **SQL Server 리소스 이름**: 클러스터 된 SQL Server 리소스에 대 한 이름입니다. 
 - **제한 시간 값**: 시간 제한 값은 클러스터 된 리소스가 온라인 상태가 되는 동안 대기 하는 시간입니다. SQL Server 하기 위해 수행할 수 있어야 하는 경우 SQL server는 `master` 데이터베이스를 온라인 상태로 있습니다. 
 
-사용자 환경에 대 한 아래의 스크립트에서 값을 업데이트 합니다. 구성 및 클러스터 된 서비스를 시작 하는 노드 하나에서 실행 합니다.
+사용자 환경에 대 한 다음 스크립트에서 값을 업데이트 합니다. 구성 및 클러스터 된 서비스를 시작 하는 노드 하나에서 실행 합니다.
 
 ```bash
 sudo crm configure

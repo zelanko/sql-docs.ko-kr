@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
-ms.openlocfilehash: 2f9d7d8697aa82caf3822cefefe83a2525a72e24
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 0e5a08655bcfea396bcf599ef65e7a8e1f126575
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>연결 라이브러리 및 Microsoft SQL Server에 대 한 프레임 워크
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-체크 아웃 우리의 [시작 자습서](http://aka.ms/sqldev) 을 빠르게 C#, Java, Node.js, PHP 및 Python 등의 언어와 프로그래밍 시작 macOS에서 Linux 또는 Windows 또는 Docker에서 SQL Server를 사용 하 여 응용 프로그램을 구축 합니다.
+체크 아웃 된 [시작 자습서](http://aka.ms/sqldev) 을 빠르게 C#, Java, Node.js, PHP 및 Python 등의 언어와 프로그래밍 시작 macOS에서 Linux 또는 Windows 또는 Docker에서 SQL Server를 사용 하 여 응용 프로그램을 구축 합니다.
 
-아래 표에 연결 라이브러리 또는 *드라이버* 클라이언트 응용 프로그램 또는 클라우드, Linux, Windows 또는 Docker 및 Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스에 연결 하 고 온-프레미스를 실행 중인 Microsoft SQL Server를 사용 하는 언어의 다양 한에서 사용할 수 있습니다. 
+다음 표에서 연결 라이브러리 또는 *드라이버* 연결 하 고 온-프레미스를 실행 중인 Microsoft SQL Server를 사용 하는 언어 또는 Linux, Windows 또는 Docker에서 클라우드에 다양 한 클라이언트 응용 프로그램에서 사용할 수 있습니다 및 또한에 Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스를 합니다. 
 
 | 언어 | 플랫폼 | 추가 리소스 | 다운로드 | 시작 |
 | :-- | :-- | :-- | :-- | :-- |
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 | Ruby | Windows, Linux, macOS | [SQL Server용 Ruby 드라이버](../connect/ruby/ruby-driver-for-sql-server.md) | [시작](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/ubuntu)
 | C++ | Windows, Linux, macOS | [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) | [다운로드](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) |  
 
-아래 표에 Linux, Windows 또는 Docker 및 Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스에 클라우드에서 개체 관계형 매핑 ORM () 프레임 워크 및 클라이언트 응용 프로그램은 온-프레미스를 실행 중인 Microsoft SQL Server 또는 사용할 수 있는 웹 프레임 워크의 몇 가지 예가 있습니다. 
+다음 표에서 Linux, Windows 또는 Docker 및 Azure SQL 데이터베이스에 클라우드 개체 관계형 매핑 ORM () 프레임 워크 및 클라이언트 응용 프로그램은 온-프레미스를 실행 중인 Microsoft SQL Server 또는 사용할 수 있는 웹 프레임 워크의 몇 가지 예를 보여 줍니다. 및 Azure SQL 데이터 웨어하우스 
 
 | 언어 | 플랫폼 | ORM(s) |
 | :-- | :-- | :-- |

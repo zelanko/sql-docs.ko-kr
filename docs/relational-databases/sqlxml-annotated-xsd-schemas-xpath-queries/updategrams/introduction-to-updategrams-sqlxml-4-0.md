@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b5a9ef6b56ee32f31b277273fb644a03925fdf0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 소개(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]수정할 수 있습니다 (삽입, 업데이트 또는 삭제)에서 데이터베이스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] updategram 이나 OPENXML을 사용 하 여 문서에서 기존 XML [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+수정할 수 있습니다 (삽입, 업데이트 또는 삭제)에서 데이터베이스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] updategram 이나 OPENXML을 사용 하 여 문서에서 기존 XML [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수입니다.  
   
  OPENXML 함수는 기존 XML 문서를 조각화하여 INSERT, UPDATE 또는 DELETE 문에 전달할 수 있는 행 집합을 제공함으로써 데이터베이스를 수정합니다. OPENXML을 사용하면 작업이 데이터베이스 테이블에 대해 직접 수행되기 때문에 OPENXML은 테이블과 같은 행 집합 공급자를 원본으로 표시할 수 있는 경우에 가장 적합합니다.  
   
@@ -66,13 +68,13 @@ ms.lasthandoff: 11/17/2017
   
  다음 정의는 각 블록의 역할에 대해 설명합니다.  
   
- **\<하기 전에 >**  
+ **\<before>**  
  레코드 인스턴스의 기존 상태("이전 상태"라고도 함)를 식별합니다.  
   
- **\<다음 >**  
+ **\<after>**  
  데이터가 변경될 새 상태를 식별합니다.  
   
- **\<동기화 >**  
+ **\<sync>**  
  포함 된  **\<하기 전에 >** 및  **\<후 >** 블록입니다. A  **\<동기화 >** 블록 집합이 여러 개 포함할 수 있습니다  **\<하기 전에 >** 및  **\<후 >** 블록입니다. 둘 이상의 집합이 있으면  **\<하기 전에 >** 및  **\<후 >** 블록, 이러한 블록 (도 비어 있는 경우) 해야 쌍으로 지정 합니다. 또한 updategram 둘 이상 있을 수  **\<동기화 >** 블록입니다. 각  **\<동기화 >** 블록은 하나의 트랜잭션 단위 (즉의 모든 요소가  **\<동기화 >** 블록은 완료 되거나 아무 요소도 처리). 여러 개 지정 하는 경우  **\<동기화 >** 하나에 오류가 updategram에 블록  **\<동기화 >** 블록 다른 레코드에 영향을 주지는 않습니다  **\<동기화 >** 블록입니다.  
   
  내용에 따라 달라 집니다 updategram를 삭제, 삽입 또는 업데이트은 레코드 인스턴스가 있는지 여부는  **\<하기 전에 >** 및  **\<후 >** 블록:  

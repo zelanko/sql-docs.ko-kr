@@ -8,14 +8,15 @@ ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.component: sql-linux
+ms.component: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>SQL Server 2017은 클라우드에서 실행
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 02/01/2018
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  에 연결 된 a m I s s h
-1.  선택한 Linux distrbution에 대 한 빠른 시작을 수행 합니다. 
+1.  선택한 Linux 배포판에 대 한 빠른 시작을 수행 합니다. 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/01/2018
 
     
 ## <a name="digital-ocean"></a>디지털 Ocean
-1. 로그인에는 [제어판](https://cloud.digitalocean.com/login) 드롭릿 만들기 클릭
+1. 에 로그인 하 고 [제어판](https://cloud.digitalocean.com/login) 드롭릿 만들기 클릭
 1. 최소 2GB의 메모리와 Ubuntu 16.04 드롭릿 선택
 1. 에 연결 된 드롭릿 ssh
 1. 수행 된 [Ubuntu 퀵 스타트](quickstart-install-connect-ubuntu.md)
@@ -58,10 +59,10 @@ ms.lasthandoff: 02/01/2018
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  이미지에 연결 된 ssh
-1.  선택한 Linux distrbution에 대 한 빠른 시작을 수행 합니다. 
+1.  선택한 Linux 배포판에 대 한 빠른 시작을 수행 합니다. 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  원격 연결에 대해 구성 합니다. 
     * 이동 하 여 [방화벽 규칙](https://console.cloud.google.com/networking/firewalls)
-    * SQL Server (기본 tcp: 1433)는 수신 포트의 트래픽을 허용 하는 인바운드 규칙 추가
+    * SQL Server는 수신 포트의 트래픽을 허용 하는 인바운드 규칙 추가 (기본 tcp: 1433)

@@ -8,26 +8,28 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SqlErrorLogEvent class
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 833b32a0224f6dd6445279d9e2ff45e113cfffb9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 197fafbe3d6cea3f1e2d99a49d4e75a3b4adbba7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 클래스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]지정 된 이벤트를 보기 위한 속성을 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일입니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에서 이벤트를 보기 위한 속성을 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -97,7 +99,7 @@ Next
   
 -   오류 로그를 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그는 다음 경로에 있습니다 (여기서 \< *드라이브 >* 설치한 드라이브를 나타내는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 \< *InstanceName*>은 인스턴스 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<드라이브 >: files\microsoft SQL Server\MSSQL13** **.\< 인스턴스 이름 > \MSSQL\Log**  
+     **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL13** **.\<InstanceName>\MSSQL\Log**  
   
  방화벽을 통해 연결하는 경우 방화벽에 원격 대상 컴퓨터의 WMI에 대한 예외가 설정되어 있는지 확인합니다. 자세한 내용은 참조 [WMI Remotely Starting with Windows Vista 연결할](http://go.microsoft.com/fwlink/?LinkId=178848)합니다.  
   

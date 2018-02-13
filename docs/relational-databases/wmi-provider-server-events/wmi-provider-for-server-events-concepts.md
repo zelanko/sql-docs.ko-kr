@@ -18,19 +18,20 @@ helpviewer_keywords:
 - monitoring events [WMI]
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37de98527c65803971285bd52134d26449954b23
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 90490b4884521f509d6e008f2bbde49605afd7b4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>서버 이벤트용 WMI 공급자 개념
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]서버 이벤트 용 WMI 공급자를 사용 하면 Windows Management Instrumentation (WMI)를 사용 하 여 이벤트의 인스턴스를 모니터링 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+서버 이벤트용 WMI 공급자를 통해 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이벤트를 모니터링할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [서버 이벤트용 WMI 공급자 이해](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  

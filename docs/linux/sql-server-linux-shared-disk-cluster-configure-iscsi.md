@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-iSCSI-Linux에서 SQL Server 구성
 
@@ -210,7 +210,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > 볼륨 그룹의 이름 및 \<LogicalVolumeName > 만든 논리 볼륨 이름입니다. 아래 예제에서는 구문 볼륨 그룹 및 위에서 만든 논리 볼륨에 일치 합니다.
+    \<VolumeGroupName > 볼륨 그룹의 이름 및 \<LogicalVolumeName > 만든 논리 볼륨 이름입니다. 다음 예에서는 구문을 볼륨 그룹 및 이전 명령에서 논리 볼륨에 일치 합니다.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -278,7 +278,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     mkdir <FolderName>
     ```
 
-    \<폴더 이름 > 폴더의 이름입니다. 폴더의 전체 경로를 지정 해야 할 경우 올바른 위치에 없습니다. 다음 예제에서는 /var/opt/mssql/userdata 라는 폴더를 만듭니다.
+    \<폴더 이름 > 폴더의 이름입니다. 폴더의 전체 경로 지정 해야 합니다. 올바른 위치에 없는 경우. 다음 예제에서는 /var/opt/mssql/userdata 라는 폴더를 만듭니다.
 
     ```bash
     mkdir /var/opt/mssql/userdata

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], queries
 - templates [SQLXML], annotated XSD schemas in queries
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a873bc0b382c1b81daed1cedb6ebb6229296ba7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cd63b4426bdc1b4adf9020b5cf4bd3e50622528
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>쿼리에 주석이 추가된 XSD 스키마 사용(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]서식 파일 XSD 스키마에 대해 XPath 쿼리를 지정 하 여 데이터베이스에서 데이터를 검색 하는 주석이 추가 된 스키마에 대 한 쿼리를 지정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+템플릿에 XDR 스키마에 대한 XPath 쿼리를 지정하는 방식으로 주석이 추가된 스키마에 대해 쿼리를 지정하여 데이터베이스에서 데이터를 검색할 수 있습니다.  
   
  **\<sql:xpath-쿼리 >** 요소를 사용 하면 주석이 추가 된 스키마에서 정의 된 XML 뷰에 대해 XPath 쿼리를 지정할 수 있습니다. 대상 XPath 쿼리를 실행할 수는 주석이 추가 된 스키마를 사용 하 여 식별 됩니다는 **매핑 스키마** 특성에는  **\<sql:xpath-쿼리 >** 요소입니다.  
   
@@ -145,6 +147,6 @@ ms.lasthandoff: 11/17/2017
 </sql:xpath-query>  
 ```  
   
- 이 템플릿에서는 XPath 쿼리만 지정하고 매핑 스키마는 지정하지 않습니다. 따라서이 쿼리는 취급는 **dbobject** 형식 쿼리는 Production.ProductPhoto가 테이블 이름 및 @ProductPhotoID= '100'이 ID 값이 100 인 제품 사진을 찾는 조건자 인 합니다. @LargePhoto값을 검색할 열이입니다.  
+ 이 템플릿에서는 XPath 쿼리만 지정하고 매핑 스키마는 지정하지 않습니다. 따라서이 쿼리는 취급는 **dbobject** 형식 쿼리는 Production.ProductPhoto가 테이블 이름 및 @ProductPhotoID= '100'이 ID 값이 100 인 제품 사진을 찾는 조건자 인 합니다. @LargePhoto 값을 검색할 열이입니다.  
   
   

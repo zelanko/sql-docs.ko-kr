@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 860d3571aa1edf7c467125de1cc2920a968eb704
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 RHEL 클러스터를 구성 합니다.
 
@@ -129,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>클러스터 속성을 false 시작 실패-은-치명적이 지 설정
 
-`start-failure-is-fatal`노드의 리소스를 시작 하지 해당 노드에서 시작 시도 하면 추가 하는지 여부를 나타냅니다. 로 설정 하면 `false`, 클러스터 리소스의 현재 오류 개수 및 마이그레이션 임계값에 따라 다시 동일한 노드에서 시작 여부를 결정 합니다. 장애 조치가 발생 한 후 Pacemaker 가용성 시작을 다시 시도 횟수 SQL 인스턴스를 사용할 수 있는 기본 전자에 리소스를 그룹화 합니다. 보조 복제본을 보조로 강등 pacemaker 하 고 가용성 그룹 하는 자동으로 다시 참여 합니다. 
+`start-failure-is-fatal` 노드의 리소스를 시작 하지 해당 노드에서 시작 시도 하면 추가 하는지 여부를 나타냅니다. 로 설정 하면 `false`, 클러스터 리소스의 현재 오류 개수 및 마이그레이션 임계값에 따라 다시 동일한 노드에서 시작 여부를 결정 합니다. 장애 조치가 발생 한 후 Pacemaker 가용성 시작을 다시 시도 횟수 SQL 인스턴스를 사용할 수 있는 기본 전자에 리소스를 그룹화 합니다. 보조 복제본을 보조로 강등 pacemaker 하 고 가용성 그룹 하는 자동으로 다시 참여 합니다. 
 
 속성 값을 업데이트 하려면 `false` 실행:
 

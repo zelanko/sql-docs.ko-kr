@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: 14119be0cc95be9f7acb324553b0c0598896c5d9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio 코드를 사용 하 여 만들고 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 합니다.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 항목에서는 사용 하는 **mssql** Visual Studio 코드 (VS) SQL Server 데이터베이스를 개발 하기에 대 한 확장입니다.
+이 문서에서는 사용 하는 **mssql** Visual Studio 코드 (VS) SQL Server 데이터베이스를 개발 하기에 대 한 확장입니다.
 
 Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그래픽 코드 편집기입니다. [**mssql** VS Code에 대 한 확장] TRANSACT-SQL (T-SQL) 사용 하 여 쿼리를 SQL Server에 연결 하 고 결과 볼 수 있습니다.
 
@@ -105,7 +105,7 @@ Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그
    | **[선택 사항] 이 프로필의 이름을 입력 합니다.** | 연결 프로필 이름입니다. 예를 들어 프로필 이름이 있습니다 **localhost 프로필**합니다. 
 
    > [!Tip] 
-   > 수 만들고 사용자 설정 파일 (settings.json)의 연결 프로필을 편집 합니다. 선택 하 여 설정 파일을 열고 **기본 설정** 차례로 **사용자 설정** VS Code 메뉴에서. 자세한 내용은 참조 하십시오. [연결 프로필을 관리]합니다.
+   > 수 만들고 사용자 설정 파일 (settings.json)의 연결 프로필을 편집 합니다. 선택 하 여 설정 파일을 열고 **기본 설정** 차례로 **사용자 설정** VS Code 메뉴에서. 자세한 내용은 참조 [연결 프로필을 관리]합니다.
 
 6. **Esc** 키를 눌러 프로필이 만들어지고 연결되었음을 알리는 정보 메시지를 닫습니다.
 

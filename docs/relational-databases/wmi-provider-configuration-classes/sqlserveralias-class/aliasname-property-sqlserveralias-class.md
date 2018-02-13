@@ -8,26 +8,31 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: AliasName Property (SqlServerAlias Class)
-apilocation: sqlmgmproviderxpsp2up.mof
-helpviewer_keywords: AliasName property
+apiname:
+- AliasName Property (SqlServerAlias Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
+helpviewer_keywords:
+- AliasName property
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 660399773c17f9d7669d19c893e6048f27300977
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fbf19bdd5162120d5aef48c4379b56fc89307c61
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName 속성(SqlServerAlias 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]서버 연결 별칭의 이름을 가져옵니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+서버 연결 별칭의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -29,19 +30,20 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d028ddf781edba7cc610966facc2e08b6bba58bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d36d141e552750650ede74ba2aba92b203825558
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 데이터 형식(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath 및 XSD (XML 스키마) 데이터 형식이 매우 다릅니다. 예를 들어 XPath에는 정수나 날짜 데이터 형식이 없지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 XSD에는 이러한 데이터 형식이 많습니다. XSD는 시간 값에 나노초 정밀도를 사용하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 최대 1/300초의 정밀도를 사용합니다. 따라서 한 데이터 형식을 다른 데이터 형식에 매핑할 수 없는 경우도 있습니다. 매핑에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 XSD 데이터 형식에 참조 [데이터 형식 강제 변환 및 sql: datatype 주석 &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath 및 XSD(XML 스키마)의 데이터 형식은 각각 다릅니다. 예를 들어 XPath에는 정수나 날짜 데이터 형식이 없지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 XSD에는 이러한 데이터 형식이 많습니다. XSD는 시간 값에 나노초 정밀도를 사용하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 최대 1/300초의 정밀도를 사용합니다. 따라서 한 데이터 형식을 다른 데이터 형식에 매핑할 수 없는 경우도 있습니다. 매핑에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 XSD 데이터 형식에 참조 [데이터 형식 강제 변환 및 sql: datatype 주석 &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  XPath는 세 가지 데이터 형식이: **문자열**, **번호**, 및 **부울**합니다. **번호** 데이터 형식은 항상는 IEEE 754 배정밀도 부동 소수점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float(53)** 데이터 형식이 XPath에 가장 가까운 **번호**합니다. 그러나 **float(53)** IEEE 754 정확 하 게 됩니다. 예를 들어 NaN(Not-a-Number)과 무한대는 모두 사용되지 않습니다. 숫자가 아닌 문자열을 변환 하는 동안 **번호** 오류가 0으로 나누려고 하려고 합니다.  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/17/2017
  노드 집합 변환이 항상 직관적이지는 않습니다. 노드 집합으로 변환 됩니다는 **문자열** 집합의 첫 번째 노드의 문자열 값을 수행 하 여 합니다. 노드 집합으로 변환 됩니다 **번호** 으로 변환 **문자열**, 다음 변환 **문자열** 를 **번호**합니다. 노드 집합으로 변환 됩니다 **부울** 있는지 여부를 테스트 하 여 합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 노드 집합에 대해 위치 선택을 수행하지 않습니다. 예를 들어 XPath 쿼리 `Customer[3]`는 세 번째 고객을 의미하는데 이러한 종류의 위치 선택이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원되지 않습니다. 따라서 노드-설정-에-**문자열** 또는 노드-설정-에-**번호** XPath 사양에서 설명 된 대로 변환이 구현 되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XPath 사양에 "첫 번째" 의미 체계가 지정된 경우 항상 "임의" 의미 체계를 사용합니다. 예를 들어 XPath 쿼리는 W3C XPath 사양에 따라 `Order[OrderDetail/@UnitPrice > 10.0]` 첫 번째 주문을 선택 **OrderDetail** 올려진는 **UnitPrice** 10.0 보다 큰 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],이 XPath 쿼리는 모든 주문을 선택 **OrderDetail** 올려진는 **UnitPrice** 10.0 보다 큰 합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노드 집합에 대해 위치 선택을 수행 하지 않습니다: 예를 들어 XPath 쿼리 `Customer[3]` 세 번째 고객을 의미 하는데 이러한 종류의 위치 선택에서 지원 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 따라서 노드-설정-에-**문자열** 또는 노드-설정-에-**번호** XPath 사양에서 설명 된 대로 변환이 구현 되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XPath 사양에 "첫 번째" 의미 체계가 지정된 경우 항상 "임의" 의미 체계를 사용합니다. 예를 들어 XPath 쿼리는 W3C XPath 사양에 따라 `Order[OrderDetail/@UnitPrice > 10.0]` 첫 번째 주문을 선택 **OrderDetail** 올려진는 **UnitPrice** 10.0 보다 큰 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],이 XPath 쿼리는 모든 주문을 선택 **OrderDetail** 올려진는 **UnitPrice** 10.0 보다 큰 합니다.  
   
  로 변환 **부울** 존재를 생성 테스트; 따라서 XPath 쿼리 `Products[@Discontinued=true()]` SQL 식과 동일 "Products.Discontinued is not null"는 SQL 식 "Products.Discontinued = 1". 쿼리를 후자 SQL 식과 동일 하도록 하려면 먼저 노드 집합을 변환 이외의**부울** 같은 입력 **번호**합니다. `Products[number(@Discontinued) = true()]`)을 입력합니다.  
   

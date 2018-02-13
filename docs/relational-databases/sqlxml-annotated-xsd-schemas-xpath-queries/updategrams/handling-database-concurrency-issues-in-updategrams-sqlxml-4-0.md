@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42193f8bcb67b8b89e0f3f2d435645cae3fc4b19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1e19d8397d59b4c85d60593c63faa5bc6f0f2ea4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Updategram의 데이터베이스 동시성 문제 처리(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]다른 데이터베이스 업데이트 메커니즘과 마찬가지로 updategram 동시 업데이트 다중 사용자 환경에서 데이터를 처리 해야 합니다. Updategram은 선택한 필드 데이터의 스냅숏을 비교하는 방법으로 업데이트 대상 데이터를 데이터베이스에서 마지막으로 읽은 이후 다른 사용자 응용 프로그램에서 해당 데이터를 변경했는지 여부를 확인하는 낙관적 동시성 제어를 사용합니다. Updategram에서 이러한 스냅숏 값이 없으면는  **\<하기 전에 >** 은 updategram의 블록입니다. 데이터베이스를 업데이트 하기 전에 updategram에 지정 된 값을 확인는  **\<하기 전에 >** 블록 업데이트가 유효한 지 확인 하기 위해 데이터베이스의 현재 값과 비교 합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+다른 데이터베이스 업데이트 메커니즘과 마찬가지로 updategram에서도 다중 사용자 환경에서 데이터의 동시 업데이트를 처리해야 합니다. Updategram은 선택한 필드 데이터의 스냅숏을 비교하는 방법으로 업데이트 대상 데이터를 데이터베이스에서 마지막으로 읽은 이후 다른 사용자 응용 프로그램에서 해당 데이터를 변경했는지 여부를 확인하는 낙관적 동시성 제어를 사용합니다. Updategram에서 이러한 스냅숏 값이 없으면는  **\<하기 전에 >** 은 updategram의 블록입니다. 데이터베이스를 업데이트 하기 전에 updategram에 지정 된 값을 확인는  **\<하기 전에 >** 블록 업데이트가 유효한 지 확인 하기 위해 데이터베이스의 현재 값과 비교 합니다.  
   
  낙관적 동시성 제어는 updategram에 낮음(없음), 중간, 높음이라는 세 가지 보호 수준을 제공합니다. Updategram을 적절하게 지정하여 필요한 보호 수준을 결정할 수 있습니다.  
   

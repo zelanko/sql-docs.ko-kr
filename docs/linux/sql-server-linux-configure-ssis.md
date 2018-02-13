@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 015c170e998fc824a8816010288b33be33d89005
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ee15f5b5124d96b2f8033515f95f03c3aab89ae3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Linux에서 SQL Server Integration Services ssis conf 구성
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 실행 하기는 `ssis-conf` 구성 스크립트 Red Hat Enterprise Linux 및 Ubuntu 용 SQL Server Integration Services (SSIS)를 설치 합니다. SSIS 설치에 대 한 자세한 내용은 참조 하십시오. [설치 Integration Services SSIS (SQL Server) linux](sql-server-linux-setup-ssis.md)합니다.
 
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 
 | Command | Description |
 |-------------|---------------------------------------------------------------------|
-| set 버전 | 버전의 SQL Server 설정                                       |
+| set-edition | 버전의 SQL Server 설정                                       |
 | 원격 분석   | SQL Server Integration Services 원격 분석 서비스를 사용할지 설정 합니다. |
 | 설치       | 초기화 하 고 Microsoft SQL Server Integration Services를 설정 합니다.      |
 |||

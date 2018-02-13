@@ -8,7 +8,8 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89b153d808010e26b5454d1a78058938ed2ea00b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d14958366c9dfa24343e244a8a5d5cb880fafa3e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자에 WQL 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]관리 응용 프로그램 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 쿼리 언어 (WQL) 문을 실행 하 여 서버 이벤트 용 WMI 공급자를 사용 하 여 이벤트입니다. WQL은 몇 가지 WMI 관련 확장 기능이 포함된 SQL(구조적 쿼리 언어)의 단순화된 일부입니다. WQL을 사용할 경우 응용 프로그램은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스, 데이터베이스 또는 데이터베이스 개체(현재 지원되는 유일한 개체는 큐임)에 대해 이벤트 유형을 검색합니다. 또는 데이터베이스 범위 또는 개체 범위 이벤트 알림의 대상 데이터베이스에서 생성 된 이벤트 알림으로 쿼리를 변환 하는 서버 이벤트 용 WMI 공급자는 **마스터** 서버 범위 이벤트에 대 한 데이터베이스 알림입니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+관리 응용 프로그램은 서버 이벤트용 WMI 공급자를 통해 WQL(WMI Query Language) 문을 실행하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트에 액세스합니다. WQL은 몇 가지 WMI 관련 확장 기능이 포함된 SQL(구조적 쿼리 언어)의 단순화된 일부입니다. WQL을 사용할 경우 응용 프로그램은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스, 데이터베이스 또는 데이터베이스 개체(현재 지원되는 유일한 개체는 큐임)에 대해 이벤트 유형을 검색합니다. 또는 데이터베이스 범위 또는 개체 범위 이벤트 알림의 대상 데이터베이스에서 생성 된 이벤트 알림으로 쿼리를 변환 하는 서버 이벤트 용 WMI 공급자는 **마스터** 서버 범위 이벤트에 대 한 데이터베이스 알림입니다.  
   
  예를 들어 다음 WQL 쿼리를 살펴보십시오.  
   
@@ -71,7 +73,7 @@ WHERE where_condition
  *event_property*  
  이벤트의 속성입니다. 예를 들면 **PostTime**, **SPID**, 및 **LoginName**합니다. 에 나열 된 각 이벤트를 조회 [서버 이벤트 클래스 및 속성에 대 한 WMI 공급자](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) 포함 된 속성을 확인 하려면. 예를 들어 DDL_DATABASE_LEVEL_EVENTS 이벤트 보유는 **DatabaseName** 및 **UserName** 속성입니다. 또한 상속 된 **SQLInstance**, **LoginName**, **PostTime**, **SPID**, 및 **ComputerName** 부모 이벤트에서 속성입니다.  
   
- **** *...n*  
+ **,** *...n*  
  나타냅니다 *event_property* 쿼리할 수를 여러 번 쉼표로 구분 합니다.  
   
  \*  

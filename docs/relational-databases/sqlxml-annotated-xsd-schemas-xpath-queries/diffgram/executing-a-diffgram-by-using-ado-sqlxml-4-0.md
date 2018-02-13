@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - data providers [SQLXML], SQLOLEDB Provider
 - DiffGrams [SQLXML], ADO
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4d9111e83a99b7f7ab217f418f4bdfb43b3b106
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3baa16c0f283e8066a764801f31422c6c2eb8f7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 DiffGram 실행(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 응용 프로그램 ADO를 사용 하 여 Microsoft의 인스턴스로 연결할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DiffGram을 빌드한 다음 실행 합니다. 이 응용 프로그램에서 DiffGram 및 XSD 스키마는 파일에 저장됩니다. 응용 프로그램은 지정된 파일에서 DiffGram을 로드합니다. Diffgram (및 연결 된 XSD 스키마) 중 하나를 사용할 수 있습니다에 설명 된 [DiffGram 예](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 응용 프로그램은 ADO를 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 DiffGram을 실행합니다. 이 응용 프로그램에서 DiffGram 및 XSD 스키마는 파일에 저장됩니다. 응용 프로그램은 지정된 파일에서 DiffGram을 로드합니다. Diffgram (및 연결 된 XSD 스키마) 중 하나를 사용할 수 있습니다에 설명 된 [DiffGram 예](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.  
   
  다음은 예제 응용 프로그램의 프로세스입니다.  
   

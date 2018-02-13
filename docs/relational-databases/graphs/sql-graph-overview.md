@@ -8,28 +8,29 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a0828b1e50472ecec5f256c9ddfe13e8f0db8b7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL 데이터베이스를 사용 하 여 처리 하는 그래프
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]모델의 다 대 다 관계를 그래프 데이터베이스 기능도 제공합니다. 그래프 관계에 통합 되어 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 수신 사용의 이점 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본적인 데이터베이스 관리 시스템으로 합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모델의 다 대 다 관계를 그래프 데이터베이스 기능도 제공합니다. 그래프 관계에 통합 되어 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 수신 사용의 이점 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본적인 데이터베이스 관리 시스템으로 합니다.
 
 
 ## <a name="what-is-a-graph-database"></a>그래프 데이터베이스 이란?  
@@ -46,12 +47,12 @@ ms.lasthandoff: 01/18/2018
 -   응용 프로그램에 복잡 한 다 대 다 관계입니다. 응용 프로그램 진화 함에 따라 새 관계 추가 됩니다.
 -   상호 연결 된 데이터 및 관계를 분석 해야 합니다.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>에 도입 된 그래프 기능[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>에 도입 된 그래프 기능 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 SQL server에 저장 하 고 쿼리 그래프 데이터를 쉽게 수행할 수 있도록 그래프 확장을 추가 합니다. 사용 하기 시작 합니다. 다음과 같은 기능이 첫 번째 릴리스에서 도입 됩니다. 
 
 
 ### <a name="create-graph-objects"></a>그래프 개체 만들기
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]확장 노드 또는 edge 테이블을 만드는 데는 사용자를 수 있습니다. 노드와 가장자리에 연결 된 속성에 있을 수 있습니다. 이후, 노드 및 가장자리 테이블로 저장 됩니다, 그리고 노드 또는 edge 테이블에 관계형 테이블에서 지원 되는 모든 작업이 지원 됩니다. 다음 예를 참조하세요.  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 확장 노드 또는 edge 테이블을 만드는 데는 사용자를 수 있습니다. 노드와 가장자리에 연결 된 속성에 있을 수 있습니다. 이후, 노드 및 가장자리 테이블로 저장 됩니다, 그리고 노드 또는 edge 테이블에 관계형 테이블에서 지원 되는 모든 작업이 지원 됩니다. 다음 예를 참조하세요.  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

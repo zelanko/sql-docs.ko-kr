@@ -1,11 +1,11 @@
 ---
 title: "버전 및 SQL Server 2017의 지원 되는 기능 ~ Linux | Microsoft Docs"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -35,13 +35,15 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e1734b7ec7619a6943e1d79a0933b6189ad3162d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>버전 및 SQL Server 2017 linux의 지원 되는 기능
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 SQL Server 2017 Linux에서 다양 한 버전에서 지 원하는 기능에 대 한 세부 정보를 제공 합니다. 버전 및 Windows에서 SQL Server의 지원 되는 기능에 대 한 참조 [SQL Server 2017-Windows](../sql-server/editions-and-components-of-sql-server-2017.md)합니다.  
   
@@ -81,7 +83,7 @@ SQL Server 2017 Linux에서 SQL Server 데이터베이스 엔진을 지원합니
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 포함 된 [!INCLUDE[ssDE](../includes/ssde-md.md)], 데이터베이스 분석 통합 및 저장, 처리 및 보안 데이터, 복제, 전체 텍스트 검색, 관계형 관리 하기 위한 도구 및 XML 데이터를 위한 핵심 서비스입니다.|  
 
 **Developer, Enterprise Core 및 Evaluation edition**  
-Developer, Enterprise Core 및 평가 버전에서 지 원하는 기능, 아래 표에 SQL Server Enterprise 버전에 대해 나열 된 기능을 참조 하세요.
+Developer, Enterprise Core 및 평가 버전에서 지 원하는 기능, SQL Server Enterprise edition은 다음 표에 나열 된 기능을 참조 하세요.
 
 Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)에 대해 클라이언트 1개만 계속 지원합니다. 
   

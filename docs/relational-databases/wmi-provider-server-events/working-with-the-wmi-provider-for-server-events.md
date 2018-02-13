@@ -22,19 +22,20 @@ helpviewer_keywords:
 - notifications [WMI]
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd4fd5dbd42a132dd5f3ab8f6eef376f1b6fc3dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: da5cc9e2163ba86ebb26f631c8b35d8590de27c5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자 작업
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]이 항목에서는 서버 이벤트 용 WMI 공급자를 사용 하 여 프로그래밍 하기 전에 고려해 야 할 지침을 제공 합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 서버 이벤트용 WMI 공급자를 사용하여 프로그래밍하기 전에 고려해야 할 사항에 대한 지침을 제공합니다.  
   
 ## <a name="enabling-service-broker"></a>Service Broker 사용  
  서버 이벤트용 WMI 공급자는 이벤트에 대한 WQL 쿼리를 대상 데이터베이스의 이벤트 알림으로 변환하는 방식으로 작동합니다. 이벤트 알림의 작동 방식에 대해 알고 있으면 공급자를 프로그래밍할 때 유용합니다. 자세한 내용은 [서버 이벤트용 WMI 공급자 개념](http://technet.microsoft.com/library/ms180560.aspx)을 참조하십시오.  

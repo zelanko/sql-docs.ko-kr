@@ -8,24 +8,27 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: security [SQLXML], about security
+helpviewer_keywords:
+- security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 185fd7894bf179bcc43df4c5b6ce9c31e702143f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a447b0efceee45f759743b245a7351dc381ba208
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="core-sqlxml-security-considerations"></a>핵심 SQLXML 보안 고려 사항
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]다음은 데이터 액세스에 SQLXML을 사용 하기 위한 보안 지침입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+다음은 데이터 액세스에 SQLXML을 사용하는 경우에 대한 보안 지침입니다.  
   
 -   SQLXMLOLEDB 공급자를 노출 한 **StreamFlags** 설정할 수 있는 속성에 SQLXML 기능을 설정 하거나 각 특정 인스턴스마다 해제할 수를 나타내는 플래그를 지정 합니다. 이 속성을 사용하여 SQLXML 사용을 사용자 지정하고 원하는 구성 요소만 사용되도록 설정할 수 있습니다. 자세한 내용은 참조 [SQLXMLOLEDB 공급자 &#40; SQLXML 4.0 &#41; ](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
   

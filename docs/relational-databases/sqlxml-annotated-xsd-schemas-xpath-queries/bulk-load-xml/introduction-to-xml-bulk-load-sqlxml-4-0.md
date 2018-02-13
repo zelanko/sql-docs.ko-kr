@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f687a25a48ff38ee8b109161e332f7306d64f177
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18950714bd976c224ef33627fb12528ad08b0584
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 대량 로드 소개(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XML 대량 로드는 반 구조화 된 XML 데이터를 Microsoft로 로드할 수 있는 독립 실행형 COM 개체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XML 대량 로드는 반구조화된 XML 데이터를 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 로드할 수 있게 해주는 독립 실행형 COM 개체입니다.  
   
  INSERT 문과 OPENXML 함수를 사용하여 XML 데이터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 삽입할 수 있습니다. 하지만 많은 양의 XML 데이터를 삽입해야 하는 경우 대량 로드 유틸리티가 더 나은 성능을 제공합니다.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 -   주석이 추가된 XSD 및 XDR 스키마. 주석이 추가 된 XSD 스키마에 대 한 자세한 내용은 참조 [주석이 추가 된 XSD 스키마 &#40; 소개 SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 주석이 추가 된 XDR 스키마에 대 한 정보를 참조 하십시오. [주석이 추가 된 XDR 스키마 &#40; SQLXML 4.0 &#41; 사용 되지 않음](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] BULK INSERT 문, bcp 유틸리티와 같은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 대량 삽입 메커니즘. 자세한 내용은 참조 [BULK insert&#40; Transact SQL &#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) 및 [bcp 유틸리티](../../../tools/bcp-utility.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 삽입 메커니즘 등의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT 문, bcp 유틸리티입니다. 자세한 내용은 참조 [BULK insert&#40; Transact SQL &#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) 및 [bcp 유틸리티](../../../tools/bcp-utility.md)합니다.  
   
 ## <a name="streaming-of-xml-data"></a>XML 데이터 스트리밍  
  원본 XML 문서가 클 수 있으므로 대량 로드 처리를 위해 전체 문서를 메모리로 읽어 오지는 않습니다. 대신 XML 대량 로드에서 XML 데이터를 스트림으로 해석하고 읽습니다. 유틸리티는 데이터를 읽는 동안 데이터베이스 테이블을 식별하고, XML 데이터 원본에서 적절한 레코드를 생성한 다음 삽입을 위해 해당 레코드를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 보냅니다.  

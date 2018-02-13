@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84195d2451664b2bee81ebbb1dc3b7d9d89060d5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>다중 서브넷 Always On 가용성 그룹 및 장애 조치 클러스터 인스턴스 구성
 
@@ -58,7 +58,7 @@ Windows 환경에서 Windows Server 장애 조치 클러스터 (WSFC)는 기본�
 
     여기서 *filename* CIB 호출 하려는 이름입니다.
 
-2.  생성 된 파일을 편집 합니다. 에 대 한 조회는 `<resources>` 섹션. AG 또는 FCI에 대해 생성 된 다양 한 리소스에 표시 됩니다. IP 주소와 연결 된 드라이브를 찾습니다. 추가 `<instance attributes>` 하기 전에 두 번째 IP 주소 위쪽 또는 아래쪽에 기존에 대 한 정보로 섹션 `<operations>`합니다. 다음 구문을 같이 표시 됩니다.
+2.  생성 된 파일을 편집 합니다. 에 대 한 조회는 `<resources>` 섹션. AG 또는 FCI에 대해 생성 된 다양 한 리소스에 표시 됩니다. IP 주소와 연결 된 드라이브를 찾습니다. 추가 `<instance attributes>` 하기 전에 두 번째 IP 주소 위쪽 또는 아래쪽에 기존에 대 한 정보로 섹션 `<operations>`합니다. 다음 구문을 비슷합니다.
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">

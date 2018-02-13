@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - templates [SQLXML], SQLXML Managed Classes
 - CommandStream property
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a751a312a4ef4a10ebf612ef81ef1132f58c5576
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3fbbbce8c44103da6a216ea2bcd973b8d464a374
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>CommandStream 속성을 사용하여 템플릿 파일 실행
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]이 예제는 SQL 또는 XPath 쿼리로 이루어진 템플릿 파일의 SqlXmlCommand 개체 CommandStream 속성을 사용 하 여 지정 하는 방법을 보여 줍니다. 이 응용 프로그램에서 한 FileStreamobject 명령 파일에 대 한 열리고 파일 스트림은 실행 되는 CommandStream으로 할당 됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+이 예제는 SQL 또는 XPath 쿼리로 이루어진 템플릿 파일의 SqlXmlCommand 개체 CommandStream 속성을 사용 하 여 지정 하는 방법을 보여 줍니다. 이 응용 프로그램에서 한 FileStreamobject 명령 파일에 대 한 열리고 파일 스트림은 실행 되는 CommandStream으로 할당 됩니다.  
   
  다음 예제에서에서는 CommandType 속성이 SqlXmlCommandType.Template (아니라, TemplateFile)으로 지정 됩니다.  
   

@@ -21,17 +21,18 @@ ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
 ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase에 기본 제공된 대화형 진단 도구를 사용하면 Kerberos 보안 Hadoop 클러스터에 대해 PolyBase를 사용할 때 인증 문제를 해결할 수 있습니다. 
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+PolyBase에 기본 제공된 대화형 진단 도구를 사용하면 Kerberos 보안 Hadoop 클러스터에 대해 PolyBase를 사용할 때 인증 문제를 해결할 수 있습니다. 
 
 이 문서는 이 도구를 활용하여 이러한 문제의 디버깅 프로세스를 살펴보기 위한 가이드입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 1. PolyBase가 설치된 SQL Server 2016 RTM CU6/SQL Server 2016 SP1 CU3/SQL Server 2017 이상
 1. Kerberos(Active Directory 또는 MIT)로 보호된 Hadoop 클러스터(Cloudera 또는 Hortonworks)
@@ -202,7 +203,7 @@ KDC 로그는 기본적으로 **/var/log/krb5kdc.log**에서 확인할 수 있�
 ### <a name="active-directory"></a>Active Directory 
 Active Directory에서는 [제어판] > [Active Directory 사용자 및 컴퓨터] > *MyRealm* > *MyOrganizationalUnit*으로 이동하여 SPN을 확인할 수 있습니다. Hadoop 클러스터가 제대로 Kerberize되었다면 사용 가능한 각 서비스(예: nn, dn, rm, yarn, spnego 등)에 SPN이 하나씩 있어야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)(Active Directory 인증을 사용하여 PolyBase와 Cloudera 통합)  
 [Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)(CDH의 Kerberos 설정에 대한 Cloudera 가이드)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)(HDP의 Kerberos 설정에 대한 Hortonworks 가이드)  

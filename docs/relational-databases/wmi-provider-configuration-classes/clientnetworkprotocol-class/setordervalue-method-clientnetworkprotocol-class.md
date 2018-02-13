@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetOrderValue Method (ClientNetworkProtocol Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetOrderValue Method (ClientNetworkProtocol Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetOrderValue method
+helpviewer_keywords:
+- SetOrderValue method
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be269f8784d3812c0110bfbc12c53f1ad6cca7d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1663a40671e6d5df2c407c1a99aa70751f587fbc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 메서드(ClientNetworkProtocol 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]클라이언트 프로토콜 목록에서 지정된 된 순서 값을 가진 프로토콜을 선택 합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+지정된 순서 값을 가진 프로토콜을 클라이언트 프로토콜 목록에서 선택합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +48,7 @@ object.SetOrderValue(OrderValue)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*OrderValue*|순서 값을 설정하는**int32** 값입니다.|  
   
@@ -52,7 +57,7 @@ object.SetOrderValue(OrderValue)
   
 ## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목:  
- [클라이언트 프로토콜 속성(순서 탭)](http://technet.microsoft.com/library/ms187884.aspx)  
+## <a name="see-also"></a>참고 항목  
+ [클라이언트 프로토콜 속성 (순서 탭)](http://technet.microsoft.com/library/ms187884.aspx)  
   
   

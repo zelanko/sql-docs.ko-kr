@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: bfd36553e4ac30b6d551e60cde02d57a7eec8fbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux에서 가용성 그룹
 
@@ -65,9 +65,9 @@ None 클러스터 유형에 대 한 요구 사항은 없습니다 또는 AG ´ �
 -   1 – 하나의 보조 복제본이 주;와 동기화 된 상태에서 여야 합니다. 자동 장애 조치가 가능 합니다. 동기 보조 복제본 사용 가능할 때까지 주 데이터베이스를 사용할 수 없는 경우
 -   2-3 개 이상의 노드 AG 구성의 두 보조 복제본을 주;와 동기화 되어야 합니다. 자동 장애 조치가 가능 합니다.
 
-`required_synchronized_secondaries_to_commit`뿐만 아니라 데이터 손실을 동기 복제본으로 장애 조치의 동작을 제어 합니다. 1 또는 2의 값으로 보조 복제본은 항상 동기화 할 필요 이므로 데이터 중복 됩니다. 즉, 데이터가 손실 되지 않습니다.
+`required_synchronized_secondaries_to_commit` 뿐만 아니라 데이터 손실을 동기 복제본으로 장애 조치의 동작을 제어 합니다. 1 또는 2의 값으로 보조 복제본은 항상 동기화 할 필요 이므로 데이터 중복 됩니다. 즉, 데이터가 손실 되지 않습니다.
 
-값을 변경 하려면 `required_synchronized_secondaries_to_commit`, 아래 구문 사용.
+값을 변경 하려면 `required_synchronized_secondaries_to_commit`, 다음 구문을 사용 합니다.
 
 >[!NOTE]
 >값을 변경 하면 일시적인 가동 중지 의미를 다시 시작 하려면 리소스를 하면 됩니다. 이 문제를 방지 하는 유일한 방법은 리소스를 관리 하지는 클러스터에 의해 일시적으로 설정 하는 합니다.
@@ -132,7 +132,7 @@ AG에 참여 하는 사용자 데이터베이스에 대 한 드라이브 및 폴
 
 수신기가 AG에 대 한 선택적 기능입니다. 응용 프로그램 및 최종 사용자가 데이터를 호스팅하는 서버에 알아야 않아도 있도록 모든 연결 (읽기/쓰기 주 복제본 및/또는 읽기 전용 보조 복제본)에 대 한 항목의 단일 지점을 제공 합니다. WSFC에서 DNS 뿐 아니라 네트워크 이름 리소스와 다음 AD DS (필요한 경우)에 등록 되어 있는 IP 리소스의 조합입니다. AG 리소스 자체와 함께, 해당 추상화를 제공합니다. 수신기에 대 한 자세한 내용은 참조 하십시오. [수신기, 클라이언트 연결 및 응용 프로그램 장애 조치](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)합니다.
 
-Linux 수신기가 다르게 구성 되어 있지만 해당 기능은 동일 합니다. Pacemaker에서 네트워크 이름 리소스의 개념이 없습니다 또는 AD DS;에 생성 하는 개체 노드 중 하나에서 실행할 수 있는 Pacemaker에서 만든 IP 주소 리소스만 있습니다. "이름"으로 DNS에서 수신기에 대 한 IP 리소스와 관련 된 항목을 만들어야 할 수 있습니다. 수신기 IP 리소스는만 해당 가용성 그룹에 대 한 주 복제본을 호스팅하는 서버에서 활성화 됩니다.
+Linux 수신기가 다르게 구성 되어 있지만 해당 기능은 동일 합니다. Pacemaker에서 네트워크 이름 리소스의 개념이 없습니다 또는 AD DS;에 생성 하는 개체 노드 중 하나에서 실행할 수 있는 Pacemaker에서 만든 IP 주소 리소스만 있습니다. "이름"으로 DNS에서 수신기에 대 한 IP 리소스와 관련 된 항목을 만들어야 합니다. 수신기 IP 리소스는만 해당 가용성 그룹에 대 한 주 복제본을 호스팅하는 서버에서 활성화 됩니다.
 
 Pacemaker을 사용 하는 경우 수신기와 연결 된 IP 주소 리소스 만들어집니다 됩니다 일시적인 가동 중지 한 서버에서 중지 하 고 다른에서 시작 하는 IP 주소 처럼 자동 또는 수동 장애 조치 인지 합니다. 단일 이름 및 IP 주소 조합 하 여 추상화를 제공이 중단을 마스킹하지 않습니다. 응용 프로그램은 어떤 종류의 기능이를 감지 하 여 다시 연결 하 여 연결 해제를 처리할 수 있어야 합니다.
 
@@ -151,7 +151,7 @@ None 클러스터 유형 AG의 복제본이 있으므로 동일한 AG의 Linux �
 
 ![하이브리드 없음](./media/sql-server-linux-availability-group-overview/image1.png)
 
-분산된 AG OS 경계를 넘을 수 수도 있습니다. 기본 Ag 구성 방법, 예: 외부 되 고 사용 하 여 구성에 대 한 규칙에 의해 바인딩된 Linux 전용 이지만 AG에 가입 된 WSFC를 사용 하 여 구성할 수 없습니다. 아래에 예가 나와 있습니다.
+분산된 AG OS 경계를 넘을 수 수도 있습니다. 기본 Ag 구성 방법, 예: 외부 되 고 사용 하 여 구성에 대 한 규칙에 의해 바인딩된 Linux 전용 이지만 AG에 가입 된 WSFC를 사용 하 여 구성할 수 없습니다. 다음 예를 살펴 보십시오.
 
 ![하이브리드 Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 

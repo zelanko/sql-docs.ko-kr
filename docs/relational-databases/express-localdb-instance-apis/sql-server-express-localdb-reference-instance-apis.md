@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d01b87a26674a213c1c0ed0f14a6ff867222fc4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b12274cfd0ee0c7703229cc416793fb23a1a91ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB 참조-인스턴스 Api
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]기존, 서비스 기반 SQL Server 환경에서는 단일 컴퓨터에 설치 하는 개별 SQL Server 인스턴스가 물리적으로 분리 되어; 즉, 각 인스턴스를 설치 해야 하 고 개별적으로 제거 별도의 이진 파일 집합 하 고은 별도 서비스 프로세스에서 실행. SQL Server 인스턴스 이름을 사용하여 연결할 SQL Server 인스턴스를 지정합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+기존 서비스 기반 SQL Server 환경에서는 단일 컴퓨터에 설치되는 개별 SQL Server 인스턴스가 실제로 분리됩니다. 즉, 각 인스턴스가 개별적으로 설치 및 제거되고, 별도의 이진 파일 집합을 사용하며, 별도의 서비스 프로세스에 따라 실행됩니다. SQL Server 인스턴스 이름을 사용하여 연결할 SQL Server 인스턴스를 지정합니다.  
   
  SQL Server Express LocalDB 인스턴스 API는 단순화된 "light" 인스턴스 모델을 사용합니다. 개별 LocalDB 인스턴스가 디스크와 레지스트리에서 분리되지만, 동일한 공유 LocalDB 이진 파일 집합을 사용합니다. 또한 LocalDB는 서비스를 사용하지 않으며, LocalDB 인스턴스는 LocalDB 인스턴스 API 호출을 통해 요청될 때 실행됩니다. LocalDB에서는 인스턴스 이름을 사용하여 작업할 LocalDB 인스턴스를 지정합니다.  
   

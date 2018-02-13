@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: FlagIndex Property (ClientSettingsGeneralFlag Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- FlagIndex Property (ClientSettingsGeneralFlag Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: FlagIndex property
+helpviewer_keywords:
+- FlagIndex property
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 281285c4c72a94507336884078034c8156cc5b85
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2661e60828e206789af41deb108bfec1bf8c258b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>FlagIndex 속성(ClientSettingsGeneralFlag 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]플래그의 인덱스 값을 가져옵니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+플래그의 인덱스 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +51,7 @@ object.FlagIndex [= value]
   
 ## <a name="remarks"></a>주의  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [클라이언트 프로토콜 구성](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

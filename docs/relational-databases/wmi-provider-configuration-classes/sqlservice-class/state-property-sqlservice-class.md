@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: State Property (SqlService Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- State Property (SqlService Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: State property
+helpviewer_keywords:
+- State property
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31b49dea8026ee0aae4406451179ee8bafd5c712
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3ba996af300626a03b61ea367791b27fbf1134e9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="state-property-sqlservice-class"></a>State 속성(SqlService 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]서비스의 현재 상태를 가져오거나 설정 합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+서비스의 현재 상태를 가져오거나 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +51,7 @@ object.State [= value]
   
  다음 값 중 하나일 수 있습니다.  
   
- 1  
+ 1.  
  중지됨. 서비스가 중지되었습니다.  
   
  2  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a7333141672e9c6979202a95f24d42cae0ed82e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b0b325cea845e82519752b04591c2c7724b1acf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 특성을 사용하여 대상 네임스페이스 지정(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XSD 스키마를 작성할에서 XSD를 사용할 수 있습니다 **targetNamespace** 특성 대상 네임 스페이스를 지정 합니다. 이 항목에서는 설명 어떻게 XSD **targetNamespace**, **elementFormDefault**, 및 **attributeFormDefault** 특성이 작동 되는 XML 인스턴스에 미치는 영향 생성 된 네임 스페이스와 XPath 쿼리를 지정 하는 방법 및 합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XSD 스키마를 작성할에서 XSD를 사용할 수 있습니다 **targetNamespace** 특성 대상 네임 스페이스를 지정 합니다. 이 항목에서는 설명 어떻게 XSD **targetNamespace**, **elementFormDefault**, 및 **attributeFormDefault** 특성이 작동 되는 XML 인스턴스에 미치는 영향 생성 된 네임 스페이스와 XPath 쿼리를 지정 하는 방법 및 합니다.  
   
  사용할 수는 **xsd: targetnamespace** 을 기본 네임 스페이스의 요소와 특성을 다른 네임 스페이스에 배치할 특성입니다. 또한 로컬로 선언된 스키마 요소 및 특성을 접두사를 사용하여 명시적으로 또는 암시적으로(기본 설정) 네임스페이스에서 정규화된 것으로 표시할지 여부를 지정할 수도 있습니다. 사용할 수는 **elementFormDefault** 및 **attributeFormDefault** 특성은  **\<xsd: schema >** 전체적으로 지정 하는 요소는 로컬 요소 및 특성 또는 사용자의 자격을 사용할 수는 **양식** 특성을 개별 요소와 특성을 개별적으로 지정 합니다.  
   

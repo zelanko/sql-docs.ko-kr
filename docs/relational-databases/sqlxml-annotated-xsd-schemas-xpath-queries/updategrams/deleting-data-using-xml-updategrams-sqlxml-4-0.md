@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adb763c45800ac1d64eeb8643134dddf5e7185db
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec9979c3c6f474cfd0702da990fa71be57d37bbf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삭제(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Updategram은 레코드 인스턴스가 표시 되는 경우 삭제 작업을 나타냅니다는  **\<하기 전에 >** 블록에서 해당 레코드가 없는  **\<후 >** 블록입니다. Updategram의 레코드를 삭제 하는 경우에  **\<하기 전에 >** 데이터베이스에서 블록입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Updategram은 레코드 인스턴스가 표시 되는 경우 삭제 작업을 나타냅니다는  **\<하기 전에 >** 블록에서 해당 레코드가 없는  **\<후 >** 블록입니다. Updategram의 레코드를 삭제 하는 경우에  **\<하기 전에 >** 데이터베이스에서 블록입니다.  
   
  삭제 작업에 대한 Updategram 형식은 다음과 같습니다.  
   

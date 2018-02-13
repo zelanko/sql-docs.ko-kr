@@ -11,24 +11,28 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SecurityCertificate Class
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SecurityCertificate Class
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SecurityCertificate class
+helpviewer_keywords:
+- SecurityCertificate class
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 875f31319805fd21fac37be4282a7dd85805cb2e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d81a903d33d474ab4c2f0350fd4a86de974d3ea6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 클래스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)][SecurityCertificate 클래스](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 보안 인증서를 나타냅니다. 인증서는 해당 개인 키를 보유하는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 공개 키 값을 바인딩하는 디지털 서명 문입니다. 인증서는 인증 기관에서 발급합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[SecurityCertificate 클래스](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 는 보안 인증서를 나타냅니다. 인증서는 해당 개인 키를 보유하는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 공개 키 값을 바인딩하는 디지털 서명 문입니다. 인증서는 인증 기관에서 발급합니다.  
   
  [SecurityCertificate 클래스](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)를 사용하여 다음 태스크를 수행할 수 있습니다.  
   

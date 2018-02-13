@@ -19,10 +19,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a4f97617decf23356dc663805494d5a2d9e2d72c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 보완 로깅 스크립트
   이 대화 상자에는 Oracle 보완 로깅 스크립트가 표시됩니다.  

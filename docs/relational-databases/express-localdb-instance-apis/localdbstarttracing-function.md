@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBStartTracing
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBStartTracing
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5550575a093f1b1e9f0fc40a61918bdf23d5f8a7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 581a1ead13d503e7445a20d84f753e4b3b80ede6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbstarttracing-function"></a>LocalDBStartTracing 함수
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]현재 Windows 사용자가 소유한 모든 SQL Server Express LocalDB 인스턴스에 대 한 호출을 추적 API 활성화 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+현재 Windows 사용자가 소유한 모든 SQL Server Express LocalDB 인스턴스에 대해 API 호출 추적을 활성화합니다.  
   
  **헤더 파일:** sqlncli.h  
   

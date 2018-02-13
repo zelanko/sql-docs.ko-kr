@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 660fe866db09675916d90cdf8130b2b99980b2ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>XML 문서를 사용 하 여 sql에서 스키마 요소 제외: 매핑된
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]모든 요소와 특성 XSD 스키마에는 기본 매핑으로 인해 데이터베이스 테이블/뷰 및 열에 매핑합니다. 지정할 수는 데이터베이스 테이블 (뷰) 또는 열에 매핑되지 않는 및 XML에 표시 되지 않는 XSD 스키마에 요소를 만들 하려는 경우는 **sql: 매핑된** 주석입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+기본 매핑 때문에 XSD 스키마의 모든 요소와 특성은 데이터베이스 테이블/뷰 및 열에 매핑됩니다. 지정할 수는 데이터베이스 테이블 (뷰) 또는 열에 매핑되지 않는 및 XML에 표시 되지 않는 XSD 스키마에 요소를 만들 하려는 경우는 **sql: 매핑된** 주석입니다.  
   
  **sql: 매핑된** 주석은 스키마를 수정할 수 없습니다 또는 스키마에서 XML 유효성 검사를 사용 하는 경우 다른 원본 아직 데이터를 포함 하며 데이터베이스에 저장 되지 않은 경우에 특히 유용 합니다. **sql: 매핑된** 주석에서와 다른 **sql:은 상수** 점에서 XML 문서에 매핑되지 않은 요소 및 특성이 표시 되지 않습니다.  
   

@@ -1,6 +1,6 @@
 ---
 title: "Linux에서 SQL Server 연결 암호화 | Microsoft Docs"
-description: "이 항목에서는 Linux에서 SQL Server 연결 암호화를 설명 합니다."
+description: "이 문서는 Linux에서 SQL Server 연결 암호화를 설명합니다."
 author: tmullaney
 ms.date: 01/30/2018
 ms.author: meetb
@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: c8d57e65d060ff6958f07fbb57ab97806d99402c
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 646a876fb7cedc4733e4d3a60ef86361ab151c4f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux에서 SQL Server 연결 암호화
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux 수를 사용 하 여 보안 TLS (전송 계층)의 인스턴스와 클라이언트 응용 프로그램 간에 네트워크를 통해 전송 되는 데이터를 암호화 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows와 Linux 모두에서 동일한 TLS 프로토콜을 지원: TLS 1.2, 1.1 및 1.0입니다. 그러나 TLS를 구성 하는 단계는 운영 체제를 관련이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 합니다.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux 수를 사용 하 여 보안 TLS (전송 계층)의 인스턴스와 클라이언트 응용 프로그램 간에 네트워크를 통해 전송 되는 데이터를 암호화 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows와 Linux 모두에서 동일한 TLS 프로토콜을 지원: TLS 1.2, 1.1 및 1.0입니다. 그러나 TLS를 구성 하는 단계는 운영 체제를 관련이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 합니다.  
 
 ## <a name="requirements-for-certificates"></a>인증서에 대 한 요구 사항 
 시작 하기 전에 인증서를 이러한 요구 사항을 수행 되도록 해야 합니다.
@@ -70,9 +70,9 @@ TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호
         - **SUSE**: 인증서를 복사 ```/usr/share/pki/trust/anchors/``` 사용 ```update-ca-certificates``` 시스템 CA 인증서로 사용 하도록 설정 합니다.
         - **Windows**:-> 인증서 루트 인증 기관 트러스트 된-> 현재 사용자 인증서로.pem 파일 가져오기
         - **macOS**: 
-           - 인증서를 복사 합니다.```/usr/local/etc/openssl/certs```
-           - 해시 값을 가져오려면 다음 명령을 실행 합니다.```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - 값은 인증서를 이름을 바꿉니다. 예를 들면 ```mv mssql.pem dc2dd900.0```과 같습니다. Dc2dd900.0에 있는지 확인```/usr/local/etc/openssl/certs```
+           - 인증서를 복사 합니다. ```/usr/local/etc/openssl/certs```
+           - 해시 값을 가져오려면 다음 명령을 실행 합니다. ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - 값은 인증서를 이름을 바꿉니다. 예를 들면 ```mv mssql.pem dc2dd900.0```과 같습니다. Dc2dd900.0에 있는지 확인 ```/usr/local/etc/openssl/certs```
     
 -   **연결 문자열 예** 
 

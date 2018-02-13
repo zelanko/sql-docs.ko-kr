@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.workload: On Demand
-ms.openlocfilehash: 12a0f16762cac5411616d2add3fe548d7f7ec6c7
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a7cc0015af2ca7af7821175cdb836f71ba0ac6f5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 bcp 사용 하 여 대량 복사 데이터
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="install-the-sql-server-command-line-tools"></a>SQL Server 명령줄 도구를 설치 합니다.
 
-`bcp`Linux에서 SQL Server와 함께 자동으로 설치 되어 있지 않은 SQL Server 명령줄 도구를의 일부가입니다. Linux 컴퓨터에서 SQL Server 명령줄 도구를 아직 설치 하지 있는 경우 설치 해야 합니다. 도구를 설치 하는 방법에 대 한 자세한 내용은 다음 목록에서 Linux 배포판을 선택 합니다.
+`bcp` Linux에서 SQL Server와 함께 자동으로 설치 되어 있지 않은 SQL Server 명령줄 도구를의 일부가입니다. Linux 컴퓨터에서 SQL Server 명령줄 도구를 아직 설치 하지 있는 경우 설치 해야 합니다. 도구를 설치 하는 방법에 대 한 자세한 내용은 다음 목록에서 Linux 배포판을 선택 합니다.
 
 - [Red Hat Enterprise Linux(RHEL)](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)

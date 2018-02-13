@@ -9,16 +9,16 @@ ms.topic: tutorial
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: mvc
+ms.custom: sql-linux,mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 4ada1034b64f710f4eeae995b771ef8be5bf4fe2
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a21856b3a864373f84ad304484ecdd88ac17f52a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>고가용성을 위해 Kubernetes에서 SQL Server 컨테이너 구성
 
@@ -119,7 +119,7 @@ Kubernetes 클러스터에서 SA 암호를 생성 합니다. Kubernetes 암호 �
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
-   `<Path to pvc.yaml file>`파일을 저장 위치가입니다.
+   `<Path to pvc.yaml file>` 파일을 저장 위치가입니다.
 
    영구 볼륨은 자동으로 Azure 저장소 계정으로 생성 되 고 영구 볼륨 클레임에 바인딩됩니다. 
 
@@ -131,7 +131,7 @@ Kubernetes 클러스터에서 SA 암호를 생성 합니다. Kubernetes 암호 �
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
-   `<PersistentVolumeClaim>`영구 볼륨 클레임의 이름이입니다.
+   `<PersistentVolumeClaim>` 영구 볼륨 클레임의 이름이입니다.
 
    이전 단계에서 영구 볼륨 클레임 이름은 `mssql-data`합니다. 영구 볼륨 클레임에 대 한 메타 데이터를 보려면 다음 명령을 실행 합니다.
 
@@ -153,7 +153,7 @@ Kubernetes 클러스터에서 SA 암호를 생성 합니다. Kubernetes 암호 �
    kubectl describe pv
    ```
 
-   `kubectl`자동으로 생성 되어 영구 볼륨 클레임에 바인딩된 영구 볼륨에 대 한 메타 데이터를 반환 합니다. 
+   `kubectl` 자동으로 생성 되어 영구 볼륨 클레임에 바인딩된 영구 볼륨에 대 한 메타 데이터를 반환 합니다. 
 
 ## <a name="create-the-deployment"></a>배포를 만들기
 
@@ -242,7 +242,7 @@ Kubernetes 클러스터에서 SA 암호를 생성 합니다. Kubernetes 암호 �
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
-   `<Path to sqldeployment.yaml file>`파일을 저장 위치가입니다.
+   `<Path to sqldeployment.yaml file>` 파일을 저장 위치가입니다.
 
    ![배포 명령 스크린 샷](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
 
@@ -293,8 +293,8 @@ SQL Server 인스턴스에 연결 하려면 다음 응용 프로그램을 사용
 
    다음 값을 바꿉니다.
       
-    - `<External IP Address>`에 대 한 IP 주소와는 `mssql-deployment` 서비스 
-    - `MyC0m9l&xP@ssw0rd`사용자의 암호
+    - `<External IP Address>` 에 대 한 IP 주소와는 `mssql-deployment` 서비스 
+    - `MyC0m9l&xP@ssw0rd` 사용자의 암호
 
 ## <a name="verify-failure-and-recovery"></a>오류 및 복구를 확인 합니다.
 
@@ -313,7 +313,7 @@ SQL Server 인스턴스에 연결 하려면 다음 응용 프로그램을 사용
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
-   `mssql-deployment-0`pod 이름에 대해 이전 단계에서 반환 된 값입니다. 
+   `mssql-deployment-0` pod 이름에 대해 이전 단계에서 반환 된 값입니다. 
 
 Kubernetes 자동으로 다시 만들지만 포드를 SQL Server 인스턴스를 복구 하 고 영구 저장소에 연결 합니다. 사용 하 여 `kubectl get pods` 새 pod가 배포 되었는지 확인 합니다. 사용 하 여 `kubectl get services` 새 컨테이너에 대 한 IP 주소가 동일 인지 확인 합니다. 
 

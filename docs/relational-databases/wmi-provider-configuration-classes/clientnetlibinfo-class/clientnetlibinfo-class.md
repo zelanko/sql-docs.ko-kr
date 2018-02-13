@@ -11,23 +11,27 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ClientNetLibInfo Class
-apilocation: sqlmgmproviderxpsp2up.mof
-helpviewer_keywords: ClientNetLibInfo class
+apiname:
+- ClientNetLibInfo Class
+apilocation:
+- sqlmgmproviderxpsp2up.mof
+helpviewer_keywords:
+- ClientNetLibInfo class
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa38feac5529dd454bb74d39fad34b6fb7ef5af5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 93d8b5374a8112d4d2ab5fa48f94831d0c3dbdf5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="clientnetlibinfo-class"></a>ClientNetLibInfo 클래스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)][ClientNetLibInfo 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 클라이언트 네트워크 라이브러리에 대 한 정보를 나타냅니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[ClientNetLibInfo 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 는 클라이언트 네트워크 라이브러리에 대한 정보를 나타냅니다.  
   
  클라이언트 네트워크 라이브러리 파일을 통해 클라이언트 인스턴스는 특정 네트워크 프로토콜을 사용하여 네트워크를 통해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스와 통신할 수 있습니다.  
   

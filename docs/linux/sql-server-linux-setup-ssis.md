@@ -10,16 +10,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: accd3a7f7abe9dd4771971e241868ef61a4f5dd0
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d2715583f9898afe9101be4d24729547730ae376
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux에서 SQL Server Integration Services (SSIS)를 설치 합니다.
 
@@ -32,7 +32,7 @@ SQL Server Integration Services를 설치 하려면이 문서의 단계에 따�
 - [Ubuntu](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a>Ubuntu SSIS를 설치 합니다.
+## <a name="ubuntu"></a> Ubuntu SSIS를 설치 합니다.
 설치 하는 `mssql-server-is` ubuntu 패키지에서 다음이 단계를 수행 합니다.
 
 1. 공용 저장소 GPG 키를 가져옵니다.
@@ -79,7 +79,7 @@ sudo apt-get install mssql-server-is
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a>RHEL에 SSIS를 설치 합니다.
+## <a name="RHEL"></a> RHEL에 SSIS를 설치 합니다.
 설치 하는 `mssql-server-is` RHEL에 패키지에서 다음이 단계를 수행 합니다.
 
 1. Microsoft SQL Server Red Hat 저장소 구성 파일을 다운로드 합니다.

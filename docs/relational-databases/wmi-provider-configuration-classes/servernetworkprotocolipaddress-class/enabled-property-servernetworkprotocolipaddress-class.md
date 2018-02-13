@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Enabled Property (ServerNetworkProtocolIpAddress Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- Enabled Property (ServerNetworkProtocolIpAddress Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: Enabled property
+helpviewer_keywords:
+- Enabled property
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 755178e6e89d380bc1ad6d38b755a9d6194cbfe5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80aee42f0011da9cb1fdbf3edd3f1a7179c9aba1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Enabled 속성(ServerNetworkProtocolIpAddress 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]IP 주소를 사용할 수 있는지 여부를 지정 하는 부울 속성을 가져옵니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+IP 주소가 설정되었는지 여부를 지정하는 부울 속성을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

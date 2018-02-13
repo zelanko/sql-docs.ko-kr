@@ -19,10 +19,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9dfd4fa6aecb1769a5e7ed2838cc1fb0b39f04f1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="look-up-infoobject"></a>InfoObject 조회
   **InfoObject 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 InfoObject를 조회할 수 있습니다. 사용할 수 있는 InfoObject 목록이 표시될 때 원하는 InfoObject를 선택하면 관련 옵션이 SAP BW 대상의 값으로 채워집니다.  

@@ -1,6 +1,6 @@
 ---
 title: "Linux에서 SQL Server 명령줄 도구를 설치 합니다. | Microsoft Docs"
-description: "이 항목에서는 Linux에서 SQL Server 도구를 설치 하는 방법에 설명 합니다."
+description: "이 문서에서는 Linux에서 SQL Server 도구를 설치 하는 방법을 설명 합니다."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 16a2366541809237609c88f8458a3930a5569c3a
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 7a23c561b34668a46f86aaad006ff6faacb41f49
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux에서 sqlcmd 및 bcp SQL Server 명령줄 도구를 설치
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/01/2018
 - [macOS](#macos)
 - [Docker](#docker)
 
-이 항목에서는 명령줄 도구를 설치 하는 방법에 설명 합니다. 사용 하는 방법의 예제를 보려면 원하는 경우 **sqlcmd** 또는 **bcp**, 참조는 [링크](#next-steps) 이 항목의 끝에 있습니다.
+이 문서에서는 이러한 명령줄 도구를 설치 하는 방법을 설명 합니다. 사용 하는 방법의 예제를 보려면 원하는 경우 **sqlcmd** 또는 **bcp**, 참조는 [링크](#next-steps) 이 항목의 끝에 있습니다.
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>RHEL 7에서 도구를 설치 합니다.
 
@@ -180,7 +180,7 @@ ms.lasthandoff: 02/01/2018
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>MacOS에서 도구를 설치 합니다.
+## <a id="macos"></a> MacOS에서 도구를 설치 합니다.
 
 미리 보기 **sqlcmd** 및 **bcp** macOS에 출시 되었습니다. 자세한 내용은 참조는 [알림](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)합니다.
 

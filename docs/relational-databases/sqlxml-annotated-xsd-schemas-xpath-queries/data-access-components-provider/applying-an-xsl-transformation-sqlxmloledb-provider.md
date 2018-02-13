@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c1e66cf59b69b1dbcedc898cef8426c814eac78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb5a39d9069824e21b9c6fee2489b0c16c66e76f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>XSL 변환 적용(SQLXMLOLEDB 공급자)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]이 예제 ADO 응용 프로그램에서 SQL 쿼리를 실행 하 고 결과에 XSL 변환을 적용 됩니다. 클라이언트 쪽에서 행 집합의 처리를 적용 ClientSideXML 속성을 True로 설정 합니다. 이 예에서는 명령 언어가 {5d531cb2-e6ed-11d2-b252-00c04f681b71}로 설정되었는데 그 이유는 SQL 쿼리가 템플릿에 지정되었고, 템플릿을 실행하려면 이 명령 언어를 지정해야 하기 때문입니다. Xsl 속성 변환을 적용 하는 데 XSL 파일을 지정 합니다. XSL 파일을 검색할 기본 경로 속성의 값 사용 됩니다. Xsl 속성의 값에 경로 지정 하는 경우 경로 Base Path 속성에 지정 된 경로 상대적입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+이 예제 ADO 응용 프로그램에서는 SQL 쿼리를 실행하고 결과에 XSL 변환을 적용합니다. 클라이언트 쪽에서 행 집합의 처리를 적용 ClientSideXML 속성을 True로 설정 합니다. 이 예에서는 명령 언어가 {5d531cb2-e6ed-11d2-b252-00c04f681b71}로 설정되었는데 그 이유는 SQL 쿼리가 템플릿에 지정되었고, 템플릿을 실행하려면 이 명령 언어를 지정해야 하기 때문입니다. Xsl 속성 변환을 적용 하는 데 XSL 파일을 지정 합니다. XSL 파일을 검색할 기본 경로 속성의 값 사용 됩니다. Xsl 속성의 값에 경로 지정 하는 경우 경로 Base Path 속성에 지정 된 경로 상대적입니다.  
   
  이 예에서는 다음 SQLXMLOLEDB 공급자별 속성을 사용하는 방법을 보여 줍니다.  
   

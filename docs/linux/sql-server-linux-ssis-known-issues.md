@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: edff09c1c66a1b3c97a80d42d5a1d9702dca3e0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Linux에서 SSIS에 대 한 알려진된 문제 및 제한
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 설명 현재 제한 사항 및 알려진된 문제 SQL Server Integration Services (SSIS)에 대 한 linux.
 
@@ -40,7 +42,7 @@ Linux에서 SSIS의이 릴리스에서 다음과 같은 기능이 지원 되지 
 
 다른 제한 사항 및 Linux에서 SSIS의 알려진된 문제에 대 한 참조는 [릴리스 정보](sql-server-linux-release-notes.md#ssis)합니다.
 
-## <a name="components"></a>지원 되는 / 지원 되지 않는 구성 요소
+## <a name="components"></a> 지원 되는 / 지원 되지 않는 구성 요소
 
 다음 기본 제공 Integration Services 구성 요소는 Linux에서 지원 됩니다. 그 중 일부는 다음 표에 설명 된 대로 Linux 플랫폼에는 제한이 있습니다.
 
@@ -55,7 +57,7 @@ Linux에서 SSIS의이 릴리스에서 다음과 같은 기능이 지원 되지 
 - 식 태스크
 - FTP 태스크
 - 웹 서비스 태스크
-- XML 태스크
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>제어 흐름 작업 제한 사항과 함께 지원
 

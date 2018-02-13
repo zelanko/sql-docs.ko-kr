@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5f52c5f83ca91b196f0bf2f05e98fb73133b4c8a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu 클러스터와 가용성 그룹 리소스 구성
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/09/2018
 이 문서에서는 ubuntu 3 개 노드 클러스터를 만들고 이전에 만든된 가용성 그룹에 클러스터 리소스로 추가 하는 방법을 설명 합니다. 고가용성을 위해 Linux에서 가용성 그룹에 노드가 3 개 필요-참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다.
 
 > [!NOTE] 
-> 이 시점에서 linux Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. sql에서 클러스터의 존재에 대 한 지식이 없는, 모든 오케스트레이션은 외부 in 않으며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에는 동일한 동등한 옵션이 없습니다. Always On 동적 관리 뷰 클러스터 정보를 쿼리 하는 빈 행을 반환 합니다. 장애 조치 후 투명 하 게 다시 연결에 사용할 수신기를 만들 수 있지만 수동으로 (아래 설명 됨) 가상 IP 리소스를 만드는 데 ip에서 수신기 이름을 DNS 서버에 등록 해야 합니다.
+> 이 시점에서 linux Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. sql에서 클러스터의 존재에 대 한 지식이 없는, 모든 오케스트레이션은 외부 in 않으며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에는 동일한 동등한 옵션이 없습니다. Always On 동적 관리 뷰 클러스터 정보를 쿼리 하는 빈 행을 반환 합니다. 장애 조치 후 투명 하 게 다시 연결에 사용할 수신기를 만들 수 있지만 수동으로 (다음 섹션에서 설명)으로 가상 IP 리소스를 만드는 데 ip에서 수신기 이름을 DNS 서버에 등록 해야 합니다.
 
 다음 섹션에서는 장애 조치 클러스터 솔루션을 설정 하는 단계를 안내 합니다. 
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. 클러스터를 만듭니다. 
 
    >[!WARNING]
-   >클러스터링 공급 업체는 조사 하 고, 시작 하는 알려진된 문제로 인해 클러스터 ('pc 클러스터 start')는 아래의 오류와 함께 실패 합니다. 해당 하는 클러스터 설치 명령을 실행 하는 때 만들어지는 잘못 /etc/corosync/corosync.conf에 구성 된 로그 파일 때문입니다. 이 문제를 해결 하려면 로그 파일을 변경: /var/log/corosync/corosync.log 합니다. 또는 /var/log/cluster/corosync.log 파일을 만들 수 있습니다.
+   >클러스터링 공급 업체는 조사 하 고, 시작 하는 알려진된 문제로 인해 클러스터 ('pc 클러스터 start') 다음 오류와 함께 실패 합니다. 해당 하는 클러스터 설치 명령을 실행 하는 때 만들어지는 잘못 /etc/corosync/corosync.conf에 구성 된 로그 파일 때문입니다. 이 문제를 해결 하려면 로그 파일을 변경: /var/log/corosync/corosync.log 합니다. 또는 /var/log/cluster/corosync.log 파일을 만들 수 있습니다.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -137,7 +137,7 @@ sudo systemctl enable pacemaker
 
 ## <a name="configure-fencing-stonith"></a>펜스 (STONITH) 구성
 
-Pacemaker 클러스터 공급 업체를 사용 하도록 설정할 STONITH와 지원 되는 클러스터 설치에 대해 구성 된 펜싱 장치에 필요 합니다. 클러스터 리소스 관리자 상태 노드 또는 노드에 있는 리소스의을 확인할 수 없는 경우 펜싱 클러스터도 알려진 상태로 다시 전환 하는 데 사용 됩니다. 리소스 수준 펜싱 하면 주로 리소스를 구성 하 여 중단 시 데이터 손상 되지 않습니다. 리소스 수준 펜싱을 사용할 수 있습니다 예를 들어, 오래 된 경우 처럼 노드에서 디스크를 표시 하려면 (복제 블록 장치 Distributed) DRBD와 통신 링크의 작동이 중지 합니다. 노드 수준 펜싱 하면 노드 모든 리소스를 실행 하지 않습니다. 노드를 다시 설정 하 여 이렇게 및는 Pacemaker 구현의 STONITH (있음 "헤드에 있는 다른 노드가 해결"에 대 한 의미) 라고 합니다. 예를 들어 무정전 전원 공급 장치 또는 관리 서버에 대 한 카드 인터페이스, pacemaker 매우 다양 한 펜싱 장치를 지원 합니다. 자세한 내용은 참조 하십시오. [처음부터 Pacemaker 클러스터](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) 및 [펜싱 및 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
+Pacemaker 클러스터 공급 업체를 사용 하도록 설정할 STONITH와 지원 되는 클러스터 설치에 대해 구성 된 펜싱 장치에 필요 합니다. 클러스터 리소스 관리자 상태 노드 또는 노드에 있는 리소스의을 확인할 수 없는 경우 펜싱 클러스터도 알려진 상태로 다시 전환 하는 데 사용 됩니다. 리소스 수준 펜싱 하면 주로 리소스를 구성 하 여 중단 시 데이터 손상 되지 않습니다. 리소스 수준 펜싱을 사용할 수 있습니다 예를 들어, 오래 된 경우 처럼 노드에서 디스크를 표시 하려면 (복제 블록 장치 Distributed) DRBD와 통신 링크의 작동이 중지 합니다. 노드 수준 펜싱 하면 노드 모든 리소스를 실행 하지 않습니다. 노드를 다시 설정 하 여 이렇게 및는 Pacemaker 구현의 STONITH (있음 "헤드에 있는 다른 노드가 해결"에 대 한 의미) 라고 합니다. 예를 들어 무정전 전원 공급 장치 또는 관리 서버에 대 한 카드 인터페이스, pacemaker 매우 다양 한 펜싱 장치를 지원 합니다. 자세한 내용은 참조 [처음부터 Pacemaker 클러스터](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) 및 [펜싱 및 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
 노드 수준 구성 방어 사용자 환경에 따라 크게 달라 집니다, 있으므로 (구성할 수 있습니다는 나중에)이이 자습서에 대 한 비활성화 했습니다. 주 노드에서 다음 스크립트를 실행 합니다. 
 
@@ -150,7 +150,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>클러스터 속성을 false 시작 실패-은-치명적이 지 설정
 
-`start-failure-is-fatal`노드의 리소스를 시작 하지 해당 노드에서 시작 시도 하면 추가 하는지 여부를 나타냅니다. 로 설정 하면 `false`, 클러스터 리소스의 현재 오류 개수 및 마이그레이션 임계값에 따라 다시 동일한 노드에서 시작 여부를 결정 합니다. 따라서 장애 조치 발생 후 Pacemaker 다시 시도 시작 하는 가용성 그룹 리소스에 기본 전자 SQL 인스턴스를 사용할 수 있는 합니다. 보조 복제본을 보조로 강등 pacemaker 하 고 가용성 그룹 하는 자동으로 다시 참여 합니다. 
+`start-failure-is-fatal` 노드의 리소스를 시작 하지 해당 노드에서 시작 시도 하면 추가 하는지 여부를 나타냅니다. 로 설정 하면 `false`, 클러스터 리소스의 현재 오류 개수 및 마이그레이션 임계값에 따라 다시 동일한 노드에서 시작 여부를 결정 합니다. 따라서 장애 조치 발생 후 Pacemaker 다시 시도 시작 하는 가용성 그룹 리소스에 기본 전자 SQL 인스턴스를 사용할 수 있는 합니다. 보조 복제본을 보조로 강등 pacemaker 하 고 가용성 그룹 하는 자동으로 다시 참여 합니다. 
 
 속성 값을 업데이트 하려면 `false` 다음 스크립트를 실행 합니다.
 

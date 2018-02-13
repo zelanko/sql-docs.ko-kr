@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3a39418ec2c94a0c5b0a5dd227ef33aab4b22b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac42ee657dd46f070eccf5d63ae9a454c3306e95
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields(SQLXML 4.0)를 사용하여 키 열 식별
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XPath 쿼리를 지정 하 여 XSD 스키마에 대해, 키 정보 결과에서 올바른 중첩을 얻으려면 대부분의 경우에 필요 합니다. 지정 하는 **sql:-필드** 주석은의 적절 한 계층이 생성 됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XSD 스키마에 대해 XPath 쿼리가 지정된 경우 결과에서 올바른 중첩을 얻으려면 대부분 키 정보가 필요합니다. 지정 하는 **sql:-필드** 주석은의 적절 한 계층이 생성 됩니다.  
   
 > [!NOTE]  
 >  올바른 중첩을 보장 하려면 것이 좋습니다 지정 하는 **sql:-필드** 테이블에 매핑되는 요소에 대 한 합니다. 기본 결과 집합의 순서가 생성되는 XML에 중요합니다. 경우 **sql:-필드** 을 지정 하지 않으면 생성 된 XML 제대로 구성할 수 있습니다.  

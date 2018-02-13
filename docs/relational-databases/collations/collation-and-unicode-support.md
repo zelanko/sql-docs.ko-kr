@@ -8,7 +8,8 @@ ms.service:
 ms.component: collations
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,19 +30,20 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef3f7949bbccdc46f59bcb74de76cf395c09885c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1fd84b774ee2ea2a7af3db4f1cd015dfbd3176d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. **char** 및 **varchar** 과 같은 문자 데이터 형식과 함께 사용되는 데이터 정렬은 해당 데이터 형식을 나타내는 데 사용할 수 있는 코드 페이지와 해당 문자를 지정합니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하든 데이터베이스 백업을 복원하든 서버를 클라이언트 데이터베이스에 연결하든 사용하는 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys를 참조하세요.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)를 참조하세요.    
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. **char** 및 **varchar** 과 같은 문자 데이터 형식과 함께 사용되는 데이터 정렬은 해당 데이터 형식을 나타내는 데 사용할 수 있는 코드 페이지와 해당 문자를 지정합니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하든 데이터베이스 백업을 복원하든 서버를 클라이언트 데이터베이스에 연결하든 사용하는 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys를 참조하세요.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)를 참조하세요.    
     
  서버, 데이터베이스, 열 또는 식에 대한 데이터 정렬을 선택하면 데이터에 일정한 특성이 부여되며, 이는 여러 데이터베이스 작업의 결과에 영향을 줍니다. 예를 들어 ORDER BY를 사용하여 쿼리를 작성할 경우 결과 집합의 정렬 순서는 쿼리의 식 수준에서 COLLATE 절에 지정되거나 데이터베이스에 적용된 데이터 정렬에 따라 달라집니다.    
     
@@ -60,11 +62,11 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Collation_Defn"></a> 데이터 정렬    
  데이터 정렬은 데이터 집합의 각 문자를 나타내는 비트 패턴을 지정합니다. 또한 데이터 정렬은 데이터를 정렬하고 비교하는 규칙을 결정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 여러 다른 데이터 정렬을 갖는 개체를 단일 데이터베이스에 저장하도록 지원합니다. 비유니코드 열의 경우 데이터 정렬 설정은 데이터에 대한 코드 페이지와 나타낼 수 있는 문자를 지정합니다. 유니코드가 아닌 열 간에 데이터를 이동하려면 원본 코드 페이지에서 대상 코드 페이지로 변환해야 합니다.    
     
- 데이터 정렬 설정이 각기 다른 데이터베이스의 컨텍스트에서[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하면 그 결과가 달라질 수 있습니다. 가능한 경우 조직에서 표준화된 데이터 정렬을 사용하세요. 그러면 모든 문자나 유니코드 식에서 명시적으로 데이터 정렬을 지정할 필요가 없습니다. 데이터 정렬 및 코드 페이지 설정이 다른 개체를 사용해야 할 경우 선행 정렬 우선 순위 규칙을 고려하도록 쿼리를 코딩하세요. 자세한 내용은 [선행 정렬 우선 순위(Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)를 참조하세요.    
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하면 그 결과가 달라질 수 있습니다. 가능한 경우 조직에서 표준화된 데이터 정렬을 사용하세요. 그러면 모든 문자나 유니코드 식에서 명시적으로 데이터 정렬을 지정할 필요가 없습니다. 데이터 정렬 및 코드 페이지 설정이 다른 개체를 사용해야 할 경우 선행 정렬 우선 순위 규칙을 고려하도록 쿼리를 코딩하세요. 자세한 내용은 [선행 정렬 우선 순위(Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)를 참조하세요.    
     
  데이터 정렬 관련 옵션에는 대/소문자 구분, 악센트 구분, 일본어 가나 구분, 전자/반자 구분, 변형 선택기 구분이 있습니다. 이러한 옵션은 데이터 정렬 이름에 추가하여 지정됩니다. 예를 들어 이 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` 데이터 정렬은 대/소문자, 악센트, 일본어 가나 및 전자/반자를 구분합니다. 또 다른 예로 이 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 데이터 정렬은 대/소문자 구분 및 악센트를 구분하지 않고 일본어 가나, 전자/반자 및 변형 선택기를 구분합니다.  다음 표에서는 이러한 다양한 옵션과 연결된 동작에 대해 설명합니다.    
     
-|옵션|설명|    
+|옵션|Description|    
 |------------|-----------------|    
 |대/소문자 구분(_CS)|대/소문자를 구분합니다. 이 정렬 순서를 선택하면 소문자가 대문자보다 먼저 정렬됩니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 대소문자를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 대문자와 소문자를 동일한 것으로 간주합니다. _CI를 지정하여 대/소문자를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    
 |악센트 구분(_AS)|악센트가 있는 문자와 악센트가 없는 문자를 구분합니다. 예를 들어 'a'와 'ấ'는 같지 않습니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 악센트를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 악센트가 있는 문자와 악센트가 없는 문자를 동일한 것으로 간주합니다. _AI를 지정하여 악센트를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    
@@ -146,7 +148,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  다음 표에서는 유니코드 서버 및 비유니코드 서버의 다양한 조합과 함께 다국어 데이터 사용에 대한 정보를 제공합니다.    
     
-|Server|클라이언트|이점 또는 제한 사항|    
+|서버|클라이언트|이점 또는 제한 사항|    
 |------------|------------|-----------------------------|    
 |유니코드|유니코드|유니코드 데이터는 시스템 전체에서 사용되므로 이 시나리오는 검색한 데이터가 손상되지 않는 등 최상의 성능을 제공합니다. ADO(ActiveX Data Objects), OLE DB 및 ODBC 버전 3.7 이상이 여기에 해당됩니다.|    
 |유니코드|비유니코드|이 시나리오에서, 특히 새로운 운영 체제를 실행하는 서버와 이전 버전의 운영 체제에 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 클라이언트 간의 연결에서는 데이터를 클라이언트 컴퓨터로 이동할 때 제한 사항 또는 오류가 발생할 수 있습니다. 서버의 유니코드 데이터는 데이터 변환을 위해 비유니코드 클라이언트의 해당 코드 페이지에 매핑을 시도합니다.|    
@@ -240,7 +242,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
     
  [유니코드 컨소시엄 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=48619)    
     
-## <a name="see-also"></a>관련 항목:    
+## <a name="see-also"></a>참고 항목    
  [포함된 데이터베이스 데이터 정렬](../../relational-databases/databases/contained-database-collations.md)     
  [전체 텍스트 인덱스 생성 시 언어 선택](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
  [sys.fn_helpcollations&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    

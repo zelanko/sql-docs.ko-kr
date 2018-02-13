@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: cf0a61c924a10066a41bcf4127e444b60f0f50bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 68e41573c107725ef7af12e8b990678f8991bb02
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Linux에서 가용성 그룹에 대해 항상 작동
 
@@ -129,7 +129,7 @@ ms.lasthandoff: 02/01/2018
  [SLES 관리 가이드-리소스](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-### <a name="forceManual"></a>수동 이동할 때 클러스터 도구 응답 하지 않습니다. 
+### <a name="forceManual"></a> 수동 이동할 때 클러스터 도구 응답 하지 않습니다. 
 
 극단적인 경우 클러스터와의 상호 작용 하기 위한 사용자 클러스터 관리 도구를 사용할 수 없는 경우 (즉, 클러스터 응답 하지 않으면, 클러스터 관리 도구에는 잘못 된 동작이) 사용자-수동으로 장애 조치 해야 할 수는 외부 클러스터 관리자를 무시 합니다. 이 정기적인 작업에 권장 되지 않습니다 및 클러스터는 클러스터 관리 도구를 사용 하 여 장애 조치 작업 실행에 실패 하는 경우 내에서 사용 해야 합니다.
 
@@ -158,7 +158,7 @@ ms.lasthandoff: 02/01/2018
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. TRANSACT-SQL은 가용성 그룹을 장애 조치할 합니다. 바꾸기 아래 예제에서는 `<**MyAg**>` 가용성 그룹의 이름으로 합니다. 대상 보조 복제본을 호스팅하는 SQL Server의 인스턴스에 연결 하 고 다음 명령을 실행 합니다.
+1. TRANSACT-SQL은 가용성 그룹을 장애 조치할 합니다. 다음 예제에서는 대체 `<**MyAg**>` 가용성 그룹의 이름으로 합니다. 대상 보조 복제본을 호스팅하는 SQL Server의 인스턴스에 연결 하 고 다음 명령을 실행 합니다.
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
@@ -244,7 +244,7 @@ Linux에서 SQL Server의 인스턴스에서 가용성 그룹 복제본을 가�
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. 장애 조치 후 이전 주 복제본에서 SQL Server b.1 b.3 위의 단계에서 설명한 동일한 절차를 반복 하 여 업그레이드 합니다.
+1. 장애 조치 후 이전 주 복제본에서 SQL Server b.3 b.1 단계에 설명 된 동일한 절차를 반복 하 여 업그레이드 합니다.
 
    다음 예제에서는 업그레이드 `mssql-server` 및 `mssql-server-ha` 패키지 합니다.
 
@@ -267,7 +267,7 @@ Linux에서 SQL Server의 인스턴스에서 가용성 그룹 복제본을 가�
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. 외부 클러스터와는 가용성 그룹에 대 한 관리자-클러스터 입력할 수 있는 EXTERNAL, 정리 수동 장애 조치에 의해 발생 한 위치 제약 조건입니다. 
+1. 클러스터 형식이 인 외부-외부 클러스터 관리자는 가용성 그룹에 대 한 수동 장애 조치에 의해 발생 한 위치 제약 조건이를 정리 합니다. 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  

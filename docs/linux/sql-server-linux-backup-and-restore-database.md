@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: 9a0a1243ede149ada6a1042a246006929370a4b2
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 96450590b55a6cb9cf6fcf517380bc25a13c1431
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux에서 SQL Server 데이터베이스 백업 및 복원
 
@@ -71,7 +71,7 @@ sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/m
 ```
 
 > [!TIP]
-> 명령을 실행 하는 경우 실수로 NORECOVERY를 사용 하 여 추가 로그 파일 백업 하지 않은, `RESTORE DATABASE demodb` 매개 변수 없이 추가 합니다. 복원이 완료 되 고 데이터베이스 작동 유지 합니다.
+> 명령을 실행 하는 경우 실수로 NORECOVERY를 사용 하 여 추가 로그 파일 백업 하지 않은, `RESTORE DATABASE demodb` 매개 변수 없이 추가 합니다. 복원을 완료 하 고 데이터베이스 작동 상태를 유지 합니다.
 
 ### <a name="restore-the-transaction-log"></a>트랜잭션 로그 복원
 

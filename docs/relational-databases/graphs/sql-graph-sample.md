@@ -9,28 +9,29 @@ ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, tsql reference
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffc2bcd906e0d975d763d12aaa899cb414ef6b5e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>그래프 데이터베이스를 만들고 일부 패턴 일치 T-SQL을 사용 하 여 쿼리를 실행 합니다.
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-이 예제는 제공 된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 노드 및 가장자리도 그래프 데이터베이스를 만들고 새 일치 절을 사용 하 여 일부 패턴 일치는 그래프를 통과할을 스크립트입니다. 이 샘플 스크립트는 모두 Azure SQL 데이터베이스에서 작동 하 고[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+이 예제는 제공 된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 노드 및 가장자리도 그래프 데이터베이스를 만들고 새 일치 절을 사용 하 여 일부 패턴 일치는 그래프를 통과할을 스크립트입니다. 이 샘플 스크립트는 모두 Azure SQL 데이터베이스에서 작동 하 고 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>샘플 스키마  
 이 샘플에서는 사람, 음식점 및 City 노드가 있는 가상 소셜 네트워크에 대 한 그림 1에 표시 된 대로 그래프 스키마를 만듭니다. 이러한 노드가에 친구를 사용 하 여 서로 연결 되어 LivesIn 및 LocatedIn 가장자리 배치할 수 있습니다. 

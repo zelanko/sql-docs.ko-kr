@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c6ff13edf01370778da9361d5834e70ebfdb20a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01df178b47bb3aac688d12e54760cd530706fd94
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 업데이트(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]기존 데이터를 업데이트할 때 둘 다 지정 해야 하는  **\<하기 전에 >** 및  **\<후 >** 블록입니다. 에 지정 된 요소는  **\<하기 전에 >** 및  **\<후 >** 블록 원하는 변경에 설명 합니다. Updategram에 지정 된 요소를 사용 하 여는  **\<하기 전에 >** 데이터베이스의 기존 레코드를 식별 하는 블록입니다. 해당 요소는  **\<후 >** 블록의 레코드 업데이트 작업을 실행 한 후 모양 나타냅니다. 이 정보를 updategram는 일치 하는 SQL 문을 만듭니다는  **\<후 >** 블록입니다. 그런 다음 Updategram은 이 문을 사용하여 데이터베이스를 업데이트합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+기존 데이터를 업데이트할 때 둘 다 지정 해야 하는  **\<하기 전에 >** 및  **\<후 >** 블록입니다. 에 지정 된 요소는  **\<하기 전에 >** 및  **\<후 >** 블록 원하는 변경에 설명 합니다. Updategram에 지정 된 요소를 사용 하 여는  **\<하기 전에 >** 데이터베이스의 기존 레코드를 식별 하는 블록입니다. 해당 요소는  **\<후 >** 블록의 레코드 업데이트 작업을 실행 한 후 모양 나타냅니다. 이 정보를 updategram는 일치 하는 SQL 문을 만듭니다는  **\<후 >** 블록입니다. 그런 다음 Updategram은 이 문을 사용하여 데이터베이스를 업데이트합니다.  
   
  다음은 업데이트 작업을 위한 Updategram 형식입니다.  
   
@@ -59,10 +61,10 @@ ms.lasthandoff: 11/17/2017
 </ROOT>  
 ```  
   
- **\<updg: 하기 전에 >**  
+ **\<updg:before>**  
  요소는  **\<하기 전에 >** 블록 데이터베이스 테이블의 기존 레코드를 식별 합니다.  
   
- **\<updg: 후 >**  
+ **\<updg:after>**  
  요소는  **\<후 >** 블록 레코드에 지정 하는 방식에 대해 설명는  **\<하기 전에 >** 블록은 업데이트가 적용 된 후 표시 됩니다.  
   
  **매핑 스키마** 특성은 updategram에서 사용 하는 매핑 스키마를 식별 합니다. 요소 및 특성 이름에 지정 된 updategram이 매핑 스키마를 지정 하는 경우는  **\<하기 전에 >** 및  **\<후 >** 블록에는 스키마의 이름과 일치 해야 합니다. 매핑 스키마는 이러한 요소 또는 특성 이름을 데이터베이스 테이블 및 열 이름에 매핑합니다.  

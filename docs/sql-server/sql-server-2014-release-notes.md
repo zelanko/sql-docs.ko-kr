@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: "100"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] 이 릴리스 정보 문서에서는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]을 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다.  
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+이 릴리스 정보 문서에서는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]을 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다.  
   
 ## <a name="top"></a>내용  
 [1.0 설치하기 전](#BeforeInstall)  
@@ -250,7 +251,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="328-using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>3.2.8 고유하게 컴파일된 저장 프로시저에서 DATEPART 및 관련 함수와 함께 문자열 매개 변수 또는 변수를 사용하면 오류가 발생함  
 **문제:** 고유하게 컴파일된 저장 프로시저 내에서 DATEPART, DAY, MONTH, YEAR 등의 기본 제공 함수와 함께 (var)char 또는 n(var)char과 같은 문자열 데이터 형식이 있는 매개 변수나 변수를 사용하면, datetimeoffset 데이터 형식이 고유하게 컴파일된 저장 프로시저에서 지원되지 않는다는 오류 메시지가 나타납니다.  
   
-**해결 방법:** 문자열 매개 변수 또는 변수를 datetime2 형식의 새로운 변수에 할당하고 DATEPART, DAY, MONTH 또는 YEAR 함수에서 해당 변수를 사용합니다. 예를 들어  
+**해결 방법:** 문자열 매개 변수 또는 변수를 datetime2 형식의 새로운 변수에 할당하고 DATEPART, DAY, MONTH 또는 YEAR 함수에서 해당 변수를 사용합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -300,7 +301,7 @@ DATEPART(weekday, @d)
   
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드는 다음 중 하나와 함께 실행될 수 없습니다.  
   
--   SharePoint 제품용[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능(SharePoint 제품용)  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 공유 서비스  
   
@@ -367,7 +368,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](http://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하십시오.  
   
-2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](http://technet.microsoft.com/library/hh758436.aspx)를 참조하십시오.  
+2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx)을 참조하세요.  
   
 **추가 정보:**  
   
@@ -382,7 +383,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](http://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하십시오.  
   
-2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](http://technet.microsoft.com/library/hh758436.aspx)를 참조하십시오.  
+2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx)을 참조하세요.  
   
 **추가 정보:**  
   

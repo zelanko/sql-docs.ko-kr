@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: fca144fd34a3b0e506ab19daba46c16b3760a0e8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>분석 및 보고에 대한 Microsoft BI(Business Intelligence) 도구 선택
 적절한 비즈니스 인텔리전스 도구를 선택하는 것은 엄청날 수 있습니다. 다른 Microsoft 제품에 대해 알아보고 필요한 사항에 가장 맞는 하나를 찾아보세요.

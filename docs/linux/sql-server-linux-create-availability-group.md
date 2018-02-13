@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들기 및 Linux에서 SQL Server에 대 한 가용성 그룹 구성
 
@@ -64,7 +64,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>다시 시작[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>다시 시작 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 다시 시작 해야 windows에서는 가용성 그룹을 사용 하도록 설정한 후 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 다음으로 수행할 수 있습니다.
 
 ```bash
@@ -596,7 +596,7 @@ Pacemaker 고가용성 클러스터 기본 [!INCLUDE[ssnoversion-md](../includes
     ```
 
     >[!NOTE]
-    >RHEL 7.4-마스터의를 사용 하 여 경고를 발생할 수 있습니다. 이 문제를 방지 하려면 사용`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+    >RHEL 7.4-마스터의를 사용 하 여 경고를 발생할 수 있습니다. 이 문제를 방지 하려면 사용 `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
    
     **SUSE Linux Enterprise Server(SLES)**
     

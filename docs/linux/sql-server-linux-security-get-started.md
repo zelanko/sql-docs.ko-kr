@@ -1,6 +1,6 @@
 ---
 title: "Linux에서 SQL Server 보안 시작 | Microsoft Docs"
-description: "이 항목에서는 일반적인 보안 동작을 설명 합니다."
+description: "이 문서에서는 일반적인 보안 동작을 설명 합니다."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d927bf68b06050c8067d6f6d63d737f084219341
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 00c222c601cdf314f04db3cb9e3b818d9ea3a65f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux에서 SQL Server의 보안 기능에 대 한 연습
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server에 새로운 Linux 사용자 인 경우 다음 작업에 관한 일부의 보안 작업입니다. 이러한 설정은 고유 하거나 Linux 특정 아니지만 알 수 있는 영역의 추가로 조사를 수행 하는 데 도움이 됩니다. 각 예제에 해당 영역에 대 한 심도 있는 문서에는 링크가 제공 됩니다.
 
@@ -38,7 +40,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  항상 위 별표 대신 강력한 암호를 사용 합니다.
+>  항상 이전 명령에서 별표 대신 강력한 암호를 사용 합니다.
 
 로그인은 SQL Server에 연결 및 (제한 된 권한)으로 master 데이터베이스에 액세스할 수 있습니다. 사용자 데이터베이스를 연결 하려면 로그인을 데이터베이스 사용자를 호출 하는 데이터베이스 수준에서 해당 id를 필요 합니다. 사용자가 각 데이터베이스에만 되며 액세스 권한을 부여 하려면 각 데이터베이스에서 개별적으로 만들어야 합니다. 다음 예제에서는 AdventureWorks2014 데이터베이스에 사용자를 이동 하 고 다음 사용 하 여는 [CREATE USER](../t-sql/statements/create-user-transact-sql.md) 문을 Larry Larry 이라는 로그인과 연결 된 명명 된 사용자를 만듭니다. 경우에 로그인과 사용자 (서로 매핑) 관련 된, 서로 다른 개체입니다. 로그인은 서버 수준 원칙입니다. 사용자가 데이터베이스 수준의 보안 주체입니다.
 
@@ -101,7 +103,7 @@ ALTER ROLE Sales ADD MEMBER Jerry;
 
 [행 수준 보안](../relational-databases/security/row-level-security.md) 쿼리를 실행 하는 사용자에 따라 데이터베이스의 행에 대 한 액세스를 제한할 수 있습니다. 이 기능은 고객만 자신의 데이터를 액세스할 수 있도록 하거나 작업 자가 해당 부서에 관련 된 데이터에만 액세스할 수와 같은 시나리오에 유용 합니다.   
 
-서로 다른 두 사용자가을 설정 하 여 워크 아래 단계 행 수준에 대 한 액세스는 `Sales.SalesOrderHeader` 테이블입니다. 
+다음 단계에 대 한 다른 행 수준 액세스와 두 사용자를 설정 하는 과정을 안내는 `Sales.SalesOrderHeader` 테이블입니다. 
 
 행 수준 보안을 테스트 하려면 두 개의 사용자 계정을 만듭니다.    
    
@@ -247,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-TDE를 제거 하려면 실행`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+TDE를 제거 하려면 실행 `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 암호화 및 해독 작업은 SQL Server가 백그라운드 스레드로 예약 됩니다. 이 항목의 뒷부분에 나오는 카탈로그 뷰 및 동적 관리 뷰를 사용하여 이러한 작업의 상태를 볼 수 있습니다.   
 

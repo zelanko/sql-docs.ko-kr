@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -35,19 +36,20 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abf9937e9d13dccdb3eb381dda760bad13f9544d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1d06fef3fcdc237740b9590d5d8e75fc9730a34e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Updategram은 레코드 인스턴스가 표시 되는 경우 삽입 작업을 나타냅니다는  **\<후 >** 블록에는 있지만 해당  **\<하기 전에 >** 블록입니다. Updategram의 레코드를 삽입 하는 경우에  **\<후 >** 데이터베이스에는 블록입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Updategram은 레코드 인스턴스가 표시 되는 경우 삽입 작업을 나타냅니다는  **\<후 >** 블록에는 있지만 해당  **\<하기 전에 >** 블록입니다. Updategram의 레코드를 삽입 하는 경우에  **\<후 >** 데이터베이스에는 블록입니다.  
   
  삽입 작업에 대한 Updategram 형식은 다음과 같습니다.  
   

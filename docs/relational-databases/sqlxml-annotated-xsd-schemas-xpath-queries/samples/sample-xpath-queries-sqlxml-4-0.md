@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - mapping schema [SQLXML], queries
 - XPath queries [SQLXML], samples
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56b2782416b3d980fa6e821272f2bf78976fbaf2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f74a4c80ca1536d0a2d326ef7a89ab791ec0ad7f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>XPath 쿼리 예제(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]이 섹션에서는 SQLXML 4.0에 대 한 XPath 쿼리 예제를 제공 합니다. 이해를 돕기 위해 이 예제 XPath 쿼리는 ADO를 사용하여 실행한 템플릿에 지정합니다. 따라서 이 섹션에 제공되는 SampleSchema1.xml이라는 매핑 스키마 파일을 사용해야 합니다. 이 파일을 템플릿이 저장된 디렉터리에 저장합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+이 섹션에서는 SQLXML 4.0용 XPath 쿼리 예제를 제공합니다. 이해를 돕기 위해 이 예제 XPath 쿼리는 ADO를 사용하여 실행한 템플릿에 지정합니다. 따라서 이 섹션에 제공되는 SampleSchema1.xml이라는 매핑 스키마 파일을 사용해야 합니다. 이 파일을 템플릿이 저장된 디렉터리에 저장합니다.  
   
 > [!NOTE]  
 >  이 섹션의 예제 쿼리는 쿼리에서 수행되는 XPath 작업의 유형별로 그룹화됩니다.  

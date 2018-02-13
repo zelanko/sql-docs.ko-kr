@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2b476304fddd169a253a3777bb1a0fb4d53087f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08a27de5e9c528d3e49156df804f19376ae5a6bd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>위치 경로에서 선택 조건자 지정(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]조건자 (SELECT 문의 WHERE 절과 유사함)는 축 기준으로 노드 집합을 필터링 합니다. 조건자는 대괄호로 묶어서 지정합니다. 노드 집합의 각 노드를 필터링하기 위해 해당 노드가 컨텍스트 노드로 사용되고 노드 집합의 노드 수가 컨텍스트 크기로 사용되어 조건자 식이 평가됩니다. 노드에 대한 조건자 식이 TRUE로 평가되면 해당 노드가 결과 노드 집합에 포함됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+조건자는 SELECT 문의 WHERE 절과 유사하게 축을 기준으로 노드 집합을 필터링합니다. 조건자는 대괄호로 묶어서 지정합니다. 노드 집합의 각 노드를 필터링하기 위해 해당 노드가 컨텍스트 노드로 사용되고 노드 집합의 노드 수가 컨텍스트 크기로 사용되어 조건자 식이 평가됩니다. 노드에 대한 조건자 식이 TRUE로 평가되면 해당 노드가 결과 노드 집합에 포함됩니다.  
   
  XPath에서도 위치 기반 필터링이 가능합니다. 숫자로 계산되는 조건자 식이 필요한 서수 노드를 선택합니다. 예를 들어 위치 경로 `Customer[3]`은 세 번째 고객을 반환하지만, 이와 같은 숫자 조건자는 지원되지 않고 부울 결과를 반환하는 조건자 식만 지원됩니다.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- 이 XPath 쿼리에서 `child` 및 `attribute`는 축 이름이고, `Customer`노드 테스트 (TRUE 이면 `Customer` 는  **\<요소 노드 >**때문에,  **\<요소 >** 에 대 한 주 노드 유형는 `child` 축). `attribute::CustomerID="ALFKI"`는 조건자입니다. 조건자에서 `attribute` 는 축이고와 `CustomerID` 는 노드 테스트 (TRUE 이면 **CustomerID** 는 컨텍스트 노드의 특성 때문에  **\<특성 >** 보안 주체 노드 유형이 **특성** 축).  
+ 이 XPath 쿼리에서 `child` 및 `attribute`는 축 이름이고, `Customer` 노드 테스트 (TRUE 이면 `Customer` 는  **\<요소 노드 >**때문에,  **\<요소 >** 에 대 한 주 노드 유형는 `child` 축). `attribute::CustomerID="ALFKI"`는 조건자입니다. 조건자에서 `attribute` 는 축이고와 `CustomerID` 는 노드 테스트 (TRUE 이면 **CustomerID** 는 컨텍스트 노드의 특성 때문에  **\<특성 >** 보안 주체 노드 유형이 **특성** 축).  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   
@@ -77,7 +79,7 @@ child::Customer[child::ContactName]
   
  이 예에서는 가정 하 고  **\<ContactName >** 의 자식 요소는  **\<고객 >** 라고 하는 XML 문서에서 요소  *요소 중심 매핑* 주석이 추가 된 XSD 스키마에서입니다.  
   
- 이 XPath 식에서 `child`는 축 이름이고, `Customer`노드 테스트 (TRUE 이면 `Customer` 는  **\<요소 >** 노드를 때문에  **\<요소 >** 에 대 한 주 노드 유형 `child` 축). `child::ContactName`는 조건자입니다. 조건자에서 `child` 는 축이고와 `ContactName` 는 노드 테스트 (TRUE 이면 `ContactName` 는  **\<요소 >** 노드).  
+ 이 XPath 식에서 `child`는 축 이름이고, `Customer` 노드 테스트 (TRUE 이면 `Customer` 는  **\<요소 >** 노드를 때문에  **\<요소 >** 에 대 한 주 노드 유형 `child` 축). `child::ContactName`는 조건자입니다. 조건자에서 `child` 는 축이고와 `ContactName` 는 노드 테스트 (TRUE 이면 `ContactName` 는  **\<요소 >** 노드).  
   
  이 식은 반환는  **\<고객 >** 있는 컨텍스트 노드의 요소 자식을  **\<ContactName >** 요소 자식이 있습니다.  
   
@@ -96,7 +98,7 @@ child::Customer[not(child::ContactName)]
   
  이 예에서는 가정 하는  **\<ContactName >** 의 자식 요소는  **\<고객 >** 에 XML 문서 요소와 ContactName 필드가 필요 하지 않습니다는 데이터베이스입니다.  
   
- 이 예에서 `child`는 축이고, `Customer`노드 테스트 (TRUE 이면 `Customer` 는 \<요소 > 노드). `not(child::ContactName)`는 조건자입니다. 조건자에서 `child` 는 축이고와 `ContactName` 는 노드 테스트 (TRUE 이면 `ContactName` 는 \<요소 > 노드).  
+ 이 예에서 `child`는 축이고, `Customer` 노드 테스트 (TRUE 이면 `Customer` 는 \<요소 > 노드). `not(child::ContactName)`는 조건자입니다. 조건자에서 `child` 는 축이고와 `ContactName` 는 노드 테스트 (TRUE 이면 `ContactName` 는 \<요소 > 노드).  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   
@@ -120,7 +122,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>선택 조건자: 예 6  
- 다음 예에서 볼 수 있는 것처럼 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0은 조건자에 교차곱을 포함하는 XPath 쿼리를 지원합니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에는 다음 예제와 같이 된 조건자에 교차곱을 포함 하는 XPath 쿼리에 대 한 지원을 포함 됩니다.  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  

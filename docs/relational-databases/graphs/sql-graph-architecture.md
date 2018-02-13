@@ -8,23 +8,24 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL 그래프 아키텍처  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ Edge 테이블에는 그래프의 관계를 나타냅니다. 가장자리는 항
 
 |열 이름    |Description  |
 |---   |---  |
-|`$edge_id`   |데이터베이스에 지정 된 가장자리를 고유 하 게 식별 합니다. 생성 된 열이 고 값은 내부적으로 생성 된 bigint 값 및 edge 테이블의 object_id의 조합입니다. 그러나 때는 `$edge_id` 열을 선택 하면 JSON 문자열의 형태로 계산 된 값이 표시 됩니다. `$edge_id`16 진수 문자열에 있는 내부 이름에 매핑되는 의사 열입니다. 선택 하는 경우 `$edge_id` 테이블에서 열 이름으로 나타납니다 `$edge_id_\<hex_string>`합니다. 쿼리에서 의사 열 이름을 사용 하는 것이 좋습니다 내부 쿼리 `$edge_id` 열 및 16 진수 문자열이 포함 된 내부 이름을 사용 하 여 피해 야 합니다. |
+|`$edge_id`   |데이터베이스에 지정 된 가장자리를 고유 하 게 식별 합니다. 생성 된 열이 고 값은 내부적으로 생성 된 bigint 값 및 edge 테이블의 object_id의 조합입니다. 그러나 때는 `$edge_id` 열을 선택 하면 JSON 문자열의 형태로 계산 된 값이 표시 됩니다. `$edge_id` 16 진수 문자열에 있는 내부 이름에 매핑되는 의사 열입니다. 선택 하는 경우 `$edge_id` 테이블에서 열 이름으로 나타납니다 `$edge_id_\<hex_string>`합니다. 쿼리에서 의사 열 이름을 사용 하는 것이 좋습니다 내부 쿼리 `$edge_id` 열 및 16 진수 문자열이 포함 된 내부 이름을 사용 하 여 피해 야 합니다. |
 |`$from_id`   |저장소는 `$node_id` 가장자리 시작 되는 위치에서 노드.  |
 |`$to_id`   |저장소는 `$node_id` 가장자리 종료 되는 노드의 합니다. |
 
@@ -99,7 +100,7 @@ Edge 테이블에는 그래프의 관계를 나타냅니다. 가장자리는 항
 |8  |GRAPH_TO_ID_COMPUTED  |
 
 
-`sys.columns`또한 노드 또는 edge 테이블에서 만든 암시적 열에 대 한 정보를 저장 합니다. 하지만 Sys.columns에서 다음 정보를 검색할 수 있습니다 사용자가 수 없는이 열을 선택 하 이러한 노드 또는 edge 테이블에서 합니다. 
+`sys.columns` 또한 노드 또는 edge 테이블에서 만든 암시적 열에 대 한 정보를 저장 합니다. 하지만 Sys.columns에서 다음 정보를 검색할 수 있습니다 사용자가 수 없는이 열을 선택 하 이러한 노드 또는 edge 테이블에서 합니다. 
 
 노드 테이블의 암시적 열  
 |열 이름    |데이터 형식  |is_hidden  |설명  |
@@ -139,7 +140,7 @@ Edge 테이블의 암시적 열
 ### <a name="data-definition-language-ddl-statements"></a>데이터 정의 언어 (DDL) 문
 |태스크   |관련된 항목  |참고
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `AS 노드 또는 AS EDGE 테이블 만들기를 지원 하도록 확장 이제 됩니다. 정의 된 특성을 참고 하 edge 테이블 되거나 모든 사용자를 사용할 수 없습니다.  |
+|CREATE TABLE |[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` AS 노드 또는 AS EDGE 테이블 만들기를 지원 하도록 확장 이제 됩니다. 정의 된 특성을 참고 하 edge 테이블 되거나 모든 사용자를 사용할 수 없습니다.  |
 |ALTER TABLE    |[ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|노드 및 가장자리 테이블에 관계형 테이블을 사용 하 여 동일한 방식으로 변경할 수는 `ALTER TABLE`합니다. 사용자가 추가 또는 사용자 정의 된 열, 인덱스 또는 제약 조건을 수정할 수 있습니다. 그러나 같은 내부 graph 열 변경 `$node_id` 또는 `$edge_id`, 오류가 발생 합니다.  |
 |CREATE  INDEX   |[CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |의사 열과 노드 및 가장자리 테이블의 사용자 정의 된 열에 인덱스를 만들 수 있습니다. 클러스터형 및 비클러스터형 columnstore 인덱스를 포함 하 여 모든 인덱스 유형에 지원 됩니다.  |
 |DROP TABLE |[DROP table&#40; Transact SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)  |노드 및 가장자리 테이블에 관계형 테이블을 사용 하 여 동일한 방식으로 삭제할 수는 `DROP TABLE`합니다. 그러나이 릴리스에서 제약 조건이 없는 없는 가장자리 삭제 된 노드를 가리키도록 하 고 가장자리는 노드 또는 노드 테이블을 삭제 하기 연계 삭제는 지원 되지 않습니다. 노드 테이블이 삭제 되 면 사용자가 수동으로 그래프의 무결성을 유지 하려면 해당 노드 테이블의 노드에 연결 된 모든 가장자리를 삭제 하는 것이 좋습니다.  |
@@ -148,10 +149,10 @@ Edge 테이블의 암시적 열
 ### <a name="data-manipulation-language-dml-statements"></a>데이터 조작 언어 (DML) 문
 |태스크   |관련된 항목  |참고
 |---  |---  |---  |
-|INSERT |[INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|노드 테이블에 삽입 하는 것은 관계형 테이블에 삽입 하는 방법과 다르지 않습니다. 에 대 한 값 `$node_id` 열이 자동으로 생성 됩니다. 값을 삽입 하려고 `$node_id` 또는 `$edge_id` 열에서 오류가 발생 합니다. 사용자에 대 한 값을 제공 해야 `$from_id` 및 `$to_id` edge 테이블에 삽입 하는 동안 열입니다. `$from_id`및 `$to_id` 됩니다는 `$node_id` 지정 된 가장자리를 연결 하는 노드의 값입니다.  |
+|INSERT |[INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|노드 테이블에 삽입 하는 것은 관계형 테이블에 삽입 하는 방법과 다르지 않습니다. 에 대 한 값 `$node_id` 열이 자동으로 생성 됩니다. 값을 삽입 하려고 `$node_id` 또는 `$edge_id` 열에서 오류가 발생 합니다. 사용자에 대 한 값을 제공 해야 `$from_id` 및 `$to_id` edge 테이블에 삽입 하는 동안 열입니다. `$from_id` 및 `$to_id` 됩니다는 `$node_id` 지정 된 가장자리를 연결 하는 노드의 값입니다.  |
 |DELETE | [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|노드 또는 edge 테이블의에서 데이터는 관계형 테이블에서 삭제 하는 대로 동일한 방식으로 삭제할 수 있습니다. 그러나이 릴리스에서 제약 조건이 없는 없는 가장자리 삭제 된 노드를 가리키도록 하 고 가장자리는 노드를 삭제 하기 연계 삭제는 지원 되지 않습니다. 노드가 삭제 될 때마다 해당 노드에 대 한 모든 연결 가장자리는도 삭제 되도록, 그래프의 무결성을 유지 하는 것이 좋습니다.  |
 |UPDATE |[UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |UPDATE 문을 사용 하 여 사용자 정의 열에 값을 업데이트할 수 있습니다. 내부 그래프 열 업데이트 `$node_id`, `$edge_id`, `$from_id` 및 `$to_id` 허용 되지 않습니다.  |
-|MERGE |[MERGE&#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE`노드 또는 edge 테이블에는 문이 지원 되지 않습니다.  |
+|MERGE |[MERGE&#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` 노드 또는 edge 테이블에는 문이 지원 되지 않습니다.  |
 
 
 ### <a name="query-statements"></a>쿼리 문

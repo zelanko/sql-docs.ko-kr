@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 25bcc2fb0ddb60198208d88ce9c19be139d6ec2f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 368fce4b3c9595f89ea14ca310049a52cf180a28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-NFS-Linux에서 SQL Server 구성
 
@@ -33,8 +33,8 @@ NFS 또는 네트워크 파일 시스템은 Linux 세계 있지만 Windows 하�
 NFS (Linux 서버 또는 다른 요소)를 호스트 하는 소스를 사용 하 여/준수 해야 4.2 이상 버전으로 있습니다. 이전 버전 Linux에서 SQL Server와 함께 작동 하지 않습니다.
 
 NFS 서버에서 공유 하는 폴더를 구성할 때 이러한 지침 일반 옵션에 따라 있는지 확인 합니다.
-- `rw`폴더 되도록 할 수에서 읽고 쓸 수를
-- `sync`폴더에 대 한 쓰기를 보장 하려면
+- `rw` 폴더 되도록 할 수에서 읽고 쓸 수를
+- `sync` 폴더에 대 한 쓰기를 보장 하려면
 - 사용 하지 마십시오 `no_root_squash` ; 옵션으로 보안 위험으로 간주 됩니다
 - 폴더에 대 한 모든 권한 (777) 적용 되었는지 확인
 
@@ -124,7 +124,7 @@ NFS 서버에서 공유 하는 폴더를 구성할 때 이러한 지침 일반 �
 
     \<IPAddressOfNFSServer >는 사용 하고자 하는 NFS 서버의 IP 주소 
 
-    \<FolderOnNFSServer > NFS 공유 이름입니다. 아래 예제에서는 구문 2 단계에서에서 NFS 정보를 찾습니다.
+    \<FolderOnNFSServer > NFS 공유 이름입니다. 다음 예에서는 구문을 2 단계에서에서 NFS 정보를 찾습니다.
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -167,7 +167,7 @@ NFS 서버에서 공유 하는 폴더를 구성할 때 이러한 지침 일반 �
     sudo systemctl status mssql-server
     ```
     
-   * 보안 제대로 설정 되어 있는지를 테스트 하려면 데이터베이스를 만듭니다. 다음 예제에서는 TRANSACT-SQL을 통해 수행 되 고 표시 됩니다. SSMS를 통해 수행할 수 있습니다.
+   * 보안 제대로 설정 되어 있는지를 테스트 하려면 데이터베이스를 만듭니다. 다음 예제에서는 TRANSACT-SQL을 통해 수행 되 고 SSMS를 통해 수행할 수 있습니다.
  
     ![CreateTestdatabase][3]
 
@@ -204,7 +204,7 @@ NFS 서버에서 공유 하는 폴더를 구성할 때 이러한 지침 일반 �
     mkdir <FolderName>
     ```
 
-    \<폴더 이름 > 폴더의 이름입니다. 폴더의 전체 경로를 지정 해야 할 경우 올바른 위치에 없습니다. 다음 예제에서는 /var/opt/mssql/userdata 라는 폴더를 만듭니다.
+    \<폴더 이름 > 폴더의 이름입니다. 폴더의 전체 경로 지정 해야 합니다. 올바른 위치에 없는 경우. 다음 예제에서는 /var/opt/mssql/userdata 라는 폴더를 만듭니다.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -230,7 +230,7 @@ NFS 서버에서 공유 하는 폴더를 구성할 때 이러한 지침 일반 �
   
    * 더 이상 수는 superuser exit를 입력 합니다.
 
-   * 를 테스트 하려면 해당 폴더에 데이터베이스를 만듭니다. Sqlcmd를 사용 하 여 데이터베이스 만들기, 컨텍스트를 전환할 OS 수준에 있는 파일과 임시 위치를 삭제 한 다음 확인는 아래 표시 된 예제입니다. SSMS를 사용할 수 있습니다.
+   * 를 테스트 하려면 해당 폴더에 데이터베이스를 만듭니다. 다음 예제에서는 sqlcmd를 사용 하 여 데이터베이스를 만들, 컨텍스트를 전환할 OS 수준에 있는 파일과 임시 위치를 삭제 한 다음 확인 합니다. SSMS를 사용할 수 있습니다.
 
     ![15-createtestdatabase][4]
  

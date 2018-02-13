@@ -8,26 +8,28 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 581472d13c4bb9e11d52a8a71965f9b8f64bf0c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfdb6b2fba95fc3e723122e9402e70caede522b1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0의 xml 데이터 형식 지원
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 XML 데이터를 사용 하 여 입력의 **xml** 데이터 형식입니다. 이 항목에서는 SQLXML 4.0의 인스턴스를 인식 하는 방법에 대 한 정보는 **xml** 데이터 형식과 구현 지원 합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 XML 데이터를 사용 하 여 입력의 **xml** 데이터 형식입니다. 이 항목에서는 SQLXML 4.0의 인스턴스를 인식 하는 방법에 대 한 정보는 **xml** 데이터 형식과 구현 지원 합니다.  
   
 ## <a name="working-with-xml-data-types"></a>xml 데이터 형식 작업  
  구현 하는 SQL 테이블을 사용 하는 방법에 대 한 자세한 **xml** 데이터 형식 열을 다음과 같은 예가 제공 됩니다.  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   SQLXML 4.0에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공되는 XML 구문 분석 지원을 사용합니다. **xml** 열 하거나 형식화 된 XML 또는 형식화 되지 않은 XML로 매핑할 수 있습니다. 두 경우 모두 SQLXML 4.0에서는 입력 XML의 유효성을 검사하지 않습니다.  입력 XML이 유효하지 않거나 잘못 작성된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 이를 SQLXML에 보고하고 서버에서 반환하는 관련 오류 정보를 사용자에게 전달합니다.  
   
--   SQLXML 4.0에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공되는 DTD에 대한 제한된 지원을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]내부 DTD를 고려한 **xml** 데이터에는 기본값을 제공 하 고 엔터티 참조를 해당 확장 대체를 사용할 수 있는 데이터를 입력 합니다. SQLXML에서는 XML 데이터를 서버에 내부 DTD를 포함한 "있는 그대로" 전달합니다. 타사 도구를 사용하여 DTD를 XML 스키마(XSD) 문서로 변환하고 인라인 XML 스키마가 있는 데이터를 데이터베이스에 로드할 수 있습니다.  
+-   SQLXML 4.0에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공되는 DTD에 대한 제한된 지원을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 DTD를 고려한 **xml** 데이터에는 기본값을 제공 하 고 엔터티 참조를 해당 확장 대체를 사용할 수 있는 데이터를 입력 합니다. SQLXML에서는 XML 데이터를 서버에 내부 DTD를 포함한 "있는 그대로" 전달합니다. 타사 도구를 사용하여 DTD를 XML 스키마(XSD) 문서로 변환하고 인라인 XML 스키마가 있는 데이터를 데이터베이스에 로드할 수 있습니다.  
   
 -   SQLXML 4.0은 보존 하지 않습니다 XML 선언 처리 명령 (예:)의 동작에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. XML 선언에 대 한 지시어로 취급 됩니다 대신는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 파서와 해당 특성 (예: 버전, 인코딩 및 독립 실행형)이 손실에 데이터를 변환한 후의 **xml** 데이터 형식입니다. XML 데이터는 내부적으로 UCS-2로 저장됩니다. XML 인스턴스의 다른 모든 처리 명령은 유지 됩니다. 에 허용 되는 **xml** 열을 SQLXML에서 지원 될 수 있습니다.  
   

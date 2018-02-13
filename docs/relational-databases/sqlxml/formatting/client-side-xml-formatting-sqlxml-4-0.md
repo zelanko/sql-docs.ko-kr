@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - client-side XML formatting
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83a2e753c9cb94d84b25949c1892b48ff7023ece
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1024bf5d057d2a5a5480592817827c21b423b0f3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XML 서식 지정(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]이 항목에서는 클라이언트 쪽 XML 서식 지정에 대 한 정보를 제공 합니다. 클라이언트 쪽 서식 지정은 중간 계층의 XML 서식 지정을 의미합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+이 항목에서는 클라이언트 쪽 XML 서식 지정에 대한 정보를 제공합니다. 클라이언트 쪽 서식 지정은 중간 계층의 XML 서식 지정을 의미합니다.  
   
 > [!NOTE]  
 >  이 항목에서는 이미 FOR XML 절에 익숙한 사용자를 대상으로 클라이언트 쪽의 FOR XML 절 사용에 대한 추가 정보를 제공합니다. FOR XML에 대 한 자세한 내용은 참조 [For를 사용 하 여 XML](../../../relational-databases/xml/for-xml-sql-server.md)합니다.  
@@ -118,7 +120,7 @@ AS
   
 -   향상된 XML 템플릿 지원  
   
--   SqlXmlCommand.ClientSideXml 속성  
+-   SqlXmlCommand.ClientSideXml property  
   
      SQLXML 관리되는 클래스의 이 속성을 true로 설정하여 클라이언트 쪽 서식 지정을 지정할 수 있습니다.  
   

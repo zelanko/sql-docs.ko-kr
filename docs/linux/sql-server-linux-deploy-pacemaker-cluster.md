@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 Pacemaker 클러스터 배포
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/01/2018
 [SQL Server 2017 설치](sql-server-linux-setup.md)합니다.
 
 ## <a name="install-the-high-availability-add-on"></a>항상 사용 가능한 추가 기능 설치
-각 Linux 배포에 대 한 고가용성 (HA) 추가 기능을 구성 하는 패키지를 설치 하려면 아래 구문을 사용 합니다. 
+각 Linux 배포에 대 한 고가용성 (HA) 추가 기능을 구성 하는 패키지를 설치 하려면 다음 구문을 사용 합니다. 
 
 **Red Hat Enterprise Linux(RHEL)**
 1.  다음 구문을 사용 하 여 서버를 등록 합니다. 유효한 사용자 이름과 암호를 묻는 메시지가 나타납니다.
@@ -153,7 +153,7 @@ Ubuntu를 구성 하는 것은 RHEL 유사 합니다. 그러나 한 가지 주�
 
 **SLES**
 
-Pacemaker 클러스터를 만드는 프로세스는 RHEL 및 Ubuntu는 SLES에 완전히 다릅니다. 아래 단계에 따라 클러스터 SLES를 만드는 방법을 문서화 합니다.
+Pacemaker 클러스터를 만드는 프로세스는 RHEL 및 Ubuntu는 SLES에 완전히 다릅니다. 다음 단계를 SLES와 클러스터를 만드는 방법을 문서화 합니다.
 1. 실행 하 여 클러스터 구성 프로세스를 시작 합니다. 
    ```bash
    sudo ha-cluster-init
@@ -200,7 +200,7 @@ Pacemaker 클러스터를 만드는 프로세스는 RHEL 및 Ubuntu는 SLES에 �
 12. 클러스터에 추가할 다른 모든 서버에 대 한 8-11 단계를 반복 합니다.
 
 ## <a name="install-the-sql-server-ha-and-sql-server-agent-packages"></a>SQL Server HA 및 SQL Server 에이전트 패키지를 설치 합니다.
-아래 명령을 사용 하 여 SQL Server HA 패키지를 설치 하 고 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트를 아직 설치 되지 않습니다. HA 패키지를 설치한 후 설치 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 를 다시 시작 해야 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 를 사용할 수 있습니다. 이 지침에서는 Microsoft 패키지에 대 한 저장소는 이미 설정 되어 있는지, 이후 가정 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 이 시점에서 설치 해야 합니다.
+다음 명령을 사용 하 여 SQL Server HA 패키지를 설치 하 고 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트를 아직 설치 되지 않습니다. HA 패키지를 설치한 후 설치 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 를 다시 시작 해야 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 를 사용할 수 있습니다. 이 지침에서는 Microsoft 패키지에 대 한 저장소는 이미 설정 되어 있는지, 이후 가정 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 이 시점에서 설치 해야 합니다.
 > [!NOTE]
 > - 사용 하지 않는 경우 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 로그 전달 또는 기타 사용에 대 한 에이전트, 없기 설치 되므로 패키지를 *mssql 서버 에이전트* 건너뛸 수 있습니다.
 > - 에 대 한 다른 선택적 패키지 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 전체 텍스트 검색 (*mssql-서버-fts*) 및 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql 서버는*), 되지 않습니다 높은 가용성, FCI는 또는 AG에 필요합니다.

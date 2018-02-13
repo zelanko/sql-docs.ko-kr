@@ -8,25 +8,29 @@ ms.service:
 ms.component: synonyms
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
-helpviewer_keywords: synonyms [SQL Server], about synonyms
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b18b02b6ec56d52c9589207b7dc8b7b3ca99209
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15c8ca0028ae722823198087b06d4f435aba40e4
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="synonyms-database-engine"></a>동의어(데이터베이스 엔진)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 동의어란 다음 용도로 사용되는 데이터베이스 개체입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+동의어란 다음 용도로 사용되는 데이터베이스 개체입니다.  
   
 -   로컬 서버나 원격 서버에 있을 수 있는 기본 개체로 참조되는 다른 데이터베이스 개체의 대체 이름을 제공합니다.  
   
@@ -68,8 +72,8 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
-|EXECUTE|INSERT|  
+|CONTROL|Delete|  
+|CREATE 문을 실행하기 전에|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
   
@@ -79,8 +83,8 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
-|EXECUTE|하위 SELECT|  
+|UPDATE|Delete|  
+|CREATE 문을 실행하기 전에|하위 SELECT|  
   
  앞에서 설명한 컨텍스트에서 동의어를 사용하면 기준 개체가 영향을 받습니다. 예를 들어 동의어가 테이블 기준 개체를 참조하며 동의어에 행을 삽입한 경우 실제로 참조되는 테이블에 행이 삽입됩니다.  
   

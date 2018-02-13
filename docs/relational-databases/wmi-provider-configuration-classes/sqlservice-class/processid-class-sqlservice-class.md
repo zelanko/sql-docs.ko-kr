@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ProcessId Class (SqlService Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- ProcessId Class (SqlService Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: ProcessId property
+helpviewer_keywords:
+- ProcessId property
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b909f4f367a66468b6618399a323904e7a93573
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bd2602dd9f5d27dd8c11967f1afe084318498963
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="processid-class-sqlservice-class"></a>ProcessId 클래스(SqlService 클래스)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]서비스를 고유 하 게 식별 하는 시스템 프로세스 ID를 가져옵니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+서비스를 고유하게 식별하는 시스템 프로세스 ID를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +57,7 @@ object.ProcessId [= value]
 mysqlservice.ProcessId = 324  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

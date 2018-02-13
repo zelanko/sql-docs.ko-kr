@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/01/2018
 > [!NOTE] 
 > Red Hat HA 추가 기능 및 문서에 대 한 액세스는 구독이 필요합니다. 
 
-아래 다이어그램에서 보듯이으로 두 명의 서버에 저장소가 제공 됩니다. -Corosync 및 Pacemaker-클러스터링 구성 요소는 통신 및 리소스 관리를 조정 합니다. 서버 중 하나에 저장소 리소스와 SQL Server에 연결 되어 있습니다. Pacemaker 오류를 발견 하면 클러스터링 구성 요소 관리 하는 리소스를 다른 노드로 이동 합니다.  
+다음 다이어그램에서 볼 수 있듯이 두 명의 서버에 저장소가 제공 됩니다. -Corosync 및 Pacemaker-클러스터링 구성 요소는 통신 및 리소스 관리를 조정 합니다. 서버 중 하나에 저장소 리소스와 SQL Server에 연결 되어 있습니다. Pacemaker 오류를 발견 하면 클러스터링 구성 요소 관리 하는 리소스를 다른 노드로 이동 합니다.  
 
 ![Red Hat Enterprise Linux 7 공유 디스크 SQL 클러스터](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -39,13 +39,13 @@ ms.lasthandoff: 02/01/2018
 
 > [!NOTE] 
 > 이 시점에서 Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. sql에서 클러스터의 존재에 대 한 지식이 없는, 외부 모든 오케스트레이션은 되며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 예를 들어 클러스터 dmv sys.dm_os_cluster_nodes 및 sys.dm_os_cluster_properties는 레코드가 없습니다.
-문자열 서버 이름이를 가리키는 연결 문자열을 사용 하는 IP를 사용 하지 있습니다 (아래 설명 됨)는 선택한 서버 이름으로 가상 IP 리소스를 만드는 데 IP를 DNS 서버에 등록 해야 합니다.
+문자열 서버 이름이를 가리키는 연결 문자열을 사용 하는 IP를 사용 하지 선택한 서버 이름으로 (다음 섹션에서 설명)으로 가상 IP 리소스를 만드는 데 IP를 DNS 서버에 등록 해야 합니다.
 
 다음 섹션에서는 장애 조치 클러스터 솔루션을 설정 하는 단계를 안내 합니다. 
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-아래 종단 간 시나리오를 완료 하려면 두 노드 클러스터와 NFS 서버를 구성 하려면 다른 서버를 배포 하려면 두 컴퓨터 해야 합니다. 아래 단계 이러한 서버는 구성 하는 방법에 대해 간략하게 설명 합니다.
+다음과 같은 종단 간 시나리오를 완료 하려면 두 노드 클러스터와 NFS 서버를 구성 하려면 다른 서버를 배포 하는 두 개의 컴퓨터가 필요 합니다. 아래 단계 이러한 서버는 구성 하는 방법에 대해 간략하게 설명 합니다.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>설정 하 고 각 클러스터 노드에서 운영 체제를 구성 합니다.
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/01/2018
 > [!NOTE] 
 > 설치 시 서버 마스터 키가 생성 된 SQL Server 인스턴스에 대 한 후 배치에 `/var/opt/mssql/secrets/machine-key`합니다. Linux에서 SQL Server는 항상 mssql 라는 로컬 계정으로 실행 됩니다. 로컬 계정을 이기 때문에 해당 id 노드 간에 공유 되지 않습니다. 따라서 서버 마스터 키를 해독 하 여 각 로컬 mssql 계정에 액세스할 수 있도록 암호화 키를 주 노드에서 각 보조 노드로 복사 해야 합니다. 
 
-1. 주 노드에서 Pacemaker에 대 한 SQL server 로그인을 만들고 실행에 로그인 권한을 부여 `sp_server_diagnostics`합니다. Pacemaker는 SQL Server를 실행 하는 노드를 확인 하려면이 계정을 사용 합니다. 
+1. 주 노드에서 Pacemaker에 대 한 SQL server 로그인을 만들고 실행에 로그인 권한을 부여 `sp_server_diagnostics`합니다. SQL Server를 실행 하는 노드를 확인 하려면이 계정을 사용 하는 pacemaker 합니다. 
 
    ```bash
    sudo systemctl start mssql-server
@@ -131,19 +131,19 @@ NFS 서버에서 다음을 수행 합니다.
    sudo yum -y install nfs-utils
    ```
 
-1. 설정 및 시작`rpcbind`
+1. 설정 및 시작 `rpcbind`
 
    ```bash
    sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. 설정 및 시작`nfs-server`
+1. 설정 및 시작 `nfs-server`
  
    ```bash
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  편집 `/etc/exports` 내보내려면 공유 하려는 디렉터리입니다. 원하는 각 공유에 대 한 1 줄이 필요 합니다. 예를 들어 
+1.  편집 `/etc/exports` 내보내려면 공유 하려는 디렉터리입니다. 각 공유를 1 줄이 필요 합니다. 예를 들어 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -233,7 +233,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->파일 시스템 (FS) 리소스를 사용 하 여 아래 권장 된 대로, 인지 유지 /etc/fstab에 탑재 명령 필요가 없습니다. Pacemaker 하므로 FS 클러스터 리소스를 시작 될 때 폴더를 탑재 합니다. 펜싱의 도움을 받아 ensurethe FS 두 번 탑재 되지 됩니다. 
+>여기에 사용 하는 파일 시스템 (FS) 리소스 권장 된 대로, 인지 유지 /etc/fstab에 탑재 명령 필요가 없습니다. Pacemaker 하므로 FS 클러스터 리소스를 시작 될 때 폴더를 탑재 합니다. 펜싱을 사용 하 여 것은 확인 고 FS 두 번 탑재 되지 않습니다. 
 
 1.  실행 `mount -a` 탑재 경로를 업데이트 하는 시스템에 대 한 명령입니다.  
 
@@ -332,7 +332,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. SQL Server, 파일 시스템 및 가상 IP 리소스에 대 한 클러스터 리소스를 구성 하 고 클러스터 구성을 밀어넣습니다. 다음과 같은 정보가 필요 합니다.
+2. SQL Server, 파일 시스템 및 가상 IP 리소스에 대 한 클러스터 리소스를 구성 하 고 클러스터 구성을 밀어넣습니다. 다음과 같은 정보가 필요합니다.
 
    - **SQL Server 리소스 이름**: 클러스터 된 SQL Server 리소스에 대 한 이름입니다. 
    - **부동 IP 리소스 이름**: 가상 IP 주소 리소스에 대 한 이름입니다.
@@ -342,7 +342,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
    - **장치**: 공유에 탑재 되는 로컬 경로
    - **fstype**: 파일 공유 유형 (즉, nfs)
 
-   사용자 환경에 대 한 아래의 스크립트에서 값을 업데이트 합니다. 구성 및 클러스터 된 서비스를 시작 하는 노드 하나에서 실행 합니다.  
+   사용자 환경에 대 한 다음 스크립트에서 값을 업데이트 합니다. 구성 및 클러스터 된 서비스를 시작 하는 노드 하나에서 실행 합니다.  
 
    ```bash
    sudo pcs cluster cib cfg 

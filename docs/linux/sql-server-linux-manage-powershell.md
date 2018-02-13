@@ -1,6 +1,6 @@
 ---
 title: "관리 SQL Server PowerShell 사용한 linux | Microsoft Docs"
-description: "이 항목에서는 PowerShell을 사용 하 여 Linux에서 SQL Server와 Windows에 대 한 개요를 제공 합니다."
+description: "이 문서에서는 PowerShell을 사용 하 여 Linux에서 SQL Server와 Windows에 대 한 개요를 제공 합니다."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: 0952e8ff950e6b440e963f3867ce74477334e74f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows PowerShell을 사용 하 여 Linux에서 SQL Server 관리
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 항목에서는 소개 [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) 과정을 안내 하는 몇 가지 예 SQL Server 2017 Linux에서 함께 사용 하는 방법에 대 한 합니다. PowerShell SQL Server에 대 한 지원은 windows에서 현재 사용할 수 있는 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터에 있는 경우에 사용할 수 있도록 합니다.
+이 문서에서는 소개 [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) 과정을 안내 하는 몇 가지 예 SQL Server 2017 Linux에서 함께 사용 하는 방법에 대 한 합니다. PowerShell SQL Server에 대 한 지원은 windows에서 현재 사용할 수 있는 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터에 있는 경우에 사용할 수 있도록 합니다.
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Windows에서 최신 버전의 SQL PowerShell 설치
 
@@ -45,19 +45,19 @@ PowerShell
 
 라는 Windows PowerShell 모듈을 제공 하는 SQL Server **SqlServer** PowerShell 환경 또는 스크립트로 (SQL Server 공급자 및 cmdlet) SQL Server 구성 요소를 가져오는 데 사용할 수 있습니다.
 
-가져올 PowerShell 프롬프트에서 아래 명령을 복사한는 **SqlServer** 현재 PowerShell 세션에 모듈:
+복사 하 고 가져오려는 PowerShell 프롬프트에서 다음 명령을 붙여는 **SqlServer** 현재 PowerShell 세션에 모듈:
 
 ```powershell
 Import-Module SqlServer
 ```
 
-아래 명령을 입력 하는 중인지 확인 하려면 PowerShell 프롬프트는 **SqlServer** 모듈을 올바르게 가져왔는지를:
+확인 하려면 PowerShell 프롬프트에서 다음 명령을 입력 된 **SqlServer** 모듈을 올바르게 가져왔는지를:
 
 ```powershell
 Get-Module -Name SqlServer
 ```
 
-PowerShell과 유사한 아래 정보를 표시 되어야 합니다.
+PowerShell에는 다음 출력과 유사한 정보가 표시 되어야 합니다.
 
 ```
 ModuleType Version    Name          ExportedCommands
@@ -97,7 +97,7 @@ $server.Information | Select-Object Edition, HostPlatform, HostDistribution | Fo
 # done
 ```
 
-PowerShell에는 아래에 표시 되는 내용을 유사한 정보가 표시 되어야 합니다.
+PowerShell에는 다음 출력과 유사한 정보가 표시 되어야 합니다.
 
 ```
 Edition          : Developer Edition (64-bit)

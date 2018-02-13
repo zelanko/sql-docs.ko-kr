@@ -1,6 +1,6 @@
 ---
 title: "Linux에서 SQL Server에 대 한 성능 모범 사례 | Microsoft Docs"
-description: "이 항목에서는 SQL Server 2017 Linux에서 실행 하기 위한 성능 모범 사례 및 지침 제공."
+description: "이 문서 SQL Server 2017 Linux에서 실행 하기 위한 성능 모범 사례 및 지침을 제공 합니다."
 author: rgward
 ms.author: bobward
 manager: craigg
@@ -9,20 +9,22 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>성능에 대 한 유용한 정보 및 SQL Server 2017 linux에 대 한 구성 지침
 
-이 항목에서는 모범 사례 및 Linux에서 SQL Server에 연결 하는 데이터베이스 응용 프로그램에 대 한 성능을 최대화 하기 위해 권장 사항을 제공 합니다. 이러한 권장 사항은 Linux 플랫폼에서 실행 됩니다. 모든 표준 SQL Server 권장 사항, 같은 인덱스 디자인 계속 적용 됩니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+이 문서는 모범 사례 및 Linux에서 SQL Server에 연결 하는 데이터베이스 응용 프로그램에 대 한 성능을 최대화 하기 위해 권장 사항을 제공 합니다. 이러한 권장 사항은 Linux 플랫폼에서 실행 됩니다. 모든 표준 SQL Server 권장 사항, 같은 인덱스 디자인 계속 적용 됩니다.
 
 다음 지침에는 SQL Server와 Linux 운영 체제를 구성 하기 위한 권장 사항을 포함 합니다.
 

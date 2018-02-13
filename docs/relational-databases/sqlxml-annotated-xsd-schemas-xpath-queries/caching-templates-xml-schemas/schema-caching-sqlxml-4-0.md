@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - cache [SQLXML]
 - schemas [SQLXML]
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c51dbf71f685fef5ff61c5d9db7ca7a7865ec71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 56c088343e6093c7500d2fd19c5d366cb261326a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="schema-caching-sqlxml-40"></a>스키마 캐싱(SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Microsoft SQL Server 2000 웹 릴리스 1, Microsoft SQLXML 2.0 및 SQLXML 3.0에 대 한 XML의-나란히 설치의 경우 스키마는 다음 레지스트리 키를 사용 하 여 모든 버전에서 캐싱을 명시적으로 제어할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Microsoft SQL Server 2000 웹 릴리스 1, Microsoft SQLXML 2.0 및 SQLXML 3.0에 대 한 XML의-나란히 설치의 경우 스키마는 다음 레지스트리 키를 사용 하 여 모든 버전에서 캐싱을 명시적으로 제어할 수 있습니다.  
   
  웹 릴리스 1:  
   

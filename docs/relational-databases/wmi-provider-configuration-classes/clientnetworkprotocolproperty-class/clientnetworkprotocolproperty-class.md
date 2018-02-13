@@ -11,23 +11,27 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ClientNetworkProtocolProperty Class
-apilocation: sqlmgmproviderxpsp2up.mof
-helpviewer_keywords: ClientNetworkProtocolProperty class
+apiname:
+- ClientNetworkProtocolProperty Class
+apilocation:
+- sqlmgmproviderxpsp2up.mof
+helpviewer_keywords:
+- ClientNetworkProtocolProperty class
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c6cb547926b932d9421dec69fa319f4517989b8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e5c389656e15e293e2f092c2d9b221f581bbc5ad
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty 클래스
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)][ClientNetworkProtocolProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) 클라이언트 네트워크 프로토콜의 속성을 나타냅니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[ClientNetworkProtocolProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) 는 클라이언트 네트워크 프로토콜의 속성을 나타냅니다.  
   
  [ClientNetworkProtocolProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)를 사용하여 다음 태스크를 수행할 수 있습니다.  
   
