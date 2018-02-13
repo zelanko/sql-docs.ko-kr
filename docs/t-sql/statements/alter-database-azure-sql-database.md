@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -246,7 +247,7 @@ ALTER DATABASE current
 |1024GB|해당 사항 없음|√|√|√|√ (D)|  
 |1024GB에서 최대 4, 096 GB 단위로 256 GB *|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|√|√|  
   
- \*P11 및 P15 허용 MAXSIZE 최대 4TB 1024GB 기본 크기 되 고 사용 합니다.  P11 및 P15 추가 비용 없이 최대 4TB의 포함 된 저장소를 사용할 수 있습니다. 프리미엄 계층에서 1TB 보다 큰 최대 크기는 현재 다음 지역에서 사용할 수 있습니다: 미국 East2, 미국 서 부, 미국 정부 기관용 버지니아, 서 부 유럽, 독일 중앙, 동남 아시아, 일본 동부, 오스트레일리아 동부, 중앙 캐나다 및 캐나다 동부 합니다. 현재 제한 사항에 대 한 참조 [데이터베이스를 단일](https://docs.microsoft.com/azure/sql-database-single-database-resources)합니다.  
+ \* P11 및 P15 허용 MAXSIZE 최대 4TB 1024GB 기본 크기 되 고 사용 합니다.  P11 및 P15 추가 비용 없이 최대 4TB의 포함 된 저장소를 사용할 수 있습니다. 프리미엄 계층에서 1TB 보다 큰 최대 크기는 현재 다음 지역에서 사용할 수 있습니다: 미국 East2, 미국 서 부, 미국 정부 기관용 버지니아, 서 부 유럽, 독일 중앙, 동남 아시아, 일본 동부, 오스트레일리아 동부, 중앙 캐나다 및 캐나다 동부 합니다. 현재 제한 사항에 대 한 참조 [데이터베이스를 단일](https://docs.microsoft.com/azure/sql-database-single-database-resources)합니다.  
 
   
  MAXSIZE 및 EDITION 인수에는 다음과 같은 규칙이 적용됩니다.  

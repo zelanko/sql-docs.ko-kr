@@ -29,19 +29,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
-# <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘 시계열 분석에 대 한 별도 두 가지 알고리즘을 포함 합니다.  
+# <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 시계열 알고리즘 기술 참조
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘에는 시계열을 분석하기 위한 두 가지 알고리즘이 포함되어 있습니다.  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 소개된 ARTXP 알고리즘은 계열의 적절한 다음 값을 예측하도록 최적화되어 있습니다.  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
 >  Microsoft 시계열 알고리즘은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있지만 시계열 분석을 사용자 지정하는 매개 변수와 같은 고급 기능은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 버전에서 지원하는 기능](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.  
   
 ### <a name="detection-of-seasonality"></a>계절성 검색  
- ARIMA 및 ARTXP 알고리즘은 모두 계절성 또는 주기 검색을 지원합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 고속 푸리에 변환을 사용하여 학습 전에 계절성을 검색합니다. 그러나 알고리즘 매개 변수를 설정하여 계절성 검색 및 시계열 분석의 결과에 영향을 줄 수 있습니다.  
+ ARIMA 및 ARTXP 알고리즘은 모두 계절성 또는 주기 검색을 지원합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 고속 푸리에 변환을 사용하여 학습 전에 계절성을 검색합니다. 그러나 알고리즘 매개 변수를 설정하여 계절성 검색 및 시계열 분석의 결과에 영향을 줄 수 있습니다.  
   
 -   *AUTODETECT_SEASONALITY*의 값을 변경하여 생성되는 가능한 시간 세그먼트의 수에 영향을 줄 수 있습니다.  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 01/08/2018
 |*FORECAST_METHOD*|분석과 예측에 사용할 알고리즘을 지정합니다. 가능한 값은 ARTXP, ARIMA 또는 MIXED입니다. 기본값은 MIXED입니다.|  
 |*HISTORIC_MODEL_COUNT*|작성할 기록 모델 수를 지정합니다. 기본값은 1입니다.<br /><br /> 참고: 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다.|  
 |*HISTORICAL_MODEL_GAP*|두 연속 기록 모델 간의 지연 시간을 지정합니다. 기본값은 10입니다. 이 값은 시간 단위 수를 나타내며 단위는 모델에 의해 정의됩니다.<br /><br /> 예를 들어 이 값을 g로 설정하면 g, 2*g, 3\*g 등의 시간 간격으로 데이터를 잘라 기록 모델을 작성합니다.<br /><br /> 참고: 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다.|  
-|*INSTABILITY_SENSITIVITY*|예측 분산이 특정 임계값을 초과하고 ARTXP 알고리즘이 예측을 표시하지 않는 지점을 제어합니다. 기본값은 1입니다.<br /><br /> 참고: 이 매개 변수는 ARIMA만 사용하는 모델에는 적용되지 않습니다.<br /><br /> 기본값 1은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서와 동일한 동작을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 각 예측에 대한 정규화된 표준 편차를 모니터링합니다. 이 값이 예측에 대한 임계값을 초과하자마자 시계열 알고리즘은 NULL을 반환하고 예측 프로세스를 중지합니다.<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 값은 불안정 검색을 중지합니다. 이는 분산에 상관없이 만들 수 있는 예측 수에 제한이 없다는 것을 의미합니다.<br /><br /> 참고: 이 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise에서만 수정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 기본값 1만 사용됩니다.|  
+|*INSTABILITY_SENSITIVITY*|예측 분산이 특정 임계값을 초과하고 ARTXP 알고리즘이 예측을 표시하지 않는 지점을 제어합니다. 기본값은 1입니다.<br /><br /> 참고: 이 매개 변수는 ARIMA만 사용하는 모델에는 적용되지 않습니다.<br /><br /> 기본값 1은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서와 동일한 동작을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 각 예측에 대한 정규화된 표준 편차를 모니터링합니다. 이 값이 예측에 대한 임계값을 초과하자마자 시계열 알고리즘은 NULL을 반환하고 예측 프로세스를 중지합니다.<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 값은 불안정 검색을 중지합니다. 이는 분산에 상관없이 만들 수 있는 예측 수에 제한이 없다는 것을 의미합니다.<br /><br /> 참고: 이 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise에서만 수정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 기본값 1만 사용됩니다.|  
 |*MAXIMUM_SERIES_VALUE*|예측에 사용할 최대값을 지정합니다. 이 매개 변수는 *MINIMUM_SERIES_VALUE*와 함께 예측을 예상 범위로 제한하는 데 사용됩니다. 예를 들어 특정 일의 예상 판매 수량이 재고 제품 수를 초과하지 않도록 지정할 수 있습니다.<br /><br /> 참고: 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다.|  
 |*MINIMUM_SERIES_VALUE*|예측할 수 있는 최소값을 지정합니다. 이 매개 변수는 *MAXIMUM_SERIES_VALUE*와 함께 예측을 예상 범위로 제한하는 데 사용됩니다. 예를 들어 예측된 판매 수량이 음수가 아니어야 함을 지정할 수 있습니다.<br /><br /> 참고: 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다.|  
 |*MINIMUM_SUPPORT*|각 시계열 트리에서 분할을 생성하는 데 필요한 최소 시간 조각 수를 지정합니다. 기본값은 10입니다.|  
@@ -164,7 +165,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 다음 표에 나열된 특정 입력 열 내용 유형, 예측 가능한 열 내용 유형 및 모델링 플래그를 지원합니다.  
   
-|Column|내용 유형|  
+|열|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Continuous, Key, Key Time 및 Table|  
 |예측 가능한 특성|Continuous, Table|  
@@ -175,6 +176,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>관련 항목:  
  [Microsoft 시계열 알고리즘](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [시계열 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: "11"
+caps.latest.revision: 
 ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="workload-management"></a>작업 관리
 SQL Server PDW 작업 관리 기능에는 사용자와 관리자가 미리 메모리 및 동시성의 구성 설정에 대 한 요청을 할당 하려면 허용 합니다. 작업 관리를 사용 하 여 모든 요청을 무기한 함으로써 적절 한 리소스에 요청을 허용 하 여 일관 된 또는 혼합 워크 로드의 성능을 향상 합니다.  
@@ -65,7 +65,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 |리소스 클래스입니다.|요청 중요도|최대 메모리 사용 *|동시성 슬롯 (최대 32 =)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|기본|보통|400MB|1|기본적으로 각 로그인에는 약간의 메모리 및 동시성 리소스의 요청에 대 한 허용 됩니다.<br /><br />로그인 리소스 클래스에 추가 되 면 새 클래스 우선적으로 적용 합니다. 로그인은 모든 리소스 클래스에서 삭제 되 면 기본 리소스 할당에 다시 로그인이 되돌립니다.|  
+|기본|보통|400MB|1.|기본적으로 각 로그인에는 약간의 메모리 및 동시성 리소스의 요청에 대 한 허용 됩니다.<br /><br />로그인 리소스 클래스에 추가 되 면 새 클래스 우선적으로 적용 합니다. 로그인은 모든 리소스 클래스에서 삭제 되 면 기본 리소스 할당에 다시 로그인이 되돌립니다.|  
 |MediumRC|보통|1200MB|3|중간 리소스 클래스를 할 수 있는 요청의 예:<br /><br />큰이 있는 CTAS에는 작업 해시 조인 합니다.<br /><br />디스크에 대 한 캐싱을 방지 하기 위해 더 많은 메모리를 필요로 하는 작업을 선택 합니다.<br /><br />클러스터형된 columnstore 인덱스에 데이터를 로드 합니다.<br /><br />빌드, 다시 작성 및 10-15 열이 있는 작은 테이블에 대 한 클러스터형된 columnstore 인덱스 다시 구성 합니다.|  
 |largerc|높음|2.8 G B|7|큰 리소스 클래스를 할 수 있는 요청의 예:<br /><br />큰 해시 조인 또는 큰 ORDER BY 또는 GROUP BY 절 등의 많은 집계를 포함 하는 매우 큰 CTAS에는 작업입니다.<br /><br />해시 조인 등의 작업 또는 ORDER BY 또는 GROUP BY 절 같은 집계에 대 한 매우 많은 양의 메모리를 필요로 하는 작업을 선택 합니다.<br /><br />클러스터형된 columnstore 인덱스에 데이터를 로드 합니다.<br /><br />빌드, 다시 작성 및 10-15 열이 있는 작은 테이블에 대 한 클러스터형된 columnstore 인덱스 다시 구성 합니다.|  
 |xlargerc|높음|8.4 GB|22|런타임 시 초대형 리소스 소비 해야 하는 요청에 대 한 초대형 리소스 클래스가입니다.|  
@@ -136,7 +136,7 @@ SQL 문 및 리소스 클래스에 의해 제어 되는 작업의 경우:
   
 -   UPDATE  
   
--   Delete  
+-   DELETE  
   
 -   RESTORE DATABASE 어플라이언스에 더 많은 계산 노드를 복원 하는 경우.  
   

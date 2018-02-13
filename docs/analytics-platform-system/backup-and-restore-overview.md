@@ -1,5 +1,5 @@
 ---
-title: "Backup 및 Restore 메서드"
+title: "백업 및 복원"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
@@ -14,14 +14,14 @@ description: "데이터 백업 및 복원에 대 한 SQL Server 병렬 데이터
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: "50"
+caps.latest.revision: 
 ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
-# <a name="backup-and-restore"></a>Backup 및 Restore 메서드
+# <a name="backup-and-restore"></a>백업 및 복원
 데이터 백업 및 복원에 대 한 SQL Server 병렬 데이터 웨어하우스 (PDW)을 작동 방법을 설명 합니다. 백업 및 복원 작업은 재해 복구에 사용 됩니다. 백업 및 복원 다른 어플라이언스에 하나의 기기에서 데이터베이스를 복사 하려면 사용할 수 있습니다.  
     
 ## <a name="BackupRestoreBasics"></a>백업 및 복원 기본 사항  
@@ -85,7 +85,7 @@ PDW는 어플라이언스 데이터베이스 백업 및 복원에 SQL Server 백
   
     -   백업 된 같거나 더 큰 수의 계산 노드를 가진 PDW 장치에만 복원할 수 있습니다.  
   
-    -   복원을 수행 하기 전에 백업 이름을 변경할 수 없습니다. 백업 디렉터리의 이름 백업의 원래 이름의 이름과 일치 해야 합니다. 백업의 원래 이름은 백업 디렉터리 내에 있는 backup.xml 파일에 있습니다. 다른 이름으로 데이터베이스를 복원 하려면 복원 명령에 새 이름을 지정할 수 있습니다. 예를 들어 `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`을 참조하십시오.  
+    -   복원을 수행 하기 전에 백업 이름을 변경할 수 없습니다. 백업 디렉터리의 이름 백업의 원래 이름의 이름과 일치 해야 합니다. 백업의 원래 이름은 백업 디렉터리 내에 있는 backup.xml 파일에 있습니다. 다른 이름으로 데이터베이스를 복원 하려면 복원 명령에 새 이름을 지정할 수 있습니다. 예를 들면 `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`과 같습니다.  
   
 ## <a name="RestoreModes"></a>데이터베이스 복원 모드  
 전체 데이터베이스 복원이 데이터베이스 백업에 데이터를 사용 하 여 PDW 데이터베이스를 다시 만듭니다. 먼저 전체 백업을 복원 하 고 다음 차등 백업을 하나 필요에 따라 복원으로 데이터베이스 복원 수행 됩니다. 데이터베이스 복원에는 데이터베이스 사용자 및 데이터베이스 역할에 포함 됩니다.  
@@ -133,7 +133,7 @@ PDW는 어플라이언스 데이터베이스 백업 및 복원에 SQL Server 백
   
 |백업 및 복원 태스크|Description|  
 |---------------------------|---------------|  
-|백업 서버로 서버를 준비 합니다.|[획득 하 고 백업 서버를 구성 합니다.](acquire-and-configure-backup-server.md)|  
+|백업 서버로 서버를 준비 합니다.|[획득 하 고 백업 서버를 구성 합니다. ](acquire-and-configure-backup-server.md)|  
 |데이터베이스를 백업 합니다.|[데이터베이스 백업](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |데이터베이스를 복원 합니다.|[데이터베이스 복원](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 <!-- MISSING LINKS

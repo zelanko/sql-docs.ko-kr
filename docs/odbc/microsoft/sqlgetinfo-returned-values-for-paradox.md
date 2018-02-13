@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 12760717293ba8ea463ff53b78bfb49838a6eaa6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>에는 SQLGetInfo 반환 값
 다음 표에서 C 언어 #에 대 한 defines는 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #에 대 한 defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 된 값에 대 한 자세한 내용은 **SQLGetInfo**, 참조는 *ODBC Programmer's Reference*합니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 >  여기서 **SQLGetInfo** 32 비트 비트 마스크, 세로 막대 (&#124;)를 반환 합니다. 비트 OR를 나타냅니다.  
   
-|정보 항목|반환 값|  
+|InfoType|반환 값|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -147,7 +148,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|다중 값|  
-|SQL_ODBC_SAG_CLI_ 규칙|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|드라이버 관리자에서|  
 |SQL_OJ_CAPABILITIES|다중 값|  

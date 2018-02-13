@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: c56a813ec873293fec2dc846da851fc9d36f2dae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo 액세스에 대 한 반환 값
 다음 표에서 C 언어 #에 대 한 defines는 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #에 대 한 defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 된 값에 대 한 자세한 내용은 **SQLGetInfo**, 참조는 *ODBC Programmer's Reference*합니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 >  여기서 **SQLGetInfo** 32 비트 비트 마스크, 세로 막대 (&#124;)를 반환 합니다. 비트 OR를 나타냅니다.  
   
-|정보 항목|반환된 값|  
+|InfoType|반환된 값|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"."|  
-|SQL_CATALOG_TERM|"데이터베이스"|  
+|SQL_CATALOG_TERM|"Database"|  
 |SQL_CATALOG_USAGE|다중 값|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -89,7 +90,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_DATA_SOURCE_NAME|Odbc.ini의 DSN 또는 "" Odbc.ini 드라이버 키워드를 사용 하는 경우|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
-|SQL_DATABASE_NAME|파일 이름 |  
+|SQL_DATABASE_NAME|파일 이름|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"액세스"|  
 |SQL_DBMS_VER|다중 값|  
@@ -147,7 +148,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|다중 값|  
-|SQL_ODBC_SAG_CLI_ 규칙|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|드라이버 관리자에서|  
 |SQL_OJ_CAPABILITIES|다중 값|  

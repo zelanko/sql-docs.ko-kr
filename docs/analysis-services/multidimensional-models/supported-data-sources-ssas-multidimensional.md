@@ -18,19 +18,20 @@ helpviewer_keywords:
 - connections [Analysis Services]
 - SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 0bdae9c95ea05d217db895331fb641b2a7038271
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>지원되는 데이터 원본(SSAS - 다차원)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 다차원 모델에서 사용할 수 있는 데이터 소스 형식을 설명 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 항목에서는 다차원 모델에서 사용할 수 있는 데이터 원본 유형에 대해 설명합니다.  
   
 ##  <a name="bkmk_supported_ds"></a> 지원되는 데이터 원본  
  다음 표에 나와 있는 데이터 원본에서 데이터를 검색할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치할 경우 각 데이터 원본에 대해 나열된 공급자는 설치되지 않습니다. 일부 공급자는 컴퓨터의 다른 응용 프로그램과 함께 이미 설치되어 있을 수 있습니다. 그렇지 않은 경우에는 공급자를 다운로드하여 설치해야 합니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
  ** 일부 기능의 경우 온-프레미스로 실행되는 SQL Server 관계형 데이터베이스가 필요합니다. 특히 쓰기 저장 및 ROLAP 저장소를 사용하려면 기본 데이터 원본이 SQL Server 관계형 데이터베이스여야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [지원 되는 데이터 원본 &#40; SSAS 테이블 형식 &#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [다차원 모델의 데이터 원본](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
