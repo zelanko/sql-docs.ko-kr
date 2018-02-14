@@ -8,21 +8,23 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: pages
+helpviewer_keywords:
+- pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0da734a4a4ae5acde02874ea6c4cd53ec52d79f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1561e7c3cea406881dc9722f26a4dfa4cefe0310
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="reading-pages"></a>페이지 읽기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,6 +61,6 @@ SQL Server Enterprise의 고급 검색 기능을 사용하여 여러 태스크�
 
 고급 검색을 사용하지 않는 경우 각 사용자는 버퍼 공간을 최대한 사용하려고 하며 이로 인해 디스크 충돌 경합이 발생합니다. 그러면 같은 페이지를 여러 사용자가 한 번에 읽고 공유하는 대신 각 사용자가 한 번씩 읽게 되므로 성능이 저하되고 리소스 처리 시간이 소모됩니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [페이지 및 익스텐트 아키텍처 가이드](../relational-databases/pages-and-extents-architecture-guide.md)   
  [페이지 쓰기](../relational-databases/writing-pages.md)
