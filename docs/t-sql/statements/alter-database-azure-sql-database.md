@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Azure SQL 데이터베이스) | Microsoft Docs"
 ms.custom: 
-ms.date: 12/20/2017
+ms.date: 02/13/2018
 ms.prod: 
 ms.prod_service: sql-database
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 80aa017e3876a7a41077f770d5328e4c6c49b5be
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER DATABASE { database_name }
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
-    | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
+    | EDITION = { 'basic' | 'standard' | 'premium' }   
     | SERVICE_OBJECTIVE = 
                  {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
@@ -69,8 +69,7 @@ ALTER DATABASE { database_name }
    }  
 
 <service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' }
 
 ```  
   
@@ -210,8 +209,10 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
- 수정 (버전  **=**  ['기본' | '표준' | '프리미엄' | premiumrs'])    
- 데이터베이스의 서비스 계층을 변경합니다. 다음 예에서는 변경 버전으로 `premium`:
+ 수정 (버전  **=**  ['기본' | '표준' | 프리미엄 '])    
+ 데이터베이스의 서비스 계층을 변경합니다. 'Premiumrs'에 대 한 지원이 제거 되었습니다. 질문에 대 한이 전자 메일 별칭을 사용 하 여: premium-rs@microsoft.com합니다.
+
+다음 예에서는 변경 버전으로 `premium`:
   
 ```  
 ALTER DATABASE current 
@@ -223,7 +224,7 @@ ALTER DATABASE current
  수정 (MAXSIZE  **=**  [100MB | 500MB | 1 | 1024... 4096] GB)  
  데이터베이스의 최대 크기를 지정합니다. 최대 크기는 데이터베이스의 EDITION 속성에 대한 유효한 값 집합을 따라야 합니다. 데이터베이스의 최대 크기를 변경하면 데이터베이스 EDITION이 변경될 수 있습니다. 다음 표에서는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서비스 계층에 대해 지원되는 MAXSIZE 값 및 기본값(D)을 보여 줍니다.  
   
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1 P6 및 PRS1 PRS6**|**P11-P15**|  
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100MB|√|√|√|√|√|  
 |250MB|√|√|√|√|√|  
@@ -266,7 +267,7 @@ ALTER DATABASE current
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
- 서비스 목표에 대 한 사용 가능한 값은: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `PRS1`, `PRS2`, `PRS4`, 및 `PRS6`합니다. 서비스 목표 설명과 크기, 버전 및 서비스 목표 조합에 대 한 자세한 내용은 [Azure SQL 데이터베이스 서비스 계층 및 성능 수준](http://msdn.microsoft.com/library/azure/dn741336.aspx)합니다. 지정 된 SERVICE_OBJECTIVE 버전에서 지원 되지 않는 경우 오류가 발생 합니다. SERVICE_OBJECTIVE 값을 한 계층에서 다른 계층으로 변경하려면(예: S1에서 P1로 변경), EDITION 값도 변경해야 합니다.  
+ 서비스 목표에 대 한 사용 가능한 값은: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, 또는`P15`합니다. 서비스 목표 설명과 크기, 버전 및 서비스 목표 조합에 대 한 자세한 내용은 [Azure SQL 데이터베이스 서비스 계층 및 성능 수준](http://msdn.microsoft.com/library/azure/dn741336.aspx)합니다. 지정 된 SERVICE_OBJECTIVE 버전에서 지원 되지 않는 경우 오류가 발생 합니다. SERVICE_OBJECTIVE 값을 한 계층에서 다른 계층으로 변경하려면(예: S1에서 P1로 변경), EDITION 값도 변경해야 합니다. PR 서비스 목표에 대 한 지원이 제거 되었습니다. 질문에 대 한이 전자 메일 별칭을 사용 하 여: premium-rs@microsoft.com합니다. 
   
  수정 (SERVICE_OBJECTIVE 탄력적인 =\_풀 (이름 = \<elastic_pool_name >)  
  기존 데이터베이스를 탄력적인 풀에 추가 하려면 데이터베이스의 SERVICE_OBJECTIVE ELASTIC_POOL로 설정 하 고 탄력적 풀의 이름을 제공 합니다. 동일한 서버 내에서 다른 탄력적인 풀에 데이터베이스를 변경 하려면이 옵션을 사용할 수도 있습니다. 자세한 내용은 참조 [만들기 및 SQL 데이터베이스 탄력적 풀 관리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)합니다. 탄력적 풀에서 데이터베이스를 제거 하는 SERVICE_OBJECTIVE 단일 데이터베이스 성능 수준으로 설정 하려면 ALTER DATABASE를 사용 합니다.  
@@ -277,7 +278,7 @@ ALTER DATABASE current
  ALLOW_CONNECTIONS와 {모든 | **아니요** }  
  ALLOW_CONNECTIONS를 지정 하지 않으면 기본적으로 NO로 설정 됩니다. 모두에 설정 된 경우 연결 하는 데 적절 한 권한이 있는 모든 로그인을 허용 하는 읽기 전용 데이터베이스입니다.  
   
- WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' }  
+ WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' }  
  SERVICE_OBJECTIVE를 지정 하지 않으면 보조 데이터베이스가 주 데이터베이스와 같은 서비스 수준에서 생성 됩니다. SERVICE_OBJECTIVE를 지정 하면 보조 데이터베이스는 지정된 된 수준에서 생성 됩니다. 이 옵션 보다 저렴 서비스 수준이 있는 지리적 복제 보조를 만들 수 있도록 지원 합니다. 지정 된 SERVICE_OBJECTIVE를 소스로 같은 버전 내에 있어야 합니다. 예를 들어 버전은 premium 경우 S0를 지정할 수 없습니다.  
   
  ELASTIC_POOL (이름 = \<elastic_pool_name)  
