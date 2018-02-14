@@ -1,5 +1,5 @@
 ---
-title: "예측 모델 만들기 (R in SQL 빠른 시작) | Microsoft Docs"
+title: "모델에서 예측 및 그리기(SQL에서 R 빠른 시작) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-server-2016
@@ -25,13 +25,13 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="create-a-predictive-model-r-in-sql-quickstart"></a>예측 모델 만들기 (R in SQL 빠른 시작)
+# <a name="create-a-predictive-model-r-in-sql-quickstart"></a>예측 모델 만들기(SQL에서 R 빠른 시작)
 
 이 단계에서는 R을 사용하여 모델을 학습한 다음 SQL Server의 테이블에 모델을 저장하는 방법을 알아봅니다. 모델은 자동차의 속도에 따른 정지 거리를 예측하는 간단한 회귀 모델입니다. R에 내장된 `cars` 데이터 집합은 작고 이해하기 쉬우므로 이를 사용할 것입니다.
 
 ## <a name="create-the-source-data"></a>원본 데이터 만들기
 
-먼저 훈련할 데이터를 저장할 테이블을 만듭니다.
+먼저 학습 데이터를 저장할 테이블을 만듭니다.
 
 ```sql
 CREATE TABLE CarSpeed ([speed] int not null, [distance] int not null)
@@ -43,9 +43,9 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'car_speed'
 ```
 
-+ 임시 테이블 사용을 좋아하는 사람도 있겠지만, 일부 R 클라이언트는 배치 처리 간의 세션 연결을 끊다는 점을 유의하세요.
++ 임시 테이블 사용을 좋아하는 사람도 있겠지만, 일부 R 클라이언트는 배치 간의 세션 연결을 끊는다는 점을 유의하세요.
 
-+ R 런타임에는 작거나 데이터 집합이 많이 포함되어 있습니다.  R과 함께 설치된 데이터 집합 목록을 가져오려면 R 명령 프롬프트에서 `library(help="datasets")`를 입력합니다.
++ R 런타임에는 작고 큰 많은 데이터 집합이 포함되어 있습니다. R과 함께 설치된 데이터 집합 목록을 가져오려면 R 명령 프롬프트에서 `library(help="datasets")`를 입력합니다.
 
 ## <a name="create-a-regression-model"></a>회귀 모델 만들기
 
@@ -58,7 +58,7 @@ EXEC sp_execute_external_script
 + 모델 훈련용 입력 데이터 제공
 
 > [!TIP]
-> 선형 모델에 재교육(refresher)이 필요하다면 RxLinMod를 사용하여 모델을 적합시키는 과정을 설명하는 이 자습서를 권장합니다: [선형 모델 맞춤](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
+> 선형 모델에 재교육(refresher)이 필요하다면 RxLinMod를 사용하여 모델 적합화 과정을 설명하는 이 자습서를 권장합니다. [선형 모델 맞춤](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
 
 실제로 모델을 빌드하려면 R 코드 내에서 수식을 정의하고 데이터를 입력 매개 변수로 전달합니다.
 
@@ -102,7 +102,7 @@ INSERT INTO stopping_distance_models (model)
 EXEC generate_linear_model;
 ```
 
-이 코드를 두 번 실행하면 다음 오류가 발생합니다:
+이 코드를 두 번 실행하면 다음 오류가 발생합니다.
 
 ```
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models
@@ -151,7 +151,7 @@ VALUES (' latest model', @model)
 
 `sp_execute_external_script` 에서 SQL 매개변수와 R 변수를 함께 작업할 때 기억할 규칙:
 
-+ R 스크립트에 매핑된 모든 SQL 매개 변수는 _@params_ 인수에 이름이 나열 되어야 합니다.
++ R 스크립트에 매핑된 모든 SQL 매개 변수는 _@params_ 인수에 이름이 나열되어야 합니다.
 + 이러한 매개 변수 중 하나를 출력하려면 _@params_ 목록에 OUTPUT 키워드를 추가합니다.
 + 매핑된 매개 변수를 나열한 후 _@params_ 목록 바로 뒤의 R 변수에 SQL 매개 변수의 매핑을 줄 단위로 제공합니다.
 
