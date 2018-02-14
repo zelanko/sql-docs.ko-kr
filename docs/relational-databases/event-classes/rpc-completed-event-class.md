@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RPC:Completed event class
+helpviewer_keywords:
+- RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c14de50af756d8b58b4af5368f13b788b7c65e3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f3dd125555180acb996579ff07f184a8092722c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] RPC:Completed 이벤트 클래스는 원격 프로시저 호출이 완료되었음을 나타냅니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+RPC:Completed 이벤트 클래스는 원격 프로시저 호출이 완료되었음을 나타냅니다.  
   
 ## <a name="rpccompleted-event-class-data-columns"></a>RPC:Completed 이벤트 클래스 데이터 열  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|예|  
 |BinaryData|**image**|추적에서 캡처된 이벤트 클래스에 의존하는 이진 값입니다.|2|예|  
@@ -37,11 +40,11 @@ ms.lasthandoff: 11/17/2017
 |CPU|**int**|이벤트에서 사용한 CPU 시간입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 마이크로초 단위입니다. 이전 버전에서는 밀리초 단위입니다.|18|예|  
 |DatabaseID|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
-|기간|**bigint**|이벤트에서 사용한 시간입니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 마이크로초 단위입니다. 이전 버전에서는 밀리초 단위입니다.|13|예|  
+|Duration|**bigint**|이벤트에서 사용한 시간입니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 마이크로초 단위입니다. 이전 버전에서는 밀리초 단위입니다.|13|예|  
 |EndTime|**datetime**|원격 프로시저 호출이 종료된 시간입니다.|15|예|  
-|오류|**int**|지정된 이벤트의 오류 번호입니다.<br /><br /> 0=확인<br /><br /> 1=오류<br /><br /> 2=중단<br /><br /> 3=건너뜀|31|예|  
-|EventClass|**int**|이벤트 유형 = 10|27|아니요|  
-|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|Error|**int**|지정된 이벤트의 오류 번호입니다.<br /><br /> 0=확인<br /><br /> 1=오류<br /><br /> 2=중단<br /><br /> 3=건너뜀|31|예|  
+|EventClass|**int**|이벤트 유형 = 10|27|아니오|  
+|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |GroupID|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IsSystem|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|예|  

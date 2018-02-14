@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: "3"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d48c41769f674278a1597dd52e40758a928a9b6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 인덱스 디자인 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -742,7 +743,7 @@ deltastore는 삭제된 것으로 표시되었지만 columnstore에서 물리적
 해시 함수는 인덱스 키 열에 적용되며 함수의 결과에 따라 해당 키가 속하는 버킷이 결정됩니다. 각 버킷에는 행에 대한 포인터가 있으며 해시된 키 값이 해당 버킷에 매핑됩니다.
 
 해시 인덱스에 사용되는 해시 함수의 특징은 다음과 같습니다.
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 모든 해시 인덱스에 사용되는 하나의 해시 함수가 있습니다.
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에는 모든 해시 인덱스에 사용되는 하나의 해시 함수가 있습니다.
 - 해시 함수는 결정적입니다. 동일한 입력 키 값이 항상 해시 인덱스의 동일한 버킷에 매핑됩니다.
 - 여러 인덱스 키를 동일한 해시 버킷에 매핑할 수 있습니다.
 - 해시 함수는 균형을 이룹니다. 즉, 해시 버킷에 대한 인덱스 키 값의 분포는 일반적으로 평평한 선형 분포가 아닌 포아송 분포 또는 종형 곡선 분포를 따릅니다.

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7c63ec7ac4a85c43606941f61990eb8cc19c9c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab1e592975fce7d5439d33df265bb8ce5bf05c45
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 확장 이벤트 패키지
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 -   대상  
   
--   작업  
+-   동작  
   
 -   유형  
   
@@ -106,7 +106,7 @@ where name = 'keyword_map'
 ### <a name="targets"></a>대상  
  대상은 이벤트의 소비자입니다. 대상은 이벤트가 발생하는 스레드에서 동기적으로 이벤트를 처리하거나 시스템을 통해 제공되는 스레드에서 비동기적으로 이벤트를 처리합니다. 확장 이벤트는 이벤트 출력을 전송하는 데 적합하게 사용할 수 있는 여러 대상을 제공합니다. 자세한 내용은 [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)을 참조하세요.  
   
-### <a name="actions"></a>작업  
+### <a name="actions"></a>동작  
  동작은 이벤트에 대한 한 차례 또는 일련의 프로그래밍 방식 응답입니다. 동작은 이벤트에 바인딩되며 각 이벤트에는 일련의 고유한 동작이 있을 수 있습니다.  
   
 > [!NOTE]  

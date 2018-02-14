@@ -8,7 +8,8 @@ ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 13f4dc7e877341917ebf4f41694cb886c81c53f2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-guide"></a>PolyBase 가이드
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase는 t-sql 언어를 통해 데이터베이스 외부의 데이터에 액세스하는 기술입니다.  SQL Server 2016에서 이 기술을 사용하여 Hadoop에서 외부 데이터에 대한 쿼리를 실행하거나 Azure Blob Storage의 데이터를 내보내거나 가져올 수 있습니다. 쿼리는 Hadoop에 계산을 푸시하도록 최적화됩니다. Azure SQL Data Warehouse에서는 Azure Blob Storage 및 Azure Data Lake Store의 데이터를 가져오거나 내보낼 수 있습니다.
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+PolyBase는 t-sql 언어를 통해 데이터베이스 외부의 데이터에 액세스하는 기술입니다.  SQL Server 2016에서 이 기술을 사용하여 Hadoop에서 외부 데이터에 대한 쿼리를 실행하거나 Azure Blob Storage의 데이터를 내보내거나 가져올 수 있습니다. 쿼리는 Hadoop에 계산을 푸시하도록 최적화됩니다. Azure SQL Data Warehouse에서는 Azure Blob Storage 및 Azure Data Lake Store의 데이터를 가져오거나 내보낼 수 있습니다.
   
   
  PolyBase를 사용하려면 [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md)을 참조하세요.  

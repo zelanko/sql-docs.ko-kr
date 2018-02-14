@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - Broker event category [SQL Server]
 - event classes [SQL Server], Broker event category
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2850b94a1ed6046e4ecea8d2f38695eb3a6ae40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 555d3b6870d0fe75dbf6eb24be6bcb3ca61d500d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="broker-event-category"></a>Broker 이벤트 범주
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Broker** 이벤트 범주에는 일반적인 Service Broker 이벤트가 포함됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Broker** 이벤트 범주에는 일반적인 Service Broker 이벤트가 포함됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Broker:Activation 이벤트 클래스](../../relational-databases/event-classes/broker-activation-event-class.md)|큐 모니터가 활성화 저장 프로시저를 시작하는 경우에 생성되는 이벤트입니다.|  
 |[Broker:Connection 이벤트 클래스](../../relational-databases/event-classes/broker-connection-event-class.md)|Service Broker에서 관리하는 전송 연결 상태를 보고하기 위해 생성되는 이벤트입니다.|  

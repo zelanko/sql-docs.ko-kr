@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e8a9a30e4221c0c425c45d46b1e3bdddda9a66e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,11 +156,12 @@ ms.lasthandoff: 11/17/2017
 -   
             *계산 열* - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 메모리 최적화 테이블에서 계산 열을 지원하지 않기 때문에 계산 열 SalesOrderNumber 및 TotalDue가 생략되었습니다. 새로운 뷰 Sales.vSalesOrderHeader_extended_inmem이 SalesOrderNumber 및 TotalDue 열을 반영하므로 이러한 열이 필요한 경우 이 뷰를 사용할 수 있습니다.  
 
-    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 계산 열이 메모리 최적화 테이블 및 인덱스에서 지원됩니다.
 
   
--   *외래 키 제약 조건* 은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 최적화 테이블에 지원되지만 참조된 테이블도 메모리 최적화 경우에만 지원됩니다. 메모리 최적화 테이블로 마이그레이션된 테이블을 참조하는 외래 키는 마이그레이션된 테이블에 유지되지만 다른 외래 키는 생략됩니다.  또한 SalesOrderHeader_inmem은 예제 작업에서 핫 테이블이며, FOREIGN KEY 제약 조건을 지정하려면 모든 DML 작업에 대한 추가 처리가 필요합니다. 이는 이러한 제약 조건에서 참조된 다른 모든 테이블에서 조회가 필요하기 때문입니다. 따라서 응용 프로그램에서 Sales.SalesOrderHeader_inmem 테이블에 대한 참조 무결성을 보장하며 참조 무결성은 행이 삽입될 때 확인되지 않는다고 가정합니다.  
+-   
+            *외래 키 제약 조건* 은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 최적화 테이블에 지원되지만 참조된 테이블도 메모리 최적화 경우에만 지원됩니다. 메모리 최적화 테이블로 마이그레이션된 테이블을 참조하는 외래 키는 마이그레이션된 테이블에 유지되지만 다른 외래 키는 생략됩니다.  또한 SalesOrderHeader_inmem은 예제 작업에서 핫 테이블이며, FOREIGN KEY 제약 조건을 지정하려면 모든 DML 작업에 대한 추가 처리가 필요합니다. 이는 이러한 제약 조건에서 참조된 다른 모든 테이블에서 조회가 필요하기 때문입니다. 따라서 응용 프로그램에서 Sales.SalesOrderHeader_inmem 테이블에 대한 참조 무결성을 보장하며 참조 무결성은 행이 삽입될 때 확인되지 않는다고 가정합니다.  
   
 -   *Rowguid* - rowguid 열이 생략되었습니다. uniqueidentifier가 메모리 최적화 테이블에 지원되지만 ROWGUIDCOL 옵션은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 지원되지 않습니다. 이러한 종류의 열은 일반적으로 병합 복제나 filestream 열이 있는 테이블에 사용됩니다. 이 예제에는 둘 다 포함되어 있지 않습니다.  
   
@@ -167,7 +169,8 @@ ms.lasthandoff: 11/17/2017
   
 -   *기본 제약 조건* - SalesOrderHeader와 유사하게 시스템 날짜/시간을 필요로 하는 기본 제약 조건은 마이그레이션되지 않으며, 대신 판매 주문을 삽입하는 저장 프로시저가 첫 번째 삽입 시 현재 시스템 날짜/시간을 삽입하는 작업을 처리합니다.  
   
--   *계산 열* - 계산 열이 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 최적화 테이블에 지원되지 않기 때문에 계산 열 LineTotal이 마이그레이션되지 않았습니다. 이 열에 액세스하려면 Sales.vSalesOrderDetail_extended_inmem 뷰를 사용합니다.  
+-   
+            *계산 열* - 계산 열이 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 최적화 테이블에 지원되지 않기 때문에 계산 열 LineTotal이 마이그레이션되지 않았습니다. 이 열에 액세스하려면 Sales.vSalesOrderDetail_extended_inmem 뷰를 사용합니다.  
   
 -   *Rowguid* - rowguid 열이 생략되었습니다. 자세한 내용은 SalesOrderHeader 테이블에 대한 설명을 참조하세요.  
   
@@ -473,10 +476,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|기본값|94|  
+|MEMORYCLERK_XTP|Default|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|기본값|0|  
-|MEMORYCLERK_XTP|기본값|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  기본 메모리 클럭은 시스템 차원의 메모리 구조를 포함하고 있으며 비교적 작습니다. 사용자 데이터베이스(이 경우 ID 5인 데이터베이스)의 메모리 클럭은 약 900MB입니다.  
   
@@ -522,10 +525,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|기본값|146|  
+|MEMORYCLERK_XTP|Default|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|기본값|0|  
-|MEMORYCLERK_XTP|기본값|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  보시다시피 SQL Server는 샘플 데이터베이스에서 메모리 최적화 테이블과 인덱스에 8GB보다 조금 작은 크기를 사용하고 있습니다.  
   
@@ -568,14 +571,14 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|기본값|2261|  
+|MEMORYCLERK_XTP|Default|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|기본값|0|  
-|MEMORYCLERK_XTP|기본값|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  이는 예상된 결과입니다. 트랜잭션 작업이 실행 중일 때 메모리가 회수됩니다.  
   
- 데모 작업의 두 번째 실행을 시작하는 경우 이전에 삭제된 행이 정리됨에 따라 메모리 사용률이 처음에는 줄어드는 것을 확인할 수 있습니다. 특정 시점에서 메모리 크기가 다시 증가하고 작업이 완료될 때까지 증가합니다. 데모를 다시 설정하고 1,000만 개의 행을 삽입한 후 메모리 사용률은 처음 실행한 후의 사용률과 매우 유사합니다. 예를 들어  
+ 데모 작업의 두 번째 실행을 시작하는 경우 이전에 삭제된 행이 정리됨에 따라 메모리 사용률이 처음에는 줄어드는 것을 확인할 수 있습니다. 특정 시점에서 메모리 크기가 다시 증가하고 작업이 완료될 때까지 증가합니다. 데모를 다시 설정하고 1,000만 개의 행을 삽입한 후 메모리 사용률은 처음 실행한 후의 사용률과 매우 유사합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SELECT type  
@@ -587,10 +590,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|기본값|1863|  
+|MEMORYCLERK_XTP|Default|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|기본값|0|  
-|MEMORYCLERK_XTP|기본값|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>메모리 최적화 테이블의 디스크 사용률  
  지정된 시점에서 데이터베이스의 검사점 파일에 대한 전체 디스크 크기는 다음 쿼리를 사용하여 확인할 수 있습니다.  
@@ -749,7 +752,7 @@ ORDER BY state, file_type
   
  데모를 다시 설정한 후 1,000만 개의 판매 주문을 삽입하는 데모 작업을 두 번째로 실행하면 작업을 처음 실행하는 동안 생성된 파일이 정리된 것을 확인할 수 있습니다. 작업이 실행되는 동안 위의 쿼리를 몇 차례 실행하는 경우 검사점 파일이 다양한 상태를 거치는 것을 확인할 수 있습니다.  
   
- 1,000만 개의 판매 주문을 삽입하는 작업을 두 번째로 실행한 후 디스크 사용률이 처음 실행한 후와 매우 유사한 것을 확인할 수 있습니다. 하지만 시스템이 특성상 동적이므로 반드시 같지는 않습니다. 예를 들어  
+ 1,000만 개의 판매 주문을 삽입하는 작업을 두 번째로 실행한 후 디스크 사용률이 처음 실행한 후와 매우 유사한 것을 확인할 수 있습니다. 하지만 시스템이 특성상 동적이므로 반드시 같지는 않습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SELECT state_desc  
@@ -778,7 +781,7 @@ ORDER BY state, file_type
   
  이 경우에는 'under construction' 상태의 검사점 파일 쌍이 두 개 있습니다. 즉, 작업의 높은 동시성 수준 때문에 여러 파일 쌍이 ‘under construction’ 상태로 이동했습니다. 여러 동시 스레드에서 같은 시간에 새로운 파일 쌍을 필요로 했으므로 파일 쌍이 'precreated'에서 ‘under construction’으로 이동했습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

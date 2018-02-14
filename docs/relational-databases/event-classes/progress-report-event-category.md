@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,21 +17,22 @@ helpviewer_keywords:
 - Progress Report event category [SQL Server]
 - SQL Server event classes, Progress Report event category
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17542948a439286dd9acc231e52226a5fca6bc80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca7184fd9988aff8ecfe61f3f174d488a2e0a404
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="progress-report-event-category"></a>Progress Report 이벤트 범주
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Progress Report** 이벤트 범주에는 **Progress Report: Online Index Operation** 이벤트 클래스가 포함됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Progress Report** 이벤트 범주에는 **Progress Report: Online Index Operation** 이벤트 클래스가 포함됩니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Progress Report: Online Index Operation 이벤트 클래스](../../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)|온라인 인덱스 작성 작업 진행률을 나타냅니다.|  
   

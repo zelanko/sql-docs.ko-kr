@@ -8,36 +8,39 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Performance Statistics event class
+helpviewer_keywords:
+- Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 952bad5b2f70ce0d1c22579ea50708cd48e6b9a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3b788ea13beced99f19a35707591ecf90c5dd5d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Performance Statistics 이벤트 클래스는 실행 중인 쿼리, 저장 프로시저 및 트리거의 성능을 모니터링하는 데 사용할 수 있습니다. 6개의 각 이벤트 하위 클래스는 시스템 내의 쿼리, 저장 프로시저 및 트리거의 유효 기간에 있는 이벤트를 나타냅니다. 이 이벤트 하위 클래스 및 관련 sys.dm_exec_query_stats, sys.dm_exec_procedure_stats 및 sys.dm_exec_trigger_stats 동적 관리 뷰를 조합하여 사용하면 지정된 쿼리, 저장 프로시저 또는 트리거의 성능 기록을 다시 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Performance Statistics 이벤트 클래스는 실행 중인 쿼리, 저장 프로시저 및 트리거의 성능을 모니터링하는 데 사용할 수 있습니다. 6개의 각 이벤트 하위 클래스는 시스템 내의 쿼리, 저장 프로시저 및 트리거의 유효 기간에 있는 이벤트를 나타냅니다. 이 이벤트 하위 클래스 및 관련 sys.dm_exec_query_stats, sys.dm_exec_procedure_stats 및 sys.dm_exec_trigger_stats 동적 관리 뷰를 조합하여 사용하면 지정된 쿼리, 저장 프로시저 또는 트리거의 성능 기록을 다시 구성할 수 있습니다.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Performance Statistics 이벤트 클래스 데이터 열  
  다음 표에서는 EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 및 EventSubClass 5와 같은 각 이벤트 하위 클래스와 관련된 이벤트 클래스 데이터 열에 대해 설명합니다.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|예|  
 |BinaryData|**image**|NULL|2|예|  
 |DatabaseID|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
-|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 0 = 현재 캐시에 없는 새로운 일괄 처리 SQL 텍스트입니다.<br /><br /> 임시 일괄 처리에 대한 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> 유형 0인 쿼리 한 개|21|예|  
 |IntegerData2|**int**|NULL|55|예|  
 |ObjectID|**int**|NULL|22|예|  
@@ -51,12 +54,12 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|이 계획을 다시 컴파일한 누적 횟수입니다.|52|예|  
 |BinaryData|**image**|컴파일된 계획의 이진 XML입니다.|2|예|  
 |DatabaseID|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
-|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = 컴파일된 저장 프로시저 내의 쿼리입니다.<br /><br /> 저장 프로시저에 대한 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> *n* 개|21|예|  
 |IntegerData2|**int**|저장 프로시저 내에 있는 문의 끝입니다.<br /><br /> -1은 저장 프로시저의 끝입니다.|55|예|  
@@ -70,17 +73,17 @@ ms.lasthandoff: 11/17/2017
 |ObjectType|**int**|이벤트와 관련된 개체 유형을 나타내는 값입니다.<br /><br /> 8272 = 저장 프로시저|28|예|  
 |BigintData2|**bigint**|컴파일 시 사용되는 총 메모리(KB)입니다.|53|예|  
 |CPU|**int**|컴파일 시 소요되는 총 CPU 시간(밀리초)입니다.|18|예|  
-|기간|**int**|컴파일 시 소요되는 총 시간(마이크로초)입니다.|13|예|  
+|Duration|**int**|컴파일 시 소요되는 총 시간(마이크로초)입니다.|13|예|  
 |IntegerData|**int**|컴파일된 계획의 크기(KB)입니다.|25|예|  
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|이 계획을 다시 컴파일한 누적 횟수입니다.|52|예|  
 |BinaryData|**image**|컴파일된 계획의 이진 XML입니다.|2|예|  
 |DatabaseID|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
-|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 2 = 컴파일된 임의 SQL 문 내의 쿼리입니다.<br /><br /> 임시 일괄 처리에 대한 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> *n* 개|21|예|  
 |IntegerData2|**int**|일괄 처리 내에 있는 문의 끝입니다.<br /><br /> -1은 일괄 처리의 끝입니다.|55|예|  
@@ -93,17 +96,17 @@ ms.lasthandoff: 11/17/2017
 |PlanHandle|**image**|일괄 처리에 대한 컴파일된 계획의 계획 핸들입니다. dm_exec_query_plan 동적 관리 뷰를 사용하여 일괄 처리 XML 계획을 가져오는 데 사용할 수 있습니다.|65|예|  
 |BigintData2|**bigint**|컴파일 시 사용되는 총 메모리(KB)입니다.|53|예|  
 |CPU|**int**|컴파일 시 소요되는 총 CPU 시간(마이크로초)입니다.|18|예|  
-|기간|**int**|컴파일 시 소요되는 총 시간(밀리초)입니다.|13|예|  
+|Duration|**int**|컴파일 시 소요되는 총 시간(밀리초)입니다.|13|예|  
 |IntegerData|**int**|컴파일된 계획의 크기(KB)입니다.|25|예|  
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|이 계획을 다시 컴파일한 누적 횟수입니다.|52|예|  
 |BinaryData|**image**|NULL|2|예|  
 |DatabaseID|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
-|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 3 = 캐시된 쿼리가 소멸되었으며 계획과 관련된 기록 성능 데이터도 소멸될 예정입니다.<br /><br /> 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> 쿼리가 캐시에서 플러시될 때 유형 3인 쿼리 한 개<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> 쿼리가 캐시에서 플러시될 때 유형 3인 쿼리 한 개|21|예|  
 |IntegerData2|**int**|저장 프로시저나 일괄 처리 내에 있는 문의 끝입니다.<br /><br /> -1은 저장 프로시저나 일괄 처리의 끝입니다.|55|예|  
@@ -118,12 +121,12 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|예|  
 |BinaryData|**image**|NULL|2|예|  
 |DatabaseID|**int**|지정된 저장 프로시저가 있는 데이터베이스의 ID입니다.|3|예|  
-|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 4 = 캐시된 저장 프로시저가 캐시에서 제거되었으며 관련된 기록 성능 데이터도 소멸될 예정입니다.|21|예|  
 |IntegerData2|**int**|NULL|55|예|  
@@ -138,12 +141,12 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|예|  
 |BinaryData|**image**|NULL|2|예|  
 |DatabaseID|**int**|지정된 트리거가 있는 데이터베이스의 ID입니다.|3|예|  
-|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 5 = 캐시된 트리거가 캐시에서 제거되었으며 관련된 기록 성능 데이터도 소멸될 예정입니다.|21|예|  
 |IntegerData2|**int**|NULL|55|예|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - event classes [SQL Server], Object Type column values
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1c0753ed19215c5d45610aa5582fbce2c906cd6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 063bab84aeaa695ace1087df518640b611749b5f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 추적 이벤트 열
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Object Type 추적 이벤트 열은 다양한 추적 이벤트에 사용됩니다. 이 항목에서는 이 열에 사용할 수 있는 값과 해당 값의 정의에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Object Type 추적 이벤트 열은 다양한 추적 이벤트에 사용됩니다. 이 항목에서는 이 열에 사용할 수 있는 값과 해당 값의 정의에 대해 설명합니다.  
   
 ## <a name="object-type-column-values"></a>Object Type 열 값  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 |8280|확장 저장 프로시저|  
 |16724|CLR 트리거|  
 |16964|데이터베이스|  
-|16975|개체|  
+|16975|Object|  
 |17222|FullText 카탈로그|  
 |17232|CLR 저장 프로시저|  
 |17235|스키마|  
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 |19283|ObfusKey|  
 |19521|비대칭 키 로그인|  
 |19523|인증서 로그인|  
-|19538|역할|  
+|19538|Role|  
 |19539|SQL 로그인|  
 |19543|Windows 로그인|  
 |20034|원격 서비스 바인딩|  
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |20821|UNIQUE 제약 조건|  
 |21057|응용 프로그램 역할|  
 |21059|인증서|  
-|21075|Server|  
+|21075|서버|  
 |21076|Transact-SQL 트리거|  
 |21313|어셈블리|  
 |21318|CLR 스칼라 함수|  

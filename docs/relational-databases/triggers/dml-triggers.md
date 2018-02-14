@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - DML triggers, about DML triggers
 - triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: afb92fc71dcb3581024950cfaac84c5b2dac7968
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 52773af792848bd628c238e0120f08f7441c2d6f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dml-triggers"></a>DML 트리거
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] DML 트리거는 트리거에 정의된 테이블 또는 뷰에 영향을 주는 DML(데이터 조작 언어) 이벤트가 실행될 때 자동으로 적용되는 특별한 유형의 저장 프로시저입니다. DML 이벤트에는 INSERT, UPDATE 또는 DELETE 문이 포함됩니다. DML 트리거를 사용하여 비즈니스 규칙과 데이터 무결성을 적용하고, 다른 테이블을 쿼리하고, 복잡한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함할 수 있습니다. 트리거 및 트리거를 시작하는 문은 트리거 내에서 롤백할 수 있는 단일 트랜잭션으로 처리됩니다. 디스크 공간 부족 등의 심각한 오류가 발견되면 전체 트랜잭션이 자동으로 롤백됩니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+DML 트리거는 트리거에 정의된 테이블 또는 뷰에 영향을 주는 DML(데이터 조작 언어) 이벤트가 실행될 때 자동으로 적용되는 특별한 유형의 저장 프로시저입니다. DML 이벤트에는 INSERT, UPDATE 또는 DELETE 문이 포함됩니다. DML 트리거를 사용하여 비즈니스 규칙과 데이터 무결성을 적용하고, 다른 테이블을 쿼리하고, 복잡한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함할 수 있습니다. 트리거 및 트리거를 시작하는 문은 트리거 내에서 롤백할 수 있는 단일 트랜잭션으로 처리됩니다. 디스크 공간 부족 등의 심각한 오류가 발견되면 전체 트랜잭션이 자동으로 롤백됩니다.  
   
 ## <a name="dml-trigger-benefits"></a>DML 트리거의 이점  
  DML 트리거는 엔터티 무결성 또는 도메인 무결성을 적용할 수 있다는 점에서 제약 조건과 비슷합니다. 일반적으로 PRIMARY KEY 및 UNIQUE 제약 조건의 일부가 되거나 제약 조건과 상관없이 생성되는 인덱스는 가장 낮은 수준에서 항상 엔터티 무결성이 강제 적용되어야 합니다. 도메인 무결성은 CHECK 제약 조건을 통해 강제 적용되어야 하고, 참조 무결성(RI)은 FOREIGN KEY 제약 조건을 통해 강제 적용되어야 합니다. DML 트리거는 제약 조건에서 지원하는 기능이 응용 프로그램에서 필요한 기능을 수행하지 못할 때 가장 유용합니다.  
@@ -73,7 +75,7 @@ ms.lasthandoff: 11/17/2017
  CLR 트리거  
  CLR 트리거는 AFTER 또는 INSTEAD OF 트리거일 수 있습니다. 또한 CLR 트리거는 DDL 트리거일 수 있습니다. CLR 트리거는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 실행하는 대신 .NET Framework에서 생성되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업로드되는 어셈블리 멤버인 관리 코드로 작성된 하나 이상의 메서드를 실행합니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크|항목|  
 |----------|-----------|  

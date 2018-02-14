@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b92ace95ff7d250fda16b1e021fddf61379cdb19
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>보고서 서버에 보고서 저장(보고서 작성기)
   보고서 작성기에서는 보고서 정의를 보고서 서버에 저장할 수 있습니다(보고서 게시라고도 함). 보고서를 보고서 서버에 저장하면 다른 사용자가 보고서를 볼 수 있습니다. 게시된 보고서를 실행할 때마다 최신 데이터를 검색하게 됩니다. 렌더링된 보고서의 정적 복사본을 저장하려면 보고서를 다른 파일 형식으로 내보내고 저장하거나, 보고서 기록 기능을 사용하여 렌더링된 보고서의 여러 버전을 저장합니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-save-a-report-to-a-report-server"></a>보고서 서버에 보고서를 저장하려면  
   
-1.  보고서 작성기 단추에서 **저장**을 클릭합니다. **\<Report Item>으로 저장** 대화 상자가 열립니다.  
+1.  보고서 작성기 단추에서 **저장**을 클릭합니다. **다른 이름으로 저장***\<보고서 항목>* 대화 상자가 열립니다.  
   
     > [!NOTE]  
     >  보고서를 다시 저장하는 경우 보고서가 이전 위치에 자동으로 다시 저장됩니다. 다른 이름으로 저장 옵션을 사용하여 위치를 변경할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-save-a-report-as-a-different-name"></a>보고서를 다른 이름으로 저장하려면  
   
-1.  보고서 작성기 단추에서 **다른 이름으로 저장**을 클릭합니다. **\<Report Item>으로 저장** 대화 상자가 열립니다.  
+1.  보고서 작성기 단추에서 **다른 이름으로 저장**을 클릭합니다. **다른 이름으로 저장***\<보고서 항목>* 대화 상자가 열립니다.  
   
 2.  보고서를 저장할 보고서 서버 위치 또는 파일 공유로 이동합니다.  
   

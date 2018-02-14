@@ -8,39 +8,42 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Background Job Error event class
+helpviewer_keywords:
+- Background Job Error event class
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6d3226f88a122531b79d53cfaa48d23c40cb805
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a1c2644233c06589a4a30970060d8d2c7df3930a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Background Job Error** 이벤트 클래스는 백그라운드 작업이 비정상적으로 종료되었을 때 발생합니다. 이 경우 시스템 관리자의 조치가 필요할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Background Job Error** 이벤트 클래스는 백그라운드 작업이 비정상적으로 종료되었을 때 발생합니다. 이 경우 시스템 관리자의 조치가 필요할 수 있습니다.  
   
 ## <a name="background-job-error-event-class-data-columns"></a>Background Job Error 이벤트 클래스 데이터 열  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|작업에서 지정한 데이터베이스의 ID입니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |**DatabaseName**|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |**오류**|**int**|마지막 시도의 오류 번호입니다(**EventSubClass** 1에만 해당).|31|예|  
-|**EventClass**|**int**|이벤트 유형 = 193|27|아니요|  
-|**EventSequence**|**int**|요청 내의 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|**EventClass**|**int**|이벤트 유형 = 193|27|아니오|  
+|**EventSequence**|**int**|요청 내의 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |**EventSubClass**|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = 실패 후 백그라운드 작업 포기 중<br /><br /> 2 = 백그라운드 작업 삭제됨 - 큐가 꽉 참<br /><br /> 3 = 백그라운드 작업이 오류를 반환했음|21|예|  
 |**IndexID**|**int**|이벤트에 의해 영향 받는 개체의 인덱스 ID입니다. 개체의 인덱스 ID를 확인하려면 **sysindexes** 시스템 테이블의 **indid** 열을 사용하십시오.|24|예|  
 |**IntegerData**|**int**|작업이 시도한 횟수입니다(**EventSubClass** 1에만 해당).|25|예|  
 |**IntegerData2**|**int**|작업 시퀀스 번호입니다.|55|예|  
-|**ObjectID**|**int**|시스템이 할당한 개체의 ID입니다.|22|예|  
+|**Exchange Spill**|**int**|시스템이 할당한 개체의 ID입니다.|22|예|  
 |**SessionLoginName**|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 **SessionLoginName** 은 Login1을 표시하고 **LoginName** 은 Login2를 표시합니다. 이 열에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로그인이 모두 표시됩니다.|64|예|  
 |**Severity**|**int**|마지막 시도에서 발생한 오류의 심각도입니다(**EventSubClass** 1에만 해당).|20|예|  
 |**StartTime**|**datetime**|이 작업이 만들어진 시간입니다.|14|예|  

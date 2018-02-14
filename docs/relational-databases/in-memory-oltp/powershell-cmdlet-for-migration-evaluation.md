@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca4150da0217a5669c2a7d68f4fde6a231716c05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63f5604c01bba64b75c51908840b8b9650ed03d2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>마이그레이션 평가용 PowerShell cmdlet
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Save-SqlMigrationReport cmdlet은 SQL Server 데이터베이스에서 여러 개체의 마이그레이션 적합성을 평가하는 도구입니다. 현재 이 도구에서는 메모리 내 OLTP에 대한 마이그레이션 적합성만 평가할 수 있습니다. 이 cmdlet은 관리자 권한 Windows PowerShell 환경과 sqlps에서 모두 실행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Save-SqlMigrationReport cmdlet은 SQL Server 데이터베이스에서 여러 개체의 마이그레이션 적합성을 평가하는 도구입니다. 현재 이 도구에서는 메모리 내 OLTP에 대한 마이그레이션 적합성만 평가할 수 있습니다. 이 cmdlet은 관리자 권한 Windows PowerShell 환경과 sqlps에서 모두 실행할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,12 +37,12 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
 #### <a name="parameters"></a>매개 변수  
  아래 표에서는 이 cmdlet의 매개 변수에 대해 설명합니다.  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |----------------|-----------------|  
 |MigrationType|cmdlet의 대상인 마이그레이션 시나리오의 유형입니다. 현재 이 매개 변수에 사용 가능한 값은 기본 OLTP뿐입니다. (선택 사항)|  
-|Server|대상 SQL Server 인스턴스의 이름입니다. -InputObject 매개 변수를 제공하지 않는 경우 Windows PowerShell에서 필수 항목입니다. SQLPS에서는 선택 사항입니다.|  
+|서버|대상 SQL Server 인스턴스의 이름입니다. -InputObject 매개 변수를 제공하지 않는 경우 Windows PowerShell에서 필수 항목입니다. SQLPS에서는 선택 사항입니다.|  
 |데이터베이스|대상 SQL Server 데이터베이스의 이름입니다. -InputObject 매개 변수를 제공하지 않는 경우 Windows PowerShell에서 필수 항목입니다. SQLPS에서는 선택 사항입니다.|  
-|개체|대상 데이터베이스 개체의 이름입니다. 테이블 또는 저장 프로시저일 수 있습니다.|  
+|Object|대상 데이터베이스 개체의 이름입니다. 테이블 또는 저장 프로시저일 수 있습니다.|  
 |InputObject|cmdlet의 대상으로 지정해야 하는 SMO 개체입니다. -Server 및 -Database를 제공하지 않는 경우 Windows PowerShell에서 필수 항목입니다. SQLPS에서는 선택 사항입니다.|  
 |FolderPath|cmdlet이 생성된 보고서를 저장해야 하는 폴더입니다. 필수 사항입니다.|  
   

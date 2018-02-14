@@ -10,20 +10,22 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86282a01e4c9027d9dc340d348a814f61c0f4b3b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>보조 복제본에 대한 자동 시드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +37,7 @@ SQL Server 2012 및 2014에서 SQL Server Always On 가용성 그룹의 보조 �
 자동 시드를 사용할 때 고려해야 할 사항은 다음과 같습니다.
 
 * [주 복제본에 대한 성능 및 트랜잭션 로그 영향](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [디스크 레이아웃](#disk-layout)
+* [디스크 레이아웃](#disklayout)
 * [보안](#security)
 
 
@@ -154,9 +156,6 @@ ALTER AVAILABILITY GROUP [<AGName>]
 <a name="sql-server-log"></a> 자동 시드의 시작과 완료는 아래에서 설명하는 [동적 관리 뷰](#dynamic-management-views)뿐만 아니라 SQL Server 로그에서도 확인할 수 있습니다.
 
 ![SQL Server 로그][2]
-
-
-
 
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>자동 시드로 백업 및 복원 결합
 

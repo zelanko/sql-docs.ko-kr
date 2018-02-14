@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 72f4daeb47e7c023e14cdd5a87a51e5dcbee2436
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29b7fbe140943ba0f2f3493f00561e8cf2b509e2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -169,18 +170,18 @@ ms.lasthandoff: 11/17/2017
           
         CONSTRAINT CHK_soSessionC_SpidFilter  
             CHECK ( SpidFilter = @@spid ),  
-    ).  
+    )  
         의 모든 멘션을  
             (MEMORY_OPTIMIZED = ON,  
              DURABILITY = SCHEMA_ONLY);  
-    go  
+    GO  
   
   
     CREATE SECURITY POLICY dbo.soSessionC_SpidFilter_Policy  
         ADD FILTER PREDICATE dbo.fn_SpidFilter(SpidFilter)  
         ON dbo.soSessionC  
         WITH (STATE = ON);  
-    go  
+    GO  
   
   
   
@@ -258,7 +259,7 @@ ms.lasthandoff: 11/17/2017
         (  
             Column1  INT   NOT NULL   INDEX ix1,  
             Column2  CHAR(10)  
-        ).  
+        )  
         의 모든 멘션을  
             (MEMORY_OPTIMIZED = ON);  
   
@@ -291,16 +292,16 @@ Microsoft SQL Server에서 메모리 최적화 기능을 사용하려면 데이�
     ALTER DATABASE InMemTest2  
         ADD FILEGROUP FgMemOptim3  
             CONTAINS MEMORY_OPTIMIZED_DATA;  
-    go  
+    GO  
     ALTER DATABASE InMemTest2  
         ADD FILE  
         (  
             NAME = N'FileMemOptim3a',  
             FILENAME = N'C:\DATA\FileMemOptim3a'  
                      --  C:\DATA\    preexisted.  
-        ).  
+        )  
         TO FILEGROUP FgMemOptim3;  
-    go  
+    GO  
   
   
 다음 스크립트는 파일 그룹을 만들고 권장되는 데이터베이스 설정을 구성합니다. [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
@@ -431,7 +432,7 @@ Azure SQL 데이터베이스에서 스크립트를 실행하는 경우 동일한
   
 메모리 최적화 테이블 변수가 액세스당 하나의 정확한 키 값에만 액세스하는 경우 비클러스터형 인덱스보다 해시 인덱스가 더 적합할 수 있습니다. 그러나 적절한 BUCKET_COUNT를 예측할 수 없는 경우 비클러스터형 인덱스가 차선책입니다.  
   
-## <a name="h-see-also"></a>8. 참고 항목  
+## <a name="h-see-also"></a>8. 관련 항목:  
   
 - [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [메모리 액세스에 최적화된 개체에 대한 내구성 정의](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  

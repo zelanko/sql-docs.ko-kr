@@ -8,23 +8,25 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d50be48fe1f6c1b57da6171e0bfaee8c8b23a1fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b32325de1691fae92ff7bcecfeeda305df98d31
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>BLOB 저장 옵션 비교(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 파일 및 문서를 저장하는 데 사용할 수 있는 옵션을 설명하고 비교합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 파일 및 문서를 저장하는 데 사용할 수 있는 옵션을 설명하고 비교합니다.  
   
 ##  <a name="Expectations"></a> 데이터베이스에 파일 저장 - 이점 및 요구 사항  
  대부분의 기업 데이터는 본질적으로 구조화되어 있지 않으며 대개 파일 시스템에 파일 및 문서로 저장됩니다. 이러한 데이터는 대부분 Windows API를 통해 파일에 액세스하는 응용 프로그램에서 생성, 관리 및 사용합니다. 일반적으로 기업에서는 이러한 데이터를 파일 시스템에 보관하는 한편, 파일의 관련 메타데이터는 관계형 데이터베이스에 저장합니다.  
@@ -53,13 +55,13 @@ ms.lasthandoff: 11/17/2017
   
 |기능|파일 서버 및 데이터베이스 솔루션|FILESTREAM 솔루션|FileTable 솔루션|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**단일화된 관리 태스크**|아니요|예|**예**|  
-|**단일 서비스 집합**: 검색, 보고, 쿼리 등|아니요|예|**예**|  
-|**통합 보안 모델**|아니요|예|**예**|  
-|**FILESTREAM 데이터의 현재 위치 업데이트**|예|아니요|**예**|  
-|**파일 및 디렉터리 계층 구조를 데이터베이스에서 유지 관리**|아니요|아니요|**예**|  
-|**Windows 응용 프로그램 호환성**|예|아니요|**예**|  
-|**파일 특성에 대한 관계형 액세스**|아니요|아니요|**예**|  
+|**단일화된 관리 태스크**|아니오|예|**예**|  
+|**단일 서비스 집합**: 검색, 보고, 쿼리 등|아니오|예|**예**|  
+|**통합 보안 모델**|아니오|예|**예**|  
+|**FILESTREAM 데이터의 현재 위치 업데이트**|예|아니오|**예**|  
+|**파일 및 디렉터리 계층 구조를 데이터베이스에서 유지 관리**|아니오|아니오|**예**|  
+|**Windows 응용 프로그램 호환성**|예|아니오|**예**|  
+|**파일 특성에 대한 관계형 액세스**|아니오|아니오|**예**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM 및 RBS(Remote BLOB Store) 비교  
  이러한 두 기능에 대한 비교 내용은 RBS 팀의 블로그 게시물 [SQL Server 원격 BLOB 저장소 및 FILESTREAM 기능 비교](http://go.microsoft.com/fwlink/?LinkId=210317)를 참조하세요.  

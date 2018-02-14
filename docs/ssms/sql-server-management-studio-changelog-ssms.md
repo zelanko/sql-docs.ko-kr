@@ -18,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 051c080de8a5b670a7fe3dbe70ccebf73bfb57a3
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 01d0f988103f39aa311b84a1bf9e03292e60f511
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [아래의 이전 SSMS 버전](#previous-ssms-releases)을 다운로드하세요.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [아래의 이전 SSMS 버전](#previous-ssms-releases)을 다운로드하세요.
 
 
 ## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
@@ -542,10 +543,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 이제 SSMS DAX 쿼리 편집기에서 Ctrl-R을 누르면 결과 창이 전환됨
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid799832"></a>[SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=799832) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>[SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 13.0.16106.4
 
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 이 릴리스에서는 다음과 같은 문제가 해결되었습니다.
 

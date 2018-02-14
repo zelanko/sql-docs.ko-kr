@@ -8,55 +8,58 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Broker Login event class
+helpviewer_keywords:
+- Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05ce6fba0a4c447b270bbb9e5cb831f4a4c1d146
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7e8329aa53d05239ad609a873de07d2ce09e4e31
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login 이벤트 클래스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **Audit Broker Login** 이벤트를 만들어 Service Broker 전송 보안과 관련된 감사 메시지를 보고합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **Audit Broker Login** 이벤트를 만들어 Service Broker 전송 보안과 관련된 감사 메시지를 보고합니다.  
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Audit Broker Login 이벤트 클래스 데이터 열  
   
-|데이터 열|유형|설명|열 번호|필터 가능|  
+|데이터 열|형식|Description|열 번호|필터 가능|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|이 이벤트 클래스에서는 사용되지 않습니다.|10|예|  
 |**ClientProcessID**|**int**|이 이벤트 클래스에서는 사용되지 않습니다.|9|예|  
 |**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
-|**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Audit Broker Login** 에 대해서는 항상 **159**입니다.|27|아니요|  
-|**EventSequence**|**int**|이 이벤트의 시퀀스 번호입니다.|51|아니요|  
+|**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Audit Broker Login** 에 대해서는 항상 **159**입니다.|27|아니오|  
+|**EventSequence**|**int**|이 이벤트의 시퀀스 번호입니다.|51|아니오|  
 |**EventSubClass**|**int**|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 다음 표에서는 이 이벤트에 대한 이벤트 하위 클래스 값을 나열합니다.|21|예|  
-|**FileName**|**nvarchar**|원격 Broker 인증 수준입니다. 원격 Broker 끝점에서 구성된 지원되는 인증 방법입니다. 둘 이상의 메서드를 사용할 수 있는 경우 수락하는(대상) 끝점에서 먼저 시도할 메서드를 결정합니다. 가능한 값은<br /><br /> **없음**. 인증 방법이 구성되어 있지 않습니다.<br /><br /> **NTLM**. NTLM 인증이 필요합니다.<br /><br /> **KERBEROS**- Kerberos 인증이 필요합니다.<br /><br /> **NEGOTIATE**- Windows에서 인증 방법을 협상합니다.<br /><br /> **CERTIFICATE**- 끝점에 대해 구성된 인증서가 필요합니다. 이 인증서는 **master** 데이터베이스에 저장되어 있습니다.<br /><br /> **NTLM, CERTIFICATE**- NTLM 또는 SSL 인증서 인증을 적용합니다.<br /><br /> **KERBEROS, CERTIFICATE**- Kerberos 또는 끝점 인증서 인증을 적용합니다.<br /><br /> **NEGOTIATE, CERTIFICATE**- Windows에서 인증 방법을 협상하거나 끝점 인증서 인증을 사용합니다.<br /><br /> **CERTIFICATE, NTLM**- 끝점 인증서 또는 NTLM 인증을 적용합니다.<br /><br /> **CERTIFICATE, KERBEROS**- 끝점 인증서 또는 Kerberos 인증을 적용합니다.<br /><br /> **CERTIFICATE, NEGOTIATE**- 끝점 인증서 인증을 적용하거나 Windows에서 인증 방법을 협상합니다.|36|아니요|  
+|**FileName**|**nvarchar**|원격 Broker 인증 수준입니다. 원격 Broker 끝점에서 구성된 지원되는 인증 방법입니다. 둘 이상의 메서드를 사용할 수 있는 경우 수락하는(대상) 끝점에서 먼저 시도할 메서드를 결정합니다. 가능한 값은<br /><br /> **없음**. 인증 방법이 구성되어 있지 않습니다.<br /><br /> **NTLM**. NTLM 인증이 필요합니다.<br /><br /> **KERBEROS**- Kerberos 인증이 필요합니다.<br /><br /> **NEGOTIATE**- Windows에서 인증 방법을 협상합니다.<br /><br /> **CERTIFICATE**- 끝점에 대해 구성된 인증서가 필요합니다. 이 인증서는 **master** 데이터베이스에 저장되어 있습니다.<br /><br /> **NTLM, CERTIFICATE**- NTLM 또는 SSL 인증서 인증을 적용합니다.<br /><br /> **KERBEROS, CERTIFICATE**- Kerberos 또는 끝점 인증서 인증을 적용합니다.<br /><br /> **NEGOTIATE, CERTIFICATE**- Windows에서 인증 방법을 협상하거나 끝점 인증서 인증을 사용합니다.<br /><br /> **CERTIFICATE, NTLM**- 끝점 인증서 또는 NTLM 인증을 적용합니다.<br /><br /> **CERTIFICATE, KERBEROS**- 끝점 인증서 또는 Kerberos 인증을 적용합니다.<br /><br /> **CERTIFICATE, NEGOTIATE**- 끝점 인증서 인증을 적용하거나 Windows에서 인증 방법을 협상합니다.|36|아니오|  
 |**HostName**|**nvarchar**|이 이벤트 클래스에서는 사용되지 않습니다.|8|예|  
-|**IsSystem**|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|아니요|  
+|**IsSystem**|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|아니오|  
 |**LoginSid**|**image**|로그인한 사용자의 SID(보안 ID)입니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|예|  
 |**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
 |**NTUserName**|**nvarchar**|이 이벤트를 생성한 연결을 소유하고 있는 사용자의 이름입니다.|6|예|  
-|**ObjectName**|**nvarchar**|이 연결에 사용된 연결 문자열입니다.|34|아니요|  
-|**OwnerName**|**nvarchar**|로컬 Broker 끝점에서 구성된 지원되는 인증 방법입니다. 둘 이상의 메서드를 사용할 수 있는 경우 수락하는(대상) 끝점에서 먼저 시도할 메서드를 결정합니다. 가능한 값은<br /><br /> **없음**. 인증 방법이 구성되어 있지 않습니다.<br /><br /> **NTLM**. NTLM 인증이 필요합니다.<br /><br /> **KERBEROS**- Kerberos 인증이 필요합니다.<br /><br /> **NEGOTIATE**- Windows에서 인증 방법을 협상합니다.<br /><br /> **CERTIFICATE**- 끝점에 대해 구성된 인증서가 필요합니다. 이 인증서는 **master** 데이터베이스에 저장되어 있습니다.<br /><br /> **NTLM, CERTIFICATE**- NTLM 또는 SSL 인증서 인증을 적용합니다.<br /><br /> **KERBEROS, CERTIFICATE**- Kerberos 또는 끝점 인증서 인증을 적용합니다.<br /><br /> **NEGOTIATE, CERTIFICATE**- Windows에서 인증 방법을 협상하거나 끝점 인증서 인증을 사용합니다.<br /><br /> **CERTIFICATE, NTLM**- 끝점 인증서 또는 NTLM 인증을 적용합니다.<br /><br /> **CERTIFICATE, KERBEROS**- 끝점 인증서 또는 Kerberos 인증을 적용합니다.<br /><br /> **CERTIFICATE, NEGOTIATE**- 끝점 인증서 인증을 적용하거나 Windows에서 인증 방법을 협상합니다.|37|아니요|  
-|**ProviderName**|**nvarchar**|이 연결에 사용된 인증 방법입니다.|46|아니요|  
-|**RoleName**|**nvarchar**|연결의 역할입니다. 이 역할은 **시작자** 또는 **대상**입니다.|38|아니요|  
-|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 SQL Server 인스턴스의 이름입니다.|26|아니요|  
+|**ObjectName**|**nvarchar**|이 연결에 사용된 연결 문자열입니다.|34|아니오|  
+|**OwnerName**|**nvarchar**|로컬 Broker 끝점에서 구성된 지원되는 인증 방법입니다. 둘 이상의 메서드를 사용할 수 있는 경우 수락하는(대상) 끝점에서 먼저 시도할 메서드를 결정합니다. 가능한 값은<br /><br /> **없음**. 인증 방법이 구성되어 있지 않습니다.<br /><br /> **NTLM**. NTLM 인증이 필요합니다.<br /><br /> **KERBEROS**- Kerberos 인증이 필요합니다.<br /><br /> **NEGOTIATE**- Windows에서 인증 방법을 협상합니다.<br /><br /> **CERTIFICATE**- 끝점에 대해 구성된 인증서가 필요합니다. 이 인증서는 **master** 데이터베이스에 저장되어 있습니다.<br /><br /> **NTLM, CERTIFICATE**- NTLM 또는 SSL 인증서 인증을 적용합니다.<br /><br /> **KERBEROS, CERTIFICATE**- Kerberos 또는 끝점 인증서 인증을 적용합니다.<br /><br /> **NEGOTIATE, CERTIFICATE**- Windows에서 인증 방법을 협상하거나 끝점 인증서 인증을 사용합니다.<br /><br /> **CERTIFICATE, NTLM**- 끝점 인증서 또는 NTLM 인증을 적용합니다.<br /><br /> **CERTIFICATE, KERBEROS**- 끝점 인증서 또는 Kerberos 인증을 적용합니다.<br /><br /> **CERTIFICATE, NEGOTIATE**- 끝점 인증서 인증을 적용하거나 Windows에서 인증 방법을 협상합니다.|37|아니오|  
+|**ProviderName**|**nvarchar**|이 연결에 사용된 인증 방법입니다.|46|아니오|  
+|**RoleName**|**nvarchar**|연결의 역할입니다. 이 역할은 **시작자** 또는 **대상**입니다.|38|아니오|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 SQL Server 인스턴스의 이름입니다.|26|아니오|  
 |**SPID**|**int**|SQL Server가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|예|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
-|**State**|**int**|SQL Server 원본 코드 내에서 이벤트가 생성된 위치를 나타냅니다. 이 이벤트가 생성될 수 있는 각 위치의 상태 코드는 서로 다릅니다. Microsoft 지원 엔지니어는 이 상태 코드를 사용하여 이벤트가 생성된 위치를 찾을 수 있습니다.|30|아니요|  
-|**TargetUserName**|**nvarchar**|로그인 상태입니다. 다음 중 하나입니다.<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> **참고**: ISC = 보안 컨텍스트 시작. ASC = 보안 컨텍스트 허용|39|아니요|  
-|**TransactionID**|**bigint**|시스템이 할당한 트랜잭션 ID입니다.|4|아니요|  
+|**State**|**int**|SQL Server 원본 코드 내에서 이벤트가 생성된 위치를 나타냅니다. 이 이벤트가 생성될 수 있는 각 위치의 상태 코드는 서로 다릅니다. Microsoft 지원 엔지니어는 이 상태 코드를 사용하여 이벤트가 생성된 위치를 찾을 수 있습니다.|30|아니오|  
+|**TargetUserName**|**nvarchar**|로그인 상태입니다. 다음 중 하나입니다.<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> <br /><br /> **참고**: ISC = 보안 컨텍스트 시작. ASC = 보안 컨텍스트 허용|39|아니오|  
+|**TransactionID**|**bigint**|시스템이 할당한 트랜잭션 ID입니다.|4|아니오|  
   
  다음 표에서는 이 이벤트 클래스에 대한 하위 클래스 값을 나열합니다.  
   
-|ID|하위 클래스|설명|  
+|ID|하위 클래스|Description|  
 |--------|--------------|-----------------|  
 |1|Login Success|Login Success 이벤트는 인접한 Broker 로그인 프로세스가 성공적으로 끝났음을 보고합니다.|  
 |2|Login Protocol Error|Login Protocol Error 이벤트는 Broker가 올바른 형식이지만 로그인 프로세스의 현재 상태에 맞지 않는 메시지를 수신했음을 보고합니다. 메시지가 잘못 전송되었거나 순서에 맞지 않게 전송되었을 수 있습니다.|  

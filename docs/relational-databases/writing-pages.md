@@ -8,21 +8,23 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: pages
+helpviewer_keywords:
+- pages
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e116782bb7c78f69a1d7c90755e746e4587d4426
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f8db9e1c466e787e4c8608b0a47bef1ff8f52c8f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="writing-pages"></a>페이지 쓰기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,6 +61,6 @@ ms.lasthandoff: 11/17/2017
 
 지연 기록, 고속 기록 및 검사점 프로세스는 I/O 작업이 완료할 때까지 대기하지 않습니다. 이 프로세스는 항상 비동기 또는 겹친 I/O를 사용하고 기타 작업을 계속 진행하여 이후에 I/O 성공을 확인합니다. 이에 따라 SQL Server에서 해당하는 태스크에 대해 CPU 리소스와 I/O 리소스를 모두 최대화할 수 있습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [페이지 및 익스텐트 아키텍처 가이드](../relational-databases/pages-and-extents-architecture-guide.md)   
  [페이지 읽기](../relational-databases/reading-pages.md)
