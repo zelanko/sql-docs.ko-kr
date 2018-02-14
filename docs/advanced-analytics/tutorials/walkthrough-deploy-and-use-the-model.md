@@ -32,9 +32,9 @@ ms.lasthandoff: 10/07/2017
 
 이 샘플은 채점(Scoring)에서 모델을 사용하는 가장 일반적인 방법 두 가지를 보여줍니다.
 
-- **일괄 처리 채점 모드 SQL** SQL 쿼리나 테이블을 입력으로 전달해서 여러 예측을 매우 빠르게 만들 필요가 있을 때 사용됩니다. 결과 테이블이 반환되면 다른 테이블에 직접 입력하거나 파일에 쓸 수 있습니다.
+- **일괄 처리 채점 모드** SQL 쿼리나 테이블을 입력으로 전달해서 여러 예측을 매우 빠르게 만들 필요가 있을 때 사용합니다. 결과 테이블이 반환되면 테이블에 직접 입력하거나 파일에 쓸 수 있습니다. 
 
-- **개별 채점 모드** 한 번에 하나씩 예측을 만들 때 사용 됩니다. 개별 값 집합을 저장 프로시저에 전달합니다. 그 값들은 모델에서 예측을 만들기 위해 사용하는 특성이나 또 다른 결과를 생성하기 위한 확률 값 같은 것에 해당합니다. 그런 다음 그 값을 응용 프로그램이나 사용자에게 반환할 수 있습니다.
+- **개별 채점 모드** 한 번에 하나씩 예측을 만들 때 사용합니다. 개별 값 집합을 저장 프로시저에 전달합니다. 그 값들은 모델에서 예측을 만드는 데 사용하는 특성이나 또 다른 결과를 생성하기 위한 확률 값 같은 것에 해당합니다. 그런 다음 그 값을 응용 프로그램이나 사용자에게 반환할 수 있습니다. 
 
 ## <a name="batch-scoring"></a>일괄 처리 채점
 
@@ -70,9 +70,9 @@ ms.lasthandoff: 10/07/2017
     END
     ```
 
-    + SELECT 문을 사용하여 SQL 테이블에 저장된 모델을 호출합니다. 모델은 **varbinary (max)** 데이터로 SQL 변수 _@lmodel2_ 에 저장되며 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 매개변수 _@model_ 에 전달됩니다.
+    + SELECT 문을 사용하여 SQL 테이블에 저장된 모델을 호출합니다. 모델은 **varbinary (max)** 데이터로 SQL 변수 _@lmodel2_에 저장되며 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 매개변수 _@model_ 을 통해 전달됩니다. 	
 
-    + 채점을 위한 입력용 데이터는 SQL 쿼리로 정의되고 SQL 변수 _@input_ 에 문자열로 저장됩니다. 데이터가 데이터베이스로부터 검색되면 *InputDataSet*이라는 데이터 프레임에 저장됩니다. 이 데이터 프레임은 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저에 입력 데이터용 기본 이름입니다. 다른 변수 이름이 필요하다면  _@input_data_1_name_ 매개 변수를 사용할 수 있습니다.
+    + 채점을 위한 입력용 데이터는 SQL 쿼리로 정의되고 SQL 변수 _@input_에 문자열로 저장됩니다. 데이터가 데이터베이스로부터 검색되면 *InputDataSet*이라는 데이터 프레임에 저장됩니다. 이 데이터 프레임은 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저에 입력 데이터용 기본 이름입니다. 다른 변수 이름이 필요하다면 _@input_data_1_name_ 매개 변수를 사용할 수 있습니다. 
 
     + 채점을 위해 저장 프로시저에서 RevoScaleR **라이브러리에서** `rxPredict` 함수를 호출합니다.
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 10/07/2017
     q <- paste("EXEC PredictTipBatchMode @inquery = ", input, sep="");
     ```
 
-4. R에서 저장 프로시저를 실행하기 위해 **RODBC** 패키지의 **sqlQuery** 메서드를 호출하며 이전의 정의한 SQL 연결 `conn을 사용합니다`:
+4. R에서 저장 프로시저를 실행하기 위해 **RODBC** 패키지의 **sqlQuery** 메서드를 호출하며 이전에 정의한 SQL 연결 `conn을 사용합니다`: 
 
     ```R
     sqlQuery (conn, q);
@@ -118,7 +118,7 @@ ms.lasthandoff: 10/07/2017
 
 ## <a name="single-row-scoring"></a>단일 행 채점
 
-행별로 예측 모델을 호출할 때개 각 개별 사례의 특성을 나타내는 값 집합을 전달합니다. 그런 다음 저장 프로시저에서 단일 예측이나 확률을 반환합니다. 
+행별로 예측 모델을 호출할 때 각 개별 사례의 특성을 나타내는 값 집합을 전달합니다. 그런 다음 저장 프로시저에서 단일 예측이나 확률을 반환합니다.  
 
 저장 프로시저 *PredictTipSingleMode* 가 이러한 접근 방법을 보여줍니다. 여러 개의 입력 매개변수로 특성 값(예: 승객 수와 여행 거리)을 받아서 저장된 R 모델을 사용하여 그러한 특성을 채점하고 팁 확률을 반환합니다.
 
@@ -200,7 +200,7 @@ ms.lasthandoff: 10/07/2017
     ```
 
     >[!TIP]
-    > R Tools for Visual Studio (RTVS)는 SQL Server와 R 모두를 위한 뛰어난 통합을 제공합니다. SQL Server 연결에서 RODBC에 관한 더 많은 예제 다음 기사를 참조합니다: [R 및 SQL Server 작업](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
+    > R Tools for Visual Studio (RTVS)는 SQL Server와 R 모두를 위한 뛰어난 통합을 제공합니다. SQL Server 연결에서 RODBC에 관한 더 많은 예제는 다음 기사를 참조합니다: [R 및 SQL Server 작업](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server) 
 
 ## <a name="summary"></a>요약
 
@@ -210,7 +210,7 @@ ms.lasthandoff: 10/07/2017
 
 - 팁이 많은지 보통인지 적은지 예측하는 다중 클래스 분류 모델
 
-다음 추가 샘플과 리소스 또한 확인하기를 권장합니다.
+다음 추가 샘플과 리소스도 확인하기를 권장합니다.
 
 + [데이터 과학 시나리오 및 솔루션 템플릿](data-science-scenarios-and-solution-templates.md)
 
