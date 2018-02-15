@@ -47,6 +47,7 @@
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [SQL Server 데이터베이스 엔진](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [SQL Server 보안](https://blogs.msdn.microsoft.com/sqlsecurity/)
+### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 
 ## 피드백 및 도움말
 ### [SQL Server에 대한 제안](https://feedback.azure.com/forums/908035-sql-server)

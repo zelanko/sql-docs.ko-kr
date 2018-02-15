@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 76a5ed98ddd1aa69c11cd371586ce963ebcd97de
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c1d84ae8ac797775759bc53a29cc55acd1323f32
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>구성 SQL Server Always On 가용성 그룹 Linux에서 고가용성을 위해
 
@@ -164,7 +164,7 @@ Linux에서 고가용성을 위한 AG를 만듭니다. 사용 하 여 [가용성
 
 - AG 2 개의 동기 복제본 만들기
 
-   동기 가용성 모드와 두 개의 복제본을 포함 합니다. 예를 들어 다음 스크립트 만듭니다 라는 AG `ag1`합니다. `node1`및 `node2` 동기 모드, 자동 시드 및 자동 장애 조치에에서 대 한 복제본을 호스트 합니다.
+   동기 가용성 모드와 두 개의 복제본을 포함 합니다. 예를 들어 다음 스크립트 만듭니다 라는 AG `ag1`합니다. `node1` 및 `node2` 동기 모드, 자동 시드 및 자동 장애 조치에에서 대 한 복제본을 호스트 합니다.
 
    >[!IMPORTANT]
    >만과 2 개의 동기 복제본 AG를 만들려면 다음 스크립트를 실행 합니다. 위의 스크립트를 실행 한 경우에 다음 스크립트를 실행 하지 마십시오. 

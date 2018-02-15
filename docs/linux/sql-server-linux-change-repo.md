@@ -9,18 +9,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 82a1f6d840897311dbb52ffbbf2620c8ec3994ec
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>설치 및 Linux에서 SQL Server 업그레이드에 대 한 저장소를 구성 합니다.
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Linux에서 SQL Server 2017 설치 및 업그레이드에 대 한 올바른 저장소를 구성 하는 방법을 설명 합니다.
 
@@ -37,7 +39,7 @@ Linux에서 SQL Server를 설치 하는 경우 Microsoft 저장소를 구성 해
 | **CU** | **mssql-server-2017** | SQL Server 2017 CU (누적 업데이트) 리포지토리. |
 | **GDR** | **mssql-server-2017-gdr** | 중요 한 업데이트에만 SQL Server 2017 GDR 리포지토리. |
 
-## <a id="cuversusgdr"></a>GDR 및 누적 업데이트
+## <a id="cuversusgdr"></a> GDR 및 누적 업데이트
 
 같은 두 가지 유형의 각 배포에 대 한 저장소는을 고려해 야 합니다.
 
@@ -50,7 +52,7 @@ Linux에서 SQL Server를 설치 하는 경우 Microsoft 저장소를 구성 해
 > [!NOTE]
 > CU GDR 릴리스에서 업데이트할 있습니다 저장소를 변경 하 여 언제 든 지 해제 합니다. 업데이트 CU에서 릴리스를 GDR 릴리스 지원 되지 않습니다. 
 
-## <a id="configure"></a>저장소 구성
+## <a id="configure"></a> 저장소 구성
 
 다음 섹션에서는 다음과 같은 지원 되는 플랫폼에 대 한 저장소를 구성 하 고 확인 하는 방법에 설명 합니다.
 
@@ -58,7 +60,7 @@ Linux에서 SQL Server를 설치 하는 경우 Microsoft 저장소를 구성 해
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#sles)
 
-## <a id="rhel"></a>RHEL 저장소 구성
+## <a id="rhel"></a> RHEL 저장소 구성
 Red Hat Enterprise 서버 (RHEL) 저장소를 구성 하려면 다음 단계를 사용 합니다.
 
 ### <a name="check-for-previously-configured-repositories-rhel"></a>이전에 구성 된 저장소 (RHEL)에 대 한 확인
@@ -97,7 +99,7 @@ SQL Server 설치 및 업그레이드에 사용할 새 저장소를 구성 합�
 | **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
-## <a id="sles"></a>SLES 저장소 구성
+## <a id="sles"></a> SLES 저장소 구성
 SLES에서 저장소를 구성 하려면 다음 단계를 사용 합니다.
 
 ### <a name="check-for-previously-configured-repositories-sles"></a>이전에 구성 된 저장소 (SLES)에 대 한 확인
@@ -128,7 +130,7 @@ SQL Server 설치 및 업그레이드에 사용할 새 저장소를 구성 합�
 | **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
-## <a id="ubuntu"></a>Ubuntu 저장소 구성
+## <a id="ubuntu"></a> Ubuntu 저장소 구성
 Ubuntu에서 저장소를 구성 하려면 다음 단계를 사용 합니다.
 
 ### <a name="check-for-previously-configured-repositories-ubuntu"></a>이전에 구성 된 저장소 (Ubuntu)에 대 한 확인
