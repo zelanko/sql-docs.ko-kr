@@ -138,15 +138,15 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>모든 복제본에서 데이터베이스 미러링 끝점 만들기
 
-데이터베이스 미러링 끝점 (TCP (Transmission Control Protocol)를 사용 하 여 데이터베이스 미러링 세션에에서 참여 하거나 가용성 복제본을 호스팅하는 서버 인스턴스 간에 메시지를 주고받을 수 있습니다. 데이터베이스 미러링 끝점은 고유의 TCP 포트 번호에서 수신합니다. TCP 수신기 수신기 IP 주소가 필요합니다. 수신기 IP 주소는 IPv4 주소 여야 합니다. 사용할 수도 있습니다 `0.0.0.0`합니다. 
+데이터베이스 미러링 끝점 (TCP (Transmission Control Protocol)를 사용 하 여 데이터베이스 미러링 세션에에서 참여 하거나 가용성 복제본을 호스팅하는 서버 인스턴스 간에 메시지를 주고받을 수 있습니다. 데이터베이스 미러링 끝점은 고유의 TCP 포트 번호에서 수신합니다. 
 
-다음 TRANSACT-SQL 스크립트 라는 수신 대기 끝점을 만듭니다 `Hadr_endpoint` 가용성 그룹에 대 한 합니다. 끝점을 시작 하 고 만든 사용자에 게 연결 권한을 부여 합니다. 스크립트를 실행하기 전에 `**< ... >**` 사이의 값을 바꿉니다.
+다음 TRANSACT-SQL 스크립트 라는 수신 대기 끝점을 만듭니다 `Hadr_endpoint` 가용성 그룹에 대 한 합니다. 끝점을 시작 하 고 만든 사용자에 게 연결 권한을 부여 합니다. 스크립트를 실행하기 전에 `**< ... >**` 사이의 값을 바꿉니다. 필요에 따라 IP 주소를 포함할 수 있습니다 `LISTENER_IP = (0.0.0.0)`합니다. 수신기 IP 주소는 IPv4 주소 여야 합니다. 사용할 수도 있습니다 `0.0.0.0`합니다. 
 
 모든 SQL Server 인스턴스에서 사용자 환경에 대해 다음 TRANSACT-SQL 스크립트를 업데이트 합니다. 
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = ALL,
         AUTHENTICATION = CERTIFICATE dbm_certificate,
@@ -161,7 +161,7 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = WITNESS,
         AUTHENTICATION = CERTIFICATE dbm_certificate,

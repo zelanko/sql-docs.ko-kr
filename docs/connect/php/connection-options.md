@@ -1,27 +1,28 @@
 ---
 title: "연결 옵션 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/16/2018
+ms.date: 02/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b90819fbed37aa41a23a257caf287fd563da6ffa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 899e072051224e2f28423e31f44d368a2884497b
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="connection-options"></a>연결 옵션
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,9 +35,8 @@ ms.lasthandoff: 01/17/2018
 |응용 프로그램 의도|문자열|서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 ReadOnly 및 ReadWrite입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 사용에 필요한 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]지원에 대한 자세한 내용은 [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)(PHP Driver for SQL Server의 고가용성, 재해 복구 지원)를 참조하세요.|ReadWrite|  
 |AttachDBFileName|문자열|서버를 연결해야 하는 데이터베이스 파일을 지정합니다.|설정된 값이 없습니다.|  
 |인증|Key, Input, Predict, PredictOnly, None<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|인증 모드를 지정 합니다.|설정 되지 않았습니다.|  
-|CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|문자열|경로, 이름 및 사용자 지정 키 저장소 공급자에는 항상 암호화 기능에 대 한 암호화 키를 지정 합니다. 연결할 때 사용자 지정 키 저장소 공급자를 올바르게 구성 하기 위해 세 값이 모두 설정 되어야 합니다. |설정된 값이 없습니다.|
 |CharacterSet<br /><br />(PDO_SQLSRV 드라이버에서 지원되지 않음)|문자열|서버에 데이터를 보내는 데 사용되는 문자 집합을 지정합니다.<br /><br />가능한 값은 SQLSRV_ENC_CHAR 및 UTF-8입니다. 자세한 내용은 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)을 참조하세요.|SQLSRV_ENC_CHAR|  
-|ColumnEncryption|**활성화** 또는 **사용 안 함**|항상 암호화 기능이 사용 되는지 여부를 지정 합니다. |사용 안 함|  
+|ColumnEncryption<br /><br />(Windows에서 지원)|**활성화** 또는 **사용 안 함**|항상 암호화 기능이 사용 되는지 여부를 지정 합니다. |사용 안 함|  
 |ConnectionPooling|연결 풀링이 설정되면 1 또는 **true** 입니다.<br /><br />연결 풀링이 해제되면 0 또는 **false** 입니다.|연결이 연결 풀에서 할당 되었는지 여부를 지정 합니다 (1 또는 **true**) 아닌지 (0 또는 **false**).<sup> 1</sup>|**true 이면** (1)|  
 |데이터베이스|문자열|설정 되는 연결에 대 한 사용 데이터베이스의 이름을 지정<sup>2</sup>합니다.|사용할 로그인에 대한 기본 데이터베이스입니다.|  
 |드라이버|문자열|SQL Server와 통신 하는 데 사용 되는 Microsoft ODBC 드라이버를 지정 합니다.<br /><br />가능한 값은<br />SQL Server 용 ODBC 드라이버 17<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (Windows에만 해당).|Driver 키워드를 지정 하지 않으면 Microsoft Drivers for PHP for SQL Server 하 려는 시스템에서 지원 되는 Microsoft ODBC 드라이버의 존재를 찾을 등 최신 버전의 ODBC로 시작 합니다.|  

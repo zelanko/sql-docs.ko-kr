@@ -1,14 +1,15 @@
 ---
 title: "bcp 유틸리티 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/26/2016
+ms.date: 02/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: bcp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,22 +30,24 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1598d16877f42d0aef9f4a997e47492bd3fee1c7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d394c689e4f4220781342dca687906d46a673c8e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [bcp 유틸리티](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)합니다.
 
+
+ > Bcp를 사용 하 여 Azure SQL 데이터 웨어하우스에 대 한 자세한 내용은 참조 [bcp 사용 하 여 데이터 로드](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)합니다.
 
   **대**량 **복**사 **프**프로그램 유틸리티(**bcp**)는 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터를 대량 복사합니다. **bcp** 유틸리티를 사용하여 많은 수의 새 행을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블로 가져오거나 테이블에서 데이터 파일로 데이터를 내보낼 수 있습니다. **queryout** 옵션과 함께 사용하는 경우를 제외하고 이 유틸리티를 사용하는 데에는 [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 지식이 필요하지 않습니다. 테이블로 데이터를 가져오려면 해당 테이블에 대해 만든 서식 파일을 사용하거나 이 테이블의 열에 적합한 테이블 구조와 데이터 형식을 알아야 합니다.  
   
@@ -66,6 +69,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#E">-E</a>]
     [<a href="#f">-f format_file</a>]
     [<a href="#F">-F first_row</a>]
+    [<a href="#G">-G Azure Active Directory Authentication</a>]
     [<a href="#h">-h"hint [,...n]"</a>]
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
@@ -112,7 +116,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  ***owner***<a name="schema"></a>  
  테이블 또는 뷰의 소유자 이름입니다. 작업을 수행하는 사용자가 지정한 테이블 또는 뷰를 소유하고 있는 경우에는*owner* 를 생략할 수 있습니다. *owner*를 지정하지 않은 경우 작업을 수행하는 사용자가 지정한 테이블이나 뷰의 소유자가 아니면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 오류 메시지를 반환하고 작업이 취소됩니다.  
   
-**"** ***query*** **"**<a name="query"></a> Is a [!INCLUDE[tsql](../includes/tsql-md.md)] query that returns a result set. 쿼리에서 여러 결과 집합을 반환하는 경우 첫 번째 결과 집합만 데이터 파일에 복사되고 그 다음 결과 집합은 무시됩니다. 쿼리는 큰따옴표로 묶고 쿼리 안에 포함되는 모든 것은 작은따옴표로 묶습니다. 쿼리에서 데이터를 대량 복사할 때는**queryout** 도 지정해야 합니다.  
+**"** ***쿼리*** **"** <a name="query"> </a> 는 [!INCLUDE[tsql](../includes/tsql-md.md)] 결과 집합을 반환 하는 쿼리입니다. 쿼리에서 여러 결과 집합을 반환하는 경우 첫 번째 결과 집합만 데이터 파일에 복사되고 그 다음 결과 집합은 무시됩니다. 쿼리는 큰따옴표로 묶고 쿼리 안에 포함되는 모든 것은 작은따옴표로 묶습니다. 쿼리에서 데이터를 대량 복사할 때는**queryout** 도 지정해야 합니다.  
   
  쿼리는 bcp 문을 실행하기 전에 저장 프로시저 내에서 참조되는 모든 테이블이 존재하는 한 저장 프로시저를 참조할 수 있습니다. 예를 들어 저장 프로시저가 임시 테이블을 생성하면 이 임시 테이블을 런타임에만 사용할 수 있고 문 실행 시에는 사용할 수 없기 때문에 **bcp** 문이 실패합니다. 이 경우 테이블에 저장 프로시저 결과를 삽입한 다음 **bcp** 를 사용하여 테이블에서 데이터 파일로 데이터를 복사할 수 있습니다.  
   
@@ -177,10 +181,49 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  *format_file* 이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-f** 와 *format_file* 값 사이에 공백을 포함하지 마세요.  
   
- **-F** ***first_row***<a name="F"></a>  
+**-F** ***first_row***<a name="F"></a>  
  테이블에서 내보내거나 데이터 파일에서 가져올 첫 번째 행 번호를 지정합니다. 이 매개 변수에는 0보다 크고(>) 총 행 수보다 작거나(<) 같은(=) 값을 지정해야 합니다. 이 매개 변수를 지정하지 않을 경우 기본값은 파일의 첫 번째 행입니다.  
   
  *first_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다. **-F** *first_row* 는 1부터 시작합니다.  
+
+**-G**<a name="G"></a>  
+ 이 스위치는 데 클라이언트에서 Azure SQL 데이터 웨어하우스 또는 Azure SQL 데이터베이스에 연결할 때 지정 하는 사용자를 Azure Active Directory 인증을 사용 하 여 인증할 수 있습니다. -G 스위치 필요 [14.0.3008.27 버전 이상](http://go.microsoft.com/fwlink/?LinkID=825643)합니다. 사용 중인 버전을 확인 하려면 bcp-v를 실행 합니다. 자세한 내용은 참조 [SQL 데이터 웨어하우스 또는 SQL 데이터베이스에서 인증을 위해 사용 하 여 Azure Active Directory 인증](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)합니다. 
+
+> [!TIP]
+>  Bcp 버전 Active Directory 인증 AAD (Azure) 형식에 대 한 지원을 포함 하는 경우를 확인 하려면 **bcp-** (bcp\<공간 >\<대시 >\<대시 >)-G 목록에 표시 되는지 확인 하 고 사용할 수 있는 인수입니다.
+
+- **Azure Active Directory 사용자 이름 및 암호:** 
+
+    Azure Active Directory의 사용자 이름과 암호를 사용하려는 경우 **-G** 옵션을 제공하고 **-U** 및 **-P** 옵션도 제공하여 사용자 이름 및 암호를 사용할 수 있습니다. 
+
+    다음 예제에서는 Azure AD 사용자 이름을 사용 하 여 데이터를 내보냅니다 및 사용자와 암호는는 AAD 자격 증명 암호입니다. 이 예제에서는 테이블 내보냅니다 `bcptest` 데이터베이스에서 `testdb` Azure 서버에서 `aadserver.database.windows.net` 파일에 데이터를 저장 하 고 `c:\last\data1.dat`:
+    ``` 
+    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ``` 
+
+    다음 예제에서는 Azure AD 사용자 이름을 사용 하 여 데이터 및 사용자와 암호는는 AAD 자격 증명 암호입니다. 이 예제에서는 파일에서 데이터를 가져오는 `c:\last\data1.dat` 테이블로 `bcptest` 데이터베이스에 대 한 `testdb` Azure 서버에서 `aadserver.database.windows.net` Azure AD 사용자/암호를 사용 하 여:
+    ```
+    bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ```
+
+
+
+- **Azure Active Directory 통합** 
+ 
+    Azure Active Directory 통합 인증을 위해 제공 된 **-G** 사용자 이름 또는 암호가 없으면 옵션입니다. 이 구성에서는 현재 Windows 사용자 계정 (bcp 명령을 실행 중인 계정)가 Azure AD와 페더레이션된 가정 합니다. 
+
+    다음 예제에서는 Azure AD 통합된 계정을 사용 하 여 데이터를 내보냅니다. 이 예제에서는 테이블 내보냅니다 `bcptest` 데이터베이스에서 `testdb` Azure 서버에서 Azure AD 통합을 사용 하 여 `aadserver.database.windows.net` 파일에 데이터를 저장 하 고 `c:\last\data2.dat`:
+
+    ```
+    bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
+    다음 예제에서는 Azure AD 통합된 인증을 사용 하 여 데이터를 가져옵니다. 이 예제에서는 파일에서 데이터를 가져오는 `c:\last\data2.txt` 테이블로 `bcptest` 데이터베이스에 대 한 `testdb` Azure 서버에서 `aadserver.database.windows.net` Azure AD 통합된 인증을 사용 하 여:
+
+    ```
+    bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> 은 데이터를 테이블 또는 뷰로 대량으로 가져올 때 사용할 힌트를 지정합니다.  
   
@@ -321,7 +364,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **90** = [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]  
   
- **100** = [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
+ **100**  =  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
   
  **110** = [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
@@ -329,7 +372,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **130** = [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
- 예를 들어 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서는 지원되지 않지만 그 이후 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에 도입된 형식에 대한 데이터를 생성하려면 -V80 옵션을 사용하십시오.  
+ 예를 들어 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서는 지원되지 않지만 그 이후 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에 도입된 형식에 대한 데이터를 생성하려면 -V80 옵션을 사용하십시오.  
   
  자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
   

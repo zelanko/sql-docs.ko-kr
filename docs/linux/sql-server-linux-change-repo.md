@@ -4,7 +4,7 @@ description: "확인 하 고 SQL Server 2017 linux에 대 한 소스 저장소�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/07/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>설치 및 Linux에서 SQL Server 업그레이드에 대 한 저장소를 구성 합니다.
 
@@ -181,8 +181,5 @@ SQL Server 설치 및 업그레이드에 사용할 새 저장소를 구성 합�
 
 > [!IMPORTANT]
 > 와 같은 설치 문서 중 하나를 사용 하기로 선택한 경우이 시점에서 [퀵 스타트](sql-server-linux-setup.md#platforms), 대상 저장소 이미 구성 되었다는 기억 합니다. 이 자습서에서 해당 단계를 반복 하지 않습니다. 퀵 스타트 CU 리포지토리를 사용 하기 때문에 이것이 GDR 저장소를 구성 하는 경우에 특히 그렇습니다.
-
-> [!IMPORTANT]
-> 모든 버전의 SQL Server 2017 CTP 2.1 이전의 2.1 이상 ga에 있습니다. 업그레이드 하기 전에 업그레이드 해야 합니다. 또 다른 옵션은 데이터베이스 백업 이전 버전을 제거 하 고 다음 GA 버전의 새로 설치를 수행 합니다.
 
 SQL Server 2017 Linux를 설치 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Linux에서 SQL Server에 대 한 설치 지침](sql-server-linux-setup.md)합니다.

@@ -27,16 +27,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9652e093a6b358a209bb7b84f1c4aa4c6854c328
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: fef54757181e9a4fc39a8eabf6399041ac0d6879
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 서로 다른 유형의 인덱스 작업 수와 각 유형의 작업이 마지막으로 수행된 시간을 반환합니다.  
+  서로 다른 유형의 인덱스 작업 수와 각 유형의 작업이 마지막으로 수행된 시간을 반환합니다.  
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이러한 정보 노출을 방지하기 위해 연결된 테넌트에 속하지 않는 데이터가 포함된 행은 모두 필터링됩니다.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 >  **sys.dm_db_index_usage_stats** 메모리 액세스에 최적화 된 인덱스에 대 한 정보를 반환 하지 않습니다. 메모리 액세스에 최적화 된 인덱스 사용에 대 한 정보를 참조 하십시오. [sys.dm_db_xtp_index_stats&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  이 메서드를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_db_index_usage_stats**합니다.  
+>  호출에서이 뷰를 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]를 사용 하 여 **sys.dm_pdw_nodes_db_index_usage_stats**합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,9 +52,9 @@ ms.lasthandoff: 02/03/2018
 |**object_id**|**int**|인덱스가 정의되어 있는 테이블 또는 뷰의 ID입니다.|  
 |**index_id**|**int**|인덱스의 ID입니다.|  
 |**user_seeks**|**bigint**|사용자 쿼리별 검색(Seek) 수입니다.|  
-|**user_scans**|**bigint**|사용자 쿼리별 검색(Scan) 수입니다. '검색' 조건자를 사용 하지 않는 검색을 나타냅니다.|  
+|**user_scans**|**bigint**|사용 하지 않은 사용자 쿼리 별 검색 수 ' 검색 ' 조건자입니다.|  
 |**user_lookups**|**bigint**|사용자 쿼리별 책갈피 수입니다.|  
-|**user_updates**|**bigint**|사용자 쿼리별 업데이트 수입니다. 이 삽입, 삭제를 포함 하 고 작업을 수행 하지 실제 적용 되는 행의 수를 나타내는 업데이트 합니다. 예를 들어 하나의 문에서 1000 개의 행을 삭제 하면이 수를 하나씩 늘립니다 1 씩|  
+|**user_updates**|**bigint**|사용자 쿼리별 업데이트 수입니다. 이 Insert, Delete, 포함 하 고 작업을 수행 하지 실제 적용 되는 행의 수를 나타내는 업데이트 합니다. 예를 들어 하나의 문에서 1000 개의 행을 삭제 하면이 개수를 1 씩|  
 |**last_user_seek**|**datetime**|마지막 사용자 검색(Seek) 시간입니다.|  
 |**last_user_scan**|**datetime**|마지막 사용자 검색(Scan) 시간입니다.|  
 |**last_user_lookup**|**datetime**|마지막 사용자 조회 시간입니다.|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층 필요는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정.  
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
 
