@@ -15,19 +15,20 @@ helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 486ba5cb40f30921374a4f66040f2a080e4a1152
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>데이터 마이닝 솔루션 및 개체 관리
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기존 마이닝 구조 및 마이닝 모델을 관리 하는 데 사용할 수 있는 클라이언트 도구를 제공 합니다. 이 섹션에서는 각 환경을 사용하여 수행할 수 있는 관리 작업에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기존 마이닝 구조와 마이닝 모델을 관리하는 데 활용할 수 있는 클라이언트 도구를 제공합니다. 이 섹션에서는 각 환경을 사용하여 수행할 수 있는 관리 작업에 대해 설명합니다.  
   
  이러한 도구 외에도 AMO를 사용하여 프로그래밍 방식으로 데이터 마이닝 개체를 관리하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2007용 데이터 마이닝 추가 기능과 같이 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 데이터베이스에 연결되는 다른 클라이언트를 사용할 수 있습니다.  
   
@@ -51,13 +52,13 @@ ms.lasthandoff: 01/08/2018
   
  다음 링크에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 데이터 마이닝 개체를 수정하는 방법에 대한 정보를 제공합니다.  
   
--   [마이닝 구조에 사용되는 데이터 원본 뷰 편집](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [마이닝 구조에 사용 되는 데이터 원본 뷰 편집](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
--   [마이닝 구조의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
+-   [마이닝 구조 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [모델링 플래그 &#40; 데이터 마이닝 &#41; 확인 또는 변경](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [알고리즘 매개 변수 확인 또는 변경](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   

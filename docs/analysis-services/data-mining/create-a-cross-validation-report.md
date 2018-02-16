@@ -17,19 +17,20 @@ helpviewer_keywords:
 - cross-validation [data mining]
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6b8b5dad234adf73717b5785fc0f3b06becaebce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cross-validation-report"></a>교차 유효성 검사 보고서 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 정확도 차트 탭을 사용 하 여 데이터 마이닝 디자이너에서 교차 유효성 검사 보고서를 만드는 과정을 안내 합니다. 교차 유효성 검사 보고서의 표시 형태 및 해당 보고서에 포함되는 통계 측정값에 대한 일반적인 내용은 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 항목에서는 데이터 마이닝 디자이너에서 정확도 차트 탭을 사용하여 교차 유효성 검사 보고서를 만드는 단계를 안내합니다. 교차 유효성 검사 보고서의 표시 형태 및 해당 보고서에 포함되는 통계 측정값에 대한 일반적인 내용은 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.  
   
  교차 유효성 검사 보고서는 리프트 차트 또는 분류 행렬과 같은 정확도 차트와 근본적으로 다릅니다.  
   

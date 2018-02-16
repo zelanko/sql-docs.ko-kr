@@ -20,19 +20,20 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 71337bc66abab8e91fd997cd2cde635945b0ef82
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-query-tools"></a>데이터 마이닝 쿼리 도구
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모든 데이터 마이닝 쿼리는 데이터 마이닝 DMX (Extensions) 언어를 사용합니다. DMX는 분류, 위험 분석, 권장 사항 생성 및 선형 회귀를 포함한 모든 종류의 기계 학습 태스크에 대한 모델을 만드는 데 사용할 수 있습니다. 또한 DMX 쿼리를 작성하여 모델을 처리할 때 생성된 패턴 및 통계에 대한 정보를 가져올 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+모든 데이터 마이닝 쿼리는 DMX(Data Mining Extensions) 언어를 사용합니다. DMX는 분류, 위험 분석, 권장 사항 생성 및 선형 회귀를 포함한 모든 종류의 기계 학습 태스크에 대한 모델을 만드는 데 사용할 수 있습니다. 또한 DMX 쿼리를 작성하여 모델을 처리할 때 생성된 패턴 및 통계에 대한 정보를 가져올 수 있습니다.  
   
  직접 DMX를 작성하거나, **예측 쿼리 작성기** 와 같은 도구를 사용하여 기본 DMX를 작성한 다음 수정할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 모두 DMX 예측 쿼리 작성에 도움이 되는 도구를 제공합니다. 이 항목에서는 이러한 도구를 사용하여 데이터 마이닝 쿼리를 만들고 실행하는 방법을 설명합니다.  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 01/08/2018
 -   클러스터 수, 의사 결정 트리에 사용된 특성, 모델이 마지막으로 처리된 날짜, 모델을 만들 때 사용된 알고리즘 매개 변수와 같은 **모델 콘텐츠** 및 **모델 메타데이터**를 검색하려면 [Discover 메서드&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드를 사용하고 [RequestType 요소&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 머리글에서 데이터 마이닝 스키마 행 집합 중 하나를 지정할 수 있습니다. 쿼리의 범위를 좁히려면 [RestrictionList 요소&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md) 요소 내에 제한 사항으로 조건을 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40; DMX &#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
  [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)   
  [DMX Select 문 이해](../../dmx/understanding-the-dmx-select-statement.md)   
  [구조 및 DMX 예측 쿼리 사용](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

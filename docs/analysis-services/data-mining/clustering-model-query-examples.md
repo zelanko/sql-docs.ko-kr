@@ -16,19 +16,20 @@ helpviewer_keywords:
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="clustering-model-query-examples"></a>클러스터링 모델 쿼리 예제
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 모델에 대 한 쿼리를 만들 때에 모델에 대 한 메타 데이터를 검색 하거나 분석 시 발견 된 패턴에 대 한 세부 정보를 제공 하는 내용 쿼리를 만들 수 있습니다. 또는 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 각 유형의 쿼리는 서로 다른 정보를 제공합니다. 예를 들어 내용 쿼리는 발견된 클러스터에 대한 추가 세부 정보를 제공하지만 예측 쿼리는 새 데이터 요소가 속해 있을 가능성이 가장 높은 클러스터를 알려 줍니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 대한 메타데이터를 검색하거나, 분석 시 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들 수 있습니다. 또는 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 각 유형의 쿼리는 서로 다른 정보를 제공합니다. 예를 들어 내용 쿼리는 발견된 클러스터에 대한 추가 세부 정보를 제공하지만 예측 쿼리는 새 데이터 요소가 속해 있을 가능성이 가장 높은 클러스터를 알려 줍니다.  
   
  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘을 기반으로 하는 모델에 대해 쿼리를 만드는 방법을 설명합니다.  
   
@@ -83,7 +84,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Cluster Model|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|All|  
+|NODE_DESCRIPTION|모두|  
   
  클러스터링 모델에서 이러한 열의 의미에 대한 정의는 [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)를 참조하세요.  
   
@@ -169,13 +170,13 @@ WHERE NODE_TYPE = 5
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
 |001|2|0.829207754|  
-|001|1|0.109354156|  
+|001|1.|0.109354156|  
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
 |001|Missing|0|  
 |002|0|0.576980023|  
-|002|1|0.406623939|  
+|002|1.|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1.60E-05|  
 |002|4|0|  
@@ -281,13 +282,13 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|식|  
 |----------------|----------------|  
-|1|0.592924735740338|  
+|1.|0.592924735740338|  
   
  열 사용법이 **PredictOnly** 로 설정되어 있고 모델이 다시 처리된 경우의 예제 결과는 다음과 같습니다.  
   
 |Bike Buyer|식|  
 |----------------|----------------|  
-|1|0.55843544003102|  
+|1.|0.55843544003102|  
   
  이 예에서 모델의 차이는 그다지 중요하지 않습니다. 그러나 실제 값 분포와 모델에서 예측하는 분포의 차이를 알아내는 것이 때로는 중요할 수 있습니다. [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) 함수는 해당 모델이 제공될 경우 사례가 나타날 가능성을 알려 주므로 이러한 경우에 유용합니다.  
   
@@ -362,7 +363,7 @@ NATURAL PREDICTION JOIN
 |클러스터 7|0.979081275926724|0.0209187240732763|  
 |클러스터 1|0.999169044818624|0.000830955181376364|  
 |클러스터 9|0.999831227795894|0.000168772204105754|  
-|클러스터 8|1|0|  
+|클러스터 8|1.|0|  
   
  기본적으로 결과는 확률 순으로 순위가 지정됩니다. 결과를 통해 Cluster 2의 확률이 매우 낮지만 그래도 Cluster 2가 새 데이터 요소에 가장 적합하다는 것을 알 수 있습니다.  
   
@@ -379,17 +380,17 @@ NATURAL PREDICTION JOIN
 |[Cluster&#40;DMX&#41;](../../dmx/cluster-dmx.md)|입력 사례가 포함되었을 가능성이 가장 높은 클러스터를 반환합니다.|  
 |[ClusterDistance&#40;DMX&#41;](../../dmx/clusterdistance-dmx.md)|입력 사례와 지정된 클러스터 사이의 거리를 반환합니다. 클러스터가 지정되지 않은 경우에는 입력 사례와 가장 가능성 있는 클러스터 사이의 거리를 반환합니다.<br /><br /> 입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  
 |[ClusterProbability&#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)|입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  
-|[IsDescendant&#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
-|[IsInNode&#40;DMX&#41;](../../dmx/isinnode-dmx.md)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
-|[PredictAdjustedProbability&#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|가중치 확률을 반환합니다.|  
-|[PredictAssociation&#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|연관 데이터 집합에서의 멤버 자격을 예측합니다.|  
+|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
+|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|가중치 확률을 반환합니다.|  
+|[PredictAssociation &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|연관 데이터 집합에서의 멤버 자격을 예측합니다.|  
 |[PredictCaseLikelihood&#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md)|입력 사례가 기존 모델에 적합할 가능성을 반환합니다.|  
 |[PredictHistogram&#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
-|[PredictNodeId&#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|각 사례에 대한 Node_ID를 반환합니다.|  
-|[PredictProbability&#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|예측 값의 확률을 반환합니다.|  
-|[PredictStdev&#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|지정된 열의 예측 표준 편차를 반환합니다.|  
-|[PredictSupport&#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|지정한 상태에 대한 지원 값을 반환합니다.|  
-|[PredictVariance&#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|지정한 열의 분산을 반환합니다.|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|각 사례에 대한 Node_ID를 반환합니다.|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|예측 값의 확률을 반환합니다.|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|지정된 열의 예측 표준 편차를 반환합니다.|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|지정한 열의 분산을 반환합니다.|  
   
  특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   

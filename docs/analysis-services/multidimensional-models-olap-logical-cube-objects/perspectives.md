@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ready-only cube view
 - OLAP objects [Analysis Services], perspectives
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - visibility [Analysis Services]
 - storage [Analysis Services], perspectives
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 815d1c6d75613855d84e9bb7ab6e5c369d97bf81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="perspectives"></a>큐브 뷰
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 뷰는 사용자가 간단한 방식으로 큐브를 볼 수 있는 정의 합니다. 큐브 기능의 하위 집합입니다. 큐브 뷰를 사용하면 관리자가 큐브 뷰를 만들어 사용자가 가장 관련 있는 데이터에 집중하도록 할 수 있습니다. 큐브 뷰에는 모든 큐브 개체의 하위 집합이 포함됩니다. 그러나 상위 큐브에 정의되지 않은 요소는 큐브 뷰에 포함될 수 없습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+큐브 뷰는 큐브를 보다 간단하게 표시할 수 있는 정의로, 큐브 기능의 하위 집합입니다. 큐브 뷰를 사용하면 관리자가 큐브 뷰를 만들어 사용자가 가장 관련 있는 데이터에 집중하도록 할 수 있습니다. 큐브 뷰에는 모든 큐브 개체의 하위 집합이 포함됩니다. 그러나 상위 큐브에 정의되지 않은 요소는 큐브 뷰에 포함될 수 없습니다.  
   
  단순 <xref:Microsoft.AnalysisServices.Perspective> 개체는 기본 정보, 차원, 측정값 그룹, 계산, KPI 및 동작으로 구성되어 있습니다. 기본 정보에는 큐브 뷰의 이름과 기본 측정값이 포함됩니다. 차원은 큐브 차원의 하위 집합입니다. 측정값 그룹은 큐브 측정값 그룹의 하위 집합입니다. 계산은 큐브 계산의 하위 집합입니다. KPI는 큐브 KPI의 하위 집합입니다. 동작은 큐브 동작의 하위 집합입니다.  
   
@@ -51,13 +53,13 @@ ms.lasthandoff: 01/08/2018
   
 -   측정값 그룹  
   
--   측정값 그룹  
+-   큐브 구조  
   
 -   KPI(핵심 성과 지표)  
   
 -   계산(계산 멤버, 명명된 집합 및 스크립트 명령)  
   
--   동작  
+-   작업  
   
  예를 들어는 **Adventure Works** 큐브에 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 샘플 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 11 개의 측정값 그룹과 21 개의 서로 다른 큐브 차원이, 판매, 판매 예측 나타내는 및 재무 데이터를 포함 합니다. 클라이언트 응용 프로그램에서 전체 큐브를 직접 참조할 수 있지만 기본 판매 예측 정보만 추출하려는 사용자에게 이러한 직접 참조는 너무 과도한 작업입니다. 동일한 사용자 대신 사용할 수는 **목표 판매량** 관점의 보기를 제한 하는 **Adventure Works** 큐브를 판매 예측과 관련 된 개체로를 합니다.  
   

@@ -22,19 +22,20 @@ helpviewer_keywords:
 - PROBABILITY_VARIANCE column
 - SUPPORT column
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 02792608fce3f2cca0c1bf78e5215b1a0b607a1e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="classified-columns-data-mining"></a>분류된 열(데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]분류 된 열을 정의할 경우 마이닝 구조의 현재 열과 다른 열 간에 관계를 만듭니다. 분류된 열로 지정한 마이닝 구조 열의 데이터에는 마이닝 구조의 다른 열의 값을 설명하는 범주 정보가 포함됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+분류된 열을 정의할 경우 마이닝 구조의 현재 열과 다른 열 간에 관계를 생성하게 됩니다. 분류된 열로 지정한 마이닝 구조 열의 데이터에는 마이닝 구조의 다른 열의 값을 설명하는 범주 정보가 포함됩니다.  
   
  예를 들어 숫자 데이터를 포함하는 두 개의 열이 있다고 가정합니다. [Yearly Purchases] 열에는 특정 달력 연도의 고객당 연간 총 구매액에 들어 있고, 다른 열인 [Standard Deviations] 열에는 그러한 값에 대한 표준 편차가 들어 있습니다. 이 경우 [Yearly Purchases] 열을 분류된 열로 지정할 수 있으며 그러면 모델에서 분석에 이 관계를 사용할 수 있습니다.  
   
@@ -65,8 +66,8 @@ ms.lasthandoff: 01/08/2018
  이 열의 값은 관련 값의 가중치 또는 사례 복제 요소입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [데이터 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [콘텐츠 형식 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [마이닝 구조 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [데이터 형식 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   

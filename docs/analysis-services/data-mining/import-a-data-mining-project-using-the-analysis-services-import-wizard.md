@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5f7a99df396ecef55f0ba6a4529416354cdccda1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 서식 파일을 사용 하는 다른 서버에서 기존 데이터 마이닝 프로젝트에서 메타 데이터를 가져와서 새 데이터 마이닝 프로젝트를 만드는 방법을 설명 **(다차원 및 데이터 마이닝) 서버에서에서 가져오기 프로젝트**, 에서[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **서버에서 가져오기(다차원 및 데이터 마이닝) 프로젝트** 템플릿을 사용하여 다른 서버의 기존 데이터 마이닝 프로젝트에서 메타데이터를 가져와 새로운 데이터 마이닝 프로젝트를 만드는 방법을 설명합니다.  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>기존 데이터 마이닝 프로젝트에서 데이터 원본, 마이닝 구조 및 마이닝 모델 가져오기  
  **서버에서 가져오기(다차원 및 데이터 마이닝) 프로젝트**템플릿을 사용하면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 새 데이터 마이닝 프로젝트를 만든 다음 지정된 데이터 마이닝 프로젝트에서 메타데이터를 복사합니다. 새 프로젝트에는 가져온 ssASnoversion 데이터베이스와 동일한 데이터 원본, 데이터 원본 뷰, 마이닝 구조 및 마이닝 모델이 포함됩니다. 그러나 프로젝트를 사용하려면 먼저 아래 설명된 대로 특정 속성을 업데이트하고 개체를 처리해야 합니다.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/08/2018
   
      [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 프로젝트가 자동으로 열립니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [프로젝트 속성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

@@ -28,19 +28,20 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-types-data-mining"></a>내용 유형(데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]을 두는 실제 데이터 형식과 열에 대 한 마이닝 구조 및 모델에 사용 된 열에 대 한 논리적 내용 유형을 정의할 수 있습니다  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 마이닝 구조의 열에 대한 실제 데이터 형식과 모델에 사용된 열에 대한 논리적 내용 유형을 모두 정의할 수 있습니다.  
   
  *데이터 형식* 은 마이닝 모델을 만들 때 알고리즘이 이 열의 데이터를 처리하는 방법을 결정합니다. 열의 데이터 형식을 정의하면 열의 데이터 처리 방법 및 해당 데이터 형식에 대한 알고리즘 정보를 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 각 데이터 형식은 데이터 마이닝에 대해 하나 이상의 내용 유형을 지원합니다.  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
  이 내용 유형은 **Double**, **Long**및 **Date**데이터 형식에서 지원합니다.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>테이블  
  *Table* 내용 유형은 열에 행과 열이 각각 한 개 이상인 다른 데이터 테이블이 포함되어 있음을 나타냅니다. 이 열은 사례 테이블의 특정 행에 대해 여러 값을 포함할 수 있는데 이러한 값은 모두 부모 사례 레코드와 관련되어 있습니다. 예를 들어 주 사례 테이블에 고객 목록이 포함되어 있는 경우 중첩 테이블을 포함하는 열이 여러 개 있을 수 있습니다. 예를 들어 **ProductsPurchased** 열의 중첩 테이블에는 이 고객이 과거에 구매한 제품이 나열되며 **Hobbies** 열에는 고객의 관심 사항이 나열됩니다.  
   
  이 열의 데이터 형식은 항상 **Table**입니다.  
@@ -118,7 +119,7 @@ ms.lasthandoff: 01/08/2018
  모든 모델에서 일반적으로 사용되는 위의 내용 유형 외에도 일부 데이터 형식에 대해 분류된 열을 사용하여 내용 유형을 정의할 수 있습니다. 분류된 열에 대한 자세한 내용은 [분류된 열&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [콘텐츠 형식&#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [콘텐츠 형식 &#40; DMX &#41;](../../dmx/content-types-dmx.md)   
  [데이터 형식 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [데이터 형식 &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
  [마이닝 구조 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   

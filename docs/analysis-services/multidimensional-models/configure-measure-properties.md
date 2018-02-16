@@ -43,19 +43,20 @@ helpviewer_keywords:
 - Type property
 - ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d448349dfa423810a6bdfd70a5d79a1dfd41f0b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-measure-properties"></a>측정값 속성 구성
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]측정값을 정의할 수 있습니다 사용할 수 있는 속성은 방법을 해당 측정값의 작동 고 측정값의 사용자에 게 표시 하는 방법을 제어할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+측정값에는 해당 측정값의 작동 방법을 정의하고 측정값의 표시 방법을 제어하는 데 사용할 수 있는 속성이 있습니다.  
   
  큐브 또는 측정값을 만들거나 편집할 때 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 속성을 설정할 수 있습니다. 또한 MDX 또는 AMO를 사용하여 프로그래밍 방식으로 속성을 설정할 수 있습니다. 자세한 내용은 [다차원 모델의 측정값 및 측정값 그룹 만들기](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md), [CREATE MEMBER 문&#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md) 또는 [AMO OLAP 기본 개체 프로그래밍](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)을 참조하세요.  
   

@@ -18,19 +18,20 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>관계형 마이닝 구조 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]대부분의 데이터 마이닝 모델은 관계형 데이터 원본을 기반으로 합니다. 관계형 데이터 마이닝 모델을 만들면 복잡하게 큐브를 만들 필요 없이 임시 데이터를 조합하여 모델을 학습 및 업데이트할 수 있는 이점이 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+대부분의 데이터 마이닝 모델은 관계형 데이터 원본을 기반으로 합니다. 관계형 데이터 마이닝 모델을 만들면 복잡하게 큐브를 만들 필요 없이 임시 데이터를 조합하여 모델을 학습 및 업데이트할 수 있는 이점이 있습니다.  
   
  관계형 마이닝 구조는 서로 다른 원본에서 데이터를 가져올 수 있습니다. 데이터를 데이터 원본 뷰의 일부로 정의할 수 있는 경우 원시 데이터를 테이블, 파일 또는 관계형 데이터베이스 시스템에 저장할 수 있습니다. 예를 들어 데이터가 Excel, SQL Server 데이터 웨어하우스 또는 SQL Server 보고 데이터베이스에 있거나 OLE DB 또는 ODBC 공급자를 통해 액세스하는 외부 원본에 있는 경우 관계형 마이닝 구조를 사용해야 합니다.  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 7.  **테스트 집합 만들기**: 이 페이지에서는 마법사에 모델을 테스트하는 데 사용하기 위해 남겨 둘 데이터의 양을 지정할 수 있습니다. 데이터가 여러 모델을 지원하는 경우 모든 모델을 같은 데이터에서 테스트할 수 있도록 홀드아웃 데이터 집합을 만드는 것이 좋습니다.  
   
-     자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)템플릿을 사용하여 데이터 마이닝 프로젝트를 작성할 수 있습니다.  
+     자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)를 참조하세요.  
   
 8.  **마법사 완료**: 이 페이지에서는 새 마이닝 구조와 관련 마이닝 모델의 이름을 지정하고 구조 및 모델을 저장합니다.  
   

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - dependency network nodes [Analysis Services]
 - Mining Model Viewer [Analysis Services], dependency network nodes
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e67cca59b2383c525fdd0fbd80546d2c123a8a96
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>종속성 네트워크에서 특정 노드 찾기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]종속성 네트워크에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터를 찾기가 어려울에 관심이, 마이닝 모델에서 노드 수를 사용할 수 있습니다. 이 문제를 해결하려면 데이터 마이닝 디자이너의 **종속성 네트워크** 탭에서 **노드 찾기** 대화 상자를 사용하여 특정 노드를 검색합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마이닝 모델의 종속성 네트워크에 노드가 너무 많아 관심 있는 데이터를 찾기 어려울 수 있습니다. 이 문제를 해결하려면 데이터 마이닝 디자이너의 **종속성 네트워크** 탭에서 **노드 찾기** 대화 상자를 사용하여 특정 노드를 검색합니다.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>종속성 네트워크에서 특정 노드를 찾으려면  
   

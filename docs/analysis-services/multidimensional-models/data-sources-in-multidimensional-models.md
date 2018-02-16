@@ -20,19 +20,20 @@ helpviewer_keywords:
 - data sources [Analysis Services]
 - storage [Analysis Services], data sources
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 99bdc630a51bd2bb4f9cbfeb7860d2dffb9392a0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-in-multidimensional-models"></a>다차원 모델의 데이터 원본
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]가져오거나를 다차원 모델에 로드 하는 모든 데이터는 외부 데이터 원본에서 생성 됩니다. 일반적으로 원본 데이터는 보고용으로 디자인된 데이터 웨어하우스의 데이터이지만 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지와 같은 매개자를 통해 직접 또는 간접으로 액세스되는 관계형 데이터베이스의 데이터일 수도 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+다차원 모델로 가져오거나 로드하는 모든 데이터는 외부 데이터 원본에서 생성됩니다. 일반적으로 원본 데이터는 보고용으로 디자인된 데이터 웨어하우스의 데이터이지만 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지와 같은 매개자를 통해 직접 또는 간접으로 액세스되는 관계형 데이터베이스의 데이터일 수도 있습니다.  
   
  **의** 데이터 원본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체는 외부 데이터 원본에 대한 직접 연결을 지정합니다. 물리적 위치 외에 데이터 원본 개체는 연결 문자열, 데이터 공급자, 자격 증명 및 연결 동작을 제어하는 기타 속성도 지정합니다.  
   
@@ -61,14 +62,14 @@ ms.lasthandoff: 01/08/2018
 |항목|Description|  
 |-----------|-----------------|  
 |[지원되는 데이터 원본&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)|다차원 모델에서 사용할 수 있는 데이터 원본 유형에 대해 설명합니다.|  
-|[데이터 원본 만들기&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|다차원 모델에 데이터 원본 개체를 추가하는 방법에 설명합니다.|  
-|[솔루션 탐색기에서 데이터 원본 삭제&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|이 절차를 사용하여 다차원 모델에서 데이터 원본 개체를 삭제할 수 있습니다.|  
-|[데이터 원본 속성 설정&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|각 속성과 각 속성을 설정하는 방법에 대해 설명합니다.|  
-|[가장 옵션 설정&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|가장 정보 대화 상자에서 옵션을 구성하는 방법을 설명합니다.|  
+|[데이터 원본 &#40; 만들기 SSAS 다차원 &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|다차원 모델에 데이터 원본 개체를 추가하는 방법에 설명합니다.|  
+|[솔루션 탐색기 &#40;에서 데이터 원본 삭제 SSAS 다차원 &#41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|이 절차를 사용하여 다차원 모델에서 데이터 원본 개체를 삭제할 수 있습니다.|  
+|[데이터 원본 속성 설정 &#40; SSAS 다차원 &#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|각 속성과 각 속성을 설정하는 방법에 대해 설명합니다.|  
+|[가장 옵션 설정 &#40; SSAS-다차원 데이터 &#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|가장 정보 대화 상자에서 옵션을 구성하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터베이스 개체&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [논리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [데이터베이스 개체 &#40; Analysis Services-다차원 데이터 &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [논리적 아키텍처 &#40; Analysis Services-다차원 데이터 &#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [데이터 원본 및 바인딩 &#40; SSAS 다차원 &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   

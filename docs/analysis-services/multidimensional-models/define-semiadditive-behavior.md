@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f78bd8b53f358b63393b374594ce76d31791c606
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-semiadditive-behavior"></a>반가산적 동작 정의
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모든 차원에서 균일 하 게 집계 되지 않는, 반 가산적 측정값은 다양 한 비즈니스 시나리오에서 매우 흔히입니다. 시간에 따른 균형에 대한 스냅숏을 기반으로 하는 모든 큐브에서 이 문제가 발생합니다. 보안, 잔액, 예산, 인력 관리, 보험 정책, 지불 청구 및 기타 비즈니스 분야를 처리하는 응용 프로그램에서 이러한 스냅숏을 찾을 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+다양한 비즈니스 시나리오에서 모든 차원에 대해 균일하게 집계되지 않는 반가산적 측정값이 있는 경우가 많습니다. 시간에 따른 균형에 대한 스냅숏을 기반으로 하는 모든 큐브에서 이 문제가 발생합니다. 보안, 잔액, 예산, 인력 관리, 보험 정책, 지불 청구 및 기타 비즈니스 분야를 처리하는 응용 프로그램에서 이러한 스냅숏을 찾을 수 있습니다.  
   
  큐브에 반가산적 동작을 추가하여 개별 측정값이나 해당 계정 유형 특성의 멤버에 대한 집계 방법을 정의합니다. 큐브에 계정 차원이 포함되는 경우 해당 계정 유형 기반의 반가산적 동작을 자동으로 설정할 수 있습니다.  
   
@@ -76,14 +77,14 @@ ms.lasthandoff: 01/08/2018
 |---------------------------|-----------------|  
 |Average of Children|멤버 자식의 평균을 집계합니다.|  
 |ByAccount|시스템에서 계정 유형에 지정된 반가산적 동작을 읽습니다.|  
-|개수|멤버 개수를 집계합니다.|  
+|Count|멤버 개수를 집계합니다.|  
 |Distinct Count|고유 멤버의 개수를 집계합니다.|  
 |First Child|멤버 값이 시간 차원에 따른 첫 번째 자식의 값으로 계산됩니다.|  
 |FirstNonEmpty|멤버 값이 시간 차원에 따른 데이터를 포함하는 첫 번째 자식의 값으로 계산됩니다.|  
 |LastChild|멤버 값이 시간 차원에 따른 마지막 자식의 값으로 계산됩니다.|  
 |LastNonEmpty|멤버 값이 시간 차원에 따른 데이터를 포함하는 마지막 자식의 값으로 계산됩니다.|  
-|최대값|표준 최대 집계 함수가 적용됩니다.|  
-|최소값|표준 최소 집계 함수가 적용됩니다.|  
+|Max|표준 최대 집계 함수가 적용됩니다.|  
+|Min|표준 최소 집계 함수가 적용됩니다.|  
 |InclusionThresholdSetting|집계가 적용되지 않습니다.|  
 |SUM|표준 합계 함수가 적용됩니다.|  
   

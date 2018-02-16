@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 31ac0cffe6656c5d644b5424b56f150572dc9af6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>모델 뷰어에서 드릴스루 사용
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모델 유형에 따라에 브라우저 뷰어에서 드릴스루를에서 사용할 수는 **마이닝 모델 뷰어** 를 마이닝 모델에 사용 된 사례를 탐색 하거나 마이닝 구조의 추가 열을 볼 데이터 마이닝 디자이너의 탭 합니다. 모델의 패턴은 특정 사례에 직접 연결할 수 없으므로 대부분의 모델 유형에서 드릴스루를 지원하지 않지만 다음 모델 유형에서는 드릴스루를 지원합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+모델 유형에 따라 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 있는 브라우저 뷰어에서 드릴스루를 사용하여 마이닝 모델에 사용된 사례를 탐색하거나 마이닝 구조의 추가 열을 볼 수 있습니다. 모델의 패턴은 특정 사례에 직접 연결할 수 없으므로 대부분의 모델 유형에서 드릴스루를 지원하지 않지만 다음 모델 유형에서는 드릴스루를 지원합니다.  
   
  모델에 드릴스루가 사용하도록 설정되어 있고 사용자에게 적절한 사용 권한이 있어야 합니다. 또한 모델이 현재 처리되지 않은 상태인 경우에는 모델이 이전에 처리되었고 모델에 내용이 있는지 여부에 관계없이 드릴스루 옵션이 사용하지 않도록 설정될 수도 있습니다. 드릴스루를 사용하여 모델 사례 데이터를 검색하려면 구조 및 모델의 캐시가 최신 상태여야 합니다.  
   
@@ -79,6 +80,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>관련 항목:  
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [마이닝 모델에서의 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
- [마이닝 구조에 대한 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
+ [마이닝 구조에서 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

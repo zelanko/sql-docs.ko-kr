@@ -18,19 +18,20 @@ helpviewer_keywords:
 - custom member formulas [Analysis Services]
 - CustomRollupColumn property
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: acec3f91c8229acc6c17f5989b63677b394b6129
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>BI 마법사-차원에서 특성에 대 한 사용자 지정 멤버 수식
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 또는 차원 멤버는 MDX (Multidimensional Expressions) 식의 결과 연결 된 기본 집계를 바꾸려면 차원에 사용자 지정 멤버 수식 기능을 추가 합니다. 이 기능은 차원에서 지정한 특성에 대한 **CustomRollupColumn** 속성을 설정합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+큐브나 차원에 사용자 지정 멤버 수식 기능을 추가하여 차원 멤버와 연결된 기본 집계를 MDX(Multidimensional Expressions) 식의 결과로 바꿀 수 있습니다. 이 기능은 차원에서 지정한 특성에 대한 **CustomRollupColumn** 속성을 설정합니다.  
   
 > [!NOTE]  
 >  사용자 지정 멤버 수식은 기존 데이터 원본을 기반으로 하는 차원에만 사용할 수 있습니다. 데이터 원본을 사용하지 않고 만든 차원의 경우에는 사용자 지정 멤버 수식을 추가하기 전에 스키마 생성 마법사를 실행하여 데이터 원본 뷰를 만들어야 합니다.  
@@ -44,6 +45,6 @@ ms.lasthandoff: 01/08/2018
  두 번째 **사용자 지정 멤버 수식 만들기** 페이지에서 사용자 지정 멤버 수식이 포함된 원본 열을 차원에 있는 하나 이상의 특성과 연결합니다. **특성** 열에서 사용자 지정 멤버 수식 열과 연결할 특성 옆에 있는 확인란을 선택합니다. 특성을 선택할 때마다 **열 선택** 대화 상자가 표시됩니다. 이 대화 상자에서 수식이 포함된 차원 테이블의 열을 클릭합니다. **열 선택** 대화 상자를 닫은 후에 선택 사항을 변경하려면 변경할 **원본 열** 셀을 클릭한 다음 줄임표(**...**)를 클릭하여 **열 선택** 대화 상자를 다시 엽니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [비즈니스 인텔리전스 마법사를 사용하여 차원 향상](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
+ [비즈니스 인텔리전스 마법사를 사용 하 여 차원 향상](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
   
   

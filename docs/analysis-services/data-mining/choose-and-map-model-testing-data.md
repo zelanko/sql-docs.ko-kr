@@ -17,19 +17,20 @@ helpviewer_keywords:
 - input column mapping [Analysis Services]
 - mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 82d6368aa699b537c2fee81c3d054e6c3546797b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-and-map-model-testing-data"></a>모델 테스트 데이터 선택 및 매핑
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]정확도 차트를 만들려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 모델, 테스트에 사용 되 고 데이터를 모델에 매핑해야 하는 데이터를 선택 해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 정확도 차트를 만들려면 모델을 테스트하는 데 사용할 데이터를 선택하고 데이터를 모델에 매핑해야 합니다.  
   
  마이닝 구조를 작성할 때 홀드아웃 데이터 집합을 만든 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 기본적으로 마이닝 모델 테스트 데이터가 사용됩니다. 홀드아웃 테스트 집합은 열 이름 및 데이터 형식이 항상 모델과 일치하고 데이터 분포도 유사하므로 홀드아웃 테스트 집합을 만드는 것은 동일한 마이닝 구조를 기반으로 하는 모델을 테스트하는 가장 쉬운 방법입니다. 또한 디자이너에서는 입력 열과 모델 열 간의 관계를 자동으로 만듭니다.  
   
@@ -126,6 +127,6 @@ ms.lasthandoff: 01/08/2018
      **열 매핑 지정** 대화 상자에 새 열 매핑이 표시됩니다. 열 사이의 선을 선택하고 Delete 키를 눌러 매핑을 제거할 수 있습니다. **마이닝 구조** 테이블의 열을 선택하고 **입력 테이블 선택** 테이블의 해당 열로 끌어 새 연결을 만들 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [테스트 및 유효성 검사 작업과 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

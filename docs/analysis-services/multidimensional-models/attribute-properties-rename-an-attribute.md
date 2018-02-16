@@ -17,19 +17,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], renaming
 - Name property
 ms.assetid: 4094f0a7-2fde-407c-9b36-c8b30537c2da
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a06c4a6c36c6955d1cd8d174738436b9c9bae734
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---rename-an-attribute"></a>속성을 특성-특성 이름 변경
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]에 있는 특성의 이름 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 정의한 해당 **이름** 속성입니다. 특성 이름을 바꾸려면 **에 있는 차원 디자이너의** 차원 구조 **탭의** 특성 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]창에서 특성을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭합니다. **특성** 창이 표 뷰로 되어 있으면 표에서 직접 특성 이름을 클릭하고 편집합니다. 특성을 선택하고 **속성** 창에서 **Name** 속성을 설정할 수도 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 특성 이름은 **Name** 속성으로 정의됩니다. 특성 이름을 바꾸려면 **에 있는 차원 디자이너의** 차원 구조 **탭의** 특성 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]창에서 특성을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭합니다. **특성** 창이 표 뷰로 되어 있으면 표에서 직접 특성 이름을 클릭하고 편집합니다. 특성을 선택하고 **속성** 창에서 **Name** 속성을 설정할 수도 있습니다.  
   
  특성 이름을 바꾸는 방법에 대한 자세한 내용은 [키 열에 특성 바인딩](../../analysis-services/multidimensional-models/attribute-properties-bind-an-attribute-to-a-key-column.md)을 참조하세요.  
   

@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - debugging stored procedures [Analysis Services]
 - stored procedures [Analysis Services], debugging
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7b605ee9a2af577048c03d406ff628b1d279a68e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="debugging-stored-procedures"></a>저장 프로시저 디버깅
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 저장된 프로시저는 실제로 CLR 또는 COM 라이브러리 (대개 Dll) C# (또는 다른 CLR 또는 COM 언어로)로 작성 됩니다. 따라서 저장 프로시저를 디버깅하는 것은 Visual Studio 디버깅 환경에서 다른 응용 프로그램을 디버깅하는 것과 매우 유사합니다. 통합된 디버깅 기능을 사용하여 Visual Studio 개발 환경에서 저장 프로시저를 디버깅합니다. 이를 통해 프로시저 위치에서 중지하고 메모리와 레지스터 값을 검사하고 변수를 변경하고 메시지 트래픽을 관찰하고 코드 작동 방식을 자세히 살펴볼 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 저장 프로시저는 실제로 C#이나 다른 CLR 또는 COM 언어로 작성되는 CLR 또는 COM 라이브러리(대개 DLL)입니다. 따라서 저장 프로시저를 디버깅하는 것은 Visual Studio 디버깅 환경에서 다른 응용 프로그램을 디버깅하는 것과 매우 유사합니다. 통합된 디버깅 기능을 사용하여 Visual Studio 개발 환경에서 저장 프로시저를 디버깅합니다. 이를 통해 프로시저 위치에서 중지하고 메모리와 레지스터 값을 검사하고 변수를 변경하고 메시지 트래픽을 관찰하고 코드 작동 방식을 자세히 살펴볼 수 있습니다.  
   
 ### <a name="to-debug-a-stored-procedure"></a>저장 프로시저를 디버깅하려면  
   
@@ -60,6 +62,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [다차원 모델 어셈블리 관리](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
- [저장 프로시저 정의](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [저장된 프로시저 정의](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

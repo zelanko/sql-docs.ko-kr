@@ -15,19 +15,20 @@ helpviewer_keywords:
 - data mining [Analysis Services], models
 - mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8c1eef41d84a8bdbd758c02f4830467b14cd9ebb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>마이닝 모델 태스크 및 방법
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 하 여는 **마이닝 모델** 데이터 마이닝 디자이너의 탭 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 관리 하 고 마이닝 구조에 마이닝 모델을 처리 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+**의 데이터 마이닝 디자이너에 있는** 마이닝 모델 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭을 사용하여 마이닝 구조의 마이닝 모델을 관리하고 처리할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -39,23 +40,23 @@ ms.lasthandoff: 01/08/2018
   
 -   [모델 열의 별칭 만들기](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
--   [마이닝 모델에서 열의 분할 변경](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
+-   [마이닝 모델에 있는 열의 분할 변경](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [모델링 플래그 &#40; 데이터 마이닝 &#41; 확인 또는 변경](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
--   [모델에서 회귀 변수로 사용할 열 지정](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
+-   [모델에서 회귀 변수로 사용할 열을 지정 합니다.](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
   
 -   [마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [마이닝 모델에 필터 적용](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)  
+-   [마이닝 모델에 필터를 적용 합니다.](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)  
   
 -   [마이닝 모델에서 필터 삭제](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
 -   [마이닝 모델에 드릴스루 사용](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)  
   
--   [알고리즘 매개 변수 보기 또는 변경](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
+-   [보기 또는 변경 알고리즘 매개 변수](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
--   [마이닝 모델 복사본 만들기](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
+-   [마이닝 모델의 복사본 만들기](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
   
 -   [마이닝 모델 처리](../../analysis-services/data-mining/process-a-mining-model.md)  
   

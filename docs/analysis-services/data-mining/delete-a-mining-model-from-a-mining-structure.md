@@ -17,19 +17,20 @@ helpviewer_keywords:
 - removing mining models
 - mining models [Analysis Services], deleting
 ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 363ac575844136dee04f9cf249253479e64836dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>마이닝 구조에서 마이닝 모델 삭제
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 하 여 데이터 마이닝 디자이너를 사용 하 여 마이닝 모델을 삭제할 수 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 또는 DMX 문을 사용 하 여 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+데이터 마이닝 디자이너, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 DMX 문을 사용하여 마이닝 모델을 삭제할 수 있습니다.  
   
 ### <a name="delete-a-mining-model-using-sql-server-data-tools"></a>SQL Server Data Tools를 사용하여 마이닝 모델 삭제  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="delete-a-mining-model-using-dmx"></a>DMX를 사용하여 마이닝 모델 삭제  
   
--   [DROP MINING MODEL&#40;DMX&#41;](../../dmx/drop-mining-model-dmx.md)  
+-   [마이닝 모델 삭제 &#40; DMX &#41;](../../dmx/drop-mining-model-dmx.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
