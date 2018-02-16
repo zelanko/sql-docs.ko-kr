@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 69ca2b7cadbb70a8728fda2e631d5df57efbda76
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-representationtabular"></a>데이터베이스 표현(테이블 형식)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]테이블 형식 모드에서 데이터베이스는 테이블 형식 모델의 모든 개체에 대 한 컨테이너입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+테이블 형식 모드에서 데이터베이스는 테이블 형식 모델의 모든 개체에 대 한 컨테이너입니다.  
   
 ## <a name="database-representation"></a>데이터베이스 표현  
  데이터베이스는 테이블 형식 모델을 형성하는 모든 개체가 있는 위치입니다. 개발자는 데이터베이스에 포함된 연결, 테이블, 역할 등의 개체를 찾습니다.  

@@ -1,7 +1,7 @@
 ---
 title: "Analysis Services에서 XMLA를 사용 하 여 개발 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, data mining
 - commands [XML for Analysis]
@@ -20,23 +21,23 @@ helpviewer_keywords:
 - XML for Analysis, Analysis Services tasks
 - XMLA, Analysis Services tasks
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a9ba34222580b292fbc6281df49505f57739911a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6bf41801ce6b81c532d8be56b5afdfe4fd5e901f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Analysis Services에서 XMLA를 사용하여 개발
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA)는 HTTP 연결을 통해 액세스할 수 있는 모든 표준 다차원 데이터 원본에 대 한 범용 데이터 액세스를 위해 특별히 설계 된는 SOAP 기반 XML 프로토콜입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 클라이언트 응용 프로그램과 통신할 때의 유일한 프로토콜로 XMLA를 사용합니다. 기본적으로 Analysis Services에서 지원하는 모든 클라이언트 라이브러리는 XMLA의 요청 및 응답을 작성합니다.  
+  XMLA(XML for Analysis)는 HTTP 연결을 통해 액세스할 수 있는 표준 다차원 데이터 원본에 대한 범용 데이터 액세스를 위해 특별히 설계된 SOAP 기반 XML 프로토콜입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 클라이언트 응용 프로그램과 통신할 때의 유일한 프로토콜로 XMLA를 사용합니다. 기본적으로 Analysis Services에서 지원하는 모든 클라이언트 라이브러리는 XMLA의 요청 및 응답을 작성합니다.  
   
  개발자는 .NET Framework 또는 COM 인터페이스에 대한 종속성 없이 XMLA를 사용하여 클라이언트 응용 프로그램을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 통합할 수 있습니다. 광범위한 플랫폼에서의 호스팅을 포함하는 응용 프로그램 요구 사항은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 HTTP 연결 및 XMLA를 사용하여 충족할 수 있습니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 XMLA의 1.1 사양과 완전히 호환되지만 데이터 정의, 데이터 조작 및 데이터 제어 지원도 사용할 수 있도록 확장되었습니다. Analysis Services 확장 프로그램을 ASSL(Analysis Services Scripting Language)이라고 합니다. XMLA와 ASSL을 함께 사용하면 XMLA 하나에서만 제공하는 기능보다 더 다양한 기능 집합을 사용할 수 있습니다. ASSL에 대 한 자세한 내용은 참조 하세요. [Analysis Services Scripting Language &#40;를 사용 하 여 개발 ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA의 1.1 사양과 완전히 호환 이지만 데이터 정의 데이터 조작 및 데이터 제어 지원을 사용 하도록 설정 하려면 확장 합니다. Analysis Services 확장 프로그램을 ASSL(Analysis Services Scripting Language)이라고 합니다. XMLA와 ASSL을 함께 사용하면 XMLA 하나에서만 제공하는 기능보다 더 다양한 기능 집합을 사용할 수 있습니다. ASSL에 대 한 자세한 내용은 참조 하세요. [Analysis Services Scripting Language &#40;를 사용 하 여 개발 ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
 |[개체를 처리 &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)|사용 하는 방법에 설명 된 [프로세스](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 명령을 프로세스에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체입니다.|  
 |[병합 파티션 &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)|사용 하는 방법에 설명 된 [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) 파티션을 병합 하는 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스.|  
 |[집계 &#40; 디자인 XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)|사용 하는 방법에 설명 된 [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) 명령 반복 또는 일괄 처리 모드는 집계 디자인에 대 한 집계를 디자인 하 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.|  
-|[데이터베이스 백업, 복원 및 동기화&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)|사용 하는 방법에 설명는 [백업](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) 및 [복원](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) 명령을 백업 및 복원 하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일에서 데이터베이스입니다.<br /><br /> 또한 사용 하는 방법에 설명 된 [동기화](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 동기화 하는 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 동일한 인스턴스 또는 다른 인스턴스에서 기존 데이터베이스를 사용 하 여 데이터베이스입니다.|  
+|[백업, 복원 및 데이터베이스 &#40; 동기화 XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)|사용 하는 방법에 설명는 [백업](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) 및 [복원](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) 명령을 백업 및 복원 하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일에서 데이터베이스입니다.<br /><br /> 또한 사용 하는 방법에 설명 된 [동기화](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 동기화 하는 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 동일한 인스턴스 또는 다른 인스턴스에서 기존 데이터베이스를 사용 하 여 데이터베이스입니다.|  
 |[삽입, 업데이트 및 삭제 멤버 &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)|사용 하는 방법에 설명 된 [삽입](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [업데이트](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), 및 [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) 를 추가, 변경 또는 쓰기 가능 차원에서 멤버를 삭제 합니다.|  
 |[셀 &#40; 업데이트 XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)|사용 하는 방법에 설명 된 [UpdateCells](../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) 쓰기 가능한 파티션의 셀 값을 변경 하는 명령입니다.|  
 |[관리 캐시 &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md)|사용 하는 방법에 자세히 설명 된 [ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) 의 캐시를 지울 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체입니다.|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="namespace-and-schema"></a>네임스페이스 및 스키마  
   
-### <a name="namespace"></a>Namespace  
+### <a name="namespace"></a>네임스페이스  
  이 사양에 정의 된 스키마는 XML 네임 스페이스를 사용 하 여 `http://schemas.microsoft.com/AnalysisServices/2003/Engine` 과 표준 약어 "DDL"을 선택 합니다.  
   
 ### <a name="schema"></a>스키마  

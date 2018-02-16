@@ -15,19 +15,20 @@ helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: b05b035f530318759f0b2eb4b20bd9bd5edd4d01
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="grant-database-permissions-analysis-services"></a>데이터베이스 권한 부여(Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]하면 관계형 데이터베이스의 백그라운드에서에서 Analysis Services 데이터베이스 관리, 가장 먼저 알아야 할 경우, 데이터 액세스의 측면에서 데이터베이스가 Analysis Services의 기본 보안 개체입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+관계형 데이터베이스의 백그라운드에서 Analysis Services 데이터베이스 관리를 수행하려는 경우 알아두어야 할 첫 번째 사항은 데이터 액세스의 측면에서 데이터베이스가 Analysis Services의 기본 보안 개체가 아니라는 점입니다.  
   
  Analysis Services의 기본 쿼리 구조는 해당 특정 개체에 대한 사용자 권한 집합을 포함하는 큐브(또는 테이블 형식 모델)입니다. 데이터베이스 로그인 및 사용자 권한(보통 **db_datareader**)이 데이터베이스 자체에 설정되는 관계형 데이터베이스 엔진과는 대조적으로 Analysis Services 데이터베이스는 일반적으로 데이터 모델에서 기본 쿼리 개체의 컨테이너입니다. 우선적인 목표가 큐브 또는 테이블 형식 모델의 데이터에 액세스하는 것이라면 일단 데이터베이스 사용 권한을 바이패스하고 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) 항목으로 이동해도 됩니다.  
   
@@ -85,6 +86,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [처리 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [처리 권한 부여 &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

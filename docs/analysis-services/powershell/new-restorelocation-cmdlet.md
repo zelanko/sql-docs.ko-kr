@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>New-RestoreLocation cmdlet
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터베이스를 복원 하는 데 사용 되는 정보를 지정 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+데이터베이스를 복원하는 데 사용되는 정보를 지정합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="parameters"></a>매개 변수  
   
-### <a name="-file-string"></a>-파일이 \<문자열 >  
+### <a name="-file-string"></a>-File \<string>  
  복원하는 백업 파일의 이름을 지정합니다.  
   
 |||  
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-datasourceid-string"></a>-DataSourceId \<문자열 >  
+### <a name="-datasourceid-string"></a>-DataSourceId \<string>  
   
 |||  
 |-|-|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-connectionstring-string"></a>-ConnectionString \<문자열 >  
+### <a name="-connectionstring-string"></a>-ConnectionString \<string>  
  원격 Analysis Services 인스턴스의 연결 문자열을 지정합니다.  
   
 |||  
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<. RestoreDataSourceType >  
+### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<AS.RestoreDataSourceType>  
  파티션의 위치를 기준으로 데이터 원본이 원격인지 로컬인지 여부를 지정합니다.  
   
 |||  
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-folders-asrestorefolder"></a>-폴더 \<. RestoreFolder >  
+### <a name="-folders-asrestorefolder"></a>-Folders \<AS.RestoreFolder>  
  로컬 또는 원격 인스턴스의 파티션 폴더를 지정합니다.  
   
 |||  
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-server-string"></a>-서버 \<문자열 >  
+### <a name="-server-string"></a>-Server \<string>  
  cmdlet이 연결하고 실행할 Analysis Services 인스턴스를 지정합니다. 서버 이름을 제공하지 않으면 localhost에 연결됩니다. 기본 인스턴스의 경우에는 서버 이름만 지정합니다. 명명된 인스턴스의 경우에는 servername\instancename 형식을 사용합니다. HTTP 연결의 경우 http[s]://server[:port]/virtualdirectory/msmdpump.dll 형식을 사용합니다.  
   
 |||  

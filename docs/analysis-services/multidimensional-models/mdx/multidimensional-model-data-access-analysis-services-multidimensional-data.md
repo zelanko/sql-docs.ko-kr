@@ -22,19 +22,20 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>다차원 모델 데이터 액세스(Analysis Services - 다차원 데이터)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목의 정보를 사용 하 여 액세스 하는 방법을 알아보려면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 프로그래밍 방식이, 스크립트 또는 연결에 대 한 기본 제공 지원을 포함 하는 클라이언트 응용 프로그램을 사용 하 여 다차원 데이터는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 네트워크 상의 서버에 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+이 항목에서는 네트워크의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 대한 연결을 기본적으로 지원하는 클라이언트 응용 프로그램, 프로그래밍 방법 또는 스크립트를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다차원 데이터에 액세스하는 방법에 대해 설명합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  다음 Microsoft 응용 프로그램은 다차원 데이터에 대한 네이티브 연결을 지원합니다.  
   
-### <a name="excel"></a>내보내기  
+### <a name="excel"></a>Excel  
  Analysis Services 다차원 데이터는 대개 Excel 통합 문서의 피벗 테이블 및 피벗 차트 컨트롤을 사용하여 표시됩니다. 피벗 테이블이 다차원 데이터에 적합한 이유는 모델의 계층, 집계 및 탐색 구성이 피벗 테이블의 데이터 요약 기능과 잘 맞기 때문입니다. Analysis Services OLE DB 데이터 공급자는 데이터 연결을 쉽게 설정할 수 있도록 Excel 설치에 포함되어 있습니다. 자세한 내용은 [SQL Server Analysis Services에 연결 또는 데이터 가져오기](http://go.microsoft.com/fwlink/?linkID=215150)를 참조하십시오.  
   
 ### <a name="reporting-services-reports"></a>Reporting Services 보고서  
@@ -75,11 +76,11 @@ ms.lasthandoff: 01/08/2018
   
  [MDX를 사용하여 다차원 데이터 쿼리](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [MDX &#40;의 주요 개념 Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [MDX 스크립팅 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 스크립팅 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> 프로그래밍 방식 인터페이스  
  다차원 데이터를 사용하는 사용자 지정 응용 프로그램을 작성하는 경우 다음과 같은 방법 중 하나로 데이터에 액세스합니다.  

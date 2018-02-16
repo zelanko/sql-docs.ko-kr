@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services 데이터베이스 동기화
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 두 있도록 데이터베이스 동기화 기능이 포함 되어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 대상 서버에서 데이터베이스에 있는 데이터와 메타 데이터는 원본 서버에서 데이터베이스를 복사 하 여 동일 합니다. 데이터베이스 동기화 기능을 사용하여 다음 작업을 수행할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 원본 서버의 데이터베이스에 있는 데이터와 메타데이터를 대상 서버의 데이터베이스로 복사하여 두 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 동일하게 만드는 데이터베이스 동기화 기능이 포함되어 있습니다. 데이터베이스 동기화 기능을 사용하여 다음 작업을 수행할 수 있습니다.  
   
 -   준비 서버에서 프로덕션 서버로 데이터베이스를 배포합니다.  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  이전 버전의 Analysis Services용으로 작성된 다음 백서는 SQL Server 2012를 사용하여 구축된 확장 가능한 다차원 솔루션에도 적용됩니다. 자세한 내용은 [Analysis Services의 쿼리 확장](http://go.microsoft.com/fwlink/?LinkId=253136) 및 [읽기 전용 데이터베이스로 Analysis Services의 쿼리 확장](http://go.microsoft.com/fwlink/?LinkId=253137.)을 참조하세요.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  데이터베이스 동기화를 시작하는 대상 서버에서 Analysis Services 서버 관리자 역할의 멤버여야 합니다. 원본 서버에서 Windows 사용자 계정에 원본 데이터베이스에 대한 모든 권한이 있어야 합니다. 데이터베이스를 대화형으로 동기화하는 경우 동기화가 Windows 사용자 ID의 보안 컨텍스트에서 실행됩니다. 특정 개체에 대한 계정의 액세스가 거부되는 경우 해당 개체가 작업에서 제외됩니다. 서버 관리자 역할 및 데이터베이스 권한에 대한 자세한 내용은 [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 및 [데이터베이스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)를 참조하세요.  
   
  TCP 포트 2383이 기본 인스턴스 간의 원격 연결을 허용하기 위해 두 서버에서 열려 있어야 합니다. Windows 방화벽에서 예외를 만드는 방법은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하십시오.  
@@ -189,12 +190,12 @@ ms.lasthandoff: 01/08/2018
   
 8.  **마침** 을 클릭하여 동기화를 시작합니다. **마법사 완료** 페이지의 옵션을 확인하고 **마침** 을 다시 클릭합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
  역할 또는 멤버 자격을 동기화하지 않은 경우 지금 대상 데이터베이스에 대한 사용자 액세스 권한을 지정해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [Synchronize 요소&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [XMLA를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [배포 마법사를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [XMLA를 사용 하 여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
+ [배포 마법사를 사용 하 여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

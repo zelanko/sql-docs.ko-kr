@@ -11,9 +11,12 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Analysis Services Scripting Language Reference
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-applies_to: SQL Server 2016 Preview
+apiname:
+- Analysis Services Scripting Language Reference
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, reference
 - scripting languages [Analysis Services]
@@ -23,19 +26,20 @@ helpviewer_keywords:
 - scripts [Analysis Services Scripting Language]
 - object definition language [Analysis Services Scripting Language]
 ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 00661a3edba892563837af0c20f5015aa9d259dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-assl-for-xmla"></a>Analysis Services Scripting Language (ASSL xmla)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]응용 프로그램 통신할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML 명령 및 개체 설명을 사용 합니다. ASSL(Analysis Services Scripting Language)은 이 XML 언어의 개체 정의 언어 부분을 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+응용 프로그램 통신할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML 명령 및 개체 설명을 사용 합니다. ASSL(Analysis Services Scripting Language)은 이 XML 언어의 개체 정의 언어 부분을 나타냅니다.  
   
  이 참조 섹션에서는 ASSL 스키마에 있는 각 요소의 구문 및 사용법을 다룹니다.  
   
@@ -52,6 +56,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [스크립팅 언어 &#40; Analysis Services를 사용 하 여 개발 ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [분석 관리 개체 &#40;를 사용 하 여 개발 AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   

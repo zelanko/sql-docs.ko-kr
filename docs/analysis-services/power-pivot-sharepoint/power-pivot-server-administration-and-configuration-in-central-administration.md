@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e4e6be04453ddacfedfefbae3aaa070614349e7a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>중앙 관리에서 파워 피벗 서버 관리 및 구성
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 관리 및 구성은 SharePoint 서비스 응용 프로그램 관리자, SharePoint 중앙 관리를 사용 하 여 수행 됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 관리 및 구성을 수행합니다.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 먼저 구성해야 사용할 수 있습니다. SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 SQL Server 설치 프로그램을 사용하여 설치한 후 다음 중 원하는 방식으로 구성할 수 있습니다.  
   
@@ -55,10 +56,10 @@ ms.lasthandoff: 01/08/2018
   
 |링크|형식|태스크 설명|  
 |----------|----------|----------------------|  
-|[SharePoint에 PowerPivot 솔루션 배포](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|필수|이 단계에서는 팜 및 사이트 모음에 프로그램 파일과 응용 프로그램 페이지를 추가하는 솔루션 파일을 설치합니다.|  
-|[중앙 관리에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|필수|이 단계에서는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 시스템 서비스를 프로비전합니다.|  
-|[중앙 관리에서 사이트 모음에 대해 파워 피벗 기능 통합 활성화](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|필수|이 단계에서는 사이트 모음 수준에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 기능을 설정합니다.|  
-|[MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|필수|이 단계에서는 Analysis Services OLE DB 공급자를 Excel 서비스에 신뢰할 수 있는 공급자로 추가합니다.|  
+|[SharePoint에 PowerPivot 솔루션 배포](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|필수임|이 단계에서는 팜 및 사이트 모음에 프로그램 파일과 응용 프로그램 페이지를 추가하는 솔루션 파일을 설치합니다.|  
+|[중앙 관리에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|필수임|이 단계에서는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 시스템 서비스를 프로비전합니다.|  
+|[중앙 관리에서 사이트 모음에 대해 파워 피벗 기능 통합 활성화](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|필수임|이 단계에서는 사이트 모음 수준에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 기능을 설정합니다.|  
+|[MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|필수임|이 단계에서는 Analysis Services OLE DB 공급자를 Excel 서비스에 신뢰할 수 있는 공급자로 추가합니다.|  
 |[SharePoint 2010에서 파워 피벗 데이터 새로 고침](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|권장|데이터 새로 고침은 선택 사항이지만 사용하는 것이 좋습니다. 게시한 Excel 통합 문서 내의 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터에 대한 무인 업데이트를 예약할 수 있습니다.|  
 |[Power Pivot 무인 데이터 새로 고침 계정 구성(SharePoint용 Power Pivot)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)|권장|이 단계에서는 서버에서 데이터 새로 고침 작업을 실행하는 데 사용할 수 있는 특수 용도 계정을 프로비전합니다.|  
 |[사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|선택 사항|사용 데이터 컬렉션은 기본적으로 구성되어 있습니다. 이 단계를 사용하여 기본 설정을 수정할 수 있습니다.|  

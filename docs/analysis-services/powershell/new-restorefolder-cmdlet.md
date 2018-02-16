@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5938b3a9-6412-45fc-86f8-264651d01598
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 20e512bbc1ac3ba7c2a6b6604032c047f83d10cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorefolder-cmdlet"></a>New-RestoreFolder cmdlet
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]새 폴더에 원래 폴더를 복원 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+원래 폴더를 새 폴더에 복원합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="parameters"></a>매개 변수  
   
-### <a name="-originalfolder-string"></a>-OriginalFolder \<문자열 >  
+### <a name="-originalfolder-string"></a>-OriginalFolder \<string>  
  원래 폴더 위치를 가져옵니다.  
   
 |||  
@@ -52,13 +53,13 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|true|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-newfolder-string"></a>-NewFolder \<문자열 >  
+### <a name="-newfolder-string"></a>-NewFolder \<string>  
  새 폴더 위치를 설정합니다.  
   
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1|  
+|위치|1.|  
 |기본값||  
 |파이프라인 입력 허용|true|  
 |와일드카드 문자 허용|false|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-server-string"></a>-서버 \<문자열 >  
+### <a name="-server-string"></a>-Server \<string>  
  cmdlet이 연결하고 실행할 Analysis Services 인스턴스를 지정합니다. 서버 이름을 제공하지 않으면 localhost에 연결됩니다. 기본 인스턴스의 경우에는 서버 이름만 지정합니다. 명명된 인스턴스의 경우에는 servername\instancename 형식을 사용합니다. HTTP 연결의 경우 http[s]://server[:port]/virtualdirectory/msmdpump.dll 형식을 사용합니다.  
   
 |||  

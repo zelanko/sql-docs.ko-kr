@@ -22,10 +22,10 @@ ms.author: jroth
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 16d6413cd47dc4775342e3cfb9adde33c0124cc5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-user-defined-aggregates"></a>사용자 정의 집계 만들기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

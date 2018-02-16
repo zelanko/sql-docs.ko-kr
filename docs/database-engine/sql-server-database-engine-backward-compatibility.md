@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-engine
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - deprecation [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 86369f3a423be60c73ed2024e1490e7de9c97c30
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>SQL Server 데이터베이스 엔진의 이전 버전과의 호환성
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] 이전 버전과의 호환성 섹션 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전 간의 동작 변경 내용에 대해 설명합니다.  
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+이전 버전과의 호환성 섹션 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전 간의 동작 변경 내용에 대해 설명합니다.  
   
 |항목|Description|  
 |-----------|-----------------|  

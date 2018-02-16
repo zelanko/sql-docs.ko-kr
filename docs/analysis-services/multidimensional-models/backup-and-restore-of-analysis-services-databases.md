@@ -23,19 +23,20 @@ helpviewer_keywords:
 - restoring databases [Analysis Services]
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services 데이터베이스 백업 및 복원
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하면 복구할 수 있도록 데이터베이스 및 해당 개체를 특정 지정에서 시간에서 백업 및 복원이 포함 되어 있습니다. 백업 및 복원은 데이터베이스를 업그레이드한 서버에 마이그레이션하거나 서버 간에 데이터베이스를 이동하거나 데이터베이스를 프로덕션 서버에 배포하는 데 사용할 수 있는 기술이기도 합니다. 중요한 데이터에 대한 백업 계획이 없는 경우 데이터 복구를 위해 가능한 한 빨리 계획을 수립하고 구현해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터베이스와 해당 개체를 특정 시점에서 복구할 수 있도록 백업 및 복원이 포함되어 있습니다. 백업 및 복원은 데이터베이스를 업그레이드한 서버에 마이그레이션하거나 서버 간에 데이터베이스를 이동하거나 데이터베이스를 프로덕션 서버에 배포하는 데 사용할 수 있는 기술이기도 합니다. 중요한 데이터에 대한 백업 계획이 없는 경우 데이터 복구를 위해 가능한 한 빨리 계획을 수립하고 구현해야 합니다.  
   
  백업 및 복원 명령은 배포된 Analysis Services 데이터베이스에서 수행됩니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 프로젝트 및 솔루션에 대해 원본 제어를 사용하여 특정 버전의 원본 파일을 복구한 다음 사용하고 있는 원본 제어 시스템의 리포지토리에 대한 데이터 복구 계획을 만들어야 합니다.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
  관리자는 데이터베이스의 크기에 관계없이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 단일 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일(.abf)로 백업할 수 있습니다. 단계별 지침은 [Analysis Services 데이터베이스 복원 방법(TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 및 [Analysis Services 데이터베이스 백업 자동화(TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)를 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 로드 하 고 쿼리에 사용 되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 환경에서 데이터 모델에는 SharePoint 콘텐츠 데이터베이스에서 해당 모델을 로드 합니다. 이러한 콘텐츠 데이터베이스는 관계형이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스 엔진에서 실행됩니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 백업 및 복원 전략이 없습니다. SharePoint 콘텐츠에 대한 재해 복구 계획이 있는 경우 해당 계획은 콘텐츠 데이터베이스에 저장된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델을 포함합니다.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]데이터 모델을 로드하고 쿼리하는 데 사용하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서는 SharePoint 콘텐츠 데이터베이스에서 해당 모델을 로드합니다. 이러한 콘텐츠 데이터베이스는 관계형이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스 엔진에서 실행됩니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 백업 및 복원 전략이 없습니다. SharePoint 콘텐츠에 대한 재해 복구 계획이 있는 경우 해당 계획은 콘텐츠 데이터베이스에 저장된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델을 포함합니다.  
   
  **원격 파티션**  
   

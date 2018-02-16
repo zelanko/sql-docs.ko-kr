@@ -11,30 +11,32 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 1ba225f5-3867-4aae-a519-e3c277688d1e
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5507e746f2f87abe2c4a08b5bda47a2eab5f61b5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="member-element-csdlbi"></a>Member 요소(CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]멤버 요소는 다른 요소에 대해 기준 역할을 하는 복합 유형입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+멤버 요소는 다른 요소에 대해 기준 역할을 하는 복합 유형입니다.  
   
  이 요소의 특성은 열, 측정값, 탐색 속성, 계층 및 수준에 나타날 수 있습니다.  
   
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표에 멤버 요소를 정의하는 특성과 해당 요소가 나와 있습니다.  
   
-|속성|필수 여부|Description|  
+|이름|필수 여부|설명|  
 |----------|-----------------|-----------------|  
-|속성||TMember 유형을 구현하여 정의되는 멤버(열, 측정값, 탐색 속성, 계층 또는 수준)에 지정된 이름입니다.|  
+|이름||TMember 유형을 구현하여 정의되는 멤버(열, 측정값, 탐색 속성, 계층 또는 수준)에 지정된 이름입니다.|  
 |Caption|예|멤버의 표시 이름입니다.|  
 |ContextualNameRule|예|멤버를 구분하는 데 사용되는 명명 형식입니다. 이 특성의 내용은 ContextualNameRule 단순 유형에 따라 정의됩니다.|  
 |숨김||멤버를 클라이언트에게 숨길지 여부를 나타내는 부울 값입니다.<br /><br /> 기본값은 클라이언트에서 열을 볼 수 있음을 의미하는 false입니다.|  
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 |값|Description|  
 |-----------|-----------------|  
-|InclusionThresholdSetting|특성 이름을 사용합니다.|  
+|없음|특성 이름을 사용합니다.|  
 |컨텍스트|들어오는 관계 이름을 사용합니다.|  
 |병합|들어오는 관계 이름과 속성 이름을 연결합니다.|  
   

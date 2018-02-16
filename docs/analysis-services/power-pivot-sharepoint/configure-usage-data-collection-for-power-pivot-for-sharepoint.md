@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>사용 현황 데이터 수집 구성(SharePoint용 파워 피벗)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 현황 데이터 수집 팜 수준의 SharePoint 기능입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 이 시스템을 사용하고 확장하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+사용 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 이 시스템을 사용하고 확장하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드의 사용 현황 데이터에 대한 자세한 내용은 [파워 피벗 관리 대시보드 및 사용 현황 데이터](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)를 참조하세요.  
   
@@ -187,7 +188,7 @@ ms.lasthandoff: 01/08/2018
   
 |설정|기본값|형식|유효 범위|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 사용 이벤트** (연결, 로드, 언로드, 요청)|\<설정 >|Boolean|이러한 값이 사용되거나 사용되지 않습니다.|  
+|**Analysis Services 사용 이벤트** (연결, 로드, 언로드, 요청)|\<enabled>|Boolean|이러한 값이 사용되거나 사용되지 않습니다.|  
 |**Query Reporting interval**|300(초)|정수|1부터 임의의 양의 정수입니다. 기본값은 5분입니다.|  
 |**Usage data history**|365(일)|정수|0은 제한이 없음을 지정하지만 기록 데이터를 만료할 상한을 설정하고 이 데이터가 자동으로 삭제되도록 할 수도 있습니다. 제한된 보존 기간에 유효한 값은 1 ~ 5000(일)입니다.|  
 |간단한 응답 상한값|500(밀리초)|정수|간단한 요청-응답 교환을 정의하는 상한을 설정합니다. 0밀리초에서 500밀리초 사이에 완료되는 모든 요청은 간단한 요청으로, 보고에서 무시됩니다.|  

@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services는 다양 한 유형의 Analysis Services 모델에서 사용 하는 메모리 아키텍처 및 런타임 환경을 결정 하는 서버 배포 모드에서 작동 합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로 설치 된 Analysis Services의 인스턴스를 참조 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint에 로드 하 고 Excel 쿼리 사용 또는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서 데이터 모델입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용되는 메모리 아키텍처 및 런타임 환경을 결정하는 서버 배포 모드에서 작동합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로 설치 된 Analysis Services의 인스턴스를 참조 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint에 로드 하 고 Excel 쿼리 사용 또는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서 데이터 모델입니다.  
   
  이 항목에서는 다차원 및 데이터 마이닝 모드에서 작업할 때의 기본 Analysis Services 아키텍처에 대해 설명합니다. 다른 모드에 대 한 자세한 내용은 참조 하세요. [테이블 형식 모델링 &#40; Ssas&#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) 및 [테이블 형식 및 다차원 솔루션 &#40; 비교 Ssas&#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/08/2018
   
  큐브 주위의 더 작은 영숫자 값이 차원의 멤버입니다. 예제 멤버는 ground(Route 차원의 멤버), Africa(Source 차원의 멤버) 및 1st quarter(Time 차원의 멤버)입니다.  
   
-### <a name="measures"></a>측정값 그룹  
+### <a name="measures"></a>큐브 구조  
  큐브 셀 내의 값은 Packages와 Last라는 두 가지 측정값을 나타냅니다. Packages 측정값은 수입한 패키지 수를 나타내며 및 **Sum** 함수 팩트 집계에 사용 됩니다. Last 측정값은 수령한 날짜를 나타내는 및 **최대** 함수 팩트 집계에 사용 됩니다.  
   
 ### <a name="dimensions"></a>차원  
@@ -117,12 +119,12 @@ ms.lasthandoff: 01/08/2018
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|패키지|마지막|  
-|3516987|1|6|1|15|1 월-10-99|  
-|3554790|1|6|1|40|1 월-19-99|  
-|3572673|1|6|1|34|Jan-27-99|  
-|3600974|1|6|1|45|Feb-02-99|  
-|3645541|1|6|1|20|Feb-09-99|  
-|3674906|1|6|1|36|Feb-17-99|  
+|3516987|1.|6|1.|15|1 월-10-99|  
+|3554790|1.|6|1.|40|1 월-19-99|  
+|3572673|1.|6|1.|34|Jan-27-99|  
+|3600974|1.|6|1.|45|Feb-02-99|  
+|3645541|1.|6|1.|20|Feb-09-99|  
+|3674906|1.|6|1.|36|Feb-17-99|  
   
  이전 테이블의 각 행에 동일한 값에 대 한는 **RouteKey**, **SourceKey**, 및 **TimeKey** 이러한 행은 동일한 큐브 셀을 발생할 수 있음을 나타내는 열입니다.  
   

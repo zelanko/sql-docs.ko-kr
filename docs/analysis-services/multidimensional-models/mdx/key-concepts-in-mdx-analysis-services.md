@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], dimensional modeling
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX의 주요 개념(Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) 사용 하 여 다차원 데이터를 쿼리하거나 큐브 내에서 MDX 식을 만들 수 있습니다, 전에 다차원의 개념과 용어를 이해 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+MDX(Multidimensional Expressions)를 사용하여 다차원 데이터를 쿼리하거나 큐브 내에 MDX 식을 만들기 전에 다차원의 개념과 용어를 이해하는 것이 도움이 됩니다.  
   
  이미 알고 있는 데이터 요약 예제를 사용하여 시작한 다음 MDX가 어떻게 관련되는지 확인하는 것이 좋습니다. 여기에 Excel에서 생성되고 Analysis Services 샘플 큐브의 데이터로 채워진 피벗 테이블이 있습니다.  
   
@@ -141,24 +142,24 @@ ms.lasthandoff: 01/08/2018
   
  **데이터베이스 차원 및 큐브 차원**. 모델 내에서 같은 모델에 있는 임의 개수의 큐브에 포함되는 독립 실행형 차원을 정의할 수 있습니다. 큐브에 차원을 추가하면 이를 큐브 차원이라 부릅니다. 개체 탐색기의 독립 실행 항목으로, 프로젝트 내에서 그 자체로 데이터베이스 차원이라 부릅니다. 이렇게 구분하는 이유는 무엇일까요? 독립적으로 속성을 설정할 수 있기 때문입니다. 이 두 용어는 제품 설명서에서 사용되고 있으므로 그 의미를 이해하는 것이 중요합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
  이제 중요한 개념과 용어에 대해 살펴봤으므로 Analysis Services의 기본 개념을 더 자세히 설명하는 다음과 같은 추가 항목을 진행할 수 있습니다.  
   
--   [기본 MDX 쿼리&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
+-   [기본 MDX 쿼리 &#40; Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
   
--   [기본 MDX 스크립트&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+-   [기본 MDX 스크립트 &#40; Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
--   [다차원 모델링&#40;Adventure Works 자습서&#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+-   [다차원 모델링 &#40; Adventure Works 자습서 &#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [큐브 공간](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [튜플](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Autoexist](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [멤버, 튜플 및 집합 작업&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [멤버, 튜플 및 집합 &#40; 사용 Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [보이는 값 합계 및 보이지 않는 값 합계](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
  [MDX 쿼리 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 스크립팅 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [MDX 언어 참조&#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [MDX&#40;Multidimensional Expression&#41; 참조](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [MDX 언어 참조 &#40; Mdx&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [다차원 식 &#40; Mdx&#41; 참조](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>만들기 및 CA에 파워 피벗 서비스 응용 프로그램 구성
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은의 공유 서비스 인스턴스는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스입니다. 각 서비스 응용 프로그램은 고유한 응용 프로그램 ID, 구성 설정, 속성 및 내부 데이터 저장소를 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스의 공유 서비스 인스턴스입니다. 각 서비스 응용 프로그램은 고유한 응용 프로그램 ID, 구성 설정, 속성 및 내부 데이터 저장소를 포함합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   

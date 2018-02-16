@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7078a7733c7764b77667628071c66c8313aae85a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remove-powerpivotserviceapplication-cmdlet"></a>Remove-PowerPivotServiceApplication cmdlet
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]삭제 한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 삭제합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.
@@ -44,7 +45,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
   
 ## <a name="parameters"></a>매개 변수  
   
-### <a name="-identity-spgeminiserviceapplicationpipebind"></a>Id \<SPGeminiServiceApplicationPipeBind >  
+### <a name="-identity-spgeminiserviceapplicationpipebind"></a>-Identity \<SPGeminiServiceApplicationPipeBind>  
  팜에 있는 단일 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램의 GUID를 지정합니다. 응용 프로그램을 하나만 제거하고 다른 서비스 응용 프로그램은 그대로 두려면 GUID를 지정해야 합니다.  
   
 |||  
@@ -66,7 +67,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-deleteall-switch"></a>-DeleteAll \<전환 >  
+### <a name="-deleteall-switch"></a>-DeleteAll \<switch>  
  모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 삭제하지만 서비스 응용 프로그램 데이터베이스와 팜의 서비스 인스턴스 개체는 삭제하지 않습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 엔진 서비스 개체는 인스턴스화된 상태로 유지되지만 사용할 수는 없습니다.  
   
 |||  
@@ -77,7 +78,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-removedata-switch"></a>-RemoveData \<전환 >  
+### <a name="-removedata-switch"></a>-RemoveData \<switch>  
  데이터 새로 고침 일정, 통합 문서 사용 데이터, 로드된 데이터를 추적하는 데 사용되는 인스턴스 맵 및 기타 내부 데이터가 포함된 서비스 응용 프로그램 데이터베이스를 제거합니다.  
   
 |||  
@@ -88,7 +89,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="commonparameters"></a>\<일반 매개 변수 >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  이 cmdlet은 공통 매개 변수 Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer 및 OutVariable을 지원합니다. 자세한 내용은 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)를 참조하세요.  
   
 ## <a name="inputs-and-outputs"></a>입/출력  
@@ -99,7 +100,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |입력|없음|  
 |출력|없음|  
   
-## <a name="example-1"></a>예 1  
+## <a name="example-1"></a>예제 1  
   
 ```  
 C:\PS>Remove-PowerPivotServiceApplication -identity 12345678-90ab-cdef-ghijklmnop  
@@ -115,7 +116,7 @@ C:\PS>Remove-PowerPivotServiceApplication -DeleteAll
   
  이 예에서는 팜의 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 삭제합니다. 데이터베이스와 캐시는 삭제되지 않습니다.  
   
-## <a name="example-3"></a>예제 3  
+## <a name="example-3"></a>예 3  
   
 ```  
 CC:\PS>Remove-PowerPivotServiceApplication -identity 12345678-90ab-cdef-ghijklmnop -RemoveData  

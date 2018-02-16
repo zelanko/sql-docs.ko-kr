@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: bf4626b3-4d6b-4795-bb01-df335fb9c09a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 42bbe583c494830308c021c1adc385ec48491007
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>DISCOVER_PARTITION_DIMENSION_STAT 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]차원에 파티션과 연결 된 통계를 반환 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+파티션과 연결된 차원에 대한 통계를 반환합니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
@@ -34,10 +36,10 @@ ms.lasthandoff: 01/08/2018
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**A S E _**|**DBTYPE_WSTR**|필수|데이터베이스의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|필수|큐브 또는 테이블 형식 모델의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
-|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|필수|측정값 그룹의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
-|**PARTITION_NAME**|**DBTYPE_WSTR**|필수|파티션의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|필수임|데이터베이스의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|필수임|큐브 또는 테이블 형식 모델의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|필수임|측정값 그룹의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|필수임|파티션의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||차원의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||차원의 특성 이름입니다.|  
 |**ATTRIBUTE_INDEXED**|**DBTYPE_BOOL**||True이면 특성이 인덱싱됨을 나타내고, 그렇지 않으면 false입니다.|  

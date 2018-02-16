@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>디스크 공간 사용 구성(SharePoint용 Power Pivot)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 배포를 사용 하 여 호스트 컴퓨터의 디스크 공간이 캐시 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 더욱 빠르게 다시 로드에 대 한 데이터베이스입니다. 메모리에 로드되는 각 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스는 이후에 새 요청을 처리하기 위해 신속하게 다시 로드될 수 있도록 디스크에 먼저 캐시됩니다. 기본적으로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서는 사용 가능한 모든 디스크 공간을 사용하여 해당 데이터베이스를 캐시하지만 사용되는 디스크 공간 크기를 제한하는 속성을 설정하여 이 동작을 수정할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서는 더욱 빠르게 다시 로드하기 위해 호스트 컴퓨터의 디스크 공간을 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스를 캐시합니다. 메모리에 로드되는 각 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스는 이후에 새 요청을 처리하기 위해 신속하게 다시 로드될 수 있도록 디스크에 먼저 캐시됩니다. 기본적으로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서는 사용 가능한 모든 디스크 공간을 사용하여 해당 데이터베이스를 캐시하지만 사용되는 디스크 공간 크기를 제한하는 속성을 설정하여 이 동작을 수정할 수 있습니다.  
   
  이 항목에서는 디스크 공간 사용량에 대한 제한을 설정하는 방법에 대해 설명합니다.  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  **확인** 을 클릭하여 변경 내용을 저장합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치에서는 서버 상태, 구성 또는 가용성에서 문제가 발견되면 수정 동작을 수행할 수 있도록 상태 규칙을 제공합니다. 이러한 규칙 중 일부는 구성 설정을 사용하여 상태 규칙이 트리거되는 조건을 확인합니다. 서버 성능을 적극적으로 조정하는 경우 이러한 설정을 검토하여 시스템에 가장 적절한 기본값이 선택되었는지 확인할 수도 있습니다. 자세한 내용은 [파워 피벗 상태 규칙 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  

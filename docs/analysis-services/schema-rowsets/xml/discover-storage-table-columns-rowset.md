@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a0fec3423b126a425206441543fd50679712c2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SharePoint 또는 테이블 형식 모드에서 실행 되는 Analysis Services 데이터베이스에서 사용 되는 저장소 테이블에 대 한 열 수준에서 정보를 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SharePoint 또는 테이블 형식 모드로 실행되는 Analysis Services 데이터베이스에서 사용하는 저장소 테이블에 대한 열 수준 정보를 제공합니다.  
   
  **다음에 적용:** 테이블 형식 모델  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 |**열 이름**|**유형 표시기**|**제한**|**설명**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|**A S E _**|**DBTYPE_WSTR**|예|테이블이 포함된 데이터베이스 이름을 지정합니다. 생략하는 경우 현재 데이터베이스가 사용됩니다.<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMNS** 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|예|테이블이 포함된 데이터베이스 이름을 지정합니다. 생략하는 경우 현재 데이터베이스가 사용됩니다.<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMNS** 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|예|테이블이 포함된 큐브 또는 모델을 지정합니다.<br /><br /> 이 열을 사용하여 **DISCOVER_STORAGE_TABLES** 행 집합을 제한할 수 있습니다.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|예|측정값 그룹의 이름입니다.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||차원의 이름입니다.|  
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 |**COLUMN_ID**|**DBTYPE_ WSTR**||열의 ID입니다. 열 ID는 xVelocity 메모리 내 분석 엔진(VertiPaq) 내부용이며 정보 제공을 위해서만 사용됩니다.|  
 |**COLUMN_TYPE**|**DBTYPE_WSTR**||열의 유형입니다. 열 유형은 xVelocity 메모리 내 분석 엔진(VertiPaq) 내부용이며 정보 제공을 위해서만 사용됩니다.<br /><br /> BASIC_DATA와 함께 사용됨<br /><br /> HIERARCHY_DATAID_TO_POSITION<br /><br /> HIERARCHY_POSITION_TO_DATAID<br /><br /> RELATIONSHIP|  
 |**COLUMN_ENCODING**|**DBTYPE_UI8**||열 데이터에 사용된 인코딩 유형을 나타내는 정수입니다.<br /><br /> **0**와 함께 사용 **COLUMN_TYPE**: HIERARCHY_DATAID_TO_POSITION, HIERARCHY_POSITION_TO_DATAID, 관계<br /><br /> **1**와 함께 사용 **COLUMN_TYPE**: BASIC_DATA<br /><br /> **2**와 함께 사용 **COLUMN_TYPE**: BASIC_DATA|  
-|**데이터 형식**|**DBTYPE_WSTR**||열의 데이터 형식입니다. 가능한 값은 다음과 같습니다.<br /><br /> DBTYPE_BOOL<br /><br /> DBTYPE_CY<br /><br /> DBTYPE_DATE<br /><br /> DBTYPE_I4<br /><br /> DBTYPE_I8<br /><br /> DBTYPE_R8<br /><br /> DBTYPE_WSTR<br /><br /> 해당 사항 없음|  
+|**DATATYPE**|**DBTYPE_WSTR**||열의 데이터 형식입니다. 가능한 값은 다음과 같습니다.<br /><br /> DBTYPE_BOOL<br /><br /> DBTYPE_CY<br /><br /> DBTYPE_DATE<br /><br /> DBTYPE_I4<br /><br /> DBTYPE_I8<br /><br /> DBTYPE_R8<br /><br /> DBTYPE_WSTR<br /><br /> 해당 사항 없음|  
 |**ISKEY**|**DBTYPE_BOOL**||**True 이면** 열이 고, 그렇지 않으면 기본 또는 외래 키로 사용 되는 경우 **false**합니다.|  
 |**ISUNIQUE**|**DBTYPE_BOOL**||**True 이면** 열에 값이 고, 그렇지 않으면 고유 **false**합니다.|  
 |**ISNULLABLE**|**DBTYPE_BOOL**||**True 이면** 열이 고, 그렇지 않으면 null을 허용 하는 경우 **false**합니다.|  

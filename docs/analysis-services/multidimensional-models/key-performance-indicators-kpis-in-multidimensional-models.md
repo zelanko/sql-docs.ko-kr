@@ -21,19 +21,20 @@ helpviewer_keywords:
 - parent KPIs [Analysis Services]
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>다차원 모델의 KPI(핵심 성과 지표)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]비즈니스 용어는 KPI 핵심 성과 지표 ()는 비즈니스 성취도 평가 하기 위한 정량 측정값을 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 성취도를 평가하기 위한 정량 측정값을 나타냅니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 KPI는 큐브의 비즈니스 성취도 평가에 사용되는 큐브의 측정값 그룹과 관련된 계산의 모음입니다. 일반적으로 이러한 계산은 MDX(Multidimensional Expression) 식 또는 계산 멤버의 조합입니다. 또한 KPI에는 클라이언트 응용 프로그램의 KPI 계산 결과 표시 방법에 대한 정보를 제공하는 추가적인 메타데이터가 포함됩니다.  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
 |용어|정의|  
 |----------|----------------|  
 |목표|KPI의 목표 값을 반환하는 MDX 숫자 식 또는 계산입니다.|  
-|값|KPI의 실제 값을 반환하는 MDX 숫자 식입니다.|  
+|Value|KPI의 실제 값을 반환하는 MDX 숫자 식입니다.|  
 |상태|지정된 기간의 KPI 상태를 나타내는 MDX 식입니다.<br /><br /> 상태 MDX 식은 -1과 1 사이의 정규화된 값을 반환해야 합니다. 값이 -1 이하이면 "불량"이나 "낮음"으로 해석됩니다. 값 영(0)은 "허용됨"이나 "보통"으로 해석됩니다. 1 이상의 값은 "양호"나 "높음"으로 해석됩니다.<br /><br /> 중간 값을 제한 없이 선택적으로 반환할 수 있으며 클라이언트 응용 프로그램에서 지원하는 경우 이러한 값을 사용하여 추가 상태를 원하는 만큼 표시할 수 있습니다.|  
 |추세|시간에 따라 KPI 값을 평가하는 MDX 식입니다. 추세는 특정 비즈니스 컨텍스트에서 유용한 시간 기반 조건입니다.<br /><br /> 추세 MDX 식을 사용하여 비즈니스 사용자는 KPI가 시간에 따라 향상되는지 또는 저하되는지 여부를 확인할 수 있습니다.|  
 |상태 표시|KPI의 상태를 빠르게 보여 주는 시각적 요소입니다. 요소 표시 방법은 상태를 평가하는 MDX 식의 값에 의해 결정됩니다.|  

@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - rowsets [Analysis Services], XML for Analysis
 - XML for Analysis, schema rowsets
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 공급자 서버 상태, 작업 및 개체에 대 한 메타 데이터를 반환 하는 스키마 행 집합을 포함 합니다. 구조와 특성이 가변적인 Analysis Services 모델에 연결하는 클라이언트 응용 프로그램을 개발하려는 경우 메타데이터 검색이 필요합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자는 서버 상태, 작업 및 개체에 대한 메타데이터를 반환하는 스키마 행 집합을 포함합니다. 구조와 특성이 가변적인 Analysis Services 모델에 연결하는 클라이언트 응용 프로그램을 개발하려는 경우 메타데이터 검색이 필요합니다.  
   
  스키마 행 집합은 서버를 모니터링하고 문제를 해결하는 데 도움이 되는 내부 프로세스 및 작업에 대한 정보를 제공합니다. 임시 관리 태스크를 더욱 잘 지원하기 위해 대부분의 스키마 행 집합에 대해 DMV(동적 관리 뷰) 쿼리를 실행할 수 있습니다. DMV 쿼리는 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서 볼 수 있는 읽기 가능한 테이블 형식으로 결과를 반환됩니다.  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|행 집합<sup>1</sup>|Description|  
+|Rowset<sup>1</sup>|Description|  
 |------------------------|-----------------|  
 |[DISCOVER_CALC_DEPENDENCY 행 집합](../../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|테이블, 열, 측정값 및 계산된 열 수식 간의 종속성 정보를 반환합니다.<br /><br /> Analysis Services 인스턴스에 배포 된 테이블 형식 모델에 적용 됩니다 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 환경에서 실행 되는 Excel 통합 문서에서 모델입니다.|  
 |[DISCOVER_CONNECTIONS 행 집합](../../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|서버에서 현재 열린 연결에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  

@@ -18,19 +18,20 @@ helpviewer_keywords:
 - projects [Analysis Services]
 - solutions [Analysis Services]
 ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: e841871a7be5dd1d787854bc5fbedc86eed264f4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)를 사용하여 다차원 모델 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 빌드, 배포 및 관리에 대 한 두 가지 다른 환경을 제공 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션: [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 이러한 환경은 둘 다 프로젝트 시스템을 구현합니다. Visual Studio 프로젝트에 대한 자세한 내용은 MSDN Library의 [프로젝트의 컨테이너 특성(Projects as Containers)](http://go.microsoft.com/fwlink/?LinkId=63960) 을 참조하십시오.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션 작성, 배포 및 관리를 위해 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]라는 두 가지 다른 환경을 제공합니다. 이러한 환경은 둘 다 프로젝트 시스템을 구현합니다. Visual Studio 프로젝트에 대한 자세한 내용은 MSDN Library의 [프로젝트의 컨테이너 특성(Projects as Containers)](http://go.microsoft.com/fwlink/?LinkId=63960) 을 참조하십시오.  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2010을 기반으로 비즈니스 인텔리전스 솔루션을 만들고 수정하는 데 사용되는 개발 환경입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체(큐브, 차원 등)의 정의를 포함하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들 수 있습니다. 이러한 프로젝트는 ASSL( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) 요소를 포함하는 XML 파일에 저장됩니다. 이러한 프로젝트는 다른 프로젝트도 포함할 수 있는 솔루션에 포함 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 등의 구성 요소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 특정 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 무관한 솔루션의 일부로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 개발할 수 있습니다. 개발 중 테스트하기 위해 테스트 서버에 있는 인스턴스로 개체를 배포한 다음 동일한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 사용하여 하나 이상의 준비 서버나 프로덕션 서버에 있는 인스턴스로 개체를 배포할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 포함된 솔루션의 프로젝트와 항목을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe와 같은 원본 코드 제어와 통합할 수 있습니다. 만들기에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용 하 여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 참조 [Analysis Services 프로젝트 &#40; 만들기 SSDT &#41; ](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md). 또한 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 직접 연결하면 프로젝트를 사용하거나 개체 정의를 XML 파일에 저장하지 않고도 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 만들고 수정할 수도 있습니다. 자세한 내용은 [다차원 model 데이터베이스&#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)및 [온라인 모드로 Analysis Services 데이터베이스에 연결](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)라는 두 가지 다른 환경을 제공합니다.  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
--   [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
+-   [Analysis Services 프로젝트를 빌드하려면 &#40; SSDT &#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
   
 -   [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
@@ -88,6 +89,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [SQL Server Management Studio에서 analysis Services 스크립트 프로젝트](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)   
- [다차원 model 데이터베이스&#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [다차원 모델 데이터베이스 &#40; Ssas&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

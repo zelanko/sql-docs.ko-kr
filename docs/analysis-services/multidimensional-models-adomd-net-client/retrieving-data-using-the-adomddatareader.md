@@ -1,7 +1,7 @@
 ---
 title: "AdomdDataReader를 사용 하 여 데이터를 검색 합니다. | Microsoft Docs"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - retrieving data
 - AdomdDataReader object
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66058488afc823095c2868b45d4156d723fb6ae6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3e536803b34715bdfc4beb87de40cda0380a589e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>AdomdDataReader를 사용하여 데이터 검색
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]분석 데이터를 검색할 때의 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 오버 헤드와 상호 작용 간에 적절 한 균형을 제공 합니다. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 분석 데이터 원본에서 정방향 및 읽기 전용의 평면화된 데이터 스트림을 검색합니다. 이 버퍼링되지 않은 데이터 스트림을 사용하면 절차적인 논리에서 분석 데이터 원본의 결과를 순차적으로 처리할 수 있습니다. 따라서 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>는 데이터가 메모리에 캐시되지 않기 때문에 표시를 목적으로 많은 양의 데이터를 검색할 때 유용하게 사용할 수 있습니다.  
+  분석 데이터 검색 시 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 오버헤드와 상호 작용 간에 적절한 균형을 맞춥니다. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 분석 데이터 원본에서 정방향 및 읽기 전용의 평면화된 데이터 스트림을 검색합니다. 이 버퍼링되지 않은 데이터 스트림을 사용하면 절차적인 논리에서 분석 데이터 원본의 결과를 순차적으로 처리할 수 있습니다. 따라서 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>는 데이터가 메모리에 캐시되지 않기 때문에 표시를 목적으로 많은 양의 데이터를 검색할 때 유용하게 사용할 수 있습니다.  
   
  또한 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>는 쿼리의 전체 결과가 반환될 때까지 기다리지 않고 사용 가능한 데이터를 바로 검색하기 때문에 응용 프로그램 성능을 높일 수 있으며, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 도 기본적으로이 판독기에서는 메모리에 한 번에 하나의 행을 저장 하기 때문에 시스템 오버 헤드를 감소 합니다.  
   
@@ -125,6 +126,6 @@ foreach (DataRow objRow in schemaTable.Rows)
 ## <a name="see-also"></a>관련 항목:  
  [분석 데이터 원본에서 데이터 검색](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [셀 집합을 사용 하 여 데이터를 검색 합니다.](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
- [XmlReader를 사용하여 데이터 검색](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
+ [XmlReader를 사용 하 여 데이터를 검색 합니다.](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
   
   

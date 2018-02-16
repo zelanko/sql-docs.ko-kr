@@ -15,19 +15,20 @@ helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>차원 특성 속성 참조
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 차원 및 차원 특성의 작동 방식을 결정 하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 차원 및 차원 특성의 작동 방식을 결정하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 |**EstimatedCount**|특성의 예상 멤버 수를 지정합니다. 집계 디자인 마법사를 실행할 때까지 기본값은 0입니다. 마법사에서 레코드 수를 계산하도록 하거나 예상 값을 직접 입력할 수 있습니다. 멤버 수를 알고 있으며 데이터베이스에 멤버 수를 쿼리하는 시간을 단축하고 싶은 경우 값을 직접 입력합니다. 프로덕션 데이터의 테스트 하위 집합으로 작업하는 경우에는 집계 디자인이 테스트 데이터 대신 프로덕션 데이터에 맞게 최적화될 수 있도록 프로덕션 데이터의 멤버 수를 사용합니다.|  
 |**GroupingBehavior**|특성을 그룹화하는 방법에 대한 힌트를 클라이언트 응용 프로그램에 제공하는 사용자 정의 값입니다.|  
 |**ID**|차원의 고유 ID를 포함합니다.|  
-|**InstanceSelection**|목록의 예상 항목 수를 기반으로 항목 목록의 표시 방법에 대한 힌트를 클라이언트 응용 프로그램에 제공합니다. 다음과 같은 옵션을 사용할 수 있습니다.<br /><br /> **None** 클라이언트 응용 프로그램에 힌트를 제공하지 않습니다. 이것은 기본값입니다.<br /><br /> **DropDown** 항목 수가 드롭다운 목록에 표시할 수 있을 만큼 적습니다.<br /><br /> **List** 항목 수가 드롭다운 **목록**에 표시하기에는 너무 많지만 필터링이 필요한 정도는 아닙니다.<br /><br /> **FilteredList** 항목 수가 많아 표시할 항목을 사용자가 필터링해야 합니다.<br /><br /> **MandatoryFilter** 항목 수가 너무 많아 표시 항목을 항상 필터링해야 합니다.|  
+|**InstanceSelection**|목록의 예상 항목 수를 기반으로 항목 목록의 표시 방법에 대한 힌트를 클라이언트 응용 프로그램에 제공합니다. 다음과 같은 옵션을 사용할 수 있습니다.<br /><br /> **None** 클라이언트 응용 프로그램에 힌트를 제공하지 않습니다. 이 값은 기본값입니다.<br /><br /> **DropDown** 항목 수가 드롭다운 목록에 표시할 수 있을 만큼 적습니다.<br /><br /> **List** 항목 수가 드롭다운 **목록**에 표시하기에는 너무 많지만 필터링이 필요한 정도는 아닙니다.<br /><br /> **FilteredList** 항목 수가 많아 표시할 항목을 사용자가 필터링해야 합니다.<br /><br /> **MandatoryFilter** 항목 수가 너무 많아 표시 항목을 항상 필터링해야 합니다.|  
 |**IsAggregatable**|특성 멤버 값을 집계할 수 있는지 여부를 지정합니다. 기본값은 **True**이며 특성 계층에 (All) 수준이 포함됨을 의미합니다. 이 속성 값이 **False**이면 특성 계층에 (All) 수준이 포함되지 않습니다.|  
 |**KeyColumns**|특성의 키를 나타내는 열을 포함합니다. 이러한 열은 특성이 바인딩된 데이터 원본 뷰의 기본 관계형 테이블에 있는 열을 나타냅니다. **NameColumn** 속성 값을 지정하지 않는 한 각 멤버의 이 열 값이 사용자에게 표시됩니다.|  
 |**MemberNamesUnique**|특성 계층의 멤버 이름이 고유해야 하는지 여부를 결정합니다.|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 |**RootMemberIf**|부모-자식 계층의 루트 또는 최상위 멤버를 식별하는 방법을 결정합니다. 이 속성 값은 **Usage** 속성 값을 Parent로 설정한 경우에만 사용됩니다. 즉, 부모-자식 계층이 정의된 경우입니다. 기본값은 **ParentIsBlankSelfOrMissing**이며 **ParentIsBlank**, **ParentIsSelf**또는 **ParentIsMissing** 에 대해 설명된 조건 중 하나 이상을 만족하는 멤버만 루트 멤버로 처리됨을 의미합니다. 사용할 수 있는 값은 다음과 같습니다.<br /><br /> **ParentIsBlank** 키 열에 Null, 0 또는 빈 문자열이 있는 멤버만 루트 멤버로 처리됩니다.<br /><br /> **ParentIsSelf** 자신이 부모인 멤버만 루트 멤버로 처리됩니다.<br /><br /> **ParentIsMissing** 부모를 찾을 수 없는 멤버만 루트 멤버로 처리됩니다.|  
 |**형식**|특성의 유형을 포함합니다. 자세한 내용은 [특성 유형 구성](../../analysis-services/multidimensional-models/attribute-properties-configure-attribute-types.md)을 참조하세요.|  
 |**UnaryOperatorColumn**|단항 연산자를 제공하는 열을 지정합니다. 단항 연산자를 제공하는 열의 세부 정보를 정의하는 DataItem 유형의 바인딩입니다.|  
-|**Usage**|특성의 사용 방식을 설명합니다.<br /><br /> 다음과 같은 옵션을 사용할 수 있습니다.<br /><br /> **Regular** 특성이 일반 특성입니다. 이것은 기본값입니다.<br /><br /> **Key** 특성이 키 특성입니다.<br /><br /> **Parent** 특성이 부모 특성입니다.|  
+|**Usage**|특성의 사용 방식을 설명합니다.<br /><br /> 다음과 같은 옵션을 사용할 수 있습니다.<br /><br /> **Regular** 특성이 일반 특성입니다. 이 값은 기본값입니다.<br /><br /> **Key** 특성이 키 특성입니다.<br /><br /> **Parent** 특성이 부모 특성입니다.|  
 |**ValueColumn**|특성 값을 제공하는 열을 식별합니다. 특성의 **NameColumn** 요소를 지정한 경우 동일한 **DataItem** 값이 **ValueColumn** 요소의 기본값으로 사용됩니다. 특성의 **NameColumn** 요소를 지정하지 않았으며 특성의 **KeyColumns** 컬렉션에 문자열 데이터 형식의 키 열을 나타내는 단일 **KeyColumn** 요소가 포함되어 있는 경우 동일한 **DataItem** 값이 **ValueColumn** 요소의 기본값으로 사용됩니다.|  
   
 > [!NOTE]  

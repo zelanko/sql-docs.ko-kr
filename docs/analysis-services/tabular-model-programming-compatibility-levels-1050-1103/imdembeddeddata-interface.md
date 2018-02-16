@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData 인터페이스
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]IMDEmbeddedData 인터페이스는 공용 인터페이스는 포함 된 관리 하는 데 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스 또는 테이블 형식 모델 데이터베이스. 이 인터페이스는 **IPersistStream** 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+IMDEmbeddedData 인터페이스는 공용 인터페이스는 포함 된 관리 하는 데 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스 또는 테이블 형식 모델 데이터베이스. 이 인터페이스는 **IPersistStream** 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  
   
 -   컨테이너 문서의 포함된 스트림에 대한 식별자를 가져옵니다.  
   
@@ -88,7 +90,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>설명  
  호스트 응용 프로그램에 사용되는 식별자를 컨테이너 문서의 포함된 스트림에 가져옵니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -96,7 +98,7 @@ HRESULT GetStreamIdentifier (
  스트림 식별자의 위치를 지정합니다.  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  스트림 식별자가 반환되었습니다.  
   
  **S_FALSE**  
@@ -110,7 +112,7 @@ HRESULT GetStreamIdentifier (
   
  DBPROP_MSMD_EMBEDDED_DATA의 가능한 값은 다음과 같습니다.  
   
-|속성|값|정의|  
+|이름|값|정의|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|포함된 데이터베이스를 사용할 수 없습니다.|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|현재 응용 프로그램에 포함된 데이터베이스가 포함되어 있습니다.|  
@@ -132,7 +134,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>설명  
  포함된 스트림을 포함하는 파일의 URL을 설정합니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -140,7 +142,7 @@ HRESULT SetContainerURL (
  포함하는 문서의 URL을 지정합니다.  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  컨테이너 URL을 설정했습니다.  
   
  **E_FAIL**  
@@ -162,7 +164,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>설명  
  포함하는 응용 프로그램이 호스팅된 환경에 있는지 여부를 나타내는 플래그를 설정합니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -170,7 +172,7 @@ HRESULT SetHosted (
  호출자가 서비스 응용 프로그램(예: IIS)의 호스팅된 환경에 있으면 TRUE입니다.  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  플래그를 설정했습니다.  
   
  **E_FAIL**  
@@ -192,7 +194,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>설명  
  포함하는 응용 프로그램에 사용되는 임시 파일에 대한 경로를 설정합니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -200,7 +202,7 @@ HRESULT SetTempDirPath (
  임시 파일에 대한 호스트 응용 프로그램에서 사용하는 경로입니다.  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  임시 파일 디렉터리를 설정했습니다.  
   
  **E_FAIL**  
@@ -220,14 +222,14 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>설명  
  현재 포함된 데이터베이스 작업을 취소합니다.  
   
 #### <a name="parameters"></a>매개 변수  
  없음  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  작업을 취소했습니다.  
   
  **DB_E_CANTCANCEL**  
@@ -251,7 +253,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>설명  
  포함된 개체를 저장하기 위해 스트림의 예상 크기(바이트)를 가져옵니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -259,7 +261,7 @@ HRESULT GetSizeMax (
  포함된 데이터베이스 이미지의 예상 크기(바이트)입니다.  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  크기를 가져왔습니다.  
   
  **E_FAIL**  
@@ -271,14 +273,14 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>설명  
  포함된 데이터베이스가 마지막으로 저장된 후에 변경되었는지 여부를 확인합니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
  none  
   
 #### <a name="return-values"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  데이터베이스가 마지막으로 저장된 후에 변경되었습니다.  
   
  **S_FALSE**  
@@ -295,7 +297,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>설명  
  포함된 데이터베이스를 로컬 또는 in-process 엔진에 로드합니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -303,7 +305,7 @@ HRESULT Load (
  포함된 데이터베이스를 로드할 스트림 인터페이스에 대한 포인터입니다.  
   
 #### <a name="return-values"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  데이터베이스를 로드했습니다.  
   
  **E_OUTOFMEMORY**  
@@ -321,7 +323,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>설명  
  로컬 또는 in-process 데이터베이스를 컨테이너 문서의 포함된 스트림에 저장합니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -332,7 +334,7 @@ HRESULT Save (
  이 작업 후에 변경 플래그를 지워야 하는지 여부를 나타내는 플래그입니다.  
   
 #### <a name="return-values"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  데이터베이스를 저장했습니다.  
   
  **STG_E_CANTSAVE**  

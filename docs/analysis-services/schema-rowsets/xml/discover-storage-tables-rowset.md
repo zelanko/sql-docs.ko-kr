@@ -11,28 +11,30 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>DISCOVER_STORAGE_TABLES 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]클라이언트가 테이블 형식 또는 SharePoint 모드에서 실행 되는 Analysis Services 데이터베이스에 포함 된 테이블을 확인할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+클라이언트가 테이블 형식 또는 SharePoint 모드에서 실행되는 Analysis Services 데이터베이스에 포함된 테이블을 확인할 수 있도록 합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DISCOVER_STORAGE_TABLES** 행 집합에는 다음 열이 포함되어 있습니다.  
   
 |**열 이름**|**유형 표시기**|**길이**|**설명**|  
 |---------------------|------------------------|----------------|---------------------|  
-|**A S E _**|**DBTYPE_WSTR**||테이블이 포함된 데이터베이스 이름을 지정합니다.<br /><br /> 이 열을 사용하여 **DISCOVER_STORAGE_TABLES** 행 집합을 제한할 수 있습니다. 이 열을 사용하여 행 집합을 제한하지 않은 경우 현재 데이터베이스가 사용됩니다.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**||테이블이 포함된 데이터베이스 이름을 지정합니다.<br /><br /> 이 열을 사용하여 **DISCOVER_STORAGE_TABLES** 행 집합을 제한할 수 있습니다. 이 열을 사용하여 행 집합을 제한하지 않은 경우 현재 데이터베이스가 사용됩니다.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**||테이블이 포함된 큐브 또는 모델을 지정합니다.<br /><br /> 이 열을 사용하여 **DISCOVER_STORAGE_TABLES** 행 집합을 제한할 수 있습니다.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**||측정값 그룹의 이름입니다.|  
 |**PARTITION_NAME**|**DBTYPE_WSTR**||파티션의 이름입니다.|  
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 |**열 이름**|**유형 표시기**|**제한 상태**|  
 |---------------------|------------------------|---------------------------|  
-|**A S E _**|**DBTYPE_WSTR**|(선택 사항)|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|(선택 사항)|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|(선택 사항)|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|선택 사항|  
 |**PARTITION_NAME**|**DBTYPE_WSTR**|선택 사항|  

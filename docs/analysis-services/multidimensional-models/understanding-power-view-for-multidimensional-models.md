@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 문서는 SQL Server의 다차원 모델 기능에 대 한 Power View에 설명 하 고 BI 전문가 및 관리자가 조직에서 다차원 모델용 Power View를 구현 하려고 하는 경우에 대 한 중요 한 정보를 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 문서에서는 SQL Server의 다차원 모델용 파워 뷰 기능에 대해 설명하고, 조직에서 다차원 모델용 파워 뷰를 구현하려는 BI 전문가 및 관리자에게 중요한 정보를 제공합니다.  
   
  다차원 모델은 업계 최고의 OLAP 데이터 모델링, 저장소 및 분석 솔루션을 제공합니다. SQL Server의 다차원 모델에서는 Microsoft 파워 뷰를 사용하여 임시 데이터 분석, 탐색 및 시각화를 수행할 수 있습니다.  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Power View를 다차원 모델 아키텍처용](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View를 다차원 모델 아키텍처용")  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  **서버 요구 사항**  
   
 -   다차원 모드에서 실행하는 Microsoft SQL Server 2016 Analysis Services  
@@ -62,9 +63,9 @@ ms.lasthandoff: 01/08/2018
 |다차원 개체|테이블 형식 개체|  
 |-----------------------------|--------------------|  
 |Cube|Model|  
-|큐브 차원|Table|  
-|차원 특성(키, 이름)|Column|  
-|측정값 그룹|Table|  
+|큐브 차원|테이블|  
+|차원 특성(키, 이름)|열|  
+|측정값 그룹|테이블|  
 |측정값|이름|  
 |측정값 그룹이 없는 측정값|Measures라는 테이블의 내부|  
 |측정값 그룹 큐브 차원 관계|관계|  
@@ -223,7 +224,7 @@ ms.lasthandoff: 01/08/2018
   
  DISCOVER_CSDL_METADATA 요청에는 다음과 같은 제한이 있습니다.  
   
-|속성|필수|Description|  
+|이름|필수임|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|예|카탈로그\데이터베이스 이름입니다.|  
 |PERSPECTIVE_NAME|큐브에 둘 이상의 큐브 뷰가 포함된 경우 필수, 큐브가 하나뿐이고 기본 큐브 뷰가 있는 경우 선택적|다차원 데이터베이스의 큐브 이름 또는 큐브 뷰 이름입니다.|  

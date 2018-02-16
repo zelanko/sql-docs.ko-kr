@@ -1,7 +1,7 @@
 ---
 title: "백업, 복원, 데이터베이스 및 동기화 (XMLA) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
 - backing up databases [XML for Analysis]
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a01f7dc9f661ffde071b54a4c738557c4f2c8dad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>데이터베이스 백업, 복원 및 동기화(XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML for Analysis에에서 백업, 복원 및 데이터베이스를 동기화 하는 세 가지 명령입니다.  
+  XML for Analysis에는 데이터베이스를 백업, 복원 및 동기화하는 세 개의 명령이 있습니다.  
   
 -   [백업](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) 명령은 백업는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용 하 여 데이터베이스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일 (.abf)로 섹션에 설명 된 대로 [데이터베이스 백업](#backing_up_databases)합니다.  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [동기화](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 명령 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 섹션에 설명 된 대로 데이터와 다른 데이터베이스의 메타 데이터 데이터베이스 [데이터베이스 동기화](#synchronizing_databases)합니다.  
   
-##  <a name="backing_up_databases"></a>데이터베이스 백업  
+##  <a name="backing_up_databases"></a> 데이터베이스 백업  
  앞에서 언급 된 **백업** 명령에서는 지정 된 백업 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 백업 파일입니다. **백업** 명령에는 데이터베이스를 백업할 수를 지정할 수 있는 다양 한 속성을 사용 하 고, 보안 정의 및 백업할 원격 파티션을 백업 하는 방법에 백업 파일입니다.  
   
 > [!IMPORTANT]  
@@ -66,10 +67,10 @@ ms.lasthandoff: 01/08/2018
   
  값은 **보안** 속성은 다음 표에 나열 된 문자열 중 하나로 제한 합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|백업 파일에 보안 정의는 포함되지만 멤버 정보는 제외됩니다.|  
-|*Copyall은*|백업 파일에 보안 정의와 멤버 정보가 포함됩니다.|  
+|*CopyAll*|백업 파일에 보안 정의와 멤버 정보가 포함됩니다.|  
 |*IgnoreSecurity*|백업 파일에서 보안 정의가 제외됩니다.|  
   
 ### <a name="backing-up-remote-partitions"></a>원격 파티션 백업  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  백업할 각 원격 데이터 원본에 대 한 포함 하 여 해당 백업 파일을 지정할 수 있습니다는 [위치](../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) 요소에는 [위치](../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md) 의 속성은 **백업** 명령입니다. **위치** 요소에는 해당 **파일** 원격 백업 파일의 UNC 경로 및 파일 이름으로 설정 하는 속성 및 해당 [DataSourceID](../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md) 속성의 식별자로 설정 데이터베이스에 정의 된 원격 데이터 원본입니다.  
   
-##  <a name="restoring_databases"></a>데이터베이스 복원  
+##  <a name="restoring_databases"></a> 데이터베이스 복원  
  **복원** 명령은 지정 된 복원 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일에서 데이터베이스입니다. **복원** 명령에 데이터베이스를 복원할 백업 파일을 사용 하 고 보안 정의 저장할 원격 파티션 및 재배치에서 복원 하는 방법을 지정할 수 있는 다양 한 속성이 ROLAP (관계형 OLAP) 개체입니다.  
   
 > [!IMPORTANT]  
@@ -99,7 +100,7 @@ ms.lasthandoff: 01/08/2018
 |값|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|데이터베이스에 보안 정의는 포함되지만 멤버 정보는 제외됩니다.|  
-|*Copyall은*|데이터베이스에 보안 정의와 멤버 정보가 포함됩니다.|  
+|*CopyAll*|데이터베이스에 보안 정의와 멤버 정보가 포함됩니다.|  
 |*IgnoreSecurity*|데이터베이스에서 보안 정의가 제외됩니다.|  
   
 ### <a name="restoring-remote-partitions"></a>원격 파티션 복원  
@@ -116,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
  사용할 수는 **위치** 요소에는 **복원** ROLAP 개체 재배치 하는 명령입니다. 각 **위치** 데이터 원본을 재배치 하는 데 사용 되는 요소는 **DataSourceType** 속성으로 명시적으로 설정 되어 있어야 *로컬*합니다. 설정 해야 할 수도 있습니다는 **ConnectionString** 의 속성은 **위치** 새 위치의 연결 문자열로 요소입니다. 복원 되는 동안는 **복원** 명령으로 식별 되는 데이터 소스에 대 한 연결 문자열을 대체는 **DataSourceID** 의 속성은 **위치** 요소 값으로는 **ConnectionString** 의 속성은 **위치** 요소입니다.  
   
-##  <a name="synchronizing_databases"></a>데이터베이스 동기화  
+##  <a name="synchronizing_databases"></a> 데이터베이스 동기화  
  **동기화** 데이터와 메타 데이터의 지정 된 명령 동기화 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다른 데이터베이스와 데이터베이스입니다. **동기화** 명령에 다양 한 속성이 원본 데이터베이스를 지정할 수 있는 보안 정의 동기화 할 원격 파티션 및 ROLAP 개체의 동기화를 동기화 하는 방법입니다.  
   
 > [!NOTE]  
@@ -137,7 +138,7 @@ ms.lasthandoff: 01/08/2018
 |값|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|대상 데이터베이스에 보안 정의만 포함되고 멤버 정보는 제외됩니다.|  
-|*Copyall은*|대상 데이터베이스에 보안 정의와 멤버 정보가 포함됩니다.|  
+|*CopyAll*|대상 데이터베이스에 보안 정의와 멤버 정보가 포함됩니다.|  
 |*IgnoreSecurity*|대상 데이터베이스에서 보안 정의가 제외됩니다.|  
   
 ### <a name="synchronizing-remote-partitions"></a>원격 파티션 동기화  
@@ -155,7 +156,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>관련 항목:  
  [요소 &#40; 백업 XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [요소 &#40; 복원 XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Synchronize 요소&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [요소 &#40; 동기화 XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Analysis Services 데이터베이스 백업 및 복원](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

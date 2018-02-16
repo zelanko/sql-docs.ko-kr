@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Power Pivot 서비스 계정 구성
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]설치에 서버 작업을 지 원하는 두 서비스가 포함 됩니다. **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 서비스는 응용 프로그램 서버에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 처리 및 쿼리 지원을 제공하는 Windows 서비스입니다. 이 서비스의 로그인 계정은 항상 SQL Server 설치 중 SharePoint 통합 모드의 Analysis Services를 설치할 때 지정됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]설치에는 서버 작업을 지원하는 두 서비스가 포함됩니다. **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 서비스는 응용 프로그램 서버에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 처리 및 쿼리 지원을 제공하는 Windows 서비스입니다. 이 서비스의 로그인 계정은 항상 SQL Server 설치 중 SharePoint 통합 모드의 Analysis Services를 설치할 때 지정됩니다.  
   
  SharePoint 팜에서 응용 프로그램 풀 ID로 실행되는 공유 웹 서비스인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 대해 두 번째 계정을 지정해야 합니다. 이 계정은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]구성 도구 또는 PowerShell을 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치를 구성할 때 지정합니다.  
   

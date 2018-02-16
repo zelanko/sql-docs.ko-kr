@@ -20,19 +20,20 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 98e15a75b97eae9c4b2fa4093f03f9c8ccf92000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services 추적 이벤트
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Microsoft SQL Server Analysis Services (SSAS) 인스턴스의 활동을 캡처하고 다음 인스턴스에 의해 생성 된 추적 이벤트를 분석 하 여 수행할 수 있습니다.  추적 이벤트는 관련된 추적 이벤트를 더 쉽게 찾을 수 있도록 그룹화되어 있습니다.  각 추적 이벤트에는 이벤트와 관련된 데이터 집합이 포함되어 있습니다. 모든 데이터 조각이 모든 이벤트와 관련이 있는 것은 아닙니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+인스턴스에서 생성되는 추적 이벤트를 캡처한 다음 분석하여 Microsoft SQL SSAS(Server Analysis Services) 인스턴스의 작업을 따라갈 수 있습니다.  추적 이벤트는 관련된 추적 이벤트를 더 쉽게 찾을 수 있도록 그룹화되어 있습니다.  각 추적 이벤트에는 이벤트와 관련된 데이터 집합이 포함되어 있습니다. 모든 데이터 조각이 모든 이벤트와 관련이 있는 것은 아닙니다.  
   
  추적 이벤트는 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**를 사용하여 시작하고 캡처하거나( [SQL Server Profiler를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)참조) XMLA 명령에서 **SQL Server 확장 이벤트** 로 시작하고 나중에 분석할 수 있습니다( [SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)참조).  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
 |**이벤트 ID**|**이벤트 이름**|**이벤트 설명**|  
 |------------------|--------------------|---------------------------|  
-|17|Error|서버 오류입니다.|  
+|17|오류|서버 오류입니다.|  
   
  **[File Load and Save 이벤트 범주](../../analysis-services/trace-events/file-load-and-save-event-category.md)**  
   
@@ -174,7 +175,7 @@ ms.lasthandoff: 01/08/2018
   
 |**이벤트 ID**|**이벤트 이름**|**이벤트 설명**|  
 |------------------|--------------------|---------------------------|  
-|1|Audit Login|클라이언트가 SQL Server의 인스턴스를 실행하는 서버에 대한 연결을 요청하는 경우와 같이 추적이 시작된 이후의 새 연결 이벤트를 모두 수집합니다.|  
+|1.|Audit Login|클라이언트가 SQL Server의 인스턴스를 실행하는 서버에 대한 연결을 요청하는 경우와 같이 추적이 시작된 이후의 새 연결 이벤트를 모두 수집합니다.|  
 |2|Audit Logout|클라이언트가 연결 끊기 명령을 보내는 등 추적이 시작된 이후의 새 연결 끊기 이벤트를 모두 수집합니다.|  
 |4|Audit Server Starts And Stops|서비스 종료, 시작 및 일시 중지 동작을 기록합니다.|  
 |18|Audit Object Permission Event|개체 사용 권한의 변경 내용을 기록합니다.|  

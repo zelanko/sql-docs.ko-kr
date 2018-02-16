@@ -15,10 +15,10 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
 ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포에 대 한 SQL Server 가용성 기본 사항
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/13/2018
 
 부터는 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 및 Windows에서 지원 됩니다. Windows 기반 같은 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux에서 항상 사용 가능한 데이터베이스와 인스턴스 필요 합니다. 이 문서에서는 계획 하 고 항상 사용 가능한 배포의 기술적인 측면도 Linux 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 데이터베이스 및 인스턴스도 Windows 기반 설치 간의 차이점 중 일부입니다. 때문에 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 전문가 및 Linux에 대 한 새 수에 대 한 새로울 수도 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 전문가 위한 문서 때때로 개념을 소개 일부에 대 한 친숙 하 고 다른 사용자에 게 생소 한 될 수 있습니다.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 배포에 대 한 가용성 옵션
+## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux 배포에 대 한 가용성 옵션
 백업 및 복원 외에도 동일한 세 가지 가용성 기능 경우 Windows 기반 배포와 Linux에서 사용할 수 있는 가지
 -   Always On 가용성 그룹 (Ag)
 -   Always On 장애 조치 클러스터 인스턴스 (Fci)
@@ -43,16 +43,16 @@ Linux에서 많은 명령을 많은 요소에서 관리자 권한으로 Windows 
 2. 더 많은 공통 및 보안을 인식 실행 하는 방법은 작업 사용 하는 것 `sudo` 아무 것도 실행 하기 전에. 사용 하 여 다양 한이 예제에서는 문서 `sudo`합니다.
 
 몇 가지 일반적인 명령에는 다양 한 스위치 및 옵션을 각각 온라인에서 확인할 수 있습니다.
--   `cd`– 디렉터리 변경
--   `chmod`-파일 또는 디렉터리의 사용 권한을 변경
--   `chown`-파일 또는 디렉터리의 소유권을 변경
--   `ls`– 디렉터리의 내용을 표시 합니다.
--   `mkdir`– 드라이브에 폴더 (디렉터리)를 만듭니다.
--   `mv`– 한 위치에서 파일 이동
--   `ps`– 작업 프로세스 모두 표시
--   `rm`-서버에서 로컬로 파일 삭제
--   `rmdir`– 폴더 (디렉터리)를 삭제 합니다.
--   `systemctl`– 시작, 중지 또는 서비스를 사용 하도록 설정
+-   `cd` – 디렉터리 변경
+-   `chmod` -파일 또는 디렉터리의 사용 권한을 변경
+-   `chown` -파일 또는 디렉터리의 소유권을 변경
+-   `ls` – 디렉터리의 내용을 표시 합니다.
+-   `mkdir` – 드라이브에 폴더 (디렉터리)를 만듭니다.
+-   `mv` – 한 위치에서 파일 이동
+-   `ps` – 작업 프로세스 모두 표시
+-   `rm` -서버에서 로컬로 파일 삭제
+-   `rmdir` – 폴더 (디렉터리)를 삭제 합니다.
+-   `systemctl` – 시작, 중지 또는 서비스를 사용 하도록 설정
 -   텍스트 편집기 명령입니다. Linux에서 vi emacs 등 다양 한 텍스트 편집기 옵션, 있습니다.
 
 ## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>가용성 구성에 대 한 일반적인 작업 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] linux
@@ -90,15 +90,15 @@ SMB 공유 Windows 기반을 사용할 수도 있습니다. SMB 공유를 호스
 
 | 포트 번호 | 형식     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS –`rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | (사용) 하는 경우 samba – 끝점 매퍼                                                                                          |
 | 137         | UDP      | (사용) 하는 경우 samba – NetBIOS 이름 서비스                                                                                      |
 | 138         | UDP      | (사용) 하는 경우 samba – NetBIOS 데이터 그램                                                                                          |
 | 139         | TCP      | (사용) 하는 경우 samba – NetBIOS 세션                                                                                           |
 | 445         | TCP      | (사용) 하는 경우 samba – TCP 통한 SMB                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 기본 포트입니다. 원하는 경우 변경할 수 있습니다.`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 기본 포트입니다. 원하는 경우 변경할 수 있습니다. `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (사용 된 경우)                                                                                                               |
-| 2224        | TCP      | Pacemaker-에서 사용 하는`pcsd`                                                                                                |
+| 2224        | TCP      | Pacemaker-에서 사용 하는 `pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker – Pacemaker 원격 노드 필수                                                                    |
 | 3260        | TCP      | iSCSI 초기자 (사용) 하는 경우 – 변경 될 수 있습니다 `/etc/iscsi/iscsid.config` (RHEL), iscsi 대상 포트와 일치 해야 하지만 |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -기본 AG 끝점;에 사용 되는 포트 끝점을 만들 때에 변경할 수 있습니다.                                |
@@ -203,15 +203,15 @@ WSFCs 참여 중인 노드의 상태를 모니터링 하 고 문제가 발생 �
 
 #### <a name="cluster-log-location"></a>클러스터 로그 위치
 Pacemaker 클러스터에 대 한 로그 위치 분포에 따라 다릅니다.
--   RHEL 및 SLES-`/var/log/cluster/corosync.log`
--   Ubuntu –`/var/log/corosync/corosync.log`
+-   RHEL 및 SLES- `/var/log/cluster/corosync.log`
+-   Ubuntu – `/var/log/corosync/corosync.log`
 
 기본 로깅 위치를 변경 하려면 수정 `corosync.conf`합니다.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Pacemaker 클러스터에 대 한 계획[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Pacemaker 클러스터에 대 한 계획 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 이 섹션에서는 Pacemaker 클러스터에 대 한 중요 한 계획 사항에 설명 합니다.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Linux 기반 가상화 Pacemaker 클러스터에 대 한[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Linux 기반 가상화 Pacemaker 클러스터에 대 한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 가상 컴퓨터를 사용 하 여 Linux 기반 배포할 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Ag 및 Fci에 대 한 배포의 경우 Windows 기반 대응와 동일한 규칙 적용 됩니다. 지원 가능성에 대 한 규칙의 기본 집합이 가상화 된 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에 Microsoft에서 제공 하는 배포 [Microsoft 지원 KB 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)합니다. Microsoft의 Hyper-v 및 VMware의 ESXi 같은 다른 하이퍼바이저 플랫폼 자체의 차이 때문에 위에 해당, 다른 분산 있을 수 있습니다.
 
 가상화에서 Ag 및 Fci에 있어 선호도 방지 특정된 Pacemaker 클러스터의 노드에 대해 설정 되어 있는지 확인 합니다. 호스트 하는 Vm AG 또는 FCI 구성에서 고가용성을 위해 구성 된 경우 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 되지 같은 하이퍼바이저 호스트에서 실행 되어야 합니다. 예를 들어 2 노드 FCI를 배포 하는 경우 없습니다는 있어야 *이상* 놓았을 하 어딘가에 호스트 실패 시 이동 하려면 노드를 호스팅하는 Vm 중 하나에 대 한 기능을 사용 하는 경우에 특히 3 하이퍼바이저 호스트 Live와 같은 마이그레이션 또는 vMotion 합니다.

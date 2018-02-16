@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>SharePoint용 파워 피벗 설치 확인
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 인스턴스는 SharePoint 팜에 설치 하는 SharePoint 중앙 관리를 통해 관리 됩니다. 최소한 중앙 관리와 SharePoint 사이트에서 페이지를 검사하여 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버 구성 요소 및 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서가 있어야 합니다. 테스트를 위해 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터가 포함되어 있는 샘플 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SharePoint 팜에 설치하는 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 인스턴스는 SharePoint 중앙 관리를 통해 관리됩니다. 최소한 중앙 관리와 SharePoint 사이트에서 페이지를 검사하여 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버 구성 요소 및 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서가 있어야 합니다. 테스트를 위해 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터가 포함되어 있는 샘플 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  
 
   
 ##  <a name="verifyinstall"></a> 중앙 관리 통합을 확인하려면  

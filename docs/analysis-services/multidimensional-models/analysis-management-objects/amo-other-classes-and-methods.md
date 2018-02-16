@@ -1,7 +1,7 @@
 ---
 title: "AMO 다른 클래스와 메서드 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restores [AMO]
 - AMO, backup and restore
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f4de10c612f0338cecbfbd2e106bee41c6115905
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5ae261375e96cf6bfa322262b0b13653b9534331
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 기타 클래스 및 메서드
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 섹션에서는 OLAP 또는 데이터 마이닝과 관련 되지 않은 하 고 관리 하거나 개체를 관리 하는 데 유용한 일반적인 클래스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이러한 클래스에서는 저장 프로시저, 추적, 예외, 백업 및 복원 등의 기능을 제공합니다.  
+  이 섹션에서는 OLAP 또는 데이터 마이닝과 관련 되지 않은 하 고 관리 하거나 개체를 관리 하는 데 유용한 일반적인 클래스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이러한 클래스에서는 저장 프로시저, 추적, 예외, 백업 및 복원 등의 기능을 제공합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  ![AMO 다른 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-otherclasses.gif "AMO 다른 클래스")  
   
-##  <a name="Assembly"></a>어셈블리 개체  
+##  <a name="Assembly">어셈블리 개체</a>  
  <xref:Microsoft.AnalysisServices.Assembly> 개체를 서버의 어셈블리 컬렉션에 추가한 다음 Update 메서드를 사용하여 서버로 업데이트하면 <xref:Microsoft.AnalysisServices.Assembly> 개체가 만들어집니다.  
   
  <xref:Microsoft.AnalysisServices.Assembly> 제거를 제거하려면 <xref:Microsoft.AnalysisServices.Assembly> 개체의 Drop 메서드를 사용하여 삭제해야 합니다. <xref:Microsoft.AnalysisServices.Assembly> 개체를 데이터베이스의 어셈블리 컬렉션에서 제거해도 어셈블리가 삭제되지는 않습니다. 응용 프로그램이 다음에 실행될 때까지 해당 어셈블리가 응용 프로그램에 표시되지 않을 뿐입니다.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 > [!IMPORTANT]  
 >  COM 어셈블리는 보안 위험을 내포할 수 있습니다. 이러한 위험 및 기타 고려 사항으로 인해 COM 어셈블리는 [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]에서 더 이상 사용되지 않습니다. COM 어셈블리는 후속 릴리스에서 지원되지 않을 수 있습니다.  
   
-##  <a name="Backup"></a>Backup 및 Restore 메서드  
+##  <a name="Backup">Backup 및 Restore 메서드</a>  
  Backup 및 Restore는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스의 복사본을 만드는 작업과 복사본을 사용하여 데이터베이스를 복원하는 작업에 사용할 수 있는 메서드입니다. Backup 메서드는 <xref:Microsoft.AnalysisServices.Database> 개체에 속해 있으며, Restore 메서드는 <xref:Microsoft.AnalysisServices.Server> 개체에 속해 있습니다.  
   
  서버 및 데이터베이스 관리자만 데이터베이스 백업을 수행할 수 있습니다. 서버 관리자만 백업한 서버가 아닌 다른 서버에 데이터베이스를 복원할 수 있습니다. 데이터베이스 관리자는 덮어쓸 데이터베이스가 자신의 소유인 경우에만 기존 데이터베이스를 덮어써서 복원할 수 있습니다. 데이터베이스가 원래 보안 정의로 복원된 경우에는 복원 후 데이터베이스 관리자가 복원된 데이터베이스에 액세스하지 못하게 될 수도 있습니다.  
@@ -73,25 +74,25 @@ ms.lasthandoff: 01/08/2018
  데이터베이스를 백업하려면 백업 파일의 이름을 매개 변수로 사용하여 데이터베이스 개체의 Backup 메서드를 호출해야 합니다.  
   
 ##### <a name="default-values"></a>기본값:  
- AllowOverwrite =**false**  
+ AllowOverwrite=**false**  
   
- BackupRemotePartitions =**false**  
+ BackupRemotePartitions=**false**  
   
- 보안 =**CopyAll**  
+ Security=**CopyAll**  
   
- ApplyCompression =**true**  
+ ApplyCompression=**true**  
   
 ### <a name="restore-method"></a>Restore 메서드  
  데이터베이스를 서버에 복원하려면 백업 파일의 이름을 매개 변수로 사용하여 서버의 Restore 메서드를 호출해야 합니다.  
   
 ##### <a name="default-values"></a>기본값:  
- AllowOverwrite =**false**  
+ AllowOverwrite=**false**  
   
- DataSourceType =**원격**  
+ DataSourceType=**Remote**  
   
- 보안 =**CopyAll**  
+ Security=**CopyAll**  
   
-##### <a name="restrictions"></a>Restrictions  
+##### <a name="restrictions"></a>제한 사항  
   
 1.  로컬 파티션은 원격 파티션으로 복원될 수 없습니다.  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **암호**비어 있지 않은 서버에서 백업 파일을 암호화를 지정 하는 경우, 합니다.  
   
-##  <a name="Traces"></a>추적 개체  
+##  <a name="Traces">추적 개체</a>  
  추적은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 인스턴스를 모니터링, 재생 및 관리하는 데 사용되는 프레임워크입니다. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]와 같은 클라이언트 응용 프로그램은 추적에 대해 구독하고 서버는 추적 정의에 지정된 대로 추적 이벤트를 다시 보냅니다.  
   
  각 이벤트는 이벤트 클래스에서 설명됩니다. 이벤트 클래스는 생성된 이벤트의 유형을 설명합니다. 이벤트 클래스에서 이벤트 하위 클래스는 더 세분화된 범주를 설명합니다. 각 이벤트에 대한 설명은 여러 열로 구성되어 있습니다. 추적 이벤트를 설명하는 열은 모든 이벤트에 대해 일관되며 SQL 추적 구조를 따릅니다. 각 열에 기록되는 정보는 이벤트 클래스에 따라 다를 수 있습니다. 즉, 미리 정의된 열 집합이 각 추적에 대해 정의되기는 하지만 열의 의미는 이벤트 클래스에 따라 다를 수 있습니다. 예를 들어, TextData 열은 모든 문 이벤트에 대해 원본 ASSL을 기록하는 데 사용됩니다.  
@@ -154,14 +155,14 @@ ms.lasthandoff: 01/08/2018
   
 6.  응용 프로그램 실행을 계속합니다.  
   
-##  <a name="CaptureLog"></a>CaptureLog 클래스 및 CaptureXML 특성  
+##  <a name="CaptureLog">CaptureLog 클래스 및 CaptureXML 특성</a>  
  AMO에서 실행되는 모든 동작이 XMLA 메시지로 서버에 전송됩니다. AMO는 SOAP 헤더 없이 이러한 메시지를 모두 캡처할 수 있는 기능을 제공합니다. 자세한 내용은 참조 [AMO 클래스 소개](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)합니다. CaptureLog는 AMO에서 개체와 작업을 스크립팅하는 메커니즘이며, 개체와 작업은 XMLA로 스크립팅됩니다.  
   
  XML 캡처를 시작 하려면 CaptureXML 서버 개체 속성 설정 해야 **true**합니다. 그러면 서버로 전송되는 모든 동작이 CaptureLog 클래스에 캡처되지만 서버로 전송되지는 않습니다. CaptureLog는 캡처 로그를 지우는 데 사용되는 Clear 메서드를 가지고 있으므로 클래스로 간주됩니다.  
   
  로그를 읽기 위해 문자열 컬렉션을 가져와서 문자열을 반복합니다. 서버 개체 메서드 ConcatenateCaptureLog를 사용하여 모든 로그를 한 문자열로 연결할 수도 있습니다. ConcatenateCaptureLog에는 매개 변수 3개가 사용되며 그 중 2개는 필수입니다. 필요한 매개 변수는 *트랜잭션*, Boolean 형식 및 *병렬*, Boolean 형식입니다. 경우 *트랜잭션* 로 설정 된 **true**, 별도 트랜잭션으로 처리 되 고 각 명령 대신 단일 트랜잭션으로 XML 배치 파일이 만들 수 있는지 나타냅니다. 경우 *병렬* 로 설정 된 **true**, 기록 된 대로 배치 파일에서 모든 명령이 순차적으로 하는 대신 동시 실행에 대 한 기록 될 것을 나타냅니다.  
   
-##  <a name="AMO"></a>AMOException 예외 클래스  
+##  <a name="AMO">AMOException 예외 클래스</a>  
  AMOException 예외 클래스를 사용하여 AMO에서 throw된 예외를 응용 프로그램에서 쉽게 catch할 수 있습니다.  
   
  AMO는 다양한 문제가 발생할 때 예외를 throw합니다. 다음 표에서는 AMO에서 처리되는 예외의 종류를 보여 줍니다. 예외는 <xref:Microsoft.AnalysisServices.AmoException> 클래스에서 파생됩니다.  

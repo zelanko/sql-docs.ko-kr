@@ -12,20 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>PowerPivot 상태 규칙 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]SharePoint에 포함 하는 데 도움이 되는 SharePoint 상태 규칙 모니터링 하 고 서버 가용성과 구성 문제를 해결 합니다. SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 에 적용되는 상태 규칙은 규칙 정의 검토 페이지에 표시됩니다.  
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 에는 서버 가용성과 구성 문제를 모니터링하고 해결하는 데 유용한 SharePoint 상태 규칙이 포함되어 있습니다. SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 에 적용되는 상태 규칙은 규칙 정의 검토 페이지에 표시됩니다.  
   
  상태 규칙을 통해 서비스가 중단될 수 있는 서버 문제를 조기에 감지할 수 있습니다. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 에서는 사용자가 영향을 받기 전에 문제를 식별하고 수정하는 데 사용할 수 있는 여러 가지 규칙을 제공합니다. 사용자 배포 환경의 고유한 특징에 맞도록 이러한 규칙을 사용자 지정할 수 있습니다. 예를 들어, 디스크 공간에 대한 경고를 해결하는 데 시간이 더 필요한 경우 사용 가능한 디스크 공간 백분율을 5%에서 10%로 늘려 경고를 더 일찍 받을 수 있습니다.  
   
@@ -49,7 +49,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [응용 프로그램 안정성을 평가하는 데 사용되는 상태 규칙 구성(파워 피벗 서비스 응용 프로그램)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  Analysis Services 인스턴스 및 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 응용 프로그램의 구성 속성을 변경하려면 서비스 응용 프로그램 관리자여야 합니다.  
   
 ##  <a name="bkmk_view"></a> 파워 피벗 상태 규칙 보기  

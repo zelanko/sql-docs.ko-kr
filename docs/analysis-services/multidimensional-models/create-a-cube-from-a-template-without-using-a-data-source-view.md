@@ -12,24 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>데이터 원본 뷰를 사용하지 않고 템플릿에서 큐브 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]선택 **데이터 원본을 사용 하지 않고 큐브 생성** 데이터 원본 뷰를 사용 하지 않고 큐브를 만들려면 큐브 마법사의 첫 페이지에 있습니다. 나중에 스키마 생성 마법사를 사용하여 큐브의 구조 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 바탕으로 데이터 원본 뷰에 대한 관계형 스키마를 생성할 수 있습니다. 스키마 생성 방법에 대한 자세한 내용은 [스키마 생성 마법사&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+데이터 원본 뷰를 사용하지 않고 큐브를 만들려면 큐브 마법사의 첫 페이지에서 **데이터 원본을 사용하지 않고 큐브 생성** 을 선택하십시오. 나중에 스키마 생성 마법사를 사용하여 큐브의 구조 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 바탕으로 데이터 원본 뷰에 대한 관계형 스키마를 생성할 수 있습니다. 스키마 생성 방법에 대한 자세한 내용은 [스키마 생성 마법사&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)를 참조하세요.  
   
 ## <a name="selecting-the-build-method"></a>생성 방법 선택  
- 큐브 마법사의 **생성 방법 선택** 페이지에서 **데이터 원본을 사용하지 않고 큐브 생성**을 클릭합니다. 기존 큐브 템플릿을 사용하여 큐브를 생성하려면 **큐브 템플릿 사용** 확인란을 선택합니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 템플릿을 사용하지 않으면 수동으로 옵션을 설정해야 합니다.  
+ 큐브 마법사의 **생성 방법 선택** 페이지에서 **데이터 원본을 사용하지 않고 큐브 생성**을 클릭합니다. 기존 큐브 템플릿을 사용하여 큐브를 생성하려면 **큐브 템플릿 사용** 확인란을 선택합니다. 를 참조하세요. 템플릿을 사용하지 않으면 수동으로 옵션을 설정해야 합니다.  
   
- 큐브 템플릿에는 사전 정의된 측정값, 측정값 그룹, 차원, 계층 및 특성이 포함되어 있습니다. 템플릿을 선택한 경우 마법사는 템플릿에서 개체 정의를 다음 페이지 설정 옵션의 기본으로 사용합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 은 표준 큐브의 여러 템플릿과 함께 설치됩니다. 또한 서버 관리자가 사용자 조직의 데이터에 맞게 디자인된 전용 큐브 또는 차원 템플릿을 추가할 수도 있습니다.  
+ 큐브 템플릿에는 사전 정의된 측정값, 측정값 그룹, 차원, 계층 및 특성이 포함되어 있습니다. 템플릿을 선택한 경우 마법사는 템플릿에서 개체 정의를 다음 페이지 설정 옵션의 기본으로 사용합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]은 표준 큐브의 여러 템플릿과 함께 설치됩니다. 또한 서버 관리자가 사용자 조직의 데이터에 맞게 디자인된 전용 큐브 또는 차원 템플릿을 추가할 수도 있습니다.  
   
 ## <a name="selecting-dimensions"></a>차원 선택  
  마법사의 **차원 선택** 페이지를 사용하여 기존 차원을 큐브에 추가할 수 있습니다. 프로젝트 또는 데이터베이스에 데이터 원본 없이 공유된 차원이 있는 경우에만 이 페이지가 표시됩니다. 데이터 원본이 있는 차원은 표시되지 않습니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  **템플릿에서 측정값 선택** 표 및 **새 측정값 추가** 표 모두 다음 테이블에 나와 있는 열 설명에 따라 값을 표시합니다. 각 목록에서 값을 클릭하여 해당 값을 변경할 수 있습니다.  
   
-|Column|Description|  
+|열|Description|  
 |------------|-----------------|  
 |**측정값 이름**|이 열의 값은 큐브의 측정값 이름을 정의합니다. 이 열의 값을 클릭하여 이름을 입력합니다. 이 열에서 **새 측정값 추가** 를 클릭하여 새 측정값을 만듭니다. 이 열은 측정값 개체의 **Name** 속성을 설정합니다.|  
 |**측정값 그룹**|측정값이 포함된 측정값 그룹의 이름입니다. 이 값을 클릭하여 이름을 선택하거나 입력합니다. 특정 측정값 그룹에 속한 모든 측정값을 삭제하면 해당 측정값 그룹도 제거됩니다. 이 열은 측정값 그룹 개체의 **Name** 속성을 설정합니다.|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
  **템플릿에서 차원 선택** 표 및 **새 차원 추가** 표는 모두 다음 테이블에 나와 있는 열 설명에 따라 값을 표시합니다. 각 목록에서 값을 클릭하여 해당 값을 변경할 수 있습니다.  
   
-|Column|Description|  
+|열|Description|  
 |------------|-----------------|  
 |**형식**|템플릿 차원의 차원 유형을 표시합니다. 이 셀을 클릭하면 차원의 차원 유형을 변경할 수 있습니다. 이 열은 차원 개체의 **유형** 속성을 설정합니다.|  
 |**이름**|차원 이름을 표시합니다. 다른 이름을 입력하려면 이 셀을 클릭합니다. 이 값은 차원 개체의 **이름** 속성을 설정합니다.|  
