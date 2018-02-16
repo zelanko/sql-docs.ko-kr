@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0953a2a8de3dce18d404929ee23d054192a2e3e7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo 결과 집합 예제
 응용 프로그램이 호출 **SQLGetTypeInfo** 데이터 원본과 해당 데이터 형식 특성에서 지원 되는 데이터 유형을 확인 하려면. 다음 표에서에서 반환 된 결과 집합 예를 보여 줍니다. **SQLGetTypeInfo** SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR, 및 SQL_INTERVAL_DAY_TO_SECOND 지 원하는 데이터 원본에 대 한 합니다.  

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - expressions [MDX], scripts
 - scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 22da0a7df618db320214f19a73e2047ea4b37922
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="the-basic-mdx-script-mdx"></a>기본 MDX 스크립트(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) 스크립트에 있는 큐브에 대해 계산 프로세스 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 다음과 같은 두 가지 유형의 MDX 스크립트가 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+MDX(Multidimensional Expressions) 스크립트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 있는 큐브에 대한 계산 프로세스를 정의합니다. 다음과 같은 두 가지 유형의 MDX 스크립트가 있습니다.  
   
  **기본 MDX 스크립트**  
  큐브를 만드는 시점에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 해당 큐브에 대해 기본 MDX 스크립트를 만듭니다. 이 스크립트는 전체 큐브에 대한 계산 패스를 정의합니다.  
@@ -58,18 +59,18 @@ ms.lasthandoff: 01/08/2018
  모든 MDX 스크립팅 문  
  MDX 스크립트에서 MDX 스크립팅 문은 계산의 컨텍스트 및 범위를 제어하고 MDX 스크립트에 있는 다른 문의 동작을 관리합니다. 이 범주에는 다음 문이 포함됩니다.  
   
--   [CALCULATE](../../../mdx/mdx-scripting-calculate.md)  
+-   [계산](../../../mdx/mdx-scripting-calculate.md)  
   
--   [FREEZE](../../../mdx/mdx-scripting-freeze.md)  
+-   [고정](../../../mdx/mdx-scripting-freeze.md)  
   
--   [SCOPE](../../../mdx/mdx-scripting-scope.md)  
+-   [범위](../../../mdx/mdx-scripting-scope.md)  
   
  MDX 스크립팅 문에 대한 자세한 내용은 [MDX 스크립팅 문&#40;MDX&#41;](../../../mdx/mdx-scripting-statements-mdx.md)을 참조하세요.  
   
- [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md)  
+ [멤버 만들기](../../../mdx/mdx-data-definition-create-member.md)  
  CREATE MEMBER 문은 계산 멤버를 만듭니다. 계산 멤버 작성 방법에 대한 자세한 내용은 [계산 멤버를 MDX로 작성&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md)을 참조하세요.  
   
- [CREATE SET](../../../mdx/mdx-data-definition-create-set.md)  
+ [집합 만들기](../../../mdx/mdx-data-definition-create-set.md)  
  CREATE SET 문은 명명된 집합을 만듭니다. 명명된 집합을 만드는 방법에 대한 자세한 내용은 [명명된 집합을 MDX로 작성&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md)을 참조하세요.  
   
  조건문  
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 언어 참조&#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [MDX 스크립팅 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 언어 참조 &#40; Mdx&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [MDX 스크립팅 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

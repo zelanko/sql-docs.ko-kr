@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 문서에서는 Analysis Services 인스턴스에 액세스 하기 위한 HTTP 끝점을 설정 하는 방법에 설명 합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 응용 프로그램 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 문서에서는 Analysis Services 인스턴스에 액세스하기 위한 HTTP 끝점을 설정하는 방법에 설명합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 응용 프로그램 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
   
 -   클라이언트 액세스가 인터넷 또는 엑스트라넷 연결을 통해 이루어집니다(설정할 수 있는 포트에 대한 제한 사항 있음)  
   
@@ -128,11 +129,11 @@ ms.lasthandoff: 01/08/2018
   
 4.  웹 서버의 \inetpub\wwwroot\OLAP 폴더에 MSMDPUMP.DLL, MSMDPUMP.INI 및 Resources 폴더가 있는지 확인합니다. 폴더 구조는 다음과 같이 표시됩니다.  
   
-    -   \<드라이브 >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<드라이브 >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<드라이브 >: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> 2단계: IIS에 응용 프로그램 풀 및 가상 디렉터리 만들기  
  다음으로 응용 프로그램 풀과 PUMP에 대한 끝점을 만듭니다.  

@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 81bdb79296ca864999d31c487cabf490ba0e0659
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>단원 1-2-데이터 원본 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/22/2018
   
 3.  **연결 정의 방법 선택** 페이지에서 새 연결, 기존 연결 또는 이전에 정의한 데이터 원본 개체를 기반으로 데이터 원본을 정의할 수 있습니다. 이 자습서에서는 새 연결을 기반으로 데이터 원본을 정의합니다. **기존 연결 또는 새 연결을 사용하여 데이터 원본 만들기** 가 선택되어 있는지 확인한 다음 **새로 만들기**를 클릭합니다.  
   
-4.  **연결 관리자** 대화 상자에서 데이터 원본에 대한 연결 속성을 정의합니다. **공급자** 목록 상자에서 **네이티브 OLE DB\SQL Server Native Client 11.0** 이 선택되어 있는지 확인합니다.  
+4.  **연결 관리자** 대화 상자에서 데이터 원본에 대한 연결 속성을 정의합니다. **공급자** 목록 상자에서 **네이티브 OLE DB\SQL Server Native Client 11.0**이 선택되어 있는지 확인합니다.  
   
     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 **공급자** 목록에 표시된 다른 공급자도 지원합니다.  
   

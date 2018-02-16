@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: de9f32a826273ed1efaf9395c8a0e67030b1b573
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="delete-power-pivot-gallery"></a>파워 피벗 갤러리 삭제
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]삭제 한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 모두 삭제에 대 한 데이터 새로 고침 기록을 비롯 하 여 해당 항목이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 예약 된 데이터 새로 고침을 위해 구성 된 통합 문서.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 삭제하면 예약된 데이터 새로 고침에 대해 구성된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 데이터 새로 고침 기록을 비롯하여 해당 항목이 모두 삭제됩니다.  
   
 > [!NOTE]  
 >  이 항목에서는 SharePoint 라이브러리를 삭제하는 방법에 대한 지침을 제공합니다. 라이브러리에서 개별 문서를 삭제하는 방법은 [파워 피벗 갤러리 사용](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)을 참조하세요.  

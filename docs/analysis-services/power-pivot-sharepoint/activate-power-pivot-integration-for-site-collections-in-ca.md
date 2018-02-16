@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 52fb43ddd40e432cb174c9d0794a3919fc48ff7a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>CA에서 사이트 모음에 대 한 파워 피벗 통합 활성화
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]활성화 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기존 팜 설치 옵션을 사용 하는 SQL Server를 설치할 경우 특정 사이트 모음에 대 한 기능 통합이 필요한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint에 대 한 합니다. 새 서버 옵션을 사용해 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 설치한 경우에는 SQL Server 설치 프로그램에서 배포를 구성할 때 루트 사이트 모음에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 이미 활성화했기 때문에 이 태스크를 건너뛰어도 됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+기존 팜 설치 옵션을 사용하여 SQL Server SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 설치하는 경우 특정 사이트 모음에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 활성화해야 합니다. 새 서버 옵션을 사용해 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 설치한 경우에는 SQL Server 설치 프로그램에서 배포를 구성할 때 루트 사이트 모음에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 이미 활성화했기 때문에 이 태스크를 건너뛰어도 됩니다.  
   
  예약된 데이터 새로 고침용 구성 페이지, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 데이터 피드 라이브러리용 응용 프로그램 페이지 등의 응용 프로그램 페이지와 템플릿을 사이트에서 사용하려면 사이트 모음 수준에서 기능을 활성화해야 합니다.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 쿼리 처리를 지원하는 각 사이트 모음에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합을 활성화해야 합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  사이트 모음 관리자여야 합니다.  
   
 ## <a name="activate-power-pivot-features"></a>파워 피벗 기능 활성화  

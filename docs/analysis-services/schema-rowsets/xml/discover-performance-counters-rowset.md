@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1d769567a033eedd98eff41aee9cde5306c9b7ea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]하나 이상의 성능 카운터의 값을 반환 합니다. 초당 디스크 읽기 수 및 CPU 사용량(%) 등의 시간별 사용량에 대한 정보를 반환하는 카운터는 지원하지 않습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+하나 이상의 성능 카운터의 값을 반환합니다. 초당 디스크 읽기 수 및 CPU 사용량(%) 등의 시간별 사용량에 대한 정보를 반환하는 카운터는 지원하지 않습니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**PERF_COUNTER_NAME**|**DBTYPE_WSTR**|필수|성능 카운터의 이름입니다.|  
+|**PERF_COUNTER_NAME**|**DBTYPE_WSTR**|필수임|성능 카운터의 이름입니다.|  
 |**PERF_COUNTER_VALUE**|**DBTYPE_DOUBLE**||성능 카운터의 값입니다.|  
   
  이 스키마 행 집합은 정렬되지 않습니다.  

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - members [Analysis Services], calculated
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-calculated-members"></a>계산 멤버 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용자 지정된 측정값 또는 큐브 데이터, 산술 연산자, 숫자 및 함수를 결합 하 여 계산된 멤버 라고 하는 차원 멤버를 만들 수 있습니다. 예를 들어 기존 달러 측정값을 환율과 곱해서 달러를 유로로 환산하는 Euros라는 계산 멤버를 만들 수 있습니다. 그런 다음 Euros를 별도의 행이나 열로 최종 사용자에게 표시할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+큐브 데이터, 산술 연산자, 숫자 및 함수 등을 결합하여 계산 멤버라고 하는 사용자 지정 측정값 또는 차원 멤버를 만들 수 있습니다. 예를 들어 기존 달러 측정값을 환율과 곱해서 달러를 유로로 환산하는 Euros라는 계산 멤버를 만들 수 있습니다. 그런 다음 Euros를 별도의 행이나 열로 최종 사용자에게 표시할 수 있습니다.  
   
  계산 멤버의 정의는 저장되지만, 값은 메모리에만 존재합니다. 위의 예에서는 유로 값이 최종 사용자에게 표시되기만 하고 큐브 데이터로 저장되지는 않습니다.  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
  Format String  
  계산 멤버를 기반으로 셀 값의 형식을 지정합니다. 이 속성은 측정값의 **Display Format** 속성과 같은 값을 받아들입니다. 표시 형식에 대한 자세한 내용은 [측정값 속성 구성](../../analysis-services/multidimensional-models/configure-measure-properties.md)을 참조하세요.  
   
- 표시  
+ Visible  
  큐브 메타데이터를 검색할 때 계산 멤버를 표시할 것인지 숨길 것인지 결정합니다. 계산 멤버를 숨길 경우 MDX 식, 문 및 스크립트에서 계산 멤버를 사용할 수는 있지만 클라이언트 사용자 인터페이스에서 선택 가능한 개체로 표시되지 않습니다.  
   
  Non-empty Behavior  

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9506938e-7f9f-4595-ad6d-98c8b0ce8395
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a24a4b19f20e28346456e3c0c53f39eaeb200b9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="invoke-processdimension-cmdlet"></a>Invoke-ProcessDimension cmdlet
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]특정 처리 유형 변수를 사용 하 여 차원을 처리 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+특정 처리 유형 변수를 사용하여 차원을 처리합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="parameters"></a>매개 변수  
   
-### <a name="-name-string"></a>-이름 \<문자열 >  
+### <a name="-name-string"></a>-Name \<string>  
  처리할 차원을 지정합니다.  
   
 |||  
@@ -50,18 +51,18 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-database-string"></a>-데이터베이스 \<문자열 >  
+### <a name="-database-string"></a>-Database \<string>  
  차원이 속한 데이터베이스를 지정합니다.  
   
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1|  
+|위치|1.|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType >  
+### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType>  
  ProcessFull, ProcessAdd, ProcessUpdate, ProcessIndexes, ProcessData, ProcessDefault, ProcessClear, ProcessStructure, ProcessCelarStructureOnly, ProcessScriptCache, ProcessRecalc 등 처리 유형을 지정합니다.  
   
 |||  
@@ -72,7 +73,7 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-databasedimension-microsoftanalysissevicesdimension"></a>-DatabaseDimension \<Microsoft.AnalysisSevices.Dimension >  
+### <a name="-databasedimension-microsoftanalysissevicesdimension"></a>-DatabaseDimension \<Microsoft.AnalysisSevices.Dimension>  
  처리할 Microsoft.AnalysisServices.Dimension 개체를 지정합니다. 파이프라인을 통해 차원 이름을 전달하려는 경우 이 매개 변수를 사용합니다.  
   
 |||  
@@ -83,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|True(ByPropertyName)|  
 |와일드카드 문자 허용|false|  
   
-### <a name="commonparameters"></a>\<일반 매개 변수 >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  이 cmdlet은 공통 매개 변수 -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer 및 -OutVariable을 지원합니다. 자세한 내용은 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)를 참조하세요.  
   
 ## <a name="inputs-and-outputs"></a>입/출력  
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
 |입력|Microsoft.AnalysisSevices.Dimension|  
 |출력|InclusionThresholdSetting|  
   
-## <a name="example-1"></a>예 1  
+## <a name="example-1"></a>예제 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Dimensions\Account> Get-Item .| Invoke-ProcessDimension –ProcessType:ProcessDefault`  
   
  이 명령은 파이프라인을 통해 지정된 차원 개체를 검색한 다음 이 개체를 처리합니다.  

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7783dd3fabfe32359b8d2da35ad9eda25a91057f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-access"></a>파워 피벗 데이터 액세스
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서 데이터를 검색 하는 방법에 설명 된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 라이브러리에 게시 된 통합 문서.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 항목에서는 Sharepoint 라이브러리에 게시되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 검색하는 방법을 설명합니다.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터는 Excel 통합 문서 내에 저장됩니다. 연결 문자열은 SharePoint 사이트에 있는 통합 문서에 대한 URL입니다.  
   

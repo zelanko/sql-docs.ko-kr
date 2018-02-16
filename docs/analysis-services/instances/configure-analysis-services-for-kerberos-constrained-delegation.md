@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 제한된 위임에 대해 Analysis Services 구성
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]다음 결과 중 하나 이상을 구현에 Kerberos 인증에 대 한 Analysis Services를 구성할 때: Analysis Services 데이터를 쿼리할 때 사용자 id를 가장 하지 하도록 하거나 Analysis Services 하위 서비스에 사용자 id 위임 합니다. 각 시나리오에는 약간 다른 구성 요구 사항이 필요합니다. 두 시나리오에 공통적으로 필요한 것은 구성이 제대로 수행되었는지 확인하는 작업입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Kerberos 인증에 대해 Analysis Services를 구성하는 경우 데이터를 쿼리할 때 Analysis Services에서 사용자 ID를 가장하도록 하거나 Analysis Services에서 하위 서비스에 사용자 ID를 위임하도록 하는 데 관심을 갖고 있을 가능성이 높습니다. 각 시나리오에는 약간 다른 구성 요구 사항이 필요합니다. 두 시나리오에 공통적으로 필요한 것은 구성이 제대로 수행되었는지 확인하는 작업입니다.  
   
 > [!TIP]  
 >  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](http://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
@@ -122,6 +123,6 @@ ms.lasthandoff: 01/08/2018
  [Kerberos를 사용한 상호 인증](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 인스턴스에 대 한 SPN 등록](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [연결 문자열 속성&#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [연결 문자열 속성 &#40; Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - filters [data mining]
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: daf31a5100ced2272b74b1bcad982f84bbbe5916
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>모델 필터 구문 및 예(Analysis Services - 데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션에서는 샘플 식 함께 모델 필터 구문에 대 한 자세한 정보를 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 섹션에서는 샘플 식과 함께 모델 필터 구문에 대한 자세한 정보를 제공합니다.  
   
  [필터 구문](#bkmk_Syntax)  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
  *avPredicate*  
  스칼라 마이닝 구조 열에만 적용할 수 있는 필터 식입니다. *avPredicate* 식은 모델 필터나 중첩 테이블 필터 모두에 사용할 수 있습니다.  
   
- 다음 연산자를 사용하는 식은 연속 열에만 적용할 수 있습니다. 으로 디코딩된 문자입니다.  
+ 다음 연산자를 사용하는 식은 연속 열에만 적용할 수 있습니다. :  
   
 -   **\<** (보다 작음)  
   
@@ -318,7 +319,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [마이닝 모델 &#40;에 대 한 필터 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [테스트 및 유효성 검사 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

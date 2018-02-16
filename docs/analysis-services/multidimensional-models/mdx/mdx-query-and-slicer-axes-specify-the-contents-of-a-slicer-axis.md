@@ -15,19 +15,20 @@ helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3aaee6261a0209a2c6504c7b0809e2dc57c079d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>MDX 쿼리 및 Slicer 축-Slicer 축의 내용 지정
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Slicer 축에 반환 된 데이터를 제한 하 여 지정된 된 멤버와 교차 되는 유일한 데이터를 반환할 수 있도록 MDX (Multidimensional Expressions) SELECT 문에 의해 반환 된 데이터 필터링 합니다. slicer 축은 표시되지 않는 쿼리의 추가 축으로 간주할 수 있으며 MDX에서 SELECT 문의 WHERE 절에 정의됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+slicer 축은 지정된 멤버와 교차되는 데이터만 반환되도록 반환 데이터를 제한하여 MDX SELECT 문에 의해 반환된 데이터를 필터링합니다. slicer 축은 표시되지 않는 쿼리의 추가 축으로 간주할 수 있으며 MDX에서 SELECT 문의 WHERE 절에 정의됩니다.  
   
 ## <a name="slicer-axis-syntax"></a>Slicer 축 구문  
  slicer 축을 명시적으로 지정하려면 다음 구문에 설명된 것과 같이 MDX에서 `<SELECT slicer axis clause>` 를 사용합니다.  

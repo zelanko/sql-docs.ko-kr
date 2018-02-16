@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>연결 문자열 속성(Analysis Services) 
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정 하거나, 쿼리 Analysis Services 데이터에 연결 하는 클라이언트 응용 프로그램에서 작성 된 연결 문자열에 표시 될 수 연결 문자열 속성에 설명 합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정하거나 Analysis Services 데이터에 연결하고 쿼리하는 클라이언트 응용 프로그램에 의해 작성된 연결 문자열에 표시될 수 있는 연결 문자열 속성에 대해 설명합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.   
   
  응용 프로그램 코드에서 사용자 지정 연결 문자열을 작성하는 개발자는 ADOMD.NET 클라이언트에 대한 API 설명서를 검토하여 더 자세한 목록( <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
@@ -71,11 +72,11 @@ ms.lasthandoff: 01/08/2018
 |**EffectiveUserName**|서버에서 최종 사용자 ID를 가장해야 할 때 사용합니다. 계정은 domain\user 형식으로 지정합니다. 이 속성을 사용하려면 호출자가 Analysis Services에서 관리 권한을 갖고 있어야 합니다. SharePoint에서 Excel 통합 문서의 이 속성을 사용하는 방법에 대한 자세한 내용은 [SharePoint Server 2013에서 Analysis Services EffectiveUserName 사용](http://go.microsoft.com/fwlink/?LinkId=311905)을 참조하십시오. Reporting Services에서 이 속성을 사용하는 방법을 보려면 [SSAS에서 EffectiveUserName을 사용하여 가장하기](http://go.microsoft.com/fwlink/?LinkId=301385)를 참조하십시오.<br /><br /> **EffectiveUserName** 은 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치에서 사용 정보를 캡처하는 데 사용됩니다. 사용자 ID가 포함된 이벤트나 오류가 로그 파일에 기록될 수 있도록 사용자 ID가 서버에 제공됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]의 경우 권한 부여 목적으로는 사용되지 않습니다.|  
 |**Encrypt Password**|로컬 암호가 로컬 큐브를 암호화하는 데 사용될지 여부를 지정합니다. 유효한 값은 True 또는 False입니다. 기본값은 False입니다.|  
 |**암호화 암호**|암호화된 로컬 큐브를 해독하는 데 사용되는 암호입니다. 기본값은 비어 있습니다. 이 값은 사용자가 명시적으로 설정해야 합니다.|  
-|**Impersonation Level**|클라이언트를 가장할 때 서버에서 사용할 수 있는 가장 수준을 나타냅니다. 유효한 값은 다음과 같습니다.<br /><br /> -   익명. 클라이언트가 서버에 대해 익명입니다. 서버 프로세스가 클라이언트에 대한 정보를 얻을 수 없고 클라이언트를 가장할 수 없습니다.<br />-   ID. 서버 프로세스가 클라이언트 ID를 가져올 수 있습니다. 서버가 권한 부여를 위해 클라이언트 ID를 가장할 수 있지만 시스템 개체에는 클라이언트로 액세스할 수 없습니다.<br />-   가장. 이것은 기본값입니다. 클라이언트 ID를 가장할 수 있지만 연결이 설정된 경우에만 가능하며 일부 호출에서는 가장할 수 없습니다.<br />-   대리자. 서버 프로세스가 클라이언트를 대신해 동작하는 동안 클라이언트 보안 컨텍스트를 가장할 수 있습니다. 서버 프로세스는 또한 클라이언트를 대신해 동작하는 동안 다른 서버로 보내는 호출을 만들 수 있습니다.|  
+|**Impersonation Level**|클라이언트를 가장할 때 서버에서 사용할 수 있는 가장 수준을 나타냅니다. 유효한 값은 다음과 같습니다.<br /><br /> -   익명. 클라이언트가 서버에 대해 익명입니다. 서버 프로세스가 클라이언트에 대한 정보를 얻을 수 없고 클라이언트를 가장할 수 없습니다.<br />-   ID. 서버 프로세스가 클라이언트 ID를 가져올 수 있습니다. 서버가 권한 부여를 위해 클라이언트 ID를 가장할 수 있지만 시스템 개체에는 클라이언트로 액세스할 수 없습니다.<br />-   가장. 이 값은 기본값입니다. 클라이언트 ID를 가장할 수 있지만 연결이 설정된 경우에만 가능하며 일부 호출에서는 가장할 수 없습니다.<br />-   대리자. 서버 프로세스가 클라이언트를 대신해 동작하는 동안 클라이언트 보안 컨텍스트를 가장할 수 있습니다. 서버 프로세스는 또한 클라이언트를 대신해 동작하는 동안 다른 서버로 보내는 호출을 만들 수 있습니다.|  
 |**통합 보안**|호출자의 Windows ID는 Analysis Services에 연결하는 데 사용됩니다. 유효한 값은 공백, SSPI 및 BASIC입니다.<br /><br /> **Integrated Security**=**SSPI** 는 NTLM, Kerberos 또는 익명 인증을 허용하는 TCP 연결에 대한 기본값입니다. 공백은 HTTP 연결에 대한 기본값입니다.<br /><br /> **SSPI**를 사용하는 경우 **ProtectionLevel** 은 **Connect**, **PktIntegrity**, **PktPrivacy**중 하나로 설정되어야 합니다.|  
 |**Persist Encrypted**|클라이언트 응용 프로그램에서 데이터 원본 개체에 암호화된 형태로 암호와 같은 중요한 인증 정보를 유지해야 하는 경우 이 속성을 설정합니다. 기본적으로 인증 정보는 유지되지 않습니다.|  
 |**Persist Security Info**|유효한 값은 True 및 False입니다. True로 설정되면 연결이 설정된 후 연결 문자열에서 이전에 지정된 사용자 ID 또는 암호와 같은 보안 정보를 연결에서 가져올 수 있습니다. 기본값은 False입니다.|  
-|**보호 수준**|연결에서 사용되는 보안 수준을 결정합니다. 유효한 값은<br /><br /> -   **None**. 인증되지 않은 연결이나 익명 연결입니다. 서버에 전송되는 데이터에 대한 인증을 수행하지 않습니다.<br />-   **Connect**. 인증된 연결입니다. 클라이언트가 서버와 관계를 설정하는 경우에만 인증합니다.<br />-   **Pkt Integrity**. 암호화된 연결입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았는지 확인합니다.<br />-   **Pkt Privacy**. XMLA에만 지원되는 서명된 암호화입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았으며 암호화를 통해 데이터의 개인 정보를 보호하는지 확인합니다.<br /><br /> 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)를 참조하세요.|  
+|**보호 수준**|연결에서 사용되는 보안 수준을 결정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -   **None**. 인증되지 않은 연결이나 익명 연결입니다. 서버에 전송되는 데이터에 대한 인증을 수행하지 않습니다.<br />-   **Connect**. 인증된 연결입니다. 클라이언트가 서버와 관계를 설정하는 경우에만 인증합니다.<br />-   **Pkt Integrity**. 암호화된 연결입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았는지 확인합니다.<br />-   **Pkt Privacy**. XMLA에만 지원되는 서명된 암호화입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았으며 암호화를 통해 데이터의 개인 정보를 보호하는지 확인합니다.<br /><br /> 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)를 참조하세요.|  
 |**Roles**|해당 역할이 제공하는 사용 권한을 사용하여 서버 또는 데이터베이스에 연결할 미리 정의된 역할의 쉼표로 구분된 목록을 지정합니다. 이 속성을 생략하면 모든 역할이 사용되고 유효 사용 권한은 모든 역할의 조합이 됩니다. 이 속성을 빈 값으로 설정하면(예: Roles=’ ‘) 클라이언트 연결에 역할 멤버 자격이 없습니다.<br /><br /> 이 속성을 사용하는 관리자는 역할이 제공하는 사용 권한을 사용하여 연결됩니다.  일부 명령은 역할이 충분한 사용 권한을 제공하지 않는 경우 실패할 수도 있습니다.|  
 |**SSPI**|**Integrated Security** 가 **SSPI**로 설정된 경우 클라이언트 인증에 사용할 보안 패키지를 명시적으로 지정합니다. SSPI는 여러 패키지를 지원하지만 이 속성을 사용하여 특정 패키지를 지정할 수 있습니다. 유효한 값은 Negotiate, Kerberos, NTLM 및 Anonymous User입니다. 이 속성이 설정되지 않으면 모든 패키지를 연결에 사용할 수 있습니다.|  
 |**Use Encryption for Data**|데이터 전송을 암호화합니다. 유효한 값은 True 및 False입니다.|  

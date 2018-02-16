@@ -22,19 +22,20 @@ helpviewer_keywords:
 - mining model content, neural network models
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8368189052f70da2e93b7d87a13787bf1793b006
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>신경망 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 하는 Microsoft 신경망 알고리즘을 사용 하는 모델만 마이닝 모델 콘텐츠에 대해 설명 합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 항목에서는 Microsoft 신경망 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="understanding-the-structure-of-a-neural-network-model"></a>신경망 모델의 구조 이해  
  각 신경망 모델에는 모델 및 해당 메타데이터를 나타내는 단일 부모 노드와 입력 특성에 대한 기술 통계를 제공하는 특수한 한계 통계 노드(NODE_TYPE = 24)가 있습니다. 한계 통계 노드는 입력에 대한 정보를 요약하기 때문에 개별 노드에서 데이터를 쿼리하지 않아도 되므로 유용합니다.  
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
 |노드 유형 ID|Description|  
 |------------------|-----------------|  
-|1|모델|  
+|1.|모델|  
 |17|하위 네트워크의 구성 도우미 노드|  
 |18|입력 계층의 구성 도우미 노드|  
 |19|숨겨진 계층의 구성 도우미 노드.|  
@@ -243,7 +244,7 @@ ms.lasthandoff: 01/08/2018
  **연속 특성:** NODE_DISTRIBUTION 테이블의 마지막 두 행에 특성의 평균, 해당 노드 전체에 대한 계수 및 계수의 분산이 들어 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft 신경망 알고리즘](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft 신경망 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [신경망 모델 쿼리 예제](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   

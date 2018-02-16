@@ -19,19 +19,20 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>누락 값(Analysis Services - 데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]처리 *누락 값* 올바르게은 효과적인 모델링의 중요 한 부분입니다. 이 섹션에서는 누락 값의 정의를 알아보고, 데이터 마이닝 구조와 마이닝 모델을 빌드할 때 누락 값을 처리하기 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기능을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+*누락 값* 을 올바르게 처리하는 것은 효과적인 모델링을 위해 매우 중요합니다. 이 섹션에서는 누락 값의 정의를 알아보고, 데이터 마이닝 구조와 마이닝 모델을 빌드할 때 누락 값을 처리하기 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기능을 설명합니다.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>데이터 마이닝에서 누락 값의 정의  
  누락 값은 다양한 경우를 의미할 수 있습니다. 필드를 적용할 수 없었거나, 이벤트가 발생하지 않았거나, 데이터를 사용할 수 없었던 경우일 수 있습니다. 데이터를 입력한 사람이 올바른 값을 몰랐거나, 필드에 데이터가 채워졌는지 확인하지 않았을 수도 있습니다.  
@@ -54,10 +55,10 @@ ms.lasthandoff: 01/08/2018
   
  예를 들어 다음 표에서는 Bike Buyer 자습서에서 사용하기 위해 만든 의사 결정 트리 모델에 있는 (All) 노드에 대한 값의 분포를 보여 줍니다. 예제 시나리오에서 [Bike Buyer] 열은 예측 가능한 특성이며, 여기서 1은 "예"를 나타내고 0은 "아니요"를 나타냅니다.  
   
-|값|사례|  
+|Value|사례|  
 |-----------|-----------|  
 |0|9296|  
-|1|9098|  
+|1.|9098|  
 |Missing|0|  
   
  이 분포는 고객의 절반 정도는 자전거를 구입했고 나머지 절반은 구입하지 않았음을 보여 줍니다. 이 특정 데이터 집합은 아주 간결하여 모든 사례의 [Bike Buyer] 열에 값이 있고 **Missing** 값의 수가 0입니다. 그러나 [Bike Buyer] 필드에 Null이 있는 사례가 있으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 해당 행을 **Missing** 값을 가진 사례로 간주합니다.  
@@ -70,10 +71,10 @@ ms.lasthandoff: 01/08/2018
 ## <a name="adjusting-probability-for-missing-states"></a>누락 상태에 대한 확률 조정  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 값의 개수를 계산할 뿐 아니라 데이터 집합 값의 확률도 계산합니다. **Missing** 값의 경우에도 마찬가지입니다. 예를 들어 다음 표에서는 위의 예에 있는 사례에 대한 확률을 보여 줍니다.  
   
-|값|사례|Probability|  
+|Value|사례|Probability|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
-|1|9098|49.42%|  
+|1.|9098|49.42%|  
 |Missing|0|0.03%|  
   
  사례 수가 0인 경우 **Missing** 값의 확률이 0.03%로 계산된다는 사실이 이상해 보일 수 있습니다. 사실 이 동작은 의도적으로 설계된 동작이며 모델에서 알 수 없는 값을 정상적으로 처리할 수 있도록 하는 조정을 나타냅니다.  
@@ -114,13 +115,13 @@ ms.lasthandoff: 01/08/2018
   
 |태스크|링크|  
 |-----------|-----------|  
-|개별 모델 열에 누락 값의 처리를 제어하는 플래그를 추가|[모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|개별 모델 열에 누락 값의 처리를 제어하는 플래그를 추가|[모델링 플래그 &#40; 데이터 마이닝 &#41; 확인 또는 변경](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |마이닝 모델에 누락 값의 처리를 제어하는 속성을 설정|[마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|DMX에서 모델링 플래그를 지정하는 방법|[모델링 플래그&#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|마이닝 구조에서 누락 값을 처리하는 방법 변경|[마이닝 구조의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
+|DMX에서 모델링 플래그를 지정하는 방법|[모델링 플래그 &#40; DMX &#41;](../../dmx/modeling-flags-dmx.md)|  
+|마이닝 구조에서 누락 값을 처리하는 방법 변경|[마이닝 구조 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [모델링 플래그&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [마이닝 모델 콘텐츠 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [모델링 플래그 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

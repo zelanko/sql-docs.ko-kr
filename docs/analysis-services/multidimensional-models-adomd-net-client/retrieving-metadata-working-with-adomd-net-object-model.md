@@ -1,7 +1,7 @@
 ---
 title: "ADOMD.NET 개체 모델 사용 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - object model (client) [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e94ba0d7842e40a1535ae865fd6440f4c16eee68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d5ab7348371437e79b52f16c98890aa2c93431b8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>ADOMD.NET 개체 모델 사용-메타 데이터 검색
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET에서는 큐브 및 분석 데이터 원본에 포함 된 하위 개체를 보기 위한 개체 모델을 제공 합니다. 하지만 개체 모델을 통해 특정 분석 데이터 원본의 모든 메타데이터를 사용할 수 있는 것은 아닙니다. 개체 모델을 통해서는 클라이언트 응용 프로그램에서 사용자가 대화형으로 명령을 생성할 수 있도록 하기 위해 표시하기에 가장 유용한 정보에만 액세스할 수 있습니다. 제공되는 메타데이터의 복잡성이 줄어들기 때문에 ADOMD.NET 개체 모델은 보다 사용하기 쉽습니다.  
+  ADOMD.NET에서는 분석 데이터 원본에 들어 있는 큐브 및 하위 개체를 보기 위한 개체 모델을 제공합니다. 하지만 개체 모델을 통해 특정 분석 데이터 원본의 모든 메타데이터를 사용할 수 있는 것은 아닙니다. 개체 모델을 통해서는 클라이언트 응용 프로그램에서 사용자가 대화형으로 명령을 생성할 수 있도록 하기 위해 표시하기에 가장 유용한 정보에만 액세스할 수 있습니다. 제공되는 메타데이터의 복잡성이 줄어들기 때문에 ADOMD.NET 개체 모델은 보다 사용하기 쉽습니다.  
   
  ADOMD.NET 개체 모델에서 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체는 분석 데이터 원본에 정의된 OLAP(온라인 분석 처리) 큐브 및 마이닝 모델과 차원, 명명된 집합, 마이닝 알고리즘 등의 관련 개체에 대한 정보에 액세스할 수 있게 해 줍니다.  
   

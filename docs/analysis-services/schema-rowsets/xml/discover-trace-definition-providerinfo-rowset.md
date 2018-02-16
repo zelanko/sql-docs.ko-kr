@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8dda2ef7-202a-454b-93f9-a2b29c2d277c
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2dc1525abfdef6b54311f1a2eb470b8350a04cc8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertracedefinitionproviderinfo-rowset"></a>DISCOVER_TRACE_DEFINITION_PROVIDERINFO 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이름 및 설명과 같은 추적 공급자에 대 한 기본 정보를 반환합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+추적 공급자의 이름 및 설명과 같은 추적 공급자에 대한 기본 정보를 반환합니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**Data**|**DBTYPE_WSTR**|예|공급자 이름, 버전, 빌드 번호 및 설명을 비롯한 추적 공급자를 설명하는 인코딩된 XML 문자열을 포함합니다.|  
+|**데이터**|**DBTYPE_WSTR**|예|공급자 이름, 버전, 빌드 번호 및 설명을 비롯한 추적 공급자를 설명하는 인코딩된 XML 문자열을 포함합니다.|  
   
  이 스키마 행 집합은 정렬되지 않습니다.  
   

@@ -24,10 +24,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>위치 지정된 Update 및 Delete 문은
 응용 프로그램 업데이트 또는 위치 지정된 업데이트 된 결과 집합의 현재 행을 삭제 또는 delete 문의 수 있습니다. 위치 update 및 delete 문이에서 일부 데이터 원본의 경우에 지원 됩니다. 데이터 원본에서 지 원하는 배치 update 및 delete 문 여부를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ 특성을 1 또는 SQL_STATIC_CURSOR_ATTRIBUTES1 *정보 항목* (커서 유형)에 따라 다름. 배치에서 ODBC 커서 라이브러리를 시뮬레이션 하는 참고 update 및 delete 문입니다.  

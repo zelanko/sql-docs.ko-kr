@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>차원 및 파티션에 대한 문자열 저장소 구성
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]차원 특성 또는 파티션의 문자열 저장소에 대 한 4GB 파일 크기 제한을 초과 하는 매우 큰 문자열을 수용 하기 위해 문자열 저장소를 다시 구성할 수 있습니다. 차원 또는 파티션이 이 크기의 문자열 저장소를 포함하는 경우, 연결된(로컬 또는 원격) 개체는 물론 로컬 개체에 대해 차원 또는 파티션 수준에서 **StringStoresCompatibilityLevel** 속성을 변경하여 파일 크기 제한을 해결할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+문자열 저장소에 대한 4GB 파일 크기 제한을 초과하는 차원 특성 또는 파티션의 매우 큰 문자열을 수용할 수 있도록 문자열 저장소를 다시 구성할 수 있습니다. 차원 또는 파티션이 이 크기의 문자열 저장소를 포함하는 경우, 연결된(로컬 또는 원격) 개체는 물론 로컬 개체에 대해 차원 또는 파티션 수준에서 **StringStoresCompatibilityLevel** 속성을 변경하여 파일 크기 제한을 해결할 수 있습니다.  
   
  추가 용량을 필요로 하는 개체에 대해서만 문자열 저장소를 늘릴 수 있습니다. 대부분의 다차원 모델에서 문자열 데이터는 차원과 연결됩니다. 하지만 문자열의 맨 위에 고유 카운트 측정값이 들어 있는 파티션도 이 설정의 혜택을 받을 수 있습니다. 이 설정은 문자열용이므로 숫자 데이터는 영향을 받지 않습니다.  
   
  이 속성에 유효한 값은 다음과 같습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1050**|저장소당 최대 파일 크기가 4GB인 기본 문자열 저장소 아키텍처를 지정합니다.|  
 |**1100**|저장소당 최대 40억 개의 고유 문자열을 지원하는 더 큰 문자열 저장소를 지정합니다.|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [도구 및 처리 접근 방법&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [처리 옵션 및 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [처리 옵션 및 설정 &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [파티션 저장소 모드 및 처리](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [차원 저장소](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

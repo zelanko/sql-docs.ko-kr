@@ -18,19 +18,20 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: abe5ce23dfb6f16fcc8fb27f16918895f6a51650
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]확장 이벤트 (*xEvents*)은 경량 추적 및 성능 모니터링 매우 적은 시스템 리소스를 사용 하 여 시스템을는 프로덕션 및 테스트 서버에서 문제를 진단 하는 데 이상적인 도구입니다. 또한, 확장성이 뛰어나고 구성 가능하며 SQL Server 2016에서는 새롭게 기본적으로 제공되는 도구 지원을 통해 쉽게 사용할 수 있습니다. SQL Server Management Studio의 Analysis Services 인스턴스에 연결에서 SQL Server Profiler를 사용하는 방식과 유사하게 실시간 추적을 구성, 실행 및 모니터링할 수 있습니다. 향상된 도구가 추가되어 SQL Server Profiler에서 xEvent를 좀 더 적절하게 교체하고 데이터베이스 엔진 및 Analysis Services 작업에서 문제를 좀 더 대칭적으로 진단할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+확장 이벤트(*xEvents*)는 매우 적은 시스템 리소스를 사용하는 경량 추적 및 성능 모니터링 시스템으로 제품 및 테스트 서버 모두에서 문제를 진단하는 데 이상적인 도구입니다. 또한, 확장성이 뛰어나고 구성 가능하며 SQL Server 2016에서는 새롭게 기본적으로 제공되는 도구 지원을 통해 쉽게 사용할 수 있습니다. SQL Server Management Studio의 Analysis Services 인스턴스에 연결에서 SQL Server Profiler를 사용하는 방식과 유사하게 실시간 추적을 구성, 실행 및 모니터링할 수 있습니다. 향상된 도구가 추가되어 SQL Server Profiler에서 xEvent를 좀 더 적절하게 교체하고 데이터베이스 엔진 및 Analysis Services 작업에서 문제를 좀 더 대칭적으로 진단할 수 있습니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]뿐만 아니라, 이전 릴리스도 지원되기 때문에 XMLA 스크립팅을 통해  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 확장 이벤트 세션을 기존 방식으로 구성할 수도 있습니다.  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  **구성** 은 대화 상자의 먼 쪽에 있는 옵션입니다.  
   
- ![ssas xevents 구성](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas xevents 구성")  
+ ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
   
  이벤트 필드 탭의 구성에서 **TextData** 를 선택하면 이벤트 옆에 서버에서 실행 중인 쿼리 등의 반환 값을 보여주는 이 필드가 표시됩니다.  
   

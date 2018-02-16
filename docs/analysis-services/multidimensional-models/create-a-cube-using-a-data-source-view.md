@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1a78f2353c7d6afa88adc0bd76c4031b9224363b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>데이터 원본 뷰를 사용하여 큐브 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]기존 데이터 원본 뷰를 사용 하려는 경우 새 큐브를 생성 하는이 방법을 사용 합니다. 이 방법을 사용하여 데이터 원본 뷰를 지정하고 데이터 원본 뷰에서 사용할 팩트 및 차원 테이블을 선택합니다. 그런 다음 큐브에 포함할 차원과 측정값을 선택합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+기존 데이터 원본 뷰를 사용하려는 경우 새 큐브를 생성하는 이 방법을 사용합니다. 이 방법을 사용하여 데이터 원본 뷰를 지정하고 데이터 원본 뷰에서 사용할 팩트 및 차원 테이블을 선택합니다. 그런 다음 큐브에 포함할 차원과 측정값을 선택합니다.  
   
  데이터 원본을 사용하여 큐브를 만들려면 솔루션 탐색기에서 **큐브** 를 마우스 오른쪽 단추로 클릭하고 **새 큐브**를 선택합니다. 큐브 마법사가 열립니다.  
   

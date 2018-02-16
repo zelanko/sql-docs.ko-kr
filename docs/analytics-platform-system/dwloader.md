@@ -16,10 +16,10 @@ ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: 
 ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader 명령줄 로더
 **dwloader** 는 기존 테이블에 대량으로 테이블 행을 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다. 행을 로드할 때 테이블의 끝에 모든 행을 추가할 수 있습니다 (*추가 모드* 또는 *fastappend 모드*), 새 행이 추가 및 기존 행을 업데이트 (*upsert 모드*)을 모두 삭제 하거나 행 로드 하기 전에 기존 한 다음 빈 테이블에 모든 행을 삽입 (*모드를 다시 로드*).  

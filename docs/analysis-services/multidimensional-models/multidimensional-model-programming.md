@@ -11,32 +11,34 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 77aa1ba7d28147c6aa2ba4ea1e7c9deb02544f91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-programming"></a>다차원 모델 프로그래밍
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 여러 Api를 제공 사용할 수 있도록에 다차원 데이터베이스와 Analysis Services 인스턴스에 대 한 프로그래밍을 사용할 수 있습니다. 이 섹션에서는 Analysis Services 다차원 솔루션을 사용하여 사용자 지정 응용 프로그램을 만들려는 개발자를 위한 접근 방법을 설명합니다. 이 정보를 활용하여 특정 프로젝트의 요구 사항에 가장 적합한 프로그래밍 인터페이스를 선택할 수 있습니다. Analysis Services 개발 프로젝트는 Windows 플랫폼이나 HTTP 액세스를 지원하는 다른 플랫폼에서 실행되는 관리 또는 비관리 코드를 기반으로 할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 Analysis Services 인스턴스와 사용 가능한 다차원 데이터베이스에 대한 프로그래밍을 위해 사용할 수 있는 여러 API를 제공합니다. 이 섹션에서는 Analysis Services 다차원 솔루션을 사용하여 사용자 지정 응용 프로그램을 만들려는 개발자를 위한 접근 방법을 설명합니다. 이 정보를 활용하여 특정 프로젝트의 요구 사항에 가장 적합한 프로그래밍 인터페이스를 선택할 수 있습니다. Analysis Services 개발 프로젝트는 Windows 플랫폼이나 HTTP 액세스를 지원하는 다른 플랫폼에서 실행되는 관리 또는 비관리 코드를 기반으로 할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Microsoft OLAP 아키텍처 이해](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
- [ADOMD.NET을 사용하여 개발](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [ADOMD.NET을 사용 하 여 개발](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
- [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [분석 관리 개체 &#40;를 사용 하 여 개발 AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
- [Analysis Services에서 XMLA를 사용하여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services에서 XMLA를 사용 하 여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
- [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [스크립팅 언어 &#40; Analysis Services를 사용 하 여 개발 ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [OLAP 기능 확장](../../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md)  
   

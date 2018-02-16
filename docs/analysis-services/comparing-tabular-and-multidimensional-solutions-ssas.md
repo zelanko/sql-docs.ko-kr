@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>테이블 형식 및 다차원 솔루션 비교
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -160,7 +160,7 @@ ms.lasthandoff: 01/22/2018
   
 |모델링 도구|사용 방법|  
 |-------------------|--------------|  
-|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|데이터 마이닝 솔루션 및 테이블 형식, 다차원, 만들 하려면 사용 합니다. 이 제작 환경에서는 Visual Studio 셸을 사용하여 작업 영역, 속성 창 및 개체 탐색을 제공합니다. Visual Studio를 이미 사용 중인 기술 사용자는 비즈니스 인텔리전스 응용 프로그램을 생성할 때 대부분 이 도구를 선호합니다.|  
+|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|데이터 마이닝 솔루션 및 테이블 형식, 다차원, 만들 하려면 사용 합니다. 이 제작 환경에서는 Visual Studio 셸을 사용하여 작업 영역, 속성 창 및 개체 탐색을 제공합니다. Visual  Studio를 이미 사용 중인 기술 사용자는 비즈니스 인텔리전스 응용 프로그램을 생성할 때 대부분 이 도구를 선호합니다.|  
 |[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for Excel|나중에 SharePoint용 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 이 설치된 SharePoint 팜에 배포할 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 통합 문서를 만드는 데 사용됩니다. Excel용[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 에는 Excel에서 열리는 별도의 응용 프로그램 작업 영역이 있습니다. 사용되는 시각적 요소(탭 페이지,  모눈 레이아웃 및 수식 표시줄)는 Excel과 동일합니다. Excel에 능숙한 사용자는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 이 도구를 사용하는 것을 선호할 것입니다.|  
   
 ##  <a name="bkmk_client"></a> 클라이언트 응용 프로그램 지원  
@@ -168,7 +168,7 @@ ms.lasthandoff: 01/22/2018
  
  Reporting  Services를 사용하는 경우 보고서 기능의 가용성은 버전 및 서버 모드에 따라 다릅니다. 따라서 작성하려는 보고서 유형은 설치하려고 선택하는 서버 모드에 영향을 줄 수 있습니다.  
   
- SharePoint에서 실행되는 Reporting Services 제작 도구인[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]는 SharePoint 2010 팜에 배포된 보고서 서버에서 사용할 수 있습니다. 이 보고서에 사용할 수 있는 데이터 원본 유형은 Analysis Services 테이블 형식 데이터베이스 또는 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 통합 문서뿐입니다. 따라서 이 보고서 유형에 사용되는 데이터 원본을 호스팅할 테이블 형식 모드 서버 또는 SharePoint용 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 서버가 있어야 합니다. 다차원 모델은 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 보고서의 데이터 원본으로 사용할 수 없습니다. [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 보고서에 대한 데이터 원본으로 사용하려면 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] BI 의미 체계 모델 연결 또는 Reporting Services 공유 데이터 원본을 만들어야 합니다.  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]는 SharePoint  2010  팜에 배포된 보고서 서버에서 사용할 수 있습니다. 이 보고서에 사용할 수 있는 데이터 원본 유형은 Analysis Services 테이블 형식 데이터베이스 또는 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 통합 문서뿐입니다. 따라서 이 보고서 유형에 사용되는 데이터 원본을 호스팅할 테이블 형식 모드 서버 또는 SharePoint용 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 서버가 있어야 합니다. 다차원 모델은 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 보고서의 데이터 원본으로 사용할 수 없습니다. [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 보고서에 대한 데이터 원본으로 사용하려면 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] BI 의미 체계 모델 연결 또는 Reporting Services 공유 데이터 원본을 만들어야 합니다.  
   
  보고서 작성기 및 보고서 디자이너는 SharePoint용 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 에서 호스트되는 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 통합 문서를 포함하여 모든 Analysis Services 데이터베이스를 사용할 수 있습니다.  
   

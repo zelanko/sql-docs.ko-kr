@@ -18,19 +18,20 @@ helpviewer_keywords:
 - UPDATE CUBE statement
 - cubes [Analysis Services], writeback
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f658740766736a83dd374cf647523ea9f8e2bfe4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>MDX 데이터 수정-쓰기 되돌림 큐브를 사용 하 여
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]사용 하 여 큐브를 업데이트는 [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) 문. 이 문은 특정 값을 가진 튜플을 업데이트할 수 있도록 해줍니다. 큐브 업데이트에 UPDATE CUBE 문을 효과적으로 사용하기 위해서는 문의 구문, 발생할 수 있는 오류 조건 및 업데이트로 인한 큐브의 영향을 이해해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+큐브를 업데이트하는 데는 [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) 문을 사용합니다. 이 문은 특정 값을 가진 튜플을 업데이트할 수 있도록 해줍니다. 큐브 업데이트에 UPDATE CUBE 문을 효과적으로 사용하기 위해서는 문의 구문, 발생할 수 있는 오류 조건 및 업데이트로 인한 큐브의 영향을 이해해야 합니다.  
   
 ## <a name="update-cube-statement-syntax"></a>UPDATE CUBE 문 구문  
  다음은 UPDATE CUBE 문의 구문입니다.  
@@ -123,6 +124,6 @@ USE_EQUAL_ALLOCATION
 -   쓰기 저장(writeback)에 포함된 차원의 차원 세분성 변경  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터 수정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [데이터 &#40; 수정 Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

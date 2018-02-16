@@ -19,19 +19,20 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>리프트 차트(Analysis Services - 데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *리프트 차트* 임의 추측에 대해 비교할 때 마이닝 모델을 제공 하는 향상률을 나타냅니다 그래픽과 변경의 측면에서 측정 한 *리프트* 점수입니다. 서로 다른 모델에 대한 리프트 점수를 비교하여 가장 적합한 모델을 확인할 수 있습니다. 또한 모델의 예측이 유용하지 않은 지점을 확인할 수 있습니다. 예를 들어 리프트 차트를 검토하면 프로모션 캠페인이 30%의 고객에게만 효과적임을 파악하고 해당 수치를 사용하여 캠페인의 범위를 제한할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A *리프트 chart* 는 임의 추측에 대해 비교할 때 마이닝 모델이 제공하는 향상률을 그래픽으로 나타내며 *리프트* 점수를 기준으로 변화를 측정합니다. 서로 다른 모델에 대한 리프트 점수를 비교하여 가장 적합한 모델을 확인할 수 있습니다. 또한 모델의 예측이 유용하지 않은 지점을 확인할 수 있습니다. 예를 들어 리프트 차트를 검토하면 프로모션 캠페인이 30%의 고객에게만 효과적임을 파악하고 해당 수치를 사용하여 캠페인의 범위를 제한할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에서는 리프트 차트를 사용하여 동일한 예측 가능한 특성이 있는 여러 모델의 정확도를 비교할 수 있습니다. 단일 결과(예측 가능한 특성의 단일 값)에 대해 또는 모든 결과(지정된 특성의 모든 값)에 대해 예측의 정확도를 평가할 수도 있습니다.  
   

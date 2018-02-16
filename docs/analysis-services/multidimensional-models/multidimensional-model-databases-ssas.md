@@ -20,19 +20,20 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, databases [Analysis Services]
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 854371e81b8adf0ecf32c2685e64f5d136d00987
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-databases-ssas"></a>다차원 model 데이터베이스(SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 데이터 원본, 데이터 원본 뷰, 큐브, 차원 및 역할의 모음입니다. 필요에 따라 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에는 데이터 마이닝 구조 및 데이터베이스에 사용자 정의 기능을 추가하기 위한 방법을 제공하는 사용자 지정 어셈블리가 포함될 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 데이터 원본, 데이터 원본 뷰, 큐브, 차원 및 역할의 모음입니다. 필요에 따라 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에는 데이터 마이닝 구조 및 데이터베이스에 사용자 정의 기능을 추가하기 위한 방법을 제공하는 사용자 지정 어셈블리가 포함될 수 있습니다.  
   
  큐브는 Analysis Services의 기본 쿼리 개체입니다. 클라이언트 응용 프로그램을 통해 Analysis Services 데이터베이스에 연결하면 해당 데이터베이스 내의 큐브에 연결됩니다. 차원, 어셈블리, 역할 또는 마이닝 구조를 여러 컨텍스트에서 다시 사용할 경우 데이터베이스에 여러 개의 큐브가 있을 수 있습니다.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
  [Analysis Services 데이터베이스 동기화](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [온라인 모드로 Analysis Services 데이터베이스에 연결](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)   

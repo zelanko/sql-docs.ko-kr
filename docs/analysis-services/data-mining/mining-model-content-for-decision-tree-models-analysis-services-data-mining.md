@@ -16,19 +16,20 @@ helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 설명 하는 사용 하는 모델만 마이닝 모델 콘텐츠에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘입니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요. Microsoft 의사 결정 트리 알고리즘은 매우 다양한 함수로 모델을 만들 수 있는 하이브리드 알고리즘이라는 사실을 기억해야 합니다. 의사 결정 트리는 연결, 규칙 또는 선형 회귀를 나타낼 수 있습니다. 트리의 구조는 기본적으로 동일하지만 정보를 해석하는 방법은 모델을 만든 목적에 따라 달라집니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요. Microsoft 의사 결정 트리 알고리즘은 매우 다양한 함수로 모델을 만들 수 있는 하이브리드 알고리즘이라는 사실을 기억해야 합니다. 의사 결정 트리는 연결, 규칙 또는 선형 회귀를 나타낼 수 있습니다. 트리의 구조는 기본적으로 동일하지만 정보를 해석하는 방법은 모델을 만든 목적에 따라 달라집니다.  
   
 ##  <a name="bkmk_Top"></a> 의사 결정 트리 모델의 구조 이해  
  의사 결정 트리 모델에는 모델 및 해당 메타데이터를 나타내는 단일 부모 노드가 있습니다. 이 부모 노드 아래에는 선택한 예측 가능 특성을 나타내는 독립적인 트리가 있습니다. 예를 들어 고객이 제품을 구매할지 여부를 예측하도록 의사 결정 트리 모델을 설정하고 성별 및 수입에 대한 입력을 제공할 경우, 해당 모델은 성별 및 수입과 관련된 조건에 따라 나뉘는 여러 분기를 사용하여 구매 특성에 대한 단일 트리를 만듭니다.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
  Microsoft 의사 결정 트리 알고리즘에서는 연속 데이터 형식을 입력으로 사용할 수 없으므로 열에 연속 숫자 데이터 형식이 있는 경우 해당 값은 불연속화됩니다. 알고리즘은 모든 연속 특성에 대해 분할 지점에서 해당 알고리즘 방식의 분할을 수행합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]연속 특성을 버킷 팅;에 대 한 메서드를 자동으로 선택 그러나 입력의 방법을 연속 값을 제어할 수 있습니다에 마이닝 구조 열의 내용 유형을 설정 하 여 분할 **Discretized** 로 설정한 다음는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 또는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 속성입니다.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연속 특성을 버킷 팅;에 대 한 메서드를 자동으로 선택 그러나 입력의 방법을 연속 값을 제어할 수 있습니다에 마이닝 구조 열의 내용 유형을 설정 하 여 분할 **Discretized** 로 설정한 다음는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 또는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 속성입니다.  
   
  [Top](#bkmk_Top)  
   
@@ -212,7 +213,7 @@ ms.lasthandoff: 01/08/2018
  XML 조각으로 표현되는 특성은 단순한 특성이거나 복잡한 특성일 수 있습니다. 단순한 특성에는 모델 열의 이름과 특성 값이 포함됩니다. 모델 열에 중첩 테이블이 들어 있는 경우 중첩 테이블 특성은 테이블 이름, 키 값 및 특성의 연결로 표현됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 중첩 테이블 사용을 지원하는 확장과 함께 2.0 버전의 PMML 표준을 지원합니다. 데이터에 중첩 테이블이 들어 있는 경우 PMML 버전의 모델을 생성하면 해당 모델에서 조건자가 포함된 모든 요소는 확장으로 표시됩니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 중첩된 테이블 사용을 지 원하는 확장과 함께 2.0 버전의 PMML 표준을 지원 합니다. 데이터에 중첩 테이블이 들어 있는 경우 PMML 버전의 모델을 생성하면 해당 모델에서 조건자가 포함된 모든 요소는 확장으로 표시됩니다.  
   
  [Top](#bkmk_Top)  
   
@@ -300,7 +301,7 @@ ms.lasthandoff: 01/08/2018
  회귀 노드에 대한 자세한 내용은 [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 의사 결정 트리 알고리즘](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9c68d97f72337a141be4f50e7ad775a9dff647f4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection"></a>연결을 설정 하는 동안 오류가 발생 했습니다.
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 오류는 쿼리 하는 경우 발생 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 하지 않은 서버에서 데이터를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint가 설치에 대 한 합니다. 또한 SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 서비스가 중지되었거나 이전 버전에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 보려는 경우에도 발생합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 오류는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 이 설치되어 있지 않은 서버에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 쿼리하면 발생합니다. 또한 SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 서비스가 중지되었거나 이전 버전에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 보려는 경우에도 발생합니다.  
   
 ## <a name="details"></a>세부 정보  
   
@@ -48,6 +49,6 @@ ms.lasthandoff: 01/08/2018
  SQL Server 2008 R2 버전의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel에서 만든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 경우 SQL Server 2008 R2 버전의 Analysis Services OLE DB 공급자를 설치해야 합니다. 이 오류는 공급자를 설치했지만 Microsoft.AnalysisServices.ChannelTransport.dll 파일을 등록하지 않은 경우 발생합니다. 파일 등록에 대한 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. Power Pivot 데이터 연결을 새로 고치지 못했습니다.](../../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md)  
+ [Windows 인증을 사용 하는 데이터 연결 및 사용자 자격 증명을 위임할 수 없습니다. Power Pivot 데이터 연결을 새로 고치지 못했습니다.](../../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md)  
   
   

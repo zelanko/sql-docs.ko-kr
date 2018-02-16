@@ -22,10 +22,10 @@ ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 개요
 ADO 또는 RDS 프로그래머가 이상적인 것 모든 데이터에서 원본에서 OLE DB 인터페이스를 제공 ADO 데이터 원본으로 직접 호출할 수 있도록 합니다. 하지만 점점 더 많은 데이터베이스 공급 업체 OLE DB 인터페이스를 구현 하는 경우 일부 데이터 원본은이 방식으로 아직 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템 ODBC를 통해 액세스할 수 있습니다.

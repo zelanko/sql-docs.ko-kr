@@ -17,19 +17,20 @@ helpviewer_keywords:
 - drillthrough actions [Analysis Services]
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6c68c3d8eba2ec1519c38a89c7a1b0b71f3be4e3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-in-multidimensional-models"></a>다차원 모델의 동작
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]동작은 선택한 큐브 또는 큐브의 일부분에 대해 최종 사용자가 시작한 작업입니다. 작업은 선택한 항목을 매개 변수로 응용 프로그램을 시작하거나 선택한 항목에 대한 정보를 검색할 수 있습니다. 동작에 대한 자세한 내용은 [동작&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+동작이란 선택한 큐브 또는 큐브의 일부분에 대해 최종 사용자가 시작하는 동작입니다. 작업은 선택한 항목을 매개 변수로 응용 프로그램을 시작하거나 선택한 항목에 대한 정보를 검색할 수 있습니다. 동작에 대한 자세한 내용은 [동작&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)을 참조하세요.  
   
  큐브 디자이너의 **동작** 탭을 사용하여 큐브에 대한 작업을 만들 수 있습니다. 다음을 지정합니다.  
   
@@ -120,7 +121,7 @@ parametervalue1
 & ...  
 ```  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  

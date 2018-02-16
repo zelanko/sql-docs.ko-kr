@@ -17,19 +17,20 @@ helpviewer_keywords:
 - custom member properties [MDX]
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1fb9052d74a19941a41a915e12acec04bfc38f1c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>MDX 데이터 조작 RollupChildren 함수
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) [RollupChildren](../../../mdx/rollupchildren-mdx.md) 함수는 각 자식에 다른 단항 연산자를 적용 하는 멤버의 자식을를 롤업 하 고이 롤업 값을 반환 합니다. 자식 멤버와 관련된 멤버 속성에서 단항 연산자를 제공하거나 함수에 직접 제공되는 문자열 식이 단항 연산자가 될 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+MDX [RollupChildren](../../../mdx/rollupchildren-mdx.md) 함수는 멤버의 자식을 롤업하여 각각의 자식에 다른 단항 연산자를 적용하고 이 롤업 값을 멤버로 반환합니다. 자식 멤버와 관련된 멤버 속성에서 단항 연산자를 제공하거나 함수에 직접 제공되는 문자열 식이 단항 연산자가 될 수 있습니다.  
   
 ## <a name="rollupchildren-function-examples"></a>RollupChildren 함수 예  
  MDX 문에서 **RollupChildren** 함수를 사용하는 방법을 설명하기는 쉽지만 MDX 쿼리에 미치는 이 함수의 효과는 매우 다양할 수 있습니다.  
@@ -79,6 +80,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  이 MDX 문은 자식 멤버의 단항 연산자를 검사합니다. 국내 및 해외 수입 멤버의 경우에서와 같이 단항 연산자를 빼기에 사용하는 경우 **IIf** 함수가 물결표(~) 단항 연산자를 대체합니다. 그렇지 않으면 **IIf** 함수는 자식 멤버의 단항 연산자를 사용합니다. 마지막으로 반환된 롤업 합계에 1.1을 곱하면 국내 및 해외 총 판매 예측 값이 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터 조작&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [데이터 &#40; 조작 Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

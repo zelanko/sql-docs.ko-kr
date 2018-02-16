@@ -17,19 +17,20 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ea4b76bc06098491a1ef7025b326cc254a5e1cdc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 설명 하는 사용 하는 모델만 마이닝 모델 콘텐츠에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘입니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Naive Bayes 모델의 구조 이해  
  Naive Bayes 모델에는 모델 및 해당 메타데이터를 나타내는 단일 부모 노드가 있으며 이 부모 노드 아래에는 사용자가 선택한 예측 가능 특성을 나타내는 여러 개의 독립적인 트리가 있습니다. 특성에 대한 트리 외에도 각 모델에는 학습 사례 집합에 대한 기술 통계를 제공하는 하나의 한계 통계 노드(NODE_TYPE = 26)가 포함됩니다. 자세한 내용은 [한계 통계 노드의 정보](#bkmk_margstats)를 참조하십시오.  
@@ -263,11 +264,11 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  예상 결과:  
   
-|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1.|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|1.|4216|0.527065883|4|  
   
  이러한 결과에서 SUPPORT 열의 값은 자전거를 구매한 고객 수를 결혼 여부와 함께 알려 줍니다. PROBABILITY 열에는 이 노드에 대해서만 계산되는 각 특성 값의 확률이 포함됩니다. NODE_DISTRIBUTION 테이블에서 사용되는 용어의 일반적인 정의는 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
@@ -276,16 +277,16 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Bike Buyer|Missing|0|0|0|1|  
+|Bike Buyer|Missing|0|0|0|1.|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|1|8615|0.492736216|0|4|  
-|Marital Status|Missing|0|0|0|1|  
+|Bike Buyer|1.|8615|0.492736216|0|4|  
+|Marital Status|Missing|0|0|0|1.|  
 |Marital Status|S|7999|0.457504004|0|4|  
 |Marital Status|M|9485|0.542495996|0|4|  
-|Total Children|Missing|0|0|0|1|  
+|Total Children|Missing|0|0|0|1.|  
 |Total Children|0|4865|0.278254404|0|4|  
 |Total Children|3|2093|0.119709449|0|4|  
-|Total Children|1|3406|0.19480668|0|4|  
+|Total Children|1.|3406|0.19480668|0|4|  
   
  한계 통계 노드는 항상 예측 가능한 특성 및 해당 특성의 가능한 값에 대한 설명을 포함하므로 [Bike Buyer] 열이 포함됩니다. 나열된 다른 모든 열은 입력 특성을 모델에 사용된 값과 함께 나타냅니다. 값은 Missing, Discrete 또는 Discretized만 될 수 있습니다.  
   
@@ -294,7 +295,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  **Missing** 값(VALUE_TYPE = 1)은 모든 입력 및 출력 특성에 추가되어 학습 데이터에 없었던 잠재적인 값을 나타냅니다. 문자열 "missing"과 기본 **Missing** 값을 주의해서 구별해야 합니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Naive Bayes 알고리즘](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

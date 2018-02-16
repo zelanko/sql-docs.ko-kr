@@ -22,19 +22,20 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4467fa9fcf4b695b77d533e358019b020545861c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="time-series-model-query-examples"></a>시계열 모델 쿼리 예제
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 모델에 대 한 쿼리를 만들 때 내용 쿼리, 분석 시 발견 된 패턴에 대 한 세부 정보에 제공 하는 만들 수 있습니다 또는 패턴을 사용 하는 모델에 새 데이터에 대 한 예측을 만드는 예측 쿼리를 만들 수 있습니다. 예를 들어 시계열 모델에 대한 내용 쿼리는 검색된 주기 구조에 대한 추가 세부 정보를 제공할 수 있고 예측 쿼리는 다음 5-10개의 시간 조각에 대한 예측을 제공할 수 있습니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 예를 들어 시계열 모델에 대한 내용 쿼리는 검색된 주기 구조에 대한 추가 세부 정보를 제공할 수 있고 예측 쿼리는 다음 5-10개의 시간 조각에 대한 예측을 제공할 수 있습니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
   
  이 섹션에서는 Microsoft 시계열 알고리즘을 기반으로 하는 모델에 대해 이러한 두 종류의 쿼리를 만드는 방법에 대해 설명합니다.  
   
@@ -104,10 +105,10 @@ WHERE NODE_NAME = 'TA00000007'
   
  예제 결과:  
   
-|약식 수식|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|약식 수식|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1.|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
  이 정보를 해석하는 방법은 [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)를 참조하세요.  
@@ -193,7 +194,7 @@ AND NODE_TYPE = 15
   
  **REPLACE_MODEL_CASES** 인수를 사용하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 사례 집합의 끝에 새 사례를 계속해서 추가하고 해당되는 수만큼을 사례 집합의 시작부터 삭제합니다. 원래의 학습 집합에서보다 더 많은 수의 새 데이터를 추가할 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 가장 앞선 데이터를 버립니다. 새 값을 충분히 제공하면 예측은 완전히 새로운 데이터를 기반으로 할 수 있습니다.  
   
- 예를 들어 1000개의 행을 포함하는 사례 데이터 집합에서 모델을 학습시켰습니다. 그 후 100개 행의 새 데이터를 추가합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 총 1000개의 행이 되도록 학습 집합에서 처음 100개의 행을 삭제하고 집합의 끝에 100개 행의 새 데이터를 추가합니다. 1100개 행의 새 데이터를 추가할 경우 최근 순서대로 1000개 행만 사용됩니다.  
+ 예를 들어 1000개의 행을 포함하는 사례 데이터 집합에서 모델을 학습시켰습니다. 그 후 100개 행의 새 데이터를 추가합니다. 그 후 100개 행의 새 데이터를 추가합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 총 1000개의 행이 되도록 학습 집합에서 처음 100개의 행을 삭제하고 집합의 끝에 100개 행의 새 데이터를 추가합니다. 1100개 행의 새 데이터를 추가할 경우 최근 순서대로 1000개 행만 사용됩니다.  
   
  다른 예를 살펴보겠습니다. 3개월 분량의 새 데이터를 추가하고 3개의 새로운 예측을 수행하려면 다음과 같이 합니다.  
   
@@ -221,11 +222,11 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |예측 함수|사용법|  
-|[Lag&#40;DMX&#41;](../../dmx/lag-dmx.md)|현재 사례의 날짜와 학습 집합의 마지막 날짜 간의 시간 조각을 여러 개 반환합니다.<br /><br /> 이 함수는 일반적으로 최근 학습 사례를 식별하여 해당 사례에 대한 자세한 데이터를 검색하는 데 사용됩니다.|  
-|[PredictNodeId&#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|지정된 예측 가능한 열의 노드 ID를 반환합니다.<br /><br /> 이 함수는 일반적으로 특정 예측 값을 생성한 노드를 식별하여 노드와 관련된 사례를 검토하거나 수식 및 다른 세부 정보를 검색하는데 사용됩니다.|  
-|[PredictStdev&#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|지정된 예측 가능한 열에서 예측의 표준 편차를 반환합니다.<br /><br /> 이 함수는 시계열 모델을 지원하지 않는 INCLUDE_STATISTICS 인수를 대체합니다.|  
-|[PredictVariance&#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|지정된 예측 가능한 열에 대한 예측의 분산을 반환합니다.<br /><br /> 이 함수는 시계열 모델을 지원하지 않는 INCLUDE_STATISTICS 인수를 대체합니다.|  
-|[PredictTimeSeries&#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)|시계열에 대한 예상 기록 값 또는 미래 예상 값을 반환합니다.<br /><br /> 일반 예측 함수인 [Predict&#40;DMX&#41;](../../dmx/predict-dmx.md)를 사용하여 시계열 모델을 쿼리할 수도 있습니다.|  
+|[Lag &#40; DMX &#41;](../../dmx/lag-dmx.md)|현재 사례의 날짜와 학습 집합의 마지막 날짜 간의 시간 조각을 여러 개 반환합니다.<br /><br /> 이 함수는 일반적으로 최근 학습 사례를 식별하여 해당 사례에 대한 자세한 데이터를 검색하는 데 사용됩니다.|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|지정된 예측 가능한 열의 노드 ID를 반환합니다.<br /><br /> 이 함수는 일반적으로 특정 예측 값을 생성한 노드를 식별하여 노드와 관련된 사례를 검토하거나 수식 및 다른 세부 정보를 검색하는데 사용됩니다.|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|지정된 예측 가능한 열에서 예측의 표준 편차를 반환합니다.<br /><br /> 이 함수는 시계열 모델을 지원하지 않는 INCLUDE_STATISTICS 인수를 대체합니다.|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|지정된 예측 가능한 열에 대한 예측의 분산을 반환합니다.<br /><br /> 이 함수는 시계열 모델을 지원하지 않는 INCLUDE_STATISTICS 인수를 대체합니다.|  
+|[PredictTimeSeries &#40; DMX &#41;](../../dmx/predicttimeseries-dmx.md)|시계열에 대한 예상 기록 값 또는 미래 예상 값을 반환합니다.<br /><br /> 일반 예측 함수인 [Predict&#40;DMX&#41;](../../dmx/predict-dmx.md)를 사용하여 시계열 모델을 쿼리할 수도 있습니다.|  
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
@@ -234,6 +235,6 @@ AND NODE_TYPE = 15
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 시계열 알고리즘](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft 시계열 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [시계열 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

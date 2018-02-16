@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], about objects
 - SQL Server Analysis Services, objects
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - Analysis Services objects
 - objects [Analysis Services]
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 19a73d527750f53dbff5f5054848933e77668234
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>데이터베이스 개체(Analysis Services - 다차원 데이터)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 데이터베이스 개체 및 온라인 분석 처리 (OLAP) 및 데이터 마이닝에 사용할 어셈블리를 포함 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 데이터베이스 개체 및 온라인 분석 처리 (OLAP) 및 데이터 마이닝에 사용할 어셈블리를 포함 합니다.  
   
 -   데이터베이스에는 OLAP와 데이터 원본, 데이터 원본 뷰, 큐브, 측정값, 측정값 그룹, 차원, 특성, 계층, 마이닝 구조, 마이닝 모델 및 역할과 같은 데이터 마이닝 개체가 포함됩니다.  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 01/08/2018
 |[다차원 모델의 큐브](../../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)|큐브에 대해 설명하고 측정값, 측정값 그룹, 차원 용도 관계, 계산, 핵심 성과 지표, 동작, 번역, 파티션, 큐브 뷰 등의 큐브 개체를 살펴봅니다.|  
 |[차원 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|차원에 대해 설명하고 특성, 특성 관계, 계층, 수준 및 멤버 등의 차원 개체를 살펴봅니다.|  
 |[마이닝 구조 &#40; Analysis Services-데이터 마이닝 &#41;](../../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)|마이닝 구조와 마이닝 모델을 포함하는 마이닝 개체에 대해 설명합니다.|  
-|[보안 역할 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 개체에 대한 액세스를 제어하는 데 사용되는 보안 메커니즘인 역할에 대해 설명합니다.|  
+|[보안 역할&#40;Analysis Services - 다차원 데이터&#41;](../../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 개체에 대한 액세스를 제어하는 데 사용되는 보안 메커니즘인 역할에 대해 설명합니다.|  
 |[다차원 모델 어셈블리 관리](../../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 MDX 및 DMX 언어를 확장하는 데 사용되는 사용자 정의 함수 모음인 어셈블리에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  

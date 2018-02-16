@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Prediction Query Builder
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-queries"></a>데이터 마이닝 쿼리
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 쿼리는 다양 한 용도로 유용 합니다. 다음 작업을 수행할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+데이터 마이닝 쿼리는 다음과 같은 다양한 용도로 다음 작업을 수행할 수 있습니다.  
   
 -   새 데이터에 모델을 적용하여 단일 또는 여러 예측을 수행합니다. 매개 변수나 일괄 처리로 입력 값을 제공할 수 있습니다.  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_Understand"></a> 데이터 마이닝 쿼리 이해  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝은 다음과 같은 쿼리 유형을 지원합니다.  
   
--   [예측 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [예측 쿼리 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      모델의 패턴을 기반으로 입력 데이터에서 추론하는 쿼리입니다.  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
      모델 자체에 대한 메타데이터, 통계 및 기타 정보를 반환하는 쿼리입니다.  
   
--   [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [드릴스루 쿼리 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      모델의 기본 사례 데이터나 모델에서 사용되지 않은 구조의 데이터까지 검색할 수 있는 쿼리입니다.  
   
@@ -148,13 +149,13 @@ ms.lasthandoff: 01/08/2018
 ## <a name="in-this-section"></a>섹션 내용  
  이 섹션의 항목에서는 데이터 마이닝 쿼리의 각 유형에 대해 자세히 소개하고 데이터 마이닝 모델에 대한 쿼리를 만드는 방법을 보여 주는 자세한 예의 링크를 제공합니다.  
   
- [예측 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [예측 쿼리 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [내용 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [데이터 정의 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [데이터 정의 쿼리 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
@@ -165,11 +166,11 @@ ms.lasthandoff: 01/08/2018
 |-----------|-----------|  
 |자습서 및 연습 데이터 마이닝 쿼리 보기|[6단원: 예측 만들기 및 작업&#40;기본 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [시계열 예측 DMX 자습서](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
 |SQL Server Management Studio 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[SQL Server Management Studio에서 DMX 쿼리 만들기](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [예측 쿼리 작성기를 사용하여 예측 쿼리 만들기](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [모델에 예측 함수 적용](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [예측 쿼리 수동 편집](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
-|예측 쿼리에 사용하는 외부 데이터 작업|[예측 쿼리에 대한 입력 데이터 선택 및 매핑](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [예측 쿼리에 대한 입력 데이터 선택 및 매핑](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
+|예측 쿼리에 사용하는 외부 데이터 작업|[선택 및 예측 쿼리에 대 한 입력된 데이터 매핑](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [선택 및 예측 쿼리에 대 한 입력된 데이터 매핑](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |쿼리 결과 사용|[예측 쿼리 결과 보기 및 저장](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
-|Management Studio에서 제공하는 DMX 및 XMLA 쿼리 템플릿 사용|[템플릿에서 단일 예측 쿼리 작성](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [XMLA를 사용하여 데이터 마이닝 쿼리 만들기](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [SQL Server Management Studio에서 Analysis Services 템플릿 사용](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Management Studio에서 제공하는 DMX 및 XMLA 쿼리 템플릿 사용|[템플릿에서 단일 예측 쿼리 만들기](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [XMLA를 사용하여 데이터 마이닝 쿼리 만들기](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [SQL Server Management Studio에서 Analysis Services 템플릿 사용](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |내용 쿼리에 대한 자세한 정보 및 예제 참조|[마이닝 모델에 내용 쿼리 만들기](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [마이닝 모델을 만드는 데 사용한 매개 변수 쿼리](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [내용 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
-|쿼리 옵션 설정과 쿼리 권한 및 문제 해결|[데이터 마이닝 쿼리에 대한 제한 시간 값 변경](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
+|쿼리 옵션 설정과 쿼리 권한 및 문제 해결|[데이터 마이닝 쿼리에 대 한 제한 시간 값 변경](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
 |Integration Services에서 데이터 마이닝 구성 요소 사용|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>관련 항목:  

@@ -1,7 +1,7 @@
 ---
 title: "ADOMD.NET에서 트랜잭션 수행 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - transactions [ADOMD.NET]
 - ADOMD.NET, transactions
 - AdomdTransaction object
 ms.assetid: 7978c28b-c255-43c0-ad05-f38604d4d8fe
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7491ab2b49dd08b0ed1fab4f8f645cd0ac0c66eb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 76964d9623a5ca477e2cc718d71739f4c69cdb1b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---performing-transactions"></a>Connections in ADOMD.NET에서 트랜잭션 수행
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET을 사용 하 여는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> 개체에 대 한 트랜잭션 컨텍스트를 관리 하는 특정 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체입니다. 이 기능을 사용하면 같은 컨텍스트 내에서 여러 명령을 실행할 수 있습니다. 각 명령이 실행되는 동안 읽는 데이터의 변경 없이 각 명령은 같은 데이터를 읽게 됩니다.  
+  ADOMD.NET에서는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> 개체를 사용하여 지정된 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체의 트랜잭션 컨텍스트를 관리할 수 있습니다. 이 기능을 사용하면 같은 컨텍스트 내에서 여러 명령을 실행할 수 있습니다. 각 명령이 실행되는 동안 읽는 데이터의 변경 없이 각 명령은 같은 데이터를 읽게 됩니다.  
   
 > [!NOTE]  
 >  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> 클래스는의 구현에서 **System.Data.IDbTransaction** 인터페이스의 일부는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 클래스 라이브러리를 지 원하는 모든.NET Framework 데이터 공급자에 의해 구현 트랜잭션입니다.  

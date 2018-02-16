@@ -15,32 +15,33 @@ helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>원격 파티션 만들기 및 관리(Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]측정값 그룹을 분할할 때 원격 보조 데이터베이스를 구성할 수 있습니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파티션 저장소로 인스턴스.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+측정값 그룹을 분할할 때 원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보조 데이터베이스를 파티션 저장소로 구성할 수 있습니다.  
   
  master 데이터베이스라는 큐브의 원격 파티션은 보조 데이터베이스라는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 원격 인스턴스에 있는 전용 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 저장됩니다.  
   
  전용 보조 데이터베이스는 단 하나의 master 데이터베이스에 대한 원격 파티션을 저장할 수 있지만 모든 보조 데이터베이스가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다. 원격 파티션 전용 데이터베이스의 차원은 연결된 차원으로 생성됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  원격 파티션을 만들기 전에 다음 조건이 충족되어야 합니다.  
   
 -   파티션을 저장하려면 두 번째 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 전용 데이터베이스가 있어야 합니다. 보조 데이터베이스는 master 데이터베이스에 원격 파티션 저장소를 제공하는 한 가지 용도로 사용됩니다.  
   
 -   두 서버 인스턴스가 같은 버전이어야 합니다. 두 데이터베이스는 동일한 기능 수준이어야 합니다.  
   
--   두 인스턴스는 TCP 연결에 맞게 구성되어야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 HTTP 프로토콜을 사용하여 원격 파티션을 만드는 작업을 지원하지 않습니다.  
+-   두 인스턴스는 TCP 연결에 맞게 구성되어야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]HTTP 프로토콜을 사용 하 여 원격 파티션 만드는 지원 하지 않습니다.  
   
 -   두 컴퓨터 모두 방화벽 설정이 외부 연결을 허용하도록 설정되어야 합니다. 방화벽을 설정하는 방법에 대한 자세한 내용은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
@@ -138,6 +139,6 @@ ms.lasthandoff: 01/08/2018
 >  원격 파티션 저장에 전용되는 데이터베이스는 스키마 행 집합에 노출되지 않지만, AMO(Analysis Management Objects)를 사용하는 응용 프로그램은 Analysis Discover 명령에 대한 XML을 사용하여 전용 데이터베이스를 검색할 수 있습니다. TCP 또는 HTTP 클라이언트를 사용하여 전용 데이터베이스에 직접 전송되는 CREATE 또는 DELETE 명령은 성공하지만, 이 동작을 수행하면 면밀하게 관리되는 이 데이터베이스가 손상될 수 있음을 알리는 경고가 서버에서 반환됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [파티션&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [파티션 &#40; Analysis Services-다차원 데이터 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

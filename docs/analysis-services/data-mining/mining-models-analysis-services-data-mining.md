@@ -19,19 +19,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 9fe63b761a9834e53832c1525d8d77ea00a9a508
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>마이닝 모델(Analysis Services - 데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *마이닝 모델* 알고리즘은 데이터를을 적용 단순한 알고리즘 또는 메타 데이터 컨테이너가 만들어집니다: 데이터, 통계 및 새 데이터를 예측을 생성 하 고 추론에 적용할 수 있는 패턴의 집합이 에 대 한 관계.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+*마이닝 모델* 은 데이터에 알고리즘을 적용하여 만들지만 단순한 알고리즘 또는 메타데이터 컨테이너가 아니며, 새로운 데이터에 적용하여 예측을 생성하고 관계를 추론할 수 있는 데이터, 통계 및 패턴의 집합입니다.  
   
  이 섹션에서는 데이터 마이닝 모델의 정의와 용도에 대해 설명합니다. 즉, 모델 및 구조의 기본 아키텍처, 마이닝 모델의 속성, 마이닝 모델을 만들고 사용하는 방법에 대해 설명합니다.  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 01/08/2018
   
 -   DMX ALTER STRUCTURE ADD MODEL 문 - 기존 구조에 새 마이닝 모델을 추가하는 데 사용할 수 있습니다. 동일한 데이터 집합을 기반으로 하는 다양한 모델을 시험하려면 이 방법을 사용합니다.  
   
- AMO 또는 XML/A를 사용하거나 Excel용 데이터 마이닝 클라이언트 등의 다른 클라이언트를 사용하여 프로그래밍 방식으로 마이닝 모델을 만들 수도 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ AMO 또는 XML/A를 사용하거나 Excel용 데이터 마이닝 클라이언트 등의 다른 클라이언트를 사용하여 프로그래밍 방식으로 마이닝 모델을 만들 수도 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
  [마이닝 모델 아키텍처](#bkmk_mdlArch)  
   
@@ -131,10 +132,10 @@ ms.lasthandoff: 01/08/2018
   
 |항목|링크|  
 |------------|-----------|  
-|여러 마이닝 모델을 지원할 수 있는 마이닝 구조를 작성하는 방법에 대해 알아봅니다. 모델의 열 사용법에 대해 알아봅니다.|[마이닝 구조 열](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)|  
-|선택한 알고리즘이 모델 콘텐츠에 미치는 영향과 다른 알고리즘에 대해 알아봅니다.|[마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
-|컴퍼지션과 동작에 영향을 미치는 모델에 대한 속성을 설정하는 방법에 대해 알아봅니다.|[마이닝 모델 속성](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [모델링 플래그&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
-|데이터 마이닝에 대한 프로그래밍 가능한 인터페이스에 대해 알아봅니다.|[AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)|  
+|여러 마이닝 모델을 지원할 수 있는 마이닝 구조를 작성하는 방법에 대해 알아봅니다. 모델의 열 사용법에 대해 알아봅니다.|[마이닝 구조 열](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [콘텐츠 형식 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/content-types-data-mining.md)|  
+|선택한 알고리즘이 모델 콘텐츠에 미치는 영향과 다른 알고리즘에 대해 알아봅니다.|[마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [데이터 마이닝 알고리즘 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|컴퍼지션과 동작에 영향을 미치는 모델에 대한 속성을 설정하는 방법에 대해 알아봅니다.|[마이닝 모델 속성](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [모델링 플래그 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
+|데이터 마이닝에 대한 프로그래밍 가능한 인터페이스에 대해 알아봅니다.|[분석 관리 개체 &#40;를 사용 하 여 개발 AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용자 지정 데이터 마이닝 뷰어를 사용하는 방법에 대해 알아봅니다.|[데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |데이터 마이닝 모델에 대해 사용할 수 있는 다양한 쿼리 유형의 예를 봅니다.|[데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)|  
   
@@ -144,9 +145,9 @@ ms.lasthandoff: 01/08/2018
 |태스크|링크|  
 |----------|----------|  
 |마이닝 모델 추가 및 삭제|[기존 마이닝 구조에 마이닝 모델 추가](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [마이닝 구조에서 마이닝 모델 삭제](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
-|마이닝 모델 열 작업|[마이닝 모델에서 열 제외](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [모델 열의 별칭 만들기](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [마이닝 모델에서 열의 분할 변경](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [모델에서 회귀 변수로 사용할 열 지정](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|모델 속성 변경|[마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [마이닝 모델에 필터 적용](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [마이닝 모델에서 필터 삭제](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [마이닝 모델에 드릴스루 사용](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [알고리즘 매개 변수 보기 또는 변경](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
-|복사. 모델 복사, 이동 또는 관리|[마이닝 모델 복사본 만들기](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [마이닝 모델의 뷰 복사](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT&#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT&#40;DMX&#41;](../../dmx/import-dmx.md)|  
+|마이닝 모델 열 작업|[마이닝 모델에서 열 제외](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [모델 열의 별칭 만들기](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [마이닝 모델에 있는 열의 분할 변경](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [모델에서 회귀 변수로 사용할 열 지정](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|모델 속성 변경|[마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [마이닝 모델에 필터를 적용 합니다.](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [마이닝 모델에서 필터 삭제](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [마이닝 모델에 드릴스루 사용](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [보기 또는 변경 알고리즘 매개 변수](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
+|복사. 모델 복사, 이동 또는 관리|[마이닝 모델의 복사본 만들기](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [마이닝 모델의 뷰 복사](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [내보내기 &#40; DMX &#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT&#40;DMX&#41;](../../dmx/import-dmx.md)|  
 |모델에 데이터 채우기 또는 모델의 데이터 업데이트|[마이닝 모델 처리](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |OLAP 모델 작업|[데이터 마이닝 차원 만들기](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   

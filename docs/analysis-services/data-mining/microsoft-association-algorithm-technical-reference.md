@@ -22,19 +22,20 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 연결 알고리즘 기술 참조
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 잘 알려진 Apriori 알고리즘의 간단한 구현입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 잘 알려진 Apriori 알고리즘을 간단하게 구현한 것입니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 둘 다 연결을 분석하는 데 사용할 수 있지만 각 알고리즘에서 발견되는 규칙은 서로 다를 수 있습니다. 의사 결정 트리 모델에서 특정 규칙을 생성하는 분류는 정보 획득량을 기반으로 하는 반면 연결 모델에서 규칙은 전적으로 신뢰도를 기반으로 합니다. 따라서 연결 모델에서 강력한 규칙 또는 신뢰도가 높은 규칙은 새로운 정보를 제공하지 않기 때문에 반드시 유용한 것은 아닙니다.  
   
@@ -143,7 +144,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="modeling-flags"></a>모델링 플래그  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘과 함께 사용할 수 있는 모델링 플래그는 다음과 같습니다.  
   
- NOT NULL  
+ NOT  NULL  
  열에 null이 포함될 수 없음을 나타냅니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 모델 학습 중 null 값을 발견할 경우 오류가 발생합니다.  
   
  마이닝 구조 열에 적용됩니다.  
@@ -159,7 +160,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델의 콘텐츠 형식에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)을 참조하세요.  
   
-|Column|내용 유형|  
+|열|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Cyclical, Discrete, Discretized, Key, Table, Ordered|  
 |예측 가능한 특성|Cyclical, Discrete, Discretized, Key, Table, Ordered|  
@@ -170,6 +171,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>관련 항목:  
  [Microsoft 연결 알고리즘](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)   
- [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [연결 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

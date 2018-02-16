@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performance-counters-ssas"></a>성능 카운터(SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]성능 모니터를 사용 하 여 성능 카운터를 사용 하 여 Microsoft SQL Server Analysis Services (SSAS) 인스턴스의 성능을 모니터링할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+성능 모니터를 사용하면 성능 카운터를 사용하여 Microsoft SQL SSAS(Server Analysis Services) 인스턴스의 성능을 모니터링할 수 있습니다.  
   
  성능 모니터는 리소스 사용을 추적하는 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management  Control)  스냅인입니다. 이 MMC 스냅인은 명령 프롬프트에 **PerfMon** 을 입력하거나 제어판에서 **관리 도구**, **성능 모니터**를 차례로 클릭하여 시작할 수 있습니다. 성능 모니터를 사용하면 미리 정의한 개체 및 카운터를 사용하여 서버와 프로세스 성능 및 작업을 추적하고 사용자 정의 카운터를 사용하여 이벤트를 모니터링할 수 있습니다. 성능 모니터는 이벤트에 대한 데이터(예: 메모리 사용량, 활성 트랜잭션 수 또는 CPU 작업) 대신에 개수를 수집합니다. 특정 카운터에 대해 운영자에게 경고 메시지를 보내도록 임계값을 설정할 수도 있습니다.  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/08/2018
 |Rows/sec|데이터 마이닝 예측 쿼리 중에 처리되는 행 수입니다.|  
 |Queries/sec|처리된 데이터 마이닝 쿼리 수입니다.|  
 |Total  Queries|서버에서 받는 총 데이터 마이닝 쿼리 수입니다.|  
-|합계 행|데이터 마이닝 쿼리에서 반환되는 총 행 수입니다.|  
+|Total  Rows|데이터 마이닝 쿼리에서 반환되는 총 행 수입니다.|  
 |Total  Predictions|서버에서 받는 총 데이터 마이닝 예측 쿼리 수입니다.|  
   
 ###  <a name="bkmk_Locks"></a> 잠금  
@@ -165,7 +166,7 @@ ms.lasthandoff: 01/08/2018
 |-------------|-----------------|  
 |Page  Pool  64  Alloc  KB|시스템에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
 |Page  Pool  64  Lookaside  KB|64KB  할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
-|Page  Pool  8  Alloc  KB|64KB 페이지 풀에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
+|Page  Pool  8  Alloc  KB|64KB  페이지 풀에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
 |Page Pool 8 Lookaside KB|8KB 할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
 |Page Pool 1 Alloc KB|64KB  페이지 풀에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
 |Page Pool 1 Lookaside KB|8KB 할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
@@ -312,7 +313,7 @@ ms.lasthandoff: 01/08/2018
 |Network round trips/sec|네트워크 왕복 비율입니다.  여기에는 모든 클라이언트/서버 통신이 포함됩니다.|  
 |Total network round trips|총 네트워크 왕복 수입니다.  여기에는 모든 클라이언트/서버 통신이 포함됩니다.|  
 |Flat cache lookups/sec|플랫 캐시 조회 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 플랫 캐시가 포함됩니다.|  
-|Flat  cache  hits/sec|플랫 캐시 적중 비율입니다.  여기에는 전역, 세션 및 쿼리 범위 플랫 캐시가 포함됩니다.|  
+|Flat  cache  hits/sec|플랫 캐시 적중 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 플랫 캐시가 포함됩니다.|  
 |Calculation  cache  lookups/sec|계산 캐시 조회 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 계산 캐시가 포함됩니다.|  
 |Calculation  cache  hits/sec|계산 캐시 적중 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 계산 캐시가 포함됩니다.|  
 |Persisted cache lookups/sec|지속형 캐시 조회 비율입니다.  지속형 캐시는 MDX  스크립트 CACHE  문으로 만들어집니다.|  

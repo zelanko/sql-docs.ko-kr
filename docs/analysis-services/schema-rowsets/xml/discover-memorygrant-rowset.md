@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9bf3896348044d084144fd2276ff31f617b202c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovermemorygrant-rowset"></a>DISCOVER_MEMORYGRANT 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서버에서 현재 실행 중인 작업에 의해 수행 된 할당량 부여 목록을 내부 메모리를 반환 합니다. 서버에서 작업이 실행되고 있는지 여부를 확인하려면 `Select * from $System.Discover_Jobs`를 사용합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+서버에서 현재 실행 중인 작업에 의해 사용되는 내부 메모리 할당량 부여 목록을 반환합니다. 서버에서 작업이 실행되고 있는지 여부를 확인하려면 `Select * from $System.Discover_Jobs`를 사용합니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
@@ -35,12 +37,12 @@ ms.lasthandoff: 01/08/2018
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**MEMORY_ID**|**DBTYPE_I8**||메모리 할당량 부여를 식별하는 번호입니다. 단일 DISCOVER_MEMORYGRANT 요청 컨텍스트에서 고유합니다.|  
-|**SPID**|**DBTYPE_I4**|필수|`Select * from $System.Discover_Sessions`를 실행하여 가져올 수 있는 SPID입니다.|  
+|**SPID**|**DBTYPE_I4**|필수임|`Select * from $System.Discover_Sessions`를 실행하여 가져올 수 있는 SPID입니다.|  
 |**CreationTime**|**DBTYPE_I8 DBTYPE_DBTIMESTAMP**||할당량이 부여된 시간입니다.|  
 |**LastRequestTime**|**DBTYPE_DBTIMESTAMP**||할당량 요청을 마지막으로 수정한 시간입니다.|  
 |**MemoryUsed**|**DBTYPE_I4**||할당량과의 연결에 사용되는 메모리 양입니다.|  
 |**MemoryGranted**|**DBTYPE_I4**||메모리 할당량을 가져오는 작업에 사용하려고 부여되는 메모리 양입니다.|  
-|**차단**|**DBTYPE_BOOL**||작업의 차단 상태를 나타내는 부울입니다. True이면 작업이 차단되어 다른 작업이 할당량 요청을 부여하기 위해 충분한 할당량을 확보하도록 대기 중임을 나타내고, False이면 작업이 할당량을 수신했으며 실행할 수 있음을 나타냅니다.|  
+|**Blocked**|**DBTYPE_BOOL**||작업의 차단 상태를 나타내는 부울입니다. True이면 작업이 차단되어 다른 작업이 할당량 요청을 부여하기 위해 충분한 할당량을 확보하도록 대기 중임을 나타내고, False이면 작업이 할당량을 수신했으며 실행할 수 있음을 나타냅니다.|  
   
  이 스키마 행 집합은 정렬되지 않습니다.  
   

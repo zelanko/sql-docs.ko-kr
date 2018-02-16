@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>단원 2-5-Analysis Services 프로젝트 배포
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/22/2018
     > [!NOTE]  
     > 배포 중에 오류가 발생하는 경우 SQL Server Management Studio를 사용하여 데이터베이스 사용 권한을 확인하십시오. 데이터 원본 연결에 대해 지정한 계정에는 SQL Server 인스턴스에서 로그인이 있어야 합니다. 로그인을 두 번 클릭하면 사용자 매핑 속성을 볼 수 있습니다. 계정에는 **AdventureWorksDW2012** 데이터베이스에 대한 db_datareader 사용 권한이 있어야 합니다.  
   
-    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 빌드한 다음 배포 스크립트를 사용하여 지정된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 배포합니다. 배포 과정 중에 **출력** 창과 **배포 진행률 - Analysis Services Tutorial** 창이 표시됩니다.  
+    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 빌드한 다음 배포 스크립트를 사용하여 지정된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 배포합니다. 배포 과정 중에 **출력** 창과 **배포 진행률 - Analysis Services Tutorial** 창이 표시됩니다.  
   
     필요한 경우 **보기** 메뉴에서 **출력** 을 클릭하여 출력 창을 엽니다. **출력** 창에는 전체적인 배포 진행률이 표시됩니다. **배포 진행률 - Analysis Services Tutorial** 창에는 배포 진행 단계가 자세히 표시됩니다. 자세한 내용은 [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md) 및 [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)를 참조하세요.  
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-a-standard-action"></a>표준 동작 추가
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 디자이너의 [작업] 보기를 사용 하 여 데이터베이스에 동작을 추가 합니다. 이 뷰는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후 관련 큐브를 다시 처리하면 사용자가 동작을 사용할 수 있게 됩니다. 자세한 내용은 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+큐브 디자이너의 동작 뷰를 사용하여 데이터베이스에 동작을 추가합니다. 이 뷰는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후 관련 큐브를 다시 처리하면 사용자가 동작을 사용할 수 있게 됩니다. 자세한 내용은 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)을 참조하세요.  
   
 ### <a name="to-create-an-action"></a>동작을 만들려면  
   
@@ -53,9 +54,9 @@ ms.lasthandoff: 01/08/2018
   
     -   **유형** 드롭다운 목록에서 만들 동작의 유형을 선택합니다. 다음 표에서는 사용 가능한 동작의 유형을 보여 줍니다.  
   
-        |형식|Description|  
+        |유형|Description|  
         |----------|-----------------|  
-        |Dataset|데이터 집합을 검색합니다.|  
+        |데이터 집합|데이터 집합을 검색합니다.|  
         |소유|이 표에 나열되지 않은 인터페이스를 사용하여 작업을 수행합니다.|  
         |행 집합|행 집합을 검색합니다.|  
         |문|OLE DB 명령을 실행합니다.|  

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - dimensions [Analysis Services], standard
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b748f139d4eed14ea9d00d275aedcc8ef8fc9fec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>기존 테이블을 사용하여 차원 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 마법사를 사용할 수 있습니다 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 기존 테이블에서 한 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **기존 테이블 사용** 옵션을 선택하십시오. 이 옵션을 선택할 경우 마법사는 기존 데이터 원본 뷰에 있는 차원 테이블, 차원 테이블 열, 차원 테이블 열 간의 관계를 기반으로 하여 차원 구조를 만듭니다. 마법사는 원본 테이블과 관련 테이블의 데이터를 샘플링한 다음 이 데이터를 사용하여 차원 테이블 열을 기반으로 하는 특성 열을 정의하고 특성의 계층( *사용자 정의* 계층이라고 함)을 정의합니다. 차원 마법사를 사용하여 차원을 만든 후에는 차원 디자이너를 사용하여 차원의 특성과 계층을 추가, 제거 및 구성할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 테이블에서 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **기존 테이블 사용** 옵션을 선택하십시오. 이 옵션을 선택할 경우 마법사는 기존 데이터 원본 뷰에 있는 차원 테이블, 차원 테이블 열, 차원 테이블 열 간의 관계를 기반으로 하여 차원 구조를 만듭니다. 마법사는 원본 테이블과 관련 테이블의 데이터를 샘플링한 다음 이 데이터를 사용하여 차원 테이블 열을 기반으로 하는 특성 열을 정의하고 특성의 계층( *사용자 정의* 계층이라고 함)을 정의합니다. 차원 마법사를 사용하여 차원을 만든 후에는 차원 디자이너를 사용하여 차원의 특성과 계층을 추가, 제거 및 구성할 수 있습니다.  
   
  기존 테이블을 사용하여 차원을 만드는 경우 차원 마법사는 다음 단계로 이루어집니다.  
   
@@ -92,10 +93,10 @@ ms.lasthandoff: 01/08/2018
  **마법사 완료** 페이지에서 새 차원의 이름을 입력하고 차원 구조를 검토하여 마법사를 완료합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터 원본에 시간이 아닌 테이블을 생성하여 차원 만들기](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
- [시간 테이블을 생성하여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [데이터 원본에 시간이 아닌 테이블을 생성 하 여 차원 만들기](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
+ [시간 테이블을 생성 하 여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [차원 특성 속성 참조](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
- [시간 테이블을 생성하여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [데이터 원본에 시간이 아닌 테이블을 생성하여 차원 만들기](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [시간 테이블을 생성 하 여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [데이터 원본에 시간이 아닌 테이블을 생성 하 여 차원 만들기](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

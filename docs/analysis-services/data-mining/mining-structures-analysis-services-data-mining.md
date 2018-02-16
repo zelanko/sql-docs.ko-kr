@@ -23,19 +23,20 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: "77"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6b7467be225e2468be21603f3e40de04050dc6b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>마이닝 구조(Analysis Services - 데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 모델을 생성 하는 데이터를 정의 하는 마이닝 구조: 원본 데이터 뷰, 수 및 열의 유형을 지정 하 고 학습 및 테스트으로 선택적 분할을 설정 합니다. 하나의 마이닝 구조는 같은 도메인을 공유하는 여러 개의 마이닝 모델을 지원할 수 있습니다. 다음 다이어그램에서는 데이터 마이닝 구조와 이를 구성하는 데이터 마이닝 모델 및 데이터 원본 간의 관계를 보여 줍니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+마이닝 구조는 마이닝 모델을 작성하는 데이터, 즉 원본 데이터 뷰, 열 유형과 수, 학습 및 테스트 집합으로의 선택적 분할을 정의합니다. 하나의 마이닝 구조는 같은 도메인을 공유하는 여러 개의 마이닝 모델을 지원할 수 있습니다. 다음 다이어그램에서는 데이터 마이닝 구조와 이를 구성하는 데이터 마이닝 모델 및 데이터 원본 간의 관계를 보여 줍니다.  
   
  ![데이터 처리: 원본 모델에 구조에](../../analysis-services/data-mining/media/dmcon-modelarch.gif "데이터의 처리: 모델에 구조에 대 한 소스")  
   
@@ -120,14 +121,14 @@ ms.lasthandoff: 01/08/2018
   
 |태스크|링크|  
 |-----------|-----------|  
-|관계형 마이닝 구조 작업|[새 관계형 마이닝 구조 만들기](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [마이닝 구조에 중첩 테이블 추가](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
+|관계형 마이닝 구조 작업|[새 관계형 마이닝 구조 만들기](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [마이닝 구조에 중첩된 테이블 추가](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
 |OLAP 큐브 기반의 마이닝 구조 작업|[새 OLAP 마이닝 구조 만들기](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
 |마이닝 구조의 열에 대한 작업|[마이닝 구조에 열 추가](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [마이닝 구조에서 열 제거](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |마이닝 구조 속성 및 데이터의 변경 또는 쿼리|[마이닝 구조 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
-|기본 데이터 원본 작업 및 원본 데이터 업데이트|[마이닝 구조에 사용되는 데이터 원본 뷰 편집](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [마이닝 구조 처리](../../analysis-services/data-mining/process-a-mining-structure.md)|  
+|기본 데이터 원본 작업 및 원본 데이터 업데이트|[마이닝 구조에 사용 되는 데이터 원본 뷰 편집](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [마이닝 구조 처리](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터베이스 개체&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [마이닝 모델 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

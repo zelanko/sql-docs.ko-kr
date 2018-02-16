@@ -19,19 +19,20 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>데이터베이스 차원-날짜 유형 차원 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 시간 차원은 년, 반기, 분기, 월 및 일 등의 기간을 나타내는 특성이 포함 된 차원 유형입니다. 분석 및 보고와 관련하여 시간 차원의 기간은 시간을 기준으로 세분화됩니다. 특성은 계층으로 구성되며 시간 차원 세분성은 주로 기록 데이터에 대한 비즈니스 및 보고 요구 사항에 따라 결정됩니다. 예를 들어 비즈니스 인텔리전스 응용 프로그램의 재무 데이터와 영업 데이터에는 대부분 월별 또는 분기별 세분성이 사용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 시간 차원은 년, 반기, 분기, 월, 일 등의 기간을 나타내는 특성이 포함된 차원 유형입니다. 분석 및 보고와 관련하여 시간 차원의 기간은 시간을 기준으로 세분화됩니다. 특성은 계층으로 구성되며 시간 차원 세분성은 주로 기록 데이터에 대한 비즈니스 및 보고 요구 사항에 따라 결정됩니다. 예를 들어 비즈니스 인텔리전스 응용 프로그램의 재무 데이터와 영업 데이터에는 대부분 월별 또는 분기별 세분성이 사용됩니다.  
   
  일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 큐브는 시간 차원을 한 형식이나 다른 형식으로 포함합니다. 데이터의 세분성과 보고 요구 사항에 따라 큐브는 둘 이상의 시간 차원이나 동일한 시간 차원의 여러 계층을 포함할 수 있습니다. 그러나 모든 큐브에 시간 차원이 필요한 것은 아닙니다. 작업 기준 차원에서의 비용 계산은 시간이 아닌 작업을 기준으로 하기 때문에 작업 기준 비용 계산과 같은 일부 OLAP 응용 프로그램에는 시간 차원이 필요하지 않습니다.  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 >  서버 시간 차원에 시간 인텔리전스를 추가하는 데는 비즈니스 인텔리전스 마법사를 사용할 수 없습니다. 비즈니스 인텔리전스 마법사는 계층을 추가하여 시간 인텔리전스를 지원하며 이 계층은 시간 차원 테이블의 열에 바인딩되어야 합니다. 서버 시간 차원에는 해당 시간 차원 테이블이 없으므로 이러한 추가 계층을 지원할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [시간 테이블을 생성하여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [시간 테이블을 생성 하 여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [비즈니스 인텔리전스 마법사 F1 도움말](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [차원 유형](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   

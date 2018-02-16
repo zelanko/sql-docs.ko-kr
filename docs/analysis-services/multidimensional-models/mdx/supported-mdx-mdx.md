@@ -15,46 +15,47 @@ helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1c4f6573ce8f72c0fa907f58a1f4264709809f11
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="supported-mdx-mdx"></a>지원되는 MDX(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) 스크립트 내에서 다음 문과 함수가 지원 됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+MDX 스크립트 내에서는 다음 문과 함수가 지원됩니다.  
   
- [&#40;설명&#41;&#40;MDX&#41;](../../../mdx/comment-mdx-double-slash.md)  
+ [&#40; 설명 &#41; &#40; Mdx&#41;](../../../mdx/comment-mdx-double-slash.md)  
   
- [--&#40;설명&#41;&#40;MDX&#41;](../../../mdx/comment-mdx-operator-reference.md)  
+ [-&#40; 설명 &#41; &#40; Mdx&#41;](../../../mdx/comment-mdx-operator-reference.md)  
   
- [설명&#40;MDX&#41;](../../../mdx/comment-mdx.md)  
+ [설명 &#40; Mdx&#41;](../../../mdx/comment-mdx.md)  
   
- [ALTER CUBE 문&#40;MDX&#41;](../../../mdx/mdx-data-definition-alter-cube.md)  
+ [ALTER CUBE 문 &#40; Mdx&#41;](../../../mdx/mdx-data-definition-alter-cube.md)  
   
 > [!NOTE]  
 >  MDX 스크립팅에서는 기본 멤버 변경만 지원됩니다.  
   
- [CALCULATE 문&#40;MDX&#41;](../../../mdx/mdx-scripting-calculate.md)  
+ [문 &#40; 계산 Mdx&#41;](../../../mdx/mdx-scripting-calculate.md)  
   
- [CASE 문&#40;MDX&#41;](../../../mdx/case-statement-mdx.md)  
+ [CASE 문 &#40; Mdx&#41;](../../../mdx/case-statement-mdx.md)  
   
- [CREATE CELL CALCULATION 문&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [CELL CALCULATION 문 &#40; 만들기 Mdx&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
- [CREATE MEMBER 문&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)  
+ [MEMBER 문 &#40; 만들기 Mdx&#41;](../../../mdx/mdx-data-definition-create-member.md)  
   
- [CREATE SET 문&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-set.md)  
+ [SET 문 &#40; 만들기 Mdx&#41;](../../../mdx/mdx-data-definition-create-set.md)  
   
- [EXISTING 키워드&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
+ [EXISTING 키워드 &#40; Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
   
- [FREEZE 문&#40;MDX&#41;](../../../mdx/mdx-scripting-freeze.md)  
+ [FREEZE 문 &#40; Mdx&#41;](../../../mdx/mdx-scripting-freeze.md)  
   
- [IF 문&#40;MDX&#41;](../../../mdx/mdx-scripting-if.md)  
+ [IF 문 &#40; Mdx&#41;](../../../mdx/mdx-scripting-if.md)  
   
  [This&#40;MDX&#41;](../../../mdx/this-mdx.md)  
   
@@ -64,6 +65,6 @@ ms.lasthandoff: 01/08/2018
  [SCOPE 문&#40;MDX&#41;](../../../mdx/mdx-scripting-scope.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [기본 MDX 스크립트&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+ [기본 MDX 스크립트 &#40; Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
   

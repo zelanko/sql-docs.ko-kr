@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertraces-rowset"></a>DISCOVER_TRACES 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서버에서 현재 활성 상태인 추적에 대 한 정보를 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+서버에서 현재 활성 상태인 추적에 대한 정보를 제공합니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
@@ -34,12 +36,12 @@ ms.lasthandoff: 01/08/2018
   
 |열 이름|유형 표시기|Description|  
 |-----------------|--------------------|-----------------|  
-|**Traceid가**|**DBTYPE_WSTR**|추적 ID입니다.|  
-|**추적 이름**|**DBTYPE_WSTR**|추적 이름입니다.|  
+|**TraceID**|**DBTYPE_WSTR**|추적 ID입니다.|  
+|**TraceName**|**DBTYPE_WSTR**|추적 이름입니다.|  
 |**LogFileName**|**DBTYPE_WSTR**|추적 로그 파일 이름입니다.|  
 |**LogFileSize**|**DBTYPE_I4**|추적 로그 파일 크기입니다.|  
 |**LogFileRollover**|**DBTYPE_BOOL**|true이면 로그 파일이 롤오버되어야 함을 나타내고, 그렇지 않으면 false입니다.|  
-|**자동 다시 시작**|**DBTYPE_BOOL**|true이면 자동 다시 시작 옵션을 사용할 수 있음을 나타내고, 그렇지 않으면 false입니다.|  
+|**AutoRestart**|**DBTYPE_BOOL**|true이면 자동 다시 시작 옵션을 사용할 수 있음을 나타내고, 그렇지 않으면 false입니다.|  
 |**CreationTime**|**DBTYPE_TIME**|추적을 만든 날짜와 시간입니다.|  
 |**StopTime**|**DBTYPE_TIME**|추적 중지 시간입니다.|  
 |**형식**|**PF_DBTYPE_WSTR**|추적의 유형입니다.|  
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 |열 이름|유형 표시기|제한 상태|  
 |-----------------|--------------------|-----------------------|  
-|**Traceid가**|**DBTYPE_I4**|(선택 사항)|  
+|**TraceId**|**DBTYPE_I4**|(선택 사항)|  
 |**형식**|WSTR|(선택 사항)|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>ADOMD.NET을 사용하여 행 집합 반환  
@@ -62,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 |인수|값|  
 |--------------|-----------|  
 |GUID|a07ccd1a-8148-11d0-87bb-00c04fc33942|  
-|String|DISCOVER_TRACES|  
+|문자열|DISCOVER_TRACES|  
   
 ## <a name="see-also"></a>관련 항목:  
  [XML for Analysis 스키마 행 집합](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

@@ -23,19 +23,20 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*기능 선택* 기계 학습의 중요 한 부분입니다. 기능 선택은 처리 및 분석을 위한 입력을 줄이거나 가장 중요한 입력을 찾는 프로세스를 말합니다. 관련 용어인 *기능 엔지니어링* (또는 *기능 추출*)은 기존 데이터에서 유용한 정보나 기능을 추출하는 프로세스를 말합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  *기능 선택*은 기계 학습의 중요한 부분입니다. 기능 선택은 처리 및 분석을 위한 입력을 줄이거나 가장 중요한 입력을 찾는 프로세스를 말합니다. 관련 용어인 *기능 엔지니어링* (또는 *기능 추출*)은 기존 데이터에서 유용한 정보나 기능을 추출하는 프로세스를 말합니다.  
   
 ## <a name="why-do-feature-selection"></a>기능 선택을 수행하는 이유  
  기능 선택은 적합한 모델을 작성하는 데 여러 이유로 중요합니다. 그중 한 가지 이유는 기능 선택이 모델을 작성할 때 고려할 수 있는 특성의 수에 대한 제한을 적용하는 어느 정도의 *카디널리티 축소*를 의미하기 때문입니다. 데이터에는 모델을 작성하는 데 필요한 것보다 더 많은 정보 또는 잘못된 종류의 정보가 자주 포함됩니다. 예를 들어 데이터 집합에 고객의 특성을 설명하는 열이 500개 있지만, 일부 열의 데이터가 매우 드물 경우 해당 열을 모델에 추가하여 얻는 이점이 거의 없으며 일부 열이 서로 중복된 경우 중복된 열을 모두 사용하면 모델에 영향을 줄 수 있습니다.  
@@ -112,7 +113,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="feature-selection-methods-per-algorithm"></a>알고리즘별 기능 선택 방법  
  다음 표에서는 기능 선택을 지원하는 알고리즘, 알고리즘에서 사용하는 기능 선택 방법 및 기능 선택 동작을 제어하기 위해 설정하는 매개 변수를 보여 줍니다.  
   
-|알고리즘|분석 방법|주석|  
+|알고리즘|분석 방법|설명|  
 |---------------|------------------------|--------------|  
 |Naive Bayes|Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|Microsoft Naïve Bayes 알고리즘은 불연속 특성 또는 불연속화된 특성을 허용하므로 흥미도 점수를 사용할 수 없습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Naive Bayes Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)를 참조하십시오.|  
 |의사 결정 트리|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이진이 아닌 연속 값이 열에 포함되어 있는 경우 일관성을 보장하기 위해 모든 열에 흥미도 점수가 사용됩니다. 그렇지 않으면 기본 기능 선택 방법이 사용되거나 모델을 만들 때 지정한 방법이 사용됩니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Decision Trees Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)를 참조하십시오.|  

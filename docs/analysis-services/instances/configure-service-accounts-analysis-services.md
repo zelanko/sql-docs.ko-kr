@@ -17,19 +17,20 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>서비스 계정 구성(Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]에 설명 되어 제품 전체의 계정 프로 비전 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), 모든에 대 한 포괄적인 서비스 계정 정보를 제공 하는 항목 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 포함한서비스를[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 올바른 계정 유형, 설치 프로그램에서 할당한 Windows 권한, 파일 시스템 권한, 레지스트리 권한 등에 대한 자세한 내용은 이 항목을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+제품 전체의 계정 프로비전은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)에 자세히 설명되어 있으며, 이 항목에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 비롯한 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 포괄적인 서비스 계정 정보를 제공합니다. 올바른 계정 유형, 설치 프로그램에서 할당한 Windows 권한, 파일 시스템 권한, 레지스트리 권한 등에 대한 자세한 내용은 이 항목을 참조하세요.  
   
  이 항목에서는 테이블 형식 및 클러스터형 설치에 필요한 추가 사용 권한을 비롯하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 추가 정보를 제공합니다. 또한 서버 작업을 지원하는 데 필요한 사용 권한도 다룹니다. 예를 들어 처리 및 쿼리 작업이 서비스 계정에서 실행되도록 구성할 수 있습니다. 이렇게 하려면 추가 사용 권한을 부여해야 합니다.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="logon-account-recommendations"></a>로그온 계정 권장 사항  
  장애 조치(failover) 클러스터에서 Analysis Services의 모든 인스턴스는 Windows 도메인 사용자 계정을 사용하도록 구성되어야 합니다. 모든 인스턴스에 동일한 계정을 할당합니다. 자세한 내용은 [Analysis Services를 클러스터링하는 방법](http://msdn.microsoft.com/library/dn736073.aspx) 을 참조하세요.  
   
- 독립 실행형 인스턴스는 기본 가상 계정 **NT Service\MSSQLServerOLAPService** (기본 인스턴스의 경우) 또는 **NT Service\MSOLAP$***instance-name* (명명된 인스턴스의 경우)을 사용해야 합니다. 이 권장 사항은 운영 체제가 Windows Server 2008 R2 이상이고 SQL Server 2012 이상의 Analysis Services가 실행된다고 가정할 때 모든 서버 모드의 Analysis Services 인스턴스에 적용됩니다.  
+ 독립 실행형 인스턴스는 기본 가상 계정을 사용 해야 **NT Service\MSSQLServerOLAPService** 기본 인스턴스에 대 한 또는 **NT Service\MSOLAP$ * * * 인스턴스 이름을* 명명 된 인스턴스에 대 한 합니다. 이 권장 사항은 운영 체제가 Windows Server 2008 R2 이상이고 SQL Server 2012 이상의 Analysis Services가 실행된다고 가정할 때 모든 서버 모드의 Analysis Services 인스턴스에 적용됩니다.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Analysis Services에 권한 부여  
  이 섹션에서는 Analysis Services에서 로컬 내부 작업(예: 실행 파일 시작, 구성 파일 읽기, 데이터 디렉터리에서 데이터베이스 로드)을 수행하는 데 필요한 권한에 대해 설명합니다. 외부 데이터 액세스를 위한 권한 설정 방법과 다른 서비스 및 응용 프로그램과의 상호 운용성에 대한 지침은 이 항목의 뒤에 나오는 [특정 서버 작업에 대한 추가 권한 부여](#bkmk_tasks) 를 참조하세요.  
@@ -102,7 +103,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_FilePermissions"></a> Analysis Services 서비스 계정에 할당된 파일 시스템 권한  
   
 > [!NOTE]  
->  각 프로그램 폴더와 관련된 권한 목록은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 을 참조하세요.  
+>  각 프로그램 폴더와 관련된 권한 목록은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
 >   
 >  IIS 구성에 관련된 파일 권한 정보 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
   
@@ -156,11 +157,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server 서비스 계정 및 서비스별 SID (블로그)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server 서비스 SID를 사용 하 여 서비스 격리 (KB 문서)](http://support.microsoft.com/kb/2620201)   
- [액세스 토큰 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [보안 식별자 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
- [액세스 토큰 (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
- [액세스 제어 목록 (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
+ [SQL Server 서비스 계정 및 서비스별 SID(블로그)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server는 서비스 SID를 사용하여 서비스 격리(KB 문서)를 제공합니다.](http://support.microsoft.com/kb/2620201)   
+ [액세스 토큰(MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
+ [보안 식별자(MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [액세스 토큰(Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
+ [액세스 제어 목록(Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   

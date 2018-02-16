@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - whitespace [Analysis Services Scripting Language]
 - trailing whitespace
@@ -27,19 +28,20 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 표기 규칙
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services Scripting Language (ASSL) 자식 요소를 포함할 수 정의 하는 요소 유형의 집합으로 개체의 계층 구조를 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+ASSL(Analysis Services Scripting Language)은 개체의 계층을 요소 유형의 집합으로 나타내며, 각 요소 유형은 포함할 수 있는 자식 요소를 정의합니다.  
   
  개체 계층을 나타내기 위해 ASSL에서는 다음과 같은 XML 표기 규칙을 사용합니다.  
   
@@ -127,13 +129,13 @@ ms.lasthandoff: 01/08/2018
 ## <a name="data-types"></a>데이터 형식  
  Analysis Services는 다음과 같은 표준 XSD(XML 스키마 정의 언어) 데이터 형식을 사용합니다.  
   
- **정수**  
+ **Int**  
  -231에서 231-1 사이의 정수 값입니다.  
   
  **Long**  
  -263에서 263-1 사이의 정수 값입니다.  
   
- **String**  
+ **문자열**  
  다음과 같은 전역 규칙을 따르는 문자열 값입니다.  
   
 -   제어 문자가 제거됩니다.  
@@ -156,7 +158,7 @@ ms.lasthandoff: 01/08/2018
 |XML 데이터 형식|기본값|  
 |-------------------|-------------------|  
 |**Boolean**|False|  
-|**String**|""(빈 문자열)|  
+|**문자열**|""(빈 문자열)|  
 |**정수** 또는 **긴**|0(영)|  
 |**타임 스탬프**|12시: 00 AM, 1/1/0001 (해당 하는.NET Frameworks **System.DateTime** 틱 수가 0 인)|  
   

@@ -19,13 +19,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: aa7ce279e968322d9e1ffd80d9a277d27b18c9f7
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot 최소 권한 예-SharePoint 2013
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 예제를 설명 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 최소 권한 사용한 SharePoint 2013 구성에 대 한 합니다. 이 구성은 세 가지 구성 요소 각각에 대해 다른 계정을 사용하며 계정마다 취소 수준의 권한이 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+이 항목에서는 최소 권한을 사용하는 SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성의 예에 대해 설명합니다. 이 구성은 세 가지 구성 요소 각각에 대해 다른 계정을 사용하며 계정마다 취소 수준의 권한이 있습니다.  
   
 ## <a name="summary-of-accounts"></a>계정 요약  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 에서는 Analysis Services 서비스 계정에 네트워크 서비스 계정을 사용할 수 있습니다. 네트워크 서비스 계정은 SharePoint 2010에서 지원하는 시나리오가 아닙니다. 서비스 계정에 대한 자세한 내용은 [Windows 서비스 계정 및 권한 구성](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx)을 참조하세요.  

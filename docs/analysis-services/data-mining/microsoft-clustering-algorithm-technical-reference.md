@@ -25,23 +25,24 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 클러스터링 알고리즘 기술 참조
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션의 구현에 설명 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘, 클러스터링 모델의 동작을 제어 하는 데 사용할 수 있는 매개 변수를 포함 합니다. 또한 클러스터링 모델을 만들고 처리할 때 성능을 향상시킬 수 있는 방법도 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 섹션에서는 클러스터링 모델의 동작을 제어하는 데 사용할 수 있는 매개 변수를 비롯한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘 구현에 대해 설명합니다. 또한 클러스터링 모델을 만들고 처리할 때 성능을 향상시킬 수 있는 방법도 제공합니다.  
   
  클러스터링 모델 사용 방법은 다음 항목을 참조하십시오.  
   
--   [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [클러스터링 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 01/08/2018
   
 |ID|메서드|  
 |--------|------------|  
-|1|Scalable  EM|  
+|1.|Scalable  EM|  
 |2|Non-scalable  EM|  
 |3|Scalable  K-Means|  
 |4|Non-scalable  K-Means|  
@@ -168,7 +169,7 @@ ms.lasthandoff: 01/08/2018
 |모델링 플래그|Description|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|열이 Missing 및 Existing 상태를 갖는 것으로 간주됩니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
-|NOT NULL|이 열에는 Null이 포함될 수 없습니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
+|NOT  NULL|이 열에는 Null이 포함될 수 없습니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  클러스터링 모델은 키 열 및 입력 열을 포함해야 합니다. 입력 열을 예측 가능한 열로 정의할 수도 있습니다. **Predict Only** 로 설정된 열은 클러스터를 작성하는 데 사용되지 않습니다. 클러스터의 이러한 값 분포는 클러스터가 작성된 다음에 계산됩니다.  
@@ -176,7 +177,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)을 참조하세요.  
   
-|Column|내용 유형|  
+|열|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Continuous,  Cyclical,  Discrete,  Discretized,  Key,  Table,  Ordered|  
 |예측 가능한 특성|Continuous,  Cyclical,  Discrete,  Discretized,  Table,  Ordered|  
@@ -187,6 +188,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>관련 항목:  
  [Microsoft 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [클러스터링 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

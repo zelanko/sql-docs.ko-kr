@@ -1,7 +1,7 @@
 ---
 title: "AMO 클래스 소개 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Management Objects]
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a07edb14a747c43abaca0451ca69a35921f3cda
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b288d323d4de3272afb434f3782c1df133e304af
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-classes---introduction"></a>AMO 클래스-소개
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Management Objects (AMO)는 클래스의 인스턴스를 관리 하기 위한 라이브러리 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 클라이언트 응용 프로그램에서입니다. AMO 클래스는 데이터베이스, 차원, 큐브, 마이닝 구조 및 모델, 역할 및 권한, 예외 등의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 관리하는 데 사용되는 클래스입니다.  
+  AMO(Analysis Management Objects)는 클라이언트 응용 프로그램에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 인스턴스를 관리하기 위해 설계된 클래스 라이브러리입니다. AMO 클래스는 데이터베이스, 차원, 큐브, 마이닝 구조 및 모델, 역할 및 권한, 예외 등의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 관리하는 데 사용되는 클래스입니다.  
   
  다음 그림에서는 이 항목에 설명된 클래스의 관계를 보여 줍니다.  
   

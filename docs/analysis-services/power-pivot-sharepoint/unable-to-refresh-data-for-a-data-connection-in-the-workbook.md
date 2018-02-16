@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다.
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]포함 된 Excel 통합 문서에 대 한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 Excel 서비스에 연결 요청을 제출 하는 경우이 오류를 반환 된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 했는데 요청이 실패 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Excel Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버로 연결 요청을 제출했는데 요청이 실패하는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 Excel 통합 문서에 대해 이 오류를 반환합니다.  
   
 ## <a name="details"></a>세부 정보  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
  기본적으로 SharePoint Server 2010은 Excel 서비스가 실행되는 응용 프로그램 서버에 SQL Server 2008 버전의 Analysis Services OLE DB 공급자를 설치합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 지원하는 팜에서 Excel Services 및 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 과 같이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 요청하는 응용 프로그램을 실행 중인 실제 서버는 모두 최신 버전의 데이터 공급자를 사용해야 합니다.  
   
- SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 실행하는 서버는 업데이트된 OLE DB 데이터 공급자를 자동으로 가져옵니다. 동일한 컴퓨터에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 없이 독립 실행형 인스턴스인 Excel Services를 실행하는 서버와 같은 기타 서버는 최신 클라이언트 라이브러리를 사용하도록 패치해야 합니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)를 참조하세요.  
+ SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 실행하는 서버는 업데이트된 OLE DB 데이터 공급자를 자동으로 가져옵니다. 동일한 컴퓨터에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 없이 독립 실행형 인스턴스인 Excel Services를 실행하는 서버와 같은 기타 서버는 최신 클라이언트 라이브러리를 사용하도록 패치해야 합니다. 자세한 내용은 [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)을 참조하세요.  
   
  **시나리오 3b: 도메인 컨트롤러를 사용할 수 없는 경우**  
   

@@ -16,21 +16,21 @@ helpviewer_keywords:
 - objects [Analysis Services], scripts
 - scripts [Analysis Services], objects
 ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 62c23859b14e9c9fc3e4663a0ec813c8dca25ff1
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Management Studio에서 Analysis Services 스크립트 만들기
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 Analysis Services 개체 및 태스크를 스크립팅하는 데 사용할 수 있는 스크립트 생성 기능, 템플릿 및 편집기가 포함되어 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 Analysis Services 개체 및 태스크를 스크립팅하는 데 사용할 수 있는 스크립트 생성 기능, 템플릿 및 편집기가 포함되어 있습니다.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Management Studio에서 Analysis Services 태스크 스크립팅  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 태스크 지향 대화 상자에서 스크립트 옵션 중 하나를 클릭하여 태스크를 스크립팅합니다. 데이터베이스 백업 또는 복원, 개체 처리, 집계 디자인과 같은 태스크를 수행하는 데 사용하는 모든 대화 상자에는 맨 위에 스크립트 옵션이 포함되어 있습니다. 이러한 옵션 중 하나를 선택하면 대화 상자의 정보 및 설정을 기반으로 XMLA 스크립트가 생성됩니다.  
