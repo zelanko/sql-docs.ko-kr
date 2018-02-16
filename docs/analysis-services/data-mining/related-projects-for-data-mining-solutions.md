@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>데이터 마이닝 솔루션 관련 프로젝트
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 솔루션에 필요한 최소값은 데이터 원본, 데이터 원본 뷰, 마이닝 구조 및 마이닝 모델을 정의 하는 데이터 마이닝 프로젝트입니다. 하지만 일상적인 의사 결정 과정에서 데이터 마이닝 모델을 사용하는 경우 데이터 마이닝이 예측 분석 솔루션의 다른 부분과 통합되어야 하는데 여기에는 다음과 같은 프로세스와 구성 요소가 포함될 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+데이터 마이닝 솔루션에 필요한 최소 사항은 데이터 원본, 데이터 원본 뷰, 마이닝 구조 및 마이닝 모델을 정의하는 데이터 마이닝 프로젝트입니다. 하지만 일상적인 의사 결정 과정에서 데이터 마이닝 모델을 사용하는 경우 데이터 마이닝이 예측 분석 솔루션의 다른 부분과 통합되어야 하는데 여기에는 다음과 같은 프로세스와 구성 요소가 포함될 수 있습니다.  
   
 -   데이터 및 변수 준비 및 선택. 데이터 정리, 여러 데이터 원본의 통합 및 메타데이터 관리, 데이터를 데이터 웨어하우스로 변환, 병합 및 업로드하는 작업이 여기에 포함됩니다.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [데이터 마이닝 쿼리 태스크](../../integration-services/control-flow/data-mining-query-task.md)  
   
--   [데이터 프로파일링 태스크](../../integration-services/control-flow/data-profiling-task.md)  
+-   [데이터 프로 파일링 태스크](../../integration-services/control-flow/data-profiling-task.md)  
   
  **데이터 흐름 구성 요소**  
   
@@ -108,11 +109,11 @@ ms.lasthandoff: 01/08/2018
   
  DMX 쿼리가 데이터 원본인 경우 Reporting Services를 사용하는 방법은 다음 링크를 참조하세요.  
   
- [데이터 마이닝 모델에서 데이터 검색&#40;DMX&#41;&#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [데이터 마이닝 모델 & #40; DMX & #41;에서 데이터를 검색 합니다. & #40; Ssrs& #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [DMX & #40; analysis Services 연결 유형 Ssrs& #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  DMX를 데이터 원본으로 사용할 필요는 없습니다. 데이터 마이닝용 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소는 예측 쿼리의 결과를 관계형 데이터베이스에 저장할 수 있도록 지원합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 사용하여 모델을 업데이트하는 워크플로를 설정한 경우 예측 및 기타 데이터 마이닝 쿼리 결과를 SQL Server에 저장하면 보고를 위해 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 또는 DMX와 인터페이스하지 않는 다른 도구를 사용할 수 있습니다.  
   
@@ -206,8 +207,8 @@ ms.lasthandoff: 01/08/2018
   
 -   일부 전체 텍스트 언어는 의미 체계 인덱싱을 지원하지 않습니다. 지원되는 언어 목록을 보려면 [sys.fulltext_languages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [다차원 모델 솔루션&#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [테이블 형식 모델 솔루션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [다차원 모델 솔루션 & #40; Ssas& #41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [테이블 형식 모델 솔루션 & #40; SSAS 테이블 형식 & #41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   
