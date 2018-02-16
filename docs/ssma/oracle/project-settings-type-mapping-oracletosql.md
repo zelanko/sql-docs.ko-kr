@@ -19,10 +19,10 @@ ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
 ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>프로젝트 설정 (형식 매핑) (OracleToSQL)
 형식 매핑 페이지는 **프로젝트 설정** 대화 상자 SSMA Oracle 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/13/2018
 **원본 형식**  
 매핑된 Oracle 데이터 형식입니다.  
   
-**대상 유형**  
+대상 유형  
 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 지정된 된 Oracle 데이터 형식에 대 한 데이터 형식입니다.  
   
 Oracle 형식 매핑에 대 한 기본 SSMA 한 다음 섹션의 표를 참조 하십시오.  
