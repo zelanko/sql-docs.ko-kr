@@ -28,55 +28,55 @@ ms.lasthandoff: 02/11/2018
 # <a name="view-and-summarize-data-using-r"></a>R를 사용한 데이터 관찰 및 요약
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이제 R 코드를 사용 하 여 동일한 데이터를 작업 하겠습니다. 이 단원에서는에 포함 된 함수를 사용 하는 방법을 배웁니다는 **RevoScaleR** 패키지 합니다.
+이제 R 코드를 사용하여 동일한 데이터를 작업해보겠습니다. 이 단원에서는 **RevoScaleR** 패키지에 포함된 함수를 사용하는 방법을 배웁니다.
 
-데이터 개체를 만들고 요약을 생성하고 모델을 작성하는 데 필요한 모든 코드를 포함하는 R 스크립트가 이 연습과 함께 제공됩니다. R 스크립트 파일 **RSQL_RWalkthrough.R**은 스크립트 파일을 설치한 위치에서 찾을 수 있습니다.
+이번 연습에서 제공되는 R 스크립트에는 데이터 개체를 만들고 요약을 생성하고 모델을 작성하는데 필요한 모든 코드를 포함하고 있습니다. **RSQL_RWalkthrough.R** 은 스크립트 파일을 설치한 곳에서 찾을 수 있습니다.
 
-+ R에 익숙한 경우 스크립트를 한 번에 실행할 수 있습니다.
-+ RevoScaleR을 사용 하는 방법을 사용자에 게이 자습서 여 한 줄씩 스크립트를 통해 이동 합니다.
-+ 스크립트의 개별 줄을 실행하려면 파일의 줄을 하나 이상 강조 표시하고 Ctrl+Enter를 누르면 됩니다.
++ R에 익숙하다면 스크립트를 한꺼번에 실행할 수 있습니다.
++ RevoScaleR 사용법을 배우는 사람을 위해 이 자습서에서는 스크립트를 한 줄씩 살펴봅니다.
++ 스크립트에서 개별 줄을 실행하려면 파일에서 한 줄 혹은 여러 줄을 강조 표시하고 Ctrl + ENTER 를 누릅니다.
 
 > [!TIP]
-> 나중에 연습의 나머지 단계를 완료하려는 경우 R 작업 영역을 저장합니다.  이런 방식으로 데이터 개체 및 기타 변수 준비가 다시 사용 합니다.
+> 연습의 나머지 부분을 나중에 완료하려는 경우 R 작업 영역을 저장해 두세요.  그렇게 하면 데이터 개체와 다른 변수들을 다시 사용할 수 있습니다.
 
-## <a name="define-a-sql-server-compute-context"></a>SQL Server 계산 컨텍스트를 정의 합니다.
+## <a name="define-a-sql-server-compute-context"></a>SQL Server 계산 컨텍스트 정의
 
-Microsoft R을 사용 하면 손쉽게 데이터를 가져올 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 코드에서 사용 하도록 합니다. 프로세스는 다음과 같습니다.
+Microsoft R을 사용하면 R 코드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 손쉽게 가져올 수 있습니다. 프로세스는 다음과 같습니다.
   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결 만들기
-- 필요한 데이터가 있는 쿼리를 정의하거나 테이블 또는 뷰를 지정합니다.
-- R 코드를 실행할 때 사용할 하나 이상의 계산 컨텍스트 정의
-- 필요에 따라 원본에서 읽는 동안 데이터 원본에 적용 되는 변환을 정의합니다
+- 필요한 데이터 가지는 쿼리를 정의하거나 테이블 또는 뷰를 지정하기
+- R 코드를 실행할 때 사용할 하나 이상의 계산 컨텍스트 정의하기
+- 선택적으로, 데이터를 읽는 동안 원본에 적용할 변환을 정의
 
-다음 단계는 R 코드의 모든 부분이 R 환경에서 실행 해야 합니다. 모든 RevoScaleR 패키지 뿐만 아니라 기본 사용할 수 있는 경량 R 도구 집합이 포함 하기 때문에 Microsoft R Client를 사용 했습니다.
+다음 단계는 모두 R 코드의 일부이므로 R 환경에서 실행합니다. Microsoft R 클라이언트를 사용한 이유는 모든 RevoScaleR 패키지를 포함하고 있으면 기본적이고 가벼운 R 도구 세트이기 때문입니다.
 
-1. 경우는 **RevoScaleR** 패키지 로드 되지 않았으면, R 코드의이 줄을 실행 합니다.
+1. **RevoScaleR** 패키지가 로드되지 않은 경우, 아래 R 코드를 실행합니다.
 
     ```R
     library("RevoScaleR")
     ```
 
-     인용 부호는 권장이 경우 선택 사항입니다.
+     인용 부호는 선택 사항이나 이 경우에는 권장됩니다.
      
-     오류가 발생 하는 경우 R 개발 환경을 RevoScaleR 패키지를 포함 하는 라이브러리를 사용 하 고 있는지 확인 합니다. 와 같은 명령을 사용 하 여 `.libPaths()` 현재 라이브러리 경로 볼 수 있습니다.
+     오류가 발생한다면 R 개발 환경이 RevoScaleR 패키지를 포함한 라이브러리를 사용하는지 확인합니다. 현재 라이브러리 경로를 보려면 `.libPaths()` 같은 명령을 사용합니다.
 
-2. SQL Server에 대 한 연결 문자열을 만들고 R 변수에 저장 _connStr_합니다.
+2. SQL Server에 대한 연결 문자열을 만들고 R 변수 _connStr_ 에 저장합니다.
     
     ```R
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=Your_Database_Name;Uid=Your_User_Name;Pwd=Your_Password"
     ```
 
-    서버 이름에 대 한 인스턴스 이름을 사용 하 여 수 또는 네트워크에 따라 이름을 정규화 해야 할 수 있습니다.
+    서버 이름으로 인스턴스 이름만 사용할 수도 있고 네트워크에 따라 전체 식별자 이름이 필요할 수도 있습니다.
 
-    Windows 인증에 대 한 구문은 조금 다릅니다.
+    Windows 인증의 경우 구문이 조금 다릅니다.
     
     ```R
     connStr <- "Driver=SQL Server;Server=SQL_instance_name;Database=database_name;Trusted_Connection=Yes"
     ```
 
-    다운로드할 수 있는 R 스크립트에는 SQL 로그인만 사용됩니다. 일반적으로 R 코드에서 암호를 저장 되지 않도록 설정할 수 있는 경우 Windows 인증을 사용 하는 것이 좋습니다. 그러나을 보장 하기 위해이 자습서의 코드는 Github에서 다운로드할 코드와 일치 하는지에서는 SQL 로그인이 연습의 나머지 부분에 대 한 합니다.
+    다운로드 가능한 R 스크립트는 SQL 로그인만 사용합니다. 일반적으로 R 코드에 암호가 저장되는 것을 피하기 위해 가능한 Windows 인증을 사용하길 권장합니다. 그러나 이 자습서의 코드가 Github에서 다운로드한 코드와 일치하도록 나머지 연습에서는 SQL 로그인을 사용할 것입니다. (역주. 명명된 인스턴스에 연결하는 경우 구분 문자 \ 를 두 번 지정합니다.)
 
-3. 새에 사용할 변수를 정의 _계산 컨텍스트_합니다. 계산 컨텍스트 개체를 만든 후에 SQL Server 인스턴스에 R 코드를 실행 하려면 사용할 수 있습니다.
+3. 새로운 _계산 컨텍스트_ 를 만들 때 사용할 변수를 정의합니다. 계산 컨텍스트 개체를 만든 후에 이를 사용해서 SQL Server 인스턴스에 R 코드를 실행할 수 있습니다.
 
     ```R
     sqlShareDir <- paste("C:\\AllShare\\",Sys.getenv("USERNAME"),sep="")
@@ -84,10 +84,9 @@ Microsoft R을 사용 하면 손쉽게 데이터를 가져올 [!INCLUDE[ssNoVers
     sqlConsoleOutput <- FALSE
     ```
 
-    - R에서는 워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 간에 R 개체를 직렬화할 때 임시 디렉터리를 사용합니다.  *sqlShareDir*로 사용되는 로컬 디렉터리를 지정하거나 기본값을 사용할 수 있습니다.
+    - R에서는 워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 간에 R 개체를 직렬화할 때 임시 디렉터리를 사용합니다. *sqlShareDir*로 사용되는 로컬 디렉터리를 지정하거나 기본값을 사용할 수 있습니다.
   
     - *sqlWait*을 사용하여 R이 서버의 결과를 기다릴지 여부를 지정합니다.  대기 vs. 비 대기 작업에 대한 논의는 [Microsoft R에서 ScaleR을 사용한 분산과 병렬 컴퓨팅](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing) 을 참조합니다.
-
   
     - *sqlConsoleOutput* 인수를 사용해서 R 콘솔에 출력되지 않도록 지정합니다.
 
@@ -143,15 +142,15 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
 
     하지만 이제 데이터 개체를 정의했으므로 다른 함수에 인수로 사용할 수 있습니다.
 
-## <a name="use-the-sql-server-data-in-r-summaries"></a>SQL Server 데이터를 사용 하 여 R 요약에서
+## <a name="use-the-sql-server-data-in-r-summaries"></a>R 요약에서 SQL Server 데이터 사용
 
-이 섹션에서는 적용 해 보도록에서 제공 하는 함수 중 몇 가지 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 해당 지원 원격 계산 컨텍스트. 데이터 원본에 R 함수를 적용 하 여 있습니다 수 탐색, 요약 및 차트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터입니다.
+이번 섹션에서 원격 계산 컨텍스트를 지원하는 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 의 몇 가지 함수를 시도해 보겠습니다. 데이터 소스에 R 함수를 적용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 탐색, 요약, 차트로 작성할 수 있습니다.
 
-1. 함수 호출 [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) 데이터 원본과 해당 데이터 형식에서 변수의 목록을 가져올 수 있습니다.
+1. [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) 함수를 호출하면 데이터 원본에 있는 변수들의 목록과 해당 데이터 형식을 얻을 수 있습니다.
 
-    **rxGetVarInfo** 유용한 함수는;을 데이터 프레임에서 호출할 수 있습니다 또는 원격 데이터 개체의 데이터 집합이 최대값 및 최소값 등의 정보를 가져오려는 값, 데이터 형식 및 요소 열에는 수준 수입니다.
+    **rxGetVarInfo** 는 편리한 함수입니다. 데이터 프레임 또는 원격 데이터 개체 내의 데이터 집합에 대해 호출하면 최대값과 최소값, 그 데이터 유형, 인자(factor) 열이 몇 개의 수준(level)으로 되어 있는지 등의 정보를 얻을 수 있습니다.
     
-    모든 종류의 데이터 입력, 기능 변환 또는 기능 엔지니어링 후에는 이 함수를 실행하는 것이 좋습니다. 이렇게 하면 모델에 사용 하려는 기능에서 필요한 데이터의 모든 입력 이며 오류가 발생 하지 않도록 확인할 수 있습니다.
+    데이터 입력, 특성 변환 또는 특성 추출(feature engineering) 후에 이 함수를 실행하는 것을 고려하세요. 그렇게 하면 모델에서 사용하려는 모든 특성의 예상 데이터 유형을 확인하고 오류를 피할 수 있습니다.
   
     ```R
     rxGetVarInfo(data = inDataSource)
@@ -172,7 +171,7 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
     Var 10: dropoff_longitude, Type: numeric
     ```
 
-2. 이제, RevoScaleR 함수를 호출 [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary) 개별 변수에 대 한 자세한 통계를 가져올 합니다.
+2. 이제 RevoScaleR 함수 [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary) 를 호출해서 개별 변수에 대한 자세한 통계를 얻습니다.
 
     rxSummary는 R `summary` 요약 함수에 기반하지만 몇 가지 추가 기능과 이점을 가집니다. rxSummary는 다중 계산 컨텍스트로 작동하고 청킹(chunking)을 지원합니다.  또한 값을 변환하거나 인자 수준 기반의 요약에도 rxSummary를 사용할 수 있습니다.
     
