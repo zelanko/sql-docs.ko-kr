@@ -12,7 +12,7 @@
 # 데이터베이스 미러링
 ## [Database Mirroring Witness - sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
 
-# 데이터 계층 응용 프로그램
+# 의
 ## [데이터 계층 응용 프로그램 보기 - dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
 
 # [가용성 그룹](always-on-availability-groups-catalog-views-transact-sql.md)  
@@ -36,9 +36,6 @@
 ## [sys.resource_stats](sys-resource-stats-azure-sql-database.md)  
 ## [sys.resource_usage](sys-resource-usage-azure-sql-database.md)  
 ## [dbo.server_quotas](dbo-server-quotas-azure-sql-database.md)  
-## [dbo.slo_assignment_history](dbo-slo-assignment-history-azure-sql-database.md)  
-## [dbo.slo_database_objectives](dbo-slo-database-objectives-azure-sql-database.md)  
-## [dbo.slo_service_objectives](dbo-slo-service-objectives-azure-sql-database.md)  
 
 # [CLR 어셈블리](clr-assembly-catalog-views-transact-sql.md)  
 ## [sys.assemblies](sys-assemblies-transact-sql.md)  
@@ -211,7 +208,7 @@
 ## [syspolicy_policy_category_subscriptions](syspolicy-policy-category-subscriptions-transact-sql.md)  
 ## [syspolicy_system_health_state](syspolicy-system-health-state-transact-sql.md)  
 
-# [리소스 관리자](resource-governor-catalog-views-transact-sql.md)  
+# [Resource Governor](resource-governor-catalog-views-transact-sql.md)  
 ## [sys.resource_governor_configuration](sys-resource-governor-configuration-transact-sql.md)  
 ## [sys.resource_governor_external_resource_pools](sys-resource-governor-external-resource-pools-transact-sql.md)  
 ## [sys.resource_governor_resource_pools](sys-resource-governor-resource-pools-transact-sql.md)  
