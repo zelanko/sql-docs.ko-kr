@@ -8,26 +8,28 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 931c88853bc5f2b0ecca65aa40cf5d4b4f29bd48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ebf0e74709450f3f6bcee076c6ac4921996c54b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Stretch Database에 테이블을 구성하려면 SQL Server Management Studio에서 테이블에 대해 **늘이기 | 활성화**를 선택하여 **스트레치에 테이블 사용** 마법사를 엽니다. 또한, Transact-SQL을 사용하여 기존 테이블에서 스트레치 데이터베이스를 사용하거나 활성화된 스트레치 데이터베이스로 새 테이블을 만들 수 있습니다.  
   
@@ -35,9 +37,9 @@ ms.lasthandoff: 12/05/2017
   
 -   테이블에 핫 데이터와 콜드 데이터가 모두 포함된 경우 필터 함수를 지정하여 마이그레이션할 행을 선택할 수 있습니다.    
  
- **필수 구성 요소**. 테이블에서 **늘이기 | 활성화** 를 선택하고 데이터베이스에서 스트레치 데이터베이스를 활성화하지 않은 경우에는, 마법사가 스트레치 데이터베이스에서 데이터베이스를 먼저 구성합니다. 이 문서의 단계 대신 [Stretch에 데이터베이스 사용 마법사를 실행하여 시작](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) 의 단계를 따르세요.  
+ **필수 구성 요소**. 테이블에서 **늘이기 | 활성화** 를 선택하고 데이터베이스에서 스트레치 데이터베이스를 활성화하지 않은 경우에는, 마법사가 스트레치 데이터베이스에서 데이터베이스를 먼저 구성합니다. 이 문서의 단계 대신 [Stretch에 데이터베이스 사용 마법사를 실행하여 시작](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)의 단계를 따르세요.  
   
- **사용 권한**. 데이터베이스 또는 테이블에 대해 스트레치 데이터베이스를 사용하도록 설정하려면 db_owner 권한이 필요합니다. 또한, 테이블에서 스트레치 데이터베이스를 사용하려면 테이블에 대한 ALTER 권한이 필요합니다.  
+ **사용 권한**. 데이터베이스 또는 테이블에 대해 스트레치 데이터베이스를 사용하도록 설정하려면 db_owner 권한이 필요합니다. 또한, 테이블에서 Stretch Database를 사용하려면 테이블에 대한 ALTER 권한이 필요합니다.  
 
  >   [!NOTE]
  > 나중에 Stretch Database를 사용하지 않도록 설정하려는 경우 테이블 또는 데이터베이스에서 Stretch Database를 사용하지 않도록 설정하면 원격 개체가 삭제되지 않습니다. 원격 테이블 또는 원격 데이터베이스를 삭제하려면 Azure 관리 포털을 사용하여 삭제해야 합니다. 원격 개체는 수동으로 삭제할 때까지 Azure 비용이 계속해서 발생합니다.
@@ -60,7 +62,7 @@ ms.lasthandoff: 12/05/2017
   
 -   마법사를 종료한 후 ALTER TABLE 문을 실행하여 필터 함수를 지정합니다. 필수 단계는 [마법사를 실행한 후 필터 함수 추가](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)를 참조하세요.  
   
- ALTER TABLE 구문은 이 항목의 뒷부분에 설명되어 있습니다.  
+ ALTER TABLE 구문은 이 문서의 뒷부분에 설명되어 있습니다.  
   
  **요약**  
  마법사에서 선택한 옵션과 입력한 값을 검토합니다. 그런 다음 **마침** 을 선택하여 스트레치를 사용하도록 설정합니다.  
@@ -71,7 +73,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="EnableTSQLTable"></a> Transact-SQL을 사용하여 테이블에서 스트레치 데이터베이스 활성화  
  또한, Transact-SQL을 사용하여 기존 테이블에서 스트레치 데이터베이스를 사용하거나 활성화된 스트레치 데이터베이스로 새 테이블을 만들 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  CREATE TABLE 또는 ALTER TABLE을 실행하여 테이블에서 스트레치 데이터베이스를 사용하는 경우 다음 옵션을 사용합니다.  
   
 -   선택 사항으로, 테이블에 핫 및 콜드 데이터가 모두 포함된 경우 `FILTER_PREDICATE = <function>` 절을 사용하여 함수를 지정해 마이그레이션할 행을 선택할 수 있습니다. 조건자는 인라인 테이블 반환 함수를 호출해야 합니다. 자세한 내용은 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요. 필터 함수를 지정하지 않으면 전체 테이블이 마이그레이션됩니다.  
@@ -137,7 +139,7 @@ GO
   
  자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
   

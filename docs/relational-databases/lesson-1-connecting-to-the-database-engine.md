@@ -1,27 +1,28 @@
 ---
 title: "1 단원: 데이터베이스 엔진에 연결 | Microsoft 문서"
 ms.custom: 
-ms.date: 08/05/2016
+ms.date: 02/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d58c2e12f7f25a067e643757afa4b86d2b47ff01
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: a7b0242b6c69f2ecb3b9ef077eae956d3f7d3f18
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/14/2017
  - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 다양한 도구와 함께 제공됩니다. 이 항목에서는 이 중 가장 필요한 도구를 설명하고 작업에 적합한 도구를 선택할 수 있도록 도움을 줍니다. 모든 도구는 **시작** 메뉴에서 액세스할 수 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]와 같은 일부 도구는 기본적으로 설치되지 않으며 설치하는 동안 클라이언트 구성 요소의 일부로 해당 도구를 선택해야 합니다. 아래에서 설명하는 도구에 대한 전체 설명을 보려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서에서 검색하세요. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 에는 이러한 도구의 일부만 포함되어 있습니다.  
 
 ### <a name="basic-tools"></a>기본 도구
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS)는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 관리하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 코드를 기록하는 주 도구이며 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 셸에 호스팅됩니다. SSMS는 [Microsoft 다운로드 센터](https://msdn.microsoft.com/library/mt238290.aspx)에서 무료로 다운로드할 수 있습니다. 이전 버전의 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]에서 최신 버전을 사용할 수 있습니다.  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS)는 [!INCLUDE[ssDE](../includes/ssde-md.md)]을 관리하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 코드를 기록하는 주 도구이며 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 셸에 호스팅됩니다. SSMS는 [Microsoft 다운로드 센터](https://msdn.microsoft.com/library/mt238290.aspx)에서 무료로 다운로드할 수 있습니다. 이전 버전의 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]에서 최신 버전을 사용할 수 있습니다.  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 클라이언트 도구 둘 다와 함께 설치됩니다. 이 관리자를 사용하면 서버 프로토콜을 설정하고, TCP 포트와 같은 프로토콜 옵션을 구성하고, 서버 서비스가 자동으로 시작되도록 구성하고, 클라이언트 컴퓨터에서 사용자가 선호하는 방법으로 연결을 설정하도록 구성할 수 있습니다. 이 도구는 더 많은 고급 연결 요소를 구성하지만 기능을 설정하지는 않습니다.  
 
@@ -84,11 +85,12 @@ ms.lasthandoff: 12/14/2017
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  **서버 이름** 상자에 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 이름을 입력합니다. 기본 SQL Server 인스턴스의 경우 서버 이름은 컴퓨터 이름입니다. SQL Server의 명명된 인스턴스의 경우 서버 이름은 *<computer_name>***\\***<instance_name>*(예: **ACCTG_SRVR\SQLEXPRESS**)입니다. 다음 스크린샷은 'PracticeComputer' 컴퓨터에 있는 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]의 기본(명명되지 않은) 인스턴스에 연결하는 방법을 보여 줍니다. Windows에 로그인한 사용자는 Contoso 도메인의 Mary입니다. Windows 인증을 사용하는 경우 사용자 이름을 변경할 수 없습니다. 
+3.  **서버 이름** 상자에 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 이름을 입력합니다. 기본 SQL Server 인스턴스의 경우 서버 이름은 컴퓨터 이름입니다. SQL Server의 명명된 인스턴스의 경우 서버 이름은 *<computer_name>***\\***<instance_name>,*(예: **ACCTG_SRVR\SQLEXPRESS**)입니다. 다음 스크린샷은 'PracticeComputer' 컴퓨터에 있는 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]의 기본(명명되지 않은) 인스턴스에 연결하는 방법을 보여 줍니다. Windows에 로그인한 사용자는 Contoso 도메인의 Mary입니다. Windows 인증을 사용하는 경우 사용자 이름을 변경할 수 없습니다. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
-4.  **연결**을 클릭합니다.  
+4.  **연결**을 클릭합니다.
+
 > [!NOTE]
 > 이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 처음 사용하며 특별한 연결 문제가 없다고 가정합니다. 그러면 대부분의 사용자를 수용하고 이 자습서를 단순하게 유지할 수 있습니다. 자세한 문제 해결 단계는 [SQL Server 데이터베이스 엔진에 대한 연결 문제 해결](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)을 참조하세요. 
 

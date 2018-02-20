@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a277fd883b517c238052ee0a328fbb0b4feb95ce
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d543239bfec50ec6b5466bf8e57d98fba542e8b7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-servicing-updates"></a>SQL Server 서비스 업데이트 설치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]용 업데이트 설치에 대한 정보를 제공합니다. 이 섹션에서는 다음과 같은 정보를 제공합니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]용 업데이트 설치에 대한 정보를 제공합니다. 이 섹션에서는 다음과 같은 정보를 제공합니다.
   
 - 새로 설치하는 동안 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 용 업데이트 설치  
   
@@ -53,10 +57,10 @@ ms.lasthandoff: 01/18/2018
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트는 MU( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update), WSUS(Windows Server Update Services) 및 Microsoft 다운로드 센터를 통해 제공됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 보안 및 중요 업데이트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update를 통해 제공되며 이러한 업데이트를 보려면 제어판의 Windows Update 애플릿을 통해 MU를 선택해야 합니다.  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] Update를 통해 업데이트를 받으면 무인 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 최신 버전으로 업데이트합니다. 더 많은 유연성이 필요하거나 인터넷 또는 WSUS 액세스가 없을 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center에서 업데이트를 얻어야 합니다.  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] Update를 통해 업데이트를 받으면 무인 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 최신 버전으로 업데이트합니다. 더 많은 유연성이 필요하거나 인터넷 또는 WSUS에 액세스할 수 없는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center에서 업데이트를 얻어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[설치 마법사에서 SQL Server 설치 &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
-[SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)   
+[설치 마법사에서 SQL Server 설치 &#40;설치&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+[SQL Server 인스턴스에 기능 추가 &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
 [실패한 SQL Server 설치 복구](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
 

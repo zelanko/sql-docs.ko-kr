@@ -8,25 +8,26 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 350e9a3e8605aedec6791d135d08127a14d72c8a
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 6419acc6380b15d289d3ac3602d6a28c0fc5c75b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>고유하게 컴파일된 저장 프로시저에서 CASE 식 구현
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**적용 대상:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] 및 SQL Server [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상
+**적용 대상:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] 및 SQL Server 이상 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
 
 CASE 식은 고유하게 컴파일된 T-SQL 모듈에서 지원됩니다. 다음 예제에서는 쿼리에서 CASE 식을 사용하는 방법을 보여 줍니다. 
 
@@ -49,7 +50,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-**적용 대상:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 및 SQL Server [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)] 이상
+**적용 대상:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 및 SQL Server 이상 [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
 
   CASE 식은 고유하게 컴파일된 T-SQL 모듈에서 지원되지 *않습니다*. 다음 예제에서는 고유하게 컴파일된 저장 프로시저에서 CASE 식의 기능을 구현하는 방법을 보여 줍니다.  
   

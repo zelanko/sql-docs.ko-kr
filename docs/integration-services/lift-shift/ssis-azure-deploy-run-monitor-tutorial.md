@@ -1,6 +1,6 @@
 ---
 title: "Azure에서 SSIS 패키지 배포, 실행 및 모니터링 | Microsoft Docs"
-ms.date: 09/25/2017
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,25 +8,26 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3391c69ccf0d3b31499d0cf18713847d3a88fc5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Azure에서 SSIS 패키지 배포, 실행 및 모니터링
 이 자습서에서는 SQL Server Integration Services 프로젝트를 Azure SQL Database의 SSISDB 카탈로그 데이터베이스에 배포하고, Azure-SSIS Integration Runtime에서 패키지를 실행하고, 실행 중인 패키지를 모니터링하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 시작하기 전에 SQL Server Management Studio 버전 17.2 이상이 설치되어 있는지 확인합니다. SSMS의 최신 버전을 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
 
-또한 SSISDB 데이터베이스를 설정하고 Azure-SSIS Integration Runtime을 프로비전했는지 확인합니다. Azure에서 SSIS를 프로비전하는 방법에 대한 자세한 내용은 [SSIS(SQL Server Integration Services) 패키지를 클라우드로 리프트 앤 시프트](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure) 참조하세요.
+또한 SSISDB 데이터베이스를 설정하고 Azure-SSIS Integration Runtime을 프로비전했는지 확인합니다. Azure에서 SSIS를 프로비전하는 방법에 대한 자세한 내용은 [SSIS(SQL Server Integration Services) 패키지를 클라우드로 리프트 앤 시프트](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 참조하세요.
 
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB 데이터베이스에 연결
 
@@ -51,9 +52,9 @@ SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS �
 
 4. 그런 다음 **연결**을 선택합니다. SSMS에서 [개체 탐색기] 창이 열립니다. 
 
-5. [개체 탐색기]에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
+5. 개체 탐색기에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
 
-## <a name="deploy-a-project"></a>프로젝트 배포
+## <a name="deploy-a-project-with-the-deployment-wizard"></a>배포 마법사를 사용하여 프로젝트 배포
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 배포 마법사 시작
 1. **Integration Services 카탈로그** 노드와 **SSISDB** 노드가 펼쳐진 SSMS의 [개체 탐색기]에서 프로젝트 폴더를 펼칩니다.
@@ -78,11 +79,75 @@ SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS �
 4.  **검토** 페이지에서 선택한 설정을 검토합니다.
     -   **이전**을 선택하거나 왼쪽 창에서 단계 중 하나를 선택하여 선택 항목을 변경할 수 있습니다.
     -   **배포**를 선택하여 배포 프로세스를 시작합니다.
-  
+
+    > ![참고] **활성 작업자 에이전트가 없습니다. (.NET SqlClient Data Provider)** 오류 메시지가 나타나면 Azure-SSIS Integration Runtime이 실행 중인지 확인합니다. Azure-SSIS IR이 중지된 상태에서 배포하려고 시도하면 이 오류가 발생합니다.
+
 5.  배포 프로세스가 완료되면 **결과** 페이지가 열립니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다.
     -   작업이 실패하면 **결과** 열에서 **실패**를 선택하여 해당 오류에 대한 설명을 표시합니다.
     -   필요에 따라 **보고서 저장...**을 선택하여 결과를 XML 파일에 저장합니다.
     -   **닫기**를 선택하여 마법사를 종료합니다.
+
+## <a name="deploy-a-project-with-powershell"></a>PowerShell을 사용하여 프로젝트 배포
+
+PowerShell을 사용하여 Azure SQL Database의 SSISDB에 프로젝트를 배포하려면 다음 스크립트를 요구 사항에 맞게 조정합니다.
+
+```powershell
+# Variables
+$ProjectFilePath = "C:\<folder>"
+$SSISDBServerEndpoint = "<servername>.database.windows.net"
+$SSISDBServerAdminUserName = "<username>"
+$SSISDBServerAdminPassword = "<password>"
+
+# Load the IntegrationServices Assembly
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices") | Out-Null;
+
+# Store the IntegrationServices Assembly namespace to avoid typing it every time
+$ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"
+
+Write-Host "Connecting to server ..."
+
+# Create a connection to the server
+$sqlConnectionString = "Data Source=" + $SSISDBServerEndpoint + ";User ID="+ $SSISDBServerAdminUserName +";Password="+ $SSISDBServerAdminPassword + ";Initial Catalog=SSISDB"
+$sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString
+
+# Create the Integration Services object
+$integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection
+
+# Get the catalog
+$catalog = $integrationServices.Catalogs['SSISDB']
+
+write-host "Enumerating all folders..."
+
+$folders = ls -Path $ProjectFilePath -Directory
+
+if ($folders.Count -gt 0)
+{
+    foreach ($filefolder in $folders)
+    {
+        Write-Host "Creating Folder " $filefolder.Name " ..."
+
+        # Create a new folder
+        $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
+        $folder.Create()
+
+        $projects = ls -Path $filefolder.FullName -File -Filter *.ispac
+        if ($projects.Count -gt 0)
+        {
+            foreach($projectfile in $projects)
+            {
+                $projectfilename = $projectfile.Name.Replace(".ispac", "")
+                Write-Host "Deploying " $projectfilename " project ..."
+
+                # Read the project file, and deploy it to the folder
+                [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)
+                $folder.DeployProject($projectfilename, $projectFileContent)
+            }
+        }
+    }
+}
+
+Write-Host "All done." 
+```
 
 ## <a name="run-a-package"></a>패키지 실행
 
@@ -100,7 +165,7 @@ Integration Services 서버에서 현재 실행 중인 Integration Services 작�
 
 또한 [개체 탐색기]에서 패키지를 선택하여 마우스 오른쪽 단추로 클릭하고, **보고서**, **표준 보고서**, **모든 실행**을 차례로 선택할 수도 있습니다.
 
-SSMS에서 실행 중인 패키지를 모니터링하는 방법에 대한 자세한 내용은 [실행 중인 패키지 및 기타 작업 모니터링](https://docs.microsoft.com/en-us/sql/integration-services/performance/monitor-running-packages-and-other-operations)을 참조하세요.
+SSMS에서 실행 중인 패키지를 모니터링하는 방법에 대한 자세한 내용은 [실행 중인 패키지 및 기타 작업 모니터링](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations)을 참조하세요.
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime 모니터링
 

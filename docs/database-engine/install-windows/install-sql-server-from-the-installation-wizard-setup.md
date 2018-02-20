@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,25 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-caps.latest.revision: "91"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41a4945a1d3a709e9fa105e3ebed4c7e010ee957
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0425515d7ffe6f912de76d12c8c64d9fbd938366
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 설치(설치 프로그램)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 이 문서에서는 설치 마법사를 통해 SQL Server를 설치하는 방법을 설명합니다. [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 및 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]에 적용됩니다. 이전 버전의 SQL Server와 관련된 내용은 [설치 마법사에서 SQL Server 2014 설치(설치 프로그램)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx)를 참조하세요.
 
-이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 새 인스턴스를 설치하는 절차를 단계별로 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소를 설치할 수 있는 단일 기능 트리를 제공하므로 구성 요소를 개별적으로 설치할 필요가 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 개별적으로 설치하는 방법에 대한 자세한 내용은 [SQL Server 설치](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+이 문서에서는 설치 마법사를 통해 SQL Server를 설치하는 방법을 설명합니다. [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 및 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]에 적용됩니다. 이전 버전의 SQL Server와 관련된 내용은 [설치 마법사에서 SQL Server 2014 설치(설치 프로그램)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx)를 참조하세요.
 
- 다음 추가 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 다른 방법을 설명합니다.  
+이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 인스턴스를 설치하는 절차를 단계별로 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소를 설치할 수 있는 단일 기능 트리를 제공하므로 구성 요소를 개별적으로 설치할 필요가 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 개별적으로 설치하는 방법에 대한 자세한 내용은 [SQL Server 설치](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)를 참조하세요.  
+
+ 다음 추가 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 다른 방법을 설명합니다.  
 
 -   [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 01/18/2018
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)을 검토하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)의 문서를 검토하세요.  
   
 > [!NOTE]  
 > 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.  

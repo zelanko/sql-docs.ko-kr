@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +17,26 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 64c02e1d3e2c0304acebd9d8c8c9a60982841c10
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 한 서버에서 두 개 이상의 네트워크 또는 네트워크 서브넷으로의 연결을 제공해야 할 경우 다중 홈 컴퓨터를 사용하는 것이 일반적인 시나리오입니다. 이 컴퓨터는 경계 네트워크(DMZ(완충 영역) 또는 스크린된 서브넷이라고도 함)에 있는 경우가 많습니다. 이 항목에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  한 서버에서 두 개 이상의 네트워크 또는 네트워크 서브넷으로의 연결을 제공해야 할 경우 다중 홈 컴퓨터를 사용하는 것이 일반적인 시나리오입니다. 이 컴퓨터는 경계 네트워크(DMZ(완충 영역) 또는 스크린된 서브넷이라고도 함)에 있는 경우가 많습니다. 이 문서에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
 >  다중 홈 컴퓨터는 여러 개의 네트워크 어댑터를 가지고 있거나, 하나의 네트워크 어댑터에 여러 IP 주소를 사용할 수 있도록 구성되어 있습니다. 이중 홈 컴퓨터는 두 개의 네트워크 어댑터를 가지고 있거나, 하나의 네트워크 어댑터에 두 개의 IP 주소를 사용할 수 있도록 구성되어 있습니다.  
   
- 이 항목의 내용을 이해하려면 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)항목에 설명되어 있는 내용에 대해 잘 알고 있어야 합니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 방화벽과 함께 사용하는 방법에 대한 기본 정보를 제공합니다.  
+ 이 문서의 내용을 이해하려면 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) 문서에 설명되어 있는 내용에 대해 잘 알고 있어야 합니다. 이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 방화벽과 함께 사용하는 방법에 대한 기본 정보를 제공합니다.  
   
  **이 예는 다음과 같은 가정을 전제로 합니다.**  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     >  IPv4 주소는 옥텟이라고 하는 일련의 네 개 숫자로 구성됩니다. 각 숫자는 255 이하이며 점으로 구분됩니다(예: 127.0.0.1). IPv6 주소는 8개의 16진수가 각각 콜론으로 구분되어 있습니다(예: fe80:4898:23:3:49a6:f5c1:2452:b994).  
   
--   방화벽 규칙에서 1433 포트 등과 같은 특정 포트를 통한 액세스를 허용할 수 있습니다. 또는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 프로그램(sqlservr.exe)에 대한 액세스를 허용할 수 있습니다. 둘 중 한 방법이 더 좋은 것은 아닙니다. 경계 네트워크에 있는 서버는 인트라넷에 있는 서버보다 공격으로부터 더 취약하기 때문에 이 항목에서는 포트를 보다 세부적으로 제어하여 열고자 하는 포트를 개별적으로 선택하기로 합니다. 따라서 이 항목에서는 고정 포트에서 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 포트에 대한 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
+-   방화벽 규칙에서 1433 포트 등과 같은 특정 포트를 통한 액세스를 허용할 수 있습니다. 또는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 프로그램(sqlservr.exe)에 대한 액세스를 허용할 수 있습니다. 둘 중 한 방법이 더 좋은 것은 아닙니다. 경계 네트워크에 있는 서버는 인트라넷에 있는 서버보다 공격으로부터 더 취약하기 때문에 이 문서에서는 포트를 보다 세부적으로 제어하여 열고자 하는 포트를 개별적으로 선택하기로 합니다. 따라서 이 문서에서는 고정 포트에서 수신 대기하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 포트에 대한 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
 -   이 예에서는 TCP 포트 1433을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 대한 액세스를 구성합니다. 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에서 사용하는 다른 포트는 포트를 구성하는 일반적인 절차를 사용하여 구성할 수 있습니다.  
   

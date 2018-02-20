@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +19,21 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d0e323482ac2d762a24a2ef39f2922764a24d35b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 372c5003b349984098a8d02e6655659e6af3ef58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-replicated-databases"></a>복제된 데이터베이스 업그레이드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복제된 데이터베이스를 업그레이드할 수 있도록 지원합니다. 따라서 노드 업그레이드 중에 다른 노드의 작업을 중지할 필요가 없으며 한 토폴로지 내에서 지원되는 버전과 관련된 규칙만 잘 지키면 됩니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복제된 데이터베이스를 업그레이드할 수 있도록 지원합니다. 따라서 노드 업그레이드 중에 다른 노드의 작업을 중지할 필요가 없으며 한 토폴로지 내에서 지원되는 버전과 관련된 규칙만 잘 지키면 됩니다.  
   
 -   배포자는 게시자 버전 이상인 모든 버전일 수 있습니다. 많은 경우에 배포자는 게시자와 동일한 인스턴스에 있습니다.  
   
@@ -42,7 +46,7 @@ ms.lasthandoff: 01/18/2018
     -   병합 게시에 대한 구독자는 게시자 버전 이하인 모든 버전일 수 있습니다.  
   
 > [!NOTE]  
->  이 항목은 설치 도움말 설명서와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 사용할 수 있습니다. 설치 도움말 설명서에서 굵게 표시된 항목 링크는 온라인 설명서에만 제공되는 항목을 나타냅니다. **이 [게시물](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**에서 설명하는 옵션을 사용하여 게시자, 구독자 및 배포자에 대한 업그레이드 전략을 설계할 수 있습니다. 
+>  이 문서는 설치 도움말 설명서와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 사용할 수 있습니다. 설치 도움말 설명서에서 굵게 표시된 문서 링크는 온라인 설명서에만 제공되는 문서를 나타냅니다. **이 [게시물](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**에서 설명하는 옵션을 사용하여 게시자, 구독자 및 배포자에 대한 업그레이드 전략을 설계할 수 있습니다. 
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>업그레이드 전에 트랜잭션 복제용 로그 판독기 에이전트 실행  
  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]로 업그레이드하기 전에 로그 판독기 에이전트에서 게시된 테이블의 커밋된 모든 트랜잭션을 처리했는지 확인해야 합니다. 모든 트랜잭션이 처리되었는지 확인하려면 트랜잭션 게시를 포함하는 각 데이터베이스에 대해 다음 단계를 수행하십시오.  
@@ -66,7 +70,7 @@ ms.lasthandoff: 01/18/2018
   
  병합 복제는 게시 및 구독 데이터베이스의 많은 시스템 테이블에 게시 및 구독 메타데이터를 저장합니다. 스냅숏 에이전트를 실행하면 게시 메타데이터가 업데이트되고 병합 에이전트를 실행하면 구독 메타데이터가 업데이트됩니다. 따라서 게시 스냅숏을 생성하기만 하면 됩니다. 병합 게시에 매개 변수가 있는 필터가 사용되면 각 파티션은 스냅숏도 갖게 됩니다. 이러한 분할된 스냅숏은 업데이트하지 않아도 됩니다.  
   
- 에이전트는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 복제 모니터 또는 명령줄에서 실행합니다. 스냅숏 에이전트를 실행하는 방법은 다음 항목을 참조하십시오.  
+ 에이전트는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 복제 모니터 또는 명령줄에서 실행합니다. 스냅숏 에이전트를 실행하는 방법은 다음 문서를 참조하세요.  
   
 -   [초기 스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
@@ -76,7 +80,7 @@ ms.lasthandoff: 01/18/2018
   
 -   [복제 에이전트 실행 파일 개념](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
- 병합 에이전트를 실행하는 방법은 다음 항목을 참조하십시오.  
+ 병합 에이전트를 실행하는 방법은 다음 문서를 참조하세요.  
   
 -   [끌어오기 구독 동기화](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   

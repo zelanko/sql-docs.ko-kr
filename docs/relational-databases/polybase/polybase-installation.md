@@ -8,21 +8,23 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PolyBase, installation
+helpviewer_keywords:
+- PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 982594dc9a0f3ec83dcecef9738b2d4cda1fad83
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-installation"></a>PolyBase 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +54,7 @@ SQL Server 인스턴스에서 PolyBase 설치를 시작하기 전에 단일 노�
 - 모든 컴퓨터가 같은 도메인에 있습니다.
 - 설치하는 동안 동일한 서비스 계정 및 암호를 사용합니다.
 - SQL Server 인스턴스가 네트워크를 통해 서로 통신할 수 있습니다.
+- SQL Server 인스턴스는 모두 동일한 버전의 SQL Server입니다.
 
 PolyBase를 독립 실행형으로 또는 확장 그룹에 설치한 후에는 변경할 수 없습니다. 이 설정을 변경하려면 기능을 제거 후 다시 설치해야 합니다.
 

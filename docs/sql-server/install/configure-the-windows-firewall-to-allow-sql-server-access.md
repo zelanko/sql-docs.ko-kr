@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,30 +26,31 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 90d281884a092adda6f50777dd5403e275611bf4
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
  > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx)을 참조하세요.
 
 방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 설정하고 올바르게 구성하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결 시도가 차단될 수 있습니다.  
   
-방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요. 방화벽은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows의 구성 요소입니다. 다른 회사의 방화벽도 설치할 수 있습니다. 이 항목에서는 Windows 방화벽의 구성 방법에 대해 설명하지만 기본 원칙은 다른 방화벽 프로그램에도 적용됩니다.  
+방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요. 방화벽은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows의 구성 요소입니다. 다른 회사의 방화벽도 설치할 수 있습니다. 이 문서에서는 Windows 방화벽의 구성 방법에 대해 설명하지만 기본 원칙은 다른 방화벽 프로그램에도 적용됩니다.  
   
 > [!NOTE]  
->  이 항목에서는 방화벽 구성의 개요를 제공하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자에게 유용한 정보를 요약하여 설명합니다. 방화벽에 대한 자세한 내용과 권위 있는 방화벽 정보를 보려면 [고급 보안이 설정된 Windows 방화벽 및 IPsec](http://go.microsoft.com/fwlink/?LinkID=116904)를 참조하세요.  
+>  이 문서에서는 방화벽 구성의 개요를 제공하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자에게 유용한 정보를 요약하여 설명합니다. 방화벽에 대한 자세한 내용과 권위 있는 방화벽 정보를 보려면 [고급 보안이 설정된 Windows 방화벽 및 IPsec](http://go.microsoft.com/fwlink/?LinkID=116904)를 참조하세요.  
   
- 제어판의 **Windows 방화벽** 항목과 고급 보안이 설정된 Windows 방화벽 MMC(Microsoft Management Console) 스냅인에 익숙한 사용자, 그리고 구성해야 할 방화벽 설정을 알고 있는 사용자는 다음 목록에 있는 항목으로 바로 이동할 수 있습니다.  
+ 제어판의 **Windows 방화벽** 항목과 고급 보안이 설정된 Windows 방화벽 MMC(Microsoft Management Console) 스냅인에 익숙한 사용자, 그리고 구성해야 할 방화벽 설정을 알고 있는 사용자는 다음 목록에 있는 문서로 바로 이동할 수 있습니다.  
   
 -   [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
@@ -65,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 -   관리자가 방화벽에 대한 예외를 구성합니다. 이를 통해 컴퓨터에서 실행 중인 지정된 프로그램에 대한 액세스 또는 컴퓨터의 지정된 연결 포트에 대한 액세스를 허용할 수 있습니다. 이 경우 컴퓨터는 서버, 수신기 또는 피어로 작동할 때 요청하지 않은 트래픽의 수신을 허용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하려면 이 유형의 구성을 완료해야 합니다.  
   
- 방화벽 전략 선택은 단순히 특정 포트를 열거나 닫을지를 결정하는 것 이상으로 복잡한 과정입니다. 기업에 맞는 방화벽 전략을 설계할 때는 사용 가능한 모든 규칙과 구성 옵션을 고려해야 합니다. 이 항목에서는 방화벽에 사용할 수 있는 모든 옵션에 대해 설명하지는 않습니다. 자세한 내용을 보려면 다음 문서를 참조하세요.  
+ 방화벽 전략 선택은 단순히 특정 포트를 열거나 닫을지를 결정하는 것 이상으로 복잡한 과정입니다. 기업에 맞는 방화벽 전략을 설계할 때는 사용 가능한 모든 규칙과 구성 옵션을 고려해야 합니다. 이 문서에서는 방화벽에 사용할 수 있는 모든 옵션을 검토하지는 않습니다. 자세한 내용을 보려면 다음 문서를 참조하세요.  
   
  [고급 보안이 포함된 Windows 방화벽 시작 가이드](http://go.microsoft.com/fwlink/?LinkId=116080)  
   
@@ -84,11 +86,11 @@ ms.lasthandoff: 12/05/2017
 
 -  **MMC(Microsoft Management Console)**  
   
-     고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용하면 고급 방화벽 설정을 구성할 수 있습니다. 이 스냅인은 대부분의 방화벽 옵션을 쉽게 사용할 수 있도록 제공하고 모든 방화벽 프로필을 제공합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [고급 보안이 설정된 Windows 방화벽 스냅인 사용](#BKMK_WF_msc) 을 참조하세요.  
+     고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용하면 고급 방화벽 설정을 구성할 수 있습니다. 이 스냅인은 대부분의 방화벽 옵션을 쉽게 사용할 수 있도록 제공하고 모든 방화벽 프로필을 제공합니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [고급 보안이 설정된 Windows 방화벽 스냅인 사용](#BKMK_WF_msc) 을 참조하세요.  
   
 -   **netsh**  
   
-     관리자는 **netsh.exe** 도구를 사용하여 명령 프롬프트 또는 배치 파일을 통해 Windows 기반 컴퓨터를 구성하고 모니터링할 수 있습니다**.** **netsh** 도구를 사용하면 상황에 맞는 명령을 입력하여 적절한 도우미에 전달할 수 있습니다. 그러면 도우미가 명령을 수행합니다. 도우미는 하나 이상의 서비스, 유틸리티 또는 프로토콜에 대한 구성, 모니터링 및 지원을 제공하여 **netsh** 도구의 기능을 확장하는 동적 연결 라이브러리 파일(.dll)입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 지원하는 모든 운영 체제에는 방화벽 도우미가 포함되어 있습니다. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 에는 **advfirewall**이라는 고급 방화벽 도우미도 있습니다. **netsh** 사용에 대한 자세한 내용은 이 항목에서 다루지 않습니다. 그러나 여기서 설명하는 대부분의 구성 옵션은 **netsh**를 사용하여 구성할 수 있습니다. 예를 들어 명령 프롬프트에서 다음 스크립트를 실행하여 TCP 포트 1433을 엽니다.  
+     관리자는 **netsh.exe** 도구를 사용하여 명령 프롬프트 또는 배치 파일을 통해 Windows 기반 컴퓨터를 구성하고 모니터링할 수 있습니다**.** **netsh** 도구를 사용하면 상황에 맞는 명령을 입력하여 적절한 도우미에 전달할 수 있습니다. 그러면 도우미가 명령을 수행합니다. 도우미는 하나 이상의 서비스, 유틸리티 또는 프로토콜에 대한 구성, 모니터링 및 지원을 제공하여 **netsh** 도구의 기능을 확장하는 동적 연결 라이브러리 파일(.dll)입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 지원하는 모든 운영 체제에는 방화벽 도우미가 포함되어 있습니다. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 에는 **advfirewall**이라는 고급 방화벽 도우미도 있습니다. **netsh** 사용에 대한 자세한 내용은 이 문서에서 다루지 않습니다. 그러나 여기서 설명하는 대부분의 구성 옵션은 **netsh**를 사용하여 구성할 수 있습니다. 예를 들어 명령 프롬프트에서 다음 스크립트를 실행하여 TCP 포트 1433을 엽니다.  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -116,7 +118,7 @@ ms.lasthandoff: 12/05/2017
   
 |시나리오|포트|주석|  
 |--------------|----------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스|TCP 포트 1433|방화벽에서 허용되는 가장 일반적인 포트입니다. 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)]설치에 대한 일상적인 연결 또는 컴퓨터에서 실행 중인 유일한 인스턴스인 명명된 인스턴스에 적용됩니다. 명명된 인스턴스에는 특별 고려 사항이 있습니다. 이 항목의 뒷부분에 나오는 [동적 포트](#BKMK_dynamic_ports) 를 참조하세요.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스|TCP 포트 1433|방화벽에서 허용되는 가장 일반적인 포트입니다. 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)]설치에 대한 일상적인 연결 또는 컴퓨터에서 실행 중인 유일한 인스턴스인 명명된 인스턴스에 적용됩니다. 명명된 인스턴스에는 특별 고려 사항이 있습니다. 이 문서의 뒷부분에 나오는 [동적 포트](#BKMK_dynamic_ports)를 참조하세요.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스|TCP 포트는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 시작할 때 결정되는 동적 포트입니다.|아래 [동적 포트](#BKMK_dynamic_ports)섹션의 설명을 참조하세요. 명명된 인스턴스를 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에 UDP 포트 1434가 필요할 수 있습니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스|관리자가 구성한 포트 번호입니다.|아래 [동적 포트](#BKMK_dynamic_ports)섹션의 설명을 참조하세요.|  
 |관리자 전용 연결|기본 인스턴스에 대한 TCP 포트 1434. 다른 포트는 명명된 인스턴스에 사용됩니다. 오류 로그에서 포트 번호를 확인하세요.|기본적으로 DAC(관리자 전용 연결)에 대한 원격 연결은 설정되지 않습니다. 원격 DAC를 설정하려면 노출 영역 구성 패싯을 사용하세요. 자세한 내용은 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)을 참조하세요.|  
@@ -124,7 +126,7 @@ ms.lasthandoff: 12/05/2017
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스|HTTP 끝점을 만들 때 지정할 수 있습니다. 기본값은 CLEAR_PORT 트래픽의 경우 TCP 포트 80이고, SSL_PORT 트래픽의 경우 443입니다.|URL을 통한 HTTP 연결에 사용됩니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스|TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 연결입니다.|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 포트 4022. 사용되는 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]에 대한 기본 포트는 없지만 이는 온라인 설명서 예에서는 이 구성이 일반적으로 사용됩니다.|  
-|데이터베이스 미러링|관리자가 선택한 포트입니다. 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|데이터베이스 미러링에 대한 기본 포트는 없지만 온라인 설명서의 예에서는 TCP 포트 5022 또는 7022를 사용합니다. 특히 자동 장애 조치(Failover)를 사용하는 보안 수준이 높은 모드에서는 사용 중인 미러링 끝점이 중단되지 않도록 하는 것이 매우 중요합니다. 방화벽 구성으로 인해 쿼럼이 중단되면 안 됩니다. 자세한 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 참조하세요.|  
+|데이터베이스 미러링|관리자가 선택한 포트입니다. 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|데이터베이스 미러링에 대한 기본 포트는 없지만 온라인 설명서의 예에서는 TCP 포트 5022 또는 7022를 사용합니다. 특히 자동 장애 조치(Failover)를 사용하는 보안 수준이 높은 모드에서는 사용 중인 미러링 끝점이 중단되지 않도록 하는 것이 매우 중요합니다. 방화벽 구성으로 인해 쿼럼이 중단되면 안 됩니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.|  
 |복제|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 복제 연결에는 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 포트(기본 인스턴스의 경우 TCP 포트 1433 등)가 사용됩니다.<br /><br /> 복제 스냅숏을 위한 웹 동기화 및 FTP/UNC 액세스를 위해서는 방화벽에서 추가 포트를 열어야 합니다. 복제는 초기 데이터 및 스키마를 다른 위치로 전송하기 위해 FTP(TCP 포트 21)를 사용하거나 HTTP(TCP 포트 80) 또는 파일 공유를 통해 동기화할 수 있습니다. 파일 공유에는 UDP 포트 137 및 138, TCP 포트 139가 사용됩니다(NetBIOS를 사용하는 경우). 파일 공유에는 TCP 포트 445가 사용됩니다.|HTTP를 통한 동기화의 경우 복제는 IIS 끝점(포트를 구성할 수 있지만 기본 포트는 80)을 사용하지만 IIS 프로세스는 표준 포트(기본 인스턴스의 경우 1433)를 통해 백 엔드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다.<br /><br /> FTP를 사용한 웹 동기화 중에 FTP 전송은 구독자와 IIS 사이가 아닌 IIS와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 사이에 이뤄집니다.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.<br /><br /> [IPsec](#BKMK_IPsec) 예외가 필요할 수도 있습니다.|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용 중인 경우 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 호스트 컴퓨터에서 예외 목록에 **Devenv.exe** 를 추가하고 TCP 포트 135를 열어야 합니다.<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용 중인 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 호스트 컴퓨터에서 예외 목록에 **ssms.exe** 를 추가하고 TCP 포트 135를 열어야 합니다. 자세한 내용은 [TSQL 디버거를 실행하기 전에 방화벽 규칙 구성](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)을 참조하세요.|  
   
@@ -316,7 +318,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **PortQry** 유틸리티를 사용하면 TCP/IP 포트 상태를 수신 대기 중, 수신 대기 중 아님 또는 필터링됨으로 보고할 수 있습니다. 필터링됨(filtered) 상태의 경우 포트가 수신 중일 수도 있고 수신 중이 아닐 수도 있습니다. 이 상태는 유틸리티가 포트로부터 응답을 수신하지 못했음을 나타냅니다. **PortQry** 유틸리티는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=28590)에서 다운로드할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Windows 서버 시스템의 서비스 개요 및 네트워크 포트 요구 사항](http://support.microsoft.com/kb/832017)   
  [방법: 방화벽 설정 구성(Azure SQL 데이터베이스)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   

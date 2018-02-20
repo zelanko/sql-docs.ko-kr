@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +24,21 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f1f07cf2c53676a37f2c26dfebfd3ed623ec7a8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>네트워크 프로토콜 및 네트워크 라이브러리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 서버는 한 번에 여러 네트워크 프로토콜을 수신하거나 모니터링할 수 있습니다. 이때 각각의 프로토콜을 구성해야 합니다. 특정 프로토콜을 구성하지 않으면 서버가 해당 프로토콜에서 수신할 수 없습니다. 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 프로토콜 구성을 변경할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  서버는 한 번에 여러 네트워크 프로토콜을 수신하거나 모니터링할 수 있습니다. 이때 각각의 프로토콜을 구성해야 합니다. 특정 프로토콜을 구성하지 않으면 서버가 해당 프로토콜에서 수신할 수 없습니다. 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 프로토콜 구성을 변경할 수 있습니다.  
   
 ## <a name="default-sql-server-network-configuration"></a>기본 SQL Server 네트워크 구성  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스는 TCP/IP 포트 1433 및 명명된 파이프 \\\\.\pipe\sql\query에 대해 구성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스는 포트 번호가 운영 체제에서 할당되는 TCP 동적 포트로 구성됩니다.  
@@ -87,7 +90,7 @@ ms.lasthandoff: 12/05/2017
   
  끝점에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [끝점 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)를 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 다음 항목을 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 다음 문서를 참조하세요.  
   
 -   [서버 네트워크 구성](../../database-engine/configure-windows/server-network-configuration.md)  
   

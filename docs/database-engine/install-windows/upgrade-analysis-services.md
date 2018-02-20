@@ -22,18 +22,21 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 4286f2266d115d39ad97ff3f6255187e7a01d968
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services 업그레이드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Analysis Services 인스턴스는 [Analysis Services의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)에서 설명한 대로 현재 릴리스에 도입된 기능을 활용하기 위해 동일한 서버 모드의 SQL Server 버전으로 업그레이드할 수 있습니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Analysis Services 인스턴스는 [Analysis Services의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)에서 설명한 대로 현재 릴리스에 도입된 기능을 활용하기 위해 동일한 서버 모드의 SQL Server 버전으로 업그레이드할 수 있습니다.  
   
  동일한 하드웨어에서 실행 중인 다른 인스턴스와 독립적으로 각 인스턴스 내부를 업그레이드할 수 있습니다. 그러나 대부분의 관리자는 프로덕션 작업을 새 서버로 전송하기 전에 응용 프로그램 테스트에 대한 새 버전의 새 인스턴스를 설치하도록 선택합니다. 하지만 개발 또는 테스트 서버의 경우 내부 업그레이드가 더 편리할 수 있습니다.  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  테이블 형식 및 다차원 데이터베이스는 서로 다른 버전 경로를 따릅니다. 다차원 및 테이블 형식 모델 모두에 비슷한 숫자의 호환성 수준이 있는 것은 우연의 일치입니다.  기능 변경 내용이 둘 중 하나에만 영향을 주는 경우 모드는 서로 다른 속도로 진행됩니다.  
   
- 배경 목적으로 다음 표는 호환성 수준을 요약하지만 각 수준에서 제공하는 것을 이해하기 위해 세부 항목을 검토해야 합니다.  
+ 배경 지식을 제공할 목적으로 다음 표에 호환성 수준이 요약되어 있지만, 각 수준에서 제공하는 내용을 정확하게 이해하려면 세부 문서를 검토해야 합니다.  
   
 ||||  
 |-|-|-|  

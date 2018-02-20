@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09801cfab4da23ee4c4b082d649d0ff40649b257
-ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
+ms.openlocfilehash: 57394ec4dcc62b6d7e8bdd490fb95bfdcfe30def
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>4단원: URL에서 가상 컴퓨터로 데이터베이스 복원
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 단원에서는 Azure 가상 머신의 SQL Server 2016 인스턴스로 AdventureWorks2014 데이터베이스를 복원합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 단원에서는 Azure 가상 머신의 SQL Server 2016 인스턴스로 AdventureWorks2014 데이터베이스를 복원합니다.
   
 > [!NOTE]  
 > 이 자습서에서는 간단한 설명을 위해 데이터베이스 백업에 사용한 것과 동일한 컨테이너를 데이터 및 로그 파일에 사용합니다. 프로덕션 환경에서는 여러 컨테이너를 사용할 가능성이 크며, 여러 데이터 파일을 사용하는 경우도 많습니다. SQL Server 2016에서는 큰 데이터베이스를 백업할 때 백업 성능을 향상시키기 위해 여러 blob에 백업을 스트라이핑할 수도 있습니다.  

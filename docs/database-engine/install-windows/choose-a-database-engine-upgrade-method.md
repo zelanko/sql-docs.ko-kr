@@ -17,14 +17,17 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 1cb3ad0fe1c3678799c557cf9c3b66286505276c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 가동 중지와 위험을 최소화하기 위해 이전 릴리스의 SQL Server에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하려는 경우 고려해야 할 몇 가지 방식이 있습니다. 전체 업그레이드를 실행하거나 새 설치로 마이그레이션하거나 롤링 업그레이드를 실행할 수 있습니다. 아래 다이어그램에 따라 적절한 방식을 선택할 수 있습니다. 다이어그램의 각 방식은 아래에서도 설명합니다. 다이어그램의 어느 지점에서 결정해야 하는지 알아보려면 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하십시오.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  가동 중지와 위험을 최소화하기 위해 이전 릴리스의 SQL Server에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하려는 경우 고려해야 할 몇 가지 방식이 있습니다. 전체 업그레이드를 실행하거나 새 설치로 마이그레이션하거나 롤링 업그레이드를 실행할 수 있습니다. 아래 다이어그램에 따라 적절한 방식을 선택할 수 있습니다. 다이어그램의 각 방식은 아래에서도 설명합니다. 다이어그램의 어느 지점에서 결정해야 하는지 알아보려면 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하십시오.  
   
  ![데이터베이스 엔진 업그레이드 방법에 대한 의사 결정 트리](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "데이터베이스 엔진 업그레이드 방법에 대한 의사 결정 트리")  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 01/29/2018
 -   Azure 계정이 있으세요?  계정이 있으면 **[여기](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)**로 이동하여 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition이 이미 설치되어 있는 가상 컴퓨터를 실행합니다.  
   
 > [!NOTE]  
->  또한 Azure SQL 데이터베이스 업그레이드 또는 SQL Server 환경 가상화를 업그레이드 계획에 포함하여 고려할 수 있습니다. 이러한 주제는 이 문서에서 다루지 않지만 다음 링크를 참조할 수 있습니다.
+>  또한 Azure SQL 데이터베이스 업그레이드 또는 SQL Server 환경 가상화를 업그레이드 계획에 포함하여 고려할 수 있습니다. 이러한 문서는 본 문서의 범위를 벗어나지만, 일부 링크를 준비했습니다.
 >   - [Azure Virtual Machines의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/) 
 >   - [Azure에서 SQL Server 옵션 선택](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
@@ -105,7 +108,7 @@ ms.lasthandoff: 01/29/2018
      ![SAN 저장소에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 저장소에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법")  
   
 ##  <a name="RollingUpgrade"></a> 롤링 업그레이드  
- 롤링 업그레이드는 가동 시간을 극대화하고 위험을 최소화하며 기능을 보존하기 위해 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 특정 순서로 업그레이드해야 하는 SQL Server 솔루션 환경에 필요합니다. 롤링 업그레이드는 업그레이드 프로젝트에서 하드웨어 및/또는 운영 체제를 더욱 쉽게 업그레이드하기 위해 각각의 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 현재 위치 업그레이드를 수행하거나 새 설치 업그레이드를 수행하여 기본적으로 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 특정 순서로 업그레이드하는 것입니다. 롤링 업그레이드 방식을 사용해야 하는 여러 시나리오가 있습니다. 이러한 방식에 대해서는 다음 항목에서 설명합니다.  
+ 롤링 업그레이드는 가동 시간을 극대화하고 위험을 최소화하며 기능을 보존하기 위해 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 특정 순서로 업그레이드해야 하는 SQL Server 솔루션 환경에 필요합니다. 롤링 업그레이드는 업그레이드 프로젝트에서 하드웨어 및/또는 운영 체제를 더욱 쉽게 업그레이드하기 위해 각각의 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 현재 위치 업그레이드를 수행하거나 새 설치 업그레이드를 수행하여 기본적으로 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 특정 순서로 업그레이드하는 것입니다. 롤링 업그레이드 방식을 사용해야 하는 여러 시나리오가 있습니다. 이러한 방식에 대해서는 다음 문서에서 설명합니다.  
   
 -   Always-On 가용성 그룹: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [Always On 가용성 그룹 복제본 인스턴스 업그레이드](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)를 참조하세요.  
   

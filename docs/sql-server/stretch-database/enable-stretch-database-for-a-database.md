@@ -8,43 +8,45 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling database
 - enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea4a52220729ad7d0fa69ef4e0784fd676aa3f5a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 754e4cb8c56b3c118f7c3d0716b250b860fd73f6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Stretch Database에 기존 데이터베이스를 구성하려면 SQL Server Management Studio에서 데이터베이스에 대해 **태스크 | 스트레치 | 사용**을 선택하여 **스트레치에 데이터베이스 사용** 마법사를 엽니다. Transact-SQL을 사용하여 데이터베이스에서 스트레치 데이터베이스를 활성화할 수도 있습니다.  
   
- 개별 테이블에 대해 **태스크 | 스트레치 | 사용** 선택하고 스트레치 데이터베이스에 데이터베이스를 사용하도록 설정하지 않은 경우에는 마법사가 스트레치 데이터베이스에 데이터베이스를 구성하고 그 과정에서 사용자가 테이블을 선택하도록 합니다. [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)의 단계 대신 이 항목의 단계를 따릅니다.  
+ 개별 테이블에 대해 **태스크 | 스트레치 | 사용** 선택하고 스트레치 데이터베이스에 데이터베이스를 사용하도록 설정하지 않은 경우에는 마법사가 스트레치 데이터베이스에 데이터베이스를 구성하고 그 과정에서 사용자가 테이블을 선택하도록 합니다. [테이블에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)의 단계 대신 이 문서의 단계를 따릅니다.  
   
- 데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하려면 db_owner 사용 권한이 필요합니다. 데이터베이스에서 스트레치 데이터베이스를 활성화하려면 CONTROL DATABASE 사용 권한도 필요합니다.  
+ 데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하려면 db_owner 사용 권한이 필요합니다. 데이터베이스에서 Stretch Database를 활성화하려면 CONTROL DATABASE 사용 권한도 필요합니다.  
 
  >   [!NOTE]
  > 나중에 Stretch Database를 사용하지 않도록 설정하려는 경우 테이블 또는 데이터베이스에서 Stretch Database를 사용하지 않도록 설정하면 원격 개체가 삭제되지 않습니다. 원격 테이블 또는 원격 데이터베이스를 삭제하려면 Azure 관리 포털을 사용하여 삭제해야 합니다. 원격 개체는 수동으로 삭제할 때까지 Azure 비용이 계속해서 발생합니다. 
  
 ## <a name="before-you-get-started"></a>시작하기 전에  
   
--   스트레치에서 데이터베이스를 구성하기 전에 스트레치에 적합한 데이터베이스와 테이블을 식별하기 위해 스트레치 데이터베이스 관리자를 실행하는 것이 좋습니다. 스트레치 데이터베이스 관리자는 차단 문제도 식별합니다. 자세한 내용은 [스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요.  
+-   스트레치에서 데이터베이스를 구성하기 전에 스트레치에 적합한 데이터베이스와 테이블을 식별하기 위해 스트레치 데이터베이스 관리자를 실행하는 것이 좋습니다. Stretch Database 관리자는 차단 문제도 식별합니다. 자세한 내용은 [스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요.  
   
 -   [스트레치 데이터베이스에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 검토합니다.  
   
--   스트레치 데이터베이스는 데이터를 Azure로 마이그레이션합니다. 따라서 Azure 계정 및 청구를 위한 구독이 있어야 합니다. Azure 계정을 생성하려면 [여기를 클릭하십시오](http://azure.microsoft.com/en-us/pricing/free-trial/).  
+-   Stretch Database는 데이터를 Azure로 마이그레이션합니다. 따라서 Azure 계정 및 청구를 위한 구독이 있어야 합니다. Azure 계정을 생성하려면 [여기를 클릭하십시오](http://azure.microsoft.com/en-us/pricing/free-trial/).  
   
 -   새 Azure 서버를 만들거나 기존 Azure 서버를 선택하는 데 필요한 연결 및 로그인 정보를 준비합니다.  
   
@@ -73,7 +75,7 @@ GO
 ##  <a name="EnableTSQLDatabase"></a> Transact-SQL을 사용하여 데이터베이스에서 스트레치 데이터베이스 활성화  
  개별 테이블에서 스트레치 데이터베이스를 활성화할 수 있으려면 데이터베이스에서 스트레치 데이터베이스를 먼저 활성화해야 합니다.  
   
- 데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하려면 db_owner 사용 권한이 필요합니다. 데이터베이스에서 스트레치 데이터베이스를 활성화하려면 CONTROL DATABASE 사용 권한도 필요합니다.  
+ 데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하려면 db_owner 사용 권한이 필요합니다. 데이터베이스에서 Stretch Database를 활성화하려면 CONTROL DATABASE 사용 권한도 필요합니다.  
   
 1.  시작하기 전에 스트레치 데이터베이스가 마이그레이션하는 데이터의 기존 Azure 서버를 선택하거나 새 Azure 서버를 만듭니다.  
   

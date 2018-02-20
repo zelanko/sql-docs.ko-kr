@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 전체 텍스트 인덱스 및 쿼리 성능 저하의 몇 가지 일반적인 원인에 대해 설명합니다. 또한 이러한 문제를 완화하고 성능을 향상시킬 수 있는 몇 가지 제안 사항도 제공합니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+이 항목에서는 전체 텍스트 인덱스 및 쿼리 성능 저하의 몇 가지 일반적인 원인에 대해 설명합니다. 또한 이러한 문제를 완화하고 성능을 향상시킬 수 있는 몇 가지 제안 사항도 제공합니다.
   
 ##  <a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>하드웨어 리소스 문제
@@ -141,7 +143,7 @@ ms.lasthandoff: 12/12/2017
 |x64|*F* = *탐색 범위 수* * 10 * 8|*M* = *T* – *F* – 500|  
 
 **수식 관련 참고 사항**
-1.  여러 전체 채우기가 진행 중인 경우 *F1*, *F2*와 같이 각 채우기 작업에 대한 fdhost.exe 메모리 요구 사항을 개별적으로 계산합니다. 그런 다음 *M* 을 *T***–** sigma**(***F*i**)**로 계산합니다.  
+1.  여러 전체 채우기가 진행 중인 경우 *F1*, *F2*와 같이 각 채우기 작업에 대한 fdhost.exe 메모리 요구 사항을 개별적으로 계산합니다. 그런 다음, *M*을 *T***–** sigma**(***F*i**)**로 계산합니다.  
 2.  500MB는 시스템의 다른 프로세스에 필요한 예상 메모리 양입니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
 3.  를 참조하세요.*ism_size* 는 x64 플랫폼의 경우 8MB로 가정합니다.  
   
@@ -183,7 +185,7 @@ GO
   
      다음 표에서는 몇 가지 흥미로운 대기 유형을 설명합니다.  
   
-    |대기 유형|설명|가능한 해결 방법|  
+    |대기 유형|Description|가능한 해결 방법|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH(_EX 또는 _UP)|IO 병목 상태를 나타내며, 이 경우 일반적으로 평균 디스크 큐 길이가 깁니다.|전체 텍스트 인덱스를 다른 디스크의 다른 파일 그룹으로 이동하면 IO 병목 상태가 줄어들 수 있습니다.|  
     |PAGELATCH_EX(또는 _UP)|동일한 데이터베이스 파일에 쓰기를 시도하고 있는 스레드 간에 경합이 많이 발생하고 있음을 나타냅니다.|전체 텍스트 인덱스가 상주하는 파일 그룹에 파일을 추가하면 이러한 경합을 완화할 수 있습니다.|  

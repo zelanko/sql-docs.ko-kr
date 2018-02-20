@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73dc17666d055ffbd4646befb43ff2a40ab77053
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="system-data-collection-set-reports"></a>시스템 데이터 컬렉션 집합 보고서
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터 수집기는 각 시스템 데이터 컬렉션 집합에 대한 기록 보고서를 제공합니다. 다음 보고서 각각은 관리 데이터 웨어하우스에 저장된 데이터를 사용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+데이터 수집기는 각 시스템 데이터 컬렉션 집합에 대한 기록 보고서를 제공합니다. 다음 보고서 각각은 관리 데이터 웨어하우스에 저장된 데이터를 사용합니다.  
   
 -   [디스크 사용 요약](#Disk)  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |--------------|----------------|  
 |인덱스|인덱스 페이지를 보관하기 위해 사용된 디스크 공간의 양|  
 |할당되지 않음|데이터베이스에 사용할 수 있지만 아직 개체에 할당되지 않은 디스크 공간의 양|  
-|데이터|데이터 페이지가 사용하는 디스크 공간의 양|  
+|data|데이터 페이지가 사용하는 디스크 공간의 양|  
 |사용 안 함|하나 이상의 개체에 할당되었지만 아직 사용되지 않은 디스크 공간의 양|  
   
  트랜잭션 로그 파일의 공간 사용은 사용 중인 공간과 사용하지 않은 공간으로 분류됩니다.  
@@ -136,7 +138,7 @@ ms.lasthandoff: 11/17/2017
 |디스크 I/O 사용량|디스크 I/O 사용량 그래프의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 시스템 그래프 선에 있는 점을 클릭하면 이러한 하위 보고서에 액세스할 수 있습니다.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O 사용량 보고서에서는 디스크 응답 시간 및 디스크 전송 속도에 대한 그래프를 제공합니다. 디스크, 데이터베이스 및 파일별 가상 파일 통계는 추가 테이블에서 제공합니다.<br /><br /> **시스템**: 시스템 디스크 사용량 보고서에서는 디스크 응답 시간, 평균 디스크 큐 길이 및 디스크 전송 속도에 대한 그래프 및 각 프로세스의 I/O 쓰기 및 읽기에 대한 정보를 나열하는 테이블을 제공합니다.|  
 |네트워크 사용량|사용할 수 있는 추가 보고서가 없습니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 작업|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 작업 그래프는 실행 중인 스레드로 인해 발생한 대기 작업을 대기 범주별로 보여 줍니다. 이 그래프에 있는 세그먼트를 클릭하면 자세한 보고서에 액세스할 수 있습니다. 이 보고서에서는 좁은 시간 프레임 동안의 그래픽 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 작업 통계를 제공할 뿐만 아니라 대기 범주에 대한 정보를 테이블 형식으로 제공합니다. CPU 및 해당 하위 범주와 같은 각 범주에 대해 테이블에서 대기 작업 수, 대기 시간 및 총 대기 시간 비율을 보여 줍니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 그래프에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업의 다양한 측면에 액세스할 수 있습니다. SQL 컴파일/초 그래프 선 위의 점을 클릭하여 다음과 같은 보고서를 가져올 수 있습니다.<br /><br /> <br /><br /> 연결 및 세션<br /><br /> 요청<br /><br /> 계획 캐시 적중률<br /><br /> tempdb 특징|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동작|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 그래프에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업의 다양한 측면에 액세스할 수 있습니다. SQL 컴파일/초 그래프 선 위의 점을 클릭하여 다음과 같은 보고서를 가져올 수 있습니다.<br /><br /> <br /><br /> 연결 및 세션<br /><br /> 요청<br /><br /> 계획 캐시 적중률<br /><br /> tempdb 특징|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   

@@ -24,11 +24,11 @@ caps.latest.revision:
 author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d291e4ab071aeafd6db43f48749e4e9ff9bcfd25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dc562d47b04c20a3878bc0e1b8c63bf5d1151e09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,73 +37,73 @@ ms.lasthandoff: 02/03/2018
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  다음 단계는 인덱싱된 뷰를 만들고 성공적으로 구현하는 데 필요합니다.  
   
-1.  뷰에 참조될 기존의 모든 테이블에 대해 SET 옵션이 올바른지 확인합니다.   
-2.  테이블 및 뷰를 만들기 전에 세션에 SET 옵션이 올바르게 설정되어 있는지 확인합니다.  
-3.  뷰 정의가 결정적인지 확인합니다.  
-4.  `WITH SCHEMABINDING` 옵션을 사용하여 보기를 만듭니다.  
-5.  뷰에 고유 클러스터형 인덱스를 만듭니다.  
+1.  뷰에 참조될 기존의 모든 테이블에 대해 SET 옵션이 올바른지 확인합니다.    
+2.  테이블 및 뷰를 만들기 전에 세션에 SET 옵션이 올바르게 설정되어 있는지 확인합니다.   
+3.  뷰 정의가 결정적인지 확인합니다.   
+4.  `WITH SCHEMABINDING` 옵션을 사용하여 보기를 만듭니다.   
+5.  뷰에 고유 클러스터형 인덱스를 만듭니다.   
 
 > [!IMPORTANT]
-> 많은 수의 인덱싱된 뷰 또는 더 적은 수의 매우 복잡한 인덱싱된 뷰에서 참조하는 테이블에서 DML<sup>1</sup>을 실행할 때 참조되는 해당 인덱싱된 뷰도 업데이트되어야 합니다. 따라서 DML 쿼리 성능이 크게 저하되거나 경우에 따라 쿼리 계획도 생성될 수 없습니다.
-> 이러한 시나리오에서는 프로덕션이 쿼리 계획을 사용하고 분석하거나 DML 문을 조정/간소화하기 전에 DML 쿼리를 테스트합니다.
->
-> <sup>1</sup> UPDATE, DELETE 또는 INSERT 작업 등
+> 많은 수의 인덱싱된 뷰 또는 더 적은 수의 매우 복잡한 인덱싱된 뷰에서 참조하는 테이블에서 DML<sup>1</sup>을 실행할 때 참조되는 해당 인덱싱된 뷰도 업데이트되어야 합니다. 따라서 DML 쿼리 성능이 크게 저하되거나 경우에 따라 쿼리 계획도 생성될 수 없습니다.   
+> 이러한 시나리오에서는 프로덕션이 쿼리 계획을 사용하고 분석하거나 DML 문을 조정/간소화하기 전에 DML 쿼리를 테스트합니다.   
+>   
+> <sup>1</sup> UPDATE, DELETE 또는 INSERT 작업 등   
   
 ###  <a name="Restrictions"></a> 인덱싱된 뷰에 필요한 SET 옵션  
- 쿼리가 실행될 때 다른 SET 옵션이 활성화되어 있으면 같은 식을 계산해도 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 다른 결과가 나올 수 있습니다. 예를 들어 SET 옵션 `CONCAT_NULL_YIELDS_NULL`이 켜기로 설정된 후에 **'**abc**'** + NULL 식은 NULL 값을 반환합니다. 그러나 `CONCAT_NULL_YIEDS_NULL`이 끄기로 설정된 후에 같은 식은 **'**abc**'**를 생성합니다.  
+쿼리가 실행될 때 다른 SET 옵션이 활성화되어 있으면 같은 식을 계산해도 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 다른 결과가 나올 수 있습니다. 예를 들어 SET 옵션 `CONCAT_NULL_YIELDS_NULL`이 켜기로 설정된 후에는 `'abc' + NULL` 식이 `NULL` 값을 반환합니다. 그러나 `CONCAT_NULL_YIEDS_NULL`이 끄기로 설정된 후에는 같은 식이 `'abc'`를 생성합니다.  
   
- 뷰를 올바르게 유지하고 일관된 결과를 반환하게 하려면 인덱싱된 뷰는 몇 가지 SET 옵션에 대해 고정 값이 필요합니다. 다음 테이블의 SET 옵션은 다음 상황이 발생할 때마다 **필요한 값** 열에 표시된 값으로 설정되어야 합니다.  
+뷰를 올바르게 유지하고 일관된 결과를 반환하게 하려면 인덱싱된 뷰는 몇 가지 SET 옵션에 대해 고정 값이 필요합니다. 다음 테이블의 SET 옵션은 다음 상황이 발생할 때마다 **필요한 값** 열에 표시된 값으로 설정되어야 합니다.  
   
--   뷰와 뷰의 후속 인덱스가 생성됩니다.  
+-   뷰와 뷰의 후속 인덱스가 생성됩니다.    
   
--   테이블을 만들 때 뷰에서 참조되는 기본 테이블입니다.  
+-   테이블을 만들 때 뷰에서 참조되는 기본 테이블입니다.    
   
--   인덱싱된 뷰에 참가하는 테이블에서 삽입, 업데이트 또는 삭제 작업이 수행됩니다. 이 요구 사항에는 대량 복사, 복제, 분산 쿼리 등의 작업이 포함됩니다.  
+-   인덱싱된 뷰에 참가하는 테이블에서 삽입, 업데이트 또는 삭제 작업이 수행됩니다. 이 요구 사항에는 대량 복사, 복제, 분산 쿼리 등의 작업이 포함됩니다.    
   
--   쿼리 최적화 프로그램에서 인덱싱된 뷰를 사용하여 쿼리 계획을 만듭니다.  
+-   쿼리 최적화 프로그램에서 인덱싱된 뷰를 사용하여 쿼리 계획을 만듭니다.   
   
-    |Set 옵션|필요한 값|기본 서버 값|Default<br /><br /> OLE DB 및 ODBC 값|Default<br /><br /> DB-Library 값|  
-    |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
-    |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|Set 옵션|필요한 값|기본 서버 값|Default<br /><br /> OLE DB 및 ODBC 값|Default<br /><br /> DB-Library 값|  
+|-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
+|ANSI_NULLS|ON|ON|ON|OFF|  
+|ANSI_PADDING|ON|ON|ON|OFF|  
+|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
+|ARITHABORT|ON|ON|OFF|OFF|  
+|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
   
-     <sup>1</sup> `ANSI_WARNINGS`를 켜기로 설정하면 암시적으로 `ARITHABORT`를 켜기로 설정하게 됩니다.  
+<sup>1</sup> `ANSI_WARNINGS`를 켜기로 설정하면 암시적으로 `ARITHABORT`를 켜기로 설정하게 됩니다.  
   
- OLE DB 또는 ODBC 서버 연결을 사용하는 경우 수정해야 하는 유일한 값은 `ARITHABORT` 설정입니다. 모든 DB-Library 값은 **sp_configure** 를 사용하여 서버 수준에서 또는 SET 명령을 사용하여 응용 프로그램에서 올바르게 설정해야 합니다.  
+OLE DB 또는 ODBC 서버 연결을 사용하는 경우 수정해야 하는 유일한 값은 `ARITHABORT` 설정입니다. 모든 DB-Library 값은 **sp_configure** 를 사용하여 서버 수준에서 또는 SET 명령을 사용하여 응용 프로그램에서 올바르게 설정해야 합니다.  
   
 > [!IMPORTANT]  
 > 서버의 데이터베이스에서 계산 열에 첫 번째로 인덱싱된 뷰 또는 인덱스가 만들어지면 바로 서버 차원에서 `ARITHABORT` 사용자 옵션을 켜기로 설정하는 것이 좋습니다.  
   
 ### <a name="deterministic-views"></a>결정적 뷰  
- 인덱싱된 뷰의 정의는 결정적이어야 합니다. `WHERE` 및 `GROUP BY` 절뿐만 아니라 SELECT 목록의 모든 식이 결정적이면 뷰가 결정적입니다. 결정적 식은 특정 입력 값 집합을 사용하여 계산될 때마다 항상 같은 결과를 반환합니다. 결정적 함수만 결정적 식에 참여할 수 있습니다. 예를 들어 `DATEADD` 함수는 세 매개 변수에 지정된 인수 값 집합에 대해 항상 같은 결과를 반환하므로 결정적 함수입니다. `GETDATE`는 항상 같은 인수로 호출되지만 실행될 때마다 반환하는 값이 바뀌므로 비결정적 함수입니다.  
+인덱싱된 뷰의 정의는 결정적이어야 합니다. `WHERE` 및 `GROUP BY` 절뿐만 아니라 SELECT 목록의 모든 식이 결정적이면 뷰가 결정적입니다. 결정적 식은 특정 입력 값 집합을 사용하여 계산될 때마다 항상 같은 결과를 반환합니다. 결정적 함수만 결정적 식에 참여할 수 있습니다. 예를 들어 `DATEADD` 함수는 세 매개 변수에 지정된 인수 값 집합에 대해 항상 같은 결과를 반환하므로 결정적 함수입니다. `GETDATE`는 항상 같은 인수로 호출되지만 실행될 때마다 반환하는 값이 바뀌므로 비결정적 함수입니다.  
   
- 뷰 열이 결정적인지 여부를 확인하려면 **COLUMNPROPERTY** 함수의 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 속성을 사용합니다. 스키마 바인딩되어 있는 뷰의 결정적 열이 정확한지 여부를 확인하려면 COLUMNPROPERTY 함수의 **IsPrecise** 속성을 사용합니다. COLUMNPROPERTY는 TRUE이면 1을 반환하고 FALSE이면 0을 반환하며 입력이 잘못되면 NULL을 반환합니다. 이는 해당 열이 비결정적이거나 정확하지 않음을 의미합니다.  
+뷰 열이 결정적인지 여부를 확인하려면 **COLUMNPROPERTY** 함수의 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 속성을 사용합니다. 스키마 바인딩되어 있는 뷰의 결정적 열이 정확한지 여부를 확인하려면 `COLUMNPROPERTY` 함수의 **IsPrecise** 속성을 사용합니다. `COLUMNPROPERTY`는 TRUE이면 1을 반환하고 FALSE이면 0을 반환하며 입력이 잘못되면 NULL을 반환합니다. 이는 해당 열이 비결정적이거나 정확하지 않음을 의미합니다.  
   
- 식이 결정적인 경우에도 float 식이 포함되어 있으면 정확한 결과는 프로세서 아키텍처 또는 마이크로코드 버전에 따라 달라질 수 있습니다. 데이터 무결성을 보장하기 위해 이런 식은 인덱싱된 뷰의 키가 아닌 열로만 참여할 수 있습니다. float 식이 없는 결정적 식을 정확하다고 합니다. 정확한 결정적 식만 인덱싱된 뷰의 WHERE 또는 GROUP BY 절과 키 열에 참여할 수 있습니다.  
+식이 결정적인 경우에도 float 식이 포함되어 있으면 정확한 결과는 프로세서 아키텍처 또는 마이크로코드 버전에 따라 달라질 수 있습니다. 데이터 무결성을 보장하기 위해 이런 식은 인덱싱된 뷰의 키가 아닌 열로만 참여할 수 있습니다. float 식이 없는 결정적 식을 정확하다고 합니다. 정확한 결정적 식만 인덱싱된 뷰의 `WHERE` 또는 `GROUP BY` 절과 키 열에 참여할 수 있습니다.  
 
 ### <a name="additional-requirements"></a>추가 요구 사항  
- SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충족해야 합니다.  
+SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충족해야 합니다.  
   
--   `CREATE INDEX`를 실행하는 사용자는 뷰의 소유자여야 합니다.  
+-   `CREATE INDEX`를 실행하는 사용자는 뷰의 소유자여야 합니다.    
   
--   인덱스를 만들 때 `IGNORE_DUP_KEY` 옵션은 끄기(기본 설정)로 설정되어야 합니다.  
+-   인덱스를 만들 때 `IGNORE_DUP_KEY` 옵션은 끄기(기본 설정)로 설정되어야 합니다.    
   
--   테이블은 뷰 정의에서 *schema***.***tablename* 처럼 두 부분으로 구성된 이름으로 참조되어야 합니다.  
+-   테이블은 뷰 정의에서 *schema***.***tablename* 처럼 두 부분으로 구성된 이름으로 참조되어야 합니다.    
   
--   뷰에서 참조하는 사용자 정의 함수는 `WITH SCHEMABINDING` 옵션을 사용하여 만들어야 합니다.  
+-   뷰에서 참조하는 사용자 정의 함수는 `WITH SCHEMABINDING` 옵션을 사용하여 만들어야 합니다.    
   
--   뷰에서 참조하는 사용자 정의 함수는 두 부분으로 구성된 이름인 *schema***.***function*으로 참조되어야 합니다.  
+-   뷰에서 참조하는 사용자 정의 함수는 두 부분으로 구성된 이름인 *\<schema>***.***\<function>*으로 참조되어야 합니다.   
   
--   사용자 정의 함수의 데이터 액세스 속성은 `NO SQL`이어야 하고 외부 액세스 속성은 `NO`여야 합니다.  
+-   사용자 정의 함수의 데이터 액세스 속성은 `NO SQL`이어야 하고 외부 액세스 속성은 `NO`여야 합니다.   
   
--   CLR(공용 언어 런타임) 함수는 뷰의 SELECT 목록에 표시될 수 있지만 클러스터형 인덱스 키 정의의 일부일 수는 없습니다. CLR 함수는 뷰의 WHERE 절이나 뷰에서 JOIN 연산의 ON 절에 표시되지 않습니다.  
+-   CLR(공용 언어 런타임) 함수는 뷰의 SELECT 목록에 표시될 수 있지만 클러스터형 인덱스 키 정의의 일부일 수는 없습니다. CLR 함수는 뷰의 WHERE 절이나 뷰에서 JOIN 연산의 ON 절에 표시되지 않습니다.   
   
--   뷰 정의에서 사용된 CLR 사용자 정의 형식의 메서드 및 CLR 함수의 속성을 다음 표와 같이 설정해야 합니다.  
+-   뷰 정의에서 사용된 CLR 사용자 정의 형식의 메서드 및 CLR 함수의 속성을 다음 표와 같이 설정해야 합니다.   
   
     |속성|참고|  
     |--------------|----------|  
@@ -143,7 +143,7 @@ ms.lasthandoff: 02/03/2018
 ###  <a name="Recommendations"></a> 권장 사항  
  인덱싱된 뷰의 **datetime** 및 **smalldatetime** 문자열 리터럴을 참조할 때 결정적 날짜 형식 스타일을 사용하여 리터럴을 원하는 날짜 유형으로 명시적으로 변환하는 것이 좋습니다. 결정적 날짜 형식 스타일 목록은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요. 결정적 및 비결정적 식에 대한 자세한 내용은 이 페이지에서 [고려 사항](#nondeterministic) 섹션을 참조하세요.
 
-많은 수의 인덱싱된 뷰 또는 더 적은 수의 매우 복잡한 인덱싱된 뷰에서 참조하는 테이블에서 DML(UPDATE, DELETE 또는 INSERT 등)을 실행할 때 DML 실행 도중 해당 인덱싱된 뷰도 업데이트되어야 합니다. 따라서 DML 쿼리 성능이 크게 저하되거나 경우에 따라 쿼리 계획도 생성될 수 없습니다. 이러한 시나리오에서는 프로덕션이 쿼리 계획을 사용하고 분석하거나 DML 문을 조정/간소화하기 전에 DML 쿼리를 테스트합니다.
+많은 수의 인덱싱된 뷰 또는 더 적은 수의 매우 복잡한 인덱싱된 뷰에서 참조하는 테이블에서 DML(`UPDATE`, `DELETE` 또는 `INSERT`)을 실행할 때 DML 실행 도중 해당 인덱싱된 뷰도 업데이트되어야 합니다. 따라서 DML 쿼리 성능이 크게 저하되거나 경우에 따라 쿼리 계획도 생성될 수 없습니다. 이러한 시나리오에서는 프로덕션이 쿼리 계획을 사용하고 분석하거나 DML 문을 조정/간소화하기 전에 DML 쿼리를 테스트합니다.
   
 ###  <a name="Considerations"></a> 고려 사항  
  인덱싱된 뷰의 열에 대한 **large_value_types_out_of_row** 옵션의 설정은 기본 테이블의 해당 열에 대한 설정에서 상속됩니다. 이 값은 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 통해 설정됩니다. 식으로부터 구성된 열의 기본 설정은 0으로서 큰 값 유형이 행 내부에 저장됨을 의미합니다.  
@@ -161,7 +161,7 @@ ms.lasthandoff: 02/03/2018
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> Permissions  
- 데이터베이스에는 CREATE VIEW 권한이 필요하고 뷰를 만들 구성표에는 ALTER 권한이 필요합니다.  
+ 데이터베이스에는 **CREATE VIEW** 권한이 필요하고 뷰를 만들 구성표에는 **ALTER** 권한이 필요합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -220,7 +220,7 @@ ms.lasthandoff: 02/03/2018
     GO  
     ```  
   
- 자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
+자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

@@ -8,22 +8,25 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87615ca4a3601ab92b37e97a8392b392accb1695
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e538fc7315661cf76dc807cb54cbd0d518cb8603
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep을 사용하여 SQL Server 설치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 관련 설치 동작에 액세스할 수 있습니다. **설치 센터**의 **고급** 페이지에는 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**와 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**라는 두 옵션이 있습니다. [준비](#prepare) 및 [완료](#complete) 섹션에서는 설치 프로세스에 대해 자세히 설명합니다. 자세한 내용은 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요. 
   
 명령 프롬프트 또는 구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 완료할 수도 있습니다. 참조 항목:  
@@ -33,7 +36,7 @@ ms.lasthandoff: 01/18/2018
 - [구성 파일을 사용하여 SQL Server 설치](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)을 검토하세요. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)의 문서를 검토합니다. 
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과 하드웨어 및 소프트웨어 요구 사항에 대한 자세한 내용은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요. 
     
@@ -173,7 +176,7 @@ ms.lasthandoff: 01/18/2018
   
      **설치된 인스턴스** — 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 
   
-10. 이 항목의 나머지 부분에 대한 워크플로는 준비 단계에서 선택한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다. 
+10. 이 문서의 나머지 부분에 대한 워크플로는 준비 단계에서 선택한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다. 
   
 11. **서버 구성** - 서비스 계정 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 계정을 지정합니다. 이 페이지에 구성된 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다. 
   
@@ -301,7 +304,7 @@ ms.lasthandoff: 01/18/2018
 10. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 모든 구성 요소가 제거될 때까지 1-9단계를 반복합니다. 
   
 ##  <a name="bk_Modifying_Uninstalling"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 완료된 인스턴스 수정 또는 제거 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 완료된 인스턴스를 제거하거나 기능을 추가 또는 제거하는 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 설치된 인스턴스에 대한 작업과 프로세스가 비슷합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 완료된 인스턴스를 제거하거나 기능을 추가 또는 제거하는 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 설치된 인스턴스에 대한 작업과 프로세스가 비슷합니다. 자세한 내용은 다음 문서를 참조하세요.  
   
 - [SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   

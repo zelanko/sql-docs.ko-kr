@@ -20,22 +20,23 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c00d5d9eea412be35b5cb5d53008237d51c95898
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f5c422a4d1a25ed210f857b9de31aaadec481847
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server의 기존 인스턴스 제거(설치)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
  > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server의 기존 인스턴스 제거(설치)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx)를 참조하세요.
 
-  이 문서에서는 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하는 방법에 대해 설명합니다. 이 항목의 단계를 수행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비할 수도 있습니다.  
+  이 문서에서는 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하는 방법에 대해 설명합니다. 이 문서의 단계를 수행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비할 수도 있습니다.  
   
 >**중요!** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하려면 서비스로 로그온할 수 있는 권한을 가진 로컬 관리자여야 합니다.  
   

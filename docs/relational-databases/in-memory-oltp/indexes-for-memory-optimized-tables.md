@@ -1,5 +1,5 @@
 ---
-title: "메모리 액세스에 최적화된 테이블의 인덱스 | Microsoft Docs"
+title: "메모리 액세스에 최적화된 테이블의 인덱스 | Microsoft 문서"
 ms.custom: 
 ms.date: 11/28/2017
 ms.prod: sql-non-specified
@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a7c3e4fb4a7082a1874c9fc320ff67a1ce6031b0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 52c415b0c4c7f4913e8d675ce9fe86ad6051e233
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/02/2018
             DURABILITY = SCHEMA\_AND_DATA);  
     ```
 > [!NOTE]  
-> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 메모리 최적화 테이블 또는 테이블 형식당 8개의 인덱스 제한이 있습니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서는 메모리 최적화 테이블 및 테이블 형식에 해당하는 인덱스 수 제한이 없어집니다.
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 메모리 최적화 테이블 또는 테이블 형식당 8개의 인덱스 제한이 있습니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서는 메모리 최적화 테이블 및 테이블 형식에 해당하는 인덱스 수 제한이 없어집니다.
   
 ### <a name="code-sample-for-syntax"></a>구문에 대한 코드 샘플  
   

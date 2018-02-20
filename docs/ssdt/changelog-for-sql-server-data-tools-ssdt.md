@@ -1,32 +1,58 @@
 ---
 title: "SSDT(SQL Server Data Tools)에 대한 변경 로그 | Microsoft 문서"
 ms.custom: 
-ms.date: 12/22/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssdt
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e516b5d29e975236e9fa002a7d258caca706663d
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 변경 로그는 [SQL Server Data Tools(SSDT)](download-sql-server-data-tools-ssdt.md)용입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+다음은 [SSDT(SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md)에 대한 변경 로그입니다.  
   
 새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.
+
+## <a name="ssdt-for-visual-studio-2017-1552"></a>Visual Studio 2017용 SSDT(15.5.2)
+빌드 번호: 14.0.16156.0
+  
+### <a name="whats-new"></a>새로운 기능
+
+**SSIS**
+1.  SSAS와 SSIS가 동일한 VS 2017 인스턴스에 설치된 경우 SSIS 2008 프로젝트 마이그레이션이 실패하는 문제를 수정합니다.
+2.  Rdlc 보고서 디자이너와 SSIS가 동일한 VS 2017 인스턴스에 설치된 경우 Rdlc 프로젝트를 작성할 수 없는 문제를 수정합니다.
+3.  주석 색을 업데이트할 수 없는 문제를 수정합니다.
+4.  Hadoop 연결 관리자 편집기의 일부 문자열이 다른 언어에서 잘리는 문제를 수정합니다.
+5.  OData 연결 관리자 편집기에서 일부 문자열이 잘리는 문제를 수정합니다.
+6.  Integration Services 가져오기 프로젝트 마법사 창에서 일부 문자열이 잘리는 문제를 수정합니다.
+7.  SSIS 도구 상자 정보 창의 제목 문제를 수정합니다.
+8.  Integration Services 배포 마법사 창에서 일부 문자열이 잘리는 문제를 수정합니다. 
+
+**설치 관리자**
+- 가끔씩 "지정한 파일을 찾을 수 없습니다(0x80070002)" 오류와 함께 페이로드 다운로드가 실패하는 문제를 해결합니다.  
+
+### <a name="known-issues"></a>알려진 문제
+- SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1551"></a>Visual Studio 2017용 SSDT(15.5.1)
 빌드 번호: 14.0.16148.0

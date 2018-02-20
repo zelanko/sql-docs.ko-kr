@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - full-text queries [SQL Server]
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-caps.latest.revision: "80"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6c4d90a0e4498ecdb28727eeca14c2f6bbe147e6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 3eb62bf156079250cc129ab1b07aa3411381e211
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 전체 텍스트 조건자 **CONTAINS** 및 **FREETEXT**와 **SELECT** 문에서 행 집합 반환 함수 **CONTAINSTABLE** 및 **FREETEXTTABLE**을 사용하여 전체 텍스트 쿼리를 작성합니다. 이 항목에서는 각 조건자 및 함수의 예제를 제공하여 최적의 사용 방법을 선택할 수 있습니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+전체 텍스트 조건자 **CONTAINS** 및 **FREETEXT**와 **SELECT** 문에서 행 집합 반환 함수 **CONTAINSTABLE** 및 **FREETEXTTABLE**을 사용하여 전체 텍스트 쿼리를 작성합니다. 이 문서에서는 각 조건자 및 함수의 예제를 제공하여 최적의 사용 방법을 선택할 수 있습니다.
 
 -   단어 및 구를 일치시키려면 **CONTAINS** 및 **CONTAINSTABLE**을 사용합니다.
 -   정확한 단어가 아닌 의미를 일치시키려면 **FREETEXT** 및 **FREETEXTTABLE**을 사용합니다.
@@ -130,7 +132,7 @@ GO
 | |CONTAINS/CONTAINSTABLE|FREETEXT/FREETEXTTABLE|
 |---|---|---|
 |**쿼리 유형**|정확히 또는 부분적으로(덜 정확함) 일치하는 단일 단어 및 구를 찾습니다.|지정된 단어, 구 또는 문장(*freetext 문자열*)의 정확한 단어가 아닌 의미를 찾습니다.<br/><br/>지정된 열의 모든 용어나 용어 형태가 전체 텍스트 인덱스에 있으면 일치하는 항목이 생성됩니다.|
-|**추가 쿼리 옵션**|서로 근접한 단어를 지정할 수 있습니다.<br/><br/>가중치가 부여된 일치 항목을 반환할 수 있습니다.<br/><br/>논리적 연산을 사용하여 검색 조건을 조합할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [부울 연산자 사용(AND, OR 및 NOT)](#Using_Boolean_Operators)을 참조하세요.|해당 사항 없음|
+|**추가 쿼리 옵션**|서로 근접한 단어를 지정할 수 있습니다.<br/><br/>가중치가 부여된 일치 항목을 반환할 수 있습니다.<br/><br/>논리적 연산을 사용하여 검색 조건을 조합할 수 있습니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [부울 연산자 사용(AND, OR 및 NOT)](#Using_Boolean_Operators)을 참조하세요.|해당 사항 없음|
 
 ## <a name="compare-predicates-and-functions"></a>조건자 및 함수 비교
 
@@ -141,7 +143,7 @@ GO
 | |조건자<br/>CONTAINS/FREETEXT|함수<br/>CONTAINSTABLE/FREETEXTTABLE|
 |---|---|---|
 |**사용법**|SELECT 문의 WHERE 또는 HAVING 절에 전체 텍스트 **조건자** CONTAINS 및 FREETEXT를 사용합니다.|SELECT 문의 FROM 절과 같은 일반 테이블 이름처럼 전체 텍스트 **함수** CONTAINSTABLE 및 FREETEXTTABLE 함수를 사용합니다.|
-|**추가 쿼리 옵션**|LIKE와 BETWEEN 등의 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 조건자와 결합할 수 있습니다.<br/><br/>검색할 테이블의 단일 열, 열 목록 또는 모든 열을 지정할 수 있으며,<br/><br/>경우에 따라 단어 분리, 형태소 분석, 동의어 사전 조회 및 의미 없는 단어 제거를 위해 지정된 전체 텍스트 쿼리에서 사용할 리소스의 언어를 지정할 수도 있습니다.|이러한 함수 중 하나를 사용하는 경우 검색할 기본 테이블을 지정해야 합니다. 조건자와 마찬가지로 검색할 테이블의 단일 열, 열 목록 또는 모든 열을 지정할 수 있으며, 경우에 따라 전체 텍스트 쿼리에서 사용할 리소스의 언어를 지정할 수도 있습니다.<br/><br/>일반적으로 CONTAINSTABLE 또는 FREETEXTTABLE 결과는 기본 테이블과 조인해야 합니다. 이렇게 하려면 고유 키 열 이름을 알아야 합니다. 모든 전체 텍스트 사용 테이블에서 생성되는 이 열은 해당 테이블에 고유 행을 강제 적용하는 데 사용됩니다( *고유**키 열*). 키 열에 대한 자세한 내용은 [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)를 참조하세요.|
+|**추가 쿼리 옵션**|LIKE와 BETWEEN 등의 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 조건자와 결합할 수 있습니다.<br/><br/>검색할 테이블의 단일 열, 열 목록 또는 모든 열을 지정할 수 있으며,<br/><br/>경우에 따라 단어 분리, 형태소 분석, 동의어 사전 조회 및 의미 없는 단어 제거를 위해 지정된 전체 텍스트 쿼리에서 사용할 리소스의 언어를 지정할 수도 있습니다.|이러한 함수 중 하나를 사용하는 경우 검색할 기본 테이블을 지정해야 합니다. 조건자와 마찬가지로 검색할 테이블의 단일 열, 열 목록 또는 모든 열을 지정할 수 있으며, 경우에 따라 전체 텍스트 쿼리에서 사용할 리소스의 언어를 지정할 수도 있습니다.<br/><br/>일반적으로 CONTAINSTABLE 또는 FREETEXTTABLE 결과는 기본 테이블과 조인해야 합니다. 이렇게 하려면 고유 키 열 이름을 알아야 합니다. 모든 전체 텍스트 사용 테이블에서 생성되는 이 열은 해당 테이블에 고유 행을 강제 적용하는 데 사용됩니다(*고유**키 열*). 키 열에 대한 자세한 내용은 [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)를 참조하세요.|
 |**결과**|CONTAINS 및 FREETEXT 조건자는 지정된 행이 전체 텍스트 쿼리와 일치하는지 여부를 나타내는 TRUE 또는 FALSE 값을 반환합니다. 일치하는 행은 결과 집합에 반환됩니다.|이러한 함수는 전체 텍스트 쿼리와 일치하는 행이 0개, 1개 또는 그 이상 있는 테이블을 반환합니다. 반환된 테이블에는 함수의 전체 텍스트 검색 조건에 지정된 선택 조건과 일치하는 기본 테이블의 행만 포함됩니다.<br/><br/>또한 이러한 함수 중 하나를 사용하는 쿼리는 다음과 같이 각 행에 대해 관련성 순위 값(RANK) 및 전체 텍스트 키(KEY)를 반환합니다.<br/><ul><li>**KEY** 열 KEY 열은 반환된 행의 고유 값을 반환하며, 선택 조건을 지정하는 데 사용할 수 있습니다.</li><li>**RANK** 열 RANK 열은 각 행이 선택 조건과 일치하는 정도를 나타내는 *순위 값* 을 반환합니다. 행의 텍스트 또는 문서 순위 값이 높을수록 지정된 전체 텍스트 쿼리에 대한 행의 관련성이 큽니다. 또한 여러 행에 동일한 순위가 지정될 수도 있습니다. 선택적 *top_n_by_rank* 매개 변수를 지정하면 반환될 일치 항목 수를 제한할 수 있습니다. 자세한 내용은 [RANK를 사용하여 검색 결과 제한](../../relational-databases/search/limit-search-results-with-rank.md)을 참조하세요.</li></ul>|
 |**추가 옵션**|CONTAINS 또는 FREETEXT 조건자에 네 부분으로 된 이름을 사용하여 연결된 서버의 대상 테이블에 대한 전체 텍스트 인덱싱된 열을 쿼리할 수 있습니다. 원격 서버에서 전체 텍스트 쿼리를 받도록 준비하려면 원격 서버의 대상 테이블 및 열에 대한 전체 텍스트 인덱스를 만든 다음 원격 서버를 연결된 서버로 추가합니다.|해당 사항 없음|
 |**추가 정보**|이러한 조건자의 구문 및 인수에 대한 자세한 내용은 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)를 참조하세요.|이러한 함수의 구문 및 인수에 대한 자세한 내용은 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)을 참조하세요.|
@@ -152,12 +154,12 @@ GO
   
 |쿼리 용어 형태|Description|지원 요소|  
 |----------------------|-----------------|------------------|  
-|하나 이상의 특정 단어 또는 구<br/>(*단순 용어*)|예를 들어 "croissant"은 단어이고 "café au lait"는 구입니다. 이와 같은 단어 및 구를 단순 단어라고 합니다.<br /><br /> 전체 텍스트 검색에서 *단어*(또는 *토큰*)는 지정된 언어의 언어 규칙에 따라 적절한 단어 분리기에 의해 경계가 식별되는 문자열입니다. 올바른 *구*는 여러 단어로 구성됩니다. 문장 부호는 있을 수도 있고 없을 수도 있습니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [특정 단어 또는 구(단순 단어) 검색](#Simple_Term)을 참조하세요.|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 은 정확히 일치하는 구를 검색합니다.<br /><br /> [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 은 구를 여러 개의 단어로 나눕니다.|  
-|특정 텍스트로 시작하는 단어 또는 그러한 단어를 포함하는 구<br/>(*접두사 용어*)|단일 접두사 단어의 경우 지정된 단어로 시작하는 모든 단어가 결과 집합의 일부로 반환됩니다. 예를 들어 "auto*" 단어를 사용하면 "automatic", "automobile" 등이 검색됩니다.<br /><br /> 구의 경우 구에 포함된 각 단어가 접두사 단어로 간주됩니다. 예를 들어 "auto tran\*"은 "automatic transmission" 및 "automobile transducer"와 일치하지만 "automatic motor transmission"과는 일치하지 않습니다.<br /><br /> *접두사 단어*는 파생어를 만들거나 굴절형을 만들기 위해 단어 앞에 추가되는 문자열을 말합니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [접두사(접두사 단어) 검색](#Prefix_Term)을 참조하세요.|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
-|특정 단어의 굴절형<br/>(*생성 용어 - 굴절형*)|예를 들어 "drive"라는 단어의 굴절형을 검색한다고 가정합니다. 테이블의 여러 행에 "drive", "drives", "drove", "driving", "driven" 등의 단어가 포함되어 있는 경우 이러한 각 단어는 drive라는 단어를 활용하여 생성된 것이므로 모두 결과 집합에 포함됩니다.<br /><br /> *굴절형*은 동사의 여러 시제 및 변화와 명사의 단수형 및 복수형을 의미합니다. <br /><br /> 자세한 내용은 이 항목 뒷부분의 [특정 단어의 굴절형(생성 단어) 검색](#Inflectional_Generation_Term)을 참조하세요.|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 은 기본적으로 지정된 모든 단어의 굴절형을 검색합니다.<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 은 선택적 INFLECTIONAL 인수를 지원합니다.|  
+|하나 이상의 특정 단어 또는 구<br/>(*단순 용어*)|예를 들어 "croissant"은 단어이고 "café au lait"는 구입니다. 이와 같은 단어 및 구를 단순 단어라고 합니다.<br /><br /> 전체 텍스트 검색에서 *단어*(또는 *토큰*)는 지정된 언어의 언어 규칙에 따라 적절한 단어 분리기에 의해 경계가 식별되는 문자열입니다. 올바른 *구*는 여러 단어로 구성됩니다. 문장 부호는 있을 수도 있고 없을 수도 있습니다.<br /><br /> 자세한 내용은 이 문서 뒷부분의 [특정 단어 또는 구(단순 단어) 검색](#Simple_Term)을 참조하세요.|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 은 정확히 일치하는 구를 검색합니다.<br /><br /> [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 은 구를 여러 개의 단어로 나눕니다.|  
+|특정 텍스트로 시작하는 단어 또는 그러한 단어를 포함하는 구<br/>(*접두사 용어*)|단일 접두사 단어의 경우 지정된 단어로 시작하는 모든 단어가 결과 집합의 일부로 반환됩니다. 예를 들어 "auto*" 단어를 사용하면 "automatic", "automobile" 등이 검색됩니다.<br /><br /> 구의 경우 구에 포함된 각 단어가 접두사 단어로 간주됩니다. 예를 들어 "auto tran\*"은 "automatic transmission" 및 "automobile transducer"와 일치하지만 "automatic motor transmission"과는 일치하지 않습니다.<br /><br /> *접두사 단어*는 파생어를 만들거나 굴절형을 만들기 위해 단어 앞에 추가되는 문자열을 말합니다.<br /><br /> 자세한 내용은 이 문서 뒷부분의 [접두사(접두사 단어) 검색](#Prefix_Term)을 참조하세요.|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+|특정 단어의 굴절형<br/>(*생성 용어 - 굴절형*)|예를 들어 "drive"라는 단어의 굴절형을 검색한다고 가정합니다. 테이블의 여러 행에 "drive", "drives", "drove", "driving", "driven" 등의 단어가 포함되어 있는 경우 이러한 각 단어는 drive라는 단어를 활용하여 생성된 것이므로 모두 결과 집합에 포함됩니다.<br /><br /> *굴절형*은 동사의 여러 시제 및 변화와 명사의 단수형 및 복수형을 의미합니다. <br /><br /> 자세한 내용은 이 문서 뒷부분의 [특정 단어의 굴절형(생성 단어) 검색](#Inflectional_Generation_Term)을 참조하세요.|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 은 기본적으로 지정된 모든 단어의 굴절형을 검색합니다.<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 은 선택적 INFLECTIONAL 인수를 지원합니다.|  
 |특정 단어의 동의어 형태<br/>(*생성 용어 - 동의어 사전*)|예를 들어 동의어 사전에 "{car, automobile, truck, van}" 항목을 추가하면 "car"라는 단어의 동의어 형태를 검색할 수 있습니다. "automobile", "truck", "van" 또는 "car"라는 단어는 각각 "car"라는 단어를 포함하는 동의어 확장 집합에 속하므로 이러한 단어를 포함하는 쿼리된 테이블의 모든 행이 결과 집합에 나타납니다.<br /><br />*동의어 사전*은 단어에 대한 사용자 지정 동의어를 정의합니다.<br /><br />  동의어 사전 파일의 구조에 대한 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 에는 기본적으로 동의어 사전이 사용됩니다.<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 은 선택적 THESAURUS 인수를 지원합니다.|  
-|다른 단어나 구와 근접한 단어나 구<br/>(*근접 용어*)|예를 들어 "ice"라는 단어가 "hockey"라는 단어와 근접해 있거나 "ice skating"이라는 구가 "ice hockey"라는 구와 근접해 있는 행을 검색할 수 있습니다.<br /><br /> *근접 단어*는 서로 근접하는 단어나 구를 나타냅니다. 첫 번째 검색 단어와 마지막 검색 단어를 구분하는 검색 대상이 아닌 단어의 최대 개수를 지정할 수도 있습니다. 또한 임의의 순서나 지정한 순서로 단어 또는 구를 검색할 수 있습니다.<br /><br /> 자세한 내용은 [NEAR를 사용하여 근접 단어 검색](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)을 참조하세요.|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
-|가중치를 사용하는 단어나 구<br/>(*가중치 용어*)|예를 들어 여러 단어를 검색하는 쿼리에서 각 검색 단어에 검색 조건에 있는 다른 단어에 대한 상대적 중요도를 나타내는 가중치를 할당할 수 있습니다. 이러한 쿼리 유형의 결과에서는 검색 단어에 지정한 상대적 가중치에 따라 관련성이 가장 높은 행이 먼저 반환됩니다. 결과 집합에는 지정된 단어(또는 단어 사이의 내용) 중 적어도 하나를 포함하는 문서 또는 행이 반환되지만 일부 결과는 검색된 여러 개의 단어와 관련된 가중치의 차이 때문에 다른 결과보다 관련이 높은 것으로 간주됩니다.<br /><br /> *가중치*는 단어와 구 집합에서 각 단어와 구의 중요도를 나타냅니다. 가중치는 0.0이 가장 낮고 1.0이 가장 높습니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [가중치를 사용하는 단어 또는 구(가중치 단어) 검색](#Weighted_Term)을 참조하세요.|[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+|다른 단어나 구와 근접한 단어나 구<br/>(*근접 용어*)|예를 들어 "ice"라는 단어가 "hockey"라는 단어와 근접해 있거나 "ice skating"이라는 구가 "ice hockey"라는 구와 근접해 있는 행을 검색할 수 있습니다.<br /><br /> *근접 단어*는 서로 근접한 단어나 구를 나타냅니다. 첫 번째 검색 단어와 마지막 검색 단어를 분리하는 검색 대상이 아닌 단어의 최대 수를 지정할 수도 있습니다. 또한 임의의 순서나 지정한 순서로 단어 또는 구를 검색할 수 있습니다.<br /><br /> 자세한 내용은 [NEAR를 사용하여 근접 단어 검색](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)을 참조하세요.|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+|가중치를 사용하는 단어나 구<br/>(*가중치 용어*)|예를 들어 여러 단어를 검색하는 쿼리에서 각 검색 단어에 검색 조건에 있는 다른 단어에 대한 상대적 중요도를 나타내는 가중치를 할당할 수 있습니다. 이러한 쿼리 유형의 결과에서는 검색 단어에 지정한 상대적 가중치에 따라 관련성이 가장 높은 행이 먼저 반환됩니다. 결과 집합에는 지정된 단어(또는 단어 사이의 내용) 중 적어도 하나를 포함하는 문서 또는 행이 반환되지만 일부 결과는 검색된 여러 개의 단어와 관련된 가중치의 차이 때문에 다른 결과보다 관련이 높은 것으로 간주됩니다.<br /><br /> *가중치*는 단어와 구 집합에서 각 단어와 구의 중요도를 나타냅니다. 가중치는 0.0이 가장 낮고 1.0이 가장 높습니다.<br /><br /> 자세한 내용은 이 문서 뒷부분의 [가중치를 사용하는 단어 또는 구(가중치 단어) 검색](#Weighted_Term)을 참조하세요.|[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
 
 ## <a name="examples_specific"></a> 특정 유형의 검색 예제
 

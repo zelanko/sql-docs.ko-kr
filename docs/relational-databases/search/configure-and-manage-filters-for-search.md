@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cca26f3d6479fb798806d5e6ed0cbcbf8b991272
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4c3a5a90c6dffb76f4569d86615cbb0034f3db5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-filters-for-search"></a>검색 필터 구성 및 관리
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **varbinary**, **varbinary(max)**, **image** 또는 **xml** 데이터 형식 열의 문서를 인덱싱하려면 추가 처리가 필요합니다. 이러한 처리를 수행하려면 필터를 사용해야 합니다. 필터는 문서에서 서식이 제거된 텍스트 정보를 추출합니다. 그런 다음 필터는 테이블 열과 연결된 언어의 단어 분리기 구성 요소에 텍스트를 보냅니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**varbinary**, **varbinary(max)**, **image** 또는 **xml** 데이터 형식 열의 문서를 인덱싱하려면 추가 처리가 필요합니다. 이러한 처리를 수행하려면 필터를 사용해야 합니다. 필터는 문서에서 서식이 제거된 텍스트 정보를 추출합니다. 그런 다음 필터는 테이블 열과 연결된 언어의 단어 분리기 구성 요소에 텍스트를 보냅니다.  
   
  지정된 필터는 지정된 문서 유형(.doc, .pdf, .xls, .xml 등)에만 해당됩니다. 이러한 필터는 IFilter 인터페이스를 구현합니다. 이러한 문서 유형에 대한 자세한 내용을 보려면 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) 카탈로그 뷰를 쿼리하세요.  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  필터 구현에 따라 필터에서 부모 개체에 포함된 개체를 처리할 수도 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다른 개체에 대한 링크를 따라가도록 필터를 구성하지 않습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 고유한 XML 및 HTML 필터를 설치합니다. 또한 운영 체제에 설치되어 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 소유 형식(.doc, .xdoc, .ppt 등)용 필터도  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 로드합니다. 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 로드되어 있는 필터를 확인하려면 [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) 저장 프로시저를 다음과 같이 사용합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 고유한 XML 및 HTML 필터를 설치합니다. 또한 운영 체제에 설치되어 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 소유 형식(.doc, .xdoc, .ppt 등)용 필터도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 로드합니다. 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 로드되어 있는 필터를 확인하려면 [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) 저장 프로시저를 다음과 같이 사용합니다.  
   
 ```  
 EXEC sp_help_fulltext_system_components 'filter';   

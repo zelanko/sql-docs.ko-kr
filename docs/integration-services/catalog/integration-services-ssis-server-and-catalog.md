@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1ba94eb985130eb7e3f8ad020756c7387df297c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b6451f3d322ff92ee928e6a9ed98759df0bcc2e6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services(SSIS) 서버 및 카탈로그
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
  SSISDB 카탈로그 기능에 대한 개요는 [SSIS 카탈로그](../../integration-services/catalog/ssis-catalog.md)를 참조하세요.  
   
 ## <a name="high-availability"></a>고가용성  
- 다른 사용자 데이터베이스와 같이 **SSISDB** 데이터베이스는 데이터베이스 미러링 및 복제를 지원하지 않습니다. 미러링 및 복제에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
+ 다른 사용자 데이터베이스와 마찬가지로, **SSISDB** 데이터베이스는 데이터베이스 미러링 및 복제를 지원합니다. 미러링 및 복제에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
- 또한 SSIS 및 Always On 가용성 그룹을 사용하여 SSISDB의 고가용성 및 해당 콘텐츠를 제공할 수도 있습니다. 자세한 내용은 blogs.msdn.com에서 Matt Masson이 게시한 [Always On을 사용하는 SSIS](http://go.microsoft.com/fwlink/?LinkId=255873)블로그를 참조하세요.  
+ 또한 SSIS 및 Always On 가용성 그룹을 사용하여 SSISDB의 고가용성 및 해당 콘텐츠를 제공할 수도 있습니다. 자세한 내용은 [SSIS 카탈로그에 대한 Always On(SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)을 참조하세요. blogs.msdn.com에서 Matt Masson이 게시한 [Always On을 사용하는 SSIS](http://go.microsoft.com/fwlink/?LinkId=255873) 블로그도 참조하세요.  
   
 ##  <a name="ssms"></a> SQL Server Management Studio의 Integration Services 서버  
  **SSISDB** 데이터베이스를 호스트하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결할 때 개체 탐색기에 다음 개체가 표시됩니다.  

@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text indexes [SQL Server], about
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 25599964a3e210e59fcbb2a1eade782e2109502b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 SQL Server에서 전체 텍스트 인덱스를 만들고, 채우고, 관리하는 방법을 설명합니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+이 항목에서는 SQL Server에서 전체 텍스트 인덱스를 만들고, 채우고, 관리하는 방법을 설명합니다.
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>필수 조건 - 전체 텍스트 카탈로그 만들기
 전체 텍스트 인덱스를 만들려면 먼저 전체 텍스트 카탈로그가 있어야 합니다. 카탈로그는 하나 이상의 전체 텍스트 인덱스에 대한 가상 컨테이너입니다. 자세한 내용은 [전체 텍스트 카탈로그 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-catalogs.md)를 참조하세요.
@@ -80,7 +83,7 @@ ms.lasthandoff: 01/02/2018
     |**열**|전체 텍스트 인덱싱에 사용할 수 있는 테이블 열을 표시합니다. 열을 선택하면 선택한 열이 전체 텍스트 인덱싱됩니다. 이때 전체 텍스트 인덱스에 포함하려는 만큼 사용 가능한 열을 선택할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 속성&#40;열 페이지&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)을 참조하세요.|  
     |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.<br /><br /> 참고: **전체 텍스트 인덱스 속성** 대화 상자를 닫으면 새로 만든 일정이 SQL Server 에이전트 작업( *database_name*.*table_name*에 대한 증분 테이블 채우기 시작)에 연결됩니다.|  
   
-6.  변경 내용을 저장하고 **전체 텍스트 인덱스 속성** 대화 상자를 닫으려면 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 변경 내용을 저장하고 **전체 텍스트 인덱스 속성** 대화 상자를 닫으려면  
   
 ##  <a name="props"></a> 인덱싱된 테이블 및 열 속성 보기  
  OBJECTPROPERTYEX와 같은 여러 가지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하여 다양한 전체 텍스트 인덱싱 속성 값을 얻을 수 있습니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용합니다.  
@@ -131,7 +134,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>전체 텍스트 키 열의 식별자 찾기  
   
-전체 텍스트를 사용하도록 설정된 테이블에는 해당 테이블에 고유 행을 강제 적용하는 데 사용되는 열( *고유**키 열*)이 있습니다. OBJECTPROPERTYEX 함수에서 얻을 수 있는 **TableFulltextKeyColumn** 속성에는 고유 키 열의 열 ID가 포함됩니다.  
+전체 텍스트를 사용하도록 설정된 테이블에는 해당 테이블에 고유 행을 강제 적용하는 데 사용되는 열(*고유**키 열*)이 있습니다. OBJECTPROPERTYEX 함수에서 얻을 수 있는 **TableFulltextKeyColumn** 속성에는 고유 키 열의 열 ID가 포함됩니다.  
  
 이 식별자를 가져오려면 SELECT 문을 사용하여 OBJECTPROPERTYEX 함수를 호출하면 됩니다. 다음과 같이 OBJECT_ID 함수를 사용하여 테이블 이름(*table_name*)을 테이블 ID로 변환하고 **TableFulltextKeyColumn** 속성을 지정합니다.  
   

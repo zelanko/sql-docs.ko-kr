@@ -8,28 +8,29 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ca8131b077c7c6b0e38be07cb037a17d42d2d08
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3403b3680edb3aa984def52b514d599c50852127
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>메모리 내 OLTP(메모리 내 최적화)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 트랜잭션 처리, 데이터 수집 및 데이터 로드, 일시적인 데이터 시나리오의 성능을 크게 개선할 수 있습니다.  기본 코드 및 정보를 즉시 활용하려면 직접 작성한 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저를 빠르게 테스트해야 합니다. 자세한 내용은 다음을 참조하세요.
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 트랜잭션 처리, 데이터 수집 및 데이터 로드, 일시적인 데이터 시나리오의 성능을 크게 개선할 수 있습니다.  기본 코드 및 정보를 즉시 활용하려면 직접 작성한 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저를 빠르게 테스트해야 합니다. 자세한 내용은 다음을 참조하세요.
  -  [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)  
  
 메모리 내 OLTP를 설명하고 성능상의 이점을 설명하는 17분 분량의 비디오
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 |[개요 및 사용 시나리오](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|메모리 내 OLTP의 정의와 성능 이점을 보여 주는 시나리오에 대한 개요입니다.|
 |[메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|하드웨어 및 소프트웨어 요구 사항과 메모리 최적화 테이블의 사용 지침에 대해 설명합니다.|  
 |[메모리 내 OLTP 코드 예제](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|메모리 최적화 테이블을 만들고 사용하는 방법을 보여 주는 코드 예제가 포함되어 있습니다.|  
-|[메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|메모리 최적화 테이블을 소개합니다.|  
+|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|메모리 최적화 테이블을 소개합니다.|  
 |[메모리 액세스에 최적화된 테이블 변수](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|기존의 테이블 변수 대신 메모리 최적화 테이블 변수를 사용하여 tempdb 사용을 줄이는 방법을 보여주는 코드 예제입니다.|  
 |[메모리 액세스에 최적화된 테이블의 인덱스](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|메모리 최적화 인덱스를 소개합니다.|  
 |[고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|고유하게 컴파일된 저장 프로시저를 소개합니다.|  

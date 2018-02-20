@@ -8,25 +8,29 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07ad726c7ba7c4c51bc98881aafbb2dd15228f78
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로그램)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전체 업그레이드할 수 있는 단일 기능 트리를 제공합니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전체 업그레이드할 수 있는 단일 기능 트리를 제공합니다.  
   
 >[!WARNING]  
 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드하면 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 덮어쓰므로 컴퓨터에는 이 버전이 더 이상 존재하지 않게 됩니다. 
@@ -109,7 +113,7 @@ ms.lasthandoff: 01/18/2018
   
      **설치된 인스턴스**  — 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 컴퓨터에 기본 인스턴스가 이미 설치된 경우 명명된 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]인스턴스를 설치해야 합니다.  
   
-13. 이 항목의 나머지 부분에 대한 워크플로는 설치에 대해 지정한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다.  
+13. 이 문서의 나머지 부분에 대한 워크플로는 설치에 대해 지정한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다.  
   
 14. 서버 구성 - 서비스 계정 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 기본 서비스 계정이 표시됩니다. 이 페이지에 구성된 실제 서비스는 사용자가 업그레이드하려는 기능에 따라 달라집니다.  
   

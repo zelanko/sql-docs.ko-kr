@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f21ea2afcf50beb80ec3cdfdc39c0d1f79d5adbe
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a7e5ed2cc2df42469baf3b28e36e6c1444d892a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>수신기, 클라이언트 연결 및 응용 프로그램 장애 조치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 클라이언트 연결 및 응용 프로그램 장애 조치(failover) 기능에 대한 고려 사항에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 클라이언트 연결 및 응용 프로그램 장애 조치(failover) 기능에 대한 고려 사항에 대해 설명합니다.  
   
 > [!NOTE]  
 >  대부분의 일반 수신기 구성에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 또는 PowerShell cmdlet을 사용하여 첫 번째 가용성 그룹 수신기를 간단히 만들 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [관련 태스크](#RelatedTasks)를 참조하세요.  
@@ -121,7 +123,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  *읽기 전용 라우팅* 은 가용성 그룹 수신기에 대한 들어오는 연결을 읽기 전용 작업을 허용하도록 구성된 보조 복제본에 라우팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 기능을 말합니다. 가용성 그룹 수신기 이름을 참조하는 들어오는 연결은 다음과 같은 경우 읽기 전용 복제본에 자동으로 라우팅될 수 있습니다.  
   
 -   최소 하나 이상의 보조 복제본이 읽기 전용 액세스로 설정되고 각 읽기 전용 보조 복제본과 주 복제본은 읽기 전용 라우팅을 지원하도록 구성됩니다. 자세한 내용은 이 섹션의 뒷부분에 나오는 [읽기 전용 라우팅을 위해 가용성 복제본을 구성하려면](#ConfigureARsForROR)을 참조하세요.  
-  
+
+-   연결 문자열은 가용성 그룹에 포함된 데이터베이스를 참조합니다. 이 방법의 대안으로, 연결에 사용되는 로그인에는 데이터베이스가 기본 데이터베이스로 구성되어 있습니다. 자세한 내용은 [알고리즘이 읽기 전용 라우팅을 사용하는 방법에 대한 문서](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)를 참조하세요.
+
 -   연결 문자열은 가용성 그룹 수신기를 참조하며 들어오는 연결의 응용 프로그램 의도는 ODBC 또는 OLEDB 연결 문자열이나 연결 특성 또는 속성에서 **Application Intent=ReadOnly** 키워드를 사용하는 등과 같은 방법으로 읽기 전용으로 설정됩니다. 자세한 내용은 이 섹션 뒷부분에 있는 [읽기 전용 응용 프로그램 의도 및 읽기 전용 라우팅](#ReadOnlyAppIntent)을 참조하세요.  
   
 ###  <a name="ConfigureARsForROR"></a> 읽기 전용 라우팅에 대한 가용성 복제본을 구성하려면  
@@ -152,7 +156,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 이 연결 문자열 예에서 클라이언트는 포트 1433에서 `AGListener` 라는 가용성 그룹 수신기에 연결을 시도합니다. 가용성 그룹 수신기가 1433에서 수신하는 경우 포트를 생략할 수도 있습니다.  연결 문자열에 **ApplicationIntent** 속성이 **ReadOnly**로 설정되어 있으므로 이 연결 문자열은 *읽기 전용 연결 문자열*입니다.  이 설정이 없으면 서버에서 연결에 대한 읽기 전용 라우팅을 시도하지 않습니다.  
+ 이 연결 문자열 예에서 클라이언트는 포트 1433에서 `AGListener`라는 가용성 그룹 수신기를 통해 AdventureWorks 데이터베이스에 연결을 시도합니다. 가용성 그룹 수신기가 1433에서 수신하는 경우 포트를 생략할 수도 있습니다.  연결 문자열에 **ApplicationIntent** 속성이 **ReadOnly**로 설정되어 있으므로 이 연결 문자열은 *읽기 전용 연결 문자열*입니다.  이 설정이 없으면 서버에서 연결에 대한 읽기 전용 라우팅을 시도하지 않습니다.  
   
  가용성 그룹의 주 데이터베이스는 들어오는 읽기 전용 라우팅 요청을 처리한 다음 주 복제본에 조인되고 읽기 전용 라우팅을 위해 구성된 온라인 읽기 전용 복제본을 찾습니다.  클라이언트는 주 복제본 서버에서 연결 정보를 다시 받고 식별된 읽기 전용 복제본에 연결합니다.  
   

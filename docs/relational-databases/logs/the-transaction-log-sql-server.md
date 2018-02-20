@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cb3c2ded87c3dd16f302aeab8e14c9ba09f92e88
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 24b9cf5cb7fd7a8359b7a946219b5e4a5eb5c037
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 각 트랜잭션에 의해 적용된 모든 트랜잭션 및 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 각 트랜잭션에 의해 적용된 모든 트랜잭션 및 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다.
   
 트랜잭션 로그는 데이터베이스의 중요한 구성 요소입니다. 시스템 오류가 발생한 경우 데이터베이스를 일관된 상태로 다시 전환하려면 이 로그가 필요합니다. 
 

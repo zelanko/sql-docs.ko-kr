@@ -1,25 +1,20 @@
 ---
 title: "업데이트됨 - 데이터베이스 엔진 설명서 | Microsoft Docs"
 description: "데이터베이스 엔진 설명서에서 최근에 변경되어 업데이트된 내용 중에서 발췌한 부분을 표시합니다."
-services: na
-documentationcenter: 
-author: MightyPen
 manager: craigg
-editor: barbkess
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: database-engine
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
+author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cbf472ba2b8d2d7abad095992895b56940a82d92
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: database-engine
+ms.date: 02/03/2018
+ms.openlocfilehash: d01d9fa13342709a74d98033d093d9856ab5d680
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>신규 및 최근 업데이트: 데이터베이스 엔진 설명서
 
@@ -33,7 +28,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *업데이트 날짜 범위:*  &nbsp; **2017-09-28** &nbsp;부터 &nbsp; **2017-12-02**
+- *업데이트 날짜 범위:*  &nbsp; **2017-12-03** &nbsp;부터 &nbsp; **2018-02-03**까지
 - *주제 영역:* &nbsp; **데이터베이스 엔진**
 
 
@@ -72,7 +67,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
-1. [임시 작업을 위해 최적화 서버 구성 옵션](#TitleNum_1)
+1. [Always On 가용성 그룹 복제본 인스턴스 업그레이드](#TitleNum_1)
 
 
 
@@ -83,83 +78,87 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-optimize-for-ad-hoc-workloads-server-configuration-optionconfigure-windowsoptimize-for-ad-hoc-workloads-server-configuration-optionmd"></a>1. &nbsp; [임시 작업을 위해 최적화 서버 구성 옵션](configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)
+### <a name="1-nbsp-upgrading-always-on-availability-group-replica-instancesavailability-groupswindowsupgrading-always-on-availability-group-replica-instancesmd"></a>1. &nbsp; [Always On 가용성 그룹 복제본 인스턴스 업그레이드](availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)
 
-*업데이트됨: 2017-11-20* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*업데이트됨: 2018-01-29* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 38.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 174.  ms.author= "mikeray".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 6ca71358f13780b930e6fd10e431d4df2bb96441 221306c4554ebd383ab68ed67cdaeca390f57106  (PR=4032  ,  Filename=optimize-for-ad-hoc-workloads-server-configuration-option.md  ,  Dirpath=docs\database-engine\configure-windows\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
+<!-- git diff --ignore-all-space --unified=0 20ca282e8965889a7a530fb67e125cc876410e41 9f27d0f9a74333b291c1cdc1529edc13960fae29  (PR=4741  ,  Filename=upgrading-always-on-availability-group-replica-instances.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=0a44ce9993ebf61f86e409255a1d58d47993951a) -->
 
 
 
-**권장 사항**
-
-일회 사용 계획의 수가 OLTP 서버의 ..!NCLUDE-NotShown--ssDEnoversion--../../includes/ssdenoversion-md.md)] 메모리의 상당 부분을 차지하고 이러한 계획이 임시 계획인 경우 이 서버 옵션을 사용하여 이들 개체의 메모리 사용을 줄입니다.
-단일 사용으로 캐시된 계획의 수를 찾으려면 다음 쿼리를 실행합니다.
-
-```
-SELECT objtype, cacheobjtype,
-  AVG(usecounts) AS Avg_UseCount,
-  SUM(refcounts) AS AllRefObjects,
-  SUM(CAST(size_in_bytes AS bigint))/1024/1024 AS Size_MB
-FROM sys.dm_exec_cached_plans
-WHERE objtype = 'Adhoc' AND usecounts = 1
-GROUP BY objtype, cacheobjtype;
-```
-
-> [!IMPORTANT]
-> **optimize for ad hoc workloads** 를 1로 설정하면 새 계획만 영향을 받으며, 이미 계획 캐시에 있던 계획은 영향을 받지 않습니다.
-> 이미 캐시된 쿼리 계획을 즉시 반영하려면 [ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE--../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)를 사용하여 계획 캐시를 지우거나 ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)]를 다시 시작해야 합니다.
+**변경 데이터 캡처 또는 복제를 위한 특별한 단계**
 
 
+적용하는 업데이트에 따라 변경 데이터 캡처 또는 복제가 활성화된 AG 복제본 데이터베이스에 추가 단계가 필요할 수 있습니다. 업데이트에 대한 릴리스 정보를 참조하여 다음 단계가 필요한지 확인하세요.
+
+1. 각 보조 복제본을 업그레이드합니다.
+
+1. 모든 보조 복제본이 업그레이드된 후 AG를 업그레이드된 인스턴스로 장애 조치(failover)합니다.
+
+1. 주 복제본을 호스트하는 인스턴스에서 다음 Transact-SQL을 실행합니다.
+
+   ```
+   EXECUTE [master].[sys].[sp_vupgrade_replication];
+   ```
+
+   >[!NOTE]
+   >이 명령을 실행하는 데 몇 분 정도 걸릴 수 있습니다.
+
+1. 원래 주 복제본이었던 인스턴스를 업그레이드합니다.
+
+자세한 내용은 [최신 CU로 업그레이드한 후 CDC 기능이 중단될 수 있음](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)을 참조하세요.
 
 
 
 
 
-## <a name="similar-articles"></a>유사한 문서
 
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+
+
+
+## <a name="similar-articles-about-new-or-updated-articles"></a>신규 문서 또는 업데이트된 문서에 대한 유사 문서
 
 이 섹션에는 공용 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새로 추가되었거나 업데이트됨(3+14): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
-- [새로 추가되었거나 업데이트됨(87 + 0): **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [새로 추가되었거나 업데이트됨(5+4): **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(2+2): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
-- [새로 추가되었거나 업데이트됨(10+9): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
-- [새로 추가되었거나 업데이트됨(2+4): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(4+2): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
-- [새로 추가되었거나 업데이트됨(21+0): **SQL 작업 Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [새로 추가되었거나 업데이트됨(5+1): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새로 추가되었거나 업데이트됨(0+2): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *있는* 주제 영역
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
+
+- [새로 추가되었거나 업데이트됨(1+3):&nbsp; **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(12+1): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(6+2):&nbsp; **SQL용 Linux** 문서](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(15+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
+- [새로 추가되었거나 업데이트됨(2+9):&nbsp; **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(1+0):&nbsp; **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **SQL 작업 Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(1+2):&nbsp; **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(0+2):&nbsp; **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *없는* 주제 영역
+
 
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMA(Data Migration Assistant)** 문서](../dma/new-updated-dma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
 

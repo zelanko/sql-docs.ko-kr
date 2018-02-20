@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eae5931014a84ff1169412b830a20e217627918c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d582d7d9ca0bc90ca40ee34e946d49bf545024bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005에서 업그레이드하나요?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 2005 지원 연장이 종료되므로 새 버전의 SQL Server와 Azure SQL 데이터베이스로 업그레이드할 이유가 생겼습니다. 업그레이드를 통해 보안 및 규정 준수를 유지할 수 있고, 획기적인 성능을 달성하고 데이터 플랫폼 인프라를 최적화할 수 있습니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+ SQL Server 2005 지원 연장이 종료되므로 새 버전의 SQL Server와 Azure SQL 데이터베이스로 업그레이드할 이유가 생겼습니다. 업그레이드를 통해 보안 및 규정 준수를 유지할 수 있고, 획기적인 성능을 달성하고 데이터 플랫폼 인프라를 최적화할 수 있습니다.  
   
  업그레이드 또는 마이그레이션을 계획하고 자동화하기 위한 자세한 정보, 지침 및 도구는 [SQL Server 2005 지원 종료](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)를 참조하세요.  
   
@@ -64,10 +68,10 @@ ms.lasthandoff: 01/18/2018
   
 -   업그레이드 하는 방법에 대해 알아봅니다.  
   
-    -   [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)항목에서 사용 가능한 업그레이드 방법을 검토하고 계획 및 테스트 방법을 알아봅니다.  
+    -   [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md) 문서에서 사용 가능한 업그레이드 방법을 검토하고 계획 및 테스트 방법을 알아봅니다.  
   
         > [!IMPORTANT]  
-        >  SQL Server 2005 인스턴스는 SQL Server 2017 서버로 업그레이드할 수 없습니다. 이렇게 하려면 SQL Server 2017 인스턴스를 설치한 다음 SQL Server 2005 데이터베이스를 새 설치로 마이그레이션해야 합니다. 자세한 내용은 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)항목에서 "새 설치 업그레이드" 섹션을 참조하세요.  
+        >  SQL Server 2005 인스턴스는 SQL Server 2017 서버로 업그레이드할 수 없습니다. 이렇게 하려면 SQL Server 2017 인스턴스를 설치한 다음 SQL Server 2005 데이터베이스를 새 설치로 마이그레이션해야 합니다. 자세한 내용은 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) 문서에서 "새 설치 업그레이드" 섹션을 참조하세요.  
    
   
 -   업그레이드 또는 마이그레이션을 계획하고 자동화하기 위한 자세한 정보, 지침 및 도구는 [SQL Server 2005 지원 종료](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)를 참조하세요.  

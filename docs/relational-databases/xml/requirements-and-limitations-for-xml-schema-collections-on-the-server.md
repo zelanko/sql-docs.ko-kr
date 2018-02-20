@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,28 +27,29 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: "84"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d12b4ae5ef18aadaf580945f5326dc08f00c11ac
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: e60de9c75202dc0c5c02a8765a1c2f8d4c631498
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] XSD(XML 스키마 정의 언어) 유효성 검사에는 **xml** 데이터 형식을 사용하는 SQL 열에 대한 몇 가지 제한 사항이 있습니다. 다음 표에서는 이러한 제한 사항과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 작동할 수 있도록 XSD 스키마를 수정하는 지침을 제공합니다. 이 섹션의 다음 항목에서는 특정 제한 사항 및 이에 따른 작업 수행 지침에 대한 추가 정보를 제공합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+XSD(XML 스키마 정의 언어) 유효성 검사에는 **xml** 데이터 형식을 사용하는 SQL 열에 대한 몇 가지 제한 사항이 있습니다. 다음 표에서는 이러한 제한 사항과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 작동할 수 있도록 XSD 스키마를 수정하는 지침을 제공합니다. 이 섹션의 다음 항목에서는 특정 제한 사항 및 이에 따른 작업 수행 지침에 대한 추가 정보를 제공합니다.  
   
 |항목|제한 사항|  
 |----------|----------------|  
 |**minOccurs** 및 **maxOccurs**|**minOccurs** 및 **maxOccurs** 특성 값은 4바이트 정수로 구성해야 합니다. 이러한 형식을 따르지 않는 스키마는 서버에서 거부됩니다.|  
-|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 파티클이 0의 **minOccurs** 특성 값으로 정의되지 않으면 하위 항목 없이 **\<xsd:choice>** 파티클을 포함한 스키마를 거부합니다.|  
+|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파티클이 0의 **minOccurs** 특성 값으로 정의되지 않으면 하위 항목 없이 **\<xsd:choice>** 파티클을 포함한 스키마를 거부합니다.|  
 |**\<xsd:include>**|현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 이 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.<br /><br /> 이러한 문제를 해결하기 위해 **\<xsd:include>** 지시어를 포함하고 있는 XML 스키마를 전처리하여 포함된 모든 스키마의 콘텐츠를 하나의 스키마로 복사 및 병합해서 서버에 업로드할 수 있습니다. 자세한 내용은 [포함된 스키마를 병합하기 위해 스키마 전처리](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)를 참조하세요.|  
 |**\<xsd:key>**, **\<xsd:keyref>** 및 **\<xsd:unique>**|현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 고유성을 적용하거나 키 및 키 참조를 설정하는 이러한 XSD 기반 제약 조건을 지원하지 않습니다. 이러한 요소를 포함하고 있는 XML 스키마는 등록할 수 없습니다.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 스키마를 업데이트하는 다른 방법은 [&#60;xsd:redefine&#62; 요소](../../relational-databases/xml/the-xsd-redefine-element.md)에서 작동할 수 있도록 XSD 스키마를 수정하는 지침을 제공합니다.|  
-|**\<xsd:simpleType>** 값|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 **xs:time** 및 **xs:dateTime**이 아닌 두 번째 구성 요소가 있는 단순 유형에 대해 밀리초 정밀도만 지원하며 **xs:time** 및 **xs:dateTime**에 대해서는 100나노초 정밀도만 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 인식된 모든 XSD 단순 유형 열거를 제한합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **\<xsd:simpleType>** 선언에서 "NaN" 값을 사용하도록 지원하지 않습니다.<br /><br /> 자세한 내용은[&#60;xsd:simpleType&#62; 선언의 값](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)에서 작동할 수 있도록 XSD 스키마를 수정하는 지침을 제공합니다.|  
+|**\<xsd:simpleType>** 값|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 **xs:time** 및 **xs:dateTime**이 아닌 두 번째 구성 요소가 있는 단순 유형에 대해 밀리초 정밀도만 지원하며 **xs:time** 및 **xs:dateTime**에 대해서는 100나노초 정밀도만 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 인식된 모든 XSD 단순 유형 열거를 제한합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **\<xsd:simpleType>** 선언에서 "NaN" 값을 사용하도록 지원하지 않습니다.<br /><br /> 자세한 내용은[&#60;xsd:simpleType&#62; 선언의 값](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)에서 작동할 수 있도록 XSD 스키마를 수정하는 지침을 제공합니다.|  
 |**xsi:schemaLocation** 및 **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **xml** 데이터 형식의 열 또는 변수에 삽입된 XML 인스턴스 데이터에 이러한 특성이 존재할 경우 이 특성을 무시합니다.|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 스키마 제한 요소를 사용하는 **xs:QName** 에서 파생된 형식을 지원하지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 멤버 요소가 **xs:QName** 인 공용 구조체 유형을 지원하지 않습니다.<br /><br /> 자세한 내용은 [The xs:QName Type](../../relational-databases/xml/the-xs-qname-type.md)을 참조하세요.|  
 |기존 대체 그룹에 멤버 추가|XML 스키마 컬렉션에서는 기존 대체 그룹에 멤버를 추가할 수 없습니다. XML 스키마의 대체 그룹은 머리글 요소와 이 요소의 모든 멤버 요소를 같은 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 문에서 정의해야 한다는 점에서 제한적입니다.|  

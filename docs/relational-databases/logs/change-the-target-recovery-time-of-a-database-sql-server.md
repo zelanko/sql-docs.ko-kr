@@ -8,23 +8,25 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ef7a5103a327739266689d45b058043d17fc1c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 520fc09bb08f2110ae6cc53b6a61d1305735601c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>데이터베이스의 대상 복구 시간 변경(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 대상 복구 시간을 설정하거나 변경하는 방법에 대해 설명합니다. 기본적으로 대상 복구 시간은 60초이고, 데이터베이스에서는 *간접 검사점*을 사용합니다. 대상 복구 시간에서는 이 데이터베이스에 대한 복구 시간의 상한이 설정됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]데이터베이스의 대상 복구 시간을 설정하거나 변경하는 방법에 대해 설명합니다. 기본적으로 대상 복구 시간은 60초이고, 데이터베이스에서는 *간접 검사점*을 사용합니다. 대상 복구 시간에서는 이 데이터베이스에 대한 복구 시간의 상한이 설정됩니다.  
   
 > [!NOTE]  
 >  장기 실행 트랜잭션으로 인해 UNDO 시간이 과도하게 길어지는 경우 주어진 데이터베이스에 대해 대상 복구 시간 설정에 지정된 상한이 초과될 수 있습니다.  
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/17/2017
     ALTER DATABASE AdventureWorks2012 SET TARGET_RECOVERY_TIME = 60 SECONDS;  
     ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   

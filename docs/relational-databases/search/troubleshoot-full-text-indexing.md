@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e273a9963b26f5c6361cf459bba54010ad58d56
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ddb9ea039218fa967132572df461103957300161
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-full-text-indexing"></a>전체 텍스트 인덱싱 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   인덱서가 필터 또는 단어 분리기 구성 요소를 찾거나 로드할 수 없습니다. 이 오류는 테이블 행에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 등록되지 않은 언어로 된 문서 내용이나 문서 형식이 포함되어 있는 경우 발생할 수 있습니다. 등록된 단어 분리기 또는 필터 구성 요소에 서명하지 않았거나 로드 시 서명 확인에 실패하는 경우에도 이 오류가 발생할 수 있습니다.  
   
--   단어 분리기 또는 필터와 같은 구성 요소가 실패하거나 인덱서에 오류를 반환합니다. 이 오류는 인덱싱 중인 문서가 손상되어 필터가 문서에서 텍스트를 추출할 수 없는 경우 발생할 수 있습니다. 전체 텍스트 필터 데몬 호스트(fdhost.exe)의 메모리 제한으로 인해 특정 크기를 초과하는 단일 행의 내용을 처리할 수 없는 경우에도 이 오류가 발생할 수 있습니다.  
+-   단어 분리기 또는 필터와 같은 구성 요소가 실패하거나 인덱서에 오류를 반환합니다. 이 오류는 인덱싱 중인 문서가 손상되어 필터가 문서에서 텍스트를 추출할 수 없는 경우 발생할 수 있습니다. 전체 텍스트 필터 데몬 호스트(fdhost.exe)의 메모리 제한으로 인해 구성 요소가 특정 크기를 초과하는 단일 행의 내용을 처리할 수 없는 경우에도 이 오류가 발생할 수 있습니다.  
   
  각 행 수준 오류의 경우 탐색 로그를 통해 오류 원인에 대한 자세한 내용을 볼 수 있습니다. 오류 수는 전체 또는 증분 채우기 완료 시 요약 표시됩니다.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   전체 텍스트 인덱싱 중인 테이블을 포함하는 파일 그룹이 오프라인 상태가 되거나 읽기 전용으로 설정되었습니다.  
   
- 중요한 전체 텍스트 인덱스 채우기 작업을 완료한 다음이나 채우기가 완료되지 않은 경우 탐색 로그를 확인해야 합니다.  
+ 중요한 전체 텍스트 인덱스 채우기 작업을 완료한 다음이나 채우기가 완료되지 않은 경우 탐색 로그를 검사합니다.  
   
 ### <a name="unsigned-components"></a>서명되지 않은 구성 요소  
  기본적으로 전체 텍스트 인덱서를 사용하려면 로드하는 필터 및 단어 분리기에 서명해야 합니다. 일부 사용자 지정 구성 요소 설치 시에서와 같이 구성 요소를 서명하지 않는 경우에는 전체 텍스트 인덱서가 서명 확인을 무시하도록 구성해야 합니다.  

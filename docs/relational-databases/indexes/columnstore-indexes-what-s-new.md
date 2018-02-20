@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65aaaf68cd32204b7447807ebce247ba3e977459
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 74b0f562bc50496df5fdbf88edac546e503d8718
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,10 +58,10 @@ ms.lasthandoff: 01/03/2018
  <sup>1</sup> 읽기 전용 비클러스터형 columnstore 인덱스를 만들려면 읽기 전용 파일 그룹에 인덱스를 저장합니다.  
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서는 이러한 새 기능을 추가합니다.
+ [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이러한 새 기능을 추가합니다.
 
 ### <a name="functional"></a>기능
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서는 클러스터형 columnstore 인덱스에서 비지속형 계산 열을 지원합니다. 지속형 열은 클러스터형 columnstore 인덱스에서 지원되지 않습니다. 계산 열이 있는 columnstore 인덱스에는 비클러스터형 인덱스를 만들 수 없습니다. 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 클러스터형 columnstore 인덱스에서 비지속형 계산 열을 지원합니다. 지속형 열은 클러스터형 columnstore 인덱스에서 지원되지 않습니다. 계산 열이 있는 columnstore 인덱스에는 비클러스터형 인덱스를 만들 수 없습니다. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 는 columnstore 인덱스의 성능 및 유연성을 개선하기 위해 주요 향상 기능을 추가합니다. 이러한 향상된 기능을 통해 데이터 웨어하우징 시나리오가 향상되며 실시간 운영 분석이 가능합니다.  
@@ -125,7 +126,7 @@ ms.lasthandoff: 01/03/2018
 -   메모리 내 테이블의 경우 columnstore 인덱스에 대한 쿼리는 InterOP 모드에서만 실행되며 메모리 내 고유 모드에서는 실행되지 않습니다. 병렬 실행은 지원됩니다.  
   
 ## [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서는 클러스터형 columnstore 인덱스를 기본 저장 형식으로 도입하였습니다. 이를 통해 일반 부하뿐만 아니라 업데이트, 삭제 및 삽입 작업도 사용할 수 있습니다.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 클러스터형 columnstore 인덱스를 기본 저장 형식으로 도입하였습니다. 이를 통해 일반 부하뿐만 아니라 업데이트, 삭제 및 삽입 작업도 사용할 수 있습니다.  
   
 -   테이블에서 클러스터형 columnstore 인덱스를 기본 테이블 저장소로 사용할 수 있습니다. 테이블에 다른 인덱스는 허용되지 않지만 클러스터형 columnstore 인덱스는 업데이트가 가능하므로 일반 부하를 수행하고 개별 행을 변경할 수 있습니다.  
 -   비클러스터형 columnstore 인덱스는 이제 일괄 처리 모드로 실행될 수 있는 추가 연산자를 제외하고 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서와 같은 기능을 계속 가지고 있습니다. 다시 만들기 및 파티션 전환의 사용을 제외하고 여전히 업데이트는 불가능합니다. 비클러스터형 columnstore 인덱스는 디스크 기반 테이블에 대해서만 지원되며 메모리 내 테이블에 대해서는 지원되지 않습니다.  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/03/2018
 -   이러한 연산자는 다중 스레드 쿼리, 즉 검색, 필터, 프로젝트, 조인, GROUP BY 및 UNION ALL에 대해 일괄 처리 모드에서 실행됩니다.  
   
 ## [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]는 columnstore 데이터에 대한 쿼리의 경우 rowstore 테이블 및 일괄 처리에 대한 또 다른 인덱스 형식으로 비클러스터형 columnstore 인덱스를 도입하였습니다.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] columnstore 데이터에 대한 쿼리의 경우 rowstore 테이블 및 일괄 처리에 대한 또 다른 인덱스 형식으로 비클러스터형 columnstore 인덱스를 도입하였습니다.  
   
 -   Rowstore 테이블에는 비클러스터형 columnstore 인덱스 한 개가 있을 수 있습니다.  
 -   columnstore 인덱스는 읽기 전용입니다. Columnstore 인덱스를 만든 후에는 `INSERT`, `DELETE` 및 `UPDATE` 작업에 의해 테이블을 업데이트할 수 없으며, 이러한 작업을 수행하려면 인덱스를 삭제하고 테이블을 업데이트한 다음 columnstore 인덱스를 다시 만들어야 합니다. 파티션 전환을 사용하여 추가 데이터를 테이블에 로드할 수 있습니다. 파티션 전환의 장점은 columnstore 인덱스를 삭제한 다음 다시 만들지 않고 데이터를 로드할 수 있다는 것입니다.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24a96c4692a8ce096a766fa534a1f939abb60bb4
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 1fd7895dae9dd1e1008c848b471cf02b0b53953a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 항목에서는 XML 인스턴스를 생성하는 방법에 대해 설명합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 XML 인스턴스를 생성하는 방법에 대해 설명합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음과 같은 방법으로 XML 인스턴스를 생성할 수 있습니다.  
   
@@ -186,7 +188,7 @@ go
  FOR XML에 대한 자세한 내용은 [FOR XML&#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)을 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TYPE 지시어를 사용하는 FOR XML 쿼리와 같은 여러 서버 생성 결과로 클라이언트에 **xml** 데이터 형식 인스턴스를 반환합니다. 또는 **xml** 데이터 형식을 사용하여 SQL 열, 변수 및 출력 매개 변수로부터 XML을 반환합니다. 클라이언트 응용 프로그램 코드에서 ADO.NET 공급자는 이 **xml** 데이터 형식 정보가 서버로부터 이진 인코딩으로 전송되도록 요청합니다. 하지만 TYPE 지시어 없이 FOR XML을 사용하는 경우 XML 데이터는 문자열 형식으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TYPE 지시문을 사용하는 FOR XML 쿼리와 같은 여러 서버 생성 결과로 클라이언트에 **xml** 데이터 형식 인스턴스를 반환합니다. 또는 **xml** 데이터 형식을 사용하여 SQL 열, 변수 및 출력 매개 변수로부터 XML을 반환합니다. 클라이언트 응용 프로그램 코드에서 ADO.NET 공급자는 이 **xml** 데이터 형식 정보가 서버로부터 이진 인코딩으로 전송되도록 요청합니다. 하지만 TYPE 지시어 없이 FOR XML을 사용하는 경우 XML 데이터는 문자열 형식으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다.  
   
 ## <a name="using-constant-assignments"></a>상수 할당 사용  
  문자열 상수는 **xml** 데이터 형식의 인스턴스가 예상되는 위치에 사용할 수 있습니다. 이것은 문자열을 XML로 암시적 캐스팅하는 것과 같습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  

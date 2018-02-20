@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41c5e5193a9ce056846f935e7663ef33fbb08337
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3482d6e097e77966be39e33b6eb31b7d941c7624
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +36,7 @@ ms.lasthandoff: 11/27/2017
     > [!NOTE]
     > 메모리 내 OLTP에는 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 필요합니다.  
   
--   
-            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 메모리 최적화 테이블 및 인덱스에 데이터를 저장하기에 충분한 메모리와 온라인 워크로드를 지원하기 위한 추가 메모리가 필요합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 을 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 메모리 최적화 테이블에 데이터를 저장하기에 충분한 메모리 및 온라인 작업을 지원하기 위한 추가 메모리가 필요합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 을 참조하세요.  
 
 -   VM(가상 컴퓨터)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행하는 경우 메모리 최적화 테이블 및 인덱스에 필요한 메모리를 지원하기에 충분한 메모리가 VM에 할당되었는지 확인합니다. VM 호스트 응용 프로그램에 따라 VM에 대한 메모리 할당을 보장하는 구성 옵션을 메모리 예약 또는 동적 메모리를 사용하는 경우 최소 RAM이라고 할 수 있습니다. 이러한 설정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스 요구에 충분한지 확인합니다.
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/27/2017
   
 -   메모리 최적화 테이블로 하나 이상의 데이터베이스를 만들 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정에 *SE_MANAGE_VOLUME_NAME* 사용자 권한을 부여하여 인스턴트 파일 초기화(IFI)를 사용해야 합니다. IFI를 사용하지 않을 경우 메모리 최적화 저장소 파일(데이터 및 델타 파일)이 생성될 때 초기화되므로 작업 성능이 저하될 수 있습니다. IFI 및 사용 방법에 대한 자세한 내용은 [데이터베이스 즉시 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)를 참조하세요.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
  [데이터베이스 즉시 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)  
  [메모리 아키텍처 가이드](../../relational-databases/memory-management-architecture-guide.md)

@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: semantic search [SQL Server], enabling
+helpviewer_keywords:
+- semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2064da501f20a9e27f6d06d018f91a1eda4cb1b0
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 0de385730d9999a2943f9599202d717fa7049152
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>테이블 및 열에 대한 의미 체계 검색 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 문서 또는 텍스트가 들어 있는 선택한 열에서 통계 의미 체계 인덱싱을 사용하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+문서 또는 텍스트가 들어 있는 선택한 열에서 통계 의미 체계 인덱싱을 사용하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
   
  통계 의미 체계 검색에서는 전체 텍스트 검색을 통해 생성되는 인덱스를 사용하고 추가 인덱스를 만듭니다. 전체 텍스트 검색에 대한 이 종속성의 결과로 새 전체 텍스트 인덱스를 정의하거나 기존 전체 텍스트 인덱스를 변경할 때는 새 의미 체계 인덱스를 만듭니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하거나 이 항목에서 설명하는 대로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 전체 텍스트 인덱싱 마법사와 다른 대화 상자를 사용하여 새 의미 체계 인덱스를 만들 수 있습니다.  
   
@@ -162,7 +165,7 @@ GO
 **ALTER FULLTEXT INDEX** 문을 사용하여 기존 전체 텍스트 인덱스를 변경할 때 의미 체계 인덱싱을 삭제할 수 있습니다. 또한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 다양한 대화 상자를 사용하여 의미 체계 인덱싱을 삭제할 수 있습니다.  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Transact-SQL을 사용하여 의미 체계 인덱스 삭제  
-열에서 의미 체계 인덱싱만 삭제하려면 **ALTER COLUMN** column_name **DROP STATISTICAL_SEMANTICS***옵션을 사용하여***ALTER FULLTEXT INDEX** 문을 호출합니다. 단일 **ALTER** 문으로 여러 열의 인덱싱을 삭제할 수도 있습니다.  
+열에서 의미 체계 인덱싱만 삭제하려면 **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다. 단일 **ALTER** 문으로 여러 열의 인덱싱을 삭제할 수도 있습니다.  
   
 ```sql  
 USE database_name  
@@ -174,7 +177,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-열에서 전체 텍스트 인덱스와 의미 체계 인덱싱을 모두 삭제하려면 **ALTER COLUMN** column_name **DROP***옵션을 사용하여***ALTER FULLTEXT INDEX** 문을 호출합니다.  
+열에서 전체 텍스트 인덱스와 의미 체계 인덱싱을 모두 삭제하려면 **ALTER COLUMN***column_name***DROP** 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다.  
   
 ```sql  
 USE database_name  

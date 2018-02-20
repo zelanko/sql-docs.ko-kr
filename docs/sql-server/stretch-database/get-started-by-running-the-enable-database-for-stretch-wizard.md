@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -25,21 +26,22 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9097c3213bf64185c24814156e38d10584a7c20c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 976561b457dc1eac740df5075bf0a02fd5a95a23
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Stretch에 데이터베이스 사용 마법사를 실행하여 시작
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
- Stretch Database에 대한 데이터베이스를 구성하려면 Stretch에 데이터베이스 사용 마법사를 실행합니다.  이 항목에서는 입력해야 하는 정보와 마법사에서 선택 항목에 대해 설명합니다.  
+
+ Stretch Database에 대한 데이터베이스를 구성하려면 Stretch에 데이터베이스 사용 마법사를 실행합니다.  이 문서에서는 입력해야 하는 정보와 마법사에서 선택해야 하는 항목에 대해 설명합니다.  
   
  스트레치 데이터베이스에 대해 자세히 알아보려면 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하세요. 
  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Stretch Database 마법사의 테이블 선택 페이지](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database 마법사의 테이블 선택 페이지")  
   
-|열|설명|  
+|Column|Description|  
 |------------|-----------------|  
 |(제목 없음)|선택한 테이블을 스트레치에 사용하려면 이 열에서 확인란을 선택합니다.|  
 |**이름**|데이터베이스에서 테이블 이름을 지정합니다.|  
@@ -120,7 +122,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE] 
 > 데이터베이스에서 Stretch를 사용하도록 설정하려면 사용 중인 구독에 관리자 권한이 있어야 합니다. Stretch Database 마법사는 사용자가 관리자 권한이 있는 구독만 표시합니다.
   
-3.  스트레치 데이터베이스에 사용할 Azure 지역을 선택합니다.
+3.  Stretch Database에 사용할 Azure 지역을 선택합니다.
     -   새 서버를 만들면 서버가 이 지역에 생성됩니다.  
     -   선택한 지역에 기존 서버가 있는 경우 **기존 서버**를 선택할 때 이러한 서버가 나열됩니다.
   
@@ -184,7 +186,7 @@ ms.lasthandoff: 12/05/2017
   
 ##  <a name="KnownIssues"></a> 마법사 문제 해결  
  **스트레치 데이터베이스 마법사가 실패했습니다.**  
- 서버 수준에서 스트레치 데이터베이스가 아직 사용하도록 설정되지 않은 경우 시스템 관리자 권한 없이 마법사를 실행하여 사용하도록 설정하면 마법사가 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 스트레치 데이터베이스를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [필수 구성 요소: 서버에서 Stretch Database를 활성화할 수 있는 권한](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)를 참조하십시오.  
+ 서버 수준에서 스트레치 데이터베이스가 아직 사용하도록 설정되지 않은 경우 시스템 관리자 권한 없이 마법사를 실행하여 사용하도록 설정하면 마법사가 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 스트레치 데이터베이스를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)를 참조하십시오.  
   
 ## <a name="next-steps"></a>다음 단계  
  스트레치 데이터베이스에 추가 테이블을 사용합니다. 데이터 마이그레이션을 모니터링하고 스트레치 사용 데이터베이스 및 테이블을 관리합니다.  
@@ -203,6 +205,6 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [테이블에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

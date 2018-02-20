@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43cacfe1341c5cb412408696ed4ed136b59f3e8a
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: c3e5be07b316f2975a56181e6e58805e88023939
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="install-and-configure-semantic-search"></a>의미 체계 검색 설치 및 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 통계 의미 체계 검색을 위한 필수 구성 요소와 이러한 필수 구성 요소의 설치 또는 확인 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+통계 의미 체계 검색을 위한 필수 구성 요소와 이러한 필수 구성 요소의 설치 또는 확인 방법에 대해 설명합니다.  
   
 ## <a name="install-semantic-search"></a>의미 체계 검색 설치  
   
@@ -150,6 +152,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>최신 문서 유형에 대한 선택적 지원 설치  
   
 ###  <a name="office"></a> Microsoft Office 및 다른 Microsoft 문서 유형에 대한 최신 필터 설치  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서는 최신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 단어 분리기 및 형태소 분석기를 설치하지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 문서 및 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 문서 유형용 최신 필터는 설치하지 않습니다. 이 필터는 최신 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 및 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 응용 프로그램을 사용하여 만든 문서를 인덱싱하는 데 필요합니다. 최신 필터를 다운로드하려면 [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293)를 참조하세요. (Office 2013 또는 Office 2016의 경우 Filter Pack 릴리스가 표시되지 않습니다.)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 최신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 단어 분리기 및 형태소 분석기를 설치하지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 문서 및 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 문서 유형용 최신 필터는 설치하지 않습니다. 이 필터는 최신 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 및 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 응용 프로그램을 사용하여 만든 문서를 인덱싱하는 데 필요합니다. 최신 필터를 다운로드하려면 [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293)를 참조하세요. (Office 2013 또는 Office 2016의 경우 Filter Pack 릴리스가 표시되지 않습니다.)
   
   

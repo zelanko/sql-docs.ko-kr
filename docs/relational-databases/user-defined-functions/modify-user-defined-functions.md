@@ -8,27 +8,29 @@ ms.service:
 ms.component: udf
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-udf
+ms.technology:
+- dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ce501e925db46f69725ef56dbbecbba135630e58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c7b7c08f7f2a853402fa2f9b8e870a317cb44554
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="modify-user-defined-functions"></a>사용자 정의 함수 수정
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용자 정의 함수를 수정할 수 있습니다. 아래 설명과 같이 사용자 정의 함수를 수정하면 함수의 권한이 변경되거나 종속 함수, 저장 프로시저 또는 트리거에 영향을 주지 않습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 함수를 수정할 수 있습니다. 아래 설명과 같이 사용자 정의 함수를 수정하면 함수의 권한이 변경되거나 종속 함수, 저장 프로시저 또는 트리거에 영향을 주지 않습니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  ALTER FUNCTION을 사용하여 다음 동작을 수행할 수 없습니다.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  함수 또는 스키마에 대한 ALTER 권한이 필요합니다. 함수에 사용자 정의 형식이 지정되면 해당 유형에 대한 EXECUTE 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  쿼리 창에서 ALTER FUNCTION 문을 필요에 따라 변경합니다.  
   
-6.  **파일** 메뉴에서 *function_name* **저장**을 클릭합니다.  
+6.  **파일** 메뉴에서 **저장***function_name*을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

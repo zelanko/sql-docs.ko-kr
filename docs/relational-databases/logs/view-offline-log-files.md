@@ -8,26 +8,28 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 225e2dafcaac744ed1ecd67ec928d13490472c7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e87fd686f9962562af63a50f216254081a17581
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-offline-log-files"></a>오프라인 로그 파일 보기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 대상 인스턴스가 오프라인이거나 시작할 수 없는 경우 로컬 또는 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일을 볼 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 대상 인스턴스가 오프라인이거나 시작할 수 없는 경우 로컬 또는 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일을 볼 수 있습니다.  
   
  등록된 서버에서 오프라인 로그 파일에 액세스하거나 WMI 및 WQL(WMI Query Language) 쿼리를 통해 프로그래밍 방식으로 액세스할 수 있습니다.  
   
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
     3.  원격 컴퓨터 이름을 입력하고 **확인**을 클릭합니다.  
   
-3.  **WMI 컨트롤(로컬)** 또는 **WMI 컨트롤(***RemoteComputerName***)**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  **WMI 컨트롤(로컬)** 또는 **WMI 컨트롤(***RemoteComputerName***)**을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
   
 4.  **WMI 컨트롤 속성** 대화 상자에서 **보안** 탭을 클릭합니다.  
   

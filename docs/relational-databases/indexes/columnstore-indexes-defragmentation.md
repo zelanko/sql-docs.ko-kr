@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9c4ca97bfc2bb8edd783913c8c2c3ad712eac57d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 283b8e0fe5173c6527e6f3708b578eca87c80ff3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Columnstore 인덱스 - 조각 모음
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/02/2018
   Columnstore 인덱스에 대한 조각 모음 작업입니다.  
   
 ## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>Columnstore 인덱스에 대한 조각 모음을 온라인에서 수행하기 위해 ALTER INDEX REORGANIZE 사용  
- **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 모든 종류의 로드를 수행하면 deltastore에서 여러 개의 작은 rowgroup을 사용할 수 있습니다. `ALTER INDEX REORGANIZE`를 사용하여 모든 rowgroup을 columnstore로 강제한 후 rowgroup을 열이 더 많은 소수의 rowgroup으로 결합합니다.  또한, 재구성 작업은 columnstore에서 삭제된 행도 제거합니다.  
   

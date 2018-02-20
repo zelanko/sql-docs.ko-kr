@@ -8,24 +8,28 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: management tools, upgrading
+helpviewer_keywords:
+- management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b350052dbe780d37cfe84b5525e31d04b44801
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5c0a15d22956bc7b4076bceb2498cdaf2e5c3683
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 관리 도구 업그레이드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서의 업그레이드가 지원됩니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구 및 관리 구성 요소(예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 데이터베이스 메일, 유지 관리 계획, XPStar 및 XPWeb) 업그레이드를 위한 지원 및 동작에 대해 설명합니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서의 업그레이드가 지원됩니다. 이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구 및 관리 구성 요소(예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 데이터베이스 메일, 유지 관리 계획, XPStar 및 XPWeb) 업그레이드를 위한 지원 및 동작에 대해 설명합니다.  
   
 > [!IMPORTANT]  
 >  로컬로 설치하는 경우 관리자로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용하십시오.  

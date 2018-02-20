@@ -1,6 +1,6 @@
 ---
 title: "Windows 인증으로 데이터 원본 및 파일 공유에 연결 | Microsoft Docs"
-ms.date: 01/12/2018
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8dc3c1f39ca65e9616372fee7995dfa41cd89a1
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 87f8b79fd8e950038658c13b502f5f26ac9a8f87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Windows 인증으로 온-프레미스 데이터 원본 및 Azure 파일 공유에 연결
 이 문서에서는 Windows 인증을 사용하여 온-프레미스 데이터 원본과 Azure 파일 공유에 연결하는 패키지를 실행하도록 Azure SQL Database에 SSIS 카탈로그를 구성하는 방법을 설명합니다. Windows 인증을 사용하여 온-프레미스 및 Azure 가상 머신과 Azure Files의 Azure SSIS Integration Runtime과 동일한 가상 네트워크에 있는 데이터 원본에 연결할 수 있습니다.
@@ -25,7 +26,11 @@ ms.lasthandoff: 01/12/2018
 > [!WARNING]
 > 이 문서에 설명된 대로 `catalog`.`set_execution_credential`을 실행하여 Windows 인증에 유효한 도메인 자격 증명을 제공하지 않으면 Windows 인증에 종속된 패키지가 데이터 원본에 연결할 수 없으며 런타임에 실패합니다.
 
-이 문서의 단계를 수행할 때 제공하는 도메인 자격 증명은 자격 증명을 변경하거나 제거할 때까지 SQL Database 인스턴스에서 모든 패키지 실행(대화형 또는 예약된 실행)에 적용됩니다.
+## <a name="you-can-only-use-one-set-of-credentials"></a>자격 증명 집합을 하나만 사용 가능
+
+지금은 패키지의 자격 증명 집합을 하나만 사용할 수 있습니다. 이 문서의 단계를 수행할 때 제공하는 도메인 자격 증명은 자격 증명을 변경하거나 제거할 때까지 SQL Database 인스턴스에서 모든 패키지 실행(대화형 또는 예약된 실행)에 적용됩니다. 여러 자격 증명 집합을 사용하여 패키지를 여러 데이터 원본에 연결해야 하는 경우 패키지를 여러 패키지로 분리해야 할 수도 있습니다.
+
+데이터 원본 중 하나가 Azure 파일인 경우 패키지를 실행할 때 프로세스 실행 태스크에서 `net use` 또는 동일 기능을 사용하여 Azure 파일 공유를 탑재하면 이 제한을 해결할 수 있습니다. 자세한 내용은 [Azure 파일 공유를 탑재하고 Windows에서 공유 액세스](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)를 참조하세요.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Windows 인증에 대한 도메인 자격 증명 제공
 패키지에서 Windows 인증을 사용하여 온-프레미스 데이터 원본에 연결할 수 있는 도메인 자격 증명을 제공하려면 다음을 수행합니다.

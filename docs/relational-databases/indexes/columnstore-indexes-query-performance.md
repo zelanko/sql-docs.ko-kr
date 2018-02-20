@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 97c0483870e4f99b68265a09337109f1f0ce0ac2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d8c18a2198e32bae0427ea286a64998ab546e3ac
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 쿼리 성능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/02/2018
 |위쪽 정렬||아니요|아니요|예||    
 |창 집계||NA|NA|예|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새 연산자.|    
     
- ¹[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 Premium Edition 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 적용    
+ ¹적용 대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 Premium Edition 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>집계 푸시 다운    
  SCAN 노드에서 조건에 맞는 행을 가져와 일괄 처리 모드에서 값을 집계하는 집계 계산을 위한 일반 실행 경로입니다. 이러한 실행으로 좋은 성능이 제공되긴 하지만 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 집계 작업은 SCAN 노드로 푸시되어 다음 조건이 충족되면 일괄 처리 모드 실행 시 크기 순서대로 정렬되므로 집계 계산 성능을 향상시킬 수 있습니다. 

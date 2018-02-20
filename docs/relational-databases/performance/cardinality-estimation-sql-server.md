@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a9b42e4a50685e79ebb88ceee62336eb30e1ae96
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c87819c3d2802e6ded39885e540b0a3fd050aae8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -236,8 +237,8 @@ OrderTable에 대한 통계가 마지막으로 수집된 날짜가 2016-04-30이
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  
-    FROM OrderTable  
-    WHERE OrderAddedDate >= '2016-05-01';  
+FROM OrderTable  
+WHERE OrderAddedDate >= '2016-05-01';  
 ```  
   
 ### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>예제 B. CE는 동일한 테이블에 대해 필터링된 예측이 종종 서로 연관된다는 것을 이해합니다.  
@@ -248,30 +249,27 @@ SELECT CustomerId, OrderAddedDate
   
 ```sql  
 SELECT Model, Purchase_Price  
-    FROM dbo.Hardware  
-    WHERE  
-        Model  = 'Xbox'  AND  
-        ModelVariant = 'One';  
+FROM dbo.Hardware  
+WHERE Model  = 'Xbox'  AND  
+      ModelVariant = 'One';  
 ```  
   
-### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>예제 C. CE에서 더 이상 서로 다른 테이블의 필터링된 예측이 상호 연결되어 있다고 가정하지 않습니다. 
+### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>예제 C. CE에서 더 이상 서로 다른 테이블의 필터링된 예측이 상호 연결되어 있다고 가정하지 않습니다. 
 최신 작업 및 실제 비즈니스 데이터에 대한 새로운 연구 결과 서로 다른 테이블의 예측 필터는 보통 서로 상호 연결되지 않습니다. 다음 쿼리에서는 CE가 s.type 및 r.date가 서로 연결되지 않은 것으로 간주합니다. 따라서 CE는 반환 행 수를 더 적게 예측합니다.  
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-    FROM  
-                   dbo.Sales    AS s  
-        CROSS JOIN dbo.Returns  AS r  
-    WHERE  
-        s.ticket = r.ticket  AND  
-        s.type   = 'toy'     AND  
-        r.date   = '2016-05-11';  
+FROM dbo.Sales    AS s  
+CROSS JOIN dbo.Returns  AS r  
+WHERE s.ticket = r.ticket  AND  
+      s.type   = 'toy'     AND  
+      r.date   = '2016-05-11';  
 ```  
   
   
 ## <a name="see-also"></a>참고 항목  
- [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  [SQL Server 2014 카디널리티 추정기로 쿼리 계획 최적화](http://msdn.microsoft.com/library/dn673537.aspx)  
- [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)  
- [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
- [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)
+ [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ [SQL Server 2014 카디널리티 추정기로 쿼리 계획 최적화](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)    
+ [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
+ [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)   
