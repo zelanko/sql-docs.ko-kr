@@ -2,7 +2,7 @@
 title: "Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보 | Microsoft Docs"
 description: "Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,15 +14,39 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eded99dffd8029431a127e6cbf4b125ab5e0ac97
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 작업 Studio (미리 보기) 릴리스 정보
 
-**[1 월 공개 미리 보기 다운로드](download.md)**
+**[2 월 공개 미리 보기 다운로드](download.md)**
+
+## <a name="february-2018-february-public-preview"></a>2 월 2018 (공개 미리 보기 2 월)
+
+릴리스 날짜: 2018 년 2 월 15,  
+버전: 0.26.7
+
+*공개 미리 보기 2 월* 몇 가지 기능 제안 및 우선 순위가 높은 버그 수정 포함 됩니다. 이 릴리스에 다음과 같은 향상 기능이 포함 되어 있습니다.
+
+- 자동 업데이트 설치를 도입 알림을 제공 하는 새 릴리스는 다운로드 하 여 사용할 때 
+- 연결 대화 상자 'Database' 필드는 동적으로 채워진된 드롭다운 목록에서 지정된 된 서버에서 채워진 데이터베이스 목록이 포함 될 되었습니다.
+- 해결 [6 발급](https://github.com/Microsoft/sqlopsstudio/issues/6): 새 쿼리 탭을 열 때 연결 하 고 선택한 데이터베이스를 유지 합니다.
+- 해결 [22 발급](https://github.com/Microsoft/sqlopsstudio/issues/22): ' 서버 이름 ' 및 ' 데이터베이스 이름 '-수 이러한 드롭다운 텍스트 상자 대신 수 있습니까?
+- 해결 [549 발급](https://github.com/Microsoft/sqlopsstudio/issues/549): 설치 후에 여는 응용 프로그램으로 인해 자동/매우 자동 설치 합니다.
+- 해결 [481 발급](https://github.com/Microsoft/sqlopsstudio/issues/481): "업데이트 확인" 옵션을 추가 합니다.
+- SQL 편집기 색 지정 및 자동 완성 수정 사항:
+   - 해결 [584 발급](https://github.com/Microsoft/sqlopsstudio/issues/584): IntelliSense에서 키워드 "완전히" 강조 표시 되지 않습니다.
+   - 해결 [345 발급](https://github.com/Microsoft/sqlopsstudio/issues/345): 편집기에서 색을 지정 하는 SQL 함수입니다.
+   - 해결 [300 발급](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] 최신 "]" 녹색이 표시 됩니다.
+   - 해결 [225 발급](https://github.com/Microsoft/sqlopsstudio/issues/225): 키워드 색 일치 하지 않습니다.
+   - 해결 [60 발급](https://github.com/Microsoft/sqlopsstudio/issues/60): 잘못 된 sql 구문을 컬러 강조 표시 from 절에서 임시 테이블을 사용 하는 경우.
+- 연결 확장성 API를 소개 합니다.
+- VS 코드 편집기 1.19 통합 합니다.
+- 여러 가지 쿼리 계획에 대 한 뷰어 향상 기능이 JustinPealing/html-쿼리 계획 구성 요소 선택 하도록 업데이트 됩니다.
+
 
 ## <a name="january-2018-january-public-preview"></a>1 월 2018 (공개 미리 보기 1 월)
 

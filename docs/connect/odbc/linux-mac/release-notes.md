@@ -16,28 +16,40 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5aecc3796565d4c32d91fe28304bdd04f5793980
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Microsoft ODBC Driver for Linux와 macOS에서 SQL Server에 대 한 릴리스 정보
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>에 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux와 macOS에서
 
-Azure SQL 인스턴스 (확장 비공개 미리 보기)를 관리 합니다. 참고는 여러 가지 차이의 관리 되는 인스턴스를 사용 하는 경우:
--   FILESTREAM 지원 되지 않습니다. 
--   로컬 파일 시스템 액세스는 지원 되지만 tracefiles 등의 작업에 필요 하지 
--   지원 되지 않습니다는 로컬 경로에서 UDT를 만들기 
--   Windows 통합 인증이 지원 되지 않습니다 
--   DTC 지원 되지 않습니다 
--   'sa' 계정 나타나지 않습니다. (기본 계정 라고 'cloudSA')
--   잘못 된 서버 이름을 반환 하는 TDS 토큰 오류 (0xAA)
--   데이터베이스 이름에 특수 문자는 지원 되지 않습니다. 
--   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] 지원 되지 않습니다
--   오류 메시지는 항상 언어에 관계 없이 영어로 표시 됩니다 (Azure와 같음) 설정 
+**지원 되는 새 배포**: 높은 시에라 및 Ubuntu 17.10 macOS 
+
+**성능 향상**: 10 배 드라이버/u t F-8/16에서 변환 하는 경우 성능 향상 보다 큽니다.
+
+**추가 된 기능**:
+
+BCP API에 대 한 상시 암호화 지원
+
+새로운 연결 문자열 특성 UseFMTOnly 드라이버를 임시 테이블을 요구 하는 특별 한 경우에서 레거시 메타 데이터를 사용 하면 됩니다.
+
+Azure SQL 관리 되는 인스턴스 (확장 된 비공개 미리 보기)에 대 한 지원. 
+> [!NOTE]
+> 관리 되는 인스턴스를 사용 하는 경우 몇 가지 차이점이 있습니다.
+> -   FILESTREAM 지원 되지 않습니다. 
+> -   로컬 파일 시스템 액세스는 지원 되지만 tracefiles 등의 작업에 필요 하지 
+> -   로컬에서 UDT를 만들 경로가 지원 되지 않습니다 
+> -   Windows 통합 인증이 지원 되지 않습니다. 
+> -   DTC 지원 되지 않습니다. 
+> -   'sa' 계정 나타나지 않습니다. (기본 계정 라고 'cloudSA')
+> -   잘못 된 서버 이름을 반환 하는 TDS 토큰 오류 (0xAA)
+> -   데이터베이스 이름에 특수 문자는 지원 되지 않습니다. 
+> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] 지원 되지 않습니다
+> -   오류 메시지는 항상 언어에 관계 없이 영어로 표시 됩니다 (Azure와 같음) 설정 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>에 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 에 대 한 ODBC Driver 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux와 macOS에서  
 

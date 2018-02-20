@@ -2,7 +2,7 @@
 title: "다운로드 하 여 Microsoft SQL 작업 Studio (미리 보기) 설치 | Microsoft Docs"
 description: "다운로드 및 설치 Microsoft SQL 작업 (미리 보기) 용 Studio 창, macOS 등 또는 Linux"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8828b5f94c5500aa7ef3bffd48556e599e41124
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: dda75f01b68816c971d31354f08686381597271f
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>다운로드 하 고 SQL 작업 Studio (미리 보기) 설치
 
-[!INCLUDE[name-sos](../includes/name-sos.md)]Windows, macOS 등 및 Linux에서 실행 됩니다.
+[!INCLUDE[name-sos](../includes/name-sos.md)] Windows, macOS 등 및 Linux에서 실행 됩니다.
 
-최신 릴리스를 설치 및 다운로드는 *년 1 월 공개 미리 보기*:
+최신 릴리스를 설치 및 다운로드는 *공개 미리 보기 2 월*:
 
-|플랫폼|다운로드|릴리스 날짜|
-|:---|:---|:---|
-|창|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|2018 년 1 월 17, |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|2018 년 1 월 17, |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|2018 년 1 월 17,|
+|플랫폼|다운로드|릴리스 날짜| 버전 |
+|:---|:---|:---|:---|
+|창|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=867998)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=867997)|2018 년 2 월 15, |0.26.7|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=867999)|2018 년 2 월 15, |0.26.7|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=868002)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=868001)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=868000)|2018 년 2 월 15,|0.26.7|
 
 최신 릴리스에 대 한 자세한 내용은 참조는 [릴리스 정보](release-notes.md)합니다.
 
@@ -40,27 +40,27 @@ ms.lasthandoff: 01/19/2018
 
 **설치 관리자**
 
-1. 다운로드 및 실행 된 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=866480)합니다.
+1. 다운로드 및 실행 된 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=867998)합니다.
 1. 시작 된 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱.
 
 
 **.zip 파일**
 
-1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 용.zip](https://go.microsoft.com/fwlink/?linkid=866479)합니다.
+1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 용.zip](https://go.microsoft.com/fwlink/?linkid=867997)합니다.
 2. 다운로드 한 파일을 찾아 압축을 풉니다.
 3. `\sqlops-windows\sqlops.exe`을 실행합니다.
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS에 대 한 SQL 작업 Studio (미리 보기) 가져오기
 
-1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] macOS에 대 한](https://go.microsoft.com/fwlink/?linkid=866481)합니다.
+1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] macOS에 대 한](https://go.microsoft.com/fwlink/?linkid=867999)합니다.
 2. Zip 내용의 확장 하려면 두 번 클릭 합니다.
 3. 있도록 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 에서 사용할 수는 *실행 패드*를 끌어 *sqlops.app* 에 *응용 프로그램* 폴더입니다.
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux에 대 한 SQL 작업 Studio (미리 보기) 가져오기
 
-1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Linux 용](https://go.microsoft.com/fwlink/?linkid=866482)합니다.
+1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Linux 용](https://go.microsoft.com/fwlink/?linkid=868000)합니다.
 1. 파일 및 실행을 추출 하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)]새 터미널 창을 열고 다음 명령을 입력 합니다.
 
    ```bash
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/19/2018
 
 ## <a name="supported-operating-systems"></a>지원되는 운영 체제
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows, macOS 등 및 Linux에서 실행 하 고 다음 플랫폼에서 지원 됩니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows, macOS 등 및 Linux에서 실행 하 고 다음 플랫폼에서 지원 됩니다.
 
 ### <a name="windows"></a>창
 - Windows 10(64비트)

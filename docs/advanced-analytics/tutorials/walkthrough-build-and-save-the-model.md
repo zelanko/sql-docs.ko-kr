@@ -20,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: aec87866d4bf22b5e1f685ba5fdf41fd259fc6e3
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 작성 하 고 SQL Server에 저장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,9 +51,7 @@ ms.lasthandoff: 02/11/2018
 
      *결과*
 
-     *에 대 한 로지스틱 회귀 결과: 크리스마스 ~ passenger_count trip_distance + trip_time_in_secs + +*
-     <br/>*direct_distance*
-     <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
+     *에 대 한 로지스틱 회귀 결과: 크리스마스 ~ passenger_count trip_distance + trip_time_in_secs +* direct_distance *   <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
      <br/>*Dependent variable(s): 크리스마스*
      <br/>*독립 변수 총: 5*
      <br/>*유효한 관찰의 수가: 17068*
@@ -210,7 +208,7 @@ ms.lasthandoff: 02/11/2018
     테이블에 모델을 저장하는 경우 INSERT 문만 있으면 됩니다. 그러나 저장된 프로시저에서와 같은 줄이 바뀔 때 보다 쉽게는 _PersistModel_합니다.
 
     > [!NOTE]
-    > 와 같은 오류가 발생 하는 경우 "EXECUTE 권한이 거부 되었습니다 PersistModel 개체에" 로그인 권한이 있는지 확인 합니다. 다음과 같은 T-SQL 문을 실행 하 여 방금 저장된 프로시저에 대 한 명시적 권한을 부여할 수 있습니다.`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > 와 같은 오류가 발생 하는 경우 "EXECUTE 권한이 거부 되었습니다 PersistModel 개체에" 로그인 권한이 있는지 확인 합니다. 다음과 같은 T-SQL 문을 실행 하 여 방금 저장된 프로시저에 대 한 명시적 권한을 부여할 수 있습니다. `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. 모델을 만든 후 데이터베이스에 저장을 호출할 수 있습니다에서 직접 [!INCLUDE[tsql](../../includes/tsql-md.md)] 시스템 저장 프로시저를 사용 하 여 코드 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)합니다.
 

@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>단원 4-1-Analysis Services Tutorial 프로젝트의 수정된 된 버전을 사용 하 여
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,15 +34,15 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="downloading-and-extracting-the-project-file"></a>프로젝트 파일 다운로드 및 압축 풀기  
   
-1.  이 자습서와 함께 제공되는 샘플 프로젝트를 제공하는 다운로드 페이지로 이동하려면[여기를 클릭](http://go.microsoft.com/fwlink/?LinkID=221866) 하세요. 자습서 프로젝트는 **Analysis Services Tutorial SQL Server 2012** 다운로드에 포함되어 있습니다.  
+1.  이 자습서와 함께 제공되는 샘플 프로젝트를 제공하는 다운로드 페이지로 이동하려면 [여기를 클릭](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)하세요. 에 포함 된 자습서 프로젝트는 **adventure-works-다차원-자습서-projects.zip** 다운로드 합니다.  
   
-2.  **Analysis Services Tutorial SQL Server 2012** 를 클릭하여 이 자습서에 사용할 프로젝트가 포함되어 있는 패키지를 다운로드합니다.  
+2.  클릭 **adventure-works-다차원-자습서-projects.zip** 이 자습서에 대 한 프로젝트를 포함 하 여 패키지를 다운로드 합니다.  
   
     기본적으로 .zip 파일은 Downloads 폴더에 저장됩니다. .zip 파일을 짧은 경로 위치로 이동해야 합니다. 예를 들어 파일을 저장할 C:\Tutorials 폴더를 만듭니다.  그런 다음 .zip 파일에 포함된 파일의 압축을 풉니다. Downloads 폴더에 있는 긴 경로 파일의 압축을 풀면 1단원만 사용할 수 있습니다.  
   
 3.  루트 드라이브 또는 루트 드라이브 근처에 하위 폴더(예: C:\Tutorial)를 만듭니다.  
   
-4.  **Analysis Services Tutorial SQL Server 2012.zip** 파일을 하위 폴더로 이동합니다.  
+4.  이동 된 **adventure-works-다차원-자습서-projects.zip** 하위 폴더에는 파일입니다.  
   
 5.  이 파일을 마우스 오른쪽 단추로 클릭하고 **압축 풀기**를 선택합니다.  
   

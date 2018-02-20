@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>시스템 학습 services (In-database) 무인된 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,9 +49,9 @@ ms.lasthandoff: 02/11/2018
 
 > [!IMPORTANT]
 > 
-> 기능을 사용 하려면 설치가 완료 된 후에 추가 단계가 필요 합니다. 및이 포함 다시 구성 하는 인스턴스를 다시 시작 합니다. 있는지 [사후 설치 단계] 섹션에 있는 모든 항목을 검토 하려면 (#bkmk_PostInstall) 작업을 결정 하려면 해야 설치가 완료 된 후.
+> 기능을 사용 하려면 설치가 완료 된 후에 추가 단계가 필요 합니다. 및이 포함 다시 구성 하는 인스턴스를 다시 시작 합니다. 에 섹션에 있는 모든 항목을 검토 하십시오 [사후 설치 단계](#bkmk_PostInstall) 설치가 완료 된 후 필요한 조치를 결정 합니다.
 
-## <a name="bkmk_NewInstall"></a>SQL Server 2017에 대 한 명령줄 설치
+## <a name="bkmk_NewInstall"></a>  SQL Server 2017에 대 한 명령줄 설치
 
 다음 예에 포함 된 **최소** 기능 필요 합니다.
 
@@ -97,7 +97,7 @@ SQL Server 2017에 Python에 대 한 필요한 플래그 note:
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>SQL Server 2016에 대 한 명령줄 설치
+## <a name="OldInstall"></a> SQL Server 2016에 대 한 명령줄 설치
  
 다음 예제에서는 자동, 무인 모드로 수행 하는 데 필요한 인수 추가 R 언어와 SQL Server 2016 설치를 보여 줍니다.
 

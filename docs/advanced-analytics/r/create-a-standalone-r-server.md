@@ -1,7 +1,7 @@
 ---
 title: "인스턴스를 설치할지 컴퓨터 학습 서버 독립 실행형 R 서버 독립 실행형 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 02/14/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 275bda79d9c8cb74d871a4d13612847dc58592e8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2ecb60bd02b3fc1ee7ac7101749fa7affc2523bd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>학습 Server 컴퓨터 (독립 실행형) 또는 R Server (독립 실행형) 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ SQL Server 설치 프로그램에는 기계 학습 SQL Server 외부에서 실�
 + [Microsoft R Server의 기존 인스턴스를 업그레이드 합니다.](#bkmk_upgrade)
 + [도움말 설치할 항목에 보기](#bkmk_tips)
 
-##  <a name="bkmk_installMLServer"></a>기계 학습 Server (독립 실행형) 설치
+##  <a name="bkmk_installMLServer"></a> 기계 학습 Server (독립 실행형) 설치
 
 이 기능을 사용 하려면 엔터프라이즈 라이선스 또는 동등한 옵션이 **SQL Server 2017**합니다.
 
@@ -114,7 +114,7 @@ SQL Server 설치 프로그램에는 기계 학습 SQL Server 외부에서 실�
     
 5.  **설치 준비 완료** 페이지에서 선택 내용을 확인하고 **설치**를 클릭합니다.
 
-## <a name="bkmk_upgrade"></a>R Server의 기존 인스턴스를 업그레이드 합니다.
+## <a name="bkmk_upgrade"></a> R Server의 기존 인스턴스를 업그레이드 합니다.
 
 이전 버전의 Microsoft R Server (독립 실행형)를 설치한 경우에 최신 버전의 R 구성 요소를 사용 하도록 인스턴스를 업그레이드할 수 있습니다. 또한 업그레이드 최신 소프트웨어 수명 주기 지원 정책을 사용 하 여 지원 정책을 변경 합니다. 따라서 인스턴스를 SQL Server를 해제 하는 보다 다른 일정에서 더 자주 업데이트 될 수 있습니다.
 
@@ -125,7 +125,7 @@ SQL Server 설치 프로그램에는 기계 학습 SQL Server 외부에서 실�
 
 2. 설치 프로그램을 실행 하 고 지시를 따릅니다. 설치할 기능을 선택 하면 페이지에서 업그레이드 하려는 R Server의 각 인스턴스를 선택 합니다.
 
-## <a name ="bkmk_tips"></a>설치에 대 한 추가 작업
+## <a name ="bkmk_tips"></a> 설치에 대 한 추가 작업
 
 이 섹션에서는 설치와 관련 된 추가 정보를 제공 합니다.
 
@@ -151,11 +151,12 @@ R 서버를 설치할 때 또는 SQL Server 설치 프로그램을 사용 하 �
 |----|----|----|
 |R Server (Standalone) |SQL Server 2016 설치 마법사|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R Server (Standalone) |독립 실행형 응용 프로그램|`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|Machine Learning Server(독립 실행형) |  SQL Server 2017 설치 마법사 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Machine Learning Server(독립 실행형) |  SQL Server 2017 설치 마법사에서 R 언어 옵션 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Machine Learning Server(독립 실행형) |  Python 언어 옵션으로 SQL Server 2017 설치 마법사 |`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Machine Learning Server(독립 실행형) |  독립 실행형 응용 프로그램 |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |R Services(In-Database) |SQL Server 2016 설치 마법사|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Machine Learning Services(데이터베이스 내) |SQL Server 2017 설치 마법사|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`또는`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
-
+|Machine Learning Services(데이터베이스 내) |SQL Server 2017 설치 마법사에서 R 언어 옵션|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  |
+|Machine Learning Services(데이터베이스 내) |Python 언어 옵션으로 SQL Server 2017 설치 마법사| `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 ### <a name="development-tools"></a>개발 도구
 
 개발 IDE 설정의 일부분으로 설치 되지 않았습니다. 추가 도구 필요 하지 않은, 포함 된 모든 표준 도구와는 제공 되는 R, Python의 배포와 함께 합니다.
@@ -182,7 +183,7 @@ SQL Server 2016 RTM 버전 있었습니다 알려진된 문제를 Microsoft R Se
 
 이 문제가 발생 하는 경우에에 설명 된 수정 프로그램을 적용할 수 있습니다 [KB3164398](https://support.microsoft.com/kb/3164398) 를 Windows Server Core에서 기존 인스턴스에 R 기능을 추가 합니다.   자세한 내용은 [Windows Server Core 운영 체제에 Microsoft R Server 독립 실행형을 설치할 수 없음](https://support.microsoft.com/kb/3168691)을 참조하세요.
 
-###  <a name="bkmk_Uninstall"></a>Microsoft R Server의 이전 버전에서 업그레이드
+###  <a name="bkmk_Uninstall"></a> Microsoft R Server의 이전 버전에서 업그레이드
 
 Microsoft R Server 시험판 버전을 설치한 경우 먼저 제거해야 최신 버전으로 업그레이드할 수 있습니다.
 
