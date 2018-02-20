@@ -1,7 +1,7 @@
 ---
 title: "다차원 모델링 (Adventure Works 자습서) | Microsoft Docs"
 ms.custom: 
-ms.date: 02/02/2018
+ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -22,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 1a6323632e17efab87ecf64358b5055288dfa5db
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: af9371e71223eedc44b7b7ec8cbeb3ab20423da8
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>다차원 모델링(Adventure Works 자습서)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자습서입니다. 이 자습서의 모든 예에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 라는 가상 회사에서 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 프로젝트를 개발 및 배포하는 방법을 설명합니다.  
   
-## <a name="what-you-will-learn"></a>학습 내용  
+## <a name="what-you-learn"></a>정보  
 이 자습서에서는 다음 항목을 배웁니다.  
   
 -   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 내의 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]프로젝트에서 데이터 원본, 데이터 원본 뷰, 차원, 특성, 특성 관계, 계층 및 큐브를 정의하는 방법  
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/15/2018
 |[10 단원: 관리자 역할 정의](../analysis-services/lesson-10-defining-administrative-roles.md)|15분|  
   
 > [!NOTE]  
-> 이 자습서에서 만들 큐브 데이터베이스는 codeplex 사이트에서 다운로드할 수 있는 Adventure Works 예제 데이터베이스의 일부인 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델 프로젝트의 단순화된 버전입니다. Adventure Works 다차원 데이터베이스의 자습서 버전은 바로 익히려는 특정 기술에 더 집중하도록 단순화되어 있습니다. 이 자습서를 끝낸 후에는 직접 다차원 모델 프로젝트를 탐색하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델링에 대한 이해를 높이는 것이 좋습니다.  
+> 이 자습서에서 만들 큐브 데이터베이스의 단순화 된 버전의는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] GitHub에서 다운로드할 수 있는 Adventure Works 예제 데이터베이스의 일부인 다차원 모델 프로젝트. Adventure Works 다차원 데이터베이스의 자습서 버전은 바로 익히려는 특정 기술에 더 집중하도록 단순화되어 있습니다. 이 자습서를 끝낸 후에는 직접 다차원 모델 프로젝트를 탐색하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델링에 대한 이해를 높이는 것이 좋습니다.  
   
 ## <a name="next-step"></a>다음 단계  
 자습서를 시작하려면 첫 번째 단원인 [1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)로 이동하십시오.  
