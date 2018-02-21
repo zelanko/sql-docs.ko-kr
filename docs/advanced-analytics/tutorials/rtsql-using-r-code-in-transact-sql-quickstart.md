@@ -1,5 +1,5 @@
 ---
-title: "Transact-SQL에서 R 코드 사용하기 (R in SQL 빠른 시작) | Microsoft Docs"
+title: "Transact-SQL에서 R 코드 사용하기(SQL에서 R 빠른 시작) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/20/2017
@@ -27,7 +27,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Transact-SQL에서 R 코드 사용하기 (R in SQL 빠른 시작)
+# <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Transact-SQL에서 R 코드 사용하기(SQL에서 R 빠른 시작)
 
 이 자습서에서는 T-SQL 저장 프로시저에서 R 스크립트를 호출하는 기본 메커니즘을 단계별로 안내합니다.
 
@@ -46,20 +46,20 @@ ms.lasthandoff: 09/01/2017
 
 다음 중 하나가 설치된 상태로 SQL Server의 인스턴스에 액세스할 수 있어야 합니다.
 
-+ SQL Server 2017 Machine Learning Services, R 언어
++ R 언어가 설치된 SQL Server 2017 Machine Learning Services
 + SQL Server 2016 R Services
 
-Azure 가상 컴퓨터 또는 온-프레미스 SQL Server 인스턴스가 될 수 있습니다.  외부 스크립팅 기능은 기본적으로 비활성화되어 있으므로 작동하기 위해서는 몇 가지 추가 단계를 수행해야합니다.
+SQL Server 인스턴스는 Azure 가상 머신 또는 온-프레미스에 있을 수 있습니다. 주의할 점은 외부 스크립팅 기능이 기본적으로 비활성화되어 있으므로 작동하기 위해서는 몇 가지 추가 단계를 수행해야 합니다.
 
-R 스크립트를 포함한 SQL 쿼리를 실행하려면 데이터베이스에 연결하고 T-SQL 코드를 실행할 수 있는 다른 응용 프로그램을 사용할 수 있습니다. SQL 전문가라면 SQL Server Management Studio (SSMS) 또는 Visual Studio를 사용할 수 있습니다.
+R 스크립트를 포함한 SQL 쿼리를 실행하려면 데이터베이스에 연결하고 T-SQL 코드를 실행할 수 있는 다른 응용 프로그램을 사용할 수 있습니다. SQL 전문가라면 SQL Server Management Studio(SSMS) 또는 Visual Studio를 사용할 수 있습니다.
 
 이 자습서에서는 SQL Server내에서 R을 실행하는 것이 얼마나 쉬운지 보여주기 위해 새로운 **Visual Studio Code용 mssql 확장**을 사용했습니다. VS Code는 Windows, Linux, macOS에서 실행할 수 있는 무료 개발 환경입니다. **mssql** 확장은 SQL 쿼리를 실행하기 위한 가벼운 확장입니다. 이 확장을 설치하려면 [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)(Visual Studio Code용 mssql 확장 사용) 문서를 참조하세요.
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>데이터베이스에 연결하고 Hello World 테스트 스크립트 실행
 
 1. Visual Studio Code에서 새 텍스트 파일을 만들고 이름을 BasicRSQL.sql로 지정합니다.
-2. 이 파일이 열리면 CTRL+SHIFT+P(macOS의 경우 COMMAND + P)를 누르고, **sql**을 입력하여 SQL 명령을 나열하고, **CONNECT**를 선택합니다. Visual Studio 코드를 사용하면 특정 데이터베이스에 연결할 때 사용할 프로필을 만들 것인지 묻습니다. 이것은 선택사항이지만 데이터베이스와 로그인 간에 전환을 쉽게할 수 있습니다.
-    + SQL Server R이 설치된 서버 또는 인스턴스를 선택합니다.
+2. 이 파일이 열리면 CTRL+SHIFT+P(macOS의 경우 COMMAND + P)를 누르고, **sql**을 입력하여 SQL 명령을 나열하고, **CONNECT**를 선택합니다. Visual Studio Code를 사용하면 특정 데이터베이스에 연결할 때 사용할 프로필을 만들 것인지 묻습니다. 이것은 선택 사항이지만 데이터베이스와 로그인 간에 전환을 쉽게할 수 있습니다.
+    + SQL Server의 R이 설치된 서버 또는 인스턴스를 선택합니다.
     + 새 데이터베이스를 만들 권한이 있는 계정을 사용하여 SELECT 문을 실행하고 테이블 정의를 확인합니다.
 2. 연결에 성공하면 상태 표시줄에 서버 및 데이터베이스 이름과 현재 자격 증명이 표시되어야 합니다. 연결에 실패하면 컴퓨터 이름과 서버 이름이 정확한지 확인하세요.
 3. 이 문을 붙여넣고 실행합니다.
@@ -73,7 +73,7 @@ R 스크립트를 포함한 SQL 쿼리를 실행하려면 데이터베이스에 
     GO
     ```
 
-    Visual Studio Code에서 실행할 코드를 선택하고 CTRL+SHIFT+E를 누르면 됩니다. 바로 가기 키를 기억하기 어려우면 변경할 수 있습니다. [Customize the shortcut key bindings](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts)(바로 가기 키 바인딩 사용자 지정)를 참조하세요.
+    Visual Studio Code에서 실행할 코드를 강조 표시하고 CTRL+SHIFT+E를 누르면 됩니다. 바로 가기 키를 기억하기 어려우면 변경할 수도 있습니다. [Customize the shortcut key bindings](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts)(바로 가기 키 바인딩 사용자 지정)를 참조하세요.
 
     ![rsql-basictut_hello1code](media/rsql-basictut-hello1code.PNG)
 
