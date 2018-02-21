@@ -8,21 +8,23 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], domain independent
+helpviewer_keywords:
+- Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 950e7cb62718b2c1fedfc5415544f21f85205cf6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="domain-independent-availability-groups"></a>도메인 독립 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,63 +87,81 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
 1. [이 링크에 있는 지침을 사용](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/)하여 가용성 그룹에 참여할 모든 서버로 구성된 작업 그룹 클러스터를 배포합니다. 작업 그룹 클러스터를 구성하기 전에 공통 DNS 접미사가 이미 구성되어 있는지 확인합니다.
 2. 가용성 그룹에 참여할 각 인스턴스에서 [Always On 가용성 그룹 기능을 사용하도록 설정합니다](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server). 이렇게 하려면 각각의 SQL Server 인스턴스를 다시 시작해야 합니다.
 3. 주 복제본을 호스팅할 각 인스턴스에는 데이터베이스 마스터 키가 필요합니다. 마스터 키가 아직 없으면 다음 명령을 실행합니다.
-```
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   GO
+   ```
+
 4. 주 복제본이 될 인스턴스에서 보조 복제본을 인바운드 연결하고 주 복제본의 끝점을 보호하는 데 사용할 인증서를 만듭니다.
-```
-CREATE CERTIFICATE InstanceA_Cert 
-WITH SUBJECT = 'InstanceA Certificate';
-GO
-``` 
+
+   ```sql
+   CREATE CERTIFICATE InstanceA_Cert 
+   WITH SUBJECT = 'InstanceA Certificate';
+   GO
+   ``` 
+
 5. 인증서를 백업합니다. 원하는 경우 개인 키를 사용하여 보안을 강화할 수도 있습니다. 이 예제에서는 개인 키를 사용하지 않습니다.
-```
-BACKUP CERTIFICATE InstanceA_Cert 
-TO FILE = 'Backup_path\InstanceA_Cert.cer';
-GO
-```
+
+   ```sql
+   BACKUP CERTIFICATE InstanceA_Cert 
+   TO FILE = 'Backup_path\InstanceA_Cert.cer';
+   GO
+   ```
+
 6. InstanceB_Cert와 같은 인증서에 대해 적절한 이름을 사용하여 4단계와 5단계를 반복하여 각 보조 복제본에 대한 인증서를 만들고 백업합니다.
 7. 주 복제본에서 가용성 그룹의 각 보조 복제본에 대한 로그인을 만들어야 합니다. 이 로그인에는 도메인 독립 가용성 그룹에서 사용하는 끝점에 연결할 수 있는 권한이 부여됩니다. 예를 들어 InstanceB라는 복제본의 경우 다음과 같습니다.
-```
-CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 8. 각 보조 복제본에서 주 복제본에 대한 로그인을 만듭니다. 이 로그인에는 끝점에 연결할 수 있는 권한이 부여됩니다. 예를 들어 InstanceB라는 복제본의 경우 다음과 같습니다.
-```
-CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 9. 모든 인스턴스에서 만든 각 로그인에 대한 사용자를 만듭니다. 이 인증서는 인증서를 복원할 때 사용됩니다. 예를 들어 주 복제본에 대한 사용자를 생성하려면 다음과 같습니다.
-```
-CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
-GO
-```
+
+   ```sql
+   CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
+   GO
+   ```
+
 10. 주 복제본일 수 있는 모든 복제본에 대해 모든 관련 보조 복제본에 로그인 및 사용자를 만듭니다.
 11. 각 인스턴스에서 로그인 및 사용자가 작성된 다른 인스턴스의 인증서를 복원합니다. 주 복제본에서 모든 보조 복제본 인증서를 복원합니다. 각 보조 복제본에서 주 복제본의 인증서를 복원하고 주 복제본이 될 수 있는 다른 모든 복제본에서도 복원합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
-```
-CREATE CERTIFICATE [InstanceB_Cert]
-AUTHORIZATION InstanceB_User
-FROM FILE = 'Restore_path\InstanceB_Cert.cer'
-```
+
+   ```sql
+   CREATE CERTIFICATE [InstanceB_Cert]
+   AUTHORIZATION InstanceB_User
+   FROM FILE = 'Restore_path\InstanceB_Cert.cer'
+   ```
+
 12. 복제본이 될 각 인스턴스에서 가용성 그룹이 사용할 끝점을 만듭니다. 가용성 그룹의 경우 끝점의 유형은 DATABASE_MIRRORING이어야 합니다. 끝점은 인증을 위해 해당 인스턴스에 대해 4단계에서 만든 인증서를 사용합니다. 인증서를 사용하여 끝점을 만드는 예제 구문은 다음과 같습니다. 사용자 환경과 관련된 적절한 암호화 방법 및 다른 옵션을 사용합니다. 사용 가능한 옵션에 대한 자세한 내용은 [CREATE ENDPOINT(Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.
-```
-CREATE ENDPOINT DIAG_EP
-STATE = STARTED
-AS TCP (
+
+   ```sql
+   CREATE ENDPOINT DIAG_EP
+   STATE = STARTED
+   AS TCP (   
     LISTENER_PORT = 5022,
     LISTENER_IP = ALL
-)
-FOR DATABASE_MIRRORING (
+         )
+   FOR DATABASE_MIRRORING (
     AUTHENTICATION = CERTIFICATE InstanceX_Cert,
     ROLE = ALL
-)
-```
+         )
+   ```
+
 13. 9단계에서 해당 인스턴스에 만든 각 사용자에게 권한을 할당하여 끝점에 연결할 수 있습니다. 
-```
-GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
-GO
-```
+
+   ```sql
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GO
+   ```
+
 14. 기본 인증서와 끝점 보안이 구성되었으면 기본 설정 방법을 사용하여 가용성 그룹을 만듭니다. 보조 복제본을 초기화하는 데 사용된 백업을 수동으로 백업, 복사 및 복원하거나 [자동 시드](automatically-initialize-always-on-availability-group.md)를 사용하는 것이 좋습니다. 마법사를 사용하여 보조 복제본을 초기화하면, 비도메인 가입 작업 그룹 클러스터를 사용할 때 작동하지 않을 수 있는 SMB(서버 메시지 블록) 파일이 사용됩니다.
 15. 수신기를 만드는 경우 이름과 IP 주소가 모두 DNS에 등록되어 있는지 확인합니다.
 
