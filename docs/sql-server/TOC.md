@@ -43,14 +43,19 @@
 # [SQL Server 자습서](tutorials-for-sql-server-2016.md)
 
 # 리소스
+
 ## 블로그
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [SQL Server 데이터베이스 엔진](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [SQL Server 보안](https://blogs.msdn.microsoft.com/sqlsecurity/)
 ### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 
+## 배우기
+### [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/sql-server#!lang=1033)
+### [Channel 9의 SQL](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
+
 ## 피드백 및 도움말
-### [SQL Server에 대한 제안](https://feedback.azure.com/forums/908035-sql-server)
+### [UserVoice - SQL Server 개선 제안](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ### [MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)

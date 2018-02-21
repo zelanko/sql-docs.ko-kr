@@ -12,6 +12,7 @@
 # [노출 영역 구성](surface-area-configuration.md)  
 # [SQL 삽입](sql-injection.md)
 # [SQL 취약성 평가](sql-vulnerability-assessment.md)  
+# [SQL 데이터 검색 및 분류](sql-data-discovery-and-classification.md)  
 # [TRUSTWORTHY 데이터베이스 속성](trustworthy-database-property.md)  
 # [사용 권한](permissions-database-engine.md)  
 # [사용 권한 계층 구조](permissions-hierarchy-database-engine.md)  

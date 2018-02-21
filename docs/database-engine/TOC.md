@@ -1,16 +1,16 @@
 # [개요](sql-server-database-engine-overview.md) 
 
-# [새로운 기능 - SQL Server 2017](whats-new-in-sql-server-2017.md)  
-# [새로운 기능 - SQL Server 2016](whats-new-in-sql-server-2016.md) 
+# [새로운 기능 - SQL Server 2017](whats-new-in-sql-server-2017.md)
+# [새로운 기능 - SQL Server 2016](whats-new-in-sql-server-2016.md)
 
 
 # 릴리스 정보
 ## [이전 버전과의 호환성](sql-server-database-engine-backward-compatibility.md)
-## [SQL Server 2017에서 사용되지 않는 기능](deprecated-database-engine-features-in-sql-server-2017.md)  
-## [SQL Server 2016에서 사용되지 않음](deprecated-database-engine-features-in-sql-server-2016.md)  
-## [SQL Server 2016에서 지원되지 않는 기능](discontinued-database-engine-functionality-in-sql-server-2016.md)  
-## [SQL Server 2017의 주요 변경 내용](breaking-changes-to-database-engine-features-in-sql-server-2017.md)  
-## [SQL Server 2016의 주요 변경 내용](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
+## [SQL Server 2017에서 사용되지 않음](deprecated-database-engine-features-in-sql-server-2017.md)
+## [SQL Server 2016에서 사용되지 않음](deprecated-database-engine-features-in-sql-server-2016.md)
+## [SQL Server 2016에서 지원되지 않는 기능](discontinued-database-engine-functionality-in-sql-server-2016.md)
+## [SQL Server 2017의 주요 변경 내용](breaking-changes-to-database-engine-features-in-sql-server-2017.md)
+## [SQL Server 2016의 주요 변경 내용](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 ## [새로운 또는 업데이트 된 문서](new-updated-database-engine.md)
 
 # [설치](../database-engine/install-windows/installation-for-sql-server-2016.md)

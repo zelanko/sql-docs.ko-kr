@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0bfa4f23ea87d7429075d1039df56286b7d4785e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Azure에서 SSIS 패키지 배포, 실행 및 모니터링
 이 자습서에서는 SQL Server Integration Services 프로젝트를 Azure SQL Database의 SSISDB 카탈로그 데이터베이스에 배포하고, Azure-SSIS Integration Runtime에서 패키지를 실행하고, 실행 중인 패키지를 모니터링하는 방법을 보여 줍니다.
@@ -89,7 +89,9 @@ SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS �
 
 ## <a name="deploy-a-project-with-powershell"></a>PowerShell을 사용하여 프로젝트 배포
 
-PowerShell을 사용하여 Azure SQL Database의 SSISDB에 프로젝트를 배포하려면 다음 스크립트를 요구 사항에 맞게 조정합니다.
+PowerShell을 사용하여 Azure SQL Database의 SSISDB에 프로젝트를 배포하려면 다음 스크립트를 요구 사항에 맞게 조정합니다. 이 스크립트는 `$ProjectFilePath` 아래의 자식 폴더와 각 자식 폴더의 프로젝트를 열거한 후 SSISDB에 동일한 폴더를 만들고 이러한 폴더에 프로젝트를 배포합니다.
+
+이 스크립트를 실행하려면 스크립트를 실행하는 컴퓨터에 SQL Server Data Tools 버전 17.x 또는 SQL Server Management Studio가 설치되어 있어야 합니다.
 
 ```powershell
 # Variables
