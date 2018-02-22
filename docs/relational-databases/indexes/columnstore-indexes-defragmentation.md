@@ -30,7 +30,7 @@ ms.lasthandoff: 02/12/2018
   Columnstore 인덱스에 대한 조각 모음 작업입니다.  
   
 ## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>Columnstore 인덱스에 대한 조각 모음을 온라인에서 수행하기 위해 ALTER INDEX REORGANIZE 사용  
- **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 모든 종류의 로드를 수행하면 deltastore에서 여러 개의 작은 rowgroup을 사용할 수 있습니다. `ALTER INDEX REORGANIZE`를 사용하여 모든 rowgroup을 columnstore로 강제한 후 rowgroup을 열이 더 많은 소수의 rowgroup으로 결합합니다.  또한, 재구성 작업은 columnstore에서 삭제된 행도 제거합니다.  
   
