@@ -12,7 +12,7 @@
 ## [쿼리 처리 아키텍처](query-processing-architecture-guide.md)
 ## [스레드 및 작업 아키텍처](thread-and-task-architecture-guide.md)
 ## [트랜잭션 로그 아키텍처 및 관리](sql-server-transaction-log-architecture-and-management-guide.md)
-## 트랜잭션 잠금 및 행 버전 관리 지침
+## [트랜잭션 잠금 및 행 버전 관리 지침](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [백업 및 복원](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -55,12 +55,13 @@
 ## [데이터베이스 수명 주기 관리](database-lifecycle-management.md)  
 ## [중앙 관리 서버를 사용하여 여러 서버 관리](administer-multiple-servers-using-central-management-servers.md)  
 
+# [조인](../relational-databases/performance/joins.md)
 # [파티션](../relational-databases/partitions/partitioned-tables-and-indexes.md)
 # [성능](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [정책 기반 관리](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
 # [복제](../relational-databases/replication/sql-server-replication.md)
-# [리소스 관리자](../relational-databases/resource-governor/resource-governor.md)
+# [Resource Governor](../relational-databases/resource-governor/resource-governor.md)
 # [스크립팅](../relational-databases/scripting/database-engine-scripting.md)
 # [검색](../relational-databases/search/full-text-search.md)
 # [보안](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
@@ -71,6 +72,7 @@
 # [SQL 추적](../relational-databases/sql-trace/sql-trace.md)
 # [통계](../relational-databases/statistics/statistics.md)
 # [저장 프로시저](../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+# [하위 쿼리](../relational-databases/performance/subqueries.md)
 # [동의어](../relational-databases/synonyms/synonyms-database-engine.md)
 # [시스템 카탈로그 뷰](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 # [시스템 호환성 뷰](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
