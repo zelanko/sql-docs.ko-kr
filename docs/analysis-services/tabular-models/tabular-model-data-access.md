@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4c1fa9b4e4f9003b193628d114ad6832436a7c8f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-data-access"></a>테이블 형식 모델 데이터 액세스
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]대부분의 동일한 클라이언트, 인터페이스 및 언어는 다차원 모델에서 데이터 또는 메타 데이터를 검색 하는 데 사용 하 여 Analysis Services 테이블 형식 모델 데이터베이스에에서 액세스할 수 있습니다. 자세한 내용은 [다차원 모델 데이터 액세스&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Analysis Services의 테이블 형식 model 데이터베이스에는 다차원 모델에서 데이터 또는 메타데이터를 검색하는 데 사용하는 것과 동일한 대부분의 클라이언트, 인터페이스 및 언어로 액세스할 수 있습니다. 자세한 내용은 [다차원 모델 데이터 액세스&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)를 참조하세요.  
   
- 이 항목에서는 테이블 형식 모델에서 사용할 수 있는 클라이언트, 쿼리 언어 및 프로그래밍 인터페이스에 대해 설명합니다.  
+ 이 문서에서는 클라이언트, 쿼리 언어 및 테이블 형식 모델과 함께 작동 하는 프로그래밍 인터페이스를 설명 합니다.  
   
 ## <a name="clients"></a>클라이언트  
  다음 Microsoft 클라이언트 응용 프로그램은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 model 데이터베이스에 대한 네이티브 연결을 지원합니다.  
@@ -34,10 +35,10 @@ ms.lasthandoff: 01/08/2018
 ### <a name="power-bi"></a>Power BI
 [Power BI](https://powerbi.microsoft.com/)에서 온-프레미스 Analysis Services 테이블 형식 model 데이터베이스에 연결할 수 있습니다. Power BI는 데이터를 분석하고 통찰력을 공유하기 위한 비즈니스 분석 도구 제품군입니다. 
 
-### <a name="excel"></a>내보내기  
+### <a name="excel"></a>Excel  
  Excel의 데이터 시각화 및 분석 기능을 사용하여 Excel에서 테이블 형식 model 데이터베이스에 연결하여 데이터를 사용할 수 있습니다. 데이터에 액세스하려면 Analysis Services 데이터 연결을 정의하고, 테이블 형식 서버 모드로 실행되는 서버를 지정한 다음, 사용할 데이터베이스를 선택합니다. 자세한 내용은 [SQL Server Analysis Services에 연결 또는 데이터 가져오기](http://go.microsoft.com/fwlink/?linkID=215150)를 참조하십시오.  
   
- Excel은 또한 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 테이블 형식 모델을 찾아보는 데 권장되는 응용 프로그램입니다. 이 도구에는 Excel의 새 인스턴스를 시작하고, Excel 통합 문서를 만들고, 통합 문서에서 모델 작업 영역 데이터베이스로의 데이터 연결을 여는 **Excel에서 분석** 옵션이 포함되어 있습니다. Excel에서 테이블 형식 모델 데이터를 찾아보는 경우 Excel은 Excel 피벗 테이블 클라이언트를 사용하여 모델에 대한 쿼리를 실행한다는 사실을 기억하십시오. 따라서 Excel 통합 문서 내에서 작업할 경우 DAX 쿼리가 아니라 MDX 쿼리가 작업 영역 데이터베이스로 전송됩니다. SQL 프로파일러 또는 기타 모니터링 도구를 사용하여 쿼리를 모니터링하는 경우 프로파일러 추적에 DAX가 아니라 MDX가 표시됩니다. Excel에서 분석 기능에 대한 자세한 내용은 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)을 참조하세요.  
+ Excel은 또한 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 테이블 형식 모델을 찾아보는 데 권장되는 응용 프로그램입니다. 이 도구에는 Excel의 새 인스턴스를 시작하고, Excel 통합 문서를 만들고, 통합 문서에서 모델 작업 영역 데이터베이스로의 데이터 연결을 여는 **Excel에서 분석** 옵션이 포함되어 있습니다. Excel에서 테이블 형식 모델 데이터를 찾아보는 경우 Excel은 Excel 피벗 테이블 클라이언트를 사용하여 모델에 대한 쿼리를 실행한다는 사실을 기억하십시오. 따라서 Excel 통합 문서 내에서 작업할 경우 DAX 쿼리가 아니라 MDX 쿼리가 작업 영역 데이터베이스로 전송됩니다. SQL 프로파일러 또는 기타 모니터링 도구를 사용하여 쿼리를 모니터링하는 경우 프로파일러 추적에 DAX가 아니라 MDX가 표시됩니다. Excel에서에서 분석 기능에 대 한 자세한 내용은 참조 [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)합니다.  
   
 ### <a name="power-view"></a>파워 뷰  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 는 SharePoint 2010 환경에서 실행되는 Reporting Services 보고 클라이언트 응용 프로그램입니다. 이 프로그램은 데이터 탐색, 쿼리 디자인 및 프레젠테이션 레이아웃을 통합된 임시 보고 환경으로 통합합니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 는 모델이 테이블 형식 모드로 실행되는 Analysis Services의 인스턴스에서 호스팅되는지 또는 DirectQuery 모드를 사용하여 관계형 데이터 저장소에서 검색되는지 여부에 관계없이 테이블 형식 모델을 데이터 원본으로 사용할 수 있습니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에서 테이블 형식 모델에 연결하려면 서버 위치 및 데이터베이스 이름이 포함된 연결 파일을 만들어야 합니다. SharePoint에서 Reporting Services 공유 데이터 원본 또는 BI 의미 체계 모델 연결 파일을 만들 수 있습니다. BI 의미 체계 모델 연결에 대한 자세한 내용은 [파워 피벗 BI 의미 체계 모델 연결&#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)을 참조하세요.  
@@ -47,13 +48,13 @@ ms.lasthandoff: 01/08/2018
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 클라이언트에서 모델로 보내는 쿼리는 모델에 대해 추적을 설정하여 모니터링할 수 있는 DAX 문으로 실행됩니다.  또한 클라이언트는 CSDL(개념 스키마 정의 언어)에 따라 제공되는 초기 스키마 정의에 대한 요청을 서버에 보냅니다. 자세한 내용은 [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 테이블 형식 모델을 호스팅하는 인스턴스를 관리하고 해당 메타데이터 및 데이터를 쿼리할 수 있습니다. 모델 또는 모델의 개체를 처리하고, 파티션을 생성 및 관리하고, 데이터 액세스를 관리하는 데 사용될 수 있는 보안을 설정할 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 테이블 형식 모델을 호스팅하는 인스턴스를 관리하고 해당 메타데이터 및 데이터를 쿼리할 수 있습니다. 모델 또는 모델의 개체를 처리하고, 파티션을 생성 및 관리하고, 데이터 액세스를 관리하는 데 사용될 수 있는 보안을 설정할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
 -   [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)  
   
--   [Analysis Services 인스턴스 모니터링](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+-   [Analysis Services 인스턴스 모니터](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 MDX 및 XMLA 쿼리 창을 사용하여 테이블 형식 데이터베이스에서 데이터 및 메타데이터를 검색할 수 있습니다. 그러나 다음과 같은 제한 사항이 있습니다.  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="data-and-metadata"></a>데이터 및 메타데이터  
  ADOMD.NET을 사용하여 관리 응용 프로그램의 테이블 형식 모델에서 데이터 및 메타데이터를 검색할 수 있습니다. 
   
--   [DMV&#40;동적 관리 뷰&#41;를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [사용 하 여 동적 관리 뷰 &#40; Dmv &#41; Analysis Services를 모니터링 하려면](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  관리되지 않는 클라이언트 응용 프로그램에서 Analysis Services 9.0 OLE DB 공급자를 사용하여 테이블 형식 모델에 대한 OLE DB 액세스를 지원할 수 있습니다. 테이블 형식 모델 액세스를 사용하도록 설정하려면 업데이트된 버전의 Analysis Services OLE DB 공급자가 필요합니다. 테이블 형식 모델과 함께 사용되는 공급자에 대한 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 를 참조하세요.  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [MDSCHEMA_HIERARCHIES 행 집합](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     테이블 형식 모델에 생성된 사용자 정의 계층을 식별하는 새로운 **STRUCTURE_TYPE** 열거형. 자세한 내용은 [계층 구조&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)를 참조하세요.  
+     테이블 형식 모델에 생성된 사용자 정의 계층을 식별하는 새로운 **STRUCTURE_TYPE** 열거형. 자세한 내용은 참조 [계층](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)합니다.  
   
  데이터 마이닝 스키마 행 집합용 OLE DB는 이 릴리스에서 업데이트되지 않았습니다.  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 01/08/2018
 >  DirectQuery 모드로 배포된 데이터베이스에는 MDX 또는 DMX 쿼리를 사용할 수 없습니다. 따라서 스키마 행 집합을 사용하여 DirectQuery 모델에 대해 쿼리를 실행해야 하는 경우 연결된 DMV가 아니라 XMLA를 사용해야 합니다. $system.DBSCHEMA_CATALOGS 또는 DISCOVER_TRACES의 SELECT *와 같이 전체 서버에 대한 결과를 반환하는 DMV의 경우 캐시된 모드로 배포된 데이터베이스 내용에서 쿼리를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [테이블 형식 model 데이터베이스에 연결&#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
+ [테이블 형식 모델 데이터베이스에 연결 ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [파워 피벗 데이터 액세스](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)  
   

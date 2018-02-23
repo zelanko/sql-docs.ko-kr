@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e7f03a55e7be9bba83458b04d11208ed1a65b524
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 883c016829dcf5ba9b7d48f0356a4a6141550e7d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server 설치를 참조하세요
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,6 +32,8 @@ ms.lasthandoff: 02/11/2018
 이 항목에서는 설치 하는 방법에 설명는 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SQL Server에 대 한 선택적인 명령줄 도구 뿐만 아니라 Linux macOS 등 (`bcp` 및 `sqlcmd`) 및 unixODBC 개발 헤더입니다.
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
+
+**중요 정보:** 기존 설치를 업데이트할 때에 Linux 및 Mac 용 17 버전 ODBC 드라이버 패키지는 문제로 인해 현재 사용할 수 없습니다. 작업을 가능한 한 빨리 업데이트 된 패키지를 제공 합니다. 17 버전에 대 한 설치 명령을 실행 하는 버전 13.1 드라이버를 설치 현재 합니다.
 
 ### <a name="debian-8-and-9"></a>Debian 8 및 9
 ```
@@ -364,7 +366,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ### <a name="offline-installation"></a>오프라인 설치
 원하는/필요로 하는 경우는 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 인터넷 연결 없이 컴퓨터에 설치 하려면 ODBC Driver 13을 해야 패키지 종속성을 수동으로 해결 합니다. [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 다음 직접 종속성이 있습니다.
 - Ubuntu: libc6 (> = 2.21), libstdc + + 6 (> = 4.9), libkrb5-3, libcurl3, openssl, debconf (> = 0.5), unixodbc (> = 2.3.1-1)
-- Red Hat:```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
+- Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
 각이 패키지에서은 자신의 수도 시스템에 없을 수도 있습니다. 이 문제에 대 한 일반 솔루션을 배포의 패키지 관리자 설명서를 참조: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), 및 [SUSE](https://en.opensuse.org/Portal:Zypper)

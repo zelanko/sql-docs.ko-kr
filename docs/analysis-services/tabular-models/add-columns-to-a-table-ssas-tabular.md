@@ -1,7 +1,7 @@
 ---
-title: "테이블 (SSAS 테이블 형식)에 열 추가 | Microsoft Docs"
+title: "테이블에 열 추가 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8f4dc0dc32d94ec793bab4e9912db739c942bb06
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b5d09c35fcdfa2def6ec78422c1f4d40caa3ef3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="add-columns-to-a-table-ssas-tabular"></a>테이블에 열 추가(SSAS 테이블 형식)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 기존 테이블에 열을 추가 하는 방법에 설명 합니다.  
+# <a name="add-columns-to-a-table"></a>테이블에 열 추가
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+이 문서에서는 기존 테이블에 열을 추가 하는 방법을 설명 합니다.  
   
-## <a name="add-columns-from-the-data-source"></a>데이터 원본의 열 추가  
+## <a name="add-columns-from-the-datasource"></a>데이터 원본에서 열을 추가 합니다.  
  데이터 원본 테이블에서 데이터를 가져오기 위해 테이블 가져오기 마법사를 사용할 경우 원본 테이블의 모든 열을 포함하거나 미리 보기 및 필터 기능을 사용하여 특정 열을 필터링하여 제외하도록 선택한 경우 해당 열 및 선택한 필터링된 데이터를 포함하는 새 테이블이 모델에서 만들어집니다. 가져올 특정 열만 지정하는 SQL 쿼리를 작성할 수도 있습니다. 그러나 나중에 추가로 원본 테이블의 다른 열을 모델 테이블에 가져오거나 DAX 수식에서 값을 유추하는 계산 열을 추가할 수 있습니다.  
   
  예를 들어 먼저 테이블 가져오기 마법사에서 미리 보기 및 필터 기능을 사용하여 데이터 원본의 일부 열만 선택하여 데이터를 가져온 다음, 나중에 원본 테이블에는 존재하지만 모델 테이블에 없는 다른 열을 추가해야 할 수 있습니다. 또는 데이터 원본의 FactSales 테이블에 새 AdjustedProfit 열을 추가한 다음 동일한 AdjustedProfit 열과 데이터를 모델의 Sales 테이블에 추가해야 할 수 있습니다.  
@@ -45,8 +46,8 @@ ms.lasthandoff: 01/08/2018
   
 2.  **테이블 속성 편집** 대화 상자의 테이블 미리 보기 창에서 추가할 원본 열을 선택한 다음 확인을 클릭합니다. 이때 모델 테이블 정의에 이미 포함된 열은 확인란이 선택되어 있습니다.  
   
-## <a name="add-a-calculated-column"></a>계산 열 추가  
- 계산 열에서는 DAX 수식에 따라 각 행의 값이 정해집니다. 예를 들어 각 행에 값으로 1을 추가하는 간단한 수식(=1)으로 계산된 열을 만들 수 있습니다. 또는 모델의 다른 데이터를 바탕으로 값을 계산하는 좀 더 복잡한 수식의 계산된 열을 만들 수도 있습니다. 계산 열은 다른 항목에서 더 자세히 다룹니다. 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)에서 작성된 테이블 형식 모델 프로젝트에 대해 설명합니다.  
+## <a name="add-a-calculated-column"></a>계산된 열 추가  
+ 계산 열에서는 DAX 수식에 따라 각 행의 값이 정해집니다. 예를 들어 각 행에 값으로 1을 추가하는 간단한 수식(=1)으로 계산된 열을 만들 수 있습니다. 또는 모델의 다른 데이터를 바탕으로 값을 계산하는 좀 더 복잡한 수식의 계산된 열을 만들 수도 있습니다. 계산 열은 다른 항목에서 더 자세히 다룹니다. 자세한 내용은 [계산 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)에서 작성된 테이블 형식 모델 프로젝트에 대해 설명합니다.  
   
 #### <a name="to-create-a-calculated-column"></a>계산 열을 만들려면  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 2.  수식 입력줄에 DAX 수식을 입력하여 각 행에 대한 특성을 추가합니다.  
   
 ## <a name="add-a-blank-column"></a>빈 열 추가  
- 모델 테이블에서 명명된 빈 열을 만들 수 있습니다. 빈 열은 다른 원본에서 데이터를 가져와서 붙여넣을 경우에 유용하게 사용됩니다. 붙여넣은 데이터는 가져올 때와 다르게 저장됩니다. 자세한 내용은 [데이터 복사 및 붙여넣기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)를 참조하세요.  
+ 모델 테이블에서 명명된 빈 열을 만들 수 있습니다. 빈 열은 다른 원본에서 데이터를 가져와서 붙여넣을 경우에 유용하게 사용됩니다. 붙여넣은 데이터는 가져올 때와 다르게 저장됩니다. 자세한 내용은 참조 [데이터 복사 및 붙여넣기](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)합니다.  
   
 #### <a name="to-create-a-named-blank-column"></a>명명된 빈 열을 만들려면  
   
@@ -67,8 +68,8 @@ ms.lasthandoff: 01/08/2018
   
 2.  맨 위 셀을 클릭하고 이름을 입력한 다음 Enter 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [테이블 속성 편집 대화 상자&#40;SSAS&#41;](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
- [테이블, 열 또는 행 필터 매핑 변경&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [테이블 속성 편집 대화 상자](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
+ [테이블, 열 또는 행 필터 매핑 변경](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

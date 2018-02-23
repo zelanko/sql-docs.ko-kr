@@ -1,7 +1,7 @@
 ---
-title: "계층 (SSAS 테이블 형식) 만들기 및 관리 | Microsoft Docs"
+title: "계층 만들기 및 관리 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6a8646985a0d9eb8dbba35123c2c3b1d049e62a5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 96af188d39d583c53b2520d03f6fd0962092a90f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-hierarchies-ssas-tabular"></a>계층 만들기 및 관리(SSAS 테이블 형식)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]계층 생성 및 다이어그램 뷰에서 모델 디자이너에서 관리할 수 있습니다. 모델 디자이너(다이어그램 뷰)를 보려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭하고 **모델 뷰**를 가리킨 다음 **다이어그램 뷰**를 클릭합니다.  
+# <a name="create-and-manage-hierarchies"></a>계층 만들기 및 관리 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+모델 디자이너(다이어그램 뷰)에서 계층을 만들고 관리할 수 있습니다. 모델 디자이너(다이어그램 뷰)를 보려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭하고 **모델 뷰**를 가리킨 다음 **다이어그램 뷰**를 클릭합니다.  
   
- 이 항목에는 다음 태스크가 포함됩니다.  
+ 이 문서에는 다음 작업이 포함 됩니다.  
   
 -   [계층 만들기](#bkmk_create)  
   
@@ -100,8 +101,8 @@ ms.lasthandoff: 01/08/2018
 -   또는 부모 계층 수준을 클릭하고 Delete 키를 누릅니다. 이 경우 모든 자식 수준도 제거됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [테이블 형식 모델 디자이너&#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [계층 &#40; SSAS 테이블 형식 &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
- [측정값&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+ [테이블 형식 모델 디자이너 ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [계층 구조](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

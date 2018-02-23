@@ -1,5 +1,5 @@
 ---
-title: "Power View 보고서 (SSAS 테이블 형식)에 대 한 테이블 동작 속성 구성 | Microsoft Docs"
+title: "Power View 보고서의 테이블 동작 속성 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f202d090127d93ec0786e0b7cca90f54f7fac0b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-보고서에 대 한 테이블 동작 속성 구성
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]에 대 한 데이터 모델로 테이블 형식 모델을 사용할 경우 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], 보다 세부적인 수준에서 정보 행을 표시 하는 테이블 동작 속성을 설정할 수 있습니다. 테이블 동작 속성을 설정하면 정보 행의 그룹화 동작이 변경되고 바둑판식 배열, 카드 및 차트 레이아웃의 식별 정보(예: 이름, 사진 ID, 로고 이미지)의 기본 배치가 향상됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+테이블 형식 모델을 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에 대한 데이터 모델로 사용할 경우 정보 행을 더 자세히 표시하는 테이블 동작 속성을 설정할 수 있습니다. 테이블 동작 속성을 설정하면 정보 행의 그룹화 동작이 변경되고 바둑판식 배열, 카드 및 차트 레이아웃의 식별 정보(예: 이름, 사진 ID, 로고 이미지)의 기본 배치가 향상됩니다.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 는 다른 보고 응용 프로그램과 달리 사용 중인 표시 형식을 기준으로 보고서 필드 목록에 배치되는 열을 평가하여 보고서 디자인 중에 항목을 자동으로 그룹화합니다. 대부분의 경우 기본 그룹화를 통해 최적의 결과가 만들어집니다. 그러나 정보 데이터가 포함된 일부 테이블의 경우 그룹화되지 않아야 할 행이 기본 그룹화 동작에 의해 그룹화되는 경우도 있습니다. 이러한 테이블의 경우 그룹 평가 방법을 변경하는 속성을 설정할 수 있습니다.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
 -   행렬 보고서에서 원치 않는 부분합 제거. 필드 수준의 기본 그룹화는 각 필드에 대한 부분합을 만듭니다. 행 수준에서 단일 부분합만 계산하려면 행 식별자를 설정합니다.  
   
- 날짜 테이블로 표시된 테이블에 대해서는 행 식별자를 설정할 수 없습니다. 날짜 테이블의 경우 테이블을 표시하면 행 식별자가 지정됩니다. 자세한 내용은 [날짜 테이블로 표시 대화 상자&#40;SSAS&#41;](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)를 참조하세요.  
+ 날짜 테이블로 표시된 테이블에 대해서는 행 식별자를 설정할 수 없습니다. 날짜 테이블의 경우 테이블을 표시하면 행 식별자가 지정됩니다. 자세한 내용은 참조 [날짜 테이블 대화 상자로 표시 ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)합니다.  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>고유한 행 유지 속성 설정  
  이 속성을 사용하면 각 행을 구별하여 ID 정보(예: 직원 이름, 제품 코드 등)를 전달하는 열을 지정할 수 있습니다. 두 고객의 이름이 같은 경우처럼 여러 행이 동일하게 나타나는 경우 이 속성에 대해 지정한 열이 보고서 테이블에서 반복됩니다.  
@@ -138,7 +140,7 @@ ms.lasthandoff: 01/08/2018
   
  ![행 ID 그룹화를 기반으로 차트](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "행 ID 그룹화를 기반으로 차트")  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
  모델에서 테이블을 평가하고 개별 항목으로 항상 표시되어야 하는 정보 행을 포함하는 테이블에서 테이블 동작 속성을 설정한 후 추가 속성 또는 설정을 사용하여 모델을 최적화할 수 있습니다.  
   
   

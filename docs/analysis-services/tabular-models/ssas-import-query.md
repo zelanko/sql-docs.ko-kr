@@ -1,7 +1,7 @@
 ---
 title: "기본 쿼리 (Analysis Services)를 사용 하 여 데이터를 가져올 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/26/2017
+ms.date: 02/20/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -16,14 +16,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1200775d4b80639c3e6e2cb5ab127e3d1bb5254
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: be1de1271558dd840f12214b8986be85572ebe6d
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="import-data-by-using-a-native-query"></a>기본 쿼리를 사용 하 여 데이터 가져오기
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 1400 모델에 대 한 Visual Studio의 Analysis Services 프로젝트의 새로운 데이터 가져오기 환경 제공 때 엄청난 유연성 매시업 하는 방법을 데이터 가져오기 중 합니다. 이 문서에서는 데이터 원본에 연결을 만들고 데이터 가져오기를 지정 하는 네이티브 SQL 쿼리가 만드는 설명 합니다.
+[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
+테이블 형식 1400 모델에 대 한 Visual Studio의 Analysis Services 프로젝트의 새로운 데이터 가져오기 환경 제공 때 엄청난 유연성 매시업 하는 방법을 데이터 가져오기 중 합니다. 이 문서에서는 데이터 원본에 연결을 만들고 데이터 가져오기를 지정 하는 네이티브 SQL 쿼리가 만드는 설명 합니다.
 
 이 문서에 설명 된 작업을 완료 하려면 최신 버전의 SSDT 사용 했는지 확인 합니다. Visual Studio 2017을 사용 하는 경우 다운로드 하 고 년 9 월 2017 설치 되어 있는지 확인 하거나 이후 Microsoft Analysis Services 프로젝트 VSIX 합니다.
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 ![쿼리 편집기](media/ssas-import-query-example-table.png)
 
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Value.NativeQuery](https://msdn.microsoft.com/library/mt736917.aspx)   
  [가장](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
 

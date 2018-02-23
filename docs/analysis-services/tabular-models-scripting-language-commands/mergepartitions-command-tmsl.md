@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: dd568426-a415-41bf-b1e9-ea2261babf81
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7960dbd174c0f959439029dc05cd16efbc42f319
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fce99eb78e6e5a40b825d13b81def4a87deb48b5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mergepartitions-command-tmsl"></a>MergePartitions 명령 TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]하나 이상의 원본 파티션의 데이터를 대상 파티션에 병합 한 다음 원본 파티션을 삭제 합니다. 대상 파티션의 SQL 쿼리 병합의 일환으로 업데이트 되지 않습니다. 파티션의 후속 처리의 모든 데이터 검색 되도록, 하려면 병합 된 파티션의 데이터를 모두 선택 되도록 쿼리를 수정 해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+하나 이상의 원본 파티션의 데이터를 대상 파티션에 병합 한 다음 원본 파티션을 삭제 합니다. 대상 파티션의 SQL 쿼리 병합의 일환으로 업데이트 되지 않습니다. 파티션의 후속 처리의 모든 데이터 검색 되도록, 하려면 병합 된 파티션의 데이터를 모두 선택 되도록 쿼리를 수정 해야 합니다.  
   
 ## <a name="request"></a>요청  
  데이터베이스, 테이블 및 원본 파티션과 대상 파티션의 지정 해야 합니다. 만 동일한 테이블에서 파티션을 병합할 수 있습니다.  
@@ -72,6 +73,6 @@ ms.lasthandoff: 01/08/2018
 
 ## <a name="see-also"></a>관련 항목:  
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [테이블 형식 모델 파티션 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

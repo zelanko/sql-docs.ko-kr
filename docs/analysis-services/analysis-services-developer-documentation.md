@@ -15,16 +15,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69f16ef4141ca467063a84bf2305ccbe6d8f8996
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 개발자 설명서
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -82,5 +82,5 @@ Analysis Services에서는 여러 가지 방법을 코드를 통해 솔루션을
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) 관리 기능 및 범용는 사용 되는 cmdlet에 설명 **Invoke-ascmd** 스크립트 또는 쿼리를 입력으로 허용 하는 cmdlet입니다.
 
 ## <a name="see-also"></a>관련 항목:
-[기술 참조 &#40; Ssas&#41; ](../analysis-services/powershell/technical-reference-ssas.md) 
+[기술 참조 ](../analysis-services/powershell/technical-reference-ssas.md) 
  [쿼리 및 식 언어 참조 &#40; Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)

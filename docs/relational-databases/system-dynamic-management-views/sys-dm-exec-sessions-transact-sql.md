@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Permissions  
 모든 사용자 세션 정보와를 보입니다.  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** 필요 `VIEW SERVER STATE` 에 대 한 권한이 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 서버의 모든 세션을 볼 수 있습니다.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 필요 `VIEW DATABASE STATE` 현재 데이터베이스에 대 한 모든 연결을 볼 수 있습니다. `VIEW DATABASE STATE`부여 될 수 없습니다는 `master` 데이터베이스입니다. 
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 필요 `VIEW DATABASE STATE` 현재 데이터베이스에 대 한 모든 연결을 볼 수 있습니다. `VIEW DATABASE STATE` 부여 될 수 없습니다는 `master` 데이터베이스입니다. 
   
   
 ## <a name="remarks"></a>주의  
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/03/2018
  이 옵션이 설정되지 않은 경우 이러한 열에 Null 값이 반환됩니다. 이 서버 구성 옵션을 설정 하는 방법에 대 한 자세한 내용은 참조 [common criteria 준수 enabled 서버 구성 옵션](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)합니다.  
  
  
- Azure SQL 데이터베이스에서 관리자 연결 관리자가 아닌 연결이 데이터베이스 사용자 세션에 관련 된 정보를 확인만 하는 동안 인증 된 세션당 행 하나 표시 됩니다. 
+ Azure SQL 데이터베이스에서 관리 연결에는 인증 된 세션당 행 하나 표시 됩니다. 결과 집합에 표시 되는 "sa" 세션 사용자 할당량에 영향을 받지 세션에 대 한 되어 있지 않은 합니다. 관리자가 아닌 연결의 데이터베이스 사용자 세션에 관련 된 정보가 표시 됩니다.
  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  

@@ -1,5 +1,5 @@
 ---
-title: "Power Pivot (SSAS 테이블 형식)에서 가져오기 | Microsoft Docs"
+title: "파워 피벗에서 가져오기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.importfromppt.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71de8ff892ff328abe134069d0ffd703846721c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cf23e21dfa0a87af7702bf07961d71184e6a59c2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="import-from-power-pivot-ssas-tabular"></a>파워 피벗에서 가져오기(SSAS 테이블 형식)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 메타 데이터와 데이터를 가져와서 새로운 테이블 형식 모델 프로젝트를 만드는 방법을 설명는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 가져오기-를 사용 하 여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 프로젝트 템플릿을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
+# <a name="import-from-power-pivot"></a>파워 피벗에서 가져오기 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+이 문서에서는 메타 데이터와 데이터를 가져와서 새로운 테이블 형식 모델 프로젝트를 만드는 방법을 설명는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 가져오기-를 사용 하 여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 프로젝트 템플릿을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Power Pivot for Excel 파일에서 새 테이블 형식 모델 만들기  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 가져와서 새로운 테이블 형식 모델 프로젝트를 만드는 경우 통합 문서의 구조를 정의하는 메타데이터를 사용하여 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 테이블 형식 모델 프로젝트의 구조를 만들고 정의합니다. 테이블, 열, 측정값 및 관계와 같은 개체는 그대로 유지되며 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 표시되는 것과 같이 테이블 형식 모델 프로젝트에 표시됩니다. .xlsx 통합 문서 파일은 변경되지 않습니다.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 01/08/2018
 4.  **열기** 대화 상자에서 가져올 모델 메타데이터 및 데이터가 포함된 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 파일을 선택한 다음 **열기**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [작업 영역 데이터베이스&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
- [복사 및 붙여넣기 데이터 &#40; SSAS 테이블 형식 &#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
+ [작업 영역 데이터베이스](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
+ [데이터 복사 및 붙여넣기](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   

@@ -12,24 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e0acafbad6d869b31b7560f059adb0a7a3e8da03
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="impersonation"></a>가장 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 테이블 형식 모델 작성자 사용 하는 방법 로그온 자격 증명은 Analysis Services에서 데이터 원본에 연결할 때를 가져오고 데이터 처리 (새로 고침) 이해를 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+이 문서에서는 테이블 형식 모델 작성자 사용 하는 방법 로그온 자격 증명은 Analysis Services에서 데이터 원본에 연결할 때를 가져오고 데이터 처리 (새로 고침) 이해를 제공 합니다.  
 
-##  <a name="bkmk_conf_imp_info"></a>가장 구성  
+##  <a name="bkmk_conf_imp_info"></a> 가장 구성  
  모델이 있는 위치 및 컨텍스트에 가장 정보를 구성 하는 방법을 결정 합니다. 새 모델 프로젝트를 만들 때에 가장 데이터를 가져오는 데이터 원본에 연결할 때 SQL Server Data Tools (SSDT)에 구성 됩니다. 모델을 배포한 후 SQL Server Management Studio (SSMS)를 사용 하 여 모델 데이터베이스 연결 문자열 속성의 가장을 구성할 수 있습니다. Azure Analysis Services에서 테이블 형식 모델에 대 한 SSMS를 사용할 수 있습니다 또는 **로 볼: 스크립트** json에서 Model.bim 파일을 편집 하려면 브라우저 기반 디자이너의 모드입니다.
   
-##  <a name="bkmk_how_imper"></a>가장을 사용 하는 방법  
+##  <a name="bkmk_how_imper"></a> 가장을 사용 하는 방법  
  *가장* 은 Analysis Services와 같은 서버 응용 프로그램이 클라이언트 응용 프로그램의 ID를 가장하는 기능입니다. 하지만 Analysis Services 서비스 계정을 사용 하 여 실행 서버에서 데이터 원본에 대 한 연결을 설정 하는 경우 사용 하 여 가장 데이터 가져오기 및 처리에 대 한 액세스 검사를 수행할 수 있습니다.  
   
  가장에 사용 되는 자격 증명으로 현재 로그온 자격 증명에서 서로 다릅니다. 로그온 한 사용자 자격 증명은 모델을 작성할 때 특정 클라이언트 쪽 작업에 사용 됩니다.  
@@ -86,7 +87,7 @@ ms.lasthandoff: 01/08/2018
   
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [데이터 원본](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [테이블 형식 모델 솔루션 배포](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  

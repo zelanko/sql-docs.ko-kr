@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 054902c076be5af595e0b9add93d500263f2acc6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2b5e88e9a77c1d192709bde2fe6dcc9be3887aa3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>테이블 형식 모델 번역(Analysis Services )
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 테이블 형식 모델에 문자열 번역 지원을 추가 합니다. 모델 내의 단일 개체는 이름 또는 설명이 여러 개로 번역되어 모델 정의 내에서 다중 언어 버전을 지원할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 테이블 형식 모델에 문자열 번역 지원을 추가합니다. 모델 내의 단일 개체는 이름 또는 설명이 여러 개로 번역되어 모델 정의 내에서 다중 언어 버전을 지원할 수 있습니다.  
   
  번역된 문자열은 Excel PivotTable 목록과 같이 클라이언트 도구에 표시되는 개체 메타데이터용(테이블 및 열의 이름 및 설명)으로만 사용됩니다.  번역된 문자열을 사용하려면 클라이언트 연결에 문화권을 지정합니다. **Excel에서 분석** 기능의 드롭다운 목록에서 언어를 선택할 수 있습니다. 다른 도구의 경우 연결 문자열에서 문화권을 지정해야 할 수 있습니다.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  **언어 파일 내보내기**를 클릭합니다.  파일 이름과 설명을 입력합니다.  
   
- ![ssas 테이블 형식-변환-내보내기](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas 테이블 형식-변환-내보내기")  
+ ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
   
 ## <a name="add-translations"></a>번역 추가  
  빈 JSON 번역 파일에는 특정 언어 번역에 대한 메타데이터가 포함됩니다. 개체 이름 및 설명에 대한 번역 자리 표시자는 모델 정의의 마지막에 있는 **Culture** 섹션에서 설명됩니다. 번역은 다음에 대하여 추가될 수 있습니다.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/08/2018
   
  다음 예제에서는 **DimProduct** 및 **DimCustomer** 테이블에 대한 번역된 캡션 및 설명을 보여줍니다.  
   
- ![ssas-테이블 형식-변환-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-테이블 형식-변환-json")  
+ ![ssas-tabular-translate-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-translate-json")  
   
 > [!TIP]  
 >  JSON 편집기를 사용하면 파일을 열 수 있지만 Visual Studio에서 JSON 편집기를 사용하여 솔루션 탐색기에서도 View Code 명령을 사용하여 SSDT에서 테이블 형식 모델 정의를 보는 것이 좋습니다. JSON 편집기를 다운로드하려면 [전체 Visual Studio 2015 버전이 설치](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)되어야 합니다. 무료 Community Edition에는 JSON 편집기 기능이 포함됩니다.  
@@ -111,13 +112,13 @@ ms.lasthandoff: 01/08/2018
   
 2.  Excel 연결 대화 상자에서 문자열 번역이 모델에 존재하는 문화권을 선택합니다. Excel은 모델에 정의된 문화권을 감지하고 그에 따라 드롭다운 목록을 채웁니다.  
   
-     ![ssas-테이블 형식-번역-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-테이블 형식-번역-excel")  
+     ![ssas-tabular-translations-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-translations-excel")  
   
      피벗 테이블을 만드는 경우 번역된 테이블 및 열 이름을 확인해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis services에서 테이블 형식 모델에 대한 호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services의 세계화 시나리오](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Excel에서 분석&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

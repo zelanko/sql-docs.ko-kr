@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - sys.dm_tran_version_store_space_usage
 - dm_tran_version_store_space_usage
 - dm_tran_version_store_space_usage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_version_store_space_usage dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_version_store_space_usage dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: cfdd2caa03fdd12501580c2584d68f374ee54222
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 3108394b7848047bac97ece004bf9c168b0e045c
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-각 데이터베이스에 대 한 버전 저장소 레코드에서 사용 하는 tempdb의 총 사용 공간을 표시 하는 테이블을 반환 합니다. **sys.dm_tran_version_store_space_usage** 효율적인 및 고성능 개별 버전 저장소를 통해 이동 하지 않는 동일 하 게 실행 기록 데이터베이스당 tempdb에 사용 되는 집계 된 버전 저장소 공간을 반환 합니다.
+각 데이터베이스에 대 한 버전 저장소 레코드에서 사용 하는 tempdb의 총 사용 공간을 표시 하는 테이블을 반환 합니다. **sys.dm_tran_version_store_space_usage** 효율적이 고 하지 비용이 개별 버전 저장소 레코드를 탐색 하지 않으면 및 집계 된 데이터베이스당 tempdb에 사용 되는 버전 저장소 공간을 반환 하는 대로 실행 됩니다.
   
-각 버전 레코드는 일부 추적/상태 정보와 함께 이진 데이터로 저장됩니다. 데이터베이스 테이블의 레코드와 마찬가지로 버전 저장소 레코드도 8192바이트 페이지로 저장됩니다. 레코드가 8192바이트를 초과하면 두 개의 레코드로 분할됩니다.  
+각 버전 레코드는 일부 추적 / 상태 정보와 함께 이진 데이터로 저장 됩니다. 데이터베이스 테이블의 레코드와 마찬가지로 버전 저장소 레코드도 8192바이트 페이지로 저장됩니다. 레코드가 8192바이트를 초과하면 두 개의 레코드로 분할됩니다.  
   
 버전 레코드는 이진 데이터로 저장되므로 각 데이터베이스의 다양한 데이터 정렬로 인한 문제가 발생하지 않습니다. 사용 하 여 **sys.dm_tran_version_store_space_usage** SQL Server 인스턴스에 있는 데이터베이스의 버전 저장소 공간 사용량에 따라 tempdb 크기를 모니터링 하 고 계획 합니다.
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 01/02/2018
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
 
 ## <a name="examples"></a>예  
- 다음 쿼리는 SQL Server 인스턴스의 각 데이터베이스의 버전 저장소를 여 tempdb에 사용 되는 공간을 결정 하 사용할 수 있습니다. 
+ 다음 쿼리는 데 사용할 수 tempdb에 사용 되는 공간 확인의 각 데이터베이스의 버전 저장소를 여는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스. 
   
 ```sql  
 SELECT 

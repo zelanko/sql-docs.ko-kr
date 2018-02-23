@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 92b6d35f7ad2a4c32b7f9ba6d7dcb1e2fdc8e407
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO의에서 테이블 형식 개체 모델 (TOM) 소개
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 개체 모델 (TOM)에 호환성 수준 1200 이상에서 작성 된 테이블 형식 모델에 대 한 프로그래밍 시나리오를 지원 하기 위해 만든 관리 개체 AMO (Analysis Services) 클라이언트 라이브러리의 확장입니다. AMO에서와 마찬가지로 TOM 범주 예측자 변수, 가져오기 및 데이터를 새로 고칠 및 역할과 사용 권한을 할당와 같은 관리 기능을 처리 하는 프로그래밍 방법을 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+테이블 형식 개체 모델 (TOM)에 호환성 수준 1200 이상에서 작성 된 테이블 형식 모델에 대 한 프로그래밍 시나리오를 지원 하기 위해 만든 관리 개체 AMO (Analysis Services) 클라이언트 라이브러리의 확장입니다. AMO에서와 마찬가지로 TOM 범주 예측자 변수, 가져오기 및 데이터를 새로 고칠 및 역할과 사용 권한을 할당와 같은 관리 기능을 처리 하는 프로그래밍 방법을 제공 합니다.  
   
 TOM와 같은 기본 테이블 형식 메타 데이터를 노출 **모델**, **테이블**, **열**, 및 **관계** 개체입니다.  아래에 제공 된 개체 모델 트리의 상위 수준 뷰 구성 요소 부분 관계를 보여 줍니다.  
   
@@ -53,7 +54,7 @@ TOM와 같은 기본 테이블 형식 메타 데이터를 노출 **모델**, **�
 
 ### <a name="tom-and-xmla"></a>TOM 및 XMLA
 
-통신 중에 TOM Analysis Services 서버와 통신 하 고 개체를 관리 하는 XMLA 프로토콜을 사용 합니다. TOM 사용 하 여 표 형식이 아닌 개체를 관리 하는 경우 [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), XMLA의 Analysis Services Scripting Language 확장 합니다. 테이블 형식 개체를 관리 하는 경우 TOM는 SSAS 테이블 형식 프로토콜 사용도 XMLA의 확장 합니다. 참조 [MS-SSAS-T SQL Server Analysis Services 테이블 프로토콜 설명서](https://msdn.microsoft.com/library/mt719260.aspx) 자세한 정보에 대 한 합니다.
+통신 중에 TOM Analysis Services 서버와 통신 하 고 개체를 관리 하는 XMLA 프로토콜을 사용 합니다. TOM 사용 하 여 표 형식이 아닌 개체를 관리 하는 경우 [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), XMLA의 Analysis Services Scripting Language 확장 합니다. 테이블 형식 개체를 관리 하는 경우 TOM XMLA의 확장도 MS SSAS 테이블 형식 프로토콜을 사용 합니다. 참조 [MS-SSAS-T SQL Server Analysis Services 테이블 프로토콜 설명서](https://msdn.microsoft.com/library/mt719260.aspx) 자세한 정보에 대 한 합니다.
 
 ### <a name="tom-and-json"></a>TOM 및 JSON
 

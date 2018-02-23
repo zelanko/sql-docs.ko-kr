@@ -4,7 +4,7 @@ description: "이 자습서에서는 Linux에서 SQL Server 에이전트 작업�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: b812c67d693d6cf9670160c6d0d795e22a9b202f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>만들기 및 Linux에서 SQL Server 에이전트 작업 실행
 
@@ -47,23 +47,22 @@ Linux에서 SQL Server 에이전트와 알려진된 문제에 대 한 참조는 
 * SSMS로 Windows 컴퓨터:
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 선택적 SSMS 단계에 대 한 합니다.
 
-## <a name="install-sql-server-agent"></a>SQL Server 에이전트를 설치 합니다.
+## <a name="enable-sql-server-agent"></a>SQL Server 에이전트를 사용 하도록 설정
 
-Linux에서 SQL Server 에이전트를 사용 하려면 먼저 설치 해야는 **mssql 서버 에이전트** 설치 된 SQL Server 2017이 이미 있는 컴퓨터에 패키지 합니다.
+Linux에서 SQL Server 에이전트를 사용 하려면 먼저 설치 된 SQL Server 2017이 이미 있는 컴퓨터에서 SQL Server 에이전트를 활성화 해야 합니다.
 
-1. 설치 **mssql 서버 에이전트** Linux OS에 대 한 적절 한 명령을 사용 합니다.
-
-   | 플랫폼 | 설치 명령 |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+1. SQL Server 에이전트를 사용 하려면 다음 단계를 수행 합니다.
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+  ```
 
 1. 다음 명령을 사용 하 여 SQL Server를 다시 시작 합니다.
+  ```bash
+  sudo systemctl restart mssql-server
+  ```
 
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
+> [!NOTE]
+> SQL Server 2017 CU4 이상에서는 SQL Server 에이전트와 함께 제공 됩니다.는 **mssql 서버** 을 패키지 하 고 기본적으로 비활성화 됩니다. 에이전트가 CU4 방문 하기 전에 설정에 대 한 [Linux에서 SQL Server 에이전트 설치](sql-server-linux-setup-sql-agent.md)합니다.
 
 ## <a name="create-a-sample-database"></a>예제 데이터베이스 만들기
 

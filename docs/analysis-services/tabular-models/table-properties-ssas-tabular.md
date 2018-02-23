@@ -1,5 +1,5 @@
 ---
-title: "테이블 속성 (SSAS 테이블 형식) | Microsoft Docs"
+title: "테이블 속성 | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
@@ -11,21 +11,23 @@ ms.custom:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tableprop.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tableprop.f1
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 864075fb43cd0912a581daa36d996b577c7beaae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 202902448a31fda27ab2c4d8c0bc894cc50da3db
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="table-properties-ssas-tabular"></a>테이블 속성(SSAS 테이블 형식)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 테이블 형식 모델 테이블 속성을 설명 합니다. 여기에서 설명하는 테이블 속성은 원본에서 가져올 열을 지정할 수 있도록 하는 테이블 속성 편집 대화 상자의 테이블 속성과는 다릅니다.  
+# <a name="table-properties"></a>Table Properties 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+이 문서에서는 테이블 형식 모델 테이블 속성을 설명 합니다. 여기에서 설명하는 테이블 속성은 원본에서 가져올 열을 지정할 수 있도록 하는 테이블 속성 편집 대화 상자의 테이블 속성과는 다릅니다.  
   
  이 항목의 섹션:  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
  **보고 속성**  
   
- 보고 속성에 대한 자세한 설명 및 구성 정보는 [파워 뷰 보고 속성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)을 참조하세요.  
+ 자세한 설명 및 속성을 보고에 대 한 구성 정보에 대 한 참조 [Power View 보고 속성](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)합니다.  
   
 |속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  

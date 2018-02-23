@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql11.asvs.ssmsimbi.RestoreFromPP.f1
+f1_keywords:
+- sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7beb148b2090fcdcb7a150d3b5eb789beaf7bb08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ab75dfb620c3d0fc41799f2f59a88b6e741440ea
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="restore-from-power-pivot"></a>파워 피벗에서 복원
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]복원을 사용할 수 있습니다 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (테이블 형식 모드에서 실행 중), Analysis Services 인스턴스에서 새 테이블 형식 모델 데이터베이스를 만들려면 SQL Server Management Studio에서 기능 또는 기존 데이터베이스를 복원는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 (.xlsx)입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+SQL Server Management Studio의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 복원 기능을 사용하면 테이블 형식 모드에서 실행되는 Analysis Services 인스턴스에서 새 테이블 형식 model 데이터베이스를 만들거나 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서(.xlsx)에서 기존 데이터베이스를 복원할 수 있습니다.  
   
 > [!NOTE]  
->  SQL Server Data Tools의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 프로젝트 템플릿에서 가져오기 옵션도 비슷한 기능을 제공합니다. 자세한 내용은 [파워 피벗에서 가져오기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)를 참조하세요.  
+>  SQL Server Data Tools의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 프로젝트 템플릿에서 가져오기 옵션도 비슷한 기능을 제공합니다. 자세한 내용은 참조 [파워 피벗에서 가져오기](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)합니다.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에서 복원을 사용할 때는 다음 사항에 유의해야 합니다.  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Analysis Services 인스턴스 서비스 계정은 복원할 통합 문서 파일에 대한 읽기 권한을 가지고 있어야 합니다.  
   
--   기본적으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에서 데이터베이스를 복원하면 테이블 형식 model 데이터베이스의 데이터 원본 가장 정보 속성이 기본값으로 설정되어 Analysis Services 인스턴스 서비스 계정이 지정됩니다. 가장 자격 증명을 데이터베이스 속성의 Windows 사용자 계정으로 변경하는 것이 좋습니다. 자세한 내용은 [가장&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)을 참조하세요.  
+-   기본적으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에서 데이터베이스를 복원하면 테이블 형식 model 데이터베이스의 데이터 원본 가장 정보 속성이 기본값으로 설정되어 Analysis Services 인스턴스 서비스 계정이 지정됩니다. 가장 자격 증명을 데이터베이스 속성의 Windows 사용자 계정으로 변경하는 것이 좋습니다. 자세한 내용은 참조 [가장](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)합니다.  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델의 데이터는 Analysis Services 인스턴스의 기존 또는 새 테이블 형식 model 데이터베이스로 복사됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 연결된 테이블이 있는 경우 해당 테이블은 새 테이블에 붙여넣기를 사용하여 만드는 테이블과 마찬가지로 데이터 원본이 없는 테이블로 다시 만들어집니다.  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 5.  **옵션**에서 **보안 정보 포함** 을 선택합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 복원할 때는 이 설정이 적용되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [테이블 형식 model 데이터베이스&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
- [파워 피벗에서 가져오기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
+ [테이블 형식 모델 데이터베이스](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
+ [파워 피벗에서 가져오기](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   
   

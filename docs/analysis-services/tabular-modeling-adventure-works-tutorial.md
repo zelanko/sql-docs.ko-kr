@@ -24,18 +24,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d85d437ce17c04107d85cf444268eb26f1a460e8
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>테이블 형식 모델링 (호환성 수준 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 이 자습서에는 Analysis Services 테이블 형식 모델을 만드는 방법에 단원에서 제공 된 [1200 호환성 수준](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) 를 사용 하 여 [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt), Analysis services 모델을 배포 하 고 온-프레미스 서버 또는 Azure입니다.  
  
-SQL Server 2017 또는 Azure Analysis Services를 사용 하는 모델 수준에서 1400 호환성 생성, 사용 하려는 경우는 [Azure Analysis Services-Adventure Works 자습서](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master)합니다. 이 업데이트 된 버전 새, 최신 데이터 가져오기 기능을 사용 하 여 연결 하 고 원본 데이터를 가져올 하 고 파티션을 구성 하는 M 언어를 사용 합니다.
+Azure Analysis Services 또는 SQL Server 2017을 사용 하 고 모델 수준에서 1400 호환성 생성, 사용 하려는 경우는 [테이블 형식 모델링 (1400 호환성 수준)](tutorial-tabular-1400/as-adventure-works-tutorial.md)합니다. 이 업데이트 된 버전 최신 데이터 가져오기 기능을 사용 하 여 연결 하 고 원본 데이터를 가져옵니다, M 언어를 사용 하 여 파티션, 구성 및 추가 추가 단원에 포함 됩니다.
+
+> [!IMPORTANT]
+> 서버에서 지 원하는 최신 호환성 수준에서 테이블 형식 모델을 만들어야 합니다. 최신 호환성 수준 모델 향상 된 성능, 추가 기능을 제공 하 고 보다 원활 하 게 이후 버전과 호환성 수준으로 업그레이드 됩니다.
  
   
 ## <a name="what-you-learn"></a>정보   
@@ -50,14 +53,14 @@ SQL Server 2017 또는 Azure Analysis Services를 사용 하는 모델 수준에
   
 -   큐브 뷰 및 사용자가 더 많은 비즈니스 및 응용 프로그램별 뷰포인트를 제공 하 여 모델 데이터를 쉽게 찾아볼 수 있도록 계층 만들기 및 관리 하는 방법.  
   
--   다른 파티션과 독립적으로 처리할 수 있도록 테이블 데이터를 더 작은 논리적 부분으로 나누는 파티션을 만드는 방법  
+-   만드는 방법을 더 작은 논리적 부분, 다른 파티션과 별개로 처리할 수 있는를 구분 하는 테이블 데이터를 분할 합니다.  
   
 -   사용자 멤버 기반 역할을 만들어 모델 개체 및 데이터를 보호하는 방법  
   
 -   Analysis Services 서버 온-프레미스 또는 Azure에서 테이블 형식 모델을 배포 하는 방법입니다.  
   
 ## <a name="scenario"></a>시나리오  
-이 자습서에서는 Adventure Works Cycles 가상의 회사를 기반으로 합니다. Adventure Works에서 북미, 유럽 및 아시아 시장에 판매를 금속 및 합성 소재 하는 대규모 다국적 제조 회사입니다. 워싱턴 주 보 셀에에서 본사가 고 있으며 직원 수 500 명입니다. 또한 Adventure Works에서는 여러 지역에 영업 팀 시장에 전반를 사용합니다.  
+이 자습서에서는 Adventure Works Cycles 가상의 회사를 기반으로 합니다. Adventure Works 자전거, 파트 및 주변 장치에 북미, 유럽 및 아시아 시장에 판매를 생성 하는 대규모의 다국적 제조 회사입니다. 워싱턴 주 보 셀에에서 본사가 고 있으며 직원 수 500 명입니다. 또한 Adventure Works에서는 여러 지역에 영업 팀 시장에 전반를 사용합니다.  
   
 영업과 마케팅 팀 및 경영 관리에 필요한 데이터 분석을 지원하기 위해 사용자가 AdventureWorksDW 예제 데이터베이스의 인터넷 매출 데이터를 분석할 수 있도록 테이블 형식 모델을 만들려고 합니다.  
   

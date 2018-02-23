@@ -1,7 +1,7 @@
 ---
-title: "만들기 및 관리 큐브 뷰 (SSAS 테이블 형식) | Microsoft Docs"
+title: "만들기 및 큐브 뷰 관리 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,33 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.perspectivedb.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.perspectivedb.f1
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c414c0edae99923b8c8e3d370a1d998fe39ccef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5149052156082507c6c970512ab7db0194209ab5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-perspectives-ssas-tabular"></a>큐브 뷰 만들기 및 관리(SSAS 테이블 형식)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]큐브 뷰는 모델의 포커스가 있는, 비즈니스 또는 응용 프로그램별 뷰포인트를 제공 하는 모델의 볼 수 있는 하위 집합을 정의 합니다. 이 항목의 태스크에서는 모델 디자이너의 **큐브 뷰** 를 사용하여 큐브 뷰를 만들고 관리하는 방법을 설명합니다.  
-  
- 이 항목에는 다음 태스크가 포함됩니다.  
-  
--   [큐브 뷰를 추가하려면](#bkmk_add)  
-  
--   [큐브 뷰를 편집하려면](#bkmk_edit)  
-  
--   [큐브 뷰의 이름을 바꾸려면](#bkmk_rename)  
-  
--   [큐브 뷰를 삭제하려면](#bkmk_delete)  
-  
--   [큐브 뷰를 복사하려면](#bkmk_copy)  
+# <a name="create-and-manage-perspectives"></a>만들기 및 큐브 뷰 관리 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+큐브 뷰는 모델을 비즈니스 또는 응용 프로그램 중심의 관점에서 파악할 수 있게 해주는 보기 가능한 모델 하위 집합을 정의합니다. 이 항목의 태스크에서는 모델 디자이너의 **큐브 뷰** 를 사용하여 큐브 뷰를 만들고 관리하는 방법을 설명합니다.  
   
 ## <a name="tasks"></a>태스크  
  큐브 뷰를 만들려면 **큐브 뷰** 대화 상자를 사용합니다. 이 대화 상자에서는 큐브 뷰를 추가, 편집, 삭제, 복사 및 확인할 수 있습니다. **큐브 뷰** 대화 상자를 보려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **모델** 메뉴에서 **큐브 뷰**를 클릭합니다.  
@@ -64,8 +54,8 @@ ms.lasthandoff: 01/08/2018
   
 -   큐브 뷰 열 위로 마우스를 이동하면 **복사** 단추가 나타납니다. 큐브 뷰의 복사본을 만들려면 **복사** 단추를 클릭합니다. 그러면 선택한 큐브 뷰의 복사본이 기존 큐브 뷰의 오른쪽에 새 큐브 뷰로 추가됩니다. 새 큐브 뷰는 복사 원본 큐브 뷰의 이름을 상속하며, 이름 끝에 *- 복사본* 이라는 주석이 추가됩니다. 예를 들어 *Sales* 큐브 뷰의 복사본을 만드는 경우 새 큐브 뷰의 이름은 *Sales – 복사본*입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [큐브 뷰&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [계층 구조&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [계층 구조](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   

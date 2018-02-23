@@ -1,7 +1,7 @@
 ---
-title: "릴리스 정보 | Microsoft Docs"
+title: "릴리스 정보 (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,11 +17,11 @@ caps.latest.revision:
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: 44c73c4d632fd434fcd296dc6fc2cc70af26086c
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 2b0846781a17fdad4c8cf9e39cab743595a20e7e
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="release-notes"></a>릴리스 정보
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -50,6 +50,7 @@ Azure SQL 관리 되는 인스턴스 (확장 된 비공개 미리 보기)에 대
 > -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] 지원 되지 않습니다
 > -   오류 메시지는 항상 언어에 관계 없이 영어로 표시 됩니다 (Azure와 같음) 설정 
   
+
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>새로운 기능에 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Windows에서  
  에 대 한 ODBC Driver 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 에 대 한 지원을 추가 [항상 암호화](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) 및 [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) Microsoft SQL Server 2016와 함께 사용 하는 경우.  해당 연결 풀링 키워드/특성에 설명 된 [드라이버 인식 연결 풀링 ODBC Driver for SQL Server에서에서](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)합니다.
 

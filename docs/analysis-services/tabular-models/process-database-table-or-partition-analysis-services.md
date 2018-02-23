@@ -11,23 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
+f1_keywords:
+- sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 786ba3a5af73ab1f7b372daf41640ed5389a45da
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c789fc9601bd4889585d52dcb6ecfe6365038323
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="process-database-table-or-partition-analysis-services"></a>데이터베이스, 테이블 또는 파티션 처리(Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목의 태스크를 사용 하 여 테이블 형식 모델 데이터베이스, 테이블 또는 파티션을 수동으로 처리 하는 방법에 설명 된 **프로세스 \<개체 >** 대화 상자에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+이 항목의 태스크를 사용 하 여 테이블 형식 모델 데이터베이스, 테이블 또는 파티션을 수동으로 처리 하는 방법에 설명 된 **프로세스 \<개체 >** 대화 상자에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
- 테이블 형식 모델 처리에 대한 자세한 내용은 [데이터 처리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)를 참조하세요.  
+ 테이블 형식 모델 처리에 대 한 자세한 내용은 참조 [데이터 처리](../../analysis-services/tabular-models/process-data-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_process_tasks"></a> 태스크  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 01/08/2018
 4.  **처리** 확인란 열에서 선택된 모드로 처리할 파티션을 선택한 후 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [테이블 형식 모델 파티션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [테이블 형식 모델 파티션](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
+ [테이블 형식 모델 파티션 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

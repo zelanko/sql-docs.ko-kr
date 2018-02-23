@@ -11,28 +11,30 @@ ms.custom:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords:
+- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1d0894a7718907bcbfa26565f80494cdce719287
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-designer-ssas"></a>테이블 형식 모델 디자이너(SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델 디자이너의 일부인 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Microsoft와 통합 된 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], 전문적인 테이블 형식의 모델 솔루션을 개발 하기 위한 추가 프로젝트 형식 템플릿이 함께 제공 합니다.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 무료 웹 다운로드로 설치됩니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.    
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+테이블 형식 모델 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 일부로 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에 통합되어 있으며, 전문적인 테이블 형식의 모델 솔루션을 개발하기 위한 추가 프로젝트 형식 템플릿이 함께 제공됩니다.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 무료 웹 다운로드로 설치됩니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.    
   
 ##  <a name="bkmk_benefits"></a> 이점  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치하면 테이블 형식의 모델을 만들기 위한 새 프로젝트 템플릿이 사용 가능한 프로젝트 형식에 추가됩니다. 이 템플릿 중 하나를 사용하여 테이블 형식의 새 모델 프로젝트를 만든 다음 테이블 형식 모델 디자이너 도구와 마법사를 사용하여 모델 제작을 시작할 수 있습니다.  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 환경에서는 전문적인 다차원 및 테이블 형식 모델 솔루션 제작을 위한 새로운 템플릿과 도구뿐만 아니라 디버깅 및 프로젝트 수명 주기 기능을 제공하여 조직에 맞는 가장 강력한 BI 솔루션을 개발할 수 있습니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에 대한 자세한 내용은 [Visual Studio 시작](http://go.microsoft.com/fwlink/?LinkId=206389)을 참조하십시오.  
   
-##  <a name="bkmk_proj_temp"></a>프로젝트 템플릿  
+##  <a name="bkmk_proj_temp"></a> 프로젝트 템플릿  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치하면 다음과 같은 테이블 형식 모델 프로젝트 템플릿이 비즈니스 인텔리전스 프로젝트 형식에 추가됩니다.  
   
  **Analysis Services 테이블 형식 프로젝트**  
@@ -90,13 +92,13 @@ ms.lasthandoff: 01/08/2018
   
 -   Model.bim  
   
--   Table  
+-   테이블  
   
--   Column  
+-   열  
   
 -   이름  
   
- 프로젝트 속성은 속성 창에 프로젝트 이름과 프로젝트 폴더만 표시합니다. 프로젝트에는 또한 모달 속성 대화 상자에서 설정할 수 있는 추가 배포 옵션 및 배포 서버 설정이 있습니다. 이 속성을 보려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+ 프로젝트 속성에 속성 창에 프로젝트 이름과 프로젝트 폴더만 표시 합니다. 프로젝트에는 또한 모달 속성 대화 상자에서 설정할 수 있는 추가 배포 옵션 및 배포 서버 설정이 있습니다. 이 속성을 보려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
  속성 창의 필드에는 클릭하면 열리는 컨트롤이 포함되어 있습니다. 편집 컨트롤 유형은 특정 속성에 따라 달라집니다. 컨트롤에는 편집 상자, 드롭다운 목록, 사용자 지정 대화 상자에 대한 링크 등이 있습니다. 흐리게 표시되는 속성은 읽기 전용입니다.  
   
@@ -126,7 +128,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="toolbar"></a>도구 모음  
  Analysis Services 도구 모음을 통해 신속하고 간편하게 자주 사용하는 모델 작성 명령에 액세스할 수 있습니다.  
   
-##  <a name="bkmk_vsint"></a>Visual Studio 통합  
+##  <a name="bkmk_vsint"></a> Visual Studio 통합  
  **원본 제어**  
  Analysis Services 프로젝트는 선택한 원본 제어 플러그 인과 통합됩니다. 원본 제어를 사용하도록 Visual Studio를 구성하면 솔루션 탐색기에서 체크 인/체크 아웃을 사용할 수 있습니다. Team Foundation Server를 사용하도록 구성하려면 [Team Foundation 버전 제어로 Visual Studio 구성](http://msdn.microsoft.com/library/ms253064.aspx)을 참조하십시오. 그 외 다양한 타사 원본 제어 플러그 인도 지원합니다.  
   
@@ -136,8 +138,8 @@ ms.lasthandoff: 01/08/2018
  **바로 가기 키**  
  도구->옵션->키보드 대화 상자를 통해 Analysis Services 키보드 바로 가기를 구성하거나 다시 매핑할 수 있습니다. 빌드, 저장, 디버그, 새 프로젝트 등과 같은 전역 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 바로 가기가 테이블 형식 모델 디자이너 컨텍스트에서 지원됩니다. 그 외 테이블 형식 모델 디자이너용 바로 가기 키는 Analysis Services 컨텍스트에서 지원됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [테이블 형식 모델 프로젝트&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [속성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [테이블 형식 모델 프로젝트](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [속성](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
