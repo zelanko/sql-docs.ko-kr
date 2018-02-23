@@ -1,7 +1,7 @@
 ---
 title: "서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server) | Microsoft 문서"
 ms.custom: 
-ms.date: 02/13/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,16 +21,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8908c590ff97f09259635a407d1e37fc22956f20
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: ffe13b9772d5c281897fa2e9099060e6858660b6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-이 아티클에서는 원본 파일에 필드가 없는 경우 서식 파일을 사용하여 테이블 열 가져오기를 건너뛰는 방법을 설명합니다. 데이터 파일에는 대상 테이블의 열 수 보다 적은 수의 필드가 포함될 수 있습니다. 즉, 다음 두 조건 중 하나 이상이 정확한 경우에만 열 가져오기를 건너뛸 수 있습니다.
+이 문서에서는 원본 데이터 파일에 건너뛴 열의 데이터가 없는 경우 서식 파일을 사용하여 테이블 열 가져오기를 건너뛰는 방법을 설명합니다. 데이터 파일에는 대상 테이블의 열 수보다 적은 수의 필드가 포함될 수 있습니다. 즉, 대상 테이블에서 다음 두 조건 중 하나 이상이 사실인 경우에만 열 가져오기를 건너뛸 수 있습니다.
 -   건너뛴 열이 Null을 허용합니다.
 -   건넌뛴 열에 기본값이 있습니다.  
   
@@ -57,28 +57,31 @@ GO
 1,DataForColumn3  
 ```  
   
-`myTestSkipCol2.dat`에서 `myTestSkipCol` 테이블로 데이터를 대량으로 가져오려면 서식 파일은 첫 번째 데이터 필드를 `Col1`에 매핑하고 두 번째 필드를 `Col3`에 매핑하고 `Col2`를 건너뛰기해야 합니다.  
-  
-## <a name="option-1---use-a-non-xml-format-file"></a>옵션 #1 - 비 XML 서식 파일 사용  
-비 XML 서식 파일을 사용하여 테이블 열을 건너뛸 수 있습니다. 두 단계가 있습니다.
+## <a name="basic-steps"></a>기본 단계
 
-1.   **bcp** 명령줄 유틸리티를 사용하여 기본 비 XML 서식 파일을 만듭니다.
+비 XML 서식 파일 또는 XML 서식 파일을 사용하여 테이블 열을 건너뛸 수 있습니다. 두 경우 모두 다음 두 단계를 수행하세요.
+
+1.   **bcp** 명령줄 유틸리티를 사용하여 기본 서식 파일을 만듭니다.
 
 2.   텍스트 편집기에서 기본 서식 파일을 수정합니다.
 
 수정된 서식 파일은 각 기존 필드를 대상 테이블의 해당 열로 매핑해야 합니다. 또한 테이블 열 또는 건너뛸 열을 표시해야 합니다. 
+
+예를 들어 `myTestSkipCol2.dat`에서 `myTestSkipCol` 테이블로 데이터를 대량으로 가져오려면 서식 파일은 첫 번째 데이터 필드를 `Col1`에 매핑하고 `Col2`를 건너뛴 다음, 두 번째 필드를 `Col3`에 매핑해야 합니다.  
+ 
+## <a name="option-1---use-a-non-xml-format-file"></a>옵션 #1 - 비 XML 서식 파일 사용  
   
 ### <a name="step-1---create-a-default-non-xml-format-file"></a>단계 #1 - 기본 비 XML 서식 파일 만들기  
-명령 프롬프트에서 다음 **bcp** 명령을 사용하여 `myTestSkipCol` 샘플 테이블에 대한 기본 비 XML 서식 파일을 만듭니다.  
+명령 프롬프트에서 다음 **bcp** 명령을 실행하여 `myTestSkipCol` 샘플 테이블에 대한 기본 비 XML 서식 파일을 만듭니다.  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
-  
-위 명령은 `myTestSkipCol_Default.fmt`라는 비 XML 서식 파일을 만듭니다. 이 서식 파일은 *bcp* 에서 생성되는 형식이므로 **기본 서식 파일**이라고 합니다. 기본 서식 파일은 데이터 파일 필드와 테이블 열 간의 일 대 일 대응을 나타냅니다.  
-  
+
 > [!IMPORTANT]  
 >  `-S` 인수로 연결할 서버 인스턴스의 이름을 지정해야 합니다. 또한 `-U` 및 `-P` 인수를 사용하여 사용자 이름과 암호를 지정해야 할 수도 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하세요.  
+
+위 명령은 `myTestSkipCol_Default.fmt`라는 비 XML 서식 파일을 만듭니다. 이 서식 파일은 *bcp* 에서 생성되는 형식이므로 **기본 서식 파일**이라고 합니다. 기본 서식 파일은 데이터 파일 필드와 테이블 열 간의 일 대 일 대응을 나타냅니다.  
   
  다음 스크린샷에서는 이 샘플 기본 서식 파일의 값을 보여줍니다. 
   
@@ -88,18 +91,18 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 >  서식 파일 필드에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)을 참조하세요.  
   
 ### <a name="step-2---modify-a-non-xml-format-file"></a>단계 #2 - 비 XML 서식 파일 수정  
-기본 비 XML 데이터 파일을 수정할 수 있는 두 가지 다른 방법이 있습니다. 각 방법은 데이터 필드가 데이터 파일에 없고 데이터가 해당 테이블 열에 삽입되지 않음을 나타냅니다.
+기본 비 XML 서식 파일을 수정하려면 두 가지 방법이 있습니다. 각 방법은 데이터 필드가 데이터 파일에 없고 데이터가 해당 테이블 열에 삽입되지 않음을 나타냅니다.
 
 테이블 열을 건너뛰려면 기본 비 XML 서식 파일을 편집하고 다음 방법 중 하나를 사용하여 해당 파일을 수정합니다.  
 
 #### <a name="option-1---remove-the-row"></a>옵션 #1 - 행 제거
-열을 건너뛰는데 기본적으로 사용되는 방법에는 세 가지 기본 단계가 포함됩니다.
+열을 건너뛰는 데 기본적으로 사용되는 방법에는 다음 세 가지 단계가 포함됩니다.
 
 1.   먼저 원본 데이터 파일에서 누락된 필드를 나타내는 모든 서식 파일 행을 삭제합니다.
-2.   그런 다음 삭제된 행 뒤에 오는 각 서식 파일 행의 "호스트 파일 필드 순서" 값을 줄입니다. 목표는 데이터 파일에서 각 데이터 필드의 실제 위치를 반영하는 1부터 *n*까지의 순차적인 "호스트 파일 필드 순서" 값을 얻는 것입니다.
-3.   마지막으로 데이터 파일의 실제 필드 수를 반영하도록 "열 수" 필드의 값을 줄입니다.  
+2.   그런 다음, 삭제된 행 뒤에 오는 각 서식 파일 행의 “호스트 파일 필드 순서” 값을 줄입니다. 목표는 데이터 파일에서 각 데이터 필드의 실제 위치를 반영하는 1부터 *n*까지의 순차적인 “호스트 파일 필드 순서” 값을 얻는 것입니다.
+3.   마지막으로 데이터 파일의 실제 필드 수를 반영하도록 “열 수” 필드의 값을 줄입니다.  
   
-다음 예는 이 아티클의 앞부분에 나오는 “기본 비 XML 서식 파일 만들기”에서 생성된 `myTestSkipCol` 테이블에 대한 기본 서식 파일을 기본으로 합니다. 수정된 이 서식 파일은 첫 번째 데이터 필드를 `Col1`에 매핑하고 `Col2`를 건너뛴 다음 두 번째 데이터 필드를 `Col3`에 매핑합니다. `Col2` 의 행은 삭제되었습니다. 첫 번째 필드 뒤에 분리된 구분 기호도 `\t`에서 `,`로 변경되었습니다.
+다음 예는 `myTestSkipCol` 테이블에 대한 기본 서식 파일을 기반으로 합니다. 수정된 이 서식 파일은 첫 번째 데이터 필드를 `Col1`에 매핑하고 `Col2`를 건너뛴 다음 두 번째 데이터 필드를 `Col3`에 매핑합니다. `Col2` 의 행은 삭제되었습니다. 첫 번째 필드 뒤의 구분 기호도 `\t`에서 `,`로 변경되었습니다.
   
 ```  
 14.0  
@@ -110,9 +113,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
 #### <a name="option-2---modify-the-row-definition"></a>옵션 #2 - 행 정의 수정
 
-테이블 열을 건너뛰기 위해 테이블 열에 해당하는 서식 파일 행의 정의를 수정할 수도 있습니다. 이 서식 파일 행에서 "접두사 길이", "호스트 파일 데이터 길이" 및 "서버 열 순서" 값은 0으로 설정해야 하며 "종결자" 및 "열 데이터 정렬" 필드는 ""(NULL)로 설정해야 합니다.  
-  
-실제 열 이름이 필요하지 않더라도 “서버 열 이름” 값에는 공백이 아닌 문자열이 필요합니다. 나머지 서식 필드에는 해당 기본값이 필요합니다.  
+테이블 열을 건너뛰기 위해 테이블 열에 해당하는 서식 파일 행의 정의를 수정할 수도 있습니다. 이 서식 파일 행에서 “접두사 길이”, “호스트 파일 데이터 길이” 및 “서버 열 순서” 값은 0으로 설정해야 하며 “종결자” 및 “열 데이터 정렬” 필드도 ""(즉, 빈 값이나 NULL 값)로 설정해야 합니다. 실제 열 이름이 필요하지 않더라도 “서버 열 이름” 값에는 공백이 아닌 문자열이 필요합니다. 나머지 서식 필드에는 해당 기본값이 필요합니다.  
   
 다음 예도 `myTestSkipCol` 테이블에 대한 기본 서식 파일에서 파생된 것입니다.  
   
@@ -125,7 +126,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 ```  
   
 ### <a name="examples-with-a-non-xml-format-file"></a>비 XML 서식 파일의 예 
-다음 예도 이 아티클의 앞부분에 나오는 `myTestSkipCol` 샘플 테이블과 `myTestSkipCol2.dat` 샘플 데이터 파일을 기반으로 합니다.  
+다음 예는 이 문서의 앞부분에 나오는 `myTestSkipCol` 샘플 테이블과 `myTestSkipCol2.dat` 샘플 데이터 파일을 기반으로 합니다.  
   
 #### <a name="using-bulk-insert"></a>BULK INSERT 사용  
 이 예는 이전 섹션에서 설명한 대로 생성되어진 수정된 비 XML 서식 파일 중 하나를 사용하여 작동 합니다. 이 예에서 수정된 서식 파일의 이름은 `myTestSkipCol2.fmt`입니다. `BULK INSERT`를 사용하여 `myTestSkipCol2.dat` 데이터 파일을 대량으로 가져오려면 SSMS에서 다음 코드를 실행합니다. 컴퓨터에서 샘플 파일 위치에 대한 파일 시스템 경로를 업데이트합니다.
@@ -142,26 +143,19 @@ GO
 ```  
   
 ## <a name="option-2---use-an-xml-format-file"></a>옵션 #2 - XML 서식 파일 사용  
-
--   `bcp` 및 `BULK INSERT` 포함 XML 서식 파일을 사용하면 **bcp** 명령이나 `BULK INSERT` 문을 사용하여 테이블로 데이터를 직접 가져올 때 열을 건너뛸 수 없습니다. 그러나 테이블의 마지막 열을 제외하고 모든 열로 가져올 수 있습니다. 마지막 열을 제외하고 모든 열을 건너뛰어야 하는 경우 데이터 파일에 있는 열만 포함된 대상 테이블의 뷰를 만들어야 합니다. 그런 다음 해당 파일의 데이터를 뷰로 대량 가져오기를 수행할 수 있습니다.  
   
--   `OPENROWSET(BULK...)` XML 서식 파일을 통해 `OPENROWSET(BULK...)`를 사용하여 테이블 열을 건너뛰려면 다음과 같이 선택 목록과 대상 테이블에 명시적인 열 목록을 제공해야 합니다.  
-  
-    ```sql
-    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
-    ```
-  
-### <a name="step-1---create-a-default-non-xml-format-file"></a>단계 #1 - 기본 비 XML 서식 파일 만들기   
+### <a name="step-1---create-a-default-xml-format-file"></a>단계 #1 - 기본 XML 서식 파일 만들기   
 
-수정된 XML 서식 파일의 이러한 예는 이 아티클의 앞부분에 나오는 “샘플 테이블 및 데이터 파일”에서 생성된 `myTestSkipCol` 샘플 테이블과 데이터 파일을 기반으로 합니다.
-
-다음 **bcp** 명령은 `myTestSkipCol` 테이블에 대한 기본 XML 서식 파일을 만듭니다.  
+명령 프롬프트에서 다음 **bcp** 명령을 실행하여 `myTestSkipCol` 샘플 테이블에 대한 기본 XML 서식 파일을 만듭니다.  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
-결과로 생성된 기본 비 XML 서식 파일은 다음과 같이 데이터 파일 필드와 테이블 열 간의 일 대 일 대응을 나타냅니다.  
+> [!IMPORTANT]  
+>  `-S` 인수로 연결할 서버 인스턴스의 이름을 지정해야 합니다. 또한 `-U` 및 `-P` 인수를 사용하여 사용자 이름과 암호를 지정해야 할 수도 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하세요.  
+ 
+위 명령은 `myTestSkipCol_Default.xml`이라는 XML 서식 파일을 만듭니다. 이 서식 파일은 *bcp* 에서 생성되는 형식이므로 **기본 서식 파일**이라고 합니다. 기본 서식 파일은 데이터 파일 필드와 테이블 열 간의 일 대 일 대응을 나타냅니다.  
   
 ```xml
 <?xml version="1.0"?>  
@@ -184,7 +178,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 
 ### <a name="step-2---modify-an-xml-format-file"></a>단계 #2 - XML 서식 파일 수정
 
-여기서 `myTestSkipCol2.xml`은 `Col2`를 건너뛴 수정된 XML 서식 파일입니다. `Col2`에 대한 `FIELD` 및 `ROW` 항목이 제거되고 항목 번호가 다시 지정되었습니다. 첫 번째 필드 뒤에 분리된 구분 기호도 `\t`에서 `,`로 변경되었습니다.
+여기서 `myTestSkipCol2.xml`은 `Col2`를 건너뛴 수정된 XML 서식 파일입니다. `Col2`에 대한 `FIELD` 및 `ROW` 항목이 제거되고 항목 번호가 다시 지정되었습니다. 첫 번째 필드 뒤의 구분 기호도 `\t`에서 `,`로 변경되었습니다.
 
 ```xml
 <?xml version="1.0"?>  
@@ -201,27 +195,15 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 ```  
  
 ### <a name="examples-with-an-xml-format-file"></a>XML 서식 파일의 예   
-이 섹션의 예에서는 이 아티클의 앞부분에 나오는 "샘플 테이블 및 데이터 파일"에서 생성된 `myTestSkipCol` 샘플 테이블과 `myTestSkipCol2.dat` 샘플 데이터 파일을 사용합니다. `myTestSkipCol2.dat` 의 데이터를 `myTestSkipCol` 테이블로 가져오기 위해 이 예에서는 수정된 XML 서식 파일인 `myTestSkipCol2.xml`을 사용합니다.   
+다음 예는 이 문서의 앞부분에 나오는 `myTestSkipCol` 샘플 테이블과 `myTestSkipCol2.dat` 샘플 데이터 파일을 기반으로 합니다.
+
+`myTestSkipCol2.dat`의 데이터를 `myTestSkipCol` 테이블로 가져오기 위해 이 예에서는 수정된 XML 서식 파일인 `myTestSkipCol2.xml`을 사용합니다.   
   
-#### <a name="using-openrowsetbulk"></a>OPENROWSET(BULK...) 사용  
-다음 예에서는 `OPENROWSET` 대량 행 집합 공급자와 `myTestSkipCol2.xml` 서식 파일을 사용합니다. 또한 `myTestSkipCol2.dat` 데이터 파일을 `myTestSkipCol` 테이블로 대량 가져옵니다. 이 문에는 필요에 따라 SELECT 목록과 대상 테이블의 명시적인 열 목록이 있습니다.  
+#### <a name="using-bulk-insert-with-a-view"></a>뷰와 함께 BULK INSERT 사용  
+
+XML 서식 파일을 사용하면 **bcp** 명령이나 `BULK INSERT` 문을 사용하여 테이블로 데이터를 직접 가져올 때 열을 건너뛸 수 없습니다. 그러나 테이블의 마지막 열을 제외하고 모든 열로 가져올 수 있습니다. 마지막 열을 제외하고 모든 열을 건너뛰어야 하는 경우 데이터 파일에 있는 열만 포함된 대상 테이블의 뷰를 만들어야 합니다. 그런 다음, 해당 파일의 데이터를 뷰로 대량 가져오기를 수행할 수 있습니다.  
   
-SSMS에서 다음 코드를 실행합니다. 컴퓨터에서 샘플 파일 위치에 대한 파일 시스템 경로를 업데이트합니다.
-  
-```sql  
-USE WideWorldImporters;  
-GO  
-INSERT INTO myTestSkipCol  
-  (Col1,Col3)  
-    SELECT Col1,Col3  
-      FROM  OPENROWSET(BULK  'C:\myTestSkipCol2.Dat',  
-      FORMATFILE='C:\myTestSkipCol2.Xml'    
-       ) as t1 ;  
-GO  
-```  
-  
-#### <a name="using-bulk-import-with-a-view"></a>뷰와 함께 BULK IMPORT 사용  
-다음 예에서는 `myTestSkipCol` 테이블에 `v_myTestSkipCol` 뷰를 만듭니다. 이 뷰는 두 번째 테이블 열인 `Col2`를 건너뜁니다. 그런 다음 이 예에서는 `BULK INSERT` 를 사용하여 `myTestSkipCol2.dat` 데이터 파일을 이 뷰로 가져옵니다.  
+다음 예에서는 `myTestSkipCol` 테이블에 `v_myTestSkipCol` 뷰를 만듭니다. 이 뷰는 두 번째 테이블 열인 `Col2`를 건너뜁니다. 그런 다음, 이 예에서는 `BULK INSERT` 를 사용하여 `myTestSkipCol2.dat` 데이터 파일을 이 뷰로 가져옵니다.  
   
 SSMS에서 다음 코드를 실행합니다. 컴퓨터에서 샘플 파일 위치에 대한 파일 시스템 경로를 업데이트합니다. 
   
@@ -239,7 +221,31 @@ FROM 'C:\myTestSkipCol2.dat'
 WITH (FORMATFILE='C:\myTestSkipCol2.xml');  
 GO  
 ```  
+
+#### <a name="using-openrowsetbulk"></a>OPENROWSET(BULK...) 사용  
+
+`OPENROWSET(BULK...)`를 사용하여 XML 서식 파일로 테이블 열을 건너뛰려면 다음과 같이 선택 목록과 대상 테이블에 명시적인 열 목록을 제공해야 합니다.  
   
+    ```sql
+    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+    ```
+
+다음 예에서는 `OPENROWSET` 대량 행 집합 공급자와 `myTestSkipCol2.xml` 서식 파일을 사용합니다. 또한 `myTestSkipCol2.dat` 데이터 파일을 `myTestSkipCol` 테이블로 대량 가져옵니다. 이 문에는 필요에 따라 SELECT 목록과 대상 테이블의 명시적인 열 목록이 있습니다.  
+  
+SSMS에서 다음 코드를 실행합니다. 컴퓨터에서 샘플 파일 위치에 대한 파일 시스템 경로를 업데이트합니다.
+  
+```sql  
+USE WideWorldImporters;  
+GO  
+INSERT INTO myTestSkipCol  
+  (Col1,Col3)  
+    SELECT Col1,Col3  
+      FROM  OPENROWSET(BULK  'C:\myTestSkipCol2.Dat',  
+      FORMATFILE='C:\myTestSkipCol2.Xml'    
+       ) as t1 ;  
+GO  
+```
+
 ## <a name="see-also"></a>참고 항목  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
