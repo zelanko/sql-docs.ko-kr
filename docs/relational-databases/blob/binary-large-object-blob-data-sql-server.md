@@ -20,21 +20,22 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 528ccfba2c8060cc73edfbaff29b714b3bdb7e30
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fc308b9b961ab98c5c44e8f6708e40cb9cf61ef0
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>BLOB(Binary Large Object) 데이터(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하면 데이터베이스 또는 원격 저장 장치에 파일 및 문서를 저장할 수 있습니다.  
   
-##  <a name="section"></a> 섹션 내용  
-### <a name="compare-options-for-storing-blobs-40sql-server41relational-databasesblobcompare-options-for-storing-blobs-sql-servermd"></a>[BLOB 저장 옵션 비교&#40;SQL Server&#41;](../../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md)  
+## <a name="compare-options-for-storing-blobs-in-sql-server"></a>SQL Server에서 BLOB 저장 옵션 비교
 
-FILESTREAM, FileTable 및 Remote Blob Store의 장점을 비교합니다.  
+FILESTREAM, FileTable 및 Remote Blob Store의 장점을 비교합니다. [BLOB 저장 옵션 비교&#40;SQL Server&#41;](../../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md)를 참조하세요.
   
+##  <a name="options-for-storing-blobs"></a>BLOB 저장 옵션  
+
 ### <a name="filestream-40sql-server41relational-databasesblobfilestream-sql-servermd"></a>[FILESTREAM&#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
 
 FILESTREAM을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기반 응용 프로그램에서 문서 및 이미지와 같은 구조화되지 않은 데이터를 파일 시스템에 저장할 수 있습니다. 응용 프로그램은 풍부한 스트리밍 API 및 파일 시스템의 성능을 활용할 수 있고 동시에 구조화되지 않은 데이터와 해당되는 구조화된 데이터 간에 트랜잭션 일관성을 유지할 수 있습니다.  
