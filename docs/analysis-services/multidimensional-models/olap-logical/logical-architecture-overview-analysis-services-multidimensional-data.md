@@ -22,17 +22,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: dacdeff9764aaa11277118cb494900bf6f42e6aa
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
 Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용되는 메모리 아키텍처 및 런타임 환경을 결정하는 서버 배포 모드에서 작동합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로 설치 된 Analysis Services의 인스턴스를 참조 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint에 로드 하 고 Excel 쿼리 사용 또는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서 데이터 모델입니다.  
   
- 이 항목에서는 다차원 및 데이터 마이닝 모드에서 작업할 때의 기본 Analysis Services 아키텍처에 대해 설명합니다. 다른 모드에 대 한 자세한 내용은 참조 하세요. [테이블 형식 모델링 &#40; Ssas&#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) 및 [테이블 형식 및 다차원 솔루션 &#40; 비교 Ssas&#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ 이 항목에서는 다차원 및 데이터 마이닝 모드에서 작업할 때의 기본 Analysis Services 아키텍처에 대해 설명합니다. 다른 모드에 대 한 자세한 내용은 참조 [테이블 형식 모델링 ](../../../analysis-services/tabular-models/tabular-models-ssas.md) 및 [비교 테이블 형식 및 다차원 솔루션 ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)합니다.  
   
 ## <a name="basic-architecture"></a>기본 아키텍처  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에는 여러 데이터베이스가 있을 수 있으며, 데이터베이스에는 OLAP 개체와 데이터 마이닝 개체가 동시에 있을 수 있습니다. 응용 프로그램은 지정된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 지정된 데이터베이스에 연결합니다. 서버 컴퓨터는 여러 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 호스팅할 수 있습니다. 인스턴스 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 관계로 명명 됩니다 "\<서버 이름 >\\< InstanceName\>"입니다. 다음 그림 언급 된 모든 관계를 보여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체입니다.  
@@ -133,6 +133,6 @@ Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용�
  여기에 제시된 예에는 단일 팩트 테이블만 있습니다. 큐브에 팩트 테이블이 여러 개 있는 경우 각 팩트 테이블의 측정값은 측정값 그룹으로 구성되고 측정값 그룹은 정의된 차원 관계에 따라 특정 차원 집합에 연결됩니다. 이러한 관계는 참여하는 테이블을 데이터 원본 뷰에 지정하고 관계의 세분성을 지정하여 정의됩니다. **관련된 항목:**[차원 관계](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [다차원 모델 데이터베이스 &#40; Ssas&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [다차원 모델 데이터베이스 ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

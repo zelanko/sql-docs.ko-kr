@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 제한된 위임에 대해 Analysis Services 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ Kerberos 인증에 대해 Analysis Services를 구성하는 경우 데이터를 
 ##  <a name="bkmk_delegate"></a> 트러스트된 위임에 대해 Analysis  Services  구성  
  Kerberos  제한 위임에 대해 Analysis  Services를 구성하면 Analysis  Services에서 관계형 데이터베이스 엔진과 같은 하위 서비스에 대해 클라이언트 ID를 가장할 수 있으므로 클라이언트가 직접 연결된 것처럼 데이터를 쿼리할 수 있습니다.  
   
- Analysis  Services에 대한 위임 시나리오는 **DirectQuery** 모드에 대해 구성된 테이블 형식 모델로 제한됩니다. Analysis  Services에서 다른 서비스로 위임된 자격 증명을 전달할 수 있는 시나리오는 이 경우뿐입니다. 이전 섹션에서 언급한 SharePoint 시나리오처럼, 다른 모든 시나리오에서 Analysis Services는 위임 체인의 수신측에 있습니다. DirectQuery에 대한 자세한 내용은 [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)를 참조하세요.  
+ Analysis  Services에 대한 위임 시나리오는 **DirectQuery** 모드에 대해 구성된 테이블 형식 모델로 제한됩니다. Analysis  Services에서 다른 서비스로 위임된 자격 증명을 전달할 수 있는 시나리오는 이 경우뿐입니다. 이전 섹션에서 언급한 SharePoint 시나리오처럼, 다른 모든 시나리오에서 Analysis Services는 위임 체인의 수신측에 있습니다. DirectQuery에 대 한 자세한 내용은 참조 [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)합니다.  
   
 > [!NOTE]  
 >  ROLAP 저장소, 처리 작업 또는 원격 파티션에 대한 액세스는 제한된 위임이 필요하다고 잘못 생각하는 경우가 흔하지만 그렇지 않습니다. 이러한 작업은 모두 서비스 계정(처리 계정)에서 직접 실행됩니다. 이러한 작업에 대한 권한을 서비스 계정으로 직접 제공하는 경우(예: 서비스에서 데이터를 처리할 수 있도록 관계형 데이터베이스의 granting db_datareader 권한 부여), Analysis Services에서 이러한 작업에 대해 위임이 필요하지 않습니다. 서버 작업 및 사용 권한에 대한 자세한 내용은 [서비스 계정 구성&#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)을 참조하세요.  

@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>기능 Analysis Services의 새로운
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -77,7 +77,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
  ### <a name="calculated-tables-in-ssdt"></a>SSDT의 계산된 테이블    
 *계산된 테이블* 은 SSDT의 DAX 식 또는 쿼리를 기반으로 하는 모델 전용 생성입니다. 데이터베이스에 배포되면 계산된 테이블을 일반 테이블과 구분할 수 없습니다.    
 
- 기존 테이블을 특정 역할로 표시할 새 테이블을 만드는 등의 다양한 용도에 계산된 테이블을 사용합니다. 기본적인 예로는 주문 날짜, 배송 날짜 등의 여러 컨텍스트에서 작동하는 날짜 테이블이 있습니다. 지정된 역할에 대한 계산된 테이블을 만들면 테이블 관계를 활성화하여 계산된 테이블을 사용하여 쿼리 또는 데이터 조작을 이용할 수 있습니다. 기존 테이블의 부분을 모델에만 있는 완전히 새로운 테이블로 결합하는 데도 계산된 테이블을 사용할 수 있습니다.  자세한 내용은 [계산된 테이블 만들기&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md)를 참조하세요.    
+ 기존 테이블을 특정 역할로 표시할 새 테이블을 만드는 등의 다양한 용도에 계산된 테이블을 사용합니다. 기본적인 예로는 주문 날짜, 배송 날짜 등의 여러 컨텍스트에서 작동하는 날짜 테이블이 있습니다. 지정된 역할에 대한 계산된 테이블을 만들면 테이블 관계를 활성화하여 계산된 테이블을 사용하여 쿼리 또는 데이터 조작을 이용할 수 있습니다. 기존 테이블의 부분을 모델에만 있는 완전히 새로운 테이블로 결합하는 데도 계산된 테이블을 사용할 수 있습니다.  참조 [계산 테이블을 만들](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) 자세한 합니다.    
  ### <a name="formula-fixup"></a>수식 수정    
  테이블 형식 1200 모델의 수식 수정을 사용하면 SSDT에서는 이름이 바뀐 열 또는 테이블을 참조하고 있는 모든 측정값을 자동으로 업데이트합니다.    
  ### <a name="support-for-visual-studio-configuration-manager"></a>Visual Studio 구성 관리자 지원    
@@ -87,7 +87,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
  ### <a name="administer-tabular-1200-models-in-ssms"></a>SSMS에서 테이블 형식 1200 모델 관리    
  이번 릴리스에서 테이블 형식 서버 모드의 Analysis Services 인스턴스는 모든 호환성 수준(1100, 1103, 1200)에서 테이블 형식 모델을 실행할 수 있습니다. 최신 [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) 가 업데이트되어 1200 호환성 수준에서 테이블 형식 모델에 대한 속성을 표시하고 데이터베이스 모델 관리를 제공합니다.    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>테이블 형식 모델의 여러 테이블 파티션에 대한 병렬 처리    
- 이번 릴리스에는 파티션이 두 개 이상 포함된 테이블에 대한 새로운 병렬 처리 기능이 포함되어 처리 성능이 향상됩니다. 이 기능에 대한 구성 설정은 없습니다. 파티션 구성 및 테이블 처리에 대한 자세한 내용은 [테이블 형식 모델 파티션&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)을 참조하세요.    
+ 이번 릴리스에는 파티션이 두 개 이상 포함된 테이블에 대한 새로운 병렬 처리 기능이 포함되어 처리 성능이 향상됩니다. 이 기능에 대한 구성 설정은 없습니다. 파티션을 구성 하 고 테이블을 처리 하는 방법에 대 한 자세한 내용은 참조 [테이블 형식 모델 파티션](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)합니다.    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>SSMS에서 관리자로 컴퓨터 계정 추가    
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 관리자는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 사용하여 컴퓨터 계정을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 관리자 그룹의 멤버로 구성할 수 있습니다. **사용자 또는 그룹 선택** 대화 상자에서 컴퓨터 도메인의 **위치** 를 선택하고 **Computers** 개체 형식을 추가합니다. 자세한 내용은 [Analysis Services 인스턴스에 서버 관리 권한 부여](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조하세요.    
  ### <a name="dbcc-for-analysis-services"></a>Analysis Services에 대한 DBCC    
@@ -206,7 +206,7 @@ Visual Studio 2015의 코드 보기는 테이블 형식 1200 모델에 대한 JS
 ### <a name="new-data-sources-for-directquery-mode"></a>DirectQuery 모드의 새 데이터 원본    
  이제 DirectQuery 모드에서 테이블 형식 1200 모델에 대해 지원 되는 데이터 원본 Oracle, Teradata 및 Microsoft 분석 플랫폼 (이전의 병렬 데이터 웨어하우스)를 포함 합니다.    
     
-자세한 내용은 [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)를 참조하세요.    
+자세한 내용은 참고 [DirectQuery 모드](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)합니다.    
 
 ## <a name="see-also"></a>관련 항목:
 [Analysis Services 팀 블로그](http://blogs.msdn.microsoft.com/analysisservices/)    

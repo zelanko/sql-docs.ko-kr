@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 276211036c3d977ab0a0b6a61114e7fe58505b63
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 970d341ee8c07cfcc15cda52f8f28dff9fed3d76
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multidimensional-modeling-ssas"></a>다차원 모델링(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,9 +33,9 @@ Analysis Services 다차원 솔루션은 여러 차원에서 비즈니스 데이
  Analysis Services 다차원 데이터베이스를 사용할 경우 또 하나의 중요한 이점은 Excel, Reporting Services 및 PerformancePoint처럼 공통적으로 사용되는 BI 보고 도구는 물론 사용자 지정 응용 프로그램 및 타사 솔루션과의 통합이 가능하다는 것입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [다차원 모델 솔루션 &#40; Ssas&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
+ [다차원 모델 솔루션 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
   
- [다차원 모델 데이터베이스 &#40; Ssas&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [다차원 모델 데이터베이스 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   

@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21e11773cfe402d85d661c009bf1b6a2fef7235a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 230e5438e9494a873a0045eebb2870597834b5be
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ Hierarchy 요소는 서로 연결하여 계층을 구성할 수 있는 테이블
 |Level|예|계층에 사용되는 열을 정의하는 하나 이상의 Level 요소입니다.<br /><br /> [Level 요소&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md)를 참조하세요.|  
   
 ## <a name="remarks"></a>주의  
- 테이블 형식 모델에서는 동일한 테이블의 열 간에 부모-자식 관계를 지정하여 계층을 만듭니다. 자세한 내용은 [계층 구조&#40;SSAS 테이블 형식&#41;](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)를 참조하세요.  
+ 테이블 형식 모델에서는 동일한 테이블의 열 간에 부모-자식 관계를 지정하여 계층을 만듭니다. 자세한 내용은 참조 [계층](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)합니다.  
   
 ## <a name="example"></a>예제  
  **테이블 형식**  

@@ -17,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 559a3a65f9a24077bbcac1e0c45506179d2e3da8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c51a35297b1a079ec026c6bcd8ac0fbd0ea7169e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services 인스턴스의 서버 모드 확인
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 다차원 및 데이터 마이닝(기본값), SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 테이블 형식이라는 세 가지 서버 모드 중 하나에 Analysis Services를 설치할 수 있습니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  
   
- 서버 모드에 따라 만들어서 배포하는 솔루션 유형이 결정됩니다. 서버 소프트웨어를 설치하지 않은 경우 서버가 설치된 모드를 확인하려면 이 항목의 정보를 사용할 수 있습니다. 특정 모드의 기능 가용성에 대한 자세한 내용은 [테이블 형식 및 다차원 솔루션 비교&#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)를 참조하세요.  
+ 서버 모드에 따라 만들어서 배포하는 솔루션 유형이 결정됩니다. 서버 소프트웨어를 설치하지 않은 경우 서버가 설치된 모드를 확인하려면 이 항목의 정보를 사용할 수 있습니다. 특정 모드의 기능 가용성에 대 한 자세한 내용은 참조 [비교 테이블 형식 및 다차원 솔루션 ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)합니다.  
   
  설치한 서버 모드를 사용하지 않으려면 소프트웨어를 제거한 후 다시 설치하여 원하는 모드를 선택해야 합니다. 또는 여러 인스턴스에서 서로 다른 모드를 실행하도록 동일한 컴퓨터에 Analysis Services의 다른 인스턴스를 설치할 수 있습니다.  
   
@@ -60,8 +60,8 @@ ms.lasthandoff: 02/15/2018
  [다차원 및 데이터 마이닝 모드에서 Analysis Services 설치](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [SharePoint 2010용 Power Pivot 설치](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)   
- [테이블 형식 모델 솔루션 &#40; SSAS 테이블 형식 &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
- [다차원 모델 솔루션 &#40; Ssas&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [테이블 형식 모델 솔루션](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
+ [다차원 모델 솔루션 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [마이닝 모델 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

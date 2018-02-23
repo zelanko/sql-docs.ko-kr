@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 19a73d527750f53dbff5f5054848933e77668234
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f328102326537d201daa4bb627d818a3a58661dc
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>데이터베이스 개체(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +77,7 @@ A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](
   
 ## <a name="see-also"></a>관련 항목:  
  [지원 되는 데이터 원본 &#40; SSAS-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [다차원 모델 솔루션 &#40; Ssas&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [다차원 모델 솔루션 ](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [데이터 마이닝 솔루션](../../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
