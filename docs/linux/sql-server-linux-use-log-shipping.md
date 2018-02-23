@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 48f1782ca1da3e730181402ed947453b6eeefc35
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: af88c21dc246238274ab66b47bb76302f0a86f06
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달 작업 시작
 
@@ -30,7 +30,7 @@ SQL Server 로그 전달이를 하나 이상의 보조 서버는 주 서버에�
   ![로그 전달](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-위 그림에 표시 된 것과 같이 로그 전달 세션에는 다음 단계가 포함 됩니다.
+이 항목에 설명 된 대로 그림, 로그 전달 세션 다음 단계가 포함 됩니다.
 
 - 주 SQL Server 인스턴스에서 트랜잭션 로그 파일 백업
 - 하나 이상의 보조 SQL Server 인스턴스를 네트워크를 통해 트랜잭션 로그 백업 파일을 복사

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Red Hat Enterprise Linux 공유 디스크 클러스터 SQL Server에 대 한 작동
 
@@ -73,7 +73,7 @@ sudo pcs status
 sudo crm_mon 
 ```
 
-리소스 에이전트 로그 보기`/var/log/cluster/corosync.log`
+리소스 에이전트 로그 보기 `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>클러스터에 노드 추가
 
@@ -105,7 +105,7 @@ sudo crm_mon
 
 1. 공유 위치에 데이터베이스 파일 디렉터리를 탑재 하도록 지침을 따르세요.
 
-   NFS 서버에서 설치`nfs-utils`
+   NFS 서버에서 설치 `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -224,7 +224,7 @@ PCSD 사용 하기 위해 실행 해야 `pcs` 도구입니다.
 
 ### <a name="current-cluster-status"></a>현재 클러스터 상태 
 
-`sudo pcs status`각 노드에 대 한 클러스터, 쿼럼, 노드, 리소스 및 데몬 상태에 대 한 기본 정보를 반환 합니다. 
+`sudo pcs status` 각 노드에 대 한 클러스터, 쿼럼, 노드, 리소스 및 데몬 상태에 대 한 기본 정보를 반환 합니다. 
 
 정상 pacemaker 쿼럼 출력의 예는 다음과 같습니다.
 
@@ -253,9 +253,9 @@ pacemaker: active/enabled
 
 예제에서는 `partition with quorum` 노드 과반수 쿼럼 온라인 임을 의미 합니다. 클러스터에서 노드 과반수 쿼럼 손실 되 면 `pcs status` 돌아갑니다 `partition WITHOUT quorum` 않으며 리소스를 모두 중지 됩니다. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`현재 클러스터에 참여 하는 모든 노드의 이름을 반환 합니다. 모든 노드가 참여 하지 않는 경우 `pcs status` 반환 `OFFLINE: [<nodename>]`합니다.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` 현재 클러스터에 참여 하는 모든 노드의 이름을 반환 합니다. 모든 노드가 참여 하지 않는 경우 `pcs status` 반환 `OFFLINE: [<nodename>]`합니다.
 
-`PCSD Status`각 노드에 대해 클러스터 상태가 표시 됩니다.
+`PCSD Status` 각 노드에 대해 클러스터 상태가 표시 됩니다.
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>이유로 노드가 오프 라인 수 수 있습니다.
 

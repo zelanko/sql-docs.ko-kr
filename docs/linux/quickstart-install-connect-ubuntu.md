@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 3f9435a43e57cc8d528e70c7376ba9ccd1c85c95
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e0dc1d24963e1e00018d5b5ac1418d68a4a22577
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Ubuntu에서 데이터베이스를 만들고 SQL Server 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 빠른 시작에서 먼저 Ubuntu 16.04에 SQL Server 2017를 설치 합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
+이 빠른 시작에서 먼저 Ubuntu 16.04에 SQL Server 2017를 설치 합니다. 그런 다음, **sqlcmd**로 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 > [!TIP]
 > 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 에 관심이 있는 경우는 [무인](sql-server-linux-setup.md#unattended) 또는 [오프 라인](sql-server-linux-setup.md#offline) 설치 절차 참조 [Linux에서 SQL Server에 대 한 설치 지침](sql-server-linux-setup.md)합니다.
@@ -126,9 +126,9 @@ Ubuntu에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명�
 > [!TIP]
 > **Sqlcmd** 쿼리를 실행 하 고 관리 및 개발 작업을 수행 하도록 SQL Server에 연결 하기 위한 하나의 도구입니다. 다른 도구는 다음과 같습니다.
 >
-> * [SQL Server 작업 Studio (미리 보기)](../sql-operations-studio/what-is.md)
+> * [SQL Server Operations Studio(미리 보기)](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
 > * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)합니다.
-> * [mssql-cli (미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+> * [mssql-cli(미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

@@ -9,18 +9,18 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Linux에서 SQL Server와 active Directory 인증
 
@@ -157,7 +157,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
   
 5. 도메인에서 사용자에 대 한 정보를 수집할 이제 수 및 해당 사용자로 Kerberos 티켓을 얻을 수 있습니다를 확인 합니다.
 
-   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+   다음 예제에서는 **id**,  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, 및  **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**  이 대 한 명령입니다.
 
    ```bash
    id user@contoso.com
@@ -182,7 +182,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>에 대 한 AD 사용자를 만들고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SPN을 설정 하 고
 
   > [!NOTE]
-  > 다음 단계는 사용 하면 [정규화 된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)합니다. 사용 중인 **Azure**, 해야  **[만드세요](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  계속 진행 하기 전에.
+  > 다음 단계를 사용 하 여 [정규화 된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)합니다. 사용 중인 **Azure**, 해야  **[만드세요](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  계속 진행 하기 전에.
 
 1. 도메인 컨트롤러에서 실행 하는 [New-aduser](https://technet.microsoft.com/library/ee617253.aspx) 만료 되지 않는 암호를 사용 하 여 새 AD 사용자를 만들려면 PowerShell 명령입니다. 이 예에서는 "mssql," 계정 이름이 되지만 필요 하면 계정 이름이 될 수 있습니다. 계정의 새 암호를 입력 하 라는 메시지가 표시 됩니다.
 
@@ -195,7 +195,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
    > [!NOTE]
    > 전용 AD 계정이 SQL Server에 대 한 보안 모범 사례는 하는 SQL Server 자격 증명 동일한 계정을 사용 하 여 다른 서비스와 공유 되지 않도록 합니다. 그러나 재사용할 수 있습니다 기존 AD 계정 원하는 경우 (다음 단계에서는 keytab 파일을 생성 하는 데 필요) 계정의 암호를 알고 있는 경우.
 
-2. 사용 하 여이 계정에 대 한 서비스 사용자 이름 (SPN) 설정에서 `setspn.exe` 도구입니다. SPN은 다음 예제에 지정 된 대로 형식 이어야 합니다:의 정규화 된 도메인 이름을 찾을 수 있습니다는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 컴퓨터를 실행 하 여 `hostname --all-fqdns` 에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 및 TCP 포트는 1433 이어야 함 구성 하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 다른 포트 번호를 사용 하도록 합니다.
+2. 사용 하 여이 계정에 대 한 서비스 사용자 이름 (SPN) 설정에서 `setspn.exe` 도구입니다. SPN은 다음 예제에 지정 된 대로 형식 이어야 합니다. 정규화 된 도메인 이름을 찾을 수 있습니다는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 컴퓨터를 실행 하 여 `hostname --all-fqdns` 에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 및 TCP 포트는 1433 이어야 함 구성 하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 다른 포트 번호를 사용 하도록 합니다.
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -218,7 +218,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. 이전 단계에서 만든 AD 사용자는 keytab 파일을 만듭니다. 사용 하 여 그렇게 하려면  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**합니다. 메시지가 표시 되 면 해당 AD 계정의 암호를 입력 합니다.
+2. 으로 keytab 파일 만들기  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**  이전 단계에서 만든 AD 사용자에 대 한 합니다. 메시지가 표시 되 면 해당 AD 계정의 암호를 입력 합니다.
 
    ```bash
    sudo ktutil
@@ -267,9 +267,9 @@ AD 인증을 구성 하기 전에 해야 합니다.
 
 도메인 자격 증명을 사용 하는 클라이언트 컴퓨터에 로그인 합니다. 에 연결할 수 이제 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 인증을 사용 하 여 암호를 다시 입력 하지 않고도 합니다. AD 그룹에 대 한 로그인을 만들면 해당 그룹의 구성원 인 모든 AD 사용자는 동일한 방식으로 연결할 수 있습니다.
 
-AD 인증을 사용 하는 클라이언트에 대 한 특정 연결 문자열 매개 변수는 사용 중인 드라이버에 따라 다릅니다. 몇 가지 예는 다음과 같습니다.
+AD 인증을 사용 하는 클라이언트에 대 한 특정 연결 문자열 매개 변수는 사용 중인 드라이버에 따라 다릅니다. 다음 예를 살펴봅니다.
 
-* `sqlcmd`도메인에 가입 된 Linux 클라이언트에서
+* `sqlcmd` 도메인에 가입 된 Linux 클라이언트에서
 
    사용 하 여 도메인에 가입 된 Linux 클라이언트에 로그인 `ssh` 및 도메인 자격 증명:
 
