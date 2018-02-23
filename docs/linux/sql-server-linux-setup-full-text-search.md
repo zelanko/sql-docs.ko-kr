@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 전체 텍스트 검색 linux 설치 | Microsoft Docs"
-description: "이 항목에서는 Linux에서 SQL Server 전체 텍스트 검색을 설치 하는 방법에 설명 합니다."
+description: "이 문서에서는 Linux에서 SQL Server 전체 텍스트 검색을 설치 하는 방법을 설명 합니다."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 8b1f14ca454582ee85506cd68b07a38f17ada1b4
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1ffb4caadffb8f292f6bd8e495a457fe86e9d641
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
 
@@ -51,7 +51,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-오프 라인 설치 해야 할 경우에 전체 텍스트 검색 패키지 다운로드를 찾습니다는 [릴리스 정보](sql-server-linux-release-notes.md)합니다. 다음 항목에 설명 된 동일한 오프 라인 설치 단계를 사용 하 여 [SQL Server 설치](sql-server-linux-setup.md#offline)합니다.
+오프 라인 설치 해야 할 경우에 전체 텍스트 검색 패키지 다운로드를 찾습니다는 [릴리스 정보](sql-server-linux-release-notes.md)합니다. 다음 문서에 설명 된 동일한 오프 라인 설치 단계를 사용 하 여 [SQL Server 설치](sql-server-linux-setup.md#offline)합니다.
 
 ## <a name="ubuntu">Ubuntu 설치</a>
 
@@ -69,7 +69,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-오프 라인 설치 해야 할 경우에 전체 텍스트 검색 패키지 다운로드를 찾습니다는 [릴리스 정보](sql-server-linux-release-notes.md)합니다. 다음 항목에 설명 된 동일한 오프 라인 설치 단계를 사용 하 여 [SQL Server 설치](sql-server-linux-setup.md#offline)합니다.
+오프 라인 설치 해야 할 경우에 전체 텍스트 검색 패키지 다운로드를 찾습니다는 [릴리스 정보](sql-server-linux-release-notes.md)합니다. 다음 문서에 설명 된 동일한 오프 라인 설치 단계를 사용 하 여 [SQL Server 설치](sql-server-linux-setup.md#offline)합니다.
 
 ## <a name="SLES">SLES에 설치</a>
 
@@ -86,7 +86,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-오프 라인 설치 해야 할 경우에 전체 텍스트 검색 패키지 다운로드를 찾습니다는 [릴리스 정보](sql-server-linux-release-notes.md)합니다. 다음 항목에 설명 된 동일한 오프 라인 설치 단계를 사용 하 여 [SQL Server 설치](sql-server-linux-setup.md#offline)합니다.
+오프 라인 설치 해야 할 경우에 전체 텍스트 검색 패키지 다운로드를 찾습니다는 [릴리스 정보](sql-server-linux-release-notes.md)합니다. 다음 문서에 설명 된 동일한 오프 라인 설치 단계를 사용 하 여 [SQL Server 설치](sql-server-linux-setup.md#offline)합니다.
 
 ## <a name="supported-languages"></a>지원되는 언어
 
@@ -148,7 +148,7 @@ sudo zypper update mssql-server-fts
 | 우르두어 | 1056 |
 | 베트남어 | 1066 |
 
-## <a id="filters"></a>필터
+## <a id="filters"></a> 필터
 
 전체 텍스트 검색 이진 파일에 저장 된 텍스트 에서도 작동 합니다. 하지만 경우 설치 된 필터는 파일을 처리 해야 합니다. 필터에 대 한 자세한 내용은 참조 [필터 구성 및 관리 검색에 대 한](../relational-databases/search/configure-and-manage-filters-for-search.md)합니다.
 
