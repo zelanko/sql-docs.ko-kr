@@ -32,7 +32,7 @@
 ### [테이블에 열 추가](add-columns-to-a-table-ssas-tabular.md)  
 ### [열 삭제](delete-a-column-ssas-tabular.md)  
 ### [테이블, 열 또는 행 필터 매핑 변경](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
-### [시간 인텔리전스에 사용할 날짜 테이블로 표시 지정(SSAS 테이블 형식)](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)  
+### [시간 인텔리전스에 사용할 날짜 테이블로 표시 지정](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)  
 ### [테이블 추가](add-a-table-ssas-tabular.md)  
 ### [테이블 삭제](delete-a-table-ssas-tabular.md)  
 ### [계산 테이블 만들기](create-a-calculated-table-ssas-tabular.md)  
