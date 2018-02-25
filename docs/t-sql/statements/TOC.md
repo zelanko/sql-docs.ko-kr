@@ -257,7 +257,7 @@
 # [MERGE](merge-transact-sql.md) 
 # [RENAME](rename-transact-sql.md)  
 
-# Permissions 
+# 사용 권한 
 ## [ADD SIGNATURE](add-signature-transact-sql.md)  
 ## [CLOSE MASTER KEY](close-master-key-transact-sql.md)  
 ## [CLOSE SYMMETRIC KEY](close-symmetric-key-transact-sql.md)  

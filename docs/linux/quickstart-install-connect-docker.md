@@ -17,7 +17,7 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
 ms.openlocfilehash: 1f018dd2b60365d89e912e7ef38499f8a4d14d9b
 ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/19/2018
 ---
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/19/2018
 > [!NOTE]
 > 이 빠른 시작은 구체적으로 mssql-server-**linux** 이미지를 사용하는 데 집중합니다. Windows 이미지는 다루지 않지만, [mssql-server-windows-developer Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)에서 자세히 알아볼 수 있습니다.
 
-## <a id="requirements"></a> Prerequisites
+## <a id="requirements"></a> 필수 구성 요소
 
 - 지원되는 모든 Linux 배포판 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+. 자세한 내용은 [사용자 Docker 설치](https://docs.docker.com/engine/installation/)를 참조하세요.
 - 최소 2GB의 디스크 공간
