@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a1648f5ecd3170b2b60c157e4debb25d7c7f793a
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -421,7 +422,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 7.  **필요한 권한** 이 거부되지 않고 **사용 권한 공간** 의 모든 개체에 대한 **보안 컨텍스트** 에서 모든 ID에 대한 직접적 또는 암시적인 GRANT 또는 GRANT WITH GRANT 사용 권한이 **필요한 권한**에 포함되는 경우 사용 권한 검사가 통과합니다.  
 
-## <a name="secial-considerations-for-column-level-permissions"></a>열 수준 사용 권한에 대한 특별 고려 사항
+## <a name="special-considerations-for-column-level-permissions"></a>열 수준 사용 권한에 대한 특별 고려 사항
 
 *<table_name>(\<column _name>)* 구문을 사용하여 열 수준 사용 권한을 부여합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 ```sql

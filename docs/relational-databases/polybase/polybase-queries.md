@@ -26,16 +26,16 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 439eb6561409ab10072f35013126e42bb5df2a41
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  이 문서에서는 SQL Server 2016의 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md) 기능을 사용하는 쿼리의 예제를 제공합니다. 이러한 예제를 사용하기 전에 PolyBase를 설정하는 데 필요한 T-SQL 문을 파악해야 합니다( [PolyBase T-SQL 개체](../../relational-databases/polybase/polybase-t-sql-objects.md)참조).
+  이 문서에서는 SQL Server 2016의 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 기능을 사용하는 쿼리의 예제를 제공합니다. 이러한 예제를 사용하기 전에 PolyBase를 설정하는 데 필요한 T-SQL 문을 파악해야 합니다( [PolyBase T-SQL 개체](../../relational-databases/polybase/polybase-t-sql-objects.md)참조).
   
 ## <a name="queries"></a>쿼리  
  외부 테이블에 대해 Transact-SQL 문을 실행하거나 BI 도구를 사용하여 외부 테이블을 쿼리합니다.

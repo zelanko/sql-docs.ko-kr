@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3a8947b1212aafe5fb3d233400900ab320a80f6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4fcb9a2ac92213a7e26a39012f8f113a858e7e9e
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-6-4---deploying-the-lesson-6-package"></a>6-4단원 - 6단원 패키지 배포
 패키지를 배포하려면 SQL Server 인스턴스의 Integration Services에서 SSISDB 카탈로그에 패키지를 추가해야 합니다. 이 단원에서는 6 단원 패키지를 SSISDB 카탈로그에 추가하고, 매개 변수를 설정하 고 패키지를 실행합니다. 이 단원에서 SQL Server Management Studio를 사용하여 SSISDB 카탈로그에 6 단원 패키지를 추가하고 패키지를 배포합니다. 패키지를 배포한 후 새 위치를 가리키도록 패키지를 수정한 다음 매개 변수를 실행합니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
 -   SSMS에서 패키지를 실행합니다.  
   
-### <a name="to-locate-or-add-the-the-ssisdb-catalog"></a>SSISDB 카탈로그를 찾거나 추가하려면  
+### <a name="to-locate-or-add-the-ssisdb-catalog"></a>SSISDB 카탈로그를 찾거나 추가하려면  
   
 1.  시작, 모든 프로그램, Microsoft SQL Server 2012를 가리킨 다음 SQL Management Studio를 클릭합니다.  
   

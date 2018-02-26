@@ -1,7 +1,7 @@
 ---
 title: "쿼리 처리 아키텍처 가이드 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,40 @@ ms.lasthandoff: 02/09/2018
 ## <a name="sql-statement-processing"></a>SQL 문 처리
 
 단일 SQL 문 처리는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 SQL 문을 실행하는 가장 기본적인 방법입니다. 이러한 기본 프로세스의 예로 뷰 또는 원격 테이블이 없는 로컬 기본 테이블만 참조하는 단일 `SELECT` 문을 처리하는 경우를 들 수 있습니다.
+
+#### <a name="logical-operator-precedence"></a>논리 연산자 선행 규칙
+
+문에 논리 연산자가 두 개 이상 사용되면 `NOT`이 가장 먼저 평가되고 다음으로 `AND`, `OR`의 순서로 평가됩니다. 산술 및 비트 연산자는 논리 연산자보다 먼저 처리됩니다. 자세한 내용은 [연산자 우선 순위](../t-sql/language-elements/operator-precedence-transact-sql.md)를 참조하세요.
+
+다음 예제에서 `AND`가 `OR`보다 우선하므로 제품 모델 21에는 색상 조건이 적용되지만 제품 모델 20에는 적용되지 않습니다.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+`OR`를 먼저 평가하도록 괄호를 추가하면 쿼리의 의미를 변경할 수 있습니다. 다음 쿼리에서는 제품 모델 20 및 21에서 색상이 빨강인 제품만 찾습니다.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+꼭 필요한 경우가 아니라도 괄호를 사용하면 쿼리의 가독성을 높이고 연산자 우선 순위로 인한 사소한 실수를 줄일 수 있습니다. 괄호를 사용하더라도 성능에는 거의 영향을 미치지 않습니다. 다음 예제는 첫 번째 예제와 구문적으로는 동일하지만 파악하기가 더 쉽습니다.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### <a name="optimizing-select-statements"></a>SELECT 문 최적화
 
@@ -49,7 +83,6 @@ ms.lasthandoff: 02/09/2018
 * 원본 데이터를 포함하는 테이블. 테이블은 `FROM` 절에서 지정됩니다.
 * 테이블이 `SELECT` 문의 목적과 논리적으로 관련되는 방식. 조인 사양에 정의되며 `WHERE` 뒤에 따라오는 `ON` 절이나 `FROM`절에 포함될 수 있습니다.
 * 원본 테이블의 행이 `SELECT` 문의 결과에 포함되기 위해 만족시켜야 할 조건. 조건은 `WHERE` 및 `HAVING` 절에 지정됩니다.
-
 
 쿼리 실행 계획은 다음 사항을 정의합니다. 
 
@@ -1045,4 +1078,5 @@ GO
  [확장 이벤트](../relational-databases/extended-events/extended-events.md)  
  [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [카디널리티 추정](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)
+ [적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)   
+ [연산자 우선 순위](../t-sql/language-elements/operator-precedence-transact-sql.md)

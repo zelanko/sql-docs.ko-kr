@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서"
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -18,19 +18,95 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 01d0f988103f39aa311b84a1bf9e03292e60f511
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f125db75de84856b8754a305a1c6ce8be9d29868
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [아래의 이전 SSMS 버전](#previous-ssms-releases)을 다운로드하세요.
 
 
-## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
+
+## <a name="ssms-175download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.5](download-sql-server-management-studio-ssms.md)
+
+일반 공급 | 빌드 번호: 14.0.17224.0
+
+### <a name="whats-new"></a>새로운 기능
+
+**일반 SSMS**
+
+데이터 검색 및 분류:
+
+- 데이터베이스에서 중요한 데이터를 검색, 분류, 레이블 지정 및 보고하는 새 SQL 데이터 검색 및 분류 기능이 추가되었습니다. 
+- 가장 중요한 데이터(비즈니스, 재무, 보건, PII 등)를 자동 검색하고 분류하면 조직 정보 보호 수준에서 중요한 역할을 담당할 수 있습니다.
+- [SQL 데이터 검색 및 분류](../relational-databases/security/sql-data-discovery-and-classification.md)에서 자세히 알아보세요.
+
+쿼리 편집기:
+
+- Azure SQL DW의 텍스트 외부 파일 형식에 SkipRows 옵션에 대한 지원이 추가되었습니다. 이 기능을 사용하면 사용자가 SQL DW로 구분된 텍스트 파일을 로드할 때 지정된 수의 행을 건너뛸 수 있습니다. 또한 FIRST_ROW 키워드에 해당하는 intellisense/SMO 지원이 추가되었습니다. 
+
+실행 계획:
+
+- SQL Data Warehouse에 예상된 계획 단추를 표시하도록 설정되었습니다.
+- 새 실행 계획 특성 *EstimateRowsWithoutRowGoal*이 추가되었습니다. *QueryTimeStats*에 새 실행 계획 특성 *UdfCpuTime* 및  *UdfElapsedTime*이 추가되었습니다. 자세한 내용은 [SQL Server 2017 CU3에 추가된 쿼리 실행 계획에서 최적화 프로그램 행 목표 정보](http://support.microsoft.com/help/4051361)를 참조하세요.
+
+
+
+### <a name="bug-fixes"></a>버그 수정
+
+**일반 SSMS**
+
+실행 계획:
+
+- LQS 연결에 대한 경과 시간 대신 엔진 실행 시간을 표시하도록 라이브 쿼리 통계 경과 시간이 해결되었습니다.
+- 실행 계획이 GbApply 및 InnerApply와 같은 논리 연산자를 인식할 수 없는 문제가 해결되었습니다.
+- ExchangeSpill과 관련된 문제가 해결되었습니다.
+
+쿼리 편집기:
+
+- SSMS가 다음과 같은 오류를 throw할 수 있는 관련된 문제가 해결되었습니다. "단순 쿼리 앞에 "SET SHOWPLAN_ALL ON"을 실행할 때 입력 문자열의 형식이 잘못되었습니다(mscorlib)." 
+
+
+SMO:
+
+- 서버 데이터 정렬이 대/소문자를 구분하는 경우에 SMO가 AvailabilityReplica 속성을 페치할 수 없는 문제가 해결되었습니다.(결과적으로 SSMS는 다음과 같은 오류 메시지를 표시할 수 있습니다. "다중 식별자 "a.delimited"를 바인딩할 수 없습니다."
+- DatabaseScopedConfigurationCollection 클래스에서 데이터 정렬을 잘못 처리하는 문제가 해결되었습니다.(결과적으로 터키어 로캘로 ma 컴퓨터에서 실행되는 SSMS는 대/소문자를 구분하는 데이터 정렬로 서버에서 실행되는 데이터베이스를 마우스 오른쪽 단추로 클릭할 때 다음과 같은 오류를 표시할 수 있습니다. "레거시 카디널리티 추정은 범위가 잘못 지정된 구성입니다.")
+- JobServer 클래스에서 SMO가 SQL 2005 서버에서 SQL 에이전트 속성을 페치할 수 없는 문제가 해결되었습니다.(결과적으로 SSMS가 다음과 같은 오류를 throw합니다. "지역 변수에 기본값을 할당할 수 없습니다. 스칼라 변수 "@ServiceStartMode"를 선언해야 하고 궁극적으로 개체 탐색기에서 SQL 에이전트 노드가 표시되지 않았습니다.)
+
+템플릿: 
+
+- "데이터베이스 메일": 몇 가자 오타가 수정되었습니다[(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).  
+
+개체 탐색기:
+- 관리 압축이 인덱스에서 실패하는 문제가 해결되었습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o).
+
+감사:
+- *감사 파일 병합* 기능과 관련된 문제가 해결되었습니다.
+<br>
+
+### <a name="known-issues"></a>알려진 문제
+
+데이터 분류:
+- 분류를 제거한 다음, 같은 열에 새로운 분류를 수동으로 추가하면 이전 정보 형식 및 민감도 레이블이 기본 보기에서 열에 할당됩니다.<br>
+*해결 방법*: 주 보기에 분류를 다시 추가한 후에 저장하기 전에 새 정보 형식 및 민감도 레이블을 할당합니다.
+
+
+
+## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
+
+다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
+
+
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>[SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 14.0.17213.0
+
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -121,9 +197,6 @@ XE 프로파일러:
 - Azure AS에 대해 Windows 인증을 선택해도 로그인 메시지가 계속 표시되는 SQL 프로파일러 문제를 수정했습니다.
 
 
-## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
-
-다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>[SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 14.0.17199.0
