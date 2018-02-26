@@ -2,9 +2,10 @@
 
 # 개요
 ## [릴리스 정보](sql-server-linux-release-notes.md)
-## [이 릴리스의 새로운 기능](sql-server-linux-whats-new.md)
+## [새로운 기능](sql-server-linux-whats-new.md)
 ## [새로운 또는 업데이트 된 문서](new-updated-linux.md)
 ## [버전 및 지원되는 기능](sql-server-linux-editions-and-components-2017.md)
+## [FAQ](sql-server-linux-faq.md)
 
 # 빠른 시작
 ## [설치 및 연결 - Red Hat](quickstart-install-connect-red-hat.md)
@@ -89,6 +90,7 @@
 
 ## [보안](sql-server-linux-security-overview.md)
 ### [보안 기능 시작](sql-server-linux-security-get-started.md)
+### [Active Directory 인증](sql-server-linux-active-directory-auth-overview.md)
 ### [연결 암호화](sql-server-linux-encrypted-connections.md)
 
 ## 성능
@@ -102,7 +104,6 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # 리소스
-## [FAQ](sql-server-linux-faq.md)
 ## [문제 해결](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server 설명서](../sql-server/sql-server-technical-documentation.md)
 ## 파트너
