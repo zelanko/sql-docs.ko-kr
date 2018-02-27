@@ -1,5 +1,5 @@
 ---
-title: "버전 (Transact SQL) | Microsoft Docs"
+title: UPDATE (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,19 +8,21 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8ba4237f9a43a525571a2d25f95acb0a31d4a5cb
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
@@ -51,7 +53,7 @@ SELECT VERSION();
 ```  
   
 ## <a name="see-also"></a>관련 항목: 
-[세션 ID (Transact SQL)](../../t-sql/functions/session-id-transact-sql.md)  
+[SESSION_ID (Transact SQL)](../../t-sql/functions/session-id-transact-sql.md)  
 [DB_NAME &#40; Transact SQL &#41;](../../t-sql/functions/db-name-transact-sql.md)  
   
   

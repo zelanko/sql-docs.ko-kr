@@ -1,5 +1,5 @@
 ---
-title: "테이블 형식 모델 데이터베이스 (SSAS)에 연결 | Microsoft Docs"
+title: "테이블 형식 모델 데이터베이스에 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,40 +12,31 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e2911c3a191a0cd41832fc37a3f07bff4735ee54
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e733d7e8964dcdd714ac095dc44a4432ac4835b7
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="connect-to-a-tabular-model-database-ssas"></a>테이블 형식 모델 데이터베이스에 연결(SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델을 작성 하 고 Analysis Services 테이블 형식 모드 서버에 배포 후에 클라이언트 응용 프로그램에 사용할 수 있도록 권한을 설정 해야 합니다. 이 항목에서는 사용 권한을 부여하는 방법과 클라이언트 응용 프로그램에서 데이터베이스에 연결하는 방법에 대해 설명합니다.  
+# <a name="connect-to-a-tabular-model-database"></a>테이블 형식 모델 데이터베이스에 연결  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 응용 프로그램에서 사용할 수 있도록 권한을 설정해야 합니다. 이 문서에서는 설명 사용 권한 및 클라이언트 응용 프로그램에서 데이터베이스에 연결 하는 방법을 하는 방법입니다.  
   
 > [!NOTE]  
 >  기본적으로 방화벽을 구성해야만 Analysis Services에 대한 원격 연결을 사용할 수 있습니다. 클라이언트 연결에 대해 명명된 인스턴스 또는 기본 인스턴스를 구성하는 경우 적절한 포트를 열어야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
- 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
-  
- [데이터베이스에 대한 사용자 권한](#bkmk_userpermissions)  
-  
- [서버에 대한 관리 권한](#bkmk_admin)  
-  
- [Excel 또는 SharePoint에서 연결](#bkmk_excelconn)  
-  
- [연결 문제 해결](#bkmk_Tshoot)  
-  
 ##  <a name="bkmk_userpermissions"></a> 데이터베이스에 대한 사용자 권한  
  테이블 형식 데이터베이스에 연결하는 사용자는 읽기 액세스 권한을 지정하는 데이터베이스 역할의 멤버여야 합니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 모델을 작성할 때 또는 배포된 모델에 대해 역할 또는 역할 멤버 자격이 정의됩니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 역할 관리자를 사용하여 역할을 만드는 방법은 [역할 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)를 참조하세요. 배포된 모델에 대한 역할을 만들고 관리하는 방법은 [테이블 형식 모델 역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)을 참조하세요.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 모델을 작성할 때 또는 배포된 모델에 대해 역할 또는 역할 멤버 자격이 정의됩니다. 역할 관리자를 사용 하 여 역할을 만드는 방법에 대 한 자세한 내용은 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], 참조 [만들기 및 관리 역할](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)합니다. 만들기 및 배포 된 모델에 대 한 역할을 관리 하는 방법에 대 한 자세한 내용은 참조 [테이블 형식 모델 역할](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)합니다.  
   
 > [!CAUTION]  
->  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 역할 관리자를 사용하여 정의한 역할로 테이블 형식 모델 프로젝트를 다시 배포하면 배포된 테이블 형식 모델에 정의된 역할을 덮어씁니다.  
+>  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 역할 관리자를 사용하여 정의한 역할로 테이블 형식 모델 프로젝트를 다시 배포하면 배포된 테이블 형식 모델에 정의된 역할을 덮어씁니다.  
   
 ##  <a name="bkmk_admin"></a> 서버에 대한 관리 권한  
  SharePoint를 사용하여 Excel 통합 문서 또는 Reporting Services 보고서를 호스팅하는 조직에서는 테이블 형식 모델 데이터를 SharePoint 사용자가 사용할 수 있도록 추가로 구성 작업을 수행해야 합니다. SharePoint를 사용하지 않는 경우 이 섹션을 건너뛰십시오.  
@@ -95,7 +86,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  데이터베이스를 선택합니다. 올바르게 선택하면 데이터베이스에 대해 단일 **모델** 큐브가 표시됩니다. **다음** , **마침**을 차례로 클릭합니다.  
   
- 연결이 설정되면 데이터를 사용하여 피벗 테이블 또는 피벗 차트를 만들 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)에서 역할 관리자 대화 상자를 사용하여 역할을 정의하는 테이블 형식 모델 작성자를 위한 것입니다.  
+ 연결이 설정되면 데이터를 사용하여 피벗 테이블 또는 피벗 차트를 만들 수 있습니다. 자세한 내용은 참조 [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint에서 연결  
  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 사용하는 경우 Analysis Services 테이블 형식 모드 서버에서 실행되는 데이터베이스에 대한 리디렉션을 제공하는 BI 의미 체계 모델 연결 파일을 SharePoint에서 만들 수 있습니다. BI 의미 체계 모델 연결은 데이터베이스에 대한 HTTP 끝점을 제공합니다. 또한 BI 의미 체계 모델 연결을 사용하면 SharePoint 사이트에서 문서를 정기적으로 사용하는 지식 근로자가 테이블 형식 모델에 쉽게 액세스할 수 있습니다. 지식 근로자는 BI 의미 체계 모델 연결 파일의 위치 또는 해당 URL만 알면 테이블 형식 모델 데이터베이스에 액세스할 수 있습니다. 서버 위치 또는 데이터베이스 이름 정보는 BI 의미 체계 모델 연결에 캡슐화됩니다. BI 의미 체계 모델 연결 파일을 만들고 사용하는 방법은 [파워 피벗 BI 의미 체계 모델 연결&#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) 및 [테이블 형식 모델 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)를 참조하세요.  
@@ -105,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
  **데이터 연결 마법사가 지정한 데이터 원본에서 데이터베이스 목록을 가져올 수 없습니다.**  
   
- 데이터를 가져올 때 마법사를 사용하여 원격 Analysis Services 서버에 있는 테이블 형식 모델 데이터베이스에 연결하려고 하지만 권한이 부족한 경우 이 Microsoft Excel 오류가 발생합니다. 이 오류를 해결하려면 데이터베이스에 대한 사용자 액세스 권한이 있어야 합니다. 이 항목의 앞부분에 있는 데이터에 대한 사용자 액세스 권한 부여 지침을 참조하십시오.  
+ 데이터를 가져올 때 원격 Analysis Services 서버의 테이블 형식 모델 데이터베이스에 연결 하도록 마법사를 사용 하려고 할 때 충분 한 권한이이 Microsoft Excel 오류가 발생 합니다. 이 오류를 해결하려면 데이터베이스에 대한 사용자 액세스 권한이 있어야 합니다. 이 항목의 앞부분에 있는 데이터에 대한 사용자 액세스 권한 부여 지침을 참조하십시오.  
   
  **외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. 다음과 같은 연결을 새로 고치지 못했습니다: \<모델 이름 > 샌드박스**  
   
@@ -119,7 +110,7 @@ ms.lasthandoff: 01/08/2018
   
  SharePoint에서 모델 데이터를 사용하는 피벗 테이블에서 데이터 필터링과 같은 데이터 상호 작용을 시도할 때 이 Microsoft Excel 오류가 발생합니다. 이 오류는 사용자가 통합 문서에 대해 충분한 SharePoint 권한을 가지고 있지 않기 때문에 발생합니다. 사용자에게 **읽기** 이상의 권한이 있어야 합니다. **보기 전용** 권한으로는 데이터에 액세스할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [테이블 형식 모델 솔루션 배포&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [테이블 형식 모델 솔루션 배포](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

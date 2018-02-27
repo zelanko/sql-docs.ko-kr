@@ -1,5 +1,5 @@
 ---
-title: Update () (Transact SQL) | Microsoft Docs
+title: UPDATE () (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE()_TSQL
 - UPDATE()
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - INSERT statement [SQL Server], UPDATE function
 - testing column updates
@@ -26,18 +28,18 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6d5b93a4f98e382ccb6504e1d20d6e974a031f86
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="update---trigger-functions-transact-sql"></a>업데이트-트리거 함수 (Transact SQL)
+# <a name="update---trigger-functions-transact-sql"></a>업데이트-트리거 UPDATE (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   테이블 또는 뷰의 지정된 열에서 INSERT 또는 UPDATE를 시도했는지 여부를 나타내는 부울 값을 반환합니다. UPDATE()는 트리거가 특정 동작을 실행해야 하는지 여부를 테스트하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 또는 UPDATE 트리거 내의 어디서나 사용할 수 있습니다.  

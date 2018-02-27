@@ -1,5 +1,5 @@
 ---
-title: "선택 (Transact SQL) | Microsoft Docs"
+title: CHOOSE (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,30 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHOOSE
 - CHOOSE_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CHOOSE function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 96e231ed5770e44018dac403e0ac895d85f00393
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="logical-functions---choose-transact-sql"></a>논리 함수-선택 (Transact SQL)
+# <a name="logical-functions---choose-transact-sql"></a>논리 함수-CHOOSE (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 값 목록에서 지정된 인덱스에 있는 항목을 반환합니다.  

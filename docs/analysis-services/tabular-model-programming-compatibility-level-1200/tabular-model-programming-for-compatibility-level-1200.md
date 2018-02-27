@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 30122388bc5e1c82f26bbaa37452330b97a77077
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7e1ec3e7ef85cb567d70e96d5c9f3bdd6655f3d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>테이블 형식 모델 프로그래밍에 대 한 호환성 수준 1200 이상
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]부터 호환성 수준이 1200, 테이블 형식 메타 데이터 모델 구조, 테이블 형식 모델 개체에 대 한 설명자도 기록 다차원 메타 데이터를 교체 설명 하는 데 사용 됩니다. 테이블, 열 및 관계에 대 한 메타 데이터는 테이블, 열 및 관계를 아닌 (차원 및 특성) 해당 하는 다차원 항목입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+부터 호환성 수준이 1200, 테이블 형식 메타 데이터 모델 구조, 테이블 형식 모델 개체에 대 한 설명자도 기록 다차원 메타 데이터를 교체 설명 하는 데 사용 됩니다. 테이블, 열 및 관계에 대 한 메타 데이터는 테이블, 열 및 관계를 아닌 (차원 및 특성) 해당 하는 다차원 항목입니다.  
   
 또는 만들 수 있습니다 새 모델 호환성 수준 1200 이상의 최신 버전의 SQL Server 데이터 도구 (SSDT), Microsoft.AnalysisServices.Tabular Api를 사용 하 여 변경 하 여는 **CompatibilityLevel** 의 기존 테이블 형식 모델 업그레이드 (SSDT에서 수행)입니다. 이렇게 최신 버전의 서버, 도구 및 프로그래밍 인터페이스에 모델을 바인딩합니다.   
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services 개발자 설명서](../../analysis-services/analysis-services-developer-documentation.md)   
  [테이블 형식 모델 프로그래밍에 대 한 호환성 수준 1050-1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [기술 참조 &#40; Ssas&#41; ](../../analysis-services/powershell/technical-reference-ssas.md) [Analysis Services 업그레이드](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [기술 참조 ](../../analysis-services/powershell/technical-reference-ssas.md) [Analysis Services 업그레이드](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [테이블 형식 모델 및 데이터베이스의 호환성 수준](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

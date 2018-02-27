@@ -1,7 +1,7 @@
 ---
-title: "Excel에서 분석 (SSAS 테이블 형식) | Microsoft Docs"
+title: "Excel에서 분석 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 13d0f86ae2413e0d54af32a97fb74100284bacd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bd537debaa43c89c2d09295f12598a9bfe9927b3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="analyze-in-excel"></a>도구 모음
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Excel에서에서 분석 기능, SSDT에서는 테이블 형식 모델 작성자를 신속 하 게 개발 하는 동안 모델 프로젝트를 분석 하는 방법을 제공 합니다. Excel에서 분석 기능은 Microsoft Excel을 열고 모델 작업 영역 데이터베이스에 데이터 원본을 연결한 후 자동으로 워크시트에 피벗 테이블을 추가합니다. 피벗 테이블 필드 목록에 작업 영역 데이터베이스 개체(테이블, 열 및 측정값)가 필드로 포함됩니다. 그런 다음 유효 사용자 또는 역할 및 큐브 뷰의 컨텍스트 내에서 개체 및 데이터를 조회할 수 있습니다.  
+# <a name="analyze-in-excel"></a>Excel에서 분석
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Excel에서에서 분석 기능, SSDT에서는 테이블 형식 모델 작성자를 신속 하 게 개발 하는 동안 모델 프로젝트를 분석 하는 방법을 제공 합니다. Excel에서 분석 기능은 Microsoft Excel을 열고 모델 작업 영역 데이터베이스에 데이터 원본을 연결한 후 자동으로 워크시트에 피벗 테이블을 추가합니다. 피벗 테이블 필드 목록에 작업 영역 데이터베이스 개체(테이블, 열 및 측정값)가 필드로 포함됩니다. 그런 다음 유효 사용자 또는 역할 및 큐브 뷰의 컨텍스트 내에서 개체 및 데이터를 조회할 수 있습니다.  
   
- 이 항목에서는 Microsoft Excel, 피벗 테이블 및 피벗 차트를 잘 알고 있다고 가정합니다. Excel 사용법에 대한 자세한 내용은 Excel 도움말을 참조하십시오.  
+ 이 문서에서는 Microsoft Excel, 피벗 테이블, 피벗 차트와 이미 익숙한 가정 합니다. Excel 사용법에 대한 자세한 내용은 Excel 도움말을 참조하십시오.  
   
 ##  <a name="bkmk_benefits"></a> 이점  
  모델 작성자는 Excel에서 분석 기능을 사용하여 일반적인 데이터 분석 응용 프로그램인 Microsoft Excel으로 모델 프로젝트의 효율성을 테스트할 수 있습니다. 분석에서에서 Excel 기능을 사용 하려면 Microsoft Office 2003 있어야 하거나 이상이 SSDT와 같은 컴퓨터에 설치 합니다.  
@@ -50,9 +51,9 @@ ms.lasthandoff: 01/08/2018
   
 |**항목**|**설명**|  
 |---------------|---------------------|  
-|[Excel에서 테이블 형식 모델 분석](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|이 항목에서는 모델 디자이너에서 Excel에서 분석 기능을 사용하여 Excel을 열고, 모델 작업 영역 데이터베이스에 데이터 원본을 연결하고, 워크시트에 피벗 테이블을 추가하는 방법을 설명합니다.|  
+|[Excel에서 테이블 형식 모델 분석](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|이 문서에서는 Excel을 열고 모델 작업 영역 데이터베이스에 데이터 원본 연결을 만들고 워크시트에 피벗 테이블을 추가 하려면 모델 디자이너에서 Excel 기능에서 분석을 사용 하는 방법을 설명 합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Excel에서 테이블 형식 모델 분석](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
  [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  

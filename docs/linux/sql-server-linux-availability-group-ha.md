@@ -1,11 +1,11 @@
 ---
 title: "SQL Server Always On 가용성 그룹 배포 방법 | Microsoft Docs"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호
 
@@ -70,7 +70,7 @@ SQL Server 2017 소개는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 파일 그룹은 R /w |자동 장애 조치(failover). 새 주 파일 그룹은 R /w |자동 장애 조치(failover). 새로운 주 이전의 주 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 사용자 트랜잭션에 사용할 수 없는 경우 
 |1개 보조 복제본 중단  | 기본 R은 /w 기본 경우 자동 장애 조치가 실패 합니다. |기본 R은 /w 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 공간이 없습니다. 
-<sup>*</sup>기본값
+<sup>*</sup> 기본값
 
 <a name="twoSynch"></a>
 
@@ -87,7 +87,7 @@ SQL Server 2017 소개는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1.
 |주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 파일 그룹은 R /w| 자동 장애 조치(failover). 새로운 주 이전의 주 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 사용자 트랜잭션에 사용할 수 없는 경우
 |1개 보조 복제본 중단  |기본 R/W, 데이터 손실에 노출 실행 중입니다. |주 보조 복구 될 때까지 사용자 트랜잭션에 사용할 수 없는 경우
-<sup>*</sup>기본값
+<sup>*</sup> 기본값
 
 >[!NOTE]
 >위 시나리오는 SQL Server 2017 CU 1 전에 동작 합니다. 
@@ -117,7 +117,7 @@ SQL Server 2017 소개는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 |보조 복제본의 작동 중단 | 주 파일 그룹은 R/W, (기본 실패 하 고 복구할 수 없습니다) 경우 데이터 손실에 노출 실행 합니다. 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 공간이 없습니다. 장애 조치할 경우 주 복제본도 실패 합니다. 
 |구성만 복제본 중단 | 기본 R은 /w 기본 경우 자동 장애 조치가 실패 합니다. | 기본 R은 /w 기본 경우 자동 장애 조치가 실패 합니다. 
 |동기 보조 데이터베이스 + 구성만 복제본 중단| 기본은 사용자 트랜잭션에 대 한 공간이 없습니다. 자동 장애 조치 없습니다. | 기본은 사용자 트랜잭션에 대 한 공간이 없습니다. 복제본이 없는 경우 장애 조치가 가능 하도록 기본 실패 하 게 합니다. 
-<sup>*</sup>기본값
+<sup>*</sup> 기본값
 
 >[!NOTE]
 >구성만 복제본을 호스팅하는 SQL Server 인스턴스의 다른 데이터베이스를 호스트할 수 있습니다. 여러 가용성 그룹에 대 한 구성만 데이터베이스로 참여할 수 있습니다. 
@@ -142,7 +142,7 @@ SQL Server 2017 소개는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>SQL Server 리소스 에이전트 pacemaker에 대 한 이해
 
-SQL Server 2017 CTP 1.4 추가 `sequence_number` 를 `sys.availability_groups` Pacemaker 얼마나 최신 보조 데이터베이스를 식별할 수 있도록 복제본은 주 복제본과 합니다. `sequence_number`가 로컬 가용성 그룹 복제본을 얼마나 최신 상태 인지를 나타내는 단조 증가 BIGINT는입니다. Pacemaker 업데이트는 `sequence_number` 각 가용성 그룹 구성 변경 합니다. 구성 변경의 예로 장애 조치, 복제본 추가 또는 제거를 들 수 있습니다. 수는 주 서버, 업데이트 한 다음 보조 복제본에 복제 합니다. 따라서 최신 구성을 포함 하는 보조 복제본에 주 동일한 시퀀스 번호가 있습니다. 
+SQL Server 2017 CTP 1.4 추가 `sequence_number` 를 `sys.availability_groups` Pacemaker 얼마나 최신 보조 데이터베이스를 식별할 수 있도록 복제본은 주 복제본과 합니다. `sequence_number` 가 로컬 가용성 그룹 복제본을 얼마나 최신 상태 인지를 나타내는 단조 증가 BIGINT는입니다. Pacemaker 업데이트는 `sequence_number` 각 가용성 그룹 구성 변경 합니다. 구성 변경의 예로 장애 조치, 복제본 추가 또는 제거를 들 수 있습니다. 수는 주 서버, 업데이트 한 다음 보조 복제본에 복제 합니다. 따라서 최신 구성을 포함 하는 보조 복제본에 주 동일한 시퀀스 번호가 있습니다. 
 
 먼저 보냅니다 Pacemaker를 주 복제본을 결정 하는 경우는 *미리 승격* 모든 복제본에는 알림입니다. 복제본의 시퀀스 번호를 반환합니다. 다음으로 Pacemaker 실제로 주 복제본을 하려고 복제본만 승격 자체의 시퀀스 번호가 가장 높은 모든 시퀀스 번호의 경우 합니다. 고유한 시퀀스 번호가 가장 높은 시퀀스 번호와 일치 하지 않으면 복제본 수준 올리기 작업을 거부 합니다. 이 방법에서는 일련 번호가 가장 높은 복제본만 주 복제본으로 승격될 수 있으므로 데이터가 손실되지 않습니다. 
 
@@ -150,7 +150,7 @@ SQL Server 2017 CTP 1.4 추가 `sequence_number` 를 `sys.availability_groups` P
 
 예를 들어 세 개의 동기 복제본-하나의 주 복제본과 2 개의 동기 보조 복제본으로 가용성 그룹입니다.
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`1 이며, (3 / 2-1 >).
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 1 이며, (3 / 2-1 >).
 
 - 필요한 수의 작업을 미리 승격에 응답 하는 복제본은 2입니다. (3-1 = 2). 
 

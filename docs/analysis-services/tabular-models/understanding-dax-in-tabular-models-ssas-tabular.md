@@ -1,5 +1,5 @@
 ---
-title: "테이블 형식 모델 (SSAS 테이블 형식)의 DAX | Microsoft Docs"
+title: "테이블 형식 모델의 DAX | Microsoft Docs"
 ms.custom: 
 ms.date: 10/21/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a95f7acdcf05c003521a4471f07036b5f458b65e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-in-tabular-models-ssas-tabular"></a>테이블 형식 모델 (SSAS 테이블 형식)의 DAX
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]데이터 분석 식 (DAX)는 Analysis Services, Power BI Desktop 및 Excel의 파워 피벗에서 사용자 지정 계산을 만드는 데 사용 되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
+# <a name="dax-in-tabular-models"></a>테이블 형식 모델의 DAX 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+데이터 분석 식 (DAX)는 Analysis Services, Power BI Desktop 및 Excel의 파워 피벗에서 사용자 지정 계산을 만드는 데 사용 되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
   
  Analysis Services, Power BI Desktop 및 Excel의 파워 피벗에 DAX가 사용 하는 동안 SQL Server Data Tools (SSDT) 작성 하는 Analysis Services 테이블 형식 모델 프로젝트에이 항목 더 적용 합니다.  
   
@@ -73,8 +74,8 @@ ms.lasthandoff: 01/08/2018
 |정수|64비트(8바이트) 정수 값 <sup>1, 2</sup>|소수 자릿수가 없는 숫자입니다. 정수는 양수나 음수가 될 수 있지만 -9,223,372,036,854,775,808(-2^63)부터 9,223,372,036,854,775,807(2^63-1) 사이의 정수여야 합니다.|  
 |10진수|64비트(8바이트) 실수 <sup>1, 2</sup>|실수는 소수 자리를 가질 수 있는 수입니다. 실수는 광범위한 값을 포함합니다.<br /><br /> -1.79E +308에서 -2.23E -308 사이의 음수 값<br /><br /> 0<br /><br /> 2.23E -308에서 1.79E + 308 사이의 양수 값<br /><br /> 하지만 유효 숫자 수는 열일곱 자릿수로 제한됩니다.|  
 |Boolean|Boolean|True 또는 False 값입니다.|  
-|텍스트 모드|String|유니코드 문자 데이터 문자열입니다. 텍스트 형식으로 표시된 문자열, 숫자 또는 날짜가 될 수 있습니다.|  
-|date|날짜/시간|허용되는 날짜-시간 표현의 날짜 및 시간<br /><br /> 유효한 날짜는 1900년 3월 1일 이후의 모든 날짜입니다.|  
+|텍스트|문자열|유니코드 문자 데이터 문자열입니다. 텍스트 형식으로 표시된 문자열, 숫자 또는 날짜가 될 수 있습니다.|  
+|날짜|날짜/시간|허용되는 날짜-시간 표현의 날짜 및 시간<br /><br /> 유효한 날짜는 1900년 3월 1일 이후의 모든 날짜입니다.|  
 |Currency|Currency|통화 데이터 형식에는 -922,337,203,685,477.5808부터 922,337,203,685,477.5807 사이의 소수 자릿수가 고정된 네 자릿수를 사용할 수 있습니다.|  
 |해당 사항 없음|공백|공백은 SQL null을 나타내거나 대체하는 DAX의 데이터 형식입니다. BLANK 함수를 사용하여 공백을 만들고 논리 함수 ISBLANK를 사용하여 공백을 테스트할 수 있습니다.|  
   
@@ -366,7 +367,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  다시 계산의 결과로 다른 값이 반환되어 행이 역할 멤버가 쿼리할 수 있거나 쿼리할 수 없게 바뀌는 경우가 아니라면 처리 및 다시 계산으로 인해 행 필터 수식이 영향을 받지는 않습니다.  
   
- 자세한 내용은 [데이터 처리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)를 참조하세요.  
+ 자세한 내용은 참조 [데이터 처리](../../analysis-services/tabular-models/process-data-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_troubleshoot"></a> 수식의 오류 문제 해결  
  수식을 정의할 때 오류가 발생하면 수식에 *구문 오류*, *의미 체계 오류*또는 *계산 오류*가 있는 경우일 수 있습니다.  
@@ -399,7 +400,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [계산 된 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [지원되는 데이터 원본](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
