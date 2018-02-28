@@ -29,13 +29,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 스크립트를 사용하여 기존 데이터베이스의 개체를 설명하는 DAC(데이터 계층 응용 프로그램)를 작성하고 이 DAC 정의를 **msdb** 시스템 데이터베이스([!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]의 **master**)에 등록할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 스크립트를 사용하여 기존 데이터베이스의 개체를 설명하는 DAC(데이터 계층 응용 프로그램)를 작성하고 이 DAC 정의를 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)])에 등록할 수 있습니다.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   

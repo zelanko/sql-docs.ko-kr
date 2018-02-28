@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-warning-thresholds"></a>경고 임계값 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 **데이터베이스 미러링 모니터** 대화 상자의 탐색 트리에서 선택한 데이터베이스에 대한 하나 이상의 경고 임계값을 설정 및 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 대화 상자를 사용하여 **데이터베이스 미러링 모니터** 대화 상자의 탐색 트리에서 선택한 데이터베이스에 대한 하나 이상의 경고 임계값을 설정 및 구성할 수 있습니다.  
   
  이 대화 상자는 두 서버 인스턴스에 연결을 시도합니다. 이러한 연결은 비동기적으로 설정됩니다. 이 대화 상자에는 각 파트너의 연결 상태가 표시됩니다. 파트너가 연결되지 않은 경우 **연결**을 클릭할 수 있습니다.  
   

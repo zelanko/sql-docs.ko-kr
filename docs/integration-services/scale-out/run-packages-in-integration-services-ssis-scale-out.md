@@ -21,10 +21,10 @@ f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
 ms.openlocfilehash: 40bc7489efca9139dd83489452610f64b84a90bf
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services(SSIS) Scale Out에서 패키지 실행
 Integration Services 서버에 패키지를 배포한 후 다음 방법 중 하나를 사용하여 Scale Out에서 패키지를 실행할 수 있습니다.

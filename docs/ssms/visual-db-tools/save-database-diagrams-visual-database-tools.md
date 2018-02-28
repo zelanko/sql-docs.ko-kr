@@ -23,13 +23,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2c3a0745ab34f997bd614b091cb8d2c6a0b1aa80
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 저장(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램을 저장하면 테이블, 열 및 기타 데이터베이스 개체에 대한 변경 내용을 비롯하여 데이터베이스에 대한 모든 변경 내용을 저장할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+데이터베이스 다이어그램을 저장하면 테이블, 열 및 기타 데이터베이스 개체에 대한 변경 내용을 비롯하여 데이터베이스에 대한 모든 변경 내용을 저장할 수 있습니다.  
   
 ### <a name="to-save-the-database-diagram"></a>데이터베이스 다이어그램을 저장하려면  
   
