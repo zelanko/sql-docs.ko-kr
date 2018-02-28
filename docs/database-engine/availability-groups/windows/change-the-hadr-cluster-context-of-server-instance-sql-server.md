@@ -22,13 +22,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e6d67df05f5cd24b3c5b1f02273708633263f1d0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>서버 인스턴스의 HADR 클러스터 컨텍스트 변경(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 이상 버전에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 HADR 클러스터 컨텍스트를 전환하는 방법에 대해 설명합니다. *HADR 클러스터 컨텍스트* 는 서버 인스턴스에서 호스트하는 가용성 복제본에 대한 메타데이터를 관리하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터를 결정합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이상 버전에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 사용하여 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 인스턴스의 HADR 클러스터 컨텍스트를 전환하는 방법에 대해 설명합니다. *HADR 클러스터 컨텍스트* 는 서버 인스턴스에서 호스트하는 가용성 복제본에 대한 메타데이터를 관리하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터를 결정합니다.  
   
  새 WSFC 클러스터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스로의 클러스터 간 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 마이그레이션을 수행하는 동안에만 HADR 클러스터 컨텍스트를 전환합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 클러스터 간 마이그레이션은 가용성 그룹의 작동 중단 시간을 최소화하면서 [!INCLUDE[win8](../../../includes/win8-md.md)] 또는 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 로의 OS 업그레이드를 지원합니다. 자세한 내용은 [OS 업그레이드를 위한 Always On 가용성 그룹의 클러스터 간 마이그레이션](http://msdn.microsoft.com/library/jj873730.aspx)을 참조하세요.  
   

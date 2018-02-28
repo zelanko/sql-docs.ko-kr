@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7b0ad2d6c9773860640bbf25ecac671dfae2dbe1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-status-page"></a>데이터베이스 미러링 모니터(상태 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 읽기 전용 페이지는 탐색 트리에서 현재 선택한 데이터베이스의 주 서버 인스턴스와 미러 서버 인스턴스에 대한 최신 미러링 상태를 표시합니다. 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 인스턴스에 해당하는 **상태** 표의 일부 셀은 회색으로 나타나고 **알 수 없음**을 표시합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 읽기 전용 페이지는 탐색 트리에서 현재 선택한 데이터베이스의 주 서버 인스턴스와 미러 서버 인스턴스에 대한 최신 미러링 상태를 표시합니다. 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 인스턴스에 해당하는 **상태** 표의 일부 셀은 회색으로 나타나고 **알 수 없음**을 표시합니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 미러링을 모니터링하려면**  
   
