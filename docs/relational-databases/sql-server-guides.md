@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cb5508fd58b6f5078d5c202e716109d58fbc8938
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4fba22c6d7a563f9645c1cf63f74b1becfc2869b
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="sql-server-guides"></a>SQL Server 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,6 +38,6 @@ ms.lasthandoff: 02/09/2018
 [페이지 및 익스텐트 아키텍처 가이드](../relational-databases/pages-and-extents-architecture-guide.md)  
 [마이그레이션 후 유효성 검사 및 최적화 가이드](../relational-databases/post-migration-validation-and-optimization-guide.md)  
 [쿼리 처리 아키텍처 가이드](../relational-databases/query-processing-architecture-guide.md)  
-[SQL Server 트랜잭션 잠금 및 행 버전 관리 지침](https://msdn.microsoft.com/library/jj856598)  
+[SQL Server 트랜잭션 잠금 및 행 버전 관리 지침](../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md)  
 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
 [스레드 및 태스크 아키텍처 가이드](../relational-databases/thread-and-task-architecture-guide.md)
