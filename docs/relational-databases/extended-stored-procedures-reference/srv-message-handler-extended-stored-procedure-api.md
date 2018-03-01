@@ -106,7 +106,7 @@ oserrtextlen
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **srv_message_handler** 함수를 사용하면 확장 저장 프로시저가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 중앙 집중식 오류 로깅 및 보고 기능과 통합될 수 있습니다. 확장 저장 프로시저의 이벤트에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경고를 설정할 수 있으며, SQL Server 에이전트가 이러한 경고 조건을 모니터링합니다.  
   
  오류 메시지가 더 길면 412바이트로 잘립니다.  

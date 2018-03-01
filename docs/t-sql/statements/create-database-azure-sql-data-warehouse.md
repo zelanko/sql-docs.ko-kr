@@ -65,13 +65,13 @@ Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(T
 *MAXSIZE*  
 기본값은 245,760GB(240TB).  
 
-**적용 대상:** 탄력성 성능 계층에 최적화 됨
+**적용 대상:** 탄력성 성능 계층에 최적화됨
 
 데이터베이스의 최대 허용 크기입니다. 데이터베이스는 MAXSIZE 이상으로 커질 수 없습니다. 
 
-**적용 대상:** 컴퓨팅 성능 계층에 최적화 됨
+**적용 대상:** 컴퓨팅 성능 계층에 최적화됨
 
-데이터베이스의 rowstore 데이터에 허용되는 최대 크기입니다. Rowstore 테이블, columnstore 인덱스의 deltastore 또는 클러스터된 columnstore 인덱스의 비클러스터된 인덱스에 저장된 데이터는 MAXSIZE 보다 커질 수 없습니다.  Columnstore 형식으로 압축된 데이터에는 크기 제한이 없으며 MAXSIZE에 의해 제한되지 않습니다.
+데이터베이스의 rowstore 데이터에 허용되는 최대 크기입니다. Rowstore 테이블, columnstore 인덱스의 deltastore 또는 클러스터된 columnstore 인덱스의 비클러스터된 인덱스에 저장된 데이터는 MAXSIZE 보다 커질 수 없습니다.  columnstore 형식으로 압축된 데이터에는 크기 제한이 없으며 MAXSIZE에 의해 제한되지 않습니다.
   
 SERVICE_OBJECTIVE  
 성능 수준을 지정합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 서비스 목표에 대한 자세한 내용은 [성능 계층](https://azure.microsoft.com/documentation/articles/performance-tiers/)을 참조하세요.  

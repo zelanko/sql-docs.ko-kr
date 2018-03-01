@@ -57,7 +57,7 @@ srvproc
 ## <a name="returns"></a>반환 값  
  현재 원격 저장 프로시저에 대한 논리 OR로 결합된 런타임 플래그가 들어 있는 비트맵. 현재 원격 저장 프로시저가 없으면 0이 반환되고 메시지가 생성됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 표에서는 각 런타임 플래그에 대해 설명합니다.  
   
 |런타임 플래그|Description|  
