@@ -112,7 +112,7 @@ msglen
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  클라이언트에 오류 메시지 또는 정보 메시지를 보내는 함수입니다. 보낼 각 메시지에 대해 한 번씩 호출됩니다.  
   
  **srv_sendrow**를 사용하여 모든 행(있는 경우)을 보내기 전후에 **srv_sendmsg**를 사용하여 순서에 상관없이 클라이언트에 메시지를 보낼 수 있습니다. **srv_senddone**을 사용하여 완료 상태를 보내기 전에는 모든 메시지(있는 경우)를 클라이언트로 보내야 합니다.  

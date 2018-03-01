@@ -52,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 |SRVDECIMALN|**decimal null**|**decimal** 데이터 형식으로 null 값이 허용됩니다.|  
 |SRVFLT4|**real**|4바이트 **real** 데이터 형식입니다.|  
 |SRVFLT8|**float**|8바이트 **float** 데이터 형식입니다.|  
-|SRVFLTN|**real** &#124; **null을 고정 해제**|**real** 또는 **float** 데이터 형식으로 null 값이 허용됩니다.|  
+|SRVFLTN|**real** &#124; **float null**|**real** 또는 **float** 데이터 형식으로 null 값이 허용됩니다.|  
 |SRVIMAGE|**image**|**image** 데이터 형식입니다.|  
 |SRVINT1|**tinyint**|1바이트 **tinyint** 데이터 형식입니다.|  
 |SRVINT2|**smallint**|2바이트 **smallint** 데이터 형식입니다.|  

@@ -82,7 +82,7 @@ count
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  클라이언트 요청으로 인해 서버에서 많은 명령을 실행하고 많은 결과 집합을 반환할 수 있습니다. 각 결과 집합에 대해 **srv_senddone** 에서 결과 완료 메시지를 클라이언트에 반환해야 합니다.  
   
  *count* 필드는 명령의 영향을 받는 행 수를 나타냅니다. *count* 필드에 개수가 포함되어 있는 경우 *status* 필드에 SRV_DONE_COUNT 플래그를 설정해야 합니다. 이 설정을 사용하면 클라이언트에서 *count* 값 0과 사용되지 않은 *count* 필드를 구분할 수 있습니다.  
