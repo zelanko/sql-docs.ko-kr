@@ -28,6 +28,8 @@ ms.lasthandoff: 09/01/2017
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata"></a>RxSqlServerData를 사용하여 SQL Server 데이터 개체 만들기(SQL과 R 심층 분석)
 
+이 문서는 SQL Server에서 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)을 사용하는 방법에 대한 데이터 과학 심층 분석 자습서의 일부입니다.
+
 지금까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들고 데이터 작업에 필요한 필요한 권한을 얻었습니다.  이 단계에서는 R에서 데이터 작업을 할 수 있도록 일부 개체를 만듭니다.
 
 ## <a name="create-the-sql-server-data-objects"></a>SQL Server 데이터 개체 만들기
