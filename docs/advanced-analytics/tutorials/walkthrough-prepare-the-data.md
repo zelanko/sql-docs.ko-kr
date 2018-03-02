@@ -162,7 +162,7 @@ SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니
 
     스크립트에서 파일을 다운로드하고 데이터베이스에 데이터를 자동으로 로드합니다. 이 작업은 다소 시간이 걸릴 수 있습니다. PowerShell 창에서 상태 메시지를 확인합니다.
       
-    대량 가져오기 또는 다른 단계가 실패하면 [문제 해결](#bkmk_Troubleshooting) 절에 설명된 대로 수동으로 데이터를 로드할 수 있습니다.
+    대량 가져오기 또는 다른 단계가 실패하면 [문제 해결](#bkmk_Troubleshooting) 섹션에 설명된 대로 수동으로 데이터를 로드할 수 있습니다.
 
 **결과(성공적으로 완료)**
 
@@ -178,7 +178,7 @@ This step (plugging in database information) takes 0.48 seconds.
 
 ## <a name="bkmk_Troubleshooting"></a>문제 해결
 
-PowerShell 스크립트에 문제가 있다면 수동으로 전체 혹은 일부를 실행할 수 있습니다. 이번 절에서 몇 가지 공통적인 문제와 해결 방법을 나열합니다.
+PowerShell 스크립트에 문제가 있다면 수동으로 전체 혹은 일부를 실행할 수 있습니다. 이번 섹션에서 몇 가지 공통적인 문제와 해결 방법을 나열합니다.
 
 ### <a name="powershell-script-didnt-download-the-data"></a>PowerShell 스크립트가 데이터를 다운로드하지 않음
 
