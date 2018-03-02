@@ -1,32 +1,33 @@
 ---
 title: "JDBC 드라이버 개요 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/18/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5caebf50c2f7ec29bef49b2b42bbd5a1452218a8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3783933de0579de9c0da9f227280656b3583b7b7
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 드라이버 개요
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  SQL Server 용 Microsoft JDBC Driver는 SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 Azure SQL 데이터베이스에 대 한 강력한 데이터 액세스를 제공 하는 유형 4 JDBC Java Database Connectivity () 4.2 규격 드라이버입니다.  
+  SQL Server 용 Microsoft JDBC 드라이버는 SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 Azure SQL 데이터베이스에 대 한 강력한 데이터 액세스를 제공 하는 유형 4 JDBC Java Database Connectivity () 4.2 규격 드라이버 .  
   
  이 섹션의 항목에서는 JDBC 드라이버를 사용하기 위한 시스템 요구 사항, JDBC 드라이버의 사용 방법 및 자세한 내용을 확인할 수 있는 위치를 비롯하여 JDBC 드라이버의 일반적인 개요를 제공합니다.  
   
@@ -44,7 +45,8 @@ ms.lasthandoff: 11/18/2017
 |[추가 JDBC 드라이버 정보 찾기](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|외부 리소스 링크를 포함하여 Microsoft JDBC 드라이버에 대한 추가 리소스를 확인할 수 있는 위치를 소개합니다.|  
 |[SQL Server용 Microsoft JDBC 드라이버 지원 매트릭스](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft JDBC Driver for SQL Server에 대한 지원 매트릭스 및 지원 드라이버에 대한 지원 주기 정책입니다.|  
 |[질문 &#40; 질문과 대답 FAQ &#41; JDBC 드라이버에 대 한](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC Driver에 대한 질문과 대답입니다.|  
-  
+|[Microsoft JDBC Driver for SQL Server의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server의 기능 종속성.|
+
 ## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 GitHub 리포지토리](https://github.com/microsoft/mssql-jdbc)  
  [JDBC 드라이버 API 참조](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  

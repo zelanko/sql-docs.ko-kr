@@ -1,27 +1,28 @@
 ---
 title: "기본 데이터 형식을 사용 하 여 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0fe716f57850c4daf3e3f319376626bee3195b6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 66da5301a12427ed50a212abf74a0700d89e8668
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-basic-data-types"></a>기본 데이터 형식 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,25 +35,25 @@ ms.lasthandoff: 11/18/2017
 |SQL Server 형식|JDBC 형식(java.sql.Types)|Java 언어 형식|  
 |----------------------|-----------------------------------|-------------------------|  
 |bigint|bigint|long|  
-|binary|BINARY|byte[]|  
+|BINARY|BINARY|byte[]|  
 |bit|BIT|boolean|  
 |char|CHAR|문자열|  
 |date|DATE|java.sql.Date|  
-|datetime|timestamp|java.sql.Timestamp|  
-|datetime2|timestamp|java.sql.Timestamp|  
+|datetime|TIMESTAMP|java.sql.Timestamp|  
+|datetime2|TIMESTAMP|java.sql.Timestamp|  
 |datetimeoffset(2)|microsoft.sql.Types.DATETIMEOFFSET|microsoft.sql.DateTimeOffset|  
 |decimal|DECIMAL|java.math.BigDecimal|  
 |float|DOUBLE|double|  
 |image|LONGVARBINARY|byte[]|  
 |int|INTEGER|int|  
 |money|DECIMAL|java.math.BigDecimal|  
-|nchar|CHAR<br /><br /> NCHAR(Java SE 6.0)|문자열|  
+|NCHAR|CHAR<br /><br /> NCHAR(Java SE 6.0)|문자열|  
 |ntext|LONGVARCHAR<br /><br /> LONGNVARCHAR(Java SE 6.0)|문자열|  
 |numeric|NUMERIC|java.math.BigDecimal|  
 |nvarchar|VARCHAR<br /><br /> NVARCHAR(Java SE 6.0)|문자열|  
 |nvarchar(max)|VARCHAR<br /><br /> NVARCHAR(Java SE 6.0)|문자열|  
 |real|REAL|float|  
-|smalldatetime|timestamp|java.sql.Timestamp|  
+|smalldatetime|TIMESTAMP|java.sql.Timestamp|  
 |smallint|SMALLINT|short|  
 |smallmoney|DECIMAL|java.math.BigDecimal|  
 |text|LONGVARCHAR|문자열|  
@@ -66,12 +67,11 @@ ms.lasthandoff: 11/18/2017
 |varchar|VARCHAR|문자열|  
 |varchar(max)|VARCHAR|문자열|  
 |xml|LONGVARCHAR<br /><br /> LONGNVARCHAR(Java SE 6.0)|문자열<br /><br /> SQLXML|  
+|sqlvariant|SQLVARIANT|개체|  
   
  (시간 함께 java.sql.Time을 사용 하는 방법 1) [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 설정 해야 형식에는 **sendTimeAsDatetime** 연결 속성을 false입니다.  
   
  (의 값에 프로그래밍 방식으로 액세스할 수 2) **datetimeoffset** 와 [DateTimeOffset 클래스](../../connect/jdbc/reference/datetimeoffset-class.md)합니다.  
-  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sqlvariant 데이터 형식은 현재 JDBC 드라이버에서 지원 되지 않습니다. sqlvariant 데이터 형식의 열이 포함된 테이블에서 쿼리를 사용하여 데이터를 검색하면 예외가 발생합니다.  
   
  다음 섹션에서는 JDBC 드라이버와 기본 데이터 형식을 사용하는 방법의 예를 보여 줍니다. Java 응용 프로그램의 기본 데이터 형식을 사용 하는 방법의 더 자세한 예제를 보려면 [기본 데이터 형식 샘플](../../connect/jdbc/basic-data-types-sample.md)합니다.  
   

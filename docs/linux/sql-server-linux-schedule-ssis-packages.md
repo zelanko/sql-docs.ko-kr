@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 005757c0a1b1f4309201fc7b7c63987f4ff3bcb8
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 7543c17a0ac9a1014658f83f0c8595bff2cda608
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>일정 SQL Server Integration Services 패키지 cron 사용 하 여 Linux에서 실행
 
@@ -80,3 +80,9 @@ Crontab 파일을 저장 하 고 편집기를 종료 합니다.
 부분적으로이 문서의 예제를 설명 하는 데 도움이 되는 출력의 예는 다음과 같습니다.
 
 ![자세한 설명은 부분 crontab 형식](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
+
+## <a name="related-content-about-ssis-on-linux"></a>Linux에서 SSIS에 대 한 관련된 내용
+-   [추출, 변환 및 SSIS와 Linux에서 데이터 로드](sql-server-linux-migrate-ssis.md)
+-   [Linux에서 SQL Server Integration Services (SSIS)를 설치 합니다.](sql-server-linux-setup-ssis.md)
+-   [Linux에서 SQL Server Integration Services ssis conf 구성](sql-server-linux-configure-ssis.md)
+-   [Linux에서 SSIS에 대 한 알려진된 문제 및 제한](sql-server-linux-ssis-known-issues.md)

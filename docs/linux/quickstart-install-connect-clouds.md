@@ -1,6 +1,6 @@
 ---
 title: "클라우드의 SQL Server 2017 시작 | Microsoft Docs"
-description: "이 빠른 시작 자습서에는 SQL Server 2017 linux 원하는 클라우드에서 실행 하는 방법을 보여 줍니다."
+description: "이 빠른 시작에서는 SQL Server 2017 linux 원하는 클라우드에서 실행 하는 방법을 보여 줍니다."
 author: annashres
 ms.author: annashres
 manager: craigg
@@ -12,17 +12,17 @@ ms.component:
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="run-the-sql-server-2017-in-the-cloud"></a>SQL Server 2017은 클라우드에서 실행
+# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>빠른 시작: SQL Server 2017은 클라우드에서 실행
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 빠른 시작 자습서에서는 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 또는 사용자가 선택한 클라우드에 Ubuntu에 SQL Server 2017을 설치 합니다. 로 이동 [Azure 포털에서 Linux SQL Server 가상 컴퓨터를 프로 비전](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) Azure에서 Linux에서 SQL Server를 실행 합니다.
+이 퀵 스타트의 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 또는 사용자가 선택한 클라우드에 Ubuntu에 SQL Server 2017를 설치 합니다. 로 이동 [Azure 포털에서 Linux SQL Server 가상 컴퓨터를 프로 비전](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) Azure에서 Linux에서 SQL Server를 실행 합니다.
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)

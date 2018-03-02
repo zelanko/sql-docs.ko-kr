@@ -4,7 +4,7 @@ description: "이 퀵 스타트의 Ubuntu에 SQL Server 2017을 설치할 로컬
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,13 +15,13 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: e0dc1d24963e1e00018d5b5ac1418d68a4a22577
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 9aa37f843d446357997bf553ca87d2d93b41bfb9
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Ubuntu에서 데이터베이스를 만들고 SQL Server 설치
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>SQL Server를 설치 하는 빠른 시작: ubuntu 데이터베이스를 만듭니다.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

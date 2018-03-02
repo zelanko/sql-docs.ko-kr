@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e33a91587f393c6c510bdb16fe9c71dc2f422eac
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>SQL Server에서 기계 학습 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ Microsoft은 온-프레미스와 클라우드 모두에 대 한 기계 학습 �
 
   SQL Server 2017 부터는 SQL Server에서 Python 코드를 지금 사용할 수 있습니다. 로 변경 되었습니다 (더 포함 된 상태가 될 때까지!), 여러 언어 및 이름을 솔루션에 대 한 광범위 한 지원이 반영 되도록 [!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]합니다. 이제 Python 또는 R 코드를 실행할 SQL 도구를 사용 하 여 기계 학습 작업을 자동화할 수 있습니다. 또는와 SQL Server 컴퓨터를 사용 하는 여는 _계산 컨텍스트_ 원격 개발 환경에서 실행 된 작업에 대 한 합니다.
 
-    + [SQL Server에서 Python에 대 한 아키텍처 개요](/python/architecture-overview-sql-server-python.md)
+    + [SQL Server에서 Python에 대 한 아키텍처 개요](../advanced-analytics/python/architecture-overview-sql-server-python.md)
     + [SQL Server R Services 또는 시스템 학습 서비스 설정](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016

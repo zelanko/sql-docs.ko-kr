@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: 5b94646e5e58db531369dcf498ada5f85b6a7902
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 새로운 기능
 
@@ -66,12 +66,13 @@ Linux에서 SQL Server를 설치 하려면 다음 자습서 중 하나를 사용
 
 - [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
-- [Ubuntu 설치](quickstart-install-connect-ubuntu.md)
+- [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-docker.md)
 - [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-Linux에서 SQL Server에 대 한 다른 정보에 대 한 참조는 [개요](sql-server-linux-overview.md)합니다. 패키지 다운로드 및 지원 되지 않는 기능 및 알려진된 문제 목록에 대 한 참조는 [릴리스 정보](sql-server-linux-release-notes.md)합니다.
-
 SQL Server 2017에 도입 된 기타 개선 기능, 참조 [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)합니다.
+
+> [!TIP]
+> 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](sql-server-linux-faq.md)합니다.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

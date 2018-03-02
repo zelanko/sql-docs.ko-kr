@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d2715583f9898afe9101be4d24729547730ae376
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 70e5bddb584135585042d9521ab580777e0e8b5a
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux에서 SQL Server Integration Services (SSIS)를 설치 합니다.
 
@@ -148,3 +148,9 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 SSIS 패키지에서 Linux를 실행 하려면 참조 [추출, 변환 및 SSIS와 Linux에서 SQL Server에 대 한 데이터 로드](sql-server-linux-migrate-ssis.md)합니다.
 
 Linux에서 추가 SSIS 설정을 구성 하려면 참조 [ssis conf와 Linux에서 SQL Server Integration Services 구성](sql-server-linux-configure-ssis.md)합니다.
+
+## <a name="related-content-about-ssis-on-linux"></a>Linux에서 SSIS에 대 한 관련된 내용
+-   [추출, 변환 및 SSIS와 Linux에서 데이터 로드](sql-server-linux-migrate-ssis.md)
+-   [Linux에서 SQL Server Integration Services ssis conf 구성](sql-server-linux-configure-ssis.md)
+-   [Linux에서 SSIS에 대 한 알려진된 문제 및 제한](sql-server-linux-ssis-known-issues.md)
+-   [일정 SQL Server Integration Services 패키지 cron 사용 하 여 Linux에서 실행](sql-server-linux-schedule-ssis-packages.md)

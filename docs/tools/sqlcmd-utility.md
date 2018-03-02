@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlcmd
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,22 +29,23 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 78bad0a1dfd518bb29c8bbdc5f04d0c173756e9f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > SQL Server 2014 및 아래에 대 한 참조 [sqlcmd 유틸리티](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx)합니다.
 
+ > Sqlcmd를 사용 하 여 Linux에서, 참조 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
 
   **sqlcmd** 유틸리티를 사용 하면 TRANSACT-SQL 문, 시스템 프로시저 및 명령 프롬프트에서 스크립트 파일에 입력 **쿼리 편집기** SQLCMD 모드, Windows 스크립트 파일 또는 SQL Server 에이전트 작업의 운영 체제 (Cmd.exe) 작업 단계에서입니다. 이 유틸리티는 ODBC를 사용 하 여 TRANSACT-SQL 일괄 처리 실행. 
   
@@ -55,14 +57,14 @@ ms.lasthandoff: 01/17/2018
   SSMS에서 sqlcmd 문을 실행하려면 위쪽 탐색 쿼리 메뉴 드롭다운에서 SQLCMD 모드를 선택합니다.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS)에서는 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] 실행에서 일반 및 SQLCMD 모드에 대 한 SqlClient **쿼리 편집기**합니다. 명령줄에서 **sqlcmd** 를 실행할 경우 **sqlcmd** 는 ODBC 드라이버를 사용합니다. 서로 다른 기본 옵션이 적용될 수 있으므로 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] SQLCMD 모드 및 **sqlcmd** 유틸리티에서 동일한 쿼리를 실행할 때 다른 동작이 수행될 수 있습니다.  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS)에서는 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] 실행에서 일반 및 SQLCMD 모드에 대 한 SqlClient **쿼리 편집기**합니다. 명령줄에서 **sqlcmd** 를 실행할 경우 **sqlcmd** 는 ODBC 드라이버를 사용합니다. 서로 다른 기본 옵션이 적용될 수 있으므로 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] SQLCMD 모드 및 **sqlcmd** 유틸리티에서 동일한 쿼리를 실행할 때 다른 동작이 수행될 수 있습니다.  
 >   
   
  현재는 **sqlcmd** 를 실행할 때 명령줄 옵션과 값 사이에 공백을 넣을 필요가 없습니다. 하지만 후속 릴리스에서는 명령줄 옵션과 값 사이에 공백을 넣어야 할 수도 있습니다.  
  
  다른 항목:
 - [sqlcmd 유틸리티 시작](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [sqlcmd 유틸리티 사용](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [sqlcmd 유틸리티 사용](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>구문  
   
@@ -402,7 +404,7 @@ sqlcmd
   
 -   **char(** *n* **)**, where 1<=n<=8000  
   
--   **nchar(n** *n* **)**, where 1<=n<=4000  
+-   **nchar (n**  *n*  **)**, 여기서 1 < = n < = 4000  
   
 -   **varchar(n** *n* **)**, where 1<=n<=8000  
   
@@ -452,7 +454,7 @@ sqlcmd
   
  각 항목이 나타내는 의미는 다음과 같습니다.  
   
- `x`= SQL Server에서 처리 된 트랜잭션의 수입니다.  
+ `x` = SQL Server에서 처리 된 트랜잭션의 수입니다.  
   
  `t1` = 모든 트랜잭션의 총 시간  
   

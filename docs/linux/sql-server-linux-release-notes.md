@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: a661da062d65ca699627bc2b5bf0683e5fe08806
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
-ms.translationtype: HT
+ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
 
@@ -39,13 +39,9 @@ ms.lasthandoff: 02/21/2018
 > [!TIP]
 > 자세한 내용은 참조는 [시스템 요구 사항](sql-server-linux-setup.md#system) Linux에서 SQL Server에 대 한 합니다. SQL Server 2017에 대 한 최신 지원 정책에 대 한 참조는 [Microsoft SQL Server에 대 한 기술 지원 정책을](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)합니다.
 
-## <a name="supported-client-tools"></a>지원 되는 클라이언트 도구
+## <a name="tools"></a>Tools
 
-| 도구 | 최소 버전 |
-|-----|-----|
-| [Windows 용 SQL Server Management Studio (SSMS)](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [Visual Studio 용 SQL Server Data Tools](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com) 와 [mssql 확장](https://aka.ms/mssql-marketplace) | 최신 |
+기존 클라이언트 도구는 대부분 SQL Server를 대상으로 하는 Linux에서 실행 중인 SQL Server 대상으로 원활 하 게 지정할 수 있습니다. 일부 도구는 Linux에서 작동 하도록 특정 버전 요구 사항이 있을 수 있습니다. SQL Server 도구 목록은 전체 참조 [SQL 도구 및 SQL Server 유틸리티](../tools/overview-sql-tools.md)합니다.
 
 ## <a name="release-history"></a>릴리스 기록
 
@@ -180,6 +176,7 @@ SQL Server 2017의 GA (일반 공급) 릴리스입니다. 이 릴리스에 대 �
 | &nbsp; | Reporting Services |
 | &nbsp; | 데이터베이스 엔진 서비스 |
 | &nbsp; | Master  Data  Services |
+| &nbsp; | Distributed Transaction Coordinator (DTC) |
 
 ## <a name="known-issues"></a>알려진 문제
 
@@ -328,7 +325,9 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 
 - [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
-- [Ubuntu 설치](quickstart-install-connect-ubuntu.md)
+- [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-ubuntu.md)
 - [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [실행 및 연결 - 클라우드](quickstart-install-connect-clouds.md)
+
+자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](sql-server-linux-faq.md)합니다.

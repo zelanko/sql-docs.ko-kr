@@ -1,7 +1,7 @@
 ---
 title: "Azure Active Directory 인증을 사용 하 여 연결 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
@@ -9,31 +9,32 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3dde204d199935b25f492ed23fadb3c2d4e70a99
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 28c8e53032cacb6620aeb304c228c35deec9e7a6
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용 하 여 연결
 이 문서에서는 SQL Server 용 Microsoft JDBC Driver 6.0 (또는 이상)과 Azure Active Directory 인증 기능을 사용 하는 Java 응용 프로그램을 개발 하는 방법을 설명 합니다.
 
-SQL Server 용 Microsoft JDBC Driver 6.0부터, Azure SQL 데이터베이스 v 12에 연결 하는 메커니즘인 Direcoty AAD (Azure Active) 인증 사용할 수 있습니다 Azure Active Directory에서 id를 사용 합니다. Azure Active Directory 인증을 사용 하 여 중앙에서 데이터베이스 사용자 및 SQL Server 인증 하는 대신 id를 관리 하 합니다. JDBC Driver 6.0 (또는 이상)를 사용 하면 Azure SQL DB에 연결 하는 데 JDBC 연결 문자열에 Azure Active Directory 자격 증명을 지정할 수 있습니다. Azure Active Directory 인증을 구성 하는 방법에 대 한 내용은 방문 [SQL 데이터베이스에서 사용 하 여 Azure Active Directory 인증 연결할](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)합니다. 
+Azure SQL 데이터베이스 v 12에 연결 하는 메커니즘은 Azure Active Directory (AAD) 인증을 사용할 수 있습니다 Azure Active Directory에서 id를 사용 합니다. Azure Active Directory 인증을 사용 하 여 중앙에서 데이터베이스 사용자 및 SQL Server 인증 하는 대신 id를 관리 하 합니다. JDBC 드라이버를 사용 하면 Azure SQL DB에 연결 하는 데 JDBC 연결 문자열에 Azure Active Directory 자격 증명을 지정할 수 있습니다. Azure Active Directory 인증을 구성 하는 방법에 대 한 내용은 방문 [SQL 데이터베이스에서 사용 하 여 Azure Active Directory 인증 연결할](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)합니다. 
 
 Azure Active Directory 인증을 지원 하기 위해 두 개의 새로운 연결 속성이 추가 되었습니다.
-*   **인증**: 연결에 사용할 SQL 인증 방법을 나타내려면이 속성을 사용 합니다. 가능한 값은: **ActiveDirectoryIntegrated**, **ActiveDirectoryPassword**, **SqlPassword** 및 기본 **NotSpecified** .
-    * 사용 하 여 ' 인증 ActiveDirectoryIntegrated =' Windows 통합된 인증을 사용 하 여 SQL 데이터베이스에 연결 합니다. 이 인증 모드를 사용 하는 온-프레미스 페더레이션 서비스 ADFS (Active Directory)를 Azure AD와 클라우드에서 페더레이션 해야 합니다. 설치 되 면 도메인 가입 된 컴퓨터에 로그온 하면 ceredentials 입력 하지 않고도 Azure SQL DB를 액세스할 수 있습니다. 
+*   **인증**: 연결에 사용할 SQL 인증 방법을 나타내려면이 속성을 사용 합니다. 가능한 값은: **ActiveDirectoryIntegrated**, **ActiveDirectoryPassword**, **SqlPassword**, 및 기본 **NotSpecified**.
+    * 사용 하 여 ' 인증 ActiveDirectoryIntegrated =' Windows 통합된 인증을 사용 하 여 SQL 데이터베이스에 연결 합니다. 이 인증 모드를 사용 하는 온-프레미스 페더레이션 서비스 ADFS (Active Directory)를 Azure AD와 클라우드에서 페더레이션 해야 합니다. 이 설치 되 면 Kerberos 티켓 뿐만 아니라, 도메인 가입 된 컴퓨터에 로그온 하면 자격 증명 입력 하지 않고도 Azure SQL DB를 액세스할 수 있습니다. 
     * 사용 하 여 ' 인증 ActiveDirectoryPassword =' Azure AD 사용자 이름 및 암호를 사용 하 여 SQL 데이터베이스에 연결 합니다.
     * 사용 하 여 ' 인증 SqlPassword =' 사용자 이름/사용자 및 암호 속성을 사용 하 여 SQL Server에 연결 합니다.
-    * 사용 하 여 ' authentication = NotSpecified' 필요 하지 않습니다. 이러한 인증 방법의 경우 기본적으로 두십시오.
+    * 사용 하 여 ' 인증 NotSpecified =' 이러한 인증 방법을 필요할 경우 기본값으로 둡니다.
 
 *   **accessToken**: 액세스 토큰을 사용 하 여 SQL 데이터베이스에 연결 하려면이 속성을 사용 합니다. 만 DriverManager 클래스에서 getConnection() 메서드의 Properties 매개 변수를 사용 하 여 accessToken은 설정할 수 있습니다. 연결 URL에 사용할 수 없습니다.  
 
@@ -43,23 +44,22 @@ Azure Active Directory 인증을 지원 하기 위해 두 개의 새로운 연�
 ## <a name="client-setup-requirements"></a>클라이언트 설치 요구 사항
 다음 구성 요소가 클라이언트 컴퓨터에 설치 되어 있는지 확인 하세요.
 * Java 7 이상
-*   Microsoft JDBC Driver 6.2 (또는 이상) for SQL Server
-*   액세스 토큰 기반된 인증 모드를 사용 하는 경우 해야 [azure-active directory-라이브러리-에-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 및 종속성이이 문서에서 예제를 실행 합니다. 참조 **액세스 토큰을 사용 하 여 연결** 자세한 내용은 섹션.
-*   ActiveDirectoryPassword 인증 모드를 사용 하는 경우 해야 [azure-active directory-라이브러리-에-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 와 그 종속성입니다. 참조 **ActiveDirectoryPassword 인증 모드를 사용 하 여 연결** 자세한 내용은 섹션.
-*   ActiveDirectoryIntegrated 모드를 사용 하는 경우 (ADALSQL SQL Server 용 Active Directory 인증 라이브러리를 설치 해야 합니다. DLL) 및 sqljdbc_auth.dll 합니다.
-    * ADALSQL 합니다. DLL 응용 프로그램을 Azure Active Directory를 사용 하 여 Microsoft Azure SQL 데이터베이스에 인증할 수 있습니다. DLL 다운로드 [Microsoft SQL Server 용 Microsoft Active Directory 인증 라이브러리](http://www.microsoft.com/en-us/download/details.aspx?id=48742)
-    * 에 대 한 ADALSQL 합니다. DLL 두 이진 버전 X86 및 X64 다운로드할 수 있는 합니다. 잘못 된 이진 버전은 설치 DLL가 없는 경우 드라이버에서 다음 오류를 발생 한 경우: "adalsql.dll을 로드할 수 없습니다 (Authentication =...). 오류 코드: 0x2. "입니다. 이런 경우에서 ADALSQL의 올바른 버전을 다운로드 합니다. DLL입니다. 
-    * 드라이버 패키지에 sqljdbc_auth.dll 입니다. JDBC 드라이버를 설치한 컴퓨터에서 Windows 시스템 경로에 있는 디렉터리를 sqljdbc_auth.dll 파일을 복사 합니다. 또는 java.libary.path 시스템 속성에 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 
-    * x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 sqljdbc_auth.dll 파일을 사용하십시오. 
-    * 32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 sqljdbc_auth.dll 파일을 사용하십시오. 
-    * 예를 들어 32 비트 JVM을 사용 하는 경우 JDBC 드라이버는 기본 디렉터리에 설치 되어 있으면 Java 응용 프로그램을 시작 하는 경우에 다음 가상 컴퓨터 (VM) 인수를 사용 하 여 DLL의 위치를 지정할 수 있습니다.  
-        ```
-        -Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86
-        ```
+*   Microsoft JDBC Driver 6.0 (또는 이상) for SQL Server
+*   액세스 토큰 기반 인증 모드를 사용 하는 경우 해야 [azure-active directory-라이브러리-에-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 및 종속성이이 문서에서 예제를 실행 합니다. 자세한 내용은 참조 **액세스 토큰을 사용 하 여 연결** 섹션.
+*   ActiveDirectoryPassword 인증 모드를 사용 하는 경우 해야 [azure-active directory-라이브러리-에-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 와 그 종속성입니다. 자세한 내용은 참조 **ActiveDirectoryPassword 인증 모드를 사용 하 여 연결** 섹션.
+*   ActiveDirectoryIntegrated 모드를 사용 하는 경우 azure-active directory-라이브러리-에-java 및 해당 종속성이 필요 합니다. 자세한 내용은 참조 **ActiveDirectoryIntegrated 인증 모드를 사용 하 여 연결** 섹션.
     
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>ActiveDirectoryIntegrated 인증 모드를 사용 하 여 연결
+ 버전 6.4 Microsoft JDBC Driver ActiveDirectoryIntegrated 인증 Kerberos 티켓을 사용 하 여 여러 플랫폼 (Windows/Linux 및 Mac)에 대 한 지원을 추가 합니다.
+참조 [Windows, Linux 및 Mac에서 설정 하는 Kerberos 티켓](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) 내용을 확인 합니다. 또는 windows에서 sqljdbc_auth.dll JDBC 드라이버와 함께 ActiveDirectoryIntegrated 인증용 데도 수 있습니다.
+
+> [!NOTE]
+>  이전 버전의 드라이버를 사용 하는 경우이 옵션을 선택 [링크](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 이 인증 모드를 사용 하는 데 필요한 각 종속성에 대 한 합니다. 
+
 다음 예제에서는 사용 하는 방법을 보여 줍니다. ' authentication = ActiveDirectoryIntegrated' 모드입니다. Azure Active Directory와 페더레이션된 도메인에 가입된 컴퓨터에이 예제를 실행 합니다. 포함 된 데이터베이스 사용자를 Azure AD 보안 주체에 또는 그룹 중 하나를 나타내는 있습니다에, 데이터베이스에 존재 해야 합니다 속하며 CONNECT 권한이 가져야 합니다. 
-    
+
+빌드하고 클라이언트 컴퓨터에서 예제를 실행 하기 전에 (기반이, 예제를 실행 하려는), 다운로드는 [azure-active directory-라이브러리-에-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 및 해당 종속성을 Java 빌드 경로에 포함
+
 서버/데이터베이스 이름을 예를 실행 하기 전에 다음 줄에서 사용자 서버/데이터베이스의 이름을 바꿉니다.
 
 ```
@@ -92,10 +92,66 @@ public class IntegratedExample {
     }
 }
 ```
-암호가 필요 하지 않은 및 Azure Active Directory와 페더레이션된 도메인에 가입 된 컴퓨터에서이 예제를 실행 합니다. Windows 자격 증명 자동으로 사용 됩니다. 연결이 설정 되 면 다음과 같은 메시지가 표시 됩니다.
+Kerberos 티켓을 사용 하 여 클라이언트 컴퓨터에서 자동으로이 예제를 실행 하 고 암호가 필요 합니다. 연결 된 경우에 다음과 같은 메시지가 나타납니다.
 ```
 You have successfully logged on as: <your domain user name>
 ```
+
+### <a name="set-kerberos-ticket-on-windows-linux-and-mac"></a>Windows, Linux 및 Mac에서 Kerberos 티켓을 설정 합니다.
+
+현재 사용자는 Windows 도메인 계정에 연결 하는 Kerberos 티켓을 설정 해야 합니다. 주요 단계를 요약 한 아래에 포함 되어 있습니다.
+
+#### <a name="windows"></a>창
+JDK와 함께 제공 `kinit` 가입 된 도메인에 KDC (키 배포 센터)에서 TGT를 가져오는 데 사용할 수 있는 Azure Active Directory와 페더레이션 하는 컴퓨터입니다.
+
+##### <a name="step-1-ticket-granting-ticket-retrieval"></a>1 단계: 티켓 허용 티켓 검색
+- **실행**: Windows
+- **작업**:
+  - 명령을 사용 하 여 `kinit username@DOMAIN.COMPANY.COM` TGT는 KDC에서 가져오려는 다음 물어봅니다 도메인 암호입니다.
+  - 사용 하 여 `klist` 사용 가능한 티켓을 볼 수 있습니다. kinit에 성공 하면 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM 티켓을 표시 되어야 합니다.
+
+> [!NOTE]
+>  지정 해야 할 수도 있습니다는 `.ini` 파일 `-Djava.security.krb5.conf` KDC 찾을 응용 프로그램에 대 한 합니다.
+
+#### <a name="linux-and-mac"></a>Linux 및 Mac
+
+##### <a name="requirements"></a>요구 사항
+Kerberos 도메인 컨트롤러를 쿼리 하기 위해 Windows 도메인에 가입 된 컴퓨터에 대 한 액세스
+
+##### <a name="step-1-find-kerberos-kdc"></a>1 단계: Kerberos KDC 찾기
+- **실행**: Windows 명령줄
+- **동작**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` (여기서 "DOMAIN.COMPANY.COM" 매핑됩니다 도메인의 이름)
+- **샘플 출력**
+  ```
+  DC: \\co1-red-dc-33.domain.company.com
+  Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
+  ...
+  The command completed successfully
+  ```
+- **정보를 추출할** DC 이름,이 경우 `co1-red-dc-33.domain.company.com`
+
+##### <a name="step-2-configuring-kdc-in-krb5conf"></a>2 단계: krb5.conf에서 KDC를 구성합니다.
+- **실행**: Linux/Mac
+- **작업**: /etc/krb5.conf 선택한 편집기에서 편집 합니다. 다음 키를 구성
+  ```
+  [libdefaults]
+    default_realm = DOMAIN.COMPANY.COM
+   
+  [realms]
+  DOMAIN.COMPANY.COM = {
+     kdc = co1-red-dc-28.domain.company.com
+  }
+  ```
+  그런 다음, krb5.conf 파일 및 종료
+
+> [!NOTE]
+>  도메인은 모두 대문자로 이어야 합니다.
+
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>3 단계: 테스트 티켓 허용 티켓 검색
+- **실행**: Linux/Mac
+- **작업**:
+  - 명령을 사용 하 여 `kinit username@DOMAIN.COMPANY.COM` TGT는 KDC에서 가져오려는 다음 물어봅니다 도메인 암호입니다.
+  - 사용 하 여 `klist` 사용 가능한 티켓을 볼 수 있습니다. kinit에 성공 하면 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM 티켓을 표시 되어야 합니다.
 
 ## <a name="connecting-using-activedirectorypassword-authentication-mode"></a>ActiveDirectoryPassword 인증 모드를 사용 하 여 연결
 다음 예제에서는 사용 하는 방법을 보여 줍니다. ' authentication = ActiveDirectoryPassword' 모드입니다.
@@ -140,7 +196,7 @@ public class UserPasswordExample {
     }
 }
 ```
-연결이 설정 되 면 출력으로 다음과 같은 메시지가 나타납니다.
+연결이 설정 되 면 다음과 같은 메시지가 출력으로 나타납니다.
 ```
 You have successfully logged on as: <your user name>
 ```
@@ -152,7 +208,7 @@ You have successfully logged on as: <your user name>
 ## <a name="connecting-using-access-token"></a>액세스 토큰을 사용 하 여 연결
 응용 프로그램/서비스 Azure Active Directory에서 액세스 토큰을 검색 하는 사용 하 여 SQL Azure 데이터베이스에 연결할 수 있으며 Note DriverManager 클래스 getConnection() 메서드의 Properties 매개 변수를 사용 하 여 해당 accessToken 설정할만 수 있습니다. 연결 문자열에 사용할 수 없습니다.
  
-다음 예제에서는 액세스 토큰 기반된 인증을 사용 하 여 Azure SQL 데이터베이스에 연결 하는 단순한 Java 응용 프로그램을 포함 합니다. 빌드하고 예제를 실행 하기 전에 다음 단계를 수행 합니다.
+다음 예제에서는 액세스 토큰 기반 인증을 사용 하 여 Azure SQL 데이터베이스에 연결 하는 단순한 Java 응용 프로그램을 포함 합니다. 빌드하고 예제를 실행 하기 전에 다음 단계를 수행 합니다.
 1.  서비스에 대 한 Azure Active Directory에 응용 프로그램 계정을 만듭니다.
     1. Azure 관리 포털에 로그인
     2. 왼쪽 탐색 창에서에서 Azure Active Directory 클릭
@@ -163,23 +219,20 @@ You have successfully logged on as: <your user name>
     7. Mytokentest 응용 프로그램에 대 한 이름으로 입력 하 고 "웹 응용 프로그램 및/또는 웹 API"를 선택한 다음 클릭 합니다.
     8. 이 응용 프로그램은 데몬/서비스 및 웹 응용 프로그램이 아닌을 가정할 수 없는 로그인 URL 또는 앱 ID URI입니다. 이 두 필드에 대 한 입력 http://mytokentest
     9. Azure 포털에서 계속 하는 동안 응용 프로그램의 구성 탭을 클릭
-    10. 클라이언트 ID 값을 찾아 복사, 하면 나중에 필요 (즉, 응용 프로그램을 구성 하는 경우  a4bbfe26-dbaa-4fec-8ef5-223d229f647d)입니다. 아래 스냅숏을 참조 하십시오.
+    10. 클라이언트 ID 값을 찾아 복사 제외 하 고, 지정 해야이 나중에 응용 프로그램 (예를 들어 a4bbfe26-dbaa-4fec-8ef5-223d229f647d)을 구성 합니다. 스냅숏을 참조 합니다.
     11. "키" 섹션에서 키의 기간을 선택 하 여 구성을 저장 및 나중에 사용할 키를 복사 합니다. 클라이언트 암호입니다.
     12. 아래쪽에 "끝점 보기"를 클릭 하 고 나중에 사용할 "OAUTH 2.0 권한 부여 끝점" 아래에서 URL을 복사 합니다. STS URL입니다.
 
-
-![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)
-
-
-2. Azure Active Directory 관리자 및 응용 프로그램 사용자에 대 한 포함된 된 데이터베이스 사용자 T-SQL 명령 프로 비전을 사용 하 여 Azure SQL Server의 사용자 데이터베이스에 로그온 합니다. 참조는 [SQL 데이터베이스 또는 SQL 데이터 웨어하우스를 사용 하 여 Azure Active Directory 인증 여 연결할](https://azure.microsoft.com/en-us/documentation/articles/sql-database-aad-authentication/) Azure Active Directory 관리자 및 포함된 된 데이터베이스 사용자를 만드는 방법에 대 한 자세한 내용은 합니다.
+    ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
+2. Azure Active Directory 관리자 및 주 응용 프로그램에 대 한 포함된 된 데이터베이스 사용자 T-SQL 명령 프로 비전을 사용 하 여 Azure SQL Server의 사용자 데이터베이스에 로그온 합니다. 참조는 [SQL 데이터베이스 또는 SQL 데이터 웨어하우스를 사용 하 여 Azure Active Directory 인증 여 연결할](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) Azure Active Directory 관리자 및 포함된 된 데이터베이스 사용자를 만드는 방법에 대 한 자세한 내용은 합니다.
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
     ```
 
-3.  클라이언트 컴퓨터에서 (기반이, 예제를 실행 하려는), 다운로드는 [azure-active directory-라이브러리-에-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 라이브러리 및 해당 종속성을 Java 빌드 경로에 포함 합니다. 이 라이브러리에서 Api를 사용 하 여 Azure AD에서 액세스 토큰을 검색 하는 대로이 특정 예제를 실행 하려면 azure-active directory-라이브러리-에-java만 필요한 것을 참고 합니다. 액세스 토큰을 이미 있는 경우이 단계를 건너뛸 수 있습니다. 참고 액세스 토큰을 검색 하는 예제 섹션을 제거 해야도 합니다.
+3.  클라이언트 컴퓨터에서 (기반이, 예제를 실행 하려는), 다운로드는 [azure-active directory-라이브러리-에-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 라이브러리 및 해당 종속성을 Java 빌드 경로에 포함 합니다. 이 라이브러리에서 Api를 사용 하 여 Azure AD에서 액세스 토큰을 검색 하는 대로이 특정 예제를 실행 하려면 azure-active directory-라이브러리-에-java만 필요한 것을 참고 합니다. 액세스 토큰을 이미 있는 경우이 단계를 건너뛸 수 있습니다. 또한 검색 액세스 토큰 예제에서 섹션을 제거 해야 하는 참고 합니다.
 
-아래 예제에서 STS URL의 클라이언트 ID, 클라이언트 암호, 서버 및 데이터베이스 이름을 값으로 바꿉니다.
+다음 예에서 STS URL, 클라이언트 ID, 클라이언트 암호, 서버 및 데이터베이스 이름을 값으로 바꿉니다.
 
 ```
 import java.sql.Connection;
@@ -230,7 +283,7 @@ public class TokenBasedExample {
 }
 ``` 
 
-연결에 성공한 경우 출력으로 다음과 같은 메시지가 나타납니다.
+연결이 성공적 이면 다음과 같은 메시지가 출력으로 나타납니다.
 ```
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    

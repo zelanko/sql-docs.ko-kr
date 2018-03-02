@@ -1,27 +1,28 @@
 ---
 title: "성능 및 안정성 JDBC 드라이버로 개선 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 51d9961583e0e4cb9f0f50e0b5555e33680e2e51
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d8b2d716ada4cb786eb141c0f49dcad41c5231c4
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>JDBC 드라이버로 성능 및 안정성 개선
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,6 +40,7 @@ ms.lasthandoff: 11/18/2017
 |[문 및 결과 집합 사용](../../connect/jdbc/working-with-statements-and-result-sets.md)|문 또는 결과 집합 개체를 사용 하는 경우 성능 향상을 위한 기술을 설명 합니다.|  
 |[적응 버퍼링 사용](../../connect/jdbc/using-adaptive-buffering.md)|서버 커서 오버헤드 없이 모든 종류의 큰 값 데이터를 검색할 수 있도록 설계된 선택 버퍼링 기능에 대해 설명합니다.|  
 |[스파스 열](../../connect/jdbc/sparse-columns.md)|에 대 한 JDBC 드라이버의 지원을 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스파스 열입니다.|  
+|[JDBC 드라이버에 대 한 캐싱을 준비 된 문의 메타 데이터](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|준비 된 문 쿼리 성능 향상을 위한 기술을 설명 합니다.|
   
 ## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

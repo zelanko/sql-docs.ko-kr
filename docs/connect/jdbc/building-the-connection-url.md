@@ -8,20 +8,21 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 81176070a9363e54dc469dd050891335edcb92af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="building-the-connection-url"></a>연결 URL 작성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -79,7 +80,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>명명된 다중 SQL Server 인스턴스  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]한 서버에 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. 명명 된 인스턴스에 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)](기본 설정), 명명 된 인스턴스의 포트 번호를 지정 하거나, 또는 인스턴스 이름을 JDBC URL 속성으로 지정할 수 있습니다 또는 **datasource** 속성입니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에서는 한 서버에 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. 명명 된 인스턴스에 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)](기본 설정), 명명 된 인스턴스의 포트 번호를 지정 하거나, 또는 인스턴스 이름을 JDBC URL 속성으로 지정할 수 있습니다 또는 **datasource** 속성입니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예를 참조하십시오.  
   
  포트 번호를 사용하려면 다음을 수행합니다.  
   
@@ -97,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  중괄호 안의 공백은 리터럴이며 잘리지 않습니다.  
   
-##  <a name="Connectingintegrated"></a>Windows 통합된 인증으로 연결  
+##  <a name="Connectingintegrated"></a> Windows 통합된 인증으로 연결  
  JDBC 드라이버는 integratedSecurity 연결 문자열 속성을 통해 Windows 운영 체제에서 형식 2 통합 인증을 사용할 수 있습니다. 통합 인증을 사용하려면 sqljdbc_auth.dll 파일을 JDBC 드라이버가 설치된 컴퓨터의 Windows 시스템 경로에 있는 디렉터리에 복사합니다.  
   
  sqljdbc_auth.dll 파일은 다음 위치에 설치되어 있습니다.  
@@ -111,7 +112,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  또는 java.libary.path 시스템 속성에 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 예를 들어 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 응용 프로그램이 시작될 때 다음과 같은 가상 컴퓨터(VM) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다.  
   
- `-Djava.library.path=C:\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
+ `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
 ## <a name="connecting-with-ipv6-addresses"></a>IPv6 주소로 연결  
  JDBC 드라이버는 연결 속성 컬렉션 및 serverName 연결 문자열 속성에 IPv6 주소를 사용하도록 지원합니다. Jdbc 등의 초기 serverName 값:*sqlserver*://*serverName*, 연결 문자열의 IPv6 주소에 대 한 지원 되지 않습니다. 에 대 한 이름을 사용 하 여 *serverName* 대신 원시 IPv6 주소는 연결의 모든 경우에서 작동 합니다. 자세한 내용은 다음 예를 참조하십시오.  

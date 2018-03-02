@@ -35,17 +35,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d394c689e4f4220781342dca687906d46a673c8e
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: 57dc975f2307a4f05afc3e71a8a9514d2aa84302
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [bcp 유틸리티](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)합니다.
 
+ > 최신 버전의 bcp 유틸리티에 대 한 참조 [SQL Server 용 Microsoft 명령줄 유틸리티 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
+
+ > Bcp를 사용 하 여 Linux에서, 참조 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
 
  > Bcp를 사용 하 여 Azure SQL 데이터 웨어하우스에 대 한 자세한 내용은 참조 [bcp 사용 하 여 데이터 로드](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)합니다.
 
@@ -497,18 +500,18 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
 ### <a name="example-test-conditions"></a>**예제 테스트 조건**
 아래 예에서는 SQL Server(2016 시작) 및 Azure SQL Database에 대한 `WideWorldImporters` 샘플 데이터베이스를 사용합니다.  `WideWorldImporters`[https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)에서 다운로드할 수 있습니다.  샘플 데이터베이스를 복원하는 구문은 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 을 참조하세요.  다르게 지정되지 않는 한 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  이름이 `D:\BCP` 인 디렉터리는 많은 예제에서 사용됩니다.
 
-다음 스크립트에서는 `WorlWideImporters.Warehouse.StockItemTransactions` 테이블의 빈 복사본을 만들고 기본 키 제약 조건을 추가합니다.  SSMS(SQL Server Management Studio)에서 다음 T-SQL 스크립트를 실행합니다.
+다음 스크립트에서는 `WideWorldImporters.Warehouse.StockItemTransactions` 테이블의 빈 복사본을 만들고 기본 키 제약 조건을 추가합니다.  SSMS(SQL Server Management Studio)에서 다음 T-SQL 스크립트를 실행합니다.
 
 ```tsql  
-USE WorlWideImporters;  
+USE WideWorldImporters;  
 GO  
 
 SET NOCOUNT ON;
 
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')     
 BEGIN
-    SELECT * INTO WorlWideImporters.Warehouse.StockItemTransactions_bcp
-    FROM WorlWideImporters.Warehouse.StockItemTransactions  
+    SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
+    FROM WideWorldImporters.Warehouse.StockItemTransactions  
     WHERE 1 = 2;  
 
     ALTER TABLE Warehouse.StockItemTransactions_bcp 
@@ -520,7 +523,7 @@ END
 > [!NOTE]
 > 필요에 따라 `StockItemTransactions_bcp` 테이블을 자릅니다.
 >
-> TRUNCATE TABLE WorlWideImporters.Warehouse.StockItemTransactions_bcp;
+> TRUNCATE TABLE WideWorldImporters.Warehouse.StockItemTransactions_bcp;
 
 ### <a name="a--identify-bcp-utility-version"></a>1.  **bcp** 유틸리티 버전 식별
 명령 프롬프트에서 다음 명령을 입력합니다.
@@ -529,14 +532,14 @@ bcp -v
 ```
   
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>2. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)  
-다음 예에서는 **테이블의** out `WorlWideImporters.Warehouse.StockItemTransactions` 옵션에 대해 설명합니다.
+다음 예에서는 `WideWorldImporters.Warehouse.StockItemTransactions` 테이블의 **out** 옵션에 대해 설명합니다.
 
 - **Basic**  
 이 예에서는 `StockItemTransactions_character.bcp` 라는 데이터 파일을 만들고 **문자** 형식을 사용하여 테이블 데이터를 파일에 복사합니다.
 
   명령 프롬프트에서 다음 명령을 입력합니다.
   ```
-  bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
+  bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
  
  - **Expanded**  
@@ -544,30 +547,30 @@ bcp -v
 
     명령 프롬프트에서 다음 명령을 입력합니다.
     ```
-    bcp WorlWideImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
+    bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
     ``` 
  
 `Error_out.log` 및 `Output_out.log`을 검토합니다.  `Error_out.log` 비어 있어야 합니다.  `StockItemTransactions_character.bcp` 및 `StockItemTransactions_native.bcp`간 파일 크기를 비교합니다. 
    
 ### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>3. 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)  
-다음 예에서는 **테이블의** out `WorlWideImporters.Warehouse.StockItemTransactions` 옵션에 대해 설명합니다.  이 예에서는 `StockItemTransactions_character.bcp` 라는 데이터 파일을 만들고 **문자** 형식을 사용하여 테이블 데이터를 파일에 복사합니다.  
+다음 예에서는 **테이블의** out `WideWorldImporters.Warehouse.StockItemTransactions` 옵션에 대해 설명합니다.  이 예에서는 `StockItemTransactions_character.bcp` 라는 데이터 파일을 만들고 **문자** 형식을 사용하여 테이블 데이터를 파일에 복사합니다.  
   
  이 예에서는 혼합 모드 인증을 사용하고 있다고 가정합니다. **-U** 스위치를 사용하여 로그인 ID를 지정해야 합니다. 또한 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하지 않는 한 **-S** 스위치를 사용하여 시스템 이름을 지정하고 원하는 경우 인스턴스 이름을 지정합니다.  
 
 명령 프롬프트에서 다음 명령을 입력합니다. \(시스템에서 암호를 입력하라는 메시지가 나타납니다.\)
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
+bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  
   
 ### <a name="d-copying-data-from-a-file-to-a-table"></a>4. 파일에서 테이블로 데이터 복사  
-다음 예제는 위에서 만든 파일을 사용하여 **테이블의** in `WorlWideImporters.Warehouse.StockItemTransactions_bcp` 옵션에 대해 설명합니다.
+다음 예제는 위에서 만든 파일을 사용하여 `WideWorldImporters.Warehouse.StockItemTransactions_bcp` 테이블의 **in** 옵션에 대해 설명합니다.
   
 - **Basic**  
 이 예에서는 이전에 만든 `StockItemTransactions_character.bcp` 데이터 파일을 사용합니다.
 
   명령 프롬프트에서 다음 명령을 입력합니다.
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
   ```  
 
 - **Expanded**  
@@ -575,7 +578,7 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransa
   
   명령 프롬프트에서 다음 명령을 입력합니다.
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
   ```    
   `Error_in.log` 및 `Output_in.log`을 검토합니다.
    
@@ -585,39 +588,39 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransa
 명령 프롬프트에서 다음 명령을 입력합니다.
   
 ```  
-bcp "SELECT StockItemTransactionID FROM WorlWideImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
+bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```  
   
 ### <a name="f-copying-a-specific-row-into-a-data-file"></a>6. 데이터 파일로 특정 행 복사  
-특정 행을 복사하려면 **queryout** 옵션을 사용합니다. 다음 예에서는 `Amy Trefl` 테이블에서 `WorlWideImporters.Application.People` 라는 연락처 행만 데이터 파일( `Amy_Trefl_c.bcp`)로 복사합니다.  참고: **-d** 스위치는 데이터베이스를 식별하는 데 사용됩니다.
+특정 행을 복사하려면 **queryout** 옵션을 사용합니다. 다음 예에서는 `WideWorldImporters.Application.People` 테이블에서 `Amy Trefl`라는 연락처 행만 데이터 파일(`Amy_Trefl_c.bcp`)로 복사합니다.  참고: **-d** 스위치는 데이터베이스를 식별하는 데 사용됩니다.
   
 명령 프롬프트에서 다음 명령을 입력합니다. 
 ```  
-bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WorlWideImporters -c -T
+bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```  
   
 ### <a name="g-copying-data-from-a-query-to-a-data-file"></a>7. 쿼리에서 데이터 파일로 데이터 복사  
-Transact-SQL 문의 결과 집합을 데이터 파일로 복사하려면 **queryout** 옵션을 사용합니다.  다음 예에서는 `WorlWideImporters.Application.People` 테이블에서 전체 이름을 기준으로 정렬된 이름을 `People.txt` 데이터 파일로 복사합니다.  참고: **-t** 스위치는 쉼표로 구분된 파일을 만드는 데 사용됩니다.
+Transact-SQL 문의 결과 집합을 데이터 파일로 복사하려면 **queryout** 옵션을 사용합니다.  다음 예에서는 `WideWorldImporters.Application.People` 테이블에서 전체 이름을 기준으로 정렬된 이름을 `People.txt` 데이터 파일로 복사합니다.  참고: **-t** 스위치는 쉼표로 구분된 파일을 만드는 데 사용됩니다.
   
 명령 프롬프트에서 다음 명령을 입력합니다.
 ```  
-bcp "SELECT FullName, PreferredName FROM WorlWideImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
+bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```  
   
 ### <a name="h-creating-format-files"></a>8. 서식 파일 만들기  
-다음 예에서는 `Warehouse.StockItemTransactions` 데이터베이스의 `WorlWideImporters` 테이블에 대해 3개의 서로 다른 서식 파일을 만듭니다.  만들어진 각 파일의 내용을 검토합니다.
+다음 예에서는 `Warehouse.StockItemTransactions` 데이터베이스의 `WideWorldImporters` 테이블에 대해 3개의 서로 다른 서식 파일을 만듭니다.  만들어진 각 파일의 내용을 검토합니다.
   
 명령 프롬프트에서 다음 명령을 입력합니다.
   
 ```  
 REM non-XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
 REM non-XML native format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
 
 REM XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
  
 ```  
   
@@ -631,7 +634,7 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stock
   
 명령 프롬프트에서 다음 명령을 입력합니다.
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
 ```  
   
 > [!NOTE]  

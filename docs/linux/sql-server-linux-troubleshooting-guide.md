@@ -4,7 +4,7 @@ description: "SQL Server 2017 Linux에서 사용 하기 위한 문제 해결 팁
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 01/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,20 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: f56806313075865c53cbd3fc1f80c0d132804c04
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Docker 컨테이너에서 또는 Linux에서 실행 중인 Microsoft SQL Server 문제를 해결 하는 방법을 설명 합니다. Linux에서 SQL Server의 문제를 해결할 때의 알려진된 제한은 지원 되는 기능을 검토 해야는 [Linux 릴리스 정보에서 SQL Server](sql-server-linux-release-notes.md)합니다.
+
+> [!TIP]
+> 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](sql-server-linux-faq.md)합니다.
 
 ## <a id="connection"></a> 연결 오류 문제 해결
 Linux SQL Server에 연결 하는 데 문제가 있는 경우 확인할 몇 가지 있습니다. 
@@ -200,12 +203,4 @@ SQLCMD 통해 단일 사용자 모드로 SQL Server를 시작 합니다.
    리소스: [특수 문자](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>지원
-
-커뮤니티를 통해 사용 가능 하 고 엔지니어링 팀에서 모니터링 되는 것이 지원은합니다. 특정 질문에 대 한 다음 리소스를 사용 합니다.
-
-- [DBA 스택 Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): 데이터베이스 관리 질문 하기
-- [스택 오버플로](http://stackoverflow.com/questions/tagged/sql-server): 개발 질문 하기
-- [MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): 기술 관련 질문
-- [피드백을 제출](https://feedback.azure.com/forums/908035-sql-server): 요청 기능 및 버그를 보고 합니다.
-- [Reddit](https://www.reddit.com/r/SQLServer/): SQL Server에 설명
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

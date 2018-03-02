@@ -1,27 +1,28 @@
 ---
 title: "Java EE 지원 이해 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5f692489b6d8e701e13c6700d63de6df0b9607a5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: cb98529d22b17ad21bfcab786064a8c8882f3b5b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="understanding-java-ee-support"></a>Java EE 지원 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/18/2017
  먼저 Java 환경(JDK, JRE)에 javax.sql 패키지가 포함되어 있는지 확인하십시오. 이 패키지는 선택적 API를 사용하는 JDBC 응용 프로그램에 필요합니다. JDK 1.5 이상 버전에는 이미 이 패키지가 포함되어 있으므로 별도로 설치할 필요가 없습니다.  
   
 ## <a name="driver-name"></a>드라이버 이름  
- 드라이버 클래스 이름은 **com.microsoft.sqlserver.jdbc.SQLServerDriver**합니다. JDBC 드라이버 4.0, 4.1, 4.2 및 6.0에 대 한 드라이버는 sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 파일에 포함 됩니다. JDBC 드라이버 6.2에 대 한 드라이버 mssql-jdbc-6.2.1.jre7.jar 또는 mssql-jdbc-6.2.1.jre8.jar에 포함 되어 있습니다.
+ 드라이버 클래스 이름은 **com.microsoft.sqlserver.jdbc.SQLServerDriver**합니다. JDBC Driver 4.1에 대 한, 6.0 및 4.2, sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 파일에 드라이버가 포함 됩니다. JDBC 드라이버 6.2에 대 한 드라이버 mssql-jdbc-6.2.1.jre7.jar 또는 mssql-jdbc-6.2.1.jre8.jar에 포함 되어 있습니다. JDBC 드라이버 6.4에 대 한 드라이버 mssql-jdbc-6.4.0.jre7.jar, mssql-jdbc-6.4.0.jre8.jar 또는 mssql-jdbc-6.4.0.jre9.jar에 포함 됩니다.
   
  클래스 이름은 JDBC DriverManager 클래스를 사용 하 여 드라이버를 로드할 때마다 사용 됩니다. 또한 드라이버 구성에 드라이버 클래스 이름을 지정해야 하는 경우에도 항상 사용됩니다. 예를 들어 Java EE 응용 프로그램 서버에서 데이터 원본을 구성하려면 드라이버 클래스 이름을 입력해야 할 수도 있습니다.  
   

@@ -4,7 +4,7 @@ description: "이 항목에서는 SQL 서버를 Linux에서 실행하는 방법 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 71efe59db9de4b60389f40ee6718627817ecee37
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
-ms.translationtype: HT
+ms.openlocfilehash: faa2898017347f59d415f7f5bf5bd6795a3f9de6
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
@@ -54,12 +54,9 @@ SQL Server 2017이 이제 Linux에서 실행됩니다 동일한 SQL Server 데�
 
 SQL Server 2017은 Linux를 포함하여 모든 지원되는 플랫폼에 동일한 기본 데이터베이스 엔진을 가지고 있습니다 따라서 많은 기존 기능 및 성능이 Linux에서 동일한 방식으로 동작합니다 이 문서에서는 이러한 기능 중 일부를 Linux 관점에서 설명합니다 또한 Linux에만 해당하는 요구 사항에 대해 설명합니다.
 
-SQL Server에 이미 익숙한 경우, [릴리스 정보](sql-server-linux-release-notes.md) 를 참고하여 일반적인 지침과 릴리스의 알려진 문제를 살펴봅니다. 그리고 [SQL Server on Linux의 새로운 기능](sql-server-linux-whats-new.md) 과 [SQL Server 2017 전반에 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md) 을 살펴봅니다. 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](sql-server-linux-faq.md)합니다.
+SQL Server에 이미 익숙한 경우, [릴리스 정보](sql-server-linux-release-notes.md) 를 참고하여 일반적인 지침과 릴리스의 알려진 문제를 살펴봅니다. 그리고 [SQL Server on Linux의 새로운 기능](sql-server-linux-whats-new.md) 과 [SQL Server 2017 전반에 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md) 을 살펴봅니다. 
 
-##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) SQL Server 엔지니어링 팀에 문의
+> [!TIP]
+> 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](sql-server-linux-faq.md)합니다.
 
-- [DBA 스택 Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): 데이터베이스 관리 관련 질문하기
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): 개발에 대해 질문하기
-- [MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): 기술 관련 질문하기
-- [피드백을 제출](https://feedback.azure.com/forums/908035-sql-server): 기능 요청과 버그 보고하기
-- [Reddit](https://www.reddit.com/r/SQLServer/): SQL Server 토론
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

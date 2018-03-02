@@ -1,27 +1,28 @@
 ---
 title: "SQLServerDataSource 멤버 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6feb87ad1bb5054b800a001a30af6b94679e977a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d046db6ae560e0384d3966286952069e940a189b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sqlserverdatasource-members"></a>SQLServerDataSource 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/18/2017
   
 |이름|Description|  
 |----------|-----------------|  
-|[(SQLServerDataSource)](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|새 인스턴스를 초기화는 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스입니다.|  
+|[SQLServerDataSource ()](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|새 인스턴스를 초기화는 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스입니다.|  
   
 ## <a name="fields"></a>필드  
  없음  
@@ -48,6 +49,8 @@ ms.lasthandoff: 11/18/2017
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|응용 프로그램 이름을 반환합니다.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)|이 데이터와 연결을 설정 하려고 원본 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 개체가 나타내는입니다.|  
 |[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|데이터베이스 이름을 반환합니다.|  
+|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|값을 반환 **disableStatementPooling** 연결 속성입니다. 이 설정은 문 풀링을 사용 하는 여부 또는이 연결에 대해 제어 합니다.|  
+|[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|값을 반환 **enablePrepareOnFirstPreparedStatementCall** 연결 속성입니다.|  
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|반환 된 **부울** encrypt 속성이 사용 되는지 여부를 나타내는 값입니다.|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|데이터 원본에 대한 설명을 반환합니다.|  
 |[getFailoverPartner](../../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md)|데이터베이스 미러링 구성에 사용되는 장애 조치(Failover) 서버의 이름을 반환합니다.|  
@@ -66,6 +69,10 @@ ms.lasthandoff: 11/18/2017
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|반환 된 **부울** 문자열 매개 변수를 서버에 유니코드 형식으로 보낼 사용 되는지 여부를 나타내는 값입니다.|  
 |[getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md)|설정을 반환 하는 **SendTimeAsDatetime** 연결 속성입니다.|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|실행 중인 컴퓨터의 이름을 반환 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.|  
+|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|값을 반환 **serverPreparedStatementDiscardThreshold** 연결 속성입니다.|  
+|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverdatasource.md)|이 연결에 대 한 준비 된 문 캐시의 크기를 반환 합니다.|  
+|[getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)|TrustManagerClass 연결 속성의 문자열 값을 반환합니다.|  
+|[getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md)|TrustManagerConstructorArg 연결 속성의 문자열 값을 반환합니다.|  
 |[getTrustServerCertificate](../../../connect/jdbc/reference/gettrustservercertificate-method-sqlserverdatasource.md)|반환 된 **부울** trustServerCertificate 속성이 사용 되는지 여부를 나타내는 값입니다.|  
 |[getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md)|인증서 trustStore 파일의 경로(파일 이름 포함)를 반환합니다.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatasource.md)|데이터 원본에 연결하는 데 사용되는 URL을 반환합니다.|  
@@ -76,9 +83,11 @@ ms.lasthandoff: 11/18/2017
 |[isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)|이 데이터 원본 개체가 지정된 인터페이스에 대한 래퍼인지 여부를 나타냅니다.|  
 |[setApplicationIntent](../../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)|값을 설정 하는 **applicationIntent** 연결 속성입니다.|  
 |[setApplicationName](../../../connect/jdbc/reference/setapplicationname-method-sqlserverdatasource.md)|응용 프로그램 이름을 설정합니다.|  
-|[때 setAuthenticationScheme](../../../connect/jdbc/reference/setauthenticationscheme-sqlserverdatasource.md)|응용 프로그램에서 사용하려는 통합 보안의 종류를 나타냅니다.|  
+|[setAuthenticationScheme](../../../connect/jdbc/reference/setauthenticationscheme-sqlserverdatasource.md)|응용 프로그램에서 사용하려는 통합 보안의 종류를 나타냅니다.|  
 |[setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md)|연결할 데이터베이스 이름을 설정합니다.|  
 |[setDescription](../../../connect/jdbc/reference/setdescription-method-sqlserverdatasource.md)|데이터 원본에 대한 설명을 설정합니다.|  
+|[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverdatasource.md)|문 풀링을 true 또는 false로 설정 합니다.|  
+|[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|새 값을 지정 된 **enablePrepareOnFirstPreparedStatementCall** 연결 속성입니다.|  
 |[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|설정 된 **부울** encrypt 속성이 사용 되는지 여부를 나타내는 값입니다.|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|데이터베이스 미러링 구성에 사용되는 장애 조치(Failover) 서버의 이름을 설정합니다.|  
 |[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|SQL Server SSL(Secure Sockets Layer) 인증서의 유효성을 검사하는 데 사용할 호스트 이름을 설정합니다.|  
@@ -97,6 +106,10 @@ ms.lasthandoff: 11/18/2017
 |[setSendStringParametersAsUnicode](../../../connect/jdbc/reference/setsendstringparametersasunicode-method-sqlserverdatasource.md)|설정 된 **부울** 문자열 매개 변수를 서버에 유니코드 형식으로 보낼 사용 되는지 여부를 나타내는 값입니다.|  
 |[setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)|java.sql.Time 값을 서버에 보내는 방식을 지정합니다.|  
 |[setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md)|실행 중인 컴퓨터의 이름을 설정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.|  
+|[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|새 값을 설정 하는 **serverPreparedStatementDiscardThreshold** 연결 속성입니다.|  
+|[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverdatasource.md)|이 연결에 대 한 준비 된 문 캐시의 크기를 설정합니다.|  
+|[setTrustManagerClass](../../../connect/jdbc/reference/settrustmanagerclass-method-sqlserverdatasource.md)|TrustManagerClass 연결 속성의 문자열 값을 설정합니다.|  
+|[setTrustManagerConstructorArg](../../../connect/jdbc/reference/settrustmanagerconstructorarg-method-sqlserverdatasource.md)|TrustManagerConstructorArg 연결 속성의 문자열 값을 설정합니다.|  
 |[setTrustServerCertificate](../../../connect/jdbc/reference/settrustservercertificate-method-sqlserverdatasource.md)|설정 된 **부울** trustServerCertificate 속성이 사용 되는지 여부를 나타내는 값입니다.|  
 |[setTrustStore](../../../connect/jdbc/reference/settruststore-method-sqlserverdatasource.md)|인증서 trustStore 파일의 경로(파일 이름 포함)를 설정합니다.|  
 |[setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)|trustStore 데이터의 무결성을 검사하는 데 사용되는 암호를 설정합니다.|  

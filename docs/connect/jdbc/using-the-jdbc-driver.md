@@ -1,27 +1,28 @@
 ---
 title: "JDBC 드라이버를 사용 하 여 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 018679acc5c3e0119755e5ab5e0378c6f3fec7f0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9118a82f333b14f9ba468c039255ff3e6a1280d7
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC 드라이버 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,19 +30,38 @@ ms.lasthandoff: 11/18/2017
   이 섹션에서는 간단한 연결 하는 방법에 대해 간략하게 설명 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용 하 여 데이터베이스의 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]합니다. 에 연결 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로컬 컴퓨터 또는 서버를 먼저 설치 해야 하 고 로컬 컴퓨터에 JDBC 드라이버를 설치 해야 합니다.  
   
 ## <a name="choosing-the-right-jar-file"></a>올바른 JAR 파일 선택  
+ SQL Server 용 Microsoft JDBC 드라이버 6.4 제공 **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, 및 **mssql-jdbc-6.4.0.jre9.jar** 클래스 라이브러리 기본 Java Runtime Environment (JRE) 설정에 따라 사용할 파일입니다.  
+ 
  SQL Server 용 Microsoft JDBC 드라이버 6.2 제공 **mssql-jdbc-6.2.1.jre7.jar**, 및 **mssql-jdbc-6.2.1.jre8.jar** 클래스 라이브러리 파일을 기본 Java 런타임 프로그램에 따라 사용 JRE (environment) 설정 합니다.  
   
   Microsoft JDBC Driver 6.0 및 4.2 for SQL Server 제공 **sqljdbc41.jar**, 및 **sqljdbc42.jar** 클래스 라이브러리 파일을 기본 Java Runtime Environment (JRE) 설정에 따라 사용할 수 있습니다.  
   
  SQL Server 용 Microsoft JDBC Driver 4.1 제공는 **sqljdbc41.jar** 클래스 라이브러리 파일을 기본 Java Runtime Environment (JRE) 설정에 따라 사용할 수 있습니다.  
-  
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 제공 **sqljdbc.jar** 및 **sqljdbc4.jar** 클래스 라이브러리 파일을 기본 Java Runtime Environment (JRE) 설정에 따라 사용할 수 있습니다.  
-  
+    
  사용 가능한 기능은 사용자의 선택에 따라서도 결정됩니다. JAR 파일 선택에 대 한 자세한 내용은 참조 하십시오. [JDBC 드라이버에 대 한 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)합니다.  
   
 ## <a name="setting-the-classpath"></a>클래스 경로 설정  
- JDBC 드라이버는 Java SDK에 포함되어 있지 않습니다. 포함 하도록 클래스 경로 설정 해야 사용 하려는 경우는 **sqljdbc.jar** 파일인 **sqljdbc4.jar** 파일인은 **sqljdbc41.jar** 파일 또는  **sqljdbc42.jar** 파일입니다. JDBC 드라이버 6.2를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-jdbc-6.2.1.jre7.jar** 또는 **mssql-jdbc-6.2.1.jre8.jar**합니다. 클래스 경로에 항목이 없으면 응용 프로그램에서 일반적인 "클래스를 찾을 수 없습니다." 예외가 throw됩니다.  
+ JDBC 드라이버는 Java SDK에 포함되어 있지 않습니다. 포함 하도록 클래스 경로 설정 해야 사용 하려는 경우는 **sqljdbc.jar** 파일인 **sqljdbc4.jar** 파일인은 **sqljdbc41.jar** 파일 또는  **sqljdbc42.jar** 파일입니다. JDBC 드라이버 6.2를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-jdbc-6.2.1.jre7.jar** 또는 **mssql-jdbc-6.2.1.jre8.jar**합니다. JDBC 드라이버 6.4를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** 또는 **mssql-jdbc-6.4.0.jre9.jar**합니다. 클래스 경로에 항목이 없으면 응용 프로그램에서 일반적인 "클래스를 찾을 수 없습니다." 예외가 throw됩니다.  
   
+### <a name="for-microsoft-jdbc-driver-64"></a>Microsoft JDBC Driver 6.4에 대 한
+ **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** 또는 **mssql-jdbc-6.4.0.jre9.jar** 파일이 다음 위치에 설치 됩니다.  
+  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre7.jar 
+  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre8.jar
+ 
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre9.jar
+  
+ 다음은 Windows 응용 프로그램에 사용되는 CLASSPATH 문의 예입니다.  
+  
+ `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_6.4\enu\mssql-jdbc-6.4.0.jre9.jar`  
+  
+ 다음은 Unix/Linux 응용 프로그램에 사용되는 CLASSPATH 문의 예입니다.  
+  
+ `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
+  
+ CLASSPATH 문에 하나만 포함 되어 있는지 확인 해야 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]mssql-jdbc-6.4.0.jre7.jar, mssql-jdbc-6.4.0.jre8.jar 또는 mssql-jdbc-6.4.0.jre9.jar 등입니다.   
+
 ### <a name="for-microsoft-jdbc-driver-62"></a>Microsoft JDBC 드라이버 6.2
  **mssql-jdbc-6.2.1.jre7.jar** 또는 **mssql-jdbc-6.2.1.jre8.jar** 파일이 다음 위치에 설치 됩니다.  
   
@@ -59,7 +79,7 @@ ms.lasthandoff: 11/18/2017
   
  CLASSPATH 문에 하나만 포함 되어 있는지 확인 해야 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], 예: mssql-jdbc-6.2.1.jre7.jar 또는 mssql-jdbc-6.2.1.jre8.jar 중 하나입니다.  
 
-### <a name="for-microsoft-jdbc-driver-40-41-42-and-60"></a>Microsoft JDBC Driver 4.0, 4.1, 4.2 및 6.0에 대 한
+### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Microsoft JDBC Driver 4.1, 4.2 및 6.0에 대 한
  sqljdbc.jar 파일, sqljdbc4.jar 파일, sqljdbc41.jar 또는 sqljdbc42.jar 파일은 다음 위치에 설치됩니다.  
   
  \<*설치 디렉터리*> \sqljdbc_\<*버전*>\\<*언어*> \sqljdbc.jar  

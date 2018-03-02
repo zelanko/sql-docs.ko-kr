@@ -5,29 +5,38 @@ ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 03/01/2018
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ce602bd9726c8762793d9289daf5c52b2176494
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 70bda1f659a284a31896ff15ee0638b64a9d0bac
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for d b 2의에서 새로운 기능 (DB2ToSQL)
 이 항목에서는 각 릴리스의 DB2 변경에 대 한 SSMA를 나열 합니다.  
+
+## <a name="ssma-v77"></a>SSMA v7.7
+D b 2 용 SSMA의 v7.7 릴리스에서 다음 변경 내용이 포함 되어 있습니다.
+- D b 2 용 SSMA 품질 및 변환 메트릭을 향상 된 대상으로 지정 된 수정 사항으로 향상 되었습니다.
+- 많은 요청에 따라, 32 비트 버전의 SSMA for d b 2 ´ ù. 이전 구현을 v7.4) (이전에 비해, 두 개의 설치 관리자 패키지 있지만 나란히 설치할 수 없습니다. 결과적으로,가지고 연결 구성 요소에 따라 가장 적합 한 버전을 선택 해야 합니다. 항상 가능한 경우 64 비트 버전을 사용 하는 것이 좋습니다.
+
+> [!IMPORTANT]
+> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수 구성 요소입니다.
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 D b 2 용 SSMA의 v7.6 릴리스 품질 및 변환 메트릭을 향상 된 대상으로 지정 된 수정 사항 및 SQL Server 2017 (공개 미리 보기)에 대 한 지원이 향상 되었습니다. Windows 및 Linux에서 SQL Server 2017에 대 한 지원을 공개 미리 보기 이므로 프로덕션 마이그레이션에 사용할 수 없습니다.
@@ -63,7 +72,7 @@ D b 2 용 SSMA의 v7.3 릴리스에서 다음 변경 내용이 포함 되어 있
       - 이 블로그 게시물에서 사용할 수 있는 사용자 지정 변환기를 생성 하는 방법에 대 한 지침 [확장 SQL Server Migration Assistant의 변환 기능](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)합니다.
       - 이 변환에 대 한 샘플 프로젝트를 다운로드할 수 수 [블로그 게시물](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)합니다.
 
-## <a name="ssma-v72"></a>SSMA v 7.2가 사전
+## <a name="ssma-v72"></a>SSMA v7.2
 D b 2 용 SSMA의 v 7.2가 사전 릴리스는 다음과 같은 변경을 포함 되어 있습니다.
 - 향상 된 품질 및 변환 메트릭을 고객 의견에 따라 수정 프로그램을 대상된으로 합니다.
 - 원격 분석의 향상 된 기능 고객 문제를 해결 하 고 SSMA의 변환율 향상에 더 나은 데이터 요소를 제공 합니다.

@@ -4,7 +4,7 @@ description: "이 문서 Linux에서 실행 중인 SQL Server에 대 한 질문�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: b5dd38c166f869cfff730d091cee091582507114
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3fad3fb2892e5a91e42eefb5f00932c39d00064f
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux에서 SQL Server가 질문과 대답 (FAQ)
 
@@ -30,7 +30,11 @@ ms.lasthandoff: 02/13/2018
 
 1. **Linux 플랫폼 지원 되나요?**
 
-   SQL Server는 현재 Red Hat Enterprise Server, SUSE Linux Enterprise Server 및 Ubuntu에서 지원 됩니다. 지원 되는 버전에 대 한 최신 정보를 참조 하십시오. [지원 되는 플랫폼](sql-server-linux-setup.md#supportedplatforms)합니다.
+   SQL Server는 현재 Red Hat Enterprise Server, SUSE Linux Enterprise Server 및 Ubuntu에서 지원 됩니다. 또한 Docker가 있는 컨테이너에서 실행 됩니다. 지원 되는 버전에 대 한 최신 정보를 참조 하십시오. [지원 되는 플랫폼](sql-server-linux-setup.md#supportedplatforms)합니다.
+
+1. **다른 플랫폼에서 사용할 수 Linux에서 SQL Server**?
+
+   설치 하 고 Linux의 다른 배포에서 SQL Server를 실행 되었을 수 있습니다. 예를 들어 CentOS는 밀접 하 Red Hat Enterprise Server RPM SQL Server 패키지를 설치할 수 있도록 합니다. 이 다른 밀접 한 관련이 분포도 발생할 수 있습니다. 주요 문제 테스트 및 지원 됩니다. SQL Server 에서만 테스트 및 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu 에서만 지원 됩니다.
 
 1. **Linux에서 지원 되는 SQL Server 기능**
 
@@ -130,6 +134,4 @@ ms.lasthandoff: 02/13/2018
 
    기본 설치에서 SQL Server 디렉터리 및 파일의 소유권을 변경 지원 하지 않습니다. Mssql 계정 및 그룹 특히 SQL Server에 사용 되 고 대화형 로그인 액세스할 수 없습니다.
 
-## <a name="next-steps"></a>다음 단계
-
-Linux에서 SQL Server를 실행 하는 방법에 대 한 자세한 내용은 참조는 [linux 개요 SQL Server의](sql-server-linux-overview.md)합니다.
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

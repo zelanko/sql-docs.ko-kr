@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 설치 지침
 
@@ -29,6 +29,8 @@ ms.lasthandoff: 02/13/2018
 
 > [!TIP]
 > 빠르게 시작 하려면에 대 한 퀵 스타트 중 하나로 이동 [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), 또는 [Docker](quickstart-install-connect-docker.md)합니다.
+
+자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](../linux/sql-server-linux-faq.md)합니다.
 
 ## <a id="supportedplatforms"></a> 지원 되는 플랫폼
 
@@ -40,6 +42,9 @@ SQL Server 2017 Linux 다음 플랫폼에서 사용할 수 있습니다.
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 받기](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 가져오기](http://www.ubuntu.com/download/server)
 | **Docker 엔진** | 1.8+ | [Docker 가져오기](http://www.docker.com/products/overview)
+
+> [!NOTE]
+> 설치 하 고 다른 밀접 하 게 관련 Linux 플랫폼에서 SQL Server를 실행 하는 경우도 있지만 SQL Server을만 테스트 하 고 앞의 표에 나열 된 플랫폼에서 지원 됩니다.
 
 Microsoft는 배포 하 고 OpenShift 및 Kubernetes 사용 하 여 SQL Server 컨테이너 관리를 지원 합니다.
 
@@ -70,7 +75,7 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 
 - [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
-- [Ubuntu 설치](quickstart-install-connect-ubuntu.md)
+- [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-docker.md)
 - [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
@@ -210,5 +215,5 @@ Linux 컴퓨터에 없는 경우 액세스에 사용 되는 온라인 저장소�
 
 - [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
-- [Ubuntu 설치](quickstart-install-connect-ubuntu.md)
+- [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-ubuntu.md)
