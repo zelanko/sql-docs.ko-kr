@@ -1,8 +1,8 @@
 ---
-title: "Linux에서 SQL Server와 active Directory 인증 | Microsoft Docs"
+title: "Linux에서 SQL Server에 대 한 active Directory 인증 자습서 | Microsoft Docs"
 description: "이 자습서는 Linux에서 SQL Server에 대 한 AAD 인증에 대 한 구성 단계를 제공합니다."
 author: meet-bhagdev
-ms.date: 01/30/2018
+ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
@@ -16,24 +16,17 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="active-directory-authentication-with-sql-server-on-linux"></a>Linux에서 SQL Server와 active Directory 인증
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Linux에서 SQL Server와 함께 사용 하 여 Active Directory 인증 자습서:
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 자습서에서는 구성 하는 방법에 설명 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] linux Active Directory (AD) 인증, 라고도 통합된 인증을 지원 하도록 합니다. AD 인증을 통해 인증 하는 데 Windows 또는 Linux에서 도메인에 가입 된 클라이언트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 해당 도메인 자격 증명 및 Kerberos 프로토콜을 사용 하 여 합니다.
-
-AD 인증을 통해 다음과 같은 이점을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증:
-
-* Single sign-on을 통해 암호를 입력 하지 않고 사용자를 인증 합니다.   
-* AD 그룹에 대 한 로그인을 만들어 액세스 및 권한을 관리할 수 있습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 그룹 멤버 자격을 사용 하 여 합니다.  
-* 추적 하는 필요 없이 조직 전체에서 단일 id는 각 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사람에 해당 하는 로그인입니다.   
-* AD를 사용 하면 조직 전체에서 중앙 집중화 된 암호 정책을 적용할 수 있습니다.   
+이 자습서에서는 구성 하는 방법에 설명 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] linux Active Directory (AD) 인증, 라고도 통합된 인증을 지원 하도록 합니다. 에 대 한 개요 [Linux에서 SQL Server에 대 한 Active Directory 인증](sql-server-linux-active-directory-auth-overview.md)합니다.
 
 이 자습서는 다음 작업으로 구성 됩니다.
 
@@ -49,17 +42,12 @@ AD 인증을 통해 다음과 같은 이점을 [!INCLUDE[ssNoVersion](../include
 AD 인증을 구성 하기 전에 해야 합니다.
 
 * 네트워크에서 AD 도메인 컨트롤러 (Windows) 설정  
-* Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* 설치 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-> [!IMPORTANT]
-> 제한 사항:
-> - 이 경우 데이터베이스 미러링 끝점에 지원 되는 유일한 인증 방법에는 인증서입니다. 이후 릴리스에서 WINDOWS 인증 방법을 사용할 수 있습니다.
-> - 제 3 자 AD 도구 좋은지 Centrify, Powerbroker, 그리고 Vintela 지원 되지 않습니다. 
-
-## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>가입 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 도메인에 호스트
+## <a id="join"></a> 가입 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 도메인에 호스트
 
 다음 단계를 사용 하 여 연결할는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory 도메인에 호스트:
 
@@ -179,7 +167,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
 
 자세한 내용은 Red Hat 설명서를 참조 [Discovering 및 Id 도메인이 가입](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)합니다. 
 
-## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>에 대 한 AD 사용자를 만들고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SPN을 설정 하 고
+## <a id="createuser"></a> 에 대 한 AD 사용자를 만들고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SPN을 설정 하 고
 
   > [!NOTE]
   > 다음 단계를 사용 하 여 [정규화 된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)합니다. 사용 중인 **Azure**, 해야  **[만드세요](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  계속 진행 하기 전에.
@@ -208,7 +196,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
 
 3. 자세한 내용은 [Kerberos 연결의 서비스 사용자 이름 등록](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)을 참조하세요.
 
-## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>구성 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 keytab
+## <a id="configurekeytab"></a> 구성 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 keytab
 
 1. 이전 단계에서 만든 AD 계정에 대 한 키 버전 번호 (kvno)를 확인 합니다. 일반적으로 2, 이지만 여러 번 계정의 암호를 변경 하는 경우 다른 정수 수도 있습니다. 에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 컴퓨터를 다음을 실행 합니다.
 
@@ -249,7 +237,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
    sudo systemctl restart mssql-server
    ```
 
-## <a name="create-ad-based-logins-in-transact-sql"></a>TRANSACT-SQL에서 AD 기반 로그인을 만들으십시오
+## <a id="createsqllogins"></a> TRANSACT-SQL에서 AD 기반 로그인을 만들으십시오
 
 1. 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 새, AD 기반 로그인을 만듭니다.
 
@@ -263,7 +251,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
    SELECT name FROM sys.server_principals;
    ```
 
-## <a name="connect-to-includessnoversionincludesssnoversion-mdmd-using-ad-authentication"></a>연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 인증을 사용 하 여
+## <a id="connect"></a> 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 인증을 사용 하 여
 
 도메인 자격 증명을 사용 하는 클라이언트 컴퓨터에 로그인 합니다. 에 연결할 수 이제 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 인증을 사용 하 여 암호를 다시 입력 하지 않고도 합니다. AD 그룹에 대 한 로그인을 만들면 해당 그룹의 구성원 인 모든 AD 사용자는 동일한 방식으로 연결할 수 있습니다.
 
