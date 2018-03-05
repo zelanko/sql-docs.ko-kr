@@ -19,7 +19,7 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -94,7 +94,7 @@ Reporting Services는 "기존"의 페이지를 매긴 문서 스타일 보고서
 
 고유한 사용자 지정 브랜딩을 웹 포털에 적용할 수 있습니다. 또한 웹 포털에서 바로 KPI를 만들 수 있습니다. KPI는 보고서를 열지 않고도 주요 비즈니스 메트릭을 한번에 브라우저에 표시할 수 있습니다. 
 
-새 웹 포털은 보고서 관리자를 완전히 다시 작성한 것입니다. 이제 이 웹 포털은 Edge, Internet Explorer 10 및 11, Chrome, Firefox, Safari, 모든 주요 브라우저 등 최신 브라우저가 최적화된 단일 페이지의 표준 기반 HTML5 앱입니다.
+새 웹 포털은 보고서 관리자를 완전히 다시 작성한 것입니다. 이제 이 웹 포털은 Microsoft Edge, Internet Explorer 10 및 11, Chrome, Firefox, Safari, 모든 주요 브라우저 등 최신 브라우저가 최적화된 단일 페이지의 표준 기반 HTML5 앱입니다.
 
 웹 포털의 콘텐츠는 Reporting Services 모바일 및 페이지를 매긴 보고서 및 KPI뿐만 아니라 보고서의 문서 블록으로 사용할 Power BI Desktop 보고서, Excel 통합 문서, 공유 데이터 집합 및 공유 데이터 원본 등 종류별로 구성됩니다. 여기, 기존 폴더 계층 구조에서 안전하게 저장하고 관리할 수 있습니다. 즐겨찾기에 태그를 지정할 수 있으며, 해당 역할이 있는 경우 콘텐츠를 관리할 수 있습니다.
 

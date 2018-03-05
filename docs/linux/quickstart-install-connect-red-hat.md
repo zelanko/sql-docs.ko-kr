@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/24/2018
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>SQL Server를 설치 하는 빠른 시작: Red hat에서 데이터베이스를 만듭니다.
+# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>SQL Server를 설치 하는 빠른 시작: Red Hat에 SQL Server를 설치하고 데이터베이스 만들기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
