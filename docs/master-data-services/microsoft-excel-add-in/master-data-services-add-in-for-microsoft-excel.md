@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: "30"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 965902950f4b49d9923f3e92f5954393c044e359
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f1e34eb5bb7992661f79e2c524b660442a6df35
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel용 Master Data Services 추가 기능
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 사용하면 MDS의 필터링된 데이터 목록을 Excel에 로드하여 다른 데이터와 같은 방식으로 사용할 수 있습니다. 작업이 끝나면 데이터를 다시 중앙 방식으로 저장되는 MDS에 게시할 수 있습니다. 사용자가 보고 업데이트할 수 있는 데이터는 보안에 따라 결정됩니다.  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cd875b088c8c7003123db63b6f6584f80a93a42
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aaa835322bda0e98ac9059bce4612abed5c59a92
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계(Master Data Services) 만들기 및 실행
   엔터티 동기화는 엔터티 버전 간의 반복 가능한 단방향 동기화입니다. 이는 서로 다른 모델 간에 엔터티 데이터를 공유하는 방법을 제공합니다.  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-caps.latest.revision: "44"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c4e94eae55ba86f5aa2cd548790f583c281de8f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e539d5a06f53fd4b79530031c8f1dec9dd493aae
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
   이 문서에서는 Windows Server 2012 R2 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 를 설치하고, MDS 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델 및 데이터를 배포하는 방법을 설명합니다. MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )를 사용하면 조직에서 신뢰할 수 있는 버전의 데이터를 관리할 수 있습니다.   

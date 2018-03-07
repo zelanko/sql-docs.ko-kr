@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5c9b65f51ecbd6d8273f9d272c493b87031d7fb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 87876f07b8ecbe9547cf7de2d32bd234498e797c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>엔터티 트랜잭션 로그 유형 변경(Master Data Services)
   엔터티의 트랜잭션 로그 유형을 특성, 멤버 또는 없음으로 변경할 수 있습니다.  

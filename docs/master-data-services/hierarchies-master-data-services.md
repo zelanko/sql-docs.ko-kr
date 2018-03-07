@@ -8,23 +8,24 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - hierarchies [Master Data Services]
 - hierarchies [Master Data Services], about hierarchies
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
-caps.latest.revision: "11"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19dd4e701123b4c014de6ed6c5940ea04e864ef6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2d86add6f1bfe23fe1ed327b2c11787153bebea1
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="hierarchies-master-data-services"></a>계층(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 계층은 다음 작업에 사용할 수 있는 트리 구조입니다.  

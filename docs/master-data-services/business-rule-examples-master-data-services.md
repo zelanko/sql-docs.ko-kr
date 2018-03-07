@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-caps.latest.revision: "21"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee090eef159e3915c412a0d98e6dd4a9fc9c8a53
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e01b4c5141011209f5fdf314711e9cc26595c5f5
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="business-rule-examples-master-data-services"></a>비즈니스 규칙의 예(Master Data Services)
 이 문서에서는 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 대한 비즈니스 규칙의 예를 보여 줍니다. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]설치에 포함된 샘플 모델에서 이러한 예를 찾을 수 있습니다.   

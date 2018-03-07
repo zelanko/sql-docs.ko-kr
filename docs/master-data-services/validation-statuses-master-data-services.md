@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d50b9b71731b7bd681f3cc82e3eeb1e2efb58a2e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9e03bf7b759a8193a6c2a5e32193379684e5f01a
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="validation-statuses-master-data-services"></a>유효성 검사 상태(Master Data Services)
   **버전 유효성 검사** 페이지의 **버전 관리** 기능 영역에서는 다음 상태가 표시될 수 있습니다.  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e255c0abb98d6ffae0cad9d68fd8696fdef8f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: af0dd255b49e77593bbd14ffa6d06542a995a06c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>필터 대화 상자(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 **필터** 대화 상자를 사용하여 Excel로 로드하기 전에 MDS 관리 데이터 목록의 범위를 좁힐 수 있습니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 |컨트롤 이름|Description|  
 |------------------|-----------------|  
-|Attribute|필터링할 특성을 표시합니다. 나열된 특성이 없으면 추가되지 않았기 때문입니다.<br /><br /> 참고: 워크시트에 표시하지 않으려는 특성으로 필터링할 수 있습니다.|  
+|attribute|필터링할 특성을 표시합니다. 나열된 특성이 없으면 추가되지 않았기 때문입니다.<br /><br /> 참고: 워크시트에 표시하지 않으려는 특성으로 필터링할 수 있습니다.|  
 |연산자|선택한 특성 유형에 해당하는 연산자를 표시합니다. 자세한 내용은 [필터 연산자&#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md)를 참조하세요.|  
 |조건|필터링할 조건입니다.|  
 |업데이트 요약|큰 데이터 집합을 사용 중일 때 로드된 데이터 양 세부 정보와 함께 **요약** 섹션을 업데이트하려면 클릭합니다.|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 |컨트롤 이름|Description|  
 |------------------|-----------------|  
 |Model|모델의 이름입니다.|  
-|버전|버전의 이름입니다.|  
+|버전 옵션|버전의 이름입니다.|  
 |엔터티|엔터티의 이름입니다.|  
 |행|**행** 섹션에 따라 Excel에 로드되는 행 수입니다.|  
 |열|**열** 섹션에서 선택한 특성에 따라 Excel에 로드되는 열 수입니다.|  

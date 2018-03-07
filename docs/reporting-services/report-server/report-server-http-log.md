@@ -1,7 +1,7 @@
 ---
 title: "보고서 서버 HTTP 로그 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: 
@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: HTTP [Reporting Services]
+helpviewer_keywords:
+- HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c05dfdbb99322caa42412c9d2bc2636625cf0b7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 705ec73a7198793754a70edfdc854a5c9c15e47c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="report-server-http-log"></a>보고서 서버 HTTP 로그
   보고서 서버 HTTP 로그 파일은 보고서 서버에서 처리하는 모든 HTTP 요청 및 응답에 대한 기록을 유지합니다. 요청 오버플로 및 제한 시간 오류는 보고서 서버에 도달하지 않으므로 로그 파일에 기록되지 않습니다.   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="configuration-settings-for-report-server-http-log"></a>보고서 서버 HTTP 로그에 대한 구성 설정   
  보고서 서버 HTTP 로그를 구성하려면 메모장을 사용하여 ReportingServicesService.exe.config 파일을 수정합니다. 구성 파일은 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 폴더에 있습니다.  
   
- HTTP 서버를 사용하려면 ReportingServicesService.exe.config 파일의 RStrace 섹션에 **http:4** 를 추가해야 합니다. 다른 모든 HTTP 로그 파일 항목은 선택 사항입니다. 다음 예에는 모든 설정이 포함되어 있으므로 RStrace 섹션에 전체 섹션을 붙여 넣은 다음 필요하지 않은 설정을 삭제할 수 있습니다.  
+ HTTP 서버를 사용하려면 ReportingServicesService.exe.config 파일의 RStrace 섹션에 **http:4** 를 추가해야 합니다. 다른 모든 HTTP 로그 파일 항목은 선택 사항입니다. 다음 예에는 모든 설정이 포함되어 있으므로 RStrace 섹션에 전체 섹션을 붙여 넣은 다음 필요하지 않은 설정을 삭제할 수 있습니다.
   
 ```  
    <RStrace>  
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/09/2018
          <add name="TraceListeners" value="debugwindow, file" />  
          <add name="TraceFileMode" value="unique" />  
          <add name="HttpTraceFileName" value="ReportServerService_HTTP_" />  
-         <add name="HttpTraceSwitches" value="date,time, clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
+         <add name="HttpTraceSwitches" value="date,time,clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
          <add name="Components" value="all:3,http:4" />  
    </RStrace>  
 ```  

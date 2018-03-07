@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-caps.latest.revision: "12"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: beb9d19bb033405761e5152d7684ba7d5b7224e6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1d2a7c7eccfffebd6e3d4000b302c1f9241ddc9d
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="overview-exporting-data-master-data-services"></a>개요: 데이터 내보내기(Master Data Services)
   이 문서에서는 구독 뷰 형식 유형 및 모델 개체에 대한 변경 내용으로 인해 뷰를 편집해야 하는 경우를 확인하는 방법을 소개합니다.  

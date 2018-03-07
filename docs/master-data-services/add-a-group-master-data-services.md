@@ -8,23 +8,24 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - groups [Master Data Services], adding
 - adding groups [Master Data Services]
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 282a0c3e16d9254797beeed57f69b26985bb707d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2398be897b1f231c2e507dc1f0960a811df3eca7
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="add-a-group-master-data-services"></a>그룹 추가(Master Data Services)
   **의** 그룹 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 그룹을 추가하여 웹 응용 프로그램에 사용 권한을 할당하는 프로세스를 시작합니다. 그룹의 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있게 하려면 하나 이상의 기능 영역과 모델 개체에 그룹 권한을 부여해야 합니다.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - attributes [Master Data Services], free-form attributes
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
-caps.latest.revision: "13"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9acfc7e9d80dd82186f62dcb3fedbe43c80f9f6c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5263182c1415e0c9919bee467c491e77ad3e239e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="attributes-master-data-services"></a>특성(Master Data Services)
   특성은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 엔터티에 포함된 개체입니다. 특성 값은 엔터티 멤버를 설명합니다. 특성을 사용하여 리프 멤버, 통합 멤버 또는 컬렉션을 설명할 수 있습니다.  

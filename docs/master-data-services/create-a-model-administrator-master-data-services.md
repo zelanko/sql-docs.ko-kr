@@ -8,21 +8,23 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: administrators [Master Data Services], creating
+helpviewer_keywords:
+- administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d3230619568cebcc6c098e59eda3488bcf2fecf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bb3cdb5a2d300601daadf8b1162a08414420d536
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>모델 관리자 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 하나 이상의 모델에 있는 모든 개체에 대한 모든 권한을 사용자나 그룹에 부여하려면 모델 관리자를 만들면 됩니다.  

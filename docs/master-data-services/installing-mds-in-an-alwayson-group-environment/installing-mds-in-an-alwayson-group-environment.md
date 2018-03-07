@@ -8,20 +8,21 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
 caps.latest.revision: 
-author: smartysanthosh
-ms.author: nagavo
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8cd77bb7366fb1bb09d8f119a1b740bd8456344
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services에 대한 고가용성 및 재해 복구
 
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/20/2017
 
 WSFC는 응용 프로그램 및 서비스의 고가용성을 향상시키는 기능입니다. 해당 인스턴스에서 실행 중인 Microsoft 장애 조치(Failover) 클러스터 서비스와 독립적인 Windows Server 인스턴스의 그룹으로 구성됩니다. Windows Server 인스턴스(때때로 노드라고도 함)가 연결되어 있어 서로 통신할 수 있으며 실패 감지를 수행할 수 있습니다. WSFC는 오류 감지 및 장애 조치 기능을 제공합니다. 클러스터의 노드 또는 서비스가 실패하고 오류가 감지되면 다른 노드가 자동 또는 수동으로 시작되어 실패한 노드에서 호스트된 서비스를 제공합니다. 따라서 사용자는 중단이 최소화된 서비스를 경험하게 되며, 서비스 가용성이 향상됩니다.  
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 
 모든 인스턴스에서 Windows Server 운영 체제를 설치하고 모든 업데이트를 패치합니다.
 
@@ -215,7 +216,7 @@ AG는 데이터베이스 수준의 고가용성을 향상시킵니다. AG(사용
 FCI는 인스턴스 수준의 고가용성을 향상시킵니다. SQL Server 서비스 및 관련된 서비스는 WSFC에서 리소스로 등록됩니다. 또한 FCI 솔루션은 WFC 클러스터의 모든 노드에 사용할 수 있어야 하는 SAN 또는 SMB 파일 공유와 같이 대칭 공유 디스크 저장소가 필요합니다.
 
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 
 -   모든 노드에서 SQL Server를 설치합니다. 자세한 내용은 [SQL Server 2016 설치](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server)를 참조하세요.
 
@@ -319,9 +320,9 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
 8.  **복제본 지정** 페이지에서 **수신기** 탭을 클릭하고 다음을 수행합니다. 그림 18을 참조하세요.
 
-    a.  **가용성 그룹 수신기 만들기**를 클릭하여 MDS 데이터베이스 연결에 대한 가용성 그룹 수신기를 설정합니다.
+    1.  **가용성 그룹 수신기 만들기**를 클릭하여 MDS 데이터베이스 연결에 대한 가용성 그룹 수신기를 설정합니다.
 
-    b.  MDSSQLServer와 같은 **수신기 DNS 이름**을 입력합니다.
+    2.  MDSSQLServer와 같은 **수신기 DNS 이름**을 입력합니다.
 
     c.  **포트** 텍스트 상자에 기본 SQL 포트 1433을 입력합니다.
 

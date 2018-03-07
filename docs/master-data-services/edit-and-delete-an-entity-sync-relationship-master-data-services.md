@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afbfa60002d96fa11d76eca3146f13117e49fd22
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bde6984b4f3d2be8660e4b8b80c956dacca5ea98
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계 편집 및 삭제(Master Data Services)
   엔터티 동기화는 엔터티 버전 간의 반복 가능한 단방향 동기화입니다. 이는 서로 다른 모델 간에 엔터티 데이터를 공유하는 방법을 제공합니다. 만든 동기화 관계를 편집하고 삭제할 수 있습니다.  

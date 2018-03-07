@@ -8,23 +8,24 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - attributes [Master Data Services], deleting
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd829ac4e41b0dc67845b8b90b54afb2bfc77587
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 698b641fdfed99e4d1fcad0609e140977e63cf33
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="delete-an-attribute-master-data-services"></a>특성 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 특성 및 연결된 모든 특성 값을 영구적으로 삭제하려는 경우 특성을 삭제할 수 있습니다.  

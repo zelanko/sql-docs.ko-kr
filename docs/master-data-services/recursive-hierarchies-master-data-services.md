@@ -8,23 +8,24 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - recursive hierarchies [Master Data Services]
 - hierarchies [Master Data Services], recursive hierarchies
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de8195e5507ed5c80158beaaed27387f27edcf98
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a4f0340f6592e6298eb8392a03ea3fa971edd92
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>재귀 계층 구조(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 재귀 계층 구조는 재귀 관계를 포함하는 파생 계층입니다. 재귀 관계는 엔터티에 엔터티 자체를 기반으로 하는 도메인 기반 특성이 있는 경우에 존재합니다.  

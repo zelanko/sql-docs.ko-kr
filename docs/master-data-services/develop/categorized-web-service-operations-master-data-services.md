@@ -11,18 +11,19 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c43a3121179b8317c94c81a3b9aaf623459ce01d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2ae71d17925d069a8bf7211b0692b6787467dbea
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>범주별로 분류한 웹 서비스 작업(Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스에는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]가 해당 사용자 인터페이스를 통해 사용하는 모든 기능을 제어하기 위한 코드를 작성할 수 있는 완전한 작업 집합이 포함되어 있습니다. 웹 서비스 작업은 <xref:Microsoft.MasterDataServices.IService> 인터페이스를 통해 정의되며 <xref:Microsoft.MasterDataServices.ServiceClient>에서 메서드로 구현됩니다. 이 항목에서는 웹 서비스 API를 사용하는 방법을 이해하는 데 도움이 되도록 웹 서비스 작업을 개념적 범주로 그룹화하였습니다.  

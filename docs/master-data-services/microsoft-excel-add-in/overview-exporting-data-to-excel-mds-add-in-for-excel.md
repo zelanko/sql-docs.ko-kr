@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86a17fe1e0bab836ed004d10e1f4691b04c127c6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7d084ce76ed1dd535575caa2d43ccb43e64fd3a2
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Overview: Exporting Data to Excel (MDS Add-in for Excel)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 데이터를 사용하려면 먼저 MDS 리포지토리의 데이터를 활성 Excel 워크시트로 내보내야 합니다. 데이터 사용을 마쳤으면 다른 사용자가 공유할 수 있도록 다시 MDS 리포지토리로 가져옵니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |MDS 데이터를 Excel에 로드하기 전에 필터링합니다.|[내보내기 전 데이터 필터링&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)|  
-|MDS 데이터를 Excel로 로드합니다.|[Master Data Services에서 Excel로 데이터 내보내기](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|MDS 데이터를 Excel로 로드합니다.|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |데이터를 다운로드하기 전에 열 순서를 변경합니다.|[열 순서 바꾸기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>관련 내용  

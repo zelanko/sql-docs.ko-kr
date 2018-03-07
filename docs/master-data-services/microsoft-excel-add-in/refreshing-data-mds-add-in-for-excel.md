@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 784bf12fe74c9cb16877984f31ec19204138d946
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9fc25e1a301616c530953ce43d4950cba5a680a
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>데이터 새로 고침(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 데이터를 새로 고쳐 새 워크시트를 열지 않고도 MDS 리포지토리에서 최신 정보를 가져올 수 있습니다. 모든 셀이나 선택한 셀을 새로 고칠 수 있습니다. 이 방법은 사용자 지정 수식이나 MDS에서 관리되지 않는 기타 데이터가 포함된 열을 삽입했으며 이를 보존하려는 경우에 유용하게 사용할 수 있습니다.  

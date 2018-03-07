@@ -8,23 +8,24 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - versions [Master Data Services], deleting
 - deleting versions [Master Data Services]
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8943644fcede0155643b12a73cc2107cddfd4493
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fecbaf5df8943cc52d0745d86b606a23d2d508a5
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="delete-a-version-master-data-services"></a>버전 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 버전에 연결된 마스터 데이터가 더 이상 필요하지 않은 경우 해당 버전을 삭제할 수 있습니다. 버전을 삭제한 후에는 연결된 마스터 데이터를 검색할 수 없습니다.  

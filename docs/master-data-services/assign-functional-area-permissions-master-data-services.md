@@ -8,23 +8,24 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
 - functional area permissions [Master Data Services], assigning
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b05c23f9ae4cb1a69ec86672030475c977a89e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 10adbe13447c77ed80f9737c70b5a23e8e6d4529
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>기능 영역 권한 할당(Master Data Services)
   기능 영역 권한을 할당하여 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]의 기능 영역에 대한 액세스 권한을 사용자나 그룹에 부여합니다.  

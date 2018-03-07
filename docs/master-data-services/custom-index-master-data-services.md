@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe67d6afd28bef9b73700206cd618db1a3374580
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 190d8f1541fc13affddffa71859d37dbb4d4239b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="custom-index-master-data-services"></a>사용자 지정 인덱스(Master Data Services)
   사용자 지정 인덱스는 엔터티에서 하나의 속성(단일 인덱스) 또는 속성 목록(복합 인덱스)에 대한 비클러스터형 인덱스를 생성합니다. 일반적으로 인덱스는 쿼리 프로세스의 성능을 향상시킵니다. SQL Server 인덱스에 대한 자세한 내용은 [인덱스](../relational-databases/indexes/indexes.md)를 참조하세요.  

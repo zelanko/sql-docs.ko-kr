@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a29f3f006af3376c430b99de312474283905ed9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7f5d996cc9ccbf7f131056e7b02a7f756d048e02
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="subscription-view-formats-master-data-services"></a>구독 뷰 형식(Master Data Services)
   선택한 엔터티 또는 파생 계층을 기준으로, 다음 형식을 구독 뷰에 사용할 수 있습니다.  

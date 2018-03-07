@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8300de71f8cf974cf12c9f8d1ac34bf29a24edca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae28abadd1114bf5944502337289170061f39e1c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>변경 집합 승인 또는 거부(Master Data Services)
   변경 집합은 마스터 데이터에 대해 보류 중인 변경 내용의 컬렉션입니다. 엔터티를 변경할 때 관리자가 승인을 해야 하는 경우 승인을 위해 변경 집합이 제출되면 변경 집합을 검토한 후 승인하거나 거부할 수 있습니다.  

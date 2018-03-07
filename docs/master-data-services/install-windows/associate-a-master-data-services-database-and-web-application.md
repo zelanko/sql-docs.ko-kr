@@ -8,25 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f342ee31cc2d3be89c1516cc86584381d84c4c02
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c83b5d024daced59d58c153140a53ced006f01e5
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스와 웹 응용 프로그램 연결
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스와 연결하여 웹 작업에 사용할 데이터베이스를 지정할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 가 로컬 컴퓨터에 설치되어야 합니다. 자세한 내용은 [Master Data Services 설치](../../master-data-services/install-windows/install-master-data-services.md)를 참조하세요.  
   
@@ -52,13 +53,13 @@ ms.lasthandoff: 11/20/2017
   
 8.  **응용 프로그램을 데이터베이스에 연결**에서 인스턴스 및 데이터베이스 정보가 올바른지 확인한 다음 **적용**을 클릭합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
   
 -   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스에 대한 프로그래밍 방식의 액세스는 웹 응용 프로그램을 만들 때 자동으로 설정됩니다. 개발자가 서비스 메타데이터에 액세스하여 프로그래밍 방식의 액세스를 위한 프록시 클래스를 쉽게 생성할 수 있도록 하려면 메타데이터 게시를 사용하도록 설정합니다. 자세한 내용은 [Create Master Data Manager Web Service Proxy Classes](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)를 참조하세요.  
   
 -   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에 사용자 및 그룹을 추가합니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에 대한 액세스 권한이 사용자나 그룹에 부여되지 않은 경우 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 시스템 관리자 자격 증명을 사용하여 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 를 열어야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md) 및 [사용자 및 그룹&#40;Master Data Services&#41;](../../master-data-services/users-and-groups-master-data-services.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Master Data Services 설치](../../master-data-services/install-windows/install-master-data-services.md)   
  [웹 구성 페이지&#40;Master Data Services 구성 마법사&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   

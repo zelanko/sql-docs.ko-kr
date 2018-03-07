@@ -8,21 +8,23 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: staging process [Master Data Services], error messages
+helpviewer_keywords:
+- staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06a7e065187ca920497d411172a67eb8362ba857
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d0560f760a619630bb0ccc9183b30674da89d5f8
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="staging-process-errors-master-data-services"></a>준비 프로세스 오류(Master Data Services)
   준비 프로세스가 완료되면 준비 테이블에 있는 처리된 모든 레코드의 ErrorCode 열에 값이 지정됩니다. 이러한 값에 대해서는 다음 표에서 설명합니다.  
