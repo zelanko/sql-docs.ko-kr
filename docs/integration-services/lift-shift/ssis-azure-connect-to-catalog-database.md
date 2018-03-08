@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9b3a63d93d9d1e27147783f6c745addcd31fac8
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 98aed78b69a108ae5b0c8f914540b385403a60f9
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Azure에서 SSISDB 카탈로그 데이터베이스에 연결
 
@@ -27,7 +28,7 @@ Azure SQL Database 서버에서 호스트되는 SSISDB 카탈로그 데이터베
 - 로그인 정보 
 
 > [!IMPORTANT]
-> 이번에는 Azure Data Factory 버전 2에서 Azure-SSIS Integration Runtime을 만드는 작업과 독립적으로 Azure SQL Database에서 SSISDB 카탈로그 데이터베이스를 만들 수 없습니다. Azure에서 SSIS 패키지를 실행하는 Azure-SSIS IR입니다. 자세한 내용 및 샘플 PowerShell 스크립트는 [Azure에 SQL Server Integration Services 패키지 배포](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)를 참조하세요. 
+> 이번에는 Azure Data Factory 버전 2에서 Azure-SSIS Integration Runtime을 만드는 작업과 독립적으로 Azure SQL Database에서 SSISDB 카탈로그 데이터베이스를 만들 수 없습니다. Azure에서 SSIS 패키지를 실행하는 Azure-SSIS IR입니다. 자세한 내용은 [Azure에 SSIS 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)를 참조하세요. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 시작하기 전에 SQL Server Management Studio 버전 17.2 이상이 설치되어 있는지 확인합니다. SSMS의 최신 버전을 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.

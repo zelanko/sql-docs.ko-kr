@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: report servers [Reporting Services], network load balancing
+helpviewer_keywords:
+- report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3576aec75cab9961b6d7423b65c66e885834ff88
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
   NLB(네트워크 부하 분산) 클러스터에서 실행되도록 보고서 서버 확장을 구성하는 경우 다음을 수행해야 합니다.  
@@ -31,8 +32,7 @@ ms.lasthandoff: 01/09/2018
   
 -   대화형 보고서 보기를 지원하도록 뷰 상태 유효성 검사를 구성합니다. 대화형 보고서는 일반적으로 단일 사용자 세션 동안 사용자 동작에 대한 응답으로 새 데이터나 다른 데이터를 시각화하기 위해 여러 번 렌더링됩니다. 뷰 상태 유효성 검사를 구성하면 실제 요청을 제공하는 보고서 서버에 관계없이 사용자 세션 내에서 근접성이 유지됩니다.  
   
- 
-            [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 스케일 아웃 배포의 부하 분산을 위한 기능, 또는 공유 URL을 통해 단일 액세스 지점을 정의하는 기능을 제공하지 않습니다. 따라서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포를 지원하기 위한 별도의 소프트웨어 또는 하드웨어 NLB 클러스터 솔루션을 구현해야 합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 스케일 아웃 배포의 부하 분산을 위한 기능 또는 공유 URL을 통해 단일 액세스 지점을 정의하는 기능을 제공하지 않습니다. 따라서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포를 지원하기 위한 별도의 소프트웨어 또는 하드웨어 NLB 클러스터 솔루션을 구현해야 합니다.  
   
  
             [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 이미 NLB 클러스터에 속하는 노드에 설치하거나 먼저 스케일 아웃 배포를 구성한 후 클러스터 소프트웨어를 설치할 수 있습니다.  
@@ -51,27 +51,24 @@ ms.lasthandoff: 01/09/2018
 |7|지정한 호스트 이름을 통해 서버에 액세스할 수 있는지 확인합니다.|이 항목의[보고서 서버 액세스 권한 확인](#Verify) 을 참조하십시오.|  
   
 ##  <a name="ViewState"></a> 뷰 상태 유효성 검사 구성 방법  
- NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 대화형 HTML 보고서를 볼 수 있도록 뷰 상태 유효성 검사를 구성해야 합니다. 이 작업은 보고서 서버 및 보고서 관리자에 대해 수행해야 합니다.  
+ NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 대화형 HTML 보고서를 볼 수 있도록 뷰 상태 유효성 검사를 구성해야 합니다.
   
  뷰 상태 유효성 검사는 ASP.NET에서 제어합니다. 뷰 상태 유효성 검사는 기본적으로 활성화되며 웹 서비스의 ID를 사용하여 유효성 검사를 수행합니다. 그러나 NLB 클러스터 시나리오에는 각기 다른 컴퓨터에서 실행되는 여러 개의 서비스 인스턴스 및 웹 서비스 ID가 있으며, 각 노드마다 서비스 ID가 다르기 때문에 하나의 프로세스 ID만으로는 유효성 검사를 수행할 수 없습니다.  
   
  이 문제를 해결하기 위해 뷰 상태 유효성 검사를 지원하도록 임의의 유효성 검사 키를 생성하고 각 보고서 서버 노드에서 같은 키를 사용하도록 수동으로 구성할 수 있습니다. 임의로 생성되는 모든 16진수 시퀀스를 사용할 수 있습니다. 16진수 시퀀스의 최대 길이는 유효성 검사 알고리즘(예: SHA1)에 따라 다릅니다.  
+
+1.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에서 제공하는 자동 생성 기능을 사용하여 유효성 검사 키와 설명 키를 생성합니다. 어떤 방법을 사용하든 스케일 아웃 배포의 각 보고서 서버 인스턴스에 대한 RSReportServer.config 파일에 붙여넣을 수 있는 단일 \<**MachineKey**> 항목을 만들어야 합니다.
   
-1.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에서 제공하는 자동 생성 기능을 사용하여 유효성 검사 키와 설명 키를 생성합니다. 어떤 방법을 사용하든 스케일 아웃 배포의 각 보고서 관리자 인스턴스에 대한 Web.config 파일에 붙여넣을 수 있는 단일 \<**machineKey**> 항목을 만들어야 합니다.  
-  
-     다음 예에서는 확보해야 하는 값을 보여 줍니다. 구성 파일에 이 예를 복사하지 마십시오. 올바른 키 값이 아닙니다.  
+     다음 예에서는 확보해야 하는 값을 보여 줍니다. 구성 파일에 이 예를 복사하지 마십시오. 올바른 키 값이 아닙니다. 보고서 서버에는 올바른 대/소문자 구분이 필요합니다.
   
     ```  
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
-    ```  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    ```   
+2.  파일을 저장합니다.  
   
-2.  보고서 관리자에 대한 Web.config 파일을 열고 생성한 \<**machineKey**> 요소를 \<**system.web**> 섹션에 붙여넣습니다. 기본적으로 보고서 관리자 Web.config 파일은 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config에 있습니다.  
+3.  스케일 아웃 배포의 각 보고서 서버에 대해 이전 단계를 반복합니다.  
   
-3.  파일을 저장합니다.  
-  
-4.  스케일 아웃 배포의 각 보고서 서버에 대해 이전 단계를 반복합니다.  
-  
-5.  \Reporting Services\Report Manager 폴더에 있는 모든 Web.Config 파일의 \<**system.web**> 섹션에 동일한 \<**machineKey**> 요소가 포함되어 있는지 확인합니다.  
+4.  \Reporting Services\Report Server 폴더에 있는 모든 RSReportServer.Config 파일에 동일한 \<**MachineKey**> 요소가 포함되어 있는지 확인합니다.  
   
 ##  <a name="SpecifyingVirtualServerName"></a> Hostname 및 UrlRoot 구성 방법  
  NLB 클러스터에서 보고서 서버 스케일 아웃 배포를 구성하려면 서버 클러스터에 대한 단일 액세스 지점을 제공하는 단일 가상 서버 이름을 정의해야 합니다. 그런 다음 가상 서버 이름을 사용자 환경의 DNS(Domain Name Server)에 등록합니다.  

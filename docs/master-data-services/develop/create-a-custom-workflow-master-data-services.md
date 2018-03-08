@@ -11,28 +11,29 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51c1529c330b6cbb6c7b1b0905a34dca3984f824
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7b982bce7e48811dbfa9874fba2a3084374ff5e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>사용자 지정 워크플로 만들기(Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]는 비즈니스 규칙을 사용하여 기본적인 워크플로 솔루션을 만듭니다. 이러한 솔루션을 사용하면 지정 조건에 따라 자동으로 데이터에 대해 업데이트 및 유효성 검사 작업을 수행하고 전자 메일 알림이 전송되게 할 수 있습니다. 기본 제공 워크플로 동작으로 가능한 것보다 복잡한 처리가 필요한 경우에는 사용자 지정 워크플로를 사용하십시오. 사용자 지정 워크플로는 사용자가 만드는 .NET 어셈블리입니다. 사용자 워크플로 어셈블리가 호출되면 상황에 따라 필요한 동작이 코드에 사용될 수 있습니다. 예를 들어, 워크플로에 다중 계층 승인 또는 복잡한 의사 결정 트리와 같은 CEP(복합 이벤트 처리)가 필요한 경우 데이터를 분석하고 어디로 데이터를 보내서 승인을 받을지를 결정하는 사용자 지정 워크플로를 시작하도록 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 구성할 수 있습니다.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 비즈니스 규칙을 사용하여 기본적인 워크플로 솔루션을 만듭니다. 이러한 솔루션을 사용하면 지정 조건에 따라 자동으로 데이터에 대해 업데이트 및 유효성 검사 작업을 수행하고 이메일 알림이 전송되게 할 수 있습니다. 기본 제공 워크플로 동작으로 가능한 것보다 복잡한 처리가 필요한 경우에는 사용자 지정 워크플로를 사용하십시오. 사용자 지정 워크플로는 사용자가 만드는 .NET 어셈블리입니다. 사용자 워크플로 어셈블리가 호출되면 상황에 따라 필요한 동작이 코드에 사용될 수 있습니다. 예를 들어, 워크플로에 다중 계층 승인 또는 복잡한 의사 결정 트리와 같은 CEP(복합 이벤트 처리)가 필요한 경우 데이터를 분석하고 어디로 데이터를 보내서 승인을 받을지를 결정하는 사용자 지정 워크플로를 시작하도록 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 구성할 수 있습니다.  
   
 ## <a name="how-custom-workflows-are-processed"></a>사용자 지정 워크플로가 처리되는 방법  
  사용자 지정 워크플로를 처리할 때는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램, SQL Server MDS Workflow Integration Service 및 워크플로 처리기 어셈블리라는 세 가지 주요 구성 요소가 사용됩니다. 이러한 구성 요소는 사용자 지정 워크플로를 다음과 같이 처리합니다.  
   
 1.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]를 사용하여 워크플로를 시작하는 엔터티의 유효성을 검사합니다.  
   
-2.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]가 비즈니스 규칙 조건에 맞는 멤버를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스의 Service Broker 큐로 보냅니다.  
+2.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 비즈니스 규칙 조건에 맞는 멤버를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스의 Service Broker 큐로 보냅니다.  
   
 3.  SQL Server MDS Workflow Integration Service가 정기적으로 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스의 저장 프로시저를 호출합니다.  
   

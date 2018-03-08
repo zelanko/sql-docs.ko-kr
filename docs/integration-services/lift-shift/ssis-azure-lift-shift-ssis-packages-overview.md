@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
 이제 SSIS(SQL Server Integration Services) 패키지 및 워크로드를 Azure 클라우드로 이동할 수 있습니다.
@@ -64,7 +65,7 @@ SSIS IR은 한 번만 프로비전하면 됩니다. 그런 다음 SSDT(SQL Serve
 > [!NOTE]
 > Azure에 패키지를 배포하는 경우 패키지 배포 마법사는 항상 패키지를 최신 패키지 형식으로 업그레이드합니다.
 
-Azure의 필수 구성 요소에 대한 자세한 내용은 [SSIS(SQL Server Integration Services) 패키지를 클라우드로 리프트 앤 시프트](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)를 참조하세요.
+Azure에서 필수 구성 요소에 대한 자세한 정보는 [Azure에 SSIS 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)를 참조하세요.
 
 ## <a name="ssis-features-on-azure"></a>Azure의 SSIS 기능
 
@@ -81,7 +82,7 @@ Windows 인증을 사용하여 클라우드에서 **온-프레미스 데이터 �
 ## <a name="common-tasks"></a>일반 작업
 
 ### <a name="provision"></a>프로비전
-Azure에서 SSIS 패키지를 배포하고 실행하려면 먼저 SSISDB 카탈로그 데이터베이스와 Azure SSIS Integration Runtime을 프로비전해야 합니다. [SSIS(SQL Server Integration Services) 패키지를 클라우드로 리프트 앤 시프트](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 문서의 프로비전 단계를 수행합니다.
+Azure에서 SSIS 패키지를 배포하고 실행하려면 먼저 SSISDB 카탈로그 데이터베이스와 Azure SSIS Integration Runtime을 프로비전해야 합니다. [Azure에 SSIS 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal) 아티클의 프로비전 단계를 수행합니다.
 
 ### <a name="deploy-and-run-packages"></a>패키지 배포 및 실행
 SQL Database에서 프로젝트를 배포하고 패키지를 실행하려면 다음과 같은 몇 가지 친숙한 도구 및 스크립팅 옵션 중 하나를 사용할 수 있습니다.
@@ -105,5 +106,5 @@ SQL Database에 저장된 패키지의 실행을 예약하려면 다음 도구�
 
 ## <a name="next-steps"></a>다음 단계
 Azure에서 SSIS 워크로드를 시작하려면 다음 문서를 참조하세요.
--   [SSIS(SQL Server Integration Services) 패키지를 클라우드로 리프트 앤 시프트](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [Azure에 SSIS 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
 -   [Azure에서 SSIS 패키지 배포, 실행 및 모니터링](ssis-azure-deploy-run-monitor-tutorial.md)

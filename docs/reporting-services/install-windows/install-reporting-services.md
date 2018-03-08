@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2f09b475d42657c8c9ce8ef60d6b5b7c36b30cc2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d3f53de12e07925af838b5188e9b889ae44eb090
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services(2017 이상) 설치
 
@@ -38,7 +38,7 @@ Reporting Services를 설치하기 전에 [SQL Server 설치를 위한 하드웨
 
 ## <a name="install-your-report-server"></a>보고서 서버 설치
 
-보고서 서버를 설치하는 것은 단순합니다. 파일을 설치하는 몇 가지 단계가 있습니다.
+보고서 서버를 설치하는 것은 간단합니다. 파일을 설치하는 몇 가지 단계가 있습니다.
 
 > [!NOTE]
 > 설치 시 사용 가능한 SQL Server 데이터베이스 엔진 서버가 필요하지 않습니다. 설치 후 Reporting Services를 구성하려면 하나가 필요합니다.

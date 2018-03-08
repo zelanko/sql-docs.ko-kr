@@ -8,29 +8,31 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: what is master data
+keywords:
+- what is master data
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: "28"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 60127dd894485c979e0c79dcde0091119d88ed9a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a60fddbc00fa808590a06bc3263dfe6bc966f18b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-overview-mds"></a>MDS(Master Data Services) 개요
   이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 주요 데이터 구성 및 관리 기능을 설명합니다. 
   
- [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 사용하면 조직 데이터의 마스터 집합을 관리할 수 있습니다. 데이터를 모델로 구성하고, 데이터를 업데이트하는 규칙을 만들고, 데이터를 누가 업데이트하는지 제어할 수 있습니다. Excel을 사용하면 조직의 다른 사람들과 마스터 데이터 집합을 공유할 수 있습니다. 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 사용하면 조직 데이터의 마스터 집합을 관리할 수 있습니다. 데이터를 모델로 구성하고, 데이터를 업데이트하는 규칙을 만들고, 데이터를 누가 업데이트하는지 제어할 수 있습니다. Excel을 사용하면 조직의 다른 사람들과 마스터 데이터 집합을 공유할 수 있습니다. 
   
  >  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 아키텍처에 대한 설명은 simple-talk.com의 [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) (Master Data Services -- 기본 사항) 문서를 참조하세요. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 새로운 기능에 대한 자세한 내용은 [MDS&#40;Master Data Services&#41;의 새로운 기능](../master-data-services/what-s-new-in-master-data-services-mds.md)을 참조하세요.  
    **[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하는 방법에 대한 자세한 내용은** [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md)을 참조하세요.  

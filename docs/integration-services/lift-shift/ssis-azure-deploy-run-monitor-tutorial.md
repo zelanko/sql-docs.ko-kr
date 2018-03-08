@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bfa4f23ea87d7429075d1039df56286b7d4785e
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Azure에서 SSIS 패키지 배포, 실행 및 모니터링
 이 자습서에서는 SQL Server Integration Services 프로젝트를 Azure SQL Database의 SSISDB 카탈로그 데이터베이스에 배포하고, Azure-SSIS Integration Runtime에서 패키지를 실행하고, 실행 중인 패키지를 모니터링하는 방법을 보여 줍니다.
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/14/2018
 
 시작하기 전에 SQL Server Management Studio 버전 17.2 이상이 설치되어 있는지 확인합니다. SSMS의 최신 버전을 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
 
-또한 SSISDB 데이터베이스를 설정하고 Azure-SSIS Integration Runtime을 프로비전했는지 확인합니다. Azure에서 SSIS를 프로비전하는 방법에 대한 자세한 내용은 [SSIS(SQL Server Integration Services) 패키지를 클라우드로 리프트 앤 시프트](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 참조하세요.
+또한 SSISDB 데이터베이스를 설정하고 Azure-SSIS Integration Runtime을 프로비전했는지 확인합니다. Azure에서 SSIS를 프로비전하는 방법에 대한 정보는 [Azure에 SSIS 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)를 참조하세요.
 
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB 데이터베이스에 연결
 

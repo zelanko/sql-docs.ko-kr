@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016 릴리스 정보 | Microsoft 문서"
-ms.date: 10/30/2017
+ms.date: 02/27/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -8,51 +8,42 @@ ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - build notes
 - release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-caps.latest.revision: "276"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3979b28e6b530ba08641731f811e259168975004
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6485ef83b940ab9d04b9406e461517d5254aec7f
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] 이 문서에서는 SQL Server 2016 릴리스 관련 제한 사항 및 문제에 대해 설명합니다.    
-    
- **사용해보기:**    
-   
-[![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**에서 SQL Server 2016 다운로드    
-    
-[![Azure 가상 컴퓨터 소형](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 컴퓨터를 실행해 보세요.
-    
-[![SSMS 다운로드](../includes/media/download2.png)**SSMS:** SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)**를 참조하세요.   
-    
- 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708)을 참조하세요.
-    
-##  <a name="bkmk_top"></a>문서 섹션:    
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+이 문서에서는 SQL Server 2016 릴리스 관련 제한 사항 및 문제에 대해 설명합니다. 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)을 참조하세요.
 
--   [사용 가능한 SQL Server 2016 서비스 팩 1(SP1)](#bkmk_2016sp1)    
--   [SQL Server 2016 GA(일반 공급)](#bkmk_2016_ga) 
--   [SQL Server 2016 RC3(릴리스 후보 3)](#bkmk_2016_rc3)     
+> [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**에서 SQL Server 2016 다운로드
+>
+> [![Azure 가상 컴퓨터 소형](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 컴퓨터를 실행해 보세요.
+>
+> [![SSMS 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)**를 참조하세요.
 
 ## <a name="bkmk_2016sp1"></a>사용 가능한 SQL Server 2016 서비스 팩 1(SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1은 SQL Server 2016의 모든 버전 및 서비스 수준을 SQL Server 2016 SP1로 업그레이드합니다. 이 문서에 나열된 수정 사항 외에 SQL Server 2016 SP1에는 SQL Server 2016 누적 업데이트 1(CU1)부터 SQL Server 2016 CU3에 포함된 핫픽스가 들어 있습니다.
-    
+
 - [SQL Server 2016 SP1 다운로드 페이지](https://www.microsoft.com/download/details.aspx?id=54276)
 - [SQL Server 2016 서비스 팩 1 릴리스 정보](https://support.microsoft.com/kb/3182545) SP1에서 수정되거나 변경된 개별 버그 및 문제를 나열합니다.
- - ![info_tip](../sql-server/media/info-tip.png) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 서비스 팩을 포함하여 지원되는 모든 버전에 대한 링크 및 자세한 내용은 [SQL Server 업데이트 센터](https://msdn.microsoft.com/library/ff803383.aspx)를 참조하세요. 
-    
-    
+ - ![info_tip](../sql-server/media/info-tip.png) 다음 서비스 팩을 포함하여 지원되는 모든 버전에 대한 링크 및 자세한 내용은 [SQL Server 업데이트 센터](https://msdn.microsoft.com/library/ff803383.aspx)를 참조하세요. [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 릴리스 - GA (일반 공급)
 -   [데이터베이스 엔진(GA)](#bkmk_ga_instalpatch) 
 -   [Stretch Database(GA)](#bkmk_ga_stretch)
