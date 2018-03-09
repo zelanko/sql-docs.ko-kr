@@ -84,7 +84,10 @@
 ## [Python 자습서](tutorials/sql-server-python-tutorials.md)
 
 ### [Python: T-SQL을 사용하여 Python 실행](tutorials/run-python-using-t-sql.md)
-### [Python: revoscalepy를 사용하여 모델 만들기](tutorials/use-python-revoscalepy-to-create-model.md)
+#### [저장 프로시저에서 Python 래핑](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [SQL Server의 Python 모델에서 학습 및 점수 매기기](tutorials/train-score-using-python-in-tsql.md)
+#### [SQL Server 계산 컨텍스트에서 revoscalepy를 사용하여 모델 만들기](tutorials/use-python-revoscalepy-to-create-model.md)
+
 ### [Python: SQL 개발자를 위한 데이터베이스 내 분석](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 #### [예제 데이터 다운로드](tutorials/sqldev-py1-download-the-sample-data.md)
@@ -94,7 +97,7 @@
 #### [모델 학습 및 저장](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [모델 운영화](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: 모델 배포 및 사용](../advanced-analytics/python/publish-consume-python-code.md)
+### [Python: 독립 실행형 서버를 사용하여 모델 배포 및 사용](../advanced-analytics/python/publish-consume-python-code.md)
 
 # [Machine Learning Server - 독립 실행형](r/r-server-standalone.md)
 ## [시작](r/getting-started-with-microsoft-r-server-standalone.md)
@@ -162,8 +165,8 @@
 ### [기계 학습 솔루션 관리 및 모니터링](r/managing-and-monitoring-r-solutions.md)
 ### [Machine Learning Services를 위한 리소스 거버넌스](r/resource-governance-for-r-services.md)
 ### [기계 학습을 위한 리소스 풀 만들기](r/how-to-create-a-resource-pool-for-r.md)
-### [Machine Learning Services를 위한 확장 이벤트](r/extended-events-for-sql-server-r-services.md)
-
+### [Machine Learning Services에 대한 확장 이벤트](r/extended-events-for-sql-server-r-services.md)
+### [PREDICT 문 모니터링에 대한 확장 이벤트](xe-event-predict-tsql.md)
 ### [Machine Learning Services용 DMV](r/dmvs-for-sql-server-r-services.md)
 ### [R 코드 프로파일링 함수 사용](r/using-r-code-profiling-functions.md)
 ### [Management Studio에서 사용자 지정 보고서를 사용하여 Machine Learning Services 모니터링](r/monitor-r-services-using-custom-reports-in-management-studio.md)
