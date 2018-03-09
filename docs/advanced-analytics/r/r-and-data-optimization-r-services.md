@@ -2,27 +2,28 @@
 title: "R Services-데이터 최적화에 대 한 성능 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 13
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df91cedac15da65bee9c9aa38c3c747e04f6d60d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-데이터 최적화에 대 한 성능
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 두 사례 연구를 기반으로 하는 R 서비스에 대 한 성능 최적화를 설명 하는 일련의 세 번째입니다. 이 문서에서는 성능 최적화 R에 대 한 설명 또는 SQL Server에서 실행 하는 Python 스크립트입니다. 또한 성능을 향상 시키기 및 알려진된 문제를 방지 하기 위해 R 코드를 업데이트 하는 데 사용할 수 있는 방법을 설명 합니다.
 
@@ -168,7 +169,7 @@ RevoScaleR의 최적화에서 추가 지침은 다음이 문서를 참조 합니
 
 + 함수에 대 한 참조 [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
 
-### <a name="use-microsoftml"></a>MicrosoftML 사용
+### <a name="use-microsoftml"></a>Use MicrosoftML
 
 또한 좋습니다 새 보면 **MicrosoftML** 계산 컨텍스트 및 RevoScaleR에서 제공 하는 변환에 사용할 수 있는 확장 가능한 기계 학습 알고리즘을 제공 하는 패키지입니다.
 
@@ -193,4 +194,3 @@ RevoScaleR의 최적화에서 추가 지침은 다음이 문서를 참조 합니
 [R-R에 대 한 성능 조정 코드 및 데이터 최적화](r-and-data-optimization-r-services.md)
 
 [성능 튜닝-사례 연구 결과](performance-case-study-r-services.md)
-

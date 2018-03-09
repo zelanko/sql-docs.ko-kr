@@ -2,25 +2,28 @@
 title: "SQL Server R Services의 R 상호 운용성 | Microsoft 문서"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 817c05a5f677e1466d4e573c3af3d66145ce0ca9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>SQL Server의 R 상호 운용성
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목 SQL Server 내에서 R에 대 한 실행 하기 위한 메커니즘을 중점적으로 다루며 Microsoft R 및 오픈 소스 오른쪽 간의 차이점을 설명
 
@@ -30,11 +33,11 @@ ms.lasthandoff: 11/09/2017
 
 ### <a name="open-source-r-components"></a>오픈 소스 R 구성 요소
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]에는 기본 R 패키지 및 도구의 전체 배포가 포함됩니다. 기본 배포에 포함된 구성 요소에 대한 자세한 내용은 설치하는 동안 기본 위치 `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`에 설치된 설명서를 참조하세요.
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 전체 배포 기본 R 패키지 및 도구를 포함 합니다. 기본 배포에 포함된 구성 요소에 대한 자세한 내용은 설치하는 동안 기본 위치 `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`에 설치된 설명서를 참조하세요.
 
 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]를 설치하는 동안 GNU Public License의 조건에 동의해야 합니다. 그 후에 R의 다른 오픈 소스 배포에서 실행하는 것처럼 추가 수정 없이 표준 R 패키지를 실행할 수 있습니다.
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 어떤 방식으로도 R 런타임을 수정하지 않습니다. R 런타임은 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 프로세스 외부에서 실행되며 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]와 독립적으로 실행될 수 있습니다. 하지만 리소스 경합을 피하려면 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 R을 사용하는 동안 이러한 도구를 실행하지 않는 것이 좋습니다.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] R 런타임 어떤 방식으로든에서 수정 하지 않습니다. R 런타임은 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 프로세스 외부에서 실행되며 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]와 독립적으로 실행될 수 있습니다. 하지만 리소스 경합을 피하려면 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 R을 사용하는 동안 이러한 도구를 실행하지 않는 것이 좋습니다.
 
 특정 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인스턴스와 연결된 R 기본 패키지 배포는 인스턴스와 연결된 폴더에서 찾을 수 있습니다. 예를 들어 기본 인스턴스에 R 서비스를 설치한 경우 R 라이브러리이 폴더에 있는이 기본적으로:
 

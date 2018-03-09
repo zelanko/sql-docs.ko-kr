@@ -1,28 +1,28 @@
 ---
-title: "자습서: 보고서 (보고서 작성기)에 세로 막대형 차트를 추가 | Microsoft Docs"
+title: "자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d7c5c99922e82652ecbd4d7ad2f526f7f4c3d89c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)
 이 자습서에서는 계열을 범주별로 그룹화된 일련의 세로 막대로 표시하는 세로 막대형 차트가 있는, 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
 ![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
   
 이 자습서에 소요되는 예상 시간: 15분  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/09/2017
 5.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택하고 **다음**을 클릭합니다. 사용자 이름과 암호를 입력해야 할 수 있습니다.  
   
     > [!NOTE]  
-    > 적절한 권한만 가지고 있으면 선택하는 데이터 원본은 중요하지 않습니다. 데이터를 데이터 원본에서 가져오는 것은 아니기 때문입니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
+    > 적절한 권한만 가지고 있으면 선택하는 데이터 원본은 중요하지 않습니다. 데이터를 데이터 원본에서 가져오는 것은 아니기 때문입니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
 6.  **쿼리 디자인** 페이지에서 **텍스트로 편집**을 클릭합니다.  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  가로 축을 마우스 오른쪽 단추로 클릭 > **가로 축 속성**을 선택합니다.  
+2.  가로 축 > **가로 축 속성**을 마우스 오른쪽 단추로 클릭합니다.  
   
 3.  **숫자** 탭의 **범주**에서 **날짜**를 선택합니다.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  가로 축 제목을 마우스 오른쪽 단추로 클릭한 다음 **축 제목 표시** 를 클릭하여 제목을 제거합니다. 가로 축에는 날짜가 표시되므로 제목이 필요하지 않습니다.  
   
-3.  가로 축을 마우스 오른쪽 단추로 클릭 > **가로 축 속성**을 선택합니다.  
+3.  가로 축 > **가로 축 속성**을 마우스 오른쪽 단추로 클릭합니다.  
   
 5.  **레이블** 탭의 **축 레이블 자동 맞춤 옵션 변경**에서 **자동 맞춤 사용 안 함**을 선택합니다.  
   
@@ -173,7 +173,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  차트에서 범례를 마우스 오른쪽 단추로 클릭 > **범례 속성**을 선택합니다.  
+2.  차트에서 범례 > **범례 속성**를 마우스 오른쪽 단추로 클릭합니다.  
   
 3.  **레이아웃 및 위치**에서 다른 위치를 선택합니다. 예를 들어 가운데 아래 옵션을 선택합니다.  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  (옵션) 이 자습서에는 범주가 하나만 있기 때문에 차트에 범례가 필요하지 않습니다. 범례를 제거하려면 범례를 마우스 오른쪽 단추로 클릭 > **범례 삭제**를 선택합니다.  
+5.  (옵션) 이 자습서에는 범주가 하나만 있기 때문에 차트에 범례가 필요하지 않습니다. 범례를 제거하려면 범례 > **범례 삭제**를 마우스 오른쪽 단추로 클릭합니다.  
   
 6.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -204,17 +204,17 @@ ms.lasthandoff: 08/09/2017
   
 4.  **소수 자릿수 줄이기** 단추를 두 번 클릭하면 근접한 달러로 반올림된 숫자가 표시됩니다.  
   
-5.  세로 축을 마우스 오른쪽 단추로 클릭 > **세로 축 속성**을 선택합니다.  
+5.  세로 축 > **세로 축 속성**을 마우스 오른쪽 단추로 클릭합니다.  
   
-6.  **숫자** 탭의**범주** 상자에서 **통화**를 선택했는지, **소수 자릿수**가 **0**인지 확인합니다.  
+6.  **숫자** 탭의 **범주** 상자에서 **통화** 를 선택했는지, **소수 자릿수** 가 **0** 인지 확인합니다.  
   
-7.  **값 표시 단위**를 선택합니다. **천 단위**가 이미 선택되어 있습니다.  
+7.  **값 표시 단위**를 선택합니다. **천 단위** 가 이미 선택되어 있습니다.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. 세로 축을 마우스 오른쪽 단추로 클릭 > **축 제목 표시**를 선택합니다. 
+9. 세로 축 > **축 제목 표시**를 마우스 오른쪽 단추로 클릭합니다. 
 
-10. 세로 축 제목을 마우스 오른쪽 단추로 클릭 > **축 제목 속성**을 선택합니다.  
+10. 세로 축 제목 > **축 제목 속성**을 마우스 오른쪽 단추로 클릭합니다.  
   
 10. **제목 텍스트** 필드의 텍스트를 **Sales Total (in Thousands)**로 바꿉니다. 제목의 형식을 지정하는 방법과 관련된 다양한 옵션을 지정할 수도 있습니다.  
   
@@ -224,7 +224,7 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. 가로(x) 축에 있는 모든 레이블 표시
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. 가로(x) 축에 있는 모든 레이블을 표시합니다.
 
 x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 이 섹션에서는 속성 창의 속성을 설정하여 모두 표시합니다.
 
@@ -306,12 +306,11 @@ x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 
   
 4.  **저장**을 클릭합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 보고서에 세로 막대형 차트 추가 자습서를 성공적으로 완료했습니다. 차트에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 및 [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 -    [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md) 
 -    [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - alternate names [SQL Server]
 - synonyms [SQL Server], data types
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
-caps.latest.revision: 18
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1d9b1da2bdc7084268740cd7de2580e64ee9698b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 07b4ada74ee54bf1c892e0938dd794e17ea4c0cb
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="data-type-synonyms-transact-sql"></a>데이터 형식 동의어 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,4 +71,3 @@ CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   
-

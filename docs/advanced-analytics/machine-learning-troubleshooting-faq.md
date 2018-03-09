@@ -2,26 +2,27 @@
 title: "문제 해결 및 SQL Server의 기계 학습에 대 한 FAQ | Microsoft Docs"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 6e45e8dc4df1404833fddd9000eb40cad6e5299f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
-
 # <a name="troubleshoot-machine-learning"></a>기계 학습 문제 해결
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 SQL Server의 컴퓨터 학습 기능의 설정 및 구성 관련 문제 해결 정보를 제공 합니다. 정보에는 설치 가이드를, 알려진된 문제 및 릴리스 정보 링크가 포함 됩니다. 다른 문서는이 문서에서 SQL Server의 시스템 학습 솔루션에 대 한 성능 최적화에 대 한 조언을 제공에 연결 합니다.
 
@@ -61,7 +62,7 @@ SQL server에서는 기계 학습을 설정 하지 않은 경우 또는 기능�
 
 기계 학습 인터넷 연결 없이 컴퓨터에서 기능을 설치 해야 하는 경우 설치 프로그램을 시작 하기 전에 R 및 Python 구성 요소를 다운로드 하려면이 문서의 링크 사용:
 
-+ [인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [인터넷에 액세스하지 않고 기계 학습 구성 요소 설치](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
 
 ### <a name="configuration"></a>Configuration
 
@@ -78,4 +79,3 @@ SQL server에서는 기계 학습을 설정 하지 않은 경우 또는 기능�
 + [Azure VM에서 R 서버 설정](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 + [Windows 용 R 서버 설치](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
 + [R Tools for Visual Studio 가져오기](https://www.visualstudio.com/vs/rtvs/)
-

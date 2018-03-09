@@ -1,32 +1,33 @@
----
+﻿---
 title: "PowerShell를 사용한 데이터 준비(연습) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.date: 11/10/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 30
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1d85684da36ef69caf9dfa39f155a320def37b5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell를 사용한 데이터 준비(연습)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 시점까지 다음 중 하나를 설치해야 합니다.
 
@@ -111,7 +112,7 @@ SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 이 예제에서는 R grep 함수로 사용 가능한 경로의 벡터를 검색하고 그 중 "Program Files"를 포함하는 경로를 찾습니다. 자세한 내용은 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)을 참조하세요.
+    - 이 예제에서는 벡터의 사용 가능한 경로 검색 하 고 "Program Files"를 포함 하는 경로 찾을 R grep 함수를 사용 합니다. 자세한 내용은 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)을 참조하세요.
 
     - 패키지가 이미 설치되었다고 생각되면 `installed.packages()`를 실행하여 설치된 패키지 목록을 확인하십시오.
 
@@ -129,7 +130,7 @@ SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니
 
 - 지정한 데이터베이스 이름을 사용하도록 R 스크립트 파일의 인수를 다시 씁니다.
 
-솔루션을 구성하는 컴퓨터에서 이 스크립트를 실행하십시오. R 코드를 개발하고 검증하는 랩톱을 예로 들 수 있습니다. 데이터 과학 클라이언트로 부르게 될 이 컴퓨터는 명명된 파이프 프로토콜을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 연결할 수 있어야 합니다.
+솔루션을 작성할 수 있는 컴퓨터에서이 스크립트 실행: 예를 들어의 노트북 개발 하 고 R 코드를 테스트 합니다. 데이터 과학 클라이언트를 호출하게 될 이 컴퓨터에서 명명된 파이프 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 연결할 수 있어야 합니다.
 
 1. PowerShell 명령줄을 **관리자** 권한으로 엽니다.
   
@@ -156,7 +157,7 @@ SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니
       > [!WARNING]
       > PowerShell 스크립트의 프롬프트를 사용하여 자격 증명을 제공하면 업데이트된 스크립트 파일에 일반 텍스트로 암호가 기록됩니다. 필요한 R 개체를 만든 직 후 파일을 편집해서 자격 증명을 제거하십시오.
       
-    **csv 파일 경로**: 데이터 파일의 전체 경로를 제공합니다. 기본 경로와 파일명은 `C:\tempR\nyctaxi1pct.csv1`입니다.
+    **csv 파일 경로**: 데이터 파일의 전체 경로를 제공합니다. 기본 경로 및 파일 이름은 `C:\tempR\nyctaxi1pct.csv`입니다.
   
 4.  Enter 키를 눌러 스크립트를 실행합니다.
 
@@ -260,7 +261,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 데이터베이스에 동일한 이름과 동일한 스키마의 테이블이 존재하는 경우 **bcp**는 기존 데이터를 덮어쓰지 않고 새로운 데이터 사본을 삽입합니다.
 
-중복 데이터를 방지하려면 스크립트를 다시 실행하기 전에 기존 테이블을 자릅니다.
+중복 데이터를 방지 하려면 스크립트를 다시 실행 하기 전에 기존 테이블을 자릅니다.
 
 ## <a name="whats-included-in-the-sample"></a>샘플에 포함된 내용
 
@@ -274,7 +275,7 @@ GitHub 리포지토리에서 파일을 다운로드하면 다음과 같습니다
 
 ### <a name="bkmk_data"></a>데이터 학습 및 채점
 
-데이터는 뉴욕 시 택시 데이터 집합의 견본 샘플로, 2017년에 각 여행에서 지불한 요금과 팁을 포함해 1억 7300만 건의 개별 여행 기록을 포함합니다. 데이터를 보다 쉽게 사용하기 위해 Microsoft 데이터 과학 팀이 다운샘플링을 수행하여 데이터의 1%만 얻었습니다. 이 데이터는 Azure의 공용 Blob 저장소 컨테이너에 .CSV 형식으로 공유됩니다. 원본 데이터에는 350MB 이하의 압축되지 않은 파일입니다.
+데이터는 각 여정의 요금 및 지불된 팁 금액을 비롯하여 2013년 17,300만 개별 여정의 레코드를 포함하는 뉴욕시 택시 데이터 집합의 대표 샘플링입니다. 데이터를 쉽게 사용할 수 있도록 Microsoft 데이터 과학 팀은 1%의 데이터만 가져오는 다운 샘플링을 수행했습니다.  이 데이터는 Azure의 공용 Blob Storage 컨테이너에서 .CSV 형식으로 공유되었습니다. 원본 데이터에는 바로 아래 350MB 압축 되지 않은 파일입니다.
 
 + 공용 데이터 집합: [NYC 택시 및 Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
@@ -294,7 +295,7 @@ PowerShell 스크립트는 SQL Server 인스턴스에서 여러 [!INCLUDE[tsql](
 
 |SQL 스크립트 파일 이름|Description|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|데이터베이스와 두 개의 테이블을 만듭니다.<br /><br /> *nyctaxi_sample*: NYC 택시 데이터 집합의 1% 샘플인 훈련용 데이터를 저장하는 테이블입니다. 저장소와 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다.<br /><br /> *nyc_taxi_models*: 훈련된 모델을 이진 형식으로 저장하는데 사용되는 테이블입니다.|
+|create-db-tb-upload-data.sql|데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br /> *nyctaxi_sample*: 교육 데이터(NYC 택시 데이터 집합의 1% 샘플)를 저장하는 테이블입니다. 저장소 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다.<br /><br /> *nyc_taxi_models*: 이진 형식에서 학습 된 모델을 저장 하는 데 사용 되는 테이블입니다.|
 |PredictTipBatchMode.sql|새로운 관측(observations)에 대한 레이블(labels)을 예측하기 위해 훈련된 모델을 호출하는 저장 프로시저를 만듭니다. 입력 매개 변수로 쿼리를 받습니다.|
 |PredictTipSingleMode.sql|새로운 관측에 대한 레이블을 예측하기 위해 훈련된 분류 모델을 호출하는 저장 프로시저를 만듭니다. 새로운 관측의 변수가 인라인 매개 변수로 전달됩니다.|
 |PersistModel.sql|데이터베이스의 테이블에 분류 모델의 이진 표현을 저장하는 데 도움이 되는 저장 프로시저를 만듭니다.|
@@ -314,5 +315,4 @@ PowerShell 스크립트는 SQL Server 인스턴스에서 여러 [!INCLUDE[tsql](
 
 [R 및 SQL Server용 데이터 과학 전체 과정 연습](/walkthrough-data-science-end-to-end-walkthrough.md)
 
-[데이터 과학 연습을 위한 필수 구성 요소](walkthrough-prerequisites-for-data-science-walkthroughs.md)
-
+[데이터 과학 연습을 위한 필수 조건](walkthrough-prerequisites-for-data-science-walkthroughs.md)

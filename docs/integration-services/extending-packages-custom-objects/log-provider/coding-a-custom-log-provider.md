@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,22 +16,21 @@ applies_to:
 helpviewer_keywords:
 - custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ae46112c19473b117a9a11eb83fc4510427365c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f1b3d9c3713bd9413d7dab486b598ef6ae8c0dff
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coding-a-custom-log-provider"></a>사용자 지정 로그 공급자 코딩
   <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 기본 클래스에서 상속된 클래스를 만들고 이 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 특성을 적용한 후에는 기본 클래스의 속성 및 메서드 구현을 재정의하여 사용자 지정 기능을 제공해야 합니다.  
   
- 사용자 지정 로그 공급자의 작업 예제를 참조 하십시오. [사용자 인터페이스 사용자 지정 로그 공급자에 대 한 개발](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)합니다.  
+ 실제로 작동 중인 사용자 지정 로그 공급자의 예제를 보려면 [사용자 지정 로그 공급자의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)을 참조하세요.  
   
 ## <a name="configuring-the-log-provider"></a>로그 공급자 구성  
   
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/03/2017
  <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> 메서드를 재정의하여 연결 컬렉션 및 이벤트 인터페이스에 대한 참조를 캐시할 수 있습니다. 이렇게 캐시된 참조는 나중에 로그 공급자의 다른 메서드에서 사용할 수 있습니다.  
   
 ### <a name="using-the-configstring-property"></a>ConfigString 속성 사용  
- 디자인 타임에 로그 공급자에서 구성 정보를 받는 **구성** 열입니다. 구성 정보는 로그 공급자의 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 속성에 해당합니다. 기본적으로 이 열에는 문자열 정보를 검색할 수 있는 입력란이 들어 있습니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에 포함된 대부분의 로그 공급자는 이 속성을 사용하여 해당 공급자가 외부 데이터 원본에 연결하는 데 사용하는 연결 관리자의 이름을 저장합니다. 로그 공급자를 사용 하는 경우는 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 속성을 사용 하 여는 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 메서드가이 속성의 유효성을 검사 하는 속성이 올바르게 설정 되어 있는지 확인 합니다.  
+ 디자인 타임에 로그 공급자는 **구성** 열에서 구성 정보를 받습니다. 구성 정보는 로그 공급자의 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 속성에 해당합니다. 기본적으로 이 열에는 문자열 정보를 검색할 수 있는 입력란이 들어 있습니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에 포함된 대부분의 로그 공급자는 이 속성을 사용하여 해당 공급자가 외부 데이터 원본에 연결하는 데 사용하는 연결 관리자의 이름을 저장합니다. 로그 공급자가 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 속성을 사용하는 경우에는 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 메서드를 사용하여 이 속성의 유효성을 검사하고 속성이 올바르게 설정되어 있는지 확인합니다.  
   
 ### <a name="validating-the-log-provider"></a>로그 공급자 유효성 검사  
  <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 메서드를 재정의하여 로그 공급자가 올바르게 구성되어 있고 실행 준비가 되어 있는지 확인할 수 있습니다. 일반적으로 최소 수준의 유효성 검사는 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>이 올바르게 설정되어 있는지 확인하는 것입니다. 로그 공급자가 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> 메서드에서 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>를 반환하기 전까지는 실행을 계속할 수 없습니다.  
@@ -87,7 +85,7 @@ End Function
 ```  
   
 ### <a name="persisting-the-log-provider"></a>로그 공급자 지속  
- 일반적으로 연결 관리자의 사용자 지정 지속성은 구현할 필요가 없습니다. 사용자 지정 지속성은 개체의 속성이 복합 데이터 형식을 사용할 때만 필요합니다. 자세한 내용은 참조 [Integration Services에 대 한 사용자 지정 개체 개발](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)합니다.  
+ 일반적으로 연결 관리자의 사용자 지정 지속성은 구현할 필요가 없습니다. 사용자 지정 지속성은 개체의 속성이 복합 데이터 형식을 사용할 때만 필요합니다. 자세한 내용은[Integration Services 사용자 지정 개체 개발](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)을 참조하세요.  
   
 ## <a name="logging-with-the-log-provider"></a>로그 공급자를 사용하여 로깅  
  모든 로그 공급자는 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A> 등의 런타임 메서드 세 개를 재정의해야 합니다.  
@@ -142,7 +140,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>로그 항목 기록  
- <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 메서드는 패키지의 개체가 이벤트를 발생 시킵니다 화재를 호출 하 여 될 때마다\<이벤트 > 메서드를 이벤트 인터페이스 중 하나입니다. 각 이벤트가 발생할 때는 해당 컨텍스트에 대한 정보와 설명 메시지도 포함됩니다. 그러나 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 메서드를 호출할 때마다 모든 메서드 매개 변수에 대한 정보가 포함되는 것은 아닙니다. 예를 들어 이름이 설명 역할을 하는 표준 이벤트는 MessageText를 제공하지 않으며 DataCode와 DataBytes는 선택적인 추가 정보를 위한 것입니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 메서드는 패키지의 개체가 이벤트 인터페이스 중 하나에서 Fire\<event> 메서드를 호출하여 이벤트를 발생시킬 때마다 호출됩니다. 각 이벤트가 발생할 때는 해당 컨텍스트에 대한 정보와 설명 메시지도 포함됩니다. 그러나 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 메서드를 호출할 때마다 모든 메서드 매개 변수에 대한 정보가 포함되는 것은 아닙니다. 예를 들어 이름이 설명 역할을 하는 표준 이벤트는 MessageText를 제공하지 않으며 DataCode와 DataBytes는 선택적인 추가 정보를 위한 것입니다.  
   
  다음 코드 예에서는 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 메서드를 구현하고 이전 섹션에서 연 스트림에 이벤트를 기록합니다.  
   
@@ -198,9 +196,8 @@ Public Overrides  Sub CloseLog()
 End Sub  
 ```  
  
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 로그 공급자 만들기](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
- [사용자 지정 로그 공급자에 대 한 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
+ [사용자 지정 로그 공급자의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   
   
-

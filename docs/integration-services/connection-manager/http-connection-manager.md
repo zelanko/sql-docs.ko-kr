@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-caps.latest.revision: 44
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 7dbd165b8d94247365697fe3b9e0cbb372becd8c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c9efb5b8d8a972cfc60ccb078363bcba055eea01
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="http-connection-manager"></a>HTTP 연결 관리자
   HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 웹 서비스 태스크에서는 이 연결 관리자가 사용됩니다.  
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
  HTTP 연결 관리자에 대한 자세한 내용은 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)를 참조하십시오. HTTP 연결 관리자의 일반적인 사용 시나리오에 대한 자세한 내용은 [Web Service Task](../../integration-services/control-flow/web-service-task.md)를 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **서버 URL**  
  서버의 URL을 입력합니다.  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 08/09/2017
  **자격 증명 사용**  
  HTTP 연결 관리자에서 사용자의 보안 자격 증명을 인증에 사용할지 여부를 지정합니다.  
   
- **사용자 이름**  
+ **User name**  
  HTTP 연결 관리자에서 자격 증명을 사용하는 경우에는 사용자 이름, 암호 및 도메인을 지정해야 합니다.  
   
  **암호**  
@@ -105,7 +104,7 @@ ms.lasthandoff: 08/09/2017
   
  HTTP 연결 관리자에 대한 자세한 내용은 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)를 참조하십시오. HTTP 연결 관리자의 일반적인 사용 시나리오에 대한 자세한 내용은 [Web Service Task](../../integration-services/control-flow/web-service-task.md)를 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **프록시 사용**  
  HTTP 연결 관리자에서 프록시 서버를 통해 연결하도록 할지 여부를 지정합니다.  
   
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/09/2017
  **자격 증명 사용**  
  HTTP 연결 관리자에서 프록시 서버에 보안 자격 증명을 사용하도록 할지 여부를 지정합니다.  
   
- **사용자 이름**  
+ **User name**  
  HTTP 연결 관리자에서 자격 증명을 사용하는 경우에는 사용자 이름, 암호 및 도메인을 지정해야 합니다.  
   
  **암호**  
@@ -136,9 +135,8 @@ ms.lasthandoff: 08/09/2017
  **제거**  
  주소를 선택한 다음 **제거**를 클릭하여 삭제합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [웹 서비스 태스크](../../integration-services/control-flow/web-service-task.md)   
- [Integration Services &#40; Ssis&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

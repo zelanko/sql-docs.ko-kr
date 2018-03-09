@@ -2,29 +2,30 @@
 title: "데이터 과학 시나리오 및 솔루션 템플릿을 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: 17
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 5317f42d3acd85f7865f79405b2daf12793a7de4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 618e2d43d4ae9e9c214084a4da3ab9d1688b3dba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 템플릿은 모범 사례를 보여 주고 솔루션을 더 빠르게 구현할 수 있도록 구성 요소를 제공하는 샘플 솔루션입니다. 각 템플릿에 특정 세로 축 또는 업계에 대 한 특정 문제를 해결 하도록 설계 되었습니다. 각 템플릿의 작업은 데이터 준비 및 기능 엔지니어링에서 모델 학습 및 점수 매기기까지 확장됩니다. 이러한 서식 파일을 사용 하 여 자세한 방법을 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 작동 합니다. 그런 다음 자유롭게 고유한 시나리오에 맞게 사용자 지정 솔루션을 생성 하는 템플릿을 사용자 지정할 수 있습니다. 
 
@@ -113,7 +114,6 @@ SQL 저장 프로시저는 해당 하는 경우 및 각 솔루션에는 예제 �
 ## <a name="next-steps"></a>다음 단계
 
 + [SQL Server 컴퓨터 학습 자습서](machine-learning-services-tutorials.md)
-
 
 
 

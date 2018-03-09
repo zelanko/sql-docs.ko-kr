@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLError function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLError function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 487e3b1f3b02365743a5b6ab7b43db98fd750646
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46696509f9276ac4974604c931c4d77acbaae15b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlerror-visual-foxpro-odbc-driver"></a>SQLError (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -47,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |*pcbErrorMsg*|식별자의 길이 메시지 텍스트의 길이입니다.|  
   
  드라이버 오류 메시지에 대 한 자세한 내용은 참조 하십시오. [오류 메시지 개요](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md)합니다. 이 함수에 대 한 자세한 내용은 참조 [SQLError](../../odbc/reference/syntax/sqlerror-function.md) 에 *ODBC Programmer's Reference*합니다.
-

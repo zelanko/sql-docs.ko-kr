@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 56eacb6ed209f34f65ae406fe4dd520284b79e5b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 10ec93a390173e089965e6f984c3725fb675748e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcheckschemaversion"></a>catalog.check_schema_version
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +40,15 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @use32bitruntime=] *use32bitruntime*  
- 매개 변수가로 설정 되 면 **True**, 32 비트 버전의 dtexec가 호출 됩니다. *use32bitruntime* 는 **Bool**합니다.  
+ [ @use32bitruntime= ] *use32bitruntime*  
+ 매개 변수를 **True**로 설정하면 32비트 버전의 dtexec가 호출됩니다. *use32bitruntime*은 **Bool**입니다.  
   
 ## <a name="result-set"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한이 필요합니다.  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할입니다.  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
   
-

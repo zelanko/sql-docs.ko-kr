@@ -2,15 +2,13 @@
 title: "마이닝 구조 및 구조 열에 대 한 속성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +17,20 @@ helpviewer_keywords:
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: 23
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b342f6466a757ce2705d97680ed0e0460c0031f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>마이닝 구조 및 구조 열의 속성
-  데이터 마이닝 디자이너의 **마이닝 구조** 탭을 사용하여 마이닝 구조 및 마이닝 구조의 관련 열과 중첩 테이블의 속성을 설정하거나 변경할 수 있습니다. 이 탭에서 설정하는 속성은 해당 구조와 연결된 각 마이닝 모델로 전파됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+데이터 마이닝 디자이너의 **마이닝 구조** 탭을 사용하여 마이닝 구조 및 마이닝 구조의 관련 열과 중첩 테이블의 속성을 설정하거나 변경할 수 있습니다. 이 탭에서 설정하는 속성은 해당 구조와 연결된 각 마이닝 모델로 전파됩니다.  
   
 > [!NOTE]  
 >  마이닝 구조에서 속성의 값을 변경하는 경우 이름이나 설명과 같은 메타데이터, 마이닝 구조 및 해당 모델도 다시 처리해야 모델을 보거나 쿼리할 수 있습니다.  
@@ -50,14 +48,14 @@ ms.lasthandoff: 09/01/2017
 |--------------|-----------------|  
 |**CacheMode**|학습이 완료된 다음 학습에 사용된 사례를 캐시할지, 아니면 삭제할지를 지정합니다. **참고:**  드릴스루 및 홀드아웃을 사용하려면 이 속성을 **KeepTrainingCases** 로 설정해야 합니다.|  
 |**데이터 정렬**|열의 기본 데이터 정렬을 지정합니다. 데이터 정렬을 지정하지 않으면 서버의 데이터 정렬이 사용됩니다.|  
-|**Description**|마이닝 구조를 설명합니다. 설명에는 구조에 있는 데이터의 용도와 컴퍼지션을 명시하는 것이 가장 좋습니다.|  
+|**설명**|마이닝 구조를 설명합니다. 설명에는 구조에 있는 데이터의 용도와 컴퍼지션을 명시하는 것이 가장 좋습니다.|  
 |**ErrorConfiguration(기본값)**|오류(있는 경우)의 특수 처리 옵션을 지정합니다.|  
 |**HoldoutMaxCases**|테스트 데이터 집합으로 예약할 수 있는 최대 구조 사례 수를 지정합니다.  **HoldoutMaxCases** 와 **HoldoutPercent**모두에 대한 값을 지정하면 조건이 결합됩니다. **참고:**  이 속성을 설정하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 를 **KeepTrainingCases**을 클릭합니다.|  
 |**HoldoutPercent**|테스트 데이터 집합으로 예약할 구조 사례의 비율을 지정합니다. **HoldoutMaxCases** 와 **HoldoutPercent**모두에 대한 값을 지정하면 조건이 결합됩니다. **참고:**  이 속성을 설정하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 를 **KeepTrainingCases**을 클릭합니다.|  
 |**HoldoutSeed**|테스트 데이터 집합을 다시 만들 수 있도록 홀드아웃 테스트 집합의 분할을 초기화하는 초기값을 지정합니다. **참고:**  이 속성을 설정하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 를 **KeepTrainingCases**을 클릭합니다.|  
 |**ID**|마이닝 구조의 고유 식별자를 표시합니다.<br /><br /> 구조를 만들 때 마이닝 구조에 할당한 이름이 ID로 사용됩니다. **Name** 속성에 대해 새 값을 입력하여 나중에 이름을 변경하면 새 이름이 별칭으로만 사용되며 ID는 변경되지 않습니다.|  
 |**언어**|마이닝 구조의 캡션에 대한 언어를 지정합니다.|  
-|**Name**|마이닝 구조의 이름이나 별칭을 지정합니다.<br /><br /> Name 속성의 값을 변경하면 새 이름이 캡션이나 별칭으로만 사용되며 마이닝 구조의 식별자는 변경되지 않습니다.|  
+|**이름**|마이닝 구조의 이름이나 별칭을 지정합니다.<br /><br /> Name 속성의 값을 변경하면 새 이름이 캡션이나 별칭으로만 사용되며 마이닝 구조의 식별자는 변경되지 않습니다.|  
 |**원본**|데이터 원본의 이름과 유형을 표시합니다.|  
   
 ### <a name="properties-of-the-mining-structure-columns"></a>마이닝 구조 열 속성  
@@ -66,7 +64,7 @@ ms.lasthandoff: 09/01/2017
 |--------------|-----------------|  
 |**ClassifiedColumns**|분류된 열이 설명하는 열을 식별합니다.|  
 |**콘텐츠**|열의 내용 유형입니다.|  
-|**Description**|열에 대해 설명합니다. 열 설명은 열의 데이터가 데이터 마이닝에 대해 파생되거나 변경된 방식에 대한 정보를 제공하는 것이 가장 좋습니다.|  
+|**설명**|열에 대해 설명합니다. 열 설명은 열의 데이터가 데이터 마이닝에 대해 파생되거나 변경된 방식에 대한 정보를 제공하는 것이 가장 좋습니다.|  
 |**DiscretizationBucketCount**|불연속화된 열의 버킷 수를 표시합니다.<br /><br /> 내용 유형이 **Discretized**로 설정된 경우에만 사용할 수 있습니다.<br /><br /> 이 속성은 읽기 전용입니다.|  
 |**DiscretizationMethod**|열을 불연속화하는 데 사용된 방법을 표시합니다.<br /><br /> 내용 유형이 **Discretized**로 설정된 경우에만 사용할 수 있습니다.<br /><br /> 이 속성은 읽기 전용입니다.|  
 |**배포**|열의 내용 분포를 지정합니다.|  
@@ -74,7 +72,7 @@ ms.lasthandoff: 09/01/2017
 |**IsKey**|열이 키 열인지 여부를 나타냅니다.|  
 |**KeyColumns**|특정 특성에 대한 키 또는 키의 일부인 열의 정의를 포함합니다.|  
 |**ModelingFlags**|알고리즘에서 사용 가능한 추가 매개 변수를 설정합니다.|  
-|**Name**|열 이름입니다.|  
+|**이름**|열 이름입니다.|  
 |**NameColumn**|부모 요소의 이름을 제공하는 열을 식별합니다.|  
 |**원본**|열의 원본을 표시합니다.<br /><br /> 관계형 데이터 원본의 경우 값은 항상 **(없음)**입니다.<br /><br /> OLAP 큐브를 기반으로 하는 구조의 경우 값은 중첩 테이블의 원본으로 사용되는 조각을 정의하는 MDX 문입니다.|  
 |**SourceMeasureGroup**|측정값 그룹의 원본을 표시합니다.<br /><br /> 관계형 데이터 원본의 경우 값은 항상 **(없음)**입니다.<br /><br /> OLAP 큐브를 기반으로 하는 구조의 경우 값은 중첩 테이블의 원본으로 사용되는 조각을 정의하는 MDX 문입니다.|  
@@ -87,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [마이닝 구조 열](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

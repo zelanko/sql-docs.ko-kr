@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], data types
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5b18d5969cc2586fec45320af4a754a12276663d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eeb2bc72ce34141eb3dbdca3f952dca0c476c2dd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel 데이터 형식
 다음 표에서 Microsoft Excel 드라이버 데이터 형식을 ODBC SQL 데이터 형식에 매핑되는 방법을 보여 줍니다. Microsoft Excel 드라이버는 이러한 데이터 형식을 열에 데이터를 기반으로 하는 Microsoft Excel 테이블의 열에 할당 합니다.  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 |TEXT|둘 이상의 Microsoft Excel 데이터 형식이 포함 되는 열의 행, Microsoft Excel ODBC 드라이버는 열에 SQL_VARCHAR 데이터 형식을 할당 합니다. 이 한 가지 예외가: 열 2, 날짜/시간 데이터 형식 (날짜, 시간 및 날짜/시간)의 3 개만 있으면 ODBC Microsoft Excel 드라이버 SQL_TIMESTAMP 데이터 형식 열을 지정 합니다.<br /><br /> 0의 텍스트 열 만들기 또는 실제로 지정 되지 않은 길이 255 바이트 열을 반환 합니다.<br /><br /> 문자열 리터럴을 ANSI 문자 (1-255 10 진수)를 포함할 수 있습니다. 하나의 작은따옴표 (')을 나타내기 위해 두 개의 연속 된 작은따옴표가 (")를 사용 합니다.<br /><br /> 이외의 SQL_VARCHAR 데이터 형식의 열에 NULL을 삽입 SQL_VARCHAR로 변경 하려면 열의 데이터 형식을 발생 합니다.|  
   
  데이터 형식에 대 한 자세한 제한에서 확인할 수 있습니다 [데이터 형식 제한](../../odbc/microsoft/data-type-limitations.md)합니다.
-

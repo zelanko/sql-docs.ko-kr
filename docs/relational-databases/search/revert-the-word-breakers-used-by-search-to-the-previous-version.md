@@ -2,28 +2,33 @@
 title: "검색에 사용된 단어 분리기를 이전 버전으로 되돌리기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4380c25d02f6fd6d05f41c030691738f3715d6e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a3ad97ccd909c55268cf2be050d913fdc931433a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 한국어를 제외하고 전체 텍스트 검색에서 지원되는 모든 언어에 대해 단어 분리기 및 형태소 분석기의 버전을 설치하고 활성화합니다. 이 항목에서는 이러한 버전의 구성 요소에서 이전 버전으로 전환하거나 이전 버전에서 다시 새 버전으로 전환하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 한국어를 제외하고 전체 텍스트 검색에서 지원되는 모든 언어에 대해 단어 분리기 및 형태소 분석기의 버전을 설치하고 활성화합니다. 이 문서에서는 이러한 버전의 구성 요소에서 이전 버전으로 전환하거나 이전 버전에서 다시 새 버전으로 전환하는 방법에 대해 설명합니다.  
   
- 이 항목에서는 다음 언어에 대해 다루지 않습니다.  
+ 이 문서에서는 다음 언어에 대해 다루지 않습니다.  
   
 -   **영어**. 영어 구성 요소를 되돌리거나 복원하려면 [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)을 참조하세요.  
   
@@ -47,7 +52,7 @@ ms.lasthandoff: 11/09/2017
 > [!WARNING]  
 >  NaturalLanguage6.dll 파일의 현재 버전을 다른 버전으로 교체하면 이 파일을 사용하는 모든 언어의 동작이 영향을 받습니다.  
   
- 이 항목에서 설명하는 파일은 `MSSQL\Binn` 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 폴더에 설치되는 DLL 파일입니다. 전체 경로는 일반적으로 다음과 같습니다.  
+ 이 문서에서 설명하는 파일은 `MSSQL\Binn` 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 폴더에 설치되는 DLL 파일입니다. 전체 경로는 일반적으로 다음과 같습니다.  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -215,8 +220,8 @@ ms.lasthandoff: 11/09/2017
 |---------------|------------------|-------------|  
 |이전 CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|현재 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|없음|  
-|현재 파일 이름|MSWB7.dll|없음|  
+|현재 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|InclusionThresholdSetting|  
+|현재 파일 이름|MSWB7.dll|InclusionThresholdSetting|  
   
  **독일어(deu), LCID 1031**  
   
@@ -225,7 +230,7 @@ ms.lasthandoff: 11/09/2017
 |이전 CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |현재 CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|현재 파일 이름|MSWB7.dll|MSWB7.dll|  
+|현재 파일 이름|MsWb7.dll|MSWB7.dll|  
   
  **일본어(jpn), LCID 1041**  
   
@@ -233,8 +238,8 @@ ms.lasthandoff: 11/09/2017
 |---------------|------------------|-------------|  
 |이전 CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|현재 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|없음|  
-|현재 파일 이름|MsWb70011.dll|없음|  
+|현재 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|InclusionThresholdSetting|  
+|현재 파일 이름|MsWb70011.dll|InclusionThresholdSetting|  
   
  **네덜란드어(nld), LCID 1043**  
   
@@ -243,7 +248,7 @@ ms.lasthandoff: 11/09/2017
 |이전 CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |현재 CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|현재 파일 이름|MSWB7.dll|MSWB7.dll|  
+|현재 파일 이름|MsWb7.dll|MSWB7.dll|  
   
  **러시아어(rus), LCID 1049**  
   
@@ -252,7 +257,7 @@ ms.lasthandoff: 11/09/2017
 |이전 CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |현재 CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|현재 파일 이름|MSWB7.dll|MSWB7.dll|  
+|현재 파일 이름|MsWb7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> 이전 파일 이름과 현재 파일 이름에 대한 언어는 모두 NaturalLanguage6.dll이 아닙니다.  
  다음 표에 나오는 언어의 경우 이전 단어 분리기 및 형태소 분석기의 파일 이름이 새 버전의 파일 이름과 다릅니다. 이전 파일 이름과 현재 파일 이름이 모두 NaturalLanguage6.dll이 아닙니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램이 구성 요소의 현재 버전과 이전 버전을 모두 Binn 폴더에 복사하므로 파일을 대체할 필요는 없습니다. 하지만 레지스트리 항목 집합을 변경하여 구성 요소의 이전 버전 또는 현재 버전을 지정해야 합니다.  
@@ -349,8 +354,8 @@ ms.lasthandoff: 11/09/2017
 |---------------|------------------|-------------|  
 |이전 CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |이전 파일 이름|Thawbrkr.dll|Thawbrkr.dll|  
-|현재 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|없음|  
-|현재 파일 이름|MsWb7001e.dll|없음|  
+|현재 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|InclusionThresholdSetting|  
+|현재 파일 이름|MsWb7001e.dll|InclusionThresholdSetting|  
   
  **중국어 번체(zh-hk), LCID 3076**  
   

@@ -2,27 +2,30 @@
 title: "기본 SQL Server Management Studio 구성 복원 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 4efb0f74-edd5-4b14-bca6-bee94fb48bcc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0038cdb40b315e3a32159902e889f3a7306cb993
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 950da8016baf537197623dcdb501ff997474a9e2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-8---restore-the-default-sql-server-management-studio-configuration"></a>1-8단원 - 기본 SQL Server Management Studio 구성 복원
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 처음 접하는 사용자는 실수로 창을 닫거나 숨긴 후 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 원래 레이아웃으로 복원하는 데 어려움을 겪을 수 있습니다. 다음 단계에서는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 기본 환경 레이아웃으로 복원합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 처음 접하는 사용자는 실수로 창을 닫거나 숨긴 후 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 원래 레이아웃으로 복원하는 데 어려움을 겪을 수 있습니다. 다음 단계에서는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 기본 환경 레이아웃으로 복원합니다.  
   
 ## <a name="restoring-components"></a>구성 요소 복원  
   

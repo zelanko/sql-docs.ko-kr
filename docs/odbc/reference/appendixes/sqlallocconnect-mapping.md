@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLAllocConnect function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLAllocConnect
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 001c430558b3db813bd316f3b4d913fe0eae26c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0188c47d6abfd294dc1a9c20c04ea7d271443a18
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect 매핑
 응용 프로그램 호출 하는 경우 **SQLAllocConnect** ODBC 3. *x* 드라이버에 대 한 호출 **SQLAllocConnect**(*henv*, *phdbc*)에 매핑되어 **SQLAllocHandle** 다음과 같습니다.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
     ```  
   
      사용 하 여 드라이버에서 *InputHandle* 로 설정 *henv*, 및 *OutputHandlePtr* 로 설정 *phdbc*합니다.
-

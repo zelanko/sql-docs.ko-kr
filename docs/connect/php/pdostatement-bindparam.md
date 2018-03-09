@@ -1,25 +1,27 @@
 ---
 title: 'Pdostatement:: Bindparam | Microsoft Docs'
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 61cecbcd76ba7c28135cd4ed306dad1c0ea0830c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 02d31959423de5c0df4dc06e9caa16ea983ef000
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,11 +32,11 @@ SQL 문의 명명된 표시 또는 물음표 자리 표시자에 매개 변수�
   
 ```  
   
-bool PDOStatement::bindParam( $parameter, &$variable [,$data_type[, $length[, $driver_options]]] );  
+bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $driver_options]]]);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*매개 변수*: (혼합된) 매개 변수 식별자입니다. 명명된 자리 표시자를 사용하는 문의 경우 매개 변수 이름(:name)입니다. 물음표 구문을 사용하는 준비된 문의 경우 이는 매개 변수의 1부터 시작하는 인덱스입니다.  
+$*매개 변수*: (혼합된) 매개 변수 식별자입니다. 명명 된 자리 표시자를 사용 하 여 문을 사용 하 여 매개 변수 이름 (: name). 물음표 구문을 사용 하 여 준비 된 문의 경우이 매개 변수의 1부터 시작 인덱스입니다.  
   
 &$*변수*: SQL 문 매개 변수에 바인딩할 PHP 변수의 (혼합된) 이름입니다.  
   
@@ -48,10 +50,10 @@ $*driver_options*: 선택적 (혼합된) 드라이버 관련 옵션입니다. �
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  
   
 ## <a name="remarks"></a>주의  
-이진 인코딩 (pdo:: SQLSRV_ENCODING_BINARY) $를 사용 하 여 지정 해야 형식 varbinary, binary 또는 varbinary (max)의 서버 열에 null 데이터를 바인딩할 때*driver_options*합니다. 인코딩 상수에 대한 자세한 내용은 [상수](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 를 참조하세요.  
+이진 인코딩 (pdo:: SQLSRV_ENCODING_BINARY) $를 사용 하 여 지정 해야 형식 varbinary, binary 또는 varbinary (max)의 서버 열에 null 데이터를 바인딩할 때*driver_options*합니다. 인코딩 상수에 대 한 자세한 내용은 참조 [상수](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다.  
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
-  
+
 ## <a name="example"></a>예제  
 이 코드 샘플은 $contact가 매개 변수에 바인딩된 후 값을 변경하면 쿼리에 전달된 값을 변경한다는 것을 보여 줍니다.  
   
@@ -59,7 +61,7 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 <?php  
 $database = "AdventureWorks";  
 $server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
 $contact = "Sales Agent";  
 $stmt = $conn->prepare("select * from Person.ContactType where name = ?");  
@@ -67,7 +69,7 @@ $stmt->bindParam(1, $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
   
@@ -78,7 +80,7 @@ $stmt->bindParam(':contact', $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
 ?>  
@@ -91,12 +93,12 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 <?php  
 $database = "Test";  
 $server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
 $input1 = 'bb';  
   
-$stmt = $conn->prepare("select ? = count(* ) from Sys.tables");  
-$stmt->bindParam( 1, $input1, PDO::PARAM_STR, 10 );  
+$stmt = $conn->prepare("select ? = count(*) from Sys.tables");  
+$stmt->bindParam(1, $input1, PDO::PARAM_STR, 10);  
 $stmt->execute();  
 echo $input1;  
 ?>  
@@ -109,7 +111,7 @@ echo $input1;
 <?php  
    $database = "AdventureWorks";  
    $server = "(local)";  
-   $dbh = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+   $dbh = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
    $dbh->query("IF OBJECT_ID('dbo.sp_ReverseString', 'P') IS NOT NULL DROP PROCEDURE dbo.sp_ReverseString");  
    $dbh->query("CREATE PROCEDURE dbo.sp_ReverseString @String as VARCHAR(2048) OUTPUT as SELECT @String = REVERSE(@String)");  
@@ -120,9 +122,30 @@ echo $input1;
    print $string;   // Expect 987654321  
 ?>  
 ```  
-  
+
+> [!NOTE]
+> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [10 진수 또는 숫자 열](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP 정밀도 대 한 제한 된 대로 정밀도 정확도 진행 하려면 [부동 소수점 숫자](http://php.net/manual/en/language.types.float.php)합니다.
+
+## <a name="example"></a>예제  
+이 코드 예제에는 10 진수 값을 입력된 매개 변수로 바인딩하는 방법을 보여 줍니다.  
+
+```
+<?php  
+$database = "Test";  
+$server = "(local)";  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
+
+// Assume TestTable exists with a decimal field 
+$input = 9223372036854.80000;
+$stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
+// by default it is PDO::PARAM_STR, rounding of a large input value may
+// occur if PDO::PARAM_INT is specified
+$stmt->bindParam(1, $input, PDO::PARAM_STR);
+$stmt->execute();
+```
+
+
 ## <a name="see-also"></a>관련 항목:  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

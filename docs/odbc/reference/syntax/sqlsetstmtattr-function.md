@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetStmtAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetStmtAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetStmtAttr
-helpviewer_keywords:
-- SQLSetStmtAttr function [ODBC]
+f1_keywords: SQLSetStmtAttr
+helpviewer_keywords: SQLSetStmtAttr function [ODBC]
 ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d652d9e028cb9eb8edd2ec2865449a4b379c4c64
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 함수
 **규칙**  
@@ -102,7 +96,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="diagnostics"></a>진단  
  때 **SQLSetStmtAttr** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* sql _HANDLE_STMT 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLSetStmtAttr** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01 S 02|옵션 값이 변경 됨|드라이버에 지정 된 값을 지원 하지 않았습니다 *ValuePtr*에 지정 된 값 또는 *ValuePtr* 드라이버 유사한 값을 대체 하도록 구현 작업 조건 때문에 잘못 되었습니다. (**SQLGetStmtAttr** 일시적으로 대체 값을 결정 하기 위해 호출할 수 있습니다.) 대체 값이 적합는 *StatementHandle* 커서를 닫을 때까지 시점 문 특성 되돌아갑니다 이전 값입니다. 변경할 수 있는 문 특성은 합니다.<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -124,7 +118,7 @@ SQLRETURN SQLSetStmtAttr(
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *StatementHandle* 함수를 지원 하지 않습니다.|  
 |S1118|드라이버는 비동기 알림을 지원 하지 않습니다.|호출 하는 경우 **SQLSetStmtAttr** SQL_ATTR_ASYNC_STMT_EVENT;를 설정 하는 드라이버에서 비동기 알림이 지원 되지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  문에 대 한 문 특성에 대 한 다른 호출에서 변경 될 때까지 계속 적용 **SQLSetStmtAttr** 문을 호출 하 여 삭제 될 때까지 또는 **SQLFreeHandle**합니다. 호출 **SQLFreeStmt** 옵션은 SQL_CLOSE, SQL_UNBIND, 또는 SQL_RESET_PARAMS 문 특성을 설정 하지 않습니다.  
   
  데이터 원본에 지정 된 값을 지원 하지 않는 경우 일부 문 특성 값이 비슷한 대체를 지원 *ValuePtr*합니다. 이러한 경우 드라이버는 SQL_SUCCESS_WITH_INFO 및 SQLSTATE 01 s 02 반환 (옵션 값이 변경 됨). 예를 들어 경우 *특성* SQL_ATTR_CONCURRENCY은 및 *ValuePtr* SQL_CONCUR_ROWVER, 이므로 데이터 소스가 지원 하지 않는 경우 드라이버 SQL_CONCUR_VALUES 대체 하 고 SQL_ 반환 SUCCESS_WITH_INFO 합니다. 대체 값을 확인 하려면 응용 프로그램이 호출 **SQLGetStmtAttr**합니다.  
@@ -167,7 +161,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>문 특성  
  현재 정의 된 특성 및 도입 된 ODBC의 버전은 다음 표에 표시 됩니다. 더 많은 특성을 다른 데이터 원본 활용 하기 위해 드라이버에 의해 정의 됩니다는 사용할 수 있습니다. 특성의 범위는 ODBC;에 예약 되어 있습니다. 드라이버 개발자는 Open Group에서 드라이버 관련 사용을 위해 값을 예약 해야 합니다. 자세한 내용은 참조 [드라이버 관련 데이터 형식, 형식 설명자, 정보 유형, 진단 형식 및 특성](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)합니다.  
   
-|Attribute|*ValuePtr* 내용|  
+|attribute|*ValuePtr* 내용|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|APD에 대 한 후속 호출에 대 한 핸들 **SQLExecute** 및 **SQLExecDirect** 문 핸들에서 합니다. 이 특성의 초기 값은 암시적으로 문을 처음으로 할당 되는 경우 할당 된 설명자입니다. 문 핸들에 이전에 연결 되었던는 명시적으로 할당 된 APD 핸들에서 분리 되 고 문 핸들 되돌아가는 데이 특성의 값이 SQL_NULL_DESC 또는 설명자에 대 한 원래 할당 된 핸들을 설정 하는 경우는 암시적으로 APD 핸들을 할당 합니다.<br /><br /> 같은 문에서; 암시적으로 설정 된 다른 설명자 핸들 또는 다른 문에 대 한 암시적으로 할당 된 설명자 핸들에이 특성을 설정할 수 없습니다. 암시적으로 할당 된 설명자 핸들 둘 이상의 문 또는 설명자 핸들에 연결할 수 없습니다.|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|문 핸들에서 후속 인출에 대 한 카드가에 대 한 핸들입니다. 이 특성의 초기 값은 암시적으로 문을 처음으로 할당 되는 경우 할당 된 설명자입니다. 문 핸들에 이전에 연결 되었던는 명시적으로 할당 된 카드가 핸들에서 분리 되 고 문 핸들 되돌아가는 데이 특성의 값이 SQL_NULL_DESC 또는 설명자에 대 한 원래 할당 된 핸들을 설정 하는 경우는 암시적으로 카드가 핸들을 할당 합니다.<br /><br /> 같은 문에서; 암시적으로 설정 된 다른 설명자 핸들 또는 다른 문에 대 한 암시적으로 할당 된 설명자 핸들에이 특성을 설정할 수 없습니다. 암시적으로 할당 된 설명자 핸들 둘 이상의 문 또는 설명자 핸들에 연결할 수 없습니다.|  
@@ -223,4 +217,3 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

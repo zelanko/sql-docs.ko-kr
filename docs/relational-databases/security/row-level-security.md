@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - row level security described
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d039c1e5bb76fb9b994e9d5fc2a89df64e320c3b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 8a5a44c3da9c34cf3bc64b632ce8cb8f86ff53e9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="row-level-security"></a>행 수준 보안
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -161,7 +159,8 @@ ms.lasthandoff: 09/27/2017
   
 -   **Polybase** RLS는 Polybase와 호환되지 않습니다.  
   
--   **메모리 액세스에 최적화된 테이블**메모리에 최적화된 테이블에서 보안 조건자로 사용되는 인라인 테이블 반환 함수는 `WITH NATIVE_COMPILATION` 옵션을 사용하여 정의해야 합니다. 이 옵션을 사용하면 메모리에 최적화된 테이블에서 지원되지 않는 언어 기능이 차단되며 만들 때 해당 오류가 발생합니다. 자세한 내용은 **메모리 액세스에 최적화된 테이블 소개** 의 [메모리 액세스에 최적화된 테이블의 행 수준 보안](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)섹션을 참조하세요.  
+-   
+            **메모리 최적화 테이블**메모리에 최적화된 테이블에서 보안 조건자로 사용되는 인라인 테이블 반환 함수는 `WITH NATIVE_COMPILATION` 옵션을 사용하여 정의해야 합니다. 이 옵션을 사용하면 메모리 최적화 테이블에서 지원되지 않는 언어 기능이 차단되며 만들 때 해당 오류가 발생합니다. 자세한 내용은 **메모리 액세스에 최적화된 테이블 소개** 의 [메모리 액세스에 최적화된 테이블의 행 수준 보안](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)섹션을 참조하세요.  
   
 -   **인덱싱된 뷰** 일반적으로 보안 정책은 뷰를 기반으로 만들 수 있으며 뷰는 보안 정책에 의해 바인딩된 테이블을 기반으로 만들 수 있습니다. 그러나 인덱스를 통한 행 조회는 정책을 무시하기 때문에 보안 정책이 있는 테이블을 기반으로 인덱싱된 뷰를 만들 수는 없습니다.  
   
@@ -375,4 +374,3 @@ GO
  [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
-

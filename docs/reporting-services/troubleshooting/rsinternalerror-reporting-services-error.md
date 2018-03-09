@@ -1,29 +1,28 @@
 ---
-title: "rsInternalError-Reporting Services 오류 | Microsoft Docs"
+title: "rsInternalError - Reporting Services 오류 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsInternalError
+helpviewer_keywords: rsInternalError
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
-caps.latest.revision: 23
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "23"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7265597c2376d62b6d3e42c55c8d87e45f6d869e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 95f0e2c76aac661977ba0eedac84125c5b1e1888
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 오류
     
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
  내부 오류는 일반적인 오류가 아닙니다. 따라서 이 오류가 발생할 경우 보고서 서버 추적 로그에서 자세한 내용을 볼 수 있습니다. 또한 오류가 발생한 동일한 컴퓨터에서 로컬 관리자로 실행 중인 경우 호출 스택에서 자세한 내용을 볼 수 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 이 메시지에 대 한 특정 이유를 확인 하려면 \Microsoft SQL Server\MSRS12에 나와 있는 보고서 서버 로그 파일을 검토 합니다. \<instancename > services\logfiles입니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
+ 이러한 메시지의 구체적인 원인을 확인하려면 \Microsoft SQL Server\MSRS12.\<instancename >\Reporting Services\LogFiles에 있는 보고서 서버 로그 파일을 검토합니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
  호출 스택을 보려면 오류가 발생한 페이지를 마우스 오른쪽 단추로 클릭한 다음 **원본 보기**를 가리킵니다. 호출 스택을 보려면 오류가 발생한 컴퓨터에서 관리자 권한이 필요합니다.  
   
@@ -51,8 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="internal-only"></a>내부 전용  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   
-

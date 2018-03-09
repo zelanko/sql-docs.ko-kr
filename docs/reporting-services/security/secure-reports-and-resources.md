@@ -2,12 +2,13 @@
 title: "보고서 및 리소스 보안 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 47
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "47"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e8d759eccca2ea7d1c7b0803f3a44cb258ffb981
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-reports-and-resources"></a>보고서 및 리소스 보안
   개별 보고서 및 리소스에 보안을 설정하여 사용자가 해당 항목에 대해 갖는 액세스 수준을 제어할 수 있습니다. 기본적으로 **Administrators** 기본 제공 그룹의 멤버인 사용자만 보고서 실행, 리소스 보기, 속성 수정, 항목 삭제 등의 작업을 수행할 수 있습니다. 다른 모든 사용자는 보고서나 리소스에 대한 액세스를 허용하는 역할 할당이 만들어져 있어야 합니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  웹 페이지의 URL에서 보고서 매개 변수 값을 제어할 수 있는 방식으로 보고서가 보고서 서버에 게시되었거나 이와 같은 방식으로 보고서를 사용할 수 있습니다.  
   
-3.  공격자가 웹 페이지 또는 형식에서 매개 변수의 값을 지정 하는 보고서 서버에 대 한 링크를 만듭니다 "javascript:\<악성 스크립트 >" 하 고 해당 링크를 유인 공격 다른 사람에 게 보냅니다.  
+3.  공격자가 "javascript:\<malicious script here>" 형식으로 매개 변수 값을 지정하여 웹 페이지나 보고서 서버에 대한 링크를 만들고 이 링크를 유인 공격의 대상으로 삼을 다른 누군가에게 보냅니다.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>게시된 보고서 또는 문서의 하이퍼링크를 이용한 스크립트 삽입 공격 위험 완화  
  보고서의 보고서 항목 또는 보고서 항목의 일부에 대한 Action 속성 값에 하이퍼링크를 포함할 수 있습니다. 이러한 하이퍼링크는 보고서 처리 시 외부 데이터 원본에서 검색되는 데이터에 바인딩될 수 있습니다. 악의적 사용자가 이러한 기본 데이터를 수정할 경우 하이퍼링크는 스크립팅 악용 공격의 대상이 될 수 있습니다. 사용자가 게시된 보고서나 내보낸 보고서의 링크를 클릭하면 악성 스크립트가 실행될 수 있습니다.  
@@ -79,12 +79,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="securing-confidential-reports"></a>기밀 보고서 보안  
  기밀 정보가 들어 있는 보고서의 경우 사용자에게 주요 데이터에 대한 액세스 자격 증명을 요청함으로써 데이터 액세스 수준에서 보안을 유지해야 합니다. 자세한 내용은 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요. 권한이 없는 사용자가 액세스하지 못하도록 폴더에 보안을 지정할 수도 있습니다. 자세한 내용은 [폴더 보안](../../reporting-services/security/secure-folders.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [역할 할당 생성 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [보고서 작성기 액세스 구성](../../reporting-services/report-server/configure-report-builder-access.md)   
- [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [공유 데이터 원본 항목 보안 설정](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Reporting Services 데이터 원본에 자격 증명을 저장 합니다.](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [공유 데이터 원본 항목 보안](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Reporting Services 데이터 원본에 자격 증명 저장](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

@@ -1,11 +1,13 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/27/2017
+ms.custom: 
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,36 +24,31 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  이 문을에서 다양 한 데이터베이스 구성 설정을 사용 하면는 **개별 데이터베이스** 수준입니다. 이 문을 모두에서 사용할 수 있는지 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다. 이러한 설정은 다음과 같습니다.  
+  이 문을에서 다양 한 데이터베이스 구성 설정을 사용 하면는 **개별 데이터베이스** 수준입니다. 이 명령문은 영어로 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다. 이러한 설정은 다음과 같습니다.  
   
 - 프로시저 캐시를 지웁니다.  
-  
-- 주 데이터베이스의 경우 MAXDOP 매개 변수를 해당 데이터베이스에 가장 적합한 임의 값(1,2, ...)으로 설정하고 사용되는 보조 데이터베이스에는 다른 값(예: 0)을 설정합니다.  
-  
+- 해당 데이터베이스에 가장 적합 기반 하 고 다른 값을 설정 하는 주 데이터베이스에 대 한 MAXDOP 매개 변수 값은 임의의 값 (1, 2,...)를 설정 (예: 0) (예: 보고 쿼리 구문과) 모든 보조 데이터베이스 사용에 대 한 합니다.  
 - 데이터베이스와 관계없이 쿼리 최적화 프로그램 카디널리티 추정 모델을 호환성 수준으로 설정합니다.  
-  
 - 데이터베이스 수준에서 매개 변수 스니핑을 사용하거나 사용하지 않도록 설정합니다.
-  
 - 데이터베이스 수준에서 쿼리 최적화 프로그램 핫픽스를 사용하거나 사용하지 않도록 설정합니다.
-
 - 데이터베이스 수준에서 id 캐시를 사용 하지 않도록 설정 하거나 사용 합니다.
+- 일괄 처리가 처음으로 컴파일 되었을 때 캐시에 저장 될 컴파일된 계획 스텁만 사용 하지 않도록 설정 하거나 사용 합니다.    
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [TRANSACT-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,6 +68,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
 }  
 ```  
   
@@ -81,11 +79,11 @@ ALTER DATABASE SCOPED CONFIGURATION
 보조 데이터베이스 (모든 보조 데이터베이스가 동일한 값을 가져야 합니다)에 대 한 설정을 지정 합니다.  
   
 MAXDOP  **=**  {\<값 > | 기본}  
-**\<값 >**  
+**\<value>**  
   
 문에 대 한 설정 MAXDOP를 사용 해야 기본을 지정 합니다. 0 값은 기본값 및 서버 구성 대신 사용 됩니다. 데이터베이스 범위에 대 한 MAXDOP (0으로 설정 되어) 있지 재정의 **x degree of** sp_configure로 서버 수준에서 설정 합니다. 쿼리 힌트는 DB 재정의할 수도 있습니다 MAXDOP 다른 설정을 필요로 하는 특정 쿼리를 조정 하기 위해 범위가 지정 합니다. 이러한 모든 설정은 작업 그룹에 대 한 설정 MAXDOP 제한 됩니다.   
 
-max degree of parallelism 옵션을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. SQL Server 쿼리, 인덱스 데이터 정의 언어 (DDL) 작업, 병렬 삽입에 대 한 병렬 실행 계획으로 간주, 온라인 열, 병렬 통계 collectiion 및 정적 커서와 키 집합 커서 채우기의 변경 합니다.
+max degree of parallelism 옵션을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. SQL Server 쿼리, 인덱스 데이터 정의 언어 (DDL) 작업, 병렬 삽입에 대 한 병렬 실행 계획으로 간주, 온라인 열, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기의 변경 합니다.
  
 인스턴스 수준에서이 옵션을 설정 하려면 참조 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)합니다. 
 
@@ -94,7 +92,7 @@ max degree of parallelism 옵션을 사용하여 병렬 계획 실행에 사용�
   
 PRIMARY  
   
-주 서버, 데이터베이스에는 동안 보조 데이터베이스에만 설정할 수 있습니다 및 구성을 기본 데이터베이스에 설정 된 것을 나타냅니다. 기본 변경 내용이 보조 데이터베이스에 있는 값에 대 한 구성을 변경 않을 경우 적절 하 게 설정할 필요 없이 보조 서버의 값 명시적으로 되어 있어야 합니다. **기본** 보조 데이터베이스에 대 한 기본 설정입니다.  
+주 서버, 데이터베이스에는 동안 보조 데이터베이스에만 설정할 수 있습니다 및 구성을 기본 데이터베이스에 설정 된 것을 나타냅니다. 기본 변경 내용이 보조 데이터베이스에 있는 값에 대 한 구성을 변경 않을 경우 적절 하 게 설정할 필요 없이 보조 서버의 값을 명시적으로 합니다. **기본** 보조 데이터베이스에 대 한 기본 설정입니다.  
   
 LEGACY_CARDINALITY_ESTIMATION  **=**  {ON | **OFF** | 기본}  
 
@@ -116,7 +114,7 @@ PARAMETER_SNIFFING  **=**  { **ON** | OFF | 기본}
   
 PRIMARY  
   
-이 값은 보조 복제본에서 주 서버, 데이터베이스 하는 동안에 유효 하 고 모든 보조 복제본에서이 설정에 대 한 값 기본 데이터베이스에 설정 된 값이 되도록 지정 합니다. 경우에 사용 하기 위한 기본 구성 [매개 변수 스니핑](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) 변경 내용을 보조 항목에 값이 변경 됩니다 적절 하 게 명시적으로 되어 있어야 값 보조 데이터베이스를 설정할 필요 없이 합니다. 보조 데이터베이스에 대 한 기본 설정입니다.  
+이 값은 보조 복제본에서 주 서버, 데이터베이스 하는 동안에 유효 하 고 모든 보조 복제본에서이 설정에 대 한 값 기본 데이터베이스에 설정 된 값이 되도록 지정 합니다. 경우에 사용 하기 위한 기본 구성 [매개 변수 스니핑](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) 변경 내용을 보조 항목에 값이 변경 됩니다 적절 하 게 설정할 필요 없이 보조 항목 값을 명시적으로 합니다. 보조 데이터베이스에 대 한 기본 설정입니다.  
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | 기본}  
 
@@ -127,7 +125,7 @@ QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | 기본}
   
 PRIMARY  
   
-이 값은 보조 복제본에서 주 서버, 데이터베이스 하는 동안에 유효 하 고 모든 보조 복제본에서이 설정에 대 한 값 기본 데이터베이스에 설정 된 값이 되도록 지정 합니다. 기본 변경 내용이 보조 데이터베이스에 있는 값에 대 한 구성을 변경 않을 경우 적절 하 게 설정할 필요 없이 보조 서버의 값 명시적으로 되어 있어야 합니다. 보조 데이터베이스에 대 한 기본 설정입니다.  
+이 값은 보조 복제본에서 주 서버, 데이터베이스 하는 동안에 사용할 및 모든 보조 복제본에서이 설정에 대 한 값이 기본 데이터베이스에 설정 된 값 임을 지정 합니다. 기본 변경 내용이 보조 데이터베이스에 있는 값에 대 한 구성이 변경 되 면 적절 하 게 설정할 필요 없이 보조 항목 값을 명시적으로 합니다. 보조 데이터베이스에 대 한 기본 설정입니다.  
   
 지우기 PROCEDURE_CACHE  
 
@@ -135,12 +133,18 @@ PRIMARY
 
 IDENTITY_CACHE  **=**  { **ON** | OFF}  
 
-**적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (기능은 공개 미리 보기 상태에서) 
+**적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 데이터베이스 수준에서 id 캐시를 사용 하지 않도록 설정 하거나 사용 합니다. 기본값은 **ON**합니다. Identity 캐싱 id 열이 있는 테이블에서 삽입 성능을 개선 하기 위해 사용 됩니다. 서버가 예기치 않게 다시 시작 하거나 장애 조치 한 보조 서버에 있는 경우에 id 열 값 간의 간격을 방지 하려면 IDENTITY_CACHE 옵션을 사용 하지 않도록 설정 합니다. 이 옵션은 기존 비슷합니다 [추적 플래그 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)한다는 점을 제외 하는 서버 수준 에서만 아니라 데이터베이스 수준에서 설정할 수 있습니다.   
 
 > [!NOTE] 
 > 이 옵션은 기본 데이터베이스에 설정할 수 있습니다. 자세한 내용은 참조 [id 열](create-table-transact-sql-identity-property.md)합니다.  
+
+OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON | **OFF** }  
+
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+일괄 처리가 처음으로 컴파일 되었을 때 캐시에 저장 될 컴파일된 계획 스텁만 사용 하지 않도록 설정 하거나 사용 합니다. 기본값은 OFF입니다. OPTIMIZE_FOR_AD_HOC_WORKLOADS 데이터베이스, 컴파일된 계획 스텁만 있는지 데이터베이스 범위 구성 캐시 때 일괄 처리에에서 저장 되 면 처음으로 컴파일됩니다. 계획 스텁을 전체 컴파일된 계획의 크기에 비해 작은 메모리 사용 공간이 있어야 합니다.  일괄 처리, 컴파일 또는 다시 실행 하는 경우 컴파일된 계획 스텁은 제거 하 고 전체 컴파일된 계획으로 대체 됩니다.
 
 ##  <a name="Permissions"></a> 사용 권한  
  필요한 모든 데이터베이스 범위 구성 변경   
@@ -149,11 +153,13 @@ IDENTITY_CACHE  **=**  { **ON** | OFF}
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  보조 데이터베이스가 해당 주 서로 다른 범위 지정 된 구성 설정이 적용을 구성할 수도 있지만, 모든 보조 데이터베이스가 동일한 구성을 사용 합니다. 각 보조 복제본에 대 한 다양 한 설정은 구성할 수 없습니다.  
   
- 이 문을 실행 하면 모든 쿼리를 다시 컴파일해야 할 합니다 즉 현재 데이터베이스에서 프로시저 캐시를 지워집니다.  
+ 이 문을 실행 모든 쿼리를 다시 컴파일하려면 있음을 의미 하는 현재 데이터베이스에 프로시저 캐시를 지웁니다.  
   
- 3 부분으로 된 이름 쿼리에 대 한 쿼리에 대 한 현재 데이터베이스 연결에 대 한 설정을 현재 데이터베이스 컨텍스트에서 컴파일되는 SQL 모듈 (예:: 프로시저, 함수 및 트리거)에 대 한 외의 다른 적용 되 고 따라서의 옵션을 사용 합니다.는 존재 하는 데이터베이스입니다.  
+ 3 부분으로 된 이름 쿼리에 대 한 쿼리에 대 한 현재 데이터베이스 연결에 대 한 설정은 현재 데이터베이스 컨텍스트에서 컴파일되는 SQL 모듈 (프로시저, 함수, 트리거 등)에 대 한 외의 다른 적용 되 고 따라서의 옵션을 사용 하 여는 존재 하는 데이터베이스입니다.  
   
  ALTER_DATABASE_SCOPED_CONFIGURATION 이벤트는 DDL 트리거를 시작 하는 데 사용할 수 있는 DDL 이벤트로 추가 됩니다. 이것이 ALTER_DATABASE_EVENTS 트리거 그룹의 자식입니다.  
+ 
+ 데이터베이스 범위 구성 설정을 데이터베이스와 함께 전달 됩니다. 즉, 지정된 된 데이터베이스 복원 또는 연결 하는 경우 기존 구성 설정 상태로 유지 합니다.
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
 **MAXDOP**  
@@ -162,7 +168,7 @@ IDENTITY_CACHE  **=**  { **ON** | OFF}
   
 -   쿼리 힌트는 sp_configure와 범위를 한 데이터베이스 설정 보다 우선 합니다. 리소스 그룹 MAXDOP 작업 그룹에 대 한 설정 되어 있습니다.  
   
-    -   쿼리 힌트를 0으로 설정 된 경우 리소스 관리자 설정에 의해 재정의 됩니다.  
+    -   쿼리 힌트를 0으로 설정 하는 경우 리소스 관리자 설정에 의해 재정의 됩니다.  
   
     -   쿼리 힌트는 0, it 하지 하는 경우는 리소스 관리자 설정에 의해 제한 됩니다.  
   
@@ -172,15 +178,15 @@ IDENTITY_CACHE  **=**  { **ON** | OFF}
   
 **QUERY_OPTIMIZER_HOTFIXES**  
   
- 레거시 쿼리 최적화 프로그램 또는 쿼리 최적화 프로그램 핫픽스를 사용할 수 있도록 QUERYTRACEON 힌트를 사용 하면 쿼리 힌트 및 데이터베이스 범위 구성 설정, 의미 중 하나를 사용 하는 경우에 옵션이 적용 됩니다 사이 OR 조건을 것입니다.  
+ 레거시 쿼리 최적화 프로그램 또는 쿼리 최적화 프로그램 핫픽스를 사용할 수 있도록 QUERYTRACEON 힌트를 사용 하면 쿼리 힌트 및 데이터베이스 범위 구성 설정, 옵션은 적용 중 하나를 사용 하는 경우 의미 사이 OR 조건을 것입니다.  
   
 **GeoDR**  
   
- 예: Always On 가용성 그룹 및 GeoReplication을 읽기 가능한 보조 데이터베이스는 데이터베이스의 상태를 확인 하 여 보조 값을 사용 합니다. म 하지 않는 장애 조치 시 다시 컴파일하고 기술적으로 새 주 데이터베이스는 보조 설정을 사용 하는 쿼리, 있더라도 개념은 다른 워크 로드를 하 고 따라서 캐시 된 쿼리는 기본 및 보조 간 설정만 달라 집니다. 새 쿼리는 자신에 게 해당 하는 새 설정을 선택 하는 반면 최적의 설정을 사용 하 여 합니다.  
+ 예: Always On 가용성 그룹 및 GeoReplication을 읽기 가능한 보조 데이터베이스는 데이터베이스의 상태를 확인 하 여 보조 값을 사용 합니다. 개념은 다른 워크 로드를 하 고 따라서 캐시 된 쿼리는 기본 및 보조 간 설정만 변경 있다는 recompile 장애 조치 발생 하지 않으며 기술적으로 새 주 데이터베이스는 보조 설정을 사용 하는 쿼리, 경우에 새 쿼리 자신에 게 해당 되는 새 설정을 선택 하는 반면 최적의 설정을 사용 하 여 합니다.  
   
 **DacFx**  
   
- 내보내기 (데이터 없이 또는) 스키마의 예를 들어 이전 버전의 SQL Server로 가져와야 할 수 ALTER DATABASE SCOPED CONFIGURATION Azure SQL 데이터베이스 및 데이터베이스 스키마에 영향을 주는 SQL Server 2016의 새로운 기능 이므로, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 < c2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 합니다. 예를 들어로 내보내기를 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 또는 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이 새로운 기능을 사용 데이터베이스를 하위 수준 서버로 가져올 수 없게 됩니다.  
+ ALTER 데이터베이스 범위 구성 되므로 영향을 줌 데이터베이스 스키마를 스키마 (포함 또는 데이터 제외)에 대 한 내보내기는 수 없습니다는 이전 버전의 SQL Server로 가져올 수는 SQL Server 2016으로 시작 하는 Azure SQL 데이터베이스 및 SQL Server의에서 새로운 기능 예를 들어 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]합니다. 예를 들어로 내보내기를 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 또는 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이 새로운 기능을 사용 데이터베이스를 하위 수준 서버로 가져올 수 없게 됩니다.  
   
 ## <a name="metadata"></a>메타데이터  
 
@@ -194,7 +200,7 @@ IDENTITY_CACHE  **=**  { **ON** | OFF}
 이 예에서는 ALTER DATABASE SCOPED CONFIGURATION을 실행 하는 데 필요한 사용 권한 부여     
 사용자 [Joe].  
   
-```tsql  
+```sql  
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;  
 ```  
   
@@ -202,14 +208,14 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 
 MAXDOP를 설정 하는이 예제 = 1 주 데이터베이스 및 MAXDOP = 4 지리적 복제 시나리오에서 보조 데이터베이스에 대 한 합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
 이 예에서는 지역 간 복제 시나리오에 해당 주 데이터베이스에 대해 설정 되어 있어서 동일 해야 보조 데이터베이스의 MAXDOP를 설정 합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
@@ -217,13 +223,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 
 이 예에서는 지역 간 복제 시나리오에서 보조 데이터베이스에 대해 ON으로 LEGACY_CARDINALITY_ESTIMATION를 설정합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 이 예에서는 지역 간 복제 시나리오에 해당 주 데이터베이스의 경우와 보조 데이터베이스에 대 한 LEGACY_CARDINALITY_ESTIMATION을 설정 합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
@@ -231,29 +237,27 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 
 이 예에서는 지역 간 복제 시나리오에서 주 데이터베이스에 대해 OFF로 PARAMETER_SNIFFING를 설정합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;  
 ```  
   
 이 예에서는 지역 간 복제 시나리오에서 주 데이터베이스에 대해 OFF로 PARAMETER_SNIFFING를 설정합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
-이 예제에서는 설정 PARAMETER_SNIFFING 보조 데이터베이스에 대 한 주 데이터베이스에 있음   
-지리적 복제 시나리오입니다.  
+이 예제에서는 지역 간 복제 시나리오에서 주 데이터베이스에 보조 데이터베이스에 대 한 PARAMETER_SNIFFING 설정 합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>5. QUERY_OPTIMIZER_HOTFIXES 설정  
 
-주 데이터베이스에 대 한 QUERY_OPTIMIZER_HOTFIXES ON으로 설정   
-지리적 복제 시나리오입니다.  
+지리적 복제 시나리오에서 주 데이터베이스에 대 한 QUERY_OPTIMIZER_HOTFIXES을 ON으로 설정 합니다.  
 
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  
 ```  
   
@@ -261,7 +265,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 
 이 예에서는 프로시저 캐시를 (주 데이터베이스에 대해서만 사용 가능)를 지웁니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;  
 ```  
 
@@ -271,8 +275,18 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 이 예제는 id 캐시를 해제합니다.
 
-```tsql 
+```sql 
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
+```
+
+### <a name="h-set-optimizeforadhocworkloads"></a>8. OPTIMIZE_FOR_AD_HOC_WORKLOADS 설정
+
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+이 예제에서는 컴파일된 계획 스텁만을 일괄 처리가 처음으로 컴파일 되었을 때 캐시에 저장 될 수 있습니다.
+
+```sql 
+ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ## <a name="additional-resources"></a>추가 리소스
@@ -290,14 +304,12 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * ["냄새가 나 매개 변수는!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 리소스    
-* [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+* [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server 쿼리 최적화 프로그램 핫픽스 추적 플래그 4199 서비스 모델](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>자세한 정보  
- [sys.database_scoped_configurations&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [데이터베이스 및 파일 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [서버 구성 옵션 &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
-  
-  
-
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [데이터베이스 및 파일 카탈로그 뷰](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [서버 구성 옵션](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ 

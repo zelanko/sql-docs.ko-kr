@@ -20,17 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 23dc2338948dc97d68436b23995a1817a0b3bb66
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5ff3fcef1362333dc1ac2de5774d63ce025b8557
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multiple-files-connection-manager"></a>다중 파일 연결 관리자
   다중 파일 연결 관리자를 사용하면 패키지에서 기존 파일 및 폴더를 참조하거나 런타임에 파일 및 폴더를 만들 수 있습니다.  
@@ -43,10 +42,10 @@ ms.lasthandoff: 08/03/2017
   
  다음 표에서는 **FileUsageType**값을 나열합니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|다중 파일 연결 관리자에서 기존 파일을 사용합니다.|  
-|**1.**|다중 파일 연결 관리자에서 파일을 만듭니다.|  
+|**1**|다중 파일 연결 관리자에서 파일을 만듭니다.|  
 |**2**|다중 파일 연결 관리자에서 기존 폴더를 사용합니다.|  
 |**3**|다중 파일 연결 관리자에서 폴더를 만듭니다.|  
   
@@ -76,4 +75,3 @@ ms.lasthandoff: 08/03/2017
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)을 참조하십시오.  
   
   
-

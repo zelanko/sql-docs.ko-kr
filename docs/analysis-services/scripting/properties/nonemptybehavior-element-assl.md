@@ -2,43 +2,35 @@
 title: "NonEmptyBehavior 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- NonEmptyBehavior Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: NonEmptyBehavior Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- NonEmptyBehavior
-helpviewer_keywords:
-- NonEmptyBehavior element
+applies_to: SQL Server 2016 Preview
+f1_keywords: NonEmptyBehavior
+helpviewer_keywords: NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 44d7443ab69f815661464a14ffd72357b332609f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bafd21bcaf9fc7ebfb06f6f37dbf87a0598cf31f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="nonemptybehavior-element-assl"></a>NonEmptyBehavior 요소(ASSL)
-  부모와 연결 된 비어 있지 않은 동작을 결정 하는 [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]부모와 연결 된 비어 있지 않은 동작을 결정 하는 [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,10 +45,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|문자열|  
-|기본값|없음|  
+|데이터 형식 및 길이|String|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -64,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **NonEmptyBehavior** 속성에 적용 됩니다. **CalculationProperty** 사용 하 여 요소는 [CalculationType](../../../analysis-services/scripting/properties/calculationtype-element-assl.md) 로 설정 *멤버*합니다.  
@@ -78,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

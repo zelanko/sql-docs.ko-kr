@@ -23,17 +23,16 @@ helpviewer_keywords:
 - ALTER RESOURCE GOVERNOR
 - RECONFIGURE, ALTER RESOURCE GOVERNOR
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ac7ae791ec7867b13a8547ec60436f25536cd5b7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7650a9eec60108a5dbd228b21a27573cc72ca4fc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,13 +94,13 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  구성 변경 내용을 적용하려면 ALTER RESOURCE GOVERNOR RECONFIGURE를 실행해야 합니다.  
   
- CLASSIFIER_FUNCTION = { *schema_name***.** *function_name* | NULL}  
+ CLASSIFIER_FUNCTION = { *schema_name***.*** function_name* | NULL}  
  으로 지정한 분류 함수 등록 *schema_name.function_name*합니다. 이 함수는 모든 새 세션을 분류하고 세션 요청 및 쿼리를 작업 그룹에 할당합니다. NULL이 사용되면 새 세션이 기본 작업 그룹에 자동으로 할당됩니다.  
   
  RESET STATISTICS  
  모든 작업 그룹 및 리소스 풀에 대한 통계를 다시 설정합니다. 자세한 내용은 참조 [sys.dm_resource_governor_workload_groups&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 및 [sys.dm_resource_governor_resource_pools &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
- MAX_OUTSTANDING_IO_PER_VOLUME = *값*  
+ MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  디스크 볼륨당 최대 지연 I/O 작업을 설정합니다. 모든 크기의 읽기 또는 쓰기가 여기에 해당합니다.  MAX_OUTSTANDING_IO_PER_VOLUME의 최대값은 100입니다. 비율이 아닙니다. 이 설정은 디스크 볼륨의 IO 특성에 맞게 IO 리소스 관리를 튜닝하도록 디자인되었습니다. 다른 값으로 시험 IOMeter, 같은 보정 도구를 사용 하는 것이 좋습니다 하는 것이 좋습니다 [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223), 또는 SQLIO (사용 되지 않음) 저장소 하위 시스템에 대 한 최대 값을 식별 합니다. 이 설정은 다른 풀의 MAX_IOPS_PER_VOLUME이 무제한으로 설정되어 있는 경우에도 SQL Server에서 리소스 풀의 최소 IOPS를 충족할 수 있도록 시스템 수준 안전 검사를 제공합니다. MAX_IOPS_PER_VOLUME에 대 한 자세한 내용은 참조 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)합니다.  
@@ -209,4 +208,3 @@ WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);
  [sys.dm_resource_governor_resource_pools &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   
   
-

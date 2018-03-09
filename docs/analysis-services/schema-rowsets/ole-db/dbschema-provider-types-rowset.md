@@ -2,39 +2,33 @@
 title: "DBSCHEMA_PROVIDER_TYPES 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_PROVIDER_TYPES
+apiname: DBSCHEMA_PROVIDER_TYPES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_PROVIDER_TYPES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bea7c78fddb8aa56f1ccae47b9a3964d81e1d115
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6906aec1d1c1dd53b8c833d59483aa0453cf284b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES 행 집합
-  데이터 공급자가 지원하는 기본 데이터 형식을 식별합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]데이터 공급자가 지 원하는 기본 데이터 형식을 식별 합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DBSCHEMA_PROVIDER_TYPES** 행 집합에는 다음 열이 포함되어 있습니다.  
@@ -58,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 |**MAXIMUM_SCALE**|**DBTYPE_I2**|유형 표시기가 **DBTYPE_VARNUMERIC**, **DBTYPE_DECIMAL**또는 **DBTYPE_NUMERIC**인 경우 소수점 오른쪽에 허용되는 최대 자릿수입니다. 그렇지 않으면**U**입니다.|  
 |**GUID**|**DBTYPE_GUID**|(나중에 사용할 계획) 형식이 형식 라이브러리에 설명되어 있는 경우 형식의 **GUID** 입니다. 그렇지 않으면 **NULL**입니다.|  
 |**형식 라이브러리**|**DBTYPE_WSTR**|(나중에 사용할 계획) 형식이 형식 라이브러리에 설명되어 있는 경우 형식 설명을 포함하는 형식 라이브러리입니다. 그렇지 않으면 NULL입니다.|  
-|**버전**|**DBTYPE_WSTR**|(나중에 사용할 계획) 형식 정의의 버전입니다. 공급자가 형식 정의를 버전 지정할 수 있습니다. 공급자마다 타임스탬프나 숫자(integer 또는 float)와 같은 서로 다른 버전 지정 체계를 사용할 수 있습니다. 지원되지 않으면**NULL** 입니다.|  
+|**VERSION**|**DBTYPE_WSTR**|(나중에 사용할 계획) 형식 정의의 버전입니다. 공급자가 형식 정의를 버전 지정할 수 있습니다. 공급자마다 타임스탬프나 숫자(integer 또는 float)와 같은 서로 다른 버전 지정 체계를 사용할 수 있습니다. 지원되지 않으면**NULL** 입니다.|  
 |**있는 IS_LONG**|**DBTYPE_BOOL**|데이터 형식이 BLOB(binary large object)이고 매우 긴 데이터를 포함하는지 여부를 나타내는 부울입니다.<br /><br /> **VARIANT_TRUE** 는 데이터 형식이 매우 긴 데이터를 포함하는 **BLOB** 임을 나타냅니다. 매우 긴 데이터의 정의는 공급자별로 다릅니다.<br /><br /> **VARIANT_FALSE** 는 데이터 형식이 매우 긴 데이터를 포함하지 않는 **BLOB** 이거나, **BLOB**이 아님을 나타냅니다<br /><br /> 이 값에 따라 **DBCOLUMNFLAGS_ISLONG** 의 **GetColumnInfo** 와 **IColumnsInfo** 의 **GetParameterInfo** 에서 반환되는 **ICommandWithParameters**플래그의 설정이 결정됩니다.|  
 |**BEST_MATCH**|**DBTYPE_BOOL**|데이터 형식이 가장 일치하는 항목인지 여부를 나타내는 부울입니다.<br /><br /> **VARIANT_TRUE** 는 해당 데이터 형식이 데이터 저장소에 있는 모든 데이터 형식과 **DATA_TYPE** 열의 값이 지시하는 OLE DB 데이터 형식 중에서 가장 일치하는 항목임을 나타냅니다.<br /><br /> **VARIANT_FALSE** 는 해당 데이터 형식이 가장 일치하는 항목이 아님을 나타냅니다.<br /><br /> **DATA_TYPE** 열 값이 같은 행 집합의 경우 **BEST_MATCH** 열이 행 하나에만 **VARIANT_TRUE** 로 설정되어 있습니다.|  
 |**IS_FIXEDLENGTH**|**DBTYPE_BOOL**|열 길이가 고정되는지 여부를 나타내는 부울입니다.<br /><br /> **VARIANT_TRUE** 는 DDL(데이터 정의 언어)로 만든 이 형식의 열이 고정 길이임을 나타냅니다.<br /><br /> **VARIANT_FALSE** 는 DDL로 만든 이 형식의 열이 가변 길이임을 나타냅니다.<br /><br /> 필드가 **NULL**이면 공급자가 이 필드를 고정 길이 열로 매핑할지 가변 길이 열로 매핑할지 알 수 없습니다.|  
@@ -77,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB 스키마 행 집합](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

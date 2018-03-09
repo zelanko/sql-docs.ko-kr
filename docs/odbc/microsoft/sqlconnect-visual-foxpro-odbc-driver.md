@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLConnect function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 49cbfafa-b21e-4e89-b248-9c7098f46b20
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 773f72c2d01babf1e4665ec7cdd5a019b8e820cb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e0481be69797c1050b901c54b3ffde023bfdfb1a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconnect-visual-foxpro-odbc-driver"></a>SQLConnect (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -38,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  일 수 있는 데이터 원본에 연결 된 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) 의 디렉터리나 [테이블](../../odbc/microsoft/visual-foxpro-terminology.md)합니다. Visual FoxPro ODBC 드라이버는 무시는 *szUID*, *cbUID*, *szAuthStr*, 및 *cbAuthStr* 인수입니다.  
   
  자세한 내용은 참조 [SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md) 에 *ODBC Programmer's Reference*합니다.
-

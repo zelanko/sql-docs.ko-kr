@@ -2,41 +2,37 @@
 title: "데이터 원본 개체 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42da7b6895e2a125253e824e8a812f63c04e633a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="datasources-object-tmsl"></a>데이터 원본 개체 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  모델 또는 DirectQuery 모드를 통해 쿼리를 통해 패스에서 모델에 데이터를 추가 하는 가져오기 중에 사용 되는 데이터 원본에 대 한 연결을 정의 합니다.  DirectQuery 모드의 모델 하나만 **DataSource** 개체입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+모델 또는 DirectQuery 모드를 통해 쿼리를 통해 패스에서 모델에 데이터를 추가 하는 가져오기 중에 사용 되는 데이터 원본에 대 한 연결을 정의 합니다.  DirectQuery 모드의 모델 하나만 **DataSource** 개체입니다.  
   
  을 만들면 교체, 또는 자체 데이터 원본 개체를 변경 (예: 파티션 스크립트) 스크립트에서 참조 하는 모든 데이터 원본에서 기존 이어야 합니다 하지 않는 한 **DataSource** 개체 모델에서.  
   
 ## <a name="object-definition"></a>개체 정의  
  모든 개체 이름, 유형, 설명, properties 컬렉션 및 주석을 포함 하 여 속성의 공통 집합을 가집니다. **데이터 원본** 개체에는 다음과 같은 속성이 있습니다.  
   
- 형식  
+ 유형  
  DataSource의 형식입니다. 현재, 유일한 유효 값에는 공급자 (1)-일반적인 연결 문자열입니다.  
   
  connectionString  
@@ -192,7 +188,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [인터넷 정보 서비스 &#40; IIS &#41;에 Analysis Services에 대 한 HTTP 액세스 구성 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

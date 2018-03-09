@@ -2,25 +2,23 @@
 title: "SQL 클라이언트 프로그래밍에 대 한 홈 페이지 | Microsoft Docs"
 description: "다운로드 및 언어와 SQL Server 나 Azure SQL 데이터베이스에 연결 하기 위한 운영 체제의 다양 한 조합에 대 한 설명서에 대 한 주석이 추가 된 링크가 있는 허브 페이지입니다."
 author: MightyPen
-ms.date: 09/13/2017
+ms.date: 11/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: connect
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.topic: article
 ms.reviewer: meetb
 ms.author: genemi
 ms.workload: Inactive
+ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server를 프로그래밍 하는 클라이언트에 대 한 홈 페이지
 
@@ -59,7 +57,7 @@ Azure SQL 데이터베이스에 연결 하기 위한 연결 문자열에 대 한
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp;[ ![C# 로고][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework는.NET Framework의][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java 로고][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js 로고][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP 로고][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Node.js 로고][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![큰 더하기 cpp][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP 로고][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp;[ ![Python 로고][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby 로고][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -186,7 +184,7 @@ SQL Server 용 Node.js 연결 드라이버는 JavaScript에서 구현 됩니다.
 
 ## <a name="odbc-for-c"></a>C + +에 대 한 ODBC 
 
-![ODBC 로고][image-ref-350-odbc]
+![ODBC 로고][image-ref-350-odbc] ![큰 더하기 cpp][image-ref-322-cpp]
 
 개방형 데이터베이스 연결 (ODBC) 1990에서 개발한 및.NET Framework를 발생 합니다. ODBC는 별개의 운영 체제 및 모든 특정 데이터베이스 시스템의 독립적인 되도록 설계 되었습니다.
 
@@ -366,7 +364,6 @@ Ruby SQL 서버와 상호 작용에 사용할 수 있습니다. Ruby 설명서 �
 
 <!-- Image references. -->
 
-[image-ref-310-ado-net]: ./media/homepage-sql-connection-drivers/gm-ado-net-an51.png
 [image-ref-322-cpp]: ./media/homepage-sql-connection-drivers/gm-cpp-4point-p61f.png
 [image-ref-320-csharp]: ./media/homepage-sql-connection-drivers/gm-csharp-c10c.png
 [image-ref-333-ef]: ./media/homepage-sql-connection-drivers/gm-entity-framework-ef20d.png
@@ -378,5 +375,4 @@ Ruby SQL 서버와 상호 작용에 사용할 수 있습니다. Ruby 설명서 �
 [image-ref-380-ruby]: ./media/homepage-sql-connection-drivers/gm-ruby-un-r82.png
 [image-ref-390-aka-ms-sqldev-choose-language]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
 [image-ref-400-aka-ms-sqldev-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
-
 

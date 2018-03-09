@@ -28,17 +28,16 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEADD
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-caps.latest.revision: 71
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6a90b51a1ef2156a2a05b8d3dd4e15111872edf6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,24 +55,24 @@ DATEADD (datepart , number , date )
 ```  
   
 ## <a name="arguments"></a>인수  
-*날짜 부분*  
-일부인 *날짜* 입니다는 **정수***번호* 추가 됩니다. 다음 표에서 모든 유효한 *datepart* 인수입니다. 해당하는 사용자 정의 변수는 사용할 수 없습니다.
+*datepart*  
+일부인 *날짜* 하는 **정수 * * * 번호* 추가 됩니다. 다음 표에서 모든 유효한 *datepart* 인수입니다. 해당하는 사용자 정의 변수는 사용할 수 없습니다.
   
-|*날짜 부분*|약어|  
+|*datepart*|약어|  
 |---|---|
-|**연도**|**yy**, **yyyy**|  
-|**분기**|**qq**, **q**|  
+|**year**|**yy**, **yyyy**|  
+|**quarter**|**qq**, **q**|  
 |**월**|**mm**, **m**|  
 |**dayofyear**|**dy**, **y**|  
-|**일**|**dd**, **d**|  
-|**주**|**wk**, **ww**|  
-|**요일**|**dw**, **w**|  
-|**1 시간**|**m**|  
-|**분**|**mi**,**n**|  
-|**두 번째**|**ss**, **s**|  
-|**밀리초**|**ms**|  
-|**(마이크로초)**|**mcs**|  
-|**나노초**|**ns**|  
+|**day**|**dd**, **d**|  
+|**week**|**wk**, **ww**|  
+|**weekday**|**dw**, **w**|  
+|**hour**|**m**|  
+|**minute**|**mi**, **n**|  
+|**second**|**ss**, **s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *number*  
 식으로 확인 될 수 있는 프로그램 [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 에 추가 되는 *datepart* 의 *날짜*합니다. 사용자 정의 변수는 유효합니다.  
@@ -96,24 +95,24 @@ DATEADD (datepart , number , date )
 경우 *datepart* 은 **월** 및 *날짜* 달은 반환 월 보다 더 많은 날짜 및 *날짜* 일 반환 월에 없습니다. 반환 월의 마지막 날이 반환 됩니다. 예를 들어 9월에는 30일이 있으므로 다음 두 가지 문은 2006-09-30 00:00:00.000을 반환합니다.
   
 ```sql
-SELECT DATEADD(month, 1, '2006-08-30');
-SELECT DATEADD(month, 1, '2006-08-31');
+SELECT DATEADD(month, 1, '20060830');
+SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>number 인수  
 *번호* 인수의 범위를 초과할 수 없습니다 **int**합니다. 다음 문에서 인수에 대 한 *번호* 의 범위를 초과 **int** 1입니다. 다음과 같은 오류 메시지가 반환 됩니다. "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
-SELECT DATEADD(year,2147483648, '2006-07-31');  
-SELECT DATEADD(year,-2147483649, '2006-07-31');  
+SELECT DATEADD(year,2147483648, '20060731');  
+SELECT DATEADD(year,-2147483649, '20060731');  
 ```  
   
 ## <a name="date-argument"></a>date 인수  
 *날짜* 인수는 해당 데이터 형식의 범위를 벗어난 값으로 증가할 수 없습니다. 다음 문에서 *번호* 값에 추가 되는 *날짜* 값의 범위를 초과 *날짜* 데이터 형식입니다. 다음과 같은 오류 메시지가 반환 됩니다: "`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`."
   
 ```sql
-SELECT DATEADD(year,2147483647, '2006-07-31');  
-SELECT DATEADD(year,-2147483647, '2006-07-31');  
+SELECT DATEADD(year,2147483647, '20060731');  
+SELECT DATEADD(year,-2147483647, '20060731');  
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>smalldatetime 날짜, 초 또는 소수 자릿수 초 datepart에 대한 반환 값  
@@ -355,5 +354,4 @@ GO
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-
 

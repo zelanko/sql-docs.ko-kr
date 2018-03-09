@@ -3,8 +3,9 @@ title: "Children 속성 (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Member::Children
 - Children
-helpviewer_keywords: Children property [ADO MD]
+helpviewer_keywords:
+- Children property [ADO MD]
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf9b0ca151408a1f1e66a7a77f98ea824f6b468f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 39c1ba30aab6f6a972241c0e564a7a0680165828
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="children-property-ado-md"></a>ADO MD children 속성
 반환 된 [멤버](../../../ado/reference/ado-md-api/members-collection-ado-md.md) 컬렉션입니다 현재 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 계층 구조에서 부모입니다.  

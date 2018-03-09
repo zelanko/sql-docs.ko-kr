@@ -2,18 +2,17 @@
 title: "보안 역할 (Analysis Services-다차원 데이터) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], roles
 - Analysis Services objects, roles
@@ -25,19 +24,20 @@ helpviewer_keywords:
 - storing data [Analysis Services], roles
 - access rights [Analysis Services], roles
 ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01525ae36d9efed7df054d4100c7a4b79340a2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>보안 역할(Analysis Services - 다차원 데이터)
-  역할에 사용 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 대 한 보안을 관리할 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체와 데이터입니다. 기술적으로 역할의 특정 액세스 권한 및의 인스턴스에 의해 관리 되는 개체에 대해 정의 된 사용 권한이 있는 Microsoft Windows 사용자 및 그룹 보안 식별자 (Sid)를 연결 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 두 가지 유형의 역할에 제공 됩니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+역할에 사용 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 대 한 보안을 관리할 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체와 데이터입니다. 기술적으로 역할의 특정 액세스 권한 및의 인스턴스에 의해 관리 되는 개체에 대해 정의 된 사용 권한이 있는 Microsoft Windows 사용자 및 그룹 보안 식별자 (Sid)를 연결 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 두 가지 유형의 역할에 제공 됩니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   서버 역할 - 관리자에게 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]인스턴스에 대한 액세스 권한을 제공하는 고정 역할  
   
@@ -84,9 +84,9 @@ ms.lasthandoff: 11/17/2017
   
  다음 목록에서는 권한에 의해 가능한 동작을 보여 줍니다.  
   
-|작업|값|설명|  
+|동작|값|설명|  
 |------------|------------|-----------------|  
-|처리|{**true**, **false**}<br /><br /> 기본값은**false**입니다.|**true**이면 멤버가 개체와 해당 개체에 포함된 모든 개체를 처리할 수 있습니다.<br /><br /> 처리 권한은 마이닝 모델에 적용되지 않습니다. <xref:Microsoft.AnalysisServices.MiningModel>권한은 항상에서 상속 됩니다 <xref:Microsoft.AnalysisServices.MiningStructure>합니다.|  
+|처리|{**true**, **false**}<br /><br /> 기본값은**false**입니다.|**true**이면 멤버가 개체와 해당 개체에 포함된 모든 개체를 처리할 수 있습니다.<br /><br /> 처리 권한은 마이닝 모델에 적용되지 않습니다. <xref:Microsoft.AnalysisServices.MiningModel> 권한은 항상에서 상속 됩니다 <xref:Microsoft.AnalysisServices.MiningStructure>합니다.|  
 |ReadDefinition|{**None**, **Basic**, **Allowed**}<br /><br /> 기본값은**None**입니다.|멤버가 개체와 연관된 데이터 정의(ASSL)를 읽을 수 있는지 여부를 지정합니다.<br /><br /> **Allowed**이면 멤버가 개체와 연관된 ASSL을 읽을 수 있습니다.<br /><br /> **Basic** 및 **Allowed** 는 개체에 포함된 개체가 상속합니다. **Allowed** 는 **Basic** 및 **None**을 재정의합니다.<br /><br /> **Allowed** 는 개체의 DISCOVER_XML_METADATA에 필요하고 **Basic** 은 연결된 개체와 로컬 큐브를 만드는 데 필요합니다.|  
 |읽기|{**None**, **Allowed**}<br /><br /> 기본값은**None** 입니다. 단, DimensionPermission의 기본값은**Allowed**입니다.|멤버가 스키마 행 집합과 데이터 콘텐츠를 읽을 수 있는 권한을 가지고 있는지 여부를 지정합니다.<br /><br /> **Allowed** 는 데이터베이스에 대한 읽기 액세스 권한을 부여하여 데이터베이스를 검색할 수 있도록 합니다.<br /><br /> **허용** 큐브 내용을로 큐브 통해 스키마 행 집합 및 액세스에 대 한 읽기 액세스 (으로 제한 되지 않는 한 <xref:Microsoft.AnalysisServices.CellPermission> 및 <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> **허용** 차원의 모든 특성에 대해 읽기 권한을 차원 권한 부여에 (으로 제한 되지 않는 한 <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). 읽기 권한은 <xref:Microsoft.AnalysisServices.CubeDimensionPermission>에 대한 정적 상속에만 사용됩니다. 차원에 대한**None** 은 차원을 숨기고 집계할 수 있는 특성의 기본 멤버에만 액세스 권한을 부여합니다. 따라서 차원에 집계할 수 없는 특성이 포함되어 있으면 오류가 발생합니다.<br /><br /> **허용** 에 <xref:Microsoft.AnalysisServices.MiningModelPermission> 예측 조인을 수행 하 고 스키마 행 집합에서 개체를 볼 사용 권한을 부여 합니다.<br /><br /> **NoteAllowed** 읽기 또는 쓰기 데이터베이스의 개체에 필요 합니다.|  
 |쓰기|{**None**, **Allowed**}<br /><br /> 기본값은**None**입니다.|멤버가 부모 개체의 데이터에 대한 쓰기 액세스 권한을 가지고 있는지 여부를 지정합니다.<br /><br /> 액세스 권한은 <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube> 및 <xref:Microsoft.AnalysisServices.MiningModel> 하위 클래스에 적용되고 데이터베이스에 적용 되지 않습니다 <xref:Microsoft.AnalysisServices.MiningStructure> 유효성 검사 오류를 생성 하는 하위 클래스입니다.<br /><br /> **허용** 에 <xref:Microsoft.AnalysisServices.Dimension> 차원의 모든 특성의 쓰기 권한을 부여 합니다.<br /><br /> **허용** 에 <xref:Microsoft.AnalysisServices.Cube> 형식으로 정의 된 파티션의 큐브 셀에 대 한 쓰기 권한을 부여 = 쓰기 저장 합니다.<br /><br /> **허용** 에 <xref:Microsoft.AnalysisServices.MiningModel> 모델 콘텐츠를 수정할 수 있는 권한을 부여 합니다.<br /><br /> **허용** 에 <xref:Microsoft.AnalysisServices.MiningStructure> 에서 특정 의미가 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.<br /><br /> 참고: 쓰기로 설정할 수 없습니다 **허용** 읽기도로 설정 하지 않으면 **허용 됨**|  

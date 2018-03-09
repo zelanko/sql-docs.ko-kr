@@ -3,8 +3,11 @@ title: "이름 선택 대화 상자(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b77cc551ac361367c4007669f46a672fca7d11fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dae6ccad669be3cb1bd3764e56f7a1033a09ab97
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>이름 선택 대화 상자(Visual Database Tools)
-이 대화 상자는 **파일** 메뉴에서 **\<TableName> 저장**, **<DiagramName> 저장** 또는 **<ViewName> 저장**을 선택하면 나타납니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자는 **파일** 메뉴에서 **\<TableName** 저장>, **<DiagramName> 저장** 또는 **<ViewName> 저장**을 선택하면 나타납니다.  
   
 **테이블/다이어그램/뷰 이름 입력**  
 테이블, 다이어그램이나 뷰의 이름을 입력할 수 있는 입력란이 제공됩니다.  

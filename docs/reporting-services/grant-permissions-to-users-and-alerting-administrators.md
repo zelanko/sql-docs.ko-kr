@@ -1,27 +1,27 @@
 ---
-title: "사용자 및 경고 담당자에 게 권한을 부여 | Microsoft Docs"
+title: "사용자 및 경고 관리자에게 사용 권한 부여 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
-caps.latest.revision: 11
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "11"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: fd7b39c2600bc683a37f6cec43041ccf8ebb009f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 9a4aa4f2ce4b9b69035fe45642a8247794f1e395
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>사용자 및 경고 담당자에게 권한 부여
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/17/2017
 사용자 및 경고 담당자는 SharePoint 권한을 부여 받아야 경로를 만들고, 편집하고, 삭제하고 볼 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 알림 기능을 사용하는 데에는 특별한 권한이 필요 없이 기본 제공 SharePoint 권한을 사용합니다.
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
 **정보 근로자**- 경고 만들기 및 항목 보기 SharePoint 권한이 있어야 합니다. 디자인, 참가, 읽기, 보기만 등의 기본 제공 SharePoint 권한 수준은 경고 만들기 및 항목 보기 SharePoint 권한을 포함합니다. 알림을 만들고 편집하며 실행하고 보는 사용자를 지원하는 데 필요한 권한이 있으면 사용자 지정 권한 수준을 만들 수도 있습니다.
 
@@ -58,10 +58,9 @@ SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
-[SharePoint 사이트 &#40;의 보고서 서버 항목에 대 한 사용 권한 설정 모드 &#41; 통합 SharePoint의 reporting Services](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

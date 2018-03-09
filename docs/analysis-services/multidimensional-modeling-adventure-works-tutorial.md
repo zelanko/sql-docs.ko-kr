@@ -1,15 +1,14 @@
 ---
 title: "다차원 모델링 (Adventure Works 자습서) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.date: 02/13/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
@@ -18,22 +17,23 @@ helpviewer_keywords:
 - tutorials [Analysis Services]
 - Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
-caps.latest.revision: 31
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: af9371e71223eedc44b7b7ec8cbeb3ab20423da8
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eee675f86ab6707346b2789e424bcc1778f111f4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>다차원 모델링(Adventure Works 자습서)
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자습서입니다. 이 자습서의 모든 예에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 라는 가상 회사에서 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 프로젝트를 개발 및 배포하는 방법을 설명합니다.  
   
-## <a name="what-you-will-learn"></a>학습 내용  
+## <a name="what-you-learn"></a>정보  
 이 자습서에서는 다음 항목을 배웁니다.  
   
 -   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 내의 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]프로젝트에서 데이터 원본, 데이터 원본 뷰, 차원, 특성, 특성 관계, 계층 및 큐브를 정의하는 방법  
@@ -53,30 +53,29 @@ ms.lasthandoff: 09/01/2017
   
 -   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 컴퓨터에서 Administrators 로컬 그룹의 멤버이거나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에서 서버 관리 역할의 멤버여야 합니다.  
   
--   **AdventureWorksDW2012** 예제 데이터베이스에 대한 읽기 권한이 있어야 합니다. 이 예제 데이터베이스는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 릴리스에 사용할 수 있습니다.  
+-   사용 권한을 읽기 있어야는 **AdventureWorksDW** 예제 데이터베이스. 이 예제 데이터베이스는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 릴리스에 사용할 수 있습니다.  
   
 ## <a name="lessons"></a>단원  
 이 자습서에는 다음 단원이 포함되어 있습니다.  
   
 |단원|소요되는 예상 시간|  
 |----------|------------------------------|  
-|[1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15분|  
-|[2단원: 큐브 정의 및 배포](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)|30분|  
-|[3단원: 측정값, 특성 및 계층 수정](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)|45분|  
-|[4단원: 고급 특성 및 차원 속성 정의](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120분|  
-|[5단원: 차원과 측정값 그룹의 관계 정의](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45분|  
-|[6단원: 계산 정의](../analysis-services/lesson-6-defining-calculations.md)|45분|  
-|[7단원: KPI&#40;핵심 성과 지표&#41; 정의](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)|30분|  
-|[8단원: 동작 정의](../analysis-services/lesson-8-defining-actions.md)|30분|  
-|[9단원: 큐브 뷰 및 번역 정의](../analysis-services/lesson-9-defining-perspectives-and-translations.md)|30분|  
-|[10단원: 관리자 역할 정의](../analysis-services/lesson-10-defining-administrative-roles.md)|15분|  
+|[1 단원: Services 프로젝트 내의 분석 데이터 원본 뷰 정의](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15분|  
+|[2 단원: 정의 및 큐브를 배포 합니다.](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)|30분|  
+|[3 단원: 측정값, 특성 및 계층 수정](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)|45분|  
+|[4 단원: 고급 특성 및 차원 속성 정의](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120분|  
+|[5 단원: 차원 및 측정값 그룹 간의 관계를 정의합니다.](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45분|  
+|[6 단원: 계산 정의](../analysis-services/lesson-6-defining-calculations.md)|45분|  
+|[7 단원: 핵심 성과 지표 &#40; 정의 Kpi &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)|30분|  
+|[8 단원: 동작 정의](../analysis-services/lesson-8-defining-actions.md)|30분|  
+|[9 단원: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)|30분|  
+|[10 단원: 관리자 역할 정의](../analysis-services/lesson-10-defining-administrative-roles.md)|15분|  
   
 > [!NOTE]  
-> 이 자습서에서 만들 큐브 데이터베이스는 codeplex 사이트에서 다운로드할 수 있는 Adventure Works 예제 데이터베이스의 일부인 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델 프로젝트의 단순화된 버전입니다. Adventure Works 다차원 데이터베이스의 자습서 버전은 바로 익히려는 특정 기술에 더 집중하도록 단순화되어 있습니다. 이 자습서를 끝낸 후에는 직접 다차원 모델 프로젝트를 탐색하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델링에 대한 이해를 높이는 것이 좋습니다.  
+> 이 자습서에서 만들 큐브 데이터베이스의 단순화 된 버전의는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] GitHub에서 다운로드할 수 있는 Adventure Works 예제 데이터베이스의 일부인 다차원 모델 프로젝트. Adventure Works 다차원 데이터베이스의 자습서 버전은 바로 익히려는 특정 기술에 더 집중하도록 단순화되어 있습니다. 이 자습서를 끝낸 후에는 직접 다차원 모델 프로젝트를 탐색하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델링에 대한 이해를 높이는 것이 좋습니다.  
   
 ## <a name="next-step"></a>다음 단계  
 자습서를 시작하려면 첫 번째 단원인 [1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)로 이동하십시오.  
   
   
   
-

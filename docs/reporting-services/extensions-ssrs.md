@@ -1,27 +1,27 @@
 ---
-title: "확장 프로그램 (SSRS) | Microsoft Docs"
+title: "확장 프로그램(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8ec3b39a36a6020a6655e7c7e7c2a589266f3fc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fbd752c6da1b706eb2d9e7327ae042e9173f9377
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extensions-ssrs"></a>확장 프로그램(SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 보고서 서버는 받는 입력 또는 출력 유형을 인증, 데이터 처리, 보고서 렌더링, 보고서 배달을 위해 모듈화하는 확장 프로그램을 사용합니다. 이 기능 덕분에 기존 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치에서 업계의 새 소프트웨어 표준(예: 새 인증 체계 또는 사용자 지정 데이터 원본 유형)을 손쉽게 활용할 수 있습니다. 보고서 서버는 사용자 지정 인증 확장 프로그램, 데이터 처리 확장 프로그램, 보고서 처리 확장 프로그램, 렌더링 확장 프로그램, 배달 확장 프로그램 및 RSReportServer.config 구성 파일에서 사용자가 구성할 수 있는 확장 프로그램을 지원합니다. 예를 들어, 보고서 뷰어에서 사용할 수 있는 내보내기 형식을 제한할 수 있습니다. 보고서 서버는 하나 이상의 인증 확장 프로그램, 데이터 처리 확장 프로그램 및 렌더링 확장 프로그램을 필요로 합니다. 배달 및 보고서 처리 확장 프로그램은 선택적이지만 보고서 배포 또는 사용자 지정 컨트롤을 지원하려는 경우에는 반드시 필요합니다.  
@@ -82,4 +82,3 @@ ms.lasthandoff: 08/09/2017
  백그라운드 처리 응용 프로그램에서는 배달 확장 프로그램을 사용하여 보고서를 여러 위치에 배치합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 메일 배달 확장 프로그램 및 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 전자 메일 배달 확장 프로그램은 SMTP(Simple Mail Transport Protocol)를 통해 보고서 자체 또는 보고서 URL 링크가 들어 있는 전자 메일 메시지를 보냅니다. URL 링크 또는 보고서가 없는 간단한 알림은 호출기, 전화 또는 기타 장치로 보낼 수 있습니다. 파일 공유 배달 확장 프로그램은 네트워크의 공유 폴더에 보고서를 저장합니다. 사용자가 만든 파일의 위치, 렌더링 형식, 파일 이름 및 덮어쓰기 옵션을 지정할 수 있습니다. 파일 공유 배달은 렌더링한 보고서의 보관 및 대용량의 보고서 작업을 위한 전략의 일환으로 사용할 수 있습니다. 배달 확장 프로그램은 구독과 함께 사용됩니다. 구독을 만들 때 사용자는 사용할 수 있는 배달 확장 프로그램을 선택하여 보고서 배달 방법을 결정할 수 있습니다.  
   
   
-

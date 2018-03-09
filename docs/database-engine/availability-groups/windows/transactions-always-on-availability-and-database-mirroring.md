@@ -1,12 +1,14 @@
 ---
 title: "트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.date: 11/01/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 25e9efc5d7ffb6d4d0c09cc88e19671ed7f7b043
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc86ef8e495bacaaaebf2470306b25d38d5158e5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 항목에서는 Always On 가용성 그룹 및 데이터베이스 미러링에 대한 데이터베이스 간 트랜잭션 및 분산 트랜잭션 지원에 대해 설명합니다.  
 
@@ -65,7 +66,7 @@ SQL Server 2016에서는 트랜잭션에 포함된 하나 이상의 데이터베
   
 -   Windows Server 2016 또는 Windows Server 2012 R2에서 가용성 그룹을 실행해야 합니다. Windows Server 2012 R2의 경우 [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)에서 제공되는 KB3090973의 업데이트를 설치해야 합니다.  
   
--   Availability groups must be created with the **CREATE AVAILABILITY GROUP** 명령 및 **WITH DTC_SUPPORT = PER_DB** 절을 사용하여 가용성 그룹을 만들어야 합니다. 현재는 기존 가용성 그룹을 변경할 수 없습니다.  
+-   **CREATE AVAILABILITY GROUP** 명령 및 **WITH DTC\_SUPPORT = PER_DB** 절을 사용하여 가용성 그룹을 만들어야 합니다. 현재는 기존 가용성 그룹을 변경할 수 없습니다.  
 
 - 가용성 그룹에 참여할 모든 SQL Server 인스턴스가 SQL Server 2016 이상이어야 합니다.
  
@@ -93,8 +94,7 @@ SQL Server 2016에서는 트랜잭션에 포함된 하나 이상의 데이터베
 > [!NOTE]  
 >  이 항목에서 승인되지 않은 방식으로 DTC에서 데이터베이스 미러링 또는 가용성 그룹을 사용하는 것은 지원되지 않습니다.  DTC와 관련이 없는 제품 측면이 지원되지 않는 것은 아니지만, 분산 트랜잭션을 부적절하게 사용하는 경우 발생하는 문제는 지원되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="next-steps"></a>다음 단계  
  [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   
-

@@ -2,36 +2,33 @@
 title: "차원 특성 속성 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 589e282fbe84a37fd9b966a14441fe7885c71285
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>차원 특성 속성 참조
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 차원 및 차원 특성의 작동 방식을 결정하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 차원 및 차원 특성의 작동 방식을 결정하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 |**CustomRollupColumn**|사용자 지정 롤업 수식을 정의하는 열을 지정합니다.|  
 |**CustomRollupPropertiesColumn**|사용자 지정 롤업 수식의 속성을 포함하는 열을 지정합니다.|  
 |**DefaultMember**|특성의 기본 측정값을 정의하는 MDX(Multidimensional Expressions) 식을 지정합니다.|  
-|**Description**|특성에 대한 설명을 포함합니다.|  
+|**설명**|특성에 대한 설명을 포함합니다.|  
 |**DiscretizationBucketCount**|불연속화할 버킷의 수를 포함합니다.|  
 |**DiscretizationMethod**|불연속화에 사용할 방법을 정의합니다.|  
 |**EstimatedCount**|특성의 예상 멤버 수를 지정합니다. 집계 디자인 마법사를 실행할 때까지 기본값은 0입니다. 마법사에서 레코드 수를 계산하도록 하거나 예상 값을 직접 입력할 수 있습니다. 멤버 수를 알고 있으며 데이터베이스에 멤버 수를 쿼리하는 시간을 단축하고 싶은 경우 값을 직접 입력합니다. 프로덕션 데이터의 테스트 하위 집합으로 작업하는 경우에는 집계 디자인이 테스트 데이터 대신 프로덕션 데이터에 맞게 최적화될 수 있도록 프로덕션 데이터의 멤버 수를 사용합니다.|  
@@ -76,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [특성 및 특성 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   
-

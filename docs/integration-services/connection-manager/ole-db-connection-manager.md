@@ -20,17 +20,16 @@ helpviewer_keywords:
 - connection managers [Integration Services], OLE DB
 - connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 6a81892e0206775357c7fdf74ef81a7b8c3ae3c7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0f30deb4f4bdea9d5a787c31135acbd968133479
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 연결 관리자
   OLE DB 연결 관리자를 사용하면 패키지에서 OLE DB Provider를 사용하여 데이터 원본에 연결할 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결되는 OLE DB 연결 관리자에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 수 있습니다.    
@@ -81,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
  OLE DB 연결 관리자에 대한 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)를 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **데이터 연결**  
  목록에서 기존 OLE DB 데이터 연결을 선택합니다.  
   
@@ -94,11 +93,10 @@ ms.lasthandoff: 08/09/2017
  **Delete**  
  데이터 연결을 선택한 다음 **삭제** 단추를 사용하여 삭제합니다.  
   
-## <a name="see-also"></a>관련 항목:    
+## <a name="see-also"></a>참고 항목    
  [OLE DB 원본](../../integration-services/data-flow/ole-db-source.md)     
  [OLE DB 대상](../../integration-services/data-flow/ole-db-destination.md)     
  [SQL 실행 태스크](../../integration-services/control-flow/execute-sql-task.md)     
- [Integration Services &#40; Ssis&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)    
+ [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)    
     
   
-

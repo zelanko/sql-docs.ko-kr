@@ -1,13 +1,14 @@
 ---
-title: "배포 및 관리 태스크를 스크립팅 | Microsoft Docs"
+title: "배포 및 관리 작업 스크립팅 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,18 +24,17 @@ helpviewer_keywords:
 - transferrng reports
 - reports [Reporting Services], migrating
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
-caps.latest.revision: 62
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "62"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: aa78cfcb78834459a8401fb7b7f8b326362382e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 707cf39041be5c96ac4898e462580b3630feaaaf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="script-deployment-and-administrative-tasks"></a>배포 및 관리 태스크 스크립팅
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 스크립트를 사용하여 일반적인 설치, 배포 및 관리 태스크를 자동화할 수 있습니다. 보고서 서버를 배포하려면 여러 단계를 수행해야 합니다. 여러 가지 도구와 프로세스를 사용하여 배포를 구성해야 하며 모든 태스크를 자동화하는 데 사용할 수 있는 단일 프로그램이나 방법은 없습니다.  
@@ -53,15 +53,15 @@ ms.lasthandoff: 08/09/2017
 |태스크|방법|  
 |----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치|명령줄에서 설치 프로그램을 실행하여 무인 설치를 수행할 수 있습니다.<br /><br /> 설치 프로그램을 사용하여 보고서 서버 설치와 구성을 모두 수행할 수 있지만 이렇게 하려면 기본 구성 옵션을 지정해야 하며 시스템이 해당 설치 유형의 요구 사항을 모두 만족해야 합니다. 기본 구성을 설치할 수 없는 경우에는 "파일만" 옵션으로 설치를 수행해야 합니다.|  
-|서비스 계정 구성|서비스 계정은 설치 프로그램을 통해 처음 구성됩니다. 서비스 계정에 대한 변경을 설치 후 태스크로 자동화하려면 보고서 서버 WMI 공급자를 호출하는 사용자 지정 코드를 작성해야 합니다. 서비스 계정을 프로그래밍 방식으로 구성하기 위한 명령 프롬프트 유틸리티나 스크립트 템플릿은 없습니다.<br /><br /> 코딩 요구 사항 때문에 이 단계를 자동화할 수 없는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 실행하여 계정을 손쉽게 수동으로 구성할 수 있습니다. 자세한 내용은 [서비스 계정 구성&#40;SSRS 구성 관리자&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)을 참조하세요.|  
+|서비스 계정 구성|서비스 계정은 설치 프로그램을 통해 처음 구성됩니다. 서비스 계정에 대한 변경을 설치 후 태스크로 자동화하려면 보고서 서버 WMI 공급자를 호출하는 사용자 지정 코드를 작성해야 합니다. 서비스 계정을 프로그래밍 방식으로 구성하기 위한 명령 프롬프트 유틸리티나 스크립트 템플릿은 없습니다.<br /><br /> 코딩 요구 사항 때문에 이 단계를 자동화할 수 없는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 실행하여 계정을 손쉽게 수동으로 구성할 수 있습니다. 자세한 내용은 [서비스 계정 구성&#40;SSRS Configuration Manager&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)를 참조하세요.|  
 |보고서 서버 웹 서비스 및 보고서 관리자 URL 구성|보고서 서버 WMI 공급자를 호출하는 사용자 지정 코드를 작성해야 합니다. URL을 구성하기 위한 명령줄 유틸리티나 스크립트 템플릿은 없습니다.<br /><br /> 코드를 작성하지 않으려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 실행하여 URL을 수동으로 구성할 수 있습니다. 자세한 내용은 [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)을 참조하세요.|  
-|보고서 서버 데이터베이스 만들기|보고서 서버 WMI 공급자를 호출하는 사용자 지정 코드를 작성해야 합니다. 보고서 서버 데이터베이스와 RSExecRole을 만들기 위한 명령 프롬프트 유틸리티나 스크립트 템플릿은 없습니다.<br /><br /> 코드를 작성하지 않으려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 실행하여 데이터베이스를 수동으로 만들 수 있습니다. 자세한 내용은 참조 [기본 모드 보고서 서버 데이터베이스 &#40; 만들기 SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).|  
-|보고서 서버 데이터베이스 연결 구성|연결 문자열, 계정이나 암호 또는 인증 유형을 변경하려면 **rsconfig** 유틸리티를 실행하여 연결을 구성합니다. 자세한 내용은 참조 [보고서 서버 데이터베이스 연결 &#40; 구성 합니다. SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) 및 [rsconfig 유틸리티 &#40; Ssrs&#41; ](../../reporting-services/tools/rsconfig-utility-ssrs.md).<br /><br /> rsconfig.exe를 사용하여 데이터베이스를 만들거나 업그레이드할 수는 없습니다. 데이터베이스와 RSExecRole은 이미 있어야 합니다.|  
-|확장 배포 구성|다음 방법 중 하나를 사용하여 확장 배포를 자동화할 수 있습니다.<br /><br /> - rskeymgmt.exe 유틸리티를 실행하여 보고서 서버 인스턴스를 기존 설치에 추가합니다. 자세한 내용은 참조 [추가 및 확장 배포 &#40;에 대 한 암호화 키 제거 SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).<br />- 보고서 서버 WMI 공급자에 대해 실행되는 사용자 지정 코드를 작성합니다.|  
+|보고서 서버 데이터베이스 만들기|보고서 서버 WMI 공급자를 호출하는 사용자 지정 코드를 작성해야 합니다. 보고서 서버 데이터베이스와 RSExecRole을 만들기 위한 명령 프롬프트 유틸리티나 스크립트 템플릿은 없습니다.<br /><br /> 코드를 작성하지 않으려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 실행하여 데이터베이스를 수동으로 만들 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.|  
+|보고서 서버 데이터베이스 연결 구성|연결 문자열, 계정이나 암호 또는 인증 유형을 변경하려면 **rsconfig** 유틸리티를 실행하여 연결을 구성합니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) 및 [rsconfig 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)를 참조하세요.<br /><br /> rsconfig.exe를 사용하여 데이터베이스를 만들거나 업그레이드할 수는 없습니다. 데이터베이스와 RSExecRole은 이미 있어야 합니다.|  
+|스케일 아웃 배포 구성|다음 방법 중 하나를 사용하여 스케일 아웃 배포를 자동화할 수 있습니다.<br /><br /> - rskeymgmt.exe 유틸리티를 실행하여 보고서 서버 인스턴스를 기존 설치에 추가합니다. 자세한 내용은 [스케일 아웃 배포의 암호화 키 추가 및 제거&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)를 참조하세요.<br />- 보고서 서버 WMI 공급자에 대해 실행되는 사용자 지정 코드를 작성합니다.|  
 |암호화 키 백업|다음 방법 중 하나를 사용하여 암호화 키 백업을 자동화할 수 있습니다.<br /><br /> - rskeymgmt.exe 유틸리티를 실행하여 키를 백업합니다. 자세한 내용은 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요.<br />- 보고서 서버 WMI 공급자에 대해 실행되는 사용자 지정 코드를 작성합니다.|  
 |보고서 서버 전자 메일 구성|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 공급자에 대해 실행되는 사용자 지정 코드를 작성합니다. 이 공급자에서는 전자 메일 구성 설정의 하위 집합을 지원합니다.<br /><br /> RSReportServer.config 파일에 모든 설정이 포함되어 있지만 이 파일을 자동화 방법으로 사용하지 마십시오. 특히 배치 파일을 사용하여 파일을 다른 보고서 서버로 복사하지 마십시오. 각 구성 파일에는 현재 인스턴스와 관련된 값이 포함되어 있으며 이러한 값은 다른 보고서 서버 인스턴스에서 유효하지 않습니다.<br /><br /> 설정에 대한 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.|  
 |무인 실행 계정을 구성합니다.|다음 방법 중 하나를 사용하여 무인 처리 계정 구성을 자동화할 수 있습니다.<br /><br /> - rsconfig.exe 유틸리티를 실행하여 계정을 구성합니다. 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.<br />- 보고서 서버 WMI 공급자를 호출하는 사용자 지정 코드를 작성합니다.|  
-|폴더 계층, 역할 할당, 보고서, 구독, 일정, 데이터 원본 및 리소스를 비롯한 다른 보고서 서버의 기존 내용 배포|기존 보고서 서버 환경을 다시 만드는 가장 좋은 방법은 보고서 서버 데이터베이스를 새 보고서 서버 인스턴스에 복사하는 것입니다.<br /><br /> 또는 기존 보고서 서버 내용을 프로그래밍 방식으로 다시 만드는 사용자 지정 코드를 작성할 수 있습니다. 그러나 구독, 보고서 스냅숏 및 보고서 기록은 프로그래밍 방식으로 다시 만들 수 없습니다.<br /><br /> 일부 경우에는 이 두 가지 방법을 함께 사용하여 배포하는 것이 유용할 수 있습니다. 즉, 보고서 서버 데이터베이스를 복원한 다음 특정 설치에 맞게 보고서 서버 데이터베이스를 수정할 수 있습니다.<br /><br /> 자세한 예제는 [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.<br /><br /> 보고서 서버 데이터베이스를 이동 하는 방법에 대 한 자세한 내용은 참조 [다른 컴퓨터 &#40; 보고서 서버 데이터베이스 이동 SSRS 기본 모드 &#41; ](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md). 보고서 서버 환경을 프로그래밍 방식으로 만드는 방법은 이 항목의 "스크립트를 사용하여 보고서 서버 내용 및 폴더 마이그레이션" 섹션을 참조하십시오.|  
+|폴더 계층, 역할 할당, 보고서, 구독, 일정, 데이터 원본 및 리소스를 비롯한 다른 보고서 서버의 기존 내용 배포|기존 보고서 서버 환경을 다시 만드는 가장 좋은 방법은 보고서 서버 데이터베이스를 새 보고서 서버 인스턴스에 복사하는 것입니다.<br /><br /> 또는 기존 보고서 서버 내용을 프로그래밍 방식으로 다시 만드는 사용자 지정 코드를 작성할 수 있습니다. 그러나 구독, 보고서 스냅숏 및 보고서 기록은 프로그래밍 방식으로 다시 만들 수 없습니다.<br /><br /> 일부 경우에는 이 두 가지 방법을 함께 사용하여 배포하는 것이 유용할 수 있습니다. 즉, 보고서 서버 데이터베이스를 복원한 다음 특정 설치에 맞게 보고서 서버 데이터베이스를 수정할 수 있습니다.<br /><br /> 자세한 예제는 [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.<br /><br /> 보고서 서버 데이터베이스를 재배치하는 방법은 [다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)를 참조하세요. 보고서 서버 환경을 프로그래밍 방식으로 만드는 방법은 이 항목의 "스크립트를 사용하여 보고서 서버 내용 및 폴더 마이그레이션" 섹션을 참조하십시오.|  
   
 ## <a name="tools-and-technologies-for-automating-server-deployment"></a>서버 배포를 자동화하기 위한 도구 및 기술  
  다음 목록에는 배포 및 유지 관리 태스크를 자동화하는 데 사용할 수 있는 프로그램과 인터페이스가 요약되어 있습니다.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 -   보고서 서버 스크립트 호스트 도구(rs.exe)에서는 보고서 서버의 내용을 다시 만들거나 한 보고서 서버의 기존 내용을 다른 보고서 서버로 이동하도록 작성한 사용자 지정 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 코드를 실행할 수 있습니다. 이 방법을 사용하면 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 스크립트를 만들고 이를 .rss 파일로 저장한 후 대상 보고서 서버에서 rs.exe를 사용하여 해당 스크립트를 실행할 수 있습니다. 작성하는 스크립트는 보고서 서버 웹 서비스에 대한 SOAP 인터페이스를 호출할 수 있습니다. 이 방법을 사용하면 보고서 서버 폴더 네임스페이스 및 내용을 다시 만들고 역할 기반 보안을 다시 만들 수 있으므로 배포 스크립트는 이 방법을 사용하여 작성합니다.  
   
--   SQL Server 2012 릴리스에서 SharePoint 통합된 모드에 대 한 PowerShell cmdlet이 도입 되었습니다. PowerShell을 사용하면 SharePoint 통합을 구성하고 관리할 수 있습니다.  자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)을 참조하세요.  
+-   SQL Server 2012 릴리스에서는 SharePoint 통합 모드에 대한 PowerShell cmdlet이 도입되었습니다. PowerShell을 사용하면 SharePoint 통합을 구성하고 관리할 수 있습니다.  자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)을 참조하세요.  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>스크립트를 사용하여 보고서 서버 내용 및 폴더 마이그레이션  
  다른 보고서 서버 인스턴스의 보고서 서버 환경을 복제하는 스크립트를 작성할 수 있습니다. 배포 스크립트는 일반적으로 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 으로 작성한 다음 보고서 서버 스크립트 호스트 유틸리티를 사용하여 처리합니다.  
@@ -89,13 +89,13 @@ ms.lasthandoff: 08/09/2017
   
 1.  스크립트 변수를 원본 보고서 서버의 URL로 설정합니다.  
   
-2.  사용 하 여는 <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A> 및 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 보고서 정의와 보고서의 속성을 검색 하는 메서드.  
+2.  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A> 및 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드를 사용하여 보고서 정의 및 보고서 속성을 검색합니다.  
   
 3.  URL이 대상 서버를 가리키도록 설정합니다.  
   
-4.  사용 하 여 <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 에서 반환 되는 속성을 전달 하는 메서드, <xref:ReportService2010.ReportingService2010.GetProperties%2A> 반환한 보고서 정의 및 <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>합니다.  
+4.  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 메서드를 사용하여 <xref:ReportService2010.ReportingService2010.GetProperties%2A>에서 반환한 속성 및 <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>에서 반환한 보고서 정의를 전달합니다.  
   
- 가져오기 및 만들기 방법을 조합하여 설정, 폴더, 공유 데이터 원본 및 리소스를 마이그레이션하는 것과 유사한 단계를 수행할 수 있습니다. 사용할 수 있는 방법에 대 한 자세한 내용은 참조 [기술 참조 &#40; Ssrs&#41; ](../../reporting-services/technical-reference-ssrs.md).  
+ 가져오기 및 만들기 방법을 조합하여 설정, 폴더, 공유 데이터 원본 및 리소스를 마이그레이션하는 것과 유사한 단계를 수행할 수 있습니다. 사용 가능한 메서드에 대한 자세한 내용은 [기술 참조&#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
 >  자격 증명을 명시적으로 설정하지 않는 한 스크립트는 해당 스크립트를 실행하는 사용자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명으로 실행됩니다.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="using-scripts-to-set-server-properties"></a>스크립트를 사용하여 서버 속성 설정  
  보고서 서버의 시스템 속성을 설정하는 스크립트를 작성할 수 있습니다. 다음 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 스크립트에서는 속성을 설정하는 한 가지 방법을 보여 줍니다. 이 예에서는 RSClientPrint ActiveX 컨트롤을 비활성화하지만 **EnableClientPrinting** 및 **False** 를 유효한 속성 이름 및 값으로 바꿀 수 있습니다. 서버 속성의 전체 목록을 보려면 [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)을 참조하십시오.  
   
- 스크립트를 사용하려면 .rss 확장명을 가진 파일로 저장한 다음 rs.exe 명령 프롬프트 유틸리티를 사용하여 보고서 서버에서 해당 파일을 실행합니다. 스크립트는 컴파일되지 않으므로 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]을 설치할 필요는 없습니다. 이 예에서는 보고서 서버를 호스팅하는 로컬 컴퓨터에 대한 권한이 사용자에게 있다고 가정합니다. 권한을 가진 계정으로 로그온하지 않은 경우, 추가 명령줄 인수를 통해 계정 정보를 지정해야 합니다. 자세한 내용은 참조 [RS.exe 유틸리티 &#40; Ssrs&#41; ](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
+ 스크립트를 사용하려면 .rss 확장명을 가진 파일로 저장한 다음 rs.exe 명령 프롬프트 유틸리티를 사용하여 보고서 서버에서 해당 파일을 실행합니다. 스크립트는 컴파일되지 않으므로 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]을 설치할 필요는 없습니다. 이 예에서는 보고서 서버를 호스팅하는 로컬 컴퓨터에 대한 권한이 사용자에게 있다고 가정합니다. 권한을 가진 계정으로 로그온하지 않은 경우, 추가 명령줄 인수를 통해 계정 정보를 지정해야 합니다. 자세한 내용은 [RS.exe 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)를 참조하세요.  
   
 > [!TIP]  
 >  자세한 예제는 [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.  
@@ -139,4 +139,4 @@ End Sub
 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

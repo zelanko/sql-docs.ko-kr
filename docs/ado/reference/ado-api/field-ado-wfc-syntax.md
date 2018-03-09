@@ -3,7 +3,7 @@ title: "필드 (ADO-WFC 구문) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,20 +16,19 @@ apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0ca92f0ab46f11fad94d4dacd6399bc2c97dd8b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea83e9a9d928ebfbab416a6cf85b4adbc887f05
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-ado---wfc-syntax"></a>필드 (ADO-WFC 구문)
-## <a name="package-commswfcdata"></a>패키지 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="methods"></a>메서드  
   
@@ -76,7 +75,7 @@ public AdoProperties getProperties()
   
  ADO/WFC 구현는 **값** 속성을는 **getValue** 는 VARIANT 개체를 반환 하는 메서드 및 **setValue** 메서드는 VARIANT를 인수로 사용 합니다. Variant는 특정 언어의 경우 Microsoft Visual Basic 등의 매우 효율적입니다.  
   
- 이외에 **값** 속성, ADO/WFC 제공 *접근자* Java 데이터 형식 가져오기 및 설정의 내용을 사용 하는 메서드 **필드** 개체입니다. 대부분의 이러한 메서드가 폼의 이름이 **가져오기***DataType* 또는 **설정***DataType*합니다.  
+ 이외에 **값** 속성, ADO/WFC 제공 *접근자* Java 데이터 형식 가져오기 및 설정의 내용을 사용 하는 메서드 **필드** 개체입니다. 대부분의 이러한 메서드가 폼의 이름이 **가져오기 * * * DataType* 또는 **설정 * * * DataType*합니다.  
   
  두 가지 예외적인: 중 하나는 **getObject** 메서드는 지정 된 클래스에 강제 변환 하는 개체를 반환 합니다. 없는 **getNull** 속성 대신는 **isNull** 필드가 null 인지 여부를 나타내는 부울 값을 반환 하는 속성입니다.  
   
@@ -108,4 +107,3 @@ public void setObject(Object value)
   
 ## <a name="see-also"></a>관련 항목:  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)
-

@@ -2,31 +2,30 @@
 title: "통합 문서에서 데이터 연결에 대 한 데이터를 새로 고칠 수 없습니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e92a6ac8d430b88c18ecae14c2a52771b566d39d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다.
-  Excel Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버로 연결 요청을 제출했는데 요청이 실패하는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 Excel 통합 문서에 대해 이 오류를 반환합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Excel Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버로 연결 요청을 제출했는데 요청이 실패하는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 Excel 통합 문서에 대해 이 오류를 반환합니다.  
   
 ## <a name="details"></a>세부 정보  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/01/2017
   
  기본적으로 SharePoint Server 2010은 Excel 서비스가 실행되는 응용 프로그램 서버에 SQL Server 2008 버전의 Analysis Services OLE DB 공급자를 설치합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 지원하는 팜에서 Excel Services 및 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 과 같이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 요청하는 응용 프로그램을 실행 중인 실제 서버는 모두 최신 버전의 데이터 공급자를 사용해야 합니다.  
   
- SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 실행하는 서버는 업데이트된 OLE DB 데이터 공급자를 자동으로 가져옵니다. 동일한 컴퓨터에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 없이 독립 실행형 인스턴스인 Excel Services를 실행하는 서버와 같은 기타 서버는 최신 클라이언트 라이브러리를 사용하도록 패치해야 합니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)를 참조하세요.  
+ SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 실행하는 서버는 업데이트된 OLE DB 데이터 공급자를 자동으로 가져옵니다. 동일한 컴퓨터에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 없이 독립 실행형 인스턴스인 Excel Services를 실행하는 서버와 같은 기타 서버는 최신 클라이언트 라이브러리를 사용하도록 패치해야 합니다. 자세한 내용은 [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)을 참조하세요.  
   
  **시나리오 3b: 도메인 컨트롤러를 사용할 수 없는 경우**  
   
@@ -68,11 +67,10 @@ ms.lasthandoff: 09/01/2017
   
  이 문제를 해결하려면 컴퓨터를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버와 같은 도메인에 가입시키거나 로컬 컴퓨터에 도메인 컨트롤러를 설치합니다. 두 번째 해결 방법인 도메인 컨트롤러 설치를 수행하려면 모든 서비스 및 사용자에 대해 로컬 도메인 계정을 만들어야 합니다. 정의한 계정에 대해 서비스 계정 및 SharePoint 권한을 구성해야 합니다.  
   
- 오프라인 상태로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 사용하려는 경우 컴퓨터에 도메인 컨트롤러를 설치하면 유용합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 오프라인으로 사용하는 방법에 대한 자세한 지침은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] http://www.powerpivotgeek.com [에서 "Taking your PowerPivot server off the network"(](http://go.microsoft.com/fwlink/?LinkId=184241)서버를 네트워크에 연결하지 않고 오프라인으로 사용) 블로그 항목을 참조하세요.  
+ 오프라인 상태로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 사용하려는 경우 컴퓨터에 도메인 컨트롤러를 설치하면 유용합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 오프라인으로 사용하는 방법에 대한 자세한 지침은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241) 에서 "Taking your PowerPivot server off the network"(서버를 네트워크에 연결하지 않고 오프라인으로 사용) 블로그 항목을 참조하세요.  
   
  **시나리오 4: 서버가 불안정한 경우**  
   
  하나 이상의 서비스가 일관성이 없는 상태일 수 있습니다. IISRESET를 실행하면 문제가 해결되는 경우가 있습니다.  
   
   
-

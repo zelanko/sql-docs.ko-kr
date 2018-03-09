@@ -1,29 +1,29 @@
 ---
-title: "배포 및 SQL Server Data Tools (SSDT)의 버전 지원 | Microsoft Docs"
+title: "SQL Server Data Tools의 배포 및 버전 지원(SSDT) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 173d2a355d1084b22bdc90643484dbab2568e0b0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>배포 및 SQL Server Data Tools (SSDT)의 버전 지원
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 배포 및 버전 지원(SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 다음과 같은 시나리오를 지원합니다.  
   
 -   보고서 정의(*.rdl) 및 보고서 서버 프로젝트(\*.rptproj) 열기  
@@ -47,9 +47,9 @@ ms.lasthandoff: 09/06/2017
   
 -   OutputPath는 보고서의 빌드 확인, 배포 및 미리 보기에 사용되는 보고서 정의를 저장할 폴더의 경로를 식별하는 빌드 속성입니다.  
   
--   ErrorLevel은 오류로 보고되는 빌드 문제의 심각도를 식별하는 빌드 속성입니다. ErrorLevel 값보다 작거나 같은 심각도 수준을 가진 문제는 오류로 보고되고 그렇지 않은 문제는 경고로 보고됩니다. 자세한 내용은의 "보고서 유효성 검사 및 오류 수준" 섹션을 참조 하십시오. [보고서 디자이너 &#40; 보고서 디자인 Ssrs&#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel은 오류로 보고되는 빌드 문제의 심각도를 식별하는 빌드 속성입니다. ErrorLevel 값보다 작거나 같은 심각도 수준을 가진 문제는 오류로 보고되고 그렇지 않은 문제는 경고로 보고됩니다. 자세한 내용은 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)에서 "보고서 유효성 검사 및 오류 수준" 섹션을 참조하세요.  
   
--   TargetServerVersion의 예상된 버전을 식별 하는 배포 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] TargetServerURL 속성에 지정 된 대상 보고서 서버에 설치 된 합니다.  
+-   TargetServerVersion은 TargetServerURL 속성에 지정된 대상 보고서 서버에 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 예상 버전을 식별하는 배포 속성입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 대화 상자에서 이전 버전의 **프로젝트 속성** 를 지정할 경우 보고서는 이전 버전으로 자동으로 되돌아가지 않습니다. 마찬가지로 보고서 서버 프로젝트는 두 가지 다른 버전인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보고서를 포함할 수 있습니다. 보고서 서버 프로젝트가 배포될 경우 프로젝트의 모든 보고서는 TargetServerVersion에 지정된 버전으로 변환됩니다.  
   
@@ -58,25 +58,24 @@ ms.lasthandoff: 09/06/2017
 ##  <a name="bkmk_SupportedVersions"></a> Supported Versions  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]보고서 서버 프로젝트를 위한 32 비트 개발 환경에서 실행 하도록 설계 되지 않았습니다 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-기반 컴퓨터에 설치 되지 않은 및 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-기반 서버. x64 기반 컴퓨터에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 지원됩니다.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 보고서 서버 프로젝트를 위한 32비트 개발 환경으로, [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 컴퓨터에서 실행되도록 디자인되지 않았으며 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 서버에 설치되지 않습니다. x64 기반 컴퓨터에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 지원됩니다.  
   
  다음 표에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서를 작성 및 게시할 때 지원되는 버전을 설명합니다.  
   
 > [!NOTE]  
 >  스키마는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이후 변경되지 않았습니다.  
   
-|프로젝트 또는 파일 유형|버전|보고서 작성|보고서 게시|참고|  
+|프로젝트 또는 파일 유형|버전 옵션|보고서 작성|보고서 게시|참고|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
-|보고서 서버 프로젝트<br /><br /> 또는<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL 스키마|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
-|보고서 서버 프로젝트<br /><br /> 또는<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL 스키마|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|보고서 서버 프로젝트<br /><br /> 또는<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL 스키마|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|보고서 서버 프로젝트<br /><br /> 또는<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 스키마|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|보고서 서버 프로젝트<br /><br /> 또는<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 스키마|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버만|2003 RDL 및 2005 RDL을 2008 RDL 스키마로 로컬 업그레이드합니다.|  
+|보고서 서버 프로젝트<br /><br /> 로 구분하거나 여러<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL 스키마|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
+|보고서 서버 프로젝트<br /><br /> 로 구분하거나 여러<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL 스키마|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|보고서 서버 프로젝트<br /><br /> 로 구분하거나 여러<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL 스키마|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|보고서 서버 프로젝트<br /><br /> 로 구분하거나 여러<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 스키마|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|보고서 서버 프로젝트<br /><br /> 로 구분하거나 여러<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 스키마|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버만|2003 RDL 및 2005 RDL을 2008 RDL 스키마로 로컬 업그레이드합니다.|  
   
  이전 버전의 보고서 정의 스키마에서 보고서를 여는 방법에 대한 자세한 내용은 [업그레이드 보고서](../../reporting-services/install-windows/upgrade-reports.md)를 참조하세요. 특정 보고서 정의 스키마에 대한 자세한 내용은 [Report Definition Language 사양(Report Definition Language Specification)](http://go.microsoft.com/fwlink/?linkid=116865)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 원본 및 보고서 게시](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   
-

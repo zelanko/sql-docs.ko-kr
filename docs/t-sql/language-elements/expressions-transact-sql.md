@@ -23,17 +23,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 826d1ab9f4a0a68d692551ae58a529ab8b7ebfae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 49efa9c940ff4428747942c88259bdd58b96a658
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expressions-transact-sql"></a>식(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,12 +89,12 @@ ms.lasthandoff: 09/01/2017
   
 |용어|정의|  
 |----------|----------------|  
-|*상수*|특정한 단일 데이터 값을 나타내는 기호입니다. 자세한 내용은 참조 [상수 &#40; Transact SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
-|*스칼라 함수*|단위는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 특정 서비스를 제공 하 고 단일 값을 반환 하는 구문입니다. *스칼라 함수* SUM, GETDATE, CAST 함수, 스칼라 사용자 정의 함수 등의 기본 제공 스칼라 함수 일 수 있습니다.|  
-|[ *table_name***합니다.** ]|테이블의 이름 또는 별칭입니다.|  
-|*열*|열의 이름입니다. 식에는 열 이름만 사용할 수 있습니다.|  
-|*변수*|변수 또는 매개 변수의 이름입니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하세요.|  
-|**(** *식***)** |이 항목에서 정의된 바와 같이 유효한 식입니다. 괄호는 안에 있는 식의 모든 연산자를 평가한 후에 그 결과를 다른 식과 결합하는 그룹 연산자입니다.|  
+|*constant*|특정한 단일 데이터 값을 나타내는 기호입니다. 자세한 내용은 참조 [상수 &#40; Transact SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
+|*scalar_function*|단위는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 특정 서비스를 제공 하 고 단일 값을 반환 하는 구문입니다. *스칼라 함수* SUM, GETDATE, CAST 함수, 스칼라 사용자 정의 함수 등의 기본 제공 스칼라 함수 일 수 있습니다.|  
+|[ *table_name***.** ]|테이블의 이름 또는 별칭입니다.|  
+|*column*|열의 이름입니다. 식에는 열 이름만 사용할 수 있습니다.|  
+|*variable*|변수 또는 매개 변수의 이름입니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하세요.|  
+|**(** *expression*  **)**|이 항목에서 정의된 바와 같이 유효한 식입니다. 괄호는 안에 있는 식의 모든 연산자를 평가한 후에 그 결과를 다른 식과 결합하는 그룹 연산자입니다.|  
 |**(** *scalar_subquery* **)**|한 개의 값을 반환하는 하위 쿼리입니다. 예를 들어<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|단항 연산자는 숫자 데이터 형식 범주의 데이터 형식 하나로 평가되는 식에 대해서만 적용할 수 있습니다. 단 하나의 숫자 피연산자만 있는 연산자입니다.<br /><br /> +는 양수를 나타냅니다.<br /><br /> -는 음수를 나타냅니다.<br /><br /> ~는 보수 연산자를 나타냅니다.|  
 |{ *binary_operator* }|두 식을 결합하여 단일 결과를 만드는 방식을 정의하는 연산자입니다. *binary_operator* 산술 연산자, 대입 연산자 (=), 비트 연산자, 비교 연산자, 논리 연산자, 문자열 연결 연산자 (+) 또는 단항 연산자 일 수 있습니다. 연산자에 대 한 자세한 내용은 참조 [연산자 &#40; Transact SQL &#41; ](../../t-sql/language-elements/operators-transact-sql.md).|  
@@ -137,9 +136,9 @@ GO
  `1+2` 식은 결과 집합의 각 행에서 `3`으로 평가됩니다. `ProductID` 식이 각 결과 집합 행에서 고유한 값을 생성하더라도 각 행은 `ProductID`에 대해 단 하나의 값을 가집니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [표준 시간대 &AMP; #40; Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [표준 시간대 &AMP;#40; Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [대/소문자 &#40; Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [CAST 및 convert&#40; Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST 및 CONVERT &#40;TRANSACT-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [COALESCE &#40; Transact SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [데이터 형식 변환 &#40; 데이터베이스 엔진 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [데이터 형식 우선 순위 &#40; Transact SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
@@ -151,4 +150,3 @@ GO
  [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

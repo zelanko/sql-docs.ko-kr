@@ -3,7 +3,7 @@ title: "스트림 및 지 속성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - persisted streams [ADO]
 - streams [ADO], persistence
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4a0a45a32086dc3befd19e720c8d600b6b43adde
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af1ecf7ed9f4702d986d6f1881b3264ab8171c87
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="streams-and-persistence"></a>스트림 및 지 속성
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [저장](../../../ado/reference/ado-api/save-method.md) 메서드 저장소 또는 *계속 되 면*, **레코드 집합** 파일인 및 [열고](../../../ado/reference/ado-api/open-method-ado-recordset.md)메서드 복원은 **레코드 집합** 파일에 해당 합니다.  
@@ -172,4 +171,3 @@ function GetRs()
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)
-

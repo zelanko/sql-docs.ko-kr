@@ -1,16 +1,14 @@
 ---
 title: "AMO OLAP 클래스 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 609958fd81ee7c703d7608f9a353c15658c1528b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5ef144b4a141c15d9d84f4e3e226f654a8f4feff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP 클래스
   AMO(Analysis Management Objects) OLAP 클래스를 사용하면 큐브 및 차원과 KPI(핵심 성과 지표), 동작, 자동 관리 캐싱 등의 관련 개체를 손쉽게 만들고 수정, 삭제 및 처리할 수 있습니다.  
@@ -67,7 +64,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="basic-classes"></a>기본 클래스  
   
-###  <a name="Dimensions"></a>차원 개체  
+###  <a name="Dimensions"></a> 차원 개체  
  부모 데이터베이스의 차원 컬렉션에 차원을 추가한 다음 Update 메서드를 사용하여 해당 <xref:Microsoft.AnalysisServices.Dimension> 개체를 서버로 업데이트하면 차원이 만들어집니다.  
   
  차원을 제거 하려면의 Drop 메서드를 사용 하 여 삭제 해야에 <xref:Microsoft.AnalysisServices.Dimension>합니다. Remove 메서드를 사용하여 데이터베이스의 차원 컬렉션에서 <xref:Microsoft.AnalysisServices.Dimension>을 제거하면 해당 차원이 서버에서는 삭제되지 않고 AMO 개체 모델에서만 삭제됩니다.  
@@ -76,7 +73,7 @@ ms.lasthandoff: 09/01/2017
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Dimension>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   
-###  <a name="Cubes"></a>큐브 개체  
+###  <a name="Cubes"></a> 큐브 개체  
  부모 데이터베이스의 큐브 컬렉션에 큐브를 추가한 다음 Update 메서드를 사용하여 해당 <xref:Microsoft.AnalysisServices.Cube> 개체를 서버로 업데이트하면 큐브가 만들어집니다. 큐브의 Update 메서드에는 큐브의 수정된 모든 개체가 이 업데이트 동작을 통해 서버로 업데이트되도록 하는 UpdateOptions.ExpandFull 매개 변수가 포함될 수 있습니다.  
   
  큐브를 제거하려면 <xref:Microsoft.AnalysisServices.Cube>의 Drop 메서드를 사용하여 삭제해야 합니다. 컬렉션에서 큐브를 제거해도 서버에는 영향을 주지 않습니다.  
@@ -85,24 +82,24 @@ ms.lasthandoff: 09/01/2017
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Cube>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   
-###  <a name="MeasureGroups"></a>MeasureGroup 개체  
+###  <a name="MeasureGroups">MeasureGroup 개체</a>  
  큐브의 측정값 그룹 컬렉션에 측정값 그룹을 추가한 다음 Update 메서드를 사용하여 해당 <xref:Microsoft.AnalysisServices.MeasureGroup> 개체를 서버로 업데이트하면 측정값 그룹이 만들어집니다. <xref:Microsoft.AnalysisServices.MeasureGroup> 개체는 해당 개체의 Drop 메서드를 사용하여 제거할 수 있습니다.  
   
  <xref:Microsoft.AnalysisServices.MeasureGroup> 개체를 만든 후 이 개체를 처리할 수 있습니다. <xref:Microsoft.AnalysisServices.MeasureGroup>은 해당 개체의 Process 메서드를 사용하여 처리하거나, 부모 개체가 처리될 때 부모 개체의 Process 메서드를 사용하여 처리할 수 있습니다.  
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.MeasureGroup>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   
-###  <a name="Partition"></a>파티션 개체  
+###  <a name="Partition">파티션 개체</a>  
  <xref:Microsoft.AnalysisServices.Partition> 개체를 부모 측정값 그룹의 파티션 컬렉션에 추가한 다음 Update 메서드를 사용하여 서버의 <xref:Microsoft.AnalysisServices.Partition> 개체를 업데이트하면 해당 개체가 만들어집니다. <xref:Microsoft.AnalysisServices.Partition> 개체는 Drop 메서드를 사용하여 제거할 수 있습니다.  
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Partition>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   
-###  <a name="AggregationDesign"></a>AggregationDesign 개체  
+###  <a name="AggregationDesign">AggregationDesign 개체</a>  
  <xref:Microsoft.AnalysisServices.AggregationDesign> 개체에서 AggregationDesign 메서드를 사용하여 집계 디자인을 생성할 수 있습니다.  
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.AggregationDesign>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   
-###  <a name="Aggregation"></a>Aggregation 개체  
+###  <a name="Aggregation">Aggregation 개체</a>  
  <xref:Microsoft.AnalysisServices.Aggregation> 개체를 부모 측정값 그룹의 집계 디자인 컬렉션에 추가한 다음 Update 메서드를 사용하여 서버의 부모 측정값 그룹 개체를 업데이트하면 해당 개체가 만들어집니다. 집계는 Remove 메서드나 RemoveAt 메서드를 사용하여 <xref:Microsoft.AnalysisServices.AggregationCollection>에서 제거할 수 있습니다.  
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Aggregation>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
@@ -122,7 +119,7 @@ ms.lasthandoff: 09/01/2017
   
  AMO는 이 향상된 동작에 대한 정의를 설정하는 데 사용되지만 실제 환경은 이러한 향상된 클래스를 모두 구현하는 탐색 클라이언트에 의해 정의됩니다.  
   
-###  <a name="Action"></a>동작 개체  
+###  <a name="Action">동작 개체</a>  
  <xref:Microsoft.AnalysisServices.Action> 개체를 큐브의 동작 컬렉션에 추가한 다음 Update 메서드를 사용하여 <xref:Microsoft.AnalysisServices.Cube> 개체를 서버로 업데이트하면 Action 개체가 만들어집니다. 큐브의 Update 메서드에는 큐브의 수정된 모든 개체가 이 업데이트 동작을 통해 서버로 업데이트되도록 하는 UpdateOptions.ExpandFull 매개 변수가 포함될 수 있습니다.  
   
  <xref:Microsoft.AnalysisServices.Action> 개체를 제거하려면 컬렉션에서 해당 개체를 제거한 후 부모 큐브를 업데이트해야 합니다.  
@@ -131,7 +128,7 @@ ms.lasthandoff: 09/01/2017
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Action>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   
-###  <a name="KPI"></a>Kpi 개체  
+###  <a name="KPI"></a> Kpi 개체  
  <xref:Microsoft.AnalysisServices.Kpi> 개체를 큐브의 KPI 컬렉션에 추가한 다음 Update 메서드를 사용하여 <xref:Microsoft.AnalysisServices.Cube> 개체를 서버로 업데이트하면 Kpi 개체가 만들어집니다. 큐브의 Update 메서드에는 큐브의 수정된 모든 개체가 이 업데이트 동작을 통해 서버로 업데이트되도록 하는 UpdateOptions.ExpandFull 매개 변수가 포함될 수 있습니다.  
   
  <xref:Microsoft.AnalysisServices.Kpi> 개체를 제거하려면 컬렉션에서 해당 개체를 제거한 후 부모 큐브를 업데이트해야 합니다.  
@@ -140,7 +137,7 @@ ms.lasthandoff: 09/01/2017
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Kpi>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   
-###  <a name="Perspective"></a>Perspective 개체  
+###  <a name="Perspective">Perspective 개체</a>  
  <xref:Microsoft.AnalysisServices.Perspective> 개체를 큐브의 큐브 뷰 컬렉션에 추가한 다음 Update 메서드를 사용하여 해당 <xref:Microsoft.AnalysisServices.Cube> 개체를 서버로 업데이트하면 Perspective 개체가 만들어집니다. 큐브의 Update 메서드에는 큐브의 수정된 모든 개체가 이 업데이트 동작을 통해 서버로 업데이트되도록 하는 UpdateOptions.ExpandFull 매개 변수가 포함될 수 있습니다.  
   
  <xref:Microsoft.AnalysisServices.Perspective> 개체를 제거하려면 컬렉션에서 해당 개체를 제거한 후 부모 큐브를 업데이트해야 합니다.  
@@ -149,14 +146,14 @@ ms.lasthandoff: 09/01/2017
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Perspective>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   
-###  <a name="Translation"></a>번역 개체  
+###  <a name="Translation">번역 개체</a>  
  <xref:Microsoft.AnalysisServices.Translation> 개체를 원하는 개체의 번역 컬렉션에 추가한 다음 Update 메서드를 사용하여 가장 가까이 있는 주요 부모 개체를 서버로 업데이트하면 Translation 개체가 만들어집니다. 가장 가까이 있는 부모 개체의 Update 메서드에는 수정된 모든 자식 개체가 이 업데이트 동작을 통해 서버로 업데이트되도록 하는 UpdateOptions.ExpandFull 매개 변수가 포함될 수 있습니다.  
   
  <xref:Microsoft.AnalysisServices.Translation> 개체를 제거하려면 컬렉션에서 해당 개체를 제거한 후 가장 가까이 있는 부모 개체를 업데이트해야 합니다.  
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Translation>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   
-###  <a name="ProactiveCaching"></a>ProactiveCaching 개체  
+###  <a name="ProactiveCaching">ProactiveCaching 개체</a>  
  차원 또는 파티션의 자동 관리 캐싱 개체 컬렉션에 <xref:Microsoft.AnalysisServices.ProactiveCaching> 개체를 추가한 다음 Update 메서드를 사용하여 차원 또는 파티션 개체를 서버로 업데이트하면 ProactiveCaching 개체가 만들어집니다.  
   
  <xref:Microsoft.AnalysisServices.ProactiveCaching> 개체를 제거하려면 컬렉션에서 해당 개체를 제거한 후 부모 개체를 업데이트해야 합니다.  
@@ -174,4 +171,3 @@ ms.lasthandoff: 09/01/2017
  [데이터베이스 개체 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

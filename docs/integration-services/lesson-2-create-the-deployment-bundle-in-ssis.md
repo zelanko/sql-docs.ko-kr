@@ -1,11 +1,11 @@
 ---
-title: "2 단원: SSIS에서 배포 번들 작성 | Microsoft Docs"
+title: "2단원: SSIS에서 배포 번들 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 54ee445b2458955a4b2f7834c4a4fee74f4aeb1e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e047268e658c5b5aa0df933fd4152864b873ef2a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>2단원: SSIS에서 배포 번들 만들기
 [1단원: 배포 번들 작성 준비](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)에서는 Deployment Tutorial이라는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 패키지 및 지원 파일을 이 프로젝트에 추가했으며 패키지에서 구성을 구현했습니다.  
@@ -39,13 +38,12 @@ ms.lasthandoff: 08/03/2017
 ## <a name="lesson-tasks"></a>단원 태스크  
 이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1 단계: 배포 유틸리티 작성](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+-   [1단계: 배포 유틸리티 작성](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
--   [2 단계: 배포 번들 확인](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+-   [2단계: 배포 번들 확인](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
 [1단계: 배포 유틸리티 작성](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
   
   
-

@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alignment issues [ODBC]
+helpviewer_keywords: alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 527e8d47d4d352a0fad579d3c12c5ef3768c402b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignment"></a>맞춤
 ODBC 응용 프로그램의 맞춤 문제는 일반적으로 서로 다른 응용 프로그램에 보다 합니다. 즉, 대부분의 ODBC 응용 프로그램 문제가 없거나 거의 맞춤. 주소 정렬 되어 있지 않기에 의해 엄격히 규제 되어 하드웨어 및 운영 체제와 다르며 성능이 약간 저하 같은 사소한 문제로 또는 런타임 오류로 같이 주요 될 수 있습니다. 따라서 ODBC 응용 프로그램 및 휴대용 ODBC 응용 프로그램, 특히 주의 해야 데이터를 제대로 정렬 합니다.  
@@ -55,4 +52,3 @@ ODBC 응용 프로그램의 맞춤 문제는 일반적으로 서로 다른 응�
  ![최대 정렬 경계로 바인딩](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  이 솔루션에 더 큰 구멍 해제 되지만 상대적으로 간단 하 고 빠르게 구현 하의 코드가입니다. 대부분의 경우가 사용 되지 않는 메모리에서 유료 페널티에 만큼 오프셋 합니다. 이 메서드를 사용 하는 예제를 참조 하십시오. [를 사용 하 여 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)합니다.
-

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 43
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6d2522a2876165f8e18222f2268dad091a6ba342
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 992919d80e0f82393af0a6aa4c2c5564d3ec6189
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -194,7 +193,7 @@ GO
 ### <a name="c-changing-a-server-audit-where-clause"></a>3. 서버 감사 WHERE 절 변경  
  다음 예에서는 수정 where 절의 예 C에서에서 만든 [CREATE SERVER audit&#40; Transact SQL &#41; ](../../t-sql/statements/create-server-audit-transact-sql.md). 새 WHERE 절은 27의 경우 사용자 정의 이벤트에 대 한 필터링 합니다.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -207,7 +206,7 @@ GO
 ### <a name="d-removing-a-where-clause"></a>4. WHERE 절 제거  
  다음 예에서는 WHERE 절 조건자 식을 제거합니다.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -220,7 +219,7 @@ GO
 ### <a name="e-renaming-a-server-audit"></a>5. 서버 감사 이름 바꾸기  
  다음 예에서는 서버 감사 이름을 `FilterForSensitiveData`에서 `AuditDataAccess`로 변경합니다.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -251,4 +250,3 @@ GO
  [서버 감사 및 서버 감사 사양 만들기](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   
-

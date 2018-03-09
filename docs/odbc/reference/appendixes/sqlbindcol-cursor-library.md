@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLAllocStmt function [ODBC], Cursor Library
+helpviewer_keywords: SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5c9742952c8539dd736bd4b2c79c1b42d63a9b63
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (커서 라이브러리)
 > [!IMPORTANT]  
@@ -42,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  커서 라이브러리 호출을 지 원하는 **SQLBindCol** 책갈피 열을 바인딩할 합니다.  
   
  ODBC 2 작업할 때는. *x* 드라이버 커서 라이브러리 반환 SQLSTATE HY090 (잘못 된 문자열 또는 버퍼 길이) 때 **SQLBindCol** 4 같지 않은 값으로 책갈피 열에 대 한 버퍼 길이 설정 하기 위해 호출 됩니다. ODBC 3 작업할 때*.x* 드라이버 커서 라이브러리의 규모에 버퍼를 허용 합니다.
-

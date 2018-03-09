@@ -2,35 +2,29 @@
 title: "모델 개체 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dadb4807613b23449fd87dfea35acc0d6d201615
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="model-object-tmsl"></a>모델 개체 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  테이블 형식 모델을 정의합니다. 데이터베이스 및 지정한 명령에 지정할 수 하나의 데이터베이스에 하나의 모델만이 있습니다. 데이터베이스 개체에는 부모 개체가입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델을 정의합니다. 데이터베이스 및 지정한 명령에 지정할 수 하나의 데이터베이스에 하나의 모델만이 있습니다. 데이터베이스 개체에는 부모 개체가입니다.  
   
  모델 정의 너무 커서 한 항목의 전체 구문을 재현 합니다. 이러한 이유로 자식 개체에 대 한 링크가 있는 주요 부분을 강조 표시 하는 부분 구문 아래 찾을 수 있습니다.  
   
@@ -47,7 +41,7 @@ ms.lasthandoff: 09/01/2017
  모델을 배치할 디스크의 위치입니다.  
   
  defaultMode  
- 데이터 분할에 사용할 수 있도록는 기본 방법입니다.  
+ 데이터를 파티션에 사용할 수 있도록 하는 기본 메서드입니다.  
   
  defaultDataView  
  DirectQuery 모드에서 모델의 경우이 속성은 모델에 대 한 쿼리를 실행 하는 파티션을 사용 하는 결정 합니다.  유효한 값 전체 및 샘플에 포함 됩니다.  
@@ -106,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis services에서 테이블 형식 모델에 대한 호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

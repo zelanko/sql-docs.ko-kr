@@ -1,10 +1,13 @@
 ---
 title: "쿼리 처리 아키텍처 가이드 | Microsoft 문서"
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,20 +16,19 @@ helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 로컬 테이블, 분할된 테이블 및 여러 서버에 분산된 테이블과 같은 다양한 데이터 저장소 아키텍처의 쿼리를 처리합니다. 다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 계획 캐싱을 통해 쿼리를 처리하고 쿼리 재사용을 최적화하는 방법에 대해 설명합니다.
 
@@ -34,18 +36,53 @@ ms.lasthandoff: 10/13/2017
 
 단일 SQL 문 처리는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 SQL 문을 실행하는 가장 기본적인 방법입니다. 이러한 기본 프로세스의 예로 뷰 또는 원격 테이블이 없는 로컬 기본 테이블만 참조하는 단일 `SELECT` 문을 처리하는 경우를 들 수 있습니다.
 
+#### <a name="logical-operator-precedence"></a>논리 연산자 선행 규칙
+
+문에 논리 연산자가 두 개 이상 사용되면 `NOT`이 가장 먼저 평가되고 다음으로 `AND`, `OR`의 순서로 평가됩니다. 산술 및 비트 연산자는 논리 연산자보다 먼저 처리됩니다. 자세한 내용은 [연산자 우선 순위](../t-sql/language-elements/operator-precedence-transact-sql.md)를 참조하세요.
+
+다음 예제에서 `AND`가 `OR`보다 우선하므로 제품 모델 21에는 색상 조건이 적용되지만 제품 모델 20에는 적용되지 않습니다.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+`OR`를 먼저 평가하도록 괄호를 추가하면 쿼리의 의미를 변경할 수 있습니다. 다음 쿼리에서는 제품 모델 20 및 21에서 색상이 빨강인 제품만 찾습니다.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+꼭 필요한 경우가 아니라도 괄호를 사용하면 쿼리의 가독성을 높이고 연산자 우선 순위로 인한 사소한 실수를 줄일 수 있습니다. 괄호를 사용하더라도 성능에는 거의 영향을 미치지 않습니다. 다음 예제는 첫 번째 예제와 구문적으로는 동일하지만 파악하기가 더 쉽습니다.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
+
 #### <a name="optimizing-select-statements"></a>SELECT 문 최적화
 
 `SELECT` 문은 프로시저를 통하지 않습니다. 즉, 데이터베이스 서버가 요청한 데이터를 검색하는 데 사용해야 하는 정확한 단계를 지정하고 있지 않습니다. 이는 데이터베이스 서버가 문을 분석하여 요청한 데이터를 추출하는 가장 효율적인 방법을 판단해야 함을 의미합니다. 이것을 `SELECT` 문 최적화라고 하며 이를 위한 구성 요소를 쿼리 최적화 프로그램이라고 합니다. 최적화 프로그램에 대한 입력은 쿼리, 데이터베이스 스키마(테이블 및 인덱스 정의) 및 데이터베이스 통계로 이루어집니다. 쿼리 최적화 프로그램의 출력은 쿼리 실행 계획이며 경우에 따라 쿼리 계획이나 그냥 계획이라고도 합니다. 쿼리 계획의 내용은 이 항목의 뒷부분에서 보다 자세히 설명됩니다.
 
-다음 도표는 단일 `SELECT` 문을 최적화하는 동안 쿼리 최적화 프로그램에 입력되는 내용과 출력 내용을 보여 줍니다. ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+다음 도표는 단일 `SELECT` 문을 최적화하는 동안 쿼리 최적화 프로그램에 입력되는 내용과 출력 내용을 보여 줍니다.
+
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 문은 다음 사항만 정의합니다.  
 * 결과 집합의 서식. 대부분 SELECT 목록에 지정됩니다. 하지만 `ORDER BY` 및 `GROUP BY` 와 같은 다른 절도 결과 집합의 최종 서식에 영향을 줍니다.
 * 원본 데이터를 포함하는 테이블. 테이블은 `FROM` 절에서 지정됩니다.
 * 테이블이 `SELECT` 문의 목적과 논리적으로 관련되는 방식. 조인 사양에 정의되며 `WHERE` 뒤에 따라오는 `ON` 절이나 `FROM`절에 포함될 수 있습니다.
 * 원본 테이블의 행이 `SELECT` 문의 결과에 포함되기 위해 만족시켜야 할 조건. 조건은 `WHERE` 및 `HAVING` 절에 지정됩니다.
-
 
 쿼리 실행 계획은 다음 사항을 정의합니다. 
 
@@ -102,7 +139,7 @@ SQL 문에서 인덱싱되지 않은 뷰를 참조할 경우 파서와 쿼리 �
 
 예를 들어 다음과 같은 뷰가 있습니다.
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW EmployeeName AS
@@ -115,7 +152,7 @@ GO
 
 이 뷰를 기반으로 두 SQL 문이 모두 기본 테이블에 대해 동일한 작업을 수행하고 동일한 결과를 생성합니다.
 
-```tsql
+```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -139,7 +176,7 @@ WHERE OrderDate > '20020531';
 
 쿼리의 뷰에 힌트를 넣으면 뷰가 확장되어 기본 테이블에 액세스할 때 발견되는 다른 힌트와 서로 충돌할 수 있습니다. 이러한 경우 쿼리에서 오류를 반환합니다. 예를 들어 다음과 같이 뷰 정의에 테이블 힌트가 포함되어 있습니다.
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
@@ -151,7 +188,7 @@ WHERE a.StateProvinceID = s.StateProvinceID;
 
 다음 쿼리를 입력한다고 가정합니다.
 
-```tsql
+```sql
 SELECT AddressID, AddressLine1, StateProvinceCode, CountryRegionCode
 FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
@@ -165,7 +202,7 @@ WHERE StateProvinceCode = 'WA';
 
 뷰를 포함하는 쿼리에 `FORCE ORDER` 힌트를 사용하면 정렬된 구조체에서의 뷰 위치에 따라 뷰 내의 테이블 조인 순서가 결정됩니다. 예를 들어 다음 쿼리는 세 개의 테이블과 한 개의 뷰에서 선택합니다.
 
-```tsql
+```sql
 SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
@@ -175,7 +212,7 @@ OPTION (FORCE ORDER);
 
 `View1` 은 다음과 같이 정의됩니다.
 
-```tsql
+```sql
 CREATE VIEW View1 AS
 SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
@@ -237,7 +274,7 @@ WHERE TableA.ColZ = TableB.Colz;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 프로세서에서는 분산형 분할 뷰의 성능을 최적화합니다. 분산형 분할 뷰 성능의 가장 중요한 측면은 멤버 서버 간에 전송되는 데이터의 양을 최소화하는 것입니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 분산 쿼리를 효율적으로 사용하여 원격 멤버 테이블의 데이터에 액세스하는 지능적이고 동적인 계획을 작성합니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 분산 쿼리를 효율적으로 사용하여 원격 멤버 테이블의 데이터에 액세스하는 지능적이고 동적인 계획을 작성합니다. 
 
 * 먼저 쿼리 프로세서는 OLE DB를 사용하여 각 멤버 테이블에서 check 제약 조건 정의를 검색합니다. 쿼리 프로세서는 이를 통해 멤버 테이블에 키 값을 분산하여 매핑할 수 있습니다.
 * The Query Processor compares the key ranges specified in an SQL statement `WHERE` 절에 지정된 키 범위를 멤버 테이블에 행이 배포되는 방식을 보여 주는 맵과 비교합니다. 그런 다음 쿼리 프로세서는 분산 쿼리를 사용하여 SQL 문을 완료하는 데 필요한 원격 행만 검색하는 쿼리 실행 계획을 작성합니다. 또한 실행 계획은 데이터 또는 메타데이터가 요청될 때까지 이러한 데이터를 얻기 위해 원격 멤버 테이블에 액세스하는 것을 연기하는 방식으로도 작성됩니다.
@@ -246,7 +283,7 @@ WHERE TableA.ColZ = TableB.Colz;
 
 Server1에서 실행되는 다음 쿼리에 대해 작성된 실행 계획을 검토합니다.
 
-```tsql
+```sql
 SELECT *
 FROM CompanyData.dbo.Customers
 WHERE CustomerID BETWEEN 3200000 AND 3400000;
@@ -256,7 +293,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 프로세서는 실행 계획이 작성되어야 할 때 키 값이 알려지지 않은 SQL 문에 대해 동적 논리를 쿼리 실행 계획으로 작성할 수 있습니다. 예를 들면 다음 저장 프로시저가 있습니다.
 
-```tsql
+```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
 AS
 SELECT *
@@ -264,9 +301,9 @@ FROM CompanyData.dbo.Customers
 WHERE CustomerID = @CustomerIDParameter;
 ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 프로시저가 실행될 때마다 `@CustomerIDParameter` 매개 변수에서 어떤 키 값을 제공하는지 예측할 수 없습니다. 키 값을 예측할 수 없으므로 쿼리 프로세서는 어떤 멤버 테이블을 액세스해야 하는지도 예측할 수 없습니다. 이러한 경우를 처리하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 어떤 멤버 테이블이 입력 매개 변수 값에 기반하여 액세스되는지 제어하기 위한 조건부 논리(동적 필터)를 포함하는 실행 계획을 작성합니다. `GetCustomer` 저장 프로시저가 Server1에서 실행되었다고 가정했을 때 실행 계획 논리를 다음과 같이 나타낼 수 있습니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로시저가 실행될 때마다 `@CustomerIDParameter` 매개 변수에서 어떤 키 값을 제공하는지 예측할 수 없습니다. 키 값을 예측할 수 없으므로 쿼리 프로세서는 어떤 멤버 테이블을 액세스해야 하는지도 예측할 수 없습니다. 이러한 경우를 처리하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 어떤 멤버 테이블이 입력 매개 변수 값에 기반하여 액세스되는지 제어하기 위한 조건부 논리(동적 필터)를 포함하는 실행 계획을 작성합니다. `GetCustomer` 저장 프로시저가 Server1에서 실행되었다고 가정했을 때 실행 계획 논리를 다음과 같이 나타낼 수 있습니다.
 
-```tsql
+```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -275,17 +312,17 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
    Retrieve row from linked table Server3.CustomerData.dbo.Customer_99
 ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 매개 변수가 없는 쿼리에 대해서도 이러한 유형의 동적 실행 계획을 작성할 때가 있습니다. 실행 계획을 다시 사용할 수 있도록 쿼리 최적화 프로그램이 쿼리를 매개 변수화할 수 있습니다. 쿼리 최적화 프로그램이 분할된 뷰를 참조하는 쿼리를 매개 변수화하는 경우 쿼리 최적화 프로그램에서는 지정된 기본 테이블에서 필요한 행이 나오는 것으로 간주하지 않게 되므로 실행 계획에서 동적 필터를 사용해야 합니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 매개 변수가 없는 쿼리에 대해서도 이러한 유형의 동적 실행 계획을 작성할 때가 있습니다. 실행 계획을 다시 사용할 수 있도록 쿼리 최적화 프로그램이 쿼리를 매개 변수화할 수 있습니다. 쿼리 최적화 프로그램이 분할된 뷰를 참조하는 쿼리를 매개 변수화하는 경우 쿼리 최적화 프로그램에서는 지정된 기본 테이블에서 필요한 행이 나오는 것으로 간주하지 않게 되므로 실행 계획에서 동적 필터를 사용해야 합니다.
 
 ## <a name="stored-procedure-and-trigger-execution"></a>저장 프로시저 및 트리거 실행
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 저장 프로시저와 트리거의 원본만 저장합니다. 저장 프로시저나 트리거가 먼저 실행될 때 원본은 실행 계획으로 컴파일됩니다. 실행 계획이 메모리에서 에이징되기 전에 저장 프로시저나 트리거가 다시 실행되는 경우 관계형 엔진은 기존 계획을 검색하고 다시 사용합니다. 계획이 메모리에서 에이징되면 새 계획이 작성됩니다. 이 프로세스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 모든 SQL 문에 대해 수행하는 프로세스와 유사합니다. 성능 면에서 동적 SQL의 일괄 처리와 비교했을 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 저장 프로시저와 트리거의 주요 이점은 SQL 문이 항상 동일하다는 것입니다. 따라서 관계형 엔진이 기존 실행 계획과 SQL 문을 쉽게 대응시킵니다. 또한 저장 프로시저와 트리거 계획이 쉽게 다시 사용됩니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 저장 프로시저와 트리거의 원본만 저장합니다. 저장 프로시저나 트리거가 먼저 실행될 때 원본은 실행 계획으로 컴파일됩니다. 실행 계획이 메모리에서 에이징되기 전에 저장 프로시저나 트리거가 다시 실행되는 경우 관계형 엔진은 기존 계획을 검색하고 다시 사용합니다. 계획이 메모리에서 에이징되면 새 계획이 작성됩니다. 이 프로세스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 모든 SQL 문에 대해 수행하는 프로세스와 유사합니다. 성능 면에서 동적 SQL의 일괄 처리와 비교했을 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 저장 프로시저와 트리거의 주요 이점은 SQL 문이 항상 동일하다는 것입니다. 따라서 관계형 엔진이 기존 실행 계획과 SQL 문을 쉽게 대응시킵니다. 또한 저장 프로시저와 트리거 계획이 쉽게 다시 사용됩니다.
 
 저장 프로시저나 트리거의 실행 계획은 저장 프로시저를 호출하거나 트리거를 실행하는 일괄 처리의 실행 계획과는 별도로 실행됩니다. 따라서 저장 프로시저와 트리거 실행 계획을 더 많이 다시 사용할 수 있습니다.
 
 ## <a name="execution-plan-caching-and-reuse"></a>실행 계획 캐싱 및 다시 사용
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 실행 계획과 데이터 버퍼를 모두 저장하는 데 사용되는 메모리 풀이 있습니다. 실행 계획이나 데이터 버퍼에 할당되는 풀 비율은 시스템 상태에 따라 동적으로 변동됩니다. 실행 계획을 저장하는 데 사용되는 메모리 풀 부분을 계획 캐시라고 합니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 계획과 데이터 버퍼를 모두 저장하는 데 사용되는 메모리 풀이 있습니다. 실행 계획이나 데이터 버퍼에 할당되는 풀 비율은 시스템 상태에 따라 동적으로 변동됩니다. 실행 계획을 저장하는 데 사용되는 메모리 풀 부분을 계획 캐시라고 합니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 계획은 다음으로 구성됩니다. 
 
@@ -296,11 +333,11 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 SQL 문을 실행할 때 관계형 엔진은 먼저 계획 캐시를 조사하여 동일한 SQL 문에 대해 기존 실행 계획이 있는지 확인합니다. 기존 계획을 찾으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 그것을 재사용하기 때문에 SQL 문을 다시 컴파일하기 위한 오버헤드가 발생하지 않습니다. 기존의 실행 계획이 없는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리에 대해 새로운 실행 계획이 생성됩니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 특정 SQL 문에 대한 기존 실행 계획을 찾는 효율적인 알고리즘이 있습니다. 대부분의 시스템에서 이러한 검색에 사용되는 최소 리소스는 모든 SQL 문을 컴파일하는 대신 기존 계획을 다시 사용함으로써 절약되는 리소스보다도 적습니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 특정 SQL 문에 대한 기존 실행 계획을 찾는 효율적인 알고리즘이 있습니다. 대부분의 시스템에서 이러한 검색에 사용되는 최소 리소스는 모든 SQL 문을 컴파일하는 대신 기존 계획을 다시 사용함으로써 절약되는 리소스보다도 적습니다.
 
 캐시에서 사용되지 않은 기존 실행 계획과 새 SQL 문을 대응시키는 알고리즘을 적용하려면 모든 개체 참조가 정규화되어야 합니다. 예를 들어 다음에서 첫 번째 `SELECT` 문은 기존 계획과 일치되지 않지만 두 번째 문은 일치됩니다.
 
-```tsql
+```sql
 SELECT * FROM Person;
 
 SELECT * FROM Person.Person;
@@ -380,13 +417,13 @@ ADO, OLE DB 및 ODBC 응용 프로그램의 매개 변수 표식을 포함하여
  
 다음의 두 `SELECT` 문 간의 유일한 차이점은 `WHERE` 절에서 비교된 값이 다르다는 것입니다.
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
@@ -398,7 +435,7 @@ WHERE ProductSubcategoryID = 4;
 
 * Transact-SQL에서는 `sp_executesql`을 사용합니다. 
 
-   ```tsql
+   ```sql
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
@@ -433,7 +470,7 @@ WHERE ProductSubcategoryID = 4;
 
 강제 매개 변수화를 설정한 경우에도 단순 매개 변수화가 계속해서 수행될 수 있습니다. 예를 들어 다음 쿼리는 강제 매개 변수화 규칙에 따라 매개 변수화할 수 없습니다.
 
-```tsql
+```sql
 SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
@@ -451,18 +488,18 @@ WHERE AddressID = 1 + 2;
 
 다음 문을 고려해 보십시오.
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 문 끝의 값 1은 매개 변수로 지정될 수 있습니다. 관계형 엔진은 마치 값 1 대신 매개 변수가 지정된 것처럼 이 일괄 처리에 대해 실행 계획을 작성합니다. 이러한 단순 매개 변수화로 인해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 다음 두 문이 기본적으로 동일한 실행 계획을 생성한다는 것을 확인하고 두 번째 문에 대해 첫 번째 계획을 재사용합니다.
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -558,7 +595,7 @@ WHERE ProductSubcategoryID = 4;
 
 첫째, 응용 프로그램이 요청된 각 제품에 대해 별도의 쿼리를 실행할 수 있습니다.
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
@@ -566,7 +603,7 @@ WHERE ProductID = 63;
 둘째, 응용 프로그램에서 다음을 수행합니다. 
 
 1. 매개 변수 표식(?)을 포함하는 문을 준비합니다.  
-   ```tsql
+   ```sql
    SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
@@ -596,7 +633,7 @@ WHERE ProductID = 63;
 
 ## <a name="parallel-query-processing"></a>병렬 쿼리 처리
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 마이크로프로세서(CPU)를 두 개 이상 사용하는 컴퓨터에서 쿼리 실행과 인덱스 작업을 최적화하는 병렬 쿼리 기능을 제공합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 여러 개의 운영 체제 작업자 스레드로 쿼리나 인덱스 작업을 병렬 수행할 수 있으므로 작업을 빠르고 효율적으로 완료할 수 있습니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 마이크로프로세서(CPU)를 두 개 이상 사용하는 컴퓨터에서 쿼리 실행과 인덱스 작업을 최적화하는 병렬 쿼리 기능을 제공합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 여러 개의 운영 체제 작업자 스레드로 쿼리나 인덱스 작업을 병렬 수행할 수 있으므로 작업을 빠르고 효율적으로 완료할 수 있습니다.
 
 쿼리를 최적화하는 동안 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 병렬 실행에 적합한 쿼리나 인덱스 작업을 찾습니다. 이러한 쿼리에 대해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 쿼리 실행 계획에 교환 연산자를 삽입하여 병렬 실행할 쿼리를 준비합니다. 교환 연산자는 프로세스 관리, 데이터 재배포 및 흐름 제어를 제공하는 쿼리 실행 계획의 연산자입니다. 교환 연산자에는 하위 유형으로 `Distribute Streams`, `Repartition Streams`및 `Gather Streams` 논리 연산자가 포함되며 이 중에서 하나 이상이 병렬 쿼리에 대한 쿼리 계획의 실행 계획 출력에 표시될 수 있습니다. 
 
@@ -610,7 +647,7 @@ WHERE ProductID = 63;
 
 ### <a name="DOP"></a> 병렬 처리 수준
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 병렬 쿼리 실행 또는 인덱스 DDL(데이터 정의 언어) 작업 각각의 인스턴스에 대해 가장 적합한 병렬 처리 수준이 자동으로 검색됩니다. 이것은 다음과 조건을 기준으로 수행됩니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 병렬 쿼리 실행 또는 인덱스 DDL(데이터 정의 언어) 작업 각각의 인스턴스에 대해 가장 적합한 병렬 처리 수준이 자동으로 검색됩니다. 이것은 다음과 조건을 기준으로 수행됩니다. 
 
 1. SMP(대칭적 다중 처리) 컴퓨터와 같이 둘 이상의 마이크로프로세서 또는 CPU가 있는 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 중인지 여부  
   두 개 이상의 CPU가 있는 컴퓨터에서만 병렬 쿼리를 사용할 수 있습니다. 
@@ -619,7 +656,7 @@ WHERE ProductID = 63;
   각 쿼리 또는 인덱스 작업을 실행하려면 일정 수의 작업자 스레드가 필요합니다. 병렬 계획을 실행하려면 직렬 계획보다 많은 작업자 스레드가 필요하고, 필요한 작업자 스레드의 수는 병렬 처리 수준에 따라 증가합니다. 특정 병렬 처리 수준에 대한 병렬 계획의 작업자 스레드 요구 사항이 충족되지 않는 경우에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 병렬 처리 수준을 자동으로 낮추거나 지정된 작업 컨텍스트의 병렬 계획을 완전히 중단합니다. 그런 다음 하나의 작업자 스레드만 사용되는 직렬 계획을 실행합니다. 
 
 3. 실행한 쿼리 또는 인덱스 작업의 유형  
-  병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 응용 프로그램에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 권장되지는 않지만 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
+  병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 응용 프로그램에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 적절한 테스트를 통해 다른 값이 워크로드 실행에 더 적합하다고 확인되는 경우 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
 
 4. 처리할 행 수가 충분한지 여부  
   쿼리 최적화 프로그램에서 행 수가 부족하다고 판단하는 경우 행을 배포하기 위해 교환 연산자를 사용하지 않습니다. 결과적으로 연산자는 직렬로 실행됩니다. 시작, 배포 및 조정 비용이 병렬 연산자 실행으로 얻은 이익보다 큰 경우 연산자를 직렬 계획으로 실행하면 이 시나리오를 피할 수 있습니다.
@@ -651,7 +688,7 @@ MAXDOP 구성에 대한 모범 사례는 이 [Microsoft 지원 문서](http://su
 
 다음 예에서는 가상의 테이블 및 열 이름을 사용합니다.
 
-```tsql
+```sql
 SELECT o_orderpriority, COUNT(*) AS Order_Count
 FROM orders
 WHERE o_orderdate >= '2000/04/01'
@@ -669,7 +706,7 @@ WHERE o_orderdate >= '2000/04/01'
 
 다음 인덱스가 `lineitem` 및 `orders` 테이블에서 정의된다고 가정합니다.
 
-```tsql
+```sql
 CREATE INDEX l_order_dates_idx 
    ON lineitem
       (l_orderkey, l_receiptdate, l_commitdate, l_shipdate)
@@ -716,9 +753,9 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) DOP가 4이고 두 테이블의 조인을 포함하는 쿼리 계획
+아래 그림은 병렬 처리 수준이 4로 실행되고 두 개의 테이블 조인을 포함하는 쿼리 최적화 프로그램 계획을 보여 줍니다.
 
-위 명령에서는 병렬 처리 수준이 4로 실행되고 두 개의 테이블 조인을 포함하는 쿼리 최적화 프로그램 계획을 보여 줍니다.
+![parallel_plan](../relational-databases/media/parallel-plan.gif)
 
 이 병렬 계획에는 세 개의 Parallelism 연산자가 포함됩니다. `o_datkey_ptr` 인덱스의 Index Seek 연산자와 `l_order_dates_idx` 인덱스의 Index Scan 연산자가 모두 병렬로 처리됩니다. 몇 개의 배타적 스트림이 생성됩니다. 이것은 각각 Index Scan 및 Index Seek 연산자 위의 가장 가까운 Parallelism 연산자에서 결정될 수 있습니다. 두 연산자는 모두 교환 유형을 다시 분할합니다. 즉, 입력 스트림 수와 동일한 수의 출력 스트림을 생성하는 스트림 사이에서 단지 데이터의 순서를 섞는 것입니다. 이 스트림 수는 병렬 처리 수준과 같습니다.
 
@@ -728,6 +765,8 @@ Index Seek 연산자 위의 Parallelism 연산자는 `O_ORDERKEY` 값을 사용�
 
 최상위 Parallelism 연산자는 여러 스트림의 결과를 단일 스트림으로 수집합니다. 그런 다음 Parallelism 연산자 아래의 Stream Aggregate 연산자에서 수행하는 부분 집계는 Parallelism 연산자 위의 Stream Aggregate 연산자의 서로 다른 각각의 `O_ORDERPRIORITY` 값에 대해 단일 `SUM` 값으로 누적됩니다. 이 계획에는 병렬 처리 수준이 4인 두 개의 교환 세그먼트가 있으므로 8개의 작업자 스레드가 사용됩니다.
 
+이 예에 사용된 연산자에 대한 자세한 내용은 [실행 계획 논리 및 물리 연산자 참조](../relational-databases/showplan-logical-and-physical-operators-reference.md)를 참조하세요.
+
 ### <a name="parallel-index-operations"></a>병렬 인덱스 작업
 
 인덱스를 만들거나 다시 작성하는 인덱스 작업 또는 클러스터형 인덱스를 삭제하는 인덱스 작업을 위해 작성된 쿼리 계획에서는 여러 마이크로프로세서가 있는 컴퓨터에서 병렬 다중 작업자 스레드 작업을 할 수 있습니다.
@@ -735,7 +774,7 @@ Index Seek 연산자 위의 Parallelism 연산자는 `O_ORDERKEY` 값을 사용�
 > [!NOTE]
 > 병렬 인덱스 작업은 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]부터 Enterprise Edition에서만 사용할 수 있습니다.
  
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 다른 쿼리에 사용하는 것과 동일한 알고리즘을 사용하여 인덱스 작업에 대한 병렬 처리 수준(실행할 총 개별 작업자 스레드 수)을 결정합니다. 인덱스 작업에 대한 최대 병렬 처리 수준은 [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 서버 구성 옵션을 따릅니다. CREATE INDEX, ALTER INDEX, DROP INDEX 및 ALTER TABLE 문에서 MAXDOP 인덱스 옵션을 설정하여 개별 인덱스 작업에 대한 max degree of parallelism 값을 재정의할 수 있습니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 다른 쿼리에 사용하는 것과 동일한 알고리즘을 사용하여 인덱스 작업에 대한 병렬 처리 수준(실행할 총 개별 작업자 스레드 수)을 결정합니다. 인덱스 작업에 대한 최대 병렬 처리 수준은 [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 서버 구성 옵션을 따릅니다. CREATE INDEX, ALTER INDEX, DROP INDEX 및 ALTER TABLE 문에서 MAXDOP 인덱스 옵션을 설정하여 개별 인덱스 작업에 대한 max degree of parallelism 값을 재정의할 수 있습니다.
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 인덱스 실행 계획을 작성하는 경우 병렬 작업의 수는 다음 중에서 가장 낮은 값으로 설정됩니다. 
 
@@ -760,7 +799,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
 * 연결된 서버 이름  
   시스템 저장 프로시저 `sp_addlinkedserver` 와 `sp_addlinkedsrvlogin` 은 OLE DB 데이터 원본에 서버 이름을 제공하는 데 사용됩니다. Transact-SQL 문에서는 4부분으로 된 이름을 사용하여 이러한 연결 서버의 개체를 참조할 수 있습니다. 예를 들어 연결된 서버 이름 `DeptSQLSrvr`이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 다른 인스턴스에 대해 정의되는 경우 다음 문은 해당 서버의 테이블을 참조합니다. 
   
-  ```tsql
+  ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
@@ -770,14 +809,14 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
 * 임의 커넥터 이름  
   데이터 원본이 자주 참조되지 않는 경우 연결된 서버에 연결하는 데 필요한 정보로 `OPENROWSET` 또는 `OPENDATASOURCE` 함수가 지정됩니다. 그런 다음 행 집합은 테이블이 Transact-SQL 문에서 참조되는 방법과 동일하게 참조될 수 있습니다. 
   
-  ```tsql
+  ```sql
   SELECT *
   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
         'c:\MSOffice\Access\Samples\Northwind.mdb';'Admin';'';
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB를 사용하여 관계형 엔진과 저장소 엔진 간에 통신합니다. 관계형 엔진은 각 Transact-SQL 문을 기본 테이블의 저장소 엔진에서 연 단순 OLE DB 행 집합에 대한 일련의 작업으로 분류합니다. 이것은 관계형 엔진도 OLE DB 데이터 원본의 단순 OLE DB 행 집합을 열 수 있음을 의미합니다.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB를 사용하여 관계형 엔진과 저장소 엔진 간에 통신합니다. 관계형 엔진은 각 Transact-SQL 문을 기본 테이블의 저장소 엔진에서 연 단순 OLE DB 행 집합에 대한 일련의 작업으로 분류합니다. 이것은 관계형 엔진도 OLE DB 데이터 원본의 단순 OLE DB 행 집합을 열 수 있음을 의미합니다.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 관계형 엔진은 OLE DB API(응용 프로그래밍 인터페이스)를 사용하여 연결된 서버에서 행 집합을 열고, 그 행을 인출하고, 트랜잭션을 관리합니다.
 
@@ -789,11 +828,11 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 가능하면 조인, 제한, 투영, 정렬, 그룹화 같은 관계형 연산을 연산별로 OLE DB 데이터 원본에 푸시합니다. 기본적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 기본 테이블을 검색하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 전송한 후 자체적으로 관계형 연산을 수행하지는 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB 공급자에게 공급자에서 지원하는 SQL 문법 수준을 확인하도록 쿼리하고 이 정보에 따라 가능한 한 많은 관계형 연산을 공급자에게 푸시합니다. 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB 공급자가 OLE DB 데이터 원본에서 키 값이 배포되는 방식을 나타내는 통계를 반환하기 위한 메커니즘을 지정합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 각 SQL 문의 요구 사항에 대해 데이터 원본의 데이터의 패턴을 좀 더 잘 분석하므로 최적의 실행 계획을 생성하는 쿼리 최적화 프로그램의 기능을 향상시킬 수 있습니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 공급자가 OLE DB 데이터 원본에서 키 값이 배포되는 방식을 나타내는 통계를 반환하기 위한 메커니즘을 지정합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 각 SQL 문의 요구 사항에 대해 데이터 원본의 데이터의 패턴을 좀 더 잘 분석하므로 최적의 실행 계획을 생성하는 쿼리 최적화 프로그램의 기능을 향상시킬 수 있습니다. 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스에서의 향상된 쿼리 처리
 
-[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]에서는 여러 병렬 계획에 대해 분할된 테이블에서의 쿼리 처리 성능이 향상되었고, 병렬 및 직렬 계획이 표시되는 방식이 변경되었으며 컴파일 시간 및 런타임 실행 계획에 제공되는 분할 정보가 개선되었습니다. 이 항목에서는 이러한 향상된 기능에 대해 설명하고, 분할된 테이블 및 인덱스의 쿼리 실행 계획을 해석하는 방법에 대해 안내하며, 분할된 개체에서의 쿼리 성능 향상을 위한 최선의 방법을 알려 줍니다. 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 여러 병렬 계획에 대해 분할된 테이블에서의 쿼리 처리 성능이 향상되었고, 병렬 및 직렬 계획이 표시되는 방식이 변경되었으며 컴파일 시간 및 런타임 실행 계획에 제공되는 분할 정보가 개선되었습니다. 이 항목에서는 이러한 향상된 기능에 대해 설명하고, 분할된 테이블 및 인덱스의 쿼리 실행 계획을 해석하는 방법에 대해 안내하며, 분할된 개체에서의 쿼리 성능 향상을 위한 최선의 방법을 알려 줍니다. 
 
 > [!NOTE]
 > 분할된 테이블 및 인덱스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer 및 Evaluation Edition에서만 지원됩니다.
@@ -806,13 +845,13 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
 
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (논리적 선행 열)과 가능한 다른 인덱스 키 열에서 수행된 후, 두 번째 수준의 seek 연산은 다른 조건을 사용하여 첫 번째 수준의 seek 연산에 대한 제한을 충족시키는 각각의 고유 값에 대해 수행될 수 있습니다. 즉 skip scan이라고 하는 이 연산을 통해 쿼리 최적화 프로그램은 seek 또는 scan 연산을 하나의 조건을 기준으로 수행하여 액세스할 파티션을 결정하고 해당 연산자에서 두 번째 수준 index seek 연산을 수행하여 다른 조건을 충족시키는 이러한 파티션에서 행을 반환할 수 있습니다. 예를 들어 다음 쿼리를 살펴보십시오.
 
-```tsql
+```sql
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 이 예에서 `T(a, b, c)`로 정의되는 T 테이블은 a 열에서 분할되고 b 열에 클러스터형 인덱스가 있다고 가정합니다. T 테이블의 파티션 경계는 다음 파티션 함수로 정의됩니다.
 
-```tsql
+```sql
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
@@ -834,7 +873,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 #### <a name="partition-information-enhancements"></a>향상된 파티션 정보 기능
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 컴파일 시간과 런타임 실행 계획 모두에 대한 향상된 분할 정보를 제공합니다. 실행 계획은 현재 다음 정보를 제공합니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 컴파일 시간과 런타임 실행 계획 모두에 대한 향상된 분할 정보를 제공합니다. 실행 계획은 현재 다음 정보를 제공합니다.
 
 * 분할된 테이블에서 `Partitioned` , `seek`, `scan`, `insert`, `update`, `merge`같은 연산자가 실행되었음을 나타내는 선택적 `delete`특성.  
 * `SeekPredicateNew` 에서 범위 검색을 지정하는 선행 인덱스 키 열 및 필터 조건으로 `SeekKeys` 를 포함하는 새로운 `PartitionID` 요소와 `PartitionID`하위 요소. `SeekKeys` 하위 요소 두 개의 존재는 `PartitionID` 에서 skip scan 연산이 사용되는 것을 나타냅니다.   
@@ -842,7 +881,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 그래픽 실행 계획 출력 및 XML 실행 계획 출력 모두에 이 정보가 표시되는 방법을 보여 주려면 분할된 테이블 `fact_sales`의 다음 쿼리를 살펴봅니다. 이 쿼리는 두 개의 파티션에 있는 데이터를 업데이트합니다. 
 
-```tsql
+```sql
 UPDATE fact_sales
 SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
@@ -971,7 +1010,7 @@ XML 실행 계획 출력에서`Partitions Accessed`는 새 `RuntimePartitionSumm
 > [!NOTE]
 > 이 예에서는 백만 개 이상의 행을 테이블로 삽입합니다. 이 예를 실행하는 데에는 하드웨어에 따라 시간이 몇 분 정도 걸릴 수 있습니다. 이 예를 실행하기 전에 1.5GB 이상의 사용 가능한 디스크 공간이 있는지 확인하십시오. 
  
-```tsql
+```sql
 USE master;
 GO
 IF DB_ID (N'db_sales_test') IS NOT NULL
@@ -1039,5 +1078,5 @@ GO
  [확장 이벤트](../relational-databases/extended-events/extended-events.md)  
  [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [카디널리티 추정](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)
-
+ [적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)   
+ [연산자 우선 순위](../t-sql/language-elements/operator-precedence-transact-sql.md)

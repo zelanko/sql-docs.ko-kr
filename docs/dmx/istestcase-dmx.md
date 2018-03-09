@@ -5,32 +5,26 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- IsTestCase
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IsTestCase function
+f1_keywords: IsTestCase
+dev_langs: DMX
+helpviewer_keywords: IsTestCase function
 ms.assetid: 7ff4b895-9bb4-4e26-ab1b-c9049cfc2291
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6e25739d2c2fd92642e8e9d61e514c0fb181bb36
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0880841c201e9f25eb4685d0e6368abbb5bca885
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="istestcase-dmx"></a>IsTestCase(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +65,6 @@ WHERE IsTestCase()
 ## <a name="see-also"></a>관련 항목:  
  [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [데이터 마이닝 쿼리](../analysis-services/data-mining/data-mining-queries.md)   
- [학습 및 테스트 데이터 집합](../analysis-services/data-mining/training-and-testing-data-sets.md)  
+ [데이터 집합 학습 및 테스트](../analysis-services/data-mining/training-and-testing-data-sets.md)  
   
   
-

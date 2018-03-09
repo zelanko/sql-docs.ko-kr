@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetConnectOption function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLSetConnectOption function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5a35449e-4694-4ee5-9fa1-45d5a8fe7823
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4667e8c80c183cb22b7199e2f404ca5eb79c5c5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 14e3708e58d87a1ab38f4b22e9917320969c105b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -49,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|드라이버에서 SQL_TXN_READ_COMMITTED만 허용 합니다.<br /><br /> 다음 *vParam*s는 지원 되지 않습니다.<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
   
  자세한 내용은 참조 [SQLSetConnectOption](../../odbc/reference/syntax/sqlsetconnectoption-function.md) 에 *ODBC Programmer's Reference*합니다.
-

@@ -2,35 +2,29 @@
 title: "TOM API (Analysis Services AMO-TOM)에서 오류 처리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ec44daa0-a90e-42ad-b70d-6a7a7a4e4b7b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fe73f11bb44968e7091fe522f4905e3640c95282
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ab72f854e36aeaa9bd0ea64ede645cbadffc018
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-errors-in-the-tom-api-analysis-services-amo-tom"></a>TOM API (Analysis Services AMO-TOM)에서 오류 처리
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-관리 되는 라이브러리와 같은 Analysis Services Management Objects (AMO) 테이블 형식 개체 모델 (TOM)에 대 한 일반적으로 사용자에 게 오류 상태를 보고 하기 위한 메커니즘으로 예외를 사용 하는 것입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]관리 되는 라이브러리와 같은 Analysis Services Management Objects (AMO) 테이블 형식 개체 모델 (TOM)에 대 한 일반적으로 사용자에 게 오류 상태를 보고 하기 위한 메커니즘으로 예외를 사용 하는 것입니다.  
 
 AMO TOM에서 오류가 검색 되 면 throw 이외의 몇 가지 표준.NET 예외와 같은 **ArgumentException** 및 **InvalidOperationException**, TOM 수 예외를 throw 할 몇 가지 TOM 관련 됩니다.  
 
@@ -69,4 +63,3 @@ Throw 되 면 * * OperationException * * 개체는 서버에서 반환 하는 XM
 - [TomInternalException 클래스](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.tominternalexception.aspx)
 - [TomValidationException 클래스](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.tomvalidationexception.aspx)
 - [JsonSerializationException 클래스](http://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializationException.htm)
-

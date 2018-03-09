@@ -1,14 +1,14 @@
 ---
-title: "Reporting Services 및 Power View 브라우저 지원 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services 및 파워 뷰에 대한 브라우저 지원 | Microsoft Docs"
+ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -21,30 +21,29 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 121
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "121"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8e003b5e3e50b8c19bfbbb059926b73e4113280b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 및 파워 뷰에 대한 브라우저 지원
+# <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 및 파워 뷰 브라우저 지원
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-어떤 브라우저에 대 한 버전은 SQL Server Reporting Services, ReportViewer 컨트롤 및 Power View 보기 및 관리 하기 위한 지원에 대해 알아봅니다.
+SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 확인을 위해 지원되는 브라우저 버전에 대해 알아봅니다.
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
-## <a name="browser-requirements-for-the-web-portal"></a>웹 포털에 대 한 브라우저 요구 사항
+## <a name="browser-requirements-for-the-web-portal"></a>웹 포털에 대한 브라우저 요구 사항
 
-다음은 웹 포털에 대 한 지원 되는 브라우저의 현재 목록입니다.
+다음은 웹 포털에 대해 지원되는 브라우저의 현재 목록입니다.
 
 **Microsoft Windows**  
 *Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
@@ -155,12 +154,11 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>다음 단계
 
-[보고서 찾기 및 보기는 웹 포털에서](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+[웹 포털에서 보고서 찾기 및 보기](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 도구](../reporting-services/tools/reporting-services-tools.md)  
 [웹 포털(SSRS 기본 모드)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
 

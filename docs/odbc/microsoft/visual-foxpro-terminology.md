@@ -5,31 +5,29 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], glossary
 - FoxPro ODBC driver [ODBC], glossary
 ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 13cd7a4aa9802521d933f5b30bf4044311bf26db
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7204f0e0185373d88606fb01a5d3382a23dd91a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-foxpro-terminology"></a>Visual FoxPro 용어
-**database**  
+**데이터베이스**  
  Visual FoxPro에 데이터베이스 파일 확장명이.dbc 및 하나 이상 포함 될 수 **테이블**합니다.  
   
  **데이터베이스 테이블**  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro에서 레코드 테이블에 저장 됩니다. 테이블의 각 열은 레코드를 나타내며 테이블의 각 행은 테이블의 열은 레코드의 필드를 나타냅니다. 각 Visual FoxPro 테이블 파일.dbf 확장명 자체에 저장 됩니다. Visual FoxPro 테이블은 데이터베이스와 연결할 수 있습니다.  
   
  FoxPro 버전 2입니다. *x* 테이블은 데이터베이스와 연결 되지 않습니다.
-

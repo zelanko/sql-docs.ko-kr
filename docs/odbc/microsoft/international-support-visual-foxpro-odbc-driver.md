@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - collating sequences [ODBC]
 - Visual FoxPro ODBC driver [ODBC], international support
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7f99c63f641ecdb6338f8028cc7438021e32e2ae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 322246bbb6634386955c8655c2e20e3cfe5b6fed
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>다국어 기능 지원 (Visual FoxPro ODBC 드라이버)
 Microsoft Visual FoxPro ODBC 드라이버를 지원합니다.  
@@ -49,4 +47,3 @@ Microsoft Visual FoxPro ODBC 드라이버를 지원합니다.
   
 ## <a name="sort-order"></a>정렬 순서(sort order)  
  다른 정렬 규칙을 통합 하는 정렬 순서 *로캘*s, 해당 언어의 데이터를 올바르게 정렬할 수 있습니다. Visual FoxPro 현재 정렬 순서는 결과 문자 식 비교와 레코드에 표시 된 인덱스 또는 테이블을 정렬 순서를 결정 합니다.
-

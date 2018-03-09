@@ -3,7 +3,7 @@ title: "Clustered 속성 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Clustered property [ADOX], Visual Basic example
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2d1fd197bf6b50ad4f5fbf31591c9ce33f39956a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ce07c377a5f09f3cc018fd48c15fc97d0de93cd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 속성 예제 (VB)
 이 예제에서는 [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) 속성은 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. Microsoft Jet 데이터베이스는 클러스터형된 인덱스, 지원 하지 않으므로이 예제는 반환 되는 참고 **False** 에 대 한는 **Clustered** 에 모든 인덱스의 속성은 **Northwind** 데이터베이스입니다.  
@@ -85,4 +84,3 @@ End Sub
  [Clustered 속성 (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [Index 개체 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
-

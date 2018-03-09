@@ -1,27 +1,27 @@
 ---
-title: "기본 모드 보고서 서버에서 보고서를 보거나 게시 문제 해결 | Microsoft Docs"
+title: "기본 모드 보고서 서버에서 보고서 게시 또는 보기 문제 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2e25f72eddf16b1cbb868f0e944a803df0f40340
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 보고서 게시 또는 보기 문제 해결
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/09/2017
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>게시된 보고서에서 항목을 전환할 때 아무 작업도 수행되지 않는 경우  
   로컬 미리 보기에서 보고서를 표시할 때 보고서의 항목을 전환하여 표시하거나 숨길 수 있습니다. 동일한 보고서를 보고서 서버에 게시한 후 볼 때는 항목을 전환해도 아무 작업도 수행되지 않습니다.   
   
-\<보고서 서버 이름 >에 밑줄 (_)를 포함 합니다.  
+\<보고서 서버 이름> 밑줄(_)이 포함된 경우  
   
 보고서가 오류 없이 실행되었으나 토글 항목이 작동하지 않으면(예: 확장 아이콘(+)을 클릭해도 동작이 발생하지 않는 경우) 보고서 서버를 호스팅하는 컴퓨터의 이름을 확인합니다. 컴퓨터 이름에 밑줄이 있으면 토글 항목이 작동하지 않습니다. 이것은 알려진 문제이며 해결 방법이 없습니다.   
   
@@ -57,14 +57,13 @@ ms.lasthandoff: 08/09/2017
   
 캐시된 파일이 포함된 폴더에 대한 액세스 권한이 있는지 확인하십시오.   
     
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [Reporting Services 및 파워 뷰 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [오류 및 이벤트(Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Reporting Services 보고서에서 데이터 검색 문제 해결](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Reporting Services 보고서의 데이터 검색 문제 해결](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Reporting Services 구독 및 배달 문제 해결](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

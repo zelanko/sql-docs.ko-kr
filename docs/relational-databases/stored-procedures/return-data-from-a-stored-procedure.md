@@ -16,23 +16,49 @@ helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 7d4ec18d40f6777a2d72b838030e3b4305c891e6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > 이전 버전의 SQL Server와 관련된 콘텐츠 [저장 프로시저에서 데이터 반환](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx)을 참조하세요.
 
-  결과 집합 또는 데이터를 프로시저에서 호출 프로그램으로 반환하는 두 가지 방법인 출력 매개 변수 및 반환 코드가 있습니다. 이 항목은 두 방법에 대한 자세한 정보를 제공합니다.  
+  데이터를 프로시저에서 호출 프로그램으로 반환하는 세 가지 방법은 결과 집합, 출력 매개 변수 및 반환 코드입니다. 이 항목은 세 가지 방법에 대한 자세한 정보를 제공합니다.  
+  
+  ## <a name="returning-data-using-result-sets"></a>결과 집합을 사용하여 데이터 반환
+ 저장 프로시저의 본문에 SELECT 문을 포함하는 경우(SELECT... INTO 또는 INSERT... SELECT 제외) SELECT 문에서 지정한 행을 클라이언트에 직접 전송합니다.  큰 결과 집합의 경우 저장 프로시저 실행은 결과 집합을 클라이언트에 완전히 전송하기 전까지 다음 문을 계속하지 않습니다.  작은 결과 집합의 경우 결과는 클라이언트에 대한 반환에 스풀되고 계속 실행됩니다.  저장 프로시저를 처리하는 동안 이러한 여러 SELECT 문을 실행하는 경우 여러 개의 결과 집합이 클라이언트에 전송됩니다.  이 동작은 중첩된 TSQL 일괄 처리, 중첩된 저장 프로시저 및 최상위 TSQL 일괄 처리에도 적용됩니다.
+ 
+ 
+ ### <a name="examples-of-returning-data-using-a-result-set"></a>결과 집합을 사용하여 데이터를 반환하는 예제 
+  다음 예제에서는 vEmployee 보기에도 표시되는 모든 SalesPerson 행에 LastName 및 SalesYTD 값을 반환하는 저장 프로시저를 보여줍니다.
+  
+ ```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
+
   
 ## <a name="returning-data-using-an-output-parameter"></a>출력 매개 변수를 사용하여 데이터 반환  
  프로시저 정의에서 매개 변수에 OUTPUT 키워드를 지정하면 해당 프로시저는 종료될 때 매개 변수의 현재 값을 호출 프로그램에 반환할 수 있습니다. 호출 프로그램에서 사용할 수 있는 변수에 매개 변수 값을 저장하려면 호출 프로그램이 프로시저를 실행할 때 OUTPUT 키워드를 사용해야 합니다. 출력 매개 변수로 사용될 수 있는 데이터 형식에 대한 자세한 내용은 [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)를 참조하세요.  
@@ -116,7 +142,7 @@ GO
   
 ### <a name="examples-of-cursor-output-parameters"></a>Cursor Output 매개 변수의 예  
  다음 예에서는 **cursor** 데이터 형식을 사용하여 출력 매개 변수 `@currency_cursor`를 지정하는 프로시저가 생성됩니다. 그런 다음 일괄 처리로 프로시저가 호출됩니다.  
-  
+ 
  먼저 선언된 프로시저를 만들고 Currency 테이블에서 커서를 엽니다.  
   
 ```  
@@ -163,7 +189,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- 반환 코드는 대개 프로시저의 흐름 제어 블록에서 발생 가능한 각 오류 상태의 반환 코드 값을 설정하는 데 사용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 다음에 @@ERROR 함수를 사용하면 문이 실행될 때 오류가 발생했는지 여부를 알 수 있습니다.  
+ 반환 코드는 대개 프로시저의 흐름 제어 블록에서 발생 가능한 각 오류 상태의 반환 코드 값을 설정하는 데 사용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 다음에 @@ERROR 함수를 사용하면 문이 실행될 때 오류가 발생했는지 여부를 알 수 있습니다.  TSQL에서 TRY/CATCH/THROW 오류 처리를 사용하기 전에 저장 프로시저의 성공 여부를 확인하기 위해 종종 반환 코드가 필요합니다.  저장 프로시저는 항상 오류(필요한 경우 THROW/RAISERROR를 사용하여 생성됨)와 함께 오류를 표시하고 오류를 표시하기 위해 반환 코드를 사용하지 않습니다.  또한 응용 프로그램 데이터를 반환하기 위해 반환 코드를 사용하지 않도록 방지해야 합니다.
   
 ### <a name="examples-of-return-codes"></a>반환 코드의 예  
  다음 예에서는 여러 오류에 대한 특정 반환 코드 값을 설정하는 오류 처리가 포함된 `usp_GetSalesYTD` 프로시저를 보여 줍니다. 다음 표에서는 발생 가능한 각 오류에 프로시저에서 할당한 정수 값 및 각 값에 해당하는 의미를 보여 줍니다.  
@@ -264,7 +290,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [SET @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)   
@@ -273,4 +299,3 @@ GO
  [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
   
-

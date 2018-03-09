@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC]
 - interoperability [ODBC], about interoperability
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b797bcf1e8e5521ea2b4fd57a68969b3f04e802d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a96949b4ca739e382a547769f496576bf13db8b7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interoperability"></a>상호 운용성
 *상호 운용성* 지원은 서로 다른 여러 Dbms와 함께 작동 하도록 단일 응용 프로그램의 기능입니다. 일반, 상호 운용 가능한 응용 프로그램을 작성할 필요가 ODBC의 개발에 중요 한 요인 중 하나 였습니다. 그러나 상호 운용성은 뒤에 "하지 상호 운용 가능"에서 간단한 경로가 아닙니다 "완전히 상호 운용 가능 합니다."를 경로 분기가 여러 개 및 각 균형을 맞추는 기능, 속도, 코드 복잡성 및 개발 시간이 필요 합니다.  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 -   [상호 운용 가능한 응용 프로그램 작성](../../../odbc/reference/develop-app/writing-an-interoperable-application.md)  
   
 -   [상호 운용 가능한 응용 프로그램 테스트](../../../odbc/reference/develop-app/testing-interoperable-applications.md)
-

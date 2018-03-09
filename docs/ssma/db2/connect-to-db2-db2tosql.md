@@ -1,36 +1,37 @@
 ---
 title: "D b 2에 연결 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e08da1c1922fce1154ec4ca16cd99a757ff973bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 733fae47c5c74eb120b7f8719dd53675eb5b7e36
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-db2-db2tosql"></a>D b 2에 연결 (DB2ToSQL)
 사용 하 여는 **d b 2에 연결** 마이그레이션할 DB2 데이터베이스에 연결 하는 대화 상자.  
   
 이 대화 상자에 액세스 하는 **파일** 메뉴 선택 **d b 2에 연결**합니다. 이 명령은 이전에 연결한 경우 **d b 2에 다시 연결**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **공급자**  
 DB2 데이터베이스에 연결에 대 한 데이터 액세스 공급자를 선택 합니다. 사용 가능한 공급자는 DB2 클라이언트 공급자 및 OLE DB Provider입니다. 기본값은 DB2 클라이언트 공급자입니다.  
   
@@ -64,7 +65,7 @@ TNSNAME 모드 옵션입니다.
   
 표준 모드 옵션입니다.  
   
-**사용자 이름**  
+**User name**  
 SSMA는 DB2 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
   
 **암호**  
@@ -82,4 +83,3 @@ SSMA는 DB2 데이터베이스에 연결 하는 데 사용할 사용자 이름�
   
 SSMA 연결 문자열에 대해 항상 Provider 매개 변수를 포함 합니다. D b 2에 연결할 때 포트 매개 변수를 포함 되어 있는지 확인 합니다.  
   
-

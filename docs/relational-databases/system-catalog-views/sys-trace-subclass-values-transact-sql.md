@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - trace_subclass_values_TSQL
 - sys.trace_subclass_values_TSQL
 - trace_subclass_values
-dev_langs: TSQL
-helpviewer_keywords: sys.trace_subclass_values catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.trace_subclass_values catalog view
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4fb609f5e74c0c9639eb8295ed4e28f1ea67a70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a10de348efe0473927305dbb9ed6a636355de13
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systracesubclassvalues-transact-sql"></a>sys.trace_subclass_values(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,17 +41,13 @@ ms.lasthandoff: 11/17/2017
  지원 되는 추적 이벤트의 전체 목록은 참조 하십시오. [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 확장 이벤트 카탈로그 뷰를 사용하십시오.  
-  
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 확장 이벤트 카탈로그 뷰를 대신 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|추적 이벤트의 ID입니다. 이 매개 변수는 또한에 **sys.trace_events** 카탈로그 뷰에 있습니다.|  
 |**trace_column_id**|**smallint**|열거에 사용된 추적 열의 ID입니다. 이 매개 변수는 또한에 **sys.trace_columns** 카탈로그 뷰에 있습니다.|  
-|**subclass_name**|**nvarchar (128)**|열 값의 의미입니다.|  
+|**subclass_name**|**nvarchar(128)**|열 값의 의미입니다.|  
 |**subclass_value**|**smallint**|열 값입니다.|  
   
 ## <a name="permissions"></a>Permissions  

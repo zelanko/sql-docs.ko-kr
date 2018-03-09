@@ -3,8 +3,11 @@ title: CREATE DATABASE ENCRYPTION KEY (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
+ms.prod_service: pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,22 +30,21 @@ helpviewer_keywords:
 - CREATE DATABASE ENCRYPTION KEY statement
 - database encryption key, create
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 559e85cf5ba8e565a6afc86d3537b476365bd980
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b108a5cddba7052d177760374d8c5047b28fb25c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
- 데이터베이스를 명시적으로 암호화하는 데 사용되는 암호화 키를 만듭니다. 투명 한 데이터베이스 암호화에 대 한 자세한 내용은 참조 하세요. [투명 한 데이터 암호화 & #40; Tde& #41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ 데이터베이스를 명시적으로 암호화하는 데 사용되는 암호화 키를 만듭니다. 투명 한 데이터베이스 암호화에 대 한 자세한 내용은 참조 하세요. [투명 한 데이터 암호화 &#40; Tde&#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -97,7 +99,7 @@ Dbo(데이터베이스 소유자)가 변경될 경우 데이터베이스 암호�
 데이터베이스에 대한 CONTROL 권한과 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서 또는 비대칭 키에 대한 VIEW DEFINITION 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
-TDE를 사용 하는 추가 예제를 보려면 [투명 한 데이터 암호화 & #40; Tde& #41; ](../../relational-databases/security/encryption/transparent-data-encryption.md), [EKM을 사용 하 여 SQL Server에서 TDE를 사용 하도록 설정](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md), 및 [Azure 키 자격 증명 모음 & #40;를 사용 하 여 확장 가능 키 관리 SQL Server & #41; ](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+TDE를 사용 하는 추가 예제를 보려면 [투명 한 데이터 암호화 &#40; Tde&#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md), [EKM을 사용 하 여 SQL Server에서 TDE를 사용 하도록 설정](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md), 및 [Azure 키 자격 증명 모음 &#40;를 사용 하 여 확장 가능 키 관리 SQL Server &#41; ](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 다음 예에서는 `AES_256` 알고리즘을 사용하여 데이터베이스 암호화 키를 만들고 `MyServerCert`라는 인증서로 개인 키를 보호합니다.  
   
@@ -110,28 +112,13 @@ ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
 GO  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-TDE를 사용 하는 추가 예제를 보려면 [투명 한 데이터 암호화 (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d)합니다.  
-  
-다음 예에서는 `AES_256` 알고리즘을 사용하여 데이터베이스 암호화 키를 만들고 `MyServerCert`라는 인증서로 개인 키를 보호합니다.  
-  
-```  
--- Uses AdventureWorks  
-  
-CREATE DATABASE ENCRYPTION KEY  
-WITH ALGORITHM = AES_256  
-ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
-GO  
-```  
-  
 ## <a name="see-also"></a>관련 항목:  
 [투명한 데이터 암호화&#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
 [SQL Server 암호화](../../relational-databases/security/encryption/sql-server-encryption.md)   
 [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
 [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
-[ALTER DATABASE ENCRYPTION key& #40; Transact SQL & #41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
-[DROP DATABASE ENCRYPTION key& #40; Transact SQL & #41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
+[ALTER DATABASE ENCRYPTION key&#40; Transact SQL &#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+[DROP DATABASE ENCRYPTION key&#40; Transact SQL &#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
 [sys.dm_database_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
     
-

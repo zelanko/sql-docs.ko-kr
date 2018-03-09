@@ -3,8 +3,11 @@ title: "템플릿 열기 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-templates
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bfa128c7a1510b2f20eb9fa86d8a960aa4b13dd9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 346cfa3d8fbeaa4b85f600aa7928edebf47a7661
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-a-template"></a>템플릿 열기
-템플릿 탐색기에서 템플릿을 열 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 템플릿 탐색기에서 템플릿을 열 수 있습니다.  
   
 ## <a name="to-open-a-template-from-template-explorer"></a>템플릿 탐색기에서 템플릿을 열려면  
 템플릿 탐색기에서 템플릿을 열 수 있습니다.  

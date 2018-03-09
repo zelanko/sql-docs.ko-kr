@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Access Driver
 - Access driver [ODBC], SQLConfigDataSource
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 27658fe72c79409a32435971bfac8d10ce92cded
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (Access 드라이버)
 > [!NOTE]  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
 |스레드|사용 하도록 엔진에 대 한 백그라운드 스레드 수를 지정 합니다. 이 값을 3으로 기본값만 변경할 수 있습니다.<br /><br /> 동일한 옵션을 설정 하는이 **스레드** 설정 대화 상자에서 합니다.|  
 |UID|Microsoft Access 드라이버에 대 한 로그인에 사용자 ID 이름을 사용 합니다.|  
 |USERCOMMITSYNC|Microsoft Access 드라이버 사용자 정의 트랜잭션을 비동기적으로 수행 여부를 결정 합니다. 이 값은 처음 의미 Microsoft Access 드라이버 완료 하는 데 사용자 정의 트랜잭션 커밋을 대기 하는 "예"로 설정 됩니다.<br /><br /> 그 결과 신중 하 게 고려 하지 않고이 옵션의 값을 변경할 수 없습니다. 옵션에 대 한 자세한 내용은 참조는 *Microsoft Jet 데이터베이스 엔진 Programmer's Guide*합니다.<br /><br /> 동일한 옵션을 설정 하는이 **UserCommitSync** 설정 대화 상자에서 합니다.|
-

@@ -18,24 +18,23 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 53
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: ac549895dbe211f38529f657caa58fc766f911f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 이상이 현재 컴퓨터에 설치되어 있으면 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]로 업그레이드할 수 있습니다.  
   
  이전 버전의 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 중 하나가 설치된 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 로 업그레이드하면 이전 버전과 함께 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 가 설치됩니다.  
   
- 함께 설치하면 여러 버전의 dtexec 유틸리티가 설치됩니다. 명령 프롬프트 유틸리티의 전체 경로 입력 하 여 실행에 올바른 버전의 유틸리티를 실행 하려면 (\<드라이브 >: files\microsoft SQL Server\\< 버전\>\DTS\Binn). dtexec에 대한 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하십시오.  
+ 함께 설치하면 여러 버전의 dtexec 유틸리티가 설치됩니다. 올바른 버전의 유틸리티가 실행되도록 하려면 명령 프롬프트에서 전체 경로(\<drive>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn)를 입력하는 방식으로 유틸리티를 실행합니다. dtexec에 대한 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하십시오.  
   
 > [!NOTE]  
 >  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하면 기본적으로 Users 그룹의 모든 사용자에게 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대한 액세스 권한이 부여되었지만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치하면 사용자에게 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대한 액세스 권한이 부여되지 않습니다. 이 서비스에는 기본적으로 보안이 적용됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 설치한 후 DCOM 구성 도구(Dcomcnfg.exe)를 실행하여 특정 사용자에게 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 액세스 권한을 부여해야 합니다. 자세한 내용은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.  
@@ -60,7 +59,7 @@ ms.lasthandoff: 09/26/2017
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램을 실행하고 **SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 업그레이드** 옵션을 선택합니다.  
   
--   명령 프롬프트에서 **setup.exe**를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 의 "용 설치 스크립트" 섹션을 참조하세요.  
+-   명령 프롬프트에서 **setup.exe**를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)의 "[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]용 설치 스크립트" 섹션을 참조하세요.  
   
  다음 동작은 업그레이드를 사용하여 수행할 수 없습니다.  
   
@@ -97,7 +96,7 @@ ms.lasthandoff: 09/26/2017
   
     -   msdb.sysdtslog90 시스템 테이블에서 msdb.sysssislog 시스템 테이블로 로그 데이터를 이동합니다.  
   
--   데이터를 새 msdb.sysssis\* 테이블로 이동한 후 msdb.sysdts*90 시스템 테이블 및 이 시스템 테이블에 액세스하는 데 사용되는 저장 프로시저를 제거합니다. 그러나 업그레이드하면 sysdtslog90 테이블은 똑같이 sysdtslog90이라는 이름을 가진 뷰로 대체됩니다. 이 새 sysdtslog90 뷰에는 새 msdb.sysssislog 시스템 테이블이 표시됩니다. 이를 통해 로그 테이블 기반의 보고서가 중단 없이 계속 실행됩니다.  
+-   데이터를 새 msdb.sysssis\* 테이블로 이동한 후 msdb.sysdts\*90 시스템 테이블 및 이 시스템 테이블에 액세스하는 데 사용되는 저장 프로시저를 제거합니다. 그러나 업그레이드하면 sysdtslog90 테이블은 똑같이 sysdtslog90이라는 이름을 가진 뷰로 대체됩니다. 이 새 sysdtslog90 뷰에는 새 msdb.sysssislog 시스템 테이블이 표시됩니다. 이를 통해 로그 테이블 기반의 보고서가 중단 없이 계속 실행됩니다.  
   
 -   패키지에 대한 액세스를 제어하기 위해 세 가지 새로운 고정 데이터베이스 수준 역할인 db_ssisadmin, db_ssisltduser 및 db_ssisoperator를 만듭니다. db_dtsadmin, db_dtsltduser 및 db_dtsoperator의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 역할은 제거되지 않고 해당하는 새 역할의 멤버가 됩니다.  
   
@@ -155,4 +154,3 @@ ms.lasthandoff: 09/26/2017
  blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 응용 프로그램을 Denali에서 사용되도록 설정](http://go.microsoft.com/fwlink/?LinkId=238157)  
   
   
-

@@ -2,35 +2,29 @@
 title: "백업 명령 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: fae1b267-0750-4dc5-9bf0-80ac4d8487a3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 50e6f8e6f5b01fce2eb0bb6a5dbcd84dd631d994
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8c0e31a8ad1269e6b6d93463f99d39490e6f52b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backup-command-tmsl"></a>백업 명령을 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  .Abf 백업 파일을 Analysis Services 데이터베이스를 백업 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)].Abf 백업 파일을 Analysis Services 데이터베이스를 백업 합니다.  
   
 ## <a name="request"></a>요청  
   
@@ -62,8 +56,8 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**속성**|**Default**|**Description**|  
-|데이터베이스|[필수]|백업할 데이터베이스 개체의 이름입니다.|  
+|**속성**|**Default**|**설명**|  
+|database|[필수]|백업할 데이터베이스 개체의 이름입니다.|  
 |파일|[필수]|백업 파일 이름/경로입니다.|  
 |password|비어 있음|백업 파일 암호화에 사용할 암호입니다.|  
 |allowOverwrite|False|True 이면 나타내고 백업 파일이 이미 존재 하는 Boolean 덮어쓰게 됩니다. 그렇지 않으면 false입니다.|  
@@ -103,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 데이터베이스 백업 및 복원](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "명명 된 명령에 매개 변수를 전달 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f98080e73f2a0eb32450c0bc8e5779471adc74c6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 33d1ee3fe4e24695deccd0615f17868bfdfd988c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="passing-parameters-to-a-named-command"></a>명명 된 명령에 매개 변수 전달
 로 전달 됩니다 명령의 결과 마찬가지로 *아웃* 명명 된 명령의 매개 변수 매개 변수화 된 명령 수에로 전달 된 *에* 명명 된 명령에는 변수입니다.  
@@ -102,4 +101,3 @@ objConn.GetOrdersOf "12345", objRs
   
 ## <a name="see-also"></a>관련 항목:  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-

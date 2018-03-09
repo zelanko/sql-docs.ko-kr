@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 서비스에 의해 기록 된 이벤트 | Microsoft Docs"
+title: "Integration Services 서비스에서 기록하는 이벤트 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9ba7f6ab3bda7bfc40acffc54fa56131ba53514b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 서비스에서 기록하는 이벤트
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 Windows 응용 프로그램 로그에 다양한 메시지를 기록합니다. 이러한 메시지는 서비스가 시작되거나 중지될 때 또는 특정 문제가 발생할 때 기록됩니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="service-status-messages"></a>서비스 상태 메시지
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 설치하도록 선택하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 설치되고 시작되며, 시작 유형은 자동으로 설정됩니다.  
   
-|이벤트 ID|심볼 이름|텍스트|참고|  
+|이벤트 ID|심볼 이름|텍스트 모드|참고|  
 |--------------|-------------------|----------|-----------|  
 |256|DTS_MSG_SERVER_STARTING|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스를 시작하고 있습니다.|서비스를 시작하려고 합니다.|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스가 시작되었습니다.|서비스가 시작되었습니다.|  
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="settings-file-messages"></a>설정 파일 메시지  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대한 설정은 수정 가능한 XML 파일에 저장됩니다. 자세한 내용은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.  
   
-|이벤트 ID|심볼 이름|텍스트|참고|  
+|이벤트 ID|심볼 이름|텍스트 모드|참고|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스: %n구성 파일을 지정하는 레지스트리 설정이 없습니다. %n기본 구성 파일을 로드하려고 합니다.|구성 파일의 경로가 포함된 레지스트리 항목이 없거나 비어 있습니다.|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스 구성 파일이 없습니다.%n기본 설정을 사용하여 로드하고 있습니다.|지정된 위치에 구성 파일 자체가 없습니다.|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="other-messages"></a>기타 메시지  
   
-|이벤트 ID|심볼 이름|텍스트|참고|  
+|이벤트 ID|심볼 이름|텍스트 모드|참고|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스: 패키지 실행을 중지하고 있습니다.%n패키지 인스턴스 ID: %1%n패키지 ID: %2%n패키지 이름: %3%n패키지 설명: %4%n패키지|서비스가 실행 중인 패키지를 중지하려고 하고 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 실행 중인 패키지를 모니터링하고 중지할 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 패키지를 관리하는 방법은 [패키지 관리&#40;SSIS 서비스&#41;](../../integration-services/service/package-management-ssis-service.md)를 참조하세요.|  
 
@@ -105,4 +104,3 @@ ms.lasthandoff: 08/03/2017
  
 ## <a name="related-tasks"></a>관련 작업  
  로그 항목을 보는 방법은 [통합 서비스 패키지에 의해 기록된 이벤트](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-

@@ -3,7 +3,7 @@ title: "Open 메서드 (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO MD]
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c23630224808a70c20583759b6d62c8475ede66a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 35faf0a1217f5b558c9781644cb9ea115e602584
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-md"></a>ADO MD open 메서드
 다차원 쿼리 결과 검색 하 고 결과를 반환 된 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)합니다.  
@@ -61,4 +60,3 @@ Cellset.Open Source, ActiveConnection
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [ADO MD source 속성](../../../ado/reference/ado-md-api/source-property-ado-md.md)   
  [State 속성(ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)
-

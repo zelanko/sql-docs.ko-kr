@@ -22,17 +22,16 @@ helpviewer_keywords:
 - combining conditions
 - OR operator
 ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 590410dd84275f63bc610ac436410c7d323eb8e3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 32e93a12ed79b6cbb2f2796e6362ba97f69abc21
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="or-transact-sql"></a>OR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +63,7 @@ boolean_expression OR boolean_expression
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|UNKNOWN|  
-|**알 수 없음**|TRUE|UNKNOWN|UNKNOWN|  
+|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `vEmployeeDepartmentHistory` 뷰를 사용하여 저녁 시간 또는 야간 교대 근무조에 속해 있는 `Quality Assurance` 직원의 이름을 검색합니다. 괄호를 생략하면 이 쿼리는 저녁 시간 근무조에 속한 `Quality Assurance` 직원과 야간 교대 근무조에 속한 모든 직원을 반환합니다.  
@@ -106,6 +105,5 @@ WHERE BaseRate < 10 OR HireDate >= '2001-01-01';
  [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-
 
 

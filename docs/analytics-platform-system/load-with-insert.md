@@ -3,10 +3,10 @@ title: "INSERT 사용 하 여 데이터를 로드 합니다."
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
 caps.latest.revision: "21"
-ms.openlocfilehash: 059dc1e8601fb02aac9a91631a161bae1e995389
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 625b6938ebbb2d0b753cb1a35f5c1df7372c6cca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-data-with-insert"></a>INSERT 사용 하 여 데이터를 로드 합니다.
 
@@ -129,8 +129,8 @@ SQL Server 병렬 데이터 웨어하우스 (PDW) 분산 또는 복제 된 테�
   
 |리터럴 형식|형식|변환 규칙|  
 |------------|------|----------------|
-|에 문자열 리터럴이 **정수** 형식|' nnnnnnnnnnnnnn'<br /><br />예: ' 321312313123'| 없음 |  
-|정수 리터럴|nnnnnnnnnnnnnn<br /><br />예: 321312313123| 없음|  
+|에 문자열 리터럴이 **정수** 형식|' nnnnnnnnnnnnnn'<br /><br />예: ' 321312313123'| InclusionThresholdSetting |  
+|정수 리터럴|nnnnnnnnnnnnnn<br /><br />예: 321312313123| InclusionThresholdSetting|  
 |10 진 리터럴|nnnnnn.nnnnn<br /><br />예: 123344.34455|값을 소수점의 오른쪽이 잘립니다.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>money 및 smallmoney 데이터 형식  
@@ -153,10 +153,10 @@ Money 리터럴 값은 선택적 소수점 및 통화 기호 접두사를 가진
   
 |리터럴 형식|형식|변환 규칙|  
 |----------------|----------|--------------------|  
-|문자열 리터럴|형식: ' 문자열 '<br /><br />예: ' abc'| 없음|  
-|유니코드 문자열 리터럴|형식: N'character 문자열 '<br /><br />예: 갖게 '|  없음 |  
-|정수 리터럴|형식: nnnnnnnnnnn<br /><br />예: 321312313123| 없음 |  
-|10 진 리터럴|형식: nnnnnn.nnnnnnn<br /><br />예: 12344.34455| 없음 |  
+|문자열 리터럴|형식: ' 문자열 '<br /><br />예: ' abc'| InclusionThresholdSetting|  
+|유니코드 문자열 리터럴|형식: N'character 문자열 '<br /><br />예: 갖게 '|  InclusionThresholdSetting |  
+|정수 리터럴|형식: nnnnnnnnnnn<br /><br />예: 321312313123| InclusionThresholdSetting |  
+|10 진 리터럴|형식: nnnnnn.nnnnnnn<br /><br />예: 12344.34455| InclusionThresholdSetting |  
 |Money 리터럴|형식: $nnnnnn.nnnnn<br /><br />예제: $ 123456.99|통화 기호 값으로 삽입 되지 않습니다. 통화 기호를 삽입 하려면 값을 문자열 리터럴로 삽입 합니다. 형식에 맞게이 **dwloader** 모든 리터럴 문자열 리터럴로 처리 되는 도구입니다.<br /><br />쉼표는 허용 되지 않습니다.<br /><br />소수점 뒤의 자릿수 2를 초과 하는 경우 값이 가장 가까운 값으로 반올림 됩니다. 예를 들어 값 123.946789 123.95로 삽입 됩니다.<br /><br />Money 리터럴을 삽입할 CONVERT 함수를 사용 하는 경우 기본 스타일 0 (쉼표가 없는 및 소수점 뒤 두 자리)만 허용 됩니다.|  
 
   

@@ -2,32 +2,32 @@
 title: "자동으로 특성 멤버의 그룹화 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a20c511000cf9489e817ab5f4da4531205a691f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lesson 4-3-자동으로 특성 멤버 그룹화
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 큐브를 찾아볼 때 일반적으로 한 특성 계층의 멤버 차원은 다른 특성 계층의 멤버별로 구분합니다. 예를 들어 고객 판매를 도시별, 구매 제품별 또는 성별로 그룹화할 수 있습니다. 그러나 특정 특성 유형의 경우에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 특성 계층 내의 멤버 배포에 따라 자동으로 특성 멤버를 그룹화하도록 하는 것이 유용합니다. 예를 들어 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 고객의 연간 소득 값 그룹을 만들도록 할 수 있습니다. 이 작업을 수행하면 특성 계층을 찾아보는 사용자는 멤버 자체가 아니라 그룹의 이름과 값을 보게 됩니다. 이렇게 하면 사용자에게 표시되는 수준 수가 제한되므로 분석하는 데 보다 유용합니다.  
   
 **DiscretizationMethod** 속성은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 그룹화 생성 여부 및 수행되는 그룹화 유형을 결정합니다. 기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 그룹화를 수행하지 않습니다. 자동 그룹화를 사용하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 특성 구조에 따라 최적의 그룹화 방법을 자동으로 결정하도록 허용하거나 다음 목록에서 그룹화 알고리즘 중 하나를 선택하여 그룹화 방법을 지정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 **Clusters**  
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 가우스 분포와 함께 K-Means 클러스터링 메서드를 사용하여 입력 값에 단일 차원 클러스터링을 수행하는 방식으로 그룹을 만듭니다. 이 옵션은 숫자 열에만 유효합니다.  
   
-그룹화 방법을 지정한 후에 **DiscretizationBucketCount** 속성을 사용하여 그룹 수를 지정해야 합니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+그룹화 방법을 지정한 후에 **DiscretizationBucketCount** 속성을 사용하여 그룹 수를 지정해야 합니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.  
   
 이 항목의 태스크에서는 **Customer** 차원의 연간 소득 값, **Employees** 차원의 직원 병가 시간 및 **Employees** 차원의 직원 휴가 시간에 대해 서로 다른 유형의 그룹화를 사용하도록 설정한 다음 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브를 처리하고 검색하여 멤버 그룹의 결과를 표시하고, 마지막으로 멤버 그룹 속성을 수정하여 그룹화 유형의 변경 결과를 표시하는 방법에 대해 설명합니다.  
   
@@ -136,8 +136,7 @@ ms.lasthandoff: 09/01/2017
 [특성 계층 숨기기 및 비활성화](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[특성 멤버 그룹화&#40;불연속화&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[특성 멤버 그룹화 &#40; 불연속화 &#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   
-

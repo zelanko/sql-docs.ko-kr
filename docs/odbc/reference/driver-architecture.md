@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], architecture
 ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe6ffa26bdae5f4d40257b36e9776cff95d8f9ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a74f6e1b212f570ba9aa47a09310b63b13ee0e42
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-architecture"></a>드라이버 아키텍처
 드라이버 아키텍처는 SQL 문에 있는 소프트웨어 프로세스에 따라 두 가지 범주에 해당 됩니다.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 -   [네트워크 예제](../../odbc/reference/network-example.md)  
   
 -   [기타 드라이버 아키텍처](../../odbc/reference/other-driver-architectures.md)
-

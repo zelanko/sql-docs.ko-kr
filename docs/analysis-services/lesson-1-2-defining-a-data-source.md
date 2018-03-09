@@ -2,32 +2,32 @@
 title: "데이터 원본 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
-caps.latest.revision: 28
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 81bdb79296ca864999d31c487cabf490ba0e0659
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c8256f6029efcb956e68325b134b72fcce452c8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>단원 1-2-데이터 원본 정의
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만든 후 일반적으로 프로젝트에 사용할 하나 이상의 데이터 원본을 정의하여 프로젝트 작업을 시작합니다. 데이터 원본을 정의하면 데이터 원본에 연결하는 데 사용할 연결 문자열 정보가 정의됩니다. 자세한 내용은 [데이터 원본 만들기&#40;SSAS 다차원&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)를 참조하세요.  
   
 다음 태스크에서는 AdventureWorksDWSQLServer2012 예제 데이터베이스를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 데이터 원본으로 정의합니다. 이 자습서에서는 이 데이터베이스가 로컬 컴퓨터에 있지만 원본 데이터베이스는 대부분 하나 이상의 원격 컴퓨터에서 호스팅됩니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  **연결 정의 방법 선택** 페이지에서 새 연결, 기존 연결 또는 이전에 정의한 데이터 원본 개체를 기반으로 데이터 원본을 정의할 수 있습니다. 이 자습서에서는 새 연결을 기반으로 데이터 원본을 정의합니다. **기존 연결 또는 새 연결을 사용하여 데이터 원본 만들기** 가 선택되어 있는지 확인한 다음 **새로 만들기**를 클릭합니다.  
   
-4.  **연결 관리자** 대화 상자에서 데이터 원본에 대한 연결 속성을 정의합니다. **공급자** 목록 상자에서 **네이티브 OLE DB\SQL Server Native Client 11.0** 이 선택되어 있는지 확인합니다.  
+4.  **연결 관리자** 대화 상자에서 데이터 원본에 대한 연결 속성을 정의합니다. **공급자** 목록 상자에서 **네이티브 OLE DB\SQL Server Native Client 11.0**이 선택되어 있는지 확인합니다.  
   
     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 **공급자** 목록에 표시된 다른 공급자도 지원합니다.  
   
@@ -64,7 +64,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [데이터 원본 뷰 정의](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [데이터 원본 만들기&#40;SSAS 다차원&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
-

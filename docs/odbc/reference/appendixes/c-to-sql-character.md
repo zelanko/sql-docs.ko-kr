@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], character
 - converting data from c to SQL types [ODBC], character
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1496d6d5a6f130b7eea47ad11a47e763a7958e08
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8d6ab676fc351afd7819c1fe60d59a58bfe7207
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-character"></a>C에서 SQL로: 문자
 ODBC C 데이터 형식 문자에 대 한 식별자는.  
@@ -72,4 +70,3 @@ ODBC C 데이터 형식 문자에 대 한 식별자는.
   
 > [!NOTE]  
 >  응용 프로그램 개발자는 C 문자 데이터를 이진 SQL 데이터 형식에 바인딩 해서는 안 됩니다. 이 변환은 일반적으로 비효율적인 및 느립니다.
-

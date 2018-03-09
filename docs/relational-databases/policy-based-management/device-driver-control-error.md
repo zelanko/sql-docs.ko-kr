@@ -2,27 +2,30 @@
 title: "장치 드라이버 컨트롤 오류 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36f3952128e8c2b0476a3b5647263410d395561e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 15ef584c3cc7aed5e25c5f564ad0ca94b7b70be0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="device-driver-control-error"></a>장치 드라이버 컨트롤 오류
-  이 규칙은 시스템 이벤트 로그에서 EventId 11을 검사합니다. 이 오류는 손상된 장치 드라이버, 하드웨어 문제, 잘못된 케이블 연결 또는 기타 연결 문제로 인해 발생할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 규칙은 시스템 이벤트 로그에서 EventId 11을 검사합니다. 이 오류는 손상된 장치 드라이버, 하드웨어 문제, 잘못된 케이블 연결 또는 기타 연결 문제로 인해 발생할 수 있습니다.  
   
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  
  이 오류를 해결하는 방법은 다음 Microsoft 기술 자료 문서를 참조하십시오.  

@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 85d11ebb5fd4245a7c6b5cf7c277e45d8df90011
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 101879f45583fc46d5bc4aecc3ff11a92aed5112
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>지원 되지 않는 Visual FoxPro 명령 및 함수 (Visual FoxPro ODBC 드라이버)
 다음 표에서 Visual FoxPro ODBC 드라이버에서 지원 되지 않지만 Microsoft® Visual FoxPro®에서 사용할 수 있는 FoxPro 명령 및 함수를 나열 합니다.  
@@ -87,7 +85,7 @@ ms.lasthandoff: 09/09/2017
 |화면 명령 만들기|SQL 보기 명령 만들기|트리거 명령 만들기|  
 |만들기 뷰 명령|CREATEOBJECT () 함수|CURDIR () 함수|  
   
-## <a name="d"></a>D  
+## <a name="d"></a>d  
   
 ||||  
 |-|-|-|  
@@ -328,4 +326,3 @@ ms.lasthandoff: 09/09/2017
 ||||  
 |-|-|-|  
 |확대/축소 창 명령|||
-

@@ -5,7 +5,7 @@ ms.date: 02/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,22 +18,21 @@ helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 28
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: a60fddbc00fa808590a06bc3263dfe6bc966f18b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-overview-mds"></a>MDS(Master Data Services) 개요
   이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 주요 데이터 구성 및 관리 기능을 설명합니다. 
   
- [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 사용하면 조직 데이터의 마스터 집합을 관리할 수 있습니다. 데이터를 모델로 구성하고, 데이터를 업데이트하는 규칙을 만들고, 데이터를 누가 업데이트하는지 제어할 수 있습니다. Excel을 사용하면 조직의 다른 사람들과 마스터 데이터 집합을 공유할 수 있습니다. 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 사용하면 조직 데이터의 마스터 집합을 관리할 수 있습니다. 데이터를 모델로 구성하고, 데이터를 업데이트하는 규칙을 만들고, 데이터를 누가 업데이트하는지 제어할 수 있습니다. Excel을 사용하면 조직의 다른 사람들과 마스터 데이터 집합을 공유할 수 있습니다. 
   
  >  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 아키텍처에 대한 설명은 simple-talk.com의 [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) (Master Data Services -- 기본 사항) 문서를 참조하세요. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 새로운 기능에 대한 자세한 내용은 [MDS&#40;Master Data Services&#41;의 새로운 기능](../master-data-services/what-s-new-in-master-data-services-mds.md)을 참조하세요.  
    **[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하는 방법에 대한 자세한 내용은** [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md)을 참조하세요.  
@@ -56,12 +55,12 @@ ms.lasthandoff: 09/07/2017
   
  데이터에 대한 기본 구조를 정의한 후 가져오기 기능을 사용하여 데이터 레코드(멤버)의 추가를 시작할 수 있습니다. 준비 표에 데이터를 로드하고, 비즈니스 규칙을 사용하여 데이터의 유효성을 검사하고, MDS 표에 데이터를 로드합니다.  비즈니스 규칙을 사용하여 특성 값을 설정할 수도 있습니다.  
   
- 다음 표에 주요 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 작업이 정리되어 있습니다. 다른 언급이 없는 경우 아래의 모든 절차를 수행하려면 사용자가 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+ 다음 표에 주요 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 작업이 정리되어 있습니다. 다른 언급이 없는 경우 아래의 모든 절차를 수행하려면 사용자가 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 > [!NOTE]  
 >  테스트 환경에서 다음 태스크를 완료하고 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치할 때 제공된 샘플 데이터를 사용할 수 있습니다. 자세한 내용은 [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)를 참조하세요.  
   
-|동작|세부 정보|관련 항목|  
+|작업|세부 정보|관련 항목|  
 |------------|-------------|--------------------|  
 |모델 만들기|모델을 만들면 VERSION_1로 간주됩니다.|[모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)<br /><br /> [모델 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
 |엔터티 만들기|멤버를 포함하는 데 필요한 만큼 엔터티를 만듭니다.|[엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)<br /><br /> [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
@@ -82,5 +81,4 @@ ms.lasthandoff: 09/07/2017
  준비가 끝나면 데이터를 포함하거나 포함하지 않는 모델을 프로덕션 환경에 배포할 수 있습니다. 자세한 내용은 [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)를 참조하세요.  
   
   
-
 

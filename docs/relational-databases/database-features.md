@@ -8,20 +8,21 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 82285d59fa04d06f3a4aef08b3961de1ac26ca90
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a02da95146315df2b8c9026376337b8e05658798
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Microsoft SQL 관계형 데이터베이스를 사용하기 위한 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
 - [온-프레미스 SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md) 및 [SQL Server 구성](../database-engine/configure-windows/sql-server-database-engine.md)  
 - [SQL Server on Linux Documentation](../linux/sql-server-linux-overview.md)  
-- [Azure SQL Database*](https://docs.microsoft.com/azure/sql-database/)  
+- [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)  
 - [Azure SQL 데이터 웨어하우스](https://docs.microsoft.com/azure/sql-data-warehouse/)  
 - [병렬 데이터 웨어하우스](https://www.microsoft.com/en-us/download/details.aspx?id=51610)  
 

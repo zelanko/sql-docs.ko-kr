@@ -1,29 +1,29 @@
 ---
-title: "숨겨진된 데이터 집합 매개 변수 값-다차원 데이터에 대 한 표시 | Microsoft Docs"
+title: "다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 55e44a7468fb08372e5f718fe8fc4bbd1846cb84
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fe04cae6783949c517a9a75a715ea4250577643c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>매개 변수 값-다차원 데이터에 대해 숨겨진된 데이터 집합 표시
+# <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시
   보고서에는 보고서 데이터 창에 기본적으로 표시되지 않는 자동 생성 데이터 집합(숨겨진 데이터 집합이라고도 함)이 포함될 수도 있습니다. 이러한 데이터 집합은 다음과 같은 방법으로 생성됩니다.  
   
 -   다차원 데이터베이스에 대해 사용할 수 있는 일부 쿼리 디자이너에서는 쿼리 창의 필터 영역에서 필터링할 필드를 지정하고, 필터에 쿼리 매개 변수를 만들지 여부를 선택할 수 있습니다. 매개 변수 옵션을 선택하면 보고서 매개 변수에 올바른 값을 제공하기 위해 보고서 데이터 집합이 자동으로 만들어집니다.  
@@ -41,11 +41,10 @@ ms.lasthandoff: 08/09/2017
   
 -   보고서 데이터 창에서 데이터 집합 폴더를 마우스 오른쪽 단추로 클릭한 다음 **숨겨진 데이터 집합 표시**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [쿼리 디자이너 &#40; 보고서 작성기 &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
+## <a name="see-also"></a>참고 항목  
+ [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
  [Reporting Services 쿼리 디자이너](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
- [보고서는 데이터 집합 및 공유 데이터 집합 &#40; 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-

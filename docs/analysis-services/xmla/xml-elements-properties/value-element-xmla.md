@@ -2,15 +2,13 @@
 title: "값 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Value Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0e3954de89983d545df118398398128568eff3f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d40497916d4ec482fae217dfbddac4a12bd011d0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="value-element-xmla"></a>Value 요소(XMLA)
-  원하는 값이 포함 된 [특성](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) 요소에 추가할 수는 [삽입](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) 명령, 또는 [셀](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) 을 업데이트 하는 요소는 [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)명령입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]원하는 값이 포함 된 [특성](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) 요소에 추가할 수는 [삽입](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) 명령, 또는 [셀](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) 을 업데이트 하는 요소는 [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,10 +48,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|전체|  
-|기본값|없음|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[특성](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md), [셀](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  에 대 한 **특성** 요소는 **값** 후 멤버가 포함 해야 하는 원하는 값을 포함 하는 요소는 **삽입** 명령 커밋됩니다. 멤버 삽입 하는 방법에 대 한 자세한 내용은 참조 [삽입, 업데이트 및 삭제 멤버 &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  

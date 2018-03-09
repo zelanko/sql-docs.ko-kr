@@ -2,16 +2,13 @@
 title: "기본 MDX 쿼리 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +18,20 @@ helpviewer_keywords:
 - SELECT statement [MDX]
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 46373fffaba2935a6faa9efa6deddebd6ce66ceb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9abd75f8cbed78630caac64447b8df59cde3ea56
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-query---the-basic-query"></a>MDX 쿼리-기본 쿼리
-  기본 MDX 쿼리는 SELECT 문이며 이 문은 MDX에서 가장 자주 사용되는 쿼리입니다. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+기본 MDX 쿼리는 SELECT 문이며 이 문은 MDX에서 가장 자주 사용되는 쿼리입니다. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  
   
 ## <a name="specifying-a-result-set"></a>결과 집합 지정  
  MDX에서 SELECT 문은 큐브로부터 반환된 다차원 데이터의 하위 집합이 포함되는 결과 집합을 지정합니다. 결과 집합을 지정하려면 MDX 쿼리에 다음과 같은 정보가 포함되어야 합니다.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 -   MDX SELECT 문의 쿼리 축을 결정하는 SELECT 절. SELECT 절의 쿼리 축 구성에 대한 자세한 내용은 [쿼리 축의 내용 지정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)을 참조하세요.  
   
--   쿼리될 큐브를 결정하는 FROM 절. FROM 절에 대한 자세한 내용은 [SELECT 문&#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)을 참조하세요.  
+-   쿼리될 큐브를 결정하는 FROM 절. FROM 절에 대한 자세한 내용은 [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)을 참조하세요.  
   
 -   반환되는 데이터를 제한하기 위해 slicer 축에서 사용할 멤버나 튜플을 결정하는 선택적인 WHERE 절. WHERE 절의 slicer 축 구성에 대한 자세한 내용은 [Slicer 축의 내용 지정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)을 참조하세요.  
   
@@ -69,7 +67,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- MDX SELECT 문은 WITH 키워드, 축 또는 slicer 축에 포함할 계산된 멤버를 만들기 위한 MDX 함수의 사용, 쿼리의 일부로 특정 셀 속성의 값을 반환하는 기능 등의 선택적 구문을 지원합니다. MDX SELECT 문에 대한 자세한 내용은 [SELECT 문&#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)을 참조하세요.  
+ MDX SELECT 문은 WITH 키워드, 축 또는 slicer 축에 포함할 계산된 멤버를 만들기 위한 MDX 함수의 사용, 쿼리의 일부로 특정 셀 속성의 값을 반환하는 기능 등의 선택적 구문을 지원합니다. MDX SELECT 문에 대한 자세한 내용은 [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)을 참조하세요.  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>MDX SELECT 문의 구문과 SQL 구문 비교  
  MDX SELECT 문의 구문 형식은 SQL 구문과 비슷합니다. 하지만 다음과 같은 점에서 근본적인 차이가 있습니다.  
@@ -117,8 +115,8 @@ WHERE ( [Sales Territory].[Southwest] )
   
  자세한 예는 [쿼리 축의 내용 지정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) 및 [Slicer 축의 내용 지정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [MDX &#40;의 주요 개념 Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [SELECT 문 &#40; Mdx&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

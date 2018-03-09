@@ -1,16 +1,14 @@
 ---
 title: "AMO 데이터 마이닝 클래스 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a1a5ca970ee22d91b06a945e8a3b600b74892790
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a4eeb92697ce1a6a8475fa973a51ee6bdf9536b0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-data-mining-classes"></a>AMO 데이터 마이닝 클래스
   데이터 마이닝 클래스는 데이터 마이닝 개체를 만들고, 수정하고, 삭제하고, 처리하는 데 사용됩니다. 데이터 마이닝 개체 작업에는 데이터 마이닝 구조 만들기, 데이터 마이닝 모델을 만들기 및 모델 처리가 포함됩니다.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 09/01/2017
   
  ![AMO 데이터 마이닝 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "AMO 데이터 마이닝 클래스")  
   
-##  <a name="MiningStructure"></a>MiningStructure 개체  
+##  <a name="MiningStructure">MiningStructure 개체</a>  
  마이닝 구조는 마이닝 모델의 컨테이너입니다. 이 구조에는 마이닝 모델에서 사용 가능한 열이 모두 정의되어 있습니다. 각 마이닝 모델에는 구조에 정의된 열 집합의 고유한 열이 정의되어 있습니다.  
   
  단순 <xref:Microsoft.AnalysisServices.MiningStructure> 개체는 기본 정보, 데이터 원본 뷰, 하나 이상의 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, 0개 이상의 <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> 및 <xref:Microsoft.AnalysisServices.MiningModelCollection>으로 구성되어 있습니다.  
@@ -101,7 +98,7 @@ ms.lasthandoff: 09/01/2017
   
  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>을 제거하려면 부모 <xref:Microsoft.AnalysisServices.MiningStructure>의 컬렉션에서 해당 개체를 제거한 후 Update 메서드를 사용하여 부모 <xref:Microsoft.AnalysisServices.MiningStructure> 개체를 서버로 업데이트해야 합니다.  
   
-##  <a name="MiningModel"></a>MiningModel 개체  
+##  <a name="MiningModel">MiningModel 개체</a>  
  <xref:Microsoft.AnalysisServices.MiningModel>은 사용할 구조의 열, 사용할 알고리즘 및 모델을 조정하는 특정 매개 변수(옵션)를 선택할 수 있는 개체입니다. 예를 들어, 동일한 알고리즘을 사용하는 동일한 마이닝 구조의 여러 마이닝 모델을 정의해야 할 수 있습니다. 한 모델에 있는 마이닝 구조의 일부 열을 무시하려면 해당 열을 다른 모델에서 입력으로 사용하고 세 번째 모델에서 입력 및 예측으로 사용합니다. 이 방법은 한 마이닝 모델에서는 열을 연속 열로 처리하고 다른 모델에서는 열을 불연속화 열로 처리하는 경우에 유용합니다.  
   
  단순 <xref:Microsoft.AnalysisServices.MiningModel> 개체는 기본 정보, 알고리즘 정의 및 열로 구성되어 있습니다.  
@@ -127,4 +124,3 @@ ms.lasthandoff: 09/01/2017
  [데이터베이스 개체 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

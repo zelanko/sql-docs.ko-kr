@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - C data types [ODBC], Unicode
 - SQL data types [ODBC], Unicode
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3bb3278fe83922aee29aa8348d32b3fbc757511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-data"></a>유니코드 데이터
 SQL 유니코드 데이터 형식은 고유 하 게 하는 DBMS에서 유니코드로에 있는 데이터를 설명 하기 위해 제공 됩니다. C 유니코드 데이터 형식은 응용 프로그램 데이터를 유니코드 버퍼에 바인딩할 수 있도록 제공 됩니다. 드라이버 관리자 유니코드 C 형식 있도록 (SQL_C_WCHAR)에서 데이터를 변환할 수는 ANSI 드라이버로 함수입니다.  
@@ -56,4 +54,3 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  유니코드 드라이버 ANSI 데이터 형식에 SQL_CHAR 에서도 지원 해야 합니다. 유니코드 드라이버로 작업 하는 응용 프로그램 SQL_CHAR를 바인딩할 경우 드라이버 관리자 SQL_CHAR 데이터 SQL_WCHAR에에 매핑되지 않습니다. 유니코드 드라이버 SQL_CHAR 데이터 동의 해야 합니다.  
   
  드라이버 관리자는 유니코드로 드라이버 및 DSN 이름을 저장 하 고 필요에 따라 ANSI로 매핑합니다. 변환 될 수 없는 문자는 기본 문자 sup으로 표현 됩니다 (컴퓨터의 네이티브 코드 페이지 하지 않은 코드 페이지 드라이버 및 DSN 이름에 사용 되는 경우 발생할 수 있습니다) 처럼를 ANSI 문자로 유니코드 문자를 매핑할 수 없으면, 시스템에서 plied 합니다.
-

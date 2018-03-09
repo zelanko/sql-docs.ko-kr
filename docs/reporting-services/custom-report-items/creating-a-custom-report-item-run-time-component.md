@@ -2,41 +2,39 @@
 title: "사용자 지정 보고서 항목 런타임 구성 요소 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, creating
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
-caps.latest.revision: 33
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "33"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: c8da0d4ac6024281315dc2e8b0b398904c8a1e6c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 4f3a03a71e6fac9b0e7803d94075a89bd8abd32b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>사용자 지정 보고서 항목 런타임 구성 요소 만들기
-  사용자 지정 보고서 항목 런타임 구성 요소는로 구현 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모든 CLS 호환 언어를 사용 하 여 구성 런타임에 보고서 처리기에서 호출 됩니다. 사용자 지정 보고서 항목의 해당 디자인 타임 구성 요소를 수정하여 디자인 환경에서 런타임 구성 요소에 대한 속성을 정의합니다.  
+  사용자 지정 보고서 항목 런타임 구성 요소는 CLS 호환 언어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현되며 런타임에 보고서 처리기에 의해 호출됩니다. 사용자 지정 보고서 항목의 해당 디자인 타임 구성 요소를 수정하여 디자인 환경에서 런타임 구성 요소에 대한 속성을 정의합니다.  
   
- 완전히 구현 된 사용자 지정 보고서 항목의 샘플을 보려면 [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)합니다.  
+ 완전히 구현된 사용자 지정 보고서 항목 예는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
 ## <a name="definition-and-instance-objects"></a>정의 및 인스턴스 개체  
- 사용자 지정 보고서 항목을 구현 하기 전에 간의 차이 이해 하는 *정의 개체* 및 *인스턴스 개체*합니다. 정의 개체는 사용자 지정 보고서 항목의 RDL 표현을 제공하고, 인스턴스 개체는 정의 개체의 평가된 버전입니다. 보고서의 각 항목에 정의 개체는 하나만 있습니다. 식이 포함된 정의 개체의 속성에 액세스할 때 사용자는 평가되지 않은 식 문자열을 받습니다. 인스턴스 개체는 정의 개체의 평가된 버전을 포함하고 항목의 정의 개체와 일 대 다 관계를 맺을 수 있습니다. 예를 들어, 보고서의 정보 행에 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix>이 포함된 <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> 데이터 영역이 있는 경우 정의 개체는 하나뿐이지만 인스턴스 개체는 데이터 영역의 각 행마다 있습니다.  
+ 사용자 지정 보고서 항목을 구현하기 전에 *정의 개체*와 *인스턴스 개체*의 차이점을 알아야 합니다. 정의 개체는 사용자 지정 보고서 항목의 RDL 표현을 제공하고, 인스턴스 개체는 정의 개체의 평가된 버전입니다. 보고서의 각 항목에 정의 개체는 하나만 있습니다. 식이 포함된 정의 개체의 속성에 액세스할 때 사용자는 평가되지 않은 식 문자열을 받습니다. 인스턴스 개체는 정의 개체의 평가된 버전을 포함하고 항목의 정의 개체와 일 대 다 관계를 맺을 수 있습니다. 예를 들어, 보고서의 정보 행에 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix>이 포함된 <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> 데이터 영역이 있는 경우 정의 개체는 하나뿐이지만 인스턴스 개체는 데이터 영역의 각 행마다 있습니다.  
   
 ## <a name="implementing-the-icustomreportitem-interface"></a>ICustomReportItem 인터페이스 구현  
- 만들려는 **CustomReportItem** 런타임 구성 요소를 구현 해야 합니다는 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> Microsoft.ReportingServices.ProcessingCore.dll에 정의 된 인터페이스:  
+ **CustomReportItem** 런타임 구성 요소를 만들려면 Microsoft.ReportingServices.ProcessingCore.dll에 정의된 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> 인터페이스를 구현해야 합니다.  
   
 ```csharp  
 namespace Microsoft.ReportingServices.OnDemandReportRendering  
@@ -139,11 +137,10 @@ namespace Microsoft.Samples.ReportingServices
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 보고서 항목 아키텍처](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
  [사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
  [사용자 지정 보고서 항목 클래스 라이브러리](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
  [방법: 사용자 지정 보고서 항목 배포](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
-

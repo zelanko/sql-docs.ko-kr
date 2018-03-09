@@ -2,31 +2,30 @@
 title: "오류 및 이벤트 참조 (SharePoint 용 파워 피벗) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 95970bab-aa4d-4e8e-be86-0c96e95a5d0c
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6a8300259dd2ac5a670a69677cfb7153d30c9825
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cc04fbd07b9ce2bf5896a3e201d02ed6745e0a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="errors-and-events-reference-power-pivot-for-sharepoint"></a>오류 및 이벤트 참조(SharePoint용 파워 피벗)
-  이 섹션에서는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 오류 및 이벤트에 대해 설명합니다. 이 섹션의 오류는 로그 또는 오류 창에 표시되는 오류 메시지 텍스트로 식별됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 섹션에서는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 오류 및 이벤트에 대해 설명합니다. 이 섹션의 오류는 로그 또는 오류 창에 표시되는 오류 메시지 텍스트로 식별됩니다.  
   
  이 섹션에 설명된 오류 메시지 목록을 보려면 온라인 설명서의 내용 창을 사용합니다.  
   
@@ -35,4 +34,3 @@ ms.lasthandoff: 09/01/2017
  [SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)  
   
   
-

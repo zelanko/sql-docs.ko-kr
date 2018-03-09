@@ -1,36 +1,33 @@
 ---
-title: "테이블 형식 모델 파티션 (SSAS 테이블 형식) | Microsoft Docs"
+title: "테이블 형식 모델 파티션 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
 ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
-caps.latest.revision: 11
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: daaca1355790577310419ad5a48395cd9cb8ff34
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03122814773bd2e11b0ea1dc24b91b4c21a8f1a8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="tabular-model-partitions-ssas-tabular"></a>테이블 형식 모델 파티션(SSAS 테이블 형식)
-  파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 모델에 대해 정의한 파티션은 배포된 모델에서 복제됩니다. 배포한 후에는 **의** 파티션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자 또는 스크립트를 사용하여 파티션을 관리하고 새 파티션을 만들 수 있습니다. 이 항목에서 제공하는 정보는 배포된 테이블 형식 model 데이터베이스의 파티션에 대해 설명합니다. 모델을 제작하는 동안 파티션을 만들고 관리하는 방법에 대한 자세한 내용은 [파티션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
+# <a name="tabular-model-partitions"></a>테이블 형식 모델 파티션 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 모델에 대해 정의한 파티션은 배포된 모델에서 복제됩니다. 배포한 후에는 **의** 파티션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자 또는 스크립트를 사용하여 파티션을 관리하고 새 파티션을 만들 수 있습니다. 이 항목에서 제공하는 정보는 배포된 테이블 형식 model 데이터베이스의 파티션에 대해 설명합니다. 파티션을 만들고 관리 하는 동안 모델을 제작 하는 방법에 대 한 자세한 내용은 참조 [파티션을](../../analysis-services/tabular-models/partitions-ssas-tabular.md)합니다.  
   
  이 항목의 섹션:  
   
@@ -72,7 +69,7 @@ ms.lasthandoff: 09/01/2017
 |처리|읽기, 처리|  
 |읽기 전용|읽기|  
   
- 모델을 제작하는 동안 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 역할을 만드는 방법에 대한 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)을 참조하세요. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 배포된 테이블 형식 모델 역할의 역할 멤버를 관리하는 방법에 대한 자세한 내용은 [테이블 형식 모델 역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)을 참조하세요.  
+ 사용 하 여 모델 제작 중에 역할을 만드는 방법에 대 한 자세한 내용을 보려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 참조 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)합니다. 역할 멤버를 사용 하 여 테이블 형식 모델 역할 배포를 관리 하는 방법에 대 한 자세한 내용을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 참조 [테이블 형식 모델 역할](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_parallelProc"></a> 병렬 처리  
 Analysis Services 처리 성능이 향상 두 개 이상의 파티션이 있는 테이블에 대 한 병렬 처리에 포함 되어 있습니다. 병렬 처리에 대한 구성 설정은 없습니다(참고 참조). 병렬 처리는 테이블을 처리하거나 동일한 테이블 및 프로세스에 대해 여러 파티션을 선택할 때 기본적으로 발생합니다. 테이블의 파티션을 독립적으로 처리하도록 선택할 수 있습니다.  
@@ -98,8 +95,7 @@ Analysis Services 처리 성능이 향상 두 개 이상의 파티션이 있는 
   
 |태스크|Description|  
 |----------|-----------------|  
-|[테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|배포된 테이블 형식 모델에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 파티션을 만들고 관리하는 방법에 대해 설명합니다.|  
-|[테이블 형식 모델 파티션 처리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|배포된 테이블 형식 모델에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 파티션을 처리하는 방법에 대해 설명합니다.|  
+|[테이블 형식 모델 파티션 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|배포된 테이블 형식 모델에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 파티션을 만들고 관리하는 방법에 대해 설명합니다.|  
+|[테이블 형식 모델 파티션 처리](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|배포된 테이블 형식 모델에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 파티션을 처리하는 방법에 대해 설명합니다.|  
   
   
-

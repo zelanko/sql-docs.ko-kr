@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLEndTran function [ODBC], Cursor Library
+helpviewer_keywords: SQLEndTran function [ODBC], Cursor Library
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf28f3e0073a9a3461f4c52636521ed60959a783
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 50b6c5ffec8dd088bdc730699cfa88abea860768
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlendtran-cursor-library"></a>SQLEndTran (커서 라이브러리)
 > [!IMPORTANT]  
@@ -40,4 +37,3 @@ ms.lasthandoff: 09/09/2017
 -   트랜잭션 경계에서 커서를 닫습니다는 데이터 원본에 대 한 커서 라이브러리는 커서가 닫힙니다 하 고 연결의 모든 문에 대해 캐시를 삭제 합니다.  
   
 -   준비 된 문은 트랜잭션 경계를 삭제 하는 데이터 원본에 대 한 응용 프로그램을 종료할지 하기 전에 연결에서 모든 준비 된 문을 reprepare 해야 합니다.
-

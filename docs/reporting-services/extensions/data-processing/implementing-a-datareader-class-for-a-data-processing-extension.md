@@ -1,48 +1,46 @@
 ---
-title: "데이터 처리 확장 프로그램에 대 한 DataReader 클래스 구현 | Microsoft Docs"
+title: "데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - data processing extensions [Reporting Services], data readers
 - data readers [Reporting Services]
 - DataReader class
 - read-only data
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
-caps.latest.revision: 35
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "35"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: cfd3a6cb38c59b1810d046839cb3be4f0dc9846a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 617f9d0a31ced8b38c79d3a3996c13a919b004f0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현
-  **DataReader** 개체는 클라이언트가 데이터 원본에서 데이터의 읽기 전용, 정방향 전용 스트림을 검색 하는 데 사용 합니다. 쿼리를 실행 하 고 요청할 때까지 클라이언트의 네트워크 버퍼에 저장 된 결과 반환 합니다. 사용 하 여는 **읽기** 의 메서드는 **DataReader** 클래스. 만들려는 **DataReader** 클래스를 구현 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 하 고 필요에 따라 구현 <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>합니다. 사용 하는 **DataReader** 개체 증가 응용 프로그램 성능이 때 즉시 데이터를 검색 하는 전체 시스템 오버 헤드를 줄여 메모리에 한 번에 반환 하 고 기본적으로 저장 한 행 수를 쿼리 결과 대 한 대기 중인 아니라를 사용할 수 있습니다.  
+  **DataReader** 개체가 있으면 클라이언트에서는 읽기 전용, 정방향 전용 데이터 스트림을 데이터 원본에서 검색할 수 있습니다. 결과는 쿼리 실행으로 반환되고 **DataReader** 클래스의 **Read** 메서드를 사용하여 요청할 때까지 클라이언트의 네트워크 버퍼에 저장됩니다. **DataReader** 클래스를 만들려면 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader>를 구현하고 선택적으로 <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>을 구현합니다. **DataReader** 개체를 사용하면 전체 쿼리 결과가 반환될 때까지 기다리지 않고 사용 가능할 때 즉시 데이터를 검색하고 (기본적으로) 한 번에 행 한 개씩만 메모리에 저장하여 시스템 오버헤드를 줄임으로써 응용 프로그램 성능이 높아집니다.  
   
- 인스턴스를 만든 후에 **명령** 만들 클래스는 **DataReader** 호출 하 여 개체 **Command.ExecuteReader** 데이터 원본에서 행을 검색 합니다. **DataReader** 구현은 두 가지 기본 기능을 제공 해야: 정방향 전용 액세스는 결과 대해 명령과 열 유형, 이름에 대 한 액세스를 실행 하 여 얻은 설정 하 고 각 행 내에서 값입니다. 클라이언트가 사용 하는 **읽기** 의 메서드는 **DataReader** 개체를 쿼리 결과에서 행을 가져옵니다.  
+ **Command** 클래스 인스턴스를 만든 후 **Command.ExecuteReader** 호출을 통해 데이터 원본에서 행을 검색하여 **DataReader** 개체를 만듭니다. **DataReader** 구현은 두 가지 기본적인 기능을 제공해야 하며, 이 두 가지 기능은 명령 실행에서 얻은 결과 집합에 대한 정방향 전용 액세스 기능과 각 행 내의 열 유형, 이름, 값에 대한 액세스 기능입니다. 클라이언트는 **DataReader** 개체의 **Read** 메서드를 사용하여 쿼리 결과에서 행을 얻습니다.  
   
- 보고서 디자이너에서 프로그램 **DataReader** 개체와 같은 결과 집합에 대 한 스키마 정보 및 필드 목록을 검색 하는 데 사용 됩니다. 구현 하 여 이렇게는 **GetName**, **GetValue**, **GetFieldType,** 및 **GetOrdinal** 의 메서드는 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 인터페이스입니다.  
+ 보고서 디자이너에서 **DataReader** 개체는 결과 집합에 대한 스키마 정보 및 필드 목록을 검색하는 데 사용됩니다. <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 인터페이스의 **GetName**, **GetValue**, **GetFieldType,** 및 **GetOrdinal** 메서드를 구현하여 이 작업을 수행할 수 있습니다.  
   
- <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> 인터페이스를 통해 결과 집합에 대한 특정 집계 정보를 제공할 수 있습니다. 샘플 **DataReader** 클래스 구현, 참조 [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)합니다.  
+ <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> 인터페이스를 통해 결과 집합에 대한 특정 집계 정보를 제공할 수 있습니다. 예제 **DataReader** 클래스 구현은 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [데이터 처리 확장 프로그램 구현](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services 확장 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

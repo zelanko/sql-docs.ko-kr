@@ -2,9 +2,12 @@
 title: "개체 탐색기 정보를 사용하여 가용성 그룹 모니터링 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdfc53f0a3e497e95a4c987531ebdff9d3fcb236
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dc0896ba691bac565cd116a2f5da6cc70951063d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>개체 탐색기 정보를 사용하여 가용성 그룹 모니터링
-  이 항목에서는 **의** 개체 탐색기 정보 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 창을 사용하여 기존 Always On 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링하고 관리하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 **개체 탐색기 정보** 창을 사용하여 기존 Always On 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링하고 관리하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
 >  개체 탐색기 정보 창을 사용하는 방법은 [개체 탐색기 정보 창](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47)을 참조하세요.  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/09/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  주 복제본 또는 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스(서버 인스턴스)에 연결해야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
   
  가능한 값은 다음과 같습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**연결 허용 안 함**|이 가용성 복제본이 보조 복제본 역할을 하는 동안 가용성 데이터베이스에 직접 연결할 수 없습니다. 보조 데이터베이스를 읽기 액세스에 사용할 수 없습니다.|  
 |**읽기 전용 연결만 허용**|이 복제본이 보조 복제본 역할을 하는 경우 직접 읽기 전용 연결만 허용됩니다. 복제본의 모든 데이터베이스에 대한 읽기 액세스가 가능합니다.|  
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/09/2017
  **연결 상태**  
  보조 복제본이 주 복제본에 현재 연결되어 있는지 여부를 나타냅니다. 가능한 값은 다음과 같습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**연결 끊김**|원격 가용성 복제본의 경우 로컬 가용성 복제본에서 연결이 끊어져 있는지를 나타냅니다. 연결이 끊긴 상태에 대한 로컬 복제본의 응답은 역할별로 다음과 같이 다릅니다.<br /><br /> 주 복제본에서 보조 복제본의 연결이 끊어지면 보조 데이터베이스는 주 복제본에 **동기화되지 않음** 으로 표시되고 주 복제본은 보조 복제본이 다시 연결될 때까지 기다립니다.<br /><br /> 보조 복제본에서 보조 복제본의 연결이 끊어지면 보조 복제본은 주 복제본에 다시 연결하려고 시도합니다.|  
 |**연결됨**|로컬 복제본에 현재 연결되어 있는 원격 가용성 복제본입니다.|  
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/09/2017
  **동기화 상태**  
  보조 복제본이 주 복제본에 현재 동기화되어 있는지 여부를 나타냅니다. 가능한 값은 다음과 같습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**동기화되지 않음**|데이터베이스가 동기화되지 않았거나 가용성 그룹에 아직 조인되지 않았습니다.|  
 |**동기화됨**|데이터베이스가 현재 주 복제본 또는 마지막 주 복제본(있는 경우)의 주 데이터베이스와 동기화되어 있습니다.<br /><br /> 참고: 성능 모드에서 데이터베이스는 절대 동기화된 상태가 되지 않습니다.|  
@@ -127,7 +130,7 @@ ms.lasthandoff: 11/09/2017
   
  가능한 동기화 상태는 다음과 같습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |동기화 중|보조 데이터베이스가 디스크에 아직 기록(확정)되지 않은 주 데이터베이스에 대한 트랜잭션 로그 기록을 수신했습니다.<br /><br /> 참고: 비동기 커밋 모드에서 동기화 상태는 항상 **동기화 중**입니다.|  
 |||  
@@ -135,7 +138,7 @@ ms.lasthandoff: 11/09/2017
  **일시 중지됨**  
  가용성 데이터베이스가 현재 온라인 상태인지 여부를 나타냅니다. 가능한 값은 다음과 같습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**일시 중지됨**|이 상태는 데이터베이스를 로컬로 일시 중지하여 수동으로 다시 시작해야 함을 나타냅니다.<br /><br /> 주 복제본에서 보조 데이터베이스에 대한 값을 읽을 수 없습니다. 보조 데이터베이스가 일시 중지되었는지 여부를 안정적으로 결정하려면 데이터베이스를 호스팅하는 보조 복제본에서 보조 데이터베이스를 쿼리합니다.|  
 |**조인되지 않음**|보조 데이터베이스가 가용성 그룹에 조인되지 않았거나 그룹에서 제거되었음을 나타냅니다.|  

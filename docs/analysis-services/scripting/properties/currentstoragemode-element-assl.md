@@ -2,43 +2,35 @@
 title: "CurrentStorageMode 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CurrentStorageMode Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CurrentStorageMode Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CurrentStorageMode
-helpviewer_keywords:
-- CurrentStorageMode element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CurrentStorageMode
+helpviewer_keywords: CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 83a958417136ca921714653492ffe118b1ff027c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 24b284deffbf0d7c6902c132a8a87fd0e40abfb8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="currentstoragemode-element-assl"></a>CurrentStorageMode 요소(ASSL)
-  부모 요소에 대한 현재 저장소 모드를 결정합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]부모 요소에 대 한 현재 저장소 모드를 결정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|*ROLAP*|  
@@ -62,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[차원](../../../analysis-services/scripting/objects/dimension-element-assl.md), [파티션](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **CurrentStorageMode** 요소는 자동 관리 캐싱을 위해 현재 사용 중인 저장소 모드를 나타내며 부모 요소의 모든 특성에 적용됩니다.  
@@ -81,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

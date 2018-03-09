@@ -3,8 +3,9 @@ title: "CreateRecordset 메서드 (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - CreateRecordset
 - RDSServer.DataFactory::CreateRecordset
 - DataFactory::CreateRecordset
-helpviewer_keywords: CreateRecordset method [RDS]
+helpviewer_keywords:
+- CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a1bec5dc5b8c0e159755c9689aac0c9bfc40217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4ce2c6eed7dbb7e68277c054693aec089b802892
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 메서드 (RDS)
 비어 있는 만듭니다 연결이 끊어진 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -94,13 +96,13 @@ object.CreateRecordset(ColumnInfos)
 |고정|**adDBTimestamp**|135|7|  
 |변수|**adBSTR**|8|130|  
 |변수|**adChar**|129|200|  
-|변수|**집합이 있으므로 필요**|200||  
+|변수|**adVarChar**|200||  
 |변수|**adLongVarChar**|201|200|  
 |변수|**adWChar**|130||  
 |변수|**adVarWChar**|202|130|  
 |변수|**adLongVarWChar**|203|130|  
 |변수|**adBinary**|128||  
-|변수|**제외할 수**|204||  
+|변수|**adVarBinary**|204||  
 |변수|**adLongVarBinary**|205|204|  
   
 ## <a name="applies-to"></a>적용 대상  

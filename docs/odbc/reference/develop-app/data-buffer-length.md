@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1b9a95fac384f0df435bd28df9d21f3fa357e6d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 84bacf4e45760b14515d44a9d81f46de4485ee5f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-buffer-length"></a>데이터 버퍼 길이
 응용 프로그램 데이터 버퍼의 바이트 길이 드라이버에 전달 명명 된 인수로 *BufferLength* 또는 비슷한 이름입니다. 예를 들어, 다음에 호출에서 **SQLBindCol**, 응용 프로그램의 길이 지정 된 *ValuePtr* 버퍼 (**sizeof (***ValuePtr***)**):  
@@ -54,4 +52,3 @@ SQLBindCol(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   [데이터 길이, 버퍼 길이 및 잘라내기](../../../odbc/reference/develop-app/data-length-buffer-length-and-truncation.md)  
   
 -   [문자 데이터 및 C 문자열](../../../odbc/reference/develop-app/character-data-and-c-strings.md)
-

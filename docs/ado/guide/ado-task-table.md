@@ -8,29 +8,28 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e0a245945c5dbe9262d251af67a138739b1888da
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f6c8bb37a6fcf52d6fbdcaba02e21cd7013ae18
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-programming-task-table"></a>ADO 프로그래밍 작업 테이블
 다음 표에서에 포함 된 프로그래밍 작업의 *ADO Programmer's Guide* 하 고 각 작업에 대 한 참조를 제공 합니다. 이러한 참조는 텍스트 설명 또는 코드 예제에서는 작업을 수행 하는 ADO 기능에 대 한 정보를 찾을 수 있습니다 수 있습니다.
 
-|ADO 작업|References|
+|ADO 작업|참조|
 |--------------|----------------|
 |데이터 공급자에 연결|[데이터 원본에 연결](../../ado/guide/data/connecting-to-data-sources.md)|
 |명령 실행 및 저장된 프로시저 호출|[준비 및 실행 명령을](../../ado/guide/data/preparing-and-executing-commands.md)|
@@ -54,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 |쿼리 또는 명령 입력에 대 한 XML을 사용 하 여|[명령 스트림](../../ado/guide/data/command-streams.md)|
 |공급자에서 XML 데이터를 반환합니다.|[스트림으로 결과 집합 검색](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
 |IIS에 게시|[인터넷 게시에 ADO 사용](../../ado/guide/data/using-ado-for-internet-publishing.md)|
-

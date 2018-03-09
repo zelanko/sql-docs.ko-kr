@@ -2,34 +2,30 @@
 title: "SortPropertiesPosition 요소 (XML) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 68b040a7-ab16-46f5-8610-21db07df9181
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d0492dae363abe5fb9acdb2c989297f808251302
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b4579aa9873c23ad3490763ce5c5900dcc8158aa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sortpropertiesposition-element-xml"></a>SortPropertiesPosition 요소(XML)
-  요소 컬렉션의 요소 위치에 대한 정보를 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]요소 컬렉션의 요소 위치에 대 한 정보를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|정수|  
 |기본값|-1|  
@@ -55,10 +51,9 @@ ms.lasthandoff: 09/01/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **RelationshipEndVisualizationProperties** 요소의 경우 **SortPropertiesPosition** 요소는 세부 정보 컬렉션의 정렬 속성 요소 위치를 포함합니다. 기본값은 사용할 정렬 속성이 없음을 나타냅니다.  
   
   
-

@@ -2,34 +2,32 @@
 title: Ancestors (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ANCESTORS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Ancestors function
+f1_keywords: ANCESTORS
+dev_langs: kbMDX
+helpviewer_keywords: Ancestors function
 ms.assetid: abdf2e9c-72c8-4f2e-a823-d42efc4cc7d5
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 3bf406938a92ec3b3c8829b3e1cb59098ea62524
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2d6304b9a87bcdb87a98a8351d4e60074ebb4d8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="ancestors-mdx"></a>Ancestors(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정된 수준이나 지정된 멤버로부터 지정된 거리만큼 떨어진 수준에서 지정된 멤버의 모든 상위 항목 집합을 반환하는 함수입니다. 와 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 반환 되는 집합은 항상 단일 멤버로 구성 되며 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 단일 멤버에 대 한 여러 부모를 지원 하지 않습니다.  
   
@@ -54,7 +52,7 @@ Ancestors(Member_Expression, Distance)
  *거리*  
  지정된 멤버와의 거리를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  와 **상위** 함수를 제공 하는 함수 MDX 멤버 식을 사용 하 여 고 해당 멤버의 상위 항목인 수준의 MDX 식 또는 해당 멤버 위의 수준 수를 나타내는 숫자 식을 제공 합니다. 이 정보는 **상위** 함수는 해당 수준의 멤버 (한 멤버의 구성 된 집합을 됩니다)의 집합을 반환 합니다.  
   
 > [!NOTE]  
@@ -110,8 +108,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

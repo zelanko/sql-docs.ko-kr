@@ -23,19 +23,18 @@ helpviewer_keywords:
 - last-opened cursor
 - asynchronous cursors [SQL Server]
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-caps.latest.revision: 36
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: 10a3a6cabae8d25de670cbacb037a62f4c5a2d54
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.openlocfilehash: 8c4c1fac4c5d9dacddfb942a3e5b9238e5be16a4
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40cursorrows-transact-sql"></a>& #x 40; & #x 40; CURSOR_ROWS (Transact SQL)
+# <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 현재 연결에 대해 열려 있는 마지막 커서에서 한정하는 행 수를 반환합니다. 성능 향상을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 큰 키 집합과 정적 커서를 비동기식으로 채울 수 있습니다. @@CURSOR_ROWS 커서를 한 정하는 행 수가 @ 시간에 검색 됩니다 확인 하기 위해 호출할 수@CURSOR_ROWS 호출 됩니다.
@@ -103,4 +102,3 @@ Sanchez
 [열기 &#40; Transact SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)
   
   
-

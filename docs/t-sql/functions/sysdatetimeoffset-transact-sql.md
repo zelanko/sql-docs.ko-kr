@@ -32,17 +32,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - time [SQL Server], system
 ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
-caps.latest.revision: 43
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 582a78d18aea9b38d42e782f7b75486f1097e196
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: fedd2c31623fc9df2afbab7897e3de446f98a960
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +59,7 @@ SYSDATETIMEOFFSET ( )
 ```  
   
 ## <a name="return-type"></a>반환 형식  
- **(7)**  
+ **datetimeoffset(7)**  
   
 ## <a name="remarks"></a>주의  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]문은 참조할 수 있습니다 SYSDATETIMEOFFSET을 참조할 수 있는 모든 위치는 **datetimeoffset** 식입니다.  
@@ -80,7 +79,7 @@ SYSDATETIMEOFFSET ( )
 SELECT SYSDATETIME() AS SYSDATETIME  
     ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
     ,SYSUTCDATETIME() AS SYSUTCDATETIME  
-    ,CURRENT_TIMESTAMP AS CURRENT_TIMESTAMP  
+    ,CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]  
     ,GETDATE() AS GETDATE  
     ,GETUTCDATE() AS GETUTCDATE;  
 ```  
@@ -147,5 +146,4 @@ GETUTCDATE()       20:18:45.3470000
  [날짜 및 시간 데이터 형식 및 함수 &#40; Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
-
 

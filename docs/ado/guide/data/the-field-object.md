@@ -3,7 +3,7 @@ title: "Field 개체 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7d537c963fa1e93c07289380f8eed682768961b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-field-object"></a>Field 개체
 각 **필드** 개체는 일반적으로 데이터베이스 테이블의 열에 해당 합니다. 그러나 한 **필드** 다른에 대 한 포인터를 나타낼 수도 있습니다 **레코드 집합**, 장 이라고 합니다. 이 가이드의 뒷부분에 나오는 장 열과 같은 예외를 설명 합니다.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 09/09/2017
  필드의 데이터를 변경 하려면 설정는 **값** 속성에 올바른 형식의 새 값입니다. 커서 유형에 필드의 내용을 변경에 대 한 업데이트를 지원 해야 합니다. 데이터베이스 유효성 검사가 수행 되지 않으므로 여기 일괄 처리 모드에서 호출 하는 경우 오류를 확인 해야 합니다 **UpdateBatch** 이러한 경우입니다. 일부 공급자는 또한 ADO 지원 **필드** 개체의 **UnderlyingValue** 및 **OriginalValue** 하려고 할 때 충돌 해결에 도움이 되는 속성 일괄 처리 업데이트를 수행 합니다. 이러한 충돌을 해결 하는 방법에 대 한 세부 정보를 참조 하십시오. [데이터 편집](../../../ado/guide/data/editing-data.md)합니다.  
   
 > [!NOTE]
->  **레코드 집합 필드** 새로운를 추가할 때 값을 설정할 수 없습니다 **필드** 에 **레코드 집합**합니다. 대신, 새 **필드** ा ए 닫힌에 **레코드 집합**합니다. 그런 다음 **레코드 집합** 열었다 다음 수 값 수에 할당 해야 이러한 **필드**합니다.  
+>  **레코드 집합 필드** 새로운를 추가할 때 값을 설정할 수 없습니다 **필드** 에 **레코드 집합**합니다. 대신, 새 **필드** 닫힌에 **레코드 집합**합니다. 그런 다음 **레코드 집합** 열었다 다음 수 값 수에 할당 해야 이러한 **필드**합니다.  
   
 ### <a name="getting-more-field-information"></a>추가 필드 정보 얻기  
  ADO 개체에는 두 가지 유형의 속성: 기본 제공 및 동적입니다. 기본 제공 속성에만이 지점에는 **필드** 개체 설명 했습니다.  
@@ -126,4 +125,3 @@ ms.lasthandoff: 09/09/2017
  사용 하는 경우 현재 레코드가 없는 경우는 **GetChunk** 또는 **AppendChunk** 에서 메서드는 **필드** 개체 3021 (현재 레코드 없음) 오류가 발생 합니다.  
   
  이러한 메서드를 사용 하 여 이진 데이터를 조작 하는 예제를 보려면는 [AppendChunk 메서드](../../../ado/reference/ado-api/appendchunk-method-ado.md) 및 [GetChunk 메서드](../../../ado/reference/ado-api/getchunk-method-ado.md) 의 예제는 *ADO Programmer's Reference*합니다.
-

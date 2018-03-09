@@ -3,8 +3,9 @@ title: "BOF, EOF 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e97052bce1e27e7730ffa73d04a8ba95f8af233c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9eb298b7bc18a959a6cd7d044a4c166ee77065eb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF 속성 (ADO)
 -   **BOF** 현재 레코드 위치에 있는 첫 번째 레코드 앞에 있는 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|로 설정 **True**|로 설정 **True**|  
 |**이동** 0|변경 내용 없음|변경 내용 없음|  
-|**MovePrevious**, **이동** < 0|로 설정 **True**|변경 내용 없음|  
+|**MovePrevious**, **Move** < 0|로 설정 **True**|변경 내용 없음|  
 |**MoveNext**, **이동** > 0|변경 내용 없음|로 설정 **True**|  
   
 ## <a name="applies-to"></a>적용 대상  

@@ -1,7 +1,7 @@
 ---
 title: "고유 식별자 (Transact SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 7/23/2017
+ms.date: 12/1/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.service: 
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - globally unique identifiers [SQL Server]
 - GUIDs [SQL Server]
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
-caps.latest.revision: 39
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 1450aa86e3f47ef27be5acd5b5410fe40dd5983e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 76f7a3c784c0d05e1a6f94da0b33207bfbb1efec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="remarks"></a>주의  
 열 이나 지역 변수 **uniqueidentifier** 다음과 같은 방법으로 데이터 형식을 값으로 초기화할 수 있습니다.
--   NEWID 함수 사용  
+-   사용 하 여는 [NEWID](../../t-sql/functions/newid-transact-sql.md) 또는 [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 함수입니다.    
 -   형식에서 문자열 상수에서를 변환 하 여 *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx* - *자*, 각 *x* 범위 0-9 또는 a-f에서 16 진수입니다. 예를 들어 6F9619FF-8B86-D011-B42D-00C04FC964FF는 유효한 **uniqueidentifier** 값입니다.  
   
 비교 연산자를 함께 사용할 수 있습니다 **uniqueidentifier** 값입니다. 그러나 순서는 두 값의 비트 패턴을 비교하여 구현되지 않습니다. 에 대해 수행할 수 있는 작업만 **uniqueidentifier** 값은 비교 (=, <>, \<, >, \<=, > =) 및 NULL (IS NULL 및 IS NOT NULL) 검사 합니다. 다른 산술 연산자는 사용할 수 없습니다. 모든 열 제약 조건 및 ID 제외 하 고 속성에 사용할 수 있습니다는 **uniqueidentifier** 데이터 형식입니다.
@@ -82,16 +81,15 @@ String                                       TruncatedValue
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [NEWID &#40; Transact SQL &#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40; Transact SQL &#41; ](../../t-sql/functions/newsequentialid-transact-sql.md) 
- [설정 @local_variable &#40; Transact SQL &#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
+[NEWSEQUENTIALID &#40; Transact SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[SET @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   
   
-

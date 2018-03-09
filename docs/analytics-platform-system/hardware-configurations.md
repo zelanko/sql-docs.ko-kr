@@ -3,10 +3,10 @@ title: "하드웨어 구성 (분석 플랫폼 시스템)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
 caps.latest.revision: "9"
-ms.openlocfilehash: 1a98d1f853b293eb417182868ee1cb67cf328f53
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6762775fdec3cd3a01a372ed5c16fbc4a93c1426
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hardware-configurations"></a>하드웨어 구성
 Analytics Platform System (APS) 하드웨어의 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구매할 수 있도록 확장 가능한 단위와 구성 됩니다. 어플라이언스는 저장소에 대 한 SQL Server 병렬 데이터 Wareouse (PDW) 수 테라바이트에 달하는에서 6 페타바이트 규모의 데이터를 조정합니다.  

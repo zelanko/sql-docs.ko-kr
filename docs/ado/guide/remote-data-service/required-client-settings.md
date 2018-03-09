@@ -3,26 +3,28 @@ title: "필요한 클라이언트 설정 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DataFactory handler in RDS [ADO]
+helpviewer_keywords:
+- DataFactory handler in RDS [ADO]
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 152d3fdee15d8696be60f1575ac1dc785d5420c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f542390110169a88b387856ca887a8b3183e01b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="required-client-settings"></a>필요한 클라이언트 설정
 > [!IMPORTANT]
@@ -73,7 +75,7 @@ rs.CursorLocation = adUseClient
   
  지정 된 [처리기 속성 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) 속성 또는 키워드입니다;는 [공급자 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) 속성 또는 키워드입니다; 및 *CustomerById* 및  *CustomerDatabase* 식별자입니다. 다음 열은 **레코드 집합** 개체  
   
- rs 합니다. "CustomerById(4)" 열기 "처리기 MSDFMAP = 합니다. 처리기;"& _  
+ rs.Open "CustomerById(4)", "Handler=MSDFMAP.Handler;" & _  
   
 ```  
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  

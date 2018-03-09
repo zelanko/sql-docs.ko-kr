@@ -31,20 +31,19 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-caps.latest.revision: 63
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d8aa3c2ff42396114287f58b7d9d431d13de8a2f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 410e71466944f1744d0c8092f0ad030ffa1da29b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>선택-INTO 절 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT INTO는 기본 파일 그룹에 새 테이블을 만든 후 쿼리의 결과 행을 이 테이블에 삽입합니다. 전체 SELECT 구문을 참조 하십시오 [select&#40; Transact SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -61,7 +60,7 @@ ms.lasthandoff: 09/01/2017
  *new_table*  
  선택 목록에 있는 열과 데이터 원본에서 선택한 행을 기반으로 만들려는 새 테이블의 이름을 지정합니다.  
  
-  *파일 그룹*
+  *filegroup*
  
  새 테이블이 만들어질 파일 그룹의 이름을 지정 합니다. 지정 된 파일 그룹에 존재 해야 합니다는 데이터베이스를 다른 SQL Server 엔진 throw 오류가 발생 합니다. 이 옵션은부터 지원 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]합니다.
  
@@ -102,7 +101,7 @@ ms.lasthandoff: 09/01/2017
  선택 목록에 계산 열이 있으면 새 테이블의 해당 열은 계산 열이 아닙니다. 새 열의 값은 SELECT...INTO가 실행될 때 계산된 값이 됩니다.  
   
 ## <a name="logging-behavior"></a>로깅 동작  
- SELECT...INTO의 로깅 양은 데이터베이스에 적용되는 복구 모델에 따라 달라집니다. 단순 복구 모델 또는 대량 로그 복구 모델에서는 대량 작업이 최소 로깅됩니다. SELECT를 사용 하 여 최소 로깅으로... 문으로 수 보다 더 효율적일 수 표를 만들고 다음 INSERT 문 사용 하 여 테이블을 채우는 합니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
+ SELECT...INTO의 로깅 양은 데이터베이스에 적용되는 복구 모델에 따라 달라집니다. 단순 복구 모델 또는 대량 로그 복구 모델에서는 대량 작업이 최소 로깅됩니다. SELECT를 사용 하 여 최소 로깅으로... 문으로 수 보다 더 효율적일 수 표를 만들고 다음 INSERT 문 사용 하 여 테이블을 채우는 합니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.  
   
 ## <a name="permissions"></a>Permissions  
  대상 데이터베이스에서 CREATE TABLE 권한이 필요합니다.  
@@ -112,7 +111,7 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>1. 여러 원본에서 열을 지정하여 테이블 만들기  
  다음 예에서는 다양한 직원 관련 테이블 및 주소 관련 테이블에서 7개의 열을 선택하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `dbo.EmployeeAddresses` 테이블을 만듭니다.  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -131,7 +130,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>2. 최소 로깅을 사용하여 행 삽입  
  다음 예에서는 `dbo.NewProducts` 테이블을 만든 후 `Production.Product` 테이블의 행을 삽입합니다. 여기에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 복구 모델이 FULL로 설정되었다고 가정합니다. 최소 로깅을 사용할 수 있도록 행 삽입 전에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 복구 모델이 BULK_LOGGED로 설정되고 SELECT...INTO 문 다음에 FULL로 재설정됩니다. 이 프로세스를 통해 SELECT...INTO 문은 트랜잭션 로그에 최소 공간을 사용하여 효율적으로 수행됩니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -147,7 +146,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>3. IDENTITY 함수를 사용하여 ID 열 만들기  
  다음 예에서는 IDENTITY 함수를 사용 하 여 새 테이블에 id 열을 만들려는 `Person.USAddress` 에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. 이렇게 하는 이유는 테이블을 정의하는 SELECT 문에 조인이 포함되어 있기 때문입니다. 조인이 포함되어 있으면 IDENTITY 속성이 새 테이블에 전송되지 않습니다. IDENTITY 함수에 지정된 초기값과 증가값은 원본 테이블 `AddressID`의 `Person.Address` 열에 있는 해당 값과 다릅니다.  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -176,7 +175,7 @@ WHERE name = 'AddressID';
   
  **적용 대상:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -219,7 +218,7 @@ GO
   
  **적용 대상:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 참조하세요.  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -233,11 +232,11 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>6. 다른 테이블의 복사본으로 새 테이블을 만들고 지정된 된 파일 그룹을 로드
-다음 예제에서는 demostrates 다른 테이블의 복사본으로 새 테이블을 만들고 지정 된 사용자의 기본 파일 그룹에서 다른 파일 그룹으로 로드 합니다.
+다음 예제에서는 다른 테이블의 복사본으로 새 테이블을 만들고 지정 된 사용자의 기본 파일 그룹에서 다른 파일 그룹으로 로드 하는 방법을 보여 줍니다.
 
  **적용 대상:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
@@ -257,4 +256,3 @@ SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
  [Identity&#40; 함수 &#41; &#40; Transact SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   
-

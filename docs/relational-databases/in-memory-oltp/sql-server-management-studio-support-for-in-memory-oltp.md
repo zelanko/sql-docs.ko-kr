@@ -2,25 +2,30 @@
 title: "메모리 내 OLTP에 대한 SQL Server Management Studio 지원 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bb364c19ff1f601792527bb89436f725d07d35f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 420c0a1dfd43a55dfda4c2e6dc612c2e49538e93
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Management Studio 지원
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라를 관리하기 위한 통합 환경입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. 자세한 내용은 [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)를 참조하세요.  
   
  이 항목의 태스크에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 메모리 최적화 테이블, 메모리 최적화 테이블의 인덱스, 고유하게 컴파일된 저장 프로시저, 사용자 정의 메모리 최적화 테이블 형식을 관리하는 방법을 설명합니다.  
@@ -94,8 +99,7 @@ ms.lasthandoff: 11/09/2017
             **메모리 최적화 개체가 사용하는 메모리** 속성에 대한 값은 데이터베이스에 있는 메모리 최적화 개체가 사용하는 메모리를 나타냅니다.  
   
 ## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>다음에서 지원되는 기능 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- 
-            [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 메모리 최적화 데이터 파일 그룹, 메모리 최적화 테이블, 인덱스 및 고유하게 컴파일된 저장 프로시저가 포함된 데이터베이스에서 데이터베이스 엔진이 지원하는 기능과 작업을 지원합니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 메모리 최적화 데이터 파일 그룹, 메모리 최적화 테이블, 인덱스 및 고유하게 컴파일된 저장 프로시저가 포함된 데이터베이스에서 데이터베이스 엔진이 지원하는 기능과 작업을 지원합니다.  
   
  데이터베이스, 테이블, 저장 프로시저, 사용자 정의 테이블 형식 또는 인덱스 개체에 대해 다음 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 기능이 메모리 내 OLTP를 지원하도록 업데이트되었거나 확장되었습니다.  
   
@@ -107,7 +111,7 @@ ms.lasthandoff: 11/09/2017
   
     -   스크립팅  
   
-    -   작업  
+    -   태스크  
   
     -   보고서  
   

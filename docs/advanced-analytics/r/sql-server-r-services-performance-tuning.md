@@ -2,27 +2,28 @@
 title: "SQL Server R Services 성능 조정 | Microsoft 문서"
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 20
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c4e77abfb68c30a1eac32b514c3987774bd5759d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server의 R에 대 한 성능 조정
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 두 개의 사례에 따라 R 서비스에 대 한 성능 최적화를 설명 하는 4 문서 시리즈의 첫 번째:
 
@@ -92,7 +93,7 @@ SQL Server 2017 년 1에서 나중에 따라 추가 언어와 동일한 아키�
 
 + [SQL Server-하드웨어에에서 R에 대 한 성능 조정](..\r\sql-server-configuration-r-services.md)
 
-    하드웨어 구성에 대 한 지침을 제공 하는 [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] 가에 설치 되어, 외부 스크립트를 더 잘 지원 하기 위해 SQL Server 인스턴스를 구성 합니다. 에 특히 유용 **데이터베이스 관리자**합니다.
+    하드웨어 구성에 대 한 지침을 제공 하는 [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] 가에 설치 되어, 외부 스크립트를 더 잘 지원 하기 위해 SQL Server 인스턴스를 구성 합니다. 에 특히 유용 **데이터베이스 관리자**합니다.
 
 + [SQL Server-코드 및 데이터에에서 R에 대 한 성능 조정 최적화](..\r\r-and-data-optimization-r-services.md)
 
@@ -104,4 +105,3 @@ SQL Server 2017 년 1에서 나중에 따라 추가 언어와 동일한 아키�
 + [SQL Server-메서드 및 결과에 R에 대 한 성능 조정](..\r\performance-case-study-r-services.md)
 
     요약 데이터 사용한 두 사례 연구, 성능 테스트 방법 및 최적화 결과 미치는 영향입니다.
-

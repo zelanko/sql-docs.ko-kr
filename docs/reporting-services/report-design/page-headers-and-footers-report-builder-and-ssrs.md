@@ -1,13 +1,14 @@
 ---
-title: "페이지 머리글 및 바닥글 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "페이지 헤더 및 바닥글(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,29 +25,28 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0c03ea200e96115c78fcb824f8a1327f6a4fd55a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>페이지 머리글 및 바닥글(보고서 작성기 및 SSRS)
   보고서는 각 페이지의 위쪽과 아래쪽에서 각기 실행되는 머리글과 바닥글을 포함할 수 있습니다. 머리글과 바닥글에는 정적 텍스트, 이미지, 선, 사각형, 테두리, 배경색, 배경 이미지 및 식이 들어갈 수 있습니다. 식에는 단 하나의 데이터 집합과 데이터 집합을 범위로 포함하는 집계 함수 호출이 있는 보고서용 데이터 집합 필드 참조가 포함됩니다.  
   
 > [!NOTE]  
->  각 렌더링 확장 프로그램에서는 페이지를 다르게 처리합니다. 보고서 페이지 매김 및 렌더링 확장 프로그램에 대한 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
+>  각 렌더링 확장 프로그램에서는 페이지를 다르게 처리합니다. 보고서 페이지 매김 및 렌더링 확장 프로그램에 대한 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)를 참조하세요.  
   
- 기본적으로 보고서에는 페이지 바닥글은 있지만 페이지 머리글은 없습니다. 추가하거나 제거하는 방법에 대한 자세한 내용은 [페이지 머리글/바닥글 추가 또는 제거&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)를 참조하세요.  
+ 기본적으로 보고서에는 페이지 바닥글은 있지만 페이지 머리글은 없습니다. 헤더 및 바닥글을 추가하거나 제거하는 방법에 대한 자세한 내용은 [페이지 헤더 및 바닥글 추가 또는 제거&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)를 참조하세요.  
   
- 머리글과 바닥글에는 일반적으로 페이지 번호, 보고서 제목 및 기타 보고서 속성이 포함됩니다. 이러한 항목을 보고서 머리글 또는 바닥글에 추가하는 방법에 대한 자세한 내용은 [페이지 번호 또는 기타 보고서 속성 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)를 참조하세요.  
+ 머리글과 바닥글에는 일반적으로 페이지 번호, 보고서 제목 및 기타 보고서 속성이 포함됩니다. 이러한 항목을 보고서 헤더 또는 바닥글에 추가하는 방법에 대한 자세한 내용은 [페이지 번호 또는 기타 보고서 속성 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)를 참조하세요.  
   
- 페이지 머리글 또는 바닥글을 만들면 모든 보고서 페이지에 표시됩니다. 첫 번째와 마지막 페이지에서 페이지 머리글 및 바닥글을 표시하지 않는 방법에 대한 자세한 내용은 [첫 페이지 또는 마지막 페이지에서 페이지 머리글 또는 바닥글 숨기기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)를 참조하세요.  
+ 페이지 머리글 또는 바닥글을 만들면 모든 보고서 페이지에 표시됩니다. 첫 번째와 마지막 페이지에서 페이지 헤더 및 바닥글을 표시하지 않는 방법에 대한 자세한 내용은 [첫 페이지 또는 마지막 페이지에서 페이지 헤더 또는 바닥글 숨기기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -94,7 +94,7 @@ ms.lasthandoff: 08/09/2017
   
      `=First(ReportItems!TXT_LastName.Value)`  
   
- 페이지 머리글 또는 바닥글의 필드에는 집계 함수를 사용할 수 없습니다. 보고서 본문에 있는 보고서 항목에만 집계 함수를 사용할 수 있습니다. 페이지 머리글 및 바닥글에 일반적으로 사용하는 식에 대한 자세한 내용은 [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
+ 페이지 머리글 또는 바닥글의 필드에는 집계 함수를 사용할 수 없습니다. 보고서 본문에 있는 보고서 항목에만 집계 함수를 사용할 수 있습니다. 페이지 헤더 및 바닥글에 일반적으로 사용하는 식에 대한 자세한 내용은 [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
 #### <a name="adding-a-data-bound-image-to-a-header-or-footer"></a>머리글 또는 바닥글에 데이터 바인딩된 이미지 추가  
  데이터베이스에 저장된 이미지 데이터를 머리글 또는 바닥글에 사용할 수 있습니다. 그러나 이미지 보고서 항목에서 직접 데이터베이스 필드를 참조할 수는 없습니다. 대신 보고서 본문에 입력란을 추가한 다음 해당 입력란을 이미지를 포함하는 데이터 필드로 설정해야 합니다. 이때 값은 base64로 인코딩되어야 합니다. 보고서 본문에서 입력란을 숨겨 base64로 인코딩된 이미지를 표시하지 않을 수 있습니다. 그런 다음 페이지 머리글 또는 바닥글의 이미지 보고서 항목에서 숨겨진 입력란의 값을 참조할 수 있습니다.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="designing-reports-with-page-headers-and-footers-for-specific-renderers"></a>특정 렌더러에 대해 페이지 머리글 및 바닥글로 보고서 디자인  
  보고서가 처리될 때 데이터와 레이아웃 정보가 결합됩니다. 보고서를 볼 때는 결합된 정보가 각 보고서 페이지에 어느 정도의 보고서 데이터가 맞는지를 결정하는 렌더러에 전달됩니다.  
   
- 브라우저를 사용하여 보고서 서버에서 보고서를 보는 경우 표시되는 보고서 페이지의 콘텐츠를 HTML 렌더러가 제어합니다. 현재 보고 있는 형식과 다른 형식으로 보고서를 제공할 계획이거나 특정 형식으로 보고서를 인쇄할 계획이면 최종 보고서 형식에 사용할 렌더러에 맞게 보고서 레이아웃을 최적화할 수 있습니다. 보고서 페이지 매김에 대한 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
+ 브라우저를 사용하여 보고서 서버에서 보고서를 보는 경우 표시되는 보고서 페이지의 콘텐츠를 HTML 렌더러가 제어합니다. 현재 보고 있는 형식과 다른 형식으로 보고서를 제공할 계획이거나 특정 형식으로 보고서를 인쇄할 계획이면 최종 보고서 형식에 사용할 렌더러에 맞게 보고서 레이아웃을 최적화할 수 있습니다. 보고서 페이지 매김에 대한 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)를 참조하세요.  
   
 ### <a name="working-with-page-headers-and-footers-in-excel"></a>Excel에서의 페이지 머리글 및 바닥글 작업  
  Excel 렌더링 확장 프로그램을 대상으로 하는 보고서에 대해 페이지 머리글 및 바닥글을 정의하는 경우 다음 지침을 따르면 가장 좋은 결과를 얻을 수 있습니다.  
@@ -130,11 +130,10 @@ ms.lasthandoff: 08/09/2017
   
  보다 정확한 페이지 수는 인쇄된 페이지의 차원과 상호 관련된 논리 페이지를 기반으로 합니다. Excel에서는 페이지 바닥글에 자동으로 논리 페이지 번호가 사용됩니다. 페이지 머리글에 논리 페이지 수를 삽입하려면 간단한 머리글을 사용하도록 장치 정보 설정을 구성해야 합니다. 간단한 머리글을 사용하면 머리글 영역에서 복잡한 보고서 레이아웃을 처리하는 기능이 제거됩니다.  
   
- 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.  
+ 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [보고서 및 &#40;에 이미지 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [사각형 및 선 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>참고 항목  
+ [보고서에 이미지 포함&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   
-

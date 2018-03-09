@@ -23,17 +23,16 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f69efb096931108fdaea084b337fcb319f7cfb6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c5cbf694abdf86a5e5e13f2799f5b1f4b808a498
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE 문-LABELONLY (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ FROM <backup_device>
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**MediaName**|**nvarchar (128)**|미디어의 이름입니다.|  
+|**MediaName**|**nvarchar(128)**|미디어의 이름입니다.|  
 |**MediaSetId**|**uniqueidentifier**|미디어 세트의 고유 ID입니다.|  
 |**FamilyCount**|**int**|미디어 세트에서 미디어 패밀리의 번호입니다.|  
 |**FamilySequenceNumber**|**int**|해당 패밀리의 시퀀스 번호입니다.|  
@@ -94,7 +93,7 @@ FROM <backup_device>
 |**MediaSequenceNumber**|**int**|미디어 패밀리에 있는 해당 미디어의 시퀀스 번호입니다.|  
 |**MediaLabelPresent**|**tinyint**|미디어 설명에 다음이 포함되는지 여부입니다.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] tape Format 미디어 레이블<br /><br /> **0** = 미디어 설명|  
 |**MediaDescription**|**nvarchar(255)**|자유 형식 텍스트로 된 미디어 설명 또는 Tape Format 미디어 레이블입니다.|  
-|**SoftwareName**|**nvarchar (128)**|미디어 레이블을 기록하는 백업 소프트웨어의 이름입니다.|  
+|**SoftwareName**|**nvarchar(128)**|미디어 레이블을 기록하는 백업 소프트웨어의 이름입니다.|  
 |**SoftwareVendorId**|**int**|백업을 기록하는 소프트웨어 공급업체의 고유 공급업체 ID입니다.|  
 |**MediaDate**|**datetime**|레이블을 작성한 날짜와 시간입니다.|  
 |**Mirror_Count**|**int**|세트에 있는 미러 수(1-4)입니다.<br /><br /> 참고: 집합에 있는 다른 미러에 대해 기록 된 레이블은 동일 합니다.|  
@@ -124,4 +123,3 @@ FROM <backup_device>
  [백업 기록 및 헤더 정보&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
-

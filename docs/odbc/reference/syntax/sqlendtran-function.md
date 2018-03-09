@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLEndTran
-apilocation:
-- sqlsrv32.dll
+apiname: SQLEndTran
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLEndTran
-helpviewer_keywords:
-- SQLEndTran function [ODBC]
+f1_keywords: SQLEndTran
+helpviewer_keywords: SQLEndTran function [ODBC]
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fcae4699f6effbc0e6605701560dad11acff5281
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 함수(SQLEndTran Function)
 **규칙**  
@@ -72,7 +66,7 @@ SQLRETURN SQLEndTran(
 ## <a name="diagnostics"></a>진단  
  때 **SQLEndTran** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 는 적절 한 *HandleType*및 *처리*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLEndTran** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08003|연결이 열려 있지 않습니다|DM ()는 *HandleType* sql_handle_dbc 라는, 되었습니다 및 *처리* 가 연결 된 상태가 아닙니다.|  
@@ -97,7 +91,7 @@ SQLRETURN SQLEndTran(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  Odbc 3. *x* 드라이버 경우 *HandleType* SQL_HANDLE_ENV은 및 *처리* 다음 드라이버 관리자가 호출 됩니다는 한 유효한 환경 핸들 **SQLEndTran**는 환경에 연결 된 각 드라이버에 있습니다. *처리* 드라이버에 대 한 호출에 대 한 인수는 드라이버의 환경 핸들 됩니다. Odbc 2. *x* 드라이버 경우 *HandleType* SQL_HANDLE_ENV은 및 *처리* 은 잘못 된 환경 핸들 및 해당 환경에서 연결된 된 상태에 대 한 연결이 여러 개 다음 드라이버 관리자는 호출 **SQLTransact** 해당 환경에서 연결된 된 상태에서 각 연결에 대해 한 번씩 드라이버에서 합니다. *처리* 각 호출의 인수에는 연결의 핸들 수 있습니다. 두 경우 모두 드라이버는 하려고 값에 따라 트랜잭션을 커밋하거나 *CompletionType*, 해당 환경에서 연결된 된 상태에 있는 모든 연결에 대해 합니다. 연결이 활성화 되지 않은 트랜잭션을 영향을 주지 않습니다.  
   
 > [!NOTE]  
@@ -164,4 +158,3 @@ SQLRETURN SQLEndTran(
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [비동기 실행(폴링 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
-

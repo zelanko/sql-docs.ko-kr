@@ -1,34 +1,33 @@
 ---
-title: "다른 컴퓨터 (SSRS 기본 모드) 보고서 서버 데이터베이스 이동 | Microsoft Docs"
+title: "다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-caps.latest.revision: 10
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "10"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e3449aa8547e62e89e3fc40ab893e1eb2fefcfd6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치에 사용되는 보고서 서버 데이터베이스를 다른 컴퓨터에 있는 인스턴스로 이동할 수 있습니다. reportserver 데이터베이스와 reportservertempdb 데이터베이스를 모두 이동하거나 함께 복사해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하려면 두 데이터베이스가 모두 필요합니다. reportservertempdb 데이터베이스는 이동하는 주 reportserver 데이터베이스와 이름으로 관련되어야 합니다.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
  데이터베이스를 이동해도 보고서 서버 항목에 대해 현재 정의되어 있는 예약된 작업에는 영향을 주지 않습니다.  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
 >  이 항목에 설명된 단계는 기존 설치에서 보고서 서버 데이터베이스를 재배치하는 작업만 수행하려는 경우에 사용하는 것이 좋습니다. 전체 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 마이그레이션하려면, 즉 데이터베이스를 이동하고 해당 데이터베이스를 사용하는 보고서 서버 Windows 서비스의 ID를 변경하려면 연결을 다시 구성하고 암호화 키를 다시 설정해야 합니다.  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>보고서 서버 데이터베이스 분리 및 연결  
- 보고서 서버를 오프라인 상태로 만들 수 있는 경우 데이터베이스를 분리한 후 사용하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 이동할 수 있습니다. 이 방법을 사용하면 데이터베이스의 사용 권한이 유지됩니다. SQL Server 데이터베이스를 사용 하는 경우 다른 SQL Server 인스턴스로 이동 해야 합니다. 데이터베이스를 이동한 후에는 보고서 서버와 보고서 서버 데이터베이스의 연결을 다시 구성해야 합니다. 확장 배포를 실행하려면 배포 환경의 각 보고서 서버에 대한 보고서 서버 데이터베이스 연결을 다시 구성해야 합니다.  
+ 보고서 서버를 오프라인 상태로 만들 수 있는 경우 데이터베이스를 분리한 후 사용하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 이동할 수 있습니다. 이 방법을 사용하면 데이터베이스의 사용 권한이 유지됩니다. SQL Server 데이터베이스를 사용하는 경우 이를 다른 SQL Server 인스턴스로 이동해야 합니다. 데이터베이스를 이동한 후에는 보고서 서버와 보고서 서버 데이터베이스의 연결을 다시 구성해야 합니다. 스케일 아웃 배포를 실행하려면 배포 환경의 각 보고서 서버에 대한 보고서 서버 데이터베이스 연결을 다시 구성해야 합니다.  
   
  다음 단계에 따라 데이터베이스를 이동하십시오.  
   
@@ -229,11 +228,10 @@ GO
 [RSExecRole 만들기](../../reporting-services/security/create-the-rsexecrole.md)   
 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
 [보고서 서버 데이터베이스 연결 구성](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[무인된 실행 계정 구성](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[무인 실행 계정 구성](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
 [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [rsconfig 유틸리티](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
 [암호화 키 구성 및 관리](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [보고서 서버 데이터베이스](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -3,8 +3,11 @@ title: COALESCE (TRANSACT-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d597c347b0b608b69c5d435fbf58b2779d462a32
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fddb9a8535472c153adf036b5afed9584cfbd3d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 인수를 순서 대로 평가 하 고 처음에 평가 되지 않는 첫 번째 식의 현재 값을 반환 `NULL`합니다. 예를 들어 `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` 세 번째 값은 null이 아닌 첫 번째 값 때문에 세 번째 값을 반환 합니다. 
   
@@ -69,7 +71,7 @@ COALESCE ( expression [ ,...n ] )
   
  즉, 입력된 값 (*expression1*, *expression2*, *expressionN*등) 여러 번 평가 됩니다. 또한 SQL 표준에 따라 하위 쿼리가 포함된 값 식은 비결정적인 것으로 간주되어 하위 쿼리가 두 번 평가됩니다. 어느 경우에든 첫 번째 평가와 이후 평가 간에 서로 다른 결과가 반환될 수 있습니다.  
   
- 예를 들어 `COALESCE((subquery), 1)` 코드를 실행하면 하위 쿼리가 두 번 평가됩니다. 따라서 쿼리 격리 수준에 따라 다른 결과가 반환될 수 있습니다. 예를 들어 코드 반환할 수 있습니다 `NULL` 아래는 `READ COMMITTED` 다중 사용자 환경에서 격리 수준입니다. 결과가 반환 되도록 하려면 사용 하 여는 `SNAPSHOT ISOLATION` 격리 수준 또는 교체 `COALESE` 와 `ISNULL` 함수입니다. 또는 다음 예제와 같이 하위 select 안에 들어가도록 쿼리를 다시 작성할 수 있습니다.  
+ 예를 들어 `COALESCE((subquery), 1)` 코드를 실행하면 하위 쿼리가 두 번 평가됩니다. 따라서 쿼리 격리 수준에 따라 다른 결과가 반환될 수 있습니다. 예를 들어 코드 반환할 수 있습니다 `NULL` 아래는 `READ COMMITTED` 다중 사용자 환경에서 격리 수준입니다. 결과가 반환 되도록 하려면 사용 하 여는 `SNAPSHOT ISOLATION` 격리 수준 또는 교체 `COALESCE` 와 `ISNULL` 함수입니다. 또는 다음 예제와 같이 하위 select 안에 들어가도록 쿼리를 다시 작성할 수 있습니다.  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -302,4 +304,3 @@ ORDER BY TotalSalary;
  [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

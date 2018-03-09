@@ -1,7 +1,7 @@
 ---
 title: "연결 옵션 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/14/2017
+ms.date: 02/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -13,35 +13,36 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 899e072051224e2f28423e31f44d368a2884497b
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aadb44954096cbbcb520850a54d4cc2c41911f08
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="connection-options"></a>연결 옵션
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 이 항목에서는 결합형 배열에 허용 되는 옵션 (사용 하는 경우 [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) SQLSRV 드라이버에서) 또는 데이터 원본 이름 (dsn)에 허용 되는 키워드 (사용 하는 경우 [:: __construct ](../../connect/php/pdo-construct.md) PDO_SQLSRV 드라이버에서).  
 
-|Key|값|설명|기본값|  
+|Key|Value|Description|기본값|  
 |-------|---------|---------------|-----------|  
 |APP|문자열|추적에서 사용되는 응용 프로그램 이름을 지정합니다.|설정된 값이 없습니다.|  
 |응용 프로그램 의도|문자열|서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 ReadOnly 및 ReadWrite입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 사용에 필요한 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]지원에 대한 자세한 내용은 [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)(PHP Driver for SQL Server의 고가용성, 재해 복구 지원)를 참조하세요.|ReadWrite|  
 |AttachDBFileName|문자열|서버를 연결해야 하는 데이터베이스 파일을 지정합니다.|설정된 값이 없습니다.|  
-|인증|Key, Input, Predict, PredictOnly, None<br /><br />' SqlPassword'<br /><br />' ActiveDirectoryPassword'|인증 모드를 지정 합니다.|설정 되지 않았습니다.|  
+|인증|Key, Input, Predict, PredictOnly, None<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|인증 모드를 지정 합니다.|설정 되지 않았습니다.|  
 |CharacterSet<br /><br />(PDO_SQLSRV 드라이버에서 지원되지 않음)|문자열|서버에 데이터를 보내는 데 사용되는 문자 집합을 지정합니다.<br /><br />가능한 값은 SQLSRV_ENC_CHAR 및 UTF-8입니다. 자세한 내용은 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)을 참조하세요.|SQLSRV_ENC_CHAR|  
+|ColumnEncryption<br /><br />(Windows에서 지원)|**활성화** 또는 **사용 안 함**|항상 암호화 기능이 사용 되는지 여부를 지정 합니다. |사용 안 함|  
 |ConnectionPooling|연결 풀링이 설정되면 1 또는 **true** 입니다.<br /><br />연결 풀링이 해제되면 0 또는 **false** 입니다.|연결이 연결 풀에서 할당 되었는지 여부를 지정 합니다 (1 또는 **true**) 아닌지 (0 또는 **false**).<sup> 1</sup>|**true 이면** (1)|  
 |데이터베이스|문자열|설정 되는 연결에 대 한 사용 데이터베이스의 이름을 지정<sup>2</sup>합니다.|사용할 로그인에 대한 기본 데이터베이스입니다.|  
+|드라이버|문자열|SQL Server와 통신 하는 데 사용 되는 Microsoft ODBC 드라이버를 지정 합니다.<br /><br />가능한 값은<br />SQL Server 용 ODBC 드라이버 17<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (Windows에만 해당).|Driver 키워드를 지정 하지 않으면 Microsoft Drivers for PHP for SQL Server 하 려는 시스템에서 지원 되는 Microsoft ODBC 드라이버의 존재를 찾을 등 최신 버전의 ODBC로 시작 합니다.|  
 |Encrypt|암호화가 설정되면 1 또는 **true** 입니다.<br /><br />암호화가 해제되면 0 또는 **false** 입니다.|SQL Server와의 통신이 암호화 되는지 여부를 지정 합니다 (1 또는 **true**) 또는 암호화 되지 않았는지 (0 또는 **false**)<sup>3</sup>합니다.|**false** (0)|  
 |Failover_Partner|문자열|주 서버를 사용할 수 없을 때 사용할 데이터베이스 미러의 인스턴스 및 서버(사용하도록 설정되고 구성된 경우)를 지정합니다.<br /><br />MultiSubnetFailover에서 Failover_Partner 사용에 대한 제한이 있습니다. 자세한 내용은 [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)(PHP Driver for SQL Server의 고가용성, 재해 복구 지원)를 참조하세요.|설정된 값이 없습니다.|  
-|LoginTimeout|정수(SQLSRV 드라이버)<br /><br />문자열(PDO_SQLSRV 드라이버)|연결 시도가 실패할 때까지 기다리는 시간(초)을 지정합니다.|시간 제한이 없습니다.|  
+|LoginTimeout|정수 (SQLSRV 드라이버)<br /><br />문자열 (PDO_SQLSRV 드라이버)|연결 시도가 실패할 때까지 기다리는 시간(초)을 지정합니다.|시간 제한이 없습니다.|  
 |MultipleActiveResultSets|MARS(Multiple Active Result Set)를 사용하려면 1 또는 **true** 입니다.<br /><br />MARS(Multiple Active Result Set)를 사용하지 않으려면 0 또는 **false** 입니다.|MARS(Multiple Active Result Set)에 대한 지원을 사용하지 않도록 설정하거나 명시적으로 사용하도록 설정합니다.<br /><br />자세한 내용은 참조 [하는 방법: Multiple Active Resultsets 사용 안 함 &#40; MARS &#41; ](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).|true(1)|  
 |MultiSubnetFailover|문자열|항상 지정 **multiSubnetFailover = yes** 의 가용성 그룹 수신기에 연결할 때는 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 장애 조치 클러스터 인스턴스의 합니다. **multiSubnetFailover = yes** 구성 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 의 더 빠른 감지와 (현재) 활성 서버 연결을 제공 하도록 합니다. 가능한 값은 예 및 아니요입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 사용에 필요한 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]지원에 대한 자세한 내용은 [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)(PHP Driver for SQL Server의 고가용성, 재해 복구 지원)를 참조하세요.|아니요|  
 |PWD<br /><br />(PDO_SQLSRV 드라이버에서 지원되지 않음)|문자열|SQL Server 인증으로 연결할 때 사용할 사용자 ID와 연결 된 암호를 지정<sup>4</sup>합니다.|설정된 값이 없습니다.|  
@@ -67,6 +68,5 @@ ms.lasthandoff: 09/09/2017
 
 지원되는 많은 키가 ODBC 연결 문자열 특성입니다. ODBC 연결 문자열에 대한 정보는 [SQL Native Client에서 연결 문자열 키워드 사용](http://go.microsoft.com/fwlink/?LinkId=105504)을 참조하세요.  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)  
-

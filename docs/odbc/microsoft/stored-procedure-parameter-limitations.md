@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9755f10bd5eb1bf88549bb2fd417049d45b59c6a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 59beb012675e3f6af8e1aef65fe2905d353e31ab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stored-procedure-parameter-limitations"></a>저장된 프로시저 매개 변수의 제한
 > [!IMPORTANT]  
@@ -38,4 +36,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Oracle 클라이언트 소프트웨어 버전 8.0.3.0.0 초기 릴리스에서이 문제가 발생 하지 않습니다.
-

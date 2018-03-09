@@ -3,26 +3,28 @@ title: "컬렉션 속성, 메서드 및 이벤트 보기 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Views collection [ADOX], members
+helpviewer_keywords:
+- Views collection [ADOX], members
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 032d69b648caba90299c1d16d0c98f63551e3011
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e7820c6e7c608f44b40b665adb083ad55e3e797
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-collection-properties-methods-and-events"></a>뷰 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

@@ -8,32 +8,30 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], about
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ad3286b87c3b0db9804a64291a4d30b8ab216e6a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2e2d2f37e68cae57416daa3710a2aa0bbaf89be4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹 시작(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 지원하도록 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 구성하고, 가용성 그룹을 만들고 관리하고 모니터링하기 위한 단계를 소개합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="RecommendedReading"></a> 권장 참조 항목  
  가용성 그룹을 처음 만드는 경우 다음 항목을 먼저 읽는 것이 좋습니다.  
@@ -58,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**보조 데이터베이스를 준비합니다.** 보조 복제본을 호스팅하는 각 서버 인스턴스에서 RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 백업을 복원합니다.|[보조 데이터베이스 수동 준비](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> 팁: 새 가용성 그룹 마법사는 보조 데이터베이스를 자동으로 준비할 수 있습니다. 자세한 내용은 [초기 데이터 동기화 페이지 선택&#40;Always On 가용성 그룹 마법사&#41;](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md)에서 "전체 초기 데이터 동기화를 사용하기 위한 필수 조건"을 참조하세요.|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**가용성 그룹에 보조 데이터베이스를 조인합니다.** 보조 복제본을 호스팅하는 모든 서버 인스턴스에서 각 로컬 보조 데이터베이스를 가용성 그룹에 조인합니다. 가용성 그룹을 조인하면 지정된 보조 데이터베이스가 해당 주 데이터베이스와의 데이터 동기화를 시작합니다.|[가용성 그룹에 보조 데이터베이스 조인](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> 팁: 모든 보조 복제본에 모든 보조 데이터베이스가 있는 경우 새 가용성 그룹 마법사가 이 단계를 수행할 수 있습니다.|  
 ||**가용성 그룹 수신기를 만듭니다.**  이 단계는 가용성 그룹을 만드는 중 가용성 그룹 수신기를 아직 만들지 않은 경우에 필요합니다.|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
-|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**응용 프로그램 개발자에 수신기의 DNS 이름을 제공합니다.**  개발자가 연결 요청을 가용성 그룹 수신기에 연결하기 위해서는 연결 문자열에 이 DNS 이름을 지정해야 합니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.|“후속 작업: 가용성 그룹 수신기를 만든 후”( [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
+|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**응용 프로그램 개발자에 수신기의 DNS 이름을 제공합니다.**  개발자가 연결 요청을 가용성 그룹 수신기에 연결하기 위해서는 연결 문자열에 이 DNS 이름을 지정해야 합니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.|“후속 작업: 가용성 그룹 수신기를 만든 후”( [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**백업 작업 위치를 구성합니다.**  보조 데이터베이스에서 백업을 수행하려면 자동화된 백업 기본 설정을 고려하는 백업 작업 스크립트를 만들어야 합니다. 가용성 그룹의 가용성 복제본을 호스팅하는 각 서버 인스턴스에서 가용성 그룹의 각 데이터베이스에 대해 스크립트를 만듭니다.|"후속 작업: 보조 복제본에 백업을 구성한 후"([가용성 복제본에 백업 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md))|  
   
 ##  <a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
@@ -113,4 +111,3 @@ ms.lasthandoff: 08/02/2017
  [Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   
-

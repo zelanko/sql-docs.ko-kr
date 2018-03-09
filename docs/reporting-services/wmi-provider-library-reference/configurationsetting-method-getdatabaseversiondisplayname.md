@@ -1,31 +1,30 @@
 ---
-title: "GetDatabaseVersionDisplayName 메서드 (WMI) | Microsoft Docs"
+title: "GetDatabaseVersionDisplayName 메서드(WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- GetDatabaseVersionDisplayName method
+helpviewer_keywords: GetDatabaseVersionDisplayName method
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
-caps.latest.revision: 15
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "15"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b4743439f2edf3f3cfb253aa981af83350f5aff7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 34369ec94a9370b01886f0ff5516caa27a01f556
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>GetDatabaseVersionDisplayName ConfigurationSetting 메서드
+# <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting 메서드 - GetDatabaseVersionDisplayName
   지정된 보고서 서버 데이터베이스 버전 문자열의 표시 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -48,17 +47,17 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 표에서는 표시 문자열에 대한 데이터베이스 버전의 매핑을 보여 줍니다.  
   
-|**릴리스**|**버전**|**표시 이름**|  
+|**릴리스**|**버전(Version)**|**표시 이름**|  
 |-----------------|-----------------|----------------------|  
-|RS 2005 SP2|@DBVersion'C.0.8.54' =|SQL Server 2005 SP2|  
-|RS 2005 SP1|@DBVersion'C.0.8.43' =|SQL Server 2005 SP1|  
-|RS 2005 RTM|@DBVersion'C.0.8.40' =|SQL Server 2005|  
-|RS 2000 SP2|@DBVersion'C.0.6.54' =|SQL Server 2000 SP2|  
-|RS 2000 SP1|@DBVersion'C.0.6.51' =|SQL Server 2000 SP1|  
-|RS 2000 RTM|@DBVersion'C.0.6.43' =|SQL Server 2000|  
+|RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
+|RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
+|RS 2005 RTM|@DBVersion = 'C.0.8.40'|SQL Server 2005|  
+|RS 2000 SP2|@DBVersion = 'C.0.6.54'|SQL Server 2000 SP2|  
+|RS 2000 SP1|@DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
+|RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |핫픽스||적용 가능한 가장 가까운 버전|  
   
  *2000 이전* 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 경우 ACT_E_BAD_VERSION의 HRESULT가 반환됩니다.  
@@ -69,8 +68,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

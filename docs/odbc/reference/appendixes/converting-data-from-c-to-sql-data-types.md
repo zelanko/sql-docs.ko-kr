@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8f3f8c3c62c7a4d4c6765d52c48d592ff92a21e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>C에서 SQL 데이터 형식으로 데이터를 변환
 응용 프로그램 호출 하는 경우 **SQLExecute** 또는 **SQLExecDirect**를 검색 하 여 데이터를 바인딩된 매개 변수 **SQLBindParameter** 의 저장소 위치에서 응용 프로그램입니다. 응용 프로그램 호출 하는 경우 **SQLSetPos**, 드라이버 업데이트에 대 한 데이터를 검색 하거나 연결 된 열에서 작업을 추가할 **SQLBindCol**합니다. 응용 프로그램 실행 시 데이터 매개 변수를 사용 하 여 매개 변수 데이터를 보냅니다 **SQLPutData**합니다. 하는 경우 필요에 따라 드라이버는 데이터 변환에서 지정한 데이터 형식에서는 *ValueType* 인수 **SQLBindParameter** 에서 지정한 데이터 형식으로는 *ParameterType*인수 **SQLBindParameter**, 데이터 원본에는 데이터를 보냅니다.  
@@ -86,4 +84,3 @@ ms.lasthandoff: 09/09/2017
 -   [C에서 SQL로: 날짜-시간 간격](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
 -   [C에서 SQL로 데이터 변환 예제](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)
-

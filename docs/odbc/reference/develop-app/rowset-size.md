@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0eb3e03c3fd2cad60b8f4a0e6c65aaaebbda03bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowset-size"></a>행 집합 크기
 응용 프로그램에 사용 하는 행 집합 크기에 따라 다릅니다. 일반적으로 화면 기반 응용 프로그램 두 가지 전략 중 하나를 수행 합니다. 첫 번째 화면에 표시 되는 행의 수는 행 집합 크기를 설정 하는 사용자가 화면을 응용 프로그램에 따라 행 집합 크기를 변경 합니다. 두 번째에 더 큰 숫자를 100, 데이터 원본에 대 한 호출 수를 줄일 수 있는를 행 집합 크기를 설정 하는 것입니다. 응용 프로그램이 로컬로 가능 하면 행 집합 내의 스크롤하고 행 집합 외부 스크롤 하는 경우에 새 행을 인출 합니다.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLSetPos** 에 대 한 이전 호출을 기준으로 적용 되는 행 집합 크기를 사용 하 여 **SQLFetch** 또는 **SQLFetchScroll**때문에, **SQLSetPos** 에서 작동 하는 이미 설정 된 행 집합입니다. **SQLSetPos** 도 선택 됩니다 새 행 집합 크기가 경우 **SQLBulkOperations** 를 호출한 후 행 집합 크기가 변경 되었습니다.  
   
 -   **SQLBulkOperations** 사용 하 여 행 집합 크기가 적용 호출의 시간에 관계 없이 모든 인출 된 행 집합의 테이블에 대 한 작업을 수행 하기 때문에 있습니다.
-

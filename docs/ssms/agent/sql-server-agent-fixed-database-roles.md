@@ -3,9 +3,13 @@ title: "SQL Server 에이전트 고정 데이터베이스 역할 | Microsoft 문
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - fixed database roles [SQL Server]
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a8b2d1ccf779150f478702870689c359af4b0182
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 02a76ac743e89269296cdb04e9eb27ec5faca66f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 에이전트 고정 데이터베이스 역할
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 관리자에게 **에이전트에 대한 보다 세부적인 액세스 제어 기능을 제공하는 다음과 같은** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 고정 데이터베이스 역할을 제공합니다. 다음 역할은 액세스 권한이 적은 것부터 순서대로 나열되어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 관리자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에 대한 보다 세부적인 액세스 제어 기능을 제공하는 다음과 같은 **msdb** 데이터베이스 고정 데이터베이스 역할을 제공합니다. 다음 역할은 액세스 권한이 적은 것부터 순서대로 나열되어 있습니다.  
   
 -   **SQLAgentUserRole**  
   
@@ -51,7 +56,7 @@ ms.lasthandoff: 11/09/2017
   
 다음 표에서는 **에이전트 개체에 대한** SQLAgentUserRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용 권한을 요약합니다.  
   
-|동작|연산자|로컬 작업<br /><br />(소유한 작업만 해당)|작업 일정<br /><br />(소유한 작업만 해당)|프록시|  
+|작업|연산자|로컬 작업<br /><br />(소유한 작업만 해당)|작업 일정<br /><br />(소유한 작업만 해당)|프록시|  
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
 |생성/수정/삭제|아니오|예<br /><br />작업 소유권을 변경할 수 없습니다.|예|아니오|  
 |목록 보기(열거)|예<br /><br />**sp_notify_operator** 및 Management Studio의 **작업 속성** 대화 상자에서 사용할 수 있는 운영자 목록을 가져올 수 있습니다.|예|예|예<br /><br />Management Studio의 **작업 단계 속성** 대화 상자에서 사용할 수 있는 프록시만 나열합니다.|  
@@ -70,7 +75,7 @@ ms.lasthandoff: 11/09/2017
   
 다음 표에서는 **에이전트 개체에 대한** SQLAgentReaderRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용 권한을 요약합니다.  
   
-|동작|연산자|로컬 작업|다중 서버 작업|작업 일정|프록시|  
+|작업|연산자|로컬 작업|다중 서버 작업|작업 일정|프록시|  
 |----------|-------------|--------------|--------------------|-----------------|-----------|  
 |생성/수정/삭제|아니오|예(소유한 작업만 해당)<br /><br />작업 소유권을 변경할 수 없습니다.|아니오|예(소유한 작업만 해당)|아니오|  
 |목록 보기(열거)|예<br /><br />**sp_notify_operator** 및 Management Studio의 **작업 속성** 대화 상자에서 사용할 수 있는 운영자 목록을 가져올 수 있습니다.|예|예|예|예<br /><br />Management Studio의 **작업 단계 속성** 대화 상자에서 사용할 수 있는 프록시만 나열합니다.|  
@@ -94,11 +99,11 @@ ms.lasthandoff: 11/09/2017
   
 다음 표에서는 **에이전트 개체에 대한** SQLAgentOperatorRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용 권한을 요약합니다.  
   
-|동작|,|연산자|로컬 작업|다중 서버 작업|작업 일정|프록시|  
+|작업|,|연산자|로컬 작업|다중 서버 작업|작업 일정|프록시|  
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |생성/수정/삭제|아니오|아니오|예(소유한 작업만 해당)<br /><br />작업 소유권을 변경할 수 없습니다.|아니오|예(소유한 작업만 해당)|아니오|  
 |목록 보기(열거)|예|예<br /><br />**sp_notify_operator** 및 Management Studio의 **작업 속성** 대화 상자에서 사용할 수 있는 운영자 목록을 가져올 수 있습니다.|예|예|예|예|  
-|설정/해제|아니오|아니요|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_job** 저장 프로시저를 사용하고 **@enabled** 및 **@job_id** (또는 **@job_name**) 매개 변수를 지정하여 자신이 소유하지 않은 로컬 작업을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|아니오|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_schedule** 저장 프로시저를 사용하고 **@enabled** 및 **@schedule_id** (또는 **@name**) 매개 변수를 지정하여 자신이 소유하지 않은 로컬 작업을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|해당 사항 없음|  
+|설정/해제|아니오|아니오|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_job** 저장 프로시저를 사용하고 **@enabled** 및 **@job_id** (또는 **@job_name**) 매개 변수를 지정하여 자신이 소유하지 않은 로컬 작업을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|아니오|예<br /><br />**SQLAgentOperatorRole** 멤버는 **sp_update_schedule** 저장 프로시저를 사용하고 **@enabled** 및 **@schedule_id** (또는 **@name**) 매개 변수를 지정하여 자신이 소유하지 않은 로컬 작업을 설정 또는 해제할 수 있습니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.|해당 사항 없음|  
 |속성 보기|예|예|예|예|예|예|  
 |속성 편집|아니오|아니오|예(소유한 작업만 해당)|아니오|예(소유한 작업만 해당)|아니오|  
 |실행/중지/시작|해당 사항 없음|해당 사항 없음|예|아니오|해당 사항 없음|해당 사항 없음|  

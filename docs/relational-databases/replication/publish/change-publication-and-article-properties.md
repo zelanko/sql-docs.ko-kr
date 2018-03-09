@@ -2,9 +2,12 @@
 title: "게시 및 아티클 속성 변경 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,22 +19,22 @@ helpviewer_keywords:
 - articles [SQL Server replication], properties
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5afcb14260648ba416360d26e94466e730b13c64
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2322ccf6cb2543f772aa72218ab0dcddce876223
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-publication-and-article-properties"></a>게시 및 아티클 속성 변경
-  게시 생성 후 대부분의 게시 및 아티클 속성을 변경할 수 있지만 일부 속성을 변경하려면 스냅숏을 다시 생성하거나 구독을 다시 초기화해야 합니다. 이 항목에서는 변경 시 이러한 두 가지 동작 중 하나 또는 모두가 필요한 모든 속성에 대한 정보를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 게시 생성 후 대부분의 게시 및 아티클 속성을 변경할 수 있지만 일부 속성을 변경하려면 스냅숏을 다시 생성하거나 구독을 다시 초기화해야 합니다. 이 항목에서는 변경 시 이러한 두 가지 동작 중 하나 또는 모두가 필요한 모든 속성에 대한 정보를 제공합니다.  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>스냅숏 및 트랜잭션 복제에 대한 게시 속성  
   
-|설명|저장 프로시저|속성|요구 사항|  
+|Description|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |스냅숏 형식을 변경합니다.|**sp_changepublication**|**sync_method**|새 스냅숏|  
 |스냅숏 위치를 변경합니다.|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|새 스냅숏|  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>스냅숏 및 트랜잭션 복제에 대한 아티클 속성  
   
-|설명|저장 프로시저|속성|요구 사항|  
+|Description|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |아티클을 삭제합니다.|**sp_droparticle**|모든 매개 변수|구독을 만들기 전에 아티클을 삭제할 수 있습니다. 저장 프로시저를 사용하면 아티클에 대한 구독을 삭제할 수 있고, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하면 전체 구독을 삭제하고 다시 만든 후 동기화해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.|  
 |열 필터를 변경합니다.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="publication-properties-for-merge-replication"></a>병합 복제에 대한 게시 속성  
   
-|설명|저장 프로시저|속성|요구 사항|  
+|Description|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |스냅숏 형식을 변경합니다.|**sp_changemergepublication**|**sync_mode**|새 스냅숏|  
 |스냅숏 위치를 변경합니다.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|새 스냅숏|  
@@ -82,7 +85,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="article-properties-for-merge-replication"></a>병합 복제에 대한 아티클 속성  
   
-|설명|저장 프로시저|속성|요구 사항|  
+|Description|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |매개 변수가 있는 필터가 게시의 마지막 필터인 아티클을 삭제합니다.|**sp_dropmergearticle**|모든 매개 변수|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
 |아티클이 조인 필터 또는 논리적 레코드에서 부모인 아티클을 삭제합니다. 조인을 삭제하면 의도하지 않는 결과가 발생할 수 있습니다.|**sp_dropmergearticle**|모든 매개 변수|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/09/2017
 |다운로드 전용 구독을 설정 또는 해제합니다. 다른 업로드 옵션 간에 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|**2** 에 대한 값 **2**를 변경|구독을 다시 초기화합니다.|  
 |대상 테이블 소유자를 변경합니다.|**sp_changemergearticle**|**destination_owner**|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [관리&#40;복제&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
  [스냅숏 만들기 및 적용](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)   

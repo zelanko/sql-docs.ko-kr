@@ -8,29 +8,26 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.clienthome.f1
+f1_keywords: sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "14"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 370c6cc6e18c7064db092a92d3b8a5d826927689
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 00ed6a9eaa24ff9981ca4184a7ec8ef3107ffc0f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-client-home-screen"></a>데이터 품질 클라이언트 홈 화면
   이 화면에서는 기술 자료 관리, 데이터 품질 프로젝트 및 관리라는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 세 가지 주요 태스크 그룹에 대한 사용자 인터페이스 액세스 권한을 얻을 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ### <a name="knowledge-base-management"></a>기술 자료 관리  
  DQS 기술 자료는 DQS에서 데이터 품질을 향상시키는 데 사용되는 메타데이터의 리포지토리입니다. 이 메타데이터는 DQS 플랫폼에서 컴퓨터 기반 기술 자료 검색 프로세스를 통해 만들어지거나, 데이터 관리자가 대화형 도메인 관리 프로세스를 통해 만듭니다.  
@@ -67,10 +64,9 @@ ms.lasthandoff: 09/09/2017
  **Configuration**  
  참조 데이터 서비스 계정(Windows Azure Marketplace 및 참조 데이터 서비스 직접 사용)에 대한 구성 속성, 일반 설정(대화형 정리, 일치 및 프로파일링) 및 로그 심각도 설정을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [데이터 품질 프로젝트&#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [DQS 관리](../data-quality-services/dqs-administration.md)  
   
   
-

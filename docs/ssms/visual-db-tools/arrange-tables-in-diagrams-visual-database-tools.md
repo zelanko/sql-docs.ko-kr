@@ -3,8 +3,11 @@ title: "다이어그램에서 테이블 정렬(Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c955812c8033d26a37df66bfe596e3d0153d1e08
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 17005e89a1711440b916815615dc86ef0c680313
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>다이어그램에서 테이블 정렬(Visual Database Tools)
-데이터베이스 다이어그램에서 테이블을 빠르게 정렬하여 각 테이블과 관계를 명확하게 파악할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램에서 테이블을 빠르게 정렬하여 각 테이블과 관계를 명확하게 파악할 수 있습니다.  
   
 ### <a name="to-arrange-tables-in-diagrams"></a>다이어그램에서 테이블을 정렬하려면  
   

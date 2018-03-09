@@ -17,17 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: 24
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4e9d1acd33ad8d10022703cde1f6a3acabb7c268
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>유연한 자동 장애 조치 정책 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +60,13 @@ ms.lasthandoff: 08/02/2017
   
 -   가용성 그룹이 해당 WSFC 오류 임계값을 초과하면 WSFC 클러스터가 가용성 그룹에 대해 자동 장애 조치를 시도하지 않습니다. 또한 클러스터 관리자가 실패한 리소스 그룹을 수동으로 온라인 상태로 만들거나 데이터베이스 관리자가 가용성 그룹의 수동 장애 조치를 수행할 때까지 가용성 그룹의 WSFC 리소스 그룹이 실패한 상태로 유지됩니다. *WSFC 오류 임계값* 은 특정 기간 동안 가용성 그룹에 대해 지원되는 최대 오류 수로 정의됩니다. 기본 기간은 6시간이며, 이 기간 동안의 최대 오류 수에 대한 기본값은 *n*-1입니다. 여기서 *n* 은 WSFC 노드의 수입니다. 지정된 가용성 그룹에 대한 오류-임계값 값을 변경하려면 WSFC 장애 조치(Failover) 관리자 콘솔을 사용하세요.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
   
 |태스크|사용 권한|  
 |----------|-----------------|  
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/02/2017
   
 2.  가용성 그룹에 가용성 복제본을 추가하는 경우 **New-SqlAvailabilityGroup** cmdlet을 사용합니다. 기존 가용성 복제본을 수정할 때 **Set-SqlAvailabilityGroup** cmdlet을 사용합니다.  
   
-    -   장애 조치 상태 수준을 설정하려면 **FailureConditionLevel***level* 매개 변수를 사용합니다. 여기서 *level* 은 다음 값 중 하나입니다.  
+    -   장애 조치 상태 수준을 설정하려면 **FailureConditionLevel***level* 매개 변수를 사용합니다. 여기서 *level*은 다음 값 중 하나입니다.  
   
         |값|Level|자동 장애 조치가 시작되는 경우|  
         |-----------|-----------|-------------------------------------------|  
@@ -138,7 +137,7 @@ ms.lasthandoff: 08/02/2017
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   상태 확인 제한 시간 임계값을 설정하려면 **HealthCheckTimeout***n* 매개 변수를 사용합니다. 여기서 *n* 은 15000밀리초(15초)부터 4294967295밀리초까지의 정수입니다. 기본값은 30000밀리초(30초)입니다.  
+    -   상태 확인 제한 시간 임계값을 설정하려면 **HealthCheckTimeout***n* 매개 변수를 사용합니다. 여기서 *n*은 15000밀리초(15초)부터 4294967295밀리초 사이의 정수입니다. 기본값은 30000밀리초(30초)입니다.  
   
          예를 들어 다음 명령은 기존 가용성 그룹 `AG1`의 상태 확인 제한 시간 임계값을 120,000밀리초(2분)로 변경합니다.  
   
@@ -166,4 +165,3 @@ ms.lasthandoff: 08/02/2017
  [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  
   
   
-

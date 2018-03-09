@@ -2,34 +2,32 @@
 title: "Representation(Tabular) 데이터베이스 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 69ca2b7cadbb70a8728fda2e631d5df57efbda76
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52b7a92280566258321a46ecfb2c489e81267965
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-representationtabular"></a>데이터베이스 표현(테이블 형식)
-  테이블 형식 모드에서 데이터베이스는 테이블 형식 모델의 모든 개체에 대 한 컨테이너입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+테이블 형식 모드에서 데이터베이스는 테이블 형식 모델의 모든 개체에 대 한 컨테이너입니다.  
   
 ## <a name="database-representation"></a>데이터베이스 표현  
  데이터베이스는 테이블 형식 모델을 형성하는 모든 개체가 있는 위치입니다. 개발자는 데이터베이스에 포함된 연결, 테이블, 역할 등의 개체를 찾습니다.  
@@ -100,4 +98,3 @@ catch (Exception createDBxc)
  AMO 사용 하 여 데이터베이스 표현을 만들고 조작 하는 방법에 대 한 실용적인 이해 Tabular AMO 2012 예제의 소스 코드를 참조 하십시오. 특히 다음 소스 파일에 체크 인: Database.cs 합니다. 예제는 Codeplex에서 사용할 수 있습니다. 예제 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다.  
   
   
-

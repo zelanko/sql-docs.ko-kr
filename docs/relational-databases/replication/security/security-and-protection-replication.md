@@ -2,11 +2,13 @@
 title: "보안 및 보호(복제) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,28 +19,28 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], security
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8e9675b71eaadc2e86015c4de49be55d026fd02
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: baa793a3d82a7420af7ceb1ddfdb30d23b91c3b8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-and-protection-replication"></a>보안 및 보호(복제)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 배포하는 복제 시나리오를 악의적인 공격으로부터 보호하고 데이터의 보안을 향상시키는 방법을 살펴봅니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 배포하는 복제 시나리오를 악의적인 공격으로부터 보호하고 데이터의 보안을 향상시키는 방법을 살펴봅니다.  
   
- ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **보안 개요**  
+ ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **보안 개요**  
  [위협 요소 및 취약성 완화&#40;복제&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
   
  [ID 및 액세스 제어&#40;복제&#41;](../../../relational-databases/replication/security/identity-and-access-control-replication.md)  
   
  [기타...](../../../relational-databases/replication/security/security-overview-replication.md)  
   
- ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **안전한 개발**  
+ ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **보안 개발**  
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
@@ -47,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
  [기타...](../../../relational-databases/replication/security/secure-development-replication.md)  
   
- ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **안전한 배포**  
+ ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **안전한 배포**  
  [배포자 보안 설정](../../../relational-databases/replication/security/secure-the-distributor.md)  
   
  [게시자 보안 설정](../../../relational-databases/replication/security/secure-the-publisher.md)  
@@ -60,10 +62,10 @@ ms.lasthandoff: 06/22/2017
   
  [기타...](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   
- ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **안전한 작업**  
+ ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **안전한 작업**  
  [복제의 로그인 및 암호 관리](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기술 참조&#40;복제&#41;](../../../relational-databases/replication/technical-reference-replication.md)  
   
   

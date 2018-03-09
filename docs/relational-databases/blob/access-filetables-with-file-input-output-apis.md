@@ -2,9 +2,12 @@
 title: "파일 입/출력 API를 사용하여 FileTable 액세스 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f482eb2ff361f6c923076093ceb22ab873f0ce8f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>파일 입/출력 API를 사용하여 FileTable 액세스
-  FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합니다.  
   
 ##  <a name="accessing"></a> FileTable에서 파일 I/O API 사용 시작  
  FileTable은 대개 Windows 파일 시스템 및 파일 I/O API를 통해 사용합니다. FileTable은 다양한 사용 가능한 파일 I/O API를 통한 비트랜잭션 액세스를 지원합니다.  
@@ -60,7 +64,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="delete"></a> FileTable의 파일 및 디렉터리 삭제  
  모든 Windows 파일 I/O API 의미 체계는 파일 또는 디렉터리를 삭제하면 적용됩니다.  
   
--   디렉터리에 파일 하위 디렉터리가 있는 경우 디렉터리가 삭제되지 않습니다.  
+-   디렉터리에 파일 또는 하위 디렉터리가 있는 경우 디렉터리가 삭제되지 않습니다.  
   
 -   파일 또는 디렉터리를 삭제하면 FileTable에서 해당 행이 제거됩니다. 이 작업은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업을 통해 해당 행을 삭제하는 것과 같습니다.  
   
@@ -109,31 +113,30 @@ ms.lasthandoff: 06/22/2017
 |기능|지원됨|주석|  
 |----------------|---------------|--------------|  
 |**Oplock**|예|수준 2, 수준 1, 일괄 처리 및 필터 oplock을 지원합니다.|  
-|**확장 특성**|아니요||  
-|**구문 재분석 지점**|아니요||  
-|**영구 ACL**|아니요||  
-|**명명된 스트림**|아니요||  
+|**확장 특성**|아니오||  
+|**구문 재분석 지점**|아니오||  
+|**영구 ACL**|아니오||  
+|**명명된 스트림**|아니오||  
 |**스파스 파일**|예|스파스는 파일에 대해서만 설정할 수 있으며 데이터 스트림 저장소에는 영향을 줍니다. FILESTREAM 데이터는 NTFS 볼륨에 저장되므로 FileTable 기능은 NTFS 파일 시스템에 대한 요청을 전달하여 스파스 파일을 지원합니다.|  
 |**압축**|예||  
 |**암호화**|예||  
-|**TxF**|아니요||  
-|**파일 ID**|아니요||  
-|**개체 ID**|아니요||  
-|**심볼 링크**|아니요||  
-|**하드 링크**|아니요||  
-|**짧은 이름**|아니요||  
-|**디렉터리 변경 알림**|아니요||  
+|**TxF**|아니오||  
+|**파일 ID**|아니오||  
+|**개체 ID**|아니오||  
+|**심볼 링크**|아니오||  
+|**하드 링크**|아니오||  
+|**짧은 이름**|아니오||  
+|**디렉터리 변경 알림**|아니오||  
 |**바이트 범위 잠금**|예|바이트 범위 잠금에 대한 요청은 NTFS 파일 시스템에 전달됩니다.|  
-|**메모리 매핑된 파일**|아니요||  
+|**메모리 매핑된 파일**|아니오||  
 |**취소 I/O**|예||  
-|**보안**|아니요|Windows 공유 수준 보안과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 열 수준 보안이 적용됩니다.|  
-|**USN 저널**|아니요|FileTable의 파일 및 디렉터리에 대한 메타데이터 변경은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 DML 작업입니다. 따라서 변경 내용이 해당 데이터베이스 로그 파일에 기록됩니다. 그러나 크기를 변경한 경우를 제외하고 NTFS USN 저널에는 변경 내용이 기록되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경 내용 추적 기능을 사용할 수 있습니다.|  
+|**보안**|아니오|Windows 공유 수준 보안과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 열 수준 보안이 적용됩니다.|  
+|**USN 저널**|아니오|FileTable의 파일 및 디렉터리에 대한 메타데이터 변경은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 DML 작업입니다. 따라서 변경 내용이 해당 데이터베이스 로그 파일에 기록됩니다. 그러나 크기를 변경한 경우를 제외하고 NTFS USN 저널에는 변경 내용이 기록되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경 내용 추적 기능을 사용할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [FileTable로 파일 로드](../../relational-databases/blob/load-files-into-filetables.md)   
- [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [FileTable에서 디렉터리 및 경로 작업](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Transact-SQL을 사용하여 FileTable에 액세스](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [FileTable DDL, 함수, 저장 프로시저 및 뷰](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
-

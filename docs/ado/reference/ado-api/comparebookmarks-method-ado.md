@@ -3,7 +3,7 @@ title: "불일치 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 431ffdb1a2be03404b4d0c3636f547b6c8cf8514
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1e19f4800505e3ed481455bc349d65855c6b538
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comparebookmarks-method-ado"></a>불일치 메서드 (ADO)
 두 개의 책갈피를 비교 하 고 상대 값의 표시를 반환 합니다.  
@@ -70,4 +69,3 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  [불일치 예제 (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
  [예제에서는 불일치 (VC + +)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Bookmark 속성(ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)
-

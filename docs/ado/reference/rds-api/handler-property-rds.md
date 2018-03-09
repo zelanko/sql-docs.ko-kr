@@ -3,7 +3,7 @@ title: "처리기 속성 (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fa363b9fa9761eb764a7bf2aa7b9d4eb992ec65b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 25ac7c676fbab1e8b5899a3502fab2199b0afd22
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handler-property-rds"></a>처리기 속성 (RDS)
 기능을 확장 하는 서버 쪽 사용자 지정 프로그램 (처리기)의 이름을 나타냅니다는 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 및에서 사용 하는 매개 변수는 *처리기*합니다.  
@@ -57,7 +56,7 @@ DataControl.Handler = String
   
  기본 처리기의 이름은 **MSDFMAP 합니다. 처리기**, 해당 기본 매개 변수는 명명 된 사용자 지정 파일 및 **MSDFMAP 합니다. INI**합니다. 이 속성을 사용 하 여 서버 관리자가 만든 대체 사용자 지정 파일을 호출 합니다.  
   
- 설정 하는 대신은 **처리기** 속성 처리기에서 및 매개 변수를 지정 하는 것은 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성 즉, "**처리기 =**  *handlerName, parameter1, parameter2;...* ".  
+ 설정 하는 대신은 **처리기** 속성 처리기에서 및 매개 변수를 지정 하는 것은 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성 즉, "**처리기 = * * * handlerName, parameter1, ...; 매개 변수 2* ".  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
@@ -66,6 +65,5 @@ DataControl.Handler = String
  [처리기 속성 예제 (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
  [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

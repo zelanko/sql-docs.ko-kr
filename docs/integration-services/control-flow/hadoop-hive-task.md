@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.hadoophivetask.f1
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bfd2e1fcda13aed2d95bed0ec780ff4d3372b94
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 66e0ac41dbc9015be94ec18180a5c8fa3932efe9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-hive-task"></a>Hadoop 하이브 태스크
   Hadoop 하이브 태스크를 사용하여 Hadoop 클러스터에서 하이브 스크립트를 실행합니다.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/03/2017
   
  ![Hadoop 하이브 태스크 편집기](../../integration-services/control-flow/media/hadoop-hive-task.png "Hadoop 하이브 태스크 편집기")  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **Hadoop 하이브 태스크 편집기** 대화 상자에서 다음 옵션을 구성합니다.  
   
 |필드|Description|  
@@ -45,8 +44,7 @@ ms.lasthandoff: 08/03/2017
 |**HadoopScriptFilePath**|**SourceType** 의 값이 **ScriptFile**일 때 Hadoop의 스크립트 파일 경로를 지정합니다.|  
 |**TimeoutInMinutes**|제한 시간 값을 분 단위로 지정합니다. Hadoop 작업은 제한 시간이 경과할 때까지 완료되지 않은 경우 중지됩니다. Hadoop 작업이 비동기적으로 실행되도록 예약하려면 값으로 0을 지정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Hadoop 연결 관리자](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   
-

@@ -1,27 +1,28 @@
 ---
-title: "아키텍처 및 개요 | Microsoft Docs"
+title: "SQL Server 컴퓨터 학습 서비스에 대 한 아키텍처 개요 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7549b59d4edc00dd620deeb515f6cd7143a62db7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
-
-# <a name="architecture-and-overview-of-machine-learning-services"></a>아키텍처 및 시스템 학습 서비스 개요
+# <a name="architecture-overview-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 아키텍처 개요 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에서는 SQL Server에서 Python 및 R 스크립트 실행을 지 원하는 확장 프레임 워크의 목표를 설명 합니다.
 
@@ -70,7 +71,6 @@ SQL Server에서 관리 보안 프레임 워크 내에서 신뢰할 수 있는 �
 
   플랫폼의 두 개의 균등 하 게 강력한 측면 의존 하는 성능 최적화: 리소스 관리와 SQL Server를 사용 하 여 처리 하 고 분산 컴퓨팅에서 알고리즘으로 제공 된 병렬 **RevoScaleR** 및 **revoscalepy**합니다.
 
-
 ## <a name="solution-development-and-deployment"></a>솔루션 개발 및 배포
 
 이러한 중요 한 확장성 플랫폼에 대 한 목표, 외에도 SQL Server의 컴퓨터 학습 서비스는 데이터베이스 엔진 및 BI 스택의 이러한 이점을 강력한 통합 기능을 제공 하도록 설계 되었습니다.
@@ -93,7 +93,7 @@ SQL Server에서 관리 보안 프레임 워크 내에서 신뢰할 수 있는 �
 
 확실 하지는 기계 학습 솔루션 요구 사항에 맞는? SQL Server 2016 및 SQL Server 2017에서 포함 된 분석 뿐만 아니라 Microsoft 다음 기계를 학습 플랫폼 및 서비스를 제공 합니다.
 
-+ [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
++ [Microsoft R 서버 및 서버를 학습 하는 컴퓨터](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
 
   개발, 배포 및 관리 컴퓨터 학습 작업에 대 한 다양 한 플랫폼 환경
 + [데이터 과학 가상 컴퓨터](https://docs.microsoft.com/azure/machine-learning/machine-learning-data-science-virtual-machine-overview)
@@ -101,7 +101,8 @@ SQL Server에서 관리 보안 프레임 워크 내에서 신뢰할 수 있는 �
   학습, 사전 설치 된 컴퓨터에 필요한 모든 도구입니다. Jupyter 노트북, Python 또는 지역을 사용 하 여
   
   새 시도 [Windows 2016 미리 보기 버전이](http://aka.ms/dsvm/win2016), CNTK mxNet를 제공할 뿐 아니라 Windows 컨테이너에 대 한 지원 같은 인기 있는 심층 학습 프레임 워크의 GPU 버전이 포함 된!
-+ [Azure Cognitive 서비스](https://azure.microsoft.com/services/cognitive-services/)
+
++ [Azure Cognitive Services](https://azure.microsoft.com/services/cognitive-services/)
 
   다양 한 AI 및 ML 자연어 비디오, 얼굴 인식의 인덱싱 등 응용 프로그램에 추가 하기 위한 클라우드 서비스의 emotion 감지, 텍스트 분석 기계 번역 고 더
 + [Azure Machine Learning](https://azure.microsoft.com/services/machine-learning/)
@@ -110,5 +111,4 @@ SQL Server에서 관리 보안 프레임 워크 내에서 신뢰할 수 있는 �
 
 ## <a name="see-also"></a>관련 항목:
 
-[R 서버 독립 실행형](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)
-
+[서버를 학습 하는 컴퓨터 및 Microsoft R 제품 비교](https://docs.microsoft.com/machine-learning-server/what-is-r-server-interoperability)

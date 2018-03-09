@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,22 +16,23 @@ helpviewer_keywords:
 - monitoring [CLR integration]
 - performance [CLR integration]
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 488b1caaab31a06f2bff4f611e0bc1e6affada68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aed7ed72f65d504caf0ada54e9eab5ed620d5913
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>관리되는 데이터베이스 개체 모니터링 및 문제 해결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 모니터링 및 관리 되는 데이터베이스 개체 및 실행 되는 어셈블리 문제 해결에 사용할 수 있는 도구에 대 한 정보를 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 중인 관리되는 데이터베이스 개체와 어셈블리를 모니터링하고 문제를 해결하는 데 사용할 수 있는 도구에 대한 정보를 제공합니다.  
   
 ## <a name="profiler-trace-events"></a>프로파일러 추적 이벤트  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터베이스 엔진에서 발생하는 이벤트를 모니터링하기 위한 SQL 추적과 이벤트 알림을 제공합니다. SQL 추적은 지정된 이벤트를 기록하여 성능 관련 문제 해결, 데이터베이스 작업 감사, 테스트 환경을 위한 샘플 데이터 수집, [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 저장 프로시저 디버깅, 성능 분석 도구를 위한 데이터 수집 등의 작업을 도와 줍니다. 자세한 내용은 참조 [SQL 추적](../../relational-databases/sql-trace/sql-trace.md) 및 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진에서 발생 하는 이벤트를 모니터링 하는 SQL 추적 및 이벤트 알림을 제공 합니다. SQL 추적은 지정된 이벤트를 기록하여 성능 관련 문제 해결, 데이터베이스 작업 감사, 테스트 환경을 위한 샘플 데이터 수집, [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 저장 프로시저 디버깅, 성능 분석 도구를 위한 데이터 수집 등의 작업을 도와 줍니다. 자세한 내용은 참조 [SQL 추적](../../relational-databases/sql-trace/sql-trace.md) 및 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
   
 |이벤트|Description|  
 |-----------|-----------------|  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |[Sql: stmtstarting 이벤트 클래스](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [sql: stmtcompleted 이벤트 클래스](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|CLR 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 루틴의 실행을 모니터링하는 데 사용합니다.|  
   
 ## <a name="performance-counters"></a>성능 카운터  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 작업을 모니터링하기 위해 시스템 모니터에서 사용할 수 있는 개체 및 카운터를 제공합니다. 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금이나 Windows 프로세스와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 말합니다. 각 개체에는 모니터링할 개체의 여러 요소를 결정하는 하나 이상의 카운터가 포함됩니다. 자세한 내용은 [SQL Server 개체 사용](../../relational-databases/performance-monitor/use-sql-server-objects.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행 하는 컴퓨터에서 작업 모니터링 시스템 모니터에서 사용할 수 있는 개체 및 카운터를 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금이나 Windows 프로세스와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 말합니다. 각 개체에는 모니터링할 개체의 여러 요소를 결정하는 하나 이상의 카운터가 포함됩니다. 자세한 내용은 [SQL Server 개체 사용](../../relational-databases/performance-monitor/use-sql-server-objects.md)을 참조하세요.  
   
 |개체|Description|  
 |------------|-----------------|  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |[sys.assembly_files &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|데이터베이스에 등록된 어셈블리 파일에 대한 정보를 반환합니다.|  
 |[sys.assembly_types &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|어셈블리로 정의된 UDT(사용자 정의 형식)를 식별합니다.|  
 |[sys.module_assembly_usages &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|CLR 모듈이 정의되어 있는 어셈블리를 식별합니다.|  
-|[sys.parameter_type_usages&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|사용자 정의 형식인 매개 변수에 대한 정보를 반환합니다.|  
+|[sys.parameter_type_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|사용자 정의 형식인 매개 변수에 대한 정보를 반환합니다.|  
 |[sys.server_assembly_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)|CLR 트리거가 정의되어 있는 어셈블리를 식별합니다.|  
 |[sys.server_triggers&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)|CLR 트리거를 비롯하여 서버의 서버 수준 DDL 트리거를 식별합니다.|  
 |[sys.type_assembly_usages &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|사용자 정의 형식이 정의되어 있는 어셈블리를 식별합니다.|  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |[sys.dm_exec_cached_plans&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)|더 빠른 쿼리 실행을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 캐시된 쿼리 실행 계획에 대한 정보를 반환합니다.|  
 |[sys.dm_exec_query_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)|캐시된 쿼리 계획에 대한 집계 성능 통계를 반환합니다.|  
 |[sys.dm_exec_requests &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 중인 각 요청에 대한 정보를 반환합니다.|  
-|[sys.dm_os_memory_clerks &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|CLR 메모리 클럭을 비롯하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 현재 활성 상태인 모든 메모리 클럭을 반환합니다.|  
+|[sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|CLR 메모리 클럭을 비롯하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 현재 활성 상태인 모든 메모리 클럭을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

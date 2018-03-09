@@ -3,27 +3,28 @@ title: "R 데이터 형식 사용 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
-caps.latest.revision: 16
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 977d358981e3382a0ea8ee224362098627424e88
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: c4ab2ed64eaaf970057987c7169d12e93c4380ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 라이브러리 및 R 데이터 형식
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에 포함 된 R 라이브러리와는 다음과 같은 제품에서 지원 되는 데이터 형식을 설명 합니다.
 
@@ -73,7 +74,7 @@ Microsoft R Server의 특정 버전에 포함 된 R 버전을 찾으려면 참�
 |**smallint**|`integer`|**int**||
 |**smallmoney**|`numeric`|**float**||
 |**tinyint**|`integer`|**int**||
-|**ssNoversion**|`character`|**varchar(max)**||
+|**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|입력 매개 변수 및 출력으로만 허용됨|
 |**varbinary(max)**|`raw`|**varbinary(max)**|입력 매개 변수 및 출력으로만 허용됨|
 |**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
@@ -156,8 +157,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|1.|1.|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|1.|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 R에서 `str` 함수를 사용할 경우 출력 데이터의 스키마를 가져옵니다. 이 함수는 다음 정보를 반환합니다.
 
@@ -199,4 +200,3 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ## <a name="see-also"></a>관련 항목:
 
 [Python 라이브러리 및 데이터 형식](../python/python-libraries-and-data-types.md)
-

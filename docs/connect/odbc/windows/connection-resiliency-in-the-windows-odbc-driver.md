@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6dda329540bd228920e88a12c69a4a6f2b8a8327
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9b19c5190d6256b0a5fd5d71976c5078ea86dee8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 드라이버에서 연결 복원
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -63,9 +61,9 @@ ms.lasthandoff: 09/09/2017
   
  응용 프로그램이 SQL_DRIVER_COMPLETE_REQUIRED에 연결하고 나중에 끊어진 연결에 대해 문을 실행하려는 경우 ODBC 드라이버가 대화 상자를 다시 표시하지 않습니다. 복구가 진행 중인 동안  
   
--   호출에 복구 하는 동안 **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**를 반환 해야 **SQL_CD_TRUE**합니다.  
+-   호출에 복구 하는 동안 **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**를 반환 해야 **SQL_CD_FALSE**합니다.  
   
--   복구가 실패 한 경우를 호출할 때 **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**를 반환 해야 **SQL_CD_FALSE**합니다.  
+-   복구가 실패 한 경우를 호출할 때 **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**를 반환 해야 **SQL_CD_TRUE**합니다.  
   
  다음 상태 코드는 서버에서 명령을 실행하는 함수에 의해 반환됩니다.  
   
@@ -180,8 +178,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Windows의 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   
-

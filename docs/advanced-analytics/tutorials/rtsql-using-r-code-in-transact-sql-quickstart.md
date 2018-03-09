@@ -1,33 +1,34 @@
----
+﻿---
 title: "Transact-SQL에서 R 코드 사용하기(SQL에서 R 빠른 시작) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: 36
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c023af0a3a9b9c53cb2b6adf7298c18657a60803
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Transact-SQL에서 R 코드 사용하기(SQL에서 R 빠른 시작)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 자습서에서는 T-SQL 저장 프로시저에서 R 스크립트를 호출하는 기본 메커니즘을 단계별로 안내합니다.
 
@@ -53,7 +54,7 @@ SQL Server 인스턴스는 Azure 가상 머신 또는 온-프레미스에 있을
 
 R 스크립트를 포함한 SQL 쿼리를 실행하려면 데이터베이스에 연결하고 T-SQL 코드를 실행할 수 있는 다른 응용 프로그램을 사용할 수 있습니다. SQL 전문가라면 SQL Server Management Studio(SSMS) 또는 Visual Studio를 사용할 수 있습니다.
 
-이 자습서에서는 SQL Server내에서 R을 실행하는 것이 얼마나 쉬운지 보여주기 위해 새로운 **Visual Studio Code용 mssql 확장**을 사용했습니다. VS Code는 Windows, Linux, macOS에서 실행할 수 있는 무료 개발 환경입니다. **mssql** 확장은 SQL 쿼리를 실행하기 위한 가벼운 확장입니다. 이 확장을 설치하려면 [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)(Visual Studio Code용 mssql 확장 사용) 문서를 참조하세요.
+이 자습서에서는 R 내부 SQL Server를 실행 하는 것이 얼마나 쉬운지 표시를 사용 했습니다 새 **Visual Studio Code 확장명이 mssql**합니다. VS Code는 Windows, Linux 또는 macOS 등에서 실행할 수 있는 무료 개발 환경입니다. **mssql** 확장은 T-SQL 쿼리를 실행 하기 위한 간단한 확장 합니다. 이 확장을 설치하려면 [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)(Visual Studio Code용 mssql 확장 사용) 문서를 참조하세요.
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>데이터베이스에 연결하고 Hello World 테스트 스크립트 실행
 
@@ -102,4 +103,3 @@ R 스크립트를 포함한 SQL 쿼리를 실행하려면 데이터베이스에 
 4 단원: [예측 모델 만들기](rtsql-create-a-predictive-model-r.md)
 
 5 단원: [모델에서 예측과 플롯](rtsql-predict-and-plot-from-model.md)
-

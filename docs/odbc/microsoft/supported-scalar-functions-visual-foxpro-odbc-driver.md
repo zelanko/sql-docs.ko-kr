@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - scalar functions [ODBC], Visual FoxPro ODBC driver
 - Visual FoxPro ODBC driver [ODBC], scalar functions
 ms.assetid: 6541192e-e562-4de0-9f20-40afa41fb84a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 51e0d3283d4a520c148e7be82ee9601d919a2608
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d664d15e359070b33f5fb9f7ac2c4737ee900351
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>지원 되는 스칼라 함수 (Visual FoxPro ODBC 드라이버)
 Visual FoxPro ODBC 드라이버는 ODBC SQL 문법에 정의 된 세 가지 유형의 스칼라 함수는 지원: 문자열, 숫자 및 날짜 및 시간 함수입니다.  
@@ -39,4 +37,3 @@ Visual FoxPro ODBC 드라이버는 ODBC SQL 문법에 정의 된 세 가지 유�
 -   [숫자 함수(Visual FoxPro ODBC 드라이버)](../../odbc/microsoft/numeric-functions-visual-foxpro-odbc-driver.md)  
   
 -   [날짜 및 시간 함수(Visual FoxPro ODBC 드라이버)](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)
-

@@ -2,29 +2,30 @@
 title: "File Load and Save 이벤트 범주 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8051a7d8-d815-45e1-a764-a5992b07b4fd
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 94347392d1f26636f04e80b467e02351d4229f57
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 35e87b8be69035997a6ba466d45f426d6e236a9c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="file-load-and-save-event-category"></a>File Load and Save 이벤트 범주
-  File Load and Save 이벤트 범주에는 다음 표에서 설명하는 이벤트 클래스가 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+File Load and Save 이벤트 범주에는 다음 표에서 설명하는 이벤트 클래스가 있습니다.  
   
 |Event Class|이벤트 ID|Description|  
 |-----------------|--------------|-----------------|  

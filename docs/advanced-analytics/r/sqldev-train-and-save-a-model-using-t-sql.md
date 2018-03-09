@@ -2,11 +2,12 @@
 title: "5 단원: 학습 및 T-SQL을 사용 하 여 모델을 저장할 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -15,19 +16,19 @@ dev_langs:
 - R
 - TSQL
 ms.assetid: 3282e8ed-b515-4ed5-8543-fcef68629a92
-caps.latest.revision: 10
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 23413e4c5093dbd4da39712faa4d5b0b03e58115
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 785e4dc3db234447c806ddc349682d08a8447923
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>5 단원: 학습 및 T-SQL을 사용 하 여 모델 저장
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
 
@@ -118,5 +119,4 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-lesson"></a>이전 단원
 
 [4 단원: T-SQL을 사용 하 여 데이터 기능 만들기](..//tutorials/sqldev-create-data-features-using-t-sql.md)
-
 

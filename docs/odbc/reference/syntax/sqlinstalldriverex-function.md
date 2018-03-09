@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLInstallDriverEx
-apilocation:
-- sqlsrv32.dll
+apiname: SQLInstallDriverEx
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLInstallDriverEx
-helpviewer_keywords:
-- SQLInstallDriverEx function [ODBC]
+f1_keywords: SQLInstallDriverEx
+helpviewer_keywords: SQLInstallDriverEx function [ODBC]
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4179bf04131f256c5a37cb01c079035a569a07af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2eda9fe4e6a5f300f83512f669ad5206f89effe6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 함수
 **규칙**  
@@ -93,7 +87,7 @@ BOOL SQLInstallDriverEx(
 ## <a name="diagnostics"></a>진단  
  때 **SQLInstallDriverEx** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*lpszPathOut* 인수 출력 경로 포함할 수 없습니다. 버퍼의 잘린된 경로 포함합니다.<br /><br /> *cbPathOutMax* 되었습니다. 0, 인수 및 *문제점과* ODBC_INSTALL_COMPLETE 되었습니다.|  
@@ -104,7 +98,7 @@ BOOL SQLInstallDriverEx(
 |ODBC_ERROR_INVALID_PARAM_SEQUENCE|잘못 된 매개 변수 순서|*lpszDriver* 인수 키워드-값 쌍의 목록이 없습니다.|  
 |ODBC_ERROR_USAGE_UPDATE_FAILED|증가 하거나 구성 요소 사용 횟수를 감소 시킬 수 없습니다.|설치 관리자는 드라이버의 사용 횟수를 증가 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  *lpszDriver* 인수는 키워드 / 값 쌍의 형태로 특성 목록입니다. 각 쌍은 null 바이트를으로 종료 되 고 전체 목록을 바이트 null로 종료 됩니다. (즉, 두 개의 null 바이트의 끝을 표시 목록입니다.) 이 목록 형식은 다음과 같습니다.  
   
  *드라이버 desc*  **\\** 0Driver**=***드라이버 DLL-파일 이름*  **\\** 0 [설치**=***설치 프로그램-DLL-filename***\\**0]  
@@ -151,4 +145,3 @@ SQL Server\0Driver=SQLSRVR.DLL\0\0
 |내용|참조 항목|  
 |---------------------------|---------|  
 |드라이버 관리자 설치|[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|
-

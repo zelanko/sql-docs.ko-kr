@@ -2,13 +2,13 @@
 title: "호출 ASCmd cmdlet | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6e5d1fba56fd4cee4c736a583d8af2fe8ec6f986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dd40b6d9f777fbea8d12f804b01b537d0ad846ce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-ascmd-cmdlet"></a>Invoke-ASCmd cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  데이터베이스 관리자는 이 cmdlet을 사용하여 XMLA 스크립트, MDX(Multidimensional Expression), DMX(Data Mining Extension) 문 또는 TMSL(Tabular Model Scripting Language) 스크립트를 실행할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]데이터베이스 관리자를 XMLA 스크립트, MDX (Multidimensional Expressions), 데이터 마이닝 Extensions (DMX) 문 또는 TMSL Tabular Model Scripting Language () 스크립트를 실행할 수 있습니다.  
   
  TMSL은 SQL Server 2016 Analysis Services 인스턴스의 테이블 형식 서버 모드에만 사용할 수 있습니다.  
   
@@ -207,7 +204,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |입력|PSObject|  
-|출력|문자열|  
+|출력|String|  
   
 ## <a name="example-1-xmla-input-file"></a>예 1(XMLA 입력 파일)  
   

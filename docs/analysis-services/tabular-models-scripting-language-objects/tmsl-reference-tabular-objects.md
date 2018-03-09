@@ -2,35 +2,29 @@
 title: "개체 정의에서 테이블 형식 모델 스크립팅 언어 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 486f0507-cec6-4672-b947-0bb61d1cbc46
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f03fce7d1159e6fe7d34024e7cf63167024b752b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f69f6b59054b7fb1880757271b290874448373d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tmsl-reference---tabular-objects"></a>TMSL 참조-테이블 형식 개체
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  또는 테이블 형식 모드에서 SQL Sever 2016 Analysis Services 인스턴스에 연결 하는 생성, 사용, 또는 테이블 형식 데이터베이스를 관리 하는 응용 프로그램 명령 및 JSON 형식에서 개체 표시가 TMSL Tabular Model Scripting Language ()를 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]또는 테이블 형식 모드에서 SQL Sever 2016 Analysis Services 인스턴스에 연결 하는 생성, 사용, 또는 테이블 형식 데이터베이스를 관리 하는 응용 프로그램 명령 및 JSON 형식에서 개체 표시가 TMSL Tabular Model Scripting Language ()를 사용할 수 있습니다.  
   
  이 문서에서 SQL Server Management Studio, SQL Server 데이터 도구 (SSDT) 및 AMO PowerShell 생성 된 스크립트에 사용 되는 TMSL 스키마의 주요 개체에 설명 합니다.  
   
@@ -53,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

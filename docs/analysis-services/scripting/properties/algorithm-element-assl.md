@@ -2,43 +2,35 @@
 title: "Algorithm 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Algorithm Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Algorithm Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Algorithm
-helpviewer_keywords:
-- Algorithm element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Algorithm
+helpviewer_keywords: Algorithm element
 ms.assetid: 188bf7ce-c5c9-406a-af75-5a026c92a569
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ad1fed7c000a978c096692fa4f4c59d655132e9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fe1a9caffdff1de0dc62c4ddd696e1ec8b829bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="algorithm-element-assl"></a>Algorithm 요소(ASSL)
-  사용 되는 알고리즘 정의 [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]사용 되는 알고리즘 정의 [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,10 +45,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|문자열|  
-|기본값|없음|  
+|데이터 형식 및 길이|String|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -64,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  값은 **알고리즘** 요소는 알고리즘을 식별 하는 문자열입니다. 예를 들어, 문자열 될 수 *Microsoft_Naive_Bayes*, *Microsoft_Decision_Trees*, 또는 *Microsoft_Clustering 합니다.* 제공 하는 알고리즘을 식별 하는 문자열 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 및 사용자가 제공 하는 사용자 지정 알고리즘입니다. 에 대 한 사용 가능한 값은 **알고리즘** 의 SERVICE_NAME 열에서 요소를 검색할 수는 [DMSCHEMA_MINING_SERVICES](../../../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md) 스키마 행 집합입니다.  
@@ -77,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

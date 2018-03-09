@@ -2,34 +2,32 @@
 title: "Hierarchy 요소 (CSDLBI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 230e5438e9494a873a0045eebb2870597834b5be
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f3ff3c0bd93b75384b53e1f386a14196bcc803c3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 요소(CSDLBI)
-  Hierarchy 요소는 서로 연결하여 계층을 구성할 수 있는 테이블의 필드에 대한 논리적 컨테이너입니다. Hierarchy 요소는 CSDL Member 요소에서 파생되는 요소로, 비즈니스 인텔리전스 데이터 모델에서 만든 계층을 지원하도록 범위가 확장되었습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Hierarchy 요소는 서로 연결하여 계층을 구성할 수 있는 테이블의 필드에 대한 논리적 컨테이너입니다. Hierarchy 요소는 CSDL Member 요소에서 파생되는 요소로, 비즈니스 인텔리전스 데이터 모델에서 만든 계층을 지원하도록 범위가 확장되었습니다.  
   
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 Hierarchy 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 |Level|예|계층에 사용되는 열을 정의하는 하나 이상의 Level 요소입니다.<br /><br /> [Level 요소&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md)를 참조하세요.|  
   
 ## <a name="remarks"></a>주의  
- 테이블 형식 모델에서는 동일한 테이블의 열 간에 부모-자식 관계를 지정하여 계층을 만듭니다. 자세한 내용은 [계층 구조&#40;SSAS 테이블 형식&#41;](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)를 참조하세요.  
+ 테이블 형식 모델에서는 동일한 테이블의 열 간에 부모-자식 관계를 지정하여 계층을 만듭니다. 자세한 내용은 참조 [계층](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)합니다.  
   
 ## <a name="example"></a>예제  
  **테이블 형식**  
@@ -97,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [구성에서 &#40; 모든 &#41; 특성 계층의 수준](../../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   
-

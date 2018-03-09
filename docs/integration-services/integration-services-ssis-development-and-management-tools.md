@@ -1,11 +1,11 @@
 ---
-title: "Integration Services (SSIS) 개발 및 관리 도구 | Microsoft Docs"
+title: "SSIS(Integration Services) 배포 및 관리 도구 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -21,20 +21,19 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-caps.latest.revision: 52
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: b0b765912f6cd4e6128453918d2a30b3ef1e1a63
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/04/2017
-
+ms.openlocfilehash: 0c9f97260324010cd8a3d32a632a8380ad8df843
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="integration-services-ssis-development-and-management-tools"></a>Integration Services (SSIS) 개발 및 관리 도구
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]패키지를 사용 하기 위한 두 개의 스튜디오에 포함 됩니다.  
+# <a name="integration-services-ssis-development-and-management-tools"></a>SSIS(Integration Services) 배포 및 관리 도구
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 패키지에 사용할 수 있는 두 가지 스튜디오가 포함되어 있습니다.  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서는 비즈니스 솔루션에 필요한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 개발할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 는 패키지를 만들 수 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 제공합니다.  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 10/04/2017
   
 -   패키지 및 종속 요소를 다른 컴퓨터에 설치할 수 있는 배포 유틸리티를 만듭니다.  
   
--   패키지의 복사본을 저장 된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 데이터베이스의 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템입니다.  
+-   패키지의 복사본을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 데이터베이스, [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장합니다.  
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에 대한 자세한 내용은 [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686.aspx)를 참조하세요.  
   
@@ -69,4 +68,3 @@ ms.lasthandoff: 10/04/2017
 -   패키지 실행 유틸리티를 실행하여 **dtexec** 명령 프롬프트 유틸리티(dtexec.exe)를 실행할 때 사용할 명령줄을 생성합니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 데이터베이스, [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에서 패키지를 가져오고 내보냅니다.  
-

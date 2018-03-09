@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 81d7b06199ccdffac5af32f4d8c0aa7b8c537ae6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 586e2b73c67138ea48c7306e67b5f604bfce8cd9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-text-file-driver-programming-details"></a>다른 텍스트 파일 드라이버 프로그래밍 정보
 > [!NOTE]  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/09/2017
 -   [테이블 만들기 및 열 (텍스트 파일 드라이버)](../../odbc/microsoft/creating-and-opening-tables-text-file-driver.md)  
   
 -   [읽기 전용 상태(텍스트 파일 드라이버)](../../odbc/microsoft/read-only-status-text-file-driver.md)
-

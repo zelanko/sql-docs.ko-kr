@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetData
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetData
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetData
-helpviewer_keywords:
-- SQLGetData function [ODBC]
+f1_keywords: SQLGetData
+helpviewer_keywords: SQLGetData function [ODBC]
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0a23ddb9ee932b67bddd35edfcc9d64228b36f18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 463a6b68149786cd9cc14ca913e3a2b2104a59e9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 함수(SQLGetData Function)
 **규칙**  
@@ -103,7 +97,7 @@ SQLRETURN SQLGetData(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetData** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 여는 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLGetData** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|지정된 된 열에 대 한 데이터의 일부만 *Col_or_Param_Num*, 단일 함수 호출에서 검색할 수 없습니다. SQL_NO_TOTAL 또는 현재 호출 하기 전에 지정된 된 열에서 남아 있는 데이터의 길이로 **SQLGetData** 에 반환 \* *StrLen_or_IndPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)<br /><br /> 에 대 한 여러 호출을 사용 하 여 대 한 자세한 내용은 **SQLGetData** 단일 열, "설명"을 참조 하십시오.|  
@@ -134,7 +128,7 @@ SQLRETURN SQLGetData(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLGetData** 지정된 된 열에 데이터를 반환 합니다. **SQLGetData** 하나 이상의 행으로 결과 집합에서 인출 된 후에 호출할 수 있습니다 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLExtendedFetch** . 가변 길이 데이터를 한 번 호출에서 반환 될 너무 크면 **SQLGetData** (제한으로 인해 응용 프로그램에), **SQLGetData** 부분에서 검색할 수 있습니다. 행과 호출의 일부 열에 바인딩할 수 **SQLGetData** 다른 사용자에 대 한 몇 가지 제한 사항이 적용 되는 아니지만 합니다. 자세한 내용은 참조 [긴 데이터를 가져오는](../../../odbc/reference/develop-app/getting-long-data.md)합니다.  
   
  사용에 대 한 내용은 **SQLGetData** 스트리밍된 출력 매개 변수를 가진 참조 [SQLGetData를 사용 하 여 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)합니다.  
@@ -282,4 +276,3 @@ if (retcode == SQL_SUCCESS) {
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [SQLGetData를 사용하여 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)
-

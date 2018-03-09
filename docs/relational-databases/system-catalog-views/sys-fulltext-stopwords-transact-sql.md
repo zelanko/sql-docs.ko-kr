@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - fulltext_stopwords
 - sys.fulltext_stopwords
 - sys.fulltext_stopwords_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - stoplists [full-text search]
 - full-text search [SQL Server], stopwords
 - sys.fulltext_stopwords catalog view
 - stopwords [full-text search]
 ms.assetid: 79787bb7-d729-448e-b56a-0a467bbb304f
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90bc334c7b42c40e7b5d31e6cdd67458775e2f1a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c8f000dcca384ae92dcb580267a6f67021adbd59
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextstopwords-transact-sql"></a>sys.fulltext_stopwords(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +44,8 @@ ms.lasthandoff: 11/17/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|**stopword** 가 속한 중지 목록의 ID입니다. 이 ID는 데이터베이스 내에서 고유합니다.|  
-|**중지 단어**|**nvarchar(64)**|중지 단어 일치 항목으로 간주되는 용어입니다.|  
-|**언어**|**sysname**|별칭 값 이거나 [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)에 해당 하는 로캘 id의 값 (**LCID**), 숫자로 된 LCID의 문자열 표현입니다.|  
+|**stopword**|**nvarchar(64)**|중지 단어 일치 항목으로 간주되는 용어입니다.|  
+|**language**|**sysname**|별칭 값 이거나 [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)에 해당 하는 로캘 id의 값 (**LCID**), 숫자로 된 LCID의 문자열 표현입니다.|  
 |**language_id**|**int**|단어 분리에 사용되는 LCID입니다.|  
   
 ## <a name="permissions"></a>Permissions  

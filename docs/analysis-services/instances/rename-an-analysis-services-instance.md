@@ -2,16 +2,13 @@
 title: "Analysis Services 인스턴스 이름 바꾸기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +17,20 @@ helpviewer_keywords:
 - names [Analysis Services], renaming instances
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: 53
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bc7c79c56282f662a6392f966364ae7f38bc4395
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services 인스턴스 이름 바꾸기
-  Management Studio(웹 설치)와 함께 설치되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using the **Rename Instance** tool, installed with  Management Studio (Web install).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Management Studio(웹 설치)와 함께 설치되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using the **Rename Instance** tool, installed with  Management Studio (Web install).  
   
 > [!IMPORTANT]  
 >  인스턴스의 이름을 바꾸는 동안 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름 바꾸기 도구는 승격된 권한으로 실행되어 해당 인스턴스와 연결된 레지스트리 항목, Windows 서비스 이름 및 보안 계정을 업데이트합니다. 이러한 동작이 수행되도록 하려면 이 도구를 로컬 시스템 관리자로 실행하십시오.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/01/2017
   
      다음 예에서는 이러한 내용을 보여 줍니다. 기본 가상 계정을 사용하여 “Tabular”라는 인스턴스로 테이블 형식 모드 서버를 설치한 경우 다음과 같은 구성이 생성됩니다.  
   
-    1.  인스턴스 이름 = \<서버 > \TABULAR  
+    1.  Instance name = \<server>\TABULAR  
   
     2.  Service name = MSOLAP$TABULAR  
   
@@ -77,7 +74,7 @@ ms.lasthandoff: 09/01/2017
   
      이제 "TAB2"로 인스턴스 이름을 바꾼다고 가정합니다. 이름을 변경하면 구성이 다음과 같이 변경됩니다.  
   
-    1.  인스턴스 이름 = \<서버 > \TAB2  
+    1.  Instance name = \<server>\TAB2  
   
     2.  Service name = MSOLAP$TAB2  
   
@@ -86,4 +83,3 @@ ms.lasthandoff: 09/01/2017
      이전에 “NT Service\ MSOLAP$TABULAR”에 부여된 데이터베이스 및 파일 사용 권한은 더 이상 유효하지 않음을 알 수 있습니다. 서비스가 수행하는 태스크 및 작업이 이전과 같이 실행되도록 하려면 “NT Service\ MSOLAP$TAB2”에 새 데이터베이스 및 파일 사용 권한을 부여해야 합니다.  
   
   
-

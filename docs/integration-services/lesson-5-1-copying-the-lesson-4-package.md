@@ -1,11 +1,11 @@
 ---
-title: "1 단계: 4 단원 패키지를 복사 하 | Microsoft Docs"
+title: "1단계: 4단원 패키지 복사 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 54328f5769560ca6710ed7df6ebe8de9509b8316
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9977afd1f47c9ea6b6747bac0ddc81348942ce65
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-5-1---copying-the-lesson-4-package"></a>Lesson 5-1-4 단원 패키지 복사
+# <a name="lesson-5-1---copying-the-lesson-4-package"></a>5-1단원 - 4단원 패키지 복사
 이 태스크에서는 4단원에서 만든 Lesson 4.dtsx 패키지의 복사본을 만듭니다. 또는 자습서에 포함되어 있는 완성된 4단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 5단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
   
 ### <a name="to-copy-the-lesson-4-package"></a>4단원 패키지를 복사하려면  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [2단계: 패키지 구성 설정 및 구성](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
-

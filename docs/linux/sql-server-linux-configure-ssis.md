@@ -10,25 +10,28 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: d71490df718bfcb6f8ce35c7d087bac4d5961aff
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 2e738f1d8088a974e698a0787370f34216c254a4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Linux에서 SQL Server Integration Services ssis conf 구성
 
-실행 하기는 `ssis-conf` 구성 스크립트 Red Hat Enterprise Linux 및 Ubuntu 용 SQL Server Integration Services (SSIS)를 설치 합니다. 다음 속성을 구성 하려면이 유틸리티를 사용할 수 있습니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+실행 하기는 `ssis-conf` 구성 스크립트 Red Hat Enterprise Linux 및 Ubuntu 용 SQL Server Integration Services (SSIS)를 설치 합니다. SSIS 설치에 대 한 자세한 내용은 참조 하십시오. [설치 Integration Services SSIS (SQL Server) linux](sql-server-linux-setup-ssis.md)합니다.
+
+사용할 수도 있습니다는 `ssis-conf` 유틸리티는 다음 속성을 구성 하려면:
 
 | Command | Description |
 |-------------|---------------------------------------------------------------------|
-| set 버전 | 버전의 SQL Server 설정                                       |
+| set-edition | 버전의 SQL Server 설정                                       |
 | 원격 분석   | SQL Server Integration Services 원격 분석 서비스를 사용할지 설정 합니다. |
 | 설치       | 초기화 하 고 Microsoft SQL Server Integration Services를 설정 합니다.      |
 |||
@@ -143,3 +146,8 @@ enabled = Y
 lcid = 2052
 ```
 
+## <a name="related-content-about-ssis-on-linux"></a>Linux에서 SSIS에 대 한 관련된 내용
+-   [추출, 변환 및 SSIS와 Linux에서 데이터 로드](sql-server-linux-migrate-ssis.md)
+-   [Linux에서 SQL Server Integration Services (SSIS)를 설치 합니다.](sql-server-linux-setup-ssis.md)
+-   [Linux에서 SSIS에 대 한 알려진된 문제 및 제한](sql-server-linux-ssis-known-issues.md)
+-   [일정 SQL Server Integration Services 패키지 cron 사용 하 여 Linux에서 실행](sql-server-linux-schedule-ssis-packages.md)

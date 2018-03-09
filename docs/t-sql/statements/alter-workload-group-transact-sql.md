@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e5a5d5650311115edc52866abdd167700438cc1f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -57,36 +55,34 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>인수  
- *group_name* | "**기본**"  
+ *group_name* | "**default**"  
  기존의 사용자 정의 작업 그룹 또는 리소스 관리자 기본 작업 그룹의 이름입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치되면 리소스 관리자가 "default" 그룹과 내부 그룹을 만듭니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치되면 리소스 관리자가 "default" 그룹과 내부 그룹을 만듭니다.  
   
  "default" 옵션은 시스템 예약어인 DEFAULT와의 충돌을 피하기 위해 ALTER WORKLOAD GROUP과 함께 사용될 경우 따옴표("") 또는 대괄호([])로 묶어야 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
 > [!NOTE]  
->  미리 정의된 작업 그룹과 리소스 풀의 이름은 "default"와 같이 소문자를 사용합니다. 대/소문자 구분 데이터 정렬을 사용하는 서버의 경우 이러한 사항을 고려해야 합니다. 대/소문자 구분 데이터 정렬(예: SQL_Latin1_General_CP1_CI_AS)을 사용하는 서버는 "default"와 "Default"를 똑같이 처리합니다.  
+> 미리 정의된 작업 그룹과 리소스 풀의 이름은 "default"와 같이 소문자를 사용합니다. 대/소문자 구분 데이터 정렬을 사용하는 서버의 경우 이러한 사항을 고려해야 합니다. 대/소문자 구분 데이터 정렬(예: SQL_Latin1_General_CP1_CI_AS)을 사용하는 서버는 "default"와 "Default"를 똑같이 처리합니다.  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  작업 그룹에 있는 요청의 상대적 중요도를 지정합니다. 중요도는 다음 값 중 하나입니다.  
   
 -   LOW  
-  
 -   MEDIUM(기본값)  
-  
 -   HIGH  
   
 > [!NOTE]  
->  내부적으로 각 중요도 설정은 계산에 사용된 멤버로 저장됩니다.  
+> 내부적으로 각 중요도 설정은 계산에 사용된 멤버로 저장됩니다.  
   
  IMPORTANCE는 리소스 풀에 대해 로컬입니다. 같은 리소스 풀 내에 있는 다른 중요도의 작업 그룹은 서로 영향을 주지만 다른 리소스 풀의 작업 그룹에는 영향을 주지 않습니다.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*값*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  단일 요청이 풀에서 사용할 수 있는 최대 메모리 양을 지정합니다. 이 비율은 MAX_MEMORY_PERCENT에서 지정한 리소스 풀 크기에 따라 바뀝니다.  
   
 > [!NOTE]  
->  지정된 양은 쿼리 실행 부여 메모리만 참조합니다.  
+> 지정된 양은 쿼리 실행 부여 메모리만 참조합니다.  
   
  *값* 0 또는 양의 정수 여야 합니다. 허용된 범위 *값* 은 0에서 100 까지입니다. 에 대 한 기본 설정은 *값* 은 25입니다.  
   
@@ -105,13 +101,16 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  두 경우 모두 서버에 실제 메모리가 부족하면 시간 초과 오류 8645가 발생할 수 있습니다.  
   
- REQUEST_MAX_CPU_TIME_SEC =*값*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  요청이 사용할 수 있는 최대 CPU 시간(초)을 지정합니다. *값* 0 또는 양의 정수 여야 합니다. 에 대 한 기본 설정은 *값* 0은 무제한을 의미 합니다.  
   
 > [!NOTE]  
->  최대 시간이 초과하는 경우 리소스 관리자가 요청을 종료하지는 않지만 이벤트가 생성됩니다. 자세한 내용은 참조 [CPU 임계값을 초과 이벤트 클래스](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)합니다.  
+> 기본적으로 리소스 관리자를 최대 시간을 초과 하는 경우 계속할 요청을 해도 됩니다. 이벤트가 생성됩니다. 자세한 내용은 참조 [CPU 임계값을 초과 이벤트 클래스](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)합니다. 
+
+> [!IMPORTANT]
+> 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, 및를 사용 하 여 [추적 플래그 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), 최대 시간을 초과 하는 경우 리소스 관리자 요청을 중단 됩니다.
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*값*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  메모리(작업 버퍼 메모리)가 부여될 때까지 쿼리가 대기할 수 있는 최대 시간(초)을 지정합니다.  
   
 > [!NOTE]  
@@ -205,4 +204,3 @@ GO
  [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
-

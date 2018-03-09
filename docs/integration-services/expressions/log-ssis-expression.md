@@ -1,5 +1,5 @@
 ---
-title: "LOG (SSIS 식) | Microsoft Docs"
+title: "LOG(SSIS 식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - base-10 logarithms
 - LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 855937a74d16d811a6a97694fc9d32b6beb200ea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8dd39c7271c1258b67aec056c89d9cbfa5891c23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="log-ssis-expression"></a>LOG(SSIS 식)
   숫자 식의 상용 로그를 반환합니다.  
@@ -45,7 +44,7 @@ LOG(numeric_expression)
 ## <a name="result-types"></a>결과 형식  
  DT_R8  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *숫자 식* 은 로그를 계산하기 전에 DT_R8 데이터 형식으로 캐스팅됩니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
  *numeric_expression* 이 0 또는 음수 값으로 계산되면 반환 결과는 Null입니다.  
@@ -69,10 +68,9 @@ LOG(Length)
 LOG(@Length)   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [EXP &#40; SSIS 식 &#41;](../../integration-services/expressions/exp-ssis-expression.md)   
- [LN &#40; SSIS 식 &#41;](../../integration-services/expressions/ln-ssis-expression.md)   
- [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>참고 항목  
+ [EXP&#40;SSIS 식&#41;](../../integration-services/expressions/exp-ssis-expression.md)   
+ [LN&#40;SSIS 식&#41;](../../integration-services/expressions/ln-ssis-expression.md)   
+ [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

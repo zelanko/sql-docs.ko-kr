@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c1c7c878a850134d625c6c956449a400672ad6f7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e19cb2defa4e2e0e17f94b32af8f94606759f2ab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 비트 정보
 Windows Server 2003부터, Microsoft 운영 체제 64 비트 ODBC 라이브러리를 지원 했습니다. ODBC 헤더 및 처음 MDAC 2.7 SDK와 함께 제공 되는 라이브러리에는 프로그래머를 쉽게 새 64 비트 플랫폼에 대 한 코드를 작성할 수 있도록 변경을 포함 합니다. ODBC 정의 형식 아래에 나열 된 코드를 사용 하는 함으로써에 따라 64 비트 및 32 비트 플랫폼에 대 한 둘 다 동일한 소스 코드를 컴파일할 수 있습니다는 **_WIN64** 또는 **WIN32** 매크로입니다.  
@@ -506,4 +504,3 @@ typedef SQLULEN BOOKMARK;
   
 ## <a name="see-also"></a>관련 항목:  
  [ODBC 소개](../../odbc/reference/introduction-to-odbc.md)
-

@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_NULLS (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
@@ -27,17 +27,16 @@ helpviewer_keywords:
 - null values [SQL Server], comparison operators
 - comparison operators [SQL Server], null values
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
-caps.latest.revision: 43
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 285803fe112cc0370b8af6049f48846c7ba55cab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: a6ef51bb13ae7372175a390a3d8c5509550a3ad1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -45,24 +44,24 @@ ms.lasthandoff: 10/24/2017
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 Null 값과 함께 사용될 경우 Equals(=)와 Not Equal To(<>) 비교 연산자의 ISO 호환 동작을 지정합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 항상 ON으로 설정되어 있으므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
+>  이후 버전에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS가 ON으로 명시적으로 OFF로 옵션을 설정 하는 모든 응용 프로그램 오류를 생성 합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>구문  
-  
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_NULLS { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_NULLS ON;  
-```  
-  
+
+## <a name="syntax"></a>구문
+
+```
+-- Syntax for SQL Server
+
+SET ANSI_NULLS { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_NULLS ON
+```
+
 ## <a name="remarks"></a>주의  
  SET ANSI_NULLS가 ON, WHERE를 사용 하는 SELECT 문의 경우 *column_name* = **NULL** 에 null 값이 없는 경우에 0 행을 반환 *column_name*합니다. 위치를 사용 하는 SELECT 문은 *column_name* <> **NULL** 에 null이 아닌 값이 없는 경우에 0 행을 반환 *column_name*합니다.  
   
@@ -76,7 +75,7 @@ SET ANSI_NULLS ON;
   
  분산 쿼리를 실행할 때는 SET ANSI_NULLS를 ON으로 설정해야 합니다.  
   
- 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET ANSI_NULLS 옵션도 ON으로 설정해야 합니다. SET ANSI_NULLS 옵션이 OFF면 계산 열의 인덱스가 있는 테이블이나 인덱싱된 뷰에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 필요한 값을 위반하는 모든 SET 옵션이 나열된 오류를 반환합니다. 뿐만 아니라 SELECT 문 실행 시 SET ANSI_NULLS 옵션이 OFF면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 계산 열이나 뷰의 인덱스 값을 무시하고 테이블이나 뷰에 이러한 인덱스가 없는 것처럼 SELECT 작업을 처리합니다.  
+ 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET ANSI_NULLS 옵션도 ON으로 설정해야 합니다. SET ANSI_NULLS 옵션이 OFF면 계산 열의 인덱스가 있는 테이블이나 인덱싱된 뷰에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]필요한 값을 위반 하는 모든 SET 옵션이 나열 하는 오류를 반환 합니다. 또한를 실행 하면 SELECT 문에서 SET ANSI_NULLS 옵션이 OFF 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 계산된 열 이나 뷰의 인덱스 값을 무시 하 고 테이블이 나 뷰에 이러한 인덱스가 없는 있었습니다 하는 경우 select 작업을 해결 합니다.  
   
 > [!NOTE]  
 >  ANSI_NULLS는 계산 열이나 인덱싱된 뷰의 인덱스를 처리할 때 필요한 값으로 설정해야 하는 7가지 SET 옵션 중 하나입니다. ANSI_PADDING, ANSI_WARNINGS, ARITHABORT, QUOTED_IDENTIFIER 및 CONCAT_NULL_YIELDS_NULL은 ON으로 설정해야 하지만 NUMERIC_ROUNDABORT는 OFF로 설정해야 합니다.  
@@ -87,7 +86,7 @@ SET ANSI_NULLS ON;
   
  SET ANSI_NULLS 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
- 이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.  
+ 이 설정에 대 한 현재 설정을 보려면 다음 쿼리를 실행 합니다.
   
 ```  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  
@@ -182,4 +181,3 @@ DROP TABLE dbo.t1;
  [WHILE&#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
   
   
-

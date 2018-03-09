@@ -8,22 +8,19 @@ ms.service:
 ms.component: import-export
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.importflatfile.f1
+f1_keywords: sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: db507927ac37d8f960f5090c774c6a52fa0d0243
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 3180456162da02ecef897fd340663500792d4785
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL 마법사로 플랫 파일 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,6 +32,10 @@ ms.lasthandoff: 10/10/2017
 이 마법사는 [PROSE](https://microsoft.github.io/prose/)(Program Synthesis using Examples)라고 하는 지능형 프레임워크를 활용하여 현재 가져오기 환경을 개선하기 위해 만들어졌습니다. 데이터 가져오기는 특별한 도메인 지식이 없는 사용자에게 복잡하고, 오류가 발생하기 쉬우며 번거로운 작업일 수 있습니다. 이 마법사는 가져오기 프로세스를 간소화하여 입력된 파일 및 고유한 테이블 이름을 선택하기만 하면 됩니다. 나머지는 PROSE 프레임워크가 처리합니다.
 
 PROSE는 입력 파일의 데이터 패턴을 분석하여 열 이름, 형식, 구분 기호 등을 유추합니다. 이 프레임워크는 파일의 구조를 학습하고 복잡한 모든 작업을 사용자 대신 처리합니다.
+
+플랫 파일 가져오기 마법사의 개선된 사용자 환경에 대해 자세히 알아보려면 다음 동영상을 확인하세요.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
 ## <a name="prerequisites"></a>필수 구성 요소
 이 기능은 SSMS(SQL Server Management Studio) v17.3 이상에서만 사용할 수 있습니다. 최신 버전을 사용하고 있는지 확인하세요. 최신 버전은 [여기](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)에서 찾을 수 있습니다.
@@ -98,5 +99,4 @@ PROSE는 입력 파일의 데이터 패턴을 분석하여 열 이름, 형식, �
 - **다른 원본 가져오기에 대해 자세히 알아봅니다.** 플랫 파일 이외의 항목을 가져오려는 경우 [SQL Server 가져오기 및 내보내기 마법사](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)를 참조하세요.
 - **플랫 파일 원본에 연결하기에 대해 자세히 알아봅니다.** 플랫 파일 원본에 연결하기에 대한 자세한 내용을 찾는 경우 [플랫 파일 데이터 원본에 연결](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard)을 참조하세요.
 - **PROSE에 대해 자세히 알아봅니다.** 이 마법사에서 사용하는 지능형 프레임워크에 대한 개요를 찾는 경우 [PROSE SDK](https://microsoft.github.io/prose/)를 참조하세요.
-
 

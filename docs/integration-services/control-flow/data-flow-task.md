@@ -21,17 +21,16 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: 75
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0e16ec789222a73e6d4a73a654576f5d0295df64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-task"></a>데이터 흐름 태스크
   데이터 흐름 태스크는 원본과 대상 사이에 데이터를 이동하는 데이터 흐름 엔진을 캡슐화하며, 이를 통해 사용자는 데이터 이동 시 데이터를 변환, 정리 및 수정할 수 있습니다. 데이터 흐름 태스크를 패키지에 추가하면 패키지에서 데이터를 추출, 변환 및 로드할 수 있습니다.  
@@ -96,12 +95,12 @@ ms.lasthandoff: 08/03/2017
   
  예를 들어 다음 표에서는 "행이 데이터 흐름 구성 요소에 입력으로 제공되었습니다. :  : 1185 : OLE DB 원본 출력 : 1180 : Sort : 1181 : 정렬 입력 : 76"이라는 메시지가 여러 개의 열로 구문 분석된 결과를 보여 줍니다. 이 메시지는 OLE DB 원본의 행이 정렬 변환으로 보내질 때 **OnPipelineRowsSent** 이벤트에 의해 기록된 것입니다.  
   
-|열|Description|Value|  
+|Column|Description|값|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB 원본과 정렬 변환 사이의 경로에 대한 **ID** 속성 값입니다.|1185|  
 |**PathName**|경로의 **Name** 속성 값입니다.|OLE DB 원본 출력|  
 |**ComponentID**|정렬 변환의 **ID** 속성 값입니다.|1180|  
-|**ComponentName**|정렬 변환의 **Name** 속성 값입니다.|정렬|  
+|**ComponentName**|정렬 변환의 **Name** 속성 값입니다.|Sort|  
 |**InputID**|정렬 변환에 대한 입력의 **ID** 속성 값입니다.|1181|  
 |**InputName**|정렬 변환에 대한 입력의 **Name** 속성 값입니다.|정렬 입력|  
 |**RowsSent**|정렬 변환의 입력으로 보내지는 행 수입니다.|76|  
@@ -125,4 +124,3 @@ ms.lasthandoff: 08/03/2017
  technet.microsoft.com의 비디오, [분산 데이터 배포자](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
   
-

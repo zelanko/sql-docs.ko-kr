@@ -2,35 +2,37 @@
 title: "SQL Server와 함께 MicrosoftML 패키지를 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 132
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38af2297d176205b06bd104228d44e50b4c94861
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>SQL Server MicrosoftML 패키지 사용
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) Microsoft R Server 및 SQL Server 2017와 함께 제공 되는 패키지에 여러 기계 학습 알고리즘을 포함 합니다. 이러한 Api 응용 프로그램을 학습 하는 내부 컴퓨터에 대 한 Microsoft에서 개발 된 및 했을 구체화 고성능 빅 데이터를 지원 하기 위해 수 년에 걸쳐 멀티 코어 처리 및 빠른 데이터 스트리밍를 사용 하 여 합니다. MicrosoftML에는 텍스트 및 이미지 처리를 위한 다양 한 변환이 포함 됩니다.
 
 SQL Server 2017 CTP 2.0에서 Python 언어에 대 한 지원이 추가 되었습니다. **microsoftml** r MicrosoftML 패키지에 동일한 함수를 포함 하는 Python에 대 한 패키지 
 
-+ **R에 대 한 MicrosoftML**
++ **MicrosoftML for R**
 
     소개 및 패키지 참조: [MicrosoftML: 기계 학습 R 알고리즘](https://docs.microsoft.com/en-us/r-server/r-reference/microsoftml/microsoftml-package)
 
@@ -125,4 +127,3 @@ Revoscalepy에 대 한 자세한 내용은 다음을 참조 하세요.
 + [Revoscalepy 란](python/what-is-revoscalepy.md)
 
 + [revoscalepy 함수 라이브러리](https://docs.microsoft.com/en-us/r-server/python-reference/revoscalepy/revoscalepy-package) 
-

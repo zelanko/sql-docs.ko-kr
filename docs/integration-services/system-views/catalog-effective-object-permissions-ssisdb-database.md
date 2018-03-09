@@ -1,5 +1,5 @@
 ---
-title: "catalog.effective_object_permissions (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.effective_object_permissions(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - catalog.effective_object_permissions views [Integration Services]
 - effective_object_permissions view [Integration Services]
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3f836aa3e13623a42a3f2e8fe0d3907b45bde850
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 204c346d67879bba4db0b6b2820b867bc82d7b5c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeffectiveobjectpermissions-ssisdb-database"></a>catalog.effective_object_permissions(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 09/26/2017
 |object_id|**bigint**|개체의 고유 식별자(ID) 또는 기본 키입니다.|  
 |permission_type|**smallint**|사용 권한의 유형입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 뷰는 다음 표에 나열된 사용 권한 유형을 표시합니다.  
   
 |permission_type 값|사용 권한 이름|사용 권한 설명|적용할 수 있는 개체 유형|  
@@ -64,8 +63,7 @@ ms.lasthandoff: 09/26/2017
   
 -   그룹에 속한 보안 주체의 멤버 자격  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자는 자신이 속한 역할 및 자신에 대한 유효 사용 권한만 볼 수 있습니다.  
   
   
-

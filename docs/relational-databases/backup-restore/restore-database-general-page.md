@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: "89"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31fc3012f234601db7d24b80b4499b78138e709c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db20fb80e64e3ffecee629dd5fc9310755ff58b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-general-page"></a>데이터베이스 복원(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,23 @@ ms.lasthandoff: 11/17/2017
   
  암호화된 백업에서 복원하려면 백업 중에 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한 **VIEW DEFINITION** 권한이 필요합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ### <a name="source"></a>원본  
  **복원할 원본 위치**패널의 옵션은 데이터베이스의 백업 세트 위치 및 복원하려는 백업 세트를 식별합니다.  
   
 |용어|정의|  
 |----------|----------------|  
-|**데이터베이스**|복원할 데이터베이스를 드롭다운 목록에서 선택합니다. 목록에는 **msdb** 백업 기록에 따라 백업된 데이터베이스만 포함되어 있습니다.|  
+|**데이터베이스 백업**|복원할 데이터베이스를 드롭다운 목록에서 선택합니다. 목록에는 **msdb** 백업 기록에 따라 백업된 데이터베이스만 포함되어 있습니다.|  
 |**장치**|복원할 백업을 포함하는 논리적 또는 물리적 백업 장치(테이프, URL 또는 파일)를 선택합니다. 데이터베이스 백업을 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 가져온 경우에 필요합니다.<br /><br /> 하나 이상의 논리적 또는 물리적 백업 장치를 선택하려면 **백업 장치 선택** 대화 상자를 여는 찾아보기 단추를 클릭합니다. 이 대화 상자에서 단일 미디어 세트에 속하는 최대 64개의 장치를 선택할 수 있습니다. 테이프 장치는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 실행하는 컴퓨터에 물리적으로 연결되어야 합니다. 백업 파일은 로컬 또는 이동식 디스크 장치에 존재할 수 있습니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다. 또한 **URL** 을 Windows Azure Storage에 저장된 백업 파일에 대한 장치 유형으로 선택할 수 있습니다.<br /><br /> **백업 장치 선택** 대화 상자를 종료하면 선택한 장치가 **장치** 목록에서 읽기 전용 값으로 표시됩니다.|  
-|**데이터베이스**|드롭다운 목록에서 백업을 복원하는 데 사용할 데이터베이스 이름을 선택합니다.<br /><br /> 참고: 이 목록은 **장치** 를 선택한 경우에만 사용할 수 있습니다. 선택한 장치에 백업이 있는 데이터베이스만 사용할 수 있습니다.|  
+|**데이터베이스 백업**|드롭다운 목록에서 백업을 복원하는 데 사용할 데이터베이스 이름을 선택합니다.<br /><br /> 참고: 이 목록은 **장치** 를 선택한 경우에만 사용할 수 있습니다. 선택한 장치에 백업이 있는 데이터베이스만 사용할 수 있습니다.|  
   
-### <a name="destination"></a>대상  
+### <a name="destination"></a>Destination  
  **복원 위치** 패널의 옵션은 데이터베이스 및 복원 지점을 식별합니다.  
   
 |용어|정의|  
 |----------|----------------|  
-|**데이터베이스**|목록에서 복원할 데이터베이스를 입력합니다. 새 데이터베이스를 입력하거나 드롭다운 목록에서 기존 데이터베이스를 선택할 수 있습니다. 이 목록에는 시스템 데이터베이스인 **master** 및 **tempdb**를 제외한 서버의 모든 데이터베이스가 포함되어 있습니다.<br /><br /> 참고: 암호로 보호된 백업을 복원하려면 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문을 사용해야 합니다.|  
+|**데이터베이스 백업**|목록에서 복원할 데이터베이스를 입력합니다. 새 데이터베이스를 입력하거나 드롭다운 목록에서 기존 데이터베이스를 선택할 수 있습니다. 이 목록에는 시스템 데이터베이스인 **master** 및 **tempdb**를 제외한 서버의 모든 데이터베이스가 포함되어 있습니다.<br /><br /> 참고: 암호로 보호된 백업을 복원하려면 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문을 사용해야 합니다.|  
 |**복원 위치**|**복원 위치** 상자는 기본적으로 "마지막으로 수행된 백업으로"로 설정됩니다. **시간대** 를 클릭하여 **백업 시간대** 대화 상자를 표시할 수도 있습니다. 이 대화 상자에는 데이터베이스 백업 기록이 시간대 형식으로 표시됩니다. 데이터베이스를 복원할 특정 **datetime** 을 지정하려면 **시간대** 를 클릭합니다. 그러면 데이터베이스가 여기서 지정한 시점의 상태로 복원됩니다. [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md)을 참조하세요.|  
   
 ### <a name="restore-plan"></a>복원 계획  

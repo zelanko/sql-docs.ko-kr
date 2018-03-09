@@ -1,32 +1,33 @@
----
+﻿---
 title: "R 모델을 배포하고 SQL에서 사용하기 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 18
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 771683f472af17292de62fb1591539f1215ebf57
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>R 모델을 배포하고 SQL에서 사용하기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 단원에서는 저장된 프로시저에서 훈련된 모델을 호출하여 프로덕션 환경에서 R 모델을 사용합니다. 그런 다음 R 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 지원하는 응용 프로그램 언어(C#, Java, Python, 등)에서 저장 프로시저를 호출하고 해당 모델을 사용해서 새 관찰에 대한 예측을 만듭니다.
 
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/07/2017
 
     + SELECT 문을 사용하여 SQL 테이블에 저장된 모델을 호출합니다. 모델은 **varbinary (max)** 데이터로 SQL 변수 _@lmodel2_에 저장되며 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 매개변수 _@model_ 을 통해 전달됩니다. 	
 
-    + 채점을 위한 입력용 데이터는 SQL 쿼리로 정의되고 SQL 변수 _@input_에 문자열로 저장됩니다. 데이터가 데이터베이스로부터 검색되면 *InputDataSet*이라는 데이터 프레임에 저장됩니다. 이 데이터 프레임은 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저에 입력 데이터용 기본 이름입니다. 다른 변수 이름이 필요하다면 _@input_data_1_name_ 매개 변수를 사용할 수 있습니다. 
+    + 점수 매기기 SQL 쿼리로 정의 되 고 있는 SQL 변수에서 문자열로 저장에 대 한 입력으로 사용 되는 데이터  _@input_ 합니다. 를 데이터베이스에서 데이터를 검색할 때 호출 데이터 프레임에서 저장 *InputDataSet*, 입력된 데이터에 대 한 기본 이름만 되는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저; 정의할 수 있습니다 필요한 경우 매개 변수를 사용 하 여 다른 변수 이름을   *_@input_data_1_name_*  합니다.
 
     + 채점을 위해 저장 프로시저에서 RevoScaleR **라이브러리에서** `rxPredict` 함수를 호출합니다.
 
@@ -229,4 +230,3 @@ ms.lasthandoff: 10/07/2017
 [SQL Server R 자습서](sql-server-r-tutorials.md)
 
 [sqlrutils를 사용하여 저장 프로시저를 만드는 방법](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
-

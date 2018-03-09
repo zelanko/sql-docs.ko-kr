@@ -2,34 +2,30 @@
 title: "호출 ProcessTable cmdlet | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 865e6d06-b99a-41f3-9d6f-c3c97b529b23
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e2a7f1392931ec5edd41803f6df6d98aa95403dd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d2298c9e882f3f754b16ce33bf6bc72dfc6d80ff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="invoke-processtable-cmdlet"></a>Invoke-ProcessTable cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  특정 **RefreshType** 이 있는 **Table** 에서 **Process**작업을 수행합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+특정 **RefreshType** 이 있는 **Table** 에서 **Process**작업을 수행합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.
@@ -41,7 +37,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="parameters"></a>매개 변수  
   
-### <a name="-tablename-string"></a>-TableName \<문자열 >  
+### <a name="-tablename-string"></a>-TableName \<string>  
  처리해야 하는 파티션이 속한 테이블의 이름입니다.  
   
 |||  
@@ -52,7 +48,7 @@ ms.lasthandoff: 09/01/2017
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-databasename-string"></a>-DatabaseName \<문자열 >  
+### <a name="-databasename-string"></a>-DatabaseName \<string>  
  테이블이 속한 데이터베이스를 지정합니다.  
   
 |||  
@@ -63,7 +59,7 @@ ms.lasthandoff: 09/01/2017
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-servermicrosoftanalysissevicesserver"></a>-서버\<Microsoft.AnalysisSevices.Server >  
+### <a name="-servermicrosoftanalysissevicesserver"></a>-Server\<Microsoft.AnalysisSevices.Server>  
  컨텍스트에 **SQLAS** 공급자 디렉터리를 사용하지 않는 경우에는 연결한 서버 인스턴스를 선택적으로 지정합니다.  
   
 |||  
@@ -74,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-refreshtype-microsoftanalysisservicesrefreshtype"></a>-RefreshType \<Microsoft.AnalysisServices.RefreshType >  
+### <a name="-refreshtype-microsoftanalysisservicesrefreshtype"></a>-RefreshType \<Microsoft.AnalysisServices.RefreshType>  
  테이블 형식 데이터베이스에 대 한 프로세스 유형을 지정합니다.  유효한 값은 Full, ClearValues, Calculate, DataOnly, Automatic, Add, 및 Defragment입니다. 설명 및 지침은 [데이터베이스, 테이블 또는 파티션 처리&#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)를 참조하세요.  
   
 |||  
@@ -129,4 +125,3 @@ ms.lasthandoff: 09/01/2017
  이 명령은 **enum** 새로 고침 유형을 사용하여 테이블 형식 메타데이터 테이블을 처리합니다.  
   
   
-

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-caps.latest.revision: 7
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 72a82c699ff117d2b9b87ffec8ea2b4c97cae66f
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 599231a2b064e9b6c1185d3662f81f24cb7245db
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="tracing-master-data-services"></a>추적(Master Data Services)
   Web.config 파일에는 다음과 같은 추적 섹션이 포함되어 있습니다. 이 섹션은 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
@@ -76,4 +75,3 @@ ms.lasthandoff: 09/07/2017
  msdn.com의 블로그 게시물 [로깅 문제 해결 개선](http://go.microsoft.com/fwlink/p/?LinkId=615377)  
   
   
-

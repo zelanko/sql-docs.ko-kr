@@ -1,41 +1,38 @@
 ---
-title: "변경 테이블, 열 또는 행 필터 매핑 (SSAS 테이블 형식) | Microsoft Docs"
+title: "테이블, 열 또는 행 필터 매핑 변경 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 361cdea7d72a02c455ccf3f5b6d21255473b937e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b80323e5aaf1dd6c469ddffefb5d92542e9d3a19
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>테이블, 열 또는 행 필터 매핑 변경(SSAS 테이블 형식)
-  이 항목에서는 **에서** 테이블 속성 편집 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]대화 상자를 사용하여 테이블, 열 또는 행 필터 매핑을 변경하는 방법에 대해 설명합니다.  
+# <a name="change-table-column-or-row-filter-mappings"></a>테이블, 열 또는 행 필터 매핑 변경 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+이 문서를 사용 하 여 테이블, 열 또는 행 필터 매핑을 변경 하는 방법에 설명 된 **테이블 속성 편집** 대화 상자에서 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]합니다.  
   
  **테이블 속성 편집** 대화 상자의 옵션은 원래 데이터를 가져올 때 목록에서 테이블을 선택하는 방법을 사용했는지 아니면 SQL 쿼리를 사용하는 방법을 사용했는지에 따라 다릅니다. 목록에서 선택하여 데이터를 가져온 경우 **테이블 속성 편집** 대화 상자에 테이블 미리 보기 모드가 표시됩니다. 이 모드에서는 원본 테이블의 첫 50개 행으로 제한된 하위 집합만 표시됩니다. SQL 문을 사용하여 데이터를 가져온 경우 **테이블 속성 편집** 대화 상자에 SQL 문만 표시됩니다. SQL 쿼리 문을 사용하면 필터를 디자인하거나 SQL 문을 직접 편집하여 행의 일부만 검색할 수 있습니다.  
   
  현재 테이블과 다른 열이 있는 테이블로 원본을 변경하면 열이 다르다는 경고 메시지가 표시됩니다. 그런 다음 현재 테이블에 넣을 열을 선택하고 **저장**을 클릭합니다. 테이블 왼쪽의 확인란을 선택하여 테이블 전체를 바꿀 수 있습니다.  
   
 > [!NOTE]  
->  테이블에 파티션이 여러 개 있는 경우 테이블 속성 편집 대화 상자를 사용하여 행 필터 매핑을 변경할 수 없습니다. 파티션이 여러 개 있는 테이블에 대한 행 필터 매핑을 변경하려면 파티션 관리자를 사용합니다. 자세한 내용은 [파티션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
+>  테이블에 파티션이 여러 개 있는 경우 테이블 속성 편집 대화 상자를 사용하여 행 필터 매핑을 변경할 수 없습니다. 파티션이 여러 개 있는 테이블에 대한 행 필터 매핑을 변경하려면 파티션 관리자를 사용합니다. 자세한 내용은 참조 [파티션을](../../analysis-services/tabular-models/partitions-ssas-tabular.md)합니다.  
   
 #### <a name="to-change-table-column-or-row-filter-mappings"></a>테이블, 열 또는 행 필터 매핑을 변경하려면  
   
@@ -53,8 +50,5 @@ ms.lasthandoff: 09/01/2017
   
          실수가 있어 새로 시작해야 하는 경우 **행 필터 지우기**를 클릭하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
- [테이블 속성 편집 대화 상자&#40;SSAS&#41;](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)  
   
   
-

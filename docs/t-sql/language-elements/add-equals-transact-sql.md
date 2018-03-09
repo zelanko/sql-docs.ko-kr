@@ -1,5 +1,5 @@
 ---
-title: "+ = (더하기 EQUALS) (Transact SQL) | Microsoft Docs"
+title: "+ = (더하기 할당) (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -20,21 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - += (add equals)
 - compound operators, +=
+- assignment operators, +=
+- augmented operators, +=
 ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0d07ab123822db8f381af6fcc4f1707529bed359
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 138f19c545c5d2ea8f8998e476e8af29d5919852
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="-add-equals-transact-sql"></a>+=(더하기 EQUALS)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-addition-assignment-transact-sql"></a>+ = (더하기 할당) (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   두 숫자를 더하고 값을 연산 결과로 설정합니다. 예를 들어 변수 @x 35 일 후 equals @x + = 2는 원래 값의 @x, 2 및 집합 추가 @x 를 새 값 (37)입니다.  
   
@@ -60,7 +61,6 @@ expression += expression
  [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+ = &#40; 문자열 연결 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+ [+ = &#40; 문자열 연결 할당 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "필드 (Visual c + + 구문에 대 한 ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - Field collection [ADO], ADO for Visual C++ syntax
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f74a4f0e1a9a180c700fa283ef5fe9d98cf5e1eb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2d35a3ae9688adfe9b6fd5e59681fcdee0f7c495
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>(ADO Visual c + + 구문에 대 한) 필드
 ## <a name="methods"></a>메서드  
@@ -63,4 +62,3 @@ put_Value(VARIANT Val)
   
 ## <a name="see-also"></a>관련 항목:  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)
-

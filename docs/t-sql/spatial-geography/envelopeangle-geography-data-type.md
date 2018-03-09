@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - EnvelopeAngle method
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cd410a6eb07c626c7674febad2a427bbd029f98a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 692287aee372bf349cfa795e3b52c6e84c8e4f42
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,4 +69,3 @@ SELECT @g.EnvelopeAngle();
  [EnvelopeCenter &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
   
-

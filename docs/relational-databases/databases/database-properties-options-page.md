@@ -8,24 +8,21 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.options.f1
+f1_keywords: sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-caps.latest.revision: 67
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "67"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 342f7d2f57d8832ca0188ceea9112673746690b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +68,7 @@ ms.lasthandoff: 09/27/2017
   
  이때 **통계 자동 업데이트** 도 **True** 로 설정해야 이 옵션을 **True**로 설정했을 때 효과가 있습니다.  
   
-## <a name="containment"></a>포함  
+## <a name="containment"></a>Containment  
  포함된 데이터베이스의 경우 일반적으로 서버 수준에서 구성하는 일부 설정을 데이터베이스 수준에서 구성할 수 있습니다.  
   
  **기본 전체 텍스트 언어 LCID**  
@@ -242,8 +239,7 @@ Service Broker를 활성화 또는 비활성화합니다.
   
 
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-

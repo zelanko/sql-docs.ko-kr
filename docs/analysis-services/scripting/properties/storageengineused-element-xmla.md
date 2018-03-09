@@ -2,15 +2,13 @@
 title: "StorageEngineUsed 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
@@ -21,20 +19,20 @@ apitype: Schema
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bbd6a47e68c069ca9eef8c8fe8f414d4025ebeba
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 188c9261964839c055b75e2abb4c1e8fc4ec3633
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed 요소(XMLA)
-  현재 데이터베이스 유형에 대해 설명하는 읽기 전용 값을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+현재 데이터베이스 유형에 대해 설명하는 읽기 전용 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -94,11 +92,10 @@ ms.lasthandoff: 09/01/2017
 |-----------|-----------------|  
 |*기존의*|데이터베이스 모델은 MOLAP, ROLAP 또는 HOLAP 저장소 모드에 해당합니다.|  
 |*InMemory*|데이터베이스 모델은 IMBI 저장소 모드에 해당합니다.|  
-|*혼합*|데이터베이스 모델은 IMBI와 MOLAP, ROLAP 또는 HOLAP 저장소 모드를 혼합합니다.|  
+|*Mixed*|데이터베이스 모델은 IMBI와 MOLAP, ROLAP 또는 HOLAP 저장소 모드를 혼합합니다.|  
   
  에 대 한 허용된 된 값에 해당 하는 열거형 **StorageEngineUsed** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.StorageEngineUsed>합니다.  
   
  부모에 해당 하는 요소 **StorageEngineUsed** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Database>합니다.  
   
   
-

@@ -3,8 +3,11 @@ title: "테스트 사례 보고서 (SybaseToSQL) 보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: adc23466083df093d778d907e932dc6bc6a30549
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e7f9b549716ed85abe6e2fdfbc7e3b5739286afe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>테스트 사례 (SybaseToSQL) 보고서 보기
 테스트 사례 보고서에서는 테스트 확인 결과 및 일반 테스트 정보를 보여 줍니다. 테스트 실패 시 확인 된 개체의 모든 일치 하지 않는 데이터에 대 한 정보가 표시 됩니다.  

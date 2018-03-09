@@ -2,15 +2,13 @@
 title: "드릴스루 쿼리 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - drillthrough [Analysis Services]
 - drillthrough [DMX]
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2ac1295dcbea5ff575cb0d1d5ab918bad03c6fd0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1cb15acfcc31572a34c6bf2fe6c3ec75101a9fd0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="drillthrough-queries-data-mining"></a>드릴스루 쿼리(데이터 마이닝)
-  *드릴스루 쿼리* 를 사용하면 마이닝 모델로 쿼리를 전송하여 기본 사례 또는 구조 데이터에서 세부 사항을 검색할 수 있습니다. 드릴스루는 모델 학습에 사용된 사례와 모델 테스트에 사용된 사례를 비교해서 보거나 사례 데이터에서 추가 정보를 확인하려는 경우에 유용합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+*드릴스루 쿼리* 를 사용하면 마이닝 모델로 쿼리를 전송하여 기본 사례 또는 구조 데이터에서 세부 사항을 검색할 수 있습니다. 드릴스루는 모델 학습에 사용된 사례와 모델 테스트에 사용된 사례를 비교해서 보거나 사례 데이터에서 추가 정보를 확인하려는 경우에 유용합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝은 다음과 같은 두 가지 드릴스루 옵션을 제공합니다.  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_DMX"></a> DMX를 사용하여 드릴스루 쿼리 만들기  
  모델 또는 구조에 대한 사용 권한을 가지고 있는 경우 DMX 쿼리를 만들어 사례 데이터로 드릴스루할 수 있습니다. DMX에서 드릴스루 쿼리를 만들기 위한 구문의 예를 보려면 다음 항목을 참조하십시오.  
   
- [DMX를 사용하여 드릴스루 쿼리 만들기](../../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)  
+ [DMX를 사용 하 여 드릴스루 쿼리 만들기](../../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)  
   
 ##  <a name="bkmk_Considerations"></a> 드릴스루 사용 시의 고려 사항  
   
@@ -97,19 +95,18 @@ ms.lasthandoff: 09/01/2017
 |Microsoft 선형 회귀 알고리즘|지원됩니다. 그러나 모델은 단일 노드인 **All**을 만들기 때문에 드릴스루 시 모델에 대한 모든 학습 사례가 반환됩니다. 학습 집합이 큰 경우 결과를 로드하는 데 시간이 많이 소요될 수 있습니다.|  
 |Microsoft 시계열 알고리즘|지원됩니다. 그러나 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 를 사용하여 구조 또는 사례 데이터로 드릴스루할 수 없습니다. 대신 DMX 쿼리를 만들어야 합니다.<br /><br /> 특정 노드로 드릴스루하거나 DMX 쿼리를 작성하여 시계열 모델의 특정 노드에 있는 사례를 검색할 수도 없습니다. 날짜 또는 특성 값과 같은 다른 기준을 사용하여 모델이나 구조에서 사례 데이터를 검색할 수 있습니다.<br /><br /> [Lag&#40;DMX&#41;](../../dmx/lag-dmx.md) 함수를 사용하여 모델의 사례에서 날짜를 반환할 수도 있습니다.<br /><br /> Microsoft 시계열 알고리즘에 의해 생성된 ARTXP 및 ARIMA 노드에 대한 세부 정보를 보려면 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)를 사용합니다.|  
   
-##  <a name="bkmk_Tasks"></a> 관련 작업  
+##  <a name="bkmk_Tasks"></a> 관련 태스크  
  특정 시나리오에서 드릴스루를 사용하려면 다음 링크를 사용하십시오.  
   
 |태스크|링크|  
 |----------|----------|  
 |데이터 마이닝 디자이너의 드릴스루 사용을 설명하는 절차|[마이닝 모델에서 사례 데이터로 드릴스루](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |드릴스루를 허용하도록 기존 마이닝 모델 변경|[마이닝 모델에 드릴스루 사용](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|DMX WITH DRILLTHROUGH 절을 사용하여 마이닝 구조에서 드릴스루를 사용하도록 설정|[CREATE MINING STRUCTURE&#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
-|마이닝 구조 및 마이닝 모델에 대한 드릴스루에 적용되는 권한 할당에 대한 정보|[데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|DMX WITH DRILLTHROUGH 절을 사용하여 마이닝 구조에서 드릴스루를 사용하도록 설정|[만들기 마이닝 구조 &#40; DMX &#41;](../../dmx/create-mining-structure-dmx.md)|  
+|마이닝 구조 및 마이닝 모델에 대한 드릴스루에 적용되는 권한 할당에 대한 정보|[데이터 마이닝 구조 및 모델 &#40;에 대 한 권한 부여 Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

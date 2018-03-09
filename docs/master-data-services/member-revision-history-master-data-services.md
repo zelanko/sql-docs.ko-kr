@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
-caps.latest.revision: 7
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 26509a91e02f0afdcdae721d2268ae6c88d792cb
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 665a5978f516520c397bdbfe01be84ab93df028c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="member-revision-history-master-data-services"></a>멤버 수정 기록(Master Data Services)
   멤버 수정 기록은 엔터티 트랜잭션 로그 형식이 멤버인 경우 멤버가 변경될 때마다 기록됩니다.  
@@ -80,4 +79,3 @@ ms.lasthandoff: 09/07/2017
  [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   
   
-

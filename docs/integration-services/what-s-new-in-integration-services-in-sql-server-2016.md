@@ -1,11 +1,14 @@
 ---
-title: "기능 &#39; SQL Server 2016의에서 Integration Services의 새로운 s | Microsoft Docs"
+title: "SQL Server 2016 Integration Services의 새로운 기능 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,34 +17,33 @@ helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-caps.latest.revision: 183
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 084c6eeaf3b83df5435092f3fc424fb9c86ea446
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/29/2017
-
+ms.openlocfilehash: 0d684f94dcd18d45c1a8b860b80d20ab07f64529
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>기능 &#39;의 새로운 SQL Server 2016의에서 Integration Services
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services의 새로운 기능
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-이 항목에서는 SQL Server 2016에서 업데이트 되거나 추가 된 기능을 설명 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]합니다. 추가 되거나 업데이트 기능도 포함는 [Integration services&#40;에 대 한 Azure 기능 팩 Ssis&#41; ](../integration-services/azure-feature-pack-for-integration-services-ssis.md) SQL Server 2016 시간 프레임 동안의 합니다.  
+이 항목에서는 SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 추가되거나 업데이트된 기능에 대해 설명합니다. 또한 SQL Server 2016 시간 프레임 동안 [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)에 포함되거나 업데이트된 기능도 포함됩니다.  
 
-## <a name="new-for-ssis-in-azure-data-factory"></a>Azure Data Factory에는 SSIS의 새로운 기능
+## <a name="new-for-ssis-in-azure-data-factory"></a>Azure Data Factory SSIS의 새로운 기능
 
-Azure Data Factory 2017 년 9 월에에서 버전 2의 공개 미리 보기에서는 이제 다음과 같은 작업을 수행할 수 있습니다.
--   SSIS 카탈로그 데이터베이스 (SSISDB) Azure SQL 데이터베이스에 패키지를 배포 합니다.
--   Azure SSIS 통합 런타임에서 Azure 데이터 팩터리 버전 2의 구성 요소에는 Azure에 배포 된 패키지를 실행 합니다.
+2017년 9월 Azure Data Factory 버전 2의 공개 미리 보기에서 이제 다음과 같은 작업을 수행할 수 있습니다.
+-   Azure SQL Database의 SSISDB(SSIS 카탈로그 데이터베이스)에 패키지를 배포합니다.
+-   Azure SSIS Integration Runtime에서 Azure에 배포된 패키지 및 Azure Data Factory 버전 2의 구성 요소를 실행합니다.
 
-자세한 내용은 참조 하십시오. [클라우드로 SQL Server Integration Services 작업 리프트 및 shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)합니다.
+자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
 
-이러한 새로운 기능 SQL Server 데이터 도구 (SSDT) 버전 17.2 이상 필요 하지만 SQL Server 2017 또는 SQL Server 2016 필요 하지 않습니다. Azure에 패키지를 배포할 때 패키지 배포 마법사는 패키지를 최신 패키지 형식으로 항상 업그레이드 합니다.
+이러한 새로운 기능을 사용하려면 SSDT(SQL Server Data Tools) 버전 17.2 이상이 필요하지만, SQL Server 2017 또는 SQL Server 2016은 필요하지 않습니다. Azure에 패키지를 배포할 때 패키지 배포 마법사는 항상 패키지를 최신 패키지 형식으로 업그레이드합니다.
 
-## <a name="2016-improvements-by-category"></a>범주별으로 2016 개선 사항  
+## <a name="2016-improvements-by-category"></a>범주별로 2016 향상된 기능  
   
 -   **관리 효율**  
   
@@ -160,16 +162,16 @@ Azure Data Factory 2017 년 9 월에에서 버전 2의 공개 미리 보기에�
   
 -   이전 버전의 SQL Server에서 데이터베이스를 복원한 경우  
   
--   SQL Server 인스턴스를 업그레이드하기 전에 Always On 가용성 그룹에서 데이터베이스를 제거하지 않은 경우. 이 경우 데이터베이스가 자동으로 업그레이드되지 않습니다. 자세한 내용은 [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)를 참조하십시오.  
+-   SQL Server 인스턴스를 업그레이드하기 전에 Always On 가용성 그룹에서 데이터베이스를 제거하지 않은 경우. 이 경우 데이터베이스가 자동으로 업그레이드되지 않습니다. 자세한 내용은 [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)를 참조하십시오.  
   
- 자세한 내용은 참조 하십시오. [SSIS 카탈로그 &#40; SSISDB &#41; ](../integration-services/service/ssis-catalog.md). 
+ 자세한 내용은 [SSIS 카탈로그&#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md)를 참조하세요. 
 
 ####  <a name="AlwaysOn"></a> SSIS 카탈로그에서 Always On 지원  
  Always On 가용성 그룹 기능은 데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. 가용성 그룹은 함께 장애 조치(Failover)되는 사용자 데이터베이스(가용성 데이터베이스라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 자세한 내용은 [AlwaysOn 가용성 그룹](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)을 참조하세요.  
   
- SQL Server 2016 SSIS 중앙 집중식된 SSIS 카탈로그 (예: SSISDB 사용자 데이터베이스)를 쉽게 배포할 수 있는 새로운 기능을 제공 합니다. SSIS 데이터베이스 및 해당 콘텐츠(프로젝트, 패키지, 실행 로그 등)에 대한 고가용성을 제공하려는 경우에는 다른 사용자 데이터베이스와 같은 방식으로 SSISDB 데이터베이스를 AlwaysOn 가용성 그룹에 추가할 수 있습니다. 장애 조치(Failover)가 발생하면 보조 노드 중 하나가 자동으로 새 주 노드가 됩니다.  
+ SQL Server 2016에서 SSIS에는 중앙 집중식 SSIS 카탈로그(즉, SSISDB 사용자 데이터베이스)로 쉽게 배포할 수 있는 기능이 새로 도입되었습니다. SSIS 데이터베이스 및 해당 콘텐츠(프로젝트, 패키지, 실행 로그 등)에 대한 고가용성을 제공하려는 경우에는 다른 사용자 데이터베이스와 같은 방식으로 SSISDB 데이터베이스를 AlwaysOn 가용성 그룹에 추가할 수 있습니다. 장애 조치(Failover)가 발생하면 보조 노드 중 하나가 자동으로 새 주 노드가 됩니다.  
   
- SSISDB에 대 한 Always On 사용 하기 위한 단계별 지침과 상세 개요에 대 한 참조 [SSIS 카탈로그](../integration-services/service/ssis-catalog.md)합니다.  
+ SSISDB용으로 AlwaysOn을 사용하도록 설정하는 단계별 지침과 상세 개요는 [SSIS 카탈로그](../integration-services/catalog/ssis-catalog.md)를 참조하세요.  
 
 ####  <a name="IncrementalDeployment"></a> 증분 패키지 배포  
 증분 패키지 배포 기능을 사용하면 전체 프로젝트를 배포하지 않고 기존 프로젝트나 새 프로젝트에 하나 이상의 패키지를 배포할 수 있습니다. 다음과 같은 도구를 사용하여 증분 방식으로 패키지를 배포할 수 있습니다.  
@@ -184,7 +186,7 @@ Azure Data Factory 2017 년 9 월에에서 버전 2의 공개 미리 보기에�
   
 -   MOM(관리 개체 모델) API  
   
- 자세한 내용은 참조 하십시오. [Integration Services 배포 (SSIS) 프로젝트 및 패키지] (... / integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md 합니다.  
+ 자세한 내용은 [SSIS(Integration Services) 프로젝트 및 패키지 배포](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md를 참조하세요.  
 
 ####  <a name="encrypted"></a> SSIS 카탈로그에서 항상 암호화 지원  
  SSIS는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 항상 암호화 기능을 이미 지원합니다. 자세한 내용은 다음 블로그 게시물을 참조하세요.  
@@ -204,12 +206,12 @@ Azure Data Factory 2017 년 9 월에에서 버전 2의 공개 미리 보기에�
  SSIS 카탈로그에서 새 **RuntimeLineage** 로깅 수준에서는 데이터 흐름의 계보 정보를 추적하는 데 필요한 데이터를 수집합니다. 이 계보 정보를 구문 분석하여 작업 간의 계보 관계를 매핑할 수 있습니다. ISV와 개발자가 이 정보로 사용자 지정 계보 매핑 도구를 빌드할 수 있습니다. 
 
 ####  <a name="CustomLogging"></a> SSIS 카탈로그에서 새 사용자 지정 로깅 수준  
- SSIS 카탈로그의 이전 버전을 사용하면 패키지를 실행할 때 네 가지 기본 제공 로깅 수준 **없음, 기본, 성능, 자세한 정보 표시**에서 선택할 수 있습니다. 추가 하는 SQL Server 2016의 **RuntimeLineage** 로깅 수준입니다. 또한 이제 SSIS 카탈로그에서 사용자 지정된 로깅 수준을 여러 개 만들고 저장할 수 있으며, 패키지를 실행할 때마다 사용할 로깅 수준을 선택할 수 있습니다. 각 사용자 지정된 로깅 수준에 대해 캡처할 통계 및 이벤트를 선택합니다. 필요에 따라 변수 값, 연결 문자열 및 작업 속성을 표시하는 이벤트 컨텍스트를 포함합니다. 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)를 참조하십시오. 
+ SSIS 카탈로그의 이전 버전을 사용하면 패키지를 실행할 때 네 가지 기본 제공 로깅 수준 **없음, 기본, 성능, 자세한 정보 표시**에서 선택할 수 있습니다. SQL Server 2016에서는 **RuntimeLineage** 로깅 수준을 추가합니다. 또한 이제 SSIS 카탈로그에서 사용자 지정된 로깅 수준을 여러 개 만들고 저장할 수 있으며, 패키지를 실행할 때마다 사용할 로깅 수준을 선택할 수 있습니다. 각 사용자 지정된 로깅 수준에 대해 캡처할 통계 및 이벤트를 선택합니다. 필요에 따라 변수 값, 연결 문자열 및 작업 속성을 표시하는 이벤트 컨텍스트를 포함합니다. 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)를 참조하십시오. 
 
 ####  <a name="ErrorColumn"></a> 데이터 흐름의 오류에 대한 열 이름  
  오류 출력에 오류를 포함 하는 데이터 흐름에서 행을 리디렉션하는 경우 출력 오류가 발생 했지만 열 이름이 표시 되지 않는 열에 대 한 숫자 식별자를 포함 합니다. 이제 여러 가지 방법을 사용하여 오류가 발생할 때 열 이름을 찾아 표시할 수 있습니다.  
   
--   로깅을 구성할 때 로깅에 대해 **DiagnosticEx** 이벤트를 선택합니다. 이 이벤트는 로그에 데이터 흐름 열 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 열 지도에 열 이름을 조회할 수 있습니다. 자세한 내용은 [Error Handling in Data](../integration-services/data-flow/error-handling-in-data.md)를 참조하십시오.  
+-   로깅을 구성할 때 로깅에 대해 **DiagnosticEx** 이벤트를 선택합니다. 이 이벤트는 로그에 데이터 흐름 열 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 열 지도에 열 이름을 조회할 수 있습니다. 자세한 내용은 [데이터 오류 처리](../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.  
   
 -   고급 편집기에서 데이터 흐름 구성 요소의 입력 또는 출력 열 속성을 볼 때 업스트림 열에 대한 열 이름을 볼 수 있습니다.  
   
@@ -236,7 +238,7 @@ Azure Data Factory 2017 년 9 월에에서 버전 2의 공개 미리 보기에�
  SQL Server **서버 속성**의 **서버 로깅 수준** 속성 아래에서 이제 기본 서버 차원의 로깅 수준을 선택할 수 있습니다. 기본 제공 로깅 수준인 기본, 없음, 자세한 정보 표시, 성능 또는 런타임 계보 중 하나에서 선택하거나 기존 사용자 지정된 로깅 수준을 선택할 수 있습니다. 선택한 로깅 수준은 SSIS 카탈로그에 배포하는 모든 패키지에 적용됩니다. 또한 SSIS 패키지를 실행하는 SQL 에이전트 작업 단계에 기본적으로 적용됩니다.  
 
 ####  <a name="CMD130"></a> API의 새로운 IDTSComponentMetaData130 인터페이스  
- SSIS 카탈로그에서 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 인터페이스는 SQL Server 2016의 새 기능, 특히 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 메서드를 기존 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 인터페이스에 추가합니다. (의 **GetIdentificationStringByID** 새로운 인터페이스를 메서드가 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스입니다.) 새로운 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> 인터페이스를 제공 하는 **LineageIdentificationString** 속성입니다. 자세한 내용은 [데이터 흐름의 오류에 대한 열 이름](#ErrorColumn)를 참조하십시오.  
+ SSIS 카탈로그에서 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 인터페이스는 SQL Server 2016의 새 기능, 특히 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 메서드를 기존 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 인터페이스에 추가합니다. (**GetIdentificationStringByID** 메서드는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스에서 새 인터페이스로 이동되었습니다.) 또한 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> 인터페이스도 새로 추가되었으며 두 인터페이스 모두 **LineageIdentificationString** 속성을 제공합니다. 자세한 내용은 [데이터 흐름의 오류에 대한 열 이름](#ErrorColumn)를 참조하십시오.  
 
 ### <a name="better-package-management"></a>패키지 관리 향상
 
@@ -300,7 +302,7 @@ PDW AU5로 데이터를 로드하기 위한 대상 어댑터가 릴리스되었�
 ### <a name="expanded-connectivity-to-the-cloud"></a>클라우드에 연결 확장
 
 ####  <a name="AFP2016"></a> Azure Feature Pack for SSIS가 SQL Server 2016용으로 릴리스됨  
- Integration Services에 대 한 Azure 기능 팩 SQL Server 2016에 대 한 릴리스 되었습니다. 기능 팩에는 연결 관리자가 포함되어 있어 일반적인 Azure 작업을 수행할 수 있도록 Azure 데이터 원본 및 작업에 연결합니다. 자세한 내용은 [Integration Services용 Azure 기능 팩&#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)을 참조하세요.  
+ Integration Services용 Azure Feature Pack이 SQL Server 2016용으로 릴리스되었습니다. 기능 팩에는 연결 관리자가 포함되어 있어 일반적인 Azure 작업을 수행할 수 있도록 Azure 데이터 원본 및 작업에 연결합니다. 자세한 내용은 [Integration Services용 Azure 기능 팩&#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)을 참조하세요.  
 
 #### <a name="dynamics"></a> 서비스 팩 1에 릴리스된 Microsoft Dynamics 온라인 리소스에 대한 지원
 
@@ -319,7 +321,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
 ### <a name="better-install-experience"></a>설치 경험 향상
 
 ####  <a name="Upgrade"></a> SSISDB가 가용성 그룹에 속해 있을 경우 업그레이드 차단  
- SSISDB(SSIS 카탈로그 데이터베이스)가 Always On 가용성 그룹에 속한 경우에는 가용성 그룹에서 SSISDB를 제거하고 SQL Server를 업그레이드한 다음 가용성 그룹에 SSISDB를 다시 추가해야 합니다. 자세한 내용은 [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)를 참조하십시오.  
+ SSISDB(SSIS 카탈로그 데이터베이스)가 Always On 가용성 그룹에 속한 경우에는 가용성 그룹에서 SSISDB를 제거하고 SQL Server를 업그레이드한 다음 가용성 그룹에 SSISDB를 다시 추가해야 합니다. 자세한 내용은 [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)를 참조하십시오.  
 
 ### <a name="better-design-experience"></a>디자인 환경 향상
 
@@ -328,7 +330,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
 
  솔루션 탐색기에서 Integration Services 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 프로젝트에 대한 속성 페이지를 엽니다. **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
    
- ![프로젝트 속성 대화 상자에서 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자에서 TargetServerVersion 속성")  
+ ![프로젝트 속성 대화 상자의 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자의 TargetServerVersion 속성")  
 
 >   [!IMPORTANT]
 > SSIS용 사용자 지정 확장 프로그램을 개발하는 경우 [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) (사용자 지정 구성 요소에서 멀티 타기팅 지원) 및 [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(SQL Server 2016용 SSDT 2015의 다중 버전 지원에서 SSIS 사용자 지정 확장 프로그램을 지원하도록 설정)을 참조하세요.  
@@ -377,5 +379,4 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

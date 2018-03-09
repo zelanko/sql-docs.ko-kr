@@ -3,7 +3,7 @@ title: ConnectModeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9f524d7d0385de331abed8d857296c55fcdbdc64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc9a29f1f46ab56a87b318761b4b0809fd76e6fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 데이터 수정에 대 한 사용할 수 있는 사용 권한을 지정는 [연결](../../../ado/reference/ado-api/connection-object-ado.md)열고는 [레코드](../../../ado/reference/ado-api/record-object-ado.md), 또는 대 한 값을 지정 하는 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 의 속성은  **레코드** 및 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1.|읽기 전용 권한을 나타냅니다.|  
 |**adModeReadWrite**|3|읽기/쓰기 권한을 나타냅니다.|  
@@ -46,7 +45,7 @@ ms.lasthandoff: 09/09/2017
 |**adModeWrite**|2|쓰기 전용 권한을 나타냅니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  
@@ -66,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |-|-|  
 |[Mode 속성(ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open 메서드(ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Open 메서드(ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
-

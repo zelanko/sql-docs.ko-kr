@@ -2,35 +2,35 @@
 title: (MDX syntax) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], operators
 - operators [MDX]
 - precedence [MDX]
 - MDX [Analysis Services], operators
 ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e931d63ae6e46b1828e940535434f5f5a10b0481
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="operators-mdx-syntax"></a>연산자(MDX 구문)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   MDX에서 연산자를 이용해 다음 동작을 수행할 수 있습니다.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/02/2017
   
  MDX는 다음 테이블에 나열된 연산자를 지원합니다.  
   
-|원하는 연산|찾기 옵션|  
+|원하는 연산|이후|  
 |---------------------------------------|---------|  
 |변수에 값을 할당하거나 결과 집합 열을 별칭과 연결합니다.|[대입 연산자](../mdx/assignment-operators.md)|  
 |더하기, 빼기, 곱하기, 나누기 연산을 수행합니다.|[산술 연산자](../mdx/arithmetic-operators.md)|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/02/2017
   
 -   DISTINCT  
   
--   :  
+-   으로 디코딩된 문자입니다.  
   
 -   ^  
   
@@ -85,11 +85,11 @@ ms.lasthandoff: 08/02/2017
   
 -   NOT  
   
--   및  
+-   AND  
   
 -   XOR  
   
--   OR  
+-   또는  
   
  MDX의 연산자에에서 대 한 자세한 내용은 참조 하십시오. [MDX 연산자 참조 &#40; Mdx&#41; ](../mdx/mdx-operator-reference-mdx.md).  
   
@@ -111,9 +111,8 @@ ms.lasthandoff: 08/02/2017
 |Tuple|멤버|\<튜플 >.item(0)|  
 |Tuple|스칼라|\<튜플 >.value|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [MDX 구문 요소 &#40; Mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
-

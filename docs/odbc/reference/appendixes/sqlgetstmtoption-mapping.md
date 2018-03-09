@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLGetStmtOption
 ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f19743c0d01c5e1a58650284f0254724c8320936
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption 매핑
 응용 프로그램 호출 하는 경우 **SQLGetStmtOption** ODBC 3*.x* 것에 대 한 호출을 지원 하지 않는 드라이버  
@@ -62,4 +60,3 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  ODBC 3에서 SQL_GET_BOOKMARK 문 옵션은 사용 되지*.x*합니다. ODBC 3에 대 한*.x* ODBC 2에서 실행 되도록 드라이버. *x* SQL_GET_BOOKMARK를 사용 하는 응용 프로그램 SQL_GET_BOOKMARK를 지원 해야 합니다. ODBC 3에 대 한*.x* ODBC 2에서 실행 되도록 드라이버. *x* 응용 프로그램을 지원 해야 SQL_USE_BOOKMARKS SQL_UB_ON을 설정 하 고 고정 길이의 책갈피를 노출 해야 합니다. ODBC 3 경우*.x* 드라이버 지원만 가변 길이 책갈피, 고정 길이 하지 책갈피, SQLSTATE HYC00 반환 해야 합니다 (선택적 기능이 구현 되지 않았습니다) 경우 ODBC 2. *x* 응용 프로그램이 SQL_USE_BOOKMARKS SQL_UB_ON로 설정 하려고 합니다.  
   
  ODBC 3에 대 한*.x* 드라이버를 드라이버 관리자를 더 이상 확인 여부를 *옵션* 사이 SQL_STMT_OPT_MIN 및 SQL_STMT_OPT_MAX, 또는 SQL_CONNECT_OPT_DRVR_START 보다 큽니다. 드라이버는이 확인란을 선택 해야 합니다.
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -28,24 +27,23 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a28fe7c6024d8cf5669199e5f33e3532013e4d3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 77962f05ede4b2650db4af59fdbde5ec42fdf1d5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="working-with-images-with-the-script-task"></a>스크립트 태스크를 사용한 이미지 작업
-  제품 또는 사용자 데이터베이스에는 텍스트 및 숫자 데이터 외에 이미지도 포함되는 경우가 많습니다. **System.Drawing** 네임 스페이스 Microsoft.NET Framework에서는 이미지 조작을 위한 클래스를 제공 합니다.  
+  제품 또는 사용자 데이터베이스에는 텍스트 및 숫자 데이터 외에 이미지도 포함되는 경우가 많습니다. Microsoft .NET Framework의 **System.Drawing** 네임스페이스에서는 이미지 조작을 위한 클래스를 제공합니다.  
   
- [예제 1: JPEG 형식으로 이미지 변환](#example1)  
+ [예 1: JPEG 형식으로 이미지 변환](#example1)  
   
- [예제 2: 만들고 축소판 이미지를 저장 합니다.](#example2)  
+ [예 2: 썸네일 이미지 만들기 및 저장](#example2)  
   
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
@@ -57,24 +55,24 @@ ms.lasthandoff: 09/26/2017
   
 1.  `CurrentImageFile`이라는 문자열 변수를 만들고 해당 값을 기존 이미지 파일의 경로 및 파일 이름으로 설정합니다.  
   
-2.  에 **스크립트** 의 페이지는 **스크립트 태스크 편집기**, 추가 된 `CurrentImageFile` 변수를 **ReadOnlyVariables** 속성입니다.  
+2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 `CurrentImageFile` 변수를 추가합니다.  
   
-3.  스크립트 프로젝트에 대 한 참조를 설정는 **System.Drawing** 네임 스페이스입니다.  
+3.  스크립트 프로젝트에서 **System.Drawing** 네임스페이스에 대한 참조를 설정합니다.  
   
-4.  사용자 코드에서 사용 하 여 **Imports** 가져오려는 문을 **System.Drawing** 및 **System.IO** 네임 스페이스입니다.  
+4.  코드에서 **Imports** 문을 사용하여 **System.Drawing** 및 **System.IO** 네임스페이스를 가져옵니다.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>이 스크립트 태스크 예를 여러 이미지 파일에 사용할 수 있도록 구성하려면  
   
 1.  Foreach 루프 컨테이너 내에 스크립트 태스크를 추가합니다.  
   
-2.  에 **컬렉션** 의 페이지는 **Foreach 루프 편집기**, 선택는 **Foreach File 열거자** 에서 열거자로 소스 경로 및 파일 마스크를 지정 하 고 등 파일 "*.bmp."로  
+2.  **Foreach 루프 편집기**의 **컬렉션** 페이지에서 열거자로 **Foreach File 열거자**를 선택하고 원본 파일의 경로 및 파일 마스크(예: "*.bmp")를 지정합니다.  
   
-3.  에 **변수 매핑** 페이지, 지도 `CurrentImageFile` 변수를 인덱스 0입니다. 이 변수는 현재 파일 이름을 열거자의 각 반복에 있는 스크립트 태스크에 전달합니다.  
+3.  **변수 매핑** 페이지에서 `CurrentImageFile` 변수를 인덱스 0으로 매핑합니다. 이 변수는 현재 파일 이름을 열거자의 각 반복에 있는 스크립트 태스크에 전달합니다.  
   
     > [!NOTE]  
     >  이러한 단계는 단일 이미지 파일에 사용하기 위한 절차에 나열된 단계에 추가적으로 수행합니다.  
   
-### <a name="example-1-code"></a>코드 예 1  
+### <a name="example-1-code"></a>예 1 코드  
   
 ```vb  
 Public Sub Main()  
@@ -159,7 +157,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a>예 2 설명: 만들기 및 미리 보기 이미지를 저장 합니다.  
+##  <a name="example2"></a> 예 2 설명: 썸네일 이미지 만들기 및 저장  
  다음 예에서는 변수로 지정된 이미지 파일을 열고, 가로 세로 비율을 일정하게 유지하면서 이미지의 축소판 그림을 만들고, 이 축소판 그림을 수정된 파일 이름으로 저장합니다. 가로 세로 비율을 일정하게 유지하면서 축소판 그림의 높이와 너비를 계산하는 코드는 전용 서브루틴에 캡슐화되어 있습니다.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>이 스크립트 태스크 예를 단일 이미지 파일에 사용할 수 있도록 구성하려면  
@@ -168,24 +166,24 @@ End Function
   
 2.  또한 `MaxThumbSize`라는 정수 변수를 만들고 100과 같이 값을 픽셀 단위로 할당합니다.  
   
-3.  에 **스크립트** 의 페이지는 **스크립트 태스크 편집기**, 두 변수를 추가 **ReadOnlyVariables** 속성입니다.  
+3.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 두 변수를 추가합니다.  
   
-4.  스크립트 프로젝트에 대 한 참조를 설정는 **System.Drawing** 네임 스페이스입니다.  
+4.  스크립트 프로젝트에서 **System.Drawing** 네임스페이스에 대한 참조를 설정합니다.  
   
-5.  사용자 코드에서 사용 하 여 **Imports** 가져오려는 문을 **System.Drawing** 및 **System.IO** 네임 스페이스입니다.  
+5.  코드에서 **Imports** 문을 사용하여 **System.Drawing** 및 **System.IO** 네임스페이스를 가져옵니다.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>이 스크립트 태스크 예를 여러 이미지 파일에 사용할 수 있도록 구성하려면  
   
 1.  Foreach 루프 컨테이너 내에 스크립트 태스크를 추가합니다.  
   
-2.  에 **컬렉션** 의 페이지는 **Foreach 루프 편집기**, 선택는 **Foreach File 열거자** 으로 **열거자**, 지정는 "*.jpg."와 같은 소스 파일의 경로 및 파일 마스크  
+2.  **Foreach 루프 편집기**의 **컬렉션** 페이지에서 **열거자**로 **Foreach File 열거자**를 선택하고 원본 파일의 경로 및 파일 마스크(예: "*.jpg")를 지정합니다.  
   
-3.  에 **변수 매핑** 페이지, 지도 `CurrentImageFile` 변수를 인덱스 0입니다. 이 변수는 현재 파일 이름을 열거자의 각 반복에 있는 스크립트 태스크에 전달합니다.  
+3.  **변수 매핑** 페이지에서 `CurrentImageFile` 변수를 인덱스 0으로 매핑합니다. 이 변수는 현재 파일 이름을 열거자의 각 반복에 있는 스크립트 태스크에 전달합니다.  
   
     > [!NOTE]  
     >  이러한 단계는 단일 이미지 파일에 사용하기 위한 절차에 나열된 단계에 추가적으로 수행합니다.  
   
-### <a name="example-2-code"></a>코드 예 2  
+### <a name="example-2-code"></a>예 2 코드  
   
 ```vb  
 Public Sub Main()  
@@ -300,4 +298,3 @@ bool ThumbnailCallback()
 ```  
   
   
-

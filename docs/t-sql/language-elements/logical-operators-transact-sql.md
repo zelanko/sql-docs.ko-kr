@@ -22,17 +22,16 @@ helpviewer_keywords:
 - FALSE
 - logical operators [SQL Server], Transact-SQL
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa7f707ba758b6811f2fc8425bf4c2da96973e02
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1c012e6105f4cbdbb12659c840ebe3c1da6156e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="logical-operators-transact-sql"></a>논리 연산자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +42,16 @@ ms.lasthandoff: 09/01/2017
 |--------------|-------------|  
 |[ALL](../../t-sql/language-elements/all-transact-sql.md)|모든 비교 집합이 TRUE인 경우 TRUE입니다.|  
 |[AND](../../t-sql/language-elements/and-transact-sql.md)|두 개의 부울 식이 모두 TRUE인 경우 TRUE입니다.|  
-|[모든](../../t-sql/language-elements/any-transact-sql.md)|비교 집합 중 하나가 TRUE인 경우 TRUE입니다.|  
-|[사이](../../t-sql/language-elements/between-transact-sql.md)|피연산자가 범위 안에 있는 경우 TRUE입니다.|  
-|[존재](../../t-sql/language-elements/exists-transact-sql.md)|하위 쿼리에 행이 포함된 경우 TRUE입니다.|  
+|[ANY](../../t-sql/language-elements/any-transact-sql.md)|비교 집합 중 하나가 TRUE인 경우 TRUE입니다.|  
+|[BETWEEN](../../t-sql/language-elements/between-transact-sql.md)|피연산자가 범위 안에 있는 경우 TRUE입니다.|  
+|[EXISTS](../../t-sql/language-elements/exists-transact-sql.md)|하위 쿼리에 행이 포함된 경우 TRUE입니다.|  
 |[IN](../../t-sql/language-elements/in-transact-sql.md)|피연산자가 식 목록 중 하나와 같은 경우 TRUE입니다.|  
-|[와 같은](../../t-sql/language-elements/like-transact-sql.md)|피연산자가 패턴과 일치하는 경우 TRUE입니다.|  
+|[LIKE](../../t-sql/language-elements/like-transact-sql.md)|피연산자가 패턴과 일치하는 경우 TRUE입니다.|  
 |[NOT](../../t-sql/language-elements/not-transact-sql.md)|다른 모든 부울 연산자의 값을 반대로 합니다.|  
 |[OR](../../t-sql/language-elements/or-transact-sql.md)|하나의 부울 식이 TRUE인 경우 TRUE입니다.|  
-|[일부](../../t-sql/language-elements/some-any-transact-sql.md)|비교 집합 중 일부가 TRUE인 경우 TRUE입니다.|  
+|[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|비교 집합 중 일부가 TRUE인 경우 TRUE입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [연산자 우선 순위 &#40; Transact SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   
-

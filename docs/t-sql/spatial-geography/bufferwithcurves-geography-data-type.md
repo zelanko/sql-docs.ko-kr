@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80f16777999a029e1063305a0d1b8501af7e05d7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0978418fe682728d02f7c65b5bff581154ae231c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>인수  
- *거리*  
+ *distance*  
  이 **float** 버퍼 점과 되는 최대 거리를 나타내는 geography 인스턴스에서 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
@@ -70,7 +69,7 @@ ms.lasthandoff: 09/01/2017
 |거리 < 0|0 또는 1|빈 **GeometryCollection** 인스턴스|  
 |거리 \< 0|2 이상|A **CurvePolygon** 또는 **GeometryCollection** 음수 버퍼가 인스턴스.<br /><br /> 참고: 버퍼가 음수 이면 빈을 만들 수 있습니다 **GeometryCollection**|
 |거리 = 0|모든 차원|호출의 복사본 **geography** 인스턴스|  
-|거리 > 0|모든 차원|**CurvePolygon** 또는 **GeometryCollection** 인스턴스|  
+|distance > 0|모든 차원|**CurvePolygon** 또는 **GeometryCollection** 인스턴스|  
   
 > [!NOTE]  
 >  이후 *거리* 는 **float**, 매우 작은 값을 0으로 계산 될 수 있습니다.  이 경우, 호출의 복사본 **geography** 인스턴스가 반환 됩니다.  
@@ -152,4 +151,3 @@ ms.lasthandoff: 09/01/2017
  [BufferWithCurves &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
   
-

@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLExecDirect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLExecDirect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLExecDirect
-helpviewer_keywords:
-- SQLExecDirect function [ODBC]
+f1_keywords: SQLExecDirect
+helpviewer_keywords: SQLExecDirect function [ODBC]
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9e2db598d233bb36eadd8161dc63a6be9a8ac4be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fdf6183eda2b66263a8ff27664d046640b94ea95
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 함수
 **규칙**  
@@ -67,7 +61,7 @@ SQLRETURN SQLExecDirect(
 ## <a name="diagnostics"></a>진단  
  때 **SQLExecDirect** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 여의 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLExecDirect** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01001|커서 작업이 충돌 합니다.|\**StatementText* 포함 한 위치 지정 업데이트 또는 delete 문의 및 둘 이상의 행 또는 행이 없는 업데이트 하거나 삭제 합니다. (둘 이상의 행에 대 한 업데이트에 대 한 자세한 내용은 참조는 SQL_ATTR_SIMULATE_CURSOR에 대 한 설명을 *특성* 에 **SQLSetStmtAttr**.)<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -126,7 +120,7 @@ SQLRETURN SQLExecDirect(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  응용 프로그램 호출 **SQLExecDirect** 데이터 원본에는 SQL 문을 보내야 합니다. 직접 실행 하는 방법에 대 한 자세한 내용은 참조 [직접 실행](../../../odbc/reference/develop-app/direct-execution-odbc.md)합니다. 드라이버 문을 수정 하 여 데이터 원본에서 사용 하는 SQL 형식을 사용 하 고 데이터 원본에 전달 합니다. 특히, 드라이버는 SQL의 특정 기능을 정의 하는 데 이스케이프 시퀀스를 수정 합니다. 이스케이프 시퀀스의 구문에 대 한 참조 [odbc에서 이스케이프 시퀀스](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)합니다.  
   
  응용 프로그램은 SQL 문에서 하나 이상의 매개 변수 표식을 포함할 수 있습니다. 응용 프로그램 매개 변수 표식에 포함 하려면 적절 한 위치에서 SQL 문을에 물음표 (?)를 포함 시킵니다. 매개 변수에 대 한 정보를 참조 하십시오. [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)합니다.  
@@ -172,4 +166,3 @@ SQLRETURN SQLExecDirect(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

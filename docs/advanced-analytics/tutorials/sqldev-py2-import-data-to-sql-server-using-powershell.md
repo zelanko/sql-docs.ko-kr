@@ -2,31 +2,32 @@
 title: "2 단계: PowerShell을 사용 하 여 SQL Server로 데이터 가져오기 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-vnext-ctp2
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 1c97a15d3b70d42337d3054f97e2e695813ca6f8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: b4741dcfee4bdc2e5ca2327b50f5dd727be9de55
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>2 단계: PowerShell을 사용 하 여 SQL Server로 데이터 가져오기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 자습서의 일부는 [SQL 개발자를 위해 데이터베이스에서 Python 분석](sqldev-in-database-python-for-sql-developers.md)합니다. 
 
@@ -57,7 +58,7 @@ PowerShell 스크립트를 다운로드 한 파일 중에서 나타나야 `RunSQ
     - 이름 또는 주소는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] python 컴퓨터 학습 서비스 설치 되어 있는 인스턴스.
     - 인스턴스의 계정에 대한 사용자 이름 및 암호. 사용 하는 계정에는 데이터베이스를 만들 테이블 및 저장된 프로시저를 만들고 로드 테이블에 데이터를 대량으로 수가 있어야 합니다. 
     - 사용자 이름 및 암호를 제공 하지 않으면 경우에 Windows id는 SQL Server에 로그인 하는 데 사용 되 고 암호를 입력 하 승격 됩니다.
-    - 방금 다운로드한 샘플 데이터 파일의 경로 및 파일 이름. 예를 들어 IPv4 주소를 사용하는 경우 `C:\temp\pysql\nyctaxi1pct.csv`
+    - 방금 다운로드한 샘플 데이터 파일의 경로 및 파일 이름. 예를 들면 다음과 같습니다. `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > 데이터를 성공적으로 로드 하려면 라이브러리 xmlrw.dll bcp.exe와 같은 폴더에 있어야 합니다.
@@ -103,5 +104,4 @@ PowerShell 스크립트를 다운로드 한 파일 중에서 나타나야 `RunSQ
 ## <a name="previous-step"></a>이전 단계
 
 [1단계: 샘플 데이터 다운로드](sqldev-py1-download-the-sample-data.md)
-
 

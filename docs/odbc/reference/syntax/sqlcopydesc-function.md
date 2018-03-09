@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLCopyDesc
-apilocation:
-- sqlsrv32.dll
+apiname: SQLCopyDesc
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLCopyDesc
-helpviewer_keywords:
-- SQLCopyDesc function [ODBC]
+f1_keywords: SQLCopyDesc
+helpviewer_keywords: SQLCopyDesc function [ODBC]
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2df05d157c7079a3b5c1a8ef9286dd2c4c7a633
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8e7383a16b40a966612784e864594588cc37199
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 함수
 **규칙**  
@@ -67,7 +61,7 @@ SQLRETURN SQLCopyDesc(
   
  때문에 **SQLCopyDesc** 호출 하 여 구현 될 수 있습니다 **SQLGetDescField** 및 **SQLSetDescField**, **SQLCopyDesc** 반환할 수 있습니다 반환 된 Sqlstate **SQLGetDescField** 또는 **SQLSetDescField**합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
@@ -83,7 +77,7 @@ SQLRETURN SQLCopyDesc(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *SourceDescHandle* 또는 *TargetDescHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  에 대 한 호출 **SQLCopyDesc** 복사본 원본 설명자 필드 대상 설명자 핸들에 대 한 핸들입니다. 필드는 IPD 또는 응용 프로그램 설명자에만 속하지만 IRD에 복사할 수 있습니다. 응용 프로그램이 나 구현 설명자에서 필드를 복사할 수 있습니다.  
   
  문 핸들 준비 또는 실행 된 상태 이면 있을 경우에 IRD에서 필드를 복사할 수 있습니다. 그렇지 않으면 함수가 반환 SQLSTATE HY007 (관련 된 문이 준비 되지 않았습니다.).  
@@ -205,4 +199,3 @@ while (SQL_SUCCEEDED(rc)) {
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - connection strings [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connection strings
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c3bc1fc7fcefb034b30c604c358b15ae1db6353e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79d5cabb884262b052429da53cf19c360048dd21
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-string-format-and-attributes"></a>연결 문자열 형식 및 특성
 > [!IMPORTANT]  
@@ -47,16 +45,16 @@ ms.lasthandoff: 09/09/2017
   
  연결 문자열에 대 한 특성은 다음과 같습니다.  
   
-|Attribute|Description|기본값|  
+|attribute|Description|기본값|  
 |---------------|-----------------|-------------------|  
 |DSN|데이터 원본 이름은의 드라이버 탭에 나열 된는 **ODBC 데이터 원본 관리자** 대화 상자.|""|  
 |PWD|에 액세스 하려면 Oracle 서버에 대 한 암호입니다. 이 드라이버는 Oracle 암호에 배치 하는 제한 사항을 지원 합니다.|""|  
 |SERVER|에 액세스 하려면 Oracle 서버에 대 한 연결 문자열입니다.|""|  
 |UID|Oracle 서버 사용자 이름입니다. 시스템에 따라이 특성 하지 못할 선택적-즉, 특정 데이터베이스 및 테이블이이 특성에 필요할 보안상의 이유로 사용 합니다.<br /><br /> 사용 하 여 "/" Oracle을 사용 하도록 운영 체제 인증 합니다.|""|  
 |BUFFERSIZE|열을 인출할 때 사용 되는 최적의 버퍼 크기입니다.<br /><br /> 드라이버 인출 Oracle 서버에서 하나의 인출이이 크기의 버퍼에 맞게 충분 한 행이 반환 되도록 최적화 됩니다. 많은 데이터를 인출 하는 경우 성능을 향상 시키기 위해 값이 클수록는 경향이 있습니다.|65535|  
-|SYNONYMCOLUMNS|이 값이 true (1), SQLColumn () API 호출 열 정보를 반환 합니다. SQLColumn (), 테이블 및 뷰에 대 한 열만 반환합니다. Oracle에 대 한 ODBC 드라이버는이 값을 설정 하지 않은 경우 더 빠른 액세스를 제공 합니다.|1.|  
+|SYNONYMCOLUMNS|이 값이 true (1), SQLColumn () API 호출 열 정보를 반환 합니다. SQLColumn (), 테이블 및 뷰에 대 한 열만 반환합니다. Oracle에 대 한 ODBC 드라이버는이 값을 설정 하지 않은 경우 더 빠른 액세스를 제공 합니다.|1|  
 |REMARKS|이 값이 true (1), 드라이버에 대 한 설명 열을 반환 된 [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) 결과 집합입니다. Oracle에 대 한 ODBC 드라이버는이 값을 설정 하지 않은 경우 더 빠른 액세스를 제공 합니다.|0|  
-|StdDayOfWeek|DAYOFWEEK 스칼라 ODBC 규칙을 적용 합니다. 기본적으로이 켜져 있지만 지역화 된 버전을 해야 하는 사용자는 Oracle에서 반환 하는 관계 없이 사용 하도록 동작을 변경할 수 있습니다.|1.|  
+|StdDayOfWeek|DAYOFWEEK 스칼라 ODBC 규칙을 적용 합니다. 기본적으로이 켜져 있지만 지역화 된 버전을 해야 하는 사용자는 Oracle에서 반환 하는 관계 없이 사용 하도록 동작을 변경할 수 있습니다.|1|  
 |GuessTheColDef|드라이버에 대 한 0이 아닌 값을 반환할지 여부를 지정 된 *cbColDef* 의 인수 **SQLDescribeCol**합니다. 될 Oracle 정의 배율 없음 계산와 같은 숫자 열에만 적용 됩니다. 열과 열 또는 소수 자릿수가 없이 수로 정의 합니다. A **SQLDescribeCol** Oracle 해당 정보를 제공 하지 않는 전체 자릿수에 대 한 호출이 반환 130입니다.|0|  
   
  예를 들어 MyOracleServerOracle 서버와 Oracle 사용자 MyUserID를 사용 하 여 MyDataSource 데이터 원본에 연결 하는 연결 문자열 다음과 같습니다.  
@@ -70,4 +68,3 @@ ms.lasthandoff: 09/09/2017
 ```  
 "DSN=MyOtherDataSource;UID=/;PWD=;SERVER=MyOtherOracleServer"  
 ```
-

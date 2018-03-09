@@ -3,7 +3,7 @@ title: "주소록 명령 단추 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 531e10f28850e6da6f9863cb5f06e253793b1dee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 31b0bb389b188c39b4590a774ac453a9de17fd56
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="address-book-command-buttons"></a>주소록 명령 단추
 주소록 응용 프로그램에 다음과 같은 명령 단추가 포함 됩니다.  
@@ -95,6 +94,5 @@ End Sub
 ## <a name="see-also"></a>관련 항목:  
  [주소록 탐색 단추](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
 
 

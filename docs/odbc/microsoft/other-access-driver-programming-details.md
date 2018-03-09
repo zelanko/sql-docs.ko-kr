@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Access driver
 - desktop database drivers [ODBC], Access driver
 ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 702fc3a26fb59ac04074c5d765cf8ccb3f2e76e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 716d0e133f96f232a0d93427d734ea9c142a5ff7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-access-driver-programming-details"></a>다른 액세스 드라이버 프로그래밍 정보
 > [!NOTE]  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 -   [Encryption(Access 드라이버)](../../odbc/microsoft/encryption-access-driver.md)  
   
 -   [ExtendedAnsiSQL 연결 문자열 특성 사용(Access 드라이버)](../../odbc/microsoft/using-the-extendedansisql-connection-string-attribute-access-driver.md)
-

@@ -1,33 +1,31 @@
 ---
-title: "데이터 소스 | Microsoft Docs"
+title: "데이터 원본 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: 84c415fd10a757cebfc365759d7fb038f9630ec4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 179efeac4673884e615648d1ed118398132dc6f9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="data-sources"></a>데이터 원본
+# <a name="data-sources"></a>솔루션 탐색기
 A *데이터 소스* 데이터의 원본을 하기만 하면 됩니다. 라이브 데이터 피드의 또는 DBMS에 있는 특정 데이터베이스 파일을 수 있습니다. 데이터에는 프로그램과 동일한 컴퓨터에서 또는 네트워크의 임의 위치에서 다른 컴퓨터에 있을 수 있습니다. 예를 들어 데이터 원본 액세스 하 여 Novell® Netware; OS/2® 운영 체제에서 실행 되는 Oracle DBMS 됩니다. 게이트웨이;를 통해 액세스 하는 IBM DB2 DBMS 서버 디렉터리;에 있는 Xbase 파일의 컬렉션 또는 로컬 Microsoft® Access 데이터베이스 파일을 추가 합니다.  
   
  목적은 데이터 원본의 데이터에 액세스 하는 데 필요한 기술 정보를 모두 수집 하는 것-드라이버 이름, 네트워크 주소, 네트워크 소프트웨어 등에-단일 배치 하 고 사용자 로부터 숨길입니다. 사용자는 급여, 인벤토리 및 담당자를 포함 하는 목록에서 급여 목록에서 선택한 프로그램이 있는 급여 데이터 나 응용 프로그램에 도달한 방법을 알 없이 모두 급여 데이터에 연결 하 고 응용 프로그램 수 있어야 합니다.  
@@ -41,4 +39,3 @@ A *데이터 소스* 데이터의 원본을 하기만 하면 됩니다. 라이�
 -   [데이터 원본 사용](../../odbc/reference/using-data-sources.md)  
   
 -   [데이터 원본 예제](../../odbc/reference/data-source-example.md)
-

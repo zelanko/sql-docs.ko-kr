@@ -3,8 +3,9 @@ title: "레코드 및 필드 공급자가 제공한 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16596d3ffa943f382e6c3a9ec2aa9c2e2e14432f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>레코드 및 필드 공급자 제공
 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체가 열릴, 소스에서 현재 열린 행 수 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 절대 URL 또는 열린와 함께에서 상대 URL [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 .  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="resource-recordset-columns"></a>리소스 레코드 집합 열  
  A *리소스 레코드 집합* 다음 열으로 구성 됩니다.  
   
-|열 이름|형식|Description|  
+|열 이름|유형|Description|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|읽기 전용입니다. 리소스의 URL을 나타냅니다.|  
 |RESOURCE_PARENTNAME|AdVarWChar|읽기 전용입니다. 부모 레코드의 절대 URL을 나타냅니다.|  
@@ -72,8 +73,8 @@ ms.lasthandoff: 11/17/2017
 |RESOURCE_CONTENTCLASS|AdVarWChar|와 같은 형식을 나타내는 문서의 MIME 형식을 나타내는 "`text/html`"입니다.|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|콘텐츠가 저장 된 언어를 나타냅니다.|  
 |RESOURCE_CREATIONTIME|adFileTime|읽기 전용입니다. 리소스를 만든 시간을 포함 하는 FILETIME 구조를 나타냅니다. 시간이는 utc (협정 세계시) 형식으로 보고 됩니다.|  
-|RESOURCE_LASTACCESSTIME|adFileTime|읽기 전용입니다. 리소스를 마지막으로 액세스 하는 시간을 포함 하는 FILETIME 구조를 나타냅니다. 시간은 UTC 형식에서입니다. FILETIME 멤버는 공급자는이 시간 멤버를 지원 하지 않는 경우 0입니다.|  
-|RESOURCE_LASTWRITETIME|adFileTime|읽기 전용입니다. 리소스를 마지막으로 쓴 시간을 포함 하는 FILETIME 구조를 나타냅니다. 시간은 UTC 형식에서입니다. FILETIME 멤버는 공급자는이 시간 멤버를 지원 하지 않는 경우 0입니다.|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|읽기 전용입니다. 리소스를 마지막으로 액세스 하는 시간을 포함 하는 FILETIME 구조를 나타냅니다. 시간은 UTC 형식에서입니다. FILETIME 멤버는 공급자는이 시간 멤버를 지원 하지 않는 경우 0입니다.|  
+|RESOURCE_LASTWRITETIME|AdFileTime|읽기 전용입니다. 리소스를 마지막으로 쓴 시간을 포함 하는 FILETIME 구조를 나타냅니다. 시간은 UTC 형식에서입니다. FILETIME 멤버는 공급자는이 시간 멤버를 지원 하지 않는 경우 0입니다.|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|읽기 전용입니다. 리소스의 기본 스트림에 바이트의 크기를 나타냅니다.|  
 |RESOURCE_ISCOLLECTION|adBoolean|읽기 전용입니다. True 이면 리소스 디렉터리와 같은 컬렉션입니다. 리소스가 간단한 파일 인 경우 false입니다.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|True 이면 리소스 구조적된 문서입니다. False 이면 리소스 구조화 된 문서가 아닙니다. 또는 간단한 파일 컬렉션 수 있습니다.|  

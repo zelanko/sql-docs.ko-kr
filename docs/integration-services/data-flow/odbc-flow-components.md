@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1d2f92077fd1424827866820a0627ac62447e3f2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-flow-components"></a>ODBC 흐름 구성 요소
   이 항목에서는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 용 Connector for ODBC(Open Database Connectivity) by Attunity는 SSIS 개발자가 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드하는 패키지를 쉽게 만드는 데 도움이 됩니다.  
+ [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]용 Connector for ODBC(Open Database Connectivity)는 SSIS 개발자가 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드하는 패키지를 쉽게 만드는 데 도움이 됩니다.  
   
  ODBC Connector는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]의 컨텍스트에서 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드할 때 최적의 성능을 얻기 위해 디자인되었습니다.  
   
@@ -108,7 +107,7 @@ ms.lasthandoff: 08/03/2017
   
 ODBC 3.8 사양에 설명된 대로 확장 가능한 C 형식에 대한 데이터 형식 지원은 없습니다. 다음 표에서는 각 ODBC SQL 형식에 사용되는 SSIS 데이터 형식을 설명합니다. SSIS 개발자는 필요한 데이터 변환 작업의 성능에 영향을 주지 않으면서 기본 매핑을 무시하고 입력/출력 열에 다른 SSIS 데이터 형식을 지정할 수 있습니다.  
   
-|ODBC SQL 형식|SSIS 데이터 형식|설명|  
+|ODBC SQL 형식|SSIS 데이터 형식|주석|  
 |-----------------|------------------|------------|  
 |SQL_BIT|DT_BOOL||  
 |SQL_TINYINT|DT_I1<br /><br />DT_UI1|ODBC 드라이버가 해당 SQL 데이터 형식에 대해 UNSIGNED_ATTRIBUTE를 SQL_TRUE로 설정하면 SQL 데이터 형식이 SSIS 부호 없는 형식(DT_UI1, DT_UI2, DT_UI4, DT_UI8)에 매핑됩니다.|  
@@ -144,4 +143,3 @@ ODBC 3.8 사양에 설명된 대로 확장 가능한 C 형식에 대한 데이�
 -   [ODBC 대상](../../integration-services/data-flow/odbc-destination.md)  
   
  
-

@@ -2,26 +2,29 @@
 title: "재생 결과 검토 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44e055d7a3da857a1be798ae5b5222a4a8a35713
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이후에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 캡처하여 각 클라이언트에서 결과 추적 파일에 저장 된 각 클라이언트에 대 한 재생 작업 수, Distributed Replay 기능이 분산된 재생을 완료 합니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
  결과 추적 파일이 저장되는 위치는 각 클라이언트에 있는 클라이언트 구성 파일 `<ResultDirectory>`의 `DReplayClient.xml` XML 요소에 지정됩니다. 클라이언트 결과 디렉터리의 추적 파일은 각 재생 시 덮어씁니다.  
   
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
 |데이터 열 이름|데이터 형식|설명|열 ID|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|**nvarchar**|이벤트 클래스의 이름입니다.|1|  
+|EventClass|**nvarchar**|이벤트 클래스의 이름입니다.|1.|  
 |EventSequence|**bigint**|공급자 오류 및 내부 오류와 경고의 경우 오류나 경고에 해당하는 캡처 이벤트 순서입니다.<br /><br /> 다른 모든 이벤트 클래스의 경우 원래 추적 데이터의 이벤트 순서입니다.|2|  
 |ReplaySequence|**bigint**|공급자 오류 및 내부 오류와 경고의 경우 오류나 경고에 해당하는 재생 이벤트 순서입니다.<br /><br /> 다른 모든 이벤트 클래스의 경우 재생 중 할당된 이벤트 순서입니다.|3|  
 |TextData|**ntext**|TextData의 내용은 EventClass에 따라 달라집니다.<br /><br /> Audit Login 및 ExistingConnection의 경우 연결에 대한 집합 옵션입니다.<br /><br /> SQL:BatchStarting의 경우 일괄 처리 요청의 본문입니다.<br /><br /> RPC:Starting의 경우 호출된 저장 프로시저입니다.<br /><br /> Replay Settings Event의 경우 재생 구성 파일에 정의된 설정이 이 열에 포함됩니다.<br /><br /> Replay Statistics Event의 경우 이 열에 다음 정보가 포함됩니다.<br /><br /> -재생 대상 SQL Server<br /><br /> -재생된 총 이벤트 수<br /><br /> -공급자 오류 수<br /><br /> -내부 오류 수<br /><br /> -내부 경고 수<br /><br /> -총 오류 수<br /><br /> -전체 통과율<br /><br /> -재생 시간(HH:MM:SS:MMM)<br /><br /> Replay Result Set Event의 경우 반환 결과의 열 머리글 목록을 보여 줍니다.<br /><br /> Replay Result Row Event의 경우 해당 행에 대한 모든 열의 반환 값을 보여 줍니다.<br /><br /> Replay Internal Warning 및 Replay Provider Error의 경우 공급자 경고나 오류가 이 열에 포함됩니다.|4|  
@@ -79,10 +82,10 @@ ms.lasthandoff: 11/09/2017
 |ReplayHostName|**nvarchar**|재생하는 동안 클라이언트를 실행 중인 컴퓨터의 이름입니다.|16|  
 |ApplicationName|**nvarchar**|캡처하는 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 만든 클라이언트 응용 프로그램의 이름입니다.|17|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay 요구 사항](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [관리 도구 명령줄 옵션 &#40; Distributed Replay utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

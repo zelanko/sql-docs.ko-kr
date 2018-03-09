@@ -2,15 +2,13 @@
 title: "개체 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - objects [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, objects
 ms.assetid: 0f672b93-c317-47e5-b44d-ecea9b587c98
-caps.latest.revision: 21
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ea027aba8d0d49c752bd31569f84d0f0cec022bd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 749c363a814590705b61d0821f1fee44ea93d488
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="objects-assl"></a>개체(ASSL)
-  이 참조 섹션에서는 ASSL(Analysis Services Scripting Language) 스키마에서 개체로 사용되는 각 요소에 대한 구문 및 사용 정보를 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+이 참조 섹션에서는 ASSL(Analysis Services Scripting Language) 스키마에서 개체로 사용되는 각 요소에 대한 구문 및 사용 정보를 제공합니다.  
   
  ASSL 스키마는 개발자의 관점에서 XML 요소만 포함 하지만이 섹션에 설명 된 요소에 해당 개체와 같은 **데이터베이스**, **큐브**, 및  **차원** 의 인스턴스에서 포함 된 개체의 계층 구조에서 개체 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 |요소|Description|  
 |-------------|-----------------|  
 |[Account 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/account-element-assl.md)|내의 계정 유형에 대 한 세부 정보를 포함 한 [데이터베이스](../../../analysis-services/scripting/objects/database-element-assl.md) 요소입니다.|  
-|[Action 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|사용 가능한 동작에 대 한 정보를 포함 한 [큐브](../../../analysis-services/scripting/objects/cube-element-assl.md) 요소 또는 [관점](../../../analysis-services/scripting/objects/perspective-element-assl.md) 요소입니다.|  
+|[Action 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) 요소 또는 [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) 요소에서 사용 가능한 동작에 대한 정보를 포함합니다.|  
 |[Aggregation 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)|에 대 한 단일 집계를 정의 [파티션](../../../analysis-services/scripting/objects/partition-element-assl.md) 요소입니다.|  
 |[AggregationDesign 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)|데이터베이스의 여러 파티션에서 공유할 수 있는 집계 정의의 집합을 정의합니다.|  
 |[AggregationInstance 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregationinstance-element-assl.md)|파티션에 대한 집계 인스턴스를 정의합니다.|  
@@ -76,7 +74,7 @@ ms.lasthandoff: 09/01/2017
 |[DataSourcePermission 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/datasourcepermission-element-assl.md)|기본 사용 권한을 정의 [DataSource](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md) 는 특정 데이터 형식을 [역할](../../../analysis-services/scripting/objects/role-element-assl.md) 요소입니다.|  
 |[DataSourceView 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/datasourceview-element-assl.md)|사용 하는 데이터 원본 뷰 정의 [데이터베이스](../../../analysis-services/scripting/objects/database-element-assl.md) 요소입니다.|  
 |[Dimension 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)|차원을 정의합니다.|  
-|[DimensionPermission 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimensionpermission-element-assl.md)|특정에 속하는 사용 권한을 정의 [역할](../../../analysis-services/scripting/objects/role-element-assl.md) 특정 데이터베이스 차원 또는 큐브 차원에 대 한 요소입니다.|  
+|[DimensionPermission 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimensionpermission-element-assl.md)|특정 데이터베이스 차원 또는 큐브 차원에 대해 특정 [Role](../../../analysis-services/scripting/objects/role-element-assl.md) 요소에 속하는 사용 권한을 정의합니다.|  
 |[ErrorConfiguration 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)|부모 요소가 처리될 때 발생할 수 있는 오류 처리에 대한 설정을 지정합니다.|  
 |[Event 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/event-element-assl.md)|일부로 캡처할 이벤트 정의 [추적](../../../analysis-services/scripting/objects/trace-element-assl.md) 요소입니다.|  
 |[File 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/file-element-assl.md)|구성 하는 파일 중 하나를 정의 [ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) 요소입니다.|  
@@ -85,7 +83,7 @@ ms.lasthandoff: 09/01/2017
 |[Hierarchy 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|차원의 계층을 정의합니다.|  
 |[IncrementalProcessingNotification 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md)|에 대 한 정보가 포함 되어는 [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) 증분 처리의 진행률을 확인 하기 위해 실행할 쿼리에 대 한 요소입니다.|  
 |[KeyColumn 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/keycolumn-element-assl.md)|특성의 키 또는 키의 일부인 열의 정의를 포함합니다.|  
-|[Kpi 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/kpi-element-assl.md)|핵심 성과 지표 (KPI) 내에서 정의 된 [큐브](../../../analysis-services/scripting/objects/cube-element-assl.md) 요소 또는 [관점](../../../analysis-services/scripting/objects/perspective-element-assl.md) 요소입니다.|  
+|[Kpi 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/kpi-element-assl.md)|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) 요소 또는 [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) 요소 내에서 KPI(핵심 성과 지표)를 정의합니다.|  
 |[Level 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/level-element-assl.md)|수준을 정의 [계층](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) 요소입니다.|  
 |[MdxScript 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)|연결 된 MDX (Multidimensional Expressions) 스크립트에 대 한 정보를 포함 한 [큐브](../../../analysis-services/scripting/objects/cube-element-assl.md) 요소입니다.|  
 |[Measure 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/measure-element-assl.md)|측정값을 정의합니다.|  
@@ -120,4 +118,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language XML 요소 계층 &#40; ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   
-

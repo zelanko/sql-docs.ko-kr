@@ -2,10 +2,14 @@
 title: "Cursors 이벤트 범주 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,23 +17,24 @@ helpviewer_keywords:
 - event classes [SQL Server], Cursors event category
 - SQL Server event classes, Cursors event category
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d87cf7fed22f6fb4d387f03226c689eafc2e39eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8f5a384535583fd7ae18329061a4f7d34d1f927e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cursors-event-category"></a>Cursors 이벤트 범주
-  **Cursors** 이벤트 범주에는 커서 동작을 모니터링하는 데 사용하는 이벤트 클래스가 포함됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Cursors** 이벤트 범주에는 커서 동작을 모니터링하는 데 사용하는 이벤트 클래스가 포함됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[CursorClose 이벤트 클래스](../../relational-databases/event-classes/cursorclose-event-class.md)|API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 닫기 이벤트에 대해 설명합니다.|  
 |[CursorExecute 이벤트 클래스](../../relational-databases/event-classes/cursorexecute-event-class.md)|API 커서에서 발생하는 커서 실행 이벤트에 대해 설명합니다.|  

@@ -2,15 +2,13 @@
 title: "Microsoft 연결 알고리즘 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,20 +32,20 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 55
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24dda88f2855c4b5a83814203092e12d645a1e84
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 연결 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 추천 엔진에 자주 사용되는 알고리즘입니다. 추천 엔진은 고객이 이미 구입한 항목 또는 관심을 나타낸 항목을 바탕으로 고객에게 항목을 추천합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 시장 바구니 분석에도 유용합니다.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 추천 엔진에 자주 사용되는 알고리즘입니다. 추천 엔진은 고객이 이미 구입한 항목 또는 관심을 나타낸 항목을 바탕으로 고객에게 항목을 추천합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 시장 바구니 분석에도 유용합니다.   
   
  연결 모델은 개별 사례 및 사례에 포함된 항목 모두에 대한 식별자를 포함하는 데이터 집합을 기반으로 작성됩니다. 사례에 포함된 항목 그룹을 *항목 집합*이라고 합니다. 연결 모델은 일련의 항목 집합과 이러한 항목이 사례 내에서 그룹화되는 방법을 설명하는 규칙으로 구성됩니다. 알고리즘이 식별하는 규칙은 고객의 쇼핑 카트에 이미 들어 있는 항목을 바탕으로 고객의 향후 구매 항목을 예측하는 데 사용할 수 있습니다. 다음 다이어그램에서는 항목 집합에 포함된 일련의 규칙을 보여 줍니다.  
   
@@ -79,7 +77,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="viewing-an-association-model"></a>연결 모델 보기  
  **Microsoft 연결 뷰어**를 사용하여 모델을 탐색할 수 있습니다. 연결 모델을 볼 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 데이터에서 발견된 관계와 규칙을 보다 잘 이해할 수 있도록 상관 관계를 다른 관점에서 표시합니다. 뷰어의 **항목 집합** 창에는 가장 일반적인 조합 또는 항목 집합에 대한 자세한 분류가 표시됩니다. **규칙** 창에는 데이터로부터 일반화된 규칙 목록이 표시되고 확률 계산이 추가되며 상대적 중요도에 따라 규칙 순위가 매겨집니다. 종속성 네트워크 뷰어에서는 서로 다른 개별 항목이 연결되는 방식을 시각적으로 살펴볼 수 있습니다. 자세한 내용은 [Microsoft 클러스터 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)를 참조하세요.  
   
- 항목 집합 및 규칙에 대한 자세한 내용을 보려면 [Microsoft 일반 콘텐츠 트리 뷰어](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)에서 모델을 살펴 보십시오. 모델에 대해 각 항목 집합에 대한 지지도, 각 규칙의 점수, 기타 통계 등의 콘텐츠가 저장됩니다. 자세한 내용은 [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)이라고 합니다.  
+ 항목 집합 및 규칙에 대한 자세한 내용을 보려면 [Microsoft 일반 콘텐츠 트리 뷰어](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)에서 모델을 살펴 보십시오. 모델에 대해 각 항목 집합에 대한 지지도, 각 규칙의 점수, 기타 통계 등의 콘텐츠가 저장됩니다. 자세한 내용은 [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="creating-predictions"></a>예측 만들기  
  모델이 처리된 후에는 규칙 및 항목 집합을 사용하여 예측을 만들 수 있습니다. 연결 모델에서는 예측을 통해 지정된 항목이 있을 경우 발생할 가능성이 있는 항목을 파악할 수 있습니다. 예측에는 확률, 지지도 또는 중요도와 같은 정보가 포함될 수 있습니다. 연결 모델에 대한 쿼리를 만드는 방법에 대한 예는 [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)를 참조하세요.  
@@ -113,4 +111,3 @@ ms.lasthandoff: 09/01/2017
  [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "키 컬렉션 (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 31b99b28a878048a59b6fd5b79760a1b70c1cd56
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d43a2b5a6417104461287b109ba06ed3438cc00e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keys-collection-adox"></a>키 컬렉션 (ADOX)
 모든 포함 [키](../../../ado/reference/adox-api/key-object-adox.md) 의 개체는 [테이블](../../../ado/reference/adox-api/table-object-adox.md)합니다.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  [키 추가 방법, 키 형식, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [키 컬렉션 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
  [Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-

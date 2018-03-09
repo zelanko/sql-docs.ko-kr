@@ -2,35 +2,29 @@
 title: "CreateOrReplace 명령을 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f77a0e04-461a-4fa8-b997-78057e410d56
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d658378bde1e3a58f36b1137328f723ad3d380d5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 62d90be2b4fe8aea96534c7c4d8b2b4617ac1ea1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="createorreplace-command-tmsl"></a>CreateOrReplace 명령을 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  만들거나 지정된 된 개체 및 지정 된 모든 하위 개체를 바꿉니다. 존재 하지 않는 개체가 만들어집니다. 기존 개체는 새 정의로 바뀝니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]만들거나 지정된 된 개체 및 지정 된 모든 하위 개체를 바꿉니다. 존재 하지 않는 개체가 만들어집니다. 기존 개체는 새 정의로 바뀝니다.  
   
  읽기 / 쓰기 속성을 지정 하면 때마다 모든 데이터를 포함 해야 합니다. 읽기 / 쓰기 개체의 생략 삭제 것으로 간주 됩니다.  
   
@@ -533,4 +527,3 @@ ms.lasthandoff: 09/01/2017
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

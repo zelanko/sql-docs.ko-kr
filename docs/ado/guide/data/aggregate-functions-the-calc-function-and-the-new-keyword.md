@@ -3,7 +3,7 @@ title: "집계 함수, CALC 함수 및 NEW 키워드 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c3b7e33486bc8a5cc283a101893aec4287062c2f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f24280f155fd5ec6bd86b8486b0f8f77338d8eb6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>집계 함수, CALC 함수 및 NEW 키워드
 데이터 모양 지정 다음 기능을 지원 합니다. 작업을 수행할 열을 포함 하는 장에 할당 된 이름은 *장 별칭*합니다.  
@@ -41,13 +40,13 @@ ms.lasthandoff: 09/09/2017
 |AVG (*장 별칭*. *열 이름*)|지정 된 열의 모든 값의 평균을 계산합니다.|  
 |MAX (*장 별칭*. *열 이름*)|지정 된 열의 최대값을 계산합니다.|  
 |MIN (*장 별칭*. *열 이름*)|지정 된 열의 최소값을 계산합니다.|  
-|COUNT (*장 별칭*[. *열 이름*])|지정된 된 별칭의 행 수를 계산합니다. 열을 지정 하는 경우를 해당 열이 Null이 아닌 행만 개수에 포함 됩니다.|  
-|STDEV (*장 별칭*. *열 이름*)|지정 된 열의 표준 편차를 계산 합니다.|  
+|COUNT(*chapter-alias*[.*column-name*])|지정된 된 별칭의 행 수를 계산합니다. 열을 지정 하는 경우를 해당 열이 Null이 아닌 행만 개수에 포함 됩니다.|  
+|STDEV(*chapter-alias*.*column-name*)|지정 된 열의 표준 편차를 계산 합니다.|  
 |모든 (*장 별칭*. *열 이름*)|지정 된 열의 값입니다. 모든 열의 값이 장에 있는 모든 행에 대해 동일 하 게 하는 경우에 예측 가능한 값을 갖습니다.<br /><br /> **참고** 장에 있는 행에 대해 동일한 값이 포함 되지 않은 열, SHAPE 명령 임의로 반환 ANY 함수의 값으로 값 중 하나입니다.|  
   
 |계산 된 식|Description|  
 |---------------------------|-----------------|  
-|계산 (*식*)|행에만 임의의 식을 계산는 **레코드 집합** CALC 함수를 포함 하 합니다. 이 사용 하 여 모든 식 [VBA 함수에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)|  
+|CALC(*expression*)|행에만 임의의 식을 계산는 **레코드 집합** CALC 함수를 포함 하 합니다. 이 사용 하 여 모든 식 [VBA 함수에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)|  
   
 |NEW 키워드|Description|  
 |-----------------|-----------------|  
@@ -67,8 +66,8 @@ ms.lasthandoff: 09/09/2017
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adBinary 제외할 수, adLongVarBinary|  
-|DBTYPE_STR|adChar, 집합이 있으므로, 필요 adLongVarChar|  
+|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
+|DBTYPE_STR|adChar, adVarChar, adLongVarChar|  
 |DBTYPE_WSTR|adWChar, adVarWChar, adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  
 |DBTYPE_DBDATE|adDBDate|  
@@ -84,4 +83,3 @@ ms.lasthandoff: 09/09/2017
  [데이터 예제를 셰이핑](../../../ado/guide/data/data-shaping-example.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)
-

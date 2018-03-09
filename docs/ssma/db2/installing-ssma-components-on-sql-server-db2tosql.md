@@ -1,29 +1,30 @@
 ---
 title: "SQL Server (DB2ToSQL)에 SSMA 구성 요소 설치 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 160be4a7704b159a9445fc5a1f48ed2a6c9d8e84
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9c5254d7031283332796a997f0d2ac90dbfc5b8b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>SQL Server (DB2ToSQL)에 SSMA 구성 요소 설치
 이 버전의 SSMA은 없어도 별도 설치를 위한에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSMA 확장 팩 서버 간 연결을 허용 하도록 DB2 공급자 및 데이터 마이그레이션을 지원 합니다.  
@@ -35,4 +36,3 @@ SSMA 확장 팩에에서 스키마를 추가 데이터베이스의 지정된 된
 [DB2 클라이언트 &#40; DB2ToSQL &#41; 용 SSMA를 설치합니다.](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
 [SQL Server &#40; DB2ToSQL &#41; DB2 데이터베이스 마이그레이션](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

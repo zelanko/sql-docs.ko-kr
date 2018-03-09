@@ -3,8 +3,11 @@ title: "(Transact SQL)를 포함 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,20 +37,19 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 117
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67d85ab09ac28beca984372e3df2bd6a1ca0bfa3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 81b231ce95ae1b87bbda2f2fd786d12cb709e9fe
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="contains-transact-sql"></a>CONTAINS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 단어 또는 구와 정확히 일치하거나 비슷하게 일치하는 단어를 검색하거나 서로 근접한 단어를 검색하거나 가중치 검색을 수행합니다. CONTAINS는에서 사용 되는 조건자는 [WHERE 절](../../t-sql/queries/where-transact-sql.md) 의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 수행 하기 위해 SELECT 문의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색 전체 텍스트 인덱싱된 열의 문자 기반 데이터 형식이 포함 합니다.  
   
@@ -162,7 +164,7 @@ CONTAINS (
 > [!IMPORTANT]  
 >  행을 반환 하는 쿼리에 대 한 *property_name* ज 검색 속성 목록이 전체 텍스트 인덱스 및 전체 텍스트 인덱스에 대 한 속성 관련 항목 있어야 *property_name*합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
- 언어 *language_term*  
+ LANGUAGE *language_term*  
  단어 분리, 형태소 분석, 동의어 사전 확장 및 대체 작업 및 의미 없는 단어에 사용할 언어 (또는 [중지 단어](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md))는 쿼리의 일환으로 제거 합니다. 이 매개 변수는 선택 사항입니다.  
   
  언어가 다른 문서가 단일 열에 BLOB(Binary Large Object)로 함께 저장된 경우 지정된 문서의 LCID(로캘 ID)에 따라 해당 내용을 인덱싱하는 데 사용할 언어가 결정됩니다. 이러한 열을 쿼리할 때 사용할 언어를 지정 하 *language_term* 가장 잘 맞는의 확률을 높일 수 있습니다.  
@@ -178,7 +180,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  검색할 텍스트를 지정 *column_name* 과 일치 하는 항목에 대 한 상태입니다.  
   
-*\<contains_search_condition >* 은 **nvarchar**합니다. 암시적 변환은 다른 문자 데이터 형식이 입력으로 사용될 때 발생합니다. 다음 예에서는 `@SearchWord`로 정의된 `varchar(30)` 변수로 인해 `CONTAINS` 조건자에서 암시적 변환이 발생합니다.
+*\<contains_search_condition >* 은 **nvarchar**합니다. 암시적 변환은 다른 문자 데이터 형식이 입력으로 사용될 때 발생합니다. 큰 문자열 데이터 형식 nvarchar (max) 및 varchar (max)를 사용할 수 없습니다. 다음 예에서는 `@SearchWord`로 정의된 `varchar(30)` 변수로 인해 `CONTAINS` 조건자에서 암시적 변환이 발생합니다.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -207,23 +209,23 @@ WHERE CONTAINS(Description, @SearchWord);
  *word*  
  공백이나 문장 부호가 포함되지 않은 문자열입니다.  
   
- *구*  
+ *phrase*  
  각 단어 사이에 공백이 포함된 하나 이상의 단어입니다.  
   
 > [!NOTE]  
 >  몇몇 아시아 지역의 언어로 작성된 경우처럼 일부 언어에는 각 단어 사이에 공백이 없는 하나 이상의 단어로 구성된 구가 있을 수 있습니다.  
   
-\<단순 어 >  
+\<simple_term>  
 단어나 구가 정확하게 일치하는 항목을 지정합니다. 유효한 단순 단어의 예로는 "blue berry", blueberry, "Microsoft SQL Server" 등이 있습니다. 구는 큰따옴표("")로 묶어야 합니다. 이 구에서의 단어에 지정 된 대로 동일한 순서로 나타나야 합니다  *\<contains_search_condition >* 데이터베이스 열에 표시 된 대로 합니다. 단어나 구에서 문자를 검색할 때는 대/소문자를 구분하지 않습니다. 의미 없는 단어 (또는 [중지 단어](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (예: a를 또는)에서 전체 텍스트 인덱싱된 열에에서 저장 되지 않습니다는 전체 텍스트 인덱스 합니다. 단일 단어 검색에 의미 없는 단어가 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리에 의미 없는 단어만 포함되어 있다는 오류 메시지를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 \Mssql\Binn\FTERef 디렉터리에 의미 없는 단어 표준 목록이 포함되어 있습니다.  
   
  문장 부호는 무시됩니다. 따라서 `CONTAINS(testing, "computer failure")`는 "Where is my computer? Failure to find it would be expensive."라는 값을 가진 행을 검색합니다. 단어 분리기 동작에 대 한 자세한 내용은 참조 하십시오. [관리 단어 분리기와 형태소 분석기 검색에 대 한 구성 및](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)합니다.  
   
- \<접두어 >  
+ \<prefix_term>  
  지정한 텍스트로 시작하는 단어 또는 구를 검색하도록 지정합니다. 접두사 단어 큰따옴표로 묶습니다 ("")는 별표를 추가 하 고 (\*) 끝 따옴표가 하기 전에 하기 전에 단순 단어로 시작 하는 모든 텍스트를 지정 하는 별표 일치 합니다. 절은 `CONTAINS (column, '"text*"')`와 같이 지정해야 합니다. 별표는 단어나 구에 포함된 어근의 문자를 개수에 관계없이 검색합니다. 텍스트와 별표를 큰따옴표로 구분하지 않으면 조건자가 `CONTAINS (column, 'text*')`를 읽고 전체 텍스트 검색에서 별표를 문자로 간주하여 `text*`와 정확하게 일치하는 텍스트를 검색합니다. 전체 텍스트 엔진은 단어를 별표를 찾지 못합니다 (\*) 단어 분리기 일반적으로 이러한 문자를 무시 하기 때문에 문자입니다.  
   
  때  *\<접두어 >* 는 구, 구에 포함 된 각 단어는 별도 접두사로 간주 됩니다. 따라서 접두사 단어 "local wine*"을 지정하는 쿼리는 "local winery", "locally wined and dined" 등의 텍스트가 포함된 모든 행을 검색합니다.  
   
- \<파생어 >  
+ \<generation_term>  
  포함된 단순 단어에 검색할 원래 단어에서 변형된 단어가 포함된 경우 단어를 검색하도록 지정합니다.  
   
  INFLECTIONAL  
@@ -234,7 +236,7 @@ WHERE CONTAINS(Description, @SearchWord);
  THESAURUS  
  열의 전체 텍스트 언어 또는 쿼리에 지정된 언어에 해당되는 동의어 사전이 사용되도록 지정합니다. 가장 긴 패턴 또는 패턴을는  *\<단순 어 >* 동의어 사전에 대해 일치 하 고 확장 하거나 원래 패턴을 대체 하도록 추가 단어가 생성 됩니다. 전체 또는 일부에 대 한 일치 하는 항목이 없는 경우는  *\<단순 어 >*, 일치 하지 않는 부분으로 처리 됩니다는 *단순 어*합니다. 전체 텍스트 검색 동의어 사전에 대 한 자세한 내용은 참조 하십시오. [전체 텍스트 검색에 대 한 동의어 사전 파일 관리 및 구성](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)합니다.  
   
- \<generic_proximity_term >  
+ \<generic_proximity_term>  
  검색 대상 문서에 있어야 하는 단어 또는 구를 지정합니다.  
   
 > [!IMPORTANT]  
@@ -249,7 +251,7 @@ WHERE CONTAINS(Description, @SearchWord);
   
  일반적인 근접 단어에 대 한 자세한 내용은 참조 [단어 검색 NEAR 사용 하 여를](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)합니다.  
   
- \<custom_proximity_term >  
+ \<custom_proximity_term>  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
  일치시킬 단어나 구를 지정하고 선택적으로 검색 단어 사이에 허용할 최대 거리를 지정합니다. 지정 하는 정확한 순서에 검색 용어를 찾을 수 있어야 지정할 수도 있습니다 (\<과 >).  
@@ -264,7 +266,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  선택적 매개 변수는 다음과 같습니다.  
   
- \<maximum_distance >  
+ \<maximum_distance>  
  문자열이 일치 항목으로 처리될 수 있는 순서로 문자열 처음과 끝에 검색 단어 사이에 허용되는 최대 거리를 지정합니다.  
   
  *integer*  
@@ -288,10 +290,10 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  내부 용어를 검색 하는 알림 `CC`, 계산 되지 않습니다.  
   
- **최대**  
+ **MAX**  
  지정된 단어 사이의 거리와 관계없이 해당 단어가 포함된 행을 모두 반환합니다. 기본값입니다.  
   
- \<과 >  
+ \<match_order>  
  검색 쿼리에서 반환하도록 지정한 순서로 단어가 나올지 여부를 지정합니다. 지정 하려면 \<과 >을 지정 해야 \<maximum_distance > 합니다.  
   
  \<과 >는 다음 값 중 하나를 사용 합니다.  
@@ -312,13 +314,13 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
   
  사용자 지정 근접 단어를 사용 하는 방법에 대 한 자세한 내용은 참조 [단어 검색 NEAR 사용 하 여를](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)합니다.  
   
- \<가중치 어 >  
+ \<weighted_term>  
  쿼리에서 반환된 결과 행이 단어 및 구 목록과 일치하고 선택적으로 가중치 값이 지정되도록 합니다.  
   
  ISABOUT  
  지정 된  *\<가중치 어 >* 키워드입니다.  
   
- 가중치 (*로*)  
+ WEIGHT(*weight_value*)  
  0.0에서 1.0 사이의 숫자로 가중치를 지정합니다. 각 구성 요소에  *\<가중치 어 >* 포함 될 수 있습니다는 *로*합니다. *로* 쿼리의 다양 한 부분에는 쿼리와 일치 하는 각 행에 할당 된 등급 값에 영향을 변경할 수 있는 방법이 있습니다. 가중치 CONTAINS 쿼리는 하지만의 영향을 미치는 순위 가중치의 결과는 영향을 주지 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리 합니다.  
   
 > [!NOTE]  
@@ -327,13 +329,13 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  { AND | & } | { AND NOT | &! } | { OR | | }  
  두 개의 포함 검색 조건 간에 논리적 연산을 지정합니다.  
   
- {및 | &}  
+ { AND | & }  
  두 개의 포함 검색 조건이 모두 충족되어야 일치한다는 것을 나타냅니다. AND 키워드 대신 앰퍼샌드 기호(&)를 사용하여 AND 연산자를 나타낼 수도 있습니다.  
   
  {아닌 | &! }  
  두 번째 검색 조건이 일치하지 않아야 한다는 것을 나타냅니다. AND NOT 키워드 대신 앰퍼샌드 다음에 느낌표 기호(&!)를 사용하여 AND NOT 연산자를 나타낼 수도 있습니다.  
   
- {또는 | |을 (를)  
+ { OR | | }  
  두 개의 포함 검색 조건 중 하나가 충족되어야 일치한다는 것을 나타냅니다. OR 키워드 대신 막대 기호(|)를 사용하여 OR 연산자를 나타낼 수도 있습니다.  
   
  때  *\<contains_search_condition >* 괄호로 묶인 그룹, 괄호로이 묶인 그룹이 먼저 계산 됩니다. 괄호로 묶인 그룹을 평가한 후 포함 검색 조건에 논리 연산자를 사용할 때 다음 규칙이 적용됩니다.  
@@ -556,4 +558,3 @@ GO
  [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   
-

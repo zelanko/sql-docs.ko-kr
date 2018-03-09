@@ -1,16 +1,14 @@
 ---
 title: "명령에서 테이블 형식 모델 스크립팅 언어 (TMSL) | Microsoft Docs"
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 4eb07192-6f53-4426-830a-d63a945dbcab
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71b44ae1e5f8e5db2859bb4d3b2457c752de4dc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 39959a86e064da782097ddc75d9d3651b4d436fa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tmsl-reference---commands"></a>TMSL 참조-명령
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  XMLA 끝점에는 스크립팅 언어 TMSL (Tabular Model)을 테이블 형식 모델 데이터베이스에 대해 사용 하 여 JSON에서 개체 정의 작성 하는 작업 명령을 실행할 수 있습니다.   참조 [개체 정의에서 테이블 형식 모델 스크립팅 언어 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) 목록은 다음 명령과 함께 사용 되는 개체입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]XMLA 끝점에는 스크립팅 언어 TMSL (Tabular Model)을 테이블 형식 모델 데이터베이스에 대해 사용 하 여 JSON에서 개체 정의 작성 하는 작업 명령을 실행할 수 있습니다.   참조 [개체 정의에서 테이블 형식 모델 스크립팅 언어 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) 목록은 다음 명령과 함께 사용 되는 개체입니다.  
   
 ## <a name="object-operations"></a>개체 작업  
   

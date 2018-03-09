@@ -1,13 +1,14 @@
 ---
-title: "차트 (보고서 작성기 및 SSRS)에 대 한 축 레이블 서식 지정 | Microsoft Docs"
+title: "차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,20 +26,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.labelfont.f1
 - sql13.rtp.rptdesigner.axisproperties.minortickmarks.f1
 - "10141"
-helpviewer_keywords:
-- "10140"
+helpviewer_keywords: "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c5fd2ef17552e0f27fd2206b4a14acdb1e1231bd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS)
   좌표 기반 차트 종류(세로 막대형, 가로 막대형, 영역형, 점, 꺾은선형 및 범위형)에는 데이터 관계를 범주화하고 표시하는 데 사용되는 두 개의 축이 있습니다. 각 축에는 다양한 유형의 서식이 지정됩니다.  
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="types-of-axes"></a>축 유형  
  차트에는 값 축과 범주 축이라는 두 가지 기본 축이 있습니다.  
   
- ![범주 차트 및 축 값](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "차트 범주 및 값 축")  
+ ![차트의 범주 및 값 축](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "차트의 범주 및 값 축")  
   
  데이터 집합에서 차트 화면으로 필드를 끌어서 놓으면 차트는 이 필드가 범주 축에 속하는지 값 축에 속하는지 확인합니다.  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>차트가 축 레이블을 계산하는 방법의 예  
  다음 표에는 세로 막대형 차트에 표시될 샘플 판매 데이터가 있습니다. 이름 필드는 범주 그룹 영역에 추가되고 수량 필드는 값 역에 추가됩니다.  
   
-|이름|수량|  
+|속성|수량|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -106,14 +105,14 @@ ms.lasthandoff: 08/09/2017
  차트는 차트의 크기에 관계없이 5개 내외의 축 레이블 간격을 계산합니다. 넓거나 높은 차트에서는 한 축에 5개의 레이블만 표시하는 경우 각 레이블 사이에 넓은 공백이 나타날 수 있습니다. 이렇게 되면 축에서 각 데이터 요소의 값을 식별하기가 더 어려워집니다. 넓거나 높은 차트에서는 가변 축 간격을 설정하여 이러한 현상을 방지할 수 있습니다. 차트의 너비나 높이를 바탕으로 차트에서 해당 축에 따라 표시할 수 있는 최적의 레이블 수를 계산합니다. 자세한 내용은 [축 간격 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)을 클릭합니다.  
   
 ## <a name="sorting-axis-values"></a>축 값 정렬  
- 범주는 결과 집합에 나타나는 순서대로 x축을 따라 표시됩니다. 쿼리에 SORT 명령을 추가하거나 식을 사용하여 데이터 집합을 정렬하는 방법으로 그룹 순서를 변경할 수 있습니다. 차트 데이터 영역은 다른 모든 데이터 영역과 같은 방식으로 정렬됩니다. 데이터를 정렬 하는 방법에 대 한 자세한 내용은 참조 [데이터 영역 &#40;의 데이터 정렬 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ 범주는 결과 집합에 나타나는 순서대로 x축을 따라 표시됩니다. 쿼리에 SORT 명령을 추가하거나 식을 사용하여 데이터 집합을 정렬하는 방법으로 그룹 순서를 변경할 수 있습니다. 차트 데이터 영역은 다른 모든 데이터 영역과 같은 방식으로 정렬됩니다. 데이터 정렬 방법은 [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="specifying-scalar-values-on-the-category-axis"></a>범주 축에 스칼라 값 지정  
  기본적으로 차트는 데이터 집합에서 유효한 값을 포함하는 데이터 요소에 대한 축 레이블만 표시합니다. 예를 들어 범주 축에 1, 2, 6 값이 있는 경우 차트에는 범주 1, 2, 6만 표시됩니다. 범주 값의 눈금을 유지하려면 스칼라 축을 사용하도록 차트를 지정하면 됩니다. 이 시나리오의 경우 데이터 집합에는 3~5 값이 없지만 차트의 x축에는 1~6에 대한 레이블이 표시됩니다.  
   
  스칼라 축은 다음 두 가지 방법으로 설정할 수 있습니다.  
   
--   **축 속성** 대화 상자에서 **스칼라 축** 옵션을 선택합니다. 이렇게 하면 데이터 그룹화 값이 없는 축 위치에 숫자 또는 날짜/시간 값이 추가됩니다. 자세한 내용은 참조 [축 속성 대화 상자, 축 옵션 &#40; 보고서 작성기 및 SSRS &#41; ](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   **축 속성** 대화 상자에서 **스칼라 축** 옵션을 선택합니다. 이렇게 하면 데이터 그룹화 값이 없는 축 위치에 숫자 또는 날짜/시간 값이 추가됩니다. 자세한 내용은 [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)를 참조하세요.  
   
 -   **계열 속성** 대화 상자의 **범주 필드** 옵션에 대한 필드를 선택하거나 식을 입력합니다. 차트는 지정한 범주 필드의 모든 값에 대해 축 간격을 추가합니다.  
   
@@ -131,10 +130,9 @@ ms.lasthandoff: 08/09/2017
   
  [로그 눈금 간격 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [차트 &#40;의 데이터 요소에 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

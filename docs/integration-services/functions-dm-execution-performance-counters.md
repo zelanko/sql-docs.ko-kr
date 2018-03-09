@@ -1,11 +1,11 @@
 ---
-title: "dm_execution_performance_counters (SSISDB 데이터베이스) | Microsoft Docs"
+title: "dm_execution_performance_counters(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -13,19 +13,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 67d5ece89f5b964acb2bb55a8cc69ff2fb77b93b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 666192f42269b1cc9b5c9503eccc849059f00652
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="functions---dmexecutionperformancecounters"></a>Dm_execution_performance_counters 함수-
+# <a name="functions---dmexecutionperformancecounters"></a>함수 - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서 실행 중인 실행 인스턴스에 대한 성능 통계를 반환합니다.  
@@ -38,12 +37,12 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @execution_id =] *execution_id*  
+ [ @execution_id = ] *execution_id*  
  하나 이상의 패키지가 포함된 실행의 고유 식별자입니다. 패키지 실행 태스크로 실행되는 패키지는 부모 패키지와 같은 실행 인스턴스에서 실행됩니다.  
   
- 실행 ID를 지정하지 않으면 여러 실행에 대한 성능 통계가 반환됩니다. **ssis_admin** 데이터베이스 역할의 멤버에게는 진행 중인 모든 실행에 대한 성능 통계가 반환됩니다.  **ssis_admin** 데이터베이스 역할이 아닌 멤버에게는 읽기 권한이 있는 진행 중인 실행에 대한 성능 통계가 반환됩니다. *execution_id* 는 **BigInt**합니다.  
+ 실행 ID를 지정하지 않으면 여러 실행에 대한 성능 통계가 반환됩니다. **ssis_admin** 데이터베이스 역할의 멤버에게는 진행 중인 모든 실행에 대한 성능 통계가 반환됩니다.  **ssis_admin** 데이터베이스 역할이 아닌 멤버에게는 읽기 권한이 있는 진행 중인 실행에 대한 성능 통계가 반환됩니다. *execution_id*는 **BigInt**입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 표에서는 dm_execution_performance_counter 함수에서 반환된 카운터 이름 값을 보여 줍니다.  
   
 |카운터 이름|Description|  
@@ -64,10 +63,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>반환 값  
  dm_execution_performance_counters 함수는 진행 중인 실행에 대해 다음과 같은 열이 있는 테이블을 반환합니다. 반환되는 정보는 실행에 포함된 모든 패키지에 대한 정보입니다. 진행 중인 실행이 없는 경우 빈 테이블이 반환됩니다.  
   
-|열 이름|열 유형|Description|주의|  
+|열 이름|열 유형|Description|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
-|execution_id|**BigInt**<br /><br /> **NULL** 유효한 값이 아닙니다.|패키지를 포함한 실행의 고유 식별자입니다.||  
-|counter_name|**nvarchar (128)**|카운터의 이름입니다.|참조는 **주의** 값 섹션.|  
+|execution_id|**BigInt**<br /><br /> **NULL**은 유효한 값이 아닙니다.|패키지를 포함한 실행의 고유 식별자입니다.||  
+|counter_name|**nvarchar(128)**|카운터의 이름입니다.|값의 **설명** 섹션을 참조하세요.|  
 |counter_value|**BigInt**|카운터가 반환하는 값입니다.||  
   
 ## <a name="example"></a>예제  
@@ -85,14 +84,14 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 기능을 사용하려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스에 대한 READ 및 MODIFY 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
 ## <a name="errors-and-warnings"></a>오류 및 경고  
  다음 목록에서는 함수 실패 조건을 설명합니다.  
@@ -102,4 +101,3 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 -   지정된 실행 ID가 잘못되었습니다.  
   
   
-

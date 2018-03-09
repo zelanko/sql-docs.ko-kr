@@ -3,8 +3,11 @@ title: "개체 탐색기 세부 정보 창 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c88f8188f607e5508bf087e230b1e8e70e92aab7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8798c67cc730cef471e28de51ae27213bc04565d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="object-explorer-details-pane"></a>개체 탐색기 세부 정보 창
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 구성 요소인 개체 탐색기 정보는 서버의 모든 개체를 테이블 형식으로 표시하고 이러한 개체를 관리하기 위한 사용자 인터페이스를 제공합니다. 개체 탐색기의 기능은 서버의 유형에 따라 조금씩 다르지만 일반적으로 데이터베이스를 위한 개발 기능과 모든 서버 유형을 위한 관리 기능을 포함합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 구성 요소인 개체 탐색기 정보는 서버의 모든 개체를 테이블 형식으로 표시하고 이러한 개체를 관리하기 위한 사용자 인터페이스를 제공합니다. 개체 탐색기의 기능은 서버의 유형에 따라 조금씩 다르지만 일반적으로 데이터베이스를 위한 개발 기능과 모든 서버 유형을 위한 관리 기능을 포함합니다.  
   
 개체 탐색기 정보 창은 기본적으로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 에 표시됩니다. 개체 탐색기가 표시되지 않으면 **보기** 메뉴에서 **개체 탐색기 정보** 를 클릭하거나 **F7**키를 누릅니다.  
   
@@ -41,13 +44,13 @@ ms.lasthandoff: 11/09/2017
   
 개체 탐색기 정보에는 다음 표에 설명된 아이콘이 있는 도구 모음이 포함되어 있습니다. 아이콘은 해당되는 경우에만 사용할 수 있습니다.  
   
-|아이콘|동작|  
+|아이콘|작업|  
 |--------|----------|  
 |**뒤로**|개체 탐색기 정보에 표시된 이전 항목으로 이동합니다. 이전 화면이 검색 작업으로 인한 결과 화면인 경우 검색을 다시 실행합니다.|  
 |**앞으로**|**뒤로** 작업을 선택한 후 다음 화면으로 이동합니다.|  
 |**위로**|부모 개체 또는 폴더로 이동합니다.|  
 |**동기화**|개체 탐색기의 포커스를 개체 탐색기 정보에서 선택한 개체로 설정합니다.|  
-|**필터**|사용 가능한 경우 구성 가능한 개체 하위 집합을 표시합니다.|  
+|**Assert**|사용 가능한 경우 구성 가능한 개체 하위 집합을 표시합니다.|  
 |**새로 고침**|개체 탐색기 정보의 화면 표시를 새로 고칩니다.|  
 |**검색**|특정 데이터베이스 개체를 찾기 위한 검색 단어를 입력할 영역을 제공합니다.|  
   
@@ -100,6 +103,6 @@ ms.lasthandoff: 11/09/2017
   
 -   큰 개체 집합을 검색하면 시간이 많이 걸리고 서버 성능이 저하될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [개체 탐색기](../../ssms/object/object-explorer.md)  
   

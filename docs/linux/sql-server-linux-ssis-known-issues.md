@@ -10,21 +10,22 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: eec45efe8fb49afefab418130d05d7a2b82bddd3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Linux에서 SSIS에 대 한 알려진된 문제 및 제한
 
-이 항목에서는 현재 제한 사항 및 알려진된 문제 SQL Server Integration Services (SSIS)에 대 한 linux.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+이 문서에서는 설명 현재 제한 사항 및 알려진된 문제 SQL Server Integration Services (SSIS)에 대 한 linux.
 
 ## <a name="general-limitations-and-known-issues"></a>일반적인 제한 사항 및 알려진된 문제
 
@@ -41,7 +42,7 @@ Linux에서 SSIS의이 릴리스에서 다음과 같은 기능이 지원 되지 
 
 다른 제한 사항 및 Linux에서 SSIS의 알려진된 문제에 대 한 참조는 [릴리스 정보](sql-server-linux-release-notes.md#ssis)합니다.
 
-## <a name="components"></a>지원 되는 / 지원 되지 않는 구성 요소
+## <a name="components"></a> 지원 되는 / 지원 되지 않는 구성 요소
 
 다음 기본 제공 Integration Services 구성 요소는 Linux에서 지원 됩니다. 그 중 일부는 다음 표에 설명 된 대로 Linux 플랫폼에는 제한이 있습니다.
 
@@ -56,7 +57,7 @@ Linux에서 SSIS의이 릴리스에서 다음과 같은 기능이 지원 되지 
 - 식 태스크
 - FTP 태스크
 - 웹 서비스 태스크
-- XML 태스크
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>제어 흐름 작업 제한 사항과 함께 지원
 
@@ -131,4 +132,8 @@ SQL Server 로그 공급자는 SQL 인증만 지원 합니다. Windows 인증을
 -   경로 제공 하지 않으면 로그 공급자는 호스트의 현재 디렉터리에 씁니다. 현재 사용자는 호스트의 현재 디렉터리에 쓸 수 있는 권한이 없으면 로그 공급자에서 오류가 발생 합니다.
 -   파일 경로에 환경 변수를 사용할 수 없습니다. 환경 변수를 지정 하면 지정 하는 리터럴 텍스트 파일 경로에 나타납니다. 예를 들어, 지정 하는 경우 `%TMP%/log.txt`, 로그 공급자에 리터럴 텍스트를 추가 `/%TMP%/log.txt` 현재 호스트 디렉터리에 있습니다.
 
-
+## <a name="related-content-about-ssis-on-linux"></a>Linux에서 SSIS에 대 한 관련된 내용
+-   [추출, 변환 및 SSIS와 Linux에서 데이터 로드](sql-server-linux-migrate-ssis.md)
+-   [Linux에서 SQL Server Integration Services (SSIS)를 설치 합니다.](sql-server-linux-setup-ssis.md)
+-   [Linux에서 SQL Server Integration Services ssis conf 구성](sql-server-linux-configure-ssis.md)
+-   [일정 SQL Server Integration Services 패키지 cron 사용 하 여 Linux에서 실행](sql-server-linux-schedule-ssis-packages.md)

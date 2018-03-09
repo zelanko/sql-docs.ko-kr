@@ -2,14 +2,13 @@
 title: "Analysis Services에서 서버 속성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,20 +20,20 @@ helpviewer_keywords:
 - properties [Analysis Services], configuration
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
-caps.latest.revision: 21
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 4db4d5d2e57f5f4a967a2099ef11efa0ca10ca21
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4157f63f72acd5da6dd369034d1633e7461c9b87
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services의 서버 속성
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 기본 서버 구성 속성을 수정할 수 있습니다. 각 인스턴스에는 동일한 서버의 다른 인스턴스와 독립적으로 설정되는 자체 구성 속성이 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 기본 서버 구성 속성을 수정할 수 있습니다. 각 인스턴스에는 동일한 서버의 다른 인스턴스와 독립적으로 설정되는 자체 구성 속성이 있습니다.  
   
  서버를 구성하려면 SQL Server Management Studio를 사용하거나 특정 인스턴스의 msmdsrv.ini 파일을 편집합니다.  
  
@@ -85,7 +84,7 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
 |[DAX 속성](../../analysis-services/server-properties/dax-properties.md)|DAX 쿼리와 관련된 속성을 정의합니다.|
 |DSO|DSO는 더 이상 지원되지 않습니다. DSO 속성은 무시됩니다.|  
 |[기능 속성](../../analysis-services/server-properties/feature-properties.md)|기능 속성은 서버 인스턴스 간 연결을 제어하는 속성을 비롯한 제품 기능(대부분 고급 기능)에 해당합니다.|  
-|[파일 저장소 속성](../../analysis-services/server-properties/filestore-properties.md)|파일 저장 속성은 고급 사용을 위한 것입니다. 여기에는 고급 메모리 관리 설정이 포함됩니다.|  
+|[Filestore 속성](../../analysis-services/server-properties/filestore-properties.md)|파일 저장 속성은 고급 사용을 위한 것입니다. 여기에는 고급 메모리 관리 설정이 포함됩니다.|  
 |[잠금 관리자 속성](../../analysis-services/server-properties/lock-manager-properties.md)|잠금 관리자 속성은 잠금 및 제한 시간에 해당하는 서버 동작을 정의합니다. 이러한 속성은 대부분 고급 사용을 위한 것입니다.|  
 |[로그 속성](../../analysis-services/server-properties/log-properties.md)|로그 속성은 서버에서 이벤트를 기록하는 경우, 장소 및 방법을 제어합니다. 여기에는 오류 로깅, 예외 로깅, 비행 레코더, 쿼리 로깅 및 추적이 포함됩니다.|  
 |[메모리 속성](../../analysis-services/server-properties/memory-properties.md)|메모리 속성은 서버의 메모리 사용 방법을 제어합니다. 이 속성은 주로 고급 사용을 위한 것입니다.|  
@@ -96,7 +95,6 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services 인스턴스 관리](../../analysis-services/instances/analysis-services-instance-management.md)   
- [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [솔루션 배포에 대 한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   
-

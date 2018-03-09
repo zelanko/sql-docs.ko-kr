@@ -5,26 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 025ad811b25f822c22c9ff81402de196b191baa6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: abb5aebcd58c79c6351d7c47a7b98be5a040ef46
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-api-reference"></a>ODBC API 참조
 이 섹션의 항목은 알파벳 순서로 각 ODBC 기능에 설명 합니다. 각 함수는 C 언어 기능을 프로그래밍으로 정의 됩니다. 설명은 다음과 같습니다.  
@@ -213,4 +211,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQLTables 함수](../../../odbc/reference/syntax/sqltables-function.md)  
   
 -   [SQLTransact 함수](../../../odbc/reference/syntax/sqltransact-function.md)
-

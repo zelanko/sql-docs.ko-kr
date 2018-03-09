@@ -2,34 +2,32 @@
 title: "MSReportServer_ConfigurationSetting 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- MSReportServer_ConfigurationSetting Class
-apilocation:
-- reportingservices.mof
+apiname: MSReportServer_ConfigurationSetting Class
+apilocation: reportingservices.mof
 apitype: MOFDef
 helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
-caps.latest.revision: 39
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "39"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 01079c495e34728b02cdbd4d9e6bc8b3adfefc09
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting 클래스
   보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이러한 매개 변수는 보고서 서버의 구성 파일에 저장됩니다.  
@@ -50,7 +48,7 @@ public class MSReportServer_ConfigurationSetting
  이 유형의 모든 public static(**의 경우** 공유 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 멤버는 다중 스레드 작업에 안전합니다. 인스턴스 멤버는 스레드로부터의 안전성이 보장되지 않습니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드를 실행 하려면 각 대신 서버 이름을 추가 \< *servername*> 합니다. 경로가 기본값이 아니면 설치 위치를 가리키도록 경로를 업데이트합니다. 다음 코드 예제에서는 *MSReportServer_ConfigurationSetting* 클래스의 각 속성을 반복하여 각 속성 이름 및 값을 콘솔에 인쇄합니다.  
+ 다음 코드를 실행하려면 각 \<*servername*> 대신 서버 이름을 추가합니다. 경로가 기본값이 아니면 설치 위치를 가리키도록 경로를 업데이트합니다. 다음 코드 예제에서는 *MSReportServer_ConfigurationSetting* 클래스의 각 속성을 반복하여 각 속성 이름 및 값을 콘솔에 인쇄합니다.  
   
 ```vb  
 Imports System  
@@ -179,8 +177,7 @@ class Class1
   
  **플랫폼:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

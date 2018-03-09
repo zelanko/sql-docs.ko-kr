@@ -30,17 +30,16 @@ helpviewer_keywords:
 - index creation [SQL Server], XML indexes
 - XML indexes [SQL Server], creating
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-caps.latest.revision: 38
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f9e235df8fe59bc86522ece554a75e22954fef1b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 133c957937d1c05cd108eeb2deb0847cd7944771
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -115,13 +114,13 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *xml_column_name*  
  이 **xml** 인덱스의 기반이 되는 열입니다. 하나의 **xml** 을 단일 XML 인덱스 정의에 열을 지정할 수 있습니다; 그러나에 여러 개의 보조 XML 인덱스를 만들 수 있습니다는 **xml** 열입니다.  
   
- XML 인덱스를 사용 하 여 *xml_index_name*  
+ USING XML INDEX *xml_index_name*  
  보조 XML 인덱스를 만들 때 사용할 기본 XML 인덱스를 지정합니다.  
   
  FOR { VALUE | PATH | PROPERTY }  
  보조 XML 인덱스의 유형을 지정합니다.  
   
- Value  
+ VALUE  
  키 열이 기본 XML 인덱스의 노드 값 및 경로인 열에 보조 XML 인덱스를 만듭니다.  
   
  PATH  
@@ -130,7 +129,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PROPERTY  
  PK가 기본 테이블의 기본 키인 기본 XML 인덱스의 열(PK, 경로 및 노드 값)에 보조 XML 인덱스를 만듭니다.  
   
- **\<개체 >:: =**  
+ **\<object>::=**  
   
  인덱스할 정규화되거나 정규화되지 않은 개체입니다.  
   
@@ -143,7 +142,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *table_name*  
  인덱싱할 테이블 이름입니다.  
   
- **\<xml_index_option >:: =** 
+ **\<xml_index_option> ::=** 
   
  인덱스를 만들 때 사용할 옵션을 지정합니다.  
   
@@ -158,7 +157,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  PAD_INDEX는 FILLFACTOR에 지정된 비율을 사용하므로 FILLFACTOR가 지정된 경우에만 PAD_INDEX 옵션을 사용할 수 있습니다. FILLFACTOR에 지정된 비율이 한 행을 저장하기에도 부족하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부적으로 허용된 최소 비율을 무시합니다. 중간 인덱스 페이지의 행 수는 두 개 이상, 어떻게 낮은 값에 관계 없이 되지 않는 *fillfactor*합니다.  
   
- FILLFACTOR  **=**  *fillfactor*  
+ FILLFACTOR **= * * * fillfactor*  
  인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor* 100 1 까지의 정수 값 이어야 합니다. 기본값은 0입니다. 경우 *fillfactor* 가 100 또는 0 일에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 리프 페이지가 꽉 찬 인덱스를 만듭니다.  
   
 > [!NOTE]  
@@ -182,7 +181,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  사용자 데이터베이스에서 인덱스를 만드는 데 필요한 공간 외에도 **tempdb** 거의 같은 양의 중간 정렬 결과를 저장할 추가 공간이 있어야 합니다. 자세한 내용은 참조 [인덱스에 대 한 SORT_IN_TEMPDB 옵션](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)합니다.  
   
- IGNORE_DUP_KEY **= OFF**  
+ IGNORE_DUP_KEY **=OFF**  
  인덱스 유형은 고유할 수 없으므로 XML 인덱스에 영향을 미치지 않습니다. 이 옵션을 ON으로 설정하지 마세요. ON으로 설정하면 오류가 발생합니다.  
   
  DROP_EXISTING  **=**  {ON | **OFF** }  
@@ -202,7 +201,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  XML 인덱스를 작성, 다시 작성 또는 삭제하는 오프라인 인덱스 작업은 테이블에 대해 SCH-M(스키마 수정) 잠금을 획득합니다. 이 경우 작업 중에 모든 사용자가 기본 테이블에 액세스할 수 없게 됩니다.  
   
 > [!NOTE]  
->  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+>  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  ALLOW_ROW_LOCKS  **=**  { **ON** | OFF}  
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
@@ -222,7 +221,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  페이지 잠금이 사용되지 않습니다.  
   
- MAXDOP  **=**  *max_degree_of_parallelism*  
+ MAXDOP **=***max_degree_of_parallelism*  
  재정의 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 인덱스 작업의 기간에 대 한 구성 옵션입니다. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
 > [!IMPORTANT]  
@@ -230,7 +229,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  *max_degree_of_parallelism* 될 수 있습니다.  
   
- 1.  
+ 1  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
@@ -259,7 +258,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 ### <a name="a-creating-a-primary-xml-index"></a>1. 기본 XML 인덱스 만들기  
  다음 예에서는 `CatalogDescription` 테이블의 `Production.ProductModel` 열에 기본 XML 인덱스를 만듭니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT * FROM sys.indexes  
@@ -275,7 +274,7 @@ GO
 ### <a name="b-creating-a-secondary-xml-index"></a>2. 보조 XML 인덱스 만들기  
  다음 예에서는 `CatalogDescription` 테이블의 `Production.ProductModel` 열에 보조 XML 인덱스를 만듭니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.indexes  
@@ -308,5 +307,4 @@ GO
  [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   
-
 

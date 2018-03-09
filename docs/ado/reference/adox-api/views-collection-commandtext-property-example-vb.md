@@ -3,7 +3,7 @@ title: "뷰 컬렉션, CommandText 속성 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - CommandText property [ADOX]
 - Views collection [ADOX], Visual Basic example
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0d610a39e0f22a893597652fcf4916e0164a920b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45e92a822f8a8acc6abbab756a44668bb4c966c6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>뷰 컬렉션, CommandText 속성 예제 (VB)
 다음 코드에서는 사용 하는 방법을 [명령](../../../ado/reference/adox-api/command-property-adox.md) 보기의 텍스트를 업데이트 하는 속성입니다.  
@@ -90,4 +89,3 @@ End Sub
  [Command 속성 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [뷰 개체 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-

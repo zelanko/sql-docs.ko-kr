@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - compiling Unicode applications [ODBC]
 - functions [ODBC], Unicode functions
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7bc4228f693f2d5753c3b04cf6e2cd48e18a591b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c99c74a1a294d7d43774fe9d53d169eece98d3ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-applications"></a>유니코드 응용 프로그램
 두 가지 방법 중 하나에서 유니코드 응용 프로그램으로 응용 프로그램을 다시 컴파일할 수 있습니다.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  세 가지 방법 중 하나에 함수를 호출할 수 있습니다: 유니코드 전용 함수 호출으로 (으로 *W* 접미사), ANSI 전용 함수 호출으로 (으로 *A* 접미사), 또는 접미사 없음 ODBC 함수 호출으로 합니다. 함수는 세 가지 형식에 대 한 인수는 동일 합니다. SQLCHAR의 함수만 \* 인수 또는 대 SQLPOINTER 인수 문자열을 가리키는 유니코드 및 ANSI 양식이 필요 합니다. 와 같은 문자 유형으로 선언 될 수 있는 인수를 사용 하는 함수에 대 한 **SQLBindCol** 또는 **SQLGetData** (헤드가 없습니다 유니코드와 ANSI 양식)을 유니코드 형식으로 인수를 선언할 수 있습니다 ANSI 입력 하거나 형식 인수를 SQL_C_TCHAR 매크로 C의 경우. 자세한 내용은 참조 [유니코드 데이터](../../../odbc/reference/develop-app/unicode-data.md)합니다.  
   
  유니코드 응용 프로그램으로 작업할 수에 사용할 수 있는 유니코드 드라이버가 없는 경우에 응용 프로그램을 작성할 수 있습니다. 드라이버 관리자 ANSI 유니코드 함수 및 데이터 형식이 매핑됩니다. 에 유니코드에서 ANSI 매핑 수행할 수 있는 몇 가지 제한 사항이 있습니다. 사용 하도록 유니코드 응용 프로그램에 대 한 유니코드 드라이버의 존재를 성능이 향상 되 고 유니코드에서 ANSI 매핑에 내재 된 제한 사항이 제거 됩니다.
-

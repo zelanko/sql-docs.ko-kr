@@ -2,32 +2,29 @@
 title: "Power Pivot 서버 관리 및 중앙 관리의 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
-caps.latest.revision: 29
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e4e6be04453ddacfedfefbae3aaa070614349e7a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3dd5476281506f84282fb8b6b6a534820ebea078
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>중앙 관리에서 파워 피벗 서버 관리 및 구성
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 관리 및 구성을 수행합니다.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 먼저 구성해야 사용할 수 있습니다. SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 SQL Server 설치 프로그램을 사용하여 설치한 후 다음 중 원하는 방식으로 구성할 수 있습니다.  
@@ -71,7 +68,7 @@ ms.lasthandoff: 09/01/2017
 |[중앙 관리에서 SharePoint 웹 응용 프로그램에 파워 피벗 서비스 응용 프로그램 연결](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|선택 사항|서비스 연결을 수정하는 방법에 대해 설명합니다.|  
 |[중앙 관리에서 파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|선택 사항|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 갤러리를 신뢰할 수 있는 위치로 추가하는 방법에 대해 설명합니다.|  
 |[SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)|선택 사항|이벤트 로깅은 기본적으로 구성되어 있습니다. 이 단계를 사용하여 기본 설정을 수정할 수 있습니다.|  
-|[PowerPivot 상태 규칙 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)|선택 사항|서버 상태 규칙은 기본적으로 구성되어 있습니다. 이 단계를 사용하여 일부 기본 설정을 수정할 수 있습니다.|  
+|[Power Pivot 상태 규칙 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)|선택 사항|서버 상태 규칙은 기본적으로 구성되어 있습니다. 이 단계를 사용하여 일부 기본 설정을 수정할 수 있습니다.|  
 |[Power Pivot 갤러리 만들기 및 사용자 지정](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)|선택 사항|수동으로 구성하는 설치에 대해 이 절차에서는 포함된 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 통합 문서의 축소판 이미지를 보여 주는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 갤러리 라이브러리를 만드는 방법에 대해 설명합니다.|  
 |[라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|선택 사항|BI 의미 체계 모델 연결 파일 만들기를 지원하도록 문서 라이브러리를 확장하는 방법에 대해 설명합니다.|  
   
@@ -81,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [SharePoint 용 파워 피벗에 대 한 재해 복구](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   
-

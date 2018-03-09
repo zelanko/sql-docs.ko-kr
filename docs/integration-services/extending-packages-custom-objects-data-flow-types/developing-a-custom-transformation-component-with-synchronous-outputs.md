@@ -1,5 +1,5 @@
 ---
-title: "동기 출력을 사용 하는 사용자 지정 변환 구성 요소 개발 | Microsoft Docs"
+title: "동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,20 +25,19 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 56
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: d316a3921cd3b2d8b3e82a6ed5c5b629389614a7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7717bfcbe29f9d59abe25a8b295fb57b955d0c63
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발
-  동기 출력을 사용하는 변환 구성 요소는 업스트림 구성 요소에서 행을 받고, 이러한 행을 다운스트림 구성 요소에 전달할 때 해당 행의 열 값을 읽거나 수정합니다. 또한 업스트림 구성 요소가 제공한 열에서 파생된 추가 출력 열도 정의할 수 있지만 데이터 흐름에 행을 추가하지는 않습니다. 동기 및 비동기 구성 요소 간의 차이 대 한 자세한 내용은 참조 [이해 동기 및 비동기 변환](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)합니다.  
+  동기 출력을 사용하는 변환 구성 요소는 업스트림 구성 요소에서 행을 받고, 이러한 행을 다운스트림 구성 요소에 전달할 때 해당 행의 열 값을 읽거나 수정합니다. 또한 업스트림 구성 요소가 제공한 열에서 파생된 추가 출력 열도 정의할 수 있지만 데이터 흐름에 행을 추가하지는 않습니다. 동기 구성 요소와 비동기 구성 요소 간의 차이점에 대한 자세한 내용은 [동기 및 비동기 변환 이해](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)를 참조하세요.  
   
  이러한 종류의 구성 요소는 데이터가 구성 요소에 제공될 때 인라인으로 수정되는 태스크와 구성 요소에서 행을 처리하기 전에 모든 행을 볼 필요가 없는 태스크에 적합합니다. 동기 출력을 사용하는 변환은 일반적으로 외부 데이터 원본에 연결하거나 외부 메타데이터 열을 관리하거나 출력 버퍼에 행을 추가하지 않으므로 개발하기가 가장 쉬운 구성 요소입니다.  
   
@@ -127,7 +125,7 @@ End Class
 |DT_CY|0|0|0|0|  
 |DT_NUMERIC|0|0보다 크고 28보다 작거나 같으며 Precision보다 작습니다.|1보다 크거나 같고 38보다 작거나 같습니다.|0|  
 |DT_BYTES|0보다 큽니다.|0|0|0|  
-|DT_STR|0 보다 작은 8000 보다 크고 합니다.|0|0|0이 아니며 올바른 코드 페이지가 아닙니다.|  
+|DT_STR|0보다 크고 8000보다 작습니다.|0|0|0이 아니며 올바른 코드 페이지가 아닙니다.|  
 |DT_WSTR|0보다 크고 4000보다 작습니다.|0|0|0|  
   
  데이터 형식 속성에 대한 제한 사항은 출력 열의 데이터 형식을 기준으로 하므로 관리되는 형식을 사용할 때는 올바른 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 선택해야 합니다. 기본 클래스에서는 관리되는 구성 요소 개발자가 관리되는 형식의 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식을 선택하는 데 도움이 되는 세 개의 도우미 메서드 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>을 제공합니다. 이러한 메서드는 관리되는 데이터 형식을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식으로 변환하거나 그 반대로 변환합니다.  
@@ -194,7 +192,7 @@ End Sub
 ### <a name="processing-rows"></a>행 처리  
  구성 요소는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 메서드에서 행 및 열이 들어 있는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 개체를 받습니다. 이 메서드가 실행되는 동안에는 버퍼의 행을 반복하고 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 실행 중 식별된 열을 읽고 수정합니다. 이 메서드는 업스트림 구성 요소에서 더 이상 행을 제공하지 않을 때까지 데이터 흐름 태스크에서 반복적으로 호출됩니다.  
   
- 버퍼의 개별 열을 읽거나 배열 인덱서 액세스 메서드를 사용 하 여 또는 중 하나를 사용 하 여 작성 된는 **가져오기** 또는 **설정** 메서드. **가져오기** 및 **설정** 메서드는 효율적이 고 버퍼에 있는 열의 데이터 형식을 알 수 있는 경우에 사용 해야 합니다.  
+ 버퍼의 개별 열은 배열 인덱서 액세스 메서드를 사용하거나 **Get** 또는 **Set** 메서드 중 하나를 사용하여 읽거나 쓸 수 있습니다. **Get** 및 **Set** 메서드가 보다 효율적이므로 버퍼에 있는 열의 데이터 형식을 알고 있는 경우에는 이 두 메서드를 사용해야 합니다.  
   
  다음 코드 예에서는 들어오는 행을 처리하는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 메서드의 구현을 보여 줍니다.  
   
@@ -331,10 +329,9 @@ Namespace Uppercase
 End Namespace  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [비동기 출력을 사용 하는 사용자 지정 변환 구성 요소 개발](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
+## <a name="see-also"></a>참고 항목  
+ [비동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
  [동기 및 비동기 변환 이해](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
- [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
+ [스크립트 구성 요소를 사용하여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

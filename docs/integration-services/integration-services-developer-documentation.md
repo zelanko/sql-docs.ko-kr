@@ -5,11 +5,10 @@ ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-caps.latest.revision: 76
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf7d7afba8ada3f6027db3053914b1822597792c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 718bc3b4bad9f3444f3ba47871c86bb18c45c7ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 개발자 설명서
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 완전히 다시 작성된 개체 모델이 포함되어 있으며 이러한 개체 모델은 패키지 확장 및 프로그래밍을 보다 쉽고 유연하고 강력하게 해 주는 다양한 기능을 갖도록 향상되었습니다. 개발자는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지의 거의 모든 측면을 확장하고 프로그래밍할 수 있습니다.  
@@ -68,7 +66,7 @@ ms.lasthandoff: 09/26/2017
  동기 출력과 비동기 출력 간의 중요한 차이를 설명하고 데이터 흐름에서 이러한 출력을 사용하는 구성 요소에 대해 설명합니다.  
   
  [프로그래밍 방식으로 연결 관리자 사용](../integration-services/working-with-connection-managers-programmatically.md)  
- 관리 코드에서 사용할 수 있는 연결 관리자와 코드를 호출할 때 연결 관리자를 반환 하는 값을 나열는 **AcquireConnection** 메서드.  
+ 관리 코드에서 사용할 수 있는 연결 관리자 및 코드에서 **AcquireConnection** 메서드를 호출할 때 연결 관리자에서 반환하는 값을 나열합니다.  
   
  [스크립팅을 사용한 패키지 확장](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  스크립트 태스크를 사용하여 제어 흐름을 확장하는 방법이나 스크립트 구성 요소를 사용하여 데이터 흐름을 확장하는 방법에 대해 설명합니다.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 09/26/2017
  [Integration Services 오류 및 메시지 참조](../integration-services/integration-services-error-and-message-reference.md)  
  미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 코드와 해당 심볼 이름 및 설명을 나열합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [패키지 배포 문제 해결 도구](../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 개발 과정의 패키지 문제 해결을 위해 제공하는 기능 및 도구에 대해 설명합니다.  
   
@@ -94,8 +92,7 @@ ms.lasthandoff: 09/26/2017
   
 -   www.codeplex.com/MSFTISProdSamples의 CodePlex 예제 - [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkID=131204)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   
-

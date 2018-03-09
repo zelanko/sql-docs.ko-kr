@@ -3,7 +3,7 @@ title: "Source 속성 (ADO 오류) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5a4b3e69feaada6c11504a1c5c2c834060be5b04
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 86c95ebdbacfffcee3e1be83c33ff3c5261352a6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-error"></a>Source 속성 (ADO 오류)
 개체 또는 원래 오류를 생성 한 응용 프로그램의 이름을 나타냅니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 09/09/2017
  반환 된 **문자열** 개체 또는 응용 프로그램의 이름을 나타내는 값입니다.  
   
 ## <a name="remarks"></a>주의  
- 사용 하 여는 **소스** 속성에는 [오류](../../../ado/reference/ado-api/error-object.md) 개체 또는 원래 오류를 생성 한 응용 프로그램의 이름을 결정 하는 개체입니다. 개체의 클래스 이름 또는 프로그래밍 id입니다.가 수 있습니다. Ado에서 오류에 대 한 속성 값이 됩니다 **ADODB.** *ObjectName*여기서 *ObjectName* 오류를 발생 시킨 개체의 이름입니다. ADOX 및 ADO MD에 대 한 값은 됩니다 **ADOX.** *ObjectName* 및 **ADOMD.** *ObjectName* 각각.  
+ 사용 하 여는 **소스** 속성에는 [오류](../../../ado/reference/ado-api/error-object.md) 개체 또는 원래 오류를 생성 한 응용 프로그램의 이름을 결정 하는 개체입니다. 개체의 클래스 이름 또는 프로그래밍 id입니다.가 수 있습니다. Ado에서 오류에 대 한 속성 값이 됩니다 **ADODB. * * * ObjectName*여기서 *ObjectName* 오류를 발생 시킨 개체의 이름입니다. ADOX 및 ADO MD 값 될 것 **ADOX. * * * ObjectName* 및 **ADOMD. * * * ObjectName* 각각.  
   
  오류 설명서에 따라는 **소스**, [번호](../../../ado/reference/ado-api/number-property-ado.md), 및 [설명](../../../ado/reference/ado-api/description-property.md) 의 속성 **오류** 개체 코드를 작성할 수 있습니다 오류를 적절 하 게 처리 합니다입니다.  
   
@@ -56,4 +55,3 @@ ms.lasthandoff: 09/09/2017
  [Number 속성 (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Source 속성 (ADO 레코드)](../../../ado/reference/ado-api/source-property-ado-record.md)   
  [Source 속성(ADO 레코드 집합)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-

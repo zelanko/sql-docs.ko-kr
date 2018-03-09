@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBindCol
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBindCol
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBindCol
-helpviewer_keywords:
-- SQLBindCol function [ODBC]
+f1_keywords: SQLBindCol
+helpviewer_keywords: SQLBindCol function [ODBC]
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4b2031680faefcdf0b701ad8065b9d90cd8678f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 641b08ab3d3aec59f66dd0405770cf19d4690769
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 함수
 **규칙**  
@@ -121,7 +115,7 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>진단  
  때 **SQLBindCol** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* SQL_의 HANDLE_STMT 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLBindCol** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07006|제한 된 데이터 형식 특성 위반|DM ()는 *ColumnNumber* 되었습니다. 0, 인수 및 *TargetType* 인수 되지 않았거나 SQL_C_BOOKMARK SQL_C_VARBOOKMARK 합니다.|  
@@ -137,7 +131,7 @@ SQLRETURN SQLBindCol(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *StatementHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLBindCol** 를 연결 하는 데 사용 됩니다 또는 *바인딩* 결과의 열 데이터 버퍼 및 응용 프로그램에서 길이/표시기 버퍼도 설정 합니다. 응용 프로그램 호출 하는 경우 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLSetPos** 데이터를 페치 하려면 드라이버 반환 바인딩된 열에 대 한 데이터를 위한; 지정 된 버퍼 자세한 내용은 참조 [SQLFetch 함수](../../../odbc/reference/syntax/sqlfetch-function.md)합니다. 응용 프로그램 호출 하는 경우 **SQLBulkOperations** 를 업데이트 하거나 행을 삽입 또는 **SQLSetPos** 행을 업데이트 하려면 검색 하 여 지정 된 버퍼에서 바인딩된 열에 대 한; 자세한 정보에 대 한 데이터 을 참조 [SQLBulkOperations 함수](../../../odbc/reference/syntax/sqlbulkoperations-function.md) 또는 [SQLSetPos 함수](../../../odbc/reference/syntax/sqlsetpos-function.md)합니다. 바인딩에 대 한 자세한 내용은 참조 하십시오. [검색 결과 (기본)](../../../odbc/reference/develop-app/retrieving-results-basic.md)합니다.  
   
  표시 열에서 데이터를 검색에 바인딩될 필요가 없습니다. 응용 프로그램 호출 또한 수 **SQLGetData** 열에서 데이터를 검색 합니다. 행과 호출의 일부 열에 바인딩할 수 있지만 **SQLGetData** 이 몇 가지 제한 사항이 적용 되는 다른 사용자에 대 한 합니다. 자세한 내용은 참조 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)합니다.  
@@ -391,4 +385,3 @@ int main() {
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -3,7 +3,7 @@ title: "Clone 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: db5785a40527f4f85558961068d2cb67eeabbfbc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9b7586bef017cd4e5f3a89586b8600abfd183f5a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clone-method-ado"></a>Clone 메서드 (ADO)
 복제를 만들어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기존 개체 **레코드 집합** 개체입니다. 필요에 따라 읽기 전용 복제 되도록 지정 합니다.  
@@ -81,7 +80,7 @@ rsNew.Filter = rsOriginal.Filter
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|아니요|  
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|아니요|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|예|  
-|[두](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|아니요|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|아니요|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|예|  
 |[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|아니요|  
 |[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|예|  
@@ -96,4 +95,3 @@ rsNew.Filter = rsOriginal.Filter
  [Clone 메서드 예제 (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [Clone 메서드 예제 (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
  [Clone 메서드 예제(VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   
-

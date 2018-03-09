@@ -1,30 +1,31 @@
 ---
 title: "SQL Server 기능 및 특성의 사용 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7cbfb4ef-1e61-4e65-9fe0-ed5adfb43415
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 9179b95331ddcad4a704feadae2aa3f9211f8dff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 66fe9487c8b7d2189d69917fc81226a4f698af7c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>SQL Server 기능 및 특성의 WideWorldImportersDW 사용
-WideWorldImportersDW는 다양 한 데이터 웨어하우스 및 분석에 적합 한 SQL Server의 주요 기능을 보여 주기 위해 설계 되었습니다. 다음 목록은 SQL Server 기능 및 기능과 WideWorldImportersDW에서 사용 되는 방법을 설명 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW는 다양 한 데이터 웨어하우스 및 분석에 적합 한 SQL Server의 주요 기능을 보여 주기 위해 설계 되었습니다. 다음 목록은 SQL Server 기능 및 기능과 WideWorldImportersDW에서 사용 되는 방법을 설명 합니다.
 
 ## <a name="polybase"></a>PolyBase
 
@@ -117,4 +118,3 @@ PolyBase는 판매 정보를 WideWorldImportersDW sales의 추가 확장에 대 
 WideWorldImportersDW는 SCHEMA_ONLY 메모리 액세스에 최적화 된 테이블을 사용 하 여 준비 테이블에 대 한 합니다. 모든 `Integration.` * `_Staging` 테이블은 SCHEMA_ONLY 메모리 액세스에 최적화 된 테이블입니다.
 
 SCHEMA_ONLY 테이블의 장점은 기록 되지 않습니다 및 모든 디스크 액세스가 필요 없는 것입니다. 이렇게 하면 ETL 프로세스의 성능이 향상 됩니다. 이러한 테이블 로깅되지 않습니다 이후 오류가 발생 하는 경우 해당 내용이 손실 됩니다. 그러나 etl 간단히 다시 시작할 수 오류가 발생 하므로 데이터 원본은 계속 사용할 수입니다.
-

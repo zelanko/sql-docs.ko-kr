@@ -1,5 +1,5 @@
 ---
-title: "대상에 변경 내용을 적용 | Microsoft Docs"
+title: "대상에 변경 내용 적용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2900e6903553f9eb74cd18aad0c13691073d425
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a9e4e736d5207eaadfcd593068be68ad8432c212
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="apply-the-changes-to-the-destination"></a>대상에 변경 내용 적용
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 세 번째이자 마지막 태스크는 대상에 변경 내용을 적용하는 것입니다. 삽입을 적용할 구성 요소, 업데이트를 적용할 구성 요소 및 삭제를 적용할 구성 요소가 필요합니다.  
@@ -113,4 +112,3 @@ ms.lasthandoff: 08/03/2017
  변경 데이터를 검색하는 Transact-SQL 문에서 **cdc.fn_cdc_get_net_changes_<capture_instance>** 함수를 호출할 때 *all with merge*를 *row_filter_option* 매개 변수의 값으로 지정할 수 있습니다. 이 변경 데이터 캡처 함수는 삽입과 업데이트를 구분하는 데 필요한 추가 처리를 수행할 필요가 없을 때 보다 효율적으로 작동합니다. *all with merge* 매개 변수 값을 지정할 때 변경 데이터의 **__$operation** 값은 삭제의 경우 1이고 삽입 또는 업데이트로 인한 변경의 경우 5입니다. 변경 데이터를 검색하는 데 사용되는 Transact-SQL 함수에 대한 자세한 내용은 [변경 데이터 검색 및 이해](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)를 참조하세요. *all with merge* 매개 변수 값을 사용하여 변경 내용을 검색한 후 삭제를 적용하고 나머지 행을 임시 테이블 또는 준비 테이블에 출력할 수 있습니다. 그런 다음 다운스트림 SQL 실행 태스크에서 단일 MERGE 문을 사용하여 준비 테이블의 모든 삽입 또는 업데이트를 대상에 적용할 수 있습니다.  
   
   
-

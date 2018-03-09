@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromText (geometry Data Type)
 ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: de4fda2c1e3cd75bb3049cb0b0437e5cd3bbfeb1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d5960c16e7a1452b920b3538e85bb792b107655d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stpolyfromtext-geometry-data-type"></a>STPolyFromText(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,8 +70,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [OGC 정적 기 하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [OGC 정적 기하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
-
 

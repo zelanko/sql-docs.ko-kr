@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSpecialColumns
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSpecialColumns
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSpecialColumns
-helpviewer_keywords:
-- SQLSpecialColumns function [ODBC]
+f1_keywords: SQLSpecialColumns
+helpviewer_keywords: SQLSpecialColumns function [ODBC]
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae814d95d376e928e2fafc323dedc14a3a532aa8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 함수
 **규칙**  
@@ -119,7 +113,7 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="diagnostics"></a>진단  
  때 **SQLSpecialColumns** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 여는 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLSpecialColumns** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
@@ -144,7 +138,7 @@ SQLRETURN SQLSpecialColumns(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  경우는 *IdentifierType* 인수가 SQL_BEST_ROWID, **SQLSpecialColumns** 열 또는 테이블의 각 행을 고유 하 게 식별 하는 열을 반환 합니다. 이러한 열에 항상 사용할 수 있습니다는 *선택 목록* 또는 **여기서** 절. **SQLColumns**, 테이블의 열에 다양 한 정보를 반환 하는 데 사용 되는 반환 하지 않는 반드시 각 행을 고유 하 게 식별 하는 열 또는 값이 행 하는 경우 자동으로 업데이트 된 열에 의해 업데이트 될는 트랜잭션입니다. 예를 들어 **SQLColumns** Oracle 의사 열 ROWID를 반환할 수 있습니다. 이 인해 **SQLSpecialColumns** 이러한 열이 반환 하는 데 사용 됩니다. 자세한 내용은 참조 [카탈로그 데이터의 사용 하 여](../../../odbc/reference/develop-app/uses-of-catalog-data.md)합니다.  
   
 > [!NOTE]  
@@ -170,9 +164,9 @@ SQLRETURN SQLSpecialColumns(
   
  다음 표에서 결과 집합의 열을 나열합니다. 드라이버에 의해 열 8 (PSEUDO_COLUMN) 이후의 추가 열을 정의할 수 있습니다. 응용 프로그램 명시적는 서 수 위치를 지정 하지 않고 결과 집합의 끝부터 계산 하 여 드라이버 관련 열에 액세스 해야 합니다. 자세한 내용은 참조 [카탈로그 함수에서 반환 된 데이터](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)합니다.  
   
-|열 이름|열 번호|데이터 형식|설명|  
+|열 이름|열 번호|데이터 형식|주석|  
 |-----------------|-------------------|---------------|--------------|  
-|범위 (ODBC 1.0)|1.|Smallint|실제 범위는 rowid입니다. 다음 값 중 하나가 포함 되어 있습니다.<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL이 반환 됩니다 *IdentifierType* SQL_ROWVER 됩니다. 각 값에 대 한 참조에 대 한 설명을 *범위* 이 섹션의 앞부분에 나오는 "구문 에서"입니다.|  
+|범위 (ODBC 1.0)|1|Smallint|실제 범위는 rowid입니다. 다음 값 중 하나가 포함 되어 있습니다.<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL이 반환 됩니다 *IdentifierType* SQL_ROWVER 됩니다. 각 값에 대 한 참조에 대 한 설명을 *범위* 이 섹션의 앞부분에 나오는 "구문 에서"입니다.|  
 |COLUMN_NAME (ODBC 1.0)|2|NULL이 아닌 Varchar|열 이름입니다. 드라이버는 이름이 없는 열에 대 한 빈 문자열을 반환 합니다.|  
 |DATA_TYPE (ODBC 1.0)|3|NULL이 아닌 Smallint|SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식이 나 드라이버별 SQL 데이터 형식과 수 있습니다. 목록이 유효한 ODBC SQL 데이터 형식에 대 한 참조 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md)합니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.|  
 |TYPE_NAME (ODBC 1.0)|4|NULL이 아닌 Varchar|데이터 소스에 따라 다릅니다 데이터 형식 이름입니다. 예를 들어 "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다.|  
@@ -208,4 +202,3 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

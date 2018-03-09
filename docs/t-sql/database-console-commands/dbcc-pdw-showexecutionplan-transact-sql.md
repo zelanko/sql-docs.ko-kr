@@ -14,17 +14,16 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 12
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 461ee87f41692172b31125e36553c0eab0b09772
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: af6b466df18df3df0535a2de8f582f57484255aa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>상태가 아니므로 DBCC PDW_SHOWEXECUTIONPLAN (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -67,7 +66,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
 ## <a name="examples-includesssdwincludessssdw-mdmd"></a>예제:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
 ### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>1. 상태가 아니므로 DBCC PDW_SHOWEXECUTIONPLAN 기본 구문  
- 실행 되는 경우는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 인스턴스를 위의 쿼리는 distribution_id ± ֳ ֵ를 수정 합니다.  
+ 실행 되는 경우는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 인스턴스를 위의 쿼리는 distribution_id 를 수정 합니다.  
   
 ```sql
 SELECT [sql_spid], [pdw_node_id], [request_id], [dms_step_index], [type], [start_time], [end_time], [status], [distribution_id]  
@@ -105,4 +104,3 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );
 ## <a name="see-also"></a>참고 항목
 [DBCC PDW_SHOWPARTITIONSTATS &#40; Transact SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED &#40; Transact SQL &#41;](dbcc-pdw-showspaceused-transact-sql.md)
-

@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4c1d3356b91e3cb311c1dbf5ee7246bbb4baaa8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2aa64242f7ae74d7bf815d197e67b91c460e4a54
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -104,7 +101,7 @@ ms.lasthandoff: 09/09/2017
   
  SQL_CURSOR_ROLLBACK_BEHAVIOR SQL_CB_PRESERVE를 반환합니다.  
   
-## <a name="d"></a>D  
+## <a name="d"></a>d  
  DSN을 변수로 전달 된 값을 반환 하는 SQL_DATA_SOURCE_NAME [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), 또는 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md); 없는 DSN이 지정 된 경우 빈 문자열을 반환 합니다.  
   
  SQL_DATA_SOURCE_READ_ONLY 반환 ' N '입니다.  
@@ -463,4 +460,3 @@ ms.lasthandoff: 09/09/2017
  SQL_UNION은 SQL_U_UNION 또는 SQL_U_UNION_ALL 중 하나를 반환합니다.  
   
  SQL_USER_NAME 반환 \<빈 > 합니다.
-

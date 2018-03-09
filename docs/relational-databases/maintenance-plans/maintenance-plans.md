@@ -2,9 +2,12 @@
 title: "유지 관리 계획 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: abd4882c905f18643da40892c4cbf200091d5363
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 62c07a1aacaf0d2cc30808b41d0f58360144acff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plans"></a>유지 관리 계획
-  유지 관리 계획은 데이터베이스를 최적화하고 정기적으로 백업하며 불일치를 제거하는 데 필요한 태스크의 워크플로를 만듭니다. 유지 관리 계획 마법사에서도 중요한 유지 관리 계획을 만들지만 이러한 계획을 수동으로 만들면 유연성을 향상시킬 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 유지 관리 계획은 데이터베이스를 최적화하고 정기적으로 백업하며 불일치를 제거하는 데 필요한 태스크의 워크플로를 만듭니다. 유지 관리 계획 마법사에서도 중요한 유지 관리 계획을 만들지만 이러한 계획을 수동으로 만들면 유연성을 향상시킬 수 있습니다.  
   
 ## <a name="benefits-of-maintenance-plans"></a>유지 관리 계획의 이점  
  [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]의 유지 관리 계획은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에이전트 작업으로 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지를 만듭니다. 유지 관리 계획은 예약된 간격으로 수동 또는 자동으로 실행될 수 있습니다.  
@@ -60,12 +63,12 @@ ms.lasthandoff: 11/09/2017
   
  유지 관리 태스크에 따라 생성된 결과는 텍스트 파일에 보고서로 기록되거나 **msdb**의 유지 관리 계획 테이블(**sysmaintplan_log** 및 **sysmaintplan_logdetail**)에 기록될 수 있습니다. 로그 파일 뷰어에서 이 결과를 보려면 **유지 관리 계획**을 마우스 오른쪽 단추로 클릭하고 **기록 보기**를 클릭합니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  유지 관리 계획을 시작하려면 다음 항목을 사용하십시오.  
   
 |||  
 |-|-|  
-|**Description**|**항목**|  
+|**설명**|**항목**|  
 |SQL Server 에이전트의 확장 프로시저를 사용할 수 있도록 **에이전트 XP** 서버 구성 옵션을 구성합니다.|[Agent XPs 서버 구성 옵션](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 유지 관리 계획을 만드는 방법에 대해 설명합니다.|[유지 관리 계획 만들기](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |유지 관리 계획 디자인 화면을 사용하여 유지 관리 계획을 만드는 방법에 대해 설명합니다.|[유지 관리 계획 만들기&#40;유지 관리 계획 디자인 화면&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

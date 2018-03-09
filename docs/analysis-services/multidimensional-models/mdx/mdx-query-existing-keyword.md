@@ -2,37 +2,31 @@
 title: "EXISTING 키워드 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- EXISTING
-helpviewer_keywords:
-- Existing keyword
+f1_keywords: EXISTING
+helpviewer_keywords: Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c3a9ebbb73e8bf2b305a7ab2730439ffd0d53f8f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5078aa14be3c476e8b89545ed1541f12b7686f4e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-query---existing-keyword"></a>MDX 쿼리-EXISTING 키워드
-  지정한 집합이 현재 컨텍스트 내에서 계산되도록 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]지정 된 집합이 현재 컨텍스트 내에서 계산 되도록 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -97,4 +91,3 @@ WHERE
  [MDX 함수 참조 &#40; Mdx&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   
-

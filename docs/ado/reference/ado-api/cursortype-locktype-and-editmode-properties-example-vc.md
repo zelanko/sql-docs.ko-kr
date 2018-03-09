@@ -3,7 +3,7 @@ title: "모두, LockType, 및 EditMode 속성 예제 (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9ab38e935694c17d27d8a451465e217129b1b3a0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ac9f781cb1625b2dcf48fa0be8eb2e15b3759d58
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>모두, LockType, 및 EditMode 속성 예제 (VC + +)
 이 예제에서는 설정 된 [모두](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 속성 열기 전에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 또한의 값을 표시는 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 다양 한 조건에서 속성입니다. EditModeOutput 함수는이 절차를 실행 하려면 필요 합니다.  
@@ -164,14 +163,13 @@ void PrintComError(_com_error &e) {
 ```  
   
   **AddNew 후:**   
- **EditMode adEditAdd =**  
+ **EditMode = adEditAdd**  
 **후 업데이트:**   
- **EditMode adEditNone =**  
+ **EditMode = adEditNone**  
 **후 편집:**   
- **EditMode adEditInProgress =**   
+ **EditMode = adEditInProgress**   
 ## <a name="see-also"></a>관련 항목:  
  [모두 속성 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [EditMode 속성](../../../ado/reference/ado-api/editmode-property.md)   
  [LockType 속성 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

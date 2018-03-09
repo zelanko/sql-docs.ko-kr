@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - functions [ODBC], duplicated functions
 - backward compatibility [ODBC], duplicated functions
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 911e36882d278a997126dbf0ee99bbab837c5125
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="duplicated-features"></a>중복 된 기능
 다음 ODBC 2입니다. *x* 함수 ODBC 3에 의해 복제 된 했습니다. *x* 함수입니다. 결과적으로 ODBC 2. *x* ODBC 3에서 함수는 사용 되지 않습니다. *x*합니다. ODBC 3입니다. *x* 함수는 대체 함수 라고 합니다.  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  함수 **SQLBindParam** 는 특별 한 경우. **SQLBindParam** 기능을 복제 합니다. 이 ODBC 2*.x* 함수, 했지만 Open Group 및 ISO 표준에 존재 하는 함수입니다. 이 함수에 의해 제공 되는 기능에 따라 완전히 포함 됩니다. **SQLBindParameter**합니다. 결과적으로, 드라이버 관리자에 대 한 호출을 매핑합니다 **SQLBindParam** 를 **SQLBindParameter** 때 기본 드라이버는 ODBC 3. *x* 드라이버입니다. 그러나 기본 드라이버는 ODBC 2는*.x* 드라이버를 드라이버 관리자에서이 매핑을 수행 하지 않습니다.
-

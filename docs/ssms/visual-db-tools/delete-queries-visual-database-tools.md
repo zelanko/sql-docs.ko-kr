@@ -3,8 +3,11 @@ title: "쿼리 삭제(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b3c61f8905a7625ccedc00153bf02eca62287b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e9ca26d7fd7245b1d2c3d40935becb0e8a9345ae
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-queries-visual-database-tools"></a>쿼리 삭제(Visual Database Tools)
-쿼리를 프로젝트에서 제거하고 파일 시스템에서 영구 삭제하는 방식으로 쿼리를 삭제할 수 있습니다. 다음 절차를 사용하여 삭제한 쿼리는 휴지통에 보관되지 않으므로 복원할 수 없습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리를 프로젝트에서 제거하고 파일 시스템에서 영구 삭제하는 방식으로 쿼리를 삭제할 수 있습니다. 다음 절차를 사용하여 삭제한 쿼리는 휴지통에 보관되지 않으므로 복원할 수 없습니다.  
   
 ### <a name="to-permanently-delete-a-query"></a>쿼리를 영구히 삭제하려면  
   

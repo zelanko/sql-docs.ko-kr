@@ -2,24 +2,25 @@
 title: "Revoscalepy 소개 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="introducing-revoscalepy"></a>Revoscalepy 소개
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **revoscalepy** 분산 컴퓨팅을 지원 하기 위해 microsoft에서 원격 계산 컨텍스트 및 고성능 알고리즘 Python에 대 한 제공 된 새 라이브러리입니다.
 
@@ -91,7 +92,7 @@ SQL Server 및 Python에 따라서는 다른 데이터 형식을 사용합니다
 |`rx_predict` | 학습된 된 모델에서 예측을 생성 합니다.|`rx_predict_ex`CTP 2.0|
 |`rx_summary` | 모델의 요약을 생성 합니다.||
 
-새 기계 학습 알고리즘의 Python 버전도 제공 됩니다 [MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
+새 기계 학습 알고리즘의 Python 버전도 제공 됩니다 [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
 | 함수| Description|
 | ------ | ------ |
@@ -125,7 +126,7 @@ Python 용 MicrosoftML도 다양 한 변환 및 도우미 함수를 같은 포�
 
 로컬로 실행 하는 경우 일반적으로 실행 하는 Python 스크립트 명령줄 또는 Python 개발 환경에서 고 지정 중 하나를 사용 하 여 SQL Server 계산 컨텍스트는 **revoscalepy** 함수입니다. 전체 코드에 대 한 또는 개별 함수에 대 한 원격 계산 컨텍스트를 사용할 수 있습니다. 예를 들어 다음 모델을 학습 데이터 이동을 방지 하 고 최신 데이터를 사용 하 여 서버를 오프 로드 하는 것이 좋습니다.
 
-저장 프로시저는 완전 한 Python 스크립트를 설정 하려면 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), 코드 입 / 출력 명확 하 게 정의 단일 함수로 다시 작성 하는 것이 좋습니다. 입 / 출력 해야 **팬더** 데이터 프레임입니다. 이 도구를 실행 하는 경우 T-SQL을 지 원하는 모든 클라이언트에서 저장된 프로시저를 호출, 쉽게 입력으로 SQL 쿼리를 전달 하 고 수 SQL 테이블에 결과 저장 합니다. 예를 들어 참조 [L 개발자를 위한 In-database Python 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)합니다.
+저장 프로시저는 완전 한 Python 스크립트를 설정 하려면 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), 코드 입 / 출력 명확 하 게 정의 단일 함수로 다시 작성 하는 것이 좋습니다. 입 / 출력 해야 **팬더** 데이터 프레임입니다. 이 도구를 실행 하는 경우 T-SQL을 지 원하는 모든 클라이언트에서 저장된 프로시저를 호출, 쉽게 입력으로 SQL 쿼리를 전달 하 고 수 SQL 테이블에 결과 저장 합니다. 예를 들어 참조 [SQL 개발자를 위해 데이터베이스에서 Python 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)합니다.
 
 ### <a name="using-remote-compute-contexts"></a>원격 계산 컨텍스트를 사용 하 여
 
@@ -162,7 +163,7 @@ SQL Server에서 Python 코드를 실행 하려면 먼저 설치 해야 SQL Serv
 
 이러한 Api에 대 한 전체 설명서는 제품 해제 될 때 사용할 수 있습니다. 한편, RevoScaleR 또는 MicrosoftML 라이브러리에는 해당 함수가 참조 하는 것이 좋습니다.
 
-+ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler)합니다.
++ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
 + [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)
 
 모듈을 내보내고 다음 호출 하는 모든 Python 함수에 도움말을 가져와서 `help()`합니다. 예를 들면 `help(revoscalepy)` Python IDE에서 모든 함수 목록이 revoscalepy 모듈 서명으로 반환 합니다.

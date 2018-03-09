@@ -31,17 +31,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 76
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0fb8883678dad7a62cac9c2109b093ee79e27b27
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -49,8 +48,11 @@ ms.lasthandoff: 09/27/2017
 비클러스터형된 columnstore 인덱스를 만들거나 rowstore 테이블을 클러스터형된 columnstore 인덱스로 변환 합니다. OLTP 워크 로드에서 실시간 운영 분석을 효율적으로 실행 하거나 데이터 웨어하우징 작업에 대 한 데이터 압축 및 쿼리 성능 향상을 위해 columnstore 인덱스를 사용 합니다.  
   
 > [!NOTE]  
->  부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], 테이블을 클러스터형된 columnstore 인덱스로 만들 수 있습니다.   먼저 rowstore 테이블을 생성 한 다음 클러스터형된 columnstore 인덱스로 변환 하는 데 필요한 파일이 없습니다.  
-  
+> 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], 테이블을 클러스터형된 columnstore 인덱스로 만들 수 있습니다.   먼저 rowstore 테이블을 생성 한 다음 클러스터형된 columnstore 인덱스로 변환 하는 데 필요한 파일이 없습니다.  
+
+> [!TIP]
+> 인덱스 디자인 지침에 대 한 자세한 내용은 참조는 [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)합니다.
+
 예제를 건너뜁니다.  
 -   [Rowstore 테이블을 columnstore로 변환 하기 위한 예제](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [비클러스터형 columnstore 인덱스에 대 한 예제](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -123,7 +125,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX
   
 테이블에 클러스터형된 columnstore 인덱스가 이미 있으면 기존 인덱스와 같은 이름을 지정할 수 있습니다 또는 DROP EXISTING 옵션을 사용 하 여 새 이름을 지정 합니다.  
   
-ON [*database_name*합니다. [*schema_name* ]. | *schema_name* 합니다. ] *table_name*  
+ON [*database_name*합니다. [*schema_name* ] . | *schema_name* . ] *table_name*  
    클러스터형 columnstore 인덱스로 저장할 테이블의 한, 두 또는 세 부분으로 이루어진 이름을 지정합니다. 테이블이 힙인 경우 클러스터형된 인덱스는 테이블은 rowstore에서 columnstore로 변환 됩니다. 테이블을 columnstore 이미 있으면이 문은 클러스터형된 columnstore 인덱스 다시 작성 합니다.  
   
 의 모든 멘션을  
@@ -171,7 +173,7 @@ ON
    *filegroup_name*  
    클러스터형 columnstore 인덱스를 저장할 파일 그룹을 지정합니다. 지정된 위치가 없고 테이블이 분할되지 않은 경우 인덱스는 기본 테이블 또는 뷰와 동일한 파일 그룹을 사용합니다. 파일 그룹은 이미 존재해야 합니다.  
 
-   **"**기본**"**  
+   **"**default**"**  
    기본 파일 그룹에 인덱스를 만들려면 "default" 또는 [default]를 사용 합니다.  
   
    "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. QUOTED_IDENTIFIER는 기본적으로 ON입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
@@ -186,7 +188,7 @@ Rowstore 테이블에 비클러스터형 columnstore 인덱스를 만들 힙 또
     저장할 열을 지정합니다. 비클러스터형 columnstore 인덱스는 1024 개의 열으로 제한 합니다.  
    각 열은 columnstore 인덱스에 대해 지원되는 데이터 형식이어야 합니다. 참조 [제한 사항](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) 목록은 지원 되는 데이터 형식입니다.  
 
-ON [*database_name*합니다. [*schema_name* ]. | *schema_name* 합니다. ] *table_name*  
+ON [*database_name*합니다. [*schema_name* ] . | *schema_name* . ] *table_name*  
    1 개, 2 개 또는 세 부분으로 인덱스를 포함 하는 테이블의 이름을 지정 합니다.  
 
 WITH DROP_EXISTING = [OFF] | ON  
@@ -255,7 +257,7 @@ ON
 *filegroup_name*  
    인덱스를 만들 파일 그룹 이름을 지정합니다. 경우 *filegroup_name* 지정 하지 않으면 테이블이 분할 되지 않은 경우, 인덱스는 기본 테이블과 동일한 파일 그룹을 사용 하 고 있습니다. 파일 그룹은 이미 존재해야 합니다.  
  
-**"**기본**"**  
+**"**default**"**  
 기본 파일 그룹에 지정된 인덱스를 만듭니다.  
   
 이 컨텍스트에서 default는 키워드가 아닙니다. 기본 파일 그룹에 대 한 식별자 이며 ON 같이 구분 되어야 합니다 **"**기본**"** 또는 ON **[**기본**]**합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
@@ -275,7 +277,7 @@ ON
 - INSERT, UPDATE, DELETE 또는 MERGE 작업으로 필터링된 인덱스의 데이터를 수정합니다.  
 - 필터링 된 인덱스는 쿼리 최적화 프로그램에서 쿼리 계획을 생성 하기 위해 사용 됩니다.  
   
-    |Set 옵션|필요한 값|기본 서버 값|기본값<br /><br /> OLE DB 및 ODBC 값|기본값<br /><br /> DB-Library 값|  
+    |SET 옵션|필요한 값|기본 서버 값|기본값<br /><br /> OLE DB 및 ODBC 값|기본값<br /><br /> DB-Library 값|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -300,14 +302,14 @@ ON
 ##  <a name="LimitRest"></a> 제한 사항  
 
 **Columnstore 인덱스의 각 열은 다음과 같은 일반적인 비즈니스 데이터 형식 중 하나 여야 합니다.** 
--   datetimeoffset [(  *n*  )]  
+-   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [(  *n*  )]  
 -   datetime  
 -   smalldatetime  
 -   date  
--   시간 [(  *n*  )]  
+-   time [ ( *n* ) ]  
 -   float [(  *n*  )]  
--   실제 [(  *n*  )]  
+-   real [ ( *n* ) ]  
 -   10 진수 [( *정밀도* [ *, 배율* ] **)** ]
 -   숫자 [( *정밀도* [ *, 배율* ] **)** ]    
 -   money  
@@ -317,12 +319,12 @@ ON
 -   smallint  
 -   tinyint  
 -   bit  
--   nvarchar [(  *n*  )] 
+-   nvarchar [ ( *n* ) ] 
 -   nvarchar (max) (적용할 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 클러스터형된 columnstore 인덱스에만에서 가격 책정 계층을 premium Azure SQL 데이터베이스)   
--   nchar [(  *n*  )]  
--   varchar [(  *n*  )]  
+-   nchar [ ( *n* ) ]  
+-   varchar [ ( *n* ) ]  
 -   varchar (max) (적용할 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 클러스터형된 columnstore 인덱스에만에서 가격 책정 계층을 premium Azure SQL 데이터베이스)
--   char [(  *n*  )]  
+-   char [ ( *n* ) ]  
 -   varbinary [(  *n*  )] 
 -   varbinary (max) (적용할 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 클러스터형된 columnstore 인덱스에만에서 가격 책정 계층을 premium Azure SQL 데이터베이스)
 -   이진 [(  *n*  )]  
@@ -715,5 +717,4 @@ WITH ( DROP_EXISTING = ON);
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
-
 

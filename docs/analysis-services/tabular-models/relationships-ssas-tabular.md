@@ -1,32 +1,31 @@
 ---
-title: "관계 (SSAS 테이블 형식) | Microsoft Docs"
+title: "관계 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eb0e07074d8658944d6abb3feaeab2b8c51a5d92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="relationships-ssas-tabular"></a>관계(SSAS 테이블 형식)
-  테이블 형식 모델에서 관계는 두 데이터 테이블 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다. 예를 들어 Customers 테이블과 Orders 테이블을 연결하여 각 주문에 연결된 고객 이름을 표시할 수 있습니다.  
+# <a name="relationships"></a>관계 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+테이블 형식 모델에서 관계는 두 데이터 테이블 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다. 예를 들어 Customers 테이블과 Orders 테이블을 연결하여 각 주문에 연결된 고객 이름을 표시할 수 있습니다.  
   
  테이블 가져오기 마법사를 사용하여 동일한 데이터 원본에서 가져오기를 수행할 경우 가져오기로 선택한 테이블(데이터 원본에서)에 이미 있는 관계가 모델에 다시 만들어집니다. 다이어그램 뷰의 모델 디자이너 또는 관계 관리 대화 상자를 사용하여 자동으로 검색된 관계와 다시 만들어진 관계를 볼 수 있습니다. 또한 다이어그램 뷰의 모델 디자이너나 관계 만들기 또는 관계 관리 대화 상자를 사용하여 수동으로 테이블 간에 새로운 관계를 만들 수도 있습니다.  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  이 접근 방법도 나쁘지 않지만 이 경우 각 주문에 대해 고객의 전자 메일 주소와 같은 중복 데이터가 다량 저장될 수 있습니다. 저장 비용은 저렴하지만 전자 메일 주소가 변경될 경우 해당 고객에 대한 모든 행을 업데이트해야 합니다. 데이터를 여러 테이블로 분할하고 해당 테이블 간에 관계를 정의하면 이러한 문제를 해결할 수 있습니다. 사용 하는 방법 이것이 *관계형 데이터베이스* SQL server. 예를 들어 모델로 가져온 데이터베이스에서 다음과 같은 세 개의 관련 테이블을 사용하여 주문 데이터를 나타낼 수 있습니다.  
   
-### <a name="customers"></a>고객  
+### <a name="customers"></a>Customers  
   
 |[CustomerID]|이름|EMail|  
 |--------------------|----------|-----------|  
@@ -105,7 +104,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="single-active-relationship-between-tables"></a>테이블 간 단일 활성 관계  
  관계가 여러 개 있으면 테이블 간의 종속성이 모호해질 수 있습니다. 정확한 계산을 만들려면 한 테이블에서 다음 테이블로 연결되는 단일 경로가 필요합니다. 따라서 각 테이블 쌍 사이에는 하나의 활성 관계만 있을 수 있습니다. 예를 들어 AdventureWorks DW 2012에서 DimDate 테이블에는 FactInternetSales 테이블의 세 가지 다른 열인 OrderDate, DueDate 및 ShipDate와 관련된 DateKey 열이 포함되어 있습니다. 이러한 테이블을 가져오려는 경우 첫 번째 관계는 성공적으로 만들어지지만 같은 열에 적용되는 연속된 관계에 대해 다음 오류가 나타나게 됩니다.  
   
- \*관계: 테이블 [열 1]-> 테이블 [열 2]-상태: 오류-이유: 테이블 간에 관계를 만들 수 없습니다 \<표 1 > 및 \<표 2 >. 두 테이블 간에는 하나의 직접 또는 간접 관계만 존재합니다.  
+ \* 관계: 테이블 [열 1]-> 테이블 [열 2]-상태: 오류-이유: 테이블 간에 관계를 만들 수 없습니다 \<표 1 > 및 \<표 2 >. 두 테이블 간에는 하나의 직접 또는 간접 관계만 존재합니다.  
   
  테이블이 두 개 있고 이 테이블 간에 여러 관계가 있는 경우 조회 열을 포함하는 테이블의 여러 복사본을 가져와서 각 테이블 쌍 간에 하나의 관계를 만들어야 합니다.  
   

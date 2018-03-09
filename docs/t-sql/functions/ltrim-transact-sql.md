@@ -25,17 +25,16 @@ helpviewer_keywords:
 - LTRIM function
 - blank characters [SQL Server]
 ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
-caps.latest.revision: 36
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad63999f685b31848ea505fd5a671d1e163ddc91
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1f73f29131ad94037c5dce500d3877567dedef8f
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +62,7 @@ LTRIM ( character_expression )
 
  다음 예제에서는 문자 식에서 선행 공백을 제거 하려면 LTRIM을 사용 합니다.  
   
-```tsql  
+```sql  
 SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.databases;  
 ```  
   
@@ -96,10 +95,15 @@ Original string Without spaces
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
+ [왼쪽 &#40; Transact SQL &#41;](../../t-sql/functions/left-transact-sql.md)  
+ [오른쪽 &#40; Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40; Transact SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40; Transact SQL &#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [부분 문자열 &#40; Transact SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM &#40; Transact SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
-
 
 

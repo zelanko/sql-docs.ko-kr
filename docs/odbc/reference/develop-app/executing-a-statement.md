@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL statements [ODBC], executing
+helpviewer_keywords: SQL statements [ODBC], executing
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddb265060dc0714ce4eafaa09ce336d289697309
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e3fdaf1a063951dcb06018858a905c5ee8651e9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-a-statement"></a>문 실행
 네 가지 방법으로 컴파일되는 경우 데이터베이스 엔진 및 사용자 정의 하 여 (준비)에 따라 문을 실행 하려면:  
@@ -92,11 +89,10 @@ while ((OrderID = GetOrderID()) != 0) {
   
 -   [직접 실행](../../../odbc/reference/develop-app/direct-execution-odbc.md)  
   
--   [준비 된 실행](../../../odbc/reference/develop-app/prepared-execution-odbc.md)  
+-   [준비된 실행](../../../odbc/reference/develop-app/prepared-execution-odbc.md)  
   
--   [프로시저](../../../odbc/reference/develop-app/procedures-odbc.md)  
+-   [절차](../../../odbc/reference/develop-app/procedures-odbc.md)  
   
 -   [SQL 문의 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md)  
   
 -   [카탈로그 함수 실행](../../../odbc/reference/develop-app/executing-catalog-functions.md)
-

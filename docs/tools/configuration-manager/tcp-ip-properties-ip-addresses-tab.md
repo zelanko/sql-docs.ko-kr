@@ -2,9 +2,12 @@
 title: "TCP/IP 속성 (IP 주소 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: 47
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 78513a9ebe1a0418a5dac367dc49b790d3197019
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3d2e6ea5bd6d2436946a015addc1e25f3dd98ce1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 속성(IP 주소 탭)
-  **TCP/IP 속성(IP 주소 탭)** 대화 상자를 사용하여 특정 IP 주소에 대한 TCP/IP 프로토콜 옵션을 구성할 수 있습니다. **IPAll** 을 선택하면 모든 주소에 대해 **TCP 동적 포트** 및 **TCP 포트**만 동시에 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+**TCP/IP 속성(IP 주소 탭)** 대화 상자를 사용하여 특정 IP 주소에 대한 TCP/IP 프로토콜 옵션을 구성할 수 있습니다. **IPAll** 을 선택하면 모든 주소에 대해 **TCP 동적 포트** 및 **TCP 포트**만 동시에 구성할 수 있습니다.  
   
  변경 내용은 SQL Server를 다시 시작할 때 적용됩니다. SQL Server Browser 서비스를 시작 및 중지하는 방법은 [SQL Server Browser 서비스 시작 및 중지](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)를 참조하세요.  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 09/27/2017
  **활성**  
  컴퓨터에서 IP 주소가 활성 상태임을 나타냅니다. **IPAll**에는 사용할 수 없습니다.  
   
- **설정**  
+ **사용**  
  **TCP/IP 속성(프로토콜 탭)** 의 **모두 수신합니다** 속성이 **아니요**로 설정되어 있으면 이 속성은 SQL Server가 IP 주소에서 수신하고 있는지 여부를 나타냅니다. **TCP/IP 속성(프로토콜 탭)** 의 **모두 수신합니다** 속성이 **예**로 설정되어 있으면 이 속성은 무시됩니다. **IPAll**에는 사용할 수 없습니다.  
   
  **IP 주소**  
@@ -56,7 +59,7 @@ ms.lasthandoff: 09/27/2017
   
  데이터베이스 엔진은 동일한 IP 주소에서 여러 포트를 수신할 수 있으며 1433,1500,1501의 형식으로 각 포트를 쉼표로 구분하여 나열합니다. 이 필드는 2047자로 제한됩니다.  
   
- 여러 포트를 수신하도록 단일 IP 주소를 구성하려면 **TCP/IP 속성** 대화 상자의 **프로토콜 탭**에서 **모두 수신합니다** 매개 변수도 **아니요** 로 설정해야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 "방법: SQL Server 온라인 설명서의 "방법: 여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성"을 참조하세요.  
+ 여러 포트를 수신하도록 단일 IP 주소를 구성하려면 **TCP/IP 속성** 대화 상자의 **프로토콜 탭**에서 **모두 수신합니다** 매개 변수도 **아니요**로 설정해야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 "방법: SQL Server 온라인 설명서의 "방법: 여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성"을 참조하세요.  
   
 ## <a name="adding-or-removing-ip-addresses"></a>IP 주소 추가 및 제거  
  SQL Server 구성 관리자는 SQL Server를 설치할 때 사용할 수 있었던 IP 주소를 표시합니다. 사용 가능한 IP 주소가 변경되는 경우로는 네트워크 카드를 추가 또는 제거한 경우, 동적으로 할당한 IP 주소가 만료된 경우, 네트워크 구조를 재구성하는 경우 또는 노트북 컴퓨터를 다른 건물의 네트워크로 연결하는 것과 같이 컴퓨터의 물리적 위치를 변경하는 경우가 있습니다. IP 주소를 변경하려면 **IP 주소** 입력란을 편집하고 SQL Server를 다시 시작하세요.  
@@ -70,4 +73,3 @@ ms.lasthandoff: 09/27/2017
  [SQL Server Browser 서비스](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   
-

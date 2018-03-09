@@ -2,9 +2,12 @@
 title: "오류 및 이벤트 참조(복제) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 20e7e616a30c61840899c0bd168d72dbaabe99ce
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7a053348a203ad7d1e3a9a3cf9fa0f7672300b64
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="errors-and-events-reference-replication"></a>오류 및 이벤트 참조(복제)
-  설명서의 이 섹션에는 복제와 관련된 다양한 오류의 원인 및 해결 방법에 대한 정보가 포함되어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 설명서의 이 섹션에는 복제와 관련된 다양한 오류의 원인 및 해결 방법에 대한 정보가 포함되어 있습니다.  
   
-|오류|메시지|  
+|Error|메시지|  
 |-----------|-------------|  
 |[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|고유 인덱스가 '%.\*ls'인 개체 '%.*ls'에 중복 키 행을 삽입할 수 없습니다.|  
 |[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|%ls 제약 조건 '%.*ls'을(를) 위반했습니다. 개체 '%.\*ls'에 중복 키를 삽입할 수 없습니다.|  
@@ -48,12 +51,12 @@ ms.lasthandoff: 11/09/2017
 |[MSSQL_ENG014151](../../relational-databases/replication/mssql-eng014151.md)|복제-%s: 에이전트 %s이(가) 실패했습니다. %s|  
 |[MSSQL_ENG014152](../../relational-databases/replication/mssql-eng014152.md)|복제-%s: 에이전트 %s이(가) 다시 시도하도록 예약되었습니다. %s|  
 |[MSSQL_ENG014157](../../relational-databases/replication/mssql-eng014157.md)|구독자 '%s'이(가) 게시 '%s'에 대해 만든 구독이 만료되어 삭제되었습니다.|  
-|[MSSQL_ENG014160](../../relational-databases/replication/mssql-eng014160.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 이 게시에 대해 하나 이상의 구독이 만료되었습니다.|  
-|[MSSQL_ENG014161](../../relational-databases/replication/mssql-eng014161.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 로그 판독기와 배포 에이전트가 실행 중이고 대기 시간 요구 사항에 맞는지 확인하십시오.|  
-|[MSSQL_ENG014162](../../relational-databases/replication/mssql-eng014162.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
+|[MSSQL_ENG014160](../../relational-databases/replication/mssql-eng014160.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오. 이 게시에 대해 하나 이상의 구독이 만료되었습니다.|  
+|[MSSQL_ENG014161](../../relational-databases/replication/mssql-eng014161.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오. 로그 판독기와 배포 에이전트가 실행 중이고 대기 시간 요구 사항에 맞는지 확인하십시오.|  
+|[MSSQL_ENG014162](../../relational-databases/replication/mssql-eng014162.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
 |[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
-|[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
-|[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
+|[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
+|[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
 |[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|사용자 '%.*ls'이(가) 로그인하지 못했습니다.%.\*ls|  
 |[MSSQL_ENG018752](../../relational-databases/replication/mssql-eng018752.md)|한 번에 하나의 로그 판독기 에이전트 또는 로그 관련 프로시저(sp_repldone, sp_replcmds 및 sp_replshowcmds)만 데이터베이스에 연결할 수 있습니다. 로그 관련 프로시저를 실행한 경우 로그 판독기 에이전트를 시작하거나 다른 로그 관련 프로시저를 실행하기 전에 프로시저가 실행된 연결을 삭제하거나 해당 연결에 대해 sp_replflush를 실행하십시오.|  
 |[MSSQL_ENG020554](../../relational-databases/replication/mssql-eng020554.md)|복제 에이전트가 %ld분 동안 진행률 메시지를 로깅하지 않았습니다. 이것은 에이전트가 응답하지 않거나 시스템 작업이 많음을 나타낼 수 있습니다. 레코드가 대상으로 복제되고 구독자, 게시자 및 배포자에 대한 연결이 여전히 활성 상태인지 확인하십시오.|  

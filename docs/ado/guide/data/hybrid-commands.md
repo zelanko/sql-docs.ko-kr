@@ -3,7 +3,7 @@ title: "하이브리드 명령 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - hybrid commands [ADO]
 - data shaping [ADO], hybrid commands
 ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cc240642d81d5ca88b5b46f6e570c3446c7c7cdf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 630672ff1e030fa99912fdc1d739d3aab68f23d1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hybrid-commands"></a>하이브리드 명령
 하이브리드 주석은 부분적으로 매개 변수화 된 명령을 있습니다. 예를 들어  
@@ -45,4 +44,3 @@ SHAPE {select * from plants}
  [데이터 예제를 셰이핑](../../../ado/guide/data/data-shaping-example.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)
-

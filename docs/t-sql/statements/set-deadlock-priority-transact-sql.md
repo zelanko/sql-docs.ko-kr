@@ -26,17 +26,16 @@ helpviewer_keywords:
 - priority deadlock settings [SQL Server]
 - SET DEADLOCK_PRIORITY statement
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
-caps.latest.revision: 35
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 12be78ffb2e899170095415a03dccc69511f7424
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  교착 상태가 발생한 것으로 선택하는 세션은 각 세션의 교착 상태 우선 순위에 따라 다릅니다.  
   
--   두 세션의 교착 상태 우선 순위가 같으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 교착 상태가 발생한 것으로 롤백하는 데 비용이 적게 드는 세션을 선택합니다. 예를 들어 두 세션의 교착 상태 우선 순위가 HIGH로 설정되어 있으면 인스턴스는 롤백하는 데 비용이 적게 드는 것으로 예상되는 세션을 교착 상태가 발생한 것으로 선택합니다.  
+-   두 세션의 교착 상태 우선 순위가 같으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 교착 상태가 발생한 것으로 롤백하는 데 비용이 적게 드는 세션을 선택합니다. 예를 들어 두 세션의 교착 상태 우선 순위가 HIGH로 설정되어 있으면 인스턴스는 롤백하는 데 비용이 적게 드는 것으로 예상되는 세션을 교착 상태가 발생한 것으로 선택합니다. 각 트랜잭션에서 해당 시점에 쓴 로그 바이트 수를 비교 하 여 비용을 결정 합니다. (이 값 볼 수 있습니다이 "로그 사용"으로 교착 상태 그래프에).
   
 -   세션의 교착 상태 우선 순위가 다르면 교착 상태 우선 순위가 가장 낮은 세션이 교착 상태가 발생한 것으로 선택됩니다.  
   
@@ -111,4 +110,3 @@ GO
  [SET LOCK_TIMEOUT &#40; Transact SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   
-

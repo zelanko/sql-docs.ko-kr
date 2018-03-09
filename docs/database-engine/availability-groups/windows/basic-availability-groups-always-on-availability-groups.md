@@ -1,7 +1,7 @@
 ---
 title: "기본 가용성 그룹(Always On 가용성 그룹) | Microsoft Docs"
 ms.custom: 
-ms.date: 09/27/2016
+ms.date: 02/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -13,16 +13,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: ba38095f11a5f40ec6b9a9398217a98f390d146d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
-ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>기본 가용성 그룹(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +43,7 @@ ms.lasthandoff: 09/28/2017
 - 보조 복제본에 대한 무결성 검사가 없습니다. 
 
 - SQL Server 2016 CTP3(Community Technology Preview 3) 이전 버전의 SQL Server를 실행하는 서버에서 호스팅되는 복제본은 지원되지 않습니다.  
-  
-- 기존의 기본 가용성 그룹에 대한 복제본 추가 또는 제거가 지원되지 않습니다.  
-  
+
 - 하나의 가용성 데이터베이스가 지원됩니다.  
   
 - 기본 가용성 그룹은 고급 가용성 그룹으로 업그레이드할 수 없습니다. 그룹을 삭제하고 SQL Server 2016 Enterprise Edition에서만 실행되는 서버를 포함하는 그룹에 다시 추가해야 합니다.  
@@ -67,4 +64,3 @@ ms.lasthandoff: 09/28/2017
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

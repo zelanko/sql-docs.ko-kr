@@ -1,5 +1,5 @@
 ---
-title: "디지털 서명으로 패키지의 원본을 확인 | Microsoft Docs"
+title: "디지털 서명을 사용하여 패키지 원본 확인 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1df41a5be2b49662abec2f44ddc0de07fea87a6e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c9356463b29b1a4971ddd336a9b44d47f3983f83
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>디지털 서명을 사용하여 패키지 원본 확인
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 해당 원본을 식별하는 디지털 인증서를 사용하여 서명할 수 있습니다. 디지털 인증서를 사용하여 패키지에 서명하면 패키지를 로드하기 전에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 디지털 서명을 확인하도록 할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 서명을 확인하도록 하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 **dtexec** 유틸리티(dtexec.exe)에서 옵션을 설정하거나 선택적 레지스트리 값을 설정합니다.  
@@ -66,10 +65,10 @@ ms.lasthandoff: 08/03/2017
   
  다음 표에서는 DWORD 데이터의 유효한 값 및 연관된 정책을 나열합니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|관리 제한이 없습니다.|  
-|1.|잘못된 서명을 차단합니다.<br /><br /> 이 설정은 서명되지 않은 패키지를 차단하지 않습니다.|  
+|1|잘못된 서명을 차단합니다.<br /><br /> 이 설정은 서명되지 않은 패키지를 차단하지 않습니다.|  
 |2|잘못된 서명과 신뢰할 수 없는 서명을 차단합니다.<br /><br /> 이 설정은 서명되지 않은 패키지를 차단하지 않지만 자체 생성된 서명은 차단합니다.|  
 |3|잘못된 서명과 신뢰할 수 없는 서명, 서명되지 않은 패키지를 차단합니다.<br /><br /> 이 설정은 자체 생성된 서명도 차단합니다.|  
   
@@ -141,21 +140,20 @@ ms.lasthandoff: 08/03/2017
   
      패키지에 서명했더라도 패키지를 로드하기 전에 디지털 서명을 확인하도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 구성해야 합니다.  
 
-## <a name="signing_dialog"></a>디지털 서명 대화 상자 UI 참조
+## <a name="signing_dialog"></a> 디지털 서명 대화 상자 UI 참조
   **디지털 서명** 대화 상자를 사용하여 패키지를 디지털 서명으로 서명하거나 서명을 제거할 수 있습니다. **디지털 서명** 대화 상자는 **의** SSIS **메뉴에 있는** 디지털 서명 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]옵션에서 사용할 수 있습니다.  
   
  자세한 내용은 [디지털 인증서를 사용하여 패키지 서명](#cert)을 참조하세요.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **서명**  
  클릭하여 **인증서 선택** 대화 상자를 열고 사용할 인증서를 선택합니다.  
   
  **제거**  
  디지털 서명을 제거하려면 클릭합니다.  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services&#40;SSIS&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)   
- [보안 개요 &#40; Integration services&#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [보안 개요&#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
   
   
-

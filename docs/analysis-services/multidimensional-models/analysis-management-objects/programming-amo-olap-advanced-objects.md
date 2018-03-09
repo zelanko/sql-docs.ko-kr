@@ -1,16 +1,14 @@
 ---
 title: "AMO OLAP 고급 개체 프로그래밍 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: 23
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dedfe7e17d6f8fd0be0bb769b9891880a83b2eba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>AMO OLAP 고급 개체 프로그래밍
   이 항목에서는 AMO(Analysis Management Objects) OLAP 고급 개체를 프로그래밍하는 방법에 대해 자세히 설명합니다. 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -46,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [번역 개체](#Transl)  
   
-##  <a name="Action"></a>동작 개체  
+##  <a name="Action">동작 개체</a>  
  Action 클래스 - 큐브의 특정 영역을 탐색할 때 활성 응답을 만드는 데 사용됩니다. 동작 개체는 AMO를 사용하여 정의될 수 있지만 데이터를 탐색하는 클라이언트 응용 프로그램에서 사용됩니다. 동작에는 여러 유형이 있을 수 있으므로 해당 유형에 따라 동작을 만들어야 합니다. 다음과 같은 유형의 동작이 있을 수 있습니다.  
   
 -   동작이 발생하는 큐브에서 선택된 셀에 대한 기본 데이터를 나타내는 행 집합을 반환하는 드릴스루 동작  
@@ -194,7 +191,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI"></a>Kpi 개체  
+##  <a name="KPI">Kpi 개체</a>  
  KPI(핵심 성과 지표)는 큐브의 측정값 그룹과 관련된 계산 모음으로 비즈니스 성취도 평가에 사용됩니다. <xref:Microsoft.AnalysisServices.Kpi> 개체는 AMO를 사용하여 정의될 수 있지만 데이터를 탐색하는 클라이언트 응용 프로그램에서 사용됩니다.  
   
  <xref:Microsoft.AnalysisServices.Kpi> 개체를 만들려면 다음 단계를 수행합니다.  
@@ -353,7 +350,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp"></a>Perspective 개체  
+##  <a name="Persp">Perspective 개체</a>  
  <xref:Microsoft.AnalysisServices.Perspective> 개체는 AMO를 사용하여 정의될 수 있지만 데이터를 탐색하는 클라이언트 응용 프로그램에서 사용됩니다.  
   
  <xref:Microsoft.AnalysisServices.Perspective> 개체를 만들려면 다음 단계를 수행합니다.  
@@ -416,7 +413,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC"></a>ProactiveCaching 개체  
+##  <a name="PC">ProactiveCaching 개체</a>  
  <xref:Microsoft.AnalysisServices.ProactiveCaching> 개체는 AMO에서 정의될 수 있습니다.  
   
  <xref:Microsoft.AnalysisServices.ProactiveCaching> 개체를 만들려면 다음 단계를 수행합니다.  
@@ -427,7 +424,7 @@ static public void CreatePerspectives(Cube cube)
   
 2.  캐시 사양을 추가합니다.  
   
-|사양|설명|  
+|사양|Description|  
 |-------------------|-----------------|  
 |AggregationStorage|집계에 대한 저장소 유형입니다.<br /><br /> 파티션에만 적용됩니다. 차원에서 **Regular.**여야 합니다.|  
 |SilenceInterval|MOLAP 이미징 처리를 시작하기 전에 캐시가 존재하는 최소 시간입니다.|  
@@ -473,7 +470,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl"></a>번역 개체  
+##  <a name="Transl">번역 개체</a>  
  번역 개체는 AMO를 사용하여 정의될 수 있지만 데이터를 탐색하는 클라이언트 응용 프로그램에서 사용됩니다. 번역 개체는 코드를 작성할 수 있는 단순 개체입니다. 개체 캡션에 대한 번역은 로캘 ID 및 번역된 캡션 쌍으로 제공됩니다. 캡션에는 여러 번역을 사용할 수 있습니다. 번역은 차원, 특성, 계층, 큐브, 측정값 그룹, 측정값 등의 대부분의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체에 제공될 수 있습니다.  
   
  다음 코드 예제에서는 Product Name 특성의 이름에 대한 스페인어 번역을 제공합니다.  
@@ -502,4 +499,3 @@ static public void CreateTranslations(Database db)
  [Analysis Services 다차원 모델링 자습서에 대 한 예제 데이터 및 프로젝트 설치](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
-

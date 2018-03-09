@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - background fetching [ODBC]
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1074d9134e9ee0c0b1a828debd225b1462e53c4a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3db2f795910c0ee331ad77903b12201f365784e6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>(Visual FoxPro ODBC 드라이버) 문제 해결
 다음 섹션에서는 성능을 개선 하 고 Visual FoxPro ODBC 드라이버를 사용 하는 동안 발생 하는 문제를 해결 하는 방법에 설명 합니다.  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="using-the-set-ansi-command"></a>SET ANSI 명령을 사용 하 여  
  Visual FoxPro 개발자 인 경우에 기본 설정인 OFF Visual FoxPro에 대 한 달리 드라이버에 대 한 ANSI 설정에 대 한 기본 설정은 ON 인지 알고 있어야 합니다. ANSI 설정에 대 한 설정에 대 한 기본값에는 일반적으로 정확한 비교를 수행 하는 다른 ODBC 데이터 소스와 일관성 있게 동작 하도록 Visual FoxPro 데이터 원본 수 있습니다. 기본 설정은 변경할 수 있습니다. 자세한 내용은 참조 [ANSI 설정](../../odbc/microsoft/set-ansi-command.md)합니다.
-

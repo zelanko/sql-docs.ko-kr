@@ -3,8 +3,11 @@ title: "SQL Server 에이전트 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,17 @@ ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cebf731c4a429ea738b1031da3d4f9445af3096b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 67b44d5e9057cc9ede6cdece28b23ae3ab8bf037
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 *에서* 작업 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]이라고 하는 일정이 지정된 관리 태스크를 실행하는 Microsoft Windows 서비스입니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]에서 *작업*이라고 하는 일정이 지정된 관리 태스크를 실행하는 Microsoft Windows 서비스입니다.  
   
 **항목 내용**  
   
@@ -76,7 +80,7 @@ ms.lasthandoff: 11/09/2017
   
 자세한 내용은 [일정을 만들고 작업에 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)을 참조하세요.  
   
-### <a name="alerts"></a>경고  
+### <a name="alerts"></a>,  
 *경고* 는 특정 이벤트에 대한 자동 응답입니다. 예를 들어 이벤트는 시작되는 작업 또는 특정 임계값에 도달한 시스템 리소스일 수 있습니다. 경고가 발생할 조건을 정의합니다.  
   
 경고는 다음 조건 중 하나에 대해 응답할 수 있습니다.  

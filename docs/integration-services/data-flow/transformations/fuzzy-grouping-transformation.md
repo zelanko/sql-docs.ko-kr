@@ -31,17 +31,16 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: 58
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 03ffaa3d6dda388fc660feafc68a57fd8ce6346c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
   유사 항목 그룹화 변환에서는 중복되기 쉬운 데이터 행을 식별하고 데이터 표준화에 사용할 데이터의 중복 행을 선택하여 데이터 정리 태스크를 수행합니다.  
@@ -111,8 +110,8 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  연결에 지정된 서버에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행해야 합니다. 유사 항목 그룹화 변환에서는 변환에 대한 전체 입력만큼 클 수 있는 임시 데이터 개체를 tempdb에 만듭니다. 실행되는 동안 변환에서는 이러한 임시 개체에 대한 서버 쿼리를 실행합니다. 이 작업은 전체적인 서버 성능에 영향을 줄 수 있습니다.  
   
-### <a name="options"></a>옵션  
- **OLE DB 연결 관리자**  
+### <a name="options"></a>변수  
+ **캐시 없음**  
  목록 상자를 사용하여 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기** 단추를 사용하여 새 연결을 만듭니다.  
   
  **새로 만들기**  
@@ -121,7 +120,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>유사 항목 그룹화 변환 편집기(열 탭)
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **열** 탭을 사용하여 중복 값을 가진 행을 그룹화하는 데 사용할 열을 지정할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **사용 가능한 입력 열**  
  중복 값을 가진 행을 그룹화하는 데 사용할 입력 열을 이 목록에서 선택합니다.  
   
@@ -168,7 +167,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  유사 항목 그룹화 변환의 **Exhaustive** 및 **MaxMemoryUsage** 속성은 **유사 항목 그룹화 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)의 유사 항목 그룹화 변환 섹션을 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **입력 키 열 이름**  
  각 입력 행에 대한 고유 식별자를 포함하는 출력 열의 이름을 지정합니다. **_key_in** 열에는 각 행을 고유하게 식별하는 값이 있습니다.  
   
@@ -189,4 +188,3 @@ ms.lasthandoff: 08/19/2017
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

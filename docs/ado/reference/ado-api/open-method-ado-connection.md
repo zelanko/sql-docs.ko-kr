@@ -3,7 +3,7 @@ title: "Open 메서드 (ADO 연결) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: aecc064b9030adb40347737dc68998de3eee4d64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c61284bb59c01e22ef4f2cb46664fe7d7f7bbd2f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-connection"></a>Open 메서드 (ADO 연결)
 데이터 원본에 대 한 연결을 엽니다.  
@@ -43,10 +42,10 @@ connection.Open ConnectionString, UserID, Password, Options
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *연결 문자열*  
+ *ConnectionString*  
  (선택 사항) A **문자열** 연결 정보를 포함 하는 값입니다. 참조는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 유효한 설정에 대 한 자세한 내용은 속성입니다.  
   
- *사용자 Id*  
+ *UserID*  
  (선택 사항) A **문자열** 연결을 설정할 때 사용할 사용자 이름을 포함 하는 값입니다.  
   
  *암호*  
@@ -81,4 +80,3 @@ connection.Open ConnectionString, UserID, Password, Options
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open 메서드 (ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [OpenSchema 메서드](../../../ado/reference/ado-api/openschema-method.md)
-

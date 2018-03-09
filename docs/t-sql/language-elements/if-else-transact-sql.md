@@ -23,17 +23,16 @@ helpviewer_keywords:
 - ELSE keyword
 - IF keyword
 ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
-caps.latest.revision: 49
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5ea7d020bc637ff2dda4ba0540de8385e99170cd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 34a14f617d5eed0b56d6ffb44134f03efa96d2c2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,7 +106,6 @@ ELSE
  [흐름 제어 언어 &#40; Transact SQL &#41; ](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; IF... 다른 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   
-
 
 
 

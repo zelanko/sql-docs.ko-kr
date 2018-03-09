@@ -1,30 +1,29 @@
 ---
-title: "SQL Server Data Tools (SSDT)의 reporting Services | Microsoft Docs"
+title: "SQL Server Data Tools의 Reporting Services(SSDT) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Business Intelligence Development Studio, Reporting Services in
+helpviewer_keywords: Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 0192525485f994534c7996f5cbd5b9a53a56d15c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
 
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 비즈니스 인텔리전스 솔루션을 만들기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 환경입니다. SSDT에서는 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 정의, 공유 데이터 원본, 공유 데이터 집합 및 보고서 파트를 열고 수정하고 미리 보고 저장하고 배포할 수 있는 보고서 디자이너 제작 환경을 사용할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 SQL Server에 포함되어 있지 않습니다. [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다. 
@@ -43,11 +42,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_ReportServerProjects"></a> 보고서 서버 프로젝트  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 설치하면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 다음 프로젝트 템플릿을 사용할 수 있습니다.  
   
--   **보고서 서버 프로젝트** 보고서 서버 프로젝트를 선택하면 보고서 디자이너가 열립니다. 보고서 서버 프로젝트는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에 의해 설치되며 **새 프로젝트** 대화 상자에서 사용할 수 있는 비즈니스 인텔리전스 프로젝트 템플릿입니다. 자세한 내용은 참조 [보고서 프로젝트 &#40;에 새로운 또는 기존 보고서 추가 Ssrs&#41; ](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). 보고서 서버 프로젝트 속성 적용 모든 보고서 및 모든 공유 데이터 원본에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트. 이러한 속성에는 보고서 서버의 URL과 보고서 및 공유 데이터 원본의 폴더 이름이 포함됩니다. **프로젝트 속성 페이지** 대화 상자를 사용하여 현재 속성 값을 볼 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+-   **보고서 서버 프로젝트** 보고서 서버 프로젝트를 선택하면 보고서 디자이너가 열립니다. 보고서 서버 프로젝트는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에 의해 설치되며 **새 프로젝트** 대화 상자에서 사용할 수 있는 비즈니스 인텔리전스 프로젝트 템플릿입니다. 자세한 내용은 [보고서 프로젝트에 새 보고서 또는 기존 보고서 추가&#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md)를 참조하세요. 보고서 서버 프로젝트 속성은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트의 모든 보고서 및 모든 공유 데이터 원본에 적용됩니다. 이러한 속성에는 보고서 서버의 URL과 보고서 및 공유 데이터 원본의 폴더 이름이 포함됩니다. **프로젝트 속성 페이지** 대화 상자를 사용하여 현재 속성 값을 볼 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
 -   **보고서 서버 프로젝트 마법사** 보고서 서버 마법사 프로젝트를 선택하면 보고서 서버 프로젝트가 자동으로 만들어지고 보고서 마법사가 열립니다. 마법사에서는 각 페이지의 지침을 따라 데이터 원본에 대한 연결 문자열을 만들고, 데이터 원본 자격 증명을 설정하고, 쿼리를 디자인하고, 테이블 또는 행렬 데이터 영역을 추가하고, 보고서 데이터 및 그룹을 지정하고, 글꼴 및 색 스타일을 선택하고, 보고서 서버에 보고서를 게시하고, 보고서를 로컬에서 미리 보는 방법으로 보고서를 만들 수 있습니다. 마법사로 보고서를 만든 후에는 보고서 서버 프로젝트의 보고서 디자이너를 사용하여 보고서 데이터 및 보고서 디자이너를 변경할 수 있습니다.  
   
- ![SSDT에서 새 프로젝트 템플릿이](../../analysis-services/media/ssdt-biprojects.png "SSDT에서 새 프로젝트 템플릿")  
+ ![SSDT의 새 프로젝트 템플릿](../../analysis-services/media/ssdt-biprojects.png "SSDT의 새 프로젝트 템플릿")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 보고서 디자이너 창 및 하위 창  
@@ -70,7 +69,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **이미지** 보고서에 이미지 보고서 항목으로 포함할 수 있는 이미지의 목록입니다.  
   
- 보고서 데이터 창의 데이터 원본 및 데이터 집합은 보고서 정의의 요소를 나타냅니다. 보고서 데이터 창은 여러 보고서 제작 환경에서 지원되는 기능입니다. 보고서 작성기에서 데이터 원본 및 데이터 집합 관리를 위해 사용할 수 있는 유일한 창입니다. 보고서 디자이너의 보고서 데이터 창은 공유 데이터 원본과 공유 데이터 집합을 파일 형태로 나열하는 솔루션 탐색기와 함께 작동합니다. 보고서 데이터 창의 공유 데이터 원본과 공유 데이터 집합은 솔루션 탐색기에 있는 해당 공유 데이터 원본 및 공유 데이터 집합을 가리켜야 합니다. 또한 보고서 데이터 창의 요소가 솔루션 탐색기의 데이터 파일에 대한 참조를 포함해야 합니다. 프로젝트 속성은 공유 데이터 원본 및 공유 데이터 집합을 보고서 서버나 SharePoint 사이트에 배포할지 여부를 결정합니다. 자세한 내용은 참조 [변환 데이터 원본 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
+ 보고서 데이터 창의 데이터 원본 및 데이터 집합은 보고서 정의의 요소를 나타냅니다. 보고서 데이터 창은 여러 보고서 제작 환경에서 지원되는 기능입니다. 보고서 작성기에서 데이터 원본 및 데이터 집합 관리를 위해 사용할 수 있는 유일한 창입니다. 보고서 디자이너의 보고서 데이터 창은 공유 데이터 원본과 공유 데이터 집합을 파일 형태로 나열하는 솔루션 탐색기와 함께 작동합니다. 보고서 데이터 창의 공유 데이터 원본과 공유 데이터 집합은 솔루션 탐색기에 있는 해당 공유 데이터 원본 및 공유 데이터 집합을 가리켜야 합니다. 또한 보고서 데이터 창의 요소가 솔루션 탐색기의 데이터 파일에 대한 참조를 포함해야 합니다. 프로젝트 속성은 공유 데이터 원본 및 공유 데이터 집합을 보고서 서버나 SharePoint 사이트에 배포할지 여부를 결정합니다. 자세한 내용은 [데이터 원본 변환&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
 >  보고서 데이터 창이 표시되지 않는 경우 디자인 영역을 클릭한 다음 **보기** 메뉴에서 **보고서 데이터**를 클릭합니다. 보고서 데이터 창이 부동 창인 경우 고정할 수 있습니다. 자세한 내용은 [보고서 디자이너에서 보고서 데이터 창 도킹&#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)을 참조하세요.  
@@ -101,11 +100,11 @@ ms.lasthandoff: 08/09/2017
   
  속성 창을 사용하여 다음을 수행할 수 있습니다.  
   
--   디자인 화면에서 현재 선택한 항목의 속성을 설정합니다. 일부 속성은 값이 포함된 드롭다운 목록을 제공합니다. 셀에 직접 값을 입력할 수도 있습니다. 일부 속성은 값 컬렉션을 포함하며 이는 값 **(컬렉션)**으로 표시됩니다. 대부분의 속성 식을; 받아들일 수 있습니다. 복잡 한 식은 값으로 표시 된  **\<식 >**합니다. 클릭  **\<식 >** 열려는 **식** 대화 상자. 자세한 내용은 [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)을 참조하세요.  
+-   디자인 화면에서 현재 선택한 항목의 속성을 설정합니다. 일부 속성은 값이 포함된 드롭다운 목록을 제공합니다. 셀에 직접 값을 입력할 수도 있습니다. 일부 속성은 값 컬렉션을 포함하며 이는 값 **(컬렉션)**으로 표시됩니다. 대부분의 속성에는 식이 허용될 수 있으며 복합 식은 **\<Expression>** 값으로 표시됩니다. **\<Expression>**을 클릭하면 **식** 대화 상자가 열립니다. 자세한 내용은 [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)을 참조하세요.  
   
 -   속성 창의 도구 모음 단추를 사용하여 종류별 보기에서 사전순 보기로 표 형태 창을 변경할 수 있습니다. 종류별 보기에서는 범주 내의 모든 속성을 보기 위해 해당 범주를 확장해야 할 수 있습니다. 항목의 속성 대화 상자를 열려면 도구 모음에서 **속성 페이지** 단추를 클릭하거나 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
--   그룹화 창에서 현재 선택 된 그룹 멤버에 대한 속성을 설정합니다. 그룹 멤버 속성은 정적 그룹 머리글 및 바닥글 행을 각 그룹 인스턴스에 대해 반복하는 방식을 제어하는 데 유용합니다. 자세한 내용은 참조 [그룹 &#40; 함께 표시 머리글 및 바닥글 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
+-   그룹화 창에서 현재 선택 된 그룹 멤버에 대한 속성을 설정합니다. 그룹 멤버 속성은 정적 그룹 머리글 및 바닥글 행을 각 그룹 인스턴스에 대해 반복하는 방식을 제어하는 데 유용합니다. 자세한 내용은 [그룹과 함께 헤더 및 바닥글 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)를 참조하세요.  
   
  속성 창을 표시하려면 **보기** 메뉴에서 **속성 창**을 클릭합니다. 이 창의 도킹을 해제하여 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]창의 다른 영역으로 이동하거나 디자인 화면에서 해당 창을 탭 뷰로 표시할 수 있습니다.  
   
@@ -248,7 +247,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 원본 플러그 인과 통합할 수 있습니다. **옵션** 대화 상자의 프로젝트 및 솔루션 페이지를 사용하여 플러그 인 및 구성 속성을 지정할 수 있습니다.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 사용자 지정 보고서 템플릿  
- 사용자 지정 보고서를 새로운 보고서에 대한 템플릿으로 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 설치된 컴퓨터의 ReportProject 폴더에 이를 복사하기만 하면 됩니다. 기본적으로 다음 위치에이 폴더는: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`합니다. 보고서 프로젝트에 새 항목을 추가하면 사용자 지정 보고서가 템플릿 창에 표시됩니다.  
+ 사용자 지정 보고서를 새로운 보고서에 대한 템플릿으로 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 설치된 컴퓨터의 ReportProject 폴더에 이를 복사하기만 하면 됩니다. 기본적으로 이 폴더는 다음 위치에 있습니다. `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. 보고서 프로젝트에 새 항목을 추가하면 사용자 지정 보고서가 템플릿 창에 표시됩니다.  
   
  보고서 마법사에 사용자 지정 스타일을 추가할 수도 있습니다.  
   
@@ -319,4 +318,4 @@ ms.lasthandoff: 08/09/2017
 [Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [SQL Server Data Tools의 배포 및 버전 지원](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

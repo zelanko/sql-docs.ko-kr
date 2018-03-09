@@ -1,5 +1,5 @@
 ---
-title: "스크립트 태스크 예 | Microsoft Docs"
+title: "스크립트 태스크 예제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f7732abe880aa5eeaab2030da423e18d1977d64a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5187a97eb3424813b94b03438a31c62f583ee852
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-task-examples"></a>스크립트 태스크 예
   스크립트 태스크는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 태스크가 충족시키지 않는 거의 모든 요구 사항을 충족시키기 위해 패키지에서 사용할 수 있는 다용도 도구입니다. 이 항목에는 사용 가능한 기능 중 몇 가지를 보여 주는 스크립트 태스크 코드 예제가 나열되어 있습니다.  
@@ -51,16 +49,16 @@ ms.lasthandoff: 09/26/2017
  사용자가 지정한 조건을 만족하는 파일 목록을 수집하고 나중에 Foreach from Variable 열거자에서 사용할 수 있도록 변수를 채웁니다.  
   
  [스크립트 태스크를 사용하여 Active Directory 쿼리](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  
- 값에 따라 Active Directory에서 사용자 정보를 검색 한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] System.DirectoryServices 네임 스페이스의 클래스를 사용 하 여 변수입니다.  
+ System.DirectoryServices 네임스페이스의 클래스를 사용하여 Active Directory에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변수 값을 기준으로 사용자 정보를 검색합니다.  
   
  [스크립트 태스크를 사용하여 성능 카운터 모니터링](../../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md)  
- 실행 진행률을 추적 하는 데 사용할 수 있는 사용자 지정 성능 카운터를 만듭니다는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] System.Diagnostics 네임 스페이스의 클래스를 사용 하 여 패키지 합니다.  
+ System.Diagnostics 네임스페이스의 클래스를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 실행 진행률을 추적하는 데 사용할 수 있는 사용자 지정 성능 카운터를 만듭니다.  
   
  [스크립트 태스크를 사용한 이미지 작업](../../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)  
- 이미지를 JPEG 형식으로 압축 하 고 System.Drawing 네임 스페이스의 클래스를 사용 하 여,에서 축소판 이미지를 만듭니다.  
+ System.Drawing 네임스페이스의 클래스를 사용하여 이미지를 JPEG 형식으로 압축하고 이 이미지에서 썸네일 이미지를 만듭니다.  
   
  [스크립트 태스크를 사용하여 설치된 프린터 찾기](../../integration-services/extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md)  
- 특정 용지 크기를 지 원하는 System.Drawing.Printing 네임 스페이스의 클래스를 사용 하 여 설치 된 프린터를 찾습니다.  
+ System.Drawing.Printing 네임스페이스의 클래스를 사용하여 설치된 프린터 중 특정 용지 크기를 지원하는 프린터를 찾습니다.  
   
  [스크립트 태스크를 사용하여 HTML 메일 메시지 보내기](../../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md)  
  전자 메일 메시지를 일반 텍스트 형식 대신 HTML 형식으로 보냅니다.  
@@ -87,4 +85,3 @@ ms.lasthandoff: 09/26/2017
  태스크에서 처리한 항목 수를 설정된 로그 공급자에 로깅합니다.  
   
   
-

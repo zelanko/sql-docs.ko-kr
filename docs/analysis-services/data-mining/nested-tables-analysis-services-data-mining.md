@@ -2,15 +2,13 @@
 title: "중첩 테이블 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 945ded7d4323d509f20fec89574fcfff98654a1b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>중첩 테이블(Analysis Services - 데이터 마이닝)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터가 사례 테이블에 포함된 일련의 사례로 데이터 마이닝 알고리즘에 공급되어야 합니다. 그러나 한 개의 데이터 행으로 설명할 수 없는 사례도 있습니다. 예를 들어 한 사례가 두 테이블, 즉 고객 정보가 포함된 한 테이블과 고객 구매 내용이 포함된 다른 테이블에서 파생될 수 있습니다. 고객 정보 테이블의 단일 고객이 고객 구매 테이블에서 여러 항목을 가질 수 있으므로 단일 행을 사용하여 데이터를 설명하기 어렵습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 *중첩 테이블*을 사용하여 이러한 사례를 처리하는 고유한 방법을 제공합니다. 다음 그림에서는 중첩 테이블의 개념을 보여 줍니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터가 사례 테이블에 포함된 일련의 사례로 데이터 마이닝 알고리즘에 공급되어야 합니다. 그러나 한 개의 데이터 행으로 설명할 수 없는 사례도 있습니다. 예를 들어 한 사례가 두 테이블, 즉 고객 정보가 포함된 한 테이블과 고객 구매 내용이 포함된 다른 테이블에서 파생될 수 있습니다. 고객 정보 테이블의 단일 고객이 고객 구매 테이블에서 여러 항목을 가질 수 있으므로 단일 행을 사용하여 데이터를 설명하기 어렵습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]사용 하 여 이러한 사례를 처리 하는 고유한 방법을 제공 *중첩 테이블*합니다. 다음 그림에서는 중첩 테이블의 개념을 보여 줍니다.  
   
  ![중첩된 테이블을 사용 하 여 두 테이블 결합](../../analysis-services/data-mining/media/nested-tables.gif "중첩된 테이블을 사용 하 여 두 테이블 결합")  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 11/17/2017
  예를 들어 중첩 테이블에 **Product**, **ProductQuantity**및 **ProductPrice**열이 포함되어 있는 경우 **Product** 는 중첩 테이블 키로 선택하고 **ProductQuantity** 는 마이닝 구조에 추가하여 입력으로 사용할 수 있습니다.  
   
 ## <a name="filtering-nested-table-data"></a>중첩 테이블 데이터 필터링  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터 마이닝 모델 학습 또는 테스트에 사용되는 데이터에 대한 필터를 만들 수 있습니다. 필터를 사용하여 모델 컴퍼지션에 영향을 주거나 사례 하위 집합에서 모델을 테스트할 수 있습니다. 필터를 중첩 테이블에 적용할 수도 있습니다. 그러나 중첩 테이블에서 사용할 수 있는 구문에는 제한이 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터 마이닝 모델 학습 또는 테스트에 사용되는 데이터에 대한 필터를 만들 수 있습니다. 모델의 컴퍼지션에 영향을 또는 사례 하위 집합에 대 한 모델을 테스트 하는 필터를 사용할 수 있습니다. 필터를 중첩 테이블에 적용할 수도 있습니다. 그러나 중첩 테이블에서 사용할 수 있는 구문에는 제한이 있습니다.  
   
  대개 특성의 존재 여부를 테스트할 때 필터를 중첩 테이블에 적용합니다. 예를 들어 모델에 사용된 사례를 중첩 테이블에 지정된 값을 갖는 사례로 제한하는 필터를 적용할 수 있습니다. 또는 모델에 사용된 사례를 특정 항목을 구매하지 않은 고객으로 제한할 수도 있습니다.  
   
@@ -75,6 +74,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [마이닝 구조 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

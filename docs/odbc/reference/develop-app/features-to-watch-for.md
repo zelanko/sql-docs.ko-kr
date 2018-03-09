@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], writing interoperable applications
+helpviewer_keywords: interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a2e4c0e37d62eccccf1e0af0f2acc28ed09e8b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 89e348d084f150bdcb2d74f4d4dd561816fc351f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="features-to-watch-for"></a>기능에 대 한 조사식을
 이 섹션에서는 다양 한 응용 프로그램 개발자는 종종 부여 하기 위해 수행 하는 기능을 설명 합니다. 실제로 이러한 기능에 따라 크게 다릅니다 지원 및 Dbms; 지원 방식으로 실패 하는 코드는 상호 운용 가능한 응용 프로그램에서 문제가 발생할 수 있습니다.  
@@ -49,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 -   [ODBC SQL 문법](../../../odbc/reference/develop-app/odbc-sql-grammar.md)  
   
 -   [일괄 처리](../../../odbc/reference/develop-app/batch-processing.md)
-

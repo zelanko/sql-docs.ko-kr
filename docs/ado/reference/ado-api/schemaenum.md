@@ -3,7 +3,7 @@ title: SchemaEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: dc84741e1963b2c484e82eea7bc3de08cf12da13
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b0b17893425ea772c848b9fb20907c4e0899d1e3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="schemaenum"></a>SchemaEnum
 스키마의 유형을 지정 **레코드 집합** 하는 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 메서드를 검색 합니다.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 09/09/2017
   
  상수에 대 한 스키마와 비슷한 결과 생성 하는 ADO **adSchemaDBInfoKeywords** 및 **adSchemaDBInfoLiterals**합니다. ADO 만듭니다는 **레코드 집합**, 후 각 행에서 각각 반환 값으로 채우는 **IDBInfo::GetKeywords** 및 **IDBInfo::GetLiteralInfo** 메서드. 이러한 메서드에 대 한 추가 정보를 찾을 수는 [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) OLE DB 프로그래머 참조 섹션에 있습니다.  
   
-|상수|값|Description|제약 조건 열|  
+|상수|Value|Description|제약 조건 열|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|카탈로그에 정의 된 지정된 된 사용자가 소유 하 고 있는 어설션을 반환 합니다.<br /><br /> (어설션 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA 제약 조건 이름|  
 |**adSchemaCatalogs**|1.|DBMS에서 액세스 가능한 카탈로그와 관련 된 물리적 특성을 반환 합니다.<br /><br /> (카탈로그 행 집합)|CATALOG_NAME|  
@@ -87,7 +86,7 @@ ms.lasthandoff: 09/09/2017
 |**adSchemaViewTableUsage**|25|종속 된 테이블이 표시 카탈로그에 정의 하 고 지정된 된 사용자가 소유 하 고 반환 됩니다.<br /><br /> (VIEW_TABLE_USAGE 행 집합)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  
@@ -135,4 +134,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>적용 대상  
  [OpenSchema 메서드](../../../ado/reference/ado-api/openschema-method.md)
-

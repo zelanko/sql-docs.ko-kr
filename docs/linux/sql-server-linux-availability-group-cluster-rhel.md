@@ -3,28 +3,27 @@ title: "SQL Server 가용성 그룹에 대 한 RHEL 클러스터 구성 | Micros
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7930fd8cee6f6fabe00a711f9109573e42550563
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 RHEL 클러스터를 구성 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Red Hat Enterprise Linux에서 SQL Server에 대 한 3 노드 가용성 그룹 클러스터를 만드는 방법을 설명 합니다. 고가용성을 위해 Linux에서 가용성 그룹에 노드가 3 개 필요-참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. Red Hat Enterprise Linux (RHEL)를 기반으로 클러스터링 레이어 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. 
 
@@ -130,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>클러스터 속성을 false 시작 실패-은-치명적이 지 설정
 
-`start-failure-is-fatal`노드의 리소스를 시작 하지 해당 노드에서 시작 시도 하면 추가 하는지 여부를 나타냅니다. 로 설정 하면 `false`, 클러스터 리소스의 현재 오류 개수 및 마이그레이션 임계값에 따라 다시 동일한 노드에서 시작 여부를 결정 합니다. 장애 조치가 발생 한 후 Pacemaker 가용성 시작을 다시 시도 횟수 SQL 인스턴스를 사용할 수 있는 기본 전자에 리소스를 그룹화 합니다. 보조 복제본을 보조로 강등 pacemaker 하 고 가용성 그룹 하는 자동으로 다시 참여 합니다. 
+`start-failure-is-fatal` 노드의 리소스를 시작 하지 해당 노드에서 시작 시도 하면 추가 하는지 여부를 나타냅니다. 로 설정 하면 `false`, 클러스터 리소스의 현재 오류 개수 및 마이그레이션 임계값에 따라 다시 동일한 노드에서 시작 여부를 결정 합니다. 장애 조치가 발생 한 후 Pacemaker 가용성 시작을 다시 시도 횟수 SQL 인스턴스를 사용할 수 있는 기본 전자에 리소스를 그룹화 합니다. 보조 복제본을 보조로 강등 pacemaker 하 고 가용성 그룹 하는 자동으로 다시 참여 합니다. 
 
 속성 값을 업데이트 하려면 `false` 실행:
 
@@ -152,7 +151,7 @@ Pacemaker 클러스터 속성에 대 한 자세한 내용은 참조 하십시오
 가용성 그룹 리소스를 만들려면 사용 `pcs resource create` 명령 및 리소스 속성을 설정 합니다. 다음 명령은 만듭니다는 `ocf:mssql:ag` 형식 리소스 이름의 가용성 그룹에 대 한 마스터/슬레이브 `ag1`합니다.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
@@ -161,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>가상 IP 리소스 만들기
 
-가상 IP 주소 리소스를 만들려면 노드 하나에서 다음 명령을 실행 합니다. 네트워크에서 사용 가능한 고정 IP 주소를 사용 합니다. 사이의 IP 주소를 교체 `**<10.128.16.240>**` 유효한 IP 주소입니다.
+가상 IP 주소 리소스를 만들려면 노드 하나에서 다음 명령을 실행 합니다. 네트워크에서 사용 가능한 고정 IP 주소를 사용 합니다. 사이의 IP 주소를 교체 `<10.128.16.240>` 유효한 IP 주소입니다.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 Pacemaker에서 지정 된 동일한 가상 서버 이름이 없습니다. IP 주소 대신 문자열 서버 이름이를 가리키는 연결 문자열을 사용 하려면 DNS에서 원하는 가상 서버 이름과 가상 IP 리소스 주소를 등록 합니다. DR 구성에 대 한 주 데이터베이스와 DR 사이트 모두에서 DNS 서버와 함께 원하는 가상 서버 이름 및 IP 주소를 등록 합니다.
@@ -211,4 +210,3 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ## <a name="next-steps"></a>다음 단계
 
 [HA 가용성 그룹 동작](sql-server-linux-availability-group-failover-ha.md)
-

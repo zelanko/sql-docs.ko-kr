@@ -29,17 +29,16 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b7268b5c9b43505d3c66fb6573a9a41c3cd62e3a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,13 +86,13 @@ WHERE database_id = DB_ID()
   
  BROKER_INSTANCE 절을 생략하면 이 경로는 Broker 인스턴스와 일치합니다. Broker 인스턴스와 일치하는 경로는 대화에서 Broker 인스턴스를 지정하지 않는 경우 명시적 Broker 인스턴스를 갖는 경로보다 일치에 대한 우선 순위가 높습니다. Broker 인스턴스를 지정하는 대화의 경우 Broker 인스턴스가 있는 경로는 Broker 인스턴스와 일치하는 경로보다 우선 순위가 높습니다.  
   
- 수명  **=**  *route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 라우팅 테이블에 경로를 유지하는 시간(초)을 지정합니다. 수명이 다되어 경로가 만료되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 새 대화를 위한 경로를 선택할 때 더 이상 해당 경로를 고려하지 않습니다. 이 절을 생략 하는 경우는 *route_lifetime* NULL이 고 경로가 만료 되지 않습니다.  
   
- 주소 **='***next_hop_address***'**  
+ ADDRESS **='***next_hop_address***'**  
  이 경로에 대한 네트워크 주소를 지정합니다. *next_hop_address* 다음 형식으로 TCP/IP 주소를 지정 합니다.  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:**  *port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
  지정 된 *port_number* 에 대 한 포트 번호와 일치 해야 합니다는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 끝점 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 컴퓨터에서 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
@@ -114,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  호스트 되는 미러된 데이터베이스 하나로 미러된 데이터베이스에 대 한 네트워크 주소를 지정 된 *next_hop_address*합니다. *next_hop_mirror_address* 다음 형식으로 TCP/IP 주소를 지정 합니다.  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:**  *port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  지정 된 *port_number* 에 대 한 포트 번호와 일치 해야 합니다는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 끝점 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 컴퓨터에서 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
@@ -235,4 +234,3 @@ CREATE ROUTE TransportRoute
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

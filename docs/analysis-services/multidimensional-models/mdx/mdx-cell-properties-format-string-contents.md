@@ -2,16 +2,13 @@
 title: "FORMAT_STRING 내용 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +18,20 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 29
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 95d4624aab2e35b3e7ec34963aa33c3af8434eb5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 셀 속성-FORMAT_STRING 내용
-  **FORMAT_STRING** 셀 속성은 **VALUE** 셀 속성의 형식을 지정하고 **FORMATTED_VALUE** 셀 속성의 값을 만듭니다. **FORMAT_STRING** 셀 속성은 문자열 및 숫자 원시 값을 모두 처리할 수 있으며 값에 형식 지정 식을 적용하여 **FORMATTED_VALUE** 셀 속성에 사용할 형식 지정된 값을 반환합니다. 다음 표에서는 문자열 및 숫자 값을 처리하는 구문 및 형식 지정 문자에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+**FORMAT_STRING** 셀 속성은 **VALUE** 셀 속성의 형식을 지정하고 **FORMATTED_VALUE** 셀 속성의 값을 만듭니다. **FORMAT_STRING** 셀 속성은 문자열 및 숫자 원시 값을 모두 처리할 수 있으며 값에 형식 지정 식을 적용하여 **FORMATTED_VALUE** 셀 속성에 사용할 형식 지정된 값을 반환합니다. 다음 표에서는 문자열 및 숫자 값을 처리하는 구문 및 형식 지정 문자에 대해 설명합니다.  
   
 ## <a name="string-values"></a>문자열 값  
  문자열에 사용할 형식 지정 식에는 한 개의 절 또는 세미콜론(;)으로 구분되는 두 개의 절을 사용할 수 있습니다.  
@@ -162,7 +159,6 @@ ms.lasthandoff: 09/01/2017
  [LANGUAGE 및 FORMAT_STRING FORMATTED_VALUE에서](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [셀 속성 &#40;를 사용 하 여 Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [만들기 및 속성 값 &#40; 사용 Mdx&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 쿼리 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

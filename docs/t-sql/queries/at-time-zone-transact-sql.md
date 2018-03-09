@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - AT TIME ZONE function
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0983cbd76b1ec3a71985537f098f8faf002b93e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8b77aeb47515f4140f78a70288e9e25d2acc52d1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="at-time-zone-transact-sql"></a>표준시 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ inputdate AT TIME ZONE timezone
  *inputdate*  
  식으로 확인 될 수 있는 한 **smalldatetime**, **datetime**, **datetime2**, 또는 **datetimeoffset** 값입니다.  
   
- *표준 시간대*  
+ *timezone*  
  대상 표준 시간대의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 레지스트리에 저장 된 표준 시간대에 의존 합니다. 컴퓨터에 설치 하는 모든 표준 시간대는 다음 레지스트리 하이브에 저장 됩니다: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time 영역**합니다. 통해 설치 된 표준 시간대의 목록도 표시 되는 [sys.time_zone_info&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 보기.  
   
 ## <a name="return-types"></a>반환 형식  
@@ -178,4 +177,3 @@ FOR SYSTEM_TIME AS OF @ASOF;
  [날짜 및 시간 데이터 형식 및 함수 &#40; Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
-

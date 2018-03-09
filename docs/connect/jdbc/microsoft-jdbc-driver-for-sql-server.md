@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 231aeea7b69585b01df5064b62707a85ec016ff7
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 996f6ff5a36c0aa96d857a548e272a756acf2212
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver
 
@@ -61,4 +59,3 @@ Microsoft JDBC Driver for SQL Server는 IBM WebSphere 및 SAP NetWeaver 등의 �
 * [Ubuntu Java 시작](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
 * [Red Hat Enterprise Linux (RHEL)의 Java 시작](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
 * [SUSE Linux Enterprise Server (SLES)의 Java 시작](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
-

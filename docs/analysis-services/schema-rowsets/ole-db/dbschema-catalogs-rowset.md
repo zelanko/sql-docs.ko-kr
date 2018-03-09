@@ -2,39 +2,33 @@
 title: "DBSCHEMA_CATALOGS 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_CATALOGS
+apiname: DBSCHEMA_CATALOGS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_CATALOGS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_CATALOGS rowset
 ms.assetid: f02dc75d-5442-4eea-b33a-567dc816be7a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 493ffd66eb4bcddd0e4aaef7c79c4c771520be92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0632d90765112ee54de8e78a66fdefa1ff27334f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dbschemacatalogs-rowset"></a>DBSCHEMA_CATALOGS 행 집합
-  DBMS(데이터베이스 관리 시스템)에서 액세스 가능한 카탈로그에 연결된 실제 특성을 식별합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]데이터베이스 관리 시스템 (DBMS)에서 액세스 가능한 카탈로그와 관련 된 물리적 특성을 식별 합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DBSCHEMA_CATALOGS** 행 집합에는 다음 열이 포함되어 있습니다.  
@@ -59,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB 스키마 행 집합](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

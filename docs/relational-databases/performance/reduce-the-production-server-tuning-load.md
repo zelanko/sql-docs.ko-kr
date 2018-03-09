@@ -2,9 +2,12 @@
 title: "프로덕션 서버 튜닝 로드 줄이기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 860458ebec0954d872b31bceb4443450bf96ad21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>프로덕션 서버 튜닝 로드 줄이기
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 쿼리 최적화 프로그램을 사용하여 작업을 분석하고 튜닝 권장 사항을 작성합니다. 프로덕션 서버에서 이러한 분석을 수행하면 서버 부하가 가중되어 튜닝 세션 중에 서버 성능이 저하될 수 있습니다. 프로덕션 서버 외에 추가로 테스트 서버를 사용하면 튜닝 세션 중에 서버 부하에 미치는 영향을 줄일 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 쿼리 최적화 프로그램을 사용하여 작업을 분석하고 튜닝 권장 사항을 작성합니다. 프로덕션 서버에서 이러한 분석을 수행하면 서버 부하가 가중되어 튜닝 세션 중에 서버 성능이 저하될 수 있습니다. 프로덕션 서버 외에 추가로 테스트 서버를 사용하면 튜닝 세션 중에 서버 부하에 미치는 영향을 줄일 수 있습니다.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>데이터베이스 엔진 튜닝 관리자가 테스트 서버를 사용하는 방법  
  테스트 서버를 사용하는 일반적인 방법은 프로덕션 서버에서 테스트 서버로 데이터를 모두 복사하고 테스트 서버를 튜닝한 다음 프로덕션 서버에 권장 사항을 구현하는 것입니다. 이 작업으로 프로덕션 서버의 성능에 미치는 영향을 없앨 수는 있지만 최적의 방법은 아닙니다. 예를 들어 프로덕션 서버에서 테스트 서버로 많은 양의 데이터를 복사하는 데 상당한 시간과 리소스가 소비될 수 있습니다. 또한 테스트 서버 하드웨어의 성능은 프로덕션 서버 하드웨어 보다 뒤쳐지는 것이 보통입니다. 튜닝 프로세스는 쿼리 최적화 프로그램에 의존하며 이 프로세스에서 생성하는 권장 사항의 일부는 기반 하드웨어를 바탕으로 계산됩니다. 테스트 서버와 프로덕션 서버 하드웨어가 동일하지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 권장 사항은 정확성이 떨어집니다.  

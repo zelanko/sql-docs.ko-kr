@@ -1,36 +1,33 @@
 ---
 title: "문자열 저장소 및 테이블 형식 모델에서 데이터 정렬 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f84b7fb415372066b820119280dd3728d340322d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="string-storage-and-collation-in-tabular-models"></a>테이블 형식 모델의 문자열 저장소 및 데이터 정렬
-  테이블 형식 모델에서 문자열(텍스트 값)은 고도로 압축된 형식으로 저장되며, 이러한 압축으로 인해 전체 또는 부분 문자열을 검색할 때 예기치 않은 결과를 얻게 될 수 있습니다. 또한 문자열 로캘 및 데이터 정렬은 가장 가까운 부모 개체에서 계층적으로 상속되므로 문자열 언어가 명시적으로 정의되어 있지 않은 경우 각 문자열이 저장되는 방식과 문자열이 고유한지 아니면 부모 데이터 정렬에 의해 정의된 유사 문자열과 혼합되는지는 부모의 로캘 및 데이터 정렬에 따라 달라질 수 있습니다.  
+# <a name="string-storage-and-collation-in-tabular-models"></a>문자열 저장소 및 테이블 형식 모델에서 데이터 정렬
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+테이블 형식 모델에서 문자열(텍스트 값)은 고도로 압축된 형식으로 저장되며, 이러한 압축으로 인해 전체 또는 부분 문자열을 검색할 때 예기치 않은 결과를 얻게 될 수 있습니다. 또한 문자열 로캘 및 데이터 정렬은 가장 가까운 부모 개체에서 계층적으로 상속되므로 문자열 언어가 명시적으로 정의되어 있지 않은 경우 각 문자열이 저장되는 방식과 문자열이 고유한지 아니면 부모 데이터 정렬에 의해 정의된 유사 문자열과 혼합되는지는 부모의 로캘 및 데이터 정렬에 따라 달라질 수 있습니다.  
   
- 이 항목에서는 문자열 압축 및 저장 메커니즘에 대해 설명하고 테이블 형식 모델에서 데이터 정렬 및 언어가 텍스트 수식 결과에 미치는 영향을 보여 주는 예를 제공합니다.  
+ 이 문서는 문자열은 압축 및 저장 메커니즘을 설명 하 고 데이터 정렬 및 언어가 텍스트 수식에서 테이블 형식 모델의 결과 미치는 영향의 예제를 제공 합니다.  
   
 ## <a name="storage"></a>저장소  
  테이블 형식 모델에서는 모든 데이터가 메모리 사용을 최적화할 수 있도록 고도로 압축됩니다. 따라서 어휘적으로 동일한 것으로 간주될 수 있는 모든 문자열이 한 번만 저장됩니다. 문자열의 첫 번째 인스턴스는 정식 표현으로 사용되며 이후 해당하는 각 문자열은 첫 번째 발생한 인스턴스와 동일한 압축된 값으로 인덱싱됩니다.  
@@ -95,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  일반적으로 원본 데이터베이스의 언어 식별자 및 데이터 정렬 순서는 테이블 형식 모델 열에서 값이 저장되는 방식에 거의 영향을 주지 않는다는 점을 주의해야 합니다. 원본 데이터베이스에서 요청된 값을 변환하거나 필터링하는 경우는 예외입니다.  
   
   
-

@@ -2,9 +2,12 @@
 title: "SQL 암호화 기능을 통해 SQL Server 커넥터 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,16 @@ ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abf7e20335fd15fc4e06971558d8ec32b5620f41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 암호화 기능을 통해 SQL Server 커넥터 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-
-  Azure 주요 자격 증명 모음으로 보호되는 비대칭 키를 사용하는 일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 작업에는 다음 세 가지 영역이 포함됩니다.  
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] Azure Key Vault로 보호되는 비대칭 키를 사용하는 일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 작업에는 다음 세 가지 영역이 포함됩니다.  
   
 -   Azure 주요 자격 증명 모음에서 비대칭 키를 사용한 투명한 데이터 암호화  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/09/2017
   
     -   `SECRET` 인수의 두 번째 부분을 파트 1의 **클라이언트 암호** 를 사용하여 완성합니다. 이 예제에서 파트 1의 **클라이언트 암호** 는 `Replace-With-AAD-Client-Secret`입니다. `SECRET` 인수의 최종 문자열은 *하이픈 없는*문자 및 숫자의 긴 시퀀스가 됩니다.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/09/2017
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 만들고 1단계의 자격 증명을 여기에 추가합니다. 이 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 예제에서는 앞에서 가져온 것과 동일한 키를 사용합니다.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/09/2017
   
      DEK은 데이터베이스 인스턴스의 데이터 및 로그 파일을 암호화하고, Azure 주요 자격 증명 모음 비대칭 키로 암호화될 수 있습니다. DEK는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 지원되는 알고리즘 또는 키 길이를 사용하여 만들 수 있습니다.  
   
-    ```tsql  
+    ```sql  
     USE ContosoDatabase;  
     GO  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  **TDE 설정**  
   
-    ```tsql  
+    ```sql  
     -- Alter the database to enable transparent data encryption.  
     ALTER DATABASE ContosoDatabase   
     SET ENCRYPTION ON;  
@@ -126,7 +127,7 @@ ms.lasthandoff: 11/09/2017
   
      또는 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 실행할 수 있습니다. 암호화 상태 3은 암호화된 데이터베이스를 나타냅니다.  
   
-    ```tsql  
+    ```sql  
     USE MASTER  
     SELECT * FROM sys.asymmetric_keys  
   
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/09/2017
   
     -   `SECRET` 인수의 두 번째 부분을 파트 1의 **클라이언트 암호** 를 사용하여 완성합니다. 이 예제에서 파트 1의 **클라이언트 암호** 는 `Replace-With-AAD-Client-Secret`입니다. `SECRET` 인수의 최종 문자열은 *하이픈 없는*문자 및 숫자의 긴 시퀀스가 됩니다.   
   
-        ```tsql  
+        ```sql  
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
@@ -180,7 +181,7 @@ ms.lasthandoff: 11/09/2017
   
      이 예제에서는 앞의 5단계 4부에서 master 데이터베이스용으로 미리 가져오거나 만들 수 있는 주요 자격 증명 모음에 저장된 `CONTOSO_KEY_BACKUP` 비대칭 키를 사용합니다.  
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     -- Create a SQL Server login associated with the asymmetric key   
@@ -202,7 +203,7 @@ ms.lasthandoff: 11/09/2017
      
      아래 예제에서 데이터베이스가 이미 TDE로 암호화되어 있고 비대칭 키 `CONTOSO_KEY_BACKUP`이 TDE 비대칭 키와 다른 경우 백업은 TDE 비대칭 키 및 `CONTOSO_KEY_BACKUP` 모두를 사용하여 암호화됩니다. 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 백업 암호를 해독하려면 두 키가 모두 필요합니다.
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     BACKUP DATABASE [DATABASE_TO_BACKUP]  
@@ -225,7 +226,7 @@ ms.lasthandoff: 11/09/2017
     
      샘플 복원 코드:  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE [DATABASE_TO_BACKUP]  
     FROM DISK = N'[PATH TO BACKUP FILE]'   
         WITH FILE = 1, NOUNLOAD, REPLACE;  
@@ -242,7 +243,7 @@ ms.lasthandoff: 11/09/2017
   
  이 예제에서는 `CONTOSO_KEY_COLUMNS` Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계 [의 섹션 3, 3단계에 설명된 대로 미리 가져오거나 만들 수 있는 주요 자격 증명 모음에 저장된](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)비대칭 키를 사용합니다. `ContosoDatabase` 데이터베이스에서 이 비대칭 키를 사용하려면 다시 `CREATE ASYMMETRIC KEY` 문을 실행하여 `ContosoDatabase` 데이터베이스에 키에 대한 참조를 제공해야 합니다.  
   
-```tsql  
+```sql  
 USE [ContosoDatabase];  
 GO  
   

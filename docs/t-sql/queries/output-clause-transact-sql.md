@@ -33,17 +33,16 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: 94
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cd5caae29a6ec10957c45f755954c9b9e9b7ecda
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6a28059e6a30657a67275d317c70bdb26d2507a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ ms.lasthandoff: 09/01/2017
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [병합](../../t-sql/statements/merge-transact-sql.md)  
+ [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -96,7 +95,7 @@ ms.lasthandoff: 09/01/2017
   
  경우 *column_list* 을 지정 하지 않으면 해당 테이블에 출력 결과 집합으로 동일한 열 수 있어야 합니다. 단, ID 및 계산 열은 예외이며 이 열은 건너뛰어야 합니다. 경우 *column_list* 생략 된 모든 열에서 null 값 허용 하거나 기본값이 지정 된이 값을 할당 합니다.  
   
- *output_table* 수 없습니다.  
+ *output_table* cannot:  
   
 -   활성화된 트리거를 정의할 수 없습니다.  
   
@@ -125,7 +124,7 @@ ms.lasthandoff: 09/01/2017
   
  INSERTED는 DELETE 문에서 OUTPUT 절과 함께 사용할 수 없습니다.  
   
- *from_table_name과*  
+ *from_table_name*  
  업데이트 또는 삭제할 행을 지정하는 데 사용되는 DELETE, UPDATE 또는 MERGE 문의 FROM 절에 포함된 테이블을 지정하는 열 접두사입니다.  
   
  변경되는 테이블을 FROM 절에도 지정할 경우 해당 테이블의 열에 대한 모든 참조는 INSERTED 또는 DELETED 접두사를 사용해 정규화해야 합니다.  
@@ -141,13 +140,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 명시적 열 참조입니다. 변경 되는 테이블에 대 한 모든 참조 올바르게으로 한정는 INSERTED 또는 DELETED 접두사를 적절 하 게 예: INSERTED**.** *column_name*합니다.  
+ 명시적 열 참조입니다. 변경 되는 테이블에 대 한 모든 참조 올바르게으로 한정는 INSERTED 또는 DELETED 접두사를 적절 하 게 예: INSERTED **. * * * column_name*합니다.  
   
  $action  
  MERGE 문에만 사용할 수 있습니다. 형식의 열을 지정 **nvarchar (10)** 각 행에 대해 3 개의 값 중 하나를 반환 하는 MERGE 문의 OUTPUT 절에서: 'INSERT', 'UPDATE' 또는 'DELETE' 해당 행에서 수행한 작업에 따라 합니다.  
   
 ## <a name="remarks"></a>주의  
- 출력 \<dml_select_list > 절과 출력 \<dml_select_list > INTO {  **@**  *table_variable*  |   *output_table* } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
+ 출력 \<dml_select_list > 절과 출력 \<dml_select_list > INTO {**@ * * * table_variable* | *output_table* } 절을 정의할 수 있습니다 단일 INSERT, UPDATE, DELETE 또는 MERGE 문의 합니다.  
   
 > [!NOTE]  
 >  다르게 지정되지 않는 이상 OUTPUT 절에 대한 참조는 OUTPUT 절 및 OUTPUT INTO 절 모두를 참조합니다.  
@@ -186,7 +185,7 @@ DELETE Sales.ShoppingCartItem
   
     -   해당 정의에서 사용자 또는 시스템 데이터 액세스를 수행하는 사용자 정의 함수가 포함된 계산 열  
   
-     때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이러한 열을 감지 OUTPUT 절에 오류 4186이 발생 합니다.   
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 OUTPUT 절에서 이러한 열을 감지하면 오류 4186이 발생합니다.   
   
 ## <a name="inserting-data-returned-from-an-output-clause-into-a-table"></a>OUTPUT 절에서 반환된 데이터를 테이블에 삽입  
  중첩된 INSERT, UPDATE, DELETE 또는 MERGE 문에서 OUTPUT 절의 결과를 캡처하고 그 결과를 대상 테이블에 삽입하는 경우 다음 사항을 고려하세요.  
@@ -680,4 +679,3 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

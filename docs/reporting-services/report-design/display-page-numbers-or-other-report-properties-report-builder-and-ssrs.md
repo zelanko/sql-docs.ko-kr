@@ -1,27 +1,27 @@
 ---
-title: "페이지 번호 또는 기타 보고서 속성 (보고서 작성기 및 SSRS) 표시 | Microsoft Docs"
+title: "페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6bf3a7865337f616cf2897919a76b3689c9fa5bd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS)
   보고서의 페이지 머리글이나 바닥글에 페이지 번호, 보고서 제목, 파일 이름 및 기타 보고서 속성을 간단히 추가할 수 있습니다. 다음은 보고서 데이터 창의 기본 제공 필드 폴더에 필드로 저장되는 속성입니다.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
      **다음에 대한 식 설정: 값** 입력란에 식 =Globals!PageNumber가 포함됩니다.  
   
-2.  유형과 = 기호 뒤 **"Page" &**합니다.  
+2.  = 기호 뒤에 커서를 두고 **"Page " &**를 입력합니다.  
   
      식이 ="Page "&Globals!PageNumber로 바뀝니다.  
   
@@ -82,15 +82,14 @@ ms.lasthandoff: 08/09/2017
   
 2.  식 끝에 **&" of "&**를 입력합니다.  
   
-3.  범주 창에서 **기본 제공 필드**를 확장한 다음 **TotalPages**를 두 번 클릭합니다.  
+3.  범주 창에서 **기본 제공 필드** 를 확장한 다음 **TotalPages**를 두 번 클릭합니다.  
   
      식이 ="Page "&Globals!PageNumber &" of "&Globals!TotalPages로 바뀝니다.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목:  
- [페이지 머리글 및 바닥글 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [텍스트 상자 &#40;의 텍스트 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>참고 항목  
+ [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   
-

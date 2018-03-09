@@ -8,36 +8,33 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.cdcsplitter.f1
+f1_keywords: sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e2bee6609acacd6c9d441eae62d178818aea27a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 19b09b99c30e0dffd81b1778c3df25596d455110
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="cdc-splitter"></a>CDC 분할자
   CDC 분할자는 CDC 원본 데이터 흐름의 단일 변경 행 흐름을 삽입, 업데이트 및 삭제 작업을 위한 여러 데이터 흐름으로 분할합니다. 데이터 흐름은 필요한 열인 `__$operation` 과 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블의 해당 표준 값을 기반으로 분할됩니다.  
   
 |작업 값|출력|Description|  
 |------------------------|------------|-----------------|  
-|1.|Delete|삭제된 행|  
+|1|DELETE|삭제된 행|  
 |2|Insert|삽입된 행( **병합을 사용한 순 변경 내용** CDC 모드를 사용하는 경우에는 제공되지 않음)|  
 |3|Update|업데이트 전 행( **이전 값이 포함된 모두** CDC 모드를 사용하는 경우에만 제공됨)|  
 |4|Update|업데이트 후 행(업데이트 전을 따름)|  
 |5|Update|병합 행( **병합을 사용한 순 변경 내용** CDC 모드를 사용하는 경우에만 제공됨)|  
-|기타|오류||  
+|기타|Error||  
   
  분할자를 사용하여 미리 정의된 삽입, 삭제 및 업데이트 출력에 연결하여 해당 출력을 추가적으로 처리할 수 있습니다.  
   
@@ -65,8 +62,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **프로젝트의** 데이터 흐름 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 화면에서 CDC 분할자를 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시**를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [변경 유형에 따라 CDC 스트림 전송](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   
-

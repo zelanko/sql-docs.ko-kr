@@ -1,11 +1,11 @@
 ---
-title: "Integration Services (SSIS) 패키지 | Microsoft Docs"
+title: "Integration Services(SSIS) 패키지 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2a80b0c5d00cac3ca874bb61d1acf55311892dec
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 54d83a301d72577eadd7e042977b572c7f8f1a57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지
   패키지는 연결, 제어 흐름 요소, 데이터 흐름 요소, 이벤트 처리기, 변수, 매개 변수 및 구성으로 이루어진 컬렉션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 그래픽 디자인 도구를 사용하여 조합하거나 프로그래밍 방식으로 작성합니다.  그런 다음 완성된 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템에 저장하거나, ssISnoversion 프로젝트를 [!INCLUDE[ssIS](../includes/ssis-md.md)] 서버에 배포할 수 있습니다. 패키지는 검색, 실행 및 저장되는 작업 단위입니다.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
  다음 다이어그램에서는 데이터 흐름 태스크 사용한 제어 흐름이 포함된 간단한 패키지를 보여 주며 이 제어 흐름에 다시 데이터 흐름이 포함됩니다.  
   
- ![하나의 제어 흐름과 데이터 흐름을 사용 하 여 패키지](../integration-services/media/ssis-package.gif "하나의 제어 흐름과 데이터 흐름을 사용 하 여 패키지")  
+ ![제어 흐름 및 데이터 흐름이 하나씩 있는 패키지](../integration-services/media/ssis-package.gif "제어 흐름 및 데이터 흐름이 하나씩 있는 패키지")  
   
  기본 패키지를 만든 후 로깅 및 변수 등의 고급 기능을 추가하여 패키지 기능을 확장할 수 있습니다. 자세한 내용은 패키지 기능을 확장하는 개체에 대한 섹션을 참조하십시오.  
   
@@ -99,7 +98,7 @@ ms.lasthandoff: 08/03/2017
 |**진단**|동시에 실행될 수 있는 실행 파일 수처럼 패키지 실행에 영향을 주는 시스템 구성에 대한 정보를 제공합니다.|  
   
 ## <a name="set-the-properties-of-a-package"></a>패키지의 속성 설정  
- **** 의 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 **속성** 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 이러한 속성을 설정하는 방법은 [패키지 속성 설정](../integration-services/set-package-properties.md)을 참조하세요.  
   
@@ -115,11 +114,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 개체 모델 외에도 두 개의 패키지 작성용 그래픽 도구인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 디자이너와 [!INCLUDE[ssIS](../includes/ssis-md.md)] 가져오기 및 내보내기 마법사가 포함되어 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [SQL Server 가져오기 및 내보내기 마법사와 데이터 가져오기 및 내보내기](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
 -   [SQL Server Data Tools에서 패키지 만들기](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
--   참조 [프로그래밍 방식으로 패키지 작성](../integration-services/building-packages-programmatically/building-packages-programmatically.md) 개발자 가이드에서. 
+-   개발자 가이드의 [프로그래밍 방식으로 패키지 작성](../integration-services/building-packages-programmatically/building-packages-programmatically.md)을 참조하세요. 
   
   
-

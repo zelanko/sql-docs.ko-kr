@@ -3,8 +3,11 @@ title: "다이어그램 창(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6808554aad795fcda134687dfaf071487217f63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3d0b1ab935d8f6af9390131a0813468bbcdd0732
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="diagram-pane-visual-database-tools"></a>다이어그램 창(Visual Database Tools)
-다이어그램 창은 데이터 연결에서 선택한 테이블 또는 테이블 반환 개체를 그래픽으로 표시합니다. 또한 이들 사이의 조인 관계도 보여 줍니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다이어그램 창은 데이터 연결에서 선택한 테이블 또는 테이블 반환 개체를 그래픽으로 표시합니다. 또한 이들 사이의 조인 관계도 보여 줍니다.  
   
 다이어그램 창에서는 다음 작업을 수행할 수 있습니다.  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
 각 테이블 또는 테이블 반환 개체는 다이어그램 창에서 별도의 창으로 나타납니다. 각 사각형의 제목 표시줄에 있는 아이콘은 다음 표에서 설명하는 바와 같이 사각형이 나타내는 개체 형식을 보여 줍니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **테이블**  
 다이어그램 창에 추가할 수 있는 테이블을 나열합니다. 테이블을 추가하려면 테이블을 선택하고 **추가**를 클릭합니다. 여러 테이블을 한번에 추가하려면 원하는 테이블을 모두 선택하고 **추가**를 클릭합니다.  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
   
 |아이콘|개체 유형|  
 |--------|---------------|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi1.gif "Visual Database Tools 아이콘")|테이블|  
+|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi1.gif "Visual Database Tools 아이콘")|Table|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi2.gif "Visual Database Tools 아이콘")|쿼리 또는 뷰|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi3.gif "Visual Database Tools 아이콘")|연결된 테이블|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dvudficon.gif "Visual Database Tools 아이콘")|사용자 정의 함수|  

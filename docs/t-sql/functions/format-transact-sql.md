@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-caps.latest.revision: 21
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 75f944ad28bc56300db7ca9dd7220036faaea711
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,12 +48,12 @@ FORMAT ( value, format [, culture ] )
  *value*  
  서식을 지정할 지원되는 데이터 형식의 식입니다. 유효한 형식 목록은 다음 설명 섹션의 표를 참조하세요.  
   
- *형식*  
+ *format*  
  **nvarchar** 형식 패턴입니다.  
   
  *형식* 인수 있어야 유효한.NET Framework 형식 문자열을 표준 형식 문자열 (예를 들어, "C" 또는 "D") 또는 사용자 지정 문자 패턴으로 날짜 및 숫자 값 (예를 들어 "MMMM DD, yyyy (dddd)")에 대 한 . 복합 서식 지정은 지원되지 않습니다. 이러한 서식 지정 패턴의 전체 내용은 일반 형식 지정에 문자열, 사용자 지정 날짜 및 시간 형식 및 사용자 지정 숫자 형식에.NET Framework 설명서를 참조 하십시오. 좋은 출발점 항목은 "[형식](http://go.microsoft.com/fwlink/?LinkId=211776)."  
   
- *문화권*  
+ *culture*  
  선택적 **nvarchar** 문화권을 지정 하는 인수입니다.  
   
  경우는 *문화권* 인수 제공 하지 않으면, 현재 세션의 언어가 사용 됩니다. 이 언어는 SET LANGUAGE 문을 사용하여 명시적으로 또는 암시적으로 설정됩니다. *문화권* ; 인수로 서.NET Framework에서 지 원하는 모든 culture를 허용 하 여 명시적으로 지 원하는 언어로 제한 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 경우는 *문화권* 인수가 유효 하지 않을, 형식에서 오류가 발생 합니다.  
@@ -89,10 +88,10 @@ FORMAT ( value, format [, culture ] )
 |숫자|real|Single|  
 |숫자|smallmoney|Decimal|  
 |숫자|money|Decimal|  
-|날짜 및 시간|date|DateTime|  
+|날짜 및 시간|date|과 같이 지원되는|  
 |날짜 및 시간|time|TimeSpan|  
-|날짜 및 시간|datetime|DateTime|  
-|날짜 및 시간|smalldatetime|DateTime|  
+|날짜 및 시간|datetime|과 같이 지원되는|  
+|날짜 및 시간|smalldatetime|과 같이 지원되는|  
 |날짜 및 시간|datetime2|DateTime|  
 |날짜 및 시간|datetimeoffset|DateTimeOffset|  
   
@@ -216,6 +215,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35
   
 ## <a name="see-also"></a>관련 항목:  
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [STR &#40; Transact SQL &#41;](../../t-sql/functions/str-transact-sql.md)  
+ [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
-

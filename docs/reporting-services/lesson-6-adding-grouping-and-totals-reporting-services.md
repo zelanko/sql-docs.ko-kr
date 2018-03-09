@@ -1,27 +1,29 @@
 ---
-title: "6 단원: 그룹화 및 합계 (Reporting Services) 추가 | Microsoft Docs"
+title: "6단원: 그룹화 및 합계 추가(Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 56
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 이 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약합니다.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
     행 핸들 안에 대괄호가 표시되어 그룹임을 나타냅니다. 이제 테이블에 세로 점선의 양쪽에 하나씩 두 개의 Date 열이 있습니다.  
   
-    ![추가 날짜 그룹](../reporting-services/media/rs-basictablegroups1design.png "날짜 그룹이 추가 됨")  
+    ![추가된 날짜 그룹](../reporting-services/media/rs-basictablegroups1design.png "추가된 날짜 그룹")  
   
 4.  **보고서 데이터** 창에서 **Order** 필드를 **행 그룹** 창으로 끌어다 Date 아래, **(자세히)**위에 놓습니다.
 
@@ -47,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  이중선 **오른쪽** 에서 원래 **Date** 및 **Order** 열을 삭제합니다. 그러면 이 개인 레코드 값이 제거되고 그룹 값만 표시됩니다. 두 열의 열 핸들을 선택하고 마우스 오른쪽 단추로 클릭한 다음 **열 삭제**를 클릭합니다.  
   
-    ![삭제할 열 선택](../reporting-services/media/rs-basictablegroupsdeletecols.gif "삭제할 열을 선택 합니다.")  
+    ![삭제할 열 선택](../reporting-services/media/rs-basictablegroupsdeletecols.gif "삭제할 열 선택")  
   
 6.  새 날짜 열에 서식을 지정하려면 `[Date]` 필드 식이 있는 셀을 마우스 오른쪽 단추로 클릭한 다음 **입력란 속성**을 클릭합니다.  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  **형식** 상자에서 **January 31, 2000**을 선택합니다.  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]를 클릭합니다.  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
   
 10.  **미리 보기** 탭으로 전환하여 보고서를 미리 봅니다. 다음 그림과 비슷해야 합니다.  
     ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.png) 
@@ -150,7 +152,7 @@ ms.lasthandoff: 08/09/2017
 7.  관리자 권한으로 웹 포털로 이동합니다. 예를 들어 Internet Explorer 아이콘을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 클릭합니다.  
   
     [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털 URL로 이동합니다.   
-    **참고:** *포털* URL은 Report *Server* URL인 "Reportserver"가 아니라 "Reports"입니다.  예를 들어   
+    **참고:** *포털* URL은 Report *Server* URL인 "Reportserver"가 아니라 "Reports"입니다.  예를 들어 다음과 같이 사용할 수 있습니다.   
     - `http://<server name>/reports`를 클릭합니다.  
      - `http://localhost/reports` 은(는) 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
   
@@ -159,12 +161,11 @@ ms.lasthandoff: 08/09/2017
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-* * 완료 했습니다. 만들기 기본 테이블 보고서 tutorial.* *  
+** 기본 테이블 보고서 만들기 자습서를 성공적으로 완료했습니다.**  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
-
 

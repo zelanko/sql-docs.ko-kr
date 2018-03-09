@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.kb.linkeddomain.f1
+f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "20"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 30f25b5b1c71f6a84bdd114173c8fc04c0b3902d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-linked-domain"></a>연결된 도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 연결된 도메인을 만드는 방법에 대해 설명합니다. 이전의 다른 기존 도메인에서 연결된 도메인을 만들고 해당 도메인의 모든 값, 규칙 및 속성을 상속(이름 및 설명 제외)할 수 있습니다. 연결된 도메인 집합을 하나로 관리할 수 있습니다. 하나의 도메인을 다른 도메인에 연결하여 다른 도메인의 콘텐츠를 상속하는 도메인을 만들 수 있습니다.  
@@ -43,19 +40,19 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  연결된 도메인을 만들려면 연결할 기존 도메인과 기술 자료가 있어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  연결된 도메인을 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Create"></a> 연결된 도메인 만들기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 또는 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   
 3.  **도메인 관리** 페이지의 **도메인 목록** 에서 새 도메인을 연결할 도메인을 마우스 오른쪽 단추로 클릭한 다음 **연결된 도메인 만들기**를 클릭합니다.  
   
@@ -68,7 +65,7 @@ ms.lasthandoff: 09/09/2017
   
 6.  필요한 경우 도메인 속성 탭에서 연결된 도메인의 이름 또는 설명을 변경할 수 있습니다.  
   
-7.  **마침** 을 클릭하여 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+7.  **마침** 을 클릭하여 [도메인 관리 작업 종료](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   
@@ -88,7 +85,7 @@ ms.lasthandoff: 09/09/2017
   
 -   연결된 도메인의 이름 및 설명을 변경할 수 있습니다.  
   
--   **데이터 형식**, **선행 값 사용**또는 **출력 형식** 속성에 대한 도메인 속성을 변경하려면 연결한 도메인을 선택하고 해당 도메인에 대한 **도메인 속성** 탭에서 이러한 설정을 변경합니다. 연결된 도메인의 속성에서는 이러한 설정을 변경할 수 없습니다. 자세한 내용은 [Create a Domain](../data-quality-services/create-a-domain.md)을 참조하세요.  
+-   **데이터 형식**, **선행 값 사용**또는 **출력 형식** 속성에 대한 도메인 속성을 변경하려면 연결한 도메인을 선택하고 해당 도메인에 대한 **도메인 속성** 탭에서 이러한 설정을 변경합니다. 연결된 도메인의 속성에서는 이러한 설정을 변경할 수 없습니다. 자세한 내용은 [도메인 만들기](../data-quality-services/create-a-domain.md)을 참조하세요.  
   
 -   도메인 관리 페이지의 **참조 데이터**, **도메인 규칙**, **도메인 값**및 **용어 기반 관계** 탭에 있는 설정은 연결된 도메인 또는 연결된 대상 도메인에 대해 변경할 수 있으며 이러한 변경 내용은 다른 도메인에 상속됩니다.  
   
@@ -107,4 +104,3 @@ ms.lasthandoff: 09/09/2017
 -   도메인 관리 탭 중 하나에서 연결된 도메인을 두 번 클릭하면 도메인이 편집할 수 있도록 열리고 이름 문자열에 해당 도메인이 연결된 도메인임을 알리는 표시가 나타납니다.  
   
   
-

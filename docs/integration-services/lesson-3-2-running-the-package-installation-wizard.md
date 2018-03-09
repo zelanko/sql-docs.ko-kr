@@ -1,11 +1,11 @@
 ---
-title: "2 단계: 패키지 설치 마법사를 실행 합니다. | Microsoft Docs"
+title: "2단계: 패키지 설치 마법사 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3007d8fa9bf7fc3c699665823b3c9c3b42d76551
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 953c78b59eeaf059a828964f26681cbbf28b89a7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-2---running-the-package-installation-wizard"></a>단원 3-2-패키지 설치 마법사를 실행 합니다.
+# <a name="lesson-3-2---running-the-package-installation-wizard"></a>3-2단원 - 패키지 설치 마법사 실행
 이 태스크에서는 패키지 설치 마법사를 실행하여 Deployment Tutorial 프로젝트의 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포합니다. 패키지만 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 sysssispackages 테이블에 설치할 수 있고 배포 번들에 포함된 지원 파일은 파일 시스템에 배포됩니다.  
   
 패키지 설치 마법사는 패키지를 설치하고 구성하는 단계를 안내합니다. 배포 번들을 복사한 컴퓨터인 대상 컴퓨터의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 패키지를 설치합니다. 또한 패키지가 아닌 파일을 마법사에서 설치하는 C:\DeploymentTutorialInstall 폴더를 만듭니다.  
@@ -113,4 +112,3 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="see-also"></a>참고 항목  
 [Integration Services 서비스&#40;SSIS 서비스&#41;](../integration-services/service/integration-services-service-ssis-service.md)  
-

@@ -2,10 +2,14 @@
 title: "전체 텍스트 인덱싱 마법사 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,19 +26,20 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98fce836048a343f9eb87b2d987d13a294bce59f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 85be544c13310a98863b03d8bd515c5a1990a5ba
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>전체 텍스트 인덱싱 마법사 사용
-  SSMS에서 전체 텍스트 인덱싱 마법사는 전체 텍스트 인덱스를 만드는 과정을 단계별로 안내합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SSMS에서 전체 텍스트 인덱싱 마법사는 전체 텍스트 인덱스를 만드는 과정을 단계별로 안내합니다.  
   
 ## <a name="create-a--full-text-index"></a>전체 텍스트 인덱스 만들기 
 
@@ -86,10 +91,10 @@ ms.lasthandoff: 11/09/2017
  10. **새 카탈로그 만들기**
  - 전체 텍스트 카탈로그를 선택합니다.  
   
-    a. **이름**  
+    1. **이름**  
      새 전체 텍스트 카탈로그에 사용할 이름을 입력합니다.  
   
-     b. **기본 카탈로그로 설정**  
+     2. **기본 카탈로그로 설정**  
      카탈로그를 이 데이터베이스의 기본 카탈로그로 만들려면 선택합니다.  
   
      c. **악센트 구분**  
@@ -98,8 +103,8 @@ ms.lasthandoff: 11/09/2017
      d. **인덱스 파일 그룹 선택**  
      전체 텍스트 인덱스를 만들 파일 그룹을 지정합니다.  
   
-     e. 값 선택:  
-      |값|설명|  
+     5. 값 선택:  
+      |값|Description|  
       |-----------|-----------------|
       |**<default>**| 테이블이나 뷰가 분할되지 않은 경우 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용하려면 선택합니다. 테이블 또는 뷰가 분할된 경우 기본 파일 그룹이 사용됩니다.|
       |**PRIMARY**|새 전체 텍스트 인덱스에 주 파일 그룹을 사용하려면 선택합니다.|
@@ -113,7 +118,7 @@ ms.lasthandoff: 11/09/2017
   
      다음 값 중 하나를 선택합니다.  
   
-   |값|설명|  
+   |값|Description|  
     |-----------|-----------------|  
     |**<system>**|새 전체 텍스트 인덱스에 시스템 중지 목록을 사용하려면 선택합니다. 이것이 기본값입니다.|  
     |**<off>**|새 전체 텍스트 인덱스에 중지 목록을 사용하지 않으려면 선택합니다.|  

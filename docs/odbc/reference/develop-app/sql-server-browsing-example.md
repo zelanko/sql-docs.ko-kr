@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SqlBrowseConnect
 - connecting to driver [ODBC], SQLBrowseConnect
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 358a1ce1e7351fa61e19b78f766a7aaa71c3b441
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6f344ce0a3830bbd79d6674cfd4d5961b973939e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server 검색 예
 다음 예제에서는 어떻게 **SQLBrowseConnect** SQL Server에 대 한 드라이버를 사용할 수 있는 연결을 검색 하는 데 사용 될 수 있습니다. 첫째, 응용 프로그램 연결 핸들을 요청합니다.  
@@ -84,10 +82,9 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- 각 키워드 다음 알아보기 쉬운 이름을 드라이버에 의해 반환 되는 최종 연결 문자열에 포함 되지 않습니다도 포함 하 고 선택적 키워드는 응용 프로그램에서 지정 하지 않습니다. 응용 프로그램으로이 문자열 צ ְ ײ **SQLDriverConnect** (연결 끊기) 한 후 현재 연결 핸들에 데이터 원본에 다시 연결 하거나, 다른 연결 핸들의 데이터 원본에 연결 합니다. 예를 들어  
+ 각 키워드 다음 알아보기 쉬운 이름을 드라이버에 의해 반환 되는 최종 연결 문자열에 포함 되지 않습니다도 포함 하 고 선택적 키워드는 응용 프로그램에서 지정 하지 않습니다. 응용 프로그램으로이 문자열 צ ְ ײ **SQLDriverConnect** (연결 끊기) 한 후 현재 연결 핸들에 데이터 원본에 다시 연결 하거나, 다른 연결 핸들의 데이터 원본에 연결 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  
                   sizeof(ConnStrOut), &ConnStrOutLen, SQL_DRIVER_NOPROMPT);  
 ```
-

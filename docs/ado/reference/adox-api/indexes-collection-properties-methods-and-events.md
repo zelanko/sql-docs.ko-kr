@@ -3,26 +3,28 @@ title: "컬렉션 속성, 메서드 및 이벤트 인덱스 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Indexes collection [ADOX], members
+helpviewer_keywords:
+- Indexes collection [ADOX], members
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a282aaba15831e73b0d7d491cb1bdcc8d6e63c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 02101339d74da43957dc216d70e9a67299a27915
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>인덱스 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

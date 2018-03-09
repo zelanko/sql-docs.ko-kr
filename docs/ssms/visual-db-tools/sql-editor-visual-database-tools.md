@@ -3,8 +3,11 @@ title: "SQL 편집기(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,16 +26,16 @@ ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b5c0c123950f5314a0f6fce46c92d64b20821df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 94b11dc5e05e50c0f0982d2d5c66a61f63594c6c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 편집기(Visual Database Tools)
-SQL 편집기를 사용하면 기존의 저장 프로시저, 함수, 트리거 및 SQL 스크립트를 편집할 수 있습니다. 이러한 개체 중 하나를 열면 이 창이 나타납니다. 데이터 원본에 대해 실행할 새 SQL 문을 만들려면 쿼리 디자이너의 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 을 사용합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL 편집기를 사용하면 기존의 저장 프로시저, 함수, 트리거 및 SQL 스크립트를 편집할 수 있습니다. 이러한 개체 중 하나를 열면 이 창이 나타납니다. 데이터 원본에 대해 실행할 새 SQL 문을 만들려면 쿼리 디자이너의 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 을 사용합니다.  
   
 SQL 편집기는 다음과 같이 다양하고 유용한 SQL 텍스트 편집 기능을 제공합니다.  
   
@@ -51,6 +54,6 @@ SQL 편집기는 다음과 같이 다양하고 유용한 SQL 텍스트 편집 �
   
 SQL 문을 편집할 때 특정 Transact-SQL 문은 얇은 선으로 둘러싸인 상자 안에 들어갑니다. 이로 인해 SQL 코드를 명령 섹션으로 분할하고, 쿼리 디자이너를 사용하여 그래픽으로 디자인할 수 있는 SQL 문 블록을 식별할 수 있습니다. 쿼리 디자이너 사용에 대한 자세한 내용은 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -8,21 +8,22 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, reference
+helpviewer_keywords:
+- ADO, reference
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ba54d66dd89f4308b2951796fde23c4ae6f96c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7632d4bed6a963e1015c4ae07adf4fbf7b034a37
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-programmer39s-reference"></a>ADO 프로그래머 &#39; s 참조
 이 섹션에서는 다음 항목을 다룹니다.  

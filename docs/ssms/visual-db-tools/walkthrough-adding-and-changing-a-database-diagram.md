@@ -3,8 +3,11 @@ title: "연습: 데이터베이스 다이어그램 추가 및 변경 | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adc91396fd49a546217d28f970a0eb3156c0fae7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a258f766d08c0cbd513cd34b152708f4948445e7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>연습: 데이터베이스 다이어그램 추가 및 변경
-이 연습에서는 데이터베이스 다이어그램을 만들고 수정하는 방법과 데이터베이스 다이어그램 구성 요소를 통해 데이터베이스를 변경하는 방법을 설명합니다. 또한 다이어그램에 테이블을 추가하고, 테이블 간에 관계를 만들고, 열에 대해 제약 조건과 인덱스를 만들며 각 테이블에 대해 표시할 정보 수준을 변경하는 방법을 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 연습에서는 데이터베이스 다이어그램을 만들고 수정하는 방법과 데이터베이스 다이어그램 구성 요소를 통해 데이터베이스를 변경하는 방법을 설명합니다. 또한 다이어그램에 테이블을 추가하고, 테이블 간에 관계를 만들고, 열에 대해 제약 조건과 인덱스를 만들며 각 테이블에 대해 표시할 정보 수준을 변경하는 방법을 설명합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 이 연습을 완료하려면 다음이 필요합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 예제 데이터베이스를 포함하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] 에 대한 액세스 권한  
@@ -198,7 +201,7 @@ XML을 포함하여 대부분의 데이터 형식에 대해 인덱스를 만들 
   
 3.  오류가 발생하면 **저장 후 알림** 대화 상자에 오류와 원인이 나타납니다. 오류를 수정하고 다이어그램을 다시 저장합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 이는 기존 테이블 두 개와 새 테이블 두 개만으로 이루어진 기본 다이어그램이지만 이 다이어그램을 만들어본 사용자라면 시각적으로 새 스키마를 만들거나 기존 데이터베이스를 다이어그램으로 만들 수 있습니다. 다음을 추가로 살펴볼 수 있습니다.  
   
 -   관련 테이블 그룹을 포함하는 새 다이어그램 만들기  

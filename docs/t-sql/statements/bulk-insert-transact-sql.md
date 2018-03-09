@@ -29,17 +29,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: 153
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80b16fd446ff72c6a673a576d9a8deb9514be8b2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -338,7 +337,7 @@ GO
  이 및 BULK INSERT를 사용 하기 위한 기타 보안 고려 사항에 대 한 자세한 내용은 참조 [를 사용 하 여 BULK INSERT 또는 openrowset&#40; 하 여 데이터 대량 가져오기 대량... &#41; &#40; SQL Server &#41; ](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Permissions  
- INSERT 및 ADMINISTER BULK OPERATIONS 권한이 필요합니다. 또한 다음 중 하나 이상이 적용되는 경우에는 ALTER TABLE 권한이 필요합니다.  
+ INSERT 및 ADMINISTER BULK OPERATIONS 권한이 필요합니다. Azure SQL 데이터베이스에는 INSERT 및 데이터베이스 ADMINISTER BULK OPERATIONS 권한이 필요입니다. 또한 다음 중 하나 이상이 적용되는 경우에는 ALTER TABLE 권한이 필요합니다.  
   
 -   제약 조건이 있으며 CHECK_CONSTRAINTS 옵션을 지정하지 않았습니다.  
   
@@ -418,7 +417,7 @@ WITH (FORMAT = 'CSV');
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>6. Azure blob 저장소에 파일에서 데이터 가져오기   
 다음 예제에서는 외부 데이터 원본으로 구성 된 Azure blob 저장소 위치에 있는 csv 파일에서 데이터를 로드 하는 방법을 보여 줍니다. 이 공유 액세스 서명을 사용 하 여 데이터베이스 범위 자격 증명이 필요 합니다.    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -444,7 +443,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
   
 -   [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
@@ -454,7 +453,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 유틸리티](../../tools/bcp-utility.md)   
  [가져오거나 데이터 &#40; 내보내기 위한 서식 파일 SQL Server &#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
@@ -462,4 +461,3 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
  [sp_tableoption &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   
-

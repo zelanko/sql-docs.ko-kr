@@ -1,41 +1,43 @@
 ---
 title: "SQL Server 2017 릴리스 정보 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/02/2017
-ms.prod: sql-server-2017
+ms.date: 10/30/2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- server-general
+ms.suite: sql
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
-caps.latest.revision: 41
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: 69f0db3da6a75c64aa331a0050be39274e01dad3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 373d01cf6a8032d76c36af0b84be7180c79a7117
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
-이 항목에서는 SQL Server 2017의 관련 제한 사항 및 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] 이 문서에서는 SQL Server 2017의 관련 제한 사항 및 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
 - [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)
-- [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
+- [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
+- 최신 CU(누적 업데이트) 릴리스에 대한 자세한 내용: [SQL Server 2017 누적 업데이트](http://aka.ms/sql2017cu)
 
 **SQL Server를 사용해 보세요.**
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![가상 컴퓨터 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2017이 있는 가상 컴퓨터 실행](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![가상 컴퓨터 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2017이 있는 가상 컴퓨터 실행](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 일반 공급 릴리스(2017년 10월)
 ### <a name="database-engine"></a>데이터베이스 엔진
 
 - **문제 및 고객에게 미치는 영향:** 업그레이드 후 기존 FILESTREAM 네트워크 공유를 더 이상 사용할 수 없습니다.
 
-- **해결 방법:** 먼저 컴퓨터를 재부팅하고 FILESTREAM 네트워크 공유를 사용할 수 있는지 확인합니다. 공유를 여전히 사용할 수 없으면 다음을 수행합니다.
+- **해결 방법:** 먼저 컴퓨터를 재부팅하고 FILESTREAM 네트워크 공유를 사용할 수 있는지 확인합니다. 공유를 여전히 사용할 수 없으면 다음 단계를 완료합니다.
 
     1. SQL Server 구성 관리자에서 SQL Server 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. 
     2. **FILESTREAM** 탭에서 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**을 선택 취소한 후 **적용**을 클릭합니다.
@@ -50,7 +52,10 @@ ms.lasthandoff: 10/02/2017
   - MDS 팀 블로그 [error applying permission on entity level(엔터티 수준에서 사용 권한 적용 오류)](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)에 설명된 스크립트를 실행합니다.
 
 ### <a name="analysis-services"></a>Analysis Services
-- **문제 및 고객에게 미치는 영향:** 1400 호환성 수준의 테이블 형식 모델의 경우 데이터 가져오기를 사용할 때 Amazon Redshift, IBM Netezza 및 Impala와 같은 일부 데이터 원본에 대한 데이터 커넥터를 아직 사용할 수 없습니다.
+- **문제 및 고객에게 미치는 영향:** 다음 원본에 대한 데이터 커넥터는 1400 호환성 수준의 표 형식 모델에서는 아직 사용할 수 없습니다.
+  - Amazon Redshift
+  - IBM Netezza
+  - Impala
 - **해결 방법:** 없습니다.   
 
 - **문제 및 고객에게 미치는 영향:** 큐브 뷰를 포함하는 1400 호환성 수준의 직접 쿼리 모델은 메타데이터 쿼리 또는 검색에 실패할 수 있습니다.
@@ -60,10 +65,9 @@ ms.lasthandoff: 10/02/2017
 - **문제 및 고객에게 미치는 영향:** *DReplay*를 실행할 때 다음 메시지와 함께 실패합니다. "DReplay 오류 예기치 않은 오류가 발생했습니다".
 - **해결 방법:** 없습니다.
 
-
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 릴리스 후보(RC2 - 2017년 8월)
-이 릴리스에 대한 Windows 릴리스 정보에는 SQL Server가 없습니다. [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)를 참조하세요.
+이 릴리스와 관련된 Windows의 SQL Server에 대한 릴리스 정보가 없습니다. [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)를 참조하세요.
 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
@@ -112,7 +116,7 @@ ms.lasthandoff: 10/02/2017
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi(CTP 2.1)
 
-- **문제 및 고객에게 미치는 영향:** 2016 버전의 *TSqlLanguageService.msi*가 SQL 설치 프로그램을 통해서 또는 독립 실행형 재배포 가능 패키지로 설치된 컴퓨터에 설치한 후 v13.*(SQL 2016) 버전의 *Microsoft.SqlServer.Management.SqlParser.dll* 및 *Microsoft.SqlServer.Management.SystemMetadataProvider.dll*이 제거됩니다. 이러한 어셈블리의 2016 버전에 종속된 모든 응용 프로그램의 작동이 중단되고 *오류: 파일, 어셈블리 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' 또는 종속 파일이나 어셈블리 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.*와 유사한 오류가 표시됩니다.
+- **문제 및 고객에게 미치는 영향:** 2016 버전의 *TSqlLanguageService.msi*가 SQL 설치 프로그램을 통해서 또는 독립 실행형 재배포 가능 패키지로 설치된 컴퓨터에 설치한 후 v13.*(SQL 2016) 버전의 *Microsoft.SqlServer.Management.SqlParser.dll* 및 *Microsoft.SqlServer.Management.SystemMetadataProvider.dll*이 제거됩니다. 이러한 어셈블리의 2016 버전에 종속된 모든 응용 프로그램의 작동이 중단되고 *오류: 파일이나 어셈블리 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' 또는 여기에 종속되어 있는 파일이나 어셈블리 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.*와 유사한 오류가 표시됩니다.
 
    또 TSqlLanguageService.msi의 2016 버전을 다시 설치하려고 하면 설치가 실패하고 *컴퓨터에 상위 버전이 이미 설치되어 있으므로 Microsoft SQL Server 2016 T-SQL 언어 서비스를 설치하지 못했습니다.*라는 메시지가 표시됩니다.
 
@@ -132,7 +136,7 @@ ms.lasthandoff: 10/02/2017
 
 ### <a name="always-on-availability-groups"></a>Always On 가용성 그룹
 
-- **문제 및 고객에게 미치는 영향:** SQL Server 주 버전이 주 복제본을 호스트하는 인스턴스보다 낮은 경우 가용성 그룹 보조 복제본을 호스트하는 SQL Server 인스턴스의 작동이 중단됩니다. 가용성 그룹을 호스트하는 지원되는 모든 버전의 SQL Server에서 SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0으로의 업그레이드에 영향을 미칩니다. 이 문제는 다음 단계에 따라 발생합니다. 
+- **문제 및 고객에게 미치는 영향:** SQL Server 주 버전이 주 복제본을 호스트하는 인스턴스보다 낮은 경우 가용성 그룹 보조 복제본을 호스트하는 SQL Server 인스턴스의 작동이 중단됩니다. 가용성 그룹을 호스트하는 지원되는 모든 버전의 SQL Server에서 SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0으로의 업그레이드에 영향을 미칩니다. 다음 조건에 해당하는 경우 이 문제가 발생할 수 있습니다. 
 
 > 1. 사용자가 보조 복제본을 호스트하는 SQL Server 인스턴스를 [모범 사례](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)에 따라 업그레이드합니다.
 > 2. 업그레이드 후 장애 조치(failover)가 발생하고 가용성 그룹의 모든 보조 복제본에 대한 업그레이드를 완료하기 전에 새로 업그레이드된 보조 복제본이 주 복제본이 됩니다. 이전 주 복제본이 이제는 주 복제본보다 버전이 낮은 보조 복제본이 됩니다.
@@ -144,16 +148,11 @@ ms.lasthandoff: 10/02/2017
 
    보조 복제본을 호스트하는 SQL Server의 인스턴스가 복구됩니다.
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 도움말 보기 
-- [Stack Overflow(태그 sql-server) - SQL 개발 관련 문의 사항](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN 포럼 - 기술 관련 문의 사항](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - 버그 보고 및 기능 요청](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - SQL Server에 대한 일반 토론](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server 사용 조건 및 정보](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
-
 ## <a name="more-information"></a>자세한 정보
 - [SQL Server Reporting Services 릴리스 정보](../reporting-services/reporting-services-release-notes.md)관련 제한 사항 및 문제에 대해 설명합니다.
 - [Machine Learning Services에 대한 알려진 문제](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
+- [SQL Server 업데이트 센터 - 지원되는 모든 버전에 대한 링크 및 정보](https://msdn.microsoft.com/library/ff803383.aspx)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
-

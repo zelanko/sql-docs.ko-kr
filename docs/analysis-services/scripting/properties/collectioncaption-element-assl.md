@@ -2,34 +2,32 @@
 title: "CollectionCaption 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 33929373-11df-4f89-8d2e-d63923c44f53
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f241e60e8861974245c0f8b23ac6c291f29d8b3c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03540ac5858144e8d986494318dde5cf1a938dec
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="collectioncaption-element-assl"></a>CollectionCaption 요소(ASSL)
-  부모 요소에 대한 복수 이름을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+부모 요소에 대한 복수 이름을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  부모에 해당 하는 요소 **CollectionCaption** Analysis Management Objects (AMO) 개체 모델은 T:Microsoft.AnalysisServices.RelationshipEndTranslation 합니다.  
   
   
-

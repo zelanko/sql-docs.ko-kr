@@ -1,30 +1,176 @@
 ---
 title: "SSDT(SQL Server Data Tools)에 대한 변경 로그 | Microsoft 문서"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: Active
+ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 다음은 [SSDT(SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md)에 대한 변경 로그입니다.  
   
 새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.
+
+## <a name="ssdt-for-visual-studio-2017-1552"></a>Visual Studio 2017용 SSDT(15.5.2)
+빌드 번호: 14.0.16156.0
+  
+### <a name="whats-new"></a>새로운 기능
+
+**SSIS**
+1.  SSAS와 SSIS가 동일한 VS 2017 인스턴스에 설치된 경우 SSIS 2008 프로젝트 마이그레이션이 실패하는 문제를 수정합니다.
+2.  Rdlc 보고서 디자이너와 SSIS가 동일한 VS 2017 인스턴스에 설치된 경우 Rdlc 프로젝트를 작성할 수 없는 문제를 수정합니다.
+3.  주석 색을 업데이트할 수 없는 문제를 수정합니다.
+4.  Hadoop 연결 관리자 편집기의 일부 문자열이 다른 언어에서 잘리는 문제를 수정합니다.
+5.  OData 연결 관리자 편집기에서 일부 문자열이 잘리는 문제를 수정합니다.
+6.  Integration Services 가져오기 프로젝트 마법사 창에서 일부 문자열이 잘리는 문제를 수정합니다.
+7.  SSIS 도구 상자 정보 창의 제목 문제를 수정합니다.
+8.  Integration Services 배포 마법사 창에서 일부 문자열이 잘리는 문제를 수정합니다. 
+
+**설치 관리자**
+- 가끔씩 "지정한 파일을 찾을 수 없습니다(0x80070002)" 오류와 함께 페이로드 다운로드가 실패하는 문제를 해결합니다.  
+
+### <a name="known-issues"></a>알려진 문제
+- SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+
+
+
+
+## <a name="ssdt-for-visual-studio-2017-1551"></a>Visual Studio 2017용 SSDT(15.5.1)
+빌드 번호: 14.0.16148.0
+  
+### <a name="whats-new"></a>새로운 기능
+
+Visual Studio 2017(15.5.1)은 설치 관리자에 대한 다음과 같은 버그 수정을 제외하고 15.5.0 버전과 동일한 릴리스입니다.
+
+1.  SQL Server Integration Services 사후 설치 시 설치 관리자가 응답하지 않는 문제를 수정했습니다.
+2.  "요청된 메타 파일 작업이 지원되지 않습니다(0x800707D3)" 오류 메시지와 함께 설치가 실패하는 문제를 수정했습니다.
+
+이러한 두 가지 버그 수정 외에도 15.5.0에 대한 다음과 같은 세부 사항이 15.5.1에 적용됩니다.
+
+## <a name="ssdt-for-visual-studio-2017-1550"></a>Visual Studio 2017용 SSDT(15.5.0)
+빌드 번호: 14.0.16146.0
+  
+### <a name="whats-new"></a>새로운 기능
+
+Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 전환됩니다.
+
+**설치 관리자**
+1. 설치 UI가 지역화됩니다.
+1. 아이콘이 더 높은 품질 버전으로 바뀝니다.
+
+**IS(Integration Services)**
+1. ADF에서 Azure SSIS IR에 배포할 때 사용하는 배포 마법사에서, Azure SSIS IR에서 실행되는 SSIS 패키지의 잠재적 호환성 문제를 검색하는 패키지 유효성 검사 단계가 추가되었습니다. 자세한 내용은 [Azure에 배포된 SSIS 패키지 유효성 검사](..\integration-services\lift-shift\ssis-azure-validate-packages.md)를 참조하세요.
+1. SSIS 확장이 지역화됩니다.
+
+### <a name="bug-fixes"></a>버그 수정
+
+**IS(Integration Services)**
+1. OLEDB 및 ADO.NET 연결 관리자의 레이아웃이 손상되는 문제를 수정했습니다.
+2. 차원 처리 작업을 편집하려고 할 때 어셈블리를 찾을 수 없는 오류가 발생하는 문제를 수정했습니다.
+
+### <a name="known-issues"></a>알려진 문제
+
+**IS(Integration Services)** SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+
+
+
+## <a name="ssdt-174-for-visual-studio-2015"></a>Visual Studio 2015용 SSDT 17.4
+빌드 번호: 14.0.61712.050
+
+### <a name="whats-new"></a>새로운 기능
+
+**AS(Analysis Services) 프로젝트**
+- 테이블 형식 프로젝트에 세 개의 새로운 옵션이 추가되었습니다.(옵션 > Analysis Services 테이블 형식 > 데이터 가져오기).
+  - 레거시 데이터 원본 사용 - 사용자가 최신 호환성 모드에서 이전 "1200 호환 모드" 데이터 원본을 만들 수 있습니다.
+  - 자동 형식 검색 - 사용하도록 설정할 경우 최신 데이터 원본에 대한 쿼리 편집기는 구조화되지 않은 쿼리가 로드되면 이러한 쿼리의 데이터 형식을 검색하려고 시도합니다. 검색에 성공하면 쿼리에 새 단계가 추가될 수 있습니다.
+  - 백그라운드 분석 실행 - 사용하도록 설정할 경우 최신 데이터 원본에 대한 쿼리 편집기는 쿼리의 출력 스키마를 분석하기 위해 쿼리가 로드되면 데이터 원본에 대해 쿼리를 실행합니다.
+
+**IS(Integration Services)**
+- ADF에서 Azure SSIS IR에 배포할 때 사용하는 배포 마법사에서, Azure SSIS IR에서 실행되는 SSIS 패키지의 잠재적 호환성 문제를 검색하는 패키지 유효성 검사 단계가 추가되었습니다. 자세한 내용은 [Azure에 배포된 SSIS 패키지 유효성 검사](..\integration-services\lift-shift\ssis-azure-validate-packages.md)를 참조하세요.
+
+
+### <a name="bug-fixes"></a>버그 수정
+
+**AS(Analysis Services) 프로젝트:**
+- TFS로의 모델 변경을 확인할 때 처리되지 않은 예외가 발생할 수 있는 문제를 수정했습니다.
+- 복잡한 M 식을 사용하여 1400 모델에 테이블을 추가할 때 예외가 발생하는 문제를 수정했습니다.
+- 모델 다이어그램 보기에서 메타데이터를 검색할 때 Visual Studio에서 크래시가 발생할 수 있는 문제를 수정했습니다.
+- 파티션 M 쿼리에 변경 내용을 저장하면 테이블 정의에서 계산 열이 제거되는 1400 모델 관련 문제를 수정했습니다.
+- 데이터 가져오기/테이블 편집기 UI에서 1400 모델에 쿼리 이름 바꾸기를 사용할 때 현재 데이터 모델과의 호환성에 대한 유효성을 검사하는 중 동결되는 문제를 수정했습니다.
+- Azure Analysis Service에 1400 모델을 배포할 때 Newtonsoft 어셈블리 참조가 누락되는 문제를 수정했습니다.
+- 특정 상황에서 PQ를 통해 1400 모델로 데이터 가져오기 오류가 발생하는 문제를 수정했습니다.
+- 창 크기 조정을 설정하면 나타나는 PowerQuery 사용자 인터페이스 대화 상자의 크기 조정 문제를 수정했습니다.
+- 이름 바꾸기 관련 문제를 수정했습니다.
+- 경우에 따라 변경 내용이 올바르게 저장/동기화되지 않는 프로젝트 구성 관련 문제를 수정했습니다.
+- "형식 변경" 단계가 자동으로 추가되는 PowerQuery 편집기 문제를 수정했습니다.
+- 통합 작업 영역 모드로 전환 후 BIM 파일을 열 때 오류가 발생하는 문제를 수정했습니다.
+- 이제 MaxConnections 속성이 테이블 형식 모델의 데이터 원본에 대해 표시됩니다.
+- PowerQuery 편집기 창의 초기 크기를 늘렸습니다.
+- PowerQuery 편집기의 "Source" 같은 M 쿼리 키워드가 이제 지역화됩니다.
+- 테이블을 편집할 때마다 동일한 자격 증명을 입력할 필요가 없도록 1400 모델 및 구조화된 데이터 원본을 작업할 때 자격 증명이 캐시됩니다.
+
+**RS 프로젝트:**
+- 다중 보고서 프로젝트에 단일 보고서를 배포할 수 없는 문제를 수정했습니다.
+- 배포 시 문제를 일으킬 수 있는 공유 데이터 원본 관련 문제를 수정했습니다.
+- 코드 보기, 디자인 보기 및 쿼리 편집기 창 사이에서 전환할 때 실행 취소 관리자에서 크래시가 발생하는 문제를 수정했습니다.
+- 런타임 오류 이후 매개 변수 창이 사라지는 문제를 수정했습니다.
+- 보고서 프로젝트의 원본 제어 매핑이 손실되는 문제를 수정했습니다.
+
+**Integration Services:**
+- Analysis Services 프로세스 작업에서 연결을 전환할 때 발생하는 문제를 수정했습니다.
+- 일부 작업/구성 요소가 올바르게 지역화되지 않은 문제를 수정했습니다.
+- \__$command\_id 열을 추가하는 CDC에 대한 SQL 픽스를 적용한 후 CDC 구성 요소가 중단되는 문제를 수정했습니다.
+
+
+## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>Visual Studio 2017용 SSDT(15.4.0 미리 보기)
+빌드 번호: 14.0.16134.0
+  
+### <a name="whats-new"></a>새로운 기능
+
+이 릴리스에서는 Visual Studio 2017 15.4 이상의 SQL Server Database, Analysis Services, Reporting Services 및 Integration Services 프로젝트에 대한 독립 실행형 웹 설치 관리자를 제공합니다.
+
+### <a name="installer"></a>설치 관리자
+
+- 사용자가 VS2017 인스턴스에 대한 새로운 SSDT를 설치할 때 애칭을 설정하도록 허용합니다.
+- VS 인스턴스가 선택되지 않는 경우 설치 관리자의 기능 선택 확인란을 숨깁니다.
+- 고객 의견에 따라 설치 관리자의 일부 메시지를 구체화합니다.
+- 설치 관리자가 업그레이드를 지원하지 않는 문제를 해결했습니다.
+
+
+### <a name="ssis"></a>SSIS
+
+- Azure 기능 팩을 설치할 때 가져오기/내보내기 마법사에서 데이터 원본을 나열할 수 없는 문제를 해결했습니다.
+- 연결을 변환하는 동안 SSIS Analysis 프로세스 태스크를 편집하면 예외가 throw되는 문제를 해결했습니다.
+- __$command_id 열을 추가하는 SQL 수정 프로그램을 적용한 후 CDC 구성 요소가 손상되는 문제를 해결했습니다.
+- 이전 SQL Server를 대상으로 타사 패키지를 편집 및 실행할 수 없는 문제를 해결했습니다.
+- DTSWizard.exe를 두 번 클릭하고 플랫 파일 원본을 선택하면 플랫 파일 원본 구성 대화 상자가 올바르게 표시되지 않는 문제를 해결했습니다.
+- SQL Server 2017을 대상으로 Azure 기능 팩 태스크/구성 요소가 포함된 패키지를 실행할 수 없는 문제를 해결했습니다.
+
+
+**알려진 문제**
+
+- 설치 프로그램이 지역화되지 않았습니다.
+- SSIS 패키지 실행 태스크는 *ExecuteOutOfProcess*가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+
 
 ## <a name="ssdt-173-for-visual-studio-2015"></a>Visual Studio 2015용 SSDT 17.3
 빌드 번호: 14.0.61709.290
@@ -131,7 +277,6 @@ ms.lasthandoff: 10/10/2017
 - SSIS가 지역화되지 않았습니다.
 - SSIS 패키지 실행 태스크는 *ExecuteOutofProcess*가 *True*로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
 - 전체 변경 내용 목록은 [변경 로그](changelog-for-sql-server-data-tools-ssdt.md)를 참조하세요.
-- 문제 보고는 [SSDT Connect 피드백](https://connect.microsoft.com/SQLServer/Feedback) 사이트를 이용하세요.
 - 타사 확장을 포함하는 SSIS 패키지는 다른 서버 버전을 대상으로 하도록 전환할 수 없습니다.
 
 
@@ -237,7 +382,7 @@ ms.lasthandoff: 10/10/2017
         - 레거시 리디렉션 사용(기본값은 false. true로 설정할 경우 매시업 엔진이 안전하지 않을 수 있는 HTTP 리디렉션을 추적함.  예: HTTPS에서 HTTP URI로 리디렉션)  
         - 오류 값을 Null로 반환(기본값은 false. true로 설정할 경우 셀 수준 오류가 null로 반환됨. false인 경우 셀에 오류가 포함되어 있으면 예외가 발생함)  
     - PowerQuery를 사용하는 추가 데이터 원본(파일 데이터 원본)
-        - Excel 
+        - 내보내기 
         - Text/CSV 
         - Xml 
         - Json 
@@ -255,7 +400,7 @@ ms.lasthandoff: 10/10/2017
 
 ### <a name="bug-fixes"></a>버그 수정
 **AS 프로젝트:**
-- BI 프로젝트가 VS에서 [New Projects](새 프로젝트) 범주 맨 위에 표시되지 않도록 템플릿 우선 순위를 수정함
+- BI 프로젝트가 VS에서 [New Projects]\(새 프로젝트) 범주 맨 위에 표시되지 않도록 템플릿 우선 순위를 수정함
 - SSIS, SSAS 또는 SSRS 솔루션을 열 때 간혹 발생할 수 있는 VS 충돌 문제를 해결함
 - 테이블 형식: DAX 구문 분석 및 수식 입력줄에 대한 여러 개선 사항 및 성능 수정.
 - 테이블 형식: SSAS 테이블 형식 프로젝트가 열려 있지 않은 경우 테이블 형식 모델 탐색기가 더 이상 표시되지 않음.
@@ -550,4 +695,3 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 [Analysis Services의 새로운 기능](../analysis-services/what-s-new-in-analysis-services.md)  
 [Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
-

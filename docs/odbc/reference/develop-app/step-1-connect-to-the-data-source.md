@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data sources [ODBC], connections
 - connecting to data source [ODBC], steps
 ms.assetid: 84298664-4523-4149-b821-7b2e42c85281
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e57a58062f352900e5411fcc99a4c5bc9c59393b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42da1bad914342a2f2973a63dc35f6e53f8b6c93
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-1-connect-to-the-data-source"></a>1 단계: 데이터 원본에 연결
 첫 번째 단계는 응용 프로그램에서 데이터 원본에 연결 하는 것입니다. 필요한 함수를 포함 하 여이 단계는 다음 그림에 표시 됩니다.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램으로 연결 핸들을 할당 하는 다음으로, **SQLAllocHandle** 사용 하 여 데이터 소스에 연결 되어 **SQLConnect**, **SQLDriverConnect**, 또는 **SQLBrowseConnect**합니다. 자세한 내용은 참조 [연결 핸들 할당](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md) 및 [연결을 설정](../../../odbc/reference/develop-app/establishing-a-connection.md)합니다.  
   
  그런 다음 응용 프로그램에 트랜잭션을 수동으로 커밋하려면 여부와 같은 연결 특성을 설정 합니다. 자세한 내용은 참조 [연결 특성](../../../odbc/reference/develop-app/connection-attributes.md)합니다.
-

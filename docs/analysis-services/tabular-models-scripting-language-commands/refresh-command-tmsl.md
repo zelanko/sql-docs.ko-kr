@@ -2,35 +2,29 @@
 title: "새로 고침 명령 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 97ff6ba8-c236-4ba6-8220-b0fcb9e1dc5c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 77bef111f20a6ccc72347b8e02bd967ef2d316b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d66a5c0ccaccf6480e0e82053b1ca6f22c5fcc0f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="refresh-command-tmsl"></a>새로 고침 명령 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  현재 데이터베이스의 개체를 처리합니다.   
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]현재 데이터베이스의 개체를 처리합니다.   
 **새로 고침** 항상 사용 하 여 제한 되지 않은 경우 병렬로 실행 [명령 &#40; 시퀀스 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).  
   
  데이터 새로 고침 작업 중 일부 개체의 일부 속성을 재정의할 수 있습니다.  
@@ -72,14 +66,14 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**새로 고침 형식**|**적용 대상**|**Description**|  
+|**새로 고침 형식**|**적용 대상**|**설명**|  
 |전체|데이터베이스를<br />테이블,<br />Partition|지정한 파티션, 테이블 또는 데이터베이스의 모든 파티션의 경우 데이터를 새로 고치고 모든 종속 항목을 다시 계산합니다. 계산 파티션의 경우 파티션 및 해당하는 모든 종속 항목을 다시 계산합니다.|  
 |clearValues|데이터베이스를<br />테이블,<br />Partition|이 개체 및 해당하는 모든 종속 항목에서 값을 지웁니다.|  
 |계산|데이터베이스를<br />테이블,<br />Partition|이 개체 및 해당하는 모든 종속 항목을 다시 계산하지만, 필요한 경우에만 이렇게 합니다. volatile 수식을 제외하고는 이 값은 강제로 다시 계산되지 않습니다.|  
 |dataOnly|데이터베이스를<br />테이블,<br />Partition|이 개체에서 데이터를 새로 고치고 모든 종속 항목을 지웁니다.|  
 |automatic|데이터베이스를<br />테이블,<br />Partition|개체를 새로 고치고 다시 계산해야 할 경우 개체 및 해당하는 모든 종속 항목을 새로 고치고 다시 계산합니다. 파티션이 준비 이외의 상태인 경우에 적용됩니다.|  
 |add|Partition|이 파티션에 데이터를 추가하고 모든 종속 항목을 다시 계산합니다. 이 명령은 계산 파티션이 아닌 일반 파티션에 대해서만 유효합니다.|  
-|조각 모음|데이터베이스를<br />테이블|지정한 테이블의 데이터를 조각 모음합니다. 데이터가 테이블에 추가되거나 테이블에서 제거되면 각 열의 사전이 더 이상 실제 열 값에 존재하지 않는 값으로 유효하지 않게 될 수 있습니다. 조각 모음 옵션은 더 이상 사용되지 않는 사전의 값을 정리합니다.|  
+|조각 모음|데이터베이스를<br />Table|지정한 테이블의 데이터를 조각 모음합니다. 데이터가 테이블에 추가되거나 테이블에서 제거되면 각 열의 사전이 더 이상 실제 열 값에 존재하지 않는 값으로 유효하지 않게 될 수 있습니다. 조각 모음 옵션은 더 이상 사용되지 않는 사전의 값을 정리합니다.|  
   
  다음 개체를 새로 고칠 수 있습니다.  
   
@@ -245,4 +239,3 @@ ms.lasthandoff: 09/01/2017
  [처리 옵션 및 설정 &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)  
   
   
-

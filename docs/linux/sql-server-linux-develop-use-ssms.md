@@ -3,30 +3,29 @@ title: "Linux SSMS로 SQL Server 관리 | Microsoft Docs"
 description: "이 자습서에서는 Linux에서 실행 중인 Windows에서 SQL Server Management Studio를 사용 하 여 SQL Server에 연결 하는 방법을 보여 줍니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
+ms.openlocfilehash: 442d57154222fdb06ba26ad7858eb783103e93cd
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: b4e70106782541d771a2539d025a0a6dd75c34d9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Windows에서 SQL Server Management Studio (SSMS)를 사용 하 여 Linux에서 SQL Server 관리
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 항목에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) SQL Server 2017 Linux에서 연결할 수 있습니다. SSMS는 Windows 응용 프로그램, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 경우 SSMS를 사용 합니다.
+이 문서에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) SQL Server 2017 Linux에서 연결할 수 있습니다. SSMS는 Windows 응용 프로그램, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 경우 SSMS를 사용 합니다.
 
 성공적으로 연결한 후 데이터베이스와의 통신을 확인 하려면 간단한 TRANSACT-SQL (T-SQL) 쿼리를 실행 합니다.
 
@@ -90,4 +89,3 @@ SQL Server를 사용할 때는 항상 최신 버전의 SQL Server Management Stu
 T-SQL을 처음 접하는 경우 참조 [자습서: TRANSACT-SQL 문 쓰기](../t-sql/tutorial-writing-transact-sql-statements.md) 및 [TRANSACT-SQL 참조 (데이터베이스 엔진)](https://msdn.microsoft.com/library/bb510741.aspx)합니다.
 
 SSMS를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [사용 하 여 SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx)합니다.
-

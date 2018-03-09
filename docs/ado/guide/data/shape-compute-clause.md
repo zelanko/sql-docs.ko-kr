@@ -3,8 +3,9 @@ title: "COMPUTE 절 셰이프 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
 부모를 생성 하는 셰이프 COMPUTE 절 **레코드 집합**, 열이 있는 자식에 대 한 참조를 이루어져 **레코드 집합**선택적 요소 내용이 장, 새로 만들었거나, 또는 계산된 열, 열 또는 자식 요소에서 집계 함수를 실행 한 결과 **레코드 집합** 또는 이전에 모양의 **레코드 집합**; 및 모든 열을 자식 **레코드 집합** 에 나열 된 절에 의해 선택 사항입니다.  
@@ -41,7 +42,7 @@ SHAPE child-command [AS] child-alias
 ## <a name="description"></a>Description  
  이 절의 일부는 다음과 같습니다.  
   
- *자식 명령*  
+ *child-command*  
  다음 중 하나를 구성 됩니다.  
   
 -   자식 항목을 반환 하는 쿼리 명령이 중괄호 ("{") 안에 **레코드 집합** 개체입니다. 기본 데이터 공급자에는 명령이 실행 될 하 고 해당 공급자의 요구 사항에 해당 구문에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어 같아야 합니다.  
@@ -52,13 +53,13 @@ SHAPE child-command [AS] child-alias
   
 -   데이터 공급자에 있는 테이블의 이름이 차례로 나옵니다 테이블 키워드입니다.  
   
- *자식 별칭*  
+ *child-alias*  
  별칭 참조 하는 데는 **레코드 집합** 에서 반환 되는 *자식 명령입니다.* *자식 별칭* COMPUTE 절에 있는 열의 목록에이 필요 하 고 부모와 자식 간의 관계를 정의 **레코드 집합** 개체입니다.  
   
- *열 추가-목록*  
+ *appended-column-list*  
  각 요소는 생성 된 부모 열을 정의 목록입니다. 장 열, 새 열, 계산된 열 또는 자식 요소에서 집계 함수를 결과 값을 포함 하는 각 요소 **레코드 집합**합니다.  
   
- *그룹 필드 목록*  
+ *grp-field-list*  
  부모 및 자식 열 목록 **레코드 집합** 자식에서 행을 그룹화 하는 방법을 지정 하는 개체입니다.  
   
  각 열에 대해서는 *그룹-필드 목록에서* 자식 및 부모에 해당 열이 **레코드 집합** 개체입니다. 부모의 각 행에 대해 **레코드 집합**, *그룹 필드 목록* 열의 고유 값이 있고 자식 **레코드 집합** 부모 참조 자식 행 으로만 구성 행을 갖는 *그룹 필드 목록* 열 동일한 부모 행 값을 갖습니다.  
@@ -85,12 +86,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |State|City|모집단|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|또는|Medford|200,000|  
-|또는|Portland|400,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|샌디에고|600,000|  
 |WA|Tacoma|500,000|  
-|또는|Corvallis|300,000|  
+|OR|Corvallis|300,000|  
   
  이제이 shape 명령을 실행 합니다.  
   
@@ -114,7 +115,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|자식 1에 대 한 참조|CA|  
 |1,200,000|자식 2에 대 한 참조|WA|  
-|1,100,000|Child3에 대 한 참조|또는|  
+|1,100,000|Child3에 대 한 참조|OR|  
   
 ## <a name="child1"></a>Child1  
   
@@ -134,9 +135,9 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |State|City|모집단|  
 |-----------|----------|----------------|  
-|또는|Medford|200,000|  
-|또는|Portland|400,000|  
-|또는|Corvallis|300,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
+|OR|Corvallis|300,000|  
   
 ## <a name="see-also"></a>관련 항목:  
  [계층적 레코드 집합의 행에 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

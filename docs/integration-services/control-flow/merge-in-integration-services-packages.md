@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 패키지의에서 MERGE | Microsoft Docs"
+title: "Integration Services 패키지의 MERGE | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: abce78012965130235001f74f541940a7ae0b218
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="merge-in-integration-services-packages"></a>Integration Services 패키지의 MERGE
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 현재 릴리스에서 SQL 실행 태스크의 SQL 문은 MERGE 문을 포함할 수 있습니다. 이 MERGE 문을 사용하면 하나의 문에서 여러 INSERT, UPDATE 및 DELETE 작업을 수행할 수 있습니다.  
@@ -77,4 +76,3 @@ ms.lasthandoff: 08/03/2017
  Inventory 데이터베이스의 ProductsInventory 테이블에는 ProductID와 StockOnHand 열이 있습니다. ProductID, CustomerID 및 Quantity 열이 있는 Shipments 테이블은 고객에게 보내는 제품 배송을 추적합니다. ProductInventory 테이블은 Shipments 테이블의 정보를 바탕으로 매일 업데이트되어야 합니다. 하나의 MERGE 문은 배송을 기준으로 ProductInventory 테이블의 재고를 줄일 수 있습니다. 또한 제품에 대한 재고가 0이 되면 이 MERGE 문은 ProductInventory 테이블에서 해당 제품 행을 삭제할 수도 있습니다.  
   
   
-

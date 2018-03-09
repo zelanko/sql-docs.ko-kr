@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLConfigDriver
-apilocation:
-- sqlsrv32.dll
+apiname: SQLConfigDriver
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLConfigDriver
-helpviewer_keywords:
-- SQLConfigDriver function [ODBC]
+f1_keywords: SQLConfigDriver
+helpviewer_keywords: SQLConfigDriver function [ODBC]
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3af2f70156cae3427b5d22f3214f5c911af14a5d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9dd30a466fefda6f8b100fdd9595e9ab65e4d85f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 함수
 **규칙**  
@@ -93,7 +87,7 @@ BOOL SQLConfigDriver(
 ## <a name="diagnostics"></a>진단  
  때 **SQLConfigDriver** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*lpszMsg* 인수가 잘못 되었습니다.|  
@@ -105,7 +99,7 @@ BOOL SQLConfigDriver(
 |ODBC_ERROR_LOAD_LIBRARY_FAILED|드라이버 또는 변환기 설치 라이브러리를 로드할 수 없습니다.|드라이버 설치 라이브러리를 로드할 수 없습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLConfigDriver** 운전 호출 응용 프로그램 **ConfigDriver** 이름을 알고와 드라이버 설치 DLL을 로드할 필요 없이 라우팅입니다. 설치 프로그램 드라이버 설치 DLL을 설치한 후이 함수를 호출 합니다. 호출 프로그램은이 함수 사용 하지 못할 모든 드라이버에 대해 알고 있어야 합니다. 이 경우 호출 프로그램은 오류 없이 계속 해야 합니다.  
   
 ## <a name="driver-specific-options"></a>드라이버 관련 옵션  
@@ -125,4 +119,3 @@ BOOL SQLConfigDriver(
 |---------------------------|---------|  
 |추가, 수정 또는 드라이버를 제거 합니다.|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)(에 DLL 설치)|  
 |기본 데이터 원본 제거|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|
-

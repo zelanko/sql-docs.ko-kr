@@ -17,22 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a04115502f54ce1731c0d8aa14b2f264bc66709f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f9541c6d49a6fc4f7a0dea8becdb4022ff53e3f6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-viewer"></a>데이터 뷰어
   경로에서 데이터 뷰어를 사용하도록 구성한 경우 데이터 뷰어에서는 데이터가 두 데이터 흐름 구성 요소 간을 이동할 때 데이터를 버퍼별로 표시합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **녹색 화살표**  
  다음 버퍼에 데이터를 표시하려면 클릭합니다. 데이터를 단일 버퍼로 이동할 수 있는 경우 이 옵션은 사용할 수 없습니다.  
   
@@ -49,8 +48,7 @@ ms.lasthandoff: 08/03/2017
  **데이터 복사**  
  현재 버퍼의 데이터를 클립보드로 복사합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름 디버깅](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   
-

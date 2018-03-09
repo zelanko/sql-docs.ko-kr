@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.values.f1
+f1_keywords: sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "31"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 43d5425678270fb224b0a55e70c5f7928545ffaa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="change-domain-values"></a>도메인 값 변경
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료의 메타데이터를 변경하고 보강하는 방법에 대해 설명합니다. 기술 자료 검색, 기술 자료로 정보 또는 도메인 가져오기, 기술 자료를 기반으로 다른 기술 자료 작성 등의 작업을 통해 기술 자료를 생성한 후 데이터 값을 대화식으로 변경할 수 있습니다. 기술 자료 생성은 컴퓨터 기반 프로세스를 활용할 뿐만 아니라 다음과 같이 사용자의 고유한 정보를 사용하여 데이터 값을 확인하고 변경하는 방법도 제공합니다.  
@@ -42,12 +39,12 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  도메인 값을 변경하려면 도메인 관리 작업에서 기술 자료와 도메인을 열어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  도메인 값을 변경하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Change"></a> 도메인 값 변경  
@@ -70,7 +67,7 @@ ms.lasthandoff: 09/09/2017
   
 3.  **도메인 관리** 페이지의 **도메인 목록** 에서 값을 변경할 도메인을 선택하거나 새 도메인을 만듭니다. 새 도메인을 만들어야 하는 경우 [도메인 만들기](../data-quality-services/create-a-domain.md)를 참조하세요. **도메인 값** 탭을 클릭합니다.  
   
-4.  **값** 테이블에서 수정해야 하는 값을 표시합니다. 자세한 내용은 아래의 [적절한 값을 표시하는 방법](#Display) 를 참조하세요.  
+4.  **값** 테이블에서 수정해야 하는 값을 표시합니다. 자세한 내용은 아래의 [How to Display the Appropriate Values](#Display) 를 참조하세요.  
   
 5.  값의 상태를 변경하려면 다음과 같이 계속합니다.  
   
@@ -124,7 +121,7 @@ ms.lasthandoff: 09/09/2017
   
  **정리** 작업의 **결과 관리 및 보기** 페이지에서 대화식 데이터 정리를 수행할 때는 **결과 관리 및 보기** 페이지의 **유효하지 않음** 탭에 유효하지 않음 값과 오류 값이 모두 포함됩니다.  
   
-##  <a name="Display"></a> 적절한 값을 표시하는 방법  
+##  <a name="Display"></a> How to Display the Appropriate Values  
  다음과 같이 표시를 수정할 수 있습니다.  
   
 -   **필터** 드롭다운 목록에서 상태를 선택하여 결과의 상태에 따라 테이블에서 원하는 결과를 **필터링합니다** .  
@@ -143,4 +140,3 @@ ms.lasthandoff: 09/09/2017
  **도메인 값** 탭의 각 값 테이블에 DQS_NULL 값이 포함되어 있습니다. 데이터 원본의 null은 값 테이블에서 SQL_NULL로 표시됩니다. null에 해당하는 값 하나 이상을 DQS_NULL에 대한 동의어로 설정할 수 있습니다. 이렇게 하면 모든 null 및 null에 해당하는 값이 DQS_NULL로 처리됩니다.  
   
   
-

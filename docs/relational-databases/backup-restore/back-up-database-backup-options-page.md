@@ -2,9 +2,12 @@
 title: "데이터베이스 백업(백업 옵션 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ f1_keywords:
 - swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa20534a1e98766899cbcd0825b5fbbf6c62ea0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b476e0436b392d2b3c093a6a4424dc3445d8e27e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-backup-options-page"></a>데이터베이스 백업(백업 옵션 페이지)
-  **데이터베이스 백업** 대화 상자의 **백업 옵션** 페이지를 사용하여 데이터베이스 백업 옵션을 확인하거나 수정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **데이터베이스 백업** 대화 상자의 **백업 옵션** 페이지를 사용하여 데이터베이스 백업 옵션을 확인하거나 수정할 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 백업을 만들려면**  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 백업 태스크를 지정할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)][스크립트](../../t-sql/statements/backup-transact-sql.md) 단추를 클릭한 다음 스크립트에 대한 대상을 선택하여 해당되는 **BACKUP** 스크립트를 생성할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ### <a name="backup-set"></a>백업 세트  
  **백업 세트** 패널의 옵션을 사용하면 백업 작업으로 생성된 백업 세트에 대한 선택 가능한 정보를 지정할 수 있습니다.  
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/09/2017
   
  백업 세트에 대한 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)를 참조하세요.  
   
- **Description**  
+ **설명**  
  백업 세트에 대한 설명을 입력합니다.  
   
  **백업 세트 만료 기한**  

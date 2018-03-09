@@ -1,11 +1,11 @@
 ---
-title: "3 단계: 추가 하 고 OLE DB 연결 관리자를 구성 | Microsoft Docs"
+title: "3단계: OLE DB 연결 관리자 추가 및 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 252ca86357f628b5b859c248bf13b1fea5bfcf75
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 86d3e42b79efd2f2541c575b2c860b0a5cb4f41b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>단원 1-3-추가 하 고 OLE DB 연결 관리자 구성
+# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>1-3단원: OLE DB 연결 관리자 추가 및 구성
 데이터 원본에 연결하기 위해 플랫 파일 연결 관리자를 추가한 후에는 OLE DB 연결 관리자를 추가하여 대상에 연결합니다. OLE DB 연결 관리자를 사용하면 패키지가 OLE DB 호환 데이터 원본에서 데이터를 추출하거나 데이터를 로드할 수 있습니다. OLE DB 연결 관리자를 사용하여 서버, 인증 방법 및 연결의 기본 데이터베이스를 지정할 수 있습니다.  
   
 이 단원에서는 Windows 인증을 사용하여 **AdventureWorksDB2012**의 로컬 인스턴스에 연결하는 OLE DB 연결 관리자를 만듭니다. 여기서 만든 OLE DB 연결 관리자는 이 자습서의 뒷부분에서 만들 다른 구성 요소(예: 조회 변환 및 OLE DB 대상)도 참조합니다.  
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="see-also"></a>참고 항목  
 [OLE DB 연결 관리자](../integration-services/connection-manager/ole-db-connection-manager.md)  
   
-

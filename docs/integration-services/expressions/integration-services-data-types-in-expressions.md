@@ -1,10 +1,13 @@
 ---
-title: "Integration Services 식의 데이터 형식 | Microsoft Docs"
+title: "식에서의 Integration Services 데이터 형식 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,16 +16,16 @@ helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 83b16b04dfe061c3953dc7dd593fbf328588129f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-data-types-in-expressions"></a>식에서의 Integration Services 데이터 형식
   식 계산기는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 사용합니다. 데이터가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에 처음 포함될 때 데이터 흐름 엔진이 모든 열 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하므로 식에 사용되는 열 데이터는 이미 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식입니다. 조건부 분할 및 파생 열 변환에 사용된 식은 열 데이터가 포함된 데이터 흐름에 속해 있으므로 열을 참조할 수 있습니다.  
@@ -44,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
  다음 스크린샷에 나와 있는 식을 살펴보세요.  
   
- ![SSIS 식의 데이터 형식 문자열](../../integration-services/expressions/media/stringsinssisexpressions.png "SSIS 식의 데이터 형식 문자열")  
+ ![SSIS 식의 문자열 데이터 형식](../../integration-services/expressions/media/stringsinssisexpressions.png "SSIS 식의 문자열 데이터 형식")  
   
 1.  첫 번째 식의 경우 NULL(DT_STR, ...)이 식의 루트 수준에 있으므로 오류 없이 실행됩니다.  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 08/03/2017
   
  다음 예에서는 캐스팅의 효과를 보여 줍니다.  
   
- ![SSIS 식의 문자열 캐스트](../../integration-services/expressions/media/stringsinssisexpressions2.png "SSIS 식에서 문자열 캐스팅")  
+ ![SSIS 식의 문자열 캐스팅](../../integration-services/expressions/media/stringsinssisexpressions2.png "SSIS 식의 문자열 캐스팅")  
   
 1.  첫 번째 식에서는 식의 루트 수준에서 캐스팅이 수행되지 않습니다. 식 평가기는 이 캐스팅을 지능적으로 처리하여 DT_STR이 아닌 DT_WSTR로 캐스팅합니다. 식은 DT_WSTR을 반환합니다.  
   
@@ -71,7 +74,7 @@ ms.lasthandoff: 08/03/2017
   
  다음 다이어그램에서는 BINARY 연산의 암시적 변환의 결과 유형을 보여 줍니다. 이 테이블에서 열과 행의 교집합은 왼쪽(원본) 및 오른쪽(대상) 유형의 피연산자가 있는 이진 연산의 결과 유형입니다.  
   
- ![암시적 데이터 형식 데이터 형식 간의 변환](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "암시적 데이터 형식 데이터 형식 간의 변환")  
+ ![데이터 형식 간 암시적 데이터 형식 변환](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "데이터 형식 간 암시적 데이터 형식 변환")  
   
  부호 있는 정수와 부호 없는 정수의 교집합은 두 인수 중 하나보다 클 수도 있는 부호 있는 정수입니다.  
   
@@ -84,11 +87,11 @@ ms.lasthandoff: 08/03/2017
 >   
 >  오류나 예기치 않은 결과를 방지하려면 **True** 및 **False**에 특정 숫자 값을 사용하는 코드를 작성하지 말아야 합니다. 가능하면 부울 변수는 부울 변수용으로 설계된 논리 값으로만 사용해야 합니다.  
   
- 자세한 내용은 다음 항목을 참조하세요.  
+ 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   [== &#40;같음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/equal-ssis-expression.md)  
   
--   [!= &#40;같지 않음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/unequal-ssis-expression.md)  
+-   [\!= &#40;같지 않음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/unequal-ssis-expression.md)  
   
 -   [&#62;&#40;보다 큼&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)  
   

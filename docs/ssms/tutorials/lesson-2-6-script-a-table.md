@@ -2,26 +2,30 @@
 title: "테이블 스크립팅 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea88d736-849e-4368-b55d-06aeee097bf3
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 299ee6d6e49a86c36bb14dab28da5b6fe484aa02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c047fd16f30998d831977ae422b68d40ab50513b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-6---script-a-table"></a>2-6단원 - 테이블 스크립팅
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 스크립트를 만들어 테이블을 선택, 삽입, 업데이트 및 삭제하고 저장 프로시저를 작성, 변경, 삭제 또는 실행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 스크립트를 작성하여 테이블을 선택, 삽입, 업데이트 및 삭제하고 저장된 프로시저를 작성, 변경, 삭제 또는 실행할 수 있습니다.  
   
 프로시저를 삭제한 다음 프로시저를 만들거나 테이블을 만든 다음 테이블을 변경하는 등 여러 옵션이 있는 스크립트가 필요한 경우가 있습니다. 조합된 스크립트를 만들려면 첫 번째 스크립트를 쿼리 편집기 창에 저장하고 두 번째 스크립트를 클립보드에 저장하여 첫 번째 스크립트 다음에 창에 붙여 넣을 수 있습니다.  
   

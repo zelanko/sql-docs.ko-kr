@@ -14,16 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de12dd7f28eb427429ecc0260ce37707ff0cec99
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3c0d634e359b9b3578ba46649d202beef3367dd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 [ring_buffer 섹션](#h2_target_ring_buffer) 에는 XML 문자열을 관계형 행 집합에 복사할 수 있는 [Transact-SQL의 XQuery](../../xquery/xquery-language-reference-sql-server.md) 를 사용하는 예제가 포함되어 있습니다.
 
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 
 
 - [빠른 시작: SQL Server에서 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)에서 설명한 대로 확장 이벤트의 기본 사항에 대해 일반적으로 잘 알고 있어야 합니다.
@@ -122,7 +122,7 @@ sqlserver      checkpoint_begin   4
 다음은 이전 결과를 발생시킨 CREATE EVENT SESSION입니다. EVENT...WHERE 절에서는 이 테스트에서 카운트가 4로 올라간 후 계산을 멈추기 위해 **package0.counter** 필드가 사용되었습니다.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_counter_1]
     ON SERVER 
     ADD EVENT sqlserver.checkpoint_begin   -- Test by issuing CHECKPOINT; statements.
@@ -160,7 +160,7 @@ CREATE EVENT SESSION [event_counter_1]
 다음은 테스트에 사용된 CREATE EVENT SESSION입니다. ADD TARGET 절 중 하나는 event_file를 지정합니다.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -292,7 +292,7 @@ TARGET...SET 절에서 다음 Transact-SQL CREATE EVENT SESSION 문은 **source_
 - 원본 작업을 하나 이상 추적할 수 있도록 CREATE EVENT SESSION 문에 두 번째 히스토그램 대상을 추가할 수 있습니다.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_lockacquired]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -358,7 +358,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_checkpoint_dbid]
     ON SERVER 
     ADD EVENT  sqlserver.checkpoint_begin
@@ -451,7 +451,7 @@ sqlserver   lock_acquired   resource_type            NULL
 결과 범위를 좁히기 위해 먼저 테스트 테이블의 object_id를 찾을 수 있도록 sys.objects에서 선택했습니다. EVENT...WHERE 절에 해당하는 ID 하나에 대한 필터를 추가했습니다.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [pair_matching_lock_a_r_33]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -555,7 +555,7 @@ ring_buffer 대상은 빠르고 간단한 이벤트 테스트에 유용합니다
 이 CREATE EVENT SESSION 문에서 특별한 것은 없습니다. ring_buffer 대상이 사용됩니다.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -668,7 +668,7 @@ SELECT 문에서 검색할 때 콘텐츠는 XML 문자열 형식으로 표시됩
 이전 XML을 보려면 이벤트 세션이 활성 상태인 동안 다음 SELECT를 실행할 수 있습니다. 시스템 뷰 **sys.dm_xe_session_targets**에서 현재 XML 데이터가 검색됩니다.
 
 
-```tsql
+```sql
 SELECT
         CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
     INTO
@@ -700,7 +700,7 @@ SELECT * FROM #XmlAsTable;
 이전 XML을 관계형 행 집합으로 보려면 다음 T-SQL을 실행하여 위의 SELECT 문에서 계속 진행합니다. 주석 처리된 줄은 각각 XQuery 사용에 대해 설명합니다.
 
 
-```tsql
+```sql
 SELECT
          -- (A)
          ObjectLocks.value('(@timestamp)[1]',

@@ -15,17 +15,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
-caps.latest.revision: 12
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 7cf14c5782a5cdc876b04600447892932f9e9921
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: e29508550528b1f98318bec26676707c72f0b5fc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-external-table-transact-sql"></a>외부 테이블 삭제 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## <a name="arguments"></a>인수  
- [ *database_name* 합니다. [*schema_name*]. | *schema_name* 합니다. ] *table_name*  
+ [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
  제거할 외부 테이블의 한 부분으로 3 구성 이름입니다. 테이블 이름, 스키마 또는 데이터베이스 및 스키마 포함 될 수 있습니다.  
   
 ## <a name="permissions"></a>Permissions  
@@ -81,5 +80,4 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
  [CREATE EXTERNAL TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   
-
 

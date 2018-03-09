@@ -3,8 +3,11 @@ title: "쿼리 이름 바꾸기(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95c9219c6ee69d72900853ef3f63c1db78231bec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3648fff573d8f687f7d91a99bd58a7c7525a76bf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rename-queries-visual-database-tools"></a>쿼리 이름 바꾸기(Visual Database Tools)
-현재 편집하기 위해 열려 있지 않은 임의의 쿼리 이름을 바꿀 수 있습니다. 다음 절차에서는 이름을 바꾸려는 쿼리가 닫혀 있는 것으로 가정합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 현재 편집하기 위해 열려 있지 않은 임의의 쿼리 이름을 바꿀 수 있습니다. 다음 절차에서는 이름을 바꾸려는 쿼리가 닫혀 있는 것으로 가정합니다.  
   
 ### <a name="to-rename-a-query"></a>쿼리 이름을 바꾸려면  
   
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  쿼리의 새 이름을 입력한 다음 Enter 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

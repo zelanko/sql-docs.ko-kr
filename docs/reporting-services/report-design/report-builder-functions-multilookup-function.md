@@ -1,29 +1,29 @@
 ---
-title: "Multilookup 함수 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "Multilookup 함수(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8ddb5eb1fbaf3cdefa3dcef1219e14710fb64797
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 13a935d3281eae92baacc6741d7e276b3046f2ba
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="report-builder-functions---multilookup-function"></a>보고서 작성기 함수-Multilookup 함수
+# <a name="report-builder-functions---multilookup-function"></a>보고서 작성기 함수 - Multilookup 함수
   이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름 집합과 처음 일치하는 값 집합을 반환합니다.  
   
 > [!NOTE]  
@@ -41,10 +41,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (**VariantArray**) 현재 범위에서 평가되고, 조회할 키 또는 이름의 집합을 지정하는 식입니다. 예를 들어 다중값 매개 변수의 경우 `=Parameters!IDs.value`입니다.  
   
  *destination_expression*  
- (**Variant**) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`)을 입력합니다.  
+ (**Variant**) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`).  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*인 데이터 집합의 행에 대해 계산되고 검색할 값을 지정하는 식입니다. `=Fields!Name.Value`)을 입력합니다.  
+ (**Variant**) *source_expression* = *destination_expression*인 데이터 집합의 행에 대해 계산되고 검색할 값을 지정하는 식입니다. `=Fields!Name.Value`).  
   
  *데이터 집합(dataset)*  
  보고서의 데이터 집합 이름을 지정하는 상수입니다. 예를 들면 "Colors"입니다.  
@@ -52,7 +52,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>반환 값  
  **VariantArray**를 반환하거나, 일치하는 항목이 없으면 **Nothing** 을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **Multilookup** 을 사용하여 일 대 일 관계가 있는 이름 값 쌍의 데이터 집합에서 값 집합을 검색할 수 있습니다. **MultiLookup** 은 이름 또는 키 집합에 대해 **Lookup** 을 호출하는 것과 동일합니다. 예를 들어 기본 키 식별자를 기반으로 하는 다중값 매개 변수의 경우 테이블의 입력란에 있는 식에 **Multilookup** 을 사용하여 매개 변수 또는 테이블에 바인딩되지 않은 데이터 집합에서 연결된 값을 검색할 수 있습니다.  
   
  **Multilookup** 은 다음을 수행합니다.  
@@ -63,7 +63,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   결과 집합을 반환합니다.  
   
- 일 대 일 관계의 이름-값 쌍을 포함하는 데이터 집합에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)를 사용하고, 일 대 다 관계의 이름 값 쌍을 포함하는 데이터 집합에서 이름에 대한 여러 값을 검색하려면 [LookupSet 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)를 사용합니다.  
+ 일 대 일 관계의 이름-값 쌍을 포함하는 데이터 집합에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)를 사용합니다. 일 대 다 관계의 이름-값 쌍을 포함하는 데이터 집합에서 이름에 대한 여러 값을 검색하려면 [LookupSet 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)를 사용합니다.  
   
  다음과 같은 제한 사항이 있습니다.  
   
@@ -96,12 +96,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  CategoryNames 데이터 집합은 다음 표와 같이 범주 식별자와 범주 이름을 포함합니다.  
   
-|ID|이름|  
+|ID|속성|  
 |--------|----------|  
-|1.|Accessories|  
+|1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Components|  
+|4|구성 요소|  
   
  식별자 목록에 해당하는 이름을 조회하려면 **Multilookup**을 사용합니다. 먼저 목록을 문자열 배열로 분할한 다음, **Multilookup** 을 호출하여 범주 이름을 검색하고 결과를 문자열로 연결해야 합니다.  
   
@@ -118,7 +118,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 |ColorID|색|  
 |-------------|-----------|  
-|1.|빨강|  
+|1|빨강|  
 |2|파랑|  
 |3|녹색|  
   
@@ -128,11 +128,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 =Join(MultiLookup(Parameters!MyColors.Value,Fields!ColorID.Value,Fields!Color.Value,"ProductColors"),", ")  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [보고서 &#40;에 사용 되는 식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [식 &#40;의 데이터 형식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션 &#40;에 대 한 식 범위 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+## <a name="see-also"></a>참고 항목  
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

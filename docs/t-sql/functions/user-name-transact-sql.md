@@ -3,8 +3,11 @@ title: USER_NAME (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - identification numbers [SQL Server], databases
 - database usernames [SQL Server]
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 74040ef26d016301cb861c1f1b8e395fe897196d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="username-transact-sql"></a>USER_NAME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   지정된 ID 번호에서 데이터베이스 사용자 이름을 반환합니다.  
   
@@ -50,13 +52,13 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>인수  
  *id*  
- 데이터베이스 사용자와 연결된 ID 번호입니다. *id*은 **int**합니다. 괄호가 필요합니다.  
+ 데이터베이스 사용자와 연결된 ID 번호입니다. *id* 은 **int**합니다. 괄호가 필요합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(256)**  
   
 ## <a name="remarks"></a>주의  
- 때 *id* 는 생략 하면 현재 컨텍스트에서 현재 사용자 가정 됩니다. 매개 변수가 포함 된 경우 단어 NULL이 NULL을 반환 합니다. 호출 하면 USER_NAME은 지정 하지 않고는 *id* EXECUTE 후 문으로 USER_NAME이 가장된 된 사용자의 이름을 반환 합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스하는 경우 USER_NAME은 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.  
+ 때 *id* 는 생략 하면 현재 컨텍스트에서 현재 사용자 가정 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다. 호출 하면 USER_NAME은 지정 하지 않고는 *id* EXECUTE 후 문으로 USER_NAME이 가장된 된 사용자의 이름을 반환 합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스하는 경우 USER_NAME은 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -168,5 +170,4 @@ User7
  [SYSTEM_USER &#40; Transact SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
-
 

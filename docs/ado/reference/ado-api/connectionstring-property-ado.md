@@ -3,7 +3,7 @@ title: "ConnectionString 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: 18
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34db69d25ff835de4f8c81d252c99017ae4acbb5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 속성 (ADO)
 데이터 원본에 대 한 연결을 설정 하는 데 사용 되는 정보를 나타냅니다.  
@@ -43,11 +42,11 @@ ms.lasthandoff: 09/09/2017
   
 |인수|Description|  
 |--------------|-----------------|  
-|*Provider =*|연결에 사용할 공급자의 이름을 지정 합니다.|  
+|*Provider=*|연결에 사용할 공급자의 이름을 지정 합니다.|  
 |*파일 이름 =*|미리 설정 된 연결 정보를 포함 하는 공급자별 파일 (예를 들어 지속형된 데이터 원본 개체)의 이름을 지정 합니다.|  
 |*원격 공급자 =*|클라이언트 연결을 열 때 사용할 공급자의 이름을 지정 합니다. (원격 데이터 서비스만 합니다.)|  
-|*원격 서버 =*|클라이언트 연결을 열 때 사용할 서버 경로 이름을 지정 합니다. (원격 데이터 서비스만 합니다.)|  
-|*URL =*|파일 또는 디렉터리와 같은 리소스를 식별 하는 절대 URL로 연결 문자열을 지정 합니다.|  
+|*Remote Server=*|클라이언트 연결을 열 때 사용할 서버 경로 이름을 지정 합니다. (원격 데이터 서비스만 합니다.)|  
+|*URL=*|파일 또는 디렉터리와 같은 리소스를 식별 하는 절대 URL로 연결 문자열을 지정 합니다.|  
   
  설정한 후의 **ConnectionString** 속성 및 open의 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 공급자 내용을 변경할 수는 속성의 예를 들어 ADO 정의 된 인수 이름에 매핑하는 방법으로 해당 특정 공급자에 해당 합니다.  
   
@@ -76,4 +75,3 @@ ms.lasthandoff: 09/09/2017
  [ConnectionString, ConnectionTimeout, 및 상태 속성 예제 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString, ConnectionTimeout, 및 상태 속성 예제 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
-

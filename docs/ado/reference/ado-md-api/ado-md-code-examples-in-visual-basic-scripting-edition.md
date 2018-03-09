@@ -3,27 +3,30 @@ title: "Visual Basic Scripting Edition에서에서 ADO MD 코드 예제 | Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: ADO MD code examples, VBScript
+dev_langs:
+- VB
+helpviewer_keywords:
+- ADO MD code examples, VBScript
 ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a4cfa5647ba5e6dcc5130585894a3cf9766aee2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ff5d6a2b14062d1f72d9825b7f5001900a99dfd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Visual Basic Scripting Edition에서에서 ADO MD 코드 예제
 다음 예에서는 Microsoft 인터넷 정보 서버 4.0에 대 한 Microsoft ASP Active Server Pages ()를 해야 합니다.  

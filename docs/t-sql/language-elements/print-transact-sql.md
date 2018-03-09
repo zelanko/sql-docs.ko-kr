@@ -25,20 +25,19 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: a1044fb78ebf3852a963d11607433fdb93d48007
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 9f78f85fc8697062c628a22736a7ae0d31d53792
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="print-transact-sql"></a>인쇄 Transact SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="print-transact-sql"></a>PRINT(Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   사용자 정의 메시지를 클라이언트에게 반환합니다.  
   
@@ -54,8 +53,8 @@ PRINT msg_str | @local_variable | string_expr
  *msg_str*  
  문자열 또는 유니코드 문자열 상수입니다. 자세한 내용은 참조 [상수 &#40; Transact SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
   
- **@***local_variable*  
- 유효한 문자 데이터 형식의 변수입니다. **@***local_variable* 해야 **char**, **nchar**, **varchar**, 또는 **nvarchar**, 될 수 있어야 하거나 이러한 데이터 형식으로 암시적으로 변환 합니다.  
+ **@** *local_variable*  
+ 유효한 문자 데이터 형식의 변수입니다. **@ * * * local_variable* 해야 **char**, **nchar**, **varchar**, 또는 **nvarchar**, 될 수 있어야 하거나 이러한 데이터 형식으로 암시적으로 변환 합니다.  
   
  *string_expr*  
  문자열을 반환하는 식입니다. 연결된 리터럴 값, 함수 및 변수를 포함할 수 있습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
@@ -124,5 +123,4 @@ GO
  [Raiserror&#40; Transact SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
-
 

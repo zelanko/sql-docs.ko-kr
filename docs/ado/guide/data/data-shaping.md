@@ -3,7 +3,7 @@ title: "데이터 모양 지정 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - data shaping [ADO]
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 37fb29f39fd6d9a5b5b3e7b0c1b1c97aa2627654
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ad3b257166308fe2c5a4bd94da5427dc0ca2649
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-shaping"></a>데이터 셰이핑
 이 섹션에서는 다음 항목을 다룹니다.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/09/2017
 -   [공식적인 셰이프 문법](../../../ado/guide/data/formal-shape-grammar.md)  
   
 -   [응용 프로그램 기능에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-

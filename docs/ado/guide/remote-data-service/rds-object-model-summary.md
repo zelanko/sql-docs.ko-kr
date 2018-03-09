@@ -3,8 +3,9 @@ title: "RDS 개체 모델 요약 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - RDS objects [ADO], object model summary
 - RDS object model [ADO]
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b68f17999d9b6c74155463525ca04d6c000cd23f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9423b2f6072f142336e1f36f02785b69f9efdae6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-object-model-summary"></a>RDS 개체 모델 요약
 > [!IMPORTANT]
@@ -32,9 +33,9 @@ ms.lasthandoff: 11/17/2017
   
 |개체|Description|  
 |------------|-----------------|  
-|[.RDS 데이터 공간](../../../ado/reference/rds-api/dataspace-object-rds.md)|이 개체는 서버 프록시를 가져오는 메서드를 포함 합니다. 프록시는 기본 또는 사용자 지정 서버 프로그램 (비즈니스 개체) 일 수 있습니다. 서버 프로그램 인터넷, 인트라넷, 로컬 영역 네트워크에서 호출할 수 또는 로컬 동적 연결 라이브러리 여야 합니다.<br /><br /> **DataSpace** 개체는 스크립팅 작업에 안전 합니다.|  
-|[업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|이 개체의 기본 서버 프로그램을 나타냅니다. 기본 RDS 데이터 검색 및 업데이트 동작을 실행합니다.<br /><br /> **DataFactory** 개체가 스크립팅 작업에 안전 합니다.|  
-|[.RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|이 개체에 자동으로 실행할 수는 **.rds입니다 DataSpace** 및 **업데이트할** 개체입니다.<br /><br /> 이 개체를 사용 하 여 기본 RDS 데이터 검색 또는 업데이트 동작을 호출 합니다.<br /><br /> 이 개체는 반환 된 액세스 하려면 시각적 컨트롤이 수단을 제공 **레코드 집합** 개체입니다.<br /><br /> **DataControl** 개체는 스크립팅 작업에 안전 합니다.|  
+|[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|이 개체는 서버 프록시를 가져오는 메서드를 포함 합니다. 프록시는 기본 또는 사용자 지정 서버 프로그램 (비즈니스 개체) 일 수 있습니다. 서버 프로그램 인터넷, 인트라넷, 로컬 영역 네트워크에서 호출할 수 또는 로컬 동적 연결 라이브러리 여야 합니다.<br /><br /> **DataSpace** 개체는 스크립팅 작업에 안전 합니다.|  
+|[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|이 개체의 기본 서버 프로그램을 나타냅니다. 기본 RDS 데이터 검색 및 업데이트 동작을 실행합니다.<br /><br /> **DataFactory** 개체가 스크립팅 작업에 안전 합니다.|  
+|[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|이 개체에 자동으로 실행할 수는 **.rds입니다 DataSpace** 및 **업데이트할** 개체입니다.<br /><br /> 이 개체를 사용 하 여 기본 RDS 데이터 검색 또는 업데이트 동작을 호출 합니다.<br /><br /> 이 개체는 반환 된 액세스 하려면 시각적 컨트롤이 수단을 제공 **레코드 집합** 개체입니다.<br /><br /> **DataControl** 개체는 스크립팅 작업에 안전 합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

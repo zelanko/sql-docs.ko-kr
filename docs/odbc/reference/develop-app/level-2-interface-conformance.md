@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - level 2 interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4002a7b376a752d4c5d3a2ddd2506bc9357842fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="level-2-interface-conformance"></a>수준 2 인터페이스 규칙
 수준 2 인터페이스 규칙 수준은 Level 1 인터페이스 규칙 – 수준 기능 및 다음 기능에 포함 되어 있습니다.  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 |209|문 특성 SQL_ATTR_CONCURRENCY를 SQL_CONCUR_READ_ONLY 이외의 값이 하나 이상 설정.|  
 |210|로그인 요청 시간 초과 및 SQL 쿼리 (SQL_ATTR_LOGIN_TIMEOUT 및 SQL_ATTR_QUERY_TIMEOUT) 수 있습니다.|  
 |211|기본 격리 수준 변경 하는 기능 "직렬화" 수준의 격리를 사용 하 여 트랜잭션을 실행 하는 기능입니다.|
-

@@ -2,30 +2,28 @@
 title: "14 단원: 배포 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 29a05dfbeea281b2468b95e69b458d4948f7f624
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f93ae84ae1ab52e5be122b0d2d397af7bf9e458a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-13-deploy"></a>13단원: 배포
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 2.  에 **AW Internet Sales 속성 페이지** 대화 상자의 **배포 서버**에 **서버** 속성을 Azure Analysis Services 서버 이름을 입력 또는 테이블 형식 모드에서 실행 되는 온-프레미스 서버 인스턴스. 모델에 배포 될 서버 인스턴스가 될 수 있습니다.  
 
-    ![aas-배포-배포-서버-속성](../analysis-services/media/aas-deploy-deployment-server-property.png)
+    ![aas-deploy-deployment-server-property](../analysis-services/media/aas-deploy-deployment-server-property.png)
  
     > [!IMPORTANT]  
     > 원격 Analysis Services 인스턴스에서 순서를 배포 하려면에 대 한 관리자 권한이 있어야 합니다.  
@@ -66,24 +64,23 @@ ms.lasthandoff: 09/01/2017
   
     배포 대화 상자가 나타나고 메타데이터 및 모델에 포함된 각 테이블의 배포 상태가 표시됩니다.  
     
-    ![aas 배포 상태](../analysis-services/media/aas-deploy-status.png)
+    ![aas-deploy-status](../analysis-services/media/aas-deploy-status.png)
   
 3. 배포가 성공적으로 완료되면 **닫기**를 클릭합니다.  
   
 ## <a name="conclusion"></a>결론  
 축하합니다. 제작 및 첫 번째 Analysis Services 테이블 형식 모델을 배포할 마쳤습니다. 이 자습서에서는 테이블 형식 모델을 만들기 위해 수행해야 하는 대부분의 일반적인 태스크를 완료하는 과정을 안내했습니다. 이제 Adventure Works Internet Sales Model이 배포되었으므로 SQL Server Management Studio를 사용하여 모델을 관리하고 처리 스크립트와 백업 계획을 만들 수 있습니다. 사용자 수 또한 이제 Microsoft Excel 또는 Power BI와 같은 보고 클라이언트 응용 프로그램을 사용 하 여 모델에 연결 됩니다.  
 
-![로-테이블 형식-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
+![as-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
 ## <a name="see-also"></a>참고 항목  
-[DirectQuery 모드&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
-[기본 데이터 모델링 및 배포 속성 구성&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
-[테이블 형식 model 데이터베이스&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
+[DirectQuery 모드](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
+[기본 데이터 모델링 및 배포 속성 구성](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+[테이블 형식 모델 데이터베이스](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   
   ## <a name="whats-next"></a>다음 단계
 *  [추가 단원-행 필터를 사용 하 여 동적 보안 구현](../analysis-services/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)합니다.
 
 *  [추가 단원-Power View 보고서에 대 한 보고 속성 구성](../analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)합니다.
-

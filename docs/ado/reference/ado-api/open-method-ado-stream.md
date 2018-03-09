@@ -3,7 +3,7 @@ title: "Open 메서드 (ADO 스트림) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b104e04c81fce3fce5cb25d175602f1b339e9ac1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dba50c39ff8c31154e52f8575a93acdf829df442
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-stream"></a>Open 메서드 (ADO 스트림)
 열립니다는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 이진 또는 텍스트 데이터 스트림을 조작 하는 개체입니다.  
@@ -75,4 +74,3 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [OpenSchema 메서드](../../../ado/reference/ado-api/openschema-method.md)   
  [SaveToFile 메서드](../../../ado/reference/ado-api/savetofile-method.md)
-

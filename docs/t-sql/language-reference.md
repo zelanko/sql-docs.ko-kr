@@ -1,5 +1,5 @@
 ---
-title: "TRANSACT-SQL 참조 (데이터베이스 엔진) | Microsoft Docs"
+title: "Transact-SQL 참조(데이터베이스 엔진) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/03/2017
 ms.prod: sql-non-specified
@@ -18,40 +18,40 @@ f1_keywords:
 helpviewer_keywords:
 - Transact-SQL
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
-caps.latest.revision: 14
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bfc7cd52aeae6978dcd21d84bd6fd7ac99de1c21
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9bc588f23d4a78d035a46c7e5c1adcb600af1ce2
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 참조(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-이 항목을 찾고 Microsoft TRANSACT-SQL (T-SQL) 참조 항목을 사용 하는 방법에 대 한 기본 사항을 제공 합니다. Microsoft SQL 제품 및 서비스를 사용 하 여 집중 T-SQL 됩니다. 모든 도구와 SQL 데이터베이스와 통신 하는 응용 프로그램 이렇게 T-SQL 명령을 전송 됩니다.  
+이 토픽에서는 Microsoft Transact-SQL(T-SQL) 참조 토픽을 찾고 사용하는 방법에 대한 기본 사항을 제공합니다. T-SQL은 Microsoft SQL 제품 및 서비스를 사용하는데 있어 핵심입니다. SQL 데이터베이스와 통신하는 모든 도구와 응용 프로그램은 T-SQL 명령을 보내서 수행합니다.  
 
-## <a name="tools-that-use-t-sql"></a>T-SQL을 사용 하는 도구
+## <a name="tools-that-use-t-sql"></a>T-SQL을 사용하는 도구
 
-T-SQL 명령을 실행 하는 Microsoft 도구는 다음과 같습니다.
+T-SQL 명령을 실행하는 Microsoft 도구 중 일부는 다음과 같습니다.
 
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
 - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)  
-- [sqlcmd](../tools/sqlcmd-utility.md)합니다.  
+- [sqlcmd](../tools/sqlcmd-utility.md).  
+- [SQL Operations Studio(미리 보기)](https://docs.microsoft.com/sql/sql-operations-studio/download).  
   
  
-## <a name="locate-the-transact-sql-reference-topics"></a>TRANSACT-SQL 참조 항목을 찾기  
+## <a name="locate-the-transact-sql-reference-topics"></a>Transact-SQL 참조 토픽 찾기  
   
-T-SQL 항목을 찾으려면 검색 위쪽에서 사용 하 여이 오른쪽의 페이지 또는 페이지의 왼쪽에 목차를 사용 합니다. Management Studio 쿼리 편집기 창에 T-SQL 키워드를 입력 하 고 F1 키를 누를 수도 있습니다. 
+T-SQL 토픽을 찾으려면 이 페이지의 오른쪽 위에 있는 검색을 사용하거나, 또는 페이지의 왼쪽에 있는 목차를 사용합니다. Management Studio 쿼리 편집기 창에서 T-SQL 키워드를 입력하고 F1 키를 누를 수도 있습니다. 
   
 
-## <a name="find-system-views"></a>시스템 뷰를 찾기
+## <a name="find-system-views"></a>시스템 뷰 찾기
 
-이러한 링크에 있는 시스템 테이블, 뷰, 함수 및 프로시저 참조를 찾을 수는 [관계형 데이터베이스를 사용 하 여](../relational-databases/database-features.md) SQL 설명서의 섹션입니다.
+시스템 테이블, 뷰, 함수 및 프로시저를 찾으려면 SQL 설명서 섹션의 [관계형 데이터베이스 사용](../relational-databases/database-features.md)에 있는 링크를 참조하세요.
 
 - [시스템 카탈로그 뷰](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [시스템 호환성 뷰](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
@@ -62,27 +62,27 @@ T-SQL 항목을 찾으려면 검색 위쪽에서 사용 하 여이 오른쪽의 
 - [시스템 테이블](../relational-databases/system-tables/system-tables-transact-sql.md)
 
  
-## <a name="applies-to-references"></a>"적용 대상" 참조  
- T-SQL 참조 항목에는 여러 버전의 다른 SQL Azure 서비스와 SQL Server 2008 부터는 범위가 포함 합니다. 각 항목의 위쪽에 제품 및 서비스 지원는 항목의 제목을 나타내는 섹션입니다. 
+## <a name="applies-to-references"></a>'적용 대상' 참조  
+ T-SQL 참조 토픽에는 다른 Azure SQL 서비스뿐만 아니라, 2008부터 시작하는 여러 버전의 SQL Server가 포함됩니다.  각 토픽의 위쪽에는 토픽의 제목을 지원하는 제품 및 서비스를 나타내는 섹션이 있습니다. 
 
-예를 들어이 항목 모든 버전에 적용 되 고 다음 레이블이 합니다. 
+예를 들어, 이 토픽은 모든 버전에 적용되며 다음 레이블이 있습니다. 
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-또 다른 예로, 다음 레이블이 Azure SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스에만 적용 되는 항목을 나타냅니다.
+또 다른 예로, 다음 레이블은 Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에만 적용되는 토픽을 나타냅니다.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   
-경우에 따라 항목 제품이 나 서비스에서 사용 하는 하지만 모든 인수는 지원 되지 않습니다. 이 경우, 추가 **에 적용 됩니다** 섹션 항목의 본문에 해당 인수 설명에 삽입 됩니다.  
+경우에 따라 토픽이 제품이나 서비스에서 사용되지만 모든 인수는 지원되지 않습니다. 이 경우 추가적인 **적용 대상** 섹션이 토픽 본문의 적절한 인수 설명에 삽입됩니다.  
  
 ## <a name="get-help-from-the-msdn-forum"></a>MSDN 포럼에서 도움말 보기  
   
-온라인 도움말에 대 한 참조는 [MSDN TRANSACT-SQL 포럼](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)합니다.  
+온라인 도움말은 [MSDN Transact-SQL 포럼](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)을 참조하세요.  
  
-## <a name="see-other-language-references"></a>다른 언어 참조
+## <a name="see-other-language-references"></a>다른 언어 참조 보기
 
-이러한 언어 참조를 포함 하는 SQL docs:
+SQL 문서에는 이러한 다른 언어 참조가 포함됩니다.
   
 - [XQuery 언어 참조](../xquery/xquery-language-reference-sql-server.md)
 - [Integration Services 언어 참조](../integration-services/integration-services-language-reference.md)
@@ -92,11 +92,10 @@ T-SQL 항목을 찾으려면 검색 위쪽에서 사용 하 여이 오른쪽의 
 
 ## <a name="next-steps"></a>다음 단계
 
-T-SQL 참조 항목을 찾는 방법을 이해 했으므로 준비가 되었습니다.
+T-SQL 참조 토픽을 찾는 방법을 이해했으므로 다음을 수행할 준비가 되었습니다.
 
-- T-SQL 쓰기, 참조 하는 방법에 대 한 간략 한 자습서를 통해 작업 [자습서: TRANSACT-SQL 문 쓰기](../t-sql/tutorial-writing-transact-sql-statements.md)합니다. 
-- 보기는 [TRANSACT-SQL 구문 표기 규칙 &#40; Transact SQL &#41; ](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+- T-SQL을 작성하는 방법에 대한 간단한 자습서를 통한 작업은 [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요. 
+- [Transact-SQL 구문 표기 규칙 &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 보기  
 
   
   
-

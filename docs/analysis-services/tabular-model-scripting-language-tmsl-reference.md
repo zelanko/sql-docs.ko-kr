@@ -2,33 +2,29 @@
 title: "테이블 형식 모델 스크립팅 언어 (TMSL) 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c700d7f8-7e01-4052-a9ad-8200dd4009f2
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 875dd29a77a341e3d40502002488fc0189947c9d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>테이블 형식 모델 스크립팅 언어 (TMSL) 참조
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   스크립팅 언어 TMSL (tabular Model)은 호환성 수준 1200 이상에서 Analysis Services 테이블 형식 모델 데이터베이스에 대 한 명령 및 개체 모델 정의 구문입니다. TMSL, XMLA 프로토콜을 통해 Analysis Services에 통신 합니다. 여기서는 [XMLA 합니다. 실행](../analysis-services/xmla/xml-elements-methods-execute.md) 메서드 둘 다 받습니다 JSON 기반 **문을** 에서 기존 XML 기반 스크립트 뿐만 아니라 TMSL 스크립트 [Analysis Services Scripting Language &#40; ASSL XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
@@ -88,4 +84,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 인스턴스의 서버 모드 확인](../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

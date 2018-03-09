@@ -3,8 +3,11 @@ title: "조인 대화 상자(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,28 +18,28 @@ ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33fea037e80f2baf12d3b4ded38b1d9e989a4403
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 65ee5adf9736860cd9cd9e8e75d6ff387af84348
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>조인 대화 상자(Visual Database Tools)
-이 대화 상자를 사용하면 테이블을 조인하기 위한 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **디자인** 창에서 조인 선을 선택합니다. 그런 다음 **속성** 창에서 **조인 조건 및 형식**을 클릭하고 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하면 테이블을 조인하기 위한 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **디자인** 창에서 조인 선을 선택합니다. 그런 다음 **속성** 창에서 **조인 조건 및 형식**을 클릭하고 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
   
 기본적으로 관련 테이블은 조인 열의 일치하는 정보를 포함하는 행에 기반하여 결과 집합을 만드는 내부 조인을 사용하여 조인됩니다. **조인** 대화 상자에서 옵션을 설정하여 다른 연산자를 기반으로 하는 조인을 지정하거나 외부 조인을 지정할 수 있습니다.  
   
 테이블을 조인하는 방법에 대한 자세한 내용은 [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)를 참조하세요.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 |**용어**|**정의**|  
 |------------|------------------|  
 |**테이블**|조인에 관련된 테이블 또는 테이블 반환 개체의 이름입니다. 여기서는 테이블의 이름을 변경할 수 없으며 표시된 정보를 참조만 할 수 있습니다.|  
 |**열**|테이블 조인에 사용된 열의 이름입니다. 연산자 목록의 연산자는 열에 있는 데이터 간의 관계를 지정합니다. 여기서는 열의 이름을 변경할 수 없으며 표시된 정보를 참조만 할 수 있습니다.|  
-|**연산자**|조인 열과 관련시키는 데 사용되는 연산자를 지정합니다. 등호(=) 이외의 연산자를 지정하려면 목록에서 해당 연산자를 선택하십시오. 속성 페이지를 닫으면 선택한 연산자가 다음 그림과 같이 조인 선의 다이아몬드 모양 안에 나타납니다.<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 아이콘")|  
+|**같음**|조인 열과 관련시키는 데 사용되는 연산자를 지정합니다. 등호(=) 이외의 연산자를 지정하려면 목록에서 해당 연산자를 선택하십시오. 속성 페이지를 닫으면 선택한 연산자가 다음 그림과 같이 조인 선의 다이아몬드 모양 안에 나타납니다.<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 아이콘")|  
 |**모든 행 <table1>**|오른쪽 테이블에 일치하는 항목이 없는 경우에도 왼쪽 테이블의 모든 행이 출력되도록 지정합니다. 오른쪽 테이블에서 일치하는 데이터가 없는 열은 null로 나타납니다. 이 옵션을 선택하면 SQL 문에 왼쪽 우선 외부 조인을 지정하는 것과 결과가 같습니다.|  
 |**모든 행 <table2>**|왼쪽 테이블에 일치하는 항목이 없는 경우에도 오른쪽 테이블의 모든 행이 출력되도록 지정합니다. 왼쪽 테이블에서 일치하는 데이터가 없는 열은 null로 나타납니다. 이 옵션을 선택하면 SQL 문에 RIGHT OUTER JOIN을 지정하는 것과 결과가 같습니다.|  
   
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 > "왼쪽"과 "오른쪽"이라는 말이 반드시 다이어그램 창의 테이블 위치를 의미하지는 않습니다. "왼쪽"은 SQL 문에서 JOIN 키워드의 왼쪽에 이름이 나타나는 테이블을 말하고 "오른쪽"은 JOIN 키워드의 오른쪽에 이름이 나타나는 테이블을 말합니다. **다이어그램** 창에서 테이블의 위치를 바꾸어도 여기에서 언급하는 왼쪽과 오른쪽이 바뀌는 것은 아닙니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

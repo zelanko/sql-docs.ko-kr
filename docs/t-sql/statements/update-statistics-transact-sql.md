@@ -1,10 +1,13 @@
 ---
 title: UPDATE STATISTICS (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - UPDATE STATISTICS statement
 - statistical information [SQL Server], updating
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-caps.latest.revision: 74
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a1b053ddc09876717f0fbf34b2d7c294988162f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7c69949773ff1dae533c98d087780a2f4b436b62
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   테이블 또는 인덱싱된 뷰에 대한 쿼리 최적화 통계를 업데이트합니다. 기본적으로 쿼리 최적화 통계를 업데이트; 쿼리 계획을 개선 하기 위해 필요에 따라 UPDATE STATISTICS 또는 저장된 프로시저를 사용 하 여 쿼리 성능을 향상 수 하는 경우에 따라 [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) 기본 업데이트 보다 더 자주 통계를 업데이트 합니다.  
   
@@ -65,7 +67,8 @@ UPDATE STATISTICS table_or_indexed_view_name
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ] 
     ] ;  
   
 <update_stats_stream_option> ::=  
@@ -131,7 +134,7 @@ PERSIST_SAMPLE_PERCENT = {ON | OFF}
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 및 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 선택한 통계에 대 한 지속형된 샘플 백분율 값을 표시 합니다.
  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 c u 4입니다.  
+ **에 적용 됩니다**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4)를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
  ON PARTITIONS ({ \<partition_number > | \<범위 >} [, … n]) ] 리프 수준 통계를 다시 계산한 다음 전역 통계 구축 하기 위해 병합 ON PARTITIONS 절에 지정 된 파티션에 적용 되도록 합니다. 서로 다른 샘플링 주기로 작성된 파티션 통계는 병합할 수 없으므로 WITH RESAMPLE이 필요합니다.  
   
@@ -156,32 +159,46 @@ PERSIST_SAMPLE_PERCENT = {ON | OFF}
  파티션별 통계가 지원되지 않을 경우 오류가 생성됩니다. 다음 통계 유형에 대해서는 증분 통계가 지원되지 않습니다.  
   
 -   기본 테이블을 기준으로 파티션 정렬되지 않은 인덱스를 사용하여 작성된 통계입니다.  
-  
 -   Always On 읽기 가능한 보조 데이터베이스에 대해 작성된 통계입니다.  
-  
 -   읽기 전용 데이터베이스에 대해 작성된 통계입니다.  
-  
 -   필터링된 인덱스에 대해 작성된 통계입니다.  
-  
 -   뷰에 대해 작성된 통계입니다.  
-  
 -   내부 테이블에 대해 작성된 통계입니다.  
-  
 -   공간 인덱스 또는 XML 인덱스를 사용하여 작성된 통계입니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+MAXDOP = *max_degree_of_parallelism*  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ 재정의 **x degree of** 통계 작업의 기간에 대 한 구성 옵션입니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
+  
+ *max_degree_of_parallelism* 될 수 있습니다.  
+  
+ 1  
+ 병렬 계획이 생성되지 않습니다.  
+  
+ \>1  
+ 지정된 된 수 이하로 현재 시스템 작업에 따라 병렬 통계 작업에 사용 되는 프로세서의 최대 수를 제한 합니다.  
+  
+ 0(기본값)  
+ 현재 시스템 작업에 따라 실제 프로세서 수 이하의 프로세서를 사용합니다.  
   
  \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
-  
+
 ## <a name="remarks"></a>주의  
   
 ## <a name="when-to-use-update-statistics"></a>UPDATE STATISTICS를 사용하는 경우  
  UPDATE STATISTICS를 사용 하는 경우에 대 한 자세한 내용은 참조 [통계](../../relational-databases/statistics/statistics.md)합니다.  
-  
+
+## <a name="limitations-and-restrictions"></a>제한 사항  
+* 외부 테이블에서 통계를 업데이트할 수 없습니다. 외부 테이블에 대 한 통계를 업데이트 하려면 삭제 하 고 통계를 다시 만듭니다.  
+* MAXDOP 옵션 STATS_STREAM, 행 개수 및 PAGECOUNT 옵션와 호환 되지 않습니다.
+
 ## <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats를 사용하여 모든 통계 업데이트  
  데이터베이스의 모든 사용자 정의 테이블 및 내부 테이블에 대한 통계를 업데이트하는 방법은 저장 프로시저 [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)를 참조하세요. 예를 들어 다음 명령에서는 sp_updatestats를 호출하여 데이터베이스에 대한 모든 통계를 업데이트합니다.  
   
-```t-sql  
+```sql  
 EXEC sp_updatestats;  
 ```  
   
@@ -191,23 +208,23 @@ EXEC sp_updatestats;
 ## <a name="pdw--sql-data-warehouse"></a>PDW / SQL 데이터 웨어하우스  
  다음 구문을 PDW에서 지원 되지 않습니다 / SQL 데이터 웨어하우스  
   
-```t-sql  
+```sql  
 update statistics t1 (a,b);   
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with sample 10 rows;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with NORECOMPUTE;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with INCREMENTAL=ON;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
@@ -219,7 +236,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ### <a name="a-update-all-statistics-on-a-table"></a>1. 테이블에 대한 모든 통계 업데이트  
  모든 인덱스에 대 한 통계를 업데이트 하는 다음 예제는 `SalesOrderDetail` 테이블입니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
@@ -229,7 +246,7 @@ GO
 ### <a name="b-update-the-statistics-for-an-index"></a>2. 인덱스에 대한 통계 업데이트  
  다음 예에서는 `AK_SalesOrderDetail_rowguid` 테이블의 `SalesOrderDetail` 인덱스에 대한 통계를 업데이트합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
@@ -239,7 +256,7 @@ GO
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>3. 50퍼센트 샘플링을 사용하여 통계 업데이트  
  다음 예에서는 `Name` 테이블의 `ProductNumber` 및 `Product` 열에 대한 통계를 만든 후 업데이트합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE STATISTICS Products  
@@ -253,7 +270,7 @@ UPDATE STATISTICS Production.Product(Products)
 ### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>4. FULLSCAN 및 NORECOMPUTE를 사용하여 통계 업데이트  
  다음 예에서는 `Products` 테이블의 `Product` 통계를 업데이트하고 `Product` 테이블의 모든 행을 전체 검색하며 `Products` 통계에 대한 자동 통계를 비활성화합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
@@ -266,21 +283,21 @@ GO
 ### <a name="e-update-statistics-on-a-table"></a>5. 테이블에 대 한 통계를 업데이트 합니다.  
  다음 예에서는 업데이트 된 `CustomerStats1` 에 대 한 통계는 `Customer` 테이블입니다.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>6. 전체 검색을 사용 하 여 통계를 업데이트 합니다.  
  다음 예에서는 업데이트 된 `CustomerStats1` 에 있는 행의 모든 검색 기준으로 통계는 `Customer` 테이블입니다.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
 ### <a name="g-update-all-statistics-on-a-table"></a>7. 테이블에 대한 모든 통계 업데이트  
  모든 통계를 업데이트 하는 다음 예제는 `Customer` 테이블입니다.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer;  
 ```  
   
@@ -293,10 +310,8 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40; Transact SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
+ [sys.dm_db_stats_properties&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
-  
-
 
 
 

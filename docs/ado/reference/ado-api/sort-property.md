@@ -3,7 +3,7 @@ title: "정렬 속성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 93be03c62c7950e2cd41a3ab5b56670c2e70b11c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16bba12bdcf95e8e71cab6dcb8404b7b3b1916e7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sort-property"></a>정렬 속성
 에 있는 하나 이상의 필드 이름 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 정렬 된 각 필드를 오름차순 또는 내림차순 정렬 되는지 합니다.  
@@ -66,4 +65,3 @@ ms.lasthandoff: 09/09/2017
  [동적 속성 (ADO)를 최적화 합니다.](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [SortColumn 속성 (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [SortDirection 속성(RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-

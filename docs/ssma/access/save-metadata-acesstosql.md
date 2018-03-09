@@ -1,10 +1,13 @@
 ---
 title: "메타 데이터 (AcessToSQL) 저장 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3073a7630f12ce6bff08f10667518adbd3a4649d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 38d74c7c7bd5d1cc2ac3bf4dbbf940ecf1abafc3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-metadata-acesstosql"></a>메타 데이터 (AcessToSQL)를 저장 합니다.
 **메타 데이터 저장** SSMA 프로젝트에 저장 하기 전에 메타 데이터를 로드 하 라는 대화 상자가 표시 됩니다. 이 게 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사용자에 게 보낼 수 있는 전체 프로젝트 파일을 제공 합니다.  
   
 액세스는 **메타 데이터 저장** 대화 상자에서 프로젝트를 저장 합니다. 메타 데이터가 누락 되 면 SSMA 표시 됩니다는 **메타 데이터 저장** 대화 상자.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **이름**  
 프로젝트의 각 데이터베이스의 이름입니다.  
   

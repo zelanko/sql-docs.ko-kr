@@ -3,7 +3,7 @@ title: "AddNew 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 4d05354a7e164d5f739f7306fc4c418ed3d1de58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b804e2c2ea92a2f1f10caf98a556de3ff1a8fca4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="addnew-method-ado"></a>AddNew 메서드 (ADO)
 업데이트할 수 있는 작업에 대 한 새 레코드를 만들어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -42,7 +41,7 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *레코드 집합*  
+ *recordset*  
  A **레코드 집합** 개체입니다.  
   
  *FieldList*  
@@ -103,4 +102,3 @@ rs.Update
  [메서드를 지원](../../../ado/reference/ado-api/supports-method.md)   
  [Update 메서드](../../../ado/reference/ado-api/update-method.md)   
  [UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md)
-

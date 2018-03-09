@@ -5,18 +5,14 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- SELECT
-dev_langs:
-- DMX
+f1_keywords: SELECT
+dev_langs: DMX
 helpviewer_keywords:
 - browsing mining model [Analysis Services]
 - TOP clause, SELECT
@@ -28,17 +24,16 @@ helpviewer_keywords:
 - statements [DMX], SELECT statement
 - WHERE clause, DMX
 ms.assetid: 32d9e8fd-796b-4e1c-ae59-73cd6f645485
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a769e8dc2157140718a4a4c35e45fa9ccdd2e43d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c012d5fd04ed19665964119d0a0985b08ff2c7c8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-dmx"></a>SELECT(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +70,7 @@ SELECT FLATTENED <select list> FROM ...
  식을 사용 하 여 쿼리 결과 정렬할 수 및의 조합을 사용 하 여 결과의 하위 집합을 반환한 다음 수는 **ORDER BY** 및 **TOP** 절. 이 함수는 응답할 가능성이 높은 사람에게만 결과를 보내도록 메일 대상을 지정하는 시나리오 등에서 유용합니다. 예측 확률에 따라 예측 쿼리를 발송 대상의 결과 정렬 하 고 다음 반환할 상위 수 \<n > 결과입니다.  
   
 ## <a name="select-list"></a>select list  
- *\<select 목록 >* 스칼라 열 참조, 예측 함수 및 식을 포함할 수 있습니다. 사용 가능한 옵션은 알고리즘과 다음 컨텍스트에 따라 달라집니다.  
+  *\<select 목록 >* 스칼라 열 참조, 예측 함수 및 식을 포함할 수 있습니다. 사용 가능한 옵션은 알고리즘과 다음 컨텍스트에 따라 달라집니다.  
   
 -   마이닝 구조를 쿼리하는지 아니면 마이닝 모델을 쿼리하는지 여부  
   
@@ -151,11 +146,10 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
   
  [SELECT FROM &#60; 구조 &#62;. 경우](../dmx/select-from-structure-cases.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)  
   
   
-

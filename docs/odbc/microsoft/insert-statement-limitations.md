@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - INSERT statement limitations [ODBC]
 - truncation of data [ODBC]
 ms.assetid: dea05698-527a-41ab-8729-bbed85556185
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7c8547de55d04aefbd3c847fca9b53b411b5ee80
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f9233e7582083ba08fb1239120e63db819b8724b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="insert-statement-limitations"></a>INSERT 문의 제한 사항
 삽입된 된 데이터가 너무 길어 열에 맞지 않으면 경고 없이 오른쪽에서 잘립니다.  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 ```  
   
  텍스트 드라이버를 사용 하면 모든 열 값 선행 공백이 채워질 수 있습니다. 모든 행의 길이 보다 작거나 65,543 바이트가 하 여야 합니다.
-

@@ -13,38 +13,37 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c1ac27b53e011580bb185ba0f264c130d44560be
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 분할을 위한 응용 프로그램 패턴
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 디스크에서 자주 액세스하지 않는 데이터를 처리하는 동안 제한된 양의 활성 데이터를 메모리 액세스에 최적화된 테이블에 유지하는 패턴을 지원합니다. 일반적으로, 이는 **datetime** 키를 기준으로 데이터가 저장되는 시나리오가 될 것입니다.  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 디스크에서 자주 액세스하지 않는 데이터를 처리하는 동안 제한된 양의 활성 데이터를 메모리 최적화 테이블에 유지하는 패턴을 지원합니다. 일반적으로, 이는 **datetime** 키를 기준으로 데이터가 저장되는 시나리오가 될 것입니다.  
   
- 분할된 테이블과 메모리 액세스에 최적화된 테이블을 공통 스키마로 유지하여 분할된 테이블을 메모리 액세스에 최적화된 테이블로 에뮬레이트할 수 있습니다. 현재 데이터는 메모리 액세스에 최적화된 테이블에 삽입되고 업데이트되는 반면, 자주 액세스하지 않는 데이터는 기존의 분할된 테이블에 유지됩니다.  
+ 분할된 테이블과 메모리 최적화 테이블을 공통 스키마로 유지하여 분할된 테이블을 메모리 최적화 테이블로 에뮬레이트할 수 있습니다. 현재 데이터는 메모리 최적화 테이블에 삽입되고 업데이트되는 반면, 자주 액세스하지 않는 데이터는 기존의 분할된 테이블에 유지됩니다.  
   
- 활성 데이터가 메모리 액세스에 최적화된 테이블에 있음을 알고 있는 응용 프로그램은 고유하게 컴파일된 저장 프로시저를 사용하여 데이터에 액세스할 수 있습니다. 전체 데이터에 액세스해야 하거나 어떤 테이블에 관련 데이터가 유지되는지 모를 수 있는 작업은 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 메모리 액세스에 최적화된 테이블을 분할된 테이블과 조인합니다.  
+ 활성 데이터가 메모리 최적화 테이블에 있음을 알고 있는 응용 프로그램은 고유하게 컴파일된 저장 프로시저를 사용하여 데이터에 액세스할 수 있습니다. 전체 데이터에 액세스해야 하거나 어떤 테이블에 관련 데이터가 유지되는지 모를 수 있는 작업은 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 메모리 최적화 테이블을 분할된 테이블과 조인합니다.  
   
  이 파티션 전환은 다음과 같이 설명됩니다.  
   
 -   메모리 내 OLTP 테이블의 데이터를 준비 테이블에 삽입합니다. 가능하면 구분 날짜를 사용합니다.  
   
--   메모리 액세스에 최적화된 테이블에서 같은 데이터를 삭제합니다.  
+-   메모리 최적화 테이블에서 같은 데이터를 삭제합니다.  
   
 -   준비 테이블을 전환합니다.  
   
 -   활성 파티션을 추가합니다.  
   
- ![파티션 전환](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
+ ![파티션 전환.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "파티션 전환.")  
 활성 데이터 유지 관리  
   
  데이터 삭제와 준비 테이블 전환 사이의 시간 중에 누락된 데이터 쿼리가 수행되지 않도록 하려면 활성 주문 삭제로 시작되는 작업을 유지 관리 시간 중에 수행해야 합니다.  
@@ -52,11 +51,11 @@ ms.lasthandoff: 06/22/2017
  관련 샘플을 보려면 [응용 프로그램 수준 분할](../../relational-databases/in-memory-oltp/application-level-partitioning.md)을 참조하세요.  
   
 ## <a name="code-sample"></a>코드 예제  
- 다음 예제에서는 분할된 디스크 기반 테이블과 함께 메모리 액세스에 최적화된 테이블을 사용하는 방법을 보여 줍니다. 자주 사용되는 데이터는 메모리에 저장됩니다. 데이터를 디스크에 저장하려면 새 파티션을 만들고 분할된 테이블에 데이터를 복사합니다.  
+ 다음 예제에서는 분할된 디스크 기반 테이블과 함께 메모리 최적화 테이블을 사용하는 방법을 보여 줍니다. 자주 사용되는 데이터는 메모리에 저장됩니다. 데이터를 디스크에 저장하려면 새 파티션을 만들고 분할된 테이블에 데이터를 복사합니다.  
   
- 이 예제의 첫 번째 부분에서는 데이터베이스와 필요한 개체를 만듭니다. 예제의 두 번째 부분에서는 메모리 액세스에 최적화된 테이블에서 분할된 테이블로 데이터를 이동하는 방법을 보여 줍니다.  
+ 이 예제의 첫 번째 부분에서는 데이터베이스와 필요한 개체를 만듭니다. 예제의 두 번째 부분에서는 메모리 최적화 테이블에서 분할된 테이블로 데이터를 이동하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   
@@ -223,4 +222,3 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
  [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

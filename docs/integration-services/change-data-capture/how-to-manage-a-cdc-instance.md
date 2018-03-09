@@ -1,5 +1,5 @@
 ---
-title: "CDC 인스턴스를 관리 하는 방법 | Microsoft Docs"
+title: "CDC 인스턴스 관리 방법 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,19 +13,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d368fcacfb8e548647785c8b5f6ef5b73b4ef10b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9a243e7aaa5140a915c6eb13c04d0e00169c5c3c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="how-to-manage-a-cdc-instance"></a>CDC 인스턴스 관리 방법
+# <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   이 절차에서는 CDC Designer 콘솔을 사용하여 런타임에 CDC 인스턴스 작업을 관리하는 방법에 대해 설명합니다.  
   
 ### <a name="to-manage-cdc-instance-operations"></a>CDC 인스턴스 작업을 관리하려면  
@@ -61,4 +60,3 @@ ms.lasthandoff: 08/03/2017
  또한 **속성** 을 선택하여 CDC 인스턴스 구성 속성을 편집할 수 있습니다. CDC 인스턴스 속성을 편집하는 방법은 [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)을 참조하십시오.  
   
   
-

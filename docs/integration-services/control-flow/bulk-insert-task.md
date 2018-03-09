@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: f0cf4aaff6e1108572000af08ad233038adf29b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-insert-task"></a>대량 삽입 태스크
   대량 삽입 태스크는 많은 양의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 또는 뷰에 복사할 수 있는 효율적인 방법을 제공합니다. 예를 들어 회사에서 백만 개 행으로 구성된 제품 목록을 메인프레임 시스템에 저장하지만 회사의 전자 상거래 시스템이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 웹 페이지를 채운다고 가정합니다. 또한 메인프레임의 마스터 제품 목록을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 테이블을 매일 밤 업데이트해야 합니다. 테이블을 업데이트하려면 제품 목록을 탭 구분 형식으로 저장하고 대량 삽입 태스크를 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 직접 복사합니다.  
@@ -127,11 +126,11 @@ ms.lasthandoff: 08/11/2017
   
  대량 삽입 작업에 대해 알아보려면 [대량 삽입 태스크](../../integration-services/control-flow/bulk-insert-task.md) 및 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.  
   
-### <a name="options"></a>옵션  
- **연결**  
- 목록에서 OLE DB 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결을 만듭니다.  
+### <a name="options"></a>변수  
+ **대량 삽입 태스크 편집기**  
+ 목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결을 만듭니다.  
   
- **관련된 항목:** [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **관련 항목:** [OLE DB 연결 관리자 구성](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **DestinationTable**  
  대상 테이블 또는 뷰의 이름을 입력하거나 목록에서 테이블 또는 뷰를 선택합니다.  
@@ -139,19 +138,19 @@ ms.lasthandoff: 08/11/2017
  **형식**  
  대량 삽입을 위한 서식의 원본을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 사용**|서식 지정을 포함하는 파일을 선택합니다. 이 옵션을 선택하면 동적 옵션 **FormatFile**이 표시됩니다.|  
 |**지정**|서식을 지정합니다. 이 옵션을 선택하면 동적 옵션 **RowDelimiter** 및 **ColumnDelimiter**가 표시됩니다.|  
   
- **파일**  
- 목록에서 파일 또는 플랫 파일 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결을 만듭니다.  
+ **최근에 사용한 파일**  
+ 목록에서 파일 또는 플랫 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결을 만듭니다.  
   
  파일 위치는 이 태스크를 위해 연결 관리자에 지정된 SQL Server 데이터베이스 엔진의 상대적 위치입니다. 텍스트 파일은 서버의 로컬 하드 드라이브에서 또는 SQL Server에 매핑된 드라이브 또는 공유 드라이브를 통해 SQL Server 데이터베이스 엔진이 액세스할 수 있어야 합니다. 이 파일은 SSIS 런타임으로 액세스되지 않습니다.  
   
  플랫 파일 연결 관리자를 사용하여 원본 파일에 액세스할 경우 대량 삽입 태스크에서는 플랫 파일 연결 관리자에서 지정한 서식을 사용하지 않습니다. 대신 대량 삽입 태스크에서는 서식 파일에 지정된 서식이나 태스크의 RowDelimiter 및 ColumnDelimiter 속성 값을 사용합니다.  
   
- **관련된 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [플랫 파일 연결 관리자](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [플랫 파일 연결 관리자](../../integration-services/connection-manager/flat-file-connection-manager.md) 
   
  **테이블 새로 고침**  
  테이블 및 뷰 목록을 새로 고칩니다.  
@@ -172,14 +171,14 @@ ms.lasthandoff: 08/11/2017
 ## <a name="bulk-insert-task-editor-general-page"></a>대량 삽입 태스크 편집기(일반 페이지)
   **대량 삽입 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 대량 삽입 태스크를 명명 및 설명할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **이름**  
  대량 삽입 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
 > [!NOTE]  
 >  태스크 이름은 패키지 내에서 고유해야 합니다.  
   
- **Description**  
+ **설명**  
  대량 삽입 태스크에 대한 설명을 입력합니다.  
  
 ## <a name="bulk-insert-task-editor-options-page"></a>대량 삽입 태스크 편집기(옵션 페이지)
@@ -187,7 +186,7 @@ ms.lasthandoff: 08/11/2017
   
  대량 삽입 작업에 대한 자세한 내용은 [대량 삽입 태스크](../../integration-services/control-flow/bulk-insert-task.md) 및 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **CodePage**  
  데이터 파일에서 데이터의 코드 페이지를 지정합니다.  
   
@@ -221,4 +220,3 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  대량 로드 작업으로 가져올 수 없는 각 행은 하나의 오류로 간주됩니다.  
   
-

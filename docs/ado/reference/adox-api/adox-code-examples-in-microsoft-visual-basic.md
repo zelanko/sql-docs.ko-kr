@@ -3,7 +3,7 @@ title: "ADOX 코드 예제에서는 Microsoft Visual Basic | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ADOX code examples, Visual Basic
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 61b67a730c2518aa4e7779c1ccc85a015df5c74c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41dd48bcdb7a10b0aabdc4bbf4458aab0e593a1c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>ADOX 코드 예제에서는 Microsoft Visual Basic
 이러한 항목 ADOX를 사용 하는 방법을 이해 하는 예제 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual Basic을 사용 하 여 기록 됩니다.  
@@ -108,4 +107,3 @@ ms.lasthandoff: 09/09/2017
 -   [Views 및 Fields 컬렉션 예제(VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)  
   
 -   [Views 컬렉션, CommandText 속성 예제(VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)
-

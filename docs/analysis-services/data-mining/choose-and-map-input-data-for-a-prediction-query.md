@@ -2,35 +2,33 @@
 title: "선택 하 고 예측 쿼리에 대 한 입력된 데이터를 매핑할 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - tables [Analysis Services], prediction queries
 - Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b95fd2fc60fa252e8ad9de34768c12846a45e322
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>예측 쿼리에 대한 입력 데이터 선택 및 매핑
-  마이닝 모델에서 예측을 만드는 경우 일반적으로 모델에 새 데이터를 제공하여 예측을 만듭니다. 기록 데이터만 기반으로 하여 예측을 만들 수 있는 시계열 모델은 예외입니다. 모델에 새 데이터를 제공하려면 해당 데이터를 데이터 원본 뷰의 일부로 사용할 수 있는지 확인해야 합니다. 예측에 사용할 데이터를 미리 알아보려는 경우 모델을 만드는 데 사용한 데이터 원본 뷰에 해당 데이터를 포함할 수 있습니다. 그렇지 않으면 새 데이터 원본 뷰를 만들어야 할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+마이닝 모델에서 예측을 만드는 경우 일반적으로 모델에 새 데이터를 제공하여 예측을 만듭니다. 기록 데이터만 기반으로 하여 예측을 만들 수 있는 시계열 모델은 예외입니다. 모델에 새 데이터를 제공하려면 해당 데이터를 데이터 원본 뷰의 일부로 사용할 수 있는지 확인해야 합니다. 예측에 사용할 데이터를 미리 알아보려는 경우 모델을 만드는 데 사용한 데이터 원본 뷰에 해당 데이터를 포함할 수 있습니다. 그렇지 않으면 새 데이터 원본 뷰를 만들어야 할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
   
  필요한 데이터가 일 대 다 조인에서 두 개 이상의 테이블에 포함되는 경우도 있습니다. 제품 또는 트랜잭션 세부 정보가 포함된 중첩 테이블에 연결된 사례 테이블을 사용하는 연결 모델 또는 시퀀스 클러스터링 모델에 사용되는 데이터의 경우에 해당됩니다. 모델에서 사례 중첩 테이블 구조를 사용하는 경우에는 예측에 사용하는 데이터에도 사례 중첩 테이블 구조가 있어야 합니다.  
   
@@ -127,7 +125,6 @@ ms.lasthandoff: 09/01/2017
      관계가 이미 존재한다면 마이닝 모델의 열이 입력 테이블에 있는 동일한 이름의 열에 자동으로 매핑됩니다. **조인 수정**을 클릭하면 열리는 **관계 만들기** 대화 상자를 사용하여 중첩 테이블과 사례 테이블 간의 관계를 수정할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [예측 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [예측 쿼리 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   
-

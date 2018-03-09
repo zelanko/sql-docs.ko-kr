@@ -3,8 +3,11 @@ title: "SQL Server Management Studio 도구 창 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,17 @@ ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ad390a70e95a80bd6faf9763b5b24892e402706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f7532ce73258e22fee8587b93ea836af98234f1b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 도구 창
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 모든 단계의 개발 및 관리를 위한 강력한 여러 도구 창을 제공합니다. 일부 도구는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 구성 요소에서 사용할 수 있지만 일부 도구는 특정 구성 요소에 대해서만 사용할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]의 모든 구성 요소에서 사용할 수 있는 도구를 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]는 모든 단계의 개발 및 관리를 위한 강력한 여러 도구 창을 제공합니다. 일부 도구는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 구성 요소에서 사용할 수 있지만 일부 도구는 특정 구성 요소에 대해서만 사용할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]의 모든 구성 요소에서 사용할 수 있는 도구를 설명합니다.  
   
 |||  
 |-|-|  

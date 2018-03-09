@@ -1,5 +1,5 @@
 ---
-title: "(나누기 EQUALS) (Transact SQL) | Microsoft Docs"
+title: "(나누기 할당) (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -19,22 +19,23 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - compound operators, /=
+- assignment operators, /=
+- augmented operators, /=
 - /= (divide equals)
 ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 796aa8801ebfff9d1bb3ef6e194eadaa907601d6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: 0b32481d1595c7414ca3a364e2cd3984d39c69cc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="divide-equals-transact-sql"></a>(나누기 EQUALS) (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-division-assignment-transact-sql"></a>/ = (나누기 할당) (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   한 숫자를 다른 숫자로 나누고 값을 연산 결과로 설정합니다. 예를 들어 변수 @x 34, 다음 equals `@x /= 2` 는 원래 값의 @x2로 나누고 설정 @x 를 새 값 (17).  
   
@@ -76,4 +77,3 @@ SELECT @myVariable AS ResultVariable;
  [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

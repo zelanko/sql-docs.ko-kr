@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], about ODBC
+helpviewer_keywords: ODBC [ODBC], about ODBC
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f1cb1869039572d0d6da1302f66ce64abc3f2590
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-is-odbc"></a>ODBC 란?
 ODBC에 대 한 많은 오해 컴퓨팅 환경에 존재합니다. 최종 사용자에 게는 Microsoft® Windows® 제어판에 있는 아이콘 응용 프로그램 프로그래머를 데이터 액세스 루틴을 포함 하는 라이브러리입니다. 봄으로써을 상상한 적이 모든 데이터베이스 액세스 문제에 대 한 대답입니다.  
@@ -41,4 +38,3 @@ ODBC에 대 한 많은 오해 컴퓨팅 환경에 존재합니다. 최종 사용
  ODBC는 데이터베이스 기능을 제공 하려면 하지 보완 하기 위해 설계 되었습니다 이해 하는 것이 유용 합니다. 응용 프로그램 작성자는 ODBC를 사용 하 여에서는 갑자기 변환 간단한 데이터베이스는 완전 한 기능의 관계형 데이터베이스 엔진 기대 하지 따라서 합니다. 또는 드라이버 작성자 것으로 예상 되는 기본 데이터베이스에 없는 기능을 구현 합니다. 이 예외는 하 파일 데이터 (예: Xbase 파일의 데이터)에 직접 액세스 하는 드라이버를 작성 하는 개발자는 이상 최소한의 SQL 기능을 지 원하는 데이터베이스 엔진을 작성 하는 데 필요 합니다. 다른 예외는 이전에 Microsoft 데이터 액세스 구성 요소 (MDAC) SDK를 포함 하는 Windows SDK의 ODBC 구성 요소, 일정 수준의 기능을 구현 하는 드라이버에 대 한 스크롤 가능 커서를 시뮬레이션 하는 커서 라이브러리를 제공 합니다.  
   
  ODBC를 사용 하는 응용 프로그램은 모든 데이터베이스 간 기능을 수행 합니다. 예를 들어 ODBC 형식이 다른 조인 엔진 해당 되지 않으며은 분산 된 트랜잭션 프로세서 아닙니다. 그러나 DBMS 독립적 이기 때문에 이러한 데이터베이스 간 도구를 만들 사용할 수 있습니다.
-

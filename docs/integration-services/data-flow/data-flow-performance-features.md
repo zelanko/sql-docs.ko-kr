@@ -26,17 +26,16 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 508d0f2774033dee83ba600036ab09efd39eaa58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
   이 항목에서는 일반적인 성능 문제를 방지할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 디자인하는 방법에 대한 제안 사항을 제공합니다. 또한 이 항목에서는 패키지의 성능 문제를 해결하기 위해 사용할 수 있는 기능 및 도구에 대한 정보를 제공합니다.  
@@ -106,7 +105,7 @@ ms.lasthandoff: 08/03/2017
  데이터 흐름 구성 요소와 상관없이 성능 향상을 위해서는 쿼리를 최적화하고 불필요한 정렬을 사용하지 않는다는 두 가지 일반적인 지침을 따라야 합니다.  
   
 #### <a name="optimize-queries"></a>쿼리 최적화  
- 많은 데이터 흐름 구성 요소가 원본에서 데이터를 추출할 때나 참조 테이블을 만들기 위해 조회 작업에서 쿼리를 사용합니다. 기본 쿼리에서 SELECT * FROM \<tableName > 구문입니다. 이 유형의 쿼리는 원본 테이블의 모든 열을 반환합니다. 디자인 타임에 모든 열을 사용할 수 있도록 만들면 모든 열을 조회, 통과 또는 원본 열로 선택할 수 있습니다. 그러나 사용할 열을 선택한 후에는 선택한 열만 포함되도록 쿼리를 수정해야 합니다. 열 수가 적을수록 더 작은 행이 만들어지므로 여분의 열을 제거하면 패키지의 데이터 흐름이 보다 효율적으로 개선됩니다. 행이 작을수록 하나의 버퍼에 더 많은 행을 넣을 수 있으며 데이터 집합의 모든 행을 보다 적은 작업으로 처리할 수 있습니다.  
+ 많은 데이터 흐름 구성 요소가 원본에서 데이터를 추출할 때나 참조 테이블을 만들기 위해 조회 작업에서 쿼리를 사용합니다. 기본 쿼리는 SELECT * FROM \<tableName> 구문을 사용합니다. 이 유형의 쿼리는 원본 테이블의 모든 열을 반환합니다. 디자인 타임에 모든 열을 사용할 수 있도록 만들면 모든 열을 조회, 통과 또는 원본 열로 선택할 수 있습니다. 그러나 사용할 열을 선택한 후에는 선택한 열만 포함되도록 쿼리를 수정해야 합니다. 열 수가 적을수록 더 작은 행이 만들어지므로 여분의 열을 제거하면 패키지의 데이터 흐름이 보다 효율적으로 개선됩니다. 행이 작을수록 하나의 버퍼에 더 많은 행을 넣을 수 있으며 데이터 집합의 모든 행을 보다 적은 작업으로 처리할 수 있습니다.  
   
  쿼리를 생성하려면 쿼리를 직접 입력하거나 쿼리 작성기를 사용합니다.  
   
@@ -167,7 +166,7 @@ ms.lasthandoff: 08/03/2017
  대상에 데이터를 저장하는 데는 예상보다 많은 시간이 소모됩니다. 대상의 낮은 데이터 처리 능력으로 인해 속도 저하가 일어났는지 여부를 식별하려면 임시로 대상을 행 개수 변환으로 대체하십시오. 처리량이 크게 향상되면 데이터를 로드하는 대상에서 속도 저하가 일어난 것입니다.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>진행률 탭의 정보 검토  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]디자이너에서 패키지를 실행할 때 제어 흐름과 데이터 흐름 모두에 대 한 정보를 제공 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. **진행률** 탭에는 태스크와 컨테이너가 실행 순서대로 나열되며 패키지 자체를 포함하여 각 태스크 및 컨테이너에 대한 시작 및 종료 시간, 경고 및 오류 메시지가 표시됩니다. 또한 데이터 흐름 구성 요소가 실행 순서대로 표시되고, 진행률(완료율로 표시)과 처리된 행 개수에 대한 정보가 포함됩니다.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행할 때 제어 흐름과 데이터 흐름 모두에 대한 정보를 제공합니다. **진행률** 탭에는 태스크와 컨테이너가 실행 순서대로 나열되며 패키지 자체를 포함하여 각 태스크 및 컨테이너에 대한 시작 및 종료 시간, 경고 및 오류 메시지가 표시됩니다. 또한 데이터 흐름 구성 요소가 실행 순서대로 표시되고, 진행률(완료율로 표시)과 처리된 행 개수에 대한 정보가 포함됩니다.  
   
  **진행률** 탭에 메시지를 표시할지 여부는 **SSIS** 메뉴의 **디버그 진행률 보고** 옵션을 선택 또는 선택 취소하여 설정합니다. 진행률 보고를 사용하지 않으면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 복잡한 패키지를 실행하는 동안 성능을 높일 수 있습니다.  
   
@@ -208,9 +207,8 @@ ms.lasthandoff: 08/03/2017
   
 -   technet.microsoft.com의 비디오 - [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [패키지 배포 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [패키지 실행 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

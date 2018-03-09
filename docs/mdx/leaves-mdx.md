@@ -2,34 +2,32 @@
 title: Leaves (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LEAVES
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Leaves function
+f1_keywords: LEAVES
+dev_langs: kbMDX
+helpviewer_keywords: Leaves function
 ms.assetid: 09f908aa-1b2d-4af9-8c8d-c023915241b2
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e8038145cf8587c6c0d5a86461302fd7075bcee9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0c6201939c5bfb6f5ad61c009aac5a7e4740af63
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="leaves-mdx"></a>Leaves(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   모든 특성 또는 특정 차원에만 속하는 특성으로 구성된 집합을 반환합니다. 반환된 집합의 각 x 특성의 경우, x가 세분성 특성이거나 세분성 특성에 직접 또는 간접적으로 관련되어 있으면 해당 세분성은 조각에 영향을 주지 않고 x 특성에 대해 설정됩니다. **둡니다** 함수는 SCOPE 문 내에 또는 대입의 왼쪽에 사용 하기 위해 설계 되었습니다.  
   
@@ -59,8 +57,7 @@ Leaves( [ Dimension_expression ] )
     > [!IMPORTANT]  
     >  현재 범위의 측정값 그룹에서 일부 특성의 세분성이 같지 않으면 오류가 생성됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

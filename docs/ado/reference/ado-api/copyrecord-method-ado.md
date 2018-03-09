@@ -3,7 +3,7 @@ title: "범위란 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f4c31ec2491486c6c2332e32395246db4651f4e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5acc04720b17df0c39203417633332a0f01c2890
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="copyrecord-method-ado"></a>범위란 메서드 (ADO)
 복사로 표시 되는 엔터티에 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 다른 위치에 있습니다.  
@@ -57,7 +56,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *옵션*  
  (선택 사항) A [메서드의 동작](../../../ado/reference/ado-api/copyrecordoptionsenum.md) 의 기본값을 가진 값 **adCopyUnspecified**합니다. 이 메서드의 동작을 지정합니다.  
   
- *비동기*  
+ *Async*  
  (선택 사항) A **부울** 값 때 **True**,이 작업이 비동기 이어야 함을 지정 합니다.  
   
 ## <a name="return-value"></a>반환 값  
@@ -78,4 +77,3 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)
-

@@ -55,4 +55,8 @@
 ## [계획 지침 삭제](delete-a-plan-guide.md)  
 ## [계획 지침 사용 또는 사용 안 함](enable-or-disable-a-plan-guide.md)  
 
-#[리소스 사용 모니터링(시스템 모니터)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
+# [리소스 사용 모니터링(시스템 모니터)](../performance-monitor/monitor-resource-usage-system-monitor.md)    
+
+# [조인](joins.md)   
+
+# [하위 쿼리](subqueries.md)    

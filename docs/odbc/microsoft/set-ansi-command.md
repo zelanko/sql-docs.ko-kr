@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- set ANSI command [ODBC]
+helpviewer_keywords: set ANSI command [ODBC]
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ef87baef7367068b5a22225f3bb9b4c3e1783ca6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2095dc0b30fc2e16d4ce691cc097dcda1614d090
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-ansi-command"></a>SET ANSI 명령
 길이가 다른 문자열 간의 비교를 적용 하는 방법을 결정은 = Visual FoxPro SQL 명령에는 연산자입니다.  
@@ -67,4 +64,3 @@ SET ANSI ON | OFF
 ## <a name="see-also"></a>관련 항목:  
  [SQL 명령 선택](../../odbc/microsoft/select-sql-command.md)   
  [SET EXACT 명령](../../odbc/microsoft/set-exact-command.md)
-

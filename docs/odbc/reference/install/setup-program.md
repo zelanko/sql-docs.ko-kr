@@ -5,27 +5,24 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- installing ODBC components [ODBC], setup program
+helpviewer_keywords: installing ODBC components [ODBC], setup program
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 615f3151212c362ad0a813ee1af9718f83398270
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 30637bacfb73d56528233ea13c4c6daeabecf814
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setup-program"></a>설치 프로그램
 > **참고:** Windows XP 및 Windows Server 2003부터 **ODBC Windows 운영 체제에 포함 되어**합니다. 이전 버전의 Windows에서 ODBC만 명시적으로 설치 해야 합니다.  
@@ -37,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  설치의 양을 실제 수행 되는 설치 프로그램에서 설치 관리자 DLL에서에서 호출 함수에 따라 달라 집니다. DLL 설치 관리자는 개별 ODBC 구성 요소를 설치 하는 함수를 포함 합니다. 설치 프로그램에서 단순히 호출 **SQLInstallDriverManager**, **SQLInstallDriverEx**, 또는 **SQLInstallTranslatorEx** 설치 관리자의 경로 검색 하는 DLL에는 구성 요소가 설치 되 고 레지스트리에 구성 요소에 대 한 정보를 추가 하는 디렉터리입니다. 이러한 함수 실제로; 파일을 복사 하지 않으려면 설치 프로그램에서 정보를 사용 하 여 이러한 함수의 인수에는 합니다.  
   
  설치 관리자 DLL에는 ODBC 구성 요소를 제거 하는 함수가 포함 되어 있습니다. 설치 프로그램을 호출 하 여 **SQLRemoveDriverManager**, **SQLRemoveDriver**, 또는 **SQLRemoveTranslator** 설치 관리자에서 구성 요소의 사용량 감소 시키기 위해 DLL의 수는 레지스트리 및 구성 요소의 새 사용 횟수를 0으로 뒤쳐지면 레지스트리에서 구성 요소에 대 한 모든 정보를 제거 합니다. 이러한 함수는 구성에 대 한 파일을 완전히 제거 하지 마십시오 설치 프로그램에서는 새 사용 횟수를 0으로 떨어질 경우이 합니다.
-

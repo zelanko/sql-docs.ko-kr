@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetTypeInfo function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLGetTypeInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2e552a73289da6d78223b6416b7be7fe125e23e7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c0240734459de6fd86d86aef2b192f13842acae7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -42,7 +39,7 @@ ms.lasthandoff: 09/09/2017
 |SQL_BIGINT|지원되지 않습니다. 64 비트 Visual FoxPro 형식이 없습니다.|  
 |SQL_BIT|논리|  
 |SQL_CHAR|문자|  
-|SQL_DATE|날짜|  
+|SQL_DATE|date|  
 |SQL_DECIMAL|숫자|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
@@ -61,4 +58,3 @@ ms.lasthandoff: 09/09/2017
  * 기본 형식  
   
  Visual FoxPro 데이터 형식에 대 한 자세한 내용은 참조 [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)합니다. 이 함수에 대 한 자세한 내용은 참조 [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) 에 *ODBC Programmer's Reference*합니다.
-

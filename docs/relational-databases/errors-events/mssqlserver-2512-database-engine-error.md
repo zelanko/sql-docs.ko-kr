@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 2512 (Database Engine error)
+helpviewer_keywords: 2512 (Database Engine error)
 ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1010301cae338b1f6d1544f48541ea5237297381
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 46642a6c8c6b3db6e0f5cb213af3ab11a1ca100b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver2512"></a>MSSQLSERVER_2512
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,4 +64,3 @@ REPAIR 절 중 하나를 사용하여 DBCC CHECKDB를 실행해도 문제가 해
 ### <a name="results-of-running-repair-options"></a>REPAIR 옵션의 실행 결과  
 레코드가 삭제되었거나 인덱스가 고유하지 않은 경우 DBCC는 인덱스를 다시 작성하여 이 문제를 복구할 수 있습니다. 그렇지 않으면 필요한 경우 REPAIR는 *P_ID2* 페이지의 *SLOT2* 슬롯을 삭제하거나 해당 슬롯을 삭제한 것으로 표시합니다.  
   
-

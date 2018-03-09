@@ -2,25 +2,25 @@
 title: "웹 포털 브랜딩 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c01c3c7f6c05e0005f92addf82fb7e45d142b338
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="branding-the-web-portal"></a>웹 포털 브랜딩
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -74,7 +74,7 @@ LESS 스타일시트에는 다음과 같이 사전 정의된 LESS 변수를 참�
         background-color:@primaryButtonBg;   
     }  
   
-색 값을 접두사로 CSS 구문과 유사이 @symbol에 있습니다. 이러한 색 값은 json 파일에서 해당 값을 설정하는 변수입니다.  
+이 스타일시트가 CSS 구문과 유사하긴 하지만 @symbol기호의 접두사가 포함된 색 값은 LESS에만 해당합니다. 이러한 색 값은 json 파일에서 해당 값을 설정하는 변수입니다.  
   
 예를 들어 colors.json 파일의 값이 다음과 같은 경우  
   
@@ -247,5 +247,4 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
         }  
     }  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

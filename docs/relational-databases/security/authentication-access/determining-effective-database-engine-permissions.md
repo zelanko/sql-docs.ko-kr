@@ -8,25 +8,23 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d21efb4495f786b6000fe0b8675fa042b4d2ca6e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>효과적인 데이터베이스 엔진 사용 권한 결정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 고정 서버 역할과 고정 데이터베이스 역할에는 변경할 수 없는 미리 구성된 사용 권한이 있습니다. 고정 서버 역할의 멤버를 확인하려면 다음 쿼리를 실행합니다.    
 >  [!NOTE] 
 >  서버 수준 사용 권한을 사용할 수 없는 SQL Database 또는 SQL Data Warehouse에는 적용되지 않습니다. `sys.server_principals`의 `is_fixed_role` 열이 SQL Server 2012에 추가되었습니다. 이전 버전의 SQL Server에는 필요하지 않습니다.  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -75,7 +73,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * 이 쿼리는 master 데이터베이스의 테이블을 확인하지만 온-프레미스 제품의 모든 데이터베이스에서 실행할 수 있습니다. 
 
 고정 데이터베이스 역할의 멤버를 확인하려면 각 데이터베이스에서 다음 쿼리를 실행합니다.
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -115,7 +113,7 @@ Windows 사용자(예: 엔지니어 및 관리자)는 둘 이상의 Windows 그�
 다음 쿼리는 서버 수준에서 부여되거나 거부된 사용 권한 목록을 반환합니다. 이 쿼리는 master 데이터베이스에서 실행해야 합니다.   
 >  [!NOTE] 
 >  서버 수준 사용 권한은 SQL Database 또는 SQL Data Warehouse에서 부여하거나 쿼리할 수 없습니다.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -129,7 +127,7 @@ SELECT pr.type_desc, pr.name,
 ### <a name="database-permissions"></a>데이터베이스 권한
 
 다음 쿼리는 데이터베이스 수준에서 부여되거나 거부된 권한 목록을 반환합니다. 이 쿼리는 각 데이터베이스에서 실행해야 합니다.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -141,7 +139,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 사용 권한 테이블의 각 클래스를 보안 개체의 해당 클래스에 대한 관련 정보를 제공하는 다른 시스템 뷰에 조인할 수 있습니다. 예를 들어 다음 쿼리는 사용 권한의 영향을 받는 데이터베이스 개체의 이름을 제공합니다.    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -153,8 +151,8 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-`HAS_PERMS_BY_NAME` 함수를 사용하여 특정 사용자(이 경우 `TestUser`)에게 사용 권한이 있는지 확인합니다. 예를 들어   
-```tsql
+`HAS_PERMS_BY_NAME` 함수를 사용하여 특정 사용자(이 경우 `TestUser`)에게 사용 권한이 있는지 확인합니다. 예를 들어 다음과 같이 사용할 수 있습니다.   
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;
@@ -165,5 +163,4 @@ REVERT;
 
 [데이터베이스 엔진 사용 권한 시작](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
 [자습서: 데이터베이스 엔진 시작](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
-
 

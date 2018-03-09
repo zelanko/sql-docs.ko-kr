@@ -3,7 +3,7 @@ title: "ActiveConnection 속성 (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -24,17 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADOX]
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 44d7173ddce5577cdb62a4208ed005d7e40daad8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b827ec332b89767a030e1925320345a2b78baee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection 속성 (ADOX)
 ADO 나타냅니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체는 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 속한 합니다.  
@@ -61,4 +60,3 @@ ADO 나타냅니다 [연결](../../../ado/reference/ado-api/connection-object-ad
  [뷰 컬렉션, CommandText 속성 예제 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [뷰는 메서드 예제를 (VB)를 새로 고칩니다.](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Create 메서드(ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
-

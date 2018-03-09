@@ -3,7 +3,7 @@ title: RecordCreateOptionsEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4c36b34f0d8eabdde75b25847d1ae47c674af2e6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f108d977c278d9f86ca47853e07c7960ee574b8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 지정 기존 여부 **레코드** opened 또는 새 **레코드** 에 대해 생성는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 [열려](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. 값은 AND 연산자로 결합할 수 있습니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|새 **레코드** 로 지정 된 노드에서 *소스* 매개 변수는 기존을 여는 대신 **레코드**합니다. 소스를 가리키는 경우 기존 노드에 런타임 오류가 발생 하지 않는 한 **adCreateCollection** 결합 된 **adOpenIfExists** 또는 **adCreateOverwrite**합니다.|  
 |**adCreateNonCollection**|0|새 **레코드** 형식의 [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)합니다.|  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>적용 대상  
  [Open 메서드(ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)
-

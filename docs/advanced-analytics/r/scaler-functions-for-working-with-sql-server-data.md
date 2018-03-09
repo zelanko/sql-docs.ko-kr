@@ -2,29 +2,30 @@
 title: "SQL Server 데이터 작업을 위한 RevoScaleR 함수 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 9
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: b1567bd6e4a419b293a963a7b3afe96c24409bcc
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c93fc378a7255c5a4f4b8f4833794cc0817c9996
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>SQL Server 데이터 작업을 위한 RevoScaleR 함수
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에서는 SQL Server 데이터 작업을 위한 RevoScaleR에서 제공 하는 주요 기능에 대 한 개요를 제공 합니다.
 
@@ -75,4 +76,3 @@ ScaleR 함수 및 사용 하는 방법의 전체 목록에 대 한 참조는 [Mi
 + [rxReadXdf](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxreadxdf) -을 데이터 프레임으로 XDF 파일에서 데이터를 읽고
 
 이러한 함수 사용에 대 한 자세한 내용은 아닌 다른 원본 데이터를 사용 하는 등 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 참조 [Microsoft R의 데이터 분석을 위해 방법 안내](https://docs.microsoft.com/r-server/r/how-to-introduction)합니다.
-

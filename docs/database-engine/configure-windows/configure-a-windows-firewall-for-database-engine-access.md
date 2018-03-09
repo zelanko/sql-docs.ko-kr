@@ -8,8 +8,7 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-caps.latest.revision: 57
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "57"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 49a59b9225ffff183e537025de7f503ba58429d6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7d79f9d00344dceb2559d66f7f6f4450597c79f7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +46,13 @@ ms.lasthandoff: 08/02/2017
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 사용하면 사용자가 포트 번호를 몰라도 포트 1433에서 수신하지 않는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 사용하려면 UDP 포트 1434를 열어야 합니다. 가장 안전한 환경으로 승격하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 중지하고 해당 포트 번호를 사용하여 연결하도록 클라이언트를 구성합니다.  
   
 > [!NOTE]  
->  기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서는 포트 1433을 닫아 인터넷 컴퓨터가 사용자 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 없도록 하는 Windows 방화벽을 사용합니다. 포트 1433을 다시 열 때까지 TCP/IP를 사용하여 기본 인스턴스에 연결할 수 없습니다. Windows 방화벽 구성을 위한 기본적인 단계는 다음 절차에서 볼 수 있습니다. 자세한 내용은 Windows 설명서를 참조하세요.  
+>  기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서는 포트 1433을 닫아 인터넷 컴퓨터가 사용자 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 없도록 하는 Windows 방화벽을 사용합니다. 포트 1433을 다시 열 때까지 TCP/IP를 사용하여 기본 인스턴스에 연결할 수 없습니다. Windows 방화벽 구성을 위한 기본적인 단계는 다음 절차에서 볼 수 있습니다. 자세한 내용은 Windows 설명서를 참조하십시오.  
   
  고정 포트에서 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성하고 포트를 여는 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일(Sqlservr.exe)을 차단된 프로그램의 예외로 표시할 수 있습니다. 동적 포트를 계속 사용하려는 경우 이 방법을 사용합니다. 이렇게 하면 하나의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에만 액세스할 수 있습니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
@@ -108,4 +106,3 @@ ms.lasthandoff: 08/02/2017
  [방법: 방화벽 설정 구성(Azure SQL 데이터베이스)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
-

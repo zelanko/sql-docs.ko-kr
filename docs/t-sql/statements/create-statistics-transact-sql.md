@@ -1,10 +1,13 @@
 ---
 title: "통계 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +28,19 @@ helpviewer_keywords:
 - creating statistics [SQL Server]
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-caps.latest.revision: 105
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e09604deac2b823243515c10398dc27c75941bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 088b79e73be6258afc5c664aaf14ba3cad9d2f5f
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   테이블, 인덱싱된 뷰 또는 외부 테이블의 하나 이상의 열에 쿼리 최적화 통계를 만듭니다. 쿼리 최적화 프로그램은 대부분의 쿼리에 대해 고품질의 쿼리 계획에 필요한 통계를 기본적으로 생성합니다. 따라서 쿼리 성능을 향상시키기 위해 CREATE STATISTICS를 사용하여 추가 통계를 만들거나 쿼리 설계를 수정해야 하는 경우는 드뭅니다.  
   
@@ -65,9 +67,10 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
-          | STATS_STREAM = stats_stream ] ]   
+          | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ]
     ] ;  
   
 <filter_predicate> ::=   
@@ -84,6 +87,11 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
   
 <comparison_op> ::=  
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<  
+    
+<update_stats_stream_option> ::=  
+    [ STATS_STREAM = stats_stream ]  
+    [ ROWCOUNT = numeric_constant ]  
+    [ PAGECOUNT = numeric_contant ] 
 ```  
   
 ```  
@@ -138,11 +146,11 @@ CREATE STATISTICS statistics_name
   
  다음은 Production.BillOfMaterials 테이블에 대한 필터 조건자의 예입니다.  
   
- `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
+ * `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
   
- `WHERE ComponentID IN (533, 324, 753)`  
+ * `WHERE ComponentID IN (533, 324, 753)`  
   
- `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
+ * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
  필터 조건자에 대 한 자세한 내용은 참조 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)합니다.  
   
@@ -163,7 +171,7 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = {ON | OFF}  
  때 **ON**, 통계 샘플링 비율을 명시적으로 지정 하지 않으면 후속 업데이트에 대 한 만들기 샘플링 백분율을 그대로 유지 됩니다. 때 **OFF**, 통계 샘플링 비율 샘플링 비율을 명시적으로 지정 하지 않은 이후의 업데이트에서 기본 샘플링을 다시 설정 될 됩니다. 기본값은 **OFF**합니다. 
  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 c u 4입니다.  
+ **에 적용 됩니다**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4)를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
  STATS_STREAM  **=**  *stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -184,28 +192,38 @@ CREATE STATISTICS statistics_name
  파티션별 통계가 지원되지 않을 경우 오류가 생성됩니다. 다음 통계 유형에 대해서는 증분 통계가 지원되지 않습니다.  
   
 -   기본 테이블을 기준으로 파티션 정렬되지 않은 인덱스를 사용하여 작성된 통계입니다.  
-  
 -   Always On 읽기 가능한 보조 데이터베이스에 대해 작성된 통계입니다.  
-  
 -   읽기 전용 데이터베이스에 대해 작성된 통계입니다.  
-  
 -   필터링된 인덱스에 대해 작성된 통계입니다.  
-  
 -   뷰에 대해 작성된 통계입니다.  
-  
 -   내부 테이블에 대해 작성된 통계입니다.  
-  
 -   공간 인덱스 또는 XML 인덱스를 사용하여 작성된 통계입니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
+MAXDOP = *max_degree_of_parallelism*  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ 재정의 **x degree of** 통계 작업의 기간에 대 한 구성 옵션입니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
+  
+ *max_degree_of_parallelism* 될 수 있습니다.  
+  
+ 1  
+ 병렬 계획이 생성되지 않습니다.  
+  
+ \>1  
+ 지정된 된 수 이하로 현재 시스템 작업에 따라 병렬 통계 작업에 사용 되는 프로세서의 최대 수를 제한 합니다.  
+  
+ 0(기본값)  
+ 현재 시스템 작업에 따라 실제 프로세서 수 이하의 프로세서를 사용합니다.  
+  
+ \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+
 ## <a name="permissions"></a>Permissions  
  이러한 사용 권한 중 하나가 필요합니다.  
   
 -   ALTER TABLE  
-  
 -   사용자는 소유자  
-  
 -   멤버 자격이 **db_ddladmin** 고정된 데이터베이스 역할  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
@@ -224,8 +242,9 @@ CREATE STATISTICS statistics_name
  [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 카탈로그 뷰 종속성 참조로 필터링 된 통계 조건자의 각 열을 추적 합니다. 필터링된 통계 조건자에서 정의된 테이블 열은 삭제, 이름 바꾸기 또는 정의 변경을 수행할 수 없으므로 필터링된 통계를 만들기 전에 테이블 열에서 수행하는 작업을 고려하세요.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
-*  외부 테이블에서 통계를 업데이트할 수 없습니다. 외부 테이블에 대 한 통계를 업데이트 하려면 삭제 하 고 통계를 다시 만듭니다.  
-*  개체당 최대 64 개 열을 나열할 수 있습니다.
+* 외부 테이블에서 통계를 업데이트할 수 없습니다. 외부 테이블에 대 한 통계를 업데이트 하려면 삭제 하 고 통계를 다시 만듭니다.  
+* 개체당 최대 64 개 열을 나열할 수 있습니다.
+* MAXDOP 옵션 STATS_STREAM, 행 개수 및 PAGECOUNT 옵션와 호환 되지 않습니다.
   
 ## <a name="examples"></a>예  
 
@@ -234,7 +253,7 @@ CREATE STATISTICS statistics_name
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>1. CREATE STATISTICS에 SAMPLE number PERCENT 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ContactMail1` 테이블에서 `BusinessEntityID` 및 `EmailPromotion` 열에 대해 5% 무작위 샘플링을 사용하여 `Contact` 통계를 만듭니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
@@ -243,7 +262,7 @@ CREATE STATISTICS ContactMail1
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>2. CREATE STATISTICS에 FULLSCAN 및 NORECOMPUTE 사용  
  다음 예에서는 `ContactMail2` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에서 모든 행에 대한 `Contact` 통계를 만듭니다. 통계의 자동 다시 계산 기능은 사용하지 않습니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
@@ -252,7 +271,7 @@ CREATE STATISTICS NamePurchase
 ### <a name="c-using-create-statistics-to-create-filtered-statistics"></a>3. CREATE STATISTICS를 사용하여 필터링된 통계 만들기  
  다음 예에서는 필터링된 통계 `ContactPromotion1`을 만듭니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 데이터의 50%를 샘플링한 다음 `EmailPromotion`이 2인 행을 선택합니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -265,7 +284,7 @@ GO
   
  이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 검색 옵션 통계를 만들려면를 임시 테이블에 외부 테이블에서 훨씬 더 오래 걸립니다. 큰 테이블에 대 한 기본 샘플링 방법으로 충분 합니다.  
   
-```t-sql  
+```sql  
 --Create statistics on an external table and use default sampling.  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
   
@@ -276,7 +295,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>5. CREATE STATISTICS에 FULLSCAN 및 PERSIST_SAMPLE_PERCENT 사용  
  다음 예제에서는 `ContactMail2` 의 모든 행에 대 한 통계는 `BusinessEntityID` 및 `EmailPromotion` 의 열은 `Contact` 테이블을 명시적으로 되어 있어야 하지 않는 한 모든 후속 업데이트는 샘플링을 지정할 100% 샘플링 비율을 설정 합니다. 백분율입니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
@@ -287,14 +306,14 @@ CREATE STATISTICS NamePurchase
 ### <a name="f-create-statistics-on-two-columns"></a>6. 두 열에 통계를 작성 합니다.  
  다음 예제에서는 `CustomerStats1` 기준으로 통계는 `CustomerKey` 및 `EmailAddress` 의 열은 `DimCustomer` 테이블입니다. 통계에 있는 행의 통계적으로 중요 한 샘플링을 기반으로 생성 된 `Customer` 테이블입니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>7. 전체 검색을 사용 하 여 통계를 만들어  
  다음 예제에서는 `CustomerStatsFullScan` 에 있는 행의 모든 검색 기준으로 통계는 `DimCustomer` 테이블입니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsFullScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
@@ -302,7 +321,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>8. 샘플 비율을 지정 하 여 통계를 만들어  
  다음 예제에서는 `CustomerStatsSampleScan` 에 있는 행의 50% 검색 기준으로 통계는 `DimCustomer` 테이블입니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  
@@ -317,5 +336,4 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;
  [sys.stats_columns &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
-
 

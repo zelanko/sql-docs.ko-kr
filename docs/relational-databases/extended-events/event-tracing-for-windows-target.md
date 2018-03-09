@@ -18,16 +18,16 @@ helpviewer_keywords:
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a3902085accac37a3649d407ff1504e01e0ac16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74ba5c0435a64cbeb6271967c4ca37c4a5ac1d86
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows용 이벤트 추적 대상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ ms.lasthandoff: 11/17/2017
   
  다음 표에서는 ETW 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|허용된 값|설명|  
+|옵션|허용된 값|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션 이름입니다. 기본적으로 이 이름은 XE_DEFAULT_ETW_SESSION입니다.|  
 |default_etw_session_logfile_path|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션의 로그 파일에 대한 경로입니다. 기본적으로 이 경로는 %TEMP%\ XEEtw.etl입니다.|  
-|default_etw_session_logfile_size_mb|부호 없는 정수 이 값은 선택 사항입니다.|확장 이벤트 세션의 로그 파일 크기(MB)입니다. 기본값은 20MB입니다.|  
+|default_etw_session_logfile_size_mb|부호 없는 정수 이 값은 선택 사항입니다. |확장 이벤트 세션의 로그 파일 크기(MB)입니다. 기본값은 20MB입니다.|  
 |default_etw_session_buffer_size_kb|부호 없는 정수 이 값은 선택 사항입니다.|확장 이벤트 세션의 메모리 내 버퍼 크기(KB)입니다. 기본값은 128KB입니다.|  
 |retries|부호 없는 정수|이벤트가 삭제되기 전에 ETW 하위 시스템에 이벤트 게시를 재시도한 횟수입니다. 기본값은 0입니다.|  
   

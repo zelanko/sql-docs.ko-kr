@@ -2,15 +2,13 @@
 title: "ActionID 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ActionID Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 62e81b5fbf076c5928ec2d0f83584abb944ce1fc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 508a4fce7624979dac8e8180a5e8cfe070682db0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="actionid-element-assl"></a>ActionID 요소(ASSL)
-  이름을 포함 한 [동작](../../../analysis-services/scripting/objects/action-element-assl.md) 요소에 정의 된는 [큐브](../../../analysis-services/scripting/objects/cube-element-assl.md) 요소에서 사용할 수 있는 [관점](../../../analysis-services/scripting/objects/perspective-element-assl.md) 요소도는 [PerspectiveAction](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이름을 포함 한 [작업](../../../analysis-services/scripting/objects/action-element-assl.md) 에 정의 된 요소는 [큐브](../../../analysis-services/scripting/objects/cube-element-assl.md) 요소에서 사용할 수 있는 [관점](../../../analysis-services/scripting/objects/perspective-element-assl.md) 요소도는 [PerspectiveAction](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,10 +43,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|문자열|  
-|기본값|없음|  
+|데이터 형식 및 길이|String|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -56,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[PerspectiveAction](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  부모에 해당 하는 요소 **ActionID** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.PerspectiveAction>합니다.  

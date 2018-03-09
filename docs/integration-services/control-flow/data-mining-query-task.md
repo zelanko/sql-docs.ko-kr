@@ -21,19 +21,18 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-mining-query-task"></a>데이터 마이닝 쿼리 태스크
+# <a name="data-mining-query-task"></a>Data Mining Query Task
   데이터 마이닝 쿼리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 작성된 데이터 마이닝 모델을 기반으로 예측 쿼리를 실행합니다. 예측 쿼리는 마이닝 모델을 사용하여 새 데이터에 대한 예측을 만듭니다. 예를 들어 예측 쿼리는 여름 기간 동안 판매될 요트 수를 예측하거나 요트를 구매할 잠재 고객 목록을 생성할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 은 DDL(데이터 정의 언어) 문 실행과 분석 개체 처리 등의 기타 비즈니스 인텔리전스 작업을 수행하는 태스크를 제공합니다.  
@@ -88,7 +87,7 @@ ms.lasthandoff: 08/11/2017
  데이터 마이닝 쿼리 태스크에 대한 설명을 입력합니다.  
   
 ### <a name="mining-model-tab-options"></a>마이닝 모델 탭 옵션  
- **연결**  
+ **대량 삽입 태스크 편집기**  
  목록에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:**  [Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
@@ -176,16 +175,15 @@ ms.lasthandoff: 08/11/2017
  데이터 마이닝 쿼리 태스크에 대한 설명을 입력합니다.  
   
 ### <a name="output-tab-options"></a>출력 탭 옵션  
- **연결**  
+ **대량 삽입 태스크 편집기**  
  목록에서 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
- **새로운 내용**  
+ **새로 만들기**  
  새 연결 관리자를 만듭니다. ADO.NET 및 OLE DB 연결 관리자 유형만 사용할 수 있습니다.  
   
  **출력 테이블**  
  예측 쿼리가 결과를 작성할 테이블을 지정합니다.  
   
- **삭제 및 다시 출력 테이블 만들기**  
+ **출력 테이블을 삭제하고 다시 만들기**  
  테이블을 삭제한 다음 다시 만들어 예측 쿼리가 대상 테이블의 내용을 덮어쓸지 여부를 나타냅니다.  
   
-

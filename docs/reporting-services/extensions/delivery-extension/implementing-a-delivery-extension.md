@@ -1,39 +1,38 @@
 ---
-title: Implementing a Delivery Extension | Microsoft Docs
+title: "배달 확장 프로그램 구현 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - delivery [Reporting Services]
 - custom delivery extensions [Reporting Services]
 - extensions [Reporting Services], delivery
 - delivery extensions [Reporting Services]
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
-caps.latest.revision: 32
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "32"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 5db9bf52437c018bc1dcb40e7fa8a8ce2824fa12
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: b34cb389c2bbc8a2aaabe81a38e1c3048f2b2b91
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="implementing-a-delivery-extension"></a>배달 확장 프로그램 구현
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 사용자를 만들고, 한 번 생성 및 게시를 제공할 수 있는 여러 다른 위치로 보고서를 게시할 수 있습니다. 또한 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에는 다수의 배달 확장 프로그램이 포함되어 있으며 개발자가 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 배달 기능을 더욱 확장할 수 있도록 추가 배달 확장 프로그램을 만들 수 있는 배달 API가 포함되어 있습니다.  
+  사용자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]를 통해 보고서를 만들고 게시할 수 있으며 그런 다음 보고서를 다양한 위치로 배달할 수 있습니다. 또한 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에는 다수의 배달 확장 프로그램이 포함되어 있으며 개발자가 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 배달 기능을 더욱 확장할 수 있도록 추가 배달 확장 프로그램을 만들 수 있는 배달 API가 포함되어 있습니다.  
   
- 배달 확장 프로그램의 샘플 구현을 참조 [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)합니다.  
+ 배달 확장 프로그램의 예제 구현은 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [배달 확장 프로그램 개요](../../../reporting-services/extensions/delivery-extension/delivery-extensions-overview.md)  
@@ -45,25 +44,25 @@ ms.lasthandoff: 08/12/2017
  [배달 확장 프로그램 라이브러리 만들기](../../../reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library.md)  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램에 대한 네임스페이스 할당에 대해 설명하고 배달 확장 프로그램을 라이브러리 DLL로 컴파일하는 방법에 대해 설명합니다.  
   
- [배달 확장 프로그램에 대 한 IDeliveryExtension 인터페이스 구현](../../../reporting-services/extensions/delivery-extension/implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
+ [배달 확장 프로그램에 대한 IDeliveryExtension 인터페이스 구현](../../../reporting-services/extensions/delivery-extension/implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
  배달 확장 프로그램의 특성 및 고유의 배달 확장 프로그램 클래스를 구현하는 방법을 설명합니다.  
   
- [배달 확장 프로그램에 대 한 알림 클래스를 사용 하 여](../../../reporting-services/extensions/delivery-extension/using-a-notification-class-for-a-delivery-extension.md)  
- 특성에 설명 된 **알림** 클래스 및 배달 확장 프로그램 구현에서 사용 하는 방법입니다.  
+ [배달 확장 프로그램에 대해 Notification 클래스 사용](../../../reporting-services/extensions/delivery-extension/using-a-notification-class-for-a-delivery-extension.md)  
+ **Notification** 클래스의 특성 및 이 클래스를 배달 확장 프로그램 구현에서 사용하는 방법을 설명합니다.  
   
- [배달 확장 프로그램에 대 한 Setting 클래스 사용](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
- 특성을 설명는 **설정** 클래스 및 배달 확장 프로그램 구현에서 사용 하는 방법입니다.  
+ [배달 확장 프로그램에 대해 Setting 클래스 사용](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
+ **Setting** 클래스의 특성 및 이 클래스를 배달 확장 프로그램 구현에서 사용하는 방법을 설명합니다.  
   
- [IDeliveryReportServerInformation 인터페이스를 사용 하 여 배달 확장 프로그램에 대 한](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
- 특성에 설명 된 **IDeliveryReportServerInformation** 인터페이스 및 배달 확장 프로그램 구현에서 사용 하는 방법입니다.  
+ [배달 확장 프로그램에 대해 IDeliveryReportServerInformation 인터페이스 사용](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
+ **IDeliveryReportServerInformation** 인터페이스의 특성 및 이 인터페이스를 배달 확장 프로그램 구현에서 사용하는 방법을 설명합니다.  
   
- [Report 클래스를 사용 하 여 배달 확장 프로그램에 대 한](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
- 특성에 설명 된 **보고서** 클래스 및 배달 확장 프로그램 구현에서 사용 하는 방법입니다.  
+ [배달 확장 프로그램에 대해 Report 클래스 사용](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
+ **Report** 클래스의 특성 및 이 클래스를 배달 확장 프로그램 구현에서 사용하는 방법을 설명합니다.  
   
- [RenderedOutputFile 클래스를 사용 하 여 배달 확장 프로그램에 대 한](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
- 특성에 설명 된 **RenderedOutputFile** 클래스 및 배달 확장 프로그램 구현에서 사용 하는 방법입니다.  
+ [배달 확장 프로그램에 대해 RenderedOutputFile 클래스 사용](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
+ **RenderedOutputFile** 클래스의 특성 및 이 클래스를 배달 확장 프로그램 구현에서 사용하는 방법을 설명합니다.  
   
- [배달 확장 프로그램에 대 한 ISubscriptionBaseUIUserControl 인터페이스 구현](../../../reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
+ [배달 확장 프로그램에 대한 ISubscriptionBaseUIUserControl 인터페이스 구현](../../../reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
  배달 확장 프로그램 사용자 컨트롤의 특성 및 고유의 구독용 사용자 인터페이스를 구현하는 방법을 설명합니다.  
   
  [배달 확장 프로그램 배포](../../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)  
@@ -75,9 +74,8 @@ ms.lasthandoff: 08/12/2017
  [배달 확장 프로그램 제거](../../../reporting-services/extensions/delivery-extension/removing-a-delivery-extension.md)  
  보고서 서버에서 배달 확장 프로그램을 제거하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services 확장 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

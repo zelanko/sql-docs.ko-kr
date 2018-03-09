@@ -2,9 +2,12 @@
 title: "SQL Server, Cursor Manager by Type 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Cursor Manager by Type
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d5dfdc26ac396f2a9872eb3927f30c5d370ddbe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b818f7a5222dc92896e9624ef7cbc89f05fe2af8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server, Cursor Manager by Type 개체
-  **SQLServer:Cursor Manager by Type** 개체는 커서 모니터링에 사용되는 카운터를 유형별로 그룹화하여 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLServer:Cursor Manager by Type** 개체는 커서 모니터링에 사용되는 카운터를 유형별로 그룹화하여 제공합니다.  
   
  다음 표에서는 SQL Server **Cursor Manager by Type** 카운터에 대해 설명합니다.  
   
-|Cursor Manager by Type 카운터|설명|  
+|Cursor Manager by Type 카운터|Description|  
 |-------------------------------------|-----------------|  
 |**Active cursors**|활성 커서 수입니다.|  
 |**Cache Hit Ratio**|캐시 적중 횟수와 조회 간 비율입니다.|  
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|Cursor Manager 인스턴스|설명|  
+|Cursor Manager 인스턴스|Description|  
 |-----------------------------|-----------------|  
 |**_Total**|모든 커서에 대한 정보입니다.|  
 |**API Cursor**|API 커서 정보만 해당됩니다.|  

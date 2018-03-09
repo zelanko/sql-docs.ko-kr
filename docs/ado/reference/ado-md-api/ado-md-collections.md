@@ -3,7 +3,7 @@ title: "ADO MD 컬렉션 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,25 +16,24 @@ helpviewer_keywords:
 - ADO MD collections
 - collections [ADO MD]
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6737c313c8a05bf0eee119b37c9cde43fa483fda
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: accf1469bab978b060fd6a7e888211a571bd472f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-collections"></a>ADO MD 컬렉션
 |||  
 |-|-|  
 |[축](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|포함 된 **축** 셀 집합을 정의 하는 개체입니다.|  
 |[CubeDefs](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|포함 된 **CubeDef** 다차원 카탈로그에서 큐브를 나타내는 개체입니다.|  
-|[Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|포함 된 **차원** 큐브에 구성 하는 개체입니다.|  
-|[계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|집합을 포함 **계층** 차원에서 개체입니다.|  
+|[차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|포함 된 **차원** 큐브에 구성 하는 개체입니다.|  
+|[계층 구조](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|집합을 포함 **계층** 차원에서 개체입니다.|  
 |[Levels](../../../ado/reference/ado-md-api/level-object-ado-md.md)|포함 된 **수준** 계층 구조로 구성 하는 개체입니다.|  
 |[멤버](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|포함 된 **멤버** 한 수준이 나 축의 위치 개체입니다.|  
 |[위치](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|포함 된 **위치** 축에서 한 지점을 정의 하는 개체입니다.|  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  [ADO MD 개체 모델](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD 개체](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [ADO MD 속성](../../../ado/reference/ado-md-api/ado-md-properties.md)
-

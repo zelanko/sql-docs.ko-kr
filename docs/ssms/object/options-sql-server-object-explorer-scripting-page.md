@@ -3,8 +3,11 @@ title: "옵션(SQL Server 개체 탐색기 - 스크립팅 페이지) | Microsoft
 ms.custom: 
 ms.date: 08/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd98889c12d8a292e0f1fe64d390fc9f51578ce5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2d2e378f807925b467f0ec01575678a31e548360
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>옵션(SQL Server 개체 탐색기 - 스크립팅 페이지)
-이 페이지를 사용하여 **개체 탐색기**의 개체 컨텍스트 메뉴에서 다음 명령에 적용되는 스크립팅 옵션을 설정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 페이지를 사용하여 **개체 탐색기**의 개체 컨텍스트 메뉴에서 다음 명령에 적용되는 스크립팅 옵션을 설정할 수 있습니다.  
   
 -   사용자 테이블 및 뷰에 대한 **편집** 명령  
   
@@ -34,10 +37,10 @@ ms.lasthandoff: 11/09/2017
   
 -   이 페이지에서는 **SQL Server 스크립트 생성 마법사**에 대한 스크립팅 옵션의 기본값도 설정합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 **편집** 및 **수정** 명령은 동일한 옵션 설정에 대해 **<object> 스크립팅** 명령과 다른 결과를 생성할 수 있습니다. **편집** 및 **수정** 명령은 쿼리 편집기 세션 중에 현재 데이터베이스의 개체를 수정하기 위해 디자인되었고, **<object> 스크립팅** 명령은 나중에 개체를 만드는 데 사용할 수 있도록 스크립트를 생성하기 위해 디자인되었습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 각 옵션 오른쪽의 목록에 있는 사용 가능한 설정에서 선택하여 스크립팅 옵션을 지정합니다.  
   
 ### <a name="general-scripting-options"></a>일반 스크립팅 옵션  
@@ -90,7 +93,7 @@ VarDecimal 저장소 옵션을 포함합니다. 기본값은 False입니다. 자
 각 CREATE TABLE 문의 앞뒤에 SET ANSI_PADDING 문을 추가합니다. 기본값은 True입니다. 자세한 내용은 [SET ANSI_PADDING(Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0)을 참조하세요.  
   
 **데이터 정렬 포함**  
-열 정의에 데이터 정렬을 포함합니다. 기본값은 True입니다. 자세한 내용은 [Collation and Unicode Support](https://msdn.microsoft.com/92d34f48-fa2b-47c5-89d3-a4c39b0f39eb)을 참조하세요.  
+열 정의에 데이터 정렬을 포함합니다. 기본값은 True입니다. 자세한 내용은 [Collation and Unicode Support](https://msdn.microsoft.com/92d34f48-fa2b-47c5-89d3-a4c39b0f39eb)을(를) 참조하세요.  
   
 **IDENTITY 속성 포함**  
 IDENTITY 초기값 및 IDENTITY 증가값에 대한 정의를 포함합니다. 기본값은 True입니다. 자세한 내용은 [IDENTITY(속성)(Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c)를 참조하세요.  
@@ -151,6 +154,6 @@ FOREIGN KEY 제약 조건에 대한 테이블 참조에 스키마 이름을 추�
 **서버 버전에 대한 스크립트**  
 생성된 스크립트는 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 버전에 대한 대상이 됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 의 새 기능은 이전 버전에 대해 스크립팅될 수 없습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 에 대해 생성된 일부 스크립트는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]가 실행 중인 서버 또는 이전의 [데이터베이스 호환성 수준 설정](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6)이 있는 데이터베이스에서 실행할 수 없습니다.  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [스크립트 생성(SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   

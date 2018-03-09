@@ -1,34 +1,31 @@
 ---
-title: "데이터 형식의 열 (SSAS 테이블 형식)를 설정 합니다. | Microsoft Docs"
+title: "열의 데이터 형식을 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 770ce419a167c71914334ea6fa1b3fd397566b34
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-the-data-type-of-a-column-ssas-tabular"></a>열 데이터 형식 설정(SSAS 테이블 형식)
-  모델에 데이터를 가져오거나 붙여넣을 때 모델 디자이너에서 자동으로 데이터 형식을 감지하고 적용합니다. 모델에 데이터를 추가한 후 열의 데이터 형식을 수동으로 수정하여 데이터가 저장되는 방법을 변경할 수 있습니다. 원하는 경우 데이터 저장 방식은 변경하지 않고 데이터 표시 방식의 형식만 변경할 수도 있습니다.  
+# <a name="set-the-data-type-of-a-column"></a>열 데이터 형식 설정 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+모델에 데이터를 가져오거나 붙여넣을 때 모델 디자이너에서 자동으로 데이터 형식을 감지하고 적용합니다. 모델에 데이터를 추가한 후 열의 데이터 형식을 수동으로 수정하여 데이터가 저장되는 방법을 변경할 수 있습니다. 원하는 경우 데이터 저장 방식은 변경하지 않고 데이터 표시 방식의 형식만 변경할 수도 있습니다.  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>열의 데이터 형식 또는 표시 형식을 변경하려면  
   
@@ -83,10 +80,9 @@ ms.lasthandoff: 09/01/2017
   
  데이터 형식은 지원되지만 모델 디자이너에서 새 데이터 형식에 맞지 않는 값을 발견할 경우에는 다른 오류가 표시되며 계속하기 전에 데이터 값을 수정해야 합니다.  
   
- 비즈니스 인텔리전스 의미 체계 모델에서 사용되는 데이터 형식, 이러한 데이터 형식이 암시적으로 변환되는 방법 및 수식에서 다양한 데이터 형식이 사용되는 방법에 대한 자세한 내용은 [지원되는 데이터 형식&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)을 참조하세요.  
+ 비즈니스 인텔리전스 의미 체계 모델에서 사용 되는 데이터 형식에 대 한 자세한 정보에 대 한 수식에 사용 된 서로 암시적으로 변환 하 고 서로 어떻게 다른 지 데이터 형식, 참조 [지원 되는 데이터 형식](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [지원되는 데이터 형식&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
+ [지원되는 데이터 형식](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   
-

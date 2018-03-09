@@ -22,17 +22,16 @@ helpviewer_keywords:
 - UNICODE function
 - Unicode [SQL Server], UNICODE function
 ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
-caps.latest.revision: 35
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 60d3a635b15cd1413b3c7ba6db145cd5717b7e41
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: ce87bcab037ff99b7eaa03a443727db17db19b74
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="unicode-transact-sql"></a>UNICODE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -147,10 +146,11 @@ Character # Unicode Character UNICODE Value
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
+ [ASCII &#40; Transact SQL &#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [CHAR &#40; Transact SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40; Transact SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
-
 

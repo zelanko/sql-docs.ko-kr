@@ -1,11 +1,11 @@
 ---
-title: "2 단계: 추가 하 고 Foreach 루프 컨테이너를 구성 | Microsoft Docs"
+title: "2단계: Foreach 루프 컨테이너 추가 및 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 315933379f0ec61453fa0fd783686f9446a977c0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 80a4fa426a322346de99aafef393e75a67e7e82a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>단원 2-2-Foreach 루프 컨테이너 추가 및 구성
+# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>2-2단원 - Foreach 루프 컨테이너 추가 및 구성
 이 태스크에서는 플랫 파일 폴더를 통해 루핑하고 1단원에서 사용한 것과 같은 데이터 흐름 변환을 각 플랫 파일에 적용합니다. 제어 흐름에 Foreach 루프 컨테이너를 추가하고 구성하여 이 작업을 수행합니다.  
   
 추가한 Foreach 루프 컨테이너는 폴더의 각 플랫 파일에 연결할 수 있어야 합니다. 폴더의 파일이 모두 같은 형식이므로 Foreach 루프 컨테이너가 같은 플랫 파일 연결 관리자를 사용하여 이러한 파일에 각각 연결할 수 있습니다. 컨테이너가 사용할 플랫 파일 연결 관리자는 1단원에서 만든 것과 같은 플랫 파일 연결 관리자입니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/03/2017
 패키지를 수정한 후 패키지가 실행되면 Foreach 루프 컨테이너가 Sample Data 폴더의 파일 집합 전체에서 반복됩니다. Foreach 루프 컨테이너는 조건에 맞는 파일을 발견할 때마다 사용자 정의 변수를 파일 이름으로 채우고 Sample Currency Data 플랫 파일 연결 관리자의 **ConnectionString** 속성에 사용자 정의 변수를 매핑한 다음 해당 파일에 대해 데이터 흐름을 실행합니다. 따라서 Foreach 루프가 반복될 때마다 데이터 흐름 태스크에서 다른 플랫 파일을 사용합니다.  
   
 > [!NOTE]  
-> 때문에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 분리 흐름을 제어 하 고, 반복 제어 흐름에 추가 하는 데이터 흐름에 대 한 수정이 필요 하지 것입니다. 따라서 1단원에서 만든 데이터 흐름을 변경하지 않아도 됩니다.  
+> [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 흐름 제어를 데이터 흐름과 분리하므로 제어 흐름에 추가한 루핑에서는 데이터 흐름을 수정할 필요가 없습니다. 따라서 1단원에서 만든 데이터 흐름을 변경하지 않아도 됩니다.  
   
 ### <a name="to-add-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 추가하려면  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 08/03/2017
   
     2.  **DOWNLOADS** 탭을 클릭합니다.  
   
-    3.  에 대 한 링크를 클릭 하 고 [SQL2012 합니다. Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031) 파일입니다.  
+    3.  [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031) 파일에 대한 링크를 클릭합니다.  
   
 6.  **파일** 상자에 **Currency_\*.txt**를 입력합니다.  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  **변수 매핑**을 클릭합니다.  
   
-2.  에 **변수 매핑** 페이지는 **변수** 열에서 빈 셀을 클릭 하 고 선택  **\<새 변수... >**합니다.  
+2.  **변수 매핑** 페이지의 **변수** 열에서 빈 셀을 클릭하고 **\<새 변수...>**를 선택합니다.  
   
 3.  **변수 추가** 대화 상자에서 **이름**에 **varFileName**을 입력합니다.  
   
@@ -99,7 +98,7 @@ ms.lasthandoff: 08/03/2017
 -   **Foreach File in Folder** 로 이름이 바뀐 Foreach 루프 컨테이너로 **Extract Sample Currency Data**데이터 흐름 태스크를 끌어옵니다.  
   
 ## <a name="next-lesson-task"></a>다음 단원 태스크  
-[3 단계: 플랫 파일 연결 관리자 수정](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+[3단계: 플랫 파일 연결 관리자 수정](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>참고 항목  
 [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
@@ -107,4 +106,3 @@ ms.lasthandoff: 08/03/2017
   
   
   
-

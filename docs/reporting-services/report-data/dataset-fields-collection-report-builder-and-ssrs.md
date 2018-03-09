@@ -1,27 +1,27 @@
 ---
-title: "데이터 집합 필드 컬렉션 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "데이터 집합 필드 컬렉션(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 93e0f3ac2c38d3fa61ec63c65c3a5ceb664bc4d8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>데이터 집합 필드 컬렉션(보고서 작성기 및 SSRS)
   데이터 집합 필드는 데이터 연결의 데이터를 나타냅니다. 필드는 숫자 데이터나 숫자가 아닌 데이터를 나타낼 수 있습니다. 예로는 판매액, 총 판매액, 고객 이름, 데이터베이스 식별자, URL, 이미지, 공간 데이터, 전자 메일 주소 등이 있습니다. 디자인 화면에서 필드는 입력란, 테이블 및 차트와 같은 보고서 항목에서 식으로 나타납니다.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
  다차원 쿼리를 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]와 같은 데이터 원본은 필드의 필드 속성을 지원합니다. 필드 속성은 쿼리의 결과 집합에 나타나지만 **보고서 데이터** 창에 표시되지 않습니다. 보고서에서 이 필드 속성을 계속 사용할 수 있습니다. 필드의 속성을 참조하려면 필드를 보고서로 끌고 기본 속성 **Value** 를 원하는 속성의 필드 이름으로 변경합니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브에서 큐브 셀의 값에 대한 서식을 정의할 수 있습니다. 서식이 지정된 값은 필드 속성 **FormattedValue**를 통해 사용할 수 있습니다. 값을 사용하고 입력란의 서식 속성을 설정하는 대신 값을 직접 사용하려면 필드를 입력란으로 끌고 기본 식 `=Fields!FieldName.Value` 를 `=Fields!FieldName.FormattedValue`로 변경합니다.  
   
 > [!NOTE]  
->  모든 데이터 원본에 대해 모든 **Field** 속성을 사용할 수 있는 것은 아닙니다. **Value** 및 **IsMissing** 속성은 모든 데이터 원본에 대해 정의됩니다. 미리 정의된 다른 속성(다차원 데이터 원본에 대한 **Key**, **UniqueName**및 **ParentUniqueName** )은 데이터 원본에서 제공하는 경우에만 지원됩니다. 일부 데이터 공급자는 사용자 지정 속성을 지원합니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)를 참조하세요. 예를 들어 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 참조 [Analysis Services 데이터베이스 &#40;에 대 한 확장 필드 속성 Ssrs&#41; ](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+>  모든 데이터 원본에 대해 모든 **Field** 속성을 사용할 수 있는 것은 아닙니다. **Value** 및 **IsMissing** 속성은 모든 데이터 원본에 대해 정의됩니다. 미리 정의된 다른 속성(다차원 데이터 원본에 대한 **Key**, **UniqueName**및 **ParentUniqueName** )은 데이터 원본에서 제공하는 경우에만 지원됩니다. 일부 데이터 공급자는 사용자 지정 속성을 지원합니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)를 참조하세요. 예를 들어, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성&#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
   
 ##  <a name="Defaults"></a> 필드에 대한 기본 식 이해  
@@ -99,8 +99,8 @@ ms.lasthandoff: 08/09/2017
   
     |SQL 데이터 형식|CLR 데이터 형식|Description|  
     |-------------------|-------------------|-----------------|  
-    |**Date**|**DateTime**|날짜만|  
-    |**Time**|**TimeSpan**|시간입니다.|  
+    |**날짜**|**DateTime**|날짜만|  
+    |**Time**|**TimeSpan**|시간만|  
     |**DateTimeTZ**|**DateTimeOffset**|표준 시간대 오프셋을 포함하는 날짜 및 시간|  
     |**DateTime2**|**DateTime**|소수 자릿수 밀리초를 포함하는 날짜 및 시간|  
   
@@ -113,10 +113,9 @@ ms.lasthandoff: 08/09/2017
  보고서가 처리될 때 해당 열이 더 이상 데이터 원본에 존재하지 않아 데이터 집합에 대한 결과 집합에서 지정된 일부 열에 대한 값이 누락될 수 있습니다. 필드 속성 IsMissing을 사용하여 필드에 대한 값이 런타임에 반환되었는지를 검색할 수 있습니다. 자세한 내용은 [데이터 집합 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [보고서 파트 및 보고서 작성기에서 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [보고서는 데이터 집합 및 공유 데이터 집합 &#40; 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

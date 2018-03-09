@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CAST function
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
-caps.latest.revision: 10
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09c5b6060798f28541f61e763954ed44920cf83d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 38958007757b3bc2d4016946a918982eba91251b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trycast-transact-sql"></a>TRY_CAST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ### <a name="a-trycast-returns-null"></a>1. TRY_CAST가 null을 반환  
  다음 예에서는 캐스팅을 실패할 때 TRY_CAST가 null을 반환하는 것을 보여 줍니다.  
   
-```tsql  
+```sql  
 SELECT   
     CASE WHEN TRY_CAST('test' AS float) IS NULL   
     THEN 'Cast failed'  
@@ -92,7 +91,7 @@ Cast failed
   
  다음 예에서는 식이 해당 형식에 맞아야 한다는 것을 보여 줍니다.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;  
 SELECT TRY_CAST('12/31/2010' AS datetime2) AS Result;  
 GO  
@@ -111,7 +110,7 @@ NULL
 ### <a name="b-trycast-fails-with-an-error"></a>2. TRY_CAST가 오류와 함께 실패  
  다음 예에서는 캐스팅이 명시적으로 허용되지 않은 경우 TRY_CAST가 오류를 반환하는 것을 보여 줍니다.  
   
-```tsql  
+```sql  
 SELECT TRY_CAST(4 AS xml) AS Result;  
 GO  
 ```  
@@ -146,4 +145,3 @@ Result
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

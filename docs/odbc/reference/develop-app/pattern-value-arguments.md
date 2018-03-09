@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4959b329f855028cedc99f7c43ef889754baecda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pattern-value-arguments"></a>패턴 값 인수
 와 같은 일부 인수 카탈로그에서 함수가 *TableName* 인수 **SQLTables**, 검색 패턴을 사용할 합니다. 이 인수는 검색 패턴을 사용할 SQL_ATTR_METADATA_ID 문 특성이 SQL_FALSE;로 설정 된 경우 이 특성은 SQL_TRUE로 설정 하는 경우 검색 패턴을 허용 하지 않는 식별자 인수 않은 것입니다.  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 >  ODBC 2입니다. *x* 드라이버의 검색 패턴을 지원 하지 않습니다는 *CatalogName* 인수 **SQLTables**합니다. ODBC 3*.x* SQL_OV_ODBC2로 설정 된 경우이 인수의 검색 패턴을 받지 않는; 드라이버 SQL_ATTR_ ODBC_VERSION 환경 특성이 SQL_OV_ODBC3로 설정 된 경우이 인수의 검색 패턴을 허용 합니다.  
   
  Null 포인터는 검색 패턴 인수를 전달 인수에 지정 된;에 대 한 검색을 제한 하지 않습니다. 즉, null 포인터와 검색 패턴 % (문자)는 동일 합니다. 길이가 0 인 패턴을 검색 하는 반면-즉,에 대 한 유효한 포인터는 문자열 길이 0-빈 문자열만 일치 ("").
-

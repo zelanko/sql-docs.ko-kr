@@ -1,10 +1,13 @@
 ---
 title: "SQL Server (MySQLToSql)에 SSMA 구성 요소 설치 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 190c3cfcb9d41af357bfffe2a247aa353e2676e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>SQL Server (MySQLToSql)에 SSMA 구성 요소 설치
 SSMA를 설치 하는 것 외에도 설치 해야 구성 요소를 실행 하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 이러한 구성 요소는 데이터 마이그레이션 및 서버 간 연결을 사용 하도록 설정 하려면 MySQL 공급자를 지 원하는 SSMA 확장 팩을 포함 합니다.  
@@ -32,7 +35,7 @@ SSMA를 설치 하는 것 외에도 설치 해야 구성 요소를 실행 하는
   
 또한 데이터를 마이그레이션할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 만듭니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업, 서버 쪽 데이터 마이그레이션 엔진으로 데이터를 마이그레이션하는 데 사용 되는 경우.  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
 에 MySQL 서버 구성 요소에 대 한 SSMA를 설치 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 컴퓨터가 다음 요구 사항을 충족 하는지 확인 합니다.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 또는 이후 버전입니다.  

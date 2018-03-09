@@ -2,27 +2,33 @@
 title: "경고 임계값 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.setwarningthreshold.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e43b17175889f598f01e841f22b87adea5abc9f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-warning-thresholds"></a>경고 임계값 설정
-  이 대화 상자를 사용하여 **데이터베이스 미러링 모니터** 대화 상자의 탐색 트리에서 선택한 데이터베이스에 대한 하나 이상의 경고 임계값을 설정 및 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 대화 상자를 사용하여 **데이터베이스 미러링 모니터** 대화 상자의 탐색 트리에서 선택한 데이터베이스에 대한 하나 이상의 경고 임계값을 설정 및 구성할 수 있습니다.  
   
  이 대화 상자는 두 서버 인스턴스에 연결을 시도합니다. 이러한 연결은 비동기적으로 설정됩니다. 이 대화 상자에는 각 파트너의 연결 상태가 표시됩니다. 파트너가 연결되지 않은 경우 **연결**을 클릭할 수 있습니다.  
   
@@ -30,7 +36,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  *서버 인스턴스 및 서버 인스턴스의 연결 상태*  
  *SYSTEM***\\***INSTANCE_NAME*형식으로 된 파트너 서버 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 시스템 이름만 표시됩니다.  
   
@@ -67,7 +73,7 @@ ms.lasthandoff: 11/09/2017
  **경고**  
  지원되는 경고를 나열합니다.  
   
-|경고|설명|  
+|경고|Description|  
 |-------------|-----------------|  
 |**보내지 않은 로그가 임계값을 초과하는 경우 경고**|임계값은 주 서버의 Send Queue에 있는 보내지 않은 로그의 크기(KB)를 나타냅니다.|  
 |**복원되지 않은 로그가 임계값을 초과하는 경우 경고**|임계값은 미러 서버 인스턴스에 있는 Redo Queue의 크기(KB)를 나타냅니다.|  
@@ -85,7 +91,7 @@ ms.lasthandoff: 11/09/2017
  **확인**  
  **확인** 을 클릭하면 이 대화 상자가 닫히고 경고 임계값의 현재 지정된 값이 **경고** 탭 페이지의 **임계값**표에 표시됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  임계값은 한 번에 한 파트너에만 적용할 수 있지만 데이터베이스가 장애 조치될 경우 경고가 유지되도록 두 파트너 모두에 지정된 이벤트에 대한 임계값을 설정하는 것이 좋습니다. 각 파트너에 적합한 임계값은 각 파트너 시스템의 성능 기능에 따라 달라집니다.  
   
  상태 테이블을 업데이트할 때 해당 값이 임계값보다 크거나 같을 경우에만 성능의 이벤트 로그에 이벤트가 기록됩니다. 상태 업데이트 사이에 최대값이 일시적으로 임계값에 도달할 경우 해당 값은 누락됩니다.  

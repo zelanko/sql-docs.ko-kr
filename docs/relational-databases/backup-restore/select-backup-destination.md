@@ -2,27 +2,30 @@
 title: "백업 대상 선택 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.selectbackupdest.f1
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84549bf1f3ea7d4875f6f23bd08d9de1a3e06521
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 08a629ac319f874312d6bb3878c721d783a5fe12
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="select-backup-destination"></a>백업 대상 선택
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   **백업 대상 선택** 대화 상자를 사용하여 장치를 백업 대상으로 선택할 수 있습니다. 디스크 또는 논리적 백업 장치를 백업 대상으로 사용할 수 있습니다.  
   
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  이 대화 상자의 옵션은 대상을 디스크에서 선택하는지 또는 테이프에서 선택하는지에 따라 달라집니다.  
   
  **디스크의 대상**  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
 |**테이프 드라이브**|서버 인스턴스를 실행하는 컴퓨터에 물리적으로 연결된 테이프 드라이브의 목록에서 테이프 드라이브를 백업 대상으로 선택하려면 이 옵션을 선택합니다.<br /><br /> 참고: 원격 컴퓨터의 테이프 백업 장치는 올바른 백업 대상이 아닙니다.|  
 |**백업 장치**|기존의 논리적 백업 장치를 선택하려면 이 옵션을 선택합니다. 이러한 논리적 백업 장치는 서버 인스턴스를 실행하는 컴퓨터에 물리적으로 연결된 테이프 드라이브입니다.<br /><br /> 참고: 테이프 백업 장치를 만드는 방법에 대한 자세한 내용은 [테이프 드라이브에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)를 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

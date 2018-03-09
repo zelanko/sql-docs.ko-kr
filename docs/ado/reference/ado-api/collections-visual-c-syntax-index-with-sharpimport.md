@@ -3,8 +3,9 @@ title: "컬렉션 (Visual c + + 구문 있는 인덱스 #import) | Microsoft Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,23 +13,24 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - 'syntax indexes [ADO], ADO for Visual C++ syntax with #import'
 - 'collections [ADO], ADO for Visual C++ syntax with #import'
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5d88dfcfe9d05d5f78f4f8e61ee32a23a67048d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 488f5dcc74f6b5b1d1ea89c794511a96dc3dea81
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>컬렉션 (Visual c + + 구문 인덱스 #import 사용)
 컬렉션 특정 공용 메서드와 속성을 상속 한다는 알아야는 것이 유용 합니다.  

@@ -24,17 +24,16 @@ helpviewer_keywords:
 - tools [SQL Server], SQL Server Configuration Manager
 - configuration manager [SQL Server]
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
-caps.latest.revision: 58
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 81c3fc1a8bc1b582fd4f8d696f1382e5a88bd706
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
-ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 구성 관리자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ ms.lasthandoff: 07/31/2017
 ### <a name="available-network-protocols"></a>사용 가능한 네트워크 프로토콜  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 공유 메모리, TCP/IP 및 명명된 파이프 프로토콜을 지원합니다. 네트워크 프로토콜을 선택하는 방법은 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)을 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 VIA, Banyan VINES SPP(Sequenced Packet Protocol), 멀티프로토콜, AppleTalk 또는 NWLink IPX/SPX 네트워크 프로토콜이 지원되지 않습니다. 이전에 이러한 프로토콜을 사용하여 연결된 클라이언트는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결하기 위해 다른 프로토콜을 선택해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 WinSock 프록시를 구성할 수 없습니다. WinSock 프록시를 구성하려면 ISA 서버 설명서를 참조하세요.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [서비스 관리 방법 도움말 항목&#40;SQL Server 구성 관리자&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
  [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
@@ -104,4 +103,3 @@ ms.lasthandoff: 07/31/2017
  [SQL Server 인스턴스의 자동 시작 방지&#40;SQL Server 구성 관리자&#41;](../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
   
-

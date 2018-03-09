@@ -28,17 +28,16 @@ helpviewer_keywords:
 - SET STATISTICS IO statement
 - statistical information [SQL Server], disk activity
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-caps.latest.revision: 40
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 99e1dc183844f25002057b7cebd4729ff5f1bbe5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3b2aad11610a23c3686e279daa60c57bf7c8154f
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ SET STATISTICS IO { ON | OFF }
 |출력 항목|의미|  
 |-----------------|-------------|  
 |**테이블**|테이블 이름입니다.|  
-|**검색 수**|출력에 대한 최종 데이터 집합을 생성하도록 모든 값을 검색하기 위해 어느 방향으로든 리프 수준에 도달한 후 시작된 검색/찾기 횟수입니다.<br /><br /> 사용된 인덱스가 고유 인덱스이거나 기본 키의 클러스터형 인덱스이고 값을 하나만 찾는 중인 경우 검색 수가 0입니다. 예를 들면 `WHERE Primary_Key_Column = <value>`입니다.<br /><br /> 기본 키 열이 아닌 키 열에 정의된 고유하지 않은 클러스터형 인덱스를 사용하여 하나의 값을 검색하는 경우에는 검색 수가 1입니다. 이 작업은 검색 중인 키 값의 중복 값을 확인하기 위해 수행됩니다. 예를 들면 `WHERE Clustered_Index_Key_Column = <value>`입니다.<br /><br /> 인덱스 키를 사용하는 키를 찾은 후 리프 수준에서 왼쪽 또는 오른쪽 방향으로 시작된 서로 다른 검색/찾기 횟수가 N인 경우 검색 수가 N이 됩니다.|  
+|**검색 수**|출력에 대한 최종 데이터 집합을 생성하도록 모든 값을 검색하기 위해 어느 방향으로든 리프 수준에 도달한 후 시작된 검색/찾기 횟수입니다.<br /><br /> 사용된 인덱스가 고유 인덱스이거나 기본 키의 클러스터형 인덱스이고 값을 하나만 찾는 중인 경우 검색 수가 0입니다. 예를 들면 `WHERE Primary_Key_Column = <value>`입니다.<br /><br /> 기본이 아닌 키 열에 정의 된 고유 하지 않은 클러스터형된 인덱스를 사용 하 여 하나의 값을 검색할 때 검색 수는 1입니다. 이 작업은 검색 중인 키 값의 중복 값을 확인하기 위해 수행됩니다. 예를 들면 `WHERE Clustered_Index_Key_Column = <value>`입니다.<br /><br /> 인덱스 키를 사용하는 키를 찾은 후 리프 수준에서 왼쪽 또는 오른쪽 방향으로 시작된 서로 다른 검색/찾기 횟수가 N인 경우 검색 수가 N이 됩니다.|  
 |**논리적 읽기 수**|데이터 캐시에서 읽은 페이지 수입니다.|  
 |**물리적 읽기 수**|디스크에서 읽은 페이지 수입니다.|  
 |**미리 읽기 수**|쿼리에 대해 캐시에 넣어진 페이지 수입니다.|  
@@ -110,4 +109,3 @@ lob read-ahead reads 0.
  [통계 시간 &#40; 설정 합니다. Transact SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  
   
   
-

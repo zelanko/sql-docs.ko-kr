@@ -1,29 +1,30 @@
 ---
 title: "HTML 뷰어 및 보고서 도구 모음 | Microsoft Docs"
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "34"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a00f751dbb765e8835fa40430dfdd00a8079f3c6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 뷰어 및 보고서 도구 모음
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 서버의 요청에 따라 보고서를 표시하는 데 사용되는 HTML 뷰어를 제공합니다. HTML 뷰어는 HTML 형식의 보고서를 표시하는 프레임워크, 즉 보고서 도구 모음, 매개 변수 섹션, 자격 증명 섹션 및 문서 구조를 제공합니다. HTML 뷰어의 보고서 도구 모음에는 보고서를 HTML이 아닌 다른 형식으로 표시할 수 있도록 하는 내보내기 옵션을 비롯하여 보고서 작업에 사용할 수 있는 다양한 기능이 있습니다. 매개 변수 섹션과 문서 구조는 매개 변수 및 문서 구조 컨트롤을 사용하도록 구성된 보고서를 열 경우에만 표시됩니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="report-toolbar"></a>보고서 도구 모음  
  보고서 도구 모음은 HTML 렌더링 확장 프로그램에서 렌더링된 보고서에 대해 페이지 탐색, 확대/축소, 새로 고침, 검색, 내보내기, 인쇄 및 데이터 피드 기능을 제공합니다.  
   
- 인쇄 기능은 선택 사항입니다. 인쇄 기능을 사용할 수 있는 경우 프린터 아이콘이 보고서 도구 모음에 표시됩니다. 인쇄 기능을 처음 사용하는 경우 프린터 아이콘을 클릭하면 반드시 설치해야 하는 ActiveX 컨트롤이 다운로드됩니다. 컨트롤이 설치된 후에 프린터 아이콘을 클릭하면 컴퓨터에 구성된 프린터 중에서 선택할 수 있는 프린터 대화 상자가 열립니다. 인쇄 기능 사용 가능 여부는 서버 설정 및 브라우저 설정에 따라 결정됩니다. 자세한 내용은 참조 [인쇄 제어 &#40;를 사용 하 여 브라우저에서 보고서 인쇄 보고서 작성기 및 SSRS &#41; ](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) 및 [설정 및 Reporting Services에 대 한 클라이언트 쪽 인쇄 기능 해제](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)합니다.  
+ 인쇄 기능은 선택 사항입니다. 인쇄 기능을 사용할 수 있는 경우 프린터 아이콘이 보고서 도구 모음에 표시됩니다. 인쇄 기능을 처음 사용하는 경우 프린터 아이콘을 클릭하면 반드시 설치해야 하는 ActiveX 컨트롤이 다운로드됩니다. 컨트롤이 설치된 후에 프린터 아이콘을 클릭하면 컴퓨터에 구성된 프린터 중에서 선택할 수 있는 프린터 대화 상자가 열립니다. 인쇄 기능 사용 가능 여부는 서버 설정 및 브라우저 설정에 따라 결정됩니다. 자세한 내용은 [인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) 및 [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)를 참조하세요.  
   
  보고서 도구 모음은 다음 그림과 같습니다. 그러나 실제 보고서 도구 모음은 사용할 수 있는 보고서 기능이나 렌더링 옵션에 따라 다를 수 있습니다.  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 |CSV|보고서를 쉼표로 분리된 형식으로 표시합니다. 보고서가 CSV 파일 형식과 연결된 응용 프로그램에서 열립니다.|  
 |PDF|클라이언트 쪽 PDF 뷰어를 사용하여 보고서를 봅니다. 이 형식을 사용하려면 타사의 PDF Viewer(예: Adobe Acrobat Reader)가 있어야 합니다.|  
 |MHTML|보고서와 함께 이미지와 연결된 내용을 유지하는 MIME로 인코딩된 HTML 형식으로 보고서를 봅니다.|  
-|Excel|[!INCLUDE[msCoName](../includes/msconame-md.md)] Excel에서 보고서(.xlsx 파일)를 봅니다.|  
+|내보내기|[!INCLUDE[msCoName](../includes/msconame-md.md)] Excel에서 보고서(.xlsx 파일)를 봅니다.|  
 |PowerPoint|[!INCLUDE[msCoName](../includes/msconame-md.md)] PowerPoint에서 보고서(.pptx 파일)를 봅니다.|  
 |TIFF 파일|기본 TIFF 뷰어로 보고서를 봅니다. 일부 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 클라이언트의 경우 이 뷰어는 Windows 사진 및 팩스 뷰어입니다. 페이지 단위의 레이아웃으로 보고서를 보려면 이 형식을 선택합니다.|  
 |Word|[!INCLUDE[msCoName](../includes/msconame-md.md)] Word에서 보고서(.docx 파일)를 봅니다.|  
@@ -78,10 +79,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="credentials"></a>자격 증명  
  자격 증명은 데이터 원본에 액세스할 수 있는 사용자 이름과 암호 값입니다. 자격 증명을 지정한 후 데이터를 가져오려면 **보고서 보기** 를 클릭합니다. 로그온이 필요한 보고서의 경우 각 사용자에게 표시되는 데이터가 다를 수 있습니다. 따라서 두 사용자가 같은 보고서를 실행해도 다른 결과를 얻을 수 있습니다. 또한 일부 보고서에는 숨겨진 영역이 있는데 사용자 로그온 자격 증명이나 보고서 자체의 선택 사항에 따라 표시 여부가 결정됩니다. 보고서의 숨겨진 영역은 검색 작업에서 제외되므로 보고서의 모든 부분을 볼 수 있는 경우와는 검색 결과가 다를 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

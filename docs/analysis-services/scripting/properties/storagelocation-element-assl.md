@@ -2,15 +2,13 @@
 title: "StorageLocation 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: StorageLocation Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f29d736c11dd7297d024bc9e6f72c93a521e84ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c942079a21d4727e1c125bf15ac837045c162ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="storagelocation-element-assl"></a>StorageLocation 요소(ASSL)
-  부모 요소의 내용에 대한 파일 시스템 저장소 위치를 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]부모 요소의 내용에 대 한 파일 시스템 저장소 위치를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,15 +45,15 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|문자열|  
+|데이터 형식 및 길이|String|  
 |기본값|아래 표를 참조 합니다.|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 |상위 항목 또는 부모|기본값|  
 |------------------------|-------------------|  
-|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|없음|  
+|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|InclusionThresholdSetting|  
 |[측정값 그룹](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|**StorageLocation** 부모 요소의 **Cube** 값입니다.|  
 |[파티션](../../../analysis-services/scripting/objects/partition-element-assl.md)|**StorageLocation** 부모 요소의 **MeasureGroup** 값입니다.|  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[큐브](../../../analysis-services/scripting/objects/cube-element-assl.md), [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md), [파티션](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  부모에 해당 하는 요소 **StorageLocation** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MeasureGroup>, 및 <xref:Microsoft.AnalysisServices.Partition>합니다.  

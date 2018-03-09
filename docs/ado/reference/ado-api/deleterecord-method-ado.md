@@ -3,8 +3,9 @@ title: "참여할 수 있는 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::raw_DeleteRecord
 - _Record::DeleteRecord
-helpviewer_keywords: DeleteRecord method [ADO]
+helpviewer_keywords:
+- DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66d13bc4449bad73b1ab09869a764e6bff533442
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5088293b3866f74f39e608a8de8f300d4e3980c1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deleterecord-method-ado"></a>참여할 수 있는 메서드 (ADO)
 가 나타내는 엔터티를 삭제 한 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다.  
@@ -42,7 +44,7 @@ Record.DeleteRecord Source, Async
  *원본*  
  (선택 사항) A **문자열** 삭제할 엔터티 (예: 파일 또는 디렉터리)를 식별 하는 URL을 포함 하는 값입니다. 경우 *소스* 를 생략 하거나 빈 문자열인 경우 현재 표시 되는 엔터티에 지정 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 삭제 됩니다. 레코드 컬렉션 레코드인 경우 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) 의 **adCollectionRecord**, 디렉터리와 같은) 모든 자식 항목 (예를 들어 하위 디렉터리)도 삭제 됩니다.  
   
- *비동기*  
+ *Async*  
  (선택 사항) A **부울** 값 때 **True**, 삭제 작업이 비동기 임을 지정 합니다.  
   
 ## <a name="remarks"></a>주의  

@@ -2,26 +2,31 @@
 title: "응용 프로그램 수준 분할 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0133e07a063589deeae9cf1d1cb9e05fe480437
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b10dd4f325b79672d4b0c880186f9331bc71dc1b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="application-level-partitioning"></a>응용 프로그램 수준 분할
-  이 응용 프로그램은 주문을 처리합니다. 최근 주문에 대한 처리 작업이 많습니다. 이전 주문에 대한 처리 작업이 많지 않습니다. 최근 주문이 메모리 최적화 테이블에 있습니다. 이전 명령이 디스크 기반 테이블에 있습니다. 
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+이 응용 프로그램은 주문을 처리합니다. 최근 주문에 대한 처리 작업이 많습니다. 이전 주문에 대한 처리 작업이 많지 않습니다. 최근 주문이 메모리 최적화 테이블에 있습니다. 이전 명령이 디스크 기반 테이블에 있습니다. 
             *hotDate* 이후의 모든 주문은 메모리 최적화 테이블에 있습니다. *hotDate* 이전의 모든 주문은 디스크 기반 테이블에 있습니다. 동시 트랜잭션이 많이 있는 극단적인 OLTP 작업을 가정합니다. 여러 개의 동시 트랜잭션이 *hotDate*를 변경하려고 하는 경우에도 이 비즈니스 규칙(메모리 최적화 테이블에 있는 최근 주문)을 적용해야 합니다.  
   
  이 예제에서는 디스크 기반 테이블에 분할된 테이블을 사용하지 않지만 제 3의 테이블을 사용하여 두 테이블 간의 명시적 분할 지점을 추적합니다. 분할 지점을 사용하여 새로 삽입된 데이터가 날짜에 따라 적절한 테이블에 항상 삽입되도록 할 수 있으며 데이터를 찾을 위치를 결정할 수도 있습니다. 늦게 도착하는 데이터가 여전히 적절한 테이블로 이동합니다.  
@@ -30,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="code-listing"></a>코드 목록  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
 IF NOT EXISTS(SELECT name FROM sys.databases WHERE name = 'hkTest')  

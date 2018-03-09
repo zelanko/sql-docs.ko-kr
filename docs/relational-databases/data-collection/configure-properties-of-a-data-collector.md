@@ -2,29 +2,34 @@
 title: "데이터 수집기의 속성 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.dc.datacollectionprop.general.f1
 - sql13.swb.dc.datacollectionprop.advanced.f1
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
-caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9faaadb66ece341464ef9f1720817f00cad7b3b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fb01bee5ac0dd68dc4cda375e076a72543e3988f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-properties-of-a-data-collector"></a>데이터 수집기의 속성 구성
-  이 항목에서는 데이터 수집기의 속성을 구성하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 데이터 수집기의 속성을 구성하는 방법에 대해 설명합니다.  
   
 ## <a name="data-collection-properties-general-tab"></a>데이터 컬렉션 속성(일반 탭)  
  이 페이지를 사용하여 관리 데이터 웨어하우스에 대한 설정을 구성하고 수집한 데이터를 데이터 웨어하우스에 업로드하기 전에 저장하는 위치를 지정할 수 있습니다.  

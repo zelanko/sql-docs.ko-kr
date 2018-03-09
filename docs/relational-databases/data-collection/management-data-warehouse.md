@@ -2,10 +2,14 @@
 title: "관리 데이터 웨어하우스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4f31923e866b45951e3758d3f1e35aa542117ad2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f61ec563867912a713504af1a291bc26507888ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="management-data-warehouse"></a>관리 데이터 웨어하우스
-  관리 데이터 웨어하우스는 데이터 컬렉션 대상인 서버에서 수집되는 데이터를 포함하는 관계형 데이터베이스입니다. 이 데이터를 사용하여 시스템 데이터 컬렉션 집합의 보고서를 생성하고 사용자 지정 보고서를 만들 수도 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+관리 데이터 웨어하우스는 데이터 컬렉션 대상인 서버에서 수집되는 데이터를 포함하는 관계형 데이터베이스입니다. 이 데이터를 사용하여 시스템 데이터 컬렉션 집합의 보고서를 생성하고 사용자 지정 보고서를 만들 수도 있습니다.  
   
  데이터 수집기 인프라는 데이터베이스 관리자가 정의하는 보존 정책을 구현하기 위해 필요한 작업 및 유지 관리 계획을 정의합니다.  
   
@@ -42,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
  다음 표에서는 core 스키마의 데이터베이스 테이블에 대해 설명합니다. 이러한 데이터베이스 테이블에서는 데이터 수집기를 사용하여 데이터가 있었던 위치, 데이터를 삽입한 사용자 및 데이터가 데이터 웨어하우스에 업로드된 시간을 추적할 수 있습니다.  
   
-|테이블 이름|설명|  
+|테이블 이름|Description|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|관리 데이터 웨어하우스 보고서에서 성능 카운터를 그룹화하고 집계하는 방법에 대한 정보를 저장합니다.|  
 |core.snapshots_internal|새로운 각 스냅숏을 식별합니다. 업로드 패키지가 새 일괄 처리 데이터를 업로드하기 시작할 때마다 새 행이 이 테이블에 삽입됩니다.|  

@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], error messages
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9bc0b106b88eee6335514723aa083aef44bd5b66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 49c71ee77178b71ed67fbdddf955af1f14643199
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC 드라이버 원시 오류 메시지
 다음 표에서 네이티브 Visual FoxPro ODBC 드라이버에 오류 메시지를 보여 줍니다.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|1.|기능은 사용할 수 없습니다.|  
+|1|기능은 사용할 수 없습니다.|  
 |2|입/출력 작업에 실패 했습니다.|  
 |3|무료 핸들을 찾을 수 없습니다.|  
 |5|할당 되지 않은 핸들 사용 되었습니다.|  
@@ -341,4 +339,3 @@ ms.lasthandoff: 09/09/2017
 |988|통화 값 범위를 벗어났습니다.|  
 |990|취소.|  
 |999|함수가 구현 되지 않았습니다.|
-

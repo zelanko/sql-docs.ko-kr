@@ -2,38 +2,36 @@
 title: "Power Pivot 사용 데이터 컬렉션 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5fab455ddd2ea659f2269512a81c93df2962df2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="power-pivot-usage-data-collection"></a>Power Pivot 사용 데이터 컬렉션
-  사용 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 이 시스템을 사용하고 확장하여 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
+# <a name="power-pivot-usage-data-collection"></a>파워 피벗 사용 현황 데이터 수집
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+사용 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 이 시스템을 사용하고 확장하여 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드의 사용 현황 데이터에 대한 자세한 내용은 [파워 피벗 관리 대시보드 및 사용 현황 데이터](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)를 참조하세요.  
   
   
 ##  <a name="usagearch"></a> 사용 데이터 수집 및 보고 아키텍처  
- [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]저장 및 SharePoint 인프라와 Powerpivot 서버 구성 요소 요소의 기능 조합을 사용 하 여 관리 사용 현황 데이터 수집 됩니다. SharePoint 인프라는 중앙 집중식 사용 서비스 및 기본 제공 타이머 작업을 제공합니다. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 SharePoint 중앙 관리에 표시되는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 사용 데이터 및 보고서에 대한 장기 저장소를 추가합니다.  
+ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 저장 및 SharePoint 인프라와 Powerpivot 서버 구성 요소 요소의 기능 조합을 사용 하 여 관리 사용 현황 데이터 수집 됩니다. SharePoint 인프라는 중앙 집중식 사용 서비스 및 기본 제공 타이머 작업을 제공합니다. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 SharePoint 중앙 관리에 표시되는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 사용 데이터 및 보고서에 대한 장기 저장소를 추가합니다.  
   
  사용 데이터 수집 시스템에서 이벤트 정보는 응용 프로그램 서버나 웹 프런트 엔드의 사용 수집 시스템에 입력됩니다. 사용 데이터는 물리적 서버의 임시 데이터 파일에서 데이터베이스 서버의 영구 저장소로 데이터를 이동하게 하는 타이머 작업에 응답하여 시스템을 통해 이동됩니다. 다음 다이어그램은 데이터 컬렉션 및 보고 시스템을 통해 사용 데이터를 이동하는 구성 요소와 프로세스를 보여 줍니다.  
   

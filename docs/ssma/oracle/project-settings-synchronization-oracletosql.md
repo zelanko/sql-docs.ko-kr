@@ -1,10 +1,13 @@
 ---
 title: "프로젝트 Settings(Synchronization) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 81a3c4860c3916753435e2b5c608628650bae255
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 030b6346a174d83234216e9c779b01026abe7b07
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>프로젝트 Settings(Synchronization) (OracleToSQL)
 동기화 페이지는 **프로젝트 설정** 대화 상자 SSMA를 로드 하 고 새로 고침 같은 데이터베이스 개체, 테이블 및 저장된 프로시저에 방법을 사용자 지정 하는 설정이 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  

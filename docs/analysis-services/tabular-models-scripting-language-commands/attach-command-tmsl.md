@@ -2,35 +2,29 @@
 title: "Attach 명령 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 24a0af4329f543c43087f902e959963384def662
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d19093c8030e9faf909168cd4707cf5b3e8759ef
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attach-command-tmsl"></a>Attach 명령 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Analysis Services 파일 서버에 연결 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services 파일 서버에 연결 합니다.  
   
   
 ## <a name="request"></a>요청  
@@ -49,8 +43,8 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**속성**|**Default**|**Description**|  
-|데이터베이스|[필수]|연결할 데이터베이스 개체의 이름입니다.|  
+|**속성**|**Default**|**설명**|  
+|database|[필수]|연결할 데이터베이스 개체의 이름입니다.|  
 |폴더|[필수]|연결 된 데이터베이스를 포함 하는 폴더입니다.|  
 |password|비어 있음|연결된 된 데이터베이스의 암호를 암호화 하는 데 암호입니다.|  
 |readWriteMode|ReadWrite|데이터베이스에 허용 된 액세스 모드를 나타내는 열거형 값입니다.<br /><br /> **열거형 값은 다음과 같습니다.**<br /><br /> readWrite-읽기 / 쓰기 액세스가 허용 됩니다.<br /><br /> 읽기 전용-읽기 전용 권한이 허용 됩니다.<br /><br /> readOnlyExclusive-읽기 전용 단독 액세스가 허용 됩니다.|  
@@ -76,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 데이터베이스 연결 및 분리](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
   
-

@@ -2,30 +2,31 @@
 title: "작업 입력 및 출력 (SQL 빠른 시작에서 R) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
-caps.latest.revision: 7
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 593e102e75624ae2b36a56e528284bdcf47027e1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a5ffcfafc29f0b741d8e6ada0d50ef6f94fecc7f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>작업에 입 / 출력 (SQL 빠른 시작에서 R)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server에서 R 코드를 실행 하려는 경우 R 스크립트는 시스템 저장 프로시저에서 래핑해야 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)합니다. 이 저장 프로시저는 SQL Server의 컨텍스트에서 R 런타임을 시작하는 데 사용되어 데이터를 R에 전달하고, R 사용자 세션을 안전하게 관리하고, 결과를 클라이언트로 반환합니다.
 
@@ -145,4 +146,3 @@ EXECUTE sp_execute_external_script
 R과 SQL 간 테이블 형식 데이터의 암시적 변환 및 차이점을 포함하여 R과 SQL Server 간에 데이터를 전달할 때 발생할 수 있는 몇 가지 문제를 살펴보겠습니다.
 
 [R 및 SQL 데이터 형식 및 데이터 개체](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
-

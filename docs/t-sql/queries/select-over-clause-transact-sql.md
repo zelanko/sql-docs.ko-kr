@@ -27,17 +27,16 @@ helpviewer_keywords:
 - rowsets [SQL Server], ordering
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-caps.latest.revision: 75
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: db58418025c1659d42c4f1b76a06af8b08ff2ea6
-ms.openlocfilehash: 9e6dad4cbd3e3b64b35f859986b4b7b9928babd5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.openlocfilehash: 1144e82253c5e9d2988ec9ff4a8aa47bb3cb2fb1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>선택-OVER 절 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -198,7 +197,7 @@ ROWS/RANGE는 지정 하는 경우 및 \<이전 창 프레임 >에 사용 되 \<
 ### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>1. OVER 절에 ROW_NUMBER 함수 사용  
  다음 예에서는 OVER 절에 ROW_NUMBER 함수를 사용하여 파티션 내의 각 행에 대한 행 번호를 표시하는 방법을 보여 줍니다. OVER 절에 지정된 ORDER BY 절은 각 파티션의 행을 `SalesYTD` 열을 기준으로 정렬합니다. SELECT 문의 ORDER BY 절은 전체 쿼리 결과 집합이 반환되는 순서를 결정합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
@@ -238,7 +237,7 @@ GO
 ### <a name="b-using-the-over-clause-with-aggregate-functions"></a>2. OVER 절에 집계 함수 사용  
  다음 예에서는 쿼리에서 반환된 모든 행에 대해 `OVER` 절에 집계 함수를 사용합니다. 이 예에서는 하위 쿼리를 사용하는 것보다 `OVER` 절을 사용하는 것이 집계 값을 파생시키는 데 더 효율적입니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -281,7 +280,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
   
  다음 예에서는 `OVER` 절에 계산된 값의 집계 함수를 사용하는 방법을 보여 줍니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -325,7 +324,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ### <a name="c-producing-a-moving-average-and-cumulative-total"></a>3. 이동 평균 및 누적 합계 생성  
  다음 예에서는 OVER 절과 함께 AVG 및 SUM 함수를 사용하여 `Sales.SalesPerson` 테이블에 있는 각 지역에 대해 연간 매출의 이동 평균 및 누적 합계를 구합니다. 데이터는 `TerritoryID`를 기준으로 분할되고 `SalesYTD`를 기준으로 논리적으로 정렬됩니다. 즉, AVG 함수는 판매 연도를 기준으로 각 지역에 대해 계산됩니다. `TerritoryID` 1의 경우 2005년도에 대한 두 개의 행이 있습니다. 이 두 행은 해당 연도의 두 영업 사원과 매출을 나타냅니다. 이 두 행의 평균 매출이 계산된 다음 2006년도 매출을 나타내는 세 번째 행이 계산에 포함됩니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
@@ -364,7 +363,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  이 예에서는 OVER 절에 PARTITION BY가 포함되어 있지 않습니다. 즉, 이 함수는 쿼리에서 반환된 모든 행에 적용됩니다. OVER 절에 지정된 ORDER BY 절은 AVG 함수가 적용되는 논리적 순서를 결정합니다. 이 쿼리는 WHERE 절에 지정된 모든 판매 지역의 연도별 매출 이동 평균을 반환합니다. SELECT 문에 지정된 ORDER BY 절은 쿼리의 행이 표시되는 순서를 결정합니다.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
@@ -401,7 +400,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  다음 예에서는 ROWS 절을 사용 하 여 현재 행으로 행을 계산 하는 창을 정의 하 고 *N* (이 예제에서는 1 행)를 수행 하는 행의 번호입니다.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -431,7 +430,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
  다음 예에서는 ROWS 절과 함께 UNBOUNDED PRECEDING을 지정합니다. 그 결과 창이 파티션의 첫 번째 행에서 시작됩니다.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -465,7 +464,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>5. OVER 절에 ROW_NUMBER 함수 사용  
  다음 예제에서는 할당 된 판매 할당량 한도에 따라 판매 담당자는 ROW_NUMBER를 반환 합니다.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
@@ -492,7 +491,7 @@ GROUP BY LastName, FirstName;
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>6. OVER 절에 집계 함수 사용  
  다음 예에서는 집계 함수에 OVER 절을 사용 하 여 보여 줍니다. 이 예에서는 OVER 절을 사용 하 여이 하위 쿼리를 사용 하 여 보다 효율적입니다.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey,   
@@ -524,7 +523,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  
  다음 예에서는 OVER 절을 사용 하 여 계산된 된 값에 집계 함수를 보여 줍니다. 공지 여 계산 된 집계 `SalesOrderNumber` 의 각 줄에 대 한 총 판매 주문 백분율로 계산 됩니다 `SalesOrderNumber`합니다.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   
@@ -556,4 +555,3 @@ ORDER BY SalesOrderNumber,ProductKey;
  [Sqlmag.com, Itzik Ben Gan 여에 창 함수와 조치에 대 한 뛰어난 블로그 게시물](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   
-

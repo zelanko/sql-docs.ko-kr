@@ -3,7 +3,7 @@ title: "Members 컬렉션 ADO MD | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Members collection [ADO MD]
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 087809ddb783b323a094a509aedd4c5b88005764
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d72b7b87507e13ae4aa103a6333e7e2caaf581ae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="members-collection-ado-md"></a>(ADO MD) members 컬렉션
 포함 된 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 한 수준이 나 축의 위치 개체입니다.  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [멤버 예 (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Member 개체(ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
-

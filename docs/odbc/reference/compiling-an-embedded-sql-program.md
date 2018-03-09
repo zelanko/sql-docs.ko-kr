@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - compiling embedded SQL programs [ODBC]
 - embedded SQL [ODBC]
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aeb3dbb46b8ac3e5e715a479923694cdea28a97f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4914a0f7c426f8409c53835e84ff26cecca94ba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiling-an-embedded-sql-program"></a>포함 된 SQL 프로그램 컴파일
 포함된 된 SQL 프로그램에는 다양 한 SQL 및 호스트 언어 문 포함 된, 호스트 언어에 대 한 컴파일러에 직접 전송할 수 없습니다. 대신 다중 단계 프로세스를 통해 컴파일됩니다. 이 프로세스 다른 제품으로 있지만 단계는 대략 모든 제품에 대해 동일 합니다.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 5.  프리에 의해 생성 된 데이터베이스 요청 모듈 특별 한 바인딩 유틸리티에 제출 됩니다. 이 유틸리티 SQL 문을 검사 하 여, 구문 분석, 유효성을 검사 하 고 최적화, 하 고 각 문에 대 한 액세스 계획을 생성 합니다. 결과 포함 된 SQL 문의 실행 된 버전을 나타내는 전체 프로그램에 대 한 결합 된 액세스 계획입니다. 바인딩 유틸리티는 일반적으로 사용 하 여 응용 프로그램의 이름을 할당 하는 데이터베이스에 계획을 저장 합니다. 이 단계에서 컴파일 타임 또는 런타임에 일어나 여부는 DBMS에 따라 달라 집니다.  
   
  포함된 된 SQL 프로그램을 컴파일하는 데 사용 하는 단계에서 이전에 설명 된 단계와 매우 밀접 하 게 상관 관계 지정 사라졌는지 [SQL 문 처리](../../odbc/reference/processing-a-sql-statement.md)합니다. 특히, 고 해당 데이터베이스 프리는 호스트 언어 코드에서 SQL 문을 구분 합니다. 바인딩 유틸리티 구문 분석 하 고 SQL 문을 유효성을 검사 하 고 액세스 계획을 만듭니다. Dbms 5 단계 발생 컴파일 타임에, SQL 문 처리의 처음 네 단계 수행 컴파일 타임에는 마지막 단계 (실행) 런타임 시 발생 하는 동안 됩니다. 이러한 Dbms 매우 빠르게에 쿼리 실행을 만드는 것과 효과가 있습니다.
-

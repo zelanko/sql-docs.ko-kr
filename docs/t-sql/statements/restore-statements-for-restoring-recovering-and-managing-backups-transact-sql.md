@@ -24,17 +24,16 @@ helpviewer_keywords:
 - file restores [SQL Server], RESTORE statement
 - transaction log backups [SQL Server], RESTORE statement
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 81443218a21a232248d3f237aba38cfc0d833b7e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d756c4fb9f299abe88ef46c14726f613e8f66497
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>백업 복원, 복구 및 관리를 위한 RESTORE 문(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|인수를 제거합니다.|Description|  
+|문|Description|  
 |---------------|-----------------|  
 |[RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|BACKUP 명령을 사용하여 수행한 백업으로부터 데이터베이스를 복원 및 복구하는 데 사용되는 RESTORE DATABASE 및 RESTORE LOG Transact-SQL 문에 대해 설명합니다. RESTORE DATABASE는 모든 복구 모델에서 데이터베이스에 사용됩니다. RESTORE LOG는 전체 복구 모델 및 대량 로그 복구 모델에서만 사용됩니다. RESTORE DATABASE를 사용하여 데이터베이스를 데이터베이스 스냅숏으로 되돌릴 수도 있습니다.|  
 |[RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|RESTORE 문과 관련 보조 문 집합인 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY의 "구문" 섹션에 설명되어 있는 인수에 대해 설명합니다. 대부분의 인수는 이러한 6개의 문에 사용되는 경우에만 지원됩니다. 각 인수에 대한 지원은 인수 설명에 나와 있습니다.|  
@@ -60,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   
-

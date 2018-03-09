@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - driver manager [ODBC], function mapping
 - functions [ODBC], Unicode functions
 ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4af23925a410fba2d1e79691172975a62507472
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4ea01836108b8cf2524aa52001927bef852ce2a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>함수 매핑 드라이버 관리자에서
 드라이버 관리자는 문자열 인수를 사용 하는 함수에 대 한 두 진입점을 지원 합니다. 데코 레이트 되지 않은 함수 (**SQLDriverConnect**)은 ANSI 형식 함수입니다. 유니코드 형식으로 데코레이팅되 어는 *W* (**: SQLDriverConnectW**.)  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
  드라이버 관리자는 유니코드를 지원 내부적으로 합니다. 결과적으로 최적의 성능을 얻을 유니코드 드라이버를 사용 하는 유니코드 응용 프로그램에서 드라이버 관리자는 단순히 유니코드 함수를 통해 드라이버에 전달 하기 때문입니다. ANSI 응용 프로그램은 ANSI 드라이버를 사용할 때 드라이버 관리자에서에서 변환 해야 문자열 ANSI 유니코드와 같은 일부 함수를 처리할 때 **SQLDriverConnect**합니다. 함수를 처리 한 후 드라이버 관리자는 다음 변환 해야 유니코드 문자열 다시 ANSI로 함수를 ANSI 드라이버에 보내기 전에 합니다.  
   
  응용 프로그램은 수정 하거나 드라이버 SQL_NEED_DATA 또는 SQL_STILL_EXECUTING을 반환 하는 경우의 바인딩된 매개 변수 버퍼에 읽을 수입니다. 드라이버 관리자 드라이버가 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO 또는 sql_error가 반환 될 때까지 ANSI에 바인딩된 버퍼를 유지 합니다. 다중 스레드 응용 프로그램에 다른 스레드가에 SQL 문을 실행 하는 모든 바인딩된 매개 변수 값에 액세스 해야 합니다. 드라이버 관리자는 데이터에서 유니코드 "위치"에서 ANSI로 변환한 드라이버에서 SQL 문을 처리 하는 동안 다른 스레드가 이러한 버퍼에 ANSI 데이터를 볼 수 있습니다. 유니코드 데이터는 ANSI 드라이버를 바인딩하는 응용 프로그램은 동일한 주소를 두 개의 다른 열을 바인딩해야 합니다.
-

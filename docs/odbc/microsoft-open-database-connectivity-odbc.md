@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 17ae2b4d9ceb1518a0c2e455c93c124df6954f3d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d19dea3d8af985f6f937711cbdc2b474b94d6ce7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 Microsoft ODBC Open Database Connectivity () 인터페이스는 응용 프로그램의 다양 한 데이터베이스 관리 시스템 (Dbms)의 데이터에 액세스할 수 있도록 하는 C 프로그래밍 언어 인터페이스입니다. ODBC는 관계형 데이터 저장소 용으로 특별히 설계 되는 하위 수준, 고성능 인터페이스입니다.  
@@ -57,4 +55,3 @@ Microsoft ODBC Open Database Connectivity () 인터페이스는 응용 프로그
   
 ## <a name="support"></a>지원  
  지원 옵션에 대 한 정보를 확인할 수 있습니다는 [Microsoft 도움말 및 지원](http://go.microsoft.com/fwlink?linkid=5521) 웹 사이트입니다.
-

@@ -5,33 +5,31 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], examples
 - data conversions from C to SQL types [ODBC], examples
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7d3270b142cb857876a558122b670bb329e08c93
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46c1a95015858fbec4ff1e1b5f10bb9b409c9482
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C to SQL 데이터 변환 예제
 다음 예에서는 드라이버 SQL 데이터 C 데이터를 변환 하는 방법을 보여 줍니다.  
   
-|C 형식 식별자|C 데이터 값|SQL 유형<br /><br /> 식별자(identifier)|열<br /><br /> length|SQL data<br /><br /> value|SQLSTATE|  
+|C 형식 식별자|C 데이터 값|SQL 유형<br /><br /> 식별자(identifier)|Column<br /><br /> length|SQL data<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|n/a|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
  [이 목록에 있는 c]는 숫자는 SQL_DATE_STRUCT 구조체의 필드에 저장 된 숫자입니다.  
   
  [이 목록에 있는 d]에서 숫자는 SQL_TIMESTAMP_STRUCT 구조체의 필드에 저장 된 숫자입니다.
-

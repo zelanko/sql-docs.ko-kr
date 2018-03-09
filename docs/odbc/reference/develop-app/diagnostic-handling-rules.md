@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQLGetDiagRec function [ODBC], diagnostic handling rules
 - diagnostic information [ODBC], SqlGetDiagRec
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7dde3b01f27efb992640594d46756b38cb94ede
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-handling-rules"></a>진단 처리 규칙
 다음 규칙에 따라 진단 처리 **SQLGetDiagRec** 및 **SQLGetDiagField**합니다.  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/09/2017
  ODBC 구성 요소를 하나 드라이버 관리자 이외의에 대 한:  
   
 -   원시 오류에 따라 SQLSTATE를 설정 해야 합니다. 파일 기반 드라이버 및 게이트웨이 사용 하지 않는 DBMS 기반 드라이버에 대 한 드라이버는 SQLSTATE를 설정 해야 합니다. 게이트웨이 사용 하는 DBMS 기반 드라이버, 드라이버 또는 ODBC를 지 원하는 게이트웨이 SQLSTATE를 설정할 수 있습니다.
-

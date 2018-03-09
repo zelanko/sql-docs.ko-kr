@@ -1,31 +1,29 @@
 ---
-title: "내보내기 (보고서 작성기 및 SSRS) 보고서 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "보고서 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10437"
+f1_keywords: "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: ed5a8e47a39df2d7d521181fff55fe6734062ce8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: db9a6cef14a145c8546a0f47a71bf83a358d483c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="export-reports-report-builder-and-ssrs"></a>보고서 내보내기(보고서 작성기 및 SSRS)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 PowerPoint, Image, PDF, [!INCLUDE[ofprword](../../includes/ofprword-md.md)], [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 등의 다른 파일 형식으로 내보낼 수도 있고, Atom 서비스 문서를 생성해 보고서를 내보내서 보고서에서 사용 가능한 Atom 규격 데이터 피드 목록을 표시할 수도 있습니다. 보고서 작성기, 보고서 디자이너([!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]) 또는 보고서 서버에서 보고서를 내보낼 수 있습니다.  
@@ -38,13 +36,13 @@ ms.lasthandoff: 08/09/2017
   
 -   **다른 파일 유형으로 보고서 복사본 저장.** 예를 들어 보고서의 복사본을 만들어 Word로 내보낸 다음 저장할 수 있습니다.  
   
--   **응용 프로그램에서 보고서 데이터를 데이터 피드로 사용.** 예를 들어 파워 피벗 또는 Power BI를 사용 하 고 다음 파워 피벗 또는 Power BI의 데이터를 사용할 수 있는 Atom 규격 데이터 피드를 생성할 수 있습니다. 자세한 내용은 참조 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)  
+-   **응용 프로그램에서 보고서 데이터를 데이터 피드로 사용.** 예를 들어 파워 피벗 또는 Power BI에서 사용할 수 있는 Atom 규격 데이터 피드를 생성한 다음 파워 피벗 또는 Power BI에서 이 데이터로 작업할 수 있습니다. 자세한 내용은 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   보고서 서버에서 보고서를 렌더링하면 구독을 설정하려는 경우나 전자 메일을 통해 보고서를 배달하려는 경우 또는 보고서 서버에서 사용할 수 있도록 보고서를 저장하려는 경우에 도움이 됩니다. 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서를 일반 파일 형식으로 내보낼 수 있도록 하는 다양한 렌더링 확장 프로그램을 제공합니다. 렌더링 확장 프로그램은 소프트 페이지 나누기를 사용하는 파일 형식(예: Word 또는 Excel), 하드 페이지 나누기를 사용하는 파일 형식(예: PDF 또는 TIFF) 또는 데이터만 있는 파일 형식(예: CSV 또는 Atom 호환 XML)을 지원합니다.  
   
- 보고서를 다른 형식으로 내보낼 때 보고서 페이지 매김이 영향을 받을 수 있습니다. 보고서를 미리 볼 때는 소프트 페이지 나누기 규칙을 따르는 HTML 렌더링 확장 프로그램에 의해 렌더링된 보고서가 표시됩니다. 보고서를 Adobe Acrobat(PDF)과 같은 다른 파일 형식으로 내보낼 때는 실제 페이지 크기를 기준으로, 즉 하드 페이지 나누기 규칙에 따라 페이지 매김이 결정됩니다. 보고서에 추가한 논리적 페이지 나누기에 따라 페이지가 나뉠 수 있지만 페이지의 실제 길이는 어떤 종류의 렌더러를 사용하는가에 따라 달라집니다. 보고서 페이지 매김을 변경하려면 선택한 렌더링 확장 프로그램의 페이지 매김 동작에 대해 잘 알고 있어야 합니다. 해당 렌더링 확장 프로그램에 맞게 보고서 레이아웃 디자인을 조정해야 할 수도 있습니다. 자세한 내용은 참조 하십시오 [페이지 레이아웃 및 렌더링](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)합니다.  
+ 보고서를 다른 형식으로 내보낼 때 보고서 페이지 매김이 영향을 받을 수 있습니다. 보고서를 미리 볼 때는 소프트 페이지 나누기 규칙을 따르는 HTML 렌더링 확장 프로그램에 의해 렌더링된 보고서가 표시됩니다. 보고서를 Adobe Acrobat(PDF)과 같은 다른 파일 형식으로 내보낼 때는 실제 페이지 크기를 기준으로, 즉 하드 페이지 나누기 규칙에 따라 페이지 매김이 결정됩니다. 보고서에 추가한 논리적 페이지 나누기에 따라 페이지가 나뉠 수 있지만 페이지의 실제 길이는 어떤 종류의 렌더러를 사용하는가에 따라 달라집니다. 보고서 페이지 매김을 변경하려면 선택한 렌더링 확장 프로그램의 페이지 매김 동작에 대해 잘 알고 있어야 합니다. 해당 렌더링 확장 프로그램에 맞게 보고서 레이아웃 디자인을 조정해야 할 수도 있습니다. 자세한 내용은 [페이지 레이아웃 및 렌더링](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -123,20 +121,20 @@ ms.lasthandoff: 08/09/2017
   
 |형식|렌더링 확장 프로그램 유형|Description|  
 |------------|------------------------------|-----------------|  
-|Acrobat(PDF) 파일|하드 페이지 나누기|PDF 렌더링 확장 프로그램은 Adobe Acrobat 및 PDF 1.3을 지원하는 타사 PDF 뷰어에서 열 수 있는 파일로 보고서를 렌더링합니다. PDF 1.3은 Adobe Acrobat 4.0 이상 버전과 호환되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Adobe Acrobat 6 이상 버전을 지원합니다. 이 렌더링 확장 프로그램으로 보고서를 렌더링하기 위해 Adobe 소프트웨어가 필요한 것은 아닙니다. 그러나 PDF 형식으로 보고서를 보거나 인쇄하기 위해서는 Adobe Acrobat과 같은 PDF 뷰어가 필요합니다.<br /><br /> 자세한 내용은 참조 [PDF 파일로 내보내기](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)합니다.|  
-|Atom|데이터|Atom 렌더링 확장 프로그램은 보고서에서 Atom 규격 데이터 피드를 생성합니다. 데이터 피드는 파워 피벗과 같은 응용 프로그램에서 읽고 교환할 수 또는 Atom 호환 데이터를 사용할 수 있는 Power BI 피드입니다.<br /><br /> 이 확장 프로그램의 출력 형식은 보고서에서 사용할 수 있는 데이터 피드를 나열하는 Atom 서비스 문서입니다. 이 문서에서는 보고서의 각 데이터 영역에 대한 데이터 피드가 하나 이상 생성되는데, 데이터 영역의 유형과 데이터 영역에 표시되는 데이터에 따라 여러 개의 데이터 피드가 생성될 수 있습니다.<br /><br /> 자세한 내용은 참조 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)합니다.|  
-|CSV|데이터|CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 보고서의 데이터를 결합하여 읽기 쉽고 많은 응용 프로그램과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.<br /><br /> 자세한 내용은 참조 [CSV 파일로 내보내기](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)합니다.|  
-|EXCELOPENXML|소프트 페이지 나누기|보고서를 검토할 때 내보내기 메뉴에 "Excel"로 표시됩니다. Excel 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013과 호환되는 Excel 문서(.xlsx)로 렌더링합니다.  자세한 내용은 참조 [Microsoft Excel로 내보내기](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)합니다.|  
+|Acrobat(PDF) 파일|하드 페이지 나누기|PDF 렌더링 확장 프로그램은 Adobe Acrobat 및 PDF 1.3을 지원하는 타사 PDF 뷰어에서 열 수 있는 파일로 보고서를 렌더링합니다. PDF 1.3은 Adobe Acrobat 4.0 이상 버전과 호환되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Adobe Acrobat 6 이상 버전을 지원합니다. 이 렌더링 확장 프로그램으로 보고서를 렌더링하기 위해 Adobe 소프트웨어가 필요한 것은 아닙니다. 그러나 PDF 형식으로 보고서를 보거나 인쇄하기 위해서는 Adobe Acrobat과 같은 PDF 뷰어가 필요합니다.<br /><br /> 자세한 내용은 [PDF 파일로 내보내기](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)를 참조하세요.|  
+|Atom|data|Atom 렌더링 확장 프로그램은 보고서에서 Atom 규격 데이터 피드를 생성합니다. 데이터 피드는 Atom 규격 데이터 피드를 사용할 수 있는 파워 피벗 또는 Power BI와 같은 응용 프로그램을 통해 읽을 수 있고 교환할 수 있습니다.<br /><br /> 이 확장 프로그램의 출력 형식은 보고서에서 사용할 수 있는 데이터 피드를 나열하는 Atom 서비스 문서입니다. 이 문서에서는 보고서의 각 데이터 영역에 대한 데이터 피드가 하나 이상 생성되는데, 데이터 영역의 유형과 데이터 영역에 표시되는 데이터에 따라 여러 개의 데이터 피드가 생성될 수 있습니다.<br /><br /> 자세한 내용은 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)을 참조하세요.|  
+|CSV|data|CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 보고서의 데이터를 결합하여 읽기 쉽고 많은 응용 프로그램과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.<br /><br /> 자세한 내용은 [CSV 파일로 내보내기](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)를 참조하세요.|  
+|EXCELOPENXML|소프트 페이지 나누기|보고서를 검토할 때 내보내기 메뉴에 "Excel"로 표시됩니다. Excel 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013과 호환되는 Excel 문서(.xlsx)로 렌더링합니다.  자세한 내용은 [Microsoft Excel로 내보내기](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.|  
 |PowerPoint|하드 페이지 나누기|PowerPoint 렌더링 확장 프로그램은 보고서를 PowerPoint 2013과 호환되는 PowerPoint 문서(.pptx)로 렌더링합니다.|  
-|TIFF 파일|하드 페이지 나누기|이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 기본적으로 이미지 렌더링 확장 프로그램은 보고서를 여러 페이지로 볼 수 있도록 TIFF 파일로 만듭니다. 클라이언트가 이미지를 수신하면 이미지 뷰어에서 확인하거나 인쇄할 수 있습니다.<br /><br /> 이미지 렌더링 확장 프로그램은 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]에서 지원하는 BMP, EMF, EMFPlus, GIF, JPEG, PNG 및 TIFF 형식으로 파일을 생성할 수 있습니다.<br /><br /> 자세한 내용은 참조 [이미지 파일로 내보내기](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)합니다.|  
-|웹 보관 파일|소프트 페이지 나누기|HTML 렌더링 확장 프로그램은 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.<br /><br /> HTML 렌더링 확장 프로그램은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 실행될 때를 포함하여 보고서 작성기에서 미리 보거나 브라우저에서 보는 보고서의 기본 렌더링 확장 프로그램입니다.<br /><br /> 자세한 내용은 참조 [HTML로 렌더링](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)합니다.|  
-|WORDOPENXML|소프트 페이지 나누기|보고서를 볼 때 내보내기 메뉴에 "Word"로 표시됩니다. Word 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013과 호환되는 Word 문서(.docx)로 렌더링합니다.  자세한 내용은 참조 [Microsoft Word로 내보내기](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)합니다.|  
-|XML|데이터|XML 렌더링 확장 프로그램은 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 응용 프로그램으로 전송할 수 있습니다.<br/><br/> 자세한 내용은 참조 [XML로 내보내기](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)합니다.|  
+|TIFF 파일|하드 페이지 나누기|이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 기본적으로 이미지 렌더링 확장 프로그램은 보고서를 여러 페이지로 볼 수 있도록 TIFF 파일로 만듭니다. 클라이언트가 이미지를 수신하면 이미지 뷰어에서 확인하거나 인쇄할 수 있습니다.<br /><br /> 이미지 렌더링 확장 프로그램은 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]에서 지원하는 BMP, EMF, EMFPlus, GIF, JPEG, PNG 및 TIFF 형식으로 파일을 생성할 수 있습니다.<br /><br /> 자세한 내용은 [이미지 파일로 내보내기](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)를 참조하세요.|  
+|웹 보관 파일|소프트 페이지 나누기|HTML 렌더링 확장 프로그램은 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.<br /><br /> HTML 렌더링 확장 프로그램은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 실행될 때를 포함하여 보고서 작성기에서 미리 보거나 브라우저에서 보는 보고서의 기본 렌더링 확장 프로그램입니다.<br /><br /> 자세한 내용은 [HTML로 렌더링](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)을 참조하세요.|  
+|WORDOPENXML|소프트 페이지 나누기|보고서를 볼 때 내보내기 메뉴에 "Word"로 표시됩니다. Word 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013과 호환되는 Word 문서(.docx)로 렌더링합니다.  자세한 내용은 [Microsoft Word로 내보내기](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)를 참조하세요.|  
+|XML|데이터|XML 렌더링 확장 프로그램은 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 응용 프로그램으로 전송할 수 있습니다.<br/><br/> 자세한 내용은 [XML로 내보내기](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)를 참조하세요.|  
   
 ##  <a name="GeneratingDataFeedsFromReport"></a> 보고서에서 데이터 피드 생성  
  보고서에서 데이터 피드를 생성하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 실행한 다음 웹 포털 도구 모음에서 **데이터 피드 생성** 아이콘을 클릭합니다. 파일을 저장할지, 아니면 열지를 선택하라는 메시지가 나타납니다. **열기**를 선택하면 .atomsvc 파일 확장명과 연결된 응용 프로그램에서 Atom 서비스 문서가 열리고, **저장**을 선택하면 문서가 .atomsvc 파일로 저장됩니다. 기본적으로 이 파일의 이름은 보고서의 이름입니다. 이 이름은 보다 의미 있는 이름으로 변경할 수 있습니다.  
   
- Atom 서비스 문서를 컴퓨터에 저장한 후 나중에 다른 사용자가 사용할 수 있도록 보고서 서버나 다른 서버에 업로드할 수 있습니다. 자세한 내용은 참조 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) 및 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)합니다.  
+ Atom 서비스 문서를 컴퓨터에 저장한 후 나중에 다른 사용자가 사용할 수 있도록 보고서 서버나 다른 서버에 업로드할 수 있습니다. 자세한 내용은 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) 및 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="Troubleshooting"></a> 내보낸 보고서의 문제 해결  
  보고서를 다른 형식으로 내보낸 후 보고서가 다르게 표시되거나 원하는 대로 동작하지 않는 경우가 있습니다. 이 문제는 렌더러에 몇 가지 규칙 및 제한 사항이 적용되기 때문일 수 있습니다. 보고서를 만들 때 이러한 제한 사항을 고려하면 대부분의 문제를 해결할 수 있습니다. 보고서에서 약간 다른 레이아웃을 사용하거나, 보고서 내의 항목을 주의해서 맞추거나, 보고서 바닥글을 한 줄 텍스트로 제한하는 등의 작업이 필요할 수 있습니다.  
@@ -147,7 +145,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Word  
   
--   Excel  
+-   내보내기  
   
 -   Image/TIFF  
   
@@ -171,9 +169,9 @@ ms.lasthandoff: 08/09/2017
   
 -   [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다른 형식에서도 제대로 작동하는 보고서를 만드는 데 유용한 추가 기능을 제공합니다. 테이블릭스 데이터 영역(테이블, 행렬, 목록), 그룹 및 사각형에 페이지 나누기를 적용하면 보고서 페이지 매김을 보다 효율적으로 제어할 수 있습니다. 페이지 나누기로 구분된 보고서 페이지에는 각각 다른 페이지 이름을 적용하고 페이지 번호 매기기를 다시 설정할 수 있습니다. 식을 사용하면 보고서를 실행할 때 페이지 이름 및 페이지 번호를 동적으로 업데이트할 수 있습니다. 자세한 내용은 참조 [Pagination In Reporting](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다른 형식에서도 제대로 작동하는 보고서를 만드는 데 유용한 추가 기능을 제공합니다. 테이블릭스 데이터 영역(테이블, 행렬, 목록), 그룹 및 사각형에 페이지 나누기를 적용하면 보고서 페이지 매김을 보다 효율적으로 제어할 수 있습니다. 페이지 나누기로 구분된 보고서 페이지에는 각각 다른 페이지 이름을 적용하고 페이지 번호 매기기를 다시 설정할 수 있습니다. 식을 사용하면 보고서를 실행할 때 페이지 이름 및 페이지 번호를 동적으로 업데이트할 수 있습니다. 자세한 내용은 [Reporting Services의 페이지 매김](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
   
- 또한 기본 제공 전역 변수인 RenderFormat을 사용하면 조건에 따라 렌더러마다 각기 다른 보고서 레이아웃을 적용할 수 있습니다. 자세한 내용은 참조 [기본 제공 Globals 및 Users 참조](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
+ 또한 기본 제공 전역 변수인 RenderFormat을 사용하면 조건에 따라 렌더러마다 각기 다른 보고서 레이아웃을 적용할 수 있습니다. 자세한 내용은 [기본 제공 Globals 및 Users 참조](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.
 
 ##  <a name="OtherWaysExportingReports"></a> 보고서를 내보내는 다른 방법  
  보고서 내보내기는 보고서가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털이나 보고서 작성기에 열려 있을 때 사용자가 수행하는 요청 시 태스크입니다. 되풀이 일정에서 특정 파일 형식으로 공유 폴더에 보고서를 내보내려는 경우와 같이 내보내기 작업을 자동화하려면 보고서를 공유 폴더로 배달하는 구독을 만듭니다. 자세한 내용은 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)을 참조하세요.  
@@ -196,9 +194,9 @@ http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%
 
 ## <a name="next-steps"></a>다음 단계
 
-[페이지 나누기, 머리글, 열 및 행 &#40; 제어 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+[페이지 나누기, 머리글, 열 및 행 제어&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
 [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
 [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
-[보고서 &#40; 저장 보고서 작성기 &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+[보고서 저장&#40;보고서 작성기&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

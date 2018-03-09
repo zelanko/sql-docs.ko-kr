@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - level 1 API functions [ODBC]
 - API functions [ODBC]
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 336100101a9cd94cbd3a39f30721721643f2912e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>수준 1 API 함수 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|테이블의 행을 고유 하 게 식별 하는 열의 최적 집합을 검색 합니다.|  
 |**SQLStatistics**|단일 테이블, 인덱스 또는 테이블에 연결 된 태그 이름에 대 한 통계 목록을 검색 합니다. 드라이버 정보 결과 집합으로 반환 합니다.|  
 |**SQLTables**|매개 변수에서 지정한 테이블 이름 목록을 반환 하는 **SQLTables** 문. 없는 매개 변수를 지정 하는 경우 현재 데이터 원본에 저장 된 테이블 이름을 반환 합니다. 드라이버 정보 결과 집합으로 반환 합니다.<br /><br /> 열거형 형식 호출 원격 뷰 또는 로컬 매개 변수화 된 보기에 대 한 결과 집합 항목을 수신 하지 않습니다. 그러나에 대 한 호출 **SQLTables** 고유 테이블이 포함 된 이름이 있는 경우 이름 지정자 이러한 보기에 대 한 일치를 찾으려고 합니다; 이렇게 하면 새 테이블의 이전 이름 충돌을 확인 하는 API입니다.<br /><br /> 공용 동의어 TABLE_OWNER 값으로 반환 됩니다 ""입니다.<br /><br /> SYS 또는 시스템에서 소유 하는 뷰는 시스템 뷰로 식별 됩니다.|
-

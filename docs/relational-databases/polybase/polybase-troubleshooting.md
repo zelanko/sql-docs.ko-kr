@@ -18,28 +18,27 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 94e965bdb0b407759b078e4fb75838888f9a3b37
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
-ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 문제 해결
-
-  PolyBase 문제를 해결하려면 이 항목에 나와 있는 기술을 사용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+PolyBase 문제를 해결하려면 이 항목에 나와 있는 기술을 사용합니다.  
   
 ## <a name="catalog-views"></a>카탈로그 뷰  
  PolyBase 작업을 관리하려면 여기에 나와 있는 카탈로그 뷰를 사용합니다.  
   
 |||  
 |-|-|  
-|보기|설명|  
+|보기|Description|  
 |[sys.external_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|외부 테이블을 식별합니다.|  
 |[sys.external_data_sources&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|외부 데이터 원본을 식별합니다.|  
 |[sys.external_file_formats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|외부 파일 형식을 식별합니다.|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 10/12/2017
   
      가장 오래 실행되는 쿼리의 실행 ID를 기록합니다.  
   
-    ```tsql  
+    ```sql  
      -- Find the longest running query  
     SELECT execution_id, st.text, dr.total_elapsed_time  
     FROM sys.dm_exec_distributed_requests  dr  
@@ -91,7 +90,7 @@ ms.lasthandoff: 10/12/2017
   
     -   DMS: PolyBase 데이터 이동 서비스 작업을 의미합니다. 3b단계를 진행합니다.  
   
-    ```tsql  
+    ```sql  
     -- Find the longest running step of the distributed query plan  
     SELECT execution_id, step_index, operation_type, distribution_type,   
     location_type, status, total_elapsed_time, command   
@@ -107,7 +106,7 @@ ms.lasthandoff: 10/12/2017
   
          이전 단계에서 기록된 실행 ID 및 단계 인덱스를 사용합니다. 이전 단계에서 기록된 실행 ID 및 단계 인덱스를 사용합니다.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of SQL step    
         SELECT execution_id, step_index, distribution_id, status,   
         total_elapsed_time, row_count, command   
@@ -120,7 +119,7 @@ ms.lasthandoff: 10/12/2017
   
          이전 단계에서 기록된 실행 ID 및 단계 인덱스를 사용합니다.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of DMS step    
         SELECT execution_id, step_index, dms_step_index, status,   
         type, bytes_processed, total_elapsed_time  
@@ -134,7 +133,7 @@ ms.lasthandoff: 10/12/2017
   
      이전 단계에서 기록된 실행 ID 및 단계 인덱스를 사용합니다.  
   
-    ```tsql  
+    ```sql  
     SELECT execution_id, step_index, dms_step_index, compute_node_id,   
     type, input_name, length, total_elapsed_time, status   
     FROM sys.dm_exec_external_work   
@@ -246,6 +245,5 @@ PolyBase는 오늘 Zookeeper 또는 Knox와 같은 이름 노드 HA 서비스와
 
 외부 테이블 오류 문제를 해결하려면 Murshed Zaman 블로그 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")(PolyBase 설치 오류 및 가능한 해결 방법)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [PolyBase Kerberos 연결 문제 해결](polybase-troubleshoot-connectivity.md)
-

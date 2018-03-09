@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: d3ad9ed32342dbd2dc7faf955eba3e9141b4fab1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3673b168743e169ba7dd4a711ae5aa7224224201
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC 데이터 원본 관리자
 Microsoft® ODBC 데이터 소스 관리자 드라이버 및 데이터 원본 데이터베이스를 관리합니다. 이 응용 프로그램에서 Windows 제어판에 있는 **관리 도구**합니다. Windows 8 부터는 아이콘 라는 **ODBC 데이터 원본**, 64 비트 운영 체제는 32 비트 및 64 비트 버전 및 합니다.  
@@ -46,4 +44,3 @@ Microsoft® ODBC 데이터 소스 관리자 드라이버 및 데이터 원본 �
 -   [ODBC 연결 풀링 옵션 설정](../../odbc/admin/setting-odbc-connection-pooling-options.md)  
   
 -   [드라이버 보기](../../odbc/admin/viewing-drivers.md)
-

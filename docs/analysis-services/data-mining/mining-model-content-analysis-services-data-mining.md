@@ -2,15 +2,13 @@
 title: "마이닝 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,20 +22,20 @@ helpviewer_keywords:
 - support [data mining]
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4097a5ab62a6e30f2056216ec83eb0c568547479
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-  기본 마이닝 구조의 데이터를 사용하여 마이닝 모델을 디자인하고 처리하고 나면 마이닝 모델이 완성되고 마이닝 모델에 *마이닝 모델 콘텐츠*가 포함됩니다. 이 콘텐츠를 사용하여 예측을 만들거나 데이터를 분석할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+기본 마이닝 구조의 데이터를 사용하여 마이닝 모델을 디자인하고 처리하고 나면 마이닝 모델이 완성되고 마이닝 모델에 *마이닝 모델 콘텐츠*가 포함됩니다. 이 콘텐츠를 사용하여 예측을 만들거나 데이터를 분석할 수 있습니다.  
   
  마이닝 모델 콘텐츠에는 모델에 대한 메타데이터, 데이터에 대한 통계 및 마이닝 알고리즘을 통해 발견한 패턴이 포함됩니다. 사용된 알고리즘에 따라 모델 콘텐츠에는 회귀 수식, 규칙 및 항목 집합의 정의, 가중치 또는 기타 통계가 포함될 수 있습니다.  
   
@@ -227,7 +225,7 @@ ms.lasthandoff: 09/01/2017
 |3|연속|특성 값이 연속 숫자 값이며 분산 및 표준 편차와 함께 평균으로 표시할 수 있음을 나타냅니다.|  
 |4|불연속|불연속 값으로 처리되는 숫자 또는 텍스트 값을 나타냅니다.<br /><br /> **참고** 불연속 값도 누락될 수 있지만 누락된 불연속 값은 계산을 수행할 때 다르게 처리됩니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)을 참조하세요.|  
 |5|불연속화됨|특성에 불연속화 숫자 값이 포함되어 있음을 나타냅니다. 이러한 값은 불연속화 버킷을 나타내는 서식 있는 문자열이 됩니다.|  
-|6|Existing|특성에 연속 숫자 값이 포함되어 있고 이러한 값이 누락 또는 유추된 데이터 및 값에 제공되었음을 나타냅니다.|  
+|6|기존|특성에 연속 숫자 값이 포함되어 있고 이러한 값이 누락 또는 유추된 데이터 및 값에 제공되었음을 나타냅니다.|  
 |7|계수|계수를 나타내는 숫자 값을 가리킵니다.<br /><br /> 계수는 종속 변수의 값을 계산할 때 적용되는 값입니다. 예를 들어 모델에서 나이를 기반으로 소득을 예측하는 회귀 수식을 만들면 나이와 소득을 연결하는 수식에 계수가 사용됩니다.|  
 |8|득점|특성의 득점을 나타내는 숫자 값을 가리킵니다.|  
 |9|통계|회귀 변수의 통계를 나타내는 숫자 값을 가리킵니다.|  
@@ -282,14 +280,14 @@ ms.lasthandoff: 09/01/2017
 |알고리즘 또는 모델 유형|모델 콘텐츠|마이닝 모델 쿼리|  
 |-----------------------------|-------------------|----------------------------|  
 |연결 규칙 모델|[연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)|  
-|클러스터링 모델|[의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
-|의사 결정 트리 모델|[의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[의사 결정 트리 모델 쿼리 예제](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
+|클러스터링 모델|[의사 결정 트리 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
+|의사 결정 트리 모델|[의사 결정 트리 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[의사 결정 트리 모델 쿼리 예제](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |선형 회귀 모델|[선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[선형 회귀 모델 쿼리 예제](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |로지스틱 회귀 모델|[로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[선형 회귀 모델 쿼리 예제](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|Naïve Bayes 모델|[Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
+|Naïve Bayes 모델|[Naive Bayes 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |신경망 모델|[신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[신경망 모델 쿼리 예제](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |시퀀스 클러스터링|[시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[시퀀스 클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|시계열 모델|[시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|시계열 모델|[시계열 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> 마이닝 모델 콘텐츠를 보기 위한 도구  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 찾아볼 경우 **및**에서 사용할 수 있는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Microsoft 일반 콘텐츠 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]트리 뷰어에서 정보를 볼 수 있습니다.  
@@ -312,8 +310,7 @@ SELECT * FROM [<mining model name>].CONTENT
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 열고 시스템 테이블을 쿼리하여 데이터 마이닝 스키마 행 집합의 정보에 액세스할 수도 있습니다. 자세한 내용은 [데이터 마이닝 스키마 행 집합&#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Microsoft 일반 콘텐츠 트리 뷰어 &#40; 데이터 마이닝 &#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
+ [데이터 마이닝 알고리즘 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   
-

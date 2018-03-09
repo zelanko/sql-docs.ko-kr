@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: ec1da65f-c69d-415d-bf75-8fda8aa2b39f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a805c4a0f98b394929f5b5a7b21613eac728533
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e6f9d8add08f80b59adaa42f02bc1da006356081
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-limitations"></a>문자열 제한 사항
 SQL 문의 문자열의 최대 길이 65, 000 자입니다.  
@@ -36,4 +34,3 @@ SQL 문의 문자열의 최대 길이 65, 000 자입니다.
  파이프 문자 (&#124;) 문자가 여부 역 따옴표에 포함 되어 있는지 여부를 문자열에 사용할 수 없습니다.  
   
  상호 운용성을 극대화 응용 프로그램 문자열 매개 변수를 전달 해야 보다는 전달은 따옴표로 묶을 문자열입니다.
-

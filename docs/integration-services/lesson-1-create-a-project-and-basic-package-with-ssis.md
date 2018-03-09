@@ -1,11 +1,11 @@
 ---
-title: "1 단원: SSIS와 프로젝트 및 기본 패키지 만들기 | Microsoft Docs"
+title: "1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,31 +15,30 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 0839d5dfbcb033a9a0d466ce9b87ecc738b15250
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b00736e0429de4a0ef10df5cf41b3e791ef4aeee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기
 
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [1 단원: 프로젝트 및 기본 패키지 만들기](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx)합니다.
+ > 이전 버전의 SQL Server와 관련된 내용은 [1단원: 프로젝트 및 기본 패키지 만들기](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx)를 참조하세요.
 
 이 단원에서는 하나의 플랫 파일 원본에서 데이터를 추출하고 두 개의 조회 변환 구성 요소를 사용하여 데이터를 변환하며 **AdventureWorksDW2012** 의 **FactCurrency**팩트 테이블에 해당 데이터를 쓰는 간단한 ETL 패키지를 만듭니다. 이 단원에서는 새로운 패키지를 만들고 데이터 원본 및 대상 연결을 추가하고 구성하며 새로운 제어 흐름 및 데이터 흐름 구성 요소를 사용하여 작업하는 방법에 대해 설명합니다.  
   
 > [!IMPORTANT]  
-> 이 자습서를 실행하려면 **AdventureWorksDW2012** 예제 데이터베이스가 필요합니다. **AdventureWorksDW2012**의 설치 및 배포에 대한 자세한 내용은 [CodePlex의 Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/p/?LinkID=526910)을 참조하십시오.  
+> 이 자습서를 실행하려면 **AdventureWorksDW2012** 예제 데이터베이스가 필요합니다. **AdventureWorksDW2012**의 설치 및 배포 방법에 대한 자세한 내용은 [CodePlex의 Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/p/?LinkID=526910)을 참조하세요.  
   
 ## <a name="understanding-the-package-requirements"></a>패키지 요구 사항 이해  
 이 자습서를 사용하려면 Microsoft SQL Server Data Tools가 필요합니다.  
   
-SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tools 다운로드](http://msdn.microsoft.com/en-us/data/hh297027)를 참조하십시오.  
+SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tools 다운로드](http://msdn.microsoft.com/data/hh297027)를 참조하십시오.  
   
 패키지를 만들기 전에 원본 데이터와 대상 양쪽에 사용되는 형식을 제대로 알아야 합니다. 이러한 데이터 형식을 모두 파악하면 원본 데이터를 대상에 매핑하는 데 필요한 변환을 정의할 수 있습니다.  
   
@@ -66,10 +65,10 @@ SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tool
   
 |열 이름|데이터 형식|조회 테이블|조회 열|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|float|없음|없음|  
+|AverageRate|FLOAT|InclusionThresholdSetting|InclusionThresholdSetting|  
 |CurrencyKey|int(FK)|DimCurrency|CurrencyKey(PK)|  
 |DateKey|int(FK)|FactOnlineSales|DateKey (PK)|  
-|EndOfDayRate|float|없음|없음|  
+|EndOfDayRate|FLOAT|InclusionThresholdSetting|InclusionThresholdSetting|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>대상과 호환될 원본 데이터 매핑  
 원본 및 대상 데이터 형식을 분석하면 **CurrencyKey** 와 **DateKey** 값을 조회해야 한다는 사실을 알 수 있습니다. 이러한 조회를 수행할 변환은 **DimCurrency** 및 **DimDate** 차원 테이블의 대체 키를 사용하여 **CurrencyKey** 및 **DateKey** 값을 가져옵니다.  
@@ -78,31 +77,30 @@ SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tool
 |--------------------|--------------|---------------|-------------|  
 |0|AdventureWorksDW2012|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|FactOnlineSales|FullDateAlternateKey|date|  
-|3|AdventureWorksDW2012|EndOfDayRate|float|  
+|2|FactOnlineSales|FullDateAlternateKey|날짜|  
+|3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
 이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1 단계: 새 Integration Services 프로젝트 만들기](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [1단계: 새 Integration Services 프로젝트 만들기](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [2 단계: 추가 하 고 플랫 파일 연결 관리자를 구성 합니다.](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [2단계: 플랫 파일 연결 관리자 추가 및 구성](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [3 단계: 추가 하 고 OLE DB 연결 관리자를 구성 합니다.](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [3단계: OLE DB 연결 관리자 추가 및 구성](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [4 단계: 패키지에 데이터 흐름 태스크 추가](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [4단계: 패키지에 데이터 흐름 태스크 추가](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [5 단계: 추가 및 플랫 파일 원본 구성](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [5단계: 플랫 파일 원본 추가 및 구성](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [6 단계: 추가 및 조회 변환 구성](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [6단계: 조회 변환 추가 및 구성](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [7 단계: 추가 및 OLE DB 대상 구성](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [7단계: OLE DB 대상 추가 및 구성](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [8 단계: 1 단원 패키지를 쉽게 이해할 수 있도록 만들기](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [8단계: 1단원 패키지를 쉽게 이해할 수 있도록 만들기](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [9 단계: 1 단원 자습서 패키지 테스트](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [9단계: 1단원 자습서 패키지 테스트](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
-[1 단계: 새 Integration Services 프로젝트 만들기](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+[1단계: 새 Integration Services 프로젝트 만들기](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
-

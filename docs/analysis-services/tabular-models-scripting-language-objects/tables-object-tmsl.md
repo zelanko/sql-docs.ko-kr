@@ -2,35 +2,29 @@
 title: "Tables 개체 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94e61c3077b748c7a2a33f1bcef8ac8b7ebae9e0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tables-object-tmsl"></a>Tables 개체 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  모델에 포함 된 테이블을 정의 합니다. 모델 테이블에에서 있는 데이터를 가져오거나 쿼리, 외부 데이터베이스의 테이블 또는 계산된 하는 DAX 식에서 생성 된 테이블에 하거나 바인딩됩니다. 하나 이상의 테이블 내에서 **파티션** 개체 데이터 소스를 설명 합니다.  테이블 간에 **관계** 카디널리티, 필터 방향 및 관계의 다른 속성을 지정 하는 개체입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]모델에 포함 된 테이블을 정의 합니다. 모델 테이블에에서 있는 데이터를 가져오거나 쿼리, 외부 데이터베이스의 테이블 또는 계산된 하는 DAX 식에서 생성 된 테이블에 하거나 바인딩됩니다. 하나 이상의 테이블 내에서 **파티션** 개체 데이터 소스를 설명 합니다.  테이블 간에 **관계** 카디널리티, 필터 방향 및 관계의 다른 속성을 지정 하는 개체입니다.  
   
 ## <a name="object-definition"></a>개체 정의  
  모든 개체 이름, 유형, 설명, properties 컬렉션 및 주석을 포함 하 여 속성의 공통 집합을 가집니다. **테이블** 개체에는 다음과 같은 속성이 있습니다.  
@@ -40,7 +34,7 @@ ms.lasthandoff: 09/01/2017
   
  isHidden  
  테이블은 처리 하는지 여부를 나타내는 Boolean을 클라이언트 시각화 도구에서 숨김 상태로 있습니다.  
-True 이면 테이블은 기호로 처리 숨겨진; 그렇지 않으면 false입니다.  
+테이블이 숨김으로 처리되면 true이고, 그렇지 않으면 false입니다.  
   
  열  
  테이블의 열을 나타냅니다. Table 개체의 자식입니다. 각 열에 다양 한 클라이언트 응용 프로그램 열에서 데이터를 시각화 하는 방법에 영향을 주는 속성이 정의 되어 있습니다.  
@@ -825,4 +819,3 @@ True 이면 테이블은 기호로 처리 숨겨진; 그렇지 않으면 false�
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

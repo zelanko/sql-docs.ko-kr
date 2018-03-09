@@ -20,22 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - STWithin (geometry Data Type)
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb38281ba8e4c4cc7c483a7662b2bdeb95a8b4f9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 77ecf242b0a29cb9129dce2d648f52daae03cbb7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-1을 반환는 **기 하 도형** 완전히 내에 다른 인스턴스는 **기 하 도형** 인스턴스; 그렇지 않으면 0을 반환 합니다.
+1을 반환는 **기 하 도형** 완전히 내에 다른 인스턴스는 **기 하 도형** 인스턴스; 그렇지 않으면 0을 반환 합니다. `STWithin` 명령은 대/소문자 구분입니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 09/01/2017
  CLR 반환 형식: **SqlBoolean**  
   
 ## <a name="remarks"></a>주의  
- 항상 null이 반환 하는 경우의 spatial reference Id (Srid)는 **geometry** 인스턴스 일치 하지 않습니다.  
+ 항상 null이 반환 하는 경우의 spatial reference Id (Srid)는 **geometry** 인스턴스 일치 하지 않습니다.
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STWithin()`을 사용하여 두 `geometry` 인스턴스를 테스트하여 첫 번째 인스턴스가 두 번째 인스턴스에 완전히 포함되는지 확인합니다.  
@@ -69,8 +68,7 @@ SELECT @g.STWithin(@h);
   
 ## <a name="see-also"></a>관련 항목:  
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [Geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

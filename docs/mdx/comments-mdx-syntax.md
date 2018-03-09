@@ -2,15 +2,16 @@
 title: "주석 (MDX 구문) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - remarks [MDX]
 - MDX [Analysis Services], comments
@@ -19,20 +20,19 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], comments
 - comments [MDX]
 ms.assetid: 9c00b30c-28f6-4f23-b812-ccc0e900daa5
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 9430eeb2613b77ce1f34918382cd57e4958ac512
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 372ef0470c32b4bb7fc6f6b2094a1e3b4d1a7013
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="comments-mdx-syntax"></a>주석(MDX 구문)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   주석은 프로그램 코드 내의 실행되지 않는 텍스트 문자열이며 설명이라고도 합니다. 코드에 대한 설명을 기록하거나 진단 중인 MDX 문 및 스크립트의 일부를 일시적으로 비활성화하는 데 주석을 사용할 수 있습니다. 주석을 사용하여 코드에 대한 설명을 기록하면 나중에 프로그램 코드를 유지 보수할 때 용이합니다. 주석은 주로 프로그램 이름, 저자 이름, 주요 코드 변경 날짜 등을 기록하는 데 사용됩니다. 또한 주석을 사용하여 복잡한 계산이나 프로그래밍 방식을 설명할 수도 있습니다.  
   
@@ -78,8 +78,7 @@ ms.lasthandoff: 08/02/2017
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDX 구문 요소 &#40; Mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
-

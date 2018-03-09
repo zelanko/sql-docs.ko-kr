@@ -1,32 +1,37 @@
----
+﻿---
 title: "SQL을 사용한 데이터 관찰 및 탐색(연습) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6b8ca39a05d77a41f5c04f58459bf26cf01daf59
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 97d1e0b468222162644e98f5813d4e4d97fd5add
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>SQL을 사용한 데이터 관찰 및 탐색(연습)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-데이터 탐색은 데이터 모델링의 중요한 한 부분이며 분석에 사용되는 데이터의 요약 정보를 검토하고 데이터를 시각화하는 작업을 포함합니다. 이 단원에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 과 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에 포함된 R 함수 모두를 사용해서 데이터 개체를 탐색하고 플롯을 생성합니다.
+데이터 탐색은 데이터 모델링의 중요한 한 부분이며 분석에 사용되는 데이터의 요약 정보를 검토하고 데이터를 시각화하는 작업을 포함합니다. 이 단원에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 과 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 에 포함된 R 함수 모두를 사용해서 데이터 개체를 탐색하고 플롯을 생성합니다.
 
-그런 다음 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]로 설치된 패키지에서 제공되는 새로운 함수를 사용하여 데이터를 시각화하는 플롯을 생성합니다.
+그런 다음 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 로 설치된 패키지에서 제공되는 새로운 함수를 사용하여 데이터를 시각화하는 플롯을 생성합니다.
 
 > [!TIP]
 > 이미 R을 잘 안다면?
@@ -41,18 +46,19 @@ ms.lasthandoff: 11/09/2017
 
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Visual Studio의 서버 탐색기, Visual Studio Code 와 같이 선호하는 데이터베이스 관리 도구를 사용해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.
 
+
 2. 새로 만든 데이터베이스를 선택하고 확장해서 새 데이터베이스, 테이블, 함수를 확인합니다.
   
     ![rsql_e2e_ssms_newobjects](media/rsql-e2e-ssms-newobjects.PNG)
   
-3. 데이터가 올바르게 로드되었는지 확인하기 위해 테이블을 마우스 오른쪽 클릭하고 **상위 1000 개 행 선택**을 선택합니다. 아래 쿼리가 실행됩니다.
+3.  데이터가 올바르게 로드되었는지 확인하기 위해 테이블을 마우스 오른쪽 클릭하고 **상위 1000 개 행 선택** 을 선택합니다. 아래 쿼리가 실행됩니다. 메뉴 옵션은이 쿼리를 실행합니다.
 
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    테이블의 데이터가 보이지 않는 경우 이전 항목의 [문제 해결](walkthrough-prepare-the-data.md) 절을 참조합니다.
+    테이블의 데이터가 보이지 않는 경우 이전 항목의 [문제 해결](walkthrough-prepare-the-data.md) 절을 참조합니다.
 
-4. 이 데이터 테이블은 [columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-overview.md)를 추가해서 집합 기반 계산용으로 최적화되었습니다. 아래 문을 실행해서 테이블에 대한 빠른 요약을 생성합니다.
+4. 이 데이터 테이블은 [columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-overview.md) 를 추가해서 집합 기반 계산용으로 최적화되었습니다. 아래 문을 실행해서 테이블에 대한 빠른 요약을 생성합니다.
 
     ```SQL
     SELECT DISTINCT [passenger_count]

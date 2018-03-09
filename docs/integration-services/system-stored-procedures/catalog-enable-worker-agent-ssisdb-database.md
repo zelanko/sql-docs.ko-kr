@@ -1,5 +1,5 @@
 ---
-title: "catalog.enable_worker_agent (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.enable_worker_agent(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
-caps.latest.revision: 3
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 3eb3f21b6a686c3013cdaaa3000038896edfbf94
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 5c83ec27897c198451f723433af5757934561cd0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent (SSISDB 데이터베이스)
+# <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-스케일 아웃 작업 마스터가에 대 한 스케일 아웃 작업자를 사용 하도록 설정 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그입니다.
+이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그를 사용하여 Scale Out 마스터에 대한 Scale Out 작업자를 사용하도록 설정합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 10/20/2017
 catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>인수
-[@WorkerAgentId =] *WorkerAgentId* 작업자 에이전트 ID의 스케일 아웃 작업자입니다. *WorkerAgentId* 은 **uniqueidentifier**합니다.
+[@WorkerAgentId =] *WorkerAgentId* Scale Out Worker의 작업자 에이전트 ID입니다. *WorkerAgentId*는 **uniqueidentifier**입니다.
 
 ## <a name="example"></a>예제
 이 예제에서는 MachineA에서 규모 확장 작업자를 사용하도록 설정합니다.
@@ -56,15 +55,14 @@ GO
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할 
+-   **sysadmin** 서버 역할에 대한 멤버 자격 
 
 ## <a name="errors-and-warnings"></a>오류 및 경고
-작업자 에이전트 ID 유효 하지 않을 경우 저장된 프로시저가 오류를 반환 합니다.
-
+작업자 에이전트 ID가 유효하지 않은 경우 저장 프로시저가 오류를 반환합니다.

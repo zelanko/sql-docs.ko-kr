@@ -19,17 +19,16 @@ helpviewer_keywords:
 - failure to connect [SQL Server]
 - connecting tutorial [SQL Server]
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 64fca04ede55e3bf0e98c4cb62b4495fd19d576b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 6dccaff93a6c8b2374a1fad069b2f597898802fc
-ms.openlocfilehash: 736763496d78fff7ed70dee9a0518c428502024a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>자습서: 데이터베이스 엔진 시작
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,12 +51,11 @@ ms.lasthandoff: 07/31/2017
   
 이 자습서를 사용하려면 시스템에 다음 항목이 설치되어야 합니다.  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 설치한 사용자를 위해 작성되었습니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 설치하려면 [SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 설치하려면 [SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [자습서: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   
   
-
 

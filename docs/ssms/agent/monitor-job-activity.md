@@ -3,8 +3,11 @@ title: "작업 활동 모니터링 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,16 +26,16 @@ ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 469142ab52bedda92cba1650982afbc6809b77ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b25b8b95fa950f7764272d2e2a47ebea4e26a78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitor-job-activity"></a>작업 활동 모니터링
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 활동 모니터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 정의된 모든 작업의 현재 활동을 모니터링할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 활동 모니터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 정의된 모든 작업의 현재 활동을 모니터링할 수 있습니다.  
   
 ## <a name="sql-server-agent-sessions"></a>SQL Server 에이전트 세션  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 서비스가 시작될 때마다 새 세션을 만듭니다. 새 세션이 만들어지면 **msdb** 데이터베이스의 **sysjobactivity** 테이블은 정의된 모든 기존 작업으로 채워집니다. 이 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 다시 시작되었을 때 작업에 대한 마지막 활동을 보존합니다. 각 세션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 정상 작업 활동을 작업 시작부터 끝까지 기록합니다. 이런 세션에 대한 정보는 **msdb** 데이터베이스의 **syssessions** 테이블에 저장됩니다.  
@@ -60,10 +63,10 @@ ms.lasthandoff: 11/09/2017
   
 |||  
 |-|-|  
-|**Description**|**항목**|  
+|**설명**|**항목**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업의 런타임 상태를 보는 방법에 대해 설명합니다.|[작업 활동 보기](../../ssms/agent/view-job-activity.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [작업 활동 보기](../../ssms/agent/view-job-activity.md)  
 [sysjobactivity(Transact-SQL)](http://msdn.microsoft.com/en-us/fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e)  
 [syssessions(Transact-SQL)](http://msdn.microsoft.com/en-us/187819b6-c7f4-4a26-b74c-0a89e96695cf)  

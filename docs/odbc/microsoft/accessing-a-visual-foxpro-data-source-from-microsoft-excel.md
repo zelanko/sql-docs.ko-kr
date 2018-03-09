@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], accessing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 67f350bf1070e7b35b6538f4d3fb56a866b728c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 085ab9bd928d7a25bd5d9e1d75f3355bdad0fd8e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스
 설치 된 Microsoft 쿼리를 사용 하도록 설정한 경우 Visual FoxPro 데이터에 연결 되는 Microsoft Excel에서 데이터 원본을 만들 수 있습니다.  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 8.  사용을 클릭 합니다.  
   
  이제 쿼리 열기에 테이블을 추가할 수 있습니다. 쿼리를 작성 하는 방법에 대 한 자세한 내용은 참조 [Visual FoxPro 데이터베이스에서 Microsoft Excel로 데이터 가져오기](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)합니다.
-

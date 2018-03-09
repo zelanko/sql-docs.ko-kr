@@ -3,8 +3,9 @@ title: "ADO 개체 및 인터페이스 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71a89ccaf6d6c8ce7022d2441814b2a6284d1993
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 76115318e0205c0b0f0bf4746dd482f39f4a8b89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 개체 및 인터페이스
 이러한 개체 간의 관계에 표시 됩니다는 [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)합니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |[속성](../../../ado/reference/ado-api/property-object-ado.md)|공급자에 의해 정의 된 ADO 개체의 동적 특성을 나타냅니다.|  
 |[레코드](../../../ado/reference/ado-api/record-object-ado.md)|행을 나타냅니다는 **레코드 집합**, 디렉터리 또는 파일 시스템에는 파일입니다. **레코드** 개체는 스크립팅 작업에 안전 합니다.|  
 |[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)|기본 테이블이 나 실행 된 명령의 결과에서 레코드 집합을 나타냅니다. 언제 든 지는 **레코드 집합** 개체가 현재 레코드로 집합 내에서 단일 레코드로 참조 합니다.<br /><br /> **레코드 집합** 개체는 스크립팅 작업에 안전 합니다.|  
-|[스트림](../../../ado/reference/ado-api/stream-object-ado.md)|이진 데이터 스트림을 나타냅니다.<br /><br /> **스트림** 개체는 스크립팅 작업에 안전 합니다.|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|이진 데이터 스트림을 나타냅니다.<br /><br /> **스트림** 개체는 스크립팅 작업에 안전 합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   

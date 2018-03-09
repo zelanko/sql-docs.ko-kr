@@ -2,26 +2,30 @@
 title: "2단원: Transact-SQL 작성| Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fdc78cbd3ca921ba16f4c68ab550f51342a87053
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f98a8f5eee2300a6351da1718e5a6e0d485afdee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-writing-transact-sql"></a>2단원: Transact-SQL 작성
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 및 XML 쿼리와 SQLCMD 명령을 작성하기 위한 통합 개발 환경입니다. 이 자습서에서는 데이터베이스 엔진 쿼리 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 작성합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 및 XML 쿼리와 SQLCMD 명령을 작성하기 위한 통합 개발 환경입니다. 이 자습서에서는 데이터베이스 엔진 쿼리 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 작성합니다.  
   
 >**알림:** 이 단원에서는 **T-SQL 문 작성 방법이 아니라**T-SQL 문으로 작업하는 동안 SSMS를 사용하는 방법에 중점을 둡니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 작성 방법에 대한 자습서는 [자습서: Transact-SQL 문 작성](../../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.  
   

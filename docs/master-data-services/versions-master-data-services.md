@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-caps.latest.revision: 9
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6348d7477123e993edc2223b874ac15f11da2897
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 5c633441058f1db8843de596824b235d30ec2eba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="versions-master-data-services"></a>버전(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 모델 내에 여러 버전의 마스터 데이터를 만들 수 있습니다. 버전은 데이터 유효성을 검사하는 동안 잠그고 데이터 유효성 검사 이후에 커밋할 수 있습니다. 커밋된 버전은 감사 가능한 변경 사항 레코드를 형성합니다. 이러한 각 버전에는 모델의 모든 멤버, 특성 값, 계층 멤버, 계층 관계 및 컬렉션이 포함됩니다.  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/07/2017
   
 1.  초기 버전은 모델을 만들고 회사의 마스터 데이터로 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 채우면 자동으로 만들어집니다. 사용 권한에 따라 사용자는 필요한 경우 이 버전을 변경할 수 있습니다.  
   
-2.  모델의 버전을 커밋하려면 모델 관리자만 데이터를 업데이트할 수 있도록 버전을 잠급니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요. 알림이 구성된 경우 버전의 상태가 변경될 때마다 전자 메일 알림이 모델 관리자에게 전송됩니다. 자세한 내용은 [메일 알림 구성&#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)을 참조하세요.  
+2.  모델의 버전을 커밋하려면 모델 관리자만 데이터를 업데이트할 수 있도록 버전을 잠급니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다. 알림이 구성된 경우 버전의 상태가 변경될 때마다 전자 메일 알림이 모델 관리자에게 전송됩니다. 자세한 내용은 [메일 알림 구성&#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)을 참조하세요.  
   
 3.  잠긴 버전의 데이터에 비즈니스 규칙을 적용하고 유효성 검사 문제를 검토합니다. 필요한 경우 누락된 정보를 채우거나 문제의 원인이 되는 트랜잭션을 되돌릴 수 있습니다. 또한 사용자가 변경할 수 있도록 버전의 잠금을 해제할 수 있습니다.  
   
@@ -97,4 +96,3 @@ ms.lasthandoff: 09/07/2017
 -   [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   
-

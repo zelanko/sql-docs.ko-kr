@@ -1,5 +1,5 @@
 ---
-title: "변환 형식 (SQL Server 가져오기 내보내기 마법사)를 확인 하는 중 변환 작업 없이 | Microsoft Docs"
+title: "변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오기-내보내기 마법사) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/11/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d4b3bfd3d61282ba7a4d7363ef02b05c5c23ac20
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 66271d8214a96453535a476e43564aa1b03d07d3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오기 및 내보내기 마법사)
   복사할 기존 테이블 및 뷰를 선택하거나 제공한 쿼리를 검토한 후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에 **변환 검사를 수행하지 않고 형식 변환**이 표시될 수 있습니다. 마법사에서는 원본과 대상 간에 데이터 형식을 매핑하는 데 필요한 하나 이상의 데이터 형식 변환 및 매핑 파일을 찾을 수 없는 경우 이 페이지를 표시합니다. 이 페이지에는 누락된 항목을 파악하는 데 도움이 되는 정보가 포함됩니다.
@@ -45,6 +44,5 @@ ms.lasthandoff: 09/26/2017
 ## <a name="whats-next"></a>다음 단계  
  **다음** 을 클릭하여 데이터 형식 변환의 성공 여부를 확인하지 않고 계속할 경우 다음 페이지는 **패키지 저장 및 실행**입니다. 이 페이지에서는 복사 작업을 즉시 실행할지 여부를 지정합니다. 구성에 따라 마법사에서 만든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 저장하여 사용자 지정하고 나중에 다시 사용할 수도 있습니다. 자세한 내용은 [패키지 저장 및 실행](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)을 참조하세요.  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [SQL Server 가져오기 및 내보내기 마법사에서 데이터 형식 매핑](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
-

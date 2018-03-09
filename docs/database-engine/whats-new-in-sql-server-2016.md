@@ -8,25 +8,23 @@ ms.service:
 ms.component: database-engine
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: 431
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "431"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 0e5018b6b111790d2ff0415180e0608798da44ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +174,7 @@ SQL Server 2014의 메모리 액세스에 최적화된 테이블에 지원되지
   - 인덱스 추가 및 삭제 해시 인덱스의 bucket_count를 변경합니다.
   - 스키마 변경합니다(열 추가/삭제/변경, 제약 조건 추가/삭제).
 
-- 이제 메모리 액세스에 최적화된 테이블에 결합된 길이가 8060바이트 페이지의 길이보다 긴 여러 개의 열이 있을 수 있습니다. `nvarchar(4000)`형식의 열이 3 개 있는 테이블이 한 예입니다. 이러한 예에서 일부 열은 이제 행 외부에 저장됩니다. 쿼리에서 열이 행 내부 또는 행 외부에 있는지 알지 못합니다.
+- 이제 메모리 액세스에 최적화된 테이블에 결합된 길이가 8060바이트 페이지의 길이보다 긴 여러 개의 열이 있을 수 있습니다. `nvarchar(4000)`형식의 열이&3;개 있는 테이블이 한 예입니다. 이러한 예에서 일부 열은 이제 행 외부에 저장됩니다. 쿼리에서 열이 행 내부 또는 행 외부에 있는지 알지 못합니다.
 
 - [LOB(Large Object) 형식](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) `varbinary(max)`, `nvarchar(max)`및 `varchar(max)` 는 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다.
 
@@ -392,7 +390,7 @@ model 데이터베이스의 새 값 및 모델을 기반으로 하는 새 데이
 
 
 ####  <a name="Masking"></a> 동적 데이터 마스킹
-동적 데이터 마스킹에서는 권한이 없는 사용자로 마스킹하여 중요한 데이터 노출을 제한합니다. 동적 데이터 마스킹을 사용하면 고객이 응용 프로그램 계층에 미치는 영향을 최소화하고 표시할 중요한 데이터의 양을 지정할 수 있게 하여 중요한 데이터에 대한 무단 액세스를 방지할 수 있습니다. 데이터베이스의 데이터는 변경되지 않으면서 지정된 데이터베이스 필드에 대한 쿼리의 결과 집합에서 중요한 데이터를 숨기는 정책 기반 보안 기능입니다. 자세한 내용은 [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md)을 참조하세요.
+동적 데이터 마스킹에서는 권한이 없는 사용자로 마스킹하여 중요한 데이터 노출을 제한합니다. 동적 데이터 마스킹을 사용하면 고객이 응용 프로그램 계층에 미치는 영향을 최소화하고 표시할 중요한 데이터의 양을 지정할 수 있게 하여 중요한 데이터에 대한 무닥 액세스를 방지할 수 있습니다. 데이터베이스의 데이터는 변경되지 않으면서 지정된 데이터베이스 필드에 대한 쿼리의 결과 집합에서 중요한 데이터를 숨기는 정책 기반 보안 기능입니다. 자세한 내용은 [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md)을 참조하세요.
 
 
 ####  <a name="Perms"></a> 새 사용 권한
@@ -454,13 +452,12 @@ SQL Server 2016 업그레이드 관리자 Preview는 이전 버전의 사용자�
 
  [여기](https://www.microsoft.com/en-us/download/details.aspx?id=48119) 에서 업그레이드 관리자 Preview를 다운로드하거나, 웹 플랫폼 설치 관리자를 사용하여 설치할 수 있습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md) 
  
 [SSMS로 SQL Server 관리 도구 설치](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
-
 
 
 

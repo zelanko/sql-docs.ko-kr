@@ -1,26 +1,27 @@
 ---
-title: "사각형 및 선 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "사각형 및 선(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: e1709624844a456439a5c5c2b9824c545a6c9d4a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc6c8bc8ddf4e23afe15c533a49a30c96702294c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>사각형 및 선(보고서 작성기 및 SSRS)
   사각형과 선을 사용하여 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 시각 효과를 만들 수 있습니다. 이러한 보고서 항목에 대한 디스플레이 속성은 홈 탭의 테두리 섹션에서 설정할 수 있으며 다른 속성은 속성 창에서 설정할 수 있습니다. 사각형에는 배경색, 이미지, 도구 설명 또는 책갈피와 같은 기능을 추가할 수 있습니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/09/2017
  사각형 내의 보고서 항목은 보고서 파트로 게시할 수 없습니다. 사용자가 사각형을 보고서에 추가하면 보고서에는 사각형과 함께 사각형에 포함된 항목도 추가됩니다.  [보고서 파트](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
 ##  <a name="RectangleAsContainer"></a> 사각형을 컨테이너로 사용  
- 사각형을 다른 항목의 컨테이너로 사용할 수 있습니다. 사각형을 이동하면 사각형 내의 항목도 함께 이동합니다. 사각형에 포함된 항목의 **Parent** 속성에는 사각형 이름이 표시됩니다. 사각형을 컨테이너로 사용 하는 방법에 대 한 자세한 내용은 참조 [사각형 또는 컨테이너 &#40; 추가 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md) 및 [행렬 및 차트 &#40;에 같은 데이터 표시 보고서 작성기 &#41; ](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
+ 사각형을 다른 항목의 컨테이너로 사용할 수 있습니다. 사각형을 이동하면 사각형 내의 항목도 함께 이동합니다. 사각형에 포함된 항목의 **Parent** 속성에는 사각형 이름이 표시됩니다. 사각형을 컨테이너로 사용하는 방법은 [사각형 또는 컨테이너 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md) 및 [행렬 및 차트에 같은 데이터 표시&#40;보고서 작성기&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  사각형은 사각형 안에서 만들거나 사각형 안으로 끌어 놓은 항목에 대한 컨테이너입니다. 디자인 화면에서 기존 항목을 포함하도록 사각형을 그려도 사각형이 기존 항목의 컨테이너로 동작하지 않습니다. 이 사각형은 기존 항목의 Parent 속성에 표시되지 않습니다.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
  [선 추가 및 수정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사각형 또는 컨테이너 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

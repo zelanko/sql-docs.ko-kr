@@ -2,36 +2,33 @@
 title: "자동으로 새 특성 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - automatic attribute creation
 - attributes [Analysis Services], creating
 ms.assetid: 208a050a-5e2f-470c-b645-8d835e123db7
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f56c70ce3d75de8f7be924941df227d1213902c0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 56bb141f18d96c1a598b83a14d3f301764df5ecf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---define-a-new-attribute-automatically"></a>속성을 특성-자동으로 새 특성 정의
-  차원 디자이너에서 끌어서 놓기 편집을 사용하여 차원에 새 특성을 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+차원 디자이너에서 끌어서 놓기 편집을 사용하여 차원에 새 특성을 만들 수 있습니다.  
   
 ### <a name="to-create-a-new-attribute-automatically"></a>자동으로 새 특성을 만들려면  
   
@@ -46,4 +43,3 @@ ms.lasthandoff: 09/01/2017
  [차원 특성 속성 참조](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-

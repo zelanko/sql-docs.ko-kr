@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC]
 - application process [ODBC], about application process
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bf9073f8dc4ec4a3216ee676a0f942c8e2ff982f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fbafffd1922dabbb49bec1cae59d6bce099bd5d7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-odbc-application-steps"></a>기본 ODBC 응용 프로그램 단계
 이 섹션에서는 ODBC 응용 프로그램의 일반적인 흐름을 설명 합니다. 그럴 가능성은 모든 응용 프로그램이 순서 대로 이러한 함수의 모든 호출을 합니다. 그러나 대부분의 응용 프로그램 단계 약간 다를 사용합니다. 기본 응용 프로그램 단계는 다음 그림에 표시 됩니다.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 -   [5단계: 트랜잭션 커밋](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
   
 -   [6단계: 데이터 원본 연결 끊기](../../../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md)
-

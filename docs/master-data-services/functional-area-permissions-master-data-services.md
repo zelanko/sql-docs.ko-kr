@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - functional area permissions [Master Data Services]
 - permissions [Master Data Services], functional areas
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
-caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0cee8bca8d48df114780a29d8bde97319102c1c6
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 34aa40c2c999709c871fe7b1e283c5d6e30ab1b4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="functional-area-permissions-master-data-services"></a>기능 영역 권한(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI(사용자 인터페이스)의 각 기능 영역에 사용 권한을 할당할 수 있습니다. 기능 영역은 다음과 같습니다.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 09/07/2017
   
  기능 영역에 사용 권한을 할당하면 UI의 해당 영역이 사용자 또는 그룹에 표시됩니다.  
   
- **탐색기** 기능 영역 내에서 모델 개체 및 계층 멤버에 할당된 추가 사용 권한에 따라 사용자가 액세스할 수 있는 데이터가 결정됩니다. 다른 모든 기능 영역 내에서 사용자가 모델을 보고 모델에 대한 작업을 수행하려면 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+ **탐색기** 기능 영역 내에서 모델 개체 및 계층 멤버에 할당된 추가 사용 권한에 따라 사용자가 액세스할 수 있는 데이터가 결정됩니다. 다른 모든 기능 영역 내에서 사용자가 모델을 보고 모델에 대한 작업을 수행하려면 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  슈퍼 사용자 권한이 있는 사용자는 효과적으로 모든 모델에 대한 관리자 권한이 있으며 다른 모든 기능 권한을 갖습니다.  
@@ -60,4 +59,3 @@ ms.lasthandoff: 09/07/2017
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   
-

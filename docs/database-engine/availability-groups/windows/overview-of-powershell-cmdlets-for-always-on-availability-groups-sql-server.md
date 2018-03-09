@@ -8,8 +8,7 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 1a6b9e19ea916963acf28a222d5bd463bc5662d4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
-ms.openlocfilehash: c9b62d5874c2fbe00a1a9508a865f866578ef1db
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +56,7 @@ ms.lasthandoff: 08/31/2017
   
 ##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
   
-|Cmdlet|설명|지원되는 위치|  
+|Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|  
 |**Disable-SqlAlwaysOn**|서버 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 사용하지 않도록 설정합니다.|**Path**, **InputObject**또는 **Name** 매개 변수에 지정된 서버 인스턴스( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]버전이어야 함)|  
 |**Enable-SqlAlwaysOn**|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 지원하는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 의 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하도록 설정합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 지원에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지원하는 모든 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]버전|  
@@ -67,7 +65,7 @@ ms.lasthandoff: 08/31/2017
   
 ##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
-|Cmdlet|설명|지원되는 위치|  
+|Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|  
 |**Backup-SqlDatabase**|데이터 또는 로그 백업을 만듭니다.|온라인 데이터베이스( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 경우 주 복제본을 호스팅하는 서버 인스턴스의 데이터베이스)|  
 |**Restore-SqlDatabase**|백업을 복원합니다.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 경우 보조 복제본을 호스팅하는 서버 인스턴스)<br /><br /> **\*\* 중요 \*\*** 보조 데이터베이스를 준비하는 경우 모든 **Restore-SqlDatabase** 명령에서 **-NoRecovery** 매개 변수를 사용해야 합니다.|  
@@ -76,7 +74,7 @@ ms.lasthandoff: 08/31/2017
   
 ##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
   
-|Cmdlet|설명|지원되는 위치|  
+|Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|  
 |**New-SqlAvailabilityGroup**|새 가용성 그룹을 만듭니다.|주 복제본을 호스팅할 서버 인스턴스|  
 |**Remove-SqlAvailabilityGroup**|가용성 그룹을 삭제합니다.|HADR 사용 서버 인스턴스|  
@@ -85,7 +83,7 @@ ms.lasthandoff: 08/31/2017
   
 ##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
   
-|Cmdlet|설명|지원되는 위치|  
+|Cmdlet|Description|지원되는 위치|  
 |------------|-----------------|------------------|  
 |**New-SqlAvailabilityGroupListener**|새 가용성 그룹 수신기를 만들고 기존 가용성 그룹에 연결합니다.|주 복제본을 호스팅하는 서버 인스턴스|  
 |**Set-SqlAvailabilityGroupListener**|기존 가용성 수신기에서 포트 설정을 수정합니다.|주 복제본을 호스팅하는 서버 인스턴스|  
@@ -93,7 +91,7 @@ ms.lasthandoff: 08/31/2017
   
 ##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
-|Cmdlet|설명|지원되는 위치|  
+|Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|  
 |**New-SqlAvailabilityReplica**|새 가용성 복제본을 만듭니다. **-AsTemplate** 매개 변수를 사용하여 새 가용성 복제본별로 하나의 메모리 내 가용성 복제본 개체를 만들 수 있습니다.|주 복제본을 호스팅하는 서버 인스턴스|  
 |**Join-SqlAvailabilityGroup**|보조 복제본을 가용성 그룹에 조인합니다.|보조 복제본을 호스팅하는 서버 인스턴스|  
@@ -102,7 +100,7 @@ ms.lasthandoff: 08/31/2017
   
 ##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
   
-|Cmdlet|설명|지원되는 위치|  
+|Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|  
 |**Add-SqlAvailabilityDatabase**|주 복제본에서 데이터베이스를 가용성 그룹에 추가합니다.<br /><br /> 보조 복제본에서 보조 데이터베이스를 가용성 그룹에 조인합니다.|가용성 복제본을 호스팅하는 모든 서버 인스턴스(주 복제본과 보조 복제본의 동작이 서로 다름)|  
 |**Remove-SqlAvailabilityDatabase**|주 복제본에서 데이터베이스를 가용성 그룹에서 제거합니다.<br /><br /> 보조 복제본에서 로컬 보조 데이터베이스를 로컬 보조 복제본에서 제거합니다.|가용성 복제본을 호스팅하는 모든 서버 인스턴스(주 복제본과 보조 복제본의 동작이 서로 다름)|  
@@ -115,7 +113,7 @@ ms.lasthandoff: 08/31/2017
 > [!IMPORTANT]  
 >  이 cmdlet을 실행하려면 연결, 서버 상태 보기 및 모든 정의 보기 권한이 있어야 합니다.  
   
-|Cmdlet|설명|지원되는 위치|  
+|Cmdlet|Description|지원되는 위치|  
 |------------|-----------------|------------------|  
 |**Test-SqlAvailabilityGroup**|SQL Server PBM(정책 기반 관리) 정책을 평가하여 가용성 그룹의 상태를 평가합니다.|가용성 복제본을 호스팅하는 서버 인스턴스*|  
 |**Test-SqlAvailabilityReplica**|SQL Server PBM(정책 기반 관리) 정책을 평가하여 가용성 복제본의 상태를 평가합니다.|가용성 복제본을 호스팅하는 서버 인스턴스*|  
@@ -125,9 +123,8 @@ ms.lasthandoff: 08/31/2017
   
  자세한 내용은 [Always On 정책을 사용하여 가용성 그룹의 상태 보기&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [SQL Server PowerShell 도움말 보기](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
   
-

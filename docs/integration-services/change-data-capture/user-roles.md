@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0abefa916dda5690d033bc9cd74ac5f75245d408
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-roles"></a>사용자 역할
   이 섹션에서는 Attunity Oracle CDC Service의 사용자 역할에 대해 설명합니다. 여기서 설명하는 역할은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할, Windows 역할 또는 Oracle 데이터베이스 역할입니다.  
@@ -147,7 +146,7 @@ ms.lasthandoff: 08/03/2017
   
  다음 목록에서는 로그 마이닝 사용자에게 부여되어야 할 필수 권한에 대해 설명합니다.  
   
--   에 선택 \<any 캡처된 테이블 >  
+-   \<any-captured-table>에 대한 SELECT 권한  
   
 -   SELECT ANY TRANSACTION  
   
@@ -181,4 +180,3 @@ ms.lasthandoff: 08/03/2017
  이 사용자의 자격 증명은 저장되지 않습니다. CDC Designer 콘솔에서 필요할 때마다 자격 증명을 요청하며 나머지 UI 세션을 위해 유지됩니다.  
   
   
-

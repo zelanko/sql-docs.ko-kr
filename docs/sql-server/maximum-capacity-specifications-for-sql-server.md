@@ -1,11 +1,14 @@
 ---
 title: "SQL Server의 최대 용량 사양 | Microsoft 문서"
-ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.date: 11/6/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.custom: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 9ec628362449c449d26005797e806e47b4614a79
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server의 최대 용량 사양](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx)을 참조하세요.
 
   다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 정의된 다양한 개체의 최대 크기 및 수가 지정되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술과 관련된 표로 이동하려면 해당 링크를 클릭합니다.  
@@ -55,11 +57,11 @@ ms.lasthandoff: 08/11/2017
 |짧은 문자열 열당 바이트 수||8,000||  
 |GROUP BY, ORDER BY당 바이트 수||8,060||  
 |인덱스 키당 바이트 수||클러스터형 인덱스의 경우 900바이트, 비클러스터형 인덱스의 경우 1,700바이트|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 클러스터형 인덱스 키의 최대 바이트 수는 900을 초과할 수 없습니다. 비클러스터형 인덱스 키에 대한 최대값은 1700바이트입니다.<br /><br /> 최대 크기가 제한을 초과하는 가변 길이 열을 사용하여 키를 정의할 수 있습니다. 그러나 이러한 열에 있는 데이터의 총 크기는 제한을 초과할 수 없습니다.<br /><br /> 비클러스터형 인덱스에 키가 아닌 열을 추가로 포함할 수 있으며 해당 열은 키의 크기 제한에 포함되지 않습니다. 키가 아닌 열은 일부 쿼리의 성능 향상에 도움이 될 수 있습니다.|  
-|메모리 액세스에 최적화된 테이블의 인덱스 키당 바이트 수||비클러스터형 인덱스의 경우 2500바이트 모든 인덱스가 행에 맞기만 하면 해시 인덱스에 대한 제한은 없습니다.|메모리 액세스에 최적화된 테이블의 비클러스터형 인덱스에는 선언된 최대 크기가 2500바이트를 초과하는 키 열을 포함할 수 없습니다. 키 열의 실제 데이터가 선언된 최대 크기보다 짧은지 여부는 관련이 없습니다.<br /><br /> 해시 인덱스 키에 대한 하드 크기 제한은 없습니다.<br /><br /> 메모리 액세스에 최적화된 테이블의 인덱스는 기본적으로 모든 열을 처리하기 때문에 포괄 열의 개념이 없습니다.<br /><br /> 메모리 액세스에 최적화된 테이블의 경우 행 크기가 8060바이트인 경우에도 일부 가변 길이 열이 물리적으로 8060바이트 외부에 저장될 수 있습니다. 그러나 테이블의 모든 인덱스에 대한 모든 키 열과 테이블의 추가 고정 길이 열의 선언된 최대 크기는 8060바이트에 맞아야 합니다.|  
+|메모리 최적화 테이블의 인덱스 키당 바이트 수||비클러스터형 인덱스의 경우 2500바이트 모든 인덱스가 행에 맞기만 하면 해시 인덱스에 대한 제한은 없습니다.|메모리 최적화 테이블의 비클러스터형 인덱스에는 선언된 최대 크기가 2500바이트를 초과하는 키 열을 포함할 수 없습니다. 키 열의 실제 데이터가 선언된 최대 크기보다 짧은지 여부는 관련이 없습니다.<br /><br /> 해시 인덱스 키에 대한 하드 크기 제한은 없습니다.<br /><br /> 메모리 최적화 테이블의 인덱스는 기본적으로 모든 열을 처리하기 때문에 포괄 열의 개념이 없습니다.<br /><br /> 메모리 최적화 테이블의 경우 행 크기가 8060바이트인 경우에도 일부 가변 길이 열이 물리적으로 8060바이트 외부에 저장될 수 있습니다. 그러나 테이블의 모든 인덱스에 대한 모든 키 열과 테이블의 추가 고정 길이 열의 선언된 최대 크기는 8060바이트에 맞아야 합니다.|  
 |외래 키당 바이트 수||900||  
 |기본 키당 바이트 수||900||  
 |행당 바이트 수||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 가변 길이 열을 행 외부로 밀어넣을 수 있는 행 오버플로 저장소를 지원합니다. 행 외부로 밀어넣은 가변 길이 열의 주 레코드에는 24바이트의 루트만 저장됩니다. 이 때문에 유효 행 제한은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]보다 높습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 "8KB를 초과하는 행 오버플로 데이터" 항목을 참조하십시오.|  
-|메모리 액세스에 최적화된 테이블의 행당 바이트 수||8,060|[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 이상에서는 메모리 액세스에 최적화된 테이블이 행 외부 저장소를 지원합니다. 테이블에 있는 모든 열의 최대 크기가 8060바이트를 초과할 경우 가변 길이 열이 행 외부로 푸시됩니다. 이는 컴파일 타임 결정입니다. 행 외부에 저장된 열의 경우 8바이트 참조만 행 내부에 저장됩니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)를 참조하세요.|  
+|메모리 최적화 테이블의 행당 바이트 수||8,060|[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 이상에서는 메모리 최적화 테이블이 행 외부 저장소를 지원합니다. 테이블에 있는 모든 열의 최대 크기가 8060바이트를 초과할 경우 가변 길이 열이 행 외부로 푸시됩니다. 이는 컴파일 타임 결정입니다. 행 외부에 저장된 열의 경우 8바이트 참조만 행 내부에 저장됩니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)를 참조하세요.|  
 |저장 프로시저의 원본 텍스트의 바이트 수||일괄 처리 크기 또는 250MB 미만||  
 |**varchar(max)**, **varbinary(max)**, **xml**, **text**또는 **image** 열당 바이트 수||2^31-1||  
 |**ntext** 또는 **nvarchar(max)** 열당 문자 수||2^30-1||  
@@ -77,16 +79,16 @@ ms.lasthandoff: 08/11/2017
 |데이터베이스 크기||524,272TB||  
 |다음 인스턴스당 데이터베이스 수: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
 |데이터베이스당 파일 그룹 수||32,767||  
-|메모리 액세스에 최적화된 데이터의 데이터베이스당 파일 그룹 수||1||  
+|메모리 최적화 데이터의 데이터베이스당 파일 그룹 수||1||  
 |데이터베이스당 파일 수||32,767||  
 |파일 크기(데이터)||16TB||  
 |파일 크기(로그)||2TB||  
-|데이터베이스당 메모리 액세스에 최적화된 데이터의 데이터 파일 수||4.096||  
-|메모리 액세스에 최적화된 데이터의 데이터 파일당 델타 파일||1||  
+|데이터베이스당 메모리 최적화 데이터의 데이터 파일 수||4,096([!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 최신 버전은 엄격한 제한을 적용하지 않습니다.||  
+|메모리 최적화 데이터의 데이터 파일당 델타 파일||1||  
 |테이블당 외래 키 테이블 참조 수||발신 = 253, 수신 = 10,000|제한 사항에 대해서는 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)를 참조하세요.|  
 |식별자 길이(문자 수)||128||  
 |컴퓨터당 인스턴스 수||독립 실행형 서버당 50개의 인스턴스<br /><br /> 클러스터 설치를 위한 저장 옵션으로 공유 클러스터 디스크를 사용하는 경우 장애 조치(failover) 클러스터에 25개의 인스턴스. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 클러스터 설치를 위한 스토리지 옵션으로 SMB 파일 공유 위치를 선택하는 경우 장애 조치(failover) 클러스터에 50개의 인스턴스를 지원합니다.||  
-|메모리 액세스에 최적화된 테이블당 인덱스 수||8||  
+|메모리 최적화 테이블당 인덱스 수||999([!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)]부터 및 [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)])<br/>8([!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] 및 [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)])||  
 |SQL 문이 포함된 문자열의 길이(일괄 처리 크기)||65,536 * 네트워크 패킷 크기|네트워크 패킷 크기는 응용 프로그램과 관계형 [!INCLUDE[ssDE](../includes/ssde-md.md)]간의 통신에 사용되는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.|  
 |연결당 잠금 수||서버당 최대 잠금 수||  
 |다음 인스턴스당 잠금 수: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||메모리로만 제한|이 값은 정적 잠금 할당용입니다. 동적 잠금은 메모리로만 제한됩니다.|  
@@ -159,4 +161,3 @@ ms.lasthandoff: 08/11/2017
  [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
-

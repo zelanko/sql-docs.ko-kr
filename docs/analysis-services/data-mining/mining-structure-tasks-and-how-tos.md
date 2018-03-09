@@ -2,34 +2,30 @@
 title: "마이닝 구조 태스크 및 방법 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], how-to topics
+helpviewer_keywords: mining structures [Analysis Services], how-to topics
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a9b949aa861e9db20c60f64c75d5edd41e9247c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 37193320cddce5b0ecccaf9d0040992118bc0e44
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>마이닝 구조 태스크 및 방법
-  **에서 데이터 마이닝 디자이너의** 마이닝 구조 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭에 있는 도구를 사용하여 마이닝 구조를 만들고 편집하고 처리할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**마이닝 구조** 데이터 마이닝 디자이너의 탭 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 만들기, 편집 및 마이닝 구조를 처리 하는 데 사용할 수 있는 도구가 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -43,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [마이닝 구조에 중첩 테이블 추가](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
   
--   [마이닝 구조 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
+-   [마이닝 구조의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [마이닝 구조에 사용되는 데이터 원본 뷰 편집](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
@@ -54,4 +50,3 @@ ms.lasthandoff: 09/01/2017
  [디자인 및 구현 방법 도움말 항목(Analysis Services - 데이터 마이닝)](https://msdn.microsoft.com/library/bb522452.aspx)  
   
   
-

@@ -17,26 +17,25 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de01c45d538cd7117b81ea55613aa66be643a2c2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 588f1ea0f1c61b6d0d6b793fac41409aa7933964
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="control-flow"></a>제어 흐름
-  패키지는 제어 흐름과 하나 이상의 데이터 흐름(선택적)으로 구성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 세 가지 유형의 제어 흐름 요소를 제공 합니다: 패키지, 기능을 제공 하는 태스크 및 실행 개체, 컨테이너 및 태스크를 정렬된 된 제어 흐름으로 연결 하는 선행 제약 조건에서 구조를 제공 하는 컨테이너입니다.  
+  패키지는 제어 흐름과 하나 이상의 데이터 흐름(선택적)으로 구성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지의 구조를 제공하는 컨테이너, 기능을 제공하는 태스크 및 실행 개체, 컨테이너, 태스크를 정렬된 제어 흐름으로 연결하는 선행 제약 조건 등 3가지 유형의 제어 흐름 요소를 제공합니다.  
   
  자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md), [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)및 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)을 참조하세요.  
   
  다음 다이어그램에서는 하나의 컨테이너와 6개의 태스크가 포함된 하나의 제어 흐름을 보여 줍니다. 태스크 중 5개는 패키지 수준에서 정의되며 남은 하나의 태스크는 컨테이너 수준에서 정의됩니다. 이 태스크는 컨테이너 내부에 있습니다.  
   
- ![6 개의 태스크와 컨테이너를 사용 하 여 흐름 제어](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "6 개의 태스크와 컨테이너를 사용 하 여 흐름 제어")  
+ ![6개의 태스크와 1개의 컨테이너가 있는 제어 흐름](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "6개의 태스크와 1개의 컨테이너가 있는 제어 흐름")  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 아키텍처는 컨테이너 중첩을 지원하며 제어 흐름에는 중첩된 컨테이너의 여러 수준이 포함될 수 있습니다. 예를 들어 패키지에는 또 다른 Foreach 루프 컨테이너 등을 포함할 수 있는 Foreach 루프 컨테이너와 같은 컨테이너가 포함될 수 있습니다.  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  다음 다이어그램에서는 제어 흐름 디자이너에서의 간단한 패키지에 대한 제어 흐름을 보여 줍니다. 다이어그램에 표시된 제어 흐름은 3개의 패키지 수준 태스크와 3개의 태스크가 포함된 한 개의 패키지 수준 컨테이너로 구성됩니다. 태스크와 컨테이너는 선행 제약 조건을 사용하여 연결됩니다.  
   
- ![패키지에 제어 흐름 디자이너의 스크린 샷](../../integration-services/connection-manager/media/samplecontrolflow.gif "패키지 제어 흐름 디자이너의 스크린 샷")  
+ ![패키지가 포함된 제어 흐름 디자이너의 스크린샷](../../integration-services/connection-manager/media/samplecontrolflow.gif "패키지가 포함된 제어 흐름 디자이너의 스크린샷")  
   
  제어 흐름을 만드는 데에는 다음 태스크가 포함됩니다.  
   
@@ -61,21 +60,20 @@ ms.lasthandoff: 08/03/2017
   
      **제어 흐름** 탭의 디자인 화면에 태스크나 컨테이너를 추가하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 해당 항목에 연결선을 자동으로 추가합니다. 패키지에 두 개 이상의 항목, 태스크 또는 컨테이너가 포함된 경우 해당 연결선을 서로 연결하여 이를 하나의 제어 흐름으로 결합시킬 수 있습니다.  
   
-     두 항목 간의 연결선을 선행 제약 조건이라고 합니다. 선행 제약 조건은 연결된 두 항목 간의 관계를 정의합니다. 선행 제약 조건은 런타임에 태스크 및 컨테이너가 실행되는 순서와 태스크 및 컨테이너가 실행되는 조건을 지정합니다. 예를 들어 선행 제약 조건을 사용하면 특정 태스크가 성공해야 제어 흐름의 다음 태스크가 실행되도록 지정할 수 있습니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을 참조하세요.  
+     두 항목 간의 연결선을 선행 제약 조건이라고 합니다. 선행 제약 조건은 연결된 두 항목 간의 관계를 정의합니다. 선행 제약 조건은 런타임에 태스크 및 컨테이너가 실행되는 순서와 태스크 및 컨테이너가 실행되는 조건을 지정합니다. 예를 들어 선행 제약 조건을 사용하면 특정 태스크가 성공해야 제어 흐름의 다음 태스크가 실행되도록 지정할 수 있습니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을(를) 참조하세요.  
   
 -   연결 관리자 추가  
   
      대부분의 태스크에는 데이터 원본에 대한 연결이 필요하며, 이를 위해서는 해당 태스크에 필요한 연결 관리자를 패키지에 추가해야 합니다. 사용되는 열거자 유형에 따라 Foreach 루프 컨테이너에도 연결 관리자가 필요할 수 있습니다. 연결 관리자는 제어 흐름을 항목별로 구성할 때나 제어 흐름 구성을 시작하기 전에 추가할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)를 참조하세요.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]디자이너에는 관리 디자인 화면에서 제어 흐름을 설명 하는 데 사용할 수 있는 많은 디자인 타임 기능이 포함 됩니다.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에는 디자인 화면을 관리하고 제어 흐름을 이해하기 쉽게 만드는 데 사용할 수 있는 여러 디자인 타임 기능도 포함됩니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
--   [태스크 또는 컨테이너는 제어 흐름에 추가 또는 삭제](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
--   [그룹 또는 그룹 해제 구성 요소](../../integration-services/group-or-ungroup-components.md)  
+-   [구성 요소 그룹화 또는 그룹 해제](../../integration-services/group-or-ungroup-components.md)  
   
   
-

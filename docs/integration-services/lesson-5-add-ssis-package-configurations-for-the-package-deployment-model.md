@@ -1,11 +1,11 @@
 ---
-title: "5 단원: 패키지 배포 모델에 대 한 SSIS 패키지 구성 추가 | Microsoft Docs"
+title: "5단원: 패키지 배포 모델을 위한 SSIS 패키지 구성 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,20 +15,19 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1a16217f90b9120993663d9046c8178e62451111
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 852a5c26df16cafdfee1f1e8d60aade25043b816
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>5단원: 패키지 배포 모델을 위한 SSIS 패키지 구성 추가
-패키지 구성을 사용하면 개발 환경 외부에서 런타임 속성과 변수를 설정할 수 있습니다. 구성을 통해 쉽고 유연하게 배포할 수 있는 패키지를 개발할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 다음과 같은 구성 유형을 제공 합니다.  
+패키지 구성을 사용하면 개발 환경 외부에서 런타임 속성과 변수를 설정할 수 있습니다. 구성을 통해 쉽고 유연하게 배포할 수 있는 패키지를 개발할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 다음과 같은 구성 유형을 제공합니다.  
   
 -   XML 구성 파일  
   
@@ -48,18 +47,17 @@ ms.lasthandoff: 08/03/2017
 ## <a name="lesson-tasks"></a>단원 태스크  
 이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1 단계: 4 단원 패키지 복사](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
+-   [1단계: 4단원 패키지 복사](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
--   [2 단계: 구성 설정 및 구성 패키지](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
+-   [2단계: 패키지 구성 설정 및 구성](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
--   [3 단계: Directory 속성 구성 값 수정](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+-   [3단계: Directory 속성 구성 값 수정](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
--   [4 단계: 5 단원 자습서 패키지 테스트](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+-   [4단계: 5단원 자습서 패키지 테스트](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
   
--   [1 단계: 4 단원 패키지 복사](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
+-   [1단계: 4단원 패키지 복사](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
   
   
-

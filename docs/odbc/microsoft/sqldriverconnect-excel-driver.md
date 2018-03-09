@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], Excel Driver
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 659789e73fa4ad85b0b79b599c6f253afdd566ec
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eca660cf2c38539dbf4a0fa560bfc67a1b1be115
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (Excel 드라이버)
 > [!NOTE]  
@@ -43,7 +42,6 @@ ms.lasthandoff: 09/09/2017
   
 |드라이버|필요한 키워드|예|  
 |------------|-----------------------|--------------|  
-|3.0 또는 4.0 Microsoft Excel|드라이버를 DriverID|Driver = {Microsoft Excel Driver (*.xls)을 (를); DBQ = c:\temp; DriverID 278 =|  
-|Microsoft Excel 5.0/7.0|드라이버를 DriverID, DBQ|Driver = {Microsoft Excel Driver (*.xls)을 (를); DBQ=c:\temp\sample.xls; DriverID = 22|  
-|Microsoft Excel 97 이상|드라이버를 DriverID, DBQ|Driver = {Microsoft Excel Driver (*.xls)을 (를); DBQ=c:\temp\sample.xls; DriverID 790 =|
-
+|3.0 또는 4.0 Microsoft Excel|Driver, DriverID|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp; DriverID=278|  
+|Microsoft Excel 5.0/7.0|Driver, DriverID,  DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=22|  
+|Microsoft Excel 97 이상|Driver, DriverID,  DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=790|

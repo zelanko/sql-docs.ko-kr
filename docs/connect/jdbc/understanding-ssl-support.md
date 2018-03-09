@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f65d4d8d094f300c3f0f3b26a6e50e63bcc9de35
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 82440c6d3ffe0ee0f2c2b9080328c0fed302cb31
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-ssl-support"></a>SSL 지원 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -33,7 +31,7 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램에 암호화를 요청 하지 않고는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 하도록 강제 하지 것입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 암호화를 지원 하도록 합니다. 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스가 SSL 암호화 사용 하도록 구성 되지 않은, 암호화 없이 연결이 설정 됩니다. 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스가 SSL 암호화를 사용 하도록 구성 됩니다, 드라이버는에서 올바르게 구성 된 가상 컴퓨터 JVM (Java)를 실행 하는 경우에 자동으로 SSL 암호화를 사용 또는 다른 연결이 종료 되 고 드라이버에서 오류가 발생 합니다.  
   
 > [!NOTE]  
->  에 전달 된 값 **serverName** 에 대체 SAN (주체 이름) SSL 연결에 대 한 서버 인증서에 성공 하려면 CN (일반 이름) 또는 DNS 이름과 정확히 일치 합니다.  
+>  SSL 연결이 성공하려면 **serverName** 에 전달된 값이 서버 인증서의 SAN(주체 대체 이름)에 있는 CN(일반 이름) 또는 DNS 이름과 정확히 일치하는지 확인하십시오.  
   
 > [!NOTE]  
 >  SSL을 구성 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 연결 암호화 참조 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 항목을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서.  
@@ -56,14 +54,14 @@ ms.lasthandoff: 09/09/2017
 |-------------|----------------------------|---------------------------|----------------|------------------------|--------------|  
 |false 또는 blank|any|any|any|any|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 하도록 강제 하지 것입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 암호화를 지원 하도록 합니다. 서버에 자체 서명된 인증서가 있는 경우 드라이버에서 SSL 인증서 교환을 시작합니다. SSL 인증서의 유효성은 검사되지 않으며 자격 증명(로그인 패킷에 있음)만 암호화됩니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구할 경우 드라이버에서 SSL 인증서 교환을 시작합니다. SSL 인증서의 유효성은 검사되지 않지만 전체 통신은 암호화됩니다.|  
 |true|true|any|any|any|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다. 되는 경우는 **trustServerCertificate** 속성이 "true", 드라이버는 SSL 인증서의 유효성을 검사 하지 것입니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
-|true|false 또는 blank|비어 있음|비어 있음|비어 있음|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버 ´ ֲ는 **serverName** 서버 SSL 인증서의 유효성을 검사 하 고 인증서 저장소를 사용 하 여 결정 하기 위해 트러스트 관리자 팩터리의 조회 규칙에 의존 하는 연결 URL에 지정 된 속성입니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
+|true|false 또는 blank|비어 있음|비어 있음|비어 있음|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버는 연결 URL에 지정된 **serverName** 속성을 사용하여 서버 SSL 인증서의 유효성을 검사하며 트러스트 관리자 팩터리의 조회 규칙에 따라 사용할 인증서 저장소를 결정합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
 |true|false 또는 blank|value|비어 있음|비어 있음|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버에 대 한 지정 된 값을 사용 하 여 SSL 인증서의 주체 값 유효성을 검사 합니다는 **hostNameInCertificate** 속성입니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
-|true|false 또는 blank|비어 있음|value|value|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버 ´ ֲ는 **trustStore** 인증서 trustStore 파일을 찾을 수 속성 값 및 **trustStorePassword** trustStore 파일의 무결성을 확인 하려면 속성 값입니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
-|true|false 또는 blank|비어 있음|비어 있음|value|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버 ´ ֲ는 **trustStorePassword** 속성 값을 기본 trustStore 파일의 무결성을 확인 합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
-|true|false 또는 blank|비어 있음|value|비어 있음|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버 ´ ֲ는 **trustStore** trustStore 파일의 위치를 조회 하는 속성 값입니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
-|true|false 또는 blank|value|비어 있음|value|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버 ´ ֲ는 **trustStorePassword** 속성 값을 기본 trustStore 파일의 무결성을 확인 합니다. 드라이버를 사용 하는 또한는 **hostNameInCertificate** 속성 값을 SSL 인증서의 유효성을 검사 합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
-|true|false 또는 blank|value|value|비어 있음|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버 ´ ֲ는 **trustStore** trustStore 파일의 위치를 조회 하는 속성 값입니다. 드라이버를 사용 하는 또한는 **hostNameInCertificate** 속성 값을 SSL 인증서의 유효성을 검사 합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
-|true|false 또는 blank|value|value|value|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버 ´ ֲ는 **trustStore** 인증서 trustStore 파일을 찾을 수 속성 값 및 **trustStorePassword** trustStore 파일의 무결성을 확인 하려면 속성 값입니다. 드라이버를 사용 하는 또한는 **hostNameInCertificate** 속성 값을 SSL 인증서의 유효성을 검사 합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
+|true|false 또는 blank|비어 있음|value|value|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버는 **trustStore** 속성 값을 사용하여 인증서 trustStore 파일을 찾고 **trustStorePassword** 속성 값을 사용하여 trustStore 파일의 무결성을 검사합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
+|true|false 또는 blank|비어 있음|비어 있음|value|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버는 **trustStorePassword** 속성 값을 사용하여 기본 trustStore 파일의 무결성을 검사합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
+|true|false 또는 blank|비어 있음|value|비어 있음|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버는 **trustStore** 속성 값을 사용하여 trustStore 파일의 위치를 조회합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
+|true|false 또는 blank|value|비어 있음|value|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버는 **trustStorePassword** 속성 값을 사용하여 기본 trustStore 파일의 무결성을 검사합니다. 드라이버를 사용 하는 또한는 **hostNameInCertificate** 속성 값을 SSL 인증서의 유효성을 검사 합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
+|true|false 또는 blank|value|value|비어 있음|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버는 **trustStore** 속성 값을 사용하여 trustStore 파일의 위치를 조회합니다. 드라이버를 사용 하는 또한는 **hostNameInCertificate** 속성 값을 SSL 인증서의 유효성을 검사 합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
+|true|false 또는 blank|value|value|value|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와 SSL 암호화를 사용 하는 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.<br /><br /> 클라이언트에서 SSL 암호화를 지원하도록 서버가 요구하거나 서버에서 암호화를 지원하는 경우 드라이버에서 SSL 인증서 교환을 시작합니다.<br /><br /> 드라이버는 **trustStore** 속성 값을 사용하여 인증서 trustStore 파일을 찾고 **trustStorePassword** 속성 값을 사용하여 trustStore 파일의 무결성을 검사합니다. 드라이버를 사용 하는 또한는 **hostNameInCertificate** 속성 값을 SSL 인증서의 유효성을 검사 합니다.<br /><br /> 서버가 암호화를 지원하도록 구성되어 있지 않은 경우 드라이버에서 오류가 발생하고 연결이 종료됩니다.|  
   
  Encrypt 속성이로 설정 되어 있으면 **true**, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] JVM의 기본 JSSE 보안 공급자를 사용 하 여와 SSL 암호화를 협상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 기본 보안 공급자는 SSL 암호화를 성공적으로 협상하는 데 필요한 기능을 모두 지원하지 않을 수 있습니다. 예를 들어 기본 보안 공급자에 사용 된 RSA 공개 키의 크기 지원 하지 않을 수 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 인증서입니다. 이 경우 기본 보안 공급자에서 오류가 발생하여 JDBC 드라이버가 연결을 종료합니다. 이 문제를 해결하려면 다음 중 하나를 수행하십시오.  
   
@@ -91,4 +89,3 @@ ms.lasthandoff: 09/09/2017
  [JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
-

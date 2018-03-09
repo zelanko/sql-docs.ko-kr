@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6b0cb350ffccb7ad61335de314765f2b85dc0821
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 49ff2aa300fc8f8e74424ae6e334bee823e8176c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>데이터베이스 범위 이름 자격 증명 (Transact SQL) 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -96,7 +94,7 @@ WITH IDENTITY = 'identity_name'
 ### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>1. 데이터베이스를 만드는 응용 프로그램에 대 한 자격 증명의 범위.
  다음 예에서는 라는 데이터베이스 범위 자격 증명 `AppCred`합니다. Windows 사용자를 포함 하는 데이터베이스 범위 자격 증명 `Mary5` 및 암호.  
   
-```tsql  
+```sql  
 -- Create a db master key if one does not already exist, using your own password.  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';  
   
@@ -108,7 +106,7 @@ GO
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>2. 공유 액세스 서명에 대 한 자격 증명의 범위는 데이터베이스 만들기.   
 다음 예제에서는 데이터베이스 범위 자격 증명을 만드는 데 사용할 수는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md), 작업을 수행할 수 있는 대량 작업을 같은 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). SQL Server, APS 또는 SQL DW에 PolyBase 사용 하 여 공유 액세스 서명에 사용할 수 없습니다.
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -120,7 +118,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 Azure 데이터 레이크 저장소 서비스 간 인증에 대 한 Azure Active Directory 응용 프로그램을 사용합니다.
 하십시오 [AAD 응용 프로그램을 만들려면](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) 하 고 데이터베이스 범위 자격 증명을 만들려면 하려고 하기 전에 client_id, OAuth_2.0_Token_EndPoint, 및 키를 문서화 합니다.
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
     IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'
@@ -139,4 +137,3 @@ WITH
  [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   
-

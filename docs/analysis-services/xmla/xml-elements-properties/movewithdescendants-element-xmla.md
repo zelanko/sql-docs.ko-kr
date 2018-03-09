@@ -2,45 +2,38 @@
 title: "MoveWithDescendants 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MoveWithDescendants Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MoveWithDescendants Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.movewithdescendants
 - http://schemas.microsoft.com/analysisservices/2003/engine#MoveWithDescendants
 - urn:schemas-microsoft-com:xml-analysis#MoveWithDescendants
-helpviewer_keywords:
-- MoveWithDescendants element
+helpviewer_keywords: MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f4a5712589c87c0301a7285083fda5f87c96aa6f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bdbacbaa6de4d175d5a1c0223a12a89911ba557a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="movewithdescendants-element-xmla"></a>MoveWithDescendants 요소(XMLA)
-  특성 멤버의 하위 항목의 부모에 의해 업데이트 되는지 여부를 나타냅니다. [업데이트](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) 명령입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]특성 멤버의 하위 항목의 부모에 의해 업데이트 되는지 여부를 나타냅니다. [업데이트](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|Boolean|  
 |기본값|False|  
@@ -66,7 +59,7 @@ ms.lasthandoff: 09/01/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **MoveWithDescendants** 요소 결정 여부는 **업데이트** 명령에서 식별 특성 멤버를 방금 업데이트 해서는 안는 [특성](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md) 요소인 하지만 또한 있는 해당 특성 멤버의 하위 항목도 업데이트 해야 합니다.  
@@ -80,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

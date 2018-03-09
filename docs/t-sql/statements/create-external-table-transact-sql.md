@@ -1,10 +1,13 @@
 ---
 title: "외부 테이블 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e9ee131e1c4bb09ae19c90d84b78a7d6fc662ae8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e9abb5affb76f0caac24e973928561939280ba40
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-external-table-transact-sql"></a>외부 테이블 (Transact SQL) 만들기
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Hadoop 클러스터 또는 Azure blob 저장소에 저장 된 데이터를 참조 하는 PolyBase 외부 테이블을 만듭니다. 에 대 한 외부 테이블을 만들려면 사용할 수도 있습니다 [탄력적 데이터베이스 쿼리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)합니다.  
   
@@ -135,15 +137,19 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ```  
   
 ## <a name="arguments"></a>인수  
- *a s e _* 합니다. [schema_name]입니다. | schema_name 합니다. ] *table_name*  
+ *database_name* . [ schema_name ] . | schema_name 합니다. ] *table_name*  
  1 ~ 3 년 부분 이름 만들 테이블의입니다. 따라서 외부 테이블에 대 한 테이블 메타 데이터 파일 및 또는 Hadoop 또는 Azure blob 저장소에서 참조 되는 폴더에 대 한 기본 통계와 함께 SQL에 저장 됩니다. 실제 데이터가 없는 옮겨졌거나에 저장 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
  \<column_definition > [,...  *n*  ] CREATE EXTERNAL TABLE이 하나 이상의 열 정의 허용 합니다. CREATE EXTERNAL TABLE과 CREATE TABLE 모두 열을 정의 하기 위한 동일한 구문을 사용 합니다. 이 예외를 외부 테이블에서 기본 제약 조건을 사용할 수 없습니다. 열 정 및 데이터 형식에 대 한 전체 세부 정보를 참조 하세요. [CREATE table&#40; Transact SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) 및 [Azure SQL 데이터베이스에 새 테이블 만들기](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)합니다.  
   
  열 정의 외부 파일의 데이터를 데이터 형식 및 열 개수를 포함 하 여 같아야 합니다. 불일치가 있을 경우에 실제 데이터를 쿼리할 때 파일 행 거부 됩니다.  
   
- 외부 데이터 원본에 대 한 파일 참조 하는 외부 테이블에 대 한 열 및 형식 정의가 외부 파일의 정확한 스키마에 매핑해야 합니다. Hadoop/Hive에 저장 된 데이터를 참조 하는 데이터 형식에 정의할 때 하이브 또는 SQL 데이터 형식에서 다음 매핑을 사용 하 고 여기에서 선택 하는 경우 SQL 데이터 형식으로 형식을 캐스팅 합니다. 유형은 별도 설명이 없으면 하이브의 모든 버전을 포함 합니다.  
-  
+ 외부 데이터 원본에 대 한 파일 참조 하는 외부 테이블에 대 한 열 및 형식 정의가 외부 파일의 정확한 스키마에 매핑해야 합니다. Hadoop/Hive에 저장 된 데이터를 참조 하는 데이터 형식에 정의할 때 하이브 또는 SQL 데이터 형식에서 다음 매핑을 사용 하 고 여기에서 선택 하는 경우 SQL 데이터 형식으로 형식을 캐스팅 합니다. 유형은 별도 설명이 없으면 하이브의 모든 버전을 포함 합니다.
+
+> [!NOTE]  
+>  SQL Server는 하이브를 지원 하지 않습니다 _무한대_ 변환의 데이터 값입니다. PolyBase는 데이터 형식 변환 오류와 함께 실패 합니다.
+
+
 |SQL 데이터 형식|.NET 데이터 형식|하이브 데이터 형식|Hadoop/Java 데이터 형식|설명|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|부호 없는 숫자입니다.|  
@@ -155,20 +161,20 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |real|단일|float|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
 |smallmoney|Decimal|double|DoubleWritable||  
-|nchar|문자열<br /><br /> Char]|string|text||  
-|nvarchar|문자열<br /><br /> Char]|string|텍스트||  
-|char|문자열<br /><br /> Char]|string|텍스트||  
-|varchar|문자열<br /><br /> Char]|string|텍스트||  
-|binary|Byte[]|binary|BytesWritable|하이브 0.8 이상에 적용 됩니다.|  
-|varbinary|Byte[]|binary|BytesWritable|하이브 0.8 이상에 적용 됩니다.|  
-|date|DateTime|timestamp|TimestampWritable||  
-|smalldatetime|DateTime|timestamp|TimestampWritable||  
-|datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
+|NCHAR|문자열<br /><br /> Char[]|string|text||  
+|nvarchar|문자열<br /><br /> Char[]|string|텍스트||  
+|char|문자열<br /><br /> Char[]|string|텍스트||  
+|varchar|문자열<br /><br /> Char[]|string|텍스트||  
+|BINARY|Byte[]|BINARY|BytesWritable|하이브 0.8 이상에 적용 됩니다.|  
+|varbinary|Byte[]|BINARY|BytesWritable|하이브 0.8 이상에 적용 됩니다.|  
+|date|과 같이 지원되는|timestamp|TimestampWritable||  
+|smalldatetime|과 같이 지원되는|timestamp|TimestampWritable||  
+|datetime2|과 같이 지원되는|timestamp|TimestampWritable||  
+|datetime|과 같이 지원되는|timestamp|TimestampWritable||  
 |time|TimeSpan|timestamp|TimestampWritable||  
 |decimal|Decimal|decimal|BigDecimalWritable|이상 Hive0.11에 적용 됩니다.|  
   
- 위치 = '*folder_or_filepath*'  
+ LOCATION =  '*folder_or_filepath*'  
  Hadoop 또는 Azure blob 저장소의 폴더 또는 파일 경로 실제 데이터에 대 한 파일 이름을 지정합니다. 위치에서 루트 폴더에서 시작 됩니다. 루트 폴더에는 외부 데이터 원본에 지정 된 데이터 위치입니다.  
   
  위치를 폴더 수를 지정 하는 경우 외부 테이블에서 선택 하는 PolyBase 쿼리 폴더와 모든 하위 폴더에서 파일을 검색 합니다. Hadoop, 마찬가지로 PolyBase는 숨겨진된 폴더를 반환 하지 않습니다. 파일을 파일 이름은 밑줄 (_) 또는 마침표 (.)로 시작 반환 하지 않습니다.  
@@ -291,6 +297,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   CREATE TABLE 및 DROP TABLE  
   
 -   CREATE STATISTICS 및 통계 삭제  
+참고: 만들기 및 Azure SQL 데이터베이스에서 외부 테이블에서 DROP STATISTICS를 사용할 수 없습니다. 
   
 -   보기 만들기 및 DROP VIEW  
   
@@ -361,7 +368,7 @@ WITH (
   
 CREATE EXTERNAL FILE FORMAT myfileformat_rc  
 WITH (  
-    FORMAT = RCFILE,  
+    FORMAT_TYPE = RCFILE,  
     SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
 )  
 ;  
@@ -469,102 +476,7 @@ WITH
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="h-create-an-external-table-with-data-in-text-delimited-format"></a>8. 구분 된 텍스트 형식에서 데이터가 포함 된 외부 테이블 만들기  
- 이 예제에서는 외부 텍스트 구분 파일에서 서식이 지정 된 데이터가 있는 테이블을 만드는 데 필요한 모든 단계를 보여 줍니다. 외부 데이터 원본 mydatasource 및 외부 파일 형식 myfileformat를 정의합니다. 이러한 서버 수준 개체는 CREATE EXTERNAL TABLE 문에서 다음 참조 됩니다. 자세한 내용은 참조 [외부 데이터 원본 만들기 &#40; Transact SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [외부 파일 형식 만들기 &#40; Transact SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat  
-WITH (  
-    FORMAT_TYPE = DELIMITEDTEXT,   
-    FORMAT_OPTIONS (FIELD_TERMINATOR ='|')  
-);  
-  
-CREATE EXTERNAL TABLE ClickStream (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee.tbl',  
-        DATA_SOURCE = mydatasource,  
-        FILE_FORMAT = myfileformat  
-    )  
-;  
-  
-```  
-  
-### <a name="i-create-an-external-table-with-data-in-rcfile-format"></a>9. RCFile 형식에서 데이터가 포함 된 외부 테이블 만들기  
- 이 예에서는 데이터 RCFiles 서식이 포함 된 외부 테이블을 만드는 데 필요한 모든 단계를 보여 줍니다. 외부 데이터 원본 mydatasource_rc 및 외부 파일 형식 myfileformat_rc를 정의합니다. 이러한 서버 수준 개체는 CREATE EXTERNAL TABLE 문에서 다음 참조 됩니다. 자세한 내용은 참조 [외부 데이터 원본 만들기 &#40; Transact SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [외부 파일 형식 만들기 &#40; Transact SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_rc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_rc  
-WITH (  
-    FORMAT = RCFILE,  
-    SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_rc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee_rc.tbl',  
-        DATA_SOURCE = mydatasource_rc,  
-        FILE_FORMAT = myfileformat_rc  
-    )  
-;  
-  
-```  
-  
-### <a name="j-create-an-external-table-with-data-in-orc-format"></a>10. ORC 형식에서 데이터가 포함 된 외부 테이블 만들기  
- 이 예에서는 외부 테이블 형식의 데이터 항목이 자기 ORC 파일을 만드는 데 필요한 모든 단계를 보여 줍니다. 외부 데이터 원본 mydatasource_orc 및 외부 파일 형식 myfileformat_orc를 정의합니다. 이러한 서버 수준 개체는 CREATE EXTERNAL TABLE 문에서 다음 참조 됩니다. 자세한 내용은 참조 [외부 데이터 원본 만들기 &#40; Transact SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [외부 파일 형식 만들기 &#40; Transact SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_orc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_orc  
-WITH (  
-    FORMAT = ORC,  
-    COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_orc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/',  
-        DATA_SOURCE = mydatasource_orc,  
-        FILE_FORMAT = myfileformat_orc  
-    )  
-;  
-  
-```  
-  
-### <a name="k-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>11. Azure에 ADLS에서 데이터 가져오기[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="h-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>8. Azure에 ADLS에서 데이터 가져오기[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
  
   
 ```  
@@ -610,7 +522,7 @@ AS SELECT * FROM
      
 ```  
   
-### <a name="l-join-external-tables"></a>12. 외부 테이블을 조인  
+### <a name="i-join-external-tables"></a>9. 외부 테이블을 조인  
   
 ```  
 SELECT url.description  
@@ -620,7 +532,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 ;  
 ```  
   
-### <a name="m-join-hdfs-data-with-pdw-data"></a>13. PDW 데이터로 HDFS 데이터 조인  
+### <a name="j-join-hdfs-data-with-pdw-data"></a>10. PDW 데이터로 HDFS 데이터 조인  
   
 ```  
 SELECT cs.user_ip FROM ClickStream cs  
@@ -630,7 +542,7 @@ WHERE cs.url = 'www.microsoft.com'
   
 ```  
   
-### <a name="n-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>14. HDFS에서 행 데이터를 분산된 PDW 테이블 가져오기  
+### <a name="k-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>11. HDFS에서 행 데이터를 분산된 PDW 테이블 가져오기  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -639,7 +551,7 @@ AS SELECT url, event_date, user_ip FROM ClickStream
 ;  
 ```  
   
-### <a name="o-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>15. HDFS에서 복제 된 PDW 테이블 행 데이터 가져오기  
+### <a name="l-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>12. HDFS에서 복제 된 PDW 테이블 행 데이터 가져오기  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -657,7 +569,6 @@ FROM ClickStream
  [TABLE AS SELECT &#40; 만들기 Azure SQL 데이터 웨어하우스 &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
   
   
-
 
 
 

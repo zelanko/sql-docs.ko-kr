@@ -2,15 +2,13 @@
 title: "AllowDuplicateNames 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AllowDuplicateNames Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45beca28a1a17afdf7645d8a42cbab519e51373e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30f5b3a7020772d3d9c0e1dbef2c40dc5114cc7d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="allowduplicatenames-element-assl"></a>AllowDuplicateNames 요소(ASSL)
-  중복 이름이 허용 되는지 여부를 결정 한 [계층](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]중복 이름이 허용 되는지 여부를 결정 한 [계층](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|Boolean|  
 |기본값|**True**|  
@@ -58,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  부모에 해당 하는 요소 **AllowDuplicateNames** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Hierarchy>합니다.  

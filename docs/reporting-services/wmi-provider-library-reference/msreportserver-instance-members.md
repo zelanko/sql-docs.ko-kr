@@ -2,33 +2,30 @@
 title: "MSReportServer_Instance 멤버 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- MSReportServer_Instance Members
-apilocation:
-- reportingservices.mof
+apiname: MSReportServer_Instance Members
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- MSReportServer_Instance class
+helpviewer_keywords: MSReportServer_Instance class
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
-caps.latest.revision: 22
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "22"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4858da330363297a88c6bcde441b26e5eb384a57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f730c67bfe4fd08a9289d5466d8579acc8cf045f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="msreportserverinstance-members"></a>MSReportServer_Instance 멤버
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  
@@ -51,4 +48,3 @@ ms.lasthandoff: 08/09/2017
 |[GetReportServerUrls 메서드&#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|사용자가 보고서 서버 및 보고서 관리자에 액세스하는 데 사용할 수 있는 URL을 나열합니다.|  
   
   
-

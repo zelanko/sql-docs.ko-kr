@@ -2,27 +2,30 @@
 title: "바로 가기 키 구성표 선택 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ccdd4b9f6b850d4cb88232e52fe00a84241c2db
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3b3a5045ed02175591b1e0d6272a88b3cfd3d152
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-6---select-the-keyboard-shortcut-scheme"></a>1-6단원 - 바로 가기 키 구성표 선택
-표준 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 키보드 구성표 대신 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 구성하여 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]과 호환되는 키보드 구성표를 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 표준 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 키보드 구성표 대신 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 구성하여 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]과 호환되는 키보드 구성표를 사용할 수 있습니다.  
   
 ## <a name="changing-to-the-includevsdev10longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>[!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 키보드 구성표로 변경  
   

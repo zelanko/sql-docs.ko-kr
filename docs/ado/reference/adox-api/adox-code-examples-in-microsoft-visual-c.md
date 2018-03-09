@@ -3,7 +3,7 @@ title: "Microsoft Visual c + +의에서 ADOX 코드 예제 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 77b07593f8bfe98cf58c8a5a591e8f76df3f4df4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cae03e9ba39212f0a8052089befd3874b08d0267
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual c + +의에서 ADOX 코드 예제
 이러한 항목 ADOX를 사용 하는 방법을 이해 하는 예제 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual c + +를 사용 하 여 기록 됩니다.  
@@ -88,4 +87,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="collections"></a>컬렉션  
   
 -   [Parameters 컬렉션, Command 속성 예제(VC++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)
-

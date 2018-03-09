@@ -2,15 +2,13 @@
 title: "테이블 형식 모델 개체 수준 보안 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: 
@@ -20,18 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 73424406508608226cbf30fa0271aa747dbf9101
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed695cd15d9e0622ff28ed449395f0684b2cf9f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-level-security"></a>개체 수준 보안
-
-[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
-
-데이터 모델 보안을 효과적으로 구현 하 여 시작 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md) 및 행 수준 필터를 데이터 모델 개체 및 데이터에 사용자 권한을 정의 합니다. 테이블 형식 1400 모델 부터는 정의할 수도 있습니다 테이블 수준 보안 및 열 수준 보안을 포함 하는 개체 수준 보안은 [역할 개체](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)합니다.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]데이터 모델 보안을 효과적으로 구현 하 여 시작 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md) 및 행 수준 필터를 데이터 모델 개체 및 데이터에 사용자 권한을 정의 합니다. 테이블 형식 1400 모델 부터는 정의할 수도 있습니다 테이블 수준 보안 및 열 수준 보안을 포함 하는 개체 수준 보안은 [역할 개체](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)합니다.
 
 ## <a name="table-level-security"></a>테이블 수준 보안
 
@@ -84,7 +78,7 @@ ms.lasthandoff: 09/01/2017
   }
 ```
 
-## <a name="restrictions"></a>제한 사항
+## <a name="restrictions"></a>Restrictions
 
 *  관계 체인을 중단 하는 경우 모델에 대 한 테이블 수준 보안을 설정할 수 없습니다. 디자인 타임에 오류가 발생 합니다.
  예를 들어 테이블 A 및 B, 및 B와 C 간의 관계가 있는 경우 표 2. 보호할 수 없습니다. 표 A에 대 한 쿼리 테이블 A와 B 및 B, C. 간의 관계를 통과 없습니다 테이블 B를 보호 하는 경우 이 경우 테이블 A와 B. 간에 별도 관계는 구성할 수 없습니다.
@@ -103,9 +97,8 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="see-also"></a>관련 항목:  
 [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
-[역할 개체 TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
+[역할 개체(TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
 [TMSL(Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
 [테이블 형식 개체 모델 (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)합니다.
 
   
-

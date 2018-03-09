@@ -25,17 +25,16 @@ helpviewer_keywords:
 - IN keyword
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 70b186107966791e29ccb76ea9c310724b76e3b6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 86d03b96015869efb8ff2ab873b1c838c50387f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="in-transact-sql"></a>IN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +55,7 @@ test_expression [ NOT ] IN
  *test_expression*  
  유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)합니다.  
   
- *하위 쿼리*  
+ *subquery*  
  하나의 열로 구성된 결과 집합을 갖는 하위 쿼리입니다. 이 열에 동일한 데이터 형식으로 되어 있어야 *test_expression*합니다.  
   
  *식*[ **,**... *n* ]  
@@ -223,7 +222,6 @@ WHERE FirstName IN ('Mike', 'Michael');
  [일부 &#124; 모든 &#40; Transact SQL &#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
   
   
-
 
 
 

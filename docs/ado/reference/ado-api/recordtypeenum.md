@@ -3,7 +3,7 @@ title: RecordTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - RecordTypeEnum enumeration [ADO]
 ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bad37453f9bd6c4ca0f76c610c2f5f328f8f87ac
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bc1723621796d349d393826ff948e9dd295bbaf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 유형을 지정 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adSimpleRecord**|0|나타냅니다는 *간단한* record (자식 노드를 포함 하지 않습니다).|  
 |**adCollectionRecord**|1.|나타냅니다는 *컬렉션* record (자식 노드 포함).|  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>적용 대상  
  [RecordType 속성(ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)
-

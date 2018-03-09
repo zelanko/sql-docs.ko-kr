@@ -2,36 +2,31 @@
 title: "개체 명명 규칙 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [Analysis Services], naming
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 116ee643ee52c3bdb8c5b6188ba5198afc24265d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
-  이 항목에서는 개체 명명 규칙과 함께 개체 이름 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 코드 또는 스크립트에 사용할 수 없는 예약어 및 예약 문자에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]예약 된 단어 뿐만 아니라 개체 명명 규칙에 설명 하는이 항목에 사용할 수 없는 코드에서 이름 개체 또는 스크립트 및 문자에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   
 ##  <a name="bkmk_Names"></a>명명 규칙  
  모든 개체에는 부모 컬렉션 범위 내에 고유해야 하는 **Name** 및 **ID** 속성이 있습니다. 예를 들어 두 차원은 각각이 다른 데이터베이스에 상주하는 한 같은 이름을 가질 수 있습니다.  
@@ -77,7 +72,7 @@ ms.lasthandoff: 09/01/2017
   
  다음 표에서는 개체별로 유효하지 않은 문자열 보여 줍니다.  
   
-|개체|유효하지 않은 문자|  
+|Object|유효하지 않은 문자|  
 |------------|------------------------|  
 |**Server**|서버 개체 이름을 지정할 대 Windows 서버 명명 규칙을 따르십시오. 자세한 내용은 [명명 규칙(Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) 을 참조하십시오.|  
 |**DataSource**|: / \ * &#124; ? " () [] {} <>|  
@@ -91,9 +86,9 @@ ms.lasthandoff: 09/01/2017
   
 |서버 모드 및 데이터베이스 호환성 수준|예약 문자 허용 여부|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP(모든 버전)|아니요|  
-|테이블 형식 - 1050|아니요|  
-|테이블 형식 - 1100|아니요|  
+|MOLAP(모든 버전)|아니오|  
+|테이블 형식 - 1050|아니오|  
+|테이블 형식 - 1100|아니오|  
 |테이블 형식 – 1130 이상|예|  
   
  데이터베이스 기본 ModelType을 가질 수 있습니다. 기본값은 다차원과 같으므로 열 이름에 예약 문자를 사용할 수 없습니다.  
@@ -104,4 +99,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis 호환성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
   
   
-

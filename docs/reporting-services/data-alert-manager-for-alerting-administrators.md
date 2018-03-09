@@ -1,30 +1,30 @@
 ---
-title: "경고 관리자에 대 한 데이터 경고 관리자 | Microsoft Docs"
+title: "경고 담당자용 데이터 경고 관리자 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-caps.latest.revision: 22
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "22"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: db92638d0dc02085e238a4702daa933dd8691107
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>경고 담당자를 위한 데이터 경고 관리자입니다.
 
@@ -32,12 +32,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services 데이터 경고를 관리 하려면 SharePoint 경고 관리자에 대 한 데이터 경고 관리자를 제공 합니다. 경고 담당자는 사이트에 저장된 모든 경고에 대한 정보를 보고, 경고를 삭제할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 SharePoint 경고 담당자가 사용할 수 있는 기능을 보여 줍니다.
+SQL Server Reporting Services는 데이터 경고를 관리할 수 있도록 SharePoint 경고 담당자를 위한 데이터 경고 관리자를 제공합니다. 경고 담당자는 사이트에 저장된 모든 경고에 대한 정보를 보고, 경고를 삭제할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 SharePoint 경고 담당자가 사용할 수 있는 기능을 보여 줍니다.
 
-![경고 관리자 SharePoin 경고 관리자에 대 한](../reporting-services/media/rs-alertmanagersite.gif "SharePoint 사이트 관리자에 대 한 경고 관리자")
+![SharePoint 사이트 관리자용 경고 관리자](../reporting-services/media/rs-alertmanagersite.gif "SharePoint 사이트 관리자용 경고 관리자")
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
  사이트가 데이터 경고 기능을 사용하도록 설정된 경우 MyDataAlerts.aspx 및 SiteDataAlerts.aspx라는 두 SharePoint 페이지가 만들어지고 SharePoint 사이트에 추가됩니다. SiteDataAlerts.aspx는 경고 담당자를 위한 데이터 경고 관리자입니다. 경고 담당자는 사이트 설정 SharePoint 페이지에서 데이터 경고 관리자를 열 수 있습니다. 데이터 경고 관리자를 열려면 경고 담당자에게 SharePoint 경고 관리 권한이 있어야 합니다.  
   
@@ -51,7 +51,7 @@ SQL Server Reporting Services 데이터 경고를 관리 하려면 SharePoint �
 ##  <a name="ViewingAlerts"></a> 데이터 경고 정보 보기  
  SharePoint에 Reporting Services가 설치 및 구성되면 사이트 설정 SharePoint 페이지에 **Reporting Services** 옵션이 포함됩니다. 경고 담당자는 Reporting Service 내에서 **데이터 경고 관리** 옵션을 클릭하여 데이터 경고 관리자를 열 수 있습니다. 다음 그림에서는 사이트 설정 페이지에서 데이터 경고 관리자를 여는 방법을 보여 줍니다.  
   
- ![사이트 설정 페이지의 reporting Services 섹션](../reporting-services/media/rs-sitesettings.gif "사이트 설정 페이지의 Reporting Services 섹션")  
+ ![사이트 설정 페이지의 Reporting Services 섹션](../reporting-services/media/rs-sitesettings.gif "사이트 설정 페이지의 Reporting Services 섹션")  
   
  데이터 경고 관리자에는 경고 이름, 보고서 이름, 경고 소유자 이름, 경고 메시지를 보낸 횟수, 경고가 마지막으로 실행된 시간, 경고 정의가 마지막으로 수정된 시간 및 경고 메시지 상태를 나열하는 테이블이 포함되어 있습니다. 경고를 생성하거나 보낼 수 없으면 상태 열에 오류에 대한 정보가 포함되어 경고 문제를 해결하도록 돕습니다. 자세한 내용은 [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)을(를) 참조하세요.  
   
@@ -61,7 +61,7 @@ SQL Server Reporting Services 데이터 경고를 관리 하려면 SharePoint �
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|마지막 경고가 성공적으로 실행되고 경고가 전송되었습니다.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|마지막 경고가 성공적으로 실행되었지만 데이터가 변경되지 않아서 경고를 보내지 않았습니다.|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<오류 메시지 > 로그 파일의 오류에 대 한 자세한 정보를 포함 합니다. 식별자와 함께 로그 항목을 참조: \<GUID > 합니다.|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<오류 메시지>로그 파일에 오류에 대한 자세한 내용이 포함되어 있습니다. 식별자가 포함된 로그 항목을 참조하세요. \<GUID>|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|경고를 만들었습니다.|  
   
  자세한 내용은 [데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)를 참조하세요.  
@@ -82,9 +82,8 @@ SQL Server Reporting Services 데이터 경고를 관리 하려면 SharePoint �
   
 -   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

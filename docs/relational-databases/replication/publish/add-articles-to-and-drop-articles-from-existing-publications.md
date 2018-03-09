@@ -2,9 +2,12 @@
 title: "기존 게시에 대한 아티클 추가 및 삭제 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fea1fa67796e56359eed3bb7bfd9746a48f18cf5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 082b20b502afb8201ab63db204bf0fff25e17c66
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>기존 게시에 대한 아티클 추가 및 삭제
-  게시가 생성된 후에는 아티클을 추가 및 삭제할 수 있습니다. 아티클 추가 작업은 언제든지 수행할 수 있지만 아티클 삭제에 필요한 동작은 복제 유형과 아티클 삭제 시기에 따라 다릅니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 게시가 생성된 후에는 아티클을 추가 및 삭제할 수 있습니다. 아티클 추가 작업은 언제든지 수행할 수 있지만 아티클 삭제에 필요한 동작은 복제 유형과 아티클 삭제 시기에 따라 다릅니다.  
   
 ## <a name="adding-articles"></a>아티클 추가  
  아티클을 추가하려면 아티클을 게시에 추가하고, 게시에 대한 새 스냅숏을 만들고, 구독을 동기화하여 새 아티클에 대한 스키마 및 데이터를 적용해야 합니다.  
@@ -87,7 +90,7 @@ ms.lasthandoff: 11/09/2017
  > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] 서비스 팩 2** 이상 및 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 서비스 팩 1** 이상에서는 트랜잭션 복제에 참여하는 아티클에 대한 **DROP TABLE** DLL 명령을 사용한 테이블 삭제를 지원합니다. 게시에서 DROP TABLE DDL이 지원되면 DROP TABLE 작업은 게시 및 데이터베이스에서 테이블을 삭제합니다. 로그 판독기 에이전트는 삭제된 테이블의 배포 데이터베이스에 대해 정리 명령을 게시하고 게시자 메타데이터를 정리합니다. 로그 판독기가 삭제된 테이블을 참조하는 일부 로그 레코드를 처리하지 않은 경우에는 삭제된 테이블과 연결된 새 명령을 무시합니다. 이미 처리된 레코드는 배포 데이터베이스로 전달됩니다. 로그 판독기가 오래된(삭제된) 아티클을 정리하기 전에 배포 에이전트가 이 레코드를 처리할 경우 이 레코드는 구독자 데이터베이스에 적용될 수 있습니다. 모든 트랜잭션 복제 게시에 대한 **기본** 설정은 DROP TABLE DLL을 지원하지 않는 것입니다. [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)에서 이 향상된 기능을 자세히 설명합니다.
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [게시 데이터베이스의 스키마 변경](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  

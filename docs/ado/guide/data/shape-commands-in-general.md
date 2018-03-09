@@ -3,7 +3,7 @@ title: "셰이프 일반적 명령 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fb85b1f835f494e7f86e69d25ed225ce4c605e55
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 245f842883ec0be1ac92ad58ea75b4cdef7d9cb3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-commands-in-general"></a>일반적으로 shape 명령
 모양의의 열을 정의 데이터 셰이핑 **레코드 집합**, 열 및는 방식을 나타내는 엔터티 사이의 관계는 **레코드 집합** 데이터로 채워집니다.  
@@ -64,4 +63,3 @@ ms.lasthandoff: 09/09/2017
 -   [집계 함수, CALC 함수 및 NEW 키워드](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)  
   
 -   [기본 데이터 공급자에 명령 발급](../../../ado/guide/data/issuing-commands-to-the-underlying-data-provider.md)
-

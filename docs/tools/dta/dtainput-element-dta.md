@@ -2,9 +2,12 @@
 title: "DTAInput 요소 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: DTAInput element
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01ce41754770e58ae35e5c1ca6c1d94dab4d5fb1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2ac4b1252abed4d02100e3891cdc2a22e4c3854e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 요소(DTA)
-  데이터베이스 엔진 튜닝 관리자에 대한 XML 입력의 정의를 포함합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]데이터베이스 엔진 튜닝 관리자 XML 입력의 정의 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,8 +50,8 @@ ms.lasthandoff: 11/09/2017
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[DTAXML 요소&#40;DTA&#41;](../../tools/dta/dtaxml-element-dta.md)|  
-|**자식 요소**|[Server 요소&#40;DTA&#41;](../../tools/dta/server-element-dta.md)<br /><br /> [Workload 요소&#40;DTA&#41;](../../tools/dta/workload-element-dta.md)<br /><br /> [TuningOptions 요소&#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Configuration 요소&#40;DTA&#41;](../../tools/dta/configuration-element-dta.md)|  
+|**부모 요소**|[DTAXML 요소 &#40; DTA &#41;](../../tools/dta/dtaxml-element-dta.md)|  
+|**자식 요소**|[Server 요소 &#40; DTA &#41;](../../tools/dta/server-element-dta.md)<br /><br /> [Workload 요소 &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)<br /><br /> [TuningOptions 요소 &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Configuration 요소 &#40; DTA &#41;](../../tools/dta/configuration-element-dta.md)|  
   
 ## <a name="remarks"></a>주의  
  이 요소는 데이터베이스 엔진 튜닝 관리자 입력 스키마 계층의 루트입니다. 데이터베이스 엔진 튜닝 관리자에 대한 입력은 튜닝할 데이터베이스가 있는 서버, 작업, 튜닝 옵션 또는 사용자 지정 구성을 지정하는 인수가 될 수 있습니다.  

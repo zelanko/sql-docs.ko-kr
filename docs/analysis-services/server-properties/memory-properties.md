@@ -1,15 +1,14 @@
 ---
 title: "메모리 속성 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/17/2016
-ms.prod: sql-non-specified
+ms.date: 01/23/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,24 +25,26 @@ helpviewer_keywords:
 - HighMemoryPrice property
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 15e0fc6fa123fd4d9ca71f35804d2f06d0342b5a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a26f0b5272c12e45ed1bf99c0d297fa7f89773ae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="memory-properties"></a>메모리 속성
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 은 요청을 즉시 처리할 수 있도록 시작 시 적절한 메모리 양을 사전 할당합니다. 쿼리 및 처리 작업이 증가함에 따라 추가 메모리가 할당됩니다. 
   
   구성 설정을 지정하여 메모리가 해제되는 임계값을 제어할 수 있습니다. 예를 들어 **HardMemoryLimit** 설정은 더 많은 리소스를 사용할 수 있을 때까지 새로운 요청이 완전히 거부되는 자체 부과된 메모리 부족 조건을 지정합니다(기본적으로 이 임계값은 사용되지 않음).
+
+최대 메모리 버전별 Analysis Services 인스턴스 당 사용량에 대 한 자세한 참조 [버전 및 SQL Server의 지원 되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)합니다.
   
- **적용 대상:** 다차원 및 테이블 형식 서버 모드(다르게 표시되지 않은 경우)  
+ 다음 설정은 별도로 언급 하지 않는 한 두 다차원 모델과 테이블 형식 서버 모드에 적용 됩니다.  
  
 ## <a name="default-memory-configuration"></a>기본 메모리 구성
 
@@ -110,7 +111,7 @@ HardMemoryLimit | Analysis Services가 메모리 압력으로 인해 완전히 �
 **-1** | (기본값) 자동. 사용할 항목을 엔진이 결정합니다.
 **1** | Analysis Services 힙
 **2** | Windows LFH
-**5** | 하이브리드 할당자. 이 할당자에 대 한 Windows LFH ´ ֲ \<16KB 할당 및에 대 한 AS 힙 = > 16KB 할당 합니다. 
+**5** | 하이브리드 할당자. 이 할당자에 대 한 Windows LFH \<16KB 할당 및에 대 한 AS 힙 = > 16KB 할당 합니다. 
 **6** | Intel TBB 할당자. SQL Server 2016 SP1 이상 Analysis Services에서 사용할 수 있습니다.
   
   
@@ -148,6 +149,3 @@ HardMemoryLimit | Analysis Services가 메모리 압력으로 인해 완전히 �
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
-  [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)
-  
-

@@ -1,30 +1,29 @@
 ---
 title: "Linux에서 SQL Server로 데이터베이스 마이그레이션 | Microsoft Docs"
-description: "이 항목에서는 Linux에서 데이터를 SQL Server 및 데이터베이스 마이그레이션에 대 한 다양 한 옵션을 설명 합니다."
+description: "이 문서는 Linux에서 데이터를 SQL Server 및 데이터베이스 마이그레이션에 대 한 다양 한 옵션을 설명합니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
+ms.openlocfilehash: 18970e7a18f635dbceac9fbbaa8b2d26aef7df94
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3e29e84d1aa2fcae2dca2d36bd0e3698eedc54a8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Linux에서 SQL Server로 데이터베이스와 구조적된 데이터 마이그레이션 
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 에 SQL Server 2017 Linux에서 실행 중인 데이터베이스 및 데이터를 마이그레이션할 수 있습니다. 사용 하도록 선택 하면 원본 데이터 및 특정 시나리오에 따라 다릅니다. 다음 섹션에서는 다양 한 마이그레이션 시나리오에 대 한 유용한 정보를 제공 합니다.
 
@@ -53,4 +52,3 @@ SQL Server 2017 linux를 다른 데이터베이스 시스템에서 데이터베�
 
 - [Bcp 사용 하 여 대량 복사 데이터](sql-server-linux-migrate-bcp.md)
 - [추출, 변환 및 SSIS와 Linux에서 SQL Server에 대 한 데이터를 로드 합니다.](sql-server-linux-migrate-ssis.md) 
-

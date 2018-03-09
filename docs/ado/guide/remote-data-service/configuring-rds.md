@@ -3,7 +3,7 @@ title: "RDS 구성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 20684885a5c43cbd04c1c6551b21da3ed61e6393
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b286453eff33e6e3c61ee73bfe4907189da1ed16
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configuring-rds"></a>RDS 구성
 > [!IMPORTANT]
@@ -55,6 +54,5 @@ ms.lasthandoff: 09/09/2017
  [관련된 기술 RDS를 사용 하 여](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS 문제 해결](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
-
 
 

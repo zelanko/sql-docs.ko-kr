@@ -26,16 +26,14 @@
 ## [병렬 인덱스 작업 구성](configure-parallel-index-operations.md)  
 ## [인덱스 속성 F1 도움말](index-properties-f1-help.md)  
 
-
-
 # columnstore 인덱스
 ## [개요](columnstore-indexes-overview.md)  
-## [아키텍처](columnstore-indexes-architecture.md)  
+## [아키텍처](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)  
 ## [디자인 지침](columnstore-indexes-design-guidance.md)  
 ## [데이터 로드 지침](columnstore-indexes-data-loading-guidance.md)  
 ## [새로운 기능](columnstore-indexes-what-s-new.md)  
 ## [쿼리 성능](columnstore-indexes-query-performance.md)  
 ## [실시간 운영 분석](get-started-with-columnstore-for-real-time-operational-analytics.md)  
-## [데이터 웨어하우스 데이터 웨어하우스](columnstore-indexes-data-warehouse.md)  
+## [Data Warehouse](columnstore-indexes-data-warehouse.md)  
 ## [조각 모음](columnstore-indexes-defragmentation.md)  
 

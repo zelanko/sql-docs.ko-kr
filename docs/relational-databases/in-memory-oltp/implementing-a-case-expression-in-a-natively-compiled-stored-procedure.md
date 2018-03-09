@@ -1,7 +1,7 @@
 ---
-title: "고유하게 컴파일된 저장 프로시저에서 CASE 식 구현 | Microsoft Docs"
+title: "고유하게 컴파일된 저장 프로시저에서 CASE 식 구현 | Microsoft 문서"
 ms.custom: 
-ms.date: 04/24/2017
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -13,22 +13,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: 8
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6419acc6380b15d289d3ac3602d6a28c0fc5c75b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>고유하게 컴파일된 저장 프로시저에서 CASE 식 구현
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  CASE 식은 고유하게 컴파일된 저장 프로시저에서 지원됩니다. 다음 예제에서는 쿼리에서 CASE 식을 사용하는 방법을 보여 줍니다. 고유하게 컴파일된 모듈의 CASE 식에 대해 설명된 해결 방법은 더 이상 필요하지 않습니다.
+**적용 대상:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] 및 SQL Server 이상 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+
+CASE 식은 고유하게 컴파일된 T-SQL 모듈에서 지원됩니다. 다음 예제에서는 쿼리에서 CASE 식을 사용하는 방법을 보여 줍니다. 
 
 ``` 
 -- Query using a CASE expression in a natively compiled stored procedure.
@@ -47,12 +48,11 @@ GO
   
 EXEC dbo.usp_SOHOnlineOrderResult  
 GO  
-```  
+``` 
 
+**적용 대상:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 및 SQL Server 이상 [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
-
-  CASE 식은 고유하게 컴파일된 저장 프로시저에서 지원되지 *않습니다* . 다음 예제에서는 고유하게 컴파일된 저장 프로시저에서 CASE 식의 기능을 구현하는 방법을 보여 줍니다.  
+  CASE 식은 고유하게 컴파일된 T-SQL 모듈에서 지원되지 *않습니다*. 다음 예제에서는 고유하게 컴파일된 저장 프로시저에서 CASE 식의 기능을 구현하는 방법을 보여 줍니다.  
   
  코드 샘플은 테이블 변수를 사용하여 단일 결과 집합을 생성합니다. 이것은 제한된 수의 행을 처리하는 경우 데이터 행의 추가 복사본을 만들어야 하기 때문에 적절합니다.  
   
@@ -112,4 +112,3 @@ GO
  [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
-

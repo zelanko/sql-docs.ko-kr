@@ -3,8 +3,11 @@ title: "열 속성(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2927394b094a21e5e854f28974387e61fb31c0f4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3605540ac694a2597e607428d5928d42f42ce14b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
-열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
   
 > [!NOTE]  
 > 이 항목의 속성은 사전순 대신 범주별로 정렬됩니다.  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 **이름**  
 열의 이름을 표시합니다.  
   
-**데이터베이스**  
+**데이터베이스 백업**  
 선택한 열에 대한 데이터 원본의 이름을 표시합니다. OLE DB에만 적용됩니다.  
   
 **기타 범주**  
@@ -71,7 +74,7 @@ ID 열에 대한 테이블의 첫 번째 행에 할당된 초기값을 표시합
 **Null 허용**  
 열에 Null 값이 허용되는지 여부를 표시합니다.  
   
-**전체 자릿수**  
+**정밀도**  
 숫자 데이터 형식에 허용되는 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
 **소수 자릿수**  
@@ -128,7 +131,7 @@ ID 열에 대한 테이블의 첫 번째 행에 할당된 초기값을 표시합
 **압축 데이터 형식**  
 필드의 데이터 형식에 대한 정보를 SQL CREATE TABLE 문과 동일한 형식으로 표시합니다. 예를 들어 최대 길이가 20자인 가변 길이 문자열을 포함하는 필드는 "varchar(20)"으로 나타납니다. 이 속성을 변경하려면 직접 값을 입력합니다.  
   
-**Description**  
+**설명**  
 열에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
   
 **전체 텍스트 사양 범주**  

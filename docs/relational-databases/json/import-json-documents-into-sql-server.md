@@ -1,10 +1,9 @@
 ---
-title: "SQL Server에 JSON 문서 가져오기 | Microsoft Docs"
+title: "SQL Server에 JSON 문서 가져오기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -13,17 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e88356f3f8de8ba463b945c5806ea3cbed14bf2c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 95489b4e72f1321f7e1139f06040eb81a5956b15
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,7 +73,7 @@ END
 ```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Azure File Storage에서 JSON 문서 가져오기
-위에서 설명한 대로 OPENROWSET(BULK)을 사용하여 SQL Server가 액세스할 수 있는 다른 파일 위치에서 JSON 파일을 읽을 수도 있습니다. 예를 들어 Azure File Storage는 SMB 프로토콜을 지원합니다. 따라서 다음 절차에 따라 Azure File Storage 공유에 로컬 가상 드라이브를 매핑할 수 있습니다.
+위에서 설명한 대로 OPENROWSET(BULK)을 사용하여 SQL Server가 액세스할 수 있는 파일 위치에서 JSON 파일을 읽을 수도 있습니다. 예를 들어 Azure File Storage는 SMB 프로토콜을 지원합니다. 따라서 다음 절차에 따라 Azure File Storage 공유에 로컬 가상 드라이브를 매핑할 수 있습니다.
 1.  Azure Portal 또는 Azure PowerShell을 사용하여 Azure File Storage에 파일 저장소 계정(예: `mystorage`), 파일 공유(예: `sharejson`) 및 폴더를 만듭니다.
 2.  파일 저장소 공유에 일부 JSON 파일을 업로드합니다.
 3.  포트 445를 허용하는 컴퓨터에서 Windows 방화벽에 아웃바운드 방화벽 규칙을 만듭니다. 인터넷 서비스 공급자가 이 포트를 차단할 수 있습니다. 다음 단계에서 DNS 오류(오류 53)가 발생하면 포트 445를 열지 않았거나 ISP가 이 포트를 차단하고 있는 것입니다.
@@ -105,7 +103,7 @@ END
         pages_i int, author nvarchar(100)) AS book
     ```
 
-Azure File Storage에 대한 자세한 내용은 [파일 저장소](https://azure.microsoft.com/en-us/services/storage/files/)를 참조하세요.
+Azure File Storage에 대한 자세한 내용은 [파일 저장소](https://azure.microsoft.com/services/storage/files/)를 참조하세요.
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>Azure Blob Storage에서 JSON 문서 가져오기
 
@@ -133,7 +131,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ## <a name="parse-json-documents-into-rows-and-columns"></a>행과 열로 JSON 문서 구문 분석
 단일 값으로 전체 JSON 파일을 읽지 않고 파일을 구문 분석하여 파일의 책과 해당 속성을 행과 열에 반환할 수 있습니다. 다음 예제에서는 [이 사이트](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)에서 책 목록이 포함된 JSON 파일을 사용합니다.
 
-### <a name="example-1"></a>예제 1
+### <a name="example-1"></a>예 1
 가장 간단하게 파일에서 전체 목록을 로드할 수 있습니다. 
 
 ```sql
@@ -152,7 +150,7 @@ OPENROWSET는 파일에서 단일 텍스트 값을 읽어 BulkColumn으로 반�
 {"id":"978-1933988177″, "cat":["book","paperback"], "name":"Lucene in Action, Second … 
 ```
 
-### <a name="example-3"></a>예 3
+### <a name="example-3"></a>예제 3
 OPENJSON 함수는 JSON 콘텐츠를 구문 분석하여 테이블 또는 결과 집합으로 변환할 수 있습니다. 다음 예제에서는 콘텐츠를 로드하고 로드된 JSON을 구문 분석하여 5개의 필드를 열로 반환합니다.
 
 ```sql
@@ -165,7 +163,7 @@ SELECT book.*
 
 이 예제에서 OPENROWSET(BULK)는 파일 콘텐츠를 읽고 그 콘텐츠를 출력에 대해 정의된 스키마로 OPENJSON 함수에 전달합니다. OPENJSON은 열 이름을 사용하여 JSON 개체의 속성을 찾습니다. 예를 들어 `price` 속성은 `price` 열로 반환되고 float 데이터 형식으로 변환됩니다. 결과는 다음과 같습니다.
 
-|Id|이름|price|pages_i|작성자
+|Id|속성|price|pages_i|작성자
 |---|---|---|---|---|
 978-0641723445|번개 도둑|12.5|384|Rick Riordan| 
 978-1423103349|몬스터 바다|6.49|304|Rick Riordan| 
@@ -175,10 +173,22 @@ SELECT book.*
 
 이제 사용자에게 이 테이블을 반환하거나 다른 테이블로 데이터를 로드할 수 있습니다.
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server의 기본 제공 JSON 지원에 대한 자세한 정보  
-많은 특정 솔루션, 사용 사례 및 권장 사항은 Microsoft 프로그램 관리자인 Jovan Popovic이 제공하는 SQL Server 및 Azure SQL Database의 [기본 제공 JSON 지원에 대한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 JSON에 대한 자세한 정보  
   
-## <a name="see-also"></a>관련 항목:
-[OPENJSON을 사용하여 JSON 데이터를 행 및 열로 변환](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
+### <a name="microsoft-blog-posts"></a>Microsoft 블로그 게시물  
+  
+특정 솔루션, 사용 사례 및 권장 사항은 SQL Server 및 Azure SQL Database의 기본 제공 JSON 지원에 대한 [블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.  
 
+### <a name="microsoft-videos"></a>Microsoft 비디오
+
+SQL Server 및 Azure SQL Database에서 기본 제공 JSON 지원에 대한 시각적 소개는 다음 비디오를 참조하세요.
+
+-   [SQL Server 2016 및 JSON 지원](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [SQL Server 2016 및 Azure SQL Database에서 JSON 사용](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [NoSQL과 관계형 간에 브리지인 JSON](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+  
+## <a name="see-also"></a>참고 항목
+[OPENJSON을 사용하여 JSON 데이터를 행 및 열로 변환](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
 

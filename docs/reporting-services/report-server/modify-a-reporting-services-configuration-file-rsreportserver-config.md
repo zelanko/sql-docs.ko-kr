@@ -1,30 +1,30 @@
 ---
-title: "Reporting Services 구성 파일 (RSreportserver.config)를 수정 합니다. | Microsoft Docs"
+title: "Reporting Services 구성 파일 수정(RSreportserver.config) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
-caps.latest.revision: 9
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "9"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: cb4c74bd26d25d35612b49dd9575ac244ee1a20d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Reporting Services 구성 파일 수정(RSreportserver.config)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 응용 프로그램 설정을 구성 파일 집합에 저장합니다. 설치 프로그램은 사용자가 설치하는 각 보고서 서버 인스턴스에 대한 구성 파일을 만듭니다. 각 파일 내에서 값은 설치 중 설정되거나 도구 및 응용 프로그램을 사용하여 작업을 위해 서버를 구성할 때 설정됩니다. 경우에 따라 파일을 직접 수정하여 고급 설정을 추가하거나 구성해야 합니다. 구성 설정은 XML 요소나 특성으로 지정됩니다. XML과 구성 파일에 대해 이해하고 있으면 텍스트나 코드 편집기를 사용하여 사용자 정의 가능한 설정을 수정할 수 있습니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 응용 프로그램 설정을 구성 파일 집합에 저장합니다. 설치 프로그램은 사용자가 설치하는 각 보고서 서버 인스턴스에 대한 구성 파일을 만듭니다. 각 파일 내에서 값은 설치 중 설정되거나 도구 및 응용 프로그램을 사용하여 작업을 위해 서버를 구성할 때 설정됩니다. 경우에 따라 파일을 직접 수정하여 고급 설정을 추가하거나 구성해야 합니다. 구성 설정은 XML 요소나 특성으로 지정됩니다. XML과 구성 파일에 대해 이해하고 있으면 텍스트나 코드 편집기를 사용하여 사용자 정의 가능한 설정을 수정할 수 있습니다.  
   
  일부 구성 설정은 도구를 통해서만 설정할 수 있습니다. 암호화된 값이 포함된 설정은 Reporting Services 구성 도구, 설치 프로그램 또는 **rsconfig** 명령줄 유틸리티를 통해 수정해야 합니다. 이러한 도구를 실행하려면 로컬 관리자 그룹의 멤버여야 합니다.  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 08/09/2017
     -   **RSReportServerServices.exe.config** 는 다음 디렉터리에 있습니다.  
     
         > [!NOTE] 
-        > 이 1 월 2017 사용할 수 있는 SQL Server Reporting Services에서 보고서를 Power BI의 기술 미리 보기.
+        > 이는 2017년 1월 SQL Server Reporting Services의 Power BI 기술 미리 보기 보고서에서 사용할 수 없습니다.
   
         ```  
         C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin  
@@ -101,14 +101,14 @@ ms.lasthandoff: 08/09/2017
   
     -   [웹 포털에서 사용자 지정 인증 쿠키를 전달하도록 구성](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
-    -   [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+    -   [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  파일을 저장합니다.  
   
 6.  추적 로그 파일에서 오류가 발생하지 않았는지 확인합니다. 오류 상태가 표시되는 경우 설정 또는 해당 값이 잘못 지정된 것입니다. 오류를 발생시키는 설정에 대한 유효한 값을 보려면 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 을 검토하세요. 추적 로그를 보는 방법은 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>참고 항목  
+ [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [ReportingServicesService 구성 파일](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [데이터 처리 확장 프로그램 배포](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
@@ -117,4 +117,3 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services 구성 파일](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
-

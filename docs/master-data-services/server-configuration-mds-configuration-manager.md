@@ -5,7 +5,7 @@ ms.date: 01/26/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.mds.configmanager.srvinfopg.f1
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
-caps.latest.revision: 11
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 66f0dd522e5a0d15f62403b2ecefa7654ca46f39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a6203f550646e1fc6b0998ccccad89ea113befb4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>서버 구성(MDS Configuration Manager)
   **서버 구성** 페이지를 사용하여 로컬 서버 컴퓨터에 대한 구성 정보를 볼 수 있습니다.  
@@ -38,4 +37,3 @@ ms.lasthandoff: 09/07/2017
 |**MDS 제품 버전**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 제품 버전을 표시합니다.|  
   
   
-

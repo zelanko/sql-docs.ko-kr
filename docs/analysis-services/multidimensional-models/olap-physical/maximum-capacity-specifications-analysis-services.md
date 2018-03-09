@@ -2,35 +2,35 @@
 title: "최대 용량 사양 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39c69ad1c26b30eda9244d192e6199903249ff40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>최대 용량 사양 (Analysis Services)
-  다음 표에서는 여러 다른 서버 배포 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 요소에 정의된 다양한 개체의 최대 크기 및 개수를 보여 줍니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+다음 표에서는 여러 다른 서버 배포 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 요소에 정의된 다양한 개체의 최대 크기 및 개수를 보여 줍니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  [테이블 형식 (DeploymentMode = 2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>다차원 및 데이터 마이닝 (DeploymentMode = 0)  
+##  <a name="bkmk_OLAP">다차원 및 데이터 마이닝 (DeploymentMode = 0)</a>  
  데이터와 메타데이터가 저장되는 MOLAP 저장소 모드에서는 파일 크기에 대한 추가적인 물리적 제한이 있습니다. 기본적으로 문자열 저장소 파일의 최대 크기는 4GB입니다. 더 큰 문자열 저장소 파일이 필요한 경우 다른 문자열 저장소 아키텍처를 지정할 수 있습니다. 자세한 내용은 참조 [차원 및 파티션에 대 한 문자열 저장소 구성](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)합니다.  
   
 |개체|최대 크기/개수|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
  온라인 분석 처리 (OLAP) 및 데이터 마이닝의 데이터 원본 제한에 대 한 자세한 내용은 참조 하세요. [지원 데이터 원본 &#40; SSAS-다차원 데이터 &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [데이터 원본 &#40; 지원 SSAS-다차원 데이터 &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), 및 [ASSL 개체 및 개체 특징](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)합니다.  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
+##  <a name="bkmk_sharepoint">SharePoint (DeploymentMode = 1)</a>  
   
 |개체|최대 크기/개수|  
 |------------|----------------------------|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |원본 쿼리의 레코드 크기|64K|  
 |개체 이름의 길이|최대 100 자|  
   
-##  <a name="bkmk_vertipaq"></a>테이블 형식 (DeploymentMode = 2)  
+##  <a name="bkmk_vertipaq">테이블 형식 (DeploymentMode = 2)</a>  
 다음은 이론적 제한 합니다. 성능에 더 낮은 숫자 낮아집니다.   
 
 |개체|최대 크기/개수|  

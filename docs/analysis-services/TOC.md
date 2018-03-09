@@ -1,12 +1,13 @@
-# [Analysis Services란?](analysis-services.md)
+# [SQL Server Analysis Services 정보](analysis-services.md)
 
 # 개요
 ## [SQL Server Analysis Services 2016의 새로운 기능](what-s-new-in-analysis-services.md)  
 ## [SQL Server Analysis Services 2017의 새로운 기능](what-s-new-in-sql-server-analysis-services-2017.md) 
-## [새로 추가되거나 최근에 업데이트된 문서](new-updated-analysis-services.md)
+## [새로운 또는 업데이트 된 문서](new-updated-analysis-services.md)
 ## [도구 및 응용 프로그램](tools-and-applications-used-in-analysis-services.md)   
+## [클라이언트 라이브러리(데이터 공급자)](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [테이블 형식 및 다차원 솔루션 비교](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [SQL Server 2016 버전에서 지원하는 Analysis Services 기능](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [SQL Server 버전에서 지원하는 Analysis Services 기능](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 ## [이전 버전과의 호환성(SQL Server 2016 Analysis Services)](analysis-services-backward-compatibility.md)  
 ## [이전 버전과 호환성(SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)  
 ## [세계화 및 번역](globalization-scenarios-for-analysis-services.md)  
@@ -15,11 +16,26 @@
 ### [통화 변환](currency-conversions-analysis-services.md)  
 ### [팁과 모범 사례](globalization-tips-and-best-practices-analysis-services.md) 
 
-# 샘플
-## [Analysis Services 샘플](analysis-services-samples.md)
+# [자습서](analysis-services-tutorials-ssas.md)
+## [테이블 형식 모델링(1400 호환성 수준)](tutorial-tabular-1400/as-adventure-works-tutorial.md)
+### [1 - 테이블 형식 모델 프로젝트 만들기](tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)
+### [2 - 데이터 가져오기](tutorial-tabular-1400/as-lesson-2-get-data.md)
+### [3 - 날짜 테이블로 표시](tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)
+### [4 - 관계 만들기](tutorial-tabular-1400/as-lesson-4-create-relationships.md)
+### [5 - 계산 열 만들기](tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)
+### [6 - 측정값 만들기](tutorial-tabular-1400/as-lesson-6-create-measures.md)
+### [7 - KPI(핵심 성과 지표) 만들기](tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)
+### [8 - 큐브 뷰 만들기](tutorial-tabular-1400/as-lesson-8-create-perspectives.md)
+### [9 - 계층 만들기](tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)
+### [10 - 파티션 만들기](tutorial-tabular-1400/as-lesson-10-create-partitions.md)
+### [11 - 역할 만들기](tutorial-tabular-1400/as-lesson-11-create-roles.md)
+### [12 - Excel에서 분석](tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)
+### [13 - 배포](tutorial-tabular-1400/as-lesson-13-deploy.md)
+### [추가 단원 - 세부 정보 행](tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)
+### [추가 단원 - 동적 보안](tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)
+### [추가 단원-비정형 계층 구조](tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)
 
-# 자습서
-## [테이블 형식 모델링(Adventure Works 자습서)](tabular-modeling-adventure-works-tutorial.md)  
+## [테이블 형식 모델링(1200 호환성 수준)](tabular-modeling-adventure-works-tutorial.md)  
 ### [1단원: 새 테이블 형식 모델 프로젝트를 만들기](lesson-1-create-a-new-tabular-model-project.md)  
 ### [2단원: 데이터 추가](lesson-2-add-data.md)  
 ### [3단원: 날짜 테이블로 표시](lesson-3-mark-as-date-table.md)  
@@ -36,7 +52,7 @@
 ### [추가 단원 - 행 필터를 사용하여 동적 보안 구현](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [추가 단원 - 파워 뷰 보고서의 보고 속성 구성](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [다차원 모델링(Adventure Works 자습서)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [다차원 모델링](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [자습서 시나리오](analysis-services-tutorial-scenario.md)  
 ### [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](install-sample-data-and-projects.md)  
 ### [1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  
@@ -94,24 +110,24 @@
 ## [추적 이벤트](../analysis-services/trace-events/analysis-services-trace-events.md)
 
 # 개발자
-## 테이블 형식 모델
-### [호환성 수준 1200 이상에 대한 테이블 형식 모델 프로그래밍](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-#### [TMSL(Tabular Model Scripting Language)](tabular-model-scripting-language-tmsl-reference.md)
-#### [TMSL(Tabular Model Scripting Language) 명령](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
-#### [TMSL(Tabular Model Scripting Language) 개체](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
-### [호환성 수준 1050 및 1103에 대한 테이블 형식 모델 프로그래밍](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+## [호환성 수준 1200 이상에 대한 테이블 형식 모델 프로그래밍](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+### [TMSL(Tabular Model Scripting Language)](tabular-model-scripting-language-tmsl-reference.md)
+### [TMSL(Tabular Model Scripting Language) 명령](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+### [TMSL(Tabular Model Scripting Language) 개체](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
+## [호환성 수준 1050 및 1103에 대한 테이블 형식 모델 프로그래밍](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 
-## 다차원 모델
-### [ASSL(Analysis Services Scripting Language) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
-### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
-### [Analysis Management Object +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
-### [OLAP 논리 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
-### [OLAP 실제 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
-### [OLAP 확장 +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
+## [ASSL(Analysis Services Scripting Language) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+## [AMO(Analysis Management Objects)+](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+## [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+## [OLAP 논리 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+## [OLAP 실제 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+## [OLAP 확장 +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [스키마 행 집합](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services Scripting Language(XMLA용 ASSL)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
+# 샘플
+## [Analysis Services 샘플](analysis-services-samples.md)
 
 # 참조
 ## [MSDN의 DAX(Data Analysis Expressions)](https://msdn.microsoft.com/library/gg413422.aspx)

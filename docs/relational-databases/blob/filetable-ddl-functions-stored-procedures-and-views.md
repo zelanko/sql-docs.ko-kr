@@ -2,27 +2,33 @@
 title: "FileTable DDL, 함수, 저장 프로시저 및 뷰 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], database objects
+helpviewer_keywords:
+- FileTables [SQL Server], database objects
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d80517985dee45c58542a90b7dff2be90c78baa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e2d7db20d24b87c674a1eb45960fd53e95954652
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL, 함수, 저장 프로시저 및 뷰
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 FileTable 기능을 지원하기 위해 추가되거나 변경된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 개체를 나열합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 FileTable 기능을 지원하기 위해 추가되거나 변경된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 개체를 나열합니다.  
   
  다음 표의 상태 열은 항목이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 신규 항목인지, 아니면 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있었지만 의미 체계 검색을 지원하기 위해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서 변경되었는지를 나타냅니다.  
   
@@ -30,7 +36,7 @@ ms.lasthandoff: 11/09/2017
   
 ##  <a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
   
-|개체|상태|자세한 정보|  
+|Object|상태|추가 정보|  
 |------------|------------|----------------------|  
 |[ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)<br /><br /> [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)|변경됨|[FileTable의 필수 구성 요소를 사용하도록 설정](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)<br /><br /> [FileTable 관리](../../relational-databases/blob/manage-filetables.md)|  
 |[ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|변경됨|[FileTable 만들기, 변경 및 삭제](../../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [FileTable 관리](../../relational-databases/blob/manage-filetables.md)|  
@@ -40,7 +46,7 @@ ms.lasthandoff: 11/09/2017
   
 ##  <a name="func"></a> 함수  
   
-|개체|상태|자세한 정보|  
+|Object|상태|추가 정보|  
 |------------|------------|----------------------|  
 |[FileTableRootPath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md)|**추가됨**|[FileTable에서 디렉터리 및 경로 작업](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|**추가됨**|[FileTable에서 디렉터리 및 경로 작업](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)|  
@@ -48,13 +54,13 @@ ms.lasthandoff: 11/09/2017
   
 ##  <a name="sproc"></a> 저장 프로시저  
   
-|개체|상태|자세한 정보|  
+|Object|상태|추가 정보|  
 |------------|------------|----------------------|  
 |[sp_kill_filestream_non_transacted_handles&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)|**추가됨**|[FileTable 관리](../../relational-databases/blob/manage-filetables.md)|  
   
 ##  <a name="cv"></a> 카탈로그 뷰  
   
-|개체|상태|자세한 정보|  
+|Object|상태|추가 정보|  
 |------------|------------|----------------------|  
 |[sys.database_filestream_options&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)|**추가됨**|[FileTable의 필수 구성 요소를 사용하도록 설정](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)|  
 |[sys.filetable_system_defined_objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)|**추가됨**|[FileTable 만들기, 변경 및 삭제](../../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [FileTable 관리](../../relational-databases/blob/manage-filetables.md)|  
@@ -63,7 +69,7 @@ ms.lasthandoff: 11/09/2017
   
 ##  <a name="dmv"></a> 동적 관리 뷰  
   
-|개체|상태|자세한 정보|  
+|Object|상태|추가 정보|  
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)|**추가됨**|[FileTable 관리](../../relational-databases/blob/manage-filetables.md)|  
   

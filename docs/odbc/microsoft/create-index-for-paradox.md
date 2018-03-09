@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - Paradox driver [ODBC], create index
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a64feb77cc0562635b5e432174c58503e459e8ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 058677892aa1a3266b1cd93a5ff015ed0a14bcb9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-index-for-paradox"></a>에는 인덱스 만들기
 ODBC Paradox 드라이버에 대 한 CREATE INDEX 문의 구문은 다음과 같습니다.  
@@ -81,4 +79,3 @@ CREATE INDEX PartNum
   
 > [!NOTE]  
 >  Borland 데이터베이스 엔진만 읽기를 구현 하지 않고 Paradox 드라이버를 사용 하 고 추가 문은 사용할 수 있습니다.
-

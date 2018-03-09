@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- escape sequences [ODBC], literals
+helpviewer_keywords: escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-time-and-timestamp-literals"></a>Date, Time 및 Timestamp 리터럴
 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스는  
@@ -36,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 |*리터럴 형식*|의미|서식을 지정 *값*|  
 |---------------------|-------------|-----------------------|  
-|**d**|날짜|*yyyy*-*mm*-*dd*|  
+|**d**|date|*yyyy*-*mm*-*dd*|  
 |**t**|시간 *|*hh*:*mm*:*ss*[1]|  
 |**ts**|타임스탬프|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss* [. *f...* ] [1]|  
   
@@ -97,4 +94,3 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  응용 프로그램이 호출을 드라이버 간격 리터럴에 대 한 ODBC 이스케이프 시퀀스를 지원 하는지 여부를 확인 하려면 **SQLGetTypeInfo**합니다. 데이터 원본에서 날짜/시간 간격 데이터 형식의 지 원하는 경우 또한 해당 이스케이프 시퀀스를 지원 해야 합니다.  
   
  데이터 원본에서 날짜/시간 간격 리터럴에 대 한 ODBC 이스케이프 시퀀스는 ANSI sql-92 사양에 정의 된 날짜/시간 리터럴도 지원할 수 있습니다. 데이터 소스에 ANSI 리터럴을 지원 여부를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS 옵션을 사용 합니다.
-

@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="odbc-destination"></a>ODBC 대상
   ODBC 대상은 ODBC 지원 데이터베이스 테이블로 데이터를 대량 로드합니다. ODBC 대상은 ODBC 연결 관리자를 사용하여 데이터 원본에 연결합니다.  
@@ -70,11 +69,11 @@ ms.lasthandoff: 08/17/2017
   
  자세한 내용은 다음 항목 중 하나를 참조하십시오.  
   
--   [ODBC 대상 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [ODBC 대상 편집기 &#40; 매핑 페이지 &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC 대상 편집기&#40;매핑 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 대상 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [ODBC 대상 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 포함됩니다.  
   
@@ -86,7 +85,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [ODBC 대상을 사용 하 여 데이터를 로드 합니다.](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
+-   [ODBC 대상을 사용하여 데이터 로드](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [ODBC 대상 사용자 지정 속성](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
@@ -103,12 +102,12 @@ ms.lasthandoff: 08/17/2017
   
 -   **ODBC 대상 편집기**에서 **연결 관리자**를 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
   
 #### <a name="connection-manager"></a>ODBC 대상 편집기  
  목록에서 기존 ODBC 연결 관리자를 선택하거나 새로 만들기를 클릭하여 새 연결을 만듭니다. 어느 ODBC 지원 데이터베이스에나 연결할 수 있습니다.  
   
-#### <a name="new"></a>새로 만들기  
+#### <a name="new"></a>단추를 사용하여 새  
  **새로 만들기**를 클릭합니다. 새 연결 관리자를 만들 수 있는 **ODBC 연결 관리자 편집기 구성** 대화 상자가 열립니다.  
   
 #### <a name="data-access-mode"></a>데이터 액세스 모드  
@@ -127,7 +126,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="odbc-destination-editor-mappings-page"></a>ODBC 대상 편집기(매핑 페이지)
   **ODBC 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
   
 #### <a name="available-input-columns"></a>사용 가능한 입력 열  
  사용 가능한 입력 열 목록입니다. 입력 열을 사용 가능한 대상 열에 끌어 놓아 열을 매핑할 수 있습니다.  
@@ -136,7 +135,7 @@ ms.lasthandoff: 08/17/2017
  사용 가능한 대상 열 목록입니다. 대상 열을 사용 가능한 입력 열에 끌어 놓아 열을 매핑할 수 있습니다.  
   
 #### <a name="input-column"></a>입력 열  
- 선택한 입력 열을 표시합니다. 선택 하 여 매핑을 제거할 수 있습니다  **\<무시 >** 출력에서 열을 제외 합니다.  
+ 선택한 입력 열을 표시합니다. 출력에서 열을 제외하는 **\<ignore>**를 선택하여 매핑을 제거할 수 있습니다.  
   
 #### <a name="destination-column"></a>대상 열  
  사용 가능한 모든 대상 열(매핑되거나 매핑되지 않음)을 표시합니다.  
@@ -154,15 +153,15 @@ ms.lasthandoff: 08/17/2017
   
 -   **ODBC 대상 편집기**에서 **오류 출력**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
   
 #### <a name="inputoutput"></a>입/출력  
  데이터 원본의 이름을 표시합니다.  
   
-#### <a name="column"></a>열  
+#### <a name="column"></a>Column  
  사용되지 않습니다.  
   
-#### <a name="error"></a>오류  
+#### <a name="error"></a>Error  
  ODBC 대상에서 흐름 오류를 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
 #### <a name="truncation"></a>잘림  
@@ -189,4 +188,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>흐름 리디렉션  
  오류 또는 잘림을 발생시키는 행이 ODBC 대상의 오류 출력으로 전송됩니다. 자세한 내용은 ODBC 대상을 참조하십시오.  
   
-

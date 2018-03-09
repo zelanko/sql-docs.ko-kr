@@ -2,37 +2,37 @@
 title: "OLE DB 스키마 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [OLE DB]
 - schema rowsets [Analysis Services], OLE DB
 - OLE DB schema rowsets
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 240b1fff05adb7bc528ba8a53f54d59a7b1af854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 59d17cb1345f7ba32a2cbaac27f5ec002aadfa40
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB 스키마 행 집합
-  다음 OLE DB 스키마 행 집합은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자가 지원합니다. 사용 하 여는 **DISCOVER_ENUMERATORS** 포함 된 행 집합의 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 특정 데이터 원본 공급자가 행 집합을 지원 하는지 여부를 확인 하는 메서드.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+다음 OLE DB 스키마 행 집합은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자가 지원합니다. 사용 하 여는 **DISCOVER_ENUMERATORS** 포함 된 행 집합의 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 특정 데이터 원본 공급자가 행 집합을 지원 하는지 여부를 확인 하는 메서드.  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 웹 사이트에 있는 MSDN  Library의 OLE DB Programmer's Reference 부분에서 "Schema Rowsets" 항목을 검색하여 이러한 행 집합에 대한 자세한 정보를 찾을 수도 있습니다.  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |**DBSCHEMA_FOREIGN_KEYS**|지정된 사용자가 카탈로그에 정의한 외래 키 열을 식별합니다. 이 스키마 행 집합은 SQL 이외 프로그래머의 편의를 위해 몇 가지 ISO 스키마 뷰를 기반으로 합니다. 이 스키마 행 집합 지원, 관련 된 ISO 뷰와 동기화 되어야 합니다 (**REFERENTIAL_CONSTRAINTS** 및 **CONSTRAINT_COLUMN_USAGE**).|  
 |**DBSCHEMA_INDEXES**|카탈로그에 정의되어 있고 지정된 사용자가 소유하고 있는 인덱스를 식별합니다.|  
 |**DBSCHEMA_KEY_COLUMN_USAGE**|카탈로그에 정의되어 있고 지정된 사용자가 키로 제약하는 열을 식별합니다.|  
-|**DBSCHEMA_PRIMARY_KEYS와**|지정된 사용자가 카탈로그에 정의한 기본 키 열을 식별합니다. 이 스키마 행 집합은 SQL 이외 프로그래머의 편의를 위해 ISO 스키마 뷰를 기반으로 합니다. 이 스키마 행 집합 지원, 관련 된 ISO 뷰와 동기화 되어야 합니다 (**CONSTRAINT_COLUMN_USAGE**).|  
+|**DBSCHEMA_PRIMARY_KEYS**|지정된 사용자가 카탈로그에 정의한 기본 키 열을 식별합니다. 이 스키마 행 집합은 SQL 이외 프로그래머의 편의를 위해 ISO 스키마 뷰를 기반으로 합니다. 이 스키마 행 집합 지원, 관련 된 ISO 뷰와 동기화 되어야 합니다 (**CONSTRAINT_COLUMN_USAGE**).|  
 |**DBSCHEMA_PROCEDURE_COLUMNS**|프로시저가 반환한 행 집합의 열에 대한 정보를 반환합니다.|  
 |**DBSCHEMA_PROCEDURE_PARAMETERS**|프로시저의 매개 변수와 반환 코드에 대한 정보를 반환합니다.|  
 |**DBSCHEMA_PROCEDURES**|카탈로그에 정의되어 있고 지정된 사용자가 소유하고 있는 프로시저를 식별합니다. 이는 OLE DB 확장입니다.|  

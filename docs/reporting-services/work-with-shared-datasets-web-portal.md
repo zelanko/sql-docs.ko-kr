@@ -1,28 +1,29 @@
 ---
-title: "공유 데이터 집합 작업 (웹 포털) | Microsoft Docs"
+title: "공유 데이터 집합 사용(웹 포털) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e72c48f816752530abddb6246410e4936ac20a6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>공유 데이터 집합-웹 포털 작업
+# <a name="work-with-shared-datasets---web-portal"></a>공유 데이터 집합 사용 - 웹 포털
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -55,11 +56,11 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]
 > 폴더에 공유 데이터 집합이 보이지 않는 경우에는 데이터 집합을 보고 있는지 확인합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **데이터 집합** 이 선택되어 있는지 확인합니다.  
   
-1.  선택 된 **줄임표 (...)**  관리 하려는 데이터 집합에 대 한 합니다.  
+1.  관리하려는 데이터 집합의 **줄임표(…)**를 선택합니다.  
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   
-2.  **관리** 를 선택하여 편집 화면으로 이동합니다.  
+2.  **관리**를 선택하여 편집 화면으로 이동합니다.  
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 ![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
   
-**이 보고서의 복사본을 캐시하고 사용 가능할 때 사용** 을 선택하면 몇 가지 옵션이 더 제공됩니다.  
+**이 보고서의 복사본을 캐시하고 사용 가능할 때 사용**을 선택하면 몇 가지 옵션이 더 제공됩니다.  
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
@@ -111,5 +112,4 @@ ms.lasthandoff: 08/09/2017
   
 그런 다음 나열된 계획을 **편집** 또는 **삭제** 할 수 있습니다. **기존 계획에서 새로 만들기** 옵션은 캐시 새로 고침 계획을 하나 선택한 경우에만 설정됩니다. 이 옵션은 원래 계획에서 복사하여 새로운 새로 고침 옵션을 만듭니다. 캐시 새로 고침 계획 페이지의 정보가 선택한 계획의 정보로 채워져서 열립니다. 그런 다음 새로 고침 계획 옵션을 수정하고 새로운 설명과 함께 계획을 저장할 수 있습니다.  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

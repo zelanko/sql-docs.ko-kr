@@ -1,29 +1,31 @@
 ---
-title: "고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능 | Microsoft Docs"
+title: "고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능 | Microsoft 문서"
 ms.custom: 
-ms.date: 04/12/2017
-ms.prod: sql-server-2016
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 462245faec6b34c8ad38e47ec23c1f8038769ae8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
   이 항목에서는 저장 프로시저([CREATE PROCEDURE(Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), 스칼라 사용자 정의 함수, 인라인 테이블 반환 함수, 트리거 등 고유하게 컴파일된 T-SQL 모듈의 본문에서 지원되는 기능 및 T-SQL 노출 영역 목록을 제공합니다.  
@@ -80,7 +82,7 @@ SELECT 절:
 
 FROM 절:  
 
--   FROM \<메모리 최적화 테이블 또는 테이블 변수>  
+-   FROM \<메모리 액세스에 최적화된 테이블 또는 테이블 변수>  
 
 -   FROM \<고유하게 컴파일된 인라인 TVF>  
 
@@ -136,7 +138,7 @@ HAVING 절:
   - 쿼리에 조인 또는 집계 함수가 포함되어 있으면 이 제한이 더 낮아질 수 있습니다. 예를 들어, 조인이 하나 있고 테이블이 두 개 있으면 4,096개의 행으로 제한되고, 조인이 두 개 있고 테이블이 세 개 있으면 2,730개의 행으로 제한됩니다.  
   - 변수에 행 수를 저장하여 8,192개 이상의 결과를 가져올 수 있습니다.  
 
-```tsql
+```sql
 DECLARE @v INT = 9000;
 SELECT TOP (@v) … FROM … ORDER BY …
 ```
@@ -154,7 +156,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   UPDATE  
 
--   DELETE  
+-   Delete  
 
 -   WHERE은 UPDATE 및 DELETE 문에서 지원됩니다.  
 
@@ -167,7 +169,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   [RETURN&#40;Transact-SQL&#41;](../../t-sql/language-elements/return-transact-sql.md)  
 
--   [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)은 모든 [메모리 내 OLTP에 지원되는 데이터 형식](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) 및 메모리 최적화 테이블 형식을 사용합니다. 변수는 NULL 또는 NOT NULL로 선언할 수 있습니다.  
+-   
+            [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)은 모든 [메모리 내 OLTP에 지원되는 데이터 형식](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) 및 메모리 최적화 테이블 형식을 사용합니다. 변수는 NULL 또는 NOT NULL로 선언할 수 있습니다.  
 
 -   [SET @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 
@@ -195,8 +198,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   비트 연산자 ~, &, | 및 ^  
 
 -   APPLY 연산자
-    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 APPLY 연산자는 고유하게 컴파일된 모듈에서 지원됩니다.
+    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.  
+      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 APPLY 연산자는 고유하게 컴파일된 모듈에서 지원됩니다.
 
 ##  <a name="bfncsp"></a> 고유하게 컴파일된 모듈의 기본 제공 함수  
  다음 함수는 메모리 최적화 테이블에 대한 제약 조건과 고유하게 컴파일된 T-SQL 모듈에서 지원됩니다.  
@@ -206,8 +209,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   날짜 함수: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME 및 YEAR  
 
 -   문자열 함수: LEN, LTRIM, RTRIM 및 SUBSTRING  
-    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 TRIM, TRANSLATE, CONCAT_WS 등의 기본 제공 함수도 지원됩니다.  
+    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.  
+      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 TRIM, TRANSLATE, CONCAT_WS 등의 기본 제공 함수도 지원됩니다.  
 
 -   ID 함수: SCOPE_IDENTITY  
 
@@ -216,8 +219,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Uniqueidentifier 함수: NEWID 및 NEWSEQUENTIALID  
 
 -   JSON 함수  
-    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 JSON 함수는 고유하게 컴파일된 모듈에서 지원됩니다.
+    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.  
+      [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 JSON 함수는 고유하게 컴파일된 모듈에서 지원됩니다.
 
 -   오류 함수: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE  
 
@@ -256,7 +259,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
  TOP N = 8192인 경우의 예: 컴파일  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -269,7 +272,7 @@ GO
 
  TOP N > 8192인 경우의 예: 컴파일 실패  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -284,7 +287,7 @@ GO
 
  변수 사용의 예: 컴파일  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -304,9 +307,8 @@ GO
 
  TOP N에서 지원되는 최대 N의 경우를 계산하는 공식은 `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`입니다.  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

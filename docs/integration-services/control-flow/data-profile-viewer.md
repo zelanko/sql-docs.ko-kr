@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 78476021d8f54edb0f26748e6d610f9590bee037
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 807c980f9c561b6c4da18597b011a98e8d9992de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profile-viewer"></a>데이터 프로필 뷰어(Data Profile Viewer)
   데이터 프로파일링 프로세스의 다음 단계는 데이터 프로필을 보고 분석하는 것입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 데이터 프로파일링 태스크를 실행하고 데이터 프로필을 계산한 후에 이러한 프로필을 볼 수 있습니다. 데이터 프로파일링 태스크를 설정하고 실행하는 방법은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/11/2017
   
 -   **디자이너에서** 데이터 프로파일링 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 태스크를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다. **데이터 프로파일링 태스크 편집기** 의 **일반** 페이지에서 **프로필 뷰어 열기**를 클릭합니다.  
   
--   폴더에서  *\<드라이브 >*: \Program Files (x86) | Files\Microsoft SQL Server\110\DTS\Binn 프로그램의 경우 DataProfileViewer.exe를 실행 합니다.  
+-   *\<드라이브>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에서 DataProfileViewer.exe를 실행합니다.  
   
  이 뷰어는 여러 창을 사용하여 선택적 세부 정보 및 드릴다운 기능과 함께 요청한 프로필과 계산된 결과를 표시합니다.  
   
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/11/2017
  데이터 프로필 뷰어를 사용하는 방법에 대한 자세한 내용은 [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)를 참조하세요. 데이터 프로필 뷰어에서 분석하는 프로필 출력을 만드는 데이터 프로파일링 태스크를 사용하는 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요.  
   
 ### <a name="static-options"></a>정적 옵션  
- **열기**  
+ **파일**  
  데이터 프로파일링 태스크의 출력을 포함하는 저장된 파일을 찾아보려면 클릭합니다.  
   
  **프로필** 창  
@@ -98,7 +97,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-length-distribution-profile"></a>프로필 유형 = 열 길이 분포 프로필  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>열 길이 분포 프로필- \<열 > 창  
+##### <a name="column-length-distribution-profile---column-pane"></a>열 길이 분포 프로필 - \<column> 창  
  **최소 길이**  
  이 열의 값에 대한 최소 길이를 표시합니다.  
   
@@ -126,7 +125,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-null-ratio-profile"></a>프로필 유형 = 열 Null 비율 프로필  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>열 Null 비율 프로필- \<열 > 창  
+##### <a name="column-null-ratio-profile---column-pane"></a>열 Null 비율 프로필 - \<column> 창  
  **Null 개수**  
  프로파일링된 열에 Null 값이 있는 행 수를 표시합니다.  
   
@@ -138,7 +137,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-pattern-profile"></a>프로필 유형 = 열 패턴 프로필  
   
-##### <a name="column-pattern-profile---column-pane"></a>열 패턴 프로필- \<열 > 창  
+##### <a name="column-pattern-profile---column-pane"></a>열 패턴 프로필 - \<column> 창  
  **행 개수**  
  테이블 또는 뷰의 행 수를 표시합니다.  
   
@@ -151,7 +150,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-statistics-profile"></a>프로필 유형 = 열 통계 프로필  
   
-##### <a name="column-statistics-profile---column-pane"></a>열 통계 프로필- \<열 > 창  
+##### <a name="column-statistics-profile---column-pane"></a>열 통계 프로필 - \<column> 창  
  **최소**  
  프로파일링된 열에서 찾은 최소값을 표시합니다.  
   
@@ -166,7 +165,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-value-distribution-profile"></a>프로필 유형 = 열 값 분포 프로필  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>열 값 분포 프로필- \<열 > 창  
+##### <a name="column-value-distribution-profile---column-pane"></a>열 값 분포 프로필 - \<column> 창  
  **고유 값 수**  
  프로파일링된 열에서 찾은 고유 값의 개수를 표시합니다.  
   
@@ -185,7 +184,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--candidate-key-profile"></a>프로필 유형 = 후보 키 프로필  
   
-##### <a name="candidate-key-profile---table-pane"></a>후보 키 프로필- \<테이블 > 창  
+##### <a name="candidate-key-profile---table-pane"></a>후보 키 프로필 - \<table> 창  
  **키 열**  
  프로파일링에 대해 후보 키로 선택된 열을 표시합니다.  
   
@@ -193,7 +192,7 @@ ms.lasthandoff: 08/11/2017
  후보 키 열 또는 열 조합의 수준(비율)을 표시합니다. 100% 미만의 키 수준은 중복 값이 있음을 나타냅니다.  
   
 ##### <a name="key-violations-pane"></a>키 위반 창  
- **\<column1 >, \<열 2 > 등입니다.**  
+ **\<column1>, \<column2>, 등**  
  프로파일링된 열에서 찾은 중복 값을 표시합니다.  
   
  **개수**  
@@ -216,17 +215,17 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  데이터에서 잘못된 값의 비율이 높으면 함수 종속성 프로필에서 예기치 않은 결과가 발생할 수 있습니다. 예를 들어 Postal Code 값 "98052"에 대한 State 값이 행의 90%에 대해 "WI"인 경우 프로필은 올바른 주 값 "WA"를 포함하는 행을 위반으로 보고합니다.  
   
- **\<결정 열 이름 >**  
+ **\<determinant column name>**  
  이 함수 종속성 위반 인스턴스에서 결정 열 또는 열 조합의 값을 표시합니다.  
   
- **\<종속 열 이름 >**  
+ **\<dependent column name>**  
  이 함수 종속성 위반 인스턴스에서 종속 열의 값을 표시합니다.  
   
  **지원 개수**  
  결정 열 값이 종속 열을 결정하는 행 수를 표시합니다.  
   
  **위반 개수**  
- 결정 열 값이 종속 열을 결정하지 않는 행 수를 표시합니다. (이 종속 값에 표시 된 값은이 행은  **\<종속 열 이름 >** 열입니다.)  
+ 결정 열 값이 종속 열을 결정하지 않는 행 수를 표시합니다. 이는 종속 값이 **\<dependent column name>** 열에 표시된 값인 행입니다.  
   
  **지원 백분율**  
  결정 열이 종속 열을 결정하는 행의 비율을 표시합니다.  
@@ -244,10 +243,9 @@ ms.lasthandoff: 08/11/2017
  열 간 겹침의 수준(비율)을 표시합니다. 100% 미만의 키 수준은 하위 집합 값이 상위 집합 값에 없는 경우가 있음을 나타냅니다.  
   
 ##### <a name="inclusion-violations-pane"></a>포함 위반 창  
- **\<column1 >, \<열 2 > 등입니다.**  
+ **\<column1>, \<column2>, 등**  
  상위 집합 열에서 찾지 못한 하위 집합 열의 값을 표시합니다.  
   
  **개수**  
  지정된 열에 첫 번째 열에 표시된 값이 있는 행 수를 표시합니다.  
   
-

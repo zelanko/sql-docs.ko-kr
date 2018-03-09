@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f619ebbbc3bb7c0ebbc90025a65c7f0530e3e4e3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c29dcd40090a380c124a0c72b07d5993d4295829
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL 문에서 사용 되는 요소
 다음과 같은 요소가 앞에 나열 된 SQL 문에서 사용 됩니다.  
@@ -112,4 +110,3 @@ ms.lasthandoff: 09/09/2017
  *위 사례 편지* :: = *&#124; &#124; &#124; D &#124; E &#124; &#124; &#124; H &#124; &#124; J &#124; K &#124; L &#124; M &#124; &#124; &#124; P &#124; Q &#124; &#124; &#124; &#124; &#124; V &#124; &#124; X &#124; Y &#124; Z*  
   
  *사용자 정의 이름* :: = *문자로*[*자리* &#124; *문자로* &#124; *_*]...
-

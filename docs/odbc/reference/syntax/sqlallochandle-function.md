@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLAllocHandle
-apilocation:
-- sqlsrv32.dll
+apiname: SQLAllocHandle
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLAllocHandle
-helpviewer_keywords:
-- SQLAllocHandle function [ODBC]
+f1_keywords: SQLAllocHandle
+helpviewer_keywords: SQLAllocHandle function [ODBC]
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b8bf173bf0055dc06cf475aa72e137d9ca426222
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 434b3b42c4e48724b42bdb1ed517b11b25e10db7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 함수
 **규칙**  
@@ -93,7 +87,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="diagnostics"></a>진단  
  때 **SQLAllocHandle** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 는 적절 한 *HandleType* 및 *처리* 의 값으로 설정 *InputHandle*합니다. SQL_SUCCESS_WITH_INFO (않음 하지 SQL_ERROR)에 대해 반환 될 수는 *OutputHandle* 인수입니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLAllocHandle** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08003|연결이 열려 있지 않습니다|DM ()는 *HandleType* 인수 여 되었거나 SQL_HANDLE_DESC, 했지만 연결에 의해 지정 된 *InputHandle* 인수를 열 수 없습니다. 연결 프로세스가 성공적으로 완료 되어야 합니다 (및 연결이 열려 있어야 합니다.)를 할당할 문 또는 설명자 드라이버에 대 한 처리 합니다.|  
@@ -109,7 +103,7 @@ SQLRETURN SQLAllocHandle(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|DM ()는 *HandleType* 인수 여, 되었으며 유효한 ODBC 드라이버가 없습니다.<br /><br /> DM ()는 *HandleType* 인수 SQL_HANDLE_DESC, 였으며 드라이버 설명자 핸들 할당을 지원 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLAllocHandle** 다음 섹션에 설명 된 대로 환경, 연결, 문 및 설명자에 대 한 핸들을 할당 하는 데 사용 됩니다. 핸들에 대 한 일반 정보를 참조 하십시오. [핸들](../../../odbc/reference/develop-app/handles.md)합니다.  
   
  여러 할당 드라이버에서 지원 되는 경우 한 번에 응용 프로그램에서 둘 이상의 환경, 연결 또는 문 핸들을 할당할 수 있습니다. ODBC, 환경, 연결, 문 또는 설명자 핸들과 한 번에 할당 될 수 있는 수에 제한이 없음을 정의 됩니다. 드라이버는 특정 유형의; 한 번에 할당 될 수 있는 핸들의 수에 제한을 설정할 수 있습니다. 자세한 내용은 드라이버 설명서를 참조 합니다.  
@@ -199,4 +193,3 @@ SQLRETURN SQLAllocHandle(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Point method
 - Point (geography Data Type)
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cefb6e199bbd4617b1fc2f6f71d9bb3997445dc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f37072d64159d5d8bfb1d44a64dd017adf0fceed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="point-geography-data-type"></a>Point(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ Point ( Lat, Long, SRID )
  *Lat*  
  이 **float** 의 x 좌표를 나타내는 식은 **지점** 생성 되 고 합니다.  
   
- *긴*  
+ *Long*  
  이 **float** 의 y 좌표를 나타내는 식은 **지점** 생성 되 고 합니다. 유효한 위 도와 경도 값에 대 한 자세한 내용은 참조 하십시오. [지점](../../relational-databases/spatial/point.md)합니다.  
   
  *SRID*  
@@ -76,4 +75,3 @@ SELECT @g.ToString();
  [확장 정적 지리 메서드](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

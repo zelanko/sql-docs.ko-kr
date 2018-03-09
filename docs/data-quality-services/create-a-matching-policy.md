@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,17 +16,16 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "43"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0cffe1699c221e37e353cad1269f675aac89db15
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1fe1c8b25d8309d3984c70c31f5949a9724599a3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-matching-policy"></a>일치 정책 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 일치 정책을 만드는 방법에 대해 설명합니다. 예제 데이터에서 일치 정책 작업을 실행하여 DQS에서 일치 프로세스를 준비할 수 있습니다. 이 작업에서는 정책에서 하나 이상의 일치 규칙을 만들고 테스트한 다음 일치 규칙을 공개적으로 사용할 수 있도록 기술 자료를 게시합니다. 기술 자료에는 하나의 일치 정책만 있을 수 있지만 해당 정책에 여러 일치 규칙이 포함되어 있을 수 있습니다.  
@@ -36,12 +34,12 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  원본 데이터가 Excel 파일 형식인 경우 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 컴퓨터에 Microsoft Excel이 설치되어 있어야 합니다. 그렇지 않으면 매핑 단계에서 Excel 파일을 선택할 수 없습니다. Microsoft Excel에서 만든 파일은 .xlsx, .xls 또는.csv 확장명을 가질 수 있습니다. 64비트 버전의 Excel이 사용된 경우 Excel 2003 파일 (.xls)만 지원됩니다. Excel 2007 또는 2010 파일(.xlsx)은 지원되지 않습니다. 64비트 버전의 Excel 2007 또는 2010을 사용 중인 경우 파일을 .xls 파일 또는 .csv 파일로 저장하거나 32비트 버전의 Excel을 대신 설치하세요.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  일치 정책을 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="MatchingRules"></a> 일치 규칙 매개 변수를 설정하는 방법  
@@ -140,7 +138,7 @@ ms.lasthandoff: 09/09/2017
   
     -   일치 결과 테이블의 레코드를 두 번 클릭하면 피벗 레코드와 원본 레코드(두 레코드의 모든 필드 값 포함), 두 레코드 간의 점수 및 레코드 일치 드릴다운이 표시된 **일치 점수 정보** 팝업이 나타납니다. 드릴다운에는 피벗 레코드와 원본 레코드의 각 필드 값이 비교할 수 있도록 표시되고 각 필드가 두 레코드의 전체 일치 점수에 기여하는 일치 점수가 표시됩니다.  
   
-14. **프로파일러** 및 **일치 결과** 탭의 통계를 보고 원하는 결과를 얻었는지 확인합니다. 자세한 내용은 [프로파일러 및 결과 탭](#Tabs)을 참조하세요.  
+14. **프로파일러** 및 **일치 결과** 탭의 통계를 보고 원하는 결과를 얻었는지 확인합니다. 자세한 내용은 [Profiler and Results Tabs](#Tabs)을 참조하세요.  
   
 15. 규칙을 변경해야 하는 경우 규칙 편집기에서 변경하고 **다시 시작**을 클릭합니다.  
   
@@ -197,7 +195,7 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="FollowUp"></a> 후속 작업: 일치 정책을 만든 후  
  일치 정책을 만든 후 해당 일치 정책이 포함된 기술 자료를 기반으로 일치 프로젝트를 실행할 수 있습니다. 자세한 내용은 [일치 프로젝트 실행](../data-quality-services/run-a-matching-project.md)을 참조하세요.  
   
-##  <a name="Tabs"></a> 프로파일러 및 결과 탭  
+##  <a name="Tabs"></a> Profiler and Results Tabs  
  프로파일러 및 결과 탭에는 일치 정책 페이지와 일치 결과 페이지 모두에 대한 통계가 포함됩니다.  
   
 ###  <a name="Profiler"></a> 프로파일러 탭  
@@ -262,4 +260,3 @@ ms.lasthandoff: 09/09/2017
 -   클러스터의 최대 중복 레코드 수  
   
   
-

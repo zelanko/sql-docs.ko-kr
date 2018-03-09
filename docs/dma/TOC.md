@@ -1,6 +1,7 @@
 # [Data Migration Assistant 개요](dma-overview.md)
 
 # [Data Migration Assistant의 새로운 기능](dma-whatsnew.md)
+# [새로운 또는 업데이트 된 문서](new-updated-dma.md)
 # [SQL Server 마이그레이션 평가](dma-assesssqlonprem.md)
 # [평가 보고서 통합](dma-consolidatereports.md)
 # [통합 평가에 대한 Power BI 보고서](dma-powerbiassesreport.md)

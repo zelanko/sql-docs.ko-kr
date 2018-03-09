@@ -3,8 +3,11 @@ title: "도구 상자 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3190646ab3eb434e2b7ad17aa6ca3914857c6690
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 44ad54ed01f16b55f4930292348d0277655c137c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-the-toolbox"></a>도구 상자 사용
-도구 상자의 항목, 텍스트 및 컨트롤을 선택하여 양식, 페이지 및 디자이너로 끌어다 놓고 이러한 원본의 항목을 다시 도구 상자로 끌어다 놓아 나중에 다시 사용할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 에서는 태스크를 유지 관리 계획으로 끌어다 놓을 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 도구 상자의 항목, 텍스트 및 컨트롤을 선택하여 양식, 페이지 및 디자이너로 끌어다 놓고 이러한 원본의 항목을 다시 도구 상자로 끌어다 놓아 나중에 다시 사용할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 에서는 태스크를 유지 관리 계획으로 끌어다 놓을 수 있습니다.  
   
 도구 상자의 항목은 탭이라는 섹션으로 그룹화됩니다. 다음은 일반 도구 상자 태스크의 참조 목록과 이에 대한 사용 방법입니다.  
   

@@ -1,34 +1,34 @@
----
+﻿---
 title: "SQL 및 R을 사용한 그래프와 플롯(plot) 만들기(연습) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/03/2017
-ms.prod: sql-server-2016
+ms.date: 11/10/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 2a1572cf1bc6f8e3f6aff99255e5805bf977978d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e81411ea3e59276739425e2527aca93ea1ebb0ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL 및 R을 사용한 그래프와 플롯(plot) 만들기(연습)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+이 연습 부분에서는 점도 SQL Server 데이터를 R을 사용 하 여 맵을 생성 하는 기술을 배웁니다. 일부 연습 하는 간단한 히스토그램을 만들고 보다 복잡 한 맵을 플롯을 개발 합니다.
 
 이 연습에서는 SQL Server 데이터와 R을 사용하여 플롯과 맵을 생성하는 기술을 배웁니다. 연습을 위해 간단한 히스토그램을 만들어 본 뒤 더 복잡한 지도 플롯을 개발합니다.
 
@@ -60,8 +60,6 @@ ms.lasthandoff: 09/01/2017
 ### <a name="create-a-map-plot"></a>지도 플롯 만들기
 
 일반적으로 데이터베이스 서버는 인터넷 접근을 차단합니다. 이는 지도나 혹은  플롯을 생성하는 다른 이미지를 다운로드해야 하는 R 패키지를 사용할 때 불편할 수 있습니다. 그러나 자신의 응용 프로그램을 개발할 때 유용할 수도 있는 해결 방법이 있습니다. 기본적으로 클라이언트에서 지도 표현을 생성한 다음 SQL Server 테이블에 속성으로 저장된 점을 지도에 오버레이합니다.
-
-1. R 플롯 개체를 만드는 함수를 정의합니다. 사용자 지정 함수 *mapPlot* 은 택시 승차 위치를 사용하는 산점도(scatter plot)를 생성하고 각 위치에서 시작한 탑승 수를 표시합니다. 이미 설치되고 로드된 **ggplot2** 및  **ggmap** 패키지를 사용합니다.
 
 
     ```R
@@ -128,4 +126,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-lesson"></a>이전 단원
 
 [R을 사용한 데이터 요약](/walkthrough-view-and-summarize-data-using-r.md)
-

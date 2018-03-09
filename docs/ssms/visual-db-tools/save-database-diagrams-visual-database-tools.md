@@ -3,9 +3,13 @@ title: "데이터베이스 다이어그램 저장(Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,23 +17,24 @@ helpviewer_keywords:
 - database diagrams [SQL Server], saving
 - diagrams [SQL Server], saving
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b298fde1eb4484fca942ed305e5f93f4e40170b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2c3a0745ab34f997bd614b091cb8d2c6a0b1aa80
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 저장(Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 데이터베이스 다이어그램을 저장하면 테이블, 열 및 기타 데이터베이스 개체에 대한 변경 내용을 비롯하여 데이터베이스에 대한 모든 변경 내용을 저장할 수 있습니다.  
   
 ### <a name="to-save-the-database-diagram"></a>데이터베이스 다이어그램을 저장하려면  
   
-1.  **파일** 메뉴에서 **\<***tablename***> 저장**을 선택합니다.  
+1.  **파일** 메뉴에서 **Save \<***tablename***>**을 선택합니다.  
   
 2.  저장하려는 다이어그램을 이전에 한번도 저장한 적이 없으면 **다른 이름으로 저장** 대화 상자가 열립니다. 다이어그램의 이름을 입력합니다.  
   

@@ -1,32 +1,36 @@
----
-title: "SQL Server 데이터 쿼리 및 수정(SQL과 R 심층 분석) | Microsoft Docs"
+﻿---
+title: "쿼리 및 수정 (SQL과 R 심층 분석)에서 SQL Server 데이터 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
+- SQL Server 2017
 dev_langs:
 - R
 ms.assetid: 8c7007a9-9a8f-4dcd-8068-40060d4f6444
-caps.latest.revision: 17
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 901ae76597dd9a9ab1136a35442cc27b6ea63e61
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4970a681733d8920b9eef6b27023f9ae1c7ce981
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="query-and-modify-the-sql-server-data"></a>SQL Server 데이터 쿼리 및 수정(SQL과 R 심층 분석)
+# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>쿼리 및 SQL Server 데이터 (SQL과 R 심층 분석)를 수정 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+이 문서는 데이터 과학 심층 분석 자습서를 사용 하는 방법에 대 한 일부 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server와 함께 합니다.
 
 이제 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드했으므로 앞서 만든 데이터 원본을 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 R 함수에 대한 인수로 사용하여 변수에 대한 기본 정보를 가져오고 요약 및 히스토그램을 생성합니다.
 
@@ -36,7 +40,9 @@ ms.lasthandoff: 09/01/2017
 
 먼저, 열과 해당 데이터 형식 목록을 가져옵니다.
 
-1.  **rxGetVarInfo** 함수를 사용하여 분석하려는 데이터 원본을 지정합니다.
+1.  함수를 사용 하 여 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 분석 하려는 데이터 원본을 지정 합니다.
+
+    RevoScaleR의 버전을 따라 사용할 수도 있습니다 [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)합니다. 
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -63,12 +69,13 @@ ms.lasthandoff: 09/01/2017
     *Var 9: fraudRisk, Type: integer*
 
 
-## <a name="modify-metadata"></a>메타 데이터 수정
+## <a name="modify-metadata"></a>메타 데이터를 수정 합니다.
 
 모든 변수가 정수로 저장되었지만 일부 변수는 범주형 데이터를 나타내며 R에서는 *요인(factor) 변수*라고 합니다. 예를 들어 *state* 열에는 50개 주와 콜롬비아 특별구에 대한 식별자로 사용되는 숫자가 포함되어 있습니다. 데이터를 더 쉽게 이해하기 위해 숫자를 주 약어 목록으로 바꿉니다.
 
-이 단계에서는 약어를 포함하는 문자열 벡터를 만들고 원래 정수 식별자에 이러한 범주 값을 매핑합니다. 그 다음 *colInfo* 인수에 새 변수를 사용하여 이 열을 요인으로 처리하도록 지정합니다. 데이터를 분석하거나 이동시킬 때마다 약어가 사용되며 열은 요인으로 처리됩니다.
-열을 요인으로 사용하기 전에 약어에 매핑하면 실제로 성능 또한 향상됩니다. 자세한 내용은 [R 및 데이터 최적화](https://msdn.microsoft.com/library/mt723575.aspx)를 참조하세요.
+이 단계에서는 약어를 포함 하는 문자열 벡터 만들고 원래 정수 식별자에 이러한 범주 값을 매핑합니다. 다음에서 새 변수를 사용 하 여는 *colInfo* 인수를 추가 하는이 열이 처리는 비율을 지정 합니다. 데이터를 분석 하거나 이동할 때마다 약어가 사용 되 고 열을 인수로 처리 됩니다.
+
+열을 요소로 사용하기 전에 열을 약어에 매핑하면 실제로 성능도 향상됩니다. 자세한 내용은 참조 [R 및 데이터 최적화](..\r\r-and-data-optimization-r-services.md)합니다.
 
 1. 먼저 R 변수 *stateAbb*를 만들고 다음과 같이 추가할 문자열 벡터를 정의합니다.
   
@@ -105,7 +112,7 @@ ms.lasthandoff: 09/01/2017
     )
     ```
   
-3. 업데이트된 데이터를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본을 만들려면 이전과 같이 *RxSqlServerData* 함수를 호출하되, *colInfo* 인수를 추가합니다.
+3. 업데이트된 데이터를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본을 만들려면 이전과 같이 **RxSqlServerData** 함수를 호출하되, *colInfo* 인수를 추가합니다.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -114,9 +121,8 @@ ms.lasthandoff: 09/01/2017
     ```
   
     - *table* 매개변수에 대해 앞에서 만든 데이터 원본을 포함하는 *sqlFraudTable*변수를 전달합니다.
-    - 열을 요소로 사용하기 전에 열을 약어에 매핑하면 실제로 성능도 향상됩니다. 자세한 내용은 [R 및 데이터 최적화](https://msdn.microsoft.com/library/mt723575.aspx)를 참조하세요.
     - 열을 요소로 사용하기 전에 열을 약어에 매핑하면 실제로 성능도 향상됩니다. 
-  
+
 4.  이제 **rxGetVarInfo** 함수를 사용하여 새 데이터 원본의 변수를 확인할 수 있습니다.
   
     ```R
@@ -154,7 +160,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-step"></a>이전 단계
 
 [RxSqlServerData를 사용하여 SQL Server 데이터 개체 만들기](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-
-
-

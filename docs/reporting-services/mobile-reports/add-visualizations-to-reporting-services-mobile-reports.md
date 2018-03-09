@@ -2,25 +2,26 @@
 title: "Reporting Services 모바일 보고서에 시각화 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 04a6baad7239d9a9203e4b71bbe23ea0e7318f2b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 시각화 추가
 차트는 데이터 시각화의 필수적인 부분입니다. [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서에서 여러 시나리오를 처리할 수 있는 차트에 대해 알아보세요. 
@@ -69,11 +70,11 @@ ms.lasthandoff: 08/09/2017
 
 3. 차트에 필요한 데이터가 보고서에 아직 없는 경우 **데이터** 탭 > **데이터 추가**를 [Excel 또는 공유 데이터 집합에서 데이터 가져오기](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)로 선택합니다.
 
-3. **데이터 속성** 창에서 **주 계열**은 **SimulatedTable**입니다. 상자에서 화살표를 선택한 다음 > 해당 테이블을 선택합니다.
+3. **데이터 속성** 창에서 **주 계열** 은 **SimulatedTable**입니다. 상자에서 화살표를 선택한 다음 > 해당 테이블을 선택합니다.
 
 5. **데이터 구조**를 **열 기준**로 설정한 경우(**레이아웃** 탭 > **시각적 속성** 창) **데이터 속성** 창에서 숫자 값의 여러 열을 선택할 수 있습니다.
 
-   **데이터 구조**를 **행 기준**로 설정한 경우에는 **데이터 속성** 창에서 **계열 이름 필드** 하나와 숫자 값 열 하나를 선택할 수 있습니다.
+   **데이터 구조** 를 **행 기준**로 설정한 경우에는 **데이터 속성** 창에서 **계열 이름 필드** 하나와 숫자 값 열 하나를 선택할 수 있습니다.
    
 자세한 내용은 [열 또는 행을 기준으로 데이터 그룹화](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md)를 참조하세요.
   
@@ -194,11 +195,10 @@ ms.lasthandoff: 08/09/2017
    2월, 6월, 7월 같이 손실이 난 달은 빨간색입니다. 
    9월, 10월, 11월 같이 수익이 난 달은 녹색입니다. 
 
-## <a name="see-also"></a>참고 항목 
-* [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+## <a name="see-also"></a>관련 항목: 
+* [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 탐색기](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 데이터 표](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
 * [Reporting Services 모바일 보고서의 계기](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   
-
 

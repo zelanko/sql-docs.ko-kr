@@ -37,17 +37,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: 136
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: b7f2f78bbda485de979c76076404f35122b61277
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +89,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 *length*  
 대상 데이터 형식의 길이를 지정하는 선택적 정수입니다. 기본값은 30입니다.
   
-*스타일*  
+*style*  
 CONVERT 함수를 변환 하는 방법을 지정 하는 정수 식 *식*합니다. style이 NULL이면 NULL이 반환됩니다. 범위 따라 사용자가 *data_type*합니다. 
   
 ## <a name="return-types"></a>반환 형식
@@ -150,7 +149,7 @@ CONVERT 함수를 변환 하는 방법을 지정 하는 정수 식 *식*합니�
 ## <a name="float-and-real-styles"></a>float 및 real 스타일
 때 *식* 은 **float** 또는 **실제**, *스타일* 다음 표에 표시 된 값 중 하나일 수 있습니다. 다른 값은 0으로 처리됩니다.
   
-|값|출력|  
+|Value|출력|  
 |---|---|
 |**0** (기본값)|최대 6자리 수입니다. 해당되는 경우 과학 표기법을 사용하세요.|  
 |**1**|항상 8 자리 수입니다. 항상 과학 표기법을 사용하세요.|  
@@ -161,7 +160,7 @@ CONVERT 함수를 변환 하는 방법을 지정 하는 정수 식 *식*합니�
 ## <a name="money-and-smallmoney-styles"></a>money 및 smallmoney 스타일
 때 *식* 은 **money** 또는 **smallmoney**, *스타일* 다음 표에 표시 된 값 중 하나일 수 있습니다. 다른 값은 0으로 처리됩니다.
   
-|값|출력|  
+|Value|출력|  
 |---|---|
 |**0** (기본값)|소수점 앞 세 자리마다 쉼표를 사용하지 않으며 소수점 이하 두 자리인 수입니다(예: 4235.98).|  
 |**1**|소수점 앞 세 자리마다 쉼표가 있으며 소수점 이하 두 자리인 수입니다(예: 3,510.92).|  
@@ -169,9 +168,9 @@ CONVERT 함수를 변환 하는 방법을 지정 하는 정수 식 *식*합니�
 |**126**|char(n) 또는 varchar(n)으로 변환하는 경우 스타일 2와 같습니다.|  
   
 ## <a name="xml-styles"></a>xml 스타일
-때 *식* 은 **xml***, 스타일* 다음 표에 표시 된 값 중 하나일 수 있습니다. 다른 값은 0으로 처리됩니다.
+때 *식* 은 **xml * * *, 스타일* 다음 표에 표시 된 값 중 하나일 수 있습니다. 다른 값은 0으로 처리됩니다.
   
-|값|출력|  
+|Value|출력|  
 |---|---|
 |**0** (기본값)|불필요한 공백을 삭제하고 내부 DTD 하위 집합을 허용하지 않는 기본 구문 분석 동작을 사용합니다.<br /> **참고:** 변환할 때는 **xml** 데이터 형식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 무효 공백을 다르게 처리 보다 XML 1.0에 있습니다. 자세한 내용은 참조 [XML 데이터 인스턴스 만들기](../../relational-databases/xml/create-instances-of-xml-data.md)합니다.|  
 |**1**|불필요한 공백을 유지합니다. 이 스타일 설정 기본 **xml: space** 동일 하 게 작동 하기 위한 처리 처럼 **xml: space = "preserve"** 가 대신 지정 된 합니다.|  
@@ -181,7 +180,7 @@ CONVERT 함수를 변환 하는 방법을 지정 하는 정수 식 *식*합니�
 ## <a name="binary-styles"></a>이진 스타일
 때 *식* 은 **binary (n)**, **varbinary (n)**, **char (n)**, 또는 **varchar (n)**, *스타일* 다음 표에 표시 된 값 중 하나일 수 있습니다. 여기에 없는 스타일 값은 오류를 반환합니다.
   
-|값|출력|  
+|Value|출력|  
 |---|---|
 |**0** (기본값)|ASCII 문자를 이진 바이트로 또는 이진 바이트를 ASCII 문자로 변환합니다. 각 문자 또는 바이트는 1:1로 변환됩니다.<br /> 경우는 *data_type* 이진 형식이 문자 0x는 결과의 왼쪽에 추가 됩니다.|  
 |**1**, **2**|경우는 *data_type* 이 binary 형식이 식에는 문자 식 이어야 합니다. *식* 짝수 개의 16 진수 숫자의 수로 구성 해야 (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). 경우는 *스타일* 1로 설정 되는 문자 0 x 이어야 합니다 처음 두 문자 식에 있습니다. 식에 홀수 개의 문자나 유효하지 않은 문자가 포함되어 있으면 오류가 발생합니다.<br /> 변환된 된 식의 길이가의 길이 보다 큰 경우는 *data_type* 결과 오른쪽이 잘렸습니다.<br /> 고정 길이 *data_types* 변환된 된 결과 결과의 오른쪽에 0이 추가 보다 크거나 합니다.<br /> data_type이 문자 유형이면 식이 이진 식이어야 합니다. 각 이진 문자는 두 개의 16진수 문자로 변환됩니다. 변환된 된 식의 길이 보다 크면는 *data_type* 길이, 오른쪽 잘릴 수 있습니다.<br /> 경우는 *data_type* 은 고정 크기 문자 유형이 고 변환된 된 결과의 길이가의 길이 보다 작으면는 *data_type*; 한도 유지 하기 위해 변환된 된 식의 오른쪽에 공백이 추가 되어 16 진수의 수입니다.<br /> 0 x에 대 한 변환된 된 결과의 왼쪽에 추가할 문자 *스타일* 1입니다.|  
@@ -714,9 +713,10 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>참고 항목
-[데이터 형식 변환 &#40; 데이터베이스 엔진 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-[시스템 함수 &#40; Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
-[국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)
+ [데이터 형식 변환 &#40; 데이터베이스 엔진 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [형식 &#40; Transact SQL &#41;](../../t-sql/functions/format-transact-sql.md)  
+ [STR &#40; Transact SQL &#41;](../../t-sql/functions/str-transact-sql.md)  
+ [SELECT &#40;TRANSACT-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+ [시스템 함수 &#40; Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)
   
-

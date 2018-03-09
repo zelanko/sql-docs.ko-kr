@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,22 +20,21 @@ helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bd1f07d35356efda77edeaf08d851ad4d7d9bcb0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 678ba0fa4e256402e9fc25e2e4e60ba4877c6c44
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>ODBC 연결 핸들 할당
 응용 프로그램은 데이터 원본이 나 드라이버에 연결할 수, 먼저 다음과 같이 연결 핸들을 할당 해야 합니다.  
   
-1.  응용 프로그램 SQLHDBC 형식의 변수를 선언합니다. 그런 다음 연속 호출 **SQLAllocHandle** 하 고이 변수를 sql_handle_dbc 라는 옵션 및 연결을 할당 하는 환경 핸들의 주소를 전달 합니다. 예를 들어  
+1.  응용 프로그램 SQLHDBC 형식의 변수를 선언합니다. 그런 다음 연속 호출 **SQLAllocHandle** 하 고이 변수를 sql_handle_dbc 라는 옵션 및 연결을 할당 하는 환경 핸들의 주소를 전달 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```  
     SQLHDBC hdbc1;  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
  연결 핸들을 할당 하는 드라이버 로드와 동일 하 게 하는 것이 유용 합니다. 연결 함수를 호출할 때까지 드라이버가 로드 되지 않습니다. 따라서 연결 핸들을 할당 한 후와 드라이버 또는 데이터 원본에 연결 하기 전에 응용 프로그램 연결 핸들 사용 하 여 호출할 수의 유일한 함수는, **SQLSetConnectAttr**, **SQLGetConnectAttr**, 또는 **SQLGetInfo** SQL_ODBC_VER 옵션을 사용 합니다. 와 같은 연결 핸들을 사용 하 여 다른 함수를 호출 **SQLEndTran**, SQLSTATE 08003 (열려 있지 않습니다. 연결)를 반환 합니다. 자세한 내용은 참조 하십시오. [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.  
   
  연결 핸들에 대 한 자세한 내용은 참조 [연결 핸들](../../../odbc/reference/develop-app/connection-handles.md)합니다.
-

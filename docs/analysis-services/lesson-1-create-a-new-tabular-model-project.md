@@ -2,27 +2,28 @@
 title: "1 단원: 새 테이블 형식 모델 프로젝트 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 6c65307cd9368c976d28b60c567ed0b9bcd29b97
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fe1c808d84bac0c14e1cf46c4613464e04bbea0c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>1단원: 새 테이블 형식 모델 프로젝트를 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/17/2017
       
 6.  **호환성 수준**에서 **SQL Server 2016(1200)** 이 선택되어 있는지 확인한 다음 **확인**을 클릭합니다.   
  
-    ![로-테이블 형식-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
+    ![as-tabular-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
       
     호환성 수준 목록 상자에서 SQL Server 2016 RTM (1200) 표시 되지 않는, 사용 중인 경우 하지 SQL Server Data Tools의 최신 버전입니다. 최신 버전을 다운로드하려면 [SQL Server Data Tools 설치](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)를 참조하세요.  
 
@@ -67,15 +68,15 @@ ms.lasthandoff: 11/17/2017
   
 프로젝트를 만든 후 SSDT에서 열립니다. 오른쪽에서에서 **테이블 형식 모델 탐색기**, 모델에 있는 개체의 트리 보기에 표시 됩니다. 데이터를 가져온 아직 하지 않은 이후 폴더는 비어 있게 됩니다. 메뉴 모음과 비슷한 작업을 수행 하는 개체 폴더를 마우스 오른쪽 단추로 클릭 수 있습니다. 이 자습서를 실행할 때는 모델 프로젝트에서 서로 다른 개체를 탐색 하는 테이블 형식 모델 탐색기를 사용 합니다.
 
-![로-테이블 형식-lesson1-시간이](../analysis-services/media/as-tabular-lesson1-tme.png)
+![as-tabular-lesson1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
 
 클릭는 **솔루션 탐색기** 탭 합니다. 확인할 수 있습니다 프로그램 **Model.bim** 파일입니다. 디자이너 창의 왼쪽 (Model.bim 탭 된 빈 창)에 표시 되지 않는 경우 **솔루션 탐색기**아래 **AW Internet Sales 프로젝트**, 두 번 클릭은 **Model.bim** 파일입니다. Model.bim 파일 모든 모델 프로젝트에 대 한 메타 데이터를 포함합니다. 
 
-![로-테이블 형식-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
+![as-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
   
 모델 속성에 살펴보겠습니다. 클릭 **Model.bim**합니다. 에 **속성** 창 표시는 [모델 속성](../analysis-services/tabular-models/model-properties-ssas-tabular.md)되며이 중 가장 중요 한는 **DirectQuery 모드** 속성입니다. 이 속성은 모델이 메모리 내 모드(해제)로 배포되는지 아니면 DirectQuery 모드(설정)로 배포되는지를 지정합니다. 이 자습서에서는 메모리 내 모드에서 모델을 제작하고 배포합니다.
 
-![로-테이블 형식-lesson1-속성](../analysis-services/media/as-tabular-lesson1-properties.png)
+![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 특정 모델 속성에 지정할 수 있는 데이터 모델링 설정에 따라 자동으로 설정 됩니다는 새 모델을 만들 때의 **도구** > **옵션** 대화 상자. 데이터 백업, 작업 영역 보존 및 작업 영역 서버 속성은 작업 영역 데이터베이스(모델 제작 데이터베이스)가 백업되고 메모리에 보관되고 작성되는 방법을 지정합니다. 필요하면 나중에 이러한 설정을 변경할 수 있지만 지금은 있는 그대로 둡니다.  
 
@@ -91,7 +92,7 @@ SSDT를 설치할 때 몇 가지 새 메뉴 항목이 Visual Studio 환경에 �
 
 
 ## <a name="additional-resources"></a>추가 리소스
-다양한 유형의 테이블 형식 모델 프로젝트에 대한 자세한 내용은 [테이블 형식 모델 프로젝트&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)를 참조하세요. 테이블 형식 모델 제작 환경에 대한 자세한 내용은 [테이블 형식 모델 디자이너&#40;SSAS&#41;](../analysis-services/tabular-models/tabular-model-designer-ssas.md)를 참조하세요.  
+다양 한 유형의 테이블 형식 모델 프로젝트에 대 한 자세한 참조 [테이블 형식 모델 프로젝트](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)합니다. 테이블 형식 모델 제작 환경에 대 한 자세한 참조 [테이블 형식 모델 디자이너 ](../analysis-services/tabular-models/tabular-model-designer-ssas.md)합니다.  
   
 
 ## <a name="whats-next"></a>다음 단계

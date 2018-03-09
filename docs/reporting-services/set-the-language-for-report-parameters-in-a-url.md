@@ -2,12 +2,13 @@
 title: "URL에 보고서 매개 변수 언어 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - international considerations [Reporting Services]
 - global considerations [Reporting Services]
 ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
-caps.latest.revision: 29
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "29"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 815af671e5bd26445153b96f68ebcbaf0e972cf7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 65ad7f21e50fa0270a5ed39aeefd562293e19c63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>URL에 보고서 매개 변수 언어 설정
   *rs:ParameterLanguage* URL액세스 매개 변수를 사용하면 날짜, 시간, 통화, 숫자 등의 culture 구분 보고서 매개 변수가 브라우저 언어를 사용하여 해석되는 문제가 완화됩니다. *rs:ParameterLanguage*를 사용하면 URL이 브라우저와 상관없이 해석됩니다. 예를 들어 보고서 서버가 독일어 지역 설정으로 설정되었지만 사용자가 영어-미국으로 설정된 브라우저를 사용하여 URL을 통해 보고서에 액세스한다면 보고서 서버에 전달되는 매개 변수 값이 잘못 해석됩니다.  
@@ -47,9 +47,8 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
   
  URL 액세스 매개 변수 **rc:Parameters** 에 대한 **true** 및 *false*값 이외에 이제 **Collapsed**값을 전달할 수 있습니다. URL에서 *rc:Parameters*=**Collapsed** 를 사용할 경우 HTML 뷰어의 매개 변수 프롬프트 영역이 보이지 않도록 축소되지만 사용자가 표시 여부를 선택할 수 있습니다. **false** 값을 사용하면 HTML 뷰어 도구 모음에서 매개 변수 프롬프트 영역이 제거되어 최종 사용자가 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [URL 액세스 &#40; Ssrs&#41;](../reporting-services/url-access-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
   
   
-

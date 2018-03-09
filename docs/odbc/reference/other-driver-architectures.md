@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - heterogeneous join engines[ODBC]
 - drivers [ODBC], middle component
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fca4bea3f40702fb2593442ccbbfb311f813a87a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a458ba0d7e83ab4e4c56ed40c34fae54e24c1b2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-driver-architectures"></a>다른 드라이버 아키텍처
 일부 ODBC 드라이버에는 앞에서 설명한 아키텍처 엄격 하 게 준수 하지 않는 합니다. 드라이버는 기존의 ODBC 드라이버의 이외의 상의 임무를 수행할 또는 일반적인 의미에서 드라이버가 아닌 때문일 수 있습니다.  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  이 아키텍처의 장점 중 하나는 효율적으로 소프트웨어 유지 관리 및 구성 됩니다. 드라이버는 한 곳에서 업데이트 필요: 서버에 있습니다. 시스템 데이터 소스를 사용 하 여 모든 클라이언트에서 데이터 원본은 사용 하기 위해 서버에서 정의할 수 있습니다. 클라이언트에서 데이터 원본은 정의할 필요가 있습니다. 연결 풀링을 사용할 수 있는 클라이언트 데이터 원본에 연결 하는 프로세스를 간소화 하 합니다.  
   
  클라이언트에서 드라이버는 일반적으로 서버에 대 한 드라이버 관리자 호출을 전송 하는 매우 작은 드라이버. 공간이 서버에서 모든 기능을 갖춘 ODBC 드라이버 보다 훨씬 적을 수 있습니다. 이 아키텍처에서 서버에 있는 경우 추가 컴퓨팅 기능이 클라이언트 리소스를 해제할 수 있습니다. 또한 백업 서버를 설치 하 고 서버 사용을 최적화 하기 위해 부하 분산을 수행 하 여 효율성 및 전체 시스템의 보안을 향상 시킬 수 있습니다.
-

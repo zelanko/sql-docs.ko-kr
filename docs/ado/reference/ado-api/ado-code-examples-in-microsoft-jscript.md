@@ -3,7 +3,7 @@ title: "Microsoft jscript에서 ADO 코드 예제 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, JScript
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 40bbf8b39fb1da60418c43074926b5115e6e1448
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b935c1d355817af0401c1088d366db4af29561f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft jscript에서 ADO 코드 예제
 다음 코드 예제를 사용 하 여 ADO 메서드, 속성 및 JScript로 작성할 때 이벤트를 사용 하는 방법에 알아봅니다.  
@@ -68,4 +67,3 @@ ms.lasthandoff: 09/09/2017
  [ADO 코드 예에서는 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Visual c + +에서 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [부록 D: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
-

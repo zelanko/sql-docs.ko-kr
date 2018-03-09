@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0ee22a6f808dd1b97d0d865229c78cbf26808fba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interval-literals"></a>간격 리터럴
 ODBC는 모든 드라이버 SQL_CHAR 또는 SQL_VARCHAR 데이터 형식의 모든 C interval 데이터 형식 변환할 지 필요 합니다. 그러나 데이터 원본에는 interval 데이터 형식을 지원 하지 않으면, 드라이버 알아야 SQL_CHAR 필드의 값이 올바른 형식의 하려면 이러한 변환을 지원 합니다. 마찬가지로, ODBC 드라이버를 어떤 형식 문자 필드에 저장 된 간격을 알고 있어야 하므로 유형 SQL_CHAR 또는 SQL_VARCHAR, 변환할 수 있는 모든 ODBC C 있어야 필요 합니다. 이 섹션에는 드라이버 기록기로 SQL_CHAR 필드 또는 C interval 데이터 형식에서 변환 하는 동안 유효성을 검사 하는 간격 리터럴 구문을 설명 합니다.  
@@ -102,4 +100,3 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{간격 '223.16' 두 번째}<br /><br /> {간격 '223' YEAR}|선행 정밀도 지정 하지 않으면 때문에 기본적으로 2는 너무 작아서 지정 된 리터럴을 보유 합니다.|  
 |{간격 '22.1234567' 두 번째}|초 전체 자릿수 지정 하지 않으므로 기본적으로 6. 리터럴 자릿수는 7 소수점 뒤 합니다.|  
 |{간격 ' 163-13' YEAR(3) 달으로}<br /><br /> {간격 ' 163 65' 시간 DAY(3)}<br /><br /> {간격을 분으로 DAY(3) '163 62:39'을 (를)<br /><br /> {간격 SECOND(3) DAY(3) '163 12:125:59.163'을 (를)<br /><br /> {간격 '163:144' 분으로 HOUR(3)}<br /><br /> {간격 '163:567:234.163' SECOND(4) HOUR(3)}<br /><br /> {간격 '163:591.163' SECOND(5) MINUTE(3)}|후행 필드는 일반 달력의 규칙을 따르지 않습니다.|
-

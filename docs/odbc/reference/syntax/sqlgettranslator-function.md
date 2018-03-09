@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetTranslator
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetTranslator
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetTranslator
-helpviewer_keywords:
-- SQLGetTranslator function [ODBC]
+f1_keywords: SQLGetTranslator
+helpviewer_keywords: SQLGetTranslator function [ODBC]
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0687666f81d30615a2cc94268ed861faf1031d8d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76bc8c85e923c792e87c13c2ca7f490c7273d975
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator 함수
 **규칙**  
@@ -87,7 +81,7 @@ BOOL SQLGetTranslator(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetTranslator** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*cbNameMax* 또는 *cbPathMax* 0 보다 작거나 같은 인수 했습니다.|  
@@ -97,7 +91,7 @@ BOOL SQLGetTranslator(
 |ODBC_ERROR_INVALID_OPTION|잘못 된 트랜잭션 옵션|*pvOption* 인수에 잘못 된 값을 포함 합니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  경우 *창은* 은 null 이거나 *lpszName*, *lpszPath*, 또는 *pvOption* null 포인터가 **SQLGetTranslator** FALSE를 반환 합니다. 그렇지 않은 경우 다음 대화 상자에 설치 된 변환기 목록이 표시 됩니다.  
   
  ![변환기 대화 상자 선택](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
@@ -115,4 +109,3 @@ BOOL SQLGetTranslator(
 |변환기를 구성합니다.|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |번역 속성 가져오기|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |번역 속성 설정|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
-

@@ -2,27 +2,30 @@
 title: "백업 장치(일반 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41ccc8cfe692b236e7bd372ef2328b7d987870a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 783ec3d28cac152932ffd2088d0aa53c92f9dcb7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-device-general-page"></a>백업 장치(일반 페이지)
-  **일반** 페이지를 사용하여 논리적 백업 장치의 일반 속성을 지정하거나 확인할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **일반** 페이지를 사용하여 논리적 백업 장치의 일반 속성을 지정하거나 확인할 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 백업 장치의 내용을 보려면**  
   
@@ -30,7 +33,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **장치 이름**  
  기존 논리적 백업 장치의 이름을 확인하거나 새 논리적 백업 장치의 이름을 지정합니다.  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  원격 컴퓨터의 테이프 백업 장치는 올바른 백업 대상이 아닙니다.  
   
- **파일**  
+ **최근에 사용한 파일**  
  기존 논리적 백업 장치의 대상 파일을 확인하거나 새 논리적 백업 장치의 대상 파일을 지정합니다.  
   
 -   기존 논리적 백업 장치의 경우 백업 파일의 경로가 표시됩니다. **파일** 필드를 편집할 수 없으며 찾아보기 단추를 사용할 수 없습니다.  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/09/2017
     > [!IMPORTANT]  
     >  네트워크를 통해 데이터를 백업할 경우에는 네트워크 오류가 발생할 수 있으므로 완료된 후에 백업 작업을 확인하는 것이 좋습니다. 자세한 내용은 [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  하나 이상의 백업 장치 세트에서의 백업이 미디어 세트 하나를 구성합니다. *미디어 세트* 는 하나 이상의 백업 작업에서 고정된 유형과 개수의 백업 장치를 사용하여 기록한 백업 미디어, 테이프 또는 디스크 파일의 모음입니다. 미디어 세트에 대한 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)인스턴스를 실행하는 컴퓨터에 테이프 드라이브가 연결되어 있는 경우에만 사용할 수 있습니다.  
   
  미디어 세트의 첫 번째 백업이 논리적 백업 장치에 기록되면 논리적 백업 장치에 해당하는 물리적 백업 장치가 초기화됩니다. 물리적 백업 장치가 아직 존재하지 않는 파일인 경우 이 시점에 만들어집니다.  

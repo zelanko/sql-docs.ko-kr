@@ -1,34 +1,31 @@
 ---
-title: "테이블 형식 모델 데이터베이스 (SSAS 테이블 형식) | Microsoft Docs"
+title: "테이블 형식 모델 데이터베이스 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: cbfa3c258d784b3a591abd13c2eb90f333bf53a1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b44bf68cba02b03faad632d4b93fe3cca361e62f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>배포 된 테이블 형식 모델 데이터베이스 관리
-  테이블 형식 model 데이터베이스는 Analysis Services 테이블 형식 모델 프로젝트 템플릿을 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 만드는 Analysis Services 데이터베이스입니다. 이 템플릿에서는 테이블과 관계가 데이터를 나타내기 위한 기본 구조입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+테이블 형식 model 데이터베이스는 Analysis Services 테이블 형식 모델 프로젝트 템플릿을 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 만드는 Analysis Services 데이터베이스입니다. 이 템플릿에서는 테이블과 관계가 데이터를 나타내기 위한 기본 구조입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터베이스, 테이블 또는 파티션 처리&#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)  
@@ -39,12 +36,12 @@ ms.lasthandoff: 09/01/2017
   
  [테이블 형식 모델 데이터베이스에 연결](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
- [파워 피벗에서 복원](../../analysis-services/tabular-models/restore-from-power-pivot.md)  
+ [Power Pivot에서 복원](../../analysis-services/tabular-models/restore-from-power-pivot.md)  
   
 
     
 ## <a name="related-content"></a>관련 내용  
- [테이블 형식 모델 솔루션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [테이블 형식 모델 솔루션](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
  [테이블 형식 모델 데이터 액세스](../../analysis-services/tabular-models/tabular-model-data-access.md)  
 
@@ -52,7 +49,7 @@ ms.lasthandoff: 09/01/2017
   
  [Analysis Services 데이터베이스 동기화](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [Analysis Services 데이터베이스 수정 또는 삭제](../../analysis-services/multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   
@@ -62,4 +59,3 @@ ms.lasthandoff: 09/01/2017
   
  [Analysis Services 데이터베이스 연결 및 분리](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
-

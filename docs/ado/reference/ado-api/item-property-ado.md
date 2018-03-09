@@ -3,7 +3,7 @@ title: "Item 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -48,17 +48,16 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 48abf6f8e4b1e99d498130aedfee6d653f214579
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 59779714027c0ff619293d01de851daec7bbe158
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="item-property-ado"></a>Item 속성 (ADO)
 이름 또는 서 수는 컬렉션의 특정 멤버를 나타냅니다.  
@@ -73,7 +72,7 @@ Set object = collection.Item ( Index )
  개체 참조를 반환합니다.  
   
 ## <a name="parameters"></a>매개 변수  
- *인덱스*  
+ *Index*  
  A **Variant** 은 이름 또는 컬렉션에 있는 개체의 서 수를 계산 되는 식입니다.  
   
 ## <a name="remarks"></a>주의  
@@ -101,4 +100,3 @@ collection (Index)
 ## <a name="see-also"></a>관련 항목:  
  [항목 속성 예제 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item 속성 예제(VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   
-

@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLNativeSql
-apilocation:
-- sqlsrv32.dll
+apiname: SQLNativeSql
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLNativeSql
-helpviewer_keywords:
-- SQLNativeSql function [ODBC]
+f1_keywords: SQLNativeSql
+helpviewer_keywords: SQLNativeSql function [ODBC]
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e233d9742ea7bd9aa5de56962e1d785be78b8066
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1672e4c1f21d223ed326c0e0649fc7cbb2376f74
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 함수(SQLNativeSql Function)
 **규칙**  
@@ -81,7 +75,7 @@ SQLRETURN SQLNativeSql(
 ## <a name="diagnostics"></a>진단  
  때 **SQLNativeSql** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *HandleType* sql_handle_dbc 라는의 및 *처리* 의 *ConnectionHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLNativeSql** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *OutStatementText* 충분히 SQL 문자열이 잘림 하므로 전체 SQL 문자열을 반환할 수 없습니다. 잘리지 않은 SQL 문자열의 길이에서 **TextLength2Ptr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -101,7 +95,7 @@ SQLRETURN SQLNativeSql(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *ConnectionHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  다음은 항목의 예 **SQLNativeSql** CONVERT 스칼라 함수를 포함 하는 다음 입력된 SQL 문자열에 대 한 반환 될 수 있습니다. 데이터 원본에는 정수 유형의 열 empid 임을 가정 합니다.  
   
 ```  
@@ -134,4 +128,3 @@ SELECT int2 (empid) FROM employee
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

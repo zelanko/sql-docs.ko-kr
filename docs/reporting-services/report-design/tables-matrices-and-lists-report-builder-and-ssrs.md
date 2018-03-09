@@ -1,13 +1,14 @@
 ---
-title: "테이블, 행렬 및 목록 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "테이블, 행렬 및 목록(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -36,22 +37,21 @@ f1_keywords:
 - "10043"
 - sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: aa7d5ba489e0f23c6802a1d6596a22f2263decd8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1caed0f401f74ad420475aae125ba47558d0163a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>테이블, 행렬 및 목록(보고서 작성기 및 SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]에서 테이블, 행렬 및 목록은 행과 열로 구성되는 셀에 페이지를 매긴 보고서 데이터를 표시하는 *데이터 영역* 입니다. 셀에는 보통 텍스트, 날짜, 숫자 등의 텍스트 데이터가 포함되지만 계기, 차트, 또는 보고서 항목(예: 이미지)도 포함될 수 있습니다. 테이블, 행렬 및 목록을 집합적으로 *테이블릭스* 데이터 영역이라고 하는 경우가 많습니다.  
   
- 테이블, 행렬 및 목록 템플릿은 셀에 데이터를 표시할 수 있는 유동적 눈금인 테이블릭스 데이터 영역에 작성됩니다. 테이블 및 행렬 템플릿에서 셀은 행과 열로 구성됩니다. 템플릿은 원본으로 사용 되는 일반 테이블 릭 스 데이터 영역의 변형 이므로 템플릿 형식의 조합 하 여 데이터를 표시할 수 있으며 변경 테이블, 행렬 또는 목록에 보고서를 개발할 때 다른 데이터 영역의 기능을 포함 합니다. 예를 들어 테이블을 추가했는데 용도에 맞지 않으면 열 그룹을 추가해 테이블을 행렬로 만들 수 있습니다.  
+ 테이블, 행렬 및 목록 템플릿은 셀에 데이터를 표시할 수 있는 유동적 눈금인 테이블릭스 데이터 영역에 작성됩니다. 테이블 및 행렬 템플릿에서 셀은 행과 열로 구성됩니다. 템플릿은 일반적인 기본 테이블릭스 데이터 영역의 변형이므로 템플릿 형식의 조합으로 데이터를 표시할 수 있으며, 보고서를 개발할 때 다른 데이터 영역의 기능을 포함하도록 테이블, 행렬 또는 목록을 변경할 수 있습니다. 예를 들어 테이블을 추가했는데 용도에 맞지 않으면 열 그룹을 추가해 테이블을 행렬로 만들 수 있습니다.  
   
  테이블 및 행렬 데이터 영역에 중첩된 테이블, 행렬, 목록, 차트 및 계기를 포함해 복잡한 데이터 관계를 표시할 수 있습니다. 테이블 및 행렬에는 테이블 형식 레이아웃이 있으며 해당 데이터는 단일 데이터 원본에 작성된 단일 데이터 집합에서 제공됩니다. 테이블과 행렬의 가장 큰 차이점은 테이블의 경우 행 그룹만 포함할 수 있지만 행렬은 행 그룹과 열 그룹을 모두 포함할 수 있다는 것입니다.  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Table"></a> 테이블  
  세부 데이터를 표시하거나, 데이터를 행 그룹으로 구성하거나, 두 가지 모두를 수행할 때 테이블을 사용합니다. 테이블 템플릿에는 테이블 머리글 행 및 데이터를 위한 정보 행이 있는 세 열이 들어 있습니다. 다음 그림에서는 디자인 화면에서 선택한 초기 테이블 템플릿을 보여 줍니다.  
   
- ![디자인 화면에서 테이블 템플릿이 선택 된](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "디자인 화면에서 테이블 템플릿이 선택")  
+ ![디자인 화면에서 테이블 템플릿 선택](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "디자인 화면에서 테이블 템플릿 선택")  
   
  단일 필드, 여러 필드를 기준으로 하거나 사용자 고유의 식을 작성하여 데이터를 그룹화할 수 있습니다. 중첩된 그룹이나 인접한 독립 그룹을 만들고 그룹화된 데이터의 집계된 값을 표시하거나 합계를 그룹에 추가할 수 있습니다. 예를 들어 테이블에 [Category]라는 행 그룹이 있는 경우 각 그룹의 부분합과 보고서의 총합을 모두 추가할 수 있습니다. 테이블의 모양을 개선하고 뚜렷하게 표시할 데이터를 강조하려면 셀을 병합하고 데이터 및 테이블 제목에 서식을 적용할 수 있습니다.  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Matrix"></a> 행렬  
  피벗 테이블 또는 크로스탭처럼 집계된 데이터 요약을 행 및 열로 그룹화하여 표시할 때 행렬을 사용합니다. 그룹의 행과 열 수는 각 행 및 열 그룹의 고유 값 수에 따라 결정됩니다. 다음 그림에서는 디자인 화면에서 선택한 초기 행렬 템플릿을 보여 줍니다.  
   
- ![선택한 도구 상자에서 추가 된 새 행렬이](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "선택한 도구 상자에서 새 행렬 추가")  
+ ![도구 상자에서 추가된 새 행렬 선택](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "도구 상자에서 추가된 새 행렬 선택")  
   
  행 및 열 그룹의 여러 필드나 식으로 데이터를 그룹화할 수 있습니다. 런타임에 보고서 데이터 및 데이터 영역이 결합되면 열 그룹에는 열이, 행 그룹에는 행이 추가되면 페이지에서 행렬이 가로와 세로 방향으로 확장됩니다. 행렬 셀에는 셀이 속한 행 및 열 그룹의 교차점으로 한정된 집계 값이 표시됩니다. 예를 들어 행렬에 판매량 합계를 표시하는 행 그룹 하나(Category)와 열 그룹 두 개(Territory, Year)가 있는 경우 보고서에서는 두 개의 셀에 Category 그룹의 각 값에 대한 판매량 합계가 표시됩니다. 셀의 범위가 되는 두 교차점은 범주와 지역 및 범주와 연도입니다. 이 행렬에는 중첩된 그룹과 인접 그룹이 포함될 수 있습니다. 중첩된 그룹에는 부모-자식 관계가 있으며 인접 그룹에는 피어 관계가 있습니다. 행렬 내에 있는 중첩된 행 및 열 그룹의 일부 및 모든 수준에 대해 부분합을 추가할 수 있습니다.  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="List"></a> 목록  
  자유 형식 레이아웃을 만들 때 목록을 사용합니다. 이를 사용하면 모눈 레이아웃에 제한되지 않고 목록 안에서 필드를 자유롭게 배치할 수 있습니다. 목록을 사용하여 여러 데이터 집합 필드를 표시하는 폼을 디자인할 수 있으며, 그룹화된 데이터를 위해 여러 데이터 영역을 나란히 표시하기 위한 컨테이너로 목록을 사용할 수도 있습니다. 예를 들어 직원 레코드나 환자 레코드에서 목록에 대한 그룹을 정의하고, 테이블, 차트 및 이미지를 추가하고, 각 그룹 값에 대해 테이블 및 그래픽 형식으로 값을 표시할 수 있습니다.  
   
- ![선택한 도구 상자에서 추가 된 새 목록](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "선택한 도구 상자에서 추가 된 새 목록")  
+ ![도구 상자에서 추가된 새 목록 선택](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "도구 상자에서 추가된 새 목록 선택")  
   
  자세한 내용은 [목록을 사용하여 송장 및 양식 만들기]를 참조하세요.  
   
@@ -166,15 +166,14 @@ ms.lasthandoff: 08/09/2017
  [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
  그룹의 의미 및 그룹을 사용하는 경우와 각 테이블릭스 데이터 영역에 사용할 수 있는 그룹에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [중첩 된 데이터 영역은 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [동일한 데이터 집합 &#40;에 여러 데이터 영역 연결 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [보고서 매개 변수 사용 &#40; 보고서 작성기 및 보고서 디자이너 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [계기 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

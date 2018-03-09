@@ -1,68 +1,68 @@
 ---
-title: "Reporting Services (SSRS)의 새로운 소식 | Microsoft Docs"
+title: "Reporting Services(SSRS)의 새로운 기능 | Microsoft Docs"
 ms.date: 10/10/2017
-ms.prod: sql-server-2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
-ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: f739af4e274a8d9ccdb4ccb3bc4ab3de3776d8a8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server의 새로운 기능에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]합니다. 여기에서는 주요 기능 영역에 설명하고 출시된 새 항목에 맞게 업데이트되었습니다.
+SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 새로운 기능에 대해 자세히 알아봅니다. 여기에서는 주요 기능 영역에 설명하고 출시된 새 항목에 맞게 업데이트되었습니다.
 
-  SQL Server의 다른 영역의 새로운 기능에 대 한 자세한 내용은 참조 [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) 또는 [SQL Server 2016의 새로운](../sql-server/what-s-new-in-sql-server-2016.md)합니다.
+  SQL Server의 다른 영역에 도입된 새로운 기능에 대한 자세한 내용은 [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md) 또는 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)을 참조하세요.
 
  **다운로드** ![download](../analysis-services/media/download.png "download")
 
-- SQL Server 2017 Reporting Services를 다운로드 하려면로 이동 된  **[Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=55252)**합니다.
+- SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=55252)**로 이동하세요.
 
-현재 릴리스 정보에 대 한 참조 [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md) 또는 [Power BI 보고서 서버 릴리스 정보](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)합니다. Power BI 보고서 서버에 대 한 정보를 참조 하십시오. [Power BI 보고서 서버와 함께 시작](https://powerbi.microsoft.com/documentation/reportserver-get-started/)합니다.
+현재 릴리스 정보에 대한 자세한 내용은 [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md) 또는 [Power BI Report Server 릴리스 정보](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)를 참조하세요. Power BI Report Server에 대한 정보는 [Power BI Report Server 시작](https://powerbi.microsoft.com/documentation/reportserver-get-started/)을 참조하세요.
 
 ## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 
-### <a name="comments-on-reports"></a>보고서에 대 한 설명
+### <a name="comments-on-reports"></a>보고서에 대한 주석
 
 이제 보고서에서 주석을 사용하여 큐브 뷰를 추가하고 다른 사용자와 공동 작업할 수 있습니다. 주석에 첨부 파일도 포함할 수 있습니다.
 
-![보고서 서버 내에서 주석](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
+![보고서 서버 내의 주석](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
 
-자세한 내용은 참조 [보고서 서버에서 보고서에 설명을 추가](https://powerbi.microsoft.com/documentation/reportserver-add-comments/)합니다.
+자세한 내용은 [보고서 서버에서 보고서에 주석 추가](https://powerbi.microsoft.com/documentation/reportserver-add-comments/)를 참조하세요.
 
-### <a name="dax-queries-in-reporting-tools"></a>보고 도구에서 DAX 쿼리
+### <a name="dax-queries-in-reporting-tools"></a>보고 도구의 DAX 쿼리
 
 최신 버전의 보고서 작성기와 SQL Server Data Tools에서 필요한 필드를 쿼리 디자이너로 끌어다 놓아 지원되는 SQL Server Analysis Services 테이블 형식 데이터 모델에 대한 네이티브 DAX 쿼리를 만들 수 있습니다. [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)(Reporting Services 블로그)를 참조하세요.
 
 ### <a name="rest-api-support"></a>REST API 지원
 
-최신 응용 프로그램 및 사용자 지정 개발을 사용 하려면 SQL Server Reporting Services는 이제 완벽 하 게 OpenAPI 규격 RESTful API를 지원 합니다. 전체 API 사양 및 설명서 찾을 수 있습니다에 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)합니다.
+최신 응용 프로그램 및 사용자 지정 개발을 사용하기 위해 SQL Server Reporting Services는 이제 완벽하게 OpenAPI 규격 RESTful API를 지원합니다. 전체 API 사양 및 설명서는 이제 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)에서 확인할 수 있습니다.
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>보고서 작성기 및 SQL Server Data Tools에서 이제 DAX에 대 한 디자이너 지원을 쿼리합니다
+## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>보고서 작성기 및 SQL Server Data Tools에서 DAX에 대한 쿼리 디자이너 지원
 
-최신 버전의 보고서 작성기와 SQL Server Data Tools-릴리스 후보에서 이제 지원 되는 SQL Server Analysis Services 표 형식 데이터 모델에 대 한 네이티브 DAX 쿼리를 만들 수 있습니다. DAX 쿼리를 직접 작성 하는 대신 자동으로 생성 원하는 필드 끌어서 두 도구 모두에 쿼리 디자이너를 사용할 수 있습니다.  
+이제 최신 버전의 보고서 작성기와 SQL Server Data Tools – 릴리스 후보에서 지원되는 SQL Server Analysis Services 테이블 형식 데이터 모델에 대한 네이티브 DAX 쿼리를 만들 수 있습니다. 모든 도구에서 쿼리 디자이너를 사용하여 원하는 필드를 끌어 오고 DAX 쿼리를 직접 작성하는 대신 자동으로 생성할 수 있습니다.  
  
-대 한 자세한 내용은 [Reporting Services 블로그](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)합니다.
+[Reporting Services 블로그](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)를 참고하세요.
 
-* 다운로드 [SQL Server 2016 보고서 작성기](https://go.microsoft.com/fwlink/?LinkId=734968)합니다.
-* 다운로드 [SQL Server Data Tools-릴리스 후보](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)합니다.
+* [SQL Server 2016 보고서 작성기](https://go.microsoft.com/fwlink/?LinkId=734968)를 다운로드합니다.
+* [SQL Server Data Tools - 릴리스 후보](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)를 다운로드합니다.
 
-> **참고**: 기본 제공 SQL Server 2016 +의 SSAS 테이블 형식 데이터 원본과 DAX에 대 한 쿼리 디자이너를만 사용할 수 있습니다.
+> **참고**: SSAS 테이블 형식 데이터 원본 기본 제공 SQL Server 2016+에서만 DAX에 대한 쿼리 디자이너를 사용할 수 있습니다.
  
 ## <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
   
@@ -112,7 +112,7 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
  
 참조 항목:  
   
--   [SharePoint 및 Reporting Services 서버 및 추가 기능을 &#40; 지원 되는 조합 SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+-   [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능의 조합&#40;SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 -   [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -129,15 +129,15 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
 
 **페이지가 매겨진 세련된 보고서:** 차트, 계기, 지도 및 기타 데이터 시각화에 대한 새롭고 현대적인 스타일을 사용하여 페이지가 매겨진 세련된 보고서를 디자인할 수 있습니다.
   
-**트리 맵 및 선 버스트 차트:** 트리 맵을 사용 하 여 보고서를 개선할 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 및 선 버스트 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 차트, 계층적 데이터를 표시 하는 유용한 방법은 합니다. 자세한 내용은 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)를 참조하세요.  
+**트리 맵 및 선버스트 차트:** 트리 맵![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 및 선버스트 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 차트를 사용하여 보고서를 개선합니다. 이 작업은 계층 데이터를 표시하는 유용한 방법입니다. 자세한 내용은 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)를 참조하세요.  
 
 **보고서 포함:** 이제 URL 매개 변수와 함께 iframe을 사용하여 다른 웹 페이지 및 응용 프로그램에 모바일 및 페이지가 매겨진 보고서를 포함할 수 있습니다.  
 
-**Power BI 대시보드에 보고서 항목 고정:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 보고서를 보는 동안 보고서 항목을 선택하여 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 고정할 수 있습니다.   고정할 수는 항목은 차트, 계기 패널, 지도 및 이미지입니다. **(1)** 고정할 대시보드가 있는 그룹을 선택하고, **(2)** 항목을 고정할 대시보드를 선택하고 **(3)** 대시보드에서 타일을 업데이트할 빈도를 선택할 수 있습니다.   ![참고](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") 에서 관리 하는 새로 고침 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독 항목이 고정 된 후에 구독을 편집을 서로 다른 새로 고침 일정을 구성할 수 있습니다.  
+**Power BI 대시보드에 보고서 항목 고정:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 보고서를 보는 동안 보고서 항목을 선택하여 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 고정할 수 있습니다.   고정할 수는 항목은 차트, 계기 패널, 지도 및 이미지입니다. **(1)** 고정할 대시보드가 있는 그룹을 선택하고, **(2)** 항목을 고정할 대시보드를 선택하고 **(3)** 대시보드에서 타일을 업데이트할 빈도를 선택할 수 있습니다.   ![참고](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") 새로 고침은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독에 의해 관리되며 항목이 고정된 후 구독을 편집하고 다른 새로 고침 일정을 구성할 수 있습니다.  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- 자세한 내용은 참조 [Power BI 보고서 서버 통합 &#40; 구성 관리자 &#41; ](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) 및 [Reporting Services 항목 고정 Power BI 대시보드에](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)합니다.  
+ 자세한 내용은 [Power BI 보고서 서버 통합&#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) 및 [Power BI 대시보드에 Reporting Services 항목 고정](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)을 참조하세요.  
  
  **PowerPoint 렌더링 및 내보내기:** Microsoft PowerPoint(PPTX) 형식은 새로운 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 렌더링 확장 프로그램입니다. 일반적인 응용 프로그램(보고서 작성기, 보고서 디자이너 (SSDT), [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)])에서 PPTX 형식으로 보고서를 내보낼 수 있습니다. 예를 들어 다음 이미지는 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 내보내기 메뉴를 보여 줍니다. 
   
@@ -173,12 +173,12 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 |||  
 |-|-|  
-|새로 만들기|Previous|  
+|단추를 사용하여 새|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
 **매개 변수 창 사용자 지정:** 이제 매개 변수 창을 사용자 지정할 수 있습니다. 보고서 작성기의 디자인 화면을 사용하여 매개 변수 창의 특정 열과 행에 매개 변수를 끌어 넣을 수 있습니다. 열을 추가하거나 제거하여 창 레이아웃을 변경할 수 있습니다.   자세한 내용은 [보고서에서 매개 변수 창 사용자 지정&#40;보고서 작성기&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)을 참조하세요.  
   
- ![보고서 데이터 창 및 매개 변수 창에서 매개 변수 목록](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "보고서 데이터 창 및 매개 변수 창에서 매개 변수 목록")  
+ ![보고서 데이터 창 및 매개 변수 창의 매개 변수 목록](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "보고서 데이터 창 및 매개 변수 창의 매개 변수 목록")  
 
   
 **높은 DPI 지원:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] 는 높은 DPI(인치당 도트 수) 배율 및 장치를 지원합니다.  높은 DPI에 대한 자세한 내용은 다음을 참조하세요.  
@@ -199,4 +199,3 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [Power BI 보고서 서버](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
-

@@ -21,17 +21,16 @@ helpviewer_keywords:
 - ASSEMBLYPROPERTY statement
 - assemblies [CLR integration], properties
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
-caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9556834a173302e19358f5333b059d7b4f902519
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a38d9f773e010ab779204d7c92b351d88c0d08f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 *property_name*  
 정보를 검색할 속성의 이름입니다. *property_name* 다음 값 중 하나일 수 있습니다.
   
-|값|Description|  
+|Value|Description|  
 |---|---|
 |**CultureInfo**|어셈블리의 로캘입니다.|  
 |**PublicKey**|어셈블리의 공개 키 또는 공개 키 토큰입니다.|  
@@ -83,4 +82,3 @@ SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');
 [DROP ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)
   
   
-

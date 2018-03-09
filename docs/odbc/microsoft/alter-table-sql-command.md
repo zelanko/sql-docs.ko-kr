@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alter table [ODBC]
+helpviewer_keywords: alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bafb2f2a11b7108d550dae66db0b5d8e158086a3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE-SQL 명령
 프로그래밍 방식으로 테이블의 구조를 수정합니다.  
@@ -202,4 +199,3 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ## <a name="see-also"></a>관련 항목:  
  [테이블-SQL 명령을 만들려면](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX 명령](../../odbc/microsoft/index-command.md)
-

@@ -1,10 +1,13 @@
 ---
 title: "프로젝트 설정 (Azure SQL DB) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d9373093e7eb133615766e402543dc35a3b4cf65
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 56fa5657caf60e0dcb5682658504b67f860938c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>프로젝트 설정 (Azure SQL DB) (AccessToSQL)
 SQL Azure 프로젝트 설정에 연결 대화 상자에 추가 하 고 SQL Azure 연결에서 하트 비트 메커니즘을 구현 허용할 SQL Azure 데이터베이스 접미사를 구성할 수 있습니다.  
@@ -35,7 +38,7 @@ SQL Azure에서 제공 되는 **프로젝트 설정** 및 **기본 프로젝트 
   
 -   기본 프로젝트 설정 대화 상자를 사용 하 여 모든 프로젝트에 대 한 구성 옵션을 설정 합니다. SQL Azure 설정에 액세스 하려면는 **도구** 메뉴 선택 **DefaultProject 설정**에서 "SQL Azure"로 프로젝트 형식을 선택 **마이그레이션 대상 버전** 콤보 상자의 SQL Azure 창에서 설정에 액세스 하려면 클릭 **일반** 선택 고 왼쪽된 창 맨 아래에 **SQL Azure**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ## <a name="connectivity"></a>연결  
 **하트 비트 간격**  

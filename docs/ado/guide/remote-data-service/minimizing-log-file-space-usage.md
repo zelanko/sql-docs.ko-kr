@@ -3,7 +3,7 @@ title: "로그 파일 공간 사용을 최소화 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - log file space in RDS [ADO]
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ccad217647f8aa2f7bde912f12914055d0f65808
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae88338987beece602691060d79ec44bad93309e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="minimizing-log-file-space-usage"></a>로그 파일 공간 사용을 최소화합니다.
 로그 파일을 빠르게 채울 수 있습니다 (따라서 서버 중지) SQL Server 데이터베이스에 볼륨이 큰 경우. 로그 파일 설정할 수 있습니다 **검사점에서 Truncate** 현저 하 게 늘릴 데이터베이스에 대 한 로그 파일의 수명을 합니다.  
@@ -55,6 +54,5 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 

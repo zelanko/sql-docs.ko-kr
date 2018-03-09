@@ -3,7 +3,7 @@ title: "Source 속성 (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO MD]
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1acecf9cbaa00746b23a4655bd845f42af23693e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07302d24cb85875dc9b4c0201da9f8b799b64827
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-md"></a>ADO MD source 속성
 데이터에 대 한 원본을 나타냅니다는 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)합니다.  
@@ -44,4 +43,3 @@ ms.lasthandoff: 09/09/2017
  [셀 집합 예제 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [ADO MD ActiveConnection 속성](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
  [Open 메서드(ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
-

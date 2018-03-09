@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fb178c2359ee9b1df4754615316f80b8284e84a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-conformance"></a>기능 규칙
 다음 표에서이 잘 정의 된 규칙 수준과 각 ODBC 함수를 나타냅니다.  
@@ -99,4 +97,3 @@ ms.lasthandoff: 09/09/2017
  [이 함수는 1] 중요 한 기능이 높은 받는 규칙 수준에만 사용할 수입니다.  
   
  [2]을 기본이 아닌 값으로 특정 특성을 설정 합니다. 규칙 수준에 따라 달라 집니다. 자세한 내용은 다음 섹션을 참조 하십시오. [특성 규칙](../../../odbc/reference/develop-app/attribute-conformance.md)합니다.
-

@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - cursors [ODBC], compatibility issues
 - SQLFetchScroll function [ODBC], block cursors
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ca3cbf2bc9aba7baccc4cfdda738a82949951fda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>블록 커서, 스크롤 가능 커서 및 ODBC 3.x 응용 프로그램에 대 한 이전 버전과 호환성
 둘 다의 존재 여부 **SQLFetchScroll** 및 **SQLExtendedFetch** 사이 API 응용 프로그래밍 인터페이스 (), 일련의 함수는 ODBC의 첫 번째 일반 분할 나타냅니다는 호출 응용 프로그램 및 서비스 공급자 인터페이스 (SPI), 일련의 함수는 드라이버 구현 합니다. 이 분할은 ODBC 3에서 요구 사항이 균형을 조정 해야 합니다. *x*를 사용 하 여 **SQLFetchScroll**는 표준을 준수 하 고 ODBC 2와 호환 되어야 합니다. *x*를 사용 하 여 **SQLExtendedFetch**합니다.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 09/09/2017
   
  다음 표에서 함수를 요약 하 고 문 특성 ODBC 3. *x* 응용 프로그램 블록 및 스크롤 가능 커서를 사용 해야 합니다. 또한 ODBC 2 사이의 변경 내용을 나열합니다. *x* 및 ODBC 3. *x* 이 영역에서 해당 ODBC 3. *x* ODBC 2와 호환 되도록 응용 프로그램 알고 있어야 합니다. *x* 드라이버입니다.  
   
-|함수 또는<br /><br /> 문 특성|설명|  
+|함수 또는<br /><br /> 문 특성|주석|  
 |-----------------------------------------|--------------|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|사용 하면 책갈피를 가리키는 **SQLFetchScroll**합니다.<br /><br /> 때 응용 프로그램 설정이 ODBC 2. *x* 고정 길이의 책갈피를 가리켜야 합니다.이 드라이버를 합니다.|  
 |SQL_ATTR_ROW_STATUS_PTR을|행 상태 배열이 가리키는로 채워진 **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, 및 **SQLSetPos**합니다.<br /><br /> 응용 프로그램에 ODBC 2이를 설정 합니다. *x* 드라이버 및 호출 **SQLBulkOperation** 와 *작업* 호출 하기 전에 SQL_ADD의 **SQLFetchScroll**,  **SQLFetch**, 또는 **SQLExtendedFetch**, SQLSTATE HY011 (특성 지금 설정할 수 없습니다)이 반환 됩니다.<br /><br /> 응용 프로그램 호출 하는 경우 **SQLFetch** ODBC 2에서. *x* 드라이버 **SQLFetch** 에 매핑된 **SQLExtendedFetch** 따라서이 배열에 있는 값을 반환 합니다.|  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ODBC 3입니다. *x* 응용 프로그램을 사용 하지 않아야 **SQLExtendedFetch** 또는 SQL_ROWSET_SIZE 문 특성입니다. 대신 사용 해야 **SQLFetchScroll** 및 SQL_ATTR_ROW_ARRAY_SIZE 문 특성입니다. ODBC 3입니다. *x* 응용 프로그램을 사용 하지 않아야 **SQLSetPos** 와 *작업* SQL_ADD의 사용 해야 하지만 **SQLBulkOperations** 는 와*작업* SQL_ADD입니다.
-

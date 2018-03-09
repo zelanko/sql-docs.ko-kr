@@ -2,15 +2,13 @@
 title: "Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +20,20 @@ helpviewer_keywords:
 - continuous columns
 - regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
-caps.latest.revision: 44
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6eaa320911fbba0f46472750bde9293b36430b46
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0de59252e18921c4c280143b695000b5913a5aa2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Microsoft 시계열 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시계열 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘으로 작성한 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 예측 시나리오에서 제품 판매량과 같은 연속 열을 예측하기 위해 데이터 마이닝 모델을 만드는 회귀 알고리즘입니다. 이 시계열 모델은 다음과 같이 다른 알고리즘을 기반으로 한 정보를 포함할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘으로 작성한 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 예측 시나리오에서 제품 판매량과 같은 연속 열을 예측하기 위해 데이터 마이닝 모델을 만드는 회귀 알고리즘입니다. 이 시계열 모델은 다음과 같이 다른 알고리즘을 기반으로 한 정보를 포함할 수 있습니다.  
   
 -   단기 예측에 대해 최적화되어 있는 ARIxp 알고리즘  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 09/01/2017
  **참고** 모델 콘텐츠 및 마이닝 범례에 대해 표시된 정보는 모델에서 사용하는 알고리즘에 따라 달라집니다. 그러나 **모델** 및 **차트** 탭은 알고리즘 혼합에 관계없이 동일합니다.  
   
 ###  <a name="BKMK_Tree"></a> Model  
- 시계열 모델을 작성할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 완료된 모델을 트리로 표시합니다. 데이터에 여러 가지 사례 계열이 포함된 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 각 계열에 대해 별도의 트리를 작성합니다. 예를 들어 태평양, 북미 및 유럽 지역의 판매를 예측하는 경우 이러한 각 지역에 대한 예측은 사례 계열입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 이러한 각 계열에 대해 별도의 트리를 작성합니다. 특정 계열을 보려면 **트리** 목록에서 계열을 선택합니다.  
+ 시계열 모델을 작성할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 완료된 모델을 트리로 표시합니다. 데이터에 여러 가지 사례 계열이 포함된 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 각 계열에 대해 별도의 트리를 작성합니다. 예를 들어 태평양, 북미 및 유럽 지역의 판매를 예측하는 경우 이러한 각 지역에 대한 예측은 사례 계열입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 이러한 각 계열에 대해 별도의 트리를 작성합니다. 특정 계열을 보려면 **트리** 목록에서 계열을 선택합니다.  
   
  각 트리에서 시계열 모델은 **모두** 노드를 포함한 다음 알고리즘에서 발견한 주기적 구조를 나타내는 노드 계열로 분리합니다. 각 노드를 클릭하여 일련의 사례와 수식 등의 통계를 표시할 수 있습니다.  
   
@@ -101,4 +99,3 @@ ms.lasthandoff: 09/01/2017
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   
-

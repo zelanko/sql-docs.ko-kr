@@ -3,10 +3,10 @@ title: "어플라이언스 노드 (분석 플랫폼 시스템)에 연결"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
 caps.latest.revision: "19"
-ms.openlocfilehash: 00db55a8c4835407d9b5aeb2ce7dac30f94eb888
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d7a6f0def6b7cedb5bf7a7306fd10a3f167335e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-appliance-nodes"></a>어플라이언스 노드에 연결
 이 항목에서는 분석 플랫폼 시스템 어플라이언스의 각 노드에 연결 하는 다양 한 방법에 설명 합니다.  
@@ -35,7 +35,7 @@ Hadoop SQL Server PDW를 사용 하기 전에 SQL Server PDW에 Java Runtime Env
   
 |||  
 |-|-|  
-|**노드**|**액세스 시나리오**|  
+|**Node**|**액세스 시나리오**|  
 |제어 노드|웹 브라우저를 사용 하는 제어 노드에에서 실행 되는 관리 콘솔에 액세스 합니다. 자세한 내용은 참조 [관리 콘솔 &#40;를 사용 하 여 어플라이언스에 모니터링 분석 플랫폼 시스템 &#41; ](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />모든 클라이언트 응용 프로그램 및 도구에는 이더넷 또는 InfiniBand 연결을 사용 하는지 여부에 관계 없이 제어 노드에 연결 합니다.<br /><br />컨트롤 노드 클러스터 IP 주소와 포트 사용 하는 제어 노드에 이더넷 연결을 구성 하려면 **17001**합니다. 예를 들어 "192.168.0.1,17001"가 있습니다.<br /><br />사용 하는 제어 노드에 InfiniBand 연결을 구성 하려면  ***appliance_domain*-SQLCTL01** 및 포트 **17001**합니다. 사용 하 여  ***appliance_domain*-SQLCTL01**, 기기 DNS 서버는 활성 InfiniBand 네트워크에 서버를 연결 합니다. 이 사용 하 여 비 어플라이언스 서버의 구성 하려면 참조 [InfiniBand 네트워크 어댑터 구성](configure-infiniband-network-adapters.md)합니다.<br /><br />어플라이언스 관리자 하 관리 작업을 수행 하는 제어 노드에 연결 됩니다. 예를 들어 기기 관리자는 제어 노드에에서 다음 작업을 수행 합니다.<br /><br />분석 플랫폼 시스템으로 구성 된 **dwconfig.exe** 구성 도구입니다.|  
 |계산 노드|제어 노드에 의해 방식 노드 연결을 계산 합니다. 계산 노드의 IP 주소가 매개 변수로 응용 프로그램 명령으로 입력 되지 됩니다.<br /><br />로드에 대 한 원격 테이블 복사본 및 Hadoop, SQL Server PDW 백업 보내거나 계산 노드 및 비 어플라이언스 노드 또는 서버 간의 직접 병렬로 데이터를 받을지 않습니다. 이러한 응용 프로그램에는 제어 노드에 연결 하 여 SQL Server PDW와 연결 하 고는 제어 노드에 계산 노드 및 비 어플라이언스 서버의 간의 통신을 설정 하려면 SQL Server PDW 보냅니다 하는 다음 키를 누릅니다.<br /><br />예를 들어 계산 노드에 직접 연결을 통해 동시에 이러한 데이터 전송 작업이 수행 됩니다.<br /><br />SQL Server PDW 로드 서버에서 로드할 수 있습니다.<br /><br />백업 서버에 SQL Server PDW에서 데이터베이스를 백업 합니다.<br /><br />SQL Server PDW에 백업 서버에서 데이터베이스를 복원 합니다.<br /><br />SQL Server PDW에서 Hadoop 데이터를 쿼리 합니다.<br /><br />SQL Server PDW에서 외부 Hadoop 테이블 데이터 내보내기.<br /><br />SMP SQL Server 데이터베이스를 원격으로 SQL Server PDW 테이블을 복사 합니다.|  
   

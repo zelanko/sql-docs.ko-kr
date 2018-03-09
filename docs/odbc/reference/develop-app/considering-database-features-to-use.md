@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], database features
+helpviewer_keywords: interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f879d11b4c9f393accaaf96beda6a159aec2363f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="considering-database-features-to-use"></a>데이터베이스 기능 사용을 고려합니다.
 기본 수준의 상호 운용성 파악 한 후에 응용 프로그램에서 사용 되는 데이터베이스 기능을 고려 되어야 합니다. 예를 들어 SQL 문을 응용 프로그램이 실행 됩니다. 스크롤 가능 커서를 사용 하 여 응용 프로그램은? 트랜잭션을? 프로시저? Long 데이터? 어떤 기능에 대 한 아이디어를 모든 Dbms에서 지원 되지 않는, 참조는 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), 및 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) 함수 설명과 [ 부록 c: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다. 일부 Dbms 대상 Dbms의 목록에서 응용 프로그램에 필요한 기능을 제거할 수도 있습니다. 또한 응용 프로그램을 여러 Dbms 대상 쉽게 수 보여 수도 있습니다.  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 -   **드라이버는 경우에 여러 개의 쿼리를 지원 합니다.** 응용 프로그램에는 드라이버를 연결한 후 활성 문 수를 확인 합니다. 응용 프로그램 사용자를을 드라이버에는 다중 활성 문을 지원 하는 경우에 활성화가 이미 새 문을 시작할 수 있습니다. 응용 프로그램을 더 높은 기능 및 상호 운용성 갖지만 구현 하기 어렵습니다.  
   
 -   **여러 쿼리를 지원 하 고 필요한 경우 직접 에뮬레이트하 항상 합니다.** 응용 프로그램에는 드라이버를 연결한 후 활성 문 수를 확인 합니다. 응용 프로그램에서는 항상 사용자를을 활성가 이미 새 문을 시작할 수 있습니다. 드라이버 하나의 활성 문만 지 원하는 경우 응용 프로그램이 해당 드라이버에 대 한 추가 연결 열리고 해당 연결에서 새 문을 실행 합니다. 응용 프로그램을 제공 하 고 높은 상호 운용성 갖지만 구현 하기 어렵습니다.
-

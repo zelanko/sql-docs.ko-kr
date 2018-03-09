@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f3bf295bdbaf259a9ca305fc1202d58bfe68b05b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b1c9419b8b26a150e717a690fd9c03395e648845
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-isolation"></a>트랜잭션 격리
 *트랜잭션 격리* 여러 동시 트랜잭션 간의 상호 작용의 정도를 나타냅니다. 이 중요 한 이유를 보려면 먼저 연속성의 개념을 확인 해야 합니다.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 -   [트랜잭션 격리 수준 설정](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md)  
   
 -   [스크롤 가능 커서 및 트랜잭션 격리](../../../odbc/reference/develop-app/scrollable-cursors-and-transaction-isolation.md)
-

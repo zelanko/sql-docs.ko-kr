@@ -14,16 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a505859d320552f4c591e61440a5b97bf92d8e17
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b532bf37f99a3fc05b0f2999d0d3d301323457d6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ SSMS.exe는 확장 이벤트에 대한 최상의 UI(사용자 인터페이스)�
 
 2. 개체 탐색기에서 **관리** > **확장 이벤트** > **새 세션**을 클릭합니다. 두 개가 서로 비슷하지만 **새 세션 마법사** 보다 **새 세션**대화 상자를 사용하는 것이 좋습니다.
 
-3. 왼쪽 위에서 **일반** 페이지를 클릭합니다. 그런 다음 *세션 이름*입력란에 **YourSession** 또는 원하는 이름을 입력합니다. *확인* 단추는 데모 마지막에 눌러야 하므로 아직 누르지 **마세요** .
+3. 왼쪽 위에서 **일반** 페이지를 클릭합니다. 그런 다음 *세션 이름*입력란에 **YourSession** 또는 원하는 이름을 입력합니다. **확인** 단추는 데모 마지막에 눌러야 하므로 아직 누르지 *마세요*.
 
     ![새 세션 > 일반 > 세션 이름](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -165,7 +165,7 @@ SSMS UI를 사용하여 이벤트 세션을 만든 T-SQL 스크립트를 생성�
 다음은 UI를 클릭하여 생성된 *YourSession*에 대한 T-SQL CREATE EVENT SESSION 문입니다.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [YourSession]
     ON SERVER 
     ADD EVENT sqlserver.sql_statement_completed
@@ -206,7 +206,7 @@ GO
 이름이 이미 있는 경우 CREATE EVENT SESSION 문 앞에서 DROP EVENT SESSION을 조건부로 실행할 수 있습니다.
 
 
-```tsql
+```sql
 IF EXISTS (SELECT *
       FROM sys.server_event_sessions    -- If Microsoft SQL Server.
     --FROM sys.database_event_sessions  -- If Azure SQL Database in the cloud.
@@ -226,7 +226,7 @@ go
 만들어진 이벤트 세션은 기본적으로 자동으로 실행되지 않습니다. 언제든지 다음 T-SQL ALTER EVENT SESSION 문을 사용하여 이벤트 세션을 시작하거나 중지할 수 있습니다.
 
 
-```tsql
+```sql
 ALTER EVENT SESSION [YourSession]
       ON SERVER
     --ON DATABASE
@@ -252,7 +252,7 @@ SQL Server 인스턴스가 시작될 때 이벤트 세션이 자동으로 시작
 
 
 
-```tsql
+```sql
 SELECT
         c.name,
         Count(*)  AS [Count-Per-Column-Repeated-Name]
@@ -304,7 +304,7 @@ SSMS에서 다음 T-SQL SELECT를 실행하여 각 행에서 한 이벤트 항�
 > 이벤트 시스템은 항상 지정한 *.xel* event_file 파일 이름에 long 형식의 숫자를 추가합니다. 파일에서 다음 SELECT를 실행하기 전에 먼저 시스템에 의해 지정된 전체 이름을 복사하고 SELECT에 붙여넣습니다.
 
 
-```tsql
+```sql
 SELECT
         object_name,
         file_name,
@@ -430,7 +430,7 @@ SSMS **개체 탐색기**에서 이벤트 세션 노드를 마우스 오른쪽 �
 다음 표에서는 확장 이벤트에 사용된 용어를 나열하고 그 의미를 설명합니다.
 
 
-| 용어 | 설명 |
+| 용어 | Description |
 | :--- | :---------- |
 | 이벤트 세션 | 하나 이상의 이벤트와 동작 및 대상 등 지원되는 항목에 대한 구성입니다. CREATE EVENT SESSION 문은 각 이벤트 세션을 생성합니다. 이벤트 세션이 원하는 대로 시작 및 중지되도록 변경할 수 있습니다. <br/> <br/> 이벤트 세션을 *세션*이라고 하는 경우도 있으며 컨텍스트상 구분이 필요한 경우에는 *이벤트 세션*이라고 합니다. <br/> <br/> 이벤트 세션에 대한 자세한 내용은 [SQL Server 확장 이벤트 세션](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)을 참조하세요. |
 | 이벤트 | 활성 이벤트 세션에서 감시하는 시스템의 특정 항목입니다. <br/> <br/> 예를 들어 *sql_statement_completed* 이벤트는 지정한 T-SQL 문이 완료되는 시점을 나타냅니다. 이벤트는 지속 시간 및 기타 데이터를 보고할 수 있습니다. |
@@ -446,7 +446,7 @@ SSMS **개체 탐색기**에서 이벤트 세션 노드를 마우스 오른쪽 �
 다음 T-SQL SELECT는 이름에 'sql'이라는 세 자가 포함된 각 사용 가능 이벤트에 대해 행을 반환합니다. 물론 LIKE 값을 편집하여 다른 이벤트 이름을 검색할 수 있습니다. 이 행은 이벤트가 포함된 패키지의 이름을 지정합니다.
 
 
-```tsql
+```sql
 SELECT   -- Find an event you want.
         p.name         AS [Package-Name],
         o.object_type,
@@ -578,7 +578,7 @@ SQL Server PowerShell 공급자를 사용하여 SQL Server 확장 이벤트를 �
 다음 SELECT... UNION ALL 문은 이벤트 세션을 만들고 확장 이벤트에 대한 시스템 카탈로그 뷰를 쿼리하는 데 필요한 사용 권한을 가진 행을 반환합니다.
 
 
-```tsql
+```sql
 -- Ascertain who has the permissions listed in the ON clause.
 -- 'CONTROL SERVER' permission includes the permissions
 -- 'ALTER ANY EVENT SESSION' and 'VIEW SERVER STATE'.
@@ -636,7 +636,7 @@ SELECT
 또한 일시적으로 다른 계정에 대한 *가장* 권한이 있는 경우 [EXECUTE AS LOGIN](../../t-sql/statements/execute-as-transact-sql.md) 및 REVERT 문의 주석을 제거하여 다른 계정을 조회할 수 있습니다.
 
 
-```tsql
+```sql
 --EXECUTE AS LOGIN = 'AccountNameHere';
 SELECT HAS_PERMS_BY_NAME(
     null, null,

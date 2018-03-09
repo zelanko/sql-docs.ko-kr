@@ -2,34 +2,32 @@
 title: "계산 측정값 표현 (테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c0b0d371298d083d23d2ecf6549a8954b8665657
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6493000843f72fbc6b7f63f5ec169a55e97b8584
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---calculated-measure-representation"></a>테이블에서 계산된 측정값 표현
-  계산 측정값은 사용할 때마다 평가되는 명명된 DAX 식입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+계산 측정값은 사용할 때마다 평가되는 명명된 DAX 식입니다.  
   
 ## <a name="calculated-measure-representation"></a>계산 측정값 표현  
   
@@ -115,4 +113,3 @@ private void addCalculatedMeasure(
 ```  
   
   
-

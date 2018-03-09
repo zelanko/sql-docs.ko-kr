@@ -2,45 +2,38 @@
 title: "Create 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Create Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Create Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Create
 - urn:schemas-microsoft-com:xml-analysis#Create
 - microsoft.xml.analysis.create
-helpviewer_keywords:
-- Create command (XMLA)
+helpviewer_keywords: Create command (XMLA)
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f3e568fb190940822a6c6ef5cb65cf6b9476f4b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5420a85c65a29a09da519207206d3406c4cd384
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-element-xmla"></a>Create 요소(XMLA)
-  사용 하는 Analysis Services Scripting Language (ASSL) 요소를 포함 된 **Execute** 메서드 개체를 만들는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]사용 하는 Analysis Services Scripting Language (ASSL) 요소를 포함 된 **Execute** 메서드 개체를 만들는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,10 +49,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -71,7 +64,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="attributes"></a>특성  
   
-|Attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |AllowOverwrite|선택적 **Boolean** 특성입니다. 경우 True로 설정 된 개체에 정의 된는 **ObjectDefinition** 요소에서 기존 개체를 덮어쓸 수는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스. 이 특성이 생략되거나 False로 설정된 경우 기존 개체가 있으면 오류가 발생합니다.|  
 |범위|선택적 **Enum** 특성입니다. **ObjectDefinition** 요소에 정의된 개체의 지속 기간을 정의합니다. 이 특성이 생략 된 경우 개체에 정의 된 **ObjectDefinition** 요소는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스. 다음 값을 사용할 수 있습니다.<br /><br /> *세션*:에 정의 된 개체는 **ObjectDefinition** 요소 Analysis (XMLA) 세션에 대 한 XML의 기간 동안만 존재 합니다.<br />                  사용할 때의 *세션* 설정을 **ObjectDefinition** 요소만 포함할 수 있습니다 [차원](../../../analysis-services/scripting/objects/dimension-element-assl.md), [큐브](../../../analysis-services/scripting/objects/cube-element-assl.md), 또는 [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL 요소.|  
@@ -98,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [명령 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

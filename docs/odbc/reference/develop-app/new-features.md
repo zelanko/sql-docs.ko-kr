@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - compatibility [ODBC], new features in release
 - ODBC [ODBC], new features
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 12e66ad8a1aa5e1389b69d5f30156f7b86b3b733
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e2b48097b6c398772e14d2594a583d89e6825e0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-features"></a>새로운 기능
 ODBC 3에서 다음과 같은 새로운 기능을 도입 했습니다. *x*합니다. ODBC 3입니다. *x* 작업 하는 ODBC 2 응용 프로그램*.x* 드라이버가이 기능을 사용할 수 없게 됩니다. ODBC 3입니다. *x* 는 ODBC 2 작업할 때 드라이버 관리자에서는 이러한 기능을 매핑하지 않습니다*.x* 드라이버입니다.  
@@ -117,4 +115,3 @@ ODBC 3에서 다음과 같은 새로운 기능을 도입 했습니다. *x*합니
  이 섹션에는 다음 항목 포함 되어 있습니다.  
   
 -   [ODBC 3.x 응용 프로그램의 블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)
-

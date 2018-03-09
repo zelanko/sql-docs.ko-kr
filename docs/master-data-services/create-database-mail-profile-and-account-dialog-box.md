@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-caps.latest.revision: 7
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 99221347b323c5353d681c372865616083bdbd5b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 240967b3909a2b3796534cb29c42dfa5838be692
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>데이터베이스 메일 프로필 및 계정 만들기 대화 상자
   **데이터베이스 메일 프로필 및 계정 만들기** 대화 상자를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 대한 데이터베이스 메일 프로필 및 데이터베이스 메일 계정을 만들 수 있습니다. 이 프로필은 비즈니스 규칙 유효성 검사가 실패한 경우 사용자와 그룹에 전자 메일로 알리는 데 사용됩니다.  
@@ -59,14 +58,13 @@ ms.lasthandoff: 09/07/2017
 |------------------|-----------------|  
 |**데이터베이스 엔진 서비스 자격 증명을 사용한 Windows 인증**|데이터베이스 메일에서 SMTP 서버 인증에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Windows 서비스 계정의 자격 증명을 사용하도록 지정합니다.|  
 |**기본 인증**|데이터베이스 메일에서 SMTP 서버 인증에 특정 사용자 이름과 암호를 사용하도록 지정합니다. 이 정보는 전자 메일 서버 인증에만 사용되며 계정이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 실행하는 컴퓨터의 사용자에 해당할 필요는 없습니다.|  
-|**사용자 이름**|데이터베이스 메일에서 SMTP 서버에 로그온하는 데 사용하는 사용자 계정의 이름을 입력합니다. SMTP 서버에 기본 인증이 필요한 경우 사용자 이름은 필수 사항입니다.|  
+|**User name**|데이터베이스 메일에서 SMTP 서버에 로그온하는 데 사용하는 사용자 계정의 이름을 입력합니다. SMTP 서버에 기본 인증이 필요한 경우 사용자 이름은 필수 사항입니다.|  
 |**암호**|데이터베이스 메일에서 SMTP 서버에 로그온하는 데 사용하는 암호를 입력합니다. SMTP 서버에 기본 인증이 필요한 경우 암호는 필수 사항입니다.|  
 |**암호 확인**|암호를 다시 입력하여 암호를 확인합니다.|  
 |**익명 인증**|SMTP 서버에 인증이 필요하지 않음을 지정합니다. 데이터베이스 메일은 SMTP 서버 인증에 자격 증명을 사용하지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md)
   
   
-

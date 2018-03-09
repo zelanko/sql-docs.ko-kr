@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetInfo
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetInfo
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetInfo
-helpviewer_keywords:
-- SQLGetInfo function [ODBC]
+f1_keywords: SQLGetInfo
+helpviewer_keywords: SQLGetInfo function [ODBC]
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5ef6197247bbe50397c543a91156e0c5db294422
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 57ba22ee8645f1d3548be91adc9aafb4fc016c79
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 함수
 **규칙**  
@@ -83,7 +77,7 @@ SQLRETURN SQLGetInfo(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetInfo** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 Sql_handle_dbc 라는 및 *처리* 의 *ConnectionHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLGetInfo** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *InfoValuePtr* 충분히 요청된 된 모든 정보를 반환할 수 없습니다. 따라서 정보가 잘렸습니다. 잘리지 않은 형태의 요청된 된 정보의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -101,7 +95,7 @@ SQLRETURN SQLGetInfo(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)에 해당 하는 드라이버는 *ConnectionHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  현재 정의 된 정보 유형이 "정보 유형";이 섹션의 뒷부분에 나오는에 표시 됩니다. 다른 데이터 원본 활용 하기 위해 정의 더 사용할 수 있습니다. 정보 유형의 범위는 ODBC;에 예약 되어 있습니다. 드라이버 개발자는 Open Group에서 드라이버 관련 사용을 위해 값을 예약 해야 합니다. **SQLGetInfo** 유니코드 변환 하지 않음 또는 *썽킹* (참조 [부록 a: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) 의 *ODBC Programmer's Reference*)에 대 한 드라이버에서 정의한 *InfoTypes*합니다. 자세한 내용은 참조 [드라이버 관련 데이터 형식, 형식 설명자, 정보 유형, 진단 형식 및 특성](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)합니다. 반환 되는 정보의 형식을 \* *InfoValuePtr* 에 따라 달라 집니다는 *정보 항목* 요청 합니다. **SQLGetInfo** 다섯 가지 형식 중 하나에서 정보를 반환 합니다.  
   
 -   Null로 끝나는 문자열  
@@ -1846,4 +1840,3 @@ else
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

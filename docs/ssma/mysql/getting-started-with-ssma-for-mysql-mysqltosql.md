@@ -1,12 +1,14 @@
 ---
 title: "MySQL (MySQLToSQL) 용 SSMA 시작 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - Getting started, SQL Server or SQL Azure metadata explorer
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 961ab39ffc76be1ce2bd7dd36234163d3c8229bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 38ce5c0e27703094e4d7ff2415d0bc91d501d1b4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>MySQL (MySQLToSQL) 용 SSMA 시작
 SQL Server Migration Assistant (SSMA) MySQL에 대 한 신속 하 게 MySQL 데이터베이스 스키마를 SQL Server 또는 Azure SQL DB 스키마로 변환 결과 스키마를 SQL Server 또는 Azure SQL DB에 업로드 하 고 MySQL에서 SQL Server 또는 Azure SQL DB에 데이터를 마이그레이션할 수 있습니다.  
@@ -116,8 +117,8 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
   
 |||  
 |-|-|  
-|**메뉴**|**Description**|  
-|**파일**|프로젝트 작업 MySQL에 연결 하 고 SQL Server 또는 Azure SQL DB에 연결 명령에 포함 되어 있습니다.|  
+|**메뉴**|**설명**|  
+|**최근에 사용한 파일**|프로젝트 작업 MySQL에 연결 하 고 SQL Server 또는 Azure SQL DB에 연결 명령에 포함 되어 있습니다.|  
 |**편집**|찾기 및 세부 정보 페이지에서 텍스트 작업에 대 한 명령을 포함 합니다. 열려는 **관리 책갈피** 대화 상자에서 편집 메뉴에서 관리 하는 책갈피를 클릭 합니다. 대화 상자에서 기존 책갈피의 목록이 표시 됩니다. 책갈피를 관리 하는 대화 상자의 오른쪽에 단추를 사용할 수 있습니다.|  
 |**보기**|포함 된 **동기화 메타 데이터 탐색기** 명령입니다. MySQL 메타 데이터 탐색기 및 SQL Server 또는 Azure SQL DB 메타 데이터 탐색기 간에 개체를 동기화 하는입니다. 표시 하거나 숨기는 명령이 포함 되어는 **출력** 및 **오류 목록** 창과 옵션 **레이아웃** 를 사용할 수 있는 레이아웃을 사용 하 여 관리 합니다.|  
 |**Tools**|보고서를 만들고, 스키마를 변환, 데이터베이스에서 새로 고침, 개체 및 데이터를 마이그레이션할 하며 스크립트로 저장 하는 명령이 포함 됩니다. 또한에 대 한 액세스를 제공 된 **전역 설정, 기본 프로젝트 설정,** 및 **프로젝트 설정** 대화 상자.|  
@@ -134,4 +135,3 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
 [사용자 인터페이스 참조 &#40; MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
 [Azure SQL DB &#40; SQL Server-에 MySQL 데이터 마이그레이션 MySQLToSQL &#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
-

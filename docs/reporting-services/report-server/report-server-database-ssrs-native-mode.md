@@ -1,13 +1,14 @@
 ---
-title: "보고서 서버 데이터베이스 (SSRS 기본 모드) | Microsoft Docs"
+title: "보고서 서버 데이터베이스(SSRS 기본 모드) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
-caps.latest.revision: 48
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "48"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b580d66daa70a5c358a458a6c8f939f5bdabce48
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0b800d0677323aa53276640be971fddf73d36b62
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스(SSRS 기본 모드)
   보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 사용하여 메타데이터와 개체 정의를 저장하는 상태 비저장 서버입니다. 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치는 두 개의 데이터베이스를 사용하여 임시 저장소와는 별도로 영구 데이터 저장소를 제공합니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본적으로 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb**입니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/09/2017
  이전 설치 또는 다른 보고서 서버 인스턴스가 있는 다른 인스턴스에서 기존 보고서 서버 데이터베이스를 이식하거나 다시 사용할 수 있습니다. 보고서 서버 데이터베이스의 스키마는 보고서 서버 인스턴스와 호환되어야 합니다. 데이터베이스가 이전 형식일 경우 현재 형식으로 업그레이드할지 묻는 메시지가 표시됩니다. 최신 버전을 이전 버전으로 다운그레이드할 수는 없습니다. 최신 보고서 서버 데이터베이스가 있는 경우 이 데이터베이스를 이전 버전의 보고서 서버 인스턴스와 함께 사용할 수 없습니다. 보고서 서버 데이터베이스를 최신 형식으로 업그레이드하는 방법에 대한 자세한 내용은 [보고서 서버 데이터베이스 업그레이드](../../reporting-services/install-windows/upgrade-a-report-server-database.md)를 참조하세요.  
   
 > [!IMPORTANT]  
->  데이터베이스의 테이블 구조는 서버 작업을 위해 최적화된 것이므로 수정하거나 조정하지 마십시오. [!INCLUDE[msCoName](../../includes/msconame-md.md)]다음 한 릴리스의 테이블 구조를 변경할 수 있습니다. 데이터베이스를 수정하거나 확장하면 나중에 프로그램을 업그레이드하거나 서비스 팩을 적용하기 어려울 수 있습니다. 또한 사용자 변경에 따라 보고서 서버 작업이 올바르게 수행되지 않을 수 있습니다. 예를 들면 ReportServer 데이터베이스에서 READ_COMMITTED_SNAPSHOT을 설정하면 대화형 정렬 기능이 중단됩니다.  
+>  데이터베이스의 테이블 구조는 서버 작업을 위해 최적화된 것이므로 수정하거나 조정하지 마십시오. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 현재 릴리스의 테이블 구조를 다음 릴리스에서 변경할 수 있습니다. 데이터베이스를 수정하거나 확장하면 나중에 프로그램을 업그레이드하거나 서비스 팩을 적용하기 어려울 수 있습니다. 또한 사용자 변경에 따라 보고서 서버 작업이 올바르게 수행되지 않을 수 있습니다. 예를 들면 ReportServer 데이터베이스에서 READ_COMMITTED_SNAPSHOT을 설정하면 대화형 정렬 기능이 중단됩니다.  
   
  보고서 서버 데이터베이스에 대한 모든 액세스는 보고서 서버를 통해 처리되어야 합니다. 보고서 서버 데이터베이스의 내용에 액세스하기 위해 보고서 서버 관리 도구(예: 보고서 관리자 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) 또는 URL 액세스, 보고서 서버 웹 서비스, WMI(Windows Management Instrumentation) 공급자와 같은 프로그래밍 인터페이스를 사용할 수 있습니다.  
   
@@ -66,17 +66,16 @@ ms.lasthandoff: 08/09/2017
 ## <a name="report-server-temporary-database"></a>보고서 서버 임시 데이터베이스  
  각 보고서 서버 데이터베이스는 관련된 임시 데이터베이스를 사용하여 보고서 서버에서 생성한 세션 및 실행 데이터, 캐시된 보고서 및 작업 테이블을 저장합니다. 백그라운드 서버 프로세스에서는 임시 데이터베이스의 테이블에서 사용되지 않는 오래된 항목을 정기적으로 제거합니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 데이터베이스가 없어도 임시 데이터베이스를 다시 만들지 않으며 테이블이 없거나 수정된 경우에도 해당 테이블을 복구하지 않습니다. 임시 데이터베이스에는 지속적 데이터가 들어 있지 않지만 오류 복구 작업의 일환으로 데이터베이스를 다시 만들 필요가 없도록 데이터베이스 복사본을 백업해야 합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 데이터베이스가 없어도 임시 데이터베이스를 다시 만들지 않으며 테이블이 없거나 수정된 경우에도 해당 테이블을 복구하지 않습니다. 임시 데이터베이스에는 지속적 데이터가 들어 있지 않지만 오류 복구 작업의 일환으로 데이터베이스를 다시 만들 필요가 없도록 데이터베이스 복사본을 백업해야 합니다.  
   
  임시 데이터베이스를 백업하고 이후에 복원한 경우에는 내용을 삭제해야 합니다. 일반적으로 임시 데이터베이스의 내용은 언제든지 삭제하는 것이 안전합니다. 그러나 내용을 삭제한 후에는 보고서 서버 Windows 서비스를 다시 시작해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL Server 장애 조치 클러스터에서 보고서 서버 데이터베이스 호스팅](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [저장소 암호화 된 보고서 서버 데이터 &#40; SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 장애 조치(failover) 클러스터에서 보고서 서버 데이터베이스 호스팅](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
+ [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
- [관리는 보고서 서버 데이터베이스 &#40; SSRS 기본 모드 &#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [보고서 서버 데이터베이스 &#40; 만들기 SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [백업 및 Reporting Services에 대 한 복원 작업](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
+ [보고서 서버 데이터베이스 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+ [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Reporting Services 백업 및 복원 작업](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   
-

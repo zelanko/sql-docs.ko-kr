@@ -21,17 +21,16 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: dc8301025936bb5f1b0ad31db6b15d90416580ba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 11/08/2017
-
+ms.openlocfilehash: 29e1fd8ede6cc943b1ee41a3b0030b2942169abc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-destination"></a>ADO.NET 대상
   ADO.NET 대상은 데이터베이스 테이블이나 뷰를 사용하는 다양한 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]호환 데이터베이스로 데이터를 로드합니다. 이 데이터를 기존 테이블이나 뷰에 로드하는 옵션이 제공되거나 새 테이블을 만들고 데이터를 새 테이블에 로드할 수 있습니다.  
@@ -47,7 +46,7 @@ ms.lasthandoff: 11/08/2017
  ADO.NET 대상에는 입력 열과 대상 데이터 원본 열 사이의 매핑이 포함되므로 입력 열을 모든 대상 열에 매핑하지 않아도 됩니다. 그러나 일부 대상 열의 속성에서 입력 열을 매핑해야 할 수도 있습니다. 그렇지 않으면 오류가 발생할 수 있습니다. 예를 들어 대상 열에 Null 값이 허용되지 않는 경우에는 입력 열을 해당 대상 열로 매핑해야 합니다. 또한 매핑된 열의 데이터 형식이 호환되어야 합니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 공급자에서 지원하지 않을 경우 문자열 데이터 형식의 입력 열을 숫자 데이터 형식의 대상 열에 매핑할 수 없습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 형식이 이미지로 설정 된 열에 텍스트 삽입을 지원 하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터 형식이 이미지로 설정된 열에 텍스트 삽입을 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
 > [!NOTE]  
 >  ADO.NET 대상은 DT_DBTIME 유형으로 설정된 입력 열을 datetime 유형으로 설정된 데이터베이스 열에 매핑하는 작업을 지원하지 않습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
@@ -97,19 +96,19 @@ ms.lasthandoff: 11/08/2017
  **사용 가능한 경우 대량 삽입 사용**  
  <xref:System.Data.SqlClient.SqlBulkCopy> 인터페이스를 사용하여 대량 삽입 작업의 성능을 향상시킬지 여부를 지정합니다.  
   
- 반환 하는 ADO.NET 공급자만 한 <xref:System.Data.SqlClient.SqlConnection> 개체의 사용을 지원는 <xref:System.Data.SqlClient.SqlBulkCopy> 인터페이스입니다. .NET Data Provider for SQL Server(SqlClient)는 <xref:System.Data.SqlClient.SqlConnection> 개체를 반환하고, 사용자 지정 공급자는 <xref:System.Data.SqlClient.SqlConnection> 개체를 반환할 수 있습니다.  
+ <xref:System.Data.SqlClient.SqlConnection> 개체를 반환하는 ADO.NET 공급자만 <xref:System.Data.SqlClient.SqlBulkCopy> 인터페이스의 사용을 지원합니다. .NET Data Provider for SQL Server(SqlClient)는 <xref:System.Data.SqlClient.SqlConnection> 개체를 반환하고, 사용자 지정 공급자는 <xref:System.Data.SqlClient.SqlConnection> 개체를 반환할 수 있습니다.  
   
  .NET Data Provider for SQL Server(SqlClient)를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다.  
   
- **사용 가능한 경우 대량 삽입 사용**을 선택하고 **오류** 옵션을 **행 리디렉션**으로 설정하면 대상에서 오류 출력으로 리디렉션하는 일괄 처리 데이터에 올바른 행이 포함될 수 있습니다. 대량 작업에서 오류 처리에 대한 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요. 에 대 한 자세한 내용은 **오류** 옵션 [ADO NET 대상 편집기 &#40; 오류 출력 페이지 &#41; ](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
+ **사용 가능한 경우 대량 삽입 사용**을 선택하고 **오류** 옵션을 **행 리디렉션**으로 설정하면 대상에서 오류 출력으로 리디렉션하는 일괄 처리 데이터에 올바른 행이 포함될 수 있습니다. 대량 작업에서 오류 처리에 대한 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요. **오류** 옵션에 대한 자세한 내용은 [ADO NET 대상 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)를 참조하세요.  
   
 > [!NOTE]  
->  SQL Server 또는 Sybase 원본 테이블에서 id 열을 포함 하는 경우 ADO NET 대상 전에 IDENTITY_INSERT를 사용 하도록 설정 하 고 나중에 다시 사용할 수 없도록 SQL 실행 태스크를 사용 해야 합니다. (Identity column 속성 열에 대 한 증분 값을 지정합니다. SET IDENTITY_INSERT 문을 사용 하면 대상 테이블에 id 열에 삽입할 원본 테이블에서 명시적 값.)  
+>  SQL Server 또는 Sybase 원본 테이블에 ID 열이 포함되어 있으면 SQL 실행 태스크를 사용하여 ADO NET 대상 전에 IDENTITY_INSERT를 활성화하고 그 후에 다시 비활성화해야 합니다. (ID 열 속성은 열에 대한 증분 값을 지정합니다. SET IDENTITY_INSERT 문은 원본 테이블의 명시적 값을 대상 테이블의 ID 열에 삽입되도록 합니다.)  
 >   
->   SET IDENTITY_INSERT 문 및 데이터를 성공적으로 로드를 실행 하려면 다음을 수행 해야 합니다. 
->       1. ADO.NET 대상 및 SQL 실행 태스크에 대 한 동일한 ADO.NET 연결 관리자를 사용 합니다. 
->       2. 연결 관리자에서 설정 된 **RetainSameConnection** 속성 및 **MultipleActiveResultSets** 속성을 True로 합니다. 
->       3. ADO.NET 대상에서 설정 된 **UseBulkInsertWhenPossible** 속성을 false로 합니다. 
+>   SET IDENTITY_INSERT 문 및 데이터 로딩을 성공적으로 실행하려면 다음을 수행해야 합니다.  
+>       1. SQL 실행 태스크와 ADO NET 대상에 같은 ADO.NET 연결 관리자를 사용합니다.  
+>       2. 연결 관리자에서 **RetainSameConnection** 속성 및 **MultipleActiveResultSets** 속성을 True로 설정합니다.  
+>       3. ADO.NET 대상에서 **UseBulkInsertWhenPossible** 속성을 False로 설정합니다.   
 >
 >  자세한 내용은 [SET IDENTITY_INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) 및 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)를 참조하세요.  
   
@@ -127,7 +126,7 @@ ms.lasthandoff: 11/08/2017
   
 3.  **ADO NET 대상 편집기**에서 **매핑**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 입력 열을 대상 열에 매핑합니다.  
   
@@ -135,7 +134,7 @@ ms.lasthandoff: 11/08/2017
  사용 가능한 대상 열의 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 대상 열을 입력 열에 매핑합니다.  
   
  **입력 열**  
- 선택한 입력 열을 표시합니다. 선택 하 여 매핑을 제거할 수 있습니다  **\<무시 >** 출력에서 열을 제외 합니다.  
+ 선택한 입력 열을 표시합니다. 출력에서 열을 제외하는 **\<ignore>**를 선택하여 매핑을 제거할 수 있습니다.  
   
  **대상 열**  
  매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  
@@ -151,7 +150,7 @@ ms.lasthandoff: 11/08/2017
   
 3.  **ADO NET 대상 편집기**에서 **오류 출력**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **입력 또는 출력**  
  입력 이름을 표시합니다.  
   
@@ -166,7 +165,7 @@ ms.lasthandoff: 11/08/2017
  **잘림**  
  사용되지 않습니다.  
   
- **Description**  
+ **설명**  
  작업에 대한 설명을 표시합니다.  
   
  **이 값을 선택한 셀에 설정**  
@@ -176,4 +175,3 @@ ms.lasthandoff: 11/08/2017
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
   
-

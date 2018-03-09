@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - connection transitions [ODBC]
 - state transitions [ODBC], connection
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea7b3761e885778aae1c70ab8d22cd2ef86c1363
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8af5cd175cdd9ab7d96cdb141bcd0a6b6100ea80
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-transitions"></a>연결 전환
 ODBC 연결 상태를 갖습니다.  
@@ -308,4 +306,3 @@ ODBC 연결 상태를 갖습니다.
 |C0<br /><br /> Env 없습니다.|C1<br /><br /> 할당되지 않음|C2<br /><br /> 할당 된|C3<br /><br /> 데이터가 필요|C4<br /><br /> 연결됨|C5<br /><br /> 인수를 제거합니다.|C 6<br /><br /> 트랜잭션|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(면)|(면)|(면)|(면)|(면)|--|--|
-

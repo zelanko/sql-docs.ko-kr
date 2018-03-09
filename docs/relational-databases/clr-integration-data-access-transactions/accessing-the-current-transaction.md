@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 550455ead049191d94de93a40a55aa3b064602a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: abcc68d96e7516b31a231efeb4c5c851b10dee45
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-the-current-transaction"></a>현재 트랜잭션 액세스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]트랜잭션이 시점에서 실행 되는 공용 언어 런타임 (CLR) 코드에 활성화 되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 입력 트랜잭션을 통해 노출 되는 **System.Transactions.Transaction** 클래스입니다. **Transaction.Current** 속성은 현재 트랜잭션에 액세스하는 데 사용됩니다. 대부분의 경우 트랜잭션에 명시적으로 액세스할 필요가 없습니다. 데이터베이스 연결의 경우 ADO.NET에서는 **Transaction.Current** 메서드를 호출할 때 **Connection.Open** 를 자동으로 검사하고 연결 문자열에서 **Enlist** 키워드가 false로 설정되지 않은 경우 연결을 트랜잭션에 투명하게 참여시킵니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+트랜잭션이 시점에서 실행 되는 공용 언어 런타임 (CLR) 코드에 활성화 되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 입력 트랜잭션을 통해 노출 되는 **System.Transactions.Transaction** 클래스입니다. **Transaction.Current** 속성은 현재 트랜잭션에 액세스하는 데 사용됩니다. 대부분의 경우 트랜잭션에 명시적으로 액세스할 필요가 없습니다. 데이터베이스 연결의 경우 ADO.NET에서는 **Transaction.Current** 메서드를 호출할 때 **Connection.Open** 를 자동으로 검사하고 연결 문자열에서 **Enlist** 키워드가 false로 설정되지 않은 경우 연결을 트랜잭션에 투명하게 참여시킵니다.  
   
  다음 시나리오에서는 **Transaction** 개체를 직접 사용할 수 있습니다.  
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee66a454da8bfdc23e9beb382c0ac22939268e80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08f93380356d54659d9e851ed124e8c257c10c8e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
 나중에 메모리 내 OLTP의 성능 향상 데모를 제공하는 다음 문서를 참조하는 것이 좋습니다.  
   
 - [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
-- [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
+- [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)(메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
   
   
   
@@ -217,7 +218,7 @@ Microsoft SQL Server에서 메모리 최적화 테이블을 만들려면 먼저 
 - [메모리 액세스에 최적화된 FILEGROUP](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)  
   
   
-Azure SQL 데이터베이스에서는 이러한 FILEGROUP을 만들 수 없으며, 만들 필요도 없습니다.  
+Azure SQL Database에서는 이러한 FILEGROUP을 만들 수 없으며, 만들 필요도 없습니다.  
 
 다음 샘플 T-SQL 스크립트는 메모리 내 OLTP에 데이터베이스를 사용하고 모든 권장 설정을 구성합니다. 이는 SQL Server와 Azure SQL Database 둘 다에서 작동합니다([enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)).
 
@@ -419,31 +420,25 @@ ALTER TABLE... ADD/DROP은 메모리 최적화 테이블 또는 인덱스에서 
 - [응용 프로그램 수준 분할](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [메모리 액세스에 최적화된 테이블 분할을 위한 응용 프로그램 패턴](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
-  
 <a name="trade-offs-of-native-procs-38p"></a>  
   
 ### <a name="trade-offs-of-native-procs"></a>기본 프로시저의 상충 관계  
   
-  
 - 네이티브 컴파일 저장 프로시저는 디스크 기반 테이블 형식에 액세스할 수 없습니다. 기본 프로시저는 메모리 최적화 테이블에만 액세스할 수 있습니다.  
 - 서버 또는 데이터베이스가 가장 최근에 온라인 상태로 전환되고 난 후 기본 프로시저가 처음으로 실행될 때 기본 프로시저는 한 번 다시 컴파일해야 합니다. 이 작업으로 인해 기본 프로시저 실행이 시작되기 전에 지연이 발생합니다.  
-  
   
 <a name="advanced-considerations-for-memory-optimized-tables-39n"></a>  
   
 ## <a name="advanced-considerations-for-memory-optimized-tables"></a>메모리 최적화 테이블에 대한 고급 고려 사항  
   
-  
-[메모리 액세스에 최적화된 테이블의 인덱스](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) 는 일부 방식에서 기존 디스크 테이블의 인덱스와 다릅니다.  
-  
-- 
-            [해시 인덱스](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 는 메모리 최적화 테이블에서만 사용할 수 있습니다.  
-  
+[메모리 액세스에 최적화된 테이블의 인덱스](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) 는 일부 방식에서 기존 디스크 테이블의 인덱스와 다릅니다. 해시 인덱스는 메모리 최적화 테이블에서만 사용할 수 있습니다.
+    
+- [메모리 액세스에 최적화된 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)
+- [메모리 액세스에 최적화된 테이블의 비클러스터형 인덱스](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
 계획 중인 메모리 최적화 테이블 및 인덱스에 대해 활성 메모리가 충분한지 확인할 계획을 세워야 합니다. 다음을 참조하십시오.  
   
 - [메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
   
 DURABILITY = SCHEMA_ONLY를 사용하여 메모리 최적화 테이블을 선언할 수 있습니다.  
   
@@ -451,17 +446,13 @@ DURABILITY = SCHEMA_ONLY를 사용하여 메모리 최적화 테이블을 선언
 - 데이터베이스가 다시 온라인 상태가 되면 메모리 최적화 테이블은 데이터가 없는 활성 메모리로 다시 로드됩니다.  
 - 수천 개의 행이 관련된 경우 SCHEMA_ONLY 테이블이 tempdb의 [#temporary 테이블](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) 보다 더 효율적일 수 있습니다.  
   
-  
 테이블 변수를 메모리 최적화 변수로 선언할 수도 있습니다. 다음을 참조하십시오.  
   
 - [메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
-  
-  
 <a name="advanced-considerations-for-natively-compiled-modules-40k"></a>  
   
 ## <a name="advanced-considerations-for-natively-compiled-modules"></a>네이티브 컴파일 모듈에 대한 고급 고려 사항  
-  
   
 TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식은 다음과 같습니다.  
   
@@ -471,7 +462,6 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
   - 메모리 최적화 테이블에는 고유하게 컴파일되는 트리거만 허용됩니다.  
 - 네이티브 컴파일 [테이블 반환 함수](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   - [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
-  
   
 고유하게 컴파일된 UDF(사용자 정의 함수)는 해석된 UDF보다 더 빠르게 실행됩니다. UDF와 관련해서 고려해야 할 몇 가지 사항은 다음과 같습니다.  
   
@@ -483,15 +473,13 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
 네이티브 UDF의 성능에 대한 테스트 데이터 및 설명은 다음을 참조하세요.  
   
   - [SQL Server 2016에서 네이티브 컴파일 UDF로 RBAR 영향 완화](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - [Gail Shaw가 작성하는 블로그 게시물](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)(2016년 1월 게시)  
-  
+  - [고유하게 컴파일된 사용자 정의 함수](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) 블로그 게시물, 2016년 1월 Gail Shaw 작성  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
 ## <a name="documentation-guide-for-memory-optimized-tables"></a>메모리 최적화 테이블에 대한 설명서 가이드  
   
-  
-다음은 메모리 최적화 테이블에 대한 특별 고려 사항에 설명하는 다른 문서에 대한 링크입니다.  
+메모리 최적화 테이블에 대한 특별 고려 사항을 설명하는 다음과 같은 기타 문서를 참조하세요.  
   
 - [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   - [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
@@ -504,9 +492,7 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
 - [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - 메모리 최적화 테이블 및 기본 프로시저에 지원되거나 지원되지 않는 T-SQL 및 데이터 형식  
 - [메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)(고급 고려 사항 옵션에 대해 설명)  
-  
-  
-  
+
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## <a name="documentation-guide-for-native-procs"></a>기본 프로시저에 대한 설명서 가이드  
@@ -519,9 +505,8 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
   
 ## <a name="related-links"></a>관련 링크  
   
-- 초기 문서: [메모리 내 OLTP(메모리 내 최적화)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+- 초기 문서: [메모리 내 OLTP &#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+    
 메모리 내 OLTP를 사용하여 얻을 수 있는 성능 향상을 보여 주는 코드를 제공하는 문서는 다음과 같습니다.  
   
 - [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 에이전트를 사용 하 여에 원격 서버의 패키지를 부하 분산 | Microsoft Docs"
+title: "SQL Server 에이전트를 사용하여 원격 서버의 패키지 부하 분산 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c6226a4f0e91ac69b8355892d67c721325a1439b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8a7b7c2d7abf766ea94cd74064292e17f1100f87
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>SQL Server 에이전트를 사용하여 원격 서버의 패키지 로드 균형 조정
   패키지를 여러 개 실행해야 하는 경우 사용 가능한 다른 서버를 사용하는 것이 편리합니다. 모든 패키지를 한 부모 패키지에서 관리하고 다른 서버를 사용하여 패키지를 실행하는 이 방법을 로드 균형 조정이라고 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 로드 균형 조정은 패키지 소유자가 직접 설계해야 하며 서버에서 자동으로 수행되지 않습니다. 또한 원격 서버에서 실행되는 패키지는 다른 패키지의 개별 태스크가 아닌 전체 패키지여야 합니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="illustration-of-load-balancing"></a>로드 균형 조정의 그림  
  다음 다이어그램에서는 서버의 부모 패키지를 보여 줍니다. 부모 패키지에는 여러 개의 SQL 작업 에이전트 실행 태스크가 들어 있습니다. 부모 패키지에 있는 각 태스크는 원격 서버의 SQL Server 에이전트를 호출합니다. 이러한 원격 서버에는 해당 서버의 패키지를 호출하는 단계가 포함된 SQL Server 에이전트 작업이 들어 있습니다.  
   
- ![SSIS 로드 균형 아키텍처 개요](../../integration-services/packages/media/loadbalancingoverview.gif "개요의 SSIS 로드 균형 아키텍처")  
+ ![SSIS 부하 분산 아키텍처 개요](../../integration-services/packages/media/loadbalancingoverview.gif "SSIS 부하 분산 아키텍처 개요")  
   
  이 아키텍처에서 로드 균형을 조정하는 데 필요한 단계는 새로운 개념이 아닙니다. 대신 기존 개념 및 일반 SSIS 개체를 새로운 방식으로 사용하여 로드 균형을 조정합니다.  
   
@@ -110,7 +109,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="listing-child-packages"></a>하위 패키지 나열  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 상위 패키지와 하위 패키지가 들어 있는 프로젝트를 배포하는 경우, 상위 패키지에서 실행되는 하위 패키지 목록을 볼 수 있습니다. 상위 패키지를 실행할 때 상위 패키지의 **개요** 보고서가 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 자동으로 생성됩니다. 이 보고서에는 다음 이미지처럼 상위 패키지에 포함되는 패키지 실행 태스크에 의해 수행된 하위 패키지가 나열됩니다.  
   
- ![하위 패키지 목록이 있는 개요 보고서](../../integration-services/packages/media/overviewreport-childpackagelisting.png "하위 패키지 목록이 있는 개요 보고서")  
+ ![자식 패키지 목록이 있는 개요 보고서](../../integration-services/packages/media/overviewreport-childpackagelisting.png "자식 패키지 목록이 있는 개요 보고서")  
   
  **개요** 보고서에 액세스하는 방법은 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)를 참조하세요.  
   
@@ -125,17 +124,16 @@ ms.lasthandoff: 08/03/2017
 >  Transact-SQL 문인 **sp_start_job N'package_name'**을 포함하는 SQL 실행 태스크를 사용할 수 있습니다. 자세한 내용은 [sp_start_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)을 참조하세요.  
   
 ### <a name="debugging-environment"></a>디버깅 환경  
- 부모 패키지를 테스트할 때는 디버그/디버깅 시작(F5)을 사용하여 디자이너의 디버깅 환경을 실행한 다음 사용합니다. 또는 명령 프롬프트 유틸리티인 **dtexec**를 사용할 수 있습니다. 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)을 참조하세요.  
+ 부모 패키지를 테스트할 때는 디버그/디버깅 시작(F5)을 사용하여 디자이너의 디버깅 환경을 실행한 다음 사용합니다. 또는 명령 프롬프트 유틸리티인 **dtexec**를 사용할 수 있습니다. 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하세요.  
 
 ## <a name="logging-for-load-balanced-packages-on-remote-servers"></a>원격 서버의 로드 균형 조정된 패키지 로깅
   모든 자식 패키지가 동일한 로그 공급자를 사용하고 동일한 대상에 쓰는 경우 관리자가 보다 쉽게 여러 서버에서 실행되는 모든 자식 패키지에 대한 로그를 관리할 수 있습니다. 모든 자식 패키지에 공통된 로그 파일을 만드는 한 가지 방법은 SQL Server 로그 공급자에 이벤트를 기록하도록 자식 패키지를 구성하는 것입니다. 모든 패키지가 동일한 데이터베이스, 동일한 서버 및 서버의 동일한 인스턴스를 사용하도록 구성할 수 있습니다.  
   
  관리자는 단일 서버에 로그온하여 모든 자식 패키지에 대한 로그 파일을 볼 수 있습니다.  
   
- 패키지에서 로깅을 활성화 하는 방법에 대 한 정보를 참조 하십시오. [Integration Services (SSIS) 로깅](../../integration-services/performance/integration-services-ssis-logging.md)합니다.  
+ 패키지에서 로깅을 사용하도록 설정하는 방법에 대한 자세한 내용은 [Integration Services(SSIS) 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
 
 ## <a name="related-tasks"></a>관련 작업  
  [패키지에 대한 SQL Server 에이전트 작업](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   
-

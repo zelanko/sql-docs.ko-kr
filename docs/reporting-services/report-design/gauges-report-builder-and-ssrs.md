@@ -1,13 +1,14 @@
 ---
-title: "계기 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "계기(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -159,17 +160,16 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fa277221c184a30af7680cb6371c9c5220ceae63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>계기(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서의 계기 데이터 영역에는 데이터 집합의 단일 값이 표시됩니다. 개별 계기는 항상 자식 또는 인접 계기를 추가할 수 있는 계기 패널 안에 배치됩니다. 필터링, 그룹화, 정렬 등 일반적인 기능을 공유하는 여러 계기를 한 계기 패널 안에 만들 수 있습니다.  
@@ -198,7 +198,7 @@ ms.lasthandoff: 08/09/2017
   
  선형 계기는 가로 또는 세로 방향의 사각형이며 눈금자와 비슷한 모양입니다. 계기 포인터는 대개 온도계 모양이지만 표식이나 막대인 경우도 있습니다. 이 계기는 이러한 모양으로 인해 테이블 또는 행렬 데이터 영역에 통합되어 진행률 데이터를 보여 주는 데 유용합니다.  
   
- 이러한 차이 외는 두 계기 유형이 유사하므로 서로 바꿔 사용할 수 있습니다. 그러나 보고서에서 단순한 계기를 사용해야 하는 경우에는 계기 대신 표시기 사용을 고려해야 합니다. 자세한 내용은 참조 [표시기 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ 이러한 차이 외는 두 계기 유형이 유사하므로 서로 바꿔 사용할 수 있습니다. 그러나 보고서에서 단순한 계기를 사용해야 하는 경우에는 계기 대신 표시기 사용을 고려해야 합니다. 자세한 내용은 [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음 그림에서는 방사형 및 선형 계기를 보여 줍니다. 방사형 계기는 둥근 모양이며 니들 포인터를 사용하고, 선형 계기는 가로 모양이며 온도계 포인터를 사용합니다.  
   
@@ -304,12 +304,11 @@ ms.lasthandoff: 08/09/2017
 |[계기의 포인터 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|계기 포인터 서식 지정에 대한 일반적인 정보와 방사형/선형 계기에서 사용할 수 있는 포인터 스타일의 서식 옵션에 대한 자세한 정보를 제공합니다.|  
 |[계기에서 범위 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|계기에서 중요한 값 하위 섹션을 나타내거나 포인터 값이 특정 값 범위에 속하는지를 시각적으로 나타내기 위해 계기의 범위 서식을 지정하는 방법에 대한 정보를 제공합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [보고서 매개 변수 사용 &#40; 보고서 작성기 및 보고서 디자이너 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

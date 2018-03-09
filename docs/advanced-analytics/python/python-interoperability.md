@@ -1,45 +1,43 @@
 ---
-title: "Python 상호 운용성 | Microsoft Docs"
+title: "SQL Server와의 상호 운용성 Python | Microsoft Docs"
 ms.custom: 
-ms.date: 04/18/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 32762183ff5273998848978238788cc830319b91
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="python-interoperability"></a>Python 상호 운용성
+# <a name="python-interoperability-with-sql-server"></a>SQL Server와 Python의 상호 운용성
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목의 기능을 사용 하면 설치 된 Python 구성 요소를 설명 **컴퓨터 학습 Services (In-database)** Python를 언어로 선택 합니다.
 
-> [!NOTE]
-> Python에 대 한 지원 시험판 기능이 며 아직 개발 중인 합니다.
-
 ## <a name="python-components"></a>Python 구성 요소
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]Python 실행 파일을 수정 하지 않습니다. Python 런타임의 SQL 도구와 독립적으로 설치 되어 있고 외부에서 실행 되는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 프로세스입니다.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Python 실행 파일을 수정 하지 않습니다. Python 런타임의 SQL 도구와 독립적으로 설치 되어 있고 외부에서 실행 되는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 프로세스입니다.
 
 연결 된 특정 배포 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인스턴스는 인스턴스와 연결 된 폴더에서 찾을 수 있습니다.
 
 예를 들어 기본 인스턴스는 Python 옵션으로 컴퓨터 학습 서비스를 설치 하는 경우 아래를 봅니다.
 
-`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER`
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 SQL Server 2017 컴퓨터 학습 서비스의 설치는 python Anaconda 배포를 추가합니다. 특히, Anaconda 4.3 분기에 따라 Anaconda 3 설치 관리자는 사용 합니다. SQL Server 2017에 대 한 예상된 Python 수준은 Python 3.5입니다.
 
-## <a name="new-in-this-release"></a>이 릴리스의 새로운 기능
+## <a name="new-python-packages-in-this-release"></a>이 릴리스의 새로운 Python 패키지
 
 Continuum analytics 사이트 참조 목록이 Anaconda 배포에서 지 원하는 패키지에 대 한: [Anaconda 패키지 목록](https://docs.continuum.io/anaconda/pkg-docs)
 
@@ -47,9 +45,9 @@ SQL Server 2017에 컴퓨터 학습 서비스도 포함 되어 새 **revoscalepy
 
 것과 동일한 기능을 제공 하는이 라이브러리는 **RevoScaleR** Microsoft r 패키지 즉, 지원으로 원격 계산 컨텍스트는 다양 한 확장 가능한 기계 학습 모델 만들기와 같은 **rxLinMod**합니다. RevoScaleR에 대 한 자세한 내용은 참조 [분산 및 병렬 컴퓨팅을 ScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing)합니다.
 
-때문에 Python는 시험판 기능 및 개발 중인 여전히 지원는 **revoscalepy** 라이브러리에는 현재 RevoScaleR 기능의 하위 집합만 포함 됩니다. 
+[Python에 대 한 microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) Python 설치에 추가할 때 패키지 SQL Server 기계 학습의 일부로 설치 됩니다. 이 패키지는 많은 기계 학습 속도 정확도에 대 한 최적화 된으로 인라인 텍스트와 이미지를 사용 하기 위한 변환 하는 알고리즘을 포함 합니다. 자세한 내용은 참조 [MicrosoftML 패키지를 사용 하 여 SQL Server와 함께](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package)합니다.
 
-앞으로 추가 될 포함 될 수 있습니다는 [Microsoft Cognitive Toolkit](https://www.microsoft.com/research/product/cognitive-toolkit/)합니다. 이 라이브러리 이전의 CNTK, 다양 한 convolutional 네트워크 (만우절), 되풀이 네트워크 (같은 메시지가) 및 짧은 용어 메모리 긴 네트워크 (LSTM)를 포함 하 여 신경망 모델을 지원 합니다.
+Microsoftml 및 revoscalepy 밀접 하 게 결합 합니다. microsoftml에 사용 되는 데이터 원본은 revoscalepy 개체로 정의 됩니다. 계산 revoscalepy 전송 하기 위해서는 microsoftml의에서 상황에 맞는 제한 해야 합니다. 즉, 모든 기능을 로컬 작업에 사용할 수 있지만 RxInSqlServer를 필요 원격 계산 컨텍스트를 전환 합니다.
 
 ## <a name="using-python-in-sql-server"></a>SQL Server에서 Python 사용
 
@@ -77,4 +75,3 @@ Python 컴퓨터 학습 서비스의 설치 과정의 일부로 GNU Public Licen
 ## <a name="see-also"></a>관련 항목:
 
 [Python 라이브러리 및 데이터 형식](python-libraries-and-data-types.md)
-

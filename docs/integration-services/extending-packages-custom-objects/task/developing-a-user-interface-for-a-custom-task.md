@@ -1,5 +1,5 @@
 ---
-title: "사용자 지정 태스크에 대 한 사용자 인터페이스 개발 | Microsoft Docs"
+title: "사용자 지정 태스크의 사용자 인터페이스 개발 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 56
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1d13e82111d97d4d4a63615c91b3cbb48f68f708
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b79f177afc2c0c5014e9e50c98409f2ecc655025
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>사용자 지정 태스크의 사용자 인터페이스 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델을 사용하면 사용자 지정 태스크 개발자가 태스크의 사용자 지정 사용자 인터페이스를 쉽게 만들 수 있으며 이러한 태스크는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 통합 및 표시될 수 있습니다. 사용자 인터페이스는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 사용자에게 유용한 정보를 제공하고 사용자 지정 태스크의 속성 및 설정을 올바르게 구성할 수 있도록 안내해 줍니다.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 08/03/2017
   
  이 섹션에서는 사용자 지정 태스크의 사용자 인터페이스를 개발할 때 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 특성 및 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 인터페이스가 하는 역할을 설명하고, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너 내에서 태스크를 만들고, 통합, 배포 및 디버깅하는 방법에 대한 세부 정보를 제공합니다.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너 작업에 대 한 사용자 인터페이스를 여러 진입점을 제공: 사용자가 선택할 수 **편집** 바로 가기 메뉴에서 해당 작업을 두 번 클릭 하거나 클릭는 **편집기 표시** 속성 시트의 맨 아래에 링크 합니다. 사용자가 이러한 진입점 중 하나에 액세스하면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 사용자 인터페이스가 들어 있는 어셈블리를 찾아서 로드합니다. 태스크의 사용자 인터페이스는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 사용자에게 표시되는 속성 대화 상자를 만듭니다.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 사용자 인터페이스에 대한 여러 진입점을 제공합니다. 즉, 사용자는 바로 가기 메뉴에서 **편집**을 선택하거나, 태스크를 두 번 클릭하거나, 속성 시트의 아래쪽에 있는 **편집기 표시** 링크를 클릭할 수 있습니다. 사용자가 이러한 진입점 중 하나에 액세스하면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 사용자 인터페이스가 들어 있는 어셈블리를 찾아서 로드합니다. 태스크의 사용자 인터페이스는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 사용자에게 표시되는 속성 대화 상자를 만듭니다.  
   
  태스크와 태스크의 해당 사용자 인터페이스는 별개의 엔터티입니다. 따라서 지역화, 배포 및 유지 관리 작업을 줄이려면 태스크와 태스크의 사용자 인터페이스를 별개의 어셈블리에 구현해야 합니다. 태스크 DLL은 태스크에 코딩된 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 특성 값에 들어 있는 정보를 제외하고는 사용자 인터페이스에 대한 어떤 정보도 로드하거나 호출하지 않으며 일반적으로 이러한 정보를 포함하지도 않습니다. 태스크와 사용자 인터페이스는 이러한 방식으로만 연결됩니다.  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 08/03/2017
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|사용되는 경우 이 속성은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 열거형의 값 중 하나로 설정합니다. `RequiredProductLevel = DTSProductLevel.None`)을 입력합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|태스크에 기술 지원이 필요한 경우를 위해 연락처 정보를 포함합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|태스크에 유형을 할당합니다.|  
-|Attribute.TypeId|파생 클래스에서 구현된 경우 이 특성에 대한 고유 식별자를 가져옵니다. 자세한 내용은 참조 **Attribute.TypeID** .NET Framework 클래스 라이브러리에서 속성입니다.|  
+|Attribute.TypeId|파생 클래스에서 구현된 경우 이 특성에 대한 고유 식별자를 가져옵니다. 자세한 내용은 .NET Framework 클래스 라이브러리의 **Attribute.TypeID** 속성을 참조하세요.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A>|[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 어셈블리를 로드하는 데 사용되는 어셈블리 유형 이름입니다. 이 속성은 태스크의 사용자 인터페이스 어셈블리를 찾는 데 사용됩니다.|  
   
  다음 코드 예에서는 클래스 정의 위에 코딩된 경우의 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>를 보여 줍니다.  
@@ -127,7 +125,7 @@ End Class 'MyTask
   
  디자이너에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 메서드를 호출하여 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에 표시되는 창을 요청합니다. 태스크에서는 해당 태스크의 사용자 인터페이스가 들어 있는 창의 인스턴스를 만들고 표시를 위해 해당 사용자 인터페이스를 디자이너에 반환합니다. 일반적으로 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 및 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 개체는 오버로드된 생성자를 통해 창에 제공되므로 이들 개체를 사용하여 태스크를 구성할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크 UI의 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 메서드를 호출하여 태스크의 사용자 인터페이스를 표시합니다. 태스크 사용자 인터페이스는 이 메서드에서 Windows Form을 반환하고 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 이 폼을 모달 대화 상자로 표시합니다. 폼을 닫을 때 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 값이 검사는 **DialogResult** 작업의 수정 여부 및이 수정 내용을 저장 해야 하는 경우를 확인 하려면 폼의 속성입니다. 하는 경우의 값은 **DialogResult** 속성은 **확인**, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너 변경 내용을 저장 하는 작업의 지 속성 메서드를 호출 하는 변경 내용이 삭제 되 고, 그러지 않으면 합니다.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크 UI의 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 메서드를 호출하여 태스크의 사용자 인터페이스를 표시합니다. 태스크 사용자 인터페이스는 이 메서드에서 Windows Form을 반환하고 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 이 폼을 모달 대화 상자로 표시합니다. 폼이 닫히면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 폼의 **DialogResult** 속성 값을 검사하여 태스크가 수정되었는지와 수정 내용을 저장해야 하는지를 결정합니다. **DialogResult** 속성 값이 **OK**인 경우 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 지속성 메서드를 호출하여 변경 내용을 저장하고, 그렇지 않은 경우 변경 내용은 무시됩니다.  
   
  다음 코드 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 인터페이스를 구현하며 SampleTaskForm이라는 Windows Form 클래스가 있다고 가정합니다.  
   
@@ -207,10 +205,9 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
  
-## <a name="see-also"></a>관련 항목:  
- [사용자 지정 작업 만들기](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
+## <a name="see-also"></a>참고 항목  
+ [사용자 지정 태스크 만들기](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
  [사용자 지정 태스크 코딩](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
- [사용자 지정 태스크에 대 한 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+ [사용자 지정 태스크의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   
-

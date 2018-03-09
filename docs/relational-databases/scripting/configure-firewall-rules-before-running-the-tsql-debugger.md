@@ -2,10 +2,14 @@
 title: "TSQL 디버거를 실행하기 전에 방화벽 규칙 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 10/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +24,19 @@ helpviewer_keywords:
 - ports [SQL Server], Transact-SQL debugger
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43a0926518f6a5f1f8751389db274f27c9da6993
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c1196f3195b1b54844a5420a8a9322265a1efa8
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>TSQL 디버거를 실행 하기 전에 방화벽 규칙 구성
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기와 다른 컴퓨터에서 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버깅을 사용하도록 Windows 방화벽 규칙을 구성해야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기와 다른 컴퓨터에서 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버깅을 사용하도록 Windows 방화벽 규칙을 구성해야 합니다.  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>Transact-SQL 디버거 구성  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 서버 쪽 구성 요소와 클라이언트 쪽 구성 요소를 모두 포함합니다. 서버 쪽 디버거 구성 요소는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2(서비스 팩 2) 이상의 각 데이터베이스 엔진 인스턴스와 함께 설치됩니다. 클라이언트 쪽 디버거 구성 요소는 다음과 같은 경우에 설치됩니다.  
@@ -161,7 +165,7 @@ ms.lasthandoff: 11/09/2017
 
 * 서버는 RPC를 통해 클라이언트와 다시 통신해야 합니다. SQL Server 서비스를 실행 중인 계정에 클라이언트에 대한 인증 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Transact-SQL 디버거](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Transact-SQL 디버거 실행](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)   

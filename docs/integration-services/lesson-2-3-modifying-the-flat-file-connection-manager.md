@@ -1,11 +1,11 @@
 ---
-title: "3 단계: 플랫 파일 연결 관리자 수정 | Microsoft Docs"
+title: "3단계: 플랫 파일 연결 관리자 수정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 525557f034199c5e6823c18ab9fdb7c3b505a434
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c447e50a05b1b705690262f322bd1ceeeee72868
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>단원 2-3-플랫 파일 연결 관리자 수정
+# <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>2-3단원 - 플랫 파일 연결 관리자 수정
 이 태스크에서는 1단원에서 만들어 구성한 플랫 파일 연결 관리자를 수정합니다. 처음 만든 플랫 파일 연결 관리자는 파일 하나를 정적으로 로드하도록 구성되어 있습니다. 플랫 파일 연결 관리자를 사용하여 반복적으로 파일을 로드하려면 런타임에 로드할 파일의 경로를 포함하는 사용자 정의 변수 `User:varFileName`을 허용하도록 연결 관리자의 ConnectionString 속성을 수정해야 합니다.  
   
 사용자 정의 변수 `User::varFileName`의 값을 사용하도록 연결 관리자를 수정하여 해당 관리자의 ConnectionString 속성을 채우면 연결 관리자가 여러 플랫 파일에 연결할 수 있습니다. 런타임에 Foreach 루프 컨테이너가 반복될 때마다 `User::varFileName` 변수가 동적으로 업데이트됩니다. 따라서 변수를 업데이트하면 연결 관리자가 다른 플랫 파일에 연결하고 데이터 흐름 태스크가 다른 데이터 집합을 처리합니다.  
@@ -55,4 +54,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

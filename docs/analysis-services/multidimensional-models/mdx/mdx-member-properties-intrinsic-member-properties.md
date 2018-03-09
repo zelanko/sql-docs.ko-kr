@@ -2,16 +2,13 @@
 title: "기본 멤버 속성 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: intrinsic member properties [MDX]
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 95f89f7681777d6d65f9d385521c9cfb911ff1b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 멤버 속성-기본 멤버 속성
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 차원 멤버의 기본 속성을 표시합니다. 이러한 기본 속성을 쿼리에 포함하면 사용자 지정 응용 프로그램에 사용할 추가 데이터 또는 메타데이터를 반환하거나 모델을 간편하게 검토 또는 생성할 수 있습니다. SQL Server 클라이언트 도구를 사용하는 경우 SSMS(SQL Server Management Studio)에서 기본 속성을 볼 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 쿼리는 사용자 지정 응용 프로그램에 추가 데이터 또는 메타 데이터 사용에 대 한 반환 하거나 모델 검토 또는 생성할 간편 하 게에 포함할 수 있는 차원 멤버에 대 한 기본 속성을 노출 합니다. SQL Server 클라이언트 도구를 사용하는 경우 SSMS(SQL Server Management Studio)에서 기본 속성을 볼 수 있습니다.  
   
  기본 속성으로는 모든 멤버가 모든 수준에서 표시하는 **ID**, **KEY**, **KEYx**및 **NAME**이 있습니다. 특히 **LEVEL_NUMBER** 또는 **PARENT_UNIQUE_NAME**과 같은 위치 정보를 반환할 수도 있습니다.  
   
@@ -72,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |**ID**|내부적으로 유지 관리되는 멤버 ID입니다.|  
 |**Key**|원본 데이터 형식에서 멤버 키의 값입니다. MEMBER_KEY는 이전 버전과의 호환성을 위해 제공됩니다.  비복합 키의 경우 MEMBER_KEY 값이 KEY0과 동일하고 복합 키의 경우 MEMBER_KEY 속성이 Null입니다.|  
 |**KEYx**|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있지만 주로 복합 키에 사용합니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 사용하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 **Key**와 같습니다.<br /><br /> **KEYx** 는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용하는 방법에 대한 예는 [간단한 MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)를 참조하세요.|  
-|**Name**|멤버의 이름입니다.|  
+|**이름**|멤버의 이름입니다.|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>상황에 맞는 속성에 대한 PROPERTIES 구문  
  특정 차원 또는 수준의 컨텍스트에서 이 멤버 속성을 사용하고 지정한 차원 또는 수준의 각 멤버에 대한 값을 제공합니다.  

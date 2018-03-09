@@ -3,8 +3,9 @@ title: "즉시에서 AddNew 및 일괄 처리 모드를 사용 하 여 | Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 397e99e2a324a74ef343086c2ba08543c80ee36b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f22ae3e595c68b52e7eca449557e647c3bedae78
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>즉시에서 AddNew 및 일괄 처리 모드를 사용 하 여
 동작은 **AddNew** 방법은의 업데이트 모드에 따라는 **레코드 집합** 개체와 전달 하는지 여부를 *FieldList* 및 *값*인수입니다.  

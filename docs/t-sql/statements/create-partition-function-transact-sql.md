@@ -30,17 +30,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], functions
 - CREATE PARTITION FUNCTION statement
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-caps.latest.revision: 57
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a08cf71066a3713d2eb96ff11bafd951795819ff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a095e1de4fdffc97d615a39fd7cf185c99493d02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,35 +99,35 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>1. int 열에 RANGE LEFT 파티션 함수 만들기  
  다음 파티션 함수는 테이블이나 인덱스를 4개의 파티션으로 분할합니다.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 ```  
   
  다음 표는 분할 열에서이 파티션 함수를 사용 하는 테이블 방법을 **col1** 분할 합니다.  
   
-|Partition|1.|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**값**|**col1** <= `1`|**col1**  >  `1` AND **col1** <= `100`|**col1**  >  `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>2. int 열에 RANGE RIGHT 파티션 함수 만들기  
  다음 파티션 함수에 대 한 동일한 값을 사용 하 여 *boundary_value* [ **,***...n* ] 이전 예제와 RANGE RIGHT를 지정 합니다.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
 AS RANGE RIGHT FOR VALUES (1, 100, 1000);  
 ```  
   
  다음 표는 분할 열에서이 파티션 함수를 사용 하는 테이블 방법을 **col1** 분할 합니다.  
   
-|Partition|1.|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**값**|**col1** \<`1`|**col1**  >=  `1` AND **col1** \<`100`|**col1**  >=  `100` AND **col1** \<`1000`|**col1** >= `1000`| 
   
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>3. datetime 열에 RANGE RIGHT 파티션 함수 만들기  
  다음 파티션 함수는 테이블이 나 인덱스에 있는 값의 1 년의 각 월 마다 하나씩 12 개의 파티션이 분할는 **datetime** 열입니다.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION [myDateRangePF1] (datetime)  
 AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',  
                '20030501', '20030601', '20030701', '20030801',   
@@ -137,28 +136,28 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
  다음 표는 테이블 또는 인덱스 분할 열에서이 파티션 함수를 사용 하는 방법 **datecol** 분할 합니다.  
   
-|Partition|1.|2|...|11|12|  
+|Partition|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
 |**값**|**datecol** \<`February 1, 2003`|**datecol**  >=  `February 1, 2003` AND **datecol** \<`March 1, 2003`||**datecol**  >=  `November 1, 2003` AND **col1** \<`December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>4. char 열에 파티션 함수 만들기  
  다음 파티션 함수는 테이블이나 인덱스를 4개의 파티션으로 분할합니다.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF3 (char(20))  
 AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');  
 ```  
   
  다음 표는 분할 열에서이 파티션 함수를 사용 하는 테이블 방법을 **col1** 분할 합니다.  
   
-|Partition|1.|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**값**|**col1** \< `EX`...|**col1**  >=  `EX` AND **col1** \< `RXE`...|**col1**  >=  `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
   
 ### <a name="e-creating-15000-partitions"></a>5. 15,000개의 파티션 만들기  
  다음 파티션 함수는 테이블이나 인덱스를 15,000개의 파티션으로 분할합니다.  
   
-```tsql  
+```sql  
 --Create integer partition function for 15,000 partitions.  
 DECLARE @IntegerPartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION IntegerPartitionFunction (int) 
@@ -177,7 +176,7 @@ GO
 ### <a name="f-creating-partitions-for-multiple-years"></a>6. 여러 연도에 대한 파티션 만들기  
  다음 파티션 함수를에 50 개의 파티션으로 테이블 또는 인덱스 분할는 **datetime2** 열입니다. 2007년 1월에서 2011년 1월 사이의 각 월마다 하나의 파티션이 있습니다.  
   
-```tsql  
+```sql  
 --Create date partition function with increment by month.  
 DECLARE @DatePartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION DatePartitionFunction (datetime2) 
@@ -212,5 +211,4 @@ GO
  [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   
-
 

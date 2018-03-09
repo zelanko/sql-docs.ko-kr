@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - environment handles [ODBC]
 - handles [ODBC], environment
 ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fa388a7724fdda836a9a82b3f00476ed0a4288bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f563e798c985ebb8ea8ab7925ed39f3d154d144
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="environment-handles"></a>환경 핸들
 *환경* 에이 데이터에 액세스할 수 있는 전역 컨텍스트는는 환경에 연결 된와 같은 전역 특성에는 모든 정보:  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
  환경 핸들 ODBC 응용 프로그램에서 자주 사용 되지 않습니다. 에 대 한 호출에서 사용 하는 항상 **SQLDataSources** 및 **SQLDrivers** 에 대 한 호출에 자주 사용 하 고 **SQLAllocHandle**, **SQLEndTran**, **SQLFreeHandle**, **SQLGetDiagField**, 및 **SQLGetDiagRec**합니다.  
   
  각 ODBC (드라이버 관리자 또는 드라이버)를 구현 하는 코드 조각에는 하나 이상의 환경 핸들을 포함 합니다. 예를 들어 드라이버 관리자 연결 된 각 응용 프로그램에 대 한 별도 환경 핸들을 유지 합니다. 사용 하 여 환경 핸들 할당은 **SQLAllocHandle** 로 해제 및 **SQLFreeHandle**합니다.
-

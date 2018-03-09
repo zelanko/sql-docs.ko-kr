@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], sqlstates
 - SQLSTATE [ODBC]
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29bd2646172cebd69f9c5a9f7cc055378e18e377
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstates"></a>SQLSTATE
 Sqlstate는 경고 또는 오류의 원인에 대 한 자세한 정보를 제공합니다. 이 설명서에서 Sqlstate 기반으로 ISO/IEF CLI 사양에서 ODBC IM로 시작 하는 이러한 SQLSTATEs 관련이 있지만 합니다.  
@@ -56,4 +54,3 @@ Sqlstate는 경고 또는 오류의 원인에 대 한 자세한 정보를 제공
  SQLSTATE HYC00 (선택적 기능이 구현 되지 않았습니다)는 유일한 방법은는 응용 프로그램 드라이버가 특정 문 또는 연결 특성을 지원 하는지 여부를 확인할 수 있기 때문에 특히 중요 합니다.  
   
  Sqlstate 및 함수 반환의 전체 목록은 참조 하십시오. [부록 a: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)합니다. 각 함수는 특정 SQLSTATE를 반환할 수 있습니다 조건, 대 한 자세한 내용은 해당 함수를 참조 하세요.
-

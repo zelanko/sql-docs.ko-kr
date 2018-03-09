@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - CollectionAggregate method (geography)
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ae882f4c0f4f1a1f489b22cac14b84933f96ecf2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4c697a43ac6b79fd137da968ce5f01e49e60c105
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
   
-## <a name="exception"></a>Exception  
+## <a name="exception"></a>예외  
  유효하지 않은 입력 값이 있는 경우 `FormatException`을 발생시킵니다. 참조 [STIsValid &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
 ## <a name="remarks"></a>주의  
@@ -74,4 +73,3 @@ ConvexHullAggregate ( geography_operand )
  [확장 정적 지리 메서드](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

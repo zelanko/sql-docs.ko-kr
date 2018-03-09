@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - escape sequences [ODBC], guid
 - guid escape sequence [ODBC]
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 086161b4d0dd96f2da3cf12e6b88665ceeda42ae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4ed6e517d9a8fa6f4c28c7b05541d36262df2a8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="guid-escape-sequences"></a>GUID 이스케이프 시퀀스
 ODBC는 GUID 리터럴에 대 한 이스케이프 시퀀스를 사용 합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
@@ -63,4 +61,3 @@ ODBC는 GUID 리터럴에 대 한 이스케이프 시퀀스를 사용 합니다.
  *hex_digit* :: 0 &#124; 1 &#124; = 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; &#124; &#124; &#124; D &#124; E &#124; F  
   
  GUID 리터럴 이스케이프 시퀀스는 GUID 데이터 형식의 데이터 원본에 의해 지원 되 면 지원 합니다. 응용 프로그램 호출 해야 **SQLGetTypeInfo** 에이 데이터 형식은 지원 되는지 확인 합니다.
-

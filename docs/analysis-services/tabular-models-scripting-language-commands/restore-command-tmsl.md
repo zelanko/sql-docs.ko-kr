@@ -2,15 +2,13 @@
 title: "복원 명령 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 360a1567-67ae-459d-8865-9a2bef8d4186
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 85ea749ca2cd2b4fdcbcbc0ec2e07f01820e377f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c237207731fc7479ab45a0c86c22d13caf5f140
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-command-tmsl"></a>복원 명령 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  백업 파일에서 Analysis Services 데이터베이스를 복원합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]백업 파일에서 Analysis Services 데이터베이스를 복원합니다.  
   
 ## <a name="request"></a>요청  
   
@@ -66,8 +61,8 @@ ms.lasthandoff: 11/17/2017
   
 ||||  
 |-|-|-|  
-|**속성**|**Default**|**Description**|  
-|데이터베이스|[필수]|복원할 데이터베이스 개체의 이름입니다.|  
+|**속성**|**Default**|**설명**|  
+|database|[필수]|복원할 데이터베이스 개체의 이름입니다.|  
 |파일|[필수]|백업 파일 이름/경로입니다.|  
 |password|비어 있음|백업 파일 암호 해독에 사용할 암호입니다.|  
 |allowOverwrite|False|True 이면 나타내고 백업 파일이 이미 존재 하는 Boolean 덮어쓰게 됩니다. 그렇지 않으면 false입니다.|  

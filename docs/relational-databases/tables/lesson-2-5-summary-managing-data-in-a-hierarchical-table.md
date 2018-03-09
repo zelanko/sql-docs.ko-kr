@@ -2,9 +2,12 @@
 title: "요약: 계층적 테이블의 데이터 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ applies_to: SQL Server 2016
 helpviewer_keywords: managing data in a table
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5c0f68a48e557da916d9d4de741ff44128fd6e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f5ed59f9911a41b65101115bf821d0b75ec74c51
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-5---summary---managing-data-in-a-hierarchical-table"></a>2-5단원 - 요약 - 계층적 테이블의 데이터 관리
-**hierarchyid** 데이터 형식을 사용하면 계층적 데이터를 반영하는 테이블을 쉽게 만든 다음 깊이 우선 및 너비 우선 인덱스를 만들어 테이블에 효율적으로 액세스할 수 있습니다. 계층 메서드를 사용하여 데이터를 쿼리하고 조작합니다.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] **hierarchyid** 데이터 형식을 사용하면 계층적 데이터를 반영하는 테이블을 쉽게 만든 다음 깊이 우선 및 너비 우선 인덱스를 만들어 테이블에 효율적으로 액세스할 수 있습니다. 계층 메서드를 사용하여 데이터를 쿼리하고 조작합니다.  
   
 ## <a name="return-to-the-start-of-the-tutorial"></a>자습서의 시작 부분으로 돌아가기  
 [자습서: hierarchyid 데이터 형식 사용](../../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)  

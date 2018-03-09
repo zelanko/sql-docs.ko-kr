@@ -3,7 +3,7 @@ title: "SaveToFile 메서드 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - SaveToFile method [ADO]
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 64fa2093400ac9c003397659be3d9d6f4251eee2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2326257da632839c9b60d630f25adb604018272d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="savetofile-method"></a>SaveToFile 메서드
 이진 내용을 저장 한 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 파일에 있습니다.  
@@ -64,4 +63,3 @@ Stream.SaveToFile FileName, SaveOptions
 ## <a name="see-also"></a>관련 항목:  
  [Open 메서드 (ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)
-

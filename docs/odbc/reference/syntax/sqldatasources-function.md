@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDataSources
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDataSources
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDataSources
-helpviewer_keywords:
-- SQLDataSources function [ODBC]
+f1_keywords: SQLDataSources
+helpviewer_keywords: SQLDataSources function [ODBC]
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8aee3d9e1caa424f4792fb1fae0551adcacfcdc3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fc056c3877b76bebdb0402248b6fe6cb9a919d49
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 함수
 **규칙**  
@@ -60,7 +54,7 @@ SQLRETURN SQLDataSources(
  *EnvironmentHandle*  
  [입력] 환경 핸들입니다.  
   
- *방향*  
+ *Direction*  
  [입력] 데이터 소스에 드라이버 관리자 정보에 대 한 반환을 결정 합니다. 다음 값 중 하나일 수 있습니다.  
   
  SQL_FETCH_NEXT (을 인출 하는 목록에는 다음 데이터 원본 이름), SQL_FETCH_FIRST (목록의 시작 부분에서 fetch)을, SQL_FETCH_FIRST_USER (사용자에 게 첫 번째 인출 DSN) 또는 SQL_FETCH_FIRST_SYSTEM (을 인출 하는 첫 번째 시스템 DSN).  
@@ -78,7 +72,7 @@ SQLRETURN SQLDataSources(
  *NameLength1Ptr*  
  [출력] 문자 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *ServerName*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength1*, 데이터 원본 이름 \* *ServerName* 잘립니다 *BufferLength1* null 종결 문자 길이 뺀 값입니다.  
   
- *설명*  
+ *Description*  
  [출력] 데이터 소스와 연결 된 드라이버의 설명을 반환 하는 버퍼에 대 한 포인터입니다. 예를 들어 dBASE 또는 SQL Server입니다.  
   
  경우 *설명* 이 NULL 이면 *NameLength2Ptr* 는 문자 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는 버퍼에서 반환할 수 *설명*합니다.  
@@ -95,7 +89,7 @@ SQLRETURN SQLDataSources(
 ## <a name="diagnostics"></a>진단  
  때 **SQLDataSources** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *HandleType*SQL_HANDLE_ENV의 및 *처리* 의 *EnvironmentHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLDataSources** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|(DM) 드라이버 관리자 별 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|(DM) 버퍼 \* *ServerName* 충분히 완전 한 데이터 원본 이름을 반환할 수 없습니다. 따라서 이름이 잘렸습니다. 전체 데이터 원본 이름의 길이가 반환 됩니다 \* *NameLength1Ptr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)<br /><br /> (DM) 버퍼 \* *설명* 하지 만큼 충분히 큰지 전체 드라이버 설명을 반환 합니다. 따라서 설명을 잘렸습니다. 잘리지 않은 데이터 원본 설명의 길이에서 **NameLength2Ptr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -107,7 +101,7 @@ SQLRETURN SQLDataSources(
 |HY103|검색 코드가 잘못 되었습니다|인수에 대해 지정 된 값 (DM) *방향* SQL_FETCH_FIRST, SQL_FETCH_FIRST_USER, SQL_FETCH_FIRST_SYSTEM, 또는 SQL_FETCH_NEXT 없습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  때문에 **SQLDataSources** 구현 된 드라이버 관리자에서 특정 드라이버의 표준 준수에 관계 없이 모든 드라이버에 지원 됩니다.  
   
  응용 프로그램에서 호출할 수 **SQLDataSources** 모든 데이터 원본 이름을 검색 하기 위해 여러 번입니다. 드라이버 관리자는 시스템 정보에서이 정보를 검색합니다. 데이터 원본 이름이 더 이상 없으면 때 드라이버 관리자는 SQL_NO_DATA를 반환 합니다. 경우 **SQLDataSources** SQL_FETCH_NEXT 첫 번째 데이터 원본 이름을 반환 합니다 SQL_NO_DATA를 반환 된 후 즉시 호출 됩니다. 응용 프로그램에서 반환 된 정보를 사용 하는 방법에 대 한 내용은 **SQLDataSources**, 참조 [데이터 원본이 나 드라이버 선택](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)합니다.  
@@ -128,4 +122,3 @@ SQLRETURN SQLDataSources(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

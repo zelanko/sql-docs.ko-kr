@@ -8,8 +8,7 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server]
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "20"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d9a08e9dab4377688b994c024c67df607c14879
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 641c3e3916cced8ce6ee995111f75f6865731fdc
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="primary-and-foreign-key-constraints"></a>PRIMARY KEY 및 FOREIGN KEY 제약 조건
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
  테이블에 대해 기본 키 제약 조건을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 기본 키 열에 대해 고유 인덱스를 자동으로 만들어 데이터 고유성을 적용합니다. 또한 쿼리에서 기본 키가 사용되는 경우 이 인덱스를 사용하여 데이터에 빠르게 액세스할 수 있습니다. 기본 키 제약 조건이 두 개 이상의 열에 정의되는 경우 한 열에 중복된 값이 있을 수 있지만 기본 키 제약 조건 정의에 있는 모든 열의 값 조합은 각각 고유해야 합니다.  
   
- 다음 그림에서와 같이 **Purchasing.ProductVendor** 테이블의 **ProductID** 및 **VendorID** 열은 이 테이블에 대한 복합 기본 키 제약 조건을 구성합니다. 그 결과 **ProductVendor** 테이블의 모든 열에서 **ProductID** 와 **VendorID**의 조합은 고유합니다. 따라서 중복 행을 삽입할 수 없습니다.  
+ 다음 그림에서와 같이 **Purchasing.ProductVendor** 테이블의 **ProductID** 및 **VendorID** 열은 이 테이블에 대한 복합 기본 키 제약 조건을 구성합니다. 그 결과 **ProductVendor** 테이블의 모든 열에서 **ProductID**와 **VendorID**의 조합은 고유합니다. 따라서 중복 행을 삽입할 수 없습니다.  
   
  ![복합 PRIMARY KEY 제약 조건](../../relational-databases/tables/media/fund04.gif "복합 PRIMARY KEY 제약 조건")  
   
@@ -75,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   자기 자신에 대한 외래 키 참조가 포함된 테이블은 계속 253개의 외래 키 참조만 사용할 수 있습니다.  
   
--   columnstore 인덱스, 메모리 액세스에 최적화된 테이블, 스트레치 데이터베이스 또는 분할된 외래 키 테이블에 대해서는 현재 253개보다 많은 외래 키 참조를 포함할 수 없습니다.  
+-   columnstore 인덱스, 메모리 최적화 테이블, 스트레치 데이터베이스 또는 분할된 외래 키 테이블에 대해서는 현재 253개보다 많은 외래 키 참조를 포함할 수 없습니다.  
   
 ### <a name="indexes-on-foreign-key-constraints"></a>FOREIGN KEY 제약 조건에 대한 인덱스  
  기본 키 제약 조건과 달리 외래 키 제약 조건을 만들어도 해당 인덱스가 자동으로 생성되지 않습니다. 그러나 외래 키에 대해 인덱스를 수동으로 만들면 다음과 같은 경우 유용합니다.  
@@ -141,4 +139,3 @@ ms.lasthandoff: 06/22/2017
 |INSERT 또는 UPDATE 문 중에 외래 키 제약 조건을 사용하지 않도록 설정하는 방법에 대해 설명합니다.|[NSERT 및 UPDATE 문에서 FOREIGN KEY 제약 조건 사용 안 함](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   
-

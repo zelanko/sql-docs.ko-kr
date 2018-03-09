@@ -1,11 +1,11 @@
 ---
-title: "2 단계: 구성 설정 및 구성 패키지 | Microsoft Docs"
+title: "2단계: 패키지 구성 설정 및 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5cf47715b998a7f09b6d90772a2b456872eebed
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1a63c43606d2a27da3469c4cedb83654c79c1bf1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lesson 5-2-패키지 구성 설정 및 구성
+# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>5-2단원 - 패키지 구성 설정 및 구성
 이 작업에서는 프로젝트를 패키지 배포 모델로 변환하고 패키지 구성 마법사를 사용하여 패키지 구성을 설정합니다. 이 마법사를 사용하여 Foreach 루프 컨테이너의 **Directory** 속성에 대한 구성 설정을 포함하는 XML 구성 파일을 생성합니다. 런타임에 업데이트할 수 있는 새 패키지 수준 변수에서 Directory 속성 값을 제공합니다. 또한 테스트하는 동안 사용할 새로운 예제 데이터 폴더를 채웁니다.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Directory 속성에 매핑되는 새 패키지 수준 변수를 만들려면  
@@ -69,7 +68,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  경고 프롬프트에서 **확인** 을 클릭하고 변환이 완료되면 **패키지 배포 모델로 변환** 대화 상자에서 **확인** 을 클릭합니다.  
   
-3.  **디자이너에서** 제어 흐름 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭의 배경을 클릭합니다.  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 **제어 흐름** 탭의 배경을 클릭합니다.  
   
 4.  **SSIS** 메뉴에서 **패키지 구성**을 클릭합니다.  
   
@@ -117,4 +116,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [3단계: Directory 속성 구성 값 수정](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
-

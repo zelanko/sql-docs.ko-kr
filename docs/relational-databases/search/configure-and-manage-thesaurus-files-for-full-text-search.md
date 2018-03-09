@@ -1,11 +1,15 @@
 ---
 title: "전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 12/04/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,18 +17,19 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: "84"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 669070a97978afa1c461cb8cfbc6e14143232432
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 849c650522d90348fd7bec2d115dd3af04b1c18b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색 쿼리는 전체 텍스트 검색 *동의어 사전*을 사용하여 사용자 지정 용어의 동의어를 검색할 수 있습니다. 각 동의어 사전은 특정 언어에 대한 동의어 집합을 정의합니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다.
 
 동의어 사전 검색은 모든 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 쿼리와 `FORMSOF THESAURUS` 절을 지정하는 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리에 대해 수행됩니다.
@@ -200,7 +205,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  동의어 사전 파일의 언어에 해당하는 LCID(로컬 식별자)를 지정하고 [sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) 을 사용하여 동의어 사전 파일의 내용을 tempdb에 로드할 수 있습니다. 예를 들어 영어 동의어 사전 파일 tsenu.xml의 경우 해당하는 LCID는 1033입니다.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
     GO

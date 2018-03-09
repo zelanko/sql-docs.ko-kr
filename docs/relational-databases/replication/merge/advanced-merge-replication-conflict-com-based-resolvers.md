@@ -2,9 +2,12 @@
 title: "Microsoft COM 기반 해결 프로그램 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - custom resolvers [SQL Server replication]
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01b82214e9d862bcd12b031a6cea6184a48ddabb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 409a397589bd7add43ffcb29e9bcf1a9c9e67f59
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>고급 병합 복제 충돌 - COM 기반 해결 프로그램
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 와 함께 제공되는 모든 COM 기반 해결 프로그램은 업데이트 충돌을 처리하고 표시가 된 곳에서 삽입 및 삭제 충돌도 처리합니다. 모든 해결 프로그램은 열 추적을 처리하며 대부분의 경우 행 추적도 처리합니다. 이러한 해결 프로그램 및 다른 모든 COM 기반 해결 프로그램은 처리할 수 있는 충돌 유형을 선언하며 병합 에이전트는 다른 모든 충돌 유형에 대해 기본 해결 프로그램을 사용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 함께 제공되는 모든 COM 기반 해결 프로그램은 업데이트 충돌을 처리하고 표시가 된 곳에서 삽입 및 삭제 충돌도 처리합니다. 모든 해결 프로그램은 열 추적을 처리하며 대부분의 경우 행 추적도 처리합니다. 이러한 해결 프로그램 및 다른 모든 COM 기반 해결 프로그램은 처리할 수 있는 충돌 유형을 선언하며 병합 에이전트는 다른 모든 충돌 유형에 대해 기본 해결 프로그램을 사용합니다.  
   
  해결 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]설치 과정 중에 설치됩니다. **sp_enumcustomresolvers** 저장 프로시저를 실행하면 컴퓨터에 등록된 모든 충돌 해결 프로그램을 볼 수 있습니다. 프로시저를 실행하면 별개의 결과 집합에 각 해결 프로그램의 설명 및 GUID(Globally unique identifier)가 표시됩니다.  
   
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
  다음 표에서는 특정 해결 프로그램의 특성을 설명합니다.  
   
-|이름|필수 입력|설명|주석|  
+|속성|필수 입력|Description|주석|  
 |----------|--------------------|-----------------|--------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가산성 충돌 해결 프로그램|합계할 행 이름입니다. **int**, **smallint**, **numeric**과 같은 산술 데이터 형식이어야 합니다.|충돌 시 적용되는 내용은 우선 순위 값으로 결정합니다. 지정된 열의 값은 원본 및 대상 열 값의 합계로 설정됩니다. 하나를 NULL로 설정하면, 모두 다른 열의 값으로 설정됩니다.|업데이트 충돌 및 열 추적만 지원합니다.|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 평균 충돌 해결 프로그램|평균할 열 이름입니다. **int**, **smallint**, **numeric**과 같은 산술 데이터 형식이어야 합니다.|충돌 시 적용되는 내용은 우선 순위 값으로 결정합니다. 결과 열 값은 원본 및 대상 열 값의 평균으로 설정됩니다. 하나를 NULL로 설정하면, 모두 다른 열의 값으로 설정됩니다.|업데이트 충돌 및 열 추적만 지원합니다.|  

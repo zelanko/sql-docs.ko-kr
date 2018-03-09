@@ -1,11 +1,15 @@
 ---
 title: "PolyBase 스케일 아웃 그룹 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-polybase
+ms.suite: sql
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,21 +17,20 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 989b6a52d4a0e26b32f292fad44a5ad1caf0b71b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 018d765aace9ef2f46a1dd8da4e0a6c503a0d35f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 스케일 아웃 그룹
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
-  PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또는 Azure Blob 저장소에서 대규모 데이터 집합을 처리하는 경우 성능상의 병목 지점이 될 수 있습니다. PolyBase 그룹 기능을 사용하면 SQL Server 인스턴스 클러스터를 만들어 Hadoop 또는 Azure Blob 저장소와 같은 외부 데이터 원본에서 쿼리 성능을 향상하기 위해 스케일 아웃 방식으로 대규모 데이터를 처리할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또는 Azure Blob 저장소에서 대규모 데이터 집합을 처리하는 경우 성능상의 병목 지점이 될 수 있습니다. PolyBase 그룹 기능을 사용하면 SQL Server 인스턴스 클러스터를 만들어 Hadoop 또는 Azure Blob 저장소와 같은 외부 데이터 원본에서 쿼리 성능을 향상하기 위해 스케일 아웃 방식으로 대규모 데이터를 처리할 수 있습니다.  
   
  [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md) 및 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
  헤드 노드는 PolyBase 쿼리가 제출되는 SQL Server 인스턴스를 포함합니다. 각 PolyBase 그룹은 헤드 노드를 하나만 가질 수 있습니다. 헤드 노드는 SQL Server 인스턴스에 있는 SQL 데이터베이스 엔진, PolyBase 엔진 및 PolyBase 데이터 이동 서비스의 논리적 그룹입니다.  
   
 ### <a name="compute-node"></a>계산 노드  
- 계산 노드는 외부 데이터에서 확장 쿼리를 지원하는 SQL Server 인스턴스를 포함합니다. 계산 노드는 SQL Server 인스턴스에 있는 SQL Server 및 PolyBase 데이터 이동 서비스의 논리적 그룹입니다. PolyBase 그룹은 여러 계산 노드를 가질 수 있습니다.  
+ 계산 노드는 외부 데이터에서 확장 쿼리를 지원하는 SQL Server 인스턴스를 포함합니다. 계산 노드는 SQL Server 인스턴스에 있는 SQL Server 및 PolyBase 데이터 이동 서비스의 논리적 그룹입니다. PolyBase 그룹은 여러 계산 노드를 가질 수 있습니다.  헤드 노드와 계산 노드는 동일한 SQL Server 버전을 실행해야 합니다.
   
 ### <a name="distributed-query-processing"></a>분산형 쿼리 처리  
  PolyBase 쿼리는 헤드 노드에서 SQL Server로 전송됩니다. 외부 테이블을 참조하는 쿼리 부분은 PolyBase 엔진으로 분배됩니다.  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="to-configure-a-polybase-group"></a>PolyBase 그룹을 구성하려면  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
   
 -   동일 도메인에 위치하는 N개의 시스템  
   
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="steps"></a>단계  
   
-1.  N개의 시스템에 PolyBase 사용하는 SQL Server를 설치합니다.  
+1.  N개의 컴퓨터에 PolyBase를 사용하는 동일한 버전의 SQL Server를 설치합니다.  
   
 2.  SQL Server 인스턴스를 헤드 노드로 선택합니다. 헤드 노드는 SQL Server Enterprise를 실행하는 인스턴스에만 지정될 수 있습니다.  
   

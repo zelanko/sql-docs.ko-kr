@@ -1,5 +1,5 @@
 ---
-title: "패키지의 중요 한 데이터에 대 한 액세스 제어 | Microsoft Docs"
+title: "패키지의 중요한 데이터에 대한 액세스 제어 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,17 +26,16 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51150293cd37e0d9f641bd7ee2ee30f8cce8ed95
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fd094efc965679119e0a15d9fc0fc97be27db4f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>패키지의 중요한 데이터에 대한 액세스 제어
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터를 보호하기 위해 중요한 데이터만 보호하거나 패키지의 모든 데이터를 보호하는 패키지 수준을 설정할 수 있습니다. 또한 패키지 데이터를 암호 또는 사용자 키로 암호화하거나 데이터베이스를 사용하여 암호화할 수도 있습니다. 패키지 보호 수준은 반드시 정적이지 않으며 패키지의 수명 주기 동안 변경됩니다. 즉, 개발 과정에서 설정하는 보호 수준과 배포 과정에서 설정하는 보호 수준이 서로 다른 경우가 자주 있습니다.  
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>명령 프롬프트에서 패키지 보호 수준을 설정하거나 변경하려면  
   
-1.  사용 가능한 값에 대 한 검토는 **ProtectionLevel** 속성 섹션에 [패키지의 보호 수준을 설정](#set_protection), 패키지에 대 한 적절 한 값을 결정 합니다.  
+1.  **패키지 보호 수준 설정** 섹션에서 [ProtectionLevel](#set_protection) 속성에 사용할 수 있는 값을 검토하고 사용 중인 패키지에 적합한 값을 결정합니다.  
   
 2.  **dtutil Utility** 항목에서 [Encrypt](../../integration-services/dtutil-utility.md)옵션에 대한 매핑을 검토하고 선택한 **ProtectionLevel** 속성의 값으로 사용하기에 적합한 정수를 결정합니다.  
   
@@ -140,12 +139,12 @@ ms.lasthandoff: 08/03/2017
   
          배치 파일에서 비슷한 명령을 사용할 경우 배치 파일에 파일 자리 표시자로 "%f" 대신 "%%f"를 입력합니다.  
 
-## <a name="protection_dialog"></a>패키지 프로젝트 보호 수준 대화 상자
+## <a name="protection_dialog"></a> 패키지 프로젝트 보호 수준 대화 상자
   **패키지 보호 수준** 대화 상자를 사용하여 패키지 보호 수준을 업데이트할 수 있습니다. 보호 수준은 보호 방법(암호 또는 사용자 키)과 패키지 보호의 범위를 결정합니다. 보호에는 모든 데이터를 포함시키거나 중요한 데이터만 포함시킬 수 있습니다.  
   
- 요구 사항 및 보안 패키지에 대 한 옵션을 이해 하려면 하면 유용한 경우가 볼 수 [보안 개요 &#40; Integration services&#41;](../../integration-services/security/security-overview-integration-services.md)합니다.  
+ 패키지 보안의 요구 사항 및 옵션을 이해하려면 [보안 개요&#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)를 참조하세요.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **Package protection level**  
  목록에서 보호 수준을 선택합니다.  
   
@@ -155,16 +154,15 @@ ms.lasthandoff: 08/03/2017
  **암호 다시 입력**  
  암호를 다시 입력합니다.  
 
-## <a name="password_dialog"></a>패키지 암호 대화 상자
+## <a name="password_dialog"></a> 패키지 암호 대화 상자
   **패키지 암호** 대화 상자를 사용하여 암호로 암호화된 패키지에 패키지 암호를 제공할 수 있습니다. 패키지에서 **암호로 중요한 데이터 암호화**또는 **암호로 모든 데이터 암호화** 보호 수준을 사용하는 경우 암호를 제공해야 합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **암호**  
  암호를 입력합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)   
- [보안 개요 &#40; Integration services&#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [보안 개요&#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
  [dtutil 유틸리티](../../integration-services/dtutil-utility.md)  
   
-

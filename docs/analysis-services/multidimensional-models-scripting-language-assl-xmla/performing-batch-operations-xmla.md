@@ -1,16 +1,14 @@
 ---
 title: "일괄 처리 작업 (XMLA) 수행 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - batches [XML for Analysis]
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f2730fb8396f63e123bf8d896ea9a648ad22016d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e2673091cfba456834da77049036591e4591891
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>일괄 작업 수행(XMLA)
   사용할 수는 [일괄 처리](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) XML for Analysis (XMLA) 단일 XMLA를 사용 하는 여러 XMLA 명령을 실행 하려면 명령을 [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드. 에 포함 된 여러 명령을 실행할 수 있습니다는 **일괄 처리** 명령을 단일 트랜잭션으로 또는 각 명령에 대 한 개별 트랜잭션을, 차례 대로 또는 병렬로 합니다. 아웃오브 라인 바인딩 및 기타 속성을 지정할 수도 있습니다는 **일괄 처리** 여러 처리 명령을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체입니다.  
@@ -48,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
  트랜잭션 일괄 처리에서 실패 한 명령이 있으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모든 명령을 롤백한는 **일괄 처리** 실패 한 명령 이전에 실행 된 명령 및 **일괄 처리** 명령을 즉시 종료 합니다. 모든 명령에는 **일괄 처리** 아직 실행 하지 않은 명령이 실행 되지 않습니다. 후의 **일괄 처리** 명령이 종료 된 **일괄 처리** 명령이 실패 한 명령에 대해 발생 한 오류를 보고 합니다.  
   
- **비트랜잭션**  
+ **Nontransactional**  
  경우는 **트랜잭션** 특성이 false로 설정 되어는 **일괄 처리** 명령을 실행 하 여 포함 된 각 명령을 **일괄 처리** 별도 트랜잭션에서 명령을-는  *비트랜잭션* 일괄 처리 합니다. 비트랜잭션 일괄 처리에서 실패 한 명령이 있으면는 **일괄 처리** 명령은 계속 실패 한 명령 이후의 명령을 실행 합니다. 후는 **일괄 처리** 명령이 모든 명령을 실행 하려고 하는 **일괄 처리** 명령에는 **일괄 처리** 명령이 발생 한 오류를 보고 합니다.  
   
  에 포함 된 명령을 사용 하 여 반환 된 모든 결과 **일괄 처리** 명령에 포함 된 명령의 순서 대로 반환 되는 **일괄 처리** 명령입니다. 반환 된 결과 **일괄 처리** 명령 인지 여부에 따라 달라 집니다는 **일괄 처리** 트랜잭션인지 또는 비트랜잭션 명령입니다.  
@@ -70,7 +67,7 @@ ms.lasthandoff: 09/01/2017
   
  동시에 실행 될 명령을 추가한 명령을 병렬로 실행 하는 [병렬](../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) 속성의는 **일괄 처리** 명령입니다. 현재 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 순차적인 연속만 실행할 수 [프로세스](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 명령만 병렬로 합니다. 와 같은 다른 모든 XMLA 명령은 [만들기](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) 또는 [Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)에 포함 된는 **병렬** 속성 순차적으로 실행 됩니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]모두 실행 하려고 **프로세스** 에 포함 된 명령만 **병렬** 병렬로 속성 않을 수도 있는 포함 된 모든 있지만 **프로세스** 명령을 병렬로 실행 될 수 있습니다. 인스턴스를 각각 분석 **프로세스** 명령 인스턴스에서 명령을 병렬로 실행할 수 없습니다 결정 하는 경우는 **프로세스** 명령을 직렬으로 실행 됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모두 실행 하려고 **프로세스** 에 포함 된 명령만 **병렬** 병렬로 속성 않을 수도 있는 포함 된 모든 있지만 **프로세스** 명령을 병렬로 실행 될 수 있습니다. 인스턴스를 각각 분석 **프로세스** 명령 인스턴스에서 명령을 병렬로 실행할 수 없습니다 결정 하는 경우는 **프로세스** 명령을 직렬으로 실행 됩니다.  
   
 > [!NOTE]  
 >  명령을 병렬로 실행 하는 **트랜잭션** 특성에는 **일괄 처리** 명령은 때문에 true로 설정 되어야 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 및 비트랜잭션 당 하나의 활성 트랜잭션만 지원 각 명령을 별도의 트랜잭션에서 실행 일괄 처리입니다. 포함 하는 경우는 **병렬** 비트랜잭션 일괄 처리에서 속성, 오류가 발생 합니다.  
@@ -137,4 +134,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services에서 XMLA를 사용 하 여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

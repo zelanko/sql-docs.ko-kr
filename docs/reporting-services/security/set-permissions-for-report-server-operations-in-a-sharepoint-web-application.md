@@ -1,13 +1,14 @@
 ---
-title: "SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대 한 사용 권한 설정 | Microsoft Docs"
+title: "SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-caps.latest.revision: 17
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "17"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a03feca8dfe4da40235745087577e307af69ba7f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정
   SharePoint 통합 모드로 실행되는 보고서 서버의 경우 SharePoint 사이트에 정의된 보안 설정에 따라 보고서, 보고서 모델 및 공유 데이터 원본을 보고 관리하는 방법이 결정됩니다. 기본 SharePoint 그룹, 사용 권한 수준 및 사용 권한 할당을 사용하는 경우 현재 보안 설정을 사용하여 보고서 및 기타 문서에 대해 작업을 수행할 수 있습니다.  
@@ -51,13 +51,13 @@ ms.lasthandoff: 08/09/2017
   
 -   원격 인터페이스 사용  
   
--   열기  
+-   파일  
   
 -   응용 프로그램 페이지 보기  
   
  미리 정의된 사용 권한 수준을 사용하고 있다면 위의 사용 권한이 모든 권한, 디자인, 참가, 읽기 및 제한된 액세스에 이미 포함되어 있으므로 아무런 동작도 수행할 필요가 없습니다. 그러나 사용자 지정 권한 수준을 사용하거나 특정 사용자 또는 그룹에 할당된 권한을 편집하는 경우 사용 권한을 직접 추가해야 합니다.  
   
- "사용자 정보 찾아보기" 권한이 있는 경우 보고서 서버는 항목의 작성자 및 항목을 마지막으로 수정한 사용자에 대한 정보를 반환할 수 있습니다. 이 사용 권한이 없는 경우 보고서 서버는 다음 오류를 반환합니다. 찾아보기 작업의 경우 “보고서 서버에 SharePoint 오류가 발생했습니다. ---> System.UnauthorizedAccessException: 액세스가 거부되었습니다.”라는 오류가 반환됩니다. 에 대 한 게시 작업, 오류: "사용자에 게 부여 된 권한 '\<도메인 >\\< 사용자\>'이 작업을 수행 하는 데 충분 하지 않습니다."  
+ "사용자 정보 찾아보기" 권한이 있는 경우 보고서 서버는 항목의 작성자 및 항목을 마지막으로 수정한 사용자에 대한 정보를 반환할 수 있습니다. 이 사용 권한이 없는 경우 보고서 서버는 다음 오류를 반환합니다. 찾아보기 작업의 경우 “보고서 서버에 SharePoint 오류가 발생했습니다. ---> System.UnauthorizedAccessException: 액세스가 거부되었습니다.”라는 오류가 반환됩니다. 게시 작업의 경우 "사용자에게 부여된 권한인 '\<domain>\\<user\>'로는 이 작업을 수행할 수 없습니다."라는 오류가 발생합니다.  
   
 ##  <a name="permissionReports"></a> 보고서 보기 및 관리 권한  
  보고서 정의 권한은 보고서가 포함된 라이브러리의 목록 사용 권한을 통해 정의되지만 액세스를 제한하려는 경우 개별 보고서에 대해 사용 권한을 설정할 수 있습니다. 다음 표에서는 태스크 목록과 각 태스크를 지원하는 사용 권한을 설명합니다.  
@@ -137,11 +137,10 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  보고서 모델을 편집할 권한은 없습니다. 보고서 모델을 생성하거나 삭제할 수 있지만 SharePoint 사이트 내에서 편집할 수는 없습니다. 보고서 모델을 편집하려면 모델 디자이너가 필요합니다. 모델 디자이너는 SharePoint에서 설정한 사용 권한의 영향을 받지 않는 클라이언트 제작 도구입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [SharePoint 사이트에서 보고서 서버 항목에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Reporting Services to SharePoint Groups and Permissions의 역할 및 태스크와 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [SharePoint 사이트에서 보고서 서버 항목에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [보고서 서버 항목에 대 한 Windows SharePoint Services의 기본 제공 보안 사용](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+## <a name="see-also"></a>참고 항목  
+ [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   
-

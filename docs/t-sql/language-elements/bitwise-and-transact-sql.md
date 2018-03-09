@@ -23,17 +23,16 @@ helpviewer_keywords:
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-caps.latest.revision: 42
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e862f742a97f0ea66edcfe32d28224c6fbbeff70
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 094c127434f2339a4a3e977c4455ca6ce904ab01
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp;(비트 AND) (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,9 +62,9 @@ expression & expression
  **tinyint** 입력된 값이 **tinyint** 또는 **비트**합니다.  
   
 ## <a name="remarks"></a>주의  
-  **&**  비트 연산자를 각 해당 양쪽 식에 비트 받아서 두 식 간에 비트 논리 AND를 수행 합니다. 결과의 비트는 입력 식에 있는 양쪽 비트(확인 중인 현재 비트)의 값이 1이면 1로 설정되고 그렇지 않으면 0으로 설정됩니다.  
+ **&**  비트 연산자를 각 해당 양쪽 식에 비트 받아서 두 식 간에 비트 논리 AND를 수행 합니다. 결과의 비트는 입력 식에 있는 양쪽 비트(확인 중인 현재 비트)의 값이 1이면 1로 설정되고 그렇지 않으면 0으로 설정됩니다.  
   
- 왼쪽 및 오른쪽 식의 경우에 다른 정수 데이터 형식 (예를 들어 왼쪽 *식* 은 **smallint** 및 오른쪽 *식* 은  **int**), 더 작은 데이터 형식의 인수를 더 큰 데이터 형식으로 변환 합니다. 이 경우는 **smallint***식* 변환 되는 **int**합니다.  
+ 왼쪽 및 오른쪽 식의 경우에 다른 정수 데이터 형식 (예를 들어 왼쪽 *식* 은 **smallint** 및 오른쪽 *식* 은  **int**), 더 작은 데이터 형식의 인수를 더 큰 데이터 형식으로 변환 합니다. 이 경우에 **smallint * * * 식* 변환할는 **int**합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 사용 하 여 테이블을 만듭니다는 **int** 데이터 입력 값을 저장 하 고 한 행에 두 개의 값을 삽입 합니다.  
@@ -113,10 +112,9 @@ GO
  [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [비트 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [& = &#40; 비트 AND EQUALS &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+ [& = &#40; 비트 AND 대입 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
  [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

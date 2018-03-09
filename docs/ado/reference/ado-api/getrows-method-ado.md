@@ -3,8 +3,9 @@ title: "GetRows 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::GetRows
 - Recordset15::raw_GetRows
-helpviewer_keywords: Getrows method [ADO]
+helpviewer_keywords:
+- Getrows method [ADO]
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a80f8619d636c13b8c76b4f867e7cbe6333a742
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fb0ab2e6673a85b7204cacfbeed5bf4968970b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getrows-method-ado"></a>(ADO) 메서드
 여러 레코드를 검색 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 배열에 있습니다.  
@@ -48,7 +50,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *시작*  
  (선택 사항) A **문자열** 값 또는 **Variant** 있는 레코드에 대 한 책갈피로 계산 되는 **GetRows** 작업을 시작 해야 합니다. 사용할 수도 있습니다는 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) 값입니다.  
   
- *필드*  
+ *Fields*  
  (선택 사항) A **Variant** 나타내는 단일 필드 이름 또는 서 수 위치 또는 배열 필드 이름 또는 서 수 위치 번호입니다. ADO 이러한 필드의 데이터에 대해서만 반환합니다.  
   
 ## <a name="remarks"></a>주의  

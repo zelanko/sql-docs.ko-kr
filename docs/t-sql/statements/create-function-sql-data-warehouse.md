@@ -15,17 +15,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-caps.latest.revision: 14
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55f1b7e612a1c7d120e06078b0fdba45d6409d36
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4957b8d665f9aa887a5ad4ab18a2e8441ea4cc2d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-function-sql-data-warehouse"></a>함수 (SQL 데이터 웨어하우스) 만들기
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -81,7 +80,7 @@ RETURNS return_data_type
 > [!NOTE]  
 >  매개 변수를 지정하지 않은 경우에도 함수 이름 뒤에 괄호를 사용해야 합니다.  
   
- @*p a r a*  
+ @*parameter_name*  
  사용자 정의 함수의 매개 변수입니다. 하나 이상의 매개 변수를 선언할 수 있습니다.  
   
  하나의 함수에 최대 2,100개의 매개 변수를 지정할 수 있습니다. 매개 변수에 기본값이 정의되지 않은 경우 함수를 실행할 때 사용자가 선언된 각 매개 변수의 값을 지정해야 합니다.  
@@ -94,7 +93,7 @@ RETURNS return_data_type
  *parameter_data_type*  
  매개 변수 데이터 형식이입니다. 에 대 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서 지원 되는 모든 스칼라 데이터 형식 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 허용 됩니다. 타임 스탬프 (rowversion) 데이터 형식이 지원 되는 형식이 아닙니다.  
   
- [=*기본* ]  
+ [ =*default* ]  
  매개 변수의 기본값입니다. 경우는 *기본* 값이 정의 해당 매개 변수에 대해 값을 지정 하지 않고 함수를 실행할 수 있습니다.  
   
  함수의 매개 변수에 기본값을 지정한 경우 기본값을 가져오는 함수를 호출할 때 DEFAULT 키워드를 지정해야 합니다. 이 동작은 매개 변수를 생략할 경우 자동으로 기본값이 사용되는 저장 프로시저에서 기본값이 있는 매개 변수를 사용하는 것과는 다릅니다.  
@@ -110,7 +109,7 @@ RETURNS return_data_type
  *scalar_expression*  
  스칼라 함수가 반환하는 스칼라 값을 지정합니다.  
   
- **\<function_option >:: =** 
+ **\<function_option>::=** 
   
  함수에 다음 옵션 중 하나 이상이 포함되도록 지정합니다.  
   
@@ -203,6 +202,5 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
  [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
-
 
 

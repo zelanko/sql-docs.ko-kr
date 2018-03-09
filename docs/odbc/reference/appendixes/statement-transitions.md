@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - state transitions [ODBC], statement
 - statement transitions [ODBC]
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 50a20cb922b3f608a9d16cd24d5c288b096e01ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45ee32a803f8c337b5d937699d2000abd718502f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="statement-transitions"></a>문 전환
 ODBC 문 상태를 갖습니다.  
@@ -478,7 +476,7 @@ ODBC 문 상태를 갖습니다.
   
 |S8<br /><br /> 데이터가 필요|S9<br /><br /> 넣으십시오|S10<br /><br /> 넣을 수합니다 있습니다.|  
 |----------------------|---------------------|---------------------|  
-|S1 [e] 및 [1] S2 [e] [nr], [2] S3 [e] [r] 및 [2] S5 [e] [4] S6 및 [e] 및 [5] S7 [e] 및 [x] [3] S9 [d] S11|HY010|S1 [e] 및 [1] S2 [e] [nr], [2] S3 [e] [r] 및 S4 [2] [s] [nr] 및 ([1] 또는 [2]) S5 [s] [r] 및 ([1] 또는 [2]) S5 ([s] 또는 [e]) 및 S6 [4] ([s] 또는 [e]) 및 [5] S7 ([s] 또는 [e]) 및 [x] [3] S9 [d] S11|  
+|S1 [e] 및 [1] S2 [e] [nr], [2] S3 [e] [r] 및 [2] S5 [e] [4] S6 및 [e] 및 [5] S7 [e] 및 [x] [3] S9 [d] S11|HY010|S1 [e] 및 [1] S2 [e] [nr], [2] S3 [e] [r] 및 S4 [2] [s] [nr] 및 ([1] 또는 [2]) S5 [s] [r] 및 ([1] 또는 [2]) S5 ([s] 또는 [e]) 및 S6 [4] \([s] 또는 [e]) 및 [5] S7 ([s] 또는 [e]) 및 [x] [3] S9 [d] S11|  
   
  [1] **SQLExecDirect** SQL_NEED_DATA를 반환 합니다.  
   
@@ -593,4 +591,3 @@ ODBC 문 상태를 갖습니다.
  [1]는 *특성* 인수 SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE SQL_ATTR_SIMULATE_CURSOR, SQL_ATTR_USE_BOOKMARKS, SQL_ATTR_CURSOR_SCROLLABLE 및 SQL_ATTR_CURSOR_SENSITIVITY 없습니다.  
   
  [2]는 *특성* SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE SQL_ATTR_SIMULATE_CURSOR, SQL_ATTR_USE_BOOKMARKS, SQL_ATTR_CURSOR_SCROLLABLE 및 SQL_ATTR_CURSOR_SENSITIVITY 되었습니다.
-

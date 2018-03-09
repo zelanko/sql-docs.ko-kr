@@ -15,17 +15,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-caps.latest.revision: 10
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a16d4a7a10eb4f36d0ead2a19f8e37d251e417f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8c564a6debb9c110cb41f8fc90a7cc1c0c5a01f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ```  
   
 ## <a name="arguments"></a>인수  
- [ *database_name* 합니다. [ *schema_name* ]. | *schema_name* 합니다. ] *table_name*  
+ [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  한, 두 또는 표시 될 테이블의 세 부분으로 이루어진 이름입니다. 두 또는 세 부분으로 구성 테이블 이름, 이름을 큰따옴표로 묶어야 합니다 (""). 한 부분으로 이루어진 테이블 이름 묶는 따옴표를 사용 하는 것은 선택 사항입니다. 없는 테이블 이름이 지정 된 경우 현재 데이터베이스에 대 한 정보가 표시 됩니다.  
   
 ## <a name="permissions"></a>Permissions  
@@ -102,4 +101,3 @@ DBCC PDW_SHOWSPACEUSED;
 [DBCC PDW_SHOWPARTITIONSTATS &#40; Transact SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 
   
-

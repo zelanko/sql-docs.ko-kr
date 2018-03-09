@@ -3,7 +3,7 @@ title: "종류의 커서 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3ec8ccca017236a8f6aa784d92e8304a98452f02
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7648e91432bd90c03398e5189e4101b9741841c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="types-of-cursors-ado"></a>(ADO) 커서 유형
 일반적으로 응용 프로그램에서는 필요한 데이터 액세스를 제공 하는 가장 간단한 커서를 사용 해야 합니다. 각 추가 커서 특징 (정방향 전용, 읽기 전용, 정적, 스크롤, 버퍼링) 기본적인 사항 보다 않음과 같은-클라이언트 메모리, 네트워크 부하 또는 성능입니다. 대부분의 경우 기본 커서 옵션에는 응용 프로그램에 실제로 필요한 것 보다 더 복잡 한 커서를 생성 합니다.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  [정적 커서](../../../ado/guide/data/static-cursors.md)   
  [키 집합 커서](../../../ado/guide/data/keyset-cursors.md)   
  [동적 커서](../../../ado/guide/data/dynamic-cursors.md)
-

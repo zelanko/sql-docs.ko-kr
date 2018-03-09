@@ -2,16 +2,13 @@
 title: "다차원 모델의 동작 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - drillthrough actions [Analysis Services]
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce19f2ad400f0a3e01efae5fea89235905025414
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c68c3d8eba2ec1519c38a89c7a1b0b71f3be4e3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-in-multidimensional-models"></a>다차원 모델의 동작
-  동작이란 선택한 큐브 또는 큐브의 일부분에 대해 최종 사용자가 시작하는 동작입니다. 작업은 선택한 항목을 매개 변수로 응용 프로그램을 시작하거나 선택한 항목에 대한 정보를 검색할 수 있습니다. 동작에 대한 자세한 내용은 [동작&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+동작이란 선택한 큐브 또는 큐브의 일부분에 대해 최종 사용자가 시작하는 동작입니다. 작업은 선택한 항목을 매개 변수로 응용 프로그램을 시작하거나 선택한 항목에 대한 정보를 검색할 수 있습니다. 동작에 대한 자세한 내용은 [동작&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)을 참조하세요.  
   
  큐브 디자이너의 **동작** 탭을 사용하여 큐브에 대한 작업을 만들 수 있습니다. 다음을 지정합니다.  
   
@@ -83,7 +81,7 @@ ms.lasthandoff: 11/17/2017
 |--------------|-----------------|  
 |**호출**|동작 실행 방법을 지정합니다. 기본값인 대화형은 사용자가 개체에 액세스할 때 동작이 실행되도록 지정합니다. 가능한 설정은 아래와 같습니다.<br /><br /> 일괄 처리<br /><br /> 대화형<br /><br /> 열 때|  
 |**응용 프로그램**|동작의 응용 프로그램을 나타냅니다.|  
-|**Description**|동작에 대한 설명입니다.|  
+|**설명**|동작에 대한 설명입니다.|  
 |**캡션**|동작에 대해 표시되는 캡션을 제공합니다. 캡션이 MDX이면 **MDX 캡션** 을 **True**로 지정합니다.|  
 |**True**|캡션이 MDX이면 **True** 를 지정하고 그렇지 않으면 **False** 를 지정합니다.|  
   

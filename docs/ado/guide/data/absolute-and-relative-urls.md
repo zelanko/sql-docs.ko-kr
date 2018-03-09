@@ -3,8 +3,9 @@ title: "절대 곡선과 상대 Url | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae21e6abedfda13da5a02130110cac0034ef8f34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolute-and-relative-urls"></a>절대 곡선과 상대 Url
 URL을 로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 지정 합니다. 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 및 등의 대상이 될 수 있습니다*합니다.*  
@@ -38,16 +39,16 @@ URL을 로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 �
   
  상대 URL을 일반적으로 구성 되어는 *경로*, 고 필요에 따라는 *리소스*, 없는 *구성표* 또는 *서버*합니다. 다음 표에서 완전 한 URL 형식의 개별 부분을 정의합니다.  
   
- *구성표*  
+ *scheme*  
  지정 방법을 *리소스* 를 액세스 하 합니다.  
   
- *서버*  
+ *server*  
  컴퓨터의 이름을 지정 합니다. 여기서는 *리소스* 있는 합니다.  
   
- *경로*  
+ *path*  
  대상에 선행 하는 디렉터리의 순서를 지정 합니다. 경우 *리소스* 은 대상 값에 있는 마지막 디렉터리는 *경로*합니다.  
   
- *리소스*  
+ *resource*  
  포함 하는 경우 *리소스* 대상인 경우 이며 일반적으로 파일의 이름입니다. 수도 있습니다는 *단순한 파일* , 바이트의 단일 이진 스트림을 포함 하는 또는 *구조화 된 문서* 저장소 및 바이트의 이진 스트림을 하나 이상 포함 합니다.  
   
 ## <a name="url-scheme-registration"></a>URL 구성표 등록  

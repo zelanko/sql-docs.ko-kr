@@ -2,32 +2,32 @@
 title: "번역 정의 및 찾아보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ac86f038e382be591b8974f36cd03fee6a80144d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7d55390b1d27fb595b139c06d9dd45b24737522
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lesson 9-2-번역 정의 및 찾아보기
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 번역은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 이름을 특정 언어로 나타내는 것을 말합니다. 개체에는 측정값 그룹, 측정값, 차원, 특성, 계층, KPI, 동작 및 계산 멤버가 포함됩니다. 번역은 여러 언어를 지원할 수 있는 클라이언트 응용 프로그램에 대한 서버 지원을 제공합니다. 클라이언트는 이러한 클라이언트를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 LCID(로캘 식별자)를 전달합니다. 그러면 해당 Analysis Services 인스턴스는 LCID를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 메타데이터를 제공할 때 사용할 번역 집합을 결정합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 해당 언어에 대한 번역이나 지정된 개체에 대한 번역이 없을 경우 기본 언어가 개체 메타데이터를 클라이언트에게 다시 반환하는 데 사용됩니다. 예를 들어 프랑스의 비즈니스 사용자가 프랑스어로 로캘이 설정된 워크스테이션에서 큐브에 액세스하는 경우 프랑스어 번역이 있다면 이 비즈니스 사용자에게는 멤버 캡션과 멤버 속성 값이 프랑스어로 표시됩니다. 그러나 독일의 비즈니스 사용자가 독일어로 로캘이 설정된 워크스테이션에서 동일한 큐브에 액세스하면 해당 캡션 이름과 멤버 속성 값이 독일어로 표시됩니다. 자세한 내용은 [차원 번역](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [큐브 번역](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)및 [Analysis Services에서의 번역 지원](../analysis-services/translation-support-in-analysis-services.md)을 참조하세요.  
   
 이 항목의 태스크에서는 Date 차원의 제한된 차원 개체 집합 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브의 큐브 개체에 대한 메타데이터 번역을 정의합니다. 그런 후 이러한 차원 및 큐브 개체를 검색하여 메타데이터 번역을 검토합니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
     프랑스어 번역을 정의할 수 있는 또 다른 언어 열이 나타납니다.  
   
-5.  **Date** 차원에 대한 **Caption** 개체의 행에서 **스페인어(스페인)** 번역 열에 **Fecha** 를, **프랑스어(프랑스)** 번역 열에 **Temps** 를 입력합니다.  
+5.  **Date** 차원에 대한 **Caption** 개체의 행에서 **스페인어(스페인)** 번역 열에 **Fecha**를, **프랑스어(프랑스)** 번역 열에 **Temps**를 입력합니다.  
   
 6.  **Month Name** 특성에 대한 **Caption** 개체의 행에서 **스페인어(스페인)** 번역 열에 **Mes del Año** 를, **프랑스어(프랑스)** 번역 열에 **Mois d'Année** 를 입력합니다.  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 09/01/2017
     이제 월 이름과 측정값 이름이 프랑스어로 표시됩니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[10단원: 관리자 역할 정의](../analysis-services/lesson-10-defining-administrative-roles.md)  
+[10 단원: 관리자 역할 정의](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>관련 항목:  
 [차원 번역](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  
@@ -142,4 +142,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

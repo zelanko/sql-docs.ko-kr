@@ -1,13 +1,14 @@
 ---
-title: "보고서 서버에 보고서를 게시 합니다. | Microsoft Docs"
+title: "보고서 서버에 보고서 게시 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +25,16 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 47
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "47"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 94377a58c5d61ea2d62d5c8e75cea5d4b82f9a4f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="publishing-reports-to-a-report-server"></a>보고서 서버에 보고서 게시
   보고서 또는 보고서 집합을 디자인 및 테스트한 후에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 기본 제공 배포 기능을 사용하여 보고서를 보고서 서버에 게시할 수 있습니다. 개별 보고서뿐만 아니라 여러 보고서와 데이터 원본을 포함할 수 있는 보고서 서버 프로젝트를 게시할 수 있습니다. 보고서 서버 프로젝트를 게시하는 것은 여러 보고서를 게시하는 가장 쉬운 방법입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서는 *게시*라는 용어 대신에 *배포*라는 용어를 사용합니다. 두 용어는 같은 의미로 사용할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-publish-all-reports-in-a-project"></a>프로젝트의 모든 보고서를 게시하려면  
   
-에 **빌드** 메뉴를 클릭 하 여 **배포 \<보고서 프로젝트 이름 >**합니다. 또는 솔루션 탐색기에서 보고서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **배포**를 클릭합니다. 출력 창에서 게시 프로세스의 상태를 볼 수 있습니다.  
+**빌드** 메뉴에서 **보고서 프로젝트 이름>\< 배포**를 클릭합니다. 또는 솔루션 탐색기에서 보고서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **배포**를 클릭합니다. 출력 창에서 게시 프로세스의 상태를 볼 수 있습니다.  
   
 보고서 서버 프로젝트를 배포할 경우 보고서 프로젝트의 공유 데이터 원본도 배포됩니다. 모든 보고서는 동일한 프로젝트 구성을 사용하여 동일한 보고서 서버, 서버의 동일한 폴더 등에 배포됩니다. 보고서를 다른 서버에 게시하려면 하나씩 게시하거나 보고서 서버 프로젝트에 원하는 보고서만 포함합니다. 솔루션은 여러 보고서 서버 프로젝트를 포함할 수 있으며 여러 프로젝트를 사용하면 다른 구성을 사용하여 다른 프로젝트를 배포할 수 있으므로 보고서 배포를 더 쉽게 관리할 수 있습니다. 
   
@@ -74,10 +74,9 @@ ms.lasthandoff: 08/09/2017
  보고서 서버의 대상 서버 URL을 지정해야 하며 보고서 및 공유 데이터 원본이 배포되는 기본 폴더를 변경할 수 있습니다.  
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [프로젝트 속성 페이지 대화 상자](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)  
   
   
-

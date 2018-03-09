@@ -2,27 +2,28 @@
 title: "Management Studio의 사용자 지정 보고서를 사용하여 R Services 모니터링 | Microsoft 문서"
 ms.custom: 
 ms.date: 10/09/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: 13
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 565041e140178055b4839985c10ba4633b5f0334
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 5a1990a7612eab44029c36129e73050854337930
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Management Studio에서 사용자 지정 보고서를 사용 하 여 컴퓨터 학습 서비스 모니터링
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 쉽게 기계 학습에 사용 되는 인스턴스 관리 제품 팀은 다양 한 SQL Server Management Studio에 추가할 수 있는 샘플 사용자 지정 보고서를 제공 했습니다. 이러한 보고서에서와 같은 세부 정보를 볼 수 있습니다.
 
@@ -120,4 +121,3 @@ GitHub에서 제품 샘플 리포지토리에는 현재 다음과 같은 보고�
 [R Services 모니터링](../../advanced-analytics/r-services/monitoring-r-services.md)
 
 [R Services에 대한 확장된 이벤트](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
-

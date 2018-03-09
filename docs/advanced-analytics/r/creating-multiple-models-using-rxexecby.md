@@ -2,25 +2,26 @@
 title: "RxExecBy를 사용 하 여 여러 모델을 만드는 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/18/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 685833317453c1ed5765385a73ff892a85989c2c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38e675f5f7bdcd5c11ab946d9e73d0c6af2ea770
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>RxExecBy를 사용 하 여 여러 모델 만들기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 새 함수를 포함 하는 SQL Server 2017 CTP 2.0 **rxExecBy**를 지 원하는 여러 관련된 모델의 병렬 처리 합니다. 매우 큰 모델 데이터를에서 기반으로 여러 비슷한 엔터티 하나는 기차를 하는 대신 데이터 과학자 매우 빠르게 만들 수 여러 관련된 모델 엔터티 하나에 고유한 데이터를 사용 하 여 각 합니다.
 
@@ -96,6 +97,5 @@ rxSetComputeContext(sqlServerCC)
 # Execute rxExecBy in SQL Server compute context
 sqlServerCCResults <- rxExecBy(inData = sqlServerDataDS, keys = c("DayOfWeek"), func = .Count)
 ```
-
 
 

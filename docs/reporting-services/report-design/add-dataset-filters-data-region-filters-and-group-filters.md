@@ -1,27 +1,27 @@
 ---
-title: "추가 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 | Microsoft Docs"
+title: "데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3b3d4f355e52f27689dad4f157ca65edad99fa99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가
   보고서에서 필터는 보고서에 사용된 데이터를 제한하기 위해 만든 데이터 집합, 데이터 영역 또는 데이터 영역 그룹의 일부입니다. 공유 데이터 집합을 사용하는 경우와 같이 데이터 집합 쿼리를 변경할 수 없는 경우 필터를 사용하여 보고서 데이터를 제어할 수 있습니다.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 08/09/2017
 |--------------------------------------------|-----------------------|  
 |**Boolean**|**Boolean**|  
 |**DateTime**|**DateTime**, **DateTimeOffset**|  
-|**정수**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
+|**Integer**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
 |**부동**|**Single**, **Double**, **Decimal**|  
 |**텍스트**|**String**, **Char**, **GUID**, **Timespan**|  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="operator"></a>연산자  
  다음 표에서는 필터 수식에 사용할 수 있으며 보고서 처리기에서 필터 수식을 계산하는 데 사용되는 연산자를 보여 줍니다.  
   
-|연산자|동작|  
+|연산자|작업|  
 |--------------|------------|  
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|식을 하나의 값과 비교합니다.|  
 |**TopN, BottomN**|식을 하나의 **Integer** 값과 비교합니다.|  
@@ -104,9 +104,8 @@ ms.lasthandoff: 08/09/2017
   
  맨 위로 이동  
   
-## <a name="see-also"></a>관련 항목:  
- [보고서 &#40;에 사용 되는 식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

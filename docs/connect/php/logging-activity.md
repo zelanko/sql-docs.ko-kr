@@ -8,24 +8,21 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- logging activity
+helpviewer_keywords: logging activity
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3c62afd5a581469af070b5a9d2c59f14264e1cf7
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d748bac061fdd4b76b1df0b9a6cf0a8101f21092
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="logging-activity"></a>작업 로깅
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -129,4 +126,3 @@ php.ini 파일에서 정수 값을 사용하여 **LogSeverity** 설정에 대한
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
   
-

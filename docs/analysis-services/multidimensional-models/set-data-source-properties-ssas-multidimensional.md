@@ -2,37 +2,31 @@
 title: "데이터 원본 속성 (SSAS 다차원) 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.datasourceproperties.f1
-helpviewer_keywords:
-- Data Source Properties dialog box
+f1_keywords: sql13.asvs.sqlserverstudio.datasourceproperties.f1
+helpviewer_keywords: Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6b9db08a099e78744f89e184882d21c3d066e6c0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d406f4743c47ded117bf93a62bb4eefadb093058
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>데이터 원본 속성 설정(SSAS 다차원)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 원본 개체는 외부 데이터 웨어하우스 또는 다차원 모델에 데이터를 제공하는 관계형 데이터베이스에 대한 연결을 지정합니다. 데이터 원본의 속성에 따라 연결 문자열, 제한 시간 간격, 최대 연결 수 및 트랜잭션 격리 수준이 결정됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 데이터 원본 개체는 외부 데이터 웨어하우스 또는 다차원 모델에 데이터를 제공 하는 관계형 데이터베이스에 대 한 연결을 지정 합니다. 데이터 원본의 속성에 따라 연결 문자열, 제한 시간 간격, 최대 연결 수 및 트랜잭션 격리 수준이 결정됩니다.  
   
 ## <a name="set-data-source-properties-in-sql-server-data-tools"></a>SQL Server Data Tools에서 데이터 원본 속성 설정  
   
@@ -58,11 +52,10 @@ ms.lasthandoff: 09/01/2017
 |**최대 연결 수**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 데이터 원본에 연결하는 데 허용되는 최대 연결 수를 지정합니다. 추가로 연결해야 하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 연결을 사용할 수 있을 때까지 대기합니다. 기본값은 10입니다. 연결 수를 제한하면 외부 데이터 원본이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 요청으로 오버로드되지 않습니다.|  
 |**격리성**|관계형 데이터베이스에 연결하여 실행되는 SQL 문의 잠금 및 행 버전 관리 기능을 지정합니다. 유효한 값은 ReadCommitted 또는 Snapshot입니다. 기본값은 ReadCommitted이며, 데이터를 읽기 전에 먼저 커밋하도록 지정합니다. 이렇게 하면 더티 읽기가 방지됩니다. 스냅숏은 이전에 커밋된 데이터의 스냅숏에서 읽기가 수행됨을 지정합니다. SQL Server의 격리 수준에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.|  
 |**관리 공급자**|데이터 원본에서 관리 공급자를 사용하는 경우 System.Data.SqlClient 또는 System.Data.OracleClient와 같은 관리 공급자의 이름을 표시합니다.<br /><br /> 데이터 원본에서 관리 공급자를 사용하지 않는 경우 이 속성은 빈 문자열을 표시합니다.<br /><br /> 이 속성은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 읽기 전용입니다. 연결에 사용되는 공급자를 변경하려면 연결 문자열을 편집합니다.|  
-|**가장 정보**|Windows 인증을 사용하는 데이터 원본에 연결할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 실행하는 Windows ID를 지정합니다. 옵션에는 미리 정의된 Windows 자격 증명의 집합, 서비스 계정, 현재 사용자의 ID를 사용하는 방법 또는 모델에 여러 데이터 원본 개체가 포함되어 있는 경우에 유용할 수 있는 상속 옵션이 포함됩니다. 자세한 내용은 [가장 옵션 설정&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)을 참조하세요.<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 유효한 값 목록에는 다음 값이 포함됩니다.<br /><br /> **ImpersonateAccount** (특정 Windows 사용자 이름 및 암호를 사용하여 데이터 원본에 연결)<br /><br /> **ImpersonateServiceAccount** (서비스 계정의 보안 ID를 사용하여 데이터 원본). 이 값은 기본값입니다.<br /><br /> **ImpersonateCurrentUser** (현재 사용자의 보안 ID를 사용하여 데이터 원본에 연결). 이 옵션은 외부 데이터 웨어하우스 또는 데이터베이스에서 데이터를 검색하는 데이터 마이닝 쿼리에만 유효합니다. 다차원 데이터베이스에서 처리, 로드 또는 쓰기 저장에 사용되는 데이터 연결에는 이 옵션을 선택하지 마십시오.<br /><br /> **상속** 또는 **기본값** (이 데이터 원본 개체가 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 가장 설정 사용). 데이터베이스 속성에는 가장 옵션이 포함되어 있습니다.|  
+|**가장 정보**|Windows 인증을 사용하는 데이터 원본에 연결할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 실행하는 Windows ID를 지정합니다. 옵션에는 미리 정의된 Windows 자격 증명의 집합, 서비스 계정, 현재 사용자의 ID를 사용하는 방법 또는 모델에 여러 데이터 원본 개체가 포함되어 있는 경우에 유용할 수 있는 상속 옵션이 포함됩니다. 자세한 내용은 [가장 옵션 설정&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)을 참조하세요.<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 유효한 값 목록에는 다음 값이 포함됩니다.<br /><br /> **ImpersonateAccount** (특정 Windows 사용자 이름 및 암호를 사용하여 데이터 원본에 연결)<br /><br /> **ImpersonateServiceAccount** (서비스 계정의 보안 ID를 사용하여 데이터 원본). 이것은 기본값입니다.<br /><br /> **ImpersonateCurrentUser** (현재 사용자의 보안 ID를 사용하여 데이터 원본에 연결). 이 옵션은 외부 데이터 웨어하우스 또는 데이터베이스에서 데이터를 검색하는 데이터 마이닝 쿼리에만 유효합니다. 다차원 데이터베이스에서 처리, 로드 또는 쓰기 저장에 사용되는 데이터 연결에는 이 옵션을 선택하지 마십시오.<br /><br /> **상속** 또는 **기본값** (이 데이터 원본 개체가 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 가장 설정 사용). 데이터베이스 속성에는 가장 옵션이 포함되어 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 데이터 원본](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   
-

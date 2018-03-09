@@ -5,29 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQLCompleteAsync
-helpviewer_keywords:
-- SQLCompleteAsync function [ODBC]
+f1_keywords: SQLCompleteAsync
+helpviewer_keywords: SQLCompleteAsync function [ODBC]
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 91a6449e07ff83fd6bb7478bfc52cb077a76c955
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83f44395e0c7ed8d102bee046b19aefe96c156b5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 함수
 **규칙**  
@@ -80,9 +76,8 @@ SQLRETURN SQLCompleteAsync(
   
 -   SQL_NO_DATA: 알림 모드에서 비동기 작업이 진행 중에서 되었거나 드라이버 관리자가 응용 프로그램 알림을 받지 않습니다. 폴링 모드에서는 비동기 작업이 진행 중에 있지 않습니다.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  폴링 기반 비동기 처리 모드에서 *AsyncRetCodePtr* SQL_STILL_EXECUTING을 수 있습니다 때 **SQLCompleteAsync** 관계 없이 SQL_SUCCESS를 반환 합니다. 응용 프로그램까지 폴링 유지 해야 *AsyncRetCodePtr* SQL_STILL_EXECUTING 않습니다. 알림 기반 비동기 처리 모드에서 *AsyncRetCodePtr* SQL_STILL_EXECUTING 안 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [비동기 실행(폴링 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
-

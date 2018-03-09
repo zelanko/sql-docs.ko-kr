@@ -2,9 +2,12 @@
 title: "안전한 개발(복제) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,21 +16,21 @@ helpviewer_keywords:
 - development security [SQL Server replication]
 ms.assetid: 2322d39c-6689-4fb6-b23b-eae51cbb0222
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee3091a5770bded35490db2ec8db6f0e86ba8994
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0f444b1d0fb41a31cefd9cf6aa04f5d7b92300b6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-development-replication"></a>안전한 개발(복제)
-  이 섹션에서는 보다 안전한 복제 토폴로지를 계획하는 데 유용한 정보를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 보다 안전한 복제 토폴로지를 계획하는 데 유용한 정보를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)  
+ [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
  복제 에이전트의 보안 모델에 대해 설명합니다.  
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)  
  보다 안전한 복제 토폴로지를 계획하는 데 유용한 일반적인 정보를 제공합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보안 개요&#40;복제&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   
  [안전한 배포&#40;복제&#41;](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   

@@ -107,7 +107,7 @@ Windows에서 실행하지만 Linux의 SQL Server에 연결하는 다른 도구�
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SSDT(SQL Server Data Tools)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## <a name="next-steps"></a>다음 단계
+## <a name="additional-resources"></a>추가 리소스
 
 다른 설치 시나리오의 경우 다음 리소스를 참조하세요.
 
@@ -118,6 +118,21 @@ Windows에서 실행하지만 Linux의 SQL Server에 연결하는 다른 도구�
 | [무인 설치](../linux/sql-server-linux-setup.md#unattended) | 확인 메시지를 표시하지 않고 설치를 스크립팅하는 방법을 알아봅니다. |
 | [오프라인 설치](../linux/sql-server-linux-setup.md#offline) | 오프라인 설치에 대한 패키지를 수동으로 다운로드하는 방법을 알아봅니다. |
 
-SQL Server를 연결하고 관리하는 다른 방법을 살펴보려면 [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) 및 [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md)를 참조하세요.
+연결 하 고 SQL Server를 관리 하는 다른 방법의 탐색 하려면 다음 도구를 살펴봅니다.
+
+|||
+|---|---|
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 확장명이 mssql TRANSACT-SQL 문을 실행 하는 플랫폼 간 GUI 코드 편집기. |
+| [SQL Server Operations Studio](../sql-operations-studio/index.md) | 플랫폼 간 GUI 데이터베이스 관리 유틸리티입니다. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL 명령을 실행 하기 위한 플랫폼 간 명령줄 인터페이스입니다. |
+| [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) | 에 연결할 수 있고 Linux에서 SQL Server 인스턴스를 관리 하는 Windows 기반 GUI 데이터베이스 관리 유틸리티입니다. |
 
 Transact-SQL 문 및 쿼리를 작성하는 방법에 대한 자세한 내용은 [자습서: TRANSACT-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.
+
+> [!TIP]
+> 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](../linux/sql-server-linux-faq.md)합니다.
+
+## <a name="next-steps"></a>다음 단계
+
+> [!div class="nextstepaction"]
+> [Linux에서 SQL Server를 위한 자습서 탐색](../linux/sql-server-linux-migrate-restore-database.md)

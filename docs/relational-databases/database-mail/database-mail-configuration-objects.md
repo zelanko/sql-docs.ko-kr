@@ -2,10 +2,14 @@
 title: "데이터베이스 메일 구성 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,19 +35,20 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ac7e0e7080ac55f1c871499b7c43b8e0a3d0d3d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5cb2f1d2c6a21ddcc6b36c4c357da8cc380348cc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail-configuration-objects"></a>데이터베이스 메일 구성 개체
-  데이터베이스 메일에는 두 가지 구성 개체가 있습니다. 데이터베이스 구성 개체를 사용하면 데이터베이스 응용 프로그램 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 전자 메일을 보낼 때 데이터베이스 모델에서 사용할 설정을 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+데이터베이스 메일에는 두 가지 구성 개체가 있습니다. 데이터베이스 구성 개체를 사용하면 데이터베이스 응용 프로그램 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 전자 메일을 보낼 때 데이터베이스 모델에서 사용할 설정을 구성할 수 있습니다.  
   
 -   데이터베이스 메일 계정  
   
@@ -130,14 +135,14 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="database-mail-settings"></a>데이터베이스 메일 설정  
   
-|이름|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[sysmail_configure_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|데이터베이스 메일의 구성 설정을 변경합니다.|  
 |[sysmail_help_configure_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|데이터베이스 메일의 구성 설정을 표시합니다.|  
   
 ### <a name="accounts-and-profiles"></a>계정 및 프로필  
   
-|이름|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|데이터베이스 메일 프로필에 메일 계정을 추가합니다.|  
 |[sysmail_delete_account_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|데이터베이스 메일 계정을 삭제합니다.|  
@@ -152,7 +157,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="security"></a>보안  
   
-|이름|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|데이터베이스 보안 주체에 대해 데이터베이스 메일 프로필을 사용할 수 있는 권한을 부여합니다.|  
 |[sysmail_delete_principalprofile_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|공개 또는 개인 데이터베이스 메일 프로필을 사용할 수 있는 데이터베이스 보안 주체에 대한 사용 권한을 제거합니다.|  
@@ -161,7 +166,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="system-state"></a>시스템 상태  
   
-|이름|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[sysmail_start_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|데이터베이스 메일 외부 프로그램 및 관련 SQL Service Broker 큐를 시작합니다.|  
 |[sysmail_stop_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|데이터베이스 메일 외부 프로그램 및 관련 SQL Service Broker 큐를 중지합니다.|  

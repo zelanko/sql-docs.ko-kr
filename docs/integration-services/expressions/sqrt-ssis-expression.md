@@ -1,5 +1,5 @@
 ---
-title: "SQRT (SSIS 식) | Microsoft Docs"
+title: "SQRT(SSIS 식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - SQRT function
 - square root of given expression
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5ae5e55d52ba0e4232d8e7a83d3aab2f70a6b56
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9567112da5d6be5200425744c8fd208d49490ad0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT(SSIS 식)
   숫자 식의 제곱근을 반환합니다.  
@@ -45,7 +44,7 @@ SQRT(numeric_expression)
 ## <a name="result-types"></a>결과 형식  
  DT_R8  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  인수가 Null이면 SQRT 결과도 Null입니다.  
   
  인수가 음수 값이면 SQRT가 실패합니다.  
@@ -74,8 +73,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  식에서 변수 이름에는 항상 @ 접두사가 포함되어 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>참고 항목  
+ [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

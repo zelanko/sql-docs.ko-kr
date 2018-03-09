@@ -1,29 +1,30 @@
 ---
 title: "샘플 콘솔 스크립트 파일 (DB2ToSQL) 작업 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 18787dab013e29427743b0712a9d56b28fbddd3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 20583ed71781b093b3195d8dc1f192258a5b569a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>샘플 콘솔 스크립트 파일 (DB2ToSQL) 작업
 사용자 참조 및 사용에 대 한 몇 가지 샘플 파일 제품 함께 제공 되었습니다. 이 여기서 쉽게 이러한 스크립트는 최종 사용자의 요구에 맞게 사용자 지정 하는 방법을 설명 합니다.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 08/02/2017
   
 5.  **ConversionAndDataMigrationSample.xml:** 이 샘플에는 사용자가 마이그레이션을 수행 하기 위해 종단 간 데이터 마이그레이션으로 변환할에서 수 있습니다. 그러면 변경 해야 하는 필수 속성 값 목록은 다음과 같습니다.  
   
-    |명령 이름|Description|Attribute|  
+    |명령 이름|Description|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|원본 데이터베이스와 대상 스키마의 스키마 매핑.|`source-schema:`변환 하는 데 필요한 원본 데이터베이스를 지정 합니다.<br /><br />`sql-server-schema`: 마이그레이션해야 하는 대상 데이터베이스를 지정 합니다.|  
     |`convert-schema`|소스에서 대상 스키마로 스키마 변환을 수행합니다.<br /><br />사용자가 여러 개체를 평가 하기 위해 / 그 데이터베이스 여러 개 지정할 수 `metabase-object` 에 설명 된 대로 노드는 `convert-schema` 샘플 콘솔 스크립트 파일의 명령의 예제 4입니다.|`object-name`: 원본 데이터베이스를 지정 합니다. / 개체 변환 하는 데 필요한 이름. 해당 확인 `object-type` 에 지정 된 개체의 유형에 따라 변경 되는`object-name`|  
@@ -90,4 +91,3 @@ ms.lasthandoff: 08/02/2017
 [서버 연결 파일 &#40; DB2ToSQL &#41; 만들기](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
 [생성할 보고서 &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)  
   
-

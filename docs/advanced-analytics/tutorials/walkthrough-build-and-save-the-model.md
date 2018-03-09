@@ -1,33 +1,35 @@
----
+﻿---
 title: "R 모델을 만들고 SQL Server에 저장하기 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-caps.latest.revision: 21
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 281f5026bc3aa7dc67cff418eb0868eeb81bc80a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 만들고 SQL Server에 저장하기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+이 단계에서는 머신 러닝 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 그 모델을 저장하는 방법을 학습합니다.
 
 이 단계에서는 머신 러닝 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 그 모델을 저장하는 방법을 학습합니다.
 
@@ -53,9 +55,7 @@ ms.lasthandoff: 10/10/2017
 
      *결과*
 
-     *Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs + 
-direct_distance*
-     <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
+     *에 대 한 로지스틱 회귀 결과: 크리스마스 ~ passenger_count trip_distance + trip_time_in_secs +* direct_distance *   <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
      <br/>*Dependent variable(s): tipped *
      <br/>*Total independent variables: 5*
      <br/>*Number of valid observations: 17068*
@@ -63,11 +63,11 @@ direct_distance*
      <br/>*-2\*LogLikelihood: 23540.0602 (Residual deviance on 17063 degrees of freedom)*
      <br/>*Coefficients:*
      <br/>*Estimate Std. Error z value Pr (> | z |)*
-     <br/>*(Intercept)-2.509e-03 3.223e-02-0.078 0.93793*
-     <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1.23 e-07\*\*\**
-     <br/>*trip_distance-3.896e-02 1.466e-02-2.658 0.00786\*\**
-     <br/>*trip_time_in_secs 2.115e-4.336e 04-05 4.878 1.07e-06\*\*\**
-     <br/>*direct_distance 6.156e-02 2.076e-02 2.966 0.00302\*\**
+     <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
+     <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
+     <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
+     <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
+     <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      <br/>*---*
      <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
      <br/>*Condition number of final variance-covariance matrix: 48.3933*
@@ -212,7 +212,7 @@ rxRoc(https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수�
     테이블에 모델을 저장하는데 INSERT 문만 있으면 되지만 _PersistModel_처럼 저장 프로시저로 구성하는 것이 더 용이합니다.
 
     > [!NOTE]
-    > 만일 "PersistModel 개체에 EXECUTE 권한이 거부되었습니다" 같은 오류가 발생하는 경우 로그인에 권한이 있는지 확인하세요. `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>` 같은 T-SQL 문을 실행하여 저장 프로시저에 명시적으로 권한을 줄 수 있습니다
+    > 와 같은 오류가 발생 하는 경우 "EXECUTE 권한이 거부 되었습니다 PersistModel 개체에" 로그인 권한이 있는지 확인 합니다. 다음과 같은 T-SQL 문을 실행 하 여 방금 저장된 프로시저에 대 한 명시적 권한을 부여할 수 있습니다. `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. 모델을 만들고 데이터베이스에 저장한 후에는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 시스템 저장 프로시저를 사용해서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드로부터 모델을 직접 호출할 수 있습니다.
 
@@ -242,5 +242,4 @@ rxRoc(https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수�
 ## <a name="previous-lesson"></a>이전 단원
 
 [R과 SQL을 사용하여 데이터 특성 만들기](walkthrough-create-data-features.md)
-
 

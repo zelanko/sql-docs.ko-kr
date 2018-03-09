@@ -1,5 +1,5 @@
 ---
-title: "작업을 프로그래밍 방식으로 추가 | Microsoft Docs"
+title: "프로그래밍 방식으로 태스크 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 35fbfd1c17d88d684671050c297a19822b098479
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0b56ab341749f86174bb743895a7c5741e982f57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-tasks-programmatically"></a>프로그래밍 방식으로 태스크 추가
   런타임 엔진에서 다음과 같은 유형의 개체에 태스크를 추가할 수 있습니다.  
@@ -50,10 +48,10 @@ ms.lasthandoff: 08/03/2017
   
  각 컨테이너에는 개별 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 개체가 들어 있는 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 컬렉션이 있습니다. 각 실행 태스크는 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 메서드와 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 메서드를 상속하고 구현합니다. 런타임 엔진에서는 이 두 메서드를 호출하여 각 <xref:Microsoft.SqlServer.Dts.Runtime.Executable>을 처리합니다.  
   
- 패키지에 태스크를 추가하려면 기존 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 컬렉션이 있는 컨테이너가 필요합니다. 대부분의 경우 컬렉션에 추가할 태스크는 패키지입니다. 호출 하면 해당 컨테이너에 대 한 컬렉션으로 실행 하 여 새 작업을 추가 하려면는 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 메서드. 이 메서드에는 추가할 태스크의 CLSID, PROGID, STOCK 모니커 또는 <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A>이 들어 있는 단일 문자열 매개 변수가 있습니다.  
+ 패키지에 태스크를 추가하려면 기존 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 컬렉션이 있는 컨테이너가 필요합니다. 대부분의 경우 컬렉션에 추가할 태스크는 패키지입니다. 새 태스크 실행 파일을 해당 컨테이너의 컬렉션에 추가하려면 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 메서드를 호출합니다. 이 메서드에는 추가할 태스크의 CLSID, PROGID, STOCK 모니커 또는 <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A>이 들어 있는 단일 문자열 매개 변수가 있습니다.  
   
 ## <a name="task-names"></a>태스크 이름  
- 이름이 나 ID로 작업을 지정할 수는 있지만 **재고** 모니커는에서 가장 자주 사용 되는 매개 변수는 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 메서드. 로 식별 되는 실행 파일에 작업을 추가 하는 **재고** 모니커를 다음 구문을 사용 합니다.  
+ 태스크는 이름이나 ID로 지정할 수 있지만 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 메서드에서 가장 자주 사용되는 매개 변수는 **STOCK** 모니커입니다. **STOCK** 모니커로 식별된 실행 파일에 태스크를 추가하려면 다음 구문을 사용합니다.  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -65,7 +63,7 @@ Dim exec As Executable = package.Executables.Add("STOCK:BulkInsertTask")
   
 ```  
   
- 다음 목록에는 다음에 사용 되는 각 작업에 대 한 이름을 보여 줍니다.는 **재고** 모니커입니다.  
+ 다음 목록에서는 **STOCK** 모니커 다음에 사용되는 각 태스크의 이름을 보여 줍니다.  
   
 -   ActiveXScriptTask  
   
@@ -127,7 +125,7 @@ Dim exec As Executable = package.Executables.Add( _
   "Culture=neutral, PublicKeyToken=89845dcd8080cc91")  
 ```  
   
- 태스크 버전을 사용 하 여 지정 하지 않고 프로그래밍 방식으로 작업에 대 한 긴 이름을 얻을 수 있습니다는 **AssemblyQualifiedName** 다음 예제에 나와 있는 것 처럼 클래스의 속성입니다. 이 예에는 Microsoft.SqlServer.SQLTask 어셈블리에 대한 참조가 필요합니다.  
+ 다음 예와 같이 클래스의 **AssemblyQualifiedName** 속성을 사용하면 태스크 버전을 지정하지 않고도 프로그래밍 방식으로 태스크의 긴 이름을 가져올 수 있습니다. 이 예에는 Microsoft.SqlServer.SQLTask 어셈블리에 대한 참조가 필요합니다.  
   
 ```csharp  
 using Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask;  
@@ -143,7 +141,7 @@ Imports Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask
       GetType(Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask).AssemblyQualifiedName)  
 ```  
   
- 다음 코드 예제에서는 만드는 방법을 보여 줍니다.는 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 컬렉션에서 새 패키지를 다음 파일 시스템 태스크 및 추가 대량 삽입 태스크 컬렉션을 사용 하 여 자신의 **재고** 모니커 합니다. 이 예에는 Microsoft.SqlServer.FileSystemTask 및 Microsoft.SqlServer.BulkInsertTask 어셈블리에 대한 참조가 필요합니다.  
+ 다음 코드 예에서는 새 패키지에서 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 컬렉션을 만든 다음 **STOCK** 모니커를 사용하여 컬렉션에 파일 시스템 태스크 및 대량 삽입 태스크를 추가하는 방법을 보여 줍니다. 이 예에는 Microsoft.SqlServer.FileSystemTask 및 Microsoft.SqlServer.BulkInsertTask 어셈블리에 대한 참조가 필요합니다.  
   
 ```csharp  
 using System;  
@@ -331,7 +329,7 @@ End Module
   
 -   컴파일 시 태스크 이름을 몰라도 되므로 모든 태스크에 대해 작동하는 일반 루틴을 코딩할 수 있습니다. 이러한 일반 루틴에 포함된 메서드에서는 사용자가 해당 메서드에 태스크 이름을 전달하며 모든 메서드 코드가 모든 태스크에 대해 작동합니다. 따라서 이 메서드는 테스트 코드를 작성하는 데 유용합니다.  
   
- 캐스팅는 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 태스크 별 클래스로 다음과 같은 이점이 있습니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>에서 태스크별 클래스로 캐스팅하면 다음과 같은 장점이 있습니다.  
   
 -   Visual Studio 프로젝트에서 문 완성 기능(IntelliSense)을 제공합니다.  
   
@@ -420,10 +418,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>외부 리소스  
- 블로그 항목- [EzAPI – SQL Server 2012에 대 한 업데이트](http://go.microsoft.com/fwlink/?LinkId=243223), blogs.msdn.com에서 합니다.  
+ blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](http://go.microsoft.com/fwlink/?LinkId=243223)  
 
 ## <a name="see-also"></a>참고 항목  
- [태스크를 프로그래밍 방식으로 연결](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
+ [프로그래밍 방식으로 태스크 연결](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   
-

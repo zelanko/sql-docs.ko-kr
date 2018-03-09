@@ -1,10 +1,13 @@
 ---
 title: "메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,16 +15,16 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 caps.latest.revision: "16"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 321212aae6e3438a24903293a6b0ab923eb1d456
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 66cf48a0435cdb14681ab996d7707cc4e082c0d9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
             [메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 에 대한 시스템 버전 temporal 테이블은 메모리 내 OLTP 작업으로 수집한 데이터 위에 [데이터 감사 및 특정 시간 분석](http://msdn.microsoft.com/library/mt631669.aspx) 이 필요한 시나리오에 대해 비용 효율적인 솔루션을 제공하기 위한 것입니다. 이는 높은 트랜잭션 처리량, 잠금 없는 동시성 및 동시에 쉽게 쿼리할 수 있는 대량의 기록 데이터를 저장하는 기능을 제공합니다.  

@@ -2,32 +2,31 @@
 title: "Index 요소 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Index element (DTA)
+dev_langs: XML
+helpviewer_keywords: Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "18"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ca17a222eb07926c89283ce1cc2f47f9412af59d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5d5affde03096be39cb219ecb0bac2e402761622
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="index-element-dta"></a>Index 요소(DTA)
-  사용자 지정 구성에 대해 만들거나 삭제하려는 인덱스에 대한 정보를 포함합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 지정 구성에 대해 만들거나 삭제 하려는 인덱스에 대 한 정보를 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|인덱스 특성|데이터 형식|설명|  
+|인덱스 특성|데이터 형식|Description|  
 |---------------------|---------------|-----------------|  
 |**클러스터형**|**boolean**|(선택 사항) 클러스터형 인덱스를 지정합니다. "true" 또는 "false"로 설정합니다. 예를 들면 다음과 같습니다.<br /><br /> `<Index Clustered="true">`<br /><br /> 기본적으로 이 특성은 "false"로 설정됩니다.|  
 |**고유**|**boolean**|(선택 사항) 고유 인덱스를 지정합니다. "true" 또는 "false"로 설정합니다. 예를 들면 다음과 같습니다.<br /><br /> `<Index Unique="true">`<br /><br /> 기본적으로 이 특성은 "false"로 설정됩니다.|  
@@ -70,8 +69,8 @@ ms.lasthandoff: 08/02/2017
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[Create 요소&#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.|  
-|**자식 요소**|[Name 요소 index&#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Index의 Column 요소&#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> **PartitionColumn** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> [Index의 Filegroup 요소&#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> **PercentUsage** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.|  
+|**부모 요소**|[만들기 요소 &#40; DTA &#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.|  
+|**자식 요소**|[Name 요소 index&#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column 요소 index&#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> **PartitionColumn** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> [Index의 Filegroup 요소&#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> **PercentUsage** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.|  
   
 ## <a name="example"></a>예제  
  이 요소의 사용 예를 보려면 [사용자 정의 구성이 포함된 XML 입력 파일 예제&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)를 참조하세요.  
@@ -80,4 +79,3 @@ ms.lasthandoff: 08/02/2017
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

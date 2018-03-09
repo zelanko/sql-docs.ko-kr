@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], result sets
 - functions [ODBC], catalog functions
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b05067010701d1751056cb99089708b5cbeb67f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-returned-by-catalog-functions"></a>카탈로그 함수에서 반환 된 데이터
 각 카탈로그 함수는 데이터를 결과 집합으로 반환 합니다. 이 결과 집합은 다른 결과 집합에서 다르지 않습니다. 일반적으로 생성 되는 미리 정의 된 의해 매개 변수화 **선택** 드라이버에 하드 코드 또는 데이터 원본에 프로시저에서 저장 된 문입니다. 결과 집합에서 데이터를 검색 하는 방법에 대 한 정보를 참조 하십시오. [는 결과 집합 생성 된?](../../../odbc/reference/develop-app/was-a-result-set-created.md)합니다.  
@@ -46,4 +44,3 @@ SELECT "Customer Name" FROM "Accounts Payable"
  카탈로그 함수 연결할 사용자 이름 및 암호를 기반 하 고 반환 되는 사용자가 권한 있는 데이터만 있는 SQL 유사 권한 부여 모델을 기반으로 합니다. 이 모델에 맞지 않는는 개별 파일의 암호 보호는 드라이버 정의입니다.  
   
  카탈로그 함수에서 반환 된 결과 집합 업데이트 거의 될 수 있으며 이러한 결과 집합의 데이터를 변경 하 여 데이터베이스의 구조를 변경 하려면 응용 프로그램에 필요 하지 않습니다.
-

@@ -3,7 +3,7 @@ title: "ADO MD 개체 차원 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9a222c6495302f06e5fa2b8dd0e0d355869e3d40
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad282fee080d57546335029eceff5475fe6aecc1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dimension-object-ado-md"></a>차원 개체 (ADO MD)
 하나 이상의 멤버 계층 구조를 포함 하는 다차원 큐브의 차원 중 하나를 나타냅니다.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/09/2017
 |이름|Description|  
 |----------|-----------------|  
 |CatalogName|이 큐브 속해 있는 카탈로그의 이름입니다.|  
-|큐브 이름|큐브의 이름입니다.|  
+|CubeName|큐브의 이름입니다.|  
 |DefaultHierarchy|기본 계층의 고유한 이름입니다.|  
 |Description|큐브의 의미 있는 설명입니다.|  
 |DimensionCaption|레이블 또는 해당 차원과 연결 된 캡션입니다.|  
@@ -71,4 +70,3 @@ ms.lasthandoff: 09/09/2017
  [ADO MD 차원 컬렉션](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [Hierarchies 컬렉션 (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-

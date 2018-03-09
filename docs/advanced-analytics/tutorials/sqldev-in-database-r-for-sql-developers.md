@@ -2,38 +2,39 @@
 title: "데이터베이스 내 R 분석 (자습서) SQL 개발자를 위해 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
-caps.latest.revision: 15
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 0062a75b92fc633e61b0aa73ae2c955ccd60cec5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 149cafe2595c176bcb3d1f162d1455aa7c4c6616
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>SQL 개발자 (자습서)에 대 한 데이터베이스에서 R 분석
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 자습서의 목표는 기계 학습에서 SQL Server 솔루션을 구축 하는 실습 환경과 SQL 프로그래머를 제공 하는 것입니다. 이 자습서에서는 저장된 프로시저에 R 코드를 래핑하여 R 응용 프로그램 또는 BI 솔루션에 통합 하는 방법을 설명 합니다.
 
 > [!NOTE]
 > 
-> Python에서 동일한 솔루션 ´ ù입니다. SQL Server 2017가 필요 합니다. 참조 [in-database 분석 Python 개발자에 대 한](../tutorials/sqldev-in-database-python-for-sql-developers.md)
+> Python에서 동일한 솔루션 입니다. SQL Server 2017가 필요 합니다. 참조 [in-database 분석 Python 개발자에 대 한](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 ## <a name="overview"></a>개요
 
@@ -88,4 +89,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-lesson"></a>다음 단원
 
 [1 단원: 예제 데이터 다운로드](../tutorials/sqldev-download-the-sample-data.md)
-

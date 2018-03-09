@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - users [SQL Server], principals
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ab67ccf5240ad3797bf744b56e615a92fa95d9bd
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +66,7 @@ ms.lasthandoff: 09/13/2017
 
 ## <a name="dbo-user-and-dbo-schema"></a>dbo 사용자 및 dbo 스키마
 
-`dbo` 사용자는 각 데이터베이스에서 특수한 사용자 보안 주체입니다. 모든 SQL Server 관리자, `sysadmin` 고정 서버 역할의 멤버, `sa` 로그인 및 데이터베이스의 소유자는 데이터베이스를 `dbo` 사용자로 시작합니다. `dbo` 사용자에게는 데이터베이스에 대한 모든 권한이 부여되며 제한하거나 삭제할 수 없습니다. `dbo`는 데이터베이스 소유자를 나타내지만 `dbo` 사용자 계정은 `db_owner` 고정 데이터베이스 역할과 동일하지 않고 `db_owner` 고정 데이터베이스 역할은 데이터베이스 소유자로 기록되는 사용자 계정과 동일하지 않습니다.     
+`dbo` 사용자는 각 데이터베이스에서 특수한 사용자 계정입니다. 모든 SQL Server 관리자, `sysadmin` 고정 서버 역할의 멤버, `sa` 로그인 및 데이터베이스의 소유자는 데이터베이스를 `dbo` 사용자로 시작합니다. `dbo` 사용자에게는 데이터베이스에 대한 모든 권한이 부여되며 제한하거나 삭제할 수 없습니다. `dbo`는 데이터베이스 소유자를 나타내지만 `dbo` 사용자 계정은 `db_owner` 고정 데이터베이스 역할과 동일하지 않고 `db_owner` 고정 데이터베이스 역할은 데이터베이스 소유자로 기록되는 사용자 계정과 동일하지 않습니다.     
 `dbo` 사용자는 `dbo` 스키마를 소유합니다. `dbo` 스키마는 일부 다른 스키마를 지정하지 않는 한 모든 사용자에 대한 기본 스키마입니다.  `dbo` 스키마는 삭제할 수 없습니다.
   
 ## <a name="public-server-role-and-database-role"></a>public 서버 역할 및 데이터베이스 역할  
@@ -117,4 +115,3 @@ ms.lasthandoff: 09/13/2017
  [데이터베이스 수준 역할](../../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   
-

@@ -1,16 +1,14 @@
 ---
 title: "AMO 데이터 마이닝 개체 프로그래밍 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: be27072d93bb9cee3d787732e57fc591452c2191
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c4c398dbda7bc898d62ea16122ccfba02ea7d5b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>AMO 데이터 마이닝 개체 프로그래밍
   AMO를 사용하여 데이터 마이닝 개체를 프로그래밍하는 과정은 매우 간단합니다. 첫 번째 단계는 마이닝 프로젝트를 지원하는 데이터 구조 모델을 만드는 것입니다. 그런 다음 데이터 내부의 보이지 않는 관계를 예측하거나 찾는 데 사용할 마이닝 알고리즘을 지원하는 데이터 마이닝 모델을 만듭니다. 구조 및 알고리즘을 포함하여 만든 마이닝 프로젝트를 통해 마이닝 모델을 처리하여 나중에 클라이언트 응용 프로그램에서 쿼리 또는 예측하는 데 사용하는 학습된 모델을 얻을 수 있습니다.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [MiningModel 개체](#MiningModel)  
   
-##  <a name="MiningStructure"></a>MiningStructure 개체  
+##  <a name="MiningStructure">MiningStructure 개체</a>  
  마이닝 구조는 모든 마이닝 모델을 만드는 데 사용되는 데이터 구조의 정의입니다. 마이닝 구조에는 데이터베이스에 정의된 데이터 원본 뷰에 대한 바인딩이 포함되며 마이닝 모델에 참여하는 모든 열에 대한 정의가 포함됩니다. 하나의 마이닝 구조에서 둘 이상의 마이닝 모델을 가질 수 있습니다.  
   
  <xref:Microsoft.AnalysisServices.MiningStructure> 개체를 만들려면 다음 단계를 수행합니다.  
@@ -97,7 +94,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 }  
 ```  
   
-##  <a name="MiningModel"></a>MiningModel 개체  
+##  <a name="MiningModel">MiningModel 개체</a>  
  마이닝 모델은 마이닝 알고리즘에 사용되는 모든 열과 열 정의에 대한 저장소입니다.  
   
  <xref:Microsoft.AnalysisServices.MiningModel> 개체를 만들려면 다음 단계를 수행합니다.  
@@ -156,4 +153,3 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
  [데이터베이스 개체 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

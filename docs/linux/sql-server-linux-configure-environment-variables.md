@@ -1,30 +1,29 @@
 ---
 title: "환경 변수를 SQL Server 설정 구성 | Microsoft Docs"
-description: "이 항목에서는 환경 변수를 사용 하 여 Linux에서 특정 SQL Server 2017 설정을 구성 하는 방법에 설명 합니다."
+description: "이 문서에서는 환경 변수를 사용 하 여 Linux에서 특정 SQL Server 2017 설정을 구성 하는 방법을 설명 합니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 07/21/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 72c648e147b628a4a99ffc9605ba42b11c83883e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux에서 환경 변수를 SQL Server 설정 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 2017 Linux에서 구성 하려면 몇 가지 서로 다른 환경 변수를 사용할 수 있습니다. 이러한 변수는 두 가지 시나리오에서 사용 됩니다.
 
@@ -40,7 +39,7 @@ SQL Server 2017 Linux에서 구성 하려면 몇 가지 서로 다른 환경 변
 |-----|-----|
 | **ACCEPT_EULA** | 모든 값 (예를 들어, ' Y')로 설정 된 경우 SQL Server 사용권 계약에 동의 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 암호를 구성 합니다. |
-| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**웹**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우에 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
+| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우에 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
 | **MSSQL_LCID** | SQL Server에 사용할 언어 ID를 설정 합니다. 예를 들어 1036 프랑스어입니다. |
 | **MSSQL_COLLATION** | SQL Server에 대 한 기본 데이터 정렬을 설정합니다. 이 언어 id (LCID) 데이터 정렬의 기본 매핑을 재정의합니다. |
 | **MSSQL_MEMORY_LIMIT_MB** | 메모리 (MB) SQL Server에서 사용할 수 있는 최대 크기를 설정 합니다. 기본적으로 것은 총 실제 메모리의 80%입니다. |
@@ -50,7 +49,11 @@ SQL Server 2017 Linux에서 구성 하려면 몇 가지 서로 다른 환경 변
 | **MSSQL_DATA_DIR** | 새 SQL Server 데이터베이스 데이터 파일 (.mdf)이 생성 되는 위치는 디렉터리를 변경 합니다. |
 | **MSSQL_LOG_DIR** | 새 SQL Server 데이터베이스 로그 (.ldf) 파일을 만드는 하는 디렉터리를 변경 합니다. |
 | **MSSQL_DUMP_DIR** | 여기서 SQL Server는 보관할 메모리 덤프 및 기타 문제 해결 파일 기본적으로 디렉터리를 변경 합니다. |
-| **MSSQL_ENABLE_HADR** | 가용성 그룹을 사용 하도록 설정 합니다. |
+| **MSSQL_ENABLE_HADR** | 가용성 그룹을 사용 하도록 설정 합니다. 예를 들어, '1'을 사용 하도록 설정 하 고 '0'은 사용할 수 없습니다. |
+| **MSSQL_AGENT_ENABLED** | SQL Server 에이전트를 사용 하도록 설정 합니다. 예를 들어, 't r u e'가 사용 되며 'false' 비활성화 됩니다. 기본적으로 에이전트를 비활성화 합니다.  |
+| **MSSQL_MASTER_DATA_FILE** | Master 데이터베이스 데이터 파일의 위치를 설정합니다. |
+| **MSSQL_MASTER_LOG_FILE** | Master 데이터베이스 로그 파일의 위치를 설정합니다. |
+
 
 ## <a name="example-initial-setup"></a>예: 초기 설치
 
@@ -87,11 +90,10 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> 컨테이너의 프로덕션 버전을 실행 하기 위한 프로세스는 약간 다릅니다. 자세한 내용은 참조 [프로덕션 컨테이너 이미지를 실행](sql-server-linux-configure-docker.md#production)합니다.
+> 컨테이너에서 프로덕션 버전을 실행하는 프로세스는 약간 다릅니다. 자세한 내용은 [프로덕션 컨테이너 이미지 실행](sql-server-linux-configure-docker.md#production)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
 여기에 나열 되지 다른 SQL Server 설정은 참조 [mssql conf 도구와 함께 Linux에서 SQL Server 구성](sql-server-linux-configure-mssql-conf.md)합니다.
 
 설치 하 고 Linux에서 SQL Server를 실행 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Linux에서 SQL Server 설치](sql-server-linux-setup.md)합니다.
-

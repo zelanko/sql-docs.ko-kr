@@ -3,7 +3,7 @@ title: "ADO MD 컬렉션 배치 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Positions collection [ADO MD]
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 07522e8bdf668adaef9760524ecdf51ca8780326
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 934b68032c6bede8499d331e869edceff958f7f4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="positions-collection-ado-md"></a>ADO MD 위치 컬렉션
 포함 된 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md) 축에서 한 지점을 정의 하는 개체입니다.  
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/09/2017
  [축 개체 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [ADO MD cell 개체](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Position 개체(ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
-

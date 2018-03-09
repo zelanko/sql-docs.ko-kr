@@ -1,11 +1,11 @@
 ---
-title: "3 단계: 패키지 및 기타 파일 추가 | Microsoft Docs"
+title: "3단계: 패키지 및 기타 파일 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f8cf4eedc8930492e28f41cee67f0c25a382bacd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e23136a630638a04c390eeac809c7786aa5476b6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-3---adding-packages-and-other-files"></a>단원 1-3-추가 패키지 및 기타 파일
+# <a name="lesson-1-3---adding-packages-and-other-files"></a>1-3단원 - 패키지 및 기타 파일 추가
 이 태스크에서는 기존 패키지, 개별 패키지를 지원하는 보조 파일 및 추가 정보를 이전 태스크에서 만든 Deployment Tutorial 프로젝트에 추가합니다. 예를 들어 패키지에 대한 데이터가 포함된 XML 데이터 파일과 프로젝트의 모든 패키지에 대한 추가 정보를 제공하는 텍스트 파일을 추가합니다.  
   
 패키지를 테스트 또는 프로덕션 환경에 배포할 경우 일반적으로 데이터 파일을 배포에 포함하는 대신에 데이터 파일 또는 데이터베이스의 테스트 또는 프로덕션 버전에 액세스하도록 구성을 사용하여 데이터 원본의 경로를 업데이트합니다. 지침을 제공하기 위해 이 자습서에는 패키지 배포에 데이터 파일이 포함되어 있습니다.  
@@ -82,4 +81,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

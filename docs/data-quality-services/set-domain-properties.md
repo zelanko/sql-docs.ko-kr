@@ -8,36 +8,33 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainproperties.f1
+f1_keywords: sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "22"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f67adedb0a54b35bb9ca5d4a27f42086e010d4b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-domain-properties"></a>도메인 속성 설정
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 속성을 설정하는 방법에 대해 설명합니다.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  도메인의 속성을 설정하려면 기술 자료와 도메인을 만들어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  도메인의 속성을 설정하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Set"></a> 도메인 속성 설정  
@@ -46,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 2.  [Create a Domain](../data-quality-services/create-a-domain.md)에 설명된 대로 새 도메인을 만든 후 속성을 설정합니다.  
   
-3.  **마침** 을 클릭하여 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+3.  **마침** 을 클릭하여 [도메인 관리 작업 종료](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 도메인 속성 설정 후  
  도메인 속성을 설정한 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
@@ -57,7 +54,7 @@ ms.lasthandoff: 09/09/2017
  도메인이 생성된 후 도메인 이름 또는 설명을 변경할 수 있습니다. 도메인 이름은 기술 자료에 대해 고유해야 합니다. 설명은 최대 256자까지 지정할 수 있습니다.  
   
 ###  <a name="Type"></a> 데이터 형식  
- 도메인을 만들 때 도메인의 값에 대해 **문자열** (기본값), **날짜**, **정수**또는 **10진수**데이터 형식 중 하나를 선택합니다. 도메인을 만든 후 데이터 형식을 볼 수 있지만 변경할 수는 없습니다. 도메인에 대해 선택한 데이터 형식에 따라 도메인에 매핑할 수 있는 원본 데이터가 정의됩니다. DQS에서 4개의 도메인 데이터 형식 각각에 대해 지원되는 데이터 형식에 대한 자세한 내용은 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하십시오.  
+ 도메인을 만들 때 도메인의 값에 대해 **문자열** (기본값), **날짜**, **정수**또는 **10진수**데이터 형식 중 하나를 선택합니다. 도메인을 만든 후 데이터 형식을 볼 수 있지만 변경할 수는 없습니다. 도메인에 대해 선택한 데이터 형식에 따라 도메인에 매핑할 수 있는 원본 데이터가 정의됩니다. DQS에서 4개의 도메인 데이터 형식 각각에 대해 지원되는 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
   
 ###  <a name="Leading"></a> 선행 값 사용  
  동의어 값 대신 동의어 그룹의 선행 값이 출력되도록 지정하려면 이 확인란을 선택합니다. 각 동의어 값이 올바른 형식 또는 수정된 형식으로 출력되고 동의어 그룹의 선행 값으로 바뀌지 않도록 지정하려면 **선행 값 사용** 을 선택 취소합니다.  
@@ -97,4 +94,3 @@ ms.lasthandoff: 09/09/2017
  데이터 형식이 **문자열**인 경우 정리 작업 시 DQS에서 도메인의 구문 오류를 식별하지 않도록 지정하려면 선택합니다. 해당 도메인의 구문 오류 식별이 무의미한 경우 이 확인란을 선택합니다. 예를 들어 일련 번호의 경우 구문 오류 식별이 중요하지 않을 수 있습니다. 이 컨트롤은 문자열 데이터 형식에만 사용할 수 있습니다. DQS는 문자열이 아닌 데이터 형식에서 구문 오류를 검사하지 않습니다.  
   
   
-

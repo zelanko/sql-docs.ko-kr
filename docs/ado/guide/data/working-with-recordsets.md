@@ -3,7 +3,7 @@ title: "레코드 집합으로 작업할 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-recordsets"></a>레코드 집합 사용
 **레코드 집합** 개체에는 제공 하는 기준에 따라 특정 레코드를 검색 하 고 인덱스를 사용 하 여 해당 검색 작업을 최적화 하기 위해도 결과 집합에 있는 데이터의 순서를 다시 정렬할 수 있는 기본 제공 기능입니다. 일부 경우 공급자에 따라 이러한 기능을 사용 하기 위해 사용할 수 있는지 여부 — 등는 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성 — 자체 데이터 원본의 구조입니다.  
@@ -125,7 +124,7 @@ ms.lasthandoff: 09/09/2017
 |**adFilterConflictingRecords**|마지막 일괄 처리 업데이트를 실패 한 레코드를 보기 위한 필터입니다.|  
 |**adFilterFetchedRecords**|현재 캐시에서 레코드를 보기 위한 필터-즉, 데이터베이스에서 레코드를 검색 한 마지막 호출의 결과입니다.|  
 |**adFilterNone**|현재 필터를 제거 하 고 보기에 대 한 모든 레코드를 복원 합니다.|  
-|**그**|레코드에만 보기에 대 한 필터를 변경 되었지만 서버로 아직 보내지 않았습니다. 일괄 업데이트 모드에만 적용할 수 있습니다.|  
+|**adFilterPendingRecords**|레코드에만 보기에 대 한 필터를 변경 되었지만 서버로 아직 보내지 않았습니다. 일괄 업데이트 모드에만 적용할 수 있습니다.|  
   
  필터 상수 보다 쉽게 마지막 하는 동안 해당 레코드를 보고, 예를 들어 허용 하 여 일괄 처리 업데이트 모드에 있는 동안 개별 레코드 충돌 영향을 해결 하려면 **UpdateBatch** 메서드 호출에서와 같이 다음 예제에서는 합니다.  
   
@@ -174,4 +173,3 @@ Loop
  원래 닫는 **레코드 집합** 복사본 닫히지 않으며 원본이 나 다른 복사본은 닫기 복사본을 닫으면지 않습니다.  
   
  복제할 수 있습니다는 **레코드 집합** 책갈피를 지원 하는 경우에 개체입니다. 책갈피 값은 교환할 수 있습니다. 즉, 하나에서 책갈피 참조 **레코드 집합** 개체 모든 복제본에서 동일한 레코드를 참조 합니다.
-

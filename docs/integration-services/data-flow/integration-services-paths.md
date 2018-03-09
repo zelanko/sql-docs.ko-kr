@@ -23,17 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 541c8faa4c878922411680646f3fa7a557eefe0f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-paths"></a>Integration Services 경로
   경로는 하나의 데이터 흐름 구성 요소의 출력을 다른 구성 요소의 입력에 연결함으로써 데이터 흐름의 두 구성 요소를 연결합니다. 경로에는 원본과 대상이 있습니다. 예를 들어 경로가 OLE DB 원본과 정렬 변환을 연결하는 경우 OLE DB 원본은 경로의 원본이며, 정렬 변환은 경로의 대상입니다. 원본은 경로가 시작되는 구성 요소이며, 대상은 경로가 끝나는 구성 요소입니다.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/26/2017
   
  메타데이터에는 이전 구성 요소의 출력에 있는 각 열의 이름, 데이터 형식, 전체 자릿수, 소수 자릿수, 길이, 코드 페이지 및 원본 구성 요소가 표시됩니다. 원본 구성 요소는 해당 열을 만든 데이터 흐름 구성 요소입니다. 이러한 구성 요소는 데이터 흐름에서 첫 번째 구성 요소일 수도 있으며, 아닐 수도 있습니다. 예를 들어 UNION ALL 및 정렬 변환은 해당 열을 만들며, 이는 출력 열에 대한 원본이 됩니다. 반대로 열 복사 변환은 열을 변경하지 않은 상태로 전달하거나 입력 열을 복사하여 새 열을 만들 수도 있습니다. 열 복사 변환은 새로운 열에 대해서만 원본 구성 요소가 됩니다.  
 
-## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>데이터 흐름 경로 편집기와 경로의 속성 설정
+## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>데이터 흐름 경로 편집기를 사용하여 경로의 속성 설정
 경로는 두 개의 데이터 흐름 구성 요소를 연결합니다. 경로 메타데이터를 설정하려면 데이터 흐름에 적어도 두 개 이상의 연결된 데이터 흐름 구성 요소가 있어야 합니다.
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
@@ -64,12 +63,12 @@ ms.lasthandoff: 09/26/2017
   
 6.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 
-## <a name="general-page---data-flow-path-editor"></a>일반 페이지-데이터 흐름 경로 편집기
+## <a name="general-page---data-flow-path-editor"></a>일반 페이지 - 데이터 흐름 경로 편집기
 **데이터 흐름 경로 편집기** 대화 상자를 사용하여 경로 속성을 설정하고, 열 메타데이터를 보고, 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  
   
  **데이터 흐름 경로 편집기** 대화 상자의 **일반** 노드를 사용하여 경로의 이름을 지정하고 경로를 설명할 수 있을 뿐만 아니라 경로 주석 옵션을 지정할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **이름**  
  경로에 사용할 고유 이름을 제공합니다.  
   
@@ -79,7 +78,7 @@ ms.lasthandoff: 09/26/2017
  **IdentificationString**  
  경로를 식별하는 문자열입니다. 위에서 입력한 이름으로 자동으로 생성됩니다.  
   
- **Description**  
+ **설명**  
  경로에 대한 설명을 입력합니다.  
   
  **PathAnnotation**  
@@ -91,11 +90,11 @@ ms.lasthandoff: 09/26/2017
  **SourceName**  
  경로의 시작인 출력을 표시합니다.  
  
-## <a name="metadata-page---data-flow-path-editor"></a>메타 데이터 페이지-데이터 흐름 경로 편집기
+## <a name="metadata-page---data-flow-path-editor"></a>메타데이터 페이지 - 데이터 흐름 경로 편집기
 **데이터 흐름 경로 편집기** 대화 상자의 **메타데이터** 페이지를 사용하여 경로 열의 메타데이터를 볼 수 있습니다.  
   
-### <a name="options"></a>옵션  
- **경로 메타 데이터**  
+### <a name="options"></a>변수  
+ **경로 메타데이터**  
  열 메타데이터를 나열합니다. 열 데이터를 정렬하려면 열 제목을 클릭합니다.  
   
  **이름**  
@@ -128,13 +127,13 @@ ms.lasthandoff: 09/26/2017
  **원본 구성 요소**  
  열의 원본인 데이터 흐름 구성 요소를 나열합니다.  
   
- **클립보드에 복사**  
+ **클립보드로 복사**  
  열 메타데이터를 클립보드로 복사합니다. 기본적으로 모든 메타데이터 행은 현재 표시된 순서대로 정렬되어 복사됩니다.  
  
-## <a name="data-viewers-page---data-flow-path-editor"></a>데이터 뷰어 페이지-데이터 흐름 경로 편집기
+## <a name="data-viewers-page---data-flow-path-editor"></a>데이터 뷰어 페이지 - 데이터 흐름 경로 편집기
 **데이터 흐름 경로 편집기** 대화 상자의 **데이터 뷰어** 페이지를 사용하여 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **이름**  
  데이터 뷰어를 나열합니다.  
   
@@ -165,4 +164,3 @@ ms.lasthandoff: 09/26/2017
 |PathAnnotation|Integer(열거형)|디자이너 화면에 주석을 경로와 함께 표시할지 여부를 나타내는 값입니다. 가능한 값은 **AsNeeded**, **SourceName**, **PathName**및 **Never**입니다. 기본값은 **AsNeeded**입니다.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|경로에 연결된 입력입니다.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|경로에 연결된 출력입니다.|  
-

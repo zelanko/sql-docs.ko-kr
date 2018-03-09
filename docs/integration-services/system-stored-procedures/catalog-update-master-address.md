@@ -1,30 +1,32 @@
 ---
-title: "catalog.update_master_address (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.update_master_address(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-caps.latest.revision: 1
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5e560d6011370b3d56ba13c86608d2be3d0dc6e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dd052bb7b75c3ea8002a40db3e37ca1e2a0b2788
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogupdatemasteraddress-ssisdb-database"></a>catalog.update_master_address (SSISDB 데이터베이스)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+# <a name="catalogupdatemasteraddress-ssisdb-database"></a>catalog.update_master_address(SSISDB 데이터베이스)
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-업데이트는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 스케일 아웃 마스터 끝점입니다.
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 스케일 아웃 마스터 엔드포인트를 업데이트합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -33,8 +35,8 @@ catalog.update_master_address [@MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>인수
-[ @MasterAddress =] *masterAddress*  
-스케일 아웃 마스터 끝점입니다. *masterAddress* 은 **nvarchar**합니다.  
+[ @MasterAddress = ] *masterAddress*  
+스케일 아웃 마스터 엔드포인트입니다. *masterAddress*는 **nvarchar**입니다.  
 
  ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
@@ -45,8 +47,7 @@ catalog.update_master_address [@MasterAddress = ] masterAddress
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
    
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
  
-

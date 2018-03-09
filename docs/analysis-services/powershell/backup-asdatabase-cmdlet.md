@@ -2,13 +2,13 @@
 title: Backup-asdatabase cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 03d58a82-021c-4e13-b265-c084f42a8bb2
@@ -17,15 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cc648f0ad73c9ed39f49e823fe4293b57ff0d470
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c4b8975c64d8fecd6227368ee0147e94496cb1df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backup-asdatabase-cmdlet"></a>Backup-ASDatabase cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   Analysis Services 백업 파일(.abf)로 Analysis Services 다차원 또는 테이블 형식 데이터베이스 백업  
 
@@ -63,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1.|  
+|위치|1|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
@@ -173,7 +172,7 @@ HTTP 액세스에 대한 자세한 내용은 [IIS&#40;인터넷 정보 서비스
 |입력|Microsoft.AnalysisServices.Database<br /><br /> 백업할 데이터베이스를 여러 개 파이프할 수 있습니다(예: 특정 인스턴스의 모든 데이터베이스 파이프).|  
 |출력|없음|  
   
-## <a name="example-1"></a>예제 1  
+## <a name="example-1"></a>예 1  
   
 ```  
 PS SQLSERVER:\SQLAS\Localhost\default >backup-asdatabase awdb-20110930.abf “Adventure Works” -AllowOverwrite -ApplyCompression  

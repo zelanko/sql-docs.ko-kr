@@ -1,36 +1,37 @@
 ---
 title: "MySQL (MySQLToSQL)에 연결 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 068fe6585eac87830511515a95373a938cbcdca2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb5ded86bf30a942aaece3f7d1404df781c24112
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL (MySQLToSQL)에 연결
 사용 하 여 **MySQL에 연결** 마이그레이션할 MySQL 데이터베이스에 연결 하는 대화 상자.  
   
 이 대화 상자에 액세스 하는 **파일** 메뉴 선택 **MySQL에 연결**합니다. 이 명령은 이전에 연결한 경우 **MySQL에 다시 연결**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **공급자**  
   
 사용 가능한 MySQL 공급자는 MySQL ODBC 5.1 드라이버 (신뢰할 수 있음).  
@@ -47,7 +48,7 @@ MySQL 서버 이름을 입력 합니다. 표준 모드 옵션입니다.
   
 서버 포트를 입력 합니다. 기본 서버 포트는 3306 합니다. 표준 모드 옵션입니다.  
   
-**사용자 이름**  
+**User name**  
   
 SSMA는 MySQL 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
   
@@ -78,4 +79,3 @@ MySQL 통해 SSL Secure Socket Layer ()에 대 한 연결을 구성 하는 옵�
 > -   **확인** 필요한 정보를 제공한 경우 단추를 사용할 수 있습니다. 유효 하지 않으면 파일 경로 있는 "확인" 단추가 비활성화 된 상태로 유지 됩니다.  
 > -   **취소** 단추 대화 상자를 닫습니다 및 **해제** 기본 연결 폼에서 SSL 옵션입니다.  
   
-

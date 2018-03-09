@@ -2,34 +2,32 @@
 title: "데이터 마이닝 솔루션 및 개체 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 486ba5cb40f30921374a4f66040f2a080e4a1152
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4154a0e542ed8e2bc6799dbc3f3c9ecb25ad5f4e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>데이터 마이닝 솔루션 및 개체 관리
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기존 마이닝 구조와 마이닝 모델을 관리하는 데 활용할 수 있는 클라이언트 도구를 제공합니다. 이 섹션에서는 각 환경을 사용하여 수행할 수 있는 관리 작업에 대해 설명합니다.  
   
  이러한 도구 외에도 AMO를 사용하여 프로그래밍 방식으로 데이터 마이닝 개체를 관리하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2007용 데이터 마이닝 추가 기능과 같이 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 데이터베이스에 연결되는 다른 클라이언트를 사용할 수 있습니다.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="location-of-data-mining-objects"></a>데이터 마이닝 개체 위치  
  처리된 마이닝 구조 및 모델은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 저장됩니다.  
   
- 데이터 마이닝 개체를 개발할 때 즉시 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모드에서 **** 데이터베이스에 대한 연결을 설정하는 경우 만드는 모든 개체는 작업하는 동안 서버에 즉시 추가됩니다. 그러나 **** 에서 작업할 때의 기본 설정인 오프라인 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]모드에서 데이터 마이닝 개체를 디자인하는 경우에는 만드는 마이닝 개체가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스로 배포되기 전까지 메타데이터 컨테이너일 뿐입니다. 따라서 개체를 변경할 때마다 해당 개체를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버로 다시 배포해야 합니다. 데이터 마이닝 아키텍처에 대한 자세한 내용은 [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)를 참조하세요.  
+ 데이터 마이닝 개체를 개발할 때 **즉시** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모드에서 데이터베이스에 대한 연결을 설정하는 경우 만드는 모든 개체는 작업하는 동안 서버에 즉시 추가됩니다. 그러나 에서 작업할 때의 기본 설정인 **오프라인** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]모드에서 데이터 마이닝 개체를 디자인하는 경우에는 만드는 마이닝 개체가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스로 배포되기 전까지 메타데이터 컨테이너일 뿐입니다. 따라서 개체를 변경할 때마다 해당 개체를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버로 다시 배포해야 합니다. 데이터 마이닝 아키텍처에 대한 자세한 내용은 [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007용 데이터 마이닝 추가 기능과 같은 일부 클라이언트를 사용하면 인스턴스에 대한 연결을 사용하지만 마이닝 구조 및 모델을 세션 기간 동안만 서버에 저장하는 세션 마이닝 모델 및 마이닝 구조를 만들 수도 있습니다. 이러한 모델도 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 저장된 구조 및 모델과 같이 여전히 클라이언트를 통해 관리할 수 있지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스와의 연결을 끊은 후에는 개체가 유지되지 않습니다.  
@@ -54,13 +52,13 @@ ms.lasthandoff: 09/01/2017
   
  다음 링크에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 데이터 마이닝 개체를 수정하는 방법에 대한 정보를 제공합니다.  
   
--   [마이닝 구조에 사용되는 데이터 원본 뷰 편집](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [마이닝 구조에 사용 되는 데이터 원본 뷰 편집](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [마이닝 구조 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [모델링 플래그 &#40; 데이터 마이닝 &#41; 확인 또는 변경](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [알고리즘 매개 변수 확인 또는 변경](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -106,4 +104,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 개발자 설명서](../../analysis-services/analysis-services-developer-documentation.md)  
   
   
-

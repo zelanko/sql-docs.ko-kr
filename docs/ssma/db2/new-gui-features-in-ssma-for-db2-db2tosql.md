@@ -1,29 +1,30 @@
 ---
 title: "SSMA for d b 2의에서 새로운 GUI 기능 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4735320bb802c86cf0e3eaa563e49fa0542b294b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8745b8f4711c245cfab83329f897b8fef0d8610b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>SSMA for d b 2의에서 새로운 GUI 기능 (DB2ToSQL)
 SSMA 사용자 인터페이스의 새로운 기능을 설명합니다이.  
@@ -132,4 +133,3 @@ GUI 개체 기록 하면 다음과 같은 이점을 개체를 탐색할 때:
 ### <a name="advanced-search"></a>고급 검색  
 편집 메뉴 지점 찾기에서 고급 검색 대화 상자를 열려면 고급 검색을 클릭 합니다. 대화 상자에서 패턴을 사용 하 여 모든 개체를 찾을 수 있습니다. 대화 상자 맨 위에 검색 영역 및 개체 범주를 선택할 수 있습니다.  
   
-

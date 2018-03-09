@@ -1,29 +1,30 @@
 ---
 title: "(DB2ToSQL) 보고서를 생성 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 77bca9dfb3bb5ff1f2d12fc112ae39a4dda4ed15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 74bb5d6044708b0f31cc5ec7a991ca1644367199
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generating-reports-db2tosql"></a>보고서 생성 (DB2ToSQL)
 명령을 사용 하 여 수행 된 특정 작업 보고서는 개체 트리 수준 SSMA 콘솔에 생성 됩니다.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 08/02/2017
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1.|자세한 정보 = "false"|활동의 요약 된 보고서를 생성합니다.|  
+    |1|자세한 정보 = "false"|활동의 요약 된 보고서를 생성합니다.|  
     |2|자세한 정보 = "true"|각 작업에 대 한 요약 및 세부 상태 보고서를 생성합니다.|  
   
     > [!NOTE]  
@@ -65,7 +66,7 @@ ms.lasthandoff: 08/02/2017
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1.|오류 보고 = "false"|오류에 세부 정보 없음 / 경고 / 정보 메시지입니다.|  
+    |1|오류 보고 = "false"|오류에 세부 정보 없음 / 경고 / 정보 메시지입니다.|  
     |2|오류 보고 = "true"|자세한 오류 / 경고 / 정보 메시지입니다.|  
   
     > [!NOTE]  
@@ -145,7 +146,6 @@ ms.lasthandoff: 08/02/2017
   
 -   스크립트 실패  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SSMA 콘솔 실행](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   
-

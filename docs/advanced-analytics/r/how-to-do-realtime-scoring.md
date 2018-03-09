@@ -1,26 +1,27 @@
 ---
 title: "실시간 점수 매기기 또는 SQL Server의 기본 점수 매기기를 수행 하는 방법 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/16/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>실시간 점수 매기기 또는 SQL Server의 기본 점수 매기기를 수행 하는 방법
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에서는 실시간 점수 매기기를 실행 하는 방법 및 SQL Server 2017 및 SQL Server 2016에서 네이티브 점수 매기기 기능에 대 한 지침 및 샘플 코드를 제공 합니다. 작은 규모로 일괄 처리 점수 매기기 작업의 성능을 개선 하기 위해 실시간 점수 매기기와 기본 점수 매기기의 목표가입니다.
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/17/2017
 > SQL Server 2017에 예측 함수를 사용 하는 것이 좋습니다.
 > Sp를 사용 하려면\_rxPredict SQLCLR 통합 사용 하도록 설정 해야 합니다. 이 옵션을 사용 하기 전에 보안 측면을 고려 합니다.
 
-모델을 준비 하 고 점수를 생성 하는 전반적인 프로세스는 매우 유사 합니다.
+모델을 준비 하 고 점수를 생성 하는 전반적인 프로세스는 유사 합니다.
 
 1. 지원 되는 알고리즘을 사용 하 여 모델을 만듭니다.
 2. 특수 이진 형식을 사용 하 여 모델을 직렬화 합니다.
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/17/2017
 
 ### <a name="serialization-and-storage"></a>Serialization 및 저장소
 
-모델에서 점수 매기기 빠른 옵션 중 하나를 사용 하려면 특별 한 직렬화 된 형식, 크기 및 점수 매기기 효율성을 위해 최적화 된 모델을 저장 해야 합니다.
+모델에서 점수 매기기 빠른 옵션 중 하나를 사용 하려면 특별 한 직렬화 된 형식, 크기에 대 한 최적화 된를 사용 하 여 및 효율성을 평가 하는 모델을 저장 합니다.
 
 + 호출 `rxSerializeModel` 지원 되는 모델을 작성 하는 **원시** 형식입니다.
 + 호출 `rxUnserializeModel` 다른 R 코드에서 사용 하기 위해 모델을 다시 구성 하기 위해 또는 모델을 표시 합니다.
@@ -75,7 +76,7 @@ R 코드에서 모델 테이블에 저장 하는 방법은 두 가지 있습니�
 
   `rxWriteObject()` 함수 SQL Server와 같은 ODBC 데이터 소스에서 R 개체를 검색 하거나 SQL server 개체를 쓸 수 있습니다. API는 단순한 키-값 저장소를 기반으로 모델링 합니다.
   
-  이 함수를 사용 하는 경우 먼저 새 serialization 함수를 사용 하 여 모델을 직렬화 해야 합니다. 다음 설정의 *serialize* 에 플래그가 지정 `rxWriteObject` serialization 단계를 반복을 방지 하려면 FALSE로 합니다.
+  이 함수를 사용 하는 경우 먼저 새 serialization 함수를 사용 하 여 모델을 직렬화 해야 합니다. 그런 다음 설정의 *serialize* 인수에 `rxWriteObject` serialization 단계를 반복을 방지 하려면 FALSE로 합니다.
 
 + 원시 형식 파일에 모델을 저장할 수도 있고 SQL Server에 파일에서 읽은 다음 합니다. 이동 하거나 환경 간에 모델을 복사 하는 경우에이 옵션이 유용할 수 있습니다.
 
@@ -125,7 +126,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-다음 코드는 기반으로 모델을 만듭니다는 **iris** 데이터 집합을 모델 테이블에 저장 합니다.
+다음 코드는 기반으로 모델을 만듭니다는 **iris** 데이터 집합 이라는 테이블에 저장 하 고 **모델**합니다.
 
 ```SQL
 DECLARE @model varbinary(max);
@@ -143,7 +144,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> 사용 해야 합니다는 [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) 에서 모델을 저장할 RevoScaleR 함수입니다. 표준 R `serialize` 함수에 필요한 형식을 생성할 수 없습니다.
+> 사용 하 여 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) 에서 모델을 저장할 RevoScaleR 함수입니다. 표준 R `serialize` 함수에 필요한 형식을 생성할 수 없습니다.
 
 이진 형식으로 저장 된 모델을 보려면 다음과 같은 문을 실행할 수 있습니다.
 
@@ -182,7 +183,7 @@ go
 점수 매기기에 사용 하려는 각 데이터베이스에 대해이 기능을 사용 하도록 설정 해야 합니다. 서버 관리자, RevoScaleR 패키지에 포함 되어 있는 명령줄 유틸리티 RegisterRExt.exe를 실행 해야 합니다.
 
 > [!NOTE]
-> 점수 매기기 작업를 사용 하는 실시간 검색 순서로 SQL CLR 기능 인스턴스에서 사용할 수 있어야 하 고 데이터베이스를 신뢰할 수 있음으로 표시 되어야 있어야 합니다. 스크립트를 실행 하면 이러한 작업은 수행 됩니다. 그러나 추가 보안 관련 문제를 고려해 야 합니다.
+> 점수 매기기 작업를 사용 하는 실시간에서 SQL CLR 기능 인스턴스;에서 사용 하도록 설정 해야 또한 데이터베이스를 신뢰할 수 있음으로 표시 되어야 있어야 합니다. 스크립트를 실행 하면 이러한 작업은 수행 됩니다. 그러나이 작업을 수행 하기 전에 추가 보안 관련 문제를 고려해!
 
 1. 관리자 권한 명령 프롬프트를 열고 RegisterRExt.exe가 있는 폴더로 이동 합니다. 기본 설치에서 경로 사용할 수 있습니다.
     
@@ -208,17 +209,17 @@ go
 
 > [!NOTE]
 > 
-> SQL Server 2017 년 1에서 추가 보안 대책은 CLR 통합 문제를 방지 하기 위해 마련 되어 있습니다. 이러한 측정값에는이 저장된 프로시저의 사용에 추가적인 제한을 적용 합니다.
+> SQL Server 2017 년 1에서 추가 보안 대책은 CLR 통합 문제를 방지 하기 위해 마련 되어 있습니다. 이러한 측정값에는이 저장된 프로시저의 사용에 추가적인 제한을 적용 합니다. 
 
 ### <a name="step-2-prepare-and-save-the-model"></a>2단계. 준비 및 모델 저장
 
-Sp에서 요구 하는 이진 형식\_rxPredict 예측에 대 한 동일 하 게 됩니다. 따라서 R 코드에 대 한 호출을 포함 [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)를 지정 해야 하 고 _realtimeScoringOnly_ = TRUE, 다음이 예제와 같이:
+Sp에서 요구 하는 이진 형식\_rxPredict PREDICT 함수를 사용 하는 데 필요한 형식와 같습니다. 따라서 R 코드에 대 한 호출을 포함 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)를 지정 해야 하 고 `realtimeScoringOnly = TRUE`이 예제와 같이,:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### <a name="step-3-call-sprxpredict"></a>3단계. Sp_rxPredict 호출
+### <a name="step-3-call-sprxpredict"></a>3단계. Call sp_rxPredict
 
 Sp 호출\_rxPredict와는 다른 저장 프로시저입니다. 현재 릴리스에서 저장된 프로시저는 두 개의 매개 변수를 사용:  _@model_  이진 형식으로 모델에 대 한 및  _@inputData_  상태 평가에 사용 하는 데이터에 대 한 유효한 SQL 쿼리로 정의 .
 
@@ -227,7 +228,8 @@ Sp 호출\_rxPredict와는 다른 저장 프로시저입니다. 현재 릴리스
 ```SQL
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
-WHERE model_name = 'iris.dtree.model' AND model_version = 'v1''
+WHERE model_name = 'iris.dtree' 
+AND model_version = 'v1''
 
 EXEC sp_rxPredict
 @model = @irismodel,
@@ -255,4 +257,3 @@ EXEC sp_rxPredict
 + [Azureml 모델-관리 sdk를 사용 하 여 웹 서비스로 Python 모델 배포](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [R 코드 블록 또는 실시간 모델을 새 웹 서비스로 게시](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [R에 대 한 mrsdeploy 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
-

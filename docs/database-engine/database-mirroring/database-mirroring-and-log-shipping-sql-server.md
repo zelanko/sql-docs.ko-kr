@@ -2,9 +2,12 @@
 title: "데이터베이스 미러링 및 로그 전달(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c9b4e97b5da12b98fc6d1a4ee362a4a7cb00e70b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 092a000b7b942a3b26a7bafedcc65ed2b19944f7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>데이터베이스 미러링 및 로그 전달(SQL Server)
-  지정된 데이터베이스를 미러링하거나 로그를 전달할 수 있으며 동시에 미러링하고 로그를 전달할 수도 있습니다. 사용할 방법을 선택하려면 다음을 고려합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 지정된 데이터베이스를 미러링하거나 로그를 전달할 수 있으며 동시에 미러링하고 로그를 전달할 수도 있습니다. 사용할 방법을 선택하려면 다음을 고려합니다.  
   
 -   얼마나 많은 대상 서버가 필요하십니까?  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
   
  ![로그 전달 및 데이터베이스 미러링](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "로그 전달 및 데이터베이스 미러링")  
   
- 미러링 장애 조치 후에 보조 서버에서 정의된 기본 서버 이름은 변경되지 않습니다. 를 참조하세요.  
+ 미러링 장애 조치 후에 보조 서버에서 정의된 기본 서버 이름은 변경되지 않습니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>원격 모니터링 인스턴스에서 데이터베이스 미러링의 영향  
  원격 모니터링 인스턴스에 로그 전달이 사용될 때 로그 전달 세션과 데이터베이스 미러링을 함께 사용하면 모니터 테이블의 정보에 영향을 줍니다. 기본 서버에 대한 정보는 주/기본 서버에서 구성된 정보와 각 보조 서버에서 구성된 모니터 정보가 결합된 것입니다.  
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/09/2017
   
      단일 공유를 백업 디렉터리(백업 공유)로 설정해야 합니다. 이렇게 하면 주 서버와 미러 서버 간에 역할이 전환된 후에도 백업 작업은 이전과 동일한 디렉터리에 계속 기록됩니다. 가장 좋은 방법은 미러링 및 로그 전달과 관련된 데이터베이스를 호스팅하는 서버가 아닌 다른 서버에 이 공유를 배치하는 것입니다.  
   
-     자세한 내용은 [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)을 참조하세요.  
+     자세한 내용은 [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)에서 도입되었습니다.  
   
 5.  주 서버에서 미러 서버로 수동 장애 조치  
   

@@ -34,17 +34,16 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - options [SQL Server], date
 ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
-caps.latest.revision: 46
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: 2dfe63f2d59cb3e3a1b563d524693af0d3dd1b51
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.openlocfilehash: fc8cff9f51841d085314f8100550aa35a80a4463
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40; DATEFIRST (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,5 +106,4 @@ SELECT @@DATEFIRST;
 [구성 함수 &#40; Transact SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   
-
 

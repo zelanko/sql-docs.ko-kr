@@ -18,6 +18,7 @@
 ### [웹 페이지에 보고서 뷰어 웹 파트 추가](add-report-viewer-web-part-to-page.md)
 ### [필터 또는 문서 웹 파트 연결](connect-filter-or-documents-web-part-sharepoint-integrated-mode.md)  
 ### [보고서 뷰어 웹 파트 사용자 지정](customize-the-report-viewer-web-part.md)  
+### [보고서 뷰어 웹 파트의 SharePoint 사이트 설정](report-viewer-web-part-sharepoint-site-settings.md)
 # [고가용성](high-availability-reporting-services.md)  
 # [RDL 샌드박스 사용 및 사용 안 함](enable-and-disable-rdl-sandboxing.md)  
 # [주체 대체 이름을 사용하도록 Reporting Services 구성](configure-reporting-services-to-use-a-subject-alternative-name.md)  

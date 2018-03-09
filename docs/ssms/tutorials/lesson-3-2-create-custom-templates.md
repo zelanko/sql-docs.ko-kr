@@ -2,30 +2,36 @@
 title: "사용자 지정 템플릿 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ad5f6304eb8d3e5957cf1d92cfc5a446023137a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>3-2단원 - 사용자 지정 템플릿 만들기
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 함께 많은 일반 태스크에 사용할 템플릿이 제공되지만 템플릿의 진정한 힘은 자주 만들어야 할 복잡한 스크립트의 사용자 지정 템플릿을 만드는 기능에 있습니다. 이 연습에서 소수의 매개 변수가 있는 단순 스크립트를 만들지만 템플릿은 반복되는 긴 스크립트에도 유용합니다.  
   
 ## <a name="using-custom-templates"></a>사용자 지정 템플릿 사용  
@@ -47,7 +53,7 @@ ms.lasthandoff: 11/09/2017
 7.  쿼리 편집기에 다음 스크립트를 입력하여 특정 부품(이 경우 Blade)에 대한 순서를 조회하는 저장 프로시저를 만듭니다. 자습서 창에서 코드를 복사하여 붙여 넣을 수 있습니다.  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -67,11 +73,11 @@ ms.lasthandoff: 11/09/2017
   
 8.  F5 키를 눌러 이 스크립트를 실행하면 **WorkOrdersForBlade** 프로시저가 생성됩니다.  
   
-9. 개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭합니다. 새 쿼리 편집기 창이 열립니다.  
+9. 개체 탐색기에서 **AdventureWorks2012** 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, **새 쿼리**를 클릭합니다. 새 쿼리 편집기 창이 열립니다.  
   
 10. 쿼리 편집기에 **EXECUTE dbo.WorkOrdersForBlade**를 입력한 다음 F5 키를 눌러 쿼리를 실행합니다. **결과** 창에서 Blade에 대한 작업 주문 목록이 반환되는지 확인합니다.  
   
-11. 네 곳에서 제품 이름 Blade를 ***\<*product_name**, **nvarchar(50)**, **name*>*** 매개 변수로 바꾸어 템플릿 스크립트(7단계의 스크립트)를 편집합니다.  
+11. 네 곳에서 제품 이름 Blade를 **\<product_name, nvarchar(50), name>** 매개 변수로 바꾸어 템플릿 스크립트(7단계의 스크립트)를 편집합니다.  
   
     > [!NOTE]  
     > 매개 변수에는 바꾸려는 매개 변수의 이름, 매개 변수의 데이터 형식 및 매개 변수 기본값의 세 가지 요소가 필요합니다.  
@@ -79,7 +85,7 @@ ms.lasthandoff: 11/09/2017
 12. 이제 스크립트는 다음과 같습니다.  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   

@@ -3,8 +3,9 @@ title: "WillConnect 이벤트 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - WillConnect
 - Connection::WillConnect
-helpviewer_keywords: WillConnect event [ADO]
+helpviewer_keywords:
+- WillConnect event [ADO]
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7113fadf60c58478173287f331822798df9aeb63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f80b08a53784a215d58d7f36697207f4d8c3c942
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 이벤트 (ADO)
 **WillConnect** 이벤트 연결을 시작 하기 전에 호출 됩니다.  
@@ -41,10 +43,10 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *연결 문자열*  
+ *ConnectionString*  
  A **문자열** 보류 중인 연결에 대 한 연결 정보가 들어 있는입니다.  
   
- *사용자 Id*  
+ *UserID*  
  A **문자열** 보류 중인 연결에 대 한 사용자 이름이 들어 있는입니다.  
   
  *암호*  

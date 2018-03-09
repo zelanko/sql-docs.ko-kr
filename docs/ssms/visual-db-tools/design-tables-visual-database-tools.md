@@ -3,8 +3,11 @@ title: "테이블 생성 및 업데이트(SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47869f706f615cf32b3a80bcfc872c2aebe7964f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1b693dfa57d72db69a6c4a5edd3545ad216645a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-update-database-tables"></a>데이터베이스 테이블 생성 및 업데이트
-
-테이블 디자이너는 [데이터베이스 테이블](../../relational-databases/tables/tables.md)을 디자인하고 시각화하는 시각적 도구입니다. SSMS(SQL Server Management Studio) 테이블 디자이너를 사용하여 테이블, 열, 키, 인덱스, 관계, 제약 조건 등을 만들거나 편집하거나 삭제합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 테이블 디자이너는 [데이터베이스 테이블](../../relational-databases/tables/tables.md)을 디자인하고 시각화하는 시각적 도구입니다. SSMS(SQL Server Management Studio) 테이블 디자이너를 사용하여 테이블, 열, 키, 인덱스, 관계, 제약 조건 등을 만들거나 편집하거나 삭제합니다.  
 
   
 ## <a name="create-a-table"></a>테이블 만들기  
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/09/2017
 
 1. 디자이너를 닫고 변경 내용을 저장합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [테이블](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f)  
 [테이블 속성&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  

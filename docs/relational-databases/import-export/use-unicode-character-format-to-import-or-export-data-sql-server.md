@@ -2,29 +2,34 @@
 title: "유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 09/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44f3402f2ba874e741c3d191a96535e8204ec368
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c6a9afc3b92d4de54b166e56c745e28898937c59
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
-확장/DBCS 문자를 포함하는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 여러 인스턴스 간에 대량 데이터 전송을 수행하는 경우에는 유니코드 문자 형식을 사용하는 것이 좋습니다. 유니코드 문자 데이터 형식을 사용하면 작업을 수행 중인 클라이언트에서 사용되는 코드 페이지와 다른 코드 페이지를 사용하여 서버에서 데이터를 내보낼 수 있습니다. 이런 경우 유니코드 문자 형식을 사용하면 다음과 같은 이점이 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+확장/DBCS 문자를 포함하는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 여러 인스턴스 간에 대량 데이터 전송을 수행하는 경우에는 유니코드 문자 형식을 사용하는 것이 좋습니다. 유니코드 문자 데이터 형식을 사용하면 작업을 수행 중인 클라이언트에서 사용되는 코드 페이지와 다른 코드 페이지를 사용하여 서버에서 데이터를 내보낼 수 있습니다. 이런 경우 유니코드 문자 형식을 사용하면 다음과 같은 이점이 있습니다.  
   
 * 원본 및 대상 데이터가 유니코드 데이터 형식이면 유니코드 문자 형식을 사용하여 모든 문자 데이터를 보존할 수 있습니다.  
   
@@ -44,7 +49,7 @@ ms.lasthandoff: 11/09/2017
 
 * 기본적으로 [bcp 유틸리티](../../tools/bcp-utility.md)는 탭 문자로 문자 데이터 필드를 구분하며 줄 바꿈 문자로 레코드를 종료합니다.  다른 종결자를 지정하는 방법에 대한 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.
 
-* 유니코드 문자 형식 데이터 파일에 저장되어 있는 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 데이터는 데이터가 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 데이터 대신 [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)로 저장된다는 것을 제외하면 문자 형식 데이터 파일과 같은 방식으로 작동합니다. 문자 형식에 대한 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하십시오.  
+* 유니코드 문자 형식 데이터 파일에 저장되어 있는 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 데이터는 데이터가 [char](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 데이터 대신 [nchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) 로 저장된다는 것을 제외하면 문자 형식 데이터 파일과 같은 방식으로 작동합니다. 문자 형식에 대한 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하십시오.  
 
 ## 유니코드 문자 형식, bcp 및 서식 파일 사용 시 특별 고려 사항<a name="special_considerations"></a>
 유니코드 문자 형식 데이터 파일은 유니코드 파일의 규칙을 따릅니다.  파일의 처음 두 바이트는 16진수 0xFFFE입니다.  이 두 바이트는 바이트 순서 표시(BOM)로서 제공되며 높은 순서 바이트가 파일의 처음에 저장될지 마지막에 저장될지를 지정합니다.  [bcp 유틸리티](../../tools/bcp-utility.md) 에서 BOM을 잘못 해석하여 가져오기 프로세스의 일부가 실패하고 다음과 유사한 오류 메시지가 표시될 수 있습니다.
@@ -83,7 +88,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
   
 다음 명령 옵션에서 유니코드 문자 형식을 사용할 수 있습니다.  
   
-|Command|옵션|설명|  
+|Command|옵션|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|유니코드 문자 형식을 사용합니다.|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|대량으로 데이터를 가져올 때 유니코드 문자 형식을 사용합니다.|  
@@ -243,6 +248,6 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET 옵션 (Transact SQL) | Microsoft Docs"
 description: "자동 튜닝, 암호화, SQL Server 및 Azure SQL 데이터베이스에서 쿼리 저장소와 같은 데이터베이스 옵션을 설정 하는 방법에 알아보기"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -28,18 +28,19 @@ helpviewer_keywords:
 - checksums [SQL Server]
 - automatic tuning
 - SQL plan regression correction
+- auto_create_statistics
+- auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 159
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5dbb93a69c6f8194c2d17eb982fae1ba15d4a522
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 09/27/2017
 데이터베이스 미러링 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], 호환성 수준은 및 `SET` 옵션 이지만에 설명 되어 별도 항목으로 합니다. 자세한 내용은 참조 [ALTER 데이터베이스 데이터베이스 미러링 &#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET hadr&#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), 및 [ALTER DATABASE 호환성 수준 &#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
->  사용 하 여 현재 세션에 대 한 많은 데이터베이스 설정 옵션을 구성할 수 있습니다 [SET 문 &#40; Transact SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md) 연결할 때 응용 프로그램에서 자주 구성 됩니다. 세션 수준 설정 옵션은 **ALTER DATABASE SET** 값을 재정의합니다. 아래에 설명된 데이터베이스 옵션은 다른 설정 옵션 값을 명시적으로 제공하지 않는 세션에 대해 설정할 수 있는 값입니다.  
+> 사용 하 여 현재 세션에 대 한 많은 데이터베이스 설정 옵션을 구성할 수 있습니다 [SET 문 &#40; Transact SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md) 연결할 때 응용 프로그램에서 자주 구성 됩니다. 세션 수준 설정 옵션은 **ALTER DATABASE SET** 값을 재정의합니다. 아래에 설명된 데이터베이스 옵션은 다른 설정 옵션 값을 명시적으로 제공하지 않는 세션에 대해 설정할 수 있는 값입니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -249,7 +250,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -279,8 +280,7 @@ SET
  **\<auto_option >:: =**  
   
  자동 옵션을 제어합니다.  
-  
- AUTO_CLOSE { ON | OFF }  
+ <a name="auto_close"></a>AUTO_CLOSE {ON | OFF}  
  ON  
  마지막 사용자가 사용을 끝낸 후 데이터베이스가 종료되고 해당 리소스가 해제됩니다.  
   
@@ -303,8 +303,8 @@ SET
 >  데이터베이스 미러링을 위해서는 AUTO_CLOSE가 OFF로 설정되어 있어야 합니다.  
   
  데이터베이스가 AUTOCLOSE = ON으로 설정되어 있으면 자동 데이터베이스 종료를 시작하는 작업이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시를 삭제합니다. 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2 이상에서는 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "데이터베이스 유지 관리 또는 재구성 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.  
-  
- AUTO_CREATE_STATISTICS { ON | OFF }  
+ 
+ <a name="auto_create_statistics"></a>AUTO_CREATE_STATISTICS {ON | OFF}  
  ON  
  쿼리 최적화 프로그램에서 필요에 따라 쿼리 조건자의 단일 열에 대한 통계를 생성하여 쿼리 계획 및 쿼리 성능을 향상시킵니다. 쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 이러한 단일 열 통계가 생성됩니다. 단일 열 통계는 기존 통계 개체의 첫 번째 열이 아닌 열에 대해서만 생성됩니다.  
   
@@ -322,7 +322,7 @@ SET
   
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
- AUTO_SHRINK { ON | OFF }  
+ <a name="auto_shrink"></a>AUTO_SHRINK {ON | OFF}  
  ON  
  데이터베이스 파일이 주기적인 축소의 후보가 됩니다.  
   
@@ -338,9 +338,9 @@ SET
  이 옵션의 상태는 sys.databases 카탈로그 뷰의 is_auto_shrink_on 열 또는 DATABASEPROPERTYEX 함수의 IsAutoShrink 속성을 검사하여 확인할 수 있습니다.  
   
 > [!NOTE]  
->  포함된 데이터베이스에서는 AUTO_SHRINK 옵션을 사용할 수 없습니다.  
+> 포함된 데이터베이스에서는 AUTO_SHRINK 옵션을 사용할 수 없습니다.  
   
- AUTO_UPDATE_STATISTICS { ON | OFF }  
+ <a name="auto_update_statistics"></a>AUTO_UPDATE_STATISTICS {ON | OFF}  
  ON  
  쿼리에서 통계를 사용하거나 통계가 최신이 아닐 때 쿼리 최적화 프로그램에서 통계를 업데이트하도록 지정합니다. 삽입, 업데이트, 삭제 또는 병합 작업을 통해 테이블이나 인덱싱된 뷰의 데이터 분포가 변경되면 통계 내용이 더 이상 최신이 아니게 됩니다. 쿼리 최적화 프로그램은 마지막 통계 업데이트 이후 데이터 수정 개수를 계산한 다음 이 수를 임계값과 비교하여 통계가 최신이 아니게 된 시점을 결정합니다. 임계값은 테이블 또는 인덱싱된 뷰의 행 수를 기준으로 합니다.  
   
@@ -359,7 +359,7 @@ SET
   
  자세한 내용은 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조 [통계](../../relational-databases/statistics/statistics.md)합니다.  
   
- AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
+ <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC {ON | OFF}  
  ON  
  AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 비동기로 지정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 통계 업데이트가 완료될 때까지 기다리지 않습니다.  
   
@@ -376,7 +376,7 @@ SET
   
  동기 또는 비동기 통계 업데이트를 사용 하는 경우를 설명 하는 자세한 내용은 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조 [통계](../../relational-databases/statistics/statistics.md)합니다.  
   
- **\<automatic_tuning_option >:: =**  
+ <a name="auto_tuning"></a> **\<automatic_tuning_option >:: =**  
  **적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
 
  설정 하거나 해제 `FORCE_LAST_GOOD_PLAN` [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md) 옵션입니다.  
@@ -386,11 +386,11 @@ SET
  [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 에서 마지막 알려진된 좋은 계획을 자동으로 강제는 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 새 SQL 계획 한 성능 저하가 발생 하는 위치 쿼리 합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 계속 해 서의 쿼리 성능을 모니터링 하는 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 강제 계획을 사용 하 여 쿼리 합니다. 성능 향상이 없으면는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 는 마지막 알려진된 좋은 계획에 사용 하 여 계속 합니다. 성능 향상, 검색 되지 않는 경우는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 새 SQL 계획을 생성 합니다. 쿼리 저장소를 사용 하지 않는 경우 또는 없는 경우 문이 실패 합니다 *읽기 / 쓰기* 모드입니다.   
 
  OFF  
- [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 에 SQL 계획 변경으로 인 한 잠재적 쿼리 성능 저하 보고 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 보기. 그러나 이러한 권장 사항은 자동으로 적용 되지 않습니다. 사용자에 적용 하 여 활성 권장 사항 및 문제를 식별 하는 해결을 모니터링할 수 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 보기에 표시 되는 스크립트입니다. 이 값은 기본값입니다.
+ [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 에 SQL 계획 변경으로 인 한 잠재적 쿼리 성능 저하 보고 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 보기. 그러나 이러한 권장 사항은 자동으로 적용 되지 않습니다. 사용자에 적용 하 여 활성 권장 사항 및 문제를 식별 하는 해결을 모니터링할 수 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 보기에 표시 되는 스크립트입니다. 이것은 기본값입니다.
 
  **\<change_tracking_option >:: =**  
   
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]합니다.  
   
  변경 내용 추적 옵션을 제어합니다. 변경 내용 추적을 설정 또는 해제하고 옵션을 설정 또는 변경할 수 있습니다. 예를 보려면 이 항목의 뒤 부분에 나오는 예 섹션을 참조하십시오.  
   
@@ -428,7 +428,7 @@ SET
  데이터베이스가 포함된 데이터베이스입니다. 데이터베이스에 복제, 변경 데이터 캡처 또는 변경 내용 추적을 사용하도록 설정되어 있는 경우 데이터베이스를 부분적으로 포함된 데이터베이스로 설정하면 실패합니다. 실패 후에는 오류 검사가 중지됩니다. 포함된 데이터베이스에 대한 자세한 내용은 [Contained Databases](../../relational-databases/databases/contained-databases.md)를 참조하십시오.  
   
 > [!NOTE]  
->  Containment에서 구성할 수 없는 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다. 포함을 명시적으로 지정 하지 않을 하지만 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 사용자와 같은 포함 된 포함 된 기능을 사용할 수 있습니다.  
+> Containment에서 구성할 수 없는 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다. 포함을 명시적으로 지정 하지 않을 하지만 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 사용자와 같은 포함 된 포함 된 기능을 사용할 수 있습니다.  
   
  **\<cursor_option >:: =**  
   
@@ -446,7 +446,7 @@ SET
  이 옵션의 상태는 sys.databases 카탈로그 뷰의 is_cursor_close_on_commit_on 열 또는 DATABASEPROPERTYEX 함수의 IsCloseCursorsOnCommitEnabled 속성을 검사하여 확인할 수 있습니다.  
   
  CURSOR_DEFAULT { LOCAL | GLOBAL }  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
  커서 범위가 LOCAL인지 GLOBAL인지 여부를 제어합니다.  
   
@@ -462,13 +462,13 @@ SET
   
  **\<database_mirroring >**  
   
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
  인수 설명에 대 한 참조 [ALTER 데이터베이스 데이터베이스 미러링 &#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
   
  **\<date_correlation_optimization_option >:: =**  
   
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
  date_correlation_optimization 옵션을 제어합니다.  
   
@@ -496,7 +496,7 @@ SET
   
  **\<db_state_option >:: =**  
   
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
  데이터베이스의 상태를 제어합니다.  
   
@@ -510,7 +510,7 @@ SET
  데이터베이스가 READ_ONLY로 표시되고 로깅이 비활성화되며 sysadmin 고정 서버 역할의 멤버로 액세스가 제한됩니다. EMERGENCY는 주로 문제 해결을 위해 사용됩니다. 예를 들어 손상된 로그 파일로 인해 주의 대상으로 표시된 데이터베이스를 EMERGENCY 상태로 설정할 수 있습니다. 이 경우 시스템 관리자는 읽기 전용으로 데이터베이스에 액세스할 수 있습니다. sysadmin 고정 서버 역할의 멤버만 데이터베이스를 EMERGENCY 상태로 설정할 수 있습니다.  
   
 > [!NOTE]  
->  **사용 권한:** 데이터베이스를 오프 라인 또는 응급 상태로 변경 하려면 주제 데이터베이스에 대 한 ALTER DATABASE 권한이 필요 합니다. 데이터베이스를 오프라인 상태에서 온라인 상태로 전환하려면 서버 수준 ALTER ANY DATABASE 권한이 필요합니다.  
+> **사용 권한:** 데이터베이스를 오프 라인 또는 응급 상태로 변경 하려면 주제 데이터베이스에 대 한 ALTER DATABASE 권한이 필요 합니다. 데이터베이스를 오프라인 상태에서 온라인 상태로 전환하려면 서버 수준 ALTER ANY DATABASE 권한이 필요합니다.  
   
  상태 및 state_desc 열을 검사 하 여이 옵션의 상태를 확인할 수 있습니다는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰 또는의 Status 속성은 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수입니다. 자세한 내용은 [Database States](../../relational-databases/databases/database-states.md)을 참조하세요.  
   
@@ -532,14 +532,14 @@ SET
  이 상태를 변경하려면 데이터베이스에 대해 배타적 액세스 권한이 있어야 합니다. 자세한 내용은 SINGLE_USER 절을 참조하십시오.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 연결된 데이터베이스에서 SET { READ_ONLY | READ_WRITE }는 해제됩니다.  
+> [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 연결된 데이터베이스에서 SET { READ_ONLY | READ_WRITE }는 해제됩니다.  
   
  **\<db_user_access_option >:: =**  
   
  데이터베이스에 대한 사용자 액세스를 제어합니다.  
   
  SINGLE_USER  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
  한 번에 한 사용자만 데이터베이스에 액세스할 수 있도록 지정합니다. SINGLE_USER가 지정된 상태에서 다른 사용자들이 데이터베이스에 연결되어 있는 경우 모든 사용자가 지정된 데이터베이스와의 연결을 끊을 때까지 ALTER DATABASE 문이 차단됩니다. 이 동작을 재정의 하려면 참조는 WITH \<종료 > 절.  
   
@@ -578,7 +578,7 @@ MULTI_USER
   
  **\<external_access_option >:: =**  
   
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
  다른 데이터베이스의 개체와 같은 외부 리소스에서 데이터베이스에 액세스할 수 있는지 여부를 제어합니다.  
   
@@ -590,7 +590,7 @@ MULTI_USER
  데이터베이스가 데이터베이스 간 소유권 체인에 참여할 수 없습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 cross db ownership chaining 서버 옵션이 0(OFF)일 때 이 설정을 인식할 수 있습니다. cross db ownership chaining이 1(ON)이면 모든 사용자 데이터베이스는 이 옵션 값에 관계없이 데이터베이스 간 소유권 체인에 참여할 수 있습니다. 이 옵션을 사용 하 여 설정 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)합니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 cross db ownership chaining 서버 옵션이 0(OFF)일 때 이 설정을 인식할 수 있습니다. cross db ownership chaining이 1(ON)이면 모든 사용자 데이터베이스는 이 옵션 값에 관계없이 데이터베이스 간 소유권 체인에 참여할 수 있습니다. 이 옵션을 사용 하 여 설정 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)합니다.  
   
  이 옵션을 설정 하려면 데이터베이스에 대 한 CONTROL SERVER 권한이 필요 합니다.  
   
@@ -662,7 +662,7 @@ MULTI_USER
   
  **\<HADR_options >:: =**  
   
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
  참조 [ALTER DATABASE SET hadr&#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
@@ -673,7 +673,7 @@ MULTI_USER
  MIXED_PAGE_ALLOCATION {OFF | 여부} 컨트롤에 데이터베이스 혼합된 익스텐트를 사용 하 여 테이블이 나 인덱스의 첫 8 페이지에 대 한 초기 페이지 만들 수 있습니다.  
   
  OFF  
- 데이터베이스는 항상 단일 익스텐트를 사용 하 여 초기 페이지를 만듭니다. 이 값은 기본값입니다.  
+ 데이터베이스는 항상 단일 익스텐트를 사용 하 여 초기 페이지를 만듭니다. 이것은 기본값입니다.  
   
  ON  
  데이터베이스 혼합된 익스텐트를 사용 하 여 초기 페이지를 만들 수 있습니다.  
@@ -695,7 +695,7 @@ MULTI_USER
   
  **\<query_store_options >:: =**  
   
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  ON | OFF | CLEAR [ ALL ]  
  이 데이터베이스에서 쿼리 저장소를 사용 여부를 제어하고 쿼리 저장소의 내용 제거를 제어합니다.  
@@ -704,7 +704,7 @@ ON
  쿼리 저장소를 사용 하도록 설정 합니다.  
   
 OFF  
- 쿼리 저장소를 사용 하지 않도록 설정 합니다.  이 값은 기본값입니다.   
+ 쿼리 저장소를 사용 하지 않도록 설정 합니다.  이것은 기본값입니다.   
   
 CLEAR  
  쿼리 저장소의 콘텐츠를 제거 합니다.  
@@ -765,7 +765,7 @@ OPERATION_MODE
  최소 로그 공간을 사용하는 단순 백업 전략을 제공합니다. 서버 오류 복구에 더 이상 필요 없는 로그 공간은 자동으로 재사용됩니다. 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  단순 복구 모델은 다른 두 모델보다 관리하기는 쉽지만 데이터 파일이 손상된 경우 데이터 손실 위험은 더 큽니다. 최신 데이터베이스 또는 차등 데이터베이스 백업이 손실된 이후의 변경 사항은 모두 수동으로 다시 입력해야 합니다.  
+> 단순 복구 모델은 다른 두 모델보다 관리하기는 쉽지만 데이터 파일이 손상된 경우 데이터 손실 위험은 더 큽니다. 최신 데이터베이스 또는 차등 데이터베이스 백업이 손실된 이후의 변경 사항은 모두 수동으로 다시 입력해야 합니다.  
   
  기본 복구 모델은 **model** 데이터베이스의 복구 모델에 의해 결정됩니다. 적절 한 복구 모델을 선택 하는 방법에 대 한 자세한 내용은 참조 [복구 모델 &#40; SQL Server &#41; ](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
@@ -779,9 +779,9 @@ OPERATION_MODE
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 완료되지 않은 페이지를 검색할 수 없습니다.  
   
 > [!IMPORTANT]  
->  TORN_PAGE_DETECTION ON | OFF 구문 구조는 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 제거될 예정입니다. 새 개발 작업에서는 이 구문 구조를 사용하지 않도록 하고 현재 이 구문 구조를 사용하는 응용 프로그램은 수정하십시오. 대신 PAGE_VERIFY 옵션을 사용하십시오.  
+> TORN_PAGE_DETECTION ON | OFF 구문 구조는 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 제거될 예정입니다. 새 개발 작업에서는 이 구문 구조를 사용하지 않도록 하고 현재 이 구문 구조를 사용하는 응용 프로그램은 수정하십시오. 대신 PAGE_VERIFY 옵션을 사용하십시오.  
   
- PAGE_VERIFY { CHECKSUM | TORN_PAGE_DETECTION | NONE }  
+<a name="page_verify"></a>PAGE_VERIFY {체크섬 | TORN_PAGE_DETECTION | NONE}  
  디스크 I/O 경로 오류로 인해 손상된 데이터베이스 페이지를 찾습니다. 디스크 I/O 경로 오류는 일반적으로 페이지를 디스크에 쓸 때 전원 오류나 디스크 하드웨어 오류로 인해 발생하며 데이터베이스 손상 문제를 일으킬 수 있습니다.  
   
  CHECKSUM  
@@ -800,7 +800,7 @@ OPERATION_MODE
 -   사용자 또는 시스템 데이터베이스를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드하는 경우 PAGE_VERIFY 값(NONE 또는 TORN_PAGE_DETECTION)이 유지됩니다. CHECKSUM을 사용하는 것이 좋습니다.  
   
     > [!NOTE]  
-    >  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 tempdb 데이터베이스의 PAGE_VERIFY 데이터베이스 옵션이 NONE으로 설정되며 수정할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 tempdb 데이터베이스에 대 한 기본값은 CHECKSUM을 새로 설치 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 업그레이드하면 기본값이 NONE으로 유지됩니다. 이 옵션은 수정할 수 없습니다. tempdb 데이터베이스에는 CHECKSUM을 사용하는 것이 좋습니다.  
+    > 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 tempdb 데이터베이스의 PAGE_VERIFY 데이터베이스 옵션이 NONE으로 설정되며 수정할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 tempdb 데이터베이스에 대 한 기본값은 CHECKSUM을 새로 설치 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 업그레이드하면 기본값이 NONE으로 유지됩니다. 이 옵션은 수정할 수 없습니다. tempdb 데이터베이스에는 CHECKSUM을 사용하는 것이 좋습니다.  
   
 -   TORN_PAGE_DETECTION은 리소스는 덜 사용하지만 CHECKSUM 보호를 최소한으로 제공합니다.  
   
@@ -812,9 +812,9 @@ OPERATION_MODE
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 체크섬, 조각난 페이지 또는 기타 I/O 오류로 읽기가 실패할 경우 4번 다시 시도합니다. 다시 시도 중에 한 번이라도 읽기가 성공하면 오류 로그에 메시지가 기록되고 해당 읽기를 트리거한 명령이 계속 수행됩니다. 다시 시도가 실패하면 824 오류 메시지와 함께 명령이 실패합니다.  
   
- 체크섬, 조각난된 페이지, 읽기 다시 시도 하는 방법에 대 한 자세한 내용은 오류 메시지 823 및 824 및 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I/O 감사 기능 참조 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=47160)합니다.  
+ 오류 메시지 823, 824 및 825에 대 한 자세한 내용은 참조 [SQL Server에서 메시지 823 오류 문제를 해결 하는 방법을](http://support.microsoft.com/help/2015755), [SQL Server에서 메시지 824 문제를 해결 하는 방법을](http://support.microsoft.com/help/2015756) 및 [메시지 825를 해결 하는 방법 &#40; 읽기 다시 시도 &#41; SQL Server에서](http://support.microsoft.com/help/2015757)합니다.
   
- 이 옵션의 현재 설정을 page_verify_option 열을 검사 하 여 확인할 수 있습니다는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰 또는 IsTornPageDetectionEnabled 속성을는 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)함수입니다.  
+ 이 옵션의 현재 설정을 검사 하 여 확인할 수 있습니다는 *page_verify_option* 열에는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰 또는 *IsTornPageDetectionEnabled*의 속성은 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수입니다.  
   
 **\<remote_data_archive_option >:: =**  
   
@@ -930,10 +930,10 @@ FEDERATED_SERVICE_ACCOUNT = ON | 해제
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
  ON  
- 트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준(예: READ COMMITTED 또는 READ UNCOMMITTED)으로 설정된 경우 메모리 액세스에 최적화된 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 수행됩니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되었는지에 관계없이 수행됩니다.  
+ 트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준(예: READ COMMITTED 또는 READ UNCOMMITTED)으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 수행됩니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되었는지에 관계없이 수행됩니다.  
   
  OFF  
- 메모리 액세스에 최적화된 테이블에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 대해 트랜잭션 격리 수준을 승격하지 않습니다.  
+ 메모리 최적화 테이블에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 대해 트랜잭션 격리 수준을 승격하지 않습니다.  
   
  데이터베이스가 OFFLINE인 경우 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT의 상태를 변경할 수 없습니다.  
   
@@ -1020,7 +1020,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | 해제
   
  이 옵션의 상태는 sys.databases 카탈로그 뷰의 is_arithabort_on 열 또는 DATABASEPROPERTYEX 함수의 IsArithmeticAbortEnabled 속성을 검사하여 확인할 수 있습니다.  
   
- COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
+ COMPATIBILITY_LEVEL = {90 | 100 | 110 | 120 | 130 | 140}  
  자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1125,21 +1125,21 @@ FEDERATED_SERVICE_ACCOUNT = ON | 해제
 |\<db_user_access_option >|예|예|  
 |\<db_update_option >|예|예|  
 |\<delayed_durability_option >|예|예|  
-|\<external_access_option >|예|아니요|  
-|\<cursor_option >|예|아니요|  
-|\<auto_option >|예|아니요|  
-|\<sql_option >|예|아니요|  
-|\<recovery_option >|예|아니요|  
-|\<target_recovery_time_option >|아니요|예|  
-|\<문당 >|아니요|아니요|  
-|ALLOW_SNAPSHOT_ISOLATION|아니요|아니요|  
-|READ_COMMITTED_SNAPSHOT|아니요|예|  
+|\<external_access_option >|예|아니오|  
+|\<cursor_option >|예|아니오|  
+|\<auto_option >|예|아니오|  
+|\<sql_option >|예|아니오|  
+|\<recovery_option >|예|아니오|  
+|\<target_recovery_time_option >|아니오|예|  
+|\<문당 >|아니오|아니오|  
+|ALLOW_SNAPSHOT_ISOLATION|아니오|아니오|  
+|READ_COMMITTED_SNAPSHOT|아니오|예|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|  
-|\<다음과 >|예|아니요|  
+|\<다음과 >|예|아니오|  
 |DATE_CORRELATION_OPTIMIZATION|예|예|  
 |\<parameterization_option >|예|예|  
 |\<change_tracking_option >|예|예|  
-|\<db_encryption >|예|아니요|  
+|\<db_encryption >|예|아니오|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대한 계획 캐시는 다음 옵션 중 하나를 설정하여 삭제됩니다.  
   
@@ -1225,9 +1225,9 @@ GO
   
  결과 집합은 스냅숏 격리 프레임워크가 활성화되었음을 보여 줍니다.  
   
- |name |snapshot_isolation_state |description|  
+ |NAME |snapshot_isolation_state |description|  
  |-------------------- |------------------------  |----------|  
- |AdventureWorks2012   |1.                        | ON |  
+ |AdventureWorks2012   |1                        | ON |  
   
 ### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>4. 변경 내용 추적 설정, 수정 및 해제  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2`일로 설정합니다.  
@@ -1253,7 +1253,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>5. 쿼리 저장소를 사용하도록 설정  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.  
   
@@ -1261,11 +1261,11 @@ SET CHANGE_TRACKING = OFF;
 ALTER DATABASE AdventureWorks2012  
 SET QUERY_STORE = ON   
     (  
-      OPERATION_MODE = READ_ONLY   
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 5 )  
-    , DATA_FLUSH_INTERVAL_SECONDS = 2000   
-    , MAX_STORAGE_SIZE_MB = 10   
-    , INTERVAL_LENGTH_MINUTES = 10   
+      OPERATION_MODE = READ_WRITE   
+    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )  
+    , DATA_FLUSH_INTERVAL_SECONDS = 900   
+    , MAX_STORAGE_SIZE_MB = 1024   
+    , INTERVAL_LENGTH_MINUTES = 60   
     );  
 ```  
   
@@ -1281,7 +1281,6 @@ SET QUERY_STORE = ON
  [SET TRANSACTION ISOLATION level&#40; Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.data_spaces &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ [sys.data_spaces &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-  
-

@@ -3,7 +3,7 @@ title: "ADO MD DimensionCount 속성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - DimensionCount property [ADO MD]
 ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 216dfe635d141cf93d422e725992a9207a23713c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 994982c9c5f2703636cc1d8e4eb5e218a13a65ac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dimensioncount-property-ado-md"></a>ADO MD DimensionCount 속성
 차원 수를 나타내는 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md)합니다.  
@@ -43,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [축 예 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Dimension 개체(ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)
-

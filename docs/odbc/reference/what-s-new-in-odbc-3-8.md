@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 463da92c55e4d00285d5348eabb7d8480e3cc073
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 309d575f63a776e90f32ba45239ecbd67771d250
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-odbc-38"></a>기능 &#39;의 새로운 ODBC 3.8
 Windows 8에는 업데이트 된 버전의 ODBC 3.8 포함 되어 있습니다. Windows 8에서 ODBC 3.8는 다음과 같은 기능이 포함 되어 있습니다.  
@@ -52,4 +50,3 @@ Windows 8에는 업데이트 된 버전의 ODBC 3.8 포함 되어 있습니다. 
   
 ## <a name="see-also"></a>관련 항목:  
  [ODBC 프로그래머 참조](../../odbc/reference/odbc-programmer-s-reference.md)
-

@@ -1,16 +1,14 @@
 ---
 title: "AMO OLAP 기본 개체 프로그래밍 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 30
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1f3b03ad50bf5921217c4313909c050a5afe6acf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eaca145753958228bdecae9b7bdcb2ebcdb8b6cb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 기본 개체 프로그래밍
   복합 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 만드는 과정은 간단하지만 세부 사항에 주의를 기울여야 합니다. 이 항목에서는 OLAP 기본 개체를 프로그래밍하는 방법에 대해 자세히 설명합니다. 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -46,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [Aggregation 개체](#AD)  
   
-##  <a name="Dim"></a>차원 개체  
+##  <a name="Dim"></a> 차원 개체  
  차원을 관리하거나 처리하려면 <xref:Microsoft.AnalysisServices.Dimension> 개체를 프로그래밍하십시오.  
   
 ### <a name="creating-dropping-and-finding-a-dimension"></a>차원 만들기, 삭제 및 찾기  
@@ -183,7 +180,7 @@ static void UpdateAllDimensions(Database db)
 }  
 ```  
   
-##  <a name="Cub"></a>큐브 개체  
+##  <a name="Cub"></a> 큐브 개체  
  큐브를 관리하거나 처리하려면 <xref:Microsoft.AnalysisServices.Cube> 개체를 프로그래밍하십시오.  
   
 ### <a name="creating-dropping-and-finding-a-cube"></a>큐브 만들기, 삭제 및 찾기  
@@ -268,7 +265,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG"></a>MeasureGroup 개체  
+##  <a name="MG">MeasureGroup 개체</a>  
  측정값 그룹을 관리하거나 처리하려면 <xref:Microsoft.AnalysisServices.MeasureGroup> 개체를 프로그래밍하십시오.  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>MeasureGroup 만들기, 삭제 및 찾기  
@@ -437,7 +434,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part"></a>파티션 개체  
+##  <a name="Part">파티션 개체</a>  
  파티션을 관리하거나 처리하려면 <xref:Microsoft.AnalysisServices.Partition> 개체를 프로그래밍하십시오.  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>파티션 만들기, 삭제 및 찾기  
@@ -488,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 }  
 ```  
   
-###  <a name="ProcPart"></a>파티션 처리  
+###  <a name="ProcPart"></a> 파티션 처리  
  파티션을 처리하는 과정은 <xref:Microsoft.AnalysisServices.Partition> 개체의 Process 메서드를 사용하는 것과 마찬가지로 간단합니다.  
   
  처리 옵션에 대 한 자세한 내용은 참조 하세요. [처리 개체 &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md) 및 [다차원 모델 &#40; 처리 Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
@@ -536,7 +533,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD"></a>Aggregation 개체  
+##  <a name="AD">Aggregation 개체</a>  
  집계를 디자인하여 하나 이상의 파티션에 적용하려면 <xref:Microsoft.AnalysisServices.Aggregation> 개체를 프로그래밍하십시오.  
   
 ### <a name="creating-and-dropping-aggregations"></a>집계 만들기 및 삭제  
@@ -582,4 +579,3 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  [Analysis Services 다차원 모델링 자습서에 대 한 예제 데이터 및 프로젝트 설치](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
-

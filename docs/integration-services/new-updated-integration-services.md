@@ -1,32 +1,22 @@
 ---
-title: "SQL Server 문서에 대 한 통합 서비스는 업데이트-| Microsoft Docs"
-description: "코드 조각에 최근에 변경 된 설명서, Microsoft SQL server Integration Services에 대 한 업데이트 된 콘텐츠를 표시 합니다."
-services: na
-documentationcenter: 
+title: "업데이트된 기능 - SQL Server Integration Services 문서 | Microsoft Docs"
+description: "Microsoft SQL Server Integration Services 설명서에서 최근에 변경되어 업데이트된 내용의 코드 조각을 표시합니다."
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.service: 
-ms.component: integration-services
-ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: 
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: integration-services
 ms.author: genemi
-ms.workload: integration-services
-ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3c5da14b7a65f8a3eb1eb253d685a146d813868a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: ssis
+ms.date: 02/03/2018
+ms.openlocfilehash: 8bfcdc3fb1033620d351ecaee2c79910c475dd94
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL server Integration Services
+# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>새로운 기능 및 최근에 업데이트된 기능: SQL Server Integration Services
 
 
 
@@ -38,8 +28,8 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *날짜 범위 업데이트:* &nbsp; **2017-09-11** &nbsp; 을 아래와 같이 &nbsp; **2017-09-27**
-- *주제 영역:* &nbsp; **for SQL Server Integration Services**합니다.
+- *업데이트 날짜 범위:*  &nbsp; **2017-12-03** &nbsp;부터 &nbsp; **2018-02-03**까지
+- *주제 영역:* &nbsp; **SQL Server Integration Services**.
 
 
 
@@ -51,23 +41,18 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-1. [Azure에서 SSISDB 카탈로그 데이터베이스에 연결](lift-shift/ssis-azure-connect-to-catalog-database.md)
-2. [Windows 인증을 사용 하는 온-프레미스 데이터 원본에 연결](lift-shift/ssis-azure-connect-with-windows-auth.md)
-3. [배포, 실행 및 Azure에서 SSIS 패키지를 모니터링 합니다.](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-4. [SQL Server Integration Services 작업에서 클라우드로 이동할](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-5. [Azure에서 SSIS 패키지의 실행 일정](lift-shift/ssis-azure-schedule-packages.md)
-6. [ISDeploymentWizard.exe 사용 하 여 명령 프롬프트에서 SSIS 프로젝트 배포](ssis-quickstart-deploy-cmdline.md)
-7. [.NET 응용 프로그램에서 C# 코드가 사용 된 SSIS 프로젝트 배포](ssis-quickstart-deploy-dotnet.md)
-8. [PowerShell과 함께 SSIS 프로젝트 배포](ssis-quickstart-deploy-powershell.md)
-9. [SQL Server Management Studio (SSMS)와 SSIS 프로젝트 배포](ssis-quickstart-deploy-ssms.md)
-10. [TRANSACT-SQL로 SSMS에서 SSIS 프로젝트 배포](ssis-quickstart-deploy-tsql-ssms.md)
-11. [Transact SQL을 사용한 Visual Studio Code에서 SSIS 프로젝트 배포](ssis-quickstart-deploy-tsql-vscode.md)
-12. [DTExec.exe 사용 하 여 명령 프롬프트에서 SSIS 패키지를 실행 합니다.](ssis-quickstart-run-cmdline.md)
-13. [.NET 응용 프로그램에서 C# 코드가 사용 된 SSIS 패키지 실행](ssis-quickstart-run-dotnet.md)
-14. [PowerShell에서 SSIS 패키지 실행](ssis-quickstart-run-powershell.md)
-15. [SQL Server Management Studio (SSMS)를 SSIS 패키지를 실행 합니다.](ssis-quickstart-run-ssms.md)
-16. [TRANSACT-SQL로 SSMS에서 SSIS 패키지를 실행 합니다.](ssis-quickstart-run-tsql-ssms.md)
-17. [Transact SQL을 사용한 Visual Studio Code에서 SSIS 패키지를 실행 합니다.](ssis-quickstart-run-tsql-vscode.md)
+1. [모든 보안 주체 찾아보기 대화 상자](catalog/browse-all-principals-dialog-box.md)
+2. [구성 대화 상자](catalog/configure-dialog-box.md)
+3. [폴더 속성 대화 상자](catalog/folder-properties-dialog-box.md)
+4. [Integration Service(SSIS) 카탈로그 Transact-SQL 참조](catalog/integration-services-ssis-catalog-transact-sql-reference.md)
+5. [Integration Services(SSIS) 서버 및 카탈로그](catalog/integration-services-ssis-server-and-catalog.md)
+6. [패키지 속성 대화 상자](catalog/package-properties-dialog-box.md)
+7. [프로젝트 속성 대화 상자](catalog/project-properties-dialog-box.md)
+8. [프로젝트 버전 대화 상자](catalog/project-versions-dialog-box.md)
+9. [매개 변수 값 설정 대화 상자](catalog/set-parameter-value-dialog-box.md)
+10. [SSIS 카탈로그](catalog/ssis-catalog.md)
+11. [유효성 검사 대화 상자](catalog/validate-dialog-box.md)
+12. [Integration Services 서버의 패키지 목록 보기](catalog/view-the-list-of-packages-on-the-integration-services-server.md)
 
 
 
@@ -93,56 +78,110 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
+1. [Azure에서 SSIS 패키지 실행 예약](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-***지금은 이 영역에서 최근에 업데이트된 문서가 없습니다.***
+&nbsp;
+
+<a name="TitleNum_1"/>
+
+### <a name="1-nbsp-schedule-the-execution-of-an-ssis-package-on-azurelift-shiftssis-azure-schedule-packagesmd"></a>1. &nbsp; [Azure에서 SSIS 패키지 실행 예약](lift-shift/ssis-azure-schedule-packages.md)
+
+*업데이트됨: 2018-01-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<!-- Source markdown line 28.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 be778f8096559da9b84670382deb11f56c129971 640dd3cb59a88ccbc4cf6eab363a45e284f6b873  (PR=4662  ,  Filename=ssis-azure-schedule-packages.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
+
+
+
+온-프레미스에서 SQL Server 에이전트를 사용하여 Azure SQL Database 서버에 저장된 패키지의 실행을 예약하기 전에 먼저 SQL Database 서버를 연결된 서버로 온-프레미스 SQL Server에 추가해야 합니다.
+
+1.  **연결된 서버 설정**
+
+    ```
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location='',
+        @provstr='',
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
+
+2.  **연결된 서버 자격 증명 설정**
+
+    ```
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer',
+        @useself = 'false',
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
+
+3.  **연결된 서버 옵션 설정**
+
+    ```
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
+
+자세한 내용은 [연결된 서버 만들기](lift-shift/../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) 및 [연결된 서버](lift-shift/../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.
 
 
 
 
 
 
-## <a name="similar-articles"></a>유사한 문서
 
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>신규 문서 또는 업데이트된 문서에 대한 유사 문서
 
 이 섹션에는 공용 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새 + 업데이트 (0 + 1): **SQL에 대 한 고급 분석** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새 + 업데이트 (0 + 1): **SQL에 대 한 Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
-- [새 + 업데이트 (4 + 1): **SQL에 대 한 데이터베이스 엔진** docs](../database-engine/new-updated-database-engine.md)
-- [새 + 업데이트 (17 + 0): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [새 + 업데이트 (3 + 0): **SQL에 대 한 Linux** docs](../linux/new-updated-linux.md)
-- [새 + 업데이트 (1 + 1): **SQL에 대 한 관계형 데이터베이스** docs](../relational-databases/new-updated-relational-databases.md)
-- [새 + 업데이트 (2 + 0): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [새 + 업데이트 (0 + 1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [새 + 업데이트 (0 + 1): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *있는* 주제 영역
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
+- [새로 추가되었거나 업데이트됨(1+3):&nbsp; **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(12+1): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(6+2):&nbsp; **SQL용 Linux** 문서](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(15+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
+- [새로 추가되었거나 업데이트됨(2+9):&nbsp; **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(1+0):&nbsp; **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **SQL 작업 Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(1+2):&nbsp; **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(0+2):&nbsp; **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *없는* 주제 영역
+
+
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMA(Data Migration Assistant)** 문서](../dma/new-updated-dma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
-- [새 + 업데이트 (0 + 0): **SQL에 연결** docs](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
-- [새 + 업데이트 (0 + 0): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
-- [새 + 업데이트 (0 + 0): **SQL에 대 한 도구** docs](../tools/new-updated-tools.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
-
 
 

@@ -1,10 +1,13 @@
 ---
 title: "ORDER BY 절 (Transact SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,20 +41,19 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: 68
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3fa84841e573d9bd1a285d24548c2f57ab5b9235
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>선택-ORDER BY 절 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 쿼리에서 반환되는 데이터를 정렬합니다. 이 절을 사용하여 다음을 수행할 수 있습니다.  
   
@@ -61,9 +63,12 @@ ms.lasthandoff: 09/01/2017
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  ORDER BY에는 SELECT에서 /으로 지원 되지 않습니다 또는에서 만들 테이블 AS 선택 (CTAS) 문을 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다.
+
 ## <a name="syntax"></a>구문  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -131,7 +136,7 @@ ORDER BY order_by_expression
  쿼리 실행 계획에서 오프셋된 행 개수 값에 표시 됩니다는 **행** 또는 **Top** 특성 TOP 쿼리 연산자입니다.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
- ORDER BY 절에서 정수를 지정하는 방식으로 SELECT 목록에 있는 열의 위치를 나타내지 않도록 해야 합니다. 예를 들어 `SELECT ProductID, Name FROM Production.Production ORDER BY 2`와 같은 문은 유효하지만 실제 열 이름을 지정하는 것에 비해 다른 사용자가 이해하기 어렵습니다. 또한 열 순서를 변경하거나 새 열을 추가하는 등 SELECT 목록을 변경한 경우 예기치 않은 결과를 방지하려면 ORDER BY 절을 수정해야 합니다.  
+ ORDER BY 절에서 정수를 지정하는 방식으로 SELECT 목록에 있는 열의 위치를 나타내지 않도록 해야 합니다. 예를 들어 `SELECT ProductID, Name FROM Production.Production ORDER BY 2`와 같은 문은 유효하지만 실제 열 이름을 지정하는 것에 비해 다른 사용자가 이해하기 어렵습니다. 또한 열 순서를 변경 하는 등 select 목록을 변경 하거나 예기치 않은 결과 방지 하기 위해 ORDER BY 절을 수정 해야 새 열을 추가 합니다.  
   
  SELECT top에서 (*N*) 문, 항상 ORDER BY 절을 사용 합니다. 이 방법은 TOP의 영향을 받는 행을 예측 가능한 방식으로 나타내는 유일한 방법입니다. 자세한 내용은 참조 [top&#40; Transact SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
   
@@ -159,9 +164,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- 또한 문에 UNION, EXCEPT 또는 INTERSECT 연산자가 있으면 첫 번째(왼쪽) 쿼리의 SELECT 목록에 지정된 열 이름이나 열 별칭을 사용해야 합니다.  
+ 또한 문에 포함 된 UNION, EXCEPT 또는 INTERSECT 연산자, 열 이름 또는 열 별칭 첫 번째 (왼쪽) 쿼리의 select 목록에 지정 해야 합니다.  
   
- UNION, EXCEPT 또는 INTERSECT 연산자를 사용하는 쿼리에서는 문의 끝 부분에만 ORDER BY를 사용할 수 있습니다. 이 제한 사항은 UNION, EXCEPT 및 INTERSECT를 최상위 수준 쿼리에 지정하고 하위 쿼리에는 지정하지 않은 경우에만 적용됩니다. 뒷부분에 나오는 예 섹션을 참조하세요.  
+ UNION, EXCEPT 또는 INTERSECT 연산자를 사용하는 쿼리에서는 문의 끝 부분에만 ORDER BY를 사용할 수 있습니다. 이 제한을 제외 하 고, 공용 구조체를 지정 하는 경우에 적용 및 INTERSECT를 최상위 수준 쿼리에 고 하위 쿼리에 없습니다. 뒷부분에 나오는 예 섹션을 참조하세요.  
   
  TOP 절 또는 OFFSET 및 FETCH 절을 함께 지정하지 않는 한 뷰, 인라인 함수, 파생 테이블 및 하위 쿼리에서 ORDER BY 절을 사용할 수 없습니다. 이러한 개체에서 ORDER BY 절을 사용하는 경우 이 절은 TOP 절 또는 OFFSET 및 FETCH 절에서 반환되는 행을 결정하기 위한 용도로만 사용됩니다. 쿼리 자체에 ORDER BY를 지정하지 않으면 ORDER BY 절은 이러한 구조에 대한 쿼리 시 정렬된 결과를 보장하지 않습니다.  
   
@@ -267,8 +272,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-a-ascending-order"></a>2. 오름차순 지정  
- 다음 예에서는 `Name` 열을 기준으로 오름차순으로 결과 집합을 정렬합니다. 문자는 숫자 순서가 아니라 사전순으로 정렬됩니다. 즉, 10이 2보다 먼저 옵니다.  
+#### <a name="b-specifying-an-ascending-order"></a>2. 오름차순 지정  
+ 다음 예에서는 `Name` 열을 기준으로 오름차순으로 결과 집합을 정렬합니다. 문자 숫자 순서가 아니라, 사전순으로 정렬 됩니다. 즉, 10이 2보다 먼저 옵니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -313,7 +318,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a>조건부 순서 지정  
- 다음 예에서는 ORDER BY 절에 CASE 식을 사용하여 지정된 열 값에 따라 행의 정렬 순서를 조건부로 결정합니다. 첫 번째 예에서는 `SalariedFlag` 테이블의 `HumanResources.Employee` 열의 값이 계산됩니다. `SalariedFlag`가 1로 설정된 직원은 `BusinessEntityID` 순서에 따라 내림차순으로 반환됩니다. `SalariedFlag`가 0으로 설정된 직원은 `BusinessEntityID` 순서에 따라 오름차순으로 반환됩니다. 두 번째 예에서 결과 집합은 `TerritoryName` 열이 'United States'와 동일하면 `CountryRegionName` 열을 기준으로 정렬되고 그 외 다른 행에는 `CountryRegionName` 열을 기준으로 정렬됩니다.  
+ 다음 예에서는 ORDER BY 절에 CASE 식을 사용 하 여 조건에 따라 지정된 된 열 값을 기준으로 행의 정렬 순서를 결정 합니다. 첫 번째 예에서는 `SalariedFlag` 테이블의 `HumanResources.Employee` 열의 값이 계산됩니다. `SalariedFlag`가 1로 설정된 직원은 `BusinessEntityID` 순서에 따라 내림차순으로 반환됩니다. `SalariedFlag`가 0으로 설정된 직원은 `BusinessEntityID` 순서에 따라 오름차순으로 반환됩니다. 두 번째 예에서 결과 집합은 `TerritoryName` 열이 'United States'와 동일하면 `CountryRegionName` 열을 기준으로 정렬되고 그 외 다른 행에는 `CountryRegionName` 열을 기준으로 정렬됩니다.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  
@@ -484,7 +489,25 @@ GO
   
 ```  
   
-### <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+###  <a name="Union"></a>제외 UNION과 함께 ORDER BY를 사용 하 여, 및 INTERSECT  
+ 쿼리에서 UNION, EXCEPT 또는 INTERSECT 연산자를 사용하는 경우 문의 끝 부분에 ORDER BY 절을 지정해야 하며 조합된 쿼리 결과가 정렬됩니다. 다음 예에서는 빨간색 또는 노란색 제품을 모두 반환하고 이 조합된 목록을 `ListPrice` 열을 기준으로 정렬합니다.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Red'  
+-- ORDER BY cannot be specified here.  
+UNION ALL  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Yellow'  
+ORDER BY ListPrice ASC;  
+  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예제에서는 숫자에 의해 결과 집합의 순서 `EmployeeKey` 열을 오름차순입니다.  
   
 ```  
@@ -525,24 +548,6 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-###  <a name="Union"></a>제외 UNION과 함께 ORDER BY를 사용 하 여, 및 INTERSECT  
- 쿼리에서 UNION, EXCEPT 또는 INTERSECT 연산자를 사용하는 경우 문의 끝 부분에 ORDER BY 절을 지정해야 하며 조합된 쿼리 결과가 정렬됩니다. 다음 예에서는 빨간색 또는 노란색 제품을 모두 반환하고 이 조합된 목록을 `ListPrice` 열을 기준으로 정렬합니다.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Red'  
--- ORDER BY cannot be specified here.  
-UNION ALL  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Yellow'  
-ORDER BY ListPrice ASC;  
-  
-```  
-  
 ## <a name="see-also"></a>관련 항목:  
  [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
@@ -555,5 +560,4 @@ ORDER BY ListPrice ASC;
  [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-
 

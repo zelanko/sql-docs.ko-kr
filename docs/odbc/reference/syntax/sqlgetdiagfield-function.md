@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetDiagField
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetDiagField
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetDiagField
-helpviewer_keywords:
-- SQLGetDiagField function [ODBC]
+f1_keywords: SQLGetDiagField
+helpviewer_keywords: SQLGetDiagField function [ODBC]
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0cd8f64eb18fc6e1fb456b03ef65ef2dc33cc140
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 함수(SQLGetDiagField Function)
 **규칙**  
@@ -127,7 +121,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_NO_DATA: *RecNumber* 에 지정 된 핸들에 대 한 존재 하는 진단 레코드 개수 보다 큰 *처리 합니다.* 함수에 대 한 임의의 양수도 SQL_NO_DATA를 반환할 *RecNumber* 에 대 한 진단 레코드가 없는 경우 *처리*합니다.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  응용 프로그램에서 일반적으로 호출 **SQLGetDiagField** 세 개의 목표 중 하나를 수행 하려면:  
   
 1.  함수 호출 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 했습니다 때 특정 오류 또는 경고 정보를 얻으려면 (또는 대 한 SQL_NEED_DATA는 **SQLBrowseConnect** 함수).  
@@ -266,4 +260,3 @@ n-정의 *|"도메인 만들기"|SQL_DIAG_CREATE_DOMAIN|
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

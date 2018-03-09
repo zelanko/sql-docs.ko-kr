@@ -3,8 +3,9 @@ title: "ADO 이벤트 인스턴스화: ADO 및 WFC | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,16 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffe0911f2845e7ff7e41cf41fcc4f267f7c0ad66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8dbbe05208498d4b23f95ded09ea9a9238c806d0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 이벤트 인스턴스화: ADO 및 WFC
 ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕으로 하며 단순화 된 응용 프로그램 프로그래밍 인터페이스를 제공 합니다. 일반적으로 ADO/WFC 차단 ADO 이벤트, 이벤트 매개 변수는 단일 이벤트 클래스를 통합 하 고 이벤트 처리기를 호출 합니다.  
@@ -46,7 +47,7 @@ ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕
   
      첫 번째 인수는 **ConnectionEventHandler** 생성자는 두 번째 인수에 명명 된 이벤트 처리기를 포함 하는 클래스에 대 한 참조입니다.  
   
-3.  이벤트 처리기는 특정 형식의 이벤트를 처리 하도록 지정 된 처리기의 목록에 추가 합니다. 와 같은 이름을 가진 메서드를 사용 **addOn***EventName*(*처리기*).  
+3.  이벤트 처리기는 특정 형식의 이벤트를 처리 하도록 지정 된 처리기의 목록에 추가 합니다. 와 같은 이름을 가진 메서드를 사용 **addOn * * * EventName*(*처리기*).  
   
 4.  ADO/WFC 모든 ADO 이벤트 처리기를 내부적으로 구현합니다. 이벤트에 의해 발생할 따라서는 **연결** 또는 **레코드 집합** 작업 ADO/WFC 이벤트 처리기에 의해 차단 됩니다.  
   
@@ -64,7 +65,7 @@ ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕
   
 6.  이벤트 처리기에서 ADO 이벤트에 대 한 ADO/WFC 처리기에 반환 합니다. ADO/WFC ADO 이벤트 매개 변수를 다시 관련 ADO/WFC 이벤트 데이터 멤버를 복사 하 고 ADO 이벤트 처리기의 반환 합니다.  
   
-7.  완료 되 면 ADO/WFC 이벤트 처리기의 목록에서 처리기를 제거를 처리 합니다. 와 같은 이름을 가진 메서드를 사용 **removeOn***EventName*(*처리기*).  
+7.  완료 되 면 ADO/WFC 이벤트 처리기의 목록에서 처리기를 제거를 처리 합니다. 와 같은 이름을 가진 메서드를 사용 **removeOn * * * EventName*(*처리기*).  
   
 ## <a name="see-also"></a>관련 항목:  
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)   

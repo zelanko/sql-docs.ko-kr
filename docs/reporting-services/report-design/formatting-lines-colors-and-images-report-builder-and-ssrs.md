@@ -1,13 +1,14 @@
 ---
-title: "선, 색 및 이미지 (보고서 작성기 및 SSRS)를 서식 지정 | Microsoft Docs"
+title: "선, 색 및 이미지 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,20 +25,19 @@ f1_keywords:
 - "10066"
 - sql13.rtp.rptdesigner.subreportproperties.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8ba2dbc33b0d61b35fc7bee87b6171016af73279
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 99dbf2e386831ec182c9c3c98680388fdb122314
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>선, 색 및 이미지 서식 지정(보고서 작성기 및 SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]선, 색, 데이터 영역, 이미지 및 기타 보고서 항목의 서식을 지정할 수가 있습니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 사용하면 선, 색, 데이터 영역, 이미지 및 다른 보고서 항목의 서식을 지정할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
  차트에 표준 테두리 프레임 이외에도 추가 테두리 프레임을 적용할 수 있습니다. 자세한 내용은 [차트에 테두리 프레임 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)를 참조하세요.  
   
- 보고서 자체에 테두리를 추가할 수도 있습니다. 자세한 내용은 [보고서에 테두리 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md)를 참조하세요.  
+ 보고서 자체에 테두리를 추가할 수도 있습니다. 자세한 내용은 [보고서에 테두리 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
 ## <a name="applying-background-colors"></a>배경색 적용  
  전체 보고서의 배경, 보고서 내의 입력란 또는 데이터 영역 내의 셀 또는 셀 그룹에 단색을 추가할 수 있습니다. 기본적으로 배경색은 흰색이지만 보고서 항목의 **속성** 대화 상자에 있는 **채우기** 탭에서 색을 선택할 수 있습니다. 예를 들어 입력란의 배경색을 변경할 경우 입력란을 마우스 오른쪽 단추로 클릭하고 **입력란 속성**을 선택합니다. **채우기** 를 클릭한 다음 원하는 색을 선택합니다. 이 대화 상자에서 선택한 항목의 배경색을 선택하거나 배경에 나타나는 이미지를 추가할 수 있습니다.  
@@ -61,11 +61,10 @@ ms.lasthandoff: 08/09/2017
   
  보고서의 배경이나 사각형, 입력란, 테이블, 행렬, 차트의 일부분 또는 보고서의 본문 및 페이지 구역에 로고와 같은 이미지를 추가할 수도 있습니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [텍스트 및 자리 표시자 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [텍스트 상자 &#40;의 텍스트 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [채우기 대화 상자 &#40; 보고서 작성기 및 SSRS &#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
+ [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
+ [채우기 대화 상자&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
   
   
-

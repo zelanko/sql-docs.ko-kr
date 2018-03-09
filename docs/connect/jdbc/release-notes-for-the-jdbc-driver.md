@@ -1,7 +1,7 @@
 ---
 title: "JDBC 드라이버에 대 한 릴리스 정보 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -13,25 +13,78 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 49710c98aad4af9373dd35ebf50960f32d999c10
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd65725237fd625c40f8755e636bb4f6fa2c55ea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC 드라이버에 대 한 릴리스 정보
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
+## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>SQL Server 용 Microsoft JDBC Driver 6.4의 업데이트
+SQL Server 용 Microsoft JDBC 드라이버 6.4 JDBC 사양 4.1 및 4.2와 완벽 하 게 호환 됩니다. 6.4 패키지에 포함 된 jar Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어 6.4 패키지에서 mssql-jdbc-6.4.0.jre8.jar 파일은 Java 8에서 사용 되는 것이 좋습니다. 
+
+**JDK 9에 대 한 지원**  
+  
+Java 개발 키트 (JDK) 버전 9.0 JDK 8.0 및 7.0 외에도 지원 합니다.
+  
+**JDBC 4.3 compliance**  
+  
+4.1 및 4.2 외에도 Java 데이터베이스 연결 API 4.3 사양에 대 한 지원. JDBC 4.3 API 메서드가 추가 되었지만 아직 구현 되지 않았습니다. 자세한 내용은 [JDBC 드라이버에 대 한 JDBC 4.3 준수](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)합니다.
+ 
+**새 연결 속성 추가: sslProtocol**
+
+사용자가 TLS 프로토콜 키워드를 지정할 수 있는 새 연결 속성이 추가 되었습니다. 가능한 값은: "TLS", "TLSv1", "TLSv1.1", "TLSv1.2"입니다. 참조 [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol) 대 한 자세한 내용은 합니다.
+
+**연결 속성을 사용 되지 않음: fipsProvider**
+
+연결 속성이 "fipsProvider" 허용 된 연결 속성 목록에서 제거 됩니다. 세부 정보를 보려면 [여기](https://github.com/Microsoft/mssql-jdbc/pull/460)합니다.
+
+**사용자 지정 TrustManager 지정 하기 위한 추가 연결 속성**
+
+드라이버는 이제 trustManagerClass"추가" 및 "trustManagerConstructorArg" 연결 속성을 사용 하는 사용자 지정 TrustManager 지정을 지원 합니다. 따라서 JVM 환경에 대 한 전역 설정을 수정 하지 않고 연결 단위로에서 트러스트 하는 인증서 집합의 동적 지정 수 있습니다.
+
+**Datetime/smallDatetime 테이블 반환 매개 변수 (TVP)에 대 한 지원 추가**
+
+테이블 반환 매개 변수 (TVP)를 사용 하는 경우 드라이버는 이제 DATETIME 및 SMALLDATETIME 데이터 형식을 지원 합니다.
+
+**Sql_variant 데이터 형식에 대 한 지원 추가**
+
+JDBC 드라이버는 이제 SQL Server에서 사용 되는 sql_variant 데이터 형식을 지원 합니다. Sql_variant 제한 아래 테이블 반환 매개 변수 (TVP) 및 BulkCopy와 같은 기능으로 지원 됩니다.
+
+1. 날짜 값에 대 한: sql_variant 열에 저장 된 datetime/smalldatetime/날짜 값이 포함 된 테이블을 채우기 위한 TVP를 사용할 때 결과 집합에서 getDateTime()/getSmallDateTime()/getDate() 메서드를 호출 작동 하지 않으며 다음 예외가 throw 됩니다.
+    ```
+    java.lang.String cannot be cast to java.sql.Timestamp
+    ```
+    해결 방법: "getString()" 또는 "getobject ()" 메서드를 대신 사용 합니다.
+
+2. SQL Variant 된 TVP를 사용 하 여 null 값
+
+TVP를 sql_variant 열 형식으로 NULL 값을 보내고 테이블을 채우는 데 사용 하는 경우 열 형식이 sql_variant 인 TVP에 있는 NULL 값을 삽입가 지원 되지 않으므로 현재 예외가 발생 합니다.
+
+**준비 된 문을 구현 메타 데이터 캐싱**
+
+JDBC 드라이버 성능 향상을 위한 준비 된 문의 메타 데이터 캐싱을 구현 했습니다. 드라이버는 이제 "disableStatementPooling" 및 "statementPoolingCacheSize" 연결 속성을 사용 하 여 드라이버에서 문 준비에 대 한 메타 데이터를 캐시를 지원합니다. 이 기능은 기본적으로 해제되어 있습니다. 자세한 내용은 [여기](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)
+
+**Linux/Mac에서 AAD 통합 인증에 대 한 지원 추가**
+
+JDBC 드라이버는 이제 Azure Active Directory 통합 인증 모든 지원 운영 체제 (Windows/Linux/Mac) kerberos 인증도 지원합니다. 또는 Windows 운영 체제에서 사용자가 인증할 수 sqljdbc_auth.dll와 합니다.
+
+**업데이트 ADAL4J 버전 1.4.0**
+
+JDBC 드라이버 버전 1.4.0 azure-active directory-라이브러리-에-java (ADAL4J)에 해당 maven 종속성을 업데이트 했습니다. 종속성에 대 한 자세한 내용은 참조 [여기](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>SQL Server 용 Microsoft JDBC Driver 6.2의 업데이트
 SQL Server 용 Microsoft JDBC 드라이버 6.2 JDBC 사양 4.1 및 4.2와 완벽 하 게 호환 됩니다. 6.0 패키지에 포함 된 jar Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어 6.2 패키지에서 mssql-jdbc-6.2.1.jre8.jar 파일은 Java 8에서 사용 되는 것이 좋습니다. 
 
-**참고:** 2017 년 6 월 29에 발표 JDBC 6.2 RTW에서 개선 캐싱 메타 데이터와 함께 문제가 있습니다. 향상 롤백된 및에서 2017 년 7 월 17에 새 jar (6.2.1 버전) 발표 된는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), 및 [Maven 중앙](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)합니다. 6.2.1를 사용 하 여 프로젝트를 업데이트 하십시오 jar를 해제 합니다. 참조 하십시오 [릴리스 정보](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) 내용을 확인 합니다.
+> [!NOTE]  
+>  2017 년 6 월 29에 발표 JDBC 6.2 RTW에서 메타 데이터 캐싱 개선에 문제가 발견 되었습니다. 향상 롤백된 및에서 2017 년 7 월 17에 새 jar (6.2.1 버전) 발표 된는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), 및 [Maven 중앙](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)합니다. 6.2.1를 사용 하 여 프로젝트를 업데이트 하십시오 jar를 해제 합니다. 참조 하십시오 [릴리스 정보](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) 내용을 확인 합니다.
 
 **Linux 용 azure Active Directory (AAD) 지원**
 
@@ -124,34 +177,9 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  JDK 6.0 및 5.0 외에도 JDK(Java Development Kit) 버전 7.0을 지원합니다.  
   
-## <a name="updates-in-microsoft-jdbc-driver-40-for-sql-server-and-later"></a>SQL Server용 Microsoft JDBC Driver 4.0 이상의 업데이트  
- **Azure SQL 데이터베이스에 연결 하는 방법에 대 한 정보**  
+## <a name="itanium-not-supported-for-jdbc-driver-64-60-42-and-41-applications"></a>Itanium JDBC 드라이버 6.4, 6.0, 4.2 및 4.1 응용 프로그램에 대 한 지원 되지 않습니다  
   
- 이제 Azure SQL 데이터베이스 연결 정보가 포함된 항목이 제공됩니다. 참조 [Azure SQL 데이터베이스에 연결 하려면](../../connect/jdbc/connecting-to-an-azure-sql-database.md) 자세한 정보에 대 한 합니다.  
-  
- **고가용성, 재해 복구에 대 한 지원**  
-  
- AlwaysOn 가용성 그룹에 대 한 고가용성, 재해 복구 연결에 대 한 지원 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]합니다. 참조 [고가용성, 재해 복구에 대 한 JDBC 드라이버 지원](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) 자세한 정보에 대 한 합니다.  
-  
- **Kerberos 통합 인증을 사용하여 SQL Server에 연결**  
-  
- 에 연결 하는 응용 프로그램에 대 한 유형 4 Kerberos 통합된 인증에 대 한 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다. 자세한 내용은 참조 [Kerberos 통합 인증을 사용 하려면 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)합니다. (유형 2 Kerberos 통합 인증은에서 사용할 수 있는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 이전 버전입니다.)  
-  
- **확장 이벤트 로그의 진단 정보 액세스**  
-  
- 연결 실패를 파악하기 위해 서버의 확장된 이벤트 정보에 액세스할 수 있습니다. 자세한 내용은 참조 [확장 이벤트 로그의 진단 정보에 액세스](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)합니다.  
-  
- **스파스 열에 대 한 추가 지원**  
-  
- 응용 프로그램에서 스파스 열을 사용하는 테이블에 있는 데이터에 이미 액세스하고 있는 경우 성능이 향상되는 것을 볼 수 있습니다. 열 (스파스 열 정보 포함)에 대 한 정보를 가져올 수 있습니다 [getColumns 메서드 &#40; SQLServerDatabaseMetaData &#41; ](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md). 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스파스 열 참조 [스파스 열 사용](http://go.microsoft.com/fwlink/?LinkId=224244)합니다.  
-  
- **Xid.getFormatId**  
-  
- 부터는 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], JDBC 드라이버가 응용 프로그램 데이터베이스 서버에서에서 형식 식별자를 전달 합니다. 업데이트된 동작을 가져오려면 서버의 sqljdbc_xa.dll이 업데이트되어야 합니다. Sqljdbc_xa.dll의 업데이트 된 서버에 복사 하는 방법에 대 한 자세한 내용은 참조 하십시오. [XA 트랜잭션 이해](../../connect/jdbc/understanding-xa-transactions.md)합니다.  
-  
-## <a name="itanium-not-supported-for-jdbc-driver-60-42-41-and-40-applications"></a>Itanium JDBC Driver 6.0, 4.2, 4.1 및 4.0 응용 프로그램에 대 한 지원 되지 않습니다  
-  
- Microsoft JDBC Driver 6.0, 4.2, 4.1 및 4.0 응용 프로그램의 SQL Server Itanium 컴퓨터에서 실행 되도록 지원 되지 않습니다.  
+ Microsoft JDBC Driver 6.4, 6.0, 4.2 및 4.1 SQL Server 응용 프로그램에 대 한 Itanium 컴퓨터에서 실행 되도록 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

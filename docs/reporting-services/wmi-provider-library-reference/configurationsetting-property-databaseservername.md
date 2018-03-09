@@ -1,36 +1,33 @@
 ---
-title: "DatabaseServerName 속성 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "DatabaseServerName 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- DatabaseServerName Property
-apilocation:
-- reportingservices.mof
+apiname: DatabaseServerName Property
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- DatabaseServerName property
+helpviewer_keywords: DatabaseServerName property
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "34"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e3d1aa08bbef7d0baeb0962ff3f3352fa954aa60
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bc74caa73810fd582513fa9542089ffad36ab214
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-property---databaseservername"></a>DatabaseServerName ConfigurationSetting 속성-
+# <a name="configurationsetting-property---databaseservername"></a>ConfigurationSetting 속성 - DatabaseServerName
   보고서 서버 데이터베이스가 설치되어 있는 서버 이름을 지정합니다. 읽기/쓰기입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -52,8 +49,7 @@ public string DatabaseServerName;
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - PWDENCRYPT function [Transact-SQL]
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
-caps.latest.revision: 9
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dcae01f4b56e022f3b5966acd33877c851d9ae05
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 06b080d784d9a8737c1fe524e6634517ca0c97f5
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pwdencrypt-transact-sql"></a>PWDENCRYPT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,4 +62,3 @@ PWDENCRYPT ( 'password' )
  [PWDCOMPARE &#40; Transact SQL &#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
   
   
-

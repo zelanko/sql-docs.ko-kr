@@ -1,10 +1,13 @@
 ---
 title: "메타 데이터 (MySQLToSQL) 저장 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6515e7747aa5137849acab0bfc3540d3ecc59996
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e62fcd6b41208b1cf17c9f611da8a7af5454ab45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-metadata--mysqltosql"></a>메타 데이터 (MySQLToSQL)를 저장 합니다.
 **메타 데이터 저장** SSMA 프로젝트에 저장 하기 전에 메타 데이터를 로드 하 라는 대화 상자가 표시 됩니다. 이 게 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사용자에 게 보낼 수 있는 전체 프로젝트 파일을 제공 합니다.  
   
 액세스는 **메타 데이터 저장** 대화 상자에서 프로젝트를 저장 합니다. 메타 데이터가 누락 되 면 SSMA 표시 됩니다는 **메타 데이터 저장** 대화 상자.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **이름**  
 프로젝트의 각 데이터베이스의 이름입니다.  
   

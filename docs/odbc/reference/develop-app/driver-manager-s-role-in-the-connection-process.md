@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 10766d85c5e06323f534d131abfde582906fe340
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>드라이버 관리자 &#39; 연결 과정에서 s 역할
 응용 프로그램 직접 호출 하지 않습니다 드라이버 기능인 기억 합니다. 대신, 동일한 이름 가진 드라이버 관리자 함수를 호출 하 고 드라이버 관리자 드라이버 함수를 호출 합니다. 일반적으로 거의 즉시 전파 됩니다. 예를 들어 응용 프로그램 호출 **SQLExecute** 드라이버 관리자를 호출 하는 드라이버 관리자와 후 몇 가지 오류 검사 **SQLExecute** 드라이버에서입니다.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  드라이버 관리자 환경 핸들을 잠가 (*henv*) 드라이버의를 호출 하기 전에 **SQLAllocHandle** 및 **SQLFreeHandle** 때 *HandleType* 로 설정 된 **sql_handle_dbc 라는**합니다.  
   
  응용 프로그램 호출 하는 경우 **SQLDisconnect**, 드라이버 관리자를 호출 하 여 **SQLDisconnect** 드라이버에서입니다. 그러나 응용 프로그램이 드라이버에 다시 연결 하는 경우 로드 된 드라이버를 유지 합니다. 응용 프로그램 호출 하는 경우 **SQLFreeHandle** 드라이버 관리자를 sql_handle_dbc 라는 옵션으로 호출 **SQLFreeHandle** 드라이버에서입니다. 드라이버 관리자는 다음 호출 다른 연결에서 드라이버를 사용 하지 않는 경우 **SQLFreeHandle** 옵션는 SQL_HANDLE_ENV 사용 하 여 드라이버에 선택한 드라이버를 언로드합니다.
-

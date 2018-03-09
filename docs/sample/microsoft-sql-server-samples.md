@@ -3,33 +3,36 @@ title: "Microsoft SQL Server 샘플 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
 ms.technology: 
 ms.topic: article
 ms.assetid: d67e31d0-49fb-40d3-b340-95c1fe00957f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
+ms.openlocfilehash: 40b094c6806e75f1535a1ba4d60ccc0387cd1d67
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6c0bbe97c8638f3a669f3c651d66bbdeac2f60f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="microsoft-sql-server-samples"></a>Microsoft SQL Server 예제
-이 갤러리는 예제 데이터베이스 및 SQL Server 및 Azure SQL 데이터베이스를 포함 하 여 Microsoft SQL 제품에 대 한 다른 예제를 포함 합니다.   
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]이 갤러리는 예제 데이터베이스 및 SQL Server 및 Azure SQL 데이터베이스를 포함 하 여 Microsoft SQL 제품에 대 한 다른 예제를 포함 합니다.   
 
 ## <a name="new-wide-world-importers-sample-database"></a>새로운!! Wide World Importers 예제 데이터베이스
 
 되어 기쁩니다 Wide World Importers (WWI), 현재 기능, 도구 및 디자인 기법을 사용 하 여 쇼케이스 데이터베이스 디자인 하기 위해 개발 된 라는 새 샘플 데이터베이스 기능입니다. 예제는 OLTP 데이터베이스와 SQL Server 2016 및 이후 버전을 실행 하는 기본 제공 OLAP 데이터베이스를 포함 합니다. 
 
 ## <a name="documentation"></a>설명서
-[WWI 설명서](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx) MSDN 켜져 있습니다.   
+[WWI 설명서](./world-wide-importers/wide-world-importers-documentation.md) Microsoft Docs 켜져 있습니다.   
   
 
 ## <a name="sql-server-samples-repository"></a>SQL Server 샘플 리포지토리

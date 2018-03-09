@@ -3,28 +3,27 @@ title: "장애 조치 클러스터 인스턴스-Linux (RHEL)에서 SQL Server �
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
+ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 11b7c2e6a782a2e1215a75e746c6def1b42f90a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>장애 조치 클러스터 인스턴스-Linux (RHEL)에서 SQL Server 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 공유 디스크 2 개 노드 장애 조치 클러스터 인스턴스의 가용성을 높이기 위한 서버 수준 중복을 제공합니다. 이 자습서에서는 Linux에서 SQL Server의 2 개 노드 장애 조치 클러스터 인스턴스를 만들려고 하는 방법에 설명 합니다. 작업을 완성 하는 구체적인 단계는 다음과 같습니다.
 
@@ -42,7 +41,7 @@ SQL Server 공유 디스크 2 개 노드 장애 조치 클러스터 인스턴스
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-아래 종단 간 시나리오를 완료 하려면 두 노드 클러스터와 저장소에 대 한 다른 서버를 배포 하려면 두 컴퓨터 해야 합니다. 아래 단계 이러한 서버는 구성 하는 방법에 대해 간략하게 설명 합니다.
+다음과 같은 종단 간 시나리오를 완료 하려면 두 노드 클러스터와 저장소에 대 한 다른 서버를 배포 하는 두 개의 컴퓨터가 필요 합니다. 아래 단계 이러한 서버는 구성 하는 방법에 대해 간략하게 설명 합니다.
 
 ## <a name="set-up-and-configure-linux"></a>설정 및 Linux 구성
 
@@ -64,7 +63,7 @@ SQL Server 공유 디스크 2 개 노드 장애 조치 클러스터 인스턴스
     > [!NOTE] 
     > 시간 설정, 서버 마스터 키를 SQL Server 인스턴스에 대 한 생성 했으며에 `var/opt/mssql/secrets/machine-key`합니다. Linux에서 SQL Server는 항상 mssql 라는 로컬 계정으로 실행 됩니다. 로컬 계정을 이기 때문에 해당 id 노드 간에 공유 되지 않습니다. 따라서 서버 마스터 키를 해독 하 여 각 로컬 mssql 계정에 액세스할 수 있도록 암호화 키를 주 노드에서 각 보조 노드로 복사 해야 합니다. 
 
-1.  주 노드에서 Pacemaker에 대 한 SQL server 로그인을 만들고 실행에 로그인 권한을 부여 `sp_server_diagnostics`합니다. Pacemaker는 SQL Server를 실행 하는 노드를 확인 하려면이 계정을 사용 합니다. 
+1.  주 노드에서 Pacemaker에 대 한 SQL server 로그인을 만들고 실행에 로그인 권한을 부여 `sp_server_diagnostics`합니다. SQL Server를 실행 하는 노드를 확인 하려면이 계정을 사용 하는 pacemaker 합니다. 
 
     ```bash
     sudo systemctl start mssql-server
@@ -208,7 +207,7 @@ FCI는 리소스 그룹에 생성 됩니다. 이 리소스 그룹 제약 조건�
 
     \<FolderToMountNFSShare > 디스크를 탑재 하는 폴더 (시스템 데이터베이스와 기본 위치에 대 한 것 /var/opt/mssql/data)
 
-     예는 다음과 같습니다.
+    예는 다음과 같습니다.
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -299,4 +298,3 @@ FCI는 리소스 그룹에 생성 됩니다. 이 리소스 그룹 제약 조건�
 - [장애 조치 클러스터 인스턴스에 SQL Server Linux에서 작동 합니다.](sql-server-linux-shared-disk-cluster-operate.md)
 
 <!--Image references-->
-

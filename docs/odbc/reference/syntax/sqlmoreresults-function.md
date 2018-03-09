@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLMoreResults
-apilocation:
-- sqlsrv32.dll
+apiname: SQLMoreResults
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLMoreResults
-helpviewer_keywords:
-- SQLMoreResults function [ODBC]
+f1_keywords: SQLMoreResults
+helpviewer_keywords: SQLMoreResults function [ODBC]
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1905665f1505cd484a6d2ab5c1f83008efc2298
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 772bfd3d05d620840ea43c9f1313b4d94add10de
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults 함수
 **규칙**  
@@ -59,7 +53,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="diagnostics"></a>진단  
  때 **SQLMoreResults** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* sql _HANDLE_STMT 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLMoreResults** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01 S 02|옵션 값이 변경|일괄 처리로 변경 하는 문 특성의 값 처리 중이 던 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -77,7 +71,7 @@ SQLRETURN SQLMoreResults(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **선택** 문은 결과 집합을 반환 합니다. **업데이트**, **삽입**, 및 **삭제** 문의 영향을 받는 행 수를 반환 합니다. 이러한 명령문은 일괄 처리 제출 된 배열 (일괄 처리에 나타나는 순서 대로 매개 변수 오름차순으로 번호가 지정) 하는 매개 변수 또는 프로시저에서 여러 결과 집합을 반환할 수 있습니다 또는 행 수를 계산 합니다. 문의 일괄 처리 및 매개 변수 배열에 대 한 정보를 참조 하십시오. [SQL 문 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md) 및 [매개 변수 값의 배열](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)합니다.  
   
  일괄 처리를 실행 한 후 응용 프로그램은 첫 번째 결과 집합에 배치 됩니다. 응용 프로그램에서 호출할 수 **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**, 및 단일 결과 집합에만 있는 경우와 마찬가지로 정당한 첫 번째 또는 모든 후속 결과 집합에서 모든 메타 데이터 기능을 합니다. 첫 번째 결과 집합으로 완료 된 후 호출 **SQLMoreResults** 다음 결과 집합으로 이동할 수 있습니다. 다른 결과 집합 또는 수를 사용할 수 있으면 **SQLMoreResults** 관계 없이 SQL_SUCCESS를 반환 하 고 결과 집합 또는 추가 처리를 위한 개수를 초기화 합니다. 문 집합 – 생성 될 행 개수 – 생성 문 사이 표시 하는 경우, 호출를 하나씩 실행할 수 있습니다 **SQLMoreResults**합니다. 호출한 후 **SQLMoreResults** 에 대 한 **업데이트**, **삽입**, 또는 **삭제** 문은, 응용 프로그램 를호출할수**SQLRowCount**합니다.  
@@ -126,4 +120,3 @@ SQLRETURN SQLMoreResults(
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [SQLGetData를 사용하여 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)
-

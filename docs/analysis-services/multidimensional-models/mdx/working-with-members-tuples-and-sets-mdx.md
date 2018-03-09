@@ -2,16 +2,13 @@
 title: "Members, Tuples, and Sets (MDX) 작업 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,19 +29,20 @@ helpviewer_keywords:
 - tuples
 - set functions [MDX]
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 56f991716d78e8b4638ab57e7dc981c5942d81b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6bfa28850b007de34937834d80c79fe81c58b7fc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>멤버, 튜플 및 집합 작업(MDX)
-  MDX는 하나 이상의 멤버, 튜플 또는 집합을 반환하거나 멤버, 튜플 또는 집합에 대해 실행되는 다양한 함수를 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+MDX는 하나 이상의 멤버, 튜플 또는 집합을 반환하거나 멤버, 튜플 또는 집합에 대해 실행되는 다양한 함수를 제공합니다.  
   
 ## <a name="member-functions"></a>멤버 함수  
  MDX는 차원, 수준, 집합 또는 튜플 등의 다른 MDX 엔터티에서 멤버를 검색할 수 있는 여러 함수를 제공합니다. 예를 들어 [FirstChild](../../../mdx/firstchild-mdx.md) 함수는 멤버에 대해 실행되고 멤버를 반환하는 함수입니다.  
@@ -88,7 +86,7 @@ FROM [Adventure Works]
  튜플 함수에 대한 자세한 내용은 [MDX 함수 참조&#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)를 참조하세요.  
   
 ## <a name="set-functions"></a>집합 함수  
- MDX는 집합을 반환하는 여러 함수를 제공합니다. 명시적으로 튜플을 입력하고 중괄호로 묶는 것이 집합 검색을 위한 유일한 방법은 아닙니다. 집합을 반환하는 멤버 함수에 대한 자세한 내용은 [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)를 참조하세요. 여러 가지 추가 집합 함수가 있습니다.  
+ MDX는 집합을 반환하는 여러 함수를 제공합니다. 명시적으로 튜플을 입력하고 중괄호로 묶는 것이 집합 검색을 위한 유일한 방법은 아닙니다. 집합을 반환하는 멤버 함수에 대한 자세한 내용은 [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)을 참조하세요. 여러 가지 추가 집합 함수가 있습니다.  
   
  콜론 연산자를 사용하면 멤버의 자연 순서를 사용해 집합을 만들 수 있습니다. 예를 들어 다음 예의 집합은 2002년 1분기부터 4분기까지의 튜플을 포함합니다.  
   
@@ -135,7 +133,7 @@ FROM [Adventure Works]
  문자열 함수는 MDX 식에 대해 실행되며 문자열을 반환합니다. 예를 들어 [UniqueName&#40;MDX&#41;](../../../mdx/uniquename-mdx.md) 함수는 차원, 계층, 수준 또는 멤버의 고유 이름이 들어 있는 문자열 값을 반환합니다. 문자열 함수에 대한 자세한 내용은 [MDX 함수 참조&#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX &#40;의 주요 개념 Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX 쿼리 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 함수 참조 &#40; Mdx&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   

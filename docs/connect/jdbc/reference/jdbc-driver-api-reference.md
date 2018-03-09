@@ -1,7 +1,7 @@
 ---
 title: "JDBC 드라이버 API 참조 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
-caps.latest.revision: 46
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9b1083f7807caef852a3ed44991ba7b21109f086
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c19740d1247fa1fd7fe8036fa2aa557e01e74c82
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC 드라이버 API 참조
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,12 +45,14 @@ ms.lasthandoff: 09/09/2017
 >   
 >  이 섹션에는 Using Table-Valued 매개 변수를 사용할 수 있는 SQL Server 용 Microsoft JDBC Driver 6.0부터에 대 한 API 세부 정보를 찾을 수 없습니다. 참조 [테이블 반환 매개 변수를 사용 하 여](../../../connect/jdbc/using-table-valued-parameters.md)  
 >   
+>  Microsoft JDBC 드라이버 6.4 JDK 7.0, 8.0 및 9.0을 사용한 컴파일을 지원합니다.  
+>   
+>  Microsoft JDBC 드라이버 6.2 JDK 7.0 및 8.0을 사용한 컴파일을 지원합니다.  
+>   
 >  Microsoft JDBC Driver 6.0 및 JDK 5.0, 6.0, 7.0 및 8.0을 사용한 컴파일을 4.2 지원 합니다.  
 >   
 >  Microsoft JDBC Driver 4.1에서는 JDK 5.0, 6.0 및 7.0을 사용한 컴파일을 지원합니다.  
->   
->  Microsoft JDBC Driver 4.0에서는 JDK 5.0 및 6.0을 사용한 컴파일이 지원됩니다.  
-  
+
 ## <a name="interfaces"></a>인터페이스  
   
 |인터페이스 이름|Description|  
@@ -95,4 +96,3 @@ ms.lasthandoff: 09/09/2017
  [JDBC 드라이버 개요](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

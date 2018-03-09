@@ -1,5 +1,5 @@
 ---
-title: "^ = (배타적 비트 OR EQUALS) (Transact SQL) | Microsoft Docs"
+title: "^ (배타적 비트 OR 할당) = (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -20,21 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - ^= (bitwise exclusive OR equals)
 - compound operators, ^=
+- assignment operators, ^=
+- augmented operators, ^=
 ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5f7c69571c760fe828a6a731b348a12168b095cb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4da8f3df7201794db31bfff09927c97c128f82b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="-bitwise-exclusive-or-equals-transact-sql"></a>^=(배타적 비트 OR EQUALS)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^ (배타적 비트 OR 할당) = (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   두 개의 정수 값 간에 배타적 비트 OR 연산을 수행하고 값을 연산 결과로 설정합니다.  
   
@@ -63,4 +64,3 @@ expression ^= expression
  [비트 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

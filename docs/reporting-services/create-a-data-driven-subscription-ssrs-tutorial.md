@@ -1,31 +1,32 @@
 ---
-title: "데이터 기반 구독 (SSRS 자습서) 만들기 | Microsoft Docs"
+title: "데이터 기반 구독 만들기(SSRS 자습서) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: 50
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "50"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 731e14ba0da7b3d9b54b1ba24aa2fda41adda49b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>데이터 기반 구독 만들기(SSRS 자습서)
 이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 자습서에서는 필터링된 보고서 출력을 생성하고 파일 공유에 저장하기 위해 데이터 기반 구독을 만드는 간단한 예제를 단계별로 안내하여 데이터 기반 구독의 개념을 설명합니다. 
@@ -38,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="what-you-will-learn"></a>학습 내용  
  이 자습서는 다음 3개의 단원으로 이루어져 있습니다.  
- 단원 | 설명
+ 단원 | 주석
  ------- | --------------
  [1단원: 샘플 구독자 데이터베이스 만들기](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | 이 단원에서는 필터링 및 출력 파일 형식에 사용할 주문 번호 정보 등의 구독자 정보가 있는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 테이블을 만듭니다.
 [2단원: 보고서 데이터 원본 속성 구성](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |이 단원에서는 보고서가 일정에 따라 무인 모드로 실행되도록 보고서 데이터 원본을 구성합니다. 무인 처리를 위해서는 저장된 자격 증명이 필요합니다. 또한 구독자 데이터로 공급되는 매개 변수를 포함하도록 보고서 데이터 집합을 수정합니다. 이 매개 변수는 주문 번호에 따라 보고서 데이터를 필터링하는 데 사용됩니다.
@@ -60,7 +61,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="requirements"></a>요구 사항  
 데이터 기반 구독은 대개 보고서 서버 관리자가 만들고 유지 관리합니다. 데이터 기반 구독을 만드는 단계를 수행하려면 쿼리 작성, 구독자 데이터가 포함된 데이터 원본에 대한 지식, 보고서 서버에서 승격된 권한이 필요합니다.  
   
-이 자습서에서는 *기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;* 자습서에서 만든 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 보고서와 샘플 데이터베이스 **AdventureWorks2014**의 데이터를 사용합니다.  
+이 자습서에서는 *기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;* 자습서에서 만든 [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 보고서와 샘플 데이터베이스 **AdventureWorks2014**의 데이터를 사용합니다.  
   
 이 자습서를 사용하려면 컴퓨터에 다음 항목이 설치되어 있어야 합니다.  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 08/09/2017
   
 -   SQL Server 에이전트 서비스가 실행되고 있어야 합니다.  
   
--   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 `Sales Orders` 기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41; [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)의 데이터를 사용합니다.  
+-   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 `Sales Orders` 기본 테이블 보고서 만들기&#40;SSRS 자습서&#41; [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)의 데이터를 사용합니다.  
   
 -   샘플 보고서에 데이터를 제공하는 **AdventureWorks2014** 샘플 데이터베이스가 필요합니다.  
   
@@ -84,5 +85,4 @@ ms.lasthandoff: 08/09/2017
 [Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
-
 

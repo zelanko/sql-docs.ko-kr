@@ -1,28 +1,29 @@
 ---
 title: "Linux에서 SQL Server의 성능 기능을 시작 | Microsoft Docs"
-description: "이 항목에서는 SQL Server를 처음 접하는 Linux 사용자에 대 한 SQL Server 성능 기능 소개를 제공 합니다. 이러한 예 중 많은 모든 플랫폼에서 작동 하지만이 문서의 컨텍스트가 Linux."
+description: "이 문서에서는 SQL Server를 처음 접하는 Linux 사용자에 대 한 SQL Server 성능 기능을 소개 합니다. 이러한 예 중 많은 모든 플랫폼에서 작동 하지만이 문서의 컨텍스트가 Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
+ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5936634cf243216f5916812bbe5ec04767932ec7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux에서 SQL Server의 성능 기능에 대 한 연습
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server에 새로운 Linux 사용자 인 경우 다음 작업에 관한 일부의 성능 기능입니다. 이러한 설정은 고유 하거나 Linux 특정 아니지만 알 수 있는 영역의 추가로 조사를 수행 하는 데 도움이 됩니다. 각 예제에 해당 영역에 대 한 깊이 설명서에는 링크가 제공 됩니다.
 
@@ -32,7 +33,7 @@ SQL Server에 새로운 Linux 사용자 인 경우 다음 작업에 관한 일�
 ## <a name="create-a-columnstore-index"></a>Columnstore 인덱스 만들기
 Columnstore 인덱스는 저장 하 고 큰 columnstore 라는 칼럼 데이터 형식으로 데이터 저장소를 쿼리 하는 기술입니다.  
 
-1. T-SQL 아래를 실행 하 여 SalesOrderDetail 테이블에 Columnstore 인덱스를 추가 합니다.
+1. 다음 TRANSACT-SQL 명령을 실행 하 여 SalesOrderDetail 테이블에 Columnstore 인덱스를 추가 합니다.
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -41,7 +42,7 @@ Columnstore 인덱스는 저장 하 고 큰 columnstore 라는 칼럼 데이터 
    GO
    ```
 
-2. 테이블 검색에 Columnstore 인덱스를 사용 하는 다음 쿼리를 실행 합니다.
+2. Columnstore 인덱스를 사용 하 여 테이블 검색에 다음 쿼리를 실행 합니다.
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -197,4 +198,3 @@ Dm_os_wait stats 동적 관리 뷰를 쿼리 합니다 하:
    SELECT wait_type, wait_time_ms
    FROM sys.dm_os_wait_stats;
    ```
-

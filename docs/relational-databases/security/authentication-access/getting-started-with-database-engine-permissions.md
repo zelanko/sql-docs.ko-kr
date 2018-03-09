@@ -8,24 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- permissions [SQL Server], getting started
+helpviewer_keywords: permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>데이터베이스 엔진 권한 시작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -167,7 +164,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ## <a name="list-of-permissions"></a>권한 목록  
  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 에는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 에는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 에는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 에는 195개의 권한이 있습니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]및 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 에는 각각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용되지 않는 일부 권한이 있지만 데이터베이스 엔진의 일부만 노출하기 때문에 권한 수가 적습니다. 다음 그래픽에서는 권한과 각 권한의 상호 관계를 보여 줍니다. 일부 높은 수준의 권한(예: `CONTROL SERVER`)은 여러 번 나열되어 있습니다. 이 항목에서는 포스터가 너무 작아 읽기 어렵습니다. 이미지를 클릭하여 **데이터베이스 엔진 사용 권한 포스터**를 pdf 형식으로 다운로드합니다.  
   
-[![데이터베이스 사용 엔진 권한](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![데이터베이스 엔진 사용 권한](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
  
  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 보안 주체와 서버 및 데이터베이스 개체 간의 관계를 보여 주는 그래픽은 [사용 권한 계층 구조&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)를 참조하세요.  
   
@@ -196,7 +193,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
  데이터베이스에서 부여되거나 거부된 명시적 권한([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)])을 반환하려면 데이터베이스에서 다음 문을 실행합니다.  
   
-```tsql  
+```sql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
@@ -211,7 +208,7 @@ JOIN sys.objects AS obj
   
  서버 역할의 멤버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 만)를 반환하려면 다음 문을 실행합니다.  
   
-```tsql  
+```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -223,7 +220,7 @@ JOIN sys.server_principals AS sRole
  
  데이터베이스 역할의 멤버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)])를 반환하려면 데이터베이스에서 다음 문을 실행합니다.  
   
-```tsql  
+```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -232,7 +229,7 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  시작하는 데 유용한 추가 항목은 다음을 참조하세요.  
   
 -   [자습서: 데이터베이스 엔진 시작](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [데이터베이스 만들기&#40;자습서&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
@@ -250,4 +247,3 @@ JOIN sys.database_principals AS dRole
  [효과적인 데이터베이스 엔진 사용 권한 결정](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
-

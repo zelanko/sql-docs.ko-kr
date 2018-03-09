@@ -2,32 +2,30 @@
 title: "테이블 형식 모델 데이터베이스에 BI 의미 체계 모델 연결 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cad58c850f42e42791bbd57c010b48234e5640e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기
-  SharePoint 팜 외부의 Analysis Services 인스턴스에서 실행되는 테이블 형식 model 데이터베이스로 리디렉션하는 BI 의미 체계 모델 연결을 설정하려면 이 항목의 정보를 참조합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+SharePoint 팜 외부의 Analysis Services 인스턴스에서 실행되는 테이블 형식 모델 데이터베이스로 리디렉션하는 BI 의미 체계 모델 연결을 설정하려면 이 항목의 정보를 참조합니다.  
   
  BI 의미 체계 모델 연결을 만들고 SharePoint 및 Analysis Services 사용 권한을 구성한 후에는 이 연결을 Excel 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 데이터 원본으로 사용할 수 있습니다.  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_BISM"></a> 테이블 형식 model 데이터베이스에 대한 읽기 권한 부여  
  데이터베이스가 팜 외부에 있는 서버에서 실행 중이므로 연결을 설정하려면 백 엔드 Analysis Services 서버에 대한 데이터베이스 사용자 권한을 부여해야 합니다. Analysis Services에서는 역할 기반 권한 모델을 사용합니다. model 데이터베이스에 연결하는 사용자는 해당 멤버에게 읽기 권한을 부여하는 역할을 통해 읽기 권한 이상을 사용하여 연결해야 합니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 만들 때 역할 또는 역할 멤버 자격이 정의됩니다. SQL Server Management Studio로 역할을 만들 수 있지만, 이미 정의된 역할에 멤버를 추가할 수는 없습니다. 역할을 만드는 방법에 대한 자세한 내용은 [역할 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)를 참조하세요.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 만들 때 역할 또는 역할 멤버 자격이 정의됩니다. SQL Server Management Studio로 역할을 만들 수 있지만, 이미 정의된 역할에 멤버를 추가할 수는 없습니다. 역할을 만드는 방법에 대 한 자세한 내용은 참조 [만들기 및 관리 역할](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)합니다.  
   
 #### <a name="assign-role-membership"></a>역할 멤버 자격 할당  
   

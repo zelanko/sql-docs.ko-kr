@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - behavioral changes [ODBC]
 - compatibility [ODBC], behavioral changes
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ccd4cdd57771d32a6a09bf1c1030ba173ee18486
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5709d3ef8d186d0dcc0fb56f27829298f74e2b0c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="behavioral-changes"></a>동작 변경 내용
 동작 변경 내용이 있는 변경 내용이 반영은 *구문* 인터페이스의 똑같이 유지 하지만 *의미 체계* 변경 되었습니다. 이러한 변경 내용을 ODBC 2에서 사용 되는 기능입니다. *x* ODBC 3에 동일한 기능 다르게 동작 합니다. *x*합니다.  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQLSTATE 매핑](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
 -   [Datetime 데이터 형식 변경](../../../odbc/reference/develop-app/datetime-data-type-changes.md)
-

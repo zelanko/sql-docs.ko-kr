@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f709992a85c4fbae5ec3ba8936851f455c21174b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a06cd42ca38c67e42bf87bab6bee656170af7d04
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|-----------|  
 |\<열을 상속 >||이 뷰가 상속 하는 열 목록은 참조 [sys.objects](http://msdn.microsoft.com/en-us/c36fa71e-549a-4533-a6cd-1314d26f533f)합니다.||  
 |lob_data_space_id|**int**||항상 0입니다.|  
-|filestream_data_space_id|**int**|FILESTREAM 파일 그룹에 대 한 데이터 공간 ID 또는[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
+|filestream_data_space_id|**int**|FILESTREAM 파일 그룹에 대 한 데이터 공간 ID 또는 [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|이 테이블에서 사용 되는 최대 열 ID입니다.||  
 |lock_on_bulk_load|**bit**|대량 로드 시 테이블이 잠깁니다.|TBD|  
 |uses_ansi_nulls|**bit**|테이블이 SET ANSI_NULLS 데이터베이스 옵션을 ON으로 설정하여 생성되었습니다.|1.|  
@@ -46,8 +48,8 @@ ms.lasthandoff: 11/17/2017
 |large_value_types_out_of_row|**bit**|1 = 큰 값 유형은 행 밖에 저장됩니다.|항상 0입니다.|  
 |is_tracked_by_cdc|**bit**|1 = 테이블에 변경 데이터 캡처 설정|항상 0; CDC 지원 되지 않습니다.|  
 |lock_escalation|**tinyint**|테이블에 대 한 LOCK_ESCALATION 옵션의 값: 2 = 자동|항상 2입니다.|  
-|lock_escalation_desc|**nvarchar (60)**|Lock_escalation 옵션의 텍스트 설명입니다.|항상 ꞌAUTOꞌ 합니다.|  
-|pdw_node_id|**int**|고유 식별자는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|NOT  NULL|  
+|lock_escalation_desc|**nvarchar(60)**|Lock_escalation 옵션의 텍스트 설명입니다.|항상 ꞌAUTOꞌ 합니다.|  
+|pdw_node_id|**int**|고유 식별자는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|NOT NULL|  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

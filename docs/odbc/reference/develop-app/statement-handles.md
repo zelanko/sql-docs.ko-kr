@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d80db9c7ce795514dd362e37170aa58cce817c5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c949c8b3b3c794d6089ff159e597aeec02cfed
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="statement-handles"></a>문 핸들
 A *문을* 은 가장 쉽게 생각할 SQL 문 처럼 같은 **선택 \* 에서 직원**합니다. 그러나 문을 SQL 문을 보다 더-예: 문에 의해 만들어진 결과 집합 및 매개 변수는 문 실행에 사용 되는 해당 SQL 문이와 관련 된 정보를 모두 이루어져 있습니다. 문을 하지 않아도 응용 프로그램 정의 된 SQL 문이 있습니다. 예를 들어 때 카탈로그 함수가 같은 **SQLTables** 실행 되는 테이블 이름 목록을 반환 하는 미리 정의 된 SQL 문을 실행 하는 문에서 합니다.  
@@ -46,4 +44,3 @@ A *문을* 은 가장 쉽게 생각할 SQL 문 처럼 같은 **선택 \* 에서 
  문 핸들은 대부분의 ODBC 함수에 사용 됩니다. 특히, 사용 되는 함수에 매개 변수 바인딩 및 결과 집합 열의 (**SQLBindParameter** 및 **SQLBindCol**), 준비 하 고 문 실행 (**SQLPrepare** **SQLExecute**, 및 **SQLExecDirect**), 메타 데이터 검색 (**SQLColAttribute** 및 **SQLDescribeCol**), fetch 결과 (**SQLFetch**), 진단을 검색할 및 (**SQLGetDiagField** 및 **SQLGetDiagRec**). 카탈로그 함수에도 사용 됩니다 (**SQLColumns**, **SQLTables**등) 및 여러 다른 함수가 있습니다.  
   
  사용 하 여 문 핸들 할당은 **SQLAllocHandle** 로 해제 및 **SQLFreeHandle**합니다.
-

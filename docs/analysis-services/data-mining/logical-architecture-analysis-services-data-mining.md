@@ -2,15 +2,13 @@
 title: "논리적 아키텍처 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3f6e0b1540d9dc1072e7370b50cfa8736894b712
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 75c725b0461cbafc018cb3b42869414b6929a191
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>논리적 아키텍처(Analysis Services - 데이터 마이닝)
-  데이터 마이닝은 여러 구성 요소와의 상호 작용을 수반하는 프로세스입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+데이터 마이닝은 여러 구성 요소와의 상호 작용을 수반하는 프로세스입니다.  
   
 -   우선 학습, 테스트 및 예측에 사용하기 위해 SQL Server 데이터베이스나 기타 데이터 원본에 있는 데이터의 원본에 액세스해야 합니다.  
   
@@ -96,9 +94,9 @@ ms.lasthandoff: 09/01/2017
  자세한 내용은 [다차원 모델 어셈블리 관리](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)를 참조하세요.  
   
  **사용자 지정 저장 프로시저**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]데이터 마이닝 데이터 마이닝 개체를 사용 하는 저장된 프로시저 사용을 지원 합니다. 사용자 고유의 저장 프로시저를 만들어 기능을 확장하거나 예측 쿼리 및 내용 쿼리에서 반환된 데이터를 쉽게 사용할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝은 저장 프로시저를 사용한 데이터 마이닝 개체 작업을 지원합니다. 사용자 고유의 저장 프로시저를 만들어 기능을 확장하거나 예측 쿼리 및 내용 쿼리에서 반환된 데이터를 쉽게 사용할 수 있습니다.  
   
- [저장 프로시저 정의](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [저장된 프로시저 정의](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  교차 유효성 검사를 수행하는 데 사용할 수 있는 저장 프로시저는 다음과 같습니다.  
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 09/01/2017
  또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터 마이닝에 내부적으로 사용되는 많은 시스템 저장 프로시저가 포함되어 있습니다. 시스템 저장 프로시저는 내부적으로 사용되지만 유용한 바로 가기를 지정할 수 있습니다. Microsoft는 이러한 저장 프로시저를 필요에 따라 변경할 권리가 있습니다. 따라서 프로덕션 환경에서 사용하려는 경우 DMX, AMO 또는 XMLA를 사용하여 쿼리를 만드는 것이 좋습니다.  
   
  **사용자 지정 플러그 인 알고리즘**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]사용자 고유의 알고리즘을 만들고 다음 서버 인스턴스에 새 데이터 마이닝 서비스 알고리즘을 추가 하기 위한 메커니즘을 제공 합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 사용자 고유의 알고리즘을 만들어 서버 인스턴스에 새 데이터 마이닝 서비스로 추가할 수 있는 메커니즘을 제공합니다.  
   
  Analysis Services에서는 COM 인터페이스를 사용하여 플러그 인 알고리즘과 통신합니다. 새 알고리즘을 구현하는 방법에 대한 자세한 내용은 [Plugin Algorithms](../../analysis-services/data-mining/plugin-algorithms.md)을 참조하십시오.  
   
@@ -116,7 +114,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Data Mining Extensions &#40; DMX &#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   
-

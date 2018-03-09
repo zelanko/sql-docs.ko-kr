@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - character data type [ODBC]
 - data conversions from SQL to C types [ODBC], character
 ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: be915f119f34ed84bc732239acd7386ea671bb66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3ba39caca1a4ad37437f35918545ed54a5dd2266
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-character"></a>SQL에서 c: 문자
 문자 형식은 ODBC SQL 데이터에 대 한 식별자:  
@@ -74,4 +72,3 @@ _C_TYPE_TIMESTAMP|데이터 값은 올바른 *타임 스탬프 값 또는 시간
  [g] 타임 스탬프 구조의 날짜 필드를 현재 날짜로 설정 됩니다.  
   
  숫자 문자 SQL 데이터를 변환, 날짜, 시간, 타임 스탬프 또는 데이터 간격 C 선행 공백과 후행 공백은 무시 됩니다.
-

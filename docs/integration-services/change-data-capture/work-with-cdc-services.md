@@ -15,22 +15,21 @@ ms.topic: article
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 496eead0f37abd155b789d4ae4c40a40a64ac9f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dace3763da446c75677288d15401a7c749740677
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="work-with-cdc-services"></a>CDC Service 작업
   CDC Service 구성 콘솔을 사용하여 새 CDC Service를 만들고 CDC를 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 준비할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **SQL Server 준비**  
  CDC Service 구성 콘솔 오른쪽의 **작업** 창에서 이 옵션을 선택합니다.  
   
@@ -47,9 +46,8 @@ ms.lasthandoff: 08/03/2017
   
  새 Oracle CDC Service 대화 상자가 열립니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [CDC Service에서 작업 하는 방법](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [CDC Service에서 작업하는 방법](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Oracle CDC Service 만들기 및 편집](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   
-

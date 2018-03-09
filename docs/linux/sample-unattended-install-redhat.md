@@ -2,37 +2,36 @@
 title: "Red Hat Enterprise Linux에서 SQL Server에 대 한 자동된 설치 | Microsoft Docs"
 description: "SQL Server 스크립트 샘플-Red Hat Enterprise Linux에서 무인된 설치"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 67f9d71c2a5bd1f57e270c07028f6e8c0ac036a1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 50f3e867f17987c36a15810eaace668d59b738f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux에 대 한 SQL Server 무인된 설치 스크립트 샘플:
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 샘플 Bash 스크립트 대화형 입력이 없는 SQL Server 2017 Red Hat Enterprise Linux (RHEL)를 설치합니다. 데이터베이스 엔진, SQL Server Agent, SQL Server 명령줄 도구를 설치 하는 방식의 예제를 제공 하 고 설치 후 단계를 수행 합니다. 필요에 따라 전체 텍스트 검색을 설치 하 고 관리 사용자를 만들 수 있습니다.
 
 > [!TIP]
-> SQL Server를 설치 하는 가장 빠른 방법은 따라야 하는 무인된 설치 스크립트를 필요 하지 않은 경우는 [Red Hat에 대 한 빠른 시작 자습서](quickstart-install-connect-red-hat.md)합니다. 다른 설정 정보를 참조 하십시오. [Linux에서 SQL Server에 대 한 설치 지침](sql-server-linux-setup.md)합니다.
+> SQL Server를 설치 하는 가장 빠른 방법은 따라야 하는 무인된 설치 스크립트를 필요 하지 않은 경우는 [Red Hat에 대 한 퀵 스타트](quickstart-install-connect-red-hat.md)합니다. 다른 설정 정보를 참조 하십시오. [Linux에서 SQL Server에 대 한 설치 지침](sql-server-linux-setup.md)합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- 최소 3.25 g B 메모리 Linux에서 SQL Server를 실행 해야 합니다.
+- 최소 2GB의 메모리 Linux에서 SQL Server를 실행 해야 합니다.
 - 파일 시스템을 해야 **XFS** 또는 **EXT4**합니다. 와 같은 다른 파일 시스템, **BTRFS**, 지원 되지 않습니다.
 - 다른 시스템 요구 사항에 대 한 참조 [Linux에서 SQL Server에 대 한 시스템 요구 사항](sql-server-linux-setup.md#system)합니다.
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 10/02/2017
 샘플 스크립트를 파일에 저장 한 다음이 사용자 지정 하려면 스크립트에서 변수 값을 바꿉니다. 설정할 수도 있습니다 스크립팅 변수의 환경 변수로으로 스크립트 파일에서 제거 합니다.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 
@@ -225,4 +224,3 @@ export SQL_INSTALL_AGENT='y'
 ```
 
 Linux에서 SQL Server에 대 한 자세한 내용은 참조 [Linux 개요에서 SQL Server](sql-server-linux-overview.md)합니다.
-

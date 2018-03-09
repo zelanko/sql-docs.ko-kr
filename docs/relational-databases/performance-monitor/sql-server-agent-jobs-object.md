@@ -2,9 +2,12 @@
 title: "SQL Server 에이전트, Jobs 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ helpviewer_keywords:
 - Jobs object
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08c18a2223c48c07aee8550401e4044411c73dbf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f372eced96ca17d4fd547a11a56cfefd732394b9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 에이전트, Jobs 개체
-  SQL Server 에이전트 **Jobs** 성능 개체에는 SQL Server 에이전트 작업에 관한 정보를 보고하는 성능 카운터가 포함되어 있습니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 에이전트 **Jobs** 성능 개체에는 SQL Server 에이전트 작업에 관한 정보를 보고하는 성능 카운터가 포함되어 있습니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
  이 표에는 **SQLAgent:Jobs** 카운터가 포함되어 있습니다.  
   
-|이름|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |**Active Jobs**|이 카운터는 현재 실행 중인 작업의 수를 보고합니다.|  
 |**Failed jobs**|이 카운터는 오류 발생으로 종료된 작업의 수를 보고합니다.|  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|인스턴스|설명|  
+|인스턴스|Description|  
 |--------------|-----------------|  
 |**_Total**|모든 작업에 대한 정보입니다.|  
 |**경고**|경고에 의해 시작된 작업의 정보입니다.|  

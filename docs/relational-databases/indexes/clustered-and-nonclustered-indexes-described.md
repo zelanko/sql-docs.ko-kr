@@ -1,36 +1,36 @@
 ---
 title: "클러스터형 및 비클러스터형 인덱스 소개 | Microsoft 문서"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 55498dc339c081da3e9c5fbeca1c464a93b2395e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fdf3562dbfbc4482d888f2e5e955b7941e2a6c76
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>클러스터형 및 비클러스터형 인덱스 소개
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [클러스터형 및 비클러스터형 인덱스 설명](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx)합니다.
-
 
   인덱스는 테이블이나 뷰와 관련된 디스크상 구조로서 테이블이나 뷰의 행 검색 속도를 향상시킵니다. 인덱스에는 테이블이나 뷰에 있는 하나 이상의 열로 작성되는 키가 포함됩니다. 이러한 키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 키 값과 연결된 행을 빠르고 효율적으로 찾을 수 있는 구조(B-트리)에 저장됩니다.  
   
@@ -68,9 +68,12 @@ ms.lasthandoff: 11/17/2017
   
  쿼리 최적화 프로그램은 일반적으로 쿼리 실행 시 가장 효율적인 방법을 선택합니다. 그러나 사용 가능한 인덱스가 없을 경우 쿼리 최적화 프로그램은 테이블 검색을 사용해야 합니다. 쿼리 최적화 프로그램에서 선택할 수 있는 효율적인 인덱스가 충분하도록 하려면 환경에 가장 적합한 인덱스를 여러 개 디자인하고 만들어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제공하는 [데이터베이스 엔진 튜닝 관리자](../../relational-databases/performance/database-engine-tuning-advisor.md) 를 사용하면 데이터베이스 환경을 분석하고 적절한 인덱스를 선택하는 데 도움이 됩니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+> [!IMPORTANT] 
+> 인덱스 디자인 지침 및 내부 요소에 대한 자세한 내용은 [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)를 참조하세요.
+
+## <a name="related-content"></a>관련 내용  
+ [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)     
  [클러스터형 인덱스 만들기](../../relational-databases/indexes/create-clustered-indexes.md)  
-  
  [비클러스터형 인덱스 만들기](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   

@@ -26,17 +26,16 @@ helpviewer_keywords:
 - integrity [SQL Server], catalogs
 - consistency [SQL Server], catalogs
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f63850a2cf39d783daee65431da349d04cba3b03
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7c8b73259e599e0001706cfaf09dca30d7d31a5b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -59,7 +57,7 @@ DBCC CHECKCATALOG
 ```  
   
 ## <a name="arguments"></a>인수  
- *a s e _* | *database_id* | 0  
+ *database_name* | *database_id* | 0  
  카탈로그 일관성을 검사할 데이터베이스의 이름 또는 ID입니다. 아무 값도 지정하지 않거나 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
   
  WITH NO_INFOMSGS  
@@ -81,23 +79,23 @@ DBCC CHECKCATALOG는 시스템 메타데이터 테이블 간에 다양한 일관
 스냅숏을 만들 수 없는 경우 DBCC CHECKCATALOG는 필요한 일관성을 얻기 위해 배타적 데이터베이스 잠금을 획득합니다. 불일치가 감지되는 경우 복구가 불가능하며 데이터베이스를 백업에서 복원해야 합니다.
   
 > [!NOTE]  
->  에 대해 DBCC CHECKCATALOG 실행 **tempdb** 검사를 수행 하지 않습니다. 성능상의 이유로 데이터베이스 스냅숏에 사용할 수 있으므로이 **tempdb**합니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. 해결 하려면 서버 재생 **tempdb** 메타 데이터 문제입니다.  
+> 에 대해 DBCC CHECKCATALOG 실행 **tempdb** 검사를 수행 하지 않습니다. 성능상의 이유로 데이터베이스 스냅숏에 사용할 수 있으므로이 **tempdb**합니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. 해결 하려면 서버 재생 **tempdb** 메타 데이터 문제입니다.  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG는 FILESTREAM 데이터를 검사하지 않습니다. FILESTREAM은 파일 시스템에 BLOB(Binary Large Object)을 저장합니다.  
+> DBCC CHECKCATALOG는 FILESTREAM 데이터를 검사하지 않습니다. FILESTREAM은 파일 시스템에 BLOB(Binary Large Object)을 저장합니다.  
   
 DBCC CHECKCATALOG는의 일부로 실행도 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)합니다.
   
 ## <a name="result-sets"></a>결과 집합  
 데이터베이스가 지정되지 않은 경우 DBCC CHECKCATALOG는 다음을 반환합니다.
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]가 데이터베이스 이름으로 지정된 경우 DBCC CHECKCATALOG는 다음을 반환합니다.
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
@@ -120,4 +118,3 @@ GO
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [시스템 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   
-

@@ -3,28 +3,29 @@ title: "데이터를 생성 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.prod: sql-non-specified
-ms.technology:
-- " database-engine "
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 49674a1edbec00a650af036297adacec3bdc150d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 데이터 생성
-이러한 데이터베이스에서 생성 된 하루 최대 년 1 월 1 일부 터 2013을 시작 하는 데이터를 포함 하는 WideWorldImporters 및 WideWorldImportersDW 데이터베이스의 릴리스 버전.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]이러한 데이터베이스에서 생성 된 하루 최대 년 1 월 1 일부 터 2013을 시작 하는 데이터를 포함 하는 WideWorldImporters 및 WideWorldImportersDW 데이터베이스의 릴리스 버전.
 
 예제 데이터베이스 데모 또는 그림에서는 나중에 사용 되는 경우 데이터베이스의 최신 샘플 데이터를 포함 하는 데 특히 도움이 수도 있습니다.
 
@@ -85,4 +86,3 @@ Wide World Importers 다운로드 크기는 배포 가능한 제공 되지만 SQ
 필요한 행 수 정도에 삽입 되는 `Fact.Sale` 2012 년에는 테이블입니다. 프로시저 50,000 하루 행 수를 인위적으로 제한 합니다. 이 변경 될 수 있지만 테이블의 실수로 overinflations 방지 하는 것입니다.
 
 또한 프로시저 경우 적용 됩니다 클러스터형된 columnstore 인덱스가 이미 적용 되지 않은 것입니다.
-

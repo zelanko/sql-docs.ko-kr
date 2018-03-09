@@ -1,34 +1,31 @@
 ---
-title: "테이블 형식 모델 솔루션 (SSAS 테이블 형식) | Microsoft Docs"
+title: "테이블 형식 모델 솔루션 | Microsoft Docs"
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5b84ae0fa5911c0140213583462b20c9054f0f4b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 31c6a32198c4a9aa417ec65fcf85a5455ea53c4a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="creating-tabular-models"></a>테이블 형식 모델 만들기
-  이 섹션의 각 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 테이블 형식 모델 디자이너를 사용하여 테이블 형식 모델을 제작하는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+이 섹션의 각 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 테이블 형식 모델 디자이너를 사용하여 테이블 형식 모델을 제작하는 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [테이블 형식 모델 디자이너](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)  
@@ -39,7 +36,7 @@ ms.lasthandoff: 09/27/2017
   
  [테이블 형식 모델 프로젝트](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)  
   
- [Properties](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+ [속성](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
  [데이터 원본](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)  
   
@@ -53,9 +50,9 @@ ms.lasthandoff: 09/27/2017
   
  [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
- [KPI](../../analysis-services/tabular-models/kpis-ssas-tabular.md)  
+ [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)  
   
- [계층](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
+ [계층 구조](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
  [파티션](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
@@ -72,4 +69,3 @@ ms.lasthandoff: 09/27/2017
  [도구 및 Analysis Services에서 사용 되는 응용 프로그램](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
   
-

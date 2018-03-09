@@ -2,10 +2,14 @@
 title: "검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,19 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-caps.latest.revision: "89"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29c3477e0a53e78727eb95423158e550328cbfe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e50f02ed70002a7f8af8d6464672328d20e70ea3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 단어 분리기와 형태소 분석기는 모든 전체 텍스트 인덱싱된 데이터에 대해 언어 분석을 수행합니다. 언어 분석에서는 다음 두 작업을 수행합니다.
 
 -   **단어 경계 찾기(단어 분리)**. *단어 분리기*는 해당 언어의 어휘 규칙을 기준으로 단어의 경계를 결정하는 개별 단어를 식별합니다. 각 단어( *토큰*이라고도 함)는 압축된 표현으로 크기를 줄여 전체 텍스트 인덱스에 삽입됩니다.
@@ -51,7 +55,7 @@ SQL Server에서 지원하는 모든 언어에 대해 제공되는 단어 분리
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색에서 지원하는 언어 목록을 보려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다. 이 목록에 언어가 있으면 단어 분리기가 해당 언어에 대해 등록되어 있음을 나타냅니다. 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -61,7 +65,7 @@ SELECT * FROM sys.fulltext_languages
 
 등록된 단어 분리기 구성 요소 목록을 보려면 다음 문을 사용합니다.
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -86,7 +90,7 @@ GO
   
 특정 열의 단어 분리기 언어를 보려면 다음 문을 실행합니다.
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
@@ -97,7 +101,7 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>MSSQLSERVER_30053 오류에 대한 정보
   
-|속성|Value|
+|속성|값|
 |-|-|
 |제품 이름|SQL Server|  
 |이벤트 ID|30053|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -29,19 +29,20 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62e51e155dbd230d3db7d6e84d71f5b1635a22be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3aaf081b264cd74614af93fd58d130b19dfa4d5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 통합 아키텍처-CLR 호스팅된 환경
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .NET Framework 공용 언어 런타임 (CLR)와 통합 되어 데이터베이스 프로그래머가 Visual C#, Visual Basic.NET 및 Visual c + +와 같은 언어를 사용할 수 있습니다. 프로그래머가 이러한 언어를 사용하여 작성할 수 있는 비즈니스 논리의 종류에는 함수, 저장 프로시저, 트리거, 데이터 형식, 집계 등이 포함됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  .NET Framework CLR(공용 언어 런타임)과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 통합을 사용하면 데이터베이스 프로그래머가 Visual C#, Visual Basic .NET, 및 Visual C++와 같은 언어를 사용할 수 있습니다. 프로그래머가 이러한 언어를 사용하여 작성할 수 있는 비즈니스 논리의 종류에는 함수, 저장 프로시저, 트리거, 데이터 형식, 집계 등이 포함됩니다.  
   
   CLR에는 가비지 수집되는 메모리, 선점형 스레딩, 메타데이터 서비스(형식 리플렉션), 코드 안정성, 코드 액세스 보안 등의 기능이 있습니다. CLR에서는 메타데이터를 사용하여 클래스를 찾아 로드하고, 메모리에 인스턴스를 배치하고, 메서드 호출을 확인하고, 네이티브 코드를 생성하고, 보안을 강화하며, 런타임 컨텍스트 경계를 설정합니다.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/17/2017
  사용자 코드는 사용자 응답을 요청하는 메시지 상자를 표시하거나 프로세스를 종료하는 것과 같이 데이터베이스 엔진 프로세스의 무결성을 손상시키는 작업을 수행할 수 없습니다. 또한 사용자 코드는 데이터베이스 엔진 메모리 버퍼 또는 내부 데이터 구조를 덮어쓸 수 없습니다.  
   
 ###### <a name="scalability"></a>확장성  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR은 일정 예약 및 메모리 관리를 위한 내부 모델이 서로 다릅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 스레드가 정기적으로 또는 잠금이나 I/O 대기 중일 때 자동으로 실행이 해제되는 공동의 비선점형 스레딩 모델을 지원합니다. 반면 CLR은 선점형 스레딩 모델을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 실행되는 사용자 코드에서 운영 체제 스레딩 기본 형식을 직접 호출할 수 있으면 사용자 코드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 태스크 스케줄러에 제대로 통합되지 않고 시스템의 확장성을 떨어뜨릴 수 있습니다. CLR은 가상 메모리와 실제 메모리를 구분하지 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 실제 메모리를 직접 관리하고 구성 가능한 한도 내에서만 실제 메모리를 사용해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 CLR은 일정 예약 및 메모리 관리를 위한 내부 모델이 서로 다릅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 스레드가 정기적으로 또는 잠금이나 I/O 대기 중일 때 자동으로 실행이 해제되는 공동의 비선점형 스레딩 모델을 지원합니다. 반면 CLR은 선점형 스레딩 모델을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 실행되는 사용자 코드에서 운영 체제 스레딩 기본 형식을 직접 호출할 수 있으면 사용자 코드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 태스크 스케줄러에 제대로 통합되지 않고 시스템의 확장성을 떨어뜨릴 수 있습니다. CLR은 가상 메모리와 실제 메모리를 구분하지 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 실제 메모리를 직접 관리하고 구성 가능한 한도 내에서만 실제 메모리를 사용해야 합니다.  
   
  수천 개의 동시 사용자 세션을 지원하도록 확장 가능한 RDBMS(관계형 데이터베이스 관리 시스템)의 경우에는 스레딩, 일정 예약 및 메모리 관리 모델이 다르기 때문에 통합하기 어렵습니다. 아키텍처에서는 스레딩, 메모리 및 동기화 기본 형식을 위한 API(응용 프로그래밍 인터페이스)를 직접 호출하는 사용자 코드로 인해 시스템의 확장성에 문제가 발생하지 않아야 합니다.  
   
@@ -125,15 +126,15 @@ ms.lasthandoff: 11/17/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호스팅되는 경우 이러한 스레드 중단은 다음과 같이 처리됩니다. 즉, CLR이 응용 프로그램 도메인 내에서 스레드 중단이 발생한 모든 공유 상태를 검색합니다. CLR은 동기화 개체가 있는지 여부를 확인하여 이 작업을 수행합니다. 응용 프로그램 도메인에 공유 상태가 있으면 응용 프로그램 도메인 자체가 언로드됩니다. 응용 프로그램 도메인이 언로드되면 해당 응용 프로그램 도메인에서 현재 실행 중인 데이터베이스 트랜잭션이 중지됩니다. 공유 상태가 있는 경우 예외를 트리거한 세션 이외의 다른 사용자 세션도 이와 같은 중대한 예외의 영향을 받을 수 있기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR은 공유 상태의 가능성을 줄이기 위한 조치를 취합니다. 자세한 내용은 .NET Framework 설명서를 참조하십시오.  
   
 ###### <a name="security-permission-sets"></a>보안: 사용 권한 집합  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스에 배포되는 코드의 안정성 및 보안 요구 사항을 사용자가 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 되는 경우 어셈블리를 만든 사람 하나를 지정할 수 세 가지 권한 집합 중 해당 어셈블리에 대해: SAFE, EXTERNAL_ACCESS 및 UNSAFE 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자를 데이터베이스에 배포 하는 코드에 대 한 안정성 및 보안 요구 사항을 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 되는 경우 어셈블리를 만든 사람 하나를 지정할 수 세 가지 권한 집합 중 해당 어셈블리에 대해: SAFE, EXTERNAL_ACCESS 및 UNSAFE 합니다.  
   
 |||||  
 |-|-|-|-|  
 |권한 집합|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |코드 액세스 보안|실행 전용|실행 및 외부 리소스 액세스|제한 없음|  
 |프로그래밍 모델 제한 사항|예|예|제한 없음|  
-|안정성 요구 사항|예|예|아니요|  
-|네이티브 코드를 호출하는 기능|아니요|아니요|예|  
+|안정성 요구 사항|예|사용자 계정 컨트롤|아니요|  
+|네이티브 코드를 호출하는 기능|아니요|아니오|예|  
   
  SAFE는 가장 신뢰할 수 있고 안전한 모드로, 허용되는 프로그래밍 모델에 대한 제한이 있습니다. SAFE 어셈블리는 실행하고, 계산을 수행하고, 로컬 데이터베이스에 액세스할 수 있는 권한이 부여됩니다. SAFE 어셈블리는 확인할 수 있는 형식 안전 어셈블리여야 하며 비관리 코드를 호출할 수 없습니다.  
   
@@ -141,14 +142,14 @@ ms.lasthandoff: 11/17/2017
   
  EXTERNAL_ACCESS는 중급 보안 옵션을 제공하며 코드가 데이터베이스 외부의 리소스에 액세스하도록 허용하지만 여전히 SAFE 수준의 안정성과 보안을 갖습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 호스트 수준의 CAS 정책 계층을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그에 저장되어 있는 권한 집합에 기초하여 세 가지 권한 집합 중 하나를 부여하는 호스트 정책을 설정합니다. 데이터베이스 내부에서 실행되는 관리 코드에는 항상 이러한 코드 액세스 권한 집합 중 하나가 부여됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호스트 수준의 CAS 정책 계층을 사용 하 여 사용 권한 기반으로 권한 집합에 저장 된 3 개 중 하나를 부여 하는 호스트 정책을 설정 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그입니다. 데이터베이스 내부에서 실행되는 관리 코드에는 항상 이러한 코드 액세스 권한 집합 중 하나가 부여됩니다.  
   
 ### <a name="programming-model-restrictions"></a>프로그래밍 모델 제한 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리 코드에 대한 프로그래밍 모델에서는 여러 호출에 걸쳐 유지되는 상태를 사용하거나 여러 사용자 세션에서 상태를 공유할 필요가 없는 함수, 프로시저 및 형식을 작성해야 합니다. 또한 앞서 설명한 것과 같이 공유된 상태가 있으면 해당 응용 프로그램의 확장성과 안정성에 영향을 주는 중대한 예외가 발생할 수 있습니다.  
   
  이러한 점을 고려하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 클래스의 정적 변수와 정적 데이터 멤버는 사용하지 않는 것이 좋습니다. SAFE 및 EXTERNAL_ACCESS 어셈블리의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CREATE ASSEMBLY 시간에 해당 어셈블리의 메타데이터를 검사하고 정적 데이터 멤버와 변수가 사용된 경우 어셈블리를 만드는 데 오류가 발생합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]주석을 지정 하 여.NET Framework Api 호출을 허용 하지 않습니다는 **: SharedState**, **동기화** 및 **ExternalProcessMgmt** 호스트 보호 특성입니다. 이로 인해 SAFE 및 EXTERNAL_ACCESS 어셈블리에서는 상태를 공유하고, 동기화를 수행하며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 API를 호출하지 못합니다. 자세한 내용은 참조 [CLR 통합 프로그래밍 모델 제한 사항](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 주석을 지정 하 여.NET Framework Api 호출을 허용 하지 않습니다는 **: SharedState**, **동기화** 및 **ExternalProcessMgmt** 호스트 보호 특성입니다. 이로 인해 SAFE 및 EXTERNAL_ACCESS 어셈블리에서는 상태를 공유하고, 동기화를 수행하며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 API를 호출하지 못합니다. 자세한 내용은 참조 [CLR 통합 프로그래밍 모델 제한 사항](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [CLR 통합 보안](../../relational-databases/clr-integration/security/clr-integration-security.md)   

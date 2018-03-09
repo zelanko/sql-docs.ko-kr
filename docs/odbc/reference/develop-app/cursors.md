@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fc2d15d949561f28cf7b9fa653ebf34c602c29bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursors"></a>커서
 사용 하 여 데이터를 인출 하는 응용 프로그램을 *커서*합니다. 커서는 결과 집합에서 다른: 결과 집합은 특정 검색 조건과 일치 하는 행 집합, 응용 프로그램에는 행을 반환 하는 반면 커서는 소프트웨어입니다. 이름을 *커서* 데이터베이스에 적용 될 때 아마도 터미널 컴퓨터에 깜박이 커서가에서 시작 합니다. 해당 커서 화면과 형식화 된 단어가 표시 되는 위치 다음에 현재 위치에 표시 하는 대로만 결과 집합에서 커서에서 결과 집합은 다음 어떤 행이 반환 되 고 현재 위치를 나타냅니다.  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  명시적으로 호출 하 여 트랜잭션을 커밋하거나 **SQLEndTran** 또는 자동 커밋 모드에서 작업할으로 설정 하면 일부 데이터 원본에 대 한 연결에 대 한 모든 문이 모든 커서를 닫습니다. 자세한 내용은에서 SQL_CURSOR_COMMIT_BEHAVIOR 및 SQL_CURSOR_ROLLBACK_BEHAVIOR 특성을 참조 하십시오.는 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 함수 설명 합니다.
-

@@ -3,7 +3,7 @@ title: "웹 서버 컴퓨터에 게스트 사용 권한만 부여 | Microsoft Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - guest privileges in RDS [ADO]
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4c9e1f3dace4916b7d8044a5b21f480bacb04238
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d9027a8e8adead5801a27465bda36a347472e383
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>웹 서버 컴퓨터에 게스트 권한 부여
 웹 서버 계정을 (u s r _*ComputerName*) rds. 사용 하도록 웹 서버 컴퓨터에서 게스트 로컬 그룹에 추가 해야 합니다  
@@ -46,6 +45,5 @@ ms.lasthandoff: 09/09/2017
 5.  웹 서버 계정을 경우 목록에 나타나지 않습니다는 **사용자 또는 그룹 선택** 대화 상자에 이름을 입력 합니다 (u s r _*ComputerName*) 아래쪽 빈 상자를 클릭 한 다음 **추가** .  
   
 6.  **확인**을 클릭합니다.
-
 
 

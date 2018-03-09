@@ -3,8 +3,11 @@ title: "옵션 대화 상자 F1 도움말 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f3de179a12e96a00f701b6aaa423902c7403886
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 14a3f463d74000c9d7df7d089073f93fa00fc3f4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-dialog-boxes-f1-help"></a>옵션 대화 상자 F1 도움말
-이 섹션에서는 **의** 도구 **메뉴에서** 옵션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]을 클릭하면 사용할 수 있는 대화 상자에 대한 F1 도움말을 제공합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 **도구** 메뉴에서 **옵션**을 클릭하면 사용할 수 있는 대화 상자에 대한 F1 도움말을 제공합니다.  
   
 [옵션&#40;디자이너 - Analysis Services 디자이너 - 일반&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 7db09ca84b86d93790ce4b1bf6300526df188dea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 7262db9da133a2aa6f82f501e8dab3228de16efb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="aggregate-transformation"></a>집계 변환
   집계 변환은 Average와 같은 집계 함수를 열 값에 적용하고 결과를 변환 출력에 복사합니다. 집계 함수 외에도 변환은 집계할 그룹을 지정하는 데 사용할 수 있는 GROUP BY 절을 제공합니다.  
@@ -135,7 +134,7 @@ ms.lasthandoff: 08/19/2017
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>관련 작업  
- [집계 변환을 사용 하 여 데이터 집합의 값 집계](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [집계 변환을 사용하여 데이터 집합의 값 집계](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>집계 변환 편집기(집계 탭)
   **집계 변환 편집기** 대화 상자의 **집계** 탭을 사용하여 집계 및 집계 속성에 대한 열을 지정할 수 있습니다. 이때 여러 집계를 적용할 수 있습니다. 이 변환으로 인해 오류 출력이 생성되지는 않습니다.  
@@ -145,7 +144,7 @@ ms.lasthandoff: 08/19/2017
 >   
 >  집계 변환에서 **키** 및 **키 배율** 은 **Group by** 연산의 결과로 반환될 그룹 수를 나타냅니다. **고유 키 수** 및 **고유 수 배율** 은 **고유 카운트** 연산의 결과로 반환될 고유 값 수를 나타냅니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **고급/기본**  
  여러 개의 출력에 대한 여러 집계를 구성하는 옵션을 표시하거나 숨깁니다. 기본적으로 고급 옵션은 숨겨져 있습니다.  
   
@@ -183,7 +182,7 @@ ms.lasthandoff: 08/19/2017
 |연산|Description|  
 |---------------|-----------------|  
 |**Group By**|데이터 집합을 그룹으로 나눕니다. 모든 데이터 형식의 열을 그룹화할 수 있습니다. 자세한 내용은 GROUP BY를 참조하십시오.|  
-|**합계**|열에 있는 값의 합계를 계산합니다. 숫자 데이터 형식의 열만 합계를 계산할 수 있습니다. 자세한 내용은 SUM을 참조하십시오.|  
+|**Sum**|열에 있는 값의 합계를 계산합니다. 숫자 데이터 형식의 열만 합계를 계산할 수 있습니다. 자세한 내용은 SUM을 참조하십시오.|  
 |**평균**|열에 있는 열 값의 평균을 반환합니다. 숫자 데이터 형식의 열만 평균을 계산할 수 있습니다. 자세한 내용은 AVG를 참조하십시오.|  
 |**개수**|그룹의 항목 개수를 반환합니다. 자세한 내용은 COUNT를 참조하십시오.|  
 |**CountDistinct**|그룹에서 Null이 아닌 고유한 값의 개수를 반환합니다. 자세한 내용은 COUNT 및 DISTINCT를 참조하십시오.|  
@@ -214,11 +213,11 @@ ms.lasthandoff: 08/19/2017
 >   
 >  집계 변환에서 **키** 및 **키 배율** 은 **Group by** 연산의 결과로 반환될 그룹 수를 나타냅니다. **고유 키 수** 및 **고유 수 배율** 은 **고유 카운트** 연산의 결과로 반환될 고유 값 수를 나타냅니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **키 배율**  
  필요에 따라 집계에 필요한 키 수를 대략적으로 지정합니다. 변환 시 이 정보를 사용하여 최초 캐시 크기를 최적화합니다. 이 옵션의 기본값은 **Unspecified**입니다. **키 배율** 과 **키 수** 를 모두 지정하면 **키 수** 가 우선 적용됩니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |Unspecified|**키 배율** 속성이 사용되지 않습니다.|  
 |낮음|집계에서 약 500,000개의 키를 쓸 수 있습니다.|  
@@ -231,7 +230,7 @@ ms.lasthandoff: 08/19/2017
  **고유 수 배율**  
  필요에 따라 집계에서 쓸 수 있는 고유한 값의 수를 대략적으로 지정합니다. 이 옵션의 기본값은 **Unspecified**입니다. **고유 수 배율** 과 **고유 키 수** 를 모두 지정하면 **고유 키 수** 가 우선 적용됩니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |Unspecified|CountDistinctScale 속성이 사용되지 않습니다.|  
 |낮음|집계에서 약 500,000개의 고유한 값을 쓸 수 있습니다.|  
@@ -244,9 +243,8 @@ ms.lasthandoff: 08/19/2017
  **자동 확장 비율**  
  1에서 100 사이의 값을 사용하여 집계 중에 메모리를 확장할 수 있는 비율을 지정합니다. 이 옵션의 기본값은 **25%**입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

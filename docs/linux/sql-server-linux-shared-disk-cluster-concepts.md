@@ -3,27 +3,27 @@ title: "장애 조치 클러스터 인스턴스-Linux에서 SQL Server | Microso
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: a9e8964b16eff5da35ef3abac6f493afc7615903
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 229c6a989a4707921eae3046e3c9707b05bb0306
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
-
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-Linux에서 SQL Server
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서는 Linux에서 SQL Server 장애 조치 클러스터 인스턴스 (FCI)와 관련 된 개념을 설명 합니다. 
 
@@ -42,13 +42,13 @@ Linux에서 SQL Server FCI를 만들려면 [Linux에서 SQL Server FCI 구성](s
 
 RHEL HA 추가 기능 및 SUSE HAE 둘 다에 작성 됩니다 [Pacemaker](http://clusterlabs.org/)합니다.
 
-아래 다이어그램에서 보듯이으로 두 명의 서버에 저장소가 제공 됩니다. -Corosync 및 Pacemaker-클러스터링 구성 요소는 통신 및 리소스 관리를 조정 합니다. 서버 중 하나에 저장소 리소스와 SQL Server에 연결 되어 있습니다. Pacemaker 오류를 발견 하면 클러스터링 구성 요소 관리 하는 리소스를 다른 노드로 이동 합니다.  
+다음 다이어그램에서 볼 수 있듯이 두 명의 서버에 저장소가 제공 됩니다. -Corosync 및 Pacemaker-클러스터링 구성 요소는 통신 및 리소스 관리를 조정 합니다. 서버 중 하나에 저장소 리소스와 SQL Server에 연결 되어 있습니다. Pacemaker 오류를 발견 하면 클러스터링 구성 요소 관리 하는 리소스를 다른 노드로 이동 합니다.  
 
 ![Red Hat Enterprise Linux 7 공유 디스크 SQL 클러스터](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> 이 시점에서 linux Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. sql에서 클러스터의 존재에 대 한 지식이 없는, 외부 모든 오케스트레이션은 되며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에는 동일한 동등한 옵션이 없습니다. 것으로 예상 되는 @@servername 및 이름을 반환 하는 노드를 클러스터 dmv sys.dm_os_cluster_nodes 및 sys.dm_os_cluster_properties는 레코드가 없는 동안 sys.servers 합니다. 문자열 서버 이름이를 가리키는 연결 문자열을 사용 하는 IP를 사용 하지 있습니다 (아래 설명 됨)는 선택한 서버 이름으로 가상 IP 리소스를 만드는 데 IP를 DNS 서버에 등록 해야 합니다.
+> 이 시점에서 linux Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. sql에서 클러스터의 존재에 대 한 지식이 없는, 외부 모든 오케스트레이션은 되며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에는 동일한 동등한 옵션이 없습니다. 것으로 예상 되는 @@servername 및 이름을 반환 하는 노드를 클러스터 dmv sys.dm_os_cluster_nodes 및 sys.dm_os_cluster_properties는 레코드가 없는 동안 sys.servers 합니다. 문자열 서버 이름이를 가리키는 연결 문자열을 사용 하는 IP를 사용 하지 선택한 서버 이름으로 (다음 섹션에서 설명)으로 가상 IP 리소스를 만드는 데 IP를 DNS 서버에 등록 해야 합니다.
 
 ## <a name="number-of-instances-and-nodes"></a>인스턴스 수 및 노드
 
@@ -59,7 +59,7 @@ Pacemaker 클러스터 수만 없으므로 최대 16 개의 노드로 Corosync �
 SQL Server FCI를 사용 하는 SQL Server 인스턴스는 하나의 노드 또는 다른에서 활성입니다.
 
 ## <a name="ip-address-and-name"></a>IP 주소와 이름
-Linux Pacemaker 클러스터에서 각 SQL Server FCI 자체 고유한 IP 주소와 이름이 필요 합니다. FCI 구성에서 여러 서브넷에 걸쳐 있는 경우 하나의 IP 주소는 서브넷별로 해야 합니다. 응용 프로그램 및 최종 사용자에 게 불필요 Pacemaker 클러스터의 기본 서버에 알아야 하는 FCI를 액세스 하는 고유 이름 및 IP 주소 사용 됩니다.
+Linux Pacemaker 클러스터에서 각 SQL Server FCI 자체 고유한 IP 주소와 이름이 필요합니다. FCI 구성에서 여러 서브넷에 걸쳐 있는 경우 하나의 IP 주소는 서브넷별로 해야 합니다. 응용 프로그램 및 최종 사용자에 게 불필요 Pacemaker 클러스터의 기본 서버에 알아야 하는 FCI를 액세스 하는 고유 이름 및 IP 주소 사용 됩니다.
 
 DNS에서 FCI의 이름을 Pacemaker 클러스터에 생성 되는 FCI 리소스의 이름과 동일 해야 합니다.
 이름과 IP 주소가 DNS에 등록 되어야 합니다.
@@ -92,4 +92,3 @@ Linux에서 SQL Server와 함께 한 가지 주요 차이점은는 기본 사용
 - [장애 조치 클러스터 인스턴스-iSCSI-Linux에서 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 - [장애 조치 클러스터 인스턴스-NFS-Linux에서 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 - [SMB-Linux에서 SQL Server 장애 조치 클러스터 인스턴스-를 구성 합니다.](sql-server-linux-shared-disk-cluster-configure-smb.md)
-

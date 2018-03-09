@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - result-free statements [ODBC]
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ef4e297719d875b70d76c94c58b5c450740d457f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a99ea01cbd5a00ea4aa12e4b1461ca7f1ce9afa5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="result-generating-and-result-free-statements"></a>결과 생성 하 고 결과 필요 없는 문
 SQL 문은 다음과 같은 5 개의 범주로 느슨하게 나눌 수 있습니다.  
@@ -45,4 +43,3 @@ SQL 문은 다음과 같은 5 개의 범주로 느슨하게 나눌 수 있습니
 -   **관리 문을** 이들은 데이터베이스에서 관리 용도로 사용 되는 SQL 문의 합니다. 예를 들어 **GRANT** 및 **해지**합니다.  
   
  처음 두 가지 범주에 있는 SQL 문을 이라고 통칭 *문 결과 생성*합니다. 후자는 세 가지 범주에 있는 SQL 문을 이라고 통칭 *문 결과 필요 없는*합니다. ODBC 문 결과 생성을 포함 하는 일괄 처리의 의미 체계를 정의 합니다. 이러한 의미 체계 매우 다양 하며 따라서 데이터 원본에 따른 특정 합니다. 예를 들어 개체를 삭제 하는 중 다음으로 참조 하거나 다시 동일한 일괄 처리의 동일한 개체를 만드는 SQL Server 드라이버가 지원 하지 않습니다. 따라서 용어 *일괄 처리* 결과 생성의 일괄 처리만이 설명서 참조에서 사용 되는 문입니다.
-

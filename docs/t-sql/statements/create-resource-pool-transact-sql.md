@@ -22,17 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - CREATE RESOURCE POOL
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5c6f9a6ae8f0f869eb5ddd32c0189fcbaab198d3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6da47e346606170b29798b0301c10c5adeeed055
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,16 +70,16 @@ CREATE RESOURCE POOL pool_name
 ```  
   
 ## <a name="arguments"></a>인수  
- *pool_name 이라*  
+ *pool_name*  
  리소스 풀에 대한 사용자 정의 이름입니다. *pool_name 이라는* 은 영숫자로 최대 128 자를 사용할 수의 인스턴스 내에서 고유 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
   
- MIN_CPU_PERCENT =*값*  
+ MIN_CPU_PERCENT =*value*  
  CPU 경합이 있을 때 리소스 풀의 모든 요청에 대해 보장되는 평균 CPU 대역폭을 지정합니다. *값* 는 정수 이며 기본 설정은 0입니다. 허용된 범위 *값* 은 0에서 100 까지입니다.  
   
- MAX_CPU_PERCENT =*값*  
+ MAX_CPU_PERCENT =*value*  
  CPU 경합이 있을 때 이 리소스 풀의 모든 요청이 받는 최대 평균 CPU 대역폭을 지정합니다. *값* 는 정수 이며 기본 설정은 100입니다. 허용된 범위 *값* 는 1에서 100 까지입니다.  
   
- CAP_CPU_PERCENT =*값*  
+ CAP_CPU_PERCENT =*value*  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  리소스 풀의 모든 요청에서 받을 CPU 대역폭의 하드 캡을 지정합니다. 최대 CPU 대역폭 수준을 지정된 값과 동일하게 제한합니다. *값* 는 정수 이며 기본 설정은 100입니다. 허용된 범위 *값* 는 1에서 100 까지입니다.  
@@ -101,18 +100,18 @@ INNER JOIN sys.dm_os_schedulers AS sc
     AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*값*  
+ MIN_MEMORY_PERCENT =*value*  
  다른 리소스 풀과 공유할 수 없으며 이 리소스 풀에 예약된 최소 메모리 양을 지정합니다. *값* 는 정수 기본 설정은 0 이며 허용 되는 범위에 대 한 *값* 는 0에서 100입니다.  
   
  MAX_MEMORY_PERCENT =*값*  
  이 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리를 지정합니다. *값* 는 정수 이며 기본 설정은 100입니다. 허용된 범위 *값* 는 1에서 100 까지입니다.  
   
- MIN_IOPS_PER_VOLUME =*값*  
+ MIN_IOPS_PER_VOLUME =*value*  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  리소스 풀에 예약할 디스크 볼륨당 최소 IOPS(초당 IO 작업)를 지정합니다. 허용된 범위 *값* 은 0에서 2 ^31-1 (2147483647). 풀에 대한 최소 임계값이 없음을 나타내려면 0을 지정합니다. 기본값은 0입니다.  
   
- MAX_IOPS_PER_VOLUME =*값*  
+ MAX_IOPS_PER_VOLUME =*value*  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  리소스 풀에 대해 허용할 디스크 볼륨당 최대 IOPS(초당 IO 작업)를 지정합니다. 허용된 범위 *값* 은 0에서 2 ^31-1 (2147483647). 풀에 대한 무제한 임계값을 설정하려면 0을 지정합니다. 기본값은 0입니다.  
@@ -182,5 +181,4 @@ WITH (
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)  
   
   
-
 

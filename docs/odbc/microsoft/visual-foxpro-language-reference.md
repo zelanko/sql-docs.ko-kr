@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - commands for FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], commands
 ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4412f1398ece10a404c317c55ff6cfff5456734a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a833509f772205258e10ec4b589da10ab2a1cbbe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-foxpro-language-reference"></a>Visual FoxPro 언어 참조
 이 섹션에서는 다음 항목을 다룹니다.  
@@ -70,4 +68,3 @@ ms.lasthandoff: 09/09/2017
 -   [UPDATE - SQL 명령](../../odbc/microsoft/update-sql-command.md)  
   
 -   [Visual FoxPro 필드 데이터 형식](../../odbc/microsoft/visual-foxpro-field-data-types.md)
-

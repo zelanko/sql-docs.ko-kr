@@ -22,17 +22,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 716c0fdaa701865e8d35154cd19068051e0ab017
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>외부 TABLE AS SELECT (Transact SQL) 만들기
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -80,10 +79,10 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>인수  
- [[ *database_name* 합니다. [ *schema_name* ]. ] | *schema_name* 합니다. ] *table_name*  
+ [[ *database_name* 합니다. [ *schema_name* ] . ] | *schema_name* . ] *table_name*  
  데이터베이스에서 만들 테이블의 부분 이름 1 ~ 3 년. 따라서 외부 테이블에 대 한 테이블 메타 데이터는 관계형 데이터베이스에 저장 됩니다.  
   
- 위치 = '*hdfs_folder*'  
+ LOCATION =  '*hdfs_folder*'  
  외부 데이터 원본에 SELECT 문의 결과 쓸 위치를 지정 합니다. 위치 폴더 이름 인지 그리고 Hadoop 클러스터 또는 Azure 저장소 Blob의 루트 폴더의 상대 경로 포함 될 수 있습니다.  PolyBase 이미 존재 하지 않는 경우 경로 및 폴더 만들어집니다.  
   
  외부 파일에 기록 됩니다 *hdfs_folder* 및 명명 된 *QueryID_date_time_ID.format*여기서 *ID* 는 증분 식별자 및 *형식* 내보낸된 데이터 형식입니다. 예를 들어 QID776_20160130_182739_0.orc입니다.  
@@ -133,8 +132,8 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   로드 실패 하지 못했습니다 50% 행 200 개의 행을 로드 하려고 시도한 후 지정된 된 30% 제한 보다 큰 합니다.  
   
- 와 *common_table_expression*  
- CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 자세한 내용은 참조 [common_table_expression &AMP; #40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ WITH *common_table_expression*  
+ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  선택 \<select_criteria > SELECT 문에서 결과 함께 새 테이블을 채웁니다. *select_criteria* 데이터를 새 테이블로 복사를 결정 하는 SELECT 문의 본문입니다. SELECT 문에 대 한 정보를 참조 하십시오. [select&#40; Transact SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -186,7 +185,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   파티션 외부 이동  
   
- **적용 대상:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]외부 테이블을 만들기 위한 필수 구성 요소로 기기 관리자 hadoop 연결을 구성 해야 합니다.   자세한 내용은 다운로드할 수 있는 APS 설명서에서 외부 데이터 (분석 플랫폼 시스템)에 대 한 연결을 구성을 참조 [여기](http://www.microsoft.com/download/details.aspx?id=48241)합니다.  
+ **적용 대상:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]외부 테이블을 만들기 위한 필수 구성 요소로 기기 관리자 hadoop 연결을 구성 해야 합니다. 자세한 내용은 다운로드할 수 있는 APS 설명서에서 외부 데이터 (분석 플랫폼 시스템)에 대 한 연결을 구성을 참조 [여기](http://www.microsoft.com/download/details.aspx?id=48241)합니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  외부 테이블 데이터가 있는 데이터베이스 외부에 백업 및 복원 작업은 데이터베이스에 저장 된 데이터 에서만 작동 이후 합니다. 즉, 메타 데이터를 백업 및 복원 됩니다.  
@@ -266,6 +265,5 @@ OPTION ( HASH JOIN );
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-
 
 

@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - DBase driver [ODBC], setting options programmatically
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 79bf64c2f577935b26dcb64b93e7f3567924291b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2760e0b08417121e765582904565461501eb0df6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>DBASE 드라이버에 대 한 프로그래밍 방식으로 옵션 설정
 |옵션|Description|메서드|  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |읽기 전용|읽기 전용으로 데이터베이스를 지정합니다.|이 옵션을 동적으로 설정 하려면는 **READONLY** 키워드에 대 한 호출에서 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)합니다.|  
 |디렉터리 선택|액세스 하려는 파일이 있는 디렉터리를 선택할 수 있는 대화 상자가 표시 됩니다.<br /><br /> 데이터 원본 디렉터리를 정의할 때 가장 자주 사용 되는 파일이 있는 디렉터리를 지정 합니다. ODBC 드라이버 기본 디렉터리와이 디렉터리를 사용합니다. 자주 사용 하는 경우 다른 파일을이 디렉터리에 복사 합니다. 또는 디렉터리 이름이 포함 된 SELECT 문의 파일 이름을 한정할 수 있습니다.<br /><br /> 선택 \* C:\MYDIR\EMP에서<br /><br /> 또는 사용 하 여 새 기본 디렉터리를 지정할 수는 **SQLSetConnectOption** 함수 SQL_CURRENT_QUALIFIER 옵션입니다.|이 옵션을 동적으로 설정 하려면는 **DEFAULTDIR** 키워드에 대 한 호출에서 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)합니다.|  
 |삭제 된 행 표시|삭제 된 것으로 표시 된 행을 검색 하거나에 배치 될 지 여부를 지정 합니다. 선택을 취소 하면 삭제 된 행 표시 되지 않습니다. 삭제 된 행을 선택 하는 경우 처리 됩니다 삭제 되지 않은 행과 동일 합니다. 기본값은 선택 취소되어 있습니다.|이 옵션을 동적으로 설정 하려면는 **DELETED** 키워드에 대 한 호출에서 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)합니다.|
-

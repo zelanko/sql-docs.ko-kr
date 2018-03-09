@@ -1,34 +1,32 @@
 ---
 title: "SharePoint 제품용 Reporting Services 추가 기능 검색 위치 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/30/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsSharePoint
+helpviewer_keywords: rsSharePoint
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
-caps.latest.revision: 14
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "14"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a23cb8cb401de31b69049a065b5bd34cc29e9b1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c0f23f6d5410bf5eeeb59476ae491fc82afd93dc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 제품용 Reporting Services 추가 기능 검색 위치
 
-SharePoint 제품 및 기술용 SSRS([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]) 추가 기능(rssharepoint.msi)은 SharePoint 배포와 보고서 서버를 통합하는 기능을 제공하는 웹 다운로드입니다.  
+SharePoint 제품 및 기술용 SSRS( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ) 추가 기능(rssharepoint.msi)은 SharePoint 배포와 보고서 서버를 통합하는 기능을 제공하는 웹 다운로드입니다.  
   
 > [!IMPORTANT]  
 >  지원되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능, 보고서 서버 및 SharePoint 조합의 목록은 [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능 조합&#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)을 참조하세요.  
@@ -60,18 +58,17 @@ SharePoint 제품 및 기술용 SSRS([!INCLUDE[msCoName](../../includes/msconame
   
  추가 기능을 다운로드하고 설치하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터를 참조하십시오.  
   
--   **SP1 add-in:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services Add-in for Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
+-   **SP1 추가 기능:**  [Microsoft® SharePoint®용 Microsoft® SQL Server® 2012 SP1 Reporting Services 추가 기능](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583)  
   
--   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
+-   **SP1:**  [Microsoft® SQL Server® 2012 SP1(서비스 팩 1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906)  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 2010 제품용 Reporting Services 추가 기능
 
-SQL Server 2016 버전에서 추가 기능을 설치할 수 있습니다는 SQL Server 설치 마법사의 기능 선택 페이지에서의 일환으로. 추가 기능을 개별적으로 다운로드하고 설치하려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft® SharePoint® 기술 2010용 Microsoft® SQL Server® 2012 Reporting Services 추가 기능](http://go.microsoft.com/fwlink/?LinkID=207242) 페이지에서 이 파일의 최신 버전을 얻을 수 있습니다.
+SQL Server 2016 릴리스부터 SQL Server 설치 마법사 중에 기능 선택 페이지에서 이 추가 기능을 설치할 수 있습니다. 추가 기능을 개별적으로 다운로드하고 설치하려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft® SharePoint® 기술 2010용 Microsoft® SQL Server® 2012 Reporting Services 추가 기능](http://go.microsoft.com/fwlink/?LinkID=207242) 페이지에서 이 파일의 최신 버전을 얻을 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
 [SharePoint용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Reporting Services 추가 기능을 제거한 후 기본값이 아닌 영역에서 SharePoint 페이지를 찾아볼 수 없는](http://support.microsoft.com/kb/2009212)  
+[Reporting Services 추가 기능을 제거한 후에는 기본값이 아닌 영역에서 SharePoint 페이지를 찾아볼 수 없습니다.](http://support.microsoft.com/kb/2009212)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

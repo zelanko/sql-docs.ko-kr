@@ -3,8 +3,11 @@ title: "개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,27 +16,27 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd56bfad6a216bd631cdd5c532d86913607dc156
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0cf165a803e6b6b8fa5640b5dd3e38173f59fa4c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
-사용자 지정 보고서가 선택한 개체 탐색기 노드의 보고서 매개 변수를 참조하면 사용자 지정 보고서를 해당 노드의 컨텍스트에서 실행할 수 있습니다. 이렇게 하면 사용자 지정 보고서가 현재 컨텍스트(예: 현재 데이터베이스)나 데이터베이스 또는 서버 개체를 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 사용자 지정 보고서가 선택한 개체 탐색기 노드의 보고서 매개 변수를 참조하면 사용자 지정 보고서를 해당 노드의 컨텍스트에서 실행할 수 있습니다. 이렇게 하면 사용자 지정 보고서가 현재 컨텍스트(예: 현재 데이터베이스)나 데이터베이스 또는 서버 개체를 사용할 수 있습니다.  
   
 ## <a name="object-explorer-node-report-parameters"></a>개체 탐색기 노드 보고서 매개 변수  
   
 |매개 변수 이름|데이터 형식|  
 |------------------|-------------|  
 |**ObjectName**|**문자열**|  
-|**ObjectTypeName**|**문자열**|  
+|**ObjectTypeName**|**String**|  
 |**필터링됨**|**Boolean**|  
-|**ServerName**|**문자열**|  
-|**FontName**|**문자열**|  
-|**DatabaseName**|**문자열**|  
+|**ServerName**|**String**|  
+|**FontName**|**String**|  
+|**DatabaseName**|**String**|  
   
 ## <a name="object-explorer-node-report-parameters-example"></a>개체 탐색기 노드 보고서 매개 변수 예제  
 예제를 실행하려면 다음 절차를 따릅니다.  
@@ -530,7 +533,7 @@ ms.lasthandoff: 11/09/2017
 </Report></pre>  
 ```
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)  
 [Management Studio에 사용자 지정 보고서 추가](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [사용자 지정 보고서 실행 경고 표시](../../ssms/object/unsuppress-run-custom-report-warnings.md)  

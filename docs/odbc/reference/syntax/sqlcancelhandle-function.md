@@ -5,29 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQLCancelHandle
-helpviewer_keywords:
-- SQLCancelHandle function [ODBC]
+f1_keywords: SQLCancelHandle
+helpviewer_keywords: SQLCancelHandle function [ODBC]
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3760400f23b558c27cd70a3ecd288171cbd56534
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 769f1659436f4325e25f0898c759d25327a795be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 함수
 **규칙**  
@@ -66,7 +62,7 @@ SQLRETURN SQLCancelHandle(
   
  다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLCancelHandle** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 인수에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
@@ -80,7 +76,7 @@ SQLRETURN SQLCancelHandle(
   
  경우 **SQLCancelHandle** 사용 하 여 호출 *HandleType* 여로 설정, 반환할 수 있지만 함수에서 반환 될 수 있는 모든 SQLSTATE **SQLCancel**합니다.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  이 함수는 **SQLCancel** 있지만 문 핸들에만 아닌 매개 변수는 연결 또는 명령문 핸들을 걸릴 수 있습니다. 드라이버 관리자에 대 한 호출을 매핑합니다 **SQLCancelHandle** 한 호출에 **SQLCancel** 때 *HandleType* 여 됩니다. 이 통해 사용 하도록 응용 프로그램 **SQLCancelHandle** 드라이버 구현 하지 않는 경우에 문 작업을 취소 하기 **SQLCancelHandle**합니다.  
   
  문 작업을 취소 하는 방법에 대 한 자세한 내용은 참조 [SQLCancel 함수](../../../odbc/reference/syntax/sqlcancel-function.md)합니다.  
@@ -118,4 +114,3 @@ SQLRETURN SQLCancelHandle(
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [비동기 실행(폴링 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
-

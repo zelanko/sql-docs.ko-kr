@@ -19,17 +19,16 @@ helpviewer_keywords:
 - functions [SQL Server], cursors
 - cursors [SQL Server], statements
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 990b1bc3c44605e2b7debed67b88e5cd65770ed5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0ab48b40d79bff67e90bfd52fe0cc482c47677ab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cursors-transact-sql"></a>커서(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,13 +37,13 @@ ms.lasthandoff: 09/01/2017
   
  커서 작업은 다음과 같은 문에서 지원됩니다.  
   
- [닫기](../../t-sql/language-elements/close-transact-sql.md)  
+ [CLOSE](../../t-sql/language-elements/close-transact-sql.md)  
   
  [CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)  
   
- [할당 취소](../../t-sql/language-elements/deallocate-transact-sql.md)  
+ [DEALLOCATE](../../t-sql/language-elements/deallocate-transact-sql.md)  
   
- [커서 선언](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
+ [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
   
  [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
   
@@ -52,11 +51,11 @@ ms.lasthandoff: 09/01/2017
   
  [FETCH](../../t-sql/language-elements/fetch-transact-sql.md)  
   
- [열기](../../t-sql/language-elements/open-transact-sql.md)  
+ [OPEN](../../t-sql/language-elements/open-transact-sql.md)  
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [설정](../../t-sql/statements/set-statements-transact-sql.md)  
+ [SET](../../t-sql/statements/set-statements-transact-sql.md)  
   
  다음 시스템 함수 및 시스템 저장 프로시저 또한 커서를 지원합니다.  
   
@@ -78,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [커서](../../relational-databases/cursors.md)  
   
   
-

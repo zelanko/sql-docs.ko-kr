@@ -2,15 +2,13 @@
 title: "모델링 플래그 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,20 +24,20 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 48
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="modeling-flags-data-mining"></a>모델링 플래그(데이터 마이닝)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 모델링 플래그를 사용하여 사례 테이블에 정의되어 있는 데이터에 대한 데이터 마이닝 알고리즘에 추가 정보를 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 모델링 플래그를 사용하여 사례 테이블에 정의되어 있는 데이터에 대한 데이터 마이닝 알고리즘에 추가 정보를 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  
   
  마이닝 구조 수준에서 정의되는 모델링 플래그도 있고 마이닝 모델 열 수준에서 정의되는 모델링 플래그도 있습니다. 예를 들어 **NOT NULL** 모델링 플래그는 마이닝 구조 열에 사용됩니다. 모델을 만드는 데 사용하는 알고리즘에 따라 마이닝 모델 열에 추가 모델링 플래그를 정의할 수 있습니다.  
   
@@ -62,7 +60,7 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Missing은 알고리즘에서 사용하는 특수한 상태로 열의 텍스트 값인 "Missing"과는 다릅니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)에서 미리 정의한 모델링 플래그 외에 다른 모델링 플래그를 사용할 수 있습니다.  
   
- **REGRESSOR**  
+ **회귀 변수**  
  열이 처리 중에 회귀 변수로 사용할 후보임을 나타냅니다. 이 플래그는 마이닝 모델 열에서 정의되며 연속 숫자 데이터 형식이 있는 열에만 적용할 수 있습니다. 이 플래그의 사용에 대한 자세한 내용은 이 항목의 [REGRESSOR 모델링 플래그 사용](#bkmk_UseRegressors)섹션을 참조하세요.  
   
 ## <a name="viewing-and-changing-modeling-flags"></a>모델링 플래그 확인 및 변경  
@@ -113,14 +111,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |태스크|항목|  
 |----------|-----------|  
-|데이터 마이닝 디자이너를 사용하여 모델링 플래그 편집|[모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|가능성이 높은 회귀 변수를 권장하기 위해 알고리즘에 대한 힌트 지정|[모델에서 회귀 변수로 사용할 열 지정](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|특정 알고리즘에서 지원하는 모델링 플래그 확인(각 알고리즘 참조 항목의 모델링 플래그 섹션 참조)|[데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|데이터 마이닝 디자이너를 사용하여 모델링 플래그 편집|[모델링 플래그 &#40; 데이터 마이닝 &#41; 확인 또는 변경](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|가능성이 높은 회귀 변수를 권장하기 위해 알고리즘에 대한 힌트 지정|[모델에서 회귀 변수로 사용할 열을 지정 합니다.](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|특정 알고리즘에서 지원하는 모델링 플래그 확인(각 알고리즘 참조 항목의 모델링 플래그 섹션 참조)|[데이터 마이닝 알고리즘 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |마이닝 구조 열과 각 열에 설정할 수 있는 속성에 대한 자세한 정보|[마이닝 구조 열](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |마이닝 모델 열과 모델 수준에서 적용할 수 있는 모델링 플래그에 대한 자세한 정보|[마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)|  
 |DMX 문에서 모델링 플래그 작업에 사용되는 구문 확인|[모델링 플래그&#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|누락된 값 및 이러한 값의 작업 방법 이해|[누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|누락된 값 및 이러한 값의 작업 방법 이해|[누락 값 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |모델 및 구조 관리와 사용법 속성 설정에 대한 자세한 정보|[데이터 마이닝 개체 이동](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   
-

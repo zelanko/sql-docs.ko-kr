@@ -2,27 +2,28 @@
 title: "Reporting Services 모바일 보고서에 탐색기 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 672e1d91d042900da427e357d630eacbb98052b0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 탐색기 추가
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 시각화의 데이터를 시간별 또는 선택 항목별로 필터링하려면 *탐색기* 를 추가합니다. 
 
 탐색기는 Power BI 및 Excel 피벗 테이블의 슬라이서와 비슷하지만 몇 가지 고유한 특성도 가지고 있습니다.
@@ -38,7 +39,7 @@ ms.lasthandoff: 08/09/2017
 이름에서 알 수 있듯이 시간 범위에 의해 제한되는 데이터 범위를 필터링하는 데 시간 탐색기를 사용합니다.   
   
 ![SSMRP_TimeNav](../../reporting-services/mobile-reports/media/ssmrp-timenav.png)  
-*왼쪽에 네 개의 꺾은선형 차트는 시간 범위 사전 설정에서 설정 됩니다. 오른쪽의 꺾은선형 차트에는 필터입니다.*  
+*왼쪽에서 네 개의 꺾은선형 차트는 시간 범위 사전 설정에서 설정됩니다. 오른쪽의 꺾은선형 차트가 필터입니다.*  
   
 미리 보기 또는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 볼 때 시간 탐색기에 있는 화살표를 끌어 보고서의 나머지를 필터링합니다.  
   
@@ -126,10 +127,9 @@ ms.lasthandoff: 08/09/2017
   
 또한, 필터를 함께 캐스케이드하여 선택한 첫 번째 값으로 두 번째 이용 가능 값을 필터링할 수 있습니다. 필터를 캐스케이드하려면 일반 갤러리 요소와 마찬가지로 키 열에 필터를 적용합니다.  
 
-### <a name="see-also"></a>참고 항목 
+### <a name="see-also"></a>관련 항목: 
   
-* [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 시각화](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 계기](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Reporting Services 모바일 보고서의 데이터 표](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  
-

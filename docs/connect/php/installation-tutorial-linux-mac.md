@@ -7,19 +7,17 @@ ms.service:
 ms.component: php
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.topic: article
 author: ulvii
 ms.author: v-ulibra
 manager: Hadis Fard
 ms.workload: Inactive
+ms.openlocfilehash: f57df5092dfa9a1eabe1e0dc04eba28cd256d978
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6ca464b620a092a910d341c90b0fec364dadd89b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="php-linux-and-mac-drivers-installation-tutorial"></a>PHP Linux 및 Mac 드라이버 설치 자습서
 다음 지침에서는 깨끗 한 환경 가정 하 고 PHP 7.x, Microsoft ODBC 드라이버, Apache 및 Microsoft PHP를 설치 하는 방법을 보여 Ubuntu 15.10, 16.04, RedHat 7, 8 Debian 및 Mac OS X에서 드라이버입니다.
@@ -380,5 +378,4 @@ function FormatErrors( $errors )
 ?>
 ```
 http://localhost/testsql.php (MacOS에서 http://localhost:8080/testsql.php) 브라우저를 가리킵니다. 이제 SQL Server/Azure SQL 데이터베이스에 연결할 수 있습니다.
-
 

@@ -15,16 +15,15 @@ ms.topic: article
 dev_langs:
 - CSharp
 ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
-caps.latest.revision: 33
+caps.latest.revision: 
 author: stevestein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b342d2733ad9dfab013957c08edfee93a3c78859
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 8cb39d4ae3ff02fffe83e7f0e4646ade1545ce72
-ms.openlocfilehash: f1ad5de594493c65688d5c1ca2d69ac421661770
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="always-encrypted-client-development"></a>상시 암호화(클라이언트 개발)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,8 +38,7 @@ ms.lasthandoff: 07/31/2017
 
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [상시 암호화(데이터베이스 엔진)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-
 

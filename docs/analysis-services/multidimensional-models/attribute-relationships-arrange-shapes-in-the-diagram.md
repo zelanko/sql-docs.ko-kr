@@ -2,35 +2,30 @@
 title: "특성 관계 다이어그램의 셰이프 정렬 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- attribute relationships [Analysis Services]
+helpviewer_keywords: attribute relationships [Analysis Services]
 ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 932726539120c0ecee0f57f879677811e3be9f0e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b42070c64e1e96268ac73fece5bb8d246eb45e21
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-relationships---arrange-shapes-in-the-diagram"></a>특성 관계 다이어그램의 셰이프 정렬-
-  **의 차원 디자이너에 있는 차원 구조 뷰의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 셰이프의 레이아웃을 변경할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]셰이프의 레이아웃을 변경할 수 있습니다는 **특성 관계** 탭의 차원 디자이너에서 차원 구조 뷰의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
   
 ### <a name="to-arrange-shapes-in-the-attribute-relationship-diagram"></a>특성 관계 다이어그램의 셰이프를 정렬하려면  
   
@@ -45,4 +40,3 @@ ms.lasthandoff: 09/01/2017
  [특성 관계 정의](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   
-

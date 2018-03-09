@@ -3,7 +3,7 @@ title: "RDS 시나리오 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 05bd95fc39fe21b5df9edfaa876a69d5935de9b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 920df727d2714629a45280133c53011afccc5c4d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-scenario"></a>RDS 시나리오
 > [!IMPORTANT]
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
  이 시나리오에서는 ActiveX 컨트롤 기본 HTML 레이아웃 태그, 사용 하 여 DHTML 데이터 바인딩 기술 및 프로그램을 사용 하는 방법을 알고 있다고 가정 합니다.  
   
- SDK를 설치한 경우 주소록 예제 응용 프로그램에 대 한 전체 소스 코드에서 samples\dataaccess\rds\AddressBook\AddressBook.asp SDK 디렉터리에 있습니다. 주소록 시나리오를 보려면 Internet Explorer 4.0 이상 버전에서는 입력  **http://*웹 서버*/RDS/AddressBook/AddressBook.asp** 여기서 *웹 서버* 이름 인터넷 정보 서비스 (IIS) 및 ASP 실행 중인 Windows NT 4.0 또는 Windows 2000 웹 서버 컴퓨터에 제공 됩니다.  
+ SDK를 설치한 경우 주소록 예제 응용 프로그램에 대 한 전체 소스 코드에서 samples\dataaccess\rds\AddressBook\AddressBook.asp SDK 디렉터리에 있습니다. 주소록 시나리오를 보려면 Internet Explorer 4.0 이상 버전에서는 입력 **http://*웹 서버*/RDS/AddressBook/AddressBook.asp** 여기서 *웹 서버* 지정 되는 이름 Windows NT 4.0 또는 Windows 2000 웹 서버 컴퓨터에 인터넷 정보 서비스 (IIS) 및 ASP 실행 되는.  
   
 ## <a name="introduction-to-address-book"></a>주소록 소개  
  주소록 샘플 응용 프로그램에는 간단한 온라인 주소록 인트라넷을 통해 검색 가능한 디렉터리를 게시 하는 데 사용할 수 있는 제공 합니다. 주소록은 사용자 직원에 대 한 정보를 요청 하는 하나 이상의 필드에 검색 문자열을 입력할 수 있도록 설계 되었습니다. 원격 데이터 서비스의 기본 기능을 표시 하려면 예제 응용 프로그램 개체 및 검색 필드의 최소 수도 작은 보관 의도적으로 됩니다.  
@@ -74,6 +73,5 @@ ms.lasthandoff: 09/09/2017
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
 
 

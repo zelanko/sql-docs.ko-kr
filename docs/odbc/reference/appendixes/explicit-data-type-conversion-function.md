@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c1520ca18c42d2efbc2822630fe7ccae9f90302a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e0bba777a69607447428d83115c545edfeccec5d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-data-type-conversion-function"></a>명시적 데이터 형식 변환 함수
 명시적 데이터 형식 변환이 SQL 데이터 형식 정의 기준으로 지정 됩니다.  
@@ -64,7 +62,7 @@ ms.lasthandoff: 09/09/2017
   
  명시적 데이터 형식 변환 함수에 대 한 ODBC 구문을 변환 형식 사양을 지원 하지 않습니다. 명시적 형식 지정 데이터 원본으로 사용할 수, 드라이버 기본값을 지정 하거나 형식 지정을 구현 해야 합니다.  
   
- 인수 *value_exp* 열 이름, 결과 다른 스칼라 함수 이거나 숫자 또는 문자열 리터럴일 수 있습니다. 예를 들어  
+ 인수 *value_exp* 열 이름, 결과 다른 스칼라 함수 이거나 숫자 또는 문자열 리터럴일 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
@@ -119,4 +117,3 @@ SELECT {fn ABS(EMPNO)}, {fn CONVERT(EMPNAME,SQL_SMALLINT)}
     ```  
     SELECT abs(EMPNO), int2(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  
     ```
-

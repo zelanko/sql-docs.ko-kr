@@ -2,34 +2,34 @@
 title: "보고서 서버 ExecutionLog 및 ExecutionLog3 뷰 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: 41
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "41"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f54e9b1c9aa0a17634048f91932c4aad2d69888b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1177b4cf7db3d55e839608f45fb036ae95e7baf5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>보고서 서버 ExecutionLog 및 ExecutionLog3 뷰
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]보고서 서버 실행 로그에는 단일 서버나 기본 모드 확장 배포 또는 SharePoint 팜의 여러 서버에서 실행되는 보고서에 대한 정보가 들어 있습니다. 보고서 실행 로그를 사용하여 보고서 요청 빈도, 가장 많이 사용되는 출력 형식 및 각 처리 단계에 소요된 처리 시간(밀리초)을 확인할 수 있습니다. 로그에는 보고서의 데이터 집합 쿼리 실행에 걸린 시간 또는 데이터 처리에 걸린 시간에 대한 정보가 포함됩니다. 보고서 서버 관리자는 로그 정보를 검토하여 오랫동안 실행되는 태스크를 식별하고 보고서 작성자가 보고서에서 기능을 향상시킬 수 있는 부문(데이터 집합 또는 처리)에 대한 사항을 제안할 수 있습니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 실행 로그에는 단일 서버 또는 기본 모드를 사용하는 스케일 아웃 배포 또는 SharePoint 팜을 사용한 다중 서버에서 실행되는 보고서에 대한 정보가 들어 있습니다. 보고서 실행 로그를 사용하여 보고서 요청 빈도, 가장 많이 사용되는 출력 형식 및 각 처리 단계에 소요된 처리 시간(밀리초)을 확인할 수 있습니다. 로그에는 보고서의 데이터 집합 쿼리 실행에 걸린 시간 또는 데이터 처리에 걸린 시간에 대한 정보가 포함됩니다. 보고서 서버 관리자는 로그 정보를 검토하여 오랫동안 실행되는 태스크를 식별하고 보고서 작성자가 보고서에서 기능을 향상시킬 수 있는 부문(데이터 집합 또는 처리)에 대한 사항을 제안할 수 있습니다.  
   
- SharePoint 모드용으로 구성된 보고서 서버는 또한 SharePoint ULS 로그를 활용할 수 있습니다. 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)을 참조하세요.  
+ SharePoint 모드용으로 구성된 보고서 서버는 또한 SharePoint ULS 로그를 활용할 수 있습니다. 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ##  <a name="bkmk_top"></a> 로그 정보 보기  
  보고서 서버 실행은 내부 데이터베이스 테이블에 보고서 실행에 대한 데이터를 기록합니다. 테이블의 정보는 SQL Server 뷰에서 확인할 수 있습니다.  
@@ -114,7 +114,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  다음 표에서는 보고서 실행 로그에 캡처되는 데이터에 대해 설명합니다.  
   
-|열|Description|  
+|Column|Description|  
 |------------|-----------------|  
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름 사용자 환경에 보고서 서버가 두 개 이상 포함된 경우 InstanceName 배포를 분석하여 네트워크 부하 분산 장치가 예상한 대로 보고서 서버 간에 요청을 분배하는지 모니터링 및 확인할 수 있습니다.|  
 |ItemPath|보고서 또는 보고서 항목이 저장된 위치의 경로|  
@@ -123,7 +123,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RequestType|가능한 값은 다음과 같습니다.<br /><br /> 대화형<br /><br /> 구독<br /><br /> <br /><br /> RequestType=Subscription으로 필터링되고 TimeStart로 정렬된 로그 데이터를 분석하면 구독 사용량이 많은 기간을 확인할 수 있으며, 그에 따라 보고서 구독 중 일부를 다른 시간으로 수정해야 할 수 있습니다.|  
 |형식|렌더링 형식|  
 |매개 변수|보고서 실행에 사용된 매개 변수 값|  
-|ItemAction|가능한 값은 다음과 같습니다.<br /><br /> Render<br /><br /> 정렬<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
+|ItemAction|가능한 값은 다음과 같습니다.<br /><br /> Render<br /><br /> Sort<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
 |TimeStart|보고서 처리 기간을 나타내는 시작 및 중지 시간|  
 |TimeEnd||  
 |TimeDataRetrieval|데이터를 검색하는 데 걸린 시간(밀리초)|  
@@ -329,7 +329,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  다음 표에서는 보고서 실행 로그에 캡처되는 데이터에 대해 설명합니다.  
   
-|열|Description|  
+|Column|Description|  
 |------------|-----------------|  
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름|  
 |ReportPath|보고서의 경로 구조입니다.  예를 들어 보고서 관리자의 루트 폴더에 있고 이름이 "test"인 보고서의 ReportPath는 "/test"입니다.<br /><br /> 보고서 관리자에서 "samples" 폴더에 저장된 이름이 "test"인 보고서의 ReportPath는 "/Samples/test"입니다.|  
@@ -361,12 +361,12 @@ select * from ExecutionLog order by TimeStart DESC
   
  다음 표에서는 보고서 실행 로그에 캡처되는 데이터에 대해 설명합니다.  
   
-|열|Description|  
+|Column|Description|  
 |------------|-----------------|  
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름|  
 |ReportID|보고서 식별자|  
 |UserName|사용자 식별자|  
-|RequestType|가능한 값은 다음과 같습니다.<br /><br /> True = 구독 요청<br /><br /> False= 대화형 요청|  
+|RequestType|가능한 값:<br /><br /> True = 구독 요청<br /><br /> False= 대화형 요청|  
 |형식|렌더링 형식|  
 |매개 변수|보고서 실행에 사용된 매개 변수 값|  
 |TimeStart|보고서 처리 기간을 나타내는 시작 및 중지 시간|  
@@ -379,10 +379,9 @@ select * from ExecutionLog order by TimeStart DESC
 |ByteCount|렌더링된 보고서 크기(바이트)|  
 |RowCount|쿼리에서 반환된 행 수|  
   
-## <a name="see-also"></a>관련 항목:  
- [SharePoint 추적 로그 &#40;에 대 한 Reporting Services 이벤트 설정 ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+## <a name="see-also"></a>참고 항목  
+ [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [오류 및 이벤트 참조&#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
-

@@ -27,20 +27,19 @@ helpviewer_keywords:
 - user-defined server roles [SQL Server]
 - roles, server
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
-caps.latest.revision: 18
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 445c44ad009ff9bd6509d077f5f579d0f7f42855
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ad6b6aa0eac42e8f415de6e4633027aa70ee9158
+ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   새로운 사용자 정의 서버 역할을 만듭니다.  
   
@@ -56,7 +55,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  *role_name*  
  만들 서버 역할의 이름입니다.  
   
- 권한 부여 *server_principal*  
+ AUTHORIZATION *server_principal*  
  새 서버 역할을 소유할 로그인입니다. 로그인을 지정하지 않으면 CREATE SERVER ROLE을 실행하는 로그인이 서버 역할을 소유합니다.  
   
 ## <a name="remarks"></a>주의  
@@ -111,4 +110,3 @@ GO
  [데이터베이스 엔진 권한 시작](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
   
-

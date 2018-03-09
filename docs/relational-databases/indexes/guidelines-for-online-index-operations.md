@@ -16,19 +16,19 @@ helpviewer_keywords:
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2c5e3f669cd2789676e334beedb4e8ee410c5cd6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,20 +95,18 @@ ms.lasthandoff: 11/17/2017
 ## <a name="resumable-index-rebuild-considerations"></a>다시 시작 가능한 인덱스 다시 작성 시 고려 사항
 
 > [!NOTE]
-> [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요. 
->
+> 다시 시작 가능한 인덱스 옵션은 SQL Server(SQL Server 2017부터) 및 SQL Database에 적용됩니다. [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요. 
 
 다시 시작 가능한 온라인 인덱스 다시 작성을 수행할 때 다음 지침이 적용됩니다.
 -   인덱스 유지 관리 기간의 관리, 계획 및 확장. 유지 관리 기간에 맞게 인덱스 다시 작성 작업을 여러 번 일시 중지 및 다시 시작할 수 있습니다.
 - 인덱스 다시 작성 오류(예: 데이터베이스 장애 조치(failover)나 디스크 공간 부족)에서 복구
 - 인덱스 작업이 일시 중지된 경우 원래 인덱스와 새로 만든 인덱스 모두 저장할 디스크 공간이 필요하고 DML 작업 중 업데이트해야 합니다.
 
-- 인덱스 다시 작성 작업 중 잘림 로그의 잘림 지원(일반 온라인 인덱스 작업에서는 이 작업을 수행할 수 없음)
+- 인덱스 다시 작성 작업 중 트랜잭션 로그의 잘림 지원(일반 온라인 인덱스 작업에서는 이 작업을 수행할 수 없음)
 - SORT_IN_TEMPDB=ON 옵션이 지원되지 않음
 
 > [!IMPORTANT]
-> 다시 시작 가능한 다시 작성에서는 오래 실행되는 잘림을 계속 열어둘 필요가 없으므로 이 작업 중 로그 잘림이 허용되고 로그 공간을 더 효율적으로 관리할 수 있습니다. 새로운 디자인에서는 다시 시작 가능한 작업을 다시 시작하는 데 필요한 모든 참조와 함께 필요한 데이터를 하나의 데이터베이스에 유지할 수 있도록 했습니다.
->
+> 다시 시작 가능한 다시 작성에서는 오래 실행되는 트랜잭션을 계속 열어둘 필요가 없으므로 이 작업 중 로그 잘림이 허용되고 로그 공간을 더 효율적으로 관리할 수 있습니다. 새로운 디자인에서는 다시 시작 가능한 작업을 다시 시작하는 데 필요한 모든 참조와 함께 필요한 데이터를 하나의 데이터베이스에 유지할 수 있도록 했습니다.
 
 일반적으로 온라인 인덱스 다시 작성 시 다시 시작 가능 여부에 따른 성능 차이는 없습니다. 인덱스 다시 작성 작업이 일시 중지된 동안, 다시 시작 가능한 인덱스를 업데이트하면 다음과 같습니다.
 - 읽기가 대부분인 작업의 경우 성능에 미치는 영향이 크지 않습니다. 

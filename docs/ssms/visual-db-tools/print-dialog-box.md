@@ -3,8 +3,11 @@ title: "인쇄 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea8fac71efd68ff30b4ea79845434b223f5ba8e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7d1d8ce6a37a0fa70f2f6cb59af991892108fefd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="print-dialog-box"></a>인쇄 대화 상자
-**인쇄** 대화 상자에서 옵션을 선택하여 원하는 문서 인쇄 방법을 지정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **인쇄** 대화 상자에서 옵션을 선택하여 원하는 문서 인쇄 방법을 지정할 수 있습니다.  
   
 ## <a name="printer"></a>프린터  
 **이름**  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
 **설명**  
 선택한 프린터에 대한 추가 정보를 포함합니다.  
   
-**속성**  
+**Properties**  
 \<*printer name properties*> 대화 상자를 열려면 클릭합니다.  
   
 **파일로 인쇄**  

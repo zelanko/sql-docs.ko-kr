@@ -1,29 +1,30 @@
 ---
-title: "스파크 라인과 데이터 막대 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "스파크라인 및 데이터 막대(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: fcca620035420f293cda90a0481380efdd4d2c25
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6021dec1c7d072041710c62a533d4e19ead4aa53
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>스파크라인 및 데이터 막대(보고서 작성기 및 SSRS)
   스파크라인과 데이터 막대는 작은 공간에 많은 정보가 포함되어 있는 작고 간단한 차트로, 보통 텍스트와 인라인으로 표시됩니다.   
@@ -40,13 +41,13 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="KindsofSparklines"></a> 스파크라인 유형  
  일반 차트와 같이 다양한 유형의 스파크라인을 만들 수 있습니다. 그러나 보통 3D 스파크라인은 만들지 않습니다. 다음과 같은 전체 차트의 스파크라인 버전을 만들 수 있습니다.  
   
--   [세로 막대형 차트 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): 기본, 누적형 및 100% 누적형 세로 막대형 차트입니다.  
+-   [세로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): 기본, 누적형 및 100% 기준 누적 세로 막대형 차트  
   
--   [꺾은선형 차트 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md): 3D 제외한 모든 꺾은선형 차트입니다.  
+-   [꺾은선형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md): 3D 꺾은선형 차트를 제외한 모든 차트  
   
--   [영역형 차트 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md): 3D 영역형 차트를 제외한 모든  
+-   [영역형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md): 3D 영역형 차트를 제외한 모든 차트  
   
--   [원형 차트 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md): 및는 다른 리소스는 제외 평면형 / 3 D 도넛형 차트는 깔때기형 및 피라미드형 차트와 같은 셰이프.  
+-   [원형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md): 도넛형 차트(평면형/3D), 깔때기형과 피라미드형 차트 등의 다른 모양은 아님  
   
 -   [범위형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md): 주식형, 원통형, 오차 막대 및 상자 그림 차트  
   
@@ -59,12 +60,12 @@ ms.lasthandoff: 08/09/2017
   
  다음과 같은 전체 차트의 데이터 막대 버전을 만들 수 있습니다.  
   
--   [가로 막대형 차트 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md): Basic, 누적 및 100% 누적형 가로 막대형 차트입니다.  
+-   [막대형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md): 기본, 누적형 및 100% 기준 누적 막대형 차트  
   
--   [세로 막대형 차트 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): Basic, 누적 및 100% 누적형 세로 막대형 차트입니다. 세로 막대형 차트는 스파크라인 또는 데이터 막대일 수 있습니다.  
+-   [세로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): 기본, 누적형 및 100% 기준 누적 세로 막대형 차트 세로 막대형 차트는 스파크라인 또는 데이터 막대일 수 있습니다.  
   
 ##  <a name="AlignDatainTableMatrix"></a> 테이블 또는 행렬에서 스파크라인 데이터 정렬  
- 스파크라인을 테이블이나 행렬에 삽입할 때는 각 스파크라인의 데이터 요소를 해당 열의 다른 스파크라인에 있는 데이터 요소에 맞게 정렬하는 것이 중요합니다. 이렇게 하지 않으면 여러 행의 데이터를 비교하기가 어렵습니다. 예를 들어 회사에 소속된 각 영업 사원의 월별 판매 데이터를 비교하는 경우 월을 정렬하게 됩니다. 특정 직원이 4월에 출근하지 않은 경우 이 직원에게는 해당 월의 데이터가 없습니다. 이 경우 해당 월은 건너뛰고 후속 월의 데이터가 다른 직원들의 데이터에 정렬되도록 할 수 있습니다. 이렇게 하려면 가로 축을 정렬하면 됩니다. 자세한 내용은 스파크 라인에 대 한 섹션을 참조 하십시오. [합계, 집계 및 기본 제공 컬렉션 &#40;에 대 한 식 범위 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md), 참조 및 [테이블 또는 행렬 &#40;에서 차트의 데이터 정렬 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
+ 스파크라인을 테이블이나 행렬에 삽입할 때는 각 스파크라인의 데이터 요소를 해당 열의 다른 스파크라인에 있는 데이터 요소에 맞게 정렬하는 것이 중요합니다. 이렇게 하지 않으면 여러 행의 데이터를 비교하기가 어렵습니다. 예를 들어 회사에 소속된 각 영업 사원의 월별 판매 데이터를 비교하는 경우 월을 정렬하게 됩니다. 특정 직원이 4월에 출근하지 않은 경우 이 직원에게는 해당 월의 데이터가 없습니다. 이 경우 해당 월은 건너뛰고 후속 월의 데이터가 다른 직원들의 데이터에 정렬되도록 할 수 있습니다. 이렇게 하려면 가로 축을 정렬하면 됩니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)에서 스파크라인에 대한 섹션 및 [테이블 또는 행렬에서 차트의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)를 참조하세요.  
   
  마찬가지로 행 전체를 비교하려는 경우에는 데이터를 세로로 정렬해야 합니다. 즉, 단일 데이터 막대나 스파크라인의 줄 또는 막대 높이가 다른 모든 데이터 막대나 스파크라인에 있는 줄 또는 막대 높이를 기준으로 해야 합니다. 이렇게 하지 않으면 행을 서로 비교할 수 없습니다.  
   
@@ -107,8 +108,8 @@ ms.lasthandoff: 08/09/2017
   
  [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [자습서: 보고서 &#40; 스파크 라인 추가 보고서 작성기 &#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
+ [자습서: 보고서에 스파크라인 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   
   

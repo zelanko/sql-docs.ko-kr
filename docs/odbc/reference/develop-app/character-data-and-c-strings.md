@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - buffers [ODBC], length
 - C strings and buffers [ODBC]
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9ea6f6c65e1250a999d019e7cf8b81510b227831
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-data-and-c-strings"></a>문자 데이터 및 C 문자열
 가변 길이 문자 데이터 (예: 열 이름, 동적 매개 변수 및 문자열 특성 값)를 참조 하는 입력된 매개 변수는 연결 된 길이 매개 변수를 갖습니다. 응용 프로그램이 종료 C에서 일반적인 경우 처럼 null 문자를 사용 하 여 문자열, 바이트 (null 종결자 제외)는 문자열의 길이 또는 SQL_NTS (Null-Terminated 문자열)를 인수로 제공 합니다. 음수가 아닌 길이 인수는 연결된 문자열의 실제 길이 지정합니다. 길이 인수에는 NULL 값을와 다릅니다. 길이가 0 인 문자열을 지정 하려면 0 일 수 있습니다. 음수 값 SQL_NTS null 종결 문자를 배치 하 여 문자열의 길이 확인 하는 드라이버를 보냅니다.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램 및 드라이버를 자주 사용 C 문자열 (null로 끝나는 배열 문자) 문자 데이터를 저장할 수 있지만이 작업을 수행 하는 요구 사항이 있습니다. C에서는 문자 데이터 문자 (null 종료)의 배열 및 길이/표시기 버퍼에 개별적으로 전달 된 바이트 길이으로 처리할 수도 있습니다.  
   
  문자 데이터는 비-null로 끝나는 배열에 저장할 수 있고를 해당 바이트 길이 개별적으로 전달 되므로 문자 데이터에 null 문자를 포함할 수 있습니다. 그러나 ODBC 함수의 동작은 경우 정의 되지 않습니다 이므로 드라이버 관련 여부 드라이버를 정확 하 게 처리이 있습니다. 따라서 상호 운용 가능한 응용 프로그램 이진 데이터가 포함 된 null 문자를 포함할 수 있는 문자 데이터를 항상 처리 해야 합니다.
-

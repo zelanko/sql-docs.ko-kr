@@ -1,36 +1,41 @@
 ---
-title: Using Always Encrypted with the ODBC Driver 13.1 for SQL Server | Microsoft Docs
+title: "SQL Server에 대 한 ODBC 드라이버를 사용 하 여 항상 암호화를 사용 하 여 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
+caps.latest.revision: "3"
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d28b647de71c5064dfbe0d49f399119f6a9ac283
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/22/2018
 ---
-# <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>Using Always Encrypted with the ODBC Driver 13.1 for SQL Server
+# <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-이 문서를 사용 하 여 ODBC 응용 프로그램을 개발 하는 방법에 대해 설명 [상시 암호화 (데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 및 [for SQL Server ODBC Driver 13.1](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)합니다.
+### <a name="applicable-to"></a>에 적용할 수
 
-Always Encrypted를 사용하면 클라이언트 응용 프로그램이 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. ODBC Driver 13.1 for SQL Server에서는이를 위해 투명 하 게 암호화 하 고 클라이언트 응용 프로그램의 중요 한 데이터를 암호 해독과 같은 상시 암호화 드라이버를 지원 합니다. 이 드라이버는 중요 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고(Always Encrypted를 사용하여 보호) 데이터를 SQL Server 또는 Azure SQL Database로 전달하기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요.
+- ODBC Driver 13.1 for SQL Server
+- SQL Server 용 ODBC 드라이버 17
+
+### <a name="introduction"></a>소개
+
+이 문서를 사용 하 여 ODBC 응용 프로그램을 개발 하는 방법에 대해 설명 [상시 암호화 (데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 및 [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)합니다.
+
+Always Encrypted를 사용하면 클라이언트 응용 프로그램이 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. 상시 암호화 지원 드라이버는 ODBC Driver for SQL Server에서는이를 위해 투명 하 게 암호화 하 고 클라이언트 응용 프로그램의 중요 한 데이터를 암호 해독과 같은 합니다. 이 드라이버는 중요 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고(Always Encrypted를 사용하여 보호) 데이터를 SQL Server 또는 Azure SQL Database로 전달하기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요.
 
 ### <a name="prerequisites"></a>필수 구성 요소
 
@@ -284,11 +289,11 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 - 열 마스터 키에 액세스하기 위한 열 마스터 키 저장소 호출
 
-이 섹션에서는 SQL Server와는 위의 두 성능 요소 영향을 제어 하는 방법에 대 한 ODBC Driver 13.1에서 기본 제공 성능 최적화를 설명 합니다.
+이 섹션에서는 SQL Server와는 위의 두 성능 요소 영향을 제어 하는 방법에 대 한 ODBC 드라이버에서 기본 제공 성능 최적화를 설명 합니다.
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>메타 데이터를 검색할 쿼리 매개 변수에 대 한 왕복 횟수를 제어 합니다.
 
-상시 암호화를 연결에 사용 하는 경우 ODBC Driver 13.1 기본적으로 SQL Server가에 대 한 호출 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) 각 매개 변수가 있는 쿼리에 대 한 매개 변수 (없이 쿼리 문을 전달 SQL Server로 값). 이 저장된 프로시저 매개 변수를 암호화 해야 하는 경우 그리고 있다면 확인 하려면 쿼리 문을 분석 하 여, 드라이버를 암호화할 수 있도록 각 매개 변수에 대해 암호화 관련 정보를 반환 합니다. 위의 동작은 클라이언트 응용 프로그램에는 투명도 대 한 높은 수준의 보장: 응용 프로그램 (및 응용 프로그램 개발자)에 암호화 된 열을 대상으로 값이 전달 된으로 어떤 쿼리가 암호화 된 열 액세스 주의 해야 할 필요 하지 않습니다 매개 변수에서 드라이버입니다.
+상시 암호화를 연결에 사용 하는 경우 드라이버는 기본적으로 호출 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) 각 매개 변수가 있는 쿼리에 대 한 모든 매개 변수 값) (없이 쿼리 문을 SQL Server에 전달 합니다. 이 저장된 프로시저 매개 변수를 암호화 해야 하는 경우 그리고 있다면 확인 하려면 쿼리 문을 분석 하 여, 드라이버를 암호화할 수 있도록 각 매개 변수에 대해 암호화 관련 정보를 반환 합니다. 위의 동작은 클라이언트 응용 프로그램에는 투명도 대 한 높은 수준의 보장: 응용 프로그램 (및 응용 프로그램 개발자)에 암호화 된 열을 대상으로 값이 전달 된으로 어떤 쿼리가 암호화 된 열 액세스 주의 해야 할 필요 하지 않습니다 매개 변수에서 드라이버입니다.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>문 별 동작을 항상 암호화
 
@@ -296,7 +301,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 문의 상시 암호화 동작을 제어 하려면 호출 SQLSetStmtAttr 설정 하 여 `SQL_SOPT_SS_COLUMN_ENCRYPTION` 매개 변수 특성을 다음 값 중 하나:
 
-|값|Description|
+|Value|Description|
 |-|-|
 |`SQL_CE_DISABLED` (0)|암호화 된 문에 대해 항상 사용할 수 없음|
 |`SQL_CE_RESULTSETONLY` (1)|만 암호 해독 합니다. 결과 집합 및 반환 값을 해독 되 고 매개 변수는 암호화 되지 않습니다.|
@@ -331,7 +336,7 @@ SQL Server 매개 변수는 암호화 하지 않아도 되는 드라이버, 메�
 열 암호화 키를 해독 하는 열 마스터 키 저장소에 대 한 호출의 수를 줄이려면 드라이버 메모리에 일반 텍스트 Cek를 캐시 합니다. ECEK에서 데이터베이스 메타 데이터를 받은 후 드라이버는 먼저 일반 텍스트 CEK에 해당 하는 캐시에 사용할 수 있는 암호화 된 키 값을 찾으려고 시도 합니다. 드라이버는 CMK를 캐시에 해당 일반 텍스트 CEK를 찾을 수 없는 경우에 포함 하는 키 저장소를 호출 합니다.
 
 > [!NOTE]
-> SQL Server 용 ODBC Driver 13.1, 캐시의 항목은 두 시간의 시간 초과 이후 제거 됩니다. 즉, 주어진된 ECEK에 대 한 드라이버 또는 2 시간 마다 응용 프로그램의 수명 동안 키 저장소를 한 번만 연결 더 작은 쪽입니다.
+> ODBC Driver for SQL Server에에서 두 시간의 시간 초과 이후 캐시의 항목이 제거 됩니다. 즉, 주어진된 ECEK에 대 한 드라이버 또는 2 시간 마다 응용 프로그램의 수명 동안 키 저장소를 한 번만 연결 더 작은 쪽입니다.
 
 ## <a name="working-with-column-master-key-stores"></a>열 마스터 키 저장소 작업
 
@@ -341,12 +346,12 @@ ECEK의 일반 텍스트 값을 가져오려면 드라이버 먼저 CEK 및 해�
 
 ### <a name="built-in-keystore-providers"></a>기본 제공 키 저장소 공급자
 
-ODBC Driver 13.1 for SQL Server는 다음 기본 제공 키 저장소 공급자와 함께 제공 됩니다.
+ODBC Driver for SQL Server는 다음 기본 제공 키 저장소 공급자와 함께 제공 됩니다.
 
 | 이름 | Description | 공급자 (메타 데이터) 이름 |가용성|
 |:---|:---|:---|:---|
-|Azure Key Vault |저장소 Cmk를 Azure 키 자격 증명 모음 | `AZURE_KEY_VAULT` |Windows, Linux, macOS|
-|Windows 인증서 저장소|Windows 키 저장소에 Cmk를 로컬로 저장| `MSSQL_CERTIFICATE_STORE`|Windows|
+|Azure Key Vault |저장소 Cmk를 Azure 키 자격 증명 모음 | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
+|Windows 인증서 저장소|Windows 키 저장소에 Cmk를 로컬로 저장| `MSSQL_CERTIFICATE_STORE`|창|
 
 - 사용자 (또는 DBA)는 열 마스터 키 메타 데이터에 구성 된 공급자 이름이 올바른지와 열 마스터 키 경로 지정 된 공급자에 대 한 키 경로 형식을 준수 되도록 해야 합니다. [CREATE COLUMN MASTER KEY(Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 실행할 때 적합한 공급자 이름 및 키 경로를 자동으로 생성하는 SQL Server Management Studio 등의 도구를 사용하여 키를 구성하는 것이 좋습니다.
 
@@ -354,7 +359,7 @@ ODBC Driver 13.1 for SQL Server는 다음 기본 제공 키 저장소 공급자�
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure 키 자격 증명 모음 공급자 사용
 
-Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 응용 프로그램이 Azure에서 호스트되는 경우). ODBC Driver 13.1 for SQL Server, Linux, macOS 등 및 Windows에는 Azure 키 자격 증명 모음에 대 한 기본 제공 열 마스터 키 저장소 공급자를 포함합니다. 참조 [Azure 키 자격 증명 모음 – 단계별](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [키 자격 증명 모음 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), 및 [Azure 키 자격 증명 모음에 열 마스터 키 만들기](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) Azure 키를 구성 하는 방법에 대 한 자세한 내용은 자격 증명 모음 항상 암호화 합니다.
+Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 응용 프로그램이 Azure에서 호스트되는 경우). Linux, macOS 등 창에 SQL Server 용 ODBC 드라이버는 Azure 키 자격 증명 모음에 대 한 기본 제공 열 마스터 키 저장소 공급자를 포함합니다. 참조 [Azure 키 자격 증명 모음-단계별](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [키 자격 증명 모음 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), 및 [Azure 키 자격 증명 모음에 열 마스터 키 만들기](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) Azure 키를 구성 하는 방법에 대 한 자세한 내용은 자격 증명 모음 항상 암호화 합니다.
 
 드라이버는 다음과 같은 자격 증명을 사용 하 여 Azure 키 자격 증명 모음에 인증을 지원 합니다.
 
@@ -373,13 +378,13 @@ Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 �
 
 다음 연결 문자열에는 두 가지 자격 증명 유형이 Azure 키 자격 증명 모음에 인증 하는 방법을 보여 줍니다.
 
-**ClientID/암호**:
+**ClientID/Secret**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**사용자 이름/암호**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -389,11 +394,11 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자를 사용 하 여
 
-라는 Windows 인증서 저장소에 대 한 기본 제공 열 마스터 키 저장소 공급자를 포함 하는 Windows에서 SQL Server에 대 한 ODBC Driver 13.1 `MSSQL_CERTIFICATE_STORE`합니다. (이 공급자에서 사용할 수 없으면 macOS 또는 Linux.) 이 공급자와 클라이언트 컴퓨터에 CMK를 로컬로 저장 되며 응용 프로그램에서 추가 구성 없이 드라이버와 함께 사용할 필요가 있습니다. 그러나 응용 프로그램 저장소에 인증서와 해당 개인 키에 액세스할 수 있어야 합니다. 참조 [만들기 열 마스터 키 및 저장 (상시 암호화)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) 자세한 정보에 대 한 합니다.
+라는 Windows 인증서 저장소에 대 한 기본 제공 열 마스터 키 저장소 공급자를 포함 하는 Windows에서 SQL Server에 대 한 ODBC 드라이버 `MSSQL_CERTIFICATE_STORE`합니다. (이 공급자에서 사용할 수 없으면 macOS 또는 Linux.) 이 공급자와 클라이언트 컴퓨터에 CMK를 로컬로 저장 되며 응용 프로그램에서 추가 구성 없이 드라이버와 함께 사용할 필요가 있습니다. 그러나 응용 프로그램 저장소에 인증서와 해당 개인 키에 액세스할 수 있어야 합니다. 참조 [만들기 열 마스터 키 및 저장 (상시 암호화)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) 자세한 정보에 대 한 합니다.
 
 ### <a name="using-custom-keystore-providers"></a>사용자 지정 키 저장소 공급자를 사용 하 여
 
-또한 SQL Server 용 ODBC Driver 13.1 CEKeystoreProvider 인터페이스를 사용 하 여 공급 업체의 사용자 지정 키 저장소 공급자를 지원 합니다. 이 응용 프로그램을, 쿼리를 로드 하 고 암호화 된 열을 액세스 하는 드라이버에서 사용 될 수 있도록 키 저장소 공급자를 구성할 수 있습니다. 응용 프로그램 저장소 SQL Server에 대 한 Cek를 암호화 하 고 odbc; 암호화 된 열에 액세스 하는 다음 작업을 수행 하려면 키 저장소 공급자와도 직접 상호 작용할 수 있습니다. 자세한 내용은 참조 [사용자 지정 키 저장소 공급자](../../connect/odbc/custom-keystore-providers.md)합니다.
+ODBC Driver for SQL Server도 CEKeystoreProvider 인터페이스를 사용 하 여 공급 업체의 사용자 지정 키 저장소 공급자를 지원 합니다. 이 응용 프로그램을, 쿼리를 로드 하 고 암호화 된 열을 액세스 하는 드라이버에서 사용 될 수 있도록 키 저장소 공급자를 구성할 수 있습니다. 응용 프로그램 저장소 SQL Server에 대 한 Cek를 암호화 하 고 odbc; 암호화 된 열에 액세스 하는 다음 작업을 수행 하려면 키 저장소 공급자와도 직접 상호 작용할 수 있습니다. 자세한 내용은 참조 [사용자 지정 키 저장소 공급자](../../connect/odbc/custom-keystore-providers.md)합니다.
 
 두 개의 연결 특성은 사용자 지정 키 저장소 공급자와 상호 작용 하는 데 사용 됩니다. 반환할 수 있습니다.
 
@@ -517,11 +522,44 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>상시 암호화를 사용 하는 경우 ODBC 드라이버의 제한 사항
 
-### <a name="bulk-copy-function-usage"></a>대량 복사 함수 사용
-사용은 [SQL 대량 복사 함수](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) 상시 암호화로 ODBC 드라이버를 사용 하는 경우 지원 되지 않습니다. SQL 대량 복사 함수와 함께 사용 되는 암호화 된 열에서 없습니다 투명 한 암호화/암호 해독이 발생 합니다.
-
 ### <a name="asynchronous-operations"></a>비동기 작업
 ODBC 드라이버는 사용을 허용 하는 동안 [비동기 작업](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) 상시 암호화,이 생깁니다 성능에 영향 되는 작업에 항상 암호화를 사용 하도록 설정 합니다. 에 대 한 호출 `sys.sp_describe_parameter_encryption` 명령문을 차단 하 고 반환 하기 전에 메타 데이터를 반환 하는 서버에 대해 기다려야 하면 드라이버에 대 한 암호화 메타 데이터를 확인 하려면 `SQL_STILL_EXECUTING`합니다.
+
+### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>SQLGetData 사용 하 여 파트에서 데이터 검색
+SQL Server 용 ODBC 드라이버 17 암호화 전에 SQLGetData 사용 하 여 파트의 문자 및 이진 열을 검색할 수 없습니다. SQLGetData 한 번만 호출 전체 열의 데이터를 포함 하기에 충분 한 길이의 버퍼에 수행할 수 있습니다.
+
+### <a name="send-data-in-parts-with-sqlputdata"></a>SQLPutData 사용 하 여 파트에 데이터 보내기
+SQLPutData 사용 하 여 파트의 삽입 또는 비교에 대 한 데이터를 보낼 수 없습니다. 전체 데이터를 포함 하는 버퍼에 SQLPutData 한 번만 호출을 수행할 수 있습니다. 암호화 된 열에 대 한 long 데이터를 삽입에 대 한 입력된 데이터 파일을 사용한 다음 섹션에 설명 된 대량 복사 API를 사용 합니다.
+
+### <a name="encrypted-money-and-smallmoney"></a>암호화 된 money 및 smallmoney
+암호화 **money** 또는 **smallmoney** 매개 변수에서 열을 대상으로 지정할 수, ODBC 데이터 형식 피연산자 유형 충돌 오류가 발생 하는 형식에 매핑하는 더 특정 있기 때문입니다.
+
+## <a name="bulk-copy-of-encrypted-columns"></a>암호화 된 열에 대량 복사
+
+사용은 [SQL 대량 복사 함수](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) 및 **bcp** 유틸리티 SQL Server 용 ODBC 드라이버 17 이후 상시 암호화와 함께 지원 됩니다. 일반 텍스트 (에서 암호화 된 삽입 및에서 해독 된 검색) 및 (정확 하 게 전송 된) 암호 텍스트를 둘 다 삽입 될 수 있습니다 및 대량 복사 (bcp_ *) Api를 사용 하 여 검색 및 **bcp** 유틸리티입니다.
+
+- Varbinary (max) 형식 (예: 대량 로드를 위한 다른 데이터베이스로) 암호 텍스트를 검색, 없이 연결는 `ColumnEncryption` 옵션 (이 속성을 설정 하거나 `Disabled`) BCP OUT 작업을 수행 합니다.
+
+- 삽입 및 일반 텍스트를 검색 한 암호화 및 암호 해독 필요한 설정으로 투명 하 게 수행 하는 드라이버를 사용 하 `ColumnEncryption` 를 `Enabled` 충분 합니다. 그렇지 않으면 BCP API의 기능 변경 되지 않습니다.
+
+- varbinary (max) 형식 (예: 검색 됨 위에) 암호 텍스트를 삽입, 설정 된 `BCPMODIFYENCRYPTED` TRUE 하려면 옵션을 선택 하 고 BCP IN 작업을 수행 합니다. 결과 데이터를 해독할 수에 대 한 순서로 대상 열의 CEK 인지 확인 암호 텍스트를 원래 가져온와 동일 합니다.
+
+사용 하는 경우는 **bcp** 유틸리티: 컨트롤에는 `ColumnEncryption` 설정,-D 옵션을 사용 하 고 원하는 값을 포함 하는 DSN을 지정 합니다. 암호 텍스트를 삽입 하려면 확인는 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 사용자의 설정을 사용 합니다.
+
+다음 표에서 암호화 된 열에서 작동할 때의 동작의 요약을 제공 합니다.
+
+|`ColumnEncryption`|BCP 방향|Description|
+|----------------|-------------|-----------|
+|`Disabled`|(클라이언트)를 초과 합니다.|암호 텍스트를 검색합니다. 관찰 된 데이터 형식이 **varbinary (max)**합니다.|
+|`Enabled`|(클라이언트)를 초과 합니다.|일반 텍스트를 검색합니다. 드라이버는 열 데이터 암호를 해독 합니다.|
+|`Disabled`|IN (서버)에|암호 텍스트를 삽입합니다. 이 불투명 하 게 요구 하지 않고 암호화 된 데이터를 이동 하기 위한 암호 해독 된 되도록 만들어졌습니다. 경우에 작업이 실패 합니다는 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 옵션은 사용자에 설정 되어 있지 않거나 BCPMODIFYENCRYPTED 연결 핸들에 설정 되지 않았습니다. 자세한 내용은 아래를 참조 하십시오.|
+|`Enabled`|IN (서버)에|일반 텍스트를 삽입합니다. 드라이버는 열 데이터를 암호화 합니다.|
+
+### <a name="the-bcpmodifyencrypted-option"></a>BCPMODIFYENCRYPTED 옵션
+
+데이터 손상을 방지 하기 위해 서버 정상적으로 않습니다을 허용 하지 않고 암호화 된 열에 직접 암호 텍스트를 삽입 하므로 이렇게 실패 합니다. 그러나 설정 하는 BCP API를 사용 하 여 암호화 된 데이터의 대량 로드에 대 한는 `BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 옵션을 TRUE로 암호 텍스트를 직접 삽입할을 사용 하면 설정을 통해 암호화 된 데이터 손상의 위험을 줄일 수는 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 는 사용자 계정에 대 한 옵션입니다. 그럼에도 불구 하 고 키에는 데이터와 일치 해야 하 고 대량 삽입 한 후 및 앞으로 사용 하기 전에 삽입된 된 데이터의 일부 읽기 전용 검사를 수행 하는 것이 좋습니다.
+
+참조 [상시 암호화로 중요 한 데이터 보호 마이그레이션할](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md) 자세한 정보에 대 한 합니다.
 
 ## <a name="always-encrypted-api-summary"></a>상시 암호화 API 요약
 
@@ -554,9 +592,14 @@ ODBC 드라이버는 사용을 허용 하는 동안 [비동기 작업](../../rel
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 바이트)|0|때 0 (기본값):이 매개 변수를 암호화 하는 결정 암호화 메타 데이터의 가용성에 따라 결정 됩니다.<br><br>0이 아닌 경우:이 매개 변수에 대해 사용할 수 있는 암호화 메타 데이터의 경우 암호화 합니다. 그렇지 않으면 요청은 실패 하며 오류 [CE300] [Microsoft] [ODBC Driver 13 for SQL Server] 필수 암호화 매개 변수에 대해 지정 되었지만 암호화 메타 데이터는 서버에서 제공 합니다.|
 
+### <a name="bcpcontrol-options"></a>bcp_control 옵션
+
+|옵션 이름|기본값|Description|
+|-|-|-|
+|`BCPMODIFYENCRYPTED` (21)|FALSE|TRUE 인 경우 암호화 된 열에 삽입할 varbinary (max) 값을 허용 합니다. FALSE 인 경우 올바른 형식 및 암호화 메타 데이터를 제공 하지 않는 한 삽입을 방지 합니다.|
+
 ## <a name="see-also"></a>관련 항목:
 
 - [상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [상시 암호화 블로그](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-
 

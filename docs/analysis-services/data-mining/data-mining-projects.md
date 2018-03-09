@@ -2,32 +2,30 @@
 title: "데이터 마이닝 프로젝트 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4462aa5a323af4b957fedc5bdbb522705f4f7140
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-mining-projects"></a>데이터 마이닝 프로젝트
-  데이터 마이닝 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션의 일부입니다. 디자인 프로세스 중에 이 프로젝트에서 만든 개체를 작업 영역 데이터베이스의 일부로 테스트 및 쿼리할 수 있습니다. 사용자가 프로젝트에서 개체를 쿼리하거나 찾아볼 수 있도록 하려면 다차원 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 프로젝트를 배포해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+데이터 마이닝 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션의 일부입니다. 디자인 프로세스 중에 이 프로젝트에서 만든 개체를 작업 영역 데이터베이스의 일부로 테스트 및 쿼리할 수 있습니다. 사용자가 프로젝트에서 개체를 쿼리하거나 찾아볼 수 있도록 하려면 다차원 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 프로젝트를 배포해야 합니다.  
   
  이 항목에서는 데이터 마이닝 프로젝트를 이해하고 만드는 데 필요한 기본 정보를 제공합니다.  
   
@@ -132,7 +130,7 @@ ms.lasthandoff: 09/01/2017
 > [!WARNING]  
 >  데이터를 필터링하려는 경우 데이터 원본 뷰에서 작업을 수행할 수 있지만 마이닝 모델 수준에서 데이터에 대한 필터를 만들 수도 있습니다. 필터 정의는 마이닝 모델과 함께 저장되므로 모델 필터를 사용하면 모델 학습에 사용된 데이터를 보다 쉽게 확인할 수 있습니다. 또한 여러 가지 필터 조건을 사용하여 여러 개의 관련 모델을 만들 수 있습니다. 자세한 내용은 [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)를 참조하세요.  
   
- 사용자가 만든 데이터 원본 뷰는 분석에 직접 사용되지 않는 추가 데이터를 포함할 수 있습니다. 예를 들어 테스트, 예측 또는 드릴스루에 사용되는 데이터 원본 뷰 데이터에 추가할 수 있습니다. 이러한 용도에 대한 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md) 및 [드릴스루](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)템플릿을 사용하여 데이터 마이닝 프로젝트를 작성할 수 있습니다.  
+ 사용자가 만든 데이터 원본 뷰는 분석에 직접 사용되지 않는 추가 데이터를 포함할 수 있습니다. 예를 들어 테스트, 예측 또는 드릴스루에 사용되는 데이터 원본 뷰 데이터에 추가할 수 있습니다. 이러한 용도에 대한 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md) 및 [드릴스루](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)를 참조하세요.  
   
   
 ###  <a name="bkmk_Structures"></a> Mining Structures  
@@ -196,7 +194,7 @@ ms.lasthandoff: 09/01/2017
   
  이러한 보고서 및 차트는 프로젝트와 함께 저장되거나 ssASnoversion 데이터베이스에 저장되지 않으므로 결과를 유지하거나 복제하려면 결과를 저장하거나 DMX 또는 AMO를 사용하여 개체를 스크립팅해야 합니다. 교차 유효성 검사에 저장 프로시저를 사용할 수도 있습니다.  
   
- 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)템플릿을 사용하여 데이터 마이닝 프로젝트를 작성할 수 있습니다.  
+ 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)를 참조하세요.  
   
   
 ###  <a name="bkmk_Predict"></a> Create Predictions  
@@ -217,17 +215,16 @@ ms.lasthandoff: 09/01/2017
 |태스크|항목|  
 |-----------|------------|  
 |마이닝 구조 열로 작업하는 방법에 대해 설명합니다.|[관계형 마이닝 구조 만들기](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|새 마이닝 모델을 추가하고 구조 및 모델을 처리하는 방법에 대해 자세히 설명합니다.|[구조에 마이닝 모델 추가&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|새 마이닝 모델을 추가하고 구조 및 모델을 처리하는 방법에 대해 자세히 설명합니다.|[마이닝 모델 구조 &#40;에 추가 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |마이닝 모델을 작성하는 알고리즘을 사용자 지정하는 데 도움이 되는 리소스에 대한 링크를 제공합니다.|[마이닝 모델 및 구조 사용자 지정](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |각 마이닝 모델 뷰어 관련 정보에 대한 링크를 제공합니다.|[데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |리프트 차트, 수익 차트 또는 분류표를 만들거나 마이닝 구조를 테스트하는 방법에 대해 설명합니다.|[테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |처리 옵션 및 사용 권한에 대해 설명합니다.|[데이터 마이닝 개체 처리](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 model 데이터베이스&#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 모델 데이터베이스 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   
- [SSDT&#40;SQL Server Data Tools&#41;를 사용하여 다차원 모델 만들기](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [작업 영역 데이터베이스&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [데이터 마이닝 디자이너](../../analysis-services/data-mining/data-mining-designer.md)   
+ [SQL Server 데이터 도구 &#40;를 사용 하 여 다차원 모델 만들기 SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [작업 영역 데이터베이스](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
 title: "전역 설정 (로깅) (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8aeaaf23c409135fa677f9d942d1a62baeb8858
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c80030383827cd5086b7bb51dc66f0524acddbea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-logging-db2tosql"></a>전역 설정 (로깅) (DB2ToSQL)
 사용 하 여 **전역 설정** SSMA에 대 한 로깅 설정을 지정 하려면 대화 상자. 일반적으로 제품 지원 팀과 작업 하는 경우에 이러한 설정을 변경할 것 있습니다.  
   
 이 대화 상자에 액세스 하려면는 **도구** 메뉴 선택 **전역 설정** 클릭 하 고는 **로깅** 왼쪽 창의 맨 아래에 단추입니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **메시지 수준**  
 다음 옵션에서 사용할 수 있는 **메시지 수준**:  
   

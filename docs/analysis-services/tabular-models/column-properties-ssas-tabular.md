@@ -1,36 +1,33 @@
 ---
-title: "열 속성 (SSAS 테이블 형식) | Microsoft Docs"
+title: "열 속성 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/23/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b4198d0d71f5c0d14c12391426f4ac4397ede93c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09e1b0f4a10c179dc9b4fe3055710063fc46a2bb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="column-properties-ssas-tabular"></a>열 속성(SSAS 테이블 형식)
-  이 항목에서는 테이블 형식 모델 열 속성에 대해 설명합니다.  
+# <a name="column-properties"></a>열 속성 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+이 문서에서는 테이블 형식 모델 열 속성을 설명 합니다.  
   
 >  [!NOTE]  
 >  일부 속성은 모든 호환성 수준에서 지원 되지 않습니다.    
@@ -49,8 +46,8 @@ ms.lasthandoff: 09/01/2017
 |**열 이름**||모델에 저장되고 보고 클라이언트 필드 목록에 표시되는 열의 이름입니다.|  
 |**데이터 형식**|가져오는 동안 자동으로 결정됩니다.|이 열의 데이터에 사용할 표시 형식을 지정합니다. 이 속성에는 다음과 같은 옵션이 있습니다.<br /><br /> **일반**<br /><br /> **10진수**<br /><br /> **정수**<br /><br /> **Currency**<br /><br /> **백분율**<br /><br /> **공학**<br /><br /> 데이터 형식을 설정한 후 각 형식과 관련된 속성을 설정할 수 있습니다. 예를 들어 **통화** 형식을 선택하는 경우 표시되는 소수 자릿수를 설정하고 천 단위 구분 기호를 선택한 다음 통화 기호를 선택할 수 있습니다.<br /><br /> <br /><br /> 열 값에 이미지가 포함된 경우 **대표 이미지**를 참조하세요.|  
 |**데이터 형식**|가져오는 동안 자동으로 결정됩니다.|열에 포함된 모든 값의 데이터 형식을 지정합니다.|  
-|**Description**||열에 대한 텍스트 설명입니다.<br /><br /> 일부 보고 클라이언트에서는 최종 사용자가 필드 목록의 이 열 위에 커서를 두면 설명이 도구 설명으로 나타납니다.|  
-|**숨김**|False|보고 클라이언트 필드 목록에서 열이 숨겨지는지 여부를 지정합니다.<br /><br /> 이 열을 숨기려면 이 속성을 **True** 로 설정합니다. 예를 들어 식별자나 키가 포함된 열은 일반적으로 최종 사용자에게 유용하지 않습니다.<br /><br /> 보고 클라이언트에서 열을 숨기는 경우 모델 데이터에서는 해당 필드가 표시됩니다. 모델에 대한 쿼리를 만드는 경우 해당 필드가 여전히 표시됩니다. 숨겨진 열을 그룹화나 정렬에 계속 사용할 수 있습니다.<br /><br /> **숨김** 속성은 어떠한 형태의 데이터 보안도 제공하지 않습니다. 데이터를 보호하려면 역할에서 행 필터를 사용합니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)을 참조하세요.|  
+|**설명**||열에 대한 텍스트 설명입니다.<br /><br /> 일부 보고 클라이언트에서는 최종 사용자가 필드 목록의 이 열 위에 커서를 두면 설명이 도구 설명으로 나타납니다.|  
+|**숨김**|False|보고 클라이언트 필드 목록에서 열이 숨겨지는지 여부를 지정합니다.<br /><br /> 이 열을 숨기려면 이 속성을 **True** 로 설정합니다. 예를 들어 식별자나 키가 포함된 열은 일반적으로 최종 사용자에게 유용하지 않습니다.<br /><br /> 보고 클라이언트에서 열을 숨기는 경우 모델 데이터에서는 해당 필드가 표시됩니다. 모델에 대한 쿼리를 만드는 경우 해당 필드가 여전히 표시됩니다. 숨겨진 열을 그룹화나 정렬에 계속 사용할 수 있습니다.<br /><br /> **숨김** 속성은 어떠한 형태의 데이터 보안도 제공하지 않습니다. 데이터를 보호하려면 역할에서 행 필터를 사용합니다. 자세한 내용은 참조 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)합니다.|  
 |**열 기준 정렬**||이 열의 값을 정렬할 다른 열을 지정합니다. 두 열 간의 관계가 존재해야 합니다.<br /><br /> 이 값은 기존 열의 이름이어야 합니다. 수식 또는 측정값을 지정할 수 없습니다.|  
 
  **기타**  
@@ -77,10 +74,9 @@ ms.lasthandoff: 09/01/2017
   
 2.  **속성** 창에서 속성을 클릭한 다음 값을 입력하거나 아래쪽 화살표를 클릭하여 설정 옵션을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Power View 보고 속성](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
  [열 숨기기 또는 고정](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)   
  [테이블에 열 추가](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)  
   
   
-

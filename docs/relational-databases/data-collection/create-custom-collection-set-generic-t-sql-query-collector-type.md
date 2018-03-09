@@ -2,29 +2,34 @@
 title: "사용자 지정 컬렉션 집합 만들기 - 일반 T-SQL 쿼리 수집기 형식 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - T-SQL Query collector type
 - collection sets [SQL Server], creating custom
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49c964b1381aaaf90fac2f4582fd70d9112a4255
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c72ceb6d3bb9220c9f4f5ce8ad8c25624f037cbd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>사용자 지정 컬렉션 집합 만들기 - 일반 T-SQL 쿼리 수집기 형식
-  데이터 수집기와 함께 제공된 저장 프로시저를 사용하여 일반 T-SQL 쿼리 수집기 유형을 사용하는 컬렉션 항목을 포함하는 사용자 지정 컬렉션 집합을 만들 수 있습니다. 이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 쿼리 편집기를 사용하여 다음 절차를 수행해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+데이터 수집기와 함께 제공된 저장 프로시저를 사용하여 일반 T-SQL 쿼리 수집기 유형을 사용하는 컬렉션 항목을 포함하는 사용자 지정 컬렉션 집합을 만들 수 있습니다. 이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 쿼리 편집기를 사용하여 다음 절차를 수행해야 합니다.  
   
 -   업로드 일정 구성  
   
@@ -81,7 +86,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  새 컬렉션 항목은 이미 설치된 일반 수집기 유형을 기반으로 하므로 다음 코드를 실행하여 일반 T-SQL 쿼리 수집기 유형에 해당하는 GUID를 설정할 수 있습니다.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -90,7 +95,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  sp_syscollector_create_collection_item 저장 프로시저를 사용하여 컬렉션 항목을 만듭니다. 일반 T-SQL 쿼리 수집기 유형에 필요한 스키마에 매핑되도록 컬렉션 항목에 대한 스키마를 선언합니다.  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -111,7 +116,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  새 컬렉션 집합을 시작하기 전에 다음 쿼리를 실행하여 새 컬렉션 집합 및 해당 컬렉션 항목이 생성되었는지 여부를 확인합니다.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -123,7 +128,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="example"></a>예제  
  다음 코드 예는 앞의 단계에 나와 있는 예제를 조합합니다. 컬렉션 집합 컬렉션 모드가 캐시됨 모드인 0으로 설정되어 있으므로 컬렉션 항목에 대해 설정된 컬렉션 빈도(5초)가 무시됩니다. 자세한 내용은 [Data Collection](../../relational-databases/data-collection/data-collection.md)을 참조하세요.  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  

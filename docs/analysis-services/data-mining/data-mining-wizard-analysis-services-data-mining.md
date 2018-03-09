@@ -2,15 +2,13 @@
 title: "데이터 마이닝 마법사 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +17,20 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 57
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eab8188020685603ba45054b42957f6cc725b638
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee0b59c9035d6801bbe7a87d8589e7c337c6c9c2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>데이터 마이닝 마법사(Analysis Services - 데이터 마이닝)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사는 데이터 마이닝 프로젝트에 새 마이닝 구조를 추가할 때마다 시작됩니다. 이 마법사를 사용하면 데이터 원본을 선택하고, 분석에 사용할 데이터를 정의하는 데이터 원본 뷰를 설정한 다음 초기 모델을 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사는 데이터 마이닝 프로젝트에 새 마이닝 구조를 추가할 때마다 시작됩니다. 이 마법사를 사용하면 데이터 원본을 선택하고, 분석에 사용할 데이터를 정의하는 데이터 원본 뷰를 설정한 다음 초기 모델을 만들 수 있습니다.  
   
  마법사의 마지막 단계에서는 원하는 경우 데이터를 학습 및 테스트 집합으로 나누고 드릴스루와 같은 기능을 사용하도록 설정할 수 있습니다.  
   
@@ -79,7 +77,7 @@ ms.lasthandoff: 09/01/2017
 ### <a name="choosing-an-algorithm"></a>알고리즘 선택  
  다음에는 데이터를 처리할 때 사용할 알고리즘을 결정해야 합니다. 이 결정은 내리기 어려운 결정일 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 각 알고리즘은 기능이 서로 다르며 서로 다른 결과를 생성하므로 사용자의 데이터와 비즈니스 문제에 가장 적합한 알고리즘을 결정하려면 여러 모델을 실험해 보는 것이 좋습니다. 알고리즘별로 가장 적합한 태스크에 대한 설명을 보려면 다음 항목을 참조하십시오.  
   
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [데이터 마이닝 알고리즘 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  다양한 알고리즘을 사용하여 여러 모델을 만들거나 알고리즘의 매개 변수를 변경하여 다양한 모델을 만들 수 있습니다. 선택한 알고리즘으로만 제한되는 것이 아니므로 하나의 데이터에 대해 여러 가지 다른 모델을 만드는 것이 좋습니다.  
   
@@ -113,15 +111,15 @@ ms.lasthandoff: 09/01/2017
 ## <a name="related-content"></a>관련 내용  
  데이터 마이닝 모델을 만들 때 결정해야 하는 사항에 대해 더 자세히 알아보려면 다음 링크를 참조하십시오.  
   
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [데이터 마이닝 알고리즘 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [콘텐츠 형식 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [데이터 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [데이터 형식 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [기능 선택&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [기능 선택 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [누락 값 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
  [마이닝 모델에서의 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
@@ -130,4 +128,3 @@ ms.lasthandoff: 09/01/2017
  [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-

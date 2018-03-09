@@ -3,7 +3,7 @@ title: "동적 속성 (ADO)를 최적화 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1ded694b5bbc332483e2363be6212381f27035af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4aeae41d865e585c4c8b93c86bd6f8e9753eaea1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="optimize-property-dynamic-ado"></a>동적 속성 (ADO)를 최적화 합니다.
 인덱스를 만들지 여부를 지정 된 [필드](../../../ado/reference/ado-api/field-object.md)합니다.  
@@ -63,4 +62,3 @@ fld.Properties("Optimize") = False   'Delete an index
  [필터 속성](../../../ado/reference/ado-api/filter-property.md)   
  [Find 메서드 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Sort 속성](../../../ado/reference/ado-api/sort-property.md)
-

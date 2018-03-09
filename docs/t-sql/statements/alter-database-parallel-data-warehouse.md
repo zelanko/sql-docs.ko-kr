@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
-caps.latest.revision: 10
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 74b47bec1033728d47e5fe577af29c6d43e9af65
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7db44d9c9f02618e4d95a9d3eb9dfc581438dea5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -59,13 +58,13 @@ ALTER DATABASE database_name
  자동 증가 = {ON | OFF}  
  자동 증가 옵션을 업데이트합니다. 자동 증가 ON 일 때 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 성장 저장소 요구 사항에 맞게 필요에 따라 복제 된 테이블, 분산된 테이블 및 트랜잭션 로그에 할당된 된 공간을 자동으로 증가 합니다. 자동 증가 옵션이 OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 에서 오류를 반환 하는 경우 복제 된 테이블, 분산 테이블 또는 트랜잭션 로그의 최대 크기 설정을 초과 합니다.  
   
- REPLICATED_SIZE = *크기* [GB]  
+ REPLICATED_SIZE = *size* [GB]  
  복제 된 테이블의 모든 변경 되는 데이터베이스에 저장 하기 위한 계산 노드당 최대 새 기가바이트를 지정 합니다. 어플라이언스 저장 공간을 계획 하는 경우 어플라이언스의 계산 노드 수 REPLICATED_SIZE 곱한 해야 합니다.  
   
- DISTRIBUTED_SIZE = *크기* [GB]  
+ DISTRIBUTED_SIZE = *size* [GB]  
  모든 분산된 테이블이 변경 되는 데이터베이스에 저장 하기 위한 데이터베이스 당 최대 새 기가바이트를 지정 합니다. 크기는 모든 어플라이언스의 계산 노드에 분산 됩니다.  
   
- LOG_SIZE = *크기* [GB]  
+ LOG_SIZE = *size* [GB]  
  변경할 데이터베이스의 모든 트랜잭션 로그를 저장 하기 위한 데이터베이스 당 최대 새 기가바이트를 지정 합니다. 크기는 모든 어플라이언스의 계산 노드에 분산 됩니다.  
   
  암호화 {ON | OFF}  
@@ -174,4 +173,3 @@ ALTER DATABASE CustomerSales
  [DROP DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   
-

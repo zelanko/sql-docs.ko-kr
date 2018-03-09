@@ -2,26 +2,30 @@
 title: "SQL 추적 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66334fc6134a84c8d9a8e707f48e14f32a0034d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b035b11167895581588de96db1c1db3f65931307
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-trace"></a>SQL 추적
-  SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 관리하는 응용 프로그램의 추적 정보를 사용할 수 있는 파일 또는 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관리 개체)일 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 관리하는 응용 프로그램의 추적 정보를 사용할 수 있는 파일 또는 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관리 개체)일 수 있습니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 확장 이벤트를 대신 사용하세요.  
@@ -90,7 +94,7 @@ ms.lasthandoff: 11/09/2017
 |**오류**|31|지정된 이벤트의 오류 번호입니다. 종종 **sysmessages**테이블에 저장된 오류 번호를 나타냅니다.|  
 |**EventClass***|27|캡처된 이벤트 클래스 유형입니다.|  
 |**EventSequence**|51|이 이벤트의 시퀀스 번호입니다.|  
-|****EventSubclass*|21|각 이벤트 클래스에 대한 추가 정보를 제공하는 이벤트 하위 클래스 유형입니다. 예를 들어 **Execution Warning** 이벤트 클래스에 대한 이벤트 하위 클래스 값은 실행 경고 유형을 나타냅니다.<br /><br /> **1** = 쿼리 대기 쿼리는 실행하기 전에 리소스(예: 메모리)를 기다려야 합니다.<br /><br /> **2** = 쿼리 제한 시간 실행을 위해 리소스를 기다리는 동안 제한 시간을 초과한 쿼리입니다. 이 데이터 열은 모든 이벤트 클래스에 대해 채워지지는 않습니다.|  
+|**EventSubclass***|21|각 이벤트 클래스에 대한 추가 정보를 제공하는 이벤트 하위 클래스 유형입니다. 예를 들어 **Execution Warning** 이벤트 클래스에 대한 이벤트 하위 클래스 값은 실행 경고 유형을 나타냅니다.<br /><br /> **1** = 쿼리 대기 쿼리는 실행하기 전에 리소스(예: 메모리)를 기다려야 합니다.<br /><br /> **2** = 쿼리 제한 시간 실행을 위해 리소스를 기다리는 동안 제한 시간을 초과한 쿼리입니다. 이 데이터 열은 모든 이벤트 클래스에 대해 채워지지는 않습니다.|  
 |**GUID**|54|추적에 지정된 이벤트 클래스에 따라 달라지는 GUID 값입니다.|  
 |**FileName**|36|수정한 파일의 논리적 이름입니다.|  
 |**Handle**|33|ODBC, OLE DB, DB-Library가 서버와의 공동 실행을 위해 사용하는 정수입니다.|  
@@ -163,7 +167,7 @@ ms.lasthandoff: 11/09/2017
 |추적에서 수집하는 데이터의 양을 최소화하는 방법을 설명합니다.|[추적 파일 및 테이블 크기 제한](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 추적을 예약하는 두 가지 방법을 설명합니다.|[예약된 추적](../../relational-databases/sql-trace/schedule-traces.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SMO&#40;SQL Server 관리 개체&#41; 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

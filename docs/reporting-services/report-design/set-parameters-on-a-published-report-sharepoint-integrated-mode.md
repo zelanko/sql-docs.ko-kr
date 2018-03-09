@@ -1,32 +1,32 @@
 ---
-title: "게시 된 보고서-SharePoint 통합된 모드에서 매개 변수를 설정 합니다. | Microsoft Docs"
+title: "게시된 보고서에 매개 변수 설정 - SharePoint 통합 모드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eb7d195139e3fd34ad6ac749bf0e09e7b13e0d3d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>게시 된 보고서-SharePoint 통합된 모드에서 매개 변수를 설정 합니다.
+# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>게시된 보고서에 매개 변수 설정 - SharePoint 통합 모드
   매개 변수가 있는 보고서는 보고서 실행 시 데이터를 필터링하는 데 사용되는 입력 값을 받아들이는 보고서입니다. 매개 변수는 보고서를 만들 때 정의됩니다. 보고서 매개 변수는 보고서 정의에 정의된 방식에 따라 단일 값, 다중 값 또는 동적 값을 받아들일 수 있습니다. 여기서 동적 값은 이전 선택 사항에 따라 변경되는 값입니다. 예를 들어 제품 범주를 선택하면 다음 선택 사항은 해당 범주에 속한 특정 제품이 될 수 있습니다. 매개 변수에는 기본값을 지정할 수 있으며 이 값을 사용하여 자동으로 보고서의 필터링된 버전을 실행하거나 해당 값을 다른 값으로 바꿀 수 있습니다.  
   
  이러한 속성은 보고서 정의에 설정하거나 보고서가 게시된 후 설정할 수 있습니다. 게시된 보고서에서 일부 매개 변수 속성을 수정하여 값과 표시 속성을 변경할 수 있지만 매개 변수 이름이나 데이터 형식은 변경할 수 없습니다. 매개 변수 이름과 데이터 형식은 보고서 작성자가 보고서 정의에서만 변경할 수 있습니다.  
@@ -87,8 +87,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  **적용**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   
-

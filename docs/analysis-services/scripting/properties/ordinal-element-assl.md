@@ -2,43 +2,35 @@
 title: "Ordinal 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Ordinal Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Ordinal Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Ordinal
-helpviewer_keywords:
-- Ordinal element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Ordinal
+helpviewer_keywords: Ordinal element
 ms.assetid: 64e68ad5-439c-4c1d-9df4-ee90c56761b4
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 37af18b1a261e02460cf692ee6e147875d314b89
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f82b14a571fad0753e3b8835a3e0829a4975c583
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="ordinal-element-assl"></a>Ordinal 요소(ASSL)
-  키 및 번역과 같은 컬렉션에서 바인딩할 서수를 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]키 및 번역과 같은 컬렉션에서 바인딩할 서 수를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|정수|  
 |기본값|**0**|  
@@ -64,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AttributeBinding](../../../analysis-services/scripting/data-type/attributebinding-data-type-assl.md), [CubeAttributeBinding](../../../analysis-services/scripting/data-type/cubeattributebinding-data-type-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **AttributeBinding** 및 **CubeAttributeBinding** 요소가 들어는 [형식](../../../analysis-services/scripting/properties/type-element-binding-assl.md) 속성으로 설정 되어 *키* 또는 *번역*  다시 데이터 원본 뷰에서 열의 컬렉션에 바인딩되는 특성에 바인딩될 수 있습니다. 값은 **서 수** 요소는 열을 결정는 **AttributeBinding** 또는 **CubeAttributeBinding** 해당 컬렉션에 대 한 참조입니다.  
@@ -75,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

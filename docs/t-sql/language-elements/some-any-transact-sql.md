@@ -27,17 +27,16 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a67801d62cb05cdb0b589548e8bd3f9676d5840a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,14 +63,14 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  비교해야 함을 지정합니다.  
   
- *하위 쿼리*  
+ *subquery*  
  하나의 열로 구성된 결과 집합을 갖는 하위 쿼리입니다. 반환 되는 열의 데이터 형식으로 동일한 데이터 형식 이어야 합니다. *scalar_expression*합니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- 일부 또는 모든 반환 **TRUE** 때 지정 된 비교값이 TRUE 변수 쌍에 대 한 (*scalar_expression***,***x*) 여기서 *x* 단일 열 집합의 값 이며 그렇지 않으면 반환 **FALSE**합니다.  
+ 일부 또는 모든 반환 **TRUE** 때 지정 된 비교값이 TRUE 변수 쌍에 대 한 (*scalar_expression***,***x*) 여기서 *x* 에서 값은 단일 열 집합입니다. 그렇지 않으면 반환 **FALSE**합니다.  
   
 ## <a name="remarks"></a>주의  
  필요한 일부는 *scalar_expression* 하위 쿼리에서 반환 하는 하나 이상의 값을 정확 하 게 비교 합니다. 필요로 하는 문에 *scalar_expression* 하위 쿼리에서 반환 되는 모든 값을 정확 하 게 비교를 참조 하세요. [모든 &#40; Transact SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). 예를 들어 하위 쿼리에서 값 2와 3을 반환 하는 경우, *scalar_expression* = SOME (하위 쿼리)에 대해 TRUE로 평가 된 *scalar_express* 2입니다. 하위 쿼리에서 값 2와 3을 반환 하는 경우 *scalar_expression* = ALL (하위 쿼리)은 일부 값 (값 3)는 하위 쿼리 식의 조건을 만족 하지 않으므로 FALSE로 계산 됩니다.  
@@ -160,4 +159,3 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  [&#40; Transact SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   
-

@@ -2,36 +2,33 @@
 title: "SSIS와 Analysis Services 관리 태스크 자동화 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
 - Analysis Services Processing task
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
-caps.latest.revision: 29
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 308c7910d408fcb29689484eb71726a669ed6d98
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 549a7813e4f4454eff3141a984b0eb1d0c157e7f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>SSIS를 사용하여 Analysis Services 관리 태스크 자동화
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하여 DDL 스크립트 실행, 큐브 및 마이닝 모델 처리 태스크, 데이터 마이닝 쿼리 태스크를 자동화할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 순차 및 병렬 데이터 처리 작업을 구성하기 위해 연결할 수 있는 제어 흐름 및 유지 관리 태스크의 모음으로 생각할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DDL 스크립트, 큐브 및 마이닝 모델 처리 태스크, 데이터 마이닝 쿼리 태스크의 실행을 자동화할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 순차 및 병렬 데이터 처리 작업을 구성하기 위해 연결할 수 있는 제어 흐름 및 유지 관리 태스크의 모음으로 생각할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 처리 태스크 중에 데이터 정리 작업을 수행하고 여러 다른 데이터 원본의 데이터를 결합하도록 디자인되었습니다. 큐브 및 마이닝 모델 작업 시에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 숫자가 아닌 데이터를 숫자 데이터로 변환할 수 있으며 데이터 값이 예상 범위 안에 포함되도록 만들어 팩트 테이블 및 차원을 채울 무결한 데이터를 만들 수 있습니다.  
   
@@ -54,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
   
   
-

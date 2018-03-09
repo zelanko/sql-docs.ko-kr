@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Domains
+helpviewer_keywords: Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "51"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 33d3b1ce22b6cf81b6d38b2644b4bd021e29e3fc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aabc21d3007d55d293fdafe5cc0469f7b815e118
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 소개
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 제공되는 데이터 품질 솔루션을 통해 데이터 관리자 또는 IT 전문가는 데이터의 품질을 유지 관리하고 데이터가 비즈니스 용도에 적합한지 보장할 수 있습니다. DQS는 컴퓨터 기반 방식과 대화형 방식 모두를 사용하여 데이터 원본의 무결성과 품질을 관리할 수 있게 해주는 지식 기반 솔루션입니다. DQS를 사용하면 데이터에 대한 지식을 검색, 구축 및 관리할 수 있습니다. 그런 후 이러한 지식을 사용하여 데이터 정리, 일치 및 프로파일링을 수행할 수 있습니다. 또한 DQS 데이터 품질 프로젝트에서 참조 데이터 공급자의 클라우드 기반 서비스를 활용할 수도 있습니다.  
@@ -94,4 +91,3 @@ ms.lasthandoff: 09/09/2017
  Data Quality Services 기능은 Microsoft Excel용 Microsoft SQL Server 2014 Master Data Services 추가 기능 내에서 원본 데이터 및 마스터 데이터에 대해 중복 제거를 수행할 수 있도록 MDS(Master Data Services)에 통합되어 있습니다. 일치를 수행하려면 MDS에서 관리되는 데이터를 Excel 워크시트로 로드하고, 이를 MDS에서 관리되지 않는 데이터와 조합한 다음, Excel 내에서 일치를 수행합니다. MDS와 함께 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 구성 요소를 설치해야 합니다. 자세한 내용은 [Excel용 MDS 추가 기능의 데이터 품질 일치](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)를 참조하세요.  
   
   
-

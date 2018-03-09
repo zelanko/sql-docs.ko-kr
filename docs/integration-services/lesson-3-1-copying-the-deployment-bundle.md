@@ -1,11 +1,11 @@
 ---
-title: "1 단계: 배포 번들 복사 | Microsoft Docs"
+title: "1단계: 배포 번들 복사 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af7cbc058ac548c4fb86d70518ca2366f6fffd57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 3ed5c0c0f01a550794c29465b041b000f38965a4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-1---copying-the-deployment-bundle"></a>단원 3-1-배포 번들 복사
+# <a name="lesson-3-1---copying-the-deployment-bundle"></a>3-1단원 - 배포 번들 복사
 이 태스크에서는 배포 번들을 대상 컴퓨터에 복사합니다.  
   
 배포 번들을 대상 컴퓨터에 복사하는 가장 쉬운 방법은 먼저 대상 컴퓨터에서 공유 위치를 만든 다음 드라이브를 공유 위치에 매핑하고 배포 번들을 공유 위치에 복사하는 것입니다. 공유 폴더를 생성 및 구성하거나 드라이브를 매핑하는 방법을 모를 경우 Windows 설명서를 참조하십시오.  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

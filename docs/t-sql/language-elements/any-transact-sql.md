@@ -24,17 +24,16 @@ helpviewer_keywords:
 - TRUE
 - single-column set of values [SQL Server]
 ms.assetid: ddadefd7-49ad-4be1-b34d-dcf155558d34
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe683b2dbbb0a36bbc801136fe3029e9d7495135
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7fc6d9c30342fdc891e8d38727097fad9504ab61
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="any-transact-sql"></a>ANY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,4 +41,3 @@ ms.lasthandoff: 09/01/2017
   스칼라 값을 단일 열 집합 값과 비교합니다. 자세한 내용은 참조 [일부 &#124; 모든 &#40; Transact SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
   
   
-

@@ -2,37 +2,42 @@
 title: "데이터베이스 엔진 업그레이드 계획 및 테스트 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/20/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: server-general
+ms.suite: sql
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: cbe7bceca06dd5eef19b56433a8054c20d2e88d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: a10e7d35aa5a72f9dcc7ba34b11b6486fb9ac1cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>데이터베이스 엔진 업그레이드 계획 및 테스트
-  방법과 상관없이 성공적인 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 업그레이드를 수행하려면 적절한 계획이 필요합니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ 방법과 상관없이 성공적인 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 업그레이드를 수행하려면 적절한 계획이 필요합니다.  
   
 ## <a name="release-notes-and-known-upgrade-issues"></a>릴리스 정보 및 알려진 업그레이드 문제  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하기 전에 다음 항목을 검토하세요.
 
 - [SQL Server 2017 릴리스 정보](../../sql-server/sql-server-2017-release-notes.md) 
 - [SQL Server 2016 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server 데이터베이스 엔진 이전 버전과의 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+- [SQL Server 데이터베이스 엔진 이전 버전과의 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md) 문서.  
   
 ## <a name="pre-upgrade-planning-checklist"></a>사전 업그레이드 계획 검사 목록  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하기 전에 다음 검사 목록 및 연결된 항목을 검토하세요. 이러한 항목은 업그레이드 방법과 상관없이 모든 업그레이드에 적용되며 가장 적절한 업그레이드 방법: 즉, 롤링 업그레이드, 새 설치 업그레이드 또는 내부 업그레이드를 결정하는 데 도움이 됩니다. 예를 들어 운영 체제를 업그레이드하거나 SQL Server 2005에서 업그레이드하거나 SQL Server의 32비트 버전에서 업그레이드하는 경우 내부 또는 롤링 업그레이드를 수행하지 못할 수 있습니다. 의사 결정 트리에 대해서는 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)을 참조하세요.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하기 전에 다음 검사 목록 및 연결된 문서를 검토하세요. 이러한 문서는 업그레이드 방법과 상관없이 모든 업그레이드에 적용되며 가장 적절한 업그레이드 방법: 즉, 롤링 업그레이드, 새 설치 업그레이드 또는 내부 업그레이드를 결정하는 데 도움이 됩니다. 예를 들어 운영 체제를 업그레이드하거나 SQL Server 2005에서 업그레이드하거나 SQL Server의 32비트 버전에서 업그레이드하는 경우 내부 또는 롤링 업그레이드를 수행하지 못할 수 있습니다. 의사 결정 트리에 대해서는 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)을 참조하세요.  
   
 -   **하드웨어 및 소프트웨어 요구 사항:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 설치하기 위한 하드웨어 및 소프트웨어 요구 사항을 검토하세요. 이러한 요구 사항은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)에서 확인할 수 있습니다. 업그레이드 계획 주기의 한 부분은 하드웨어 업그레이드(최신 하드웨어는 더 빠르며 프로세서 수가 적거나 데이터베이스와 서버의 통합으로 라이선스가 감소할 수 있음) 및 운영 체제 업그레이드를 고려하는 것입니다. 이러한 유형의 하드웨어 및 소프트웨어 변경은 선택하는 업그레이드 방법의 유형에 영향을 미칩니다.  
   
@@ -60,7 +65,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]를 업그레이드하는 경우 Enterprise Edition: Core 기반 라이선스와 Enterprise Edition 중에서 선택합니다. 이러한 엔터프라이즈 버전은 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)을 참조하세요.  
   
--   **이전 버전과의 호환성:** [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 이전 버전과의 호환성 항목을 검토하여 업그레이드 중인 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 간의 동작 변화를 검토합니다. [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)을 참조하세요.  
+-   **이전 버전과의 호환성:** [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 이전 버전과의 호환성 문서를 검토하여 업그레이드 중인 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 간의 동작 변화를 검토합니다. [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)을 참조하세요.  
   
 -   **업그레이드 관리자:**  업그레이드 프로세스를 방해하거나 주요 변경 내용 때문에 기존 스크립트 또는 응용 프로그램의 수정이 필요할 수 있는 문제를 진단하는 데 도움을 얻으려면 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 업그레이드 관리자를 실행합니다. [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]에는 고객이 기존 시스템의 업그레이드를 준비하는 데 도움이 되는 새 버전의 업그레이드 관리자가 포함되어 있습니다.  또한 이 도구는 기존 데이터베이스를 검사하여 업그레이드가 완료된 후 스트레치 테이블과 같은 새 기능을 이용할 수 있는지 확인할 수 있는 기능도 포함하고 있습니다.   
     [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]업그레이드 관리자  [여기](https://www.microsoft.com/en-us/download/details.aspx?id=48119)서 다운로드할 수 있습니다.  

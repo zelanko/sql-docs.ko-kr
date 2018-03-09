@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1992b3fc6d6013859c1bdd46d119f633db46acfc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07e868f5798e759a9b84e9c28d2c1fa82bb34c4f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors"></a>스크롤 가능 커서
 최신 스크린 기반 응용 프로그램에서 사용자 데이터를 뒤로 및 앞으로 스크롤합니다. 이러한 응용 프로그램에 대 한 문제는 이전에 인출 된 행을 반환 합니다. 한 가지 예로 닫기 및 커서를 다시 열고 다음 커서 필요한 행에 도달할 때까지 행을 인출 합니다. 다른 가능한 결과 집합을 읽고 로컬에 캐시, 스크롤 응용 프로그램에서 구현 하는 것입니다. 두 가능성 작은 결과 집합에만 제대로 작동 하 고 후자의 가능성은 구현 하기가 어렵습니다. 더 나은 방법은 사용 하는 *스크롤 가능 커서* 결과 집합 마다 앞으로 또는 뒤로 이동 수입니다.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 -   [상대 및 절대 스크롤](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
   
 -   [책갈피](../../../odbc/reference/develop-app/bookmarks-odbc.md)
-

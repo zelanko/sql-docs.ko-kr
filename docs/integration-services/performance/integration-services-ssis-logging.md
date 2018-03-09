@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 로깅 | Microsoft Docs"
+title: "Integration Services(SSIS) 로깅 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -32,17 +32,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 22c1126b8d5555dc743f7c8906230cf5dbcb08a8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함됩니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
@@ -141,7 +140,7 @@ ms.lasthandoff: 08/03/2017
 |**OnVariableValueChanged**|변수의 값이 변경될 때 로그 항목을 기록합니다.|  
 |**OnWarning**|경고가 발생할 때 로그 항목을 기록합니다.|  
 |**PipelineComponentTime**|각 데이터 흐름 구성 요소에 대해 유효성 검사 및 실행의 각 단계에 대한 로그 항목을 기록합니다. 로그 항목에서는 각 단계의 처리 시간을 지정합니다.|  
-|**진단**<br /><br /> **DiagnosticEx**|진단 정보를 제공하는 로그 항목을 기록합니다.<br /><br /> 예를 들어 외부 데이터 공급자에 대한 각 호출 전후의 메시지를 기록할 수 있습니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.<br /><br /> 데이터 흐름에서 오류가 발생한 열의 열 이름을 찾으려면 **DiagnosticEx** 이벤트를 기록합니다. 이 이벤트는 로그에 데이터 흐름 계보 맵을 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 계보 맵에서 열 이름을 조회할 수 있습니다. 자세한 내용은 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)를 참조하십시오.<br /><br /> **DiagnosticEx** 이벤트는 로그의 크기를 줄이기 위해 해당 XML 출력에서 공백을 유지하지 않습니다. 가독성을 높이기 위해 XML 서식 지정 및 구문 강조를 지원하는 XML 편집기(예: Visual Studio)로 로그를 복사합니다.<br /><br /> 참고: SQL Server 로그 공급자를 사용하여 **DiagnosticEx** 이벤트를 기록하는 경우에는 출력이 잘릴 수 있습니다. SQL Server 로그 공급자의 **message** 필드는 nvarchar(2048) 형식입니다. 로그가 잘리지 않도록 하려면 **DiagnosticEx** 이벤트를 기록할 때 다른 로그 공급자를 사용하세요.|  
+|**진단**<br /><br /> **DiagnosticEx**|진단 정보를 제공하는 로그 항목을 기록합니다.<br /><br /> 예를 들어 외부 데이터 공급자에 대한 각 호출 전후의 메시지를 기록할 수 있습니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.<br /><br /> 데이터 흐름에서 오류가 발생한 열의 열 이름을 찾으려면 **DiagnosticEx** 이벤트를 기록합니다. 이 이벤트는 로그에 데이터 흐름 계보 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 계보 맵에서 열 이름을 조회할 수 있습니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.<br /><br /> **DiagnosticEx** 이벤트는 로그의 크기를 줄이기 위해 해당 XML 출력에서 공백을 유지하지 않습니다. 가독성을 높이기 위해 XML 서식 지정 및 구문 강조를 지원하는 XML 편집기(예: Visual Studio)로 로그를 복사합니다.<br /><br /> 참고: SQL Server 로그 공급자를 사용하여 **DiagnosticEx** 이벤트를 기록하는 경우에는 출력이 잘릴 수 있습니다. SQL Server 로그 공급자의 **message** 필드는 nvarchar(2048) 형식입니다. 로그가 잘리지 않도록 하려면 **DiagnosticEx** 이벤트를 기록할 때 다른 로그 공급자를 사용하세요.|  
   
  패키지 및 여러 태스크에는 로깅을 사용하도록 설정할 수 있는 사용자 지정 로그 항목이 있습니다. 예를 들어 메일 보내기 태스크는 태스크가 시작되어 메일 메시지를 보내기 전에 정보를 로깅하는 **SendMailTaskBegin** 사용자 지정 로그 항목을 제공합니다. 자세한 내용은 [Custom Messages for Logging](#custom_messages)를 참조하세요.  
   
@@ -177,9 +176,9 @@ ms.lasthandoff: 08/03/2017
  데이터 흐름 태스크에서는 성능을 모니터링하고 조정하는 데 사용할 수 있는 여러 가지 사용자 지정 로그 항목을 제공합니다. 예를 들어 메모리 손실을 유발할 수 있는 구성 요소를 모니터링하거나 특정 구성 요소를 실행하는 데 소요되는 시간을 추적할 수 있습니다. 이러한 사용자 지정 로그 항목의 목록과 예제 로깅 출력은 [Data Flow Task](../../integration-services/control-flow/data-flow-task.md)을 참조하십시오.  
   
 #### <a name="capture-the-names-of-columns-in-which-errors-occur"></a>오류가 발생하는 열의 이름 캡처  
- 데이터 흐름에서 오류 출력을 구성할 때 오류 출력에서는 기본적으로 오류가 발생한 열의 숫자 식별자만 제공됩니다. 자세한 내용은 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)를 참조하십시오.  
+ 데이터 흐름에서 오류 출력을 구성할 때 오류 출력에서는 기본적으로 오류가 발생한 열의 숫자 식별자만 제공됩니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.  
   
- 로깅을 사용하도록 설정하고 **DiagnosticEx** 이벤트를 선택하여 열 이름을 찾을 수 있습니다. 이 이벤트는 로그에 데이터 흐름 계보 맵을 작성합니다. 그런 다음 이 계보 맵의 식별자를 통해 열 이름을 조회할 수 있습니다. **DiagnosticEx** 이벤트는 로그의 크기를 줄이기 위해 해당 XML 출력에서 공백을 유지하지 않습니다. 가독성을 높이기 위해 XML 서식 지정 및 구문 강조를 지원하는 XML 편집기(예: Visual Studio)로 로그를 복사합니다.  
+ 로깅을 사용하도록 설정하고 **DiagnosticEx** 이벤트를 선택하여 열 이름을 찾을 수 있습니다. 이 이벤트는 로그에 데이터 흐름 계보 지도를 작성합니다. 그런 다음 이 계보 맵의 식별자를 통해 열 이름을 조회할 수 있습니다. **DiagnosticEx** 이벤트는 로그의 크기를 줄이기 위해 해당 XML 출력에서 공백을 유지하지 않습니다. 가독성을 높이기 위해 XML 서식 지정 및 구문 강조를 지원하는 XML 편집기(예: Visual Studio)로 로그를 복사합니다.  
   
 #### <a name="use-the-pipelinecomponenttime-event"></a>PipelineComponentTime 이벤트 사용  
  가장 유용한 사용자 지정 로그 항목은 PipelineComponentTime 이벤트일 수 있습니다. 이 로그 항목은 5개의 각 주요 처리 단계에서 데이터 흐름의 각 구성 요소에 소요된 시간(밀리초)을 보고합니다. 다음 표에서는 이러한 처리 단계에 대해 설명합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개발자는 이러한 단계를 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>을 참조하세요.  
@@ -234,15 +233,15 @@ ms.lasthandoff: 08/03/2017
   
 3.  **공급자 유형** 목록에서 로그 공급자를 선택한 다음 **추가**를 클릭합니다.  
   
-4.  에 **구성** 열에서 연결 관리자를 선택 하거나 클릭  **\<새 연결 >** 는 새 연결 관리자를 만듭니다 적절 한 형식의 로그 공급자에 대 한 합니다. 선택한 공급자에 따라 다음 연결 관리자 중 하나를 사용합니다.  
+4.  **구성** 열에서 연결 관리자를 선택하거나 **\<새 연결>**을 클릭하여 로그 공급자에 대한 적절한 유형의 연결 관리자를 만듭니다. 선택한 공급자에 따라 다음 연결 관리자 중 하나를 사용합니다.  
   
     -   텍스트 파일에는 파일 연결 관리자를 사용합니다. 자세한 내용은 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)를 참조하세요.  
   
     -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에는 파일 연결 관리자를 사용합니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 OLE DB 연결 관리자를 사용합니다. 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)를 참조하세요.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 OLE DB 연결 관리자를 사용합니다. 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)을 참조하세요.  
   
-    -   Windows 이벤트 로그에는 아무 것도 선택하지 마십시오. [!INCLUDE[ssIS](../../includes/ssis-md.md)]로그를 자동으로 만듭니다.  
+    -   Windows 이벤트 로그에는 아무 것도 선택하지 마십시오. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 자동으로 로그를 만듭니다.  
   
     -   XML 파일에는 파일 연결 관리자를 사용합니다.  
   
@@ -287,7 +286,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="container"></a> 컨테이너 창의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **컨테이너** 창을 사용하여 패키지 및 해당 컨테이너에 대해 로깅을 활성화할 수 있습니다.  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  **SSIS 로그 구성**  
  패키지 및 해당 컨테이너에 대해 로깅을 활성화하려면 계층 뷰의 확인란을 선택합니다.  
   
@@ -302,7 +301,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="provider"></a> 공급자 및 로그 탭의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **공급자 및 로그** 탭을 사용하여 런타임 이벤트를 캡처하기 위한 로그를 생성 및 구성할 수 있습니다.  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  **공급자 유형**  
  목록에서 로그 공급자 유형을 선택합니다.  
   
@@ -312,11 +311,11 @@ ms.lasthandoff: 08/03/2017
  **이름**  
  **SSIS 로그 구성** 대화 상자의 **컨테이너** 창에서 선택한 컨테이너 또는 태스크에 대한 로그를 확인란을 사용하여 설정하거나 해제합니다. 이름 필드는 편집할 수 있습니다. 공급자의 기본 이름을 사용하거나 설명이 포함된 고유 이름을 입력합니다.  
   
- **Description**  
+ **설명**  
  설명 필드는 편집할 수 있습니다. 클릭한 다음 로그의 기본 설명을 수정합니다.  
   
  **Configuration**  
- 목록에서 기존 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
+ 목록에서 기존 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
   
  관련 항목: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) , [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -326,27 +325,27 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="detail"></a> 자세히 탭의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **자세히** 탭을 사용하여 로깅에 사용할 이벤트와 로깅할 세부 정보를 지정할 수 있습니다. 선택한 정보는 패키지의 모든 로그 공급자에 적용됩니다. 예를 들어 일부 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 쓰고 다른 정보는 텍스트 파일에 쓰는 것은 불가능합니다.  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  **이벤트**  
  로깅할 이벤트를 설정 또는 해제합니다.  
   
- **Description**  
+ **설명**  
  이벤트에 대한 설명을 표시합니다.  
   
  **고급**  
  로깅할 이벤트를 선택하거나 선택을 취소하고, 각 이벤트에 대해 로깅할 정보를 선택하거나 선택을 취소합니다. 이벤트 목록을 제외한 모든 로깅 세부 정보를 숨기려면 **기본** 을 클릭합니다. 다음은 로깅에 사용할 수 있는 정보입니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**Computer**|로깅된 이벤트가 발생한 컴퓨터의 이름입니다.|  
-|**연산자**|패키지를 시작한 사람의 사용자 이름입니다.|  
+|**같음**|패키지를 시작한 사람의 사용자 이름입니다.|  
 |**SourceName**|로깅된 이벤트가 발생한 패키지, 컨테이너 및 태스크의 이름입니다.|  
 |**SourceID**|로깅된 이벤트가 발생한 패키지, 컨테이너 또는 태스크의 GUID(Global Unique Identifier)입니다.|  
 |**ExecutionID**|패키지 실행 인스턴스의 GUID(Global Unique Identifier)입니다.|  
 |**MessageText**|로그 항목과 연결된 메시지입니다.|  
 |**DataBytes**|나중에 사용하도록 예약되어 있습니다.|  
   
- **기본**  
+ **Basic**  
  로깅할 이벤트를 선택하거나 선택을 취소합니다. 이 옵션은 이벤트 목록을 제외한 로깅 세부 정보를 숨깁니다. 이벤트를 선택한 경우 해당 이벤트에 대한 모든 로깅 세부 정보가 기본적으로 선택됩니다. 로깅 세부 정보를 모두 표시하려면 **고급** 을 클릭합니다.  
   
  **로드**  
@@ -417,10 +416,10 @@ ms.lasthandoff: 08/03/2017
 |로깅 수준|Description|  
 |-------------------|-----------------|  
 |InclusionThresholdSetting|로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
-|Basic|사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 이 값은 기본값입니다.|  
+|Basic|사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 이것은 기본값입니다.|  
 |RuntimeLineage|데이터 흐름에서 계보 정보를 추적하는 데 필요한 데이터를 수집합니다. 이 계보 정보를 구문 분석하여 작업 간의 계보 관계를 매핑할 수 있습니다. ISV 및 개발자는 이 정보를 사용하여 사용자 지정 계보 매핑 도구를 빌드할 수 있습니다.|  
 |성능|성능 통계와 OnError 및 OnWarning 이벤트만 기록됩니다.<br /><br /> **실행 성능** 보고서에는 패키지 데이터 흐름 구성 요소의 활성 시간 및 총 시간이 표시됩니다. 이 정보는 마지막 패키지 실행의 로깅 수준이 **성능** 또는 **자세히**로 설정된 경우에 사용할 수 있습니다. 자세한 내용은 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)을(를) 참조하세요.<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 뷰에는 각 실행 단계의 데이터 흐름 구성 요소에 대한 시작 시간과 종료 시간이 표시됩니다. 이 뷰에서는 패키지 실행의 로깅 수준이 **성능** 또는 **자세히**로 설정된 경우에만 해당 구성 요소에 대해 이 정보를 표시합니다.|  
-|자세히|사용자 지정 이벤트 및 진단 이벤트를 포함한 모든 이벤트가 기록됩니다.<br /><br /> 사용자 지정 이벤트로는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 태스크에 의해 기록되는 이벤트가 있습니다. 사용자 지정 이벤트에 대한 자세한 내용은 [Custom Messages for Logging](#custom_messages)을(를) 참조하세요.<br /><br /> 진단 이벤트의 한 예로 **DiagnosticEx** 이벤트가 있습니다. 패키지 실행 태스크가 자식 패키지를 실행할 때마다 이 이벤트는 자식 패키지에 전달된 매개 변수 값을 캡처합니다.<br /><br /> 또한 **DiagnosticEx** 이벤트는 행 수준 오류가 발생하는 열의 이름을 가져올 수 있습니다. 이 이벤트는 로그에 데이터 흐름 계보 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 계보 맵에서 열 이름을 조회할 수 있습니다.  자세한 내용은 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)를 참조하십시오.<br /><br /> **DiagnosticEx** 에 대한 메시지 열 값은 XML 텍스트입니다. 패키지 실행에 대한 메시지 텍스트를 보려면 [catalog.operation_messages&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) 뷰를 쿼리합니다. **DiagnosticEx** 이벤트는 로그의 크기를 줄이기 위해 해당 XML 출력에서 공백을 유지하지 않습니다. 가독성을 높이기 위해 XML 서식 지정 및 구문 강조를 지원하는 XML 편집기(예: Visual Studio)로 로그를 복사합니다.<br /><br /> [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) 뷰는 패키지 실행에 대해 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 뷰에서 이 정보를 캡처하려면 로깅 수준을 **자세히** 로 설정해야 합니다.|  
+|자세히|사용자 지정 이벤트 및 진단 이벤트를 포함한 모든 이벤트가 기록됩니다.<br /><br /> 사용자 지정 이벤트로는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 태스크에 의해 기록되는 이벤트가 있습니다. 사용자 지정 이벤트에 대한 자세한 내용은 [Custom Messages for Logging](#custom_messages)을(를) 참조하세요.<br /><br /> 진단 이벤트의 한 예로 **DiagnosticEx** 이벤트가 있습니다. 패키지 실행 태스크가 자식 패키지를 실행할 때마다 이 이벤트는 자식 패키지에 전달된 매개 변수 값을 캡처합니다.<br /><br /> 또한 **DiagnosticEx** 이벤트는 행 수준 오류가 발생하는 열의 이름을 가져올 수 있습니다. 이 이벤트는 로그에 데이터 흐름 계보 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 계보 맵에서 열 이름을 조회할 수 있습니다.  자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.<br /><br /> **DiagnosticEx** 에 대한 메시지 열 값은 XML 텍스트입니다. 패키지 실행에 대한 메시지 텍스트를 보려면 [catalog.operation_messages&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) 뷰를 쿼리합니다. **DiagnosticEx** 이벤트는 로그의 크기를 줄이기 위해 해당 XML 출력에서 공백을 유지하지 않습니다. 가독성을 높이기 위해 XML 서식 지정 및 구문 강조를 지원하는 XML 편집기(예: Visual Studio)로 로그를 복사합니다.<br /><br /> [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) 뷰는 패키지 실행에 대해 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 뷰에서 이 정보를 캡처하려면 로깅 수준을 **자세히** 로 설정해야 합니다.|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>사용자 지정된 로깅 수준 관리 대화 상자를 사용하여 사용자 지정된 로깅 수준 만들기 및 관리  
  원하는 통계 및 이벤트를 수집하는 사용자 지정된 로깅 수준을 만들 수 있습니다. 필요에 따라 변수 값, 연결 문자열 및 구성 요소 속성을 포함하는 이벤트의 컨텍스트를 캡처할 수도 있습니다. 패키지를 실행하는 경우 기본 제공 로깅 수준을 선택할 수 있을 때마다 사용자 지정된 로깅 수준을 선택할 수 있습니다.  
@@ -481,7 +480,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
   
  [로그인 전송 태스크](#TransferLogins)  
   
- [Master 저장 프로시저 전송 태스크](#TransferMasterStoredProcedures)  
+ [master 저장 프로시저 전송 태스크](#TransferMasterStoredProcedures)  
   
  [SQL Server 개체 전송 태스크](#TransferSQLServerObjects)  
   
@@ -683,8 +682,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 ## <a name="related-tasks"></a>관련 작업  
  다음 목록에는 로깅 기능과 관련된 태스크를 수행하는 방법을 보여 주는 항목에 대한 링크가 나와 있습니다.  
   
--   [통합 서비스 패키지에 의해 기록된 이벤트](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+-   [Integration Services 패키지에서 기록하는 이벤트](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
 ## <a name="related-content"></a>관련 내용  
  [전체 및 세부 정보 로깅을 위한 DTLoggedExec 도구(CodePlex 프로젝트)](http://go.microsoft.com/fwlink/?LinkId=150579)  
-

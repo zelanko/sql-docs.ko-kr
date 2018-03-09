@@ -1,16 +1,14 @@
 ---
 title: "ADOMD.NET 클라이언트 프로그래밍 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
-caps.latest.revision: 42
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 453848d922a5e2a88258922f764403cf4126de12
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8a7debab516c8f48b4184c66028c42f44d5bdd2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 클라이언트 프로그래밍
   ADOMD.NET 클라이언트 구성 요소 내에 있는 **Microsoft.AnalysisServices.AdomdClient** 네임 스페이스 (microsoft.analysisservices.adomdclient.dll). 이러한 클라이언트 구성 요소가 클라이언트에 대 한 기능 및 중간 계층 응용 프로그램을 쉽게 쿼리 데이터와 메타 데이터는 분석 데이터 저장소에서 제공와 같은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
@@ -40,8 +37,8 @@ ms.lasthandoff: 09/01/2017
 |태스크|Description|  
 |----------|-----------------|  
 |[ADOMD.NET에서 연결 설정](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)|ADOMD.NET에서 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 분석 데이터 원본에 대한 연결을 설정합니다. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체를 사용하여 분석 데이터 원본에 대해 명령을 실행하고 데이터 및 메타데이터를 검색할 수 있습니다.|  
-|[분석 데이터 원본에서 메타 데이터 검색](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)|연결이 설정된 후에는 다양한 개체를 사용하여 내부 데이터 원본에 대한 정보를 검색할 수 있습니다. 응용 프로그램에서 이 기능을 사용하여 연결된 데이터 원본을 적용할 수 있습니다.|  
-|[분석 데이터 원본에 대해 명령을 실행합니다.](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 개체는 내부 분석 데이터 원본에 대한 명령을 실행하는 데 필요한 인터페이스를 제공합니다.|  
+|[분석 데이터 원본에서 메타데이터 검색](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)|연결이 설정된 후에는 다양한 개체를 사용하여 내부 데이터 원본에 대한 정보를 검색할 수 있습니다. 응용 프로그램에서 이 기능을 사용하여 연결된 데이터 원본을 적용할 수 있습니다.|  
+|[분석 데이터 원본에 대한 명령 실행](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 개체는 내부 분석 데이터 원본에 대한 명령을 실행하는 데 필요한 인터페이스를 제공합니다.|  
 |[분석 데이터 원본에서 데이터 검색](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)|데이터를 검색할 수 없습니다 및 중 하나를 사용 하 여 구문 분석 명령을 실행 한 후의 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, 또는 **System.XmlReader** 개체입니다.|  
 |[ADOMD.NET에서 트랜잭션 수행](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions.md)|이 표의 이전 행에 나열된 모든 동작은 커밋된 읽기 트랜잭션 내에서 발생할 수 있습니다. 데이터를 읽는 동안 더티 읽기를 방지하기 위해 공유 잠금이 유지되지만 트랜잭션이 끝나기 전에 데이터가 변경되어 반복되지 않은 읽기나 팬텀 데이터가 생성될 수도 있습니다. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> 개체는 ADOMD.NET에서 트랜잭션 기능을 제공합니다.|  
   
@@ -62,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [ADOMD.NET을 사용 하 여 개발](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
   
-

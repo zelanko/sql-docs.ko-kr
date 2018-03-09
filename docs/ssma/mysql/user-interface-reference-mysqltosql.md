@@ -1,29 +1,30 @@
 ---
 title: "사용자 인터페이스 참조 (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e39a5ca8327230660a0a6dc1c0a6d1170ae7c279
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 669901a865788be20096ddedb05d15f4448a2a4b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-mysqltosql"></a>사용자 인터페이스 참조 (MySQLToSQL)
 이 섹션 MySQL에 대 한 도움말 항목에 대 한 SQL Server Migration Assistant (SSMA) 포함 되어 있습니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 08/02/2017
 |[형식 매핑 &#40; 편집 MySQLToSQL &#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|사용 하 여는 **형식 매핑 편집** 을 만들거나 원본 및 대상 데이터베이스와 데이터베이스 개체 간에 데이터 형식 매핑 수정 대화 상자.|  
 |[전역 설정 &#40; 편집기 &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|편집기 페이지를 사용 하는 **전역 설정** 대화 상자를 코드 편집기 옵션을 구성할 수 있습니다.|  
 |[전역 설정 &#40; 대화 상자 &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|대화 상자 페이지를 사용 하는 **전역 설정** 대화 상자 기본 대화 상자 및 경고 설정을 구성할 수 있습니다.|  
-|[전역 설정 (로깅)](http://msdn.microsoft.com/en-us/0d033492-5ec3-473a-8de1-821894ec9518)|로깅 페이지를 사용 하 여 **전역 설정** 로깅을 구성 하려면 대화 상자.|  
+|[전역 설정(로깅)](http://msdn.microsoft.com/en-us/0d033492-5ec3-473a-8de1-821894ec9518)|로깅 페이지를 사용 하 여 **전역 설정** 로깅을 구성 하려면 대화 상자.|  
 |[전역 설정 &#40; 출력 창 &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|사용 하 여 **전역 설정** MySQL 사용자 인터페이스용 SSMA에 대 한 기본 설정을 지정 하려면 대화 상자.|  
 |[새 프로젝트 &#40; SSMA &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|사용 하 여는 **새 프로젝트** 대화 상자를 MySQL 프로젝트에 대 한 새 SSMA를 만듭니다.|  
 |[프로젝트 설정 &#40; 변환 &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|변환 페이지를 사용 하 여는 **프로젝트 설정** MySQL 용 SSMA 함수 및 전역 변수를 변환 하는 방법을 지정 하려면 대화 상자.|  
@@ -57,8 +58,7 @@ ms.lasthandoff: 08/02/2017
 |[데이터베이스 &#40;에서 새로 고침 MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|사용 하 여는 **데이터베이스에서 새로 고침** 대화 상자는 MySQL 데이터베이스에서 새로 고칠 개체를 선택 합니다.|  
 |[메타 데이터 &#40; 저장 MySQLToSQL &#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|**메타 데이터 저장** 메타 데이터가 없습니다. 프로젝트를 저장할 때 대화 상자가 나타납니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SSMA MySQL &#40;에 대 한 시작 MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [Azure SQL DB &#40; SQL Server-MySQL 데이터베이스 마이그레이션 MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

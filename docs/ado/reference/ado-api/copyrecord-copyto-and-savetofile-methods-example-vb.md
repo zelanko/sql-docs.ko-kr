@@ -3,7 +3,7 @@ title: "범위란, CopyTo 및 SaveToFile 메서드 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - SaveToFile method [ADO], Visual Basic example
 - CopyTo method [ADO], Visual Basic example
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 624484f7783449fa0793ee934217a3ae76dba865
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f7e0bdba854ce12456b80a7f42b29f0b6889e9d2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>범위란, CopyTo 및 SaveToFile 메서드 예제 (VB)
 사용 하 여 파일의 복사본을 만드는 방법을 보여 주는이 예제 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 또는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다. 하나의 복사본이 인터넷 게시에 대 한 웹 폴더에 생성 됩니다. 다른 속성 및 메서드로 표시 된 [스트림 형식](../../../ado/reference/ado-api/type-property-ado-stream.md), **열려**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), 및 [레코드가 열려](../../../ado/reference/ado-api/open-method-ado-record.md)합니다.  
@@ -142,4 +141,3 @@ End Sub
  [SaveToFile 메서드](../../../ado/reference/ado-api/savetofile-method.md)   
  [스트림 개체 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Type 속성(ADO 스트림)](../../../ado/reference/ado-api/type-property-ado-stream.md)
-

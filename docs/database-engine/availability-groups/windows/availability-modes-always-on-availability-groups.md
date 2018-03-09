@@ -1,12 +1,14 @@
 ---
 title: "가용성 모드(Always On 가용성 그룹) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/16/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,22 +19,23 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: f7f1e90e1892eae4763b8afd1af575cc6b3ef16a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cec987001aa2242861da91b0815c8cc6455b9efd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>가용성 모드(Always On 가용성 그룹)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 *가용성 모드* 는 지정된 가용성 복제본을 동기 커밋 모드에서 실행할 수 있는지 여부를 결정하는 복제본 속성입니다. 각 가용성 복제본에 대해 가용성 모드를 동기 커밋 모드나 비동기 커밋 모드로 구성해야 합니다.  주 복제본이 *비동기 커밋 모드*로 구성된 경우 주 복제본에서는 보조 복제본이 들어오는 트랜잭션 로그 레코드를 디스크에 기록( *로그 확정*)할 때까지 기다리지 않습니다. 특정 보조 복제본이 비동기 커밋 모드로 구성된 경우 주 복제본은 해당 보조 복제본이 로그를 확정할 때까지 기다리지 않습니다. 주 복제본과 특정 보조 복제본이 모두 *동기 커밋 모드*로 구성된 경우에는 보조 복제본이 주 복제본의 *세션 제한 시간*내에 주 복제본을 ping하는 데 실패하지 않은 한 주 복제본은 보조 복제본이 로그를 확정했음을 확인할 때까지 기다립니다.  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 *가용성 모드* 는 지정된 가용성 복제본을 동기 커밋 모드에서 실행할 수 있는지 여부를 결정하는 복제본 속성입니다. 각 가용성 복제본에 대해 가용성 모드를 동기 커밋 모드나 비동기 커밋 또는 구성 전용 모드로 구성해야 합니다.  주 복제본이 *비동기 커밋 모드*로 구성된 경우 주 복제본에서는 보조 복제본이 들어오는 트랜잭션 로그 레코드를 디스크에 기록( *로그 확정*)할 때까지 기다리지 않습니다. 특정 보조 복제본이 비동기 커밋 모드로 구성된 경우 주 복제본은 해당 보조 복제본이 로그를 확정할 때까지 기다리지 않습니다. 주 복제본과 특정 보조 복제본이 모두 *동기 커밋 모드*로 구성된 경우에는 보조 복제본이 주 복제본의 *세션 제한 시간*내에 주 복제본을 ping하는 데 실패하지 않은 한 주 복제본은 보조 복제본이 로그를 확정했음을 확인할 때까지 기다립니다. 
   
+
 > [!NOTE]  
 >  보조 복제본이 주 복제본의 세션 제한 시간을 초과할 경우 주 복제본은 일시적으로 해당 보조 복제본에 대해 비동기 커밋 모드로 전환합니다. 보조 복제본이 주 복제본에 다시 연결할 때는 동기 커밋 모드가 다시 시작됩니다.  
   
@@ -58,6 +61,8 @@ ms.lasthandoff: 08/02/2017
 -   *동기-커밋 모드* 는 트랜잭션 대기 시간이 증가하더라도 성능에 비해 고가용성을 강조합니다. 동기-커밋 모드에서는 보조 복제본이 로그를 디스크에 확정할 때까지 트랜잭션이 트랜잭션 확정을 클라이언트에 보내기를 기다립니다. 보조 데이터베이스에서 데이터 동기화가 시작되면 보조 복제본은 해당 주 데이터베이스로부터 들어오는 로그 레코드를 적용하기 시작합니다. 모든 로그 레코드가 확정되면 보조 데이터베이스가 곧바로 SYNCHRONIZED 상태로 전환됩니다. 이후부터 모든 새 트랜잭션은 보조 복제본에 의해 확정된 후 로그 레코드가 로컬 로그 파일에 작성됩니다. 지정된 보조 복제본의 모든 보조 데이터베이스가 동기화된 경우 동기-커밋 모드에서는 수동 장애 조치(Failover)와 필요한 경우 자동 장애 조치를 지원합니다.  
   
      자세한 내용은 이 항목의 뒷부분에 나오는 [동기-커밋 가용성 모드](#SyncCommitAvMode)를 참조하세요.  
+
+-   *구성 전용 모드*는 Windows Server 장애 조치(Failover) 클러스터에 없는 가용성 그룹에 적용됩니다. 구성 전용 모드의 복제본은 사용자 데이터를 포함하지 않습니다. 구성 전용 모드에서 복제본 master 데이터베이스는 가용성 그룹 구성 메타데이터를 저장합니다. 자세한 내용은 [구성 전용 복제본이 있는 가용성 그룹](../../../linux/sql-server-linux-availability-group-ha.md)을 참조하세요.
   
  다음 그림에서는 5개의 가용성 복제본이 있는 가용성 그룹을 보여 줍니다. 주 복제본 및 하나의 보조 복제본이 자동 장애 조치를 사용하여 동기-커밋 모드에 대해 구성됩니다. 또한 다른 보조 복제본이 계획된 수동 장애 조치만 사용하여 동기-커밋 모드에 대해 구성되고, 두 개의 보조 복제본이 비동기-커밋 모드에 대해 구성됩니다(강제 수동 장애 조치만 지원함, 일반적으로 *강제 장애 조치 작업*이라고 함).  
   
@@ -69,8 +74,8 @@ ms.lasthandoff: 08/02/2017
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 및 03|04|예|  
 |02|01|01 및 03|04|예|  
-|03||01 및 02|04|아니요|  
-|04|||01, 02 및 03|아니요|  
+|03||01 및 02|04|아니오|  
+|04|||01, 02 및 03|아니오|  
   
  일반적으로 노드 04는 비동기 커밋 복제본으로서 재해 복구 사이트에 배포됩니다. 노드 04에 대한 장애 조치(Failover)를 수행한 후 노드 01, 02, 03은 비동기 커밋 모드로 유지된다는 점에서 두 사이트 간의 긴 네트워크 지연 시간으로 인해 가용성 그룹의 잠재적 성능이 저하되는 것을 방지할 수 있습니다.  
   
@@ -185,4 +190,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

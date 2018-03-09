@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLForeignKeys
-apilocation:
-- sqlsrv32.dll
+apiname: SQLForeignKeys
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLForeignKeys
-helpviewer_keywords:
-- SQLForeignKeys function [ODBC]
+f1_keywords: SQLForeignKeys
+helpviewer_keywords: SQLForeignKeys function [ODBC]
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ba8f395a556d976f2698ce9646db2e830e7a69aa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0d56fd87c4c9612fb520b1a54b9d0c2cab645223
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 함수
 **규칙**  
@@ -125,7 +119,7 @@ SQLRETURN SQLForeignKeys(
 ## <a name="diagnostics"></a>진단  
  때 **SQLForeignKeys** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* sql _HANDLE_STMT 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLForeignKeys** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
@@ -149,7 +143,7 @@ SQLRETURN SQLForeignKeys(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  이 함수에서 반환 되는 정보를 어떻게 사용할 수 있는지에 대 한 정보를 참조 하십시오. [카탈로그 데이터의 사용 하 여](../../../odbc/reference/develop-app/uses-of-catalog-data.md)합니다.  
   
  경우 \* *PKTableName* 테이블 이름이 포함 된 **SQLForeignKeys** 지정된 된 테이블의 기본 키 및 참조 하는 모든 외래 키를 포함 하는 결과 집합을 반환 합니다. 다른 테이블의 외래 키 목록이 지정된 된 테이블의 unique 제약 조건을 가리키는 외래 키를 포함 되지 않습니다.  
@@ -176,9 +170,9 @@ SQLRETURN SQLForeignKeys(
   
  다음 표에서 결과 집합의 열을 나열합니다. 드라이버에 의해 열 14 (설명) 이후의 추가 열을 정의할 수 있습니다. 응용 프로그램 결과 명시적 서 수 위치를 지정 하는 대신 집합의 끝부터 계산 하 여 드라이버 관련 열에 액세스 해야 합니다. 자세한 내용은 참조 [카탈로그 함수에서 반환 된 데이터](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)합니다.  
   
-|열 이름|열 번호|데이터 형식|설명|  
+|열 이름|열 번호|데이터 형식|주석|  
 |-----------------|-------------------|---------------|--------------|  
-|PKTABLE_CAT (ODBC 1.0)|1.|Varchar|기본 키 테이블 카탈로그 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버 카탈로그 일부 테이블을 지원 하지만 지원만, 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 카탈로그를 갖지 않는 이러한 테이블에 대 한 합니다.|  
+|PKTABLE_CAT (ODBC 1.0)|1|Varchar|기본 키 테이블 카탈로그 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버 카탈로그 일부 테이블을 지원 하지만 지원만, 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 카탈로그를 갖지 않는 이러한 테이블에 대 한 합니다.|  
 |PKTABLE_SCHEM (ODBC 1.0)|2|Varchar|기본 키 테이블 스키마 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버가 지 원하는 스키마만, 하지만 일부 테이블에 대 한 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 스키마가 없는 해당 테이블에 대 한 합니다.|  
 |PKTABLE_NAME (ODBC 1.0)|3|NULL이 아닌 Varchar|기본 키 테이블 이름입니다.|  
 |PKCOLUMN_NAME (ODBC 1.0)|4|NULL이 아닌 Varchar|기본 키 열 이름입니다. 드라이버는 이름이 없는 열에 대 한 빈 문자열을 반환 합니다.|  
@@ -212,19 +206,19 @@ SQLRETURN SQLForeignKeys(
   
 |TABLE_NAME|COLUMN_NAME|KEY_SEQ|  
 |-----------------|------------------|--------------|  
-|ORDERS|ORDERID|1.|  
+|ORDERS|ORDERID|1|  
   
  다음으로,이 예에서는 호출 **SQLForeignKeys** ORDERS 테이블의 기본 키를 참조 하는 다른 테이블의 외래 키를 가져올 수 있습니다. 결과 집합에는 행이 하나씩; 있으며 됩니다. 중요 한 열은 다음 표에 표시 됩니다.  
   
 |PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
 |-------------------|--------------------|-------------------|--------------------|--------------|  
-|ORDERS|CUSTID|줄|CUSTID|1.|  
+|ORDERS|CUSTID|줄|CUSTID|1|  
   
  마지막으로,이 예에서는 호출 **SQLForeignKeys** 다른 테이블의 기본 키를 참조 하는 ORDERS 테이블의 외래 키를 가져올 수 있습니다. 결과 집합에는 행이 하나씩; 있으며 됩니다. 중요 한 열은 다음 표에 표시 됩니다.  
   
 |PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
 |-------------------|--------------------|-------------------|--------------------|--------------|  
-|고객|CUSTID|ORDERS|CUSTID|1.|  
+|고객|CUSTID|ORDERS|CUSTID|1|  
   
 ```  
 #define TAB_LEN SQL_MAX_TABLE_NAME_LEN + 1  
@@ -340,4 +334,3 @@ SQLFreeStmt(hstmt, SQL_DROP);
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

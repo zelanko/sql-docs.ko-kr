@@ -1,35 +1,36 @@
 ---
 title: "SQL Server 인스턴스의 컴퓨터 학습 구성 요소를 업그레이드 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: 15
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>SQL Server 인스턴스의 컴퓨터 학습 구성 요소 업그레이드
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는의 과정을 설명 합니다. _바인딩_, 기계 학습 SQL Server에서 사용 되는 구성 요소를 업그레이드 하는 데 사용할 수 있습니다. 바인딩 프로세스는 SQL Server가 아닌 서버를 학습 하는 컴퓨터의 버전에 따라는 업데이트 흐름으로 서버를 잠급니다.
+이 문서에서는의 과정을 설명 합니다. _바인딩_, 기계 학습 SQL Server에서 사용 되는 구성 요소를 업그레이드 하는 데 사용할 수 있습니다. 바인딩 프로세스 서버 기반으로 컴퓨터 학습 서버의 릴리스에서 업데이트 흐름으로, SQL Server를 사용 하는 대신 릴리스를 잠그고 일정을 업데이트 합니다.
 
 > [!IMPORTANT]
-> SQL Server 업데이트의 일부로 업그레이드 확보 하려는 경우이 업그레이드 프로세스를 사용할 필요가 없습니다. 새 서비스 팩 또는 서비스 릴리스를 설치할 때마다 컴퓨터 학습 구성 요소는 항상 자동으로 최신 버전으로 업그레이드 됩니다. SQL Server 서비스 릴리스에서 제공 되어 보다 더 빠른 속도로 구성 요소를 업그레이드 하려는 경우이 프로세스를 사용 합니다.
+> SQL Server 업데이트의 일부로 업그레이드 확보 하려는 경우이 업그레이드 프로세스를 사용할 필요가 없습니다. 새 서비스 팩 또는 서비스 릴리스를 설치할 때마다 컴퓨터 학습 구성 요소는 항상 자동으로 최신 버전으로 업그레이드 됩니다. 만 사용 하 여는 _바인딩_ 서비스 릴리스에서 SQL Server에서 제공 하는 것 보다 더 빠른 속도로 구성 요소를 업그레이드 하려는 경우를 처리 합니다.
 
 언제 든 지 서버를 학습 하는 컴퓨터 일정에 따라 업그레이드를 중지 하려면 수행 해야 하는 경우 _바인딩 해제_ 에 설명 된 대로 인스턴스 [이 섹션](#bkmk_Unbind), 및 학습 서버 컴퓨터를 제거 합니다.
 
@@ -39,22 +40,22 @@ ms.lasthandoff: 10/13/2017
 
 기계 학습 구성 요소를 업그레이드 하는 프로세스 라고 **바인딩**새로운 최신 소프트웨어 수명 주기 정책을 사용 하 여 SQL Server 컴퓨터 학습 구성 요소에 대 한 지원 모델을 변경 하기 때문에, 합니다. 
 
-일반적으로 새 라이선스 모델을 전환 하면 데이터 과학자 R, Python의 최신 버전을 항상 사용할 수 있습니다. 최신 수명 주기 정책 조건에 대 한 자세한 내용은 참조 [Microsoft R Server에 대 한 지원 타임 라인](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support)합니다.
+일반적으로 새로운 서비스 모델로 전환 하면 데이터 과학자 R, Python의 최신 버전을 항상 사용할 수 있습니다. 최신 수명 주기 정책 조건에 대 한 자세한 내용은 참조 [Microsoft R Server에 대 한 지원 타임 라인](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)합니다.
 
 > [!NOTE]
 > 업그레이드는 SQL Server 데이터베이스에 대 한 지원 모델을 변경 하지 하 고 SQL Server의 버전을 변경 하지 않습니다.
 
-인스턴스를 바인딩하는 경우 업그레이드 기계 학습 구성 요소를 포함할 수 있는 몇 가지 작업이 수행 됩니다.
+인스턴스를 바인딩하면 다음과 같은 여러 작업이 수행됩니다.
 
 + 지원 모델 변경 됩니다. SQL Server 서비스 릴리스를 사용 하지 않고 지원 새로운 최신 주기 정책을 기반으로 합니다.
 + 인스턴스와 연결 된 컴퓨터 학습 구성 요소의 새 최신 수명 주기 정책에 따라 최신 버전으로 잠금 단계에서는 각 릴리스마다 자동으로 업그레이드 됩니다. 
-+ 새 R, Python 패키지 추가 될 수 있습니다. 예를 들어 이전 업데이트가 Microsoft R Server에서 추가 새 R 패키지와 같은 [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), 및 [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)합니다.
++ 새 R, Python 패키지 추가 될 수 있습니다. 예를 들어 이전 업데이트가 Microsoft R Server 9.1에 따라 추가 새 R 패키지와 같은 [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), 및 [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)합니다.
 + 새 패키지를 추가하는 경우를 제외하고 더 이상 수동으로 인스턴스를 업데이트할 수 없습니다.
-+ Microsoft에서 제공 하는 미리 학습 된 모델을 추가 하는 옵션을 구성할 수 있습니다.
++ Microsoft에서 제공 하는 미리 학습 된 모델을 설치 하는 옵션을 얻게 됩니다.
 
 ## <a name="bkmk_prereqs"></a>Prerequisites
 
-먼저에 적합 한 업그레이드 인스턴스를 확인 합니다. 설치 프로그램을 실행 하 고 바인딩 옵션을 선택 하는 경우 업그레이드와 호환 되는 인스턴스 목록을 반환 합니다. 
+먼저에 적합 한 업그레이드 인스턴스를 확인 합니다. 설치 프로그램을 실행 하 고 바인딩 옵션을 선택 하는 경우 업그레이드와 호환 되는 인스턴스 목록을 반환 합니다.
 
 지원 되는 업그레이드 및 요구 사항 목록은 다음 표를 참조 하십시오.
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/13/2017
 
 ## <a name="bind-or-upgrade-an-instance"></a>바인딩 또는 인스턴스 업그레이드
 
-Microsoft 컴퓨터 학습 서버에 대 한 Windows 언어 및 SQL Server의 인스턴스에 연결 된 도구를 학습 하는 컴퓨터를 업그레이드 하는 데 사용할 수 있는 도구에 포함 됩니다. 두 가지 버전의 도구: 마법사, 그리고 명령줄 유틸리티입니다.
+컴퓨터 학습 서버에 대 한 Windows 언어 및 SQL Server의 인스턴스에 연결 된 도구를 학습 하는 컴퓨터를 업그레이드 하는 데 사용할 수 있는 도구에 포함 됩니다. 두 가지 버전의 도구: 마법사, 그리고 명령줄 유틸리티입니다.
 
 마법사 또는 명령줄 도구를 실행 하려면 먼저 구성 요소를 학습 하는 컴퓨터에 대 한 독립 실행형 설치 관리자의 최신 버전을 다운로드 해야 합니다.
 
@@ -89,13 +90,13 @@ Microsoft 컴퓨터 학습 서버에 대 한 Windows 언어 및 SQL Server의 �
 
 4. 연속 페이지에서 선택한 Microsoft R Open 또는 Python Anaconda 배포와 같은 오픈 소스 구성 요소에 대 한 추가 라이선스 조건에 동의 하 게 제공 합니다.
 
-5. 에 **얼마 남지** 페이지에서 설치 폴더를 기록 합니다. 기본 폴더는 `~\Program Files\Microsoft\ML Server`합니다. 
+5. 에 **얼마 남지** 페이지에서 설치 폴더를 기록 합니다. 기본 폴더는 `~\Program Files\Microsoft\ML Server`합니다.
 
-    설치 폴더를 변경 하려면 클릭 **고급** 마법사의 첫 페이지로 돌아갑니다. 그러나 이전에 선택한 항목을 반복 해야 합니다. 
+    설치 폴더를 변경 하려면 클릭 **고급** 마법사의 첫 페이지로 돌아갑니다. 그러나 이전에 선택한 항목을 반복 해야 합니다.
 
 6. 오프 라인 구성 요소를 설치 하는 경우 Microsoft R Open, Python 서버 및 Python 열기 등 필요한 컴퓨터 학습 구성 요소 위치에 대 한 라는 메시지가 표시 될 수 있습니다.
-    
-설치 하는 동안 SQL Server에서 사용 하는 모든 Python 또는 R 라이브러리 대체 하 고 실행 패드 최신 구성 요소를 사용 하도록 업데이트 됩니다. 즉, 인스턴스 라이브러리 기본 R_SERVICES 폴더에 이전에 사용한 경우 업그레이드 후 이러한 라이브러리 제거 되 고 사용자가 지정한 위치에서 라이브러리를 사용 하는 실행 패드 서비스에 대 한 속성 변경 됩니다.
+
+설치 과정에서 SQL Server에서 사용 하는 모든 Python 또는 R 라이브러리 대체 하 고 실행 패드 최신 구성 요소를 사용 하도록 업데이트 됩니다. 결과적으로, 인스턴스 라이브러리 기본 R_SERVICES 폴더에 이전에 사용한 경우 업그레이드 후 이러한 라이브러리 제거 되 고 새 위치에는 라이브러리를 사용 하는 실행 패드 서비스에 대 한 속성 변경 됩니다.
 
 ### <a name="bkmk_BindCmd"></a>명령줄을 사용 하 여 업그레이드
 
@@ -219,4 +220,3 @@ Microsoft R Server 9.1.0에 대 한 새 설치 관리자를 실행 하면 SQL Se
 + [R Server의 이전 릴리스에서 기능 공지 사항](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
 + [사용 되지 않는, 지원 되지 않는 추가 되거나 변경 된 기능](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)
-

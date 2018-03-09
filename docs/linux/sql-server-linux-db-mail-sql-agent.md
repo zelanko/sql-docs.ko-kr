@@ -1,40 +1,31 @@
 ---
 title: "DB 메일 및 전자 메일 경고 Linux에서 SQL 에이전트와 | Microsoft Docs"
-description: "이 항목에서는 Linux에서 SQL Server와 함께 DB 메일 및 전자 메일 경고를 사용 하는 방법을 설명합니다"
+description: "이 문서에서는 Linux에서 SQL Server와 함께 DB 메일 및 전자 메일 경고를 사용 하는 방법을 설명합니다"
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.workload: Inactive
+ms.openlocfilehash: 69d1ff539d2e488030f32b9246f1ccf40d92bdd8
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 77eed5cce942dbb91b0b9eb5afbd9ad11403e1d2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB 메일 및 Linux에서 SQL 에이전트와 전자 메일 알림
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 다음 단계에서는 DB 메일을 설정 하 고 SQL Server 에이전트를 사용 하는 방법을 보여 줍니다. (**mssql 서버 에이전트**) linux. 
-
-> [!NOTE]
-> Linux에서 SQL Server와 함께 DB 메일을 사용 하려면 SQL Server 2017 RC1 사용 해야 이상.
-
-## <a name="prerequisites"></a>필수 구성 요소
-
-- SQL Server 2017 RC1 이상
-- SQL Server 에이전트 v14.0.800.90 2 이상 (경고에 대 한 전자 메일을 사용 하려는) 하는 경우
 
 ## <a name="1-enable-db-mail"></a>1. DB 메일을 사용 하도록 설정
 
@@ -138,4 +129,3 @@ GO
 
 ## <a name="next-steps"></a>다음 단계
 SQL Server 에이전트를 사용 하 여 일정을 만들고 작업을 실행 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Linux에서 SQL Server 에이전트 작업 실행](sql-server-linux-run-sql-server-agent-job.md)합니다.
-

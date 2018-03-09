@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLCreateDataSource
-apilocation:
-- sqlsrv32.dll
+apiname: SQLCreateDataSource
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLCreateDataSource
-helpviewer_keywords:
-- SQLCreateDataSource function [ODBC]
+f1_keywords: SQLCreateDataSource
+helpviewer_keywords: SQLCreateDataSource function [ODBC]
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9077489c1380b0c750c9a725dfa50f813a5418da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c4c7b0b4ebecf75f1bcf31b0b1716a7076513488
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource 함수
 **규칙**  
@@ -63,7 +57,7 @@ BOOL SQLCreateDataSource(
 ## <a name="diagnostics"></a>진단  
  때 **SQLCreateDataSource** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_INVALID_HWND|잘못 된 창 핸들|*hwnd* 인수가 잘못 되었거나 NULL입니다.|  
@@ -74,7 +68,7 @@ BOOL SQLCreateDataSource(
 |ODBC_ERROR_CREATE_DSN_FAILED|요청 된 DSN을 만들 수 없습니다.|데이터베이스;에 연결할 수 없습니다. 에 대 한 호출 **SQLDriverConnect** 파일 DSN 성공적으로 연결을 반환 하지 않았습니다.<br /><br /> 파일에 쓸 수 없습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  경우 *hwnd* 매개 변수가 null 이면 **SQLCreateDataSource** FALSE를 반환 합니다. 그렇지 않으면 표시는 **새 데이터 원본 만들기** 다음 그림에 나와 있는 것 처럼를 설정 해야 데이터 소스의 형식을 선택 하기 위한 마법사 페이지와 대화 상자.  
   
  ![새 데이터 소스 만들기 대화 상자: 유형 선택](../../../odbc/reference/syntax/media/ch23a.gif "CH23A")  
@@ -120,4 +114,3 @@ BOOL SQLCreateDataSource(
 |내용|참조 항목|  
 |---------------------------|---------|  
 |데이터 소스 관리|[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|
-

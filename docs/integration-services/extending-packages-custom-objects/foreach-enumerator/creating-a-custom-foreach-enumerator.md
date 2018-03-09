@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], creating
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f2f852ff319554d0b863fd06d790c2e5e9bf2d59
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 23f211384c7215fa7a139425a8bd7e2cf464d019
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>사용자 지정 Foreach 열거자 만들기
   사용자 지정 foreach 열거자를 만드는 단계는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 다른 사용자 지정 개체를 만드는 단계와 비슷합니다.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
 -   필요한 경우 사용자 지정 사용자 인터페이스를 개발합니다. foreach 열거자의 경우 사용자 지정 사용자 인터페이스를 개발하려면 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSForEachEnumeratorUI> 인터페이스를 구현하는 클래스가 필요합니다.  
   
- 사용자 지정 열거자는 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 컨테이너에 의해 호스팅됩니다. 런타임에 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 컨테이너는 사용자 지정 열거자의 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> 메서드를 호출합니다. 구현 하는 개체를 반환 하는 사용자 지정 열거자는 **IEnumerable** 인터페이스와 같은 **ArrayList**합니다. 그런 다음 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>는 컬렉션의 각 요소를 반복하고, 사용자 정의 변수를 통해 현재 요소의 값을 제어 흐름에 제공하고, 컨테이너에서 제어 흐름을 실행합니다.  
+ 사용자 지정 열거자는 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 컨테이너에 의해 호스팅됩니다. 런타임에 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 컨테이너는 사용자 지정 열거자의 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> 메서드를 호출합니다. 사용자 지정 열거자는 **ArrayList**와 같이 **IEnumerable** 인터페이스를 구현하는 개체를 반환합니다. 그런 다음 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>는 컬렉션의 각 요소를 반복하고, 사용자 정의 변수를 통해 현재 요소의 값을 제어 흐름에 제공하고, 컨테이너에서 제어 흐름을 실행합니다.  
   
 ## <a name="getting-started-with-a-custom-foreach-enumerator"></a>사용자 지정 ForEach 열거자 시작  
   
@@ -55,9 +53,9 @@ ms.lasthandoff: 08/03/2017
  강력한 이름 키 파일을 사용하여 빌드 시 생성될 어셈블리에 서명하도록 두 프로젝트를 구성합니다.  
   
 ### <a name="applying-the-dtsforeachenumerator-attribute"></a>DtsForEachEnumerator 특성 적용  
- 앞에서 만든 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 특성을 적용하여 해당 클래스를 foreach 열거자로 식별합니다. 이 특성은 foreach 열거자의 이름 및 설명 같은 디자인 타임 정보를 제공합니다. **이름** 속성에 사용 가능한 열거자의 드롭다운 목록에서 표시는 **컬렉션** 탭은 **Foreach 루프 편집기** 대화 상자.  
+ 앞에서 만든 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 특성을 적용하여 해당 클래스를 foreach 열거자로 식별합니다. 이 특성은 foreach 열거자의 이름 및 설명 같은 디자인 타임 정보를 제공합니다. **Name** 속성은 **Foreach 루프 편집기** 대화 상자의 **컬렉션** 탭에서 사용 가능한 열거자의 드롭다운 목록에 나타납니다.  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 속성을 사용하여 foreach 열거자를 사용자 지정 사용자 인터페이스에 연결합니다. 사용이 속성에 필요한 공개 키 토큰을 가져오려면 **sn.exe-t** 사용자 인터페이스 어셈블리 서명에 사용할 키 쌍 (.snk) 파일에서 공개 키 토큰을 표시 합니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 속성을 사용하여 foreach 열거자를 사용자 지정 사용자 인터페이스에 연결합니다. 이 속성에 필요한 공개 키 토큰을 가져오려면 **sn.exe -t**를 사용하여 사용자 인터페이스 어셈블리 서명에 사용할 키 쌍(.snk) 파일의 공개 키 토큰을 표시할 수 있습니다.  
   
 ```vb  
 Imports System  
@@ -85,11 +83,10 @@ namespace Microsoft.Samples.SqlServer.Dts
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-enumerator"></a>사용자 지정 열거자 빌드, 배포 및 디버깅  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 사용자 지정 foreach 열거자의 빌드, 배포 및 디버깅 단계는 다른 형식의 사용자 지정 개체에 대해 필요한 단계와 매우 비슷합니다. 자세한 내용은 참조 [건물, Deploying, and Debugging Custom Objects](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)합니다.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 사용자 지정 foreach 열거자의 빌드, 배포 및 디버깅 단계는 다른 형식의 사용자 지정 개체에 대해 필요한 단계와 매우 비슷합니다. 자세한 내용은 [사용자 지정 개체 빌드, 배포 및 디버그](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 Foreach 열거자 코딩](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)   
- [사용자 지정 ForEach 열거자에 대 한 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [사용자 지정 ForEach 열거자의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   
-

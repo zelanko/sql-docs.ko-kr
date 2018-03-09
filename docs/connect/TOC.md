@@ -1,6 +1,6 @@
 # [SQL Server와 상호 작용하는 프로그래밍](homepage-sql-connection-programming.md)
 # [SQL Server 드라이버](sql-connection-libraries.md)
-# [새로 추가되거나 최근에 업데이트된 문서](new-updated-connect.md)
+# [새로운 또는 업데이트 된 문서](new-updated-connect.md)
 
 # [ADO.NET +](ado-net/microsoft-ado-net-for-sql-server.md)
 # [JDBC +](jdbc/microsoft-jdbc-driver-for-sql-server.md)

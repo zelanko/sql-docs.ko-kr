@@ -1,31 +1,36 @@
 ---
 title: "컴퓨터 학습 기능에 SQL Server의 버전 차이 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/22/2017
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b33a3e2-04d3-4bad-9335-9568ae09db0b
-caps.latest.revision: 12
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: f4fd73dd213b004916fb99dcb95146221116da8e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9b520b7fc7e97498f4b46a43ad991558025123a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
-
 # <a name="differences-in-machine-learning-features-between-editions-of-sql-server"></a>SQL Server의 버전 간에 시스템 학습 기능 차이점
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
- 기계 학습에 대 한 지원은 다음 버전의 SQL Server 2016 및 SQL Server 2017에서 제공 됩니다.
+ 기계 학습에 대 한 지원은 SQL Server 2016 및 SQL Server 2017에서 제공 됩니다. 이 문서 기능을 지 원하는 버전을 나열 하 고, 특정 버전에 적용 되는 추가 제한 사항에 설명, 특정 버전에만 사용할 수 있는 기능을 나열 합니다.
+
+ > [!NOTE]
+ > SQL Server 기계 학습을 다루지 않습니다 일반적으로 [해결해줍니다](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) 컴퓨터 학습 서버 또는 Microsoft R Server에 포함 된 기능을 합니다.
+ > 
+ > 이러한 기능이 필요 하면 예측 모델의 웹 서비스로 배포를 지원 하도록 컴퓨터 학습 서버 또는 Microsoft R Server 별도로 설치할 수 있습니다. 
 
 ## <a name="summary-of-differences"></a>차이점 요약
 
@@ -35,11 +40,11 @@ ms.lasthandoff: 09/01/2017
      
      SQL Server 2017 Microsoft 컴퓨터 학습 Server (독립 실행형)를 포함합니다. SQL Server 2016 Microsoft R Server (독립 실행형)를 포함합니다. 이 기능은 기계 학습의 SQL Server 계산 컨텍스트 사용 하 여 필요 없는의 화를 지원 합니다.
 
-     및 스트리밍을 통해 최적화 된 성능 및 확장성을 제공 하는 Enterprise Edition에서 이러한 기능에 제한은 없습니다. 또한이 버전 스트리밍 및 병렬 실행에 대 한 플랫폼 지원의 사용을 최대화합니다.
+     및 스트리밍을 통해 최적화 된 성능 및 확장성을 제공 하는 Enterprise Edition에서 이러한 기능에 제한은 없습니다. 또한이 버전 스트리밍 및 병렬 실행에 대 한 플랫폼 지원의 사용을 최대화합니다. 이 즉, Standard Edition에서는 달리 입력 데이터는 메모리에 비해 하지 않아도 되지만 스트리밍할 수 있습니다.
      
      SQL Server를 사용 하 여 데이터베이스에서 분석 서버 리소스 사용량을 사용자 지정 하려면 외부 스크립트의 리소스 관리를 지원 합니다.
      
-     최신 버전의 Microsoft R Server 배포를 안전 하 고 신속 하 게 지 원하는 해결해줍니다 엔진의 향상된 된 버전 및 R 솔루션을 공유할 포함 됩니다. 자세한 내용은 참조 [mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)합니다.
+     최신 버전의 Microsoft R Server 및 학습 서버 컴퓨터를 지 원하는 안전 하 고 신속한 배포를 해결해줍니다 엔진의 향상된 된 버전 및 R 솔루션을 공유할 포함 됩니다. 자세한 내용은 참조 [분석 컴퓨터 학습 서버와 운영 화](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)합니다.
 
 -   **Developer Edition**
 
@@ -47,20 +52,19 @@ ms.lasthandoff: 09/01/2017
   
 -   **Standard Edition**
 
-     가 분석에서 데이터베이스의 모든 기능에 포함 된 Enterprise Edition을 리소스 관리를 제외 하 고 합니다. 성능 및 확장성은 제한도: 처리할 수 있는 데이터 서버 메모리 크기에 맞아야 하 고 사용 하는 경우에 처리가 단일 계산 스레드로 제한 됩니다는 **RevoScaleR** 함수입니다.
+     가 분석에서 데이터베이스의 모든 기능에 포함 된 Enterprise Edition을 리소스 관리를 제외 하 고 합니다. 성능 및 확장성 제한 사항도: 처리할 수 있는 데이터 서버 메모리 크기에 맞아야 하 고 사용 하는 경우에 처리가 단일 계산 스레드로 제한 됩니다는 **RevoScaleR** 함수입니다.
   
 -   **Express 및 웹 버전**
   
-     만 Express Edition with Advanced Services 기능을 학습 하는 컴퓨터 포함 되어 있습니다. 성능 제한은 Standard Edition과 비슷합니다. Web edition; 기계 학습 모델을 만드는 등의 작업에 적합 하지 않습니다. 그러나 다른 곳에서 학습 된 모델을 사용 하 여 점수 매기기를 수행 하는 예측 함수를 사용할 수 있습니다.
-
--   **Azure SQL Database***
-  
-     R 스크립팅 Python 등의 시스템 학습 기능은 현재 Azure SQL 데이터베이스에서 지원 되지 않습니다.
+     만 Express Edition with Advanced Services 기능을 학습 하는 컴퓨터 포함 되어 있습니다. 성능 제한은 Standard Edition과 비슷합니다. 
      
-     자세한 내용과 공지를 사용할 수 있는이 기능은 시점에 대 한 SQL Server 블로그를 참조 하세요: [SQL Server 2017에서 Python: 데이터베이스에서 기계 학습 향상](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
+     Web Edition 기계 학습 모델을 만드는 등의 작업에 대 한 적합 하지 않습니다. 그러나 다른 곳에서 학습 된 모델을 사용 하 여 점수 매기기를 수행 하는 예측 함수를 사용할 수 있습니다.
 
+-   **Azure SQL Database**
+  
+     초기 테스트 릴리스 후 R 서비스는 현재 **하지** 이후 개발 보류 중인 Azure SQL 데이터베이스에서 사용할 수 있습니다. 
 
-### <a name="languages-supported-in-all-editions"></a>모든 버전에서 지원 되는 언어
+### <a name="external-script-languages-supported"></a>지원 되는 외부 스크립트 언어
 
 모든 버전에 대 한 다음 컴퓨터 학습 언어 지원 됩니다.
 
@@ -85,15 +89,19 @@ Microsoft R Client는 모든 버전에서 사용할 수 있습니다.
 
 ## <a name="machine-learning-in-developer-edition"></a>기계 학습 Developer edition
 
-Developer Edition은 Enterprise Edition과 동등한 성능을 제공합니다. 그러나 프로덕션 환경에서는 Developer Edition을 사용할 수 없습니다.
+Developer Edition Enterprise Edition의 것과 동일한 성능을 제공합니다.
+
+Developer Edition을 사용 하 여 프로덕션 환경에 대해 지원 되지 않습니다.
 
 ## <a name="machine-learning-in-standard-edition"></a>기계 학습에서 Standard Edition
 
 동일한 하드웨어 구성에서는 Standard Edition이 표준 R 패키지에 비해 성능이 더 높습니다.
 
-Standard Edition에서 리소스 관리자를 지원 하지 않습니다. 리소스 관리를 사용 하 여 모델 학습 및 점수 매기기 등의 다양 한 작업을 지원 하기 위해 서버 리소스를 사용자 지정 하는 가장 좋은 방법은 됩니다.
+Standard Edition에서 리소스 관리자를 지원 하지 않습니다. Standard Edition에는 또한 제한 된 성능 및 확장성 Enterprise 및 Developer edition에 비해 제공합니다.
 
-또한 Standard Edition은 Enterprise 및 Developer Edition에 비해 제한된 성능 및 확장성을 제공합니다. 모든는 **RevoScaleR** 함수 및 패키지 Standard Edition에 포함 되어 있지만 시작 하 고 R 스크립트를 관리 하는 서비스를 사용할 수 있습니다 하는 프로세스의 수에 제한 됩니다. 또한 스크립트에서 처리하는 데이터가 메모리에 맞아야 합니다.  사용 하는 솔루션에도 동일한 제한이 적용 **revoscalepy**합니다.
+모든는 **RevoScaleR** 함수 및 패키지 Standard Edition에 포함 되어 있지만 시작 하 고 R 스크립트를 관리 하는 서비스를 사용할 수 있습니다 하는 프로세스의 수에 제한 됩니다. 또한 스크립트에서 처리하는 데이터가 메모리에 맞아야 합니다.
+
+사용 하는 솔루션에도 동일한 제한이 적용 **revoscalepy**합니다.
 
 ## <a name="machine-learning-in-express-edition-with-advanced-services"></a>Express Edition with Advanced Services에서에서 학습 하는 컴퓨터
 
@@ -101,7 +109,7 @@ Express Edition에는 Standard Edition과 동일한 제한 사항이 적용됩�
 
 ## <a name="machine-learning-in-web-edition"></a>기계 학습 Web edition
 
-웹 버전의 R, Python 스크립트 실행을 지원 하지 않습니다. 그러나 수행 하는 예측 함수를 사용할 수 있습니다 [기본 점수 매기기](../sql-native-scoring.md) 다른 R 서버 또는 SQL Server 인스턴스에서 학습 되 고 그런 다음 필요한 이진 형식으로 저장 된 모델에 있습니다.
+웹 버전의 R, Python 스크립트 실행을 지원 하지 않습니다. 사용할 수 있습니다는 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 수행 하는 함수 [기본 점수 매기기](../sql-native-scoring.md) 다른 R 서버 또는 SQL Server 인스턴스에서 학습 되 고 그런 다음 필요한 이진 형식으로 저장 된 모델에 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -112,7 +120,6 @@ Express Edition에는 Standard Edition과 동일한 제한 사항이 적용됩�
 
 SQL Server의 다른 기능에 대 한 자세한 내용은 다음을 참조 하세요.
 
-+ [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
++ [버전 및 SQL Server 2016 의 지원 되는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md) 
 
-큰 데이터 집합에 대 한 솔루션을 최적화 하는 방법 및 Microsoft R 기능에 대 한 자세한 내용은 참조는 [Microsoft R Server](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips) 설명서입니다.
-
+큰 데이터 집합에 대 한 솔루션을 최적화 하는 방법을 대 한 자세한 내용은 참조 하십시오. [R에서 큰 데이터로 컴퓨팅에 대 한 팁](https://docs.microsoft.com/machine-learning-server/r/tutorial-large-data-tips) 설명서입니다.

@@ -3,7 +3,7 @@ title: "ADO 코드 예제 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - ADO code examples
 - ADO, code examples
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 1e25cca01a4a43a674e486c223203405fec96f16
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c954269a6a79059e5c1bc24313c68d0b8b420243
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-code-examples"></a>ADO 코드 예제
 다음 코드 예제를 사용 하 여 ADO 개체, 메서드, 속성 및 이벤트를 사용 하는 방법에 알아봅니다.  
@@ -41,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 -   [Visual C++의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)  
   
 -   [Jscript에서 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)
-

@@ -3,7 +3,7 @@ title: "레코드 집합의 경계 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 96473d512ed586ebdb155e3422f6559294c2616d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="boundaries-of-a-recordset"></a>레코드 집합의 경계
 **레코드 집합** 지원는 **BOF** 및 **EOF** 속성을 데이터 집합의 시작과 끝을 각각 설명 합니다. 생각할 수 있으며 **BOF** 및 **EOF** 의 시작과 끝에 배치 됩니다 "팬텀" 레코드로 **레코드 집합**합니다. 계산 **BOF** 및 **EOF**, 샘플 **레코드 집합** 는 이제 다음과 같이 표시 됩니다.  
@@ -78,4 +77,3 @@ else
  이 체계 커서의 모든 형식에 사용할 수 있으며 기본 공급자와 무관 합니다. 비어 있는지를 확인 하려는 경우는 **레코드 집합** 확인 하 여 개체의 **RecordCount** 속성 값은 영 (0) 여부, 적절 한 커서 및 공급자를 사용 하는 조치를 수행 해야 하는 결과에서 레코드의 수를 반환 하도록 지원 합니다.  
   
  마지막 남은 레코드를 삭제 하는 경우는 **레코드 집합** 개체 커서는 결정 되지 않은 상태로 남아 있습니다. **BOF** 및 **EOF** 속성 유지 **False** 공급자에 따라 현재 레코드의 위치를 변경 하기 전 까지는 합니다. 자세한 내용은 참조 [Delete 메서드를 사용 하 여 삭제 레코드](../../../ado/guide/data/deleting-records-using-the-delete-method.md)합니다.
-

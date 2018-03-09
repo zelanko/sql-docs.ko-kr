@@ -2,9 +2,12 @@
 title: "매개 변수가 있는 행 필터 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,22 +23,22 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: "69"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cc71572d7cc5b68293a288af4715634b615cb39
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ae3c32d0636b37afb15005eb823629f7dfd5194e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>매개 변수가 있는 필터 - 매개 변수가 있는 행 필터
-  매개 변수가 있는 행 필터를 사용하면 여러 게시를 만들지 않고도 데이터의 여러 파티션을 서로 다른 구독자로 보낼 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 매개 변수가 있는 행 필터를 동적 필터라고 불렀습니다. 파티션은 테이블에 있는 행의 하위 집합입니다. 게시된 테이블의 각 행은 매개 변수가 있는 필터를 만들 때 선택한 설정에 따라 하나의 파티션에만 속하거나(겹치지 않는 파티션 생성) 두 개 이상의 파티션에 속할 수 있습니다(겹치는 파티션 생성).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 매개 변수가 있는 행 필터를 사용하면 여러 게시를 만들지 않고도 데이터의 여러 파티션을 서로 다른 구독자로 보낼 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 매개 변수가 있는 행 필터를 동적 필터라고 불렀습니다. 파티션은 테이블에 있는 행의 하위 집합입니다. 게시된 테이블의 각 행은 매개 변수가 있는 필터를 만들 때 선택한 설정에 따라 하나의 파티션에만 속하거나(겹치지 않는 파티션 생성) 두 개 이상의 파티션에 속할 수 있습니다(겹치는 파티션 생성).  
   
  겹치지 않는 파티션을 구독 간에 공유하게 하거나 지정된 파티션을 한 구독에서만 받도록 제한할 수 있습니다. 파티션의 동작을 제어하는 설정은 나중에 이 항목의 "적절한 필터링 옵션 사용"에서 설명합니다. 이 설정을 사용하면 매개 변수가 있는 필터링을 응용 프로그램 및 성능 요구 사항에 알맞게 조정할 수 있습니다. 일반적으로 겹치는 파티션은 유연성이 뛰어나고, 단일 구독으로 복제되는 겹치지 않는 파티션은 성능이 뛰어납니다.  
   
- 매개 변수가 있는 필터는 단일 테이블에서 사용되며 일반적으로 조인 필터와 함께 사용하여 관련 테이블로 필터링을 확장합니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)을 참조하세요.  
+ 매개 변수가 있는 필터는 단일 테이블에서 사용되며 일반적으로 조인 필터와 함께 사용하여 관련 테이블로 필터링을 확장합니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)를 참조하세요.  
   
  매개 변수가 있는 행 필터를 정의하거나 수정하려면 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하십시오.  
   
@@ -127,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>'partition options' 설정  
  아티클을 만들 때 필터링된 테이블의 데이터를 구독자에서 공유하는 방식에 따라 **partition options** 속성의 값을 지정합니다. 속성은 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)및 **Article Properties** 대화 상자를 사용하여 네 값 중 하나로 설정할 수 있습니다. 새 게시 마법사와 **게시 속성** 대화 상자의 **필터 추가** 또는 **필터 편집** 대화 상자를 사용하여 이 속성을 두 개의 값 중 하나로 설정할 수 있습니다. 다음 표에서는 사용할 수 있는 값을 요약합니다.  
   
-|설명|필터 추가 및 필터 편집에 있는 값|아티클 속성에 있는 값|저장 프로시저에 있는 값|  
+|Description|필터 추가 및 필터 편집에 있는 값|아티클 속성에 있는 값|저장 프로시저에 있는 값|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |파티션에 있는 데이터는 겹치며 구독자는 매개 변수가 있는 필터에서 참조된 열은 업데이트할 수 있습니다.|**이 테이블의 행을 여러 구독으로 이동**|**겹침**|**0**|  
 |파티션에 있는 데이터는 겹치며 구독자는 매개 변수가 있는 필터에서 참조된 열은 업데이트할 수 없습니다.|N/A*|**겹침, 파티션 외부 데이터 변경 내용 허용 안 함**|**1**|  
@@ -181,13 +184,13 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   조인 필터 계층에서 겹치는 파티션이 있는 아티클은 겹치지 않는 파티션이 있는 아티클 위에 표시될 수 없습니다. 즉 자식 아티클이 겹치지 않는 파티션을 사용하면 부모 아티클도 겹치지 않는 파티션을 사용해야 합니다. 조인 필터에 대한 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)를 참조하십시오.  
   
--   겹치지 않는 파티션이 자식인 조인 필터에서는 **join unique key** 속성을 1로 설정해야 합니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)을 참조하세요.  
+-   겹치지 않는 파티션이 자식인 조인 필터에서는 **join unique key** 속성을 1로 설정해야 합니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)를 참조하세요.  
   
 -   아티클에는 매개 변수가 있는 필터 또는 조인 필터가 하나만 있어야 합니다. 매개 변수가 있는 필터가 있으면서 조인 필터에서 부모일 수 있습니다. 매개 변수가 있는 필터가 있으면서 조인 필터에서 자식일 수는 없습니다. 조인 필터가 두 개 이상일 수도 없습니다.  
   
 -   게시자의 두 테이블에 조인 필터 관계가 있고 자식 테이블에는 부모 테이블에 없는 행이 있을 경우 부모 테이블에 없는 행을 삽입해도 관련된 행이 구독자로 다운로드되지 않습니다(겹치는 파티션의 경우 다운로드됨). 예를 들어 **SalesOrderHeader** 테이블에는 없는 행이 **SalesOrderDetail** 테이블에 있고 이 행을 **SalesOrderHeader**에 삽입하면 해당 행은 구독자로 다운로드되지만 **SalesOrderDetail** 의 행은 다운로드되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [시간 기반 행 필터에 대한 최상의 구현 방법](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
  [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)   
  [병합 복제의 게시된 데이터 필터링](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

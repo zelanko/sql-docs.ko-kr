@@ -3,7 +3,7 @@ title: "Visual c + + 확장 헤더 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bd4add0612acdf4d55dc8ba17d0ba13b9c2f804d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3d9065ef0ee22ce415fa764a8572ec4effdb3c61
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions-header"></a>Visual c + + 확장 헤더
 다음 헤더 **icrsint.h**, 클라이언트가에서 필드를 검색 하도록 허용 하는 인터페이스에 자세히 설명 된 **레코드 집합** 에서 파생 된 클래스에 정의 된 변수로 **CADORecordBinding**. 에 액세스 하려면 각 필드에 대 한 ADO 바인딩 매크로 지정 해야 합니다.  
@@ -218,4 +217,3 @@ public:
 ## <a name="see-also"></a>관련 항목:  
  [Visual c + + 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Visual C++ 확장 사용](../../../ado/guide/appendixes/using-visual-c-extensions.md)
-

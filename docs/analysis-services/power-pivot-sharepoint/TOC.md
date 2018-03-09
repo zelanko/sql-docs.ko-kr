@@ -1,4 +1,4 @@
-# [개요](power-pivot-for-sharepoint-ssas.md)  
+# [SharePoint용 PowerPivot](power-pivot-for-sharepoint-ssas.md)  
 # [중앙 관리에서 Power Pivot 서버 관리 및 구성](power-pivot-server-administration-and-configuration-in-central-administration.md)  
 ## [SharePoint에 Power Pivot 솔루션 배포](deploy-power-pivot-solutions-to-sharepoint.md)  
 ## [Power Pivot 서비스 응용 프로그램 만들기 및 구성](create-and-configure-power-pivot-service-application-in-ca.md)  

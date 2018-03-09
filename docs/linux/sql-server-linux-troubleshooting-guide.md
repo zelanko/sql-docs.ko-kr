@@ -3,26 +3,34 @@ title: "Linux에서 SQL Server 문제 해결 | Microsoft Docs"
 description: "SQL Server 2017 Linux에서 사용 하기 위한 문제 해결 팁을 제공 합니다."
 author: annashres
 ms.author: anshrest
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
+ms.workload: On Demand
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 Docker 컨테이너에서 또는 Linux에서 실행 중인 Microsoft SQL Server 문제를 해결 하는 방법을 설명 합니다. Linux에서 SQL Server 문제를 해결 해야 지원 되는 기능 및의 알려진된 제한 사항을 검토 하 고 [Linux 릴리스 정보에서 SQL Server](sql-server-linux-release-notes.md)합니다.
+이 문서에서는 Docker 컨테이너에서 또는 Linux에서 실행 중인 Microsoft SQL Server 문제를 해결 하는 방법을 설명 합니다. Linux에서 SQL Server의 문제를 해결할 때의 알려진된 제한은 지원 되는 기능을 검토 해야는 [Linux 릴리스 정보에서 SQL Server](sql-server-linux-release-notes.md)합니다.
 
-## <a id="connection"></a>연결 오류 문제 해결
+> [!TIP]
+> 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](sql-server-linux-faq.md)합니다.
+
+## <a id="connection"></a> 연결 오류 문제 해결
 Linux SQL Server에 연결 하는 데 문제가 있는 경우 확인할 몇 가지 있습니다. 
 
 - 서버 이름 또는 IP 주소는 클라이언트 컴퓨터에서 연결할 수 있는지 확인 합니다.
@@ -46,7 +54,7 @@ Linux SQL Server에 연결 하는 데 문제가 있는 경우 확인할 몇 가�
 
 - 사용자 이름 및 암호 포함 되지 않도록 입력 오류 또는 추가 공백이 나 잘못 된 대/소문자를 확인 합니다.
 
-- 다음과 같은 서버 이름으로 프로토콜 및 포트 번호를 명시적으로 설정 하려고: **tcp:servername, 1433**합니다.
+- 다음 예제와 같은 서버 이름으로 프로토콜 및 포트 번호를 명시적으로 설정 하려고: **tcp:servername, 1433**합니다.
 
 - 연결 오류 및 시간 제한에도 네트워크 연결 문제가 발생할 수 있습니다. 연결 정보 및 네트워크 연결을 확인 한 후 연결을 다시 시도 하십시오.
 
@@ -56,7 +64,7 @@ Linux SQL Server에 연결 하는 데 문제가 있는 경우 확인할 몇 가�
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Red Hat Enterprise Linux (RHEL) 및 Ubuntu mssql 서버 서비스를 관리 합니다. 
 
-이 명령을 사용 하는 SQL Server 서비스의 상태의 상태를 확인 합니다.
+이 명령을 사용 하는 SQL Server 서비스의 상태를 확인 합니다.
 
    ```bash
    sudo systemctl status mssql-server
@@ -72,7 +80,7 @@ Linux SQL Server에 연결 하는 데 문제가 있는 경우 확인할 몇 가�
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Mssql Docker 컨테이너의 실행을 관리
 
-(ID는 "컨테이너 ID" 열 수는) 다음 명령을 실행 하 여 만든된 최신 SQL Server Docker 컨테이너의 상태 및 컨테이너 ID를 가져올 수 있습니다.
+다음 명령을 실행 하 여 만든된 최신 SQL Server Docker 컨테이너의 상태 및 컨테이너 ID를 가져올 수 있습니다 (아래에서 ID가는 **컨테이너 ID** 열):
 
    ```bash
    sudo docker ps -l
@@ -120,12 +128,43 @@ SQL 덤프에 대 한
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
+   
+## <a name="start-sql-server-in-minimal-configuration-or-in-single-user-mode"></a>최소 구성에서 또는 단일 사용자 모드로 SQL Server 시작
+
+### <a name="start-sql-server-in-minimal-configuration-mode"></a>최소 구성 모드로 SQL Server를 시작 합니다.
+예를 들어 오버 커밋 메모리 같은 구성 값의 설정 때문에 서버를 시작할 수 없을 경우에 유용합니다.
+  
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -f
+   ```
+
+### <a name="start-sql-server-in-single-user-mode"></a>단일 사용자 모드로 SQL Server를 시작 합니다.
+특정 상황에서는 시작 옵션-m을 사용 하 여 단일 사용자 모드에서 SQL Server의 인스턴스를 시작할 수 있습니다. 예를 들어 서버 구성 옵션을 변경하거나 손상된 master 데이터베이스 또는 다른 시스템 데이터베이스를 복구하려고 할 수도 있습니다. 예를 들어 서버 구성 옵션을 변경 하거나 손상된 된 master 데이터베이스 또는 다른 시스템 데이터베이스를 복구 하 경우가   
+
+단일 사용자 모드로 SQL Server를 시작 합니다.
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m
+   ```
+
+SQLCMD 통해 단일 사용자 모드로 SQL Server를 시작 합니다.
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
+   ```
+  
+> [!WARNING]  
+>  "mssql" 사용자와 함께 Linux에서 SQL Server를 시작하여 향후 시작 문제를 방지합니다. "sudo -u mssql /opt/mssql/bin/sqlservr [시작 옵션]" 예제 
+
+다른 사용자와 실수로 SQL Server를 시작한 경우 다시 systemd와 SQL Server를 시작 하기 전에 'mssql' 사용자에 게 SQL Server 데이터베이스 파일의 소유권을 변경 해야 합니다. 예를 들어 'mssql' 사용자에 게 /var/opt/mssql 아래에 있는 모든 데이터베이스 파일의 소유권을 변경 하려면 다음 명령을 실행합니다
+
+   ```bash
+   chown -R mssql:mssql /var/opt/mssql/
+   ```
 
 ## <a name="common-issues"></a>일반적인 문제
 
 1. 원격 SQL Server 인스턴스에 연결할 수 없습니다.
 
-   항목의 문제 해결 섹션을 참조 [Linux에서 SQL Server에 연결](#connection)합니다.
+   문서의 문제 해결 섹션을 참조 [Linux에서 SQL Server에 연결](#connection)합니다.
 
 2. 오류: 호스트 이름이 15 자 여야 합니다 또는 작습니다.
 
@@ -133,10 +172,10 @@ SQL 덤프에 대 한
 
 3. 시스템 관리 (SA) 암호 다시 설정 합니다.
 
-   시스템 관리자 (SA) 암호를 잊어버린 또는 다른 이유로 다시 설정 해야 할 경우에 다음이 단계를 수행 하십시오.
+   시스템 관리자 (SA) 암호를 잊어버린 하거나 일부 다른 이유로 다시 설정 해야 할 경우 다음이 단계를 수행 합니다.
 
    > [!NOTE]
-   > 다음 단계에 따라 SQL Server 서비스를 일시적으로 중지 됩니다.
+   > 다음 단계는 SQL Server 서비스를 일시적으로 중지합니다.
 
    호스트 터미널을 로그인 하 고 다음 명령을 실행 한 다음 지시에 따라 SA 암호를 다시 설정:
 
@@ -147,7 +186,7 @@ SQL 덤프에 대 한
 
 4. 암호에 특수 문자를 사용 합니다.
 
-   SQL Server 로그인 암호의 일부 문자를 사용 하는 경우 Linux 터미널에 사용 하는 경우 이스케이프 해야 합니다. $ 이스케이프 해야 합니다는 백슬래시 문자를 사용 하 여 언제 든 지 사용 터미널 명령/셸 스크립트에서:
+   SQL Server 로그인 암호의 일부 문자를 사용 하는 경우 Linux 터미널에 사용 하는 경우 이스케이프 해야 합니다. $ 붙여 이스케이프 처리 해야 백슬래시 문자를 사용 하 여 언제 든 지 사용 하는 것에 터미널 명령/셸 스크립트:
 
    작동 하지 않습니다.
 
@@ -164,12 +203,4 @@ SQL 덤프에 대 한
    리소스: [특수 문자](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>지원
-
-커뮤니티를 통해 사용 가능 하 고 엔지니어링 팀에서 모니터링 되는 것이 지원은합니다. 특정 질문에 대 한 다음 리소스를 사용 합니다.
-
-- [DBA 스택 Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): 데이터베이스 관리 질문 하기
-- [스택 오버플로](http://stackoverflow.com/questions/tagged/sql-server): 개발 질문 하기
-- [MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): 기술 관련 질문
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): 요청 기능 및 버그를 보고 합니다.
-- [Reddit](https://www.reddit.com/r/SQLServer/): SQL Server에 설명
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

@@ -3,8 +3,11 @@ title: "시퀀스 식 (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,22 +19,21 @@ helpviewer_keywords:
 - expressions [XQuery], sequence
 - filtering sequences [XQuery]
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 50ed3ac28bad010247c8d117c950bb898305807a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 99e7d41d829f9ef651b51306fc34754ef2e161c9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sequence-expressions-xquery"></a>시퀀스 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 항목의 시퀀스를 생성, 필터링 및 조합하는 데 사용되는 XQuery 연산자를 지원합니다. 항목은 원자 값이거나 노드일 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 생성, 필터링 및 항목의 시퀀스를 결합 하는 데 사용 되는 XQuery 연산자를 지원 합니다. 항목은 원자 값이거나 노드일 수 있습니다.  
   
 ## <a name="constructing-sequences"></a>시퀀스 생성  
  쉼표 연산자를 사용하여 항목을 단일 시퀀스로 연결하는 시퀀스를 생성할 수 있습니다.  
@@ -251,4 +253,3 @@ SELECT @x.query('
  [XQuery 식](../xquery/xquery-expressions.md)  
   
   
-

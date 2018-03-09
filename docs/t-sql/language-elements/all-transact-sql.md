@@ -24,17 +24,16 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fd1b250a30b83a3b014384aafee6c40ff4f1a5a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 142fbd5b352a73e382f89a61f60fba6373902172
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="all-transact-sql"></a>ALL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  { = | <> | != | > | >= | !> | < | <= | !< }  
  비교 연산자입니다.  
   
- *하위 쿼리*  
+ *subquery*  
  한 열의 결과 집합을 반환하는 하위 쿼리입니다. 반환 된 열의 데이터 형식을의 데이터 형식으로 동일한 데이터 형식 이어야 합니다. *scalar_expression*합니다.  
   
  하위 쿼리는 제한된 SELECT 문이며 ORDER BY 절 및 INTO 키워드는 허용되지 않습니다.  
@@ -66,7 +65,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- 지정 된 비교값이 true 일 때 TRUE를 반환 합니다. 모든 쌍에 대 한 (*scalar_expression***,***x)*때 *x* 에서 값은 단일 열 집합입니다. 그렇지 않으면 FALSE를 반환합니다.  
+ 지정 된 비교값이 true 일 때 TRUE를 반환 합니다. 모든 쌍에 대 한 (*scalar_expression***,***x)*때 *x* 단일 열 집합의 값 이며 그렇지 않으면 FALSE를 반환 합니다.  
   
 ## <a name="remarks"></a>주의  
  필요한 모든는 *scalar_expression* 하위 쿼리에서 반환 되는 모든 값을 정확 하 게 비교 합니다. 예를 들어 하위 쿼리에서 값 2와 3을 반환 하는 경우, *scalar_expression* < = ALL (하위 쿼리)에 대해 TRUE로 평가 된 *scalar_expression* 2입니다. 하위 쿼리에서 값 2와 3을 반환 하는 경우 *scalar_expression* = ALL (하위 쿼리)은 일부 값 (값 3)는 하위 쿼리 식의 조건을 만족 하지 않으므로 FALSE로 계산 됩니다.  
@@ -127,4 +126,3 @@ EXECUTE DaysToBuild 49080, 1 ;
  [&#40; Transact SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "4 단계: 세부 정보 텍스트 상자 채우기 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -13,17 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 78f0c3e899400e1bf56a9b00ce1521a23b638189
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 512ad22b6529adcf065cacb219d1f0acc025c306
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-4-populate-the-details-text-box"></a>4 단계: 세부 정보 텍스트 상자 채우기
 정보 텍스트 상자를 채우려면 라는 새 서브루틴을 만들 **recFields** 하 고 다음 코드를 삽입 합니다.  
@@ -57,4 +56,3 @@ End Sub
 ## <a name="see-also"></a>관련 항목:  
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   
  [3단계: 필드 목록 상자 채우기](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
-

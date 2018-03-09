@@ -1,5 +1,5 @@
 # [개요](data-mining-extensions-dmx-reference.md)  
-# [새로 추가되거나 최근에 업데이트된 문서](new-updated-dmx.md)
+# [새로운 또는 업데이트 된 문서](new-updated-dmx.md)
 
 # [DMX 문 - 데이터 정의](dmx-statements-data-definition.md)  
 ## [CREATE MINING STRUCTURE](create-mining-structure-dmx.md)  

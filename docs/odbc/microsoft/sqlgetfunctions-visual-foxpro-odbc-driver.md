@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: feae201ca72f241fe2ad18023d4686985203c89d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0552f93e5318e5a282b92c88fe12345e6883670d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -41,23 +38,22 @@ ms.lasthandoff: 09/09/2017
   
 |*함수*|지원됨|  
 |----------------|---------------|  
-|SQL_API_SQLBROWSECONNECT|아니요|  
-|SQL_API_SQLCOLUMNPRIVELEGES|아니요|  
+|SQL_API_SQLBROWSECONNECT|아니오|  
+|SQL_API_SQLCOLUMNPRIVELEGES|아니오|  
 |SQL_API_SQLDATASOURCES|예|  
-|SQL_API_SQLDESCRIBEPARAM|아니요|  
+|SQL_API_SQLDESCRIBEPARAM|아니오|  
 |SQL_API_SQLDRIVERS|예|  
 |SQL_API_SQLEXTENDEDFETCH|예|  
-|SQL_API_SQLFOREIGNKEYS|아니요|  
+|SQL_API_SQLFOREIGNKEYS|아니오|  
 |SQL_API_SQLMORERESULTS|예|  
-|SQL_API_SQLNATIVESQL|아니요|  
+|SQL_API_SQLNATIVESQL|아니오|  
 |SQL_API_SQLNUMPARAMS|예|  
 |SQL_API_SQLPARAMOPTIONS|예|  
 |SQL_API_SQLPRIMARYKEYS|예|  
-|SQL_API_SQLPROCEDURECOLUMNS|아니요|  
-|SQL_API_SQLPROCEDURES|아니요|  
+|SQL_API_SQLPROCEDURECOLUMNS|아니오|  
+|SQL_API_SQLPROCEDURES|아니오|  
 |SQL_API_SQLSETPOS|예|  
 |SQL_API_SQLSETSCROLLOPTIONS|예|  
-|SQL_API_SQLTABLEPRIVILEGES|아니요|  
+|SQL_API_SQLTABLEPRIVILEGES|아니오|  
   
  자세한 내용은 참조 [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) 에 *ODBC Programmer's Reference*합니다.
-

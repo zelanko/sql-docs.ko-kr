@@ -2,15 +2,13 @@
 title: "기능 선택 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,20 +23,20 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 39
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ae50c18dab1894b42e209d2a37762e0fa9e0d57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
-  *기능 선택* 은 기계 학습의 중요한 부분입니다. 기능 선택은 처리 및 분석을 위한 입력을 줄이거나 가장 중요한 입력을 찾는 프로세스를 말합니다. 관련 용어인 *기능 엔지니어링* (또는 *기능 추출*)은 기존 데이터에서 유용한 정보나 기능을 추출하는 프로세스를 말합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  *기능 선택*은 기계 학습의 중요한 부분입니다. 기능 선택은 처리 및 분석을 위한 입력을 줄이거나 가장 중요한 입력을 찾는 프로세스를 말합니다. 관련 용어인 *기능 엔지니어링* (또는 *기능 추출*)은 기존 데이터에서 유용한 정보나 기능을 추출하는 프로세스를 말합니다.  
   
 ## <a name="why-do-feature-selection"></a>기능 선택을 수행하는 이유  
  기능 선택은 적합한 모델을 작성하는 데 여러 이유로 중요합니다. 그중 한 가지 이유는 기능 선택이 모델을 작성할 때 고려할 수 있는 특성의 수에 대한 제한을 적용하는 어느 정도의 *카디널리티 축소*를 의미하기 때문입니다. 데이터에는 모델을 작성하는 데 필요한 것보다 더 많은 정보 또는 잘못된 종류의 정보가 자주 포함됩니다. 예를 들어 데이터 집합에 고객의 특성을 설명하는 열이 500개 있지만, 일부 열의 데이터가 매우 드물 경우 해당 열을 모델에 추가하여 얻는 이점이 거의 없으며 일부 열이 서로 중복된 경우 중복된 열을 모두 사용하면 모델에 영향을 줄 수 있습니다.  
@@ -144,4 +142,3 @@ ms.lasthandoff: 09/01/2017
  [마이닝 모델 및 구조 사용자 지정](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   
-

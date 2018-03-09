@@ -1,36 +1,37 @@
 ---
 title: "전역 설정 (로깅) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f80a451a574aad466258d77e9408c839d5a4075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1ccedf7874c9d4e8a3729e31dbea6f00a08426c9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-logging--mysqltosql"></a>전역 설정 (로깅) (MySQLToSQL)
 사용 하 여 **전역 설정** SSMA에 대 한 로깅 설정을 지정 하려면 대화 상자. 일반적으로 제품 지원 팀과 작업 하는 경우에 이러한 설정을 변경할 것 있습니다.  
   
 이 대화 상자에 액세스 하려면는 **도구** 메뉴 선택 **전역 설정** 클릭 하 고는 **로깅** 왼쪽 창의 맨 아래에 단추입니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **메시지 수준**  
 다음 옵션에서 사용할 수 있는 **메시지 수준**:  
   
@@ -67,4 +68,3 @@ Kb에서 로그 파일의 최대 크기입니다. 최소 크기는 10KB입니다
 **로그 파일의 총 수**  
 한 로그가 꽉 차면 SSMA 로그 파일 바꾸고 새 시작 됩니다. 이 설정을 사용 하 여 보관할 로그 파일의 최대 수를 지정 합니다. 최소값은 2입니다.  
   
-

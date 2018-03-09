@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - DROP EXTERNAL RESOURCE POOL statement
 ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
-caps.latest.revision: 6
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a0aae6de75280fb0e32879ece5acea6d0fd94f3c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: edd6e956bc9453317c928a099469e65ddf5e0e0f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP 외부 리소스 풀 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -81,4 +80,3 @@ GO
  [DROP RESOURCE pool&#40; Transact SQL &#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)  
   
   
-

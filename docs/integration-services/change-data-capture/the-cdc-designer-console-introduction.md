@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
-ms.openlocfilehash: 12afe7ad2b83c4ab25e4c0803d015442ef9cfc55
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b89045fbbda6920dbeb57e6d19da3813932ba597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC Designer 콘솔 소개
   이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다.  
@@ -46,8 +45,8 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="source-oracle-database"></a>원본 Oracle 데이터베이스
   
--   Oracle 데이터베이스 10g 릴리스 2
--   Oracle 데이터베이스 11g 릴리스 1과 릴리스 2
+-   Oracle Database 10g 릴리스 2
+-   Oracle Database 11g 릴리스 1 및 릴리스 2
 -   클래식 설치의 Oracle Database 12c. (다중 테넌트 설치는 지원되지 않습니다.)  
 
 ### <a name="target-sql-server-database"></a>대상 SQL Server 데이터베이스
@@ -70,4 +69,3 @@ ms.lasthandoff: 08/03/2017
  제어판의 프로그램 및 기능을 사용하여 CDC Designer 콘솔을 제거합니다.  
   
   
-

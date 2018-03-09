@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b51491fa5ab071d679c7f89990977275a4e45f1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetching-a-row-of-data"></a>데이터 행을 인출합니다.
 데이터의 행을 인출 하는 응용 프로그램 호출 **SQLFetch**합니다. **SQLFetch** 모든 종류의 커서를 호출할 수 있지만 앞 으로만 이동 가능한 방향으로 행 집합 커서를 이동 합니다. **SQLFetch** 다음 행으로 커서를 이동 하 고 호출 하 여 바인딩된 열에 대 한 데이터를 반환 **SQLBindCol**합니다. 커서는 결과의 끝에 도달 하면 때 설정 **SQLFetch** SQL_NO_DATA를 반환 합니다. 호출에 대 한 예제 **SQLFetch**, 참조 [를 사용 하 여 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)합니다.  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
  문자 데이터 해야 드라이버에 의해 null로 끝나는 응용 프로그램에 반환 하기 전에 잘린 경우에 합니다. Null 종결 문자는 반환 된 바이트 길이에 포함 되어 있지 않지만 바인딩된 버퍼에 공간이 필요 없습니다. 예를 들어, ASCII 문자 집합의 문자 데이터의 구성 된 문자열을 사용 하 여 응용 프로그램, 드라이버에 반환할 데이터의 50 자 및 응용 프로그램의 버퍼가 25 바이트 길이입니다. 응용 프로그램의 버퍼는 드라이버는 먼저 24 문자 뒤에 null 종결 문자를 반환 합니다. 길이/표시기 버퍼의 바이트 길이 50 반환합니다.  
   
  응용 프로그램 집합을 결과 만드는 문을 실행 하기 전에 SQL_ATTR_MAX_ROWS 문 특성을 설정 하 여 결과 집합의 행 수를 제한할 수 있습니다. 예를 들어, 보고서 서식을 지정 하는 데 사용 하는 응용 프로그램의 미리 보기 모드는 보고서의 첫 번째 페이지를 표시 하려면 충분 한 데이터에만 필요 합니다. 결과 집합의 크기를 제한 하 여 이러한 기능 더 빠르게 실행 됩니다. 이 문 특성은 네트워크 트래픽을 줄이기 위해 되며 모든 드라이버에서 지원 되지 않을 수 있습니다.
-

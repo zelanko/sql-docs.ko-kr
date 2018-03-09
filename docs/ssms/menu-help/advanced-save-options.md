@@ -3,8 +3,11 @@ title: "저장 고급 옵션 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 400cd101e694e02b7ab883d3db2b4f74ff5e384b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cb0587036168b77e50da5e1ed26cb9eac66a9b9c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="advanced-save-options"></a>저장 고급 옵션
-이 대화 상자를 사용하여 언어 인코딩 스키마를 선택하고 각 줄 끝에 삽입할 문자를 지정할 수 있습니다. **저장 고급 옵션** 대화 상자에 액세스하려면 **파일** 메뉴에서 **.sql** <query name>**저장** 을 클릭하여 **.sql 파일 As** 대화 상자를 열고 **.sql** 단추의 아래쪽 화살표를 클릭한 다음 **.sql with Encoding**을 클릭합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 언어 인코딩 스키마를 선택하고 각 줄 끝에 삽입할 문자를 지정할 수 있습니다. **저장 고급 옵션** 대화 상자에 액세스하려면 **파일** 메뉴에서 **.sql** <query name>**저장** 을 클릭하여 **.sql 파일 As** 대화 상자를 열고 **.sql** 단추의 아래쪽 화살표를 클릭한 다음 **.sql with Encoding**을 클릭합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **인코딩**  
 이 목록 상자를 사용하여 대상 파일에 새 언어 인코딩 스키마를 적용할 수 있습니다.  
   

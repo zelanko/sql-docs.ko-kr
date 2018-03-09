@@ -1,19 +1,18 @@
 ---
 title: "집계 디자인 (XMLA) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - statistical information [XML for Analysis]
 - batches [XML for Analysis]
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da7a6639d68c6b97725fea152d4d7f8be1224273
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-xmla"></a>집계 디자인(XMLA)
   집계 디자인은 특정 측정값 그룹의 파티션과 연결되어 해당 파티션에서 집계를 저장할 때 동일한 구조를 사용하도록 합니다. 동일한 저장 구조를 사용 하 여 파티션에 대 한을 사용 하면 사용 하 여 나중에 병합할 수 있는 파티션을 쉽게 정의할 수는 [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) 명령입니다. 집계 디자인에 대 한 자세한 내용은 참조 [집계 및 집계 디자인](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)합니다.  
@@ -58,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="specifying-queries"></a>쿼리 지정  
  DesignAggregations 명령은 하나 이상 포함 하 여 사용 빈도 기반 최적화 명령을 지원 **쿼리** 의 요소는 [쿼리](../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) 속성입니다. **쿼리** 속성 하나 이상 포함할 수 있습니다 [쿼리](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md) 요소입니다. 경우는 **쿼리** 속성 포함 하지 않는 **쿼리** 요소에 지정 된 집계 디자인의 **개체** 요소를 포함 하는 기본 구조를 사용 하 여 한 일반적인 집계 집합입니다. 이 일반적인 집계 집합에 지정 된 조건을 충족 하도록는 **최적화** 및 **저장소** 의 속성은 **DesignAggregations** 명령입니다.  
   
- 각 **Query** 요소는 가장 자주 사용하는 쿼리를 대상으로 하는 집계를 정의하기 위해 디자인 프로세스에서 사용하는 목표 쿼리를 나타냅니다. 인스턴스에서 저장 된 정보를 사용할 수 있습니다 또는 사용자 고유의 목표 쿼리를 지정 하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가장 자주에 대 한 정보를 검색 하는 쿼리 로그에 쿼리를 사용 합니다. 사용 빈도 기반 최적화 마법사는 쿼리 로그를 사용 하 여 전송 된 경우 시간, 사용 빈도 또는 지정된 된 사용자 기반으로 목표 쿼리를 검색 한 **DesignAggregations** 명령입니다. 자세한 내용은 참조 [사용 빈도 기반 최적화 마법사 F1 도움말](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763)합니다.  
+ 각 **Query** 요소는 가장 자주 사용하는 쿼리를 대상으로 하는 집계를 정의하기 위해 디자인 프로세스에서 사용하는 목표 쿼리를 나타냅니다. 사용자 고유의 목표 쿼리를 지정하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 의해 쿼리 로그에 저장된 정보를 사용하여 가장 자주 사용하는 쿼리에 대한 정보를 검색할 수 있습니다. 사용 빈도 기반 최적화 마법사는 쿼리 로그를 사용 하 여 전송 된 경우 시간, 사용 빈도 또는 지정된 된 사용자 기반으로 목표 쿼리를 검색 한 **DesignAggregations** 명령입니다. 자세한 내용은 참조 [사용 빈도 기반 최적화 마법사 F1 도움말](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763)합니다.  
   
  만 첫 번째 범위에서 목표 쿼리를 전달 해야 집계를 반복적으로 디자인 하는 경우 **DesignAggregations** 있기 때문에 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 이러한 목표 쿼리를 저장 하 고 이러한 쿼리를 사용 하 여 후속 중 **DesignAggregations** 명령입니다. 반복 프로세스의 첫 번째 **DesignAggregations** 명령에서 목표 쿼리를 전달하면 **DesignAggregations** 속성에 목표 쿼리를 포함하는 모든 후속 **Queries** 명령은 오류를 생성합니다.  
   
@@ -122,6 +121,6 @@ ms.lasthandoff: 11/17/2017
  각 반환 된 행 집합에 포함 되어 있는 디자인 통계를 사용 하 여 **DesignAggregations** 반복 모두에 명령 및 일괄 처리 합니다. 반복 디자인에서는 디자인 통계를 사용하여 진행률을 확인하고 표시할 수 있습니다. 일괄 처리로 집계를 디자인할 때는 디자인 통계를 사용하여 해당 명령으로 만들어진 집계 수를 확인할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Analysis Services에서 XMLA를 사용하여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services에서 XMLA를 사용 하 여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

@@ -24,17 +24,16 @@ helpviewer_keywords:
 - removing routes
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 39e39b8688e2350d27e664b4a1517584c11df941
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,13 +83,13 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
- 수명  **=**  *route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 라우팅 테이블에 경로를 유지하는 시간(초)을 지정합니다. 수명이 다되어 경로가 만료되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 새 대화를 위한 경로를 선택할 때 더 이상 해당 경로를 고려하지 않습니다. 이 절이 생략되면 경로의 수명이 변경되지 않습니다.  
   
- 주소 **='***next_hop_address'*  
+ ADDRESS **='***next_hop_address'*  
  이 경로에 대한 네트워크 주소를 지정합니다. *next_hop_address* 다음 형식으로 TCP/IP 주소를 지정 합니다.  
   
- **TCP: / /** { *dns_name* | *netbios_name* |*ip_address* } **:**  *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
  지정 된 *port_number* 에 대 한 포트 번호와 일치 해야 합니다는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 끝점 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 컴퓨터에서 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
@@ -114,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  에 있는 주 서버는 미러링된 쌍의 미러 서버에 대 한 네트워크 주소 지정은 *next_hop_address*합니다. *next_hop_mirror_address* 다음 형식으로 TCP/IP 주소를 지정 합니다.  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:**  *port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  지정 된 *port_number* 에 대 한 포트 번호와 일치 해야 합니다는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 끝점 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 컴퓨터에서 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
@@ -190,4 +189,3 @@ ALTER ROUTE ExpenseRoute
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

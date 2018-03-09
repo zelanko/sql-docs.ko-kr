@@ -3,8 +3,11 @@ title: "필터 설정(개체 탐색기 및 유틸리티 탐색기) | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,22 +18,22 @@ ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17bccb5ad0fe065699f2aed56d276568473ea56b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 049d826cfe7170462ed3942202f208a621362613
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>필터 설정(개체 탐색기 및 유틸리티 탐색기)
-이 대화 상자를 사용하여 필터를 지정할 수 있습니다. 필터를 사용하면 특정 조건에 맞는 항목만 표시하도록 개체 탐색기 및 유틸리티 탐색기를 구성할 수 있습니다. 예를 들어 필터를 사용하여 이름에 "Maintenance"라는 단어가 포함된 작업만 표시할 수 있습니다. **필터 설정** 대화 상자의 머리글에는 서버 이름이나 데이터베이스 이름이 포함될 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 필터를 지정할 수 있습니다. 필터를 사용하면 특정 조건에 맞는 항목만 표시하도록 개체 탐색기 및 유틸리티 탐색기를 구성할 수 있습니다. 예를 들어 필터를 사용하여 이름에 "Maintenance"라는 단어가 포함된 작업만 표시할 수 있습니다. **필터 설정** 대화 상자의 머리글에는 서버 이름이나 데이터베이스 이름이 포함될 수 있습니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
 **속성**  
 필터링할 속성을 표시합니다.  
   
-**연산자**  
+**같음**  
 필터가 속성에 값을 적용하는 방식을 선택합니다. 옵션은 다음과 같습니다.  
   
 -   **같음**  
@@ -69,7 +72,7 @@ ms.lasthandoff: 11/09/2017
   
     이 필터는 날짜에 사용할 수 있으며 해당 날짜가 제공된 두 날짜보다 이전이거나 이후인 항목을 보여 줍니다. **사이에 있지 않음** 을 선택하고 **연산자** 열에서 Tab 키를 누르면 두 번째 날짜를 입력할 다른 행이 추가됩니다.  
   
-**값**  
+**Value**  
 속성과 비교할 값을 입력합니다. 날짜의 경우 아래쪽 화살표를 클릭하면 날짜를 선택할 수 있는 달력이 표시됩니다.  
   
 **필터 지우기**  

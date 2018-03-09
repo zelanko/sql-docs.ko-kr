@@ -1,5 +1,6 @@
 # 이 릴리스에 대한 정보
 ## [새로운 기능](whats-new-analytics-platform-system.md)
+## [새로운 또는 업데이트 된 문서](new-updated-analytics-platform-system.md)
 
 # Architecture
 ## [병렬 데이터 웨어하우스 개요](parallel-data-warehouse-overview.md)

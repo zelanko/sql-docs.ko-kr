@@ -2,42 +2,40 @@
 title: "데이터 처리 확장 프로그램 개요 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data processing extensions [Reporting Services], about extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
-caps.latest.revision: 39
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "39"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 08e8a1c640a837d91e22e4c533d84dec59510486
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-processing-extensions-overview"></a>데이터 처리 확장 프로그램 개요
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 데이터 처리 확장 프로그램을 통해 데이터 원본에 연결하고 데이터를 검색할 수 있습니다. 이 프로그램은 데이터 원본과 데이터 집합을 연결하는 역할도 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]데이터 처리 확장 프로그램의 하위 집합을 본떠서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자 인터페이스입니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 데이터 처리 확장 프로그램을 통해 데이터 원본에 연결하고 데이터를 검색할 수 있습니다. 이 프로그램은 데이터 원본과 데이터 집합을 연결하는 역할도 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자 인터페이스의 하위 집합을 본떠서 만든 것입니다.  
   
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 포함된 데이터 처리 확장 프로그램을 나열합니다.  
   
 |데이터 처리 확장 프로그램|Description|  
 |-------------------------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 데이터 처리 확장 프로그램|.NET Framework Data Provider for SQL Server를 사용 하 여 연결 하 고 데이터를 검색 하는 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]합니다.|  
-|OLE DB용 데이터 처리 확장 프로그램|.NET Framework Data Provider for OLE DB 사용합니다. 이 확장 프로그램을 사용하여 보고서 서버에서 OLE DB 공급자를 가진 데이터 원본을 쿼리할 수 있습니다.|  
-|Oracle용 데이터 처리 확장 프로그램|.NET Framework Data Provider for Oracle 사용합니다. 이 확장 프로그램을 사용하여 보고서 서버에서 Oracle 클라이언트 연결 소프트웨어를 통해 Oracle 데이터 원본에 액세스할 수 있습니다.|  
-|ODBC용 데이터 처리 확장 프로그램|.NET Framework Data Provider for ODBC 사용합니다. 이 확장 프로그램을 사용하여 보고서 서버에서 ODBC 드라이버가 있는 임의의 데이터베이스의 데이터에 액세스할 수 있습니다.|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 데이터 처리 확장 프로그램|.NET Framework Data Provider for SQL Server를 사용하여 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 연결하고 데이터를 검색합니다.|  
+|OLE DB용 데이터 처리 확장 프로그램|.NET Framework Data Provider for OLE DB를 사용합니다. 이 확장 프로그램을 사용하여 보고서 서버에서 OLE DB 공급자를 가진 데이터 원본을 쿼리할 수 있습니다.|  
+|Oracle용 데이터 처리 확장 프로그램|.NET Framework Data Provider for Oracle을 사용합니다. 이 확장 프로그램을 사용하여 보고서 서버에서 Oracle 클라이언트 연결 소프트웨어를 통해 Oracle 데이터 원본에 액세스할 수 있습니다.|  
+|ODBC용 데이터 처리 확장 프로그램|.NET Framework Data Provider for ODBC를 사용합니다. 이 확장 프로그램을 사용하여 보고서 서버에서 ODBC 드라이버가 있는 임의의 데이터베이스의 데이터에 액세스할 수 있습니다.|  
   
  [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 데이터 처리 API를 사용하여 사용자 지정 데이터 처리를 보고서 서버에 추가할 수 있습니다.  
   
@@ -62,7 +60,7 @@ Reporting Services 데이터 처리 확장 프로그램 아키텍처
 ## <a name="data-extension-process-flow"></a>데이터 확장 프로세스 흐름  
  사용자 지정 데이터 확장 프로그램을 개발하기 전에 보고서 서버에서 데이터 확장 프로그램을 사용하여 어떻게 데이터를 처리하는지 이해해야 합니다. 또한 보고서 서버에서 호출되는 생성자와 메서드에 대해서도 잘 알고 있어야 합니다.  
   
- ![데이터 처리 확장 프로그램에 대 한 흐름 처리](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "데이터 처리 확장 프로그램에 대 한 흐름을 처리 합니다.")  
+ ![데이터 처리 확장 프로그램의 프로세스 흐름](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "데이터 처리 확장 프로그램의 프로세스 흐름")  
 보고서 서버에서 호출되는 데이터 확장 프로그램의 단계별 프로세스 흐름  
   
  이 그림은 다음과 같은 이벤트 시퀀스를 나타냅니다.  
@@ -78,17 +76,16 @@ Reporting Services 데이터 처리 확장 프로그램 아키텍처
   
 -   보고서 디자이너 또는 보고서 서버가 설치된 배포 컴퓨터가 있어야 합니다.  
   
--   된 개발 컴퓨터가 [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 이상이 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 소프트웨어 개발 키트 (SDK)가 설치 되어 있습니다.  
+-   [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 이상 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK(소프트웨어 개발 키트)가 설치된 개발 컴퓨터가 있어야 합니다.  
   
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기능을 자세히 알고 있어야 합니다.  
   
--   깊이 있게 이해할 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 아키텍처 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자, ADO.NET 데이터 집합 개체 및 공통 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 인터페이스입니다.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 아키텍처, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자, ADO.NET 데이터 집합 개체 및 공통 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 인터페이스에 대해 자세히 알고 있어야 합니다.  
   
--   개발 해 본 경험이 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 과 같은 언어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 합니다.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET과 같은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 언어에 대한 개발 경험이 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services 확장 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

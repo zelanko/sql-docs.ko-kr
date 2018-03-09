@@ -3,7 +3,7 @@ title: "Refresh 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [ADO]
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 422f04618e6e63b6143a8459c869316e47450796
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 00a739b4bf90651f1e38402a8309482bf8217680
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="refresh-method-ado"></a>Refresh 메서드 (ADO)
 공급자에 게,에서 사용할 수 있는 개체를 반영 하도록 컬렉션 및 관련 개체를 업데이트 합니다.  
@@ -78,4 +77,3 @@ collection.Refresh
  [새로 메서드 예제 (VC + +)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Count 속성 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Refresh 메서드(RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
-

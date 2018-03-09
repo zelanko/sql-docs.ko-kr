@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7355d98c342052997441c2013e056b0453962c5a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 83125af2f2f85c825aae5b594767fa421af2a656
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-transactions"></a>Integration Services 트랜잭션
   패키지는 트랜잭션을 사용하여 태스크가 원자 단위로 수행되는 데이터베이스 동작을 바인딩하며 이를 통해 데이터 무결성을 유지 관리합니다. 각 작업을 캡슐화하는 For Loop, Foreach Loop, Sequence 컨테이너 및 태스크 호스트 등의 모든 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 컨테이너는 트랜잭션을 사용하도록 구성할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 트랜잭션 구성을 위해 **NotSupported**, **Supported**및 **Required**의 세 가지 옵션을 제공합니다.  
@@ -53,7 +52,7 @@ ms.lasthandoff: 09/26/2017
   
  다음 절차에서는 위의 두 옵션을 구성하는 방법에 대해 설명합니다.  
   
-### <a name="configure-a-package-to-use-a-single-transaction"></a>단일 트랜잭션을 사용 하도록 패키지 구성  
+### <a name="configure-a-package-to-use-a-single-transaction"></a>단일 트랜잭션을 사용하도록 패키지 구성  
  이 옵션에서는 패키지 자체에서 단일 트랜잭션을 시작합니다. 패키지의 TransactionOption 속성을 **Required**로 설정하여 이 트랜잭션을 시작하도록 패키지를 구성합니다.  
   
  그런 다음 이 단일 트랜잭션에 특정 태스크와 컨테이너를 등록합니다. 트랜잭션에 태스크와 컨테이너를 등록하려면 해당 태스크 또는 컨테이너의 TransactionOption 속성을 **Supported**로 설정합니다.  
@@ -77,7 +76,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  트랜잭션에 등록할 각 태스크와 컨테이너에 대해 6-7단계를 반복합니다.  
   
-### <a name="configure-a-package-to-use-multiple-transactions"></a>여러 트랜잭션을 사용 하도록 패키지 구성  
+### <a name="configure-a-package-to-use-multiple-transactions"></a>여러 트랜잭션을 사용하도록 패키지 구성  
  이 옵션에서는 패키지 자체에서 트랜잭션을 지원하지만 트랜잭션을 시작하지는 않습니다. 패키지의 TransactionOption 속성을 **Supported**로 설정하여 트랜잭션을 지원하도록 패키지를 구성합니다.  
   
  그런 다음 패키지에 포함된 태스크와 컨테이너 중에서 원하는 태스크와 컨테이너를 트랜잭션을 시작하거나 트랜잭션에 참여하도록 구성합니다. 트랜잭션을 시작하도록 태스크나 컨테이너를 구성하려면 태스크 또는 컨테이너의 TransactionOption 속성을 **Required**로 설정합니다.   
@@ -108,10 +107,10 @@ ms.lasthandoff: 09/26/2017
   
 10. 트랜잭션을 시작하는 각 태스크와 컨테이너에 대해 6-9단계를 반복합니다.  
 
-## <a name="multiple-transactions-in-a-package"></a>패키지에서 여러 트랜잭션
+## <a name="multiple-transactions-in-a-package"></a>패키지에 여러 트랜잭션 포함
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 내의 관련 없는 트랜잭션을 한 개의 패키지가 포함하는 것이 가능합니다. 중첩 컨테이너 계층 중간의 컨테이너가 트랜잭션을 지원하지 않으면 위 또는 아래에 위치한 컨테이너에서 별도의 트랜잭션을 시작합니다(트랜잭션을 지원하도록 구성된 경우). 트랜잭션은 중첩 컨테이너 계층의 가장 안쪽 태스크부터 순서대로 패키지에 커밋 또는 롤백합니다. 그러나 내부 트랜잭션이 커밋한 후에는 외부 트랜잭션이 중단되더라도 롤백하지 않습니다.  
   
-### <a name="example-of-multiple-transactions-in-a-package"></a>패키지에서 여러 트랜잭션의 예 
+### <a name="example-of-multiple-transactions-in-a-package"></a>패키지에 여러 트랜잭션 포함의 예 
  예를 들어 한 패키지가 두 개의 Foreach 루프 컨테이너를 포함하고 각 컨테이너가 다시 두 개의 SQL 실행 태스크를 포함하는 경우 시퀀스 컨테이너는 트랜잭션을 지원하지만 Foreach 루프 컨테이너는 지원하지 않고 SQL 실행 태스크는 지원합니다. 이 예에서 각 SQL 실행 태스크는 자체 트랜잭션을 시작하며 시퀀스 태스크에서 트랜잭션이 중단된 경우에도 롤백하지 않습니다.  
   
  시퀀스 컨테이너, Foreach 루프 컨테이너 및 SQL 실행 태스크의 TransactionOption 속성은 다음과 같이 설정됩니다.  
@@ -137,7 +136,7 @@ ms.lasthandoff: 09/26/2017
   
  자식 패키지가 트랜잭션에 조인하지 않으면 자식 패키지 내의 컨테이너 및 태스크가 부모 패키지 트랜잭션에 조인할 수 없습니다.  
   
-### <a name="example-of-inherited-transactions"></a>상속 된 트랜잭션의 예  
+### <a name="example-of-inherited-transactions"></a>상속된 트랜잭션의 예  
  다음 다이어그램에서 트랜잭션을 사용하는 3개의 패키지가 있습니다. 각 패키지는 여러 태스크를 포함합니다. 트랜잭션 동작을 강조하기 위해 패키지 실행 태스크만 표시했습니다. 패키지 A는 패키지 B와 C를 실행하고 차례로 패키지 B는 패키지 D와 E를 실행하며 패키지 C는 패키지 F를 실행합니다.  
   
  패키지 및 태스크는 다음 트랜잭션 특성을 가집니다.  
@@ -148,7 +147,7 @@ ms.lasthandoff: 09/26/2017
   
 -   패키지 E, 패키지 실행 태스크 C 및 패키지 실행 E의**트랜잭션 옵션** 은 **지원되지 않음** 으로 설정됩니다.  
   
- ![상속 된 트랜잭션의 흐름](../integration-services/media/mw-dts-executepack.gif "상속 된 트랜잭션의 흐름")  
+ ![상속된 트랜잭션의 흐름](../integration-services/media/mw-dts-executepack.gif "상속된 트랜잭션의 흐름")  
   
  패키지 B, D 및 F만 부모 패키지에서 트랜잭션을 상속할 수 있습니다.  
   
@@ -165,9 +164,8 @@ ms.lasthandoff: 09/26/2017
   
 -   www.mssqltips.com의 블로그 항목 - [SQL Server Integration Services SSIS에서 트랜잭션을 사용하는 방법](http://go.microsoft.com/fwlink/?LinkId=157783)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [상속된 트랜잭션](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
  [여러 트랜잭션](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
   
-

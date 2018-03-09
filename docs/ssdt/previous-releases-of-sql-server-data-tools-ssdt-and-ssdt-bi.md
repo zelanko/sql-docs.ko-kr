@@ -1,27 +1,31 @@
 ---
 title: "SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/28/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssdt
+ms.suite: sql
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4b1dab5e822c5ef2f9ac580f4d4cd2e5b43b7ae6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 08c7c2eddb0d5624058d301241406df54360fbdb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 SQL Server Data Tools(SSDT)는 관계형 데이터베이스, Analysis Services 모델, Reporting Services 보고서, Integration Services 패키지 등의 SQL Server 콘텐츠 형식을 작성하기 위한 프로젝트 템플릿 및 디자인 화면을 제공합니다.  
   
 SSDT는 Visual Studio 셸을 기반으로 하며 SQL Server와 함께 출시됩니다. 새 버전의 SSDT는 SQL Server의 최신 기능을 통합합니다. 이전 버전에는 출시 당시 최신이던 템플릿과 설계 환경이 포함됩니다.  
@@ -35,12 +39,26 @@ SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](download-sql-serve
 
 [최신 릴리스](download-sql-server-data-tools-ssdt.md)관련 문제가 발생하는 경우 몇 개의 최신 다운로드가 제공됩니다. 
 
-|릴리스| Visual Studio 2015|Visual Studio 2013|
-|:---|:---|:---|
-|17.2|[VS2015 17.2용 SSDT](https://go.microsoft.com/fwlink/?linkid=852922)| \* 해당 사항 없음|
-|17.1|[VS2015 17.1용 SSDT](https://go.microsoft.com/fwlink/?linkid=849393)| \* 해당 사항 없음|
-|17.0|[VS2015 17.0용 SSDT](https://go.microsoft.com/fwlink/?linkid=846626)| \* 해당 사항 없음|
-|16.5|[VS2015 16.5용 SSDT](https://go.microsoft.com/fwlink/?LinkID=832313)|[VS2013 16.5용 SSDT](https://go.microsoft.com/fwlink/?LinkID=832308)|
+|릴리스| Visual Studio 2017|
+|:---|:---|
+|15.5.1|[VS2017 15.5.1용 SSDT](https://go.microsoft.com/fwlink/?LinkId=865748)|  
+<br>
+
+
+|릴리스| Visual Studio 2015|
+|:---|:---|
+|17.3|[VS2015 17.3용 SSDT](https://go.microsoft.com/fwlink/?linkid=858660)| 
+|17.2|[VS2015 17.2용 SSDT](https://go.microsoft.com/fwlink/?linkid=852922)| 
+|17.1|[VS2015 17.1용 SSDT](https://go.microsoft.com/fwlink/?linkid=849393)|
+|17.0|[VS2015 17.0용 SSDT](https://go.microsoft.com/fwlink/?linkid=846626)| 
+|16.5|[VS2015 16.5용 SSDT](https://go.microsoft.com/fwlink/?LinkID=832313)|  
+<br>
+
+|릴리스| Visual Studio 2013|
+|:---|:---|
+|16.5|[VS2013 16.5용 SSDT](https://go.microsoft.com/fwlink/?LinkID=832308)|  
+<br>
+
 
 \* SSDT는 두 가지 최신 버전의 Visual Studio를 지원합니다. Visual Studio 2017 릴리스에서는 VS2013용 SSDT가 더 이상 업데이트되지 않습니다. 자세한 내용은 [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/)(이 SSDT 팀 블로그 게시물)의 *FAQ* 섹션을 참조하세요.
 
@@ -74,7 +92,7 @@ BIDS(Business Intelligence Development Studio)는 SQL Server 설치 프로그램
   
 SQL Server 2012 또는 2014의 경우 **Visual Studio 2012용 SSDT-BI** 또는 **SSDT-BI f또는 Visual Studio 2013**등과 같은 다양한 이름으로 출시되었습니다. 두 버전은 Visual Studio 버전만 다릅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SQL Server Data Tools 다운로드 &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [SQL Server Management Studio 다운로드 &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [SQL 도구 및 유틸리티](../tools/overview-sql-tools.md)

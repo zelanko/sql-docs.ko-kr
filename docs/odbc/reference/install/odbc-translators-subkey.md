@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,22 +16,21 @@ helpviewer_keywords:
 - subkeys [ODBC], translator subkey
 - registry entries for components [ODBC], translator subkey
 ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e94cd3cd2313b98376e32c8775ec38c3c8ddb268
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dfc34daa6236fa7187c27a204ee16cc47a0de7b0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-translators-subkey"></a>ODBC 변환기가 하위 키
 설치 된 변환기가 ODBC 변환기 하위 키 아래 값을 나열합니다. 이러한 값의 서식은 다음 표에 표시 됩니다.  
   
-|이름|데이터 형식|data|  
+|속성|데이터 형식|data|  
 |----------|---------------|----------|  
 |*변환기 desc*|REG_SZ|**설치**|  
   
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 MS Code Page Translator: REG_SZ : Installed  
 ASCII to EBCDIC: REG_SZ : Installed.  
 ```
-

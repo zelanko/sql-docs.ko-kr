@@ -3,8 +3,11 @@ title: "Management Studio의 사용자 지정 보고서 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,16 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1933b88111092137c15210111d3bafb63f0f381
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: be381dfcba80135f5c76694ab2f19f2942e0f5a8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio의 사용자 지정 보고서
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 많은 개체 탐색기 노드에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)]에서 만든 표준 보고서 집합이 표시됩니다. 이러한 보고서는 일반적으로 요청되는 서버 정보를 요약합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 서비스 팩 2부터 관리자는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서 만든 사용자 지정 보고서를 실행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 많은 개체 탐색기 노드에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)]에서 만든 표준 보고서 집합이 표시됩니다. 이러한 보고서는 일반적으로 요청되는 서버 정보를 요약합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 서비스 팩 2부터 관리자는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서 만든 사용자 지정 보고서를 실행할 수 있습니다.  
   
 ## <a name="implementation"></a>구현  
 사용자 지정 보고서는 보고서 정의 파일(.rdl)로 저장되며 RDL(Report Definition Language)을 사용하여 생성됩니다. RDL에는 보고서에 대한 데이터 검색 및 레이아웃 정보가 XML 형식으로 포함됩니다. RDL은 개방형 스키마입니다. 개발자는 추가 특성 및 요소를 사용하여 RDL을 확장할 수 있습니다. 보고서는 보고서 내의 모든 유효한 [!INCLUDE[tsql](../../includes/tsql_md.md)] 문을 실행할 수 있습니다.  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="managing-custom-reports"></a>사용자 지정 보고서 관리  
 많은 사용자 지정 보고서를 보유하고 있는 사용자의 경우 적절한 NTFS 파일 시스템 권한이 있는 파일 시스템 폴더를 사용하여 보고서를 구성하는 것이 좋습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 사용자 지정 보고서는 현재 사용자의 사용 권한을 사용하여 실행됩니다. 보고서에서 실행하는 쿼리를 악의적인 사용자가 변경하지 못하게 하려면 보고서 파일이 있는 파일 시스템 폴더에 대한 액세스가 제한되도록 사용 권한을 설정해야 합니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 서비스에 사용되는 사용자와 계정 모두에는 보고서 파일이 있는 파일 시스템 폴더에 대한 읽기 권한이 필요합니다.  

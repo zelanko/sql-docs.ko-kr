@@ -1,30 +1,30 @@
 ---
 title: "Linux에서 SQL Server에 대 한 성능 모범 사례 | Microsoft Docs"
-description: "이 항목에서는 SQL Server 2017 Linux에서 실행 하기 위한 성능 모범 사례 및 지침 제공."
+description: "이 문서 SQL Server 2017 Linux에서 실행 하기 위한 성능 모범 사례 및 지침을 제공 합니다."
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 18d40800ee74783b0ce3df4d9d4e0458fbb72ebb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
-
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>성능에 대 한 유용한 정보 및 SQL Server 2017 linux에 대 한 구성 지침
 
-이 항목에서는 모범 사례 및 Linux에서 SQL Server에 연결 하는 데이터베이스 응용 프로그램에 대 한 성능을 최대화 하기 위해 권장 사항을 제공 합니다. 이러한 권장 사항은 Linux 플랫폼에서 실행 됩니다. 모든 표준 SQL Server 권장 사항, 같은 인덱스 디자인 계속 적용 됩니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+이 문서는 모범 사례 및 Linux에서 SQL Server에 연결 하는 데이터베이스 응용 프로그램에 대 한 성능을 최대화 하기 위해 권장 사항을 제공 합니다. 이러한 권장 사항은 Linux 플랫폼에서 실행 됩니다. 모든 표준 SQL Server 권장 사항, 같은 인덱스 디자인 계속 적용 됩니다.
 
 다음 지침에는 SQL Server와 Linux 운영 체제를 구성 하기 위한 권장 사항을 포함 합니다.
 
@@ -57,7 +57,6 @@ Linux 응용 프로그램에 대 한 최상의 성능을 얻으려면 SQL Server
 다음과 같은 Linux 운영 체제 구성 설정을 사용 하 여 SQL Server 설치에 대 한 최상의 성능을 경험할 수 하는 것이 좋습니다.
 
 ### <a name="kernel-settings-for-high-performance"></a>고성능에 대 한 커널 설정
-
 이들은 권장 Linux 운영 체제 설정 높은 관련 된 성능 및 SQL Server 설치에 대 한 처리량입니다. 이러한 설정을 구성 하는 프로세스에 대 한 Linux 운영 체제 설명서를 참조 하십시오.
 
 
@@ -67,7 +66,7 @@ Linux 응용 프로그램에 대 한 최상의 성능을 얻으려면 SQL Server
 
 다음 표에서 CPU 설정에 대 한 권장 사항을 제공합니다.
 
-| 설정 | 값 | 자세한 정보 |
+| 설정 | Value | 자세한 정보 |
 |---|---|---|
 | CPU 주기 관리자 | 성능 | 참조는 **cpupower** 명령 |
 | ENERGY_PERF_BIAS | 성능 | 참조는 **x86_energy_perf_policy** 명령 |
@@ -76,10 +75,10 @@ Linux 응용 프로그램에 대 한 최상의 성능을 얻으려면 SQL Server
 
 다음 표에서 디스크 설정에 대 한 권장 사항을 제공합니다.
 
-| 설정 | 값 | 자세한 정보 |
+| 설정 | Value | 자세한 정보 |
 |---|---|---|
 | 미리 읽기가 디스크 | 4096 | 참조는 **blockdev** 명령 |
-| sysctl 설정 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns 15000000 =<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 참조는 **sysctl** 명령 |
+| sysctl 설정 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 참조는 **sysctl** 명령 |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>다중 노드 NUMA 시스템에 대 한 분산 커널 설정 자동 numa
 
@@ -94,7 +93,7 @@ sysctl -w kernel.numa_balancing=0
 기본 설정은 **vm.max_map_count** (65536은)는 SQL Server 설치 수 있을 정도로 충분히 높은 수 없습니다. 256 K입니다 (즉, 상한값)이이 값을 변경 합니다.
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>마지막으로 액세스 한 날짜/시간에서 파일 시스템에 SQL Server 데이터 및 로그 파일에 대 한 사용 안 함
@@ -105,7 +104,7 @@ sysctl -w vm.max_map_count 262144
 
 대부분의 Linux 설치 기본적으로의이 옵션을 해야 합니다. 이 구성 옵션을 사용 하도록 설정 하려면 가장 일관 된 성능 경험에 대 한 것이 좋습니다.
 
-### <a name="swapfile"></a>스왑 파일
+### <a name="swapfile"></a>swapfile
 
 모든 메모리가 부족 한 문제를 방지 하기 위해는 올바르게 구성 된 스왑 파일 확인 합니다. 만들고 제대로 스왑 파일 크기를 하는 방법에 대 한 Linux 설명서를 참조 하십시오.
 
@@ -118,4 +117,3 @@ Linux에서 SQL Server를 실행 하는 가상 컴퓨터에는, 경우에 가상
 성능을 향상 시키는 SQL Server 기능에 대 한 자세한 참조 [성능 기능을 시작](sql-server-linux-performance-get-started.md)합니다.
 
 Linux에서 SQL Server에 대 한 자세한 내용은 참조 [linux 개요 SQL Server의](sql-server-linux-overview.md)합니다.
-

@@ -3,7 +3,7 @@ title: IsolationLevelEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevelEnum enumeration [ADO]
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 98a9f6213af3fbfb523701f0a8dda1de80cc2d93
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f6f18a4cd10c70369d2e0aceb226310d7a5f4ae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 에 대 한 트랜잭션 격리 수준을 지정는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|나타내지만, 지정 된 것 보다 공급자 다른 격리 수준을 사용 하는 수준을 확인할 수 없습니다.|  
 |**adXactChaos**|16|보류 중인 변경 내용이 격리 수준이 더 높은 트랜잭션에서 없습니다 덮어쓸 수 있다는 것을 나타냅니다.|  
@@ -46,7 +45,7 @@ ms.lasthandoff: 09/09/2017
 |**adXactSerializable**|1048576|와 동일 **adXactIsolated**합니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>적용 대상  
  [IsolationLevel 속성](../../../ado/reference/ado-api/isolationlevel-property.md)
-

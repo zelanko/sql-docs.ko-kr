@@ -2,27 +2,28 @@
 title: "컴퓨터 학습 서비스의 무인된 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c58bbb4a7277b37c9ef479b79ba4809a02218908
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>시스템 학습 services (In-database) 무인된 설치
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 기계 학습 구성 요소를 설치 하려면 SQL Server 설치 프로그램을 명령줄 인수를 사용 하는 방법을 설명 합니다.
 
@@ -48,9 +49,9 @@ ms.lasthandoff: 11/09/2017
 
 > [!IMPORTANT]
 > 
-> 기능을 사용 하려면 설치가 완료 된 후에 추가 단계가 필요 합니다. 및이 포함 다시 구성 하는 인스턴스를 다시 시작 합니다. 있는지 [사후 설치 단계] 섹션에 있는 모든 항목을 검토 하려면 (#bkmk_PostInstall) 작업을 결정 하려면 해야 설치가 완료 된 후.
+> 기능을 사용 하려면 설치가 완료 된 후에 추가 단계가 필요 합니다. 및이 포함 다시 구성 하는 인스턴스를 다시 시작 합니다. 에 섹션에 있는 모든 항목을 검토 하십시오 [사후 설치 단계](#bkmk_PostInstall) 설치가 완료 된 후 필요한 조치를 결정 합니다.
 
-## <a name="bkmk_NewInstall"></a>SQL Server 2017에 대 한 명령줄 설치
+## <a name="bkmk_NewInstall"></a>  SQL Server 2017에 대 한 명령줄 설치
 
 다음 예에 포함 된 **최소** 기능 필요 합니다.
 
@@ -96,7 +97,7 @@ SQL Server 2017에 Python에 대 한 필요한 플래그 note:
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>SQL Server 2016에 대 한 명령줄 설치
+## <a name="OldInstall"></a> SQL Server 2016에 대 한 명령줄 설치
  
 다음 예제에서는 자동, 무인 모드로 수행 하는 데 필요한 인수 추가 R 언어와 SQL Server 2016 설치를 보여 줍니다.
 

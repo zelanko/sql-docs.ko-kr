@@ -2,15 +2,13 @@
 title: "파티션 저장소 모드 및 처리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -27,20 +25,20 @@ helpviewer_keywords:
 - MOLAP
 - ROLAP
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 40
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d94daaeb72996f418f7f1b30dd8a8b4d76e9a5c6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>파티션-파티션 저장소 모드 및 처리
-  파티션의 저장소 모드는 파티션과 해당 부모 측정값 그룹 및 큐브의 쿼리 및 처리 성능, 저장소 요구 사항, 저장소 위치 등에 영향을 줍니다. 선택한 저장소 모드는 처리 선택 사항에도 영향을 줍니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+파티션의 저장소 모드는 파티션과 해당 부모 측정값 그룹 및 큐브의 쿼리 및 처리 성능, 저장소 요구 사항, 저장소 위치 등에 영향을 줍니다. 선택한 저장소 모드는 처리 선택 사항에도 영향을 줍니다.  
   
  파티션에는 다음 3가지 기본 저장소 모드 중 하나를 사용할 수 있습니다.  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 -   HOLAP(하이브리드 OLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 세 가지 기본 저장소 모드를 지원 합니다. 또한 자동 관리 캐싱을 지원하므로 ROLAP과 MOLAP 저장소의 특성을 적절히 조합하여 데이터를 즉시 검색하고 쿼리 성능을 향상시킬 수 있습니다. 자세한 내용은 [자동 관리 캐싱&#40;파티션&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)을 참조하세요.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 세 가지 기본 저장소 모드를 지원합니다. 또한 자동 관리 캐싱을 지원하므로 ROLAP과 MOLAP 저장소의 특성을 적절히 조합하여 데이터를 즉시 검색하고 쿼리 성능을 향상시킬 수 있습니다. 자세한 내용은 [자동 관리 캐싱&#40;파티션&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)을 참조하세요.  
   
 ## <a name="molap"></a>MOLAP  
  MOLAP 저장소 모드에서는 파티션을 처리할 때 파티션 집계와 해당 원본 데이터의 복사본이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 다차원 구조로 저장됩니다. 이 MOLAP 구조는 최적의 쿼리 성능을 얻을 수 있도록 최적화된 구조입니다. 저장소 위치는 파티션이 정의된 컴퓨터나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 실행 중인 다른 컴퓨터일 수 있습니다. 원본 데이터 복사본이 다차원 구조에 있으므로 파티션의 원본 데이터에 액세스하지 않고 쿼리를 해결할 수 있습니다. 집계를 사용하면 쿼리 응답 시간이 훨씬 줄어들 수 있습니다. 파티션의 MOLAP 구조에 있는 데이터는 파티션에서 가장 최근에 처리 중인 데이터입니다.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 09/01/2017
   
     -   QUOTED_IDENTIFIER  
   
--   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 인덱스 키의 전체 크기는 900바이트를 초과할 수 없습니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]CREATE INDEX 문 처리 시 고정된 길이 키 열을 기반으로이 상태를 어설션 됩니다. 그러나 인덱스 키에 가변 길이 열이 있는 경우, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 는 또한이 상태는 기본 테이블에 대 한 모든 업데이트에 대 한 어설션 됩니다. 여러 집계에는 서로 다른 뷰 정의를 사용하므로, 인덱싱된 뷰를 사용하는 ROLAP 처리는 집계 디자인에 따라 성공할 수도 있고 실패할 수도 있습니다.  
+-   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 인덱스 키의 전체 크기는 900바이트를 초과할 수 없습니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] CREATE INDEX 문 처리 시 고정된 길이 키 열을 기반으로이 상태를 어설션 됩니다. 그러나 인덱스 키에 가변 길이 열이 있는 경우, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 는 또한이 상태는 기본 테이블에 대 한 모든 업데이트에 대 한 어설션 됩니다. 여러 집계에는 서로 다른 뷰 정의를 사용하므로, 인덱싱된 뷰를 사용하는 ROLAP 처리는 집계 디자인에 따라 성공할 수도 있고 실패할 수도 있습니다.  
   
 -   인덱싱된 뷰를 만드는 세션에는 다음 옵션이 ON으로 설정 되어 있어야: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING, 및 ANSI_WARNING 합니다. 이 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 지정할 수 있습니다.  
   
@@ -97,7 +95,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>관련 항목:  
  [자동 관리 캐싱 &#40; 파티션 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Analysis Services 데이터베이스 동기화](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [파티션&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [파티션 &#40; Analysis Services-다차원 데이터 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   
-

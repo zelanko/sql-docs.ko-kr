@@ -1,27 +1,27 @@
 ---
-title: "데이터 경고 메시지는 | Microsoft Docs"
+title: "데이터 경고 메시지 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-caps.latest.revision: 9
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "9"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8e12172ffc24d67a0ad27f07be3c08b17e9c660f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-alert-messages"></a>데이터 경고 메시지
 
@@ -29,23 +29,23 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services 데이터 경고 전자 메일을 통해 두 종류의 데이터 경고 메시지를 제공: 경고 메시지와 데이터 결과 전자 메일로 제공 합니다. 결과가 포함된 메시지는 모든 받는 사람에게 유용하고 비즈니스 의사 결정을 내리는 데 중요한 보고서 데이터 변경 사항에 대해 알려줍니다. 오류가 발생하여 결과를 사용할 수 없는 경우 오류 메시지를 대신 보냅니다.
+SQL Server Reporting Services 데이터 경고는 데이터 경고 결과가 포함된 메시지와 오류 설명이 포함된 메시지의 두 가지 종류의 데이터 경고 메시지를 전자 메일로 제공합니다. 결과가 포함된 메시지는 모든 받는 사람에게 유용하고 비즈니스 의사 결정을 내리는 데 중요한 보고서 데이터 변경 사항에 대해 알려줍니다. 오류가 발생하여 결과를 사용할 수 없는 경우 오류 메시지를 대신 보냅니다.
 
 또한 데이터 경고 정의 소유자는 데이터 경고 관리자에서 데이터 경고 인스턴스에 대한 정보를 볼 수 있습니다. 자세한 내용은 [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md)을 참조하세요.  
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
 ##  <a name="DataAlertMessages"></a> 데이터 경고 메시지  
  다음 그림에서는 결과가 포함된 데이터 경고 메시지와 오류 설명이 포함된 경고 메시지를 보여 줍니다.  
   
  **결과 메시지**  
   
- ![결과가 포함 된 데이터 경고 전자 메일 메시지가](../reporting-services/media/rs-alertmessageresults.gif "결과가 포함 된 데이터 경고 전자 메일 메시지")  
+ ![결과가 포함된 데이터 경고 전자 메일 메시지](../reporting-services/media/rs-alertmessageresults.gif "결과가 포함된 데이터 경고 전자 메일 메시지")  
   
  **오류 메시지입니다.**  
   
- ![데이터 경고 메시지와 오류 메시지](../reporting-services/media/rs-alertmessageerrror.gif "데이터 경고 메시지와 오류 메시지")  
+ ![오류 메시지가 포함된 데이터 경고 메시지](../reporting-services/media/rs-alertmessageerrror.gif "오류 메시지가 포함된 데이터 경고 메시지")  
   
  메시지에는 동일한 유형의 정보가 포함되어 있습니다.  
   
@@ -73,10 +73,9 @@ SQL Server Reporting Services 데이터 경고 전자 메일을 통해 두 종�
   
 -   [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [데이터 경고 디자이너](../reporting-services/data-alert-designer.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

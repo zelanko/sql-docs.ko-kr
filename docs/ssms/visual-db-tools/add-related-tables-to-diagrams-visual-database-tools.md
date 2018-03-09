@@ -3,8 +3,11 @@ title: "다이어그램에 관련 테이블 추가(Visual Database Tools) | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4f3bb71005dad9ef5cff8d797c58813a8adae05
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ae84e82ba503892c82661f3f1a4ebe06de4337f3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>다이어그램에 관련 테이블 추가(Visual Database Tools)
-선택한 테이블과 관련된 모든 테이블을 데이터베이스 다이어그램에 간편하게 추가할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 선택한 테이블과 관련된 모든 테이블을 데이터베이스 다이어그램에 간편하게 추가할 수 있습니다.  
   
 ### <a name="to-add-related-tables-to-a-diagram"></a>다이어그램에 관련 테이블을 추가하려면  
   

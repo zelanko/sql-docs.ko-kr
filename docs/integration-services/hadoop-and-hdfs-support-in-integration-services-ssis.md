@@ -1,11 +1,11 @@
 ---
-title: "Hadoop 및 HDFS 지원 Integration Services (SSIS)에서 | Microsoft Docs"
+title: "Integration Services(SSIS)에서 Hadoop 및 HDFS 지원 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - SQL13.SSIS.HADOOP.F1
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da5fafb4145da0d0122e5e57de3e025c012dca3a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e60b390dcb8549c1e776f83ef00049ff1b78d3ce
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Integration Services(SSIS)에서 Hadoop 및 HDFS 지원
   SQL Server 2016 Integration Services(SSIS)에는 Hadoop 및 HDFS 온-프레미스에 대한 지원을 제공하는 다음 구성 요소가 포함됩니다.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/03/2017
   
     -   [Hadoop 파일 시스템 태스크](../integration-services/control-flow/hadoop-file-system-task.md)  
   
-    -   [Hadoop 하이브 태스크](../integration-services/control-flow/hadoop-hive-task.md)  
+    -   [Hadoop Hive 태스크](../integration-services/control-flow/hadoop-hive-task.md)  
   
     -   [Hadoop Pig 작업](../integration-services/control-flow/hadoop-pig-task.md)  
   
@@ -51,4 +50,3 @@ ms.lasthandoff: 08/03/2017
     -   [HDFS 파일 대상](../integration-services/data-flow/hdfs-file-destination.md)  
   
   
-

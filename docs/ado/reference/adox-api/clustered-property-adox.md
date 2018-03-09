@@ -3,7 +3,7 @@ title: "Clustered 속성 (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Clustered property [ADOX]
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ff996467ecc3bb0d5fc1f84d370e3b6287e70866
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75650f172c8862e082d7e5e50bc589b1cf0fe623
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clustered-property-adox"></a>Clustered 속성 (ADOX)
 인덱스가 클러스터형 인지 여부를 나타냅니다.  
@@ -50,4 +49,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [Clustered 속성 예제(VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)
-

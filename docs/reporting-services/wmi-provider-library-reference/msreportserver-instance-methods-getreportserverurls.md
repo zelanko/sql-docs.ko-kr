@@ -1,31 +1,30 @@
 ---
-title: "GetReportServerUrls 메서드 (WMI MSReportServer_Instance) | Microsoft Docs"
+title: "GetReportServerUrls 메서드(WMI MSReportServer_Instance) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- GetReportServerUrls method
+helpviewer_keywords: GetReportServerUrls method
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
-caps.latest.revision: 12
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "12"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a4b7067d9e6360902bf76b1bfe27c7ed6541f481
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fb88837f3c9393c561e65c13656bb0e87a516325
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="msreportserverinstance-methods---getreportserverurls"></a>GetReportServerUrls-MSReportServer_Instance 메서드
+# <a name="msreportserverinstance-methods---getreportserverurls"></a>MSReportServer_Instance 메서드 - GetReportServerUrls
   사용자가 보고서 서버 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용할 수 있는 URL 목록을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -55,14 +54,13 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>반환 값  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  WMI 관리 개체에서 노출되는 메서드는 InvokeMethod 함수를 통해 호출됩니다. 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI 설명서의 "관리 개체에서 메서드 실행(Executing Methods on Management Objects)"을 참조하십시오.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b6ddedabeb826caf903701327b6b103666b2abb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 375898263ea58a2ac8dd9e54f86257d07d1daeca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 
 -   Azure Active Directory 만들기  
 
--   [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 검토하여 Azure 주요 자격 증명 모음을 사용하는 EKM 저장소의 보안 주체를 파악합니다.  
+-   [Azure Key Vault를 사용한 확장 가능 키 관리 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 검토하여 Azure Key Vault를 사용하는 EKM 저장소의 보안 주체를 파악합니다.  
 
 -   실행 중인 SQL Server 버전에 적절한 재배포 가능한 Visual Studio C++의 최신 버전이 설치되어 있는지 확인하세요.
   
@@ -275,7 +273,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
      다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 실행하여 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 을(를) 구성하고 EKM 공급자를 사용합니다.  
   
-    ```tsql  
+    ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -296,7 +294,7 @@ SQL Server 버전  |재배포 가능 설치 링크
      -- Azure 주요 자격 증명 모음에 대한 EKM 공급자인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터를 사용하여 암호화 공급자를 만듭니다.    
     이 예제에서는 `AzureKeyVault_EKM_Prov`이름을 사용합니다.  
   
-    ```tsql  
+    ```sql  
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
@@ -326,9 +324,9 @@ SQL Server 버전  |재배포 가능 설치 링크
         > [!IMPORTANT]  
         >  **클라이언트 ID**에서 하이픈을 제거해야 합니다.  
   
-    -   `SECRET` 인수의 두 번째 부분을 파트 1의 **클라이언트 암호** 를 사용하여 완성합니다. 이 예제에서 파트 1의 **클라이언트 암호** 는 `Replace-With-AAD-Client-Secret`입니다. `SECRET` 인수의 최종 문자열은 *하이픈 없는* 문자 및 숫자의 긴 시퀀스가 됩니다.  
+    -   `SECRET` 인수의 두 번째 부분을 파트 1의 **클라이언트 암호** 를 사용하여 완성합니다. 이 예제에서 파트 1의 **클라이언트 암호** 는 `Replace-With-AAD-Client-Secret`입니다. `SECRET` 인수의 최종 문자열은 *하이픈 없는*문자 및 숫자의 긴 시퀀스가 됩니다.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -353,7 +351,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
     -   `ContosoRSAKey0` 을 Azure 주요 자격 증명 모음의 키 이름으로 바꿉니다.  
   
-    ```tsql  
+    ```sql  
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
@@ -368,4 +366,3 @@ SQL Server 버전  |재배포 가능 설치 링크
 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
-

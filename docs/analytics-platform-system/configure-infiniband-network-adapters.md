@@ -3,10 +3,10 @@ title: "Analytics Platform System (APS)의 InfiniBand 네트워크 어댑터 구
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -14,12 +14,12 @@ description: "SQL Server 병렬 데이터 웨어하우스 (PDW) 제어 노드에
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: "15"
-ms.openlocfilehash: 007e595f52ab891438c862afa6d94d68644b091f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 InfiniBand 네트워크 어댑터 구성
 SQL Server 병렬 데이터 웨어하우스 (PDW) 제어 노드에 연결 하려면 비 어플라이언스 클라이언트 서버에 InfiniBand 네트워크 어댑터를 구성 하는 방법에 설명 합니다. 로드, 백업, 및 기타 프로세스 활성 InfiniBand 네트워크에 자동으로 연결 해 되도록 하 고 고가용성을 위해 기본 연결에 대 한 다음이 지침을 사용 합니다.  
@@ -77,9 +77,9 @@ SQLCTL01를 사용 하 여 분석 플랫폼 시스템 DNS는 활성 InfiniBand �
   
     ![관리 노드에서의 InfiniBand 연결](media/network-teamib.png "관리 노드에서의 InfiniBand 연결")  
   
-4.  에 대 한 값은 인터넷 프로토콜 버전 4 (TCP/IPv4) 속성 창에서 기록 된 **IP 주소** 및 **서브넷 마스크**합니다.  IP 주소는  ***appliance_domain*-AD01** 노드는 분석 플랫폼 시스템 DNS 서버의 IP 주소입니다.  
+4.  에 대 한 값은 인터넷 프로토콜 버전 4 (TCP/IPv4) 속성 창에서 기록 된 **IP 주소** 및 **서브넷 마스크**합니다.  IP 주소는 ***appliance_domain *-AD01** 노드는 분석 플랫폼 시스템 DNS 서버의 IP 주소입니다.  
   
-5.  TeamIB1 어댑터에 대해 1-5 위의 단계를 반복  ***appliance_domain*-AD02** 서버입니다.  
+5.  TeamIB1 어댑터에 대해 1-5 위의 단계를 반복 ***appliance_domain *-AD02** 서버입니다.  
   
     ![PDW 관리 노드 InfiniBand 1 속성](media/network-ip1-properties.png "PDW 관리 노드 InfiniBand 1 속성")  
   
@@ -168,7 +168,7 @@ SQLCTL01를 사용 하 여 분석 플랫폼 시스템 DNS는 활성 InfiniBand �
   
 2.  에 고급을 클릭 하십시오... 단추를 선택합니다.  
   
-3.  고급 TCP/IP 설정 창에서 추가 DNS 접미사 (순서 대로) 옵션 이러한가 되지 회색 경우 확인 상자 호출 다음 DNS 접미사 추가 순서에 따라:, 기기 도메인 접미사를 선택 하 고 추가 클릭 하 고 있습니다... 어플라이언스 도메인 접미사가 됩니다.`appliance_domain.local`  
+3.  고급 TCP/IP 설정 창에서 추가 DNS 접미사 (순서 대로) 옵션 이러한가 되지 회색 경우 확인 상자 호출 다음 DNS 접미사 추가 순서에 따라:, 기기 도메인 접미사를 선택 하 고 추가 클릭 하 고 있습니다... 어플라이언스 도메인 접미사가 됩니다. `appliance_domain.local`  
   
 4.  다음이 DNS 접미사 (순서 대로)는 추가 하는 경우: 옵션이 회색, HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient 레지스트리 키를 수정 하 여이 서버에 APS 도메인을 추가할 수 있습니다.  
   
@@ -182,10 +182,10 @@ SQLCTL01를 사용 하 여 분석 플랫폼 시스템 DNS는 활성 InfiniBand �
   
     MyAPS MyPDW PDW 영역 이라는 라는 기기를 위한 예제:  
   
-    -   MyPDW SQLCTL01.MyAPS.local  
+    -   MyPDW-SQLCTL01.MyAPS.local  
   
-    -   MyPDW SQLCTL01  
+    -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>관련 항목:  
-[획득 하 고 로드 하는 서버를 구성 합니다.](acquire-and-configure-loading-server.md)  
+[획득 하 고 로드 하는 서버를 구성 합니다. ](acquire-and-configure-loading-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "catalog.deny_permission (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.deny_permission(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 689a59e92286881fa3be7ee3754a786ccb54ae6c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a04ae959af4c0a23b3a954e590df424aa1536949
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,44 +39,44 @@ catalog.deny_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @object_type =] *object_type*  
- 보안 개체의 유형입니다. 보안 개체 유형에 폴더 (`1`), 프로젝트 (`2`), 환경 (`3`), 및 작업 (`4`). *object_type* 은 **smallint***합니다.*  
+ [ @object_type = ] *object_type*  
+ 보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다. *object_type*은 **smallint****입니다.  
   
- [ @object_id =] *object_id*  
- 보안 개체의 고유 식별자(ID) 또는 기본 키입니다. *object_id* 은 **bigint**합니다.  
+ [ @object_id = ] *object_id*  
+ 보안 개체의 고유 식별자(ID) 또는 기본 키입니다. *object_id*는 **bigint**입니다.  
   
- [ @principal_id =] *principal_id*  
- 거부할 보안 주체의 ID입니다. *principal_id* 은 **int**합니다.  
+ [ @principal_id = ] *principal_id*  
+ 거부할 보안 주체의 ID입니다. *principal_id*는 **int**입니다.  
   
- [ @permission_type =] *permission_type*  
- 거부할 사용 권한의 유형입니다. *permission_type* 은 **smallint**합니다.  
+ [ @permission_type = ] *permission_type*  
+ 거부할 사용 권한의 유형입니다. *permission_type*은 **smallint**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공)  
   
- 1 (object_class 잘못 되었습니다.)  
+ 1(object_class가 유효하지 않습니다.)  
   
- 2 (object_id 존재 하지 않음)  
+ 2(object_id가 없습니다.)  
   
- 3 (보안 주체가 존재 하지 않음)  
+ 3(보안 주체가 없습니다.)  
   
- 4 (권한이 잘못 되었습니다.)  
+ 4(권한이 잘못되었습니다.)  
   
  5(기타 오류)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   개체에 대한 MANAGE_PERMISSIONS 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 저장 프로시저를 통해 다음 표에 설명된 사용 권한 유형을 거부할 수 있습니다.  
   
 |permission_type 값|사용 권한 이름|사용 권한 설명|적용할 수 있는 개체 유형|  
@@ -95,9 +94,8 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="errors-and-warnings"></a>오류 및 경고  
  다음 목록에서는 오류나 경고가 발생하는 몇 가지 조건을 설명합니다.  
   
--   Permission_type를 지정 하는 경우 프로시저는 명시적으로 지정된 된 개체에 대 한 지정된 된 보안 주체에 할당 된 지정된 된 사용을 거부 합니다. 해당 인스턴스가 없는 경우에도 프로시저에서 성공 코드 값(`0`)을 반환합니다.  
+-   permission_type을 지정한 경우 이 프로시저는 지정된 개체의 지정된 보안 주체에 명시적으로 할당된 지정된 사용 권한을 거부합니다. 해당 인스턴스가 없는 경우에도 프로시저에서 성공 코드 값(`0`)을 반환합니다.  
   
--   Permission_type를 생략 하면 프로시저는 지정된 된 개체에 지정된 된 보안 주체에 대 한 모든 권한을 거부 합니다.  
+-   permission_type을 생략한 경우 이 프로시저는 지정된 개체의 지정된 보안 주체에 대한 모든 사용 권한을 거부합니다.  
   
   
-

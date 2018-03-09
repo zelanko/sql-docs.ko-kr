@@ -1,5 +1,5 @@
 ---
-title: "버전 (Transact SQL) | Microsoft Docs"
+title: UPDATE (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
-caps.latest.revision: 7
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1905ef3b0f31e91d6cec00c0314770b7686e8c51
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8ba4237f9a43a525571a2d25f95acb0a31d4a5cb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="version---transact-sql-metadata-functions"></a>버전-Transact SQL 메타 데이터 함수
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -54,8 +53,7 @@ SELECT VERSION();
 ```  
   
 ## <a name="see-also"></a>관련 항목: 
-[세션 ID (Transact SQL)](../../t-sql/functions/session-id-transact-sql.md)  
+[SESSION_ID (Transact SQL)](../../t-sql/functions/session-id-transact-sql.md)  
 [DB_NAME &#40; Transact SQL &#41;](../../t-sql/functions/db-name-transact-sql.md)  
   
   
-

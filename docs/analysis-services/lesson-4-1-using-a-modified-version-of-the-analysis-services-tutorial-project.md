@@ -2,47 +2,47 @@
 title: "Tutorial 프로젝트를 Services 분석의 수정된 된 버전을 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 10cb63369b23a19ecb126ee210de2a90ed114fc4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>단원 4-1-Analysis Services Tutorial 프로젝트의 수정된 된 버전을 사용 하 여
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 이 자습서의 나머지 단원은 처음 세 단원에서 완료한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 향상된 버전을 기반으로 합니다. 추가 테이블과 명명된 계산이 **Adventure Works DW 2012** 데이터 원본 뷰에 추가되고 추가 차원이 프로젝트에 추가되었으며 이러한 새 차원이 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 추가되었습니다. 또한 두 번째 팩트 테이블에서 가져온 측정값을 포함하는 두 번째 측정값 그룹이 추가되었습니다. 이 향상된 프로젝트를 사용하면 이미 배운 기술을 반복하지 않아도 비즈니스 인텔리전스 응용 프로그램에 기능을 추가하는 방법을 계속 익힐 수 있습니다.  
   
 자습서를 계속 진행하려면 먼저 향상된 버전의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 다운로드하고 압축을 풀고 로드하고 처리해야 합니다.  이 단원의 지침을 사용하여 모든 단계를 수행했는지 확인합니다.  
   
 ## <a name="downloading-and-extracting-the-project-file"></a>프로젝트 파일 다운로드 및 압축 풀기  
   
-1.  이 자습서와 함께 제공되는 샘플 프로젝트를 제공하는 다운로드 페이지로 이동하려면[여기를 클릭](http://go.microsoft.com/fwlink/?LinkID=221866) 하세요. 자습서 프로젝트는 **Analysis Services Tutorial SQL Server 2012** 다운로드에 포함되어 있습니다.  
+1.  이 자습서와 함께 제공되는 샘플 프로젝트를 제공하는 다운로드 페이지로 이동하려면 [여기를 클릭](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)하세요. 에 포함 된 자습서 프로젝트는 **adventure-works-다차원-자습서-projects.zip** 다운로드 합니다.  
   
-2.  **Analysis Services Tutorial SQL Server 2012** 를 클릭하여 이 자습서에 사용할 프로젝트가 포함되어 있는 패키지를 다운로드합니다.  
+2.  클릭 **adventure-works-다차원-자습서-projects.zip** 이 자습서에 대 한 프로젝트를 포함 하 여 패키지를 다운로드 합니다.  
   
     기본적으로 .zip 파일은 Downloads 폴더에 저장됩니다. .zip 파일을 짧은 경로 위치로 이동해야 합니다. 예를 들어 파일을 저장할 C:\Tutorials 폴더를 만듭니다.  그런 다음 .zip 파일에 포함된 파일의 압축을 풉니다. Downloads 폴더에 있는 긴 경로 파일의 압축을 풀면 1단원만 사용할 수 있습니다.  
   
 3.  루트 드라이브 또는 루트 드라이브 근처에 하위 폴더(예: C:\Tutorial)를 만듭니다.  
   
-4.  **Analysis Services Tutorial SQL Server 2012.zip** 파일을 하위 폴더로 이동합니다.  
+4.  이동 된 **adventure-works-다차원-자습서-projects.zip** 하위 폴더에는 파일입니다.  
   
 5.  이 파일을 마우스 오른쪽 단추로 클릭하고 **압축 풀기**를 선택합니다.  
   
@@ -129,4 +129,3 @@ Geography 차원은 **Adventure Works DW 2012** 데이터 원본 뷰의 **Geogra
 ## <a name="see-also"></a>관련 항목:  
 [Analysis Services 프로젝트 배포](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
-

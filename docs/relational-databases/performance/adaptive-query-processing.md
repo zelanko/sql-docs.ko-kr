@@ -2,10 +2,13 @@
 title: "Microsoft SQL 데이터베이스의 적응 쿼리 처리 | Microsoft Docs | Microsoft Docs"
 description: "SQL Server 2017 이상 및 Azure SQL Database에서 쿼리 성능을 향상시키는 적응 쿼리 처리 기능입니다."
 ms.custom: 
-ms.date: 10/13/2017
-ms.prod: sql-server-2017
+ms.date: 11/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,19 +16,16 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack;monicar
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 139d73430346cdad7baa27d90c14ad692be5bbeb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
-
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 데이터베이스의 적응 쿼리 처리
-
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 이 문서에서는 SQL Server 및 Azure SQL Database에서 쿼리 성능을 향상시키는 데 사용할 수 있는 다음과 같은 적응 쿼리 처리 기능을 소개합니다.
 - 일괄 처리 모드 메모리 부여 피드백
@@ -41,7 +41,7 @@ ms.lasthandoff: 10/13/2017
 ![적응 쿼리 처리 기능](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>적응 쿼리 처리를 사용하도록 설정하는 방법
-데이터베이스에 대해 호환성 수준 140을 사용하도록 설정하여 워크로드가 적응 쿼리 처리에 자동으로 적합하도록 만들 수 있습니다.  Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어
+데이터베이스에 대해 호환성 수준 140을 사용하도록 설정하여 워크로드가 적응 쿼리 처리에 자동으로 적합하도록 만들 수 있습니다.  Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
@@ -71,7 +71,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 최적 상태를 유지하려면 매개 변수 값마다 다른 쿼리 계획이 필요할 수도 있습니다. 이러한 유형의 쿼리를 "매개 변수가 중요한" 쿼리로 정의합니다. 매개 변수가 중요한 계획의 경우 메모리 요구 사항이 불안정하면 쿼리에서 메모리 부여 피드백이 자동으로 비활성화됩니다.  쿼리가 여러 번 반복 실행된 후 계획이 비활성화되며, *memory_grant_feedback_loop_disabled* XEvent를 모니터링하면 이를 관찰할 수 있습니다.
 
 ### <a name="memory-grant-feedback-caching"></a>메모리 부여 피드백 캐싱
-단일 실행에 대해 캐시된 계획에 피드백을 저장할 수 있습니다. 그러나 메모리 부여 피드백 조정의 혜택을 받는 것은 해당 문의 연속 실행입니다. 이 기능은 문의 반복 실행에 적용됩니다. 메모리 부여 피드백은 캐시된 계획만 변경합니다. 변경 내용은 현재 쿼리 Ssore에 캡처되지 않습니다.
+단일 실행에 대해 캐시된 계획에 피드백을 저장할 수 있습니다. 그러나 메모리 부여 피드백 조정의 혜택을 받는 것은 해당 문의 연속 실행입니다. 이 기능은 문의 반복 실행에 적용됩니다. 메모리 부여 피드백은 캐시된 계획만 변경합니다. 변경 내용은 현재 쿼리 저장소에 캡처되지 않습니다.
 캐시에서 계획을 제거하면 피드백이 유지되지 않습니다. 장애 조치(failover)가 있는 경우에도 피드백이 손실됩니다. OPTION(RECOMPILE)을 사용하는 문은 새 계획을 만들지만 캐시하지 않습니다. 캐시되지 않으므로 메모리 부여 피드백이 생성되지 않으며 해당 컴파일 및 실행을 위해 저장되지 않습니다.  그러나 OPTION(RECOMPILE)을 사용하지 *않는* 동등한 문(즉, 동일한 쿼리 해시 포함)을 캐시한 후 다시 실행하는 경우 연속된 문은 메모리 부여 피드백에서 혜택을 받을 수 있습니다.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>메모리 부여 피드백 작업 추적
@@ -183,7 +183,7 @@ SQL Server 2014 및 SQL Server 2016에서는 MSTVF에 대한 고정 카디널리
 1. 또한 MSTVF 테이블 검색에서 나오는 실제 행 수에 따라 더 많은 메모리를 다시 부여하기 때문에 분산 경고가 더 이상 표시되지 않습니다.
 
 ### <a name="interleaved-execution-eligible-statements"></a>인터리브 실행 적합한 문
-인터리브 실행의 MSTVF 참조 문은 현재 읽기 전용이어야 하며 데이터 수정 작업에 포함되면 안 됩니다. 또한 MSTVF는 CROSS APPLY 내부에서 사용되는 경우 인터리브 실행에 적합하지 않습니다.
+인터리브 실행의 MSTVF 참조 문은 현재 읽기 전용이어야 하며 데이터 수정 작업에 포함되면 안 됩니다. 또한 런타임 상수를 사용하지 않는 경우 MSTVF는 인터리브 방식으로 실행할 수 없습니다.
 
 ### <a name="interleaved-execution-benefits"></a>인터리브 실행 혜택
 일반적으로 다운스트림 계획 작업 수와 더불어 실제 행 수와 예상치 간의 차이가 클수록 성능에 미치는 영향이 커집니다.
@@ -224,12 +224,11 @@ OPTION(RECOMPILE)을 사용하는 문은 인터리브 실행을 사용하는 새
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>인터리브 실행 및 쿼리 저장소 상호 운용성
 인터리브 실행을 사용하는 계획을 강제로 적용할 수 있습니다. 계획은 초기 실행에 따라 카디널리티 예상치를 수정한 버전입니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 
 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)
 
 [Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)(적응 쿼리 처리 시연)      
-
 

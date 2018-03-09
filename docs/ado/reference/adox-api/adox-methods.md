@@ -3,7 +3,7 @@ title: "ADOX 메서드 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 73fcca57a0cb497694bf843f1569a51868282a89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fcd840f212ce73a0c059c74c5710cce9366126a3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-methods"></a>ADOX 메서드
 |||  
@@ -39,7 +38,7 @@ ms.lasthandoff: 09/09/2017
 |[(테이블)를 추가 합니다.](../../../ado/reference/adox-api/append-method-adox-tables.md)|새로 추가 **테이블** 개체는 **테이블** 컬렉션입니다.|  
 |[(사용자)를 추가 합니다.](../../../ado/reference/adox-api/append-method-adox-users.md)|새로 추가 **사용자** 개체는 **사용자** 컬렉션입니다.|  
 |[(뷰)를 추가 합니다.](../../../ado/reference/adox-api/append-method-adox-views.md)|새로 추가 **보기** 개체는 **뷰** 컬렉션입니다.|  
-|[암호 변경](../../../ado/reference/adox-api/changepassword-method-adox.md)|사용자 계정의 암호를 변경합니다.|  
+|[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|사용자 계정의 암호를 변경합니다.|  
 |[만들기](../../../ado/reference/adox-api/create-method-adox.md)|새 카탈로그를 만듭니다.|  
 |[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|컬렉션에서 개체를 제거 합니다.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|카탈로그에 있는 개체의 소유자를 반환합니다.|  
@@ -50,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
  [DDL(데이터 정의 언어) 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

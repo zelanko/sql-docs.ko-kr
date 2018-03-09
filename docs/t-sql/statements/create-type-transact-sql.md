@@ -29,17 +29,16 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 - data types [SQL Server], creating
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-caps.latest.revision: 92
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4e7f411871d98fc6854b97478402567017d28222
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 145f60bcec81e8a29761a44146df025f66a21b80
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -207,7 +206,7 @@ column_name <data_type>
  **[.** *class_name***]**   
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 사용자 정의 형식을 구현하는 어셈블리 내 클래스를 지정합니다. *class_name* 유효한 식별자 여야 하며 어셈블리 표시 유형이 있는 어셈블리에 클래스로 존재 해야 합니다. *class_name* 데이터베이스 데이터 정렬에 관계 없이 대/소문자 이며 해당 어셈블리의 클래스 이름과 정확히 일치 해야 합니다. 클래스 이름을 대괄호로 묶인 네임 스페이스로 한정 이름일 수 있습니다 (****)는 클래스를 작성 하는 데 사용 되는 프로그래밍 언어는 C#과 같은 네임 스페이스의 개념을 사용 하는 경우. 경우 *class_name* 를 지정 하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 같은 것으로 간주 *type_name*합니다.  
+ 사용자 정의 형식을 구현하는 어셈블리 내 클래스를 지정합니다. *class_name* 유효한 식별자 여야 하며 어셈블리 표시 유형이 있는 어셈블리에 클래스로 존재 해야 합니다. *class_name* 데이터베이스 데이터 정렬에 관계 없이 대/소문자 이며 해당 어셈블리의 클래스 이름과 정확히 일치 해야 합니다. 클래스 이름을 대괄호로 묶인 네임 스페이스로 한정 이름일 수 있습니다 (**[]**)는 클래스를 작성 하는 데 사용 되는 프로그래밍 언어는 C#과 같은 네임 스페이스의 개념을 사용 하는 경우. 경우 *class_name* 를 지정 하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 같은 것으로 간주 *type_name*합니다.  
   
  \<column_definition >  
  사용자 정의 테이블 형식의 열을 정의합니다.  
@@ -228,12 +227,12 @@ column_name <data_type>
  고유 클러스터형 또는 고유 비클러스터형 인덱스에 여러 행을 삽입하는 작업에서 중복된 키 값이 있는 경우에 대한 오류 응답을 지정합니다. 인덱스 옵션에 대 한 자세한 내용은 참조 [CREATE index&#40; Transact SQL &#41; ](../../t-sql/statements/create-index-transact-sql.md).  
   
  INDEX  
- CREATE TABLE 문의 일부로 열 및 테이블 인덱스를 지정해야 합니다. CREATE INDEX 및 DROP INDEX는 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다.  
+ CREATE TABLE 문의 일부로 열 및 테이블 인덱스를 지정해야 합니다. CREATE INDEX 및 DROP INDEX는 메모리 최적화 테이블에서 지원되지 않습니다.  
   
  MEMORY_OPTIMIZED  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
   
- 테이블 형식이 메모리 액세스에 최적화된 형식인지 여부를 나타냅니다. 이 옵션은 기본적으로 해제됩니다. 테이블(형식)은 메모리 액세스에 최적화된 테이블(형식)이 아닙니다. 메모리 액세스에 최적화된 테이블 형식은 메모리 액세스에 최적화된 사용자 테이블입니다. 디스크에 저장된 스키마는 다른 사용자 테이블과 비슷합니다.  
+ 테이블 형식이 메모리 액세스에 최적화된 형식인지 여부를 나타냅니다. 이 옵션은 기본적으로 해제됩니다. 테이블(형식)은 메모리 액세스에 최적화된 테이블(형식)이 아닙니다. 메모리 최적화 테이블 형식은 메모리 최적화 사용자 테이블입니다. 디스크에 저장된 스키마는 다른 사용자 테이블과 비슷합니다.  
   
  BUCKET_COUNT  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
@@ -313,4 +312,3 @@ GO
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

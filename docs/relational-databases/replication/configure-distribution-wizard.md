@@ -2,27 +2,30 @@
 title: "배포 구성 마법사 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Configure Distribution Wizard
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c11ae9934974e7e02ee1b4b78b4a172f15129a3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b700916165340f23dfe73e7364ff0bb27f2f984a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="configure-distribution-wizard"></a>배포 구성 마법사
-  이 섹션에서는 배포 구성 마법사의 다음 페이지에 대한 정보를 제공합니다.  
+# <a name="configure-distribution-wizard"></a>Configure Distribution Wizard
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 배포 구성 마법사의 다음 페이지에 대한 정보를 제공합니다.  
   
 -   [배포자](../../relational-databases/replication/distributor.md)  
   
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [배포자 암호](../../relational-databases/replication/distributor-password.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [배포 구성](../../relational-databases/replication/configure-distribution.md)   
  [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [속성 참조&#40;복제&#41;](../../relational-databases/replication/properties-reference-replication.md)  

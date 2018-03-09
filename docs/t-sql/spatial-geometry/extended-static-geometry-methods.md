@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Extended Static Geometry Methods [SQL Server]
 ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f16c55a70d6bf0a4aaf9c8782a7d6030b03a46fc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cd2a003e0349b01a5234a60e66fd064213203984
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extended-static-geometry-methods"></a>확장 정적 기하 도형 메서드
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,13 +49,12 @@ ms.lasthandoff: 09/01/2017
   
 -   [구문 분석](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
--   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
+-   [점](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [정적 기 하 도형 집계 메서드](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
  [Geometry 인스턴스의 확장된 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
- [OGC 정적 기 하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [OGC 정적 기하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
-

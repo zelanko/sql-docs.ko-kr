@@ -3,8 +3,11 @@ title: "경로 식 (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - path expressions [XQuery]
 - expressions [XQuery], path
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e47b66d37e7b43f2921d8d6edf626a6b9178b7e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db503aeb452dbaa096331f7b1df8cb39b2a62f21
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions-xquery"></a>경로 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery 경로 식은 문서에서 요소, 특성 및 텍스트 노드와 같은 노드를 찾습니다. 경로 식의 결과는 항상 결과 시퀀스에 중복 노드 없이 문서 순서에 따라 발생합니다. 경로를 지정할 때 비축약형 또는 축약형 구문을 사용할 수 있습니다. 다음은 비축약형 구문에 대한 내용입니다. 축약형 구문에 대해서는 이 항목의 뒷부분에서 설명합니다.  
   
@@ -57,7 +59,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="axis-step"></a>축 단계  
  경로 식의 축 단계는 다음 부분으로 구성됩니다.  
   
- [축](../xquery/path-expressions-specifying-axis.md)  
+ [axis](../xquery/path-expressions-specifying-axis.md)  
  이동 방향을 정의합니다. 컨텍스트 노드에서 시작하여 축이 지정하는 방향으로 도달할 수 있는 노드로 이동하는 경로 식의 축 단계입니다.  
   
  [노드 테스트](../xquery/path-expressions-specifying-node-test.md)  
@@ -102,4 +104,3 @@ id(/a/b)
  경로 식에서 축약형 구문을 사용하는 방법에 대해 설명합니다.  
   
   
-

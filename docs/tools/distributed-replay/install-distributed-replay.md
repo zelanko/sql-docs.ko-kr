@@ -2,9 +2,12 @@
 title: "Distributed Replay 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,16 +15,16 @@ ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 429751190eb204503600a09c2ca8aa7ca15713b4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay"></a>Distributed Replay 설치
-  Distributed Replay는 다음 세 가지 방법 중 하나로 설치할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Distributed Replay는 다음 세 가지 방법 중 하나에 설치할 수 있습니다.  
   
 -   [설치 마법사에서 Distributed Replay 설치](#bkmk_wizard)  
   
@@ -64,7 +67,7 @@ ms.lasthandoff: 11/09/2017
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools  
   
-     \- 또는  
+     \- OR-  
   
      \<공유 기능 디렉터리 > \Tools\\(사용자가 입력 한 대체 공유 기능 디렉터리)  
   
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/09/2017
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
-     \- 또는  
+     \- OR-  
   
      \<공유 기능 디렉터리 (x86) > \Tools\\(사용자가 입력 한 대체 공유 기능 (x86) 디렉터리)  
   
@@ -156,18 +159,18 @@ ms.lasthandoff: 11/09/2017
   
  다음 표에 나와 있는 매개 변수를 사용하여 설치 명령줄 스크립트를 개발할 수 있습니다.  
   
-|매개 변수|설명|지원되는 값|  
+|매개 변수|Description|지원되는 값|  
 |---------------|-----------------|----------------------|  
-|/CTLRSVCACCOUNT<br /><br /> **선택 사항**|Distributed Replay Controller 서비스의 서비스 계정|계정 및 암호 확인|  
-|/CTLRSVCPASSWORD<br /><br /> **선택 사항**|Distributed Replay Controller 서비스 계정의 암호|계정 및 암호 확인|  
+|/CTLRSVCACCOUNT<br /><br /> **선택**|Distributed Replay Controller 서비스의 서비스 계정|계정 및 암호 확인|  
+|/CTLRSVCPASSWORD<br /><br /> **선택**|Distributed Replay Controller 서비스 계정의 암호|계정 및 암호 확인|  
 |/CTLRSTARTUPTYPE<br /><br /> **선택 사항**|Distributed Replay Controller 서비스의 시작 유형|자동<br /><br /> 사용 안 함<br /><br /> 수동|  
-|/CTLRUSERS<br /><br /> **선택 사항**|Distributed Replay Controller 서비스에 대한 사용 권한을 가지는 사용자를 지정합니다.|구분 기호로 공백(" ")을 사용하는 일련의 사용자 계정 문자열<br /><br /> **중요**: Distributed Replay Controller 서비스를 구성할 때 Distributed Replay Client 서비스를 실행하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.<br /><br /> 도메인 사용자 계정<br /><br /> 사용자가 만든 로컬 사용자 계정<br /><br /> 관리자<br /><br /> 관리자<br /><br /> 가상 계정 및 MSA(관리 서비스 계정)<br /><br /> 네트워크 서비스, 로컬 서비스 및 시스템<br /><br /> <br /><br /> 참고: 그룹 계정(로컬 또는 도메인) 및 다른 기본 제공 계정(예: Everyone)은 사용할 수 없습니다.|  
-|/CLTSVCACCOUNT<br /><br /> **선택 사항**|Distributed Replay Client 서비스의 서비스 계정|계정 및 암호 확인|  
-|/CLTSVCPASSWORD<br /><br /> **선택 사항**|Distributed Replay Client 서비스 계정의 암호|계정 및 암호 확인|  
-|/CLTSTARTUPTYPE<br /><br /> **선택 사항**|Distributed Replay Client 서비스의 시작 유형|자동<br /><br /> 사용 안 함<br /><br /> 수동|  
-|/CLTCTLRNAME<br /><br /> **선택 사항**|클라이언트에서 Distributed Replay Controller 서비스를 위해 통신하는 컴퓨터 이름||  
-|/CLTWORKINGDIR<br /><br /> **선택 사항**|Distributed Replay Client 서비스의 작업 디렉터리|올바른 경로|  
-|/CLTRESULTDIR<br /><br /> **선택 사항**|Distributed Replay Client 서비스의 결과 디렉터리|올바른 경로|  
+|/CTLRUSERS<br /><br /> **선택**|Distributed Replay Controller 서비스에 대한 사용 권한을 가지는 사용자를 지정합니다.|구분 기호로 공백(" ")을 사용하는 일련의 사용자 계정 문자열<br /><br /> **중요**: Distributed Replay Controller 서비스를 구성할 때 Distributed Replay Client 서비스를 실행하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.<br /><br /> 도메인 사용자 계정<br /><br /> 사용자가 만든 로컬 사용자 계정<br /><br /> 관리자<br /><br /> 관리자<br /><br /> 가상 계정 및 MSA(관리 서비스 계정)<br /><br /> 네트워크 서비스, 로컬 서비스 및 시스템<br /><br /> <br /><br /> 참고: 그룹 계정(로컬 또는 도메인) 및 다른 기본 제공 계정(예: Everyone)은 사용할 수 없습니다.|  
+|/CLTSVCACCOUNT<br /><br /> **선택**|Distributed Replay Client 서비스의 서비스 계정|계정 및 암호 확인|  
+|/CLTSVCPASSWORD<br /><br /> **선택**|Distributed Replay Client 서비스 계정의 암호|계정 및 암호 확인|  
+|/CLTSTARTUPTYPE<br /><br /> **선택**|Distributed Replay Client 서비스의 시작 유형|자동<br /><br /> 사용 안 함<br /><br /> 수동|  
+|/CLTCTLRNAME<br /><br /> **선택**|클라이언트에서 Distributed Replay Controller 서비스를 위해 통신하는 컴퓨터 이름||  
+|/CLTWORKINGDIR<br /><br /> **선택**|Distributed Replay Client 서비스의 작업 디렉터리|올바른 경로|  
+|/CLTRESULTDIR<br /><br /> **선택**|Distributed Replay Client 서비스의 결과 디렉터리|올바른 경로|  
   
 ### <a name="sample-syntax"></a>예제 구문:  
  **Distributed Replay Controller 구성 요소를 설치하려면**  
@@ -217,11 +220,11 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  구성 파일에서는 암호를 구성할 수 없으므로 명령줄에서 두 암호를 모두 지정해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay 요구 사항](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [관리 도구 명령줄 옵션 &#40; Distributed Replay utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

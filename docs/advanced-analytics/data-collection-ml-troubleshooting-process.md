@@ -2,28 +2,30 @@
 title: "기계 학습-에 대 한 데이터 수집 SQL Server 문제 해결"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: b9185b1798c638541a5228d9cbe9e675a8de3427
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>기계 학습에 대 한 데이터 수집 문제 해결
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 설치, 구성 또는 SQL Server에서 학습 하는 컴퓨터의 성능 문제를 해결 하려고 할 때 수집 해야 하는 데이터의 종류를 설명 합니다. 이러한 데이터 로그, 오류 메시지 및 시스템 정보를 포함합니다.
 
@@ -345,4 +347,3 @@ R 런타임 작동 하는 경우 오류를 반환 하는 스크립트는 전용�
 ## <a name="see-also"></a>참고 항목
 
 [SQL Server의 기계 학습 문제 해결](machine-learning-troubleshooting-faq.md)
-

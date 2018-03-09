@@ -2,9 +2,12 @@
 title: "복제 에이전트 이벤트에 대한 경고 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,18 +24,18 @@ helpviewer_keywords:
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67c68cfcba51bcd9bd2dfb8512108766fe1240e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 000b57b9e462be4babcf15d94017fec5b5422855
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>복제 에이전트 이벤트에 대한 경고 사용
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서는 경고를 사용하여 복제 에이전트 이벤트 등의 이벤트를 모니터링하는 방법을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 경고와 관련된 이벤트에 대한 Windows 응용 프로그램 로그를 모니터링합니다. 이런 이벤트가 발생하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 사용자가 정의한 태스크를 실행하거나 지정된 운영자에게 전자 메일 또는 호출기 메시지를 보내어 자동으로 응답합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 태스크를 실행하거나 운영자에게 알리도록 구성할 수 있는 복제 에이전트에 대한 미리 정의된 경고 집합이 포함되어 있습니다. 실행할 태스크를 정의하는 방법은 이 항목의 "경고에 대한 응답 자동화" 섹션을 참조하십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서는 경고를 사용하여 복제 에이전트 이벤트 등의 이벤트를 모니터링하는 방법을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 경고와 관련된 이벤트에 대한 Windows 응용 프로그램 로그를 모니터링합니다. 이런 이벤트가 발생하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 사용자가 정의한 태스크를 실행하거나 지정된 운영자에게 전자 메일 또는 호출기 메시지를 보내어 자동으로 응답합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 태스크를 실행하거나 운영자에게 알리도록 구성할 수 있는 복제 에이전트에 대한 미리 정의된 경고 집합이 포함되어 있습니다. 실행할 태스크를 정의하는 방법은 이 항목의 "경고에 대한 응답 자동화" 섹션을 참조하십시오.  
   
  컴퓨터가 배포자로 구성될 때는 다음과 같은 경고가 설치됩니다.  
   
@@ -41,8 +44,8 @@ ms.lasthandoff: 11/09/2017
 |14150|**복제: 에이전트 성공**|에이전트가 성공적으로 종료됩니다.|예|  
 |14151|**복제: 에이전트 실패**|오류로 인해 에이전트가 종료됩니다.|예|  
 |14152|**복제: 에이전트 다시 시도**|불필요한 작업을 다시 시도한 후 에이전트가 종료합니다. 에이전트에는 사용할 수 없는 서버, 교착 상태, 연결 실패, 제한 시간 실패 등이 발생합니다.|예|  
-|14157|**복제: 만료된 구독 삭제**|만료된 구독이 삭제되었습니다.|아니요|  
-|20572|**복제: 유효성 검사 실패 후에 구독이 다시 초기화되었습니다.**|'데이터 유효성 검사 실패 시 구독 다시 초기화' 응답 작업이 구독을 성공적으로 다시 초기화합니다.|아니요|  
+|14157|**복제: 만료된 구독 삭제**|만료된 구독이 삭제되었습니다.|아니오|  
+|20572|**복제: 유효성 검사 실패 후에 구독이 다시 초기화되었습니다.**|'데이터 유효성 검사 실패 시 구독 다시 초기화' 응답 작업이 구독을 성공적으로 다시 초기화합니다.|아니오|  
 |20574|**복제: 구독자가 데이터 유효성 검사에 실패했습니다.**|배포 또는 병합 에이전트가 데이터 유효성 검사에 실패합니다.|예|  
 |20575|**복제: 구독자가 데이터 유효성 검사를 통과했습니다.**|배포 또는 병합 에이전트가 데이터 유효성 검사를 통과합니다.|예|  
 |20578|**복제: 에이전트 사용자 지정 종료**|||  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [미리 정의된 복제 경고 구성&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>응용 프로그램 로그 직접 보기  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 이벤트 뷰어를 사용하여 Windows 응용 프로그램 로그를 볼 수 있습니다. 응용 프로그램 로그에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지는 물론, 해당 컴퓨터에서 이루어지는 다른 여러 동작에 대한 메시지도 포함됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 로그와 달리 새 응용 프로그램 로그는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 시작할 때마다 생성되지 않고 각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 세션이 새 이벤트를 기존 응용 프로그램 로그에 기록하지만 로그된 이벤트를 유지할 기간을 지정할 수 있습니다. Windows 응용 프로그램 로그를 보고 특정 이벤트에 대한 로그를 필터링할 수 있습니다. 자세한 내용은 Windows 설명서를 참조하세요.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 이벤트 뷰어를 사용하여 Windows 응용 프로그램 로그를 볼 수 있습니다. 응용 프로그램 로그에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지는 물론, 해당 컴퓨터에서 이루어지는 다른 여러 동작에 대한 메시지도 포함됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 로그와 달리 새 응용 프로그램 로그는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 시작할 때마다 생성되지 않고 각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 세션이 새 이벤트를 기존 응용 프로그램 로그에 기록하지만 로그된 이벤트를 유지할 기간을 지정할 수 있습니다. Windows 응용 프로그램 로그를 보고 특정 이벤트에 대한 로그를 필터링할 수 있습니다. 자세한 내용은 Windows 설명서를 참조하십시오.  
   
 ## <a name="automating-a-response-to-an-alert"></a>경고에 대한 응답 자동화  
  복제 시 데이터 유효성 검사에 실패한 구독에 대한 응답 작업을 제공하며 경고에 대한 자동 응답을 추가로 만드는 프레임워크 또한 제공합니다. 응답 작업은 **데이터 유효성 검사 실패 시 구독 다시 초기화** 로 제목이 지정되고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 **에이전트** 작업 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]폴더에 저장됩니다. 이 응답 작업을 사용하도록 설정하는 방법은 [미리 정의된 복제 경고 구성&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)을 참조하세요. 트랜잭션 게시의 아티클이 유효성 검사에 실패하면 응답 작업은 실패한 아티클만 다시 초기화합니다. 병합 게시의 아티클이 유효성 검사에 실패하면 응답 작업은 게시의 모든 아티클을 다시 초기화합니다.  
@@ -89,7 +92,7 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 에이전트 관리](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [모니터링&#40;복제&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  

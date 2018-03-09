@@ -2,36 +2,31 @@
 title: "XMLA 개념 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- XMLA, concepts
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: XMLA, concepts
 ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 31764ea957feff56c50357f8058ba710e6c1c658
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c8df1713f3015e9319f7a1323b43f697bebb625
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xmla-concepts"></a>XMLA 개념
-  XMLA(XML for Analysis) 개방형 표준에서는 World Wide Web에 있는 데이터 원본에 대한 데이터 액세스를 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] XMLA 1.1 사양에 따라 XMLA를 구현 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA) 개방형 표준 World Wide Web에 존재 하는 데이터 원본에 대 한 데이터 액세스를 지원 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] XMLA 1.1 사양에 따라 XMLA를 구현 합니다.  
   
  XMLA(XML for Analysis)는 웹에 있는 표준 다차원 데이터 원본에 대한 범용 데이터 액세스를 위해 특별히 설계된 SOAP(Simple Object Access Protocol) 기반 XML 프로토콜입니다. XMLA도 구성 요소 개체 모델 (COM)를 노출 하는 클라이언트 구성 요소를 배포 하지 않아도 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 인터페이스입니다. XMLA는 서버와의 왕복에 시간과 리소스가 많이 소모되며 데이터 원본에 대한 상태 저장 연결에 따라 서버의 사용자 연결이 제한되는 인터넷 환경에서 최적화됩니다.  
   
@@ -56,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  XMLA는 UDM(Unified Dimensional Model) 방법론을 채택한 비즈니스 인텔리전스 응용 프로그램에 사용되는 프로토콜입니다.  
   
   
-

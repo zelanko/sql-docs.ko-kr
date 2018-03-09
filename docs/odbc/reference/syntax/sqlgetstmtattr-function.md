@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetStmtAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetStmtAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetStmtAttr
-helpviewer_keywords:
-- SQLGetStmtAttr function [ODBC]
+f1_keywords: SQLGetStmtAttr
+helpviewer_keywords: SQLGetStmtAttr function [ODBC]
 ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 10ef63cf77fc4668d9f9f80daaff8ab483d1876b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 478d69a608740a0c8886336ca567ebc8ec75d6eb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetstmtattr-function"></a>SQLGetStmtAttr 함수
 **규칙**  
@@ -90,7 +84,7 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetStmtAttr** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* sql _HANDLE_STMT 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLGetStmtAttr** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|반환 되는 데이터  *\*ValuePtr* 되도록 잘렸습니다 *BufferLength* null 종결 문자 길이 뺀 값입니다. 잘리지 않은 문자열 값의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -107,7 +101,7 @@ SQLRETURN SQLGetStmtAttr(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)에 해당 하는 드라이버는 *StatementHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  문 특성에 대 한 일반 정보를 참조 하십시오. [문 특성](../../../odbc/reference/develop-app/statement-attributes.md)합니다.  
   
  에 대 한 호출 **SQLGetStmtAttr** 반환  *\*ValuePtr* 문 특성에 지정 된 값 *특성*합니다. 해당 값은 SQLULEN 값 또는 null로 끝나는 문자열에는 일 수 있습니다. 값 SQLULEN 값 이면 일부 드라이버 수만 하위 32 비트 쓰거나 16 비트 버퍼 및 연결 해제의 상위 비트 변경 되지 않습니다. 따라서 응용 프로그램 SQLULEN의 버퍼를 사용 하 고이 함수를 호출 하기 전에 값을 0으로 초기화 해야 합니다. 또한는 *BufferLength* 및 *StringLengthPtr* 인수가 사용 되지 않습니다. 값이 null로 끝나는 문자열을 응용 프로그램에서 해당 문자열의 최대 길이 지정 하는 *BufferLength* 인수와 드라이버에서 해당 문자열의 길이 반환 된  *\* StringLengthPtr* 버퍼입니다.  
@@ -135,4 +129,3 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

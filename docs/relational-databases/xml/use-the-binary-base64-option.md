@@ -2,31 +2,37 @@
 title: "BINARY BASE64 옵션 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: AUTO FOR XML mode, BINARY BASE64 option
+helpviewer_keywords:
+- AUTO FOR XML mode, BINARY BASE64 option
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 642bf9fabc3af63d503b2cd2945600d2f220cc13
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9e0761b3be2cd4148f972fb1dea488e38e725a85
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-the-binary-base64-option"></a>BINARY BASE64 옵션 사용
-  쿼리에서 BINARY BASE64 옵션을 지정하면 이진 데이터가 base64 인코딩 형식으로 반환됩니다. 기본적으로 BINARY BASE64 옵션이 지정되지 않은 경우 AUTO 모드는 이진 데이터의 URL 인코딩을 지원합니다. 즉, 이진 데이터 대신 쿼리가 실행된 데이터베이스의 가상 루트의 상대 URL에 대한 참조가 반환됩니다. 이 참조를 사용하면 후속 작업에서 SQLXML ISAPI dbobject 쿼리를 사용하여 실제 이진 데이터를 액세스할 수 있습니다. 쿼리는 이미지를 식별하기 위해 기본 키 열과 같은 정보를 충분히 제공해야 합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+쿼리에서 BINARY BASE64 옵션을 지정하면 이진 데이터가 base64 인코딩 형식으로 반환됩니다. 기본적으로 BINARY BASE64 옵션이 지정되지 않은 경우 AUTO 모드는 이진 데이터의 URL 인코딩을 지원합니다. 즉, 이진 데이터 대신 쿼리가 실행된 데이터베이스의 가상 루트의 상대 URL에 대한 참조가 반환됩니다. 이 참조를 사용하면 후속 작업에서 SQLXML ISAPI dbobject 쿼리를 사용하여 실제 이진 데이터를 액세스할 수 있습니다. 쿼리는 이미지를 식별하기 위해 기본 키 열과 같은 정보를 충분히 제공해야 합니다.  
   
  쿼리를 지정할 때 뷰의 이진 열에 대해 별칭이 사용되는 경우 별칭은 이진 데이터의 URL 인코딩으로 반환됩니다. 후속 작업에서 별칭은 아무 의미도 없으며 URL 인코딩은 이미지를 검색하는 데 사용할 수 없습니다. 따라서 FOR XML AUTO 모드를 사용하여 뷰를 쿼리할 때는 별칭을 사용하지 않아야 합니다.  
   
- 예를 들어 SELECT 쿼리에서 모든 열에 BLOB에 대한 캐스트를 지정하면 임시 엔터티가 되어 관련 테이블 이름과 열 이름이 손실됩니다. 이것은 XML 계층 구조에서 이 값을 둘 위치를 알 수 없으므로, 이로 인해 AUTO 모드 쿼리에서 오류가 발생하게 됩니다. 예를 들어  
+ 예를 들어 SELECT 쿼리에서 모든 열에 BLOB에 대한 캐스트를 지정하면 임시 엔터티가 되어 관련 테이블 이름과 열 이름이 손실됩니다. 이것은 XML 계층 구조에서 이 값을 둘 위치를 알 수 없으므로, 이로 인해 AUTO 모드 쿼리에서 오류가 발생하게 됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 CREATE TABLE MyTable (Col1 int PRIMARY KEY, Col2 binary)  

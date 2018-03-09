@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geography Data Type)
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2fa06f270ad653e9c8e43a5ec5456257e785670e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e6bd49bb41c8db0fa702e97e5ad8316961e7af15
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>인수  
- *거리*  
+ *distance*  
  형식의 값은 **float** (**double** .NET framework에서)에서 거리를 지정 하는 **geography** 버퍼를 계산할 인스턴스와의 합니다.  
   
  버퍼의 최대 거리는 0.999를 초과할 수 없습니다 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 지구 둘레의 1/2) 또는 전체 구형입니다.  
@@ -83,7 +82,6 @@ SELECT @g.STBuffer(1).ToString();
   
 ## <a name="see-also"></a>관련 항목:  
  [Bufferwithtolerance&#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
- [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

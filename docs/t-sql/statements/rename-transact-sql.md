@@ -1,7 +1,7 @@
 ---
 title: "이름 바꾸기 (Transact SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 11/20/2017
 ms.prod: 
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 15
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d58470957ab58085ddd6a733cf30dbc77ce7439a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rename-transact-sql"></a>이름 바꾸기 (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.lasthandoff: 09/01/2017
   사용자가 만든 테이블의 이름을 바꿉니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다. 사용자가 만든 테이블 또는 데이터베이스의 이름을 바꿉니다 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다.  
   
 > [!NOTE]  
->  데이터베이스의 이름을 바꾸려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 저장된 프로시저를 사용 하 여 [sp_renamedb &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).  
+>  데이터베이스의 이름을 바꾸려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 저장된 프로시저를 사용 하 여 [sp_renamedb &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Azure SQL Database에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Database)](/statements/alter-database-azure-sql-database.md) 문을 사용합니다. 
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +57,7 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 ## <a name="arguments"></a>인수  
  개체 [:] 이름 바꾸기   
-          [[*database_name* 합니다. [ *schema_name* ]. ] | [ *schema_name* 합니다. ]]*table_name* TO *new_table_name*  
+          [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
  **적용 대상:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  사용자 정의 테이블의 이름을 변경 합니다. 1, 2 개 또는 세 부분으로 된 이름으로 이름을 변경 하려면 테이블을 지정 합니다.    새 테이블을 지정 *new_table_name* 한 부분 이름으로 합니다.  
@@ -112,7 +111,7 @@ RENAME DATABASE [::] database_name TO new_database_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-rename-a-database"></a>1. 데이터베이스 이름 바꾸기  
- **적용 대상:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만    
+ **적용 대상:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만  
   
  이 예제에서는 AdWorks2에 사용자 정의 데이터베이스를 AdWorks 이름을 바꿉니다.  
   
@@ -164,4 +163,3 @@ KILL 'SID1234';
 ```  
   
   
-

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
-caps.latest.revision: 6
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5981022c301b8fab4ae0d6c3f250b7ddae5b93db
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 9abf874d3e813639f16e36b1ccc92cf178996f3a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계(Master Data Services)
   엔터티 동기화는 엔터티 버전 간의 반복 가능한 단방향 동기화입니다. 엔터티 동기화를 통해 여러 모델 간에 엔터티 데이터를 공유할 수 있습니다. 정보의 단일 원본을 모델 하나에 보관하고 다른 모델에서 이 마스터 데이터를 다시 사용할 수 있습니다. 예를 들어 미국의 주 데이터를 모델 엔터티 하나에 저장하여 다른 모델에서 해당 데이터를 다시 사용할 수 있습니다.  
@@ -39,4 +38,3 @@ ms.lasthandoff: 09/07/2017
  [엔터티 동기화 관계 편집 및 삭제&#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   
-

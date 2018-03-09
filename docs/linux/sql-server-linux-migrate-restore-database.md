@@ -3,28 +3,27 @@ title: "Linux를 Windows에서 SQL Server 데이터베이스 마이그레이션 
 description: "이 자습서에서는 Windows에서 SQL Server 데이터베이스 백업을 수행 하 고 SQL Server 2017을 실행 하는 Linux 컴퓨터를 복원 하는 방법을 보여 줍니다."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
+ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: a6d84942bfd13d672b3c59416cb64d2ae41ee10f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Linux 백업 및 복원을 사용 하 여 Windows에서 SQL Server 데이터베이스 마이그레이션
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server의 백업 및 복원 기능은 Windows에서 SQL Server에서 SQL Server 2017 Linux에서 데이터베이스를 마이그레이션하는 것이 좋습니다. 이 자습서에서는 Linux를 백업으로 데이터베이스를 이동한 복원 기술 하는 데 필요한 단계를 안내 합니다.
 
@@ -34,6 +33,8 @@ SQL Server의 백업 및 복원 기능은 Windows에서 SQL Server에서 SQL Ser
 > * Bash 셸의에서 백업 파일을 Linux로 이동 합니다.
 > * TRANSACT-SQL로 Linux에서 백업 파일을 복원
 > * 마이그레이션을 확인 하려면 쿼리를 실행 합니다.
+
+SQL Server Always On 가용성 그룹 Linux로 Windows에서 SQL Server 데이터베이스 마이그레이션를 만들 수 있습니다. 참조 [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -87,7 +88,7 @@ SQL Server의 백업 및 복원 기능은 Windows에서 SQL Server에서 SQL Ser
 
 1. Windows에서 Bash 세션을 엽니다.
 
-## <a id="scp"></a>Linux 백업 파일 복사
+## <a id="scp"></a> Linux 백업 파일 복사
 
 1. Bash 세션에서는 백업 파일에 포함 된 디렉터리로 이동 합니다. 예를 들어
 
@@ -196,9 +197,9 @@ SQL Server의 백업 및 복원 기능은 Windows에서 SQL Server에서 SQL Ser
 > * 백업 파일에 대 한 복원을 준비 재배치
 > * 사용 하 여 **sqlcmd** TRANSACT-SQL 명령을 실행 하려면
 > * 사용 하 여 데이터베이스 백업을 복원는 **데이터베이스 복원** 명령 
+> * 마이그레이션을 확인 하려면 쿼리를 실행 합니다.
 
 다음으로 Linux에서 SQL Server에 대 한 다른 마이그레이션 시나리오를 탐색 합니다. 
 
 > [!div class="nextstepaction"]
 >[Linux에서 SQL Server로 데이터베이스 마이그레이션](sql-server-linux-migrate-overview.md)
-

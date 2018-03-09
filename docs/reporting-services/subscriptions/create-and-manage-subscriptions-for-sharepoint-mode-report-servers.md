@@ -1,13 +1,14 @@
 ---
-title: "SharePoint 모드 보고서 서버에 대 한 구독 만들기 및 관리 | Microsoft Docs"
+title: "SharePoint 모드 보고서 서버에 구독 만들기 및 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 31d672c16ed9cf4854be7b64507daaf381a6a175
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint 모드 보고서 서버 구독 만들기 및 관리
   SharePoint 모드 보고서 서버와 통합된 SharePoint 웹 응용 프로그램에서 보고서를 배달하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들 수 있습니다. 구독은 보고서를 문서 라이브러리, 파일 폴더 또는 전자 메일로 배달할 수 있습니다. 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들기 위한 요구 사항 및 단계를 요약합니다.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  구독을 만들 때는 출력 파일 형식을 선택할 수 있습니다. 보고서가 모든 형식에서 다 잘 작동하는 것은 아닙니다. 구독 형식을 선택하기 전에 보고서를 열고 다른 형식으로 내보내 해당 보고서가 예상대로 표시되는지 확인하세요.  
   
- **구독을 만들 수 있으려면 사용자에게 SharePoint의** 항목 편집 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 목록 권한이 필요합니다. 자세한 내용은 [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)를 참조하세요.  
+ **구독을 만들 수 있으려면 사용자에게 SharePoint의** 항목 편집 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 목록 권한이 필요합니다. 자세한 내용은 [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)를 참조하세요.  
   
 > [!IMPORTANT]  
 >  보고서를 라이브러리나 공유 폴더로 배달하는 구독은 원래 보고서를 기반으로 하는 새 정적 파일을 만들지만 이는 보고서 뷰어 웹 파트에서 실행되는 진정한 보고서 정의가 아닙니다. 원래 보고서에 드릴스루 링크와 같은 대화형 기능이나 동적 콘텐츠가 있는 경우 이러한 기능은 대상 위치로 배달되는 정적 파일에서 사용할 수 없게 됩니다. "웹 페이지"를 선택하는 경우 일부 대화형 작업을 유지할 수 있지만 문서가 보고서 뷰어에서 실행하는 .rdl 파일이 아니므로 보고서를 클릭 광고하면 사이트로 돌아가기 위해 스크롤해야 할 브라우저 세션에 새 페이지가 생성됩니다.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  **덮어쓰기 옵션**에서 이후 배달 시 파일을 덮어쓸지 여부를 결정하는 옵션을 지정합니다. 이전 배달을 유지하려면 **고유 이름으로 파일 만들기**를 선택합니다. 그러면 새 파일에 번호가 추가되어 고유한 파일 이름이 생성됩니다.  
   
-9. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅숏 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대 한 자세한 내용은 참조 [처리 옵션 설정 &#40; 모드 &#41; 통합 SharePoint의 reporting Services ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅숏 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대한 자세한 내용은 [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)를 참조하세요.  
   
 10. 매개 변수가 있는 보고서에 대한 구독을 만드는 경우 **매개 변수**에서 구독 처리 시 보고서에 사용할 값을 지정합니다. 선택한 보고서에 매개 변수가 없는 경우 매개 변수 섹션이 이 페이지에 표시되지 않습니다. 매개 변수에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 08/09/2017
   
 10. **사용자 이름** 및 **암호**에 공유 폴더에 대한 쓰기 권한이 있는 자격 증명을 입력합니다.  
   
-11. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅숏 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대 한 자세한 내용은 참조 [처리 옵션 설정 &#40; 모드 &#41; 통합 SharePoint의 reporting Services ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+11. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅숏 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대한 자세한 내용은 [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)를 참조하세요.  
   
 12. 매개 변수가 있는 보고서에 대한 구독을 만드는 경우 **매개 변수**에서 구독 처리 시 보고서에 사용할 값을 지정합니다. 매개 변수에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
   
      렌더링 형식과 브라우저에 따라 보고서가 포함될지 또는 첨부될지가 결정됩니다. 브라우저에서 HTML 4.0 및 MHTML을 지원하고 웹 보관 파일 렌더링 형식을 선택한 경우 보고서는 메시지의 일부로 포함됩니다. CSV, PDF를 비롯한 다른 렌더링 형식은 모두 보고서를 첨부 파일로 배달합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서를 보내기 전에 첨부 파일 또는 메시지의 크기를 확인하지 않습니다. 첨부 파일 또는 메시지가 메일 서버에서 허용하는 최대 제한을 초과할 경우 보고서가 배달되지 않습니다. 큰 보고서의 경우 URL이나 알림과 같은 다른 배달 옵션 중 하나를 선택하십시오.  
   
-9. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅숏 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대 한 자세한 내용은 참조 [처리 옵션 설정 &#40; 모드 &#41; 통합 SharePoint의 reporting Services ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅숏 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대한 자세한 내용은 [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)를 참조하세요.  
   
 10. 매개 변수가 있는 보고서에 대한 구독을 만드는 경우 **매개 변수**에서 구독 처리 시 보고서에 사용할 값을 지정합니다. 매개 변수에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
@@ -162,7 +162,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  구독 옆에 있는 확인란을 클릭하고 **삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services의 전자 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Reporting Services의 파일 공유 배달](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
@@ -170,4 +170,3 @@ ms.lasthandoff: 08/09/2017
  [전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

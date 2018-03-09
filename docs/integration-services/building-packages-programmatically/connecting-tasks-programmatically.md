@@ -1,5 +1,5 @@
 ---
-title: "태스크를 프로그래밍 방식으로 연결 | Microsoft Docs"
+title: "프로그래밍 방식으로 태스크 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], connecting tasks
 - constraints [Integration Services]
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 27be63f22fda13f0959f28c4ee36cc2b12c66058
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 17a0b11519fcf438847c34291ded9e1b43edb090
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connecting-tasks-programmatically"></a>프로그래밍 방식으로 태스크 연결
   개체 모델에서 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 클래스가 나타내는 선행 제약 조건은 패키지에서 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 개체가 실행되는 순서를 설정합니다. 선행 제약 조건을 사용하면 패키지의 컨테이너 및 태스크 실행이 이전 태스크 또는 컨테이너의 실행 결과에 따라 결정되도록 할 수 있습니다. 선행 제약 조건은 컨테이너 개체에서 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> 개체 쌍 간에 설정됩니다. 두 개의 실행 개체 사이에 제약 조건을 만든 후 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 속성을 설정하여 제약 조건에 정의된 두 번째 실행 파일을 실행하기 위한 조건을 지정합니다.  
@@ -43,8 +41,8 @@ ms.lasthandoff: 08/03/2017
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|실행 결과에 따라 제약 조건이 지정된 컨테이너 또는 태스크의 실행 여부가 결정되도록 지정합니다. <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 열거형에서 원하는 값으로 설정합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|식의 값에 따라 제약 조건이 지정된 컨테이너 또는 태스크의 실행 여부가 결정되도록 지정합니다. <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 속성을 설정합니다.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|제약 조건 결과가 발생해야 하며 식에서 제약 조건이 지정된 컨테이너 또는 태스크의 실행을 평가해야 하도록 지정합니다. 모두 설정는 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> 의 속성은 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, 설정 및 해당 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> 속성을 **true**합니다.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|제약 조건 결과가 발생해야 하거나 식에서 제약 조건이 지정된 컨테이너 또는 태스크의 실행을 평가해야 하도록 지정합니다. 모두 설정는 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> 의 속성은 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, 설정 및 해당 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> 속성을 **false**합니다.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|제약 조건 결과가 발생해야 하며 식에서 제약 조건이 지정된 컨테이너 또는 태스크의 실행을 평가해야 하도록 지정합니다. <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 속성과 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> 속성을 모두 설정하고 해당 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> 속성을 **true**로 설정합니다.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|제약 조건 결과가 발생해야 하거나 식에서 제약 조건이 지정된 컨테이너 또는 태스크의 실행을 평가해야 하도록 지정합니다. <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 속성과 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> 속성을 모두 설정하고 해당 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> 속성을 **false**로 설정합니다.|  
   
  다음 코드 예제에서는 패키지에 두 개의 태스크를 추가하는 방법을 보여 줍니다. 두 태스크 사이에는 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>가 만들어지므로 첫 번째 태스크가 완료될 때까지 두 번째 태스크는 실행되지 않습니다.  
   
@@ -108,7 +106,6 @@ End Module
 ```
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 흐름 태스크를 프로그래밍 방식으로 추가](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+ [프로그래밍 방식으로 데이터 흐름 태스크 추가](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
   
-

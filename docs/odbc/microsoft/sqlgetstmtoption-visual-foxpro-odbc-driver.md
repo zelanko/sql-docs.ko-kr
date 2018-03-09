@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetStmtOption function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLGetStmtOption function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9042a1a951d08c60e8dc795cd58f2a525cf39cda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 601dd559d7bf13d1a12d032d8431a8c3fe0287d4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -46,4 +43,3 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro ODBC 드라이버 Dll 변환을 있습니다.  
   
  자세한 내용은 참조 [SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md) 에 *ODBC Programmer's Reference*합니다.
-

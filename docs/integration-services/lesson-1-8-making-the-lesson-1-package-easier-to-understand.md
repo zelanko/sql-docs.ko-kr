@@ -1,11 +1,11 @@
 ---
-title: "8 단계: 1 단원 패키지를 쉽게 이해할 수 있도록 만들기 | Microsoft Docs"
+title: "8단계: 1단원 패키지를 쉽게 이해할 수 있도록 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55bd386054f3a7d066dc8c28c13e22ae82e9f0cb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a8a576339c4365a266439c4d70cf64ba49670204
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>단원 1-8-1 단원 패키지를 쉽게 이해할 수 있도록 만들기
+# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>1-8단원: 1단원 패키지를 쉽게 이해할 수 있도록 만들기
 1단원 패키지의 구성을 완료했으므로 이제 패키지 레이아웃을 정리하는 것이 좋습니다. 제어 및 데이터 흐름 레이아웃 셰이프의 크기가 제멋대로이거나 셰이프가 정렬 또는 그룹화되지 않은 경우 패키지의 기능을 이해하기가 매우 어려울 수 있습니다.  
   
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools에서는 패키지 레이아웃의 서식을 쉽고 빠르게 지정할 수 있는 도구를 제공합니다. 서식 지정 기능에는 셰이프의 크기를 동일하게 지정하고 셰이프를 정렬하며 셰이프 간의 가로 및 세로 간격을 조정하는 기능이 포함됩니다.  
@@ -60,9 +59,8 @@ ms.lasthandoff: 09/26/2017
   
     주석 상자에 텍스트를 추가하지 않은 경우 상자의 바깥쪽을 클릭하면 주석 상자가 사라집니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 [9단계: 1단원 자습서 패키지 테스트](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
   
-

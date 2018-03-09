@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e9b3f2ea4c6484544663cb00c15db662da56ee05
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>보완 로깅 스크립트 검토 및 생성
   **스크립트** 탭을 사용하여 보완 로깅을 설정하는 Oracle 원본 데이터베이스에서 스크립트를 실행하거나 다시 실행할 수 있습니다.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  보완 로깅 스크립트를 실행하면 유효한 Oracle 사용자 이름과 암호를 입력할 수 있는 스크립트 실행을 위한 Oracle 자격 증명 대화 상자가 열립니다. 적절한 Oracle 자격 증명을 제공하는 방법은 [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)을 참조하십시오.  
   
- 필요한 경우 SQL * Plus를 사용하여 스크립트를 수동으로 실행할 수도 있습니다.  
+ 필요한 경우 SQL\*Plus를 사용하여 스크립트를 수동으로 실행할 수도 있습니다.  
   
 ### <a name="to-run-the-scripts-manually"></a>스크립트를 수동으로 실행하려면  
   
@@ -61,9 +60,8 @@ ms.lasthandoff: 08/03/2017
   
 2.  파일 이름을 지정하고 **저장** 을 클릭하여 파일을 저장합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [CDC 인스턴스 속성을 편집 하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [스크립트 실행을 위한 oracle 자격 증명](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+## <a name="see-also"></a>참고 항목  
+ [CDC 인스턴스 속성을 편집하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+ [스크립트 실행을 위한 Oracle 자격 증명](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   
-

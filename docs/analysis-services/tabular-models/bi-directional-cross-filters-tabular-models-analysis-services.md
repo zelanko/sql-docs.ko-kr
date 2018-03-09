@@ -1,38 +1,37 @@
 ---
-title: "양방향 교차 필터는 Analysis Services-테이블 형식 모델-| Microsoft Docs"
+title: "양방향 교차 필터 테이블 형식 모델에서 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3d4854a602dc3eb7b02a50dc760409243a64313
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>양방향 교차 필터-테이블 형식 모델-Analysis Services
-  SQL Server 2016의 새로운 기능에는 테이블 형식 모델에서 *양방향 교차 필터* 를 사용하는 기본 제공 접근 방식이 있습니다. 이 방식을 사용하면 테이블 관계에서 필터 컨텍스트를 전파하기 위한 수동 DAX 해결 방법이 필요 없습니다.  
+# <a name="bi-directional-cross-filters-in-tabular-models"></a>테이블 형식 모델에서 양방향 교차 필터
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+SQL Server 2016의 새로운 기능에는 테이블 형식 모델에서 *양방향 교차 필터* 를 사용하는 기본 제공 접근 방식이 있습니다. 이 방식을 사용하면 테이블 관계에서 필터 컨텍스트를 전파하기 위한 수동 DAX 해결 방법이 필요 없습니다.  
   
  개념을 해당 구성 요소로 세분화해 보겠습니다. *교차 필터링* 은 관련 테이블의 값에 따라 테이블에 대한 필터 컨텍스트를 설정하는 기능이고, *양방향* 은 테이블 관계의 반대편에 있는 두 번째 관련 테이블로 필터 컨텍스트를 전달하는 것입니다. 이름에서 알 수 있듯이 한 방향이 아니라 관계의 양방향으로 분할할 수 있습니다.  내부적으로 양방향 필터링은 필터 컨텍스트를 확장하여 데이터의 상위 집합을 쿼리합니다.  
   
- ![SSAS BIDI-1 Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "BIDI 1 Filteroption SSAS")  
+ ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- 교차 필터에는 단방향 필터링과 양방향 필터링의 두 가지 유형이 있습니다. 단방향은 해당 관계에서 팩트 테이블과 차원 테이블 간의 기존 다 대 일 필터 방향입니다. 양방향은 두 관계 모두에 공통적인 하나의 테이블을 사용하여 하나의 관계에 대한 필터 컨텍스트를 다른 테이블 관계에 대한 필터 컨텍스트로 사용할 수 있도록 해주는 교차 필터입니다.  
+ 두 가지가의 교차 필터: 단방향과 양방향 필터링 합니다. 단방향은 해당 관계에서 팩트 테이블과 차원 테이블 간의 기존 다 대 일 필터 방향입니다. 양방향은 두 관계 모두에 공통적인 하나의 테이블을 사용하여 하나의 관계에 대한 필터 컨텍스트를 다른 테이블 관계에 대한 필터 컨텍스트로 사용할 수 있도록 해주는 교차 필터입니다.  
   
  **FactOnlineSales** 에 대한 외래 키 관계가 있는 **DimDate** 및 **DimProduct**의 경우 양방향 교차 필터는 **FactOnlineSales-to-DimDate** 와 **FactOnlineSales-to-DimProduct** 를 동시에 사용하는 것과 같습니다.  
   
@@ -67,18 +66,18 @@ ms.lasthandoff: 11/17/2017
 ## <a name="walkthrough-an-example"></a>예제 연습  
  양방향 교차 필터링의 가치를 이해하려면 예제를 사용하는 것이 가장 좋습니다. 기본적으로 만들어진 교차 필터와 카디널리티를 반영하는 [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279)의 다음 데이터 집합을 고려해 보겠습니다.  
   
- ![SSAS BIDI-2 모델](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI-2 모델")  
+ ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
   
 > [!NOTE]  
 >  기본적으로 데이터를 가져오는 동안 팩트 테이블과 관련 차원 테이블 간의 외래 키와 기본 키 관계에서 파생된 다 대 일 구성에 대한 테이블 관계가 만들어집니다.  
   
  필터 방향은 차원 테이블에서 팩트 테이블 방향입니다. 프로 모션, 제품, 날짜, 고객 및 고객 지리는 모두 몇 가지 측정값의 집계를 생성하는 유효한 필터이며, 실제 값은 사용된 차원에 따라 달라집니다.  
   
- ![ssas bidi-3 defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "bidi 3 defaultrelationships ssas")  
+ ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
  이 간단한 별모양 스키마에서는 Excel에서의 테스트를 통해 행과 열의 차원 테이블에서 가운데 **FactOnlineSales** 테이블에 있는 **Sum of Sales** 측정값에 제공된 집계 데이터로의 흐름을 필터링할 때 데이터가 적절히 조각화되는지 확인합니다.  
   
- ![ssas bidi-4 excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "bidi 4 excelSumSales ssas")  
+ ![ssas-bidi-4-excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "ssas-bidi-4-excelSumSales")  
   
  측정값을 팩트 테이블에서 가져오고 필터 컨텍스트가 팩트 테이블에서 종료되는 경우 이 모델에 대한 집계가 올바르게 필터링됩니다. 그러나 다른 곳에서 측정값(예: 제품 또는 고객 테이블의 고유 개수 또는 프로모션 테이블의 평균 할인)을 만들고 기존 필터 컨텍스트를 해당 측정값으로 확장하려는 경우에는 어떻게 될까요?  
   
@@ -90,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
  ![ssas-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
-## <a name="learn-step-by-step"></a>단계별 학습  
+## <a name="learn-step-by-step"></a>자세한 단계별  
  이 연습을 단계별로 수행하여 양방향 교차 필터를 체험할 수 있습니다. 단계를 따르려면 다음이 필요합니다.  
   
 -   SQL Server 2016 Analysis Services 인스턴스, 테이블 형식 모드, 최신 CTP 릴리스  
@@ -139,7 +138,7 @@ ms.lasthandoff: 11/17/2017
   
      이제 모델에서 보다 쉽게 읽을 수 있도록 이름을 편집할 수 있습니다.  
   
-     ![ssas bidi-7 가져오기를](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "bidi 7 가져오기를 ssas")  
+     ![ssas-bidi-7-ImportData](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "ssas-bidi-7-ImportData")  
   
 6.  데이터를 가져옵니다.  
   
@@ -148,11 +147,11 @@ ms.lasthandoff: 11/17/2017
 ### <a name="review-default-table-relationships"></a>기본 테이블 관계 검토  
  다이어그램 뷰로 전환합니다( **모델** > **모델 뷰** > **다이어그램 뷰**). 카디널리티 및 활성 관계가 시각적으로 표시됩니다. 모든 관계는 임의의 두 관련 테이블 간에 일 대 다 관계입니다.  
   
- ![SSAS BIDI-2 모델](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI-2 모델")  
+ ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
   
  또는 **테이블** > **관계 관리** 를 클릭하여 테이블 레이아웃으로 동일한 정보를 볼 수 있습니다.  
   
- ![ssas bidi-3 defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "bidi 3 defaultrelationships ssas")  
+ ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
 ### <a name="create-measures"></a>측정값 만들기  
  차원 데이터의 다양한 측면으로 판매량 합계를 구하는 집계가 필요합니다. **DimProduct** 에서 제품 수를 계산하는 측정값을 만든 다음 지정된 연도, 지정된 지역 또는 고객 유형별로 판매된 제품 수를 보여 주는 제품 머천다이징 분석에 이를 사용할 수 있습니다.  
@@ -199,14 +198,14 @@ ms.lasthandoff: 11/17/2017
   
  이제 제품 수와 판매량 둘 다 동일한 필터 컨텍스트( **DimProducts** 의 제조업체뿐 아니라 **DimDate**의 역년을 포함)로 필터링된 것을 볼 수 있습니다.  
   
-## <a name="conclusion-and-next-steps"></a>결론 및 다음 단계  
+## <a name="next-steps"></a>다음 단계  
  양방향 교차 필터가 언제 어떻게 시행 착오를 일으킬 수 있는지를 이해하면 사용자의 시나리오에서 양방향 교차 필터가 작동하는 방식을 알 수 있습니다. 때때로 기본 제공 동작으로 부족하여 DAX 계산에서 대체해야 작업을 완료할 수 있는 경우가 있습니다. **참고 항목** 섹션에 이 주제에 대한 추가 리소스를 제공하는 여러 링크가 나와 있습니다.  
   
  실제로 교차 필터링은 일반적으로 다 대 다 구문을 통해서만 배달되는 데이터 탐색 형식을 지원할 수 있습니다. 양방향 교차 필터링은 다 대 다 구문이 아니라는 점을 인식해야 합니다.  이 릴리스의 테이블 형식 모델 디자이너에서는 실제 다 대 다 테이블 구성이 지원되지 않는 상태로 유지됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Power BI Desktop에서 관계 만들기 및 관리](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [Powerpivot과 SSAS 테이블 형식 모델에서 간단한 다 다 대 다 관계를 처리 하는 방법의 실제 예](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [Powerpivot과 테이블 형식 모델에서 간단한 다 다 대 다 관계를 처리 하는 방법의 실제 예](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
  [DAX를 활용 하 여 다 대 다 관계를 확인 하 고 교차 테이블 필터링](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
  [다 대 다 혁명 (SQLBI 블로그)](http://www.sqlbi.com/articles/many2many/)  
   

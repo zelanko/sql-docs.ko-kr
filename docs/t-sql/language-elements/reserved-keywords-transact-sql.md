@@ -20,20 +20,19 @@ helpviewer_keywords:
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: 53
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efaa21099f422ae812168561351a359fc89f8e0d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 65ef776b119b40bbeb4bbdddcfe0a4a99379a833
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="reserved-keywords-transact-sql"></a>예약 된 키워드-TRANSACT-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="reserved-keywords-transact-sql"></a>예약어(Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스를 정의, 조작 및 액세스할 때 예약된 키워드를 사용합니다. 예약된 키워드는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 일괄 처리를 구문 분석하고 이해하는 데 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 문법의 일부입니다. 구문상으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예약된 키워드를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 식별자와 개체 이름으로 사용할 수 있지만 구분 기호로 분리된 식별자를 사용한 경우에만 가능합니다.  
   
@@ -91,8 +90,8 @@ ms.lasthandoff: 09/01/2017
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|User|  
-|DROP|또는|VALUES|  
+|DOUBLE|OPTION|USER|  
+|DROP|OR|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
@@ -118,84 +117,84 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**절대**|**EXEC**|**겹치는 항목이 있습니다**|  
-|**작업**|**EXECUTE**|**채움**|  
-|**ADA**|**존재**|**부분**|  
-|**추가**|**외부**|**파스칼**|  
-|**ALL**|**추출**|**위치**|  
-|**할당**|**FALSE**|**전체 자릿수**|  
+|**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
+|**작업**|**EXECUTE**|**PAD**|  
+|**ADA**|**EXISTS**|**부분**|  
+|**ADD**|**외부**|**PASCAL**|  
+|**ALL**|**EXTRACT**|**위치**|  
+|**ALLOCATE**|**FALSE**|**전체 자릿수**|  
 |**ALTER**|**FETCH**|**준비**|  
-|**AND**|**첫 번째**|**유지**|  
-|**모든**|**FLOAT**|**PRIMARY**|  
+|**및**|**FIRST**|**유지**|  
+|**ANY**|**FLOAT**|**PRIMARY**|  
 |**는**|**에 대 한**|**사전**|  
 |**AS**|**외부**|**권한**|  
-|**ASC**|**포트란**|**프로시저**|  
-|**어설션**|**찾을 수합니다**|**공개**|  
-|**AT**|**FROM**|**읽기**|  
-|**권한 부여**|**FULL**|**실제**|  
-|**AVG**|**가져오기**|**참조**|  
-|**BEGIN**|**전역**|**상대**|  
-|**BETWEEN**|**이동**|**제한**|  
-|**비트**|**GOTO**|**REVOKE**|  
+|**ASC**|**포트란**|**PROCEDURE**|  
+|**어설션**|**찾을 수합니다**|**PUBLIC**|  
+|**AT**|**FROM**|**READ**|  
+|**AUTHORIZATION**|**FULL**|**REAL**|  
+|**AVG**|**GET**|**참조**|  
+|**BEGIN**|**GLOBAL**|**상대**|  
+|**BETWEEN**|**GO**|**제한**|  
+|**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**둘 다**|**그룹**|**롤백**|  
-|**에서**|**필요**|**행**|  
-|**계단식 배열**|**1 시간**|**스키마**|  
-|**캐스케이드**|**IDENTITY**|**스크롤**|  
-|**대/소문자**|**직접 실행**|**두 번째**|  
-|**캐스트**|**IN**|**섹션**|  
-|**카탈로그**|**포함**|**SELECT**|  
-|**CHAR**|**인덱스**|**세션**|  
-|**CHAR_LENGTH**|**표시기**|**SESSION_USER**|  
-|**문자**|**처음**|**설정**|  
-|**CHARACTER_LENGTH**|**내부**|**크기**|  
-|**확인**|**입력**|**SMALLINT**|  
-|**닫기**|**구분 안 함**|**일부**|  
-|**COALESCE**|**INSERT**|**공간**|  
-|**한 부씩 인쇄**|**INT**|**SQL**|  
-|**데이터 정렬**|**정수**|**SQLCA**|  
-|**열**|**교차**|**SQLCODE**|  
-|**커밋**|**간격**|**SQLERROR**|  
-|**연결**|**에**|**SQLSTATE**|  
-|**연결**|**IS**|**SQLWARNING**|  
-|**제약 조건**|**격리**|**SUBSTRING**|  
-|**제약 조건**|**조인**|**합계**|  
-|**계속**|**키**|**SYSTEM_USER**|  
-|**변환**|**LANGUAGE**|**테이블**|  
-|**에 해당**|**마지막**|**임시**|  
-|**개수**|**앞에**|**그런 다음**|  
-|**만들기**|**LEFT**|**시간**|  
-|**크로스**|**수준**|**타임 스탬프**|  
-|**현재**|**LIKE**|**TIMEZONE_HOUR**|  
-|**CURRENT_DATE**|**로컬**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**더 낮은**|**받는 사람**|  
-|**CURRENT_TIMESTAMP**|**MATCH**|**후행**|  
-|**CURRENT_USER**|**최대**|**트랜잭션**|  
-|**커서**|**MIN**|**번역하기**|  
-|**날짜**|**분**|**번역**|  
-|**일**|**모듈**|**TRIM**|  
-|**할당 취소**|**월**|**TRUE**|  
-|**년 12 월**|**이름**|**공용 구조체**|  
-|**10 진수**|**NATIONAL**|**고유**|  
-|**선언**|**자연**|**알 수 없음**|  
-|**기본값**|**NCHAR**|**UPDATE**|  
-|**연기할 수**|**다음**|**위쪽**|  
-|**지연**|**아니요**|**사용**|  
-|**DELETE**|**NONE**|**사용자**|  
-|**DESC**|**NOT**|**사용 하 여**|  
+|**BOTH**|**GROUP**|**롤백**|  
+|**BY**|**HAVING**|**ROWS**|  
+|**CASCADE**|**HOUR**|**SCHEMA**|  
+|**CASCADED**|**IDENTITY**|**SCROLL**|  
+|**CASE**|**IMMEDIATE**|**두 번째**|  
+|**CAST**|**IN**|**섹션**|  
+|**CATALOG**|**INCLUDE**|**SELECT**|  
+|**CHAR**|**INDEX**|**세션**|  
+|**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
+|**CHARACTER**|**INITIALLY**|**SET**|  
+|**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
+|**CHECK**|**INPUT**|**SMALLINT**|  
+|**CLOSE**|**구분 안 함**|**SOME**|  
+|**COALESCE**|**INSERT**|**SPACE**|  
+|**COLLATE**|**INT**|**SQL**|  
+|**데이터 정렬**|**INTEGER**|**SQLCA**|  
+|**COLUMN**|**INTERSECT**|**SQLCODE**|  
+|**COMMIT**|**INTERVAL**|**SQLERROR**|  
+|**CONNECT**|**INTO**|**SQLSTATE**|  
+|**연결**|**은**|**SQLWARNING**|  
+|**CONSTRAINT**|**격리**|**SUBSTRING**|  
+|**CONSTRAINTS**|**JOIN**|**SUM**|  
+|**CONTINUE**|**KEY**|**SYSTEM_USER**|  
+|**CONVERT**|**LANGUAGE**|**TABLE**|  
+|**에 해당**|**LAST**|**임시**|  
+|**COUNT**|**앞에**|**그런 다음**|  
+|**CREATE**|**LEFT**|**TIME**|  
+|**CROSS**|**LEVEL**|**타임 스탬프**|  
+|**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
+|**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
+|**CURRENT_TIME**|**LOWER**|**TO**|  
+|**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
+|**CURRENT_USER**|**MAX**|**TRANSACTION**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
+|**DATE**|**MINUTE**|**번역**|  
+|**DAY**|**모듈**|**TRIM**|  
+|**DEALLOCATE**|**MONTH**|**TRUE**|  
+|**DEC**|**NAMES**|**공용 구조체**|  
+|**DECIMAL**|**NATIONAL**|**고유**|  
+|**선언**|**자연**|**UNKNOWN**|  
+|**DEFAULT**|**NCHAR**|**UPDATE**|  
+|**연기할 수**|**NEXT**|**UPPER**|  
+|**지연**|**NO**|**USAGE**|  
+|**DELETE**|**NONE**|**USER**|  
+|**DESC**|**NOT**|**USING**|  
 |**설명**|**NULL**|**VALUE**|  
-|**설명자**|**NULLIF**|**값**|  
-|**진단**|**숫자**|**VARCHAR**|  
+|**DESCRIPTOR**|**NULLIF**|**VALUES**|  
+|**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
 |**연결 끊기**|**OCTET_LENGTH**|**다양 한**|  
-|**DISTINCT**|**의**|**보기**|  
-|**도메인**|**ON**|**시기**|  
-|**DOUBLE**|**만**|**때마다**|  
-|**DROP**|**열기**|**WHERE**|  
-|**ELSE**|**옵션**|**사용**|  
+|**DISTINCT**|**OF**|**VIEW**|  
+|**도메인**|**ON**|**WHEN**|  
+|**DOUBLE**|**ONLY**|**WHENEVER**|  
+|**DROP**|**OPEN**|**WHERE**|  
+|**ELSE**|**옵션**|**WITH**|  
 |**END**|**OR**|**작업**|  
-|**EXEC 끝**|**순서**|**쓰기**|  
-|**이스케이프**|**외부**|**연도**|  
-|**제외 하**|**출력**|**영역**|  
+|**END-EXEC**|**ORDER**|**WRITE**|  
+|**ESCAPE**|**OUTER**|**YEAR**|  
+|**EXCEPT**|**OUTPUT**|**ZONE**|  
 |**예외**|||  
   
 ## <a name="future-keywords"></a>앞으로 사용될 키워드  
@@ -247,7 +246,7 @@ ms.lasthandoff: 09/01/2017
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
+|CUME_DIST|NEW|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|아니요|TIMEZONE_MINUTE|  
 |CURRENT_PATH|없음|TRAILING|  
@@ -261,7 +260,7 @@ ms.lasthandoff: 09/01/2017
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALUE|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|매개 변수|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -300,4 +299,3 @@ ms.lasthandoff: 09/01/2017
  [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
-

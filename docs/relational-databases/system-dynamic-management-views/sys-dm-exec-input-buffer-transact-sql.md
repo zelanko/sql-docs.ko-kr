@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_input_buffer _tsql
 - dm_exec_input_buffer
 - dm_exec_input_buffer_tsql
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_input_buffer dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ed224c77a502f81da57b232a68fddc0d4157338
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 456ae8af5d366f8fb5be006f944f1f704e382488
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
@@ -59,7 +62,7 @@ request_id [sys.dm_exec_requests](../../relational-databases/system-dynamic-mana
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**event_type**|**nvarchar(256)**|지정 된 spid에 대 한 입력된 버퍼에서 이벤트의 형식입니다.|  
-|**매개 변수**|**smallint**|제공 된 문에 대 한 모든 매개 변수입니다.|  
+|**parameters**|**smallint**|제공 된 문에 대 한 모든 매개 변수입니다.|  
 |**event_info**|**nvarchar(max)**|지정 된 spid에 대 한 입력된 버퍼에 있는 문의 텍스트입니다.|  
   
 ## <a name="permissions"></a>Permissions  
@@ -75,7 +78,7 @@ request_id [sys.dm_exec_requests](../../relational-databases/system-dynamic-mana
 ### <a name="a-simple-example"></a>1. 간단한 예  
  다음 예제에서는 함수에는 세션 id (SPID)와 요청 id를 전달 하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
@@ -83,7 +86,7 @@ GO
 ### <a name="b-using-cross-apply-to-additional-information"></a>2. 크로스 사용 하 여 추가 정보에 적용  
  다음 예제에서는 세션 id가 50 보다 크므로 인 세션에 대 한 입력된 버퍼를 나열합니다.  
   
-```tsql  
+```sql  
 SELECT es.session_id, ib.event_info   
 FROM sys.dm_exec_sessions AS es  
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  

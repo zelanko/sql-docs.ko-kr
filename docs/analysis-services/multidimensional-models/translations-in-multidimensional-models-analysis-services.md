@@ -2,35 +2,30 @@
 title: "다차원 모델 (Analysis Services)의 번역 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
+f1_keywords: sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e0f767ae138a66bd1237bcac1cfc64ce5998a824
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87f826e36a3fb58cfb1adba2b30a1375e3b84e71
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>다차원 모델의 번역(Analysis Services)
-  번역할 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 개체에 적절한 디자이너를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 번역을 정의할 수 있습니다. 번역을 정의하면 해당 **개체와 연결된** 개체의 속성에 대해 지정한 언어로 지정한 명시적 리터럴 값을 가진 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Translation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체가 생성됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]번역을 정의할 수 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에 대 한 적절 한 디자이너를 사용 하 여는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 변환 해야 하는 개체입니다. 번역을 정의하면 해당 **개체와 연결된** 개체의 속성에 대해 지정한 언어로 지정한 명시적 리터럴 값을 가진 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Translation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체가 생성됩니다.  
   
 ## <a name="elements-of-a-multi-lingual-data-model"></a>다국어 데이터 모델의 요소  
  다국어 솔루션에 사용되는 데이터 모델에서는 번역된 레이블(필드 이름 및 설명) 이상의 것들이 필요합니다. 또한 다양한 언어 스크립트에 명시되는 데이터 값도 제공해야 합니다. 다국어 솔루션을 만들려면 개별 특성이 데이터를 반환하는 외부 데이터베이스의 열에 바인딩되어야 합니다.  
@@ -134,4 +129,3 @@ ms.lasthandoff: 09/01/2017
  [언어 및 데이터 정렬 &#40; Analysis Services &#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   
-

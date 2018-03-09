@@ -3,28 +3,27 @@ title: "SQL Server에 대 한 공유 클러스터 Red Hat Enterprise Linux 작�
 description: "SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 하 여 높은 가용성을 구현 합니다."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5ad4620cf4972aa060844dfc8477e3e9c022ebf2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Red Hat Enterprise Linux 공유 디스크 클러스터 SQL Server에 대 한 작동
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Red Hat Enterprise Linux를 사용 하 여 공유 디스크 장애 조치 클러스터에서 SQL Server에 대 한 다음 작업을 수행 하는 방법에 설명 합니다.
 
@@ -74,7 +73,7 @@ sudo pcs status
 sudo crm_mon 
 ```
 
-리소스 에이전트 로그 보기`/var/log/cluster/corosync.log`
+리소스 에이전트 로그 보기 `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>클러스터에 노드 추가
 
@@ -84,7 +83,7 @@ sudo crm_mon
    ip addr show
    ```
 
-3. 새 노드는 15 자 하는 한 고유 이름을 지정 해야이 있습니다. Red Hat Linux에서 기본적으로 컴퓨터 이름이 `localhost.localdomain`합니다. 이 기본 이름은 고유 되지 않을 수 있습니다 및 너무 깁니다. 새 노드에 다음 컴퓨터 이름을 설정 합니다. 컴퓨터 이름을 추가 하 여 설정 `/etc/hosts`합니다. 다음 스크립트를 사용 하면 편집할 `/etc/hosts` 와 `vi`합니다. 
+3. 새 노드는 15 자 하는 한 고유 이름을 지정 해야이 있습니다. Red Hat Linux에서 기본적으로 컴퓨터 이름이 `localhost.localdomain`합니다. 이 기본 이름은 고유 되지 않을 수 있습니다 및 너무 깁니다. 새 노드에 다음 컴퓨터 이름을 설정 합니다. 컴퓨터 이름을 추가 하 여 설정 `/etc/hosts`합니다. 다음 스크립트를 사용하면 `/etc/hosts`를 `vi`로 편집할 수 있습니다. 
 
    ```bash
    sudo vi /etc/hosts
@@ -106,7 +105,7 @@ sudo crm_mon
 
 1. 공유 위치에 데이터베이스 파일 디렉터리를 탑재 하도록 지침을 따르세요.
 
-   NFS 서버에서 설치`nfs-utils`
+   NFS 서버에서 설치 `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -185,7 +184,7 @@ sudo crm_mon
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    다음 예제에서는 광고 이라는 한 노드가 **vm3** 클러스터에 있습니다.
+    명명 된 노드를 추가 하는 다음 예제에서는 **vm3** 클러스터에 있습니다.
 
     ```bash
     sudo pcs    cluster auth  
@@ -225,7 +224,7 @@ PCSD 사용 하기 위해 실행 해야 `pcs` 도구입니다.
 
 ### <a name="current-cluster-status"></a>현재 클러스터 상태 
 
-`sudo pcs status`각 노드에 대 한 클러스터, 쿼럼, 노드, 리소스 및 데몬 상태에 대 한 기본 정보를 반환 합니다. 
+`sudo pcs status` 각 노드에 대 한 클러스터, 쿼럼, 노드, 리소스 및 데몬 상태에 대 한 기본 정보를 반환 합니다. 
 
 정상 pacemaker 쿼럼 출력의 예는 다음과 같습니다.
 
@@ -254,9 +253,9 @@ pacemaker: active/enabled
 
 예제에서는 `partition with quorum` 노드 과반수 쿼럼 온라인 임을 의미 합니다. 클러스터에서 노드 과반수 쿼럼 손실 되 면 `pcs status` 돌아갑니다 `partition WITHOUT quorum` 않으며 리소스를 모두 중지 됩니다. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`현재 클러스터에 참여 하는 모든 노드의 이름을 반환 합니다. 모든 노드가 참여 하지 않는 경우 `pcs status` 반환 `OFFLINE: [<nodename>]`합니다.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` 현재 클러스터에 참여 하는 모든 노드의 이름을 반환 합니다. 모든 노드가 참여 하지 않는 경우 `pcs status` 반환 `OFFLINE: [<nodename>]`합니다.
 
-`PCSD Status`각 노드에 대해 클러스터 상태가 표시 됩니다.
+`PCSD Status` 각 노드에 대해 클러스터 상태가 표시 됩니다.
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>이유로 노드가 오프 라인 수 수 있습니다.
 
@@ -266,7 +265,7 @@ pacemaker: active/enabled
 
     다음 포트가 열려 Pacemaker 통신할 수에 대 한 모든 노드에 있어야 합니다.
     
-    - * * TCP: 2224 3121, 21064
+    - **TCP: 2224, 3121, 21064
 
 - **Pacemaker 또는 Corosync 서비스 실행**
 
@@ -281,5 +280,4 @@ pacemaker: active/enabled
 ## <a name="next-steps"></a>다음 단계
 
 [SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
-
 

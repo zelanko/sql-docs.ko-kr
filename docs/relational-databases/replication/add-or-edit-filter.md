@@ -2,27 +2,30 @@
 title: "필터 추가 또는 편집 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b488f571aee2fcbe68a228489e078ccdc32e9ba2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0461e699bbf3593f87567d3972aa7e260bca3111
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-filter"></a>필터 추가 또는 편집
-  **필터 추가** 및 **필터 편집** 대화 상자를 사용하여 정적 행 필터 및 매개 변수가 있는 행 필터를 추가 및 편집할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **필터 추가** 및 **필터 편집** 대화 상자를 사용하여 정적 행 필터 및 매개 변수가 있는 행 필터를 추가 및 편집할 수 있습니다.  
   
 > [!NOTE]  
 >  기존 게시에서 필터를 편집하려면 해당 게시에 대한 새 스냅숏이 필요합니다. 게시에 구독이 있으면 해당 구독을 다시 초기화해야 합니다. 속성 변경에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
@@ -31,7 +34,7 @@ ms.lasthandoff: 11/09/2017
   
  행 필터를 사용하여 게시할 행의 하위 집합을 테이블로부터 지정할 수 있습니다. 중요한 정보 또는 비밀 정보가 포함된 행과 같이 사용자가 보지 말아야 하는 행을 삭제하거나 서로 다른 구독자에 전달할 서로 다른 데이터 파티션을 만드는 데 행 필터를 사용할 수 있습니다. 서로 다른 데이터 파티션을 서로 다른 구독자로 게시하면 여러 구독자에서 동일한 데이터를 업데이트함으로써 발생할 수 있는 충돌을 방지할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  이 대화 상자는 2단계로 이루어진 트랜잭션 및 스냅숏 게시 처리 과정과 3단계로 이루어진 병합 게시 처리 과정으로 구성되어 있습니다. 모든 게시 유형에 대해 필터링할 테이블과 필터에 포함할 하나 이상의 열을 선택해야 합니다. 필터는 표준 WHERE 절로 정의합니다.  
   
 1.  **필터링할 테이블을 선택하십시오.**  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/09/2017
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [게시된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)   
- [조인 필터](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

@@ -2,23 +2,26 @@
 title: "아키텍처 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 1dcde96872f391d1be312c5b8ff9bd8c2dd7a479
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Python 컴퓨터 학습 서비스에 대 한 아키텍처 개요
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에서는 Python SQL Server, 보안 모델, 구성 요소를 포함 하 여 외부 스크립트 실행을 지 원하는 데이터베이스 엔진 및 SQL Server와 Python의 상호 운용성을 사용 하도록 설정 하는 새 구성 요소와 통합 되어 방법의 개요를 제공 합니다. 자세한 내용은 링크 된 항목을 참조 합니다.
 

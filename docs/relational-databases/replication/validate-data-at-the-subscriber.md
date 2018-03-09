@@ -2,9 +2,12 @@
 title: "구독자에서 데이터 유효성 검사 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - merge replication data validation [SQL Server replication], SQL Server Management Studio
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4cd46d5af16007ec474b86a7c1126cb35a9d3db
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 43528ddbe29580c30ca15d0588b5bd6d24d66a48
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validate-data-at-the-subscriber"></a>구독자에서 데이터 유효성 검사
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 구독자의 데이터에 대한 유효성을 검사하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 구독자의 데이터에 대한 유효성을 검사하는 방법에 대해 설명합니다.  
   
  데이터 유효성 검사 프로세스는 세 부분으로 구성되어 있습니다.  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/09/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -83,7 +86,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  복제 모니터 또는 **동기화 상태 보기** 대화 상자에서 유효성 검사 결과를 확인합니다. 다음과 같이 각 구독에 대한 작업을 수행하세요.  
+7.  복제 모니터 또는 **동기화 상태 보기** 대화 상자에서 유효성 검사 결과를 확인합니다. 다음과 같이 각 구독에 대한 작업을 수행하십시오.  
   
     1.  게시를 확장하고 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.  
   
@@ -125,7 +128,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-6.  복제 모니터 또는 **동기화 상태 보기** 대화 상자에서 유효성 검사 결과를 확인합니다. 다음과 같이 각 구독에 대한 작업을 수행하세요.  
+6.  복제 모니터 또는 **동기화 상태 보기** 대화 상자에서 유효성 검사 결과를 확인합니다. 다음과 같이 각 구독에 대한 작업을 수행하십시오.  
   
     1.  게시를 확장하고 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 상태 보기**를 클릭합니다.  
   
@@ -151,7 +154,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  **모든 구독** 탭을 클릭합니다.  
   
-7.  유효성 검사 결과를 확인합니다. 다음과 같이 각 밀어넣기 구독에 대한 작업을 수행하세요.  
+7.  유효성 검사 결과를 확인합니다. 다음과 같이 각 밀어넣기 구독에 대한 작업을 수행하십시오.  
   
     1.  에이전트가 실행되고 있지 않은 경우 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 시작**을 클릭합니다.  
   
@@ -195,7 +198,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  **모든 구독** 탭을 클릭합니다.  
   
-6.  유효성 검사 결과를 확인합니다. 다음과 같이 각 밀어넣기 구독에 대한 작업을 수행하세요.  
+6.  유효성 검사 결과를 확인합니다. 다음과 같이 각 밀어넣기 구독에 대한 작업을 수행하십시오.  
   
     1.  에이전트가 실행되고 있지 않은 경우 해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **동기화 시작**을 클릭합니다.  
   

@@ -4,34 +4,34 @@ ms.custom:
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: SQL
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - online index operations
 - source indexes [SQL Server]
-- preexisting indexes [SQL Server]
+- pre-existing indexes [SQL Server]
 - target indexes [SQL Server]
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: "28"
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3a06dc9f01b2cf889605770beb57940b7f10558b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="how-online-index-operations-work"></a>온라인 인덱스 작동 방식
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 온라인 인덱스 작업 중에 존재하는 구조에 대해 설명하고 이러한 구조와 관련된 작업을 보여 줍니다.  
   
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/22/2017
   
 |단계|원본 작업|원본 잠금|  
 |-----------|---------------------|------------------|  
-|준비<br /><br /> 매우 짧은 단계|비어 있는 새 인덱스 구조를 만들 시스템 메타데이터 준비<br /><br /> 테이블 스냅숏이 정의됩니다. 즉, 트랜잭션 수준의 읽기 일관성을 제공하기 위해 행 버전 관리가 사용됩니다.<br /><br /> 매우 짧은 기간 동안 원본에 대한 동시 사용자 쓰기 작업이 차단됩니다.<br /><br /> 여러 개의 비클러스터형 인덱스 만들기를 제외한 동시 DDL 작업이 허용되지 않습니다.|테이블에 대한 S(공유)*<br /><br /> IS(내재된 공유)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
+|준비<br /><br /> 짧은 단계|비어 있는 새 인덱스 구조를 만들 시스템 메타데이터 준비<br /><br /> 테이블 스냅숏이 정의됩니다. 즉, 트랜잭션 수준의 읽기 일관성을 제공하기 위해 행 버전 관리가 사용됩니다.<br /><br /> 짧은 기간 동안 원본에 대한 동시 사용자 쓰기 작업이 차단됩니다.<br /><br /> 여러 개의 비클러스터형 인덱스 만들기를 제외한 동시 DDL 작업이 허용되지 않습니다.|테이블에 대한 S(공유)*<br /><br /> IS(내재된 공유)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
 |빌드<br /><br /> 주 단계|대량 로드 작업의 대상으로 데이터가 검색, 정렬, 병합 및 삽입됩니다.<br /><br /> 동시 사용자 선택, 삽입, 업데이트 및 삭제 작업이 기존 인덱스와 작성된 모든 새 인덱스에 적용됩니다.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
-|최종<br /><br /> 매우 짧은 단계|이 단계를 시작하기 전에 커밋되지 않은 모든 업데이트 트랜잭션이 완료되어야 합니다. 획득한 잠금에 따라 이 단계가 완료될 때까지 매우 짧은 기간 동안 새로운 사용자 읽기 또는 쓰기 트랜잭션이 모두 차단됩니다.<br /><br /> 시스템 메타데이터가 업데이트되어 원본이 대상으로 대체됩니다.<br /><br /> 필요한 경우 원본이 삭제됩니다. 예를 들어 클러스터형 인덱스를 다시 작성하거나 삭제하면 원본이 삭제됩니다.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 비클러스터형 인덱스를 만드는 경우 테이블에 대한 S\*<br /><br /> 원본 구조(인덱스 또는 테이블)가 삭제되는 경우 SCH-M(스키마 수정)\*|  
+|최종<br /><br /> 짧은 단계|이 단계를 시작하기 전에 커밋되지 않은 모든 업데이트 트랜잭션이 완료되어야 합니다. 획득한 잠금에 따라 이 단계가 완료될 때까지 짧은 기간 동안 새로운 사용자 읽기 또는 쓰기 트랜잭션이 모두 차단됩니다.<br /><br /> 시스템 메타데이터가 업데이트되어 원본이 대상으로 대체됩니다.<br /><br /> 필요한 경우 원본이 삭제됩니다. 예를 들어 클러스터형 인덱스를 다시 작성하거나 삭제하면 원본이 삭제됩니다.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 비클러스터형 인덱스를 만드는 경우 테이블에 대한 S\*<br /><br /> 원본 구조(인덱스 또는 테이블)가 삭제되는 경우 SCH-M(스키마 수정)\*|  
   
  \* 인덱스 작업은 커밋되지 않은 모든 업데이트 트랜잭션이 완료될 때까지 대기한 후 테이블에 대한 S 잠금이나 SCH-M 잠금을 획득합니다.  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 06/22/2017
 |-----------|---------------------|------------------|  
 |준비|새 인덱스가 작성되고 쓰기 전용으로 설정됩니다.|IS|  
 |빌드|원본의 데이터가 삽입됩니다.<br /><br /> 원본에 적용된 사용자 수정 사항(삽입, 업데이트, 삭제)이 적용됩니다.<br /><br /> 사용자는 이 작업을 인식하지 못합니다.|IS|  
-|최종|인덱스 메타데이터가 업데이트됩니다.<br /><br /> 인덱스가 읽기/쓰기 상태로 설정됩니다.|S<br /><br /> 또는<br /><br /> SCH-M|  
+|최종|인덱스 메타데이터가 업데이트됩니다.<br /><br /> 인덱스가 읽기/쓰기 상태로 설정됩니다.|S<br /><br /> 로 구분하거나 여러<br /><br /> SCH-M|  
   
  인덱스 작업이 완료될 때까지 사용자가 실행한 SELECT 문은 대상에 액세스할 수 없습니다.  
   
@@ -97,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [온라인 인덱스 작업에 대한 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
-

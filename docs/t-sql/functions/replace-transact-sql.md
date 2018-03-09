@@ -24,17 +24,16 @@ helpviewer_keywords:
 - second string expressions [SQL Server]
 - REPLACE function
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-caps.latest.revision: 39
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8340c1b3af3ad843a0e3080cbfdc771d7353c7b7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 330a3d79893bd24e3253eced054fa029b7f8d1d9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replace-transact-sql"></a>REPLACE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,10 +52,10 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string_expression*  
  문자열은 [식](../../t-sql/language-elements/expressions-transact-sql.md) 를 검색할 수 있습니다. *string_expression* 문자 또는 이진 데이터 형식일 수 있습니다.  
   
- *string_*패턴  
+ *string_*pattern  
  찾을 부분 문자열입니다. *string_pattern* 문자 또는 이진 데이터 형식일 수 있습니다. *string_pattern* 빈 문자열 (") 될 수 없습니다 하며 페이지에 맞는 최대 바이트 수를 초과 하지 않아야 합니다.  
   
- *string_*교체  
+ *string_*replacement  
  대체 문자열입니다. *string_replacement* 문자 또는 이진 데이터 형식일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
@@ -105,7 +104,15 @@ This is a desk
 
   
 ## <a name="see-also"></a>관련 항목:  
+ [CONCAT &#40; Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [Quotename&#40; Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [역방향 &#40; Transact SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40; Transact SQL &#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [변환 &#40; Transact SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
-

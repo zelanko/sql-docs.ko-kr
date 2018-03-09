@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetDiagRec
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetDiagRec
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetDiagRec
-helpviewer_keywords:
-- SQLGetDiagRec function [ODBC]
+f1_keywords: SQLGetDiagRec
+helpviewer_keywords: SQLGetDiagRec function [ODBC]
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 34aa67ed374f525f6195403b299500019192c19a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 591664f329f4c7feeb24fff52b809dba567d0b80
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 함수
 **규칙**  
@@ -117,7 +111,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_NO_DATA: *RecNumber* 에 지정 된 핸들에 대 한 존재 하는 진단 레코드 개수 보다 큰 *처리 합니다.* 함수에 대 한 임의의 양수도 SQL_NO_DATA를 반환할 *RecNumber* 에 대 한 진단 레코드가 없는 경우 *처리*합니다.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  응용 프로그램에서 일반적으로 호출 **SQLGetDiagRec** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO ODBC 함수에 대 한 이전 호출에서 반환 하는 때입니다. 그러나 모든 ODBC 함수를 호출할 때마다 0 개 이상의 진단 레코드를 게시할 수 있습니다, 때문에 응용 프로그램이 호출할 수 **SQLGetDiagRec** ODBC 함수 호출 합니다. 응용 프로그램에서 호출할 수 **SQLGetDiagRec** 여러 번 진단 데이터 구조에서 일부 또는 모든 레코드를 반환 합니다. ODBC에서는 한 번에 저장할 수 있는 진단 레코드의 수를 제한 하지 않습니다.  
   
  **SQLGetDiagRec** 진단 데이터 구조의 헤더에서 필드를 반환할 사용할 수 없습니다. (의 *RecNumber* 인수는 0 보다 커야 합니다.) 응용 프로그램 호출 해야 **SQLGetDiagField** 이 목적을 위해 합니다.  
@@ -147,4 +141,3 @@ SQLRETURN SQLGetDiagRec(
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [샘플 ODBC 프로그램](../../../odbc/reference/sample-odbc-program.md)
-

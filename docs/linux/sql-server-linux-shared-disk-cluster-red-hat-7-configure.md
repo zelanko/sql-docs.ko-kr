@@ -3,29 +3,34 @@ title: "Red Hat Enterprise Linux 공유 클러스터 SQL Server에 대 한 구�
 description: "SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 하 여 높은 가용성을 구현 합니다."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
+ms.workload: On Demand
+ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 가이드를 Red Hat Enterprise Linux에서 SQL Server에 대 한 공유 디스크 2 개 노드 클러스터를 만드는 지침을 제공 합니다. Red Hat Enterprise Linux (RHEL)를 기반으로 클러스터링 레이어 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. SQL Server 인스턴스는 하나의 노드 또는 다른에서 활성입니다.
 
 > [!NOTE] 
 > Red Hat HA 추가 기능 및 문서에 대 한 액세스는 구독이 필요합니다. 
 
-아래 다이어그램에서 보듯이으로 두 명의 서버에 저장소가 제공 됩니다. -Corosync 및 Pacemaker-클러스터링 구성 요소는 통신 및 리소스 관리를 조정 합니다. 서버 중 하나에 저장소 리소스와 SQL Server에 연결 되어 있습니다. Pacemaker 오류를 발견 하면 클러스터링 구성 요소 관리 하는 리소스를 다른 노드로 이동 합니다.  
+다음 다이어그램에서 볼 수 있듯이 두 명의 서버에 저장소가 제공 됩니다. -Corosync 및 Pacemaker-클러스터링 구성 요소는 통신 및 리소스 관리를 조정 합니다. 서버 중 하나에 저장소 리소스와 SQL Server에 연결 되어 있습니다. Pacemaker 오류를 발견 하면 클러스터링 구성 요소 관리 하는 리소스를 다른 노드로 이동 합니다.  
 
 ![Red Hat Enterprise Linux 7 공유 디스크 SQL 클러스터](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -34,13 +39,13 @@ ms.lasthandoff: 10/24/2017
 
 > [!NOTE] 
 > 이 시점에서 Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. sql에서 클러스터의 존재에 대 한 지식이 없는, 외부 모든 오케스트레이션은 되며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 예를 들어 클러스터 dmv sys.dm_os_cluster_nodes 및 sys.dm_os_cluster_properties는 레코드가 없습니다.
-문자열 서버 이름이를 가리키는 연결 문자열을 사용 하는 IP를 사용 하지 있습니다 (아래 설명 됨)는 선택한 서버 이름으로 가상 IP 리소스를 만드는 데 IP를 DNS 서버에 등록 해야 합니다.
+문자열 서버 이름이를 가리키는 연결 문자열을 사용 하는 IP를 사용 하지 선택한 서버 이름으로 (다음 섹션에서 설명)으로 가상 IP 리소스를 만드는 데 IP를 DNS 서버에 등록 해야 합니다.
 
 다음 섹션에서는 장애 조치 클러스터 솔루션을 설정 하는 단계를 안내 합니다. 
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-아래 종단 간 시나리오를 완료 하려면 두 노드 클러스터와 NFS 서버를 구성 하려면 다른 서버를 배포 하려면 두 컴퓨터 해야 합니다. 아래 단계 이러한 서버는 구성 하는 방법에 대해 간략하게 설명 합니다.
+다음과 같은 종단 간 시나리오를 완료 하려면 두 노드 클러스터와 NFS 서버를 구성 하려면 다른 서버를 배포 하는 두 개의 컴퓨터가 필요 합니다. 아래 단계 이러한 서버는 구성 하는 방법에 대해 간략하게 설명 합니다.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>설정 하 고 각 클러스터 노드에서 운영 체제를 구성 합니다.
 
@@ -63,7 +68,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE] 
 > 설치 시 서버 마스터 키가 생성 된 SQL Server 인스턴스에 대 한 후 배치에 `/var/opt/mssql/secrets/machine-key`합니다. Linux에서 SQL Server는 항상 mssql 라는 로컬 계정으로 실행 됩니다. 로컬 계정을 이기 때문에 해당 id 노드 간에 공유 되지 않습니다. 따라서 서버 마스터 키를 해독 하 여 각 로컬 mssql 계정에 액세스할 수 있도록 암호화 키를 주 노드에서 각 보조 노드로 복사 해야 합니다. 
 
-1. 주 노드에서 Pacemaker에 대 한 SQL server 로그인을 만들고 실행에 로그인 권한을 부여 `sp_server_diagnostics`합니다. Pacemaker는 SQL Server를 실행 하는 노드를 확인 하려면이 계정을 사용 합니다. 
+1. 주 노드에서 Pacemaker에 대 한 SQL server 로그인을 만들고 실행에 로그인 권한을 부여 `sp_server_diagnostics`합니다. SQL Server를 실행 하는 노드를 확인 하려면이 계정을 사용 하는 pacemaker 합니다. 
 
    ```bash
    sudo systemctl start mssql-server
@@ -108,7 +113,10 @@ ms.lasthandoff: 10/24/2017
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>공유 저장소를 구성 하 고 데이터베이스 파일 이동 
 
-공유 저장소를 제공 하는 솔루션의 여러 가지가 있습니다. 이 연습이 NFS를 사용 하 여 공유 저장소를 구성 하는 방법을 보여 줍니다. 모범 사례를 따르고 NFS를 보호 하기 위해 Kerberos를 사용 하는 것이 좋습니다 (여기에 예제를 찾을 수 있습니다: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 그렇지 않으면 데이터 파일에 액세스할 수 SQL 노드의 IP 주소를 스푸핑 하 고 네트워크에 액세스할 수 있는 모든 사용자. 늘 그렇듯이 위협을 하면 프로덕션 환경에서 사용 하기 전에 시스템을 모델링 해야 합니다. 또 다른 저장소 옵션 SMB 파일 공유를 사용 하는 것입니다.
+공유 저장소를 제공 하는 솔루션의 여러 가지가 있습니다. 이 연습이 NFS를 사용 하 여 공유 저장소를 구성 하는 방법을 보여 줍니다. 모범 사례를 따르고 NFS를 보호 하기 위해 Kerberos를 사용 하는 것이 좋습니다 (여기에 예제를 찾을 수 있습니다: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+
+>[!Warning]
+>NFS를 보호 하지 않으면 모든 사용자가 네트워크에 액세스 하 고 SQL 노드의 IP 주소를 스푸핑할 수 됩니다 데이터 파일에 액세스할 수 있습니다. 늘 그렇듯이 위협을 하면 프로덕션 환경에서 사용 하기 전에 시스템을 모델링 해야 합니다. 또 다른 저장소 옵션 SMB 파일 공유를 사용 하는 것입니다.
 
 ### <a name="configure-shared-storage-with-nfs"></a>Nfs 공유 저장소를 구성 합니다.
 
@@ -123,19 +131,19 @@ NFS 서버에서 다음을 수행 합니다.
    sudo yum -y install nfs-utils
    ```
 
-1. 설정 및 시작`rpcbind`
+1. 설정 및 시작 `rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. 설정 및 시작`nfs-server`
+1. 설정 및 시작 `nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  편집 `/etc/exports` 내보내려면 공유 하려는 디렉터리입니다. 원하는 각 공유에 대 한 1 줄이 필요 합니다. 예를 들어 
+1.  편집 `/etc/exports` 내보내려면 공유 하려는 디렉터리입니다. 각 공유를 1 줄이 필요 합니다. 예를 들어 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -172,7 +180,7 @@ NFS 서버에서 다음을 수행 합니다.
 
 모든 클러스터 노드에서 다음 단계를 수행 합니다.
 
-1.  NFS 서버에서 설치`nfs-utils`
+1.  `nfs-utils` 설치
 
    ```bash
    sudo yum -y install nfs-utils
@@ -206,7 +214,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 1.  **주 노드의**, 데이터베이스 파일을 임시 위치에 저장 합니다. 다음 스크립트에서는 새로운 임시 디렉터리를 만듭니다 하 고, 데이터베이스 파일을 새 디렉터리를 복사, 오래 된 데이터베이스 파일을 제거 합니다. SQL Server mssql 로컬 사용자로 실행 되는 탑재 된 공유에 데이터 전송, 후 로컬 사용자가 공유에 대 한 읽기 / 쓰기 액세스 있는지 확인 해야 합니다. 
 
    ``` 
-   $ su mssql
+   $ sudo su mssql
    $ mkdir /var/opt/mssql/tmp
    $ cp /var/opt/mssql/data/* /var/opt/mssql/tmp
    $ rm /var/opt/mssql/data/*
@@ -225,16 +233,16 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->파일 시스템 (FS) 리소스를 사용 하 여 아래 권장 된 대로, 인지 유지 /etc/fstab에 탑재 명령 필요가 없습니다. Pacemaker 하므로 FS 클러스터 리소스를 시작 될 때 폴더를 탑재 합니다. 펜싱의 도움을 받아 ensurethe FS 두 번 탑재 되지 됩니다. 
+>여기에 사용 하는 파일 시스템 (FS) 리소스 권장 된 대로, 인지 유지 /etc/fstab에 탑재 명령 필요가 없습니다. Pacemaker 하므로 FS 클러스터 리소스를 시작 될 때 폴더를 탑재 합니다. 펜싱을 사용 하 여 것은 확인 고 FS 두 번 탑재 되지 않습니다. 
 
 1.  실행 `mount -a` 탑재 경로를 업데이트 하는 시스템에 대 한 명령입니다.  
 
 1.  에 저장 된 데이터베이스 및 로그 파일을 복사 `/var/opt/mssql/tmp` 새로 탑재 된 공유에 `/var/opt/mssql/data`합니다. 만 작업을 수행 해야이 **주 노드에서**합니다. 'Mssql' 로컬 사용자 읽기/쓰기 권한을 부여 하는 있는지 확인 합니다.
 
    ``` 
-   $ chown mssql /var/opt/mssql/data
-   $ chgrp mssql /var/opt/mssql/data
-   $ su mssql
+   $ sudo chown mssql /var/opt/mssql/data
+   $ sudo chgrp mssql /var/opt/mssql/data
+   $ sudo su mssql
    $ cp /var/opt/mssql/tmp/* /var/opt/mssql/data/
    $ rm /var/opt/mssql/tmp/*
    $ exit
@@ -257,8 +265,8 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
+   echo '<loginName>' | sudo tee -a /var/opt/mssql/secrets/passwd
+   echo '<loginPassword>' | sudo tee -a /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd 
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
@@ -324,10 +332,9 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. SQL Server, 파일 시스템 및 가상 IP 리소스에 대 한 클러스터 리소스를 구성 하 고 클러스터 구성을 밀어넣습니다. 다음과 같은 정보가 필요 합니다.
+2. SQL Server, 파일 시스템 및 가상 IP 리소스에 대 한 클러스터 리소스를 구성 하 고 클러스터 구성을 밀어넣습니다. 다음과 같은 정보가 필요합니다.
 
    - **SQL Server 리소스 이름**: 클러스터 된 SQL Server 리소스에 대 한 이름입니다. 
-   - **제한 시간 값**: 시간 제한 값은 클러스터에서 대기 하는 시간 동안는 리소스는 온라인 상태가 합니다. SQL Server 하기 위해 수행할 수 있어야 하는 경우 SQL server는 `master` 데이터베이스를 온라인 상태로 있습니다.  
    - **부동 IP 리소스 이름**: 가상 IP 주소 리소스에 대 한 이름입니다.
    - **IP 주소**: SQL Server의 클러스터형된 인스턴스에 연결 하려면 클라이언트에서 사용 하는 IP 주소입니다. 
    - **파일 시스템 리소스 이름**: 파일 시스템 리소스에 대 한 이름입니다.
@@ -335,11 +342,11 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
    - **장치**: 공유에 탑재 되는 로컬 경로
    - **fstype**: 파일 공유 유형 (즉, nfs)
 
-   사용자 환경에 대 한 아래의 스크립트에서 값을 업데이트 합니다. 구성 및 클러스터 된 서비스를 시작 하는 노드 하나에서 실행 합니다.  
+   사용자 환경에 대 한 다음 스크립트에서 값을 업데이트 합니다. 구성 및 클러스터 된 서비스를 시작 하는 노드 하나에서 실행 합니다.  
 
    ```bash
    sudo pcs cluster cib cfg 
-   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci op defaults timeout=<timeout_in_seconds>
+   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci
    sudo pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    sudo pcs -f cfg resource create <fileShareResourceName> Filesystem device=<networkPath> directory=<localPath>         fstype=<fileShareType>
    sudo pcs -f cfg constraint colocation add <virtualIPResourceName> <sqlResourceName>
@@ -351,7 +358,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 
    ```bash
    sudo pcs cluster cib cfg
-   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci op defaults timeout=60s
+   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci
    sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    sudo pcs -f cfg resource create fs Filesystem device="10.8.8.0:/mnt/nfs" directory="/var/opt/mssql/data" fstype="nfs"
    sudo pcs -f cfg constraint colocation add virtualip mssqlha
@@ -391,4 +398,3 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 ## <a name="next-steps"></a>다음 단계
 
 [Red Hat Enterprise Linux 공유 디스크 클러스터에서 SQL Server 동작](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-

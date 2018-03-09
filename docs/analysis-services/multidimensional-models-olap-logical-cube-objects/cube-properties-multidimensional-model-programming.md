@@ -2,18 +2,17 @@
 title: "큐브 속성-다차원 모델 프로그래밍 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Collation property
 - ID property
@@ -36,19 +35,20 @@ helpviewer_keywords:
 - ProcessingPriority property
 - ProactiveCaching property
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fc44854185830f93ff672cae6a0ebc68a88aa80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>큐브 속성-다차원 모델 프로그래밍
-  큐브에는 큐브 차원 동작에 영향을 주기 위해 설정할 수 있는 많은 속성이 있습니다. 다음 표에서는 이러한 속성을 요약하여 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+큐브에는 큐브 차원 동작에 영향을 주기 위해 설정할 수 있는 많은 속성이 있습니다. 다음 표에서는 이러한 속성을 요약하여 설명합니다.  
   
 > [!NOTE]  
 >  일부 속성은 큐브를 만들 때 자동으로 설정되며 변경할 수 없습니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |**AggregationPrefix**|집계 이름에 사용되는 공통 접두사를 지정합니다.|  
 |**데이터 정렬**|LCID(로캘 ID)와 비교 플래그를 밑줄로 구분하여 지정합니다(예: Latin1_General_C1_AS).|  
 |**DefaultMeasure**|큐브의 기본 측정값을 정의하는 MDX(Multidimensional Expressions) 식을 포함합니다.|  
-|**Description**|큐브에 대한 설명을 제공합니다. 이 설명은 클라이언트 응용 프로그램에 노출될 수 있습니다.|  
+|**설명**|큐브에 대한 설명을 제공합니다. 이 설명은 클라이언트 응용 프로그램에 노출될 수 있습니다.|  
 |**ErrorConfiguration**|중복 키, 알 수 없는 키, 오류 제한, 오류 감지 시 수행 동작, 오류 로그 파일 및 Null 키 처리 등에 대한 구성 가능한 오류 처리 설정을 포함합니다.|  
 |**EstimatedRows**|큐브의 예상 행 수를 지정합니다.|  
 |**ID**|큐브의 ID(고유 식별자)를 포함합니다.|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |**ScriptErrorHandlingMode**|오류 처리를 결정합니다. 옵션은 **IgnoreNone** 또는 **IgnoreAll**|  
 |**원본**|큐브에 사용된 데이터 원본 뷰를 표시합니다.|  
 |**StorageLocation**|큐브의 파일 시스템 저장소 위치를 지정합니다. 아무 위치도 지정하지 않으면 큐브 개체를 포함하는 데이터베이스에서 위치를 상속받습니다.|  
-|**StorageMode**|큐브의 저장소 모드를 지정합니다. 값은 **MOLAP**, **ROLAP**, 또는 **HOLAP * * *입니다.**|  
+|**StorageMode**|큐브의 저장소 모드를 지정합니다. 값은 **MOLAP**, **ROLAP**, 또는 **HOLAP**합니다.|  
 |**Visible**|큐브의 표시 여부를 결정합니다.|  
   
 > [!NOTE]  

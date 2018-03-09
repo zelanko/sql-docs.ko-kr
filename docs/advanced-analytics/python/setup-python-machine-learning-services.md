@@ -1,28 +1,29 @@
 ---
 title: "설정 및 Python 컴퓨터 학습 서비스에 대 한 구성 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.date: 12/20/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: c7437cff5e2828db7c841e289e329526390e5b69
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Python 컴퓨터 학습 Services (In-database) 설치
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  실행 하 여 Python에 대 한 필수 구성 요소를 설치는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 고이 항목에 설명 된 대로 대화형 프롬프트를 따릅니다.
+  이 문서에서는 실행 하 여 Python에 필요한 구성 요소를 설치 하는 방법을 설명는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사 및 대화형 프롬프트를 수행 합니다.
 
 ## <a name="machine-learning-options-in-sql-server-setup"></a>기계 학습에서 SQL Server 설치 옵션
 
@@ -42,21 +43,24 @@ ms.lasthandoff: 09/08/2017
   이 문제를 해결 Python 서비스를 사용 하는 독립 실행형 SQL Server 인스턴스에 필요한 테이블을 복사할 복제를 사용할 수 있습니다. 또는 기계 학습 Python AlwaysOn 설정을 사용 하 고 가용성 그룹의 일부는 독립 실행형 컴퓨터에는 서비스와 함께 설치할 수 있습니다.
 
 + Python의 다른 버전과 함께 설치 하 여 병렬이 SQL Server 인스턴스 Anaconda 배포의 자체 복사본을 사용 하기 때문에 가능 합니다. 그러나 SQL Server 외부 SQL Server 컴퓨터에 Python을 사용 하는 코드를 실행 중인 다양 한 문제가 발생할 수 있습니다.
-    + 다른 라이브러리와 다른 실행 파일이 사용 및 SQL Server에서 실행 하는 때 보다 서로 다른 결과 가져옵니다.
-    + Python 스크립트 외부 라이브러리에서 실행 중인 SQL server에 리소스 경합을 관리할 수 없습니다.
+    
+    - 다른 라이브러리와 다른 실행 파일이 사용 및 SQL Server에서 실행 하는 때 보다 서로 다른 결과 가져옵니다.
+    - Python 스크립트 외부 라이브러리에서 실행 중인 SQL server에 리소스 경합을 관리할 수 없습니다.
   
 > [!IMPORTANT]
-> 설치가 완료 된 후에이 항목에 설명 된 추가 구성 후 단계를 완료 해야 합니다. 여기에 SQL Server 외부 스크립트를 사용 하도록 설정 및 계정에서 사용자 대신 Python 작업을 실행 하는 SQL Server에 필요한 추가 됩니다.
+> 설치가 완료 된 후에이 문서에 설명 된 추가 구성 후 단계를 완료 해야 합니다. 이러한 단계에는 외부 스크립트를 사용 하도록 SQL Server를 사용 하도록 설정 하 고 사용자 대신 Python 작업을 실행 하는 SQL Server에 필요한 계정 추가 포함 됩니다.
 
 ### <a name="unattended-installation"></a>무인된 설치
 
-무인된 설치를 수행 하려면 SQL Server 설치 프로그램 및 Python 특정 인수에 대 한 명령줄 옵션을 사용 합니다. 자세한 내용은 참조 [Unattended Python 컴퓨터 학습 서비스를 사용 하 여 SQL server 설치](./unattended-installs-of-sql-server-python-services.md)합니다.
+무인된 설치를 수행 하려면 SQL Server 설치 프로그램 및 Python 특정 인수에 대 한 명령줄 옵션을 사용 합니다. 자세한 내용은 참조 [Unattended Python 컴퓨터 학습 서비스를 사용 하 여 SQL server 설치](unattended-installs-of-sql-server-python-services.md)합니다.
 
 ##  <a name="bkmk_installPythonInDatabase"></a>1 단계: 기계 학습에서 SQL Server Services (In-database) 설치
 
 1. SQL Server 2017에 대 한 설치 마법사를 실행 합니다.
   
 2. 에 **설치** 탭에서 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**합니다.
+
+    ![데이터베이스에서 Python 설치](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. **기능 선택** 페이지에서 다음 옵션을 선택합니다.
   
@@ -69,11 +73,12 @@ ms.lasthandoff: 09/08/2017
          이 옵션에서는 Python 스크립트 실행을 지 원하는 데이터베이스 서비스를 설치 합니다.
 
     -   **Python** Python 3.5 실행 파일을 가져오고 Anaconda 배포에서 라이브러리를 선택 하려면이 옵션을 선택 합니다. 인스턴스당 하나의 언어를 설치 합니다.
+        
+        ![Python에 대 한 옵션 기능](media/ml-svcs-features-python-highlight.png "Python에 대 한 옵션 설정")
 
         > [!NOTE]
-        > 옵션에서 선택 하지 않으면 **공유 기능** 에 대 한 **Microsoft R Server (독립 실행형)**합니다. 기계 학습 R 개발에 사용 되는 다른 컴퓨터에 구성 요소를 추가 해야 하는 경우 별도 설치에서이 옵션을 사용 합니다. 예를 들어이 데이터 과학자의 랩톱에 대 한 유용할 수 있습니다.
-        
-        ![설치 옵션에 대 한 Python](media/ml-svcs-features-python-highlight.png "Python에 대 한 옵션 설정")
+        > 
+        > 에 대 한 옵션을 선택 하지 않으면 **학습 Server 컴퓨터 (독립 실행형)**합니다. 컴퓨터 학습 서버를 설치 하는 옵션 **공유 기능** 별도 컴퓨터에 사용 됩니다. 예를 들어 다음 동일한 버전의 기계 학습 데이터 과학자의 랩톱 등의 프로젝트 개발에 사용 되는 다른 컴퓨터에 구성 요소를 설치 하는 것이 좋습니다.
 
 4. 에 **Python 설치에 동의** 페이지에서 **Accept**합니다.
   
@@ -92,7 +97,7 @@ ms.lasthandoff: 09/08/2017
      + Machine Learning Services(데이터베이스 내)
      + Python
   
-    이러한 선택 항목 Python SQL Server와 함께 사용 하는 데 필요한 최소 구성을 나타냅니다.
+    이러한 선택 항목으로 Python을 사용 하는 데 필요한 최소 구성을 나타냅니다 [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]합니다.
     
     ![Python 설치 준비 완료](media/ready-to-install-python.png "Python 설치에 대 한 필수 구성 요소")
 
@@ -102,7 +107,12 @@ ms.lasthandoff: 09/08/2017
 
 ##  <a name="bkmk_enableFeature"></a>2 단계: Python 스크립트 실행을 사용 하도록 설정
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 아직 설치 되지 않은 경우 다운로드 링크를 열도록 하 고 설치를 다시 SQL Server 설치 마법사를 실행할 수 있습니다.
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 
+
+    > [!TIP]
+    > 다운로드 하 고이 페이지에서 적절 한 버전을 설치할 수 있습니다: [다운로드 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
+    > 
+    > 미리 보기 릴리스도 볼 수 있습니다 [SQL 작업 Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)를 지 원하는 관리 작업 및 SQL Server에 대 한 쿼리 합니다.
   
 2. 컴퓨터 학습 서비스를 설치한 인스턴스에 연결 하 고 다음 명령을 실행 합니다.
 
@@ -118,7 +128,8 @@ ms.lasthandoff: 09/08/2017
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
-    이 기본 확장성 기능 언어를 모두 지원 하므로 R을 사용할 수 있도록 사용 되는 동일한 프로세스 정확 하 게 합니다.
+    
+    R 언어에 대 한 기능을 이미 사용 하는 경우 실행 하지 마십시오 Python에 대 한를 두 번째로 다시 구성 합니다. 기본 확장성 플랫폼 언어를 모두 지원 합니다.
 
 4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 SQL Server 서비스를 다시 시작합니다. SQL Server 서비스가 자동으로 다시 시작 하면 관련 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 서비스입니다.
 
@@ -140,13 +151,13 @@ ms.lasthandoff: 09/08/2017
   
     SQL Server의 여러 인스턴스를 설치한 경우 사용 하도록 설정 하는 Python 또는 R 권한이 있는 모든 인스턴스는 실행 패드 서비스는 자체에 있습니다.
 
-    그러나 단일 인스턴스에서 R 및 Python을 설치 하는 경우에 하나의 실행 패드 설치 됩니다. 각 언어에 대 한 별도, 언어별 launcher DLL 추가 됩니다. 자세한 내용은 참조 [Python의 통합을 지원 하려면 구성 요소가](new-components-in-sql-server-to-support-python-integration.md)합니다. 
+    단일 인스턴스에서 모두 R 및 Python을 설치 하는 경우에 하나의 실행 패드 설치 됩니다. 각 언어에 대 한 별도, 언어별 launcher DLL 추가 됩니다. 자세한 내용은 참조 [Python의 통합을 지원 하려면 구성 요소가](new-components-in-sql-server-to-support-python-integration.md)합니다. 
    
 3. 다음과 같은 간단한 Python 스크립트를 실행할 수 있어야 실행 패드를 실행 중인 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:
     
     ```SQL
     EXEC sp_execute_external_script  @language =N'Python',
-    @script=N'OutputDataSet=InputDataSet',
+    @script=N'OutputDataSet = InputDataSet',
     @input_data_1 = N'SELECT 1 AS col'
     ```
     
@@ -156,6 +167,7 @@ ms.lasthandoff: 09/08/2017
 
 > [!NOTE]
 > 열 또는 Python 스크립트에 사용 되는 머리글은을 반환 하지를 디자인 합니다. 출력에 대 한 열 이름을 추가 하려면 반환 된 데이터 집합에 대 한 스키마를 지정 해야 합니다. 이 작업을 수행 하 여 열 이름을 지정 하 고 SQL 데이터 형식 지정, 저장된 프로시저의 결과와 매개 변수를 사용 합니다.
+> 
 > 예를 들어 임의의 열 이름을 생성 하려면 다음 줄을 추가할 수 있습니다.`WITH RESULT SETS ((Col1 AS int))`
 
 ## <a name="step-4-additional-configuration"></a>4 단계: 추가 구성
@@ -177,20 +189,20 @@ ms.lasthandoff: 09/08/2017
 Windows 사용자 그룹 **SQLRUserGroup**에서 해당 계정을 볼 수 있습니다. 기본적으로 외부 스크립트 실행을 위한 충분 한 더 많은 작업은 일반적으로 20 작업자 계정이 생성 됩니다.
 
 > [!IMPORTANT]
-> 작업자 그룹을 실행 하는 스크립트의 유형에 관계 없이 SQLRUserGroup 라고 합니다. 각 인스턴스에 대 한 단일 그룹이 됩니다.
+> 작업자 그룹 이름은 **SQLRUserGroup** R, Python 설치 여부에 관계 없이 합니다. 각 인스턴스에 대 한 단일 그룹이 됩니다.
 
-원격 데이터 과학자의 클라이언트에서 R 스크립트를 실행 해야 하는 경우 Windows 인증을 사용 하는 추가 고려 사항 사항이 있습니다. 이러한 작업자 계정 로그인 할 사용 권한이 부여 해야는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 대신 인스턴스.
+원격 데이터 과학 클라이언트에서 스크립트를 실행 해야 하는 경우 Windows 인증을 사용 하는 추가 고려 사항 사항이 있습니다. 이러한 작업자 계정 로그인 할 사용 권한이 부여 해야는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 대신 인스턴스.
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]개체 탐색기에서 확장 **보안**합니다. 마우스 오른쪽 단추로 클릭 한 다음 **로그인**를 선택 하 고 **새 로그인**합니다.
 2. 에 **로그인-신규** 대화 상자에서 **검색**합니다.
 3. 선택 **개체 유형**를 선택 하 고 **그룹**합니다. 다른 모든 항목의 선택을 취소 합니다.
 4. **선택할 개체 이름을 입력**, 형식 *SQLRUserGroup*를 선택 하 고 **이름 확인**합니다.
 5. 인스턴스의 실행 패드 서비스와 연결된 로컬 그룹의 이름이 *instancename\SQLRUserGroup*과 같은 이름으로 확인되어야 합니다. **확인**을 선택합니다.
-6. 기본적으로 로그인은 할당에 **공용** 역할, 데이터베이스 엔진에 연결할 수 있는 권한이 있으며 합니다.
+6. 기본적으로 그룹에 할당 된 **공용** 역할을 데이터베이스 엔진에 연결할 수 있는 권한이 있으며 합니다.
 7. **확인**을 선택합니다.
 
 > [!NOTE]
-> SQL Server 계산 컨텍스트에서 스크립트를 실행 한 SQL 로그인에서 사용 하는 경우에이 추가 단계 필요 하지 않습니다.
+> 사용 하는 경우는 **SQL 로그인** SQL Server 계산 컨텍스트에서 스크립트를 실행 하는 데이 추가 단계가 필요 하지 않습니다.
 
 ### <a name="give-users-permission-to-run-external-scripts"></a>사용자 한 외부 스크립트를 실행 하는 권한 부여
 
@@ -209,12 +221,12 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 
 ### <a name="give-your-users-read-write-or-data-definition-language-ddl-permissions-to-databases"></a>데이터베이스 언어 (DDL) 사용 권한을 부여 하 여 사용자가 읽기, 쓰기 또는 데이터 정의
 
-사용자 스크립트를 실행 중인 동안 다른 데이터베이스에서 데이터를 읽는 사용자 계정 또는 SQL 로그인 해야 합니다. 사용자 계정 또는 SQL 로그인 결과 저장 하 고 데이터를 테이블에 기록 하기 위한 새 테이블을 만들려고 할 수도 있습니다.
+사용자 스크립트를 실행 중인 동안에 다른 데이터베이스에서 데이터를 읽는 사용자 해야 합니다. 사용자 결과 저장 하 고 데이터를 테이블에 기록 하기 위한 새 테이블을 만들려고 할 수도 있습니다.
 
-각 사용자 계정 또는 SQL 로그인 Python 또는 R 스크립트를 실행 하는 경우에 있는지를 확인 `db_datareader`, `db_datawriter`, 또는 `db_ddladmin` 특정 데이터베이스에 대 한 권한이 있습니다.
+각 Windows 사용자 계정 또는 Python 또는 R 스크립트를 실행 하는 SQL 로그인에 대 한 특정 데이터베이스에 적절 한 권한을 보유 확인: `db_datareader`, `db_datawriter`, 또는 `db_ddladmin`합니다.
 
-예를 들어, 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 SQL 로그인 *MySQLLogin* T-SQL 쿼리를 실행할 수 있는 권한을 *ML_Samples* 데이터베이스입니다. 이 명령문을 실행 하려면 SQL 로그인에 이미 있어야 서버의 보안 컨텍스트.
-  
+예를 들어, 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 SQL 로그인 *MySQLLogin* T-SQL 쿼리를 실행할 수 있는 권한을 *ML_Samples* 데이터베이스입니다. 이 문을 실행하려면 SQL 로그인이 서버의 보안 컨텍스트에 이미 있어야 합니다.
+
 ```SQL
 USE ML_Samples
 GO
@@ -229,12 +241,11 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>데이터 과학 클라이언트의 인스턴스에 대한 ODBC 데이터 원본 만들기
 
-기계 학습 데이터 과학 클라이언트 컴퓨터에서 솔루션을 만들 수 있습니다. 계산 컨텍스트로 써 SQL Server 컴퓨터를 사용 하 여 코드를 실행 해야 할 경우 두 가지 옵션이 있습니다. SQL 로그인 이나는 통합된 Windows 인증을 사용할 수 있습니다.
+기계 학습 데이터 과학 클라이언트 컴퓨터에서 솔루션을 만들 수 있습니다. 계산 컨텍스트로 써 SQL Server 컴퓨터를 사용 하 여 코드를 실행 해야 할 경우 두 가지 옵션이 있습니다: Windows를 사용 하 여 계정 또는 SQL 로그인을 사용 하 여 인스턴스에 액세스 합니다.
 
-+ SQL 로그인을 위한: 로그인 권한을 있는지 확인 적절 한 데이터를 읽는 데이터베이스에 있습니다. 추가 하 여 수행할 수 있습니다 *연결할* 및 *선택* 사용 권한 또는 로그인을 추가 하 여는 `db_datareader` 역할입니다. 개체를 만드는 로그인 필요 `DDL_admin` 권한. 테이블에 데이터를 저장 해야 하는 로그인에 추가 해야는 `db_datawriter` 역할입니다.
++ SQL 로그인에 대 한: 로그인 데이터를 읽는 데이터베이스에서 적절 한 권한이 있는지 확인 합니다. 추가 하 여 수행할 수 있습니다 *연결할* 및 *선택* 사용 권한 또는 로그인을 추가 하 여는 `db_datareader` 역할입니다. 할당 개체를 만들려는 `DDL_admin` 권한. 테이블에 데이터를 저장 해야 하는 경우에 추가 된 `db_datawriter` 역할입니다.
 
 + Windows 인증을 위해: 인스턴스 이름 및 기타 연결 정보를 지정 하는 데이터 과학 클라이언트에는 ODBC 데이터 원본을 만들 해야 할 수 있습니다. 자세한 내용은 참조 [ODBC 데이터 원본 관리자](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator)합니다.
-
 
 ## <a name="additional-optimizations"></a>추가 최적화
 
@@ -242,7 +253,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="add-more-worker-accounts"></a>작업자 계정을 더 추가 합니다.
 
-많은 사용자를 동시에 스크립트를 실행 하려는 경우에 실행 패드 서비스에 할당 된 작업자 계정의 수를 늘릴 수 있습니다. 자세한 내용은 참조 [SQL Server R Services에 대 한 사용자 계정 풀 수정](../r/modify-the-user-account-pool-for-sql-server-r-services.md)합니다.
+많은 사용자를 동시에 스크립트를 실행 하려는 경우에 실행 패드 서비스에 할당 된 작업자 계정의 수를 늘릴 수 있습니다. 자세한 내용은 참조 [SQL Server 컴퓨터 학습 서비스에 대 한 사용자 계정 풀 수정](../r/modify-the-user-account-pool-for-sql-server-r-services.md)합니다.
 
 ### <a name="optimize-the-server-for-script-execution"></a>서버 스크립트 실행을 위해 최적화
 
@@ -263,7 +274,7 @@ SQL Server Enterprise Edition의 경우 Python에 대 한 외부 리소스 풀�
   
      [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
   
--   에 의해 시작 될 수 있는 작업자 계정의 수를 변경 합니다.[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
+-   에 의해 시작 될 수 있는 작업자 계정의 수를 변경 합니다. [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
   
      [SQL Server R Services에 대 한 사용자 계정 풀 수정](../r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
@@ -280,10 +291,6 @@ SQL Server 2017을 사용 하 여 컴퓨터 학습 서비스를 설치 하면 �
 
 인스턴스를 업그레이드 하는 방법에 대 한 정보를 참조 하십시오. [바인딩을 통해 업그레이드 R 구성 요소](..\r\use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
 
-> [!NOTE]
-> 
-> 최신 릴리스 버전은 최신 버전의 모든 컴퓨터에 대 한 학습 구성 요소를 포함합니다. 따라서 Microsoft 컴퓨터 학습 서버를 통해 업그레이드는 SQL Server 2017에 대 한 지원, 하지만 업그레이드가 현재 사용할 수 있는 SQL Server 2016 인스턴스에만 적용 됩니다.
-
 ### <a name="tutorials"></a>자습서
 
 Python SQL Server와 함께 사용 하 여 빌드 컴퓨터 학습 솔루션을 배포 하는 방법을의 몇 가지 예에 대 한 다음 자습서를 참조 하십시오.
@@ -291,4 +298,3 @@ Python SQL Server와 함께 사용 하 여 빌드 컴퓨터 학습 솔루션을 
 [Python을 사용 하 여 T-SQL에서](../tutorials/run-python-using-t-sql.md)
 
 [Revoscalepy를 사용 하 여 Python 모델 만들기](../tutorials/use-python-revoscalepy-to-create-model.md)
-

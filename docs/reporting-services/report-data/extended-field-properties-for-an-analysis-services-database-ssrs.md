@@ -1,34 +1,34 @@
 ---
-title: "Analysis Services (SSRS) 데이터베이스에 대 한 확장 필드 속성 | Microsoft Docs"
+title: "Analysis Services 데이터베이스에 대한 확장 필드 속성(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0d5c9c11ddf274af9bf8f1851509dae5bff8e27a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 데이터베이스에 대한 확장 필드 속성(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 확장 필드 속성을 지원합니다. 확장 필드 속성은 **Value** 및 **IsMissing** 외에 데이터 원본에서 사용할 수 있고 데이터 처리 확장 프로그램에서 지원되는 속성입니다. 확장 속성은 보고서 데이터 집합에 대한 필드 컬렉션의 일부로 보고서 데이터 창에 나타나지 않습니다. 기본 제공 **Fields** 컬렉션을 사용하여 이름으로 확장 필드 속성 값을 지정하는 식을 작성하면 보고서에 확장 필드 속성 값을 포함할 수 있습니다.  
   
  확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의된 속성은 여러 데이터 원본에 공통되는 속성으로, 특정 필드 속성 이름에 매핑되고 기본 제공 **Fields** 컬렉션을 통해 이름으로 액세스될 수 있습니다. 사용자 지정 속성은 각 데이터 공급자별로 정의되며 확장 속성 이름을 문자열로 사용하는 구문에 의해서만 기본 제공 **Fields** 컬렉션을 통해 액세스될 수 있습니다.  
   
- 그래픽 모드에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리 디자이너를 사용하여 쿼리를 정의하면 미리 정의된 셀 속성 및 차원 속성 집합이 자동으로 MDX 쿼리에 추가됩니다. 보고서의 MDX 쿼리에 구체적으로 나열된 확장 속성만 사용할 수 있습니다. 보고서에 따라 기본 MDX 명령 텍스트를 수정하여 큐브에 정의된 다른 차원 속성이나 사용자 지정 속성을 포함할 수도 있습니다. 사용할 수 있는 확장된 필드에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 참조 [만들기 및 사용 하 여 속성 값 &#40; Mdx&#41; ](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
+ 그래픽 모드에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리 디자이너를 사용하여 쿼리를 정의하면 미리 정의된 셀 속성 및 차원 속성 집합이 자동으로 MDX 쿼리에 추가됩니다. 보고서의 MDX 쿼리에 구체적으로 나열된 확장 속성만 사용할 수 있습니다. 보고서에 따라 기본 MDX 명령 텍스트를 수정하여 큐브에 정의된 다른 차원 속성이나 사용자 지정 속성을 포함할 수도 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에서 사용할 수 있는 확장 필드에 대한 자세한 내용은 [속성 값 만들기 및 사용&#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)을 참조하세요.  
   
 ## <a name="working-with-field-properties-in-a-report"></a>보고서에서 필드 속성 사용  
  확장 필드 속성에는 미리 정의된 속성과 데이터 공급자 관련 속성이 포함됩니다. 필드 속성은 데이터 집합에 대해 작성된 쿼리에 포함되어 있어도 **보고서 데이터** 창의 필드 목록에 나타나지 않습니다. 따라서 필드 속성을 보고서 디자인 화면으로 끌 수 없습니다. 대신 필드를 보고서로 끈 다음 필드의 **Value** 속성을 사용하려는 속성으로 변경해야 합니다. 예를 들어 큐브의 셀 데이터 형식이 이미 지정되어 있는 경우 `=Fields!FieldName.FormattedValue`식을 통해 FormattedValue 필드 속성을 사용할 수 있습니다.  
@@ -52,18 +52,18 @@ ms.lasthandoff: 08/09/2017
 |------------------|--------------|---------------------------------------|  
 |**Value**|**개체**|필드의 데이터 값을 지정합니다.|  
 |**IsMissing**|**Boolean**|필드가 결과 데이터 집합에 있는지 여부를 나타냅니다.|  
-|**UniqueName**|**문자열**|수준의 정규화된 이름을 반환합니다. 예를 들어 직원의 **UniqueName** 값은 *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]*일 수 있습니다.|  
-|**BackgroundColor**|**문자열**|필드에 대해 데이터베이스에 정의된 배경색을 반환합니다.|  
-|**색**|**문자열**|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.|  
-|**FontFamily**|**문자열**|항목에 대해 데이터베이스에 정의된 글꼴 이름을 반환합니다.|  
-|**FontSize**|**문자열**|항목에 대해 데이터베이스에 정의된 글꼴 크기를 반환합니다.|  
-|**FontWeight**|**문자열**|항목에 대해 데이터베이스에 정의된 글꼴 두께를 반환합니다.|  
-|**FontStyle**|**문자열**|항목에 대해 데이터베이스에 정의된 글꼴 스타일을 반환합니다.|  
-|**TextDecoration**|**문자열**|항목에 대해 데이터베이스에 정의된 특수 텍스트 서식을 반환합니다.|  
-|**FormattedValue**|**문자열**|측정값 또는 주요 숫자 값의 형식화된 값을 반환합니다. 예를 들어 **Sales Amount Quota** 에 대한 **FormattedValue** 속성은 $1,124,400.00과 같은 통화 형식을 반환합니다.|  
+|**UniqueName**|**String**|수준의 정규화된 이름을 반환합니다. 예를 들어 직원의 **UniqueName** 값은 *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]*일 수 있습니다.|  
+|**BackgroundColor**|**String**|필드에 대해 데이터베이스에 정의된 배경색을 반환합니다.|  
+|**색**|**String**|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.|  
+|**FontFamily**|**String**|항목에 대해 데이터베이스에 정의된 글꼴 이름을 반환합니다.|  
+|**FontSize**|**String**|항목에 대해 데이터베이스에 정의된 글꼴 크기를 반환합니다.|  
+|**FontWeight**|**String**|항목에 대해 데이터베이스에 정의된 글꼴 두께를 반환합니다.|  
+|**FontStyle**|**String**|항목에 대해 데이터베이스에 정의된 글꼴 스타일을 반환합니다.|  
+|**TextDecoration**|**String**|항목에 대해 데이터베이스에 정의된 특수 텍스트 서식을 반환합니다.|  
+|**FormattedValue**|**String**|측정값 또는 주요 숫자 값의 형식화된 값을 반환합니다. 예를 들어 **Sales Amount Quota** 에 대한 **FormattedValue** 속성은 $1,124,400.00과 같은 통화 형식을 반환합니다.|  
 |**Key**|**개체**|수준의 키를 반환합니다.|  
-|**LevelNumber**|**정수**|부모-자식 계층에 대해 수준 또는 차원 번호를 반환합니다.|  
-|**ParentUniqueName**|**문자열**|부모-자식 계층에 대해 부모 수준의 정규화된 이름을 반환합니다.|  
+|**LevelNumber**|**Integer**|부모-자식 계층에 대해 수준 또는 차원 번호를 반환합니다.|  
+|**ParentUniqueName**|**String**|부모-자식 계층에 대해 부모 수준의 정규화된 이름을 반환합니다.|  
   
 > [!NOTE]  
 >  이러한 확장 필드 속성의 값은 보고서가 실행되어 해당 데이터 집합에 대한 데이터가 검색될 때 데이터 원본(예: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브)이 이러한 값을 제공하는 경우에만 존재합니다. 이러한 값이 존재하는 경우 다음 섹션에 설명된 구문을 사용하여 모든 식에서 해당 필드 속성 값을 참조할 수 있습니다. 그러나 이러한 필드는 이 데이터 공급자에만 해당되므로 이러한 값을 변경해도 보고서 정의와 함께 저장되지 않습니다.  
@@ -103,7 +103,7 @@ FROM [Adventure Works]
 |DateCaption|DateUniqueName|DateDayName|DateValueinOriginalDatatype|DateParentUniqueName|DateMemberKeyinOriginalDatatype|  
 |-----------------|--------------------|-----------------|---------------------------------|--------------------------|-------------------------------------|  
 |All Periods|[Date].[Date].[All Periods]|(null)|(null)|(null)|0|  
-|1-Jul-01|[Date].[Date].&[1]|일요일|7/1/2001|[Date].[Date].[All Periods]|1.|  
+|1-Jul-01|[Date].[Date].&[1]|일요일|7/1/2001|[Date].[Date].[All Periods]|1|  
 |2-Jul-01|[Date].[Date].&[2]|월요일|7/2/2001|[Date].[Date].[All Periods]|2|  
 |3-Jul-01|[Date].[Date].&[3]|화요일|7/3/2001|[Date].[Date].[All Periods]|3|  
   
@@ -134,7 +134,7 @@ CELL PROPERTIES
   
  속성은 MDX SELECT 문의 일부이지만 결과 집합 열에 나타나지 않습니다. 그러나 확장 속성 기능을 사용하여 이 데이터를 보고서에 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 MDX 쿼리 결과 창에서 셀을 두 번 클릭하면 큐브에 설정된 경우 셀 속성 값을 볼 수 있습니다. 1,379가 포함된 첫 번째 Order Count 셀을 두 번 클릭하면 다음 셀 속성이 있는 팝업 창이 표시됩니다.  
   
-|속성|Value|  
+|속성|값|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |Value|2481|  
@@ -154,10 +154,9 @@ CELL PROPERTIES
   
  이렇게 하면 데이터 원본의 원래 정수 데이터 형식으로 필드 값이 정렬됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [식 &#40;의 기본 제공 컬렉션 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [데이터 집합 필드 컬렉션 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-

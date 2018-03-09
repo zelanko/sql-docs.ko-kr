@@ -2,15 +2,13 @@
 title: "속성-사용자 계층 수준 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,20 +17,20 @@ helpviewer_keywords:
 - user hierarchies [Analysis Services]
 - hierarchies [Analysis Services], user
 ms.assetid: dabb7335-887b-442a-b67c-4901ba1242b7
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: db94622cfc84d97cb6f8e7578421f4933a63af94
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7fa44b453e1c91d8a43dde01ec582b59f22d3824
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-hierarchies---level-properties"></a>사용자 계층-수준 속성
-  다음 표에서는 사용자 정의 계층의 수준 속성을 나열하고 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+다음 표에서는 사용자 정의 계층의 수준 속성을 나열하고 설명합니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/01/2017
  [사용자 계층 속성](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   
-

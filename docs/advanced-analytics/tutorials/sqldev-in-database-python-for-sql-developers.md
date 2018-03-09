@@ -2,31 +2,32 @@
 title: "데이터베이스 내 Python 분석 SQL 개발자를 위해 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/13/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 725d69f4c0799cf5911cb8764aa7d0f3b6cbc48d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 개발자를 위해 데이터베이스에서 Python 분석
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 연습의 목표 기계 학습에서 SQL Server를 실행 하는 Python을 사용 하 여 솔루션을 구축 하는 실습 환경과 SQL 프로그래머를 제공 하는 것입니다. 이 연습에서는 저장된 프로시저에 Python 코드를 추가 하 고 저장된 프로시저를 작성 하 고 모델에서 예측을 실행 하는 방법을 설명 합니다.
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/18/2017
 
 잘 알려진 NYC 택시 데이터 집합의 데이터입니다. 이 연습에서는 쉽고 빠르게 하도록 하려면 데이터 샘플링 됩니다. 특정 여행 인지 여부, 팁은 발생할 가능성이 시간, 거리 및 위치 선정 등의 열에 따라 예측 하는 이진 분류 모델을 만들게 됩니다.
 
-모든 작업을 수행할 수 있습니다 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 익숙한 환경에서 저장 프로시저[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+모든 작업을 수행할 수 있습니다 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 익숙한 환경에서 저장 프로시저 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [1단계: 샘플 데이터 다운로드](sqldev-py1-download-the-sample-data.md)
 
@@ -122,7 +123,6 @@ PowerShell에 대 한 지식이 도움이 됩니다.
 |학습 및 T-SQL을 사용 하 여 모델 저장|0:15|
 |모델을 운용|0:40|
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작 하기
 
   [1단계: 샘플 데이터 다운로드](sqldev-py1-download-the-sample-data.md)
-

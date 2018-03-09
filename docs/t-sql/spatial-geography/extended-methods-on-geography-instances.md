@@ -15,17 +15,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f7af6e687461d9663ca59a6262cbd1ed5c5560f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7f17a6adc4449e0c3e9e1b9e944732a9aa13672b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extended-methods-on-geography-instances"></a>geography 인스턴스의 확장 메서드
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [EnvelopeCenter](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
--   [Assert](../../t-sql/spatial-geography/filter-geography-data-type.md)  
+-   [필터](../../t-sql/spatial-geography/filter-geography-data-type.md)  
   
 -   [HasM &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/hasm-geography-data-type.md)  
   
@@ -72,7 +71,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [Lat](../../t-sql/spatial-geography/lat-geography-data-type.md)  
   
--   [긴](../../t-sql/spatial-geography/long-geography-data-type.md)  
+-   [Long](../../t-sql/spatial-geography/long-geography-data-type.md)  
   
 -   [M](../../t-sql/spatial-geography/m-geography-data-type.md)  
   
@@ -100,4 +99,3 @@ ms.lasthandoff: 09/01/2017
  [확장 정적 지리 메서드](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

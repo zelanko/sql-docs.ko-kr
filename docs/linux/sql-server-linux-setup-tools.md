@@ -1,30 +1,29 @@
 ---
 title: "Linux에서 SQL Server 명령줄 도구를 설치 합니다. | Microsoft Docs"
-description: "이 항목에서는 Linux에서 SQL Server 도구를 설치 하는 방법에 설명 합니다."
+description: "이 문서에서는 Linux에서 SQL Server 도구를 설치 하는 방법을 설명 합니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
+ms.openlocfilehash: 92b04366f3dbcba517c5c82b0e7d65e862890cc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 130da2409070f0acfda0bf78fcf2c4326bbeec92
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux에서 sqlcmd 및 bcp SQL Server 명령줄 도구를 설치
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 명령줄 도구, Microsoft ODBC 드라이버 및 해당 종속성을 설치 하는 다음 단계를 수행 합니다. **mssql 도구** 패키지에 포함 되어 있습니다.
 
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 - [macOS](#macos)
 - [Docker](#docker)
 
-이 항목에서는 명령줄 도구를 설치 하는 방법에 설명 합니다. 사용 하는 방법의 예제를 보려면 원하는 경우 **sqlcmd** 또는 **bcp**, 참조는 [링크](#next-steps) 이 항목의 끝에 있습니다.
+이 문서에서는 이러한 명령줄 도구를 설치 하는 방법을 설명 합니다. 사용 하는 방법의 예제를 보려면 원하는 경우 **sqlcmd** 또는 **bcp**, 참조는 [링크](#next-steps) 이 항목의 끝에 있습니다.
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>RHEL 7에서 도구를 설치 합니다.
 
@@ -181,15 +180,18 @@ ms.lasthandoff: 08/02/2017
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>MacOS에서 도구를 설치 합니다.
+## <a id="macos"></a> MacOS에서 도구를 설치 합니다.
 
 미리 보기 **sqlcmd** 및 **bcp** macOS에 출시 되었습니다. 자세한 내용은 참조는 [알림](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)합니다.
+
+*설치 [Homebrew](https://brew.sh) 이미 있는 하지 않는 경우:*
+
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 Mac El Capitan 및 시에라 도구를 설치 하려면 다음 명령을 사용 합니다.
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew untap microsoft/mssql-preview if you installed the preview version 
+# brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install --no-sandbox mssql-tools
@@ -197,7 +199,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 SQL Server 2017 CTP 2.0 부터는 SQL Server 명령줄 도구는 Docker 이미지에 포함 됩니다. 대화형 명령 프롬프트를 사용 하 여 이미지에 연결 하는 경우 도구를 로컬로 실행할 수 있습니다.
 
@@ -216,10 +218,10 @@ SQL Server 2017 CTP 2.0 부터는 SQL Server 명령줄 도구는 Docker 이미�
 
 이러한 패키지에 종속 될 **배치한**, 먼저 설치 해야 합니다. **배치한** 패키지 때에 중 하나에 종속 되어 **unixODBC 개발자** (RPM) 또는 **unixodbc dev** (Debian). 위치는 **배치한** 패키지는 다음 표에 나열 됩니다.
 
-| 배치한 패키지 | 버전 | 다운로드 |
+| msodbcsql package | 버전 | 다운로드 |
 |-----|-----|-----|
-| Red Hat RPM 배치한 패키지 | 13.1.6.0-1 | [배치한 RPM 패키지](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| SLES RPM 배치한 패키지 | 13.1.6.0-1 | [배치한 RPM 패키지](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
+| Red Hat RPM 배치한 패키지 | 13.1.6.0-1 | [msodbcsql RPM package](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
+| SLES RPM 배치한 패키지 | 13.1.6.0-1 | [msodbcsql RPM package](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 배치한 패키지 | 13.1.6.0-1 | [배치한 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
 | Ubuntu 16.10 Debian 배치한 패키지 | 13.1.6.0-1 | [배치한 Debian 패키지](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
 
@@ -262,7 +264,7 @@ SQL Server 2017 CTP 2.0 부터는 SQL Server 명령줄 도구는 Docker 이미�
 
 ## <a name="next-steps"></a>다음 단계
 
-사용 하는 방법의 예제를 보려면 **sqlcmd** 하 SQL Server에 연결 된 데이터베이스를 만들려면 다음 빠른 중 하나를 참조 시작 자습서:
+사용 하는 방법의 예제를 보려면 **sqlcmd** 하 SQL Server에 연결 된 데이터베이스를 만들려면 다음 퀵 스타트 중 하나를 참조 합니다.
 
 - [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
@@ -270,4 +272,3 @@ SQL Server 2017 CTP 2.0 부터는 SQL Server 명령줄 도구는 Docker 이미�
 - [Docker에서 실행](quickstart-install-connect-ubuntu.md)
 
 사용 하는 방법의 예제를 보려면 **bcp** 대량 가져오기 및 내보내기 데이터, 참조 [Linux에서 SQL Server로 대량 복사 데이터](sql-server-linux-migrate-bcp.md)합니다.
-

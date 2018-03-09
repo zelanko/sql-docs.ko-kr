@@ -3,24 +3,28 @@ title: "SQL Server 확장 이벤트의 대상 데이터 고급 보기 | Microsof
 ms.custom: 
 ms.date: 10/04/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: xevents
+ms.suite: sql
+ms.technology:
+- xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 643d3b6f21d5ff42c1117df009f4e08e83793898
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: 7415e768584c9256eaa600cb2302c7cc9aa0d529
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 확장 이벤트의 대상 데이터 고급 보기
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 이 문서에는 SQL Server Management Studio(SSMS.exe)의 고급 기능을 사용하여 확장 이벤트에서 대상 데이터를 상세하게 보는 방법이 나와 있습니다. 이 문서에서는 다음을 수행하는 방법을 설명합니다.
@@ -32,7 +36,7 @@ ms.lasthandoff: 11/09/2017
 
 
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 
 현재 문서에서는 이벤트 세션을 만들고 시작하는 방법은 이미 알고 있다고 가정합니다. 이벤트 세션을 만드는 방법은 다음 문서에서 이미 설명했습니다.
 

@@ -1,10 +1,13 @@
 ---
-title: "(백슬래시) (Transact SQL) | Microsoft Docs"
+title: "백슬래시 (줄 연속 문자) (Transact SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/27/2017
+ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,24 +33,21 @@ helpviewer_keywords:
 - line continuation character
 - reverse solidus
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 011025d20b6341b9fa43b25f6c14c91a135a6ffa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6cc27da58953985a2fa4910583bde2dd31d67405
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-utilities-statements---backslash"></a>SQL Server 유틸리티 문 백슬래시
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="backslash-line-continuation-transact-sql"></a>백슬래시 (줄 연속 문자) (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]제공 되지 않은 명령 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 인식 되는 **sqlcmd** 및 **osql** 유틸리티 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기. 이러한 명령을 사용하면 일괄 처리 및 스크립트를 쉽게 읽고 실행할 수 있습니다.  
-  
-\ 가독성을 위해 두 개 이상의 줄으로 상수 긴 문자열을 중단 합니다.  
+`\`가독성을 위해 두 개 이상의 줄으로 긴 문자열 상수, 문자 또는 이진을 중단합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,15 +67,16 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>주의  
  이 명령은 문자열의 첫째 섹션과 계속되는 섹션을 백슬래시 없이 한 문자열로 반환합니다.  
-  
- 백슬래시는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 아닙니다. 인식 되는 명령인는 **sqlcmd** 및 **osql** 유틸리티 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기.  
-  
+
 ## <a name="examples"></a>예  
- 다음 예에서는 백슬래시 및 캐리지 리턴을 사용하여 문자열을 두 줄로 분할합니다.  
+
+### <a name="a-splitting-a-character-string"></a>1. 문자열 분  
+
+다음 예제에서는를 사용 하 여 백슬래시 및 캐리지 리턴 문자 문자열 선을 두 선으로 분할 합니다.  
   
 ```  
 SELECT 'abc\  
-def' AS ColumnResult;  
+def' AS [ColumnResult];  
   
 ```  
   
@@ -86,14 +87,31 @@ def' AS ColumnResult;
  ------------  
  abcdef
  ```    
+
+### <a name="b-splitting-a-binary-string"></a>2. 이진 문자열 분  
+
+다음 예제에서는 백슬래시 및 캐리지 리턴을 사용 하 여 이진 문자열 선을 두 선으로 분할 합니다.  
+
+```  
+SELECT 0xabc\  
+def AS [ColumnResult];  
   
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ ```  
+ ColumnResult  
+ ------------  
+ 0xABCDEF
+ ```    
+
 ## <a name="see-also"></a>관련 항목:  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [&#40; 나누기 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/divide-transact-sql.md)   
- [&#40; 나누기 EQUALS &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [&#40; 나누기 대입 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
  [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-

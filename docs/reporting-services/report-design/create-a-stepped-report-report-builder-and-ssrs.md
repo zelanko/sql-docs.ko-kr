@@ -1,32 +1,32 @@
 ---
-title: "단계별된 보고서 (보고서 작성기 및 SSRS) 만들기 | Microsoft Docs"
+title: "단계별 보고서 만들기(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d94397d96f5532ed798c2bfe6b50ea17709f9654
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>단계별 보고서 만들기(보고서 작성기 및 SSRS)
 단계별 보고서는 아래 예제와 같이 동일한 열의 부모 그룹 아래에 들여 쓴 정보 행 또는 자식 그룹을 표시하는 페이지가 매겨진  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 한 유형입니다.  
   
- ![렌더링 된 단계별된 보고서](../../reporting-services/report-design/media/steppedreportrendered.gif "렌더링 된 보고서도 실행")  
+ ![렌더링된 단계별 보고서](../../reporting-services/report-design/media/steppedreportrendered.gif "렌더링된 단계별 보고서")  
   
  기존 테이블 보고서에서는 부모 그룹이 보고서의 인접 열에 배치됩니다. 새로운 테이블릭스 데이터 영역을 사용하면 그룹과 정보 행 또는 자식 그룹을 동일한 열에 추가할 수 있습니다. 그룹 행을 정보 행 또는 자식 그룹 행과 구별하기 위해 글꼴 색과 같은 서식을 적용하거나 정보 행을 들여쓸 수 있습니다.  
   
@@ -54,15 +54,15 @@ ms.lasthandoff: 08/09/2017
   
      이제 기본적인 테이블 형식 보고서가 준비되었습니다. 이 보고서를 렌더링하면 그룹 인스턴스 값이 들어 있는 한 개의 열과 그룹으로 묶은 정보 데이터가 들어 있는 한 개 이상의 열이 표시됩니다. 다음 그림에서는 디자인 화면의 데이터 영역을 보여 줍니다.  
   
-     ![테이블 데이터 영역의 그룹과](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "그룹을 사용 하 여 테이블 데이터 영역")  
+     ![그룹이 있는 테이블 데이터 영역](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "그룹이 있는 테이블 데이터 영역")  
   
      다음 그림에서는 보고서를 볼 때의 렌더링된 데이터 영역을 보여 줍니다.  
   
-     ![렌더링 된 그룹화 된 보고서](../../reporting-services/report-design/media/tablereportrendered.gif "렌더링 된 보고서 그룹화")  
+     ![렌더링된 그룹화된 보고서](../../reporting-services/report-design/media/tablereportrendered.gif "렌더링된 그룹화된 보고서")  
   
 3.  단계별 보고서의 경우 그룹 인스턴스를 표시하는 첫 번째 열이 필요하지 않습니다. 대신 그룹 머리글 셀의 값을 복사하고 그룹 열을 삭제한 다음 그룹 머리글 행의 첫 번째 입력란에 붙여넣습니다. 그룹 열을 제거하려면 그룹 열 또는 셀을 마우스 오른쪽 단추로 클릭하고 **열 삭제**를 클릭합니다. 다음 그림에서는 디자인 화면의 데이터 영역을 보여 줍니다.  
   
-     ![그룹 머리글 행을 사용 하 여 데이터 영역](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "그룹 머리글 행을 사용 하 여 데이터 영역")  
+     ![그룹 머리글 행이 있는 데이터 영역](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "그룹 머리글 행이 있는 데이터 영역")  
   
 4.  정보 행을 동일한 열의 그룹 머리글 행 아래 들여 쓰려면 정보 데이터 셀의 안쪽 여백을 변경합니다.  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
      데이터 영역은 다음 예와 비슷한 모양이 됩니다.  
   
-     ![단계별된 보고서에 대 한 데이터 영역](../../reporting-services/report-design/media/steppedreportdataregion.gif "단계별된 보고서에 대 한 데이터 영역")  
+     ![단계별 보고서의 데이터 영역](../../reporting-services/report-design/media/steppedreportdataregion.gif "단계별 보고서의 데이터 영역")  
   
      **단계별 보고서 레이아웃의 데이터 영역**  
   
@@ -109,14 +109,13 @@ ms.lasthandoff: 08/09/2017
   
 3.  그룹 데이터를 표시하는 셀의 안쪽 여백을 변경합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [페이지 머리글 및 바닥글 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [보고서 항목 서식 지정 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [테이블 릭 스 데이터 영역 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [테이블 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [행렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>참고 항목  
+ [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [행렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

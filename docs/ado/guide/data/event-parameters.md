@@ -3,7 +3,7 @@ title: "이벤트 매개 변수 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ae7ee638c8489795df8894be23ef80e63b26f07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="event-parameters"></a>이벤트 매개 변수
 모든 이벤트 처리기에 이벤트 처리기를 제어 하는 상태 매개 변수입니다. 전체 이벤트에 대 한이 매개 변수는 이벤트를 생성 하는 작업의 성공 여부를 나타내는 것도 사용 됩니다. 가장 완전 이벤트 발생 하는 모든 오류 및 작업을 수행 하는 데 사용 되는 ADO 개체를 참조 하는 하나 이상의 개체 매개 변수 하는 방법에 대 한 정보를 제공 하는 오류 매개 변수를 갖게 됩니다. 예를 들어는 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) 에 대 한 개체 매개 변수를 포함 하는 이벤트는 **명령**, **레코드 집합**, 및 **연결** 개체 이벤트와 연결 합니다. 다음 Microsoft® Visual Basic® 예에서 pCommand, pRecordset, 및 pConnection 개체를 나타냅니다를 볼 수는 **명령**, **레코드 집합**, 및 **연결** 에서 사용 되는 개체는 **Execute** 메서드.  
@@ -51,7 +50,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Status 매개 변수  
  이벤트 처리기 루틴 호출 되는 *상태* 매개 변수는 다음 값 중 하나로 설정 됩니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**adStatusOK**|가 않으며 완료 이벤트를 모두에 전달 합니다. 이 값을 사용 하는 성공적으로 완료 이벤트를 발생 시킨 작업을 의미 합니다.|  
 |**adStatusErrorsOccurred**|완료 이벤트에만 전달 합니다. 이 값이 이벤트를 발생 시킨 작업이 성공적 Will 이벤트에서 작업을 취소 있음을 의미 합니다. 확인 된 *오류* 자세한 내용은 매개 변수입니다.|  
@@ -61,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  설정할 수 없습니다 더 이상 이벤트를 처리 하려면 *상태* 를 **adStatusUnwantedEvent** 및 응용 프로그램에 해당 이벤트의 알림을 더 이상 받지 것입니다. 단, 여러 가지 원인에 대 한 일부 이벤트를 발생할 수 있습니다. 이 경우 지정 해야 **adStatusUnwantedEvent** 가능한 각 원인에 대 한 합니다. 예를 들어, 보류 중인 알림 수신을 중지 하려면 **RecordChange** 설정 해야 이벤트에는 *상태* 매개 변수를 **adStatusUnwantedEvent** 에 대 한  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, 및 **adRsnFirstChange** 발생 합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|이 이벤트 처리기에 더 이상 알림을 받지를 요청 합니다.|  
 |**adStatusCancel**|수행 하려는 작업의 취소를 요청 합니다.|  
@@ -99,4 +98,3 @@ End Sub
  [언어별 ADO 이벤트 인스턴스 생성](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [이벤트 처리기 함께 작동 하는 방법](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [이벤트 유형](../../../ado/guide/data/types-of-events.md)
-

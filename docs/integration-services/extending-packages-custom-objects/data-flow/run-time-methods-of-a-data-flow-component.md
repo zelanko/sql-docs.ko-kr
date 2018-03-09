@@ -1,5 +1,5 @@
 ---
-title: "런타임 메서드는 데이터 흐름 구성 요소 | Microsoft Docs"
+title: "데이터 흐름 구성 요소의 런타임 메서드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da14a10c936d1966e9317fe50141ecdb86c23379
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 874bc64760b93f2d7757022534c3d25a87d1d62c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 런타임 메서드
   런타임에 데이터 흐름 태스크에서는 구성 요소의 시퀀스를 검사하고, 실행 계획을 준비하고, 작업 계획을 실행하는 작업자 스레드의 풀을 관리합니다. 또한 원본에서 데이터 행을 로드하고 이를 변환을 통해 처리한 다음 대상에 저장합니다.  
@@ -167,10 +165,10 @@ public overrides sub PrimeOutput( outputs as Integer , outputIDs() as Integer ,b
 End Sub  
 ```  
   
- 출력 버퍼에 행을 추가 하는 구성 요소를 개발 하는 방법에 대 한 자세한 내용은 참조 [사용자 지정 원본 구성 요소 개발](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) 및 [비동기 출력을 사용자 지정 변환 구성 요소 개발](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)합니다.  
+ 출력 버퍼에 행을 추가하는 구성 요소 개발에 대한 자세한 내용은 [사용자 지정 원본 구성 요소 개발](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) 및 [비동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)을 참조하세요.  
   
 ### <a name="receiving-rows"></a>파일 받기  
- 구성 요소는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 개체에서 업스트림 구성 요소의 행을 받습니다. 데이터 흐름 태스크에서는 업스트림 구성 요소가 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 메서드에 대한 매개 변수로 데이터 흐름에 추가한 행이 들어 있는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 개체를 제공합니다. 이 입력 버퍼를 사용하여 버퍼의 행 및 열을 검사하거나 수정할 수 있지만 행을 추가하거나 제거할 수는 없습니다. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 메서드는 사용할 수 없는 버퍼가 더 이상 없을 때까지 반복적으로 호출됩니다. 마지막으로 호출 되는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성은 **true**합니다. 버퍼 내에서 다음 행으로 진행하는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> 메서드를 사용하면 버퍼의 행 컬렉션을 반복할 수 있습니다. 이 메서드가 반환 **false** 버퍼가 컬렉션의 마지막 행에 있는 경우. 마지막 데이터 행이 처리된 후 추가 동작을 수행해야 하는 경우가 아니면 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성을 확인할 필요가 없습니다.  
+ 구성 요소는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 개체에서 업스트림 구성 요소의 행을 받습니다. 데이터 흐름 태스크에서는 업스트림 구성 요소가 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 메서드에 대한 매개 변수로 데이터 흐름에 추가한 행이 들어 있는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 개체를 제공합니다. 이 입력 버퍼를 사용하여 버퍼의 행 및 열을 검사하거나 수정할 수 있지만 행을 추가하거나 제거할 수는 없습니다. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 메서드는 사용할 수 없는 버퍼가 더 이상 없을 때까지 반복적으로 호출됩니다. 이 메서드가 마지막으로 호출되는 경우 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성이 **true**가 됩니다. 버퍼 내에서 다음 행으로 진행하는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> 메서드를 사용하면 버퍼의 행 컬렉션을 반복할 수 있습니다. 버퍼가 컬렉션의 마지막 행에 있으면 이 메서드에서 **false**를 반환합니다. 마지막 데이터 행이 처리된 후 추가 동작을 수행해야 하는 경우가 아니면 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성을 확인할 필요가 없습니다.  
   
  다음 텍스트는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> 메서드와 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성을 사용할 때 올바른 패턴을 보여 줍니다.  
   
@@ -216,10 +214,9 @@ Public Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pipe
 End Sub  
 ```  
   
- 입력된 버퍼에서 행을 받는 구성 요소를 개발 하는 방법에 대 한 자세한 내용은 참조 [사용자 지정 대상 구성 요소 개발](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) 및 [동기 출력을 사용자 지정 변환 구성 요소 개발](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)합니다.  
+ 입력 버퍼에 행을 받는 구성 요소 개발에 대한 자세한 내용은 [사용자 지정 원본 구성 요소 개발](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) 및 [동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름 구성 요소의 디자인 타임 메서드](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   
-

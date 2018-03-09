@@ -23,17 +23,16 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 7
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 08f27953aac5fa36f1b38e243d8465f57458dafe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/12/2017
-
+ms.openlocfilehash: 6c8228f0db3e37fe3bf6425d60fd4f9067e92220
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -146,4 +145,3 @@ FROM dbo.Duration;
 [DATEDIFF &#40; Transact SQL &#41;](../../t-sql/functions/datediff-transact-sql.md)
   
   
-

@@ -24,19 +24,18 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-caps.latest.revision: 44
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8ce3046c36b7d224f6294948029cef6cf5afd43c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ad2b7e5343547bb65c6d81de8c6586ef5209e52a
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="countbig-transact-sql"></a>COUNT_BIG(Transact-SQL)
+# <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 그룹의 항목 개수를 반환합니다. COUNT_BIG은 COUNT 함수와 비슷하며 두 함수 간의 유일한 차이점은 반환 값뿐입니다. COUNT_BIG은 항상 반환 된 **bigint** 데이터 값을 입력 합니다. COUNT는 항상 반환는 **int** 데이터 값을 입력 합니다.
@@ -102,11 +101,10 @@ COUNT_BIG은 OVER 및 ORDER BY 절 없이 사용되는 경우 결정적 함수�
 ## <a name="examples"></a>예  
 예제를 보려면 [수 &#40; Transact SQL &#41; ](../../t-sql/functions/count-transact-sql.md).
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [집계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT &#40; Transact SQL &#41;](../../t-sql/functions/count-transact-sql.md)  
 [int, bigint, smallint 및 tinyint &#40; Transact SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
 [절 &#40; 조치 Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
-

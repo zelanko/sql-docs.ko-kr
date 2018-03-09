@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBrowseConnect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBrowseConnect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBrowseConnect
-helpviewer_keywords:
-- SQLBrowseConnect function [ODBC]
+f1_keywords: SQLBrowseConnect
+helpviewer_keywords: SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 10470316e18dcedd1c3cd36c6f837a7deb4ceba3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f8117cc5238576f840cdb98f5ffaded38aed0d6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 함수
 **규칙**  
@@ -81,7 +75,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="diagnostics"></a>진단  
  때 **SQLBrowseConnect** SQL_ERROR, SQL_SUCCESS_WITH_INFO 또는 관련된 된 SQLSTATE 값 sql_need_data가 반환 되는 호출 하 여 경우가 **SQLGetDiagRec** 와 *HandleType* 여의 및 *ConnectionHandle의 핸들*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLBrowseConnect** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *OutConnectionString* 충분히 문자열이 잘렸습니다 하므로 전체 검색 결과 연결 문자열을 반환할 수 없습니다. 버퍼 **StringLength2Ptr* 잘리지 않은 찾아보기 결과 연결 문자열의 길이 포함 합니다. (함수는 SQL_NEED_DATA를 반환합니다.)|  
@@ -295,4 +289,3 @@ int main() {
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

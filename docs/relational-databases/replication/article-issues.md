@@ -2,27 +2,30 @@
 title: "아티클 문제 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.articleissues.f1
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7840d17929da4b25bdab26ba98cba4fc92f1c60c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4935f6e607270401c095f78bd6142828e8581071
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-issues"></a>아티클 문제
-  **아티클 문제** 페이지는 아티클에 대해 검색된 조건 및 이러한 조건의 결과로 필요한 변경 내용을 나열합니다. 다음 표에서는 발생 가능한 문제 및 복제와 기존 응용 프로그램이 올바르게 작동하는지 여부를 확인하는 데 필요한 동작을 나열합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **아티클 문제** 페이지는 아티클에 대해 검색된 조건 및 이러한 조건의 결과로 필요한 변경 내용을 나열합니다. 다음 표에서는 발생 가능한 문제 및 복제와 기존 응용 프로그램이 올바르게 작동하는지 여부를 확인하는 데 필요한 동작을 나열합니다.  
   
 |아티클 문제|세부 정보|필요한 동작|  
 |-------------------|-------------|---------------------|  
@@ -32,8 +35,8 @@ ms.lasthandoff: 11/09/2017
 |뷰에서 참조하는 테이블이 필요합니다.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 뷰에서 참조한 테이블 및 게시된 인덱싱된 뷰를 모두 구독자에서 사용할 수 있어야 합니다. 참조된 테이블이 이 게시에 아티클로 게시되지 않으면 구독자에서 이를 수동으로 만들어야 합니다.|**뒤로** 단추를 사용하여 **아티클** 페이지로 이동합니다. 필요한 개체를 추가합니다.|  
 |저장 프로시저가 참조하는 개체가 필요합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 테이블 및 사용자 정의 함수와 같이 게시된 저장 프로시저가 참조하는 모든 개체는 구독자에서 사용할 수 있어야 합니다. 참조된 개체가 이 게시에서 아티클로 게시되지 않으면 구독자에서 이를 수동으로 만들어야 합니다.|**뒤로** 단추를 사용하여 **아티클** 페이지로 이동합니다. 필요한 개체를 추가합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
   
   

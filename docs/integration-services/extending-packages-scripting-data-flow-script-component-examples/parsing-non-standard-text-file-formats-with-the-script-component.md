@@ -1,5 +1,5 @@
 ---
-title: "스크립트 구성 요소 설정 하는 비표준 텍스트 파일을 구문 분석 | Microsoft Docs"
+title: "스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,36 +19,35 @@ helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c6bf6a70027da7804e2fdca998948d44c9a26097
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 745b5cdb361e1521875d40dbb852dfbf6ebfefed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석
   원본 데이터가 비표준 형식으로 정렬된 경우 여러 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변환을 함께 결합하는 것보다 모든 구문 분석 논리를 단일 스크립트에 통합하는 것이 더 쉬울 수 있습니다.  
   
- [예제 1: 행으로 구분 된 레코드의 구문 분석](#example1)  
+ [예제 1: 행으로 구분된 레코드에 대한 구문 분석](#example1)  
   
- [예제 2: 부모와 자식 레코드 분](#example2)  
+ [예제 2: 부모 레코드와 자식 레코드 분할](#example2)  
   
 > [!NOTE]  
 >  여러 데이터 흐름 태스크 및 여러 패키지에서 쉽게 다시 사용할 수 있는 구성 요소를 만들려면 이 스크립트 구성 요소 예제에 있는 코드를 바탕으로 사용자 지정 데이터 흐름 구성 요소를 만들어 보십시오. 자세한 내용은 [사용자 지정 데이터 흐름 구성 요소 개발](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)을 참조하세요.  
   
-##  <a name="example1"></a>예제 1: 행으로 구분 된 레코드의 구문 분석  
+##  <a name="example1"></a> 예 1: 행으로 구분된 레코드에 대한 구문 분석  
  이 예에서는 각 데이터 열이 별도의 줄에 나타나는 텍스트 파일을 가져오고 스크립트 구성 요소를 사용하여 이를 대상 테이블로 구문 분석하는 방법을 보여 줍니다.  
   
- 데이터 흐름의 변환으로 사용 하기 위해 스크립트 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 및 [스크립트 구성 요소를 사용 하 여 비동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)합니다.  
+ 데이터 흐름에서 변환으로 사용하도록 스크립트 구성 요소를 구성하는 방법에 대한 자세한 내용은 [스크립트 구성 요소를 사용하여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 및 [스크립트 구성 요소를 사용하여 비동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)를 참조하세요.  
   
 #### <a name="to-configure-this-script-component-example"></a>스크립트 구성 요소 예를 구성하려면  
   
-1.  라는 텍스트 파일 생성 및 저장 **rowdelimiteddata.txt** 다음 원본 데이터를 포함 하는 합니다.  
+1.  다음 원본 데이터가 포함된 **rowdelimiteddata.txt**라는 텍스트 파일을 만들고 저장합니다.  
   
     ```  
     FirstName: Nancy  
@@ -94,17 +92,17 @@ ms.lasthandoff: 09/26/2017
   
 6.  패키지에 OLE DB 연결 관리자를 추가하고 해당 연결 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 대상 테이블을 만든 데이터베이스에 연결하도록 구성합니다.  
   
-7.  패키지에 데이터 흐름 태스크를 추가 하 고 클릭 하 고 **데이터 흐름** SSIS 디자이너의 탭 합니다.  
+7.  패키지에 데이터 흐름 태스크를 추가하고 SSIS 디자이너의 **데이터 흐름** 탭을 클릭합니다.  
   
-8.  데이터 흐름에 플랫 파일 원본을 추가하고 해당 플랫 파일 원본이 RowDelimitedData 연결 관리자를 사용하도록 구성합니다. 에 **열** 의 페이지는 **플랫 파일 원본 편집기**, 사용 가능한 단일 외부 열을 선택 합니다.  
+8.  데이터 흐름에 플랫 파일 원본을 추가하고 해당 플랫 파일 원본이 RowDelimitedData 연결 관리자를 사용하도록 구성합니다. **플랫 파일 원본 편집기**의 **열** 페이지에서 사용 가능한 단일 외부 열을 선택합니다.  
   
 9. 데이터 흐름에 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다. 플랫 파일 원본의 출력을 스크립트 구성 요소에 연결합니다.  
   
-10. 표시 하려면 스크립트 구성 요소를 두 번 클릭은 **스크립트 변환 편집기**합니다.  
+10. 스크립트 구성 요소를 두 번 클릭하여 **스크립트 변환 편집기**를 표시합니다.  
   
-11. 에 **입력 열** 의 페이지는 **스크립트 변환 편집기**, 사용 가능한 단일 입력된 열을 선택 합니다.  
+11. **스크립트 변환 편집기** 대화 상자의 **입력 열** 페이지에서 사용 가능한 단일 입력 열을 선택합니다.  
   
-12. 에 **입 / 출력** 의 페이지는 **스크립트 변환 편집기**출력 0을 선택 하 고 설정, 해당 **SynchronousInputID** None으로 합니다. 길이가 32이고 문자열 유형이 모두 [DT_STR]인 5개의 출력 열을 만듭니다.  
+12. **스크립트 변환 편집기**의 **입/출력** 페이지에서 출력 0을 선택하고 **SynchronousInputID**를 None으로 설정합니다. 길이가 32이고 문자열 유형이 모두 [DT_STR]인 5개의 출력 열을 만듭니다.  
   
     -   FirstName  
   
@@ -116,7 +114,7 @@ ms.lasthandoff: 09/26/2017
   
     -   StateProvince  
   
-13. 에 **스크립트** 의 페이지는 **스크립트 변환 편집기**, 클릭 **스크립트 편집** 에 표시 된 코드를 입력 하 고는 **ScriptMain** 의 클래스 예입니다. 스크립트 개발 환경과 및 **스크립트 변환 편집기**합니다.  
+13. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 예제의 **ScriptMain** 클래스에 표시된 코드를 입력합니다. 스크립트 개발 환경과 **스크립트 변환 편집기**를 닫습니다.  
   
 14. 데이트 흐름에 SQL Server 대상을 추가합니다. SQL Server 대상이 OLE DB 연결 관리자와 RowDelimitedData 테이블을 사용하도록 구성합니다. 이 대상에 스크립트 구성 요소의 출력을 연결합니다.  
   
@@ -197,17 +195,17 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a>예제 2: 부모와 자식 레코드 분  
+##  <a name="example2"></a> 예제 2: 부모 레코드와 자식 레코드 분할  
  이 예에서는 구분 행 뒤에 부모 레코드 행이 있고 그 뒤에 불특정 개수의 자식 레코드 행이 있는 텍스트 파일을 가져오고 스크립트 구성 요소를 사용하여 이를 올바르게 정규화된 부모 및 자식 대상 테이블로 구문 분석하는 방법을 보여 줍니다. 이 간단한 예는 각각의 부모 및 자식 레코드에 둘 이상의 행 또는 열을 사용하는 원본 파일에 맞게 쉽게 조정할 수 있습니다. 단, 각 레코드의 시작 부분과 끝 부분을 식별할 수 있어야 합니다.  
   
 > [!CAUTION]  
 >  이 예제는 예시 목적으로만 제공됩니다. 이 예제를 두 번 이상 실행하면 대상 테이블에 중복 키 값이 삽입됩니다.  
   
- 데이터 흐름의 변환으로 사용 하기 위해 스크립트 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 및 [스크립트 구성 요소를 사용 하 여 비동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)합니다.  
+ 데이터 흐름에서 변환으로 사용하도록 스크립트 구성 요소를 구성하는 방법에 대한 자세한 내용은 [스크립트 구성 요소를 사용하여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 및 [스크립트 구성 요소를 사용하여 비동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)를 참조하세요.  
   
 #### <a name="to-configure-this-script-component-example"></a>스크립트 구성 요소 예를 구성하려면  
   
-1.  라는 텍스트 파일 생성 및 저장 **parentchilddata.txt** 다음 원본 데이터를 포함 하는 합니다.  
+1.  다음 원본 데이터가 포함된 **parentchilddata.txt**라는 텍스트 파일을 만들고 저장합니다.  
   
     ```  
     **********  
@@ -253,23 +251,23 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 6.  패키지에 OLE DB 연결 관리자를 추가하고 해당 연결 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 대상 테이블을 만든 데이터베이스에 연결하도록 구성합니다.  
   
-7.  패키지에 데이터 흐름 태스크를 추가 하 고 클릭 하 고 **데이터 흐름** SSIS 디자이너의 탭 합니다.  
+7.  패키지에 데이터 흐름 태스크를 추가하고 SSIS 디자이너의 **데이터 흐름** 탭을 클릭합니다.  
   
-8.  데이터 흐름에 플랫 파일 원본을 추가하고 해당 플랫 파일 원본이 ParentChildData 연결 관리자를 사용하도록 구성합니다. 에 **열** 의 페이지는 **플랫 파일 원본 편집기**, 사용 가능한 단일 외부 열을 선택 합니다.  
+8.  데이터 흐름에 플랫 파일 원본을 추가하고 해당 플랫 파일 원본이 ParentChildData 연결 관리자를 사용하도록 구성합니다. **플랫 파일 원본 편집기**의 **열** 페이지에서 사용 가능한 단일 외부 열을 선택합니다.  
   
 9. 데이터 흐름에 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다. 플랫 파일 원본의 출력을 스크립트 구성 요소에 연결합니다.  
   
-10. 표시 하려면 스크립트 구성 요소를 두 번 클릭은 **스크립트 변환 편집기**합니다.  
+10. 스크립트 구성 요소를 두 번 클릭하여 **스크립트 변환 편집기**를 표시합니다.  
   
-11. 에 **입력 열** 의 페이지는 **스크립트 변환 편집기**, 사용 가능한 단일 입력된 열을 선택 합니다.  
+11. **스크립트 변환 편집기** 대화 상자의 **입력 열** 페이지에서 사용 가능한 단일 입력 열을 선택합니다.  
   
-12. 에 **입 / 출력** 의 페이지는 **스크립트 변환 편집기**, 출력 0을 선택, parentrecords로 바꾼 다음 이름 바꾸기 및 설정의 **SynchronousInputID** None으로 합니다. 2 개의 출력 열을 만듭니다.  
+12. **스크립트 변환 편집기**의 **입/출력** 페이지에서 출력 0을 선택하고, 이름을 ParentRecords로 바꾼 다음, **SynchronousInputID**를 None으로 설정합니다. 다음과 같이 2개의 출력 열을 만듭니다.  
   
     -   부호 있는 4바이트 정수 [DT_I4] 형식의 ParentID(기본 키)  
   
     -   길이가 32인 문자열 [DT_STR] 형식의 ParentRecord  
   
-13. 두 번째 출력을 만들고 이름을 ChildRecords로 지정합니다. **SynchronousInputID** 새 출력의 이미 None으로 설정 됩니다. 다음과 같이 3개의 출력 열을 만듭니다.  
+13. 두 번째 출력을 만들고 이름을 ChildRecords로 지정합니다. 새 출력의 **SynchronousInputID**는 이미 None으로 설정되어 있습니다. 다음과 같이 3개의 출력 열을 만듭니다.  
   
     -   부호 있는 4바이트 정수 [DT_I4] 형식의 ChildID(기본 키)  
   
@@ -277,7 +275,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   길이가 50인 문자열 [DT_STR] 형식의 ChildRecord  
   
-14. 에 **스크립트** 의 페이지는 **스크립트 변환 편집기**, 클릭 **스크립트 편집**합니다. 에 **ScriptMain** 클래스, 예제에 표시 된 코드를 입력 합니다. 스크립트 개발 환경과 및 **스크립트 변환 편집기**합니다.  
+14. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭합니다. **ScriptMain** 클래스에서 이 예제에 표시된 코드를 입력합니다. 스크립트 개발 환경과 **스크립트 변환 편집기**를 닫습니다.  
   
 15. 데이트 흐름에 SQL Server 대상을 추가합니다. 이 대상에 스크립트 구성 요소의 ParentRecords 출력을 연결하고 해당 대상이 OLE DB 연결 관리자와 Parents 테이블을 사용하도록 구성합니다.  
   
@@ -356,9 +354,8 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
+## <a name="see-also"></a>참고 항목  
+ [스크립트 구성 요소를 사용하여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [스크립트 구성 요소를 사용하여 비동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
-

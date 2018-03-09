@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], file data sources
 - file data sources [ODBC]
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d64a08cc8e748efe984c8aa5acd7deac743c2ed3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5f8a5d949127e7ad87866a0272fbd285fe12ceed
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-using-file-data-sources"></a>파일 데이터 원본을 사용 하 여 연결
 파일 데이터 원본에 대 한 연결 정보는.dsn 파일에 저장 됩니다. 결과적으로, 연결 문자열을 단일 사용자가 반복적으로 사용할 또는 적절 한 드라이버가 설치 되어 있는 경우 여러 사용자가 공유할 수 있습니다. 드라이버 이름 (또는 다른 데이터 원본 이름을 공유할 수 없는 파일 데이터 원본의 경우)을 포함 하는 파일 및에서 사용할 수 있는 연결 문자열이 필요에 따라 **SQLDriverConnect**합니다. 드라이버 관리자에 대 한 호출에 대 한 연결 문자열을 작성 **SQLDriverConnect** .dsn 파일의 키워드에서입니다.  
@@ -63,4 +61,3 @@ DSN = MyDataSource
   
 ## <a name="see-also"></a>관련 항목:  
  [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
-

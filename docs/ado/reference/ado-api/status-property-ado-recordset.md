@@ -3,8 +3,9 @@ title: "Status 속성 (ADO 레코드 집합) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::GetStatus
 - Recordset15::Status
-helpviewer_keywords: Status property [ADO Recordset]
+helpviewer_keywords:
+- Status property [ADO Recordset]
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0005de0669a2dd68622c2e81c9f7b3be2f912da1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a8b65d43534fd75a9d6d8e659959100c5bea14f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-ado-recordset"></a>Status 속성 (ADO 레코드 집합)
 일괄 처리 업데이트에 대해 현재 레코드 또는 다른 대량 작업의 상태를 나타냅니다.  

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e02d385d699c1c26d44f2e7383584416c2d9dd5c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 79f10b22ba88d6dd860c608c9468e20a27615650
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 데이터 형식 메서드를 사용하기 위한 지침
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
  유형 검사를 위해서는 //first-name[1] 및 (//first-name)[1] 간의 차이점을 인식해야 합니다. 앞의 시퀀스를 반환 \<-이름 > 각 노드는 가장 왼쪽에 있는 노드 \<-이름 > 노드를 형제 중입니다. 첫 번째 단일 후자 반환 \<-이름 > XML 인스턴스에서 문서 순서로 노드.  
   
 ### <a name="example-using-value"></a>예: value () 사용  
- 다음 쿼리는 형식화 되지 않은 XML 열에는 정적 컴파일 오류가 발생합니다. ¿¡´ **Value ()** 하나만 있는지 여부를 확인할 수 없습니다 첫 번째 인수와 컴파일러 처럼 단일 노드가 필요한 \<마지막 이름 > 노드는 런타임에 발생 합니다.  
+ 다음 쿼리는 형식화 되지 않은 XML 열에는 정적 컴파일 오류가 발생합니다.**Value ()**  하나만 있는지 여부를 확인할 수 없습니다 첫 번째 인수와 컴파일러 처럼 단일 노드가 필요한 \<마지막 이름 > 노드는 런타임에 발생 합니다.  
   
 ```  
 SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName  
@@ -115,4 +114,3 @@ FROM   T
  [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

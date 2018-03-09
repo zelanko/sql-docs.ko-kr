@@ -3,7 +3,7 @@ title: "이동 메서드 예제 (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Move method [ADO], VC++ example
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 554b78e38b47cdfde7ed6bfdc5667ae2959c3d50
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af89c8f0dfdc4839ff85a68891e45e426d7bf26d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="move-method-example-vc"></a>Move 메서드 예제 (VC + +)
 사용 하 여이 예제는 [이동](../../../ado/reference/ado-api/move-method-ado.md) 메서드 레코드 포인터를 사용자 입력에 기반 합니다.  
@@ -267,4 +266,3 @@ Enter number of records to Move
   
 ## <a name="see-also"></a>관련 항목:  
  [Move 메서드(ADO)](../../../ado/reference/ado-api/move-method-ado.md)
-

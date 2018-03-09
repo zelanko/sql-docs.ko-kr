@@ -1,13 +1,14 @@
 ---
-title: "필터링, 그룹화 및 정렬 (보고서 작성기 및 SSRS) 데이터 | Microsoft Docs"
+title: "데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +21,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 422c3efc7f6514efafcfa552ed78658d002a2f42
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ec9e18aeee47b023b6afcf8dbac2e733fd2c6223
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
   보고서에서 식은 보고서 데이터를 제어, 구성 및 정렬하는 데 사용됩니다. 기본적으로 데이터 집합을 만들고 보고서 레이아웃을 디자인하면 보고서 항목의 속성이 데이터 집합 필드, 매개 변수 및 보고서 데이터 창에 표시되는 기타 항목을 기반으로 자동으로 식에 설정됩니다. 또한 테이블 또는 행렬 셀에 대화형 정렬 단추를 추가하여 사용자가 그룹의 행 정렬 순서 또는 그룹 내 행을 대화형으로 변경하도록 할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **대화형 정렬** 사용자가 열의 정렬 순서를 정렬하거나 역순으로 정렬할 수 있도록 테이블이나 행렬의 열 머리글 또는 그룹 머리글 셀에 대화형 정렬 단추를 추가할 수 있습니다.  
   
- 사용자가 필터, 그룹 또는 정렬 식을 사용자 지정할 수 있도록 식을 변경하여 보고서 매개 변수에 참조를 추가할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
+ 사용자가 필터, 그룹 또는 정렬 식을 사용자 지정할 수 있도록 식을 변경하여 보고서 매개 변수에 참조를 추가할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
  자세한 내용 및 예제는 다음 항목을 참조하십시오.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Filtering"></a> 보고서 데이터 필터링  
  필터는 데이터 연결에서 검색된 보고서 데이터를 제어하는 데 사용되는 보고서의 일부입니다. 필터는 데이터를 외부 데이터 원본에서 검색하기 전에 필터링하기 위해 데이터 집합 쿼리를 변경할 수 없는 경우에 사용합니다.  
   
- 가능한 경우 보고서에 표시하기 위해 필요한 데이터만 반환하는 데이터 집합 쿼리를 작성합니다. 검색 및 처리해야 하는 데이터의 양을 줄이면 보고서 성능을 향상시키는 데 도움이 됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
+ 가능한 경우 보고서에 표시하기 위해 필요한 데이터만 반환하는 데이터 집합 쿼리를 작성합니다. 검색 및 처리해야 하는 데이터의 양을 줄이면 보고서 성능을 향상시키는 데 도움이 됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
   
  외부 데이터 원본에서 데이터를 검색한 후 데이터 집합, 데이터 영역 및 데이터 영역 그룹(세부 그룹 포함)에 필터를 추가할 수 있습니다. 필터는 런타임에 데이터 집합에 대해 가장 먼저 적용된 다음 데이터 영역과 그룹(그룹 계층 구조에 대해 하향식으로)에 차례로 적용됩니다. 테이블, 행렬 또는 목록에서 행 그룹, 열 그룹 및 인접 그룹의 필터는 독립적으로 적용됩니다. 또한 차트에서 범주 그룹 및 계열 그룹의 필터는 독립적으로 적용됩니다. 자세한 내용은 [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)를 참조하세요.  
   
@@ -91,11 +91,11 @@ ms.lasthandoff: 08/09/2017
   
  테이블 또는 행렬 데이터 영역에서 여러 행 그룹과 열 그룹을 만들 수 있습니다. 중첩 그룹, 인접 그룹 및 재귀 계층 구조 그룹(예: 조직 차트)을 구성하여 데이터를 시각적 계층에 표시할 수 있습니다.  
   
- 그룹 이름은 식 범위를 나타냅니다. 집계를 계산하고, 데이터를 계층적으로 구성하고 드릴다운 보고서에서 자식 노드 보기와 부모 노드 보기 간에 전환하고, 여러 데이터 영역에 있는 동일한 데이터에 대한 다양한 보기를 표시하고, 테이블, 행렬, 차트, 계기 또는 지도에 요약 데이터를 시각화하기 위해 그룹의 이름을 범위로 지정할 수 있습니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
+ 그룹 이름은 식 범위를 나타냅니다. 집계를 계산하고, 데이터를 계층적으로 구성하고 드릴다운 보고서에서 자식 노드 보기와 부모 노드 보기 간에 전환하고, 여러 데이터 영역에 있는 동일한 데이터에 대한 다양한 보기를 표시하고, 테이블, 행렬, 차트, 계기 또는 지도에 요약 데이터를 시각화하기 위해 그룹의 이름을 범위로 지정할 수 있습니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
   
  여러 데이터 집합 필드를 그룹화하려면 각 필드를 그룹 식 집합에 추가합니다. 또한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 그룹 식을 직접 작성할 수도 있습니다. 예를 들어 값의 범위로 그룹화하거나 보고서 매개 변수를 사용하여 그룹화함으로써 데이터 영역의 데이터를 그룹화하는 방법을 사용자가 직접 선택하도록 할 수 있습니다. 자세한 내용은 [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
- 보고서 프레젠테이션을 위해 각 그룹의 전과 후 또는 그룹에 있는 각 인스턴스의 전과 후에 페이지 나누기를 추가하여 각 페이지에서 데이터의 양을 줄이고 보고서 렌더링 성능을 보다 원활하게 관리할 수 있습니다. 자세한 내용은 참조 [에 페이지 나누기 &#40; 추가 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
+ 보고서 프레젠테이션을 위해 각 그룹의 전과 후 또는 그룹에 있는 각 인스턴스의 전과 후에 페이지 나누기를 추가하여 각 페이지에서 데이터의 양을 줄이고 보고서 렌더링 성능을 보다 원활하게 관리할 수 있습니다. 자세한 내용은 [페이지 나누기 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)를 참조하세요.  
   
  데이터 영역 그룹을 만드는 것은 데이터를 보고서에 구성하기 위한 한 방법입니다. 데이터를 구성하는 데는 여러 가지 방법이 있으며 각 방법에는 장점이 있습니다. 자세한 내용은 [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)을 참조하세요.  
   
@@ -212,14 +212,13 @@ FROM Production.Product
   
  [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [지도 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [스파크 라인 및 데이터 막대 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [계기 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

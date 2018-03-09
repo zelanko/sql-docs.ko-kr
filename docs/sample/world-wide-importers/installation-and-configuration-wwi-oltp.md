@@ -1,30 +1,31 @@
 ---
 title: "설치 및 구성 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: 967755e34b397f2dfac98277d34cb799655f5165
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3b4a02b7b8c17f6bd5a75714a8fc3357dcfbd9a3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="installation-and-configuration"></a>설치 및 구성
-Wide World Importers OLTP 데이터베이스 설치 및 구성 지침입니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers OLTP 데이터베이스 설치 및 구성 지침입니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -96,5 +97,4 @@ Azure SQL 데이터베이스 감사를 통해 구성 된는 [Azure 포털](https
 행 수준 보안은 WideWorldImporters의 bacpac 다운로드에는 기본적으로 사용할 수 없습니다. 데이터베이스에서 행 수준 보안을 사용 하려면 다음 저장된 프로시저를 실행 합니다.
 
     EXECUTE [Application].[Configuration_ApplyAuditing]
-
 

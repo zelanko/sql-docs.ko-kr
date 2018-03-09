@@ -2,32 +2,31 @@
 title: "도구 옵션 및 레이아웃 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.suite: sql
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "24"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 68a4c894fb4defe848b146c59b3ad159ac3da287
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 2a741d086567c6255c5259f5d69aac5323cbffb0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>단원 1-2-도구 옵션 및 레이아웃 설정
-시작할 때 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스)에 표시되는 사항, 사용되는 글꼴 및 인터페이스 사용법을 가장 잘 지원하는 기타 도구 기능을 구성하는 옵션을 설정할 수 있습니다. 이 페이지의 연습을 통해 사용자가 설정할 수 있는 옵션과 해당 옵션을 설정하는 방법에 익숙해질 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]시작 시 사용 되는 글꼴 표시 될 데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스 (GUI)를 구성 하는 옵션을 설정할 수 있으며 가장 기타 도구 기능을 사용 하는 방법을 지원 합니다. 이 페이지의 연습을 통해 사용자가 설정할 수 있는 옵션과 해당 옵션을 설정하는 방법에 익숙해질 수 있습니다.  
   
 ### <a name="set-the-tool-options"></a>도구 옵션 설정  
   
@@ -50,8 +49,7 @@ ms.lasthandoff: 10/24/2017
     -   데이터베이스 엔진 튜닝 관리자가 작업 분석을 완료하기 전에 튜닝 세션을 실수로 중지하지 않도록 **세션 분석을 중지하기 전에 확인** 이 기본적으로 선택되어 있습니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[2단원: 데이터베이스 엔진 튜닝 관리자 사용](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[2 단원: 데이터베이스 엔진 튜닝 관리자를 사용 하 여](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   
-

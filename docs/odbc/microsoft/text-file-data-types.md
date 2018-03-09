@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - text file data types [ODBC]
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ad5f3d62138693caae19e51a80b1dd5a49d4072a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-file-data-types"></a>텍스트 파일 데이터 형식
 다음 표에서 텍스트 데이터 형식은 ODBC SQL 데이터 형식에 매핑되는 방법을 보여 줍니다. 참고 일부 ODBC SQL 데이터 형식이 텍스트 ODBC 드라이버에서 지원 됩니다.  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 |LONGCHAR|이론상 제한 중 하나에 있는 LONGCHAR 열의 너비에 고정 길이 또는 구분 기호로 분리 된 테이블은 65500 K. 텍스트 ISAM는 32k 약까지 신뢰할 수 있는 지원을 제공 하기 위해 가능성이 높습니다.|  
   
  데이터 형식에 대 한 자세한 제한에서 확인할 수 있습니다 [데이터 형식 제한](../../odbc/microsoft/data-type-limitations.md)합니다.
-

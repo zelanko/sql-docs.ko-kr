@@ -3,7 +3,7 @@ title: "DataSpace 개체 및 CreateObject 메서드 예 (VBScript) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - DataSpace object [RDS], VBScript example
 - CreateObject method [ADO], VBScript example
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4bebeadebb875b6fc8e12cda9e3b9f73197e6b89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24c258c54f6850b3f1eebfd7aba4ccee3c208477
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace 개체 및 CreateObject 메서드 예 (VBScript)
 > [!IMPORTANT]
@@ -157,6 +156,5 @@ End Sub
 ## <a name="see-also"></a>관련 항목:  
  [CreateObject 메서드 (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataSpace 개체(RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
-
 
 

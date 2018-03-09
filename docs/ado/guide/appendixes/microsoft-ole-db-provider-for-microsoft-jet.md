@@ -3,8 +3,9 @@ title: Microsoft OLE DB Provider for Microsoft Jet | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a09ad6fb1af544e98f1b7875d1e04c396e46e60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d703eff7e65b590961a4bc78a70032050e1b395
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 개요
 OLE DB Provider for Microsoft Jet ADO를 Microsoft Jet 데이터베이스에 액세스할 수 있습니다.
@@ -134,57 +135,57 @@ Microsoft.Jet.OLEDB.4.0
 |비동기 가능 커밋|DBPROP_ASYNCTNXCOMMIT|
 |격리 수준 자동 커밋|DBPROP_SESS_AUTOCOMMITISOLEVELS|
 |카탈로그 위치|DBPROP_CATALOGLOCATION과 같습니다|
-|카탈로그 용어가|DBPROP_CATALOGTERM과 같습니다|
-|열 정의|DBPROP_COLUMNDEFINITION과 같습니다|
+|카탈로그 용어가|DBPROP_CATALOGTERM|
+|열 정의|DBPROP_COLUMNDEFINITION|
 |현재 카탈로그|DBPROP_CURRENTCATALOG|
 |데이터 원본|DBPROP_INIT_DATASOURCE|
 |Data Source Name|DBPROP_DATASOURCENAME|
 |데이터 소스 개체 스레딩 모델|DBPROP_DSOTHREADMODEL|
-|DBMS 이름|DBPROP_DBMSNAME과 같습니다|
-|DBMS 버전|DBPROP_DBMSVER와 같습니다|
-|지원 기준으로 그룹화|DBPROP_GROUPBY와 같습니다|
+|DBMS 이름|DBPROP_DBMSNAME|
+|DBMS 버전|DBPROP_DBMSVER|
+|지원 기준으로 그룹화|DBPROP_GROUPBY|
 |유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES와 같습니다|
-|식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE와 같습니다|
+|식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE|
 |격리 수준|DBPROP_SUPPORTEDTXNISOLEVELS|
-|격리 보존|DBPROP_SUPPORTEDTXNISORETAIN과 같습니다|
+|격리 보존|DBPROP_SUPPORTEDTXNISORETAIN|
 |로캘 ID|DBPROP_INIT_LCID|
-|최대 인덱스 크기|DBPROP_MAXINDEXSIZE와 같습니다|
-|최대 행 크기|DBPROP_MAXROWSIZE와 같습니다|
-|BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB와 같습니다|
-|SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT와 같습니다|
+|최대 인덱스 크기|DBPROP_MAXINDEXSIZE|
+|최대 행 크기|DBPROP_MAXROWSIZE|
+|BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB|
+|SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
 |모드|DBPROP_INIT_MODE|
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|
-|여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE와 같습니다|
-|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION과 같습니다|
-|NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR와 같습니다|
+|여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE|
+|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION|
+|NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR|
 |OLE DB 버전|DBPROP_PROVIDEROLEDBVER|
 |OLE 개체 지원|DBPROP_OLEOBJECTS|
 |열린 행 집합 지원|DBPROP_OPENROWSETSUPPORT|
-|선택 목록의 열으로 정렬|DBPROP_ORDERBYCOLUMNSINSELECT와 같습니다|
+|선택 목록의 열으로 정렬|DBPROP_ORDERBYCOLUMNSINSELECT|
 |출력 매개 변수 가용성|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Ref 접근자로 전달|DBPROP_BYREFACCESSORS|
 |암호|DBPROP_AUTH_PASSWORD|
-|영구 ID 유형|DBPROP_PERSISTENTIDTYPE과 같습니다|
-|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR와 같습니다|
+|영구 ID 유형|DBPROP_PERSISTENTIDTYPE|
+|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR|
 |커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR와 같습니다|
-|프로시저 용어가|DBPROP_PROCEDURETERM과 같습니다|
+|프로시저 용어가|DBPROP_PROCEDURETERM|
 |프롬프트|DBPROP_INIT_PROMPT|
 |공급자 이름|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |공급자 버전|DBPROP_PROVIDERVER|
-|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY와 같습니다|
+|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY|
 |명령 시 행 집합 변환|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |스키마 용어|DBPROP_SCHEMATERM|
-|스키마 사용|DBPROP_SCHEMAUSAGE와 같습니다|
+|스키마 사용|DBPROP_SCHEMAUSAGE|
 |SQL 지원|DBPROP_SQLSUPPORT|
 |구조적된 저장소|DBPROP_STRUCTUREDSTORAGE|
-|하위 쿼리 지원|DBPROP_SUBQUERIES와 같습니다|
-|테이블 용어|DBPROP_TABLETERM과 같습니다|
-|트랜잭션 DDL|DBPROP_SUPPORTEDTXNDDL과 같습니다|
+|하위 쿼리 지원|DBPROP_SUBQUERIES|
+|테이블 용어|DBPROP_TABLETERM|
+|트랜잭션 DDL|DBPROP_SUPPORTEDTXNDDL|
 |사용자 ID|DBPROP_AUTH_USERID|
-|사용자 이름|DBPROP_USERNAME과 같습니다|
+|사용자 이름|DBPROP_USERNAME|
 |창 핸들|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>레코드 집합 동적 속성

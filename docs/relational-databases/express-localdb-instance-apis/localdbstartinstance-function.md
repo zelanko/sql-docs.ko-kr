@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBStartInstance
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBStartInstance
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf6530a3b24f7fc10c752ba896240e85e7e454d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16adebca59bd2ba5f6d31f1bcc64ec7742b06ca5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 함수
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]지정된 된 SQL Server Express LocalDB 인스턴스를 시작합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+지정한 SQL Server Express LocalDB 인스턴스를 시작합니다.  
   
  **헤더 파일:** sqlncli.h  
   
@@ -110,7 +114,7 @@ HRESULT LocalDBStartInstance(
 ## <a name="details"></a>세부 정보  
  연결 버퍼 인수(*wszSqlConnection*) 및 연결 버퍼 크기 인수(*lpcchSqlConnection*)는 선택 사항입니다. 다음 표에서는 이러한 인수를 사용하기 위한 옵션과 해당 결과를 보여 줍니다.  
   
-|버퍼|버퍼 크기|이유|작업|  
+|버퍼|버퍼 크기|이유|동작|  
 |------------|-----------------|---------------|------------|  
 |NULL|NULL|사용자가 인스턴스를 시작하려고 하지만 파이프 이름은 필요하지 않습니다.|인스턴스를 시작합니다(파이프 반환 없음, 필요한 버퍼 크기 반환 없음).|  
 |NULL|있음|사용자가 출력 버퍼 크기를 요청합니다. 다음 호출에서 사용자는 실제 시작을 요청할 수 있습니다.|필요한 버퍼 크기를 반환합니다(시작 없음, 파이프 반환 없음). 결과는 S_OK입니다.|  

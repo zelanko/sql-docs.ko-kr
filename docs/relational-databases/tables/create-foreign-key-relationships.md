@@ -8,24 +8,21 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- relationships [SQL Server], creating
+helpviewer_keywords: relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "21"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: f6d1acfc492d4d2c37bd4e7cfe66a2b95266a80a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4f90816f11420f3bef3885c66199144666e903bb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-foreign-key-relationships"></a>외래 키 관계 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ ms.lasthandoff: 06/22/2017
     
     -   자기 자신에 대한 외래 키 참조가 포함된 테이블은 계속 253개의 외래 키 참조만 사용할 수 있습니다.    
     
-    -   columnstore 인덱스, 메모리 액세스에 최적화된 테이블 또는 Stretch Database에 대해서는 현재 253개보다 많은 외래 키 참조를 사용할 수 없습니다.    
+    -   columnstore 인덱스, 메모리 최적화 테이블 또는 스트레치 데이터베이스에 대해서는 현재 253개보다 많은 외래 키 참조를 사용할 수 없습니다.    
     
 -   임시 테이블에는 FOREIGN KEY 제약 조건이 적용되지 않습니다.    
     
@@ -65,7 +62,7 @@ ms.lasthandoff: 06/22/2017
     
 
     
-##   <a name="permissions"></a>Permissions    
+##   <a name="permissions"></a>사용 권한    
  외래 키가 포함된 새 테이블을 만들려면 데이터베이스에서 CREATE TABLE 권한이 필요하고 테이블을 만들려는 스키마에 대한 ALTER 권한이 필요합니다.    
     
  기존 테이블에서 외래 키를 만들려면 해당 테이블에 대한 ALTER 권한이 필요합니다.    
@@ -143,4 +140,3 @@ ms.lasthandoff: 06/22/2017
      자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [table_constraint&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)를 참조하세요.    
     
   
-

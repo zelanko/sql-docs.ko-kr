@@ -2,9 +2,12 @@
 title: "Oracle 게시자에 대한 데이터 형식 매핑 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d692a102043f78c7c62674843bed4228445ba7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4078e78f9f1e8879d709ef154a11e44055e2dcd5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
-  Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  
+# <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  
   
  다음 표에서는 Oracle 게시자에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자로 데이터 이동 시 Oracle과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간에 데이터 형식이 기본적으로 매핑되는 방법을 보여 줍니다. 대체 형식 열은 대체 매핑을 사용할 수 있는지 여부를 나타냅니다.  
   
@@ -36,30 +39,30 @@ ms.lasthandoff: 11/09/2017
 |CHAR([1-2000])|CHAR([1-2000])|예|  
 |CLOB|VARCHAR(MAX)|예|  
 |DATE|DATETIME|예|  
-|FLOAT|FLOAT|아니요|  
-|FLOAT([1-53])|FLOAT([1-53])|아니요|  
-|FLOAT([54-126])|FLOAT|아니요|  
+|FLOAT|FLOAT|아니오|  
+|FLOAT([1-53])|FLOAT([1-53])|아니오|  
+|FLOAT([54-126])|FLOAT|아니오|  
 |INT|NUMERIC(38)|예|  
 |INTERVAL|DATETIME|예|  
 |LONG|VARCHAR(MAX)|예|  
 |LONG RAW|IMAGE|예|  
-|NCHAR([1-1000])|NCHAR([1-1000])|아니요|  
+|NCHAR([1-1000])|NCHAR([1-1000])|아니오|  
 |NCLOB|NVARCHAR(MAX)|예|  
 |NUMBER|FLOAT|예|  
-|NUMBER([1-38])|NUMERIC([1-38])|아니요|  
+|NUMBER([1-38])|NUMERIC([1-38])|아니오|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|예|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|아니요|  
-|RAW([1-2000])|VARBINARY([1-2000])|아니요|  
-|REAL|FLOAT|아니요|  
-|ROWID|CHAR(18)|아니요|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|아니오|  
+|RAW([1-2000])|VARBINARY([1-2000])|아니오|  
+|real|FLOAT|아니오|  
+|ROWID|CHAR(18)|아니오|  
 |TIMESTAMP|DATETIME|예|  
 |TIMESTAMP(0-7)|DATETIME|예|  
 |TIMESTAMP(8-9)|DATETIME|예|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|예|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|아니요|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|아니오|  
 |TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|예|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|아니요|  
-|UROWID|CHAR(18)|아니요|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|아니오|  
+|UROWID|CHAR(18)|아니오|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|예|  
   
 ## <a name="considerations-for-data-type-mapping"></a>데이터 형식 매핑에 대한 고려 사항  
@@ -110,6 +113,6 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>참고 항목  
  [Oracle 게시자 구성](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle 게시 개요](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

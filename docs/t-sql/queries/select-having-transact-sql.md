@@ -1,7 +1,7 @@
 ---
 title: HAVING (TRANSACT-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -23,22 +23,21 @@ helpviewer_keywords:
 - HAVING clause
 - HAVING clause, about HAVING clause
 ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9bff75a84689090f6e416db052a2561e57fa98a6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5ec700e859eda5b1a6313183a7485686ce3727ce
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---having-transact-sql"></a>선택-것 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  그룹 또는 집계에 대한 검색 조건을 지정합니다. HAVING은 SELECT 문하고만 사용될 수 있으며 일반적으로 GROUP BY 절에 사용됩니다. GROUP BY가 사용되지 않으면 HAVING은 WHERE 절처럼 작동합니다.  
+  그룹 또는 집계에 대한 검색 조건을 지정합니다. HAVING은 SELECT 문하고만 사용될 수 있으며 HAVING은 일반적으로 GROUP BY 절과 함께 사용 됩니다. GROUP BY를 사용 하지 않는 경우 암시적 단일, 집계 된 그룹입니다.   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>인수  
-\<c h _ c >에 맞게는 그룹이 나 집계에 대 한 검색 조건을 지정 합니다.  
+\<c h _ c > 그룹 및/또는 집계에 맞게에 대 한 하나 이상의 조건자를 지정 합니다. 검색 조건과 조건자에 대 한 자세한 내용은 참조 [검색 조건 &#40; Transact SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
  **텍스트**, **이미지**, 및 **ntext** 데이터 형식은 HAVING 절에 사용할 수 없습니다.  
   
@@ -84,5 +83,4 @@ ORDER BY OrderDateKey;
  [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-
 

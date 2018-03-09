@@ -28,17 +28,16 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 59e7140970b80d2be64c15aefebca90bf45977e7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,13 +104,13 @@ CREATE QUEUE <object>
  STATUS (Activation)  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 저장 프로시저를 시작할지 여부를 지정합니다. STATUS = ON이면 현재 실행 중인 프로시저 수가 MAX_QUEUE_READERS보다 작고, 큐에 도착하는 메시지가 저장 프로시저의 메시지 수신 속도보다 빠른 경우 큐에서 PROCEDURE_NAME에 지정된 저장 프로시저를 시작합니다. STATUS = OFF이면 큐에서 저장 프로시저를 시작하지 않습니다. 이 절을 지정하지 않은 경우 기본값은 ON입니다.  
   
- PROCEDURE_NAME = \<프로시저 >  
+ PROCEDURE_NAME = \<procedure>  
  이 큐에 있는 메시지를 처리하기 위해 시작할 저장 프로시저의 이름을 지정합니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 합니다.  
   
- *a s e _*(프로시저)  
+ *database_name*(procedure)  
  저장 프로시저가 포함된 데이터베이스의 이름입니다.  
   
- *schema_name*(프로시저)  
+ *schema_name*(procedure)  
  저장 프로시저를 포함한 스키마의 이름입니다.  
   
  *procedure_name*  
@@ -240,4 +239,3 @@ CREATE QUEUE ExpenseQueue
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

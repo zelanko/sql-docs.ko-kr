@@ -1,0 +1,79 @@
+---
+title: sys.dm_audit_actions (Transact SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: dmv's
+ms.reviewer: 
+ms.suite: sql
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sys.dm_audit_actions_TSQL
+- sys.dm_audit_actions
+- dm_audit_actions_TSQL
+- dm_audit_actions
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_audit_actions dynamic management view
+ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4f5422f3230aa5d65df1a946ccf532e8108728e3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/03/2018
+---
+# <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions(Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  감사 로그에 보고할 수 있는 모든 감사 동작 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit의 일부로 구성할 수 있는 모든 감사 동작 그룹에 대한 행을 반환합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 감사 참조 [SQL Server audit&#40; 데이터베이스 엔진 &#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)합니다.  
+  
+|열 이름|데이터 형식|Description|  
+|-----------------|---------------|-----------------|  
+|**action_id**|**varchar(4)**|감사 동작의 ID입니다. 에 관련 된 **action_id** 각 감사 레코드에 기록 하는 값입니다. Null을 허용합니다. 감사 그룹의 경우 NULL입니다.|  
+|**action_in_log**|**bit**|동작을 감사 로그에 기록할 수 있는지 여부를 나타냅니다. 값은 다음과 같습니다.<br /><br /> 1 = 예<br /><br /> 0 = 아니요|  
+|**name**|**sysname**|감사 동작 또는 동작 그룹의 이름입니다. Null을 허용하지 않습니다.|  
+|**class_desc**|**nvarchar(120)**|감사 동작이 적용되는 개체 클래스의 이름입니다. 서버, 데이터베이스 또는 스키마 범위 개체 중 하나일 수 있지만 스키마 개체를 포함하지 않습니다. Null을 허용하지 않습니다.|  
+|**parent_class_desc**|**nvarchar(120)**|class_desc에서 설명하는 개체의 부모 클래스 이름입니다. class_desc가 서버인 경우 NULL입니다.|  
+|**covering_parent_action_name**|**nvarchar(120)**|이 행에 설명된 감사 동작을 포함하는 감사 동작 또는 감사 그룹의 이름입니다. 동작 계층 및 포함 동작을 만드는 데 사용됩니다. Null을 허용합니다.|  
+|**configuration_level**|**nvarchar(10)**|이 행에 지정된 동작 또는 동작 그룹을 그룹 또는 동작 수준에서 구성할 수 있음을 나타냅니다. 동작을 구성할 수 없는 경우 NULL입니다.|  
+|**containing_group_name**|**nvarchar(120)**|지정된 동작이 포함된 감사 그룹의 이름입니다. 이름의 값이 그룹인 경우 NULL입니다.|  
+  
+## <a name="permissions"></a>Permissions  
+ 보안 주체에 있어야 **선택** 권한. 기본적으로 이 권한은 Public에 부여됩니다.  
+  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+  
+## <a name="see-also"></a>관련 항목:  
+ [서버 감사 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [ALTER SERVER audit&#40; Transact SQL &#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER audit&#40; Transact SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [SERVER AUDIT specification&#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT specification&#40; Transact SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT specification&#40; Transact SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [DATABASE AUDIT specification&#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT specification&#40; Transact SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT specification&#40; Transact SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER authorization&#40; Transact SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.fn_get_audit_file&#40; Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys.server_audits&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [서버 감사 및 서버 감사 사양 만들기](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
+  
+  

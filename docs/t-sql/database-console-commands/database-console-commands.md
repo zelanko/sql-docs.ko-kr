@@ -15,17 +15,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
-caps.latest.revision: 5
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c19c1cb88699e356237993d6467ca7d6967d1ac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f23f9e52ae434129e061a9ad3e087097aa3efc8c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="database-console-commands"></a>데이터베이스 콘솔 명령
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +35,8 @@ ms.lasthandoff: 09/01/2017
 
 |||  
 |-|-|  
-|[검사점](../../t-sql/language-elements/checkpoint-transact-sql.md)|[KILL STATS JOB](../../t-sql/language-elements/kill-stats-job-transact-sql.md)|  
+|[CHECKPOINT](../../t-sql/language-elements/checkpoint-transact-sql.md)|[KILL STATS JOB](../../t-sql/language-elements/kill-stats-job-transact-sql.md)|  
 |[DBCC](../../t-sql/database-console-commands/dbcc-transact-sql.md)|[RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md)|  
-|[KILL](../../t-sql/language-elements/kill-transact-sql.md)|[종료](../../t-sql/language-elements/shutdown-transact-sql.md)|  
+|[KILL](../../t-sql/language-elements/kill-transact-sql.md)|[SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)|  
 |[KILL QUERY NOTIFICATION SUBSCRIPTION](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)||  
   
-

@@ -1,5 +1,5 @@
 ---
-title: "YEAR (SSIS 식) | Microsoft Docs"
+title: "YEAR(SSIS 식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a72a54b02f136f2d9acc130051e79852d72a2f1f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 40c62cf02371f9bf1888c3df4f8d7c588aea6ab6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="year-ssis-expression"></a>YEAR(SSIS 식)
   날짜의 연도 부분을 나타내는 정수를 반환합니다.  
@@ -45,7 +44,7 @@ YEAR(date)
 ## <a name="result-types"></a>결과 형식  
  DT_I4  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  인수가 Null이면 YEAR 결과도 Null입니다.  
   
  날짜 리터럴은 다음의 날짜 데이터 형식 중 하나로 명시적 캐스팅되어야 합니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
@@ -74,13 +73,12 @@ YEAR(ModifiedDate)
 YEAR(GETDATE())  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [DATEADD &#40; SSIS 식 &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEDIFF &#40; SSIS 식 &#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
- [DATEPART &#40; SSIS 식 &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY &#40; SSIS 식 &#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [월 &#40; SSIS 식 &#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>참고 항목  
+ [DATEADD&#40;SSIS 식&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEDIFF&#40;SSIS 식&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
+ [DATEPART&#40;SSIS 식&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [DAY&#40;SSIS 식&#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [MONTH&#40;SSIS 식&#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

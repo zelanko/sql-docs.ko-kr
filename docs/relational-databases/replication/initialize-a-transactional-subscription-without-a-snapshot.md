@@ -2,9 +2,12 @@
 title: "스냅숏 없이 트랜잭션 구독 초기화 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 471ff7f62145dd3e6593ab449545f5ddb49612eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0c8e0d600647d81dde027bb053cfeabb83518ae7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>스냅숏 없이 트랜잭션 구독 초기화
-  기본적으로 트랜잭션 게시에 대한 구독은 스냅숏 에이전트가 생성하고 배포 에이전트가 적용하는 스냅숏으로 초기화됩니다. 큰 초기 데이터 집합을 다루는 시나리오와 같은 일부 시나리오에서는 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 구독자를 초기화하는 다른 방법은 다음과 같습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 기본적으로 트랜잭션 게시에 대한 구독은 스냅숏 에이전트가 생성하고 배포 에이전트가 적용하는 스냅숏으로 초기화됩니다. 큰 초기 데이터 집합을 다루는 시나리오와 같은 일부 시나리오에서는 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 구독자를 초기화하는 다른 방법은 다음과 같습니다.  
   
 -   백업을 지정하고 이 백업을 구독자에서 복원하면 배포 에이전트가 필요한 복제 메타데이터와 시스템 프로시저를 복사합니다. 게시를 백업으로 초기화할 수 있도록 설정한 다음 생성된 백업 중 어떤 최근 백업이든 사용할 수 있으므로 백업으로 초기화는 방법은 데이터를 구독자에 배달하는 가장 빠르고도 편리한 방법입니다.  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/09/2017
   
  대체 방법으로 구독을 초기화하려면 [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구독 초기화](../../relational-databases/replication/initialize-a-subscription.md)  
   
   

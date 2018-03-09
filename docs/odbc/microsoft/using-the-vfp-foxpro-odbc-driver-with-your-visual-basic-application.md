@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], visual basic applications
 - Visual FoxPro data [ODBC], visual basic applications
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 266577d54e579956fcc2435283a9835c19f9ef36
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 37834afc7cc69e0276645d68752e66f68449fbb3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Visual Basic 응용 프로그램과 함께 VFP FoxPro ODBC 드라이버를 사용 하 여
 Microsoft® Visual Basic® 응용 프로그램 Visual FoxPro 데이터 원본에 연결 하는 데이터 컨트롤을 만들어서 Visual FoxPro 데이터와 통신할 수 있습니다.  
@@ -74,4 +72,3 @@ Microsoft® Visual Basic® 응용 프로그램 Visual FoxPro 데이터 원본에
     ```  
   
 8.  폼을 실행 하 고 고객 id 필드를 통해 Visual FoxPro TasTrade 예제 데이터베이스에서 건너뛸 데이터 컨트롤을 사용 합니다.
-

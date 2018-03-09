@@ -3,8 +3,11 @@ title: "쿼리 관련 기본 작업 수행(Visual Database Tools) | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cacb4d0c0425b022f14ab90702fa5508679fd2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e61d1ac966ed5c5829e6c03c463fc5fa4b1e38bf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>쿼리 관련 기본 작업 수행(Visual Database Tools)
-다음 기본 작업은 거의 모든 쿼리에 적용됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다음 기본 작업은 거의 모든 쿼리에 적용됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
@@ -97,7 +100,7 @@ SQL 주석, 매개 변수 목록, Top 사양 등과 같은 속성을 표시하�
 [쿼리 속성&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)  
 쿼리에 사용할 수 있는 속성에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 [쿼리 형식&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 쿼리 및 뷰 디자이너에서 작업에 사용할 수 있는 쿼리와 관련된 항목을 나열합니다.  
   

@@ -3,7 +3,7 @@ title: "Value 속성 (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO MD]
 ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 797daeb72afb955f5113f697c54987bda972b95a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 67ff4dd7aa7d8698aa6d99cf82b61f5f0afe54bf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="value-property-ado-md"></a>ADO MD value 속성
 현재 값을 나타냅니다 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md)합니다.  
@@ -42,4 +41,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [FormattedValue 속성(ADO MD)](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)
-

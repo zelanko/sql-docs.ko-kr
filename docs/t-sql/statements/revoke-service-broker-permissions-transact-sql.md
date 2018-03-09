@@ -24,17 +24,16 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 - REVOKE statement, Service Broker
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cc90d37072e2e081fc358f186e3dc85f0c8c092c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 897da4d05bcd9a2cfbb88ce5383ba7a71867edcc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE Service Broker 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,25 +66,25 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!IMPORTANT]  
 >  보안 주체에 GRANT 옵션 없이 지정된 사용 권한이 있는 경우 사용 권한 자체가 취소됩니다.  
   
- *사용 권한*  
+ *permission*  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 보안 개체에 대해 취소할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- 계약 **::***contract_name*  
+ CONTRACT **::***contract_name*  
  사용 권한을 취소할 계약을 지정합니다. 범위 한정자 **::** 가 필요 합니다.  
   
- 메시지 유형 **::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  사용 권한을 취소할 메시지 유형을 지정합니다. 범위 한정자 **::** 가 필요 합니다.  
   
  REMOTE SERVICE BINDING **::***remote_binding_name*  
  사용 권한을 취소할 원격 서비스 바인딩을 지정합니다. 범위 한정자 **::** 가 필요 합니다.  
   
- 경로 **::***route_name*  
+ ROUTE **::***route_name*  
  사용 권한을 취소할 경로를 지정합니다. 범위 한정자 **::** 가 필요 합니다.  
   
- 서비스 **::***message_type_name*  
+ SERVICE **::***message_type_name*  
  사용 권한을 취소할 서비스를 지정합니다. 범위 한정자 **::** 가 필요 합니다.  
   
- *데이터베이스 _ 보안 주체*  
+ *database_principal*  
  사용 권한을 취소할 보안 주체를 지정합니다. *데이터베이스 _ 보안 주체* 다음 중 하나일 수 있습니다.  
   
 -   데이터베이스 사용자  
@@ -195,4 +194,3 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-

@@ -1,27 +1,27 @@
 ---
-title: "대화형 정렬 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "대화형 정렬(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b5a259bbe965efc86a9f11ad377525455bdfbd5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4574f1f77dacff636af04a955bfb9f94bd6a7441
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>대화형 정렬(보고서 작성기 및 SSRS)
   대화형 정렬 단추를 추가하여 사용자가 테이블의 행 또는 행렬의 행 및 열에 대해 오름차순 및 내림차순 사이를 전환하도록 할 수 있습니다. 대화형 정렬의 일반적인 용도는 열 머리글마다 정렬 단추를 추가하는 것입니다. 그러면 사용자는 정렬할 기준이 되는 열을 선택할 수 있습니다.  
@@ -47,13 +47,13 @@ ms.lasthandoff: 08/09/2017
   
  다음 표에서는 대화형 정렬 단추를 사용하여 얻을 수 있는 효과에 대해 간략히 설명합니다.  
   
-|동작|정렬 대상|정렬 단추 추가 위치|정렬 기준|정렬 범위|  
+|작업|정렬 대상|정렬 단추 추가 위치|정렬 기준|정렬 범위|  
 |------------|------------------|----------------------------------|---------------------|----------------|  
 |그룹이 없는 테이블의 정보 행 정렬|세부 정보|열 머리글|이 열에 바인딩되는 데이터 집합 필드|데이터 영역|  
 |행렬의 최상위 그룹 인스턴스 정렬|그룹|열 머리글|부모 그룹의 그룹 식|데이터 영역|  
 |테이블의 자식 그룹에 대해 정보 행 정렬|세부 정보|자식 그룹 머리글 행|정렬 기준이 되는 데이터 집합 필드|자식 그룹|  
 |여러 행 그룹의 행 및 테이블의 정보 행 정렬|그룹(단, 그룹 식을 구체화해야 함)|열 머리글|정렬 기준이 되는 데이터 집합의 집계|데이터 영역|  
-|여러 데이터 영역에 대한 정렬 순서 동기화|그룹|일반적으로 열 머리글|그룹 식|데이터 집합|  
+|여러 데이터 영역에 대한 정렬 순서 동기화|그룹|일반적으로 열 머리글|그룹 식|Dataset|  
   
  보고서 처리기는 모든 데이터 영역 및 그룹 정렬 식이 적용된 후 대화형 정렬을 적용합니다. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -62,10 +62,9 @@ ms.lasthandoff: 08/09/2017
   
  이렇게 하려면 여러 필드를 결합하는 식을 그룹화하여 테이블을 다시 디자인해야 합니다. 예를 들어 재고 수가 들어 있는 데이터 집합의 경우 원래 테이블을 크기 및 색 순서로 그룹화하는 경우 크기 및 색을 결합한 그룹 식으로 단일 그룹을 지정할 수 있습니다. 자세한 내용은 [테이블 또는 행렬에 대화형 정렬 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [테이블 또는 행렬에 대화형 정렬 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   
-

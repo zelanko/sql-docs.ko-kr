@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetEnvAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetEnvAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetEnvAttr
-helpviewer_keywords:
-- SQLGetEnvAttr function [ODBC]
+f1_keywords: SQLGetEnvAttr
+helpviewer_keywords: SQLGetEnvAttr function [ODBC]
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6d292b667e51211fac9d7b2d3d577f2d459b17fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7e353d41c1065f8d65a70c6633901ef22547a61
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 함수
 **규칙**  
@@ -77,7 +71,7 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetEnvAttr** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* SQL_의 HANDLE_ENV 및 *처리* 의 *EnvironmentHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLGetEnvAttr** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|반환 되는 데이터 \* *ValuePtr* 되도록 잘렸습니다 *BufferLength* null 종결 문자가 뺀 값입니다. 잘리지 않은 문자열 값의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -90,7 +84,7 @@ SQLRETURN SQLGetEnvAttr(
 |HYC00|선택적 기능이 구현 되지 않았습니다|인수에 대해 지정 된 값 *특성* ODBC의 버전 드라이버에서 지원 되지만 드라이버에서 지원 하지 않아 유효한 ODBC 환경 특성을 했습니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)에 해당 하는 드라이버는 *EnvironmentHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  특성 목록이 참조 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)합니다. 드라이버 관련 환경 특성이 없는 합니다. 경우 *특성* 지정는 문자열을 반환 하는 특성 *ValuePtr* 문자열을 반환 하는 버퍼에 대 한 포인터 여야 합니다. Null 종료 바이트를 포함 하 여 문자열의 최대 길이 됩니다 *BufferLength* 바이트입니다.  
   
  **SQLGetEnvAttr** 언제 든 지 할당 및 환경 핸들의 해제 간의 호출할 수 있습니다. 모든 환경 특성 환경에 대 한 응용 프로그램에 의해 성공적으로 설정 될 때까지 지속 **SQLFreeHandle** 라고 하는 *EnvironmentHandle* 와 *HandleType*SQL_HANDLE_ENV입니다. ODBC 3에서 개 이상의 환경 핸들을 동시에 할당 될 수*.x*합니다. 다른 환경에서 할당 한 환경에 대 한 환경 특성 영향을 주지 않습니다.  
@@ -111,4 +105,3 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

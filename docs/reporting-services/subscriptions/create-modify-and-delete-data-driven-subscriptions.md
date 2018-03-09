@@ -1,13 +1,14 @@
 ---
-title: "만들기, 수정 및 데이터 기반 구독을 삭제 합니다. | Microsoft Docs"
+title: "데이터 기반 구독 만들기, 수정 및 삭제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 51
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "51"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 92aab81d1e8bb487b3cbf671c4e15034abe09341
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>데이터 기반 구독 만들기, 수정 및 삭제
   데이터 기반 구독은 런타임에 구독을 처리하는 데 사용하는 데이터 값을 가져오는 쿼리 기반 구독입니다. 구독이 실행될 때 받는 사람, 보고서 배달 옵션, 렌더링 형식 및 매개 변수 설정에 대한 최신 정보를 가져오기 위한 쿼리가 처리됩니다. 쿼리 결과가 구독 정의에 조합되어 직원 데이터베이스, 고객 데이터베이스 또는 구독자 데이터로 사용할 수 있는 정보가 포함된 기타 데이터베이스에서 이미 유지 관리되고 있는 데이터를 사용하는 동적 구독을 형성합니다.  
   
- 새 데이터 기반 구독을 만들거나 기존 구독을 수정하려면 보고서 관리자의 데이터 기반 구독 만들기 페이지를 사용하십시오. 이 페이지에서는 구독을 만들거나 수정하는 각 단계를 안내합니다. 구독을 만든 다음 액세스하려면 내 구독 페이지와 보고서의 구독 목록을 사용합니다. 데이터 기반 구독을 만드는 방법에 자세한 내용은 [데이터 기반 구독 &#40; 만들기 SSRS 자습서 &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ 새 데이터 기반 구독을 만들거나 기존 구독을 수정하려면 보고서 관리자의 데이터 기반 구독 만들기 페이지를 사용하십시오. 이 페이지에서는 구독을 만들거나 수정하는 각 단계를 안내합니다. 구독을 만든 다음 액세스하려면 내 구독 페이지와 보고서의 구독 목록을 사용합니다. 데이터 기반 구독을 만드는 방법에 대한 자세한 내용은 [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)를 참조하세요.  
   
  항목 내용  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  **구독** 탭을 클릭합니다. 또는 보고서 관리자 맨 위에서 **내 구독** 링크를 클릭합니다.  
   
-3.  수정할 구독을 선택합니다. 다음 아이콘은 데이터 기반 구독을 나타내는: ![데이터 기반 구독 아이콘](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "데이터 기반 구독 아이콘")  
+3.  수정할 구독을 선택합니다. 다음 아이콘은 데이터 기반 구독을 나타냅니다. ![데이터 기반 구독 아이콘](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "데이터 기반 구독 아이콘")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>기존 데이터 기반 구독을 수정하려면(SharePoint 모드)  
   
@@ -105,12 +106,12 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_run_subscription"></a> 구독 실행  
  구독의 처리 조건을 지정해야 합니다. 일정을 지정하거나 보고서 실행 스냅숏 업데이트에 맞춰 구독을 실행할 수 있습니다. 데이터 기반 구독 처리 방법은 표준 구독 처리 방법과 동일합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [구독 및 배달 &#40; Reporting services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [기존_기본 모드 보고서 서버 구독 만들기 및 관리](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [구독 페이지 &#40; 보고서 관리자 &#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [내 구독 페이지 &#40; 보고서 관리자 &#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [구독 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [내 구독 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

@@ -1,33 +1,31 @@
 ---
-title: "테이블 삭제 (SSAS 테이블 형식) | Microsoft Docs"
+title: "테이블 삭제 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be4ed45f-fde3-466c-9869-49bd3ddb505e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: be456ceeef0d8d965c9e922bffbcec0507cb3777
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a4f9c2850798353cb6e16413f395aad1a370a69e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-a-table-ssas-tabular"></a>테이블 삭제(SSAS 테이블 형식)
-  모델 디자이너의 모델 작업 영역 데이터베이스에서 더 이상 필요하지 않은 테이블을 삭제할 수 있습니다. 테이블을 삭제하면 원래 원본 데이터는 영향을 받지 않고 가져와서 작업하고 있는 데이터만 삭제됩니다. 테이블의 삭제는 실행 취소할 수 없습니다.  
+# <a name="delete-a-table"></a>테이블 삭제
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+모델 디자이너의 모델 작업 영역 데이터베이스에서 더 이상 필요하지 않은 테이블을 삭제할 수 있습니다. 테이블을 삭제하면 원래 원본 데이터는 영향을 받지 않고 가져와서 작업하고 있는 데이터만 삭제됩니다. 테이블의 삭제는 실행 취소할 수 없습니다.  
   
 ### <a name="to-delete-a-table"></a>테이블을 삭제하려면  
   
@@ -41,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 -   해당 테이블을 사용하여 계산 열을 만든 경우 해당 테이블의 열도 삭제됩니다. 다른 테이블에서 삭제된 테이블의 열을 사용하는 계산 열에서는 오류가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [테이블 및 열&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [테이블 및 열](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

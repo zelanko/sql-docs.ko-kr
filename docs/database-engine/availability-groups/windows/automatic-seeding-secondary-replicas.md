@@ -20,13 +20,12 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8c1fc9f84428fc60283d6d53bab21a90b5c4049d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>보조 복제본에 대한 자동 시드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ SQL Server 2012 및 2014에서 SQL Server Always On 가용성 그룹의 보조 �
 자동 시드를 사용할 때 고려해야 할 사항은 다음과 같습니다.
 
 * [주 복제본에 대한 성능 및 트랜잭션 로그 영향](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [디스크 레이아웃](#disk-layout)
+* [디스크 레이아웃](#disklayout)
 * [보안](#security)
 
 
@@ -73,7 +72,7 @@ SQL Server 2017에서는 가용성 그룹에 참여하는 모든 복제본에서
 
 주 및 보조 복제본 데이터 위치가 인스턴스 기본 경로가 아닌 시나리오는 이 변경 사항에 영향을 받지 않습니다. 보조 복제본 파일 경로가 주 복제본 파일 경로와 일치하기 위한 요구 사항은 동일합니다.
 
-|주 인스턴스</br>기본 데이터 경로|보조 인스턴스</br>기본 데이터 경로|주 인스턴스</br>파일 위치|보조 인스턴스</br> 파일 위치
+|주 인스턴스</br>기본 데이터 경로|보조 인스턴스</br>기본 데이터 경로|주 인스턴스</br>파일 위치 |보조 인스턴스</br> 파일 위치 
 |:------|:------|:------|:------
 |c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
 |c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
@@ -81,7 +80,7 @@ SQL Server 2017에서는 가용성 그룹에 참여하는 모든 복제본에서
 
 주 및 보조 복제본에서 기본 경로와 기본이 아닌 경로가 혼합된 경우 SQL Server 2017은 이전 릴리스와 다르게 작동합니다. 다음 표에서는 SQL Server 2017의 동작을 보여줍니다.
 
-|주 인스턴스</br>기본 데이터 경로 |보조 인스턴스</br>기본 데이터 경로 |주 인스턴스</br>파일 위치 |SQL Server 2016 </br>보조 인스턴스</br>파일 위치 |SQL Server 2017 </br>보조 인스턴스</br>파일 위치
+|주 인스턴스</br>기본 데이터 경로 |보조 인스턴스</br>기본 데이터 경로 |주 인스턴스</br>파일 위치  |SQL Server 2016 </br>보조 인스턴스</br>파일 위치  |SQL Server 2017 </br>보조 인스턴스</br>파일 위치 
 |:------|:------|:------|:------|:------
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |c:\\data\\ |d:\\data\\ 
 |c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |c:\\data\\group1\\ |d:\\data\\group1\\
@@ -158,9 +157,6 @@ ALTER AVAILABILITY GROUP [<AGName>]
 
 ![SQL Server 로그][2]
 
-
-
-
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>자동 시드로 백업 및 복원 결합
 
 기존의 백업, 복사 및 복원을 자동 시드와 결합할 수 있습니다. 이 경우 먼저 사용 가능한 트랜잭션 로그 모두를 포함하여 데이터베이스를 보조 복제본에 복원합니다. 다음으로 비상 로그 백업을 복원한 것처럼 보조 복제본의 데이터베이스를 "따라 잡기(catch up)" 위해 가용성 그룹을 만들 때 자동 시드를 사용하도록 설정합니다([비상 로그 백업(SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md) 참조).
@@ -172,7 +168,7 @@ Transact-SQL 또는 SSMS(SQL Server Management Studio) 버전 17 이상에서 �
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>복제본의 시드 모드 변경
 
-가용성 그룹을 만든 후에 복제본의 시드 모드를 변경하여 자동 시드를 사용하거나 사용하지 않도록 설정할 수 있습니다. 가용성 그룹을 만든 후에 자동 시드를 사용하도록 설정하면 백업, 복사 및 복원으로 가용성 그룹을 만들었을 때 자동 시드를 사용하여 이 가용성 그룹에 데이터베이스를 추가할 수 있습니다. 예를 들어
+가용성 그룹을 만든 후에 복제본의 시드 모드를 변경하여 자동 시드를 사용하거나 사용하지 않도록 설정할 수 있습니다. 가용성 그룹을 만든 후에 자동 시드를 사용하도록 설정하면 백업, 복사 및 복원으로 가용성 그룹을 만들었을 때 자동 시드를 사용하여 이 가용성 그룹에 데이터베이스를 추가할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -252,7 +248,7 @@ GO
 
 다음 표에는 자동 시드와 관련된 확장 이벤트가 나열되어 있습니다.
 
-|이름|설명|
+|속성|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|시드 요청 메시지입니다.|
 |hadr_physical_seeding_backup_state_change|물리적 시드 백업 관련 상태 변경입니다.|
@@ -269,7 +265,7 @@ GO
 |hadr_automatic_seeding_failure|자동 시드 작업이 실패할 때 발생합니다.|
 |hadr_automatic_seeding_timeout|자동 시드 작업 시간이 초과할 때 발생합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [ALTER AVAILABILITY GROUP(Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 
@@ -280,4 +276,3 @@ GO
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png
 [2]: ./media/auto-seed-sql-server-log.png
-

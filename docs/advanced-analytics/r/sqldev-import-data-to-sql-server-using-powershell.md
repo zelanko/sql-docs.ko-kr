@@ -2,11 +2,12 @@
 title: "2 단원: SQL server PowerShell을 사용 하 여 데이터 가져오기 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -15,19 +16,19 @@ dev_langs:
 - R
 - TSQL
 ms.assetid: 3c5b5145-fa57-455a-b153-0400fc062dc0
-caps.latest.revision: 11
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 4aaaf0ec50d5bd3764a78c8a202ccac399255956
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ce5688abd8dee584c515fa691ac86c5799c53298
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>2 단원: SQL server PowerShell을 사용 하 여 데이터 가져오기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
 
@@ -98,4 +99,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-lesson"></a>이전 단원
 
 [1 단원: 예제 데이터 다운로드](../tutorials/sqldev-download-the-sample-data.md)
-

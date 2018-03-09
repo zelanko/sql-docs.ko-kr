@@ -2,37 +2,32 @@
 title: "IMDEmbeddedData 인터페이스 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0fae25125663ceca4a0cc2c7ddf94f72841ace2a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData 인터페이스
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  IMDEmbeddedData 인터페이스는 공용 인터페이스는 포함 된 관리 하는 데 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스 또는 테이블 형식 모델 데이터베이스. 이 인터페이스는 **IPersistStream** 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+IMDEmbeddedData 인터페이스는 공용 인터페이스는 포함 된 관리 하는 데 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스 또는 테이블 형식 모델 데이터베이스. 이 인터페이스는 **IPersistStream** 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  
   
 -   컨테이너 문서의 포함된 스트림에 대한 식별자를 가져옵니다.  
   
@@ -103,7 +98,7 @@ HRESULT GetStreamIdentifier (
  스트림 식별자의 위치를 지정합니다.  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  스트림 식별자가 반환되었습니다.  
   
  **S_FALSE**  
@@ -147,7 +142,7 @@ HRESULT SetContainerURL (
  포함하는 문서의 URL을 지정합니다.  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  컨테이너 URL을 설정했습니다.  
   
  **E_FAIL**  
@@ -177,7 +172,7 @@ HRESULT SetHosted (
  호출자가 서비스 응용 프로그램(예: IIS)의 호스팅된 환경에 있으면 TRUE입니다.  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  플래그를 설정했습니다.  
   
  **E_FAIL**  
@@ -207,7 +202,7 @@ HRESULT SetTempDirPath (
  임시 파일에 대한 호스트 응용 프로그램에서 사용하는 경로입니다.  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  임시 파일 디렉터리를 설정했습니다.  
   
  **E_FAIL**  
@@ -234,7 +229,7 @@ HRESULT Cancel ( void )
  없음  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  작업을 취소했습니다.  
   
  **DB_E_CANTCANCEL**  
@@ -266,7 +261,7 @@ HRESULT GetSizeMax (
  포함된 데이터베이스 이미지의 예상 크기(바이트)입니다.  
   
 #### <a name="return-value"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  크기를 가져왔습니다.  
   
  **E_FAIL**  
@@ -285,7 +280,7 @@ HRESULT IsDirty ( void )
  none  
   
 #### <a name="return-values"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  데이터베이스가 마지막으로 저장된 후에 변경되었습니다.  
   
  **S_FALSE**  
@@ -310,7 +305,7 @@ HRESULT Load (
  포함된 데이터베이스를 로드할 스트림 인터페이스에 대한 포인터입니다.  
   
 #### <a name="return-values"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  데이터베이스를 로드했습니다.  
   
  **E_OUTOFMEMORY**  
@@ -339,7 +334,7 @@ HRESULT Save (
  이 작업 후에 변경 플래그를 지워야 하는지 여부를 나타내는 플래그입니다.  
   
 #### <a name="return-values"></a>반환 값  
- **S_OK이 고**  
+ **S_OK**  
  데이터베이스를 저장했습니다.  
   
  **STG_E_CANTSAVE**  
@@ -349,4 +344,3 @@ HRESULT Save (
  저장 장치에 남아 있는 공간이 없으므로 데이터베이스를 저장할 수 없습니다.  
   
   
-

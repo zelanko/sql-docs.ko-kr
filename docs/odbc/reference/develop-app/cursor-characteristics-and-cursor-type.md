@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0314dfcc66e783a48a7474b0b0656a93b1bf3822
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19a9e44523e1dc550b593bc83589177c03d8a842
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>커서 특성 및 커서 유형
 응용 프로그램 (정방향 전용, 정적, 키 집합 커서 또는 동적) 커서 유형을 지정 하는 대신 커서의 특징을 지정할 수 있습니다. 이 위해 응용 프로그램 선택 (으로 SQL_ATTR_CURSOR_SCROLLABLE 문 특성 설정) 커서의 스크롤 가능 여부 및 민감도 (으로 SQL_ATTR_CURSOR_SENSITIVITY 문 특성 설정) 문에서 커서를 열기 전에 핸들입니다. 드라이버는 다음 있는 특성을 가장 효율적으로 제공 하는 커서 유형을 요청한 응용 프로그램을 선택 합니다.  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_ATTR_CURSOR_TYPE SQL_CURSOR_FORWARD_ONLY|SQL_ATTR_CURSOR_SCROLLABLE을 SQL_NONSCROLLABLE 합니다.|  
 |SQL_ATTR_CURSOR_TYPE SQL_CURSOR_KEYSET_DRIVEN|Sql_scrollable SQL_ATTR_SCROLLABLE 합니다.<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED 또는 SQL_SENSITIVE (기준에 따라 드라이버에서 정의한 SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY 아닌 경우).|  
 |SQL_ATTR_CURSOR_TYPE SQL_CURSOR_STATIC|Sql_scrollable SQL_ATTR_SCROLLABLE 합니다.<br /><br /> (SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY 경우) SQL_INSENSITIVE로 SQL_ATTR_SENSITIVITY 합니다.<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED 또는 SQL_SENSITIVE (SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY 아닌 경우).|
-

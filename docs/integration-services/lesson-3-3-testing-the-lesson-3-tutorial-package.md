@@ -1,11 +1,11 @@
 ---
-title: "3 단계: 3 단원 자습서 패키지 테스트 | Microsoft Docs"
+title: "3단계: 3단원 자습서 패키지 테스트 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6477267c95ffd200f70b2c93191dfaf0883a4af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: da9d8f8f1ec3977d559aae8941c311f9602e1c04
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>단원 3-3-3 단원 자습서 패키지 테스트
+# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>3-3단원 - 3단원 자습서 패키지 테스트
 이 태스크에서는 Lesson 3.dtsx 패키지를 실행합니다. 패키지를 실행하면 이벤트 로그 창에 로그 파일에 기록된 로그 항목이 나열됩니다. 패키지 실행을 끝낸 후 로그 공급자가 생성한 로그 파일 내용을 확인합니다.  
   
 ## <a name="checking-the-package-layout"></a>패키지 레이아웃 확인  
@@ -35,11 +34,11 @@ ms.lasthandoff: 09/26/2017
   
 **제어 흐름**  
   
-![패키지의 흐름 제어](../integration-services/media/task4lesson2control.gif "패키지의 흐름 제어")  
+![패키지의 제어 흐름](../integration-services/media/task4lesson2control.gif "패키지의 제어 흐름")  
   
 **데이터 흐름**  
   
-![패키지의 데이터 흐름](../integration-services/media/task9lesson1data.gif "패키지에 데이터 흐름")  
+![패키지의 데이터 흐름](../integration-services/media/task9lesson1data.gif "패키지의 데이터 흐름")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>4단원 자습서 패키지를 실행하려면  
   
@@ -60,4 +59,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

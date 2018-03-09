@@ -2,9 +2,12 @@
 title: "데이터베이스 미러링 운영 모드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b16df777853d2485643d066a040a2fc4521e4b66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c716fa65c68b44c6a4eb53e9c63bbe378298633
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
-  이 항목에서는 데이터베이스 미러링 세션의 동기 운영 모드 및 비동기 운영 모드에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 데이터베이스 미러링 세션의 동기 운영 모드 및 비동기 운영 모드에 대해 설명합니다.  
   
 > [!NOTE]  
 >  데이터베이스 미러링에 대한 소개는 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
@@ -148,7 +151,7 @@ ms.lasthandoff: 11/09/2017
   
  ![미러링 모니터 서버 없이 통신하는 파트너](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "미러링 모니터 서버 없이 통신하는 파트너")  
   
- 파트너가 연결되어 있으며 데이터베이스가 이미 동기화된 경우 수동 장애 조치가 지원됩니다. 미러 서버 인스턴스의 작동이 중단되더라도 주 서버 인스턴스는 아무런 영향을 받지 않으며 노출된 상태(데이터를 미러링하지 않음)로 실행됩니다. 주 서버가 손상되면 미러가 일시 중단되지만 서비스를 미러 서버로 강제 수행할 수 있으며 이 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)를 다운로드하세요.  
+ 파트너가 연결되어 있으며 데이터베이스가 이미 동기화된 경우 수동 장애 조치가 지원됩니다. 미러 서버 인스턴스의 작동이 중단되더라도 주 서버 인스턴스는 아무런 영향을 받지 않으며 노출된 상태(데이터를 미러링하지 않음)로 실행됩니다. 주 서버가 손상되면 미러가 일시 중단되지만 서비스를 미러 서버로 강제 수행할 수 있으며 이 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> 자동 장애 조치(Failover)를 지원하는 보호 우선 모드  
  자동 장애 조치를 사용하면 서버 한 대가 손실되어도 데이터베이스가 여전히 작동되므로 고가용성이 제공됩니다. 자동 장애 조치를 사용하려면 이상적으로 세 번째 컴퓨터에 있는 세 번째 서버 인스턴스인 *미러링 모니터 서버*가 세션에 필요합니다. 다음 그림에서는 자동 장애 조치를 지원하는 보호 우선 모드 세션의 구성을 보여 줍니다.  
@@ -248,7 +251,7 @@ ms.lasthandoff: 11/09/2017
 ###  <a name="ViewWitness"></a> 보안 설정 및 미러링 모니터 상태 보기  
  데이터베이스의 보안 설정 및 미러링 모니터 상태를 보려면 **sys.database_mirroring** 카탈로그 뷰를 사용합니다. 관련된 열은 다음과 같습니다.  
   
-|요소|열|설명|  
+|요소|열|Description|  
 |------------|-------------|-----------------|  
 |트랜잭션 보안|**mirroring_safety_level** 또는 **mirroring_safety_level_desc**|다음 중 하나에 해당되는 미러 데이터베이스상의 업데이트를 위한 트랜잭션 보안 설정<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL = 데이터베이스가 온라인이 아닙니다.|  
 |미러링 모니터의 존재 여부|**mirroring_witness_name**|데이터베이스 미러링 모니터의 서버 이름 또는 미러링 모니터가 존재하지 않음을 나타내는 NULL|  

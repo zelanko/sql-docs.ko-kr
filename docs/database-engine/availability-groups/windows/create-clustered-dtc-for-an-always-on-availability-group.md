@@ -2,9 +2,12 @@
 title: "Always On 가용성 그룹에 대한 클러스터된 DTC 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,16 +15,16 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 caps.latest.revision: "2"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1964cd48c4ab789bb95564a1595e1c6b09aeccb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a6d456f5197522bdd9f936f468645f1cbd9bc377
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 만들기
-이 항목에서는 SQL Server Always On 가용성 그룹에 대한 클러스터형 DTC 리소스의 전체 구성에 대해 안내합니다. 전체 구성을 완료하는 데 최대 한 시간이 걸릴 수 있습니다. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 SQL Server Always On 가용성 그룹에 대한 클러스터형 DTC 리소스의 전체 구성에 대해 안내합니다. 전체 구성을 완료하는 데 최대 한 시간이 걸릴 수 있습니다. 
 
 이 연습에서는 클러스터된 DTC 리소스와 SQL Server 가용성 그룹을 만들어 [SQL Server 가용성 그룹에 대한 DTC 클러스터링](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md)의 요구 사항에 맞춥니다.
 
@@ -117,7 +120,7 @@ foreach ($node in $nodes) {
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.  **in-doubt xact resolution** 구성 
 이 스크립트에서는 미결 트랜잭션에 대한 “커밋 가정"을 위해 **in-doubt xact resolution** 서버 구성 옵션을 구성합니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS(SQL Server Management Studio)에서 다음 T-SQL 스크립트를 실행합니다.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -158,7 +161,7 @@ GO
 ## <a name="4-create-test-databases"></a>4. 테스트 데이터베이스 만들기
 스크립트에서 `AG1`에 `SQLNODE1`라는 데이터베이스와, `dtcDemoAG1`에 `SQLNODE2`라는 데이터베이스를 만듭니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -216,7 +219,7 @@ GO
 ## <a name="5---create-endpoints"></a>5.   끝점 만들기
 이 스크립트에서는 TCP 포트 `5022`에서 수신하는 `AG1_endpoint`라는 끝점을 만듭니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
-```tsql  
+```sql  
 /**********************************************
 Execute on SQLNODE1 in SQLCMD mode
 **********************************************/
@@ -249,7 +252,7 @@ GO
 ## <a name="6---prepare-databases-for-availability-group"></a>6.   가용성 그룹에 대한 데이터베이스 준비
 스크립트에서는 `SQLNODE1`에서 `AG1`을 백업하고 `SQLNODE2`로 복원합니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -282,7 +285,7 @@ GO
 ## <a name="7---create-availability-group"></a>7.   가용성 그룹 만들기
 **CREATE AVAILABILITY GROUP** 명령 및 **WITH DTC_SUPPORT = PER_DB** 절을 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 만들어야 합니다.  현재는 기존 가용성 그룹을 변경할 수 없습니다.  새 가용성 그룹 마법사에서는 새 가용성 그룹에 대한 DTC를 지원할 수 없습니다.  다음 스크립트에서는 새 가용성 그룹을 만들고 보조를 조인합니다.  `SQLNODE1` 에 대해 **SQLCMD 모드**로 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -485,7 +488,7 @@ $nodes = (Get-ClusterNode).Name;
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 분산 트랜잭션이 처음 필요할 때 DTC 서비스에 등록됩니다. SQL Server 서비스는 다시 시작될 때까지 해당 DTC 서비스를 계속 사용합니다. 클러스터된 DTC 서비스를 사용할 수 있으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 클러스터된 DTC 서비스에 등록됩니다. 클러스터된 DTC 서비스를 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 로컬 DTC 서비스에 등록됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 클러스터된 DTC 서비스에 등록되었는지 확인하기 위해 각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 중지하고 다시 시작합니다. 
 
 다음 T-SQL 스크립트에 포함된 단계를 따르세요.
-```tsql  
+```sql  
 /*
 Gracefully cycle the SQL Server service and failover the Availability Group
     a.  On SQLNODE2, cycle the SQL Server service from SQL Server Configuration Manger
@@ -546,7 +549,7 @@ END
 ### <a name="create-linked-servers"></a>연결된 서버 만들기  
 다음 스크립트는 `SQLNODE1`두 개의 연결된 서버를 만듭니다.  `SQLNODE1`에 대해 SSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
-```tsql  
+```sql  
 -- SQLNODE1
 IF NOT EXISTS (SELECT * FROM sys.servers where name = N'SQLNODE1')
 BEGIN
@@ -562,7 +565,7 @@ END
 ### <a name="execute-a-distributed-transaction"></a>분산 트랜잭션 실행
 이 스크립트는 먼저 현재 DTC 트랜잭션 통계를 반환합니다.  그런 다음 스크립트에서 `SQLNODE1` 및 `SQLNODE2`의 데이터베이스를 활용하여 분산 트랜잭션을 실행합니다.  그런 다음 스크립트에서 이제 숫자가 늘어난 DTC 트랜잭션 정적 변수를 다시 반환합니다.  `SQLNODE1` 물리적으로 연결하고 `SQLNODE1` 에 대해 **SQLCMD 모드**SSSMS에서 다음 T-SQL 스크립트를 실행합니다.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
     Must be physically connected to SQLNODE1

@@ -1,5 +1,5 @@
 ---
-title: "데이터베이스 백업 작업 | Microsoft Docs"
+title: "데이터베이스 백업 태스크 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a71821c8fc7710d86d819d65ef35878a2594f997
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a78526022b2d3cc16adb8f4706d30a8f430da8f1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="back-up-database-task"></a>데이터베이스 백업 태스크
   데이터베이스 백업 태스크는 여러 가지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업을 수행합니다. 자세한 내용은 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
@@ -43,9 +42,9 @@ ms.lasthandoff: 08/03/2017
   
 |복구 모델|데이터베이스|데이터베이스 - 차등|트랜잭션 로그|파일 또는 파일 차등|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|간단|필수임|선택 사항|지원되지 않음|지원되지 않음|  
-|전체|필수임|선택 사항|필수임|선택 사항|  
-|대량 로그|필수임|선택 사항|필수임|선택 사항|  
+|간단|필수|선택 사항|지원되지 않음|지원되지 않음|  
+|전체|필수|선택 사항|필수|선택 사항|  
+|대량 로그|필수|선택 사항|필수|선택 사항|  
   
  데이터베이스 백업 태스크는 Transact-SQL BACKUP 문을 캡슐화합니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  
   
@@ -61,4 +60,3 @@ ms.lasthandoff: 08/03/2017
 -   [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   
-

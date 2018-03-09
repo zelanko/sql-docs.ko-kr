@@ -24,17 +24,16 @@ helpviewer_keywords:
 - objects [SQL Server], creating
 - DEFAULT definition
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
-caps.latest.revision: 47
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 71c0f964d245be92fb8d2be19e074fbd34dd616e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a51a1045532b9194586d197c6b1b537d795d1996
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ AS constant_expression [ ; ]
 |열 정의|입력 안 함, 기본값 없음|입력 안 함, 기본값 있음|NULL 입력, 기본값 없음|NULL 입력, 기본값 있음|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
 |**NULL**|NULL|기본|NULL|NULL|  
-|**NOT NULL**|오류|기본|error|error|  
+|**NOT NULL**|Error|기본|error|error|  
   
  기본값의 이름을 바꾸려면 사용 **sp_rename**합니다. 에 대 한 보고서 기본값을 사용 하 여 **sp_help**합니다.  
   
@@ -100,7 +99,7 @@ AS constant_expression [ ; ]
 ### <a name="a-creating-a-simple-character-default"></a>1. 단순한 문자 기본값 만들기  
  다음 예에서는 `unknown`이라는 문자 기본값을 만듭니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
@@ -111,7 +110,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
   
  `phonedflt`라는 기본값은 없으므로 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 실패하게 됩니다. 이 예는 설명을 돕기 위해 제공된 것입니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
@@ -132,4 +131,3 @@ sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';
  [sp_unbindefault &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   
-

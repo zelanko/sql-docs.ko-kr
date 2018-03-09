@@ -3,8 +3,9 @@ title: "DefinedSize 속성 (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - _Column::GetDefinedSize
 - _Column::get_DefinedSize
 - _Column::PutDefinedSize
-helpviewer_keywords: DefinedSize property [ADOX]
+helpviewer_keywords:
+- DefinedSize property [ADOX]
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cdbe12a5aa0f1b9b2eb693b673a9371010a3dc7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6a316c2cbd05fd4ec0df58d79f48b1f3922509f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 속성 (ADOX)
 열의 명시 된 최대 크기를 나타냅니다.  

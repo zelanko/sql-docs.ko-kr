@@ -1,10 +1,13 @@
 ---
 title: "분산 가용성 그룹(SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.date: 01/12/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,17 +16,16 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e4cff3c69ac7369aef0bccf0121558a504c2bf76
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b91fb1cb4699158b69db18a9a86e407f1de97cc6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
-
-분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)를 보완합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)를 보완합니다.
 
 > [!NOTE]
 > "DAG"는 Exchange 데이터베이스 가용성 그룹 기능에 대한 약어로 이미 사용되고 있으므로 *분산 가용성 그룹*에 대한 공식적인 약어가 아닙니다. 이 Exchange 기능은 SQL Server 가용성 그룹 또는 분산 가용성 그룹과는 관련이 없습니다.
@@ -145,7 +147,11 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 앞의 두 예제 모두에서는 세 개의 가용성 그룹에 최대 27개의 복제본이 있을 수 있습니다. 이러한 복제본은 모두 읽기 전용 쿼리에 사용할 수 있습니다. 
 
-[읽기 전용 라우팅]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)은 현재 분산 가용성 그룹에서 작동하지 않습니다. 수신기를 사용하여 연결하는 경우 모든 쿼리는 주 복제본으로 이동합니다. 그렇지 않으면 모든 복제본을 보조 복제본으로 연결하고 직접 액세스할 수 있도록 각 복제본을 구성해야 합니다. 이 동작은 SQL Server 2016 또는 이후 버전의 SQL Server에 대한 업데이트에서 변경될 수 있습니다.
+[읽기 전용 라우팅]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)은 현재 분산 가용성 그룹에서 완벽하게 작동하지 않습니다. 더 구체적으로 설명하면,
+
+1. 읽기 전용 라우팅은 분산 가용성 그룹의 주 가용성 그룹에 구성할 수 있고 이 그룹에서 작동합니다. 
+2. 읽기 전용 라우팅은 분산 가용성 그룹의 보조 가용성 그룹에 구성할 수 있지만 이 그룹에서 작동하지 않습니다. 수신기를 사용하여 보조 가용성 그룹에 연결하는 모든 쿼리는 보조 가용성 그룹의 주 복제본으로 이동합니다. 그렇지 않으면 모든 복제본을 보조 복제본으로 연결하고 직접 액세스할 수 있도록 각 복제본을 구성해야 합니다. 그러나 읽기 전용 라우팅은 보조 가용성 그룹이 장애 조치(failover) 후 주 가용성 그룹이 된 후에 작동합니다. 이 동작은 SQL Server 2016 또는 이후 버전의 SQL Server에 대한 업데이트에서 변경될 수 있습니다.
+
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>분산 가용성 그룹의 보조 가용성 그룹 초기화
 

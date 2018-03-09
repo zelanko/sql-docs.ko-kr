@@ -1,25 +1,28 @@
 ---
-title: "ADO NET 사용자 지정 속성 | Microsoft Docs"
+title: "ADO.NET 사용자 지정 속성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e16ce0117e36cfd15f8f1cde1bb8c7ce9ac2df55
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 2823f22fa0396451fbf5de1b5dd3840559ca1e02
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-custom-properties"></a>ADO.NET 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -30,8 +33,8 @@ ms.lasthandoff: 08/03/2017
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|CommandTimeOut|문자열|SQL 명령이 종료되기 전의 제한 시간(초)을 지정하는 값입니다. 값 0은 명령의 제한 시간이 없음을 나타냅니다.|  
-|SqlCommand|문자열|ADO.NET 원본이 데이터 추출에 사용하는 SQL 문입니다.<br /><br /> 패키지가 로드되면 ADO.NET 원본이 사용할 SQL 문으로 이 속성을 동적으로 업데이트할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md) 및 [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.|  
+|CommandTimeout|String|SQL 명령이 종료되기 전의 제한 시간(초)을 지정하는 값입니다. 값 0은 명령의 제한 시간이 없음을 나타냅니다.|  
+|SqlCommand|String|ADO.NET 원본이 데이터 추출에 사용하는 SQL 문입니다.<br /><br /> 패키지가 로드되면 ADO.NET 원본이 사용할 SQL 문으로 이 속성을 동적으로 업데이트할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md) 및 [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.|  
 |AllowImplicitStringConversion|Boolean|다음이 발생하는지 여부를 나타내는 값입니다.<br /><br /> -문자열(DT_WSTR 또는 DT_NTEXT)인 출력 열 유형과 외부 메타데이터 유형이 일치하지 않을 경우 유효성 검사 오류를 생성하지 않음<br /><br /> -출력 열이 사용하는 문자열 데이터 형식으로 외부 메타데이터 유형을 암시적으로 변환<br /><br /> <br /><br /> 기본값은 TRUE입니다.<br /><br /> 자세한 내용은 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)을 참조하세요.|  
   
  ADO.NET 원본의 출력 및 출력 열에는 사용자 지정 속성이 없습니다.  
@@ -48,11 +51,11 @@ ms.lasthandoff: 08/03/2017
 |--------------|---------------|-----------------|  
 |BatchSize|정수|일괄 처리를 통해 서버로 전송되는 행 수입니다. 값 **0** 은 일괄 처리 크기가 내부 버퍼 크기와 일치함을 나타냅니다. 이 속성의 기본값은 **0**입니다.|  
 |CommandTimeOut|정수|제한 시간이 초과될 때까지 SQL 명령을 실행할 수 있는 최대 시간(초)입니다. 값 **0** 은 제한 시간이 없음을 의미합니다. 이 속성의 기본값은 **0**입니다.|  
-|TableOrViewName|문자열|대상 테이블 또는 뷰의 이름입니다.|  
+|TableOrViewName|String|대상 테이블 또는 뷰의 이름입니다.|  
   
  자세한 내용은 [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+## <a name="see-also"></a>참고 항목  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

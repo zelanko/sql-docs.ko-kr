@@ -3,28 +3,27 @@ title: "장애 조치 클러스터 인스턴스-Linux에서 SQL Server 작동 | 
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 5e557c2ef6005a9e2822b973748928bae991875c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: a8595b61afd374d6127f6cc7b9b363f325a257b5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스에 SQL Server Linux에서 작동 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서는 Linux에서 SQL Server 장애 조치 클러스터 인스턴스 (FCI) 작동 하는 방법을 설명 합니다. Linux에서 SQL Server FCI를 만들지 않은 경우 참조 [구성 장애 조치 클러스터 인스턴스-Linux에서 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)합니다. 
 
@@ -39,7 +38,7 @@ Fci에 대 한 장애 조치가 Windows Server 장애 조치 클러스터 (WSFC)
 - [RHEL 또는 Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
-## <a name = "#rhelFailover"></a>수동 장애 조치 (RHEL 또는 Ubuntu)
+## <a name = "#rhelFailover"></a> 수동 장애 조치 (RHEL 또는 Ubuntu)
 
 Red Hat Enterprise Linux (RHEL) onn 또는 Ubuntu 서버는 수동 장애 조치를 수행 하려면 다음 단계를 실행 합니다.
 1.  다음 명령을 실행 합니다. 
@@ -60,7 +59,7 @@ Red Hat Enterprise Linux (RHEL) onn 또는 Ubuntu 서버는 수동 장애 조치
 
 \<FCIResourceName > FCI에 대 한 Pacemaker 리소스 이름입니다. 
 
-## <a name = "#slesFailover"></a>수동 장애 조치 (SLES)
+## <a name = "#slesFailover"></a> 수동 장애 조치 (SLES)
 
 
 Suse Linux Enterprise Server (SLES)를 사용 하 여는 `migrate` SQL Server FCI를 수동으로 장애 조치가 가능 하도록 명령 합니다. 예를 들어
@@ -86,4 +85,3 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 - [장애 조치 클러스터 인스턴스-Linux에서 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
-

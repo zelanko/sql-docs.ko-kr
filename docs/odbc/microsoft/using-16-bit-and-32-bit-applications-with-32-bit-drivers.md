@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - 32-bit applications with 32-bit drivers [ODBC]
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5e0cd1697e6b33b5e7d2e0d22252eaf8338648fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 802b09dd83ce3671edbff33ff2be447c6279621f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>32 비트 드라이버와 16 비트 및 32 비트 응용 프로그램을 사용 하 여
 > [!IMPORTANT]  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/09/2017
 -   [32비트 드라이버와 16비트 응용 프로그램 사용](../../odbc/microsoft/using-16-bit-applications-with-32-bit-drivers.md)  
   
 -   [32비트 드라이버와 32비트 응용 프로그램 사용](../../odbc/microsoft/using-32-bit-applications-with-32-bit-drivers.md)
-

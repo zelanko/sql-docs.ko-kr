@@ -1,32 +1,32 @@
 ---
-title: "Reporting Services 모바일 보고서에서 공유 데이터 집합에서 데이터 가져오기 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services 모바일 보고서의 공유 데이터 집합에서 데이터 가져오기 | Microsoft Docs"
+ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c081588c29dddd792d0b92e6cd9573beeb09fa4f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b2cfe0cdb9290b4de7fdeac76ad2319807422693
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Get data from shared datasets in Reporting Services mobile reports
-외에 [Excel 파일에서 데이터를 로드](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), SQL Server 모바일 보고서 게시자 거의 모든 원본의 데이터에 액세스할 수도 있습니다. 데이터에 액세스 하는 Reporting Services 웹 포털에 구성 된 공유 데이터 원본에 필요 합니다. [공유 데이터 원본 만들기](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [공유 데이터 집합 만들기](../../reporting-services/report-data/manage-shared-datasets.md)에 대한 자세한 내용을 확인해 보세요.  
+SQL Server 모바일 보고서 게시자는 [Excel 파일의 데이터 로드](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)할 수 있을 뿐 아니라 거의 모든 원본의 데이터에 액세스할 수 있습니다. 데이터에 액세스하려면 Reporting Services 웹 포털에 구성되어 있는 공유 데이터 원본이 필요합니다. [공유 데이터 원본 만들기](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [공유 데이터 집합 만들기](../../reporting-services/report-data/manage-shared-datasets.md)에 대한 자세한 내용을 확인해 보세요.  
   
-후 공유 데이터 원본 및 공유 데이터 집합은 Reporting Services 서버에 구성 된에서 만든 모바일 보고서에서 사용할 수 있습니다 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]합니다.   
+Reporting Services 서버에서 공유 데이터 원본과 공유 데이터 집합을 구성한 후에는 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]에서 만든 모바일 보고서에서 해당 데이터 원본과 데이터 집합을 사용할 수 있습니다.   
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 에서 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]서버에 연결하고 나면 모바일 보고서를 공유 데이터 집합에 쉽게 연결할 수 있습니다.   
   
@@ -65,14 +65,13 @@ ms.lasthandoff: 08/09/2017
      
 2. 새 서버 연결을 추가하거나 기존 연결을 편집 또는 제거합니다.  
   
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>관련 항목:  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  [웹 포털 (SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)  
+-  [웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)  
 -  [iPad 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  보기(iOS용 Power BI)  
 -  [iPhone 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) 보기(iOS용 Power BI)  
   
   
   
   
-
 

@@ -3,7 +3,7 @@ title: "Count 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2f9ae68eda44e92834ca54613aca0a68afffc979
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 173b2fc9073676e77ad3068e9e9dc3ca76089702
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="count-property-ado"></a>Count 속성 (ADO)
 컬렉션의 개체 수를 나타냅니다.  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/09/2017
  [Count 속성 예제 (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [Count 속성 예제 (VC + +)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh 메서드(ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
-

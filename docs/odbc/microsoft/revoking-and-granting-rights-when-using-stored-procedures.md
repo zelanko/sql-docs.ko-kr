@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 24070039-03ab-4623-a681-6308802eb399
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8b2a34667e08e767a77f31917f5c373b795c7324
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 67bad57e201d10c5eb29aafb19fa9f513c43b172
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>저장된 프로시저를 사용 하는 경우 호출 및 권한 부여 권한
 > [!IMPORTANT]  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  szErrorMsg = "[Microsoft] [ODBC driver for Oracle] 구문 오류 또는 액세스 위반"  
   
  Oracle OCI 함수 Odessp() 호출이이 시나리오에서 실패 하지만 기본 매개 변수를 구현 하는 데 필요 합니다. 기본 테이블 사용 권한은 수정한 후 저장된 프로시저 다시 실행 하기 전에 컴파일해야 합니다.
-

@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b05e1b46845c0a2b5ee47b94dc239d79d4a12a17
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f13a1c0730b01280896b8c759aa401cf10ba875c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  실행 중인 패키지가 일시 중지하고 덤프 파일을 만들도록 합니다. 파일에 저장 되는  *\<드라이브 >*: files\microsoft SQL Server\130\Shared\ErrorDumps 폴더입니다.  
+  실행 중인 패키지가 일시 중지하고 덤프 파일을 만들도록 합니다. 파일은 *\<drive>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 폴더에 저장됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,8 +37,8 @@ catalog.create_execution_dump [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @execution_id =] *execution_id*  
- 실행 중인 패키지의 실행 ID입니다. *execution_id* 은 **bigint**합니다.  
+ [ @execution_id = ] *execution_id*  
+ 실행 중인 패키지의 실행 ID입니다. *execution_id*는 **bigint**입니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 실행 ID 88인 실행 중인 패키지가 덤프 파일을 만들도록 프롬프트됩니다.  
@@ -54,10 +53,10 @@ EXEC create_execution_dump @execution_id = 88
  저장 프로시저가 실패하면 오류를 반환합니다.  
   
 ## <a name="result-set"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
- 이 저장된 프로시저는 사용자의 구성원이 될 필요는 **ssis_admin** 데이터베이스 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 이 저장 프로시저 사용자는 **ssis_admin** 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="errors-and-warnings"></a>오류 및 경고  
  다음 목록에서는 저장 프로시저 실패 조건을 설명합니다.  
@@ -68,8 +67,7 @@ EXEC create_execution_dump @execution_id = 88
   
 -   패키지가 현재 덤프 파일을 만들고 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [패키지 실행을 위한 덤프 파일 생성](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

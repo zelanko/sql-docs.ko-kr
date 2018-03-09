@@ -8,22 +8,20 @@ ms.service:
 ms.component: ruby
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ba675eba2fd72e35e37f71bf9afff0eba34d73af
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1cb783b7024c23c4e656288c3ba5a5d555f877b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="ruby-driver-for-sql-server"></a>SQL Server에 대 한 ruby 드라이버
 
@@ -46,4 +44,3 @@ Windows, Linux 또는 Mac.에서 Ruby를 사용 하 여 SQL 데이터베이스�
 * [Ruby macOS on 시작](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
 * [Ubuntu Ruby 시작](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
 * [Red Hat Enterprise Linux (RHEL)에 대 한 Ruby 시작](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)
-

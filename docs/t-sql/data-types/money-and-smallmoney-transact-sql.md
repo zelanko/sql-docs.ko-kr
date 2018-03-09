@@ -26,17 +26,16 @@ helpviewer_keywords:
 - values [SQL Server], monetary
 - currency [SQL Server]
 ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
-caps.latest.revision: 36
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bd07ecd1cdacc686e0f831320fd5e939c0c174da
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c9c66d9934618b1b8b21b0d4dcb0a234ff94731f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money 및 smallmoney(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,4 +90,3 @@ SM_MONEY VARCHAR               MONEY DECIMAL
  [sys.types &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   
-

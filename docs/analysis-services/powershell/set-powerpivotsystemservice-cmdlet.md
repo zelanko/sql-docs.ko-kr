@@ -2,32 +2,30 @@
 title: Set-powerpivotsystemservice cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a3d63834fe9322f45d0524de5434154f1257056
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc15f310355b3ecaab626600c14ee27905d250a5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-powerpivotsystemservice-cmdlet"></a>Set-PowerPivotSystemService cmdlet
-  
-  [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-  
-  PowerPivotSystemService 개체의 팜 수준 전역 속성을 설정합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+PowerPivotSystemService 개체의 팜 수준 전역 속성을 설정합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.
@@ -45,7 +43,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
   
 ## <a name="parameters"></a>매개 변수  
   
-### <a name="-identity-powerpivotmidtierservicepipebind"></a>Id \<PowerPivotMidTierServicePipeBind >  
+### <a name="-identity-powerpivotmidtierservicepipebind"></a>-Identity \<PowerPivotMidTierServicePipeBind>  
  속성을 업데이트할 부모 개체를 지정합니다. 팜에서 개체를 고유하게 식별하는 유효한 GUID 값을 지정해야 합니다.  
   
 |||  
@@ -56,7 +54,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |파이프라인 입력 허용|true|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-updateassemblyinformation-switch"></a>-UpdateAssemblyInformation \<전환 >  
+### <a name="-updateassemblyinformation-switch"></a>-UpdateAssemblyInformation \<switch>  
  업그레이드 목적으로만 사용합니다. 팜에 배포된 어셈블리 버전이 SharePoint 구성 데이터베이스에 저장된 버전과 다를 경우 이 cmdlet을 실행하여 구성 데이터베이스에 있는 어셈블리 정보를 업데이트할 수 있습니다. 어셈블리 버전 정보는 전역 어셈블리에 저장된 Microsoft.AnalysisServices.SharePoint.Integration.dll의 파일 속성에서 찾을 수 있습니다.  
   
 |||  
@@ -67,7 +65,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-workbookupgradeondatarefresh-boolean"></a>-WorkbookUpgradeOnDataRefresh \<부울 >  
+### <a name="-workbookupgradeondatarefresh-boolean"></a>-WorkbookUpgradeOnDataRefresh \<boolean>  
  서버에서 예약된 데이터 새로 고침이 시작될 때 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통합 문서를 자동으로 업그레이드하는 데 사용합니다. 데이터 새로 고침은 현재 서버 버전과 일치하는 통합 문서에 대해서만 지원됩니다. 이 속성을 사용으로 설정하면 데이터 새로 고침이 계속될 수 있도록 통합 문서가 자동으로 업그레이드됩니다. 이 속성은 서버 인스턴스 수준에서 설정됩니다. 이 속성은 통합 문서, 라이브러리, 사이트 또는 사용자별로 다르게 설정할 수 없습니다.  
   
 |||  
@@ -104,7 +102,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="commonparameters"></a>\<일반 매개 변수 >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  이 cmdlet은 공통 매개 변수 Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer 및 OutVariable을 지원합니다. 자세한 내용은 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)를 참조하세요.  
   
 ## <a name="inputs-and-outputs"></a>입/출력  

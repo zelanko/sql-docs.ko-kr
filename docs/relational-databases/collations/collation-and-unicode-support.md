@@ -1,10 +1,13 @@
 ---
 title: "데이터 정렬 및 유니코드 지원 | Microsoft 문서"
 ms.custom: 
-ms.date: 08/04/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: collations
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,20 +30,20 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 46
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 9c7e1e6997db9f93ea0145169a1f40b79ca93ea1
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: 03e346a8f89d923525951ec8b8683527b611d8f5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. **char** 및 **varchar** 과 같은 문자 데이터 형식과 함께 사용되는 데이터 정렬은 해당 데이터 형식을 나타내는 데 사용할 수 있는 코드 페이지와 해당 문자를 지정합니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하든 데이터베이스 백업을 복원하든 서버를 클라이언트 데이터베이스에 연결하든 사용하는 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys를 참조하세요.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)를 참조하세요.    
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. **char** 및 **varchar** 과 같은 문자 데이터 형식과 함께 사용되는 데이터 정렬은 해당 데이터 형식을 나타내는 데 사용할 수 있는 코드 페이지와 해당 문자를 지정합니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하든 데이터베이스 백업을 복원하든 서버를 클라이언트 데이터베이스에 연결하든 사용하는 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys를 참조하세요.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)를 참조하세요.    
     
  서버, 데이터베이스, 열 또는 식에 대한 데이터 정렬을 선택하면 데이터에 일정한 특성이 부여되며, 이는 여러 데이터베이스 작업의 결과에 영향을 줍니다. 예를 들어 ORDER BY를 사용하여 쿼리를 작성할 경우 결과 집합의 정렬 순서는 쿼리의 식 수준에서 COLLATE 절에 지정되거나 데이터베이스에 적용된 데이터 정렬에 따라 달라집니다.    
     
@@ -59,11 +62,11 @@ ms.lasthandoff: 08/04/2017
 ###  <a name="Collation_Defn"></a> 데이터 정렬    
  데이터 정렬은 데이터 집합의 각 문자를 나타내는 비트 패턴을 지정합니다. 또한 데이터 정렬은 데이터를 정렬하고 비교하는 규칙을 결정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 여러 다른 데이터 정렬을 갖는 개체를 단일 데이터베이스에 저장하도록 지원합니다. 비유니코드 열의 경우 데이터 정렬 설정은 데이터에 대한 코드 페이지와 나타낼 수 있는 문자를 지정합니다. 유니코드가 아닌 열 간에 데이터를 이동하려면 원본 코드 페이지에서 대상 코드 페이지로 변환해야 합니다.    
     
- 데이터 정렬 설정이 각기 다른 데이터베이스의 컨텍스트에서[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하면 그 결과가 달라질 수 있습니다. 가능한 경우 조직에서 표준화된 데이터 정렬을 사용하세요. 그러면 모든 문자나 유니코드 식에서 명시적으로 데이터 정렬을 지정할 필요가 없습니다. 데이터 정렬 및 코드 페이지 설정이 다른 개체를 사용해야 할 경우 선행 정렬 우선 순위 규칙을 고려하도록 쿼리를 코딩하세요. 자세한 내용은 [선행 정렬 우선 순위(Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)를 참조하세요.    
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하면 그 결과가 달라질 수 있습니다. 가능한 경우 조직에서 표준화된 데이터 정렬을 사용하세요. 그러면 모든 문자나 유니코드 식에서 명시적으로 데이터 정렬을 지정할 필요가 없습니다. 데이터 정렬 및 코드 페이지 설정이 다른 개체를 사용해야 할 경우 선행 정렬 우선 순위 규칙을 고려하도록 쿼리를 코딩하세요. 자세한 내용은 [선행 정렬 우선 순위(Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)를 참조하세요.    
     
  데이터 정렬 관련 옵션에는 대/소문자 구분, 악센트 구분, 일본어 가나 구분, 전자/반자 구분, 변형 선택기 구분이 있습니다. 이러한 옵션은 데이터 정렬 이름에 추가하여 지정됩니다. 예를 들어 이 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` 데이터 정렬은 대/소문자, 악센트, 일본어 가나 및 전자/반자를 구분합니다. 또 다른 예로 이 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 데이터 정렬은 대/소문자 구분 및 악센트를 구분하지 않고 일본어 가나, 전자/반자 및 변형 선택기를 구분합니다.  다음 표에서는 이러한 다양한 옵션과 연결된 동작에 대해 설명합니다.    
     
-|옵션|설명|    
+|옵션|Description|    
 |------------|-----------------|    
 |대/소문자 구분(_CS)|대/소문자를 구분합니다. 이 정렬 순서를 선택하면 소문자가 대문자보다 먼저 정렬됩니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 대소문자를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 대문자와 소문자를 동일한 것으로 간주합니다. _CI를 지정하여 대/소문자를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    
 |악센트 구분(_AS)|악센트가 있는 문자와 악센트가 없는 문자를 구분합니다. 예를 들어 'a'와 'ấ'는 같지 않습니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 악센트를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 악센트가 있는 문자와 악센트가 없는 문자를 동일한 것으로 간주합니다. _AI를 지정하여 악센트를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    
@@ -133,7 +136,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  또한 서버의 데이터에 대해 다른 데이터 정렬을 사용할 수도 있습니다. 클라이언트의 코드 페이지에 매핑되는 데이터 정렬을 선택하세요.    
     
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 제공되는 UTF-16 데이터 정렬을 사용하기 위해 보조 문자 `_SC` 데이터 정렬(Windows 데이터 정렬만) 중 하나를 선택하여 일부 유니코드 문자의 검색 및 정렬 성능을 향상시킬 수 있습니다.    
+ 일부 유니코드 문자의 검색 및 정렬 성능을 향상시키기 위해(Windows 데이터 정렬만) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 제공되는 UTF-16 데이터 정렬을 사용하려면, 보조 문자(_SC) 데이터 정렬 중 하나 또는 버전 140 데이터 정렬 중 하나를 선택할 수 있습니다.    
     
  유니코드 데이터 형식 또는 비유니코드 데이터 형식 사용과 관련된 문제점을 평가하려면 작업 시나리오를 테스트하여 사용자 환경에서 나타나는 성능 차이를 측정하세요. 조직 전반의 시스템에 사용되는 데이터 정렬을 표준화하고 유니코드 서버 및 클라이언트를 배포하는 것이 좋습니다.    
     
@@ -145,7 +148,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  다음 표에서는 유니코드 서버 및 비유니코드 서버의 다양한 조합과 함께 다국어 데이터 사용에 대한 정보를 제공합니다.    
     
-|Server|클라이언트|이점 또는 제한 사항|    
+|서버|클라이언트|이점 또는 제한 사항|    
 |------------|------------|-----------------------------|    
 |유니코드|유니코드|유니코드 데이터는 시스템 전체에서 사용되므로 이 시나리오는 검색한 데이터가 손상되지 않는 등 최상의 성능을 제공합니다. ADO(ActiveX Data Objects), OLE DB 및 ODBC 버전 3.7 이상이 여기에 해당됩니다.|    
 |유니코드|비유니코드|이 시나리오에서, 특히 새로운 운영 체제를 실행하는 서버와 이전 버전의 운영 체제에 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 클라이언트 간의 연결에서는 데이터를 클라이언트 컴퓨터로 이동할 때 제한 사항 또는 오류가 발생할 수 있습니다. 서버의 유니코드 데이터는 데이터 변환을 위해 비유니코드 클라이언트의 해당 코드 페이지에 매핑을 시도합니다.|    
@@ -155,35 +158,39 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ##  <a name="Supplementary_Characters"></a> 보조 문자    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 유니코드 데이터를 저장하기 위해 **nchar** 및 **nvarchar** 같은 데이터 형식을 제공합니다. 이러한 데이터 형식은 텍스트를 *UTF-16*이라고 하는 형식으로 인코딩합니다. 유니코드 컨소시엄에서는 각 문자에 0x0000 ~ 0x10FFFF 범위의 값인 고유한 코드 포인트를 할당합니다. 가장 자주 사용되는 문자에는 메모리 및 디스크에서 16비트 단어로 나타날 수 있는 코드 포인트 값이 할당되지만 코드 포인트 값이 0xFFFF보다 큰 문자에는 두 개의 연속적인 16비트 단어가 필요합니다. 이러한 문자를 *보조 문자*라고 하며 두 개의 연속적인 16비트 단어는 *서로게이트 쌍*이라고 합니다.    
     
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 일련의 새 _SC(보조 문자) 데이터 정렬을 **nchar**, **nvarchar** 및 **sql_variant** 데이터 형식에 사용할 수 있습니다. 예를 들어 `Latin1_General_100_CI_AS_SC`또는 `Japanese_Bushu_Kakusu_100_CI_AS_SC`(일본어 데이터 정렬을 사용하는 경우)를 사용합니다.    
+
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터는 새로운 모든 데이터 정렬에서 자동으로 보조 문자를 지원합니다.
+
  보조 문자를 사용하는 경우    
     
 -   데이터 정렬 버전 90 이상에서 정렬 및 비교 연산에 보조 문자를 사용할 수 있습니다.    
     
--   _100 수준 데이터 정렬은 모두 보조 문자를 사용한 언어적 정렬을 지원합니다.    
+-   버전 100 데이터 정렬은 모두 보조 문자를 사용한 언어적 정렬을 지원합니다.    
     
 -   데이터베이스 개체 이름 같은 메타데이터에는 보조 문자를 사용할 수 없습니다.    
     
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 일련의 새 SC(보조 문자) 데이터 정렬을 **nchar**, **nvarchar** 및 **sql_variant**데이터 형식에 사용할 수 있습니다. 예를 들어 `Latin1_General_100_CI_AS_SC`또는 `Japanese_Bushu_Kakusu_100_CI_AS_SC`(일본어 데이터 정렬을 사용하는 경우)를 사용합니다.    
-  > [!NOTE]    
-  >  보충 문자(\_SC)를 사용하는 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 사용할 수 없습니다. 이는 복제를 위해 생성되는 시스템 테이블 및 저장 프로시저 중 일부가 보충 문자를 지원하지 않는 **ntext** 데이터 형식을 사용하기 때문입니다.  
+-   보충 문자(\_SC)를 사용하는 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 사용할 수 없습니다. 이는 복제를 위해 생성되는 시스템 테이블 및 저장 프로시저 중 일부가 보충 문자를 지원하지 않는 **ntext** 데이터 형식을 사용하기 때문입니다.  
     
-     SC 플래그는 다음에 적용할 수 있습니다.    
+-   SC 플래그는 다음에 적용할 수 있습니다.    
     
-    -   버전 90 Windows 데이터 정렬    
+    -   버전 90 데이터 정렬    
     
-    -   버전 100 Windows 데이터 정렬    
+    -   버전 100 데이터 정렬    
     
-     SC 플래그는 다음에 적용할 수 없습니다.    
+-   SC 플래그는 다음에 적용할 수 없습니다.    
     
     -   버전 80 버전이 지정되지 않은 Windows 데이터 정렬    
     
     -   BIN 또는 BIN2 이진 데이터 정렬    
     
-    -   SQL* 데이터 정렬    
+    -   SQL\* 데이터 정렬    
     
- 다음 표에서는 보조 문자를 SC 데이터 정렬과 함께 사용할 경우와 그렇지 않을 때 일부 문자열 함수 및 문자열 연산자의 동작을 비교합니다.    
+    -   버전 140 데이터 정렬(이미 보조 문자를 지원하기 때문에 SC 플래그가 필요하지 않음)    
     
-|문자열 함수 또는 연산자|SC 데이터 정렬 사용|SC 데이터 정렬 사용 안 함|    
+ 다음 표에서는 보조 문자를 SCA(보조 문자 인식) 데이터 정렬과 함께 사용할 경우와 그렇지 않을 때 일부 문자열 함수 및 문자열 연산자의 동작을 비교합니다.    
+    
+|문자열 함수 또는 연산자|SCA(보조 문자 인식) 데이터 정렬 사용|SCA 데이터 정렬 사용 안 함|    
 |---------------------------------|--------------------------|-----------------------------|    
 |[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)<br /><br /> [LEN](../../t-sql/functions/len-transact-sql.md)<br /><br /> [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|UTF-16 서로게이트 쌍이 단일 코드 포인트로 계산됩니다.|UTF-16 서로게이트 쌍이 두 개의 코드 포인트로 계산됩니다.|    
 |[LEFT](../../t-sql/functions/left-transact-sql.md)<br /><br /> [REPLACE](../../t-sql/functions/replace-transact-sql.md)<br /><br /> [REVERSE](../../t-sql/functions/reverse-transact-sql.md)<br /><br /> [RIGHT](../../t-sql/functions/right-transact-sql.md)<br /><br /> [SUBSTRING](../../t-sql/functions/substring-transact-sql.md)<br /><br /> [STUFF](../../t-sql/functions/stuff-transact-sql.md)|함수가 각 서로게이트 쌍을 단일 코드 포인트로 처리하며 올바르게 작동합니다.|함수가 서로게이트 쌍을 분할하여 예기치 않은 결과가 발생할 수 있습니다.|    
@@ -205,15 +212,17 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 
 ##  <a name="Japanese_Collations"></a> 일본어 데이터 정렬이  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 다양한 옵션(_CS, _AS, _KS, _WS, _VSS 등) 순열을 사용하여 새 일본어 데이터 정렬 패밀리 두 개가 지원됩니다. 
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 다양한 옵션(\_CS, \_AS, \_KS, \_WS, \_VSS) 순열을 사용하여 새 일본어 데이터 정렬 패밀리 두 개가 지원됩니다. 
 
-이러한 데이터 정렬은 나열하기 위해 SQL Server 데이터베이스 엔진을 쿼리할 수 있습니다.
+이러한 데이터 정렬을 나열하기 위해 SQL Server 데이터베이스 엔진을 쿼리할 수 있습니다.
 ``` 
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
 
-이러한 데이터 정렬은 데이터베이스 엔진 인덱스, 메모리 액세스에 최적화된 테이블, columnstore 인덱스 및 고유하게 컴파일된 모듈에서 지원됩니다.
+새 데이터 정렬은 모두 보조 문자를 기본 지원하므로 새 데이터 정렬에 SC 플래그가 없거나 필요하지 않습니다.
+
+이러한 데이터 정렬은 데이터베이스 엔진 인덱스, 메모리 최적화 테이블, columnstore 인덱스 및 고유하게 컴파일된 모듈에서 지원됩니다.
     
 ##  <a name="Related_Tasks"></a> 관련 작업    
     
@@ -233,11 +242,10 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
     
  [유니코드 컨소시엄 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=48619)    
     
-## <a name="see-also"></a>관련 항목:    
+## <a name="see-also"></a>참고 항목    
  [포함된 데이터베이스 데이터 정렬](../../relational-databases/databases/contained-database-collations.md)     
  [전체 텍스트 인덱스 생성 시 언어 선택](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
  [sys.fn_helpcollations&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
-
 

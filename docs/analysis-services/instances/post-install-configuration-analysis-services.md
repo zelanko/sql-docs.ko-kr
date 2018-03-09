@@ -2,36 +2,32 @@
 title: "설치 후 구성 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining - "setup-install"
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
-- setup-install
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e172989400466a7ab78e3a2ff24022651524bd0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>설치 후 구성(Analysis Services)
-  Analysis Services를 설치한 후 추가 구성을 수행하여 서버가 완전히 작동하고 일반 용도로 사용 가능하도록 설정해야 합니다. 이 섹션에서는 설치를 완료하는 추가 태스크를 소개합니다. 연결 요구 사항에 따라 인증을 구성해야 할 수도 있습니다( [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)참조).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services를 설치한 후 추가 구성을 수행하여 서버가 완전히 작동하고 일반 용도로 사용 가능하도록 설정해야 합니다. 이 섹션에서는 설치를 완료하는 추가 태스크를 소개합니다. 연결 요구 사항에 따라 인증을 구성해야 할 수도 있습니다( [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)참조).  
   
- 이후에 데이터베이스를 배포할 준비가 되면 추가 작업이 필요합니다. 즉, 데이터베이스에서 역할 멤버 자격을 구성하여 데이터 액세스 권한을 사용자에게 부여해야 하며 데이터베이스 백업 및 복구 전략을 디자인하고 데이터를 정기적으로 새로 고칠 수 있도록 예약된 처리 작업이 필요한지 여부를 결정해야 합니다. 데이터베이스 배포 및 관리에 대한 자세한 내용은 [다차원 model 데이터베이스&#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) 및 [테이블 형식 model 데이터베이스&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md) 링크에서 찾을 수 있습니다.  
+ 이후에 데이터베이스를 배포할 준비가 되면 추가 작업이 필요합니다. 즉, 데이터베이스에서 역할 멤버 자격을 구성하여 데이터 액세스 권한을 사용자에게 부여해야 하며 데이터베이스 백업 및 복구 전략을 디자인하고 데이터를 정기적으로 새로 고칠 수 있도록 예약된 처리 작업이 필요한지 여부를 결정해야 합니다. 데이터베이스 배포 및 관리 하는 방법에 대 한 자세한 내용은 다음이 링크에서 찾을 수 있습니다: [다차원 모델 데이터베이스 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) 및 [테이블 형식 모델 데이터베이스](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)합니다.  
   
 ## <a name="instance-configuration"></a>인스턴스 구성  
  Analysis Services는 복제 가능한 서비스이므로 단일 서버에 서비스의 인스턴스를 여러 개 설치할 수 있습니다. 각 추가 인스턴스는 SQL Server 설치 프로그램을 사용하여 명명된 인스턴스로 별도로 설치되며 필요한 용도를 지원하도록 독립적으로 구성됩니다. 예를 들어 개발 서버는 비행 레코더를 실행하거나 데이터 저장소에 대한 기본값을 사용할 수 있습니다. 이러한 기본값은 프로덕션 작업을 지원하는 서버에서 변경될 수도 있습니다. 시스템 구성을 조정해야 하는 또 다른 예는 다른 서비스들이 공유하는 하드웨어에 Analysis Services 인스턴스를 설치하는 경우입니다. 동일한 하드웨어에서 데이터를 많이 사용하는 여러 응용 프로그램을 호스팅하는 경우 모든 응용 프로그램 간에 사용 가능한 리소스를 최적화하도록 메모리 임계값을 낮추는 서버 속성을 구성해야 할 수 있습니다.  
@@ -58,4 +54,3 @@ ms.lasthandoff: 09/01/2017
  [파워 피벗 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   
-

@@ -2,39 +2,37 @@
 title: "DISCOVER_MEMORYUSAGE 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3dcbb314e1816757562f93290d95a3f9e345460b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 행 집합
-  서버에 의해 할당된 다양한 개체에 대한 DISCOVER_MEMORYUSAGE 통계를 반환합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+서버에 의해 할당된 다양한 개체에 대한 DISCOVER_MEMORYUSAGE 통계를 반환합니다.  
   
 > [!WARNING]  
 >  이 행 집합은 대량의 결과 집합을 생성할 수 있습니다. SQL Server Management Studio가 허용하는 것보다 많은 표시 메모리가 필요해 결과를 표시할 수 없는 경우 다음과 같은 기본 위치의 임시 파일에 결과가 기록됩니다.  
 >   
->  '\<드라이브 >: \Users\\< 사용자 이름\>\AppData\Local\Temp\\< fileID\>.xml'.  
+>  '\<drive>:\Users\\<username\>\AppData\Local\Temp\\<fileID\>.xml'.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
@@ -53,9 +51,9 @@ ms.lasthandoff: 09/01/2017
 |**MemoryAllocBase**|**DBTYPE_UI8**||개체 자체에 대해 처음에 할당된 바이트 수입니다(개체 내용에 대한 추가 할당 제외).|  
 |**MemoryAllocFromAlloc**|**DBTYPE_UI8**||이 개체의 내용에 대해 할당되는 메모리입니다.|  
 |**ElementCount**|**DBTYPE_UI4**||컨테이너 개체의 경우 해당 개체에 포함된 개체 수입니다.|  
-|**축소**|**DBTYPE_BOOL**|예|메모리가 축소 가능(메모리 가중으로 인해 삭제 가능)한지 여부를 나타내는 부울입니다. true이면 메모리가 축소 가능하며, false이면 축소 불가능합니다.|  
+|**Shrinkable**|**DBTYPE_BOOL**|예|메모리가 축소 가능(메모리 가중으로 인해 삭제 가능)한지 여부를 나타내는 부울입니다. true이면 메모리가 축소 가능하며, false이면 축소 불가능합니다.|  
 |**ObjectParentPath**|**DBTYPE_WSTR**||이 개체의 전체 경로를 식별하는 문자열입니다.|  
-|**ObjectID**|**DBTYPE_WSTR**||개체를 식별하는 문자열입니다. 이 개체의 전체 경로 문자열에 의해 표시 됩니다: (ObjectParentPath + '.' + ObjectId).|  
+|**Exchange Spill**|**DBTYPE_WSTR**||개체를 식별하는 문자열입니다. 이 개체의 전체 경로 문자열에 의해 표시 됩니다: (ObjectParentPath + '.' + ObjectId).|  
   
  이 스키마 행 집합은 정렬되지 않습니다.  
   
@@ -73,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis 스키마 행 집합](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

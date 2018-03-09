@@ -24,17 +24,16 @@ helpviewer_keywords:
 - stopping SQL Server
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a959b807bf566eab860b93350ebe07664e4965fa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: df8ef0a3cfe0ac4adb6f45bddb0bef650fea6ff3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용합니다.  
   
--   실행 하 여 **net stop mssqlserver** 기본 인스턴스를 실행 하거나 명령 프롬프트에서 **net stop mssql$***instancename* 명명 된 인스턴스의 명령 프롬프트에서 합니다.  
+-   실행 하 여 **net stop mssqlserver** 기본 인스턴스를 실행 하거나 명령 프롬프트에서 **net stop mssql$ * * * instancename* 명명 된 인스턴스의 명령 프롬프트에서 합니다.  
   
 -   제어판에서 서비스를 사용합니다.  
   
@@ -85,11 +84,10 @@ SHUTDOWN [ WITH NOWAIT ]
  SHUTDOWN 권한은의 멤버에 할당 되는 **sysadmin** 및 **serveradmin** 고정된 서버 역할을 받지 않습니다 양도할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [CHECKPOINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+ [Checkpoint&#40; Transact SQL &#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_lock&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sqlservr 응용 프로그램](../../tools/sqlservr-application.md)   
  [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   
-

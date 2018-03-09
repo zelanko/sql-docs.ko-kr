@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,22 +16,21 @@ applies_to:
 helpviewer_keywords:
 - custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c8117a84ee1dcbd78de5015e5e9e21bfa0e8940
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fe3f9823cfb1b84c0ea3d80a5f2917632b2829f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coding-a-custom-connection-manager"></a>사용자 지정 연결 관리자 코딩
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 기본 클래스에서 상속된 클래스를 만들고 이 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 특성을 적용한 후에는 기본 클래스의 속성 및 메서드 구현을 재정의하여 사용자 지정 기능을 제공해야 합니다.  
   
- 에 대 한 사용자 지정 연결 관리자 예제를 참조 하세요. [사용자 인터페이스 사용자 지정 연결 관리자에 대 한 개발](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)합니다. 이 항목에 표시된 코드 예는 SQL Server 사용자 지정 연결 관리자 예제에서 가져온 것입니다.  
+ 사용자 지정 연결 관리자의 예제는 [사용자 지정 연결 관리자의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)을 참조하세요. 이 항목에 표시된 코드 예는 SQL Server 사용자 지정 연결 관리자 예제에서 가져온 것입니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에 기본 제공된 대부분의 태스크, 원본 및 대상은 특정 유형의 기본 제공 연결 관리자와만 사용할 수 있습니다. 따라서 이러한 예제를 기본 제공 태스크 및 구성 요소와 함께 테스트할 수 없습니다.  
@@ -196,13 +194,13 @@ public override Microsoft.SqlServer.Dts.Runtime.DTSExecResult Validate(Microsoft
 ```  
   
 ### <a name="persisting-the-connection-manager"></a>연결 관리자 지속  
- 일반적으로 연결 관리자의 사용자 지정 지속성은 구현할 필요가 없습니다. 사용자 지정 지속성은 개체의 속성이 복합 데이터 형식을 사용할 때만 필요합니다. 자세한 내용은 참조 [Integration Services에 대 한 사용자 지정 개체 개발](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)합니다.  
+ 일반적으로 연결 관리자의 사용자 지정 지속성은 구현할 필요가 없습니다. 사용자 지정 지속성은 개체의 속성이 복합 데이터 형식을 사용할 때만 필요합니다. 자세한 내용은[Integration Services 사용자 지정 개체 개발](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)을 참조하세요.  
   
 ## <a name="working-with-the-external-data-source"></a>외부 데이터 원본 작업  
  외부 데이터 원본에 대한 연결을 지원하는 메서드는 사용자 지정 연결 관리자의 중요한 메서드입니다. <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A> 메서드는 디자인 타임과 런타임에 호출됩니다.  
   
 ### <a name="acquiring-the-connection"></a>연결 설정  
- <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 메서드가 사용자 지정 연결 관리자에서 반환하는 데 적절한 개체 유형을 결정해야 합니다. 예를 들어 파일 연결 관리자는 경로 및 파일 이름이 들어 있는 문자열만 반환하는 반면에 ADO.NET 연결 관리자는 이미 열려 있는 관리되는 연결 개체를 반환합니다. 또한 OLE DB 연결 관리자는 관리 코드에서 사용할 수 없는 네이티브 OLE DB 연결 개체를 반환하고, 이 항목의 코드 조각 수행 되는 사용자 지정 SQL Server 연결 관리자에서 열린 반환 **SqlConnection** 개체입니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 메서드가 사용자 지정 연결 관리자에서 반환하는 데 적절한 개체 유형을 결정해야 합니다. 예를 들어 파일 연결 관리자는 경로 및 파일 이름이 들어 있는 문자열만 반환하는 반면에 ADO.NET 연결 관리자는 이미 열려 있는 관리되는 연결 개체를 반환합니다. 또한 OLE DB 연결 관리자는 관리 코드에서 사용할 수 없는 네이티브 OLE DB 연결 개체를 반환하고, 사용자 지정 SQL Server 연결 관리자는 열려 있는 **SqlConnection** 개체를 반환합니다. 이 항목의 코드 조각은 이 연결 관리자의 일부입니다.  
   
  연결 관리자의 사용자는 반환된 개체를 적절한 유형으로 캐스팅하고 해당 메서드 및 속성에 액세스할 수 있도록 예상되는 개체 유형을 미리 알고 있어야 합니다.  
   
@@ -270,7 +268,6 @@ public override void ReleaseConnection(object connection)
  
 ## <a name="see-also"></a>참고 항목  
  [사용자 지정 연결 관리자 만들기](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
- [사용자 지정 연결 관리자에 대 한 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [사용자 지정 연결 관리자의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

@@ -3,7 +3,7 @@ title: Microsoft OLE DB Provider for SQL Server | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 19
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 11f9d1d69332e1d32b1d6bbabd804ed222b620e1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 개요
 Microsoft OLE DB Provider for SQL Server, SQLOLEDB Microsoft SQL Server에 액세스 하는 ADO 수 있습니다.
@@ -68,7 +67,7 @@ User ID=MyUserID;Password=MyPassword;"
 
 |매개 변수|Description|
 |---------------|-----------------|
-|Trusted_Connection|사용자 인증 모드를 나타냅니다. 로 설정할 수 있습니다 **예** 또는 **아니요**합니다. 기본값은 **아니요**합니다. 이 속성은로 설정 하는 경우 **예**, SQLOLEDB Microsoft Windows NT 인증 모드를 사용 하 여 지정한 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 하는 **위치** 및 [데이터 원본 ](../../../ado/reference/ado-api/datasource-property-ado.md) 속성 값입니다. 이 속성을 설정 하는 경우 **아니요**, SQLOLEDB 혼합 모드를 사용 하 여 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여할 수 있습니다. 에 지정 된 SQL Server 로그인 및 암호는 **사용자 Id** 및 **암호** 속성입니다.|
+|Trusted_Connection|사용자 인증 모드를 나타냅니다. 로 설정할 수 있습니다 **예** 또는 **아니요**합니다. 기본값은 **No**합니다. 이 속성은로 설정 하는 경우 **예**, SQLOLEDB Microsoft Windows NT 인증 모드를 사용 하 여 지정한 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 하는 **위치** 및 [데이터 원본 ](../../../ado/reference/ado-api/datasource-property-ado.md) 속성 값입니다. 이 속성을 설정 하는 경우 **아니요**, SQLOLEDB 혼합 모드를 사용 하 여 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여할 수 있습니다. 에 지정 된 SQL Server 로그인 및 암호는 **사용자 Id** 및 **암호** 속성입니다.|
 |현재 언어|SQL Server 언어 이름을 나타냅니다. 시스템 메시지 선택 및 서식 지정에 사용되는 언어를 식별합니다. SQL Server에는 언어를 설치 해야 여는 그렇지 않으면 연결이 실패 합니다.|
 |네트워크 주소|지정 된 SQL Server의 네트워크 주소 나타냅니다는 **위치** 속성입니다.|
 |네트워크 라이브러리|SQL Server와 통신 하는 데 사용 하는 네트워크 라이브러리 (DLL)의 이름을 나타냅니다. 이름에는 경로 또는 .dll 파일 확장명이 포함되면 안 됩니다. 기본값은 SQL Server 클라이언트 구성에서 제공 됩니다.|
@@ -152,60 +151,60 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |비동기 가능 커밋|DBPROP_ASYNCTNXCOMMIT|
 |격리 수준 자동 커밋|DBPROP_SESS_AUTOCOMMITISOLEVELS|
 |카탈로그 위치|DBPROP_CATALOGLOCATION과 같습니다|
-|카탈로그 용어가|DBPROP_CATALOGTERM과 같습니다|
-|열 정의|DBPROP_COLUMNDEFINITION과 같습니다|
+|카탈로그 용어가|DBPROP_CATALOGTERM|
+|열 정의|DBPROP_COLUMNDEFINITION|
 |연결 제한 시간|DBPROP_INIT_TIMEOUT|
 |현재 카탈로그|DBPROP_CURRENTCATALOG|
 |데이터 원본|DBPROP_INIT_DATASOURCE|
 |Data Source Name|DBPROP_DATASOURCENAME|
 |데이터 소스 개체 스레딩 모델|DBPROP_DSOTHREADMODEL|
-|DBMS 이름|DBPROP_DBMSNAME과 같습니다|
-|DBMS 버전|DBPROP_DBMSVER와 같습니다|
+|DBMS 이름|DBPROP_DBMSNAME|
+|DBMS 버전|DBPROP_DBMSVER|
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|
-|지원 기준으로 그룹화|DBPROP_GROUPBY와 같습니다|
+|지원 기준으로 그룹화|DBPROP_GROUPBY|
 |유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES와 같습니다|
-|식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE와 같습니다|
+|식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE|
 |초기 카탈로그|DBPROP_INIT_CATALOG|
 |격리 수준|DBPROP_SUPPORTEDTXNISOLEVELS|
-|격리 보존|DBPROP_SUPPORTEDTXNISORETAIN과 같습니다|
+|격리 보존|DBPROP_SUPPORTEDTXNISORETAIN|
 |로캘 ID|DBPROP_INIT_LCID|
-|최대 인덱스 크기|DBPROP_MAXINDEXSIZE와 같습니다|
-|최대 행 크기|DBPROP_MAXROWSIZE와 같습니다|
-|BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB와 같습니다|
-|SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT와 같습니다|
+|최대 인덱스 크기|DBPROP_MAXINDEXSIZE|
+|최대 행 크기|DBPROP_MAXROWSIZE|
+|BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB|
+|SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|
-|여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE와 같습니다|
-|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION과 같습니다|
-|NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR와 같습니다|
+|여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE|
+|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION|
+|NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR|
 |OLE DB 버전|DBPROP_PROVIDEROLEDBVER|
 |OLE 개체 지원|DBPROP_OLEOBJECTS|
 |열린 행 집합 지원|DBPROP_OPENROWSETSUPPORT|
-|선택 목록의 열으로 정렬|DBPROP_ORDERBYCOLUMNSINSELECT와 같습니다|
+|선택 목록의 열으로 정렬|DBPROP_ORDERBYCOLUMNSINSELECT|
 |출력 매개 변수 가용성|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Ref 접근자로 전달|DBPROP_BYREFACCESSORS|
 |암호|DBPROP_AUTH_PASSWORD|
 |보안 정보 유지|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
-|영구 ID 유형|DBPROP_PERSISTENTIDTYPE과 같습니다|
-|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR와 같습니다|
+|영구 ID 유형|DBPROP_PERSISTENTIDTYPE|
+|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR|
 |커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR와 같습니다|
-|프로시저 용어가|DBPROP_PROCEDURETERM과 같습니다|
+|프로시저 용어가|DBPROP_PROCEDURETERM|
 |프롬프트|DBPROP_INIT_PROMPT|
 |공급자 이름|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |공급자 버전|DBPROP_PROVIDERVER|
-|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY와 같습니다|
+|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY|
 |명령 시 행 집합 변환|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |스키마 용어|DBPROP_SCHEMATERM|
-|스키마 사용|DBPROP_SCHEMAUSAGE와 같습니다|
+|스키마 사용|DBPROP_SCHEMAUSAGE|
 |SQL 지원|DBPROP_SQLSUPPORT|
 |구조적된 저장소|DBPROP_STRUCTUREDSTORAGE|
-|하위 쿼리 지원|DBPROP_SUBQUERIES와 같습니다|
-|테이블 용어|DBPROP_TABLETERM과 같습니다|
-|트랜잭션 DDL|DBPROP_SUPPORTEDTXNDDL과 같습니다|
+|하위 쿼리 지원|DBPROP_SUBQUERIES|
+|테이블 용어|DBPROP_TABLETERM|
+|트랜잭션 DDL|DBPROP_SUPPORTEDTXNDDL|
 |사용자 ID|DBPROP_AUTH_USERID|
-|사용자 이름|DBPROP_USERNAME과 같습니다|
+|사용자 이름|DBPROP_USERNAME|
 |창 핸들|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>레코드 집합 동적 속성
@@ -364,4 +363,3 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 ## <a name="see-also"></a>관련 항목:
  [ConnectionString 속성 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Provider 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [(ADO) 레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md)
-

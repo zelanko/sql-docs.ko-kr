@@ -1,39 +1,38 @@
 ---
 title: "AMO 보안 개체 프로그래밍 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, security
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b81d5b81df182309384c5d647a4251688bb1489
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee56a1d89bdf9d5712dcdb70043be95b9195d0ba
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-security-objects"></a>AMO 보안 개체 프로그래밍
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 서버 관리자 그룹 또는 Database Administrator 그룹의 구성원 보안 개체 프로그래밍 또는 AMO 보안 개체를 사용 하는 응용 프로그램을 실행 해야 합니다. Server Administrator와 Database Administrator는 액세스 수준을 제공한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 AMO 보안 개체를 사용하는 보안 개체를 프로그래밍하거나 응용 프로그램을 실행하려면 Server Administrator 그룹 또는 Database Administrator 그룹의 멤버여야 합니다. Server Administrator와 Database Administrator는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 제공하는 액세스 수준입니다.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 사용자는 해당 개체에 할당된 역할과 권한의 조합을 통해 가져온 모든 개체에 액세스합니다. 자세한 내용은 참조 [AMO 보안 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)합니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 사용자는 해당 개체에 할당된 역할과 권한의 조합을 통해 가져온 모든 개체에 액세스합니다. 자세한 내용은 참조 [AMO 보안 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)합니다.  
   
 ## <a name="role-and-permission-objects"></a>역할 및 권한 개체  
  서버 역할에는 해당 컬렉션의 유일한 역할인 관리자 역할만 있습니다. 서버 역할 컬렉션에는 새 역할을 추가할 수 없습니다. 관리자 역할의 멤버 자격에서는 서버의 모든 개체에 대한 전체 액세스를 허용합니다.  

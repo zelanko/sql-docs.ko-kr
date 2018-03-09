@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- set blocksize command [ODBC]
+helpviewer_keywords: set blocksize command [ODBC]
 ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e2fe90c50d87cea5b949787a6504479c2670e14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d0c98afd9479e1a7de4f7a14834909962f274f1e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE 명령
 메모 필드의 저장에 대 한 디스크 공간이 할당 되는 방식을 지정 합니다.  
@@ -43,4 +40,3 @@ SET BLOCKSIZE TO nBytes
   
 ## <a name="remarks"></a>주의  
  블록 크기 설정의 기본값은 64입니다. 파일이 생성 된 블록 크기를 다른 값으로 다시 설정, 새 값으로 설정 하 고 복사를 사용 하 여 새 테이블을 만들 합니다. 새 테이블에는 지정 된 블록 크기입니다.
-

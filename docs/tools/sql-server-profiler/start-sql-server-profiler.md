@@ -2,11 +2,13 @@
 title: "SQL Server 프로파일러 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 7/7/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "25"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 7b875fa70017ce162ca50aa7d6d0235627d2f5f8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9ce18e13fa735921846ea7f564ff53983d0c2dca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler 실행
-  실행할 수 있습니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 여러 가지 방법으로 추적 수집을 지원 하기 위해 출력 다양 한 시나리오에서에서 합니다. 시작할 수 있습니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Windows 10에서 **시작** 메뉴에서는 **도구** 메뉴 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 여러 위치에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]실행할 수 있습니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 여러 가지 방법으로 추적 수집을 지원 하기 위해 출력 다양 한 시나리오에서에서 합니다. 시작할 수 있습니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Windows 10에서 **시작** 메뉴에서는 **도구** 메뉴 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 여러 위치에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
 처음 시작 하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 선택 **새 추적** 에서 **파일** 메뉴, 표시 됩니다는 **서버에 연결** 지정할 수 있는 대화 상자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결할 인스턴스.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Windows 10 시작 메뉴에서 SQL Server Profiler를 시작 하려면  
@@ -63,4 +64,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="next-steps"></a>다음 단계  
  [SQL Server Profiler 개요](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Management Studio 사용](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
-

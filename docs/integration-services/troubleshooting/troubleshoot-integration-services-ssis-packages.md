@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 패키지 문제 해결 | Microsoft Docs"
+title: "Integration Services(SSIS) 패키지 문제 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ce2c0b78-e1f1-409a-9f4c-f90027c70c07
-caps.latest.revision: 2
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc8ac07a418dd814fea28c6068084f7433cd7328
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fa3730cf3f54dc1977c7c5db1347c9eb27824bdd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshoot-integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지 문제 해결
 ## <a name="in-this-section"></a>섹션 내용
@@ -32,5 +31,4 @@ ms.lasthandoff: 08/03/2017
 -   [패키지 실행 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)
 -   [패키지 배포 보고서 문제 해결](../../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md)
 -   [패키지 실행을 위한 덤프 파일 생성](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)
-
 

@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1e26fe82d939dd58cbbfa850f041a7ae3d23b248
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 9c8def299d18a8c7d64cd581fdf7934f366ce5dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-source"></a>ODBC 원본
   ODBC 원본은 데이터베이스 테이블, 뷰 또는 SQL 문을 사용하여 ODBC 지원 데이터베이스에서 데이터를 추출합니다.  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/17/2017
  오류 동작 설정에 따라 ODBC 원본은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)를 참조하세요.  
   
 ## <a name="data-type-support"></a>데이터 형식 지원  
- ODBC 원본이 지원하는 데이터 형식에 대한 자세한 내용은 Connector for ODBC(Open Database Connectivity) by Attunity를 참조하십시오.  
+ ODBC 원본이 지원하는 데이터 형식에 대한 자세한 내용은 Connector for ODBC(Open Database Connectivity)를 참조하세요.  
   
 ## <a name="extract-options"></a>추출 옵션  
  ODBC 원본은 **일괄 처리** 또는 **행 단위** 모드에서 작동합니다. 사용되는 모드는 **FetchMethod** 속성으로 결정됩니다. 다음 목록에서는 이러한 모드를 설명합니다.  
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/17/2017
   
  **FetchMethod** 속성에 대한 자세한 내용은 [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)을 참조하십시오.  
   
-## <a name="parallelism"></a>병렬 처리  
+## <a name="parallelism"></a>Parallelism  
  동일한 컴퓨터 또는 서로 다른 컴퓨터에서 동일한 테이블 또는 서로 다른 테이블에 대해 병렬로 실행될 수 있는 ODBC 원본 구성 요소의 수에는 제한이 없습니다(일반적인 전역 세션 제한 제외).  
   
  그러나 이용 중인 ODBC 공급자의 제한으로 인해 공급자를 통한 동시 연결 수가 제한될 수 있습니다. 이러한 제한으로 인해 ODBC 원본에 대해 지원 가능한 병렬 인스턴스 수가 제한됩니다. SSIS 개발자는 이용 중인 모든 ODBC 공급자의 제한을 이해하고 SSIS 패키지를 작성할 때 해당 제한을 고려해야 합니다.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [ODBC 원본을 사용 하 여 데이터를 추출 합니다.](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [ODBC 원본을 사용하여 데이터 추출](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
 -   [ODBC 원본 사용자 지정 속성](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
@@ -103,12 +102,12 @@ ms.lasthandoff: 08/17/2017
   
 -   **데이터 흐름** 탭에서 ODBC 원본을 두 번 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
   
 #### <a name="connection-manager"></a>ODBC 원본 편집기  
  목록에서 기존 ODBC 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다. 어느 ODBC 지원 데이터베이스에나 연결할 수 있습니다.  
   
-#### <a name="new"></a>새로 만들기  
+#### <a name="new"></a>단추를 사용하여 새  
  **새로 만들기**를 클릭합니다. 새 ODBC 연결 관리자를 만들 수 있는 **ODBC 연결 관리자 편집기 구성** 대화 상자가 열립니다.  
   
 #### <a name="data-access-mode"></a>데이터 액세스 모드  
@@ -139,7 +138,7 @@ ms.lasthandoff: 08/17/2017
   
 3.  **ODBC 원본 편집기**에서 **열**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
   
 #### <a name="available-external-columns"></a>사용 가능한 외부 열  
  데이터 원본에서 사용 가능한 외부 열의 목록입니다. 이 테이블을 사용하여 열을 추가하거나 삭제할 수 없습니다. 원본에서 사용할 열을 선택합니다. 선택한 열이 선택 순서대로 **외부 열** 목록에 추가됩니다.  
@@ -164,15 +163,15 @@ ms.lasthandoff: 08/17/2017
   
 -   **ODBC 원본 편집기**에서 **오류 출력**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
   
 #### <a name="inputoutput"></a>입/출력  
  데이터 원본의 이름을 표시합니다.  
   
-#### <a name="column"></a>열  
+#### <a name="column"></a>Column  
  사용되지 않습니다.  
   
-#### <a name="error"></a>오류  
+#### <a name="error"></a>Error  
  ODBC 원본에서 흐름의 오류를 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
 #### <a name="truncation"></a>잘림  
@@ -200,4 +199,3 @@ ms.lasthandoff: 08/17/2017
  오류 또는 잘림을 발생시키는 행이 ODBC 원본의 오류 출력으로 전송됩니다.  
   
   
-

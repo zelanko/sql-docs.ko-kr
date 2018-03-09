@@ -2,9 +2,12 @@
 title: "정책 기반 관리를 사용하여 서버 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f980a3c0022592582d9df62fd81b179a7f1dc7a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 928ac23212fc1941db34ee409d6adec44142b79e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 서버 관리
-   정책 기반 관리는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 관리하는 정책 기반 시스템입니다. 조건 식을 포함하는 조건을 만들 때 사용합니다. 그런 다음 조건을 데이터베이스 대상 개체에 적용하는 정책을 만듭니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 정책 기반 관리는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 관리하는 정책 기반 시스템입니다. 조건 식을 포함하는 조건을 만들 때 사용합니다. 그런 다음 조건을 데이터베이스 대상 개체에 적용하는 정책을 만듭니다.  
 
 예를 들어 데이터베이스 관리자 권한으로 특정 서버에서 데이터베이스 메일을 사용하도록 설정되지 않도록 서버 옵션을 설정하는 조건과 정책을 만들 수 있습니다. 
    
@@ -120,7 +123,7 @@ ms.lasthandoff: 11/09/2017
  ## <a name="examples"></a>예
  - [Off By Default 정책 만들기](lesson-1-1-create-the-off-by-default-policy.md)
   - [Off By Default 정책을 실행하도록 서버 구성](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [정책 기반 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

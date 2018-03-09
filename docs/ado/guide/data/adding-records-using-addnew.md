@@ -3,7 +3,7 @@ title: "AddNew를 사용 하 여 레코드를 추가 합니다. | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,22 +17,21 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f68a67e0eafaf7bbb9d89ddd151b73dd5d0bbb75
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92bbc404985ebbb49c4e654efd5a7f54198d35ab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adding-records-using-addnew-method"></a>AddNew 메서드를 사용 하 여 레코드를 추가 합니다.
 기본 구문은 **AddNew** 메서드:
 
- *레코드 집합*합니다. AddNew *FieldList*, *값*
+ *recordset*.AddNew *FieldList*, *Values*
 
  *FieldList* 및 *값* 인수는 선택 사항입니다. *FieldList* 단일 이름 이거나 새 레코드의 필드의 서 수 위치 또는 이름 배열입니다.
 
@@ -57,4 +56,3 @@ End If
 
 ## <a name="remarks"></a>주의
  이 코드를 사용 하 여 연결이 끊긴 때문에 **레코드 집합** 다시 연결 해야 일괄 처리 모드에서 클라이언트 쪽 커서를 **레코드 집합** 를 새 데이터 원본에 **연결** 호출 하기 전에 개체는 **UpdateBatch** 메서드 변경 내용을 데이터베이스에 게시할 수 있습니다. 새 함수를 사용 하 여 쉽게 이렇게 **GetNewConnection**합니다.
-

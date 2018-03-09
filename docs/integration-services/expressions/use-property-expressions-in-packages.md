@@ -22,17 +22,16 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f1a931e20a1ab0bafae0e014b174cf718e9a69f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: df3d79297b56c02f4aff107349cb8dce5c75d4da
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
   속성 식은 런타임에 동적으로 속성을 업데이트하기 위해 속성에 할당한 식입니다. 예를 들어 속성 식을 사용하면 메일 보내기 태스크에서 사용하는 받는 사람 줄에 변수에 저장된 전자 메일 주소를 삽입할 수 있습니다.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  사용자 정의 변수 및 시스템 변수의 이름은 대/소문자를 구분합니다.  
   
- 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.  
+ 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   
  속성 식의 중요한 용도는 배포된 패키지의 각 인스턴스 구성을 사용자 지정하는 것입니다. 이렇게 하면 다른 환경의 패키지 속성을 동적으로 업데이트할 수 있습니다. 예를 들어 연결 관리자의 연결 문자열에 변수를 할당하는 속성 식을 만든 다음 패키지를 배포할 때 런타임에 연결 문자열이 정확한지 확인하고 변수를 업데이트할 수 있습니다. 패키지 구성은 속성 식을 계산하기 전에 로드됩니다.  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 08/03/2017
   
  다음 다이어그램에서는 속성 식을 추가, 변경 및 제거하는 데 사용하는 사용자 인터페이스를 보여 줍니다.  
   
- ![속성 식에 대 한 사용자 인터페이스](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "속성 식에 대 한 사용자 인터페이스")  
+ ![속성 식에 대한 사용자 인터페이스](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "속성 식에 대한 사용자 인터페이스")  
   
  **속성** 창과 **식** 페이지에서 **식** 컬렉션 수준의 찾아보기 단추 **(…)** 를 클릭하여 **속성 식 편집기** 대화 상자를 엽니다. 속성 식 편집기를 사용하여 속성을 식에 매핑하거나 속성 식을 입력할 수 있습니다. 그래픽 식 도구를 사용하여 식을 만든 다음 식의 유효성을 검사하려면 식 수준의 찾아보기 단추 **(...)** 를 클릭하여 **식 작성기** 대화 상자를 연 다음 식을 만들거나 수정하고 필요에 따라 식의 유효성을 검사합니다.  
   
@@ -179,8 +178,7 @@ ms.lasthandoff: 08/03/2017
   
 -   social.technet.microsoft.com의 기술 문서 - [SSIS 식 예](http://go.microsoft.com/fwlink/?LinkId=220761)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

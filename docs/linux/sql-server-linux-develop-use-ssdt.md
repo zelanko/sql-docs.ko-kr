@@ -9,24 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
+ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 9a639559de35573c7fb6dfdcc98c9d9680312659
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux에서 SQL Server에 대 한 데이터베이스를 만들 수
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT)는 Linux에서 SQL Server에 대 한 강력한 개발 및 데이터베이스 수명 주기 관리 (DLM) 환경으로 Visual Studio를 설정합니다. 개발 빌드 및 테스트 응용 프로그램 코드를 개발 하는 것 처럼 소스 제어 프로젝트에서 데이터베이스를 게시할 수 있습니다.
+SQL Server Data Tools (SSDT)는 Linux에서 SQL Server에 대 한 강력한 개발 및 데이터베이스 수명 주기 관리 (DLM) 환경으로 Visual Studio를 설정합니다. 개발 빌드 및 테스트 하 고, 응용 프로그램 코드를 개발 하는 것 처럼 소스 제어 프로젝트에서 데이터베이스를 게시할 수 있습니다.
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Visual Studio와 SQL Server Data Tools 설치
 
@@ -104,7 +103,7 @@ SQL Server 2017 Linux에서 SSDT 17.0 RC 이상 버전에서 지원 됩니다.
 
 5. 게시 상태를 확인 합니다.는 **데이터 도구 작업** 창.
 
-6. 클릭 **보기 Reulst** 또는 **스크립트 보기** 결과 Linux에서 SQL Server에 게시 하는 목록의 세부 정보를 볼 수 있습니다.
+6. 클릭 **보기 Reulst** 또는 **스크립트 보기** 결과 Linux에서 SQL Server에 게시 데이터베이스의 정보를 확인할 수 있습니다.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
@@ -121,4 +120,3 @@ SQL Data Tools를 사용 하 여 데이터베이스를 개발 하는 방법에 �
 [SSDT MSDN 문서]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [자습서: TRANSACT-SQL 문 쓰기]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL 참조 (데이터베이스 엔진)]:https://msdn.microsoft.com/library/bb510741.aspx
-

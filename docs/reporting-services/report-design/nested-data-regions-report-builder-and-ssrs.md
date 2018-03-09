@@ -1,26 +1,27 @@
 ---
-title: "중첩 된 데이터 영역 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "중첩된 데이터 영역(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 3333479da0d2989354242869c430712a3688e968
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3a2829591b4024a9423c83b057ed1462c6762255
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>중첩된 데이터 영역(보고서 작성기 및 SSRS)
   일반적으로 데이터 요약을 간결하게 표시하거나 데이터를 테이블이나 행렬 이외에 시각적인 방식으로도 표시하려는 경우 차트와 같은 한 데이터 영역을 행렬과 같은 다른 데이터 영역에 중첩할 수 있습니다.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **테이블릭스 본문** 데이터 집합, 외부 테이블릭스 및 행과 열 그룹에 필터 및 정렬 식이 적용된 후 행 그룹과 열 그룹의 교차로 표현되는 가장 안쪽 그룹의 데이터입니다.  
   
- 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="nesting-a-chart-sparkline-or-data-bar-in-a-tablix"></a>테이블릭스에 차트, 스파크라인 또는 데이터 막대 중첩  
  테이블릭스 열 그룹 머리글 또는 그룹 바닥글 행이나 테이블릭스 본문 셀에 차트(스파크라인 또는 데이터 막대 포함)를 추가한 경우 차트에 전달되는 데이터의 범위는 해당 셀 데이터의 하위 집합입니다. 기본적으로 테이블릭스 셀에 차트를 추가하면 차트 차원이 확장되어 셀을 채웁니다.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  테이블릭스 셀에서 차트의 크기를 더 세밀하게 제어하려면 먼저 사각형에 차트를 추가한 다음 사각형을 테이블릭스 셀에 추가합니다.  
   
- 기본적으로 차트 범례 색은 차트 계열의 데이터 요소 색에 따라 결정됩니다. 중첩된 차트 데이터 영역 모두에서 동일한 데이터 범주에 동일한 색을 사용하려면 사용자 지정 색을 사용하고 데이터에 대해 정렬 식을 설정해야 합니다. 자세한 내용은 [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md) 및 [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
+ 기본적으로 차트 범례 색은 차트 계열의 데이터 요소 색에 따라 결정됩니다. 중첩된 차트 데이터 영역 모두에서 동일한 데이터 범주에 동일한 색을 사용하려면 사용자 지정 색을 사용하고 데이터에 대해 정렬 식을 설정해야 합니다. 자세한 내용은 [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md) 및 [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="nesting-a-gauge-or-an-indicator-in-a-tablix"></a>테이블릭스에 계기 또는 표시기 중첩  
  테이블, 행렬 또는 목록 안쪽에 계기 또는 표시기를 중첩하여 KPI(핵심 성과 지표)를 표시할 수 있습니다. 테이블 안에 계기 또는 표시기를 배치하면 테이블릭스의 각 행에 대해 계기 또는 표시기가 렌더링됩니다. 테이블릭스에 표시기를 추가하는 방법에 대한 자세한 내용은 [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)를 참조하세요.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
  테이블릭스의 데이터가 그룹화된 경우 테이블릭스 안에 중첩된 계기 데이터 영역은 자동으로 이 그룹을 상속하지 않습니다. 테이블릭스에 표시되는 정보와 같은 정보를 표시하려면 계기에 일치하는 그룹 식을 추가해야 합니다. 예를 들어 테이블릭스의 데이터가 Product로 그룹화되어 있는 경우 동일한 데이터를 표시하려면 Product 그룹 식을 계기에 추가해야 합니다. 자세한 내용은 [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md) 및 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
- 계기 눈금에 표시되는 최소값과 최대값을 설정해야 합니다. 계기의 최대값을 지정하려면 `=Max!MyField.Value`와 같은 식을 사용할 수 있습니다. 하지만 이 식은 셀의 데이터 범위 내에서만 계산되기 때문에 각 계기의 최대값은 테이블릭스의 모든 행에 대해 동일하지 않습니다. 이 때문에 테이블릭스의 계기 간 비교를 이해하기 어려울 수 있습니다. 최대값에 정적 값을 지정할 수도 있습니다. 그러면 테이블릭스 안의 모든 행에 이 최대값이 적용된 계기가 표시됩니다. 자세한 내용은 [계기의 최소값 또는 최대값 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)을 참조하세요.  
+ 계기 눈금에 표시되는 최소값과 최대값을 설정해야 합니다. 계기의 최대값을 지정하려면 `=Max!MyField.Value`와 같은 식을 사용할 수 있습니다. 하지만 이 식은 셀의 데이터 범위 내에서만 계산되기 때문에 각 계기의 최대값은 테이블릭스의 모든 행에 대해 동일하지 않습니다. 이 때문에 테이블릭스의 계기 간 비교를 이해하기 어려울 수 있습니다. 최대값에 정적 값을 지정할 수도 있습니다. 그러면 테이블릭스 안의 모든 행에 이 최대값이 적용된 계기가 표시됩니다. 자세한 내용은 [계기의 최소값 또는 최대값 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)를 참조하세요.  
   
  계기에서 데이터가 너무 커질 경우에는 눈금 승수를 사용하여 표시되는 자릿수를 줄일 수 있습니다. 승수를 지정하려면 눈금을 마우스 오른쪽 단추로 클릭하고 **눈금 속성**을 선택합니다. **눈금 속성** 대화 상자가 열리면 **승수**의 값을 지정합니다.  
   
@@ -88,13 +89,13 @@ ms.lasthandoff: 08/09/2017
  자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) 및 [테이블, 행렬 또는 목록 추가, 이동 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [계기 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [보고서 항목 서식 지정 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [자습서: 보고서 &#40;에 KPI 추가 보고서 작성기 &#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [계기 &#40;의 눈금 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [자습서: 보고서에 KPI 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

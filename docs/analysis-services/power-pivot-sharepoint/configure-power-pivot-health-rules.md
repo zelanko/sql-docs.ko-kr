@@ -2,32 +2,29 @@
 title: "Powerpivot 상태 규칙 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 42cc598c702a0e88063896717926e280171d0371
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>PowerPivot 상태 규칙 구성
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 에는 서버 가용성과 구성 문제를 모니터링하고 해결하는 데 유용한 SharePoint 상태 규칙이 포함되어 있습니다. SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 에 적용되는 상태 규칙은 규칙 정의 검토 페이지에 표시됩니다.  
   
  상태 규칙을 통해 서비스가 중단될 수 있는 서버 문제를 조기에 감지할 수 있습니다. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 에서는 사용자가 영향을 받기 전에 문제를 식별하고 수정하는 데 사용할 수 있는 여러 가지 규칙을 제공합니다. 사용자 배포 환경의 고유한 특징에 맞도록 이러한 규칙을 사용자 지정할 수 있습니다. 예를 들어, 디스크 공간에 대한 경고를 해결하는 데 시간이 더 필요한 경우 사용 가능한 디스크 공간 백분율을 5%에서 10%로 늘려 경고를 더 일찍 받을 수 있습니다.  
@@ -142,4 +139,3 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
  [Power Pivot 관리 대시보드 및 사용 데이터](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
   
-

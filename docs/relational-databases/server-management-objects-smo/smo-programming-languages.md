@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +20,20 @@ helpviewer_keywords:
 - development environments [SMO]
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5fe01fab65692826d2476b06d88a45f60cff1a19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b32c1a9341e7cba418501d7292f8028b0d8e3ee5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="smo-programming-languages"></a>SMO 프로그래밍 언어
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 섹션에서는 설명 프로그래밍 하는 방법 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.NET 합니다.
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  이 섹션에서는 설명 프로그래밍 하는 방법 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.NET 합니다.
   
 |항목|Description|  
 |-----------|-----------------|  

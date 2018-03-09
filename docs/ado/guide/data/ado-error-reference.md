@@ -3,7 +3,7 @@ title: "ADO 오류 참조 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a25f9697d00a234bb98fe65eaaa2cd85520b45db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2604f09ecffab3e0f5519731acffa00111af9677
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-errors"></a>ADO 오류
 **ErrorValueEnum** 상수는 ADO 오류 값을 설명 합니다. 이러한 값을 포함 하 여 열거 상수의 전체 목록은 참조 [부록 b: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)합니다. 이 섹션은 더 흥미로운 오류 중 일부를 검토 하 고, 또는 문제를 해결 하려면 솔루션을 발생 시킬 수 있는 특정 한 상황을 설명 합니다. 두는 **ErrorValueEnum** 상수 및 짧은 10 진수 양수 나열 됩니다.
@@ -88,4 +87,3 @@ ms.lasthandoff: 09/09/2017
 |**3749**|**adErrFieldsUpdateFailed**|필드를 업데이트 하지 못했습니다. 자세한 내용을 보려면 확인는 **상태** 개별 필드 개체의 속성입니다. 이 오류는 두 가지 상황에서 발생할 수 있습니다: 변경 하는 경우는 **필드** 개체 값을 변경 하거나 속성을 변경 하는 경우;의 데이터베이스 레코드를 추가 하는 과정은 **필드** 개체 자체입니다.<br /><br /> **레코드** 또는 **레코드 집합** 현재 레코드의 필드 중 하나에 문제가 있어서를 업데이트 하지 못했습니다. 열거는 **필드** 수집 및 확인 된 **상태** 문제의 원인을 파악 하려면 각 필드의 속성입니다.|
 |**3750**|**adErrDenyNotSupported**|공급자는 공유 제한이 지원 하지 않습니다. 파일 공유를 제한 하려고 하 고 공급자 개념을 지원 하지 않습니다.|
 |**3751**|**adErrDenyTypeNotSupported**|공급자는 요청 된 유형의 제한 공유를 지원 하지 않습니다. 특정 형식의 파일 공유를 설정 하려고 했습니다 공급자가 지원 되지 않는 제한 합니다. 파일 공유 제한 사항 지원 되는지 확인 하려면 공급자의 설명서를 참조 하십시오.|
-

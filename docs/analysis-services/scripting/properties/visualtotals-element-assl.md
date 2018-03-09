@@ -2,43 +2,35 @@
 title: "VisualTotals 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- VisualTotals Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: VisualTotals Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- VisualTotals
-helpviewer_keywords:
-- VisualTotals element
+applies_to: SQL Server 2016 Preview
+f1_keywords: VisualTotals
+helpviewer_keywords: VisualTotals element
 ms.assetid: 352a05b1-846c-4d58-ac36-1f5ad418ba7d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e1f6361a3610c48b408f762868f25c561903e7f7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bd9ab26661ea712d44b22f8099cdd26e80000beb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="visualtotals-element-assl"></a>VisualTotals 요소(ASSL)
-  이 특성 멤버에 대한 보이는 값 합계를 표시할 것인지 여부를 결정하는 MDX(Multidimensional Expressions) 식을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 특성의 멤버에 대해 보이는 값 합계 표시 되는지 여부를 결정 하는 MDX (Multidimensional Expressions) 식을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,9 +45,9 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|문자열|  
+|데이터 형식 및 길이|String|  
 |기본값|**0**|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
@@ -64,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AttributePermission](../../../analysis-services/scripting/objects/attributepermission-element-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  부모에 해당 하는 요소 **VisualTotals** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AttributePermission>합니다.  
@@ -73,4 +65,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

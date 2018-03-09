@@ -1,13 +1,14 @@
 ---
-title: "차트 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "차트(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,47 +22,47 @@ f1_keywords:
 - "10172"
 - sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 84aa1b349c9667b1f9dba44c6b29476081956c53
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="charts-report-builder-and-ssrs"></a>차트(보고서 작성기 및 SSRS)
-차트 데이터 영역을 사용 하 여 읽을 수 있도록 하는 방법에 대 한 읽기 프로그램 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진된 보고서를 한 눈에 집계 된 데이터의 양이 많은 이해 합니다.  
+차트 데이터 영역을 사용하는 방법에 대해 읽고 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 읽는 사용자가 한 눈에 집계된 많은 양의 데이터를 이해할 수 있도록 합니다.  
 
-더 많은 시간을 신중 하 게 준비 하 고 차트를 만들기 전에 데이터를 이해 보다 쉽게는 것을 빠르고 효율적으로 디자인 하려면 차트입니다. 사용 하는 차트를 선택 하는 도움말을 참조 하십시오. [차트 종류](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md) 막대, 열, 스파크 라인 및 원형 차트 자습서에 참조 작업할 수 있도록 차트 즉시 시작 [보고서 작성기 자습서](../../reporting-services/report-builder-tutorials.md)합니다.  
+차트를 만들기 전에 데이터를 신중하게 준비하고 이해하는 데 더 많은 시간을 보낼수록 차트를 더 빠르고 효율적으로 디자인할 수 있습니다. 사용할 차트를 선택하는 도움말은 [차트 형식](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)을 참조하세요. 즉시 차트를 사용해 보려면 [보고서 작성기 자습서](../../reporting-services/report-builder-tutorials.md)에서 막대, 열, 스파크 라인 및 원형 차트 자습서를 참조하세요.  
   
  다음 그림에서는 차트에 사용되는 다양한 요소를 보여 줍니다.  
   
  ![차트 요소 다이어그램](../../reporting-services/report-design/media/rs-chartelementsc.gif "차트 요소 다이어그램")  
   
- 차트를 보고서와 별도로 게시할 수 있습니다 *보고서 파트*합니다. 자세한 내용은 참조 [보고서 파트](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)합니다.
+ 차트를 보고서와는 별도로 *보고서 파트*로 게시할 수 있습니다. 자세한 내용은 [보고서 파트](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)를 참조하세요.
   
  
 ##  <a name="DesigningChart"></a> 차트 디자인  
- 디자인 화면에 차트 데이터 영역을 추가한 후에는 숫자 데이터 및 숫자가 아닌 데이터에 대한 보고서 데이터 집합 필드를 차트의 차트 데이터 창으로 끌 수 있습니다. 디자인 화면에서 차트를 클릭하면 범주 그룹, 계열 그룹 및 값의 세 영역이 포함된 차트 데이터 창이 나타납니다. 보고서에 공유 데이터 집합이나 포함된 데이터 집합이 있는 경우 데이터 집합의 필드가 보고서 데이터 창에 나타납니다. 데이터 집합에서 필드를 적절 한 영역 차트 데이터 창으로 끕니다. 기본적으로 차트의 영역 중 하나에 필드를 추가하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 필드에 대한 집계를 계산합니다. 계열 그룹화를 사용하여 계열을 동적으로 생성할 수도 있습니다. 차트는 [행렬 처럼 구성](#SimilarMatrix)합니다.  
+ 디자인 화면에 차트 데이터 영역을 추가한 후에는 숫자 데이터 및 숫자가 아닌 데이터에 대한 보고서 데이터 집합 필드를 차트의 차트 데이터 창으로 끌 수 있습니다. 디자인 화면에서 차트를 클릭하면 범주 그룹, 계열 그룹 및 값의 세 영역이 포함된 차트 데이터 창이 나타납니다. 보고서에 공유 데이터 집합이나 포함된 데이터 집합이 있는 경우 데이터 집합의 필드가 보고서 데이터 창에 나타납니다. 필드를 데이터 집합에서 차트 데이터 창의 적절한 영역으로 끕니다. 기본적으로 차트의 영역 중 하나에 필드를 추가하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 필드에 대한 집계를 계산합니다. 계열 그룹화를 사용하여 계열을 동적으로 생성할 수도 있습니다. 차트는 [행렬처럼 구성](#SimilarMatrix)됩니다.  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   
 > [!NOTE]  
 >  디자인 타임의 차트 데이터는 보고서를 처리할 때의 차트 데이터와 다릅니다. 즉, 디자인 타임의 데이터는 실제 데이터가 아니며, 차트의 모양을 예측하면서 차트를 디자인할 수 있도록 추가되는 생성된 데이터입니다.  
   
-##  <a name="SimilarMatrix"></a>매트릭스 차트는 하는 방법  
+##  <a name="SimilarMatrix"></a>행렬같은 차트 방식  
  차트 작동 방식을 설명하는 방법 중 하나는 행렬과 비교하는 것입니다.  
   
- ![선택한 도구 상자에서 추가 된 새 행렬이](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "선택한 도구 상자에서 새 행렬 추가")  
+ ![도구 상자에서 추가된 새 행렬 선택](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "도구 상자에서 추가된 새 행렬 선택")  
   
  개념상 차트와 행렬의 구성은 동일합니다.  
   
 -   행렬의 열 그룹은 차트의 범주 그룹 영역과 비슷합니다.  
   
--   행렬의 행 그룹은 차트의 계열 그룹 영역과 비슷합니다.  
+-   행렬의 열 그룹은 차트의 범주 그룹 영역과 비슷합니다.  
   
 -   행렬의 데이터 영역은 차트의 값 영역과 비슷합니다.  
   
@@ -96,11 +97,11 @@ ms.lasthandoff: 08/09/2017
   
  차트에 데이터를 통합하는 데는 여러 가지 방법이 있습니다.  
   
--   원형 차트를 사용할 경우 작은 조각을 "기타"라는 한 조각으로 수집합니다. 이렇게 하면 원형 차트 조각의 수가 줄어듭니다. 자세한 내용은 [원형 차트에서 작은 조각 수집&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)을 참조하세요.  
+-   원형 차트를 사용할 경우 작은 조각을 "기타"라는 한 조각으로 수집합니다. 이렇게 하면 원형 차트 조각의 수가 줄어듭니다. 자세한 내용은 [원형 차트에서 작은 조각 수집&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)를 참조하세요.  
   
 -   데이터 요소가 많은 경우에는 데이터 요소 레이블을 사용하지 않는 것이 좋습니다. 데이터 요소 레이블은 차트에 요소의 수가 적을 때 가장 효과적입니다.  
   
--   원하지 않거나 관계없는 데이터를 필터링합니다. 이렇게 하면 차트에서 보여 주려는 핵심 데이터를 강조하는 데 도움이 됩니다. 차트에서 데이터 요소를 필터링하려면 범주 그룹이나 계열 그룹에 대해 필터를 설정합니다. 기본적으로 차트에서는 기본 제공 함수 Sum을 사용하여 동일한 그룹에 속하는 값을 계열의 개별 데이터 요소로 집계합니다. 계열의 집계 함수를 변경할 경우에는 필터 식의 집계 함수도 변경해야 합니다. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)을 참조하세요.  
+-   원하지 않거나 관계없는 데이터를 필터링합니다. 이렇게 하면 차트에서 보여 주려는 핵심 데이터를 강조하는 데 도움이 됩니다. 차트에서 데이터 요소를 필터링하려면 범주 그룹이나 계열 그룹에 대해 필터를 설정합니다. 기본적으로 차트에서는 기본 제공 함수 Sum을 사용하여 동일한 그룹에 속하는 값을 계열의 개별 데이터 요소로 집계합니다. 계열의 집계 함수를 변경할 경우에는 필터 식의 집계 함수도 변경해야 합니다. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
   
 -   테이블 또는 행렬 템플릿의 비율 데이터를 표시하려면 막대 그래프 대신 선형 계기를 사용해 보십시오. 계기는 셀 내의 단일 값을 보여 주는 데 더 적합합니다. 자세한 내용은 [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)를 참조하세요.  
    
@@ -142,12 +143,12 @@ ms.lasthandoff: 08/09/2017
  [차트 문제 해결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
  차트 사용 관련 팁에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [이미지, 입력란, 사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [대화형 정렬, 문서 구조 및 연결 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [중첩 된 데이터 영역은 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [자습서: 보고서 &#40; 세로 막대형 차트 추가 보고서 작성기 &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [자습서: 보고서에 세로 막대형 차트 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [자습서: 보고서에 원형 차트 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [자습서: 보고서 &#40; 가로 막대형 차트 추가 보고서 작성기 &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [자습서: 보고서에 막대형 차트 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

@@ -2,15 +2,13 @@
 title: "속성 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ad143a8832224d0b8964aec3c10d504bf4ff5de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 38f0983ae4f840ac0addf4e30439ff57a679e30e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---properties"></a>XML 요소-속성
-  XMLA(XML for Analysis) 프로토콜은 XML 요소를 사용하여 XMLA 헤더, 메서드, 개체, 명령 및 데이터 형식에 대한 속성 정보 및 값을 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]XML for Analysis (XMLA) 프로토콜을 속성 정보와 XMLA 헤더, 메서드, 개체, 명령 및 데이터 형식에 대 한 값을 나타내는 XML 요소를 사용 합니다.  
   
 ## <a name="topic-list"></a>항목 목록  
  다음 항목에서는 [!INCLUDE[ssAS](../../../includes/ssas-md.md)]에서 구현되는 XMLA 요소에 대해 설명합니다.  

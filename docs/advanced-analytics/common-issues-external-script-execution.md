@@ -3,26 +3,28 @@ title: "일반적인 문제를 SQL Server의 외부 스크립트 실행 | Micros
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 2be854d38728670d5f68325da0bcf8136aef53f9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>일반적인 문제를 SQL Server의 외부 스크립트 실행
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에는 알려진된 문제 및 SQL Server에서 R, Python 코드를 실행 된 일반적인 문제 목록이 포함 되어 있습니다.
 
@@ -319,7 +321,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 *[1] "c:\\프로그램 파일\\Microsoft SQL Server\\MSSQL13 합니다. SQL2016\\R_SERVICES "*
 
-*[1] "c: / Program 파일/Microsoft SQL Server/MSSQL13 합니다. SQL2016/R_SERVICES/라이브러리 "*
+*[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 
 문제를 해결 하려면 SQL Server 인스턴스 라이브러리에 패키지를 다시 설치 해야 합니다.
 
@@ -335,4 +337,3 @@ EXEC sp_execute_external_script @language = N'R',
 [업그레이드 및 설치 FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 [데이터베이스 엔진 연결 문제 해결](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
-

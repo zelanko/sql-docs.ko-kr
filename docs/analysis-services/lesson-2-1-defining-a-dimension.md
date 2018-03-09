@@ -2,32 +2,32 @@
 title: "차원을 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 0a6a1056c4b778dbc4cb71faa4e7b05111512285
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b6969c73bc6f466eb1a2acfd9d41ff21e80d727c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>단원 2-1-차원 정의
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 다음 태스크에서는 차원 마법사를 사용하여 Date 차원을 구축합니다.  
   
 > [!NOTE]  
@@ -63,13 +63,13 @@ ms.lasthandoff: 09/01/2017
   
 8.  **Full Date Alternate Key** 특성의 **특성 유형** 열 설정을 **일반** 에서 **날짜**로 변경합니다. 이렇게 하려면 **특성 유형** 열에서 **일반** 을 클릭합니다. 그런 다음 화살표를 클릭하여 옵션을 확장합니다. **날짜** > **달력** > **날짜**를 클릭합니다. **확인**을 클릭합니다. 이 단계를 반복하여 특성의 특성 유형을 다음과 같이 변경합니다.  
   
-    -   **English Month Name** 에서 **Month**  
+    -   **English Month Name** to **Month**  
   
-    -   **Calendar Quarter** 에서 **Quarter**  
+    -   **Calendar Quarter** to **Quarter**  
   
-    -   **Calendar Year** 에서 **Year**  
+    -   **Calendar Year** to **Year**  
   
-    -   **Calendar Semester** 에서 **Half Year**  
+    -   **Calendar Semester** to **Half Year**  
   
 9. **다음**을 클릭합니다.  
   
@@ -84,11 +84,10 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [큐브 정의](../analysis-services/lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [다차원 모델의 차원](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [기존 테이블을 사용하여 차원 만들기](../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
 [차원 마법사를 사용하여 차원 만들기](../analysis-services/multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
   
   
   
-

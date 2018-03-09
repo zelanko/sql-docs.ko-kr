@@ -1,17 +1,17 @@
 ---
-title: "웹 서비스 프록시를 만드는 | Microsoft Docs"
+title: "웹 서비스 프록시 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, proxies
 - proxies [Reporting Services]
@@ -19,27 +19,26 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
-caps.latest.revision: 44
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "44"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 1c39d81ec9a1d2cd24f01b9dccfed13e8560a770
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 71da140c96f21a28676c2d95ac8d93acf72af16a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="creating-the-web-service-proxy"></a>웹 서비스 프록시 만들기
   클라이언트와 웹 서비스는 입력 및 출력 매개 변수를 XML로 캡슐화하는 SOAP 메시지를 사용하여 통신할 수 있습니다. 프록시 클래스는 매개 변수를 XML 요소에 매핑한 다음 네트워크를 통해 SOAP 메시지를 보냅니다. 이와 같이 프록시 클래스 덕분에 SOAP 수준에서 웹 서비스와 통신할 필요가 없으며 SOAP 및 웹 프록시를 지원하는 임의의 개발 환경에서 웹 서비스 메서드를 호출할 수 있습니다.  
   
- 두 가지 방법으로 사용 하 여 개발 프로젝트에 프록시 클래스를 추가 하는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]:에서 WSDL 도구와는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], 및에서 웹 참조를 추가 하 여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]합니다. 다음 섹션에서는 이 두 가지 방법에 대해 자세히 설명합니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]를 사용하여 개발 프로젝트에 프록시 클래스를 추가하는 방법에는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서 WSDL 도구를 사용하는 방법과 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 웹 참조를 추가하는 방법이 있습니다. 다음 섹션에서는 이 두 가지 방법에 대해 자세히 설명합니다.  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>WSDL 도구를 사용하여 프록시 추가  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK에는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 개발 환경에서 사용할 웹 서비스 프록시를 생성할 수 있는 WSDL(웹 서비스 기술 언어) 도구(Wsdl.exe)가 포함되어 있습니다. 웹 서비스를 지 원하는 언어로 클라이언트 프록시를 만들 수는 가장 일반적인 방법은 (현재 C# 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) WSDL 도구를 사용 하는 것입니다.  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK에는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 개발 환경에서 사용할 웹 서비스 프록시를 생성할 수 있는 WSDL(웹 서비스 기술 언어) 도구(Wsdl.exe)가 포함되어 있습니다. 웹 서비스를 지원하는 언어(현재 C# 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)])로 클라이언트 프록시를 생성하는 가장 일반적인 방법은 WSDL 도구를 사용하는 것입니다.  
   
- **Wsdl.exe를 사용 하 여 프로젝트에 프록시 클래스를 추가 하려면**  
+ **Wsdl.exe를 사용하여 프록시 클래스를 프로젝트에 추가하려면**  
   
 1.  명령 프롬프트에서 Wsdl.exe를 사용하여 (최소한) URL을 보고서 서버 웹 서비스에 지정함으로써 프록시 클래스를 만듭니다.  
   
@@ -76,15 +75,15 @@ ReportingService2010 service = new ReportingService2010();
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>Visual Studio에서 웹 참조를 사용하여 프록시 추가  
  웹 참조를 통해 프로젝트에서 웹 서비스를 하나 이상 사용할 수 있습니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서는 사용자가 다음의 간단한 단계를 수행하여 웹 서비스 참조를 프로젝트에 추가할 수 있습니다.  
   
- **프로젝트에 웹 참조를 추가 하려면**  
+ **프로젝트에 웹 참조를 추가하려면**  
   
-1.  **솔루션 탐색기**를 사용 하는 웹 서비스 프로젝트를 선택 합니다.  
+1.  **솔루션 탐색기**에서 웹 서비스가 사용될 프로젝트를 선택합니다.  
   
-2.  에 **프로젝트** 메뉴를 클릭 하 여 **웹 참조 추가**합니다.  
+2.  **프로젝트** 메뉴에서 **웹 참조 추가**를 클릭합니다.  
   
      **웹 참조 추가** 대화 상자가 열립니다.  
   
-3.  에 **URL** 필드를 보고서 서버 웹 서비스의 전체 경로 입력 합니다.  
+3.  **URL** 필드에 보고서 서버 웹 서비스에 대한 전체 경로를 입력합니다.  
   
      보고서 서버 웹 서비스의 보고서 실행 끝점에 대한 간단한 URL은 다음과 같습니다.  
   
@@ -92,24 +91,24 @@ ReportingService2010 service = new ReportingService2010();
     http://<Server Name>/reportserver/reportexecution2005.asmx  
     ```  
   
-     URL에는 보고서 서버 웹 서비스가 배포된 도메인, 서비스가 포함된 폴더의 이름 및 서비스에 대한 검색 파일의 이름이 포함됩니다. 다양 한 URL 요소 설명과 참조 [SOAP API 액세스](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)합니다.  
+     URL에는 보고서 서버 웹 서비스가 배포된 도메인, 서비스가 포함된 폴더의 이름 및 서비스에 대한 검색 파일의 이름이 포함됩니다. 다양한 URL 요소에 대한 자세한 내용은 [SOAP API 액세스](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)를 참조하세요.  
   
      웹 서비스에서 제공하는 메서드 및 속성에 대한 설명은 왼쪽의 브라우저 창에 나타납니다.  
   
     > [!NOTE]  
-    >  보고서 서버 웹 서비스와 관련 된 항목에 대 한 자세한 내용은 참조 [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)합니다.  
+    >  보고서 서버 웹 서비스와 연관된 항목에 대한 자세한 내용은 [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)를 참조하세요.  
   
 4.  프로젝트에서 보고서 서버 웹 서비스를 사용할 수 있고 보고서 서버에 액세스할 수 있는 충분한 권한이 있는지 확인합니다.  
   
-5.  에 **웹 참조 이름** 필드에 사용할 이름을 입력 합니다. 보고서 서버 웹 서비스를 프로그래밍 방식으로 액세스 하기 위해 코드에서.  
+5.  보고서 서버 웹 서비스에 프로그래밍 방식으로 액세스하기 위해 코드에 사용할 이름을 **웹 참조 이름** 필드에 입력합니다.  
   
-6.  선택 된 **참조 추가** 를 응용 프로그램 웹 서비스에에서 대 한 참조를 만드는 단추입니다.  
+6.  **참조 추가** 단추를 선택하여 웹 서비스에 대한 응용 프로그램의 참조를 만듭니다.  
   
-     새 참조에 표시 **솔루션 탐색기** 현재 프로젝트에 대 한 Web References 노드 아래에 지정 된 대로 라는 **웹 참조 이름** 필드입니다.  
+     새 참조가 **솔루션 탐색기**에서 활성 프로젝트에 대한 Web References 노드 아래에 **웹 참조 이름** 필드에 지정한 이름으로 나타납니다.  
   
-7.  **솔루션 탐색기**, 프로젝트의 항목에 사용할 수 있는 웹 참조 클래스에 대 한 네임 스페이스를 확인 하려면 웹 참조 폴더를 확장 합니다.  
+7.  **솔루션 탐색기**에서 Web References 폴더를 확장하여 프로젝트의 항목에서 사용 가능한 웹 참조 클래스에 대한 네임스페이스를 확인합니다.  
   
-     웹 참조 폴더 내의 폴더에 표시 됩니다는 관련된 파일을 프로젝트에 대 한 웹 참조를 추가한 후 **솔루션 탐색기**합니다.  
+     프로젝트에 웹 참조를 추가하면 연결된 파일이 **솔루션 탐색기** Web References 폴더 내의 폴더에 표시됩니다.  
   
  웹 참조를 추가한 후 다음 구문을 사용하여 프록시 클래스의 인스턴스를 만듭니다.  
   
@@ -126,7 +125,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- 추가할 수도 있습니다는 **를 사용 하 여** (**가져오기** 에 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 지시문을 보고서 서버 웹 서비스 참조에 있습니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다. 이렇게 하려면 다음 코드를 파일에 추가합니다.  
+ **using**([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]의 경우 **Import**) 지시문을 보고서 서버 웹 서비스 참조에 추가할 수도 있습니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다. 이렇게 하려면 다음 코드를 파일에 추가합니다.  
   
 ```vb  
 Import myNamespace.myReferenceName  
@@ -136,10 +135,9 @@ Import myNamespace.myReferenceName
 using myNamespace.myReferenceName;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [기술 참조 &#40; Ssrs&#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getIndexInfo
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getIndexInfo
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 028937d023b6cf899eb5fa47354cb0c5d21545bc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -89,10 +85,10 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |TYPE|**짧은**|인덱스의 유형입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> tableIndexStatistic(0)<br /><br /> tableIndexClustered(1)<br /><br /> tableIndexHashed(2)<br /><br /> tableIndexOther(3)|  
 |ORDINAL_POSITION|**짧은**|인덱스에 있는 열의 서수 위치입니다. 인덱스의 첫 번째 열은 1입니다.|  
 |COLUMN_NAME|**문자열**|열 이름입니다.|  
-|ASC_OR_DESC|**문자열**|인덱스의 데이터 정렬에 사용되는 순서입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> A(오름차순)<br /><br /> D(내림차순)<br /><br /> NULL(해당 사항 없음)<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 항상 "A"를 반환 합니다.  |  
+|ASC_OR_DESC|**문자열**|인덱스의 데이터 정렬에 사용되는 순서입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> A(오름차순)<br /><br /> D(내림차순)<br /><br /> NULL(해당 사항 없음)<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 항상 "A"를 반환 합니다.|  
 |CARDINALITY|**int**|테이블의 행 또는 인덱스의 고유 값 수입니다.|  
 |PAGES|**int**|인덱스 또는 테이블을 저장하는 데 사용되는 페이지 수입니다.|  
-|FILTER_CONDITION|**문자열**|필터 조건입니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 항상 null을 반환 합니다.  |  
+|FILTER_CONDITION|**문자열**|필터 조건입니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 항상 null을 반환 합니다.|  
   
 > [!NOTE]  
 >  GetIndexInfo 메서드에 의해 반환 되는 데이터에 대 한 자세한 내용은 "sp_indexes (TRANSACT-SQL)"를 참조 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 온라인 설명서.  
@@ -129,4 +125,3 @@ public static void executeGetIndexInfo(Connection con) {
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

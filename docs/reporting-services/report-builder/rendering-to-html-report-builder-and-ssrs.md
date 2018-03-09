@@ -1,27 +1,27 @@
 ---
-title: "HTML로 렌더링 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "HTML로 렌더링(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a431b5b8c988b981f217353c366bbbe1f1f68699
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 165a0ad6a70b3141ec3b1ce0fa22b953d287abf4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML로 렌더링(보고서 작성기 및 SSRS)
   HTML 렌더링 확장 프로그램은 페이지를 매긴 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.  
@@ -81,13 +81,13 @@ ms.lasthandoff: 08/09/2017
  문서 구조 레이블이 렌더링되고 뷰어 컨트롤에서 문서 구조를 사용하여 탐색할 수 있습니다. 데이터 영역 머리글이 생략된 경우 레이블은 첫 번째 자식 셀에 렌더링됩니다. 자식 셀이 없으면 레이블은 그 앞에 있는 자식에 렌더링됩니다.  
   
 ### <a name="bookmarks"></a>책갈피  
- 책갈피 링크는 렌더링되어 하이퍼링크로 표시됩니다. 책갈피 대상이 렌더링되고 책갈피 링크를 클릭하여 탐색할 수 있습니다. 책갈피 링크를 클릭하면 제일 앞에 있는 대상 책갈피 레이블로 보고서가 이동하며 가능한 경우 해당 책갈피 링크가 창의 맨 위에 오도록 브라우저가 스크롤됩니다. HTML 앵커 (\<는 >) 태그는 책갈피 대상이 표시 하는 데 사용 됩니다.  
+ 책갈피 링크는 렌더링되어 하이퍼링크로 표시됩니다. 책갈피 대상이 렌더링되고 책갈피 링크를 클릭하여 탐색할 수 있습니다. 책갈피 링크를 클릭하면 제일 앞에 있는 대상 책갈피 레이블로 보고서가 이동하며 가능한 경우 해당 책갈피 링크가 창의 맨 위에 오도록 브라우저가 스크롤됩니다. HTML 앵커(\<a>) 태그를 사용하여 책갈피 대상이 표시됩니다.  
   
 ### <a name="interactive-sorting"></a>대화형 정렬  
  입력란에 사용자 정렬이 정의되어 있으면 HTML 렌더링 확장 프로그램은 입력란의 정렬 아이콘을 입력란 내용의 오른쪽에 렌더링합니다. 보고서에 사용자 정렬이 정의된 입력란이 포함되어 있으면 정렬 이미지가 클릭될 때 서버로 포스트백을 보낼 JavaScript가 렌더링됩니다.  
   
 ### <a name="hyperlinks-and-drillthrough"></a>하이퍼링크 및 드릴스루  
- 하이퍼링크와 드릴스루 링크는 HTML 앵커를 사용 하 여 보고서 항목에 대 한 하이퍼링크로 렌더링 됩니다 (\<는 >) 태그 정의 된 항목입니다.  
+ 하이퍼링크 및 드릴스루 링크는 해당 링크가 정의된 보고서 항목 주위의 HTML 앵커(\<a>) 태그를 사용하여 보고서 항목에 대한 하이퍼링크로 렌더링됩니다.  
   
 ### <a name="search"></a>검색  
  검색 기능을 통해 사용자는 보고서 내의 텍스트 문자열을 검색할 수 있습니다.  
@@ -99,12 +99,11 @@ ms.lasthandoff: 08/09/2017
  장치 정보 설정을 변경하여 렌더링할 모드를 비롯한 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 자세한 내용은 [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)을 참조하세요.  
   
   
-## <a name="see-also"></a>관련 항목:  
- [Reporting services&#40;의 페이지 매김 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [렌더링 동작 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램 &#40;에 대 한 대화형 기능 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [보고서 항목 렌더링 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>참고 항목  
+ [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

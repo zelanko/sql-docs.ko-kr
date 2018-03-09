@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -28,17 +28,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 17db392a965b35d668404127d778bf7ef7ecc875
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 가 제공하는 그래픽 인터페이스를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만들 때는 속성 창에서 패키지 개체의 속성을 설정합니다.  
@@ -63,7 +62,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [버전](#Version)  
   
- 에 설정할 수 없는 추가 패키지 속성에 대 한 내용은 **속성** 창 참조 <xref:Microsoft.SqlServer.Dts.Runtime.Package>합니다.  
+ **속성** 창에서 설정할 수 없는 추가 패키지 속성에 대한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.Package>를 참조하세요.  
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>속성 창에서 패키지 속성을 설정하려면  
   
@@ -115,8 +114,8 @@ ms.lasthandoff: 08/03/2017
 |**CreationDate**|패키지를 만든 날짜입니다.|  
 |**CreatorComputerName**|패키지를 만든 컴퓨터의 이름입니다.|  
 |**CreatorName**|패키지를 만든 사용자의 이름입니다.|  
-|**Description**|패키지 기능에 대한 설명입니다.|  
-|**ID**|패키지를 만들 때 할당된 패키지 GUID입니다. 이 속성은 읽기 전용입니다. 에 대 한 새로운 임의 값을 생성 하는 **ID** 속성을 선택  **\<새 ID 만들기\>**  드롭 다운 목록에 있습니다.|  
+|**설명**|패키지 기능에 대한 설명입니다.|  
+|**ID**|패키지를 만들 때 할당된 패키지 GUID입니다. 이 속성은 읽기 전용입니다. **ID** 속성의 새 임의 값을 생성하려면 드롭다운 목록에서 **\<새 ID 생성\>**을 선택합니다.|  
 |**이름**|패키지의 이름입니다.|  
 |**PackageType**|패키지 유형입니다. 가능한 값은 **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**및 **SQLReplication**입니다. 이 속성의 기본값은 **Default**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>를 참조하세요.|  
   
@@ -147,7 +146,7 @@ ms.lasthandoff: 08/03/2017
   
 |속성|Description|  
 |--------------|-----------------|  
-|**IsolationLevel**|패키지 트랜잭션의 격리 수준입니다. 가능한 값은 **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**및 **Snapshot**입니다. 이 속성의 기본값은 **Serializable**입니다.<br /><br /> 참고: **IsolationLevel** 속성의 **Snapshot** 값은 패키지 트랜잭션에 사용할 수 없습니다. 따라서 **IsolationLevel** 속성으로는 패키지 트랜잭션의 격리 수준을 **Shapshot**으로 설정할 수 없습니다. 패키지 트랜잭션을 **Snapshot**으로 설정하려면 SQL 쿼리를 대신 사용해야 합니다. 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.<br /><br /> **IsolationLevel** 속성 값을 **TransactionOption** 로 설정한 경우에만 **Required**속성이 패키지 트랜잭션에 적용됩니다.<br /><br /> 다음과 같은 경우 자식 컨테이너에서 요청하는 **IsolationLevel** 속성 값이 무시됩니다.<br />자식 컨테이너의 **TransactionOption** 속성 값이 **Supported**일 경우<br />자식 컨테이너가 부모 컨테이너의 트랜잭션에 참여하는 경우<br /><br /> 컨테이너에서 요청하는 **IsolationLevel** 속성 값은 컨테이너가 새 트랜잭션을 시작할 때만 적용됩니다. 다음과 같은 경우 컨테이너가 새 트랜잭션을 시작합니다.<br />컨테이너의 **TransactionOption** 속성 값이 **Required**일 경우<br />부모는 트랜잭션을 시작하지 않습니다.<br /><br /> <br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>를 참조하세요.|  
+|**IsolationLevel**|패키지 트랜잭션의 격리 수준입니다. 가능한 값은 **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**및 **Snapshot**입니다. 이 속성의 기본값은 **Serializable**입니다.<br /><br /> 참고: **IsolationLevel** 속성의 **Snapshot** 값은 패키지 트랜잭션에 사용할 수 없습니다. 따라서 **IsolationLevel** 속성으로는 패키지 트랜잭션의 격리 수준을 **Shapshot**으로 설정할 수 없습니다. 패키지 트랜잭션을 **Snapshot**으로 설정하려면 SQL 쿼리를 대신 사용해야 합니다. 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.<br /><br /> **IsolationLevel** 속성 값을 **TransactionOption** 로 설정한 경우에만 **Required**속성이 패키지 트랜잭션에 적용됩니다.<br /><br /> 다음과 같은 경우 자식 컨테이너에서 요청하는 **IsolationLevel** 속성 값이 무시됩니다.<br />자식 컨테이너의 **TransactionOption** 속성 값이 **Supported**일 경우<br />자식 컨테이너가 부모 컨테이너의 트랜잭션에 참여하는 경우<br /><br /> 컨테이너에서 요청하는 **IsolationLevel** 속성 값은 컨테이너가 새 트랜잭션을 시작할 때만 적용됩니다. 다음과 같은 경우 컨테이너가 새 트랜잭션을 시작합니다.<br />컨테이너의 **TransactionOption** 속성 값이 **Required**일 경우<br />부모가 트랜잭션을 시작하지 않은 경우<br /><br /> <br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>를 참조하세요.|  
 |**TransactionOption**|패키지의 트랜잭션 참여 옵션입니다. 가능한 값은 **NotSupported**, **Supported**및 **Required**입니다. 이 속성의 기본값은 **Supported**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>를 참조하세요.|  
   
 ###  <a name="Version"></a> 버전  
@@ -176,4 +175,3 @@ ms.lasthandoff: 08/03/2017
   
 5.  **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 업데이트된 패키지를 저장합니다.  
   
-

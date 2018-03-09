@@ -8,28 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - replication [SQL Server], planning
 - programming [SQL Server replication], planning
 - programming [SQL Server replication]
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "43"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 01257c38de98453f4672ebcf0d9101bdeedd5ae9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 12b8b87460c4cb21776780af955eeecad3b5cda3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-programming-concepts"></a>복제 프로그래밍 개념
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +118,7 @@ ms.lasthandoff: 07/31/2017
 |<xref:Microsoft.SqlServer.Replication>|관리 코드|동기화|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|관리 코드|사용자 지정 논리를 병합 동기화 프로세스에 통합하기 위한 비즈니스 논리 처리기 생성|  
 |[복제 저장 프로시저&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|스크립팅|관리 및 모니터링|  
-|[복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|스크립팅|동기화|  
+|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|스크립팅|동기화|  
   
 ## <a name="example"></a>예제  
  [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)]에서는 전 세계 200명의 영업 담당자에게 데이터를 게시해야 합니다. 영업 담당자들은 자주 이동하기 때문에 랩톱 컴퓨터나 PDA(개인용 정보 단말기)를 사용하여 고객 데이터를 변경하고 새 주문을 추가해야 합니다. 변경 내용은 영업 담당자가 랩톱을 네트워크에 연결할 때 게시자에 동기화되어야 합니다.  
@@ -141,4 +138,3 @@ ms.lasthandoff: 07/31/2017
  이 예제 시나리오는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 다운로드할 수 있는 AdventureWorks 응용 프로그램 예제에서 구현되었습니다.  
   
   
-

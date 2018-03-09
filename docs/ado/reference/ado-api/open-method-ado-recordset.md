@@ -3,8 +3,9 @@ title: "Open 메서드 (ADO 레코드 집합) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Open
 - Recordset15::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3f223702a882910354d69fbcbfe5920e444000f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74e6fc58d5b32313806301467ca48b9f033b083b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-recordset"></a>Open 메서드 (ADO 레코드 집합)
 커서를 열고는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -45,7 +47,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  *ActiveConnection*  
  (선택 사항) 어느 한 **Variant** 유효한으로 계산 되는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 변수 이름 또는 **문자열** 포함 된 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 매개 변수입니다.  
   
- *모두*  
+ *CursorType*  
  (선택 사항) A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) 값 공급자를 열 때 사용 해야 하는 커서의 형식을 결정 하는 **레코드 집합**합니다. 기본값은 **adOpenForwardOnly**합니다.  
   
  *LockType*  

@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f51c5b639649a3d21ce515a1d4082e84be4f7329
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a8464fb7ff4e971c1d67d270ffa021d0dca1910
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structured-query-language-sql"></a>SQL(구조적 쿼리 언어)(Structured Query Language)
 일반적인 DBMS를 사용 하면 저장, 액세스 및를 구성 하 고 효율적인 방식으로 데이터를 수정할 수 있습니다. 원래, Dbms의 사용자에 게 프로그래머 했습니다. 저장 된 데이터에 액세스 하는 프로그램 COBOL와 같은 프로그래밍 언어로 작성 필요 합니다. 이러한 프로그램 배경이 사용자에 게 친숙 한 인터페이스를 보여 쓴 종종를 잘 알고 있는 프로그래머의 서비스 필요한 데이터 자체에 대 한 액세스. 데이터에 대 한 임시 액세스는 큰 의미가 없습니다.  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQL 모듈](../../odbc/reference/sql-modules.md)  
   
 -   [호출 수준 인터페이스](../../odbc/reference/call-level-interfaces.md)
-

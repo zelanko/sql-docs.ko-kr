@@ -1,49 +1,38 @@
 ---
-title: "Kpi (SSAS 테이블 형식) 만들기 및 관리 | Microsoft Docs"
+title: "Kpi 만들기 및 관리 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.kpi.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1eec54bdb45111be19536f598990d1e6889140bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b16307f79552529c2afc0c1d298c68a85ff1f2a1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-kpis-ssas-tabular"></a>KPI 만들기 및 관리(SSAS 테이블 형식)
-  이 항목에서는 테이블 형식 모델에서 KPI(핵심 성과 지표)를 만들거나 편집하거나 삭제하는 방법을 설명합니다. KPI를 만들려면 KPI의 기본 값으로 평가되는 측정값을 선택합니다. 그런 후 핵심 성과 지표 대화 상자를 사용해서 대상 값으로 평가되는 두 번째 측정값 또는 절대값을 선택합니다. 그리고 기본 및 대상 측정값 사이의 성능을 측정하는 상태 임계값을 정의할 수 있습니다.  
-  
- 이 항목에는 다음 태스크가 포함됩니다.  
-  
--   [KPI 만들기](#bkmk_create_KPI)  
-  
--   [KPI 편집](#bkmk_edit_KPI)  
-  
--   [KPI 및 기본 측정값 삭제](#bkmk_delete)  
-  
--   [KPI를 삭제하고 기본 측정값 유지](#bkmk_delete_KPI)  
+# <a name="create-and-manage-kpis"></a>Kpi 만들기 및 관리 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+이 문서에는 만들기, 편집 또는 테이블 형식 모델에 KPI (핵심 성과 지표)를 삭제 하는 방법을 설명 합니다. KPI를 만들려면 KPI의 기본 값으로 평가되는 측정값을 선택합니다. 그런 후 핵심 성과 지표 대화 상자를 사용해서 대상 값으로 평가되는 두 번째 측정값 또는 절대값을 선택합니다. 그리고 기본 및 대상 측정값 사이의 성능을 측정하는 상태 임계값을 정의할 수 있습니다.  
   
 ## <a name="tasks"></a>태스크  
   
 > [!IMPORTANT]  
->  KPI를 만들려면 먼저 값으로 계산되는 기본 측정값을 만들어야 합니다. 그런 다음 기본 측정값을 KPI로 확장합니다. 측정값을 만드는 방법은 다른 항목 [측정값 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)에서 설명합니다. KPI에는 대상 값도 필요합니다. 이 값은 미리 정의된 다른 측정값이나 절대값에서 얻을 수 있습니다. 기본 측정값을 KPI로 확장한 후 핵심 성과 지표 대화 상자에서 대상 값을 선택하고 상태 임계값을 정의할 수 있습니다.  
+>  KPI를 만들려면 먼저 값으로 계산되는 기본 측정값을 만들어야 합니다. 그런 다음 기본 측정값을 KPI로 확장합니다. 측정값을 만드는 방법 다른 항목에서 설명 [만들기 및 관리 측정값](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)합니다. KPI에는 대상 값도 필요합니다. 이 값은 미리 정의된 다른 측정값이나 절대값에서 얻을 수 있습니다. 기본 측정값을 KPI로 확장한 후 핵심 성과 지표 대화 상자에서 대상 값을 선택하고 상태 임계값을 정의할 수 있습니다.  
   
 ###  <a name="bkmk_create_KPI"></a> KPI 만들기  
   
@@ -62,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 5.  **설명**을 클릭하고 KPI, 값, 상태 및 대상에 대한 설명을 입력합니다.  
   
 > [!TIP]  
->  Excel에서 분석 기능을 사용하여 KPI를 테스트할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)에서 역할 관리자 대화 상자를 사용하여 역할을 정의하는 테이블 형식 모델 작성자를 위한 것입니다.  
+>  Excel에서 분석 기능을 사용하여 KPI를 테스트할 수 있습니다. 자세한 내용은 참조 [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)합니다.  
   
 ###  <a name="bkmk_edit_KPI"></a> KPI 편집  
   
@@ -76,13 +65,13 @@ ms.lasthandoff: 11/17/2017
   
 -   측정값 표에서 KPI의 기본 측정값(값)으로 사용할 측정값을 마우스 오른쪽 단추로 클릭하고 **KPI 삭제**를 클릭합니다.  
   
-## <a name="alt-shortcuts"></a>Alt 바로 가기  
+## <a name="alt-shortcuts"></a>ALT 바로 가기  
   
 |UI 섹션|키 명령|  
 |----------------|-----------------|  
 |KPI 기본 측정값|Alt+B|  
 |KPI 상태|Alt+S|  
-|측정값|Alt+M|  
+|이름|Alt+M|  
 |절대값|Alt+A|  
 |상태 임계값 정의|Alt+U|  
 |아이콘 스타일 선택|Alt+I|  
@@ -90,9 +79,9 @@ ms.lasthandoff: 11/17/2017
 |설명|Alt+D|  
 |추세|Alt+T|  
   
-## <a name="see-also"></a>관련 항목:  
- [KPI&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [측정값&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [측정값 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [만들기 및 managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   
   

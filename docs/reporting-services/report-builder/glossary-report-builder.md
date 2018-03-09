@@ -1,27 +1,27 @@
 ---
-title: "용어 설명 (보고서 작성기) | Microsoft Docs"
+title: "용어 설명(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="glossary-report-builder"></a>용어 설명(보고서 작성기)
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
 |색 규칙(color rules)|지도 계층의 각 지도 요소에 색을 자동으로 할당하는 알고리즘입니다.|  
 |색 눈금(color scale)|지도에 표시된 색을 해석하는 데 사용되는 지도 범례의 한 유형입니다.|  
 |공용 언어 런타임(common language runtime)|관리 코드 실행의 핵심에 있는 엔진입니다. 런타임에서는 관리 코드에 언어 간 통합, 코드 액세스 보안, 개체 수명 관리 및 디버깅과 프로파일링 지원 등의 서비스를 제공합니다.|  
-|복합 식(complex expression)|단일 기본 제공 필드 참조로 표현할 수 없는 고로 디자인 화면에 표시 되는 식입니다 <\<Expr >> 합니다.|  
+|복합 식(complex expression)|단일 기본 제공 필드 참조로 표시할 수 없는 식으로 디자인 화면에 <\<Expr>>로 표시됩니다.|  
 |연결(concatenation)|둘 이상의 문자열이나 식을 단일 문자열이나 식으로 결합하거나 둘 이상의 이진 문자열이나 식을 단일 이진 문자열이나 식으로 결합하는 것을 말합니다.|  
 |동시성|여러 사용자들이 공유 데이터를 동시에 액세스 및 변경할 수 있도록 하는 프로세스입니다. SQL Server는 잠금을 사용하여 여러 사용자들이 충돌 없이 동시에 공유 데이터를 액세스 및 변경할 수 있도록 합니다.|  
 |구성 파일(config file)|다음 용어 참조: 구성 파일(configuration file)|  
@@ -105,7 +105,7 @@ ms.lasthandoff: 08/09/2017
 |데이터 원본 이름(data source name)|보고서에서 데이터 원본 개체의 이름입니다.|  
 |데이터 형식|열, 매개 변수 또는 변수에 저장될 수 있는 정보 유형을 지정하는 특성입니다.|  
 |데이터 웨어하우스|쿼리 및 분석을 위해 특수하게 구성된 데이터베이스입니다.|  
-|데이터베이스|데이터 검색, 정렬 및 재결합과 같은 특정 목적을 위해 구성 및 제공되는 정보, 테이블 및 기타 개체의 모음입니다.|  
+|database|데이터 검색, 정렬 및 재결합과 같은 특정 목적을 위해 구성 및 제공되는 정보, 테이블 및 기타 개체의 모음입니다.|  
 |데이터베이스 카탈로그(database catalog)|데이터베이스에 포함된 모든 개체의 정의 및 데이터베이스 정의를 포함하는 데이터베이스의 부분입니다.|  
 |데이터베이스 엔진|데이터베이스 관리 시스템(DBMS)에 대한 액세스를 제공하는 프로그램 모듈입니다.|  
 |데이터베이스 파일(database file)|데이터베이스를 구성하는 물리적 파일 중 하나입니다.|  
@@ -356,7 +356,7 @@ ms.lasthandoff: 08/09/2017
 |시스템 역할 할당(system role assignment)|사이트에 전체적으로 적용되는 역할 할당입니다.|  
 |시스템 역할 정의(system role definition)|사이트 전체 권한을 지정하는 역할 정의입니다.|  
 |시스템 저장 프로시저|시스템 카탈로그에서 정보를 검색하거나 관리 태스크를 수행하는 것과 같은 동작에 사용할 수 있는 SQL Server 제공 저장 프로시저 집합입니다.|  
-|table|1. 관계형 데이터베이스에서 모델링된 엔터티에 대한 데이터를 저장하며 행 및 열로 구성된 2차원 개체입니다. 2. 데이터를 열 형식으로 표시하는 보고서 레이아웃의 데이터 영역입니다.|  
+|테이블|1. 관계형 데이터베이스에서 모델링된 엔터티에 대한 데이터를 저장하며 행 및 열로 구성된 2차원 개체입니다. 2. 데이터를 열 형식으로 표시하는 보고서 레이아웃의 데이터 영역입니다.|  
 |테이블 데이터 영역(table data region)|데이터를 열 형식으로 표시하는 보고서 레이아웃의 보고서 항목입니다.|  
 |테이블릭스(tablix)|테이블 또는 행렬과 유사한(두 가지의 특성을 공유) 행과 열을 포함하는 Reporting Services RDL 데이터 영역입니다.|  
 |태스크(task)|태스크(보고서 관리, 폴더 관리 등)를 구성하는 사용 권한 컬렉션입니다.|  
@@ -364,7 +364,7 @@ ms.lasthandoff: 08/09/2017
 |사용자 인스턴스(user instance)|사용자 대신 부모 인스턴스에서 생성하는 SQL Server Express 인스턴스입니다.|  
 |값(y) 축(value (y) axis)|차트에서 숫자 데이터 값을 표시하는 축입니다. 일반적으로 세로 축입니다. 예외: 가로 막대형 차트에서는 축이 반대로 바뀌어 y축이 데이터 그룹화를 표시합니다.|  
 |값 식(value expression)|값을 반환하는 MDX(Multidimensional Expressions)입니다. 값 식은 집합, 튜플, 멤버, 수준, 숫자 또는 문자열에 사용될 수 있습니다.|  
-|변수|1. Integration Services에서 열 값 및 패키지 개체의 속성을 설정하기 위해 스크립트, 식 및 속성 식에 사용될 수 있는 값을 저장합니다. <br />2. 값이 할당된 상태로 정의된 엔터티를 말합니다. 지역 변수도 정의 되는 DECLARE@localvariable 문을 선언 될 경우 사용 하 여 SELECT 문이 일괄 처리 내에서 초기 값이 할당 및 또는 SET@localvariable 문.|  
+|변수|1. Integration Services에서 열 값 및 패키지 개체의 속성을 설정하기 위해 스크립트, 식 및 속성 식에 사용될 수 있는 값을 저장합니다. <br />2. 값이 할당된 상태로 정의된 엔터티를 말합니다. 지역 변수는 DECLARE@localvariable 문을 사용하여 정의하며 SELECT 또는 SET@localvariable 문으로 선언될 경우 문 일괄 처리 내에서 초기 값이 할당됩니다.|  
 |가변 간격(variable interval)|차트 너비와 높이에 따라 한 축에 배치할 수 있는 최적의 레이블 수를 자동으로 계산하도록 지정할 수 있는 Reporting Services 차트의 옵션입니다.|  
 |시각화(visualization)|지도, 차트 및 계기에서 사용자가 분석 데이터를 시각화하기 위해 선택하는 방법입니다.|  
 |웹 서비스|Reporting Services에서 HTTP를 통한 SOAP(Simple Object Access Protocol)를 사용하고 클라이언트 프로그램과 보고서 서버 간의 통신 인터페이스로 작동하는 서비스입니다.|  
@@ -375,8 +375,7 @@ ms.lasthandoff: 08/09/2017
 |x축(x-axis)|다음 용어 참조: 범주(x) 축(category (x) axis)|  
 |y축(y-axis)|다음 용어 참조: 값(y) 축(value (y) axis)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
-

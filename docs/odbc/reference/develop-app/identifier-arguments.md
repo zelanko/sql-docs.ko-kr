@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a6800d7cb73790c61ec94acaffdeb291fa6b475
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifier-arguments"></a>식별자 인수
 식별자 인수에 문자열에 따옴표를 드라이버 선행 및 후행 공백을 제거 하 고 따옴표 안에 문자열 리터럴로 처리 합니다. 문자열에 따옴표가 사용 되지 드라이버 제거 후행 공백 및 접기 문자열을 대문자로 합니다. SQL_ERROR 및 SQLSTATE HY009 반환 식별자 인수는 null 포인터를 설정 (잘못 된 null 포인터)를 사용 하는 경우가 아니면 인수가 카탈로그 이름을 카탈로그는 지원 되지 않습니다.  
@@ -44,4 +42,3 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  따옴표 붙은 식별자는 동일한 이름의 Oracle에서 ROWID 같은 의사 열에서 true 열 이름을 구분 하는 데 사용 됩니다. "ROWID" 카탈로그 함수의 인수에 전달 되 면이 특성이 있으면 함수는 ROWID 의사 열과 작동 합니다. 의사 열이 없는 경우 함수는 "ROWID" 열과 작동 합니다. ROWID 카탈로그 함수의 인수에 전달 되 면 함수 행 ID 열과 사용 합니다.  
   
  따옴표 붙은 식별자에 대 한 자세한 내용은 참조 [따옴표 붙은 식별자](../../../odbc/reference/develop-app/quoted-identifiers.md)합니다.
-

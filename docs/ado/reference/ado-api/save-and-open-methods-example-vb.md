@@ -3,7 +3,7 @@ title: "저장 및 열기 메서드 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Save method [ADO], Visual Basic example
 - Open method [ADO]
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7bf87da3c7a8e00b93c7e4055e6c957453fe658c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad4d79342ae4903e3469f3685210e882d64d318f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="save-and-open-methods-example-vb"></a>저장 하 고 (VB) 메서드 예제 열기
 이 세 가지 예제를 보여 주는 방법을 [저장](../../../ado/reference/ado-api/save-method.md) 및 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 방법을 함께 사용할 수 있습니다.  
@@ -109,4 +108,3 @@ Attribute VB_Name = "Save"
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [지 속성 레코드 집합에 대 한 자세한 정보](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)
-

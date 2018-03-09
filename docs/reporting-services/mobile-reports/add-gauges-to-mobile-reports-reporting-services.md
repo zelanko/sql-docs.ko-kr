@@ -2,25 +2,26 @@
 title: "모바일 보고서에 계기 추가 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec1f4cee1318947e3c1ab730b3e4f7eaa16dd333
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1e06346c3562f438e962eda3ff01a4068bafa750
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>모바일 보고서에 계기 추가 | Reporting Services
 계기는 모바일 보고서에서 가장 기본적이고 가장 널리 사용되는 시각화 개체입니다. 데이터 집합의 단일 값을 표시합니다. 값만 표시하거나 목표와 비교하여 값을 표시합니다.
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
 *레이아웃 탭의 계기 시각화*  
   
-SQL Server 모바일 보고서 게시자의 모든 계기는 하나 이상의 속성이 공통: 모바일 보고서에 있는 데이터 테이블 중 하나에 숫자 필드로 설정 하는 주 값입니다.  
+SQL Server 모바일 보고서 게시자의 모든 계기에는 하나 이상의 공통 속성이 있습니다. 주 값은 모바일 보고서의 데이터 테이블 중 하나에 있는 숫자 필드에 설정됩니다.  
 
 숫자 계기를 제외한 모든 계기는 비교 또는 주 값과 비교 값 간의 관계인 *델타*값을 표시할 수도 있습니다. 비교 값은 대체로 목표이고, 계기는 해당 목표에 대한 진행률의 시각적 표시기 또는 실제값과 목표 간의 델타입니다.
 
@@ -88,11 +89,10 @@ SQL Server 모바일 보고서 게시자의 모든 계기는 하나 이상의 �
 
 계기에 표시된 숫자의 형식(예: 통화, 백분율, 시간 또는 일반)을 결정합니다. 모바일 보고서의 각 요소에 대해 숫자 형식을 설정합니다.
   
-### <a name="see-also"></a>참고 항목 
+### <a name="see-also"></a>관련 항목: 
 
 * [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
-* [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 탐색기](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 시각화](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 데이터 표](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
-

@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5953f3409a3886abbf76963d0207a89be1e83aec
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="buffers"></a>버퍼
 버퍼는 드라이버 및 응용 프로그램 간에 데이터를 전달 하는 데 사용 되는 응용 프로그램 메모리의 일부입니다. 예를 들어 응용 프로그램 버퍼에 연결할 수 있는, 또는 *하면서 바인딩된* 결과 집합으로 열 **SQLBindCol**합니다. 각 행을 인출할 때 이러한 버퍼에 각 열에 대 한 데이터가 반환 됩니다. *입력 버퍼* 드라이버;에 응용 프로그램에서 데이터를 전달 하는 데 사용 됩니다 *출력 버퍼* 응용 프로그램에는 드라이버에서 데이터를 반환 하는 데 사용 됩니다.  
@@ -65,4 +63,3 @@ ms.lasthandoff: 09/09/2017
 -   [버퍼 할당 및 해제](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)  
   
 -   [데이터 버퍼 사용](../../../odbc/reference/develop-app/using-data-buffers.md)
-

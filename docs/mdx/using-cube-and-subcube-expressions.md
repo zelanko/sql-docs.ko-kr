@@ -2,15 +2,16 @@
 title: "큐브 및 하위 큐브 식을 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - subcubes [MDX]
 - cubes [Analysis Services], MDX
@@ -18,20 +19,19 @@ helpviewer_keywords:
 - expressions [MDX], subcubes
 - expressions [MDX], cubes
 ms.assetid: 95ae034d-8f88-4820-91c6-205ec424e119
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: cb1766ed1c16901bec84f735ecc2357939a65a11
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 71ba6c7d7d5040481ea13d80a160fc19c0704c10
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-cube-and-subcube-expressions"></a>큐브 및 하위 큐브 식 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   큐브 또는 하위 큐브의 데이터를 정의, 조작 또는 검색하기 위해 MDX(Multidimensional Expressions) 문에 큐브 및 하위 큐브 식을 사용하는 경우가 있습니다.  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/02/2017
   
  하위 큐브 식별자로 표시 *Subcube_Name*합니다. 나타납니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [기본 MDX 쿼리 &#40; Mdx&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
  [MDX &#40;로 하위 큐브 작성 Mdx&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
  [SUBCUBE 문 &#40; 만들기 Mdx&#41;](../mdx/mdx-data-definition-create-subcube.md)   
@@ -91,4 +91,3 @@ ms.lasthandoff: 08/02/2017
  [SCOPE 문 &#40; Mdx&#41;](../mdx/mdx-scripting-scope.md)  
   
   
-

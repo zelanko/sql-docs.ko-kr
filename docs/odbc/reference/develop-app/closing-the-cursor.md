@@ -5,31 +5,29 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], closing
 - closing cursors [ODBC]
 ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2d5c9b47c5e51b68712e7c30f4b2de731f328b5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05cf8dde95111a9f5b530b37fd9a60356f4b77bf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="closing-the-cursor"></a>커서 닫기
-호출 응용 프로그램은 커서를 사용 하 여 완료 되 면 **SQLCloseCursor** 를 커서를 닫습니다. 예를 들어  
+호출 응용 프로그램은 커서를 사용 하 여 완료 되 면 **SQLCloseCursor** 를 커서를 닫습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SQLCloseCursor(hstmt);  
@@ -41,4 +39,3 @@ SQLCloseCursor(hstmt);
 >  커서 닫기, 응용 프로그램 호출 해야 **SQLCloseCursor**이 아니라 **SQLCancel**합니다.  
   
  커서가 열린 상태로 남게 명시적으로 닫았는지 될 때까지 제외는 트랜잭션이 커밋되거나 롤백될 때이 경우 일부 데이터 원본의 커서를 닫습니다. 특히 결과의 끝에 도달한 설정 때 **SQLFetch** sql_no_data가 반환, 커서를 닫지 않습니다. 빈 결과 집합 (결과 집합 생성 하는 문이 성공적으로 실행 되지만 반환 된 행이 없는 경우)에 커서를 명시적으로 닫아야 합니다.
-

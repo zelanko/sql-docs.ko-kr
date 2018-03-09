@@ -3,27 +3,26 @@ title: "Docker에서 SQL Server 데이터베이스를 복원 | Microsoft Docs"
 description: "이 자습서에서는 어떻게 새 Linux Docker 컨테이너에 SQL Server 데이터베이스 백업을 복원 합니다."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 1f3cc214be4eaac2199c17c3bea1da7fd02956f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스 복원
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 자습서에서는 이동 하 고 Docker에서 실행 중인 SQL Server 2017 Linux 컨테이너 이미지에 SQL Server 백업 파일을 복원 하는 방법을 설명 합니다.
 
@@ -37,12 +36,9 @@ ms.lasthandoff: 10/14/2017
 ## <a name="prerequisites"></a>필수 구성 요소
 
 * docker 엔진 1.8 + Mac/창에 Linux 배포 또는 Docker를 지원 합니다. 자세한 내용은 참조 [설치 Docker](https://docs.docker.com/engine/installation/)합니다.
-* 최소 4GB의 디스크 공간
-* 최소 4GB의 RAM
+* 최소 2GB의 디스크 공간
+* 2GB ram 이상
 * [Linux에서 SQL Server에 대 한 시스템 요구 사항](sql-server-linux-setup.md#system)합니다.
-
-> [!IMPORTANT]
-> Mac 용 Docker 및 Windows 용 Docker에 대 한 기본값 Moby VM에 대 한 2GB 이므로 4GB로 변경 해야 합니다. Mac 또는 Windows에서 실행 하는 경우 메모리 설정을 사용 하 여 증가 된 [Docker 빠른 시작의 지침에](quickstart-install-connect-docker.md)합니다.
 
 ## <a name="pull-and-run-the-container-image"></a>컨테이너 이미지를 실행 하 고 끌어오기
 
@@ -411,4 +407,3 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 > [!div class="nextstepaction"]
 >[SQL Server 2017 Docker에 대 한 구성 가이드](sql-server-linux-configure-docker.md)
-

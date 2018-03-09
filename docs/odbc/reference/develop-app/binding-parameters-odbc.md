@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- binding parameters [ODBC]
+helpviewer_keywords: binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53c032a38f81b87b596e05f22137c80f5c54853c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20879f658c1fdc2ca8a4527f76a540ab2700b98f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-parameters-odbc"></a>바인딩 매개 변수 ODBC
 SQL 문의 각 매개 변수에 연결, 해야 또는 *바인딩되는 경우,* 문이 실행 되기 전에 응용 프로그램의 변수에 합니다. 해당 변수를 설명 응용 프로그램 변수에 매개 변수를 바인딩할 때-주소, C 데이터 형식 등에-driver. 매개 변수 자체에 대해서도 설명 — SQL 데이터 형식, 정밀도 및 등입니다. 드라이버는 해당 문에 대 한 유지 관리 하 고는 문이 실행 될 때 변수에서 값을 검색 하는 정보를 사용 하 여 구조에이 정보를 저장 합니다.  
@@ -57,4 +54,3 @@ SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?
 -   [매개 변수 바인딩 오프셋](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
   
 -   [매개 변수 설명](../../../odbc/reference/develop-app/describing-parameters.md)
-

@@ -38,17 +38,16 @@ helpviewer_keywords:
 - moving databases
 - attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
-caps.latest.revision: 212
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: de8574d6d4f2322c63743828b7b8a03d4e6fa576
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 7c6e52f8e36ed40e18c2aeab162a75c39f186c97
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE(SQL Server Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +57,10 @@ ms.lasthandoff: 10/24/2017
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
-  
+
+데이터베이스 만들기    
+
 ```  
-  
-      Create a database  
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -116,10 +115,10 @@ FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY
 }  
   
 ```  
-  
+ 
+데이터베이스 연결    
+
 ```  
-  
-      Attach a database  
 CREATE DATABASE database_name   
     ON <filespec> [ ,...n ]   
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }  
@@ -131,13 +130,12 @@ CREATE DATABASE database_name
       <service_broker_option>  
     | RESTRICTED_USER  
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )  
-}  
-  
+}   
 ```  
   
+데이터베이스 스냅숏 만들기    
+
 ```  
-  
-      Create a database snapshot  
 CREATE DATABASE database_snapshot_name   
     ON   
     (  
@@ -185,15 +183,15 @@ CREATE DATABASE database_snapshot_name
 > [!NOTE]  
 >  포함된 데이터베이스는 포함되지 않은 데이터베이스와 다른 방식으로 데이터가 정렬됩니다. 참조 하십시오 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) 자세한 정보에 대 한 합니다.  
   
- 와 \<옵션 >  
- -   **\<filestream_options >** 
+ WITH \<option>  
+ -   **\<filestream_options>** 
   
      NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | 전체}  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
      데이터베이스에 대한 비트랜잭션 FILESTREAM 액세스 수준을 지정합니다.  
   
-    |값|설명|  
+    |Value|Description|  
     |-----------|-----------------|  
     |OFF|비트랜잭션 액세스는 사용할 수 없습니다.|  
     |READONLY|비트랜잭션 프로세스에서 이 데이터베이스의 FILESTREAM 데이터를 읽을 수 있습니다.|  
@@ -299,14 +297,15 @@ CREATE DATABASE database_snapshot_name
 -   버전과 관계 없이 다른 서버 인스턴스에 데이터베이스를 연결 하는 경우 실행 해야 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 연결 작업이 완료 된 후 복제를 제거 하려면.  
   
 > [!NOTE]  
->  연결 작업을 수행할은 **vardecimal** 저장소 형식을 사용 하지만 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이상으로 업그레이드 해야 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2입니다. vardecimal 저장소 형식을 사용하는 데이터베이스는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다. 에 대 한 자세한 내용은 **vardecimal** 저장소 형식을 참조 [데이터 압축](../../relational-databases/data-compression/data-compression.md)합니다.  
+> 연결 작업을 수행할은 **vardecimal** 저장소 형식을 사용 하지만 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이상으로 업그레이드 해야 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] s p 2입니다. vardecimal 저장소 형식을 사용하는 데이터베이스는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다. 에 대 한 자세한 내용은 **vardecimal** 저장소 형식을 참조 [데이터 압축](../../relational-databases/data-compression/data-compression.md)합니다.  
   
  데이터베이스가 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 처음으로 연결되거나 복원될 때 데이터베이스 마스터 키(서비스 마스터 키로 암호화됨)의 복사본은 서버에 아직 저장되지 않은 상태입니다. 데이터베이스 마스터 키를 암호 해독하려면 **OPEN MASTER KEY** 문을 사용해야 합니다. DMK를 암호 해독한 후에는 **ALTER MASTER KEY REGENERATE** 문을 사용하여 SMK(서비스 마스터 키)로 암호화된 DMK의 복사본을 서버에 프로비전함으로써 앞으로 자동 암호 해독을 사용하도록 설정할 수 있습니다. 데이터베이스가 이전 버전에서 업그레이드되지 않은 경우에는 DMK를 다시 생성해야 최신 AES 알고리즘을 사용할 수 있습니다. DMK를 다시 생성하는 방법은 [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요. AES로 업그레이드하기 위해 DMK 키를 다시 생성하는 데 소요되는 시간은 DMK에서 보호하는 개체 수에 따라 달라집니다. AES로 업그레이드하기 위해 DMK 키를 다시 생성하는 작업은 한 번만 필요하며 키 회전 전략의 일부로 이후에 수행하는 다시 생성 작업에 영향을 주지 않습니다. 사용 하 여 데이터베이스를 업그레이드 하는 방법에 대 한 정보에 대 한 연결을 참조 하십시오 [는 데이터베이스를 사용 하 여 분리 및 연결 &#40; 업그레이드 Transact SQL &#41; ](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).  
   
- **보안 정보** 알 수 없거나 신뢰할 수 없는 출처의 데이터베이스를 연결 하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용 하기 전에 실행 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 비프로덕션 서버의 데이터베이스에서 저장된 프로시저 또는 다른 데이터베이스에 사용자 정의 코드 같은 코드를 검사 하십시오.  
+> [!IMPORTANT]  
+> 출처를 알 수 없거나 신뢰할 수 없는 데이터베이스는 연결하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용 하기 전에 실행 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 비프로덕션 서버의 데이터베이스에서 저장된 프로시저 또는 다른 데이터베이스에 사용자 정의 코드 같은 코드를 검사 하십시오.  
   
 > [!NOTE]  
->  **TRUSTWORTHY** 및 **DB_CHAINING** 데이터베이스를 연결할 때 옵션은 영향을 주지 않습니다.  
+> **TRUSTWORTHY** 및 **DB_CHAINING** 데이터베이스를 연결할 때 옵션은 영향을 주지 않습니다.  
   
  FOR ATTACH_REBUILD_LOG  
  기존 운영 체제 파일 집합을 연결하여 데이터베이스를 만들도록 지정합니다. 이 옵션은 읽기/쓰기 데이터베이스로 제한됩니다. 있어야는  *\<filespec >* 주 파일을 지정 하는 항목입니다. 하나 이상의 트랜잭션 로그 파일이 없으면 로그 파일이 다시 작성됩니다. ATTACH_REBUILD_LOG는 1MB의 새 로그 파일을 자동으로 만듭니다. 이 파일은 기본 로그 파일 위치에 저장됩니다. 이 위치에 대 한 정보를 참조 하세요. [확인 하거나 데이터 및 로그 파일 &#40;에 대 한 기본 위치 변경 SQL Server Management studio&#41; ](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
@@ -321,7 +320,7 @@ CREATE DATABASE database_snapshot_name
 -   모든 데이터 파일(MDF 및 NDF)을 사용할 수 있어야 합니다.  
   
 > [!IMPORTANT]  
->  이 작업을 실행하면 로그 백업 체인이 끊어집니다. 따라서 작업이 완료된 후 전체 데이터베이스 백업을 수행하는 것이 좋습니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  
+> 이 작업을 실행하면 로그 백업 체인이 끊어집니다. 따라서 작업이 완료된 후 전체 데이터베이스 백업을 수행하는 것이 좋습니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  
   
  일반적으로 FOR ATTACH_REBUILD_LOG는 로그 크기가 큰 읽기/쓰기 데이터베이스를 복사본이 주로 읽기 작업에만 사용되어 원본 데이터베이스에 비해 로그 공간이 덜 필요한 다른 서버에 복사할 때 사용됩니다.  
   
@@ -329,16 +328,16 @@ CREATE DATABASE database_snapshot_name
   
  연결 및 데이터베이스를 분리 하는 방법에 대 한 자세한 내용은 참조 [데이터베이스 분리 및 연결 &#40; SQL Server &#41; ](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
- \<filespec >  
+ \<filespec>  
  파일 속성을 제어합니다.  
   
- 이름 *logical_file_name*  
+ NAME *logical_file_name*  
  파일의 논리적 이름을 지정합니다. FOR ATTACH 절 중 하나를 지정하는 경우가 아니면 FILENAME이 지정될 때 NAME이 필요합니다. FILESTREAM 파일 그룹 이름은 PRIMARY로 지정할 수 없습니다.  
   
  *logical_file_name*  
  파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다. *Logical_file_name* 데이터베이스 내에서 고유 하 고 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다. 이 이름은 문자 상수, 유니코드 상수, 일반 식별자 또는 구분 식별자가 될 수 있습니다.  
   
- 파일 이름 { **'***os_file_name***'** | **'***filestream_path* **'** }  
+ FILENAME { **'***os_file_name***'** | **'***filestream_path***'** }  
  운영 체제(물리적) 파일 이름을 지정합니다.  
   
  **'** *os_file_name* **'**  
@@ -362,7 +361,7 @@ CREATE DATABASE database_snapshot_name
   
  크기 수 없습니다 될 때 지정 되는 *os_file_name* UNC 경로로 지정 합니다. SIZE는 FILESTREAM 파일 그룹에 적용되지 않습니다.  
   
- *크기*  
+ *size*  
  파일의 처음 크기입니다.  
   
  때 *크기* 주 파일에 대 한 제공 되지 않으면는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] model 데이터베이스에 있는 주 파일의 크기를 사용 합니다. 모델의 기본 크기는 8MB (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 또는 (이전 버전)의 경우 1MB입니다. 보조 데이터 파일 또는 로그 파일을 지정 하지만 *크기* 파일을 지정 하지 않으면는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 파일 하 게 8MB (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 또는 (이전 버전)의 경우 1MB입니다. 주 파일에 지정된 크기는 최소한 model 데이터베이스의 주 파일 크기와 같아야 합니다.  
@@ -379,7 +378,7 @@ CREATE DATABASE database_snapshot_name
  디스크가 꽉 찰 때까지 파일 크기가 증가하도록 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 무제한 증가로 지정된 로그 파일의 최대 크기는 2TB이고 데이터 파일의 최대 크기는 16TB입니다.  
   
 > [!NOTE]  
->  이 옵션이 FILESTREAM 컨테이너에 지정되면 최대 크기가 없습니다. 디스크가 꽉 찰 때까지 파일이 증가합니다.  
+> 이 옵션이 FILESTREAM 컨테이너에 지정되면 최대 크기가 없습니다. 디스크가 꽉 찰 때까지 파일이 증가합니다.  
   
  FILEGROWTH *growth_increment*  
  파일의 자동 증분을 지정합니다. 파일의 FILEGROWTH 설정은 MAXSIZE 설정을 초과할 수 없습니다. FILEGROWTH 수 없습니다 될 때 지정 되는 *os_file_name* UNC 경로로 지정 합니다. FILEGROWTH는 FILESTREAM 파일 그룹에 적용되지 않습니다.  
@@ -395,14 +394,14 @@ CREATE DATABASE database_snapshot_name
   
 |버전|기본값|  
 |-------------|--------------------|  
-|시작[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|데이터 64MB입니다. 로그 파일 64MB.|  
-|시작[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|데이터 1MB입니다. 로그 파일 10%입니다.|  
-|이전에[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|데이터 10%입니다. 로그 파일 10%입니다.|  
+|시작[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|데이터는 64MB입니다. 로그 파일은 64MB입니다.|  
+|시작[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|데이터는 1MB입니다. 로그 파일은 10%입니다.|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전|데이터는 10%입니다. 로그 파일은 10%입니다.|  
   
- \<파일 그룹 >  
+ \<filegroup>  
  파일 그룹 속성을 제어합니다. 데이터베이스 스냅숏에는 파일 그룹을 지정할 수 없습니다.  
   
- 파일 그룹 *filegroup_name*  
+ FILEGROUP *filegroup_name*  
  파일 그룹의 논리적 이름입니다.  
   
  *filegroup_name*  
@@ -423,13 +422,13 @@ CREATE DATABASE database_snapshot_name
  *database_snapshot_name*  
  새 데이터베이스 스냅숏의 이름입니다. 데이터베이스 스냅숏 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하며 식별자에 대한 규칙을 따라야 합니다. *database_snapshot_name* 최대 128 자가 될 수 있습니다.  
   
- ON **(** 이름  **=**  *logical_file_name***,** FILENAME **='**  *os_file_name***')** [ **,**... *n* ]  
+ ON **(** 이름  **= ***logical_file_name***,** FILENAME **='***os_file_name***')** [ **,**... *n* ]  
  데이터베이스 스냅숏을 만들기 위해 원본 데이터베이스의 파일 목록을 지정합니다. 스냅숏이 동작하려면 모든 데이터 파일을 개별적으로 지정해야 합니다. 그러나 데이터베이스 스냅숏에는 로그 파일이 허용되지 않습니다. FILESTREAM 파일 그룹은 데이터베이스 스냅숏에서 지원되지 않습니다. FILESTREAM 데이터 파일이 CREATE DATABASE ON 절에 포함되어 있으면 문이 실패하고 오류가 발생합니다.  
   
  에 해당 하는 설명은 참조 하는 이름, 파일 이름 및 해당 값에 대 한 설명은 \<filespec > 값입니다.  
   
 > [!NOTE]  
->  다른 데이터베이스 스냅숏을 만들 때 \<filespec > 옵션 및 PRIMARY 키워드는 허용 되지 않습니다.  
+> 다른 데이터베이스 스냅숏을 만들 때 \<filespec > 옵션 및 PRIMARY 키워드는 허용 되지 않습니다.  
   
  AS SNAPSHOT OF *source_database_name*  
  생성 중인 데이터베이스에서 지정한 원본 데이터베이스의 데이터베이스 스냅숏의 임을 지정 *source_database_name*합니다. 스냅숏 및 원본 데이터베이스는 같은 인스턴스에 있어야 합니다.  
@@ -471,7 +470,7 @@ CREATE DATABASE database_snapshot_name
  CREATE DATABASE 문을 사용 하 여 읽기 전용, 정적 보기를 만들 수는 *데이터베이스 스냅숏을* 의 *원본 데이터베이스*합니다. 데이터베이스 스냅숏은 스냅숏을 만들었을 당시의 원본 데이터베이스와 트랜잭션 측면에서 일관성을 가집니다. 원본 데이터베이스 하나에 스냅숏이 여러 개 있을 수 있습니다.  
   
 > [!NOTE]  
->  데이터베이스 스냅숏을 만드는 경우 CREATE DATABASE 문은 로그 파일, 오프라인 파일, 복원 파일 및 존재하지 않는 파일을 참조할 수 없습니다.  
+> 데이터베이스 스냅숏을 만드는 경우 CREATE DATABASE 문은 로그 파일, 오프라인 파일, 복원 파일 및 존재하지 않는 파일을 참조할 수 없습니다.  
   
  데이터베이스 스냅숏 만들기에 실패한 경우 해당 스냅숏은 주의 대상이 되며 삭제해야 합니다. 자세한 내용은 참조 [DROP database&#40; Transact SQL &#41; ](../../t-sql/statements/drop-database-transact-sql.md).  
   
@@ -499,7 +498,7 @@ CREATE DATABASE database_snapshot_name
   
  다음 예에서는 데이터베이스 사용자 Fay에게 데이터베이스를 만들 수 있는 권한을 제공합니다.  
   
-```  
+```sql  
 USE master;  
 GO  
 GRANT CREATE DATABASE TO [Fay];  
@@ -518,14 +517,14 @@ GO
  이러한 사용 권한을 설정하면 누구나 액세스할 수 있는 디렉터리에 있는 파일이 실수로 변경되는 것을 방지할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)]에서는 데이터 및 로그 파일 사용 권한을 설정하지 않습니다.  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)]에서는 데이터 및 로그 파일 사용 권한을 설정하지 않습니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-database-without-specifying-files"></a>1. 파일을 지정하지 않고 데이터베이스 만들기  
  다음 예에서는 `mytest` 데이터베이스를 만들고 해당 주 파일 및 트랜잭션 로그 파일을 만듭니다. 명령문에 아니요 \<filespec > 항목을 주 데이터베이스 파일은 model 데이터베이스 주 파일의 크기입니다. 트랜잭션 로그가 더 큰 하도록 설정 되어 다음이 값 중: 25% 또는 512KB 주 데이터 파일의 크기입니다. MAXSIZE를 지정하지 않았으므로 사용 가능한 디스크 공간을 모두 채울 때까지 파일 크기가 증가할 수 있습니다. 이 예에서는 `mytest` 데이터베이스를 만들기 전에 `mytest`라는 데이터베이스(있는 경우)를 삭제하는 방법도 보여 줍니다.  
   
-```  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'mytest') IS NOT NULL
@@ -538,13 +537,12 @@ SELECT name, size, size*1.0/128 AS [Size in MBs]
 FROM sys.master_files  
 WHERE name = N'mytest';  
 GO  
-  
 ```  
   
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>2. 데이터 파일 및 트랜잭션 로그 파일을 지정하는 데이터베이스 만들기  
- 다음 예에서는 `Sales` 데이터베이스를 만듭니다. 첫 번째 파일이 주 파일 그룹은 하지 키워드 사용 하기 때문에 (`Sales_dat`) 주 파일이 됩니다. `Sales_dat` 파일의 SIZE 매개 변수에 MB 또는 KB를 지정하지 않았으므로 기본값 MB를 사용하여 할당됩니다. 사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 `Sales_log` 파일은 `MB` 매개 변수에 명시적으로 `SIZE` 접미사를 지정했으므로 메가바이트(MB)로 공간이 할당됩니다.  
+ 다음 예에서는 `Sales` 데이터베이스를 만듭니다. 주 키워드를 사용하지 않았으므로 첫 번째 파일(`Sales_dat`)이 주 파일이 됩니다. `Sales_dat` 파일의 SIZE 매개 변수에 MB 또는 KB를 지정하지 않았으므로 기본값 MB를 사용하여 할당됩니다. 사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 `Sales_log` 파일은 `MB` 매개 변수에 명시적으로 `SIZE` 접미사를 지정했으므로 메가바이트(MB)로 공간이 할당됩니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -566,7 +564,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>3. 데이터 파일 및 트랜잭션 로그 파일을 여러 개 지정하여 데이터베이스 만들기  
  다음 예에서는 3개의 `Archive` 데이터 파일과 2개의 `100-MB` 트랜잭션 로그 파일을 가진 `100-MB` 데이터베이스를 만듭니다. 주 파일은 목록의 첫 번째 파일이며 `PRIMARY` 키워드로 명시적으로 지정되어 있습니다. 트랜잭션 로그 파일은 `LOG ON` 키워드 다음에 지정됩니다. `FILENAME` 옵션에서 파일에 사용된 확장명에 유의하십시오. 주 데이터 파일에는 `.mdf`, 보조 데이터 파일에는 `.ndf`, 트랜잭션 로그 파일에는 `.ldf`가 각각 사용됩니다. 이 예에서는 데이터베이스를 `D:` 데이터베이스와 함께 배치하는 대신 `master` 드라이브에 배치합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -612,7 +610,7 @@ GO
   
  이 예에서는 성능을 향상시키기 위해 데이터 파일과 로그 파일을 서로 다른 디스크에 배치합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -661,7 +659,7 @@ GO
 ### <a name="e-attaching-a-database"></a>5. 데이터베이스 연결  
  다음 예에서는 예 4에서 만든 `Archive` 데이터베이스를 분리한 다음, `FOR ATTACH` 절을 사용하여 데이터베이스를 연결합니다. `Archive`는 데이터 파일과 로그 파일을 여러 개 포함하도록 정의되었습니다. 그러나 파일을 만든 후 위치를 변경하지 않았으므로 `FOR ATTACH` 절에 주 파일만 지정해야 합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 연결 중인 데이터베이스에 속한 모든 전체 텍스트 파일이 데이터베이스에 연결됩니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -677,7 +675,7 @@ GO
   
  이 예의 원본 데이터베이스는 예 4에서 만든 `Sales` 데이터베이스입니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -694,7 +692,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>7. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정  
  다음 예에서는 `MyOptionsTest` 데이터베이스를 만듭니다. 데이터 정렬 이름을 지정하고 `TRUSTYWORTHY` 및 `DB_CHAINING` 옵션을 `ON`으로 설정합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -709,13 +707,12 @@ SELECT name, collation_name, is_trustworthy_on, is_db_chaining_on
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>8. 이동된 전체 텍스트 카탈로그 연결  
  다음 예에서는 `AdvWksFtCat` 전체 텍스트 카탈로그를 `AdventureWorks2012` 데이터 및 로그 파일과 연결합니다. 이 예에서는 전체 텍스트 카탈로그를 기본 위치에서 새 위치 `c:\myFTCatalogs`로 이동하고 데이터 및 로그 파일은 기본 위치에 그대로 남아 있습니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -740,7 +737,7 @@ GO
   
 -   `FileStreamResumes`는 FILESTREAM 데이터를 포함합니다. 여기에는 `FSResumes`에 있는 FILESTREAM 데이터 컨테이너 `C:\MyFSfolder\Resumes`가 포함됩니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  
@@ -792,7 +789,7 @@ GO
 ### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>10. 여러 파일이 포함된 FILESTREAM 파일 그룹이 있는 데이터베이스 만들기  
  다음 예에서는 `BlobStore1` 데이터베이스를 만듭니다. 이 데이터베이스에는 행 파일 그룹 하나와 FILESTREAM 파일 그룹 하나(`FS`)가 있습니다. FILESTREAM 파일 그룹에는 두 개의 파일(`FS1` 및 `FS2`)이 포함됩니다. 그런 다음 세 번째 파일(`FS3`)을 FILESTREAM 파일 그룹에 추가하여 데이터베이스를 변경합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   
@@ -850,5 +847,4 @@ GO
  [데이터베이스 파일 이동](../../relational-databases/databases/move-database-files.md)   
  [데이터베이스](../../relational-databases/databases/databases.md)   
  [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-
 

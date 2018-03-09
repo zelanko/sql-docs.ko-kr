@@ -27,17 +27,16 @@ helpviewer_keywords:
 - session trace flags [SQL Server]
 - displaying trace flag status
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 75d78069427891cfab6f7aaef7192d498912611a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4f373d7cf31a4dbc53318245b8ba2800ab9e90b8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 ```  
   
 ## <a name="arguments"></a>인수  
-*trace #*  
+*trace#*  
 상태를 표시할 추적 플래그의 번호입니다. 경우 *trace #*, 및-1이 지정 되지 않은 경우 세션에 대해 사용할 수 있는 추적 플래그를 모두 표시 됩니다.
   
 *n*  
@@ -73,7 +72,7 @@ WITH NO_INFOMSGS
 |---|---|
 |**TraceFlag**|추적 플래그의 이름입니다.|  
 |**상태**|전역 또는 세션에 대한 추적 플래그의 설정 상태가 ON인지 아니면 OFF인지 여부를 나타냅니다.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|**전역**|추적 플래그가 전역으로 설정되었는지 여부를 나타냅니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Global**|추적 플래그가 전역으로 설정되었는지 여부를 나타냅니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**세션**|추적 플래그가 해당 세션에 대해서만 설정되었는지 여부를 나타냅니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS는 추적 플래그 번호에 대한 열과 상태에 대한 열을 반환하여 추적 플래그의 ON(1) 또는 OFF(0) 여부를 표시합니다. 추적 플래그 번호에 대 한 열 머리글 **전역 추적 플래그** 또는 **세션 추적 플래그**전역 또는 세션 추적 플래그의 상태를 확인 하는지 여부에 따라 합니다.
@@ -120,4 +119,3 @@ GO
 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   
-

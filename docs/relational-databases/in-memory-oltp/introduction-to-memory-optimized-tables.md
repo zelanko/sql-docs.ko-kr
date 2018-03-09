@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ea5a719b09f55de405593a29445824ba01902a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50e7a92d87b806a0eb26481cca92b89f932dfa9d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 소개
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ SQL Server 2016부터 Azure SQL Database에는 메모리 내 OLTP에 한정되�
 |기능|고유하게 컴파일된 저장 프로시저를 통한 액세스|해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스|CLR 액세스|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |메모리 액세스에 최적화된 테이블|예|예|아니요*|  
-|메모리 액세스에 최적화된 테이블 형식|예|예|아니요|  
+|메모리 액세스에 최적화된 테이블 형식|예|예|아니오|  
 |고유하게 컴파일된 저장 프로시저|고유하게 컴파일된 저장 프로시저 중첩은 지원되지 않습니다. 참조되는 프로시저도 고유하게 컴파일된 경우 저장 프로시저 내에서 EXECUTE 구문을 사용할 수 있습니다.|예|아니요*|  
   
  *컨텍스트 연결(CLR 모듈을 실행하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 연결)에서는 메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저에 액세스할 수 없습니다. 하지만 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에 액세스할 수 있는 다른 연결을 만들어서 열 수 있습니다.  
@@ -110,7 +111,7 @@ EXECUTE AS CALLER 사용 시에는 호출자의 권한 확인으로 인해 성�
 
 [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 를 사용하여 성능을 향상시킬 수 있는 일반적인 시나리오에 대한 간단한 설명은 [메모리 내 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

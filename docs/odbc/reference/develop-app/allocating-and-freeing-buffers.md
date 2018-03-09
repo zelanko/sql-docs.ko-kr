@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4602d02a25740ce296a059a0f3f1fd82a9a3db47
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 73689fb95eb9b51e7f5f16b10c43256ef63f8dd2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-and-freeing-buffers"></a>할당 하 고 버퍼를 해제 합니다.
 모든 버퍼가 할당 되 고 응용 프로그램에 의해 해제 됩니다. 버퍼를 연기 하지 되는 경우 함수에 대 한 호출 기간 동안 다만 필요 합니다. 예를 들어 **SQLGetInfo** 가리키는 버퍼에 특정 옵션과 관련 된 값을 반환 된 *InfoValuePtr* 인수입니다. 이 버퍼에 대 한 호출 직후 해제할 수 있도록 **SQLGetInfo**다음 코드 예제에 나온 것 처럼:  
@@ -98,4 +96,3 @@ void BindAColumn(SQLHSTMT hstmt)  // WARNING! This function won't work!
    // ValuePtr is freed when BindAColumn exits.  
 }  
 ```
-

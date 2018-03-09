@@ -1,5 +1,5 @@
 ---
-title: "값 포함 프로필 요청 옵션 (데이터 프로 파일링 태스크) | Microsoft Docs"
+title: "값 포함 프로필 요청 옵션(데이터 프로파일링 태스크) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db75039979f7c0e4d6d17beeef4bf4457607290e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 180c0ca64cf4619a8ada7a90d45fa0498e2ea87a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>값 포함 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **값 포함 프로필 요청** 의 옵션을 설정할 수 있습니다. 값 포함 프로필은 두 개의 열 또는 열 집합 간에 겹치는 값을 계산합니다. 따라서 이 프로필은 열 또는 열 집합이 선택한 테이블 간의 외래 키 역할을 수행하기에 적합한지 여부도 확인할 수 있습니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 값 포함 프로필을 사용하여 Sales 테이블의 ProductID 열을 프로파일링하는 중 프로필이 Products 테이블의 ProductID 열에 없는 값이 열에 포함되어 있음을 검색할 수 있습니다.  
@@ -113,12 +112,12 @@ ms.lasthandoff: 08/03/2017
 |값|Description|  
 |-----------|-----------------|  
 |**Default**|원본 테이블에서 열의 데이터 정렬을 기준으로 데이터를 정렬 및 비교합니다.|  
-|**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다. 이진은 가장 빠른 정렬 순서입니다.|  
+|**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다.  이진은 가장 빠른 정렬 순서입니다.|  
 |**DictionarySort**|관련된 언어 또는 알파벳에 대해 사전에 정의된 정렬 및 비교 규칙에 따라 데이터를 정렬 및 비교합니다.|  
   
  **DictionarySort**를 선택하는 경우 다음 테이블에 나열된 옵션 조합을 선택할 수도 있습니다. 이러한 추가 옵션은 기본적으로 선택되어 있지 않습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|비교 시 대문자와 소문자를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 문자열 비교 시 대/소문자가 무시됩니다. 예를 들어 "ABC"는 "abc"와 동일하게 인식됩니다.|  
 |**IgnoreNonSpace**|비교 시 공백 문자와 분음 기호를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 비교 시 분음 기호가 무시됩니다. 예를 들어 "å"와 "a"는 동일합니다.|  
@@ -129,13 +128,13 @@ ms.lasthandoff: 08/03/2017
  **RequestID**  
  이 프로필 요청을 식별할 설명이 포함된 이름을 입력합니다. 일반적으로 자동 생성된 값은 변경하지 않아도 됩니다.  
   
-### <a name="options"></a>옵션이 포함되어 있습니다.  
+### <a name="options"></a>변수  
  **None**  
  프로필의 출력을 구체화하기 위한 임계값 설정을 선택합니다. 이 속성의 기본값은 **Specified**입니다. 자세한 내용은 이 항목의 앞부분에 나오는 "임계값 설정 이해" 섹션을 참조하십시오.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|임계값을 지정하지 않습니다. 키 수준은 해당 값에 관계없이 보고됩니다.|  
+|**없음**|임계값을 지정하지 않습니다. 키 수준은 해당 값에 관계없이 보고됩니다.|  
 |**Specified**|**InclusionStrengthThreshold**에 지정된 임계값을 사용합니다. 포함 수준은 이 값이 임계값보다 큰 경우에만 보고됩니다.|  
 |**Exact**|임계값을 지정하지 않습니다. 포함 수준은 하위 집합 값이 상위 집합 값에 완전히 포함된 경우에만 보고됩니다.|  
   
@@ -147,9 +146,9 @@ ms.lasthandoff: 08/03/2017
  **None**  
  상위 집합 임계값을 지정합니다. 이 속성의 기본값은 **Specified**입니다. 자세한 내용은 이 항목의 앞부분에 나오는 "임계값 설정 이해" 섹션을 참조하십시오.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|임계값을 지정하지 않습니다. 포함 수준은 상위 집합 열의 키 수준에 관계없이 보고됩니다.|  
+|**없음**|임계값을 지정하지 않습니다. 포함 수준은 상위 집합 열의 키 수준에 관계없이 보고됩니다.|  
 |**Specified**|**SupersetColumnsKeyThreshold**에 지정된 임계값을 사용합니다. 포함 수준은 상위 집합 열의 키 수준이 임계값보다 큰 경우에만 보고됩니다.|  
 |**Exact**|임계값을 지정하지 않습니다. 포함 수준은 상위 집합 열이 상위 집합 테이블의 정확한 키인 경우에만 보고됩니다.|  
   
@@ -161,9 +160,8 @@ ms.lasthandoff: 08/03/2017
  **MaxNumberOfViolations**  
  출력에 보고할 최대 포함 위반 수를 지정합니다. 이 속성의 기본값은 100입니다. **Exact** 가 **InclusionThresholdSetting**으로 선택된 경우 이 옵션을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터 작업 편집기 &#40; 프로 파일링 일반 페이지 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [단일 테이블 빠른 프로필 형식 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>참고 항목  
+ [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

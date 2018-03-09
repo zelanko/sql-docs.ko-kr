@@ -3,7 +3,7 @@ title: "put_OLEDBCommand 메서드 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - put_OLEDBCommand method [ADO]
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a5442bf995d16b6edcca4c5f094db50faf00c6fa
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bacb428831a27a0c62c9a92116a6cef54ddd709c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="putoledbcommand-method"></a>put_OLEDBCommand 메서드
 이 메서드는 아무런 작업도 수행 하 고 항상 S_OK를 반환 합니다.  
@@ -45,4 +44,3 @@ HRESULT put_OLEDBCommand(
   
 ## <a name="applies-to"></a>적용 대상  
  [IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)
-

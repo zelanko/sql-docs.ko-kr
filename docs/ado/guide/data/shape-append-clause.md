@@ -3,8 +3,9 @@ title: "APPEND 절 셰이프 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab01c719611309117308c818930b1553741495e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-append-clause"></a>셰이프 APPEND 절
 열 또는 열을 추가 하는 셰이프 명령 APPEND 절은 **레코드 집합**합니다. 대부분의 경우 이러한 열은 장 열을 참조 하는 자식 **레코드 집합**합니다.  
@@ -39,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 ## <a name="description"></a>Description  
  이 절의 일부는 다음과 같습니다.  
   
- *부모 명령*  
+ *parent-command*  
  다음 중 하나 또는 0 (생략할 수 있습니다는 *부모 명령이* 완전히):  
   
 -   반환 하는 공급자 명령 중괄호 ("{")는 **레코드 집합** 개체입니다. 기본 데이터 공급자에는 명령이 실행 될 하 고 해당 공급자의 요구 사항에 해당 구문에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어 같아야 합니다.  
@@ -48,10 +49,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   데이터 공급자에 있는 테이블의 이름이 차례로 나옵니다 테이블 키워드입니다.  
   
- *부모 별칭*  
+ *parent-alias*  
  부모를 참조 하는 선택적 별칭 **레코드 집합**합니다.  
   
- *열 목록*  
+ *column-list*  
  하나 이상의 다음:  
   
 -   집계 열입니다.  
@@ -71,7 +72,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>주의  
- *자식 레코드 집합*  
+ *child-recordset*  
  -   반환 하는 공급자 명령 중괄호 ("{")는 **레코드 집합** 개체입니다. 기본 데이터 공급자에는 명령이 실행 될 하 고 해당 공급자의 요구 사항에 해당 구문에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어 같아야 합니다.  
   
 -   다른 도형 명령 괄호에 포함 합니다.  
@@ -80,19 +81,19 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   데이터 공급자에 있는 테이블의 이름이 차례로 나옵니다 테이블 키워드입니다.  
   
- *자식 별칭*  
+ *child-alias*  
  자식 참조 하는 별칭 **레코드 집합**합니다.  
   
- *부모 열*  
+ *parent-column*  
  열에는 **레코드 집합** 에서 반환 되는 *부모 명령입니다.*  
   
- *자식 열*  
+ *child-column*  
  열에는 **레코드 집합** 에서 반환 되는 *자식 명령*합니다.  
   
- *매개 변수 번호*  
+ *param-number*  
  참조 [작업 매개 변수가 있는 명령의](../../../ado/guide/data/operation-of-parameterized-commands.md)합니다.  
   
- *장 별칭*  
+ *chapter-alias*  
  부모에 추가 된 장 열을 참조 하는 별칭입니다.  
   
 > [!NOTE]

@@ -3,7 +3,7 @@ title: "Name 속성 (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -25,17 +25,16 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO MD]
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 91c6c966079e2a802922c18e1d754ef9ef21fb76
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d898b2e478b9a5dfccb431d0d29088c9e8d9286
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="name-property-ado-md"></a>Name 속성 (ADO MD)
 개체의 이름을 나타냅니다.  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/09/2017
  [ADO MD caption 속성](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
  [Description 속성 (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
  [UniqueName 속성(ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)
-

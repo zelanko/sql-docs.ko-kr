@@ -2,16 +2,13 @@
 title: "다차원 모델의 측정값 및 측정값 그룹 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: measure groups [Analysis Services], defining
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f10c201d936a3580ca02846f43e3592ebfbacebf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a66d433e5b96e8012e8c4c05c14d3078235db958
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>다차원 모델의 측정값 및 측정값 그룹 만들기
-  *측정값* 은 합계, 개수, 최소값, 최대값, 평균 또는 사용자가 만드는 사용자 지정 MDX 식과 같은 숫자 데이터 값의 집계입니다. *측정값 그룹* 은 하나 이상의 측정이 포함된 컨테이너입니다. 모든 측정값은 측정값이 하나만 있더라도 측정값 그룹에 포함됩니다. 큐브는 하나 이상의 측정값과 측정값 그룹을 포함해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *측정값* 합계, 개수, 최소, 최대, 평균 또는 사용자 지정 MDX 식을 만드는 등의 숫자 데이터 값의 집계 됩니다. *측정값 그룹* 은 하나 이상의 측정이 포함된 컨테이너입니다. 모든 측정값은 측정값이 하나만 있더라도 측정값 그룹에 포함됩니다. 큐브는 하나 이상의 측정값과 측정값 그룹을 포함해야 합니다.  
   
  이 항목은 다음과 같은 섹션으로 구성됩니다.  
   
@@ -59,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|  
 |**원본(source)**|대부분의 측정값은 AdventureWorks 데이터 웨어하우스에 있는 Internet Sales 및 Reseller Sales 테이블의 Sales Amount 열과 같이 외부 데이터 웨어하우스에 있는 팩트 테이블의 숫자 열에서 가져오지만 전적으로 사용자가 정의한 계산을 기반으로 새 측정값을 만들 수도 있습니다.<br /><br /> 차원 테이블의 특성 열을 사용하여 측정값을 정의할 수도 있지만 이러한 측정값은 일반적으로 집계 동작 면에서 반가산적이거나 비가산적입니다. 반가산적 동작에 대한 자세한 내용은 [반가산적 동작 정의](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)를 참조하세요.|  
 |**집계(aggregation)**|기본적으로 측정값이 각 차원에 따라 합계되지만 그러나 **AggregateFunction** 속성을 사용하여 이 동작을 수정할 수 있습니다. 목록은 [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) 을 참조하세요.|  
-|**속성**|추가 속성 설명은 [Configure Measure Properties](../../analysis-services/multidimensional-models/configure-measure-properties.md) 을 참조하세요.|  
+|**Properties**|추가 속성 설명은 [Configure Measure Properties](../../analysis-services/multidimensional-models/configure-measure-properties.md) 을 참조하세요.|  
   
 ##  <a name="bkmk_modeling"></a> 팩트 및 팩트 테이블의 측정값 및 측정값 그룹 모델링  
  마법사를 실행하기 전에 측정값 정의의 근간이 되는 모델링 원칙을 이해하는 것이 좋습니다.  

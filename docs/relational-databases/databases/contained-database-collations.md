@@ -2,27 +2,30 @@
 title: "포함된 데이터베이스 데이터 정렬 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a064d177390a6e9037f02cb7ab4c05364122273
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 00a724d305e55a58b257b699f298cbd5044a3510
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="contained-database-collations"></a>포함된 데이터베이스 데이터 정렬
-  여러 가지 속성이 대/소문자 구분, 악센트 구분 및 사용되는 기본 언어를 비롯한 텍스트 데이터의 같음 의미 체계 및 정렬 순서에 영향을 줍니다. 이러한 사항은 데이터에 대한 데이터 정렬 선택을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 전달됩니다. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 여러 가지 속성이 대/소문자 구분, 악센트 구분 및 사용되는 기본 언어를 비롯한 텍스트 데이터의 같음 의미 체계 및 정렬 순서에 영향을 줍니다. 이러한 사항은 데이터에 대한 데이터 정렬 선택을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 전달됩니다. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
  데이터 정렬은 사용자 테이블에 저장된 데이터에 적용될 뿐만 아니라 메타데이터, 임시 개체, 변수 이름 등 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 처리하는 모든 텍스트에 적용됩니다. 이러한 항목의 처리 방식은 포함되지 않은 데이터베이스인지 여부에 따라 다릅니다. 이러한 변경 내용은 대부분의 사용자에게는 영향을 미치지 않지만 인스턴스 독립 및 일관성을 제공하는 데 도움이 됩니다. 하지만 이로 인해 일부 혼란이 발생할 수도 있고 포함된 데이터베이스와 포함되지 않은 데이터베이스에 모두 액세스하는 세션의 경우에는 문제가 될 수도 있습니다.  
   
@@ -31,16 +34,16 @@ ms.lasthandoff: 11/09/2017
 ## <a name="non-contained-databases"></a>포함되지 않은 데이터베이스  
  모든 데이터베이스는 기본 데이터 정렬이 있습니다. 기본 데이터 정렬은 데이터베이스를 만들거나 변경할 때 설정할 수 있습니다. 이러한 데이터 정렬은 데이터베이스의 모든 메타데이터에 사용되며 데이터베이스 내 모든 문자열 열의 기본값으로 사용됩니다. 사용자는 **COLLATE** 절을 사용하여 특정 열의 데이터 정렬을 다르게 선택할 수 있습니다.  
   
-### <a name="example-1"></a>예제 1  
+### <a name="example-1"></a>예 1  
  예를 들어 베이징에서 작업하는 경우 중국어 데이터 정렬을 사용할 것입니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  이제 열을 만들면 이 열의 기본 데이터 정렬은 중국어 데이터 정렬이 되지만 원하는 경우 다른 데이터 정렬을 선택할 수 있습니다.  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -53,7 +56,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -65,7 +68,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>예제 2  
  예를 들어 **Latin1_General** 데이터 정렬을 사용하는 인스턴스에서 위의 중국어 데이터베이스가 사용되는 경우를 가정합니다.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -89,7 +92,7 @@ JOIN #T2
   
  임시 테이블에 대해 명시적으로 데이터 정렬을 수행하여 이 문제를 해결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 **COLLATE** 절에 제공되는 **DATABASE_DEFAULT** 키워드를 사용하면 편리합니다.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -139,7 +142,7 @@ END;
   
  앞에서 설명된 임시 테이블 예를 보면 이 데이터 정렬 동작 때문에 대부분의 임시 테이블 사용 시 명시적으로 **COLLATE** 절을 사용할 필요가 없음을 알 수 있습니다. 포함된 데이터베이스에서 데이터베이스와 인스턴스 데이터 정렬이 다른 경우에도 이제 이 코드는 오류 없이 실행됩니다.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  
@@ -167,7 +170,7 @@ JOIN #T2
   
  몇 가지 예를 들어 이러한 경우를 설명하겠습니다. 이 경우 데이터베이스 데이터 정렬이 기본 데이터 정렬( `MyCDB` Latin1_General_100_CI_AS_WS_KS_SC **)로 설정된**라는 부분적으로 포함된 데이터베이스가 있다고 가정합니다. 인스턴스 데이터 정렬은 **Latin1_General_100_CS_AS_WS_KS_SC**라고 가정합니다. 두 데이터 정렬은 대/소문자 구분 여부에서만 다릅니다.  
   
-### <a name="example-1"></a>예제 1  
+### <a name="example-1"></a>예 1  
  다음 예에서는 참조가 일치하는 항목을 정확히 하나 찾는 경우를 보여 줍니다.  
   
 ```  
@@ -236,7 +239,7 @@ GO
   
  개체 이름 '#A'이(가) 잘못되었습니다.  
   
-### <a name="example-3"></a>예 3  
+### <a name="example-3"></a>예제 3  
  다음 예에서는 참조가 원래는 구별되었던 여러 개의 일치 항목을 찾는 경우를 보여 줍니다. 먼저 인스턴스와 동일한 대/소문자 구분 데이터 정렬을 가지고 있는 **tempdb** 에서 시작하여 다음 문을 실행합니다.  
   
 ```  

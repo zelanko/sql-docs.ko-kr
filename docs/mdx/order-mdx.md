@@ -2,34 +2,32 @@
 title: Order (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ORDER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Order function
+f1_keywords: ORDER
+dev_langs: kbMDX
+helpviewer_keywords: Order function
 ms.assetid: 84acff52-2443-4424-a09e-694e6f14c109
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: c67e4106b760f9218172e7ada5628e34dd308f8a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 98037f9c56523e05a1d3af44078bf8da51cd53e5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="order-mdx"></a>Order(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정한 집합의 멤버를 정렬합니다. 계층을 유지하거나 바꿀 수도 있습니다.  
   
@@ -57,7 +55,7 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  문자열로 표현된 숫자를 반환하는 셀 좌표의 유효한 문자열 식으로서, 일반적으로 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **순서** 함수 계층적 일 수 있습니다 (사용 하 여 지정 된 대로 **ASC** 또는 **DESC** 플래그) 비계층적 또는 (사용 하 여 지정 된 대로 **BASC** 또는 **BDESC** 플래그는 **B** "break hierarchy"에). 경우 **ASC** 또는 **DESC** 지정는 **순서** 함수 먼저 계층에서의 위치에 따라 멤버를 정렬 하 고 다음 각 수준을 정렬 합니다. 경우 **BASC** 또는 **BDESC** 지정는 **순서** 함수는 계층과 관계 없이 집합에서 멤버를 정렬 합니다. 플래그가 지정 경우 **ASC** 값이 기본값입니다.  
   
  경우는 **순서** 함수에 사용 되는 설정 된 둘 이상의 계층이 크로스 조인 및 **DESC** 플래그가 사용 된 집합에 있는 마지막 계층의 구성원만 정렬 됩니다. 이 사항은 집합에 있는 모든 계층이 정렬되는 Analysis Services 2000에서 변경되었습니다.  
@@ -227,4 +225,3 @@ FROM [Adventure Works]
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

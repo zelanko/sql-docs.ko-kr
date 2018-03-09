@@ -1,7 +1,7 @@
 ---
 title: ROUND (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-caps.latest.revision: 40
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: cba8b5a9b62a21fc810ff9bb5fcd3d0c6429f9f5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 9dbfe719e4216e778a28f1a9afb8a1995c09acb1
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="round-transact-sql"></a>ROUND(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,15 +42,8 @@ ms.lasthandoff: 10/17/2017
 ## <a name="syntax"></a>구문  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
   
 ROUND ( numeric_expression , length [ ,function ] )  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-ROUND (numeric_expression , length )  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -91,7 +83,7 @@ ROUND (numeric_expression , length )
 |ROUND (748.58,-1)|750.00|  
 |ROUND (748.58,-2)|700.00|  
 |ROUND(748.58, -3)|748.58은 기본적으로 10진수(5,2)로 1000.00을 반환할 수 없기 때문에 산술 오버플로가 발행합니다.|  
-|4자릿수까지 반올림하려면 입력 데이터 형식을 변경합니다. 예를 들어<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
+|4자릿수까지 반올림하려면 입력 데이터 형식을 변경합니다. 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
 ## <a name="examples"></a>예  
   
@@ -146,22 +138,6 @@ GO
 150.00  
   
 (1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-using-round-and-estimates"></a>4. ROUND 및 어림값 사용  
- 다음 예에서는 마지막 자릿수가 항상 어림값인 `ROUND`를 사용하는 두 개의 식을 보여 줍니다.  
-  
-```  
-SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-
- ```
---------  ---------
-123.995000    123.995444
 ```
   
 ## <a name="see-also"></a>관련 항목:  
@@ -169,8 +145,4 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [FLOOR &#40; Transact SQL &#41;](../../t-sql/functions/floor-transact-sql.md)   
- [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-  
-  
-
-
+ [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

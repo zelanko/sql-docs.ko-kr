@@ -2,33 +2,29 @@
 title: "Synchronize 명령 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bdf14cf2c3ac199c1108cd8d1178ede676976baa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2904954269f32dc80d603c3c0b045685d58bc2d5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="synchronize-command-tmsl"></a>Synchronize 명령 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later](../../includes/ssas-appliesto-sql2016-later.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   Analysis Services 데이터베이스를 기존의 다른 데이터베이스와 동기화합니다.  
   
@@ -50,8 +46,8 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**속성**|**Default**|**Description**|  
-|데이터베이스||동기화 할 데이터베이스 개체의 이름입니다.|  
+|**속성**|**Default**|**설명**|  
+|database||동기화 할 데이터베이스 개체의 이름입니다.|  
 |원본(source)||원본 서버에 연결 하는 데 연결 문자열입니다.|  
 |synchronizeSecurity|skipMembership|역할 및 사용 권한이 포함 되는 보안 정의 복원 하는 방법을 지정 하는 열거형 값입니다. CopyAll, skipMembership, ignoreSecurity 유효한 값에 포함 되어 있습니다.|  
 |applyCompression|True|True 이면 나타내고; 동기화 작업을 하는 동안 압축을 적용할 하는 Boolean 그렇지 않으면 false입니다.|  
@@ -76,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

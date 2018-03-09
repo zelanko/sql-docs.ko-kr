@@ -1,5 +1,5 @@
 ---
-title: "SSIS 패키지 저장 (SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs"
+title: "SSIS 패키지 저장(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -15,29 +15,28 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: 64
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 6ebbab742350e6874b86213c1fbf516e095a1e9a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS 패키지 저장(SQL Server 가져오기 및 내보내기 마법사)
-  에 지정 된 경우는 **를 저장 하 고 패키지 실행** 설정을으로 SQL Server Integration Services (SSIS) 패키지를 저장 하려는 페이지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서는 **i S 패키지 저장**합니다. 이 페이지에서 마법사로 만든 패키지를 저장 하기 위한 추가 옵션을 지정 합니다.  
+  **패키지 저장 및 실행** 페이지에서 SSIS(SQL Server Integration Services) 패키지로 설정을 저장하도록 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **SSIS 패키지 저장**을 표시합니다. 이 페이지에서 마법사에서 만든 패키지를 저장하기 위한 추가 옵션을 지정합니다.  
 
 **SSIS 패키지 저장** 페이지에 표시되는 옵션은 이전에 **패키지 저장 및 실행** 페이지에서 패키지를 SQL Server 또는 파일 시스템에 저장하도록 선택했는지에 따라 달라집니다. **패키지 저장 및 실행** 페이지를 다시 살펴보려면 [패키지 저장 및 실행](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)을 참조하세요.
  
 **패키지란?** 마법사에서는 SSIS(SQL Server Integration Services)를 사용하여 데이터를 복사합니다. SSIS에서 기본 단위는 패키지입니다. 마법사는 사용자가 마법사 페이지를 진행하고 옵션을 지정하면 메모리 내에 SSIS 패키지를 만듭니다.
 
-## <a name="screen-shot---common-options"></a>스크린 샷-일반 옵션
-다음 스크린 샷에 표시의 첫 번째 부분에서 **i S 패키지 저장** 마법사의 페이지입니다. 페이지의 나머지에 따라 달라 선택한 패키지 대상에 따라 달라 지는 옵션입니다.
+## <a name="screen-shot---common-options"></a>스크린샷 - 일반 옵션
+다음 스크린샷에서는 마법사의 **SSIS 패키지 저장** 페이지에 있는 첫 번째 부분을 보여 줍니다. 페이지의 나머지 부분에는 선택한 패키지 대상에 따라 달라지는 다양한 옵션이 있습니다.
 
-![패키지-일반 옵션 저장](../../integration-services/import-export-data/media/save-package-common-options.png)
+![패키지 저장 - 일반 옵션](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>패키지에 대한 이름 및 설명 입력  
  **이름**  
@@ -51,14 +50,14 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>스크린샷 - SQL Server에 패키지 저장
 
- 다음 스크린샷에 표시는 **i S 패키지 저장** 선택한 경우 마법사의 페이지는 **SQL Server** 옵션에 **를 저장 하 고 패키지 실행** 페이지. 
+ 다음 스크린샷에서는 **패키지 저장 및 실행** 페이지에서 **SQL Server** 옵션을 선택한 경우 마법사의 **SSIS 패키지 저장** 페이지를 보여 줍니다. 
   
-![가져오기 및 내보내기 마법사의 페이지를 SSIS 패키지 저장](../../integration-services/import-export-data/media/save-package2.png "가져오기 및 내보내기 마법사의 페이지 i S 패키지 저장")  
+![가져오기 및 내보내기 마법사의 SSIS 패키지 저장 페이지](../../integration-services/import-export-data/media/save-package2.png "가져오기 및 내보내기 마법사의 SSIS 패키지 저장 페이지")  
 
-## <a name="options-to-specify-target--sql-server"></a>지정 하는 옵션 (대상 = SQL Server) 
+## <a name="options-to-specify-target--sql-server"></a>지정할 옵션(대상 = SQL Server) 
 
  > [!NOTE]
- > 마법사에서 패키지를 저장 된 **msdb** 여기에 데이터베이스는 **sysssispackages** 테이블입니다. 이 옵션은 않습니다 **하지** SSIS 카탈로그 데이터베이스 (SSISDB)에 패키지를 저장 합니다.  
+ > 마법사는 **msdb** 데이터베이스의 **sysssispackages** 테이블에 패키지를 저장합니다. 이 옵션은 SSISDB(SSIS 카탈로그 데이터베이스)에 패키지를 **저장하지 않습니다**.  
  
  **서버 이름**  
  대상 서버 이름을 선택하거나 입력합니다.  
@@ -69,30 +68,30 @@ Windows 통합 인증을 사용하여 서버에 연결합니다. 이 방법은 �
  **SQL Server 인증 사용**  
 SQL Server 인증을 사용하여 서버에 연결합니다.  
   
- **사용자 이름**  
-SQL Server 인증을 지정한 경우에 사용자 이름을 입력 합니다.  
+ **User name**  
+SQL Server 인증을 지정한 경우 사용자 이름을 입력합니다.  
   
  **암호**  
-SQL Server 인증을 지정한 경우에 암호를 입력 합니다.  
+SQL Server 인증을 지정한 경우 암호를 입력합니다.  
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>스크린샷 - 파일 시스템에 패키지 저장
  
-다음 스크린샷에 표시는 **i S 패키지 저장** 선택한 경우 마법사의 페이지는 **파일 시스템** 옵션에 **를 저장 하 고 패키지 실행** 페이지. 
+다음 스크린샷에서는 **패키지 저장 및 실행** 페이지에서 **파일 시스템** 옵션을 선택한 경우 마법사의 **SSIS 패키지 저장** 페이지를 보여 줍니다. 
   
-![가져오기 및 내보내기 마법사의 페이지를 SSIS 패키지 저장](../../integration-services/import-export-data/media/save-package1.png "가져오기 및 내보내기 마법사의 페이지 i S 패키지 저장")  
+![가져오기 및 내보내기 마법사의 SSIS 패키지 저장 페이지](../../integration-services/import-export-data/media/save-package1.png "가져오기 및 내보내기 마법사의 SSIS 패키지 저장 페이지")  
 
-## <a name="options-to-specify-target--file-system"></a>지정 하는 옵션 (대상 = 파일 시스템)
+## <a name="options-to-specify-target--file-system"></a>지정할 옵션(대상 = 파일 시스템)
 
  **파일 이름**  
- 대상 파일의 경로 및 파일 이름을 입력 하거나 사용 하 여는 **찾아보기** 단추 대상을 선택 합니다.  
+ 대상 파일의 경로와 파일 이름을 입력하거나 **찾아보기** 단추를 사용하여 대상을 선택합니다.  
   
 > [!TIP]
-> 입력 하 여 또는 검색 하 여 대상 폴더를 지정 해야 합니다. 경로 없이 파일 이름을 입력할 경우 알 수 없는 패키지 저장 됩니다. 또한 마법사에서 파일을 저장할 수 있는 권한이 없는 위치에 패키지를 저장하려고 시도하고 오류가 발생할 수도 있습니다.  
+> 대상 폴더를 입력하거나 검색하여 지정해야 합니다. 경로 없이 파일 이름만 입력하면 마법사에서 패키지를 저장하는 위치를 인식할 수 없습니다. 또한 마법사에서 파일을 저장할 수 있는 권한이 없는 위치에 패키지를 저장하려고 시도하고 오류가 발생할 수도 있습니다.  
 >   
 >  패키지 파일의 저장 위치를 기억해 두세요.  
   
  **찾아보기**  
- 필요에 따라 이동 대상 파일에 대 한 경로 선택 하 고 **패키지 저장** 대화 상자.  
+ 필요에 따라 **패키지 저장** 대화 상자에서 대상 파일의 경로를 찾아 선택합니다.  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>패키지 저장을 위한 두 페이지의 옵션 정보  
  **SSIS 패키지 저장** 페이지는 SSIS 패키지를 저장하기 위한 옵션을 선택하는 두 페이지 중 하나입니다.  
@@ -118,10 +117,9 @@ SQL Server 인증을 지정한 경우에 암호를 입력 합니다.
 ## <a name="whats-next"></a>다음 단계  
  패키지 저장 옵션을 추가로 지정한 후 다음 페이지는 **마법사 완료**입니다. 이 페이지에서는 마법사에서 선택한 내용을 검토하고 작업을 시작합니다. 자세한 내용은 [마법사 완료](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)를 참조하세요.  
  
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [패키지 저장](../../integration-services/save-packages.md)  
 [Integration Services(SSIS) 패키지 실행](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)
  
  
-

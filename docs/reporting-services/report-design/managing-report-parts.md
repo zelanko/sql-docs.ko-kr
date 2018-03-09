@@ -2,26 +2,26 @@
 title: "보고서 파트 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
   보고서 파트는 여러 사용자가 다시 사용하고 페이지가 매겨진 보고서 및 여러 보고서에서 다시 사용할 수 있습니다. 사용자는 서버에서 보고서 파트를 검색하여 보고서에 추가할 수 있습니다.  또한 사용자에게 서버의 보고서 파트에 대한 업데이트를 알리고 보고서 파트의 새 버전을 다시 게시할 수 있습니다. 이러한 보고서 제작 동작은 Reporting Services 보안 권한에 의해 제어되고 이의 영향을 받습니다.  이 항목에서는 서버에 게시된 보고서 파트 속성 및 동작을 검토합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
  보고서 작성기와 같은 보고서 제작 응용 프로그램에서 SharePoint 통합 모드의 보고서 서버로 보고서 파트를 게시하면 보고서 서버 카탈로그도 업데이트되므로 갤러리 검색에도 새 보고서 파트나 업데이트 보고서 파트가 정확히 반영됩니다.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>SharePoint 폴더로 보고서 파트 직접 업로드  
- 보고서 파트가 보고서 제작 응용 프로그램에서 게시되지 않고 대신에 SharePoint 문서 폴더로 직접 업로드되는 경우 보고서 서버 카탈로그가 업데이트되지 않습니다. 따라서 보고서 파트 갤러리를 검색할 때 업로드된 보고서 파트를 찾을 수 없습니다. SharePoint 폴더와 보고서 서버 카탈로그의 동기화 상태를 유지하기 위해 SharePoint 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 동기화 기능을 활성화할 수 있습니다. 자세한 내용은 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능 활성화](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)를 참조하세요.  
+ 보고서 파트가 보고서 제작 응용 프로그램에서 게시되지 않고 대신에 SharePoint 문서 폴더로 직접 업로드되는 경우 보고서 서버 카탈로그가 업데이트되지 않습니다. 따라서 보고서 파트 갤러리를 검색할 때 업로드된 보고서 파트를 찾을 수 없습니다. SharePoint 폴더와 보고서 서버 카탈로그의 동기화 상태를 유지하기 위해 SharePoint 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 동기화 기능을 활성화할 수 있습니다. 자세한 내용은 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)를 참조하세요.  
   
  GetProperties 및 SetProperties와 같은 일부 Reporting Services 관리 API를 호출하여 파일을 동기화할 수도 있습니다.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
 |속성|Description|보고서 파트<br /><br /> 갤러리 검색 조건|  
 |--------------|-----------------|---------------------------------------------|  
-|이름|사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
+|속성|사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
 |Description|사용자가 갤러리에서 쉽게 찾을 수 있도록 보고서 파트 이름을 구성할 수 있습니다. 예를 들어 판매 관련 데이터 및 프레젠테이션이 포함되는 모든 보고서 파트를 찾을 때 "판매>>"로 시작하는 설명을 검색할 수 있습니다.|예|  
 |CreatedBy|보고서 파트를 보고서 서버 데이터베이스에 추가한 사용자의 ID입니다. 정확한 형식은 인증 방식에 따라 다릅니다. 예를 들어 일부 인증 방법은 CreatedBy 및 ModifiedBy 필드에 전체 도메인\사용자 이름이 표시됩니다.|예|  
 |CreationDate|보고서 파트가 처음 생성된 날짜입니다.<br /><br /> 사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="server-in-native-mode"></a>기본 모드의 서버  
   
-|작업|역할|  
+|동작|역할|  
 |-------------|-----------|  
 |보고서 파트 추가, 삭제, 항목 속성 편집, 보안 관리 및 다운로드|내용 관리자<br /><br /> 내 보고서|  
 |보고서 파트 추가, 삭제 및 다운로드|게시자|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드의 서버  
   
-|작업|역할|  
+|동작|Role|  
 |-------------|----------|  
 |보고서 파트 추가, 삭제, 항목 속성 편집, 보안 관리 및 다운로드|모든 권한|  
 |보고서 파트 추가, 삭제, 항목 속성 편집 및 다운로드|디자인<br /><br /> 참가|  
@@ -94,11 +94,10 @@ ms.lasthandoff: 08/09/2017
   
 -   보고서 파트는 기존 "리소스" 항목 유형과 동일한 사용 권한 정책을 사용합니다. 보안 상속 관점에서 폴더 내의 기존 리소스 항목과 보고서 파트는 차이가 없습니다. 보고서 파트는 같은 폴더에 있는 이미지와 동일한 사용 권한 정책을 상속합니다. 구별해야 하는 경우에는 원하는 보고서 파트에 대해 항목 수준 보안을 구성할 수 있습니다. 또는 올바른 사용 권한이 구성된 별도의 폴더에 보고서 파트를 넣을 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 파트 문제 해결(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [보고서 디자이너 &#40;의 보고서 파트 Ssrs&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   
-

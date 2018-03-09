@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ffa8a350cb4531f9d4a6d1439a4dad0682189266
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1cb8520351369dad761862132211b5222c52e3ae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,17 +44,17 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>인수  
- *거리*  
+ *distance*  
  한 **float** 거리를 지정 하는 식의 **기 하 도형** 인스턴스와의 버퍼를 계산할 합니다.  
   
- *허용 오차*  
+ *tolerance*  
  이 **float** 버퍼 거리의 허용 오차를 지정 하는 식입니다.  
   
  *허용 오차* 은 반환된 된 선형 근사값에 대 한 이상적인 버퍼 거리의 최대 편차를 나타냅니다.  
   
  예를 들어 요소의 이상적인 버퍼 거리는 원이지만 이는 다각형으로 대략 나타내야 합니다. 허용 오차가 작을수록 다각형의 점 개수가 늘어나 결과가 더 복잡해지지만 오류는 줄어듭니다.  
   
- *상대*  
+ *relative*  
  **비트** 지정 여부는 *허용 오차* 상대 또는 절대 값이 합니다. 경우 '값은 TRUE' 또는 1 인 다음 허용 오차는 상대적 이며의 곱으로 계산 되는 *허용 오차* 매개 변수와 인스턴스 경계 상자 지름의 합니다. 'FALSE' 또는 0 허용 오차는 절대적 하는 경우 및 *허용 오차* 값은 반환된 된 선형 근사값에 대 한 이상적인 버퍼 거리의 최대 절대 편차입니다.  
   
 ## <a name="return-types"></a>반환 형식  
@@ -101,8 +100,7 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
   
 ## <a name="see-also"></a>관련 항목:  
  [Stbuffer&#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
- [Geometry 인스턴스의 확장된 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
-
 

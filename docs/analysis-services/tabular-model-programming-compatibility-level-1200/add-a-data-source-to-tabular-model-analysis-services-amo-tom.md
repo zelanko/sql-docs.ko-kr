@@ -2,35 +2,29 @@
 title: "테이블 형식 모델 (Analysis Services AMO-TOM)에 데이터 원본을 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 501e99294ccc603a8815448c7c23b380ea125b46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 692de4d83bfef7a61b11079fb31bb395da8771aa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>테이블 형식 모델 (Analysis Services AMO-TOM)에 데이터 소스 추가
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-**DataSource** Microsoft.AnalysisServices.Tabular 네임 스페이스의 클래스 값은 데이터 새로 고침 작업 중 유형을 지정 하는 테이블 형식 모델의 데이터 원본에 대 한 추상화 및 가져온된 데이터의 위치입니다. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]**DataSource** Microsoft.AnalysisServices.Tabular 네임 스페이스의 클래스 값은 데이터 새로 고침 작업 중 유형을 지정 하는 테이블 형식 모델의 데이터 원본에 대 한 추상화 및 가져온된 데이터의 위치입니다. 
 
 파생 된 클래스의 개체를 인스턴스화하고 테이블 형식 모델에 데이터 소스를 추가할 수 있습니다 **DataSource**, 다음에 추가 하는 **DataSources** 모델 개체의 컬렉션입니다. 호출 서버에 변경 내용을 커밋 **Model.SaveChanges()** 또는 **Database.Update(UpdateOptions.ExpandFull)**합니다. 
 
@@ -142,4 +136,3 @@ namespace TOMSamples
 ## <a name="next-step"></a>다음 단계 
 
 모델 내에서 데이터 원본에서 원본 열을 모델에서 대상 열에 매핑되는 데이터 바인딩을 설정 해야 합니다. 파티션 최소 테이블당 1 데이터를 저장 하는 정의 해야 합니다. 다음 링크를 클릭 하는 방법을 보여 줍니다: [테이블, 파티션 및 열 만들기](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-tables-partitions-and-columns-in-a-tabular-model.md) 
-

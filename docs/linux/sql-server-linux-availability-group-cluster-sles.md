@@ -3,40 +3,39 @@ title: "SLES 클러스터 SQL Server 가용성 그룹에 대 한 구성 | Micros
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
+ms.openlocfilehash: 9b0c068ce56a2f499ee452b56ca54025485163f5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 50a2633790b9878a8be2a9a3c417fc877a37633d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 SLES 클러스터를 구성 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 가이드를 SQL Server에서 SUSE Linux Enterprise Server (SLES) 12 s p 2에 대 한 3 개 노드 클러스터를 만드는 지침을 제공 합니다. 고가용성을 위해 Linux에서 가용성 그룹에 노드가 3 개 필요-참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. 클러스터링 레이어 SUSE 기반 [높은 가용성 확장 (HAE)](https://www.suse.com/products/highavailability) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. 
 
 클러스터 구성, 리소스 에이전트 옵션, 관리, 모범 사례 및 권장 사항에 대 한 자세한 내용은 참조 하십시오. [SUSE Linux Enterprise 높은 가용성 확장 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)합니다.
 
 >[!NOTE]
->이 시점에서 linux Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. Linux에서 SQL Server 서비스의 클러스터를 인식할 수 없는 경우 Pacemaker 모든 가용성 그룹 리소스를 포함 하 여 클러스터 리소스의 오케스트레이션을 제어 합니다. Linux에서 항상에 가용성 그룹 동적 관리 뷰 (Dmv) sys.dm_hadr_cluster 같은 클러스터 정보를 제공 하는에 되지는지 않습니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에는 동일한 동등한 옵션이 없습니다. 장애 조치 후 투명 하 게 다시 연결에 사용할 수신기를 만들 수 있지만 (아래 설명 됨) 가상 IP 리소스를 만드는 데 IP와 함께 DNS 서버에서 수신기 이름은 수동으로 등록 해야 합니다.
+>이 시점에서 linux Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. Linux에서 SQL Server 서비스의 클러스터를 인식할 수 없는 경우 Pacemaker 모든 가용성 그룹 리소스를 포함 하 여 클러스터 리소스의 오케스트레이션을 제어 합니다. Linux에서 항상에 가용성 그룹 동적 관리 뷰 (Dmv) sys.dm_hadr_cluster 같은 클러스터 정보를 제공 하는에 되지는지 않습니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에는 동일한 동등한 옵션이 없습니다. 장애 조치 후 투명 하 게 다시 연결에 사용할 수신기를 만들 수 있지만 (다음 섹션에서 설명)으로 가상 IP 리소스를 만드는 데 IP와 함께 DNS 서버에서 수신기 이름은 수동으로 등록 해야 합니다.
 
 
 ## <a name="roadmap"></a>로드맵
 
-고가용성을 위해 Linux 서버에 가용성 그룹을 만드는 단계는 Windows Server 장애 조치 클러스터에는 단계와에서 다릅니다. 다음 목록에서는 고급 단계를 설명합니다. 
+고가용성을 위한 가용성 그룹을 만드는 절차는 Linux 서버와 Windows Server 장애 조치 클러스터 간에 다릅니다. 다음 목록에서는 단계를 간략히 설명합니다. 
 
 1. [SQL Server 클러스터 노드에서 구성](sql-server-linux-setup.md)합니다.
 
@@ -47,7 +46,7 @@ ms.lasthandoff: 08/02/2017
    클러스터 리소스 관리자를 구성 하는 방법은 특정 Linux 배포에 따라 달라 집니다. 
 
    >[!IMPORTANT]
-   >프로덕션 환경에서는 고가용성을 위해 STONITH 같은 펜스 에이전트를 해야 합니다. 이 설명서에서 데모 펜싱 에이전트를 사용 하지 마십시오. 데모는 테스트 및 유효성 검사에만 적용 됩니다. 
+   >프로덕션 환경에서는 고가용성을 위해 STONITH 같은 펜스 에이전트를 해야 합니다. 이 문서의 예제 펜싱 에이전트를 사용 하지 마십시오. 테스트 및 유효성 검사에만 서로입니다. 
    
    >Pacemaker 클러스터 펜싱을 사용 하 여 알려진 상태로 클러스터를 반환 합니다. 펜싱을 구성 하는 방법은 배포 및 환경에 따라 달라 집니다. 이때 펜싱 일부 클라우드 환경에서 사용할 수 없는 경우 참조 [SUSE Linux Enterprise 고가용성 확장](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing)합니다.
 
@@ -55,7 +54,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-아래 종단 간 시나리오를 완료 하려면 세 컴퓨터 3 개 노드 클러스터 배포를 해야 합니다. 다음 단계에는 이러한 서버를 구성 하는 방법을 간략하게 설명 합니다.
+다음과 같은 종단 간 시나리오를 완료 하려면 3 개 노드 클러스터를 배포 하는 3 개의 컴퓨터가 필요 합니다. 다음 단계에는 이러한 서버를 구성 하는 방법을 간략하게 설명 합니다.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>설정 하 고 각 클러스터 노드에서 운영 체제를 구성 합니다. 
 
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/02/2017
 
 1. 클러스터의 일부가 될 노드는 서로 통신할 수 있는지 확인 합니다.
 
-   다음 예제와 `/etc/hosts` SLES1, SLES2 및 SLES3 이라는 세 개의 노드를 추가 합니다.
+   다음 예제와 `/etc/hosts` SLES1, SLES2, 및 SLES3 이라는 세 개의 노드를 추가 합니다.
 
    ```
    127.0.0.1   localhost
@@ -119,11 +118,11 @@ Linux 서버에 가용성 그룹을 구성 하 고 클러스터 리소스를 구
 
    NTP 부팅 시간에 시작 하도록 구성 되지 않았습니다, 메시지가 나타납니다. 
 
-   그래도 계속 하려는 경우 스크립트 자동으로 대 한 SSH 액세스 하며 Csync2 동기화 도구에 대 한 키를 생성 하 고 둘 다에 대해 필요한 서비스를 시작 합니다. 
+   그래도 계속 하기로 스크립트가 자동으로 대 한 SSH 액세스 하며 Csync2 동기화 도구에 대 한 키를 생성 하 고 둘 다에 대해 필요한 서비스를 시작 합니다. 
 
 3. 구성 하려면 클러스터 통신 계층 (Corosync): 
 
-   a. 바인딩할 네트워크 주소를 입력 합니다. 기본적으로 스크립트는 t h 0의 네트워크 주소를 제안 합니다. 또는 bond0의 주소 예를 들어 다른 네트워크 주소를 입력 합니다. 
+   a. 바인딩할 네트워크 주소를 입력 합니다. 기본적으로 스크립트에서는 t h 0의 네트워크 주소를 제안합니다. 또는 bond0의 주소 예를 들어 다른 네트워크 주소를 입력 합니다. 
 
    b. 멀티 캐스트 주소를 입력 합니다. 스크립트는 기본으로 사용할 수 있는 한 임의의 주소를 제안 합니다. 
 
@@ -148,11 +147,11 @@ Linux 서버에 가용성 그룹을 구성 하 고 클러스터 리소스를 구
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>기존 클러스터에 노드 추가
 
-하나 이상의 노드를 실행 하는 클러스터를 설정한 경우 ha 클러스터-조인 부트스트랩 스크립트와 함께 더 많은 클러스터 노드를 추가 합니다. 만 필요한 스크립트는 기존 클러스터 노드에 대 한 액세스 하 고 현재 컴퓨터에 기본 설치를 자동으로 완료 됩니다. 다음 단계를 수행 합니다.
+하나 이상의 노드를 실행 하는 클러스터를 설정한 경우 ha 클러스터-조인 부트스트랩 스크립트와 함께 더 많은 클러스터 노드를 추가 합니다. 만 필요한 스크립트는 기존 클러스터 노드에 대 한 액세스 하 고 현재 컴퓨터에 기본 설치를 자동으로 완료 됩니다. 다음 단계를 따르십시오.
 
 사용 하 여 기존 클러스터 노드를 구성한 경우는 `YaST` 모듈 클러스터를 실행 하기 전에 다음 선행 조건을 충족 되는지 확인 `ha-cluster-join`:
 - 기존 노드에서 상의 루트 사용자에 SSH 키에 대 한 passwordless 로그인 합니다. 
-- `Csync2`기존 노드에서 구성 됩니다. 자세한 내용은 구성 Csync2 YaST 가리킵니다. 
+- `Csync2` 기존 노드에서 구성 됩니다. 자세한 내용은 YaST와 Csync2 구성을 참조 하십시오. 
 
 1. 물리적 컴퓨터 또는 가상 컴퓨터 클러스터에 가입 해야 하는 경우에 루트로 로그인 합니다. 
 2. 부트스트랩 스크립트를 실행 하 여 시작 합니다. 
@@ -167,9 +166,9 @@ Linux 서버에 가용성 그룹을 구성 하 고 클러스터 리소스를 구
 
 4. 두 컴퓨터 간의 passwordless SSH 액세스를 아직 구성 하지 있을 경우 기존 노드의 루트 암호 라는 메시지가 표시도 됩니다. 
 
-   지정 된 노드에 로그인 한 후 스크립트는 Corosync 구성을 복사, SSH를 구성 하 고 `Csync2`, 새 클러스터 노드로 온라인 현재 컴퓨터를 제공 합니다. 별개로 하더라도 매에 필요한 서비스를 시작 됩니다. 공유 저장소를 구성한 경우 `OCFS2`에 대 한 탑재 지점 디렉터리가 자동으로 만들어집니다는 `OCFS2` 파일 시스템입니다. 
+   지정 된 노드에 로그인 한 후 스크립트 Corosync 구성을 복사, SSH 구성 및 `Csync2`, 새 클러스터 노드로 현재 컴퓨터 온라인으로 전환 합니다. 별개로 하더라도 매에 필요한 서비스를 시작 합니다. 공유 저장소를 구성한 경우 `OCFS2`에 대 한 "탑재 지점" 디렉터리를 자동으로 만듭니다는 `OCFS2` 파일 시스템입니다. 
 
-5. 클러스터에 추가 하려는 모든 컴퓨터에 대해 위의 단계를 반복 합니다. 
+5. 클러스터에 추가 하려는 모든 컴퓨터에 대해 이전 단계를 반복 합니다. 
 
 6. 확인 프로세스의 자세한 `/var/log/ha-cluster-bootstrap.log`합니다. 
 
@@ -186,37 +185,40 @@ Linux 서버에 가용성 그룹을 구성 하 고 클러스터 리소스를 구
    ```
 
    >[!NOTE]
-   >`admin_addr`초기 1 노드 클러스터 설치 중 구성 된 가상 IP 클러스터 리소스가입니다.
+   >`admin_addr` 초기 1 노드 클러스터 설치 중 구성 된 가상 IP 클러스터 리소스가입니다.
 
-모든 노드를 추가한 후의 아니요-쿼럼-정책 전역 클러스터 옵션을 조정 해야 하는 경우를 확인 합니다. 이 2 노드 클러스터에 대 한 특히 중요 합니다. 자세한 내용은 4.1.2, 옵션 no 쿼럼 정책 섹션을 참조 합니다. 
+모든 노드를 추가한 후의 아니요-쿼럼-정책 전역 클러스터 옵션을 조정 해야 하는 경우를 확인 합니다. 이 2 노드 클러스터에 대 한 특히 중요 합니다. 자세한 내용은 옵션 no 쿼럼 정책 4.1.2, 섹션을 참조 합니다. 
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>클러스터 속성을 false 시작 실패-은-치명적이 지 설정
 
-`Start-failure-is-fatal`노드의 리소스를 시작 하지 해당 노드에서 시작 시도 하면 추가 하는지 여부를 나타냅니다. 로 설정 하면 `false`, 클러스터 리소스의 현재 오류 개수 및 마이그레이션 임계값에 따라 다시 동일한 노드에서 시작을 시도할 것인지 결정 합니다. 따라서 장애 조치 발생 후 Pacemaker로 다시 시작의 가용성 그룹 리소스가 이전에 기본 SQL 인스턴스를 사용할 수 있는 합니다. 보조 복제본의 수준을 내립니다 pacemaker 하므로 및 가용성 그룹 자동으로 다시 연결 됩니다. 또한 경우 `start-failure-is-fatal` 로 설정 된 `false`, 클러스터 마이그레이션 임계값에 따라 업데이트 됩니다 기본 있는지 확인 해야 하므로 마이그레이션 임계값을 사용 하 여 구성 된 구성된 failcount 제한으로 대체 됩니다.
+`Start-failure-is-fatal` 노드의 리소스를 시작 하지 해당 노드에서 시작 시도 하면 추가 하는지 여부를 나타냅니다. 로 설정 하면 `false`, 클러스터 리소스의 현재 오류 개수 및 마이그레이션 임계값에 따라 다시 동일한 노드에서 시작 여부를 결정 합니다. 따라서 장애 조치 발생 후 Pacemaker 다시 시도 시작 하는 가용성 그룹 리소스에 기본 전자 SQL 인스턴스를 사용할 수 있는 합니다. 보조 복제본의 수준 내리기 pacemaker 맡고을 가용성 그룹 하는 자동으로 다시 참여 합니다. 또한 경우 `start-failure-is-fatal` 로 설정 된 `false`, 클러스터 마이그레이션 임계값을 사용 하 여 구성 하는 구성 된 failcount 제한이로 대체 합니다. 마이그레이션 임계값에 대 한 기본값에 따라 업데이트 되었는지 확인 합니다.
 
 업데이트 하려면 속성 값을 false 실행:
 ```bash
 sudo crm configure property start-failure-is-fatal=false
 sudo crm configure rsc_defaults migration-threshold=5000
 ```
-속성의 기본값에 있으면 `true`리소스 실패, 사용자 작업을 시작 하려면 첫 번째 시도 정리 리소스 실패 횟수를 자동 장애 조치 후와 사용 하 여 구성을 다시 설정 하는 경우: `sudo crm resource cleanup <resourceName>` 명령입니다.
+속성의 기본값에 있으면 `true`리소스 실패, 사용자 작업을 시작 하려면 첫 번째 시도 자동 장애 조치는 리소스 실패 횟수를 정리 하 고 사용 하 여 구성을 다시 설정 된 후 필요한 경우,: `sudo crm resource cleanup <resourceName>` 명령입니다.
 
-Pacemaker 클러스터 속성에 대 한 자세한 내용은 참조 [클러스터 리소스 구성](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html)합니다.
+Pacemaker 클러스터 속성에 대 한 자세한 내용은 참조 하십시오. [클러스터 리소스 구성](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html)합니다.
 
 # <a name="configure-fencing-stonith"></a>펜스 (STONITH) 구성
 Pacemaker 클러스터 공급 업체를 사용 하도록 설정할 STONITH와 지원 되는 클러스터 설치에 대해 구성 된 펜싱 장치에 필요 합니다. 클러스터 리소스 관리자 상태 노드 또는 노드에 있는 리소스의을 확인할 수 없는 경우 펜싱 클러스터도 알려진 상태로 다시 전환 하는 데 사용 됩니다.
-리소스 수준 펜싱 하면 주로 리소스를 구성 하 여 중단 시 데이터 손상 되지 않습니다. 리소스 수준 펜싱을 사용할 수 있습니다 예를 들어, 오래 된 경우 처럼 노드에서 디스크를 표시 하려면 (복제 블록 장치 Distributed) DRBD와 통신 링크의 작동이 중지 합니다.
-노드 수준 펜싱 하면 노드 모든 리소스를 실행 하지 않습니다. 노드를 다시 설정 하 여 이렇게 및는 Pacemaker 구현의 STONITH (있음 "헤드에 있는 다른 노드가 해결"에 대 한 의미) 라고 합니다. 예를 들어 무정전 전원 공급 장치 또는 관리 서버에 대 한 카드 인터페이스, pacemaker 매우 다양 한 펜싱 장치를 지원 합니다.
-자세한 내용은 참조 하십시오. [처음부터 Pacemaker 클러스터](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [펜싱 및 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 및 [SUSE HA 설명서: 펜싱 및 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)합니다.
 
-클러스터 초기화 시 STONITH 구성이 없는 검색 된 경우 비활성화 됩니다. 아래의 명령 실행 하 여 나중에 활성화할 수 있습니다.
+리소스 수준 펜싱 하면 주로 리소스를 구성 하 여 가동 중단 시 데이터 손상 되지 않습니다. 리소스 수준 펜싱을 사용할 수 있습니다 예를 들어, 오래 된 경우 처럼 노드에서 디스크를 표시 하려면 (복제 블록 장치 Distributed) DRBD와 통신 링크의 작동이 중지 합니다.
+
+노드 수준 펜싱 하면 노드 모든 리소스를 실행 하지 않습니다. 노드를 다시 설정 하 여 이렇게 및는 Pacemaker 구현의 STONITH (있음 "헤드에 있는 다른 노드가 해결"에 대 한 의미) 라고 합니다. Pacemaker 다양 한 방어 서버는 무정전 전원 공급 장치 또는 관리 인터페이스 카드와 같은 장치를 지원 합니다.
+
+자세한 내용은 참조 [처음부터 Pacemaker 클러스터](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [펜싱 및 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 및 [SUSE HA 설명서: 펜싱 및 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)합니다.
+
+클러스터 초기화 시 STONITH 구성이 없는 검색 된 경우 비활성화 됩니다. 다음 명령을 실행 하 여 나중에 사용할 수 있습니다.
 
 ```bash
 sudo crm configure property stonith-enabled=true
 ```
   
 >[!IMPORTANT]
->테스트 목적으로 하는 데 않습니다 STONITH를 사용 하지 않도록 설정 합니다. Pacemaker 프로덕션 환경에서 사용 하려는 경우 환경에 따라 STONITH 구현을 계획 하 고 사용 하도록 설정 유지 해야 합니다. 참고 SUSE 모든 클라우드 환경 (Azure 포함) 또는 Hyper-v에 대 한 펜스 에이전트를 제공 하지 않습니다. 검사가 클러스터 공급 업체는 이러한 환경에서 실행 중인 프로덕션 클러스터에 대 한 지원을 제공 하지 않습니다. 제작 하는 이후 릴리스에서 사용할 수 있는 이러한 차이 대 한 솔루션입니다.
+>테스트 목적으로 하는 데 않습니다 STONITH를 사용 하지 않도록 설정 합니다. Pacemaker 프로덕션 환경에서 사용 하려는 경우 환경에 따라 STONITH 구현을 계획 하 고 사용 하도록 설정 유지 해야 합니다. SUSE 모든 클라우드 환경 (Azure 포함) 또는 Hyper-v에 대 한 펜스 에이전트를 제공 하지 않습니다. 검사가 클러스터 공급 업체는 이러한 환경에서 실행 중인 프로덕션 클러스터에 대 한 지원을 제공 하지 않습니다. 제작 하는 이후 릴리스에서 사용할 수 있는 이러한 차이 대 한 솔루션입니다.
 
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>SQL Server에 대 한 클러스터 리소스를 구성 합니다.
@@ -225,7 +227,7 @@ sudo crm configure property stonith-enabled=true
 
 ### <a name="create-availability-group-resource"></a>가용성 그룹 리소스 만들기
 
-다음 명령의 만들고 가용성 그룹 [ag1]의 복제본 3 개에 대 한 가용성 그룹 리소스를 구성 합니다. 작업 모니터 및 시간 제한 기반으로 인지 시간 제한은 항상 종속 작업 부하 및 각 배포에 대해 신중 하 게 조정 해야 할 SLES에 명시적으로 지정할 수 있어야 합니다.
+다음 명령의 만들고 가용성 그룹 [ag1]의 세 개의 복제본에 대 한 가용성 그룹 리소스를 구성 합니다. 작업 모니터 및 시간 제한 기반으로 인지 시간 제한 수준이 높은 작업 부하에 따라 변하는 및 각 배포에 대해 신중 하 게 조정 해야 할 SLES에 명시적으로 지정할 수 있어야 합니다.
 클러스터의 노드 중 하나에서 명령을 입력 합니다.
 
 1. 실행 `crm configure` crm 프롬프트를 엽니다.
@@ -234,7 +236,7 @@ sudo crm configure property stonith-enabled=true
    sudo crm configure 
    ```
 
-1. Crm 프롬프트에서 리소스 속성을 구성 하려면 아래 명령을 실행 합니다.
+1. Crm 프롬프트 리소스 속성을 구성 하려면 다음 명령을 실행 합니다.
 
    ```bash
 primitive ag_cluster \
@@ -269,7 +271,7 @@ primitive admin_addr \
 ```
 
 ### <a name="add-colocation-constraint"></a>공동 배치 제약 조건 추가
-Pacemaker 클러스터에서 리소스를 실행할 위치를 선택 하는 등 거의 모든 의사 결정은 점수를 비교 하 여 수행 됩니다. 리소스 당 점수가 계산 되 고 클러스터 리소스 관리자가 특정 리소스에 대 한 점수가 가장 높은 있는 노드를 선택 합니다. (한 노드에 리소스에 대 한 음수 점수 있으면 리소스 실행할 수 없습니다 해당 노드에서.) 제약 조건 사용 하 여 클러스터의 결정을 조작할 수 있습니다. 제한에는 점수는. 제약 조건에 무한대 보다 낮은 점수를 경우만 권장 사항입니다. 무한대의 점수는 필수 사항 의미 합니다. 원하는 실행 되도록 하기 위해 주 가용성 그룹 및 가상 ip 리소스는 동일한 호스트에 있으므로 무한대의 점수는 공동 배치 제약 조건을 정의 합니다. 
+Pacemaker 클러스터에서 리소스를 실행할 위치를 선택 하는 등 거의 모든 의사 결정은 점수를 비교 하 여 수행 됩니다. 리소스 당 점수가 계산 되 고 클러스터 리소스 관리자가 특정 리소스에 대 한 점수가 가장 높은 있는 노드를 선택 합니다. (한 노드에 리소스에 대 한 음수 점수 있으면 리소스 실행할 수 없습니다 해당 노드에서.) 제약 조건 사용 하 여 클러스터의 결정을 조작할 수 있습니다. 제한에는 점수는. 제약 조건에 무한대 보다 낮은 점수를 경우만 권장 사항입니다. 무한대의 점수는 필수 사항 의미 합니다. 기본 가용성 그룹 및 가상 ip 리소스는 실행 되도록 동일한 호스트에서 무한대의 점수와 공동 배치 제약 조건 정의 하므로 하려고 합니다. 
 
 마스터와 같은 노드에를 실행 하는 가상 IP에 대 한 공동 배치 제약을 설정 하려면 노드 하나에서 다음 명령을 실행 합니다.
 
@@ -300,10 +302,10 @@ crm crm configure \
 >[!IMPORTANT]
 >클러스터를 구성 하 고를 클러스터 리소스로 가용성 그룹을 추가한 후 TRANSACT-SQL 장애 조치할 가용성 그룹 리소스를 사용할 수 없습니다. Linux에서 SQL Server 클러스터 리소스 Windows Server 장애 조치 클러스터 (WSFC)에 운영 체제와 엄격히 결합 되지 됩니다. SQL Server 서비스가 클러스터의 사용 여부 인식 하지 않습니다. 모든 오케스트레이션 클러스터 관리 도구를 통해 수행 됩니다. SLES에서 사용 하 여 `crm`합니다. 
 
-수동으로 가용성 그룹을 장애 조치할 `crm`합니다. TRANSACT-SQL로 장애 조치를 시작 하지 마십시오. 자세한 내용은 [장애 조치](sql-server-linux-availability-group-failover-ha.md#failover)합니다.
+수동으로 가용성 그룹을 장애 조치할 `crm`합니다. TRANSACT-SQL로 장애 조치의 시작 하지 마십시오. 자세한 내용은 참조 [장애 조치](sql-server-linux-availability-group-failover-ha.md#failover)합니다.
 
 
-자세한 내용은 참조 하세요.
+참조 항목:
 - [클러스터 리소스 관리](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm)합니다.   
 - [HA 개념](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Pacemaker 빠른 참조](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 
@@ -313,4 +315,3 @@ crm crm configure \
 ## <a name="next-steps"></a>다음 단계
 
 [HA 가용성 그룹 동작](sql-server-linux-availability-group-failover-ha.md)
-

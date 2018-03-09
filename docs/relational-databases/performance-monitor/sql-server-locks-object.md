@@ -2,9 +2,12 @@
 title: "SQL Server, Locks 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9a60e5e072a0c6b5d9d769aa07b57a921f678c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 159bb57b8f8798a0e6043d57b0c033374482d079
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, Locks 개체
-  Microsoft **의** SQLServer:Locks [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 개별 리소스 유형에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 정보를 제공합니다. 트랜잭션 동안 읽거나 수정한 행과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에는 잠금이 설정되어 다른 트랜잭션에서 동시에 리소스를 사용하는 것을 방지합니다. 예를 들어 트랜잭션에 의해 테이블에 있는 행에 배타적(X) 잠금이 설정되어 있다면 잠금을 풀기 전까지는 다른 트랜잭션으로 수정할 수 없습니다. 잠금을 최소화하면 동시성을 늘려 성능을 향상시킬 수 있습니다. **Locks** 개체의 여러 인스턴스는 리소스 유형의 잠금을 나타내는 각 인스턴스와 함께 동시 모니터링이 가능합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **SQLServer:Locks** 개체는 개별 리소스 유형에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 정보를 제공합니다. 트랜잭션 동안 읽거나 수정한 행과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에는 잠금이 설정되어 다른 트랜잭션에서 동시에 리소스를 사용하는 것을 방지합니다. 예를 들어 트랜잭션에 의해 테이블에 있는 행에 배타적(X) 잠금이 설정되어 있다면 잠금을 풀기 전까지는 다른 트랜잭션으로 수정할 수 없습니다. 잠금을 최소화하면 동시성을 늘려 성능을 향상시킬 수 있습니다. **Locks** 개체의 여러 인스턴스는 리소스 유형의 잠금을 나타내는 각 인스턴스와 함께 동시 모니터링이 가능합니다.  
   
  이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** 카운터를 설명합니다.  
   
-|SQL Server Locks 카운터|설명|  
+|SQL Server Locks 카운터|Description|  
 |-------------------------------|-----------------|  
 |**Average Wait Time(ms)**|대기한 각 잠금 요청에 대한 평균 대기 시간(밀리초)입니다.|  
 |**Average Wait Time Base**|내부용으로만 사용할 수 있습니다.|
@@ -41,14 +44,14 @@ ms.lasthandoff: 11/09/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 잠글 수 있는 리소스는 다음과 같습니다.  
   
-|항목|설명|  
+|항목|Description|  
 |----------|-----------------|  
 |**_Total**|모든 잠금 정보입니다.|  
 |**AllocUnit**|할당 단위에 대한 잠금입니다.|  
 |**응용 프로그램**|응용 프로그램이 지정한 리소스에 대한 잠금입니다.|  
-|**데이터베이스**|데이터베이스의 모든 개체를 포함한 데이터베이스에 대한 잠금입니다.|  
+|**데이터베이스 백업**|데이터베이스의 모든 개체를 포함한 데이터베이스에 대한 잠금입니다.|  
 |**Extent**|연결된 8페이지 그룹에 대한 잠금입니다.|  
-|**파일**|데이터베이스 파일에 대한 잠금입니다.|  
+|**최근에 사용한 파일**|데이터베이스 파일에 대한 잠금입니다.|  
 |**Heap/BTree**|힙 또는 BTree(HOBT)입니다. 데이터 페이지의 힙 또는 인덱스의 BTree 구조에 대한 잠금입니다.|  
 |**Key**|인덱스의 행에 대한 잠금입니다.|  
 |**메타데이터**|메타데이터라고도 하는 카탈로그 정보에 대한 잠금입니다.|  

@@ -8,23 +8,21 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a8416bd8dea2a36d3421ab44084649e64f39345b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41909851b81767272d50a4d93426bcdc4dbb075f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,8 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 |이름|Description|  
 |----------|-----------------|  
-|[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|
-          SQLServerClob 클래스의 새 인스턴스를 초기화합니다.|  
+|[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|SQLServerClob 클래스의 새 인스턴스를 초기화합니다.|  
   
 ## <a name="fields"></a>필드  
  없음  
@@ -69,4 +66,3 @@ ms.lasthandoff: 09/09/2017
  [SQLServerClob 클래스](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   
-

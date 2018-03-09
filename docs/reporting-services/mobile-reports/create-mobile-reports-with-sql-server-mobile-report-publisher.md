@@ -1,34 +1,34 @@
 ---
-title: "SQL Server 모바일 보고서 게시자 사용 모바일 보고서 만들기 | Microsoft Docs"
-description: "모바일 보고서는 다양 한 데이터 시각화를 사용 하 여 온-프레미스 데이터에 연결 하는 모바일 장치에 대 한 Reporting Services에 알아봅니다."
-ms.custom:
-- SQL2016_New_Updated
+title: "SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 | Microsoft Docs"
+description: "다양한 데이터 시각화와 함께 온-프레미스 데이터에 연결된 모바일 장치용 Reporting Services 모바일 보고서에 대해 알아봅니다."
+ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5109bc0d5fddfa5a69f0880b2167615ac860f3ba
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기
 다양한 데이터 시각화와 함께 모바일 장치용으로 최적화되고 온-프레미스 데이터에 연결된 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서에 대해 알아봅니다. 
 
 >[!NOTE]
->  SQL Server 2016으로 대시보드 및 Kpi와 같은 Datazen 서버 콘텐츠를 마이그레이션해야 할 있습니다 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 서버? [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128)(Datazen용 SQL Server Migration Assistant)을 사용해 보세요. 
+>  대시보드 및 KPI와 같은 Datazen Server 콘텐츠를 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 서버로 마이그레이션해야 하나요? [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128)(Datazen용 SQL Server Migration Assistant)을 사용해 보세요. 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 
 * 온-프레미스 SQL Server 및 Analysis Services 데이터를 포함하여 다양한 데이터 원본에 모바일 보고서를 연결합니다. 
 * 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 모바일 보고서를 만듭니다. 
-* Reporting Services 서버에 이러한 모바일 보고서를 저장 및 확인 하 고 브라우저 또는 Ipad, Iphone, Android 휴대폰 및 태블릿, 및 Windows 10 장치에서 Power BI 모바일 앱에서 상호 작용 다음 합니다.
+* 그런 다음 Reporting Service 서버에 이러한 모바일 보고서를 저장하고, 브라우저 또는 iPad, iPhone, Android 휴대폰 및 태블릿 및 Windows 10 장치의 Power BI 모바일 앱에서 이를 보고 조작합니다.
   
 ## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  모바일 보고서 만들기  
   
@@ -54,11 +54,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Power BI 모바일 앱의 SSRS 모바일 보고서
 
--  보기 [iOS 모바일 앱에서 Reporting Services 모바일 보고서 및 Kpi](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
--  보기 [Android 장치용 Power BI 앱에서 Reporting Services 모바일 보고서 및 Kpi](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
+-  [iOS 모바일 앱에서 Reporting Services 모바일 보고서 및 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) 보기
+-  [Android 장치용 Power BI 앱에서 Reporting Services 모바일 보고서 및 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports) 보기
 -  [Windows 10 장치용 Power BI 앱에서 Reporting Services 보고서 및 KPI 보기](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
   
 -   [공유 데이터 원본 만들기, 수정 및 삭제(SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
 -   [공유 데이터 집합 관리](../../reporting-services/report-data/manage-shared-datasets.md)  
@@ -67,5 +67,4 @@ ms.lasthandoff: 08/09/2017
 
   
   
-
 

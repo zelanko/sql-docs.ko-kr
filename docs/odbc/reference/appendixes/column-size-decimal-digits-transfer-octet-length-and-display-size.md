@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - column size of data types [ODBC]
 - data types [ODBC], transfer octet length
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fa5322870c92ee8c48d9d4dc49fbc5a50b6b3e7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19f505751d63f07dbd5eb2d1d53b9c191307e9b2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>열 크기를 10 진수 숫자, 8 진수 길이 전송 하 고, 표시 크기-ODBC
 데이터 형식 열 (또는 매개 변수) 크기, 소수 자릿수, 길이, 특징 및 크기를 표시 합니다. 다음과 같은 ODBC 함수가 데이터 원본에는 SQL 문의 매개 변수에 대 한 또는 SQL 데이터 형식에 대 한 이러한 특성을 반환합니다. 각 ODBC 함수를 다음과 같이 다양 한 이러한 특성을 반환합니다.  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 -   [십진수](../../../odbc/reference/appendixes/decimal-digits.md)  
 -   [8진수 길이 전송](../../../odbc/reference/appendixes/transfer-octet-length.md)  
 -   [표시 크기](../../../odbc/reference/appendixes/display-size.md)
-

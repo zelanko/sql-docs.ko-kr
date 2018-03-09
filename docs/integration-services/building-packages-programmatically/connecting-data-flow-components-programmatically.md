@@ -1,5 +1,5 @@
 ---
-title: "데이터 흐름 구성 요소를 프로그래밍 방식으로 연결 | Microsoft Docs"
+title: "프로그래밍 방식으로 데이터 흐름 구성 요소 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,28 +22,27 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 40869328965e049b5981e94655226bc0a78dc37f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0f9f18de57efa9a088018b8d5a69690cbf64f387
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 연결
   데이터 흐름 태스크에 구성 요소를 추가한 후 해당 구성 요소를 연결하여 원본에서 변환을 거쳐 대상으로 이동하는 데이터 흐름을 나타내는 실행 트리를 만들 수 있습니다. 데이터 흐름의 구성 요소를 연결하려면 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 개체를 사용합니다.  
   
 ## <a name="creating-a-path"></a>경로 만들기  
- 새 메서드를 호출 하는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> 속성의는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> 인터페이스를 새 경로 만들고 컬렉션의 데이터 흐름 태스크의 경로에 추가 합니다. 이 메서드는 연결이 끊어진 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 개체를 반환합니다. 그러면 이 개체를 사용하여 두 구성 요소를 연결할 수 있습니다.  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> 인터페이스에 있는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> 속성의 새 메서드를 호출하여 새 경로를 만들고 이 경로를 데이터 흐름 태스크의 경로 컬렉션에 추가할 수 있습니다. 이 메서드는 연결이 끊어진 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 개체를 반환합니다. 그러면 이 개체를 사용하여 두 구성 요소를 연결할 수 있습니다.  
   
  경로를 연결하고 연결된 경로에 참여하는 구성 요소에 해당 구성 요소가 연결되었음을 알리려면 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> 메서드를 호출합니다. 이 메서드는 업스트림 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>과 다운스트림 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>을 매개 변수로 받아들입니다. 기본적으로 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 메서드를 호출하면 입력이 있는 구성 요소에 대한 단일 입력과 출력이 있는 구성 요소에 대한 단일 출력이 만들어집니다. 다음 예에서는 원본의 이 기본 출력과 대상의 입력을 사용합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- 다음 단계는 다음 항목에서 설명 하는 다운스트림 구성 요소에서 입력된 열에 매핑하는 두 구성 요소 사이의 경로 설정한 후 [입력 열을 프로그래밍 방식 선택](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)합니다.  
+ 두 구성 요소 간의 경로를 설정한 다음에는 다운스트림 구성 요소의 입력 열을 매핑해야 합니다. 이 단계에 대한 자세한 내용은 다음에 나오는 [프로그래밍 방식으로 입력 열 선택](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md) 항목에서 설명합니다.  
   
 ## <a name="sample"></a>예제  
  다음 코드 예제에서는 두 구성 요소 간의 경로를 설정하는 방법을 보여 줍니다.  
@@ -131,7 +129,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [입력된 열을 프로그래밍 방식으로 선택](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+ [프로그래밍 방식으로 입력 열 선택](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
   
   
-

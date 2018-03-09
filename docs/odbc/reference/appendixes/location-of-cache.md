@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f8d2c2083175bcccf1fba0157bcdf30c8b83af81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 645ff6dc68fec7cf332face2fe53a43555887a48
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="location-of-cache"></a>캐시의 위치
 > [!IMPORTANT]  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  응용 프로그램은 읽기 전용 공유 (예: Microsoft Foundation Class 라이브러리 샘플) 컴팩트 디스크에서 실행 되는 동안 커서 라이브러리의 Microsoft® WindowsNT®/windows 2000 찾으려 현재 디렉터리에 임시 파일에 데이터를 캐시 하는 경우 SQLSTATE HY000 (일반 오류-없습니다 파일 버퍼를 만들) 반환 됩니다.
-

@@ -2,32 +2,38 @@
 title: "SharePoint용 파워 피벗 업그레이드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b75ca97fc91e1637b082a44240d7fd4f61a2b6e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: df0547a4e9665040cea0aff190586759d6a24cd4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 업그레이드
-  이 항목에서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포를 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]으로 업그레이드하는 데 필요한 단계에 대해 간략하게 설명합니다. 특정 단계는 사용자 환경에서 실행 중인 SharePoint 버전에 따라 다르며 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능(**spPowerPivot.msi**)을 포함합니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  이 문서에서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포를 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]으로 업그레이드하는 데 필요한 단계에 대해 간략하게 설명합니다. 특정 단계는 사용자 환경에서 실행 중인 SharePoint 버전에 따라 다르며 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능(**spPowerPivot.msi**)을 포함합니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
  릴리스 정보는 [SQL Server 2016 릴리스 정보](http://go.microsoft.com/fwlink/?LinkID=398124)를 참조하세요.  
   
- **항목 내용**  
+ **문서 내용:**  
   
  [필수 구성 요소](#bkmk_prereq)  
   
@@ -51,7 +57,7 @@ ms.lasthandoff: 11/09/2017
   
 -   둘 이상의 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 이 포함된 다중 서버 SharePoint 2010 팜을 업그레이드하는 경우 한 서버에 대해 전체 업그레이드를 수행한 **후** 다음 서버로 이동해야 합니다. 전체 업그레이드는 SQL Server 설치 프로그램을 실행하여 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 프로그램 파일을 업그레이드한 다음 업그레이드된 서비스를 구성하는 SharePoint 업그레이드 동작을 실행합니다. 적합한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구 또는 Windows PowerShell에서 업그레이드 동작을 실행할 때까지 서버 가용성이 제한됩니다.  
   
--   SharePoint 2010 팜에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스 및 Analysis Services의 모든 인스턴스는 버전이 같아야 합니다. 버전을 확인하는 방법은 이 항목에서 [파워 피벗 구성 요소 및 서비스의 버전 확인](#bkmk_verify_versions) 섹션을 참조하세요.  
+-   SharePoint 2010 팜에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스 및 Analysis Services의 모든 인스턴스는 버전이 같아야 합니다. 버전을 확인하는 방법은 이 문서에서 [파워 피벗 구성 요소 및 서비스의 버전 확인](#bkmk_verify_versions) 섹션을 참조하세요.  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구는 SQL Server 공유 기능 중 하나인 동시에 모든 공유 기능 업그레이드 중 하나입니다. 업그레이드 프로세스 중에 공유 기능 업그레이드가 필요한 다른 SQL Server 인스턴스 또는 기능을 선택하면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구도 업그레이드됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구가 업그레이드되었지만 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스가 업그레이드되지 않은 경우 문제가 있을 수 있습니다. SQL Server 공유 기능에 대한 자세한 내용은 [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)를 참조하세요.  
   
@@ -136,7 +142,7 @@ ms.lasthandoff: 11/09/2017
   
     -   [SharePoint용 Power Pivot에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
-5.  업그레이드 후 단계를 수행하고 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 버전을 확인하여 업그레이드에 성공했는지 확인합니다. 자세한 내용은 이 항목의 [업그레이드 후 확인 태스크](#verify) 와 다음 섹션을 참조하세요.  
+5.  업그레이드 후 단계를 수행하고 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 버전을 확인하여 업그레이드에 성공했는지 확인합니다. 자세한 내용은 이 문서의 [업그레이드 후 확인 태스크](#verify) 및 다음 섹션을 참조하세요.  
   
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> 기존 SharePoint 2010 팜 업그레이드  
  SharePoint 2013에 배포된 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 를 업그레이드하려면 다음을 수행하십시오.  
@@ -204,7 +210,7 @@ ms.lasthandoff: 11/09/2017
   
 8.  팜의 각 SQL Server Analysis Services(**)에 대해** 프로세스 반복[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]: 1) SQL Server 설치를 실행합니다. 2) [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 실행합니다.  
   
-9. 업그레이드 후 단계를 수행하고 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 버전을 확인하여 업그레이드에 성공했는지 확인합니다. 자세한 내용은 이 항목의 [업그레이드 후 확인 태스크](#verify) 와 다음 섹션을 참조하세요.  
+9. 업그레이드 후 단계를 수행하고 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 버전을 확인하여 업그레이드에 성공했는지 확인합니다. 자세한 내용은 이 문서의 [업그레이드 후 확인 태스크](#verify) 및 다음 섹션을 참조하세요.  
   
 10. **오류 문제 해결**  
   
@@ -253,7 +259,7 @@ Get-PowerPivotSystemService
   
  **Windows 파일 탐색기**:  
   
-1.  **** 인스턴스에 대한 Bin [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 폴더로 이동합니다. 예를 들면 `C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\bin`입니다.  
+1.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스에 대한 **Bin** 폴더로 이동합니다. 예를 들면 `C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\bin`입니다.  
   
 2.  `msmdsrv.exe`를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -316,7 +322,7 @@ Get-PowerPivotSystemService
   
  첫 번째 서버를 업그레이드하면 아직 업그레이드되지 않은 다른 서버들을 **사용할 수 없게 됩니다**. 모든 서버가 동일한 수준에서 실행되어야 가용성이 복원됩니다.  
   
- SQL Server 설치 프로그램은 실제 컴퓨터에서 직접 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 파일을 업그레이드하지만 팜에서 사용하는 솔루션을 업그레이드하려면 이 항목의 앞쪽 섹션에서 설명한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용해야 합니다.  
+ SQL Server 설치 프로그램은 실제 컴퓨터에서 직접 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 파일을 업그레이드하지만 팜에서 사용하는 솔루션을 업그레이드하려면 이 문서의 앞쪽 섹션에서 설명한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용해야 합니다.  
   
 ##  <a name="qfe"></a> 팜의 Power Pivot 인스턴스에 QFE 적용  
  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버에 패치를 적용하면 기존 프로그램 파일이 특정 문제에 대한 수정 프로그램이 포함된 새 버전으로 업데이트됩니다. 다중 서버 토폴로지에 QFE를 적용하는 경우에는 먼저 시작해야 하는 주 서버가 없습니다. 팜의 다른 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버에 동일한 QFE를 적용하기만 한다면 원하는 서버 어디에서든지 시작할 수 있습니다.  
@@ -357,7 +363,7 @@ Get-PowerPivotSystemService
   
  설치 후 구성 태스크를 모두 안내하는 단계별 지침은 [초기 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SharePoint 2010용 파워 피벗 설치](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   

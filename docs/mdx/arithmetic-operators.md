@@ -2,32 +2,31 @@
 title: "산술 연산자 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- arithmetic operators
+dev_langs: kbMDX
+helpviewer_keywords: arithmetic operators
 ms.assetid: 1dff3e20-fe9d-4155-bf06-27d6458188e9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6e835905fb1d51d4918c3d382ad6268925d469e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc3adf599f92a74dd996a0ef090f6f42ab1fba0d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="arithmetic-operators"></a>산술 연산자
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   MDX에서 산술 연산자를 사용하여 더하기, 빼기, 곱하기 및 나누기 등의 산술 계산을 수행할 수 있습니다.  
   
@@ -35,9 +34,9 @@ ms.lasthandoff: 08/02/2017
   
 |연산자|Description|  
 |--------------|-----------------|  
-|[+ (더하기)](../mdx/add-mdx.md)|두 숫자를 더합니다.|  
+|[+(더하기)](../mdx/add-mdx.md)|두 숫자를 더합니다.|  
 |[/ (나누기)](../mdx/divide-mdx-operator-reference.md)|한 수를 다른 수로 나눕니다.|  
-|[* (곱하기)](../mdx/multiply-mdx.md)|두 숫자를 곱합니다.|  
+|[*(곱하기)](../mdx/multiply-mdx.md)|두 숫자를 곱합니다.|  
 |[-(빼기)](../mdx/subtract-mdx.md)|두 숫자의 차이 값을 구합니다.|  
 |^ (거듭제곱)|한 수에 다른 수를 제곱합니다.|  
   
@@ -53,9 +52,8 @@ ms.lasthandoff: 08/02/2017
   
 -   괄호 안의 식은 다른 모든 연산보다 선행됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [연산자 &#40; MDX 구문 &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-

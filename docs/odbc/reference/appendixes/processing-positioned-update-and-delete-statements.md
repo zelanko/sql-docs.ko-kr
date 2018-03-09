@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], positioned update or delete
 - cursor library [ODBC], statement processing
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97678a0f54c9cbe02ed28b30393db6c16473e58f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>Update 및 Delete 문을 처리 배치
 > [!IMPORTANT]  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 -   드라이버 하나의 활성 문만 지 원하는 경우에 결과의 나머지 설정 하 고 배치를 실행 하기 전에 캐시에서 현재 행 집합을 다음 다시 커서 라이브러리 인출 업데이트 또는 삭제 문의 합니다. 그런 다음 응용 프로그램 메타 데이터는 결과 집합에서 반환 하는 함수를 호출 하는 경우 (예를 들어 **SQLNumResultCols** 또는 **SQLDescribeCol**), 커서 라이브러리는 오류를 반환 합니다.  
   
 -   위치 지정된 update 또는 delete 문이 업데이트를 수행할 때마다 자동으로 업데이트 하는 타임 스탬프 열을 포함 하는 테이블의 열에서 수행 하는 경우 모든 후속 위치 지정된 update 또는 delete 문을 못합니다 타임 스탬프 열이 바인딩된 합니다. 이 때문에 발생 검색 된 update 또는 delete 문이 커서 라이브러리 만들기는 업데이트할 행을 정확 하 게 식별 하지 않습니다. 타임 스탬프 열에 대 한 검색 결과 문의 값의 타임 스탬프 열 자동으로 업데이트 된 값을 일치 하지 않습니다.
-

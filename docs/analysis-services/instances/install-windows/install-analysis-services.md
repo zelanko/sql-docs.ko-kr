@@ -2,31 +2,30 @@
 title: "Analysis Services 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: cdc4deb033afe212103a80a0e5b8413c13000433
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 084223d83c3786610dbce145f27a4c18a6409769
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services 설치
-  SQL Server Analysis Services가 테이블 형식 모델, 다차원 큐브 및 보고서, 스프레드시트 및 대시보드에서 액세스할 수 있는 데이터 마이닝 모델을 호스팅하는 분석 데이터베이스 서버입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SQL Server Analysis Services가 테이블 형식 모델, 다차원 큐브 및 보고서, 스프레드시트 및 대시보드에서 액세스할 수 있는 데이터 마이닝 모델을 호스팅하는 분석 데이터베이스 서버입니다.  
   
  Analysis Services는 다중 인스턴스는 단일 컴퓨터에 복사본 여러 개 설치 하거나 신규 버전과 기존 버전-side-by-side 실행 수를 의미 합니다. 설치한 모든 인스턴스는 설치 도중 결정된 세 가지 모드(다차원 및 데이터 마이닝, 테이블 형식 또는 SharePoint) 중 하나로 실행됩니다. 다중 모드를 사용하려면 각 모드에 대한 별도의 인스턴스가 필요합니다.  
   
@@ -74,16 +73,15 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** 는 대/소문자를 구분합니다.  모든 값은 대문자로 표시해야 합니다. 다음 표에는 **ASSERVERMODE**의 유효한 값에 대한 설명이 나와 있습니다.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
 |TABULAR|이 값은 기본값입니다. 설정 하지 않으면 **ASSERVERMODE**, 서버가 테이블 형식 모드에 설치 됩니다.|
 |MULTIDIMENSIONAL|이 값은 선택 사항입니다.|  
 |POWERPIVOT|이 값은 선택 사항입니다. 실제로 **ROLE** 매개 변수를 설정한 경우 서버 모드는 자동으로 1로 설정되며 **ASSERVERMODE** 를 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 설치에 대한 옵션으로 만듭니다. 자세한 내용은 [명령 프롬프트에서 Power Pivot 설치](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)를 참조하십시오.|  
   
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 인스턴스의 서버 모드 확인](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [테이블 형식 모델링 (SSAS 테이블 형식)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
+ [테이블 형식 모델링](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   
   
-

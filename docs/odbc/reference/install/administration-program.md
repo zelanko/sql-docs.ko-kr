@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administration program [ODBC]
 - ODBC administrator [ODBC]
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d2fce2aa391f452286a15aa635e26c52ca96952
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="administration-program"></a>관리 프로그램
 > [!NOTE]  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 -   **추가, 수정 또는 데이터 원본을 자동으로 삭제 합니다.** 관리 프로그램 호출 **SQLConfigDataSource** 설치 DLL 및 전달에는 null 창 처리할 것, 추가, 수정 또는 삭제 하는 데이터 원본의 이름과 레지스트리에 대 한 값의 목록입니다. 설치 프로그램 DLL 호출 하 여 **ConfigDSN** 드라이버 설치 DLL 실제로 추가할 수정 또는 데이터 원본을 삭제 합니다.  
   
 -   **추가, 수정 또는 기본 데이터 원본을 삭제 합니다.** 기본 데이터 원본은 해당 이름이 기본 제외 하 고 다른 데이터 원본으로 같습니다. 추가, 수정 하거나 동일한 방식으로 다른 데이터 소스에서 삭제 합니다.
-

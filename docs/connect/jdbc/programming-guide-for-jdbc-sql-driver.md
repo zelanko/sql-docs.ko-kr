@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ba2f1cd25465967d59511670ebbbea10932cfa86
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b30ab2fe38fce6bb53b171d36a1009dea4b44e9f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guide-for-jdbc-sql-driver"></a>프로그래밍 JDBC SQL 드라이버에 대 한 가이드
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
 * [테이블 반환 매개 변수 사용](../../connect/jdbc/using-table-valued-parameters.md)
 * [JDBC 드라이버의 국가별 기능](../../connect/jdbc/international-features-of-the-jdbc-driver.md)
 * [JDBC 드라이버 API 참조](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
-

@@ -2,15 +2,13 @@
 title: "ValueColumn 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ValueColumn Element
@@ -24,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4413367639b3cc712e2b068ef0b34fce1f277431
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3dab1859f50e4f2806ac46ce24a07f77a21305f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="valuecolumn-element-assl"></a>ValueColumn 요소(ASSL)
-  부모 요소의 값을 제공하는 열을 식별합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]부모 요소의 값을 제공 하는 열을 식별 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)|  
 |기본값|Varies(주의 참조)|  
@@ -57,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  경우는 [l u m n](../../../analysis-services/scripting/objects/namecolumn-element-assl.md) 요소의 **DimensionAttribute** 지정 된 동일한 **DataItem** 값에 대 한 기본값 사용는 **ValueColumn** 요소입니다. 경우는 **l u m n** 요소의 **DimensionAttribute** 지정 하지 않으면 및 [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md) 컬렉션 **DimensionAttribute** 포함 하는 하나의 [KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md) 같은 문자열 데이터 형식의 키 열을 나타내는 요소 **DataItem** 값에 대 한 기본값 사용는 **ValueColumn** 요소입니다.  

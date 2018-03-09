@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], driver setup DLL
 - driver setup DLL [ODBC]
 ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fd507929bcb54079f62f81829f5e721834efe21e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d75a8985feff2ddfe26d3e19e8bafd91f228d30e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-setup-dll"></a>드라이버 설치 DLL
 > [!NOTE]  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetTranslator**합니다. 변환기 이름 및 옵션에 대 한 사용자 메시지를 표시 합니다. 이 함수 호출 **ConfigTranslator** 변환기에 DLL을 설치 합니다.  
   
  드라이버 설치 DLL 드라이버 개발자가 작성 됩니다. 드라이버의 일부가 될 수 있습니다 DLL 또는 별도 DLL입니다.
-

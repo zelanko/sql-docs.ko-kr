@@ -1,11 +1,11 @@
 ---
-title: "4 단계: 플랫 파일 대상 추가 | Microsoft Docs"
+title: "4단계: 플랫 파일 대상 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ff4badae70e5762f51003c0d3edae3ad1fb3907b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d9024e237d159c37b18a89be62b0982149c81253
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-4-4---adding-a-flat-file-destination"></a>단원 4-4-플랫 파일 대상 추가
+# <a name="lesson-4-4---adding-a-flat-file-destination"></a>4-4단원 - 플랫 파일 대상 추가
 Lookup Currency Key 변환의 오류 출력은 조회 작업에 실패한 모든 데이터 행을 스크립트 변환으로 리디렉션합니다. 발생한 오류에 대한 정보를 보강하기 위해 스크립트 변환은 오류에 대한 설명을 가져오는 스크립트를 실행합니다.  
   
 이 태스크에서는 나중에 처리할 수 있도록 실패한 행에 대한 이러한 모든 정보를 구분된 파일에 저장합니다. 실패한 행을 저장하려면 오류 데이터를 포함할 텍스트 파일에 대해 플랫 파일 연결 관리자를 추가 및 구성하고 플랫 파일 대상을 추가 및 구성해야 합니다. 플랫 파일 대상에서 사용되는 플랫 파일 연결 관리자에 속성을 설정하여 플랫 파일 대상에서 텍스트 파일을 기록하고 형식을 지정하는 방식을 지정할 수 있습니다. 자세한 내용은 [Flat File Connection Manager](../integration-services/connection-manager/flat-file-connection-manager.md) 및 [Flat File Destination](../integration-services/data-flow/flat-file-destination.md)를 참조하세요.  
@@ -68,9 +67,8 @@ Lookup Currency Key 변환의 오류 출력은 조회 작업에 실패한 모든
   
 15. **확인**을 클릭합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 [5단계: 4단원 자습서 패키지 테스트](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   
   
-

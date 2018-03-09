@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4bb349dd9bc791659dc518aa66cbc40e958dbe66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-long-data"></a>긴 데이터 가져오기
 Dbms 정의 *긴 데이터* 모든 문자 데이터 또는 255 자 같은 특정 크기에 대 한 이진 데이터입니다. 이 데이터 만큼 작지 않아서 몇 천 문자의 파트 설명 등의 단일 버퍼에 저장 될 수 있습니다. 그러나 너무 길어 긴 텍스트 문서 또는 비트맵 처럼 메모리에 저장할 수 있습니다. 이러한 데이터는 단일 버퍼에 저장할 수 없습니다, 때문에 사용 하 여 파트에서 드라이버에서 검색 된 **SQLGetData** 행의 다른 데이터를 가져온 후 합니다.  
@@ -41,7 +39,7 @@ Dbms 정의 *긴 데이터* 모든 문자 데이터 또는 255 자 같은 특정
   
  단일 열에 대 한 **SQLGetData** 처럼 동작 **SQLFetch**: 열에 대 한 데이터를 검색, 응용 프로그램 변수 형식으로 변환 하 고 해당 변수에 반환 합니다. 또한 길이/표시기 버퍼의 데이터의 바이트 길이 반환합니다. 방법에 대 한 자세한 내용은 **SQLFetch** 반환 데이터 참조 [행의 데이터를 인출](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)합니다.  
   
- **SQLGetData** 에서 다른 **SQLFetch** 한 중요 한 측면에서 합니다. 호출 될 두 번 이상 연속 해 서에서 동일한 열에 대 한 각 호출 데이터의 연속 된 부분을 반환 합니다. 마지막 호출을 제외한 각 호출은 SQL_SUCCESS_WITH_INFO 및 SQLSTATE 01004 (문자열 데이터, 오른쪽이 잘렸습니다); 반환 마지막으로 호출한 관계 없이 SQL_SUCCESS를 반환 합니다. 이 어떻게 **SQLGetData** 부분에 long 데이터를 검색 하는 데 사용 됩니다. 반환할 데이터가 더 이상 없을 때 **SQLGetData** SQL_NO_DATA를 반환 합니다. 응용 프로그램은 긴 데이터를 함께 배치 하는 데 일부 데이터를 연결 하 의미입니다. 각 파트는 null로 끝나는; 응용 프로그램 부분을 연결 하는 경우 null 종결 문자를 제거 해야 합니다. 다른 긴 데이터의 경우와 다양 한 길이의 책갈피를도 대 한 부분에서 데이터 검색을 수행할 수 있습니다. 일반적으로 드라이버에서 사용 가능한 데이터의 크기를 검색 하 고 SQL_NO_TOTAL의 바이트 길이 반환 하지 못할 수 있지만 각 호출에 길이/표시기 버퍼 감소 이전 호출에서 반환 된 바이트 수로 반환 된 값입니다. 예를 들어  
+ **SQLGetData** 에서 다른 **SQLFetch** 한 중요 한 측면에서 합니다. 호출 될 두 번 이상 연속 해 서에서 동일한 열에 대 한 각 호출 데이터의 연속 된 부분을 반환 합니다. 마지막 호출을 제외한 각 호출은 SQL_SUCCESS_WITH_INFO 및 SQLSTATE 01004 (문자열 데이터, 오른쪽이 잘렸습니다); 반환 마지막으로 호출한 관계 없이 SQL_SUCCESS를 반환 합니다. 이 어떻게 **SQLGetData** 부분에 long 데이터를 검색 하는 데 사용 됩니다. 반환할 데이터가 더 이상 없을 때 **SQLGetData** SQL_NO_DATA를 반환 합니다. 응용 프로그램은 긴 데이터를 함께 배치 하는 데 일부 데이터를 연결 하 의미입니다. 각 파트는 null로 끝나는; 응용 프로그램 부분을 연결 하는 경우 null 종결 문자를 제거 해야 합니다. 다른 긴 데이터의 경우와 다양 한 길이의 책갈피를도 대 한 부분에서 데이터 검색을 수행할 수 있습니다. 일반적으로 드라이버에서 사용 가능한 데이터의 크기를 검색 하 고 SQL_NO_TOTAL의 바이트 길이 반환 하지 못할 수 있지만 각 호출에 길이/표시기 버퍼 감소 이전 호출에서 반환 된 바이트 수로 반환 된 값입니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 // Declare a binary buffer to retrieve 5000 bytes of data at a time.  
@@ -93,4 +91,3 @@ SQLCloseCursor(hstmt);
  일부 드라이버는 이러한 제한을 적용 하지 않습니다. 상호 운용 가능한 응용 프로그램에는 이러한 없거나 결정 되는 제한을 호출 하 여 적용 되지 않습니다 가정 하거나 해야 **SQLGetInfo** SQL_GETDATA_EXTENSIONS 옵션을 사용 합니다.  
   
  응용 프로그램 문자 또는 이진 데이터 열에 있는 모든 데이터, 필요 하지 않는 경우 문을 실행 하기 전에 SQL_ATTR_MAX_LENGTH 문 특성을 설정 하 여 DBMS 기반 드라이버에서 네트워크 트래픽을 줄일 수 있습니다. 문자 또는 이진 열에 대해 반환 되는 데이터의 바이트 수를 제한 합니다. 예를 들어 열 긴 텍스트 문서에 포함 되어 있다고 가정 합니다. 에서는이 열이 포함 된 테이블을 탐색 하는 응용 프로그램은 각 문서의 첫 번째 페이지에만 표시 해야 할 수 있습니다. 드라이버에서이 문 특성을 시뮬레이션할 수 있지만, 이지만이 작업을 수행할 필요가 없습니다. 특히, 응용 프로그램를 문자 또는 이진 데이터 truncate 하려는 경우 해당 바인딩해야 작은 버퍼의 열에 **SQLBindCol** 드라이버는 데이터가 잘릴 수 있도록 합니다.
-

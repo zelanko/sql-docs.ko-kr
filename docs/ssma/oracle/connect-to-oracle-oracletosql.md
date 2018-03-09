@@ -1,10 +1,13 @@
 ---
 title: "Oracle (OracleToSQL)에 연결 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6350438d06f574096f78c44af85a298b5003423a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 04f87810ef02030a95c06870012972f307c41f33
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle (OracleToSQL)에 연결
 사용 하 여는 **Connect to Oracle** 마이그레이션할 Oracle 데이터베이스에 연결 하는 대화 상자.  
   
 이 대화 상자에 액세스 하는 **파일** 메뉴 선택 **Connect to Oracle**합니다. 이 명령은 이전에 연결한 경우 **Oracle에 다시 연결**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **공급자**  
 Oracle 데이터베이스에 연결에 대 한 데이터 액세스 공급자를 선택 합니다. 사용 가능한 공급자는 Oracle 클라이언트 공급자 및 OLE DB Provider입니다. 기본값은 Oracle 클라이언트 공급자입니다.  
   
@@ -59,7 +62,7 @@ TNSNAME 모드 옵션입니다.
   
 표준 모드 옵션입니다.  
   
-**사용자 이름**  
+**User name**  
 SSMA는 Oracle 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
   
 **암호**  

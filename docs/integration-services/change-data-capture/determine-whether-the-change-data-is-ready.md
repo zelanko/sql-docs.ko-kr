@@ -1,5 +1,5 @@
 ---
-title: "변경 데이터가 준비 되었는지 여부를 확인 | Microsoft Docs"
+title: "변경 데이터의 준비 여부 확인 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 91c0f342c63df8d3a1376850615c5b68745ab4c9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1d2f30ddb989c9d92d0972f85af33e3b0496ba56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>변경 데이터의 준비 여부 확인
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 두 번째 태스크는 선택한 간격에 대한 변경 데이터가 준비되었는지 확인하는 것입니다. 비동기 캡처 프로세스에서 선택한 끝점까지 변경 내용을 아직 다 처리하지 않았을 수 있기 때문에 이 단계가 필요합니다.  
@@ -97,7 +96,7 @@ ms.lasthandoff: 08/03/2017
 |반환 값|의미|응답|  
 |------------------|-------------|--------------|  
 |0|변경 데이터가 준비되지 않았음을 나타냅니다.<br /><br /> 선택한 간격의 끝 지점 뒤에 오는 변경 데이터 캡처 레코드가 없습니다.|지연을 구현하는 구성 요소에서 실행이 계속됩니다. 그런 다음 제어가 For 루프 컨테이너로 반환되어 반환되는 값이 0인 한 SQL 실행 태스크가 계속 검사됩니다.|  
-|1.|변경 데이터가 전체 간격에 대해 캡처되지 않았거나 삭제되었음을 나타낼 수 있습니다. 이는 오류 상태로 처리됩니다.<br /><br /> 선택한 간격의 시작 지점 앞에 오는 변경 데이터 캡처 레코드가 없습니다.|오류를 기록하는 선택적 구성 요소에서 실행이 계속됩니다.|  
+|1|변경 데이터가 전체 간격에 대해 캡처되지 않았거나 삭제되었음을 나타낼 수 있습니다. 이는 오류 상태로 처리됩니다.<br /><br /> 선택한 간격의 시작 지점 앞에 오는 변경 데이터 캡처 레코드가 없습니다.|오류를 기록하는 선택적 구성 요소에서 실행이 계속됩니다.|  
 |2|데이터가 준비되었음을 나타냅니다.<br /><br /> 선택한 간격의 시작 지점 앞에 오고 끝 지점 뒤에 오는 변경 데이터 캡처 레코드가 모두 있습니다.|실행이 For 루프 밖으로 전달되고 증분 로드가 시작됩니다.|  
 |3|사용 가능한 모든 변경 데이터의 초기 로드를 나타냅니다.<br /><br /> 조건부 논리는 이 용도로만 사용되는 특수 패키지 변수에서 이 값을 가져옵니다.|실행이 For 루프 밖으로 전달되고 증분 로드가 시작됩니다.|  
 |5|TimeoutCeiling에 도달했음을 나타냅니다.<br /><br /> 루프에서 지정한 횟수만큼 데이터를 테스트했으며 데이터를 여전히 사용할 수 없습니다. 이 테스트나 유사한 테스트를 사용하지 않으면 패키지가 무기한 실행될 수 있습니다.|시간 초과를 기록하는 선택적 구성 요소에서 실행이 계속됩니다.|  
@@ -345,4 +344,3 @@ ms.lasthandoff: 08/03/2017
  **다음 항목:** [변경 데이터에 대한 쿼리 준비](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   
-

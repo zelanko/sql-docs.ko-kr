@@ -5,18 +5,14 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DELETE
-dev_langs:
-- DMX
+f1_keywords: DELETE
+dev_langs: DMX
 helpviewer_keywords:
 - DELETE statement [DMX]
 - mining structures [DMX], clearing
@@ -25,17 +21,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], clearing
 - deleting mining structures
 ms.assetid: 5a8204c3-a3df-4d97-9c1d-d997d24c70e3
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 566ae835ad06e99edbf624ab6d25611c0a8427f7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 00be9b52e652e2a2456cdbcd589f048d8a971d47
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="delete-dmx"></a>DELETE(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,11 +57,11 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
  다음 표에서는 다른 형식의 구문을 사용한 결과를 설명합니다.  
   
-|문|결과|  
+|인수를 제거합니다.|결과|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE*\<구조 >*<br /><br /> 또는<br /><br /> DELETE FROM MINING STRUCTURE*\<구조 >*합니다. 콘텐츠|마이닝 구조에 ProcessClear를 수행합니다. 마이닝 구조 및 연결된 마이닝 모델에서 모든 내용이 지워집니다.|  
+|DELETE FROM MINING STRUCTURE*\<구조 >*<br /><br /> 로 구분하거나 여러<br /><br /> DELETE FROM MINING STRUCTURE*\<구조 >*합니다. 콘텐츠|마이닝 구조에 ProcessClear를 수행합니다. 마이닝 구조 및 연결된 마이닝 모델에서 모든 내용이 지워집니다.|  
 |DELETE FROM MINING STRUCTURE*\<구조 >*합니다. 경우|마이닝 구조에 ProcessClearStructureOnly를 수행합니다. 마이닝 구조에서 모든 내용이 지워지고 연결된 마이닝 모델은 그대로 유지됩니다. 마이닝 구조를 지운 후에는 연결된 마이닝 모델에서 드릴스루가 실행되지 않습니다.|  
-|마이닝 모델에서 삭제*\<모델 >*<br /><br /> 또는<br /><br /> 마이닝 모델에서 삭제*\<모델 >*합니다. 콘텐츠|마이닝 모델에서 ProcessClear를 수행 하지만 상태 값을 그대로 둡니다. 상태 값은 열에서 가능한 상태입니다. 예를 들어 Gender 열의 상태 값은 Male 및 Female입니다.|  
+|마이닝 모델에서 삭제*\<모델 >*<br /><br /> 로 구분하거나 여러<br /><br /> 마이닝 모델에서 삭제*\<모델 >*합니다. 콘텐츠|마이닝 모델에서 ProcessClear를 수행 하지만 상태 값을 그대로 둡니다. 상태 값은 열에서 가능한 상태입니다. 예를 들어 Gender 열의 상태 값은 Male 및 Female입니다.|  
   
  처리 유형에 대 한 자세한 내용은 참조 [Type 요소 &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md).  
   
@@ -80,7 +75,6 @@ DELETE FROM NB_Sample.CONTENT
 ## <a name="see-also"></a>관련 항목:  
  [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

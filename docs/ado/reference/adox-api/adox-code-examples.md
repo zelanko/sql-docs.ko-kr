@@ -3,7 +3,7 @@ title: "ADOX 코드 예제 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - ADOX code examples
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d0da086c625fcb54c2fbb62bc528d1dcf8f00d76
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aae22d4169b93fa3f3526007a20abaf8cb28f652
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-code-examples"></a>ADOX 코드 예제
 ADOX 개체, 메서드, 속성 및 이벤트를 사용 하는 방법에 알아보려면 다음 코드 예제를 사용 합니다.  
@@ -56,4 +55,3 @@ ADOX 개체, 메서드, 속성 및 이벤트를 사용 하는 방법에 알아�
  [뷰 컬렉션, CommandText 속성 예제 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [뷰 삭제 (VB) 메서드 예제](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Views Refresh 메서드 예제(VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)
-

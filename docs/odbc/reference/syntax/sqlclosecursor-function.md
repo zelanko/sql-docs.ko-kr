@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLCloseCursor
-apilocation:
-- sqlsrv32.dll
+apiname: SQLCloseCursor
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLCloseCursor
-helpviewer_keywords:
-- SQLCloseCursor function [ODBC]
+f1_keywords: SQLCloseCursor
+helpviewer_keywords: SQLCloseCursor function [ODBC]
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8c8e82312bda206d941bb08fe21fdcd27dbc0f56
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0921de0c8bc117ca86f4aaabd273efff1f09a9e6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlclosecursor-function"></a>SQLCloseCursor 함수
 **규칙**  
@@ -59,7 +53,7 @@ SQLRETURN SQLCloseCursor(
 ## <a name="diagnostics"></a>진단  
  때 **SQLCloseCursor** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* sql _HANDLE_STMT 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLCloseCursor** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |24000|잘못된 커서 상태|커서가 없습니다에 열려 있었던는 *StatementHandle*합니다. (ODBC 3에 의해서만 반환 됩니다. *x* 드라이버입니다.)|  
@@ -71,7 +65,7 @@ SQLRETURN SQLCloseCursor(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *StatementHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLCloseCursor** 커서가 없습니다 열려 있으면 SQLSTATE 24000 (잘못 된 커서 상태)를 반환 합니다. 호출 **SQLCloseCursor** 호출 하는 것과 같습니다 **SQLFreeStmt** 예외와 SQL_CLOSE 옵션을 사용 하는 **SQLFreeStmt** SQL_CLOSE와에 아무런 영향을 주지는 응용 프로그램 문에서 열려 있는 커서가 없습니다 없으면 동안 **SQLCloseCursor** SQLSTATE 24000 (잘못 된 커서 상태)를 반환 합니다.  
   
 > [!NOTE]  
@@ -93,4 +87,3 @@ SQLRETURN SQLCloseCursor(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

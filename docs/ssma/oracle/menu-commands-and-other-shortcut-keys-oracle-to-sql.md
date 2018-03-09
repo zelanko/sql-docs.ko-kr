@@ -1,26 +1,27 @@
 ---
 title: "메뉴 명령 및 기타 바로 가기 키 (Oracle To SQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: b6bdfbc11f7e458cb93fbf0af7a159526fe29d7f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d58f17f3c5450232e97c79ad594ccc7c3a7fe1a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>메뉴 명령 및 기타 바로 가기 키 (Oracle To SQL)
 다음 섹션에서는 메뉴 명령 및 Oracle 응용 프로그램에 대 한 SSMA의 다양 한 대화 상자에 사용 된 다른 바로 가기 키에 액세스 하는 바로 가기 키에 설명 합니다.  
@@ -202,7 +203,6 @@ ms.lasthandoff: 08/02/2017
 |요약 정보를 시작 합니다.|CTRL + SHIFT + 공간|  
 |선언으로 이동 합니다.|F12|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [바로 가기 키 &#40; Oracle SQL &#41;](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
   
-

@@ -13,24 +13,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
-caps.latest.revision: 26
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8fa809bf27923d4e55c972dbcf2c5013bebff799
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>메모리 내 OLTP에 지원되는 데이터 형식
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 문서에서는 다음 항목의 메모리 내 OLTP 기능에 대해 지원되지 않는 데이터 형식을 소개합니다.  
   
--   메모리 최적화 테이블  
+-   메모리 액세스에 최적화된 테이블  
   
 -   고유하게 컴파일된 T-SQL 모듈  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 07/31/2017
 |-|-|-|  
 |[datetimeoffset&#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)|[geography&#40;Transact-SQL&#41;](../../t-sql/spatial-geography/spatial-types-geography.md)|[geometry&#40;Transact-SQL&#41;](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)|  
 |[hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[rowversion&#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)|[xml&#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)|  
-|[sql_variant&#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)|사용자 정의 형식|.|  
+|[sql_variant&#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)|사용자 정의 형식|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
   
 ## <a name="notable-supported-data-types"></a>지원되는 주요 데이터 형식  
  메모리 내 OLTP의 대다수 기능은 대부분의 데이터 형식을 지원합니다. 지원되는 몇 가지 주요 데이터 형식은 다음과 같습니다.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 07/31/2017
   
 위의 문자열 및 이진 데이터 형식의 경우 SQL Server 2016부터는 다음 사항이 적용됩니다.  
   
-- 개별 메모리 최적화 테이블은 `nvarchar(4000)`등의 긴 열을 여러 개 포함할 수도 있습니다. 이러한 열의 길이로 인해 실제 행 크기가 8060바이트보다 커지더라도 포함이 가능합니다.  
+- 메모리 최적화 개별 테이블은 `nvarchar(4000)` 등의 긴 열을 여러 개 포함할 수도 있습니다. 이러한 열의 길이로 인해 실제 행 크기가 8060바이트보다 커지더라도 포함이 가능합니다.  
   
 - 메모리 최적화 테이블은 `varchar(max)`와 같은 데이터 형식의 이진 열과 최대 길이 문자열을 포함할 수 있습니다.  
 
@@ -70,7 +69,7 @@ SQL Server 2016부터는 메모리 최적화 테이블이 [행 외부 열을 지
 - max_length가 -1이면 LOB(Large Object) 열을 나타냅니다.
 
 
-```tsql
+```sql
 SELECT
         OBJECT_NAME(m.object_id) as [table],
         c.name                   as [column],
@@ -90,12 +89,11 @@ SELECT
 
 |기타 유형|참조 항목|  
 |-----------------|--------------------------|  
-|테이블 형식|[메모리 최적화 테이블 변수](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
+|테이블 형식|[메모리 액세스에 최적화된 테이블 변수](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [메모리 최적화 테이블에서 SQL_VARIANT 구현](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
- [메모리 최적화 테이블의 테이블 및 행 크기](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+ [메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-

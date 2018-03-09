@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC driver for Oracle [ODBC], versions
+helpviewer_keywords: ODBC driver for Oracle [ODBC], versions
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1151f1ce5c1c8644c448555e25a03a0b455e1a9d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e3a8132d535b764818fb9dcab72b3cba8bb48154
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-version-scheme"></a>드라이버 버전 체계
 > [!IMPORTANT]  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  와 2.573.2973 릴리스, 명명 규칙을 유발 하 고 일부 혼란이 2.573 2.73 보다 이전 버전은 있지만 빌드 번호의 각 섹션은 개별적으로 고려해 야 합니다. 573 번호 보다 큰 경우 73, 최신 버전 이므로 또한 "2.5" 드라이버의 버전 번호를 나타냅니다.
-

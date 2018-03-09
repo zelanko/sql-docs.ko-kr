@@ -1,27 +1,27 @@
 ---
-title: "Excel 2003 행 제한을 해결 | Microsoft Docs"
+title: "Excel 2003 행 제한 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 76705db4f9467f412cbe2dcc7d611d8576c447d6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   이 항목에서는 페이지를 매긴 보고서를 Excel로 내보낼 때 Excel 2003 행 제한을 해결하는 방법을 설명합니다. 테이블만 포함하는 보고서에 대한 해결 방법입니다.  
@@ -61,9 +61,8 @@ ms.lasthandoff: 08/09/2017
   
 7.  **페이지 나누기** 페이지에서 **각 그룹 인스턴스 사이** 를 클릭한 다음 **확인**을 클릭합니다.  
   
-     ![페이지 나누기를 설정할](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "페이지 나누기를 설정 합니다.")  
+     ![페이지 나누기 설정](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "페이지 나누기 설정")  
   
 8.  보고서를 저장합니다. 보고서를 Excel로 내보내는 경우 여러 워크시트로 내보내고 각 워크시트에는 최대 65000개 행이 포함됩니다.  
   
   
-

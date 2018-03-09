@@ -2,26 +2,31 @@
 title: "메모리 내 OLTP 데이터베이스에 대한 고가용성 지원 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14e2a3d68d922c4e78ee154a380fc6ddd4721526
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 299c2e0d7306fb1cca33eac4a26c1d3b04dca83c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>메모리 내 OLTP 데이터베이스에 대한 고가용성 지원
-  고유하게 컴파일된 저장 프로시저가 있거나 없이 메모리 최적화 테이블을 포함하는 데이터베이스는 Always On 가용성 그룹에서 완전히 지원됩니다.  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 개체를 포함하는 데이터베이스의 구성과 지원 방식은 이러한 개체를 포함하지 않는 데이터베이스의 경우와 차이가 없습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+고유하게 컴파일된 저장 프로시저가 있거나 없이 메모리 최적화 테이블을 포함하는 데이터베이스는 Always On 가용성 그룹에서 완전히 지원됩니다.  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 개체를 포함하는 데이터베이스의 구성과 지원 방식은 이러한 개체를 포함하지 않는 데이터베이스의 경우와 차이가 없습니다.  
   
  Always On 가용성 그룹에서 메모리 내 OLTP 데이터베이스를 배포하면 주 복제본의 메모리 최적화 테이블에 대한 변경 내용이 REDO 적용 시 메모리 내에서 보조 복제본의 테이블에 적용됩니다. 즉, 데이터가 이미 메모리에 있으므로 보조 복제본 장애 조치(failover)가 매우 신속하게 진행될 수 있습니다. 또한 읽기용으로 구성된 보조 복제본에 대한 쿼리에서 테이블을 사용할 수 있습니다.  
   

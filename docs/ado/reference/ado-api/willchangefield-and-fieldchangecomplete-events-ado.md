@@ -3,7 +3,7 @@ title: "WillChangeField 및 FieldChangeComplete 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - WillChangeField event [ADO]
 - fieldchangecomplete event [ADO]
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 98b5b27b9a6111768f2ef2c5e9470b4b87fa9acc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d9ce0412a76f34f653273d294e7f8add031a9d9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 및 FieldChangeComplete 이벤트 (ADO)
 **WillChangeField** 이벤트는 보류 중인 작업이 하나 이상의 값을 변경 하기 전에 호출 됩니다 [필드](../../../ado/reference/ado-api/field-object.md) 개체에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. **FieldChangeComplete** 하나 이상의 값 보다 이후 라고 이벤트 **필드** 개체 변경 되었습니다.  
@@ -49,7 +48,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  A **긴** 의 수를 나타내는 **필드** 개체 *필드*합니다.  
   
- *필드*  
+ *Fields*  
  에 대 한 **WillChangeField**, *필드* 매개 변수는 배열입니다 **변형** 포함 된 **필드** 원래 값이 있는 개체입니다. 에 대 한 **FieldChangeComplete**, *필드* 매개 변수는 배열입니다 **변형** 포함 된 **필드** 에서 변경 된 값을 사용 하 여 개체 .  
   
  *pError*  
@@ -75,4 +74,3 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
 ## <a name="see-also"></a>관련 항목:  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)
-

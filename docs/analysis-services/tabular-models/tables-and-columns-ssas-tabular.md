@@ -1,34 +1,31 @@
 ---
-title: "테이블 및 열 (SSAS 테이블 형식) | Microsoft Docs"
+title: "테이블 및 열 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 19f955231a5a68cc52ae9c867d0ea64f9c3daddf
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e941e6c084842238d429c7a653efbad24fb56520
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="tables-and-columns-ssas-tabular"></a>테이블 및 열(SSAS 테이블 형식)
-  테이블 가져오기 마법사를 사용하여 테이블과 데이터를 모델에 추가한 후에는 데이터의 새 열 추가, 테이블 간의 관계 만들기, 데이터를 확장하는 계산 정의, 보기 쉽게 테이블의 데이터 필터링 및 정렬 등을 수행하여 테이블 작업을 시작할 수 있습니다.  
+# <a name="tables-and-columns"></a>테이블 및 열 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+테이블 가져오기 마법사를 사용하여 테이블과 데이터를 모델에 추가한 후에는 데이터의 새 열 추가, 테이블 간의 관계 만들기, 데이터를 확장하는 계산 정의, 보기 쉽게 테이블의 데이터 필터링 및 정렬 등을 수행하여 테이블 작업을 시작할 수 있습니다.  
   
  이 항목의 섹션:  
   
@@ -59,7 +56,7 @@ ms.lasthandoff: 09/01/2017
   
 -   복사하여 테이블에 붙여넣은 관계형 데이터 및 테이블 형식(HTML) 데이터의 조합  
   
- 데이터를 가져오면 데이터의 각 테이블이나 뷰, 시트 또는 파일이 모델 디자이너에 테이블로 추가됩니다. 다양한 원본의 데이터를 각각 별도의 탭에 추가하는 것이 일반적지만 **붙여넣기** 및 **추가하여 붙여넣기**를 사용하여 데이터를 단일 테이블로 결합할 수도 있습니다. 자세한 내용은 [데이터 복사 및 붙여넣기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)를 참조하세요.  
+ 데이터를 가져오면 데이터의 각 테이블이나 뷰, 시트 또는 파일이 모델 디자이너에 테이블로 추가됩니다. 다양한 원본의 데이터를 각각 별도의 탭에 추가하는 것이 일반적지만 **붙여넣기** 및 **추가하여 붙여넣기**를 사용하여 데이터를 단일 테이블로 결합할 수도 있습니다. 자세한 내용은 참조 [데이터 복사 및 붙여넣기](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)합니다.  
   
  필요한 데이터를 모두 추가한 후 테이블 간의 추가 관계를 만들거나, 다른 테이블의 관련 값을 조회 또는 참조하거나, 새 계산 열을 추가하여 파생 값을 만들 수 있습니다.  
   
@@ -69,17 +66,16 @@ ms.lasthandoff: 09/01/2017
   
 |항목|Description|  
 |-----------|-----------------|  
-|[테이블에 열 추가&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|원본 열을 테이블 정의에 추가하는 방법을 설명합니다.|  
-|[열 삭제&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|모델 디자이너 또는 테이블 속성 대화 상자를 사용하여 모델 테이블 열을 삭제하는 방법에 대해 설명합니다.|  
-|[테이블, 열 또는 행 필터 매핑 변경&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)|테이블 속성 편집 대화 상자에서 테이블 미리 보기 또는 SQL 쿼리 편집기를 사용하여 테이블, 열 또는 행 필터 매핑을 변경하는 방법을 설명합니다.|  
-|[시간 인텔리전스에 사용할 날짜 테이블로 표시 지정&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|날짜 테이블로 표시 대화 상자를 사용하여 날짜 테이블 및 고유 식별자 열을 지정하는 방법을 설명합니다. 날짜 테이블 및 고유 식별자 지정은 DAX 수식에서 시간 인텔리전스 기능을 사용할 경우에 필요합니다.|  
-|[테이블 추가&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/add-a-table-ssas-tabular.md)|기존 데이터 원본 연결을 사용하여 데이터 원본의 테이블을 추가하는 방법을 설명합니다.|  
-|[테이블 삭제&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 더 이상 필요하지 않은 테이블을 삭제하는 방법을 설명합니다.|  
-|[테이블 또는 열 이름 바꾸기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|모델에서 쉽게 식별할 수 있도록 테이블 또는 열의 이름을 바꾸는 방법을 설명합니다.|  
-|[열 데이터 형식 설정&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|열의 데이터 형식을 변경하는 방법을 설명합니다. 데이터 형식은 열의 데이터가 저장되고 표시되는 방법을 정의합니다.|  
-|[열 숨기기 또는 고정&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|표시하지 않을 열을 숨기는 방법과 한 영역에서 특정 열을 고정(잠금)하여 모델의 다른 영역으로 스크롤하는 동안 모델의 특정 영역을 계속 표시하는 방법을 설명합니다.|  
-|[계산 열&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)|이 섹션의 항목에서는 계산 열을 사용하여 집계된 데이터를 모델에 추가하는 방법을 설명합니다.|  
-|[데이터 필터링 및 정렬&#40;SSAS 테이블 형식&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|이 섹션의 항목에서는 모델 디자이너의 컨트롤을 사용하여 데이터를 필터링하거나 정렬하는 방법을 설명합니다.|  
+|[테이블에 열 추가](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|원본 열을 테이블 정의에 추가하는 방법을 설명합니다.|  
+|[열 삭제](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|모델 디자이너 또는 테이블 속성 대화 상자를 사용하여 모델 테이블 열을 삭제하는 방법에 대해 설명합니다.|  
+|[테이블, 열 또는 행 필터 매핑 변경](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)|테이블 속성 편집 대화 상자에서 테이블 미리 보기 또는 SQL 쿼리 편집기를 사용하여 테이블, 열 또는 행 필터 매핑을 변경하는 방법을 설명합니다.|  
+|[시간 인텔리전스에 사용할 날짜 테이블로 표시 지정](../../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|날짜 테이블로 표시 대화 상자를 사용하여 날짜 테이블 및 고유 식별자 열을 지정하는 방법을 설명합니다. 날짜 테이블 및 고유 식별자 지정은 DAX 수식에서 시간 인텔리전스 기능을 사용할 경우에 필요합니다.|  
+|[테이블 추가](../../analysis-services/tabular-models/add-a-table-ssas-tabular.md)|기존 데이터 원본 연결을 사용하여 데이터 원본의 테이블을 추가하는 방법을 설명합니다.|  
+|[테이블 삭제](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 더 이상 필요하지 않은 테이블을 삭제하는 방법을 설명합니다.|  
+|[테이블 또는 열 이름 바꾸기](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|모델에서 쉽게 식별할 수 있도록 테이블 또는 열의 이름을 바꾸는 방법을 설명합니다.|  
+|[열 데이터 형식 설정](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|열의 데이터 형식을 변경하는 방법을 설명합니다. 데이터 형식은 열의 데이터가 저장되고 표시되는 방법을 정의합니다.|  
+|[열 숨기기 또는 고정](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|표시하지 않을 열을 숨기는 방법과 한 영역에서 특정 열을 고정(잠금)하여 모델의 다른 영역으로 스크롤하는 동안 모델의 특정 영역을 계속 표시하는 방법을 설명합니다.|  
+|[계산 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)|이 섹션의 항목에서는 계산 열을 사용하여 집계된 데이터를 모델에 추가하는 방법을 설명합니다.|  
+|[데이터 필터링 및 정렬](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|이 섹션의 항목에서는 모델 디자이너의 컨트롤을 사용하여 데이터를 필터링하거나 정렬하는 방법을 설명합니다.|  
   
   
-

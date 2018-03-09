@@ -3,8 +3,11 @@ title: "결과 업데이트 규칙(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a4c523c915ec236189f9b97104fcd78c725b4fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0ab1925f265eb27a6c0efd1b55b4770e4be7cf3d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>결과 업데이트 규칙(Visual Database Tools)
-대부분의 경우 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)에 표시된 결과 집합을 업데이트할 수 있지만 업데이트를 할 수 없는 경우도 종종 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 대부분의 경우 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)에 표시된 결과 집합을 업데이트할 수 있지만 업데이트를 할 수 없는 경우도 종종 있습니다.  
   
 일반적으로 결과를 업데이트하려면 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 에 테이블의 행을 고유하게 식별할 수 있는 충분한 정보가 있어야 합니다. 예를 들어 쿼리에 출력 목록의 기본 키가 포함되어 있는 경우입니다. 또한 사용자는 데이터베이스를 업데이트할 수 있는 충분한 권한이 있어야 합니다.  
   
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/09/2017
   
 아래 표는 결과 창에서 쿼리 결과를 업데이트할 수 있거나 업데이트할 수 없는 특정 예제를 요약한 것입니다. 대부분의 경우 현재 사용하고 있는 데이터베이스가 쿼리 결과의 업데이트 여부를 결정합니다.  
   
-|Query|결과의 업데이트 가능 여부|  
+|쿼리|결과의 업데이트 가능 여부|  
 |---------|---------------------------|  
 |출력 목록의 기본 키가 있는 테이블 하나를 기반으로 하는 쿼리|예(아래 항목은 예외)|  
 |고유 인덱스 및 기본 키가 없는 테이블 하나를 기반으로 하는 쿼리|쿼리와 데이터베이스에 따라 다릅니다. 일부 데이터베이스는 기록을 고유하게 식별할 수 있는 충분한 정보가 있는 경우 업데이트할 수 있습니다.|  
@@ -67,6 +70,6 @@ ms.lasthandoff: 11/09/2017
   
 -   타임스탬프 또는 BLOB 열  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

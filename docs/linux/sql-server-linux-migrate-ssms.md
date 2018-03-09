@@ -1,32 +1,31 @@
 ---
 title: "내보내기 및 가져오기 Linux에서 데이터베이스 | Microsoft Docs"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
+ms.openlocfilehash: 817fc0ae018ebb7999ad572c0f18ede943ff7090
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 06dc93bec060f2ceb435fcf17817df9e7a8daee9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>내보내기 및 SSMS 또는 SqlPackage.exe windows와 Linux에서 데이터베이스 가져오기
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 항목에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 및 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) 내보내고 SQL Server 2017 linux에서 데이터베이스를 가져옵니다. Windows 응용 프로그램은 SSMS 및 SqlPackage.exe, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 하는 경우이 방법을 사용 합니다.
+이 문서에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 및 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) 내보내고 SQL Server 2017 linux에서 데이터베이스를 가져옵니다. Windows 응용 프로그램은 SSMS 및 SqlPackage.exe, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 하는 경우이 방법을 사용 합니다.
 
 항상 설치 하 고에 설명 된 대로 SQL Server Management Studio (SSMS)의 가장 최신 버전을 사용 해야 [Linux에서 SQL Server에 연결 하는 Windows에서 SSMS를 사용 하 여](sql-server-linux-develop-use-ssms.md)
 
@@ -69,7 +68,7 @@ ms.lasthandoff: 10/02/2017
 
 *입니다. 지정한 대상 서버에서 새 데이터베이스를 만들려는 BACPAC 파일을 가져옵니다.
 
-## <a id="sqlpackage"></a>SqlPackage 명령줄 옵션
+## <a id="sqlpackage"></a> SqlPackage 명령줄 옵션
 
 SQL Server Data Tools (SSDT) 명령줄 도구를 사용 하 여 이기도 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx),으로 내보내고 가져올 BACPAC 파일입니다.
 
@@ -88,4 +87,3 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 
 ## <a name="see-also"></a>참고 항목
 SSMS를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [사용 하 여 SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx)합니다. SqlPackage.exe에 자세한 내용은 참조는 [SqlPackage 참조 설명서](https://msdn.microsoft.com/library/hh550080.aspx)합니다.
-

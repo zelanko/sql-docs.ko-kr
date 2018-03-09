@@ -2,10 +2,14 @@
 title: "데이터베이스 미러링 구성 문제 해결(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], troubleshooting
 - troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23f685d4e5a32dc99fdf41e9a8db7c0deb8063a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3f3862958324bbd92c14921c03b0fa76f7dc7fc1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>데이터베이스 미러링 구성 문제 해결(SQL Server)
-  이 항목에서는 데이터베이스 미러링 세션을 설정할 때 발생하는 문제를 해결하는 데 도움이 되는 정보를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 데이터베이스 미러링 세션을 설정할 때 발생하는 문제를 해결하는 데 도움이 되는 정보를 제공합니다.  
   
 > [!NOTE]  
 >  [데이터베이스 미러링을 위한 선행 조건](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)을 모두 충족하는지 확인하세요.  
@@ -40,7 +45,7 @@ ms.lasthandoff: 11/09/2017
 |[네트워크 액세스](#NetworkAccess)|각 서버 인스턴스에서 TCP를 통해 다른 서버 인스턴스의 포트에 액세스할 수 있어야 한다는 요구 사항에 대해 설명합니다.|  
 |[미러 데이터베이스 준비](#MirrorDbPrep)|미러링이 시작될 수 있도록 미러 데이터베이스를 준비하기 위한 요구 사항을 요약합니다.|  
 |[파일 생성 작업 실패](#FailedCreateFileOp)|파일 생성 작업이 실패할 경우의 대처 방법에 대해 설명합니다.|  
-|[Transact-SQL을 사용하여 미러링 시작](#StartDbm)|ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 문의 필요한 순서에 대해 설명합니다.|  
+|[Transact-SQL을 사용하여 미러링 시작](#StartDbm)|ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 문의 필수 순서에 대해 설명합니다.|  
 |[데이터베이스 간 트랜잭션](#CrossDbTxns)|자동 장애 조치(Failover)를 사용할 경우 미결 트랜잭션이 자동으로 잘못 해결될 수 있습니다. 이러한 이유로 데이터베이스 미러링은 데이터베이스 간 트랜잭션을 지원하지 않습니다.|  
   
 ##  <a name="Accounts"></a> 계정  
@@ -50,7 +55,7 @@ ms.lasthandoff: 11/09/2017
   
     1.  계정이 동일한 도메인 계정에서 실행되는 경우 잘못 구성할 가능성이 줄어듭니다.  
   
-    2.  계정이 서로 다른 도메인에서 실행되거나 도메인 계정이 아닐 경우 다른 컴퓨터의 **master** 에 한 계정의 로그인을 만들고 끝점에 대한 CONNECT 권한을 해당 로그인에 부여해야 합니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조하세요. 여기에는 네트워크 서비스 계정이 포함됩니다.  
+    2.  계정이 서로 다른 도메인에서 실행되거나 도메인 계정이 아닐 경우 다른 컴퓨터의 **master** 에 한 계정의 로그인을 만들고 끝점에 대한 CONNECT 권한을 해당 로그인에 부여해야 합니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요. 여기에는 네트워크 서비스 계정이 포함됩니다.  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 로컬 시스템 계정을 사용하는 서비스로 실행되는 경우 인증서를 사용하여 인증해야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
@@ -83,7 +88,7 @@ ms.lasthandoff: 11/09/2017
     GO  
     ```  
   
-     자세한 내용은 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)를 참조하세요.  
+     자세한 내용은 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)을 참조하세요.  
   
 5.  ROLE이 정확한지 확인합니다. 각 서버 인스턴스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
   
@@ -129,7 +134,7 @@ ms.lasthandoff: 11/09/2017
   
  데이터베이스 미러링이 중지된 경우 주 데이터베이스에서 수행된 모든 후속 로그 백업을 미러 데이터베이스에 적용해야만 미러링을 다시 시작할 수 있습니다.  
   
- 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)버전에서는 데이터베이스 미러링을 사용할 수 없습니다.  
+ 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
 ##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  미러링 세션에 영향을 주지 않고 파일을 추가하려면 파일의 경로가 두 서버 모두에 있어야 합니다. 따라서 미러 데이터베이스를 만들 때 데이터베이스 파일을 이동하면 나중에 미러 데이터베이스에 파일을 추가할 수 없고 미러링이 일시 중지될 수 있습니다.  
@@ -163,11 +168,11 @@ ms.lasthandoff: 11/09/2017
   
 -   동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 여러 데이터베이스를 업데이트하는 트랜잭션  
   
--   MS DTC([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator)를 사용하는 트랜잭션  
+-   MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator)를 사용하는 트랜잭션  
   
  자세한 내용은 [Always On 가용성 그룹 및 데이터베이스 미러링에 대한 데이터베이스 간 트랜잭션 및 분산 트랜잭션&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   

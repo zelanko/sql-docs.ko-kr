@@ -1,25 +1,27 @@
 ---
-title: "모바일 보고서의 열 이나 행으로 데이터를 그룹화 | Reporting Services | Microsoft Docs"
+title: "모바일 보고서에서 열 또는 행을 기준으로 데이터 그룹화 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: c9fee1d3dc4099d73c2ed0af13333cdaa10a97b9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>모바일 보고서에서 열 또는 행을 기준으로 데이터 그룹화 | Reporting Services
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]의 많은 차트 종류에서 열 또는 행을 기준으로 데이터를 구성할 수 있습니다. 이 단계별 지침을 따릅니다.
@@ -32,7 +34,7 @@ ms.lasthandoff: 08/09/2017
 
 1. **레이아웃** 탭에서 **비교 합계 차트** 를 디자인 화면으로 끌어 놓고 확장합니다.
 
-2. **데이터** 탭을 선택합니다. SimulatedTable 테이블에는 **Metric1** 부터 **Metric5** 까지, **Comparison1** 부터 **Comparison5**까지의 열 계열이 있습니다. 
+2. **데이터** 탭을 선택합니다. SimulatedTable 테이블에는 **Metric1**부터 **Metric5**까지, **Comparison1**부터 **Comparison5**까지의 열 계열이 있습니다. 
 
    ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
@@ -66,5 +68,5 @@ ms.lasthandoff: 08/09/2017
 
    이제 차트의 각 막대는 Category 열의 각 범주에 대한 값을 나타냅니다.
 
-### <a name="see-also"></a>참고 항목
+### <a name="see-also"></a>관련 항목:
 * [Reporting Services 모바일 보고서의 시각화](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

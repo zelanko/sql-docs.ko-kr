@@ -3,7 +3,7 @@ title: "Number 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - number property [ADO]
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f6a98f38098d936ea6c2eee03b28d969f1c0e506
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d5567283a62a31842185afce7682d3641d6fcc4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="number-property-ado"></a>Number 속성 (ADO)
 고유 하 게 식별 하는 번호 나타냅니다는 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  
@@ -52,4 +51,3 @@ ms.lasthandoff: 09/09/2017
  [Description 속성](../../../ado/reference/ado-api/description-property.md)   
  [HelpContext, 도움말 파일 속성](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Source 속성(ADO 오류)](../../../ado/reference/ado-api/source-property-ado-error.md)
-

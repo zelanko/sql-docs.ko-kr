@@ -1,5 +1,5 @@
 # [Microsoft ODBC(Open Database Connectivity)](microsoft-open-database-connectivity-odbc.md)
-# [새로 추가되거나 최근에 업데이트된 문서](new-updated-odbc.md)
+# [새로운 또는 업데이트 된 문서](new-updated-odbc.md)
 
 # [Microsoft ODBC 드라이버 +](../odbc/microsoft/microsoft-supplied-odbc-drivers.md)
 # [ODBC 관리 +](../odbc/admin/odbc-data-source-administrator.md)

@@ -2,16 +2,13 @@
 title: "사용자 정의 멤버 속성 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: custom member properties [MDX]
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eaeb79931b4c9c57088ada093148047a26b614d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08576f10739533850f04a9e64fa052bf7c6bfeec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-member-properties---user-defined-member-properties"></a>MDX 멤버 속성-사용자 정의 멤버 속성
-  사용자 정의 멤버 속성을 차원 내의 특정한 이름의 수준에 특성 관계로 추가할 수 있습니다. 계층의 **(All)** 수준 또는 수준 자체에는 사용자 정의 멤버 속성을 추가할 수 없습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]특정 한 특성 관계로 차원의 수준에에서 명명 된 사용자 정의 멤버 속성을 추가할 수 있습니다. 계층의 **(All)** 수준 또는 수준 자체에는 사용자 정의 멤버 속성을 추가할 수 없습니다.  
   
 ## <a name="creating-user-defined-member-properties"></a>사용자 정의 멤버 속성 만들기  
  사용자 정의 멤버 속성을 서버 기반 차원 또는 큐브에 추가하는 데는 사용자 인터페이스 방식 또는 프로그래밍 방식을 사용할 수 있습니다.  

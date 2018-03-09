@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLValidDSN
-apilocation:
-- sqlsrv32.dll
+apiname: SQLValidDSN
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLValidDSN
-helpviewer_keywords:
-- SQLValidDSN [ODBC]
+f1_keywords: SQLValidDSN
+helpviewer_keywords: SQLValidDSN [ODBC]
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c745b7ac285f09ff80478dab911b3cd3a9fc94d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 473670a87ede935267c91537f301589b94666acf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 함수
 **규칙**  
@@ -59,12 +53,12 @@ BOOL SQLValidDSN(
 ## <a name="diagnostics"></a>진단  
  때 **SQLValidDSN** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. A  *\*pfErrorCode* 경우 반환 되만 함수 호출이 실패 한 경우 하지 데이터 원본 이름이 올바르지 않으면 FALSE를 반환 했습니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLValidDSN** 운전 호출한 [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) 데이터 원본 이름의 길이 데이터 원본 이름에 개별 문자의 유효성을 확인 하려면. 이름의 길이 보다 큰지 SQL_MAX_DSN_LENGTH, Sqlext.h에 정의 된 대로 확인 합니다. (데이터 원본 이름의 길이 확인란도 선택 하 여 [SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md).) **SQLValidDSN** 는 다음과 같은 잘못 된 문자 데이터 원본 이름에 포함 되는지 여부를 확인 합니다.  
   
  [ ] { } ( ) , ; ? * = ! @ \  
@@ -76,4 +70,3 @@ BOOL SQLValidDSN(
 |추가, 수정 또는 데이터 원본 제거|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (에 DLL 설치)|  
 |추가, 수정 또는 데이터 원본 제거|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |시스템 정보에는 데이터 원본 이름 쓰기|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
-

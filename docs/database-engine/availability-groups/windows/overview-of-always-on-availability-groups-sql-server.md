@@ -2,9 +2,12 @@
 title: "Always On 가용성 그룹 개요(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bb78ad6f8de0b4f0fa37199a9d70bf31ef67fba7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 22f2cac063d651a2c5eb2867e54a64515b1472e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹 개요(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  > 이전 버전의 SQL Server와 관련된 내용은 [AlwaysOn 가용성 그룹 개요(SQL Server) ](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx)를 참조하세요.
 
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
  ![5개 복제본이 있는 가용성 그룹](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "5개 복제본이 있는 가용성 그룹")  
   
 ##  <a name="AvDbs"></a> Availability Databases  
- 데이터베이스를 가용성 그룹에 추가하려면 데이터베이스는 주 복제본을 호스팅하는 서버 인스턴스에 있는 온라인 읽기-쓰기 데이터베이스여야 합니다. 데이터베이스를 추가하면 이 데이터베이스는 가용성 그룹을 주 데이터베이스로 조인하며 클라이언트에서 사용할 수 있는 상태로 유지됩니다. 새로운 주 데이터베이스의 백업이 보조 복제본을 호스팅하는 서버 인스턴스로 복원될 때까지 해당 보조 데이터베이스는 존재하지 않습니다(RESTORE WITH NORECOVERY 사용). 새 보조 데이터베이스는 가용성 그룹에 조인될 때까지 RESTORING 상태에 있습니다. 자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)을 참조하세요.  
+ 데이터베이스를 가용성 그룹에 추가하려면 데이터베이스는 주 복제본을 호스팅하는 서버 인스턴스에 있는 온라인 읽기-쓰기 데이터베이스여야 합니다. 데이터베이스를 추가하면 이 데이터베이스는 가용성 그룹을 주 데이터베이스로 조인하며 클라이언트에서 사용할 수 있는 상태로 유지됩니다. 새로운 주 데이터베이스의 백업이 보조 복제본을 호스팅하는 서버 인스턴스로 복원될 때까지 해당 보조 데이터베이스는 존재하지 않습니다(RESTORE WITH NORECOVERY 사용). 새 보조 데이터베이스는 가용성 그룹에 조인될 때까지 RESTORING 상태에 있습니다. 자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)를 참조하세요.  
   
  조인하면 보조 데이터베이스가 ONLINE 상태로 전환되고 해당 주 데이터베이스와의 데이터 동기화가 시작됩니다. *데이터 동기화* 는 주 데이터베이스에 대한 변경 사항이 보조 데이터베이스에서 재현되는 프로세스입니다. 데이터 동기화를 수행하면 주 데이터베이스가 트랜잭션 로그 레코드를 보조 데이터베이스에 전송합니다.  
   
@@ -190,6 +193,6 @@ ms.lasthandoff: 11/09/2017
  [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [활성 보조: 읽기 가능한 보조 복제본&#40;Always ON 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [활성 보조: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
    

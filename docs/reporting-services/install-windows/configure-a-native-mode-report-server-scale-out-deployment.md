@@ -2,11 +2,13 @@
 title: "기본 모드 보고서 서버 확장 배포 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,25 +16,25 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 10c05be9afbf0f9e272e35f73957ddb3a19c65f2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>기본 모드 보고서 서버 확장 배포 구성
 
-  Reporting Services 기본 모드에서는 단일 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스 실행을 허용하는 확장 배포 모델을 사용할 수 있습니다. 확장 배포는 더 많은 동시 사용자와 보고서 실행 부하를 처리할 수 있도록 보고서 서버의 확장성을 개선하는 데 사용됩니다. 또한 특정 서버가 대화형 보고서나 예약된 보고서를 처리하도록 지정하는 데도 사용할 수 있습니다.  
+  Reporting Services 기본 모드에서는 단일 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스 실행을 허용하는 스케일 아웃 배포 모델을 사용할 수 있습니다. 확장 배포는 더 많은 동시 사용자와 보고서 실행 부하를 처리할 수 있도록 보고서 서버의 확장성을 개선하는 데 사용됩니다. 또한 특정 서버가 대화형 보고서나 예약된 보고서를 처리하도록 지정하는 데도 사용할 수 있습니다.  
   
  SharePoint 모드 보고서 서버는 확장을 위해 SharePoint 제품 인프라를 이용합니다. SharePoint 모드 확장은 SharePoint 팜에 SharePoint 모드 보고서 서버를 추가하여 수행됩니다. SharePoint 모드의 확장에 대한 자세한 내용은 [팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)를 참조하세요.  
  
-  *확장 배포* 는 다음과 같은 시나리오에서 사용됩니다.  
+  
+            *스케일 아웃 배포* 는 다음과 같은 시나리오에서 사용됩니다.  
   
 -   서버 클러스터에 있는 여러 보고서 서버의 부하 분산을 위한 선행 조건. 여러 보고서 서버의 부하를 분산하려면 먼저 같은 보고서 서버 데이터베이스를 공유하도록 구성해야 합니다.  
   
@@ -48,19 +50,20 @@ ms.lasthandoff: 08/09/2017
   
  Reporting Services는 Microsoft Cluster Services 클러스터에 참여하지 않습니다. 그러나 장애 조치(Failover) 클러스터의 일부인 데이터베이스 엔진 인스턴스에 보고서 서버 데이터베이스를 만들 수는 있습니다.  
   
- **확장 배포를 계획, 설치 및 구성하려면 다음 단계를 수행합니다.**  
+ 
+            **스케일 아웃 배포를 계획, 설치 및 구성하려면 다음 단계를 수행합니다.**  
   
 -   보고서 서버 인스턴스를 설치하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요.  
   
--   NLB(네트워크 로드 균형 조정) 클러스터에 확장 배포를 호스트하려는 경우 확장 배포를 구성하기 전에 MLB 클러스터를 구성해야 합니다. 자세한 내용은 [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)을 참조하세요.  
+-   NLB(네트워크 로드 균형 조정) 클러스터에 스케일 아웃 배포를 호스트하려는 경우 스케일 아웃 배포를 구성하기 전에 MLB 클러스터를 구성해야 합니다. 자세한 내용은 [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)을 참조하세요.  
   
 -   보고서 서버 데이터베이스를 공유하고 보고서 서버를 확장 배포에 조인하는 방법은 이 항목의 절차를 참조하십시오.  
   
-     절차에서는 두 개의 노드로 구성된 보고서 서버 확장 배포를 구성하는 방법에 대해 설명합니다. 보고서 서버 노드를 배포에 추가하려면 이 항목에 설명된 단계를 반복하십시오.  
+     절차에서는 두 개의 노드로 구성된 보고서 서버 스케일 아웃 배포를 구성하는 방법에 대해 설명합니다. 보고서 서버 노드를 배포에 추가하려면 이 항목에 설명된 단계를 반복하십시오.  
   
-    -   확장 배포에 조인될 보고서 서버 인스턴스를 각각 설치하려면 설치 프로그램을 사용합니다.  
+    -   스케일 아웃 배포에 조인될 보고서 서버 인스턴스를 각각 설치하려면 설치 프로그램을 사용합니다.  
   
-         서버 인스턴스를 공유 데이터베이스에 연결할 때 데이터베이스 호환성 오류가 발생하지 않도록 하려면 모든 인스턴스가 동일한 버전인지 확인합니다. 예를 들어 SQL Server 2016 보고서 서버 인스턴스를 사용 하 여 보고서 서버 데이터베이스를 만드는 경우 동일한 배포 내의 다른 모든 인스턴스도 SQL Server 2016을도 이어야 합니다.  
+         서버 인스턴스를 공유 데이터베이스에 연결할 때 데이터베이스 호환성 오류가 발생하지 않도록 하려면 모든 인스턴스가 동일한 버전인지 확인합니다. 예를 들어 SQL Server 2016 보고서 서버 인스턴스를 사용하여 보고서 서버 데이터베이스를 만드는 경우 동일한 배포 내의 다른 모든 인스턴스도 SQL Server 2016이어야 합니다.  
   
     -   공유 데이터베이스에 각 보고서 서버를 연결하려면 Reporting Services 구성 관리자를 사용합니다. 한 번에 하나의 보고서 서버에만 연결하여 구성할 수 있습니다.  
   
@@ -74,19 +77,19 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="service-accounts"></a>서비스 계정
 
-Reporting Services 인스턴스에 대 한 사용 되는 서비스 계정을 확장 배포를 처리할 때 중요 합니다. Reporting Services 인스턴스를 배포 하는 경우 다음 중 하나를 수행 해야 합니다.
+Reporting Services 인스턴스에 대해 사용되는 서비스 계정은 확장 배포를 처리할 때 중요합니다. Reporting Services 인스턴스를 배포하는 경우 다음 중 하나를 수행해야 합니다.
 
-**옵션 1:** 모든 Reporting Services 인스턴스 서비스 계정에 대 한 동일한 도메인 사용자 계정으로 구성 해야 합니다.
+**옵션 1:** 모든 Reporting Services 인스턴스는 서비스 계정에 대해 동일한 도메인 사용자 계정으로 구성되어야 합니다.
 
-**옵션 2:** 각 개별 서비스 계정, 도메인 계정 인지, ReportServer 카탈로그 데이터베이스를 호스팅하는 SQL Server 데이터베이스 인스턴스 내에서 dbadmin 권한을 부여 해야 합니다.
+**옵션 2:** 각 개별 서비스 계정, 도메인 계정 여부는 ReportServer 카탈로그 데이터베이스를 호스팅하는 SQL Server 데이터베이스 인스턴스 내에서 dbadmin 권한을 부여 받아야 합니다.
 
-위의 옵션 중 하나 보다 다른 구성으로 구성한 경우에 수정 SQL 에이전트를 사용 하 여 작업의 일시적인 오류가 발생할 수 있습니다. 이 표시 됩니다 모두 Reporting Services에서 오류 로그 및 웹 포털에서 보고서 구독을 편집 하는 경우.
+위의 옵션 중 하나 이외의 다른 구성으로 구성한 경우 SQL 에이전트를 사용하여 작업 수정에 일시적인 오류가 발생할 수 있습니다. 이는 보고서 구독을 편집할 때 Reporting Services 로그 및 웹 포털에서 모두 오류로 표시됩니다.
 
 ```
 An error occurred within the report server database.  This may be due to a connection failure, timeout or low disk condition within the database.
 ``` 
 
-문제 됩니다 간헐적으로 발생 하는 SQL 에이전트 작업을 만든 서버를 볼 수 있는 권한이 갖습니다, 삭제 또는 항목을 편집 합니다. 위의 옵션 중 하나를 이렇게 하지 않으면, 작업 부하 분산 장치에서 SQL 에이전트 작업을 만든 서버에 모든 해당 구독에 대 한 요청이 보낼 때만 성공할 수 있습니다. 
+간헐적으로 발생하는 문제는 SQL 에이전트 작업을 만든 서버만 항목을 보고, 삭제하거나 편집할 수 있는 권한을 갖는다는 것입니다. 위의 옵션 중 하나를 수행하지 않는 경우 작업은 부하 분산 장치에서 SQL 에이전트 작업을 만든 서버에 해당 구독에 대한 모든 요청을 보낼 때만 성공합니다. 
   
 ## <a name="to-install-the-first-report-server-instance"></a>첫 번째 보고서 서버 인스턴스를 설치하려면  
   
@@ -94,7 +97,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 시작합니다.  
   
-3.  보고서 서버 웹 서비스 URL, 웹 포털 URL 및 보고서 서버 데이터베이스를 구성 합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [보고서 서버 구성&#40;Reporting Services 기본 모드&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)을 참조하세요.  
+3.  보고서 서버 웹 서비스 URL, 웹 포털 URL 및 보고서 서버 데이터베이스를 구성합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [보고서 서버 구성&#40;Reporting Services 기본 모드&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)을 참조하세요.  
   
 4.  보고서 서버가 작동하는지 확인합니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services 설치 확인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
@@ -122,13 +125,13 @@ An error occurred within the report server database.  This may be due to a conne
   
     8.  **요약** 을 선택한 다음 **마침**을 선택합니다.  
   
-4.  보고서 서버 **웹 서비스 URL**을 구성합니다. 아직 URL을 테스트하지 마십시오. 보고서 서버가 확장 배포에 조인될 때까지 URL은 확인되지 않습니다.  
+4.  보고서 서버 **웹 서비스 URL**을 구성합니다. 아직 URL을 테스트하지 마십시오. 보고서 서버가 스케일 아웃 배포에 조인될 때까지 URL은 확인되지 않습니다.  
   
-5.  **웹 포털 URL**을 구성합니다. 아직 URL을 테스트하거나 배포를 확인하지 마십시오. 보고서 서버가 확장 배포에 조인될 때까지 보고서 서버를 사용할 수 없습니다.  
+5.  **웹 포털 URL**을 구성합니다. 아직 URL을 테스트하거나 배포를 확인하지 마십시오. 보고서 서버가 스케일 아웃 배포에 조인될 때까지 보고서 서버를 사용할 수 없습니다.  
   
-## <a name="to-join-the-second-report-server-instance-to-the-scale-out-deployment"></a>확장 배포에 두 번째 보고서 서버 인스턴스를 조인하려면  
+## <a name="to-join-the-second-report-server-instance-to-the-scale-out-deployment"></a>스케일 아웃 배포에 두 번째 보고서 서버 인스턴스를 조인하려면  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 열고 첫 번째 보고서 서버 인스턴스에 다시 연결합니다. 첫 번째 보고서 서버는 해독 가능한 암호화 작업을 위해 이미 초기화되었으므로 추가 보고서 서버 인스턴스를 확장 배포에 조인하는 데 사용할 수 있습니다.  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 열고 첫 번째 보고서 서버 인스턴스에 다시 연결합니다. 첫 번째 보고서 서버는 해독 가능한 암호화 작업을 위해 이미 초기화되었으므로 추가 보고서 서버 인스턴스를 스케일 아웃 배포에 조인하는 데 사용할 수 있습니다.  
   
 2.  **확장 배포** 를 클릭하여 확장 배포 페이지를 엽니다. 보고서 서버 데이터베이스에 연결되어 있는 각 보고서 서버 인스턴스당 하나씩 두 개의 항목이 표시되어야 합니다. 첫 번째 보고서 서버 인스턴스는 조인되어야 하고 두 번째 보고서 서버는 "조인될 때까지 기다려야" 합니다. 배포에 비슷한 항목이 보이지 않을 경우 보고서 서버 데이터베이스를 사용하도록 이미 구성되고 초기화된 첫 번째 보고서 서버에 연결된 것입니다.  
   
@@ -137,9 +140,10 @@ An error occurred within the report server database.  This may be due to a conne
 3.  확장 배포 페이지에서 배포에 조인되기를 기다리고 있는 보고서 서버 인스턴스를 선택한 다음 **서버 추가**를 선택합니다.  
   
     > [!NOTE]  
-    >  **문제:** Reporting Services 보고서 서버 인스턴스를 확장 배포에 조인하려고 할 때 ‘액세스가 거부되었습니다.’와 유사한 오류 메시지가 표시될 수 있습니다.  
+    >  
+            **문제:** Reporting Services 보고서 서버 인스턴스를 스케일 아웃 배포에 조인하려고 할 때 ‘액세스가 거부되었습니다.’와 유사한 오류 메시지가 표시될 수 있습니다.  
     >   
-    >  **해결 방법:** 첫 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 백업하고 이 키를 두 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 복원합니다. 그런 다음 두 번째 서버를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장 배포에 조인합니다.  
+    >  **해결 방법:** 첫 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 백업하고 이 키를 두 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 복원합니다. 그런 다음 두 번째 서버를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포에 조인합니다.  
   
 4.  이제 두 보고서 서버 인스턴스가 작동하는지 확인할 수 있습니다. 두 번째 인스턴스를 확인하려면 Reporting Services 구성 도구를 사용하여 보고서 서버에 연결한 다음 **웹 서비스 URL** 또는 **웹 포털 URL**을 클릭합니다.  
   
@@ -150,9 +154,9 @@ An error occurred within the report server database.  This may be due to a conne
 [서비스 계정 구성](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
 [URL 구성](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [기본 모드 보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[보고서 서버 Url 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[보고서 서버 URL 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [보고서 서버 데이터베이스 연결 구성](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[추가 하 고 확장 배포에 대 한 암호화 키를 제거 합니다.](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
-[Reporting Services 기본 모드 보고서 서버를 관리 합니다.](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+[확장 배포의 암호화 키 추가 및 제거](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+[Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

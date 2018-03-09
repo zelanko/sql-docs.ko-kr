@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-caps.latest.revision: 13
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf74698e9e61f456726b1e6a62126a8d78a09777
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f2bcc8b02b0228dc403fffc4ef1c6b82557872a4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,19 +47,19 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 ## <a name="arguments"></a>인수 
 
-*구분 기호*  
+*separator*  
 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 의 `NVARCHAR` 또는 `VARCHAR` 에 대 한 구분 기호로 사용 되는 형식 문자열을 연결 합니다. 리터럴 또는 변수 수 있습니다. 
 
 *expression*  
 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 모든 종류의 합니다. 식으로 변환 됩니다 `NVARCHAR` 또는 `VARCHAR` 연결 하는 동안 형식입니다. 문자열이 아닌 유형으로 변환 됩니다 `NVARCHAR` 유형입니다.
 
 
-< order_clause >   
+<order_clause>   
 필요에 따라 사용 하 여 연결 된 결과의 순서를 지정할 `WITHIN GROUP` 절:
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
-< order_by_expression_list >   
+<order_by_expression_list>   
  
   비상수 목록이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 결과 정렬에 사용할 수 있는 합니다. 하나의 `order_by_expression` 쿼리당 허용 됩니다. 기본 정렬 순서는 오름차순입니다.   
   
@@ -73,14 +72,14 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR (1... 4000) |NVARCHAR (4000) |
-|VARCHAR (1... 8000) |VARCHAR(8000) |
-|int, bigint, smallint, tinyint, 숫자, float, real, 비트, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR (4000) |
+|NVARCHAR(1…4000) |NVARCHAR(4000) |
+|VARCHAR(1…8000) |VARCHAR(8000) |
+|int, bigint, smallint, tinyint, 숫자, float, real, 비트, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
 
 ## <a name="remarks"></a>주의  
  
-`STRING_AGG`집계 행에서 모든 식을 사용 하 고 단일 문자열로 연결 합니다. 식 값 문자열 형식으로 암시적으로 변환 되 고 연결 됩니다. 문자열에 대한 암시적 변환은 데이터 형식 변환에 대한 기존 규칙을 따릅니다. 데이터 형식 변환에 대 한 자세한 내용은 참조 [CAST 및 CONVERT (TRANSACT-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)합니다. 
+`STRING_AGG`행에서 모든 식을 사용 하 고 단일 문자열로 연결 하는 집계 함수가입니다. 식 값 문자열 형식으로 암시적으로 변환 되 고 연결 됩니다. 문자열에 대한 암시적 변환은 데이터 형식 변환에 대한 기존 규칙을 따릅니다. 데이터 형식 변환에 대 한 자세한 내용은 참조 [CAST 및 CONVERT (TRANSACT-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)합니다. 
 
 입력된 식이 형식인 경우 `VARCHAR`, 구분 기호는 형식일 수 없습니다. `NVARCHAR`합니다. 
 
@@ -93,7 +92,7 @@ Null 값은 무시 되 고 해당 구분 기호가 추가 되지 않습니다. N
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>1. 새 줄에 구분 된 목록이 생성 
 다음 예제에서는 캐리지 리턴으로 구분 된 단일 결과 셀에 대 한 이름 목록을 생성 합니다.
-```tsql
+```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
 ```
@@ -110,7 +109,7 @@ FROM Person.Person;
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>2. NULL 값이 없는 쉼표로 구분 된 목록이 생성   
 다음 예제에서는 해당 '없음'으로 null 값을 대체 하 고 단일 결과 셀에는 쉼표로 구분 하 여 이름을 반환 합니다.  
-```tsql
+```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
 ```
@@ -125,7 +124,7 @@ FROM Person.Person;
 
 ### <a name="c-generate-comma-separated-values"></a>3. 쉼표로 구분 된 값을 생성 합니다. 
 
-```tsql   
+```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -144,7 +143,7 @@ FROM Person.Person;
 ### <a name="d-return-news-articles-with-related-tags"></a>4. 관련된 태그 데이터에 대 한 뉴스 기사를 반환 합니다. 
 
 문서 및 태그 여러 테이블로 구분 됩니다. 개발자는 태그와 모두 연결 된 각 아티클에 당 한 개의 행을 반환 하려고 합니다. 다음 쿼리를 사용 하 여: 
-```tsql
+```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
 LEFT JOIN dbo.ArticleTag AS t 
@@ -163,7 +162,7 @@ GROUP BY a.articleId, title;
 ### <a name="e-generate-list-of-emails-per-towns"></a>5. 도심지 당 전자 메일 주소 목록을 생성 합니다.
 
 다음 쿼리는 직원의 전자 메일 주소를 찾아서 도심지 별로 그룹화 합니다. 
-```tsql
+```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
 GROUP BY town; 
@@ -181,7 +180,7 @@ GROUP BY town;
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>6. 도심지 당 전자 메일의 정렬 된 목록을 생성합니다   
    
 이전 예제와 마찬가지로 다음 쿼리 직원의 전자 메일 주소, 도시에 별로 그룹화 찾아서 전자 메일을 사전순으로 정렬 합니다.   
-```tsql
+```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
 FROM dbo.Employee 
@@ -197,7 +196,15 @@ GROUP BY town;
 
 
 ## <a name="see-also"></a>관련 항목:  
-
-[문자열 함수 (Transact SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
-
+ [CONCAT &#40; Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [Quotename&#40; Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [바꾸기 &#40; Transact SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [역방향 &#40; Transact SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [변환 &#40; Transact SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [집계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

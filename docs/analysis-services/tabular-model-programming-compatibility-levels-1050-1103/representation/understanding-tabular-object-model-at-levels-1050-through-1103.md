@@ -2,81 +2,77 @@
 title: "1103을 통해 수준을 1050에서 테이블 형식 개체 모델 이해 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4f51832fadb754f29a0f8cd9c95a6cbc9ce183dc
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 719e2f265c532236dae15a3e955f8c3e64af9e0b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>수준 1050-1103에서 테이블 형식 개체 모델 이해
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
 
   테이블 형식 모델은 테이블, 관계, 계층, 큐브 뷰, 측정값 및 핵심 성과의 논리적 표현입니다. 이 섹션에서는 AMO를 사용한 내부 구현에 대해 소개합니다. 참조 [분석 관리 개체 &#40;를 사용 하 여 개발 AMO &#41; ](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) 하기 전에 AMO를 사용 하지 않은 경우.  
   
  여기에 사용되는 접근 방법은 하향식이며, 테이블 형식 모델의 모든 관련 개체가 논리적으로 AMO 개체 및 필요한 상호 작용이나 설명된 워크플로에 매핑됩니다. AMO to Tabular 예제의 AMO를 사용 하 여 테이블 형식 모델을 만들려면 소스 코드 샘플은 Codeplex에서 사용할 수 있습니다. 예제 코드 관련 중요 정보: 예제 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다. 예제는 지원 또는 보증 없이 제공됩니다.  
   
 ## <a name="database-representation"></a>데이터베이스 표현  
- 데이터베이스는 테이블 형식 모델의 컨테이너 개체를 제공하며 테이블 형식 모델의 모든 개체는 데이터베이스에 포함됩니다. AMO 개체를 기준으로 데이터베이스 표현은 <xref:Microsoft.AnalysisServices.Database>과 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 모델링을 수행할 때 AMO 데이터베이스 개체에 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
+ 데이터베이스는 테이블 형식 모델의 컨테이너 개체를 제공하며 테이블 형식 모델의 모든 개체는 데이터베이스에 포함됩니다. AMO 개체를 기준으로 데이터베이스 표현은 `xref:Microsoft.AnalysisServices.Database`과 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 모델링을 수행할 때 AMO 데이터베이스 개체에 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
  참조 [표현 &#40; 데이터베이스 테이블 형식 &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/database-representation-tabular.md) 데이터베이스 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
   
 ## <a name="connection-representation"></a>연결 표현  
- 연결은 테이블 형식 모델 솔루션에 포함할 데이터와 모델 자체 간에 관계를 설정합니다. AMO 개체를 기준으로 연결은 <xref:Microsoft.AnalysisServices.DataSource>과 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 모델링을 수행할 때 AMO 데이터 원본 개체에 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
+ 연결은 테이블 형식 모델 솔루션에 포함할 데이터와 모델 자체 간에 관계를 설정합니다. AMO 개체를 기준으로 연결은 `xref:Microsoft.AnalysisServices.DataSource`과 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 모델링을 수행할 때 AMO 데이터 원본 개체에 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
  참조 [연결 표현 &#40; 테이블 형식 &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md) 데이터 원본 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
   
 ## <a name="table-representation"></a>테이블 표현  
- 테이블은 데이터베이스의 데이터를 포함하는 데이터베이스 개체입니다. AMO 개체를 기준으로 테이블은 일 대 다 매핑 관계를 가지며 며 다음 AMO 개체를 사용 하 여 표: <xref:Microsoft.AnalysisServices.DataSourceView>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.MeasureGroup> 및 <xref:Microsoft.AnalysisServices.Partition> 은 주된 필수 개체; 하지만 반드시를 의미 하지는 모델링을 수행할 때 앞에서 말한 AMO 개체에 포함 된 모든 개체를 사용할 수 있습니다.  
+ 테이블은 데이터베이스의 데이터를 포함하는 데이터베이스 개체입니다. AMO 개체를 기준으로 테이블은 일 대 다 매핑 관계를 가지며 며 다음 AMO 개체를 사용 하 여 표: `xref:Microsoft.AnalysisServices.DataSourceView`, `xref:Microsoft.AnalysisServices.Dimension`, `xref:Microsoft.AnalysisServices.Cube`, `xref:Microsoft.AnalysisServices.CubeDimension`, `xref:Microsoft.AnalysisServices.MeasureGroup` 및 `xref:Microsoft.AnalysisServices.Partition` 가 주된 필수 개체입니다. 그러나 되기 의미는 아닙니다 모델링을 수행할 때 앞에서 말한 AMO 개체에 포함 된 모든 개체를 사용할 수 있는지 확인 하는 것이 중요 합니다.  
   
  참조 [표현 &#40; 테이블 테이블 형식 &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md) 테이블 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
   
 ### <a name="calculated-column-representation"></a>계산 열 표현  
- 계산 열은 테이블의 열을 생성하는 평가 식이며 테이블의 각 행에 대해 새 값이 계산 열에 계산 및 저장됩니다. AMO 개체를 기준으로 계산 열은 일 대 다 매핑 관계를 가지며 다음 AMO 개체를 사용 하 여 계산된 된 열이 표시 됩니다: <xref:Microsoft.AnalysisServices.Dimension> 및 <xref:Microsoft.AnalysisServices.MeasureGroup> 가 주된 필수 개체입니다. 모델링을 수행할 때 앞에서 말한 AMO 개체의 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
+ 계산 열은 테이블의 열을 생성하는 평가 식이며 테이블의 각 행에 대해 새 값이 계산 열에 계산 및 저장됩니다. AMO 개체를 기준으로 계산된 된 열 일 대 다 매핑 관계를 있습니다. 다음 AMO 개체를 사용 하 여 계산된 된 열이 표시 됩니다: `xref:Microsoft.AnalysisServices.Dimension` 및 `xref:Microsoft.AnalysisServices.MeasureGroup` 가 주된 필수 개체입니다. 모델링을 수행할 때 앞에서 말한 AMO 개체의 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
  참조 [계산 열 표현 &#40; 테이블 형식 &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-column-representation.md) 계산된 열 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
   
 ### <a name="calculated-measure-representation"></a>계산 측정값 표현  
- 계산 측정값은 모델이 배포된 후 요청 시 평가되는 저장 식입니다. AMO 개체를 기준으로 계산 측정값은 일 대 다 매핑 관계를 가지며 다음 AMO 개체를 사용 하 여 계산된 된 열이 표시 됩니다: <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> 및 <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 가 주된 필수 개체입니다. 모델링을 수행할 때 앞에서 말한 AMO 개체의 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
+ 계산 측정값은 모델이 배포된 후 요청 시 평가되는 저장 식입니다. AMO 개체를 기준으로 계산 측정값은 일 대 다 매핑 관계를 가지며 다음 AMO 개체를 사용 하 여 계산된 된 열이 표시 됩니다: `xref:Microsoft.AnalysisServices.MdxScript.Commands%2A` 및 `xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A` 가 주된 필수 개체입니다. 모델링을 수행할 때 앞에서 말한 AMO 개체의 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
 > [!NOTE]  
->  <xref:Microsoft.AnalysisServices.Measure> 개체는 테이블 형식 모델의 계산 측정값과 아무런 관계가 없으며 테이블 형식 모델에서 지원되지 않습니다.  
+>  `xref:Microsoft.AnalysisServices.Measure` 개체는 테이블 형식 모델의 계산 측정값과 아무런 관계가 없으며 테이블 형식 모델에서 지원되지 않습니다.  
   
  참조 [계산 측정값 표현 &#40; 테이블 형식 &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-measure-representation.md) 계산된 측정값 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
   
 ### <a name="hierarchy-representation"></a>계층 표현  
- 계층은 최종 사용자에게 풍부한 드릴업 및 드릴다운 환경을 제공하는 메커니즘입니다. AMO 개체를 기준으로 계층 표현은 <xref:Microsoft.AnalysisServices.Hierarchy>과 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 테이블 형식 모델링을 수행할 때 AMO 데이터베이스 개체에 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
+ 계층은 최종 사용자에게 풍부한 드릴업 및 드릴다운 환경을 제공하는 메커니즘입니다. AMO 개체를 기준으로 계층 표현은 `xref:Microsoft.AnalysisServices.Hierarchy`과 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 테이블 형식 모델링을 수행할 때 AMO 데이터베이스 개체에 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
  참조 [계층 표현 &#40; 테이블 형식 &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md) 계층 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
   
 ### <a name="key-performance-indicator-kpi--representation"></a>KPI(핵심 성과 지표) 표현  
- KPI는 기본 측정값으로 정의된 값을 대상 값과 비교하여 값 성과를 측정하는 데 사용됩니다. AMO 개체를 기준으로 KPI 표현은 일 대 다 매핑 관계를 가지며 다음 AMO 개체를 사용 하 여 KPI 표시 됩니다: <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A>및 <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 가 주된 필수 개체입니다.  모델링을 수행할 때 앞에서 말한 AMO 개체의 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
+ KPI는 기본 측정값으로 정의된 값을 대상 값과 비교하여 값 성과를 측정하는 데 사용됩니다. AMO 개체를 기준으로 KPI 표현은 일 대 다 매핑 관계를 가지며 다음 AMO 개체를 사용 하 여 KPI 표시 됩니다: `xref:Microsoft.AnalysisServices.MdxScript.Commands%2A` 및 `xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A` 가 주된 필수 개체입니다.  모델링을 수행할 때 앞에서 말한 AMO 개체의 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
 > [!NOTE]  
->  <xref:Microsoft.AnalysisServices.Kpi> 개체는 테이블 형식 모델의 KPI와 아무런 관계가 없다는 것도 중요한 차이점입니다. 또한 이러한 개체는 테이블 형식 모델에서 지원되지 않습니다.  
+>  `xref:Microsoft.AnalysisServices.Kpi` 개체는 테이블 형식 모델의 KPI와 아무런 관계가 없다는 것도 중요한 차이점입니다. 또한 이러한 개체는 테이블 형식 모델에서 지원되지 않습니다.  
   
  참조 [성능 지표 표현을 &#40; 키 테이블 형식 &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-key-performance-indicator-representation.md) KPI 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
   
 ### <a name="partition-representation"></a>파티션 표현  
- 원활한 운영을 위해 테이블 하나를 여러 개의 행 하위 집합으로 나눌 수 있으며 이 행들이 결합하여 테이블을 구성합니다. 각각의 하위 집합은 테이블의 파티션입니다. AMO 개체를 기준으로 파티션 표현은 <xref:Microsoft.AnalysisServices.Partition>과 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 모델링을 수행할 때 AMO 데이터베이스 개체에 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
+ 원활한 운영을 위해 테이블 나눌 수 있습니다 다른 하위 집합에는 테이블을 구성을 함께 결합 될 때 행을, 합니다. 각각의 하위 집합은 테이블의 파티션입니다. AMO 개체를 기준으로 파티션 표현은 `xref:Microsoft.AnalysisServices.Partition`과 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 모델링을 수행할 때 AMO 데이터베이스 개체에 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
  참조 [표현 &#40; 분할 테이블 형식 &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-partition-representation.md) 파티션 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
   
@@ -85,12 +81,12 @@ ms.lasthandoff: 09/01/2017
   
  테이블 형식 모델에서는 두 테이블 간에 여러 관계를 정의할 수 있습니다. 두 테이블 간에 여러 관계가 정의되어 있는 경우 하나의 관계만 기본 활성 관계로 정의할 수 있습니다. 나머지 모든 관계는 비활성 관계입니다.  
   
- AMO 개체를 기준으로 모든 비활성 관계는 <xref:Microsoft.AnalysisServices.Relationship>과 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 활성 관계에 대해서는 기타 요구 사항이 있으며 <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>에 대한 매핑 역시 필수입니다. 모델링을 수행할 때 AMO 관계 또는 referenceMeasureGroupDimension 개체에 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
+ AMO 개체를 기준으로 모든 비활성 관계는 `xref:Microsoft.AnalysisServices.Relationship`과 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 활성 관계에 대해서는 기타 요구 사항이 있으며 `xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension`에 대한 매핑 역시 필수입니다. 모델링을 수행할 때 AMO 관계 또는 referenceMeasureGroupDimension 개체에 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
  참조 [관계 표현 &#40; 테이블 형식 &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) 관계 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
   
 ## <a name="perspective-representation"></a>큐브 뷰 표현  
- 큐브 뷰는 모델을 간소화하거나 집중시키는 메커니즘입니다. AMO 개체를 기준으로 관계 표현은 <xref:Microsoft.AnalysisServices.Perspective>와 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 테이블 형식 모델링을 수행할 때 AMO 큐브 뷰 개체에 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
+ 큐브 뷰는 모델을 간소화하거나 집중시키는 메커니즘입니다. AMO 개체를 기준으로 관계 표현은 `xref:Microsoft.AnalysisServices.Perspective`와 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다. 의미는 아닙니다 테이블 형식 모델링을 수행할 때 AMO 큐브 뷰 개체에 포함 된 모든 개체를 사용할 수 있는지 확인 하는 것이 유용 합니다.  
   
  참조 [큐브 뷰 표현 &#40; 테이블 형식 &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) 큐브 뷰 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
   
@@ -98,4 +94,3 @@ ms.lasthandoff: 09/01/2017
 >  큐브 뷰는 보안 메커니즘이 아니므로 다른 인터페이스를 통해 큐브 뷰 밖에 있는 개체에 계속 액세스할 수 있습니다.  
   
   
-

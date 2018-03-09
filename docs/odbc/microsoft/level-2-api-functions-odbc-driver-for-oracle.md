@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - API functions [ODBC]
 - level 2 API functions [ODBC]
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 452af0d9daf66cee389f10029ea302efca14cf93
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>수준 2 API 함수 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|데이터 원본에 프로시저의 목록을 반환합니다. 패키지에 포함 된 프로시저에 대 한 프로시저 이름 열에이 *packagename.procedurename* 형식입니다.<br /><br /> Oracle 패키지 함수에서 패키지에 포함 된 프로시저를 구별 하는 방법을 제공 하지 않으므로, 드라이버 SQL_PT_UNKNOWN PROCEDURE_TYPE 열에 대 한 반환 합니다.|  
 |**SQLSetPos**|행 집합에서 커서 위치를 설정합니다. 사용할 수 있습니다 **SQLSetPos** 와 **SQLGetData** 행 집합의 특정 행으로 커서를 놓고 후 바인딩되지 않은 열의 행을 검색 합니다. 결과 사용 하 여 집합에 추가 된 행 *fOption* SQL_ADD 결과 집합의 마지막 행 뒤에 추가 됩니다.|  
 |**SQLSetScrollOptions**|문 핸들 hstmt와 관련 된 커서의 동작을 제어 하는 옵션을 설정 합니다. 자세한 내용은 참조 [커서 유형 및 동시성 조합](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)합니다.|
-

@@ -3,7 +3,7 @@ title: "사용자 지정 파일 UserList 섹션 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5f883b100d522f90ae802578256108ee9e658b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5521648ed1c4d125168d3f9afb7a4c884854d9b4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-userlist-section"></a>사용자 지정 파일 UserList 섹션
 **userlist** 관련 섹션의 **연결** 의 동일한 영역 *식별자* 매개 변수입니다.  
@@ -39,12 +38,12 @@ ms.lasthandoff: 09/09/2017
 ## <a name="syntax"></a>구문  
  사용자 액세스 항목 형식입니다.  
   
- *사용자 이름***=**   
+ *userName* **=**   
  ***accessRights***  
   
 |부분|Description|  
 |----------|-----------------|  
-|*사용자 이름*|*사용자 이름* 이 연결을 사용 하는 사람의 합니다. 유효한 사용자 이름은 IIS에서 설정 됩니다 **Service Manager** 대화 상자.|  
+|*userName*|*사용자 이름* 이 연결을 사용 하는 사람의 합니다. 유효한 사용자 이름은 IIS에서 설정 됩니다 **Service Manager** 대화 상자.|  
 |***accessRights***|다음 액세스 권한 중 하나입니다.<br /><br /> -   **액세스 권한 없음** -사용자 데이터 원본에 액세스할 수 없습니다.<br />-   **읽기 전용** -사용자는 데이터 소스를 읽을 수 있습니다.<br />-   **ReadWrite** -사용자 읽기 또는 데이터 원본에 쓸 수 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
@@ -55,6 +54,5 @@ ms.lasthandoff: 09/09/2017
  [필요한 클라이언트 설정](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [사용자 지정 파일 이해](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [고유한 사용자 지정된 처리기 작성](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

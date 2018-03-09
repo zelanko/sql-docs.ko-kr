@@ -2,15 +2,13 @@
 title: "원격 파티션을 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,20 +24,20 @@ helpviewer_keywords:
 - MasterDataSourceID property
 - remote partitions [Analysis Services]
 ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4366b335e5092818e33de8a0ea1b7ab8d7af607c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b01c6fbe8bb2e6fda98da468bf4e313f5610cee3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---remote-partitions"></a>원격 파티션-파티션
-  원격 파티션의 데이터는 Microsoft의 다른 인스턴스로에 저장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 파티션과 부모 큐브가 정의 (메타 데이터)를 포함 하는 인스턴스와 합니다. 원격 파티션은 파티션과 해당 부모 큐브가 정의된 것과 동일한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 관리됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+원격 파티션의 데이터는 Microsoft의 다른 인스턴스로에 저장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 파티션과 부모 큐브가 정의 (메타 데이터)를 포함 하는 인스턴스와 합니다. 원격 파티션은 파티션과 해당 부모 큐브가 정의된 것과 동일한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 관리됩니다.  
   
 > [!NOTE]  
 >  원격 파티션을 저장 하려면 컴퓨터의 인스턴스로 있어야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 설치 하 고 파티션이 정의 된 인스턴스와 동일한 수준의 서비스 팩을 실행 합니다. 이전 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서는 원격 파티션이 지원되지 않습니다.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/01/2017
   
 |||  
 |-|-|  
-|저장소 유형|data|  
+|저장소 유형|Data|  
 |MOLAP|파티션의 집계 및 파티션의 원본 데이터에 대한 복사본|  
 |HOLAP|파티션 집계|  
 |ROLAP|파티션 데이터가 저장되지 않음|  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 개체 처리](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)  
   
   
-

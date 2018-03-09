@@ -2,34 +2,32 @@
 title: "DISCOVER_TRANSACTIONS 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ca0b129013f5bdced79d8fb8245893a3db7ff06
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0b287af43de1284c727a64d27d55b3ccf75c5d87
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertransactions-rowset"></a>DISCOVER_TRANSACTIONS 행 집합
-  시스템에서 현재 보류 중인 트랜잭션 집합을 반환합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+시스템에서 현재 보류 중인 트랜잭션 집합을 반환합니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
@@ -52,7 +50,7 @@ ms.lasthandoff: 09/01/2017
 |**열 이름**|**유형 표시기**|**제한 상태**|  
 |---------------------|------------------------|---------------------------|  
 |**ID**|**DBTYPE_WSTR**|(선택 사항)|  
-|**세션 ID**|**DBTYPE_WSTR**|(선택 사항)|  
+|**SESSION_ID**|**DBTYPE_WSTR**|(선택 사항)|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>ADOMD.NET을 사용하여 행 집합 반환  
  ADOMD.NET 및 스키마 행 집합을 사용하여 메타데이터를 검색할 때 GUID 또는 문자열을 사용하여 GetSchemaDataSet 메서드의 스키마 행 집합 개체를 참조할 수 있습니다. 자세한 내용은 [Working with Schema Rowsets in ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md)을 참조하세요.  
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis 스키마 행 집합](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

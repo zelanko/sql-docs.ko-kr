@@ -1,5 +1,5 @@
 # [개요](language-reference.md)  
-# [새로 추가되거나 최근에 업데이트된 문서](new-updated-t-sql.md)
+# [새로운 또는 업데이트 된 문서](new-updated-t-sql.md)
 
 # [데이터 형식](../t-sql/data-types/data-types-transact-sql.md)
 # [데이터베이스 콘솔 명령](../t-sql/database-console-commands/database-console-commands.md)

@@ -2,45 +2,38 @@
 title: "요소 (XMLA) 결과 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- results Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: results Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.results
 - urn:schemas-microsoft-com:xml-analysis#results
 - http://schemas.microsoft.com/analysisservices/2003/engine#results
-helpviewer_keywords:
-- results element
+helpviewer_keywords: results element
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3b68533f174d5502c77d94be70aab4f0ff676071
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 791512ba71ef92a9e220936b138faf9eff2a4872
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="results-element-xmla"></a>results 요소(XMLA)
-  [Batch](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) 명령을 사용하여 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드에 의해 반환되는 [root](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 요소의 컬렉션을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]컬렉션을 포함 [루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) 반환 하는 요소는 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드를 사용 하는 [일괄 처리](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 명령입니다.  
   
  **Namespace**`http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults`  
   
@@ -57,10 +50,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -79,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

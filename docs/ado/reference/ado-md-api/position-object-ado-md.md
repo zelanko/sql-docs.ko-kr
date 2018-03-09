@@ -3,7 +3,7 @@ title: "ADO MD 개체의 위치 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Position object [ADO MD]
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6becc43857026e8ea74d13f7bb2ac5ad7dc0c251
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5c4b64e066a83673df845a3a43dff80fb2acc0e4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="position-object-ado-md"></a>ADO MD 위치 개체
 축 상에 지점을 정의 하는 하나 이상의 서로 다른 차원의 멤버의 집합을 나타냅니다.  
@@ -50,4 +49,3 @@ ms.lasthandoff: 09/09/2017
  [ADO MD cell 개체](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [(ADO MD) members 컬렉션](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Positions 컬렉션(ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)
-

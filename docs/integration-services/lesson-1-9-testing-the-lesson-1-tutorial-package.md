@@ -1,11 +1,11 @@
 ---
-title: "9 단계: 1 단원 자습서 패키지 테스트 | Microsoft Docs"
+title: "9단계: 1단원 자습서 패키지 테스트 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca45e8e1ba02246eb5429bd7bfea125663f69f41
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5fe1c97344edd6b5893fee1873df89a1ca37444c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>단원 1-9-1 단원 자습서 패키지 테스트
+# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>1-9단원 - 1단원 자습서 패키지 테스트
 이 단원에서는 다음 태스크를 수행했습니다.  
   
 -   새 [!INCLUDE[ssIS](../includes/ssis-md.md)] 프로젝트를 만들었습니다.  
@@ -43,11 +42,11 @@ ms.lasthandoff: 09/26/2017
   
 **제어 흐름**  
   
-![패키지의 흐름 제어](../integration-services/media/task9lesson1control.gif "패키지의 흐름 제어")  
+![패키지의 제어 흐름](../integration-services/media/task9lesson1control.gif "패키지의 제어 흐름")  
   
 **데이터 흐름**  
   
-![패키지의 데이터 흐름](../integration-services/media/task9lesson1data.gif "패키지에 데이터 흐름")  
+![패키지의 데이터 흐름](../integration-services/media/task9lesson1data.gif "패키지의 데이터 흐름")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>1단원 자습서 패키지를 실행하려면  
   
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

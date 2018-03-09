@@ -3,7 +3,7 @@ title: "Property 개체 (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Property object [ADOX]
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c9d13366eb3554738fbd50da2ed09db8bceb6f5d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fa319e0fa981b3346232e3d3848bfdfe843d9f31
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="property-object-adox"></a>Property 개체 (ADOX)
 ADOX 개체의 특성을 나타냅니다.  
@@ -53,4 +52,3 @@ ADOX 개체의 특성을 나타냅니다.
  이 섹션에는 다음 항목 포함 되어 있습니다.  
   
 -   [ADOX Property 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/adox-property-object-properties-methods-and-events.md)
-

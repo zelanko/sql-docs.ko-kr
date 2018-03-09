@@ -2,11 +2,13 @@
 title: SQL Server Profiler | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,23 +27,22 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "46"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8a6f1151141c3f0641ba35b92d8c9cd8b1639a14
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ec5830ac7d4a4bf468f7c9af0ae1866e05725ca2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler"></a>SQL Server 프로파일러
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]작성 하 고 추적을 관리 하 고 분석 및 추적 결과 재생 인터페이스가입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 인터페이스로을 생성 하 고 추적을 관리, 분석 및 추적 결과 재생 합니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  
   
 >**중요!!**  
-> Microsoft는 향후 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 캡처 및 추적 재생에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 를 사용하지 않을 것임을 발표하고 있습니다. 이러한 **기능은** SQL Server 2016에서 사용할 수 있지만 이후 버전에서 제거됩니다.
+> Microsoft는 향후 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 캡처 및 추적 재생에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 사용하지 않을 것임을 발표하고 있습니다. 이러한 **기능은** SQL Server 2016에서 사용할 수 있지만 이후 버전에서 제거됩니다.
 >   
 >  Microsoft SQL Server 추적 및 재생 개체를 포함하는 *Microsoft.SqlServer.Management.Trace* 네임스페이스도 더 이상 사용되지 않을 예정입니다.                     
 **참고** Analysis Services 작업에는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 계속 사용되며 지원됩니다.
@@ -133,7 +134,7 @@ ms.lasthandoff: 09/27/2017
   
  SQL Server는 SQL Server 인스턴스를 추적하는 두 가지 방법을 제공합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적하거나 시스템 저장 프로시저를 사용하여 추적할 수 있습니다.  
   
- **Assert**  
+ **필터**  
  추적 또는 템플릿을 만들 때 이벤트가 수집하는 데이터를 필터링할 조건을 정의할 수 있습니다. 추적이 지나치게 커지지 않도록 필터링을 통해 이벤트 데이터의 하위 집합만 수집할 수 있습니다. 예를 들어 추적에서 Microsoft Windows 사용자 이름을 특정 사용자로 제한하여 출력 데이터를 줄일 수 있습니다.  
   
  필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다.  
@@ -188,7 +189,7 @@ ms.lasthandoff: 09/27/2017
 |SQL Server Profiler를 시작하는 방법에 대해 설명합니다.|[SQL Server Profiler 시작](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |추적 및 추적 템플릿을 저장하는 방법에 대해 설명합니다.|[추적 및 추적 템플릿 저장](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  
 |추적 템플릿을 수정하는 방법에 대해 설명합니다.|[추적 템플릿 수정](../../tools/sql-server-profiler/modify-trace-templates.md)|  
-|추적과 Windows 성능 로그 데이터의 상관 관계를 지정하는 방법에 대해 설명합니다.|[Windows 성능 로그 데이터와 추적의 상관 관계 지정](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
+|추적과 Windows 성능 로그 데이터의 상관 관계를 지정하는 방법에 대해 설명합니다.|[추적과 Windows 성능 로그 데이터](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
 |SQL Server Profiler를 사용하여 추적을 보고 분석하는 방법에 대해 설명합니다.|[SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
 |SQL Server Profiler를 사용하여 교착 상태를 분석하는 방법에 대해 설명합니다.|[SQL Server Profiler를 사용하여 교착 상태 분석](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
 |SQL Server Profiler에서 SHOWPLAN 결과로 쿼리를 분석하는 방법에 대해 설명합니다.|[SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|  
@@ -205,4 +206,3 @@ ms.lasthandoff: 09/27/2017
  [서버 성능 및 작업 모니터링](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
-

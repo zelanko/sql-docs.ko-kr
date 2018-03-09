@@ -1,17 +1,18 @@
 ---
 layout: HubPage
-hide_bc: True
+hide_bc: 
 title: "Microsoft SQL 문서 | Microsoft 문서"
 description: "SQL에 대한 자세한 정보"
 author: barbkess
 ms.author: barbkess
 ms.topic: article
-ms.technology: database-engine
-ms.openlocfilehash: 99100b0d7451ba9829fed689e3b2c36b2e3a4727
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.technology:
+- database-engine
+ms.openlocfilehash: 3d3fb586dab22c8f3e8c7a8a3b4f4b9c94bd31be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -37,8 +38,8 @@ ms.lasthandoff: 11/09/2017
                                                 <h4>SQL</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation">SQL Server(2016, 2017)</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/hh278311(v=sql.10).aspx">SQL Server 2014</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
+                                                    <li><a class="barLink" href="https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx">SQL Server 2014</a></li>
+                                                    <li><a class="barLink" href="https://msdn.microsoft.com/library/hh278312(v=sql.10).aspx">SQL Server 2012</a></li>
                                                     <li><a class="barLink" href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database</a></li>
                                                     <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL 데이터 웨어하우스</a></li>
                                                     <li><a class="barLink" href="/sql/analytics-platform-system/index">분석 플랫폼 시스템 - 병렬 데이터 웨어하우스</a><li>
@@ -71,12 +72,12 @@ ms.lasthandoff: 11/09/2017
                                                 <h3 class="bgdAccent1" style="padding:20px;">개발</h3>
                                                 <h4>디자인</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/connect/sql-connection-libraries">클라이언트 응용 프로그램을 사용하여 연결</a></li>
+                                                    <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming">클라이언트 응용 프로그램을 사용하여 연결</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/database-features">관계형 데이터베이스 개념</a></li>
                                                 </ul>
                                                 <h4>Tools</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SSMS(SQL Server Management Studio)</a></li>
+                                                    <li><a class="barLink" href="/sql/sql-operations-studio/download">SQL Operations Studio<sup>미리 보기</sup></a></li>   <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SSMS(SQL Server Management Studio)</a></li>
                                                     <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SSDT(SQL Server Data Tools)</a></li>
                                                     <li><a class="barLink" href="/sql/tools/overview-sql-tools">모든 SQL 도구 보기</a></li>
                                                 </ul>
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/09/2017
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/t-sql/language-reference">T-SQL</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMV</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/powershell/sql-server/overview?view=sqlserver-ps">PowerShell</a></li>
+                                                    <li><a class="barLink" href="/sql/powershell/sql-server-powershell">PowerShell</a></li>
                                                     <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
                                                 </ul>
                                                 <h4>GitHub 샘플</h4>

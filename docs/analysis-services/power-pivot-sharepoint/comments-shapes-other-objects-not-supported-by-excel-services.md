@@ -2,31 +2,30 @@
 title: "메모, 도형, Excel 서비스에서 지원 되지 않는 다른 개체 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e81433f28d9b3b3f20ceb99f2e6436a689ba4e86
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bb73f60aea4a67a2e7fe7967dc9411762fe8e8f9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="comments-shapes-other-objects-not-supported-by-excel-services"></a>메모, 도형, Excel 서비스에서 지원 되지 않는 다른 개체
-  이 오류는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 필드 목록에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 슬라이서를 추가할 때 발생합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+이 오류는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 필드 목록에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 슬라이서를 추가할 때 발생합니다.  
   
 ## <a name="details"></a>세부 정보  
   
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  이 오류는 무시해도 됩니다. **확인** 을 클릭하여 오류 메시지를 닫고 통합 문서 및 슬라이서를 계속 사용해도 아무런 문제가 없습니다.  
   
   
-

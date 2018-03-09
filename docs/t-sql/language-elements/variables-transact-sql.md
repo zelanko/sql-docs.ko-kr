@@ -15,17 +15,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c77c323f8e9dbb2abc010c3fbc9e6d2b349c8ae1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f77c0919c75fa87320cf150b8844f1131f7a55c9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variables-transact-sql"></a>변수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -185,10 +184,9 @@ GO
 
 ## <a name="see-also"></a>관련 항목:  
  [선언@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-  
  [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
+ [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
+ [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
- [선택@local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
   
-  
-

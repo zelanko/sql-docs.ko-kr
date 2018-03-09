@@ -16,17 +16,16 @@ helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 48579e225f90fe074aaaffa22f6424f1fe90dddd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="parsing-data"></a>데이터 구문 분석
   패키지의 데이터 흐름에서는 다양한 표준 및 사용자 지정 데이터 형식이 사용될 수 있는 다른 유형의 데이터 저장소 간의 데이터가 추출 및 로드됩니다. 데이터 흐름에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본은 데이터를 추출하고, 문자열 데이터를 구문 분석하고, 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하는 작업을 수행합니다. 이후의 변환에서는 데이터를 다른 데이터 형식으로 변환하기 위해 데이터를 구문 분석하거나 다른 데이터 형식이 포함된 열 복사본을 만들 수 있습니다. 구성 요소에 사용된 식에서는 인수와 피연산자를 다른 데이터 형식으로 캐스팅할 수도 있습니다. 마지막으로, 데이터가 데이터 저장소에 로드될 때 대상에서는 대상에 사용되는 데이터 형식으로 데이터를 변환하기 위해 데이터를 구문 분석할 수 있습니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
@@ -52,10 +51,10 @@ ms.lasthandoff: 09/26/2017
   
  빠른 구문 분석은 열 수준에서 지정됩니다. 플랫 파일 원본과 데이터 변환의 경우 출력 열에 빠른 구문 분석을 지정할 수 있습니다. 입력과 출력에는 로캘 구분 및 로캘 비구분 열이 모두 포함될 수 있습니다.  
  
-## <a name="numeric-data-formats-fast-parse"></a>숫자 데이터 형식 (빠른 구문 분석)
+## <a name="numeric-data-formats-fast-parse"></a>숫자 데이터 형식(빠른 구문 분석)
 빠른 구문 분석에서는 데이터 구문 분석을 위해 로캘을 구분하지 않는 신속하고 간단한 루틴을 제공합니다. 빠른 구문 분석은 일부 제한된 정수 데이터 형식만 지원합니다.  
   
-### <a name="integer-data-type"></a>Integer 데이터 형식
+### <a name="integer-data-type"></a>정수 데이터 형식
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공되는 정수 데이터 형식은 DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 및 DT_UI8입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
  빠른 구문 분석에서는 정수 데이터에 대해 다음과 같은 형식이 지원됩니다.  
@@ -84,7 +83,7 @@ ms.lasthandoff: 09/26/2017
   
 -   하나 이상의 힌두-아라비아 숫자(0-9).  
 
-## <a name="date-and-time-formats-fast-parse"></a>날짜 및 시간 형식 (빠른 구문 분석)
+## <a name="date-and-time-formats-fast-parse"></a>날짜 및 시간 형식(빠른 구문 분석)
 빠른 구문 분석에서는 데이터 구문 분석을 위한 신속하고 간단한 루틴을 제공합니다. 빠른 구문 분석에서는 날짜 및 시간 데이터 형식에 대해 다음과 같은 형식이 지원됩니다.  
   
 ### <a name="date-data-type"></a>날짜 데이터 형식 
@@ -192,7 +191,7 @@ ms.lasthandoff: 09/26/2017
   
  자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## <a name="enable-fast-parse"></a>빠른 구문 분석을 사용 하도록 설정
+## <a name="enable-fast-parse"></a>빠른 구문 분석 활성화
 빠른 구문 분석을 사용하는 원본 또는 변환의 각 열에는 빠른 구문 분석 속성을 설정해야 합니다. 이 속성을 설정하려면 플랫 파일 원본 및 데이터 변환의 고급 편집기를 사용합니다.  
   
 1.  플랫 파일 원본이나 데이터 변환을 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시**를 클릭합니다.  
@@ -210,4 +209,3 @@ ms.lasthandoff: 09/26/2017
   
  표준 구문 분석은 국가별 데이터에 대한 데이터 형식 변환을 지원하며 데이터 형식이 빠른 구문 분석에서 지원되지 않는 경우에만 사용되어야 합니다. 자동 데이터 형식 변환 API에 대한 자세한 내용은 [MSDN Library(](http://go.microsoft.com/fwlink/?LinkId=79427))의 "데이터 형식 변환 API(Data Type Conversion APIs)"를 참조하십시오. 
  
-

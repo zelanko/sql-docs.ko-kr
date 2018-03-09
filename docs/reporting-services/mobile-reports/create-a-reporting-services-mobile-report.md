@@ -2,36 +2,37 @@
 title: "Reporting Services 모바일 보고서 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 73de345a79e96800bf194c73bc17d70de7bd4055
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services 모바일 보고서 만들기
-SQL Server 모바일 보고서 게시자는 신속 하 게 조정 가능한 표 행 및 열, 유동적인 모바일 보고서 요소는 디자인 화면에서 어떤 화면 크기에 맞게 조정 하는 SQL Server 2016 Reporting Services 모바일 보고서를 만들 수 있습니다.  
+SQL Server 모바일 보고서 게시자를 사용하면 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 SQL Server 2016 Reporting Services 모바일 보고서를 빠르게 만들 수 있습니다.  
   
-처음에 모바일 보고서를 만들 때 Reporting Services 웹 포털에서 로컬 컴퓨터의 SQL Server 모바일 보고서 게시자를 설치할 수 있습니다. 또는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=733527)에서 설치할 수 있습니다. 처음 만든 후에는 웹 포털이나 로컬에서 보고서 게시자를 시작할 수 있습니다.   
+모바일 보고서를 처음 만들 때는 Reporting Services 웹 포털에서 로컬 컴퓨터에 SQL Server 모바일 보고서 게시자를 설치할 수 있습니다. 또는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=733527)에서 설치할 수 있습니다. 처음 만든 후에는 웹 포털이나 로컬에서 보고서 게시자를 시작할 수 있습니다.   
     
-1. Reporting Services 웹 포털의 위쪽 막대에서 선택 **새로** > **모바일 보고서**합니다.  
+1. Reporting Services 웹 포털의 위쪽 표시줄에서 **새로 만들기** > **모바일 보고서**를 선택합니다.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. 에 **레이아웃** 탭 모바일 보고서 게시자에서 탐색기, 계기, 차트, 지도, 또는 datagrid 선택한 다음 디자인 눈금으로 끕니다.  
+2. 모바일 보고서 게시자의 **Layout** 탭에서 탐색기, 계기, 차트, 지도, 또는 데이터 표를 선택한 다음 디자인 눈금으로 끕니다.  
   
 3. 요소의 오른쪽 아래 모서리를 클릭하여 원하는 크기로 끕니다.  
   
@@ -69,12 +70,11 @@ SQL Server 모바일 보고서 게시자는 신속 하 게 조정 가능한 표 
   
 11. 이제 보고서를 저장합니다. 왼쪽 위의 저장 아이콘을 선택하고 **로컬에 저장** 또는 **서버에 저장**을 클릭합니다.  
   
-   서버를 저장 하려면 SQL Server 2016 Reporting Services 보고서 서버에 액세스를 해야 합니다.  
+   보고서를 서버에 저장하려면 SQL Server 2016 Reporting Services 보고서 서버 액세스 권한이 있어야 합니다.  
      
-   ### <a name="see-also"></a>참고 항목  
+   ### <a name="see-also"></a>관련 항목:  
      
 -   [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -   [휴대폰 또는 태블릿용 Reporting Services 모바일 보고서 레이아웃](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    
-

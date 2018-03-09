@@ -2,35 +2,29 @@
 title: "기존 Analysis Services 테이블 형식 서버 및 데이터베이스에 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 05be704e-4ee4-4101-b5ce-96fdda18c639
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9f8282029d3f20075ed35b29e1af913a882075da
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 061b37f5b0e8209f896ded915f0259c3253a1439
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>기존 Analysis Services 테이블 형식 서버 및 데이터베이스에 연결
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-SQL Server 2016 Analysis Services Management Objects (AMO) 서버 연결을 설정 하는 데 사용할 수 있는 몇 가지 네임 스페이스를 포함 합니다. 이 문서에서는 모델 및 1200에서 생성 된 데이터베이스에 대 한 Microsoft.AnalysisServices.Tabular 네임 스페이스를 사용 하 여 서버 연결을 설정 하는 방법 또는 더 높은 호환성 수준을 설명 합니다. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]SQL Server 2016 Analysis Services Management Objects (AMO) 서버 연결을 설정 하는 데 사용할 수 있는 몇 가지 네임 스페이스를 포함 합니다. 이 문서에서는 모델 및 1200에서 생성 된 데이터베이스에 대 한 Microsoft.AnalysisServices.Tabular 네임 스페이스를 사용 하 여 서버 연결을 설정 하는 방법 또는 더 높은 호환성 수준을 설명 합니다. 
 
 Analysis Services 서버에 연결할 코드는 서버 개체를 인스턴스화할 하 고에 Connect 메서드를 호출 해야 합니다. 연결 되 면 서버 개체의 속성에는 현재 Analysis Services 인스턴스의 설정이 반영 됩니다. 
 
@@ -122,4 +116,3 @@ Windows 2012 이상에서는 위임 도메인 간에 전달할 수 있습니다.
 
 - [만들기 및 빈 데이터베이스를 배포 합니다.](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-and-deploy-an-empty-database-analysis-services-amo-tom.md)
 - [기존 데이터베이스를 나열](../../analysis-services/tabular-model-programming-compatibility-level-1200/list-existing-databases-on-a-tabular-server-analysis-services-amo-tom.md)
-

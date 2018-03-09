@@ -2,35 +2,29 @@
 title: "Alter 명령 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8bdc49f1-209e-4055-be19-c83862b81efa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 34e3e12741988f5d1369e96381a54c15f64ec557
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 48567b03017e6ded0aba940b64ef1db52e7f78a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-command-tmsl"></a>변경 명령을 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  테이블 형식 모드에서 Analysis Services 인스턴스에서 자식 없습니다 되지만 기존 개체를 변경합니다.  개체가 없으면 명령에서 오류가 발생 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모드에서 Analysis Services 인스턴스에서 자식 없습니다 되지만 기존 개체를 변경합니다.  개체가 없으면 명령에서 오류가 발생 합니다.  
   
  사용 하 여 **Alter** 의 모든 열에도 지정 하지 않고 테이블에 속성을 설정 하는 등의 대상으로 지정 된 업데이트에 대 한 명령입니다. 이 명령은 비슷합니다 **CreateOrReplace**, 있지만 전체 개체 정의 제공 하지 않고 있습니다.  
   
@@ -174,4 +168,3 @@ ms.lasthandoff: 09/01/2017
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

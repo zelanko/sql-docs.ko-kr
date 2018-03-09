@@ -1,29 +1,30 @@
 ---
 title: "데이터베이스 엔진의 새로운 기능 - SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/11/2017
-ms.prod: sql-server-2017
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8f6f7d38bf06e453017b48108b5bda5594f0870c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
-ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 이 문서에서는 향상된 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]용 [!INCLUDE[ssdenoversion-md](../includes/ssdenoversion-md.md)] 기능에 대해 설명합니다. 각 항목에 대한 자세한 내용은 아래 링크를 클릭하세요.
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/12/2017
 - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) DMF가 트랜잭션 로그 파일에 대한 요약 수준 특성 및 정보를 표시하기 위해 새로 도입되었으며, 트랜잭션 로그의 상태를 모니터링하는 데 유용합니다.  
 - 다시 시작 가능한 온라인 인덱스 다시 작성 - 다시 시작 가능한 온라인 인덱스 다시 작성을 사용하면 오류(예: 복제본으로 장애 조치 또는 디스크 공간 부족)가 발생한 후 중지된 위치에서 온라인 인덱스 다시 작성 작업을 다시 시작할 수 있습니다. 또한 온라인 인덱스 다시 작성 작업을 일시 중지했다가 나중에 다시 시작할 수도 있습니다. 예를 들어 우선 순위가 높은 작업을 실행하기 위해 시스템 리소스를 일시적으로 비우거나, 사용 가능한 유지 관리 시간이 큰 테이블에 비해 너무 짧은 경우 또 다른 유지 관리 기간에서 인덱스 다시 작성하여 완료해야 할 수 있습니다. 마지막으로 다시 시작 가능한 온라인 인덱스 다시 작성에는 상당한 로그 공간이 필요하지 않으므로 이 작업이 실행되는 동안 로그 잘림을 수행할 수 있습니다. [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 및 [온라인 인덱스 작업에 대한 지침](../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요.
 - **ALTER DATABASE SCOPED CONFIGURATION에 대한 IDENTITY_CACHE 옵션** - IDENTITY_CACHE 옵션이 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL 문에 새로 추가되었습니다. 이 옵션을 `OFF`로 설정하면 서버가 예기치 않게 다시 시작되거나 보조 서버로 장애 조치되는 경우 데이터베이스 엔진에서 ID 열 값 차이가 발생하지 않도록 방지할 수 있습니다. [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요.   
--  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]는 이제 다대다 관계를 모델링 하는 그래프 데이터베이스 기능을 제공합니다. 여기에는 노드 및 가장자리 테이블을 만들기 위한 새로운 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 구문과 쿼리에 대한 [MATCH](../t-sql/queries/match-sql-graph.md) 키워드가 포함됩니다. 자세한 내용은 [SQL Server 2017에서 그래프 처리](../relational-databases/graphs/sql-graph-overview.md)를 참조하세요.   
+-  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]는 이제 보다 의미있는 관계 지향 데이터를 모델링하는 그래프 데이터베이스 기능을 제공합니다. 여기에는 노드 및 가장자리 테이블을 만들기 위한 새로운 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 구문과 쿼리에 대한 [MATCH](../t-sql/queries/match-sql-graph.md) 키워드가 포함됩니다. 자세한 내용은 [SQL Server 2017에서 그래프 처리](../relational-databases/graphs/sql-graph-overview.md)를 참조하세요.   
 - 응용 프로그램 워크로드의 런타임 조건에 대한 최적화 전략을 적용한 새로운 세대의 향상된 쿼리 처리 기능입니다. **적응 쿼리 처리** 기능 제품군의 첫 번째 버전의 경우 다중 문 테이블 값 함수에 대한 **배치 모드 적응 조인**, **배치 모드 메모리 부여 피드백** 및 **인터리브 실행**과 같은 세 가지 새로운 향상된 기능이 있습니다.  [SQL Databases의 적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)를 참조하세요.
 - 자동 튜닝은 잠재적 쿼리 성능 문제에 대한 정보를 제공하고, 솔루션을 권장하며, 식별된 문제를 자동으로 해결하는 데이터베이스 기능입니다. [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]의 자동 튜닝은 잠재적인 성능 문제를 검색할 때마다 알려주고, 정정 작업을 적용하거나 [!INCLUDE[ssde-md](../includes/ssde-md.md)]에서 자동으로 성능 문제를 해결할 수 있도록 합니다. 자세한 내용은 [자동 튜닝](../relational-databases/automatic-tuning/automatic-tuning.md)을 참조하세요.
 - 메모리 최적화 테이블에 대한 비클러스터형 인덱스 작성 성능 향상 - 데이터베이스 복구 중에 MEMORY_OPTIMIZED 테이블에 대한 bwtree(비클러스터형) 인덱스를 다시 작성하는 성능이 상당히 최적화되었습니다. 이에 따라 비클러스터형 인덱스를 사용하는 경우 데이터베이스 복구 시간을 크게 줄여줍니다.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/12/2017
     - 고유하게 컴파일된 모듈의`CROSS APPLY` 연산자   
 - 새 문자열 함수 [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md)및 [TRIM](../t-sql/functions/trim-transact-sql.md) 이 추가되었습니다.   
 - `WITHIN GROUP` STRING_AGG [함수에 대해 이제](../t-sql/functions/string-agg-transact-sql.md) 절이 지원됩니다.
-- 새로운 두 일본어 데이터 정렬 패밀리(Japanese_Bushu_Kakusu_140 및 Japanese_XJIS_140)가 추가되었고, 데이터 정렬 옵션 Variation-selector-sensitive(_VSS)가 일본어 데이터 정렬에서 사용을 위해 추가되었습니다. 자세한 내용은 [데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.   
+- 이 새로운 두 일본어 데이터 정렬 패밀리(Japanese_Bushu_Kakusu_140 및 Japanese_XJIS_140)가 추가되었고, 데이터 정렬 옵션 Variation-selector-sensitive(_VSS)가 일본어 데이터 정렬에서 사용을 위해 추가되었습니다. 또한 모든 새 데이터 정렬은 _SC 옵션을 지정하지 않고도 보조 문자를 자동으로 지원합니다. 자세한 내용은 [데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.   
 - 새로운 대량 액세스 옵션([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) 및 [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md))을 사용하면 CSV 형식으로 지정된 파일과 Azure Blob 저장소에 저장된 파일에서 [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)의 새로운 `BLOB_STORAGE` 옵션을 통해 데이터에 직접 액세스할 수 있습니다.
 - 데이터베이스 **COMPATIBILITY_LEVEL** 140이 추가되었습니다.   이 수준에서 실행하는 고객에게는 최신 언어 기능 및 쿼리 최적화 프로그램 동작이 제공됩니다. 여기에는 Microsoft에서 릴리스하는 각 시험판 버전의 변경 내용이 포함됩니다.
 - 증분 통계 업데이트 임계값을 계산하는 방식이 향상되었습니다(140 호환성 모드 필요).
@@ -86,5 +87,4 @@ ms.lasthandoff: 10/12/2017
 - 새 권한: 이제 `DATABASE SCOPED CREDENTIAL` 은 보안 개체 클래스로서, `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`, `VIEW DEFINITION` 권한을 지원합니다. SQL Database로 제한되는 `ADMINISTER DATABASE BULK OPERATIONS`가 이제 `sys.fn_builtin_permissions`에 표시됩니다.   
 - [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md) DMV가 추가되어 Windows 및 Linux 둘 다에 대한 운영 체제 정보를 제공합니다.   
 - R Services로 데이터베이스 역할을 만들어 패키지와 관련된 권한을 관리합니다. 자세한 내용은 [SQL Server에 대한 R 패키지 관리](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)를 참조하세요.
-
 

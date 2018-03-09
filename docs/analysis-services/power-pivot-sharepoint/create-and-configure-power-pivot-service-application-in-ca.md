@@ -2,32 +2,30 @@
 title: "만들기 및 CA에 파워 피벗 서비스 응용 프로그램 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 27d009450f9bdfac7eeff0f1bc9e1909d8968f01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>만들기 및 CA에 파워 피벗 서비스 응용 프로그램 구성
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스의 공유 서비스 인스턴스입니다. 각 서비스 응용 프로그램은 고유한 응용 프로그램 ID, 구성 설정, 속성 및 내부 데이터 저장소를 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스의 공유 서비스 인스턴스입니다. 각 서비스 응용 프로그램은 고유한 응용 프로그램 ID, 구성 설정, 속성 및 내부 데이터 저장소를 포함합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -162,6 +160,6 @@ ms.lasthandoff: 11/17/2017
 3.  리본에서 **속성** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [중앙 관리에서 Power Pivot 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

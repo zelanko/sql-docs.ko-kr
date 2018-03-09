@@ -2,29 +2,32 @@
 title: "정의 데이터 원본 뷰 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7fa2ed565479de8dfc127ce74d769da7540ba140
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b4cc8514f957d0b9337d8466b5cd130c852b334c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>단원 1-3-데이터 원본 뷰 정의
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 사용할 데이터 원본을 정의한 후 수행해야 할 다음 단계는 일반적으로 프로젝트에 대한 데이터 원본 뷰를 정의하는 것입니다. 데이터 원본 뷰는 프로젝트에서 데이터 원본에 의해 정의되는 뷰와 지정된 테이블의 메타데이터에 대한 단일 통합 뷰입니다. 메타데이터를 데이터 원본 뷰로 저장하면 기본 데이터 원본에 대한 연결이 열려 있지 않아도 개발 중에 메타데이터를 사용할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
   
 다음 태스크에서는 **AdventureWorksDW2012** 데이터 원본의 테이블이 5개 포함된 데이터 원본 뷰를 정의합니다.  
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 3.  **관계형 데이터 원본**에서 **Adventure Works DW 2012** 데이터 원본이 선택되어 있습니다. **다음**을 클릭합니다.  
   
     > [!NOTE]  
-    > 여러 데이터 원본을 기반으로 하는 데이터 원본 뷰를 만들려면 단일 데이터 원본을 기반으로 하는 데이터 원본 뷰를 먼저 정의합니다. 이 데이터 원본을 주 데이터 원본이라고 합니다. 그런 다음 보조 데이터 원본에 있는 테이블과 뷰를 추가할 수 있습니다. 여러 데이터 원본의 관련 테이블에 기초하는 특성이 포함된 차원을 디자인할 경우 해당 분산 쿼리 엔진 기능을 사용하려면 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 원본을 주 데이터 원본으로 정의해야 할 수도 있습니다.  
+    > 여러 데이터 원본을 기반으로 하는 데이터 원본 뷰를 만들려면 단일 데이터 원본을 기반으로 하는 데이터 원본 뷰를 먼저 정의합니다. 이 데이터 원본을 주 데이터 원본이라고 합니다. 그런 다음 보조 데이터 원본에 있는 테이블과 뷰를 추가할 수 있습니다. 정의 해야 여러 데이터 원본의 관련된 테이블을 기반으로 특성을 포함 하는 차원을 디자인할 때는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 분산된 쿼리 엔진 기능을 사용 하는 기본 데이터 원본으로 데이터 원본입니다.  
   
 4.  **테이블 및 뷰 선택** 페이지에서 선택한 데이터 원본에서 사용할 수 있는 개체 목록을 통해 테이블과 뷰를 선택합니다. 테이블과 뷰를 선택하는 데 도움이 되도록 이 목록을 필터링할 수 있습니다.  
   

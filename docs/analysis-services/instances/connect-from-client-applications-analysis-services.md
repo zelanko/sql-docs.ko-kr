@@ -2,16 +2,13 @@
 title: "클라이언트 응용 프로그램 (Analysis Services)에서 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,19 +16,20 @@ f1_keywords:
 - sql13.swb.connecttoas.connectionproperties.f1
 - sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0310a1012153fae8ecb364e63a270ce0846af277
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3aaccfe1f58568bde946c9ddf112b3e83bf8b9e1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>클라이언트 응용 프로그램에서 연결(Analysis Services)
-  Analysis Services를 처음 접하는 경우 이 항목의 정보를 사용하여 일반 도구 및 응용 프로그램을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기존 인스턴스에 연결할 수 있습니다. 이 항목에서는 테스트를 위해 서로 다른 사용자 ID로 연결하는 방법에 대해서도 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services를 처음 접하는 경우 이 항목의 정보를 사용하여 일반 도구 및 응용 프로그램을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기존 인스턴스에 연결할 수 있습니다. 이 항목에서는 테스트를 위해 서로 다른 사용자 ID로 연결하는 방법에 대해서도 설명합니다.  
   
 -   [SQL Server Management Studio를 사용하여 연결(SSMS)](#bkmk_SSMS)  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [개체 및 작업 &#40;에 대 한 권한 부여 액세스 Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> SQL Server Management Studio를 사용하여 연결(SSMS)  
  SSMS에서 Analysis Services에 연결하여 서버 인스턴스와 데이터베이스를 대화형으로 관리할 수 있습니다. 또한 XMLA 또는 MDX 쿼리를 실행하여 관리 작업을 수행하거나 데이터를 검색할 수도 있습니다. 쿼리가 전송될 때 데이터베이스만 로드하는 다른 도구 및 응용 프로그램과 달리 SSMS는 데이터베이스를 볼 수 있는 권한이 있다는 가정하에 서버에 연결할 때 모든 데이터베이스를 로드합니다. 즉, 서버에 수많은 테이블 형식 데이터베이스가 있는 경우 SSMS를 사용하여 연결할 때 모든 테이블 형식 데이터베이스가 시스템 메모리에 로드됩니다.  
@@ -132,7 +130,7 @@ ms.lasthandoff: 11/17/2017
   
      테스트하려면 원격 컴퓨터에서 Excel 또는 SSMS를 사용하여 Analysis Services 인스턴스에서 사용하는 IP 주소 및 포트를 지정합니다. 연결할 수 있으면 방화벽 규칙이 인스턴스에 대해 올바르며 인스턴스에서 원격 연결을 허용하는 것입니다.  
   
-     또한 연결 프로토콜에 TCP/IP를 사용하는 경우 Analysis Services에서는 클라이언트 연결이 동일한 도메인이나 트러스트된 도메인에서 설정되도록 요구합니다. 연결이 보안 경계를 넘어 이동하는 경우 대부분 HTTP 액세스를 구성해야 합니다. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
+     또한 연결 프로토콜에 TCP/IP를 사용하는 경우 Analysis Services에서는 클라이언트 연결이 동일한 도메인이나 트러스트된 도메인에서 설정되도록 요구합니다. 연결이 보안 경계를 넘어 이동하는 경우 대부분 HTTP 액세스를 구성해야 합니다. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하십시오.  
   
 -   특정 도구를 사용해서만 연결할 수 있습니까? 문제는 잘못된 클라이언트 라이브러리 버전일 수 있습니다. SQL Server 기능 팩 다운로드 페이지에서 클라이언트 라이브러리를 얻을 수 있습니다.  
   
@@ -142,8 +140,8 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Analysis Services에서 지원하는 인증 방법](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [가장 &#40; SSAS 테이블 형식 &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [데이터 원본 만들기&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Analysis Services에서 지 원하는 인증 방법](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [가장](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
+ [데이터 원본 &#40; 만들기 SSAS 다차원 &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

@@ -33,17 +33,16 @@ helpviewer_keywords:
 - matching patterns [SQL Server]
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-caps.latest.revision: 50
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 07a8bb8b08120f08cd54e42dcd332459544c206d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 4fa2299a1efade9f44de85d02c60286a25aad8d0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +69,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자 데이터 형식입니다.  
   
- *패턴*  
+ *pattern*  
  문자에서 검색할 특정 문자열이 며 *match_expression*, 다음과 같은 유효한 와일드 카드 문자를 포함할 수 있습니다. *패턴* 8, 000 바이트의 최대 일 수 있습니다.  
   
 |와일드카드 문자|Description|예제|  
@@ -94,7 +93,7 @@ match_expression [ NOT ] LIKE pattern
   
  포함 하는 패턴을 사용 하 여 문자열 비교 **char** 및 **varchar** 데이터 데이터가 저장 되는 방식 때문에 LIKE 비교가 성공 하지 않을 수 있습니다. 각 데이터 형식의 저장 방식과 LIKE 비교가 실패할 수 있는 상황을 이해하는 것이 중요합니다. 다음 예제에서는 로컬 전달 **char** 변수 저장된 프로시저와 다음 사용 하 여 패턴 일치를 시작 하는 성을 지정 된 문자 집합으로 모든 직원 찾기를 합니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -112,7 +111,7 @@ GO
   
  그러나 다음 예제에서는 성공에 후행 공백이 추가 되지 않습니다 때문에 **varchar** 변수입니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -140,7 +139,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  다음 예에서는 ASCII 패턴 일치 및 유니코드 LIKE 패턴 일치가 반환하는 행의 차이를 보여 줍니다.  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -171,7 +170,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  예를 들어 다음 쿼리는 모두 `dm` 문자로 시작하므로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 모든 동적 관리 뷰를 보여 줍니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -210,7 +209,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>1. LIKE와 % 와일드카드 문자 사용  
  다음 예에서는 `415` 테이블에서 지역 번호가 `PersonPhone`인 모든 전화 번호를 찾는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -244,7 +243,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>2. NOT LIKE와 % 와일드카드 문자 사용  
  다음 예에서는 `PersonPhone` 테이블에서 `415` 외의 다른 지역 번호를 포함하는 모든 전화 번호를 찾는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -275,7 +274,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>3. ESCAPE 절 사용  
  다음 예에서는 `ESCAPE` 절과 이스케이프 문자를 사용하여 `10-15%` 테이블의 `c1` 열에서 `mytbl2`와 정확히 일치하는 문자열을 찾는 방법을 보여 줍니다.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -300,7 +299,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>4. [ ] 와일드카드 문자 사용  
  다음 예제에서 직원을 찾습니다는 `Person` 의 이름이 포함 된 테이블 `Cheryl` 또는 `Sheryl`합니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -311,7 +310,7 @@ GO
   
  다음 예에서는 `Person` 테이블에서 성이 `Zheng` 또는 `Zhang`인 직원의 행을 찾습니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -326,7 +325,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>5. LIKE와 % 와일드카드 문자 사용  
  다음 예제에서는 검색에 모든 직원의 `DimEmployee` 로 시작 하는 전화 번호를 가진 테이블 `612`합니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -338,7 +337,7 @@ ORDER by LastName;
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>6. NOT LIKE와 % 와일드카드 문자 사용  
  다음 예제에서는에서 모든 전화 번호를 찾습니다는 `DimEmployee` 로 시작 하지 않는 테이블 `612`합니다.  의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -350,7 +349,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>7. LIKE와 _ 와일드 카드 문자 사용  
  다음 예제에서는 부터는 지역 번호는 모든 전화 번호를 찾습니다 `6` 와 끝 `2` 에 `DimEmployee` 테이블입니다. Note 지역 번호 전화 번호의 첫 번째 부분 하 고 열 값에 이후에 추가 문자가 존재 하므로 % 와일드 카드 문자 검색 패턴의 끝에도 됩니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -365,4 +364,3 @@ ORDER by LastName;
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
  
-

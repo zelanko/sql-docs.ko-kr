@@ -5,11 +5,10 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc06520b8dcf2fe5686d041e1c48e50cf5555b79
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5bd1ce6560e8c93d22cac8f99f2eee53be1b953
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>변경 된 동작 및 ODBC 3.x 드라이버
 환경 특성 SQL_ATTR_ODBC_VERSION 나타냅니다 드라이버에 ODBC 2를 따르기만 하는 데 필요한 여부. *x* 동작이 나 ODBC 3*.x* 동작 합니다. SQL_ATTR_ODBC_VERSION 환경 특성은 설정 하는 방법을 응용 프로그램에 따라 달라 집니다. ODBC 3*.x* 응용 프로그램 호출 해야 **SQLSetEnvAttr** 호출 후이 특성을 설정 하려면 **SQLAllocHandle** 환경 핸들을 할당 를호출하기전에 **SQLAllocHandle** 연결 핸들을 할당 합니다. 드라이버 관리자 SQLSTATE HY010 반환이 작업을 수행 하지 않은 경우 (함수 시퀀스 오류입니다.)의 두 번째 호출 **SQLAllocHandle**합니다.  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQLSetPos를 호출하여 데이터 삽입](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
   
 -   [서수로 로딩](../../../odbc/reference/appendixes/loading-by-ordinal.md)
-

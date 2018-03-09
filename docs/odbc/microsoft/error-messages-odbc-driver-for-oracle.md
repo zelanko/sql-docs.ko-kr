@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - error messages [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], error messages
 ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e400e690d93a576e94b5b333d45f11c24e4c972b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45b66b513595612de968bfc8cb274ebfc90a7a46
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-messages-odbc-driver-for-oracle"></a>오류 메시지 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  이 섹션에는 다음 항목 포함 됩니다.  
   
 -   [Oracle용 ODBC 드라이버에서 반환한 메시지](../../odbc/microsoft/messages-returned-by-the-odbc-driver-for-oracle.md)
-

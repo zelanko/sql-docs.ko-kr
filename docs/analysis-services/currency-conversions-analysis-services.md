@@ -2,14 +2,13 @@
 title: "통화 변환 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - many-to-many currency conversions [Analysis Services]
 - many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b454d405b6175c200d8be9426fafb7e79be25e70
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f54b50833ce40a8222925ac2b43591fa89617631
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>통화 변환(Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   [!INCLUDE[applies](../includes/applies-md.md)] 다차원 전용  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 MDX(Multidimensional Expressions) 스크립트에서 지정하는 여러 기능을 사용하여 다중 통화를 지원하는 큐브에 통화 환산 지원을 제공할 수 있습니다.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/01/2017
 -   요율 측정값 그룹에 포함된 환율을 나타내는 하나 이상의 측정값입니다.  
   
  보고 통화 차원  
- 통화 변환을 정의한 다음 비즈니스 인텔리전스 마법사에서 정의한 차원이며 해당 통화 변환에 대한 보고 통화를 포함합니다. 보고 통화 차원은 통화 차원의 주 차원 테이블에서 명명된 쿼리를 기반으로 합니다. 이 쿼리는 요율 측정값 그룹과 연결된 통화 차원이 기반으로 하는 데이터 원본 뷰에 정의되어 있습니다. 다음 설정으로 보고 통화 차원이 정의됩니다.  
+ 통화 변환을 정의한 다음 비즈니스 인텔리전스 마법사에서 정의한 차원이며 해당 통화 변환에 대한 보고 통화를 포함합니다. 보고 통화 차원은 통화 차원의 주 차원 테이블에서 명명된 쿼리를 기반으로 합니다. 이 쿼리는 요율 측정값 그룹과 연결된 통화 차원이 기반으로 하는 데이터 원본 뷰에 정의되어 있습니다. 다음 설정으로 보고 통화 차원이 정의됩니다.   
   
 -   차원의 **Type** 속성을 Currency로 설정합니다.  
   
@@ -196,4 +196,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services의 세계화 시나리오](../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "경로 식 단계에서 축 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c34c230f6df65610466e087da5707622c3911e42
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>경로 식에서 축 지정
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   경로 식의 축 단계는 다음 구성 요소를 포함합니다.  
   
@@ -52,12 +54,12 @@ ms.lasthandoff: 09/01/2017
   
 |축|Description|  
 |----------|-----------------|  
-|**자식**|컨텍스트 노드의 자식을 반환합니다.|  
-|**하위 항목**|컨텍스트 노드의 모든 하위 노드를 반환합니다.|  
-|**부모**|컨텍스트 노드의 부모를 반환합니다.|  
-|**특성**|컨텍스트 노드의 특성을 반환합니다.|  
-|**자체**|컨텍스트 노드 자신을 반환합니다.|  
-|**하위 또는 자체**|컨텍스트 노드와 해당 컨텍스트 노드의 모든 하위 노드를 반환합니다.|  
+|**child**|컨텍스트 노드의 자식을 반환합니다.|  
+|**descendant**|컨텍스트 노드의 모든 하위 노드를 반환합니다.|  
+|**parent**|컨텍스트 노드의 부모를 반환합니다.|  
+|**attribute**|컨텍스트 노드의 특성을 반환합니다.|  
+|**self**|컨텍스트 노드 자신을 반환합니다.|  
+|**descendant-or-self**|컨텍스트 노드와 해당 컨텍스트 노드의 모든 하위 노드를 반환합니다.|  
   
  이러한 모든 축을 제외 하 고는 **부모** 축 정방향 축입니다. **부모** 축 문서 계층 구조에서 거꾸로 검색 하므로 역방향 축입니다가 있습니다. 예를 들어 상대 경로 식 `child::ProductDescription/child::Summary`에는 두 단계가 있는데 각 단계는 하나의 `child` 축을 지정합니다. 검색 하는 첫 번째 단계는 \<ProductDescription > 컨텍스트 노드의 요소 자식이 있습니다. 각 \<ProductDescription > 요소 노드를 두 번째 단계 검색는 \<요약 > 요소 노드 자식을 합니다.  
   
@@ -246,4 +248,3 @@ WHERE ProductModelID=19
  단일 값이 반환되도록 경로 식에서 `[1]` 조건자가 추가되었습니다.  
   
   
-

@@ -2,41 +2,34 @@
 title: "Action 데이터 형식 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Action Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Action Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Action data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Action data type
 ms.assetid: 8c4d2ff7-17e1-4e74-bec7-637e0b191acf
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e0f42a42254c97d5f4c9f2aa4a3977e650108b1e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6dc68139ddfbce5151cb3750aaca1ffd54d37041
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="action-data-type-assl"></a>Action 데이터 형식(ASSL)
-  작업을 나타내는 추상 기본 데이터 형식을 정의 [큐브](../../../analysis-services/scripting/objects/cube-element-assl.md) 요소 또는 [관점](../../../analysis-services/scripting/objects/perspective-element-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]작업을 나타내는 추상 기본 데이터 형식을 정의 [큐브](../../../analysis-services/scripting/objects/cube-element-assl.md) 요소 또는 [관점](../../../analysis-services/scripting/objects/perspective-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -61,16 +54,16 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|없음|  
+|기본 데이터 형식|InclusionThresholdSetting|  
 |파생 데이터 형식|[DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md), [StandardAction](../../../analysis-services/scripting/data-type/standardaction-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[작업](../../../analysis-services/scripting/collections/actions-element-assl.md)|  
+|부모 요소|[동작](../../../analysis-services/scripting/collections/actions-element-assl.md)|  
 |자식 요소|[주석](../../../analysis-services/scripting/collections/annotations-element-assl.md), [응용 프로그램](../../../analysis-services/scripting/properties/application-element-assl.md), [캡션](../../../analysis-services/scripting/properties/caption-element-assl.md), [CaptionIsMdx](../../../analysis-services/scripting/properties/captionismdx-element-assl.md), [조건](../../../analysis-services/scripting/properties/condition-element-assl.md), [설명 ](../../../analysis-services/scripting/properties/description-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [호출](../../../analysis-services/scripting/properties/invocation-element-assl.md), [이름](../../../analysis-services/scripting/properties/name-element-assl.md), [대상](../../../analysis-services/scripting/properties/target-element-assl.md), [TargetType](../../../analysis-services/scripting/properties/targettype-element-assl.md), [번역](../../../analysis-services/scripting/collections/translations-element-assl.md), [유형](../../../analysis-services/scripting/properties/type-element-action-assl.md)|  
 |파생 요소|[DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md), [StandardAction](../../../analysis-services/scripting/data-type/standardaction-data-type-assl.md)|  
   
@@ -86,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [스크립팅 언어 XML 데이터 형식 &#40; analysis Services ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

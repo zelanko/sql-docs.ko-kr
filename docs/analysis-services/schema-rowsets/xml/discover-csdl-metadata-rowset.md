@@ -2,34 +2,32 @@
 title: "DISCOVER_CSDL_METADATA 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94f4cf7687c8e1469ea5f3a4260b69224e0ddbc0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 행 집합
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 모델(테이블 형식 또는 다차원)에 대한 정보를 반환하여 CSDLBI 형식(BI 포함 개념 스키마 정의 언어 주석)으로 모델의 정의를 제공합니다. CSDLBI는 CSDL을 기반으로 하며, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 클라이언트 간의 통신을 위한 엔터티 데이터 프레임워크에서 사용되는 XML 스키마입니다. BI(비즈니스 인텔리전스) 주석은 테이블 형식 모델과 모델 안의 개체에 대한 메타데이터를 추가로 제공합니다. 테이블 형식 데이터 모델에 대한 자세한 내용은 [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 모델(테이블 형식 또는 다차원)에 대한 정보를 반환하여 CSDLBI 형식(BI 포함 개념 스키마 정의 언어 주석)으로 모델의 정의를 제공합니다. CSDLBI는 CSDL을 기반으로 하며, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 클라이언트 간의 통신을 위한 엔터티 데이터 프레임워크에서 사용되는 XML 스키마입니다. BI(비즈니스 인텔리전스) 주석은 테이블 형식 모델과 모델 안의 개체에 대한 메타데이터를 추가로 제공합니다. 테이블 형식 데이터 모델에 대한 자세한 내용은 [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)을 참조하세요.  
   
  명령의 보안 컨텍스트에 따라 반환되는 행 집합이 달라집니다. 서버에서 CSDL 정의를 가져오려면 Analysis Services 인스턴스에 대해 읽기 권한이 있어야 합니다.  
   
@@ -38,12 +36,12 @@ ms.lasthandoff: 09/01/2017
 ## <a name="rowset-columns"></a>행 집합 열  
  **DISCOVER_CSDL_METADATA** 행 집합에는 다음 열이 포함되어 있습니다.  
   
-|**열 이름**|**유형 표시기**|**제한**|**Description**|  
+|**열 이름**|**유형 표시기**|**제한**|**설명**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|예|CSDLBI 설명이 요청된 데이터베이스의 이름을 지정합니다. 생략하는 경우 현재 데이터베이스가 사용됩니다.<br /><br /> 이 제한은 모든 모델 유형에 필수입니다.|  
 |**PERSPECTIVE_ID**|**DBTYPE_WSTR**|예|CATALOG_NAME으로 지정한 모델에 정의되어 있는 큐브 뷰 ID를 지정합니다.<br /><br /> 선택적 제한입니다. 모든 모델 유형에 적용됩니다.|  
 |**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|예|CATALOG_NAME에 의해 지정된 모델에 정의되어 있는 큐브 뷰 이름을 지정합니다.<br /><br /> 이 제한은 테이블 형식 모델에 큐브 뷰가 포함되거나 다차원 솔루션에 큐브 또는 큐브 뷰가 여러 개 포함된 경우에 필요합니다.|  
-|**메타 데이터**|**DBTYPE_WSTR**|아니요|CSDLBI 스키마에 따라 데이터 원본 및 그 속성의 XML 정의를 포함하는 문자열입니다.|  
+|**METADATA**|**DBTYPE_WSTR**|아니요|CSDLBI 스키마에 따라 데이터 원본 및 그 속성의 XML 정의를 포함하는 문자열입니다.|  
 |**CUBE_ID**|**DBTYPE_WSTR**|예|문자열 식별자입니다.<br /><br /> 이 제한은 다차원 데이터베이스에 대한 선택 사항입니다. 큐브를 여러 개 사용할 수 있고 제한을 생략한 경우 기본 큐브가 반환됩니다.|  
   
 ## <a name="remarks"></a>주의  
@@ -136,4 +134,3 @@ ms.lasthandoff: 09/01/2017
  [Business Intelligence &#40;에 대 한 CSDL 주석 CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   
-

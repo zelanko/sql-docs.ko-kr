@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC driver for Oracle [ODBC], supported options
+helpviewer_keywords: ODBC driver for Oracle [ODBC], supported options
 ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3811ad91de8793fb27f600e1fe256d0bef4ca72a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a95efee589a8570527305bd8aef8226cfc1eb3bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>지원 되는 옵션 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -62,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQL_MAX_ROWS](../../odbc/microsoft/statement-options.md)  
   
 -   [SQL_ROWSET_SIZE](../../odbc/microsoft/statement-options.md)
-

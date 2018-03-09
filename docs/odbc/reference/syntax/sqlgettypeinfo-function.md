@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetTypeInfo
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetTypeInfo
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetTypeInfo
-helpviewer_keywords:
-- SQLGetTypeInfo function [ODBC]
+f1_keywords: SQLGetTypeInfo
+helpviewer_keywords: SQLGetTypeInfo function [ODBC]
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7411a992bfbcb56a05e8ada5e4849a24ab8d2894
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 함수(SQLGetTypeInfo Function)
 **규칙**  
@@ -66,7 +60,7 @@ SQLRETURN SQLGetTypeInfo(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetTypeInfo** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* sql _HANDLE_STMT 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLGetTypeInfo** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01 S 02|옵션 값이 변경 됨|지정 된 문 특성 유사한 값에 일시적으로 대체 하므로 구현 작업 조건 때문에 잘못 되었습니다. (호출 **SQLGetStmtAttr** 일시적으로 대체 값을 결정 합니다.) 대체 값이 적합는 *StatementHandle* 커서를 닫을 때까지 합니다. 변경할 수 있는 문 특성은: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT, 및 SQL_ATTR_SIMULATE_CURSOR 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -88,7 +82,7 @@ SQLRETURN SQLGetTypeInfo(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLGetTypeInfo** 정렬 DATA_TYPE 순위별로 정리한 다음 근접도 데이터 형식이 해당 ODBC SQL 데이터 형식에 매핑되는 표준 결과 집합으로 결과 반환 합니다. 데이터 원본에 의해 정의 된 데이터 형식을 사용자 정의 데이터 형식 보다 우선 합니다. 따라서 정렬 순서 반드시 일치 하지 않습니다 되지만 수 수 먼저 DATA_TYPE로 일반화, 그 두 오름차순 TYPE_NAME 합니다. 예를 들어 데이터 원본이 여기서 카운터 자동 증가, 정수 및 카운터 데이터 형식을 정의 하 고 사용자 정의 데이터 형식 WHOLENUM도 정의 되었다고 가정 합니다. 이러한 WHOLENUM, INTEGER, 순서 대로 반환 됩니다 및 카운터, ODBC SQL 데이터에 가깝게 WHOLENUM 지도 형식 SQL_INTEGER, 반면 자동 증분 데이터 형식, 데이터 원본에서 지 원하는 경우에 매핑되지 않는 밀접 하 게 ODBC SQL 데이터 형식에 있습니다. 이 정보를 어떻게 사용할 수 있는지에 대 한 정보를 참조 하십시오. [DDL 문을](../../../odbc/reference/develop-app/ddl-statements.md)합니다.  
   
  경우는 *DataType* 인수는 드라이버에서 지 원하는 ODBC의 버전에 대 한 유효한 데이터 형식을 지정 하지만 드라이버에 의해 지원 되지 않는 다음 빈 결과 집합이 반환 됩니다.  
@@ -119,9 +113,9 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo** 모든 데이터 형식을 반환할 수 없습니다. 예를 들어 드라이버는 사용자 정의 데이터 형식 반환 하지 수도 있습니다. 응용 프로그램으로 반환 되는지 여부에 관계 없이 모든 유효한 데이터 형식을 사용할 수 **SQLGetTypeInfo**합니다. 반환 데이터 형식은 **SQLGetTypeInfo** 데이터 원본에서 지원 되는 합니다. 데이터 정의 언어 (DDL) 문 사용 하기 위해 것은. 드라이버에서 반환 형식 이외의 데이터 형식을 사용 하는 결과 집합 데이터를 반환할 수 **SQLGetTypeInfo**합니다. 결과 집합에 카탈로그 함수를 만들 드라이버 데이터 원본에서 지원 되지 않는 데이터 형식을 사용할 수 있습니다.  
   
-|열 이름|열<br /><br /> number|데이터 형식|설명|  
+|열 이름|Column<br /><br /> number|데이터 형식|주석|  
 |-----------------|-----------------------|---------------|--------------|  
-|TYPE_NAME (ODBC 2.0)|1.|NULL이 아닌 Varchar|데이터 원본 – 종속적인 데이터 형식 이름입니다. 예를 들어 "char ()", "VARCHAR()", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다. 응용 프로그램에서이 이름을 사용 해야 **CREATE TABLE** 및 **ALTER TABLE** 문.|  
+|TYPE_NAME (ODBC 2.0)|1|NULL이 아닌 Varchar|데이터 원본 – 종속적인 데이터 형식 이름입니다. 예를 들어 "char ()", "VARCHAR()", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다. 응용 프로그램에서이 이름을 사용 해야 **CREATE TABLE** 및 **ALTER TABLE** 문.|  
 |DATA_TYPE (ODBC 2.0)|2|NULL이 아닌 Smallint|SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식이 나 드라이버별 SQL 데이터 형식과 수 있습니다. 날짜/시간 또는 간격 데이터 형식의 경우이 열 간결 하 게 데이터 형식 (예: SQL_TYPE_TIME 또는 SQL_INTERVAL_YEAR_TO_MONTH)를 반환합니다. 목록이 유효한 ODBC SQL 데이터 형식에 대 한 참조 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식에서입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.|  
 |COLUMN_SIZE (ODBC 2.0)|3|정수|서버에서 지 원하는이 데이터 형식에 대 한 최대 열 크기입니다. 숫자 데이터에 대 한 최대 전체 자릿수입니다. 문자열 데이터의 길이 문자입니다. Datetime 데이터 형식 (소수 자릿수 초 구성 요소의 최대 허용된 전체 자릿수 라고 가정) 문자열 표현의 문자 길이입니다. 열 크기를 적용할 수 없는 데이터 형식에 대해 NULL이 반환 됩니다. Interval 데이터 형식에 대 한 리터럴 간격의 문자 표시에 있는 문자의 수입니다 (정밀도 유도 하는 간격에 정의 된 대로 참조 [간격 데이터 형식의 길이가](../../../odbc/reference/appendixes/interval-data-type-length.md) 부록 d: 데이터 형식에).<br /><br /> 열 크기에 대 한 자세한 내용은 참조 하십시오. [열 크기, 10 진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.|  
 |LITERAL_PREFIX (ODBC 2.0)|4|Varchar|리터럴에 접두사로 사용할 문자 (들) 예를 들어, 작은따옴표 (') 문자 데이터 형식 또는 이진 데이터 형식에 대 한 0 x에 대 한 NULL 리터럴 접두사 적용할 수 없는 데이터 형식에 대해 반환 됩니다.|  
@@ -157,4 +151,3 @@ SQLRETURN SQLGetTypeInfo(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

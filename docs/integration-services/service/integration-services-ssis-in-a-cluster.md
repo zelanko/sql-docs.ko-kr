@@ -1,5 +1,5 @@
 ---
-title: "클러스터의 integration Services (SSIS) | Microsoft Docs"
+title: "클러스터의 Integration Services(SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,24 +13,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>클러스터의 Integration Services(SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 클러스터형 또는 클러스터 인식형 서비스가 아니며 클러스터 노드 간 장애 조치(failover) 기능을 지원하지 않으므로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 클러스터링이 권장되지 않습니다. 따라서 클러스터형 환경에서는 클러스터의 노드마다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 설치하고 독립 실행형 서비스로 시작해야 합니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 클러스터형 서비스가 아니지만 클러스터의 각 노드에 별도로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 설치한 후 이러한 서비스가 클러스터 리소스로 작동하도록 수동으로 구성할 수 있습니다.  
   
- 그러나 클러스터형 하드웨어 환경 설정의 목표가 고가용성인 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 클러스터 리소스로 구성하지 않고도 이러한 목표를 달성할 수 있습니다.  클러스터 노드의 패키지를 클러스터의 다른 노드에서 관리하려면 클러스터의 각 노드에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 구성 파일을 수정합니다. 이러한 각 구성 파일을 수정하여 패키지가 저장되어 있는 모든 사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 가리키도록 할 수 있습니다. 이렇게 하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 클러스터 리소스로 구성할 때 발생할 수 있는 문제를 방지하고 대부분의 고객이 원하는 고가용성을 제공할 수 있습니다. 구성 파일을 변경 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Integration Services 서비스 &#40; SSIS 서비스 &#41; ](../../integration-services/service/integration-services-service-ssis-service.md).  
+ 그러나 클러스터형 하드웨어 환경 설정의 목표가 고가용성인 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 클러스터 리소스로 구성하지 않고도 이러한 목표를 달성할 수 있습니다.  클러스터 노드의 패키지를 클러스터의 다른 노드에서 관리하려면 클러스터의 각 노드에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 구성 파일을 수정합니다. 이러한 각 구성 파일을 수정하여 패키지가 저장되어 있는 모든 사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 가리키도록 할 수 있습니다. 이렇게 하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 클러스터 리소스로 구성할 때 발생할 수 있는 문제를 방지하고 대부분의 고객이 원하는 고가용성을 제공할 수 있습니다. 구성 파일을 변경하는 방법에 대한 자세한 내용은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.  
   
  클러스터형 환경에서 서비스를 구성하는 방법을 합리적으로 결정하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 역할을 이해하는 것이 중요합니다. 자세한 내용은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.  
   
@@ -139,4 +138,3 @@ ms.lasthandoff: 09/26/2017
 -   **클러스터 관리자**에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 선택하고 마우스 오른쪽 단추로 클릭한 다음 팝업 메뉴에서 **온라인 상태로 만들기** 를 선택합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 클러스터 리소스로 온라인 상태가 됩니다.  
   
   
-

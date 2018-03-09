@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
-caps.latest.revision: 11
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4fb36fd89c02ff9ddd5bc33825a387b53ab6e174
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>데이터베이스 백업 (병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -83,7 +82,7 @@ BACKUP DATABASE database_name
   
  설명에 메타 데이터를 저장 및 백업 헤더 RESTORE HEADERONLY로 복원 하는 경우에 표시 됩니다.  
   
- 이름 = **'***백업 _name***'**  
+ NAME = **'***backup _name***'**  
  백업 하는 이름을 지정합니다. 백업 이름을 데이터베이스 이름과 다를 수 있습니다.  
   
 -   이름은 최대 128자까지 지정할 수 있습니다.  
@@ -162,11 +161,11 @@ BACKUP DATABASE database_name
 ## <a name="metadata"></a>메타데이터  
  이러한 동적 관리 뷰 모두 백업, 복원 하는 방법에 대 한 정보를 포함 하 고 작업을 로드 합니다. 정보는 시스템을 다시 시작 유지합니다.  
   
--   [sys.pdw_loader_backup_runs &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys.pdw_loader_backup_run_details &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+-   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>성능  
  백업을 수행 하려면 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 첫 번째 백업 메타 데이터를 한 다음 계산 노드에 저장 된 데이터베이스 데이터의 병렬 백업을 수행 합니다. 데이터는 각 계산 노드에서 직접 백업 디렉터리에 복사 됩니다. 백업 디렉터리에는 계산 노드 모두에서 데이터를 이동 하기 위한 최상의 성능을 얻으려면 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 복사 하는 데이터 동시에 계산 노드 수를 제어 합니다.  
@@ -252,4 +251,3 @@ WITH (
  [데이터베이스 복원 &#40; 병렬 데이터 웨어하우스 &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
   
-

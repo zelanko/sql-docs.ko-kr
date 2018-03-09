@@ -1,27 +1,33 @@
 ---
 title: "8단원: 로그 백업에서 새 데이터베이스로 복원 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd973fc07c6849a1e211f77be4a995bdada4b271
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b2fccaf04b123ec7ba354ffabef8d21ee6c35845
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>8단원: 로그 백업에서 새 데이터베이스로 복원
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 이 단원에서는 파일-스냅숏 트랜잭션 로그 백업에서 AdventureWorks2014 데이터베이스를 새 데이터베이스로 복원합니다.  
   
 이 시나리오에서는 비즈니스 분석 및 보고를 위해 다른 가상 컴퓨터의 SQL Server 인스턴스로 복원을 수행합니다. 다른 가상 컴퓨터의 다른 인스턴스로 복원할 경우 이 목적을 위한 큰 전용 가상 컴퓨터에 작업이 오프로드되므로 트랜잭션 시스템의 리소스를 사용할 필요가 없습니다.  

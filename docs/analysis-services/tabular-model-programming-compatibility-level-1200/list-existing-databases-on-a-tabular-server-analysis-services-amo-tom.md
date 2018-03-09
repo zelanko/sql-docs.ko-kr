@@ -2,35 +2,29 @@
 title: "테이블 형식 서버 (Analysis Services AMO-TOM)에 있는 기존 데이터베이스 목록 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ab5eb4b8-6254-442d-a42e-2372c346d260
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3864da736ccdeca7ffa9d6c024748e5cd60b7a5a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55587b02262943b06843c504c5ee00b13f914c07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>테이블 형식 서버 (Analysis Services AMO-TOM)에 있는 기존 데이터베이스 목록
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-있는 경우는 **서버** 되는 개체를 Analysis Services 인스턴스에 연결을 반복할 수 있습니다 **Server.Databases** Anlaysis 서비스 인스턴스에 의해 호스트 되는 모든 데이터베이스를 나열 하는 컬렉션입니다. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]있는 경우는 **서버** 되는 개체를 Analysis Services 인스턴스에 연결을 반복할 수 있습니다 **Server.Databases** Anlaysis 서비스 인스턴스에 의해 호스트 되는 모든 데이터베이스를 나열 하는 컬렉션입니다. 
 
 **Server.Databases** 컬렉션을 포함 하나 **데이터베이스** 서버 모드 (다차원 또는 테이블 형식) 또는 데이터베이스 유형 (다차원에 관계 없이 서버에서 호스팅되는 모든 데이터베이스에 대 한 개체 테이블 형식 사전 1200 또는 테이블 형식 1200 이상)입니다. 
 
@@ -128,5 +122,4 @@ switch(obj.ObjectType)
 ## <a name="next-steps"></a>다음 단계
 
 이해 하는 방법 [만들기 빈 데이터베이스를 배포 하 고](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-and-deploy-an-empty-database-analysis-services-amo-tom.md) TOM API를 사용 하 여 합니다.
-
 

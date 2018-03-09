@@ -1,29 +1,30 @@
 ---
 title: "(MySQLToSQL) 데이터베이스에서 새로 고침 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 18656f8929e52d23e10ccc5fafe8139544bf44a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0e4a2afc29ff32b51a38e9df117426585e84e177
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-mysqltosql"></a>(MySQLToSQL) 데이터베이스에서 새로 고침
 **데이터베이스에서 새로 고침** 대화 상자를 사용 하면 MySQL 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자에 있는 행은 코딩 된 색 메타 데이터의 상태에 따라:  
@@ -40,7 +41,7 @@ ms.lasthandoff: 08/02/2017
   
 액세스는 **데이터베이스에서 새로 고침** 대화 상자에서 마우스 오른쪽 단추로 클릭 하 고 MySQL 메타 데이터 탐색기에서 개체 **데이터베이스에서 새로 고침**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 |||  
 |-|-|  
@@ -52,4 +53,3 @@ ms.lasthandoff: 08/02/2017
 |**데이터베이스에서 새로 고치지 않습니다 (X 단추)**|X 단추를 사용 하 여 지정 SSMA에서 선택한 개체에 대 한 메타 데이터를 업데이트 되지 않아야 합니다.|  
 |**범례**|표시는 **범례** 대화 상자. 범례는 색 행 및 메타 데이터 상태 간의 매핑을 포함합니다.<br /><br />유지 하는 **범례** 대화 상자 맨 위에 **데이터베이스에서 새로 고침** 대화 상자는 **맨 위에 표시** 확인란 합니다.|  
   
-

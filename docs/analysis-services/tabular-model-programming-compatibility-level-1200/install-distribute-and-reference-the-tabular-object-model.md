@@ -2,35 +2,29 @@
 title: "설치 및 배포 하 고 테이블 형식 개체 모델 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4992c9a621964f8125178f114a930b1f4e007179
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9688a692d25d484b05bca88e0779d2812944f3af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>설치 및 배포 하 고 테이블 형식 개체 모델 참조
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-이 문서를 다운로드, 참조 및 Analysis Services 테이블 형식 개체 모델 (TOM) 만들기 및 관리 코드에서 데이터베이스 및 테이블 형식 모델 관리에 대 한 C# 라이브러리를 재배포 하는 방법을 설명 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 문서를 다운로드, 참조 및 Analysis Services 테이블 형식 개체 모델 (TOM) 만들기 및 관리 코드에서 데이터베이스 및 테이블 형식 모델 관리에 대 한 C# 라이브러리를 재배포 하는 방법을 설명 합니다.  
   
 TOM에 SQL Server 2016와 함께 제공 되는 AMO 클라이언트 라이브러리 (Microsoft.AnalysisServices.dll)의 확장입니다. SQL Server 2016 버전에서 테이블 형식 메타 데이터 엔진을 대상으로 하는 테이블 형식 모델과 함께 작동 합니다. TOM를 사용 하려면 해당 모델과 데이터베이스는 호환성 수준 1200 이상 이어야 합니다.  
 
@@ -43,8 +37,8 @@ SQL Server 2016 리팩터링와 AMO Core, 테이블 형식 및 JSON에 대 한 �
 어셈블리  |기능  |중요 한 클래스 |
 ---------|---------|--------------  |
 핵심 <br/>Microsoft.AnalysisServices.Core.dll | 테이블 형식 및 다차원 데이터베이스를 모두에 공통 됩니다. <br/><br/>예외 처리, Analysis Services 인스턴스 및 데이터베이스에 대 한 일반 연결 및 서버 및 데이터베이스 개체에 대 한 공용 메서드와 속성에 대 한 액세스를 제공 합니다. <br/><br/>SQL Server 2016을 대상으로 하는 모든 AMO 솔루션에 대 한 필요 합니다. | 코어&nbsp;서버<br/>코어&nbsp;데이터베이스<br/>AmoException
-TOM<br/> Microsoft.AnalysisServices.Tabular.dll, 13.0.1601.5 버전 이상.| 페이지를 만들고 테이블 형식 메타 데이터 개체를 관리 합니다. | TOM&nbsp;서버 <br/>TOM&nbsp;데이터베이스<br /> Model<br /> 테이블<br /> 열<br /> 관계
-  AMO<br /> Microsoft.AnalysisServices.dll| 만들고, 테이블 형식 1050-1103 데이터베이스를 포함 한 다차원 메타 데이터 개체를 관리 합니다. | AMO&nbsp;서버 <br />AMO&nbsp;데이터베이스 <br /> Cube <br /> 차원 <br /> MeasureGroup 
+TOM<br/> Microsoft.AnalysisServices.Tabular.dll, 13.0.1601.5 버전 이상.| 페이지를 만들고 테이블 형식 메타 데이터 개체를 관리 합니다. | TOM&nbsp;서버 <br/>TOM&nbsp;데이터베이스<br /> Model<br /> Table<br /> Column<br /> 관계
+  AMO<br /> Microsoft.AnalysisServices.dll| 만들고, 테이블 형식 1050-1103 데이터베이스를 포함 한 다차원 메타 데이터 개체를 관리 합니다. | AMO&nbsp;서버 <br />AMO&nbsp;데이터베이스 <br /> Cube <br /> 차원 <br /> Partition 
 Json<br/>Microsoft.AnalysisServices.Tabular.Json.dll | 도우미 DLL 업데이트를 제어 하는 NewtonSoftJson.dll (JSON.NET)을 래핑하는 Analysis Services 작업에서 JSON serialization 기능 변경의 위험을 제거 합니다. <br /> <br />이 DLL의 TOM 종속성 있고 코드에서 직접 사용할 수 없습니다. | 없음  
   
  ### <a name="understanding-assembly-dependencies"></a>어셈블리 종속성 이해
@@ -127,4 +121,3 @@ Microsoft.AnalysisServices.dll Microsoft.AnalysisServices.Tabular.dll, 하지 �
 TOM 및 AMO는 재배포를 통해는 **sql_as_amo.msi** 설치 패키지입니다. AMO 또는 TOM으로 호출 하는 클라이언트 응용 프로그램에 대 한 설치 프로그램을 작성 하는 경우 추가 **sql_as_amo.msi** 실행 파일에 있습니다. TOM 및 AMO 클라이언트 라이브러리를 재배포 하기 위한 유일한 지원 되는 메커니즘입니다.  
   
 패키지 자체 포함 하며 사용자 코드에서 TOM 및 AMO를 호출 하는 데 필요한 모든 어셈블리를 제공 합니다. SQL_AS_OLEDB.msi SQL_AS_ADOMD.msi를 등의 다른 패키지 TOM 프로그래밍 시나리오에 특히 필요 하지 않습니다.
-

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -19,36 +19,35 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 592d135ccf66f8a9fde2cc064a51dc25617cf127
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b150288c113b1aebf92abedbd6f7eabd0b4b7d24
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE 및 INSERT 문
 SQL 기반 응용 프로그램을 실행 하 여 테이블에 변경 내용을 확인는 **업데이트**, **삭제**, 및 **삽입** 문. 이러한 문은 최소 SQL 문법의 규칙 수준과의 일부 이며 모든 드라이버 및 데이터 원본에서 지원 되어야 합니다.  
   
  이러한 문의 구문은 다음과 같습니다.  
   
- **업데이트***테이블 이름*   
+ **UPDATE**  *table-name*  
   
- **설정** *열 식별자*  **=**  {*식* &#124; **NULL**}  
+ **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**,** *열 식별자*  **=**  {*식* &#124; **NULL**}]...  
+ [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
   
- [**여기서** *검색 조건*]  
+ [**WHERE** *search-condition*]  
   
- **DELETE FROM** *테이블 이름*[**여기서** *검색 조건*]  
+ **DELETE FROM** *table-name*[**WHERE** *search-condition*]  
   
- **INSERT INTO** *테이블 이름*[**(***열 식별자* [**,** *열 식별자*] ... **)**]  
+ **INSERT INTO** *table-name*[**(***column-identifier* [**,** *column-identifier*]...**)**]  
   
- {*쿼리 사양* &#124; **값 (***삽입 값* [**,** *삽입 값*]... **)**}  
+ {*쿼리 사양* &#124;  **값 (* * * 삽입 값* [* *,** *삽입 값*]... **)**}  
   
  *쿼리 사양* 요소는 핵심 및 확장 SQL 문법을 지정 하 고 있는 경우에 유효는 *식* 및 *검색 조건* 요소 정하여 핵심 및 확장 SQL 문법에 복잡 한 합니다.  
   
@@ -59,4 +58,3 @@ INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)
 ```  
   
  매개 변수 값 배열을 전달 하 여 이러한 효율성을 늘릴 수 있습니다. 문 매개 변수 및 매개 변수 값의 배열에 대 한 자세한 내용은 참조 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)합니다.
-

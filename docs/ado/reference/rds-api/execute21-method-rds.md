@@ -3,7 +3,7 @@ title: "Execute21 메서드 (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fd79bbbd0ccce5e5e2f2bef181ba958c76f6afb5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3a985a6bb9d9e50a3a6d6741a8f379abafc26af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute21-method-rds"></a>Execute21 메서드 (RDS)
 요청을 실행 하 고 ADO 2.1에서에서 사용 하기 위해 ADO 레코드 집합을 만듭니다.  
@@ -42,13 +41,13 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *연결 문자열*  
+ *ConnectionString*  
  실행에는 요청을 보낼 위치 OLE DB 공급자에 연결 하는 데 사용 하는 문자열입니다. 처리기를 사용 하 여 지정 된 경우 *HandlerString*, 편집 하거나 연결 문자열을 바꿀 수 있습니다.  
   
  *HandlerString*  
  문자열이이 실행에서 사용 되는 처리기를 식별 합니다. 문자열에는 두 부분 포함 되어 있습니다. 첫 번째 부분은 사용할 처리기의 이름 (ProgID)을 포함 합니다. 두 번째 부분 문자열의 처리기에 전달 될 인수를 포함 합니다. 인수 문자열 해석 되는 방식을 특정 처리기입니다. 두 부분 (하지만 인수 문자열 추가 쉼표를 포함할 수 있음) 첫 번째 인스턴스의 문자열의 쉼표로 구분 됩니다. 인수는 선택적입니다.  
   
- *쿼리 문자열*  
+ *QueryString*  
  연결 문자열에 식별 되는 OLE DB 공급자에서 지 원하는 명령 언어에 사용 되는 명령입니다. SQL 기반 공급자에 대 한 포함 될 수 있습니다는 [!INCLUDE[tsql](../../../includes/tsql_md.md)] 명령 문 하지만 비 SQL 공급자 (예를 들어 MSDataShape)에 대 한이 아닐 수 있습니다는 [!INCLUDE[tsql](../../../includes/tsql_md.md)] 쿼리 문입니다.  
   
  또한 경우 사용 되는 처리기 (좋습니다 처리기를 사용할 수), 처리기 하거나 변경할 수 여기에서 지정 된 값을 대체 합니다. 예를 들어 처리기 대체 일반적으로 *QueryString* .ini 파일에서 쿼리 문자열을 사용 합니다. Msdfmap.ini 파일은 기본적으로 사용 됩니다.  
@@ -85,6 +84,5 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
   
 ## <a name="applies-to"></a>적용 대상  
  [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

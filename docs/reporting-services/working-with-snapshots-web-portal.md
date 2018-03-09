@@ -1,33 +1,33 @@
 ---
-title: "스냅샷 (웹 포털) 작업 | Microsoft Docs"
+title: "스냅샷 사용(웹 포털) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 51abaf6facdb6c9dbb9ed360d371057a0274de3f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="working-with-snapshots-web-portal"></a>스냅숏 사용(웹 포털)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-선택 하 여 보고서에 대 한 스냅숏을 만듭니다를 제어할 수는 **줄임표 (...)**  보고서 선택 **관리** 선택 하 고 **캐싱** 또는 **기록 스냅숏**합니다.  
+보고서에 대한 스냅숏을 만든 경우 보고서의 **줄임표(...)** , **관리** 를 선택하고 **캐싱** 또는 **기록 스냅숏**을 선택하여 제어할 수 있습니다.  
   
 > [!NOTE]
 > SQL Server 에이전트 서비스를 시작해야 합니다.  
@@ -81,8 +81,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>다음 단계
 
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
-[페이지가 매겨진된 보고서 작업](working-with-paginated-reports-web-portal.md)  
+[페이지를 매긴 보고서 사용](working-with-paginated-reports-web-portal.md)  
 [공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

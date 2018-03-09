@@ -3,7 +3,7 @@ title: "Cellset 개체 속성, 메서드 및 이벤트 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,21 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - Cellset object [ADO MD], members
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 76687d99e803c4858d11c495e911ba18881b4b64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52dd2ddc0669666d2f574ad65fdb8534663c59c0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Cellset 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
- [ActiveConnection 속성](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)  
+ [ActiveConnection Property](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)  
   
  [Axes 컬렉션](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
   
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
-

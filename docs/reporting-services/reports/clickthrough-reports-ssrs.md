@@ -1,13 +1,14 @@
 ---
-title: "클릭 광고 보고서 (SSRS) | Microsoft Docs"
+title: "클릭 방문 보고서(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-caps.latest.revision: 28
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "28"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 55d22d2fd64faef6e913bf226c831546d71665ca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ff805dbe62b75603d90dead84c4e25ca08c08236
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="clickthrough-reports-ssrs"></a>클릭 광고 보고서(SSRS)
   클릭 광고 보고서는 주 보고서 내에 포함되어 있는 데이터에 대한 세부 정보를 제공하는 보고서입니다. 클릭 광고 보고서는 사용자가 주 보고서에 나타나는 대화형 데이터를 클릭할 때 표시됩니다. 이러한 보고서는 보고서 서버에 의해 자동으로 생성됩니다. 모델 디자이너는 보고서 모델의 엔터티에 할당하는 **DefaultDetailAttribute** 및 **DefaultAggregateAttribute** 속성을 설정하여 클릭 광고 보고서에 표시될 내용을 결정합니다.  
@@ -39,12 +39,12 @@ ms.lasthandoff: 08/09/2017
 #### <a name="single-instance-templates"></a>단일 인스턴스 템플릿  
  단일 인스턴스 템플릿은 대상 엔터티의 모든 특성 및 대상 엔터티를 기준으로 일 대 다 관계에 있는 관련 엔터티에 대해 지정되는 모든 기본 집계 특성을 표시합니다. 단일 인스턴스 템플릿은 다음 이미지와 비슷합니다.  
   
- ![다 대 일 클릭 광고 보고서입니다. ] (../../reporting-services/reports/media/manytooneclickthrough.gif "다 대 일 클릭 광고 보고서.")  
+ ![다 대 일 클릭 방문 보고서](../../reporting-services/reports/media/manytooneclickthrough.gif "다 대 일 클릭 방문 보고서")  
   
 #### <a name="multiple-instance-templates"></a>여러 인스턴스 템플릿  
  여러 인스턴스 템플릿은 대상 엔터티의 기본 세부 특성 및 대상 엔터티를 기준으로 일 대 다 관계에 있는 관련 엔터티에 대해 지정되는 모든 기본 집계 특성만 표시합니다. 여러 인스턴스 템플릿은 다음 이미지와 비슷합니다.  
   
- ![다 대 일 클릭 광고 보고서입니다. ] (../../reporting-services/reports/media/onetomanyclickthrough.gif "다 대 일 클릭 광고 보고서.")  
+ ![다 대 일 클릭 방문 보고서](../../reporting-services/reports/media/onetomanyclickthrough.gif "다 대 일 클릭 방문 보고서")  
   
 ## <a name="customizing-clickthrough-reports"></a>클릭 광고 보고서 사용자 지정  
  보고서 서버가 생성하는 기본 템플릿을 사용하는 대신 보고서 작성기에서 보고서를 만들어 사용자 지정된 클릭 광고 보고서로 사용할 수 있습니다. 그런 다음 보고서 관리자에서 이 보고서를 드릴스루 보고서로 모델에 연결할 수 있습니다.  
@@ -54,8 +54,7 @@ ms.lasthandoff: 08/09/2017
 > [!IMPORTANT]  
 >  보고서에서 사용되는 기본 엔터티는 보고서를 연결하는 엔터티와 동일한 엔터티여야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서를 클릭 광고 보고서로 모델에 연결](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   
-

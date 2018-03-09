@@ -3,7 +3,7 @@ title: CommandTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,24 +18,23 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 11150cb69914cf5438d46cc15238b38465ddfa30
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc2cd3acc56c11bdab98d58c1adc76d98eb1579d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 명령 인수를 해석 하는 방법을 지정 합니다.  
   
  사용자가 제공한 유효성을 검사 해야 *CommandString* 을 방지 하기 위해 응용 프로그램 사용자 기회를 실행 하도록 ADO에 대 한 잠재적으로 위험한 명령을 삽입 하는 값입니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|명령 유형 인수를 지정 하지 않습니다.|  
 |**adCmdText**|1.|평가 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 명령 또는 저장된 프로시저의 텍스트 정의 호출 합니다.|  
@@ -46,7 +45,7 @@ ms.lasthandoff: 09/09/2017
 |**adCmdTableDirect**|512|평가 **CommandText** 는 테이블 이름과 열이 있는 모두 반환 합니다. 함께 사용할 **Recordset.Open** 또는 **Requery** 만 합니다. 사용 하는 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드는 **레코드 집합** 으로 열어야 **adCmdTableDirect**합니다.<br /><br /> 이 값을 함께 사용할 수는 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 값 **adAsyncExecute**합니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/09/2017
 |[CommandType 속성(ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Execute 메서드(ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[Execute 메서드(ADO 연결)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Open 메서드(ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
 |[Requery 메서드](../../../ado/reference/ado-api/requery-method.md)||
-

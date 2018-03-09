@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 997f393918f0800cad1858df142e909d3a59348d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4ea8bfe361b01ebebbbdd3a794187f4d2983c55b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-packages"></a>패키지 저장
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 만든 패키지를 파일 시스템에 XML 파일(.dtsx 파일)로 저장합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 msdb 데이터베이스나 패키지 저장소에 패키지 XML 파일의 복사본을 저장할 수도 있습니다. 패키지 저장소는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에서 관리하는 파일 시스템 위치에 있는 폴더를 나타냅니다.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 09/26/2017
     >  속성 창에서 패키지가 저장된 경로와 파일 이름을 확인할 수 있습니다.  
 
 ## <a name="save-a-copy-of-a-package"></a>패키지의 복사본 저장
-  이 섹션에서는 파일 시스템, 패키지 저장소 또는 패키지의 복사본을 저장 하는 방법을 설명는 **msdb** 여기에 데이터베이스 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 패키지 복사본의 저장 위치를 지정할 때 패키지 이름을 업데이트할 수도 있습니다.  
+  이 섹션에서는 패키지 복사본을 파일 시스템, 패키지 저장소 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 **msdb** 데이터베이스에 저장하는 방법에 대해 설명합니다. 패키지 복사본의 저장 위치를 지정할 때 패키지 이름을 업데이트할 수도 있습니다.  
   
  패키지 저장소에는 **msdb** 데이터베이스와 파일 시스템의 폴더가 모두 포함될 수도 있고, **msdb**또는 파일 시스템의 폴더 중 하나만 포함될 수도 있습니다. **msdb**에서 패키지는 **sysssispackages** 테이블에 저장됩니다. 이 테이블에는 패키지가 속한 논리적 폴더를 식별하는 **folderid** 열이 있습니다. 논리적 폴더를 사용하면 파일 시스템의 폴더를 통해 파일 시스템에 저장된 패키지를 그룹화할 수 있는 것과 동일한 방식으로 **msdb** 에 저장된 패키지를 그룹화할 수 있습니다. **msdb** 의 **sysssispackagefolders** 테이블에 있는 행은 폴더를 정의합니다.  
   
@@ -64,7 +63,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  솔루션 탐색기에서 복사본을 저장하려는 패키지를 두 번 클릭합니다.  
   
-2.  에 **파일** 메뉴를 클릭 **의 복사본 저장 \<패키지 파일 >으로**합니다.  
+2.  **파일** 메뉴에서 **다른 이름으로 \<패키지 파일>의 복사본 저장**을 클릭합니다.  
   
 3.  **패키지 복사본 저장** 대화 상자의 **패키지 위치** 목록에서 패키지 위치를 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
     -   SQL Server
@@ -94,7 +93,7 @@ ms.lasthandoff: 09/26/2017
 9. **확인**을 클릭합니다.  
 
 ## <a name="save-a-package-as-a-package-template"></a>패키지 템플릿으로 패키지 저장
- 이 섹션에 지정 하 고에서 새 Integration Services 패키지를 만들 때 사용자 지정 패키지를 템플릿으로 사용 하는 방법에 설명 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 새 패키지를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 때 빈 패키지를 만드는 패키지 템플릿을 사용합니다. 이러한 기본 템플릿은 바꿀 수 없지만 새 템플릿을 추가할 수는 있습니다.  
+ 이 섹션에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 새 Integration Services 패키지를 만들 때 사용자 지정 패키지를 템플릿으로 지정하고 사용하는 방법에 대해 설명합니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 새 패키지를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 때 빈 패키지를 만드는 패키지 템플릿을 사용합니다. 이러한 기본 템플릿은 바꿀 수 없지만 새 템플릿을 추가할 수는 있습니다.  
   
  여러 개의 패키지를 템플릿으로 지정하여 사용할 수 있습니다. 사용자 지정 패키지를 템플릿으로 구현하려면 먼저 패키지를 만들어야 합니다.  
   
@@ -114,9 +113,8 @@ ms.lasthandoff: 09/26/2017
   
 2.  솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **새 항목**을 클릭합니다.  
   
-3.  에 **새 항목 추가-\<프로젝트 이름 >** 대화 상자에서 패키지를 템플릿으로 사용 하려면를 클릭 합니다.  
+3.  **새 항목 추가 -\<프로젝트 이름>** 대화 상자에서 템플릿으로 사용할 패키지를 클릭합니다.  
   
      템플릿 목록에 새 SSIS 패키지라는 기본 패키지 템플릿이 포함됩니다. 패키지 아이콘을 통해 패키지 템플릿으로 사용할 수 있는 템플릿을 식별할 수 있습니다.  
   
 4.  **추가**를 클릭합니다.  
-

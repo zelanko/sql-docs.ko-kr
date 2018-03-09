@@ -2,27 +2,30 @@
 title: "쿼리 편집기 화면 크기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 635c2845-93c5-4c7f-8f33-ea848ca48b7c
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d265d008c019ccc03aed0a212bf632962d04ab2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eaf3eef790009a62035c4ea284a047b793eaf783
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-3---maximizing-query-editor"></a>2-3단원 - 쿼리 편집기 화면 크기
-프로그래머가 자주 제기하는 "코드를 쓸 공간을 더 확보하려면 어떻게 합니까?"라는 질문에 대해 두 가지 간단한 방법이 있다고 대답할 수 있습니다. 쿼리 편집기 창을 최대화하고 사용하지 않는 도구 창을 숨기면 됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 프로그래머가 자주 제기하는 "코드를 쓸 공간을 더 확보하려면 어떻게 합니까?"라는 질문에 대해 두 가지 간단한 방법이 있다고 대답할 수 있습니다. 쿼리 편집기 창을 최대화하고 사용하지 않는 도구 창을 숨기면 됩니다.  
   
 ## <a name="maximizing-the-query-editor-window"></a>쿼리 편집기 창 최대화  
   

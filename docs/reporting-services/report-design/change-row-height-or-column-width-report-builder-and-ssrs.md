@@ -1,27 +1,27 @@
 ---
-title: "행 높이 또는 열 너비 (보고서 작성기 및 SSRS) 변경 | Microsoft Docs"
+title: "행 높이 또는 열 너비 변경(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 6f36396d8db92285c7ba5ec841867098f549a9ee
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>행 높이 또는 열 너비 변경(보고서 작성기 및 SSRS)
   행 높이를 설정하면 렌더링되는 보고서의 최대 행 높이가 지정됩니다. 하지만 기본적으로 행의 입력란은 런타임에 행의 데이터 크기에 맞게 세로로 늘어나도록 설정되어 있으므로 행 높이가 지정한 높이를 초과할 수 있습니다. 고정 행 높이를 설정하려면 입력란 속성을 변경하여 입력란이 자동으로 늘어나지 않도록 해야 합니다.  
@@ -45,11 +45,11 @@ ms.lasthandoff: 09/27/2017
   
 1.  디자인 뷰에서 테이블 행의 셀을 클릭합니다.  
   
-     ![테이블에서 셀을 선택한](../../reporting-services/report-design/media/table-selectcell.png "테이블의 셀 선택")  
+     ![테이블에서 선택한 셀](../../reporting-services/report-design/media/table-selectcell.png "테이블에서 선택한 셀")  
   
 2.  표시되는 **속성** 창에서 **높이** 속성을 수정한 다음 **속성** 창 외부 아무 곳이나 클릭합니다.  
   
-     ![선택한 테이블 셀에 대 한 속성 창](../../reporting-services/report-design/media/cell-propertiespane.png "선택한 테이블 셀에 대 한 속성 창")  
+     ![선택한 테이블 셀의 속성 창](../../reporting-services/report-design/media/cell-propertiespane.png "선택한 테이블 셀의 속성 창")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>행 높이가 자동으로 늘어나지 않도록 하려면  
   
@@ -70,13 +70,12 @@ ms.lasthandoff: 09/27/2017
   
 3.  열의 가장자리를 클릭한 상태로 왼쪽 또는 오른쪽으로 이동하여 열 너비를 조정합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [테이블 릭 스 데이터 영역 (보고서 작성기 및 SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
- [테이블 릭 스 데이터 영역 셀, 행 및 열 (보고서 작성기) 및 SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [테이블 (보고서 작성기 및 SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [행렬 (보고서 작성기 및 SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
- [목록 (보고서 작성기 및 SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 (보고서 작성기 및 SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>참고 항목  
+ [테이블릭스 데이터 영역(보고서 작성기 및 SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
+ [테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [테이블(보고서 작성기 및 SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [행렬(보고서 작성기 및 SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
+ [목록(보고서 작성기 및 SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록(보고서 작성기 및 SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

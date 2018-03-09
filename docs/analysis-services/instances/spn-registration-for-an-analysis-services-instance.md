@@ -2,33 +2,30 @@
 title: "Analysis Services 인스턴스에 대 한 SPN 등록 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d0d90aea6725bd45cded022791699cf910b7bdd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Analysis Services 인스턴스에 대한 SPN 등록
-  SPN(서비스 사용자 이름)은 Kerberos가 클라이언트 및 서비스 ID를 상호 인증하는 데 사용되는 Active Directory 도메인의 서비스 인스턴스를 고유하게 식별합니다. SPN은 서비스 인스턴스가 실행되는 로그온 계정과 연결되어 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+SPN(서비스 사용자 이름)은 Kerberos가 클라이언트 및 서비스 ID를 상호 인증하는 데 사용되는 Active Directory 도메인의 서비스 인스턴스를 고유하게 식별합니다. SPN은 서비스 인스턴스가 실행되는 로그온 계정과 연결되어 있습니다.  
   
  Kerberos  인증을 통해 Analysis  Services에 연결하는 클라이언트 응용 프로그램의 경우 Analysis  Services  클라이언트 라이브러리는 지정된 Analysis  Services  릴리스에서 고정된 잘 알려진 변수(예:  서비스 클래스)  및 연결 문자열의 호스트 이름을 사용하여 SPN을 생성합니다.  
   
@@ -175,15 +172,14 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
 ## <a name="see-also"></a>관련 항목:  
  [Microsoft BI 인증 및 Id 위임](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Kerberos를 사용한 상호 인증](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Kerberos 인증을 사용 하도록 SQL Server 2008 Analysis Services 및 SQL Server 2005 Analysis Services를 구성 하는 방법](http://support.microsoft.com/kb/917409)   
- [서비스 사용자 이름 (Spn) SetSPN 구문 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [어떤 SPN을 사용 하 고 어떻게 합니까?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Kerberos  인증을 사용하도록 SQL  Server  2008  Analysis  Services  및 SQL  Server  2005  Analysis  Services를 구성하는 방법](http://support.microsoft.com/kb/917409)   
+ [서비스 사용자 이름(SPN) SetSPN 구문(Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [어떤 SPN을 어떻게 사용합니까?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [서비스 계정 단계별 가이드](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [인터넷 정보 서비스에서 호스팅되는 웹 응용 프로그램을 구성할 때 Spn을 사용 하는 방법](http://support.microsoft.com/kb/929650)   
+ [IIS(Internet Information Services)에서 호스팅되는 웹 응용 프로그램을 구성할 때 SPN을 사용하는 방법](http://support.microsoft.com/kb/929650)   
  [서비스 계정의 새로운 기능](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [SharePoint 2010 제품 (백서)에 대 한 Kerberos 인증 구성](http://technet.microsoft.com/library/ff829837.aspx)  
+ [SharePoint 2010 제품에 대한 Kerberos 인증 구성(백서)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   
-

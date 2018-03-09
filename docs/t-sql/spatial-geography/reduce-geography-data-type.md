@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c5b174f3f4b8daf99c402b110ba10d95345783d7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a4ac2e0f44ee4d6361f0f91c47f4472de7c23756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.lasthandoff: 09/01/2017
 |||  
 |-|-|  
 |용어|정의|  
-|*허용 오차*|형식의 값은 **float**합니다. *허용 오차* 는를 Douglas-peucker 알고리즘에 입력할 허용 오차입니다. *허용 오차* 는 양수 여야 합니다.|  
+|*tolerance*|형식의 값은 **float**합니다. *허용 오차* 는를 Douglas-peucker 알고리즘에 입력할 허용 오차입니다. *허용 오차* 는 양수 여야 합니다.|  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
@@ -80,7 +79,6 @@ SELECT @g.Reduce(10000).ToString()
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [Geography 인스턴스의 확장된 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+ [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

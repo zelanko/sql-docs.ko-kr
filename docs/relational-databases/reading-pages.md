@@ -3,26 +3,31 @@ title: "페이지 읽기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: server-general
+ms.suite: sql
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: pages
+helpviewer_keywords:
+- pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78c1979ae1334e1c7586c2068a7495abbe8ce7b6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1561e7c3cea406881dc9722f26a4dfa4cefe0310
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="reading-pages"></a>페이지 읽기
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스의 I/O에는 논리적 읽기 수 및 물리적 읽기 수가 포함되어 있습니다. 논리적 읽기는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 [버퍼 캐시](../relational-databases/memory-management-architecture-guide.md)에서 페이지를 요청할 때마다 발생합니다. 페이지가 현재 버퍼 캐시에 없는 경우 물리적 읽기가 먼저 디스크의 페이지를 캐시로 복사합니다.
 
@@ -56,6 +61,6 @@ SQL Server Enterprise의 고급 검색 기능을 사용하여 여러 태스크�
 
 고급 검색을 사용하지 않는 경우 각 사용자는 버퍼 공간을 최대한 사용하려고 하며 이로 인해 디스크 충돌 경합이 발생합니다. 그러면 같은 페이지를 여러 사용자가 한 번에 읽고 공유하는 대신 각 사용자가 한 번씩 읽게 되므로 성능이 저하되고 리소스 처리 시간이 소모됩니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [페이지 및 익스텐트 아키텍처 가이드](../relational-databases/pages-and-extents-architecture-guide.md)   
  [페이지 쓰기](../relational-databases/writing-pages.md)

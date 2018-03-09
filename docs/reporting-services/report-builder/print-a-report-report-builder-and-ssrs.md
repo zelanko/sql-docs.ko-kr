@@ -1,33 +1,34 @@
 ---
-title: "(보고서 작성기 및 SSRS) 보고서를 인쇄 | Microsoft Docs"
+title: "보고서 인쇄(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: fc47aa9bb4a584849f2779116767637d83142b17
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)
-  보고서 서버에 보고서를 저장 한 후 볼 수 있으며 사용 하면 내보낸된 보고서를 볼 수 있는 모든 응용 프로그램, Reporting Services 웹 포털 또는 브라우저에서 보고서를 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
+  보고서 서버에 보고서를 저장한 후에는 브라우저, Reporting Services 웹 포털 또는 내보낸 보고서를 보는 데 사용되는 응용 프로그램에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
   
  보고서를 인쇄할 때 사용할 용지 크기를 지정할 수 있습니다. 용지 크기에 따라 보고서의 페이지 수와 각 페이지에 맞는 보고서 데이터가 결정됩니다. 용지 크기는 PDF, 이미지 및 인쇄 하드 페이지 나누기 렌더러로 렌더링되는 보고서에만 적용됩니다. 용지 크기 설정 작업은 다른 렌더러에 영향을 주지 않습니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
   
- 보고서 뷰어 도구 모음에서 Reporting Services 웹 포털에서 또는 미리 보기 보고서 작성기에서 보고서를 하드 페이지 나누기 렌더러로 내보낼 수도 있고 보고서의 복사본을 인쇄 하려면 인쇄 단추를 클릭 수 있습니다. 용지 크기 또는 다른 페이지 설정 속성을 지정해야 할 수 있습니다. 용지 크기를 비롯한 페이지 설정 속성을 변경하려면 **보고서 속성** 대화 상자를 사용합니다.  
+ Reporting Services 웹 포털의 보고서 뷰어 도구 모음 또는 보고서 작성기의 미리 보기에서 보고서를 하드 페이지 나누기 렌더러로 내보내거나 인쇄 단추를 클릭하여 보고서의 복사본을 인쇄할 수 있습니다. 용지 크기 또는 다른 페이지 설정 속성을 지정해야 할 수 있습니다. 용지 크기를 비롯한 페이지 설정 속성을 변경하려면 **보고서 속성** 대화 상자를 사용합니다.  
   
  인쇄 페이지 여백은 디자인 모드와 실행 모드에서 지정할 수 있습니다.  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  인쇄 여백은 디자인 모드나 실행 모드에서 표시되지 않습니다. 보고서의 디자인 화면 영역과 인쇄 영역 간에는 어떠한 관계도 없습니다. 실행 모드에서 인쇄 여백을 확인하려면 리본 메뉴의 **실행** 탭에서 인쇄 레이아웃을 클릭합니다.  
   
- 보고서 페이지 매김에 대 한 자세한 내용은 참조 하십시오. [Reporting services&#40;의 페이지 매김 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ 보고서 페이지 매김에 대한 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -62,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-print-a-report-from-a-web-browser-application"></a>웹 브라우저 응용 프로그램에서 보고서를 인쇄하려면  
   
-1.  Reporting Services 웹 포털에서 인쇄할 보고서로 이동 합니다. 보고서를 엽니다.  
+1.  Reporting Services 웹 포털에서 인쇄하려는 보고서로 이동합니다. 보고서를 엽니다.  
   
 3.  보고서 맨 위의 도구 모음에서 **인쇄**를 클릭합니다.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-print-a-report-from-other-applications"></a>다른 응용 프로그램에서 보고서를 인쇄하려면  
   
-1.  Reporting Services 웹 포털에서 인쇄할 보고서로 이동 합니다. 보고서를 엽니다.  
+1.  Reporting Services 웹 포털에서 인쇄하려는 보고서로 이동합니다. 보고서를 엽니다.  
   
 2.  보고서 맨 위의 도구 모음에서 렌더링 형식을 선택하고 **내보내기**를 클릭합니다. 렌더링 형식에 맞는 뷰어 응용 프로그램에서 보고서가 열립니다.  
   
@@ -98,10 +99,10 @@ ms.lasthandoff: 08/09/2017
   
 -   **실행** 탭에서 **페이지 설정** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [보고서 속성 대화 상자, 페이지 설정 &#40; 보고서 작성기 &#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [보고서 속성 대화 상자, 페이지 설정&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

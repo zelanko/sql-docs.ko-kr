@@ -2,34 +2,29 @@
 title: "호출 ProcessASDatabase | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 73155507a34f955d390bfb86f160755753ee7763
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8e83493ed934a3f9bf32a1cef35969f04996223
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  기본 메타데이터 유형에 따라 특정 **ProcessType** 또는 **RefreshType** 으로 지정된 **Database** 에서 **Process** 연산을 수행합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]수행 하는 **프로세스** 연산이 지정된 된 **데이터베이스** 특정 **ProcessType** 또는 **RefreshType** 에 따라는 내부 메타 데이터 형식입니다.  
   
  다차원 메타데이터를 데이터베이스의 **ProcessType** 에 사용합니다.(여기에는 호환성 수준이 1050, 1100 또는 1103인 테이블 형식 데이터베이스가 포함됩니다.)  
   
@@ -82,7 +77,7 @@ ms.lasthandoff: 09/01/2017
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1.|  
+|위치|1|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
@@ -93,7 +88,7 @@ ms.lasthandoff: 09/01/2017
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1.|  
+|위치|1|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
@@ -164,4 +159,3 @@ PS  SQL Server >  Invoke-ProcessASDatabase -databasename "AdventureWorks" -serve
   
   
   
-

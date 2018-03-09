@@ -2,27 +2,28 @@
 title: "Python 컴퓨터 학습 services (In-database) 무인된 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: r-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Python 컴퓨터 학습 services (In-database) 무인된 설치
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 항목에서는 컴퓨터 학습 서비스 및 자동 모드를 사용 하 여 Python을 사용 하 여 SQL Server 데이터베이스 엔진을 설치 하려면 SQL Server 2017 설치 프로그램에서 명령줄 인수를 사용 하는 방법에 설명 합니다.
 
@@ -74,4 +75,3 @@ ms.lasthandoff: 09/01/2017
 3.  다시 구성 된 인스턴스에 대 한 SQL Server 서비스를 다시 시작 합니다. 이렇게 자동으로 다시 관련 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 서비스 뿐입니다.
 
 3. 사용자 지정 보안 구성이 있거나 SQL Server를 사용하여 원격 계산 컨텍스트를 지원할 경우 추가 단계가 필요할 수 있습니다. 자세한 내용은 참조 [컴퓨터 학습 설치 문제 해결](../machine-learning-troubleshooting-faq.md)합니다.
-

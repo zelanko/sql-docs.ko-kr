@@ -20,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: feaa401cfd6e2077035d164412941392412011ae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: bb70f24c521fd5f0325ecbb718e7d76aa43f935d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +46,12 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>인수  
- *거리*  
+ *distance*  
  한 **float** 거리를 지정 하는 식의 **geography** 인스턴스와의 버퍼를 계산할 합니다.  
   
  버퍼의 최대 거리는 0.999를 초과할 수 없습니다 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 지구 둘레의 1/2) 또는 전체 구형입니다.  
   
- *허용 오차*  
+ *tolerance*  
  이 **float** 버퍼 거리의 허용 오차를 지정 하는 식입니다.  
   
  *허용 오차* 값은 반환된 된 선형 근사값에 대 한 이상적인 버퍼 거리의 최대 편차를 나타냅니다.  
@@ -61,7 +60,7 @@ ms.lasthandoff: 09/01/2017
   
  최소 제한은 거리의 0.1%이며, 이보다 작은 허용 오차는 최소 제한으로 올림됩니다.  
   
- *상대*  
+ *relative*  
  **비트** 지정 여부는 *허용 오차* 상대 또는 절대 값이 합니다. 경우 '값은 TRUE' 또는 1 인 경우 허용 오차는 상대적 이며의 곱으로 계산 되는 *허용 오차* 매개 변수와 각 범위 \* 타원 면의 반지름입니다. 'FALSE' 또는 0 허용 오차는 절대적 하는 경우 및 *허용 오차* 값은 반환된 된 선형 근사값에 대 한 이상적인 버퍼 거리의 최대 절대 편차입니다.  
   
 ## <a name="return-types"></a>반환 형식  
@@ -93,7 +92,6 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
   
 ## <a name="see-also"></a>관련 항목:  
  [Stbuffer&#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
- [Geography 인스턴스의 확장된 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+ [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

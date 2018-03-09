@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLInstallTranslatorEx
-apilocation:
-- sqlsrv32.dll
+apiname: SQLInstallTranslatorEx
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLInstallTranslatorEx
-helpviewer_keywords:
-- SQLInstallTranslatorEx function [ODBC]
+f1_keywords: SQLInstallTranslatorEx
+helpviewer_keywords: SQLInstallTranslatorEx function [ODBC]
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 220d3e6b0cc62c2d3d238332975c32e9c38bc030
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 241cb92786626bfc4674426c67f099f4349a6cb4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 함수
 **규칙**  
@@ -95,7 +89,7 @@ BOOL SQLInstallTranslatorEx(
 ## <a name="diagnostics"></a>진단  
  때 **SQLInstallTranslatorEx** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*lpszPathOut* 인수 출력 경로 포함할 수 없습니다. 버퍼의 잘린된 경로 포함합니다.<br /><br /> *cbPathOutMax* 되었습니다. 0, 인수 및 *문제점과* ODBC_INSTALL_COMPLETE 되었습니다.|  
@@ -105,7 +99,7 @@ BOOL SQLInstallTranslatorEx(
 |ODBC_ERROR_INVALID_PARAM_SEQUENCE|잘못 된 매개 변수 순서|*lpszTranslator* 인수 키워드-값 쌍의 목록이 없습니다.|  
 |ODBC_ERROR_USAGE_UPDATE_FAILED|증가 하거나 레지스트리의 구성 요소 사용 횟수를 감소 시킬 수 없습니다.|설치 관리자는 변환기 사용 횟수를 증가 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLInstallTranslatorEx** 변환기만 설치 하는 메커니즘을 제공 합니다. 이 함수 실제로 파일을 복사 하지 않습니다. 호출 프로그램은 변환기 파일을 복사 하는 일을 담당 합니다.  
   
  **SQLInstallTranslatorEx** 설치 된 변환기에 대 한 구성 요소 사용 횟수를 1 씩 증가 합니다. 변환기의 버전이 이미 변환기에 대 한 구성 요소의 사용 횟수가 존재 하지 않는 경우 새 구성 요소 사용 개수 값을 2로 설정 됩니다.  
@@ -127,4 +121,3 @@ BOOL SQLInstallTranslatorEx(
 |기본 변환 옵션을 반환합니다.|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |변환기를 선택합니다.|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
 |변환기를 제거합니다.|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
-

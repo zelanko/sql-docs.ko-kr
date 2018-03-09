@@ -18,17 +18,16 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8418167e-cbd2-464d-b118-73cdd76080ed
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 774a382c6e026094261ec562f21e11ba80dc85fb
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c339a53bd782047db67bc58a61283ce9cd4cbe9e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="executebatch-method-sqlserverpreparedstatement"></a>executeBatch 메서드 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,9 +51,7 @@ public int[] executeBatch()
   
 ## <a name="remarks"></a>주의  
  이 executeBatch 메서드는 java.sql.Statement 인터페이스의 executeBatch 메서드에 의해 지정 됩니다.  
-  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC 드라이버 3.0은 OUT 또는 INOUT 저장된 프로시저에서 허용 하는 경우 (PreparedStatement에서 상속) CallableStatement.executeBatch 메서드를 호출이는 BatchUpdateException를 throw 합니다 JDBC 4.0 권장 사항을 준수 매개 변수 또는 업데이트 횟수가 아닌 반환 합니다.  
-  
+    
  이 메서드를 재정의 [SQLServerStatement.executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
@@ -62,4 +59,3 @@ public int[] executeBatch()
  [SQLServerPreparedStatement 클래스](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   
-

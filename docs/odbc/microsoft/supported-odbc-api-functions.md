@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC, API functions
 - ODBC SQL grammar, API functions mapped to driver (table) [ODBC]
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f898533861d389336da3aafa6f839f8a66a340a1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 01b64e71e67aa9839d858d919d3cfbdcc8f2ec75
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-odbc-api-functions"></a>지원 되는 ODBC API 함수
 평준화의 목적은 어떤 기능을 사용할 수에 드라이버에서 응용 프로그램에 알리기 위해 하는 것입니다. Microsoft ODBC 데스크톱 데이터베이스 드라이버는 모든 핵심과 수준 1 기능을 지원 합니다.  
@@ -82,4 +80,3 @@ Transact] (... / Topic/SQLTransact%20Function.md)|[액세스 권한](../../odbc/
 -   [SQLSetStmtOption(데스크톱 데이터베이스 드라이버)](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
   
 -   [SQLSpecialColumns(데스크톱 데이터베이스 드라이버)](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)
-

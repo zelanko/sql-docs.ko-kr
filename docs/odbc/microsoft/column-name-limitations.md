@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 91fe107bf25d2ec2702778475af9f366af22a120
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-name-limitations"></a>열 이름 제한 사항
 열 이름은 유효한 모든 문자 (예: 공백)을 포함할 수 있습니다. 열 이름은 문자, 숫자 및 밑줄을 제외한 모든 문자가 들어 있으면 역 따옴표 (')에 포함 하 여 이름을 구분 해야 합니다.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  파이프 문자 (&#124;) 이름을 따옴표로 백 아닌지 여부를 열 이름에 사용할 수 없습니다.  
   
  텍스트 드라이버를 사용 하면 드라이버는 열 이름을 지정 하지 않으면 기본 이름이 제공 합니다. 예를 들어 첫 번째 열 F1, F2, 두 번째 열 등에 드라이버를 호출합니다.
-

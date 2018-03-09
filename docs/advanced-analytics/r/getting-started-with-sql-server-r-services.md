@@ -3,27 +3,28 @@ title: "SQL Server 시작 기계 학습 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 12/07/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
-caps.latest.revision: 34
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: d643bbdf32b946c5342484fa531303b5b74f4bcb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea25548e0dfb3aa8a433c0fb014ad44a0f031f07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>SQL Server 시작 기계 학습
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server의 컴퓨터 학습 서비스 보안 위험이 나 데이터 unnecesarily 이동 하 여 데이터를 노출 하지 않고 데이터 과학 작업을 지원 하도록 설계 되었습니다.
 
@@ -83,7 +84,7 @@ SQL Server의 컴퓨터 학습 서비스를이 프로세스를 변경할 필요�
 
 + **RevoScaleR**.:이 R 패키지에 일부 병렬 처리 및 확장성을 제공 하도록 다시 설계 하는 가장 인기 있는 R 함수를 구현 합니다. 또한 일반적으로는 훨씬 큰 메모리와 계산력을 갖춘 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 계산을 푸시하여 성능과 확장을 더 증대하는 함수도 포함되어 있습니다.
 
-+ **revoscalepy**합니다. 분산 처리를 지 원하는 대부분의 알고리즘을이 Python 라이브러리를 새로 추가 되거나 SQL Server 2017 CTP 2.0 에서만 사용할 수 RevoScaleR의 원격 계산 컨텍스트 등 가장 인기 있는 기능을 구현.
++ **revoscalepy**. 분산 처리를 지 원하는 대부분의 알고리즘을이 Python 라이브러리를 새로 추가 되거나 SQL Server 2017 CTP 2.0 에서만 사용할 수 RevoScaleR의 원격 계산 컨텍스트 등 가장 인기 있는 기능을 구현.
 
 + 작업에 대 한 적합 한 언어를 선택 합니다.  R은 SQL을 사용 하 여 구현 하기 어려운 통계적 계산에 가장 적합 합니다. 데이터에 대해 집합 기반 작업에 대 한 성능을 활용해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 최대 성능을 얻을 수 있도록 합니다. 열에 대해 매우 빠른 계산을 위한 메모리 내 데이터베이스 엔진을 사용 합니다.
 
@@ -135,4 +136,3 @@ R 스크립트 또는 모델이 프로덕션 환경에서 사용할 준비가 �
 ## <a name="solutions"></a>솔루션
 
 자세한 예제에 대 한 업계 비롯 하 여 = 특정 솔루션 템플릿을 참조 [SQL Server 컴퓨터 학습 자습서](../tutorials/machine-learning-services-tutorials.md)합니다.
-

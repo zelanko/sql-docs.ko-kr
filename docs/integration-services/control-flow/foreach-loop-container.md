@@ -33,17 +33,16 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 73
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 21fdac9e8c4fffa0a87eee72e3587c2a3378ad66
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
   Foreach 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **Foreach** 루프 구조와 유사합니다. 패키지에서 Foreach 열거자를 사용하면 루프를 사용할 수 있습니다.  Foreach 루프 컨테이너는 지정한 열거자의 각 멤버에 대해 제어 흐름을 반복합니다.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 10/10/2017
   
 -   Foreach ADO 열거자는 테이블의 행을 열거합니다. 예를 들어 ADO 레코드 집합의 행을 가져올 수 있습니다.  
   
-     레코드 집합 대상은 **Object** 데이터 형식의 패키지 변수에 저장된 레코드 집합의 메모리에 데이터를 저장합니다. 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자에 대해 지정된 변수는 개체 데이터 형식이어야 합니다. 레코드 집합 대상에 대 한 자세한 내용은 참조 [레코드 집합 대상을 사용 하 여](../../integration-services/data-flow/use-a-recordset-destination.md)합니다.  
+     레코드 집합 대상은 **Object** 데이터 형식의 패키지 변수에 저장된 레코드 집합의 메모리에 데이터를 저장합니다. 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자에 대해 지정된 변수는 개체 데이터 형식이어야 합니다. 레코드 집합 대상에 대한 자세한 내용은 [레코드 집합 대상 사용](../../integration-services/data-flow/use-a-recordset-destination.md)을 참조하세요.  
   
 -   Foreach ADO.NET 스키마 행 집합 열거자는 데이터 원본에 대한 스키마 정보를 열거합니다. 예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블 목록을 열거하고 가져올 수 있습니다.  
   
@@ -70,11 +69,11 @@ ms.lasthandoff: 10/10/2017
   
 -   Azure 저장소의 blob 컨테이너에 blob를 열거하는 Foreach Azure Blob 열거자입니다.  
 
--   ADLS Foreach File 열거자 Azure 데이터 레이크 저장소에서 디렉터리에 파일을 열거 합니다.
+-   Azure Data Lake Store의 디렉터리에 파일을 열거하는 Foreach ADLS 파일 열거자입니다.
   
  다음 다이어그램에서는 파일 시스템 태스크가 있는 Foreach 루프 컨테이너를 보여 줍니다. Foreach 루프는 Foreach File 열거자를 사용하며 파일 시스템 태스크는 파일을 복사하도록 구성되어 있습니다. 열거자가 지정한 폴더에 4개 파일이 들어 있으면 루프가 4번 반복되어 4개 파일이 복사됩니다.  
   
- ![폴더를 열거 하는 Foreach 루프 컨테이너](../../integration-services/control-flow/media/ssis-foreachloop.gif "폴더를 열거 하는 Foreach 루프 컨테이너")  
+ ![폴더를 열거하는 Foreach 루프 컨테이너](../../integration-services/control-flow/media/ssis-foreachloop.gif "폴더를 열거하는 Foreach 루프 컨테이너")  
   
  변수 및 속성 식의 조합을 사용하여 패키지 개체의 속성을 열거자 컬렉션 값으로 업데이트할 수 있습니다. 먼저 컬렉션 값을 사용자 정의 변수에 매핑한 다음 이 변수를 사용하는 속성 식을 속성에 구현합니다. 예를 들어 Foreach File 열거자의 컬렉션 값을 **MyFile** 이라는 변수에 매핑한 다음 메일 보내기 태스크의 Subject 속성에 대한 속성 식에서 이 변수를 사용합니다. 패키지를 실행하면 루프가 반복될 때마다 Subject 속성이 파일 이름으로 업데이트됩니다. 자세한 내용은 [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.  
   
@@ -100,16 +99,16 @@ ms.lasthandoff: 10/10/2017
 |Foreach SMO|데이터베이스에 대한 연결과 열거할 SMO 개체 지정|  
 |Foreach HDFS File 열거자|열거할 폴더 및 파일, 검색된 파일의 파일 이름 형식 및 하위 폴더 포함 여부 지정|  
 |Foreach Azure Blob|컨테이너 blob을 열거할 수 있는 Azure blob 컨테이너를 지정합니다.|  
-|Foreach ADLS 파일|파일을 열거할 수 있는 Azure 데이터 레이크 저장소 디렉터리를 지정 합니다.|
+|Foreach ADLS 파일|열거할 파일을 포함하는 Azure Data Lake Store 디렉터리를 지정합니다.|
 
-## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용 하 여 제어 흐름에 열거 추가
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Foreach 루프 컨테이너를 간단 하 게 패키지의 제어 흐름에 파일 및 개체를 열거 하는 루핑 구성을 포함 하는 제어 흐름 요소를 포함 합니다. 자세한 내용은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md)을 참조하십시오.  
+## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 제어 흐름에 열거 추가
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지의 제어 흐름에 파일 및 개체를 열거하는 루핑 구성을 간단하게 포함시킬 수 있는 제어 흐름 요소인 Foreach 루프 컨테이너가 포함됩니다. 자세한 내용은 [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)를 참조하세요.  
   
- Foreach 루프 컨테이너는 특정 기능을 제공하는 것이 아니라 반복 가능한 제어 흐름을 작성하고, 열거자 유형을 지정하고, 열거자를 구성할 수 있는 구조만 제공합니다. 컨테이너 기능을 제공하려면 적어도 하나 이상의 태스크를 Foreach 루프 컨테이너에 포함시켜야 합니다. 자세한 내용은 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)를 참조하세요.  
+ Foreach 루프 컨테이너는 특정 기능을 제공하는 것이 아니라 반복 가능한 제어 흐름을 작성하고, 열거자 유형을 지정하고, 열거자를 구성할 수 있는 구조만 제공합니다. 컨테이너 기능을 제공하려면 적어도 하나 이상의 태스크를 Foreach 루프 컨테이너에 포함시켜야 합니다. 자세한 내용은 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)을(를) 참조하세요.  
   
  Foreach 루프 컨테이너에는 여러 태스크가 포함된 제어 흐름과 다른 컨테이너가 포함될 수 있습니다. Foreach 루프 컨테이너에 태스크 및 컨테이너를 추가하는 방법은 패키지에 추가하는 방법과 비슷하며, 태스크 및 컨테이너를 패키지가 아닌 Foreach 루프 컨테이너로 끌어 온다는 점만 다릅니다. Foreach 루프 컨테이너에 두 개 이상의 태스크 또는 컨테이너가 포함된 경우 패키지에서와 같은 방식으로 선행 제약 조건을 사용하여 이를 연결할 수 있습니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을(를) 참조하세요.  
   
-### <a name="add-and-configure-a-foreach-loop-container"></a>추가 하 고 Foreach 루프 컨테이너 구성
+### <a name="add-and-configure-a-foreach-loop-container"></a>Foreach 루프 컨테이너 추가 및 구성
   
 1.  패키지에 Foreach 루프 컨테이너를 추가합니다. 자세한 내용은 [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)를 참조하세요.  
   
@@ -132,7 +131,7 @@ ms.lasthandoff: 10/10/2017
   
 5.  열거자를 지정하고 열거자 옵션을 다음과 같이 설정합니다.  
   
-    -   Foreach File 열거자를 사용 하려면 파일을 열거, 파일 이름 및 형식에 대 한 필터를 지정 하 고, 정규화 된 파일 이름을 반환할지 여부를 지정 합니다. 포함 된 폴더를 제공 합니다. 또한 하위 폴더의 파일에 대해서도 동일 작업을 반복할지 여부를 나타냅니다.  
+    -   Foreach File 열거자를 사용하려면 열거할 파일이 들어 있는 폴더를 제공하고, 파일 이름 및 유형에 대한 필터를 지정하고, 정규화된 파일 이름을 반환할지 여부를 지정합니다. 또한 하위 폴더의 파일에 대해서도 동일 작업을 반복할지 여부를 나타냅니다.  
   
     -   Foreach Item 열거자를 사용하려면 **열**을 클릭하고 **For Each Item 열** 대화 상자에서 **추가** 를 클릭하여 열을 추가합니다. **데이터 형식** 목록에서 각 열에 대한 데이터 형식을 선택하고 **확인**을 클릭합니다.  
   
@@ -158,18 +157,18 @@ ms.lasthandoff: 10/10/2017
   
          그런 다음 EnumerationType을 클릭하고 목록에서 열거형 형식을 선택합니다. EnumerationType이 **Navigator, Node 또는 NodeText**이면 OuterXPathStringSourceType을 클릭하고 원본 유형을 선택한 다음 OuterXPathString을 클릭합니다. OuterXPathStringSourceType에 대해 설정된 값에 따라 목록에서 변수 또는 파일 연결을 선택하거나, 새 변수 또는 파일 연결을 만들거나, 외부 XPath(XML Path Language) 식에 대한 문자열을 입력합니다.  
   
-         EnumerationType 이면 **ElementCollection**, 위에서 설명한 것 처럼 OuterXPathStringSourceType 및 OuterXPathString를 설정 합니다. 그런 다음 InnerElementType을 클릭하고 내부 요소에 대한 열거형 형식을 선택한 다음 InnerXPathStringSourceType을 클릭합니다. InnerXPathStringSourceType에 대해 설정된 값에 따라 변수 또는 파일 연결을 선택하거나, 새 변수 또는 파일 연결을 만들거나, 내부 XPath 식에 대한 문자열을 입력합니다.  
+         EnumerationType이 **ElementCollection**이면 위에서 설명한 대로 OuterXPathStringSourceType 및 OuterXPathString을 설정합니다. 그런 다음 InnerElementType을 클릭하고 내부 요소에 대한 열거형 형식을 선택한 다음 InnerXPathStringSourceType을 클릭합니다. InnerXPathStringSourceType에 대해 설정된 값에 따라 변수 또는 파일 연결을 선택하거나, 새 변수 또는 파일 연결을 만들거나, 내부 XPath 식에 대한 문자열을 입력합니다.  
   
     -   Foreach SMO 열거자를 사용하려면 기존 ADO.NET 연결을 선택하거나 **연결** 목록에서 **새 연결** 을 클릭한 후 사용할 문자열을 입력하거나 **찾아보기**를 클릭합니다. **찾아보기**를 클릭한 경우 **SMO 열거 선택** 대화 상자에서 열거할 개체 유형과 열거 유형을 선택하고 **확인**을 클릭합니다.  
   
 6.  선택적으로 **컬렉션** 페이지의 **식** 입력란에서 찾아보기 단추 **(...)** 를 클릭하여 속성 값을 업데이트하는 식을 만듭니다. 자세한 내용은 [속성 식 추가 또는 변경](../../integration-services/expressions/add-or-change-a-property-expression.md)을 참조하세요.  
   
     > [!NOTE]  
-    >  에 나열 된 속성의 **속성** 목록 열거자에 따라 달라 집니다.  
+    >  **속성** 목록에 나열되는 속성은 열거자에 따라 다릅니다.  
   
-7.  필요에 따라 **변수 매핑** 컬렉션 값에 개체 속성을 매핑한 후 다음 작업을 수행 하려면:  
+7.  선택적으로 **변수 매핑**을 클릭하여 컬렉션 값에 개체 속성을 매핑한 후 다음을 수행합니다.  
   
-    1.  에 **변수** 목록에서 변수를 선택 하거나 클릭  **\<새 변수 >** 새 변수를 만듭니다.  
+    1.  **변수** 목록에서 변수를 선택하거나 **\<새 변수>**를 클릭하여 새 변수를 만듭니다.  
   
     2.  새 변수를 추가하는 경우에는 **변수 추가** 대화 상자에서 변수 속성을 설정하고 **확인**을 클릭합니다.  
   
@@ -182,23 +181,23 @@ ms.lasthandoff: 10/10/2017
   
 9. **확인**을 클릭합니다.  
 
-## <a name="general-page---foreach-loop-editor"></a>일반 페이지-Foreach 루프 편집기
+## <a name="general-page---foreach-loop-editor"></a>일반 페이지 - Foreach 루프 편집기
 **Foreach 루프 편집기** 대화 상자의 **일반** 페이지에서 지정한 열거자를 사용하여 컬렉션의 각 멤버에 대해 워크플로를 반복하는 Foreach 루프 컨테이너의 이름을 지정하고 설명할 수 있습니다.  
   
  Foreach 루프 컨테이너와 이를 구성하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md) 및 [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **이름**  
  Foreach 루프 컨테이너에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘과 로그에서 레이블로 사용됩니다.  
   
 > [!NOTE]  
 >  개체 이름은 패키지 내에서 고유해야 합니다.  
   
- **Description**  
+ **설명**  
  Foreach 루프 컨테이너에 대한 설명을 입력합니다.  
 
-## <a name="collection-page---foreach-loop-editor"></a>컬렉션 페이지-Foreach 루프 편집기
- 사용 하 여는 **컬렉션** 의 페이지는 **Foreach 루프 편집기** 열거자 유형을 지정 하 고 열거자를 구성 대화 상자.  
+## <a name="collection-page---foreach-loop-editor"></a>컬렉션 페이지 - Foreach 루프 편집기
+ **Foreach 루프 편집기** 대화 상자의 **컬렉션** 페이지를 사용하여 열거자 유형을 지정하고 열거자를 구성합니다.  
   
  Foreach 루프 컨테이너와 이를 구성하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md) 및 [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
   
@@ -206,7 +205,7 @@ ms.lasthandoff: 10/10/2017
  **Enumerator**  
  목록에서 열거자 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**Foreach File 열거자**|파일을 열거합니다. 이 값을 선택하면 아래의 **Foreach File 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**Foreach Item 열거자**|항목의 값을 열거합니다. 이 값을 선택하면 아래의 **Foreach Item 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -217,7 +216,7 @@ ms.lasthandoff: 10/10/2017
 |**Foreach SMO 열거자**|SMO 개체를 열거합니다. 이 값을 선택하면 아래의 **Foreach SMO 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**Foreach HDFS File 열거자**|지정된 HDFS 위치에 있는 HDFS 파일을 열거합니다. 이 값을 선택하면 **Foreach HDFS File 열거자**섹션에 동적 옵션이 표시됩니다.|  
 |**Foreach Azure Blob 열거자**|지정된 Blob 위치에 있는 Blob 파일을 열거합니다. 이 값을 선택하면 **Foreach Azure Blob 열거자**섹션에 동적 옵션이 표시됩니다.|  
-|**ADLS Foreach File 열거자**|지정된 된 데이터 레이크 저장소 디렉터리에서 파일을 열거 합니다. 이 값을 선택 하면 동적 옵션 섹션에 표시 됩니다 **Foreach ADLS File 열거자**합니다.|
+|**Foreach ADLS File 열거자**|지정된 Data Lake Store 디렉터리에서 파일을 열거합니다. 이 값을 선택하면 **Foreach ADLS File 열거자**섹션에 동적 옵션이 표시됩니다.|
   
  **식**  
  기존 속성 식 목록을 보려면 **식** 을 클릭 또는 확장합니다. 줄임표 단추**(…)**를 클릭하여 열거자 속성에 대한 속성 식을 추가하거나 기존 속성 식을 편집 및 평가합니다.  
@@ -229,13 +228,13 @@ ms.lasthandoff: 10/10/2017
 #### <a name="enumerator--foreach-file-enumerator"></a>Enumerator = Foreach File 열거자  
  폴더의 파일을 열거하는 데 Foreach File 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach File 열거자를 사용하여 SQL 실행 태스크에서 실행하는 SQL 문을 포함하는 파일을 열거할 수 있습니다. 하위 폴더를 포함하도록 열거자를 구성할 수 있습니다.  
   
- 루프의 외부 프로세스 또는 태스크에서는 루프가 실행되는 동안 파일을 추가, 삭제하거나 파일 이름을 바꾸기 때문에 Foreach File 열거자가 열거하는 폴더 및 하위 폴더의 내용이 루프가 실행되는 동안 변경될 수 있습니다. 이러한 변경 내용은 다양 한 예기치 않은 상황이 발생할 수 있습니다.  
+ 루프의 외부 프로세스 또는 태스크에서는 루프가 실행되는 동안 파일을 추가, 삭제하거나 파일 이름을 바꾸기 때문에 Foreach File 열거자가 열거하는 폴더 및 하위 폴더의 내용이 루프가 실행되는 동안 변경될 수 있습니다. 이러한 변경 내용은 다양한 예기치 않은 상황을 발생시킬 수 있습니다.  
   
--   파일을 삭제 한 경우 Foreach 루프에서 한 태스크의 작업 이후 작업에서 사용 되는 파일과 파일의 다른 집합 영향을 줄 수 있습니다.  
+-   파일을 삭제한 경우 Foreach 루프의 특정 태스크의 작업은 후속 태스크에 사용되는 파일과 다른 파일 집합에 영향을 줄 수 있습니다.  
   
--   파일 이름이 바뀌어 외부 프로세스 이름이 바뀐된 파일을 대체 하는 파일을 자동으로 추가, Foreach 루프 태스크의 작업 영향을 줄 수 같은 파일 두 번입니다.  
+-   파일 이름이 바뀌어 외부 프로세스에서 이름이 바뀐 파일을 대체하기 위해 자동으로 파일을 추가한 경우 Foreach 루프에서 테스크의 작업은 같은 파일에 두 번 영향을 줄 수 있습니다.  
   
--   파일을 추가한 경우 Foreach 루프가 파일 영향을 결정 하기 어려울 수 있습니다.  
+-   파일을 추가한 경우 Foreach 루프가 영향을 준 파일을 확인하기 어려울 수 있습니다.  
   
  **Folder**  
  열거할 루트 폴더의 경로를 입력합니다.  
@@ -249,12 +248,12 @@ ms.lasthandoff: 10/10/2017
 > [!NOTE]  
 >  와일드카드 문자(*)를 사용하여 컬렉션에 포함할 파일을 지정합니다. 예를 들어 이름에 "abc"가 포함된 파일을 포함하려면 \*abc\*필터를 사용합니다.  
 >   
->  파일 이름 확장명을 지정하면 열거자는 동일한 확장명에 추가 문자가 포함된 파일도 반환합니다. 이 동작은 이전 버전과의 호환성을 위해 8.3 파일 이름도 비교하는 운영 체제의 **dir** 명령줄 동작과 같습니다. 이 열거자 동작으로 인해 예기치 못한 결과가 발생할 수 있습니다. 예를 들어 Excel 2003 파일만 열거하기 위해 "*.xls"를 지정하면 그러나 열거자 반환 Excel 2007 파일 이므로 해당 파일의 확장명이 ".xlsx"입니다.  
+>  파일 이름 확장명을 지정하면 열거자는 동일한 확장명에 추가 문자가 포함된 파일도 반환합니다. 이 동작은 이전 버전과의 호환성을 위해 8.3 파일 이름도 비교하는 운영 체제의 **dir** 명령줄 동작과 같습니다. 이 열거자 동작으로 인해 예기치 못한 결과가 발생할 수 있습니다. 예를 들어 Excel 2003 파일만 열거하기 위해 "*.xls"를 지정하면 열거자는 Excel 2007 파일도 반환합니다. 이는 Excel 2007 파일의 확장명이 ".xlsx"이기 때문입니다.  
 >   
 >  식을 사용하여 컬렉션에 포함할 파일을 지정할 수 있습니다. **컬렉션** 페이지에서 **식** 을 확장하고 **FileSpec** 속성을 선택한 후 줄임표 단추(…)를 클릭하여 속성 식을 추가합니다.  
   
- **정규화 된 이름**  
- 파일 이름의 정규화된 경로를 검색하려면 선택합니다. 파일 옵션에서 와일드 카드 문자를 지정 하는 필터와 일치 반환 되는 정규화 된 경로입니다.  
+ **정규화된 이름**  
+ 파일 이름의 정규화된 경로를 검색하려면 선택합니다. 파일 옵션에서 와일드카드 문자를 지정한 경우 반환된 정규화된 경로가 필터와 일치합니다.  
   
  **이름만**  
  파일 이름만 검색하려면 선택합니다. 파일 옵션에서 와일드카드 문자를 지정하지 않은 경우 반환된 파일 이름이 필터와 일치합니다.  
@@ -294,7 +293,7 @@ ms.lasthandoff: 10/10/2017
  변수에 저장된 ADO 또는 ADO.NET 개체의 행이나 테이블을 열거하는 데 Foreach ADO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 변수에 데이터 집합을 기록하는 스크립트 태스크를 포함하는 경우 Foreach ADO 열거자를 사용하여 데이터 집합의 행을 열거할 수 있습니다. 변수가 ADO.NET 데이터 집합을 포함하는 경우 여러 테이블의 행을 열거하거나 테이블을 열거하도록 열거자를 구성할 수 있습니다.  
   
  **ADO 개체 원본 변수**  
- 사용자 정의 변수를 목록에서 선택 하거나 클릭 \< **새 변수...** > 새 변수를 만듭니다.  
+ 목록에서 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
 > [!NOTE]  
 >  변수에 Object 데이터 형식이 있어야 합니다. 그렇지 않으면 오류가 발생합니다.  
@@ -304,17 +303,17 @@ ms.lasthandoff: 10/10/2017
  **첫 번째 테이블의 행**  
  첫 번째 테이블의 행만 열거하려면 선택합니다.  
   
- **모든 테이블 (ADO.NET 데이터 집합에만 해당)의 행**  
+ **모든 테이블의 행(ADO.NET 데이터 집합에만 해당)**  
  모든 테이블의 행을 열거하려면 선택합니다. 이 옵션은 열거할 모든 개체가 같은 ADO.NET 데이터 집합의 멤버인 경우에만 사용할 수 있습니다.  
   
- **모든 테이블 (ADO.NET 데이터 집합에만 해당)**  
+ **모든 테이블(ADO.NET 데이터 집합에만 해당)**  
  테이블만 열거하려면 선택합니다.  
   
 #### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumerator = Foreach ADO.NET 스키마 행 집합 열거자  
  지정한 데이터 원본에 대한 스키마를 열거하는 데 Foreach ADO.NET 스키마 행 집합 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 **AdventureWorks** 데이터베이스의 열과 같은 스키마를 열거하고 SQL 실행 태스크를 사용하여 스키마 사용 권한을 가져올 수 있습니다.  
   
- **연결**  
- 목록에서 ADO.NET 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 ADO.NET 연결 관리자를 만듭니다.  
+ **대량 삽입 태스크 편집기**  
+ 목록에서 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 ADO.NET 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
 >  ADO.NET 연결 관리자는 OLE DB용 .NET 공급자를 사용해야 합니다. SQL Server에 연결하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 관리자 **대화 상자의** OleDb용 .NET 공급자 **섹션에 나열된** Native Client를 공급자로 사용하는 것이 좋습니다.  
@@ -333,7 +332,7 @@ ms.lasthandoff: 10/10/2017
  지정한 변수의 열거 가능한 개체를 열거하는 데 Foreach From Variable 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 쿼리를 실행하여 변수에 결과를 저장하는 SQL 실행 태스크를 포함하는 경우 Foreach From Variable 열거자를 사용하여 쿼리 결과를 열거할 수 있습니다.  
   
  **변수**  
- 목록에서 변수를 선택 하거나 클릭 \< **새 변수...** > 새 변수를 만듭니다.  
+ 목록에서 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -347,7 +346,7 @@ ms.lasthandoff: 10/10/2017
  **DocumentSourceType**  
  XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -356,28 +355,28 @@ ms.lasthandoff: 10/10/2017
  **DocumentSource**  
  **DocumentSourceType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 (...)를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
- 경우 **DocumentSourceType** 로 설정 된 **파일 연결**, 파일 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결 관리자를 만듭니다.  
+ **DocumentSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 경우 **DocumentSourceType** 로 설정 된 **변수**기존 변수를 선택 하거나 클릭 \< **새 변수...** > 새 변수를 만듭니다.  
+ **DocumentSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **EnumerationType**  
  목록에서 열거 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
-|**탐색 창**|XPathNavigator를 사용하여 열거합니다.|  
-|**노드**|XPath 작업에서 반환한 노드를 열거합니다.|  
+|**Navigator**|XPathNavigator를 사용하여 열거합니다.|  
+|**Node**|XPath 작업에서 반환한 노드를 열거합니다.|  
 |**NodeText**|XPath 작업에서 반환한 텍스트 노드를 열거합니다.|  
 |**ElementCollection**|XPath 작업에서 반환한 요소 노드를 열거합니다.|  
   
  **OuterXPathStringSourceType**  
  XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -386,11 +385,11 @@ ms.lasthandoff: 10/10/2017
  **OuterXPathString**  
  **OuterXPathStringSourceType**을 **직접 입력**으로 설정한 경우 XPath 문자열을 입력합니다.  
   
- 경우 **OuterXPathStringSourceType** 로 설정 된 **파일 연결**, 파일 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결 관리자를 만듭니다.  
+ **OuterXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 경우 **OuterXPathStringSourceType** 로 설정 된 **변수**기존 변수를 선택 하거나 클릭 \< **새 변수...** > 새 변수를 만듭니다.  
+ **OuterXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -400,7 +399,7 @@ ms.lasthandoff: 10/10/2017
  **InnerXPathStringSourceType**  
  내부 XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -409,19 +408,19 @@ ms.lasthandoff: 10/10/2017
  **InnerXPathString**  
  **InnerXPathStringSourceType**을 **직접 입력**으로 설정한 경우 XPath 문자열을 입력합니다.  
   
- 경우 **InnerXPathStringSourceType** 로 설정 된 **파일 연결**, 파일 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결 관리자를 만듭니다.  
+ **InnerXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 경우 **InnerXPathStringSourceType** 로 설정 된 **변수**기존 변수를 선택 하거나 클릭 \< **새 변수...** > 새 변수를 만듭니다.  
+ **InnerXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO 열거자  
- SMO(SQL Server Management Objects) 개체를 열거하는 데 Foreach SMO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함 하는 경우 Foreach SMO 열거자를 사용 하 여 테이블을 열거 수 있습니다는 **AdventureWorks** 데이터베이스에 있으며 각 테이블의 행 수를 계산 하는 쿼리를 실행 합니다.  
+ SMO(SQL Server Management Objects) 개체를 열거하는 데 Foreach SMO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach SMO 열거자를 사용하여 **AdventureWorks** 데이터베이스의 테이블을 열거하고 각 테이블의 행 수를 계산하는 쿼리를 실행할 수 있습니다.  
   
- **연결**  
- 기존 ADO.NET 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결 관리자를 만듭니다.  
+ **대량 삽입 태스크 편집기**  
+ 기존 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  관련 항목: [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
@@ -433,7 +432,7 @@ ms.lasthandoff: 10/10/2017
   
  **관련 항목:** [SMO 열거 선택 대화 상자](http://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
-####  <a name="ForeachHDFSFile"></a>열거자 = Foreach HDFS File 열거자  
+####  <a name="ForeachHDFSFile"></a> 열거자 = Foreach HDFS File 열거자  
  SSIS 패키지는 **Foreach HDFS 파일 열거자** 를 사용하여 지정된 HDFS 위치에 있는 HDFS 파일을 열거할 수 있습니다. 각 HDFS 파일의 이름을 변수에 저장하여 Foreach 루프 컨테이너 내의 태스크에서 사용할 수 있습니다.  
   
  **Hadoop 연결 관리자**  
@@ -443,67 +442,67 @@ ms.lasthandoff: 10/10/2017
  열거할 HDFS 파일을 포함하는 HDFS 디렉터리의 이름을 지정합니다.  
   
  **파일 이름 필터**  
- 특정 이름 패턴의 파일을 선택하려면 이름 필터를 지정합니다. 예를 들어 MySheet*.xls\* MySheet001.xls 및 MySheetABC.xlsx와 같은 파일이 포함 되어 있습니다.  
+ 특정 이름 패턴의 파일을 선택하려면 이름 필터를 지정합니다. 예를 들어 MySheet*.xls\*는 MySheet001.xls 및 MySheetABC.xlsx와 같은 파일을 포함합니다.  
   
  **파일 이름 검색**  
  SSIS에서 검색되는 파일 이름 형식을 지정합니다.  
   
--   **정규화 된 이름** 디렉터리 경로 파일 이름을 포함 하는 전체 이름을 의미 합니다.  
+-   **정규화된 이름**은 디렉터리 경로와 파일 이름을 포함하는 전체 이름을 의미합니다.  
   
--   **이름만** 경로 없이 파일 이름을 검색 하는 것을 의미 합니다.  
+-   **이름만**은 경로 없이 파일 이름을 검색함을 의미합니다.  
   
  **하위 폴더 포함**  
  하위 폴더를 재귀적으로 반복할지 여부를 지정합니다.  
   
  편집기의 **변수 매핑** 페이지에서 열거된 HDFS 파일의 이름을 저장할 변수를 선택하거나 만듭니다.  
   
-####  <a name="ForeachAzureBlob"></a>열거자 = Foreach Azure Blob 열거자  
- SSIS 패키지는  **Azure Blob 열거자** 를 사용하여 지정된 Blob 위치에 있는 Blob 파일을 열거할 수 있습니다. 변수에 열거 된 blob 파일의 이름을 저장 하 고 Foreach 루프 컨테이너 내의 작업에서 사용할 수 있습니다.  
+####  <a name="ForeachAzureBlob"></a> 열거자 = Foreach Azure Blob 열거자  
+ SSIS 패키지는  **Azure Blob 열거자** 를 사용하여 지정된 Blob 위치에 있는 Blob 파일을 열거할 수 있습니다. 열거된 Blob 파일의 이름을 변수에 저장하고 Foreach 루프 컨테이너 내의 작업에서 사용할 수 있습니다.  
   
  **Azure Blob 열거자**는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 대해 제공되는 Azure용 SSIS(SQL Server Integration Services) 기능 팩의 구성 요소입니다. [여기](http://go.microsoft.com/fwlink/?LinkID=626967)서 기능 팩을 다운로드하세요.  
   
- **Azure 저장소 연결 관리자**  
+ **Azure Storage 연결 관리자**  
  기존 Azure 저장소 연결 관리자를 선택하거나 Azure 저장소 계정을 참조하는 연결 관리자 하나를 새로 만듭니다.  
   
- 관련된 항목: [Azure 저장소 연결 관리자](../../integration-services/connection-manager/azure-storage-connection-manager.md)합니다.  
+ 관련 항목: [Azure Storage 연결 관리자](../../integration-services/connection-manager/azure-storage-connection-manager.md)  
   
  **Blob 컨테이너 이름**  
- 열거할 blob 파일을 포함 하는 blob 컨테이너의 이름을 지정 합니다.
+ 열거할 Blob 파일을 포함하는 Blob 컨테이너의 이름을 지정합니다.
   
  **Blob 디렉터리**  
- 열거할 blob 파일을 포함 하는 blob 디렉터리를 지정 합니다. Blob 디렉터리는 가상 계층 구조입니다.  
+ 열거할 Blob 파일을 포함하는 Blob 디렉터리를 지정합니다. Blob 디렉터리는 가상 계층 구조입니다.  
   
  **Blob 이름 필터**  
- 특정 이름 패턴의 파일을 열거하려면 이름 필터를 지정합니다. 예를 들어 `MySheet*.xls\*` MySheet001.xls 및 MySheetABC.xlsx와 같은 파일을 포함 합니다.  
+ 특정 이름 패턴의 파일을 열거하려면 이름 필터를 지정합니다. 예를 들어 `MySheet*.xls\*`는 MySheet001.xls 및 MySheetABC.xlsx와 같은 파일을 포함합니다.  
   
  **Blob 시간 범위 시작/끝 필터**  
- 시간 범위 필터를 지정합니다. 수정 된 파일이 **TimeRangeFrom** 하기 전에 **TimeRangeTo** 열거 됩니다. 
+ 시간 범위 필터를 지정합니다. **TimeRangeFrom** 에서 **TimeRangeTo** 사이에 수정된 파일이 열거됩니다. 
 
-####  <a name="ForeachAdlsFile"></a>열거자 = Foreach ADLS File 열거자 
-**ADLS File 열거자** 는 SSIS 패키지에서 Azure 데이터 레이크 저장소의 파일을 열거 합니다. 열거 된 파일의 전체 경로 저장할 수 있습니다 (슬래시-접두사로 `/`) 변수를 사용 하 여 Foreach 루프 컨테이너 내의 작업에서 파일 경로입니다.
+####  <a name="ForeachAdlsFile"></a> 열거자 = Foreach ADLS File 열거자 
+**ADLS File 열거자**를 통해 SSIS 패키지는 Azure Data Lake Store의 파일을 열거할 수 있습니다. 변수에 열거된 파일(슬래시 접두사로 시작 - `/`)의 전체 경로를 저장하고 Foreach 루프 컨테이너 내에서 작업의 파일 경로를 사용합니다.
   
 **AzureDataLakeConnection**  
-Azure 데이터 레이크 연결 관리자를 지정 하거나 ADLS 계정을 참조 하는 새 브러시를 만듭니다.   
+Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 새 연결 관리자를 만듭니다.   
   
 **AzureDataLakeDirectory**  
-파일을 열거할 수 있는 ADLS 디렉터리를 지정 합니다.
+열거할 파일을 포함하는 ADLS 디렉터리를 지정합니다.
   
 **FileNamePattern**  
-파일 이름 필터를 지정합니다. 지정된 된 패턴과 일치 하는 파일만 열거 됩니다. 와일드 카드 `*` 및 `?` 지원 됩니다. 
+파일 이름 필터를 지정합니다. 지정된 패턴과 일치하는 이름의 파일만 열거됩니다. 와일드카드 `*` 및 `?`가 지원됩니다. 
   
 **SearchRecursively**  
-지정된 된 디렉터리 내에서 재귀적으로 검색할 것인지 지정 합니다.  
+지정된 디렉터리 내에서 재귀적으로 검색할 것인지 지정합니다.  
 
-## <a name="variable-mappings-page---foreach-loop-editor"></a>변수 매핑 페이지-Foreach 루프 편집기
+## <a name="variable-mappings-page---foreach-loop-editor"></a>변수 매핑 페이지 - Foreach 루프 편집기
  **Foreach 루프 편집기** 대화 상자의 **변수 매핑** 페이지를 사용하여 변수를 컬렉션 값에 매핑할 수 있습니다. 변수 값은 루프가 반복될 때마다 컬렉션 값으로 업데이트됩니다.  
   
- Integration Services 패키지의 Foreach 루프 컨테이너를 사용 하는 방법에 대 한 자세한 내용은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md)합니다. 구성 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
+ Integration Services 패키지의 Foreach 루프 컨테이너를 사용하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md)를 참조하세요. 구성 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 자습서인 간단한 ETL 패키지 만들기 자습서에는 Foreach 루프를 추가 및 구성하는 방법을 배울 수 있는 단원이 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **변수**  
- 기존 변수를 선택 하거나 클릭 **새 변수...**  새 변수를 만듭니다.  
+ 기존 변수를 선택하거나 **새 변수...**를 클릭하여 새 변수를 만듭니다.  
   
 > [!NOTE]  
 >  변수를 매핑하면 새 행이 **변수** 목록에 자동으로 추가됩니다.  
@@ -519,10 +518,10 @@ Azure 데이터 레이크 연결 관리자를 지정 하거나 ADLS 계정을 �
 **Delete**  
  변수를 선택한 다음 **삭제**를 클릭합니다.  
 
-## <a name="schema-restrictions-dialog-box-adonet"></a>스키마 제한 대화 상자 (ADO.NET)
+## <a name="schema-restrictions-dialog-box-adonet"></a>스키마 제한 대화 상자(ADO.NET)
 **스키마 제한** 대화 상자를 사용하여 Foreach ADO.NET 스키마 행 집합 열거자에 적용할 스키마 제한을 설정할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **제한 사항**  
  스키마에 적용할 제약 조건을 선택합니다.  
   
@@ -537,7 +536,7 @@ Azure 데이터 레이크 연결 관리자를 지정 하거나 ADLS 계정을 �
 ## <a name="for-each-item-columns-dialog-box"></a>For Each Item 열 대화 상자
 **For Each Item 열** 대화 상자를 사용하여 Foreach Item 열거자에서 열거하는 항목에 열을 정의할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **열**  
  열을 나열합니다.  
   
@@ -553,7 +552,7 @@ Azure 데이터 레이크 연결 관리자를 지정 하거나 ADLS 계정을 �
  ## <a name="select-smo-enumeration-dialog-box"></a>SMO 열거 선택 대화 상자
 **SMO 열거 선택** 대화 상자를 사용하여 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 열거할 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) 개체를 지정할 수 있고 열거형을 선택할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **열거**  
  서버를 확장한 다음 SMO 개체를 선택합니다.  
   
@@ -566,22 +565,21 @@ Azure 데이터 레이크 연결 관리자를 지정 하거나 ADLS 계정을 �
  **이름**  
  Names 열거형을 사용합니다.  
   
- **Urn**  
+ **URN**  
  URNs 열거형을 사용합니다.  
   
  **위치**  
  Locations 열거형을 사용합니다. 이 옵션은 파일에 대해서만 사용할 수 있습니다.  
 
-## <a name="use-property-expressions-with-foreach-loop-containers"></a>Foreach 루프 컨테이너와 함께 속성 식을 사용 하 여  
+## <a name="use-property-expressions-with-foreach-loop-containers"></a>Foreach 루프 컨테이너와 함께 속성 식 사용  
  여러 개의 실행 파일을 동시에 실행하도록 패키지를 구성할 수 있습니다. 패키지가 속성 식을 구현하는 Foreach 루프 컨테이너를 포함하는 경우에는 이 구성 사용 시 주의해야 합니다.  
   
  Foreach 루프 열거자가 사용하는 연결 관리자의 ConnectionString 속성 값을 설정하기 위해 속성 식을 구현하면 유용합니다. ConnectionString의 속성 식은 열거자의 컬렉션 값에 매핑되는 변수에 의해 설정되며 루프가 반복될 때마다 업데이트됩니다.  
   
  루프 태스크의 병렬 실행 타이밍이 불확실해지는 부정적인 결과가 발생하지 않도록 하려면 한 번에 하나의 실행 파일만 실행하도록 패키지를 구성해야 합니다. 예를 들어 한 패키지가 여러 태스크를 동시에 실행할 수 있는 경우 SQL 실행 태스크의 인스턴스 두 개가 동시에 쓰기를 시도하면 폴더에 있는 파일을 열거하고 파일 이름을 검색한 다음 SQL 실행 태스크를 사용하여 파일 이름을 테이블에 삽입하는 Foreach 루프 컨테이너에 쓰기 충돌이 발생할 수 있습니다. 자세한 내용은 [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [제어 흐름](../../integration-services/control-flow/control-flow.md)   
  [Integration Services 컨테이너](../../integration-services/control-flow/integration-services-containers.md)  
   
   
-

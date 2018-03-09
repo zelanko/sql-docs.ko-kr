@@ -2,26 +2,29 @@
 title: "3단원: 템플릿, 솔루션 및 스크립트 프로젝트 작업 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edac948a-18bb-4301-9504-945056727f63
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 73a2ecd229999669787e9b452df596cc95d7154c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 79d5c15217620308ed076a695919dfae6d8e3054
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>3단원: 템플릿, 솔루션 및 스크립트 프로젝트 작업
-SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )를 사용하여 사용자 지정 템플릿을 만들고 솔루션 및 스크립트 프로젝트를 만들 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usse [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)](SSMS)를 사용하여 사용자 지정 템플릿을 만들고 솔루션 및 스크립트 프로젝트를 만들 수 있습니다.  
   
 이 단원에서는 다음 항목을 다룹니다.  
   

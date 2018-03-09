@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "21"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c1676681c21b306c6df820957b07863c5db6c5a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 복합 도메인을 만드는 방법에 대해 설명합니다. 복합 도메인은 단일 데이터 필드에 적용되는 하나 이상의 단일 도메인으로 구성됩니다. 복합 도메인에 대한 자세한 내용은 [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md)를 참조하세요.  
@@ -37,12 +35,12 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  복합 도메인을 만들려면 기술 자료를 만들고 열어야 하며 복합 도메인에 추가할 두 개 이상의 단일 도메인이 있어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  복합 도메인을 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> 기술 자료 검색 작업에서 복합 도메인 만들기  
@@ -57,7 +55,7 @@ ms.lasthandoff: 09/09/2017
   
 5.  **매핑** 테이블에서 빈 행의 **원본 열** 에 대한 드롭다운 목록에서 원본 열을 선택합니다. 원본 열에 두 개의 기존 단일 도메인에 의해 주소가 지정된 복합 도메인이 포함되어 있는지 확인합니다. 해당하는 단일 도메인이 없으면 **도메인 만들기** 아이콘을 클릭합니다.  
   
-6.  **매핑** 테이블에서 빈 행의 **원본 열** 에 대한 드롭다운 목록에서 원본 열을 선택합니다. 원본 열에 두 개의 기존 단일 도메인에 의해 주소가 지정된 복합 도메인 부분이 포함되어 있는지 확인합니다. 해당하는 단일 도메인이 없으면 **도메인 만들기** 아이콘을 클릭하여 도메인을 만듭니다. 자세한 내용은 [Create a Domain](../data-quality-services/create-a-domain.md)을 참조하세요.  
+6.  **매핑** 테이블에서 빈 행의 **원본 열** 에 대한 드롭다운 목록에서 원본 열을 선택합니다. 원본 열에 두 개의 기존 단일 도메인에 의해 주소가 지정된 복합 도메인 부분이 포함되어 있는지 확인합니다. 해당하는 단일 도메인이 없으면 **도메인 만들기** 아이콘을 클릭하여 도메인을 만듭니다. 자세한 내용은 [도메인 만들기](../data-quality-services/create-a-domain.md)을 참조하세요.  
   
 7.  **복합 도메인 만들기** 아이콘을 클릭합니다.  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 09/09/2017
   
 2.  **도메인 관리** 를 작업으로 선택한 다음 **만들기** 를 클릭하여 새 기술 자료를 만들거나 **열기** 를 클릭하여 기존 기술 자료를 엽니다.  
   
-3.  복합 도메인에 필요한 두 개 이상의 단일 도메인이 있는지 확인합니다. 필요한 단일 도메인이 없으면 **도메인 만들기** 아이콘을 클릭하여 단일 도메인을 만듭니다. 자세한 내용은 [Create a Domain](../data-quality-services/create-a-domain.md)을 참조하세요.  
+3.  복합 도메인에 필요한 두 개 이상의 단일 도메인이 있는지 확인합니다. 필요한 단일 도메인이 없으면 **도메인 만들기** 아이콘을 클릭하여 단일 도메인을 만듭니다. 자세한 내용은 [도메인 만들기](../data-quality-services/create-a-domain.md)을 참조하세요.  
   
 4.  **도메인 관리** 페이지에서 도메인 목록 위에 있는 **복합 도메인 만들기** 아이콘을 클릭합니다.  
   
@@ -95,7 +93,7 @@ ms.lasthandoff: 09/09/2017
   
 5.  구문 분석 방법에 대해 **구분 기호** 를 선택한 경우 **기술 자료 구문 분석 사용**을 선택할 수도 있습니다. 자세한 내용은 [Knowledge-Based Parsing](#KnowledgeBaseParsing)을 참조하세요.  
   
-6.  **마침** 을 클릭하여 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+6.  **마침** 을 클릭하여 [도메인 관리 작업 종료](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 복합 도메인을 만든 후  
  복합 도메인을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
@@ -110,4 +108,3 @@ ms.lasthandoff: 09/09/2017
  기술 자료 구문 분석을 사용할 때 원본 데이터의 값 수가 복합 도메인의 도메인 수보다 적은 경우에는 DQS에서 누락된 도메인에 Null을 삽입합니다. 원본 데이터의 값 수가 복합 도메인의 도메인 수보다 많은 경우에는 DQS에서 열 중 하나에 추가 데이터를 추가합니다. 둘 이상의 도메인에 같은 값이 포함된 경우 데이터 원본은 첫 번째 일치하는 도메인으로 구문 분석됩니다.  
   
   
-

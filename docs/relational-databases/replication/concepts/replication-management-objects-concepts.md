@@ -1,16 +1,17 @@
 ---
 title: "복제 관리 개체 개념 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/08/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - Replication Management Objects
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 61
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "61"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ad05dda9ba5ae8ac81416c87b6538525fa53352e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   RMO(복제 관리 개체)는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 복제 기능을 캡슐화하는 관리 코드 어셈블리로, <xref:Microsoft.SqlServer.Replication> 네임스페이스를 통해 구현됩니다.  
   
@@ -187,14 +188,17 @@ ms.lasthandoff: 08/03/2017
   
 > [!IMPORTANT]  
 >  속성을 설정할 때 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 트랜잭션을 명시적으로 선언할 수 있지만 이러한 트랜잭션은 내부 복제 트랜잭션을 방해하여 예기치 않은 결과를 초래할 수 있기 때문에 RMO와 함께 사용하지 않는 것이 좋습니다.  
-  
+
+### <a name="enabling-tls-12-support-for-rmo-components"></a>RMO 구성 요소에 대한 TLS 1.2 지원을 사용하도록 설정 
+ Windows 2012 및 이하 버전의 RMO 구성 요소에 대한 TLS 1.2 지원은 [KB 3140245](http://support.microsoft.com/help/3140245) 업데이트를 설치하고 이 문서에서 언급한 대로 레지스트리 키를 만들어 활성화할 수 있습니다. Windows 2012 R2 이상 버전에서는 위의 문서에서 설명한 대로 레지스트리 키만 만들어야 합니다.
+ 
 ## <a name="example"></a>예제  
  이 예에서는 속성 변경 내용을 캐시하는 방법을 보여 줍니다. 여기서 트랜잭션 게시의 특성에 대한 변경 내용은 서버에 명시적으로 전송되기 전까지 캐시됩니다.  
   
  [!code-cs[HowTo#rmo_ChangeTranPub_cached](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changetranpub_cached)]  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 시스템 저장 프로시저 개념](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [복제 프로그래밍 개념](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

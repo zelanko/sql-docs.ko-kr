@@ -2,10 +2,10 @@
 title: "Stretch Database용 확장 이벤트 | Microsoft 문서"
 ms.custom: 
 ms.date: 06/14/2016
-ms.prod: stretch-database
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -13,26 +13,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dad6f8bb729bb16121648f01ec046bffc33443ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d17c9eec2443602cde7465426f7349beb4e0a6e1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="extended-events-for-stretch-database"></a>Stretch Database용 확장 이벤트
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-Stretch Database는 문제 해결을 위해 몇 가지 확장 이벤트를 제공합니다.  
+
+스트레치 데이터베이스는 문제 해결을 위해 몇 가지 확장 이벤트를 제공합니다.  
   
 자세한 내용은 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)를 참조하세요. 문제 해결을 위해 확장 이벤트 세션을 시작하는 방법은 [확장 이벤트 세션 만들기](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)를 참조하세요.  
   
-## <a name="list-of-extended-events-for-stretch-database"></a>Stretch Database용 확장 이벤트 목록  
+## <a name="list-of-extended-events-for-stretch-database"></a>스트레치 데이터베이스용 확장 이벤트 목록  
   
 이벤트 이름|이벤트 설명   
 ---------|---------  
@@ -90,6 +90,5 @@ stretch_table_validation_error|사용자가 늘이기를 사용하도록 설정�
 stretch_unprovision_table_start|늘이기 테이블 프로비전 해제 시작을 보고합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Stretch Database 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
-
+[스트레치 데이터베이스 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 

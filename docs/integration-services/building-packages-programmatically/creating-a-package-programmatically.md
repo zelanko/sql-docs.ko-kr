@@ -1,5 +1,5 @@
 ---
-title: "패키지를 프로그래밍 방식으로 만드는 | Microsoft Docs"
+title: "프로그래밍 방식으로 패키지 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 58a8201d68cb6d942bd98ca3c53b6cf98336284e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ded4a64108848b0520c31074a83360507be0693f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-package-programmatically"></a>프로그래밍 방식으로 패키지 만들기
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> 개체는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 프로젝트 솔루션에 있는 다른 모든 개체의 최상위 컨테이너입니다. 최상위 컨테이너인 패키지는 첫 번째로 만들어지는 개체이며 그 이후에 만들어지는 개체는 패키지에 추가된 다음 패키지의 컨텍스트 내에서 실행됩니다. 패키지 자체는 데이터를 이동하거나 변환하지 않습니다. 패키지는 패키지에 포함된 태스크를 통해서만 작업을 수행합니다. 태스크는 패키지에서 수행하는 대부분의 작업을 수행하고 패키지의 기능을 정의합니다. 단 세 줄의 코드만으로도 패키지를 만들고 실행할 수 있지만 다양한 태스크와 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 추가하면 패키지에 추가 기능을 제공할 수 있습니다. 이 섹션에서는 프로그래밍 방식으로 패키지를 만드는 방법을 설명하며, 태스크 또는 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>를 만드는 방법에 대해서는 설명하지 않습니다. 이러한 내용은 뒷부분의 섹션에서 설명합니다.  
@@ -73,15 +71,15 @@ Module Module1
 End Module  
 ```  
   
- 예제를 컴파일하고 실행하려면 Visual Studio에서 F5 키를 누릅니다. C# 컴파일러를 사용 하 여 코드를 빌드하려면 **csc.exe**컴파일할 명령 프롬프트에서 다음 명령을 사용 하 여 및 파일 참조를 대체는  *\<파일 이름 >* 지정.cs 또는.vb 파일의 이름으로는  *\<outputfilename >* 원하는 합니다.  
+ 예제를 컴파일하고 실행하려면 Visual Studio에서 F5 키를 누릅니다. C# 컴파일러인 **csc.exe**를 사용하여 코드를 빌드하려면 명령 프롬프트에서 다음 명령과 파일 참조를 사용하여 코드를 컴파일합니다. 이때 *\<filename>*은 .cs 또는 .vb 파일의 이름으로 바꾸고 원하는 *\<outputfilename>*을 지정합니다.  
   
- **csc /target: library /out: \<outputfilename >.dll \<파일 이름 >.cs /r:Microsoft.SqlServer.Managed DTS.dll "/r:System.dll**  
+ **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- Visual Basic.NET 컴파일러인을 사용 하 여 코드를 빌드하려면 **vbc.exe**컴파일할 명령 프롬프트에서 다음 명령을 사용 하 여 및 파일 참조 합니다.  
+ Visual Basic .NET 컴파일러인 **vbc.exe**를 사용하여 코드를 빌드하려면 명령 프롬프트에서 다음 명령과 파일 참조를 사용하여 코드를 컴파일합니다.  
   
- **vbc /target: library /out: \<outputfilename >.dll \<파일 이름 >.vb /r:Microsoft.SqlServer.Managed DTS.dll "/r:System.dll**  
+ **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 디스크에 저장된 기존 패키지를 파일 시스템이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드하여 패키지를 만들 수도 있습니다. 차이점은는 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 채워진 후 응용 프로그램의 오버 로드 된 메서드 중 하나에서 패키지 개체 및 개체를 처음 만들: **LoadPackage** 플랫 파일용 **LoadFromSQLServer** 에 저장 된 패키지에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 또는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 파일 시스템에 저장 된 패키지입니다. 다음 예에서는 디스크에서 기존 패키지를 로드한 다음 패키지의 여러 속성을 확인합니다.  
+ 디스크에 저장된 기존 패키지를 파일 시스템이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드하여 패키지를 만들 수도 있습니다. 이때 차이점은 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 개체가 먼저 만들어진 다음 패키지 개체가 응용 프로그램의 오버로드된 메서드인 **LoadPackage**(플랫 파일의 경우), **LoadFromSQLServer**([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지의 경우) 또는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>(파일 시스템에 저장된 패키지의 경우) 중 하나로 채워진다는 것입니다. 다음 예에서는 디스크에서 기존 패키지를 로드한 다음 패키지의 여러 속성을 확인합니다.  
   
 ```csharp  
 using System;  
@@ -160,12 +158,11 @@ End Module
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   블로그 항목- [API 예제-OleDB 원본 및 OleDB 대상](http://go.microsoft.com/fwlink/?LinkId=220824), blogs.msdn.com에서 합니다.  
+-   blogs.msdn.com의 블로그 항목 - [API 예제 - OleDB 원본 및 OleDB 대상](http://go.microsoft.com/fwlink/?LinkId=220824)  
   
--   블로그 항목- [EzAPI – SQL Server 2012에 대 한 업데이트](http://go.microsoft.com/fwlink/?LinkId=243223), blogs.msdn.com에서 합니다.  
+-   blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](http://go.microsoft.com/fwlink/?LinkId=243223)  
   
-## <a name="see-also"></a>관련 항목:  
- [작업을 프로그래밍 방식으로 추가](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
+## <a name="see-also"></a>참고 항목  
+ [프로그래밍 방식으로 태스크 추가](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
   
   
-

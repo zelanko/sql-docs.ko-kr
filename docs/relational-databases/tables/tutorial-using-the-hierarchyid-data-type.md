@@ -2,9 +2,12 @@
 title: "자습서: hierarchyid 데이터 형식 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e862f7dc909b260f3d90edb2a0659cbb7cc3bb55
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 668177022a6032c906a97c1787ddac3b9a6771dc
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>자습서: hierarchyid 데이터 형식 사용
-이 자습서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 경험은 있지만 **hierarchyid** 데이터 형식은 처음 사용하는 사용자를 위해 작성되었습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 이 자습서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 경험은 있지만 **hierarchyid** 데이터 형식은 처음 사용하는 사용자를 위해 작성되었습니다.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
 이 자습서는 다음 두 단원으로 이루어져 있습니다.  

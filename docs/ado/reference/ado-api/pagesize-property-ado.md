@@ -3,8 +3,9 @@ title: "PageSize 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::PageSize
-helpviewer_keywords: PageSize property [ADO]
+f1_keywords:
+- Recordset15::PageSize
+helpviewer_keywords:
+- PageSize property [ADO]
 ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c0417012a1c68d0a3e3951a11f3a9ec84d8e89e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f611c47acb81b661e7c99422a785d6fb1c0d489
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="pagesize-property-ado"></a>PageSize 속성 (ADO)
 레코드 수를 구성 나타냅니다에서 한 페이지는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

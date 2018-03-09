@@ -2,32 +2,32 @@
 title: "부모-자식 계층에서 부모 특성 속성 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a7430bd3692788b8977d4c1849a599ada77dfc59
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e369924d45fe9cc718103cf1e763340e2c03c018
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Lesson 4-2-부모-자식 계층에서 부모 특성 속성 정의
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 부모-자식 계층은 두 개의 테이블 열을 기반으로 하는 차원의 계층입니다. 이 두 열은 차원의 멤버 간 계층 관계를 정의합니다. *멤버 키 열*이라는 첫 번째 열은 각 차원 멤버를 식별합니다. *부모 열*이라는 다른 하나의 열은 각 차원 멤버의 부모를 식별합니다. 부모 특성의 **NamingTemplate** 속성은 부모-자식 계층의 각 수준 이름을 지정하고 **MembersWithData** 속성은 부모 멤버의 데이터 표시 여부를 지정합니다.  
   
 자세한 내용은 [부모-자식 차원](../analysis-services/multidimensional-models/parent-child-dimension.md), [부모-자식 계층의 특성](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)을 참조하세요.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 09/01/2017
   
 7.  Excel 아이콘을 클릭한 다음 연결을 사용하도록 설정할지 묻는 메시지가 나타나면 **사용** 을 클릭합니다.  
   
-8.  피벗 테이블 필드 목록에서 **Reseller Sales**를 확장합니다. **Reseller Sales-Sales Amount** 를 값 영역으로 끌어옵니다.  
+8.  피벗 테이블 필드 목록에서 **Reseller Sales**를 확장합니다. **Reseller Sales-Sales Amount**를 값 영역으로 끌어옵니다.  
   
 9. 피벗 테이블 필드 목록에서 **Employee**를 확장한 다음 **Employees** 계층을 **행** 영역으로 끌어옵니다.  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="browsing-the-employee-dimension-with-the-modified-attributes"></a>특성이 수정된 Employee 차원 찾아보기  
   
-1.  **의** 빌드 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **빌드** 메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
 2.  배포가 성공적으로 완료되면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 대한 큐브 디자이너로 전환한 후 **브라우저** 탭의 도구 모음에서 **다시 연결** 을 클릭합니다.  
   
@@ -122,4 +122,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

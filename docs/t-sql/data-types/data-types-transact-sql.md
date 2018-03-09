@@ -18,17 +18,16 @@ helpviewer_keywords:
 - data types [SQL Server]
 - data types [SQL Server], about data types
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
-caps.latest.revision: 45
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 75efc7b5a58b3739a196e36b2c80d4ee37a92003
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 397d96212851ed52020a0ac0e951e282edf6c087
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="data-types-transact-sql"></a>데이터 형식 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -129,4 +128,3 @@ ms.lasthandoff: 09/27/2017
 [sp_rename&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
   
   
-

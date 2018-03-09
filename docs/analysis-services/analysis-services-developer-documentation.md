@@ -2,34 +2,33 @@
 title: "Analysis Services 개발자 설명서 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4694fd3def6dea209929f99559fcc61fe833972a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 개발자 설명서
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
 Analysis Services에서 거의 모든 개체 및 작업은 프로그래밍이 가능 하며 종종 둘 이상의 접근 방식을 선택할 수 있습니다.  옵션에는 관리 코드 작성, 스크립트 또는.NET framework를 사용 하 여 솔루션 요구 사항을 배제 하는 경우에 MSOLAP 등 XMLA 개방형 표준을 사용 하 여 포함 됩니다.
 
 ## <a name="what-you-can-accomplish-in-code"></a>코드에서 수행할 수 있는 작업
@@ -83,6 +82,5 @@ Analysis Services에서는 여러 가지 방법을 코드를 통해 솔루션을
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) 관리 기능 및 범용는 사용 되는 cmdlet에 설명 **Invoke-ascmd** 스크립트 또는 쿼리를 입력으로 허용 하는 cmdlet입니다.
 
 ## <a name="see-also"></a>관련 항목:
-[기술 참조 &#40; Ssas&#41; ](../analysis-services/powershell/technical-reference-ssas.md) 
+[기술 참조 ](../analysis-services/powershell/technical-reference-ssas.md) 
  [쿼리 및 식 언어 참조 &#40; Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
-

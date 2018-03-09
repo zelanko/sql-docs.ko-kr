@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_sendrow function
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0caf3ad75ae1362252d23b1fc0489e5fcf5bdc32
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4312fedbd01082501faec1efd89a2cb1cd5161e
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpsendrow"></a>bcp_sendrow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ RETCODE bcp_sendrow (
   
  호출 하기 전에 **bcp_sendrow**, 호출을 수행 해야 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 행 데이터를 포함 하는 프로그램 변수를 지정할 수 있습니다.  
   
- 경우 **bcp_bind** 예를 들어 긴 가변 길이 데이터 형식 지정 이라고는 *eDataType* SQLTEXT 및 null이 아닌 매개 변수 *pData* 매개 변수, **bcp_sendrow** 다른 데이터 형식에 대해서와 마찬가지로 변수와 값을 보냅니다. 그러나 If, **bcp_bind** 에 NULL *pData* 매개 변수를 **bcp_sendrow** 지정 된 데이터가 있는 모든 열을 보낸 후에 즉시 응용 프로그램에 컨트롤 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 응용 프로그램이 호출할 수 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 반복적으로 하는 긴 가변 길이 데이터를 보내도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 한 번에 청크 합니다. 자세한 내용은 참조 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)합니다.  
+ 경우 **bcp_bind** 예를 들어 긴 가변 길이 데이터 형식 지정 이라고는 *eDataType* SQLTEXT 및 NULL이 아닌 매개 변수 *pData* 매개 변수, **bcp_sendrow** 와 같이 다른 데이터 형식에 대 한 전체 데이터 값을 보냅니다. 그러나 If, **bcp_bind** 에 NULL *pData* 매개 변수를 **bcp_sendrow** 지정 된 데이터가 있는 모든 열을 보낸 후에 즉시 응용 프로그램에 컨트롤 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 응용 프로그램이 호출할 수 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 반복적으로 하는 긴 가변 길이 데이터를 보내도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 한 번에 청크 합니다. 자세한 내용은 참조 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)합니다.  
   
  때 **bcp_sendrow** 행을 대량 복사 프로그램 변수에서 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블, 행이 커밋됩니다 사용자를 호출 하는 경우에 [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 또는 [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) . 사용자를 호출 하도록 선택할 수 **bcp_batch** 되 면 모든  *n*  행 하거나 데이터가 연이어 사이의 소강 상태가 있는 때입니다. 경우 **bcp_batch** 은 호출 되지 행이 커밋됩니다 때 **bcp_done** 호출 됩니다.  
   

@@ -1,27 +1,27 @@
 ---
-title: "항목 (보고서 작성기 및 SSRS)에 확장 또는 축소 동작 추가 | Microsoft Docs"
+title: "항목에 확장 또는 축소 작업 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dcd1af4aee2c0267f1443d87d80be1e3cc2ad8b3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 84a57041ddc986a359d598e1fbb47a0181f432cc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>항목에 확장 또는 축소 동작 추가(보고서 작성기 및 SSRS)
   사용자가 보고서 항목을 대화형으로 확장 또는 축소하거나, 테이블이나 행렬의 경우 그룹과 연결된 행과 열을 축소 또는 확장할 수 있도록 설정할 수 있습니다. 사용자가 항목을 확장 또는 축소할 수 있도록 하려면 해당 항목에 표시 유형 속성을 설정합니다. 표시 유형을 설정하면 HTML 보고서 뷰어에서 사용할 수 있으며 이를 *드릴다운* 동작이라고도 합니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
     -   보고서 항목을 숨기려면 **True** 를 선택합니다.  
   
-    -   선택  **\<식 >** 열려는 **식** 대화 상자는 표시 유형을 결정 하려면 런타임에 계산 되는 식을 만들 수 있습니다.  
+    -   보고서 항목을 표시하려면 **\<Expression>**을 선택하여 **식** 대화 상자를 열고 런타임에 평가되어 표시 유형을 결정할 식을 만듭니다.  
   
 5.  **ToggleItem**의 드롭다운 상자에서 토글 이미지를 추가할 입력란의 이름을 선택합니다.  
   
@@ -69,11 +69,11 @@ ms.lasthandoff: 08/09/2017
   
 6.  토글을 테스트하려면 보고서를 실행하고 토글 이미지가 있는 입력란을 클릭합니다. 보고서 화면이 새로 고쳐져 전환된 표시 유형이 적용된 행 그룹 및 열 그룹이 표시됩니다.  
   
-     ![확장 가능한 행 그룹이 있는 실행 중인 보고서](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "확장 가능한 행 그룹이 있는 보고서를 실행 합니다.")  
+     ![확장 가능한 행 그룹이 있는 실행 중인 보고서](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "확장 가능한 행 그룹이 있는 실행 중인 보고서")  
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>확장 및 축소 동작을 보고서 항목에 추가하려면  
   
-1.  보고서 디자인 뷰에서 보고서 항목 표시 또는 숨기기 및 클릭을 마우스 오른쪽 단추로 클릭  *\<보고서 항목 >* **속성**합니다.  *\<보고서 항목 >* **속성** 보고서 항목에 대 한 대화 상자가 열립니다.  
+1.  보고서 디자인 뷰에서 표시하거나 숨길 보고서 항목을 마우스 오른쪽 단추로 클릭한 다음 *\<report item>* **속성**을 클릭합니다. 보고서 항목에 대한 *\<report item>* **속성** 대화 상자가 열립니다.  
   
 2.  **표시 유형**을 클릭합니다.  
   
@@ -99,11 +99,10 @@ ms.lasthandoff: 08/09/2017
   
 5.  토글을 테스트하려면 보고서를 실행하고 토글 이미지가 있는 입력란을 클릭합니다. 보고서 화면이 새로 고쳐져 전환된 표시 유형이 적용된 보고서 항목이 표시됩니다.  
   
-     ![확장 하는 테이블이 있는 실행 중인 보고서](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "확장 하는 테이블이 있는 실행 중인 보고서")  
+     ![확장하는 테이블이 있는 실행 중인 보고서](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "확장하는 테이블이 있는 실행 중인 보고서")  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [항목 &#40; 숨기기 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [항목 숨기기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   
-

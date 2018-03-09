@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a88ea4010ec1cfd48661b34e990634fe371141f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d248c248d4b5d9b4a4e90954e01f15841d305319
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>인수  
- *거리*  
+ *distance*  
  이 **float** 에서 수를 버퍼로 점과 되는 최대 거리를 나타내는 **기 하 도형** 인스턴스.  
   
 ## <a name="return-types"></a>반환 형식  
@@ -71,7 +70,7 @@ SQL Server 반환 형식: **기 하 도형**
 |거리 < 0|0 또는 1|빈 **GeometryCollection** 인스턴스|  
 |거리 < 0|2 이상|A **CurvePolygon** 또는 **GeometryCollection** 음수 버퍼가 인스턴스. **참고:** 버퍼가 음수 이면 빈을 만들 수 있습니다 **GeometryCollection**|  
 |거리 = 0|모든 차원|호출의 복사본 **geometry** 인스턴스|  
-|거리 > 0|모든 차원|**CurvePolygon** 또는 **GeometryCollection** 인스턴스|  
+|distance > 0|모든 차원|**CurvePolygon** 또는 **GeometryCollection** 인스턴스|  
   
 > [!NOTE]  
 >  이후 *거리* 는 **float**, 매우 작은 값을 0으로 계산 될 수 있습니다. 이 경우 호출의 복사본 **geometry** 인스턴스가 반환 됩니다. 참조 [float 및 real &#40; Transact SQL &#41; ](../../t-sql/data-types/float-and-real-transact-sql.md).  
@@ -164,6 +163,5 @@ SQL Server 반환 형식: **기 하 도형**
  처음 두 **선택** 문은 반환는 `GeometryCollection` 않았기 때문에 인스턴스에 매개 변수 *거리* 보다 작거나 1/2 둘 사이의 거리 요소 (1 1) 및 (1 4). 세 번째 **선택** 문에서 반환은 `CurvePolygon` 두의 버퍼링 된 인스턴스가 요소 (1 1) 때문에 인스턴스 (1 4) 및 중첩 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Geometry 인스턴스의 확장된 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  
-

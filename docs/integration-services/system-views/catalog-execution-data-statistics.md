@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: fa1d87489ff6d0a10d95bf160ded3d038ca39d81
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dca56725e70ab1d73d13592faeb40f7c37674099
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/03/2017
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|데이터의 고유 ID(식별자)입니다.|  
 |execution_id|**bigint**|실행 인스턴스의 고유 ID입니다.|  
-|package_name|**nvarchar (260)**|실행 중에 시작된 첫 번째 패키지의 이름입니다.|  
+|package_name|**nvarchar(260)**|실행 중에 시작된 첫 번째 패키지의 이름입니다.|  
 |task_name|**nvarchar(4000)**|데이터 흐름 태스크의 이름입니다.|  
 |dataflow_path_id_string|**nvarchar(4000)**|데이터 흐름 경로의 ID 문자열입니다.|  
 |dataflow_path_name|**nvarchar(4000)**|데이터 흐름 경로의 이름입니다.|  
@@ -44,25 +43,24 @@ ms.lasthandoff: 08/03/2017
 |created_time|**datatimeoffset(7)**|값을 가져온 시간입니다.|  
 |execution_path|**nvarchar(max)**|구성 요소의 실행 경로입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 -   구성 요소의 출력이 여러 개인 경우 각 출력에 해당하는 행이 추가됩니다.  
   
 -   기본적으로 실행이 시작되면 전송되는 행의 수에 대한 정보는 기록되지 않습니다.  
   
--   지정된 된 패키지 실행에 대해이 데이터를 보려면 로깅 수준을로 설정 **Verbose**합니다. 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)을 참조하세요.  
+-   지정된 패키지 실행에 대해 이 데이터를 보려면 로깅 수준을 **Verbose**로 설정합니다. 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)을 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스에 대한 READ 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
 > [!NOTE]  
 >  서버에서 작업을 수행할 권한이 있으면 작업에 대한 정보를 볼 수 있는 권한도 있습니다. 행 수준 보안이 적용됩니다. 따라서 볼 수 있는 권한이 있는 행만 표시됩니다.  
   
   
-

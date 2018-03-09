@@ -2,9 +2,12 @@
 title: "차트, 경고, 로그 및 보고서 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14e449b64d959cd6f877b27871f329b231038955
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0c84f299a27b69def3acf965f7a3cf6d4ab74017
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>차트, 경고, 로그 및 보고서 만들기
-  시스템 모니터를 사용하면 차트, 경고, 로그 및 보고서를 만들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 모니터링할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 시스템 모니터를 사용하면 차트, 경고, 로그 및 보고서를 만들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 모니터링할 수 있습니다.  
   
 ## <a name="charts"></a>차트  
  차트를 사용하면 선택된 개체 및 카운터의 현재 성능(CPU 사용량 또는 디스크 I/O)을 모니터링할 수 있습니다. 차트에 여러 가지 시스템 모니터 개체 및 카운터 조합을 추가할 수 있습니다. 또한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 개체 및 카운터도 차트에 추가할 수 있습니다.  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/09/2017
   
  차트는 이벤트가 발생할 때 모니터링하는 것과 같이 로컬 또는 원격 컴퓨터를 단기에 걸쳐 실시간으로 모니터링할 때 유용합니다.  
   
-## <a name="alerts"></a>경고  
+## <a name="alerts"></a>,  
  경고를 사용하면 시스템 모니터는 특정 이벤트를 추적해 이 이벤트에 대해 사용자가 요청한 대로 알려 줍니다. 경고 로그를 사용하면 선택된 카운터의 현재 성능 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]개체의 인스턴스를 모니터링할 수 있습니다. 카운터가 지정된 값을 넘어 가면 로그에 이벤트가 발생한 날짜와 시간이 기록됩니다. 이벤트는 네트워크 경고도 생성할 수 있습니다. 특정 프로그램을 이벤트가 처음 발생할 때 실행되도록 하거나 이벤트가 발생할 때마다 실행되도록 할 수도 있습니다. 예를 들어 경고 기능을 사용하면 모든 시스템 관리자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 디스크 공간이 부족하다는 네트워크 메시지를 보낼 수 있습니다.  
   
 ## <a name="logs"></a>로그  

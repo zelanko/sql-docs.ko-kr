@@ -34,17 +34,16 @@ helpviewer_keywords:
 - EDGE
 - SQL graph, CREATE TABLE statement
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c32a8c4f683f20c4384089c1d2552614090f9b3d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fe8ace1b8f8c55c14d4807514fcb1436f6966fed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-sql-graph"></a>테이블 (SQL 그래프) 만들기
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ CREATE TABLE
 ## <a name="arguments"></a>인수  
 이 문서는 SQL 그래프와 관련 된 인수에만 나열 합니다. 전체 목록과 설명은 지원 되는 인수에 대 한 참조 [CREATE TABLE (TRANSACT-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
- *a s e _*    
+ *database_name*    
  테이블이 생성된 데이터베이스의 이름입니다. *a s e _* 기존 데이터베이스의 이름을 지정 해야 합니다. 지정 하지 않으면 *database_name* 현재 데이터베이스에 대 한 기본값입니다. 현재 연결에 대 한 로그인에 지정 된 데이터베이스의 기존 사용자 ID와 연결 되어 있어야 *database_name*, 되며 해당 사용자 ID는 CREATE TABLE 권한을 갖고 있어야 합니다.  
   
  *schema_name*    
@@ -130,5 +129,4 @@ CREATE TABLE
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [INSERT (SQL 그래프)](../../t-sql/statements/insert-sql-graph.md)]  
  [SQL Server 2017을 사용 하 여 처리 하는 그래프](../../relational-databases/graphs/sql-graph-overview.md)
-
 

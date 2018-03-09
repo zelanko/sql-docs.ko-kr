@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetPos function [ODBC], Cursor Library
+helpviewer_keywords: SQLSetPos function [ODBC], Cursor Library
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bee332fc4307b7842f8cf6d8e9ec2d7473a5720b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b195ca1dbb138b21fcf107150832288df8317196
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetpos-cursor-library"></a>SQLSetPos (커서 라이브러리)
 > [!IMPORTANT]  
@@ -40,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  커서 라이브러리에 대 한 호출에서 SQL_UPDATE 및 SQL_DELETE 작업을 지원 하지 않습니다 **SQLSetPos**합니다. 커서 라이브러리 구현 하는 위치 지정 업데이트 하거나 만들어 검색 결과 SQL 문을 삭제 업데이트 또는 바인딩된 각 열에 대 한 캐시에 저장 된 값을 열거 하는 WHERE 절을 사용 하 여 문을 삭제 합니다. 자세한 내용은 참조 [처리 위치 Update 및 Delete 문이](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)합니다.  
   
  커서 라이브러리를 사용 하는 응용 프로그램을 호출 해야 드라이버는 정적 커서를 지원 하지 않으면, **SQLSetPos** 에 의해 인출 된 행 집합에 대해서만 **SQLExtendedFetch** 또는 **SQLFetchScroll** 인식 되지 않습니다 **SQLFetch**합니다. 커서 라이브러리 구현 **SQLExtendedFetch** 및 **SQLFetchScroll** 의 반복 된 호출을 수행 하 여 **SQLFetch** (행 집합 크기가 1)와 드라이버에서 합니다. 커서 라이브러리에 대 한 호출을 전달 **SQLFetch**에서 다른 반면 통해 드라이버에 있습니다. 경우 **SQLSetPos** 다중 행에 의해 인출 된 행 집합에서 호출 **SQLFetch** 때문에 호출이 실패 드라이버는 정적 커서를 지원 하지 않으면, **SQLSetPos** 작동 하지 않습니다 정방향 전용 커서입니다. 응용 프로그램에 성공적으로 호출 하는 경우에이 실시할 **SQLSetStmtAttr** SQL_ATTR_CURSOR_TYPE 커서 라이브러리가 지원 드라이버는 정적 커서를 지원 하지 않는 경우에 있는 SQL_CURSOR_STATIC로 설정 합니다.
-

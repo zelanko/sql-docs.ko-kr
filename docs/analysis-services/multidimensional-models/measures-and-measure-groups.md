@@ -2,16 +2,13 @@
 title: "측정값 및 측정값 그룹 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +22,20 @@ helpviewer_keywords:
 - aggregations [Analysis Services], measures
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f02584f0daf175439fb51e3afac34e6b4a328f52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measures-and-measure-groups"></a>측정값 및 측정값 그룹
-  큐브에는 *측정값 그룹* 의 *측정값*, 비즈니스 논리 및 측정값이 제공하는 숫자 데이터를 평가하기 위한 컨텍스트를 제공하는 차원 컬렉션이 포함됩니다. 측정값과 측정값 그룹은 둘 다 큐브의 필수 구성 요소입니다. 큐브는 최소 하나의 측정값과 측정값 그룹 없이는 존재할 수 없습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+큐브에는 *측정값 그룹* 의 *측정값*, 비즈니스 논리 및 측정값이 제공하는 숫자 데이터를 평가하기 위한 컨텍스트를 제공하는 차원 컬렉션이 포함됩니다. 측정값과 측정값 그룹은 둘 다 큐브의 필수 구성 요소입니다. 큐브는 최소 하나의 측정값과 측정값 그룹 없이는 존재할 수 없습니다.  
   
  이 항목에서는 [Measures](#bkmk_measure) 및 [Measure Groups](#bkmk_mg)에 대해 설명합니다. 또한 측정값 및 측정값 그룹을 만들고 구성하는 절차 단계에 대한 링크가 들어 있는 다음 표도 제공됩니다.  
   
@@ -46,9 +44,9 @@ ms.lasthandoff: 11/17/2017
 |[다차원 모델의 측정값 및 측정값 그룹 만들기](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|측정값과 측정값 그룹을 만들기 위한 몇 가지 접근 방식 중 하나를 선택합니다.|  
 |[측정값 속성 구성](../../analysis-services/multidimensional-models/configure-measure-properties.md)|큐브 마법사를 사용하여 큐브를 시작한 경우 집계 방법을 변경하고, 데이터 형식을 적용하며, 클라이언트 응용 프로그램에서 측정값의 표시 유형을 설정하거나, 값이 집계되기 전에 데이터를 조작하기 위한 측정값 식을 추가해야 할 수 있습니다.|  
 |[측정값 그룹 속성 구성](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|다차원 모델에서 측정값 그룹은 원본 데이터 웨어하우스의 팩트 테이블과 같습니다. 측정값 그룹의 속성을 통해 측정값 그룹 수준에서 전체적으로 작동하는 캐싱 동작, 저장소 및 처리 지시문을 지정할 수 있습니다. 파티션 구성은 부분적으로 측정값 그룹 개체에 대해 설정하는 속성에 의해 결정됩니다.|  
-|[집계 함수 사용](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|측정값에 할당될 수 있는 집계 방법을 이해합니다.|  
-|[반가산적 동작 정의](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|반가산적 동작은 일부 차원에 대해서만 유효하고 나머지 다른 차원에 대해서는 유효하지 않은 집계를 의미합니다. 일반적인 예로는 은행 계좌 잔액을 들 수 있습니다. 잔액을 고객 및 지역별로 집계하고자 하지만 시간별로 집계하고자 하지는 않을 것입니다. 예를 들어 연속적으로 며칠간 동일한 계좌의 잔액을 더하지는 않을 것입니다. 반가산적 동작을 정의하려면 비즈니스 인텔리전스 추가 마법사를 사용합니다.|  
-|[연결된 측정값 그룹](../../analysis-services/multidimensional-models/linked-measure-groups.md)|동일한 데이터베이스 또는 다른 Analysis Services 데이터베이스에 있는 다른 큐브의 기존 측정값 그룹의 용도를 변경합니다.|  
+|[집계 함수를 사용 하 여](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|측정값에 할당될 수 있는 집계 방법을 이해합니다.|  
+|[반 가산적 동작 정의](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|반가산적 동작은 일부 차원에 대해서만 유효하고 나머지 다른 차원에 대해서는 유효하지 않은 집계를 의미합니다. 일반적인 예로는 은행 계좌 잔액을 들 수 있습니다. 잔액을 고객 및 지역별로 집계하고자 하지만 시간별로 집계하고자 하지는 않을 것입니다. 예를 들어 연속적으로 며칠간 동일한 계좌의 잔액을 더하지는 않을 것입니다. 반가산적 동작을 정의하려면 비즈니스 인텔리전스 추가 마법사를 사용합니다.|  
+|[연결 된 측정값 그룹](../../analysis-services/multidimensional-models/linked-measure-groups.md)|동일한 데이터베이스 또는 다른 Analysis Services 데이터베이스에 있는 다른 큐브의 기존 측정값 그룹의 용도를 변경합니다.|  
   
 ##  <a name="bkmk_measure"></a> Measures  
  측정값은 집계할 수 있는 측정 가능한 데이터(대개 숫자)를 포함하는 열을 나타냅니다. 측정값은 통화 용어(예: 수익, 이익률 또는 비용) 또는 개수(재고 수준, 직원 수, 고객 수 또는 주문 수)나 비즈니스 논리를 통합하는 더 복잡한 계산으로 표현된 조직 활동의 일부 측면을 나타냅니다.  

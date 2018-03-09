@@ -1,29 +1,30 @@
 ---
 title: "프로젝트 설정 (마이그레이션) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97ea6eb0162b544f3c0666042b0ae70a5783fe43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ab9b6365d527d2cbd804ab0095021c2f2d9dc2b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>프로젝트 설정 (마이그레이션) (MySQLToSQL)
 마이그레이션 페이지는 **프로젝트 설정** 대화 상자 SSMA가 마이그레이션하는 방법을 데이터 MySQL에서 SQL Server에 사용자 지정 하는 설정이 포함 되어 있습니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   
 -   에 현재 프로젝트에 대 한 설정을 지정 하려면는 **도구** 메뉴 선택 **프로젝트 설정**, 클릭 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **마이그레이션**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ### <a name="bulk-copy"></a>대량 복사  
   
@@ -91,4 +92,3 @@ ms.lasthandoff: 08/02/2017
 |**오류 처리**|공간 데이터 형식의 값의 마이그레이션에 대 한 오류를 처리 하는 방법을 지정 합니다. 'NULL 바꿉니다'를 지정 하는 경우에 오류가 발생 하는 모든 공간 값 NULL로 바뀝니다. 바뀌지 않고 그렇지 않은 경우에 수행 됩니다.<br /><br />**기본 모드**: 오류를 생성<br /><br />**최적 모드**: 오류를 생성<br /><br />**전체 모드**: 오류를 생성|  
 |**값 유효성 검사**|잘못 된 공간 값을 처리 하는 방법을 지정 합니다. ' 시도 확인 유효한 '를 지정 하는 경우는 되 고 하려고 유효 하면 잘못 된 값을 수정 합니다.<br /><br />**기본 모드**: 유효한 확인<br /><br />**최적 모드**: 변경 하지 마십시오<br /><br />**전체 모드**: 유효한 확인|  
   
-

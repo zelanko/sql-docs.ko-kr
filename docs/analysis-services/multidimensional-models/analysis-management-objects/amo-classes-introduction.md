@@ -1,16 +1,14 @@
 ---
 title: "AMO 클래스 소개 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - objects [Analysis Management Objects]
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b288d323d4de3272afb434f3782c1df133e304af
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 868de22e20887c0d038cf65690649ae6a41530e1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-classes---introduction"></a>AMO 클래스-소개
   AMO(Analysis Management Objects)는 클라이언트 응용 프로그램에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 인스턴스를 관리하기 위해 설계된 클래스 라이브러리입니다. AMO 클래스는 데이터베이스, 차원, 큐브, 마이닝 구조 및 모델, 역할 및 권한, 예외 등의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 관리하는 데 사용되는 클래스입니다.  
@@ -46,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 |[AMO OLAP 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 OLAP 개체를 관리하는 데 사용되는 클래스를 설명합니다.|  
 |[AMO 데이터 마이닝 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 데이터 마이닝 개체를 관리하는 데 사용되는 클래스를 설명합니다.|  
 |[AMO 보안 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|다른 개체에 대한 액세스를 제어하고 보안을 유지하는 데 사용되는 클래스를 설명합니다.|  
-|[AMO 다른 클래스와 메서드](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|OLAP 또는 데이터 마이닝 관리자의 일상 업무에 도움이 되는 클래스와 메서드를 설명합니다.|  
+|[AMO 기타 클래스 및 메서드](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|OLAP 또는 데이터 마이닝 관리자의 일상 업무에 도움이 되는 클래스와 메서드를 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  <xref:Microsoft.AnalysisServices>   
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  [분석 관리 개체 &#40;를 사용 하 여 개발 AMO &#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   
-

@@ -2,27 +2,30 @@
 title: "코드 창을 표시하는 다른 방법 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: d94f79ec-9f8f-4c06-b62b-3ed22a0f8971
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5419967dca2b9602d477acfcdd2bab1037db3fb7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cae5ffe9e604be6525010d5f595752d599e2ab2c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-5---other-ways-of-viewing-the-code-window"></a>2-5단원 - 코드 창을 표시하는 다른 방법
-다양한 방법으로 여러 코드 창을 표시하도록 코드 창을 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다양한 방법으로 여러 코드 창을 표시하도록 코드 창을 구성할 수 있습니다.  
   
 ## <a name="using-multiple-code-windows"></a>여러 코드 창 사용  
   

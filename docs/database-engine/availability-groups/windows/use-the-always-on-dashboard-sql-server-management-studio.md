@@ -1,34 +1,34 @@
 ---
 title: "Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/30/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.agdashboard.f1
+f1_keywords: sql13.swb.agdashboard.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5aa07d7f0664e89aca776375d5a173ca93fd4624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스 관리자는 Always On 가용성 그룹 대시보드를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 그룹과 해당 가용성 복제본 및 데이터베이스에 대한 상태를 한 눈에 볼 수 있습니다. 가용성 그룹 대시보드의 일반적인 몇 가지 용도는 다음과 같습니다.  
   
@@ -123,7 +123,10 @@ ms.lasthandoff: 08/02/2017
  연결된 서버의 인스턴스와 가용성 그룹이 구성원 노드인 클러스터의 이름과 상태입니다.  
   
 ##  <a name="AvReplicaDetails"></a> 가용성 복제본 정보  
- **가용성 복제본** 창에 다음 열이 표시됩니다.  
+
+주 복제본에 연결하는 경우 **가용성 복제본 정보**는 가용성 그룹에 있는 모든 복제본의 정보를 보여 줍니다. 보조 복제본에 연결되면 화면에는 연결된 복제본의 정보만 표시됩니다.  
+
+**가용성 복제본** 창에 다음 열이 표시됩니다.  
   
  **이름**  
  가용성 복제본을 호스팅하는 서버 인스턴스의 이름입니다. 이 열은 기본적으로 표시됩니다.  
@@ -362,4 +365,3 @@ ms.lasthandoff: 08/02/2017
  [가용성 그룹 모니터링&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
-

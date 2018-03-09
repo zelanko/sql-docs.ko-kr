@@ -8,40 +8,38 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syscollector_config_store_TSQL
 - syscollector_config_store
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aabe9744ea3766dfeb8acc5707164f05c6419b1b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8b637834db24c769284380f8d6edde923143f26
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   컬렉션 집합 인스턴스가 아닌 전체 데이터 수집기에 적용되는 속성을 반환합니다. 이 뷰의 각 행은 관리 데이터 웨어하우스의 이름, 관리 데이터 웨어하우스가 위치한 인스턴스 이름과 같은 특정 데이터 수집기 속성을 설명합니다.  
   
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|parameter_name|**nvarchar (128)**|속성의 이름입니다. Null을 허용하지 않습니다.|  
+|parameter_name|**nvarchar(128)**|속성의 이름입니다. Null을 허용하지 않습니다.|  
 |parameter_value|**sql_variant**|실제 속성 값입니다. Null을 허용합니다.|  
   
 ## <a name="permissions"></a>Permissions  
@@ -61,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples"></a>예  
  다음 예에서는 syscollector_config_store 뷰를 쿼리합니다.  
   
-```tsql  
+```sql  
 SELECT parameter_name, parameter_value  
 FROM msdb.dbo.syscollector_config_store;  
 ```  

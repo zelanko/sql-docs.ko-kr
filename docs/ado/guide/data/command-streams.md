@@ -3,7 +3,7 @@ title: "스트림 명령 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b7564f349c25fda5d39f977320937b2515bb9dfd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1be2cc9528e62e548feb242b06686ad50a1753c8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-streams"></a>명령 스트림
 ADO에서 지정 된 문자열 형식에 대 한 명령 입력 지원 왔지만 **CommandText** 속성입니다. 대신 ado 2.7 이상을 사용할 수도 있습니다 정보의 스트림입니다 명령 입력에 대 한 스트림을 지정 하 여는 **CommandStream** 속성입니다. ADO를 할당할 수 **스트림** 개체나 지 원하는 COM 개체 **IStream** 인터페이스입니다.  
@@ -82,4 +81,3 @@ adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"
 ```  
 Set objRS = adoCmd.Execute  
 ```
-

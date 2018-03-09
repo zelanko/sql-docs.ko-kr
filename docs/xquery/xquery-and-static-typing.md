@@ -3,8 +3,11 @@ title: "XQuery 및 정적 입력 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - checking static types
 - inference [XQuery]
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
-caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 41c21d1689e97b3939d4c479395e5af217e39897
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4ecd8ad6c497ba796feeccc195cb0b6ebe76332c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 및 정적 형식 지정
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 XQuery는 정적으로 형식화된 언어입니다. 즉 특정 함수나 연산자에서 허용하지 않는 형식이나 카디널리티가 있는 값을 식에서 반환하면 쿼리를 컴파일하는 동안 유형 오류가 발생합니다. 또한 정적 형식 확인을 통해 형식화된 XML 문서의 경로 식의 형식이 잘못 지정되었는지 여부도 검색할 수 있습니다. XQuery 컴파일러는 먼저 원자화와 같은 암시적 연산을 추가한 다음 정적 형식 유추와 정적 형식 확인을 수행하는 정규화 단계를 적용합니다.  
   
@@ -99,4 +101,3 @@ ms.lasthandoff: 09/01/2017
  [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   
-

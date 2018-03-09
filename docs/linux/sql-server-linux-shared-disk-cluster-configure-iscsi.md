@@ -3,27 +3,26 @@ title: "장애 조치 클러스터 인스턴스 저장소 iSCSI-Linux에서 SQL 
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 18a73a25e8817577930ad058dbad56d56586d417
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-iSCSI-Linux에서 SQL Server 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서는 Linux에서 장애 조치 클러스터 인스턴스 (FCI)에 대 한 iSCSI 저장소를 구성 하는 방법을 설명 합니다. 
 
@@ -52,7 +51,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
-    ![7 setiscsinetwork][6]
+    ![7-setiscsinetwork][6]
  
 2.  편집 `/var/lib/iscsi/ifaces/iSCSIIfaceName`합니다. 다음 값을 완전히 작성 권한이 있는지 확인 합니다.
 
@@ -100,7 +99,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  ISCSI 디스크에 실제 볼륨을 만듭니다.
 
@@ -201,7 +200,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     ls /var/opt/mssql/data
     ```
 
-    ![45 CopyMove][8]
+    ![45-CopyMove][8]
  
    *    형식 `exit` 루트 사용자로 다시 전환 합니다.
 
@@ -211,7 +210,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > 볼륨 그룹의 이름 및 \<LogicalVolumeName > 만든 논리 볼륨 이름입니다. 아래 예제에서는 구문 볼륨 그룹 및 위에서 만든 논리 볼륨에 일치 합니다.
+    \<VolumeGroupName > 볼륨 그룹의 이름 및 \<LogicalVolumeName > 만든 논리 볼륨 이름입니다. 다음 예에서는 구문을 볼륨 그룹 및 이전 명령에서 논리 볼륨에 일치 합니다.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -279,7 +278,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     mkdir <FolderName>
     ```
 
-    \<폴더 이름 > 폴더의 이름입니다. 폴더의 전체 경로를 지정 해야 할 경우 올바른 위치에 없습니다. 다음 예제에서는 /var/opt/mssql/userdata 라는 폴더를 만듭니다.
+    \<폴더 이름 > 폴더의 이름입니다. 폴더의 전체 경로 지정 해야 합니다. 올바른 위치에 없는 경우. 다음 예제에서는 /var/opt/mssql/userdata 라는 폴더를 만듭니다.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -325,7 +324,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
 
    *    를 테스트 하려면 해당 폴더에 데이터베이스를 만듭니다. Sqlcmd를 사용 하 여 데이터베이스 만들기, 컨텍스트를 전환할 OS 수준에 있는 파일과 임시 위치를 삭제 한 다음 확인는 아래 표시 된 예제입니다. SSMS를 사용할 수 있습니다.
   
-    ![50 ExampleCreateSSMS][9]
+    ![50-ExampleCreateSSMS][9]
 
    *    공유를 마운트 해제 
 
@@ -359,7 +358,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
 
     \<ListOfVGsNotUsedByPacemaker >는 FCI가 사용 되지 것입니다 단계 20의 출력에서 볼륨 그룹의 목록입니다. 쉼표에 의해 따옴표로 및 별도 하나씩을 저장 됩니다. 아래에 예가 나와 있습니다.
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. Linux 시작 될 때 파일 시스템에서 탑재 합니다. 만 Pacemaker iSCSI 디스크를 탑재할 수 있도록 루트 파일 시스템 이미지를 다시 작성 합니다. 
@@ -417,4 +416,3 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
 [9]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/50-ExampleCreateSSMS.png
 [10]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/40-Create25GBVol.png
 [11]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/55-ListOfVGs.png
-

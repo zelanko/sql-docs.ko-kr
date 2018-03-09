@@ -1,5 +1,5 @@
 ---
-title: "사용자 지정 태스크를 개발 | Microsoft Docs"
+title: "사용자 지정 태스크 개발 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-caps.latest.revision: 67
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a6f9c16453365ce5b7a278f352c8cec8d86c2780
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 173662d19cd2cfa26962ff31b81f4edf5a2ee88e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-task"></a>사용자 지정 태스크 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 태스크를 사용하여 데이터의 추출, 변환 및 로드를 지원하는 작업 단위를 수행합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 SQL 문 실행부터 FTP 사이트의 파일 다운로드에 이르기까지 가장 자주 사용되는 동작을 수행하는 다양한 태스크가 포함되어 있습니다. 포함된 태스크와 지원되는 동작이 요구 사항을 완전히 충족시키지 못할 경우에는 사용자 지정 태스크를 만들 수 있습니다.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="in-this-section"></a>섹션 내용  
  이 섹션에서는 사용자 지정 태스크와 선택 사항인 태스크의 사용자 지정 사용자 인터페이스를 만들고 구성하고 코딩하는 방법을 설명합니다.  
   
- [사용자 지정 작업 만들기](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)  
+ [사용자 지정 태스크 만들기](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)  
  사용자 지정 태스크를 만드는 첫 번째 단계를 설명합니다.  
   
  [사용자 지정 태스크 코딩](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)  
@@ -57,16 +55,16 @@ ms.lasthandoff: 08/03/2017
  [사용자 지정 태스크에서 데이터 원본에 연결](../../../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
  사용자 지정 태스크를 데이터 원본에 연결하는 방법에 대해 설명합니다.  
   
- [이벤트 발생 및 정의에 사용자 지정 작업](../../../integration-services/extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md)  
+ [사용자 지정 태스크에서 이벤트 발생 및 정의](../../../integration-services/extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md)  
  사용자 지정 태스크에서 이벤트를 발생시키고 사용자 지정 이벤트를 정의하는 방법에 대해 설명합니다.  
   
- [사용자 지정 태스크에서 디버깅에 대 한 지원 추가](../../../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md)  
+ [사용자 지정 태스크에 디버깅 지원 추가](../../../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md)  
  사용자 지정 태스크에 중단점 대상을 만드는 방법에 대해 설명합니다.  
   
- [사용자 지정 태스크에 대 한 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+ [사용자 지정 태스크의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에 표시되는 사용자 인터페이스를 만들어 사용자 지정 태스크의 속성을 구성하는 방법에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
   
 ### <a name="information-common-to-all-custom-objects"></a>모든 사용자 지정 개체에 대한 일반적인 정보  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 만들 수 있는 모든 사용자 지정 개체 유형에 공통적인 내용은 다음 항목을 참조하십시오.  
@@ -95,9 +93,8 @@ ms.lasthandoff: 08/03/2017
  [사용자 지정 데이터 흐름 구성 요소 개발](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  사용자 지정 데이터 흐름 원본, 변환 및 대상을 프로그래밍하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [스크립트 태스크를 사용 하 여 패키지를 확장합니다.](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
- [스크립팅 솔루션과 사용자 지정 개체를 비교합니다.](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
+## <a name="see-also"></a>참고 항목  
+ [스크립트 태스크를 사용하여 패키지 확장](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
+ [스크립팅 솔루션과 사용자 지정 개체 비교](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   
-

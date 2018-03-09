@@ -5,34 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ConfigDSN
-apilocation:
-- sqlsrv32.dll
+apiname: ConfigDSN
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- ConfigDSN
-helpviewer_keywords:
-- ConfigDSN [ODBC]
+f1_keywords: ConfigDSN
+helpviewer_keywords: ConfigDSN [ODBC]
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b82eb128f125415d3dbdb24ffc616dbeccc5e938
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 491396da26d75d6710e708b840c9407b4a976bb9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configdsn-function"></a>ConfigDSN 함수
 **규칙**  
@@ -77,7 +71,7 @@ BOOL ConfigDSN(
 ## <a name="diagnostics"></a>진단  
  때 **ConfigDSN** 관련 FALSE를 반환  *\*pfErrorCode* 를 호출 하 여 설치 관리자 오류 버퍼에 값이 게시 **SQLPostInstallerError** 및 호출 하 여 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|잘못 된 창 핸들|*창은* 인수가 잘못 되었습니다.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|잘못 된 키워드-값 쌍|*lpszAttributes* 인수에 구문 오류가 포함 되어 있습니다.|  
@@ -86,7 +80,7 @@ BOOL ConfigDSN(
 |ODBC_ERROR_REQUEST_FAILED|*요청* 실패|요청한 작업을 수행할 수 없습니다는 *문제점과* 인수입니다.|  
 |ODBC_ERROR_DRIVER_SPECIFIC|드라이버 또는 변환기 관련 오류|정의 된 ODBC 설치 관리자 오류가 없는 드라이버 관련 오류가 발생 했습니다. *SzError* 에 대 한 호출의 인수는 **SQLPostInstallerError** 함수에는 드라이버 특정 오류 메시지가 포함 되어 있어야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **ConfigDSN** 키워드-값 쌍의 형식에 특성의 목록으로 DLL 설치 관리자에서 연결 정보를 받습니다. 각 쌍은 null 바이트를으로 종료 되 고 전체 목록을 바이트 null로 종료 됩니다. (즉, 두 개의 null 바이트의 끝을 표시 목록입니다.) 키워드 / 값 쌍의 등호 엔 공백이 허용 되지 않습니다. **ConfigDSN** 키워드에 대 한 유효한 키워드를 수락할 수 있는 **SQLBrowseConnect** 및 **SQLDriverConnect**합니다. **ConfigDSN** 에서는 반드시 지원에 대 한 유효한 키워드는 모든 키워드 **SQLBrowseConnect** 및 **SQLDriverConnect**합니다. (**ConfigDSN** 을 허용 하지 않습니다는 **드라이버** 키워드입니다.) 사용 하는 키워드는 **ConfigDSN** 함수는 다시 설치 프로그램의 자동 설정 기능을 사용 하 여 데이터 소스를 만드는 데 필요한 모든 옵션을 지원 해야 합니다. 때의 용도 **ConfigDSN** 값과 연결 문자열 값은 동일한, 동일한 키워드를 사용 해야 합니다.  
   
  와 같이 **SQLBrowseConnect** 및 **SQLDriverConnect**, 키워드 및 해당 값 포함 되 면 안는 **{} (),? \*=! @** 문자와의 값은 **DSN** 키워드 공백으로 구성 될 수 없습니다. 키워드 및 데이터 원본 이름 레지스트리 문법 때문에 백슬래시를 포함할 수 없습니다 (\\) 문자.  
@@ -134,4 +128,3 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
 |Odbc.ini (또는 레지스트리)에서 제거 하는 데이터 원본 이름|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
 |데이터 원본 이름을 Odbc.ini (또는 레지스트리)에 추가|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|  
 |Odbc.ini 파일 또는 레지스트리 값을 쓸|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|
-

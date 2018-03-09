@@ -2,29 +2,32 @@
 title: "사용자 정의 계층의 특성 관계 4-6 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8db9cd243cb27505bfda4eb2342802b8bb588ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77b8a5621b71eec40546d79d73ab1672dfff6a7e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>사용자 정의 계층의 특성 관계 4-6 지정
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 이 자습서에서 이미 설명한 대로 특성 계층을 사용자 계층 안에 수준으로 구성하여 큐브 사용자를 위한 탐색 경로를 제공할 수 있습니다. 사용자 계층은 구/군/시, 시/도 및 국가와 같은 자연 계층을 나타내거나 직원 이름, 직책 및 부서 이름과 같은 탐색 경로를 나타낼 수 있습니다. 계층을 탐색하는 사용자에게는 이 두 가지 유형의 사용자 계층이 동일합니다.  
   
 자연 계층에서는 수준을 구성하는 특성 간의 특성 관계를 정의하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 특정한 특성의 집계를 사용하여 관련 특성에서 결과를 가져올 수 있습니다. 특성 간에 정의된 관계가 없으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 가 키 특성에서 키가 아닌 특성을 모두 집계합니다. 따라서 기본 데이터가 특성 관계를 지원하는 경우 특성 간의 특성 관계를 정의해야 합니다. 특성 관계를 정의하면 차원, 파티션 및 쿼리 처리 성능이 개선됩니다. 자세한 내용은 [특성 관계 정의](../analysis-services/multidimensional-models/attribute-relationships-define.md) 및 [특성 관계](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)를 참조하세요.  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  다이어그램에서 **Full Name** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-4.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Full Name**입니다. **관련 특성** 을 **Postal Code**로 설정합니다. 멤버 간의 관계는 시간이 지나면 변경될 수 있으므로 **관계 유형** 목록에서 관계 유형을 **유동** 으로 설정된 상태로 둡니다.  
+4.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Full Name**입니다. **관련 특성** 을 **Postal Code**로 설정합니다. 멤버 간의 관계는 시간이 지나면 변경될 수 있으므로 **관계 유형** 목록에서 관계 유형을 **유동**으로 설정된 상태로 둡니다.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -111,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  다이어그램에서 **Model Name** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-3.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Model Name**입니다. **관련 특성** 을 **Product Line**으로 설정합니다. **관계 유형** 목록에서 관계 유형을 **유동**으로 설정된 상태로 둡니다.  
+3.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Model Name**입니다. **관련 특성**을 **Product Line**으로 설정합니다. **관계 유형** 목록에서 관계 유형을 **유동**으로 설정된 상태로 둡니다.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -141,19 +144,19 @@ ms.lasthandoff: 11/17/2017
   
 1.  다이어그램에서 **Month Name** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-2.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Month Name**입니다. **관련 특성** 을 **Calendar Quarter**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
+2.  **특성 관계 만들기** 대화 상자에서 **원본 특성**은 **Month Name**입니다. **관련 특성** 을 **Calendar Quarter**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  다이어그램에서 **Calendar Quarter** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-5.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Calendar Quarter**입니다. **관련 특성** 을 **Calendar Semester**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
+5.  **특성 관계 만들기** 대화 상자에서 **원본 특성**은 **Calendar Quarter**입니다. **관련 특성** 을 **Calendar Semester**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  다이어그램에서 **Calendar Semester** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-8.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Calendar Semester**입니다. **관련 특성** 을 **Calendar Year**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
+8.  **특성 관계 만들기** 대화 상자에서 **원본 특성**은 **Calendar Semester**입니다. **관련 특성** 을 **Calendar Year**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -169,7 +172,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  다이어그램에서 **City** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-6.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **City**입니다. **관련 특성** 을 **State-Province**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
+6.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **City**입니다. **관련 특성**을 **State-Province**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -190,7 +193,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [알 수 없는 멤버 및 Null 처리 속성 정의](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [특성 관계 정의](../analysis-services/multidimensional-models/attribute-relationships-define.md)  
 [사용자 계층 속성](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

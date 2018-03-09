@@ -2,11 +2,13 @@
 title: "CREATE SESSION CUBE 문 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,26 +19,24 @@ f1_keywords:
 - CREATE SESSION CUBE
 - CREATE SESSION
 - CREATE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - CREATE SESSION CUBE
 - statements [MDX], CREATE SESSION CUBE
 ms.assetid: 06b90f44-d943-4a52-b0d8-4bcbc57ed6ec
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: be395f43e1a372e54f9759edcf58d0b35f03d15c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 14556669f6c39977fa1f82d8fbe6a2edff927837
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX 데이터 정의-세션 큐브 만들기
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   기존 서버 큐브에서 세션 큐브를 만들고 채웁니다. 세션 큐브는 현재 세션 내에서만 볼 수 있고 다른 세션에서 찾아보거나 쿼리할 수 없습니다.  세션 큐브는 세션을 닫을 때 암시적으로 삭제됩니다.  
   
@@ -218,9 +218,8 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
    )  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [GLOBAL CUBE 문 &#40; 만들기 Mdx&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   
   
-

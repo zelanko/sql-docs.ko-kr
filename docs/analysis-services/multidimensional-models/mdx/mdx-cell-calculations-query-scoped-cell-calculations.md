@@ -2,35 +2,33 @@
 title: "쿼리 범위 셀 계산 만들기 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d6b38d88d6a9bf5ba180a9023a962199633a6a4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34ef680e855c0a6b29363923ba6984189a4e9119
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>MDX 셀 계산-쿼리 범위 셀 계산 만들기
-  MDX에서 **WITH** 키워드를 사용하여 쿼리 컨텍스트 내의 계산 셀을 설명합니다. **WITH** 키워드는 다음 구문을 가집니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+MDX에서 **WITH** 키워드를 사용하여 쿼리 컨텍스트 내의 계산 셀을 설명합니다. **WITH** 키워드는 다음 구문을 가집니다.  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -63,6 +61,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  한편으로 MDX는 계산 셀 정의에 포함된 셀과 관련된 큐브에 대해 MDX 쿼리를 실행할 때마다 계산 수식을 처리합니다. 작성 범위에 상관없이 이렇게 처리됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [CREATE CELL CALCULATION 문&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [CELL CALCULATION 문 &#40; 만들기 Mdx&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

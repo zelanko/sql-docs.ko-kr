@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - connOra
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1f8d78348d21f48a19ba05a55de836520a0afd6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9875bb277ead7ce75ce8fa4f87fe42a7a03bba56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-oracle"></a>Oracle에 연결
   CDC 인스턴스에 사용되는 테이블을 처음으로 추가하거나 편집하는 경우 Oracle 데이터베이스에 연결하라는 메시지가 표시됩니다. 캡처할 테이블의 스키마에 액세스할 수 있는 Oracle 사용자의 자격 증명을 입력해야 합니다. 이 대화 상자에 다음을 입력합니다.  
@@ -38,8 +37,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Oracle 인증**: 이 옵션을 선택하는 경우 연결 중인 Oracle 데이터베이스의 사용자에 대한 **사용자 이름** 과 **암호** 를 입력해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CDC 인스턴스에 테이블 추가](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
   
   
-

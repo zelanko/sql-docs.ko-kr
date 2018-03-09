@@ -2,43 +2,49 @@
 title: "Lock:Deadlock 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Deadlock event class
+helpviewer_keywords:
+- Deadlock event class
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9ca6119d3c4972e4b9edb758c62891da536c24d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7b4cd55a7d886e6d3eb6f979898cbf7f85d0e9a6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 이벤트 클래스
-  Lock:Deadlock 이벤트 클래스는 잠금을 얻으려고 시도하는 동안 교착 상태가 발생하여 이 시도가 취소될 때 생성됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Lock:Deadlock 이벤트 클래스는 잠금을 얻으려고 시도하는 동안 교착 상태가 발생하여 이 시도가 취소될 때 생성됩니다.  
   
  Lock:Deadlock 이벤트 클래스를 사용하여 교착 상태 발생 시기와 관련된 개체를 모니터링할 수 있습니다. 이 정보를 사용하면 교착 상태로 인해 응용 프로그램 성능이 심하게 저하되는지 여부를 확인할 수 있습니다. 그러면 응용 프로그램 코드를 조사하여 교착 상태를 최소화하도록 변경할 수 있는지 알 수 있습니다.  
   
 ## <a name="lockdeadlock-event-class-data-columns"></a>Lock:Deadlock 이벤트 클래스 데이터 열  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|예|  
 |BinaryData|**image**|잠금 리소스 식별자입니다.|2|예|  
 |ClientProcessID|**int**|클라이언트 응용 프로그램이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|**int**|잠금을 획득한 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|**nvarchar**|잠금을 얻은 데이터베이스 이름입니다.|35|예|  
-|기간|**bigint**|잠금 요청이 발생한 시간과 교착 상태가 발생한 시간 사이의 간격(마이크로초)입니다.|13|예|  
+|Duration|**bigint**|잠금 요청이 발생한 시간과 교착 상태가 발생한 시간 사이의 간격(마이크로초)입니다.|13|예|  
 |EndTime|**datetime**|교착 상태가 끝난 시간입니다.|15|예|  
-|EventClass|**int**|이벤트 유형 = 25|27|아니요|  
-|EventSequence|**int**|요청 내의 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventClass|**int**|이벤트 유형 = 25|27|아니오|  
+|EventSequence|**int**|요청 내의 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |GroupID|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IntegerData|**int**|교착 상태 번호입니다. 서버가 시작되면 번호가 0부터 시작되어 교착 상태마다 증가합니다.|25|예|  
@@ -53,7 +59,7 @@ ms.lasthandoff: 11/09/2017
 |ObjectID2|**bigint**|관련 개체 또는 엔터티의 ID입니다(사용 및 적용 가능한 경우).|56|예|  
 |OwnerID|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|예|  
 |RequestID|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
-|데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
+|데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니오|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |StartTime|**datetime**|사용 가능한 경우 이벤트가 시작된 시간입니다.|14|예|  

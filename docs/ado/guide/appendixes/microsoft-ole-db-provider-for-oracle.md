@@ -3,7 +3,7 @@ title: Microsoft OLE DB Provider for Oracle | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d92236375a3ac152dbe7f5a2f259ce2a5f2edb79
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 개요
 > [!IMPORTANT]
@@ -75,9 +74,8 @@ MSDAORA
 |**창 핸들**|추가 정보에 대 한 메시지를 표시 하는 데 창 핸들을 나타냅니다.|
 |**로캘 ID**|사용자의 언어와 관련 된 기본 설정을 지정 하는 (예: 1033)는 고유 32 비트 숫자를 나타냅니다. 이러한 기본 설정을 나타내는 날짜 및 시간 서식이 지정 되 방법을 항목이 사전순으로 정렬 되는 문자열을 비교 하 고, 합니다.|
 |**OLE DB 서비스**|OLE DB 서비스를 사용 하거나 사용 하지 않도록 지정 하는 비트 마스크를 나타냅니다.|
-|**메시지를 표시합니다**|연결이 설정 되는 동안 사용자에 게 확인 여부를 나타냅니다.|
+|**Prompt**|연결이 설정 되는 동안 사용자에 게 확인 여부를 나타냅니다.|
 |**확장된 속성**|공급자별 확장된 연결 정보를 포함 하는 문자열입니다. 속성 메커니즘을 통해 설명할 수 없는 공급자 특정 연결 정보에 대해서만이 속성을 사용 합니다.|
 
 ## <a name="see-also"></a>관련 항목:
  [ConnectionString 속성 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Provider 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [(ADO) 레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md)
-

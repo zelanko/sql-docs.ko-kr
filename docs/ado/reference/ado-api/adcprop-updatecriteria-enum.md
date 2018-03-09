@@ -3,7 +3,7 @@ title: ADCPROP_UPDATECRITERIA_ENUM | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,24 +18,23 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_UPDATECRITERIA_ENUM [ADO]
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cf0c00fb7f353171686f57405879b3beb544aa1d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 730a97c27d4aa57632ecf14b0f5cbddffb689d70
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 지정 된 데이터 원본의 행의 낙관적 업데이트 하는 동안 충돌을 검색 하는 필드를 사용할 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
   
  이러한 상수를 사용 하 여는 **레코드 집합** "**업데이트 조건**"에서 참조 되는 동적 속성은 [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 는에설명되어[ OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 설명서입니다.  
   
-|상수|값|Description|  
+|상수|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adCriteriaAllCols**|1.|데이터 원본 행의 모든 열이 변경 된 경우 충돌을 검색 합니다.|  
 |**adCriteriaKey**|0|키 열 데이터의 원본 행이 변경 된 경우 충돌, 즉, 해당 행이 삭제를 검색 합니다.|  
@@ -43,7 +42,7 @@ ms.lasthandoff: 09/09/2017
 |**adCriteriaUpdCols**|2|업데이트 된 필드에 해당 하는 행의 데이터 원본의 열 경우 충돌 감지는 **레코드 집합** 변경 되었습니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
- 패키지에 대 한 **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |상수|  
 |--------------|  
@@ -51,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |AdoEnums.AdcPropUpdateCriteria.KEY|  
 |AdoEnums.AdcPropUpdateCriteria.TIMESTAMP|  
 |AdoEnums.AdcPropUpdateCriteria.UPDCOLS|
-

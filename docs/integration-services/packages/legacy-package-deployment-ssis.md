@@ -1,5 +1,5 @@
 ---
-title: "레거시 패키지 배포 (SSIS) | Microsoft Docs"
+title: "레거시 패키지 배포(SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,17 +34,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: f0a4d37996a1add0c028f9481b1dc232190a19a3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="legacy-package-deployment-ssis"></a>레거시 패키지 배포(SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지를 배포 컴퓨터에서 프로덕션 서버나 다른 컴퓨터로 손쉽게 배포할 수 있는 도구와 마법사가 포함되어 있습니다.  
@@ -153,7 +152,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="registry-entry"></a>레지스트리 항목  
  레지스트리 항목을 사용하여 구성을 저장하려면 기존 키를 사용하거나 HKEY_CURRENT_USER에서 새 키를 만들 수 있습니다. **Value**값이 있는 레지스트리 키를 사용해야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.  
   
- **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<레지스트리 키 >입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용 하려면 형식을 사용 \<레지스트리 키 키\\... > 키를 식별 합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용하려면 **SSISPackages\MyPackage**를 입력합니다.  
+ **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<레지스트리 키>입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용하려면 **SSISPackages\MyPackage**를 입력합니다.  
   
 #### <a name="sql-server"></a>SQL Server  
  **SQL Server** 구성 유형을 선택한 경우 구성을 저장할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결을 지정하십시오. 기존 테이블에 구성을 저장하거나 지정한 데이터베이스에 새 테이블을 만들 수 있습니다.  
@@ -223,7 +222,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  다음 표에서는 **패키지 구성 도우미** 대화 상자 구성 목록의 열에 대해 설명합니다.  
   
-|열|Description|  
+|Column|Description|  
 |------------|-----------------|  
 |**구성 이름**|구성의 이름입니다.|  
 |**구성 유형**|구성의 유형입니다.|  
@@ -268,7 +267,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  패키지 구성은 런타임 시 패키지 개체의 속성 값을 업데이트합니다. 패키지가 로드되면 구성의 값이 패키지 개발 시 설정한 값을 대체합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 여러 가지 구성 유형을 지원합니다. 예를 들어 여러 구성이 포함될 수 있는 XML 파일이나 단일 구성이 포함되는 환경 변수를 사용할 수 있습니다. 자세한 내용은 [Package Configurations](../../integration-services/packages/package-configurations.md)을 참조하세요.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **패키지 구성 설정**  
  패키지에 구성을 사용하려면 선택합니다.  
   
@@ -309,7 +308,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="welcome-to-the-package-configuration-wizard-page"></a>패키지 구성 마법사 시작 페이지  
  **SSIS 구성 마법사** 를 사용하여 런타임에 패키지 및 패키지 개체의 속성을 업데이트하는 구성을 만들 수 있습니다.  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  **이 페이지를 다시 표시 안 함**  
  다음에 마법사를 열 때 시작 페이지를 표시하지 않습니다.  
   
@@ -325,7 +324,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 유형**  
  다음 옵션을 사용하여 구성을 저장할 원본 유형을 선택합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**XML 구성 파일**|구성을 XML 파일로 저장합니다. 이 값을 선택하면 **구성 유형**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**환경 변수**|환경 변수 중 하나에 구성을 저장합니다. 이 값을 선택하면 **구성 유형**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -342,7 +341,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**구성 파일 이름**|마법사에서 생성하는 구성 파일의 경로를 입력합니다.|  
 |**찾아보기**|**구성 파일 위치 선택** 대화 상자를 사용하여 마법사에서 생성하는 구성 파일의 경로를 지정할 수 있습니다. 파일이 없으면 마법사에서 새 파일을 생성합니다.|  
@@ -350,7 +349,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용됩니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
@@ -362,14 +361,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
-|**레지스트리 항목**|구성 정보를 포함하는 레지스트리 키를 입력합니다. 형식은 \<레지스트리 키 >입니다.<br /><br /> 레지스트리 키가 HKEY_CURRENT_USER에 이미 있어야 하고 Value라고 지정된 값을 가져야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.<br /><br /> HKEY_CURRENT_USER의 루트에 키가 레지스트리를 사용 하려는 경우 형식을 사용 \<레지스트리 키 키\\... > 키를 식별 합니다.|  
+|**레지스트리 항목**|구성 정보를 포함하는 레지스트리 키를 입력합니다. 형식은 \<레지스트리 키>입니다.<br /><br /> 레지스트리 키가 HKEY_CURRENT_USER에 이미 있어야 하고 Value라고 지정된 값을 가져야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.<br /><br /> HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다.|  
   
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용됩니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
@@ -377,14 +376,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**부모 변수**|구성 정보를 포함하는 부모 패키지의 변수를 지정합니다.|  
   
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용됩니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
@@ -392,23 +391,23 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
-|**연결**|목록에서 연결을 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다.|  
+|**대량 삽입 태스크 편집기**|목록에서 연결을 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다.|  
 |**구성 테이블**|기존 테이블을 선택하거나 **새로 만들기** 를 클릭하여 새 테이블을 만드는 SQL 문을 작성합니다.|  
 |**구성 필터**|기존 구성 이름을 선택하거나 새 이름을 입력합니다.<br /><br /> 같은 테이블에 여러 SQL Server 구성을 저장할 수 있으며 각 구성은 여러 구성 항목을 포함할 수 있습니다.<br /><br /> 이 사용자 정의 값은 특정 구성에 속하는 구성 항목을 식별하기 위해 테이블에 저장됩니다.|  
   
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
 ### <a name="select-objects-to-export-page"></a>내보낼 개체 선택 페이지  
  **대상 속성 선택 또는 내보낼 속성 선택** 페이지를 사용하여 구성에 포함할 개체 속성을 지정할 수 있습니다. 여러 속성을 선택하는 기능은 XML 구성 유형을 선택하는 경우에만 사용할 수 있습니다.  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  **개체**  
  패키지 계층을 확장하고 내보낼 속성을 선택합니다.  
   
@@ -421,7 +420,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="completing-the-wizard-page"></a>마법사 완료 페이지  
  **마법사 완료** 페이지를 사용하여 구성의 이름을 지정하고 마법사에서 구성을 만드는 데 사용하는 설정을 볼 수 있습니다. 마법사를 완료하면 패키지의 모든 구성을 나열하는 **패키지 구성 도우미** 가 표시됩니다.  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  **구성 이름**  
  구성의 이름을 입력합니다.  
   
@@ -431,7 +430,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **마침**  
  구성을 만든 다음 **패키지 구성 마법사**를 종료합니다.  
 
-## <a name="child"></a>자식 패키지에서 변수 및 매개 변수의 값을 사용 합니다.
+## <a name="child"></a> 자식 패키지에서 변수 및 매개 변수의 값 사용
   이 절차에서는 부모 변수 구성 유형을 사용하는 패키지 구성을 만드는 방법에 대해 설명합니다. 이 구성 유형을 사용하여 부모 패키지에서 실행되는 자식 패키지가 부모 변수에 액세스하도록 설정할 수 있습니다.  
   
 > [!NOTE]  
@@ -477,7 +476,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 5.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 
-## <a name="create-a-deployment-utility"></a>배포 유틸리티 만들기
+## <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   패키지를 배포하는 첫 번째 단계는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 배포 유틸리티를 만드는 것입니다. 배포 유틸리티는 다른 서버로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 패키지를 배포하는 데 필요한 파일이 포함된 폴더입니다. 배포 유틸리티는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트가 저장된 컴퓨터에 만들어집니다.  
   
  먼저 배포 유틸리티를 만들도록 빌드 프로세스를 구성한 다음 프로젝트를 빌드하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 패키지 배포 유틸리티를 만들 수 있습니다. 프로젝트를 빌드할 때 프로젝트의 모든 패키지와 패키지 구성은 자동으로 포함됩니다. 추가 정보 파일 등의 추가 파일을 프로젝트와 함께 배포하려면 해당 파일을 **프로젝트의** 기타 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 폴더에 저장하십시오. 프로젝트가 빌드될 때 이러한 파일도 자동으로 포함됩니다.  
@@ -492,7 +491,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |CreateDeploymentUtility|프로젝트를 빌드할 때 패키지 배포 유틸리티를 만들지 여부를 지정하는 값입니다. 배포 유틸리티를 만들려면 이 속성을 **True** 로 설정합니다.|  
 |DeploymentOutputPath|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트와 관련된 배포 유틸리티의 위치입니다.|  
   
- 작성 하는 경우는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트, 매니페스트 파일 \<프로젝트 이름 >. X m l 만들어지고 프로젝트 패키지와 프로젝트의 bin\Deployment 폴더 또는 DeploymentOutputPath 속성에 지정 된 위치에 같은 패키지 종속 파일의 복사본과 함께 추가 됩니다. 매니페스트 파일은 프로젝트의 패키지, 패키지 구성 및 모든 기타 파일을 나열합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 빌드하면 매니페스트 파일인 \<project name>.SSISDeploymentManifest.xml이 패키지 종속 관계 및 패키지의 복사본과 함께 프로젝트의 bin\Deployment 폴더 또는 DeploymentOutputPath 속성에서 지정한 위치에 만들어지고 추가됩니다. 매니페스트 파일은 프로젝트의 패키지, 패키지 구성 및 모든 기타 파일을 나열합니다.  
   
  배포 폴더의 내용은 프로젝트를 작성할 때마다 새로 고쳐집니다. 즉, 배포 폴더에 저장되었지만 빌드 프로세스로 폴더에 다시 복사되지 않은 파일은 모두 삭제됩니다. 예를 들어 배포 폴더에 저장된 패키지 구성 파일은 삭제되지 않습니다.  
   
@@ -502,7 +501,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  에  **\<프로젝트 이름 > 속성 페이지** 대화 상자를 클릭 **배포 유틸리티**합니다.  
+3.  **\<프로젝트 이름> 속성 페이지** 대화 상자에서 **배포 유틸리티**를 클릭합니다.  
   
 4.  패키지를 배포할 때 패키지 구성을 업데이트하려면 **AllowConfigurationChanges** 를 **True**로 설정합니다.  
   
@@ -521,7 +520,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  배포 폴더의 경로는 배포 유틸리티를 만든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 DeploymentOutputPath 속성에 지정됩니다. 기본 경로는 bin\Deployment이며 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 상대적입니다. 자세한 내용은 [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md)를 참조하세요.  
   
- 패키지 설치 마법사를 사용하여 패키지를 설치합니다. 마법사를 시작하려면 배포 폴더를 서버로 복사한 다음 배포 유틸리티 파일을 두 번 클릭합니다. 이 파일 이름은 \<프로젝트 이름 >. SSISDeploymentManifest, 대상 컴퓨터에 배포 폴더에서 찾을 수 있습니다.  
+ 패키지 설치 마법사를 사용하여 패키지를 설치합니다. 마법사를 시작하려면 배포 폴더를 서버로 복사한 다음 배포 유틸리티 파일을 두 번 클릭합니다. 이 파일의 이름은 \<프로젝트 이름>.SSISDeploymentManifest이며 대상 컴퓨터의 배포 폴더에 있습니다.  
   
 > [!NOTE]  
 >  배포하는 패키지의 버전에 따라 여러 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 함께 설치할 경우 오류가 발생할 수 있습니다. 이 오류는 .SSISDeploymentManifest 파일 이름 확장명이 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]버전에서 동일하기 때문에 발생할 수 있습니다. 파일을 두 번 클릭하면 가장 최근에 설치된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]버전의 설치 관리자가 호출되며 이 버전이 배포 유틸리티 파일과 동일한 버전이 아닐 수 있습니다. 이 문제를 해결하려면 명령줄에서 정확한 버전의 dtsinstall.exe를 실행한 후 배포 유틸리티 파일의 경로를 입력합니다.  
@@ -544,7 +543,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  대상 컴퓨터에서 배포 폴더를 엽니다.  
   
-2.  매니페스트 파일을 두 번 \<프로젝트 이름 >. SSISDeploymentManifest 패키지 설치 마법사를 시작 합니다.  
+2.  매니페스트 파일 \<프로젝트 이름>.SSISDeploymentManifest를 두 번 클릭하여 패키지 설치 마법사를 시작합니다.  
   
 3.  **SSIS 패키지 배포** 페이지에서 **SQL Server 배포** 옵션을 선택합니다.  
   
@@ -590,7 +589,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="configure-packages-page"></a>패키지 구성 페이지  
  **패키지 구성** 페이지를 사용하여 패키지 구성을 편집할 수 있습니다.  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  **구성 파일**  
  목록에서 파일을 선택하여 구성 파일의 내용을 편집합니다.  
   
@@ -602,7 +601,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **형식**  
  속성의 데이터 형식을 봅니다.  
   
- **값**  
+ **Value**  
  구성의 값을 지정합니다.  
   
  **다음**  
@@ -626,7 +625,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="deploy-ssis-packages-page"></a>SSIS 패키지 배포 페이지  
  **SSIS 패키지 배포** 페이지를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 및 해당 종속성을 설치할 위치를 지정할 수 있습니다.  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  **파일 시스템 배포**  
  파일 시스템에서 지정한 폴더에 패키지 및 종속성을 배포합니다.  
   
@@ -651,7 +650,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-installation-folder-page"></a>설치 폴더 선택 페이지  
  **설치 폴더 선택** 페이지를 사용하여 패키지 및 패키지의 종속성을 설치할 파일 시스템 폴더를 지정할 수 있습니다.  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  **Folder**  
  패키지 및 해당 패키지의 종속성을 복사할 경로 및 폴더를 지정합니다.  
   
@@ -667,7 +666,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="specify-target-sql-server-page"></a>대상 SQL Server 지정 페이지  
  **대상 SQL Server 지정** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 패키지를 배포할 수 있는 옵션을 지정할 수 있습니다.  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  **서버 이름**  
  패키지를 배포할 서버의 이름을 지정합니다.  
   
@@ -677,7 +676,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **SQL Server 인증 사용**  
  패키지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 서버에 로그온하도록 할지 여부를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름과 암호를 입력해야 합니다.  
   
- **사용자 이름**  
+ **User name**  
  사용자 이름을 지정합니다.  
   
  **암호**  
@@ -705,5 +704,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **마침**  
  **마침**을 클릭하여 마법사를 종료합니다.  
-
 

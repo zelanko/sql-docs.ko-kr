@@ -3,7 +3,7 @@ title: "JScript 코드 예제에서는 레코드 집합을 반환 하려면 | Mi
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7c9c767413fefb4f35e2f3ac60ebcf52323efd2b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: edecd6bcaf8cb7547cf026f68edaf72767c57659
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>JScript 코드 예제에서는 레코드 집합을 반환 하려면
 ## <a name="jscript-code-rsjs"></a>JScript 코드 (rs.js)  
@@ -94,4 +93,3 @@ function alert(str)
 2.  명령 프롬프트 및 cd JScript 파일 (rs.js)를 저장 한 디렉터리를 엽니다.  
   
 3.  형식 `CScript rs.js` 명령 프롬프트에서 합니다.
-

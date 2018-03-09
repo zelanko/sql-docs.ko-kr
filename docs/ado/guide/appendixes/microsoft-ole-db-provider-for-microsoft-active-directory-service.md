@@ -3,7 +3,7 @@ title: "Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provide
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 3824623cb28c6902b4a96542f149e537df41cb5d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc6946f6944cf37f85759847f2c8db852d120461
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provider
 서비스 인터페이스 ADSI (Active Directory) 공급자 ADO를 ADSI 통해 유형이 다른 디렉터리 서비스에 연결할 수 있습니다. 그러면 ADO 응용 프로그램에서는 읽기 전용 액세스할 모든 LDAP 호환 디렉터리 서비스 및 Novell 디렉터리 서비스 외에 Microsoft Windows NT 4.0 및 Microsoft Windows 2000 디렉터리 서비스에 있습니다. ADO 응용 프로그램 원활 하 게 액세스할 수 없는 경우 다른 디렉터리에 새 공급자 주어진 액세스, 있도록 ADSI 자체 공급자 모델에 기반 합니다. ADSI 공급자는 자유 스레드 및 유니코드를 사용할 수 있습니다.  
@@ -67,10 +66,10 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*Root*|나타냅니다는 **ADsPath** 개체 (즉, 검색의 루트) 검색을 시작할입니다.|  
-|*Assert*|RFC 1960 형식에서 검색 필터를 나타냅니다.|  
+|*필터*|RFC 1960 형식에서 검색 필터를 나타냅니다.|  
 |*특성*|쉼표로 구분 된 목록이 반환 될 특성을 나타냅니다.|  
 |*범위*|(선택 사항) A **문자열** 검색 범위를 지정 하는 합니다. 다음 중 하나일 수 있습니다.<br /><br /> 밑수가-기준 개체 (검색의 루트)를 검색 합니다.<br />-기준 개체를 검색 한 수준입니다.<br />-하위 트리-전체 하위 트리를 검색 합니다.|  
   
@@ -103,15 +102,15 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|읽기/쓰기|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|읽기 전용|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|읽기 전용|  
-|[책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md)|읽기/쓰기|  
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|읽기/쓰기|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|읽기/쓰기|  
-|[앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|항상 **가 adUseServer**|  
-|[모두](../../../ado/reference/ado-api/cursortype-property-ado.md)|항상 **adOpenStatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|항상 **adEditNone**|  
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|  
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|읽기 전용|  
-|[Assert](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|  
+|[필터](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|읽기/쓰기|  
-|[마샬링](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|사용할 수 없음|  
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|사용할 수 없음|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|읽기/쓰기|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|읽기 전용|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|읽기/쓰기|  
@@ -139,10 +138,10 @@ objectClass='user' AND objectCategory='Person'"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|예|  
 |[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|  
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|  
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|예|  
 |[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|  
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|아니요|  
+|[업데이트](../../../ado/reference/ado-api/update-method.md)|아니요|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|  
   
  ADSI 및 공급자의 세부 사항에 대 한 자세한 내용은 Active Directory 서비스 인터페이스 설명서를 참조 하거나 ADSI 웹 페이지를 방문 하십시오.  
@@ -154,4 +153,3 @@ objectClass='user' AND objectCategory='Person'"
  [공급자 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports 메서드](../../../ado/reference/ado-api/supports-method.md)
-

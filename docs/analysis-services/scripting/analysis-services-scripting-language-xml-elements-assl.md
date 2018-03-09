@@ -2,15 +2,13 @@
 title: "Analysis Services Scripting Language XML 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -21,20 +19,20 @@ helpviewer_keywords:
 - elements [Analysis Services Scripting Language]
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 87d59c2d4041cbb7267054d2a691e0e39745827a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: af8401c0f7fb3b4e5a9088bc3698ce83fad70119
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Analysis Services Scripting Language XML 요소(ASSL)
-  ASSL(Analysis Services Scripting Language) 스키마는 XML 요소만 포함하지만 개발자 관점에서 이러한 요소는 다음 개념에 해당합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+ASSL(Analysis Services Scripting Language) 스키마는 XML 요소만 포함하지만 개발자 관점에서 이러한 요소는 다음 개념에 해당합니다.  
   
 -   와 같은 개체 **데이터베이스**, **큐브**, 및 **차원** 의 인스턴스에서 포함 된 개체의 계층 구조에서 개체 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [스크립팅 언어 &#40; analysis Services ASSL XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

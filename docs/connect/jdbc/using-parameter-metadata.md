@@ -1,7 +1,7 @@
 ---
 title: "매개 변수 메타 데이터를 사용 하 여 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 812e8af3f3b08cf7cd25de64b157cb76657a6b6f
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d50af4d0d22d6042230fed2ee6b989fb7c53408d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-parameter-metadata"></a>매개 변수 메타데이터 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ ms.lasthandoff: 09/09/2017
     
 > [!NOTE]  
 SQLServerParameterMetaData 클래스를 사용 하 여 준비 된 문을 사용 하는 데는 몇 가지 제한이 있습니다. 
-**Microsoft JDBC Driver 6.0 (또는 그 이상) for SQL Server**:으로 이러한 문은 하위 쿼리 및/또는 조인과 JDBC 드라이버는 SELECT, DELETE, INSERT 및 UPDATE 문을 지원 SQL Server 2008 또는 2008 r 2 사용 하면 됩니다. 쿼리 병합도 지원 되지 않습니다 SQLServerParameterMetaData 클래스에 대 한 SQL Server 2008 또는 2008 r 2 사용 하는 경우. SQL Server 2012 이상 버전의 경우 복잡한 쿼리에서 매개 변수 메타데이터가 지원됩니다. 암호화 된 열에 대 한 매개 변수 메타 데이터 검색을 지원 하지 않습니다. **4.1 또는 4.2 SQL Server 용 Microsoft JDBC Driver 4.0와**: The JDBC 드라이버는 이러한 문은 하위 쿼리 및/또는 조인과으로 SELECT, DELETE, INSERT 및 UPDATE 문을 지원 합니다. 쿼리 병합은 또한 SQLServerParameterMetaData 클래스에 대해 지원 되지 않습니다.  
+**Microsoft JDBC Driver 6.0 (또는 그 이상) for SQL Server**:으로 이러한 문은 하위 쿼리 및/또는 조인과 JDBC 드라이버는 SELECT, DELETE, INSERT 및 UPDATE 문을 지원 SQL Server 2008 또는 2008 r 2 사용 하면 됩니다.  
 
-## <a name="see-also"></a>관련 항목:  
- [JDBC 드라이버로 메타데이터 처리](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)  
+쿼리 병합도 지원 되지 않습니다 SQLServerParameterMetaData 클래스에 대 한 SQL Server 2008 또는 2008 r 2 사용 하는 경우. SQL Server 2012 이상 버전의 경우 복잡한 쿼리에서 매개 변수 메타데이터가 지원됩니다.  
+
+암호화 된 열에 대 한 매개 변수 메타 데이터 검색을 지원 하지 않습니다. **Microsoft JDBC Driver 4.1 또는 4.2 for SQL Server와**: The JDBC 드라이버는 이러한 문은 하위 쿼리 및/또는 조인과으로 SELECT, DELETE, INSERT 및 UPDATE 문을 지원 합니다. 쿼리 병합은 또한 SQLServerParameterMetaData 클래스에 대해 지원 되지 않습니다.  
   
   
-

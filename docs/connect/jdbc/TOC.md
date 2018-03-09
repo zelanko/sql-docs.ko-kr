@@ -19,6 +19,7 @@
 ## [추가 JDBC 드라이버 정보 찾기](finding-additional-jdbc-driver-information.md)
 ## [SQL Server용 Microsoft JDBC 드라이버 지원 매트릭스](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
 ## [JDBC 드라이버에 대한 FAQ(질문과 대답)](frequently-asked-questions-faq-for-jdbc-driver.md)
+## [Microsoft JDBC Driver for SQL Server의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 
 
 # [JDBC 드라이버 응용 프로그램 보안](securing-jdbc-driver-applications.md)
 ## [연결 문자열 보안](securing-connection-strings.md)
@@ -36,6 +37,7 @@
 ## [문 및 결과 집합 사용](working-with-statements-and-result-sets.md)
 ## [적응 버퍼링 사용](using-adaptive-buffering.md)
 ## [스파스 열](sparse-columns.md)
+## [JDBC 드라이버에 대한 준비된 문 메타데이터 캐싱](prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 # [JDBC 드라이버 관련 문제 진단](diagnosing-problems-with-the-jdbc-driver.md)
 ## [오류 처리](handling-errors.md)
@@ -63,6 +65,7 @@
 # [JDBC SQL 드라이버에 대한 준수 및 법적 고지](compliance-and-legal-for-the-jdbc-sql-driver.md)
 ## [JDBC 드라이버의 JDBC 4.1 준수](jdbc-4-1-compliance-for-the-jdbc-driver.md)
 ## [JDBC 드라이버의 JDBC 4.2 준수](jdbc-4-2-compliance-for-the-jdbc-driver.md)
+## [JDBC 드라이버의 JDBC 4.3 준수](jdbc-4-3-compliance-for-the-jdbc-driver.md)
 
 # [JDBC SQL 드라이버 프로그래밍 가이드](programming-guide-for-jdbc-sql-driver.md)
 ## [JDBC 드라이버로 SQL Server에 연결](connecting-to-sql-server-with-the-jdbc-driver.md)
@@ -125,3 +128,5 @@
 ### [java.sql.Time 값을 서버에 보내는 방식 구성](configuring-how-java-sql-time-values-are-sent-to-the-server.md)
 ### [SQL 이스케이프 시퀀스 사용](using-sql-escape-sequences.md)
 ### [저장 프로시저가 있는 문 사용](using-statements-with-stored-procedures.md)
+### [Azure Key Vault 샘플 버전 6.0.0](azure-key-vault-sample-version-6.0.0.md)
+### [Azure Key Vault 샘플 버전 6.2.2](azure-key-vault-sample-version-6.2.2.md)

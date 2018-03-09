@@ -3,8 +3,11 @@ title: "nchar 및 nvarchar (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 44
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc7de3b64519f3d0fd1f2e9557ccf7196e3f07a8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 및 nvarchar(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 문자 데이터 형식 중 하나가 고정 길이,입니다 **nchar**, 또는 가변 길이 **nvarchar**, 유니코드 데이터와 사용 하 여 UNICODE ucs-2 문자 집합입니다.
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 고정 길이 유니코드 문자열 데이터. *n*문자열 길이 정의 하며 1과 4,000 사이의 값 이어야 합니다. 저장소 크기는 두 번  *n*  바이트입니다. 데이터 정렬 코드 페이지에서 더블 바이트 문자를 사용할 경우 저장소 크기는 여전히  *n*  바이트입니다. 문자열의 저장소 크기에 따라  *n*  바이트에 대 한 지정 된 값 보다 작을 수 있으며  *n* 합니다. ISO 동의어 **nchar** 는 **national char** 및 **국가별 문자**...
   
 **nvarchar** [(n | **최대** )]  
-가변 길이 유니코드 문자열 데이터입니다. *n*문자열 길이 정의 하며 1에서 4,000 사이가 될 수 있습니다. **최대** 중임을 최대 저장소 크기가 2 ^31-1 바이트 (2GB)입니다. 저장소 크기(바이트)는 입력된 데이터의 실제 길이의 두 배 + 2바이트입니다. ISO 동의어 **nvarchar** 는 **다양 한 national char** 및 **국가별 문자 다양 한**합니다.
+가변 길이 유니코드 문자열 데이터입니다. *n*문자열 길이 정의 하며 1에서 4,000 사이가 될 수 있습니다. **최대** 중임을 최대 저장소 크기가 2 ^31-1 자 (2GB). 저장소 크기(바이트)는 입력된 데이터의 실제 길이의 두 배 + 2바이트입니다. ISO 동의어 **nvarchar** 는 **다양 한 national char** 및 **국가별 문자 다양 한**합니다.
   
 ## <a name="remarks"></a>주의  
 때  *n*  기본 길이 1 데이터 정의 나 변수 선언문에서 지정 하지 않으면 합니다. 때  *n*  기본 길이 30 CAST 함수를 지정 하지 않으면 합니다.
@@ -103,4 +105,3 @@ Test data       More test data
 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)
   
   
-

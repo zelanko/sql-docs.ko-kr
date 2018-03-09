@@ -2,9 +2,12 @@
 title: "복제 모니터에서 게시 및 구독 상태 보기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,18 +24,18 @@ helpviewer_keywords:
 - Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49aca8d99dc0b19f8bcffb7ab101f9393eb1ff43
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ab769d9d4a6c5c311fa6695056ef503999455d8f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>복제 모니터에서 게시 및 구독 상태 보기
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독에 대한 상태 정보가 표시됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독에 대한 상태 정보가 표시됩니다.  
   
 -   게시 상태는 해당 구독의 가장 높은 우선 순위 상태에 의해 결정됩니다. 예를 들어 게시에 대한 특정 구독에 오류가 있고 다른 구독에 성능 문제가 있으면 해당 게시에 대해 오류 상태가 표시됩니다.  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/09/2017
   
 |상태|아이콘|  
 |------------|----------|  
-|오류|![UI 아이콘: 오류](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
+|Error|![UI 아이콘: 오류](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
 |성능 심각|![UI 아이콘: 경고](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
 |실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI icon: replication agent retry")|  
 |확인|none|  
@@ -81,7 +84,7 @@ ms.lasthandoff: 11/09/2017
   
 |상태|아이콘|  
 |------------|----------|  
-|오류|![UI 아이콘: 오류](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
+|Error|![UI 아이콘: 오류](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
 |성능 심각|![UI 아이콘: 경고](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
 |곧 만료됨/만료됨|![UI 아이콘: 경고](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
 |초기화되지 않은 구독|![UI 아이콘: 경고](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
@@ -93,7 +96,7 @@ ms.lasthandoff: 11/09/2017
   
 |상태|아이콘|  
 |------------|----------|  
-|오류|![UI 아이콘: 오류](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
+|Error|![UI 아이콘: 오류](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
 |성능 심각|![UI 아이콘: 경고](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
 |장기 실행 트랜잭션 병합|![UI 아이콘: 경고](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
 |곧 만료됨/만료됨|![UI 아이콘: 경고](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
@@ -106,14 +109,14 @@ ms.lasthandoff: 11/09/2017
   
 |상태|아이콘|  
 |------------|----------|  
-|오류|![UI 아이콘: 오류](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
+|Error|![UI 아이콘: 오류](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI icon: error")|  
 |곧 만료됨/만료됨|![UI 아이콘: 경고](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
 |초기화되지 않은 구독|![UI 아이콘: 경고](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI icon: warning")|  
 |실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI icon: replication agent retry")|  
 |동기화 중|![UI 아이콘: 복제 에이전트 실행 중](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI icon: replication agent running")|  
 |비동기화 중|![UI 아이콘: 복제 에이전트 중지됨](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

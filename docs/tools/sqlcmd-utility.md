@@ -2,10 +2,14 @@
 title: "sqlcmd 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sqlcmd
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,39 +29,42 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3fd1d53f4fb89ac74e6f2b271107a271f95d0de1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > SQL Server 2014 및 아래에 대 한 참조 [sqlcmd 유틸리티](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx)합니다.
 
+ > Sqlcmd를 사용 하 여 Linux에서, 참조 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
 
   **sqlcmd** 유틸리티를 사용 하면 TRANSACT-SQL 문, 시스템 프로시저 및 명령 프롬프트에서 스크립트 파일에 입력 **쿼리 편집기** SQLCMD 모드, Windows 스크립트 파일 또는 SQL Server 에이전트 작업의 운영 체제 (Cmd.exe) 작업 단계에서입니다. 이 유틸리티는 ODBC를 사용 하 여 TRANSACT-SQL 일괄 처리 실행. 
   
 > [!NOTE]
 > sqlcmd 유틸리티의 가장 최신 버전은 [다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=825643)에서 웹 릴리스로 제공됩니다. 상시 암호화를 지원 하기 위해 13.1 이상 버전이 필요 (`-g`) 및 Azure Active Directory 인증 (`-G`). (컴퓨터에 설치된 sqlcmd.exe 버전이 여러 개일 수 있습니다. 올바른 버전을 사용해야 합니다. 버전을 확인하려면 `sqlcmd -?`를 실행하세요.)
 
+미리 기본적으로 설치 된 Azure 클라우드 셸에서 sqlcmd 유틸리티를 시도할 수 있습니다: [ ![클라우드 셸 시작](https://shell.azure.com/images/launchcloudshell.png "클라우드 셸 시작")](https://shell.azure.com)
+
   SSMS에서 sqlcmd 문을 실행하려면 위쪽 탐색 쿼리 메뉴 드롭다운에서 SQLCMD 모드를 선택합니다.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS)에서는 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] 실행에서 일반 및 SQLCMD 모드에 대 한 SqlClient **쿼리 편집기**합니다. 명령줄에서 **sqlcmd** 를 실행할 경우 **sqlcmd** 는 ODBC 드라이버를 사용합니다. 서로 다른 기본 옵션이 적용될 수 있으므로 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] SQLCMD 모드 및 **sqlcmd** 유틸리티에서 동일한 쿼리를 실행할 때 다른 동작이 수행될 수 있습니다.  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS)에서는 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] 실행에서 일반 및 SQLCMD 모드에 대 한 SqlClient **쿼리 편집기**합니다. 명령줄에서 **sqlcmd** 를 실행할 경우 **sqlcmd** 는 ODBC 드라이버를 사용합니다. 서로 다른 기본 옵션이 적용될 수 있으므로 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] SQLCMD 모드 및 **sqlcmd** 유틸리티에서 동일한 쿼리를 실행할 때 다른 동작이 수행될 수 있습니다.  
 >   
   
  현재는 **sqlcmd** 를 실행할 때 명령줄 옵션과 값 사이에 공백을 넣을 필요가 없습니다. 하지만 후속 릴리스에서는 명령줄 옵션과 값 사이에 공백을 넣어야 할 수도 있습니다.  
  
  다른 항목:
 - [sqlcmd 유틸리티 시작](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [sqlcmd 유틸리티 사용](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [sqlcmd 유틸리티 사용](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>구문  
   
@@ -214,11 +221,11 @@ sqlcmd
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  연결할 SQL Server의 인스턴스를 지정 합니다. **sqlcmd** 스크립팅 변수 SQLCMDSERVER를 설정합니다.  
   
- 지정 *server_name* 해당 서버 컴퓨터에서 SQL Server의 기본 인스턴스에 연결할 수 있습니다. 지정 *server_name* [  **\\**  *instance_name* ] 해당 서버 컴퓨터에서 SQL Server의 명명 된 인스턴스에 연결 합니다. 지정 된 서버 컴퓨터가 경우 **sqlcmd** 로컬 컴퓨터에서 SQL Server의 기본 인스턴스에 연결 합니다. 네트워크의 원격 컴퓨터에서 **sqlcmd** 를 실행할 경우에는 이 옵션을 지정해야 합니다.  
+ 지정 *server_name* 해당 서버 컴퓨터에서 SQL Server의 기본 인스턴스에 연결할 수 있습니다. 지정 *server_name* [**\\* * * instance_name* ] 해당 서버 컴퓨터에서 SQL Server의 명명 된 인스턴스에 연결 합니다. 지정 된 서버 컴퓨터가 경우 **sqlcmd** 로컬 컴퓨터에서 SQL Server의 기본 인스턴스에 연결 합니다. 네트워크의 원격 컴퓨터에서 **sqlcmd** 를 실행할 경우에는 이 옵션을 지정해야 합니다.  
   
  *protocol* 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다.  
   
- 지정 하지 않는 경우는 *server_name* [  **\\**  *instance_name* ] 시작할 때 **sqlcmd**, SQL Server에 대 한 확인 하 고 기본적으로 SQLCMDSERVER 환경 변수를 사용 하 여 합니다.  
+ 지정 하지 않는 경우는 *server_name* [**\\* * * instance_name* ] 시작할 때 **sqlcmd**, SQL Server에 대 한 확인 하 고 기본적으로 SQLCMDSERVER 환경 사용 변수입니다.  
   
 > [!NOTE]  
 >  OSQLSERVER 환경 변수는 이전 버전과의 호환성을 위해 유지되었습니다. SQLCMDSERVER 환경 변수는 OSQLSERVER 환경 변수보다 우선 적용됩니다. 따라서 **sqlcmd** 와 **osql** 을 문제 없이 함께 사용할 수 있으며 이전 스크립트를 계속 사용할 수 있습니다.  
@@ -272,7 +279,7 @@ sqlcmd
   
  공백이 포함된 파일 경로는 따옴표로 묶어야 합니다.  
   
- 이 옵션은 두 번 이상 사용할 수 있습니다. **-i***input_file* **-I***I input_file.*  
+ 이 옵션을 두 번 이상 사용할 수 있습니다: **-i * * * input_file* **-I * * * I input_file 합니다.*  
   
  **-o** *output_file*  
  **sqlcmd**에서 출력을 받는 파일을 식별합니다.  
@@ -316,7 +323,7 @@ sqlcmd
 > [!IMPORTANT]  
 >  쿼리에 GO 종결자를 사용하지 마십시오.  
   
- 이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b** 에 대해서는 이 항목의 뒷부분에서 설명합니다.  
+ 이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b**에 대해서는 이 항목의 뒷부분에서 설명합니다.  
   
  **-Q"** *cmdline query* **"**  
  **sqlcmd** 가 시작될 때 쿼리를 실행한 다음 바로 **sqlcmd**를 종료합니다. 세미콜론으로 구분된 여러 쿼리를 실행할 수 있습니다.  
@@ -335,13 +342,13 @@ sqlcmd
  이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b** 에 대해서는 이 항목의 뒷부분에서 설명합니다.  
   
  **-t** *query_timeout*  
- 명령 또는 SQL 문 제한 시간(초)을 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDSTATTIMEOUT을 설정합니다. *time_out* 값을 지정하지 않으면 명령이 무기한 실행됩니다. *query**time_out*은 1에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **sqlcmd** 는 오류 메시지를 생성합니다.  
+ 명령 또는 SQL 문 제한 시간(초)을 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDSTATTIMEOUT을 설정합니다. *time_out* 값을 지정하지 않으면 명령이 무기한 실행됩니다. *쿼리 * * time_out* 1에서 65534 사이의 숫자 여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **sqlcmd** 는 오류 메시지를 생성합니다.  
   
 > [!NOTE]  
 >  실제 제한 시간 값은 지정한 *time_out* 값과 몇 초 정도 차이가 날 수 있습니다.  
   
  **-vvar =**  *value*[ **var =** *value*...]  
- **sqlcmd**스크립트에서 사용할 수 있는 **sqlcmd** 스크립팅 변수를 만듭니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 ***var***=**"***values***"** 값을 지정할 수 있습니다. 지정한 값에 오류가 있을 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
+ **sqlcmd**스크립트에서 사용할 수 있는 **sqlcmd** 스크립팅 변수를 만듭니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 개 지정할 수 ***var***=**"***값***"** 값입니다. 지정한 값에 오류가 있을 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -397,7 +404,7 @@ sqlcmd
   
 -   **char(** *n* **)**, where 1<=n<=8000  
   
--   **nchar(n** *n* **)**, where 1<=n<=4000  
+-   **nchar (n**  *n*  **)**, 여기서 1 < = n < = 4000  
   
 -   **varchar(n** *n* **)**, where 1<=n<=8000  
   
@@ -447,7 +454,7 @@ sqlcmd
   
  각 항목이 나타내는 의미는 다음과 같습니다.  
   
- `x`= SQL Server에서 처리 된 트랜잭션의 수입니다.  
+ `x` = SQL Server에서 처리 된 트랜잭션의 수입니다.  
   
  `t1` = 모든 트랜잭션의 총 시간  
   
@@ -683,8 +690,8 @@ sqlcmd
  GO는 일괄 처리의 끝을 알립니다 및를 실행 TRANSACT-SQL 문을 캐시 합니다. 일괄 처리가 별도 일괄 처리;로 여러 번 실행 단일 일괄 처리에 두 번 이상 변수를 선언할 수 없습니다.
   
  **기타 명령**  
-  **:r \<** *filename***>**  
- 추가 Transact SQL 문을 구문 분석 및 **sqlcmd** 로 지정 된 파일에 포함 된 명령을  **\<**  *filename***>**캐시로 합니다.  
+  **:r \<** *filename* **>**  
+ 추가 Transact SQL 문을 구문 분석 하 고 **sqlcmd** 로 지정 된 파일에 포함 된 명령을  **\< ***filename***>**문을 캐시 합니다.  
   
  파일을 따르지 하 여 TRANSACT-SQL 문을 포함 하는 경우 **이동**를 입력 해야 **이동** 뒤에 오는 줄에 **: r**합니다.  
   
@@ -699,7 +706,7 @@ sqlcmd
  **:Serverlist**  
  로컬로 구성된 서버와 네트워크상에서 브로드캐스팅하는 서버의 이름을 표시합니다.  
   
- **:Connect**  *인스턴스에 연결하려면*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
  SQL Server의 인스턴스에 연결합니다. 또한 현재 연결을 종료합니다.  
   
  제한 시간 옵션은 다음과 같습니다.  
@@ -742,7 +749,7 @@ sqlcmd
 ### <a name="sqlcmd-file-names"></a>sqlcmd 파일 이름  
  **sqlcmd** 입력 파일은 **-i** 옵션 또는 **:r** 명령을 사용하여 지정할 수 있습니다. 출력 파일은 **-o** 옵션 또는 **:Error**, **:Out** 및 **:Perftrace** 명령을 사용하여 지정할 수 있습니다. 다음은 이러한 파일 작업에 대한 지침입니다.  
   
--   **:Error**, **:Out** 및 **:Perftrace** 는 별도의 **\<***filename***>**을 사용해야 합니다. 동일한 **\<***filename***>** 을 사용하면 명령의 입력이 섞일 수 있습니다.  
+-   **: Error**, **: Out** 및 **: Perftrace** 별도 사용 해야  **\< ***filename***>**합니다. 하는 경우 동일한  **\< ***filename*** >**  는 사용 하면 명령의 입력 섞일 수 있습니다.  
   
 -   원격 서버에 있는 입력 파일을 로컬 컴퓨터에 있는 **sqlcmd** 에서 호출할 경우 이 파일에 :out c:\OutputFile.txt와 같은 드라이브 파일 경로가 포함되어 있으면 출력 파일이 원격 서버가 아닌 로컬 컴퓨터에 생성됩니다.  
   
