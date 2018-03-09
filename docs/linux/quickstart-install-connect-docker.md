@@ -4,7 +4,7 @@ description: "이 빠른 시작에서는 Docker를 사용하여 SQL Server 2017 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 971f6ed4b728f4be127bf9a23e8a7499ec308d90
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 8c3f8bc09ef8c3b6838912027024a3feb97cea5d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Docker가 있는 SQL Server 2017 컨테이너 이미지를 실행 하는 빠른 시작:
 
@@ -52,6 +52,8 @@ ms.lasthandoff: 02/24/2018
    ```
 
    이전 명령은 최신 SQL Server 2017 컨테이너 이미지를 끌어옵니다. 특정 이미지를 끌어오려면 콜론 및 태그 이름(예를 들어 `microsoft/mssql-server-linux:2017-GA`)을 추가합니다. 사용 가능한 모든 이미지를 보려면 [mssql-server-linux Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)를 참조하세요.
+   
+   이 문서에서는 bash 명령에 대 한 `sudo` 사용 됩니다. MacOS 등에서 `sudo` 필요가 없을 수도 있습니다. Linux에서 사용 하지 않을 경우 `sudo` Docker를 실행 하려면 구성할 수 있습니다는 **docker** 그룹화 하 고 해당 그룹에 사용자를 추가 합니다. 자세한 내용은 참조 [Linux에 대 한 사후 설치 단계](https://docs.docker.com/install/linux/linux-postinstall/)합니다.
 
 1. Docker를 사용하여 컨테이너 이미지를 실행하려면 bash 셸(Linux/macOS) 또는 상승된 권한 PowerShell 명령 프롬프트에서 다음 명령을 사용할 수 있습니다.
 

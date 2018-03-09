@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="language-elements"></a>언어 요소
 TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
@@ -33,12 +33,12 @@ TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL S
 * [구문 표기 규칙](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [개체 명명 규칙](../relational-databases/databases/database-identifiers.md)
 * [예약 된 키워드](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [데이터 정렬](https://msdn.microsoft.com/library/ff848763.aspx)
-* [주석](../t-sql/language-elements/comment-transact-sql.md)
-* [상수](../t-sql/data-types/constants-transact-sql.md)
+* [collations](https://msdn.microsoft.com/library/ff848763.aspx)
+* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [constants](../t-sql/data-types/constants-transact-sql.md)
 * [데이터 형식](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [식](../t-sql/language-elements/expressions-transact-sql.md)
+* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [IDENTITY 속성 해결 방법](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -76,7 +76,7 @@ TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL S
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
-* [이 [하지](../t-sql/queries/is-null-transact-sql.md)
+* [아닌](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
 * [OR](../t-sql/language-elements/or-transact-sql.md)
@@ -103,7 +103,7 @@ TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL S
 * [ASIN](../t-sql/functions/asin-transact-sql.md)
 * [ATAN](../t-sql/functions/atan-transact-sql.md)
 * [ATN2](../t-sql/functions/atn2-transact-sql.md)
-* [BINARY_CHECKSUM은](../t-sql/functions/binary-checksum-transact-sql.md)
+* [BINARY_CHECKSUM](../t-sql/functions/binary-checksum-transact-sql.md)
 * [CASE](../t-sql/language-elements/case-transact-sql.md)
 * [CAST 및 CONVERT](../t-sql/functions/cast-and-convert-transact-sql.md)
 * [CEILING](../t-sql/functions/ceiling-transact-sql.md)
@@ -234,8 +234,8 @@ TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL S
 * [YEAR](../t-sql/functions/year-transact-sql.md)
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
-## <a name="transactions"></a>의
-* [트랜잭션](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+## <a name="transactions"></a>트랜잭션
+* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>진단 세션
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)

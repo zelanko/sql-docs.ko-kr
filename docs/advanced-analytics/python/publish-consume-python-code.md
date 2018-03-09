@@ -1,7 +1,7 @@
 ---
-title: "게시 및 Python 코드를 사용 합니다. | Microsoft Docs"
+title: "게시 및 Python 코드-SQL Server 컴퓨터 학습 서버 (독립 실행형) 사용 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/09/2017
+ms.date: 03/07/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,39 +12,34 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: cgronlund
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 8720440872fb0b41a76d4ac644fd3b60d52a095e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9a7e56d5f2726b627381d24e3cfd8e50ade325f6
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>게시 및 Python 웹 서비스를 사용 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Microsoft 학습 서버 컴퓨터의에서 화 기능을 사용 하 여 웹 서비스에 작업 중인 Python 솔루션을 배포할 수 있습니다. 이 항목에서는 성공적으로 게시 한 후 솔루션을 실행 하는 단계를 설명 합니다.
+정상 작동을 배포할 수 있습니다에 화 기능을 사용 하 여 웹 서비스에 대 한 Python 솔루션은 [SQL Server 컴퓨터 학습 서버 (독립 실행형)](../r/r-server-standalone.md) 인스턴스. 이 문서에서는 성공적으로 게시 한 후 솔루션을 실행 하는 단계를 설명 합니다.
 
-이 문서에 대 한 대상 사용자는 Python 코드 또는 모델 Microsoft 학습 서버 컴퓨터에서에서 호스팅되는 웹 서비스로 게시 하는 방법을 알아 보 려는 데이터 과학자입니다. 설명 하 고 응용 프로그램을 소비할 수 있는 방법의 코드 또는 모델입니다. 이 문서에서는 Python에 능숙 한 한다고 가정 합니다.
+대상 그룹 Python 코드 또는 모델 학습 서버 컴퓨터를 게시 하는 방법과 코드 또는 사용자 지정 응용 프로그램에서 모델을 사용 하는 방법에 설명 하는 데이터 과학자입니다. 
 
-> [!IMPORTANT]
->
-> 이 예제는 학습 Server 컴퓨터 (독립 실행형)는 포함 되며 컴퓨터 학습 서버 버전의 기능을 사용 하 여 Python 버전에 대 한 개발 되었습니다 **9.1.0**합니다.
- > 
- > 학습 서버 컴퓨터에에서는 최신 라이브러리를 사용 하 여 다시 게시 동일한 샘플을 보려면 다음 링크를 클릭 합니다. 참조 [배포에서 Python 웹 서비스를 관리 하 고](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)합니다.
-
-**적용 대상: Microsoft R Server (독립 실행형)**
+이 문서에서는 Python에 능숙 한 한다고 가정 합니다. 또한 다른 SQL Server 기능을 독립적으로 설치 되는 독립 실행형 서버가 있어야 합니다. 해당 서버 수 있어야 [화에 대해 구성 된](../operationalization-with-mrsdeploy.md) 웹 서비스 호스팅을 사용할 수 있도록 합니다. 
 
 ## <a name="overview-of-workflow"></a>워크플로 개요
 
 Python 웹 서비스를 사용 하는 데 게시에서 워크플로 다음과 같이 요약할 수 있습니다.
 
-1. 처리는 [필수 구성 요소](#prereq) 코어 API Swagger 문서에서 Python 클라이언트 라이브러리를 생성 합니다.
-2. 인증 및 헤더 논리 Python 스크립트를 추가 합니다.
-3. Python 세션을 만들고 환경을 준비 환경을 유지 하기 위해 스냅숏을 만듭니다.
-4. 웹 서비스를 게시 하 고이 스냅숏을 포함 합니다.
-5. 세션에서 사용 하 여 웹 서비스를 해보세요.
-6. 이러한 서비스를 관리 합니다.
+1. Python 학습 서버 컴퓨터의 독립 실행형 서버 설치 확인 합니다.
+2. 처리는 [필수 구성 요소](#prereq) 코어 API Swagger 문서에서 Python 클라이언트 라이브러리를 생성 합니다.
+3. 인증 및 헤더 논리 Python 스크립트를 추가 합니다.
+4. Python 세션을 만들고 환경을 준비 환경을 유지 하기 위해 스냅숏을 만듭니다.
+5. 웹 서비스를 게시 하 고이 스냅숏을 포함 합니다.
+6. 세션에서 사용 하 여 웹 서비스를 해보세요.
+7. 이러한 서비스를 관리 합니다.
 
 ![Swagger 워크플로](./media/data-scientist-python-workflow.png)
 
@@ -52,9 +47,9 @@ Python 웹 서비스를 사용 하는 데 게시에서 워크플로 다음과 �
 
 ## <a name="sample-code"></a>예제 코드
 
-이 샘플 코드에서는 충족 하는 [필수 구성 요소](#prereq) 해당 Swagger에서 Python 클라이언트 라이브러리를 생성 하려면 파일 및을 사용한 Autorest 합니다.
+이 샘플 코드에 있다고 가정 [필수 Python 클라이언트 라이브러리 생성](#prereq) Swagger에서 사용한 적이 있다면 Autorest 합니다. 화에 대해 구성 된 SQL Server 컴퓨터 학습 서버 (독립 실행형) 인스턴스에서이 코드를 실행 합니다.
 
-코드 블록을 한 후 전체 프로세스에 대 한 더 자세한 설명이 포함 된 단계별 연습을 찾을 수 있습니다.
+이 코드 심층에서을 탐색 하려면으로 바로 이동 하는 [단계별 연습](#walkthrough) 자세한 전체 프로세스에 대 한 설명 합니다.
 
 > [!IMPORTANT]
 > 이 예에서는 로컬 `admin` 인증에 대 한 계정입니다. 하지만 자격 증명을 대체 해야 및 [인증 방법을](#python-auth) 관리자를 구성 합니다.
@@ -289,14 +284,16 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+<a name="walkthrough"></a>
+
 ## <a name="walkthrough"></a>연습
 
 이 섹션에서는 코드의 더 자세하게에서 작동 하는 방법을 설명 합니다.
 
 
-### <a name="prereq"></a>1 단계입니다. 필수 구성 요소 클라이언트 라이브러리 만들기
+### <a name="prereq"></a> 1 단계입니다. 필수 구성 요소 클라이언트 라이브러리 만들기
 
-게시 하 여 Python 코드와 모델 thorugh Microsoft 학습 서버 컴퓨터를 시작 하려면 먼저이 릴리스에 대 한 제공 된 Swagger 문서를 사용 하 여 클라이언트 라이브러리를 생성 해야 합니다.
+게시 Python 코드 및 컴퓨터 학습 서버를 통해 모델을 시작 하기 전에이 릴리스에 대 한 제공 된 Swagger 문서를 사용 하 여 클라이언트 라이브러리를 생성 해야 합니다.
 
 1. 로컬 컴퓨터의 Swagger 코드 생성기를 설치 하 고 것을 잘 이해 해야 합니다. Python에서 API 클라이언트 라이브러리를 생성 하려면 사용 합니다. 인기 있는 도구에 포함 [Azure AutoRest](https://github.com/Azure/autorest) (Node.js 필요) 및 [Swagger Codegen](https://github.com/swagger-api/swagger-codegen)합니다. 
 

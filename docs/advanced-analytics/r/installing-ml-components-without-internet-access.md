@@ -1,7 +1,7 @@
 ---
 title: "인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/08/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 1c4a63077cf9801a6c83502f2fdea6f88c063227
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d7d218dcb5efeddf248230abff85b46da23d389a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,16 +47,18 @@ R 및 Python 구성 요소는 SQL Server 2016 및 SQL Server 2017와 함께 제�
 
 ### <a name="step-1-obtain-additional-installers"></a>1단계. 가져올 추가 설치 관리자
 
+일반적으로 별도 설치 관리자는 오픈 소스 및 독점 구성 요소에 제공 됩니다. SQL Server 설치 마법사가 올바른 순서 대로 설치 되어 있는지 확인 합니다. 그러나 일부 릴리스에서 하나의 구성 요소 집합을 업데이트할 수 있습니다. 참조는 [설치 관리자의 테이블](#bkmk_2017Installers) 릴리스에 대 한 자세한 내용은 당 합니다.
+
 **R에 대 한**
 
-R 언어는 SQL Server 2016 및 SQL Server 2017 모두에서 지원 됩니다. 두 명의 서로 다른 설치 관리자는 오픈 소스 및 독점 구성 요소에 필요 합니다. SQL Server 설치 마법사가 올바른 순서 대로 설치 되어 있는지 확인 합니다.
+SQL Server 2016 및 이후 버전에서는 R 언어 사용할 수 있습니다. 
 
 + 설치 프로그램의 **SRO** 이름에는 오픈 소스 구성 요소를 제공 합니다.
 + 설치 프로그램의 **SRS** 이름에 데이터베이스 통합에 대 한 포함 하 여 Microsoft에서 제공 하는 구성 요소를 포함 합니다.
 
 **Python에 대 한**
 
-Python 언어 SQL Server 2017 에서만 지원 됩니다. 다시 다운로드 해야 하는 별도 설치 관리자를 두 가지가 있습니다.
+Python 언어에는 SQL Server 2017 이상이 필요합니다. 
 
 + 설치 프로그램의 **SPO** 이름에는 Microsoft Python Open 및 오픈 소스 구성 요소를 제공 합니다.
 + 설치 프로그램의 **SPS** 이름에 Microsoft Python 서버용 이며 데이터베이스 통합에 대 한 포함 하 여 Microsoft에서 제공 하는 구성 요소를 포함 합니다.
@@ -79,19 +81,18 @@ SQL Server 2016에서 R Services에 대 한 오프 라인 설치 프로세스의
 3. 에 대 한 묻는 대화 상자가 열립니다는 **설치 경로** 필요한 패키지 합니다.
 4. 클릭 **찾아보기** 앞에서 복사한 설치 관리자 파일을 포함 하 여 폴더를 찾습니다.
 5. 올바른 파일을 찾으면 **다음**을 클릭하여 구성 요소가 사용 가능함을 표시합니다.
-10. SQL Server 설치 마법사를 완료합니다.
-11. 서비스가 활성화 되어 있는지 확인 하는 데 필요한 설치 후 단계를 수행 합니다.
+6. SQL Server 설치 마법사를 완료합니다.
+7. 서비스가 활성화 되어 있는지 확인 하는 데 필요한 설치 후 단계를 수행 합니다.
 
 ## <a name="installerlocs"></a>컴퓨터 학습 구성 요소를 다운로드 하는 위치
 
-> [!NOTE]
-> 설치 하는 SQL Server의 버전과 일치 하는 파일을 가져올 해야 합니다.
-> 
-> SQL Server 2017 CTP 2.0 부터는 Python에 대 한 지원이 제공 됩니다. SQL Server 2016 이전 버전에서는 Python 지원 하지 않습니다.
+설치 하는 SQL Server의 버전과 일치 하는 파일을 가져올 해야 합니다.
 
 + [SQL Server 2016에 대 한 R 구성 요소를 가져오려는](#bkmk_2016Installers)
 
 + [SQL Server 2017에 대 한 Python 또는 R 구성 요소를 가져오려는](#bkmk_2017Installers)
+
+SQL Server 2017 CTP 2.0 부터는 Python에 대 한 지원이 제공 됩니다. SQL Server 2016 이전 버전에서는 Python 지원 하지 않습니다.
 
 ### <a name="bkmk_2017Installers"></a>SQL Server 2017에 대 한 다운로드
 
@@ -141,6 +142,11 @@ Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?
 Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
 Microsoft Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
+**SQL Server 2017 CU4** |
+Microsoft R Open     |변경 없음 이전에 사용 하 여|
+Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
+Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
+Microsoft Python Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
 
 ### <a name="bkmk_2016Installers"></a>SQL Server 2016에 대 한 다운로드
 
@@ -235,7 +241,7 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 
 + 서버가 인터넷에 연결되어 있지 않으면 SQL Server 설치 관리자를 다운로드하고 나서 업데이트 프로세스를 시작하기 **전에** R 구성 요소 설치 관리자의 일치하는 버전을 다운로드해야 합니다.  R 구성 요소는 SQL Server와 함께 기본적으로 포함 되지 않습니다.
 
-+ 있다면 *추가* 에 이러한 구성 요소는 *기존* 설치를 업데이트 된 버전의 SQL Server 설치 관리자를 사용 하 고 해당 버전의 추가 구성 요소를 업데이트 합니다. R 기능이 설치 되도록 상태임을 지정 하면 설치 관리자 구성 요소를 학습 하는 컴퓨터에 대 한 설치 관리자의 일치 하는 버전을 찾습니다.
++ 기존 설치에 이러한 구성 요소를 추가 하는 경우 SQL Server 설치 프로그램의 업데이트 된 버전 및 해당 업데이트 된 버전의 추가 구성 요소를 사용 합니다. R 기능이 설치 되도록 상태임을 지정 하면 설치 관리자 구성 요소를 학습 하는 컴퓨터에 대 한 설치 관리자의 일치 하는 버전을 찾습니다.
 
 ## <a name="command-line-arguments-for-specifying-component-locations"></a>구성 요소 위치를 지정 하기 위한 명령줄 인수
 
@@ -243,27 +249,26 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 
 **설치 관리자의 위치**
 
-- `/UPDATESOURCE`SQL Server 업데이트 설치 관리자를 포함 하는 로컬 파일의 위치를 지정 하려면
-- `/MRCACHEDIRECTORY`R 구성 요소 CAB 파일을 포함 하는 폴더를 지정 하려면
-- `/MPYCACHEDIRECTORY`Python 구성 요소 CAB 파일을 포함 하는 폴더를 지정 하려면
+- `/UPDATESOURCE` SQL Server 업데이트 설치 관리자를 포함 하는 로컬 파일의 위치를 지정 하려면
+- `/MRCACHEDIRECTORY` R 구성 요소 CAB 파일을 포함 하는 폴더를 지정 하려면
+- `/MPYCACHEDIRECTORY` Python 구성 요소 CAB 파일을 포함 하는 폴더를 지정 하려면
 
 **SQL Server 2016의 R 구성 요소**
 
-- `/ADVANCEDANALYTICS`외부 스크립트에 대 한 엔진 지원
-- `/IACCEPTROPENLICENSETERMS="True"`별도 R 사용권 계약을 적용 하려면
+- `/ADVANCEDANALYTICS` 외부 스크립트에 대 한 엔진 지원
+- `/IACCEPTROPENLICENSETERMS="True"` 별도 R 사용권 계약을 적용 하려면
 
 **SQL Server 2017에 R 구성 요소**
 
-- `/ADVANCEDANALYTICS`외부 스크립트에 대 한 엔진 지원
-- `/SQL_INST_MR`R을 사용 하려면
-- `/IACCEPTROPENLICENSETERMS="True"`별도 R 사용권 계약을 적용 하려면
+- `/ADVANCEDANALYTICS` 외부 스크립트에 대 한 엔진 지원
+- `/SQL_INST_MR` R을 사용 하려면
+- `/IACCEPTROPENLICENSETERMS="True"` 별도 R 사용권 계약을 적용 하려면
 
 **SQL Server 2017에 Python 구성 요소**
 
-- `/ADVANCEDANALYTICS`외부 스크립트에 대 한 엔진 지원
-- `/SQL_INST_MPY`Python을 사용 하려면
-- `/IACCEPTPYTHONLICENSETERMS="True"`라이선스 계약을 별도 Python을 적용 하려면
-
+- `/ADVANCEDANALYTICS` 외부 스크립트에 대 한 엔진 지원
+- `/SQL_INST_MPY` Python을 사용 하려면
+- `/IACCEPTPYTHONLICENSETERMS="True"` 라이선스 계약을 별도 Python을 적용 하려면
 
 > [!NOTE]
 > SQL Server 설치 프로그램에서 매개 변수를 사용 하 여 실행 패드에 대 한 서비스 계정을 변경할 수 없습니다. 기본 서비스 계정을 사용 하 여 설치 하 고 다음 SQL Server 구성 관리자를 사용 하 여 서비스 계정을 수정 하는 것이 좋습니다. 이렇게 하면 실행 패드 서비스를 다시 시작 해야 합니다.

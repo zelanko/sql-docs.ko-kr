@@ -2,7 +2,7 @@
 title: "다운로드 하 여 Microsoft SQL 작업 Studio (미리 보기) 설치 | Microsoft Docs"
 description: "다운로드 및 설치 Microsoft SQL 작업 (미리 보기) 용 Studio 창, macOS 등 또는 Linux"
 ms.custom: tools|sos
-ms.date: 02/15/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dda75f01b68816c971d31354f08686381597271f
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 1cb41e1824fc157932e2cb08292608bb97e46712
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>다운로드 하 고 SQL 작업 Studio (미리 보기) 설치
 
@@ -65,16 +65,25 @@ ms.lasthandoff: 02/19/2018
 
    ```bash
    cd ~
-   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~
-   tar -xvf ~/sqlops-linux-<version string>.tar.gz
-   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
-   source ~/.bashrc
+   sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
+
    sqlops
    ```
 
    > [!NOTE]
-   > Ubuntu 및 Redhat에서 누락 된 종속성을 할 수 있습니다. 다음 명령을 사용 하 여 linux 버전에 따라 이러한 종속성을 설치 합니다.
+   > Debian, Redhat, 및 Ubuntu에서 누락 된 종속성을 할 수 있습니다. 다음 명령을 사용 하 여 linux 버전에 따라 이러한 종속성을 설치 합니다.
    
+
+   **Debian:** 
+   ```bash
+   sudo apt-get install libuwind8
+   ```
+
+   **Redhat:** 
+   ```bash
+   yum install libXScrnSaver
+   ```
+
    **Ubuntu:** 
    ```bash
    sudo apt-get install libxss1
@@ -84,10 +93,6 @@ ms.lasthandoff: 02/19/2018
    sudo apt-get install libunwind8
    ```
 
-   **Redhat:** 
-   ```bash
-   yum install libXScrnSaver
-   ```
 
 ## <a name="uninstall-sql-operations-studio-preview"></a>SQL 작업 Studio (미리 보기)를 제거 합니다.
 

@@ -1,10 +1,10 @@
 ---
-title: "SQL Server 2017 linux 설치 | Microsoft Docs"
+title: "SQL Server 2017 linux에 대 한 설치 지침 | Microsoft Docs"
 description: "설치, 업데이트 및 Linux에서 SQL Server를 제거 합니다. 이 문서에서는 온라인, 오프 라인 및 무인 시나리오에 설명 합니다."
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,26 +15,30 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 설치 지침
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 설치, 업데이트 및 SQL Server 2017 Linux에서 제거 하는 방법을 설명 합니다. SQL Server 2017 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 및 Ubuntu에서 지원 됩니다. Linux 또는 Docker에 대 한 Windows/Mac. Docker 엔진에서 실행할 수 있는 Docker 이미지 형식으로 제공 됩니다.
+이 문서에서는 설치, 업데이트 및 SQL Server 2017 Linux에서 제거 하기 위한 지침을 제공 합니다.
 
 > [!TIP]
-> 빠르게 시작 하려면에 대 한 퀵 스타트 중 하나로 이동 [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), 또는 [Docker](quickstart-install-connect-docker.md)합니다.
+> 이 가이드는 몇 가지 배포 시나리오를 coves 합니다. 단계별 설치 지침에 대해서만 찾으려는 경우 퀵 스타트 중 하나로 이동 합니다.
+> - [RHEL 빠른 시작](quickstart-install-connect-red-hat.md)
+> - [SLES 빠른 시작](quickstart-install-connect-suse.md)
+> - [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
+> - [Docker 빠른 시작](quickstart-install-connect-docker.md)
 
 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](../linux/sql-server-linux-faq.md)합니다.
 
 ## <a id="supportedplatforms"></a> 지원 되는 플랫폼
 
-SQL Server 2017 Linux 다음 플랫폼에서 사용할 수 있습니다.
+SQL Server 2017 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 및 Ubuntu에서 지원 됩니다. Linux 또는 Docker에 대 한 Windows/Mac. Docker 엔진에서 실행할 수 있는 Docker 이미지로 에서도 지원 됩니다.
 
 | 플랫폼 | 지원 되는 버전 | 가져오기
 |-----|-----|-----
@@ -69,6 +73,13 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 - 만 찾습니다는 **/var/opt/mssql** NFS 탑재 디렉터리입니다. SQL Server 시스템 이진 파일 등의 기타 파일 지원 되지 않습니다.
 - 원격 공유 마운트할 때 NFS 클라이언트 'nolock' 옵션을 사용 하도록 확인 합니다.
 
+## <a id="repositories"></a> 소스 저장소 구성
+
+를 설치 하거나 SQL Server를 업그레이드 하는 경우 구성 된 Microsoft 리포지토리에서 SQL Server 2017의 최신 버전을 가져옵니다. 퀵 스타트를 사용 하 여 **CU (누적 업데이트)** 리포지토리 합니다. 하지만 대신 구성할 수 있습니다는 **GDR** 저장소입니다. 저장소 및 구성 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Linux에서 SQL Server에 대 한 저장소를 구성](sql-server-linux-change-repo.md)합니다.
+
+> [!IMPORTANT]
+> CTP 또는 SQL Server 2017의 RC 버전을 이전에 설치한 경우 미리 보기 리포지토리를 제거 하 고는 GA (일반 공급) 하나를 등록 해야 합니다. 자세한 내용은 참조 [Linux에서 SQL Server에 대 한 저장소를 구성](sql-server-linux-change-repo.md)합니다.
+
 ## <a id="platforms"></a> SQL Server 설치
 
 명령줄에서 Linux에서 SQL Server를 설치할 수 있습니다. 자세한 내용은 다음 퀵 스타트 중 하나를 참조 합니다.
@@ -78,13 +89,6 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 - [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-docker.md)
 - [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
-
-## <a id="repositories"></a> 소스 저장소 구성
-
-를 설치 하거나 SQL Server를 업그레이드 하는 경우 구성 된 Microsoft 리포지토리에서 SQL Server 2017의 최신 버전을 가져옵니다. 퀵 스타트를 사용 하 여 **CU (누적 업데이트)** 리포지토리 합니다. 하지만 대신 구성할 수 있습니다는 **GDR** 저장소입니다. 저장소 및 구성 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Linux에서 SQL Server에 대 한 저장소를 구성](sql-server-linux-change-repo.md)합니다.
-
-> [!IMPORTANT]
-> CTP 또는 SQL Server 2017의 RC 버전을 이전에 설치한 경우 미리 보기 리포지토리를 제거 하 고는 GA (일반 공급) 하나를 등록 해야 합니다. 자세한 내용은 참조 [Linux에서 SQL Server에 대 한 저장소를 구성](sql-server-linux-change-repo.md)합니다.
 
 ## <a id="upgrade"></a> SQL Server를 업데이트 합니다.
 
@@ -202,18 +206,16 @@ Linux 컴퓨터에 없는 경우 액세스에 사용 되는 온라인 저장소�
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-## <a name="next-steps"></a>다음 단계
+## <a name="optional-sql-server-features"></a>(옵션) SQL Server 기능
 
-설치 후 다른 선택적 SQL Server 패키지를 설치할 수 있습니다.
+설치가 끝나면 설치 하거나 선택적 SQL Server 기능을 사용 하거나 수도 있습니다.
 
 - [SQL Server 명령줄 도구](sql-server-linux-setup-tools.md)
 - [SQL Server 에이전트](sql-server-linux-setup-sql-agent.md)
 - [SQL Server 전체 텍스트 검색](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-데이터베이스 만들기 및 관리를 시작 하 여 SQL Server 인스턴스에 연결 합니다. 시작 하려면 퀵 스타트를 참조 하세요.
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
-- [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
-- [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
-- [Docker에서 실행](quickstart-install-connect-ubuntu.md)
+> [!TIP]
+> 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](sql-server-linux-faq.md)합니다.

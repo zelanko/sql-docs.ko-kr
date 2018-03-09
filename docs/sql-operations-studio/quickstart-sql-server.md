@@ -2,7 +2,7 @@
 title: "빠른 시작: 연결 및 SQL 작업 Studio (미리 보기)를 사용 하 여 SQL Server에 쿼리할 | Microsoft Docs"
 description: "이 빠른 시작에서는 SQL 작업 Studio (미리 보기)를 사용 하 여 SQL Server에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다."
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,16 +14,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7588368dcd64316551a9eaa72aeb8ce1d2ea67a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: 연결 하 고 사용 하 여 SQL Server 쿼리[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: 연결 하 고 사용 하 여 SQL Server 쿼리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 이 빠른 시작을 사용 하는 방법을 보여 줍니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)] SQL Server에 연결 하 고 TRANSACT-SQL (T-SQL) 문을 만드는 데 사용할는 *TutorialDB* 에 사용 된 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서입니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 빠른 시작을 완료 하려면 필요 [!INCLUDE[name-sos](../includes/name-sos-short.md)], 및 SQL Server에 액세스 합니다.
 
@@ -92,7 +92,10 @@ SQL Server에 액세스할 수 없으면 다음 링크에서 플랫폼을 선택
 
 
 
-1. 다음 코드 조각은 쿼리 창에 붙여 넣습니다.
+1. 다음 코드 조각은 쿼리 창에 붙여넣고 클릭 **실행**:
+
+   > [!NOTE]
+   > 이 추가 하거나 앞의 쿼리 편집기에서 덮어쓸 수 있습니다. 클릭 하면 **실행** 을 선택 하 여 쿼리를 실행 합니다. 어떤 영역도 선택 하는 경우 클릭 하면 **실행** 편집기에서 모든 쿼리를 실행 합니다.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +118,8 @@ SQL Server에 액세스할 수 없으면 다음 링크에서 플랫폼을 선택
 
 ## <a name="insert-rows"></a>행 삽입
 
-1. 다음 코드 조각은 쿼리 창에 붙여 넣습니다.
+- 다음 코드 조각은 쿼리 창에 붙여넣고 클릭 **실행**:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -128,18 +132,17 @@ SQL Server에 액세스할 수 없으면 다음 링크에서 플랫폼을 선택
    GO
    ```
 
-1. 쿼리를 실행 하려면 클릭 **실행**합니다.
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>쿼리에서 반환 된 데이터 보기
-1. 다음 코드 조각은 쿼리 창에 붙여 넣습니다.
+1. 다음 코드 조각은 쿼리 창에 붙여넣고 클릭 **실행**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. 쿼리를 실행 하려면 클릭 **실행**합니다.
+1. 쿼리 결과 표시 됩니다.
 
    ![결과 선택](media/quickstart-sql-server/select-results.png)
 

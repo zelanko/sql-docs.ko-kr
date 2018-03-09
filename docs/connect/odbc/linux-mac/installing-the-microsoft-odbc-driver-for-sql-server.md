@@ -20,20 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 883c016829dcf5ba9b7d48f0356a4a6141550e7d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 2f8b7e34ae99042012b88f9d83c0ee3af0ad18be
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server 설치를 참조하세요
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-이 항목에서는 설치 하는 방법에 설명는 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SQL Server에 대 한 선택적인 명령줄 도구 뿐만 아니라 Linux macOS 등 (`bcp` 및 `sqlcmd`) 및 unixODBC 개발 헤더입니다.
+이 문서에서는 설치 하는 방법에 설명는 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SQL Server에 대 한 선택적인 명령줄 도구 뿐만 아니라 Linux macOS 등 (`bcp` 및 `sqlcmd`) 및 unixODBC 개발 헤더입니다.
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
-
-**중요 정보:** 기존 설치를 업데이트할 때에 Linux 및 Mac 용 17 버전 ODBC 드라이버 패키지는 문제로 인해 현재 사용할 수 없습니다. 작업을 가능한 한 빨리 업데이트 된 패키지를 제공 합니다. 17 버전에 대 한 설치 명령을 실행 하는 버전 13.1 드라이버를 설치 현재 합니다.
 
 ### <a name="debian-8-and-9"></a>Debian 8 및 9
 ```
@@ -51,7 +49,7 @@ curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql
+sudo ACCEPT_EULA=Y apt-get install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y apt-get install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -76,7 +74,7 @@ curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/m
 
 exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
-sudo ACCEPT_EULA=Y yum install msodbcsql
+sudo ACCEPT_EULA=Y yum install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y yum install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -101,7 +99,7 @@ zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 exit
-sudo ACCEPT_EULA=Y zypper install msodbcsql
+sudo ACCEPT_EULA=Y zypper install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y zypper install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -130,7 +128,7 @@ curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sou
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql
+sudo ACCEPT_EULA=Y apt-get install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y apt-get install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -140,13 +138,13 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="os-x-1011-el-capitan-macos-1012-sierra-and-macos-1013-high-sierra"></a>OS X 10.11 (El Capitan) macOS 10.12 (시에라)와 macOS 10.13 (높은 시에라)
+### <a name="os-x-1011-el-capitan-macos-1012-sierra-and-macos-1013-high-sierra"></a>OS X 10.11 (El Capitan), macOS 10.12 (시에라)와 macOS 10.13 (높은 시에라)
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql mssql-tools
+brew install --no-sandbox msodbcsql17 mssql-tools
 ```
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
@@ -369,12 +367,12 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-각이 패키지에서은 자신의 수도 시스템에 없을 수도 있습니다. 이 문제에 대 한 일반 솔루션을 배포의 패키지 관리자 설명서를 참조: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), 및 [SUSE](https://en.opensuse.org/Portal:Zypper)
+각이 패키지에은 자신의 수도 시스템에 없을 수도 있습니다. 이 문제에 대 한 일반 솔루션을 배포의 패키지 관리자 설명서를 참조: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), 및 [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 또한 것이 모든 종속 패키지를 수동으로 다운로드 하 고 설치 컴퓨터에 함께 배치 다음 차례로 각 패키지를 수동으로 설치를 마친는 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 패키지 합니다.
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - 최신 다운로드 `msodbcsql` 여기에서.rpm: http://packages.microsoft.com/rhel/7/prod/
+  - 최신 다운로드 `msodbcsql` `.rpm` 여기에서: http://packages.microsoft.com/rhel/7/prod/
   - 종속성 및 드라이버를 설치 합니다.
   
 ```
@@ -392,7 +390,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- 최신 다운로드 `msodbcsql` 여기에서.rpm: http://packages.microsoft.com/sles/12/prod/
+- 최신 다운로드 `msodbcsql` `.rpm` 여기에서: http://packages.microsoft.com/sles/12/prod/
 - 드라이버 및 종속성 설치
 
 ```
@@ -426,9 +424,9 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 5.  **odbcinst.ini**의 백업을 만듭니다. 드라이버 설치에서 **odbcinst.ini**를 업데이트합니다. odbcinst.ini에는 unixODBC 드라이버 관리자에 등록된 드라이버 목록이 있습니다. 컴퓨터에서 odbcinst.ini의 위치를 검색 하려면 다음 명령을 실행: ```odbc_config --odbcinstini```합니다.  
   
-6.  드라이버를 설치하기 전에 다음 명령을 실행합니다. **./install.sh verify**. **./install.sh verify** 출력은 컴퓨터가 Linux 기반 ODBC 드라이버를 지원하는 데 필요한 소프트웨어가 있는지 보고합니다.  
+6.  다음 명령을 실행 하는 드라이버를 설치 하기 전에: `./install.sh verify`합니다. 출력 `./install.sh verify` 컴퓨터가 Linux 기반 ODBC 드라이버를 지 원하는 데 필요한 소프트웨어가 있는지 보고 합니다.  
   
-7.  Linux 기반 ODBC 드라이버를 설치할 준비가 되면 다음 명령을 실행합니다. **./install.sh install**. 설치 명령을 지정 해야 하는 경우 (`bin-dir` 또는 `lib-dir`), 다음에 명령을 지정는 **설치** 옵션입니다.  
+7.  명령을 실행 하는 경우 Linux 기반 ODBC 드라이버를 설치할 준비가: `./install.sh install`합니다. 설치 명령을 지정 해야 하는 경우 (`bin-dir` 또는 `lib-dir`), 다음에 명령을 지정는 **설치** 옵션입니다.  
   
 8.  사용권 계약을 검토한 후 **YES** 를 입력하여 설치를 계속합니다.  
   

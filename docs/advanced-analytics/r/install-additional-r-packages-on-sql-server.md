@@ -1,6 +1,6 @@
 ---
 title: "SQL Server에 추가 R 패키지를 설치 합니다. | Microsoft Docs"
-ms.date: 02/20/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a328b07027f61f50df7e3ca2b6ac12b92508688b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: acb1727c85cae1d8176703c93cc77c971980d394
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server에 추가 R 패키지를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ SQL Server 버전에 있는 및 인터넷에 연결 되어 있는지에 따라 �
 
     기본 R 명령을 사용 하 여 인터넷에서 패키지를 설치 합니다. 이 가장 간단한 방법은 아니지만 관리 액세스가 필요한 합니다.
 
-    **적용 대상:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]합니다.     또한에 필요한 인스턴스의 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 패키지 관리 Ddl 통해 설정 되지 않은 합니다.
+    **적용 대상:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]합니다. 또한에 필요한 인스턴스의 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 패키지 관리 Ddl 통해 설정 되지 않은 합니다.
 
 + [사용 하 여 서버에 새 R 패키지 설치 **없는** 인터넷 액세스](#bkmk_offlineInstall)
 
@@ -40,9 +40,9 @@ SQL Server 버전에 있는 및 인터넷에 연결 되어 있는지에 따라 �
 
 + [외부 라이브러리 만들기 문을 사용 하 여 패키지 설치](#bkmk_createlibrary) 
 
-    외부 라이브러리 만들기 문은 dba Python 또는 R 코드를 직접 실행 하지 않고 패키지 라이브러리를 만들 수 있도록 SQL Server 2017에 제공 됩니다. 그러나이 방법은 필요한 모든 패키지를 미리 준비 해야 합니다.  
+    [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) Python 코드를 직접 또는 문은 R을 실행 하지 않고 패키지 라이브러리를 만들 수 있도록 SQL Server 2017에 제공 됩니다. 그러나이 메서드는 사전에 필요한 모든 패키지를 준비 하 고 추가 database 권한이 있어야 필요 합니다.
 
-    **적용 대상:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 기타 제한이 적용  
+    **적용 대상:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 기타 제한이 적용
 
 ## <a name="bkmk_rInstall"></a> 인터넷을 사용 하 여 새 R 패키지 설치
 
@@ -131,7 +131,7 @@ R 패키지를 인터넷에 연결 되지 않은 서버에 설치 하려면 다�
 
 ## <a name="bkmk_createlibrary"></a> DDL 문을 사용 하 여 패키지를 설치 하려면 
 
-SQL Server 2017 년 1에서 사용할 수 있습니다는 [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 인스턴스 또는 특정 데이터베이스에 패키지 또는 패키지 집합을 추가 하는 문입니다. 이 DDL 문이 및 지원 데이터베이스 역할은 않습니다 패키지의 설치 및 관리를 용이 하 게 한 BA 하 여 Python 또는 R 도구를 사용 하지 않고도.
+SQL Server 2017 년 1에서 사용할 수 있습니다는 [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 인스턴스 또는 특정 데이터베이스에 패키지 또는 패키지 집합을 추가 하는 문입니다. 이 DDL 문이 및 지원 데이터베이스 역할은 것 패키지의 설치 및 관리를 용이 하 게 하려면 데이터베이스 소유자가 Python 또는 R 도구를 사용 하지 않고도입니다.
 
 이 프로세스는 일반적인 R, Python 메서드를 사용 하 여 패키지 설치에 비해 몇 가지 준비가 필요 합니다.
 
@@ -140,6 +140,8 @@ SQL Server 2017 년 1에서 사용할 수 있습니다는 [외부 라이브러�
     서버에서 파일 시스템에 액세스할 수 없는 경우 전달할 수도 있습니다는 완전 한 패키지 변수를 이진 형식을 사용 하 여 합니다. 자세한 내용은 참조 [외부 라이브러리 만들기](../../t-sql/statements/create-external-library-transact-sql.md)합니다.
 
 + 문이 필요한 패키지를 사용할 수 없는 경우 실패 합니다. 설치 하 고 패키지 서버 및 데이터베이스에 업로드 되 고 있는지 확인 하려는 패키지의 종속성을 분석 해야 합니다. 사용 하는 것이 좋습니다 **miniCRAN** 또는 **igraph** 패키지 종속성을 분석에 대 한 합니다.
+
++ 데이터베이스에 필요한 권한이 있어야 합니다. 자세한 내용은 참조 [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)합니다.
 
 ### <a name="prepare-the-packages-in-archive-format"></a>보관 파일 형식으로 패키지 준비
 

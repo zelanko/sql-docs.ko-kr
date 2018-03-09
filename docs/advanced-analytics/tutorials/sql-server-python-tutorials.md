@@ -1,9 +1,17 @@
 ---
 title: "SQL Server Python 자습서 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 09/19/2017
-vapplies_to:
+titleSuffix: SQL Server
+ms.custom: 
+ms.date: 03/06/2018
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
+ms.tgt_pltfrm: 
+ms.topic: tutorial
+applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
@@ -11,11 +19,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 42a9339f5983eeef28250db7a384f37efd4dad9d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: a9ba77cd6ec26e21136aa8ebfebfe67725b94ba2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server Python 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,15 +46,15 @@ ms.lasthandoff: 02/11/2018
 
 + [기계 학습에서 Python revoscalepy를 사용 하 여 모델 만들기](use-python-revoscalepy-to-create-model.md)
 
-   사용 하 여 모델을 만들게 **rxLinMod**, 새 **revoscalepy** 라이브러리입니다. 원격 Python 터미널에서 코드를 실행 하지만 모델링 SQL Server 계산 컨텍스트에서 수행 됩니다.
+   이 단원에서는 실행 하는 방법을 코드 원격 Python 터미널에서 SQL Server 계산 컨텍스트를 사용 하 여 보여 줍니다. Python tools와 환경에 어느 정도 이해 해야 합니다. 예제 코드를 사용 하 여 모델을 만드는 제공는 **rxLinMod**, 새 **revoscalepy** 라이브러리입니다. 
 
 + [SQL 개발자를 위해 데이터베이스에서 Python 분석](sqldev-in-database-python-for-sql-developers.md)
 
-  새로운! T-SQL 저장 프로시저를 사용 하 여 완전 한 Python 솔루션을 빌드하십시오. 모든 Python 코드가 포함 되어 있습니다.
+    이 종단 간 연습 T-SQL 저장 프로시저를 사용 하 여 전체 Python 솔루션을 구축 과정을 보여 줍니다. 모든 Python 코드가 포함 되어 있습니다.
 
 + [배포 및 Python 모델 사용](..\python\publish-consume-python-code.md)
 
-  최신 버전의 Microsoft 컴퓨터 학습 서버를 사용 하 여 Python 모델을 배포 하는 방법에 알아봅니다.
+  최신 버전의 Microsoft 컴퓨터 학습 서버를 사용 하 여 웹 서비스로 Python 모델을 배포 하는 방법을 알아봅니다.
 
 ## <a name="python-samples"></a>Python 샘플
 
@@ -65,22 +73,26 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="bkmk_Prerequisites"></a>필수 구성 요소
 
-이 자습서를 사용 하려면 SQL Server 2017 컴퓨터 학습 Services (In-database) 설치 해야 합니다. SQL Server 2017 Python 또는 R을 지원합니다. 그러나 확장성 프레임 워크를 지 원하는 기계 학습을 설치 하 고 설치할 언어도 Python을 선택 해야 합니다. R 및 Python 모두 동일한 컴퓨터에 설치할 수 있습니다.
+이 자습서를 사용 하려면 SQL Server 2017 있어야 하 고 명시적으로 설치 하 고 컴퓨터 학습 Services (In-database) 기능을 사용 하도록 설정 해야 합니다. 
 
-> [!NOTE]
->
-> Python에 대 한 지원이 SQL Server 2017 년 1의 새로운 기능 고 CTP 2.0 이상이 필요 합니다. 기능이 시험판 및 프로덕션 환경에 대해 지원 되지 않는 경우에 기능 직접 사용해 하 여 의견을 보내 초대 합니다.
+SQL Server 2017 R 및 Python 언어를 지원 하지만 설치 또는 둘 다 기본적으로 사용 됩니다. Python를 실행 하려면을 확장성 프레임 워크 사용할 수 있으며 Python 설치할 언어를 선택 해야 합니다. 
 
-**SQL Server 2017**
+### <a name="post-installation-configuration-tips"></a>설치 후 구성 팁
 
-SQL Server 설치 프로그램을 실행 한 후 이러한 중요 한 단계를 잊지 마십시오.
+SQL Server 설치 프로그램을 실행 한 후 Python 및 SQL Server 통신 하는지 확인 하려면 몇 가지 추가 단계를 수행 해야 합니다.
 
 + 외부 스크립트 실행 기능을 사용 하 여 활성화 `sp_configure 'external scripts enabled', 1`합니다.
-+ 서버를 다시 시작합니다.
-+ 외부 런타임을 호출 하는 서비스에 필요한 권한이 있는지 확인 합니다.
++ 서버를 다시 시작합니다. 
++ 열기는 **서비스** 패널 실행 패드 시작 되었는지 여부를 확인 합니다. 
++ 외부 런타임을 호출 하는 서비스에 필요한 권한이 있는지 확인 합니다. 자세한 내용은 참조 [묵시적된 인증 사용](../r/add-sqlrusergroup-to-database.md)합니다.
++ SQL Server에 대 한 방화벽에서 포트를 열고 필요한 네트워크 프로토콜을 사용 하도록 설정 합니다.
 + SQL 로그인 이나 Windows 사용자 계정에 데이터를 읽을 수 및 샘플에 필요한 모든 데이터베이스 개체를 만들려면 서버에 연결 하는 데 필요한 권한이 있는지 확인 합니다.
 
-문제를 실행 하면 몇 가지 일반적인 문제에 대 한이 문서를 참조 하세요.: [컴퓨터 학습 서비스 문제 해결](../machine-learning-troubleshooting-faq.md)
+몇 가지 일반적인 문제에 대 한이 문서를 참조: [컴퓨터 학습 서비스 문제 해결](../machine-learning-troubleshooting-faq.md)
+
+### <a name="resource-management"></a>리소스 관리
+
+R 및 Python 모두 동일한 컴퓨터에 설치할 수는 있지만 둘 다를 실행 하면 상당히 많은 리소스가 필요할 수 있습니다. "Out of memory" 오류가 발생 하는 경우 또는 보안 주체 사용 서버를 사용 하는 컴퓨터 학습 작업을 실행 하는 경우 데이터베이스 엔진에 할당 되는 메모리의 양을 줄일 수 있습니다. 자세한 내용은 참조 [관리 및 SQL Server에서 Python 모니터링](../python/managing-and-monitoring-python-solutions.md)합니다.
 
 ## <a name="see-also"></a>참고 항목
 
