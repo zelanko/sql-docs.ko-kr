@@ -28,9 +28,9 @@ ms.lasthandoff: 02/11/2018
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>SQL Server 및 R에 대 한 데이터 과학 연습에 대 한 필수 구성 요소
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-랩톱 또는 Microsoft R 라이브러리가 설치된 다른 컴퓨터에서 이 연습을 수행하길 권장합니다. 동일한 네트워크에서 Machine Learning 서비스와 R 언어를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 연결할 수 있어야 합니다.
+랩톱 또는 Microsoft R 라이브러리가 설치된 다른 컴퓨터에서 이 연습을 수행하길 권장합니다. 동일한 네트워크에서 기계 학습 서비스와 R 언어를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 연결할 수 있어야 합니다.
 
-이 연습에서는 둘 다를 포함 하는 컴퓨터에서 실행할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 R 개발 환경을 하지만 프로덕션 환경에 대 한이 구성을 권장 하지 않습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 R 개발 환경을 모두 가진 컴퓨터에서 이 연습을 실행할 수 있지만 프로덕션 환경에서는 그러한 구성을 권장하지 않습니다.
 
 ## <a name="install-machine-learning-for-sql-server"></a>SQL Server에 머신 러닝(Machine Learning) 설치
 
