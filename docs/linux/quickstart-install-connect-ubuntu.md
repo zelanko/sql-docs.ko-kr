@@ -1,4 +1,4 @@
----
+﻿---
 title: "Ubuntu Server 2017 SQL 시작 | Microsoft Docs"
 description: "이 퀵 스타트의 Ubuntu에 SQL Server 2017을 설치할 로컬 폴더를 만들고 sqlcmd 사용 하 여 데이터베이스를 쿼리 하는 방법을 보여 줍니다."
 author: rothja
@@ -28,22 +28,22 @@ ms.lasthandoff: 02/24/2018
 이 빠른 시작에서 먼저 Ubuntu 16.04에 SQL Server 2017를 설치 합니다. 그런 다음, **sqlcmd**로 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 > [!TIP]
-> 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 에 관심이 있는 경우는 [무인](sql-server-linux-setup.md#unattended) 또는 [오프 라인](sql-server-linux-setup.md#offline) 설치 절차 참조 [Linux에서 SQL Server에 대 한 설치 지침](sql-server-linux-setup.md)합니다.
+> 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 만약 [무인](sql-server-linux-setup.md#unattended) 또는 [오프라인](sql-server-linux-setup.md#offline) 설치 절차에 관심이 있는 경우는, [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
 사용 하는 Ubuntu 16.04 컴퓨터가 있어야 **최소 2GB** 메모리입니다.
 
-Ubuntu을 사용자의 컴퓨터에 설치 하려면로 이동 [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server)합니다. 또한 Azure의 Ubuntu 가상 컴퓨터를 만들 수 있습니다. 참조 [만들기 및 관리 Azure CLI 된 Linux Vm](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)합니다.
+Ubuntu를 사용자의 컴퓨터에 설치하려면, [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server)로 이동합니다. 또한 Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하십시오.
 
 > [!NOTE]
-> 이번에 [Linux에 대 한 Windows 하위](https://msdn.microsoft.com/commandline/wsl/about) 설치 대상으로 Windows 10은 지원 되지 않습니다.
+> 현재 Windows 10의 [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about)은 지원되지 않는 설치 대상입니다.
 
-다른 시스템 요구 사항에 대 한 참조 [Linux에서 SQL Server에 대 한 시스템 요구 사항](sql-server-linux-setup.md#system)합니다.
+다른 시스템 요구 사항에 대해서는 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하십시오.
 
 ## <a id="install"></a>SQL Server 설치
 
-Ubuntu에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명령을 실행는 **mssql 서버** 패키지 합니다.
+Ubuntu에 SQL Server를 구성하려면, **mssql-server** 패키지를 설치하는 다음 명령을 터미널에서 실행합니다.
 
 > [!IMPORTANT]
 > SQL Server 2017의 CTP나 RC 릴리스를 미리 설치한 경우, GA 리포지토리 중 하나를 등록하기 전에 이전 리포지토리를 먼저 제거해야 합니다. 자세한 내용은 [Preview 리포지토리에서 GA 리포지토리로 변경](sql-server-linux-change-repo.md)을 참고하십시오.

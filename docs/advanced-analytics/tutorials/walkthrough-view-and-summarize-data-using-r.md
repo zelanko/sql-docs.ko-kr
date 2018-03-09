@@ -1,4 +1,4 @@
----
+﻿---
 title: "R를 사용한 데이터 관찰 및 요약 | Microsoft Docs"
 ms.date: 11/10/2017
 ms.reviewer: 
@@ -40,6 +40,8 @@ ms.lasthandoff: 02/11/2018
 > 연습의 나머지 부분을 나중에 완료하려는 경우 R 작업 영역을 저장해 두세요.  그렇게 하면 데이터 개체와 다른 변수들을 다시 사용할 수 있습니다.
 
 ## <a name="define-a-sql-server-compute-context"></a>SQL Server 계산 컨텍스트 정의
+
+Microsoft R을 사용하면 R 코드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 손쉽게 가져올 수 있습니다. 프로세스는 다음과 같습니다.
 
 Microsoft R을 사용하면 R 코드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 손쉽게 가져올 수 있습니다. 프로세스는 다음과 같습니다.
   
@@ -119,6 +121,7 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
     ```R
     sampleDataQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
     ```
+    더 빠르게 실행하도록 TOP 절을 사용했었지만 그로 인해 쿼리에서 반환 되는 실제 행은 순서에 따라 다양할 수 있습니다. 따라서 아래에 나열된 요약 결과 또한 다른 수 있습니다. 편하게 TOP 절을 제거하세요 (역주. 원문에 TOP절이 생략되어 있어 추가함.)
 
     좀 더 빠르게 실행 하는 TOP 절을 사용 했습니다 하지만 쿼리에 의해 반환 되는 실제 행 순서에 따라 달라질 수 있습니다. 따라서 요약 결과가 아래에 나열 된 다른 수도 있습니다. TOP 절을 제거 하려면 자유롭게 합니다.
 
@@ -147,11 +150,10 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
 이번 섹션에서 원격 계산 컨텍스트를 지원하는 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 의 몇 가지 함수를 시도해 보겠습니다. 데이터 소스에 R 함수를 적용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 탐색, 요약, 차트로 작성할 수 있습니다.
 
 1. [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) 함수를 호출하면 데이터 원본에 있는 변수들의 목록과 해당 데이터 형식을 얻을 수 있습니다.
-
-    **rxGetVarInfo** 는 편리한 함수입니다. 데이터 프레임 또는 원격 데이터 개체 내의 데이터 집합에 대해 호출하면 최대값과 최소값, 그 데이터 유형, 인자(factor) 열이 몇 개의 수준(level)으로 되어 있는지 등의 정보를 얻을 수 있습니다.
     
-    데이터 입력, 특성 변환 또는 특성 추출(feature engineering) 후에 이 함수를 실행하는 것을 고려하세요. 그렇게 하면 모델에서 사용하려는 모든 특성의 예상 데이터 유형을 확인하고 오류를 피할 수 있습니다.
+    **rxGetVarInfo** 는 편리한 함수입니다. 데이터 프레임 또는 원격 데이터 개체 내의 데이터 집합에 대해 호출하면 최대값과 최소값, 그 데이터 유형, 인자(factor) 열이 몇 개의 수준(level)으로 되어 있는지 등의 정보를 얻을 수 있습니다.
   
+    데이터 입력, 특성 변환 또는 특성 추출(feature engineering) 후에 이 함수를 실행하는 것을 고려하세요. 그렇게 하면 모델에서 사용하려는 모든 특성의 예상 데이터 유형을 확인하고 오류를 피할 수 있습니다.
     ```R
     rxGetVarInfo(data = inDataSource)
     ```
@@ -190,6 +192,7 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
     + 이 예제에는 함수의 시작과 완료 시간을 추적해서 성능을 비교할 수 있는 코드도 포함하고 있습니다.
   
     **결과**
+    rxSummary 함수가 성공적으로 실행되면 다음과 같은 범주별 통계 목록을 보여줍니다. 
 
     이러한 경우 결과 rxSummary 함수 성공적으로 실행 하는 경우 나타납니다 목록 다음에 통계의 범주별으로 보여 줍니다. 
 

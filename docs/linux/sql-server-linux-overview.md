@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server on Linux 개요 | Microsoft Docs"
 description: "이 항목에서는 SQL 서버를 Linux에서 실행하는 방법 및 자세한 학습 방법에 대한 정보를 제공합니다."
 author: rothja
@@ -50,7 +50,7 @@ SQL Server 2017이 이제 Linux에서 실행됩니다 동일한 SQL Server 데�
 | SSMS(SQL Server Management Studio) | [Windows에서 SSMS를 사용하여 SQL Server on Linux에 연결](sql-server-linux-develop-use-ssms.md) |
 | SQL  Server  Data  Tools(SSDT) | [SQL Server on Linux에서 SSDT 사용](sql-server-linux-develop-use-ssdt.md) |
 
-## <a name="explore"></a>탐색
+## <a name="explore">탐색</a>
 
 SQL Server 2017은 Linux를 포함하여 모든 지원되는 플랫폼에 동일한 기본 데이터베이스 엔진을 가지고 있습니다 따라서 많은 기존 기능 및 성능이 Linux에서 동일한 방식으로 동작합니다 이 문서에서는 이러한 기능 중 일부를 Linux 관점에서 설명합니다 또한 Linux에만 해당하는 요구 사항에 대해 설명합니다.
 
