@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 설명서 | Microsoft Docs"
-ms.date: 10/30/2017
+ms.date: 02/28/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -27,11 +27,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5e6b2ffe7735bf8c7cb2fe7e9f76b7d4b675ceef
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84c0a18929883f0a58e75ed5ce20900d0bdf09e7
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,21 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 |[SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)        |
 |[SQL Server 2014의 새로운 기능](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
-   
+
+
 **SQL Server를 사용해 보세요.**
+> [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
+>
+> [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)
+>
+> [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
+>
+> [![가상 머신 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server가 있는 가상 머신 가져오기](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+## <a name="sql-server-technologies"></a>SQL Server 기술
+
 
 |||
-|-|-|
-|[![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477) | [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [SQL Server 2016 다운로드](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) |
-|[![가상 머신 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server가 있는 가상 머신 가져오기](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) | [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md) |
-| [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md) | |
-
-    
-## <a name="sql-server-technologies"></a>SQL Server 기술    
-    
-|||    
 |-|-|    
 |![SQL 데이터베이스 엔진](../sql-server/media/sql-database-engine.png "SQL 데이터베이스 엔진")|**[데이터베이스 엔진](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> 데이터베이스 엔진은 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. 데이터베이스 엔진에서는 기업 내에서 가장 다루기 어려운 데이터 소비형 응용 프로그램의 요구 사항을 충족시키기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다. 또한 데이터베이스 엔진은 고가용성을 유지하기 위한 다각적인 지원을 제공합니다.|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 데이터 웨어하우징을 위해 추출, 변환 및 로드하는 ETL 패키지를 비롯하여 고성능 데이터 통합 솔루션을 작성하기 위한 플랫폼입니다.|    
@@ -74,13 +76,13 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 ## <a name="earlier-sql-server-versions"></a>이전 버전의 SQL Server
 - [SQL Server 업데이트 센터 - 지원되는 모든 버전에 대한 링크 및 정보](https://msdn.microsoft.com/library/ff803383.aspx)
 - [SQL Server 2014 설명서](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [SQL Server 2012 설명서](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
-- [SQL Server 2008 R2 설명서](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
-- [SQL Server 2008 설명서](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
-- [보관된 SQL Server 2005 설명서](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
+- [SQL Server 2012 설명서](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
+- [SQL Server 2008 R2 설명서](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)
+- [SQL Server 2008 설명서](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
+- [보관된 SQL Server 2005 설명서](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
 
 ## <a name="samples"></a>샘플  
-- [Wide World Importers 예제 데이터베이스](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
+- [Wide World Importers 예제 데이터베이스](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
 - [SQL Server 2016에 대한 AdventureWorks 예제 데이터베이스 및 스크립트](https://www.microsoft.com/download/details.aspx?id=49502) 
 - [GitHub의 SQL Server 예제](https://github.com/Microsoft/sql-server-samples) 
    
