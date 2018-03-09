@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL을 사용한 데이터 관찰 및 탐색(연습) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2017

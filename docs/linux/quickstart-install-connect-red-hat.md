@@ -1,4 +1,4 @@
----
+﻿---
 title: "Red Hat Enterprise Linux에서 SQL Server 2017 시작 | Microsoft Docs"
 description: "이 빠른 시작 자습서에서는 Red Hat Enterprise Linux에 SQL Server 2017을 설치할 로컬 폴더를 만들고 sqlcmd를 사용하여 데이터베이스를 쿼리하는 방법을 보여줍니다."
 author: rothja

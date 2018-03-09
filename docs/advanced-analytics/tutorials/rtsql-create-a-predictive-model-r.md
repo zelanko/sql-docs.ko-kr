@@ -1,4 +1,4 @@
----
+﻿---
 title: "모델에서 예측 및 그리기(SQL에서 R 빠른 시작) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
