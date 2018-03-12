@@ -1,4 +1,4 @@
-﻿---
+---
 title: "PowerShell를 사용한 데이터 준비(연습) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/10/2017
@@ -48,13 +48,13 @@ ms.lasthandoff: 02/11/2018
 
 1.  데이터 과학 클라이언트 컴퓨터에서 관리자 권한으로 Windows PowerShell 명령 프롬프트를 엽니다.
 
-2. 다운로드 스크립트를 오류 없이 실행하기 위해 아래 명령을 실행합니다. 시스템 기본값을 변경하지 않고 일시적으로 스크립트를 허용합니다.
+2.  다운로드 스크립트를 오류 없이 실행하기 위해 아래 명령을 실행합니다. 시스템 기본값을 변경하지 않고 일시적으로 스크립트를 허용합니다.
 
     ```
     Set-ExecutionPolicy Unrestricted -Scope Process -Force
     ```
       
-3.  3.	다음 Powershell 명령을 실행하여 스크립트 파일을 로컬 디렉터리로 다운로드합니다. 디렉터리를 다르게 지정하지 않으면 기본적으로 `C:\tempR` 폴더가 만들어지고 모든 파일이 저장됩니다.
+3.  다음 Powershell 명령을 실행하여 스크립트 파일을 로컬 디렉터리로 다운로드합니다. 디렉터리를 다르게 지정하지 않으면 기본적으로 `C:\tempR` 폴더가 만들어지고 모든 파일이 저장됩니다.
   
     ```
     $source = 'https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_R_Walkthrough.ps1'  
@@ -66,15 +66,15 @@ ms.lasthandoff: 02/11/2018
   
     다른 디렉터리에 파일을 저장하려면 *DestDir* 매개 변수의 값을 편집해서 컴퓨터의 다른 폴더를 지정하십시오. 존재하지 않는 폴더 이름을 입력하면 PowerShell 스크립트가 해당 폴더를 만듭니다.
   
-4. 	다운로드는 다소 시간이 걸릴 수 있습니다. 다운로드가 완료된 후 Windows PowerShell 명령 콘솔은 아래와 같이 표시됩니다.
+4.  다운로드는 다소 시간이 걸릴 수 있습니다. 다운로드가 완료된 후 Windows PowerShell 명령 콘솔은 아래와 같이 표시됩니다.
   
     ![PowerShell 스크립트 완료 후](media/rsql-e2e-psscriptresults.PNG "PowerShell 스크립트 완료 후")
   
-5.  PowerShell 콘솔에서 `ls` 명령을 실행하여 *DestDir*에 다운로드된 파일 목록을 확인할 수 있습니다.  파일에 대한 설명은 [샘플에 포함된 내용](#What-the-Download-Includes)을 참조합니다.
+5.  PowerShell 콘솔에서 `ls` 명령을 실행하여 *DestDir*에 다운로드된 파일 목록을 확인할 수 있습니다.  파일에 대한 설명은 [샘플에 포함된 내용](#What-the-Download-Includes) 을 참조합니다.
 
 ## <a name="2-install-required-r-packages"></a>2. 필수 R 패키지 설치
 
-이 연습을 수행하려면 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 일부로 기본 설치되지 않는 몇 가지 R 라이브러리가 필요합니다. 솔루션을 개발하는 클라이언트와 솔루션을 배포하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 양쪽 모두에 패키지를 설치해야 합니다.
+이 연습을 수행하려면 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 의 일부로 기본 설치되지 않는 몇 가지 R 라이브러리가 필요합니다. 솔루션을 개발하는 클라이언트와 솔루션을 배포하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 양쪽 모두에 패키지를 설치해야 합니다.
 
 ### <a name="install-required-packages-on-the-client"></a>클라이언트에 필수 패키지 설치
 
@@ -99,9 +99,9 @@ ms.lasthandoff: 02/11/2018
 SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니다. 예를 들어 SQL Server는 데이터베이스 관리자가 패키지 리포지토리를 만들고 사용자가 자신의 패키지를 설치할 수 있도록 권한을 할당할 수 있는 [패키지 관리](../r/installing-and-managing-r-packages.md) 기능을 제공합니다. 그런데 컴퓨터 관리자의 경우 R을 사용해서 새로운 패키지를 설치할 수도 있습니다.
 
 > [!NOTE]
-> 서버에서 메시지가 표시되더라도 사용자 라이브러리에 설치하지 마십시오. 사용자 라이브러리에 설치하지 마십시오. 사용자 라이브러리에 설치하면 SQL Server 인스턴스가 해당 패키지를 찾거나 실행할 수 없습니다. 자세한 내용은 [SQL Server에 새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md)를 참조하세요.
+> 서버에서 메시지가 표시되더라도 사용자 라이브러리에 설치 **하지 마** 십시오. 사용자 라이브러리에 설치하면 SQL Server 인스턴스가 해당 패키지를 찾거나 실행할 수 없습니다. 자세한 내용은 [SQL Server에 새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md) 를 참조하세요.
 
-1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 RGui.exe를 **관리자 권한으로** 엽니다. 기본값으로 SQL Server R Services를 설치한 경우 RGui.exe는 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64)에 있습니다.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 RGui.exe를 **관리자 권한으로** 엽니다.  기본값으로 SQL Server R Services를 설치한 경우 RGui.exe는 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64)에 있습니다.
 
 2.  R 프롬프트에서 다음 R 명령을 실행합니다.
   
@@ -112,13 +112,13 @@ SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 이 예제에서는 벡터의 사용 가능한 경로 검색 하 고 "Program Files"를 포함 하는 경로 찾을 R grep 함수를 사용 합니다. 자세한 내용은 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)을 참조하세요.
+    - 이 예제에서는 R grep 함수로 사용 가능한 경로의 벡터를 검색하고 그 중 "Program Files"를 포함하는 경로를 찾습니다. 자세한 내용은 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep) 을 참조하세요.
 
-    - 패키지가 이미 설치되었다고 생각되면 `installed.packages()`를 실행하여 설치된 패키지 목록을 확인하십시오.
+    - 패키지가 이미 설치되었다고 생각되면 `installed.packages()` 를 실행하여 설치된 패키지 목록을 확인하십시오.
 
 ## <a name="3-prepare-the-environment-using-runsqlrwalkthroughps1"></a>3. RunSQL_R_Walkthrough.ps1으로 환경 준비
 
-다운로드는 데이터 파일, R 스크립트, T-SQL 스크립트와 더불어 PowerShell 스크립트 `RunSQL_R_Walkthrough.ps1`을 포함합니다. 이 스크립트는 다음 작업을 수행합니다.
+다운로드는 데이터 파일, R 스크립트, T-SQL 스크립트와 더불어 PowerShell 스크립트 `RunSQL_R_Walkthrough.ps1` 을 포함합니다. 이 스크립트는 다음 작업을 수행합니다.
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 SQL Native Client와 명령줄 유틸리티가 설치되어 있는지 확인합니다. 명령줄 도구는 [bcp 유틸리티](../../tools/bcp-utility.md)를 실행하는 데 필요합니다. 이 유틸리티는 SQL 테이블에 데이터를 빠르게 대량 로드하는 데 사용됩니다.
 
@@ -130,7 +130,7 @@ SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니
 
 - 지정한 데이터베이스 이름을 사용하도록 R 스크립트 파일의 인수를 다시 씁니다.
 
-솔루션을 작성할 수 있는 컴퓨터에서이 스크립트 실행: 예를 들어의 노트북 개발 하 고 R 코드를 테스트 합니다. 데이터 과학 클라이언트를 호출하게 될 이 컴퓨터에서 명명된 파이프 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 연결할 수 있어야 합니다.
+솔루션을 구성하는 컴퓨터에서 이 스크립트를 실행하십시오. R 코드를 개발하고 검증하는 랩톱을 예로 들 수 있습니다. 데이터 과학 클라이언트로 부르게 될 이 컴퓨터는 명명된 파이프 프로토콜을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 연결할 수 있어야 합니다.
 
 1. PowerShell 명령줄을 **관리자** 권한으로 엽니다.
   
@@ -140,11 +140,11 @@ SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니
     .\RunSQL_R_Walkthrough.ps1
     ```
   
-3. 다음 각 매개변수마다 프롬프트가 표시됩니다.
+3.  다음 각 매개변수마다 프롬프트가 표시됩니다.
   
-    **데이터베이스 서버 이름**: Machine Learning Services 또는 R Services가 설치된 SQL Server 인스턴스의 이름입니다.
+    **데이터베이스 서버 이름**: 기계 학습 서비스 또는 R Services가 설치된 SQL Server 인스턴스의 이름입니다.
 
-    네트워크 요구 사항에 따라 인스턴스 이름에 하나 이상의 서브넷 이름이 필요할 수도 있습니다. 예를 들어 MYSERVER가 작동하지 않으면  myserver.subnet.mycompany.com을 시도해 보세요.
+    네트워크 요구 사항에 따라 인스턴스 이름에 하나 이상의 서브넷 이름이 필요할 수도 있습니다.   예를 들어 MYSERVER가 작동하지 않으면 myserver.subnet.mycompany.com을 시도해 보세요.
     
     **만들려는 데이터베이스의 이름**: 예를 들어 **Tutorial** 또는 **Taxi**를 입력할 수 있습니다.
 
@@ -157,13 +157,13 @@ SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니
       > [!WARNING]
       > PowerShell 스크립트의 프롬프트를 사용하여 자격 증명을 제공하면 업데이트된 스크립트 파일에 일반 텍스트로 암호가 기록됩니다. 필요한 R 개체를 만든 직 후 파일을 편집해서 자격 증명을 제거하십시오.
       
-    **csv 파일 경로**: 데이터 파일의 전체 경로를 제공합니다. 기본 경로 및 파일 이름은 `C:\tempR\nyctaxi1pct.csv`입니다.
+    **csv 파일 경로**: 데이터 파일의 전체 경로를 제공합니다. 기본 경로와 파일명은 `C:\tempR\nyctaxi1pct.csv` 입니다.
   
 4.  Enter 키를 눌러 스크립트를 실행합니다.
 
     스크립트에서 파일을 다운로드하고 데이터베이스에 데이터를 자동으로 로드합니다. 이 작업은 다소 시간이 걸릴 수 있습니다. PowerShell 창에서 상태 메시지를 확인합니다.
       
-    대량 가져오기 또는 다른 단계가 실패하면 [문제 해결](#bkmk_Troubleshooting) 섹션에 설명된 대로 수동으로 데이터를 로드할 수 있습니다.
+    대량 가져오기 또는 다른 단계가 실패하면 [문제 해결](#bkmk_Troubleshooting) 절에 설명된 대로 수동으로 데이터를 로드할 수 있습니다.
 
 **결과(성공적으로 완료)**
 
@@ -179,7 +179,7 @@ This step (plugging in database information) takes 0.48 seconds.
 
 ## <a name="bkmk_Troubleshooting"></a>문제 해결
 
-PowerShell 스크립트에 문제가 있다면 수동으로 전체 혹은 일부를 실행할 수 있습니다. 이번 섹션에서 몇 가지 공통적인 문제와 해결 방법을 나열합니다.
+PowerShell 스크립트에 문제가 있다면 수동으로 전체 혹은 일부를 실행할 수 있습니다. 이번 절에서 몇 가지 공통적인 문제와 해결 방법을 나열합니다.
 
 ### <a name="powershell-script-didnt-download-the-data"></a>PowerShell 스크립트가 데이터를 다운로드하지 않음
 
@@ -187,7 +187,7 @@ PowerShell 스크립트에 문제가 있다면 수동으로 전체 혹은 일부
 
 [http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
-다운로드한 데이터 파일의 경로와 데이터가 저장된 파일 이름을 적어둡니다. **bcp**를 사용하여 테이블에 데이터를 로드하려면 전체 경로가 필요합니다.
+다운로드한 데이터 파일의 경로와 데이터가 저장된 파일 이름을 적어둡니다. **bcp** 를 사용하여 테이블에 데이터를 로드하려면 전체 경로가 필요합니다. 
 
 ### <a name="unable-to-download-the-data"></a>데이터를 다운로드할 수 없음
 
@@ -199,7 +199,7 @@ PowerShell 스크립트에 문제가 있다면 수동으로 전체 혹은 일부
 
 + 인스턴스 이름의 철자를 확인합니다.
 + 전체 연결 문자열을 확인합니다.
-+ 네트워크 요구 사항에 따라 하나 이상의 서브넷 이름을 사용하여 인스턴스 이름을 한정해야 할 수도 있습니다. 예를 들어 MYSERVER가 작동하지 않는 경우 myserver.subnet.mycompany.com을 사용해 보세요.
++ 네트워크 요구 사항에 따라 인스턴스 이름에 하나 이상의 서브넷 이름이 필요할 수도 있습니다.   예를 들어 MYSERVER가 작동하지 않으면 myserver.subnet.mycompany.com을 시도해 보세요.
 + Windows 방화벽이 SQL Server 연결을 허용하는지 확인합니다.
 + 서버를 등록하고 원격 연결을 허용하는지 확인합니다.
 + 명명된 인스턴스를 사용한다면 SQL Browser 서비스를 켜서 연결을 보다 쉽게 합니다.
@@ -259,9 +259,9 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 ### <a name="the-data-loaded-but-it-contains-duplicates"></a>로드된 데이터에 중복이 있음
 
-데이터베이스에 동일한 이름과 동일한 스키마의 테이블이 존재하는 경우 **bcp**는 기존 데이터를 덮어쓰지 않고 새로운 데이터 사본을 삽입합니다.
+데이터베이스에 동일한 이름과 동일한 스키마의 테이블이 존재하는 경우 **bcp** 는 기존 데이터를 덮어쓰지 않고 새로운 데이터 사본을 삽입합니다.
 
-중복 데이터를 방지 하려면 스크립트를 다시 실행 하기 전에 기존 테이블을 자릅니다.
+중복 데이터를 방지하려면 스크립트를 다시 실행하기 전에 기존 테이블을 자릅니다.
 
 ## <a name="whats-included-in-the-sample"></a>샘플에 포함된 내용
 
@@ -275,11 +275,11 @@ GitHub 리포지토리에서 파일을 다운로드하면 다음과 같습니다
 
 ### <a name="bkmk_data"></a>데이터 학습 및 채점
 
-데이터는 각 여정의 요금 및 지불된 팁 금액을 비롯하여 2013년 17,300만 개별 여정의 레코드를 포함하는 뉴욕시 택시 데이터 집합의 대표 샘플링입니다. 데이터를 쉽게 사용할 수 있도록 Microsoft 데이터 과학 팀은 1%의 데이터만 가져오는 다운 샘플링을 수행했습니다.  이 데이터는 Azure의 공용 Blob Storage 컨테이너에서 .CSV 형식으로 공유되었습니다. 원본 데이터에는 바로 아래 350MB 압축 되지 않은 파일입니다.
+데이터는 뉴욕 시 택시 데이터 집합의 견본 샘플로, 2017년에 각 여행에서 지불한 요금과 팁을 포함해 1억 7300만 건의 개별 여행 기록을 포함합니다. 데이터를 보다 쉽게 사용하기 위해 Microsoft 데이터 과학 팀이 다운샘플링을 수행하여 데이터의 1%만 얻었습니다.  이 데이터는 Azure의 공용 Blob 저장소 컨테이너에 .CSV 형식으로 공유됩니다. 원본 데이터에는 350MB 이하의 압축되지 않은 파일입니다.
 
 + 공용 데이터 집합: [NYC 택시 및 Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [뉴욕 택시 데이터 집합에서 Azure ML 모델 만들기] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/
++ [뉴욕 택시 데이터 집합에서 Azure ML 모델 만들기] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 
 ### <a name="powershell-and-r-script-files"></a>PowerShell 및 R 스크립트 파일
 
@@ -295,7 +295,7 @@ PowerShell 스크립트는 SQL Server 인스턴스에서 여러 [!INCLUDE[tsql](
 
 |SQL 스크립트 파일 이름|Description|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br /> *nyctaxi_sample*: 교육 데이터(NYC 택시 데이터 집합의 1% 샘플)를 저장하는 테이블입니다. 저장소 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다.<br /><br /> *nyc_taxi_models*: 이진 형식에서 학습 된 모델을 저장 하는 데 사용 되는 테이블입니다.|
+|create-db-tb-upload-data.sql|데이터베이스와 두 개의 테이블을 만듭니다.<br /><br /> *nyctaxi_sample*: NYC 택시 데이터 집합의 1% 샘플인 훈련용 데이터를 저장하는 테이블입니다. 저장소와 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다.<br /><br /> *nyc_taxi_models*: 훈련된 모델을 이진 형식으로 저장하는데 사용되는 테이블입니다.|
 |PredictTipBatchMode.sql|새로운 관측(observations)에 대한 레이블(labels)을 예측하기 위해 훈련된 모델을 호출하는 저장 프로시저를 만듭니다. 입력 매개 변수로 쿼리를 받습니다.|
 |PredictTipSingleMode.sql|새로운 관측에 대한 레이블을 예측하기 위해 훈련된 분류 모델을 호출하는 저장 프로시저를 만듭니다. 새로운 관측의 변수가 인라인 매개 변수로 전달됩니다.|
 |PersistModel.sql|데이터베이스의 테이블에 분류 모델의 이진 표현을 저장하는 데 도움이 되는 저장 프로시저를 만듭니다.|
@@ -304,7 +304,7 @@ PowerShell 스크립트는 SQL Server 인스턴스에서 여러 [!INCLUDE[tsql](
 
 이 연습에서 사용된 T-SQL은 검증을 거쳤으며 R 코드에서 그대로 실행될 수 있습니다. 그러나 추가 실험을 원하거나 자체 솔루션을 개발하는 경우엔 전용 SQL 개발 환경에서 쿼리를 검증하고 튜닝한 뒤 R 코드에 추가하는 것을 권장합니다.
 
-+ [Visual Studio Code](https://code.visualstudio.com/)용 [mssql 확장](https://code.visualstudio.com/docs/languages/tsql)은 대부분의 데이터베이스 개발 작업을 지원하는 쿼리를 실행할 수 있는 무료 경량 환경입니다.
++ [Visual Studio Code](https://code.visualstudio.com/) 용 [mssql 확장](https://code.visualstudio.com/docs/languages/tsql) 은 대부분의 데이터베이스 개발 작업을 지원하는 쿼리를 실행할 수 있는 무료 경량 환경입니다.
 + [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)는 SQL Server 데이터베이스 개발 및 관리를 위해 제공되는 강력한 무료 도구입니다.
 
 ## <a name="next-lesson"></a>다음 단원
@@ -315,4 +315,4 @@ PowerShell 스크립트는 SQL Server 인스턴스에서 여러 [!INCLUDE[tsql](
 
 [R 및 SQL Server용 데이터 과학 전체 과정 연습](/walkthrough-data-science-end-to-end-walkthrough.md)
 
-[데이터 과학 연습을 위한 필수 조건](walkthrough-prerequisites-for-data-science-walkthroughs.md)
+[데이터 과학 연습을 위한 필수 구성 요소](walkthrough-prerequisites-for-data-science-walkthroughs.md)
