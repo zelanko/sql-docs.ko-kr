@@ -29,10 +29,10 @@ ms.author: jroth
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ce69679a348fdb29b334f45fa5e3a61f8dd14e2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,15 +59,15 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|추적의 ID입니다.|  
-|속성|**int**|추적의 속성입니다.<br /><br /> 1= 추적 옵션. 자세한 내용은 참조 @options 에 [sp_trace_create &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = 파일 이름<br /><br /> 3 = 최대 크기<br /><br /> 4 = 중지 시간<br /><br /> 5 = 현재 추적 상태. 0 = 중지됨. 1 = 실행 중.|  
+|속성|**int**|추적의 속성입니다.<br /><br /> 1= 추적 옵션. 자세한 내용은 참조 @options 에 [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)합니다.<br /><br /> 2 = 파일 이름<br /><br /> 3 = 최대 크기<br /><br /> 4 = 중지 시간<br /><br /> 5 = 현재 추적 상태. 0 = 중지됨. 1 = 실행 중.|  
 |value|**sql_variant**|지정된 추적의 속성에 대한 정보입니다.|  
   
 ## <a name="remarks"></a>주의  
  fn_trace_getinfo에 특정 추적의 ID를 전달하면 해당 추적에 대한 정보가 반환되고 잘못된 ID를 전달하면 빈 행 집합이 반환됩니다.  
   
- fn_trace_getinfo는 해당 결과 집합에 포함된 모든 추적 파일 이름에 .trc 확장명을 추가합니다. 추적 정의에 대 한 정보를 참조 하십시오. [sp_trace_create &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). 추적 필터에 대 한 유사한 정보를 참조 하십시오. [sys.fn_trace_getfilterinfo&#40; Transact SQL &#41; ](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
+ fn_trace_getinfo는 해당 결과 집합에 포함된 모든 추적 파일 이름에 .trc 확장명을 추가합니다. 추적 정의에 대 한 정보를 참조 하십시오. [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)합니다. 추적 필터에 대 한 유사한 정보를 참조 하십시오. [sys.fn_trace_getfilterinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)합니다.  
   
- 추적 저장 프로시저를 사용 하 여의 전체 예제를 참조 하세요. [추적 &#40; 만들기 Transact SQL &#41; ](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
+ 추적 저장 프로시저를 사용 하 여의 전체 예제를 참조 하십시오. [추적을 만들고 &#40;TRANSACT-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)합니다.  
   
 ## <a name="permissions"></a>Permissions  
  서버에 대한 ALTER TRACE 권한이 필요합니다.  
@@ -83,12 +83,12 @@ GO
 ## <a name="see-also"></a>관련 항목:  
  [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [sp_trace_create&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
- [sp_trace_generateevent&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [sys.fn_trace_getfilterinfo&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sys.fn_trace_geteventinfo&#40; Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys.fn_trace_gettable &#40; Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
+ [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_gettable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   
