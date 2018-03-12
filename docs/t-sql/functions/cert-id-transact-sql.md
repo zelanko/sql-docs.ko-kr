@@ -1,5 +1,5 @@
 ---
-title: CERT_ID (Transact SQL) | Microsoft Docs
+title: CERT_ID(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -54,10 +54,10 @@ Cert_ID ( 'cert_name' )
 ## <a name="return-types"></a>반환 형식
  **int**  
   
-## <a name="remarks"></a>주의  
-인증서 이름에 표시 되는 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 카탈로그 뷰에 있습니다.
+## <a name="remarks"></a>Remarks  
+인증서 이름은 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 카탈로그 뷰에서 볼 수 있습니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 인증서에 대한 몇 가지 사용 권한이 필요하며 인증서에 대한 호출자의 VIEW DEFINITION 권한이 거부되지 않아야 합니다.
   
 ## <a name="examples"></a>예  
@@ -68,7 +68,7 @@ SELECT Cert_ID('ABerglundCert3');
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [sys.certificates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
 [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
 [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)

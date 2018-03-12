@@ -1,5 +1,5 @@
 ---
-title: INDEX_COL (Transact SQL) | Microsoft Docs
+title: INDEX_COL(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,16 +58,16 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  인덱스가 속한 스키마의 이름입니다.  
   
  *table_or_view_name*  
- 테이블 또는 인덱싱된 뷰의 이름입니다. *table_or_view_name* 작은따옴표로 구분 해야 하며 데이터베이스 이름 및 스키마 이름을 붙여 정규화 할 수 있습니다.  
+ 테이블 또는 인덱싱된 뷰의 이름입니다. *table_or_view_name*은 작은따옴표로 구분해야 하며 데이터베이스 이름 및 스키마 이름을 붙여 정규화할 수 있습니다.  
   
  *index_id*  
- 인덱스의 ID입니다. *index_ID* 은 **int**합니다.  
+ 인덱스의 ID입니다. *index_ID*는 **int**입니다.  
   
  *key_id*  
- 인덱스 키 열 위치입니다. *key_ID* 은 **int**합니다.  
+ 인덱스 키 열 위치입니다. *key_ID*는 **int**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **nvarchar (128** **)**  
+ **nvarchar(128** **)**  
   
 ## <a name="exceptions"></a>예외  
  오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  
@@ -99,9 +99,9 @@ Index Column 1      Index Column 2
 SalesOrderID        SalesOrderDetailID  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

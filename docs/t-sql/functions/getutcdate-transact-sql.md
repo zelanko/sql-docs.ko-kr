@@ -1,5 +1,5 @@
 ---
-title: GETUTCDATE (Transact SQL) | Microsoft Docs
+title: GETUTCDATE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/02/2015
 ms.prod: sql-non-specified
@@ -51,12 +51,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  현재 데이터베이스 시스템 타임 스탬프로 반환는 **datetime** 값입니다. 데이터베이스 표준 시간대 오프셋이 포함되어 있지 않습니다. 이 값은 현재 UTC(Coordinated Universal Time) 시간을 나타냅니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 운영 체제에서 파생됩니다.  
+  현재 데이터베이스 시스템 타임스탬프를 **datetime** 값으로 반환합니다. 데이터베이스 표준 시간대 오프셋이 포함되어 있지 않습니다. 이 값은 현재 UTC(Coordinated Universal Time) 시간을 나타냅니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 운영 체제에서 파생됩니다.  
   
 > [!NOTE]  
 >  SYSDATETIME 및 SYSUTCDATETIME에는 GETDATE 및 GETUTCDATE보다 많은 소수 자릿수 초의 전체 자릿수가 있습니다. SYSDATETIMEOFFSET에는 시스템 표준 시간대 오프셋이 포함되어 있습니다. SYSDATETIME, SYSUTCDATETIME 및 SYSDATETIMEOFFSET은 모든 날짜 및 시간 유형의 변수에 할당할 수 있습니다.  
   
- 모든 개요 [!INCLUDE[tsql](../../includes/tsql-md.md)] 날짜 및 시간 데이터 형식 및 함수, 참조 [날짜 및 시간 데이터 형식 및 함수 &#40; Transact SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식과 함수에 대한 개요는 [날짜 및 시간 데이터 형식과 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,8 +69,8 @@ GETUTCDATE()
 ## <a name="return-types"></a>반환 형식  
  **datetime**  
   
-## <a name="remarks"></a>주의  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]문은 참조할 수 있습니다 GETUTCDATE를 참조할 수 있는 모든 위치는 **datetime** 식입니다.  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 **datetime** 식을 참조할 수 있는 모든 곳에서 GETUTCDATE를 참조할 수 있습니다.  
   
  GETUTCDATE는 비결정적 함수입니다. 열에서 이 함수를 참조하는 뷰와 식은 인덱싱될 수 없습니다.  
   
@@ -135,9 +135,9 @@ GETUTCDATE()             01:25:01.6930000
 */  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [CAST 및 convert&#40; Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [표준 시간대 &AMP;#40; Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

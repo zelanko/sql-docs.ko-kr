@@ -1,5 +1,5 @@
 ---
-title: ASYMKEY_ID (Transact SQL) | Microsoft Docs
+title: ASYMKEY_ID(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -56,7 +56,7 @@ ASYMKEY_ID ( 'Asym_Key_Name' )
 ## <a name="return-types"></a>반환 형식
  **int**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 비대칭 키에 대한 일부 사용 권한이 필요하며 비대칭 키에 대한 호출자의 VIEW 권한이 거부되지 않아야 합니다.
   
 ## <a name="examples"></a>예  
@@ -67,16 +67,16 @@ SELECT ASYMKEY_ID('ABerglundKey11');
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
-[ALTER ASYMMETRIC key&#40; Transact SQL &#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
-[DROP ASYMMETRIC key&#40; Transact SQL &#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+[ALTER ASYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+[DROP ASYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY&#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY &#40; Transact SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
+[VERIFYSIGNEDBYASYMKEY&#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
 [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[sys.asymmetric_keys &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
+[sys.asymmetric_keys&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEYPROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
-[KEY_ID &#40; Transact SQL &#41;](../../t-sql/functions/key-id-transact-sql.md)
+[ASYMKEYPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+[KEY_ID&#40;Transact-SQL&#41;](../../t-sql/functions/key-id-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: NEWSEQUENTIALID (Transact SQL) | Microsoft Docs
+title: NEWSEQUENTIALID(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/08/2015
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  개인 정보 보호가 중요한 경우에는 이 함수를 사용하지 마십시오. 다음번에 생성되는 GUID 값을 추측할 수 있으므로 이 GUID와 관련된 데이터에 액세스할 수 있습니다.  
   
- NEWSEQUENTIALID는 창에 대해 래퍼는 [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) 함수 일부와 [바이트 적용 순서 섞기](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)합니다.
+ NEWSEQUENTIALID는 Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) 함수(일부 [바이트 셔플 적용됨](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/))에 대한 래퍼입니다.
   
 > [!WARNING]  
->  UuidCreateSequential 함수는 하드웨어 종속 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], (예: 포함 된 데이터베이스) 데이터베이스를 다른 컴퓨터로 이동할 때 순차 값의 클러스터를 개발할 수 있습니다. Always On 사용 하는 경우와 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], 다른 컴퓨터에 데이터베이스가 장애 조치 클러스터의 순차 값 개발할 수 있습니다.  
+>  UuidCreateSequential 함수는 하드웨어 종속성이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스(예: 포함된 데이터베이스)를 다른 컴퓨터로 이동할 때 순차 값의 클러스터가 나타날 수 있습니다. Always On 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 사용 시 데이터베이스가 다른 컴퓨터로 장애 조치되면 순차 값의 클러스터가 나타날 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,8 +57,8 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>반환 형식  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>주의  
- 형식의 테이블 열에 DEFAULT 제약 조건으로 NEWSEQUENTIALID() 에서만 사용할 수 있습니다 **uniqueidentifier**합니다. 예를 들어  
+## <a name="remarks"></a>Remarks  
+ NEWSEQUENTIALID()는 **uniqueidentifier** 형식의 테이블 열에서 DEFAULT 제약 조건과 함께만 사용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   
@@ -78,8 +78,8 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
   
  NEWSEQUENTIALID를 사용하여 생성된 각 GUID는 해당 컴퓨터에서 고유합니다. NEWSEQUENTIALID를 사용하여 생성된 GUID는 원본 컴퓨터에 네트워크 카드가 있는 경우에만 여러 컴퓨터에서 고유합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [NEWID &#40; Transact SQL &#41;](../../t-sql/functions/newid-transact-sql.md)   
- [비교 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [NEWID&#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
+ [비교 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   

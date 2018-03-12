@@ -1,5 +1,5 @@
 ---
-title: COS (Transact SQL) | Microsoft Docs
+title: COS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ COS ( float_expression )
   
 ## <a name="arguments"></a>인수  
 *float_expression*  
-이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **float**합니다.
+**float** 형식의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
 **float**
@@ -72,7 +72,7 @@ The COS of the angle is: -0.599465
 
 ## <a name="examples"></a>예
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
 다음 예에서는 특정 각도의 COS를 반환합니다.
@@ -89,8 +89,8 @@ cosCalc1  cosCalc2
 -0.58     0.99
 ```
   
-## <a name="see-also"></a>참고 항목
-[수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

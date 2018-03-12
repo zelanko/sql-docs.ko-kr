@@ -1,5 +1,5 @@
 ---
-title: CURRENT_REQUEST_ID (Transact SQL) | Microsoft Docs
+title: CURRENT_REQUEST_ID(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,10 +47,10 @@ CURRENT_REQUEST_ID()
 ## <a name="return-types"></a>반환 형식
 **smallint**
   
-## <a name="remarks"></a>주의  
-현재 세션 및 현재 요청에 대 한 정확한 정보를 찾기 위해 사용 하 여@SPID 및 current_request_id (), 각각.
+## <a name="remarks"></a>Remarks  
+현재 세션 및 현재 요청에 대한 정확한 정보를 확인하려면 각각 @@SPID 및 CURRENT_REQUEST_ID()를 사용하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [@@SPID&#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)
   
   

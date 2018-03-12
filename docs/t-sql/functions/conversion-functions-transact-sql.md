@@ -1,5 +1,5 @@
 ---
-title: "변환 함수 (Transact SQL) | Microsoft Docs"
+title: "변환 함수(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,12 +33,12 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[Parse&#40; Transact SQL &#41;](../../t-sql/functions/parse-transact-sql.md)  
-[TRY_CAST &#40; Transact SQL &#41;](../../t-sql/functions/try-cast-transact-sql.md)  
-[TRY_CONVERT &#40; Transact SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)  
-[TRY_PARSE &#40; Transact SQL &#41;](../../t-sql/functions/try-parse-transact-sql.md)
+[PARSE&#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)  
+[TRY_CAST&#40;Transact-SQL&#41;](../../t-sql/functions/try-cast-transact-sql.md)  
+[TRY_CONVERT&#40;Transact-SQL&#41:](../../t-sql/functions/try-convert-transact-sql.md)  
+[TRY_PARSE&#40;Transact-SQL&#41:](../../t-sql/functions/try-parse-transact-sql.md)
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [함수](../../t-sql/functions/functions.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   

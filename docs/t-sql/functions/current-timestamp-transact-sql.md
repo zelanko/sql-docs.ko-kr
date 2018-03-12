@@ -1,5 +1,5 @@
 ---
-title: CURRENT_TIMESTAMP (Transact SQL) | Microsoft Docs
+title: CURRENT_TIMESTAMP(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,14 +47,14 @@ ms.lasthandoff: 11/21/2017
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-으로 현재 데이터베이스 시스템 타임 스탬프를 반환 합니다.는 **datetime** 데이터베이스 표준 시간대 오프셋 없는 값입니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 운영 체제에서 파생됩니다.
+현재 데이터베이스 시스템 타임스탬프를 데이터베이스 표준 시간대 오프셋 없이 **datetime** 값으로 반환합니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 운영 체제에서 파생됩니다.
   
 > [!NOTE]  
 >  SYSDATETIME 및 SYSUTCDATE에는 GETDATE 및 GETUTCDATE보다 많은 소수 자릿수 초의 전체 자릿수가 있습니다. SYSDATETIMEOFFSET에는 시스템 표준 시간대 오프셋이 포함되어 있습니다. SYSDATETIME, SYSUTCDATE 및 SYSDATETIMEOFFSET은 모든 날짜 및 시간 유형의 변수에 할당할 수 있습니다.  
   
-이 함수는 해당 하는 ANSI SQL [GETDATE](../../t-sql/functions/getdate-transact-sql.md)합니다.
+이 함수는 ANSI SQL의 [GETDATE](../../t-sql/functions/getdate-transact-sql.md)와 동등합니다.
   
-모든 개요 [!INCLUDE[tsql](../../includes/tsql-md.md)] 날짜 및 시간 데이터 형식 및 함수, 참조 [날짜 및 시간 데이터 형식 및 함수](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)합니다.
+모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식과 함수에 대한 개요는 [날짜 및 시간 데이터 형식과 함수](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,8 +70,8 @@ CURRENT_TIMESTAMP
 ## <a name="return-type"></a>반환 형식  
 **datetime**
   
-## <a name="remarks"></a>주의  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]문은 참조할 수 있습니다 CURRENT_TIMESTAMP를 참조할 수 있는 모든 위치는 **datetime** 식입니다.
+## <a name="remarks"></a>Remarks  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 **datetime** 식을 참조할 수 있는 모든 곳에서 CURRENT_TIMESTAMP를 참조할 수 있습니다.
   
 CURRENT_TIMESTAMP는 비결정적 함수입니다. 이 열을 참조하는 뷰와 식은 인덱싱될 수 없습니다.
   
@@ -136,13 +136,13 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT CURRENT_TIMESTAMP;  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

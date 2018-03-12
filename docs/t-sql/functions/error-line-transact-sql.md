@@ -1,5 +1,5 @@
 ---
-title: ERROR_LINE (Transact SQL) | Microsoft Docs
+title: ERROR_LINE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -62,10 +62,10 @@ ERROR_LINE ( )
   
  CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수는 CATCH 블록 내의 어떤 위치에서도 호출할 수 있습니다.  
   
- ERROR_LINE은 호출 횟수 또는 CATCH 블록 내에서 호출된 위치에 관계 없이 오류가 발생한 줄 번호를 반환합니다. 이와 달리, 함수 등@ERROR를 바로 다음에 오류를 발생 시키는 문 또는 CATCH 블록의 첫 번째 문에서 오류 번호를 반환 하 합니다.  
+ ERROR_LINE은 호출 횟수 또는 CATCH 블록 내에서 호출된 위치에 관계 없이 오류가 발생한 줄 번호를 반환합니다. 이것은 오류가 발생한 문 바로 다음 문 또는 CATCH 블록의 첫 번째 문에 오류 번호를 반환하는 @@ERROR와 대조적입니다.  
   
  CATCH 블록이 중첩된 경우 ERROR_LINE은 참조되는 CATCH 블록의 범위에 해당하는 오류 줄 번호를 반환합니다. 예를 들어 TRY...CATCH 구조의 CATCH 블록에는 중첩된 TRY...CATCH 구문이 포함될 수 있습니다. 중첩된 CATCH 블록 내에 있는 ERROR_LINE은 중첩된 CATCH 블록을 호출한 오류의 줄 번호를 반환합니다. 외부 CATCH 블록에서 ERROR_LINE을 실행하면 해당 CATCH 블록을 호출한 오류의 줄 번호를 반환합니다.  
   
@@ -131,14 +131,14 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [ERROR_NUMBER&#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_MESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY&#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [Error_state &#40; Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

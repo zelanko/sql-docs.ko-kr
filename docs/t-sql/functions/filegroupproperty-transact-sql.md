@@ -1,5 +1,5 @@
 ---
-title: FILEGROUPPROPERTY (Transact SQL) | Microsoft Docs
+title: FILEGROUPPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ FILEGROUPPROPERTY ( filegroup_name , property )
   
 ## <a name="arguments"></a>인수  
  *filegroup_name*  
- 형식의 식 **sysname** 명명된 된 속성 정보를 반환할 파일 그룹의 이름을 나타내는입니다.  
+ 명명된 속성 정보를 반환할 파일 그룹의 이름을 나타내는 **sysname** 형식의 식입니다.  
   
- *속성*  
- 형식의 식 **varchar (128)** 반환할 파일 그룹 속성의 이름을 포함 합니다. *속성* 다음이 값 중 하나일 수 있습니다.  
+ *property*  
+ 반환할 파일 그룹 속성의 이름이 들어 있는 **varchar(128)** 형식의 식입니다. *property*는 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|반환 값|  
 |-----------|-----------------|--------------------|  
@@ -64,8 +64,8 @@ FILEGROUPPROPERTY ( filegroup_name , property )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>주의  
- *filegroup_name* 에 해당 하는 **이름** 열에는 **sys.filegroups** 카탈로그 뷰에 있습니다.  
+## <a name="remarks"></a>Remarks  
+ *filegroup_name*은 **sys.filegroups** 카탈로그 뷰의 **name** 열과 일치합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `IsDefault` 데이터베이스의 주 파일 그룹에 대해 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 속성의 설정을 반환합니다.  
@@ -86,11 +86,11 @@ Default Filegroup
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [FILEGROUP_ID &#40; Transact SQL &#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
- [FILEGROUP_NAME &#40; Transact SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [FILEGROUP_ID&#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
+ [FILEGROUP_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [sys.filegroups &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

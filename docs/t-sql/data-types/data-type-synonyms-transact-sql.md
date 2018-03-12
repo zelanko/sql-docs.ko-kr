@@ -1,5 +1,5 @@
 ---
-title: "데이터 형식 동의어 (Transact SQL) | Microsoft Docs"
+title: "데이터 형식 동의어(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -30,34 +30,34 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-type-synonyms-transact-sql"></a>데이터 형식 동의어 (TRANSACT-SQL)
+# <a name="data-type-synonyms-transact-sql"></a>데이터 형식 동의어(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 데이터 형식 동의어는 ISO 호환성을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함되었습니다. 다음 표에서는 동의어 및 동의어가 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식을 나열합니다.
   
 |동의어|SQL Server 시스템 데이터 형식|  
 |---|---|
-|**Binary varying**|**varbinary**|  
-|**다양 한 문자**|**varchar**|  
-|**문자**|**char**|  
-|**문자**|**char(1)**|  
-|**문자 (**  *n*  **)**|**char(n)**|  
-|**다양 한 문자 (**  *n*  **)**|**varchar(n)**|  
-|**년 12 월**|**decimal**|  
-|**배정밀도**|**float**|  
-|**float**[**(***n***)**]에 대 한  *n*  1-7|**real**|  
-|**float**[**(***n***)**]에 대 한  *n*  = 8 15|**float**|  
+|**binary varying**|**varbinary**|  
+|**char varying**|**varchar**|  
+|**character**|**char**|  
+|**character**|**char(1)**|  
+|**character(** *n* **)**|**char(n)**|  
+|**character varying(** *n* **)**|**varchar(n)**|  
+|**Dec**|**decimal**|  
+|**Double precision**|**float**|  
+|*n* = 1-7의 경우 **float**[**(***n***)**]|**real**|  
+|*n* = 8-15의 경우 **float**[**(***n***)**]|**float**|  
 |**integer**|**int**|  
-|**국가별 문자 (**  *n*  **)**|**nchar (n)**|  
-|**national char (**  *n*  **)**|**nchar (n)**|  
-|**다양 한 국가별 문자 (**  *n*  **)**|**nvarchar (n)**|  
-|**다양 한 national char (**  *n*  **)**|**nvarchar (n)**|  
-|**national 텍스트**|**ntext**|  
+|**national character(** *n* **)**|**nchar(n)**|  
+|**national char(** *n* **)**|**nchar(n)**|  
+|**national character varying(** *n* **)**|**nvarchar(n)**|  
+|**national char varying(** *n* **)**|**nvarchar(n)**|  
+|**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-데이터 형식 동의어는 CREATE TABLE, CREATE PROCEDURE 같은 데이터 정의 언어 (DDL) 문 해당 기본 데이터 형식 이름 대신 사용할 수 있습니다 또는 선언  *@variable* 합니다. 그러나 개체가 만들어진 후에는 동의어가 표시되지 않습니다. 개체가 만들어질 때 동의어에 연결된 기본 데이터 형식이 개체에 할당되기 때문입니다. 개체를 만든 문에 동의어가 지정되었다는 기록은 남지 않습니다.
+데이터 형식 동의어는 CREATE TABLE, CREATE PROCEDURE, DECLARE *@variable* 등의 DDL(데이터 정의 언어) 문에서 해당 기본 데이터 형식 이름 대신 사용할 수 있습니다. 그러나 개체가 만들어진 후에는 동의어가 표시되지 않습니다. 개체가 만들어질 때 동의어에 연결된 기본 데이터 형식이 개체에 할당되기 때문입니다. 개체를 만든 문에 동의어가 지정되었다는 기록은 남지 않습니다.
   
-결과 집합 열이나 식 등 원래 개체에서 파생된 모든 개체에는 기본 데이터 형식이 할당됩니다. 이로 인해 원래 개체와 파생된 모든 개체에서 수행되는 모든 후속 메타데이터 함수는 동의어가 아니라 기본 데이터 형식을 보고하게 됩니다. 이 동작은 같은 메타 데이터 작업으로 발생 **sp_help** 와 다른 시스템 저장 프로시저, 정보 스키마 뷰 또는 테이블이 나 결과 집합의 데이터 형식을 보고 하는 다양 한 데이터 액세스 API 메타 데이터 작업 열입니다.
+결과 집합 열이나 식 등 원래 개체에서 파생된 모든 개체에는 기본 데이터 형식이 할당됩니다. 이로 인해 원래 개체와 파생된 모든 개체에서 수행되는 모든 후속 메타데이터 함수는 동의어가 아니라 기본 데이터 형식을 보고하게 됩니다. 이 동작은 **sp_help**와 그 밖의 시스템 저장 프로시저, 정보 스키마 뷰 또는 다양한 데이터 액세스 API 등 테이블이나 결과 집합 열의 데이터 형식을 보고하는 메타데이터 작업 시 나타납니다.
   
 예를 들어 다음과 같이 `national character varying`을 지정하여 테이블을 만들 수 있습니다.
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 11/21/2017
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-`VarCharCol`실제로 할당는 **nvarchar (10)** 데이터 형식 및 모든 후속 메타 데이터 함수는 열으로 보고는 **nvarchar (10)** 열입니다. 메타 데이터 함수는으로 보고 하지 않습니다는 **국가별 문자 varying(10)** 열입니다.
+`VarCharCol`에는 실제로 **nvarchar(10)** 데이터 형식이 할당되며 모든 후속 메타데이터 함수는 해당 열을 **nvarchar(10)** 열로 보고합니다. 메타데이터 함수가 이 열을 **national character varying(10)** 열로 보고하는 경우는 없습니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

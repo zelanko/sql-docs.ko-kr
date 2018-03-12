@@ -38,6 +38,6 @@ ms.lasthandoff: 11/21/2017
 [binary 및 varbinary&#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)  
 [char 및 varchar&#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
 [nchar 및 nvarchar&#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
-[ntext, 텍스트 및 이미지 &#40; Transact SQL &#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
+[ntext, text 및 image&#40;Transact-SQL&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
   
   

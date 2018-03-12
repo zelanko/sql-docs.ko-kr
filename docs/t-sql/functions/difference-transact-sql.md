@@ -1,5 +1,5 @@
 ---
-title: "차이 (Transact SQL) | Microsoft Docs"
+title: DIFFERENCE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ DIFFERENCE ( character_expression , character_expression )
   
 ## <a name="arguments"></a>인수  
  *character_expression*  
- 영숫자 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자 데이터입니다. *character_expression* 상수, 변수 또는 열일 수 있습니다.  
+ 문자 데이터의 영숫자 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>주의  
- 반환된 정수는 SOUNDEX 값에서 동일한 문자 수입니다. 반환 값의 범위는 0부터 4: 0 적거나 없음을 나타내며 4는 유사점이 많거나 동일한 값 나타냅니다.  
+## <a name="remarks"></a>Remarks  
+ 반환된 정수는 SOUNDEX 값에서 동일한 문자 수입니다. 반환값의 범위는 0~4입니다. 0은 유사점이 적거나 없음을 나타내며 4는 유사점이 많거나 동일한 값임을 나타냅니다.  
   
  DIFFERENCE 및 SOUNDEX는 데이터 정렬을 인식합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예의 첫 번째 부분에서 매우 유사한 두 개의 문자열에 대한 `SOUNDEX` 값이 비교됩니다. Latin1_General 데이터 정렬에 대 한 `DIFFERENCE` 의 값을 반환 `4`합니다. 다음 예제에서는 두 번째 부분에는 `SOUNDEX` 값를 매우 다른 두 개의 문자열을 비교에 대 한 및 Latin1_General 데이터 정렬에 대 한 `DIFFERENCE` 의 값을 반환 `0`합니다.  
+ 다음 예의 첫 번째 부분에서 매우 유사한 두 개의 문자열에 대한 `SOUNDEX` 값이 비교됩니다. Latin1_General 데이터 정렬에 대해 `DIFFERENCE`는 `4` 값을 반환합니다. 다음 예의 두 번째 부분에서 매우 다른 두 개의 문자열에 대한 `SOUNDEX` 값이 비교되고 Latin1_General 데이터 정렬에 대해 `DIFFERENCE`는 `0` 값을 반환합니다.  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
@@ -84,9 +84,9 @@ B432  G650  0
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [SOUNDEX &#40; Transact SQL &#41;](../../t-sql/functions/soundex-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [SOUNDEX&#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md)   
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

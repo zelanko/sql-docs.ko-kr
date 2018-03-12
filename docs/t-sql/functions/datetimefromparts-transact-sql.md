@@ -1,5 +1,5 @@
 ---
-title: DATETIMEFROMPARTS (Transact SQL) | Microsoft Docs
+title: DATETIMEFROMPARTS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-반환 된 **datetime** 지정 된 날짜 및 시간에 대 한 값입니다.
+지정된 날짜 및 시간에 대한 **datetime** 값을 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,32 +45,32 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 ```  
   
 ## <a name="arguments"></a>인수  
-*연도*  
+*year*  
 연도를 지정하는 정수 식입니다.
   
-*월*  
+*month*  
 월을 지정하는 정수 식입니다.
   
-*일*  
+*day*  
 일을 지정하는 정수 식입니다.
   
-*1 시간*  
+*hour*  
 시간을 지정하는 정수 식입니다.
   
-*분*  
+*minute*  
 분을 지정하는 정수 식입니다.
   
 *초*  
 초를 지정하는 정수 식입니다.
   
-*시간 (밀리초)*  
+*milliseconds*  
 밀리초를 지정하는 정수 식입니다.
   
 ## <a name="return-types"></a>반환 형식
 **datetime**
   
-## <a name="remarks"></a>주의  
-**DATETIMEFROMPARTS** 는 완전히 초기화 된 반환 **datetime** 값입니다. 인수가 유효하지 않으면 오류가 발생합니다. 필수 인수가 Null일 경우에는 Null이 반환됩니다.
+## <a name="remarks"></a>Remarks  
+**DATETIMEFROMPARTS**는 완전히 초기화된 **datetime** 값을 반환합니다. 인수가 유효하지 않으면 오류가 발생합니다. 필수 인수가 Null일 경우에는 Null이 반환됩니다.
   
 이 함수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이상 서버에 대해서는 원격으로 실행할 수 있지만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전 버전이 설치되어 있는 서버에 대해서는 원격으로 실행할 수 없습니다.
   
@@ -90,8 +90,8 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[날짜/시간 &#40; Transact SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)
   
   
 

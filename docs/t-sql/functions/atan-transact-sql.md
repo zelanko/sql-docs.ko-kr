@@ -1,5 +1,5 @@
 ---
-title: ATAN (Transact SQL) | Microsoft Docs
+title: ATAN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="atan-transact-sql"></a>ATAN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-탄젠트가 지정 된 라디안으로 각도 반환 **float** 식입니다. 이를 아크탄젠트라고도 합니다.
+탄젠트가 지정된 **float** 식인 각도를 라디안 단위로 반환합니다. 이를 아크탄젠트라고도 합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ATAN ( float_expression )
   
 ## <a name="arguments"></a>인수  
 *float_expression*  
-이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **float** 또는 암시적으로 변환할 수 있는 형식의 **float**합니다.
+**float** 형식 또는 **float**로 암시적으로 변환할 수 있는 형식의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
 **float**
   
 ## <a name="examples"></a>예  
-다음 예제에서는 **float** 식과 지정된 된 각도의 atan 값을 반환 합니다.
+다음 예에서는 **float** 식을 받아 지정된 각도의 ATAN을 반환합니다.
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -95,8 +95,8 @@ The ATAN of 197.1099392 is: 1.56572
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-다음 예제에서는 **float** 식이 지정된 된 각도의 아크탄젠트를 반환 합니다.
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+다음 예에서는 **float** 식을 받아 지정된 각도의 아크탄젠트를 반환합니다.
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  
@@ -114,9 +114,9 @@ atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5
 1.55       -1.57       0.00       0.15       1.57
 ```
   
-## <a name="see-also"></a>참고 항목
-[천장 &#40; Transact SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[CEILING&#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
+[수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

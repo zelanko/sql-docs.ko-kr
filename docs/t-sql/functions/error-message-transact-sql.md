@@ -1,5 +1,5 @@
 ---
-title: ERROR_MESSAGE (Transact SQL) | Microsoft Docs
+title: ERROR_MESSAGE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,10 +56,10 @@ ERROR_MESSAGE ( )
   
  CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ERROR_MESSAGE는 CATCH 블록 범위 내의 아무 위치에서나 호출할 수 있습니다.  
   
- ERROR_MESSAGE는 CATCH 블록 범위 내에서 실행 횟수 또는 실행 위치에 상관없이 오류 메시지를 반환합니다. 이 같은 함수와 대조 @@ERROR만의 반환 하는 오류 번호는 오류를 발생 시키는 것 바로 다음 문으로 또는 첫 번째 문은 catch 블록입니다.  
+ ERROR_MESSAGE는 CATCH 블록 범위 내에서 실행 횟수 또는 실행 위치에 상관없이 오류 메시지를 반환합니다. 이 함수는 오류를 발생시킨 문 바로 뒤에 나오는 문이나 CATCH 블록의 첫 번째 문에 나오는 오류 번호만 반환하는 @@ERROR와 같은 함수와는 대조됩니다.  
   
  중첩된 CATCH 블록에서 ERROR_MESSAGE는 참조하는 CATCH 블록의 범위에 한정된 오류 메시지를 반환합니다. 예를 들어 외부 TRY...CATCH 구문의 CATCH 블록에는 중첩된 TRY...CATCH 구문이 있을 수 있습니다. 중첩된 CATCH 블록에서 ERROR_MESSAGE는 중첩된 CATCH 블록을 호출한 오류 메시지를 반환합니다. ERROR_MESSAGE가 외부 CATCH 블록에서 실행되는 경우 해당 CATCH 블록을 호출한 오류 메시지를 반환합니다.  
   
@@ -101,7 +101,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>3. 다른 오류 처리 도구로 CATCH 블록에서 ERROR_MESSAGE 사용  
  다음 코드 예에서는 0으로 나누기 오류를 생성하는 `SELECT` 문을 보여 줍니다. 오류 메시지와 함께 오류와 관련된 정보가 반환됩니다.  

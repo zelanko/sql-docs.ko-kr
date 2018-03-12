@@ -1,5 +1,5 @@
 ---
-title: IDENT_SEED (Transact SQL) | Microsoft Docs
+title: IDENT_SEED(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identseed-transact-sql"></a>IDENT_SEED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  원래 초기값을 반환 합니다 (으로 반환 **숫자**(**@@**MAXPRECISION, 0))는 테이블 또는 뷰에서 id 열을 만들 때 지정한 합니다. DBCC CHECKIDENT를 사용하여 현재 ID 열 값을 변경해도 이 함수에서 반환되는 값은 변경되지 않습니다.  
+  테이블이나 뷰에서 ID 열을 만드는 동안 지정된 원래 초기값(**numeric**(**@@**MAXPRECISION,0)으로 반환됨)을 반환합니다. DBCC CHECKIDENT를 사용하여 현재 ID 열 값을 변경해도 이 함수에서 반환되는 값은 변경되지 않습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ IDENT_SEED ( 'table_or_view' )
   
 ## <a name="arguments"></a>인수  
  **'** *table_or_view* **'**  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 테이블 또는 뷰 id 초기값에 대 한 검사를 지정 하는 합니다. *table_or_view* 문자열 상수 따옴표, 변수, 함수 또는 열 이름에 포함 될 수 있습니다. *table_or_view* 은 **char**, **nchar**, **varchar**, 또는 **nvarchar**합니다.  
+ ID 초기값을 확인할 테이블 또는 뷰를 지정하는 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *table_or_view*는 따옴표로 묶은 문자열 상수, 변수, 함수 또는 열 이름일 수 있습니다. *table_or_view*는 **char**, **nchar**, **varchar** 또는 **nvarchar**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **numeric**  
@@ -98,12 +98,12 @@ Person             vAdditionalContactInfo                 1
 dbo                AWBuildVersion                         1
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [IDENT_CURRENT&#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
- [IDENT_INCR &#40; Transact SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_INCR&#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [DBCC CHECKIDENT&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [sys.identity_columns &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

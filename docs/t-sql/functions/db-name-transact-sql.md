@@ -1,5 +1,5 @@
 ---
-title: DB_NAME (Transact SQL) | Microsoft Docs
+title: DB_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>인수  
 *database_id*  
-반환될 데이터베이스의 ID입니다. *database_id* 은 **int**, 기본값은 없습니다. ID를 지정하지 않으면 현재 데이터베이스 이름이 반환됩니다.
+반환될 데이터베이스의 ID입니다. *database_id*는 **int**이며 기본값은 없습니다. ID를 지정하지 않으면 현재 데이터베이스 이름이 반환됩니다.
   
 ## <a name="return-types"></a>반환 형식
-**nvarchar (128)**
+**nvarchar(128)**
   
-## <a name="permissions"></a>Permissions  
-하는 경우의 호출자 **DB_NAME** 데이터베이스의 소유자가 아니고 및 데이터베이스가 **마스터** 또는 **tempdb**, 해당 행을 보는 데 필요한 최소 권한으로 ALTER ANY DATABASE 또는 VIEW ANY DATABASE 서버 수준 사용 권한 또는 CREATE DATABASE 권한은 **마스터** 데이터베이스입니다. 호출자가 연결된 데이터베이스는 항상 **sys.databases**에서 볼 수 있습니다.
+## <a name="permissions"></a>사용 권한  
+**DB_NAME**의 호출자가 데이터베이스의 소유자가 아니고 데이터베이스가 **master** 또는 **tempdb**가 아닐 경우 해당 행을 보려면 최소한 서버 수준의 ALTER ANY DATABASE 또는 VIEW ANY DATABASE 권한이 있거나 **master** 데이터베이스에서 CREATE DATABASE 권한이 있어야 합니다. 호출자가 연결된 데이터베이스는 항상 **sys.databases**에서 볼 수 있습니다.
   
 > [!IMPORTANT]  
->  기본적으로 public 역할 VIEW ANY DATABASE, 권한이 데이터베이스 정보를 볼 수 있는 모든 로그인을 허용 합니다. 데이터베이스를 검색 하는 기능에서의 로그인을 차단 하려면 public에서 VIEW ANY DATABASE 권한을 해지 하거나 개별 로그인에 대 한 VIEW ANY DATABASE 권한을 거부 합니다.  
+>  기본적으로 public 역할에는 모든 로그인이 데이터베이스 정보를 보도록 허용하는 VIEW ANY DATABASE 권한이 있습니다. 특정 로그인이 데이터베이스를 검색하지 못하게 하려면 public에서 VIEW ANY DATABASE 권한을 REVOKE하거나 개별 로그인에 대해 VIEW ANY DATABASE 권한을 DENY합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -81,7 +81,7 @@ SELECT DB_NAME(3)AS [Database Name];
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-return-the-current-database-name"></a>3. 현재 데이터베이스 이름 반환  
   
@@ -89,17 +89,17 @@ GO
 SELECT DB_NAME() AS [Current Database];  
 ```  
   
-### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>4. 데이터베이스 ID를 사용 하 여 데이터베이스의 이름을 반환합니다  
-다음 예에서는 데이터베이스 이름 및 각 데이터베이스에 대 한 database_id 반환합니다.
+### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>4. 데이터베이스 ID를 사용하여 데이터베이스의 이름을 반환합니다  
+다음 예에서는 각 데이터베이스에 대해 데이터베이스 이름과 database_id를 반환합니다.
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  
 FROM sys.databases;  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[DB_ID &#40; Transact SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+## <a name="see-also"></a>관련 항목:
+[DB_ID&#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
+[메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
   
   

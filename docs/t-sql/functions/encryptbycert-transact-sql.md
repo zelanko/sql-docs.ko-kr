@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYCERT (Transact SQL) | Microsoft Docs
+title: ENCRYPTBYCERT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )
   
 ## <a name="arguments"></a>인수  
  *certificate_ID*  
- 데이터베이스에 있는 인증서 ID입니다. **int**합니다.  
+ 데이터베이스에 있는 인증서 ID입니다. **int**.  
   
- *일반 텍스트*  
+ *cleartext*  
  인증서로 암호화될 데이터 문자열입니다.  
   
  **@cleartext**  
- 형식의 변수 **nvarchar**, **char**, **varchar**, **이진**, **varbinary**, 또는 **nchar** 데이터가 들어 있는 인증서의 공개 키로 암호화 됩니다.  
+ 인증서의 공개 키로 암호화될 데이터가 들어 있는 **nvarchar**, **char**, **varchar**, **binary**, **varbinary** 또는 **nchar** 형식의 변수입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **varbinary** 최대 크기가 8, 000 바이트입니다.  
+ 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수는 인증서의 공개 키를 사용하여 데이터를 암호화합니다. 이러한 암호화된 텍스트는 이에 대응하는 개인 키로만 해독할 수 있습니다. 이러한 비대칭 변환은 대칭 키를 사용한 암호화 및 암호 해독에 비해 비용이 많이 듭니다. 그러므로 테이블의 사용자 데이터와 같이 큰 데이터 집합으로 작업할 경우에는 비대칭 암호화를 사용하지 않는 것이 좋습니다.  
   
 ## <a name="examples"></a>예  
@@ -73,11 +73,11 @@ INSERT INTO [AdventureWorks2012].[ProtectedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [DECRYPTBYCERT &#40; Transact SQL &#41;](../../t-sql/functions/decryptbycert-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [DECRYPTBYCERT&#40;Transact-SQL&#41;](../../t-sql/functions/decryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP certificate&#40; Transact SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

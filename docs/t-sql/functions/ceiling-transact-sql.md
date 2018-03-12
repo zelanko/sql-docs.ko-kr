@@ -1,5 +1,5 @@
 ---
-title: CEILING (Transact SQL) | Microsoft Docs
+title: CEILING(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ CEILING ( numeric_expression )
   
 ## <a name="arguments"></a>인수  
 *numeric_expression*  
-이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 정확한 수치 또는 근사치 숫자 데이터 형식 범주에서를 제외 하 고는 **비트** 데이터 형식입니다.
+**bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
 *numeric_expression*과 같은 유형을 반환합니다.
@@ -70,7 +70,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[시스템 함수 &#40; Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   

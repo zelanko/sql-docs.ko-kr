@@ -1,5 +1,5 @@
 ---
-title: NTILE (Transact SQL) | Microsoft Docs
+title: NTILE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -49,19 +49,19 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="arguments"></a>인수  
  *integer_expression*  
- 각 파티션을 분할해야 하는 그룹 수를 지정하는 양의 정수 상수 식입니다. *integer_expression* 유형일 수 **int**, 또는 **bigint**합니다.  
+ 각 파티션을 분할해야 하는 그룹 수를 지정하는 양의 정수 상수 식입니다. *integer_expression*은 **int** 또는 **bigint** 형식일 수 있습니다.  
   
- \<partition_by_clause >  
- 생성 한 결과 집합을 나눕니다는 [FROM](../../t-sql/queries/from-transact-sql.md) 함수가 적용 되는 절을으로 분할 합니다. PARTITION BY 구문은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ [FROM](../../t-sql/queries/from-transact-sql.md) 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. PARTITION BY 구문은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
- \<order_by_clause >  
- 파티션의 각 행에 NTILE 값이 할당되는 순서를 결정합니다. 정수 열을 나타낼 수 없는 경우는 \<order_by_clause > 순위 함수에 사용 됩니다.  
+ \<order_by_clause>  
+ 파티션의 각 행에 NTILE 값이 할당되는 순서를 결정합니다. 순위 함수에 \<order_by_clause>가 사용된 경우 정수는 열을 나타낼 수 없습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **bigint**  
   
-## <a name="remarks"></a>주의  
- 파티션의 행 수로 나눌 수 없는 경우 *integer_expression*, 구성원을 하나는 다른 두 가지 크기의 그룹이 생성 됩니다. OVER 절이 지정한 순서에서 큰 그룹이 작은 그룹 앞에 옵니다. 예를 들어 행의 총 수가 53개이고 그룹 수가 5개이면 처음 3개 그룹은 11개의 행을 포함하고 나머지 두 개 그룹은 10개의 행을 포함합니다. 반면에 행의 총 수를 그룹 수로 나눌 수 있으면 각 그룹에 행이 똑같이 분산됩니다. 예를 들어 행의 총 수가 50개이고 그룹이 5개 있으면 각 그룹이 10개의 행을 포함합니다.  
+## <a name="remarks"></a>Remarks  
+ 파티션의 행 수를 *integer_expression*으로 나눌 수 없는 경우 멤버 수 하나의 차이가 있는 두 가지 크기의 그룹이 생성됩니다. OVER 절이 지정한 순서에서 큰 그룹이 작은 그룹 앞에 옵니다. 예를 들어 행의 총 수가 53개이고 그룹 수가 5개이면 처음 3개 그룹은 11개의 행을 포함하고 나머지 두 개 그룹은 10개의 행을 포함합니다. 반면에 행의 총 수를 그룹 수로 나눌 수 있으면 각 그룹에 행이 똑같이 분산됩니다. 예를 들어 행의 총 수가 50개이고 그룹이 5개 있으면 각 그룹이 10개의 행을 포함합니다.  
   
  NTILE은 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   
@@ -112,7 +112,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ```  
   
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>2. PARTITION BY를 사용하여 결과 집합 나누기  
- 다음 예에서는 예 1의 코드에 `PARTITION BY` 인수를 추가합니다. 행은 먼저 `PostalCode`로 분할된 다음 각 `PostalCode` 내에 4개 그룹으로 나누어집니다. 이 예제에서는 변수 선언 `@NTILE_Var` 해당 변수를 사용 하 여에 대 한 값을 지정 하 고는 *integer_expression* 매개 변수입니다.  
+ 다음 예에서는 예 1의 코드에 `PARTITION BY` 인수를 추가합니다. 행은 먼저 `PostalCode`로 분할된 다음 각 `PostalCode` 내에 4개 그룹으로 나누어집니다. 또한 이 예에서는 변수 `@NTILE_Var`을 선언하고 이 변수를 사용하여 *integer_expression* 매개 변수의 값을 지정합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,10 +156,10 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-dividing-rows-into-groups"></a>3. 행을 그룹으로 나누기  
- 다음 예제에서는 NTILE 함수를 사용 하 여 영업 집합이 2003 년에 대 한 할당 된 판매 할당량 한도에 따라 4 개의 그룹으로 나눌 수 있습니다. 행의 총 그룹 수로 나눌 수 없기 때문에 첫 번째 그룹에 다섯 개의 행이 있고 나머지 그룹 4 개 행.  
+ 다음 예에서는 NTILE 함수를 사용하여 2003년에 할당된 판매 할당량을 기반으로 영업 담당자 집합을 4개의 그룹으로 나눕니다. 행의 총 수를 그룹 수로 나눌 수 없으므로 첫 번째 그룹에는 5개의 행이 있고 나머지 그룹에는 각각 4개의 행이 있습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -199,7 +199,7 @@ Tsoflias          4          867,000.00
 ```  
   
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>4. PARTITION BY를 사용하여 결과 집합 나누기  
- 다음 예제에서는 예 1의에서 코드에 PARTITION BY 인수를 추가합니다. 행은 먼저 분할 `SalesTerritoryCountry` 다음 각 내에서 두 그룹으로 나눈 `SalesTerritoryCountry`합니다. 정렬 NTILE는 OVER 절에서 ORDER BY 및 ORDER BY SELECT 문의 결과 집합을 정렬를 확인 합니다.  
+ 다음 예에서는 예 1의 코드에 PARTITION BY 인수를 추가합니다. 행은 먼저 `SalesTerritoryCountry`로 분할된 다음, 각 `SalesTerritoryCountry` 내에서 두 그룹으로 나뉩니다. OVER 절의 ORDER BY는 NTILE을 정렬하고, SELECT 문의 ORDER BY는 결과 집합을 정렬합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -241,11 +241,11 @@ Ito               2        2,644,000.00     United States
 Ansman-Wolfe      2        1,183,000.00     United States
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [순위 &#40; Transact SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40; Transact SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [순위 함수 &#40; Transact SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [RANK&#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK&#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER&#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [순위 함수&#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "읽기 (데이터베이스 엔진) | Microsoft Docs"
+title: "Read(데이터베이스 엔진) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="read-database-engine"></a>Read(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-읽기의 이진 표현을 읽고 **SqlHierarchyId** 전달 기능에서 **BinaryReader** 설정 하 고는 **SqlHierarchyId** 개체를 해당 값입니다. 읽기를 사용 하 여 호출할 수 없습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. 대신 CAST 또는 CONVERT를 사용합니다.
+Read는 전달된 **BinaryReader**에서 **SqlHierarchyId**의 이진 표현을 읽고 **SqlHierarchyId** 개체를 해당 값으로 설정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 Read를 호출할 수 없습니다. 대신 CAST 또는 CONVERT를 사용합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -44,17 +44,17 @@ void Read( BinaryReader r )
   
 ## <a name="arguments"></a>인수  
 *r*  
- **BinaryReader** 의 이진 표현에 해당 하는 이진 스트림을 생성 하는 개체는 **hierarchyid** 노드.  
+ **hierarchyid** 노드의 이진 표현에 해당하는 이진 스트림을 생성하는 **BinaryReader** 개체입니다.  
   
 ## <a name="return-types"></a>반환 형식
  **CLR 반환 형식: void**  
   
-## <a name="remarks"></a>주의  
- 읽기는 입력 유효성을 검사 하지 않습니다. 잘못 된 이진 입력이 지정 되 면 읽기 예외가 발생 될 수 있습니다. 성공 하 고 잘못 된 생성 될 수 있습니다 또는 **SqlHierarchyId** 개체 메서드 예기치 않은 결과 제공 하거나 예외를 발생 시킬 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ Read는 입력 유효성을 검사하지 않습니다. 잘못된 이진 입력이 지정되면 Read는 예외를 발생시킵니다. 성공하더라도 메서드가 예상치 못한 결과를 반환하거나 예외를 발생시킬 수 있는 잘못된 **SqlHierarchyId** 개체가 생성될 수 있습니다.  
   
- 읽기 에서만 호출 될 수는 새로 만든 **SqlHierarchyId** 개체입니다.  
+ Read는 새로 생성된 **SqlHierarchyId** 개체에서만 호출할 수 있습니다.  
   
- 읽기 내부적으로 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 되었을 때와 같이 필요한 데이터를 쓸 때 **hierarchyid** 열입니다. 읽기 간의 변환 시 내부적으로 호출 또한 **varbinary** 및 **hierarchyid**합니다.  
+ Read는 **hierarchyid** 열에 데이터를 쓸 때와 같이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 필요한 경우에 내부적으로 사용됩니다. 또한 Read는 **varbinary**와 **hierarchyid** 간의 변환 시 내부적으로 호출됩니다.  
   
 ## <a name="examples"></a>예  
   
@@ -66,9 +66,9 @@ SqlHierarchyId hid = new SqlHierarchyId();
 hid.Read(br);   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
-[쓰기 &#40; 데이터베이스 엔진 &#41;](../../t-sql/data-types/write-database-engine.md)  
-[Tostring&#40; 데이터베이스 엔진 &#41;](../../t-sql/data-types/tostring-database-engine.md)  
+## <a name="see-also"></a>참고 항목  
+[Write&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/write-database-engine.md)  
+[ToString&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [hierarchyid 데이터 형식 메서드 참조](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

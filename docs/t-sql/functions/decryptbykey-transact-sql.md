@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYKEY (Transact SQL) | Microsoft Docs
+title: DECRYPTBYKEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,31 +50,31 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>인수  
- *암호 텍스트*  
- 키로 암호화된 데이터입니다. *암호 텍스트* 은 **varbinary**합니다.  
+ *ciphertext*  
+ 키로 암호화된 데이터입니다. *ciphertext*는 **varbinary**입니다.  
   
  **@ciphertext**  
- 형식의 변수는 **varbinary** 키로 암호화 된 데이터가 들어 있는입니다.  
+ 키로 암호화된 데이터를 포함하는 **varbinary** 형식의 변수입니다.  
   
  *add_authenticator*  
- 인증자가 일반 텍스트와 함께 암호화되었는지 여부를 나타냅니다. 데이터 암호화 시 EncryptByKey로 전달된 값과 같아야 합니다. *add_authenticator* 은 **int**합니다.  
+ 인증자가 일반 텍스트와 함께 암호화되었는지 여부를 나타냅니다. 데이터 암호화 시 EncryptByKey로 전달된 값과 같아야 합니다. *add_authenticator*는 **int**입니다.  
   
- *인증자*  
- 인증자가 생성될 데이터입니다. EncryptByKey에 제공된 값과 일치해야 합니다. *인증자* 은 **sysname**합니다.  
+ *authenticator*  
+ 인증자가 생성될 데이터입니다. EncryptByKey에 제공된 값과 일치해야 합니다. *authenticator*는 **sysname**입니다.  
   
  **@authenticator**  
  인증자가 생성될 데이터를 포함하는 변수입니다. EncryptByKey에 제공된 값과 일치해야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **varbinary** 최대 크기가 8, 000 바이트입니다.  
+ 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  DecryptByKey는 대칭 키를 사용합니다. 이 대칭 키는 데이터베이스에서 이미 열려 있어야 합니다. 동시에 여러 개의 키를 열어 둘 수 있습니다. ciphertext를 해독하기 직전에 키를 열 필요는 없습니다.  
   
  대칭 암호화 및 암호 해독은 비교적 속도가 빠르며 대량의 데이터 작업 시 적합합니다.  
   
-## <a name="permissions"></a>Permissions  
- 현재 세션에서 대칭 키가 열려 있어야 합니다. 자세한 내용은 참조 [OPEN SYMMETRIC key&#40; Transact SQL &#41; ](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+## <a name="permissions"></a>사용 권한  
+ 현재 세션에서 대칭 키가 열려 있어야 합니다. 자세한 내용은 [OPEN SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   
@@ -119,8 +119,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Encryptbykey&#40; Transact SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ENCRYPTBYKEY&#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   

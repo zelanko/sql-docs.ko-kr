@@ -1,5 +1,5 @@
 ---
-title: "GetReparentedValue (데이터베이스 엔진) | Microsoft Docs"
+title: "GetReparentedValue(데이터베이스 엔진) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-경로가 루트에서 노드를 반환 하려면 *newRoot*에서 경로 *oldRoot* 를 *이*합니다.
+루트에서 *newRoot*까지의 경로 다음에 *oldRoot*에서 *this*까지의 경로가 오는 노드를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -50,23 +50,23 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
   
 ## <a name="arguments"></a>인수  
 *oldRoot*  
-A **hierarchyid** 노드 수정할 계층의 수준을 나타내는입니다.
+수정할 계층 구조의 수준을 나타내는 노드인 **hierarchyid**입니다.
   
 *newRoot*  
-A **hierarchyid** 를 대체 하는 노드를 나타내는 *oldRoot* 노드를 이동 하기 위해 현재 노드의 섹션.
+노드를 이동하기 위해 현재 노드의 *oldRoot* 섹션을 대체할 노드를 나타내는 **hierarchyid**입니다.
   
 ## <a name="return-types"></a>반환 형식  
 **SQL Server 반환 형식: hierarchyid**
   
 **CLR 반환 형식: SqlHierarchyId**
   
-## <a name="remarks"></a>주의  
-노드를 이동 하 여 트리를 수정 하는 데 사용 될 *oldRoot* 를 *newRoot*합니다. GetReparentedValue를 사용하면 계층에서 노드를 새 위치로 이동할 수 있습니다. **hierarchyid** 데이터 형식을 나타내지 않으며 계층 구조를 적용 하지 않습니다. 사용자는 hierarchyid가 새 위치에 대해 적절히 구성되어 있는지 확인해야 합니다. 에 고유 인덱스는 **hierarchyid** 데이터 형식은 중복 항목을 방지할 수 있습니다. 전체 하위 트리를 이동 하는 예제를 보려면 [계층적 데이터 &#40; SQL Server &#41; ](../../relational-databases/hierarchical-data-sql-server.md).
+## <a name="remarks"></a>Remarks  
+*oldRoot*에서 *newRoot*로 노드를 이동하여 트리를 수정하는 데 사용할 수 있습니다. GetReparentedValue를 사용하면 계층에서 노드를 새 위치로 이동할 수 있습니다. **hierarchyid** 데이터 형식은 계층 구조를 나타내지만 강제 적용하지는 않습니다. 사용자는 hierarchyid가 새 위치에 대해 적절히 구성되어 있는지 확인해야 합니다. **hierarchyid** 데이터 형식의 고유한 인덱스는 중복 항목을 방지하는 데 도움이 될 수 있습니다. 전체 하위 트리를 이동하는 예는 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)를 참조하세요.
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-comparing-two-node-locations"></a>1. 두 노드 위치 비교  
-다음 예에서는 노드의 현재 hierarchyid를 보여 줍니다. 또한 어떤 표시는 **hierarchyid** 노드의 것 노드 하위 항목 이동 된 경우는  **@NewParent**  노드. 이 예에서는 `ToString()` 메서드를 사용하여 계층 관계를 보여 줍니다.
+다음 예에서는 노드의 현재 hierarchyid를 보여 줍니다. 또한 노드가 **@NewParent** 노드의 하위 노드로 이동된 경우 노드의 **hierarchyid**가 어떻게 달라지는지 보여줍니다. 이 예에서는 `ToString()` 메서드를 사용하여 계층 관계를 보여 줍니다.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  
@@ -110,13 +110,13 @@ WHERE LoginID = 'adventure-works\gail0' ; -- Now node /2/3/2/
 ```  
   
 ### <a name="c-clr-example"></a>3. CLR 예  
-다음 코드 조각 GetReparentedValue () 메서드를 호출합니다.
+다음 코드 조각은 GetReparentedValue() 메서드를 호출합니다.
   
 ```sql
 this. GetReparentedValue(oldParent, newParent)  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [hierarchyid 데이터 형식 메서드 참조](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: "기호 (Transact SQL) | Microsoft Docs"
+title: SIGN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ SIGN ( numeric_expression )
 
 ## <a name="arguments"></a>인수  
  *numeric_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 정확한 수치 또는 근사치 숫자 데이터 형식 범주에서를 제외 하 고는 **비트** 데이터 형식입니다.  
+ **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
   
 |지정된 식|반환 형식|  
 |--------------------------|-----------------|  
 |**bigint**|**bigint**|  
-|**tinyint/int/smallint**|**int**|  
+|**int/smallint/tinyint**|**int**|  
 |**money/smallmoney**|**money**|  
-|**숫자/소수**|**숫자/소수**|  
+|**numeric/decimal**|**numeric/decimal**|  
 |**기타 형식**|**float**|  
   
 ## <a name="examples"></a>예  
@@ -103,8 +103,8 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 3 가지 숫자의 SIGN 값을 반환합니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 세 개의 숫자로 된 SIGN 값을 반환합니다.  
   
 ```  
 SELECT SIGN(-125), SIGN(0), SIGN(564);  
@@ -117,8 +117,8 @@ SELECT SIGN(-125), SIGN(0), SIGN(564);
 -1     0      1
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

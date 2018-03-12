@@ -1,5 +1,5 @@
 ---
-title: CERTENCODED (Transact SQL) | Microsoft Docs
+title: CERTENCODED(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="certencoded-transact-sql"></a>CERTENCODED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-인증서의 공개 부분을 이진 형식으로 반환합니다. 이 함수는 인증서 ID를 가져와서 인코딩된 인증서를 반환합니다. 이진 결과에 전달 될 수 **인증서 만들기... 이진과** 새 인증서를 만듭니다.
+인증서의 공개 부분을 이진 형식으로 반환합니다. 이 함수는 인증서 ID를 가져와서 인코딩된 인증서를 반환합니다. 이진 결과를 **CREATE CERTIFICATE...WITH BINARY**에 전달하여 새 인증서를 만들 수 있습니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -44,21 +44,21 @@ CERTENCODED ( cert_id )
   
 ## <a name="arguments"></a>인수  
 *cert_id*  
-이 **certificate_id** 인증서의 합니다. Sys.certificates 또는 사용 하 여 사용할 수는 [CERT_ID &#40; Transact SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) 함수입니다. *cert_id* 형식이 **int**
+인증서의 **certificate_id**입니다. 이는 sys.certificates 또는 [CERT_ID&#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) 함수를 통해 사용할 수 있습니다. *cert_id*는 **int** 형식입니다.
   
 ## <a name="return-types"></a>반환 형식
 **varbinary**
   
-## <a name="remarks"></a>주의  
-**CERTENCODED** 및 **CERTPRIVATEKEY** 는 이진 형식으로 인증서의 다른 부분을 반환 하는 데 함께 사용 됩니다.
+## <a name="remarks"></a>Remarks  
+**CERTENCODED** 및 **CERTPRIVATEKEY**는 인증서의 서로 다른 부분을 이진 형식으로 반환하는 데 함께 사용됩니다.
   
-## <a name="permissions"></a>Permissions  
-**CERTENCODED** 는 누구나 사용할 수 있습니다.
+## <a name="permissions"></a>사용 권한  
+**CERTENCODED**는 누구나 사용할 수 있습니다.
   
 ## <a name="examples"></a>예  
   
 ### <a name="simple-example"></a>간단한 예  
-다음 예에서는 이라는 인증서 `Shipping04` 다음 사용 하 여는 **CERTENCODED** 인증서의 이진 인코딩을 반환 하는 함수입니다.
+다음 예에서는 이름이 `Shipping04`인 인증서를 만든 다음, **CERTENCODED** 함수를 사용하여 인증서의 이진 인코딩을 반환합니다.
   
 ```sql
 CREATE DATABASE TEST1;  
@@ -159,10 +159,10 @@ SELECT @CLEARTEXT AS ClearTextInTarget, @CIPHERTEXT AS CipherTextInTarget, @UNCI
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[CERTPRIVATEKEY &#40; Transact SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+[CERTPRIVATEKEY&#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
 [sys.certificates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

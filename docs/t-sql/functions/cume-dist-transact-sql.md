@@ -1,5 +1,5 @@
 ---
-title: CUME_DIST (Transact SQL) | Microsoft Docs
+title: CUME_DIST(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="cumedist-transact-sql"></a>CUME_DIST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 값 그룹에 있는 값의 누적 분포를 계산합니다. 즉, CUME_DIST는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 행에 대해 *r*오름차순으로 정렬의 CUME_DIST 가정 하 고 *r* 보다 값이 있는 행 수의 값 보다 낮은 크거나 *r*행의 수로 나눈, 파티션 또는 쿼리 결과 집합의 계산 합니다. CUME_DIST는 PERCENT_RANK 함수와 비슷합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 값 그룹에 있는 값의 누적 분포를 계산합니다. 즉, CUME_DIST는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 행 *r*의 경우 오름차순으로 정렬되었다고 가정하면, *r*의 CUME_DIST는 값이 *r*을 파티션 또는 쿼리 결과 집합의 계산된 행 수로 나눈 값과 같거나 작은 행의 수입니다. CUME_DIST는 PERCENT_RANK 함수와 비슷합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>인수  
-통해 **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* 함수가 적용 되는 파티션으로 FROM 절에서 생성 한 결과 집합을 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 작업이 수행 되는 논리적 순서를 결정 합니다. *order_by_clause* 가 필요 합니다. \<s 또는 range 절 > OVER 구문 CUME_DIST 함수에 지정할 수 없습니다. 자세한 내용은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+*partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause*가 필요합니다. CUME_DIST 함수에는 OVER 구문의 \<rows 또는 range 절>을 지정할 수 없습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
 **float(53)**
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 CUME_DIST가 반환하는 값 범위는 0보다 크고 1보다 작거나 같습니다. 동일한 값은 항상 동일한 누적 분포 값으로 계산되어야 합니다. NULL 값은 기본적으로 포함되며 가능한 가장 낮은 값으로 취급됩니다.
   
 CUME_DIST는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.
@@ -99,7 +99,7 @@ Information Services   Bueno                  27.4038               0.4         
 (15 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[PERCENT_RANK &#40; Transact SQL &#41;](../../t-sql/functions/percent-rank-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[PERCENT_RANK&#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)
   
   

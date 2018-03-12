@@ -1,5 +1,5 @@
 ---
-title: ASIN (Transact SQL) | Microsoft Docs
+title: ASIN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="asin-transact-sql"></a>ASIN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-사인이 지정 된 라디안 단위로 각도 반환 **float** 식입니다. 이를 아크사인이라고도 합니다.
+지정된 **float** 식을 사인 값으로 가지는 각도를 라디안 단위로 반환합니다. 이를 아크사인이라고도 합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ASIN ( float_expression )
   
 ## <a name="arguments"></a>인수  
 *float_expression*  
-이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **float** 또는 1부터 1 까지입니다 값이 float로 암시적으로 변환 될 수 있는 형식의 합니다. 값이 이 범위를 벗어나면 NULL이 반환되고 도메인 오류가 보고됩니다.
+**float** 형식 또는 -1에서 1 사이의 값을 가진 float로 암시적으로 변환될 수 있는 형식의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 값이 이 범위를 벗어나면 NULL이 반환되고 도메인 오류가 보고됩니다.
   
 ## <a name="return-types"></a>반환 형식
 **float**
   
 ## <a name="examples"></a>예  
-다음 예제에서는 **float** 식과 지정된 된 각도의 ASIN 반환 합니다.
+다음 예에서는 **float** 식을 받아서 지정된 각도의 ASIN을 반환합니다.
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -95,24 +95,24 @@ The ASIN of the angle is: 0.147811
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-다음 예제에서는 1.00의 아크사인 값을 반환합니다.
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+다음 예에서는 1.00의 아크사인을 반환합니다.
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  
 ```  
   
-다음 예에서는 허용 되는 범위를 벗어난 값에 대 한 아크사인 값을 요청 하기 때문에 오류를 반환 합니다.
+다음은 허용 범위를 벗어난 값에 대해 아크사인을 요청하여 오류가 반환되는 예입니다.
   
 ```sql
 SELECT ASIN(1.1472738) AS asinCalc;  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[천장 &#40; Transact SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-[SET arithignore 옵션 &#40; Transact SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
-[SET arithabort&#40; Transact SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[CEILING&#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
+[수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[SET ARITHIGNORE&#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
+[SET ARITHABORT&#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
   
   
 

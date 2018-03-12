@@ -1,5 +1,5 @@
 ---
-title: ATN2 (Transact SQL) | Microsoft Docs
+title: ATN2(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ATN2 ( float_expression , float_expression )
 ```  
   
 ## <a name="arguments"></a>인수  
-*float_expression* 는 [식](../../t-sql/language-elements/expressions-transact-sql.md) 의 **float** 데이터 형식입니다.
+*float_expression*은 **float** 데이터 형식의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
 **float**
@@ -68,10 +68,10 @@ The ATN2 of the angle is: 0.265345
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[float 및 real &#40; Transact SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[float 및 real&#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

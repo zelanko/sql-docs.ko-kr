@@ -1,5 +1,5 @@
 ---
-title: "IsDescendantOf (데이터베이스 엔진) | Microsoft Docs"
+title: "IsDescendantOf(데이터베이스 엔진) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-이면 true를 반환 *이* 가 부모의 하위 항목인 합니다.
+*this*가 부모의 하위 항목인 경우 true를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -49,15 +49,15 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 ```  
   
 ## <a name="arguments"></a>인수  
-*부모*  
-**hierarchyid** IsDescendantOf 테스트를 수행 해야 하는 노드.
+*parent*  
+IsDescendantOf 테스트를 수행해야 하는 **hierarchyid** 노드입니다.
   
 ## <a name="return-types"></a>반환 형식  
-**SQL Server 반환 형식: 비트**
+**SQL Server 반환 형식: bit**
   
 **CLR 반환 형식: SqlBoolean**
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 부모에서 시작하는 하위 트리의 모든 노드에 대해서는 true를 반환하고 다른 모든 노드에 대해서는 false를 반환합니다.
   
 부모는 자신의 하위 항목으로 간주됩니다.
@@ -104,7 +104,7 @@ ELSE
 this.IsDescendantOf(Parent)  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [hierarchyid 데이터 형식 메서드 참조](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

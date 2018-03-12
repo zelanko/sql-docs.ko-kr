@@ -1,5 +1,5 @@
 ---
-title: CHECKSUM_AGG (Transact SQL) | Microsoft Docs
+title: CHECKSUM_AGG(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-그룹에서 값의 체크섬을 반환합니다. Null 값은 무시됩니다. 가 올 수 있습니다는 [OVER 절](../../t-sql/queries/select-over-clause-transact-sql.md)합니다.
+그룹에서 값의 체크섬을 반환합니다. Null 값은 무시됩니다. [OVER 절](../../t-sql/queries/select-over-clause-transact-sql.md)이 뒤에 올 수 있습니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,19 +54,19 @@ DISTINCT
 CHECKSUM_AGG가 고유한 값의 체크섬을 반환하도록 지정합니다.
   
 *expression*  
-정수 [식](../../t-sql/language-elements/expressions-transact-sql.md)합니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
+정수 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
   
 ## <a name="return-types"></a>반환 형식
-모든의 체크섬을 반환 *식* 값으로 **int**합니다.
+모든 *expression* 값의 체크섬을 **int**로 반환합니다.
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 CHECKSUM_AGG는 테이블에서 변경 사항을 검색하는 데 사용할 수 있습니다.
   
 테이블의 행 순서는 CHECKSUM_AGG의 결과에 영향을 주지 않습니다. 또한 CHECKSUM_AGG 함수는 DISTINCT 키워드 및 GROUP BY 절과 함께 사용할 수 있습니다.
   
 식 목록에 있는 값을 하나라도 변경하면 일반적으로 목록의 체크섬도 바뀝니다. 그러나 체크섬이 바뀌지 않는 경우도 가끔 있습니다.
   
-CHECKSUM_AGG는 다른 집계 함수와 기능이 비슷합니다. 자세한 내용은 참조 [집계 함수 &#40; Transact SQL &#41; ](../../t-sql/functions/aggregate-functions-transact-sql.md).
+CHECKSUM_AGG는 다른 집계 함수와 기능이 비슷합니다. 자세한 내용은 [집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)를 참조하세요.
   
 ## <a name="examples"></a>예  
 다음 예에서는 `CHECKSUM_AGG`를 사용하여 `Quantity` 데이터베이스에 있는 `ProductInventory` 테이블의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 열에서 변경된 사항을 검색합니다.
@@ -102,8 +102,8 @@ FROM Production.ProductInventory;
 287  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[체크섬 &#40; Transact SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[절 &#40; 조치 Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[CHECKSUM&#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

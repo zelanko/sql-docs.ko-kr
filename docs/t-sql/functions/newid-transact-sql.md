@@ -1,5 +1,5 @@
 ---
-title: NEWID (Transact SQL) | Microsoft Docs
+title: NEWID(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="newid-transact-sql"></a>NEWID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  형식의 고유 값을 만듭니다 **uniqueidentifier**합니다.  
+  **uniqueidentifier** 형식의 고유한 값을 만듭니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ NEWID ( )
 ## <a name="return-types"></a>반환 형식  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  `NEWID()`는 RFC4122와 호환됩니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>1. 변수가 있는 NEWID 함수 사용  
- 다음 예제에서는 `NEWID()` 로 선언 된 변수에 값을 할당 하는 **uniqueidentifier** 데이터 형식입니다. 값은 **uniqueidentifier** 데이터 형식 변수에 값이 테스트 하기 전에 인쇄 됩니다.  
+ 다음 예에서는 `NEWID()`를 사용하여 **uniqueidentifier** 데이터 형식으로 선언된 변수에 값을 할당합니다. 값이 테스트되기 전에 **uniqueidentifier** 데이터 형식 변수의 값이 인쇄됩니다.  
   
 ```  
 -- Creating a local variable with DECLARE/SET syntax.  
@@ -75,9 +75,9 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>2. CREATE TABLE 문에서 NEWID 사용  
   
-**적용 대상**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 다음 예제에서는 `cust` 테이블에 **uniqueidentifier** 데이터 형식 및 NEWID 사용 하 여 기본 값으로 테이블을 채울 수 있습니다. `NEWID()`의 기본값을 할당할 때 새 행과 기존 행마다 `CustomerID` 열에 고유 값이 있습니다.  
+ 다음 예에서는 **uniqueidentifier** 데이터 형식을 사용하여 `cust` 테이블을 만들고, NEWID를 사용하여 테이블을 기본값으로 채웁니다. `NEWID()`의 기본값을 할당할 때 새 행과 기존 행마다 `CustomerID` 열에 고유 값이 있습니다.  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  
@@ -115,7 +115,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>3. uniqueidentifier 및 변수 할당 사용  
- 다음 예제에서는 라는 지역 변수를 선언 `@myid` 의 변수로 **uniqueidentifier** 데이터 형식입니다. 그런 다음 `SET` 문을 사용하여 변수에 값을 할당합니다.  
+ 다음 예에서는 `@myid`라는 로컬 변수를 **uniqeidentifier** 데이터 형식의 변수로 선언합니다. 그런 다음 `SET` 문을 사용하여 변수에 값을 할당합니다.  
   
 ```  
 DECLARE @myid uniqueidentifier ;  
@@ -124,14 +124,14 @@ SELECT @myid;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [NEWSEQUENTIALID &#40; Transact SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [NEWSEQUENTIALID&#40;Transact-SQL&#41](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CAST 및 convert&#40; Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [uniqueidentifier &#40; Transact SQL &#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
+ [uniqueidentifier&#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: CURRENT_USER (Transact SQL) | Microsoft Docs
+title: CURRENT_USER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ CURRENT_USER
 ## <a name="return-types"></a>반환 형식
 **sysname**
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 CURRENT_USER는 현재 보안 컨텍스트의 이름을 반환합니다. EXECUTE AS 호출로 컨텍스트를 전환한 후 CURRENT_USER를 실행하면 가장된 컨텍스트 이름이 반환됩니다. Windows 보안 주체가 그룹의 멤버 자격을 통해 데이터베이스에 액세스한 경우에는 그룹 이름 대신 Windows 보안 주체 이름이 반환됩니다.
   
-현재 사용자의 로그인을 반환 하려면 참조 [SUSER_NAME &#40; Transact SQL &#41; ](../../t-sql/functions/suser-name-transact-sql.md) 및 [SYSTEM_USER &#40; Transact SQL &#41; ](../../t-sql/functions/system-user-transact-sql.md).
+현재 사용자의 로그인을 반환하려면 [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 및 [SYSTEM_USER &#40;Transact- SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)을 참조하세요.
   
 ## <a name="examples"></a>예  
   
@@ -139,13 +139,13 @@ Arnalfo
 Wanida
 ```
   
-## <a name="see-also"></a>참고 항목
-[USER_NAME &#40; Transact SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
-[SYSTEM_USER &#40; Transact SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+## <a name="see-also"></a>관련 항목:
+[USER_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
+[SYSTEM_USER&#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[시스템 함수 &#40; Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

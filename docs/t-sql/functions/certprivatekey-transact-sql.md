@@ -1,5 +1,5 @@
 ---
-title: CERTPRIVATEKEY (Transact SQL) | Microsoft Docs
+title: CERTPRIVATEKEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ CERTPRIVATEKEY
   
 ## <a name="arguments"></a>인수  
 *certificate_ID*  
-이 **certificate_id** 인증서의 합니다. Sys.certificates 또는 사용 하 여 사용할 수는 [CERT_ID &#40; Transact SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) 함수입니다. *cert_id* 형식이 **int**
+인증서의 **certificate_id**입니다. 이는 sys.certificates 또는 [CERT_ID&#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) 함수를 통해 사용할 수 있습니다. *cert_id*는 **int** 형식입니다.
   
 *encryption_password*  
 반환된 이진 값을 암호화하는 데 사용되는 암호입니다.
@@ -65,11 +65,11 @@ CERTPRIVATEKEY
 ## <a name="return-types"></a>반환 형식
 **varbinary**
   
-## <a name="remarks"></a>주의  
-**CERTENCODED** 및 **CERTPRIVATEKEY** 는 이진 형식으로 인증서의 다른 부분을 반환 하는 데 함께 사용 됩니다.
+## <a name="remarks"></a>Remarks  
+**CERTENCODED** 및 **CERTPRIVATEKEY**는 인증서의 서로 다른 부분을 이진 형식으로 반환하는 데 함께 사용됩니다.
   
-## <a name="permissions"></a>Permissions  
-**CERTPRIVATEKEY** 는 누구나 사용할 수 있습니다.
+## <a name="permissions"></a>사용 권한  
+**CERTPRIVATEKEY**는 누구나 사용할 수 있습니다.
   
 ## <a name="examples"></a>예  
   
@@ -86,12 +86,12 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-사용 하는 보다 복잡 한 예제에 대 한 **CERTPRIVATEKEY** 및 **CERTENCODED** 인증서를 다른 데이터베이스로 복사할 항목의 예제 B를 참조 하십시오. [CERTENCODED &#40; Transact SQL &#41; ](../../t-sql/functions/certencoded-transact-sql.md).
+**CERTPRIVATEKEY** 및 **CERTENCODED**를 사용하여 다른 데이터베이스로 인증서를 복사하는 더 복잡한 예는 [CERTENCODED&#40;Transact-SQL&#41](../../t-sql/functions/certencoded-transact-sql.md) 토픽의 예 2를 참조하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-[Certificate&#40; 만들기 Transact SQL &#41; ](../../t-sql/statements/create-certificate-transact-sql.md) 
- [보안 함수 &#40; Transact SQL &#41; ](../../t-sql/functions/security-functions-transact-sql.md) 
- [sys.certificates&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)
+[보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)
+[sys.certificates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: CRYPT_GEN_RANDOM (Transact SQL) | Microsoft Docs
+title: CRYPT_GEN_RANDOM(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -46,15 +46,15 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>인수  
 *length*  
-만들려는 숫자의 길이입니다. 최대값은 8000입니다. *길이* 형식이 **int**합니다.
+만들려는 숫자의 길이입니다. 최대값은 8000입니다. *length*는 **int** 형식입니다.
   
-*시드*  
-임의 초기값으로 사용할 선택적 데이터입니다.  있어야 이상 *길이* 데이터의 바이트입니다. *시드* 은 **varbinary (8000)**합니다.
+*seed*  
+임의 초기값으로 사용할 선택적 데이터입니다.  *length* 바이트 이상의 데이터가 있어야 합니다. *seed*는 **varbinary(8000)**입니다.
   
 ## <a name="returned-types"></a>반환 형식  
-**varbinary (8000)**
+**varbinary(8000)**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 이 함수는 공개 함수이며 특별한 사용 권한이 필요하지 않습니다.
   
 ## <a name="examples"></a>예  
@@ -72,7 +72,7 @@ SELECT CRYPT_GEN_RANDOM(50) ;
 SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[RAND &#40; Transact SQL &#41;](../../t-sql/functions/rand-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[RAND&#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
   
   

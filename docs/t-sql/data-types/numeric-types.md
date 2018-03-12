@@ -1,5 +1,5 @@
 ---
-title: "숫자 형식 | Microsoft Docs"
+title: "숫자 유형 | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -29,12 +29,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="numeric-types"></a>숫자 유형
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다음과 같은 지원 **숫자** 형식입니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 **numeric** 유형을 지원합니다.
   
 ## <a name="in-this-section"></a>섹션 내용
-[decimal 및 numeric&#40; Transact SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
-[float 및 real &#40; Transact SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[int, bigint, smallint 및 tinyint &#40; Transact SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
-[money 및 smallmoney &#40; Transact SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)
+[decimal 및 numeric&#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
+[float 및 real&#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[int, bigint, smallint 및 tinyint&#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
+[money 및 smallmoney&#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: '@@DBTS (Transact SQL) | Microsoft Docs'
+title: '@@DBTS(Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
+# <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 현재 데이터베이스의 현재 **timestamp** 데이터 형식 값을 반환합니다. 이 타임스탬프는 데이터베이스에서 고유합니다.
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>반환 형식
 **varbinary**
   
-## <a name="remarks"></a>주의  
-@@DBTS 현재 데이터베이스의 타임 스탬프를 마지막으로 사용 된 값을 반환 합니다. 새 타임스탬프 값은 **timestamp** 열의 행이 삽입되거나 업데이트될 때 생성됩니다.
+## <a name="remarks"></a>Remarks  
+@@DBTS는 현재 데이터베이스에서 최근에 사용된 타임스탬프 값을 반환합니다. 새 타임스탬프 값은 **timestamp** 열의 행이 삽입되거나 업데이트될 때 생성됩니다.
   
-@@DBTS 함수 트랜잭션 격리 수준에 있는 변경 내용의 영향을 받지 않습니다.
+@@DBTS 함수는 트랜잭션 격리 수준에 있는 변경 내용의 영향을 받지 않습니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 현재 반환 **타임 스탬프** 에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다.
+다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 현재 **timestamp**를 반환합니다.
   
 ```sql
 USE AdventureWorks2012;  
@@ -62,10 +62,10 @@ GO
 SELECT @@DBTS;  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[구성 함수 &#40; Transact SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
-[커서 동시성 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+## <a name="see-also"></a>관련 항목:
+[구성 함수&#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[커서 동시성&#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40; Transact SQL &#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+[MIN_ACTIVE_ROWVERSION&#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   

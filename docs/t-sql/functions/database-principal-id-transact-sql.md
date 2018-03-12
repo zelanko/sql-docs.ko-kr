@@ -1,5 +1,5 @@
 ---
-title: DATABASE_PRINCIPAL_ID (Transact SQL) | Microsoft Docs
+title: DATABASE_PRINCIPAL_ID(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-현재 데이터베이스의 보안 주체 ID를 반환합니다. 보안 주체에 대 한 자세한 내용은 참조 [보안 주체 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)합니다.
+현재 데이터베이스의 보안 주체 ID를 반환합니다. 보안 주체에 대한 자세한 내용은 [Principals&#40;데이터베이스 엔진#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)를 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,14 +49,14 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>인수  
 *principal_name*  
-형식의 식 **sysname** 보안 주체를 나타내는입니다.  
-때 *principal_name* 은 생략 하면 현재 사용자의 ID가 반환 됩니다. 괄호가 필요합니다.
+보안 주체를 나타내는 **sysname** 형식의 식입니다.  
+*principal_name*을 생략하면 현재 사용자의 ID가 반환됩니다. 괄호가 필요합니다.
   
 ## <a name="return-types"></a>반환 형식
 **int**  
 데이터베이스 보안 주체가 없는 경우 NULL입니다.
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 DATABASE_PRINCIPAL_ID는 SELECT 목록, WHERE 절 또는 식이 허용된 모든 곳에서 사용할 수 있습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.
   
 ## <a name="examples"></a>예  
@@ -77,7 +77,7 @@ SELECT DATABASE_PRINCIPAL_ID('db_owner');
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
 [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
 [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)

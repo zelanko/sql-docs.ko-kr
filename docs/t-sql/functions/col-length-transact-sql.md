@@ -1,5 +1,5 @@
 ---
-title: COL_LENGTH (Transact SQL) | Microsoft Docs
+title: COL_LENGTH(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ COL_LENGTH ( 'table' , 'column' )
 ```  
   
 ## <a name="arguments"></a>인수  
-**'** *테이블* **'**  
-열 길이 정보를 확인할 테이블의 이름입니다. *테이블* 형식의 식 **nvarchar**합니다.
+**'** *table* **'**  
+열 길이 정보를 확인할 테이블의 이름입니다. *table*은 **nvarchar** 형식의 식입니다.
   
-**'** *열* **'**  
-길이를 확인할 열의 이름입니다. *열* 형식의 식 **nvarchar**합니다.
+**'** *column* **'**  
+길이를 확인할 열의 이름입니다. *column*은 **nvarchar** 형식의 식입니다.
   
 ## <a name="return-type"></a>반환 형식
 **smallint**
@@ -62,8 +62,8 @@ COL_LENGTH ( 'table' , 'column' )
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 COL_LENGTH와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.
   
-## <a name="remarks"></a>주의  
-형식의 열에 대 한 **varchar** 사용 하 여 선언 된 **max** 지정자 (**varchar (max)**), COL_LENGTH가 값-1을 반환 합니다.
+## <a name="remarks"></a>Remarks  
+**max** 지정자(**varchar(max)**)로 선언된 **varchar** 형식의 열에서는 COL_LENGTH가 값 -1을 반환합니다.
   
 ## <a name="examples"></a>예  
 다음 예에서는 `varchar(40)` 형식의 열과 `nvarchar(40)` 형식의 열에 대한 반환 값을 보여 줍니다.
@@ -86,10 +86,10 @@ VarChar     NVarChar
 40          80  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40; Transact SQL &#41;](../../t-sql/functions/col-name-transact-sql.md)  
+[메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[COL_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

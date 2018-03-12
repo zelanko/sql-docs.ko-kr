@@ -1,5 +1,5 @@
 ---
-title: "GetAncestor (데이터베이스 엔진) | Microsoft Docs"
+title: "GetAncestor(데이터베이스 엔진) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getancestor-database-engine"></a>GetAncestor(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-반환 된 **hierarchyid** 나타내는  *n* 번째 상위 항목을 *이*합니다.
+*this*의 *n*번째 상위 항목을 나타내는 **hierarchyid**를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -50,17 +50,17 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="arguments"></a>인수  
 *n*  
-**int**, 계층 구조에서 위로 이동할 수준 수를 나타내는입니다.
+계층에서 위로 이동할 수준 수를 나타내는 **int**입니다.
   
 ## <a name="return-types"></a>반환 형식
 **SQL Server 반환 형식: hierarchyid**
   
 **CLR 반환 형식: SqlHierarchyId**
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 출력의 각 노드가 현재 노드를 지정된 수준의 상위 항목으로 갖는지 여부를 테스트하는 데 사용됩니다.
   
-보다 큰 숫자가 [getlevel ()](../../t-sql/data-types/getlevel-database-engine.md) 가 전달, NULL이 반환 됩니다.
+[GetLevel()](../../t-sql/data-types/getlevel-database-engine.md)보다 큰 숫자가 전달되면 NULL이 반환됩니다.
   
 음수가 전달되면 예외가 발생합니다.
   
@@ -93,7 +93,7 @@ WHERE OrgNode.GetAncestor(2) = @CurrentEmployee ;
 ```  
   
 ### <a name="c-returning-the-current-row"></a>3. 현재 행 반환  
-사용 하 여 현재 노드를 반환할 `GetAncestor(0)`, 다음 코드를 실행 합니다.
+`GetAncestor(0)`를 사용하여 현재 노드를 반환하려면 다음 코드를 실행합니다.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -106,7 +106,7 @@ WHERE OrgNode.GetAncestor(0) = @CurrentEmployee ;
 ```  
   
 ### <a name="d-returning-a-hierarchy-level-if-a-table-is-not-present"></a>4. 테이블이 없는 경우 계층 수준 반환  
-`GetAncestor`는 테이블이 없는 경우에도 계층에서 선택한 수준을 반환합니다. 예를 들어 다음 코드에서는 현재 직원을 지정 하 고 반환 된 `hierarchyid` 테이블을 참조 하지 않고 현재 직원의 상위 항목의 합니다.
+`GetAncestor`는 테이블이 없는 경우에도 계층에서 선택한 수준을 반환합니다. 예를 들어 다음 코드는 현재 직원을 지정하고 테이블에 대한 참조 없이 현재 직원의 상위 항목 `hierarchyid`를 반환합니다.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid ;  
@@ -123,8 +123,8 @@ SELECT @TargetEmployee.ToString(), @TargetEmployee ;
 this.GetAncestor(1)  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[IsDescendantOf &#40; 데이터베이스 엔진 &#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
+## <a name="see-also"></a>관련 항목:
+[IsDescendantOf&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [hierarchyid 데이터 형식 메서드 참조](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

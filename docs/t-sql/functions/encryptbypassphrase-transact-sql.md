@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYPASSPHRASE (Transact SQL) | Microsoft Docs
+title: ENCRYPTBYPASSPHRASE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,34 +51,34 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>인수  
- *공유 암호*  
+ *passphrase*  
  대칭 키 생성에 사용할 전달 구입니다.  
   
  @passphrase  
- 형식의 변수 **nvarchar**, **char**, **varchar**, **이진**, **varbinary**, 또는 **nchar** 대칭 키를 생성할 전달 구가 들어 있는입니다.  
+ 대칭 키를 생성하는 데 사용할 전달 구가 들어 있는 **nvarchar**, **char**, **varchar**, **binary**, **varbinary** 또는 **nchar** 형식의 변수입니다.  
   
- *일반 텍스트*  
+ *cleartext*  
  암호화할 일반 텍스트입니다.  
   
  @cleartext  
- 형식의 변수 **nvarchar**, **char**, **varchar**, **이진**, **varbinary**, 또는 **nchar** cleartext가 들어 있는입니다. 최대 크기는 8,000바이트입니다.  
+ 일반 텍스트가 들어 있는 **nvarchar**, **char**, **varchar**, **이진**, **varbinary** 또는 **nchar** 형식의 변수입니다. 최대 크기는 8,000바이트입니다.  
   
  *add_authenticator*  
- 인증자가 일반 텍스트와 함께 암호화될지 여부를 나타냅니다. 인증자가 추가되면 1입니다. **int**합니다.  
+ 인증자가 일반 텍스트와 함께 암호화될지 여부를 나타냅니다. 인증자가 추가되면 1입니다. **int**.  
   
  @add_authenticator  
  해시가 일반 텍스트와 함께 암호화되는지 여부를 나타냅니다.  
   
- *인증자*  
- 인증자가 파생될 데이터입니다. **sysname**합니다.  
+ *authenticator*  
+ 인증자가 파생될 데이터입니다. **sysname**.  
   
  @authenticator  
  인증자가 파생될 데이터를 포함하는 변수입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **varbinary** 최대 크기는 8, 000 바이트입니다.  
+ 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  전달 구는 공백을 포함하는 암호입니다. 전달 구에는 상대적으로 긴 문자열보다 의미 있는 구나 문장이 사용되므로 기억하기가 쉽습니다.  
   
  이 함수는 암호 복잡성은 확인하지 않습니다.  
@@ -107,8 +107,8 @@ WHERE CreditCardID = '3681';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [DECRYPTBYPASSPHRASE &#40; Transact SQL &#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [DECRYPTBYPASSPHRASE&#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

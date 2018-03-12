@@ -1,5 +1,5 @@
 ---
-title: "분석 함수 (Transact SQL) | Microsoft Docs"
+title: "분석 함수(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,12 +33,12 @@ SQL Server는 다음과 같은 분석 함수를 지원합니다. 분석 함수�
   
 |||  
 |-|-|  
-|[CUME_DIST &#40; Transact SQL &#41;](../../t-sql/functions/cume-dist-transact-sql.md)|[잠재 고객 &#40; Transact SQL &#41;](../../t-sql/functions/lead-transact-sql.md)|  
-|[FIRST_VALUE &#40; Transact SQL &#41;](../../t-sql/functions/first-value-transact-sql.md)|[PERCENTILE_CONT &#40; Transact SQL &#41;](../../t-sql/functions/percentile-cont-transact-sql.md)|  
-|[LAG &#40; Transact SQL &#41;](../../t-sql/functions/lag-transact-sql.md)|[PERCENTILE_DISC &#40; Transact SQL &#41;](../../t-sql/functions/percentile-disc-transact-sql.md)|  
-|[LAST_VALUE &#40; Transact SQL &#41;](../../t-sql/functions/last-value-transact-sql.md)|[PERCENT_RANK &#40; Transact SQL &#41;](../../t-sql/functions/percent-rank-transact-sql.md)|  
+|[CUME_DIST&#40;Transact-SQL&#41;](../../t-sql/functions/cume-dist-transact-sql.md)|[LEAD&#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)|  
+|[FIRST_VALUE&#40;Transact-SQL&#41;](../../t-sql/functions/first-value-transact-sql.md)|[PERCENTILE_CONT&#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)|  
+|[LAG&#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)|[PERCENTILE_DISC&#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)|  
+|[LAST_VALUE&#40;Transact-SQL&#41;](../../t-sql/functions/last-value-transact-sql.md)|[PERCENT_RANK&#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)|  
   
-## <a name="see-also"></a>참고 항목
-[절 &#40; 조치 Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

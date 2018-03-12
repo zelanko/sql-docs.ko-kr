@@ -1,5 +1,5 @@
 ---
-title: TERTIARY_WEIGHTS (Transact SQL) | Microsoft Docs
+title: TERTIARY_WEIGHTS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>데이터 정렬 함수-TERTIARY_WEIGHTS (TRANSACT-SQL)
+# <a name="collation-functions---tertiaryweights-transact-sql"></a>데이터 정렬 함수 - TERTIARY_WEIGHTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 비유니코드 문자열 식의 각 문자에 대해 SQL 3차 데이터 정렬로 정의된 정렬 조건(weight)을 이진 문자열로 반환합니다.
@@ -48,13 +48,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>인수  
 *non_Unicode_character_string_expression*  
-문자열인 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **char**, **varchar**, 또는 **varchar (max)** 3 차 SQL 데이터 정렬에서 정의 합니다. 이러한 데이터 정렬의 목록은 주의를 참조하세요.
+3차 SQL 데이터 정렬에 정의된 **char**, **varchar** 또는 **varchar(max)** 형식의 문자열 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 이러한 데이터 정렬의 목록은 주의를 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
-TERTIARY_WEIGHTS 반환 **varbinary** 때 *non_Unicode_character_string_expression* 은 **char** 또는 **varchar**, 반환 **varbinary (max)** 때 *non_Unicode_character_string_expression* 은 **varchar (max)**합니다.
+TERTIARY_WEIGHTS는 *non_Unicode_character_string_expression*이 **char** 또는 **varchar**인 경우 **varbinary**를 반환하고, *non_Unicode_character_string_expression*이 **varchar(max)**인 경우 **varbinary(max)**를 반환합니다.
   
-## <a name="remarks"></a>주의  
-TERTIARY_WEIGHTS NULL을 반환 *non_Unicode_character_string_expression* 는 SQL 3 차 데이터 정렬으로 정의 되어 있지 않습니다. 표에서는 SQL 3차 데이터 정렬을 보여 줍니다.
+## <a name="remarks"></a>Remarks  
+TERTIARY_WEIGHTS는 *non_Unicode_character_string_expression*이 SQL 3차 데이터 정렬로 정의되지 않은 경우 NULL을 반환합니다. 표에서는 SQL 3차 데이터 정렬을 보여 줍니다.
   
 |정렬 순서 ID|SQL 데이터 정렬|  
 |---|---|
@@ -91,7 +91,7 @@ TERTIARY_WEIGHTS NULL을 반환 *non_Unicode_character_string_expression* 는 SQ
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-값에 정의 된 계산 열의 정의에 사용 하기 위한 TERTIARY_WEIGHTS는 **char**, **varchar**, 또는 **varchar (max)** 열입니다. 계산된 열에 인덱스를 정의 및 **char**, **varchar**, 또는 **varchar (max)** 열에는 성능을 향상 시킬 수는 경우는 **char**, **varchar**, 또는 **varchar (max)** 열이 쿼리의 ORDER BY 절에 지정 됩니다.
+TERTIARY_WEIGHTS는 **char**, **varchar** 또는 **varchar(max)** 열 값에 정의되는 계산 열 정의에 사용됩니다. 계산 열과 **char**, **varchar** 또는 **varchar(max)** 열 모두에 인덱스를 정의하면 **char**, **varchar** 또는 **varchar(max)** 열이 쿼리의 ORDER BY 절에 지정된 경우 성능을 향상시킬 수 있습니다.
   
 ## <a name="examples"></a>예  
 다음 예에서는 `TERTIARY_WEIGHTS` 함수를 `char` 열의 값에 적용하는 계산 열을 테이블에 만듭니다.
@@ -103,7 +103,7 @@ Col2 AS TERTIARY_WEIGHTS(Col1));
 GO   
 ```  
   
-## <a name="see-also"></a>참고 항목
-[ORDER BY 절 &#40; Transact SQL &#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[ORDER BY 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

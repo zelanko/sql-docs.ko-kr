@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYKEYAUTOASYMKEY (Transact SQL) | Microsoft Docs
+title: DECRYPTBYKEYAUTOASYMKEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
@@ -50,36 +50,36 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   
 ## <a name="arguments"></a>인수  
  *akey_ID*  
- 대칭 키 암호화에 사용되는 비대칭 키의 ID입니다. *akey_ID* 은 **int**합니다.  
+ 대칭 키 암호화에 사용되는 비대칭 키의 ID입니다. *akey_ID*는 **int**입니다.  
   
  *akey_password*  
- 비대칭 키의 개인 키를 보호하는 암호입니다. 개인 키가 데이터베이스 마스터 키로 보호되는 경우에는 NULL이 될 수 있습니다. *akey_password* 은 **nvarchar**합니다.  
+ 비대칭 키의 개인 키를 보호하는 암호입니다. 개인 키가 데이터베이스 마스터 키로 보호되는 경우에는 NULL이 될 수 있습니다. *akey_password*는 **nvarchar**입니다.  
   
- '*암호 텍스트*'  
- 키로 암호화된 데이터입니다. *암호 텍스트* 은 **varbinary**합니다.  
+ '*ciphertext*'  
+ 키로 암호화된 데이터입니다. *ciphertext*는 **varbinary**입니다.  
   
  @ciphertext  
- 형식의 변수는 **varbinary** 키로 암호화 된 데이터가 들어 있는입니다.  
+ 키로 암호화된 데이터가 포함된 **varbinary** 형식의 변수입니다.  
   
  *add_authenticator*  
- 인증자가 일반 텍스트와 함께 암호화되었는지 여부를 나타냅니다. 데이터 암호화 시 EncryptByKey로 전달된 값과 같아야 합니다. 인증자가 사용된 경우 1이 됩니다. *add_authenticator* 은 **int**합니다.  
+ 인증자가 일반 텍스트와 함께 암호화되었는지 여부를 나타냅니다. 데이터 암호화 시 EncryptByKey로 전달된 값과 같아야 합니다. 인증자가 사용된 경우 1이 됩니다. *add_authenticator*는 **int**입니다.  
   
  @add_authenticator  
  인증자가 일반 텍스트와 함께 암호화되었는지 여부를 나타냅니다. 데이터 암호화 시 EncryptByKey로 전달된 값과 같아야 합니다.  
   
- *인증자*  
- 인증자가 생성될 데이터입니다. EncryptByKey에 제공된 값과 일치해야 합니다. *인증자* 은 **sysname**합니다.  
+ *authenticator*  
+ 인증자가 생성될 데이터입니다. EncryptByKey에 제공된 값과 일치해야 합니다. *authenticator*는 **sysname**입니다.  
   
  @authenticator  
  인증자가 생성될 데이터를 포함하는 변수입니다. EncryptByKey에 제공된 값과 일치해야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **varbinary** 최대 크기가 8, 000 바이트입니다.  
+ 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  DecryptByKeyAutoAsymKey는 OPEN SYMMETRIC KEY와 DecryptByKey의 기능을 결합합니다. 단일 작업으로 대칭 키를 해독한 다음 이 키를 사용하여 ciphertext를 해독합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대칭 키에 대한 VIEW DEFINITION 권한 및 비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -133,10 +133,10 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber2
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OPEN SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [Encryptbykey&#40; Transact SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [Decryptbykey&#40; Transact SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY&#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY&#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

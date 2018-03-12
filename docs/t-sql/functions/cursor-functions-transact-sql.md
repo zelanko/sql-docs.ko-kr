@@ -1,5 +1,5 @@
 ---
-title: "커서 함수 (Transact SQL) | Microsoft Docs"
+title: "커서 함수(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 11/21/2017
 |[@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)|[CURSOR_STATUS](../../t-sql/functions/cursor-status-transact-sql.md)|  
 |[@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md)||  
   
-모든 커서 함수는 비결정적입니다. 이는 이러한 함수를 호출할 때마다 동일한 입력 값 집합을 사용하더라도 항상 동일한 결과가 반환되지는 않는다는 것을 의미합니다. 함수 결정성에 대 한 자세한 내용은 참조 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)합니다.
+모든 커서 함수는 비결정적입니다. 이는 이러한 함수를 호출할 때마다 동일한 입력 값 집합을 사용하더라도 항상 동일한 결과가 반환되지는 않는다는 것을 의미합니다. 함수 결정성에 대한 자세한 내용은 [결정적 함수 및 비결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)
   
   

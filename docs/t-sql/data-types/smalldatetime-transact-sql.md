@@ -1,5 +1,5 @@
 ---
-title: smalldatetime (Transact SQL) | Microsoft Docs
+title: smalldatetime(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -41,14 +41,14 @@ ms.lasthandoff: 11/21/2017
 날짜와 시간을 정의합니다. 시간은 하루 24시간을 기준으로 하며 초는 항상 소수 자릿수 없이 0(:00)으로 표시됩니다.
   
 > [!NOTE]  
->  사용 하 여는 **시간**, **날짜**, **datetime2** 및 **datetimeoffset** 새 작업에 대 한 데이터 형식입니다. 이러한 데이터 형식은 SQL 표준에 맞는 형식으로, 이식성이 높습니다. **시간**, **datetime2** 및 **datetimeoffset** 높아지며 초의 정밀도 됩니다. **datetimeoffset** 전체적으로 배포 된 응용 프로그램에 대 한 표준 시간대 지원을 제공 합니다.  
+>  새 작업에 대해 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 사용합니다. 이러한 데이터 형식은 SQL 표준에 맞는 형식으로, 이식성이 높습니다. **time**, **datetime2** 및 **datetimeoffset**은 초의 정밀도를 높여줍니다. 전 세계에 배포되는 응용 프로그램의 경우 **datetimeoffset**을 사용하면 표준 시간대가 지원됩니다.  
   
 ## <a name="smalldatetime-description"></a>smalldatetime 설명
   
 |||  
 |-|-|  
 |구문|**smalldatetime**|  
-|사용법|선언 @MySmalldatetime **smalldatetime**<br /><br /> 만들 테이블 Table1 (Column1 **smalldatetime** )|  
+|사용법|DECLARE @MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1(Column1 **smalldatetime**)|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|해당 사항 없음|  
 |날짜 범위|1900-01-01부터 2079-06-06까지<br /><br /> 1900년 1월 1일부터 2079년 6월 6일까지|  
 |시간 범위|00:00:00부터 23:59:59까지<br /><br /> 2007-05-09 23:59:59 다음 시간은 다음과 같음<br /><br /> 2007-05-10 00:00:00|  
@@ -58,20 +58,20 @@ ms.lasthandoff: 11/21/2017
 |정확도|1분|  
 |기본값|1900-01-01 00:00:00|  
 |달력|일반 달력<br /><br /> (전체 연도 범위를 포함하지는 않음)|  
-|사용자 정의 초 소수 부분 자릿수|아니요|  
-|표준 시간대 오프셋 인식 및 유지|아니요|  
-|일광 절약 시간제 인식|아니요|  
+|사용자 정의 초 소수 부분 자릿수|아니오|  
+|표준 시간대 오프셋 인식 및 유지|아니오|  
+|일광 절약 시간제 인식|아니오|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
-**smalldatetime** 는 ANSI 또는 ISO 8601 규격이 아닙니다.
+**smalldatetime**은 ANSI 또는 ISO 8601 규격이 아닙니다.
   
-## <a name="converting-date-and-time-data"></a>날짜 및 시간 데이터를 변환합니다.
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜 및 시간 데이터 형식을 변환할 때 날짜나 시간으로 인식되지 않는 값은 모두 무시됩니다. 날짜 및 시간 데이터와 함께 CAST 및 CONVERT 함수를 사용 하는 방법에 대 한 정보를 참조 하십시오. [CAST 및 convert&#40; Transact SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).
+## <a name="converting-date-and-time-data"></a>날짜 및 시간 데이터 변환
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜 및 시간 데이터 형식을 변환할 때 날짜나 시간으로 인식되지 않는 값은 모두 무시됩니다. 날짜 및 시간 데이터에 CAST 및 CONVERT 함수를 사용하는 방법은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.
   
-### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>Smalldatetime을 다른 날짜 및 시간 형식으로 변환
-이 섹션에서는 발생 하는 상황을 설명 때는 **smalldatetime** 데이터 형식을 다른 날짜 및 시간 데이터 형식으로 변환 됩니다.
+### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>smalldatetime을 다른 날짜 및 시간 형식으로 변환
+이 섹션에서는 **smalldatetime** 데이터 형식이 다른 날짜 및 시간 데이터 형식으로 변환될 때 어떤 일이 발생하는지를 설명합니다.
   
-변환의 경우 **날짜**, 연도, 월 및 일이 복사 됩니다. 다음 코드에서는 `smalldatetime` 값을 `date` 값으로 변환한 결과를 보여 줍니다.
+**date**로 변환되는 경우 년, 월 및 일이 복사됩니다. 다음 코드에서는 `smalldatetime` 값을 `date` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -87,7 +87,7 @@ SELECT @smalldatetime AS '@smalldatetime', @date AS 'date';
 --(1 row(s) affected)  
 ```  
   
-변환 됩니다 때 **time (n)**, 시, 분 및 초 복사 됩니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `time(4)` 값으로 변환한 결과를 보여 줍니다.
+**time(n)**으로 변환되는 경우 시간, 분 및 초가 복사됩니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `time(4)` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -103,7 +103,7 @@ SELECT @smalldatetime AS '@smalldatetime', @time AS 'time';
 --(1 row(s) affected)  
 ```  
   
-변환 됩니다 때 **datetime**, **smalldatetime** 값에 복사 됩니다는 **datetime** 값입니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.
+**datetime**으로 변환되는 경우 **smalldatetime** 값이 **datetime** 값으로 복사됩니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -119,7 +119,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-변환의 경우 **datetimeoffset (n)**, **smalldatetime** 값에 복사 되는 **datetimeoffset (n)** 값입니다. 소수 자릿수 초는 0으로 설정되고 표준 시간대 오프셋은 +00:0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetimeoffset(4)` 값으로 변환한 결과를 보여 줍니다.
+**datetimeoffset(n)**으로 변환되는 경우 **smalldatetime** 값이 **datetimeoffset(n)** 값으로 복사됩니다. 소수 자릿수 초는 0으로 설정되고 표준 시간대 오프셋은 +00:0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetimeoffset(4)` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -135,7 +135,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetimeoffset AS 'datetimeoffset(4)
 --(1 row(s) affected)  
 ```  
   
-변환에 **datetime2(n)**, **smalldatetime** 값에 복사 되는 **datetime2(n)** 값입니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime2(4)` 값으로 변환한 결과를 보여 줍니다.
+**datetime2(n)**로 변환되는 경우 **smalldatetime** 값이 **datetime2(n)** 값으로 복사됩니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime2(4)` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -194,7 +194,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

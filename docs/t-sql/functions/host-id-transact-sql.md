@@ -1,5 +1,5 @@
 ---
-title: HOST_ID (Transact SQL) | Microsoft Docs
+title: HOST_ID(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,9 +49,9 @@ HOST_ID ()
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **char (10)**  
+ **char(10)**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  시스템 함수의 매개 변수가 선택 사항이면 현재 데이터베이스, 호스트 컴퓨터, 서버 사용자 또는 데이터베이스 사용자를 가정합니다. 기본 제공 함수 다음에는 항상 괄호가 와야 합니다.  
   
  시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다.  
@@ -70,8 +70,8 @@ CREATE TABLE Orders
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [시스템 함수 &#40; Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

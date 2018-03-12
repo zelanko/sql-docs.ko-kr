@@ -1,5 +1,5 @@
 ---
-title: ABS (Transact SQL) | Microsoft Docs
+title: ABS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="abs-transact-sql"></a>ABS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-지정한 수식의 절대(양수) 값을 반환하는 수치 연산 함수입니다. (`ABS` 변경 음수 양수 값에는 값입니다. `ABS`0에 영향을 주지 양수 값 또는.)
+지정한 수식의 절대(양수) 값을 반환하는 수치 연산 함수입니다. (`ABS`는 음수 값을 양수 값으로 변경합니다. `ABS`는 0 또는 양수 값에 영향을 미치지 않습니다.)
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -84,10 +84,10 @@ GO
 "식을(를) 데이터 형식 int(으)로 변환하는 중 산술 오버플로 오류가 발생했습니다."
 
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [기본 제공 함수s&#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: CERTPROPERTY (Transact SQL) | Microsoft Docs
+title: CERTPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>인수  
 *Cert_ID*  
-인증서의 ID입니다. *Cert_ID* 는 int입니다.
+인증서의 ID입니다. *Cert_ID*는 int입니다.
   
 *Expiry_Date*  
 인증서의 만료 날짜입니다.
@@ -78,15 +78,15 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 ## <a name="return-types"></a>반환 형식
 속성 지정은 작은따옴표로 묶어야 합니다.
   
-반환 형식은 함수 호출에 지정된 속성에 따라 다릅니다. 모든 반환 값은 반환 형식의에 래핑됩니다.이 **sql_variant**합니다.
--   *Expiry_Date* 및 *Start_Date* 반환 **datetime**합니다.  
--   *Cert_Serial_Number*, *Issuer_Name*, *주체*, 및 *String_SID* 반환 **nvarchar**합니다.  
--   *SID* 반환 **varbinary**합니다.  
+반환 형식은 함수 호출에 지정된 속성에 따라 다릅니다. 모든 반환 값은 **sql_variant**의 반환 형식으로 래핑됩니다.
+-   *Expiry_Date* 및 *Start_Date*는 **datetime**을 반환합니다.  
+-   *Cert_Serial_Number*, *Issuer_Name*, *Subject* 및 *String_SID*는 **nvarchar**를 반환합니다.  
+-   *SID*는 **varbinary**를 반환합니다.  
   
-## <a name="remarks"></a>주의  
-인증서에 대 한 정보는 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 카탈로그 뷰에 있습니다.
+## <a name="remarks"></a>Remarks  
+인증서 정보는 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 카탈로그 뷰에 표시됩니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 인증서에 대한 몇 가지 사용 권한이 필요하며 인증서에 대한 호출자의 VIEW DEFINITION 권한이 거부되지 않아야 합니다.
   
 ## <a name="examples"></a>예  
@@ -108,12 +108,12 @@ PRINT CONVERT(nvarchar, @CertSubject);
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[ALTER CERTIFICATE &#40; Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
-[CERT_ID &#40; Transact SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) 
- [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)
-[sys.certificates&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 
- [보안 카탈로그 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+[ALTER CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
+[CERT_ID&#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)
+[암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)
+[sys.certificates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
   
   

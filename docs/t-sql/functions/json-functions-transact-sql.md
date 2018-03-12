@@ -1,5 +1,5 @@
 ---
-title: "JSON 함수 (Transact SQL) | Microsoft Docs"
+title: "JSON 함수(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -26,23 +26,23 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/17/2017
 ---
-# <a name="json-functions-transact-sql"></a>JSON 함수 (Transact SQL)
+# <a name="json-functions-transact-sql"></a>JSON 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-유효성을 검사 하거나 JSON 텍스트를 변경 또는 간단 하거나 복잡 한 값을 추출 하려면이 섹션에 있는 페이지의 설명 하는 함수를 사용 합니다.  
+JSON 텍스트에 대한 유효성 검사 또는 변경을 수행하거나 간단한 값이나 복잡한 값을 추출하려면 이 섹션의 페이지에 설명된 함수를 사용합니다.  
   
 |함수|Description|  
 |--------------|-----------------|  
-|[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|문자열에 유효한 JSON이 포함 되어 있는지 테스트 합니다.|  
-|[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|JSON 문자열에서 스칼라 값을 추출 합니다.|  
+|[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|문자열에 유효한 JSON이 포함되어 있는지 테스트합니다.|  
+|[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|JSON 문자열에서 스칼라 값을 추출합니다.|  
 |[JSON_QUERY](../../t-sql/functions/json-query-transact-sql.md)|JSON 문자열에서 개체 또는 배열을 추출합니다.|  
-|[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|JSON 문자열에서 속성의 값을 업데이트 하 고 업데이트 된 JSON 문자열을 반환 합니다.|
+|[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|JSON 문자열의 속성 값을 업데이트하고 업데이트된 JSON 문자열을 반환합니다.|
 
- 기본 제공 JSON 지원에는에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [JSON 데이터 &#40; SQL Server &#41; ](../../relational-databases/json/json-data-sql-server.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 JSON에 대한 기본 제공 지원에 관한 자세한 내용은 [JSON 데이터&#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)를 참조하세요.  
     
-## <a name="see-also"></a>관련 항목:  
- [유효성 검사, 쿼리, 및 기본 제공 함수 &#40;를 사용 하 여 JSON 데이터를 변경 합니다. SQL Server &#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
- [JSON 경로 식 &#40; SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON 데이터 &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a>참고 항목  
+ [기본 제공 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경&#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
+ [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON 데이터&#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   
