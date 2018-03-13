@@ -30,14 +30,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="modeling-flags-data-mining"></a>모델링 플래그(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 모델링 플래그를 사용하여 사례 테이블에 정의되어 있는 데이터에 대한 데이터 마이닝 알고리즘에 추가 정보를 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 모델링 플래그를 사용하여 사례 테이블에 정의되어 있는 데이터에 대한 데이터 마이닝 알고리즘에 추가 정보를 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  
   
  마이닝 구조 수준에서 정의되는 모델링 플래그도 있고 마이닝 모델 열 수준에서 정의되는 모델링 플래그도 있습니다. 예를 들어 **NOT NULL** 모델링 플래그는 마이닝 구조 열에 사용됩니다. 모델을 만드는 데 사용하는 알고리즘에 따라 마이닝 모델 열에 추가 모델링 플래그를 정의할 수 있습니다.  
   

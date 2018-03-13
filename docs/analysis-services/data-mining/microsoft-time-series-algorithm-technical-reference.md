@@ -35,14 +35,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 시계열 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘에는 시계열을 분석하기 위한 두 가지 알고리즘이 포함되어 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘에는 시계열을 분석하기 위한 두 가지 알고리즘이 포함되어 있습니다.  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 소개된 ARTXP 알고리즘은 계열의 적절한 다음 값을 예측하도록 최적화되어 있습니다.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/15/2018
  이 항목에서는 각 알고리즘이 구현되는 방법과 분석 및 예측 결과를 세부 조정하기 위해 매개 변수를 설정하여 알고리즘을 사용자 지정하는 방법에 대한 추가 정보를 제공합니다.  
   
 ## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Microsoft 시계열 알고리즘 구현  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘에 대한 구현을 기초로 하여 SQL Server 2005에 처음 사용된 ARTXP 알고리즘을 개발했습니다. 따라서 ARTXP 알고리즘은 주기 시계열 데이터를 나타내는 자동 회귀 트리 모델로 설명할 수 있습니다. 이 알고리즘은 다양한 수의 과거 항목을 예측 중인 각 현재 항목과 연결합니다. ARTXP라는 이름은 자동 회귀 트리 방법(ART 알고리즘)이 알려지지 않은 여러 이전 상태에 적용된다는 사실에서 기인한 것입니다. ARTXP 알고리즘에 대한 자세한 내용은 [시계열 분석을 위한 자동 회귀 트리 모델](http://go.microsoft.com/fwlink/?LinkId=45966)을 참조하세요.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]연구 개발 바탕으로 구현 되는 SQL Server 2005에서 사용 된 ARTXP 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘입니다. 따라서 ARTXP 알고리즘은 주기 시계열 데이터를 나타내는 자동 회귀 트리 모델로 설명할 수 있습니다. 이 알고리즘은 다양한 수의 과거 항목을 예측 중인 각 현재 항목과 연결합니다. ARTXP라는 이름은 자동 회귀 트리 방법(ART 알고리즘)이 알려지지 않은 여러 이전 상태에 적용된다는 사실에서 기인한 것입니다. ARTXP 알고리즘에 대한 자세한 내용은 [시계열 분석을 위한 자동 회귀 트리 모델](http://go.microsoft.com/fwlink/?LinkId=45966)을 참조하세요.  
   
  ARIMA 알고리즘은 장기 예측의 정확도를 향상시키기 위해 SQL Server 2008의 Microsoft 시계열 알고리즘에 추가되었습니다. 이 알고리즘은 Box 및 Jenkins가 설명한 자동 회귀 통합 이동 평균 계산을 위한 프로세스를 구현한 기술입니다. ARIMA 방식에서는 순차적으로 관측된 결과에서 종속성을 확인하고 모델 중에 임의 충격을 사용할 수 있습니다. ARIMA 방식은 또한 승제 계절성을 지원합니다. ARIMA 알고리즘에 대한 자세한 내용이 필요한 경우 Box 및 Jenkins의 세미나 자료를 참조하십시오. 이 섹션에서는 Microsoft 시계열 알고리즘에서 ARIMA 방식이 어떻게 구현되었는지에 대해서만 설명합니다.  
   

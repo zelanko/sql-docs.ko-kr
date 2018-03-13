@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
 ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 이상이 현재 컴퓨터에 설치되어 있으면 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]로 업그레이드할 수 있습니다.  
@@ -47,8 +47,8 @@ ms.lasthandoff: 02/15/2018
 >   
 >  -   DTS 런타임  
 > -   DTS API  
-> -   DTS 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
-> -   다음 DTS 패키지 유지 관리 지원: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+> -   DTS 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 다음 버전으로 마이그레이션하기 위한 패키지 마이그레이션 마법사  
+> -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 DTS 패키지 유지 관리 지원  
 > -   DTS 2000 패키지 실행 태스크  
 > -   DTS 패키지의 업그레이드 관리자 검색입니다.  
 >   
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램을 실행하고 **SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 업그레이드** 옵션을 선택합니다.  
   
--   명령 프롬프트에서 **setup.exe**를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)의 "[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]용 설치 스크립트" 섹션을 참조하세요.  
+-   명령 프롬프트에서 **setup.exe**를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 의 "용 설치 스크립트" 섹션을 참조하세요.  
   
  다음 동작은 업그레이드를 사용하여 수행할 수 없습니다.  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 02/15/2018
   
     -   msdb.sysdtslog90 시스템 테이블에서 msdb.sysssislog 시스템 테이블로 로그 데이터를 이동합니다.  
   
--   데이터를 새 msdb.sysssis\* 테이블로 이동한 후 msdb.sysdts\*90 시스템 테이블 및 이 시스템 테이블에 액세스하는 데 사용되는 저장 프로시저를 제거합니다. 그러나 업그레이드하면 sysdtslog90 테이블은 똑같이 sysdtslog90이라는 이름을 가진 뷰로 대체됩니다. 이 새 sysdtslog90 뷰에는 새 msdb.sysssislog 시스템 테이블이 표시됩니다. 이를 통해 로그 테이블 기반의 보고서가 중단 없이 계속 실행됩니다.  
+-   데이터를 새 msdb.sysssis\* 테이블로 이동한 후 msdb.sysdts*90 시스템 테이블 및 이 시스템 테이블에 액세스하는 데 사용되는 저장 프로시저를 제거합니다. 그러나 업그레이드하면 sysdtslog90 테이블은 똑같이 sysdtslog90이라는 이름을 가진 뷰로 대체됩니다. 이 새 sysdtslog90 뷰에는 새 msdb.sysssislog 시스템 테이블이 표시됩니다. 이를 통해 로그 테이블 기반의 보고서가 중단 없이 계속 실행됩니다.  
   
 -   패키지에 대한 액세스를 제어하기 위해 세 가지 새로운 고정 데이터베이스 수준 역할인 db_ssisadmin, db_ssisltduser 및 db_ssisoperator를 만듭니다. db_dtsadmin, db_dtsltduser 및 db_dtsoperator의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 역할은 제거되지 않고 해당하는 새 역할의 멤버가 됩니다.  
   

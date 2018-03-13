@@ -25,10 +25,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
   데이터 프로파일링 태스크는 사용자가 데이터 원본에 익숙해지고 데이터에서 해결해야 할 문제를 식별하는 데 도움이 되는 다양한 프로필을 계산합니다.  
@@ -123,7 +123,7 @@ ms.lasthandoff: 02/15/2018
 |**DataProfilingTaskTrace**|태스크 상태에 대한 설명 정보를 제공합니다. 메시지에는 다음 정보가 포함됩니다.<br /><br /> 처리 요청 시작<br /><br /> 쿼리 시작<br /><br /> 쿼리 끝<br /><br /> 계산 요청 마침|  
   
 ## <a name="output-and-its-schema"></a>출력 및 스키마  
- 데이터 프로파일링 태스크는 선택한 프로필을 DataProfile.xsd 스키마에 따라 구조화된 XML로 출력합니다. 이 XML을 파일 또는 패키지 변수에 저장하도록 지정할 수 있습니다. 이 스키마는 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)에서 온라인으로 볼 수 있습니다. 웹 페이지에서 스키마를 로컬 복사본으로 저장할 수 있습니다. 그런 다음 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기나 메모장과 같은 텍스트 편집기에서 스키마의 로컬 복사본을 볼 수 있습니다.  
+ 데이터 프로파일링 태스크는 선택한 프로필을 DataProfile.xsd 스키마에 따라 구조화된 XML로 출력합니다. 이 XML을 파일 또는 패키지 변수에 저장하도록 지정할 수 있습니다. 온라인에서이 스키마를 볼 수 있습니다 [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)합니다. 웹 페이지에서 스키마를 로컬 복사본으로 저장할 수 있습니다. 그런 다음 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기나 메모장과 같은 텍스트 편집기에서 스키마의 로컬 복사본을 볼 수 있습니다.  
   
  데이터 품질 정보에 대한 이 스키마는 다음과 같은 경우 유용할 수 있습니다.  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/15/2018
   
 -   데이터 품질 정보를 사용하는 사용자 지정 도구 빌드  
   
- 대상 네임스페이스는 스키마에서 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)와 같이 식별됩니다.  
+ 스키마에 식별 되는 대상 네임 스페이스 [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)합니다.  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>패키지 조건부 워크플로의 출력  
  데이터 프로파일링 구성 요소에는 데이터 프로파일링 태스크의 출력을 기반으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 워크플로에 조건부 논리를 구현하기 위한 기본 제공 기능이 없습니다. 그러나 이 논리는 스크립트 태스크를 사용하여 최소한의 프로그래밍 작업으로 손쉽게 추가할 수 있습니다. 이 코드는 XML 출력을 대상으로 XPath 쿼리를 수행한 다음 그 결과를 패키지 변수로 저장합니다. 스크립트 태스크를 후속 태스크에 연결하는 선행 제약 조건은 식을 사용하여 워크플로를 확인할 수 있습니다. 예를 들어 스크립트 태스크는 열에서 특정 임계값을 초과하는 null 값의 비율을 탐지합니다. 이 경우 패키지를 중단하면 문제가 계속되기 전에 해결할 수 있습니다.  
@@ -145,7 +145,7 @@ ms.lasthandoff: 02/15/2018
  [프로필 요청 페이지](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
  **프로필 요청** 페이지에서는 데이터 원본을 지정하고 계산할 데이터 프로필을 선택 및 구성할 수 있습니다. 구성 가능한 여러 프로필에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [후보 키 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [후보 키 프로필 요청 옵션 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [열 길이 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
