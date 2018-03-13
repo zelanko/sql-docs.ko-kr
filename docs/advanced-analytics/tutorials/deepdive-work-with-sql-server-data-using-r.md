@@ -1,4 +1,4 @@
----
+﻿---
 title: "R (SQL과 R 심층 분석)를 사용 하 여 SQL Server 데이터로 작업 | Microsoft Docs"
 ms.date: 12/14/2017
 ms.reviewer: 
@@ -32,12 +32,14 @@ ms.lasthandoff: 02/11/2018
 이 문서는 데이터 과학 심층 분석 자습서를 사용 하는 방법에 대 한 일부 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server와 함께 합니다.
 
 이 단원에서는 모델을 학습에 필요한 데이터를 추가 및 데이터의 몇 가지 빠른 요약 실행 환경을 설정 합니다. 프로세스의 일환으로, 이러한 작업을 수행 해야 합니다.
+
+이 단원에서는 환경을 설정하고 모델 훈련에 필요한 데이터를 추가하고 데이터에 대한 간략한 요약을 실행합니다. 절차의 일부로 다음 작업을 완료해야 합니다.
   
-- 두 개의 R 모델 학습 및 점수 매기기에 사용되는 데이터를 저장할 새 데이터베이스를 만듭니다.
+- 두 개의 R 모델을 훈련하고 채점하기 위한 데이터를 저장할 새 데이터베이스를 만듭니다.
   
 - 워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 간에 통신할 때 사용할 계정(Windows 사용자 또는 SQL 로그인)을 만듭니다.
   
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 및 데이터베이스 개체 작업을 위한 데이터 원본을 R에서 만듭니다.
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 및 데이터베이스 개체로 작업하기 위한 데이터 원본을 R에서 만듭니다.
   
 - R 데이터 원본을 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드합니다.
   
@@ -75,7 +77,7 @@ USE master
 GO
 CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[DeepDive]
 
- --Add the new user to tutorial database
+  --Add the new user to tutorial database
 USE [DeepDive]
 GO
 CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[db_datareader]
@@ -95,11 +97,11 @@ GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
-5. 사용자가 만들어졌는지 확인하려면 새 데이터베이스를 선택하고 **보안**및 **사용자**를 차례로 확장합니다.
+5. 사용자가 만들어졌는지 확인하려면 새 데이터베이스를 선택하고 **보안** 및 **사용자**를 차례로 확장합니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 
-이 섹션에서는 데이터베이스를 설정하는 과정에서 발생할 수 있는 몇 가지 일반적인 문제를 보여 줍니다.
+이 절에서는 데이터베이스를 설정하는 과정에서 발생할 수 있는 몇 가지 일반적인 문제를 보여 줍니다.
 
 - **데이터베이스 연결을 확인하고 SQL 쿼리를 검사하려면 어떻게 하나요?**
   
@@ -125,7 +127,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     예, 그러나 다른 사람에게 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 미리 로드하도록 요청하고 새 테이블을 만들기 위해 호출하는 섹션을 건너뛰어야 합니다. DDL 권한이 필요로 하는 함수에에서 명시 되어 자습서 가능 합니다.
 
-    또한 EXECUTE ANY EXTERNAL SCRIPT 권한 부여 관리자에 게 문의 합니다. 원격 여부를 사용 하 여 R 스크립트 실행을 위해 필요한 `sp_execute_external_script`합니다.
+    또한 EXECUTE ANY EXTERNAL SCRIPT 권한을 부여해 줄 것을 관리자에게 요청합니다. 이 권한은 원격 혹은 'sp_execute_external_script'를 사용해서 R 스크립트를 실행하는 데 필요합니다.
 
 ## <a name="next-step"></a>다음 단계
 
