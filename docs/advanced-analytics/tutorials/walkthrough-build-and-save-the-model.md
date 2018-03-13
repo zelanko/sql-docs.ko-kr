@@ -1,5 +1,5 @@
-﻿---
-title: "R 모델을 만들고 SQL Server에 저장하기 | Microsoft Docs"
+---
+title: "R 모델을 작성하고 SQL Server에 저장하기 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2017
 ms.reviewer: 
@@ -26,28 +26,24 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/19/2018
 ---
-# <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 만들고 SQL Server에 저장하기
+# <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 작성하고 SQL Server에 저장하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 단계에서는 머신 러닝 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 그 모델을 저장하는 방법을 학습합니다.
 
-이 단계에서는 머신 러닝 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 그 모델을 저장하는 방법을 학습합니다.
+## <a name="create-a-classification-model-using-rxlogit"></a>RxLogit를 사용 하 여 분류 모델 만들기
 
+작성하는 모델은 택시 운전사가 특정 승차에 대해 팁을 받을 수 있는지를 예측하는 이진 분류기입니다. 이전 단원에서 만든 데이터 원본을 사용하여 팁 분류기를 학습하며 로지스틱 회귀를 사용합니다.
 
-## <a name="create-a-classification-model-using-rxlogit"></a>rxLogit을 사용해서 분류모델(classification model) 만들기
-
-이번에 만들 모델은 이진분류기(binary classifier)로서, 택시운전사가 승객의 목적지에 도착한 후 승객으로부터 팁을 받을 수 있는지를 예측하는 모델입니다. 지난 과정(lesson)에서 만들었던 데이터 소스(data source)를 사용하여 이 팁 예측 모델을 학습하고, 이때 로지스틱 회귀(logistic regression)를 사용합니다.
-
-1. [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 패키지에 들어있는 **rxLogit** 함수를 호출하여 로지스틱 회귀 모델을 만들어 봅시다. 
+1. [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 패키지에 포함된 **rxLogit** 함수를 호출하여 로지스틱 회귀 모델을 만듭니다. 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = sql_feature_ds));
     ```
 
-    모델을 빌드하는 호출은 system.time 함수 내에 포함되어 있습니다. 이것으로 모델을 빌드하는 데 필요한 시간을 구할 수 있습니다.
+    모델을 작성하는 호출은 system.time 함수로 묶여 있습니다. 이것으로 모델을 작성하는 데 필요한 시간을 구할 수 있습니다.
 
-
-2. 모델을 빌드한 후에 `summary` 함수를 사용해서 모델을 점검하고 계수를 확인할 수 있습니다.
+2. 모델을 작성한 후에 `summary` 함수를 사용하여 모델을 조사하고 계수를 관찰할 수 있습니다.
 
     ```R
     summary(logitObj);
@@ -55,8 +51,8 @@ ms.lasthandoff: 02/19/2018
 
      *결과*
 
-     *에 대 한 로지스틱 회귀 결과: 크리스마스 ~ passenger_count trip_distance + trip_time_in_secs +* direct_distance *   <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
-     <br/>*Dependent variable(s): tipped *
+     *Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs +* direct_distance*   <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
+     <br/>*Dependent variable(s): tipped*
      <br/>*Total independent variables: 5*
      <br/>*Number of valid observations: 17068*
      <br/>*Number of missing observations: 0*
@@ -75,9 +71,9 @@ ms.lasthandoff: 02/19/2018
 
 ## <a name="use-the-logistic-regression-model-for-scoring"></a>로지스틱 회귀 모델을 사용하여 채점하기
 
-이제 모델이 만들어졌으므로 택시운전사가 팁을 받을 가능성이 있는지 여부를 예측할 수 있습니다.
+이제 모델이 작성되었으므로 모델을 사용하여 기사가 특정 여정에서 팁을 받을 가능성이 있는지 여부를 예측할 수 있습니다.
 
-1. 우선 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 함수를 사용해서 점수 결과를 저장하기 위한 데이터 저장 객체를 정의합니다.
+1. 우선 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 함수를 사용해서 채점 결과를 저장하기 위한 데이터 원본 개체를 정의합니다. (역주. 원본에 “scoring resul” 이라는 단어로 끝나는 문장을 가지고 있으며 이를 역자는 “scoring result” 라고 판단해 해석에 적용했습니다.)
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -85,11 +81,11 @@ ms.lasthandoff: 02/19/2018
       table = "taxiScoreOutput"  )
     ```
 
-    + 예제를 간단하게 하기 위해, 모델을 학습시키는 데에 사용되었던 특성값 데이터(`sql_feature_ds`)을 그대로 로지스틱 회귀 모델의 입력값으로 사용할 것입니다. 하지만 보통 테스트 때에 사용하는 데이터는 학습 때와는 다른 새로운 데이터인 경우가 대부분이며, 테스트용 데이터와 학습용 테이터를 따로 준비해서 사용하는 것이 보다 일반적입니다.
+    + 예제를 더 간단하게 만들기 위해 로지스틱 회귀 모델의 입력은 모델 훈련에 사용했던 같은 특성 데이터 원본(`sql_feature_ds`)입니다.  보다 일반적으로는 채점을 위해 새로운 데이터를 가지고 있거나 혹은 검증용(test)과 훈련용(training)으로 일부 데이터를 따로 준비했을 것입니다. 
   
-    + 예측 결과는 _taxiscoreOutput_ 테이블에 저장됩니다. 이 테이블의 스키마는 이 테이블이 RxSqlServerData 함수를 통해 생성될 때 만들어지는 것이 아니라 rxPredict의 출력값으로부터 오는 것입니다. 이 부분을 눈여겨 보세요.
+    + 예측 결과 테이블에 저장 됩니다 _taxiscoreOutput_합니다. 이 테이블에 대 한 스키마 rxSqlServerData를 사용 하 여 만들 때 정의 되어 있지 확인 합니다. RxPredict 출력에서 스키마를 가져옵니다.
   
-    + 예측된 값을 저장하기 위한 테이블을 만들려면, RxSqlServerData 함수를 실행하는 SQL 데이터베이스의 계정에 DDL 권한이 있어야 합니다. 만약 현재 사용되는 계정이 테이블을 만들 수 없는 경우라면 실행문은 실패하게 됩니다.
+    + 예측된 값을 저장하는 테이블을 만들려면 rxSqlServer 데이터 함수를 실행하는 SQL 로그인에 데이터베이스의 DDL 권한이 있어야 합니다. 로그인이 테이블을 만들 수 없는 경우 문이 실패합니다.
 
 2. [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 함수를 호출하여 결과를 생성합니다.
 
@@ -102,28 +98,28 @@ ms.lasthandoff: 02/19/2018
         writeModelVars = TRUE, overwrite = TRUE)
     ```
     
-    문이 성공하면 실행하는 데 약간의 시간이 걸립니다. 실행이 완료되면 SQL Server Management Studio를 열고 해당 테이블이 생성되었으며 Score 열과 기타 예상되는 결과가 포함되어 있는지 확인할 수 있습니다.
+    문은 성공 하는 경우 실행 하는 데 약간의 시간이 취해야 합니다. 완료 되 면 SQL Server Management Studio를 열고 테이블을 만든 및 예상 출력은 점수 열 오류 코드 및 기타 포함 되어 있는지 확인 하십시오.
 
 ## <a name="plot-model-accuracy"></a>모델 정확도 그리기
 
-rxRoc(https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수를 사용하여 Receiver Operating Curve를 그릴 수 있고 이것을 통해서 모델이 얼마나 정확한지를 알아볼 수 있습니다. RevoScaleR 패키지는 원격 계산 컨텍스트(remote compute context)를 지원하며 rxRoc는 RevoScaleR 패키지에서 제공하는 새로운 함수들 중 하나이기 때문에, 여러분은 다음의 둘 중 하나를 선택할 수 있습니다.
+모델의 정확도 파악 하려면 사용할 수 있습니다는 [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수 수신기 운영 곡선을 그립니다. RxRoc RevoScaleR 패키지에서 제공 하는 새 기능 중 하나 이므로 원격 계산 컨텍스트를 지 원하는, 두 가지 옵션이 있습니다.
 
 + rxRoc 함수를 사용하여 원격 계산 컨텍스트에서 플롯을 실행한 다음 로컬 클라이언트에 플롯을 반환합니다.
 
-+ 데이터를 R 클라이언트 컴퓨터로 가져온 후 다른 R 플로팅 함수를 사용해서 성능 그래프를 만들 수도 있습니다.
++ 데이터를 R 클라이언트 컴퓨터로 가져온 후 다른 R 그리기 함수를 사용하여 성능 그래프를 만들 수도 있습니다.
 
-이 절에서는 두 가지 방법을 모두 시도해 봅니다.
+이 절에서는 두 가지 방법을 모두 시험합니다.
 
 ### <a name="execute-a-plot-in-the-remote-sql-server-compute-context"></a>원격(SQL Server) 계산 컨텍스트에서 플롯 실행
 
-1. rxRoc 함수를 호출하고 앞에서 정의한 데이터를 입력으로 제공합니다.
+1. 함수 rxRoc를 호출 하 고 앞에서 정의한 입력으로 데이터를 제공 합니다.
 
     ```R
     scoredOutput = rxImport(scoredOutput);
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    이 호출은 ROC 차트를 계산할 때 사용되는 값을 반환합니다. 라벨(Label) 열은 _tipped_ 이고 예측하려는 실제 결과를 가지고 있으며 _Score_ 열에는 예측이 들어 있습니다.
+    이 호출은 ROC 차트를 계산할 때 사용되는 값을 반환합니다. 라벨(Label) 열은 _tipped_ 이고 예측하려는 실제 결과를 가지고 있으며 _Score_ 열에는 예측이 들어 있습니다. 
 
 2. 실제로 차트를 그리기 위해서는 ROC 개체를 저장한 다음에 `plot` 함수로 그릴 수 있습니다. 그래프는 원격 계산 컨텍스트에 생성되고 R 환경에 반환됩니다.
 
@@ -133,7 +129,7 @@ rxRoc(https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수�
     plot(rocObjectOut);
     ```
 
-    R 그래픽 장치를 열거나 RStudio의 **Plot** 창을 클릭해서 그래프를 봅니다.
+    R 그래픽 장치를 열거나 RStudio의 **Plot** 창을 클릭해서 그래프를 봅니다.
 
     ![모델에 대한 ROC 그림](media/rsql-e2e-rocplot.png "모델에 대한 ROC 그림")
 
@@ -171,11 +167,11 @@ rxRoc(https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수�
 
 모델을 작성하고 잘 수행되는 것을 확인한 후 그 모델을 사용하거나 혹은 정기적으로 재교육과 재조정하는 조직의 사용자나 사람들이 있는 사이트로 배포하길 원할 것입니다. 이러한 절차를 때때로 *operationalizing a model* 이라고 합니다.
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 사용해서 R 모델을 호출할 수 있으므로 클라이언트 응용 프로그램에서 R을 쉽게 사용할 수 있습니다.
+[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 사용해서 R 모델을 호출할 수 있으므로 클라이언트 응용 프로그램에서 R을 쉽게 사용할 수 있습니다. 
 
 그러나 외부 응용 프로그램에서 모델을 호출하려면 프로덕션에서 사용되는 데이터베이스에 모델을 저장해야 합니다. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에서는 학습된 모델이 **varbinary(max)** 형식의 단일 열에 이진 형식으로 저장됩니다.
 
-따라서 훈련된 모델을 R에서 SQL Server로 이동하는 단계는 다음과 같습니다.
+따라서 학습된 모델을 R에서 SQL Server로 이동하는 단계는 다음과 같습니다.
 
 + 모델을 16진수 문자열로 직렬화
 
@@ -209,14 +205,14 @@ rxRoc(https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수�
     sqlQuery (conn, q);
     ```
 
-    테이블에 모델을 저장하는데 INSERT 문만 있으면 되지만 _PersistModel_처럼 저장 프로시저로 구성하는 것이 더 용이합니다.
+    테이블에 모델을 저장하는 경우 INSERT 문만 있으면 됩니다. 그러나 저장된 프로시저에서와 같은 줄이 바뀔 때 보다 쉽게는 _PersistModel_합니다.
 
     > [!NOTE]
-    > 와 같은 오류가 발생 하는 경우 "EXECUTE 권한이 거부 되었습니다 PersistModel 개체에" 로그인 권한이 있는지 확인 합니다. 다음과 같은 T-SQL 문을 실행 하 여 방금 저장된 프로시저에 대 한 명시적 권한을 부여할 수 있습니다. `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > 만일 "PersistModel 개체에 EXECUTE 권한이 거부되었습니다" 같은 오류가 발생하는 경우 로그인에 권한이 있는지 확인하세요. `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>` 같은 T-SQL 문을 실행하여 저장 프로시저에 명시적으로 권한을 줄 수 있습니다
 
 4. 모델을 만들고 데이터베이스에 저장한 후에는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 시스템 저장 프로시저를 사용해서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드로부터 모델을 직접 호출할 수 있습니다.
 
-    그런데 자주 사용하는 모델이라면 사용자 저장 프로시저 내에서 입력 쿼리와 모델 호출을 다른 매개변수와 함께 구성하는 것이 더 용이합니다.
+    그러나 자주 사용 하는 모든 모델을 사용자 지정 저장된 프로시저에서 입력된 쿼리 및 기타 매개 변수를 모델에 대 한 호출을 래핑하는 것이 쉽습니다.
 
     다음은 그러한 저장 프로시저의 전체 코드입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 R 모델을 보다 쉽게 관리하고 업데이트할 수 있도록 이와 같은 저장된 프로시저를 만드는 것이 좋습니다.
 
@@ -241,5 +237,5 @@ rxRoc(https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수�
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[R과 SQL을 사용하여 데이터 특성 만들기](walkthrough-create-data-features.md)
+[R과 SQL을 사용 하 여 데이터 기능 만들기](walkthrough-create-data-features.md)
 
