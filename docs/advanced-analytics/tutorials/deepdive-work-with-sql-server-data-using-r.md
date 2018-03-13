@@ -1,5 +1,5 @@
 ---
-title: R를 사용하여 SQL Server 데이터 작업(SQL과 R 심층 분석) | Microsoft Docs"
+title: "R을 사용하여 SQL Server 데이터 작업(SQL과 R 심층 분석) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 05/18/2017
@@ -27,7 +27,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/27/2017
 
 ---
-# <a name="work-with-sql-server-data-using-r"></a>R를 사용하여 SQL Server 데이터 작업(SQL과 R 심층 분석)
+# <a name="work-with-sql-server-data-using-r"></a>R을 사용하여 SQL Server 데이터 작업(SQL과 R 심층 분석)
 
 이 문서는 SQL Server에서 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)을 사용하는 방법에 대한 데이터 과학 심층 분석 자습서의 일부입니다.
 
@@ -45,16 +45,16 @@ ms.lasthandoff: 09/27/2017
   
 - R 코드의 원격 실행이 가능하도록 계산 컨텍스트를 만듭니다.
   
-- (선택 사항)원격 계산 컨텍스트에서 추적을 사용합니다.
+- (선택 사항) 원격 계산 컨텍스트에서 추적을 사용합니다.
   
 ## <a name="create-the-database-and-user"></a>데이터베이스 및 사용자 만들기
 
-이 연습에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 새 데이터베이스를 만들고, 데이터를 읽고 쓸 수 있으며 R 스크립트를 실행할 수 있는 사용 권한을 가진 SQL 로그인을 추가 합니다.
+이 연습에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 새 데이터베이스를 만들고, 데이터를 읽고 쓸 수 있으며 R 스크립트를 실행할 수 있는 사용 권한을 가진 SQL 로그인을 추가합니다.
 
 > [!NOTE]
-> 데이터 읽기만 한다면 R 스크립트를 실행하는 계정에는 지정된 데이터베이스에서 SELECT 사용 권한(**db_datareader** 역할)이 필요합니다.  그러나 이 자습서에서는 데이터베이스를 준비하고 채점 결과를 저장하기 위한 테이블을 만들려면 DDL 관리 권한이 있어야 합니다.
+> 데이터를 읽기만 한다면 R 스크립트를 실행하는 계정에는 지정된 데이터베이스에서 SELECT 사용 권한(**db_datareader** 역할)이 필요합니다. 그러나 이 자습서에서는 데이터베이스를 준비하고 채점 결과를 저장하기 위한 테이블을 만들려면 DDL 관리 권한이 있어야 합니다.
 > 
-> 또한 데이터베이스 소유자가 아닌 경우 R 스크립트를 실행하려면 EXECUTE ANY EXTERNAL SCRIPT 사용 권한이 필요 합니다.
+> 또한 데이터베이스 소유자가 아닌 경우 R 스크립트를 실행하려면 EXECUTE ANY EXTERNAL SCRIPT 사용 권한이 필요합니다.
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 을 사용할 수 있는 인스턴스를 선택하고 **데이터베이스**를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스**를 선택합니다.
   
@@ -115,7 +115,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     스키마에 하나의 특정 사용자 이름이 연결된 경우 이 사용자를 스키마 소유자라고 합니다. 개체를 만들 때 다른 스키마에서 만들도록 요청하지 않을 경우 항상 고유한 스키마에서 만듭니다.
   
-    예를 들어 이름이 *TestData* 인 테이블을 만들고 기본 스키마가 **db_datareader**이면 이름이 *<database_name>.db_datareader.TestData*인 테이블이 만들어집니다.
+    예를 들어 이름이 *TestData*인 테이블을 만들고 기본 스키마가 **db_datareader**이면 이름이 *<database_name>.db_datareader.TestData*인 테이블이 만들어집니다.
   
     이러한 이유로 테이블이 서로 다른 스키마에 속하기만 하면 한 데이터베이스에 같은 이름의 테이블이 여러 개 포함될 수 있습니다.
    
@@ -125,7 +125,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     예, 그러나 다른 사람에게 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 미리 로드하도록 요청하고 새 테이블을 만들기 위해 호출하는 절을 건너뛰어야 합니다. DDL 권한이 필요한 함수는 일반적으로 자습서에 명시되어 있습니다.
 
-    또한 EXECUTE ANY EXTERNAL SCRIPT 권한을 달라고 관리자에게 요청합니다. 원격 혹은 'sp_execute_external_script'을 사용해서 R 스크립트를 실행하는데 필요합니다.
+    또한 EXECUTE ANY EXTERNAL SCRIPT 권한을 부여해 줄 것을 관리자에게 요청합니다. 이 권한은 원격 혹은 'sp_execute_external_script'를 사용해서 R 스크립트를 실행하는 데 필요합니다.
 
 ## <a name="next-step"></a>다음 단계
 
