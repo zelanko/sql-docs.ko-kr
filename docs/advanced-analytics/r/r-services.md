@@ -16,10 +16,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 40c76cba27559c8fcc314ce4c9761ee42edacac0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Microsoft 컴퓨터 학습 서비스 목표 기계 학습 작업 및 도구 컴�
 
 SQL Server 2016 Microsoft 인기 있는 오픈 소스 R 언어를 비즈니스 응용 프로그램과 통합 하기 위한 두 개의 서버 플랫폼을 시작 합니다.
 
-+ **SQL Server R Services (In-database)**와 통합에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ **SQL Server R Services(In-Database)**에 통합하기 위해, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**, Windows 및 Linux 서버에 배포 하는 엔터프라이즈 수준의 R에 대 한
 
 SQL Server 2017 이름 인기 있는 Python 언어에 대 한 지원이 반영 되도록 변경 되었습니다.

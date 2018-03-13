@@ -34,7 +34,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="install-machine-learning-for-sql-server"></a>SQL Server에 머신 러닝(Machine Learning) 설치
 
-R 설치에 대 한 지원과 함께 SQL Server의 인스턴스에 액세스할 수 있어야 합니다. 원래이 연습에서는 SQL erver 2016 용으로 개발 된 하 고 다음 SQL Server 버전 중 하나를 사용할 수 있어야 하므로 2017 년 1에서 테스트 되었습니다. (일부 방법 차이로 RevoScaleR 함수는 릴리스 간의.)
+설치된 R을 지원하는 SQL Server의 인스턴스에 접근할 수 있어야 합니다. 이 연습은 원래 SQL Server 2016용으로 개발되고 2017에서 시험했으므로 다음 SQL Server 버전 중 하나를 사용할 수 있어야 합니다. (각 릴리스에서 RevoScaleR 기능에 약간의 차이가 있습니다.)
 
 + SQL server 2017 기계 Services (In-database) 학습
 + SQL Server 2016 R Services
@@ -42,7 +42,7 @@ R 설치에 대 한 지원과 함께 SQL Server의 인스턴스에 액세스할 
 자세한 내용은 참조 [SQL Server R Services 설치 (In-database](../r/set-up-sql-server-r-services-in-database.md)합니다.
 
 > [!IMPORTANT]
-> SQL Server 버전 이전 2016 지원 하지 않는 오른쪽와의 통합 그러나 기존의 SQL 데이터베이스를 ODBC 데이터 원본으로 사용할 수 있습니다.
+> 이전 버전은 R과의 통합을 지원하지 않지만 ODBC 데이터 원본으로서 SQL 데이터베이스를 사용할 수 있습니다.
 
 ## <a name="install-an-r-development-environment"></a>R 개발 환경을 설치합니다
 
@@ -50,13 +50,13 @@ R 설치에 대 한 지원과 함께 SQL Server의 인스턴스에 액세스할 
 
 - **R Tools for Visual Studio** (RTVS)Microsoft R 지원, 인텔리센스, 디버깅을 제공하는 무료 플러그 인입니다. R 서버와 SQL Server Machine Learning 서비스 모두에 사용할 수 있습니다. 다운로드하려면 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) 를 참조하세요.
 
-- **Microsoft R Client** 개발을 지 원하는 RevoScaleR 패키지를 사용 하 여 R의 간단한 개발 도구입니다. 가져오려면 [Microsoft R Client 시작](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)을 참조하세요.
+- **Microsoft R Client** 는 RevoScaleR 패키지를 사용하여 R 개발을 지원하는 경량 개발 도구입니다. 사용하려면 [Microsoft R Client 시작](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) 을 참조하세요.
 
 - **RStudio** 는 R 개발에 많이 사용되는 환경 중 하나입니다. 자세한 내용은 [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)를 참조하세요.
 
     RStudio 또는 다른 환경;의 일반 설치를 사용 하 여이 자습서를 완료할 수 없습니다. R 패키지 및 연결 라이브러리에 대 한 Microsoft R Open도 설치 해야 합니다. 자세한 내용은 [데이터 과학 클라이언트 설정](../r/set-up-a-data-science-client.md)을 참조하세요.
 
-- 기본 R 도구 (R.exe, RTerm.exe, RScripts.exe) SQL Server R 클라이언트에 R을 설치 하는 경우에 기본적으로 설치 됩니다. IDE를 설치 하지 않을 경우 이러한 도구를 사용할 수 있습니다.
+- 기본 R 도구 (R.exe, RTerm.exe, RScripts.exe) SQL Server R 클라이언트에 R을 설치 하는 경우에 기본적으로 설치 됩니다. IDE 설치를 원하지 않는다면 이러한 도구를 사용할 수 있습니다.
 
 ## <a name="get-permissions-on-the-sql-server-instance-and-database"></a>SQL Server 인스턴스 및 데이터베이스에 대 한 사용 권한을
 
