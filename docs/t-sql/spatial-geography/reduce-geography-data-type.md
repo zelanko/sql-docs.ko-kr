@@ -1,5 +1,5 @@
 ---
-title: "(Geography 데이터 형식)를 줄이는 | Microsoft Docs"
+title: "Reduce(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reduce-geography-data-type-"></a>Reduce(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  한 근사값을 반환는 주어진 **geography** 인스턴스 인스턴스에서 지정 된 허용 오차로 Douglas-peucker 알고리즘을 실행 하 여 생성 합니다.  
+  인스턴스에서 지정된 허용 오차로 Douglas-Peucker 알고리즘을 실행하여 생성한 지정된 **geography** 인스턴스에 대한 근사값을 반환합니다.  
   
- 이 **geography** 데이터 형식 메서드 지원 **FullGlobe** 인스턴스 또는 반구 보다 큰 공간 인스턴스.  
+ 이 **geography** 데이터 형식 메서드는 **FullGlobe** 인스턴스 또는 반구보다 큰 공간 인스턴스를 지원합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,23 +50,23 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |용어|정의|  
-|*tolerance*|형식의 값은 **float**합니다. *허용 오차* 는를 Douglas-peucker 알고리즘에 입력할 허용 오차입니다. *허용 오차* 는 양수 여야 합니다.|  
+|*tolerance*|**float** 형식의 값입니다. *tolerance*는 Douglas-Peucker 알고리즘에 입력할 허용 오차입니다. *tolerance*는 양수여야 합니다.|  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>주의  
- 컬렉션 형식의 경우이 알고리즘 무관 하 게 작동 각 **geography** 인스턴스에 포함 된 합니다. 이 알고리즘을 수정 하지 않는 **지점** 인스턴스.  
+## <a name="remarks"></a>Remarks  
+ 컬렉션 형식의 경우 이 알고리즘은 인스턴스에 포함된 각 **geography**에 대해 독립적으로 작동합니다. 이 알고리즘은 **Point** 인스턴스를 수정하지는 않습니다.  
   
- 이 메서드는 끝점을 유지 하려고 **LineString** 인스턴스에 하지만 유효한 결과 유지 하기 위해 작업을 수행 하지 못할 수 있습니다.  
+ 이 메서드는 **LineString** 인스턴스의 엔드포인트를 유지하려고 하지만 유효한 결과를 유지하기 위해 이러한 엔드포인트를 유지하지 못할 수 있습니다.  
   
- 경우 `Reduce()` 라고 음수 값을 가진이 메서드를 생성 합니다는 **ArgumentException**합니다. `Reduce()`에 사용되는 허용 오차는 양수여야 합니다.  
+ 음수 값을 사용하여 `Reduce()`를 호출하면 이 메서드는 **ArgumentException**을 발생시킵니다. `Reduce()`에 사용되는 허용 오차는 양수여야 합니다.  
   
- Douglas-peucker 알고리즘의 작동 각 곡선 또는 링에서 **geography** 인스턴스의 시작점 및 끝점 제외 하 고 모든 요소를 제거 합니다. 제거 된 각 지점이 다시 추가 됩니다, 지점이 없을 때까지 가장 멀리 떨어진 지점부터 이상 *허용 오차* 결과에서입니다. 그러면 유효한 결과가 보장되므로 필요한 경우 결과가 유효하게 됩니다.  
+ Douglas-Peucker 알고리즘은 시작점과 끝점을 제외한 모든 지점을 제거하여 **geography** 인스턴스의 각 곡선 또는 링에서 작동합니다. 가장 멀리 떨어진 지점부터 결과의 *허용 오차*보다 큰 지점이 없을 때까지 제거된 각 지점이 다시 추가됩니다. 그러면 유효한 결과가 보장되므로 필요한 경우 결과가 유효하게 됩니다.  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)],이 메서드가 확장 되었습니다 **FullGlobe** 인스턴스.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 이 메서드는 **FullGlobe** 인스턴스로 확장되었습니다.  
   
  이 메서드는 정확하지 않습니다.  
   
@@ -78,7 +78,7 @@ DECLARE @g geography = 'LineString(120 45, 120.1 45.1, 199.9 45.2, 120 46)'
 SELECT @g.Reduce(10000).ToString()  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
