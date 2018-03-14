@@ -1,5 +1,5 @@
 ---
-title: "STMLineFromText (geometry 데이터 형식) | Microsoft Docs"
+title: "STMLineFromText(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-반환 된 **geometry** Z (높이) 값 및 M (측정값) 값을 따르도록 Open Geospatial Consortium (OGC) wkt (WELL-KNOWN Text) 표현의 인스턴스는 인스턴스에서 얻어진 합니다.
+인스턴스에서 얻어진 Z(높이) 값 및 M(측정값) 값을 사용하여 보강된 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현의 **geometry** 인스턴스를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -45,20 +45,20 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>인수  
  *multilinestring_tagged_text*  
- WKT 표현에서 **geometryMultiLineString** 반환할 인스턴스. *multilinestring_tagged_text* 는 **nvarchar (max)** 식입니다.  
+ 반환하려는 **geometryMultiLineString** 인스턴스의 WKT 표현입니다. *multilinestring_tagged_text*는 **nvarchar(max)** 식입니다.  
   
  *SRID*  
- 이 **int** spatial 나타내는 식 참조의 ID (SRID)는 **geometryMultiLineString** 반환할 인스턴스.  
+ 반환하려는 **geometryMultiLineString** 인스턴스의 SRID(spatial reference ID)를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
  OGC 형식: **MultiLineString**  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 throw 된 **FormatException** 입력이 잘못 된 경우.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STMLineFromText()`를 사용하여 `geometry` 인스턴스를 만듭니다.  
@@ -70,7 +70,7 @@ SET @g = geometry::STMLineFromText('MULTILINESTRING ((100 100, 200 200), (3 4, 7
   
  `SELECT @g.ToString();`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OGC 정적 기하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

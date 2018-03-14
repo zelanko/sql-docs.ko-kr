@@ -1,5 +1,5 @@
 ---
-title: "Null (geography 데이터 형식) | Microsoft Docs"
+title: "Null(geography 데이터 형식) | Miciosoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geography-data-type"></a>Null(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-null 인스턴스를 제공 하는 읽기 전용 속성은 **geography** 유형입니다.
+**geography** 형식의 null 인스턴스를 제공하는 읽기 전용 속성입니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -46,11 +46,11 @@ Null
 ## <a name="arguments"></a>인수  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **geography**  
   
  CLR 형식: **SqlGeography**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>예  
  다음 예에서는 Null `geography` 인스턴스를 검색합니다.  
@@ -61,7 +61,7 @@ SET @g = geography::[Null];
 SELECT @g  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [확장 정적 지리 메서드](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

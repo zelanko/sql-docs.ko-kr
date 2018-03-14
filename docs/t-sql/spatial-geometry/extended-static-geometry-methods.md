@@ -1,5 +1,5 @@
 ---
-title: "확장 정적 기 하 도형 메서드 | Microsoft Docs"
+title: "확장 정적 기하 도형 메서드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,11 +49,11 @@ ms.lasthandoff: 01/25/2018
   
 -   [구문 분석](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
--   [점](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
+-   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [정적 기 하 도형 집계 메서드](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
- [Geometry 인스턴스의 확장된 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+## <a name="see-also"></a>참고 항목  
+ [정적 기하 도형 집계 메서드](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
+ [Geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [OGC 정적 기하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "STSrid (geometry 데이터 형식) | Microsoft Docs"
+title: "STSrid(geometry 데이터 형식) | Miciosoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geometry-data-type"></a>STSrid(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid** 는 인스턴스의 spatial reference identifier를 나타내는 정수입니다.  
+  **STSrid**는 인스턴스의 Spatial Reference Identifier를 나타내는 정수입니다.  
   
 이 속성은 수정할 수 있습니다.
   
@@ -46,12 +46,12 @@ STSrid
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]형식: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **int**  
   
  CLR 형식: **SqlInt32**  
   
 ## <a name="examples"></a>예  
- 첫 번째 예제에서는 **기 하 도형** SRID 값을 가진 인스턴스 13 및 사용 하 여 `STSrid` SRID를 확인 합니다.  
+ 첫 번째 예제에서는 SRID 값이 13인 **geometry** 인스턴스를 만들고 `STSrid`를 사용하여 SRID를 확인합니다.  
   
 ```  
 DECLARE @g geometry;  
@@ -66,7 +66,7 @@ SET @g.STSrid = 23;
 SELECT @g.STSrid;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [STX&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STY&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

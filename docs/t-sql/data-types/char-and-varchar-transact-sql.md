@@ -1,5 +1,5 @@
 ---
-title: "char 및 varchar (Transact SQL) | Microsoft Docs"
+title: "char 및 varchar(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -39,49 +39,49 @@ ms.lasthandoff: 11/21/2017
 # <a name="char-and-varchar-transact-sql"></a>char 및 varchar(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-이러한 데이터 형식의 길이 고정된 길이 또는 가변 길이입니다.  
+고정 길이 또는 가변 길이의 데이터 형식입니다.  
   
 ## <a name="arguments"></a>인수  
-**char** [(  *n*  )] 고정 길이의 비유니코드 문자열 데이터. *n*문자열 길이 정의 하며 1부터 8,000 사이의 값 이어야 합니다. 저장소 크기는  *n*  바이트입니다. ISO 동의어는 **char** 은 **문자**합니다.
+**char** [ ( *n* ) ] 고정 길이 비유니코드 문자열 데이터입니다. *n*은 문자열 길이를 정의하며 1에서 8,000 사이여야 합니다. 저장소 크기는 *n*바이트입니다. ISO에서 정의한 **char**의 동의어는 **character**입니다.
   
-**varchar** [(  *n*   |  **max** )] 가변 길이의 비유니코드 문자열 데이터. *n*문자열 길이 정의 하며 1부터 8,000 사이의 값이 될 수 있습니다. **최대** 중임을 최대 저장소 크기가 2 ^31-1 바이트 (2GB)입니다. 저장소 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. ISO 동의어 **varchar** 는 **charvarying** 또는 **charactervarying**합니다.
+**varchar** [ ( *n* | **max** ) ] 가변 길이의 비유니코드 문자열 데이터입니다. *n*은 문자열 길이를 정의하며 1에서 8,000 사이가 될 수 있습니다. **max**는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 저장소 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. ISO에서 정의한 **varchar**의 동의어는 **charvarying** 또는 **charactervarying**입니다.
   
-## <a name="remarks"></a>주의  
-때  *n*  기본 길이 1 데이터 정의 나 변수 선언문에서 지정 하지 않으면 합니다. 때  *n*  지정 하지 않으면 CAST 및 CONVERT 함수를 사용 하는 경우 기본 길이 30입니다.
+## <a name="remarks"></a>Remarks  
+데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이 1이 사용됩니다. CAST 및 CONVERT 함수를 사용할 경우 *n*을 지정하지 않으면 기본 길이는 30입니다.
   
-사용 하는 개체 **char** 또는 **varchar** COLLATE 절을 사용 하 여 특정 데이터 정렬을 할당 하지 않는 한 데이터베이스의 기본 데이터 정렬이 할당 됩니다. 데이터 정렬은 문자 데이터를 저장하는 데 사용되는 코드 페이지를 제어합니다.
+**char** 또는 **varchar**를 사용하는 개체에는 COLLATE 절을 사용하여 특정 데이터 정렬을 할당하지 않는 한 데이터베이스의 기본 데이터 정렬이 할당됩니다. 데이터 정렬은 문자 데이터를 저장하는 데 사용되는 코드 페이지를 제어합니다.
   
-여러 언어를 지 원하는 사이트를 사용 하는 경우 유니코드를 사용 하 여 하십시오 **nchar** 또는 **nvarchar** 문자 변환 문제를 최소화 하기 위해 데이터 형식입니다. 사용 하는 경우 **char** 또는 **varchar**, 다음 것이 좋습니다.
-- 사용 하 여 **char** 열 데이터 항목의 크기가 동일 합니다.  
-- 사용 하 여 **varchar** 열 데이터 항목의 크기가 크게 달라질 때.  
-- 사용 하 여 **varchar (max)** 열 데이터 항목의 크기 차이 보이고 시점과 크기는 8, 000 바이트를 초과할 수 있습니다.  
+여러 언어를 지원하는 사이트를 가진 경우에는 문자 변환 문제를 최소화할 수 있도록 유니코드 **nchar** 또는 **nvarchar** 데이터 형식의 사용을 고려하세요. **char** 또는 **varchar**를 사용하는 경우에는 다음과 같이 하는 것이 좋습니다.
+- 열 데이터 항목의 크기가 일관된 경우 **char**를 사용합니다.  
+- 열 데이터 항목의 크기가 비교적 큰 차이를 보일 경우 **varchar**를 사용합니다.  
+- 열 데이터 항목들의 크기가 비교적 큰 차이를 보이고 크기가 8,000바이트를 초과할 수 있는 경우 **varchar(max)**를 사용합니다.  
   
-CREATE TABLE 또는 ALTER TABLE 중 하나를 실행 하면 SET ANSI_PADDING 옵션이 OFF 면는 **char** NULL로 처리 되는 정의 된 열 **varchar**합니다.
+CREATE TABLE 또는 ALTER TABLE 중 하나를 실행할 때 SET ANSI_PADDING이 OFF면 NULL로 정의된 **char** 열이 **varchar**로 처리됩니다.
   
-데이터 정렬 코드 페이지에서 더블 바이트 문자를 사용할 경우 저장소 크기는 여전히  *n*  바이트입니다. 문자열의 저장소 크기가 따라  *n*  바이트 수 미만  *n*  문자입니다.
+데이터 정렬 코드 페이지에서 더블바이트 문자를 사용할 경우 저장소 크기는 계속 *n*바이트입니다. 문자열에 따라 *n*바이트의 저장소 크기가 *n*자보다 작을 수도 있습니다.
 
 > [!WARNING]
-> 각 null이 아닌 varchar (max) 또는 nvarchar (max) 열에는 24 바이트의 추가 고정된 할당 정렬 작업 동안 8, 060 바이트 행 제한에 따라 계산 하는 필요 합니다. 이 null이 아닌 varchar (max) 또는 테이블에서 만들 수 있는 nvarchar (max) 열 수에 암묵적인 제한이 생깁니다.  
+> Null이 아닌 각 varchar(max) 또는 nvarchar(max) 열은 24바이트의 추가 고정 할당이 필요하며 정렬 작업 시 여기에 8,060바이트의 행 제한이 적용됩니다. 이로 인해 null이 아닌 varchar(max) 또는 테이블에서 생성할 수 있는 nvarchar (max)열의 수에 묵시적 제한이 적용됩니다.  
 테이블 생성 시 또는 데이터 삽입 시점에 특별한 오류(최대 행의 크기가 최대로 허용된 8060바이트를 초과한다는 일반적인 경고 외의 메시지)가 표시되지 않습니다. 이렇게 크기가 큰 행은 클러스터형 인덱스 키 업데이트 같은 일부 정상 작업이나 전체 열 집합 정렬에서 오류(오류 512 등)를 발생시킬 수 있고 사용자는 이러한 오류를 작업을 수행하기 전에는 예측할 수 없습니다.
   
-##  <a name="_character"></a>문자 데이터 변환  
-문자 식이 다른 크기의 문자 데이터 형식으로 변환되면 새 데이터 형식에 대해 너무 긴 값은 잘립니다. **uniqueidentifier** 형식이 문자 형식으로 간주 됩니다는 문자 식에서 변환의 목적에 대 한와 문자 형식으로 변환 하기 위한 잘림 규칙이 이므로 합니다. 뒷부분에 나오는 예 섹션을 참조하세요.
+##  <a name="_character"></a> 문자 데이터 변환  
+문자 식이 다른 크기의 문자 데이터 형식으로 변환되면 새 데이터 형식에 대해 너무 긴 값은 잘립니다. **uniqueidentifier** 형식은 문자 식에서 변환하기 위한 문자 형식으로 간주되므로, 문자 형식으로 변환하기 위한 잘림 규칙이 있습니다. 뒷부분에 나오는 예 섹션을 참조하세요.
   
-때 문자 식에서 변환 됩니다 크기 또는 다른 데이터 형식에는 문자 식과 같은 **char (5)** 를 **varchar(5)**, 또는 **char(20)** 를**char(15)**, 입력된 값의 데이터 정렬이 변환 된 값에 할당 됩니다. 문자 이외의 식을 문자 데이터 형식으로 변환하면 현재 데이터베이스의 기본 데이터 정렬이 변환된 값에 할당됩니다. 두 경우 모두에서 특정 데이터 정렬을 사용 하 여 할당할 수 있습니다는 [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 절.
+문자 식이 다른 데이터 형식 또는 크기의 문자 식으로 변환되는 경우(예: **char(5)**에서 **varchar(5)**로, 또는 **char(20)**에서 **char(15)**로) 입력 값의 데이터 정렬은 변환된 값에 적용됩니다. 문자 이외의 식을 문자 데이터 형식으로 변환하면 현재 데이터베이스의 기본 데이터 정렬이 변환된 값에 할당됩니다. 두 경우 모두 [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 절을 사용하여 특정 데이터 정렬을 할당할 수 있습니다.
   
 > [!NOTE]  
->  코드 페이지 변환이 지원 되는 **char** 및 **varchar** 데이터 형식에 대 한 **텍스트** 데이터 형식입니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 마찬가지로 코드 페이지 변환 중 데이터 손실은 보고되지 않습니다.  
+>  **char** 및 **varchar** 데이터 형식에 대해서는 코드 페이지 변환이 지원되지만 **text** 데이터 형식에 대해서는 지원되지 않습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 마찬가지로 코드 페이지 변환 중 데이터 손실은 보고되지 않습니다.  
   
-대략적인 값으로 변환 되는 문자 식 **숫자** 데이터 형식은 선택적 지 수 표기를 포함할 수 있습니다 (소문자 e 또는 대문자 E 다음에 옵션인 더하기 (+) 또는 빼기 (-) 기호가 온 다음 숫자가).
+근사 **numeric** 데이터 형식으로 변환되는 문자 식에는 선택적 지수 표기(소문자 e 또는 대문자 E 다음에 옵션인 더하기(+) 또는 빼기(-) 기호가 온 다음 숫자가 옴)가 포함될 수 있습니다.
   
-문자는 정확한으로 변환 중인 식 **숫자** 자릿수, 소수점 및 선택적 데이터 형식으로 구성 되어야 더하기 (+) 또는 빼기 (-). 선행 공백은 무시됩니다. 123,456.00에서 천 단위 구분 기호와 같은 쉼표 구분 기호는 문자열에서 사용할 수 없습니다.
+정확한 **numeric** 데이터 형식으로 변환되는 문자 식은 숫자, 소수점 및 옵션인 더하기(+) 또는 빼기(-) 기호로 구성되어야 합니다. 선행 공백은 무시됩니다. 123,456.00에서 천 단위 구분 기호와 같은 쉼표 구분 기호는 문자열에서 사용할 수 없습니다.
   
-문자 식으로 변환 되 고 **money** 또는 **smallmoney** 선택적 소수점 및 달러 기호 ($)에 데이터 형식을 포함할 수 있습니다. $123,456.00에서처럼 쉼표 구분자를 사용할 수 있습니다.
+**money** 또는 **smallmoney** 데이터 형식으로 변환되는 문자 식에는 선택적 소수점 및 달러 기호($)가 포함될 수도 있습니다. $123,456.00에서처럼 쉼표 구분자를 사용할 수 있습니다.
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-showing-the-default-value-of-n-when-used-in-variable-declaration"></a>1. 변수 선언에 사용될 때 n의 기본값 표시  
-다음 예제에서는 기본값인  *n*  는 1에 대 한는 `char` 및 `varchar` 변수 선언에 사용 되는 데이터 형식입니다.
+다음 예에서는 `char` 및 `varchar` 데이터 형식이 변수 선언에 사용될 때 *n*의 기본값이 1임을 보여 줍니다.
   
 ```sql
 DECLARE @myVariable AS varchar = 'abc';  
@@ -92,7 +92,7 @@ GO
 ```  
   
 ### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>2. CAST 및 CONVERT에 varchar가 사용될 때 n의 기본값 표시  
-다음 예제에서는 기본값인  *n*  30 때는 `char` 또는 `varchar` 데이터 형식에 사용 되는 `CAST` 및 `CONVERT` 함수입니다.
+다음 예에서는 `char` 또는 `varchar` 데이터 형식이 `CAST` 및 `CONVERT` 함수에 사용될 때 *n*의 기본값이 30임을 보여 줍니다.
   
 ```sql
 DECLARE @myVariable AS varchar(40);  
@@ -104,7 +104,7 @@ SELECT DATALENGTH(CONVERT(char, @myVariable)) AS 'VarcharDefaultLength';
 ```  
   
 ### <a name="c-converting-data-for-display-purposes"></a>3. 표시를 위해 데이터 변환  
-다음 예에서는 두 개의 열을 문자 형식으로 변환한 후 해당 형식에 적용되는 스타일을 표시된 데이터에 적용합니다. A **money** 형식이 문자 데이터로 변환 되 고 스타일 1 표시 하는 값은 쉼표로 구분 소수점 기호 왼쪽으로 세 자리 마다 및 두 자리 숫자의 소수점 오른쪽에 적용 됩니다. A **datetime** 형식이 문자 데이터로 변환 되 고 스타일 3 적용 되는 형식 dd/mm/yy 데이터를 표시 하는 합니다. WHERE 절에는 **money** 유형은 문자열 비교 연산을 수행 하는 문자 형식으로 캐스팅 됩니다.
+다음 예에서는 두 개의 열을 문자 형식으로 변환한 후 해당 형식에 적용되는 스타일을 표시된 데이터에 적용합니다. **money** 형식이 문자 데이터로 변환되고 스타일 1이 적용됩니다. 스타일 1은 소수점 앞 세 자리마다 쉼표를 사용하고 소수점 뒤 두 자리까지 값을 표시합니다. **datetime** 형식이 문자 데이터로 변환되고 스타일 3이 적용됩니다. 스타일 3은 데이터를 dd/mm/yy 형식으로 표시합니다. WHERE 절에서 **money** 형식은 문자열 비교 연산을 수행하기 위해 문자 형식으로 캐스팅됩니다.
   
 ```sql
 USE AdventureWorks2012;  
@@ -140,7 +140,7 @@ DECLARE @myid uniqueidentifier = NEWID();
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
-다음 예는 변환될 데이터 형식에서 해당 값이 너무 길면 데이터가 잘림을 보여 줍니다. 때문에 **uniqueidentifier** 형식은 36 자로 제한, 해당 길이 초과 하는 문자는 잘립니다.
+다음 예는 변환될 데이터 형식에서 해당 값이 너무 길면 데이터가 잘림을 보여 줍니다. **uniqueidentifier** 형식은 36자로 제한되므로 길이가 초과된 글자는 잘립니다.
   
 ```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
@@ -157,11 +157,11 @@ String                                       TruncatedValue
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [nchar 및 nvarchar&#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40; Transact SQL &#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
-[데이터 형식 변환 &#40; 데이터베이스 엔진 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[COLLATE&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[데이터 형식 변환&#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [데이터베이스 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-database.md)
   

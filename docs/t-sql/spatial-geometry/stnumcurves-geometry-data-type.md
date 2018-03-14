@@ -1,5 +1,5 @@
 ---
-title: "STNumCurves (geometry 데이터 형식) | Microsoft Docs"
+title: "STNumCurves(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-이 메서드가 반환 있는 곡선 개수는 **기 하 도형** 인스턴스가 1 차원 공간 데이터 형식에 있으면 인스턴스. 1 차원 공간 데이터 형식에는 **LineString**, **CircularString**, 및 **CompoundCurve**합니다. `STNumCurves`(); 단순 형식 에서만 작동 작동 하지 않습니다 **geometry** 컬렉션 같은 **MultiLineString**합니다.
+이 메서드는 인스턴스가 1차원 공간 데이터 형식일 때 **geometry** 인스턴스의 곡선 수를 반환합니다. 1차원 공간 데이터 형식에는 **LineString**, **CircularString** 및 **CompoundCurve**가 포함됩니다. `STNumCurves`()는 단순 형식에서만 작동하며 **MultiLineString**과 같은 **geometry** 컬렉션에서는 작동하지 않습니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -41,12 +41,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- 빈 1 차원 **geometry** 인스턴스 0을 반환 합니다. **NULL** 때 반환 되는 **기 하 도형** 인스턴스가 1 차원 인스턴스가 아니거나 초기화 되지 않은 인스턴스.  
+## <a name="remarks"></a>Remarks  
+ 빈 1차원 **geometry** 인스턴스는 0을 반환합니다. **geometry** 인스턴스가 1차원 인스턴스가 아니거나 초기화되지 않은 인스턴스일 경우 **NULL**이 반환됩니다.  
   
 ## <a name="examples"></a>예  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

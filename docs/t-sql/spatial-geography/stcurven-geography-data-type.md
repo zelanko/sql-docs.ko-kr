@@ -1,5 +1,5 @@
 ---
-title: "STCurveN (geography 데이터 형식) | Microsoft Docs"
+title: "STCurveN(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurven-geography-data-type"></a>STCurveN(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  지정한 곡선을 반환 합니다.는 **geography** 인스턴스에서 **LineString**, **CircularString**, 또는 **CompoundCurve**합니다.  
+  **LineString**, **CircularString** 또는 **CompoundCurve**인 **geography** 인스턴스에서 지정된 곡선을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,31 +45,31 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *n*  
- 이 **int** 1 있는 곡선 개수 사이의 식은 **geography** 인스턴스.  
+ 1과 **geography** 인스턴스에 있는 곡선의 개수 사이의 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="exceptions"></a>예외  
- 경우 n < 1 아니라면 **ArgumentOutOfRangeException** throw 됩니다.  
+ n < 1인 경우, **ArgumentOutOfRangeException**이 throw 됩니다.  
   
-## <a name="remarks"></a>주의  
- **NULL** 때 반환 되는 다음 조건을 발생 합니다.  
+## <a name="remarks"></a>Remarks  
+ 다음 조건에서는 **NULL**이 반환됩니다.  
   
--   **geography** 인스턴스가 선언 되지만 인스턴스화되지 않습니다  
+-   **geography** 인스턴스가 선언되었지만 인스턴스화되지 않았습니다.  
   
--   **geography** 인스턴스 비어 있습니다.  
+-   **geography** 인스턴스가 비어 있습니다.  
   
--   n 있는 곡선 개수를 초과 **geography** 인스턴스 (참조 [STNumCurves &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)  
+-   n은 **geography** 인스턴스의 커브 수를 초과합니다([STNumCurves &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md) 참조).  
   
--   에 대 한 차원에서 **geography** 인스턴스 같지 않음 (참조 [STDimension &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
+-   **geography** 인스턴스의 차원이 동일하지 않습니다([STDimension &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md) 참조).  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-stcurven-on-a-circularstring"></a>1. CircularString에 STCurveN() 사용  
- 두 번째 곡선을 반환 하는 다음 예제는 **CircularString** 인스턴스:  
+ 다음 예제에서는 **CircularString** 인스턴스에 두 번째 곡선을 반환합니다.  
   
 ```
  DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/25/2018
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
 ### <a name="b-using-stcurven-on-a-compoundcurve"></a>2. CompoundCurve에 STCurveN() 사용  
- 두 번째 곡선을 반환 하는 다음 예제는 **CompoundCurve** 인스턴스:  
+ 다음 예제에서는 **CompoundCurve** 인스턴스에서 두 번째 곡선을 반환합니다.  
   
 ```
  DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
 ### <a name="c-using-stcurven-on-a-compoundcurve-containing-three-circularstrings"></a>3. 세 개의 CircularString이 포함된 CompoundCurve에 STCurveN() 사용  
- 다음 예제에서는 한 **CompoundCurve** 세 개의 개별 결합 하는 인스턴스 **CircularString** 인스턴스를 동일한 곡선 시퀀스 앞의 예제:  
+ 다음 예제에서는 별도의 **CircularString** 인스턴스 세 개를 이전 예와 동일한 곡선 시퀀스로 조합하는 **CompoundCurve** 인스턴스를 사용합니다.  
   
 ```
  DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -107,7 +107,7 @@ ms.lasthandoff: 01/25/2018
  `STCurveN()`은 사용되는 WKT(Well-Known Text) 형식과 관계없이 같은 결과를 반환합니다.  
   
 ### <a name="d-testing-for-validity-before-calling-stcurve"></a>4. STCurve()를 호출하기 전에 유효성 테스트  
- 다음 예제에서는 다음 사항을 확인 하는 방법을 보여 줍니다  *n*  stcurven () 메서드를 호출 하기 전에:  
+ 다음 예제에서는 STCurveN() 메서드를 호출하기 전에 *n*이 유효한지 확인하는 방법을 보여 줍니다.  
   
 ```
  DECLARE @g geography;  
@@ -120,7 +120,7 @@ ms.lasthandoff: 01/25/2018
  END
   ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STSrid (geography 데이터 형식) | Microsoft Docs"
+title: "STSrid(geography 데이터 형식) | Miciosoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geography-data-type"></a>STSrid(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid** 는 인스턴스의 spatial reference identifier (SRID)을 나타내는 정수입니다.  
+  **STSrid**는 인스턴스의 SRID(Spatial Reference Identifier)를 나타내는 정수입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]형식: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **int**  
   
  CLR 형식: **SqlInt32**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 속성은 수정할 수 있습니다.  
   
 ## <a name="examples"></a>예  
@@ -67,8 +67,8 @@ SET @g.STSrid = 4267;
 SELECT @g.STSrid;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Spatial Reference Identifier &#40; Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="see-also"></a>참고 항목  
+ [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Spatial Reference Identifier &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)   
   
   

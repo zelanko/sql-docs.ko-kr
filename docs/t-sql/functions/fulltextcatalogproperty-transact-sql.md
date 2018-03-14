@@ -1,5 +1,5 @@
 ---
-title: FULLTEXTCATALOGPROPERTY (Transact SQL) | Microsoft Docs
+title: FULLTEXTCATALOGPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,15 +50,15 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>인수  
   
 > [!NOTE]  
->  다음 속성의 후속 릴리스에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **LogSize** 및 **PopulateStatus**합니다. 향후 개발 작업에서는 이 속성을 사용하지 않도록 하고 현재 이 속성을 사용하는 응용 프로그램은 수정하십시오.  
+>  이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **LogSize** 및 **PopulateStatus** 속성이 제거됩니다. 향후 개발 작업에서는 이 속성을 사용하지 않도록 하고 현재 이 속성을 사용하는 응용 프로그램은 수정하십시오.  
   
  *catalog_name*  
  전체 텍스트 카탈로그의 이름이 포함된 식입니다.  
   
- *속성*  
+ *property*  
  전체 텍스트 카탈로그 속성의 이름이 포함된 식입니다. 다음은 속성과 반환되는 정보에 대한 설명입니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|악센트 구분 설정입니다.<br /><br /> 0 = 악센트 구분 안 함<br /><br /> 1 = 악센트 구분|  
 |**IndexSize**|전체 텍스트 카탈로그의 논리 크기(MB)입니다. 의미 키 구 및 문서 유사 인덱스의 크기를 포함합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.|  
@@ -76,14 +76,14 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="exceptions"></a>예외  
  오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 FULLTEXTCATALOGPROPERTY와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 참조 [sp_help_fulltext_catalogs &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 FULLTEXTCATALOGPROPERTY와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [sp_help_fulltext_catalogs&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
- FULLTEXTCATALOGPROPERTY ('*catalog_name*','**IndexSize**')와 같이 상태가 4 또는 6 인 조각만 찾습니다 [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)합니다. 이러한 조각은 논리적 인덱스의 일부입니다. 따라서는 **IndexSize** 속성은 논리적 인덱스 크기만 반환 합니다. 그러나 인덱스를 병합하는 동안 실제 인덱스 크기는 논리적 크기의 두 배일 수 있습니다. 병합 하는 동안 전체 텍스트 인덱스에서 사용 되는 실제 크기를 찾기 위해 사용 하 여는 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 저장 프로시저입니다. 이 프로시저는 전체 텍스트 인덱스와 연결된 모든 조각을 찾습니다. 전체 텍스트 카탈로그 파일의 크기를 제한하고 병합 프로세스를 위한 충분한 공간을 허용하지 않으면 전체 텍스트 채우기가 실패할 수 있습니다. 이 경우 FULLTEXTCATALOGPROPERTY('catalog_name' ,'IndexSize')가 0을 반환하고 전체 텍스트 로그에 다음 오류가 기록됩니다.  
+## <a name="remarks"></a>Remarks  
+ FULLTEXTCATALOGPROPERTY('*catalog_name*','**IndexSize**')는 [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)와 같이 상태가 4또는 6인 조각만 찾습니다. 이러한 조각은 논리적 인덱스의 일부입니다. 따라서 **IndexSize** 속성은 논리적 인덱스 크기만 반환합니다. 그러나 인덱스를 병합하는 동안 실제 인덱스 크기는 논리적 크기의 두 배일 수 있습니다. 병합하는 동안 전체 텍스트 인덱스가 사용하는 실제 크기를 찾으려면 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 저장 프로시저를 사용하십시오. 이 프로시저는 전체 텍스트 인덱스와 연결된 모든 조각을 찾습니다. 전체 텍스트 카탈로그 파일의 크기를 제한하고 병합 프로세스를 위한 충분한 공간을 허용하지 않으면 전체 텍스트 채우기가 실패할 수 있습니다. 이 경우 FULLTEXTCATALOGPROPERTY('catalog_name' ,'IndexSize')가 0을 반환하고 전체 텍스트 로그에 다음 오류가 기록됩니다.  
   
  `Error: 30059, Severity: 16, State: 1. A fatal error occurred during a full-text population and caused the population to be cancelled. Population type is: FULL; database name is FTS_Test (id: 13); catalog name is t1_cat (id: 5); table name t1 (id: 2105058535). Fix the errors that are logged in the full-text crawl log. Then, resume the population. The basic Transact-SQL syntax for this is: ALTER FULLTEXT INDEX ON table_name RESUME POPULATION.`  
   
- 이 응용 프로그램에 대 한 검사 빽빽한 루프에서 대기 하지 않도록 중요는 **PopulateStatus** 속성이 유휴 (나타내는 채우기가 완료 된) 되도록이 데이터베이스 및 전체 텍스트에서 CPU 주기 때문에 검색 프로세스 및 원인 시간 제한입니다. 또한 일반적으로 더 나은 옵션 이므로 해당 확인 하려면 **PopulateStatus** 테이블 수준에서 속성 **TableFullTextPopulateStatus** OBJECTPROPERTYEX 시스템 함수의 합니다. OBJECTPROPERTYEX에서 이 전체 텍스트 속성과 기타 새 전체 텍스트 속성은 전체 텍스트 인덱싱 테이블에 대한 보다 자세한 정보를 제공합니다. 자세한 내용은 [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)를 참조하세요.  
+ 응용 프로그램이 빽빽한 루프에서 대기하지 않도록 하고 **PopulateStatus** 속성을 유휴로 설정(채우기가 완료된 것으로 표시)하는 것이 중요합니다. 이렇게 함으로써 CPU 사이클을 데이터베이스와 전체 텍스트 검색 프로세스로부터 격리하고 시간 제한이 발생하도록 할 수 있기 때문입니다. 또한 일반적으로 OBJECTPROPERTYEX 시스템 함수의 테이블 수준 **TableFullTextPopulateStatus**에서 해당 **PopulateStatus** 속성을 확인하는 것이 더 좋습니다. OBJECTPROPERTYEX에서 이 전체 텍스트 속성과 기타 새 전체 텍스트 속성은 전체 텍스트 인덱싱 테이블에 대한 보다 자세한 정보를 제공합니다. 자세한 내용은 [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `Cat_Desc`라는 전체 텍스트 카탈로그에서 전체 텍스트 인덱싱된 항목의 수를 반환합니다.  
@@ -95,9 +95,9 @@ SELECT fulltextcatalogproperty('Cat_Desc', 'ItemCount');
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Fulltextserviceproperty&#40; Transact SQL &#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sp_help_fulltext_catalogs &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [FULLTEXTSERVICEPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sp_help_fulltext_catalogs&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)  
   
   

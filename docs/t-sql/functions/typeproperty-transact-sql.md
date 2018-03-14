@@ -1,5 +1,5 @@
 ---
-title: TYPEPROPERTY (Transact SQL) | Microsoft Docs
+title: TYPEPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,15 +50,15 @@ TYPEPROPERTY (type , property)
  *type*  
  데이터 형식의 이름입니다.  
   
- *속성*  
- 데이터 형식에 대해 반환할 정보의 유형입니다. *속성* 다음 값 중 하나일 수 있습니다.  
+ *property*  
+ 데이터 형식에 대해 반환할 정보의 유형입니다. *property*는 다음 값 중 하나일 수 있습니다.  
   
 |속성|Description|반환 값|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|데이터 형식이 Null 값을 허용합니다.|1 = True<br /><br /> 0 = False<br /><br /> NULL = 데이터 형식을 찾지 못함.|  
-|**OwnerId**|형식의 소유자입니다.<br /><br /> 참고: 스키마 소유자는 반드시 형식 소유자입니다.|Null이 아닌 경우 = 형식 소유자의 데이터베이스 사용자 ID입니다.<br /><br /> NULL = 지원되지 않는 형식이거나 형식 ID가 유효하지 않습니다.|  
+|**OwnerId**|형식의 소유자입니다.<br /><br /> 참고: 스키마 소유자가 반드시 형식 소유자일 필요는 없습니다.|Null이 아닌 경우 = 형식 소유자의 데이터베이스 사용자 ID입니다.<br /><br /> NULL = 지원되지 않는 형식이거나 형식 ID가 유효하지 않습니다.|  
 |**정밀도**|데이터 형식의 전체 자릿수입니다.|자릿수 또는 문자 수입니다.<br /><br /> -1 = **xml** 또는 큰 값 데이터 형식<br /><br /> NULL = 데이터 형식을 찾지 못함.|  
-|**소수 자릿수**|데이터 형식의 소수 자릿수입니다.|데이터 형식의 소수 자릿수입니다.<br /><br /> NULL = 데이터 형식이 아닙니다 **숫자** 없거나 찾을 수 없습니다.|  
+|**소수 자릿수**|데이터 형식의 소수 자릿수입니다.|데이터 형식의 소수 자릿수입니다.<br /><br /> NULL = 데이터 형식이 **numeric**이 아니거나 데이터 형식을 찾지 못함.|  
 |**UsesAnsiTrim**|데이터 형식을 만들 때 ANSI 패딩 설정을 ON으로 설정했습니다.|1 = True<br /><br /> 0 = False<br /><br /> NULL = 데이터 형식을 찾을 수 없거나 이진 또는 문자열 데이터 형식이 아님.|  
   
 ## <a name="return-types"></a>반환 형식  
@@ -86,14 +86,14 @@ FROM sys.types;
 SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [TYPE_ID &#40; Transact SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPE_NAME &#40; Transact SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [Columnproperty&#40; Transact SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [TYPE_ID&#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPE_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [ALTER authorization&#40; Transact SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.types&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+ [ALTER AUTHORIZATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.types&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   
 

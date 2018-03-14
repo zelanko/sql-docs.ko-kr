@@ -1,5 +1,5 @@
 ---
-title: AVG (Transact SQL) | Microsoft Docs
+title: AVG(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -57,13 +57,13 @@ DISTINCT
 값이 중복될 경우 횟수에 관계 없이 무시하고 고유한 값에 대해서만 AVG를 수행하도록 지정합니다.
   
 *expression*  
-이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 정확한 수치 또는 근사치 숫자 데이터 형식 범주에서를 제외 하 고는 **비트** 데이터 형식입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
+**bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
   
-통해 **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* 함수가 적용 되는 파티션으로 FROM 절에서 생성 한 결과 집합을 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 작업이 수행 되는 논리적 순서를 결정 합니다. *order_by_clause* 가 필요 합니다. 자세한 내용은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+*partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause*가 필요합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
-반환 형식은 계산된 된 결과의 유형에 따라 결정 됩니다 *식*합니다.
+반환 형식은 계산된 *식* 결과의 형식에 의해 결정됩니다.
   
 |식 결과|반환 형식|  
 |---|---|
@@ -71,12 +71,12 @@ DISTINCT
 |**smallint**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|**10 진수** 범주 (p, s)|**10 진수 (38, s)** 나눈 **decimal (10, 0)**|  
+|**decimal** 범주(p, s)|**decimal(10, 0)**로 나눈 **decimal(38, s)**|  
 |**money** 및 **smallmoney** 범주|**money**|  
-|**float** 및 **실제** 범주|**float**|  
+|**float** 및 **real** 범주|**float**|  
   
-## <a name="remarks"></a>주의  
-데이터 형식이 *식* 이 별칭 데이터 형식, 반환 형식 이기도 별칭 데이터 형식입니다. 그러나 기본 데이터 유형의 경우 별칭 데이터 형식이 승격 되 면 from **tinyint** 를 **int**, 승격 된 데이터의 반환 값은 형식 및 별칭 데이터 형식입니다.
+## <a name="remarks"></a>Remarks  
+*expression*이 별칭 데이터 형식이면 반환 형식도 별칭 데이터 형식입니다. 하지만 별칭 데이터 형식의 기본 데이터 형식이 승격되면(예: **tinyint**에서 **int**로) 반환 값은 별칭 데이터 형식이 아닌 승격된 데이터 형식입니다.
   
 AVG ()는 값 집합의 합계를 Null이 아닌 값의 개수로 나눠 이러한 값에 대한 평균을 계산합니다. 합계가 반환 값의 데이터 형식에 대한 최대값을 초과할 경우 오류가 반환됩니다.
   
@@ -239,8 +239,8 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[집계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[절 &#40; 조치 Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

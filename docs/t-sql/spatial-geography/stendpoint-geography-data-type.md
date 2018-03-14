@@ -1,5 +1,5 @@
 ---
-title: "STEndpoint (geography 데이터 형식) | Microsoft Docs"
+title: "STEndpoint(geography 데이터 형식) | Miciosoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stendpoint-geography-data-type"></a>STEndpoint(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  반환 끝점에는 **geography** 인스턴스.  
+  **geography** 인스턴스의 엔드포인트를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
- 열기 Geospatial Consortium (OGC) 입력: **지점**  
+ OGC(Open Geospatial Consortium) 형식: **Point**  
   
-## <a name="remarks"></a>주의  
- STEndPoint() 같습니다 [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`합니다.  
+## <a name="remarks"></a>Remarks  
+ STEndPoint()는 [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`과 동일합니다.  
   
- 이 메서드는 비어 있는 메서드를 호출 하면 null을 반환 **geography** 인스턴스.  
+ 이 메서드는 비어 있는 **geography** 인스턴스에서 호출되면 Null을 반환합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `LineString`를 사용하여 `STGeomFromText()` 인스턴스를 만들고 `STEndpoint()`를 사용하여 `LineString`의 끝점을 검색합니다.  
@@ -64,7 +64,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STEndPoint().ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

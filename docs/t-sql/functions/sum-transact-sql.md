@@ -1,5 +1,5 @@
 ---
-title: SUM (Transact SQL) | Microsoft Docs
+title: SUM(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -68,13 +68,13 @@ SUM ( [ ALL | DISTINCT ] expression )
  SUM이 고유한 값의 합계를 반환하도록 지정합니다.  
   
  *expression*  
- 상수, 열 또는 함수이며 산술, 비트 및 문자열 연산자의 조합입니다. *식* 제외한 정확한 수치 또는 근사치 숫자 데이터 형식 범주의 식이 **비트** 데이터 형식입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
+ 상수, 열 또는 함수이며 산술, 비트 및 문자열 연산자의 조합입니다. *expression*은 **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
- 통해 **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* 함수가 적용 되는 파티션으로 FROM 절에서 생성 한 결과 집합을 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 작업이 수행 되는 논리적 순서를 결정 합니다. *order_by_clause* 가 필요 합니다. 자세한 내용은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause*가 필요합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
- 모든의 합계를 반환 *식* 가장 정확한 값 *식* 데이터 형식입니다.  
+ 가장 정확한 *expression* 데이터 형식에서 모든 *expression* 값의 합계를 반환합니다.  
   
 |식 결과|반환 형식|  
 |-----------------------|-----------------|  
@@ -82,11 +82,11 @@ SUM ( [ ALL | DISTINCT ] expression )
 |**smallint**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|**10 진수** 범주 (p, s)|**10 진수 (38, s)**|  
+|**decimal** 범주(p, s)|**decimal(38, s)**|  
 |**money** 및 **smallmoney** 범주|**money**|  
-|**float** 및 **실제** 범주|**float**|  
+|**float** 및 **real** 범주|**float**|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SUM은 OVER 및 ORDER BY 절 없이 사용되는 경우 결정적 함수이고, OVER 및 ORDER BY 절과 함께 지정되는 경우 비결정적 함수입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
@@ -189,10 +189,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-a-simple-sum-example"></a>3. 합계 하는 간단한 예제  
- 다음 예에서는 2003 년에서 판매 된 각 제품의 총 수를 반환 합니다.  
+### <a name="c-a-simple-sum-example"></a>3. 간단한 SUM 예  
+ 다음 예는 2003년 판매된 각 제품의 총 수를 반환합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -217,7 +217,7 @@ ProductKey  TotalPerProduct
 225          7956.1500
  ```
   
-### <a name="d-calculating-group-totals-with-more-than-one-column"></a>4. 둘 이상의 열과 그룹 합계 계산  
+### <a name="d-calculating-group-totals-with-more-than-one-column"></a>4. 두 개 이상의 열에 대한 그룹 합계 계산  
  다음 예에서는 `ListPrice` 테이블에 나열된 각 색에 대한 `StandardCost` 및 `Product`의 합계를 계산합니다.  
   
 ```  
@@ -230,7 +230,7 @@ GROUP BY Color
 ORDER BY Color;  
 ```  
   
- 결과 집합의 첫 번째 부분은 다음과 같습니다.  
+ 결과 집합의 첫 번째 부분은 아래에 나와 있습니다.  
   
  ```
 Color       TotalList      TotalCost
@@ -242,9 +242,9 @@ Multi          880.7468      526.4095
 NA            3162.3564     1360.6185
  ```  
   
-## <a name="see-also"></a>관련 항목:  
- [집계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [절 &#40; 조치 Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: SUSER_SNAME (Transact SQL) | Microsoft Docs
+title: SUSER_SNAME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -54,14 +54,14 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="arguments"></a>인수  
  *server_user_sid*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
- 선택적 로그인 보안 ID입니다. *server_user_sid* 은 **varbinary(85)**합니다. *server_user_sid* 의 보안 id 번호 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 또는 그룹입니다. 경우 *server_user_sid* 은 지정 하지 않으면 현재 사용자에 대 한 정보가 반환 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
+ 선택적 로그인 보안 ID입니다. *server_user_sid*는 **varbinary(85)**입니다. *server_user_sid*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 또는 그룹의 보안 ID일 수 있습니다. *server_user_sid*가 지정되지 않은 경우 현재 사용자에 대한 정보가 반환됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SUSER_SNAME을 ALTER TABLE 또는 CREATE TABLE에서 DEFAULT 제약 조건으로 사용할 수 있습니다. SUSER_SNAME은 SELECT 목록이나 WHERE 절, 그리고 식이 사용되는 모든 곳에 사용할 수 있습니다. 지정된 매개 변수가 없는 경우에도 SUSER_SNAME 다음에는 항상 괄호가 나와야 합니다.  
   
  인수 없이 SUSER_SNAME이 호출되면 현재 보안 컨텍스트의 이름이 반환됩니다. EXECUTE AS를 사용하여 컨텍스트를 전환한 일괄 처리 내에서 인수 없이 SUSER_SNAME이 호출되면 가장된 컨텍스트의 이름이 반환됩니다. 가장된 컨텍스트에서 SUSER_SNAME이 호출된 경우 ORIGINAL_LOGIN은 원래 컨텍스트의 이름을 반환합니다.  
@@ -84,7 +84,7 @@ GO
 ### <a name="b-using-susersname-with-a-windows-user-security-id"></a>2. Windows 사용자의 SID로 SUSER_SNAME 사용  
  다음 예에서는 Windows SID와 연결된 로그인 이름을 반환합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
@@ -111,7 +111,7 @@ GO
 ### <a name="d-calling-susersname-in-combination-with-execute-as"></a>4. SUSER_SNAME을 EXECUTE AS와 함께 호출  
  이 예에서는 SUSER_SNAME이 가장된 컨텍스트에서 호출된 경우의 동작을 보여 줍니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
 ```  
 SELECT SUSER_SNAME();  
@@ -133,7 +133,7 @@ WanidaBenShoof
 sa
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-susersname"></a>5. SUSER_SNAME 사용  
  다음 예에서는 `0x01` 값을 갖는 SID에 대한 로그인 이름을 반환합니다.  
@@ -143,7 +143,7 @@ SELECT SUSER_SNAME(0x01);
 GO  
 ```  
   
-### <a name="f-returning-the-current-login"></a>6. 현재 로그인을 반환합니다.  
+### <a name="f-returning-the-current-login"></a>6. 현재 로그인 반환  
  다음 예에서는 현재 로그인의 로그인 이름을 반환합니다.  
   
 ```  
@@ -151,11 +151,11 @@ SELECT SUSER_SNAME() AS CurrentLogin;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [SUSER_SID &#40; Transact SQL &#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [SUSER_SID&#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.server_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [실행 AS &#40; Transact SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)  
+ [EXECUTE AS&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   
 

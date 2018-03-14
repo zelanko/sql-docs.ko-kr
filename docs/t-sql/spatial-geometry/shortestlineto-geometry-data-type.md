@@ -1,5 +1,5 @@
 ---
-title: "ShortestLineTo (geometry 데이터 형식) | Microsoft Docs"
+title: "ShortestLineTo(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-반환 된 **LineString** 두 사이의 최단 거리를 나타내는 두 점과 사용 하 여 인스턴스 **geometry** 인스턴스. 길이 **LineString** 반환 된 인스턴스는 둘 사이의 거리 **geometry** 인스턴스.
+두 **geometry** 인스턴스 사이의 최단 거리를 나타내는 두 점과 함께 **LineString** 인스턴스를 반환합니다. 반환된 **LineString** 인스턴스의 길이는 두 **geometry** 인스턴스 사이의 거리입니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *geometry_other*  
- 두 번째 **geometry** 인스턴스를 호출 하는 **geometry** 인스턴스 최단 거리를 확인 하려고 합니다.  
+ **geometry** 인스턴스를 호출하여 최단 거리를 확인하려는 두 번째 **geometry** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- 메서드는 **LineString** 인스턴스는 두 개의 교차 하지 않는의 테두리에 있는 끝점과 함께 **기 하 도형** 비교 되는 인스턴스. 길이 **LineString** 반환된 equals 둘 사이의 최단 거리 **geometry** 인스턴스. 빈 **LineString** 인스턴스가 반환 됩니다 두 **geometry** 인스턴스가 서로 교차 합니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 비교할 교차하지 않는 두 **geometry** 인스턴스의 테두리에 있는 엔드포인트와 함께 **LineString** 인스턴스를 반환합니다. 반환된 **LineString**의 길이는 두 **geometry** 인스턴스 사이의 최단 거리와 같습니다. 두 **geometry** 인스턴스가 서로 교차할 경우 빈 **LineString** 인스턴스가 반환됩니다.  
   
 ## <a name="examples"></a>예  
   
@@ -72,8 +72,8 @@ ms.lasthandoff: 01/25/2018
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ShortestLineTo &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+## <a name="see-also"></a>참고 항목  
+ [ShortestLineTo &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
 

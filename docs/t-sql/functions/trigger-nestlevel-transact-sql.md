@@ -1,5 +1,5 @@
 ---
-title: TRIGGER_NESTLEVEL (Transact SQL) | Microsoft Docs
+title: TRIGGER_NESTLEVEL(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="arguments"></a>인수  
  *object_id*  
- 트리거의 개체 ID입니다. 경우 *object_id* 지정 된 문이 반환에 대 한 지정한 트리거의 실행 된 횟수입니다. 경우 *object_id* 을 지정 하지 않으면 문이 반환에 대 한 모든 트리거 실행 된 횟수입니다.  
+ 트리거의 개체 ID입니다. *object_id*가 지정된 경우 해당 문에 대해 지정한 트리거의 실행 횟수가 반환됩니다. *object_id*가 지정되지 않은 경우 문에 대한 모든 트리거의 실행 횟수가 반환됩니다.  
   
  **'** *trigger_type* **'**  
- TRIGGER_NESTLEVEL을 AFTER 트리거에 적용할지 아니면 INSTEAD OF 트리거에 적용할지를 지정합니다. 지정 **AFTER** AFTER 트리거에 합니다. 지정 **IOT** INSTEAD OF 트리거에 대 한 합니다. 경우 *trigger_type* 지정 된 *trigger_event_category* 도 지정 해야 합니다.  
+ TRIGGER_NESTLEVEL을 AFTER 트리거에 적용할지 아니면 INSTEAD OF 트리거에 적용할지를 지정합니다. AFTER 트리거의 경우 **AFTER**를 지정하며 INSTEAD OF 트리거의 경우 **IOT**를 지정합니다. *trigger_type*이 지정된 경우에는 *trigger_event_category*도 지정해야 합니다.  
   
  **'** *trigger_event_category* **'**  
- TRIGGER_NESTLEVEL을 DML 또는 DDL 트리거 중 어디에 적용할지를 지정합니다. 지정 **DML** DML 트리거에 대 한 합니다. 지정 **DDL** DDL 트리거에 대 한 합니다. 경우 *trigger_event_category* 지정 된 *trigger_type* 도 지정 해야 합니다. 만 **AFTER** 지정 될 수 있습니다 **DDL**이므로 DDL 트리거는 AFTER 트리거만 될 수 있습니다.  
+ TRIGGER_NESTLEVEL을 DML 또는 DDL 트리거 중 어디에 적용할지를 지정합니다. DML 트리거에 대해 **DML**을 지정하며 DDL 트리거에는 **DDL**을 지정합니다. *trigger_event_category*가 지정된 경우에는 *trigger_type*도 지정해야 합니다. DDL 트리거는 AFTER 트리거만 가능하므로 **AFTER**만 **DDL**을 함께 지정할 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  매개 변수를 지정하지 않은 경우 TRIGGER_NESTLEVEL은 호출 스택에 있는 총 트리거 수를 반환합니다. 여기에는 해당 트리거도 포함됩니다. 트리거가 다른 트리거를 발생시키면서 명령을 실행하거나 트리거를 연속적으로 발생시키는 경우 매개 변수를 생략할 수 있습니다.  
   
- 특정 트리거 형식 및 이벤트 범주에 대 한 호출 스택에 있는 총 트리거 수를 반환 하려면 지정 *object_id* = 0.  
+ 호출 스택에서 특정 트리거 형식 및 이벤트 범주에 대한 총 트리거 수를 반환하려면 *object_id* = 0을 지정합니다.  
   
  TRIGGER_NESTLEVEL는 트리거 밖에서 실행되고 모든 매개 변수가 NULL이 아닌 경우 0을 반환합니다.  
   
@@ -91,7 +91,7 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
       ('This statement nested over 5 levels of triggers.',16,-1)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

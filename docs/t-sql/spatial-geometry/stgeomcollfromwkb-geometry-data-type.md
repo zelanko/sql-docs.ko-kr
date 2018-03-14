@@ -1,5 +1,5 @@
 ---
-title: "STGeomCollFromWKB (geometry 데이터 형식) | Microsoft Docs"
+title: "STGeomCollFromWKB(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-반환 된 **geometrycollection** Open Geospatial Consortium (OGC) wkb (WELL-KNOWN Binary) 표현의 인스턴스.
+OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현의 **geometrycollection** 인스턴스를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -45,23 +45,23 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>인수  
  *WKB_geometrycollection*  
- WKB 표현에서 **geometrycollection** 반환할 인스턴스. *WKB_geometrycollection* 는 **varbinary (max)** 식입니다.  
+ 반환하려는 **geometrycollection** 인스턴스의 WKB 표현입니다. *WKB_geometrycollection*은 **varbinary(max)** 식입니다.  
   
  *SRID*  
- 이 **int** spatial 나타내는 식 참조의 ID (SRID)는 **geometry** 반환할 인스턴스.  
+ 반환하려는 **geometry** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- OGC 형식은 **geometry** 에서 반환한 인스턴스 `STGeomCollFromWKB()` 로 설정 된 **GeomCollection**, **MultiPolygon**, **MultiLineString**, 또는 **MulitPoint**해당 WKB 입력에 따라 합니다.  
+## <a name="remarks"></a>Remarks  
+ `STGeomCollFromWKB()`에 의해 반환된 **geometry** 인스턴스의 OGC 형식은 해당 WKB 입력에 따라 **GeomCollection**, **MultiPolygon**, **MultiLineString** 또는 **MulitPoint**로 설정됩니다.  
   
  이 메서드는 입력이 잘못된 경우 FormatException 예외를 throw합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 `STGeomCollFromWKB()` 만들려는 **geometry** 인스턴스.  
+ 다음 예제에서는 `STGeomCollFromWKB()`를 사용하여 **geometry** 인스턴스를 만듭니다.  
   
 ```  
 DECLARE @g geometry;  
@@ -69,7 +69,7 @@ SET @g = geometry::STGeomCollFromWKB(0x01070000000200000001030000000100000004000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OGC 정적 기하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

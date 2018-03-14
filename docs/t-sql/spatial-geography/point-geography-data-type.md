@@ -1,5 +1,5 @@
 ---
-title: "진입점 (geography 데이터 형식) | Microsoft Docs"
+title: "Point(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geography-data-type"></a>Point(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-생성 된 **geography** 인스턴스를 나타내는 **지점** 해당 위도 및 경도 값 및 spatial reference ID (SRID)에서 인스턴스.
+해당 위도 및 경도 값과 SRID(Spatial Reference ID)로부터 **Point** 인스턴스를 나타내는 **geography** 인스턴스를 생성합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -46,16 +46,16 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>인수  
  *Lat*  
- 이 **float** 의 x 좌표를 나타내는 식은 **지점** 생성 되 고 합니다.  
+ 생성할 **Point**의 x 좌표를 나타내는 **float** 식입니다.  
   
  *Long*  
- 이 **float** 의 y 좌표를 나타내는 식은 **지점** 생성 되 고 합니다. 유효한 위 도와 경도 값에 대 한 자세한 내용은 참조 하십시오. [지점](../../relational-databases/spatial/point.md)합니다.  
+ 생성할 **Point**의 y 좌표를 나타내는 **float** 식입니다. 유효한 위도와 경도 값에 대한 자세한 내용은 [Point](../../relational-databases/spatial/point.md)를 참조하세요.  
   
  *SRID*  
- 이 **int** SRID를 나타내는 식은 **geography** 반환할 인스턴스.  
+ 반환하려는 **geography** 인스턴스의 SRID를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
@@ -71,7 +71,7 @@ SET @g = geography::Point(47.65100, -122.34900, 4326)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [확장 정적 지리 메서드](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

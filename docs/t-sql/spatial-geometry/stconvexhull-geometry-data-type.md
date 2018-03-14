@@ -1,5 +1,5 @@
 ---
-title: "STConvexHull (geometry 데이터 형식) | Microsoft Docs"
+title: "STConvexHull(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-네 점을 나타내는 개체를 반환 된 **geometry** 인스턴스.
+**geometry** 인스턴스의 볼록 집합을 나타내는 개체를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- `STConvexHull()`가장 작은 볼록 다각형에서 반환 된 주어진 **기 하 도형** 인스턴스. **포인트** 또는 동축 **LineString** 인스턴스는 입력으로 동일한 형식의 인스턴스를 생성 합니다.  
+## <a name="remarks"></a>Remarks  
+ `STConvexHull()`은 지정된 **geometry** 인스턴스가 포함된 가장 작은 볼록 다각형(convex polygon)을 반환합니다. **Point** 또는 동축 **LineString** 인스턴스는 입력 형식과 동일한 형식의 인스턴스를 생성합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STConvexHull()`을 사용하여 비볼록 `Polygon``geometry` 인스턴스의 볼록 집합을 찾습니다.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 1 1, 2 2, 2 0, 0 0))', 0);
 SELECT @g.STConvexHull().ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

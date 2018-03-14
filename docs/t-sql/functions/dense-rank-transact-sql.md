@@ -1,5 +1,5 @@
 ---
-title: DENSE_RANK (Transact SQL) | Microsoft Docs
+title: DENSE_RANK(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ```  
   
 ## <a name="arguments"></a>인수  
- \<partition_by_clause >  
- 생성 한 결과 집합을 나눕니다는 [FROM](../../t-sql/queries/from-transact-sql.md) DENSE_RANK 함수가 적용 되는 절을으로 분할 합니다. PARTITION BY 구문은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ [FROM](../../t-sql/queries/from-transact-sql.md) 절이 생성한 결과 집합을 DENSE_RANK 함수가 적용되는 파티션으로 나눕니다. PARTITION BY 구문은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
- \<order_by_clause >  
+ \<order_by_clause>  
  DENSE_RANK 함수가 파티션 내의 행에 적용되는 순서를 결정합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **bigint**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  같은 파티션에서 한 순위에 두 개 이상의 행이 연결된 경우 연결된 각 행에는 같은 순위가 지정됩니다. 예를 들어 성과가 가장 좋은 두 명의 판매 직원이 같은 SalesYTD 값을 갖는 경우 둘 다 1로 순위가 지정됩니다. 다음으로 높은 SalesYTD 값을 갖는 판매 직원이 순위 2로 지정됩니다. 이는 해당 행 앞에 오는 개별 행의 수보다 하나 더 큰 값입니다. 따라서 DENSE_RANK 함수가 반환하는 수는 간격 없이 항상 연속적인 순위를 갖게 됩니다.  
   
  전체 쿼리에 사용되는 정렬 순서는 결과에 나타나는 행의 순서를 결정합니다. 이는 순위 1로 지정된 행이 반드시 파티션에서 첫 번째 행일 필요는 없음을 의미합니다.  
@@ -131,7 +131,7 @@ BusinessEntityID Rate                  RankBySalary
 274              48.101                8  
 ```  
   
-## <a name="c-four-ranking-functions-used-in-the-same-query"></a>3. 같은 쿼리에서 사용 되는 4 개의 순위 함수  
+## <a name="c-four-ranking-functions-used-in-the-same-query"></a>3. 동일한 쿼리에 사용된 4가지 순위 함수  
  다음은 동일한 쿼리에 사용된 4가지 순위 함수를 보여 줍니다. 함수별 예에 대한 자세한 내용은 각 순위 함수를 참조하십시오.  
   
 ```  
@@ -156,11 +156,11 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|1.|1|1|1.|4557045.0459|98027|  
-|Linda|Mitchell|2|1|1|1.|5200475.2313|98027|  
-|Jillian|Carson|3|1|1|1.|3857163.6332|98027|  
-|Garrett|Vargas|4|1|1|1.|1764938.9859|98027|  
-|Tsvi|Reiter|5|1.|1|2|2811012.7151|98027|  
+|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
+|Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
+|Jillian|Carson|3|1|1|1|3857163.6332|98027|  
+|Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
+|Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
 |Shu|Ito|6|6|2|2|3018725.4858|98055|  
 |José|Saraiva|7|6|2|2|3189356.2465|98055|  
 |David|Campbell|8|6|2|3|3587378.4257|98055|  
@@ -171,10 +171,10 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D:에는 파티션 내의 행 순위 지정  
- 다음 예에서는 순위 총 판매액에 따라 각 영업 지역에 영업 담당자를 지정 합니다. 행 집합은 `SalesTerritoryGroup`별로 분할되며 `SalesAmountQuota`를 기준으로 정렬됩니다.  
+### <a name="d-ranking-rows-within-a-partition"></a>D: 파티션 내의 행 순위 지정  
+ 다음 예는 총 매출액을 기준으로 영업 구역별 영업 담당자의 순위를 지정합니다. 행 집합은 `SalesTerritoryGroup`별로 분할되며 `SalesAmountQuota`를 기준으로 정렬됩니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -209,11 +209,11 @@ Mensa-Annan        2753000.0000  North America        10
 Tsoflias           1687000.0000  Pacific              1 
 ```  
 
-## <a name="see-also"></a>관련 항목:  
- [순위 &#40; Transact SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [순위 함수 &#40; Transact SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [RANK&#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [ROW_NUMBER&#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE&#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [순위 함수&#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [함수](../../t-sql/functions/functions.md)  
   
   

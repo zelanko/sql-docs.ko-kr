@@ -1,5 +1,5 @@
 ---
-title: "STSymDifference (geography 데이터 형식) | Microsoft Docs"
+title: "STSymDifference(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  하나는 않은 모든 점을 나타내는 개체를 반환 **geography** 인스턴스 또는 다른 **geography** 인스턴스에 있지만 두 인스턴스에 점이 아님.  
+  특정 **geography** 인스턴스 또는 다른 **geography** 인스턴스에 있지만 두 인스턴스 모두에 있지는 않은 모든 점을 나타내는 개체를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *other_geography*  
- 다른 **geography** STSymDistance()가 호출 되는 인스턴스 외에 인스턴스.  
+ STSymDistance()가 호출되는 인스턴스 외의 다른 **geography** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>주의  
- 항상 null이 반환 하는 경우의 spatial reference identifier (Srid)는 **geography** 인스턴스 일치 하지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 **geography** 인스턴스의 SRID(satial reference identifier)가 일치하지 않으면 항상 Null을 반환합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 반구보다 큰 공간 인스턴스를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 서버에서 얻을 수 있는 결과 집합이 확장 되었습니다 **FullGlobe** 인스턴스.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 반구보다 큰 공간 인스턴스를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버에서 얻을 수 있는 결과 집합이 **FullGlobe** 인스턴스까지 확장되었습니다.  
   
  입력 인스턴스에 원호 세그먼트가 있을 경우에만 결과에 원호 세그먼트가 포함될 수 있습니다.  
   
@@ -80,7 +80,7 @@ SELECT @g.STSymDifference(@h).ToString();
  SELECT @g.STSymDifference('FULLGLOBE').ToString();
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

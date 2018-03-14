@@ -1,5 +1,5 @@
 ---
-title: OPENDATASOURCE (Transact SQL) | Microsoft Docs
+title: OPENDATASOURCE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,12 +52,12 @@ OPENDATASOURCE ( provider_name, init_string )
   
 ## <a name="arguments"></a>인수  
  *provider_name*  
- 데이터 원본에 액세스하는 데 사용하는 OLE DB 공급자의 PROGID로 등록된 이름입니다. *provider_name* 는 **char** 데이터 형식, 기본값은 없습니다.  
+ 데이터 원본에 액세스하는 데 사용하는 OLE DB 공급자의 PROGID로 등록된 이름입니다. *provider_name*은 기본값이 없는 **char** 데이터 형식입니다.  
   
- *다음은 init_string*  
- 대상 공급자의 IDataInitialize 인터페이스에 전달 된 연결 문자열입니다. 공급자 문자열 구문은 세미콜론으로 구분와 같은 키워드-값 쌍 기반: **'***keyword1*=*값***;** *keyword2*=*값***'**합니다.  
+ *init_string*  
+ 대상 공급자의 IDataInitialize 인터페이스로 전달되는 연결 문자열입니다. 공급자 문자열 구문은 세미콜론으로 구분된 키워드-값 쌍으로 구분됩니다. 예: **'***keyword1*=*value***;***keyword2*=*value***'**.  
   
- 공급자에서 지원되는 특정 키워드-값 쌍은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK를 참조하십시오. 이 설명서에서는 기본 구문을 정의합니다. 다음 표에서 가장 자주 사용 되는 목록을 키워드는 *은 init_string* 인수입니다.  
+ 공급자에서 지원되는 특정 키워드-값 쌍은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK를 참조하십시오. 이 설명서에서는 기본 구문을 정의합니다. 다음 표에서는 *init_string* 인수에 가장 자주 사용되는 키워드를 나열합니다.  
   
 |키워드|OLE DB 속성|유효한 값 및 설명|  
 |-------------|---------------------|----------------------------------|  
@@ -70,7 +70,7 @@ OPENDATASOURCE ( provider_name, init_string )
 |Catalog|DBPROP_INIT_CATALOG|데이터 원본에 연결할 때의 초기 또는 기본 카탈로그 이름입니다.|  
 |Integrated Security|DBPROP_AUTH_INTEGRATED|Windows 인증을 지정하는 SSPI입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  OPENDATASOURCE는 지정된 공급자에 대해 명시적으로 DisallowAdhocAccess 레지스트리 옵션을 0으로 설정하고 Ad Hoc Distributed Queries 고급 구성 옵션을 설정할 때만 OLE DB 데이터 원본에서 원격 데이터에 액세스하는 데 사용할 수 있습니다. 이러한 옵션을 설정하지 않은 경우 기본적으로 임시 액세스가 허용되지 않습니다.  
   
  OPENDATASOURCE 함수는 연결된 서버 이름과 동일한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 위치에서 사용할 수 있습니다. 따라서 OPENDATASOURCE는 SELECT, INSERT, UPDATE 또는 DELETE 문에서 테이블이나 뷰 이름을 참조하거나 EXECUTE 문에서 원격 저장 프로시저를 참조하는 네 부분으로 된 이름의 첫 번째 부분으로 사용할 수 있습니다. 원격 저장 프로시저를 실행하는 경우 OPENDATASOURCE는 반드시 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 참조해야 합니다. OPENDATASOURCE는 변수를 인수로 받아들이지 않습니다.  
@@ -80,11 +80,11 @@ OPENDATASOURCE ( provider_name, init_string )
 > [!IMPORTANT]  
 >  Windows 인증이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증보다 훨씬 더 안전하므로 가능하면 Windows 인증을 사용해야 합니다. OPENDATASOURCE는 연결 문자열에서 명시적 암호와 함께 사용하면 안 됩니다.  
   
- 각 공급자에 대한 연결 요구 사항은 연결된 서버를 만들 때의 매개 변수에 대한 요구 사항과 비슷합니다. 여러 일반적인 공급자에 대 한 세부 정보는 항목에 나열 된 [sp_addlinkedserver &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ 각 공급자에 대한 연결 요구 사항은 연결된 서버를 만들 때의 매개 변수에 대한 요구 사항과 비슷합니다. 여러 일반적인 공급자에 대한 자세한 내용은 [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 항목을 참조하십시오.  
   
  FROM 절에서 OPENDATASOURCE, OPENQUERY 또는 OPENROWSET에 대한 모든 호출은 두 호출에 동일한 인수가 제공되는 경우에도 업데이트의 대상으로 사용되는 함수에 대한 호출과는 개별적이고 독립적으로 평가됩니다. 특히 이러한 호출 중 하나의 결과에 적용되는 필터 또는 조인 조건은 다른 호출의 결과에 영향을 미치지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  모든 사용자가 OPENDATASOURCE를 실행할 수 있습니다. 원격 서버 연결에 사용되는 사용 권한은 연결 문자열에서 결정됩니다.  
   
 ## <a name="examples"></a>예  
@@ -104,7 +104,7 @@ SELECT * FROM OPENDATASOURCE('Microsoft.Jet.OLEDB.4.0',
 'Data Source=C:\DataFolder\Documents\TestExcel.xls;Extended Properties=EXCEL 5.0')...[Sheet1$] ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   

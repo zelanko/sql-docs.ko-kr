@@ -1,5 +1,5 @@
 ---
-title: "GeomFromGml (geometry 데이터 형식) | Microsoft Docs"
+title: "GeomFromGml(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-생성 한 **기 하 도형** 표현이 지정 된 인스턴스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 집합의는 언어 GML (Geography Markup).
+GML(Geography Markup Language)의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 집합에 표현이 지정된 경우 **geometry** 인스턴스를 생성합니다.
   
 Geography Markup Language에 대한 자세한 내용은 다음 Open Geospatial Consortium Specifications를 참조하세요.
   
@@ -52,15 +52,15 @@ GeomFromGml ( GML_input, SRID )
  GML이 값을 반환하는 데 사용되는 XML 입력입니다.  
   
  *SRID*  
- 이 **int** spatial 나타내는 식 참조의 ID (SRID)는 **geometry** 반환할 인스턴스.  
+ 반환하려는 **geometry** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 throw 된 **FormatException** 입력이 잘못 된 경우.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `GeomFromGml()`를 사용하여 `geometry` 인스턴스를 만듭니다.  
@@ -73,7 +73,7 @@ SET @g = geometry::GeomFromGml(@x, 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [확장 정적 기하 도형 메서드](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

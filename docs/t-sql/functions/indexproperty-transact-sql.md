@@ -1,5 +1,5 @@
 ---
-title: INDEXPROPERTY (Transact SQL) | Microsoft Docs
+title: INDEXPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
   
 ## <a name="arguments"></a>인수  
  *object_ID*  
- 인덱스 속성 정보를 제공할 테이블 또는 인덱싱된 뷰의 개체 ID가 포함된 식입니다. *object_ID* 은 **int**합니다.  
+ 인덱스 속성 정보를 제공할 테이블 또는 인덱싱된 뷰의 개체 ID가 포함된 식입니다. *object_ID*는 **int**입니다.  
   
  *index_or_statistics_name*  
- 속성 정보를 반환할 인덱스 또는 통계의 이름이 포함된 식입니다. *index_or_statistics_name* 은 **nvarchar (128)**합니다.  
+ 속성 정보를 반환할 인덱스 또는 통계의 이름이 포함된 식입니다. *index_or_statistics_name*은 **nvarchar(128)**입니다.  
   
- *속성*  
- 반환할 데이터베이스 속성의 이름이 포함된 식입니다. *속성* 은 **varchar (128)**, 다음이 값 중 하나일 수 있습니다.  
+ *property*  
+ 반환할 데이터베이스 속성의 이름이 포함된 식입니다. *property*는 **varchar(128)**이며 다음 값 중 하나일 수 있습니다.  
   
 > [!NOTE]  
->  달리 언급 하지 않는 한 NULL이 반환 됩니다 *속성* 올바른 속성 이름이 아닙니다 *object_ID* 는 유효한 개체 id *object_ID* 는 지원 되지 않는 개체 형식입니다. 지정된 된 속성을 기다리거나 없는 개체의 메타 데이터를 볼 수 있는 권한이 있습니다.  
+>  달리 언급하지 않는 한 *property*가 유효한 속성 이름이 아니거나, *object_ID*가 유효한 개체 ID가 아니거나, *object_ID*가 지정된 속성에 대해 지원되지 않는 개체 유형이거나 또는 호출자가 개체의 메타데이터를 볼 수 있는 권한이 없는 경우에는 NULL이 반환됩니다.  
   
 |속성|Description|값|  
 |--------------|-----------------|-----------|  
@@ -72,7 +72,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsPadIndex**|인덱스가 각 하위 노드에 남겨 둘 빈 공간을 지정합니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
 |**IsPageLockDisallowed**|ALTER INDEX의 ALLOW_PAGE_LOCKS 옵션으로 설정된 페이지 잠금 값입니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 페이지 잠금이 허용되지 않습니다.<br /><br /> 0 = 페이지 잠금이 허용됩니다.<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**IsRowLockDisallowed**|ALTER INDEX의 ALLOW_ROW_LOCKS 옵션으로 설정된 행 잠금 값입니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 행 잠금이 허용되지 않습니다.<br /><br /> 0 = 행 잠금이 허용됩니다.<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsStatistics**|*index_or_statistics_name* 는 CREATE STATISTICS 문 또는 ALTER DATABASE의 AUTO_CREATE_STATISTICS 옵션으로 만든 통계입니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
+|**IsStatistics**|*index_or_statistics_name*은 CREATE STATISTICS 문 또는 ALTER DATABASE의 AUTO_CREATE_STATISTICS 옵션으로 생성된 통계입니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
 |**IsUnique**|인덱스가 고유합니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
 |**IsColumnstore**|인덱스가 xVelocity 메모리 액세스에 최적화된 columnstore 인덱스입니다.|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -85,7 +85,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 INDEXPROPERTY와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 에 대 한 값을 반환 하는 다음 예제는 **IsClustered**, **IndexDepth**, 및 **IndexFillFactor** 에 대 한 속성의 `PK_Employee_BusinessEntityID` 는 의인덱스`Employee`테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Employee` 테이블의 `PK_Employee_BusinessEntityID` 인덱스에 대한 **IsClustered**, **IndexDepth** 및 **IndexFillFactor** 속성 값을 반환합니다.  
   
 ```  
 SELECT   
@@ -108,8 +108,8 @@ Is Clustered Index Depth Fill Factor
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제에는 인덱스 중 하나의 속성을 검사 하 고 `FactResellerSales` 테이블입니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예는 `FactResellerSales` 테이블의 색인 중 하나의 속성을 검사합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -124,13 +124,13 @@ INDEXPROPERTY(OBJECT_ID('dbo.FactResellerSales'),
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [통계](../../relational-databases/statistics/statistics.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [sys.stats_columns &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "STBuffer (geometry 데이터 형식) | Microsoft Docs"
+title: "STBuffer(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stbuffer-geometry-data-type"></a>STBuffer(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-모든의 합집합을 나타내는 기하학적 개체를 가리키는 인스턴스와의 거리가 반환은 **geometry** 인스턴스는 지정된 된 값 보다 작습니다.
+**geometry** 인스턴스와의 거리가 지정된 값보다 작거나 같은 모든 요소의 합집합을 나타내는 기하학적 개체를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -45,35 +45,35 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *distance*  
- 형식의 값은 **float** (**double** .NET framework에서)를 버퍼를 계산할 geometry 인스턴스와의 거리를 지정 하 합니다.  
+ 해당 버퍼를 계산할 geometry 인스턴스와의 거리를 지정하는 **float**(.NET Framework의 경우 **double**) 형식의 값입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- `STBuffer()`버퍼를 계산 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)로 지정 하 여 *허용 오차* = 거리 \* .001 및 *상대*  =   **false**합니다.  
+## <a name="remarks"></a>Remarks  
+ `STBuffer()`는 *허용 오차* = distance\*.001 및 *relative* = **false**로 지정하여 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)와 동일한 방식으로 버퍼를 계산합니다.  
   
- 때 *거리* > 0 이면 한 **다각형** 또는 **MultiPolygon** 인스턴스가 반환 됩니다.  
+ *distance* > 0이면, **Polygon** 또는 **MultiPolygon** 인스턴스가 반환됩니다.  
   
 > [!NOTE]  
->  거리 이므로 **float**, 매우 작은 값을 0으로 계산 될 수 있습니다.  이 경우 호출의 복사본이 **geometry** 인스턴스가 반환 됩니다.  참조 [float 및 real &#40; Transact SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+>  거리가 **float**이므로 매우 작은 값은 0으로 계산될 수 있습니다.  이 경우 호출 **geometry** 인스턴스의 복사본이 반환됩니다.  [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md) 참조  
   
- 때 *거리* = 0 이면 호출의 복사본 **geometry** 인스턴스가 반환 됩니다.  
+ *distance* = 0이면, 호출 **geometry** 인스턴스의 복사본이 반환됩니다.  
   
- 때 *거리* < 0 인  
+ *distance* < 0이면,  
   
--   빈 **GeometryCollection** 인스턴스의 차원이 0 또는 1은 인스턴스가 반환 됩니다.  
+-   인스턴스의 차원이 0 또는 1이면 빈 **GeometryCollection** 인스턴스가 반환됩니다.  
   
 -   인스턴스의 차원이 2 이상이면 음수 버퍼가 반환됩니다.  
   
     > [!NOTE]  
-    >  버퍼가 음수 이면 빈 만들 수도 **GeometryCollection** 인스턴스.  
+    >  버퍼가 음수이면 빈 **GeometryCollection** 인스턴스가 생성될 수도 있습니다.  
   
  버퍼가 음수이면 geometry 경계에서 지정된 거리 내에 있는 모든 요소가 제거됩니다.  
   
- 이론적 버퍼와 계산 된 버퍼 간의 오차는 max (허용 오차, 익스텐트 * 1.E-7) 여기서 허용 오차 = 거리 \* .001 합니다. 익스텐트에 대 한 자세한 내용은 참조 하십시오. [geometry 데이터 형식 메서드 참조](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)합니다.  
+ 이론적 버퍼와 계산된 버퍼 간의 오차는 허용 오차 = 거리 \* .001인 max(허용 오차, 익스텐트 * 1.E-7)입니다. 익스텐트에 대한 자세한 내용은 [geometry 데이터 형식 메서드 참조](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   
@@ -102,17 +102,17 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 > [!NOTE]  
->  `Polygon` 인스턴스는 `CurvePolygon` 인스턴스 대신 반환됩니다.  반환 하는 `CurvePolygon` 인스턴스를 참조 [BufferWithCurves &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+>  `Polygon` 인스턴스는 `CurvePolygon` 인스턴스 대신 반환됩니다.  `CurvePolygon` 인스턴스를 반환하려면 [BufferWithCurves &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)을 참조하세요.  
   
 ### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>4. 빈 인스턴스를 반환하는 음수 매개 변수 값을 사용하여 STBuffer() 호출  
- 다음 예제에서는 발생 하는 상황 때는 *거리* 매개 변수가-2 인 앞의 예제입니다.  
+ 다음 예제에서는 이전 예제에서 *distance* 매개 변수가 -2인 경우에 발생하는 결과를 보여 줍니다.  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.STBuffer(-2).ToString();
  ```  
   
- 이 **선택** 문에서 반환 된`GEOMETRYCOLLECTION EMPTY.`  
+ 이 **SELECT** 문은 `GEOMETRYCOLLECTION EMPTY.`를 반환합니다.  
   
 ### <a name="e-calling-stbuffer-with-parametervalue--0"></a>5. parameter_value = 0을 사용하여 STBuffer() 호출  
  다음 예에서는 호출 `geometry` 인스턴스의 복사본을 반환합니다.  
@@ -167,10 +167,10 @@ ms.lasthandoff: 01/25/2018
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- 처음 두 **선택** 문은 반환는 `MultiPolygon` 않았기 때문에 인스턴스에 매개 변수 *거리* 보다 작거나 1/2 둘 사이의 거리 요소 (1 1) 및 (1 4). 세 번째 **선택** 문에서 반환은 `Polygon` 두의 버퍼링 된 인스턴스가 요소 (1 1) 때문에 인스턴스 (1 4) 및 중첩 합니다.  
+ 처음 두 **SELECT** 문은 매개 변수 *distance*가 두 요소(1 1)과 (1 4) 사이 거리의 1/2보다 작거나 같기 때문에 `MultiPolygon` 인스턴스를 반환합니다. 세 번째 **SELECT** 문은 두 요소(1 1)과 (1 4)의 버퍼링된 인스턴스가 겹치기 때문에 `Polygon` 인스턴스를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Bufferwithtolerance&#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
+## <a name="see-also"></a>참고 항목  
+ [BufferWithTolerance &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

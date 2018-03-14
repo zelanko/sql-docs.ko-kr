@@ -1,5 +1,5 @@
 ---
-title: geography (Transact SQL) | Microsoft Docs
+title: geography(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geography"></a>Geography 공간 형식은-
+# <a name="spatial-types---geography"></a>공간 형식 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  지리 공간 데이터 형식인 **geography**,.NET 공용 언어 런타임 (CLR) 데이터 형식으로의 구현 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 데이터 형식은 둥근 표면 좌표 시스템의 데이터를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식은 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장합니다.  
+  geography 공간 데이터 형식인 **geography**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. 이 데이터 형식은 둥근 표면 좌표 시스템의 데이터를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식은 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대 한 메서드 집합이 지원는 **geography** 공간 데이터 형식입니다. 메서드가 포함 됩니다 **geography** Open Geospatial Consortium (OGC) 표준과의 집합으로 정의한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 표준에 대 한 확장입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **gegraphy** 공간 데이터 형식에 대해 메서드 집합을 지원합니다. 이러한 메서드에는 OGC(Open Geospatial Consortium) 표준과 해당 표준에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 확장의 집합으로 정의된 **geography**의 메서드가 포함됩니다.  
  
- 에 대 한 허용 오차는 **geography** 메서드 수 만큼 클 1.0 e-7 * 익스텐트 합니다. 지점 사이의 최대 근사 거리를 참조 하는 익스텐트가 **geography**개체입니다.
+ **geography** 메서드의 허용 오차는 1.0e-7 * 익스텐트와 같을 수 있습니다. 익스텐트는 **geography** 개체의 점 사이의 최대 근사 거리를 나타냅니다.
   
 
 ## <a name="registering-the-geography-type"></a>geography 형식 등록  
@@ -83,7 +83,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geography-in-a-computed-column"></a>3. 계산 열에 geography 사용  
- 다음 예제에서는 사용 하 여 지속형된 계산된 열 테이블을 만듭니다는 **geography** 유형입니다.  
+ 다음 예제에서는 **geography** 형식을 사용하여 지속형 계산 열이 있는 테이블을 만듭니다.  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -98,7 +98,7 @@ CREATE TABLE SpatialTable
 )  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
 
   

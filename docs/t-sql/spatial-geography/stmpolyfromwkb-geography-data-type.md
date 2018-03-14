@@ -1,5 +1,5 @@
 ---
-title: "STMPolyFromWKB (geography 데이터 형식) | Microsoft Docs"
+title: "STMPolyFromWKB(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-반환 된 **geographyMultiPolygon** Open Geospatial Consortium (OGC) wkb (WELL-KNOWN Binary) 표현의 인스턴스.
+OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현에서 **geographyMultiPolygon** 인스턴스를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -45,13 +45,13 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>인수  
  *WKB_multipolygon*  
- WKB 표현에서 **geographyMultiPolygon** 반환할 인스턴스. *WKB_multipolygon* 는 **varbinary (max)** 식입니다.  
+ 반환하려는 **geographyMultiPolygon** 인스턴스의 WKB 표현입니다. *WKB_multipolygon*은 **varbinary(max)** 식입니다.  
   
  *SRID*  
- 이 **int** spatial 나타내는 식 참조의 ID (SRID)는 **geographyMultiPolygon** 반환할 인스턴스.  
+ 반환하려는 **geographyMultiPolygon** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
@@ -66,7 +66,7 @@ SET @g = geography::STMPolyFromWKB(0x0106000000020000000103000000010000000400000
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OGC 정적 지리 메서드](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

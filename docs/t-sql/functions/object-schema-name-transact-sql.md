@@ -1,5 +1,5 @@
 ---
-title: OBJECT_SCHEMA_NAME (Transact SQL) | Microsoft Docs
+title: OBJECT_SCHEMA_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  스키마 범위 개체에 대한 데이터베이스 개체 이름을 반환합니다. 목록이 스키마 범위 개체에 대 한 참조 [sys.objects&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+  스키마 범위 개체에 대한 데이터베이스 개체 이름을 반환합니다. 스키마 범위 개체 목록에 대해서는 [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조하십시오.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
 ## <a name="arguments"></a>인수  
  *object_id*  
- 사용할 개체의 ID입니다. *object_id* 은 **int** 이며 지정된 된 데이터베이스 또는 현재 데이터베이스 컨텍스트에서 스키마 범위 개체로 간주 됩니다.  
+ 사용할 개체의 ID입니다. *object_id*는 **int**이며 지정한 데이터베이스 또는 현재 데이터베이스 컨텍스트에서 스키마 범위 개체로 간주됩니다.  
   
  *database_id*  
- 개체를 조회하려는 데이터베이스의 ID입니다. *database_id* 은 **int**합니다.  
+ 개체를 조회하려는 데이터베이스의 ID입니다. *database_id*는 **int**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **sysname**  
@@ -64,15 +64,15 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자에게 개체에 대한 사용 권한이 없으면 OBJECT_SCHEMA_NAME과 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환할 수 있습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  개체에 대한 ANY 권한이 필요합니다. 데이터베이스 ID를 지정하려면 데이터베이스에 대해 CONNECT 권한도 필요합니다. 그렇지 않으면 게스트 계정을 설정해야 합니다.  
   
-## <a name="remarks"></a>주의  
- 시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다. 자세한 내용은 참조 [식](../../t-sql/language-elements/expressions-transact-sql.md) 및 [여기서](../../t-sql/queries/where-transact-sql.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ 시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다. 자세한 내용은 [식](../../t-sql/language-elements/expressions-transact-sql.md) 및 [WHERE](../../t-sql/queries/where-transact-sql.md)를 참조하세요.  
   
  이 시스템 함수에서 반환하는 결과 집합에서는 현재 데이터베이스의 데이터 정렬을 사용합니다.  
   
- 경우 *database_id* 를 지정 하지 않으면는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 있다고 가정 *object_id* 은 현재 데이터베이스의 컨텍스트에서 실행 됩니다. 참조 하는 쿼리는 *object_id* 다른 데이터베이스에서 NULL 또는 잘못 된 결과 반환 합니다. 예를 들어 다음 쿼리에서 현재 데이터베이스 컨텍스트는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 쿼리의 FROM 절에 지정된 데이터베이스 대신 이 데이터베이스의 지정된 개체 ID에 대한 개체 스키마 이름을 반환하려고 합니다. 따라서 잘못된 정보가 반환됩니다.  
+ *database_id*가 지정되지 않은 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 *object_id*가 현재 데이터베이스 컨텍스트에 있는 것으로 간주합니다. 다른 데이터베이스의 *object_id*를 참조하는 쿼리는 NULL 또는 잘못된 결과를 반환합니다. 예를 들어 다음 쿼리에서 현재 데이터베이스 컨텍스트는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 쿼리의 FROM 절에 지정된 데이터베이스 대신 이 데이터베이스의 지정된 개체 ID에 대한 개체 스키마 이름을 반환하려고 합니다. 따라서 잘못된 정보가 반환됩니다.  
   
 ```  
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  
@@ -118,11 +118,11 @@ FROM sys.dm_db_index_operational_stats(null, null, null, null);
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION&#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
- [Object_id&#40; Transact SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
- [OBJECT_NAME &#40; Transact SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [OBJECT_ID&#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
+ [OBJECT_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
  [보안 개체](../../relational-databases/security/securables.md)  
   
   

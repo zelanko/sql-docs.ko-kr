@@ -1,5 +1,5 @@
 ---
-title: "MinDbCompatibilityLevel (geometry 데이터 형식) | Microsoft Docs"
+title: "MinDbCompatibilityLevel(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-인식 하는 최소 데이터베이스 호환성 수준을 반환는 **geometry** 데이터 형식 인스턴스에 있습니다.
+**geometry** 데이터 형식 인스턴스를 인식하는 최소 데이터베이스 호환성 수준을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -41,11 +41,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **int**  
   
  CLR 반환 형식: **int**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  데이터베이스의 호환성 수준을 변경하기 전에 `MinDbCompatibilityLevel()`을 사용하여 공간 개체의 호환성을 테스트할 수 있습니다.  
   
 ## <a name="examples"></a>예  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  END
 ``` 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

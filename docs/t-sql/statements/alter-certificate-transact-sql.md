@@ -1,5 +1,5 @@
 ---
-title: ALTER CERTIFICATE (Transact SQL) | Microsoft Docs
+title: ALTER CERTIFICATE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-non-specified
@@ -75,23 +75,23 @@ ALTER CERTIFICATE certificate_name
  *certificate_name*  
  데이터베이스에서 인증서를 식별하는 고유한 이름입니다.  
   
- 파일 **='***path_to_private_key***'**  
+ FILE **='***path_to_private_key***'**  
  개인 키에 대해 파일 이름을 포함하여 전체 경로를 지정합니다. 이 매개 변수는 로컬 경로이거나 네트워크 위치에 대한 UNC 경로가 될 수 있습니다. 이 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트 내에서 액세스할 수 있습니다. 이 옵션을 사용할 경우 지정한 파일에 대한 액세스 권한이 서비스 계정에 있는지 확인해야 합니다.  
   
  DECRYPTION BY PASSWORD **='***key_password***'**  
  개인 키를 해독하는 데 필요한 암호를 지정합니다.  
   
- ENCRYPTION BY PASSWORD **='***암호***'**  
- 데이터베이스에서 인증서의 개인 키를 암호화하는 데 사용되는 암호를 지정합니다. *암호* 의 인스턴스를 실행 하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
+ ENCRYPTION BY PASSWORD **='***password***'**  
+ 데이터베이스에서 인증서의 개인 키를 암호화하는 데 사용되는 암호를 지정합니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 따라야 합니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
   
  REMOVE PRIVATE KEY  
  데이터베이스 내에서 더 이상 개인 키를 유지하지 않도록 지정합니다.  
   
- ACTIVE FOR BEGIN_DIALOG  **=**  {ON | OFF}  
+ ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 기능의 시작자가 인증서를 사용할 수 있게 합니다.  
   
-## <a name="remarks"></a>주의  
- 개인 키로 지정 된 공개 키와 일치 해야 *certificate_name*합니다.  
+## <a name="remarks"></a>Remarks  
+ 개인 키는 *certificate_name*으로 지정한 공개 키와 일치해야 합니다.  
   
  파일에 있는 암호가 Null 암호로 보호되는 경우에는 DECRYPTION BY PASSWORD 절을 생략할 수 있습니다.  
   
@@ -106,7 +106,7 @@ ALTER CERTIFICATE certificate_name
   
  포함된 데이터베이스에서는 WITH PRIVATE KEY 옵션을 사용할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  인증서에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -146,9 +146,9 @@ ALTER CERTIFICATE Shipping15
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [DROP certificate&#40; Transact SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [DROP CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

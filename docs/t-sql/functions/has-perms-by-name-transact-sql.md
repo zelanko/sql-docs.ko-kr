@@ -1,5 +1,5 @@
 ---
-title: HAS_PERMS_BY_NAME (Transact SQL) | Microsoft Docs
+title: HAS_PERMS_BY_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  보안 개체에 대한 현재 사용자의 유효 사용 권한을 평가합니다. 관련된 함수는 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)합니다.  
+  보안 개체에 대한 현재 사용자의 유효 사용 권한을 평가합니다. 연관된 함수는 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)입니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,34 +52,34 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 ```  
   
 ## <a name="arguments"></a>인수  
- *보안 개체*  
- 보안 개체의 이름입니다. 보안 개체가 서버 자체인 경우 이 값을 NULL로 설정해야 합니다. *보안 개체* 형식의 스칼라 식 **sysname**합니다. 기본값은 없습니다.  
+ *securable*  
+ 보안 개체의 이름입니다. 보안 개체가 서버 자체인 경우 이 값을 NULL로 설정해야 합니다. *securable*은 **sysname** 형식의 스칼라 식입니다. 기본값은 없습니다.  
   
- *b l e _*  
- 사용 권한을 테스트한 보안 개체 클래스의 이름입니다. *b l e _* 형식의 스칼라 식 **nvarchar (60)**합니다.  
+ *securable_class*  
+ 사용 권한을 테스트한 보안 개체 클래스의 이름입니다. *securable_class*는 **nvarchar(60)** 형식의 스칼라 식입니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], securable_class 인수는 다음 중 하나를 설정 해야: **데이터베이스**, **개체**, **역할**, **스키마**, 또는 **사용자**합니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 securable_class 인수는 **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA**, **USER** 중 하나로 설정해야 합니다.  
   
- *사용 권한*  
- 형식의 null이 아닌 스칼라 식이 **sysname** 확인할 사용 권한 이름을 나타내는입니다. 기본값은 없습니다. 사용 권한 이름 ANY는 와일드카드입니다.  
+ *permission*  
+ 확인할 사용 권한 이름을 나타내는 **sysname** 형식의 Null이 아닌 스칼라 식입니다. 기본값은 없습니다. 사용 권한 이름 ANY는 와일드카드입니다.  
   
- *하위 보안 개체*  
- 형식의 선택적 스칼라 식 **sysname** 는 권한이 테스트 되는 보안 개체 하위 엔터티의 이름을 나타내는입니다. 기본값은 NULL입니다.  
+ *sub-securable*  
+ 사용 권한이 테스트되는 대상 보안 개체 하위 엔터티의 이름을 나타내는 **sysname** 형식의 선택적 스칼라 식입니다. 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], 하위 보안 개체 형태로 대괄호를 사용할 수 없는 **' [***하위 이름***]'**합니다. 사용 하 여 **'***하위 이름***'** 대신 합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 하위 보안 개체에 **'[***sub name***]'** 형식의 대괄호를 사용할 수 없습니다. 대신 **'***sub name***'**을 사용하세요.  
   
- *sub-b l e _*  
- 형식의 선택적 스칼라 식 **nvarchar (60)** 는 권한이 테스트 되는 보안 개체 하위 엔터티의 클래스를 나타냅니다. 기본값은 NULL입니다.  
+ *sub-securable_class*  
+ 사용 권한이 테스트되는 대상 보안 개체 하위 엔터티의 클래스를 나타내는 **nvarchar(60)** 형식의 선택적 스칼라 식입니다. 기본값은 NULL입니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], sub securable_class 인수는 securable_class 인수는로 설정 된 경우에 유효한 **개체**합니다. Securable_class 인수 설정 된 경우 **개체**, sub securable_class 인수로 설정 해야 **열**합니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 sub-securable_class 인수는 securable_class 인수가 **OBJECT**로 설정된 경우에만 유효합니다. securable_class 인수가 **OBJECT**로 설정된 경우 sub-securable_class 인수는 **COLUMN**으로 설정해야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
  쿼리가 실패하면 NULL을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 기본 제공 함수는 지정된 보안 개체에 대한 특정 유효 사용 권한이 현재 보안 주체에 있는지 여부를 테스트합니다. HAS_PERMS_BY_NAME은 사용자에게 보안 개체에 대한 유효 사용 권한이 있으면 1을 반환하고, 사용자에게 보안 개체에 대한 유효 사용 권한이 없으면 0을 반환하며, 보안 개체 클래스 또는 사용 권한이 유효하지 않으면 NULL을 반환합니다. 유효 사용 권한은 다음 중 하나입니다.  
   
 -   보안 주체에게 직접 부여되고 거부되지 않은 사용 권한  
@@ -112,7 +112,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>1. 서버 수준 VIEW SERVER STATE 권한이 있는지 확인  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -120,7 +120,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>2. Ps 서버 보안 주체에 대한 IMPERSONATE 권한이 있는지 확인  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
@@ -186,7 +186,7 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

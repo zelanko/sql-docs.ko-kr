@@ -1,5 +1,5 @@
 ---
-title: "STNumGeometries (geography 데이터 형식) | Microsoft Docs"
+title: "STNumGeometries(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  개수를 반환 **기 하 도형** 구성 하는 한 **geography** 인스턴스.  
+  **geography** 인스턴스를 구성하는 **기하 도형**의 개수를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **int**  
   
  CLR 반환 형식: **SqlInt32**  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 경우 1을 반환는 **geography** 인스턴스가 않습니다는 **MultiPoint**, **MultiLineString**, **MultiPolygon**, 또는 **GeometryCollection** 인스턴스 또는 인 경우 0은 **geography** 인스턴스가 비어 있습니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 **geography** 인스턴스가 **MultiPoint**, **MultiLineString**, **MultiPolygon** 또는 **GeometryCollection** 인스턴스가 아닌 경우 1을 반환하고, **geography** 인스턴스가 비어 있으면 0을 반환합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 한 `MultiPoint` 인스턴스 및 사용 하 여 `STNumGeometries()` 방법을 찾기 위해 많은 **기 하 도형** 인스턴스를 포함 합니다.  
+ 다음 예에서는 `MultiPoint` 인스턴스를 만들고 `STNumGeometries()`를 사용하여 인스턴스에 있는 **기하 도형**의 개수를 확인합니다.  
   
 ```  
 DECLARE @g geography;  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT((-122.360 47.656), (-122.343 47.6
 SELECT @g.STNumGeometries();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

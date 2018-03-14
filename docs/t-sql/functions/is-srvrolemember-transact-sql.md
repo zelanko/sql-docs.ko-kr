@@ -1,5 +1,5 @@
 ---
-title: IS_SRVROLEMEMBER (Transact SQL) | Microsoft Docs
+title: IS_SRVROLEMEMBER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,10 +48,10 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ```  
   
 ## <a name="arguments"></a>인수  
- **'** *역할* **'**  
- 확인할 서버 역할의 이름입니다. *역할* 은 **sysname**합니다.  
+ **'** *role* **'**  
+ 확인할 서버 역할의 이름입니다. *role*은 **sysname**입니다.  
   
- 유효한 값에 대 한 *역할* 는 사용자 정의 서버 역할 및 다음 고정 서버 역할:  
+ *role*의 유효한 값은 사용자 정의 서버 역할이며 다음 고정 서버 역할입니다.  
   
 |||  
 |-|-|  
@@ -61,24 +61,24 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |diskadmin|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> public|  
 |processadmin||  
   
- **'** *로그인* **'**  
- 이름인는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 검사할 로그인 합니다. *로그인* 은 **sysname**, 기본값은 NULL입니다. 값을 지정하지 않으면 현재의 실행 컨텍스트에 따른 결과를 얻게 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
+ **'** *login* **'**  
+ 점검할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 값을 지정하지 않으면 현재의 실행 컨텍스트에 따른 결과를 얻게 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
 |반환 값|Description|  
 |------------------|-----------------|  
-|0|*로그인* 의 구성원이 아니므로 *역할*합니다.<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],이 문은 항상 0을 반환 합니다.|  
-|1.|*로그인* 의 멤버인 *역할*합니다.|  
-|NULL|*역할* 또는 *로그인* 유효 하지 않거나 역할 멤버 자격을 볼 수 있는 권한이 없습니다.|  
+|0|*login*은 *role*의 구성원이 아닙니다.<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 이 문은 항상 0을 반환합니다.|  
+|1|*login*은 *role*의 구성원입니다.|  
+|NULL|*role* 또는 *login*이 올바르지 않거나 역할 멤버 자격을 볼 수 있는 사용 권한이 없습니다.|  
   
-## <a name="remarks"></a>주의  
- 현재 사용자가 서버 역할의 사용 권한이 필요한 동작을 수행할 수 있는지 여부를 확인 하려면 UseIS_SRVROLEMEMBER 합니다.  
+## <a name="remarks"></a>Remarks  
+ UseIS_SRVROLEMEMBER를 사용하여 현재 사용자가 서버 역할의 사용 권한이 필요한 동작을 수행할 수 있는지 여부를 확인할 수 있습니다.  
   
- Contoso\Mary5, 등으로 Windows 로그인에 대 한 지정 된 경우 *로그인*, **IS_SRVROLEMEMBER** 반환 **NULL**로그인에 부여 되었거나 거부에 대 한 직접 액세스 하지 않는 한, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ *login*에 Contoso\Mary5와 같은 Windows 로그인이 지정된 경우 해당 로그인에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 직접 액세스가 허용 또는 거부되지 않으면 **IS_SRVROLEMEMBER**가 **NULL**을 반환합니다.  
   
- 경우 선택적 *로그인* 매개 변수가 제공 되지 않고 경우 *로그인* Windows 도메인 로그인, Windows 그룹의 멤버 자격을 통해 고정된 서버 역할의 멤버 수 있습니다. 이러한 간접 멤버 자격을 확인하기 위해 IS_SRVROLEMEMBER는 도메인 컨트롤러에 Windows 그룹 멤버 자격 정보를 요청합니다. 도메인 컨트롤러를 액세스할 수 없거나 응답 하지 않으면 경우 **IS_SRVROLEMEMBER** 사용자 및의 로컬 그룹만 고려 하 여 역할 멤버 자격 정보를 반환 합니다. 지정된 사용자가 현재 사용자가 아닌 경우 IS_SRVROLEMEMBER가 반환하는 값이 인증자(예: Active Directory)의 마지막 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 업데이트와 다를 수 있습니다.  
+ 선택적 *login* 매개 변수를 제공하지 않고 *login*이 Windows 도메인 로그인인 경우 Windows 그룹 멤버 자격을 통해 고정 서버 역할의 멤버가 될 수 있습니다. 이러한 간접 멤버 자격을 확인하기 위해 IS_SRVROLEMEMBER는 도메인 컨트롤러에 Windows 그룹 멤버 자격 정보를 요청합니다. 도메인 컨트롤러에 액세스할 수 없거나 도메인 컨트롤러가 응답하지 않으면 **IS_SRVROLEMEMBER**가 사용자 및 사용자의 로컬 그룹만 고려하여 역할 멤버 자격 정보를 반환합니다. 지정된 사용자가 현재 사용자가 아닌 경우 IS_SRVROLEMEMBER가 반환하는 값이 인증자(예: Active Directory)의 마지막 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 업데이트와 다를 수 있습니다.  
   
  선택적 로그인 매개 변수를 제공하지 않으면 쿼리 중인 Windows 로그인이 sys.server_principals에 있어야 하거나 IS_SRVROLEMEMBER가 NULL을 반환합니다. 이것은 올바른 로그인이 아님을 나타냅니다.  
   
@@ -86,16 +86,16 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
  도메인 컨트롤러를 사용할 수 없으면 IS_SRVROLEMEMBER 호출은 로컬 Windows 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 같이 Windows 사용자를 로컬로 인증할 수 있는 경우 정확한 정보를 반환합니다.  
   
- **IS_SRVROLEMEMBER** Windows 그룹이 로그인 인수로 사용 되 고이 Windows 그룹에 지정된 된 서버 역할의 멤버 차례로 이며 다른 Windows 그룹의 구성원은 항상 0을 반환 합니다.  
+ Windows 그룹이 로그인 인수로 사용되는 경우 **IS_SRVROLEMEMBER**는 항상 0을 반환하며, 이 Windows 그룹은 지정된 서버 역할의 멤버인 또 다른 Windows 그룹의 멤버입니다.  
   
- 사용자 계정 컨트롤 (UAC) 설정을 않을 수 있습니다 다른 결과 반환 합니다. 이는 사용자가 Windows 그룹 멤버 또는 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 중 어떤 자격으로 서버에 액세스했는지에 따라 다릅니다.  
+ 사용자 계정 컨트롤(UAC) 설정도 다른 결과가 반환되는 원인이 될 수 있습니다. 이는 사용자가 Windows 그룹 멤버 또는 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 중 어떤 자격으로 서버에 액세스했는지에 따라 다릅니다.  
   
- 이 함수는 기본 사용 권한이 아니라 역할 멤버 자격을 평가합니다. 예를 들어는 **sysadmin** 고정된 서버 역할에는 **제어 서버** 권한. 사용자에 게 있으면는 **제어 서버** 권한에 포함 있지만 역할의 멤버는 아닌 경우이 함수는 잘못 보고 하 여 사용자의 구성원이 아닙니다는 **sysadmin** 역할을 사용자에 게 동일한 경우에 사용 권한입니다.  
+ 이 함수는 기본 사용 권한이 아니라 역할 멤버 자격을 평가합니다. 예를 들어 **sysadmin** 고정 서버 역할에는 **CONTROL SERVER** 권한이 있습니다. 사용자가 **CONTROL SERVER** 권한을 갖고 있지만 역할의 멤버는 아닌 경우 이 함수는 해당 사용자가 동일한 사용 권한을 갖고 있더라도 **sysadmin** 역할의 멤버가 아닌 것으로 올바르게 보고합니다.  
   
 ## <a name="related-functions"></a>관련 함수  
- 현재 사용자 지정된 된 Windows 그룹의 구성원 인지 확인 하려면 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할을 사용 하 여 [IS_MEMBER &#40; Transact SQL &#41; ](../../t-sql/functions/is-member-transact-sql.md). 확인 하려면 여부는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 데이터베이스 역할의 멤버를 사용 하 여 [IS_ROLEMEMBER &#40; Transact SQL &#41; ](../../t-sql/functions/is-rolemember-transact-sql.md).  
+ 현재 사용자가 지정된 Windows 그룹의 멤버인지 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할의 멤버인지 확인하려면 [IS_MEMBER&#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)를 사용하고, 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 데이터베이스 역할의 멤버인지 여부를 확인하려면 [IS_ROLEMEMBER&#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md)를 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버 역할에 대한 VIEW DEFINITION 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -110,14 +110,14 @@ ELSE IF IS_SRVROLEMEMBER ('sysadmin') IS NULL
    print 'ERROR: The server role specified is not valid.';  
 ```  
   
- 다음 예에서는 도메인 로그인 Pat의 멤버 인지를 나타냅니다.는 **diskadmin** 고정된 서버 역할입니다.  
+ 다음 예에서는 도메인 로그인 Pat가 **diskadmin** 고정 서버 역할의 멤버인지 여부를 보여 줍니다.  
   
 ```  
 SELECT IS_SRVROLEMEMBER('diskadmin', 'Contoso\Pat');  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Is_member&#40; Transact SQL &#41;](../../t-sql/functions/is-member-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [IS_MEMBER&#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: COUNT (Transact SQL) | Microsoft Docs
+title: COUNT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="count-transact-sql"></a>COUNT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-그룹의 항목 개수를 반환합니다. Count는 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 함수입니다. 두 함수 간의 유일한 차이점은 반환 값뿐입니다. COUNT는 항상 반환는 **int** 데이터 값을 입력 합니다. COUNT_BIG은 항상 반환 된 **bigint** 데이터 값을 입력 합니다.
+그룹의 항목 개수를 반환합니다. COUNT는 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 함수와 비슷하며 두 함수 간의 유일한 차이점은 반환 값뿐입니다. COUNT는 항상 **int** 데이터 형식 값을 반환합니다. COUNT_BIG은 항상 **bigint** 데이터 형식 값을 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -74,23 +74,23 @@ DISTINCT
 Null이 아닌 고유한 값의 개수만 반환하도록 지정합니다.
   
 *expression*  
-이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 제외한 모든 형식의 **텍스트**, **이미지**, 또는 **ntext**합니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
+**text**, **image** 또는 **ntext**를 제외한 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
   
 \*  
-테이블 행의 전체 개수를 반환할 때 모든 행이 포함되도록 지정합니다. COUNT (\*) 매개 변수가 없으며 DISTINCT와 함께 사용할 수 없습니다. COUNT (\*) 필요 하지 않습니다는 *식* 매개 변수 이므로 기본적으로 사용 하지 않는 특정 열에 대 한 정보입니다. COUNT(*)는 지정한 테이블에서 중복 행을 포함한 행의 개수를 반환합니다. 각 행은 개별적으로 계산되며 Null 값을 가진 행도 포함됩니다.
+테이블 행의 전체 개수를 반환할 때 모든 행이 포함되도록 지정합니다. COUNT(\*)는 매개 변수가 없으며 DISTINCT와 함께 사용할 수 없습니다. COUNT(\*)는 특정 열에 대한 정보를 사용하지 않도록 정의되어 있으므로 *expression* 매개 변수가 필요하지 않습니다. COUNT(*)는 지정한 테이블에서 중복 행을 포함한 행의 개수를 반환합니다. 각 행은 개별적으로 계산되며 Null 값을 가진 행도 포함됩니다.
   
-통해 **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-*partition_by_clause* 함수가 적용 되는 파티션으로 FROM 절에서 생성 한 결과 집합을 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 작업이 수행 되는 논리적 순서를 결정 합니다. 자세한 내용은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
+*partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
  **int**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 COUNT(*)는 그룹에 포함된 항목 개수를 반환합니다. 여기에는 NULL 값과 중복 항목이 포함됩니다.
   
-COUNT (모든 *식*) 평가 *식* 그룹의 각 행에 대해 null이 아닌 값의 수를 반환 합니다.
+COUNT(ALL *expression*)은 그룹에 포함된 각 행의 *expression*을 계산하여 Null이 아닌 값의 개수를 반환합니다.
   
-COUNT (DISTINCT *식*) 평가 *식* 그룹의 각 행에 대해 null이 아닌 값의 수를 반환 합니다.
+COUNT(DISTINCT *expression*)은 그룹에 포함된 각 행의 *expression*을 계산하여 Null이 아닌 고유 값의 개수를 반환합니다.
   
 반환 값이 2^31-1보다 큰 경우 COUNT에서 오류가 발생합니다. 이 때는 COUNT 대신 COUNT_BIG을 사용하세요.
   
@@ -196,10 +196,10 @@ Tool Design                   8.62                  29.8462               23.505
 (16 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-count-and-distinct"></a>5. COUNT 및 DISTINCT 사용  
-다음 예제에서는 특정 회사에서 근무 하는 직원이 보유할 수 있는 다른 타이틀 수를 나열 합니다.
+다음 예에서는 특정 회사에서 근무하는 직원이 가질 수 있는 고유한 직함의 수를 나열하는 방법을 보여 줍니다.
   
 ```sql
 USE ssawPDW;  
@@ -216,7 +216,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="f-using-count"></a>6. COUNT(*) 사용  
-에 있는 행의 총 수를 반환 하는 다음 예제는 `dbo.DimEmployee` 테이블입니다.
+다음 예에서는 `dbo.DimEmployee` 테이블에 있는 총 행 수를 반환합니다.
   
 ```sql
 USE ssawPDW;  
@@ -233,7 +233,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="g-using-count-with-other-aggregates"></a>7. COUNT(*)와 다른 집계 사용  
-다음 예제에서는 결합 `COUNT(*)` SELECT 목록에 다른 집계 함수와 합니다. 쿼리는 500, 000 달러와 평균 판매 할당량 보다 큰 연간 판매 할당량이 있는 영업 담당자의 수를 반환합니다.
+다음 예에서는 `COUNT(*)`를 SELECT 목록의 다른 집계 함수와 결합합니다. 쿼리는 연간 판매 할당량이 $500,000를 초과하는 영업 담당자의 수와 평균 영업 할당량을 반환합니다.
   
 ```sql
 USE ssawPDW;  
@@ -252,8 +252,8 @@ TotalCount  Average Sales Quota
 10          683800.0000
 ```
   
-### <a name="h-using-count-with-having"></a>8. HAVING 개수 사용  
-다음 예에서는 HAVING 절과 함께 COUNT를 사용 하 여 15 개 이상의 직원이 있는 회사의 부서를 반환 합니다.
+### <a name="h-using-count-with-having"></a>8. HAVING과 함께 COUNT 사용  
+다음 예는 HAVING 절과 함께 COUNT를 사용해 회사에서 직원 수가 15명을 초과하는 부서를 반환합니다.
   
 ```sql
 USE ssawPDW;  
@@ -274,8 +274,8 @@ Sales           18
 Production      179
 ```
   
-### <a name="i-using-count-with-over"></a>9. OVER 개수 사용  
-다음 예에서는 OVER 절과 함께 COUNT를 사용 하 여 각각 지정 된 판매 주문에 포함 된 제품 수를 반환 합니다.
+### <a name="i-using-count-with-over"></a>9. OVER와 함께 COUNT 사용  
+다음 예는 OVER 절과 함께 COUNT를 사용해 지정된 각 판매 주문에 포함된 제품의 수를 반환합니다.
   
 ```sql
 USE ssawPDW;  
@@ -295,10 +295,10 @@ ProductCount   SalesOrderID`
 1              SO55981
 ```
   
-## <a name="see-also"></a>참고 항목
-[집계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[COUNT_BIG &#40; Transact SQL &#41;](../../t-sql/functions/count-big-transact-sql.md)  
-[절 &#40; 조치 Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[COUNT_BIG&#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)  
+[OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
 

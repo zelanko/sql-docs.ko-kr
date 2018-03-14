@@ -1,5 +1,5 @@
 ---
-title: ADD SIGNATURE (TRANSACT-SQL) | Microsoft Docs
+title: ADD SIGNATURE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -61,22 +61,22 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  *module_class*  
  서명을 추가할 모듈의 클래스입니다. 스키마 범위 모듈에 대한 기본값은 OBJECT입니다.  
   
- *모듈*  
+ *module_name*  
  서명하거나 연대 서명할 저장 프로시저, 함수, 어셈블리 또는 트리거의 이름입니다.  
   
- 인증서 *cert_name*  
+ CERTIFICATE *cert_name*  
  저장 프로시저, 함수, 어셈블리 또는 트리거에 서명하거나 연대 서명하는 데 사용할 인증서의 이름입니다.  
   
- 암호와 함께 ='*암호*'  
+ WITH PASSWORD ='*password*'  
  인증서의 개인 키나 비대칭 키의 암호를 해독하는 데 필요한 암호입니다. 이 절은 개인 키가 데이터베이스 마스터 키로 보호되지 않는 경우에만 필요합니다.  
   
- 서명 =*signed_blob*  
- 모듈의 서명된 BLOB(Binary Large Object)를 지정합니다. 이 절은 개인 키를 포함하지 않고 모듈을 제공하려는 경우 유용합니다. 이 절을 사용할 때는 모듈, 서명 및 공개 키만 있으면 서명된 BLOB(Binary Large Object)을 데이터베이스에 추가할 수 있습니다. *signed_blob* 은 16 진수 형식의 blob 자체입니다.  
+ SIGNATURE =*signed_blob*  
+ 모듈의 서명된 BLOB(Binary Large Object)를 지정합니다. 이 절은 개인 키를 포함하지 않고 모듈을 제공하려는 경우 유용합니다. 이 절을 사용할 때는 모듈, 서명 및 공개 키만 있으면 서명된 BLOB(Binary Large Object)을 데이터베이스에 추가할 수 있습니다. *signed_blob*은 16진수 형식의 BLOB 자체입니다.  
   
- 비대칭 키 *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  저장 프로시저, 함수, 어셈블리 또는 트리거에 서명하거나 연대 서명하는 데 사용할 비대칭 키의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  서명하거나 연대 서명할 모듈과 모듈에 서명하는 데 사용되는 인증서 또는 비대칭 키가 있어야 합니다. 모듈의 모든 문자는 서명 계산에 포함됩니다. 여기에는 선행 캐리지 리턴과 줄 바꿈도 포함됩니다.  
   
  모듈에 서명하거나 연대 서명하는 데 사용되는 인증서와 비대칭 키의 수는 제한되지 않습니다.  
@@ -96,9 +96,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 >  서명 절차를 다시 만들 때 원래 일괄 처리의 모든 문은 다시 만들기 일괄 처리와 일치해야 합니다. 공백이나 주석이라도 일괄 처리 일부가 다를 경우 결과 서명이 달라집니다.  
   
 ## <a name="countersignatures"></a>연대 서명  
- 서명 된 모듈을 실행할 때는 서명이 일시적으로 추가 SQL 토큰에 되지만 모듈에서 다른 모듈을 실행 하거나 실행을 종료 하면 서명은 손실 됩니다. 연대 서명은 특수 한 형식의 서명이 있습니다. 그 자체로는 사용 권한을 부여하지 않습니다. 그러나 동일한 인증서나 비대칭 키를 통해 만든 서명을 연대 서명된 개체에 대한 호출 기간 동안 유지할 수 있도록 허용합니다.  
+ 서명된 모듈을 실행할 때는 서명이 SQL 토큰에 일시적으로 추가되지만 모듈에서 다른 모듈을 실행하거나 실행을 종료하면 서명은 손실됩니다. 연대 서명은 특수한 형식의 서명이며 그 자체로는 사용 권한을 부여하지 않습니다. 그러나 동일한 인증서나 비대칭 키를 통해 만든 서명을 연대 서명된 개체에 대한 호출 기간 동안 유지할 수 있도록 허용합니다.  
   
- 예를 들어 Alice라는 사용자가 ProcSelectT1ForAlice 프로시저를 호출하고, 이 프로시저가 procSelectT1 프로시저를 호출하며, 이 프로시저는 T1 테이블에서 선택한다고 가정해 보겠습니다. Alice에게는 ProcSelectT1ForAlice 및 procSelectT1에 대한 EXECUTE 권한은 있지만 T1에 대한 SELECT 권한은 없으며 이 전체 체인에 소유권 체인은 포함되어 있지 않습니다. Alice는 직접적으로 또는 ProcSelectT1ForAlice 및 procSelectT1을 사용해 T1 테이블에 액세스할 수 없습니다. Alice가 항상 ProcSelectT1ForAlice를 사용 하 여 액세스를 위해 할 것 이므로 procSelectT1 실행 권한은 부여 하려고 하지 않습니다. 아래에서는 이 작업을 수행하는 방법에 대해 설명합니다.  
+ 예를 들어 Alice라는 사용자가 ProcSelectT1ForAlice 프로시저를 호출하고, 이 프로시저가 procSelectT1 프로시저를 호출하며, 이 프로시저는 T1 테이블에서 선택한다고 가정해 보겠습니다. Alice에게는 ProcSelectT1ForAlice 및 procSelectT1에 대한 EXECUTE 권한은 있지만 T1에 대한 SELECT 권한은 없으며 이 전체 체인에 소유권 체인은 포함되어 있지 않습니다. Alice는 직접적으로 또는 ProcSelectT1ForAlice 및 procSelectT1을 사용해 T1 테이블에 액세스할 수 없습니다. 여기서는 Alice가 ProcSelectT1ForAlice를 사용하여 액세스하도록 할 것이므로 procSelectT1 실행 권한은 부여하지 않습니다. 아래에서는 이 작업을 수행하는 방법에 대해 설명합니다.  
   
 -   procSelectT1이 T1에 액세스할 수 있도록 procSelectT1에 서명을 하면 Alice가 procSelectT1을 직접 호출할 수 있으므로 ProcSelectT1ForAlice를 호출하지 않아도 됩니다.  
   
@@ -106,9 +106,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   ProcSelectT1ForAlice에 서명을 해도 procSelectT1을 호출하는 과정에서 서명이 손실되기 때문에 그 자체로는 작업이 수행되지 않습니다.  
   
-그러나 ProcSelectT1ForAlice에 서명 하는 데 사용 하는 같은 인증서로 procSelectT1 연대 서명을으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호출 체인 전체에 대해 서명을 유지 하 고 t 1에 대 한 액세스를 허용 됩니다. 연대 서명은 아무런 권한을 부여하지 않으므로 Alice가 procSelectT1을 직접 호출하려고 시도해도 T1에는 액세스할 수 없습니다. 아래의 3번 예에서는 이 예에 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 보여 줍니다.  
+그러나 ProcSelectT1ForAlice에 서명하는 데 사용된 것과 같은 인증서로 procSelectT1에 연대 서명을 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호출 체인 전체에 대해 서명을 유지하며 T1에 대한 액세스를 허용합니다. 연대 서명은 아무런 권한을 부여하지 않으므로 Alice가 procSelectT1을 직접 호출하려고 시도해도 T1에는 액세스할 수 없습니다. 아래의 3번 예에서는 이 예에 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 보여 줍니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  개체에 대한 ALTER 권한과 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다. 연결된 개인 키가 암호로 보호되어 있으면 사용자도 암호가 있어야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -155,7 +155,7 @@ SELECT cp.crypt_property
 GO  
 ```  
   
- 이 문에서 반환하는 `crypt_property` 서명은 프로시저를 만들 때마다 달라집니다. 이 예의 뒷부분에서 사용할 수 있도록 결과를 적어 두십시오. 이 예에서는 나타나는 결과: `0x831F5530C86CC8ED606E5BC2720DA835351E46219A6D5DE9CE546297B88AEF3B6A7051891AF3EE7A68EAB37CD8380988B4C3F7469C8EABDD9579A2A5C507A4482905C2F24024FFB2F9BD7A953DD5E98470C4AA90CE83237739BB5FAE7BAC796E7710BDE291B03C43582F6F2D3B381F2102EEF8407731E01A51E24D808D54B373`합니다.  
+ 이 문에서 반환하는 `crypt_property` 서명은 프로시저를 만들 때마다 달라집니다. 이 예의 뒷부분에서 사용할 수 있도록 결과를 적어 두십시오. 이 예의 경우 나타나는 결과는 `0x831F5530C86CC8ED606E5BC2720DA835351E46219A6D5DE9CE546297B88AEF3B6A7051891AF3EE7A68EAB37CD8380988B4C3F7469C8EABDD9579A2A5C507A4482905C2F24024FFB2F9BD7A953DD5E98470C4AA90CE83237739BB5FAE7BAC796E7710BDE291B03C43582F6F2D3B381F2102EEF8407731E01A51E24D808D54B373`입니다.  
   
 ```  
 -- Drop the signature so that it can be signed again.  
@@ -255,8 +255,8 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [sys.crypt_properties &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP 서명 &#40; Transact SQL &#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [sys.crypt_properties&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [DROP SIGNATURE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
   
   

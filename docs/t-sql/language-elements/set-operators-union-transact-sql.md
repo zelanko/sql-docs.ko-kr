@@ -1,5 +1,5 @@
 ---
-title: UNION (Transact SQL) | Microsoft Docs
+title: UNION(Transact-SQL) | Microsoft
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-operators---union-transact-sql"></a>집합 연산자-UNION (TRANSACT-SQL)
+# <a name="set-operators---union-transact-sql"></a>집합 연산자 - UNION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   둘 이상의 쿼리 결과를 각 해당 쿼리에 속하는 모든 행이 포함된 하나의 결과 집합으로 결합합니다. UNION 연산은 두 테이블의 열을 결합하는 조인을 사용하는 것과는 다릅니다.  
@@ -57,9 +57,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>인수  
-\<query_specification > | ( \<query_expression >)는 쿼리 사양 또는 다른 쿼리 사양 또는 쿼리 식에서 데이터와 결합할 데이터를 반환 하는 쿼리 식입니다. UNION 연산의 일부인 열의 정의는 같을 필요는 없지만 암시적 변환을 통해 호환되어야 합니다. 데이터 형식이 다를 때 결과 데이터 형식에 대 한 규칙에 따라 결정 됩니다 [데이터 형식 우선 순위](../../t-sql/data-types/data-type-precedence-transact-sql.md)합니다. 형식은 동일하지만 전체 자릿수, 소수 자릿수 또는 길이가 다르면 식 결합에 대한 동일한 규칙에 따라 결과가 결정됩니다. 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이&#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  
+\<query_specification> | (\<query_expression>)은 다른 쿼리 사양 또는 쿼리 식의 데이터와 결합할 데이터를 반환하는 쿼리 사양 또는 쿼리 식입니다. UNION 연산의 일부인 열의 정의는 같을 필요는 없지만 암시적 변환을 통해 호환되어야 합니다. 데이터 형식이 다를 때 결과 데이터 형식은 [ 데이터 형식 우선 순위](../../t-sql/data-types/data-type-precedence-transact-sql.md)의 규칙에 따라 결정됩니다. 형식은 동일하지만 전체 자릿수, 소수 자릿수 또는 길이가 다르면 식 결합에 대한 동일한 규칙에 따라 결과가 결정됩니다. 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이&#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  
   
- 열은 **xml** 데이터 형식은 동일 해야 합니다. 모든 열은 XML 스키마로 형식화되거나 형식화되지 않아야 합니다. 형식화되는 경우 모든 열은 동일한 XML 스키마 컬렉션으로 형식화되어야 합니다.  
+ **xml** 데이터 형식의 열은 동등한 형식이어야 합니다. 모든 열은 XML 스키마로 형식화되거나 형식화되지 않아야 합니다. 형식화되는 경우 모든 열은 동일한 XML 스키마 컬렉션으로 형식화되어야 합니다.  
   
  UNION  
  여러 결과 집합을 결합하여 하나의 결과 집합으로 반환하도록 지정합니다.  
@@ -246,10 +246,10 @@ GO
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-simple-union"></a>5. 단순 UNION 사용  
- 다음 예제에서는 결과 집합의 내용을 포함 됩니다.는 `CustomerKey` 둘 다의 열은 `FactInternetSales` 및 `DimCustomer` 테이블입니다. ALL 키워드는 사용 되지 않으므로 결과에서 중복 제외 됩니다.  
+ 다음 예제에서는 결과 집합에 `FactInternetSales`와 `DimCustomer` 테이블 모두의 `CustomerKey` 열 내용이 포함됩니다. ALL 키워드는 사용되지 않으므로 중복 결과가 제외됩니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -263,7 +263,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="f-using-union-of-two-select-statements-with-order-by"></a>6. 두 SELECT 문에서 ORDER BY와 함께 UNION 사용  
- UNION 문에 SELECT 문의 ORDER BY 절을 포함 하는 경우 모든 SELECT 문의 한 후 해당 절에 포함 되어야 합니다. 다음 예제에서는 잘못 된 경우와 올바르게 사용한 `UNION` 두 `SELECT` 의 열 정렬에 ORDER BY와 함께 문입니다.  
+ UNION 문의 SELECT 문에 ORDER BY 절이 포함되어 있으면, 해당 절을 모든 SELECT 문 뒤에 배치해야 합니다. 다음 예제에서는 열이 ORDER BY로 정렬된 두 `SELECT` 문에서 `UNION`을 잘못 사용한 경우와 올바르게 사용한 경우를 보여 줍니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -288,8 +288,8 @@ FROM DimCustomer
 ORDER BY CustomerKey;  
 ```  
   
-### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>7. 두 개의 SELECT 문에서 UNION을 사용 하 여 where 및 ORDER BY  
- 다음 예제에서는 잘못 된 경우와 올바르게 사용한 `UNION` 두 `SELECT` 문을 경우 위치 및 필요한 ORDER BY 합니다.  
+### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>7. WHERE 및 ORDER BY와 함께 두 SELECT 문의 UNION 사용  
+ 다음 예제에서는 WHERE 및 ORDER BY가 필요한 곳에 두 `SELECT` 문에서 `UNION`을 잘못 사용한 경우와 올바르게 사용한 경우를 보여 줍니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -316,12 +316,12 @@ FROM DimCustomer
 ORDER BY CustomerKey;  
 ```  
   
-### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>8. 세 개의 SELECT 문에서 UNION을 사용 하 여 모든 및 괄호  
- 다음 예에서는 사용 `UNION` 의 결과를 결합 **같은 테이블** 사용 하는 경우 모든 및 괄호를 보여 주기 위해 `UNION`합니다.  
+### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>8. ALL 및 괄호의 효과를 나타내기 위해 세 개의 SELECT 문의 UNION 사용  
+ 다음 예제에서는 `UNION`를 이용할 때 ALL 및 괄호의 효과를 보여 주기 위해 `UNION`을 사용하여 **같은 테이블**의 결과를 결합합니다.  
   
- 사용 하 여 첫 번째 예제 `UNION ALL` 표시할 중복 된 레코드 및 반환 각 행이 원본 테이블에 세 번입니다. 두 번째 예에서는 `UNION` 없이 `ALL` 세 가지 결합된 된 결과에서 중복 행을 제거 하려면 `SELECT` 문 및 원본 테이블에서 중복된 행만 반환 합니다.  
+ 첫 번째 예제에서는 `UNION ALL`을 사용하여 중복된 레코드를 표시하고 원본 테이블의 각 행을 세 번 반환합니다. 두 번째 예제에서는 `ALL` 없이 `UNION`을 사용하여 세 `SELECT` 문의 결합된 결과에서 중복 행을 제거하고 원본 테이블에서 중복되지 않은 행만 반환합니다.  
   
- 세 번째 예에서는 `ALL` 첫 번째 `UNION` 및 두 번째 묶는 괄호 `UNION` 사용 하지 않는 `ALL`합니다. 두 번째 `UNION` 괄호에 있기 때문에 먼저 처리 됩니다. 때문에 테이블에서 중복된 행만 반환는 `ALL` 옵션은 사용 되지 않으며 중복 항목이 제거 됩니다. 이러한 행의 첫 번째 결과와 결합 되 `SELECT` 를 사용 하 여는 `UNION ALL` 키워드입니다. 이 두 집합 간의 중복 행은 제거 되지 않습니다.  
+ 세 번째 예제에서는 첫 번째 `UNION`에서 `ALL`을 사용하고 `ALL`을 사용하지 않는 두 번째 `UNION`은 괄호로 묶습니다. 두 번째 `UNION`은 괄호 안에 있기 때문에 먼저 처리됩니다. `ALL` 옵션이 사용되지 않고 중복이 제거되므로 테이블에서 복제되지 않은 행만 반환됩니다. 이러한 행은 `UNION ALL` 키워드를 사용하여 첫 번째 `SELECT` 결과와 결합됩니다. 두 집합 간의 중복 행은 제거되지 않습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -356,9 +356,9 @@ FROM DimCustomer
 );  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [예제 &#40;를 선택 합니다. Transact SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
+ [SELECT 예제 &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "ODBC 스칼라 함수 (Transact SQL) | Microsoft Docs"
+title: "ODBC 스칼라 함수(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 스칼라 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  사용할 수 있습니다 [ODBC 스칼라 함수](http://go.microsoft.com/fwlink/?LinkID=88579) 에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문. 이러한 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해석되고, 저장 프로시저 및 사용자 정의 함수에 사용될 수 있습니다. 여기에는 문자열, 숫자, 시간, 날짜, 간격, 시스템 함수가 포함됩니다.  
+  [ 문에서 ](http://go.microsoft.com/fwlink/?LinkID=88579)ODBC 스칼라 함수[!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용할 수 있습니다. 이러한 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해석되고, 저장 프로시저 및 사용자 정의 함수에 사용될 수 있습니다. 여기에는 문자열, 숫자, 시간, 날짜, 간격, 시스템 함수가 포함됩니다.  
   
 ## <a name="usage"></a>사용법  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/21/2017
   
 |함수|Description|  
 |--------------|-----------------|  
-|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|소수점 이하 integer_exp 위치로 잘린 numeric_exp를 반환합니다. Integer_exp가 음수일 경우 numeric_exp로 잘립니다 &#124; integer_exp &#124; 소수점의 왼쪽에 위치 합니다.|  
+|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|소수점 이하 integer_exp 위치로 잘린 numeric_exp를 반환합니다. integer_exp가 음수인 경우 numeric_exp는 소수점 왼쪽의 &#124;integer_exp&#124; 위치로 잘립니다.|  
   
 ### <a name="time-date-and-interval-functions"></a>시간, 날짜 및 간격 함수  
   
@@ -183,7 +183,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>4. 저장 프로시저에서 ODBC 함수 사용  
  다음 예에서는 저장 프로시저에 ODBC 함수를 사용합니다.  
@@ -254,7 +254,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

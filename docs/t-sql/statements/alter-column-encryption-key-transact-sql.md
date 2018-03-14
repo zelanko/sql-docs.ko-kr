@@ -1,5 +1,5 @@
 ---
-title: ALTER COLUMN ENCRYPTION KEY (Transact SQL) | Microsoft Docs
+title: ALTER COLUMN ENCRYPTION KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  데이터베이스를 추가 또는 삭제 된 암호화 된 값에서 열 암호화 키를 변경 합니다. CEK는 해당 열 마스터 키 회전을 허용 하는 최대 12 개의 값을 가질 수 있습니다. CEK는 사용 하 여 열을 암호화할 때 사용 되는 [상시 암호화 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 기능입니다. CEK 값을 추가 하기 전에 사용 하 여 값을 암호화 하는 데 사용 된 열 마스터 키 정의 해야 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 문.  
+  암호화 값을 추가 또는 삭제해 데이터베이스의 열 암호화 키를 수정합니다. CEK는 해당 열 마스터 키의 회전을 허용하는 값을 최대 2개까지 가질 수 있습니다. CEK는 [상시 암호화&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 기능을 사용하여 열을 암호화할 때 사용합니다. CEK 값을 추가하기 전에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 사용하여 값을 암호화하는 데 사용된 열 마스터 키를 정의해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,32 +54,32 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 ## <a name="arguments"></a>인수  
  *key_name*  
- 변경 중인 열 암호화 키입니다.  
+ 변경하고 있는 열 암호화 마스터 키입니다.  
   
  *column_master_key_name*  
- 열 암호화 키 (CEK)를 암호화 하는 데 사용 되는 열 마스터 키 (CMK)의 이름을 지정 합니다.  
+ 열 암호화 키(CEK)를 암호화하는 데 사용되는 열 마스터 키(CMK)의 이름을 지정합니다.  
   
  *algorithm_name*  
- 값을 암호화 하는 데 사용 된 암호화 알고리즘의 이름입니다. 시스템 공급자에 대 한 알고리즘 해야 **RSA_OAEP**합니다. 열 암호화 키 값을 삭제 하는 경우이 인수가 올바르지 않습니다.  
+ 값을 암호화하는 데 사용되는 암호화 알고리즘의 이름입니다. 시스템 공급자에 대한 알고리즘은 **RSA_OAEP**이어야 합니다. 이 인수는 열 암호화 키 값을 삭제할 때에는 유효하지 않습니다.  
   
  *varbinary_literal*  
- CEK BLOB로 암호화 되며 지정 된 마스터 암호화 키. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 열 암호화 키 값을 삭제 하는 경우이 인수가 올바르지 않습니다.  
+ 지정된 마스터 암호화 키로 암호화된 CEK BLOB입니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 이 인수는 열 암호화 키 값을 삭제할 때에는 유효하지 않습니다.  
   
 > [!WARNING]  
->  전달 하면 일반 텍스트 CEK 값이 문에서 합니다. 이렇게 하면이 기능의 이점 구성 하는 합니다.  
+>  이 문의 일반 텍스트 CEK 값은 절대 전달하지 마십시오. 그럴 경우 이 기능의 이점을 구성하게 됩니다.  
   
-## <a name="remarks"></a>주의  
- 일반적으로 열 암호화 키를 암호화 된 값이 하나만 만들어집니다. (현재 열 마스터 키 요구 새 열 마스터 키로 교체) 회전할 수, 열 암호화 키의 새 값을 추가할 수 있습니다 열 마스터 키가 필요한 경우 새 열 마스터 키로 암호화 합니다. 이렇게 하면 클라이언트 응용 프로그램이 새 열 마스터 키 이루어지고 클라이언트 응용 프로그램에 제공 하는 동안 열 암호화 키로 암호화 된 데이터에 액세스할 수 있습니다. 상시 암호화 드라이버 새 마스터 키에 액세스할 필요는 없으며, 이전 열 마스터 키로 암호화 된 열 암호화 키 값을 사용 하 여 중요 한 데이터 액세스 할 수 있습니다 하는 클라이언트 응용 프로그램에서 사용할 수 있습니다. 암호화 알고리즘, 상시 암호화 지원 256 비트를 일반 텍스트 값이 필요 합니다. 열 마스터 키를 보유 하 고 키 저장소를 캡슐화 하는 키 저장소 공급자를 사용 하 여 암호화 된 값을 생성 합니다.  
+## <a name="remarks"></a>Remarks  
+ 일반적으로 열 암호화 키는 단 하나의 암호화된 값으로 만들어집니다. 열 마스터 키가 회전할 필요가 있는 경우(지금의 열 마스터 키는 새 열 마스터 키로 교체해야 합니다) 새 열 마스터 키로 암호화된 열 암호화 키의 새 값을 추가할 수 있습니다. 이렇게 하면 클라이언트 응용 프로그램이 열 암호화 키로 암호화된 데이터에 액세스할 수 있게 하는 동시에 새 열 마스터 키가 클라이언트 응용 프로그램에 사용할 수 있게 됩니다. 새 마스터 키에 액세스 권한이 없는 클라이언트 응용 프로그램에서 Always Encrypted 기반 드라이버는 민감한 데이터에 액세스하기 위해 이전 열 마스터 키로 암호화된 열 암호화 키 값을 사용할 수 있습니다. Always Encrypted 지원 암호화 알고리즘은 256비트를 가진 일반 텍스트 값을 요구합니다. 암호화된 값은 열 마스터 키를 보유한 키 저장소를 캡슐화하는 키 저장소 공급자를 사용하여 생성돼야 합니다.  
   
- 사용 하 여 [sys.columns&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 및 [sys.column_encryption_key_values&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 열 암호화 키에 대 한 정보를 볼 수 있습니다.  
+ 열 암호화 키에 대한 정보를 보려면 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md), [sys.column_encryption_key_values&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)를 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
- 필요한 **ALTER ANY COLUMN ENCRYPTION KEY** 데이터베이스에 대 한 권한이 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 데이터베이스에 대한 **ALTER ANY COLUMN ENCRYPTION KEY** 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-a-column-encryption-key-value"></a>1. 열 암호화 키 값을 추가합니다.  
- 다음 예에서는 라는 열 암호화 키 변경 `MyCEK`합니다.  
+### <a name="a-adding-a-column-encryption-key-value"></a>1. 열 암호화 키 값 추가  
+ 다음 예에서는 `MyCEK`이라고 하는 열 암호화 키를 수정합니다.  
   
 ```  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
@@ -93,8 +93,8 @@ GO
   
 ```  
   
-### <a name="b-dropping-a-column-encryption-key-value"></a>2. 열 암호화 키 값을 삭제 하는 중  
- 다음 예에서는 라는 열 암호화 키 변경 `MyCEK` 값을 삭제 하 여 합니다.  
+### <a name="b-dropping-a-column-encryption-key-value"></a>2. 열 암호화 키 값 삭제  
+ 다음 예에서는 값을 삭제하여 `MyCEK`이라고 하는 열 암호화 키를 수정합니다.  
   
 ```  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
@@ -105,9 +105,9 @@ DROP VALUE
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE COLUMN ENCRYPTION KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION key&#40; Transact SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [상시 암호화&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   

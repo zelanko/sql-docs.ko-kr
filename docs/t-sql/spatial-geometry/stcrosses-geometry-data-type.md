@@ -1,5 +1,5 @@
 ---
-title: "STCrosses (geometry 데이터 형식) | Microsoft Docs"
+title: "STCrosses(geometry 데이터 형식) | Mrcrosoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcrosses-geometry-data-type"></a>STCrosses(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-1을 반환는 **geometry** 인스턴스 교차 **기 하 도형** 인스턴스. 그렇지 않으면 0을 반환합니다.
+**geometry** 인스턴스가 다른 **geometry** 인스턴스와 교차하면 1을 반환합니다. 그렇지 않으면 0을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- 다른 **geometry** 인스턴스와 비교할 인스턴스 `STCrosses()` 가 호출 됩니다.  
+ `STCrosses()`를 호출할 인스턴스와 비교할 다른 **geometry** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **비트**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>주의  
- 두 개의 **geometry** 다음 조건이 모두 해당 하는 경우 인스턴스가 상호 교차 합니다.  
+## <a name="remarks"></a>Remarks  
+ 다음 조건이 모두 true이면 두 **geometry** 인스턴스는 교차합니다.  
   
--   두의 교집합 **geometry** 원본의 최대 차원 보다 작은 차원은 geometry 인스턴스가 **geometry** 인스턴스.  
+-   두 **geometry** 인스턴스가 교차하여 기하 도형의 차원이 원본 **geometry** 인스턴스의 최대 차원보다 작습니다.  
   
--   교차 집합이 두 원본에 내부 **geometry** 인스턴스.  
+-   교차 집합은 두 원본 **geometry** 인스턴스 내에 있습니다.  
   
- 항상 null이 반환 하는 경우의 spatial reference Id (Srid)는 **geometry** 인스턴스 일치 하지 않습니다.  
+ 이 메서드는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STCrosses()`를 사용하여 두 `geometry` 인스턴스가 교차하는지 테스트합니다.  
@@ -72,7 +72,7 @@ SET @h = geometry::STGeomFromText('LINESTRING(0 0, 2 2)', 0);
 SELECT @g.STCrosses(@h);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

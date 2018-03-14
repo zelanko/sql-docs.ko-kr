@@ -1,5 +1,5 @@
 ---
-title: "STIntersection (geometry 데이터 형식) | Microsoft Docs"
+title: "STIntersection(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geometry-data-type"></a>STIntersection(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-점을 나타내는 개체를 반환 합니다. 여기서는 **기 하 도형** 다른 인스턴스와 교차 **기 하 도형** 인스턴스.
+**geometry** 인스턴스와 다른 **geometry** 인스턴스가 교차하는 점을 나타내는 개체를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- 다른 **geometry** 인스턴스와 비교할 개체 인스턴스 `STIntersection()` 교차점을 확인 하려면 호출 되는 합니다.  
+ 교차점을 확인하기 위해 `STIntersection()`을 호출할 인스턴스와 비교할 다른 **geometry** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- `STIntersection()`항상 경우 null을 반환의 spatial reference Id (Srid)는 **geometry** 인스턴스 일치 하지 않습니다. 입력 인스턴스에 원호 세그먼트가 있을 경우에만 결과에 원호 세그먼트가 포함될 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ `STIntersection()`는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다. 입력 인스턴스에 원호 세그먼트가 있을 경우에만 결과에 원호 세그먼트가 포함될 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -77,7 +77,7 @@ SELECT @g.STIntersection(@h).ToString();
  SELECT @h.STIntersection(@g).ToString();
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

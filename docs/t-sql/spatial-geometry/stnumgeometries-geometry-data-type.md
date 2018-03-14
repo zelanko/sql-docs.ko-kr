@@ -1,5 +1,5 @@
 ---
-title: "STNumGeometries (geometry 데이터 형식) | Microsoft Docs"
+title: "STNumGeometries(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-구성 하는 geometries의 개수를 반환 합니다.는 **geometry** 인스턴스.
+**geometry** 인스턴스를 구성하는 기하 도형의 개수를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **int**  
   
  CLR 반환 형식: **SqlInt32**  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 경우 1을 반환는 **geometry** 인스턴스가 않습니다는 **MultiPoint**, **MultiLineString**, **MultiPolygon**, 또는  **GeometryCollection** 인스턴스와 인 경우 0은 **geometry** 인스턴스가 비어 있습니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 **geometry** 인스턴스가 **MultiPoint**, **MultiLineString**, **MultiPolygon** 또는 **GeometryCollection** 인스턴스가 아닌 경우 1을 반환하고, **geometry** 인스턴스가 비어 있으면 0을 반환합니다.  
   
 > [!NOTE]  
->  경우는 **GeometryCollection** 비어 있는 요소에 중첩 된 `STNumGeometries()` 0을 반환 하지 것입니다. 하지만의 요소는 **GeometryCollection** 비어 있는 인스턴스, 인스턴스 자체는 빈 집합 않습니다.  
+>  **GeometryCollection**에 중첩된 빈 요소가 있으면 `STNumGeometries()`은 0을 반환하지 않습니다. **GeometryCollection** 인스턴스에 빈 요소가 있어도 인스턴스 자체가 빈 집합은 아닙니다.  
   
   
 

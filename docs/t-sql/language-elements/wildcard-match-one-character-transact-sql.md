@@ -1,5 +1,5 @@
 ---
-title: "_ (와일드 카드-문자 하 나와 일치) (Transact SQL) | Microsoft Docs"
+title: "_(와일드카드 - 문자 하나와 일치)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -41,13 +41,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (와일드카드 - 문자 하나와 일치)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-밑줄 문자 _를 사용 하 여 패턴 일치와 같은 포함 하는 문자열 비교 작업에서 임의의 단일 문자와 일치 하도록 `LIKE` 및 `PATINDEX`합니다.  
+밑줄 문자(_)를 사용하여 `LIKE` 및 `PATINDEX`와 같은 패턴 일치가 포함된 문자열 비교 작업에서 단일 문자와 일치하도록 합니다.  
   
 ## <a name="examples"></a>예  
 
 ## <a name="a-simple-example"></a>A: 간단한 예   
 
-다음 예에서는 모든 데이터베이스 이름이 문자로 시작 하는 반환 `m` 문자 있고 `d` 고 세 번째 문자입니다. 밑줄 문자는 이름의 두 번째 문자에 문자일 수를 지정 합니다. `model` 및 `msdb` 데이터베이스가이 기준을 충족 합니다. `master` 데이터베이스는 그렇지 않습니다.
+다음 예제에서는 문자 `m`로 시작하고 문자 `d`를 세 번째 문자로 가진 모든 데이터베이스 이름을 반환합니다. 밑줄 문자는 이름의 두 번째 문자가 임의의 문자가 될 수 있음을 나타냅니다. `model` 및 `msdb` 데이터베이스는 이 기준을 충족합니다. `master` 데이터베이스는 그렇지 않습니다.
 
 ```sql
 SELECT name FROM sys.databases
@@ -60,12 +60,12 @@ name
 model
 msdb
 ```   
-이 조건을 충족 하는 추가 데이터베이스를 할 수 있습니다.
+이 조건을 충족하는 추가 데이터베이스가 있을 수 있습니다.
 
-여러 개의 문자를 나타내는 여러 밑줄을 사용할 수 있습니다. 변경 된 `LIKE` 두 개의 밑줄을 포함 하는 조건을 `'m__%` master 데이터베이스의 결과에 포함 됩니다.
+여러 개의 밑줄을 사용하여 여러 문자를 나타낼 수 있습니다. 두 개의 밑줄 `'m__%`을 포함하도록 `LIKE` 조건을 변경하면 결과에 master 데이터베이스가 포함됩니다.
 
-### <a name="b-more-complex-example"></a>B: 더 복잡 한 예제
- 다음 예제에서는 _ 연산자를 사용 하 여 모든 사람에 찾을 수는 `Person` 끝나는 세 문자 이름을 가진 테이블 `an`합니다.  
+### <a name="b-more-complex-example"></a>B: 복잡한 예
+ 다음 예제에서는 _연산자를 사용하여 `Person` 테이블에서 `an`으로 끝나는 3개 문자로 된 이름을 가진 모든 사람을 찾습니다.  
   
 ```sql  
 -- USE AdventureWorks2012
@@ -75,21 +75,21 @@ FROM Person.Person
 WHERE FirstName LIKE '_an'  
 ORDER BY FirstName;  
 ```  
-## <a name="c-escaping-the-underscore-character"></a>C: 밑줄 문자를 이스케이프 처리   
-다음 예제에서는 같은 고정된 데이터베이스 역할의 이름을 반환 `db_owner` 및 `db_ddladmin`를 반환 한다는 `dbo` 사용자입니다. 
+## <a name="c-escaping-the-underscore-character"></a>C: 밑줄 문자 이스케이핑   
+다음 예제에서는 `db_owner` 및 `db_ddladmin`와 같은 고정 데이터베이스 역할의 이름을 반환하지만 `dbo` 사용자도 반환합니다. 
 
 ```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
-세 번째 문자 위치에 밑줄은를 와일드 카드로 라인 상태가 되며 문자로 시작 하는 사용자만 필터링 되지 않도록 `db_`합니다. 값이 되도록 이스케이프 밑줄을 대괄호로 묶으십시오 `[_]`합니다. 
+세 번째 문자 위치의 밑줄은 와일드카드로 사용되며 `db_` 문자로 시작하는 보안 주체만 필터링하지 않습니다. 밑줄을 이스케이프하려면 대괄호 `[_]`로 묶습니다. 
 
 ```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   
-이제는 `dbo` 사용자 제외 됩니다.   
+이제 `dbo` 사용자는 제외됩니다.   
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 ```
 name
@@ -101,10 +101,10 @@ db_securityadmin
 ```
 
   
-## <a name="see-also"></a>관련 항목:  
- [마찬가지로 &#40; Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [PATINDEX &#40; Transact SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
-  [% (와일드 카드-하나 이상의 문자 일치)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; &#93; (와일드 카드-하나 이상의 문자 일치)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#91; ^ &#93; (와일드 카드-일치 하지 않는 문자)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+## <a name="see-also"></a>참고 항목  
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
+  [%(와일드카드 - 일치하는 문자)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+  [&#91 &#93;(와일드카드 - 일치하는 문자)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [&#91;^&#93;(와일드카드 - 일치하지 않는 문자)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
   

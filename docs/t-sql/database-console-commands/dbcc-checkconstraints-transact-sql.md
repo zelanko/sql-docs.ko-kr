@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKCONSTRAINTS (Transact SQL) | Microsoft Docs
+title: DBCC CHECKCONSTRAINTS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ DBCC CHECKCONSTRAINTS
   
 ## <a name="arguments"></a>인수  
  *table_name* | *table_id* | *constraint_name* | *constraint_id*  
- 검사할 테이블이나 제약 조건입니다. 때 *table_name* 또는 *table_id* 가 지정 하면 해당 테이블에 대해 설정 된 모든 제약 조건을 검사 됩니다. 때 *constraint_name* 또는 *constraint_id* 가 지정 하면 해당 제약 조건만 검사 합니다. 테이블 식별자도 제약 조건 식별자도 지정하지 않으면 현재 데이터베이스의 모든 테이블에 대해 설정된 모든 제약 조건을 검사합니다.  
+ 검사할 테이블이나 제약 조건입니다. *table_name* 또는 *table_id*를 지정하면 해당 테이블에 설정된 모든 제약 조건을 검사합니다. *constraint_name* 또는 *constraint_id*를 지정하면 해당 제약 조건만 검사합니다. 테이블 식별자도 제약 조건 식별자도 지정하지 않으면 현재 데이터베이스의 모든 테이블에 대해 설정된 모든 제약 조건을 검사합니다.  
  제약 조건 이름은 제약 조건이 속해 있는 테이블을 고유하게 식별합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
  의 모든 멘션을  
@@ -76,7 +76,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKCONSTRAINTS는 테이블의 모든 FOREIGN KEY 제약 조건 및 CHECK 제약 조건에 대한 쿼리를 생성 및 실행합니다.
   
 예를 들어 외래 키 쿼리의 형식은 다음과 같습니다.
@@ -93,21 +93,21 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 ```  
   
 쿼리 데이터는 임시 테이블에 저장됩니다. 요청한 모든 테이블이나 제약 조건의 검사가 끝나면 결과 집합이 반환됩니다.
-DBCC CHECKCONSTRAINTS는 FOREIGN KEY와 CHECK 제약 조건의 무결성을 검사하지만 테이블의 디스크에서 데이터 구조의 무결성은 검사하지 않습니다. 사용 하 여 이러한 데이터 구조 검사를 수행할 수 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 및 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)합니다.
+DBCC CHECKCONSTRAINTS는 FOREIGN KEY와 CHECK 제약 조건의 무결성을 검사하지만 테이블의 디스크에서 데이터 구조의 무결성은 검사하지 않습니다. 이러한 데이터 구조 검사는 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 및 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)을 사용하여 수행할 수 있습니다.
   
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
-경우 *table_name* 또는 *table_id* 지정 된 시스템 버전 관리에 사용 하도록 설정 하 고, DBCC CHECKCONSTRAINTS은 또한 지정된 된 테이블에서 임시 데이터 일관성 검사를 수행 합니다. 때 *NO_INFOMSGS* 를 지정 하지 않으면이 명령은 출력에 별도 줄에 각 일관성 위반을 반환 합니다. 출력의 형식이 됩니다. ([pkcol1] [pkcol2]...) = (\<pkcol1_value >, \<pkcol2_value >...) 및 \<무엇이 잘못 된 임시 테이블 레코드 > 합니다.
+*table_name* 또는 *table_id*가 지정되고 시스템 버전 관리가 설정된 경우, DBCC CHECKCONSTRAINTS는 지정된 테이블에서 temporal 데이터 일관성 검사도 수행합니다. *NO_INFOMSGS*를 지정하지 않은 경우, 이 명령은 별도 줄의 출력에서 각 일관성 위반을 반환합니다. 출력의 형식은 ([pkcol1] [pkcol2]...) = (\<pkcol1_value>, \<pkcol2_value >...) 및 \<temporal 테이블 레코드의 문제점은 무엇입니까>입니다.
   
-|확인|실패 한 경우 출력에서 추가 정보|  
+|확인|검사 실패 시 출력에서 추가 정보|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (현재)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
-|PeriodEndColumn ≥ PeriodStartColumn (현재, 기록)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
-|PeriodStartColumn < current_utc_time (현재)|[sys_start] = ' {'이 (0) 및 SYSUTCTIME|  
-|PeriodEndColumn < current_utc_time (기록)|[sys_end] = '{0}' AND SYSUTCTIME|  
-|겹치는 항목이 있습니다|(sys_start1, sys_end1), (sys_start2 sys_end2) 두에 대 한 레코드를 중첩 합니다.<br /><br /> 겹치는 레코드 2 개 이상의 출력에 각 겹침 쌍을 보여 주는 여러 행 포함 됩니다.|  
+|PeriodEndColumn ≥ PeriodStartColumn(현재)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn(현재, 기록)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
+|PeriodStartColumn < current_utc_time(현재)|[sys_start] = '{0}' AND SYSUTCTIME|  
+|PeriodEndColumn < currein_utc_time(기록)|[sys_end] = '{0}' AND SYSUTCTIME|  
+|Overlaps|두 개의 겹치는 레코드에 대한 (sys_start1, sys_end1), (sys_start2 sys_end2)<br /><br /> 겹치는 레코드가 2개 초과인 경우 출력에는 각 겹치는 한 쌍을 나타내는 여러 행이 있습니다.|  
   
-제약 조건 이름 또는 constraint_id만 임시 일관성 검사를 실행 하기 위해 지정할 방법이 없습니다.
+temporal 일관성 검사만 실행하기 위해 constraint_name 또는 constraint_id를 지정할 방법이 없습니다.
   
 ## <a name="result-sets"></a>결과 집합  
 DBCC CHECKCONSTRAINTS는 다음 열이 있는 행 집합을 반환합니다.
@@ -118,7 +118,7 @@ DBCC CHECKCONSTRAINTS는 다음 열이 있는 행 집합을 반환합니다.
 |Constraint Name|**varchar**|위반된 제약 조건의 이름입니다.|  
 |위치|**varchar**|제약 조건을 위반한 행을 식별하는 열 값 할당입니다.<br /><br /> 이 열의 값은 제약 조건을 위반한 행을 쿼리하는 SELECT 문의 WHERE 절에 사용될 수 있습니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
@@ -157,7 +157,7 @@ DBCC CHECKCONSTRAINTS WITH ALL_CONSTRAINTS;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKTABLE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)

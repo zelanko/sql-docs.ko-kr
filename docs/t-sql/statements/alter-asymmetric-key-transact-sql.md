@@ -1,5 +1,5 @@
 ---
-title: ALTER ASYMMETRIC KEY (Transact SQL) | Microsoft Docs
+title: ALTER ASYMMETRIC KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-non-specified
@@ -71,27 +71,27 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  개인 키의 보호를 변경합니다.  
   
  ENCRYPTION BY PASSWORD **='***stongPassword***'**  
- 개인 키를 보호하기 위한 새 암호를 지정합니다. *암호* 의 인스턴스를 실행 하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 옵션을 생략하면 개인 키가 데이터베이스 마스터 키로 암호화됩니다.  
+ 개인 키를 보호하기 위한 새 암호를 지정합니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 따라야 합니다. 이 옵션을 생략하면 개인 키가 데이터베이스 마스터 키로 암호화됩니다.  
   
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  개인 키가 현재 보호되는 이전 암호를 지정합니다. 개인 키가 데이터베이스 마스터 키로 암호화된 경우 필요하지 않습니다.  
   
-## <a name="remarks"></a>주의  
- 데이터베이스 마스터 키가 없으면 ENCRYPTION BY PASSWORD 옵션이 필요하고 암호가 제공되지 않으면 작업이 실패합니다. 데이터베이스 마스터 키를 만드는 방법에 대 한 정보를 참조 하세요. [CREATE MASTER key&#40; Transact SQL &#41; ](../../t-sql/statements/create-master-key-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 데이터베이스 마스터 키가 없으면 ENCRYPTION BY PASSWORD 옵션이 필요하고 암호가 제공되지 않으면 작업이 실패합니다. 데이터베이스 마스터 키 만들기에 대한 자세한 내용은 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)를 참조하세요.  
   
  ALTER ASYMMETRIC KEY를 사용하면 다음 표에서와 같이 PRIVATE KEY 옵션을 지정하여 개인 키 보호를 변경할 수 있습니다.  
   
 |변경할 보호 방법|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|이전 암호를 새 암호로 변경|필수|필수임|  
-|암호를 마스터 키로 변경|생략|필수임|  
-|마스터 키를 암호로 변경|필수임|생략|  
+|이전 암호를 새 암호로 변경|필수|필수|  
+|암호를 마스터 키로 변경|생략|필수|  
+|마스터 키를 암호로 변경|필수|생략|  
   
- 개인 키를 보호하는 데 사용하려면 먼저 데이터베이스 마스터 키를 열어야 합니다. 자세한 내용은 참조 [OPEN MASTER key&#40; Transact SQL &#41; ](../../t-sql/statements/open-master-key-transact-sql.md).  
+ 개인 키를 보호하는 데 사용하려면 먼저 데이터베이스 마스터 키를 열어야 합니다. 자세한 내용은 [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)를 참조하세요.  
   
- 비대칭 키의 소유권을 변경 하려면 사용 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)합니다.  
+ 비대칭 키의 소유권을 변경하려면 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)을 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  개인 키를 제거하는 경우 비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -125,13 +125,13 @@ ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
  [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [MASTER key&#40; 열기 Transact SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
  [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   
