@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
-caps.latest.revision: "37"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec934637b86851a4d6fdc57722ac46aeebd0429e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 113c1df4efd962de6353e9a4c9db76bae8fa78b2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>매개 변수가 있는 필터를 사용하는 병합 게시의 스냅숏
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 병합 게시에서 매개 변수가 있는 행 필터를 사용하면 복제 시 각 구독이 두 부분으로 구성된 스냅숏으로 초기화됩니다. 먼저 복제에 필요한 모든 개체와 게시된 개체의 스키마를 포함하는 스키마 스냅숏이 생성되는데 이때 데이터는 제외됩니다. 그런 다음 스키마 스냅숏의 개체 및 스키마와 구독의 파티션에 속한 데이터를 포함하는 스냅숏으로 각 구독을 초기화합니다. 둘 이상의 구독이 주어진 파티션(동일한 스키마와 데이터)을 받는다면 해당 파티션에 대한 스냅숏은 단 한 번만 생성됩니다. 동일한 스냅숏에서 여러 개의 구독이 초기화됩니다. 매개 변수가 있는 행 필터에 대한 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  병합 게시에서 매개 변수가 있는 행 필터를 사용하면 복제 시 각 구독이 두 부분으로 구성된 스냅숏으로 초기화됩니다. 먼저 복제에 필요한 모든 개체와 게시된 개체의 스키마를 포함하는 스키마 스냅숏이 생성되는데 이때 데이터는 제외됩니다. 그런 다음 스키마 스냅숏의 개체 및 스키마와 구독의 파티션에 속한 데이터를 포함하는 스냅숏으로 각 구독을 초기화합니다. 둘 이상의 구독이 주어진 파티션(동일한 스키마와 데이터)을 받는다면 해당 파티션에 대한 스냅숏은 단 한 번만 생성됩니다. 동일한 스냅숏에서 여러 개의 구독이 초기화됩니다. 매개 변수가 있는 행 필터에 대한 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  다음 3가지 방법 중 하나로 매개 변수가 있는 필터를 사용하여 게시에 대한 스냅숏을 만들 수 있습니다.  
   

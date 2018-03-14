@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.configuredistributionwizard.distributorpassword.f1
+f1_keywords:
+- sql13.rep.configuredistributionwizard.distributorpassword.f1
 ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
-caps.latest.revision: "24"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25add00605312f2a290f265088f59f763410df13
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: de6e4846acfa0c7d3e18e176fd0053e8a190f9ed
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="distributor-password"></a>배포자 암호
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 마법사의 **게시자** 페이지에서 하나 이상의 게시자가 이 서버를 원격 배포자로 설정한 경우 복제가 **distributor_admin** 로그인을 사용하여 게시자와 원격 배포자 간 연결을 만들 때 사용할 암호를 지정해야 합니다. 새 게시 마법사 또는 배포 구성 마법사의 **관리 암호** 페이지에서 이 원격 배포자를 사용하는 각 게시자에 대해 동일한 암호를 입력해야 합니다. 배포자 보안에 자세한 내용은 [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 마법사의 **게시자** 페이지에서 하나 이상의 게시자가 이 서버를 원격 배포자로 설정한 경우 복제가 **distributor_admin** 로그인을 사용하여 게시자와 원격 배포자 간 연결을 만들 때 사용할 암호를 지정해야 합니다. 새 게시 마법사 또는 배포 구성 마법사의 **관리 암호** 페이지에서 이 원격 배포자를 사용하는 각 게시자에 대해 동일한 암호를 입력해야 합니다. 배포자 보안에 자세한 내용은 [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)을 참조하세요.  
   
 ## <a name="options"></a>변수  
  **암호**  

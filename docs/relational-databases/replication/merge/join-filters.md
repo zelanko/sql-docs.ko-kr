@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - merge replication join filters [SQL Server replication]
 - join filters
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 211bde4093eff61342659558e231fb29c13e5bd7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a4e8494e274dc8f04aac972e7dd9bdfbc4f18baa
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="join-filters"></a>Join Filters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 조인 필터를 사용하여 게시의 관련 테이블이 필터링되는 방식에 따라 테이블을 필터링할 수 있습니다. 일반적으로 부모 테이블은 매개 변수가 있는 필터를 사용하여 필터링됩니다. 그리고 나서 테이블 간 조인을 정의하는 방식과 매우 유사하게 하나 이상의 조인 필터가 정의됩니다. 조인 필터는 매개 변수가 있는 필터를 확장하므로 관련 테이블의 데이터는 조인 필터 절과 일치할 경우에만 복제됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  조인 필터를 사용하여 게시의 관련 테이블이 필터링되는 방식에 따라 테이블을 필터링할 수 있습니다. 일반적으로 부모 테이블은 매개 변수가 있는 필터를 사용하여 필터링됩니다. 그리고 나서 테이블 간 조인을 정의하는 방식과 매우 유사하게 하나 이상의 조인 필터가 정의됩니다. 조인 필터는 매개 변수가 있는 필터를 확장하므로 관련 테이블의 데이터는 조인 필터 절과 일치할 경우에만 복제됩니다.  
   
  일반적으로 조인 필터는 조인 필터가 적용되는 테이블에 대해 정의된 기본 키/외래 키 관계를 따르지만 기본 키/외래 키 관계를 엄격하게 따르지는 않습니다. 조인 필터는 두 테이블의 관련 데이터를 비교하는 논리를 기반으로 할 수 있습니다.  
   

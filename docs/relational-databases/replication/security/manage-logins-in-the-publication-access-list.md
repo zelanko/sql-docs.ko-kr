@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - PAL (publication access list)
 - logins [SQL Server replication], managing
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
-caps.latest.revision: "45"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 728fc310a00084d5b69257221fbda270f3994c01
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4fd4f6e7e5ba111555167985343cfa6e4206ba39
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>게시 액세스 목록에서 로그인 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 게시 액세스 목록의 로그인을 관리하는 방법에 대해 설명합니다. 게시에 대한 액세스는 PAL(게시 액세스 목록)에서 제어합니다. 로그인 및 그룹을 추가하고 PAL에서 제거할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시 액세스 목록의 로그인을 관리하는 방법에 대해 설명합니다. 게시에 대한 액세스는 PAL(게시 액세스 목록)에서 제어합니다. 로그인 및 그룹을 추가하고 PAL에서 제거할 수 있습니다.  
   
  **항목 내용**  
   

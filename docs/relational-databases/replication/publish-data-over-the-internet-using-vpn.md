@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Web publishing [SQL Server replication], VPNs
 - Internet [SQL Server replication], VPNs
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
-caps.latest.revision: "33"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a851ec36920e6300a25ebf815e8f1c6998263d5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 760dd1341cc9a6aab18644b3777b007519322c7b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>VPN을 사용하여 인터넷을 통해 데이터 게시
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] VPN(가상 개인 네트워크) 기술을 사용하면 집, 지점, 원격 클라이언트 및 다른 회사에서 사용자가 인터넷을 통해 회사 네트워크에 연결하여 안전하게 통신할 수 있습니다. 사용자는 LAN(근거리 통신망)에서처럼 Windows 인증을 사용할 수 있습니다. 모든 유형의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제는 VPN을 통해 데이터를 복제할 수 있지만 웹 동기화에는 VPN이 필요하지 않으므로 병합 복제를 사용할 경우 웹 동기화 사용을 고려해야 합니다. 자세한 내용은 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  VPN(가상 개인 네트워크) 기술을 사용하면 집, 지점, 원격 클라이언트 및 다른 회사에서 사용자가 인터넷을 통해 회사 네트워크에 연결하여 안전하게 통신할 수 있습니다. 사용자는 LAN(근거리 통신망)에서처럼 Windows 인증을 사용할 수 있습니다. 모든 유형의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제는 VPN을 통해 데이터를 복제할 수 있지만 웹 동기화에는 VPN이 필요하지 않으므로 병합 복제를 사용할 경우 웹 동기화 사용을 고려해야 합니다. 자세한 내용은 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)을 참조하세요.  
   
  VPN에는 클라이언트 소프트웨어가 포함되어 있어 컴퓨터에서 인터넷이나 인트라넷(특별한 경우)으로 전용 컴퓨터 또는 서버의 소프트웨어에 연결할 수 있습니다. 사용자 인증 방법 외에도 양쪽 모두에서 암호화할 수도 있습니다. 인터넷을 통한 VPN 연결은 논리적으로 사이트 간에 WAN(광역 통신망)으로 운영됩니다.  
   

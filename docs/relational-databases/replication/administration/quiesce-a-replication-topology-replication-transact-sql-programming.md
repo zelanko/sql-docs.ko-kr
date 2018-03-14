@@ -8,28 +8,31 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - administering replication, quiescing
 - quiesce [SQL Server replication]
 - transactional replication, backup and restore
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
-caps.latest.revision: "34"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ab96c3dd1a5e3919636e1ac2f098959c511b537
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6542a04d98e3d9bbed49dc37274bb96bd5504d64
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>복제 토폴로지 정지(복제 Transact-SQL 프로그래밍)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 시스템 *정지* 과정에서는 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 받았는지 확인합니다. 이 항목에서는 여러 가지 관리 태스크에 필요한 복제 토폴로지 정지 방법과 노드가 다른 노드의 변경 내용을 모두 받았는지 확인하는 방법을 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  시스템*정지* 과정에서는 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 받았는지 확인합니다. 이 항목에서는 여러 가지 관리 태스크에 필요한 복제 토폴로지 정지 방법과 노드가 다른 노드의 변경 내용을 모두 받았는지 확인하는 방법을 설명합니다.  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>읽기 전용 구독이 포함된 트랜잭션 복제 토폴로지를 정지하려면  
   

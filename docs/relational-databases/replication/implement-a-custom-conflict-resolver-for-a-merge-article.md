@@ -8,28 +8,31 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], stored procedure-based resolvers
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
-caps.latest.revision: "45"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66a0716665f2f8df2be0df258392aeb8ea4531dc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fbff9f904824d72596b1362535eca7a1ea47091a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>병합 아티클용 사용자 지정 충돌 해결 프로그램 구현
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 [COM 기반 사용자 지정 해결 프로그램](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 병합 아티클을 위한 사용자 지정 충돌 해결 프로그램을 구현하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [또는 COM 기반 사용자 지정 해결 프로그램](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여[!INCLUDE[tsql](../../includes/tsql-md.md)] 의 병합 아티클을 위한 사용자 지정 충돌 해결 프로그램을 구현하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   

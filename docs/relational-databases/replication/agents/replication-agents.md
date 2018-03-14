@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - agents [SQL Server replication]
 - replication [SQL Server], agents and profiles
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
-caps.latest.revision: "10"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 306304e967336f428bece315b0e36651afe1d668
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: bd2acc90438f28be8c3649d0c1243aa8a8ac77fb
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-agents"></a>복제 에이전트
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제는 “에이전트”라는 여러 개의 독립 실행형 프로그램을 사용하여 변경 내용 추적 및 데이터 배포와 연관된 태스크를 수행합니다. 이 설명서 섹션에는 다음 복제 에이전트에 대한 매개 변수 참조가 포함되어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  복제는 "에이전트"라는 여러 개의 독립 실행형 프로그램을 사용하여 변경 내용 추적 및 데이터 배포와 연관된 태스크를 수행합니다. 이 설명서 섹션에는 다음 복제 에이전트에 대한 매개 변수 참조가 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [복제 에이전트 개요](../../../relational-databases/replication/agents/replication-agents-overview.md)  

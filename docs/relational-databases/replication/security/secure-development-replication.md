@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - security [SQL Server replication], development
 - development security [SQL Server replication]
 ms.assetid: 2322d39c-6689-4fb6-b23b-eae51cbb0222
-caps.latest.revision: "9"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f444b1d0fb41a31cefd9cf6aa04f5d7b92300b6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b378c5fb9fbd2946abb8af1ce238a27e13554997
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="secure-development-replication"></a>안전한 개발(복제)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 보다 안전한 복제 토폴로지를 계획하는 데 유용한 정보를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 섹션에서는 보다 안전한 복제 토폴로지를 계획하는 데 유용한 정보를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  

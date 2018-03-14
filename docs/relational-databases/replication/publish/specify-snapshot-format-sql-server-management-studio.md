@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshots [SQL Server replication], formats
 - snapshot replication [SQL Server], formats
 ms.assetid: 7c95f545-731a-4743-9acb-0b325ef9b98b
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0fa034fbebc77e66d044fcde9d68d26289cbd88e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c5bae3f755eaca45f2388a7d855a8c034cc5901a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="specify-snapshot-format-sql-server-management-studio"></a>스냅숏 형식 지정(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **게시 속성 - \<Publication>** 대화 상자의 **스냅숏** 페이지에서 스냅숏 형식을 지정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **게시 속성 - \<게시>** 대화 상자의 **스냅숏** 페이지에서 스냅숏 형식을 지정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 ### <a name="to-specify-snapshot-format"></a>스냅숏 형식을 지정하려면  
   

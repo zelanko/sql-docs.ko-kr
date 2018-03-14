@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - restoring [SQL Server replication], actions requiring a backup
 - backups [SQL Server replication], actions requiring a backup
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
-caps.latest.revision: "32"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b6d551be26a358f01e8825732973f0eae04dd93
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a4cc5303d5253c1621b5b5f62105f5a3e5e26d23
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>업데이트된 백업이 필요한 일반 동작
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제 스키마 또는 토폴로지에 변경 작업을 수행한 후 게시, 배포, 구독, **msdb**및 **master** 데이터베이스 백업을 수행합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제 스키마 또는 토폴로지에 변경 작업을 수행한 후 게시, 배포, 구독, **msdb**및 **master** 데이터베이스 백업을 수행합니다.  
   
 ## <a name="publication-database"></a>게시 데이터베이스  
  다음 작업 후 게시 데이터베이스를 백업합니다.  

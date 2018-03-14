@@ -8,23 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
-caps.latest.revision: "20"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5db8397679583939bc9a1abeb85480f46c2b850
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 21765d0357b870cb996e1d247540d16bd41c7672
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="distributor-properties"></a>배포자 속성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 배포자 및 배포 데이터베이스의 속성에 대한 정보를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 섹션에서는 배포자 및 배포 데이터베이스의 속성에 대한 정보를 제공합니다.  
   
 -   [배포자 속성, 일반](../../relational-databases/replication/distributor-properties-general.md)  
   

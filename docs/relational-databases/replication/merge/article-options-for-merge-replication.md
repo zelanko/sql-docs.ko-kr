@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - merge replication [SQL Server replication], article options
 - articles [SQL Server replication], merge replication options
 ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
-caps.latest.revision: "37"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ddef0bdc5d08fadc7d232417ffc7579671e8c2c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5dd0dd0171c1f6fba7c8b0b07481e78cd50a6967
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="article-options-for-merge-replication"></a>병합 복제를 위한 아티클 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 응용 프로그램의 요구에 맞게 복제 동작을 사용자 지정할 수 있는 여러 가지 병합 테이블 아티클 옵션이 있습니다. 병합 복제를 사용하여 다음을 수행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  응용 프로그램의 요구에 맞게 복제 동작을 사용자 지정할 수 있는 여러 가지 병합 테이블 아티클 옵션이 있습니다. 병합 복제를 사용하여 다음을 수행할 수 있습니다.  
   
 -   행 필터, 조인 필터 및 열 필터를 사용합니다. 테이블 아티클을 필터링하여 게시할 데이터 파티션을 만들 수 있습니다. 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  
   

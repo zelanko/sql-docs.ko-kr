@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newpubwizard.pubproperties.filterrows.f1
+f1_keywords:
+- sql13.rep.newpubwizard.pubproperties.filterrows.f1
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
-caps.latest.revision: "21"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9f279d06d1be056edf486e0a9a8c4ee0184a9bd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 80da582db33f49ef5fe456eb9351e9b4d6091591
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publication-properties-filter-rows"></a>게시 속성, 행 필터
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **게시 속성** 대화 상자의 **행 필터** 페이지를 사용하여 추가, 편집 또는 삭제할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **게시 속성** 대화 상자의 **행 필터** 페이지를 사용하여 추가, 편집 또는 삭제할 수 있습니다.  
   
 -   스냅숏, 트랜잭션 및 병합 게시의 테이블 아티클에 정적 행 필터를 적용합니다.  
   

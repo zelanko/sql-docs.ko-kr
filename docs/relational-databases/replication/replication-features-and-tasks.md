@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - replication [SQL Server], development
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
-caps.latest.revision: "21"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a1b9183f8a9cf1c60bd399baf43825c4a3949f6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0d0524be08e29d65d89566eecf23e0b880e7a471
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-features-and-tasks"></a>복제 기능 및 태스크
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 디자이너, 개발자, 분석가 또는 관리자를 포함한 모든 사용자가 복제 솔루션을 디자인하고 구현하는 데 필요한 정보를 찾아 보십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  디자이너, 개발자, 분석가 또는 관리자를 포함한 모든 사용자가 복제 솔루션을 디자인하고 구현하는 데 필요한 정보를 찾아 보십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

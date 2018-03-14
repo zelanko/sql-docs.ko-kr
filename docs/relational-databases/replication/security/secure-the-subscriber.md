@@ -18,19 +18,19 @@ helpviewer_keywords:
 - security [SQL Server replication], Subscribers
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c12d1c2ed7f777d147c6cb94c93bb5c7e8b4e1e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ee4adedf88b092672a1001c83e82f81e240032ab
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="secure-the-subscriber"></a>구독자 보안 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-병합 에이전트 및 배포 에이전트는 구독자에 연결합니다. 이러한 연결은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인의 컨텍스트에서 설정됩니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 저장소를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다. 각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하십시오.  
+  병합 에이전트 및 배포 에이전트는 구독자에 연결합니다. 이러한 연결은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인의 컨텍스트에서 설정됩니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 저장소를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다. 각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하십시오.  
   
 ## <a name="distribution-agent"></a>배포 에이전트  
  구독당 배포 에이전트가 하나씩(독립 에이전트 - 새 게시 마법사에서 생성된 게시의 기본값임) 또는 한 쌍의 게시 데이터베이스와 구독 데이터베이스당 배포 에이전트가 하나씩(공유 에이전트) 있습니다. T  

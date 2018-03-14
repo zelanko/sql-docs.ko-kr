@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Web synchronization, about
 - Web synchronization
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
-caps.latest.revision: "45"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95942267f871946f402f2261d4a5dc0cd1873256
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d5884fb9db00d9b995866ce275f44df8b6395c00
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="web-synchronization-for-merge-replication"></a>병합 복제에 대한 웹 동기화
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 병합 복제에 대한 웹 동기화를 사용하면 HTTPS 프로토콜을 사용하여 데이터를 복제할 수 있으며 다음 시나리오에서도 유용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  병합 복제에 대한 웹 동기화를 사용하면 HTTPS 프로토콜을 사용하여 데이터를 복제할 수 있으며 다음 시나리오에서도 유용합니다.  
   
 -   인터넷을 통해 모바일 사용자로부터 데이터 동기화  
   

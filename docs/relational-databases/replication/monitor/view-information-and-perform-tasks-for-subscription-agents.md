@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - viewing replication agent information
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: fbb59d31-2424-4552-9195-0da8d83e755f
-caps.latest.revision: "37"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a9434ff6b82cb8ba8a6cc87c05df32c35310f85
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ae84b02e10013afbf1467a5c0030a85b4c2af734
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="view-information-and-perform-tasks-for-subscription-agents"></a>구독 에이전트에 대한 정보 보기 및 태스크 수행
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 모니터에서는 구독과 연결된 에이전트 정보에 액세스할 수 있는 두 가지 탭을 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  복제 모니터에서는 구독과 연결된 에이전트 정보에 액세스할 수 있는 두 가지 탭을 제공합니다.  
   
 -   **모든 구독**  
   

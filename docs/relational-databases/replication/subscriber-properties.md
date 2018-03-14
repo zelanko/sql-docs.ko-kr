@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.configdistwizard.subscribers.f1
-helpviewer_keywords: Subscriber Properties dialog box
+f1_keywords:
+- sql13.rep.configdistwizard.subscribers.f1
+helpviewer_keywords:
+- Subscriber Properties dialog box
 ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
-caps.latest.revision: "22"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ccced37e2c29aa47c2d5ce67d3adeebba6ec5c58
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4362ff8e0c58967d8793e83e83b589847142ae02
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="subscriber-properties"></a>구독자 속성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **구독자 속성** 대화 상자에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 구독자와 관련된 정보가 포함되어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **구독자 속성** 대화 상자에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 구독자와 관련된 정보가 포함되어 있습니다.  
   
 ## <a name="options"></a>변수  
  **에이전트에서 구독자 연결**  

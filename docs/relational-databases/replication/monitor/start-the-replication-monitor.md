@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Replication Monitor, starting
+helpviewer_keywords:
+- Replication Monitor, starting
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
-caps.latest.revision: "36"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5e9b5a38bbd6ef2468a21683b3279602edf8336
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9e1a339c818c4199656d3114d214b2908501a017
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="start-the-replication-monitor"></a>복제 모니터 시작
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에 있는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]나 명령 프롬프트에서 복제 모니터를 시작할 수 있습니다. 복제 모니터를 시작한 후 모니터링할 하나 이상의 게시자를 추가합니다. 자세한 내용은 [복제 모니터에서 게시자 추가 및 제거](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]나 명령 프롬프트에서 복제 모니터를 시작할 수 있습니다. 복제 모니터를 시작한 후 모니터링할 하나 이상의 게시자를 추가합니다. 자세한 내용은 [복제 모니터에서 게시자 추가 및 제거](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)를 참조하세요.  
   
 ### <a name="to-start-replication-monitor-from-sql-server-management-studio"></a>SQL Server Management Studio에서 복제 모니터를 시작하려면  
   

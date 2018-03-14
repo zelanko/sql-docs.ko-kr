@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], scripts
 - scripts [SQL Server replication]
 ms.assetid: 9a6872c2-9bed-477f-9d2f-332d640edcf2
-caps.latest.revision: "35"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7780ddbbe3486c67535d27cc4c9bb9132274e04d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 01d55924d79b7291b23aab38ae06e0a2112c0978
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="execute-scripts-before-and-after-the-snapshot-is-applied"></a>스냅숏 적용 전후에 스크립트 실행
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 스냅숏 적용 전후에 구독자에서 스크립트가 실행되도록 지정할 수 있습니다. 각 구독자에서 로그인과 스키마(개체 소유자)를 만드는 작업 등 다양한 작업에 스크립트를 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  스냅숏 적용 전후에 구독자에서 스크립트가 실행되도록 지정할 수 있습니다. 각 구독자에서 로그인과 스키마(개체 소유자)를 만드는 작업 등 다양한 작업에 스크립트를 사용할 수 있습니다.  
   
  사용자가 각 스크립트에 대한 파일 위치를 지정하면 스냅숏 에이전트는 스냅숏 처리가 발생할 때마다 해당 스크립트 파일을 현재 스냅숏 폴더로 복사합니다. 배포 에이전트 또는 병합 에이전트는 스냅숏을 적용할 때 복제된 모든 개체 스크립트보다 먼저 프리 스냅숏 스크립트를 실행합니다. 배포 에이전트 또는 병합 에이전트는 복제된 다른 개체 스크립트 및 데이터가 모두 적용된 후에 포스트 스냅숏 스크립트를 실행합니다. 스냅숏 응용 프로그램이 완료되고 스크립트 파일이 성공적으로 실행되면 스크립트 파일은 구독자의 작업 디렉터리에서 제거됩니다.  
   

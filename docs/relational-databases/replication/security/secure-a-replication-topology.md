@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: replication [SQL Server], security
+helpviewer_keywords:
+- replication [SQL Server], security
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f5883fe3b649b2ad21deb3e9fde14c153df5416
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 06503486567ccc86fda076a12d4e147c9fa68fdc
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="secure-a-replication-topology"></a>복제 토폴로지 보안 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제에 필요한 보안 계정, 로그인 및 암호는 복제가 구성될 때와 게시 및 구독이 생성될 때 제공됩니다. 이러한 보안 설정은 나중에 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], 복제 저장 프로시저 및 RMO(복제 관리 개체)를 사용하여 변경할 수 있습니다. 다음 항목에서는 복제 보안 설정을 수정하는 방법을 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  복제에 필요한 보안 계정, 로그인 및 암호는 복제가 구성될 때와 게시 및 구독이 생성될 때 제공됩니다. 이러한 보안 설정은 나중에 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], 복제 저장 프로시저 및 RMO(복제 관리 개체)를 사용하여 변경할 수 있습니다. 다음 항목에서는 복제 보안 설정을 수정하는 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

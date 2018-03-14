@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.replicationutilities.selectdistributor.f1
+f1_keywords:
+- sql13.rep.replicationutilities.selectdistributor.f1
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
-caps.latest.revision: "22"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eda1d3fc60baeea0f657561febb9f188ea78b16a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 16dca6f26fb892691d1ed48721850567745dac3d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="distributor"></a>배포자
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **배포자** 페이지는 배포 구성 마법사 및 새 게시 마법사에 표시됩니다. 배포자는 배포 데이터베이스를 포함하고 모든 유형의 복제에 대한 메타데이터 및 기록 데이터를 저장하는 서버입니다. 또한 배포자는 트랜잭션 복제에 대한 트랜잭션을 저장합니다. 배포자는 게시자와 별개인 서버(원격 배포자)가 되거나 게시자와 같은 서버(로컬 배포자)가 될 수 있습니다. 배포자의 역할은 구현하는 복제의 유형에 따라 달라집니다. 일반적으로 배포자의 역할은 병합 복제 및 스냅숏 복제보다 트랜잭션 복제에서 훨씬 큽니다. 보통 병합 및 스냅숏 복제에서는 로컬 배포자를 사용하지만 사용률이 매우 높은 시스템에서는 트랜잭션 배포에서 원격 배포자를 사용하는 것이 유리할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **배포자** 페이지는 배포 구성 마법사 및 새 게시 마법사에 표시됩니다. 배포자는 배포 데이터베이스를 포함하고 모든 유형의 복제에 대한 메타데이터 및 기록 데이터를 저장하는 서버입니다. 또한 배포자는 트랜잭션 복제에 대한 트랜잭션을 저장합니다. 배포자는 게시자와 별개인 서버(원격 배포자)가 되거나 게시자와 같은 서버(로컬 배포자)가 될 수 있습니다. 배포자의 역할은 구현하는 복제의 유형에 따라 달라집니다. 일반적으로 배포자의 역할은 병합 복제 및 스냅숏 복제보다 트랜잭션 복제에서 훨씬 큽니다. 보통 병합 및 스냅숏 복제에서는 로컬 배포자를 사용하지만 사용률이 매우 높은 시스템에서는 트랜잭션 배포에서 원격 배포자를 사용하는 것이 유리할 수 있습니다.  
   
  배포자가 있는 서버에는 다음과 같은 추가 리소스가 필요합니다.  
   

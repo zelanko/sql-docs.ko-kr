@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.reinit.all.f1
-helpviewer_keywords: Reinitialize Subscription(s) dialog box
+f1_keywords:
+- sql13.rep.reinit.all.f1
+helpviewer_keywords:
+- Reinitialize Subscription(s) dialog box
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
-caps.latest.revision: "11"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0556ec4bd0cfdb40bb5db48b871731b6ebc37dd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5e5ca311380d3b6f1ce479ea816f71cd20fea752
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>구독 다시 초기화 - 모든 구독
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **구독 다시 초기화** 대화 상자를 사용하여 게시에 대한 모든 구독을 다시 초기화로 표시할 수 있습니다. 다시 초기화를 수행하려면 각 구독자에 스냅숏을 적용해야 하며 이 작업은 트랜잭션 게시에 대한 구독을 위한 배포 에이전트 및 병합 게시에 대한 구독을 위한 병합 에이전트에서 수행합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **구독 다시 초기화** 대화 상자를 사용하여 게시에 대한 모든 구독을 다시 초기화로 표시할 수 있습니다. 다시 초기화를 수행하려면 각 구독자에 스냅숏을 적용해야 하며 이 작업은 트랜잭션 게시에 대한 구독을 위한 배포 에이전트 및 병합 게시에 대한 구독을 위한 병합 에이전트에서 수행합니다.  
   
 ## <a name="options"></a>변수  
  **현재 스냅숏 사용**  

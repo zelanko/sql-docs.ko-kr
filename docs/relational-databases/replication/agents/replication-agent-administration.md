@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
-caps.latest.revision: "48"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86cebd3ab2286cc34ff25d45ec1837d75716c16f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 23903fc135bdc5aaf539c6550a7679f42e9449aa
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-agent-administration"></a>복제 에이전트 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 에이전트는 스키마와 데이터의 복사본 만들기, 게시자 또는 구독자에서 업데이트 검색, 서버 간에 변경 내용 전파 등 복제와 관련된 많은 태스크를 수행합니다. 기본적으로 복제 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행됩니다. 에이전트는 단순히 실행 파일이므로 명령줄 및 일괄 처리 스크립트에서 직접 호출할 수도 있습니다. 각 응용 프로그램 에이전트는 실행 방식을 제어하는 데 사용되는 일련의 런타임 매개 변수를 지원합니다. 이러한 매개 변수는 에이전트 프로필 또는 명령줄에서 지정됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  복제 에이전트는 스키마와 데이터의 복사본 만들기, 게시자 또는 구독자에서 업데이트 검색, 서버 간에 변경 내용 전파 등 복제와 관련된 많은 태스크를 수행합니다. 기본적으로 복제 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행됩니다. 에이전트는 단순히 실행 파일이므로 명령줄 및 일괄 처리 스크립트에서 직접 호출할 수도 있습니다. 각 응용 프로그램 에이전트는 실행 방식을 제어하는 데 사용되는 일련의 런타임 매개 변수를 지원합니다. 이러한 매개 변수는 에이전트 프로필 또는 명령줄에서 지정됩니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 설치될 때 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스를 자동으로 시작하도록 명시적으로 선택하지 않으면 기본적으로 이 서비스는 해제됩니다.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 - scripts [SQL Server replication]
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
-caps.latest.revision: "36"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38d3866d8bd2e1f08501530efecb6628f94f5c53
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 96387cb192e0b13656788786bc52512d20ffe9fb
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="synchronize-data"></a>데이터 동기화
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 데이터 동기화란 초기 스냅숏이 구독자에 적용된 후 게시자와 구독자 간에 데이터 및 스키마 변경 내용이 전파되는 프로세스를 말합니다. 동기화는 다음과 같은 방식으로 발생할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  데이터 동기화란 초기 스냅숏이 구독자에 적용된 후 게시자와 구독자 간에 데이터 및 스키마 변경 내용이 전파되는 프로세스를 말합니다. 동기화는 다음과 같은 방식으로 발생할 수 있습니다.  
   
 -   계속 - 트랜잭션 복제에 일반적임  
   

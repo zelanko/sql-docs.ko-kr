@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 - merge replication [SQL Server replication], administering
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a93507645a081f1e0fdc245eae439cf932a44360
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 526259da8044bd3868bc0a2516061b97c860a62a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="administration-replication"></a>관리(복제)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 복제 토폴로지 관리에 대한 정보를 제공합니다. 최상의 방법 항목을 먼저 읽고 나서 해당 항목의 링크를 따라 이 섹션 및 다른 섹션에 있는 더 자세한 정보를 찾아보는 것이 좋습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 섹션에서는 복제 토폴로지 관리에 대한 정보를 제공합니다. 최상의 방법 항목을 먼저 읽고 나서 해당 항목의 링크를 따라 이 섹션 및 다른 섹션에 있는 더 자세한 정보를 찾아보는 것이 좋습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [복제 관리에 대한 모범 사례](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  

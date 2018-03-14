@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
-caps.latest.revision: "24"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 445e2016c22123ecce9e12ded3688fddec63ba38
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8a11cf12fc057aba0f014fc36014fde9a52eda2a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>자습서: 모바일 클라이언트와의 데이터 복제
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제는 가끔 연결되는 중앙 서버와 모바일 클라이언트 간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하면 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 이 자습서에서는 모바일 클라이언트에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+복제는 가끔 연결되는 중앙 서버와 모바일 클라이언트간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하면 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 이 자습서에서는 모바일 클라이언트에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
 이 자습서에서는 각 사용자가 고유하게 필터링된 데이터의 하위 집합을 얻을 수 있도록 병합 복제를 사용하여 중앙 데이터베이스의 데이터를 여러 모바일 사용자에게 게시합니다. 첫 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 게시를 만드는 방법을 보여 줍니다. 이후의 단원에서는 구독을 만들고 이를 동기화하는 방법을 보여 줍니다.  

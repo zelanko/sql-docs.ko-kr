@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - security [SQL Server replication], Distributors
 - Distributors [SQL Server replication], security
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69919214ba8fae9f6158466482f5b08201ad8afd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 43c578d6c18e0f5a58088e935faeb79fdefcf991
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="secure-the-distributor"></a>배포자 보안 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 배포자에 연결하는 병합 에이전트에는 로그 판독기 에이전트, 스냅숏 에이전트, 큐 판독기 에이전트, 배포 에이전트 및 병합 에이전트가 있습니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 저장소를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  배포자에 연결하는 병합 에이전트에는 로그 판독기 에이전트, 스냅숏 에이전트, 큐 판독기 에이전트, 배포 에이전트 및 병합 에이전트가 있습니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 저장소를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다.  
   
 -   로그인 및 암호 관리에 대한 자세한 내용은 [복제의 로그인 및 암호 관리](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)를 참조하세요.  
   

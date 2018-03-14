@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
 - replication [SQL Server], synchronization
 ms.assetid: cbe13120-8dd9-4309-88dd-07a801c68f5f
-caps.latest.revision: "35"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 145ae64c09e0a98a92ff13ddbd6c25d91b74a67e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 606dc8b0f5fc5c9e8d469443ce22b725252a22bf
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="synchronize-subscriptions-replication"></a>구독 동기화(복제)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 구독은 복제 에이전트에 의해 동기화됩니다. 배포 에이전트는 트랜잭션 및 스냅숏 게시에 대한 구독을 동기화하며 병합 에이전트는 병합 게시에 대한 구독을 동기화합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 복제 저장 프로시저 및 RMO(복제 관리 개체)를 사용하여 구독을 동기화하고 동기화 동작을 제어할 수 있습니다. 다음 항목에서는 구독을 동기화하고 동기화 옵션을 지정하는 방법을 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  구독은 복제 에이전트에 의해 동기화됩니다. 배포 에이전트는 트랜잭션 및 스냅숏 게시에 대한 구독을 동기화하며 병합 에이전트는 병합 게시에 대한 구독을 동기화합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 복제 저장 프로시저 및 RMO(복제 관리 개체)를 사용하여 구독을 동기화하고 동기화 동작을 제어할 수 있습니다. 다음 항목에서는 구독을 동기화하고 동기화 옵션을 지정하는 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

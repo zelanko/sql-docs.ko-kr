@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.monitor.publicationinfo.tracertokens.f1
+f1_keywords:
+- sql13.rep.monitor.publicationinfo.tracertokens.f1
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
-caps.latest.revision: "24"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89955827dd69aee8d9a81b244c30bf289f66a502
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 21d6cd27ccd62eeac1e04108748a89105b1174e9
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>게시 정보, 추적 프로그램 토큰(SQL Server 2005 이상)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **추적 프로그램 토큰** 탭을 사용하여 연결 유효성을 검사하고 트랜잭션 복제를 사용하는 시스템의 대기 시간을 측정할 수 있습니다. 토큰(적은 양의 데이터)은 게시 데이터베이스의 트랜잭션 로그에 기록되고, 일반적인 복제된 트랜잭션인 것처럼 표시되고, 시스템을 통해 전달되며 다음을 계산할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **추적 프로그램 토큰** 탭을 사용하여 연결 유효성을 검사하고 트랜잭션 복제를 사용하는 시스템의 대기 시간을 측정할 수 있습니다. 토큰(적은 양의 데이터)은 게시 데이터베이스의 트랜잭션 로그에 기록되고, 일반적인 복제된 트랜잭션인 것처럼 표시되고, 시스템을 통해 전달되며 다음을 계산할 수 있습니다.  
   
 -   게시자에서 커밋된 트랜잭션과 배포자의 배포 데이터베이스에서 삽입된 해당 명령 사이의 경과 시간  
   

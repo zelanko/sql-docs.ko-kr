@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.monitor.publisherinfo.publications.f1
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.publications.f1
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
-caps.latest.revision: "27"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b003b3d18832f83fc1c57ea34c83e6da9dfab46c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5be16d57a1a660185cc5ab98462a99654dd74c82
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publisher-information-publications"></a>게시자 정보, 게시
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **게시** 탭은 왼쪽 창에서 선택한 게시자에서의 모든 게시에 대한 요약 정보를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **게시** 탭은 왼쪽 창에서 선택한 게시자에서의 모든 게시에 대한 요약 정보를 제공합니다.  
   
 ## <a name="options"></a>변수  
  표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  

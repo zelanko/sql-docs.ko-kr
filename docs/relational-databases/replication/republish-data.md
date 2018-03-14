@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - publishing [SQL Server replication], Subscribers
 - Subscribers [SQL Server replication], republishing data
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
-caps.latest.revision: "34"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f560429493fe0182159ad66e89535ff017739678
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 28cb49602feeafe9c2182d54859f4b50f7c0a599
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="republish-data"></a>데이터 다시 게시
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 재게시 모델에서 게시자는 구독자로 데이터를 보내고 구독자는 다른 모든 구독자에 데이터를 다시 게시합니다. 이 방법은 게시자가 속도가 느리거나 비용이 많이 드는 통신 연결로 데이터를 구독자에 보내야 할 경우 유용합니다. 연결 끝 쪽에 다수의 구독자가 있을 경우 재게시자를 사용하면 대량의 배포 로드가 해당 연결 쪽으로 이동합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  재게시 모델에서 게시자는 구독자로 데이터를 보내고 구독자는 다른 모든 구독자에 데이터를 다시 게시합니다. 이 방법은 게시자가 속도가 느리거나 비용이 많이 드는 통신 연결로 데이터를 구독자에 보내야 할 경우 유용합니다. 연결 끝 쪽에 다수의 구독자가 있을 경우 재게시자를 사용하면 대량의 배포 로드가 해당 연결 쪽으로 이동합니다.  
   
  데이터 재게시 과정은 다음과 같습니다.  
   

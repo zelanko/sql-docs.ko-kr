@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.p2pwizard.init.f1
+f1_keywords:
+- sql13.rep.p2pwizard.init.f1
 ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
-caps.latest.revision: "20"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9acd541075532d1ed56794053ad4c85e64bd9862
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c9c95b488fd9e8a56317edac9bd1071901356112
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>새 피어 초기화(피어 투 피어 복제)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **새 피어 초기화** 페이지를 사용하여 피어 데이터베이스가 초기화된 방법을 지정할 수 있습니다. 이 마법사를 완료하기 전에 피어를 초기화해야 합니다. 피어는 수동으로 초기화되거나 트랜잭션 복제에서 제공하는 **initialize with backup** 기능을 사용하여 초기화됩니다. 피어 투 피어 트랜잭션 복제는 스냅숏을 사용한 피어 초기화를 지원하지 않습니다. 여러 피어를 각각 다른 방법을 사용하여 초기화해야 하는 경우에는 이 마법사를 두 번 수행하여 피어를 개별적으로 추가해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **새 피어 초기화** 페이지를 사용하여 피어 데이터베이스가 초기화된 방법을 지정할 수 있습니다. 이 마법사를 완료하기 전에 피어를 초기화해야 합니다. 피어는 수동으로 초기화되거나 트랜잭션 복제에서 제공하는 **initialize with backup** 기능을 사용하여 초기화됩니다. 피어 투 피어 트랜잭션 복제는 스냅숏을 사용한 피어 초기화를 지원하지 않습니다. 여러 피어를 각각 다른 방법을 사용하여 초기화해야 하는 경우에는 이 마법사를 두 번 수행하여 피어를 개별적으로 추가해야 합니다.  
   
 ## <a name="options"></a>변수  
  **새 피어 데이터베이스가 초기화된 방법을 지정하십시오.**  

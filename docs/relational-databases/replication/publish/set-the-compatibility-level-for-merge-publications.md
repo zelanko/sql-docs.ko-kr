@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - backward compatibility [SQL Server], replication
 - publications [SQL Server replication], backward compatibility
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
-caps.latest.revision: "33"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c453badb1bd6b114626c03f0be3fbe6bea92c3c6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fcdf5bf7dfde8ce02f66fbdb5f7430d50fdb74ef
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>병합 게시에 대한 호환성 수준 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 병합 복제는 게시 호환성 수준을 사용하여 지정된 데이터베이스에서 게시에 사용할 수 있는 기능을 확인합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 병합 복제는 게시 호환성 수준을 사용하여 지정된 데이터베이스에서 게시에 사용할 수 있는 기능을 확인합니다.  
   
  **항목 내용**  
   

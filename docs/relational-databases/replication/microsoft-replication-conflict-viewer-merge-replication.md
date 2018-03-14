@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.replconflictviewer.cvmerge.f1
+f1_keywords:
+- sql13.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
-caps.latest.revision: "24"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: feff3e58f4069175fa2e12b617a40aa92043dcc2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4fbbfbe441da04c73f39e653fc9b12a6169eaea3
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 복제 충돌 뷰어(병합 게시)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 충돌 뷰어를 사용하면 복제 동기화를 수행하는 동안 발생한 모든 충돌을 볼 수 있습니다. 충돌은 게시자와 구독자 또는 두 구독자 등 두 위치에서 같은 데이터를 동시에 변경할 때 발생합니다. 복제는 아티클을 만들 때 선택한 충돌 해결 프로그램을 사용하여 충돌을 자동으로 해결합니다. 그러나 필요한 경우 복제 충돌 뷰어를 사용하여 충돌 해결에 다른 해결 방법을 선택할 수 있습니다. 다음과 같은 두 가지 충돌이 일어날 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  복제 충돌 뷰어를 사용하면 복제 동기화를 수행하는 동안 발생한 모든 충돌을 볼 수 있습니다. 충돌은 게시자와 구독자 또는 두 구독자 등 두 위치에서 같은 데이터를 동시에 변경할 때 발생합니다. 복제는 아티클을 만들 때 선택한 충돌 해결 프로그램을 사용하여 충돌을 자동으로 해결합니다. 그러나 필요한 경우 복제 충돌 뷰어를 사용하여 충돌 해결에 다른 해결 방법을 선택할 수 있습니다. 다음과 같은 두 가지 충돌이 일어날 수 있습니다.  
   
 -   업데이트 충돌. 업데이트 충돌은 같은 데이터를 두 위치에서 변경할 때 발생합니다. 이 경우 한 가지 변경 내용만 적용됩니다. 기존 데이터를 유지하거나(이 경우 기존 데이터가 적용되는 데이터임) 기존 데이터와 충돌하는 데이터로 기존 데이터를 덮어쓰거나(이 경우 기존 데이터가 무시되는 데이터임) 두 데이터를 병합하여 기존 데이터를 업데이트할 수 있습니다.  
   

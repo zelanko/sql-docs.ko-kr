@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - System Monitor [SQL Server], replication
 - performance counters [SQL Server replication]
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
-caps.latest.revision: "30"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce2cd6d57f3d8f5c2e08930a96f118341172fafc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5dd2bf72431d7a75c34e08f6bba6699811529905
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>시스템 모니터로 복제 모니터링
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 시스템 모니터를 사용하면 그래프, 차트 및 보고서를 통해 컴퓨터의 효율성을 측정하고, 발생할 수 있는 문제(리소스 사용의 불균형, 하드웨어 부족, 잘못된 프로그램 디자인 등)를 식별하고 해결하며, 그 밖의 하드웨어 요구에 대한 계획을 수립할 수 있습니다. 자세한 내용은 [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 시스템 모니터를 사용하면 그래프, 차트 및 보고서를 통해 컴퓨터의 효율성을 측정하고, 발생할 수 있는 문제(리소스 사용의 불균형, 하드웨어 부족, 잘못된 프로그램 디자인 등)를 식별하고 해결하며, 그 밖의 하드웨어 요구에 대한 계획을 수립할 수 있습니다. 자세한 내용은 [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)을 참조하세요.  
   
  시스템 모니터는 여러 가지 프로세스의 성능에 대한 정보를 제공하는 성능 개체 및 카운터를 사용합니다. 복제 에이전트와 관련된 카운터를 통해 복제 성능을 측정할 수 있습니다.  
   

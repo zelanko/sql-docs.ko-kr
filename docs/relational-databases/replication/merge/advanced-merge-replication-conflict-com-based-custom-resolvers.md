@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
 - custom resolvers [SQL Server replication]
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
-caps.latest.revision: "36"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b39f8593b86d61ad9b31884a95212d8cb7bac72
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 82fad6f34b9cdc3cc500aadb9f0ed5fdc6cb26ec
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>고급 병합 복제 충돌 - COM 기반 사용자 지정 해결 프로그램
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 사용자 지정 해결 프로그램은 기본 해결 메커니즘보다 더 높은 유연성을 제공하며 복제된 데이터를 사용하여 응용 프로그램에 필요한 비즈니스 논리를 구현할 수 있습니다. COM 기반 사용자 지정 해결 프로그램은 DLL(동적 연결 라이브러리)이며 **ICustomResolver** COM 인터페이스, 해당 메서드 및 속성, 그리고 충돌 해결을 위해 특별히 디자인된 다른 지원 인터페이스 및 유형 정의를 구현합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  사용자 지정 해결 프로그램은 기본 해결 메커니즘보다 더 높은 유연성을 제공하며 복제된 데이터를 사용하여 응용 프로그램에 필요한 비즈니스 논리를 구현할 수 있습니다. COM 기반 사용자 지정 해결 프로그램은 DLL(동적 연결 라이브러리)이며 **ICustomResolver** COM 인터페이스, 해당 메서드 및 속성, 그리고 충돌 해결을 위해 특별히 디자인된 다른 지원 인터페이스 및 유형 정의를 구현합니다.  
   
 > [!NOTE]  
 >  가능하면 COM 기반 사용자 지정 해결 프로그램보다 비즈니스 논리 처리기를 사용하는 것이 좋습니다. 비즈니스 논리 처리기에 대한 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  

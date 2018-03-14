@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newsubwizard.subproperties.publisher.f1
-helpviewer_keywords: Subscription Properties dialog box
+f1_keywords:
+- sql13.rep.newsubwizard.subproperties.publisher.f1
+helpviewer_keywords:
+- Subscription Properties dialog box
 ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
-caps.latest.revision: "22"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baba517b574179be16ef1376d0b1eff113c6338d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: dbf57cb3f73b3f59130afd10492b248a16a9cf5f
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="subscription-properties---publisher"></a>구독 속성 - 게시자
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 게시자의 **구독 속성** 대화 상자를 사용하여 밀어넣기 구독에 대한 속성을 보고 설정할 수 있습니다. 끌어오기 구독에 대한 일부 속성도 볼 수 있지만 구독자의 **구독 속성** 대화 상자는 추가 속성을 표시하고 속성을 수정할 수 있게 해줍니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  게시자의 **구독 속성** 대화 상자를 사용하여 밀어넣기 구독에 대한 속성을 보고 설정할 수 있습니다. 끌어오기 구독에 대한 일부 속성도 볼 수 있지만 구독자의 **구독 속성** 대화 상자는 추가 속성을 표시하고 속성을 수정할 수 있게 해줍니다.  
   
  **구독 속성** 대화 상자의 각 속성에는 설명이 포함되어 있습니다. 속성을 클릭하면 대화 상자 아래쪽에 해당 설명이 표시됩니다. 이 항목에서는 밀어넣기 구독인 경우에만 게시자에 표시되는 여러 속성에 대한 추가 정보를 제공합니다. 속성은 다음 범주로 그룹화됩니다.  
   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newpubwizard.configuresnapshotagent.f1
+f1_keywords:
+- sql13.rep.newpubwizard.configuresnapshotagent.f1
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
-caps.latest.revision: "29"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cb4fbaa68fa5e80a79ab77d28efaedc772ef826
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ea9636b5a25a75d363a64772cf3bea65a39f9325
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>스냅숏 에이전트(새 게시 마법사)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 스냅숏 에이전트는 새 구독을 초기화하는 데 사용되는 게시 스키마와 데이터가 포함된 파일을 만듭니다. 기본적으로 스냅숏 에이전트는 새 게시 마법사에서 게시가 생성된 후 즉시 실행됩니다. 이후에는 사용자가 지정한 일정에 따라 에이전트가 실행됩니다. 에이전트가 실행될 때마다 새 스냅숏 파일을 만들지 여부는 선택한 복제 유형 및 옵션에 따라 결정됩니다. 자세한 내용은 [스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-snapshot.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  스냅숏 에이전트는 새 구독을 초기화하는 데 사용되는 게시 스키마와 데이터가 포함된 파일을 만듭니다. 기본적으로 스냅숏 에이전트는 새 게시 마법사에서 게시가 생성된 후 즉시 실행됩니다. 이후에는 사용자가 지정한 일정에 따라 에이전트가 실행됩니다. 에이전트가 실행될 때마다 새 스냅숏 파일을 만들지 여부는 선택한 복제 유형 및 옵션에 따라 결정됩니다. 자세한 내용은 [스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-snapshot.md)을 참조하세요.  
   
  매개 변수가 있는 필터를 사용하는 병합 게시의 경우 게시 스냅숏이 완료된 후 각 데이터 파티션의 스냅숏을 만들어야 합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)을 참조하세요.  
   

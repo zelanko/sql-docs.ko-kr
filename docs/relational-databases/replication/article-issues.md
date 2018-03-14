@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newpubwizard.articleissues.f1
+f1_keywords:
+- sql13.rep.newpubwizard.articleissues.f1
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
-caps.latest.revision: "23"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4935f6e607270401c095f78bd6142828e8581071
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 466b60db17030c0681ff1d6608faa499e46fdf67
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="article-issues"></a>아티클 문제
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **아티클 문제** 페이지는 아티클에 대해 검색된 조건 및 이러한 조건의 결과로 필요한 변경 내용을 나열합니다. 다음 표에서는 발생 가능한 문제 및 복제와 기존 응용 프로그램이 올바르게 작동하는지 여부를 확인하는 데 필요한 동작을 나열합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **아티클 문제** 페이지는 아티클에 대해 검색된 조건 및 이러한 조건의 결과로 필요한 변경 내용을 나열합니다. 다음 표에서는 발생 가능한 문제 및 복제와 기존 응용 프로그램이 올바르게 작동하는지 여부를 확인하는 데 필요한 동작을 나열합니다.  
   
 |아티클 문제|세부 정보|필요한 동작|  
 |-------------------|-------------|---------------------|  

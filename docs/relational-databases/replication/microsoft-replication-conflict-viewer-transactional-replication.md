@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.replconflictviewer.cvqueued.f1
+f1_keywords:
+- sql13.rep.replconflictviewer.cvqueued.f1
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
-caps.latest.revision: "22"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 110c636ba2a86f698f2955e7cb6a067885c2165f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 84f634a20b64b754a696692ac9b860e686f2b786
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft 복제 충돌 뷰어(트랜잭션 복제)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 복제 충돌 뷰어에서는 지연 업데이트 구독을 사용하는 트랜잭션 복제 및 피어 투 피어 트랜잭션 복제에서 동기화 중 발생한 충돌을 볼 수 있습니다. 자세한 내용은 [트랜잭션 게시의 데이터 충돌 확인&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  복제 충돌 뷰어에서는 지연 업데이트 구독을 사용하는 트랜잭션 복제 및 피어 투 피어 트랜잭션 복제에서 동기화 중 발생한 충돌을 볼 수 있습니다. 자세한 내용은 [트랜잭션 게시의 데이터 충돌 확인&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)을 참조하세요.  
   
 > [!NOTE]  
 >  복제 충돌 뷰어에는 병합 복제 및 트랜잭션 복제에서 발생하는 충돌이 표시됩니다. 트랜잭션 복제의 경우 복제 충돌 뷰어를 사용하여 충돌 데이터를 볼 수는 있지만 충돌에 대한 다른 해결 방법을 선택할 수는 없습니다.  

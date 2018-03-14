@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - merge replication [SQL Server replication], filtering published data
 - replication [SQL Server], filtering published data
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
-caps.latest.revision: "34"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed6d8575d2dfbcc6f6ad29c8910346eb5ef27b41
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9ea3df63d6d52a166a49875aacf8e4ed41ae7985
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="filter-published-data-for-merge-replication"></a>병합 복제의 게시된 데이터 필터링
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 다른 복제 유형으로 정의할 수 있는 정적 행 필터와 열 필터 이외에 병합 복제는 매개 변수가 있는 행 필터 및 조인 필터를 제공합니다. 정적 행 필터와 열 필터에 대한 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  다른 복제 유형으로 정의할 수 있는 정적 행 필터와 열 필터 이외에 병합 복제는 매개 변수가 있는 행 필터 및 조인 필터를 제공합니다. 정적 행 필터와 열 필터에 대한 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  
   
  병합 복제는 모바일 사용자를 지원하는 여러 응용 프로그램에서 사용됩니다. 이러한 응용 프로그램에는 대개 많은 구독이 있으며 각 구독은 고유한 데이터 집합을 받습니다. 매개 변수가 있는 필터를 조인 필터와 함께 사용하면 관리자는 하나의 게시 또는 적은 수의 게시를 설정한 다음에도 다양한 데이터 집합을 사용자에게 제공할 수 있으므로 여러 게시를 만들 때 발생하는 관리 오버헤드를 줄일 수 있습니다.  
   

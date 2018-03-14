@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - passwords [SQL Server replication]
 - security [SQL Server replication], passwords
 ms.assetid: 277759f9-b0da-4524-8abe-0460cdab69ec
-caps.latest.revision: "35"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 739d6c4d7b70cb1897c8a32a627f4b36d3090aea
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: dc78365dd8e983ecbe3a9c15f92dd8aaf665a561
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="manage-logins-and-passwords-in-replication"></a>복제의 로그인 및 암호 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제를 구성할 때 복제 에이전트에 대한 로그인과 암호를 지정합니다. 복제를 구성한 후에는 로그인과 암호를 변경할 수 있습니다. 자세한 내용은 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을(를) 참조하세요. 복제 에이전트에서 사용하는 계정의 암호를 변경하는 경우 [sp_changereplicationserverpasswords&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)를 실행합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  복제를 구성할 때 복제 에이전트에 대한 로그인과 암호를 지정합니다. 복제를 구성한 후에는 로그인과 암호를 변경할 수 있습니다. 자세한 내용은 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을(를) 참조하세요. 복제 에이전트에서 사용하는 계정의 암호를 변경하는 경우 [sp_changereplicationserverpasswords&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)를 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)   

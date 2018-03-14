@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 147f7b93-1804-4e0b-9e17-57a51d035b2a
-caps.latest.revision: "12"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02e559d21156340da4527e2915e62efc4205eb19
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9ad3fadb0017628fa54a102366f132bbc72b9cfb
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>3단원: 구독 유효성 검사 및 대기 시간 측정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 단원에서는 추적 프로그램 토큰을 사용하여 구독자에 변경 내용이 복제되는지 확인하고 대기 시간, 즉 게시자에서 변경한 내용이 구독자에게 표시될 때까지 걸리는 시간을 확인합니다. 이 단원을 수행하려면 이전 단원인 [2단원: 트랜잭션 게시에 구독 만들기](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md)를 완료해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 단원에서는 추적 프로그램 토큰을 사용하여 구독자에 변경 내용이 복제되는지 확인하고 대기 시간, 즉 게시자에서 변경한 내용이 구독자에게 표시될 때까지 걸리는 시간을 확인합니다. 이 단원을 수행하려면 이전 단원인 [2단원: 트랜잭션 게시에 구독 만들기](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md)를 완료해야 합니다.  
   
 ### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>추적 프로그램 토큰을 삽입하고 이 토큰에 대한 정보를 보려면  
   

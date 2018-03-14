@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newpubwizard.generatefilters.f1
+f1_keywords:
+- sql13.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
-caps.latest.revision: "26"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caab625c0f783290f1206c832a3243d498eae349
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8261d1194ea4f1786fbe19088cdde66ef2cc3f30
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="generate-filters"></a>필터 생성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **필터 생성** 대화 상자를 사용하여 병합 게시의 테이블에 행 필터를 정의할 수 있습니다. 그러면 복제에서 외래 키 관계를 통해 관련된 다른 테이블로 해당 필터를 확장합니다. 예를 들어 프랑스 고객에 대한 데이터만 포함되도록 고객 테이블에 필터를 정의하면 복제에서는 관련된 주문 및 주문 세부 정보 테이블에 프랑스 고객과 관련된 정보만 포함되도록 해당 필터를 확장합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **필터 생성** 대화 상자를 사용하여 병합 게시의 테이블에 행 필터를 정의할 수 있습니다. 그러면 복제에서 외래 키 관계를 통해 관련된 다른 테이블로 해당 필터를 확장합니다. 예를 들어 프랑스 고객에 대한 데이터만 포함되도록 고객 테이블에 필터를 정의하면 복제에서는 관련된 주문 및 주문 세부 정보 테이블에 프랑스 고객과 관련된 정보만 포함되도록 해당 필터를 확장합니다.  
   
 ## <a name="options"></a>변수  
  이 대화 상자에서는 3단계로 이루어진 프로세스를 통해 테이블에 행 필터를 만듭니다. 그러면 기본 키와 외래 키 간의 관계를 통해 필터링된 테이블과 관련된 테이블로 필터가 확장됩니다. 예를 들어 **Customer**, **SalesOrderHeader**및 **SalesOrderDetail**테이블이 있는데 **Customer** 와 **SalesOrderHeader**간에 관계가 있고 **SalesOrderHeader** 와 **SalesOrderDetail**간에 관계가 있을 때 **Customer**에 행 필터를 적용하면 복제에서는 해당 필터를 **SalesOrderHeader** 및 **SalesOrderDetail**로 확장합니다.  

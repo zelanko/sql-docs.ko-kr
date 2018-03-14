@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Oracle publishing [SQL Server replication], glossary
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], glossary
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
-caps.latest.revision: "32"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 835ca9131d8484a2abe4995fb589775ba24bb953
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 89626fd3666456bb8770eb07d1767be749032722
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 게시를 위한 용어 설명
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Oracle 게시를 구성 및 관리할 때 다음 Oracle 용어에 익숙해야 합니다. 전체 Oracle 용어 목록은 Oracle 온라인 설명서를 참조하십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Oracle 게시를 구성 및 관리할 때 다음 Oracle 용어에 익숙해야 합니다. 전체 Oracle 용어 목록은 Oracle 온라인 설명서를 참조하십시오.  
   
  IOT(인덱스 구성 테이블)  
  인덱스 순서대로 데이터가 물리적으로 디스크에 저장되는 테이블로, 클러스터형 인덱스가 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블과 유사합니다. IOT는 클러스터형 인덱스가 있는 테이블로 구독자에 복제됩니다.  

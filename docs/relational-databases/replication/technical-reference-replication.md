@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: technical reference [SQL Server replication]
+helpviewer_keywords:
+- technical reference [SQL Server replication]
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
-caps.latest.revision: "15"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 591194f20b042c1f069fc3a7756cc4bcb96581c9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4677f53075516c3648c72adbfc03f55707944fcd
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="technical-reference-replication"></a>기술 참조(복제)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 섹션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 대한 기술 참조 설명서에 연결되는 링크가 들어 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  이 섹션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 대한 기술 참조 설명서에 연결되는 링크가 들어 있습니다.  
   
  ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **오류 및 이벤트**  
  [오류 및 이벤트 참조&#40;복제&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newpubwizard.pubproperties.datapartitions.f1
+f1_keywords:
+- sql13.rep.newpubwizard.pubproperties.datapartitions.f1
 ms.assetid: 5869edb7-d05f-495b-b828-b7fd5e828d20
-caps.latest.revision: "20"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e62fa467c0b757a74ca72bc4d9d7679944a91ca
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4c3934697f01070c587aa1e20670bb42e34e9500
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publication-properties-data-partitions"></a>게시 속성, 데이터 파티션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **게시 속성** 대화 상자의 **데이터 파티션** 페이지를 사용하여 매개 변수가 있는 필터링을 사용하는 병합 게시를 위한 데이터 파티션을 정의할 수 있습니다. 파티션을 정의하고 나면 이들 파티션에 대한 스냅숏을 생성하여 구독자의 연결 속성(로그인 및/또는 컴퓨터 이름)을 기준으로 다양한 구독자에 대한 각기 다른 초기 데이터 집합을 제공할 수 있습니다. 또한 구독자가 처음 동기화할 때 파티션에 사용할 수 있는 스냅숏을 가지고 있지 않은 경우 스냅숏 배달 및 생성을 요청할 수 있도록 선택할 수 있습니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **게시 속성** 대화 상자의 **데이터 파티션** 페이지를 사용하여 매개 변수가 있는 필터링을 사용하는 병합 게시를 위한 데이터 파티션을 정의할 수 있습니다. 파티션을 정의하고 나면 이들 파티션에 대한 스냅숏을 생성하여 구독자의 연결 속성(로그인 및/또는 컴퓨터 이름)을 기준으로 다양한 구독자에 대한 각기 다른 초기 데이터 집합을 제공할 수 있습니다. 또한 구독자가 처음 동기화할 때 파티션에 사용할 수 있는 스냅숏을 가지고 있지 않은 경우 스냅숏 배달 및 생성을 요청할 수 있도록 선택할 수 있습니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
 ## <a name="options"></a>변수  
  **추가**  

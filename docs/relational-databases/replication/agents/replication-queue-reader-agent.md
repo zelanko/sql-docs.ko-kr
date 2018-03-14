@@ -19,19 +19,19 @@ helpviewer_keywords:
 - Queue Reader Agent, executables
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ce0b2cc9add2bd3b7ee329c019a094998bc910f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 11ce360c2638ffb10194c969072f1f32864c0d47
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-queue-reader-agent"></a>복제 큐 판독기 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-복제 큐 판독기 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 큐 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 메시지 큐에 저장된 메시지를 읽고 해당 메시지를 게시자에 적용하는 실행 파일입니다. 큐 판독기 에이전트는 지연 업데이트를 허용하는 스냅숏 및 트랜잭션 게시와 함께 사용됩니다.  
+  복제 큐 판독기 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 큐 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 메시지 큐에 저장된 메시지를 읽고 해당 메시지를 게시자에 적용하는 실행 파일입니다. 큐 판독기 에이전트는 지연 업데이트를 허용하는 스냅숏 및 트랜잭션 게시와 함께 사용됩니다.  
   
 > [!NOTE]  
 >  매개 변수는 지정되는 순서에 제한을 받지 않습니다. 선택적 매개 변수가 지정되지 않은 경우 기본 에이전트 프로필을 기반으로 하여 미리 정의된 값이 사용됩니다.  

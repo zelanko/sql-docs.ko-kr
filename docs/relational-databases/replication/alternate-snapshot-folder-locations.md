@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], alternate folder locations
 - alternate snapshot folders [SQL Server replication]
 ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
-caps.latest.revision: "36"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c1d03f6d3d20f821eeb1ab4e8930b06fc0f997e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 00c990b2fabc64f4cf704cc2fb18999f490507f8
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alternate-snapshot-folder-locations"></a>대체 스냅숏 폴더 위치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 대체 스냅숏 위치를 사용하면 기본 위치가 아닌 위치(일반적으로 배포자에 위치)에 스냅숏 파일을 저장할 수 있습니다. 대체 위치는 다른 서버, 다른 네트워크 드라이브 또는 이동식 미디어(CD-ROM, 이동식 디스크)가 될 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  대체 스냅숏 위치를 사용하면 기본 위치가 아닌 위치(일반적으로 배포자에 위치)에 스냅숏 파일을 저장할 수 있습니다. 대체 위치는 다른 서버, 다른 네트워크 드라이브 또는 이동식 미디어(CD-ROM, 이동식 디스크)가 될 수 있습니다.  
   
  대체 스냅숏 위치는 게시의 속성으로 저장됩니다. 대체 스냅숏 위치가 게시 속성이기 때문에 배포 에이전트 및 병합 에이전트에서는 동화 프로세스의 일부인  올바른 스냅숏을 찾을 수 있습니다.  
   

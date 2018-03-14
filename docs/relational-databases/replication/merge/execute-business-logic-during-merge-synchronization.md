@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 - business logic handlers [SQL Server replication]
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
-caps.latest.revision: "31"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fadbd13868423a4defc38dad56653e745634fdb4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6ffbd9a858037b952ae4bde0412ee25bbc830f8d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>병합 동기화 중 비즈니스 논리 실행
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 비즈니스 논리 처리기 프레임워크를 사용하면 병합 동기화 과정 동안 호출되는 관리 코드 어셈블리를 작성할 수 있습니다. 이 어셈블리에는 동기화 중 데이터 변경, 충돌, 오류 등의 여러 상황에 응답할 수 있는 비즈니스 논리가 포함되어 있습니다. 비즈니스 논리 처리기 프레임워크에서 단순한 프로그래밍 모델을 제공하고 병합 프로세스에서 사용자 어셈블리에 ADO.NET 데이터 집합을 제공하므로 사용자는 소유 인터페이스를 새로 익히지 않고 ADO.NET에 대한 지식을 활용할 수 있습니다. 비즈니스 논리 처리기 프로그래밍에 대한 자세한 내용은 다음 항목을 참조하십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  비즈니스 논리 처리기 프레임워크를 사용하면 병합 동기화 과정 동안 호출되는 관리 코드 어셈블리를 작성할 수 있습니다. 이 어셈블리에는 동기화 중 데이터 변경, 충돌, 오류 등의 여러 상황에 응답할 수 있는 비즈니스 논리가 포함되어 있습니다. 비즈니스 논리 처리기 프레임워크에서 단순한 프로그래밍 모델을 제공하고 병합 프로세스에서 사용자 어셈블리에 ADO.NET 데이터 집합을 제공하므로 사용자는 소유 인터페이스를 새로 익히지 않고 ADO.NET에 대한 지식을 활용할 수 있습니다. 비즈니스 논리 처리기 프로그래밍에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   API(응용 프로그래밍 인터페이스) 참조: <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   

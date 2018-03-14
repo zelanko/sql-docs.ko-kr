@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.p2pwizard.LRA.f1
+f1_keywords:
+- sql13.rep.p2pwizard.LRA.f1
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
-caps.latest.revision: "17"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 949ca3ece47a0d29dc4d20b6a9870e6380c9914d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b064576c5edd65059bdfcf2950fc4482da8e41d5
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>로그 판독기 에이전트 보안(피어 투 피어 복제)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **로그 판독기 에이전트 보안** 페이지를 사용하여 각 피어에서 로그 판독기 에이전트를 실행 및 연결하는 계정을 지정할 수 있습니다. 에이전트에 필요한 사용 권한 및 복제 보안을 위한 최선의 구현 방법은 [Replication Agent Security Model(복제 에이전트 보안 모델)](../../relational-databases/replication/security/replication-agent-security-model.md) 및 [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)(복제 보안 모범 사례)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **로그 판독기 에이전트 보안** 페이지를 사용하여 각 피어에서 로그 판독기 에이전트를 실행 및 연결하는 계정을 지정할 수 있습니다. 에이전트에 필요한 사용 권한 및 복제 보안을 위한 최선의 구현 방법은 [Replication Agent Security Model(복제 에이전트 보안 모델)](../../relational-databases/replication/security/replication-agent-security-model.md) 및 [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)(복제 보안 모범 사례)를 참조하세요.  
   
 > [!NOTE]  
 >  트랜잭션 복제를 사용하여 게시된 각 데이터베이스에 대해 하나의 로그 판독기 에이전트가 있습니다. 데이터베이스에 대한 로그 판독기 에이전트가 이미 구성된 경우(이 마법사의 이전 실행에서 게시에 대해 구성했거나 동일한 데이터베이스의 다른 트랜잭션 게시에 대해 구성한 경우) 이 마법사를 통해 데이터베이스가 사용하는 자격 증명을 변경할 수 없습니다. 새 자격 증명을 지정하면 이 자격 증명은 무시됩니다. 자격 증명을 변경하려면 **게시 속성** 대화 상자를 사용하십시오. 자세한 내용은 [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을(를) 참조하세요.  
