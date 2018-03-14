@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
-caps.latest.revision: "41"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dedf784414d1eda02bd650bd46051950f22629ad
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f5e9b520191020639ce044d195e5c7b892e75181
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>복제 모니터 인터페이스 개요
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 모든 복제 작업을 게시자 관점 또는 배포자 관점으로 제공합니다. 왼쪽 창에서 모니터에 게시자를 추가하면 오른쪽 창에 게시자, 해당 게시, 게시에 대한 구독 및 다양한 복제 에이전트 정보가 표시됩니다. 복제 토폴로지에 대한 정보를 제공하는 것 외에도 복제 모니터를 사용하여 에이전트 시작 및 중지, 데이터 유효성 검사 등 다양한 태스크를 수행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 모든 복제 작업을 게시자 관점 또는 배포자 관점으로 제공합니다. 왼쪽 창에서 모니터에 게시자를 추가하면 오른쪽 창에 게시자, 해당 게시, 게시에 대한 구독 및 다양한 복제 에이전트 정보가 표시됩니다. 복제 토폴로지에 대한 정보를 제공하는 것 외에도 복제 모니터를 사용하여 에이전트 시작 및 중지, 데이터 유효성 검사 등 다양한 태스크를 수행할 수 있습니다.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>전체 토폴로지 정보 보기  
  복제 모니터 화면의 왼쪽 창  

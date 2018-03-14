@@ -8,26 +8,28 @@ ms.component: replication
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], what's new
 - what's new [SQL Server replication]
 ms.assetid: 130a760a-4162-4d7d-b266-453eb5759d7a
-caps.latest.revision: "39"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c33f2ea82e7f280624a90e4a45873932a70c963b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5c4eae711af59262411b3c0e7fd7cda79d5fa9bd
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="what39s-new-replication"></a>새로운 기능(복제)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]는 중요한 새로운 기능을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 도입하지 않았습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 는 중요한 새로운 기능을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 도입하지 않았습니다.  
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에 대한 복제를 지원하지 않습니다.  
   

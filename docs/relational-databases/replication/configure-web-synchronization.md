@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - Web synchronization, security best practices
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: "74"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d8ae90df79860b503830c9881fecd5f26b252e3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6ac1123e75ef9b3ae6e79a2b8099b4de7572b2e3
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +125,7 @@ ms.lasthandoff: 01/18/2018
  게시를 설정하고 IIS를 구성한 다음에는 끌어오기 구독을 만들고 이 구독에서 IIS를 사용하여 동기화를 수행하도록 지정합니다. 웹 동기화는 끌어오기 구독에 대해서만 지원됩니다.  
   
 ## <a name="upgrading-from-an-earlier-version-of-sql-server"></a>이전 버전의 SQL Server에서 업그레이드  
- 기존 웹 동기화 토폴로지를 구성한 상태에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드하는 경우 웹 동기화에 사용되는 가상 디렉터리에 최신 버전의 Replisapi.dll이 복사되어 있는지 확인해야 합니다. 기본적으로 최신 버전의 Replisapi.dll은C:\Program Files\Microsoft SQL Server\\<nnn\>\COM에 있습니다.  
+ 기존 웹 동기화 토폴로지를 구성한 상태에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드하는 경우 웹 동기화에 사용되는 가상 디렉터리에 최신 버전의 Replisapi.dll이 복사되어 있는지 확인해야 합니다. 기본적으로 최신 버전의 Replisapi.dll은 C:\Program Files\Microsoft SQL Server\\<nnn\>\COM에 있습니다.  
   
 ## <a name="replicating-large-volumes-of-data"></a>많은 양의 데이터 복제  
  구독자 컴퓨터에서 메모리 문제가 발생하지 않도록 웹 동기화에서 변경 내용을 전송하는 데 사용되는 XML 파일에 대해 기본 최대 크기인 100MB를 사용합니다. 다음 레지스트리 키를 설정하여 제한을 늘릴 수 있습니다.  
