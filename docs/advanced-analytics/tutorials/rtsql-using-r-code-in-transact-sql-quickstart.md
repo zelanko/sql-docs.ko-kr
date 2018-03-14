@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Transact-SQL에서 R 코드 사용하기(SQL에서 R 빠른 시작) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
@@ -54,7 +54,7 @@ SQL Server 인스턴스는 Azure 가상 머신 또는 온-프레미스에 있을
 
 R 스크립트를 포함한 SQL 쿼리를 실행하려면 데이터베이스에 연결하고 T-SQL 코드를 실행할 수 있는 다른 응용 프로그램을 사용할 수 있습니다. SQL 전문가라면 SQL Server Management Studio(SSMS) 또는 Visual Studio를 사용할 수 있습니다.
 
-이 자습서에서는 R 내부 SQL Server를 실행 하는 것이 얼마나 쉬운지 표시를 사용 했습니다 새 **Visual Studio Code 확장명이 mssql**합니다. VS Code는 Windows, Linux 또는 macOS 등에서 실행할 수 있는 무료 개발 환경입니다. **mssql** 확장은 T-SQL 쿼리를 실행 하기 위한 간단한 확장 합니다. 이 확장을 설치하려면 [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)(Visual Studio Code용 mssql 확장 사용) 문서를 참조하세요.
+이 자습서에서는 SQL Server내에서 R을 실행하는 것이 얼마나 쉬운지 보여주기 위해 새로운 **Visual Studio Code용 mssql 확장**을 사용했습니다. VS Code는 Windows, Linux, macOS에서 실행할 수 있는 무료 개발 환경입니다. **mssql** 확장은 SQL 쿼리를 실행하기 위한 가벼운 확장입니다. 이 확장을 설치하려면 [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)(Visual Studio Code용 mssql 확장 사용) 문서를 참조하세요.
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>데이터베이스에 연결하고 Hello World 테스트 스크립트 실행
 
@@ -84,7 +84,7 @@ R 스크립트를 포함한 SQL 쿼리를 실행하려면 데이터베이스에 
 
 ## <a name="troubleshooting"></a>문제 해결
 
-+ 이 쿼리에서 오류가 발생한다면 설치가 완료되지 않았을 수 있습니다. SQL Server 설치 마법사를 사용하여 기능을 추가한 후 외부 코드 라이브러리를 사용할 수 있도록 몇 가지 추가 단계를 수행해야 합니다. [SQL Server R Services 설치](../r/set-up-sql-server-r-services-in-database.md)를 참조하세요.
++ 이 쿼리에서 오류가 발생한다면 설치가 완료되지 않았을 수 있습니다. SQL Server 설치 마법사를 사용하여 기능을 추가한 후 외부 코드 라이브러리를 사용할 수 있도록 몇 가지 추가 단계를 수행해야 합니다.  [SQL Server R Services 설치](../r/set-up-sql-server-r-services-in-database.md)를 참조하세요.
 
 + Launchpad 서비스가 실행 중인지 확인합니다. 환경에 따라 SQL Server에 연결할 R 작업자 계정을 사용하도록 설정하거나, 추가 네트워크 라이브러리를 설치하거나, 원격 코드 실행을 사용하도록 설정하거나, 구성이 완료된 후 인스턴스를 다시 시작해야 할 수 있습니다. [R Services 설치 및 업그레이드 FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)를 참조하세요.
 
@@ -98,8 +98,8 @@ R 스크립트를 포함한 SQL 쿼리를 실행하려면 데이터베이스에 
 
 2 단원: [R 및 SQL 데이터 형식과 데이터 개체](rtsql-r-and-sql-data-types-and-data-objects.md)
 
-3 단원: [R 함수를 SQL Server 데이터와 함께 사용하기](rtsql-using-r-functions-with-sql-server-data.md)
+3단원: [R 함수를 SQL Server 데이터와 함께 사용하기](rtsql-using-r-functions-with-sql-server-data.md)
 
 4 단원: [예측 모델 만들기](rtsql-create-a-predictive-model-r.md)
 
-5 단원: [모델에서 예측과 플롯](rtsql-predict-and-plot-from-model.md)
+5단원: [모델에서 예측과 플롯](rtsql-predict-and-plot-from-model.md)
