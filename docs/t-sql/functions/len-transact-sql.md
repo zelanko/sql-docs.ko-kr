@@ -1,5 +1,5 @@
 ---
-title: LEN (Transact SQL) | Microsoft Docs
+title: LEN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/03/2015
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/18/2018
   지정한 문자열 식의 후행 공백을 제외한 문자 수를 반환합니다.  
   
 > [!NOTE]  
->  식을 표시 하는 데 사용 되는 바이트 수를 반환 하려면 사용 하 여는 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 함수입니다.  
+>  식을 표시하는 데 사용된 바이트 수를 반환하려면 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 함수를 사용하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,15 +51,15 @@ LEN ( string_expression )
   
 ## <a name="arguments"></a>인수  
  *string_expression*  
- 문자열은 [식](../../t-sql/language-elements/expressions-transact-sql.md) 계산 되도록 합니다. *string_expression* 상수, 변수 또는 문자 또는 이진 데이터의 열 수 있습니다.  
+ 계산할 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *string_expression*은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **bigint** 경우 *식* 입니다는 **varchar (max)**, **nvarchar (max)** 또는 **varbinary (max)** 데이터 형식입니다. 그렇지 않으면 **int**합니다.  
+ *식*의 데이터 형식이 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)**이면 **bigint**, 그렇지 않으면 **int**입니다.  
   
  SC 데이터 정렬을 사용하는 경우 반환되는 정수 값에서는 UTF-16 서로게이트 쌍이 단일 문자로 계산됩니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
- LEN 후행 공백을 제외합니다. 문제가 있는 경우에 사용 하 여 여는 [DATALENGTH &#40; Transact SQL &#41; ](../../t-sql/functions/datalength-transact-sql.md) 함수에 문자열을 트리밍 하지 않습니다. 유니코드 문자열을 처리 하는 경우 DATALENGTH 두 배 문자 수를 반환 합니다. 다음 예제에서는 후행 공백이 있는 LEN 및 DATALENGTH을 보여 줍니다.  
+## <a name="remarks"></a>Remarks  
+ LEN은 후행 공백을 제외합니다. 이것이 문제가 될 경우 문자열을 자르지 않는 [DATALENGTH&#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md) 함수를 사용해 보십시오. 유니코드 문자열을 처리할 경우 DATALENGTH는 문자 수의 두 배를 반환합니다. 다음 예는 후행 공백이 포함된 LEN 및 DATALENGTH를 보여줍니다.  
   
 ```  
 DECLARE @v1 varchar(40),  
@@ -82,8 +82,8 @@ WHERE CountryRegionName = 'Australia';
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 열에 있는 문자의 수를 반환 `FirstName` 에 있는 직원의 성과 이름 및 `Australia`합니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예는 `FirstName`열의 문자 수를 반환하고 `Australia`에 위치한 직원의 이름과 성을 반환합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -103,14 +103,14 @@ FNameLength  FirstName  LastName
 4            Lynn       Tsoflias
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [DATALENGTH &#40; Transact SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [CHARINDEX &#40; Transact SQL &#41;](../../t-sql/functions/charindex-transact-sql.md)  
- [PATINDEX &#40; Transact SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)  
- [왼쪽 &#40; Transact SQL &#41;](../../t-sql/functions/left-transact-sql.md)   
- [오른쪽 &#40; Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [DATALENGTH&#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
+ [CHARINDEX&#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
+ [PATINDEX&#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
+ [LEFT&#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)   
+ [RIGHT&#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

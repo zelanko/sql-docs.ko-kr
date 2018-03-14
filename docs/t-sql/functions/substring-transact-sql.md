@@ -1,5 +1,5 @@
 ---
-title: SUBSTRING (Transact SQL) | Microsoft Docs
+title: SUBSTRING(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
@@ -52,16 +52,16 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 이 **문자**, **이진**, **텍스트**, **ntext**, 또는 **이미지**[식](../../t-sql/language-elements/expressions-transact-sql.md).  
+ **character**, **binary**, **text**, **ntext** 또는 **image**[expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *start*  
- 정수 또는 **bigint** 반환 되는 문자의 시작 위치를 지정 하는 식입니다. (1, 기반된은 식에서 첫 번째 문자는 1는 번호 매기기)입니다. 경우 *시작* 1 보다 작으면 반환 되는 식은에 지정 된 첫 번째 문자에서 시작 됩니다 *식*합니다. 이 경우 반환 되는 문자 수는 가장 큰 값의 합계의 *시작* + *길이*-1 또는 0입니다. 경우 *시작* 수보다 큰 값 식에 있는 문자의 길이가 0 인 식이 반환 됩니다.  
+ 반환된 문자가 시작되는 위치를 지정하는 정수 또는 **bigint** 식입니다. (번호 매기기는 식의 첫 번째 문자가 1을 의미하는 1 기준입니다). *start*가 1보다 작은 경우 반환되는 식은 *expression*에 지정된 첫째 문자에서 시작합니다. 이 경우 반환되는 문자 수는 *start* + *length*-1 또는 0 중에서 더 큰 값입니다. *start*가 값 식의 문자 수보다 큰 경우 길이가 0인 식이 반환됩니다.  
   
  *length*  
- 양의 정수 또는 **bigint** 식의 문자 수를 지정 하는 *식* 반환 됩니다. 경우 *길이* 가 음수 이면 오류가 생성 되 고 문이 종료 됩니다. 경우 총 *시작* 및 *길이* 의 문자 수보다 크면 *식*에서 시작 하는 전체 값 식이 *시작*반환 됩니다.  
+ 반환될 *expression*의 문자 수를 지정하는 양의 정수 또는 **bigint** 식입니다. *length*가 음수이면 오류가 발생하면서 문이 종료됩니다. *start*와 *length*의 합계가 *expression*의 문자 수보다 크면 *start*에서 시작하는 전체 값 식이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 경우 문자 데이터를 반환 *식* 지원 되는 문자 데이터 형식 중 하나입니다. 경우에 이진 데이터를 반환 *식* 는 지원 되는 하나 **이진** 데이터 형식입니다. 반환되는 문자열은 다음 표에 표시된 항목을 제외하고 지정된 식과 같은 형식입니다.  
+ *expression*이 지원되는 문자 데이터 형식 중 하나이면 문자 데이터를 반환합니다. *expression*이 지원되는 **binary** 데이터 형식 중 하나이면 이진 데이터를 반환합니다. 반환되는 문자열은 다음 표에 표시된 항목을 제외하고 지정된 식과 같은 형식입니다.  
   
 |지정된 식|반환 형식|  
 |--------------------------|-----------------|  
@@ -69,18 +69,18 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>주의  
- 에 대 한 값 *시작* 및 *길이* 의 문자 수를 지정 해야 **ntext**, **char**, 또는 **varchar**  데이터 형식 및에 대 한 바이트 **텍스트**, **이미지**, **이진**, 또는 **varbinary** 데이터 형식입니다.  
+## <a name="remarks"></a>Remarks  
+ **ntext**, **char** 또는 **varchar** 데이터 형식의 문자 수와 **text**, **image**, **binary** 또는 **varbinary** 데이터 형식의 바이트에 대해 *start* 및 *length* 값을 지정해야 합니다.  
   
- *식* 해야 **varchar (max)** 또는 **varbinary (max)** 때는 *시작* 또는 *길이* 2147483647 보다 큰 값을 포함합니다.  
+ *start* 또는 *length*에 2147483647보다 큰 값이 포함된 경우 *expression*은 **varchar(max)** 또는 **varbinary(max)**여야 합니다.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
- SC (보조 문자) 데이터 정렬을 사용할 때 둘 다 *시작* 및 *길이* 각 서로게이트 쌍의 수 *식* 는 단일 문자입니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
+ SC(보조 문자) 데이터 정렬을 사용하는 경우 *start* 및 *length*가 *expression*의 각 서로게이트 쌍을 단일 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-substring-with-a-character-string"></a>1. 문자열과 SUBSTRING 사용  
- 다음 예에서는 문자열의 일부를 반환하는 방법을 보여 줍니다. `sys.databases` 테이블을이 쿼리는 시스템 데이터베이스의 이름을 반환 합니다 첫 번째 열의 두 번째 열에 데이터베이스 및 세 번째와 네 번째 문자는 마지막 열에서의 첫 번째 문자입니다.  
+ 다음 예에서는 문자열의 일부를 반환하는 방법을 보여 줍니다. 이 쿼리는 `sys.databases` 테이블에서 첫 번째 열에 시스템 데이터베이스 이름, 두 번째 열에 데이터베이스의 첫 번째 문자, 마지막 열에 세 번째 및 네 번째 문자를 반환합니다.  
   
 ```  
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
@@ -91,7 +91,7 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|name |Initial |ThirdAndFourthCharacters|
+|NAME |Initial |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
 |tempdb  |t  |mp |
@@ -119,9 +119,9 @@ bcd
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>2. text, ntext, image 데이터와 SUBSTRING 사용  
   
 > [!NOTE]  
->  다음 예제를 실행 하려면 설치 해야는 **pubs** 데이터베이스입니다.  
+>  다음 예를 실행하려면 **pubs** 데이터베이스를 설치해야 합니다.  
   
- 다음 예제에서는 각각의 처음 10 자를 반환 하는 방법을 보여 줍니다는 **텍스트** 및 **이미지** 데이터 열에는 `pub_info` 목차는 `pubs` 데이터베이스입니다. **텍스트** 데이터는 **varchar**, 및 **이미지** 데이터는 **varbinary**합니다.  
+ 다음 예에서는 `pubs` 데이터베이스의 `pub_info` 테이블에 있는 각각의 **text** 및 **image** 데이터 열에서 처음 10자를 반환하는 방법을 보여 줍니다. **text** 데이터는 **varchar**로 반환되며 **image** 데이터는 **varbinary**로 반환됩니다.  
   
 ```  
 USE pubs;  
@@ -141,7 +141,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- 다음 예제에서는 둘 다에서 부분 문자열의 효과 보여 줍니다. **텍스트** 및 **ntext** 데이터입니다. 이 예제는 먼저 `pubs` 데이터베이스에서 `npub_info`라는 새 테이블을 만듭니다. 다음 `pr_info` 열의 처음 80자로 `npub_info` 테이블의 `pub_info.pr_info` 열을 만들고 `ü`를 첫 번째 문자로 추가합니다. 마지막으로, 한 `INNER JOIN` 게시자 id 번호를 모두 검색 및 `SUBSTRING` 둘 다의 **텍스트** 및 **ntext** 게시자 정보 열의 합니다.  
+ 다음 예에서는 **text** 및 **ntext** 데이터에 SUBSTRING을 사용한 결과를 보여 줍니다. 이 예제는 먼저 `pubs` 데이터베이스에서 `npub_info`라는 새 테이블을 만듭니다. 다음 `pr_info` 열의 처음 80자로 `npub_info` 테이블의 `pub_info.pr_info` 열을 만들고 `ü`를 첫 번째 문자로 추가합니다. 마지막으로 `INNER JOIN`을 사용해 모든 게시자 ID와 **text** 및 **ntext** 게시자 정보 열의 `SUBSTRING`을 검색합니다.  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
@@ -183,7 +183,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>3. 문자열과 SUBSTRING 사용  
  다음 예에서는 문자열의 일부를 반환하는 방법을 보여 줍니다. 이 쿼리는 `dbo.DimEmployee` 테이블에서 첫 번째 열에 이름을 반환하고 두 번째 열에 머리글자를 반환합니다.  
@@ -207,7 +207,7 @@ Barber               D
 Barreto de Mattos    P
 ```  
   
- 다음 예제에서는 두 번째 반환 하는 방법을 보여 줍니다 문자열 상수의 세 번째 및 네 번째 문자 `abcdef`합니다.  
+ 다음 예는 문자열 상수 `abcdef`의 두 번째, 세 번째, 네 번째 문자를 반환하는 방법을 보여줍니다.  
   
 ```  
 USE ssawPDW;  
@@ -223,14 +223,14 @@ x
 bcd
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [왼쪽 &#40; Transact SQL &#41;](../../t-sql/functions/left-transact-sql.md)  
- [LTRIM &#40; Transact SQL &#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [오른쪽 &#40; Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40; Transact SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
- [STRING_SPLIT &#40; Transact SQL &#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [TRIM &#40; Transact SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [LEFT&#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT&#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT&#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM&#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

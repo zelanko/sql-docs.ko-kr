@@ -1,5 +1,5 @@
 ---
-title: ASCII (Transact SQL) | Microsoft Docs
+title: ASCII(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,16 +49,16 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>인수  
 *character_expression*  
-이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **char** 또는 **varchar**합니다.
+**char** 또는 **varchar** 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
  **int**  
   
-## <a name="remarks"></a>주의
-ASCII 정보 교환에 대 한 미국 표준 코드에 대 한 약어는 합니다. 이 컴퓨터에서 사용 되는 표준 인코딩 문자입니다. 목록이 ASCII 문자에 대 한 참조는 **인쇄 가능한 문자** 섹션 [ASCII](https://www.wikipedia.org/wiki/ASCII)합니다.
+## <a name="remarks"></a>Remarks
+ASCII는 American Standard Code for Information Interchange의 약어이며 컴퓨터에서 사용하는 문자 인코딩 표준입니다. ASCII 문자 목록은 [ASCII](https://www.wikipedia.org/wiki/ASCII)의 **인쇄 가능 문자** 섹션을 참조하세요.
 
 ## <a name="examples"></a>예  
-다음 예에서는 ASCII 문자 집합을 가정 하 고 반환 된 `ASCII` 6 자에 대 한 값입니다.
+다음 예에서는 대상 문자열이 ASCII 문자 집합을 사용함을 전제로 하여 6개 문자에 대한 `ASCII` 값을 반환합니다.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -74,11 +74,11 @@ A           B           a           b           1           2
 65          66          97          98          49          50  
 ```  
   
-## <a name="see-also"></a>참고 항목
- [CHAR &#40; Transact SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
- [NCHAR &#40; Transact SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)  
- [유니코드 &#40; Transact SQL &#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+ [CHAR&#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR&#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
+ [UNICODE&#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

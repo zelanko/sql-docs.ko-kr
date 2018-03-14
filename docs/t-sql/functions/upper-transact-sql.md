@@ -1,5 +1,5 @@
 ---
-title: "위 (Transact SQL) | Microsoft Docs"
+title: UPPER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ UPPER ( character_expression )
   
 ## <a name="arguments"></a>인수  
  *character_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자 데이터입니다. *character_expression* 상수, 변수 또는 문자 또는 이진 데이터의 열 수 있습니다.  
+ 문자 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다.  
   
- *character_expression* 로 암시적으로 변환할 수 있는 데이터 형식 이어야 합니다 **varchar**합니다. 그렇지 않은 경우 사용 하 여 [캐스트](../../t-sql/functions/cast-and-convert-transact-sql.md) 명시적으로 변환 하려면 *character_expression*합니다.  
+ *character_expression*은 **varchar**로 암시적으로 변환될 수 있는 데이터 형식이어야 합니다. 그렇지 않은 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md)를 사용하여 *character_expression*을 명시적으로 변환하세요.  
   
 ## <a name="return-types"></a>반환 형식  
  **varchar** 또는 **nvarchar**  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 `UPPER` 및 `RTRIM` 있는 사람의 성을 반환 하는 함수는 `dbo.DimEmployee` 대문자이 고 잘린 이름 부분과 연결 된는 테이블입니다.  
+ 다음 예에서는 `UPPER` 및 `RTRIM` 함수를 사용하여 `dbo.DimEmployee` 테이블에 있는 사람의 성을 반환합니다. 성은 대문자로 변환되고 잘린 다음, 이름 부분과 연결됩니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -79,10 +79,10 @@ ABERCROMBIE, Kim
 ABOLROUS, Hazem
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
- [아래 &#40; Transact SQL &#41;](../../t-sql/functions/lower-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [LOWER&#40;Transact-SQL&#41;](../../t-sql/functions/lower-transact-sql.md)  
   
   
 

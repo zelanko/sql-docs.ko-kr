@@ -1,5 +1,5 @@
 ---
-title: "왼쪽 (Transact SQL) | Microsoft Docs"
+title: LEFT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -49,20 +49,20 @@ LEFT ( character_expression , integer_expression )
   
 ## <a name="arguments"></a>인수  
  *character_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자 또는 이진 데이터입니다. *character_expression* 상수, 변수 또는 열일 수 있습니다. *character_expression* 제외한 데이터 형식일 수 있습니다 **텍스트** 또는 **ntext**로 암시적으로 변환할 수 있는 **varchar** 또는  **nvarchar**합니다. 그렇지 않은 경우 사용 하 여는 [캐스트](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수를 명시적으로 변환 *character_expression*합니다.  
+ 문자 또는 이진 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다. *character_expression*은 **varchar** 또는 **nvarchar**로 변환될 수 있으며 **text** 또는 **ntext**를 제외한 모든 데이터 형식일 수 있습니다. 그렇지 않을 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수를 사용하여 *character_expression*으로 명시적으로 변환합니다.  
   
  *integer_expression*  
- 문자 수를 지정 하는 양의 정수는 *character_expression* 반환 됩니다. 경우 *integer_expression* 가 음수 이면 오류가 반환 됩니다. 경우 *integer_expression* 형식이 **bigint** 큰 값을 포함 하 고 *character_expression* 와 같은 큰 데이터 형식 이어야 합니다 **varchar (max)**.  
+ 반환될 *character_expression*의 문자 수를 지정하는 양의 정수입니다. *integer_expression*이 음수이면 오류가 반환됩니다. *integer_expression*이 **bigint** 형식이고 큰 값이 포함된 경우 *character_expression*은 **varchar(max)**와 같은 큰 데이터 형식이어야 합니다.  
   
- *integer_expression* 매개 변수를 utf-16 서로게이트 문자를 한 문자로 계산 합니다.  
+ *integer_expression* 매개 변수는 UTF-16 서로게이트 문자를 한 문자로 계산합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 반환 **varchar** 때 *character_expression* 유니코드가 아닌 문자 데이터 형식이 있습니다.  
+ *character_expression*이 유니코드가 아닌 문자 데이터 형식인 경우 **varchar**를 반환합니다.  
   
- 반환 **nvarchar** 때 *character_expression* 유니코드 문자 데이터 형식이 있습니다.  
+ *character_expression*이 유니코드 문자 데이터 형식인 경우 **nvarchar**를 반환합니다.  
   
-## <a name="remarks"></a>주의  
- SC 데이터 정렬을 사용 하는 경우는 *integer_expression* 매개 변수는 한 문자로 utf-16 서로게이트 쌍을 계산 합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
+## <a name="remarks"></a>Remarks  
+ SC 데이터 정렬을 사용하는 경우 *integer_expression* 매개 변수가 UTF-16 서로게이트 쌍을 한 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   
@@ -93,7 +93,7 @@ ab
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-left-with-a-column"></a>3. 열에서 LEFT 사용  
  다음 예에서는 각 제품 이름에서 가장 왼쪽에 있는 5문자를 반환합니다.  
@@ -122,16 +122,16 @@ SELECT LEFT('abcdefg',2) FROM dbo.DimProduct;
 ab  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [LTRIM &#40; Transact SQL &#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [오른쪽 &#40; Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40; Transact SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
- [STRING_SPLIT &#40; Transact SQL &#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [부분 문자열 &#40; Transact SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
- [TRIM &#40; Transact SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
- [CAST 및 CONVERT &#40;TRANSACT-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [LTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT&#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT&#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING&#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM&#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
+ [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

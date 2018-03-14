@@ -1,5 +1,5 @@
 ---
-title: NCHAR (Transact SQL) | Microsoft Docs
+title: NCHAR(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -47,16 +47,16 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>인수  
  *integer_expression*  
- 데이터베이스의 데이터 정렬에 SC(보조 문자) 플래그가 포함되어 있지 않은 경우 이 인수는 0에서 65535(0~0xFFFF) 사이의 양의 정수입니다. 이 범위 밖의 값을 지정한 경우 NULL이 반환됩니다. 보충 문자에 대 한 자세한 내용은 참조 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)합니다.  
+ 데이터베이스의 데이터 정렬에 SC(보조 문자) 플래그가 포함되어 있지 않은 경우 이 인수는 0에서 65535(0~0xFFFF) 사이의 양의 정수입니다. 이 범위 밖의 값을 지정한 경우 NULL이 반환됩니다. 보조 문자에 대한 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)를 참조하세요.  
   
  데이터베이스의 데이터 정렬이 SC(보조 문자) 플래그를 지원하는 경우 이 인수는 0에서 1114111(0~0x10FFFF) 사이의 양의 정수입니다. 이 범위 밖의 값을 지정한 경우 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **nchar(1)** 기본 데이터베이스 데이터 정렬이 보조 문자를 지원 하지 않습니다.  
+ **nchar(1)**: 기본 데이터베이스 데이터 정렬이 보조 문자를 지원하지 않는 경우  
   
- **nvarchar(2)** 기본 데이터베이스 데이터 정렬에서 보조 문자를 지원 하면 합니다.  
+ **nvarchar(2)**: 기본 데이터베이스 데이터 정렬이 보조 문자를 지원하는 경우  
   
- 경우 매개 변수 *integer_expression* 0-0xFFFF 범위에 있을 한 문자만 반환 됩니다. 값이 더 높을 경우 NCHAR가 해당 서로게이트 쌍을 반환합니다. `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`를 사용하여 서로게이트 쌍을 생성하지 마세요. 대신 보조 문자를 지원하는 데이터베이스 데이터 정렬을 사용한 다음 서로게이트 쌍에 대한 유니코드 코드 포인트를 지정합니다. 다음 예에서는 서로게이트 쌍을 생성하는 이전 스타일의 방법과 유니코드 코드 포인트를 지정하는 기본 방법을 모두 보여 줍니다.  
+ *integer_expression* 매개 변수가 0 - 0xFFFF 범위에 있을 경우 한 문자만 반환됩니다. 값이 더 높을 경우 NCHAR가 해당 서로게이트 쌍을 반환합니다. `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`를 사용하여 서로게이트 쌍을 생성하지 마세요. 대신 보조 문자를 지원하는 데이터베이스 데이터 정렬을 사용한 다음 서로게이트 쌍에 대한 유니코드 코드 포인트를 지정합니다. 다음 예에서는 서로게이트 쌍을 생성하는 이전 스타일의 방법과 유니코드 코드 포인트를 지정하는 기본 방법을 모두 보여 줍니다.  
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
@@ -218,12 +218,12 @@ Character # Unicode Character UNICODE Value
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ASCII &#40; Transact SQL &#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [CHAR &#40; Transact SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
- [유니코드 &#40; Transact SQL &#41;](../../t-sql/functions/unicode-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [ASCII&#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [CHAR&#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
+ [UNICODE&#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: CHARINDEX (Transact SQL) | Microsoft Docs
+title: CHARINDEX(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,32 +49,32 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
   
 ## <a name="arguments"></a>인수  
 *expressionToFind*  
-문자 [식](../../t-sql/language-elements/expressions-transact-sql.md) 찾을 시퀀스가 포함 된 합니다. *expressionToFind* 8000 자로 제한 됩니다.
+찾을 시퀀스가 포함된 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md) 입니다. *expressionToFind*은 8000자로 제한됩니다.
   
 *expressionToSearch*  
 검색할 문자 식입니다.
   
 *start_location*  
-이 **정수** 또는 **bigint** 검색이 시작 되는 식입니다. 경우 *start_location* 지정 하지 않으면는 음수 이거나 0 이면의 시작 부분에서 검색이 시작 *expressionToSearch*합니다.
+검색이 시작되는 **integer** 또는 **bigint** 식입니다. *start_location*이 지정되지 않았거나 음수이거나 0이면 *expressionToSearch*의 시작 부분에서 검색이 시작됩니다.
   
 ## <a name="return-types"></a>반환 형식
-**bigint** 경우 *expressionToSearch* 입니다는 **varchar (max)**, **nvarchar (max)**, 또는 **varbinary (max)** 데이터 지원 합니다. 그렇지 않으면 **int**합니다.
+*expressionToSearch*의 데이터 형식이 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)**이면 **bigint**, 그렇지 않으면 **int**입니다.
   
-## <a name="remarks"></a>주의  
-어느 경우 *expressionToFind* 또는 *expressionToSearch* 유니코드 데이터 형식입니다 (**nvarchar** 또는 **nchar**) 하지 않으면 다른는 다른 옵션은 유니코드 데이터 형식으로 변환 됩니다. CHARINDEX는 함께 사용할 수 없습니다 **텍스트**, **ntext**, 및 **이미지** 데이터 형식입니다.
+## <a name="remarks"></a>Remarks  
+*expressionToFind* 또는 *expressionToSearch*의 데이터 형식이 Unicode(**nvarchar** 또는 **nchar**)이고 다른 하나는 그렇지 않은 경우 다른 하나는 Unicode 데이터 형식으로 변환됩니다. CHARINDEX에는 **text**, **ntext** 및 **image** 데이터 형식을 사용할 수 없습니다.
   
-어느 경우 *expressionToFind* 또는 *expressionToSearch* 가 null 인 경우 CHARINDEX는 NULL을 반환 합니다.
+*expressionToFind* 또는 *expressionToSearch*가 NULL인 경우 CHARINDEX에서 NULL을 반환합니다.
   
-경우 *expressionToFind* 에 없는 *expressionToSearch*, CHARINDEX 0을 반환 합니다.
+*expressionToFind*가 *expressionToSearch* 안에 없는 경우 CHARINDEX에서 0을 반환합니다.
   
 CHARINDEX는 입력의 데이터 정렬을 기반으로 비교를 수행합니다. 지정된 데이터 정렬에서 비교를 수행하려면 COLLATE를 사용하여 입력에 명시적 데이터 정렬을 적용할 수 있습니다.
   
 반환된 시작 위치는 0이 아닌 1부터 시작합니다.
   
-0x0000 (**char(0)**)은 Windows 데이터 정렬에서 정의 되지 않은 문자 이며 CHARINDEX에 포함할 수 없습니다.
+0x0000(**char(0)**)은 Windows 데이터 정렬에서 정의되지 않은 문자이며 CHARINDEX에 포함할 수 없습니다.
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
-SC 데이터 정렬을 사용 하는 경우 둘 다 *start_location* 두 개가 아닌 한 문자로 반환 값 개수 서로게이트 쌍입니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
+SC 데이터 정렬을 사용하는 경우 *start_location*과 반환 값 둘 다 서로게이트 쌍을 둘이 아닌 한 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
   
 ## <a name="examples"></a>예  
   
@@ -97,7 +97,7 @@ GO
 ```  
   
 ### <a name="b-searching-from-a-specific-position"></a>2. 특정 위치에서 검색  
-다음 예에서는 선택적 *start_location* 을 찾기 시작 매개 변수 `vital` 의 5 번째 문자는 `DocumentSummary` 열에는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다.
+다음 예에서는 선택적 *start_location* 매개 변수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 `DocumentSummary` 열의 5번째 문자에서 `vital`을 찾기 시작합니다.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -118,7 +118,7 @@ GO
 ```  
   
 ### <a name="c-searching-for-a-nonexistent-expression"></a>3. 존재하지 않는 식 검색  
-다음 예제에 나와 있는 경우의 결과 집합 *expressionToFind* 에 없는 *expressionToSearch*합니다.
+다음 예에서는 *expressionToFind*이 *expressionToSearch* 내에 없을 때의 결과 집합을 보여 줍니다.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -139,7 +139,7 @@ GO
 ```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>4. 대/소문자 구분 검색 수행  
-다음 예제에서는 문자열에 대 한 대/소문자 구분 검색 수행 `'TEST'` 에서 `'This is a Test``'`합니다.
+다음 예에서는 `'This is a Test``'`의 문자열 `'TEST'`에 대해 대/소문자 구분 검색을 수행합니다.
   
 ```sql
 USE tempdb;  
@@ -157,7 +157,7 @@ SELECT CHARINDEX ( 'TEST',
 0
 ```  
   
-다음 예제에서는 문자열에 대 한 대/소문자 구분 검색 수행 `'Test'` 에서 `'This is a Test'`합니다.
+다음 예에서는 `'This is a Test'`의 문자열 `'Test'`에 대해 대/소문자 구분 검색을 수행합니다.
   
 ```sql
   
@@ -195,10 +195,10 @@ GO
 13
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-searching-from-the-start-of-a-string-expression"></a>6. 문자열 식의 처음부터 검색  
-첫 번째 위치를 반환 하는 다음 예제는 `is` 문자열에 `This is a string`문자열에서 위치 1 (첫 번째 문자)부터 시작 하는 위치입니다.
+다음 예는 문자열의 위치 1(첫 번째 문자)부터 시작하여 `This is a string`의 `is` 문자열의 첫 번째 위치를 반환합니다.
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string');  
@@ -212,7 +212,7 @@ SELECT CHARINDEX('is', 'This is a string');
 ```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>7. 첫 번째 위치 이외의 위치에서 검색  
-첫 번째 위치를 반환 하는 다음 예제는 `is` 문자열에 `This is a string`된 네 번째 위치에서 시작 합니다.
+다음 예는 네 번째 위치부터 시작하여 `This is a string`의 `is` 문자열의 첫 번째 위치를 반환합니다.
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string', 4);  
@@ -225,8 +225,8 @@ SELECT CHARINDEX('is', 'This is a string', 4);
  6
  ```  
   
-### <a name="h-results-when-the-string-is-not-found"></a>8. 결과 문자열을 찾을 수 없는 경우  
-다음 예제에서는 반환 되는 경우이 값은 *string_pattern* 검색된 되는 문자열에 없습니다.
+### <a name="h-results-when-the-string-is-not-found"></a>8. 문자열이 없을 경우 결과  
+다음 예는 검색된 문자열에 *string_pattern*이 없을 경우 반환 값을 보여줍니다.
   
 ```sql
 SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;  
@@ -239,12 +239,12 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 0
 ```  
   
-## <a name="see-also"></a>참고 항목
- [Len 함수 &#40; Transact SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
- [PATINDEX &#40; Transact SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)  
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
- [+ &#40; 문자열 연결 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+## <a name="see-also"></a>관련 항목:
+ [LEN&#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
+ [PATINDEX&#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [+ &#40;문자열 연결&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

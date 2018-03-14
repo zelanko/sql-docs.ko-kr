@@ -1,5 +1,5 @@
 ---
-title: QUOTENAME (Transact SQL) | Microsoft Docs
+title: QUOTENAME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
   
 ## <a name="arguments"></a>인수  
  '*character_string*'  
- 유니코드 문자 데이터로 이루어진 문자열입니다. *character_string* 은 **sysname** 128 자로 제한 됩니다. 128자가 넘는 문자열을 입력하면 NULL이 반환됩니다.  
+ 유니코드 문자 데이터로 이루어진 문자열입니다. *character_string*은 **sysname**이며 128자로 제한됩니다. 128자가 넘는 문자열을 입력하면 NULL이 반환됩니다.  
   
  '*quote_character*'  
- 구분 기호로 사용되는 단일 문자 문자열입니다. 작은따옴표를 사용할 수 있습니다 ( **'** ), 왼쪽 또는 오른쪽 대괄호 ( **[]** ), 또는 큰따옴표 ( **"** ). 경우 *대괄호가* 를 지정 하지 않으면 대괄호가 사용 됩니다.  
+ 구분 기호로 사용되는 단일 문자 문자열입니다. 작은 따옴표( **'** ), 왼쪽 또는 오른쪽 대괄호( **[]** ) 또는 큰 따옴표( **"** )일 수 있습니다. *quote_character*를 지정하지 않은 경우 대괄호가 사용됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(258)**  
@@ -75,7 +75,7 @@ SELECT QUOTENAME('abc[]def');
   
  `abc[]def` 문자열에서 오른쪽 대괄호는 이중으로 사용되었는데, 이것은 이스케이프 문자를 나타내기 위한 것입니다.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 `abc def` 문자열에 `[` 및 `]` 문자를 추가하여 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구분 식별자로 만듭니다.  
   
 ```  
@@ -90,18 +90,18 @@ SELECT QUOTENAME('abc def');
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [PARSENAME &#40; Transact SQL &#41;](../../t-sql/functions/parsename-transact-sql.md)  
- [CONCAT &#40; Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [바꾸기 &#40; Transact SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
- [역방향 &#40; Transact SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40; Transact SQL &#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40; Transact SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40; Transact SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [변환 &#40; Transact SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [PARSENAME&#40;Transact-SQL&#41;](../../t-sql/functions/parsename-transact-sql.md)  
+ [CONCAT&#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS&#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [REPLACE&#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE&#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG&#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE&#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF&#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE&#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

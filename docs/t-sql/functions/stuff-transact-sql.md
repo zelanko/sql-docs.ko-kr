@@ -1,5 +1,5 @@
 ---
-title: STUFF (Transact SQL) | Microsoft Docs
+title: STUFF(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -52,27 +52,27 @@ STUFF ( character_expression , start , length , replaceWith_expression )
   
 ## <a name="arguments"></a>인수  
  *character_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자 데이터입니다. *character_expression* 상수, 변수 또는 문자 또는 이진 데이터의 열 수 있습니다.  
+ 문자 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다.  
   
  *start*  
- 삭제 및 삽입 시작 위치를 지정하는 정수 값입니다. 경우 *시작* 가 음수 또는 0 이면 null 문자열이 반환 됩니다. 경우 *시작* 첫 번째 보다 긴 *character_expression*, null 문자열이 반환 됩니다. *시작* 유형일 수 **bigint**합니다.  
+ 삭제 및 삽입 시작 위치를 지정하는 정수 값입니다. *start*가 음수 또는 0이면 Null 문자열이 반환됩니다. *start*가 첫 번째 *character_expression*보다 긴 경우 null 문자열이 반환됩니다. *start*는 **bigint** 형식일 수 있습니다.  
   
  *length*  
- 삭제할 문자 수를 지정하는 정수입니다. 경우 *길이* 가 음수 이면 null 문자열이 반환 됩니다. 경우 *길이* 첫 번째 보다 긴 *character_expression*, 문자까지 삭제 마지막으로 다음 시간이 내의 *character_expression*합니다.  경우 *길이* 삽입 문자열의 첫 번째 문자가 앞에 오는 0이 됩니다. *길이* 유형일 수 **bigint**합니다.
+ 삭제할 문자 수를 지정하는 정수입니다. *length*가 음수이면 null 문자열이 반환됩니다. *length*가 첫 번째 *character_expression*보다 긴 경우 마지막 *character_expression*의 마지막 문자까지 삭제됩니다.  *length*가 0인 경우 문자열의 첫 번째 문자 앞에서 삽입됩니다. *length*는 **bigint** 형식일 수 있습니다.
 
  *replaceWith_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자 데이터입니다. *character_expression* 상수, 변수 또는 문자 또는 이진 데이터의 열 수 있습니다. 이 식은 대체 *길이* 자의 *character_expression* 에서 시작 *시작*합니다. 제공 `NULL` 로 *replaceWith_expression*, 아무 것도 삽입 하지 않고 문자를 제거 합니다.   
+ 문자 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다. 이 식은 *character_expression*에서 *start*부터 *length*문자를 바꿉니다. `NULL`를 *replaceWith_expression*으로 제공할 경우 아무 것도 삽입하지 않고 문제를 제거합니다.   
   
 ## <a name="return-types"></a>반환 형식  
- 경우 문자 데이터를 반환 *character_expression* 지원 되는 문자 데이터 형식 중 하나입니다. 경우에 이진 데이터를 반환 *character_expression* 지원 되는 이진 데이터 형식 중 하나입니다.  
+ 지원되는 문자 데이터 형식 중 *character_expression*이 이 있을 경우 문자 데이터를 반환합니다. 지원되는 이진 데이터 형식 중 *character_expression*이 이 있을 경우 이진 데이터를 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  시작 위치 또는 길이가 음수이거나 시작 위치가 첫 번째 문자열의 길이를 넘어서면 null 문자열이 반환됩니다. 시작 위치가 0일 경우 Null 값이 반환됩니다. 삭제할 길이가 첫 번째 문자열보다 길면 첫 번째 문자열의 첫 번째 문자까지 삭제됩니다.  
 
 결과 값이 반환 유형이 지원하는 최대값보다 크면 오류가 발생합니다.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
- SC 데이터 정렬을 사용 하는 경우 둘 다 *character_expression* 및 *replaceWith_expression* 서로게이트 쌍을 포함할 수 있습니다. 각 서로게이트를 계산 하는 길이 매개 변수 *character_expression* 는 단일 문자입니다.  
+ SC 데이터 정렬을 사용할 경우 *character_expression* 및 *replaceWith_expression* 모두 서로게이트 쌍을 포함할 수 있습니다. 길이 매개 변수는 *character_expression*의 각 서로게이트를 단일 문자로 계산합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 첫 문자열 `abcdef`에서 `2` 위치의 `b`부터 세 문자를 삭제하고 삭제 지점에 두 번째 문자열을 삽입하여 만든 문자열을 반환합니다.  
@@ -91,15 +91,15 @@ aijklmnef
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [CONCAT &#40; Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [Quotename&#40; Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [바꾸기 &#40; Transact SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
- [역방향 &#40; Transact SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40; Transact SQL &#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40; Transact SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [변환 &#40; Transact SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [CONCAT&#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS&#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME&#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE&#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE&#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG&#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE&#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [TRANSLATE&#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  

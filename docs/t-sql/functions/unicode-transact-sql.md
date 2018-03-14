@@ -1,5 +1,5 @@
 ---
-title: "유니코드 (Transact SQL) | Microsoft Docs"
+title: UNICODE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,12 +48,12 @@ UNICODE ( 'ncharacter_expression' )
   
 ## <a name="arguments"></a>인수  
  **'** *ncharacter_expression* **'**  
- 이 **nchar** 또는 **nvarchar** 식입니다.  
+ **nchar** 또는 **nvarchar** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]버전 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서는 UNICODE 함수가 0에서 0xFFFF까지 범위의 UCS-2 코드 포인트를 반환합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이후 버전에서는 SC 데이터 정렬을 사용할 때 UNICODE가 0에서 0x10FFFF까지 범위의 UTF-16 코드 포인트를 반환합니다.  
   
 ## <a name="examples"></a>예  
@@ -145,12 +145,12 @@ Character # Unicode Character UNICODE Value
 12          4                 52  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ASCII &#40; Transact SQL &#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [CHAR &#40; Transact SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
- [NCHAR &#40; Transact SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+## <a name="see-also"></a>참고 항목  
+ [ASCII&#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [CHAR&#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR&#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

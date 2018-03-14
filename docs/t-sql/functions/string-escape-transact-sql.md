@@ -1,5 +1,5 @@
 ---
-title: STRING_ESCAPE (Transact SQL) | Microsoft Docs
+title: STRING_ESCAPE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/25/2016
 ms.prod: sql-non-specified
@@ -31,10 +31,10 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact SQL)
+# <a name="stringescape-transact-sql"></a>STRING_ESCAPE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  텍스트에서 특수 문자를 이스케이프 하 고 이스케이프 문자가 있는 텍스트를 반환 합니다. **STRING_ESCAPE** 는 결정적 함수입니다.  
+  텍스트의 특수 문자를 이스케이프하고 이스케이프 문자가 포함된 텍스트를 반환합니다. **STRING_ESCAPE**는 결정적 함수입니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,19 +46,19 @@ STRING_ESCAPE( text , type )
   
 ## <a name="arguments"></a>인수  
  *text*  
- 이 **nvarchar**[식](../../t-sql/language-elements/expressions-transact-sql.md) 이스케이프 해야 하는 개체를 나타내는 식입니다.  
+ 이스케이프해야 하는 개체를 나타내는 **nvarchar**[expression](../../t-sql/language-elements/expressions-transact-sql.md) 식입니다.  
   
  *type*  
- 적용 되는 이스케이프 규칙입니다. 현재 지원 되는 값은 `'json'`합니다.  
+ 적용될 규칙을 이스케이프합니다. 현재 지원되는 값은 `'json'`입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **nvarchar (max)** 이스케이프 된 특수 한 및 제어 문자가 포함 된 텍스트입니다. 현재 **STRING_ESCAPE** 만 다음 표에 표시 된 JSON 특수 문자를 이스케이프할 수 있습니다.  
+ 이스케이프된 특수 및 제어 문자가 포함된 **nvarchar(max)** 텍스트입니다. 현재 **STRING_ESCAPE**는 다음 표에 나와 있는 JSON 특수 문자만 이스케이프할 수 있습니다.  
   
 |특수 문자|인코딩된 시퀀스|  
 |-----------------------|----------------------|  
 |따옴표(")|\\"|  
-|역방향 solidus (\\)|\\\|  
-|Solidus (/)|\\/|  
+|백슬래시(\\)|\\\|  
+|슬래시(/)|\\/|  
 |백스페이스|\b|  
 |용지 공급|\f|  
 |줄 바꿈|\n|  
@@ -72,12 +72,12 @@ STRING_ESCAPE( text , type )
 |...|...|  
 |CHAR(31)|\u001f|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>예  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>1.  JSON 서식 설정 규칙에 따라 텍스트를 이스케이프 합니다.  
- 다음 쿼리는 JSON 규칙을 사용 하는 특수 문자를 이스케이프 하 고 이스케이프 된 텍스트를 반환 합니다.  
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>1.  JSON 서식 지정 규칙에 따라 텍스트를 이스케이프합니다  
+ 다음 쿼리는 JSON 규칙을 사용하여 특수 문자를 이스케이프하며 이스케이프된 텍스트를 반환합니다.  
   
 ```  
 SELECT STRING_ESCAPE('\   /  
@@ -92,24 +92,24 @@ escapedText
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>2. JSON 개체의 서식  
- 다음 쿼리는 숫자 및 문자열 변수에서 JSON 텍스트를 만들고 변수에 있는 특수 한 JSON 문자를 이스케이프 합니다.  
+### <a name="b-format-json-object"></a>2. JSON 개체 서식 지정  
+ 다음 쿼리는 숫자 및 문자열 변수에서 JSON 텍스트를 만들며 변수의 모든 특수 JSON 문자를 이스케이프합니다.  
   
 ```  
 SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',   
     17, STRING_ESCAPE(@name,'json'), STRING_ESCAPE(@surname,'json') );  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [CONCAT &#40; Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [Quotename&#40; Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [바꾸기 &#40; Transact SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
- [역방향 &#40; Transact SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40; Transact SQL &#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STUFF &#40; Transact SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [변환 &#40; Transact SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CONCAT&#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS&#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME&#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE&#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE&#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG&#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STUFF&#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE&#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

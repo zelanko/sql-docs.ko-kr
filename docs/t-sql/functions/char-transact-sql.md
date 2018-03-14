@@ -1,5 +1,5 @@
 ---
-title: CHAR (Transact SQL) | Microsoft Docs
+title: CHAR(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="char-transact-sql"></a>CHAR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-변환 된 **int** 문자로 ASCII 코드.
+**int** ASCII 코드를 문자로 변환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,15 +55,15 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>인수  
 *integer_expression*  
-0에서 255 사이의 정수입니다. `NULL`정수 식이이 범위에 없으면 반환 됩니다.
+0에서 255 사이의 정수입니다. 정수 식이 이 범위에 속하지 않으면 `NULL`이 반환됩니다.
   
 ## <a name="return-types"></a>반환 형식
 **char(1)**
   
-## <a name="remarks"></a>주의  
-`CHAR`데 사용할 수는 문자열에 제어 문자를 삽입 합니다. 다음 표에서는 자주 사용되는 제어 문자를 보여 줍니다.
+## <a name="remarks"></a>Remarks  
+문자열에 제어 문자를 삽입하는 데 `CHAR`를 사용할 수 있습니다. 다음 표에서는 자주 사용되는 제어 문자를 보여 줍니다.
   
-|제어 문자|Value|  
+|제어 문자|값|  
 |---|---|
 |탭|**char(9)**|  
 |줄 바꿈|**char(10)**|  
@@ -132,10 +132,10 @@ ken0@adventure-works.com
 (1 row(s) affected)
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>3. ASCII 및 CHAR를 사용하여 문자열의 ASCII 값 인쇄  
-다음 예제에서는 설정 하 고 6 개 ASCII 문자 숫자에 대 한 문자 값을 반환 하는 ASCII 문자를 가정 합니다.
+다음 예에서는 대상 문자열이 ASCII 문자 집합을 사용함을 전제로 하여 6개 ASCII 문자 숫자에 대한 문자값을 반환합니다.
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +152,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>4. CHAR를 사용하여 제어 문자 삽입  
-다음 예제에서는 `CHAR(13)` 결과가 텍스트로 반환 될 때 별도 줄에는 데이터베이스에 대 한 정보를 반환 하 합니다.
+다음 예에서는 결과가 텍스트로 반환될 때 `CHAR(13)`을 사용하여 데이터베이스에 대한 정보를 별도 라인에 반환합니다.
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   
@@ -173,12 +173,12 @@ AdventureWorksPDW2012    was created on  2014-05-07 09:05:07.083
 AdventureWorksPDW2012    is currently  ONLINE  
 ```
   
-## <a name="see-also"></a>참고 항목
- [ASCII &#40; Transact SQL &#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [NCHAR &#40; Transact SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)  
- [유니코드 &#40; Transact SQL &#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [+ &#40; 문자열 연결 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+ [ASCII&#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [NCHAR&#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
+ [UNICODE&#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
+ [+ &#40;문자열 연결&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

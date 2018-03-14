@@ -1,5 +1,5 @@
 ---
-title: REPLACE (Transact SQL) | Microsoft Docs
+title: REPLACE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -50,25 +50,25 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
 ## <a name="arguments"></a>인수  
  *string_expression*  
- 문자열은 [식](../../t-sql/language-elements/expressions-transact-sql.md) 를 검색할 수 있습니다. *string_expression* 문자 또는 이진 데이터 형식일 수 있습니다.  
+ 검색할 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *string_expression*는 문자 또는 이진 데이터 형식일 수 있습니다.  
   
  *string_*pattern  
- 찾을 부분 문자열입니다. *string_pattern* 문자 또는 이진 데이터 형식일 수 있습니다. *string_pattern* 빈 문자열 (") 될 수 없습니다 하며 페이지에 맞는 최대 바이트 수를 초과 하지 않아야 합니다.  
+ 찾을 부분 문자열입니다. *string_expression*은 문자 또는 이진 데이터 형식일 수 있습니다. *string_pattern*은 빈 문자열('')일 수 없으며 페이지 크기에 맞는 최대 바이트 수를 초과하지 않아야 합니다.  
   
  *string_*replacement  
- 대체 문자열입니다. *string_replacement* 문자 또는 이진 데이터 형식일 수 있습니다.  
+ 대체 문자열입니다. *string_replacement*는 문자 또는 이진 데이터 형식일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 반환 **nvarchar** 의 입력된 인수 중 하나가 경우는 **nvarchar** 데이터 입력 그렇지 않으면 REPLACE 반환 **varchar**합니다.  
+ 입력 인수 중 하나의 데이터 형식이 **nvarchar**이면 REPLACE는 **nvarchar**를 반환하고 그렇지 않으면 **varchar**를 반환합니다.  
   
  인수 중에 Null이 있으면 NULL을 반환합니다.  
   
- 경우 *string_expression* 다른 형식의 **varchar (max)** 또는 **nvarchar (max), REPLACE** 반환 값을 8, 000 바이트에서 자릅니다. 8, 000 바이트 보다 큰 값을 반환 하려면 *string_expression* 큰 값 데이터 형식으로 명시적으로 캐스팅 되어야 합니다.  
+ *string_expression*의 형식이 **varchar(max)** 또는 **nvarchar(max)가 아닌 경우 REPLACE**는 반환 값을 8,000 바이트에서 자릅니다. 8,000바이트를 초과하는 값을 반환하려면 *string_expression*을 큰 값 데이터 형식으로 명시적으로 캐스팅해야 합니다.  
   
-## <a name="remarks"></a>주의  
- REPLACE는 입력의 데이터 정렬을 기반으로 비교를 수행합니다. 지정된 된 데이터 정렬에서 비교를 수행 하려면 사용할 수 있습니다 [COLLATE](~/t-sql/statements/collations.md) 입력에 명시적 데이터 정렬을 적용할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ REPLACE는 입력의 데이터 정렬을 기반으로 비교를 수행합니다. 지정된 데이터 정렬에서 비교를 수행하려면 [COLLATE](~/t-sql/statements/collations.md)를 사용하여 입력에 명시적 데이터 정렬을 적용할 수 있습니다.  
   
- 0x0000 (**char(0)**)은 Windows 데이터 정렬에서 정의 되지 않은 문자 이며 REPLACE에 포함할 수 없습니다.  
+ 0x0000 (**char(0)**)은 Windows 데이터 정렬에서 정의되지 않은 문자이며 REPLACE에 포함할 수 없습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `cde`의 `abcdefghi` 문자열을 `xxx`로 대체합니다.  
@@ -103,16 +103,16 @@ This is a desk
 ```  
 
   
-## <a name="see-also"></a>관련 항목:  
- [CONCAT &#40; Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [Quotename&#40; Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [역방향 &#40; Transact SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40; Transact SQL &#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40; Transact SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40; Transact SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [변환 &#40; Transact SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [CONCAT&#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS&#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME&#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REVERSE&#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG&#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE&#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF&#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE&#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   

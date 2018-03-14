@@ -1,5 +1,5 @@
 ---
-title: "집계 함수 (Transact SQL) | Microsoft Docs"
+title: "집계 함수(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/16/2018
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/18/2018
 
 집계 함수는 값 집합에 대한 계산을 수행하고 단일 값을 반환합니다. COUNT를 제외한 집계 함수는 Null 값을 무시합니다 집계 함수는 SELECT 문의 GROUP BY 절과 함께 사용하는 경우가 많습니다.
   
-모든 집계 함수는 결정적입니다. 즉, 집계 함수는 특정 입력 값 집합을 사용하여 호출될 때 항상 동일한 값을 반환합니다. 함수 결정성에 대 한 자세한 내용은 참조 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)합니다. [OVER 절](../../t-sql/queries/select-over-clause-transact-sql.md) GROUPING 및 GROUPING_ID를 제외한 모든 집계 함수를 따를 수 있습니다.
+모든 집계 함수는 결정적입니다. 즉, 집계 함수는 특정 입력 값 집합을 사용하여 호출될 때 항상 동일한 값을 반환합니다. 함수 결정성에 대한 자세한 내용은 [결정적 함수 및 비 결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요. [OVER 절](../../t-sql/queries/select-over-clause-transact-sql.md)은 GROUPING 및 GROUPING_ID를 제외한 모든 집계 함수에서 사용할 수 있습니다.
   
 집계 함수는 다음과 같은 식으로만 사용할 수 있습니다.
 -   SELECT 문의 SELECT 목록(하위 쿼리 또는 외부 쿼리)  
@@ -54,8 +54,8 @@ ms.lasthandoff: 01/18/2018
 |[GROUPING_ID](../../t-sql/functions/grouping-id-transact-sql.md)|[VAR](../../t-sql/functions/var-transact-sql.md)|  
 |[MAX](../../t-sql/functions/max-transact-sql.md)|[VARP](../../t-sql/functions/varp-transact-sql.md)|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [기본 제공 함수s&#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)  
-[절 &#40; 조치 Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

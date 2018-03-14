@@ -1,5 +1,5 @@
 ---
-title: REVERSE (Transact SQL) | Microsoft Docs
+title: REVERSE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ REVERSE ( string_expression )
   
 ## <a name="arguments"></a>인수  
  *string_expression*  
- *string_expression* 는 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자열 또는 이진 데이터 형식입니다. *string_expression* 상수, 변수 또는 문자 또는 이진 데이터의 열 수 있습니다.  
+ *string_expression*은 문자열 또는 이진 데이터 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *string_expression*은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **varchar** 또는 **nvarchar**  
   
-## <a name="remarks"></a>주의  
- *string_expression* 로 암시적으로 변환할 수 있는 데이터 형식 이어야 합니다 **varchar**합니다. 그렇지 않은 경우 사용 하 여 [캐스트](../../t-sql/functions/cast-and-convert-transact-sql.md) 명시적으로 변환 하려면 *string_expression*합니다.  
+## <a name="remarks"></a>Remarks  
+ *string_expression*은 **varchar**로 암시적으로 변환될 수 있는 데이터 형식이어야 합니다. 그렇지 않은 경우 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md)를 사용하여 *string_expression*을 명시적으로 변환하세요.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
  SC 데이터 정렬을 사용할 때 REVERSE 함수는 서로게이트 쌍에 포함된 두 항목의 순서를 반대로 반환하지 않습니다.  
@@ -92,34 +92,34 @@ SELECT REVERSE(@myvar) AS Reversed ;
 GO  
 ```  
   
- 다음 예제에서는 암시적 변환이 **int** 데이터 형식에 **varchar** 데이터 입력 한 다음 결과 반대로 바꿉니다.  
+ 다음 예에서는 **int** 데이터 형식을 **varchar** 데이터 형식으로 암시적으로 변환한 다음, 결과를 반대로 만듭니다.  
   
 ```  
 SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 모든 데이터베이스의 이름을 반환 되 고 이름에는 문자 사용.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 모든 데이터베이스 이름의 문자를 반대로 반환합니다.  
   
 ```  
 SELECT name, REVERSE(name) FROM sys.databases;  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [CONCAT &#40; Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [Quotename&#40; Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [바꾸기 &#40; Transact SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
- [STRING_AGG &#40; Transact SQL &#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40; Transact SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40; Transact SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [변환 &#40; Transact SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
- [CAST 및 CONVERT &#40;TRANSACT-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CONCAT&#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS&#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME&#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE&#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [STRING_AGG&#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE&#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF&#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE&#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

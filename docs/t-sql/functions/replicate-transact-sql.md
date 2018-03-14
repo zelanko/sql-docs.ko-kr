@@ -1,5 +1,5 @@
 ---
-title: REPLICATE (Transact SQL) | Microsoft Docs
+title: REPLICATE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ REPLICATE ( string_expression ,integer_expression )
   
 ## <a name="arguments"></a>인수  
  *string_expression*  
- 문자 또는 이진 데이터 형식의 식입니다. *string_expression* 문자 또는 이진 데이터 일 수 있습니다.  
+ 문자 또는 이진 데이터 형식의 식입니다. *string_expression*는 문자 또는 이진 데이터일 수 있습니다.  
   
 > [!NOTE]  
->  경우 *string_expression* 다른 형식의 **varchar (max)** 또는 **nvarchar (max)**, REPLICATE는 반환 값 8, 000 바이트에서 자릅니다. 8, 000 바이트 보다 큰 값을 반환 하려면 *string_expression* 적절 한 큰 값 데이터 형식으로 명시적으로 캐스팅 되어야 합니다.  
+>  *string_expression*의 형식이 **varchar(max)** 또는 **nvarchar(max)**가 아닌 경우 REPLACE는 반환 값을 8,000 바이트에서 자릅니다. 8,000바이트를 초과하는 값을 반환하려면 *string_expression*을 적절한 큰 값 데이터 형식으로 명시적으로 캐스팅해야 합니다.  
   
  *integer_expression*  
- 모든 정수 형식의 식이 포함 하 여 **bigint**합니다. 경우 *integer_expression* 가 음수 이면 NULL이 반환 됩니다.  
+ **bigint**를 포함하는 정수 유형의 식입니다. *integer_expression*이 음수이면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 과 같은 유형을 반환 *string_expression*합니다.  
+ *string_expression*과 같은 유형을 반환합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -123,10 +123,10 @@ Varchar Column        Char Column
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C: REPLICATE 사용  
- 다음 예에서는 복제는 `0` 4 번의 앞에 문자는 `ItemCode` 값입니다.  
+### <a name="c-using-replicate"></a>3. REPLICATE 사용  
+ 다음 예에서는 `ItemCode` 값 앞의 `0` 문자를 4번 복제합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -138,7 +138,7 @@ FROM dbo.DimProduct
 ORDER BY Name;  
 ```  
   
- 다음 결과 집합의 첫 번째 행은입니다.  
+ 다음은 결과 집합의 첫 번째 행입니다.  
   
  ```
 Name                     ItemCode       FullItemCode
@@ -151,10 +151,10 @@ AWC Logo Cap             CA-1098        0000CA-1098
 BB Ball Bearing          BE-2349        0000BE-2349
  ```  
   
-## <a name="see-also"></a>관련 항목:  
- [공간 &#40; Transact SQL &#41;](../../t-sql/functions/space-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [SPACE&#40;Transact-SQL&#41;](../../t-sql/functions/space-transact-sql.md)  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

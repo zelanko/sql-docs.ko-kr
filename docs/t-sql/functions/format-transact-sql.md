@@ -1,5 +1,5 @@
 ---
-title: "형식 (Transact SQL) | Microsoft Docs"
+title: FORMAT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -49,50 +49,50 @@ FORMAT ( value, format [, culture ] )
  서식을 지정할 지원되는 데이터 형식의 식입니다. 유효한 형식 목록은 다음 설명 섹션의 표를 참조하세요.  
   
  *format*  
- **nvarchar** 형식 패턴입니다.  
+ **nvarchar** 형식 패턴  
   
- *형식* 인수 있어야 유효한.NET Framework 형식 문자열을 표준 형식 문자열 (예를 들어, "C" 또는 "D") 또는 사용자 지정 문자 패턴으로 날짜 및 숫자 값 (예를 들어 "MMMM DD, yyyy (dddd)")에 대 한 . 복합 서식 지정은 지원되지 않습니다. 이러한 서식 지정 패턴의 전체 내용은 일반 형식 지정에 문자열, 사용자 지정 날짜 및 시간 형식 및 사용자 지정 숫자 형식에.NET Framework 설명서를 참조 하십시오. 좋은 출발점 항목은 "[형식](http://go.microsoft.com/fwlink/?LinkId=211776)."  
+ *format* 인수는 유효한 .NET Framework 형식 문자열을 표준 형식 문자열(예: "C" 또는 "D") 또는 날짜 및 숫자 값에 대한 사용자 지정 문자 패턴(예: "MMMM DD, yyyy (dddd)")으로 포함해야 합니다. 복합 서식 지정은 지원되지 않습니다. 이러한 형식 지정 패턴에 대한 자세한 설명은 .NET Framework 설명서에서 일반적인 문자열 서식 지정, 사용자 지정 날짜 및 시간 형식 및 사용자 지정 숫자 형식을 참조하세요. 시작할 때 유용한 항목은 "[형식 지정](http://go.microsoft.com/fwlink/?LinkId=211776)"입니다.  
   
  *culture*  
- 선택적 **nvarchar** 문화권을 지정 하는 인수입니다.  
+ culture를 지정하는 선택적 **nvarchar** 인수입니다.  
   
- 경우는 *문화권* 인수 제공 하지 않으면, 현재 세션의 언어가 사용 됩니다. 이 언어는 SET LANGUAGE 문을 사용하여 명시적으로 또는 암시적으로 설정됩니다. *문화권* ; 인수로 서.NET Framework에서 지 원하는 모든 culture를 허용 하 여 명시적으로 지 원하는 언어로 제한 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 경우는 *문화권* 인수가 유효 하지 않을, 형식에서 오류가 발생 합니다.  
+ *culture* 인수를 지정하지 않으면 현재 세션의 언어가 사용됩니다. 이 언어는 SET LANGUAGE 문을 사용하여 명시적으로 또는 암시적으로 설정됩니다. *culture*에 지정할 수 있는 culture는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 명시적으로 지원하는 언어로만 국한되지 않으며 .NET Framework에서 인수로 지원하는 모든 culture를 지정할 수 있습니다. *culture* 인수가 유효하지 않을 경우 FORMAT은 오류를 발생시킵니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar** 또는 null  
   
- 반환 값의 길이에 의해 결정 됩니다는 *형식*합니다.  
+ 반환 값의 길이는 *format*에 의해 결정됩니다.  
   
-## <a name="remarks"></a>주의  
- 지정 된 형식 오류에 대 한 아닌 NULL을 반환는 *문화권* 없는 *유효한*합니다. 값에 지정 된 경우 NULL이 반환 하는 예를 들어 *형식* 올바르지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ FORMAT은 *valid*가 아닌 *culture* 이외의 다른 오류에 대해 NULL을 반환합니다. 예를 들어 *format*에 지정된 값이 유효하지 않으면 NULL이 반환됩니다.  
  
- FORMAT 함수는 비결 정적입니다.   
+ FORMAT 함수는 비결정적입니다.   
   
- 부여의는.NET Framework 런타임 CLR (공용 언어) 형식을 사용 합니다.  
+ FORMAT은 .NET Framework CLR(공용 언어 런타임)이 설치되어 있어야 사용할 수 있습니다.  
   
- 이 함수는 clr에 의존 하므로 원격 일 수 없습니다. 원격 서비스의 CLR을 필요로 하는 함수는 원격 서버에서 오류가 발생할 수 있습니다.  
+ 이 함수는 CLR이 있어야 실행되므로 원격에서 실행할 수 없습니다. CLR이 설치되어 있어야만 실행되는 함수를 원격에서 호출할 경우 원격 서버에서 오류가 발생합니다.  
   
- 형식 서식 설정 규칙 사항이 콜론과 마침표를 이스케이프 해야 하는 CLR에 의존 합니다. 따라서는 형식 (두 번째 매개 변수) 문자열에 콜론 또는 마침표, 콜론 또는 기간 때 입력된 값 백슬래시로 이스케이프 되어야 합니다 (첫 번째 매개 변수)는는 **시간** 데이터 형식입니다. 참조 [D. 형식 시간 데이터 형식으로](#ExampleD)합니다.  
+ FORMAT은 콜론과 마침표를 이스케이프해야 하는 CLR 서식 지정 규칙이 있어야 실행됩니다. 따라서 형식 문자열(두 번째 매개 변수)에 콜론 또는 마침표가 포함된 경우 입력 값(첫 번째 매개 변수)이 **time** 데이터 형식이면 백슬래시로 콜론 또는 마침표를 이스케이프해야 합니다. [4. 시간 데이터 형식이 포함된 FORMAT](#ExampleD)  
   
- 다음 표에서 사용할 수 있는 데이터 형식에 대 한는 *값* 해당.NET Framework 매핑 해당 유형과 함께 인수입니다.  
+ 다음 표에서는 *value* 인수에 사용할 수 있는 데이터 형식과 함께 .NET Framework 매핑에서 이에 해당하는 데이터 형식을 보여 줍니다.  
   
 |범주|형식|.NET 형식|  
 |--------------|----------|---------------|  
 |숫자|bigint|Int64|  
-|숫자|int|Int32|  
-|숫자|smallint|Int16|  
-|숫자|tinyint|Byte|  
+|숫자|ssNoversion|Int32|  
+|숫자|SMALLINT|Int16|  
+|숫자|TINYINT|Byte|  
 |숫자|decimal|SqlDecimal|  
-|숫자|numeric|SqlDecimal|  
-|숫자|float|Double|  
-|숫자|real|Single|  
-|숫자|smallmoney|Decimal|  
+|숫자|NUMERIC|SqlDecimal|  
+|숫자|FLOAT|Double|  
+|숫자|REAL|Single|  
+|숫자|SMALLMONEY|Decimal|  
 |숫자|money|Decimal|  
-|날짜 및 시간|date|과 같이 지원되는|  
-|날짜 및 시간|time|TimeSpan|  
-|날짜 및 시간|datetime|과 같이 지원되는|  
-|날짜 및 시간|smalldatetime|과 같이 지원되는|  
-|날짜 및 시간|datetime2|DateTime|  
+|날짜 및 시간|날짜|DateTime|  
+|날짜 및 시간|Time|TimeSpan|  
+|날짜 및 시간|DATETIME|DateTime|  
+|날짜 및 시간|smalldatetime|DateTime|  
+|날짜 및 시간|Datetime2|DateTime|  
 |날짜 및 시간|datetimeoffset|DateTimeOffset|  
   
 ## <a name="examples"></a>예  
@@ -130,7 +130,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 ```  
   
 ### <a name="b-format-with-custom-formatting-strings"></a>2. 사용자 지정 서식 문자열이 포함된 FORMAT  
- 다음 예에서는 사용자 지정 서식을 지정하여 숫자 값의 서식을 지정하는 방법을 보여 줍니다. 이 예제에서는 현재 날짜가 2012 년 9 월 27 일 이라고 가정 합니다. 이러한 오류 코드 및 기타 사용자 지정 형식에 대 한 자세한 내용은 참조 [사용자 지정 숫자 형식 문자열](http://msdn.microsoft.com/library/0c899ak8.aspx)합니다.  
+ 다음 예에서는 사용자 지정 서식을 지정하여 숫자 값의 서식을 지정하는 방법을 보여 줍니다. 이 예는 현재 날짜가 2012년 9월 27일인 경우를 가정합니다. 이러한 서식과 다른 사용자 지정 서식에 대한 자세한 내용은 [사용자 지정 숫자 형식 문자열](http://msdn.microsoft.com/library/0c899ak8.aspx)을 참조하세요.  
   
 ```sql  
 DECLARE @d DATETIME = GETDATE();  
@@ -149,7 +149,7 @@ DateTime Result  Custom Number Result
 ```  
   
 ### <a name="c-format-with-numeric-types"></a>3. 숫자 유형이 있는 FORMAT  
- 5 개의 행을 반환 하는 다음 예제는 **Sales.CurrencyRate** 테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. 열 **EndOfDateRate** 형식으로 저장 되어 **money** 테이블에 있습니다. 이 예에서는 서식이 지정되지 않은 상태로 열이 반환된 다음 .NET 숫자 형식, 일반 형식 및 통화 형식 유형 중 하나로 서식이 지정됩니다. 이러한 오류 코드 및 다른 숫자 형식에 대 한 자세한 내용은 참조 [표준 숫자 형식 문자열](http://msdn.microsoft.com/library/dwhawy9k.aspx)합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 **Sales.CurrencyRate** 테이블에서 5개의 행을 반환합니다. **EndOfDateRate** 열은 테이블에 **money** 유형으로 저장됩니다. 이 예에서는 서식이 지정되지 않은 상태로 열이 반환된 다음 .NET 숫자 형식, 일반 형식 및 통화 형식 유형 중 하나로 서식이 지정됩니다. 이러한 형식과 다른 숫자 형식에 대한 자세한 내용은 [표준 숫자 형식 문자열](http://msdn.microsoft.com/library/dwhawy9k.aspx)을 참조하세요.  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  
@@ -198,24 +198,24 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
  (5 row(s) affected)  
 ```  
   
-###  <a name="ExampleD"></a> 4. 시간 데이터 유형이 있는 FORMAT  
- 지정 된 형식 때문에 이러한 경우에 NULL을 반환 `.` 및 `:` 는 이스케이프 되지 않습니다.  
+###  <a name="ExampleD"></a> 4. 시간 데이터 형식이 포함된 FORMAT  
+ 이러한 경우 `.` 및 `:`가 이스케이프되지 않으므로 FORMAT에서 NULL을 반환합니다.  
   
 ```sql  
 SELECT FORMAT(cast('07:35' as time), N'hh.mm');   --> returns NULL  
 SELECT FORMAT(cast('07:35' as time), N'hh:mm');   --> returns NULL  
 ```  
   
- 때문에 지정 된 형식 반환 서식이 지정 된 문자열의 `.` 및 `:` 이스케이프 됩니다.  
+ `.` 및 `:`가 이스케이프되지 않으므로 Format에서 서식이 지정된 문자열을 반환합니다.  
   
 ```sql  
 SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35  
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
- [STR &#40; Transact SQL &#41;](../../t-sql/functions/str-transact-sql.md)  
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [STR&#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
