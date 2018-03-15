@@ -1,7 +1,7 @@
 ---
 title: "Synchronize 명령 (TMSL) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 03/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdf14cf2c3ac199c1108cd8d1178ede676976baa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b2bd9ea464b69e1b62ada91fbdee23f790080f86
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="synchronize-command-tmsl"></a>Synchronize 명령 TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Analysis Services 데이터베이스를 기존의 다른 데이터베이스와 동기화합니다.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 ||||  
 |-|-|-|  
 |**속성**|**Default**|**설명**|  
-|database||동기화 할 데이터베이스 개체의 이름입니다.|  
+|데이터베이스||동기화 할 데이터베이스 개체의 이름입니다.|  
 |원본(source)||원본 서버에 연결 하는 데 연결 문자열입니다.|  
 |synchronizeSecurity|skipMembership|역할 및 사용 권한이 포함 되는 보안 정의 복원 하는 방법을 지정 하는 열거형 값입니다. CopyAll, skipMembership, ignoreSecurity 유효한 값에 포함 되어 있습니다.|  
 |applyCompression|True|True 이면 나타내고; 동기화 작업을 하는 동안 압축을 적용할 하는 Boolean 그렇지 않으면 false입니다.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
  명령이 성공 하는 경우 빈 결과 반환 합니다. 그렇지 않은 경우 XMLA 예외가 반환 됩니다.  
   
 ## <a name="usage-endpoints"></a>사용 현황 (끝점)  
- Command 요소에이의 문에 사용 되는 [메서드 실행 &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) 다음과 같은 방법으로 노출 하는 XMLA 끝점을 통해 호출 합니다.  
+ Command 요소에이의 문에 사용 되는 [메서드 실행 &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) 다음과 같은 방법으로 노출 하는 XMLA 끝점을 통해 호출 합니다.  
   
 -   SQL Server Management Studio (SSMS)의 XMLA 창으로  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
  SSMS에서 데이터베이스 동기화 대화 상자에서 스크립트 단추를 클릭 하 여이 명령에 대 한 기본으로 제공 되는 스크립트를 생성할 수 있습니다.  
   
- [ \[MS-SSAS-T\]: QL Server Analysis Services 테이블 (SQL Server 기술 프로토콜)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 테이블 형식 메타 데이터 명령 및 개체의 구조를 설명 하는 섹션 3.1.5.2.2 문서를 포함 합니다. 현재 문서에서는 명령과 기능은 아직 구현 되지 않은 TMSL 스크립트에서 다룹니다. 항목을 참조 [테이블 형식 모델 스크립팅 언어 &#40; TMSL &#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) 지원 되는 기능에 대 한 설명은  
+ [ \[MS-SSAS-T\]: QL Server Analysis Services 테이블 (SQL Server 기술 프로토콜)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 테이블 형식 메타 데이터 명령 및 개체의 구조를 설명 하는 섹션 3.1.5.2.2 문서를 포함 합니다. 현재 문서에서는 명령과 기능은 아직 구현 되지 않은 TMSL 스크립트에서 다룹니다. 항목을 참조 [테이블 형식 모델 스크립팅 언어 &#40;TMSL&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) 지원 되는 기능에 대 한 설명은  
   
 ## <a name="see-also"></a>관련 항목:  
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

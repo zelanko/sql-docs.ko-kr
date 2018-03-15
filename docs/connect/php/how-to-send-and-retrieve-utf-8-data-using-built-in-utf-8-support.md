@@ -1,14 +1,15 @@
 ---
 title: "방법: 기본 제공 utf-8 지원을 사용 하 여 utf-8 데이터를 주고받을 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 89e34b2b9f113beaa0b170cdfc36c1afb5fcfc84
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2d2763ec8906cc3100c1259aa25473ae7e8d8b22
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터를 보내고 검색하는 방법
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +46,7 @@ PDO_SQLSRV 드라이버를 사용하는 경우 PDO::SQLSRV_ATTR_ENCODING 특성�
 Utf-8 또는 SQLSRV_ENC_CHAR을 전달할 수 있습니다 **CharacterSet** (SQLSRV_ENC_BINARY 전달할 수 없습니다). 기본 인코딩은 SQLSRV_ENC_CHAR입니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 연결 시 UTF-8 문자 집합을 지정하여 UTF-8로 인코드된 데이터를 보내고 검색하는 방법을 보여 줍니다. 이 예제는 지정된 검토 ID에 대한 Production.ProductReview 테이블의 주석 열을 업데이트합니다. 또한 새로 업데이트된 데이터를 검색하고 표시합니다. 형식의 주석 열은 **nvarcahr(3850) 합니다.** 또한 서버에 데이터를 보내기 전에 PHP를 사용 하 여 인코딩을 u t F-8로 변환 됩니다 것에 유의 **utf8_encode** 함수입니다. 이는 예시용으로만 수행됩니다. 실제 응용 프로그램 시나리오에서는 UTF-8 인코드된 데이터로 시작합니다.  
+다음 예제에서는 연결 시 UTF-8 문자 집합을 지정하여 UTF-8로 인코드된 데이터를 보내고 검색하는 방법을 보여 줍니다. 이 예제는 지정된 검토 ID에 대한 Production.ProductReview 테이블의 주석 열을 업데이트합니다. 또한 새로 업데이트된 데이터를 검색하고 표시합니다. 주석 열은 형식의 **nvarchar(3850) 합니다.** 또한 서버에 데이터를 보내기 전에 PHP를 사용 하 여 인코딩을 u t F-8로 변환 됩니다 것에 유의 **utf8_encode** 함수입니다. 이 단계는 예시용 으로만 수행 됩니다. 실제 응용 프로그램 시나리오에서는 u t F-8로 인코딩된 데이터로 시작 합니다.  
   
 이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치되어 있다고 가정합니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
   
@@ -226,7 +227,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>관련 항목:  
 [데이터 검색](../../connect/php/retrieving-data.md)  
-[데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[비 Windows에서 ASCII 데이터 작업](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+[데이터 업데이트 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

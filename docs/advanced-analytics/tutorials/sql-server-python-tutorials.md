@@ -19,11 +19,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: a9ba77cd6ec26e21136aa8ebfebfe67725b94ba2
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 82c340775eadef642a4775c3984db195f80bfd19
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server Python 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,9 +52,6 @@ ms.lasthandoff: 03/08/2018
 
     이 종단 간 연습 T-SQL 저장 프로시저를 사용 하 여 전체 Python 솔루션을 구축 과정을 보여 줍니다. 모든 Python 코드가 포함 되어 있습니다.
 
-+ [배포 및 Python 모델 사용](..\python\publish-consume-python-code.md)
-
-  최신 버전의 Microsoft 컴퓨터 학습 서버를 사용 하 여 웹 서비스로 Python 모델을 배포 하는 방법을 알아봅니다.
 
 ## <a name="python-samples"></a>Python 샘플
 

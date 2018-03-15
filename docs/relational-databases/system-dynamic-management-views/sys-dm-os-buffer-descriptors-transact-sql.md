@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e35b3cd5c0b10bce5ed66f8c68babcebc96ae95
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1c03bbdbe271500ecf417fe3b5c125304001a05e
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/03/2018
  데이터 페이지를 디스크에서 읽으면 해당 페이지가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버퍼 풀에 복사되며 다시 사용할 수 있도록 캐싱됩니다. 각 캐시된 데이터 페이지에는 하나의 버퍼 설명자가 있습니다. 버퍼 설명자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 현재 캐시된 각 데이터 페이지를 고유하게 식별합니다. sys.dm_os_buffer_descriptors는 모든 사용자 및 시스템 데이터베이스에 대 한 캐시 된 페이지를 반환합니다. 여기에는 Resource 데이터베이스와 연결된 페이지가 포함됩니다.  
   
 > **참고:** 로 표현에서 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_buffer_descriptors**합니다.  
-  
+
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|버퍼 풀에 있는 페이지와 연결된 데이터베이스의 ID입니다. Null을 허용합니다.|  
@@ -118,9 +118,9 @@ ORDER BY cached_pages_count DESC;
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sys.allocation_units &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
- [SQL Server 운영 체제 관련 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Resource 데이터베이스](../../relational-databases/databases/resource-database.md)   
  [sys.dm_os_buffer_pool_extension_configuration&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   

@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 5ae4298fabb7147846b5ee87f391c1a0707cde3a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>SQL Server에서 기계 학습 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -106,9 +106,6 @@ SQL Server 2016에서 설치 하는 옵션을 사용 [!INCLUDE[rsql-platform-md]
 
    SQL 개발자에 대 한 종단 간 솔루션을 Python SQL Server Management Studio에서 실행 해야 하는 모든 코드를 제공 합니다.
 
-+ [게시 및 Python 코드를 사용 합니다.](../advanced-analytics/python/publish-consume-python-code.md)
-
-  이 연습에서는 모델을 학습 서버 컴퓨터를 사용 하 여 웹 서비스에 배포 하는 데 필요한 모든 코드가 포함 되어 있습니다.
 
 ### <a name="product-samples-with-code"></a>코드와 제품 예제
 

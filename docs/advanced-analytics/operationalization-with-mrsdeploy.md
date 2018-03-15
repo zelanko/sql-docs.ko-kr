@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b090579bd0a32b901d1c1cedcc26b290d7a68771
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 4b439725c8c9e522ed500f717686b8a9cf7d972a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>배포 및 mrsdeploy를 사용 하 여 분석 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +56,6 @@ SQL Server와 함께 컴퓨터 학습 서비스를 설치한 경우 *해결해�
   
   지원 되는 R 모델 개체와 점수 매기기 실시간 작업 점수 매기기의 속도 개선 하기 위해 사용할 수 있습니다.
 
-+ Python 코드를 웹 서비스로 게시
-
-  예제를 보려면 [게시 Python 코드 사용 및](./python/publish-consume-python-code.md)합니다.
-
 + 비동기 일괄 처리 사용
 
   일괄 처리 실행을 통해 큰 입력된 데이터에 대 한 호출 하는 웹 서비스를 비동기적으로 이제 사용할 수 있습니다.
@@ -88,7 +84,7 @@ SQL Server 2017 CTP 2.0 이상에 R Server에만 사용할 수 있었던 되었�
 
 3. 설치를 마친 후 **Microsoft 컴퓨터 학습 서버**수동으로 다음 레지스트리 키에 대 한 추가 **mrsdeploy**, R_SERVER 파일에 대 한 기본 폴더를 지정 하는 합니다. 
 
-    + 새 레지스트리 키 만들기`H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
+    + 새 레지스트리 키 만들기 `H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
     + 키의 값을 설정 `"C:\Program Files\Microsoft SQL Server\140\R_SERVER"`합니다.
 
 4. 을 완료 한 후 엽니다는 [관리자 유틸리티](https://docs.microsoft.com/r-server/operationalize/configure-use-admin-utility)합니다.
