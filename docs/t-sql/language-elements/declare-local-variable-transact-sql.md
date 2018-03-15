@@ -1,5 +1,5 @@
 ---
-title: "선언 @local_variable (Transact SQL) | Microsoft Docs"
+title: DECLARE @local_variable(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="declare-localvariable-transact-sql"></a>선언 @local_variable (Transact SQL)
+# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   DECLARE 문을 사용하여 일괄 처리나 프로시저의 본문에 변수를 선언하고 SET 또는 SELECT 문을 사용하여 값을 할당합니다. 이 문을 사용하여 커서 변수를 선언하고 다른 커서 관련 문과 함께 사용할 수 있습니다. 선언의 일부로 값을 지정하지 않으면 선언 후 모든 변수가 NULL로 초기화됩니다.  
@@ -90,12 +90,12 @@ DECLARE
   
 ## <a name="arguments"></a>인수  
 @*local_variable*  
- 변수의 이름입니다. 변수 이름은 @ 기호로 시작해야 합니다. 지역 변수 이름에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
+ 변수의 이름입니다. 변수 이름은 @ 기호로 시작해야 합니다. 지역 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
 *data_type*  
- 시스템 제공 데이터 형식, CLR(공용 언어 런타임) 사용자 정의 테이블 형식 또는 별칭 데이터 형식입니다. 변수 안 **텍스트**, **ntext**, 또는 **이미지** 데이터 형식입니다.  
+ 시스템 제공 데이터 형식, CLR(공용 언어 런타임) 사용자 정의 테이블 형식 또는 별칭 데이터 형식입니다. 변수는 **text**, **ntext** 또는 **image** 데이터 형식일 수 없습니다.  
   
- 시스템 데이터 형식에 대 한 자세한 내용은 참조 하십시오. [데이터 형식 &#40; Transact SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). CLR 사용자 정의 형식 또는 별칭 데이터 형식에 대 한 자세한 내용은 참조 [CREATE type&#40; Transact SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ 시스템 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요. CLR 사용자 정의 형식에 대한 자세한 내용은 [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)을 참조하세요.  
   
  =*value*  
  인라인으로 변수에 값을 할당합니다. 값은 상수 또는 식일 수 있지만 변수 선언 형식과 일치하거나 해당 형식으로 암시적으로 변환할 수 있어야 합니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
@@ -107,15 +107,15 @@ CURSOR
  변수가 로컬 커서 변수가 되도록 지정합니다.  
   
 @*table_variable_name*  
- 형식의 변수 이름 **테이블**합니다. 변수 이름은 at 기호(@)로 시작해야 하며 식별자 규칙을 따라야 합니다.  
+ **table** 형식의 변수 이름입니다. 변수 이름은 at 기호(@)로 시작해야 하며 식별자 규칙을 따라야 합니다.  
   
 <table_type_definition>  
-정의 **테이블** 데이터 형식입니다. 테이블 선언에는 열 정의, 이름, 데이터 형식 및 제약 조건 등이 포함되며 PRIMARY KEY, UNIQUE, NULL 및 CHECK만 제약 조건 유형으로 사용할 수 있습니다. 규칙 또는 기본 정의가 형식에 바인딩되어 있는 경우 별칭 데이터 형식을 열 스칼라 데이터 형식으로 사용할 수 없습니다.
+**table** 데이터 형식을 정의합니다. 테이블 선언에는 열 정의, 이름, 데이터 형식 및 제약 조건 등이 포함되며 PRIMARY KEY, UNIQUE, NULL 및 CHECK만 제약 조건 유형으로 사용할 수 있습니다. 규칙 또는 기본 정의가 형식에 바인딩되어 있는 경우 별칭 데이터 형식을 열 스칼라 데이터 형식으로 사용할 수 없습니다.
   
-\<table_type_definiton > CREATE TABLE에는 테이블을 정의 하는 데 사용 되는 정보의 하위 집합입니다. 여러 요소와 주요 정의가 여기에 포함됩니다. 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.  
+\<table_type_definition>은 CREATE TABLE에 있는 테이블을 정의하는 정보의 하위 집합입니다. 여러 요소와 주요 정의가 여기에 포함됩니다. 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.  
   
  *n*  
- 여러 변수를 지정하여 값을 할당할 수 있음을 나타내는 자리 표시자입니다. 선언할 때 **테이블** 변수는 **테이블** 변수가 DECLARE 문으로 선언 되는 유일한 변수 여야 합니다.  
+ 여러 변수를 지정하여 값을 할당할 수 있음을 나타내는 자리 표시자입니다. **table** 변수를 선언할 때는 **table** 변수가 DECLARE 문으로 선언되는 유일한 변수여야 합니다.  
   
  *column_name*  
  테이블에 있는 열의 이름입니다.  
@@ -124,21 +124,21 @@ CURSOR
  열에 스칼라 데이터 형식을 지정합니다.  
   
  *computed_column_expression*  
- 계산 열의 값을 정의하는 식입니다. 동일한 테이블의 다른 열을 사용하는 식에서 계산됩니다. 예를 들어 계산된 열 정의 가질 수 **비용** AS **가격 \* qty**합니다. 식은 계산되지 않은 열 이름, 상수, 기본 제공 함수, 변수 또는 이러한 요소를 하나 이상의 연산자로 연결한 조합이 될 수 있습니다. 식은 하위 쿼리 또는 사용자 정의 함수가 될 수 없습니다. 식은 CLR 사용자 정의 데이터 형식을 참조할 수 없습니다.  
+ 계산 열의 값을 정의하는 식입니다. 동일한 테이블의 다른 열을 사용하는 식에서 계산됩니다. 예를 들어 계산 열은 **cost** AS **price \* qty** 정의를 가질 수 있습니다. 식은 계산되지 않은 열 이름, 상수, 기본 제공 함수, 변수 또는 이러한 요소를 하나 이상의 연산자로 연결한 조합이 될 수 있습니다. 식은 하위 쿼리 또는 사용자 정의 함수가 될 수 없습니다. 식은 CLR 사용자 정의 데이터 형식을 참조할 수 없습니다.  
   
- [COLLATE *데이터 정렬 이름*]  
- 열에 대한 데이터 정렬을 지정합니다. *데이터 정렬 이름* Windows 데이터 정렬 이름이 나 SQL 데이터 정렬 이름이 될 수 있으며의 열에만 적용할 수는 **char**, **varchar**, **텍스트** **nchar**, **nvarchar**, 및 **ntext** 데이터 형식입니다. 지정하지 않은 경우 열이 사용자 정의 데이터 형식이면 사용자 정의 데이터 형식의 데이터 정렬에 열이 할당되고 그렇지 않은 경우에는 현재 데이터베이스의 데이터 정렬에 할당됩니다.  
+ [ COLLATE *collation_name*]  
+ 열에 대한 데이터 정렬을 지정합니다. *collation_name*은 Windows 데이터 정렬 이름이나 SQL 데이터 정렬 이름이 될 수 있으며, **char**, **varchar**, **text**, **nchar**, **nvarchar** 및 **ntext** 데이터 형식의 열에만 적용할 수 있습니다. 지정하지 않은 경우 열이 사용자 정의 데이터 형식이면 사용자 정의 데이터 형식의 데이터 정렬에 열이 할당되고 그렇지 않은 경우에는 현재 데이터베이스의 데이터 정렬에 할당됩니다.  
   
- Windows 및 SQL 데이터 정렬 이름에 대 한 자세한 내용은 참조 하십시오. [collate&#40; Transact SQL &#41; ](~/t-sql/statements/collations.md).  
+ Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)를 참조하세요.  
   
  DEFAULT  
- 삽입 중에 값이 명시적으로 지정되지 않은 경우에 열에 대해 제공되는 값을 지정합니다. DEFAULT 정의로 정의 된 제외한 모든 열에 적용할 수 있습니다 **타임 스탬프** 되거나 IDENTITY 속성이 있는 합니다. DEFAULT 정의는 테이블이 삭제될 때 제거됩니다. 문자열 같은 상수 값, SYSTEM_USER() 같은 시스템 함수 또는 NULL을 기본값으로 사용할 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환성을 유지하기 위해 DEFAULT에 제약 조건 이름을 할당할 수 있습니다.  
+ 삽입 중에 값이 명시적으로 지정되지 않은 경우에 열에 대해 제공되는 값을 지정합니다. DEFAULT 정의는 **timestamp**로 정의되거나 IDENTITY 속성이 있는 열을 제외한 모든 열에 적용할 수 있습니다. DEFAULT 정의는 테이블이 삭제될 때 제거됩니다. 문자열 같은 상수 값, SYSTEM_USER() 같은 시스템 함수 또는 NULL을 기본값으로 사용할 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환성을 유지하기 위해 DEFAULT에 제약 조건 이름을 할당할 수 있습니다.  
   
  *constant_expression*  
  열의 기본값으로 사용되는 상수, NULL 또는 시스템 함수입니다.  
   
  IDENTITY  
- 새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 열에 사용할 고유한 증가값을 제공합니다. ID 열은 일반적으로 PRIMARY KEY 제약 조건과 함께 사용되어 테이블의 고유한 행 식별자 역할을 합니다. IDENTITY 속성에 지정할 수 **tinyint**, **smallint**, **int**, **decimal(p,0)**, 또는 **numeric(p,0)** 열입니다. ID 열은 테이블당 하나만 만들 수 있습니다. ID 열에는 바인딩된 기본값 및 DEFAULT 제약 조건을 사용할 수 없습니다. 초기값과 증가값을 모두 지정하거나 모두 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.  
+ 새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 열에 사용할 고유한 증가값을 제공합니다. ID 열은 일반적으로 PRIMARY KEY 제약 조건과 함께 사용되어 테이블의 고유한 행 식별자 역할을 합니다. IDENTITY 속성은 **tinyint**, **smallint**, **int**, **decimal(p,0)** 또는 **numeric(p,0)** 열에 할당할 수 있습니다. ID 열은 테이블당 하나만 만들 수 있습니다. ID 열에는 바인딩된 기본값 및 DEFAULT 제약 조건을 사용할 수 없습니다. 초기값과 증가값을 모두 지정하거나 모두 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.  
   
  *seed*  
  테이블에 로드되는 첫 번째 행에 사용하는 값입니다.  
@@ -147,7 +147,7 @@ CURSOR
  이전에 로드된 행의 ID 값에 추가되는 증가값입니다.  
   
  ROWGUIDCOL  
- 새 열이 행 전역 고유 식별자 열임을 나타냅니다. 하나의 **uniqueidentifier** 테이블당 열 ROWGUIDCOL 열으로 지정 될 수 있습니다. ROWGUIDCOL 속성에만 할당할 수는 **uniqueidentifier** 열입니다.  
+ 새 열이 행 전역 고유 식별자 열임을 나타냅니다. 테이블당 한 개의 **uniqueidentifier** 열만 ROWGUIDCOL 열로 지정할 수 있으며 ROWGUIDCOL 속성은 **uniqueidentifier** 열에만 할당할 수 있습니다.  
   
  NULL | NOT NULL  
  변수에 null이 허용되는지 여부를 나타냅니다. 기본값은 NULL입니다.  
@@ -164,14 +164,14 @@ CURSOR
  *logical_expression*  
  TRUE 또는 FALSE를 반환하는 논리 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  일괄 처리나 프로시저에서 변수는 종종 WHILE, LOOP 또는 IF...ELSE 블록의 카운터로 사용됩니다.  
   
  변수는 식에서만 사용할 수 있으며 개체 이름이나 키워드 대신 사용할 수 없습니다. 동적 SQL 문을 생성하려면 EXECUTE를 사용합니다.  
   
  지역 변수의 범위는 변수가 선언된 일괄 처리입니다.  
  
- 테이블 변수는 반드시 메모리 상주 하지 않습니다. 메모리 부족 테이블 변수에 속하는 페이지 tempdb에 푸시할 수 수 있습니다.
+ 테이블 변수가 반드시 메모리 상주하지는 않습니다. 메모리가 부족하면 테이블 변수에 속한 페이지를 tempdb로 푸시 아웃 할 수 있습니다.
   
  현재 커서가 할당된 커서 변수는 다음 문의 원본으로 참조될 수 있습니다.  
   
@@ -191,7 +191,7 @@ CURSOR
   
  커서 변수는 다음과 같습니다.  
   
--   커서 형식이나 다른 커서 변수의 대상이 될 수 있습니다. 자세한 내용은 참조 [설정 @local_variable &#40; Transact SQL &#41; ](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+-   커서 형식이나 다른 커서 변수의 대상이 될 수 있습니다. 자세한 내용은 [SET @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)을 참조하세요.  
   
 -   커서 변수에 현재 할당된 커서가 없으면 EXECUTE 문에서 출력 커서 매개 변수의 대상으로 참조될 수 있습니다.  
   
@@ -247,7 +247,7 @@ WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;
 ```  
   
 ### <a name="c-declaring-a-variable-of-type-table"></a>3. 테이블 형식의 변수 선언  
- 다음 예에서는 UPDATE 문의 OUTPUT 절에서 지정된 값을 저장하는 `table` 변수를 만듭니다. 각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다. 결과 `INSERTED.ModifiedDate` 열 값에서 다는 `ModifiedDate` 열에는 `Employee` 테이블입니다. 그 이유는 `AFTER UPDATE` 값을 현재 날짜로 업데이트하는 `ModifiedDate` 트리거가 `Employee` 테이블에 정의되어 있기 때문입니다. 그러나 `OUTPUT`에서 반환된 열은 트리거가 실행되기 전의 데이터를 반영합니다. 자세한 내용은 참조 [OUTPUT 절 &#40; Transact SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
+ 다음 예에서는 UPDATE 문의 OUTPUT 절에서 지정된 값을 저장하는 `table` 변수를 만듭니다. 각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다. `INSERTED.ModifiedDate` 열의 결과 값은 `Employee` 테이블의 `ModifiedDate` 열 값과 다릅니다. 그 이유는 `AFTER UPDATE` 값을 현재 날짜로 업데이트하는 `ModifiedDate` 트리거가 `Employee` 테이블에 정의되어 있기 때문입니다. 그러나 `OUTPUT`에서 반환된 열은 트리거가 실행되기 전의 데이터를 반영합니다. 자세한 내용은 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.  
   
 ```  
 USE AdventureWorks2012;  
@@ -277,14 +277,14 @@ GO
 ```  
   
 ### <a name="d-declaring-a-variable-of-user-defined-table-type"></a>4. 사용자 정의 테이블 형식의 변수 선언  
- 다음 예에서는 `@LocationTVP`라고 하는 테이블 반환 매개 변수 또는 테이블 변수를 만듭니다. 이렇게 하려면 `LocationTableType`이라고 하는 해당 사용자 정의 테이블 형식이 필요합니다. 사용자 정의 테이블 형식을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [CREATE type&#40; Transact SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md). 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 [테이블 반환 매개 변수 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)합니다.  
+ 다음 예에서는 `@LocationTVP`라고 하는 테이블 반환 매개 변수 또는 테이블 변수를 만듭니다. 이렇게 하려면 `LocationTableType`이라고 하는 해당 사용자 정의 테이블 형식이 필요합니다. 사용자 정의 테이블 형식을 만드는 방법은 [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)을 참조하세요. 테이블 반환 매개 변수에 관한 자세한 내용은 [Use Table-Valued Parameters&#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)를 참조하세요.  
   
 ```  
 DECLARE @LocationTVP   
 AS LocationTableType;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-declare"></a>5. DECLARE 사용  
  다음 예에서는 `@find`라는 지역 변수를 사용하여 성이 `Walt`으로 시작하는 모든 연락처 정보를 검색합니다.  
@@ -304,7 +304,7 @@ WHERE LastName LIKE @find;
 ```  
   
 ### <a name="f-using-declare-with-two-variables"></a>6. 두 변수가 있는 DECLARE 사용  
- 에 있는 직원의 성과 이름 지정을 사용 하 여 변수를 검색 하는 다음 예제는 `DimEmployee` 테이블입니다.  
+ 다음 예는 `DimEmployee` 테이블에 있는 직원의 성과 이름을 지정하기 위해 변수를 검색하여 사용합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,11 +319,11 @@ FROM DimEmployee
 WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [테이블 &#40; Transact SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)  
   
   

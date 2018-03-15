@@ -1,5 +1,5 @@
 ---
-title: "OVER 절 (Transact SQL) | Microsoft Docs"
+title: "OVER 절(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---over-clause-transact-sql"></a>선택-OVER 절 (Transact SQL)
+# <a name="select---over-clause-transact-sql"></a>SELECT - OVER 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   관련 창 함수를 적용하기 전에 행 집합의 분할과 순서를 결정합니다. 즉, OVER 절은 쿼리 결과 집합 내의 창 또는 사용자 지정 행 집합을 정의합니다. 그런 다음 창 함수가 창의 각 행에 대한 값을 계산합니다. OVER 절에 함수를 사용하여 이동 평균, 누적 집계, 누계 또는 그룹 결과당 상위 N개 결과 등의 집계된 값을 계산할 수 있습니다.  
@@ -118,16 +118,16 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  쿼리 결과 집합을 파티션으로 분할합니다. 창 함수는 각 파티션에 별도로 적용되므로 각 파티션에 대해 계산이 다시 시작됩니다.  
   
  *value_expression*  
- 행 집합을 분할하는 데 사용하는 열을 지정합니다. *value_expression* FROM 절을 통해 사용 가능한 열만 참조할 수 있습니다. *value_expression* 식이나 select 목록에 별칭을 참조할 수 없습니다. *value_expression* 열 식, 스칼라 하위 쿼리, 스칼라 함수 또는 사용자 정의 변수 될 수 있습니다.  
+ 행 집합을 분할하는 데 사용하는 열을 지정합니다. *value_expression*은 FROM 절을 통해 사용 가능한 열만 참조할 수 있습니다. *value_expression*은 SELECT 목록의 식이나 별칭은 참조할 수 없습니다. *value_expression*은 열 식, 스칼라 하위 쿼리, 스칼라 함수 또는 사용자 정의 변수일 수 있습니다.  
   
- \<ORDER BY 절 >  
+ \<ORDER BY 절>  
  결과 집합의 각 파티션 내에서 행의 논리적 순서를 정의합니다. 즉, 창 functioncalculation이 수행되는 논리적 순서를 지정합니다.  
   
  *order_by_expression*  
- 정렬할 열 또는 식을 지정합니다. *order_by_expression* FROM 절을 통해 사용 가능한 열만 참조할 수 있습니다. 열 이름이나 별칭을 나타내기 위해 정수를 지정할 수는 없습니다.  
+ 정렬할 열 또는 식을 지정합니다. *order_by_expression*은 FROM 절을 통해 사용 가능한 열만 참조할 수 있습니다. 열 이름이나 별칭을 나타내기 위해 정수를 지정할 수는 없습니다.  
   
- COLLATE *데이터 정렬 이름*  
- 에 지정 된 데이터 정렬에 따라 ORDER BY 작업을 수행 하도록 지정 *데이터 정렬 이름*합니다. *데이터 정렬 이름* Windows 데이터 정렬 이름이 나 SQL 데이터 정렬 이름이 될 수 있습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. COLLATE 형식의 열에만 적용 가능 **char**, **varchar**, **nchar**, 및 **nvarchar**합니다.  
+ COLLATE *collation_name*  
+ ORDER BY 작업이 *collation_name*에서 지정된 데이터 정렬에 따라 수행되도록 지정합니다. *collation_name*으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. COLLATE는 **char**, **varchar**, **nchar** 및 **nvarchar** 형식의 열에만 적용할 수 있습니다.  
   
  **ASC** | DESC  
  지정된 열의 값이 오름차순으로 정렬되는지 내림차순으로 정렬되는지를 지정합니다. ASC가 기본 정렬 순서입니다. Null 값은 가능한 가장 작은 값으로 취급됩니다.  
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  파티션 내의 시작점 및 끝점을 지정하여 파티션 내의 행을 추가로 제한합니다. 이 작업은 논리적 연결이나 물리적 연결을 통해 현재 행을 기준으로 한 행 범위를 지정하여 수행됩니다. 물리적 연결은 ROWS 절을 사용하여 수행됩니다.  
   
- ROWS 절은 현재 행 이전 또는 다음의 고정 행 수를 지정하여 파티션 내의 행 수를 제한합니다. 또한 RANGE 절은 현재 행의 값을 기준으로 행 범위를 지정하여 파티션 내의 행 수를 논리적으로 제한합니다. 이전 및 다음 행은 ORDER BY 절의 순서에 따라 정의됩니다. 창 프레임 "RANGE … CURRENT ROW … " 현재 행으로 ORDER BY 식에 동일한 값을 가진 모든 행을 포함 합니다. 예를 들어 ROWS BETWEEN 2 PRECEDING AND CURRENT ROW는 함수가 작동하는 행의 창 크기가 앞의 두 행과 현재 행을 포함하여 모두 세 개의 행임을 의미합니다.  
+ ROWS 절은 현재 행 이전 또는 다음의 고정 행 수를 지정하여 파티션 내의 행 수를 제한합니다. 또한 RANGE 절은 현재 행의 값을 기준으로 행 범위를 지정하여 파티션 내의 행 수를 논리적으로 제한합니다. 이전 및 다음 행은 ORDER BY 절의 순서에 따라 정의됩니다. 창 프레임 “RANGE …CURRENT ROW …”에는 ORDER BY 식에서 현재 행과 동일한 값을 갖는 모든 행을 포함합니다. CURRENT ROW …” includes all rows that have the same values in the ORDER BY expression as the current row. 예를 들어 ROWS BETWEEN 2 PRECEDING AND CURRENT ROW는 함수가 작동하는 행의 창 크기가 앞의 두 행과 현재 행을 포함하여 모두 세 개의 행임을 의미합니다.  
   
 > [!NOTE]  
 >  ROWS 또는 RANGE에는 ORDER BY 절을 지정해야 합니다. ORDER BY에 여러 개의 순서 식이 포함되어 있는 경우 CURRENT ROW FOR RANGE는 현재 행을 확인할 때 ORDER BY 목록의 모든 열을 고려합니다.  
@@ -147,26 +147,26 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  창이 파티션의 첫 번째 행에서 시작되도록 지정합니다. UNBOUNDED PRECEDING은 창 시작 지점으로만 지정할 수 있습니다.  
   
- \<value 부호 없음 > PRECEDING  
- 지정 된 \<value 부호 없음 > 행 또는 현재 행 앞에 값의 수를 나타냅니다. RANGE에는 이 인수를 지정할 수 없습니다.  
+ \<unsigned value specification> PRECEDING  
+ \<unsigned value specification>과 함께 지정되어 현재 행 앞의 행 또는 값 수를 나타냅니다. RANGE에는 이 인수를 지정할 수 없습니다.  
   
  CURRENT ROW  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
   
  창이 현재 행(ROWS와 함께 사용될 경우) 또는 현재 값(RANGE와 함께 사용될 경우)에서 시작되거나 끝나도록 지정합니다. CURRENT ROW는 시작 지점 및 끝 지점 모두로 지정할 수 있습니다.  
   
- 사이의 \<바인딩된 창 프레임 > AND \<바인딩된 창 프레임 >  
+ BETWEEN \<window frame bound > AND \<window frame bound >  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
   
- ROWS 또는 RANGE와 함께 사용되어 창의 하한(시작) 및 상한(끝) 지점을 지정합니다. \<창 프레임 바인딩된 > 경계 시작 지점 정의 및 \<바인딩된 창 프레임 > 경계 끝점을 정의 합니다. 상한은 하한보다 작을 수 없습니다.  
+ ROWS 또는 RANGE와 함께 사용되어 창의 하한(시작) 및 상한(끝) 지점을 지정합니다. \<window frame bound>는 경계 시작 지점을 정의하고 \<window frame bound>는 경계 끝 지점을 정의합니다. 상한은 하한보다 작을 수 없습니다.  
   
  UNBOUNDED FOLLOWING  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
   
  창이 파티션의 마지막 행에서 끝나도록 지정합니다. UNBOUNDED FOLLOWING은 창 끝 지점으로만 지정할 수 있습니다. 예를 들어 RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING은 현재 행에서 시작하고 파티션의 마지막 행에서 끝나는 창을 정의합니다.  
   
- \<value 부호 없음 > 다음  
- 지정 된 \<value 서명 되지 않은 > 행 또는 값에 따라 현재 행의 수를 나타냅니다. 때 \<value 서명 되지 않은 > 다음 창 시작 지점으로 지정 된, 끝점 이어야 합니다 \<value 서명 되지 않은 > 다음 합니다. 예를 들어 ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING은 현재 행 다음의 두 번째 행에서 시작하고 현재 행 다음의 열 번째 행에서 끝나는 창을 정의합니다. RANGE에는 이 인수를 지정할 수 없습니다.  
+ \<unsigned value specification> FOLLOWING  
+ \<unsigned value specification>과 함께 지정되어 현재 행 다음의 행 또는 값 수를 나타냅니다. \<unsigned value specification> FOLLOWING이 창 시작 지점으로 지정된 경우 끝 지점은 \<unsigned value specification>FOLLOWING이어야 합니다. 예를 들어 ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING은 현재 행 다음의 두 번째 행에서 시작하고 현재 행 다음의 열 번째 행에서 끝나는 창을 정의합니다. RANGE에는 이 인수를 지정할 수 없습니다.  
   
  부호 없는 정수 리터럴  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -180,7 +180,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>중요!
 
-ROWS/RANGE는 지정 하는 경우 및 \<이전 창 프레임 >에 사용 되 \<창 프레임 크기 > (짧은 구문)이이 사양은 창 프레임 경계 시작 지점에 사용 되 고 CURRENT ROW는 경계 끝에 사용 됩니다 점입니다. 예를 들어 “ROWS 5 PRECEDING”은 “ROWS BETWEEN 5 PRECEDING AND CURRENT ROW”와 같습니다.  
+ROWS/RANGE를 지정되고 \<window frame extent>(짧은 구문)에 \<window frame preceding>을 사용할 경우 이 사양은 창 프레임 경계 시작 지점에 사용되고 CURRENT ROW는 경계 끝 지점에 사용됩니다. 예를 들어 “ROWS 5 PRECEDING”은 “ROWS BETWEEN 5 PRECEDING AND CURRENT ROW”와 같습니다.  
   
 > [!NOTE]
 > ORDER BY를 지정하지 않을 경우 전체 파티션이 창 프레임에 사용됩니다. 이는 ORDER BY 절이 필요하지 않은 함수에만 적용됩니다. ROWS/RANGE는 지정하지 않았지만 ORDER BY를 지정한 경우 RANGE UNBOUNDED PRECEDING AND CURRENT ROW가 창 프레임의 기본값으로 사용됩니다. 이는 선택적 ROWS/RANGE 사양을 허용할 수 있는 함수에만 적용됩니다. 예를 들어 순위 함수는 ROWS/RANGE를 허용할 수 없으므로 ORDER BY가 있고 ROWS/RANGE가 없더라도 이 창 프레임은 적용되지 않습니다.  
@@ -188,9 +188,9 @@ ROWS/RANGE는 지정 하는 경우 및 \<이전 창 프레임 >에 사용 되 \<
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  OVER 절은 CHECKSUM 집계 함수와 함께 사용할 수 없습니다.  
   
- 범위는 함께 사용할 수 없습니다 \<value 서명 되지 않은 > PRECEDING 또는 \<value 서명 되지 않은 > 다음 합니다.  
+ RANGE는 \<unsigned value specification> PRECEDING 또는 \<unsigned value specification> FOLLOWING과 함께 사용할 수 없습니다.  
   
- OVER 절과 함께 사용 하는 순위, 집계 또는 분석 함수에 따라 \<ORDER BY 절 > 및/또는 \<ROWS 및 RANGE 절 > 지원 되지 않습니다.  
+ OVER 절과 함께 사용되는 순위, 집계 또는 분석 함수에 따라 \<ORDER BY clause> 및/또는 \<ROWS and RANGE clause>가 지원되지 않을 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -398,7 +398,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 다음 예에서는 ROWS 절을 사용 하 여 현재 행으로 행을 계산 하는 창을 정의 하 고 *N* (이 예제에서는 1 행)를 수행 하는 행의 번호입니다.  
+ 다음 예에서는 ROWS 절을 사용하여 현재 행과 다음에 나오는 행의 *N* 번호(이 예에서는 1 행)로 행이 계산되는 창을 정의합니다.  
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
@@ -459,10 +459,10 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
   
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>5. OVER 절에 ROW_NUMBER 함수 사용  
- 다음 예제에서는 할당 된 판매 할당량 한도에 따라 판매 담당자는 ROW_NUMBER를 반환 합니다.  
+ 다음 예는 담당자의 판매 할당량을 기반으로 영업 담당자의 ROW_NUMBER를 반환합니다.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -489,7 +489,7 @@ GROUP BY LastName, FirstName;
  ```
  
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>6. OVER 절에 집계 함수 사용  
- 다음 예에서는 집계 함수에 OVER 절을 사용 하 여 보여 줍니다. 이 예에서는 OVER 절을 사용 하 여이 하위 쿼리를 사용 하 여 보다 효율적입니다.  
+ 다음 예에서는 OVER 절에 집계 함수를 사용하는 방법을 보여 줍니다. 이 예에서는 OVER 절을 사용하는 것이 하위 쿼리를 사용하는 것보다 더 효율적입니다.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -521,7 +521,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43664      235      1     2     1    2      1    1  
  ```
  
- 다음 예에서는 OVER 절을 사용 하 여 계산된 된 값에 집계 함수를 보여 줍니다. 공지 여 계산 된 집계 `SalesOrderNumber` 의 각 줄에 대 한 총 판매 주문 백분율로 계산 됩니다 `SalesOrderNumber`합니다.  
+ 다음 예에서는 OVER 절에 계산된 값의 집계 함수를 사용하는 방법을 보여 줍니다. 집계는 `SalesOrderNumber`로 계산되며 각 `SalesOrderNumber`의 각 줄에 대해 총 판매 주문의 백분율이 계산됩니다.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -538,7 +538,7 @@ WHERE SalesOrderNumber IN(N'SO43659',N'SO43664') AND
 ORDER BY SalesOrderNumber,ProductKey;  
 ```  
   
- 이 결과 집합의 첫 번째 시작이 됩니다.  
+ 이 결과 집합의 첫 번째 시작은 다음과 같습니다.  
   
  ```
  OrderNumber  Product  Qty  Total  PctByProduct  
@@ -549,9 +549,9 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43659      229      2    16     18.75  
  ```
  
-## <a name="see-also"></a>관련 항목:  
- [집계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [분석 함수 &#40; Transact SQL &#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
- [Sqlmag.com, Itzik Ben Gan 여에 창 함수와 조치에 대 한 뛰어난 블로그 게시물](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
+## <a name="see-also"></a>참고 항목  
+ [집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [분석 함수&#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
+ [sqlmag.com의 window 함수 및 OVER에 대한 블로그 게시물, Itzik Ben-Gan 작성](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   
