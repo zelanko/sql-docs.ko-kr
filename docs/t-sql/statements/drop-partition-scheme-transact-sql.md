@@ -1,5 +1,5 @@
 ---
-title: DROP PARTITION SCHEME (Transact SQL) | Microsoft Docs
+title: DROP PARTITION SCHEME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/06/2017
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  현재 데이터베이스에서 파티션 구성표를 제거합니다. 파티션 구성표를 사용 하 여 만들어진 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 를 사용 하 여 수정할 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)합니다.  
+  현재 데이터베이스에서 파티션 구성표를 제거합니다. [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)을 사용하여 파티션 스키마를 만들고 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)을 사용하여 파티션 스키마를 수정할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,10 +53,10 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
  *partition_scheme_name*  
  삭제할 파티션 스키마의 이름입니다.   
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  현재 파티션 스키마를 사용하는 테이블이나 인덱스가 없는 경우에만 파티션 스키마를 삭제할 수 있습니다. 파티션 스키마를 사용하는 테이블이나 인덱스가 있는 경우 DROP PARTITION SCHEME에서 오류를 반환합니다. DROP PARTITION SCHEME이 파일 그룹 자체를 제거하는 것은 아닙니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  DROP PARTITION SCHEME을 실행하는 데 다음 권한을 사용할 수 있습니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -72,14 +72,14 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
 DROP PARTITION SCHEME myRangePS1;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE PARTITION SCHEME&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [ALTER PARTITION scheme&#40; Transact SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [sys.partition_schemes &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
+ [ALTER PARTITION SCHEME&#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [sys.partition_schemes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.data_spaces &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.destination_data_spaces &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
- [sys.partitions&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.data_spaces&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
+ [sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

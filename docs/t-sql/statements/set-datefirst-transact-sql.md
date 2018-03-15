@@ -1,5 +1,5 @@
 ---
-title: SET DATEFIRST (Transact SQL) | Microsoft Docs
+title: SET DATEFIRST(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 
   일주일의 시작 요일을 1부터 7까지의 숫자로 설정합니다.  
   
- 모든 개요 [!INCLUDE[tsql](../../includes/tsql-md.md)] 날짜 및 시간 데이터 형식 및 함수, 참조 [날짜 및 시간 데이터 형식 및 함수 &#40; Transact SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>인수  
- *숫자* | **@***number_var*  
+ *number* | **@***number_var*  
  일주일의 시작 요일을 나타내는 정수입니다. 다음 값 중 하나일 수 있습니다.  
   
 |값|일주일의 시작 요일|  
@@ -73,16 +73,16 @@ SET DATEFIRST 7 ;
 |**4**|목요일|  
 |**5**|금요일|  
 |**6**|토요일|  
-|**7** (기본값, 미국 영어)|일요일|  
+|**7**(기본값, 미국 영어)|일요일|  
   
-## <a name="remarks"></a>주의  
- SET DATEFIRST의 현재 설정을 보려면는 [@@DATEFIRST ](../../t-sql/functions/datefirst-transact-sql.md) 함수입니다.  
+## <a name="remarks"></a>Remarks  
+ SET DATEFIRST의 현재 설정을 확인하려면 [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md) 함수를 사용합니다.  
   
  SET DATEFIRST 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
  SET DATEFIRST를 지정해도 DATEDIFF에는 영향을 주지 않습니다. DATEDIFF는 항상 일요일을 한 주의 첫 날로 사용하여 결정적 함수가 되도록 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -108,7 +108,7 @@ SELECT CAST('1999-1-1' AS datetime2) AS SelectDate
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

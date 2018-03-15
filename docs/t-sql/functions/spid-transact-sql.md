@@ -1,5 +1,5 @@
 ---
-title: '@@SPID (Transact SQL) | Microsoft Docs'
+title: '@@SPID(Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact SQL)
+# <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 사용자 프로세스의 세션 ID를 반환합니다.  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>반환 형식  
  **smallint**  
   
-## <a name="remarks"></a>주의  
- @@SPID 의 출력에 현재 사용자 프로세스를 식별 하는 데 사용 될 **sp_who**합니다.  
+## <a name="remarks"></a>Remarks  
+ @@SPID을 사용하여 **sp_who**의 출력에서 현재 사용자 프로세스를 식별할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 사용자 프로세스의 세션 ID, 로그인 이름 및 사용자 이름을 반환합니다.  
@@ -71,16 +71,16 @@ ID     Login Name                     User Name
 54     SEATTLE\joanna                 dbo                             
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 이 예제에서는 반환 된 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 세션 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노드 세션 ID, 로그인 이름 및 현재 사용자 프로세스에 대 한 사용자 이름을 제어 합니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 현재 사용자 프로세스의 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 세션 ID, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어 노드 세션 ID, 로그인 이름 및 사용자 이름을 반환합니다.  
   
 ```  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구성 함수](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [sp_lock&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

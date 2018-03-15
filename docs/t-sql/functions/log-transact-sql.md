@@ -1,5 +1,5 @@
 ---
-title: "로그 (Transact SQL) | Microsoft Docs"
+title: LOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="log-transact-sql"></a>LOG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  지정 된 자연 로그를 반환 **float** 에 식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정된 **float** 식의 자연 로그를 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,27 +56,27 @@ LOG ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **float** 또는 암시적으로 변환할 수 있는 형식의 **float**합니다.  
+ **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
- *자료*  
+ *base*  
  로그 밑을 설정하는 선택적 정수 인수입니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
   
-## <a name="remarks"></a>주의  
- 기본적으로 **log ()** 자연 로그를 반환 합니다. 부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 선택적인을 사용 하 여 다른 값으로는 로그의 밑수를 변경할 수 있습니다 *기본* 매개 변수입니다.  
+## <a name="remarks"></a>Remarks  
+ 기본적으로 **LOG()**는 자연 로그를 반환합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 선택적 *베이스* 매개 변수를 사용하여 로그 밑을 다른 값으로 변경할 수 있습니다.  
   
- 자연 로그의 기본 로그는 **e**여기서 **e** 는 무리 상수 대략 2.718281828과 같은 같습니다.  
+ 자연 로그는 밑이 **e**인 로그입니다. 여기서 **e**는 대략 2.718281828과 같은 무리 상수입니다.  
   
- 숫자의 지 수 자연 로그는 번호 자체: 로그 (EXP (  *n*  )) =  *n* 합니다. 숫자의 자연 로그의 지 수는 번호 자체: EXP (로그 (  *n*  )) =  *n* 합니다.  
+ 한 수의 지수에 대한 자연 로그는 그 수 자체입니다. LOG( EXP( *n* ) ) = *n* 한 수의 자연 로그에 대한 지수는 그 수 자체입니다. EXP( LOG( *n* ) ) = *n*  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>1. 수의 로그를 계산합니다.  
- 다음 예에서는 계산 된 `LOG` 지정 된 **float** 식입니다.  
+ 다음 예에서는 지정된 **float** 식의 `LOG`를 계산하는 방법을 보여 줍니다.  
   
 ```  
 DECLARE @var float = 10;  
@@ -109,10 +109,10 @@ SELECT LOG (EXP (10));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-logarithm-for-a-number"></a>3. 숫자에 대 한 로그 계산  
- 다음 예에서는 계산 된 `LOG` 지정 된 **float** 식입니다.  
+### <a name="c-calculating-the-logarithm-for-a-number"></a>3. 수의 로그를 계산합니다.  
+ 다음 예에서는 지정된 **float** 식의 `LOG`를 계산하는 방법을 보여 줍니다.  
   
 ```  
 SELECT LOG(10);  
@@ -126,10 +126,10 @@ SELECT LOG(10);
  2.30
  ```  
   
-## <a name="see-also"></a>관련 항목:  
- [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [EXP &#40; Transact SQL &#41;](../../t-sql/functions/exp-transact-sql.md)   
- [LOG10 &#40; Transact SQL &#41;](../../t-sql/functions/log10-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [EXP &#40;Transact-SQL&#41;](../../t-sql/functions/exp-transact-sql.md)   
+ [LOG10&#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
   
   
 

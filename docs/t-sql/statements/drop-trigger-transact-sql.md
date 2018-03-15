@@ -1,5 +1,5 @@
 ---
-title: DROP TRIGGER (Transact SQL) | Microsoft Docs
+title: DROP TRIGGER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -66,16 +66,16 @@ ON ALL SERVER
 
   
 ## <a name="arguments"></a>인수  
- *경우에 존재*  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- 조건에 따라 이미 있는 경우에 트리거를 삭제 합니다.  
+ 이미 있는 경우에만 트리거를 조건부로 삭제합니다.  
   
  *schema_name*  
- DML 트리거가 속한 스키마의 이름입니다. DML 트리거는 트리거가 생성된 테이블 또는 뷰의 스키마로 한정됩니다. *schema_name* DDL 또는 logon 트리거에 대해서는 지정할 수 없습니다.  
+ DML 트리거가 속한 스키마의 이름입니다. DML 트리거는 트리거가 생성된 테이블 또는 뷰의 스키마로 한정됩니다. *schema_name*은 DDL 또는 LOGON 트리거에 대해 지정될 수 없습니다.  
   
  *trigger_name*  
- 제거할 트리거의 이름입니다. 현재 생성된 된 트리거 목록을 보려면 [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 또는 [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)합니다.  
+ 제거할 트리거의 이름입니다. 현재 생성된 트리거 목록을 보려면 [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 또는 [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)를 사용하세요.  
   
  DATABASE  
  현재 데이터베이스에 적용된 DDL 트리거의 범위를 나타냅니다. 트리거를 만들거나 수정할 때 DATABASE를 지정한 경우 DATABASE를 지정해야 합니다.  
@@ -88,22 +88,22 @@ ON ALL SERVER
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  트리거 또는 트리거 테이블을 삭제하여 DML 트리거를 제거할 수 있습니다. 테이블을 삭제하면 이와 연결된 모든 트리거도 삭제됩니다.  
   
- 트리거에 대 한 정보가에서 제거 되는 트리거를 삭제 하는 경우는 **sys.objects**, **sys.triggers** 및 **sys.sql_modules** 카탈로그 뷰.  
+ 트리거를 삭제하면 **sys.objects**, **sys.triggers** 및 **sys.sql_modules** 카탈로그 뷰에서 트리거 정보가 제거됩니다.  
   
  같은 ON 절을 사용하여 만든 DDL 트리거에 대해서만 하나의 DROP TRIGGER 문으로 여러 개의 DDL 트리거를 삭제할 수 있습니다.  
   
  트리거의 이름을 바꾸려면 DROP TRIGGER와 CREATE TRIGGER를 사용합니다. 트리거의 정의를 변경하려면 ALTER TRIGGER를 사용합니다.  
   
- 특정 트리거에 대 한 종속성을 확인 하는 방법에 대 한 자세한 내용은 참조 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [sys.dm_sql_referenced_entities&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md), 및 [sys.dm_sql_referencing_entities&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
+ 특정 트리거에 대한 종속성을 결정하는 방법에 대 한 자세한 내용은 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) 및 [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)을 참조하세요.  
   
- 트리거의 텍스트 보기에 대 한 자세한 내용은 참조 [sp_helptext &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) 및 [sys.sql_modules&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
+ 트리거의 텍스트 보기에 대한 자세한 내용은 [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) 및 [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)을 참조하세요.  
   
- 기존 트리거의 목록 보기에 대 한 자세한 내용은 참조 [sys.triggers&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 및 [sys.server_triggers&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ 기존 트리거의 목록 보기에 대한 자세한 내용은 [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 및 [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  DML 트리거를 삭제하려면 트리거가 정의된 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
  서버 범위(ON ALL SERVER)로 정의된 DDL 트리거 또는 LOGON 트리거를 삭제하려면 현재 서버에서 CONTROL SERVER 권한이 필요합니다. 데이터베이스 범위(ON DATABASE)로 정의된 DDL 트리거를 삭제하려면 현재 데이터베이스에서 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  
@@ -111,7 +111,7 @@ ON ALL SERVER
 ## <a name="examples"></a>예  
   
 ### <a name="a-dropping-a-dml-trigger"></a>1. DML 트리거 삭제  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `employee_insupd` 트리거를 삭제합니다. (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 트리거 IF EXISTS DROP 구문을 사용할 수 있습니다.)  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `employee_insupd` 트리거를 삭제합니다. ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 DROP TRIGGER IF EXISTS 구문을 사용할 수 있습니다.)  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
@@ -122,14 +122,14 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
  다음 예에서는 `safety` DDL 트리거를 삭제합니다.  
   
 > [!IMPORTANT]  
->  DDL 트리거는 스키마 범위 아니며에 표시 되지 않습니다는 **sys.objects** 카탈로그 뷰의 OBJECT_ID 함수를 사용 하 여를 데이터베이스에 존재 하는지 여부를 쿼리할 수 없습니다. 스키마 범위가 아닌 개체는 해당 카탈로그 뷰를 사용하여 쿼리해야 합니다. DDL 트리거에 대 한 사용 하 여 **sys.triggers**합니다.  
+>  DDL 트리거는 스키마 범위가 아니고 따라서 **sys.objects** 카탈로그 뷰에 표시되지 않기 때문에 OBJECT_ID 함수를 사용하여 데이터베이스에 DDL 트리거가 있는지 여부를 쿼리할 수 없습니다. 스키마 범위가 아닌 개체는 해당 카탈로그 뷰를 사용하여 쿼리해야 합니다. DDL 트리거의 경우 **sys.triggers**를 사용합니다.  
   
 ```  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ENABLE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

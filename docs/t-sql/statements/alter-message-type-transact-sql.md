@@ -1,5 +1,5 @@
 ---
-title: "메시지 유형 (Transact SQL) ALTER | Microsoft Docs"
+title: ALTER MESSAGE TYPE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -70,15 +70,15 @@ ALTER MESSAGE TYPE message_type_name
  메시지 본문에 올바른 형식의 XML이 있어야 합니다.  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
- 메시지 본문에는 지정된 스키마 컬렉션의 스키마를 준수하는 XML이 포함되어야 합니다. *schema_collection_name* 기존 XML 스키마 컬렉션의 이름 이어야 합니다.  
+ 메시지 본문에는 지정된 스키마 컬렉션의 스키마를 준수하는 XML이 포함되어야 합니다. *schema_collection_name*은 기존 XML 스키마 컬렉션의 이름이어야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  메시지 유형의 유효성 검사를 변경해도 이미 큐에 배달된 메시지에는 영향을 주지 않습니다.  
   
  메시지 유형에 대한 AUTHORIZATION을 변경하려면 ALTER AUTHORIZATION 문을 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
- 멤버는 메시지 유형의 소유자에 게 메시지 유형 변경 권한은 기본적으로 설정 된 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버는 **sysadmin**고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 메시지 유형 변경 권한은 기본적으로 메시지 유형의 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
  ALTER MESSAGE TYPE 문에서 스키마 컬렉션을 지정하면 이 문을 실행하는 사용자는 지정된 스키마 컬렉션에 대해 REFERENCES 권한이 있어야 합니다.  
   
@@ -91,10 +91,10 @@ ALTER MESSAGE TYPE
     VALIDATION = WELL_FORMED_XML ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER authorization&#40; Transact SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [메시지 유형 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [DROP MESSAGE type&#40; Transact SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

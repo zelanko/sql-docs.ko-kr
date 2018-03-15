@@ -1,5 +1,5 @@
 ---
-title: ALTER CREDENTIAL (TRANSACT-SQL) | Microsoft Docs
+title: ALTER CREDENTIAL(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -57,17 +57,17 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  IDENTITY **='***identity_name***'**  
  서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다.  
   
- 비밀 **='***비밀***'**  
- 나가는 인증에 필요한 암호를 지정합니다. *비밀* 선택 사항입니다.  
+ SECRET **='***secret***'**  
+ 나가는 인증에 필요한 암호를 지정합니다. *비밀*은 선택 사항입니다.  
   
-## <a name="remarks"></a>주의  
- 자격 증명 변경 된 경우, 값이 모두 *identity_name* 및 *비밀* 다시 설정 됩니다. 옵션인 SECRET 인수를 지정하지 않으면 저장된 암호 값이 NULL로 설정됩니다.  
+## <a name="remarks"></a>Remarks  
+ 자격 증명이 변경되면 *identity_name*과 *비밀*의 값이 모두 다시 설정됩니다. 옵션인 SECRET 인수를 지정하지 않으면 저장된 암호 값이 NULL로 설정됩니다.  
   
  암호는 서비스 마스터 키를 사용하여 암호화됩니다. 서비스 마스터 키가 다시 생성되면 암호가 새 서비스 마스터 키를 사용하여 다시 암호화됩니다.  
   
- 자격 증명에 대 한 정보에 표시 됩니다는 **sys.credentials** 카탈로그 뷰에 있습니다.  
+ 자격 증명 정보는 **sys.credentials** 카탈로그 뷰에 표시됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER ANY CREDENTIAL 권한이 필요합니다. 자격 증명이 시스템 자격 증명인 경우에는 CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -89,11 +89,11 @@ ALTER CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [자격 증명 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a>참고 항목  
+ [자격 증명&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [DROP CREDENTIAL &#40; Transact SQL &#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
- [ALTER DATABASE SCOPED credential&#40; Transact SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

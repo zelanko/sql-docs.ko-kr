@@ -1,5 +1,5 @@
 ---
-title: TYPE_NAME (Transact SQL) | Microsoft Docs
+title: TYPE_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ TYPE_NAME ( type_id )
   
 ## <a name="arguments"></a>인수  
  *type_id*  
- 사용될 형식의 ID입니다. *type_id* 는 **int**, 하면 호출자가 액세스할 수 있는 권한이 있는 모든 스키마의 형식을 참조할 수 있습니다.  
+ 사용될 형식의 ID입니다. *type_id*는 **int**이며 호출자가 액세스할 수 있는 모든 스키마의 형식을 참조할 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **sysname**  
@@ -60,12 +60,12 @@ TYPE_NAME ( type_id )
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 TYPE_NAME과 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
- TYPE_NAME 돌아갑니다 인 경우 NULL *type_id* 유효 하지 호출자에 게 유형을 참조할 수 있는 충분 한 사용 권한을 없는 합니다.  
+## <a name="remarks"></a>Remarks  
+ TYPE_NAME은 *type_id*가 유효하지 않거나 호출자에게 유형을 참조할 수 있는 충분한 권한이 없는 경우 NULL을 반환합니다.  
   
- TYPE_NAME은 시스템 데이터 형식에 사용할 수 있으며 사용자 정의 데이터 형식에도 사용할 수 있습니다. 형식은 모든 스키마에 포함될 수 있지만 항상 정규화되지 않은 형식 이름이 반환됩니다. 즉, 이름이 없는 *스키마***합니다.** 찾습니다.  
+ TYPE_NAME은 시스템 데이터 형식에 사용할 수 있으며 사용자 정의 데이터 형식에도 사용할 수 있습니다. 형식은 모든 스키마에 포함될 수 있지만 항상 정규화되지 않은 형식 이름이 반환됩니다. 따라서 이름에 *스키마***가 포함되지 않습니다.** 찾습니다.  
   
- 시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다. 자세한 내용은 참조 [식 &#40; Transact SQL &#41; ](../../t-sql/language-elements/expressions-transact-sql.md) 및 [여기서 &#40; Transact SQL &#41; ](../../t-sql/queries/where-transact-sql.md).  
+ 시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다. 자세한 내용은 [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) 및 [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Vendor` 테이블에 있는 각 열의 개체 이름, 열 이름 및 형식 이름을 반환합니다.  
@@ -97,26 +97,26 @@ Vendor          PurchasingWebServiceURL  nvarchar
 (8 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제에서는 반환 된 `TYPE ID` id 가진 데이터 형식에 대 한 `1`합니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 `TYPE ID` ID를 가진 데이터 형식의 `1`을 반환합니다.  
   
 ```  
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  
 GO  
 ```  
   
- 형식의 목록, sys.types를 쿼리 합니다.  
+ 형식의 목록을 보려면 sys.types를 쿼리합니다.  
   
 ```  
 SELECT * FROM sys.types;  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [TYPE_ID &#40; Transact SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPEPROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [메타데이터 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

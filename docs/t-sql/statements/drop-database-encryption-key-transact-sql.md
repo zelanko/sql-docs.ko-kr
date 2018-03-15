@@ -1,5 +1,5 @@
 ---
-title: DROP DATABASE ENCRYPTION KEY (Transact SQL) | Microsoft Docs
+title: DROP DATABASE ENCRYPTION KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  TDE(Transparent Data Encryption)에 사용된 데이터베이스 암호화 키를 삭제합니다. 투명 한 데이터베이스 암호화에 대 한 자세한 내용은 참조 하세요. [투명 한 데이터 암호화 &#40; Tde&#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+  TDE(Transparent Data Encryption)에 사용된 데이터베이스 암호화 키를 삭제합니다. TDE(투명한 데이터 암호화)에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.  
   
 > [!IMPORTANT]  
 >  데이터베이스에 암호화를 사용할 수 없는 경우에도 데이터베이스 암호화 키를 보호하는 인증서의 백업을 보관해야 합니다. 데이터베이스가 더 이상 암호화되지 않더라도 트랜잭션 로그 부분은 그대로 보호될 수 있으며, 일부 작업의 경우 데이터베이스 전체 백업을 수행할 때까지는 인증서가 필요할 수 있습니다.  
@@ -48,10 +48,10 @@ ms.lasthandoff: 11/21/2017
 DROP DATABASE ENCRYPTION KEY  
 ```  
   
-## <a name="remarks"></a>주의  
- 데이터베이스가 암호화되면 먼저 ALTER DATABASE 문을 사용하여 데이터베이스에서 암호화를 제거해야 합니다. 데이터베이스 암호화 키를 제거하기 전에 해독이 완료될 때까지 기다립니다. ALTER DATABASE 문에 대 한 자세한 내용은 참조 [ALTER DATABASE SET 옵션 &#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md). 데이터베이스의 상태를 보려면 사용 하 여는 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰.  
+## <a name="remarks"></a>Remarks  
+ 데이터베이스가 암호화되면 먼저 ALTER DATABASE 문을 사용하여 데이터베이스에서 암호화를 제거해야 합니다. 데이터베이스 암호화 키를 제거하기 전에 해독이 완료될 때까지 기다립니다. ALTER DATABASE 문에 대한 자세한 내용은 [ALTER DATABASE SET 옵션 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하십시오. 데이터베이스 상태를 보려면 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -72,8 +72,8 @@ DROP DATABASE ENCRYPTION KEY;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제에서는 TDE 암호화를 제거 하 고 데이터베이스 암호화 키를 삭제 합니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예제에서는 TDE 암호화를 제거한 다음, 데이터베이스 암호화 키를 삭제합니다.  
   
 ```  
 ALTER DATABASE AdventureWorksPDW2012  
@@ -104,14 +104,14 @@ DROP DATABASE ENCRYPTION KEY;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [투명한 데이터 암호화&#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [SQL Server 암호화](../../relational-databases/security/encryption/sql-server-encryption.md)   
  [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [데이터베이스 암호화 키 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION key&#40; Transact SQL &#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [sys.dm_database_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
   
   

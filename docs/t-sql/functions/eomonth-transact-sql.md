@@ -1,5 +1,5 @@
 ---
-title: EOMONTH (Transact SQL) | Microsoft Docs
+title: EOMONTH(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ EOMONTH ( start_date [, month_to_add ] )
  달의 마지막 날을 반환하는 날짜를 지정하는 날짜 식입니다.  
   
  *month_to_add*  
- 에 추가할 개월 수를 지정 하는 선택적 정수 식 *start_date*합니다.  
+ *start_date*에 추가할 개월 수를 지정하는 선택적 정수 식입니다.  
   
- 이 인수는 지정할 경우 **EOMONTH** 지정 된 수의 개월 *start_date*, 한 다음 결과 날짜에 대 한 달의 마지막 날을 반환 합니다. 추가로 인해 유효한 날짜 범위를 벗어날 경우 오류가 발생합니다.  
+ 이 인수를 지정하면 **EOMONTH**는 지정한 개월 수를 *start_date*에 추가한 다음, 결과 날짜에 해당하는 달의 마지막 날을 반환합니다. 추가로 인해 유효한 날짜 범위를 벗어날 경우 오류가 발생합니다.  
   
 ## <a name="return-type"></a>반환 형식  
  **date**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 서버에 대해서는 원격으로 실행할 수 있지만 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전의 서버에 대해서는 원격으로 실행할 수 없습니다.  
   
 ## <a name="examples"></a>예  

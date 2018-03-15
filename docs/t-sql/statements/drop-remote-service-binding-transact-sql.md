@@ -1,5 +1,5 @@
 ---
-title: "삭제할 원격 서비스 바인딩 (Transact SQL) | Microsoft Docs"
+title: DROP REMOTE SERVICE BINDING(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,8 +54,8 @@ DROP REMOTE SERVICE BINDING binding_name
  *binding_name*  
  삭제할 원격 서비스 바인딩의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
- 원격 서비스 바인딩 삭제 권한은 기본적으로 원격 서비스 바인딩, db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버의 소유자입니다.  
+## <a name="permissions"></a>사용 권한  
+ 원격 서비스 바인딩 삭제 권한은 기본적으로 해당 원격 서비스 바인딩의 소유자, db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 원격 서비스 바인딩 `APBinding`을 데이터베이스에서 삭제합니다.  
@@ -64,9 +64,9 @@ DROP REMOTE SERVICE BINDING binding_name
 DROP REMOTE SERVICE BINDING APBinding ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE REMOTE SERVICE BINDING&#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [ALTER REMOTE SERVICE binding&#40; Transact SQL &#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
+ [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

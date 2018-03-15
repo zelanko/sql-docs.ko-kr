@@ -1,5 +1,5 @@
 ---
-title: DROP SERVER ROLE (Transact SQL) | Microsoft Docs
+title: DROP SERVER ROLE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ DROP SERVER ROLE role_name
  *role_name*  
  서버에서 삭제할 사용자 정의 서버 역할을 지정합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  보안 개체를 소유한 사용자 정의 서버 역할을 서버에서 삭제할 수 없습니다. 보안 개체를 소유한 사용자 정의 서버 역할을 삭제하려면 먼저 해당 보안 개체의 소유권을 이전하거나 삭제해야 합니다.  
   
- 멤버가 있는 사용자 정의 서버 역할은 삭제할 수 없습니다. 멤버가 포함 된 사용자 정의 서버 역할을 삭제 하려면 먼저 제거 해야 역할의 멤버를 사용 하 여 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)합니다.  
+ 멤버가 있는 사용자 정의 서버 역할은 삭제할 수 없습니다. 멤버가 있는 사용자 정의 서버 역할을 삭제하려면 먼저 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)을 사용하여 역할의 멤버를 제거해야 합니다.  
   
  고정 서버 역할은 제거할 수 없습니다.  
   
- 쿼리하여 역할 멤버 자격에 대 한 정보를 볼 수는 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 카탈로그 뷰에 있습니다.  
+ [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 카탈로그 뷰를 쿼리하여 역할 멤버 자격에 대한 정보를 볼 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버 역할에 대한 CONTROL 권한 또는 ALTER ANY SERVER ROLE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>2. 역할 멤버 자격 보기  
- 역할 멤버 자격을 보려면 사용 하 여는 **서버 역할 (멤버**) 페이지에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 하거나 다음 쿼리를 실행 합니다.  
+ 역할 멤버 자격을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **서버 역할(멤버**) 페이지를 사용하거나 다음 쿼리를 실행합니다.  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -98,11 +98,11 @@ JOIN sys.server_principals AS SP2
 ORDER BY SP1.name ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER role&#40; Transact SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [역할 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [DROP role&#40; Transact SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

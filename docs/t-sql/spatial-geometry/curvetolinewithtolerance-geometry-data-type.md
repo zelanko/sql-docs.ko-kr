@@ -1,5 +1,5 @@
 ---
-title: "CurveToLineWithTolerance (geometry 데이터 형식) | Microsoft Docs"
+title: "CurveToLineWithTolerance(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-다각형 근사값을 반환 합니다.는 **geometry** 원호 세그먼트가 포함 된 인스턴스.
+원호 세그먼트가 포함된 **geometry** 인스턴스의 다각형 근사값을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -42,21 +42,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *tolerance*  
- 이 **double** 원래의 원호 세그먼트와 선형 근사값 사이의 최대 오차를 정의 하는 식입니다.  
+ 원래의 원호 세그먼트와 선형 근사값 사이의 최대 오차를 정의하는 **double** 식입니다.  
   
  *relative*  
- 이 **bool** 편차에 대해 극대 사용할 것인지를 나타내는 식입니다. 극대값이 false(0)로 설정되면 선형 근사값이 가질 수 있는 편차에 대해 최대값이 설정됩니다. 극대값이 true(1)로 설정되면 허용 오차는 허용 오차 매개 변수와 공간 개체의 경계 상자 지름의 곱으로 계산됩니다.  
+ 편차에 대해 극대값을 사용할지 여부를 나타내는 **bool** 식입니다. 극대값이 false(0)로 설정되면 선형 근사값이 가질 수 있는 편차에 대해 최대값이 설정됩니다. 극대값이 true(1)로 설정되면 허용 오차는 허용 오차 매개 변수와 공간 개체의 경계 상자 지름의 곱으로 계산됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
 ## <a name="exceptions"></a>예외  
  허용 오차를 <= 0으로 설정하면 `ArgumentOutOfRange` 예외가 발생합니다.  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 결과 허용 오차 크기를 지정할 수 **LineString**합니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 결과 **LineString**의 허용 오차 크기를 지정할 수 있습니다.  
   
  다음 표에서는 여러 유형에 대해 `CurveToLineWithTolerance()`에서 반환하는 인스턴스 유형을 보여 줍니다.  
   
@@ -69,17 +69,17 @@ ms.lasthandoff: 01/25/2018
 |**MultiLineString**|**LineString** 또는 **MultiLineString** 인스턴스|  
 |**CurvePolygon** 및 **다각형**|**다각형** 인스턴스|  
 |**MultiPolygon**|**다각형** 또는 **MultiPolygon** 인스턴스|  
-|**GeometryCollection** 원호 세그먼트를 포함 하지 않는 단일 인스턴스를 사용|에 포함 된 인스턴스는 **GeometryCollection** 반환 된 인스턴스의 유형을 결정 합니다.|  
-|**GeometryCollection** 단일 1 차원 원호 세그먼트 인스턴스 (**CircularString**, **CompoundCurve**)|**LineString** 인스턴스|  
-|**GeometryCollection** 단일 2 차원 원호 세그먼트 인스턴스 (**CurvePolygon**)|**다각형** 인스턴스|  
-|**GeometryCollection** 여러 1 차원 인스턴스가 있는|**MultiLineString** 인스턴스|  
-|**GeometryCollection** 와 여러 2 차원 인스턴스가|**MultiPolygon** 인스턴스|  
-|**GeometryCollection** 서로 다른 차원의 여러 인스턴스가 있는|**GeometryCollection** 인스턴스|  
+|원호 세그먼트가 포함되지 않은 단일 인스턴스가 있는 **GeometryCollection**|**GeometryCollection**에 포함된 인스턴스가 반환된 인스턴스의 유형을 결정합니다.|  
+|단일 1차원 원호 세그먼트 인스턴스가 있는 **GeometryCollection**(**CircularString**, **CompoundCurve**)|**LineString** 인스턴스|  
+|단일 2차원 원호 세그먼트 인스턴스가 있는 **GeometryCollection**(**CurvePolygon**)|**다각형** 인스턴스|  
+|여러 1차원 인스턴스가 있는 **GeometryCollection**|**MultiLineString** 인스턴스|  
+|여러 2차원 인스턴스가 있는 **GeometryCollection**|**MultiPolygon** 인스턴스|  
+|다른 차원의 여러 인스턴스가 있는 **GeometryCollection**|**GeometryCollection** 인스턴스|  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>1. CircularString 인스턴스에 여러 허용 오차 값 사용  
- 다음 예제에서는 영향을 어떻게 설정 된 허용 오차는 `LineString`에서 반환 된 인스턴스는 `CircularString` 인스턴스:  
+ 다음 예에서는 허용 오차를 설정하면 인스턴스에서 `LineString`반환된 인스턴스`CircularString`가 어떤 영향을 받는지 보여 줍니다.  
   
 ```
  DECLARE @g geometry; 
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>4. 호출하는 CurvePolygon 인스턴스에 대해 극대값을 true로 설정  
- 다음 예제에서는 한 `CurvePolygon` 호출 하는 인스턴스 `CurveToLineWithTolerance()` 와 *상대* true로 설정:  
+ 다음 예에서는 *relative*를 true로 설정하여 `CurvePolygon` 인스턴스를 사용해 `CurveToLineWithTolerance()`를 호출합니다.  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -122,9 +122,9 @@ ms.lasthandoff: 01/25/2018
  SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
  ```  
   
-## <a name="see-also"></a>관련 항목:  
- [CurveToLineWithTolerance &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
- [STCurveToLine &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+## <a name="see-also"></a>참고 항목  
+ [CurveToLineWithTolerance &#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
+ [STCurveToLine &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
   
 

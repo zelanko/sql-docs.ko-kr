@@ -1,5 +1,5 @@
 ---
-title: "원격 서비스 바인딩 (Transact SQL) 만들기 | Microsoft Docs"
+title: CREATE REMOTE SERVICE BINDING(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -71,35 +71,35 @@ CREATE REMOTE SERVICE BINDING binding_name
   
 ## <a name="arguments"></a>인수  
  *binding_name*  
- 생성할 원격 서비스 바인딩의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *binding_name* 은 유효한 **sysname**합니다.  
+ 생성할 원격 서비스 바인딩의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *binding_name*은 유효한 **sysname**이어야 합니다.  
   
- 권한 부여 *owner_name*  
- 지정한 데이터베이스 사용자 또는 역할로 바인딩 소유자를 설정합니다. 현재 사용자가 **dbo** 또는 **sa**, *owner_name* 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name* 현재 사용자의 이름, 현재 사용자가을 대 한 IMPERSONATE 권한이 있는 사용자의 이름 또는 현재 사용자가 속해 있는 역할의 이름 이어야 합니다.  
+ AUTHORIZATION *owner_name*  
+ 지정한 데이터베이스 사용자 또는 역할로 바인딩 소유자를 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자에 IMPERSONATE 권한이 있는 사용자 이름 또는 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  
   
- 서비스에 '*service_name*'  
+ TO SERVICE '*service_name*'  
  WITH USER 절에서 식별된 사용자에 바인딩할 원격 서비스를 지정합니다.  
   
- 사용자 = *user_name*  
+ USER = *user_name*  
  TO SERVICE 절로 식별되는 원격 서비스와 연결된 인증서를 소유하는 데이터베이스 보안 주체를 지정합니다. 이 인증서는 원격 서비스와 교환한 메시지의 암호화 및 인증에 사용됩니다.  
   
  ANONYMOUS  
- 원격 서비스와 통신할 경우 익명 인증을 사용할지 여부를 지정합니다. 익명 = ON 이면 익명 인증을 사용 하 고 원격 데이터베이스에 있는 작업의 구성원으로 발생는 **공용** 고정된 데이터베이스 역할입니다. ANONYMOUS가 OFF인 경우에는 원격 데이터베이스의 작업이 해당 데이터베이스의 특정 사용자로 수행됩니다. 이 절을 지정하지 않은 경우 기본값은 OFF입니다.  
+ 원격 서비스와 통신할 경우 익명 인증을 사용할지 여부를 지정합니다. ANONYMOUS가 ON인 경우에는 익명 인증이 사용되고 원격 데이터베이스의 작업은 **public** 고정 데이터베이스 역할의 멤버로 수행됩니다. ANONYMOUS가 OFF인 경우에는 원격 데이터베이스의 작업이 해당 데이터베이스의 특정 사용자로 수행됩니다. 이 절을 지정하지 않은 경우 기본값은 OFF입니다.  
   
-## <a name="remarks"></a>주의  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 원격 서비스 바인딩을 사용하여 새 대화에 사용할 인증서를 찾습니다. 연결 된 인증서의 공개 키 *user_name* 원격 서비스에 전송 된 메시지를 인증 하 고 다음 대화를 암호화 하는 데 사용 되는 세션 키를 암호화 하는 데 사용 됩니다. 에 대 한 인증서 *user_name* 원격 서비스를 호스팅하는 데이터베이스의 사용자에 대 한 인증서와 일치 해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 원격 서비스 바인딩을 사용하여 새 대화에 사용할 인증서를 찾습니다. *user_name*과 연관된 인증서에 있는 공개 키는 원격 서비스로 전달된 메시지 인증 및 대화를 암호화하는 데 사용되는 세션 키의 암호화에 사용됩니다. *user_name*에 대한 인증서는 원격 서비스를 호스팅하는 데이터베이스의 사용자에 대한 인증서와 일치해야 합니다.  
   
- 원격 서비스 바인딩은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부의 대상 서비스와 대화하는 시작 서비스에만 필요합니다. 시작 서비스를 호스팅하는 데이터베이스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부의 대상 서비스에 대한 원격 서비스 바인딩이 포함되어야 합니다. 대상 서비스를 호스팅하는 데이터베이스에는 대상 서비스와 대화하는 시작 서비스에 대한 원격 서비스 바인딩이 없어도 됩니다. 시작자와 대상 서비스가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에 있는 경우에는 원격 서비스 바인딩이 필요 없습니다. 그러나 원격 서비스 바인딩을는 존재 하는 경우는 *service_name* 서비스 하는 로컬 서비스의 이름과 일치에 대해 지정 된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 바인딩을 사용 합니다.  
+ 원격 서비스 바인딩은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부의 대상 서비스와 대화하는 시작 서비스에만 필요합니다. 시작 서비스를 호스팅하는 데이터베이스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부의 대상 서비스에 대한 원격 서비스 바인딩이 포함되어야 합니다. 대상 서비스를 호스팅하는 데이터베이스에는 대상 서비스와 대화하는 시작 서비스에 대한 원격 서비스 바인딩이 없어도 됩니다. 시작자와 대상 서비스가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에 있는 경우에는 원격 서비스 바인딩이 필요 없습니다. 그러나 원격 서비스 바인딩이 있고 TO SERVICE에 지정된 *service_name*이 로컬 서비스 이름과 일치하면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]이 해당 바인딩을 사용하게 됩니다.  
   
- Anonymous = ON의 구성원으로 대상 서비스에 연결 하는 시작 서비스는 **공용** 고정된 데이터베이스 역할입니다. 기본적으로 이 역할의 멤버는 데이터베이스에 연결할 수 있는 권한이 없습니다. 대상 데이터베이스는 메시지를 성공적으로 보내려면 부여 해야는 **공용** 역할은 데이터베이스에 대 한 CONNECT 권한 및 대상 서비스에 대 한 SEND 권한이 있습니다.  
+ ANONYMOUS가 ON인 경우 시작 서비스는 **public** 고정 데이터베이스 역할의 멤버로 대상 서비스에 연결합니다. 기본적으로 이 역할의 멤버는 데이터베이스에 연결할 수 있는 권한이 없습니다. 메시지를 보내려면 대상 데이터베이스가 데이터베이스에 대한 CONNECT 권한 및 대상 서비스에 대한 SEND 권한을 **public** 역할에 부여해야 합니다.  
   
  사용자가 인증서를 두 개 이상 소유하고 있는 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 현재 유효하며 AVAILABLE FOR BEGIN_DIALOG로 표시된 인증서 중에서 만료 날짜가 가장 최근인 인증서를 선택합니다.  
   
-## <a name="permissions"></a>Permissions  
- 원격 만들기에 대 한 권한을 서비스의 구성원 USER 절에 명명 된 사용자에 게 기본 바인딩는 **db_owner** 고정된 데이터베이스 역할의 멤버는 **db_ddladmin** 고정 데이터베이스 역할 및 멤버 **sysadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 원격 서비스 바인딩 생성 권한은 기본적으로 USER 절에 명명된 사용자, **db_owner** 고정 데이터베이스 역할의 멤버, **db_ddladmin** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버에게 있습니다.  
   
  CREATE REMOTE SERVICE BINDING 문을 실행하는 사용자는 문에서 지정한 보안 주체에 대해 가장 권한이 있어야 합니다.  
   
- 원격 서비스 바인딩은 임시 개체가 될 수 없습니다. 로 시작 하는 원격 서비스 바인딩 이름은  **#**  수 있지만 영구 개체입니다.  
+ 원격 서비스 바인딩은 임시 개체가 될 수 없습니다. 원격 서비스 바인딩 이름은 **#**으로 시작할 수 있지만 영구 개체입니다.  
   
 ## <a name="examples"></a>예  
   
@@ -113,7 +113,7 @@ CREATE REMOTE SERVICE BINDING APBinding
 ```  
   
 ### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>2. 익명 인증을 사용하여 원격 서비스 바인딩 만들기  
- 다음 예에서는 `//Adventure-Works.com/services/AccountsPayable` 서비스에 대한 바인딩을 만듭니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 `APUser` 데이터베이스 보안 주체가 소유한 인증서를 사용하여 해당 원격 서비스와 세션 암호화 키를 교환합니다. 원격 서비스를 인증하지는 않습니다. 원격 서비스를 호스팅하는 데이터베이스에 메시지로 전달 되는 **게스트** 사용자입니다.  
+ 다음 예에서는 `//Adventure-Works.com/services/AccountsPayable` 서비스에 대한 바인딩을 만듭니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 `APUser` 데이터베이스 보안 주체가 소유한 인증서를 사용하여 해당 원격 서비스와 세션 암호화 키를 교환합니다. 원격 서비스를 인증하지는 않습니다. 원격 서비스를 호스팅하는 데이터베이스에서 메시지는 **guest** 사용자로 배달됩니다.  
   
 ```  
 CREATE REMOTE SERVICE BINDING APBinding  
@@ -121,9 +121,9 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser, ANONYMOUS=ON ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER REMOTE SERVICE binding&#40; Transact SQL &#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
- [DROP REMOTE SERVICE binding&#40; Transact SQL &#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
+ [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

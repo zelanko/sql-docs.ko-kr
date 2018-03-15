@@ -1,5 +1,5 @@
 ---
-title: SYSTEM_USER (Transact SQL) | Microsoft Docs
+title: SYSTEM_USER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -55,12 +55,12 @@ SYSTEM_USER
 ## <a name="return-types"></a>반환 형식  
  **nchar**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  CREATE TABLE 및 ALTER TABLE 문에서 SYSTEM_USER 함수를 DEFAULT 제약 조건으로 사용할 수 있습니다. 이 함수를 표준 함수로 사용할 수도 있습니다.  
   
  사용자 이름과 로그인 이름이 다르면 SYSTEM_USER가 로그인 이름을 반환합니다.  
   
- 현재 사용자가에 로그인 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SYSTEM_USER 형식의 Windows 로그인 id 이름을 반환 Windows 인증을 사용 하 여: *도메인*\\*user_login_name*. 하지만 현재 사용자가 SQL Server 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인한 경우에는 SYSTEM_USER가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 ID 이름을 반환합니다. 예를 들어 `WillisJo`로 로그인한 사용자의 경우에는 `WillisJo`를 반환합니다.  
+ 현재 사용자가 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인하면 SYSTEM_USER는 *DOMAIN*\\*user_login_name* 형식의 Windows 로그인 식별 이름을 반환합니다. 하지만 현재 사용자가 SQL Server 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인한 경우에는 SYSTEM_USER가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 ID 이름을 반환합니다. 예를 들어 `WillisJo`로 로그인한 사용자의 경우에는 `WillisJo`를 반환합니다.  
   
  SYSTEM_USER는 현재 실행 중인 컨텍스트의 이름을 반환합니다. EXECUTE AS 문이 컨텍스트를 전환하는 데 사용된 경우에는 SYSTEM_USER가 가장된 컨텍스트의 이름을 반환합니다.  
   
@@ -133,23 +133,23 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C: SYSTEM_USER를 사용 하 여 현재 시스템 사용자 이름 반환  
- 현재 값을 반환 하는 다음 예제에서는 `SYSTEM_USER`합니다.  
+### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>3. SYSTEM_USER를 사용하여 현재 시스템 사용자 이름 반환  
+ 다음 예에서는 `SYSTEM_USER`의 현재 값을 반환합니다.  
   
 ```  
 SELECT SYSTEM_USER;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40; Transact SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40; Transact SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SESSION_USER &#40; Transact SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [User&#40; Transact SQL &#41;](../../t-sql/functions/user-transact-sql.md)  
+ [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: SIGNBYASYMKEY (Transact SQL) | Microsoft Docs
+title: SIGNBYASYMKEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,18 +53,18 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
   
 ## <a name="arguments"></a>인수  
  *Asym_Key_ID*  
- 현재 데이터베이스에 있는 비대칭 키의 ID입니다. *Asym_Key_ID* 은**int**합니다.  
+ 현재 데이터베이스에 있는 비대칭 키의 ID입니다. *Asym_Key_ID*는 **int**입니다.  
   
  **@plaintext**  
- 형식의 변수는 **nvarchar**, **char**, **varchar**, 또는 **nchar** 비대칭 키로 서명 될 데이터가 들어 있는입니다.  
+ 비대칭 키로 서명될 데이터가 들어 있는 **nvarchar**, **char**, **varchar** 또는 **nchar** 형식의 변수입니다.  
   
- *암호*  
- 개인 키를 보호하는 암호입니다. *암호* 은 **nvarchar (128)**합니다.  
+ *password*  
+ 개인 키를 보호하는 암호입니다. *암호*는 **nvarchar(128)**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **varbinary** 최대 크기가 8, 000 바이트입니다.  
+ 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -86,9 +86,9 @@ INSERT INTO [SignedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ASYMKEY_ID &#40; Transact SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [VERIFYSIGNEDBYASYMKEY &#40; Transact SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

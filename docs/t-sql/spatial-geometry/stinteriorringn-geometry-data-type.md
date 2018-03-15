@@ -1,5 +1,5 @@
 ---
-title: "STInteriorRingN (geometry 데이터 형식) | Microsoft Docs"
+title: "STInteriorRingN(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-지정된 된 내부 링을 반환 합니다.는 **Polygongeometry** 인스턴스.
+**Polygongeometry** 인스턴스의 지정된 내부 링을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 이 **int** 1과 내부 링 개수 사이의 식은 **기 하 도형** 인스턴스.  
+ 1과 **geometry** 인스턴스에 있는 내부 링 개수 사이의 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
- 열기 Geospatial Consortium (OGC) 입력: **LineString**  
+ OGC(Open Geospatial Consortium) 형식: **LineString**  
   
-## <a name="remarks"></a>주의  
- 이 메서드가 반환 **null** 경우는 **geometry** 인스턴스가 다각형 않습니다. 이 메서드는 또한 throw 한 **ArgumentOutOfRangeException** 식이 링 개수 보다 큰 경우. 내부 링의 개수를 사용 하 여 반환 될 수 `STNumInteriorRing``()`합니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 **geometry** 인스턴스가 다각형이 아니면 **null**을 반환합니다. 또한 이 메서드는 식이 링 개수보다 크면 **ArgumentOutOfRangeException**을 throw합니다. 링 개수는 `STNumInteriorRing``()`를 사용하여 반환할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 한 `Polygon` 인스턴스 및 사용 하 여 `STInteriorRingN()` 으로 다각형의 내부 링을 반환 하는 **LineString**합니다.  
+ 다음 예에서는 `Polygon` 인스턴스를 만들고 `STInteriorRingN()`을 사용하여 다각형의 내부 링을 **LineString**으로 반환합니다.  
   
 ```  
 DECLARE @g geometry;  
@@ -66,7 +66,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STInteriorRingN(1).ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

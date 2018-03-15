@@ -1,5 +1,5 @@
 ---
-title: sql_variant (Transact SQL) | Microsoft Docs
+title: sql_variant(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 9/12/2017
 ms.prod: sql-non-specified
@@ -47,27 +47,27 @@ ms.lasthandoff: 11/21/2017
 sql_variant  
 ```  
   
-## <a name="remarks"></a>주의  
-**sql_variant** 열, 매개 변수, 변수 및 사용자 정의 함수의 반환 값에서 사용할 수 있습니다. **sql_variant** 다른 데이터 형식의 값을 지 원하는 데 이러한 데이터베이스 개체를 사용 하도록 설정 합니다.
+## <a name="remarks"></a>Remarks  
+**sql_variant**는 열, 매개 변수, 변수 및 사용자 정의 함수의 반환 값으로 사용될 수 있습니다. **sql_variant**는 이 데이터베이스 개체들이 다른 데이터 형식의 값을 지원할 수 있게 합니다.
   
-형식의 열 **sql_variant** 서로 다른 데이터 형식의 행이 포함 될 수 있습니다. 로 정의 된 열의 예를 들어 **sql_variant** 저장할 수 있는 **int**, **이진**, 및 **char** 값입니다.
+**sql_variant** 형식의 열은 다른 데이터 형식의 행을 포함할 수 있습니다. 예를 들어 **sql_variant**로 정의된 열은 **int**, **binary** 및 **char** 값을 저장할 수 있습니다.
   
-**sql_variant** 8016 바이트의 최대 길이 가질 수 있습니다. 여기에는 기본 유형 정보 및 기본 유형 값이 모두 포함됩니다. 실제 기본 유형 값의 최대 길이는 8,000바이트입니다.
+**sql_variant**는 최대 8016바이트의 길이를 가질 수 있습니다. 여기에는 기본 유형 정보 및 기본 유형 값이 모두 포함됩니다. 실제 기본 유형 값의 최대 길이는 8,000바이트입니다.
   
-A **sql_variant** 데이터 형식 캐스트 되어야 해당 기본 데이터 형식 값에 더하기 및 빼기와 같은 작업에 사용 되기 전에 합니다.
+**sql_variant** 데이터 형식은 덧셈 및 뺄셈과 같은 연산에 사용되기 전에 먼저 기본 데이터 형식 값으로 캐스팅되어야 합니다.
   
-**sql_variant** 기본값을 할당할 수 있습니다. 이 데이터 형식은 NULL을 기초값으로 가질 수는 있지만 NULL 값은 연결된 기본 유형을 갖지 않습니다. 또한 **sql_variant** 다른 없는 **sql_variant** 기본 형식으로.
+**sql_variant**에 기본값을 할당할 수 있습니다. 이 데이터 형식은 NULL을 기초값으로 가질 수는 있지만 NULL 값은 연결된 기본 유형을 갖지 않습니다. 또한 **sql_variant**는 기본 유형으로 다른 **sql_variant**를 가질 수 없습니다.
   
-고유, 기본 또는 외래 키 형식의 열을 포함할 수 **sql_variant**, 있지만 특정 행의 키를 구성 하는 데이터 값의 총 길이 인덱스의 최대 길이 초과 합니다. 크면 안 됩니다.
+고유 키, 기본 키 또는 외래 키는 **sql_variant** 형식의 열을 포함할 수 있지만 특정 행의 키를 구성하는 데이터 값의 총 길이는 인덱스의 최대 길이(900바이트)보다 크면 안 됩니다.
   
-테이블이 개수에 관계 없이 포함할 수 **sql_variant** 열입니다.
+테이블은 **sql_variant** 열을 얼마든지 포함할 수 있습니다.
   
-**sql_variant** CONTAINSTABLE 및 FREETEXTTABLE에 사용할 수 없습니다.
+**sql_variant**를 CONTAINSTABLE 및 FREETEXTTABLE에 사용할 수 없습니다.
   
-ODBC 완전히 지원 하지 않는 **sql_variant**합니다. 따라서 쿼리가 **sql_variant** Microsoft OLE DB Provider for ODBC (MSDASQL)를 사용 하는 경우 열이 이진 데이터로 반환 됩니다. 예를 들어 한 **sql_variant** 문자열 데이터 'p s 2091'를 포함 하는 열은 0x505332303931 반환 됩니다.
+ODBC에서는 **sql_variant**를 모두 지원하지는 않습니다. 따라서 Microsoft OLE DB Provider for ODBC(MSDASQL)를 사용할 때 **sql_variant** 열을 쿼리하면 이진 데이터로 반환됩니다. 예를 들어 문자열 데이터 'PS2091'를 포함하는 **sql_variant** 열은 0x505332303931로 반환됩니다.
   
 ## <a name="comparing-sqlvariant-values"></a>sql_variant 값 비교  
-**sql_variant** 데이터 형식 변환에 대 한 데이터 형식 계층 구조 목록의 맨 위에 속합니다. 에 대 한 **sql_variant** 비교는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 계층 구조 순서는 데이터 형식 패밀리로 그룹화 됩니다.
+**sql_variant** 데이터 형식은 변환을 위한 데이터 형식 계층 구조 목록의 맨 위에 속합니다. **sql_variant** 비교를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 계층 구조 순서는 데이터 형식 패밀리로 그룹화됩니다.
   
 |데이터 형식 계층|데이터 형식 패밀리|  
 |---|---|
@@ -96,23 +96,23 @@ ODBC 완전히 지원 하지 않는 **sql_variant**합니다. 따라서 쿼리�
 |**binary**|이진|  
 |**uniqueidentifier**|Uniqueidentifier |  
   
-에 다음 규칙이 적용 **sql_variant** 비교:
--   때 **sql_variant** 서로 다른 기본 데이터 형식의 값을 비교 하 고 기본 데이터 형식이 서로 다른 데이터 형식 패밀리, 계층 구조 차트에서 데이터 형식 패밀리의 더 높은 값 두 값 중 더 큰 것으로 간주 됩니다.  
--   때 **sql_variant** 서로 다른 기본 데이터 형식의 값을 비교 하 고 기본 데이터 형식은 동일한 데이터 형식 패밀리에 있는, 계층 구조 차트에서 기본 데이터 형식이 더 낮은 값은 다른 데이터 형식으로 암시적으로 변환 하 고 다음 비교 됩니다.  
--   때 **sql_variant** 의 값은 **char**, **varchar**, **nchar**, 또는 **nvarchar** 데이터 형식은 비교할 때 해당 데이터 정렬이 먼저 비교 됩니다 다음 기준에 따라: LCID, LCID 버전, 비교 플래그 및 정렬 id입니다. 이러한 조건은 각각 정수 값으로, 그리고 나열된 순서대로 비교됩니다. 이러한 모든 조건이 같다면 실제 문자열 값은 데이터 정렬에 따라 비교됩니다.  
+**sql_variant** 비교에는 다음 규칙이 적용됩니다.
+-   서로 다른 기본 데이터 형식의 **sql_variant** 값을 비교할 때 기본 데이터 형식이 서로 다른 데이터 형식 패밀리에 있으면 계층 구조 차트에서 더 높은 데이터 형식 패밀리의 값이 두 값 중 더 큰 것으로 간주됩니다.  
+-   서로 다른 기본 데이터 형식의 **sql_variant** 값을 비교할 때 기본 데이터 형식이 동일한 데이터 형식 패밀리에 있으면 계층 구조 차트에서 더 낮은 기본 데이터 형식의 값이 암시적으로 다른 데이터 형식으로 변환된 다음, 비교됩니다.  
+-   **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식의 **sql_variant** 값을 비교하는 경우 해당 데이터 정렬은 먼저 LCID, LCID 버전, 비교 플래그 및 정렬 ID와 같은 기준에 따라 비교됩니다. 이러한 조건은 각각 정수 값으로, 그리고 나열된 순서대로 비교됩니다. 이러한 모든 조건이 같다면 실제 문자열 값은 데이터 정렬에 따라 비교됩니다.  
   
 ## <a name="converting-sqlvariant-data"></a>sql_variant 데이터 변환  
-처리 하는 경우는 **sql_variant** 데이터 형식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다른 데이터 형식으로 된 개체의 암시적 변환을 지원는 **sql_variant** 유형입니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 암시적 변환을 지원 하지 않습니다 **sql_variant** 데이터를 다른 데이터 형식의 개체입니다.
+**sql_variant** 데이터 형식을 처리할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 개체의 데이터 형식을 **sql_variant** 형식으로 암시적으로 변환할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 **sql_variant** 데이터에서 다른 데이터 형식의 개체로의 암시 적 변환을 지원하지 않습니다.
   
-## <a name="restrictions"></a>제한 사항  
-다음 표에서 사용 하 여 저장할 수 없는 값의 유형은 **sql_variant**:
+## <a name="restrictions"></a>Restrictions  
+다음 표에서는 **sql_variant**를 사용하여 저장할 수 없는 값 형식을 나열합니다.
   
 |||  
 |-|-|  
 |**varchar(max)**|**varbinary(max)**|  
 |**nvarchar(max)**|**xml**|  
 |**text**|**ntext**|  
-|**image**|**rowversion** (**타임 스탬프**)|  
+|**image**|**rowversion**(**timestamp**)|  
 |**sql_variant**|**geography**|  
 |**hierarchyid**|**geometry**|  
 |사용자 정의 형식|**datetimeoffset**|  
@@ -120,7 +120,7 @@ ODBC 완전히 지원 하지 않는 **sql_variant**합니다. 따라서 쿼리�
 ## <a name="examples"></a>예  
 
 ### <a name="a-using-a-sqlvariant-in-a-table"></a>1. 테이블에서 sql_variant 사용  
- 다음 예제에서는 sql_variant 데이터 형식으로 테이블을 만듭니다. 이 예제에서는 검색 `SQL_VARIANT_PROPERTY` 에 대 한 정보는 `colA` 값 `46279.1` 여기서 `colB`  = `1689`있다고 가정, `tableA` 가 `colA` 형식의 `sql_variant` 및 `colB`.  
+ 다음 예에서는 sql_variant 데이터 형식이 있는 테이블을 만듭니다. 그런 다음, 예제는 `tableA`에 `sql_variant` 및 `colB` 유형인 `colA`가 있는 경우 `colB` =`1689`인 `colA`값`46279.1`에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -132,7 +132,7 @@ FROM      tableA
 WHERE      colB = 1689  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]다음 세 값 중 각는 **sql_variant**합니다.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 이 세 값은 각각 **sql_variant**입니다.  
   
 ```  
 Base Type    Precision    Scale  
@@ -142,8 +142,8 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>2. 변수는 sql_variant를 사용 하 여   
- 다음 예제에서는 sql_variant 데이터 형식을 사용 하 여 변수를 만들고 다음 검색 `SQL_VARIANT_PROPERTY` 라는 변수에 대 한 정보 @v1합니다.  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>2. 변수로 sql_variant 사용   
+ 다음 예제에서는 sql_variant 데이터 형식을 사용하여 변수를 만든 다음, @v1 변수에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
   
 ```sql    
 DECLARE @v1 sql_variant;  
@@ -154,8 +154,8 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 ```    
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[SQL_VARIANT_PROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
+[SQL_VARIANT_PROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
   
   

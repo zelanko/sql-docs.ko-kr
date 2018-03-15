@@ -1,5 +1,5 @@
 ---
-title: "공간 (Transact SQL) | Microsoft Docs"
+title: SPACE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ SPACE ( integer_expression )
   
 ## <a name="arguments"></a>인수  
  *integer_expression*  
- 공백 수를 나타내는 양의 정수입니다. 경우 *integer_expression* 가 음수 이면 null 문자열이 반환 됩니다.  
+ 공백 수를 나타내는 양의 정수입니다. *integer_expression*이 음수이면 Null 문자열이 반환됩니다.  
   
- 자세한 내용은 참조 [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
  **varchar**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  유니코드 데이터에 공백을 포함하거나 8000개가 넘는 공백을 반환하려면 SPACE 대신 REPLICATE를 사용합니다.  
   
 ## <a name="examples"></a>예  
@@ -70,7 +70,7 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 성을 없애고 쉼표 하나, 공백 두 개 및 `DimCustomer`의 `AdventureWorksPDW2012` 테이블에 나열된 사람의 이름을 연결합니다.  
   
 ```  
@@ -82,9 +82,9 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 &#40; Transact SQL &#41;](../../t-sql/functions/replicate-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [REPLICATE &#40;Transact-SQL&#41;](../../t-sql/functions/replicate-transact-sql.md)   
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

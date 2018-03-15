@@ -1,5 +1,5 @@
 ---
-title: '@@SERVICENAME (Transact SQL) | Microsoft Docs'
+title: '@@SERVICENAME(Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,10 +33,10 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact SQL)
+# <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행되고 있는 레지스트리 키의 이름을 반환합니다. @@SERVICENAME 경우 'MSSQLSERVER'를 반환 합니다. 현재 인스턴스가 기본 인스턴스가;이 함수는 현재 인스턴스가 명명 된 인스턴스인 경우 인스턴스 이름을 반환 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행되고 있는 레지스트리 키의 이름을 반환합니다. @@SERVICENAME은 현재 인스턴스가 기본 인스턴스인 경우에는 'MSSQLSERVER'를 반환하고 현재 인스턴스가 명명된 인스턴스인 경우에는 인스턴스 이름을 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>반환 형식  
  **nvarchar**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 MSSQLServer라는 서비스로 실행됩니다.  
   
 ## <a name="examples"></a>예  
@@ -67,7 +67,7 @@ Service Name
 MSSQLSERVER                     
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구성 함수&#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [데이터베이스 엔진 서비스 관리](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   

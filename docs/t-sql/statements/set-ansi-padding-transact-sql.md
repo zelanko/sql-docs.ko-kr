@@ -1,5 +1,5 @@
 ---
-title: SET ANSI_PADDING (Transact SQL) | Microsoft Docs
+title: SET ANSI_PADDING(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -58,29 +58,29 @@ SET ANSI_PADDING { ON | OFF }
 SET ANSI_PADDING ON
 ```
 
-## <a name="remarks"></a>주의  
- 으로 정의 된 열 **char**, **varchar**, **이진**, 및 **varbinary** 데이터 형식에 정의 된 크기는 합니다.  
+## <a name="remarks"></a>Remarks  
+ **char**, **varchar**, **binary** 및 **varbinary** 데이터 형식으로 정의된 열에는 정의된 크기가 있습니다.  
   
  이 설정은 새 열의 정의에만 영향을 줍니다. 열이 생성된 다음에는 열을 만들 때의 설정에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 값을 저장합니다. 나중에 이 설정을 변경해도 기존의 열은 영향을 받지 않습니다.  
   
 > [!NOTE]  
 >  ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다.  
   
- 다음 표에서 값을 가진 열에 삽입할 때 SET ANSI_PADDING 설정의 효과 보여 줍니다 **char**, **varchar**, **이진**, 및  **varbinary** 데이터 형식입니다.  
+ 다음 표에서는 **char**, **varchar**, **binary** 및 **varbinary** 데이터 형식의 열에 값을 삽입할 때 SET ANSI_PADDING 설정의 결과를 보여 줍니다.  
   
-|설정|char (*n*) 하지 NULL 또는 binary (*n*) NOT NULL|char (*n*) NULL 또는 binary (*n*) NULL|varchar (*n*) 또는 varbinary (*n*)|  
+|설정|char(*n*) NOT NULL 또는 binary(*n*) NOT NULL|char(*n*) NULL 또는 binary(*n*) NULL|varchar(*n*) 또는 varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|원래 값 (후행 공백으로 대 한 **char** 열 후행 0에 대 한으로 **이진** 열) 열의 길이입니다.|와 같은 규칙을 따르는 **char (***n***)** 또는 **이진 (**  *n*  **)** NOT SET ANSI_PADDING이 ON 일 때 NULL입니다.|삽입 된 문자 값의 후행 공백과 **varchar** 열이 잘리지 않습니다. 뒤에 오는 0에 삽입 된 이진 값의 **varbinary** 열이 잘리지 않습니다. 값은 열의 크기만큼 오른쪽에 공백으로 채워집니다.|  
-|OFF|원래 값 (후행 공백으로 대 한 **char** 열 후행 0에 대 한으로 **이진** 열) 열의 길이입니다.|와 같은 규칙을 따르는 **varchar** 또는 **varbinary** 때 SET ANSI_PADDING이 OFF입니다.|에 삽입 된 문자 값의 후행 공백과 **varchar** 열 잘립니다. 뒤에 오는 0에 삽입 된 이진 값에는 **varbinary** 열 잘립니다.|  
+|ON|열의 크기만큼 오른쪽으로 원래 값(**char** 열에 대해서는 후행 공백으로, **binary** 열에 대해서는 후행 0으로)을 채웁니다.|SET ANSI_PADDING이 ON일 **char(***n***)** 또는 **binary(***n***)** NOT NULL과 동일한 규칙을 따릅니다.|**varchar** 열에 삽입된 문자 값의 후행 공백은 잘리지 않습니다. **varbinary** 열에 삽입된 이진 값 뒤에 오는 0은 잘리지 않습니다. 값은 열의 크기만큼 오른쪽에 공백으로 채워집니다.|  
+|OFF|열의 크기만큼 오른쪽으로 원래 값(**char** 열에 대해서는 후행 공백으로, **binary** 열에 대해서는 후행 0으로)을 채웁니다.|SET ANSI_PADDING 옵션이 OFF일 때 **varchar** 또는 **varbinary**의 경우와 같은 규칙을 따릅니다.|**varchar** 열에 삽입된 문자 값의 후행 공백은 잘립니다. **varbinary** 열에 삽입된 이진 값 뒤에 오는 0은 잘립니다.|  
   
 > [!NOTE]  
->  채워질 때 **char** 열은 공백으로 및 **이진** 열은 0으로 채워집니다. 잘릴 때 **char** 열에 후행 공백이 잘리고, 있어야 하 고 **이진** 열 뒤에 오는 0 잘리지에 있어야 합니다.  
+>  채워질 때 **char** 열은 공백으로, **binary** 열은 0으로 채워집니다. 잘릴 때 **char** 열에서는 후행 공백이, **binary** 열에서는 뒤에 오는 0이 잘립니다.  
   
- 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET ANSI_PADDING을 ON으로 설정해야 합니다. 계산된 열에 인덱스 및 인덱싱된 뷰에 필요한 SET 옵션 설정에 대 한 자세한 내용은 "고려 사항 때 설정 문 사용"의 참조 [SET 문 &#40; Transact SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
+ 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET ANSI_PADDING을 ON으로 설정해야 합니다. 인덱싱된 뷰 및 계산 열의 인덱스에 사용되는 필수 SET 옵션 설정에 대한 자세한 내용은 [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)에서 "SET 문 사용 시 고려 사항"을 참조하세요.  
   
- SET ANSI_PADDING의 기본값은 ON입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 될 때 자동으로 ANSI_PADDING을 ON으로 설정 합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는, SQL Server에 연결하기 전에 응용 프로그램에 설정된 OLE DB 연결 속성에서 이 옵션을 구성할 수 있습니다. DB-Library 응용 프로그램에서 연결하는 경우 SET ANSI_PADDING의 기본값은 OFF입니다.  
+ SET ANSI_PADDING의 기본값은 ON입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_PADDING을 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는, SQL Server에 연결하기 전에 응용 프로그램에 설정된 OLE DB 연결 속성에서 이 옵션을 구성할 수 있습니다. DB-Library 응용 프로그램에서 연결하는 경우 SET ANSI_PADDING의 기본값은 OFF입니다.  
   
- SET ANSI_PADDING 설정에 영향을 주지 않습니다는 **nchar**, **nvarchar**, **ntext**, **텍스트**, **이미지**, **varbinary (max)**, **varchar (max)**, 및 **nvarchar (max)** 데이터 형식입니다. 이 설정은 항상 SET ANSI_PADDING ON 동작을 표시합니다. 즉, 후행 공백과 뒤에 오는 0은 잘리지 않는다는 의미입니다.  
+ SET ANSI_PADDING 설정은 **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** 및 **nvarchar(max)** 데이터 형식에는 영향을 주지 않습니다. 이 설정은 항상 SET ANSI_PADDING ON 동작을 표시합니다. 즉, 후행 공백과 뒤에 오는 0은 잘리지 않는다는 의미입니다.  
   
  SET ANSI_DEFAULTS가 ON이면 SET ANSI_PADDING이 설정됩니다.  
   
@@ -95,7 +95,7 @@ SELECT @ANSI_PADDING AS ANSI_PADDING;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -142,11 +142,11 @@ DROP TABLE t1;
 DROP TABLE t2;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
+ [SESSIONPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
+ [SET ANSI_DEFAULTS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "DENY 비대칭 키 권한 (Transact SQL) | Microsoft Docs"
+title: "DENY 비대칭 키 권한(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -53,13 +53,13 @@ DENY { permission  [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>인수  
- *사용 권한*  
+ *permission*  
  비대칭 키에 대해 거부할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- 비대칭 키에 **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
  사용 권한을 거부할 비대칭 키를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
- *데이터베이스 _ 보안 주체*  
+ *database_principal*  
  사용 권한을 거부할 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
   
 -   데이터베이스 사용자  
@@ -100,7 +100,7 @@ DENY { permission  [ ,...n ] }
   
 -   서버 보안 주체에 매핑되지 않은 데이터베이스 사용자  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  비대칭 키는 사용 권한 계층에서 부모 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 아래에는 비대칭 키에 부여할 수 있는 가장 제한적인 사용 권한이 이러한 권한을 암시적으로 포함하는 보다 일반적인 사용 권한과 함께 정리되어 있습니다.  
   
 |비대칭 키 권한|비대칭 키 권한에 포함된 권한|데이터베이스 사용 권한에 포함된 사용 권한|  
@@ -111,10 +111,10 @@ DENY { permission  [ ,...n ] }
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  비대칭 키에 대한 CONTROL 권한이 필요합니다. AS 절을 사용하는 경우 지정한 보안 주체가 비대칭 키를 소유해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DENY&#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

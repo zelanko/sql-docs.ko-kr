@@ -1,5 +1,5 @@
 ---
-title: SIGNBYCERT (Transact SQL) | Microsoft Docs
+title: SIGNBYCERT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,22 +53,22 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
   
 ## <a name="arguments"></a>인수  
  *certificate_ID*  
- 현재 데이터베이스에 있는 인증서 ID입니다. *certificate_ID* 은 **int**합니다.  
+ 현재 데이터베이스에 있는 인증서 ID입니다. *certificate*_ID는 **int**입니다.  
   
  *@cleartext*  
- 형식의 변수는 **nvarchar**, **char**, **varchar**, 또는 **nchar** 서명 될 데이터가 들어 있는입니다.  
+ 서명될 데이터가 들어 있는 **nvarchar**, **char**, **varchar** 또는 **nchar** 형식의 변수입니다.  
   
- **'** *암호* **'**  
- 인증서 개인 키를 암호화할 때 사용한 암호입니다. *암호* 은 **nvarchar (128)**합니다.  
+ **'** *password* **'**  
+ 인증서 개인 키를 암호화할 때 사용한 암호입니다. *암호*는 **nvarchar(128)**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **varbinary** 최대 크기가 8, 000 바이트입니다.  
+ 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  인증서에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 텍스트에 서명 `@SensitiveData` 인증서로 `ABerglundCert07`, 먼저 암호 "pGFD4bb925DGvbd2439587y"를 사용 하 여 인증서 암호를 해독할 필요 합니다. 그런 다음 `SignedData04` 테이블에 일반 텍스트와 서명을 삽입합니다.  
+ 다음 예에서는 `@SensitiveData` 인증서를 사용하여 `ABerglundCert07`의 텍스트에 서명합니다. 이 인증서는 먼저 암호 "pGFD4bb925DGvbd2439587y"를 사용하여 해독해야 합니다. 그런 다음 `SignedData04` 테이블에 일반 텍스트와 서명을 삽입합니다.  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  
@@ -81,12 +81,12 @@ INSERT INTO [SignedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [VERIFYSIGNEDBYCERT &#40; Transact SQL &#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
- [CERT_ID &#40; Transact SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [VERIFYSIGNEDBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
  [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP certificate&#40; Transact SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: TODATETIMEOFFSET (Transact SQL) | Microsoft Docs
+title: TODATETIMEOFFSET(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  반환 된 **datetimeoffset** 값에서 변환 된는 **datetime2** 식입니다.  
+  **datetime2** 표현식에서 변환된 **datetimeoffset** 값을 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +52,10 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 를 확인 하는 [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 값입니다.  
+ [datetime2](../../t-sql/language-elements/expressions-transact-sql.md) 값으로 확인되는 [식](../../t-sql/data-types/datetime2-transact-sql.md)입니다.  
   
 > [!NOTE]  
->  식 형식이 될 수 없습니다 **텍스트**, **ntext**, 또는 **이미지** 이러한 형식에 암시적으로 변환할 수 없기 때문 **varchar** 또는 **nvarchar**합니다.  
+>  **varchar** 또는 **nvarchar**로 암시적으로 변환할 수 없는 **text**, **ntext** 또는 **image** 형식의 식을 사용할 수 없습니다.  
   
  *time_zone*  
  분(-120과 같은 정수인 경우) 단위나 시간 및 분(‘+13.00’과 같은 문자열인 경우) 단위의 표준 시간대 오프셋을 나타내는 식입니다. 범위는 +14에서 -14(시간) 사이입니다. 이 식은 지정된 time_zone의 현지 시간으로 해석됩니다.  
@@ -64,7 +64,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  식이 문자열인 경우 {+|-}TZH:THM 형식이어야 합니다.  
   
 ## <a name="return-type"></a>반환 형식  
- **datetimeoffset**합니다. 소수 자릿수는 동일는 *datetime* 인수입니다.  
+ **datetimeoffset**. 소수 자릿수는 *datetime* 인수와 같습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -97,10 +97,10 @@ SELECT TODATETIMEOFFSET (@dateTime, '+13:00');
 -- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [CAST 및 convert&#40; Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [날짜 및 시간 데이터 형식 및 함수 &#40; Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [표준 시간대 &AMP;#40; Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

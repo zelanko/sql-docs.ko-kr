@@ -1,5 +1,5 @@
 ---
-title: COLUMNS_UPDATED (Transact SQL) | Microsoft Docs
+title: COLUMNS_UPDATED(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-반환 된 **varbinary** 테이블이 나 뷰를 삽입 또는 업데이트 된 열을 나타내는 비트 패턴입니다. COLUMNS_UPDATED는 트리거가 특정 동작을 실행해야 할지 여부를 테스트하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 또는 UPDATE 트리거의 본문 내 어느 곳에서나 사용됩니다.
+테이블 또는 뷰에서 삽입 또는 업데이트된 열을 나타내는 **varbinary** 비트 패턴을 반환합니다. COLUMNS_UPDATED는 트리거가 특정 동작을 실행해야 할지 여부를 테스트하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 또는 UPDATE 트리거의 본문 내 어느 곳에서나 사용됩니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,12 +50,12 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>반환 형식
 **varbinary**
   
-## <a name="remarks"></a>주의  
-COLUMNS_UPDATED는 여러 열을 대상으로 수행되는 UPDATE 또는 INSERT 동작을 테스트하기 위한 것입니다. 특정 열에 대 한 업데이트 또는 삽입 시도 대 한을 테스트 하려면 [update ()](../../t-sql/functions/update-trigger-functions-transact-sql.md)합니다.
+## <a name="remarks"></a>Remarks  
+COLUMNS_UPDATED는 여러 열을 대상으로 수행되는 UPDATE 또는 INSERT 동작을 테스트하기 위한 것입니다. 한 열에 대한 UPDATE 또는 INSERT를 테스트하려면 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md)를 사용하세요.
   
 COLUMNS_UPDATED는 왼쪽에서 오른쪽으로 정렬된 하나 이상의 바이트를 반환하며 각 바이트에서는 최하위 비트(가장 낮은 자릿수에 해당하는 비트)가 가장 오른쪽에 위치합니다. 가장 왼쪽에 있는 바이트의 가장 오른쪽 비트는 테이블의 첫 번째 열을 나타내며 그 다음 왼쪽의 비트는 두 번째 열을, 그 다음도 같은 순서로 이어집니다. COLUMNS_UPDATED는 트리거의 기반 테이블이 8개를 초과하는 열을 포함하는 경우 여러 바이트를 반환하며 최하위 비트가 제일 왼쪽에 옵니다. INSERT 동작의 경우 열에 명시적인 값 또는 암시적인(NULL) 값이 삽입되므로 COLUMNS_UPDATED는 모든 해당 열에 대해 TRUE를 반환합니다.
   
-특정 열에 대한 업데이트 또는 삽입 여부를 테스트하려면 비트 연산자의 구문과 해당 열의 정수 비트 마스크를 사용합니다. 예를 들어 테이블 **t1** 열이 포함 되어 **C1**, **C2**, **C3**, **C4**, 및 **C5** . 확인 하려면 해당 열 **C2**, **C3**, 및 **C4** 이 모두 업데이트 (테이블과 **t1** UPDATE 트리거가 있는), 구문을 사용**14 &**합니다. 유일한 여부를 테스트 하려면 열 **C2** 은 지정 업데이트 **& 2**합니다.
+특정 열에 대한 업데이트 또는 삽입 여부를 테스트하려면 비트 연산자의 구문과 해당 열의 정수 비트 마스크를 사용합니다. 예를 들어 테이블 **t1**에 **C1**, **C2**, **C3**, **C4** 및 **C5** 열이 있을 경우. **C2**, **C3** 및 **C4** 열이 모두 업데이트되었는지(테이블 **t1**에 UPDATE 트리거가 있음) 확인하려면 **& 14**와 함께 구문을 사용합니다. **C2** 열만이 업데이트되었는지 테스트하려면 **& 2**를 지정합니다.
   
 COLUMNS_UPDATED는 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 또는 UPDATE 트리거 내의 어느 곳에서든 사용할 수 있습니다.
   
@@ -188,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>2. COLUMNS_UPDATED를 사용하여 9개 이상의 열 테스트  
-테이블에 있는 처음 8개 이외의 열에 영향을 주는 업데이트를 확인하려면 `SUBSTRING` 함수를 사용하여 `COLUMNS_UPDATED`에 의해 정확한 비트가 반환되는지 테스트합니다. 다음 예제에서는 열에 영향을 주는 업데이트에 대 한 테스트 `3`, `5`, 및 `9` 에 `AdventureWorks2012.Person.Person` 테이블입니다.
+테이블에 있는 처음 8개 이외의 열에 영향을 주는 업데이트를 확인하려면 `SUBSTRING` 함수를 사용하여 `COLUMNS_UPDATED`에 의해 정확한 비트가 반환되는지 테스트합니다. 다음 예에서는 `AdventureWorks2012.Person.Person` 테이블에서 `3`, `5` 및 `9` 열이 업데이트되었는지 테스트합니다.
   
 ```sql
 USE AdventureWorks2012;  
@@ -210,9 +210,9 @@ UPDATE Person.Person
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[비트 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+## <a name="see-also"></a>관련 항목:
+[Bitwise Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-[업데이트 &#40; &#41; &#40; Transact SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
+[UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
   
   

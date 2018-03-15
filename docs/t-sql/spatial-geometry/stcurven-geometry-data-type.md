@@ -1,5 +1,5 @@
 ---
-title: "STCurveN (geometry 데이터 형식) | Microsoft Docs"
+title: "STCurveN(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurven-geometry-data-type"></a>STCurveN(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-지정한 곡선을 반환 합니다.는 **geometry** 인스턴스에서 **LineString**, **CircularString**, **CompoundCurve**, 또는  **MultiLineString**합니다.
+**LineString**, **CircularString**, **CompoundCurve** 또는 **MultiLineString**인 **geography** 인스턴스에서 지정된 곡선을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -42,26 +42,26 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *curve_index*  
- 이 **int** 1 있는 곡선 개수 사이의 식은 **기 하 도형** 인스턴스.  
+ 1과 **geometry** 인스턴스에 있는 곡선 개수 사이의 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
 ## <a name="exceptions"></a>예외  
- 경우 *curve_index* < 1 아니라면 `ArgumentOutOfRangeException` throw 됩니다.  
+ *curve_index* < 1인 경우는 `ArgumentOutOfRangeException`을 throw합니다.  
   
-## <a name="remarks"></a>주의  
- **NULL** 이 반환 됩니다는 다음에 발생 합니다.  
+## <a name="remarks"></a>Remarks  
+ 다음 상황에서는 **NULL**이 반환됩니다.  
   
--   **geometry** 인스턴스가 선언 되지만 인스턴스화되지  
+-   **geometry** 인스턴스가 선언되지만 인스턴스화되지 않는 경우  
   
--   **geometry** 인스턴스 비어 있습니다.  
+-   **geometry** 인스턴스가 비어있는 경우  
   
--   *curve_index* 있는 곡선 개수를 초과 **geometry** 인스턴스  
+-   *curve_index*가 **geometry** 인스턴스에 있는 곡선 개수를 초과하는 경우  
   
--   **geometry** 인스턴스가 **지점**, **MultiPoint**, **다각형**, **CurvePolygon**, 또는  **MultiPolygon**  
+-   **geometry** 인스턴스가 **Point**, **MultiPoint**, **Polygon**, **CurvePolygon** 또는 **MultiPolygon**인 경우  
   
 ## <a name="examples"></a>예  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
  이전의 세 가지 예와 결과가 동일합니다. 같은 곡선 시퀀스를 입력하기 위해 어떤 WKT(Well-known Text) 형식을 사용하건 간에 `STCurveN()` 인스턴스가 사용될 때 `CompoundCurve`에서 반환하는 결과는 같습니다.  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>4. STCurveN() 호출 전 매개 변수 유효성 검사  
- 다음 예제에서는 있는지 확인 하는 방법을 보여 줍니다 `@n` 호출 하기 전에 올바른지는 `STCurveN()`메서드:  
+ 다음 예에서는 `STCurveN()`메서드를 호출하기 전에 `@n`이 올바른지 확인하는 방법을 보여 줍니다.  
   
 ```
  DECLARE @g geometry;  
@@ -117,8 +117,8 @@ ms.lasthandoff: 01/25/2018
  END
  ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Stnumcurves&#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
+## <a name="see-also"></a>참고 항목  
+ [STNumCurves &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

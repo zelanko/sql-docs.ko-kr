@@ -1,5 +1,5 @@
 ---
-title: KEY_NAME (Transact SQL) | Microsoft Docs
+title: KEY_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,22 +46,22 @@ KEY_NAME ( ciphertext | key_guid )
 ```  
   
 ## <a name="arguments"></a>인수  
- *암호 텍스트*  
- 대칭 키로 암호화되는 텍스트입니다. *cyphertext* 형식이 **varbinary (8000)**합니다.  
+ *ciphertext*  
+ 대칭 키로 암호화되는 텍스트입니다. *cyphertext*는 **varbinary(8000)** 형식입니다.  
   
  *key_guid*  
- 대칭 키의 GUID입니다. *key_guid* 형식이 **uniqueidentifier**합니다.  
+ 대칭 키의 GUID입니다. *key_guid*는 **uniqueidentifier** 형식입니다.  
   
 ## <a name="returned-types"></a>반환 형식  
- **varchar (128)**  
+ **varchar(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 사용자가 소유하고 있거나 일부 사용 권한이 부여된 보안 개체에 대해서만 메타데이터를 볼 수 있도록 제한됩니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>1. key_guid를 사용하여 대칭 키의 이름 표시  
- **마스터** 데이터베이스 # # ms_servicemasterkey # # 라는 대칭 키를 포함 합니다. 다음 예에서는 sys.symmetric_keys 동적 관리 뷰에서 해당 키의 GUID를 가져오고, 이를 변수에 할당한 다음 해당 변수를 KEY_NAME 함수로 전달하여 GUID에 해당하는 이름을 반환하는 방법을 보여 줍니다.  
+ **master** 데이터베이스에는 ##MS_ServiceMasterKey##라는 대칭 키가 있습니다. 다음 예에서는 sys.symmetric_keys 동적 관리 뷰에서 해당 키의 GUID를 가져오고, 이를 변수에 할당한 다음 해당 변수를 KEY_NAME 함수로 전달하여 GUID에 해당하는 이름을 반환하는 방법을 보여 줍니다.  
   
 ```  
 USE master;  
@@ -115,9 +115,9 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [sys.symmetric_keys &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [Encryptbykey&#40; Transact SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEYAUTOASYMKEY &#40; Transact SQL &#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   

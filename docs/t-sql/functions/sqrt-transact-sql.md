@@ -1,5 +1,5 @@
 ---
-title: SQRT (Transact SQL) | Microsoft Docs
+title: SQRT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ SQRT ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **float** 형식이 나 암시적으로 float로 변환할 수 있는 형식입니다.  
+ **float** 형식 또는 float로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
@@ -89,8 +89,8 @@ GO
 3.0  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 숫자의 제곱근을 반환 `1.00` 및 `10.00`합니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 `1.00`과 `10.00`의 값에 대한 제곱근을 반환하는 방법을 보여 줍니다.  
   
 ```  
 SELECT SQRT(1.00), SQRT(10.00);  
@@ -103,8 +103,8 @@ SELECT SQRT(1.00), SQRT(10.00);
 1.00        3.16
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

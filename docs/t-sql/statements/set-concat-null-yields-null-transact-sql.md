@@ -1,5 +1,5 @@
 ---
-title: SET CONCAT_NULL_YIELDS_NULL (Transact SQL) | Microsoft Docs
+title: SET CONCAT_NULL_YIELDS_NULL(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -60,17 +60,17 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET CONCAT_NULL_YIELDS_NULL 옵션이 ON일 경우 NULL 값을 문자열과 연결하면 결과가 NULL 값입니다. 예를 들어 `SELECT 'abc' + NULL`은 `NULL`를 생성합니다. SET CONCAT_NULL_YIELDS_NULL 옵션이 OFF일 경우, NULL 값을 문자열과 연결하면 그 결과가 문자열 자체(NULL 값은 빈 문자열로 처리됨)가 됩니다. 예를 들어 `SELECT 'abc' + NULL`은 `abc`를 생성합니다.  
   
- SET CONCAT_NULL_YIELDS_NULL 지정 되지 않은 경우의 설정 된 **CONCAT_NULL_YIELDS_NULL** 데이터베이스 옵션은 적용 됩니다.  
+ SET CONCAT_NULL_YIELDS_NULL이 지정되지 않은 경우 **CONCAT_NULL_YIELDS_NULL** 데이터베이스 옵션의 설정이 적용됩니다.  
   
 > [!NOTE]  
 >  SET CONCAT_NULL_YIELDS_NULL 옵션은 ALTER DATABASE의 CONCAT_NULL_YIELDS_NULL 옵션과 설정이 같습니다.  
   
  SET CONCAT_NULL_YIELDS_NULL 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
- 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET CONCAT_NULL_YIELDS_NULL 옵션을 ON으로 설정해야 합니다. SET CONCAT_NULL_YIELDS_NULL 옵션이 OFF이면 계산 열에 인덱스가 있는 테이블이나 인덱싱된 뷰에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. 계산된 열에 인덱스 및 인덱싱된 뷰에 필요한 SET 옵션 설정에 대 한 자세한 내용은 "고려 사항 때 설정 문 사용"의 참조 [SET 문 &#40; Transact SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
+ 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET CONCAT_NULL_YIELDS_NULL 옵션을 ON으로 설정해야 합니다. SET CONCAT_NULL_YIELDS_NULL 옵션이 OFF이면 계산 열에 인덱스가 있는 테이블이나 인덱싱된 뷰에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. 인덱싱된 뷰 및 계산 열의 인덱스에 사용되는 필수 SET 옵션 설정에 대한 자세한 내용은 [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)의 "SET 문 사용 시 고려 사항"을 참조하세요.  
   
  CONCAT_NULL_YIELDS_NULL 옵션을 OFF로 설정하면 서버 경계 간에 문자열을 연결할 수 없습니다.  
   
@@ -102,8 +102,8 @@ SELECT 'abc' + NULL;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

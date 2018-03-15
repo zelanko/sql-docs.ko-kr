@@ -1,5 +1,5 @@
 ---
-title: "순위 (Transact SQL) | Microsoft Docs"
+title: RANK(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/25/2016
 ms.prod: sql-non-specified
@@ -39,10 +39,10 @@ ms.lasthandoff: 11/21/2017
 
   결과 집합의 파티션 내에 있는 각 행의 순위를 반환합니다. 요청한 행의 순위는 해당 행 앞에 있는 행의 순위에 1을 더한 값입니다.  
 
-  ROW_NUMBER와 순위는 유사 합니다. ROW_NUMBER 숫자 모든 행을 순서 대로 (예: 1, 2, 3, 4, 5). 순위 동률 (예: 1, 2, 2, 4, 5)에 대 한 숫자 값을 제공합니다.   
+  ROW_NUMBER와 RANK는 유사합니다. ROW_NUMBER는 모든 행을 순차적으로 번호 지정합니다.(예: 1, 2, 3, 4, 5) RANK는 순위 동률(예: 1, 2, 2, 4, 5)에 대해 동일한 숫자 값을 제공합니다.   
   
 > [!NOTE]
-> 순위는 쿼리를 실행할 때 임시 값을 계산 합니다. 참조 테이블의 숫자를 유지 하기 위해 [IDENTITY 속성](../../t-sql/statements/create-table-transact-sql-identity-property.md) 및 [시퀀스](../../t-sql/statements/create-sequence-transact-sql.md)합니다. 
+> RANK는 쿼리를 실행할 때 계산되는 임시 값입니다. 테이블의 숫자를 유지하려면 [IDENTITY 속성](../../t-sql/statements/create-table-transact-sql-identity-property.md) 및 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)를 참조하세요. 
    
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,13 +53,13 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ```  
   
 ## <a name="arguments"></a>인수  
- 통해 **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* 함수가 적용 되는 파티션으로 FROM 절에서 생성 한 결과 집합을 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 함수를 적용 하기 전에 데이터의 순서를 결정 합니다. *order_by_clause* 가 필요 합니다. \<s 또는 range 절 >는 OVER 절은 RANK 함수에 지정할 수 없습니다. 자세한 내용은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *order_by_clause*가 필요합니다. OVER 절의 \<rows 또는 range 절>은 RANK 함수에 지정할 수 없습니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
  **bigint**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  하나의 순위에 둘 이상의 행이 결합되면 결합된 각 행은 동일한 순위를 갖게 됩니다. 예를 들어 성과가 가장 좋은 두 명의 판매 직원이 같은 SalesYTD 값을 갖는 경우 둘 다 1로 순위가 지정됩니다. 다음으로 높은 SalesYTD를 갖는 판매 직원은 더 높은 순위를 가진 행이 두 개이기 때문에 3위로 순위가 지정됩니다. 따라서 RANK 함수는 항상 연속적인 정수를 반환하지는 않습니다.  
   
  전체 쿼리에 사용되는 정렬 순서는 행이 결과 집합에 표시되는 순서를 결정합니다.  
@@ -135,10 +135,10 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C: 파티션 내의 행 순위 지정  
- 다음 예에서는 순위 총 판매액에 따라 각 영업 지역에 영업 담당자를 지정 합니다. 행 집합은 `SalesTerritoryGroup`별로 분할되며 `SalesAmountQuota`를 기준으로 정렬됩니다.  
+### <a name="c-ranking-rows-within-a-partition"></a>3. 파티션 내의 행 순위 지정  
+ 다음 예는 총 판매액에 따라 각 영업 지역에서 영업 담당자의 순위를 매깁니다. 행 집합은 `SalesTerritoryGroup`별로 분할되며 `SalesAmountQuota`를 기준으로 정렬됩니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -173,11 +173,11 @@ Ito               7804000.0000   Southwest            2
 Pak               10514000.0000  United Kingdom       1
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [DENSE_RANK &#40; Transact SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [순위 함수 &#40; Transact SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [순위 함수&#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

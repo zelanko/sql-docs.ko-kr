@@ -1,5 +1,5 @@
 ---
-title: SET STATISTICS TIME (Transact SQL) | Microsoft Docs
+title: SET STATISTICS TIME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,18 +52,18 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET STATISTICS TIME 옵션을 ON으로 설정하면 문에 대한 시간 통계가 표시됩니다. OFF로 설정하면 시간 통계가 표시되지 않습니다.  
   
  SET STATISTICS TIME 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하도록 설정 하면 활성화 되는 파이버 모드에서 정확한 통계를 제공 하지 못하면는 **경량 풀링** 구성 옵션입니다.  
+ **lightweight pooling** 구성 옵션을 설정하면 활성화되는 파이버 모드에서는 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 정확한 통계를 제공할 수 없습니다.  
   
- **cpu** 열에는 **sysprocesses** 테이블은 SET STATISTICS TIME ON으로 쿼리를 실행할 때만 업데이트 됩니다. SET STATISTICS TIME이 OFF 인 경우 **0** 반환 됩니다.  
+ SET STATISTICS TIME을 ON으로 설정해 쿼리를 실행하면 **sysprocesses** 테이블의 **cpu** 열만 업데이트됩니다. SET STATISTICS TIME이 OFF인 경우에는 **0**이 반환됩니다.  
   
  ON과 OFF 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 Process Info View for Current Activity에 있는 CPU 열에도 영향을 줍니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  SET STATISTICS TIME을 사용하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있는 적절한 권한이 있어야 합니다. SHOWPLAN 권한이 필요하지 않습니다.  
   
 ## <a name="examples"></a>예  
@@ -99,8 +99,8 @@ SQL Server parse and compile time:
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET STATISTICS IO &#40; Transact SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: PERCENT_RANK (Transact SQL) | Microsoft Docs
+title: PERCENT_RANK(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -46,8 +46,8 @@ PERCENT_RANK( )
 ```  
   
 ## <a name="arguments"></a>인수  
- 통해 **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* 함수가 적용 되는 파티션으로 FROM 절에서 생성 한 결과 집합을 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 작업이 수행 되는 논리적 순서를 결정 합니다. *order_by_clause* 가 필요 합니다. \<s 또는 range 절 > OVER 구문 PERCENT_RANK 함수에 지정할 수 없습니다.  자세한 내용은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause*가 필요합니다. PERCENT_RANK 함수에는 OVER 구문의 \<rows 또는 range 절>을 지정할 수 없습니다.  자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
  **float(53)**  
@@ -97,7 +97,7 @@ Information Services   Bueno                  27.4038               0.4         
 (15 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [CUME_DIST &#40; Transact SQL &#41;](../../t-sql/functions/cume-dist-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [CUME_DIST &#40;Transact-SQL&#41;](../../t-sql/functions/cume-dist-transact-sql.md)  
   
   

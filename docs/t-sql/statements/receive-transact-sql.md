@@ -1,5 +1,5 @@
 ---
-title: "(Transact SQL) 수신 | Microsoft Docs"
+title: RECEIVE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/21/2017
  WAITFOR  
  현재 메시지가 없으면 메시지가 큐에 도착할 때까지 RECEIVE 문이 대기하도록 지정합니다.  
   
- TOP (  *n*  )  
+ TOP( *n* )  
  반환할 메시지의 최대 개수를 지정합니다. 이 절을 지정하지 않으면 문 조건을 만족하는 모든 메시지가 반환됩니다.  
   
  \*  
@@ -86,62 +86,62 @@ ms.lasthandoff: 11/21/2017
  *expression*  
  열 이름, 상수, 함수이거나 열 이름, 상수, 연산자로 연결된 함수의 모든 조합입니다.  
   
- *column_alias를 사용할*  
+ *column_alias*  
  결과 집합에서 열 이름을 대신하는 또 다른 이름입니다.  
   
  FROM  
  메시지를 가져올 큐를 지정합니다.  
   
  *database_name*  
- 메시지를 받을 큐가 포함된 데이터베이스의 이름입니다. No *데이터베이스 이름* 제공 되는 현재 데이터베이스에 대 한 기본값입니다.  
+ 메시지를 받을 큐가 포함된 데이터베이스의 이름입니다. *데이터베이스 이름*을 제공하지 않으면 기본값은 현재 데이터베이스입니다.  
   
  *schema_name*  
- 메시지를 받을 큐를 소유하는 스키마의 이름입니다. No *스키마 이름* 제공 되는 현재 사용자의 기본 스키마는 기본값입니다.  
+ 메시지를 받을 큐를 소유하는 스키마의 이름입니다. *스키마 이름*을 제공하지 않으면 기본값은 현재 사용자의 기본 스키마입니다.  
   
  *queue_name*  
  메시지를 받을 큐의 이름입니다.  
   
- 에 *table_variable*  
+ INTO *table_variable*  
  RECEIVE가 메시지를 넣을 테이블 변수를 지정합니다. 테이블 변수의 열 개수는 메시지의 열 개수와 동일해야 합니다. 테이블 변수에 있는 각 열의 데이터 형식은 메시지에 있는 해당 열의 데이터 형식으로 암시적으로 변환할 수 있어야 합니다. INTO를 지정하지 않으면 메시지가 결과 집합으로 반환됩니다.  
   
  WHERE  
  받은 메시지에 대한 대화 또는 대화 그룹을 지정합니다. 생략하면 사용 가능한 다음 대화 그룹에서 메시지를 반환합니다.  
   
  conversation_handle = *conversation_handle*  
- 받은 메시지에 대한 대화를 지정합니다. *대화 핸들* 반드시 제공 수는 **uniqueidentifer**, 또는로 변환할 수 있는 형식 **uniqueidentifier**합니다.  
+ 받은 메시지에 대한 대화를 지정합니다. 제공된 *대화 핸들*은 **uniqueidentifer**이거나 **uniqueidentifier**로 변환이 가능한 형식이어야 합니다.  
   
  conversation_group_id = *conversation_group_id*  
- 받은 메시지에 대한 대화 그룹을 지정합니다. *은 대화 그룹 ID* 제공 해야 합니다 수는 **uniqueidentifier**, 또는를 변환할 수 있는 형식 **uniqueidentifier**합니다.  
+ 받은 메시지에 대한 대화 그룹을 지정합니다. 제공된 *대화 그룹 ID*는 **uniqueidentifer**이거나 **uniqueidentifier**로 변환이 가능한 형식이어야 합니다.  
   
- 제한 시간 *제한 시간*  
- 문이 메시지를 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. 이 절을 지정 하지 않거나 제한 시간이-경우**1**, 대기 시간 제한 됩니다. 제한 시간이 만료되면 RECEIVE가 빈 결과 집합을 반환합니다.  
+ TIMEOUT *timeout*  
+ 문이 메시지를 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. 이 절을 지정하지 않거나 시간 제한이 -**1**이면 대기 시간은 무제한입니다. 제한 시간이 만료되면 RECEIVE가 빈 결과 집합을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  일괄 처리 또는 저장 프로시저에서 RECEIVE 문이 첫 번째 문이 아닌 경우 이전 문은 세미콜론(;)으로 끝나야 합니다.  
   
- RECEIVE 문은 큐에서 메시지를 읽고 결과 집합을 반환합니다. 결과 집합은 없거나 1개 이상의 행으로 구성되며 각 행에는 메시지 하나가 들어 있습니다. INTO 절을 사용 하지 않는 경우 및 *column_specifier* 값을 할당 하지 않습니다 문이 지역 변수에 결과 호출 프로그램으로 집합을 반환 합니다.  
+ RECEIVE 문은 큐에서 메시지를 읽고 결과 집합을 반환합니다. 결과 집합은 없거나 1개 이상의 행으로 구성되며 각 행에는 메시지 하나가 들어 있습니다. INTO 절을 사용하지 않고 *column_specifier*에서 지역 변수에 값을 할당하지 않으면 명령문은 호출 프로그램에 결과 집합을 반환합니다.  
   
- RECEIVE 문에서 반환하는 메시지는 다양한 유형일 수 있습니다. 응용 프로그램이 사용할 수는 **message_type_name** 연관된 된 메시지 유형을 처리 하는 코드에 각 메시지를 라우팅하는 열입니다. 메시지 유형에는 다음과 같은 두 가지가 있습니다.  
+ RECEIVE 문에서 반환하는 메시지는 다양한 유형일 수 있습니다. 응용 프로그램은 **message_type_name** 열을 사용하여 각 메시지를 연관된 메시지 유형을 처리하는 코드로 라우팅할 수 있습니다. 메시지 유형에는 다음과 같은 두 가지가 있습니다.  
   
 -   CREATE MESSAGE TYPE 문을 사용하여 만든 응용 프로그램 정의 메시지 유형. 대화에 사용할 수 있는 응용 프로그램 정의 메시지 유형 집합은 대화에 지정된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 계약을 사용하여 정의됩니다.  
   
 -   상태 또는 오류 정보를 반환하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 시스템 메시지.  
   
- 큐에서 메시지 보존 기간을 지정하지 않으면 RECEIVE 문은 받은 메시지를 큐에서 제거합니다. 큐의 RETENTION 설정이 ON 이면 RECEIVE 문이 업데이트 경우는 **상태** 열을 **0** 큐에 메시지를 유지 합니다. RECEIVE 문을 포함하는 트랜잭션이 롤백되면 트랜잭션 내에 있는 큐의 모든 변경 내용도 롤백되어 메시지를 큐로 반환합니다.  
+ 큐에서 메시지 보존 기간을 지정하지 않으면 RECEIVE 문은 받은 메시지를 큐에서 제거합니다. 큐의 RETENTION 설정이 ON이면 RECEIVE 문은 **status** 열을 **0**으로 업데이트하고 메시지를 큐에 그대로 남겨둡니다. RECEIVE 문을 포함하는 트랜잭션이 롤백되면 트랜잭션 내에 있는 큐의 모든 변경 내용도 롤백되어 메시지를 큐로 반환합니다.  
   
- RECEIVE 문에 의해 반환된 모든 메시지는 동일한 대화 그룹에 속합니다. RECEIVE 문은 문을 포함하는 트랜잭션이 완료될 때까지 반환된 메시지에 대한 대화 그룹을 잠급니다. RECEIVE 문은 메시지를 반환 합니다.는 **상태** 의 **1입니다.** RECEIVE 문에 의해 반환된 결과 집합은 다음과 같이 암시적으로 정렬됩니다.  
+ RECEIVE 문에 의해 반환된 모든 메시지는 동일한 대화 그룹에 속합니다. RECEIVE 문은 문을 포함하는 트랜잭션이 완료될 때까지 반환된 메시지에 대한 대화 그룹을 잠급니다. RECEIVE 문은 **status**가 **1**인 메시지를 반환합니다. RECEIVE 문에 의해 반환된 결과 집합은 다음과 같이 암시적으로 정렬됩니다.  
   
 -   여러 대화의 메시지가 WHERE 절 조건을 충족하는 경우 RECEIVE 문은 한 대화의 모든 메시지를 반환한 후 다른 대화의 메시지를 반환합니다. 대화는 우선 순위의 내림차순으로 처리됩니다.  
   
--   메시지를 오름차순으로 정렬 RECEIVE 문은 특정된 대화에 대 한 반환 **message_sequence_number** 순서입니다.  
+-   특정 대화에 대해 RECEIVE 문은 메시지를 **message_sequence_number**의 오름차순으로 반환합니다.  
   
- RECEIVE 문의 WHERE 절 중 하나를 사용 하는 검색 조건만 포함할 수 있습니다 **conversation_handle** 또는 **conversation_group_id**합니다. 검색 조건에는 큐에 있는 하나 이상의 다른 열이 포함되지 않습니다. **conversation_handle** 또는 **conversation_group_id** 식일 수 없습니다. 반환되는 메시지 집합은 WHERE 절에 지정된 조건에 따라 달라집니다.  
+ RECEIVE 문의 WHERE 절에는 **conversation_handle** 또는 **conversation_group_id**를 사용하는 검색 조건이 하나만 포함될 수 있습니다. 검색 조건에는 큐에 있는 하나 이상의 다른 열이 포함되지 않습니다. **conversation_handle** 또는 **conversation_group_id**는 식이 될 수 없습니다. 반환되는 메시지 집합은 WHERE 절에 지정된 조건에 따라 달라집니다.  
   
--   경우 **conversation_handle** 지정, 수신 큐에서 사용할 수 있는 지정된 된 대화의 모든 메시지를 반환 합니다.  
+-   **conversation_handle**을 지정하면 RECEIVE가 지정된 대화에 있는 큐에서 사용 가능한 모든 메시지를 반환합니다.  
   
--   경우 **conversation_group_id** 지정 하면 수신 큐가 지정된 된 대화 그룹의 멤버인 모든 대화에서에 사용할 수 있는 모든 메시지를 반환 합니다.  
+-   **conversation_group_id** 지정하면 RECEIVE가 지정된 대화 그룹에 속한 모든 대화의 큐에서 사용 가능한 모든 메시지를 반환합니다.  
   
 -   WHERE 절이 없으면 RECEIVE가 다음과 같은 대화 그룹을 선택합니다.  
   
@@ -168,8 +168,8 @@ ms.lasthandoff: 11/21/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**상태**|**tinyint**|메시지의 상태입니다. RECEIVE 명령에서 반환 된 메시지에 대 한 상태는 항상 **0**합니다. 큐의 메시지는 다음 값 중 하나를 포함할 수 있습니다.<br /><br /> **0**= 준비**1**= 받은 메시지**2**= 아직 완료**3**= 보낸 메시지 보유|  
-|**우선 순위**|**tinyint**|메시지에 적용된 대화의 우선 순위 수준입니다.|  
+|**상태**|**tinyint**|메시지의 상태입니다. RECEIVE 명령에 의해 반환되는 메시지는 상태가 항상 **0**입니다. 큐의 메시지는 다음 값 중 하나를 포함할 수 있습니다.<br /><br /> **0**=준비**1**=받은 메시지**2**=아직 완료되지 않음**3**=보낸 메시지 보유|  
+|**priority**|**tinyint**|메시지에 적용된 대화의 우선 순위 수준입니다.|  
 |**queuing_order**|**bigint**|큐 내의 메시지 정렬 번호입니다.|  
 |**conversation_group_id**|**uniqueidentifier**|이 메시지가 속하는 대화 그룹의 식별자입니다.|  
 |**conversation_handle**|**uniqueidentifier**|이 메시지가 속하는 대화의 핸들입니다.|  
@@ -180,10 +180,10 @@ ms.lasthandoff: 11/21/2017
 |**service_contract_id**|**int**|대화에서 준수하는 계약의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |**message_type_name**|**nvarchar(256)**|메시지 형식을 설명하는 메시지 유형의 이름입니다. 메시지는 응용 프로그램 메시지 유형이거나 Broker 시스템 메시지일 수 있습니다.|  
 |**message_type_id**|**int**|메시지를 설명하는 메시지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
-|**유효성 검사**|**nchar(2)**|메시지에 사용된 유효성 검사입니다.<br /><br /> **E**= 비어 있음**N**= None**X**= XML|  
-|**message_body**|**varbinary (max)**|메시지 내용입니다.|  
+|**validation**|**nchar(2)**|메시지에 사용된 유효성 검사입니다.<br /><br /> **E**=Empty**N**=None**X**=XML|  
+|**message_body**|**varbinary(MAX)**|메시지 내용입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  메시지를 받으려면 현재 사용자는 큐에서 RECEIVE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -338,15 +338,15 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [BEGIN DIALOG conversation&#40; Transact SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [BEGIN CONVERSATION TIMER &#40; Transact SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [END CONVERSATION &#40; Transact SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [계약 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [메시지 유형 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [Send&#40; Transact SQL &#41;](../../t-sql/statements/send-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [BEGIN DIALOG CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN CONVERSATION TIMER&#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [END CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [CREATE CONTRACT&#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CREATE MESSAGE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [SEND&#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
  [CREATE QUEUE&#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER queue&#40; Transact SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
- [DROP queue&#40; Transact SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
+ [ALTER QUEUE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [DROP QUEUE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: BACKUP SERVICE MASTER KEY (Transact SQL) | Microsoft Docs
+title: BACKUP SERVICE MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -54,16 +54,16 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>인수  
- 파일 **='***path_to_file***'**  
+ FILE **='***path_to_file***'**  
  서비스 마스터 키를 내보낼 파일에 대한 파일 이름을 포함한 전체 경로를 지정합니다. 이 경로는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다.  
   
- 암호 **='***암호***'**  
+ PASSWORD **='***password***'**  
  백업 파일의 서비스 마스터 키를 암호화하는 데 사용되는 암호입니다. 이 암호의 복잡성을 확인해야 합니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  서비스 마스터 키는 외부의 안전한 위치에 백업 및 보관해야 합니다. 이러한 백업을 만드는 작업은 서버에서 수행되는 첫 번째 관리 동작 중 하나입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -73,8 +73,8 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER SERVICE MASTER key&#40; Transact SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [RESTORE SERVICE MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)  
   
   

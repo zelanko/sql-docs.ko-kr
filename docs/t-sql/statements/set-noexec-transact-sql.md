@@ -1,5 +1,5 @@
 ---
-title: SET NOEXEC (Transact SQL) | Microsoft Docs
+title: SET NOEXEC(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,14 +50,14 @@ ms.lasthandoff: 11/21/2017
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET NOEXEC 옵션을 ON으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 각 일괄 처리를 컴파일하지만 실행하지는 않습니다. SET NOEXEC 옵션을 OFF로 설정하면 컴파일 후 모든 일괄 처리가 실행됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문의 실행은 컴파일과 실행의 두 단계로 이루어집니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 구문의 유효성 및 실행 시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 개체 이름 유효성을 검사하도록 할 때 사용할 수 있는 유용한 기능입니다. 또한 더 큰 일괄 처리 문에 포함된 문을 디버깅할 때도 유용한 기능입니다.  
   
  SET NOEXEC 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -115,9 +115,9 @@ SET NOEXEC OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET showplan_all 옵션 &#40; Transact SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET showplan_text 옵션 &#40; Transact SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL&#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT&#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

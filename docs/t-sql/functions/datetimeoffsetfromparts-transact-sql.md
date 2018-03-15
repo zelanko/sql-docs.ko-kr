@@ -1,5 +1,5 @@
 ---
-title: DATETIMEOFFSETFROMPARTS (Transact SQL) | Microsoft Docs
+title: DATETIMEOFFSETFROMPARTS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-반환 된 **datetimeoffset** 고 지정 된 오프셋 및 전체 자릿수 지정 된 날짜 및 시간에 대 한 값입니다.
+지정된 오프셋 및 전체 자릿수를 사용하여 지정된 날짜 및 시간에 대한 **datetimeoffset** 값을 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 ```  
   
 ## <a name="arguments"></a>인수  
-*연도*  
+*year*  
 연도를 지정하는 정수 식입니다.
   
-*월*  
+*month*  
 월을 지정하는 정수 식입니다.
   
-*일*  
+*day*  
 일을 지정하는 정수 식입니다.
   
-*1 시간*  
+*hour*  
 시간을 지정하는 정수 식입니다.
   
-*분*  
+*minute*  
 분을 지정하는 정수 식입니다.
   
 *초*  
 초를 지정하는 정수 식입니다.
   
-*분수*  
+*fractions*  
 소수 자릿수를 지정하는 정수 식입니다.
   
 *hour_offset*  
@@ -73,15 +73,15 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 표준 시간대 오프셋의 분 부분을 지정하는 정수 식입니다.
   
 *전체 자릿수*  
-정수 리터럴 자릿수를 지정 하는 **datetimeoffset** 값을 반환할 수 있습니다.
+반환할 **datetimeoffset** 값의 전체 자릿수를 지정하는 정수 리터럴입니다.
   
 ## <a name="return-types"></a>반환 형식
-**datetimeoffset (** *정밀도* **)**
+**datetimeoffset(** *precision* **)**
   
-## <a name="remarks"></a>주의  
-**DATETIMEOFFSETFROMPARTS** 는 완전히 초기화 된 반환 **datetimeoffset** 데이터 형식입니다. 오프셋 인수는 표준 시간대 오프셋을 나타내는 데 사용됩니다. 오프셋 인수를 생략하면 표준 시간대 오프셋이 00:00인 것으로 간주됩니다. 즉, 표준 시간대 오프셋이 없습니다. 오프셋 인수를 지정할 경우 두 인수를 모두 지정해야 하고 둘 모두 양수 또는 음수여야 합니다. 경우 *minute_offset* 없이 지정 된 *hour_offset*, 오류가 발생 합니다. 다른 인수가 유효하지 않으면 오류가 발생합니다. 필수 인수가 Null일 경우에는 Null이 반환됩니다. 그러나 경우는 *정밀도* 인수가 null 일 경우 다음 오류가 발생 합니다.
+## <a name="remarks"></a>Remarks  
+**DATETIMEOFFSETFROMPARTS**는 완전히 초기화된 **datetimeoffset** 데이터 형식을 반환합니다. 오프셋 인수는 표준 시간대 오프셋을 나타내는 데 사용됩니다. 오프셋 인수를 생략하면 표준 시간대 오프셋이 00:00인 것으로 간주됩니다. 즉, 표준 시간대 오프셋이 없습니다. 오프셋 인수를 지정할 경우 두 인수를 모두 지정해야 하고 둘 모두 양수 또는 음수여야 합니다. *minute_offset*이 *hour_offset*없이 지정되면 오류가 발생합니다. 다른 인수가 유효하지 않으면 오류가 발생합니다. 필수 인수가 Null일 경우에는 Null이 반환됩니다. 그러나 *precision* 인수가 Null일 경우에는, 오류가 발생합니다.
   
-*분수* 인수에 따라 달라 집니다는 *정밀도* 인수입니다. 예를 들어 경우 *정밀도* 은 7, 다음 하는 경우 각 소수 자릿수가 100 나노초를 나타내고 *정밀도* 3 인 다음 각 소수 자릿수가 1 밀리초를 나타냅니다. 하는 경우의 값 *정밀도* 0의 값이 *분수* 또한 해야 0; 그렇지 않으면 오류가 발생 합니다.
+*fractions* 인수는 *precision* 인수에 의존합니다. 예를 들어 *precision*이 7이면 각 소수 자릿수가 100나노초를 나타내고 *precision*이 3이면 각 소수 자릿수가 1밀리초를 나타냅니다. *precision*의 값이 0이면 *fractions*의 값도 0이어야 합니다. 그렇지 않으면, 오류가 발생합니다.
   
 이 함수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이상 서버에 대해서는 원격으로 실행할 수 있지만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전 버전이 설치되어 있는 서버에 대해서는 원격으로 실행할 수 없습니다.
   
@@ -104,10 +104,10 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>2. 소수 단위 초를 사용하는 예  
-다음 예제에서는 *분수* 및 *정밀도* 매개 변수:
-1.   때 *분수* 5 값 및 *정밀도* 에 값이 1 항목이 값 *분수* 5/10 초를 나타냅니다.  
-1.   때 *분수* 50 값 및 *정밀도* 에 값이 2 항목이 값 *분수* 50/100 초를 나타냅니다.  
-1.   때 *분수* 값이 500 및 *정밀도* 값은 값은 값 3 다음 *분수* 500/1000 초를 나타냅니다.  
+다음 예에서는 *fractions* 및 *precision* 매개 변수의 사용 방법을 설명합니다.
+1.   *fractions*의 값이 5이고 *precision*의 값이 1이면, *fractions*의 값은 1초의 5/10를 나타냅니다.  
+1.   *fractions*의 값이 50이고 *precision*의 값이 2이면, *fractions*의 값은 1초의 50/100을 나타냅니다.  
+1.   *fractions*의 값이 500이고 *precision*의 값이 3이면, *fractions*의 값은 1초의 500/1000을 나타냅니다.  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  
@@ -135,9 +135,9 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [datetimeoffset&#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[표준 시간대 &AMP;#40; Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   
 

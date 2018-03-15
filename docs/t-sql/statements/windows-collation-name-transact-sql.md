@@ -1,5 +1,5 @@
 ---
-title: "Windows 데이터 정렬 이름 (Transact SQL) | Microsoft Docs"
+title: "Windows 데이터 정렬 이름(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -66,16 +66,16 @@ CollationDesignator_<ComparisonStyle>
 -   터키어: 코드 페이지 1254를 사용합니다.  
   
  *CaseSensitivity*  
- **CI** 지정 대/소문자 구분, **CS** 대/소문자 구분을 지정 합니다.  
+ **CI**는 대/소문자를 구분하지 않도록 지정하고 **CS**는 대/소문자를 구분하도록 지정합니다.  
   
  *AccentSensitivity*  
- **AI** 지정 악센트 구분 안 함, **AS** 악센트 구분을 지정 합니다.  
+ **AI**는 악센트를 구분하지 않도록 지정하고 **AS**는 악센트를 구분하도록 지정합니다.  
   
  *KanatypeSensitive*  
- **생략 하면** 전자/반자 구분 안 함, 지정 **KS** 전자/반자 구분을 지정 합니다.  
+ **Omitted**는 일본어 가나를 구분하지 않도록 지정하고 **KS**는 일본어 가나를 구분하도록 지정합니다.  
   
  *WidthSensitivity*  
- **생략 하면** 너비 구분 지정 **WS** 전자/반자 구분을 지정 합니다.  
+ **Omitted**는 전자/반자를 구분하지 않도록 지정하고 **WS**는 전자/반자를 구분하도록 지정합니다.  
   
  **BIN**  
  이전 버전과 호환되는 이진 정렬 순서를 사용하도록 지정합니다.  
@@ -83,7 +83,7 @@ CollationDesignator_<ComparisonStyle>
  **BIN2**  
  코드 포인트 비교 기능을 사용하는 이진 정렬 순서를 지정합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  데이터 정렬 버전에 따라 일부 코드 포인트가 정의되지 않을 수 있습니다. 예를 들어 다음을 비교해 보세요.  
   
 ```  
@@ -103,7 +103,7 @@ GO
   
 -   **Latin1_General_100_**  
   
- 라틴어1 일반 용어 사전 정렬 규칙, 코드 페이지 1252를 사용하는 데이터 정렬입니다. 대/소문자는 구분하지 않고 악센트를 구분합니다. 라틴어1 일반 용어 사전 정렬 규칙을 사용하고 코드 페이지 1252에 매핑되는 데이터 정렬입니다. Windows 데이터 정렬 일 경우 데이터 정렬의 버전 번호를 표시: _90 또는 _100 합니다. 대/소문자는 구분하지 않고(CI) 악센트를 구분합니다(AS).  
+ 라틴어1 일반 용어 사전 정렬 규칙, 코드 페이지 1252를 사용하는 데이터 정렬입니다. 대/소문자는 구분하지 않고 악센트를 구분합니다. 라틴어1 일반 용어 사전 정렬 규칙을 사용하고 코드 페이지 1252에 매핑되는 데이터 정렬입니다. 데이터 정렬이 Windows 데이터 정렬일 경우 데이터 정렬의 버전 번호(_90 또는 _100)를 보여 줍니다. 대/소문자는 구분하지 않고(CI) 악센트를 구분합니다(AS).  
   
 -   **Estonian_CS_AS**  
   
@@ -224,18 +224,18 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 서버 수준에서 더 이상 사용할 수 없음|Lithuanian_Classic|Lithuanian_Classic|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 서버 수준에서 더 이상 사용할 수 없음|마케도니아어|마케도니아어|  
   
- <sup>1</sup>Windows 유니코드 전용 데이터 정렬은 열 수준 또는 식 수준 데이터에만 적용 될 수 있습니다. 서버 또는 데이터베이스 데이터 정렬로 사용할 수 없습니다.  
+ <sup>1</sup>Windows 유니코드 전용 데이터 정렬은 열 수준 또는 식 수준 데이터에만 적용할 수 있으며 서버 또는 데이터베이스 데이터 정렬로 사용할 수 없습니다.  
   
- <sup>2</sup>마찬가지로 중국어 (대만) 데이터 정렬이 중국어 (마카오) 사용 하 여 중국어 간체의 규칙 않으며 중국어 (대만)와 달리 코드 페이지 950을 사용 합니다.  
+ <sup>2</sup>중국어(마카오)는 중국어(대만) 데이터 정렬과 마찬가지로 중국어 간체의 규칙을 사용합니다. 하지만 중국어(대만)와 달리 코드 페이지 950을 사용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [상수 &#40; Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
+ [Constants&#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [테이블 &#40; Transact SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table&#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [sys.fn_helpcollations&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "MakeValid (geometry 데이터 형식) | Microsoft Docs"
+title: "MakeValid(geometry 데이터 형식) | Miciosoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geometry-data-type"></a>MakeValid(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-잘못 된 변환 **geometry** 인스턴스는 **geometry** 유효한 Open Geospatial Consortium (OGC) 형식으로 인스턴스.
+잘못된 **geometry** 인스턴스를 유효한 OGC(Open Geospatial Consortium) 형식의 **geometry** 인스턴스로 변환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 형식의에서 변경 발생할 수 있습니다는 **기 하 도형** 의 점이 뿐만 아니라 인스턴스를 한 **기 하 도형** 인스턴스 조금 이동할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드로 인해 **geometry** 인스턴스의 점이 약간 변경될 수 있을 뿐만 아니라 **geometry** 인스턴스의 형식 자체가 변경될 수 있습니다.  
   
 ## <a name="examples"></a>예  
  첫 번째 예에서는 자체적으로 겹치는 잘못된 `LineString` 인스턴스를 만들고 `STIsValid()`를 사용하여 해당 인스턴스가 잘못되었음을 확인합니다. `STIsValid()`는 잘못된 인스턴스에 대해 값 0을 반환합니다.  
@@ -86,7 +86,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 1 1, 1 1)';
 SELECT @g.MakeValid().ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [STIsValid&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

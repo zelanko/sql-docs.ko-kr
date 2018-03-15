@@ -1,5 +1,5 @@
 ---
-title: SQUARE (Transact SQL) | Microsoft Docs
+title: SQUARE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ SQUARE ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **float** 형식이 나 암시적으로 float로 변환할 수 있는 형식입니다.  
+ **float** 형식 또는 float로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
@@ -70,8 +70,8 @@ Cyl Vol
 15.707963267948966  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 각 값의 제곱을 반환 하는 다음 예제는 `volume` 열에는 `containers` 테이블입니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 `containers` 테이블의 `volume` 열에 각 값의 제곱을 반환합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -97,8 +97,8 @@ Cylinder       15680.05
 Cube             575.04
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: '@@TIMETICKS (Transact SQL) | Microsoft Docs'
+title: '@@TIMETICKS(Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact SQL)
+# <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   틱당 마이크로초 수를 반환합니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>반환 형식  
  **integer**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  틱당 시간은 컴퓨터마다 다릅니다. 운영 체제의 각 틱은 31.25밀리초이거나 1/32초입니다.  
   
 ## <a name="examples"></a>예  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 SELECT @@TIMETICKS AS 'Time Ticks';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [시스템 통계 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DROP ROLE (TRANSACT-SQL) | Microsoft Docs
+title: DROP ROLE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -58,18 +58,18 @@ DROP ROLE role_name
 ```  
   
 ## <a name="arguments"></a>인수  
- *경우에 존재*  
+ *IF EXISTS*  
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- 조건에 따라 이미 있는 경우에 역할을 삭제 합니다.  
+ 이미 있는 경우에만 역할을 조건적으로 삭제합니다.  
   
  *role_name*  
  데이터베이스에서 삭제할 역할을 지정합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  보안 개체를 소유한 역할은 데이터베이스에서 삭제할 수 없습니다. 보안 개체를 소유한 데이터베이스 역할을 삭제하려면 먼저 해당 보안 개체의 소유권을 이전하거나 데이터베이스에서 해당 보안 개체를 삭제해야 합니다. 멤버가 있는 역할은 데이터베이스에서 삭제할 수 없습니다. 멤버가 있는 역할을 삭제하려면 먼저 해당 역할의 멤버를 제거해야 합니다.  
   
- 데이터베이스 역할에서 구성원을 제거 하려면 사용 하 여 [ALTER role&#40; Transact SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md).  
+ 데이터베이스 역할에서 멤버를 제거하려면 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)를 사용합니다.  
   
  DROP ROLE을 사용하여 고정 데이터베이스 역할을 삭제할 수 없습니다.  
   
@@ -78,13 +78,13 @@ DROP ROLE role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
- 사용 하 여 서버 역할을 제거 하려면 [DROP SERVER role&#40; Transact SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md).  
+ 서버 역할을 제거하려면 [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)를 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
- 필요 **ALTER ANY ROLE** 데이터베이스에 대 한 권한 또는 **제어** 역할 또는의 멤버 자격에 대 한 권한이 **db_securityadmin**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 데이터베이스에 대한 **ALTER ANY ROLE** 권한 또는 역할에 대한 **CONTROL** 권한 또는 **db_securityadmin**의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 데이터베이스 역할을 삭제 `purchasing` 에서 `AdventureWorks2012` 데이터베이스입니다.  
+ 다음 예에서는 `AdventureWorks2012` 데이터베이스에서 `purchasing` 데이터베이스 역할을 삭제합니다.  
   
 ```  
 DROP ROLE purchasing;  
@@ -92,9 +92,9 @@ GO
 ```  
   
   
-## <a name="see-also"></a>관련 항목:  
- [역할 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
- [ALTER role&#40; Transact SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   

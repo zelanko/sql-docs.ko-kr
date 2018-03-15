@@ -1,5 +1,5 @@
 ---
-title: "STGeomFromWKB (geography 데이터 형식) | Microsoft Docs"
+title: "STGeomFromWKB(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-반환 된 **geography** Open Geospatial Consortium (OGC) wkb (WELL-KNOWN Binary) 표현의 인스턴스.
+OGN(Open Geospatial Consortium) WKB(WELL-KNOWN Binary) 표현에서 **geography** 인스턴스를 반환합니다.
   
-이 **geography** 데이터 형식 메서드 지원 **FullGlobe** 인스턴스 또는 반구 보다 큰 공간 인스턴스.
+이 **geography** 데이터 형식 메서드는 **FullGlobe** 인스턴스 또는 반구보다 큰 공간 인스턴스를 지원합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -47,22 +47,22 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
 ## <a name="arguments"></a>인수  
  *WKB_geography*  
- WKB 표현입니다는 **geography** 인스턴스를 반환 합니다. *WKB_geography* 는 **varbinary (max)** 식입니다.  
+ 반환할 **geography** 인스턴스의 WKB 표현입니다. *WKB_geography*은 **varbinary(max)** 식입니다.  
   
  *SRID*  
- **int** spatial 나타내는 식 참조의 ID (SRID)는 **geography** 인스턴스를 반환 합니다.  
+ 반환할 **geography** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>주의  
- OGC 형식은 **geography** 에서 반환한 인스턴스 `STGeomFromText()` 해당 WKB 입력으로 설정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ `STGeomFromText()`에 의해 반환되는 **geography** 인스턴스의 OGC 형식은 해당 WKB 입력으로 설정됩니다.  
   
- 이 메서드에서 throw 한 **FormatException** 입력이 잘못 된 경우.  
+ 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
- 이 메서드는 throw **ArgumentException** 입력에 대척점 가장자리를 포함 하는 경우.  
+ 이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException**을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STGeomFromWKB()`를 사용하여 `geography` 인스턴스를 만듭니다.  
@@ -73,7 +73,7 @@ SET @g = geography::STGeomFromWKB(0x010200000002000000D7A3703D0A975EC08716D9CEF7
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OGC 정적 지리 메서드](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

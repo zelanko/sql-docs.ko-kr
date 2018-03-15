@@ -1,5 +1,5 @@
 ---
-title: "메타 데이터 함수 (Transact SQL) | Microsoft Docs"
+title: "메타데이터 함수(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  모든 메타데이터 함수는 비결정적입니다. 이는 이러한 함수를 호출할 때마다 동일한 입력 값 집합을 사용하더라도 항상 동일한 결과가 반환되지는 않는다는 것을 의미합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

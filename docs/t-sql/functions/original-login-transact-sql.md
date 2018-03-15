@@ -1,5 +1,5 @@
 ---
-title: ORIGINAL_LOGIN (Transact SQL) | Microsoft Docs
+title: ORIGINAL_LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,10 +52,10 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>반환 형식  
  **sysname**  
   
-## <a name="remarks"></a>주의  
- 이 함수는 원래 연결 컨텍스트의 ID를 감사하는 데 유용할 수 있습니다. 반면와 같은 함수가 [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) 및 [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) 인스턴스에최초로연결한로그인의id를반환하는현재실행중인컨텍스트ORIGINAL_LOGIN반환[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]해당 세션에서 합니다.  
+## <a name="remarks"></a>Remarks  
+ 이 함수는 원래 연결 컨텍스트의 ID를 감사하는 데 유용할 수 있습니다. [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) 및 [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md)와 같은 함수가 현재 실행 중인 컨텍스트를 반환하는 반면에 ORIGINAL_LOGIN은 해당 세션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 인스턴스에 최초로 연결한 로그인의 ID를 반환합니다.  
   
- 에 NULL을 반환 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 NULL을 반환합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 세션의 실행 컨텍스트를 문의 호출자에서 `login1`로 전환합니다. `SUSER_SNAME` 및 `ORIGINAL_LOGIN` 함수를 사용하여 현재 세션 사용자(컨텍스트가 전환되는 대상 사용자)와 원래 로그인 계정을 반환할 수 있습니다.  
@@ -85,8 +85,8 @@ DROP USER user1;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [실행 AS &#40; Transact SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [되돌리기 &#40; Transact SQL &#41;](../../t-sql/statements/revert-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)  
   
   

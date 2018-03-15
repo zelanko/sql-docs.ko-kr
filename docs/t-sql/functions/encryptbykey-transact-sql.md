@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYKEY (Transact SQL) | Microsoft Docs
+title: ENCRYPTBYKEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,32 +52,32 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
   
 ## <a name="arguments"></a>인수  
  *key_GUID*  
- 암호화 하는 데 사용할 키의 guid는 *보냄*합니다. **uniqueidentifier**합니다.  
+ *일반 텍스트* 암호화에 사용할 키의 GUID입니다. **uniqueidentifier**  
   
- '*보냄*'  
+ '*cleartext*'  
  키로 암호화할 데이터입니다.  
   
  @cleartext  
- 형식의 변수는 **nvarchar**, **char**, **varchar**, **이진**, **varbinary**, 또는 **nchar** 키로 암호화 될 데이터가 들어 있는입니다.  
+ 키로 암호화될 데이터가 들어 있는 **navarchar**, **char**, **varchar**, **이진**, **varbinary** 또는 **nchar** 형식의 변수입니다.  
   
  *add_authenticator*  
- 인증 자가와 함께 암호화 될 지 여부를 나타냅니다는 *보냄*합니다. 인증자를 사용하는 경우 1이어야 합니다. **int**합니다.  
+ 인증자가 *일반 텍스트*와 함께 암호화될지 여부를 나타냅니다. 인증자를 사용하는 경우 1이어야 합니다. **int**  
   
  @add_authenticator  
- 인증 자가와 함께 암호화 될 지 여부를 나타냅니다는 *보냄*합니다. 인증자를 사용하는 경우 1이어야 합니다. **int**합니다.  
+ 인증자가 *일반 텍스트*와 함께 암호화될지 여부를 나타냅니다. 인증자를 사용하는 경우 1이어야 합니다. **int**  
   
- *인증자*  
- 인증자가 파생될 데이터입니다. **sysname**합니다.  
+ *authenticator*  
+ 인증자가 파생될 데이터입니다. **sysname**.  
   
  @authenticator  
  인증자가 파생될 데이터를 포함하는 변수입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **varbinary** 최대 크기가 8, 000 바이트입니다.  
+ 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
  키가 열리지 않거나, 존재하지 않거나, 더 이상 사용되지 않는 RC4 키이며 데이터베이스 호환성 수준이 110 이상이 아닐 경우 Null을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  EncryptByKey는 대칭 키를 사용합니다. 이 키는 열려 있어야 합니다. 대칭 키가 현재 세션에서 이미 열려 있으면 쿼리 컨텍스트에서 다시 열지 않아도 됩니다.  
   
  인증자는 암호화된 필드의 정수 값 대체를 막는 데 유용합니다. 예를 들어 급여 데이터로 이루어진 다음 테이블을 살펴봅니다.  
@@ -97,10 +97,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  대칭 암호화 및 암호 해독은 비교적 속도가 빠르며 대량의 데이터 작업 시 적합합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호화 함수를 ANSI_PADDING OFF 설정과 함께 사용하면 암시적 변환으로 인해 데이터가 손실될 수 있습니다. ANSI_PADDING에 대 한 자세한 내용은 참조 [SET ansi_padding&#40; Transact SQL &#41; ](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호화 함수를 ANSI_PADDING OFF 설정과 함께 사용하면 암시적 변환으로 인해 데이터가 손실될 수 있습니다. ANSI_PADDING에 관한 자세한 내용은 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예에 설명 하는 기능 키에 의존 하며 인증서에서 만든 [방법: 데이터 열 암호화](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)합니다.  
+ 다음 예에 설명된 기능은 [방법: 데이터 열 암호화](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)에서 생성된 키와 인증서에 의존합니다.  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>1. 대칭 키로 문자열 암호화  
  다음 예에서는 `Employee` 테이블에 열을 추가한 다음 `NationalIDNumber` 열에 저장되는 주민 등록 번호의 값을 암호화합니다.  
@@ -149,12 +149,12 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Decryptbykey&#40; Transact SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [HASHBYTES &#40; Transact SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+ [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

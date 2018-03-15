@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYPASSPHRASE (Transact SQL) | Microsoft Docs
+title: DECRYPTBYPASSPHRASE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,34 +51,34 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>인수  
- *공유 암호*  
+ *passphrase*  
  암호 해독을 위한 키를 생성하는 데 사용할 전달 구입니다.  
   
  @passphrase  
- 형식의 변수는 **nvarchar**, **char**, **varchar**, 또는 **nchar** 에 대 한 키를 생성 하는 데 사용 될 전달 구가 들어 있는 암호 해독 합니다.  
+ 암호 해독을 위한 키를 생성하는 데 사용될 전달 구가 들어 있는 **nvarchar**, **char**, **varchar** 또는 **nchar** 형식의 변수입니다.  
   
- '*암호 텍스트*'  
+ '*ciphertext*'  
  암호를 해독할 암호화 텍스트입니다.  
   
  @ciphertext  
- 형식의 변수는 **varbinary** 암호화 텍스트가 들어 있는입니다. 최대 크기는 8,000바이트입니다.  
+ 암호화 텍스트가 들어 있는 **varbinary** 형식의 변수입니다. 최대 크기는 8,000바이트입니다.  
   
  *add_authenticator*  
- 인증자가 일반 텍스트와 함께 암호화되었는지 여부를 나타냅니다. 인증자가 사용된 경우 1이 됩니다. **int**합니다.  
+ 인증자가 일반 텍스트와 함께 암호화되었는지 여부를 나타냅니다. 인증자가 사용된 경우 1이 됩니다. **int**  
   
  @add_authenticator  
- 인증자가 일반 텍스트와 함께 암호화되었는지 여부를 나타냅니다. 인증자가 사용된 경우 1이 됩니다. **int**합니다.  
+ 인증자가 일반 텍스트와 함께 암호화되었는지 여부를 나타냅니다. 인증자가 사용된 경우 1이 됩니다. **int**  
   
- *인증자*  
- 인증자 데이터입니다. **sysname**합니다.  
+ *authenticator*  
+ 인증자 데이터입니다. **sysname**.  
   
  @authenticator  
  인증자가 파생될 데이터를 포함하는 변수입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **varbinary** 최대 크기가 8, 000 바이트입니다.  
+ 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수를 실행하는 데 필요한 사용 권한은 없습니다.  
   
  잘못된 전달 구나 인증자 정보를 사용하면 NULL을 반환합니다.  
@@ -88,7 +88,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  암호화 텍스트를 생성할 때 인증자를 포함한 경우 암호 해독 시 인증자를 제공해야 합니다. 암호 해독 시 제공한 인증자 값이 데이터를 암호화한 인증자 값과 일치하지 않으면 암호 해독이 실패합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서 업데이트 된 레코드의 암호를 해독 [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md)합니다.  
+ 다음 예에서는 [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md)에서 업데이트된 레코드의 암호를 해독합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -107,7 +107,7 @@ SELECT CardNumber, CardNumber_EncryptedbyPassphrase
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ENCRYPTBYPASSPHRASE&#40;Transact-SQL&#41;](../../t-sql/functions/encryptbypassphrase-transact-sql.md)  
   

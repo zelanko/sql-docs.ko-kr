@@ -1,5 +1,5 @@
 ---
-title: FILEGROUP_ID (Transact SQL) | Microsoft Docs
+title: FILEGROUP_ID(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ FILEGROUP_ID ( 'filegroup_name' )
   
 ## <a name="arguments"></a>인수  
  **'** *filegroup_name* **'**  
- 형식의 식 **sysname** 나타내는 파일 그룹 이름을 반환할 파일 그룹 id입니다.  
+ 파일 그룹 ID를 반환할 파일 그룹 이름을 나타내는 **sysname** 형식의 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>주의  
- *filegroup_name* 에 해당 하는 **이름** 열에는 **sys.filegroups** 카탈로그 뷰에 있습니다.  
+## <a name="remarks"></a>Remarks  
+ *filegroup_name*은 **sys.filegroups** 카탈로그 뷰의 **name** 열과 일치합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `PRIMARY` 데이터베이스에서 파일 그룹 이름 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]에 해당하는 파일 그룹 ID를 반환합니다.  
@@ -78,9 +78,9 @@ Filegroup ID
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>관련 항목:  
- [FILEGROUP_NAME &#40; Transact SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.filegroups &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [메타데이터 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

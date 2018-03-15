@@ -1,5 +1,5 @@
 ---
-title: SOUNDEX (Transact SQL) | Microsoft Docs
+title: SOUNDEX(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,17 +50,17 @@ SOUNDEX ( character_expression )
   
 ## <a name="arguments"></a>인수  
  *character_expression*  
- 영숫자 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자 데이터입니다. *character_expression* 상수, 변수 또는 열일 수 있습니다.  
+ 문자 데이터의 영숫자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **varchar**  
   
-## <a name="remarks"></a>주의  
- SOUNDEX는 문자열을 말할 때 어떻게 들리는지에 따라 영숫자 문자열을 4자의 코드로 변환합니다. 코드의 첫 번째 문자는 첫 번째 문자의 *character_expression*, 대문자로 변환 합니다. 코드의 두 번째부터 네 번째 문자까지의 문자는 식의 문자를 나타내는 숫자입니다. 문자 A, E, I, O, U, H, W 및 Y는 문자열의 첫 문자가 아닌 경우 무시됩니다. 4자로 된 코드를 생성하기 위해 필요한 경우 끝에 0이 추가됩니다. SOUNDEX 코드에 대 한 자세한 내용은 참조 [Soundex 인덱싱 시스템](https://www.archives.gov/research/census/soundex.html)합니다.  
+## <a name="remarks"></a>Remarks  
+ SOUNDEX는 문자열을 말할 때 어떻게 들리는지에 따라 영숫자 문자열을 4자의 코드로 변환합니다. 코드의 첫 번째 문자는 *character_expression*의 첫 번째 문자이며 대문자로 변환됩니다. 코드의 두 번째부터 네 번째 문자까지의 문자는 식의 문자를 나타내는 숫자입니다. 문자 A, E, I, O, U, H, W 및 Y는 문자열의 첫 문자가 아닌 경우 무시됩니다. 4자로 된 코드를 생성하기 위해 필요한 경우 끝에 0이 추가됩니다. SOUNDEX 코드에 대한 자세한 내용은 [Soundex 인덱싱 시스템](https://www.archives.gov/research/census/soundex.html)을 참조하세요.  
   
  다른 문자열의 SOUNDEX 코드는 문자열을 말할 때 얼마나 비슷한지 확인하기 위해 비교할 수 있습니다. DIFFERENCE 함수는 두 개의 문자열에서 SOUNDEX를 수행하고 이러한 문자열에 대해 SOUNDEX 코드가 얼마나 유사한지 나타내는 정수를 반환합니다.  
   
- SOUNDEX는 데이터 정렬을 인식합니다. 문자열 함수를 중첩할 수 있습니다.  
+ SOUNDEX는 데이터 정렬을 인식합니다. 문자열 함수는 중첩될 수 있습니다.  
   
 ## <a name="soundex-compatibility"></a>SOUNDEX 호환성  
  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 SOUNDEX 함수는 SOUNDEX 규칙의 하위 집합을 적용했습니다. 데이터베이스 호환성 수준 110 이상에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 더 자세한 규칙 집합을 적용합니다.  
@@ -81,7 +81,7 @@ SOUNDEX ( character_expression )
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Latin1_General 데이터 정렬에 대 한 유효 합니다.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General 데이터 정렬에 유효합니다.  
   
 ```  
   
@@ -99,7 +99,7 @@ SELECT DIFFERENCE('Smithers', 'Smythers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Latin1_General 데이터 정렬에 대 한 유효 합니다.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General 데이터 정렬에 유효합니다.  
   
 ```  
 -----------   
@@ -115,7 +115,7 @@ SELECT DIFFERENCE('Anothers', 'Brothers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Latin1_General 데이터 정렬에 대 한 유효 합니다.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General 데이터 정렬에 유효합니다.  
   
 ```  
 -----------   
@@ -124,9 +124,9 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [차이 &#40; Transact SQL &#41;](../../t-sql/functions/difference-transact-sql.md)   
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [DIFFERENCE &#40;Transact-SQL&#41;](../../t-sql/functions/difference-transact-sql.md)   
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

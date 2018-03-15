@@ -1,5 +1,5 @@
 ---
-title: ALTER FULLTEXT CATALOG (Transact SQL) | Microsoft Docs
+title: ALTER FULLTEXT CATALOG(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,7 +56,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>인수  
  *catalog_name*  
- 수정할 카탈로그의 이름을 지정합니다. 지정 된 이름의 카탈로그가 없으면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 오류를 반환 하 고 변경 작업을 수행 하지 않습니다.  
+ 수정할 카탈로그의 이름을 지정합니다. 지정된 이름의 카탈로그가 없을 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환하고 ALTER 작업을 수행하지 않습니다.  
   
  REBUILD  
  전체 카탈로그를 다시 작성하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 알려 줍니다. 카탈로그를 다시 작성하면 기존 카탈로그가 삭제되고 새 카탈로그가 해당 위치에 만들어집니다. 전체 텍스트 인덱싱 참조가 있는 모든 테이블은 새 카탈로그와 연결됩니다. 카탈로그를 다시 작성하면 데이터베이스 시스템 테이블의 전체 텍스트 메타데이터가 설정됩니다.  
@@ -64,12 +64,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  변경할 카탈로그의 전체 텍스트 인덱싱 및 쿼리에 대한 악센트 구분 여부를 지정합니다.  
   
- 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인 하려면 FULLTEXTCATALOGPROPERTY 함수를 사용 하 여는 **accentsensitivity** 속성 값에 대해 *catalog_name*합니다. 함수가 '1'을 반환하면 전체 텍스트 카탈로그가 악센트를 구분하고, '0'을 반환하면 악센트를 구분하지 않습니다.  
+ 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인하려면 *catalog_name*에 대해 **accentsensitivity** 속성 값을 가진 FULLTEXTCATALOGPROPERTY 함수를 사용합니다. 함수가 '1'을 반환하면 전체 텍스트 카탈로그가 악센트를 구분하고, '0'을 반환하면 악센트를 구분하지 않습니다.  
   
  카탈로그와 데이터베이스의 악센트 구분 기본값은 동일합니다.  
   
  REORGANIZE  
- 지시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수행 하는 *마스터 병합*를 하나의 큰 인덱스로 인덱싱 과정에서 만들어진 작은 인덱스가 병합 합니다. 전체 텍스트 인덱스 조각을 병합 성능이 향상 되 고 디스크 및 메모리 리소스를 확보 합니다. 전체 텍스트 카탈로그를 자주 변경하는 경우에는 이 명령을 주기적으로 사용하여 전체 텍스트 카탈로그를 다시 구성할 수 있습니다.  
+ 인덱싱 과정에서 만들어진 작은 인덱스를 하나의 큰 인덱스로 병합하는 *master merge*을 수행하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 알려줍니다. 전체 텍스트 인덱스 조각을 병합하면 성능이 향상되고 디스크 및 메모리 리소스를 확보할 수 있습니다. 전체 텍스트 카탈로그를 자주 변경하는 경우에는 이 명령을 주기적으로 사용하여 전체 텍스트 카탈로그를 다시 구성할 수 있습니다.  
   
  REORGANIZE는 내부 인덱스 및 카탈로그 구조도 최적화합니다.  
   
@@ -78,8 +78,8 @@ ALTER FULLTEXT CATALOG catalog_name
  AS DEFAULT  
  이 카탈로그를 기본 카탈로그로 지정합니다. 카탈로그를 지정하지 않고 전체 텍스트 인덱스를 만들면 기본 카탈로그가 사용됩니다. 기본 전체 텍스트 카탈로그가 이미 있는 경우 이 카탈로그를 AS DEFAULT로 설정하면 기존 기본값보다 우선 적용됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 사용자는 전체 텍스트 카탈로그에 대 한 ALTER 권한이 있거나의 멤버는 **db_owner**, **db_ddladmin** 고정 데이터베이스 역할 또는 sysadmin 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 사용자는 전체 텍스트 카탈로그에 대해 ALTER 권한이 있거나 **db_owner**, **db_ddladmin** 고정 데이터베이스 역할 또는 sysadmin 고정 서버 역할의 멤버여야 합니다.  
   
 > [!NOTE]  
 >  ALTER FULLTEXT CATALOG AS DEFAULT를 사용하려면 사용자에게 전체 텍스트 카탈로그에 대한 ALTER 권한과 데이터베이스에 대한 CREATE FULLTEXT CATALOG 권한이 있어야 합니다.  
@@ -100,10 +100,10 @@ GO
 --Returned 0, which means the catalog is not accent sensitive.  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [sys.fulltext_catalogs &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [전체 텍스트 카탈로그 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [DROP FULLTEXT catalog&#40; Transact SQL &#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)  
   
   

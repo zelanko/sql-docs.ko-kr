@@ -12,16 +12,16 @@ ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67aaeb56b3d3230e650dc24d16221e2af6872344
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0306d075998380efc599e82386e49496db3cdaaa
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="configure-distributed-availability-group"></a>분산 가용성 그룹 구성  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -210,10 +210,10 @@ GO
 ```  
 
 ## <a name="failover"></a> 두 번째 가용성 그룹의 보조에 있는 데이터베이스 조인
-두 번째 가용성 그룹의 보조에 있는 데이터베이스가 복원 상태로 전환되면 해당 데이터베이스를 가용성 그룹에 수동으로 조인해야 합니다.
+두 번째 가용성 그룹의 보조 부분에 있는 데이터베이스가 복원 상태로 전환된 후 해당 데이터베이스를 가용성 그룹에 수동으로 조인해야 합니다.
 
 ```sql  
-ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```  
   
 ## <a name="failover"></a> 보조 가용성 그룹에 대한 장애 조치(failover)  

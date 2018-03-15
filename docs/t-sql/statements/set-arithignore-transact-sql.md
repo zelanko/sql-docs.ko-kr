@@ -1,5 +1,5 @@
 ---
-title: SET ARITHIGNORE (Transact SQL) | Microsoft Docs
+title: SET ARITHIGNORE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET ARITHIGNORE 설정은 오류 메시지 반환 여부만 제어합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 설정에 관계없이 오버플로 또는 0으로 나누기 오류와 연관된 계산에서 NULL을 반환합니다. SET ARITHABORT 설정을 사용하여 쿼리 종료 여부를 결정할 수 있습니다. 그러나 이 설정은 INSERT, UPDATE, DELETE 문 실행 중에 발생한 오류에는 영향을 주지 않습니다.  
   
  SET ARITHABORT 옵션이나 SET ARITHIGNORE 옵션 중 하나가 OFF이고 SET ANSI_WARNINGS 옵션이 ON이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 0으로 나누기 또는 오버플로 오류가 발생할 경우 여전히 오류 메시지를 반환합니다.  
@@ -73,7 +73,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -105,8 +105,8 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제는 0으로 나누기와 오버플로 오류입니다. ARITHIGNORE가 OFF입니다. 때문에이 예제에서는 이러한 오류에 대 한 오류 메시지를 반환 하지 않습니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 0으로 나누기 및 오버플로 오류를 보여 줍니다. 이 예제에서는 ARITHIGNORE가 OFF이기 때문에 이러한 오류에 대해 오류 메시지를 반환하지 않습니다.  
   
 ```  
 -- SET ARITHIGNORE OFF and testing.  
@@ -116,9 +116,9 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET arithabort&#40; Transact SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT&#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
 

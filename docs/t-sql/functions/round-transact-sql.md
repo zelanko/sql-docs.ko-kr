@@ -1,5 +1,5 @@
 ---
-title: ROUND (Transact SQL) | Microsoft Docs
+title: ROUND(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/14/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 ## <a name="arguments"></a>인수  
  *numeric_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 정확한 수치 또는 근사치 숫자 데이터 형식 범주에서를 제외 하 고는 **비트** 데이터 형식입니다.  
+ **비트** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *length*  
- 전체 자릿수를 *numeric_expression* 반올림 됩니다. *길이* 유형의 식 이어야 합니다 **tinyint**, **smallint**, 또는 **int**합니다. 때 *길이* 양수, *numeric_expression* 로 지정 된 10 진수 자리의 숫자로 반올림 됩니다 *길이*합니다. 때 *길이* 음수, *numeric_expression* 에서 지정한 대로 소수점의 왼쪽에서 반올림은 *길이*합니다.  
+ *numeric_expression*을 반올림할 전체 자릿수입니다. *length*는 **tinyint**, **smallint** 또는 **int** 형식의 식이어야 합니다. *length*가 양수이면 *numeric_expression*은 *length*로 지정된 10진수 자리의 숫자로 반올림됩니다. *length*가 음수이면 *numeric_expression*은 *length*로 지정된 소수점의 왼쪽에 반올림됩니다.  
   
  *function*  
- 수행할 연산의 유형입니다. *함수* 해야 **tinyint**, **smallint**, 또는 **int**합니다. 때 *함수* 를 생략 하거나 값 0 (기본값) 이면 *numeric_expression* 반올림 됩니다. 이외의 값 0을 지정 하면 *numeric_expression* 잘립니다.  
+ 수행할 연산의 유형입니다. *function*은 **tinyint**, **smallint** 또는 **int**여야 합니다. *function*이 생략되거나 값이 0(기본값)이면 *numeric_expression*이 반올림됩니다. 0 이외의 값을 지정하면 *numeric_expression*이 잘립니다.  
   
 ## <a name="return-types"></a>반환 형식  
  다음 데이터 형식을 반환합니다.  
@@ -65,23 +65,23 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**smallint**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|**10 진수** 및 **숫자** 범주 (p, s)|**10 진수 (p, s)**|  
+|**decimal** 및 **numeric** 범주(p, s)|**decimal(p, s)**|  
 |**money** 및 **smallmoney** 범주|**money**|  
-|**float** 및 **실제** 범주|**float**|  
+|**float** 및 **real** 범주|**float**|  
   
-## <a name="remarks"></a>주의  
- ROUND는 항상 하나의 값을 반환합니다. 경우 *길이* 음수이 고 소수점 전의 자릿수 보다 큰 이면 ROUND는 0을 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ ROUND는 항상 하나의 값을 반환합니다. *length*가 음수이고 소수점 전의 자릿수보다 클 경우 ROUND는 0을 반환합니다.  
   
 |예제|결과|  
 |-------------|------------|  
-|ROUND (748.58,-4)|0|  
+|ROUND(748.58, -4)|0|  
   
- 라운드 반환 둥근 *numeric_expression*데이터 형식에 관계 없이 때 *길이* 은 음수입니다.  
+ *length*가 음수일 경우 ROUND는 데이터 형식에 관계없이 반올림된 *numeric_expression*을 반환합니다.  
   
 |예|결과|  
 |--------------|------------|  
-|ROUND (748.58,-1)|750.00|  
-|ROUND (748.58,-2)|700.00|  
+|ROUND(748.58, -1)|750.00|  
+|ROUND(748.58, -2)|700.00|  
 |ROUND(748.58, -3)|748.58은 기본적으로 10진수(5,2)로 1000.00을 반환할 수 없기 때문에 산술 오버플로가 발행합니다.|  
 |4자릿수까지 반올림하려면 입력 데이터 형식을 변경합니다. 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
@@ -140,9 +140,9 @@ GO
 (1 row(s) affected)  
 ```
   
-## <a name="see-also"></a>관련 항목:  
- [천장 &#40; Transact SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CEILING&#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [FLOOR &#40; Transact SQL &#41;](../../t-sql/functions/floor-transact-sql.md)   
- [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [FLOOR&#40;Transact-SQL&#41;](../../t-sql/functions/floor-transact-sql.md)   
+ [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

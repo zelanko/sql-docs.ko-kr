@@ -1,5 +1,5 @@
 ---
-title: "트랜잭션 격리 수준을 (Transact SQL) 설정 | Microsoft Docs"
+title: SET TRANSACTION ISOLATION LEVEL(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -84,7 +84,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  READ COMMITTED의 동작은 다음과 같이 READ_COMMITTED_SNAPSHOT 데이터베이스 옵션 설정에 따라 달라집니다.  
   
--   READ_COMMITTED_SNAPSHOT이 OFF(기본값)로 설정되어 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 공유 잠금을 사용하여 현재 트랜잭션이 읽기 작업을 실행하는 동안 다른 트랜잭션이 행을 수정하지 못하도록 합니다. 또한 공유 잠금은 다른 트랜잭션이 완료될 때까지 해당 트랜잭션이 수정한 행을 문이 읽을 수 없도록 합니다. 공유 잠금의 해제 시기는 공유 잠금 유형에 의해 결정됩니다. 행 잠금은 다음 행이 처리되기 전에 해제되고, 테이블 잠금이 문이 끝날 때 해제 됩니다 하 고 다음 페이지를 읽을 때 페이지 잠금이 해제 됩니다.  
+-   READ_COMMITTED_SNAPSHOT이 OFF(기본값)로 설정되어 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 공유 잠금을 사용하여 현재 트랜잭션이 읽기 작업을 실행하는 동안 다른 트랜잭션이 행을 수정하지 못하도록 합니다. 또한 공유 잠금은 다른 트랜잭션이 완료될 때까지 해당 트랜잭션이 수정한 행을 문이 읽을 수 없도록 합니다. 공유 잠금의 해제 시기는 공유 잠금 유형에 의해 결정됩니다. 행 잠금은 다음 행이 처리되기 전에 해제되고, 페이지 잠금은 다음 페이지를 읽을 때 해제되고 테이블 잠금은 명령문이 끝나면 해제됩니다.  
   
     > [!NOTE]  
     >  READ_COMMITTED_SNAPSHOT이 ON으로 설정되어 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 행 버전 관리를 사용하여 문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅숏을 각 문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다.  
@@ -128,7 +128,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  범위 잠금은 트랜잭션에서 실행된 각 문의 검색 조건과 일치하는 키 값의 범위에 적용됩니다. 따라서 다른 트랜잭션은 현재 트랜잭션에서 실행한 문에 한정되는 행을 업데이트하거나 삽입할 수 없습니다. 즉, 트랜잭션의 문이 다시 실행되면 동일한 행 집합을 읽게 됩니다. 범위 잠금은 트랜잭션이 완료될 때까지 유지됩니다. 범위 잠금은 전체 키 범위를 잠그고 트랜잭션이 완료될 때까지 해당 잠금을 보유하므로 격리 수준 중에서 가장 제한적입니다. 동시성이 더 낮기 때문에 필요할 때만 이 옵션을 사용하도록 하세요. 이 옵션은 트랜잭션의 모든 SELECT 문의 모든 테이블에 HOLDLOCK을 설정하는 것과 같습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  격리 수준 옵션은 한 번에 하나만 설정할 수 있으며 명시적으로 변경할 때까지는 해당 연결에 대한 설정이 그대로 유지됩니다. 문의 FROM 절에 있는 테이블 힌트가 테이블에 대해 다른 잠금 동작이나 버전 관리 동작을 지정하지 않는 한 트랜잭션 내에서 수행되는 모든 읽기 작업은 지정한 격리 수준의 규칙에 따라 수행됩니다.  
   
  트랜잭션 격리 수준은 읽기 작업 시 획득되는 잠금 유형을 정의합니다. 일반적으로 READ COMMITTED 또는 REPEATABLE READ에 대해 획득된 공유 잠금은 행 잠금입니다. 그러나 읽기 작업에서 페이지나 테이블의 많은 행을 참조하는 경우 이 행 잠금은 페이지 또는 테이블 잠금으로 에스컬레이션될 수 있습니다. 트랜잭션에서 행을 읽은 후 수정하면 트랜잭션은 해당 행을 보호하기 위해 배타적 잠금을 획득합니다. 이러한 배타적 잠금은 트랜잭션이 완료될 때까지 유지됩니다. 예를 들어 REPEATABLE READ 트랜잭션이 행에 공유 잠금을 설정한 다음 해당 행을 수정하면 공유 행 잠금은 배타적 행 잠금으로 변환됩니다.  
@@ -154,7 +154,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   행 버전 관리를 사용하는 READ COMMITTED  
   
- 반대로 이러한 격리 수준에서 실행된 쿼리는 힙의 최적화된 대량 로드 작업을 차단합니다. 대량 로드 작업에 대 한 자세한 내용은 참조 하십시오. [대량 가져오기 및 데이터의 내보내기 &#40; SQL Server &#41; ](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ 반대로 이러한 격리 수준에서 실행된 쿼리는 힙의 최적화된 대량 로드 작업을 차단합니다. 대량 로드 작업에 대한 자세한 내용은 [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)를 참조하세요.  
   
  FILESTREAM 사용 데이터베이스는 다음 트랜잭션 격리 수준을 지원합니다.  
   
@@ -187,9 +187,9 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [DBCC USEROPTIONS &#40; Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
+ [DBCC USEROPTIONS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  

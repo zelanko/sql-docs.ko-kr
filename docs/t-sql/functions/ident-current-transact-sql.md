@@ -1,5 +1,5 @@
 ---
-title: IDENT_CURRENT (Transact SQL) | Microsoft Docs
+title: IDENT_CURRENT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,22 +50,22 @@ IDENT_CURRENT( 'table_name' )
   
 ## <a name="arguments"></a>인수  
  *table_name*  
- ID 값을 반환할 테이블의 이름입니다. *table_name* 은 **varchar**, 기본값은 없습니다.  
+ ID 값을 반환할 테이블의 이름입니다. *table_name*은 **varchar**이며 기본값은 없습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **38, 0**  
+ **numeric(38,0)**  
   
 ## <a name="exceptions"></a>예외  
  오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 IDENT_CURRENT와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
- IDENT_CURRENT는 비슷합니다는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] identity 함수 SCOPE_IDENTITY 및 @@IDENTITY합니다. 이 세 함수는 모두 최근에 생성된 ID 값을 반환합니다. 그러나 범위와 세션을 *마지막* 이러한 각 함수에 정의 된 다릅니다.  
+## <a name="remarks"></a>Remarks  
+ IDENT_CURRENT는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] IDENTITY 함수 SCOPE_IDENTITY 및 @@IDENTITY와 유사합니다. 이 세 함수는 모두 최근에 생성된 ID 값을 반환합니다. 그러나 각 함수에서 *last*가 정의하는 범위와 세션은 각기 다릅니다.  
   
 -   IDENT_CURRENT는 임의의 세션과 범위에 있는 특정 테이블에 대해 최근 생성된 ID 값을 반환합니다.  
   
--   @@IDENTITY 전체 범위에 걸쳐 현재 세션의 모든 테이블에 대해 생성 된 마지막 id 값을 반환 합니다.  
+-   @@IDENTITY은 현재 세션의 전체 범위에 걸쳐 임의의 테이블에 대해 최근 생성된 ID 값을 반환합니다.  
   
 -   SCOPE_IDENTITY는 현재 세션 및 현재 범위에 있는 임의의 테이블에 대해 최근 생성된 ID 값을 반환합니다.  
   
@@ -87,7 +87,7 @@ SELECT IDENT_CURRENT ('Person.Address') AS Current_Identity;
 GO  
 ```  
   
-### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>2. IDENT_CURRENT, @ 반환 된 id 값 비교@IDENTITY 및 SCOPE_IDENTITY  
+### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>2. IDENT_CURRENT, @@IDENTITY 및 SCOPE_IDENTITY에서 반환된 ID 값 비교  
  다음 예에서는 `IDENT_CURRENT`, `@@IDENTITY` 및 `SCOPE_IDENTITY`가 반환하는 서로 다른 ID 값을 보여 줍니다.  
   
 ```  
@@ -144,12 +144,12 @@ SELECT IDENT_CURRENT('t7');
 /* Returns the last value inserted into t7.*/  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [@@IDENTITY&#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
- [IDENT_INCR &#40; Transact SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
- [IDENT_SEED &#40; Transact SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [시스템 함수 &#40; Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

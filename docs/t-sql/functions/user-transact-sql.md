@@ -1,5 +1,5 @@
 ---
-title: "사용자 (Transact SQL) | Microsoft Docs"
+title: USER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ USER
 ## <a name="return-types"></a>반환 형식  
  **char**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  USER는 USER_NAME 시스템 함수와 같은 기능을 제공합니다.  
   
  USER를 CREATE TABLE 또는 ALTER TABLE 문에서 DEFAULT 제약 조건으로 사용하거나 임의의 표준 함수로 사용합니다.  
@@ -153,15 +153,15 @@ Mario
 DBO
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40; Transact SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40; Transact SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [SESSION_USER &#40; Transact SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [SYSTEM_USER &#40; Transact SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)   
- [USER_NAME &#40; Transact SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
+ [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: DROP CERTIFICATE (TRANSACT-SQL) | Microsoft Docs
+title: DROP CERTIFICATE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ DROP CERTIFICATE certificate_name
  *certificate_name*  
  데이터베이스에서 인증서를 식별하는 고유한 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  연결된 엔터티가 없는 인증서만 삭제할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  인증서에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -69,18 +69,18 @@ USE AdventureWorks2012;
 DROP CERTIFICATE Shipping04;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 인증서를 삭제 `Shipping04`합니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 `Shipping04`인증서를 삭제합니다.  
   
 ```  
 USE master;  
 DROP CERTIFICATE Shipping04;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [BACKUP CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: WITH common_table_expression (TRANSACT-SQL) | Microsoft Docs
+title: WITH common_table_expression(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -60,17 +60,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *expression_name*  
-공통 테이블 식에 대 한 유효한 식별자가입니다. *expression_name* 모든 다른 공통 테이블 식의 동일한 WITH에 정의 된 이름과 다를 수 해야 \<common_table_expression > 절을 하지만 *expression_name* 의 이름과 같을 수는 기본 테이블 또는 뷰입니다. 에 대 한 모든 참조 *expression_name* 쿼리에서 공통 테이블 식 및 기본 개체가 아닌를 사용 합니다.
+공통 테이블 식에 대한 유효한 식별자입니다. *expression_name*은 같은 WITH \<common_table_expression> 절에서 정의된 다른 공통 테이블 식의 이름과는 달라야 하지만 *expression_name*이 기본 테이블 또는 뷰의 이름과 같을 수 있습니다. 쿼리에서 *expression_name*에 대한 모든 참조는 기본 개체가 아니라 공통 테이블 식을 사용합니다.
   
  *column_name*  
- 공통 테이블 식에서 열 이름을 지정합니다. 단일 CTE 정의 내에서는 중복 이름이 허용되지 않습니다. 열 이름 지정 된 수의 결과 집합의 열 수가 일치 해야 합니다는 *CTE_query_definition*합니다. 열 이름 목록은 쿼리 정의에 모든 결과 열에 대한 고유한 이름을 제공한 경우에만 선택 사항입니다.  
+ 공통 테이블 식에서 열 이름을 지정합니다. 단일 CTE 정의 내에서는 중복 이름이 허용되지 않습니다. 지정한 열 이름 수는 반드시 *CTE_query_definition*의 결과 집합에 있는 열 수와 일치해야 합니다. 열 이름 목록은 쿼리 정의에 모든 결과 열에 대한 고유한 이름을 제공한 경우에만 선택 사항입니다.  
   
  *CTE_query_definition*  
- 공통 테이블 식을 채울 결과 집합을 위한 SELECT 문을 지정합니다. 에 대 한 SELECT 문은 *CTE_query_definition* 또 다른 CTE를 정의 하지는 못한다는 점을 제외 하 고 뷰를 만드는 것과 동일한 요구 사항을 충족 해야 합니다. 자세한 내용은 설명 섹션을 참조 하 고 [CREATE view&#40; Transact SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ 공통 테이블 식을 채울 결과 집합을 위한 SELECT 문을 지정합니다. *CTE_query_definition*의 SELECT 문은 CTE가 또 다른 CTE를 정의하지는 못한다는 점을 제외하고는 뷰를 만들 때와 동일한 요구 사항을 만족해야 합니다. 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)과 주의 섹션을 참조하세요.  
   
- 개 이상의 *CTE_query_definition* 은 정의 쿼리 정의 가입 되어 있어야 다음 중 하나가 집합 연산자: UNION ALL, UNION, EXCEPT 또는 INTERSECT입니다.  
+ *CTE_query_definition*이 두 개 이상 정의된 경우 UNION ALL, UNION, EXCEPT 또는 INTERSECT 등의 집합 연산자 중 하나를 사용하여 쿼리 정의에 조인해야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>공통 테이블 식 만들기 및 사용 지침  
  다음 지침은 비재귀 공통 테이블 식에 적용됩니다. 재귀 공통 테이블 식에 적용되는 지침은 다음에 나오는 "재귀 공통 테이블 식 정의 및 사용 지침"을 참조하세요.  
@@ -81,9 +81,9 @@ ms.lasthandoff: 01/25/2018
   
 -   CTE는 같은 WITH 절에서 자신 및 이전에 정의한 CTE를 참조할 수 있지만 전방 참조는 허용되지 않습니다.  
   
--   CTE에 둘 이상의 WITH 절을 지정할 수 없습니다. 예를 들어 경우는 *CTE_query_definition* 포함 하는 하위 쿼리가 그 하위 쿼리가 또 다른 CTE를 정의 하는 절이 있는 중첩 된 포함할 수 없습니다.  
+-   CTE에 둘 이상의 WITH 절을 지정할 수 없습니다. 예를 들어 *CTE_query_definition*이 하위 쿼리를 포함하는 경우 그 하위 쿼리는 또 다른 CTE를 정의하는 중첩 WITH 절을 포함할 수 없습니다.  
   
--   다음 절에서 사용할 수 없습니다는 *CTE_query_definition*:  
+-   *CTE_query_definition*에는 다음 절을 사용할 수 없습니다.  
   
     -   ORDER BY(TOP 절을 지정하는 경우는 제외)  
   
@@ -112,15 +112,15 @@ ms.lasthandoff: 01/25/2018
   
 -   재귀 멤버에 있는 열의 데이터 형식은 앵커 멤버에 있는 해당 열의 데이터 형식과 반드시 같아야 합니다.  
   
--   재귀 멤버의 FROM 절 CTE를 한 번만 참조 해야 *expression_name*합니다.  
+-   재귀 멤버의 FROM 절은 CTE *expression_name*을 한 번만 참조해야 합니다.  
   
--   다음 항목에서 허용 되지 않습니다는 *CTE_query_definition* 재귀 멤버의:  
+-   다음 항목은 재귀 멤버의 *CTE_query_definition*에서 허용되지 않습니다.  
   
     -   SELECT DISTINCT  
   
     -   GROUP BY  
   
-    -   PIVOT(데이터베이스 호환성 수준이 110 이상인 경우. 참조 [SQL Server 2016에서에서 데이터베이스 엔진 기능의 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).)  
+    -   PIVOT(데이터베이스 호환성 수준이 110 이상인 경우. [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)을 참조합니다.)  
   
     -   HAVING  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 01/25/2018
   
     -   하위 쿼리  
   
-    -   내부의 CTE에 대 한 재귀 참조에 적용 된 힌트는 *CTE_query_definition*합니다.  
+    -   *CTE_query_definition* 내부의 CTE에 대한 재귀적 참조에 적용되는 힌트입니다.  
   
  다음 지침은 재귀 공통 테이블 식 사용 작업에 적용됩니다.  
   
@@ -142,42 +142,42 @@ ms.lasthandoff: 01/25/2018
   
 -   재귀 공통 테이블 식을 포함한 뷰를 사용하여 데이터를 업데이트할 수 없습니다.  
   
--   CTE를 사용하여 쿼리에 커서를 정의할 수 있습니다. CTE가는 *select_statement* 커서의 결과 집합을 정의 하는 인수입니다. 재귀 CTE에는 빠른 정방향 전용 커서 및 정적(스냅숏) 커서만 사용할 수 있습니다. 재귀 CTE에 또 다른 커서 유형을 지정하는 경우 해당 커서 유형이 정적으로 변환됩니다.  
+-   CTE를 사용하여 쿼리에 커서를 정의할 수 있습니다. CTE는 커서의 결과 집합을 정의하는 *select_statement* 인수입니다. 재귀 CTE에는 빠른 정방향 전용 커서 및 정적(스냅숏) 커서만 사용할 수 있습니다. 재귀 CTE에 또 다른 커서 유형을 지정하는 경우 해당 커서 유형이 정적으로 변환됩니다.  
   
 -   CTE에서 원격 서버 상의 테이블을 참조할 수 있습니다. CTE의 재귀 멤버에서 원격 서버를 참조하는 경우 로컬에서 반복적으로 테이블에 액세스할 수 있도록 각 원격 테이블을 위한 스풀이 생성됩니다. CTE 쿼리인 경우 쿼리 계획에 Index Spool/Lazy Spool이 표시되며 이 스풀은 추가 WITH STACK 조건자를 가집니다. 이는 재귀를 올바르게 수행하는 한 가지 방법입니다.  
   
--   CTE의 재귀 부분에 있는 분석 및 집계 함수는 현재 재귀 수준에 대한 집합에만 적용되며 CTE에 대한 집합에는 적용되지 않습니다. ROW_NUMBER와 같은 함수는 CTE의 재귀 부분에 전달된 전체 데이터 집합이 아니라 현재 재귀 수준에 의해 함수로 전달된 데이터 하위 집합에 대해서만 실행됩니다. 자세한 내용은 예 11.를 사용 하 여 분석 함수는 재귀 CTE에서에서 참조.  
+-   CTE의 재귀 부분에 있는 분석 및 집계 함수는 현재 재귀 수준에 대한 집합에만 적용되며 CTE에 대한 집합에는 적용되지 않습니다. ROW_NUMBER와 같은 함수는 CTE의 재귀 부분에 전달된 전체 데이터 집합이 아니라 현재 재귀 수준에 의해 함수로 전달된 데이터 하위 집합에 대해서만 실행됩니다. 자세한 내용은 예제 K. 재귀 CTE에서 분석 함수 사용을 참조하세요.  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>일반적인 기능 및 제한에 대 한 테이블에서 식 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 현재 구현에서 cte [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 는 다음과 같은 기능 및 제한 사항:  
+## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 공통 테이블 식의 기능과 제한  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 현재 CTE의 구현은 다음과 같은 기능과 제한이 있습니다.  
   
--   CTE에 지정할 수는 **선택** 문.  
+-   CTE는 **SELECT** 문에서 지정될 수 있습니다.  
   
--   CTE에 지정할 수는 **CREATE VIEW** 문.  
+-   CTE는 **CREATE VIEW** 문에서 지정될 수 있습니다.  
   
--   CTE에 지정할 수는 **CREATE TABLE AS SELECT** (CTAS) 문입니다.  
+-   CTE는 **CREATE TABLE AS SELECT**(CTAS) 문에서 지정할 수 있습니다.  
   
--   CTE에 지정할 수는 **CREATE 원격 TABLE AS SELECT** (CRTAS) 문입니다.  
+-   CTE는 **CREATE REMOTE TABLE AS SELECT**(CRTAS) 문에서 지정할 수 있습니다.  
   
--   CTE에 지정할 수는 **CREATE EXTERNAL TABLE AS SELECT** (CETAS) 문입니다.  
+-   CTE는 **CREATE EXTERNAL TABLE AS SELECT**(CETAS) 문에서 지정할 수 있습니다.  
   
 -   CTE에서 원격 테이블을 참조할 수 있습니다.  
   
 -   CTE에서 외부 테이블을 참조할 수 있습니다.  
   
--   여러 개의 CTE 쿼리 정의 CTE에 정의할 수 있습니다.  
+-   여러 CTE 쿼리 정의는 CTE 내에서 정의할 수 있습니다.  
   
--   CTE는 단일 따라야 할 **선택** 문. **삽입**, **업데이트**, **삭제**, 및 **병합** 문은 지원 되지 않습니다.  
+-   CTE 다음에 단일 **SELECT** 문을 추가해야 합니다. **INSERT**, **UPDATE**, **DELETE** 및 **MERGE** 문은 지원하지 않습니다.  
   
--   공통 테이블 식 (재귀 공통 테이블 식) 자체에 대 한 참조를 포함 하는 지원 되지 않습니다.  
+-   자체(재귀 공통 테이블 식)에 대한 참조를 포함하는 공통 테이블 식은 지원하지 않습니다.  
   
--   개 이상 지정 **WITH** CTE에 절을 사용할 수 없습니다. 예를 들어 한 CTE_query_definition 하위 쿼리를 포함 하는 경우 그 하위 쿼리가 포함할 수 없습니다는 중첩 된 **WITH** 또 다른 CTE를 정의 하는 절입니다.  
+-   CTE에 둘 이상의 **WITH** 절을 지정할 수 없습니다. 예를 들어 CTE_query_definition이 하위 쿼리를 포함하는 경우 그 하위 쿼리는 또 다른 CTE를 정의하는 중첩 **WITH** 절을 포함할 수 없습니다.  
   
--   **ORDER BY** 의 경우는 제외 CTE_query_definition에 절을 사용할 수 없습니다는 **TOP** 절을 지정 합니다.  
+-   **ORDER BY** 절은 **TOP** 절이 지정된 경우를 제외하고는 CTE_query_definition에서 사용할 수 없습니다.  
   
 -   일괄 처리에 속한 문에 CTE를 사용할 때는 그 전의 문 다음에 반드시 세미콜론을 추가해야 합니다.  
   
--   여 준비 된 문에 사용 되는 경우 **sp_prepare**, Cte가 작동 하는 동일한 방식으로 다른 **선택** PDW에서 문입니다. 그러나 Cte CETAS 준비의 일환으로 사용 됩니다 **sp_prepare**, 동작에서 연기할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 방식으로 바인딩 인해 다른 PDW 문에에 대해 구현 및 **sp_prepare**합니다. 경우 **선택** 참조 CTE를 사용 하는지, CTE에 존재 하지 않는 잘못 된 열은 **sp_prepare** 오류, 하지만 오류를 검색 하는 동안 throw 됩니다 하지 않고 통과 합니다 **sp_execute**  대신 합니다.  
+-   CTE가 **sp_prepare**에서 준비한 문에 사용되는 경우 PDW에서 사용하는 다른 **SELECT**과 동일한 방식으로 작동합니다. 그러나 CTE가 **sp_prepare**에서 준비한 CETAS의 일부로서 사용되는 경우 그 동작은 바인딩이 **sp_prepare**에 대해 구현되는 방식 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 다른 PDW 문에서 지연될 수 있습니다. CTE를 참조하는 **SELECT** 문이 CTE에 존재하지 않는 잘못된 열을 사용하고 있는 경우 **sp_prepare**는 오류를 감지하지 않고 지나가지만 대신 오류는 **sp_execute** 동안 throw됩니다.  
   
 ## <a name="examples"></a>예  
   
@@ -456,7 +456,7 @@ GO
 ```  
   
 ### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>9. UPDATE 문에서 재귀 CTE 사용  
- 다음 예에서는 업데이트 된 `PerAssemblyQty` 제품 개발에 ' Road-550-W Yellow, 44' 사용 되는 모든 부분에 대 한 값 `(ProductAssemblyID``800`). 공통 테이블 식은 `ProductAssemblyID 800`을 제작하는 데 사용되는 부품 및 해당 부품을 만드는 데 사용되는 구성 요소 등의 계층적 목록을 반환합니다. 이렇게 공통 테이블 식이 반환한 행만 수정됩니다.  
+ 다음 예에서는 제품 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`를 제작하는 데 사용되는 모든 부품의 `PerAssemblyQty` 값을 업데이트합니다). 공통 테이블 식은 `ProductAssemblyID 800`을 제작하는 데 사용되는 부품 및 해당 부품을 만드는 데 사용되는 구성 요소 등의 계층적 목록을 반환합니다. 이렇게 공통 테이블 식이 반환한 행만 수정됩니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -601,10 +601,10 @@ Lvl  N
   
  `N`은 CTE 재귀 부분의 각 패스에 대해 1을 반환하는데 그 이유는 해당 재귀 수준에 대한 데이터 하위 집합만 `ROWNUMBER`로 전달되기 때문입니다. 쿼리 재귀 부분이 반복될 때마다 각각 하나의 행만 `ROWNUMBER`로 전달됩니다.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>12. CTAS에는 문 내에서 공통 테이블 식을 사용 하 여  
- 다음 예에서는 연간 판매 주문의 총 수에서 각 판매 담당자에 대 한 포함 된 새 테이블을 만듭니다 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]합니다.  
+### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>12. CTAS 문 내에서 공통 테이블 식 사용하기  
+ 다음 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에서 각 판매 담당자의 연간 총 판매 주문 수를 포함한 새 테이블을 만듭니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -632,8 +632,8 @@ AS
 GO  
 ```  
   
-### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>13. CETAS 문 내에서 공통 테이블 식을 사용 하 여  
- 다음 예제에서 각 영업 담당자의 판매 주문 연간 총 수를 포함 하는 새 외부 테이블에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]합니다.  
+### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>13. CETAS 문 내에서 공통 테이블 식 사용하기  
+ 다음 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에서 각 판매 담당자의 연간 총 판매 주문 수를 포함한 새 외부 테이블을 만듭니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -662,8 +662,8 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>14. 문에서 Cte 구분 된 여러 개의 쉼표를 사용 하 여  
- 다음 예제에서는 두 개의 Cte를 포함 하 여 단일 문에서 하는 방법을 보여 줍니다. Cte 수 없습니다 (재귀 제외)를 중첩 합니다.  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>14. 문에서 쉼표로 구분하는 여러 CTE 사용하기  
+ 다음 예에서는 단일 명령문에 두 개의 CTE를 포함하는 방법을 보여줍니다. CTE는 중첩될 수 없습니다(재귀 제외).  
   
 ```  
 WITH   
@@ -680,10 +680,10 @@ UNION ALL
 SELECT TableName, TotalAvg FROM CountCustomer;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [제외 하 고 및 INTERSECT &#40; Transact SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [EXCEPT and INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  

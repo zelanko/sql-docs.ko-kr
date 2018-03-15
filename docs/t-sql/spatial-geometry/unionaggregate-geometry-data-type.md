@@ -42,24 +42,24 @@ UnionAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>인수  
  *geometry_operand*  
- 이 **기 하 도형** 의 집합을 보유 하는 형식 테이블 열 **기 하 도형** 통합 연산을 수행할 개체입니다.  
+ 통합 연산을 수행할 **geometry** 개체 집합을 보관하는 **geometry** 형식 테이블 열입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
 ## <a name="exceptions"></a>예외  
- 유효하지 않은 입력 값이 있는 경우 `FormatException`을 발생시킵니다. 참조 [STIsValid &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ 유효하지 않은 입력 값이 있는 경우 `FormatException`을 발생시킵니다. [STIsValid &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md) 참조  
   
-## <a name="remarks"></a>주의  
- 메서드 반환 **null** 경우 입력이 비어 있거나 입력에 다른 srid가 있습니다. 참조 [Spatial Reference Identifier &#40; Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 입력이 비어 있거나 입력에 다른 SRID가 있는 경우 **null**을 반환합니다. [Spatial Reference Identifier &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) 참조  
   
- 메서드는 무시 **null** 입력 합니다.  
+ 이 메서드는 **null** 입력을 무시합니다.  
   
 > [!NOTE]  
->  메서드 반환 **null** 경우는 모든 입력 값 **null**합니다.  
+>  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
   
 ## <a name="examples"></a>예  
- 집합의 합집합을 반환 하는 다음 예제에서는 **geometry** 테이블 변수에 개체입니다.  
+ 다음 예에서는 테이블 변수에 있는 **geometry** 개체 집합의 합집합을 반환합니다.  
  ```
  -- Setup table variable for UnionAggregate example 
  DECLARE @Geom TABLE 
@@ -75,7 +75,7 @@ UnionAggregate ( geometry_operand )
  FROM @Geom;
 ``` 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [확장 정적 기하 도형 메서드](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

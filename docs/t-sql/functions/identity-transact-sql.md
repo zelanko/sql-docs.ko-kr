@@ -1,5 +1,5 @@
 ---
-title: '@@IDENTITY (Transact SQL) | Microsoft Docs'
+title: '@@IDENTITY(Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -47,25 +47,25 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **38, 0**  
+ **numeric(38,0)**  
   
-## <a name="remarks"></a>주의  
- INSERT, SELECT INTO 또는 대량 복사 문이 완료 되 면 @@IDENTITY 문에 의해 생성 된 마지막 id 값을 포함 합니다. 문이 않은 영향을 주지 id 열이 있는 테이블@IDENTITY NULL을 반환 합니다. 여러 행을 삽입 한 경우 여러 id 값을 생성@IDENTITY 생성 된 마지막 id 값을 반환 합니다. 문이 id 값을 생성 하는 삽입을 수행 하는 트리거를 하나 이상 발생 하는 경우 호출@IDENTITY 하면 트리거로 생성 된 마지막 id 값 반환 후에 즉시 합니다. Id 열이 있는 테이블에 대 한 삽입 작업 후에 트리거가 발생 하 고 트리거 @ id 열이 없는 다른 테이블에 삽입 하는 경우@IDENTITY 첫 번째 삽입의 id 값을 반환 합니다. @@IDENTITY 값 트랜잭션이 롤백되는 경우 또는 INSERT 나 SELECT INTO 문 또는 대량 복사에 실패 하면 이전 설정으로 되돌아가지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ INSERT, SELECT INTO 또는 대량 복사 문이 완료된 후 @@IDENTITY에는 문에 의해 생성된 마지막 ID 값이 들어 있습니다. 문이 ID 열이 있는 테이블에 영향을 주지 않은 경우에 @@IDENTITY은 NULL을 반환합니다. 여러 행이 삽입되어 여러 ID 값이 생성되면 @@IDENTITY은 마지막으로 생성된 ID 값을 반환합니다. 명령문이 ID 값을 생성하는 삽입 작업을 수행하는 트리거를 하나 이상 실행하는 경우 명령문 바로 다음에 @@IDENTITY를 호출하면 트리거로 생성된 마지막 ID 값이 반환됩니다. ID 열이 있는 테이블에 대한 삽입 동작 후에 트리거가 실행되었고 이 트리거가 ID 열이 없는 다른 테이블에 삽입을 수행하는 경우 @@IDENTITY은 첫 번째 삽입의 ID 값을 반환합니다. INSERT나 SELECT INTO 문 또는 대량 복사가 실패했거나 트랜잭션이 롤백된 경우 @@IDENTITY 값은 이전 설정으로 되돌아가지 않습니다.  
   
  문 및 트랜잭션이 실패해도 테이블의 현재 ID가 변경되고 ID 열 값 간에 간격이 생성될 수 있습니다. 테이블에 값을 삽입하려고 시도한 트랜잭션이 커밋되지 않아도 ID 값은 롤백되지 않습니다. 예를 들어 IGNORE_DUP_KEY 위반으로 인해 INSERT 문이 실패해도 테이블의 현재 ID 값은 계속 증가합니다.  
   
- @@IDENTITY, SCOPE_IDENTITY 및 IDENT_CURRENT는 비슷한 함수 모두 테이블의 ID 열에 삽입 된 마지막 값을 반환 합니다.  
+ @@IDENTITY, SCOPE_IDENTITY 및 IDENT_CURRENT는 모두 테이블의 IDENTITY 열에 삽입된 마지막 값을 반환한다는 점에서 서로 비슷한 함수입니다.  
   
- @@IDENTITY SCOPE_IDENTITY는 현재 세션의 모든 테이블에서 생성 된 마지막 id 값을 반환 하 고 있습니다. SCOPE_IDENTITY는 현재 범위 내 에서만 값을 반환 하는 반면 @@IDENTITY 특정 범위로 제한 되지 않습니다.  
+ @@IDENTITY과 SCOPE_IDENTITY는 현재 세션의 테이블에서 생성된 마지막 ID 값을 반환합니다. 그러나 SCOPE_IDENTITY는 현재 범위 내에서만 값을 반환합니다. @@IDENTITY은 특정 범위로 제한되지 않습니다.  
   
- IDENT_CURRENT는 범위와 세션으로 제한되는 것이 아니라 지정된 테이블로 제한됩니다. IDENT_CURRENT는 모든 세션과 범위에 있는 특정 테이블에 생성된 ID 값을 반환합니다. 자세한 내용은 참조 [IDENT_CURRENT &#40; Transact SQL &#41; ](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT는 범위와 세션으로 제한되는 것이 아니라 지정된 테이블로 제한됩니다. IDENT_CURRENT는 모든 세션과 범위에 있는 특정 테이블에 생성된 ID 값을 반환합니다. 자세한 내용은 [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)을 참조하세요.  
   
- 범위는 @@IDENTITY 함수 실행은 로컬 서버에서 현재 세션입니다. 이 함수는 원격 서버 또는 연결된 서버에 적용할 수 없습니다. 다른 서버의 ID 값을 가져오려면 해당 원격 서버 또는 연결된 서버에서 저장 프로시저를 실행하고 이 저장 프로시저(원격 서버 또는 연결된 서버의 컨텍스트에서 실행 중)에서 ID 값을 수집하여 로컬 서버의 호출 연결에 반환하도록 합니다.  
+ @@IDENTITY 함수의 범위는 이 함수를 실행 중인 로컬 서버의 현재 세션입니다. 이 함수는 원격 서버 또는 연결된 서버에 적용할 수 없습니다. 다른 서버의 ID 값을 가져오려면 해당 원격 서버 또는 연결된 서버에서 저장 프로시저를 실행하고 이 저장 프로시저(원격 서버 또는 연결된 서버의 컨텍스트에서 실행 중)에서 ID 값을 수집하여 로컬 서버의 호출 연결에 반환하도록 합니다.  
   
- 복제에 영향을 줄 수는 @@IDENTITY 값을 복제 트리거 및 저장된 프로시저 내에서 사용 되기 때문입니다. @@IDENTITY 열이 복제 아티클의 일부인 경우 사용자가 만든 가장 최근 id 정확 하 게 표시 하지 않습니다. @ 대신 scope_identity () 함수 구문을 사용할 수 있습니다@IDENTITY합니다. 자세한 내용은 참조 [SCOPE_IDENTITY &#40; Transact SQL &#41;](../../t-sql/functions/scope-identity-transact-sql.md)  
+ @@IDENTITY 값은 복제 트리거 및 저장 프로시저 내에서 사용되므로 복제로 인한 영향을 받을 수 있습니다. 열이 복제 아티클의 일부인 경우 @@IDENTITY은 사용자가 만든 가장 최근 ID를 정확하게 표시하지 않습니다. @@IDENTITY 대신 SCOPE_IDENTITY() 함수 구문을 사용할 수 있습니다. 자세한 내용은 [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)를 참조하세요.  
   
 > [!NOTE]  
->  호출 하는 저장 프로시저 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용 하도록 문을 다시 작성 해야는 `SCOPE_IDENTITY()` 해당 사용자 문의 범위 내에서 사용 되는 최신 id 및에서 사용 되는 중첩된 트리거 범위 내에서 id가 아닌 반환 하는 함수를 복제 합니다.  
+>  복제에 사용되는 중첩 트리거 범위 내의 ID가 아니라 해당 사용자 명령문의 범위 내에서 사용되는 최신 ID를 반환할 `SCOPE_IDENTITY()` 함수를 사용하도록 호출하는 저장 프로시저 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 다시 작성해야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 ID 열(`LocationID`)이 있는 테이블에 행을 삽입하고 `@@IDENTITY`를 사용하여 새 행에 사용된 ID 값을 표시합니다.  
@@ -86,7 +86,7 @@ SELECT MAX(LocationID) FROM Production.Location;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENT_CURRENT&#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   

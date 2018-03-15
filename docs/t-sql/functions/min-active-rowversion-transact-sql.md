@@ -1,5 +1,5 @@
 ---
-title: MIN_ACTIVE_ROWVERSION (Transact SQL) | Microsoft Docs
+title: MIN_ACTIVE_ROWVERSION(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  현재 데이터베이스의 비활성 **rowversion** 값을 반환합니다. **rowversion** 값이 아직 커밋되지 않은 트랜잭션에서 사용되는 경우에는 활성 상태입니다. 자세한 내용은 참조 [rowversion &#40; Transact SQL &#41; ](../../t-sql/data-types/rowversion-transact-sql.md).  
+  현재 데이터베이스의 비활성 **rowversion** 값을 반환합니다. **rowversion** 값이 아직 커밋되지 않은 트랜잭션에서 사용되는 경우에는 활성 상태입니다. 자세한 내용은 [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)을 참조하세요.  
   
 > [!NOTE]  
->  **rowversion** 데이터 형식이 라고도 **타임 스탬프**합니다.  
+>  **rowversion** 데이터 형식은 **timestamp**라고도 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +49,17 @@ MIN_ACTIVE_ROWVERSION
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- 반환 된 **binary (8)** 값입니다.  
+ **binary(8)** 값을 반환합니다.  
   
-## <a name="remarks"></a>주의  
- MIN_ACTIVE_ROWVERSION은 비활성 반환 하는 비 결정적인 함수 **rowversion** 현재 데이터베이스에 있는 값입니다. 새로운 **rowversion** 값은 일반적으로 **rowversion**형식의 열이 포함된 테이블에 삽입 또는 업데이트가 수행될 때 생성됩니다. 데이터베이스의 현재 값이 없는 경우 MIN_ACTIVE_ROWVERSION @와 같은 값을 반환@DBTS + 1입니다.  
+## <a name="remarks"></a>Remarks  
+ MIN_ACTIVE_ROWVERSION은 현재 데이터베이스의 가장 낮은 활성 **rowversion** 값을 반환하는 비결정적 함수입니다. 새로운 **rowversion** 값은 일반적으로 **rowversion**형식의 열이 포함된 테이블에 삽입 또는 업데이트가 수행될 때 생성됩니다. 데이터베이스에 활성 값이 없는 경우 MIN_ACTIVE_ROWVERSION은 @@DBTS + 1과 같은 값을 반환합니다.  
   
- MIN_ACTIVE_ROWVERSION은 사용 하는 데이터 동기화와 같은 시나리오에 유용 **rowversion** 함께 변경 내용 그룹 집합에는 값입니다. 응용 프로그램에서 사용 하는 경우@DBTS MIN_ACTIVE_ROWVERSION, 대신 동기화가 일어날 때 활성 상태인 누락 변경 내용을 수는 있습니다.  
+ MIN_ACTIVE_ROWVERSION은 **rowversion** 값을 사용하여 변경 내용 집합을 그룹화하는 데이터 동기화와 같은 시나리오에 유용합니다. 응용 프로그램이 MIN_ACTIVE_ROWVERSION이 아닌 @@DBTS를 사용하면 동기화가 일어날 때 활성 상태인 변경 내용을 놓칠 수 있습니다.  
   
  MIN_ACTIVE_ROWVERSION 함수는 트랜잭션 격리 수준에 있는 변경 내용의 영향을 받지 않습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 반환 **rowversion** 사용 하 여 값 `MIN_ACTIVE_ROWVERSION` 및 `@@DBTS`합니다. 데이터베이스에 활성 트랜잭션이 없으면 값이 달라집니다.  
+ 다음 예에서는 `MIN_ACTIVE_ROWVERSION` 및 `@@DBTS`를 사용하여 **rowversion** 값을 반환합니다. 데이터베이스에 활성 트랜잭션이 없으면 값이 달라집니다.  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  
@@ -141,7 +141,7 @@ GO
 --0x00000000000007E5  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [@@DBTS&#40;Transact-SQL&#41;](../../t-sql/functions/dbts-transact-sql.md)   
  [rowversion&#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)  
   

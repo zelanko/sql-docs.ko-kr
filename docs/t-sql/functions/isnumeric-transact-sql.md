@@ -1,5 +1,5 @@
 ---
-title: ISNUMERIC (Transact SQL) | Microsoft Docs
+title: ISNUMERIC(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,12 +51,12 @@ ISNUMERIC ( expression )
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 계산 되도록 합니다.  
+ 평가해야 하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ISNUMERIC은 입력 식이 올바른 숫자 데이터 형식으로 평가되면 1을 반환하고 그렇지 않으면 0을 반환합니다. 올바른 숫자 데이터 형식은 다음과 같습니다.  
   
 |||  
@@ -68,7 +68,7 @@ ISNUMERIC ( expression )
 |**decimal**|**real**|  
   
 > [!NOTE]  
->  ISNUMERIC은 더하기(+), 빼기(-)와 같은 숫자가 아닌 일부 문자 및 달러 기호($)와 같은 올바른 통화 기호에 대해 1을 반환합니다. 통화 기호 목록은 전체 참조 [money 및 smallmoney &#40; Transact SQL &#41; ](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+>  ISNUMERIC은 더하기(+), 빼기(-)와 같은 숫자가 아닌 일부 문자 및 달러 기호($)와 같은 올바른 통화 기호에 대해 1을 반환합니다. 통화 기호의 전체 목록은 [money 및 smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `ISNUMERIC`을 사용하여 숫자 값이 아닌 모든 우편 번호를 반환합니다.  
@@ -82,7 +82,7 @@ WHERE ISNUMERIC(PostalCode)<> 1;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 `ISNUMERIC`을 사용하여 숫자 값이 아닌 모든 우편 번호를 반환합니다.  
   
 ```  
@@ -93,8 +93,8 @@ FROM sys.databases;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   

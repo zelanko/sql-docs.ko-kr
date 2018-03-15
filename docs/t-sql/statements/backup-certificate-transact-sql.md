@@ -1,5 +1,5 @@
 ---
-title: "백업 인증서 (Transact SQL) | Microsoft Docs"
+title: BACKUP CERTIFICATE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -87,14 +87,14 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *decryption_password*  
  키를 백업하기 전에 개인 키의 암호를 해독하는 데 사용되는 암호입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  개인 키가 데이터베이스에 있는 암호로 암호화된 경우 암호 해독 암호를 지정해야 합니다.  
   
  개인 키를 파일로 백업할 때는 암호화가 필요합니다. 백업된 인증서를 보호하는 데 사용되는 암호는 인증서의 개인 키를 암호화하는 데 사용되는 암호와 다릅니다.  
   
- 사용 하 여 인증서를 백업 된 복원는 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)문.  
+ 백업된 인증서를 복원하려면 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 문을 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  인증서에 대한 CONTROL 권한이 필요하고 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다. 인증서의 공개 부분만 백업하면 인증서에 대한 일부 권한이 필요하고 호출자가 인증서에 대해 VIEW 권한이 거부되지 않아야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -128,10 +128,10 @@ BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP certificate&#40; Transact SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
   
   
 

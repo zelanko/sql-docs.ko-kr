@@ -1,7 +1,7 @@
 ---
-title: "예측 (Transact SQL) | Microsoft Docs"
+title: PREDICT(Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 02/25/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -21,16 +21,16 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: c4d6b3967807c83db75dd3171313e9a5869336a1
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
-# <a name="predict-transact-sql"></a>예측 (Transact SQL)  
+# <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-예측된 된 값 또는 저장 된 모델을 기반으로 하는 점수를 생성 합니다.  
+저장된 모델을 기반으로 예측 값 또는 점수를 생성합니다.  
 
 ## <a name="syntax"></a>구문
 
@@ -59,64 +59,67 @@ MODEL = @model | model_literal
 
 **모델**
 
-`MODEL` 점수 매기기 이나 예측에 사용 되는 모델을 지정 하려면 매개 변수를 사용 합니다. 모델은 변수 또는 리터럴 또는 스칼라 식으로 지정 됩니다.
+`MODEL` 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되는 모델을 지정합니다. 모델은 변수 또는 리터럴 또는 스칼라 식으로 지정됩니다.
 
-R 또는 Python 또는 다른 도구를 사용 하 여 모델 개체를 만들 수 있습니다.
+모델 개체는 R 또는 Python 또는 다른 도구에 의해 생성할 수 있습니다.
 
 **data**
 
-DATA 매개 변수는 점수 매기기 이나 예측에 사용 되는 데이터를 지정 하는 데 사용 됩니다. 데이터 형식 쿼리에서 테이블 원본으로 지정 됩니다. 테이블, 테이블 별칭, CTE 별칭, 뷰 또는 테이블 반환 함수 테이블 원본 될 수 있습니다.
+DATA 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되는 데이터를 지정합니다. 데이터는 쿼리의 테이블 원본 형식으로 지정됩니다. 테이블 원본은 테이블, 테이블 별칭, CTE 별칭, 뷰 또는 테이블 반환 함수일 수 있습니다.
 
 **parameters**
 
-매개 변수가 매개 변수는 선택적 사용자 정의 매개 변수 예측 점수 매기기에 사용 되는 지정 하는 데 사용 됩니다.
+PARAMETERS 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되는 선택적 사용자 정의 매개 변수를 지정합니다.
 
-각 매개 변수의 이름은 모델 유형에 따라 다릅니다. RevoScaleR의 rxPredict 함수는 매개 변수를 지원 하는 예를 들어  _@computeResiduals 비트_ 로지스틱 회귀 모델의 점수를 매길 때 잉여의 계산을 지원 하도록 합니다. 매개 변수 이름과 값을 전달할 수는 `PREDICT` 함수입니다.
+각 매개 변수의 이름은 모델 유형에 따라 다릅니다. 예를 들어 RevoScaleR의 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 함수는 물류 회귀 모델의 점수를 매길 때 나머지를 계산해야 하는지 여부를 나타내는 `@computeResiduals` 매개 변수를 지원합니다. 호환되는 모델을 호출하는 경우 `PREDICT` 함수에 해당 매개 변수 이름 및 TRUE 또는 FALSE를 전달할 수 있습니다.
 
-> [참고] 이 옵션의 SQL Server 2017 시험판 버전에서 지원 되지 않습니다 되며 정방향 호환성 목적 으로만 포함 합니다.
+> [!NOTE]
+> SQL Server 2017의 시험판 버전에서는 이 옵션이 작동하지 않습니다.
 
-**와 ( \<result_set_definition >)**
+**WITH ( <result_set_definition> )**
 
-WITH 절은에서 반환 되는 출력의 스키마를 지정 하는 데 사용 되는 `PREDICT` 함수입니다.
+WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마를 지정합니다.
 
-반환 된 열과 함께 `PREDICT` 함수 자체는 데이터의 일부인 모든 열은 쿼리에서 사용 하기 위해 사용할 수 있는 입력 합니다.
+`PREDICT` 함수 자체에서 반환되는 열뿐만 아니라 데이터 입력의 일부인 모든 열도 쿼리에 사용할 수 있습니다.
 
 ### <a name="return-values"></a>반환 값
 
-미리 정의 된 스키마를 사용할 수 있습니다. SQL Server는 모델의 콘텐츠 유효성이 확인 되지 않습니다 및 반환 된 열 값의 유효성을 검사 하지 않습니다.  
-- `PREDICT` 입력으로 열을 통해 함수에 전달  
-- `PREDICT` 함수에도 새 열을 생성 하지만 열과 해당 데이터 형식이 수 예측에 사용 된 모델의 유형에 따라 다릅니다.  
+미리 정의된 스키마는 사용할 수 없으며, SQL Server는 모델 콘텐츠의 유효성을 검사하지 않고 반환된 열 값의 유효성도 검사하지 않습니다.
 
-모든 오류 메시지는 데이터와 관련 된, 모델 또는 열 형식 모델에 연결 된 기본 예측 함수에 의해 반환 됩니다.  
-- RevoScaleR을 해당 하는 경우 함수는 [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict)  
-- MicrosoftML, 해당 하는 경우 함수는 [rxPredict.mlModel](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxpredict)  
+- `PREDICT` 함수는 열을 입력으로 전달합니다.
+- 또한 `PREDICT` 함수는 새 열을 생성하지만 열 개수와 해당 데이터 형식은 예측에 사용되는 모델의 유형에 따라 달라집니다.
 
-사용 하 여 내부 모델 구조를 볼 수 없으면 `PREDICT`합니다. 모델 자체의 내용을 이해 하려면 모델 개체를 로드 해야, 역직렬화 하는 것을 및 적절 한 R 코드를 사용 하 여 모델을 구문 분석 합니다.
+데이터, 모델 또는 열 형식과 관련된 오류 메시지는 모델과 연결된 기본 예측 함수에 의해 반환됩니다.
 
-## <a name="remarks"></a>주의
+- RevoScaleR의 경우 동일한 함수는 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)입니다.  
+- MicrosoftML의 동일한 함수는 [rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict)입니다.  
 
-`PREDICT` 함수는 SQL Server, Linux 등의 모든 버전에서 지원 됩니다.
+`PREDICT`를 사용하여 내부 모델 구조를 볼 수 없습니다. 모델 자체의 콘텐츠를 이해하려면 모델 개체를 로드하고 deserialize하고 해당 R 코드를 사용하여 모델을 구문 분석해야 합니다.
 
-R, Python 또는 언어를 학습 하는 다른 컴퓨터를 사용 하도록 서버에 설치할 필요는 없습니다는 `PREDICT` 함수입니다. 다른 환경에서 모델을 학습 하 고 사용 하도록 SQL Server 테이블에 저장할 수 `PREDICT`, 하거나 저장 된 모델에 있는 SQL Server의 다른 인스턴스에서 모델을 호출 합니다.
+## <a name="remarks"></a>Remarks
 
-### <a name="supported-algorithms"></a>지원 되는 알고리즘
+`PREDICT` 함수는 다른 기계 학습 기능이 활성화되었는지 여부와 상관없이 Linux 및 Azure SQL Database를 포함하여 SQL Server의 모든 버전에서 지원됩니다. 그러나 SQL Server 2017 이상이 필요합니다. 
 
-사용 하는 모델 만들어야 RevoScaleR 패키지에서 지원 되는 알고리즘 중 하나를 사용 합니다. 목록이 현재 지원 되는 모델에 대 한 참조 [실시간 점수 매기기](../../advanced-analytics/real-time-scoring.md)합니다.
+`PREDICT` 함수를 사용하기 위해 R, Python 또는 다른 기계 학습 언어를 서버에 설치할 필요는 없습니다. 모델을 다른 환경에서 학습하고 `PREDICT`와 함께 사용하기 위해 SQL Server 테이블에 저장하거나 저장된 모델을 가진 SQL Server의 다른 인스턴스에서 모델을 호출할 수 있습니다.
 
-### <a name="permissions"></a>Permissions
+### <a name="supported-algorithms"></a>지원되는 알고리즘
 
-에 대 한 필요한 권한은 없습니다 `PREDICT`있지만 사용자 요구 `EXECUTE` 는 데이터베이스에 대 한 권한 및 입력으로 사용 되는 모든 데이터를 쿼리할 수 있는 권한이 있습니다. 모델 테이블에 저장 되어 있는 경우에 사용자를 모델 테이블에서 읽을 수 여야 합니다.
+사용하는 알고리즘은 RevoScaleR 패키지에서 지원되는 알고리즘 중 하나를 사용하여 만들어졌어야 합니다. 현재 지원되는 모델의 목록은 [실시간 점수 매기기](../../advanced-analytics/real-time-scoring.md)를 참조하세요.
+
+### <a name="permissions"></a>사용 권한
+
+`PREDICT`를 위해 권한은 필요 없지만, 사용자는 데이터베이스에 대한 `EXECUTE` 권한 및 입력으로 사용하는 데이터를 쿼리하는 권한이 필요합니다. 또한 모델이 테이블에 저장된 경우 사용자는 테이블에서 모델을 읽을 수 있어야 합니다.
 
 ## <a name="examples"></a>예
 
-다음 예에서는 호출에 대 한 구문을 보여 주는 `PREDICT`합니다.
+다음 예제에서는 `PREDICT`를 호출하는 구문을 보여 줍니다.
 
-### <a name="call-a-stored-model-and-use-it-for-prediction"></a>저장 된 모델을 호출 하 고 예측에 사용
+### <a name="call-a-stored-model-and-use-it-for-prediction"></a>저장된 모델을 호출하고 예측에 사용합니다.
 
-이 예제에서는 [models_table] 테이블에 저장 된 기존 로지스틱 회귀 모델을 호출 합니다. 최신 학습된 된 모델을 SELECT 문을 사용 하 여를 가져오고 이진 모델 PREDICT 함수에 전달 합니다. 입력된 값이 나타내는 기능 출력 모델에 의해 할당 된 분류를 나타냅니다.
+이 예제에서는 테이블 [models_table]에 저장된 기존 물류 회귀 모델을 호출합니다. SELECT 문을 사용하여 최근 학습한 모델을 가져온 다음, 이진 모델을 PREDICT 함수에 전달합니다. 입력 값은 기능을 나타내며, 출력은 모델에서 할당한 분류를 나타냅니다.
 
 ```sql
-DECLARE @logit_model varbinary(max) = "SELECT TOP 1 @model from [models_table]";
+DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_table] ORDER BY [trained_date] DESC";
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
@@ -124,9 +127,9 @@ FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
 WITH (class string);
 ```
 
-### <a name="using-predict-in-a-from-clause"></a>FROM 절에서 예측을 사용 하 여
+### <a name="using-predict-in-a-from-clause"></a>FROM 절에 PREDICT 사용
 
-이 예제에서는 참조는 `PREDICT` 함수는 `FROM` 절은 `SELECT` 문:
+이 예제는 `SELECT` 문의 `FROM`절에서 `PREDICT` 함수를 참조합니다.
 
 ```sql
 SELECT d.*, p.Score
@@ -134,11 +137,11 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-별칭 **d** 테이블 원본에 대해 지정 된 된 _데이터_ dbo.mytable에 속하는 열을 참조 하도록 매개 변수를 사용 합니다. 별칭 **p** 에 대해 지정 된 된 **PREDICT** 함수는 예측 함수에 의해 반환 되는 열을 참조할 때 사용 됩니다.
+`DATA` 매개 변수에서 테이블 원본에 대해 지정된 별칭 **d**를 사용하여 dbo.mytable에 속한 열을 참조합니다. **PREDICT** 함수에 대해 지정된 별칭 **p**를 사용하여 PREDICT 함수에서 반환된 열을 참조합니다.
 
-### <a name="combining-predict-with-an-insert-statement"></a>INSERT 문을 사용 하 여 예측을 결합
+### <a name="combining-predict-with-an-insert-statement"></a>INSERT 문과 PREDICT 결합
 
-입력된 데이터에 대 한 점수를 생성 한 다음 테이블에 예측된 값을 삽입 하는 예측에 대 한 일반적인 사용 사례 중 하나입니다. 다음 예제에서는 호출 응용 프로그램이 저장된 프로시저를 사용 하 여 테이블에 예측 된 값이 포함 된 행을 삽입 하려면 가정 합니다.
+예측에 대한 일반적인 사용 사례 중 하나는 입력 데이터에 대한 점수를 생성한 다음, 예측된 값을 테이블에 삽입하는 것입니다. 다음 예제에서는 호출 응용 프로그램이 저장 프로시저를 사용하여 예측 값이 포함된 행을 테이블에 삽입하는 것으로 가정합니다.
 
 ```sql
 CREATE PROCEDURE InsertLoanApplication
@@ -156,7 +159,7 @@ BEGIN
 END;
 ```
 
-프로시저에서 사용 하는 테이블 반환 매개 변수를 통해 여러 행 하는 경우 다음 그 수 있습니다. 다음과 같이 작성할 수 있습니다:
+프로시저에서 테이블 반환 매개 변수를 통해 여러 행을 가져온 다음, 다음과 같이 기록할 수 있습니다.
 
 ```sql
 CREATE PROCEDURE InsertLoanApplications (@new_applications dbo.loan_application_type)
@@ -170,26 +173,26 @@ BEGIN
 END;
 ```
 
-### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>R 모델 만들기 및 선택적 모델 매개 변수를 사용 하 여 점수를 생성 합니다.
+### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>R 모델을 만들고 선택적 모델 매개 변수를 사용하여 점수를 생성
 
 > [!NOTE]
-> 매개 변수 인수를 사용 Release Candidate 1에서 지원 되지 않습니다.
+> 매개 변수 인수 사용은 릴리스 후보 1에서 지원되지 않습니다.
 
-이 예에서는 만들었다고 공 분산 행렬 적합 로지스틱 회귀 모델은 이와 같은 RevoScaleR 호출 하 여 가정 합니다.
+이 예제에서는 이와 같은 RevoScaleR 호출을 사용하여 공변성 행렬(covariance matrix)에 맞는 물류 회귀 모델을 만들었다고 가정합니다.
 
 ```R
 logitObj <- rxLogit(Kyphosis ~ Age + Start + Number, data = kyphosis, covCoef = TRUE)
 ```
 
-이진 형식에 있는 SQL Server에서 모델을 저장 하는 경우 예측을 뿐 아니라 오류 또는 신뢰도 간격 같은 모델 유형별로 지원 되는 추가 정보를 생성 하는 예측 함수를 사용할 수 있습니다.
+모델을 이진 형식으로 SQL Server에 저장한 경우, PREDICT 함수를 사용하여 예측뿐만 아니라 모델 유형에서 지원되는 추가 정보(예: 오류 또는 신뢰 구간)도 생성할 수 있습니다.
 
-다음 코드 rxPredict R에서 해당 호출을 보여 줍니다.
+다음 코드는 R에서의 동일한 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 호출을 보여 줍니다.
 
 ```R
 rxPredict(logitObj, data = new_kyphosis_data, computeStdErr = TRUE, interval = "confidence")
 ```
 
-사용 하 여 해당 호출에서 `PREDICT` 함수 또한 점수를 제공 (예측 값), 오류 및 신뢰도 간격:
+`PREDICT` 함수를 사용하는 동일한 호출은 점수(예측 값), 오류 및 신뢰 구간도 제공합니다.
 
 ```sql
 SELECT d.Age, d.Start, d.Number, p.pred AS Kyphosis_Pred, p.stdErr, p.pred_lower, p.pred_higher
@@ -198,5 +201,3 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
-
-

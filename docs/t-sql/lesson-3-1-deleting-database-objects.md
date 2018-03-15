@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-3-1---deleting-database-objects"></a>단원 3-1-데이터베이스 개체 삭제
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]이 자습서의 모든 추적을 제거 하려면 데이터베이스를 삭제 하기만 하면 됩니다. 그러나 이 항목에서는 자습서에서 수행한 모든 동작을 되돌리는 단계를 진행합니다.  
+# <a name="lesson-3-1---deleting-database-objects"></a>3-1단원 - 데이터베이스 개체 삭제
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 이 자습서의 모든 추적 내용을 제거하려면 데이터베이스를 삭제하기만 하면 됩니다. 그러나 이 항목에서는 자습서에서 수행한 모든 동작을 되돌리는 단계를 진행합니다.  
   
 ### <a name="removing-permissions-and-objects"></a>사용 권한 및 개체 제거  
   

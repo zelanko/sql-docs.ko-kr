@@ -1,5 +1,5 @@
 ---
-title: ALTER BROKER PRIORITY (Transact SQL) | Microsoft Docs
+title: ALTER BROKER PRIORITY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -65,10 +65,10 @@ FOR CONVERSATION
  대화 우선 순위를 대화에 적용할지 여부를 결정하는 조건을 지정합니다. SET은 필수이며 CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME 또는 PRIORITY_LEVEL 조건을 하나 이상 포함해야 합니다.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
- 대화 우선 순위를 대화에 적용할지 여부를 결정하기 위한 조건으로 사용할 계약 이름을 지정합니다. *ContractName* 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자는 현재 데이터베이스의 계약 이름을 지정 해야 합니다.  
+ 대화 우선 순위를 대화에 적용할지 여부를 결정하기 위한 조건으로 사용할 계약 이름을 지정합니다. *ContractName*은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자이며 현재 데이터베이스의 계약 이름을 지정해야 합니다.  
   
  *ContractName*  
- 대화 우선 순위 대화 대화를 시작 하는 BEGIN DIALOG 문에 ON CONTRACT를 지정 하는 위치에 적용 될 수 있도록 지정 *ContractName*합니다.  
+ 대화를 시작한 BEGIN DIALOG 문에 ON CONTRACT *ContractName*이 지정된 대화에만 대화 우선 순위가 적용될 수 있도록 지정합니다.  
   
  ANY  
  사용하는 계약에 관계없이 모든 대화에 대화 우선 순위가 적용될 수 있도록 지정합니다.  
@@ -78,14 +78,14 @@ FOR CONVERSATION
  LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  대화 끝점에 대화 우선 순위를 적용할지 여부를 결정하는 조건으로 사용될 서비스 이름을 지정합니다.  
   
- *LocalServiceName* 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자 하며 현재 데이터베이스에 있는 서비스의 이름을 지정 해야 합니다.  
+ *LocalServiceName*은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자이며 현재 데이터베이스에 있는 서비스의 이름을 지정해야 합니다.  
   
  *LocalServiceName*  
  대화 우선 순위가 다음 항목에 적용될 수 있도록 지정합니다.  
   
--   시작자 서비스 이름이 일치 하는 모든 시작자 대화 끝점 *LocalServiceName*합니다.  
+-   시작자 서비스 이름이 *LocalServiceName*과 일치하는 모든 시작자 대화 끝점입니다.  
   
--   모든 대상 대화 끝점 대상 서비스 이름이 일치 *LocalServiceName*합니다.  
+-   대상 서비스 이름이 *LocalServiceName*과 일치하는 모든 대상 대화 끝점입니다.  
   
  ANY  
  -   끝점에서 사용하는 로컬 서비스 이름에 관계없이 모든 대화 끝점에 대화 우선 순위가 적용될 수 있도록 지정합니다.  
@@ -95,32 +95,32 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  대화 끝점에 대화 우선 순위를 적용할지 여부를 결정하는 조건으로 사용될 서비스 이름을 지정합니다.  
   
- *RemoteServiceName* 형식의 리터럴이 **nvarchar (256)**합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]바이트 단위 비교를 사용 하 여 일치 하는 *RemoteServiceName* 문자열입니다. 비교 시 대/소문자가 구분되고 현재 데이터 정렬은 고려되지 않습니다. 대상 서비스는 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 또는 원격 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 있을 수 있습니다.  
+ *RemoteServiceName*은 **nvarchar(256)** 형식의 리터럴입니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 바이트 단위로 비교하여 일치하는 *RemoteServiceName*를 찾습니다. 비교 시 대/소문자가 구분되고 현재 데이터 정렬은 고려되지 않습니다. 대상 서비스는 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 또는 원격 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 있을 수 있습니다.  
   
  '*RemoteServiceName*'  
  대화 우선 순위가 다음 항목에 적용되도록 지정합니다.  
   
--   와 연결 된 대상 서비스 이름이 모든 시작자 대화 끝점 *RemoteServiceName*합니다.  
+-   연결된 대상 서비스 이름이 *RemoteServiceName*과 일치하는 모든 시작자 대화 끝점입니다.  
   
--   연결 된 시작자 서비스 이름이 일치 하는 모든 대상 대화 끝점 *RemoteServiceName*합니다.  
+-   연결된 시작 서비스 이름이 *RemoteServiceName*과 일치하는 모든 대상 대화 끝점입니다.  
   
  ANY  
  끝점과 연결된 원격 서비스 이름에 관계없이 모든 대화 끝점에 대화 우선 순위가 적용되도록 지정합니다.  
   
  REMOTE_SERVICE_NAME을 지정하지 않으면 대화 우선 순위의 원격 서비스 속성이 변경되지 않습니다.  
   
- PRIORITY_LEVEL = { *PriorityValue* | **기본** }  
- 대화 우선 순위에 지정된 계약 및 서비스를 사용하는 모든 대화 끝점에 할당할 우선 순위 수준을 지정합니다. *PriorityValue* 리터럴 1 (가장 낮은 우선 순위)에서 10 (가장 높은 우선 순위)는 정수 여야 합니다.  
+ PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
+ 대화 우선 순위에 지정된 계약 및 서비스를 사용하는 모든 대화 끝점에 할당할 우선 순위 수준을 지정합니다. *PriorityValue*는 1(가장 낮은 우선 순위)에서 10(가장 높은 우선 순위) 사이의 정수 리터럴이어야 합니다.  
   
  PRIORITY_LEVEL을 지정하지 않으면 대화 우선 순위의 우선 순위 수준 속성이 변경되지 않습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ALTER BROKER PRIORITY를 사용하여 변경한 속성은 기존 대화에 적용되지 않습니다. 기존 대화에는 대화가 시작될 때 할당된 우선 순위가 계속 적용됩니다.  
   
- 자세한 내용은 참조 [CREATE BROKER PRIORITY &#40; Transact SQL &#41; ](../../t-sql/statements/create-broker-priority-transact-sql.md).  
+ 자세한 내용은 [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
- 기본값의 구성원에 게 대화 우선 순위를 만들기 위한 사용 권한은 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할을 하 고는 **sysadmin** 고정된 서버 역할입니다. 데이터베이스에 대한 ALTER 권한이 필요합니다.  
+## <a name="permissions"></a>사용 권한  
+ 대화 우선 순위를 만들 수 있는 권한은 기본적으로 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정 서버 역할의 멤버에게 있습니다. 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -145,9 +145,9 @@ ALTER BROKER PRIORITY SimpleContractPriority
          PRIORITY_LEVEL = 8);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [BROKER 우선 순위 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
- [DROP BROKER PRIORITY &#40; Transact SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [sys.conversation_priorities &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

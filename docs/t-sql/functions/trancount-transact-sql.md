@@ -1,5 +1,5 @@
 ---
-title: '@@TRANCOUNT (Transact SQL) | Microsoft Docs'
+title: '@@TRANCOUNT(Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact SQL)
+# <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 연결에서 발생한 BEGIN TRANSACTION 문의 수를 반환합니다.  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>반환 형식  
  **integer**  
   
-## <a name="remarks"></a>주의  
- BEGIN TRANSACTION 문은 증가@TRANCOUNT 1입니다. @ ROLLBACK TRANSACTION 감소@TRANCOUNT 을 제외한 ROLLBACK TRANSACTION 0 *savepoint_name*, @에 영향을 주지 않는@TRANCOUNT합니다. COMMIT TRANSACTION 또는 COMMIT WORK @ 감소@TRANCOUNT 1입니다.  
+## <a name="remarks"></a>Remarks  
+ BEGIN TRANSACTION 문은 @@TRANCOUNT을 1씩 늘립니다. @@TRANCOUNT에 영향을 주지 않는 ROLLBACK TRANSACTION *savepoint_name*을 제외한 ROLLBACK TRANSACTION은 @@TRANCOUNT을 0으로 줄입니다. COMMIT TRANSACTION 또는 COMMIT WORK는 @@TRANCOUNT을 1씩 줄입니다.  
   
 ## <a name="examples"></a>예  
   
@@ -101,10 +101,10 @@ PRINT @@TRANCOUNT
 --0  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [BEGIN TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [시스템 함수 &#40; Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: POWER (Transact SQL) | Microsoft Docs
+title: POWER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -46,13 +46,13 @@ POWER ( float_expression , y )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **float** 또는 암시적으로 변환할 수 있는 형식의 **float**합니다.  
+ **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *y*  
- 구할 거듭제곱입니다 *float_expression*합니다. *y* 제외한 정확한 수치 또는 근사치 숫자 데이터 형식 범주의 식일 수 있습니다는 **비트** 데이터 형식입니다.  
+ *float_expression*의 거듭제곱입니다. *y*는 **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 전송과 같은 유형을 반환 *float_expression*합니다. 예를 들어 경우는 **10 진수**(2, 0)으로 제출 됩니다 *float_expression*, 반환 된 결과 **10 진수**(2, 0).  
+ *float_expression*에서 제출된 것과 동일한 형식을 반환합니다. 예를 들어 **십진수**(2,0)가 *float_expression*으로 제출되면 반환되는 결과는 **십진수**(2,0)입니다.  
   
 ## <a name="examples"></a>예  
   
@@ -78,7 +78,7 @@ Result1                Result2
 ```  
   
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>2. POWER를 사용하여 데이터 형식 자동 변환 표시  
- 다음 예제와 방법을 *float_expression* 예기치 않은 결과 반환할 수 있는 데이터 형식을 유지 합니다.  
+ 다음 예에서는 *float_expression*에서 예기치 않은 결과를 반환할 수 있는 데이터 형식을 유지하는 방법을 보여 줍니다.  
   
 ```  
 SELECT   
@@ -141,10 +141,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: POWER를 사용 하 여 숫자의 세제곱 반환 하는  
- 다음 예제에서는 반환 `POWER` 에 대 한 결과 `2.0` 3 제곱 합니다.  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>4. POWER를 사용하여 숫자의 세제곱 반환  
+ 다음 예에서는 `2.0`의 세제곱에 대한 `POWER` 결과를 반환합니다.  
   
 ```  
 SELECT POWER(2.0, 3);  
@@ -157,12 +157,12 @@ SELECT POWER(2.0, 3);
 8.0
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [decimal 및 numeric&#40; Transact SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [float 및 real &#40; Transact SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [int, bigint, smallint 및 tinyint &#40; Transact SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
- [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [money 및 smallmoney &#40; Transact SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [decimal 및 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
+ [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [money 및 smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
   
   
 

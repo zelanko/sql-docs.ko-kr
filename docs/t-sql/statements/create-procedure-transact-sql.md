@@ -1,5 +1,5 @@
 ---
-title: "프로시저 (Transact SQL) 만들기 | Microsoft Docs"
+title: CREATE PROCEDURE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  만듭니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 공용 언어 런타임 (CLR) 저장 프로시저에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 합니다. 저장 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 프로시저와 유사합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR(공용 언어 런타임) 저장 프로시저를 만듭니다. 저장 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 프로시저와 유사합니다.  
   
 -   입력 매개 변수를 받아 여러 값을 출력 매개 변수의 형태로 호출하는 프로시저 또는 일괄 처리에 반환합니다.  
   
@@ -70,12 +70,12 @@ ms.lasthandoff: 11/21/2017
   
 -   호출하는 프로시저 또는 일괄 처리에 상태 값을 반환하여 성공 또는 실패 및 실패 원인을 나타냅니다.  
   
- 이 문을 사용 하 여 현재 데이터베이스 이름이 나에 임시 프로시저에 영구 프로시저를 만들는 **tempdb** 데이터베이스입니다.  
+ 이 명령문을 사용하여 현재 데이터베이스에 영구 프로시저를 만들거나 **tempdb** 데이터베이스에 임시 프로시저를 만들 수 있습니다.  
   
 > [!NOTE]  
->  SQL Server의 통합의.NET Framework CLR은이 항목에서 설명 합니다. CLR 통합 Azure에 적용 되지 않습니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.
+>  이 항목에서는 .NET Framework CLR을 SQL Server에 통합하는 방법에 대해 설명합니다. Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에는 CLR 통합이 적용되지 않습니다.
 
-이동할 [간단한 예](#Simple) 구문의 세부 정보 생략 하 고는 빠른 예제는 기본 저장 프로시저입니다.
+구문의 세부 사항을 건너 뛰고 기본 저장 프로시저에 대한 빠른 예제를 보려면 [간단한 예](#Simple)로 이동하세요.
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -149,116 +149,116 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 ```  
   
 ## <a name="arguments"></a>인수
-또는 변경  
- **적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).  
+OR ALTER  
+ **적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터)  
   
- 이미 있는 경우 프로시저를 변경 합니다.
+ 프로시저가 이미 존재하는 경우 변경합니다.
  
  *schema_name*  
  프로시저가 속한 스키마의 이름입니다. 프로시저는 스키마 바운드 개체입니다. 프로시저를 만들 때 스키마 이름을 지정하지 않으면 프로시저를 만드는 사용자의 기본 스키마가 자동으로 할당됩니다.  
   
  *procedure_name*  
- 프로시저의 이름입니다. 프로시저 이름에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md) 하며 스키마 내에서 고유 해야 합니다.  
+ 프로시저의 이름입니다. 프로시저 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 준수해야 하며 스키마 내에서 고유해야 합니다.  
   
- 사용 하지는 **sp_** 프로시저 이름을 지정할 때 접두사입니다. 이 접두사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시스템 프로시저를 지정하는 데 사용됩니다. 이 접두사를 사용하면 같은 이름의 시스템 프로시저가 있을 경우 응용 프로그램 코드가 손상될 수 있습니다.  
+ 프로시저 이름을 지정할 때 **sp_** 접두사를 사용하지 않도록 합니다. 이 접두사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시스템 프로시저를 지정하는 데 사용됩니다. 이 접두사를 사용하면 같은 이름의 시스템 프로시저가 있을 경우 응용 프로그램 코드가 손상될 수 있습니다.  
   
- 하기 전에 하나의 숫자 기호 (#)를 사용 하 여 로컬 또는 전역 임시 프로시저를 만들 수 있습니다 *procedure_name* (*#procedure_name*) 로컬 임시 프로시저 및 전역 임시에 대 한 두 개의 숫자 기호에 대 한 프로시저 (*# # procedure_name*). 로컬 임시 프로시저는 해당 프로시저를 만든 연결에만 표시되고 해당 연결을 닫을 때 삭제됩니다. 전역 임시 프로시저는 모든 연결에서 사용할 수 있고 해당 프로시저를 사용하는 마지막 세션이 종료될 때 삭제됩니다. CLR 프로시저에는 임시 이름을 지정할 수 없습니다.  
+ 로컬 임시 프로시저의 경우 *procedure_name* 앞에 숫자 기호(#)를 하나 사용하고(*#procedure_name*) 전역 임시 프로시저의 경우 숫자 기호를 두 개 사용하여(*##procedure_name*) 로컬 또는 전역 임시 프로시저를 각각 만들 수 있습니다. 로컬 임시 프로시저는 해당 프로시저를 만든 연결에만 표시되고 해당 연결을 닫을 때 삭제됩니다. 전역 임시 프로시저는 모든 연결에서 사용할 수 있고 해당 프로시저를 사용하는 마지막 세션이 종료될 때 삭제됩니다. CLR 프로시저에는 임시 이름을 지정할 수 없습니다.  
   
  프로시저 또는 전역 임시 프로시저의 전체 이름은 ##을 포함하여 128자를 초과할 수 없습니다. 로컬 임시 프로시저의 전체 이름은 #을 포함하여 116자를 초과할 수 없습니다.  
   
- **;**  *번호*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ **;** *number*  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  같은 이름의 프로시저를 그룹화하는 데 사용하는 정수입니다(선택 사항). 이렇게 그룹화된 프로시저는 DROP PROCEDURE 문 하나를 사용하여 한꺼번에 삭제할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 번호가 매겨진된 프로시저를 사용할 수 없습니다는 **xml** 또는 CLR 사용자 정의 형식 및 계획 지침에 사용할 수 없습니다.  
+ 번호가 매겨진 프로시저는 **xml** 또는 CLR 사용자 정의 형식을 사용할 수 없으며 계획 지침에 사용될 수 없습니다.  
   
- **@***매개 변수*  
- 프로시저에 선언된 매개 변수입니다. 매개 변수 이름을 사용 하 여 지정 된 at 기호 (**@**) 첫 번째 문자로 합니다. 매개 변수 이름에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다. 매개 변수는 프로시저에서 로컬로 사용되므로 다른 프로시저에서 동일한 매개 변수 이름을 사용할 수 있습니다.  
+ **@** *parameter*  
+ 프로시저에 선언된 매개 변수입니다. at 기호(**@**)를 첫 번째 문자로 사용하여 매개 변수 이름을 지정합니다. 매개 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 매개 변수는 프로시저에서 로컬로 사용되므로 다른 프로시저에서 동일한 매개 변수 이름을 사용할 수 있습니다.  
   
- 하나 이상의 매개 변수를 선언할 수 있으며 최대 2,100개까지 선언할 수 있습니다. 선언된 각 매개 변수의 값은 기본값이 정의된 경우나 다른 매개 변수와 값이 같도록 설정된 경우를 제외하면 프로시저가 호출될 때 사용자가 지정해야 합니다. 프로시저는 포함 된 경우 [테이블 반환 매개 변수](../../relational-databases/tables/use-table-valued-parameters-database-engine.md), 및 매개 변수는 호출에서 누락, 빈 테이블이 전달 됩니다. 매개 변수는 상수 식 대신 사용할 수 있지만 테이블 이름, 열 이름 또는 다른 데이터베이스 개체의 이름 대신 사용할 수는 없습니다. 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)을 참조하세요.  
+ 하나 이상의 매개 변수를 선언할 수 있으며 최대 2,100개까지 선언할 수 있습니다. 선언된 각 매개 변수의 값은 기본값이 정의된 경우나 다른 매개 변수와 값이 같도록 설정된 경우를 제외하면 프로시저가 호출될 때 사용자가 지정해야 합니다. 프로시저에 [테이블 반환 매개 변수](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)가 포함되어 있고 호출에 매개 변수가 없는 경우 빈 테이블이 전달됩니다. 매개 변수는 상수 식 대신 사용할 수 있지만 테이블 이름, 열 이름 또는 다른 데이터베이스 개체의 이름 대신 사용할 수는 없습니다. 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)을 참조하세요.  
   
  FOR REPLICATION을 지정하면 매개 변수를 선언할 수 없습니다.  
   
- [ *type_schema_name***합니다.** ] *data_type*  
+ [ *type_schema_name***.** ] *data_type*  
  매개 변수의 데이터 형식 및 해당 데이터 형식이 속하는 스키마입니다.  
   
-**에 대 한 지침이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저**:  
+**[!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저에 대한 지침**:  
   
--   모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터 형식은 매개 변수로 사용할 수 있습니다.  
+-   모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터 형식을 매개 변수로 사용할 수 있습니다.  
   
--   사용자 정의 테이블 형식을 사용하여 테이블 반환 매개 변수를 만들 수 있습니다. 테이블 반환 매개 변수는 INPUT 매개 변수로만 지정할 수 있으며 READONLY 키워드와 함께 사용해야 합니다. 자세한 내용은 참조 [테이블 반환 매개 변수 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
+-   사용자 정의 테이블 형식을 사용하여 테이블 반환 매개 변수를 만들 수 있습니다. 테이블 반환 매개 변수는 INPUT 매개 변수로만 지정할 수 있으며 READONLY 키워드와 함께 사용해야 합니다. 자세한 내용은 [테이블 반환 매개 변수 사용&#40;데이터베이스 엔진&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)을 참조하세요.  
   
--   **커서** 데이터 형식 출력 매개 변수로 지정할 수 있습니다 및 VARYING 키워드와 함께 제공 합니다.  
+-   **cursor** 데이터 형식은 OUTPUT 매개 변수로만 지정할 수 있으며 VARYING 키워드와 함께 사용해야 합니다.  
   
-**CLR 프로시저에 대 한 지침이**:  
+**CLR 프로시저에 대한 지침**:  
   
--   관리 코드에 해당 형식이 있는 모든 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 매개 변수로 사용할 수 있습니다. CLR 형식 간의 관계에 대 한 자세한 내용은 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식을 참조 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식과 해당 구문 참조 [데이터 형식 &#40; Transact SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md).  
+-   관리 코드에 해당 형식이 있는 모든 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 매개 변수로 사용할 수 있습니다. CLR 형식과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식 간의 관계에 대한 자세한 내용은 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식과 해당 구문에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
--   테이블 반환 또는 **커서** 데이터 형식은 매개 변수로 사용할 수 없습니다.  
+-   테이블 반환 데이터 형식이나 **cursor** 데이터 형식은 매개 변수로 사용할 수 없습니다.  
   
 -   매개 변수의 데이터 형식이 CLR 사용자 정의 형식인 경우 해당 형식에 대해 EXECUTE 권한이 있어야 합니다.  
   
 VARYING  
- 결과 집합이 출력 매개 변수로 사용되도록 지정합니다. 이 매개 변수는 프로시저에 의해 동적으로 생성될 수 있으며 해당 내용은 여러 가지가 될 수 있습니다. 에 적용 됩니다 **커서** 매개 변수입니다. CLR 프로시저에는 이 옵션이 유효하지 않습니다.  
+ 결과 집합이 출력 매개 변수로 사용되도록 지정합니다. 이 매개 변수는 프로시저에 의해 동적으로 생성될 수 있으며 해당 내용은 여러 가지가 될 수 있습니다. **cursor** 매개 변수에만 적용됩니다. CLR 프로시저에는 이 옵션이 유효하지 않습니다.  
   
-*기본값*  
- 매개 변수의 기본값을 나타냅니다. 매개 변수에 대해 기본값이 정의 경우 해당 매개 변수에 대해 값을 지정 하지 않고 프로시저를 실행할 수 있습니다. 기본값은 상수이거나 NULL입니다. 상수 값을 와일드카드 형태로 지정할 수 있으므로 프로시저에 매개 변수를 전달할 때 LIKE 키워드를 사용할 수 있습니다.   
+*default*  
+ 매개 변수의 기본값을 나타냅니다. 매개 변수에 대해 기본값이 정의되어 있으면 해당 매개 변수 값을 지정하지 않아도 프로시저를 실행할 수 있습니다. 기본값은 상수이거나 NULL입니다. 상수 값을 와일드카드 형태로 지정할 수 있으므로 프로시저에 매개 변수를 전달할 때 LIKE 키워드를 사용할 수 있습니다.   
   
- 기본 값에 기록 되는 **sys.parameters.default** CLR 프로시저에 대 한 열입니다. 해당 열에 대해 NULL 이다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저 매개 변수입니다.  
+ 기본값은 CLR 프로시저의 경우에만 **sys.parameters.default** 열에 기록됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저 매개 변수의 경우 이 열은 NULL입니다.  
   
 OUT | OUTPUT  
- 매개 변수가 출력 매개 변수임을 나타냅니다. OUTPUT 매개 변수를 사용하여 프로시저의 호출자에 값을 반환할 수 있습니다. **텍스트**, **ntext**, 및 **이미지** 프로시저가 CLR 프로시저가 아닐 경우 출력 매개 변수로 매개 변수를 사용할 수 없습니다. 프로시저가 CLR 프로시저가 아닐 경우 출력 매개 변수는 커서 자리 표시자일 수 있습니다. 테이블 반환 데이터 형식은 프로시저의 OUTPUT 매개 변수로 지정할 수 없습니다.  
+ 매개 변수가 출력 매개 변수임을 나타냅니다. OUTPUT 매개 변수를 사용하여 프로시저의 호출자에 값을 반환할 수 있습니다. 프로시저가 CLR 프로시저가 아니면 **text**, **ntext** 및 **image** 매개 변수를 OUTPUT 매개 변수로 사용할 수 없습니다. 프로시저가 CLR 프로시저가 아닐 경우 출력 매개 변수는 커서 자리 표시자일 수 있습니다. 테이블 반환 데이터 형식은 프로시저의 OUTPUT 매개 변수로 지정할 수 없습니다.  
   
 READONLY  
  프로시저 본문 내에서 매개 변수를 업데이트하거나 수정할 수 없음을 나타냅니다. 매개 변수 형식이 테이블 반환 형식인 경우 READONLY를 지정해야 합니다.  
   
 RECOMPILE  
- 나타냅니다는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 실행 될 때마다 컴파일한다 수는이 절차에 대 한 쿼리 계획을 캐시 하지 않습니다. 다시 컴파일을 적용 하는 목적에 대 한 자세한 내용은 참조 [저장 프로시저를 다시 컴파일하려면](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)합니다. CLR 프로시저에 대해 FOR REPLICATION을 지정한 경우에는 이 옵션을 사용할 수 없습니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 현재 프로시저의 쿼리 계획을 캐시하지 않고 프로시저가 실행될 때마다 컴파일한다는 것을 나타냅니다. 다시 컴파일을 적용하는 이유에 대한 자세한 내용은 [저장 프로시저 다시 컴파일](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)을 참조하세요. CLR 프로시저에 대해 FOR REPLICATION을 지정한 경우에는 이 옵션을 사용할 수 없습니다.  
   
- 지시 하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로시저 안에 있는 개별 쿼리에 대 한 쿼리 계획을 삭제 하려면 쿼리 정의에서 RECOMPILE 쿼리 힌트를 사용 합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 프로시저 안에 있는 개별 쿼리에 대한 쿼리 계획을 삭제하도록 하려면 쿼리 정의에서 RECOMPILE 쿼리 힌트를 사용합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ENCRYPTION  
- **적용 대상**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 나타냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CREATE PROCEDURE 문의 원본 텍스트가 알아보기 어려운된 형식으로 변환 합니다. 난독 처리의 출력의 카탈로그 뷰 중 하나에 직접 표시 되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 시스템 테이블 또는 데이터베이스 파일에 대한 액세스 권한이 없는 사용자는 변조된 텍스트를 검색할 수 없습니다. 그러나 텍스트를 통해 시스템 테이블에 액세스 하거나 수 있는 권한이 있는 사용자를 사용할 수는 [DAC 포트](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) 또는 데이터베이스 파일에 직접 액세스 합니다. 또한 디버거를 서버 프로세스에 연결할 수 있는 사용자는 런타임에 메모리에서 해독된 프로시저를 검색할 수 있습니다. 시스템 메타 데이터에 액세스 하는 방법에 대 한 자세한 내용은 참조 [메타 데이터 표시 유형 구성은](../../relational-databases/security/metadata-visibility-configuration.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CREATE PROCEDURE 문의 원본 텍스트를 난독 처리된 형식으로 변환하는 것을 나타냅니다. 난독 처리된 출력은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 카탈로그 뷰 어디에서도 직접 표시되지 않습니다. 시스템 테이블 또는 데이터베이스 파일에 대한 액세스 권한이 없는 사용자는 변조된 텍스트를 검색할 수 없습니다. 하지만 [DAC 포트](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)를 통해 시스템 테이블에 액세스하거나 데이터베이스 파일에 직접 액세스할 수 있는 권한이 있는 사용자는 난독 처리된 텍스트를 사용할 수 있습니다. 또한 디버거를 서버 프로세스에 연결할 수 있는 사용자는 런타임에 메모리에서 해독된 프로시저를 검색할 수 있습니다. 시스템 메타데이터에 액세스하는 방법에 대한 자세한 내용은 [메타데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
  CLR 프로시저에는 이 옵션이 유효하지 않습니다.  
   
- 이 옵션을 사용 하 여 만든 프로시저의 일부로 게시할 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 합니다.  
+ 이 옵션을 사용하여 만든 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 일부로 게시할 수 없습니다.  
   
 EXECUTE AS *절*  
  프로시저를 실행할 보안 컨텍스트를 지정합니다.  
   
- 시작 하는 고유 하 게 컴파일된 저장된 프로시저에 대 한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 EXECUTE AS에 제한이 없습니다 절. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SELF, OWNER 및 *'r _'* 절은 고유 하 게 컴파일된 저장된 프로시저와 함께 지원 됩니다.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 고유하게 컴파일된 저장 프로시저의 경우 EXECUTE AS 절에 대한 제한이 없습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우 SELF, OWNER 및 *‘user_name’* 절이 고유하게 컴파일된 저장 프로시저에서 지원됩니다.  
   
  자세한 내용은 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
   
 FOR REPLICATION  
- **적용 대상**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  프로시저가 복제용으로 생성되도록 지정합니다. 따라서 구독자에서는 프로시저를 실행할 수 없습니다. FOR REPLICATION 옵션을 사용하여 만든 프로시저는 프로시저 필터로 사용되며 복제하는 동안에만 실행됩니다. FOR REPLICATION을 지정하면 매개 변수를 선언할 수 없습니다. CLR 프로시저에는 FOR REPLICATION을 지정할 수 없습니다. FOR REPLICATION으로 만든 프로시저의 경우 RECOMPILE 옵션이 무시됩니다.  
   
- A `FOR REPLICATION` 프로시저에는 개체 유형 **RF** 에 **sys.objects** 및 **sys.procedures**합니다.  
+ `FOR REPLICATION` 프로시저는 **sys.objects** 및 **sys.procedures**에 개체 형식 **RF**가 있습니다.  
   
- {[BEGIN] *sql_statement* [;] [ ...  *n*  ] [END]을 (를)  
+ { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  프로시저 본문을 구성하는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 선택적 키워드인 BEGIN과 END를 사용하여 문을 묶을 수 있습니다. 자세한 내용은 다음에 나오는 최선의 구현 방법, 일반적인 주의 사항 및 제한 사항 섹션을 참조하세요.  
   
-외부 이름 *assembly_name***.** *class_name***.** *method_name*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
- CLR 저장 프로시저가 참조할 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리의 메서드를 지정합니다. *class_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자 하며 어셈블리에서 클래스로 존재 해야 합니다. 있는 경우 클래스에 마침표를 사용 하는 정규화 된 네임 스페이스 이름은 (**.**) 네임 스페이스 부분을 구분 하 클래스 이름은 대괄호를 사용 하 여 구분 합니다 (**[]**) 나 따옴표 (**""**). 지정한 메서드는 해당 클래스의 정적 메서드여야 합니다.  
+ CLR 저장 프로시저가 참조할 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리의 메서드를 지정합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에서 클래스로 존재해야 합니다. 클래스에 마침표(**.**)를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름이 있는 경우 클래스 이름은 대괄호(**[]**) 또는 큰따옴표(**""**)를 사용하여 구분되어야 합니다. 지정한 메서드는 해당 클래스의 정적 메서드여야 합니다.  
   
- 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 만들기, 수정 및 공용 언어 런타임 모듈; 참조 하는 데이터베이스 개체를 삭제 합니다. 그러나 이러한 참조를 실행할 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정할 때까지 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)합니다. 옵션을 사용 하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)합니다.  
+ 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 공용 언어 런타임 모듈을 참조하는 데이터베이스 개체를 생성, 수정 및 삭제할 수 있지만 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정할 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 참조를 실행할 수 없습니다. 이 옵션을 설정하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다.  
   
 > [!NOTE]  
 >  CLR 프로시저는 포함된 데이터베이스에서 지원되지 않습니다.  
   
 ATOMIC WITH  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  원자성 저장 프로시저 실행을 나타냅니다. 변경 내용이 커밋되거나 모든 변경 내용이 예외를 발생하고 롤백됩니다. ATOMIC WITH 블록은 고유하게 컴파일된 저장 프로시저에 필요합니다.  
   
@@ -277,127 +277,127 @@ SET 옵션은 ATOMIC 블록 내에서 변경할 수 없습니다. 사용자 세�
   
 BEGIN, ROLLBACK 및 COMMIT 작업은 원자성 블록 내에서 사용할 수 없습니다.  
   
- 프로시저 외부 범위에 고유하게 컴파일된 저장 프로시저당 한 개의 ATOMIC 블록이 있습니다. 블록은 중첩될 수 없습니다. Atomic 블록에 대 한 자세한 내용은 참조 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)합니다.  
+ 프로시저 외부 범위에 고유하게 컴파일된 저장 프로시저당 한 개의 ATOMIC 블록이 있습니다. 블록은 중첩될 수 없습니다. Atomic 블록에 대한 자세한 내용은 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.  
   
 **NULL** | NOT NULL  
  매개 변수에 null 값이 허용되는지 여부를 결정합니다. NULL이 기본값입니다.  
   
 NATIVE_COMPILATION  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 프로시저가 고유하게 컴파일되었음을 나타냅니다. NATIVE_COMPILATION, SCHEMABINDING 및 EXECUTE AS는 임의 순서로 지정할 수 있습니다. 자세한 내용은 참조 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)합니다.  
+ 프로시저가 고유하게 컴파일되었음을 나타냅니다. NATIVE_COMPILATION, SCHEMABINDING 및 EXECUTE AS는 임의 순서로 지정할 수 있습니다. 자세한 내용은 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.  
   
 SCHEMABINDING  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 프로시저에서 참조되는 테이블을 삭제 또는 변경할 수 없도록 보장합니다. SCHEMABINDING은 고유하게 컴파일된 저장 프로시저에 필요합니다. (자세한 내용은 참조 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).) SCHEMABINDING 제한은 사용자 정의 함수의 경우와 동일합니다. 자세한 내용은에서 SCHEMABINDING 섹션을 참조 하십시오. [CREATE function&#40; Transact SQL &#41; ](../../t-sql/statements/create-function-transact-sql.md).  
+ 프로시저에서 참조되는 테이블을 삭제 또는 변경할 수 없도록 보장합니다. SCHEMABINDING은 고유하게 컴파일된 저장 프로시저에 필요합니다. (자세한 내용은 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.) SCHEMABINDING 제한은 사용자 정의 함수의 경우와 동일합니다. 자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)에서 SCHEMABINDING 섹션을 참조하세요.  
   
 LANGUAGE = [N] '언어'  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 에 해당 [언어 &#40; 설정 합니다. Transact SQL &#41; ](../../t-sql/statements/set-language-transact-sql.md) 세션 옵션입니다. LANGUAGE = [N] '언어'는 필수입니다.  
+ [SET LANGUAGE&#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) 세션 옵션에 해당합니다. LANGUAGE = [N] '언어'는 필수입니다.  
   
 TRANSACTION ISOLATION LEVEL  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  고유하게 컴파일된 저장 프로시저에 필요합니다. 저장 프로시저의 트랜잭션 격리 수준을 지정합니다. 다음과 같은 옵션이 있습니다.  
   
- 이러한 옵션에 대 한 자세한 내용은 참조 [SET TRANSACTION ISOLATION LEVEL &#40; Transact SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 이러한 옵션에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
 REPEATABLE READ  
- 다른 트랜잭션에 의해 수정되었지만 아직 커밋되지 않은 데이터를 문이 읽을 수 없도록 지정합니다. 다른 트랜잭션이 현재 트랜잭션에서 읽은 데이터를 수정 하는 경우 현재 트랜잭션이 실패 합니다.  
+ 다른 트랜잭션에 의해 수정되었지만 아직 커밋되지 않은 데이터를 문이 읽을 수 없도록 지정합니다. 현재 트랜잭션에서 읽은 데이터를 다른 트랜잭션이 수정할 경우 현재 트랜잭션이 실패합니다.  
   
 SERIALIZABLE  
  다음을 지정합니다.  
 -   문은 다른 트랜잭션에 의해 수정되었지만 아직 커밋되지 않은 데이터를 읽을 수 없습니다.  
--   다른 트랜잭션은 현재 트랜잭션에서 읽은 데이터를 수정할 경우 현재 트랜잭션이 실패 합니다.  
--   다른 트랜잭션이 현재 트랜잭션의 문에서 읽은 키 범위에 속하는 키 값을 가진 새 행을 삽입, 현재 트랜잭션이 실패 합니다.  
+-   현재 트랜잭션에서 읽은 데이터를 다른 트랜잭션이 수정할 경우 현재 트랜잭션이 실패합니다.  
+-   현재 트랜잭션의 명령문에서 읽은 키의 범위에 속하는 키 값이 포함된 새 행을 다른 트랜잭션이 삽입하면 현재 트랜잭션이 실패합니다.  
   
 SNAPSHOT  
- 트랜잭션의 문이 읽은 데이터가 트랜잭션 시작 당시 되는 데이터의 트랜잭션 측면에서 일관 된 버전 임을 지정 합니다.  
+ 트랜잭션의 명령문이 읽은 데이터가 트랜잭션별로 트랜잭션을 시작할 때 존재한 데이터 버전과 일관성이 유지되도록 지정합니다.  
   
-DATEFIRST = *번호*  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+DATEFIRST = *number*  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  일주일의 시작 요일을 1부터 7까지의 숫자로 지정합니다. DATEFIRST는 선택 사항입니다. 지정하지 않으면 지정된 언어로부터 설정이 유추됩니다.  
   
- 자세한 내용은 참조 [SET datefirst&#40; Transact SQL &#41; ](../../t-sql/statements/set-datefirst-transact-sql.md).  
+ 자세한 내용은 [SET DATEFIRST&#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)를 참조하세요.  
   
-DATEFORMAT = *형식*  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+DATEFORMAT = *format*  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  date, smalldatetime, datetime, datetime2 및 datetimeoffset 문자열 해석을 위한 월, 일 및 연도 날짜 부분의 순서를 지정합니다. DATEFORMAT은 선택 사항입니다. 지정하지 않으면 지정된 언어로부터 설정이 유추됩니다.  
   
- 자세한 내용은 참조 [SET DATEFORMAT &#40; Transact SQL &#41; ](../../t-sql/statements/set-dateformat-transact-sql.md).  
+ 자세한 내용은 [SET DATEFORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)을 참조하세요.  
   
 DELAYED_DURABILITY = { OFF | ON }  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션은 완전 내구성이 있는(기본값) 커밋 또는 지연된 내구성이 있는 커밋을 수행할 수 있습니다.  
   
- 자세한 내용은 참조 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)합니다.  
+ 자세한 내용은 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.  
 
-## <a name="Simple"></a>간단한 예
+## <a name="Simple"></a> 간단한 예
 
-를 시작할 수 있도록 두 가지 빠른 예제는 다음과 같습니다.  
-`SELECT DB_NAME() AS ThisDB;`현재 데이터베이스의 이름을 반환합니다.  
-저장된 프로시저에서와 같은 해당 문을 래핑할 수 있습니다.  
+다음은 시작에 도움이 될만한 두 가지 간단한 예입니다.  
+`SELECT DB_NAME() AS ThisDB;`는 현재 데이터베이스의 이름을 반환합니다.  
+저장 프로시저에서 이 명령문을 다음과 같이 래핑할 수 있습니다.  
 ```sql  
 CREATE PROC What_DB_is_this     
 AS   
 SELECT DB_NAME() AS ThisDB; 
 ```   
-문 사용 하 여 저장 프로시저를 호출 합니다.`EXEC What_DB_is_this;`   
+`EXEC What_DB_is_this;` 문으로 저장 프로시저 호출   
 
-좀 더 복잡 한 프로시저를 보다 유연 하 게 하는 입력된 매개 변수를 제공 하는 것입니다. 예를 들어  
+좀더 복잡한 방법은 입력 매개 변수를 제공하여 프로시저의 유연성을 높이는 것입니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
 ```sql   
 CREATE PROC What_DB_is_that @ID int   
 AS    
 SELECT DB_NAME(@ID) AS ThatDB;   
 ```   
-프로시저를 호출 하는 경우에 데이터베이스 id 번호를 제공 합니다. 예를 들어 `EXEC What_DB_is_that 2;` 반환 `tempdb`합니다.   
+프로시저를 호출할 때 데이터베이스 ID 번호를 제공합니다. 예를 들어 `EXEC What_DB_is_that 2;`는 `tempdb`를 반환합니다.   
 
-참조 [예제](#Examples) 더 많은 예제를 위한이 항목의 끝까지 합니다.     
+더 많은 예제를 보려면 이 토픽 끝에 있는 [예제](#Examples)를 참조하세요.     
     
 ## <a name="best-practices"></a>최선의 구현 방법  
  여기에 제시된 최선의 구현 방법은 일부에 불과하지만 이를 적절히 참고하면 프로시저 성능을 개선하는 데 도움이 됩니다.  
   
--   프로시저 본문에서 SET NOCOUNT ON 문을 첫 번째 문으로 사용합니다. 즉, 이 문을 AS 키워드 바로 다음에 배치합니다. 이렇게 하면 SELECT, INSERT, UPDATE, MERGE 및 DELETE 문이 실행된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트로 보내는 메시지가 해제됩니다. 따라서 필요 없는 네트워크 오버헤드가 사라져 데이터베이스와 응용 프로그램의 전반적인 성능이 개선됩니다. 자세한 내용은 참조 하세요. [SET NOCOUNT &#40; Transact SQL &#41; ](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   프로시저 본문에서 SET NOCOUNT ON 문을 첫 번째 문으로 사용합니다. 즉, 이 문을 AS 키워드 바로 다음에 배치합니다. 이렇게 하면 SELECT, INSERT, UPDATE, MERGE 및 DELETE 문이 실행된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트로 보내는 메시지가 해제됩니다. 따라서 필요 없는 네트워크 오버헤드가 사라져 데이터베이스와 응용 프로그램의 전반적인 성능이 개선됩니다. 자세한 내용은 [SET NOCOUNT&#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)를 참조하세요.  
   
--   프로시저에서 데이터베이스 개체를 만들거나 참조할 때 스키마 이름을 사용합니다. 에 대 한 처리 시간이 걸리는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 여러 스키마를 검색 하려면 없는 경우 개체 이름을 확인할 수 있습니다. 또한 사용 권한 및 스키마를 지정 하지 않고 개체를 만들 때 할당 되는 사용자의 기본 스키마로 인 한 액세스 문제를 방지 합니다.  
+-   프로시저에서 데이터베이스 개체를 만들거나 참조할 때 스키마 이름을 사용합니다. 여러 스키마를 검색할 필요가 없는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 개체 이름을 확인하기 위한 처리 시간이 줄어듭니다. 또한 스키마를 지정하지 않고 개체를 만들 경우 사용자의 기본 스키마 할당으로 인해 발생하는 권한 및 액세스 문제도 방지됩니다.  
   
 -   WHERE 및 JOIN 절에서 지정한 열을 함수로 묶지 않도록 합니다. 함수로 묶을 경우 열이 비결정적 열이 되어 쿼리 프로세서에서 인덱스를 사용할 수 없습니다.  
   
 -   대량의 데이터 행을 반환하는 SELECT 문에서는 스칼라 함수를 사용하지 않도록 합니다. 스칼라 함수는 모든 행에 적용되어야 하므로 행 기반 처리와 비슷한 동작이 발생하여 성능이 저하됩니다.  
   
--   사용 하지 못하도록 `SELECT *`합니다. 대신 필요한 열 이름을 지정합니다. 이렇게 하면 프로시저 실행을 중지하는 몇몇 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류를 방지할 수 있습니다. 예를 들어 한 `SELECT *` 수까지 12 열 테이블에서 데이터를 반환 하 고 다음 12 열 임시 테이블에 해당 데이터를 삽입 하는 문이 성공 또는 두 테이블의 열 순서를 변경 합니다.  
+-   `SELECT *`를 사용을 피합니다. 대신 필요한 열 이름을 지정합니다. 이렇게 하면 프로시저 실행을 중지하는 몇몇 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류를 방지할 수 있습니다. 예를 들어, 12 열 테이블에서 데이터를 반환하고 이 데이터를 12 열 임시 테이블에 삽입하는 `SELECT *` 문은 두 테이블 중 하나에서 열의 개수나 순서가 변경되기 전까지 계속 실행됩니다.  
   
 -   너무 많은 데이터를 처리하거나 반환하지 않도록 합니다. 되도록 프로시저 코드의 앞 부분에서 결과를 좁혀 해당 프로시저에서 수행하는 이후의 작업은 가능하면 가장 적은 데이터 집합을 사용하여 완료되도록 합니다. 꼭 필요한 데이터를 클라이언트 응용 프로그램에 보낼 수 있습니다. 이렇게 하면 네트워크를 통해 불필요한 데이터를 보내 클라이언트 응용 프로그램에서 필요 없이 많은 결과 집합을 처리하지 않아도 되므로 효율적입니다.  
   
--   BEGIN/COMMIT TRANSACTION을 사용 하 여 명시적 트랜잭션을 사용 하 고 트랜잭션이 되도록 짧게 유지 합니다. 트랜잭션이 길면 레코드 잠금 시간이 길어지고 교착 상태가 발생할 확률이 높아집니다.  
+-   BEGIN/COMMIT TRANSACTION을 사용하여 명시적 트랜잭션을 사용하고 트랜잭션을 되도록 짧게 유지합니다. 트랜잭션이 길면 레코드 잠금 시간이 길어지고 교착 상태가 발생할 확률이 높아집니다.  
   
 -   프로시저 내의 오류 처리에 [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY…CATCH 기능을 사용합니다. TRY…CATCH는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 블록을 캡슐화할 수 있습니다. 따라서 성능 오버헤드가 줄어들 뿐만 아니라 대폭 줄어든 프로그래밍과 함께 오류 보고가 더욱 정확해집니다.  
   
--   프로시저 본문에서 CREATE TABLE 또는 ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 참조하는 모든 테이블 열에 DEFAULT 키워드를 사용합니다. 이렇게 하면 null 값을 허용 하지 않는 열에 NULL이 전달 됩니다.  
+-   프로시저 본문에서 CREATE TABLE 또는 ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 참조하는 모든 테이블 열에 DEFAULT 키워드를 사용합니다. 이렇게 하면 Null 값을 허용하지 않는 열에 NULL이 전달되지 않습니다.  
   
 -   임시 테이블의 각 열에 NULL 또는 NOT NULL을 사용합니다. ANSI_DFLT_ON과 ANSI_DFLT_OFF 옵션은 CREATE TABLE 또는 ALTER TABLE 문에 NULL 또는 NOT NULL 특성이 지정되지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 열에 이러한 특성을 할당하는 방식을 제어합니다. 프로시저를 만든 연결과는 이 옵션 설정이 다른 프로시저를 연결이 실행하면 두 번째 연결에 만들어진 테이블의 열은 Null 허용 여부가 달라질 수 있으며 다른 동작을 나타낼 수 있습니다. 각 열에 NULL 또는 NOT NULL을 명시적으로 지정하면 프로시저를 실행하는 모든 연결에 대해 Null 허용 여부가 동일한 임시 테이블이 만들어집니다.  
   
--   Null 값을 변환하는 수정 문을 사용하고 Null 값을 포함하는 행을 쿼리에서 제거하는 논리를 포함합니다. 주의에 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)], NULL 비어 또는 "없음"을 의미 합니다. 알 수 없는 값에 대한 자리 표시자를 나타냅니다. 이 NULL은 특히 결과 집합을 쿼리하거나 AGGREGATE 함수를 사용할 때 예기치 않은 동작을 야기할 수 있습니다.  
+-   Null 값을 변환하는 수정 문을 사용하고 Null 값을 포함하는 행을 쿼리에서 제거하는 논리를 포함합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 NULL은 비어 있거나 "없음"을 의미하는 것이 아니라 알 수 없는 값에 대한 자리 표시자를 나타냅니다. 이 NULL은 특히 결과 집합을 쿼리하거나 AGGREGATE 함수를 사용할 때 예기치 않은 동작을 야기할 수 있습니다.  
   
 -   고유 값에 대한 특별한 요구 사항이 있지 않으면 UNION 또는 OR 연산자 대신 UNION ALL 연산자를 사용합니다. UNION ALL 연산자를 사용할 경우 중복되는 항목이 결과 집합에서 필터링되지 않으므로 처리 오버헤드가 줄어듭니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  프로시저에는 미리 정의된 최대 크기가 없습니다.  
   
- 사용자 정의 변수는 프로시저에 지정 된 수 또는 시스템 변수를 같은 @@SPID합니다.  
+ 프로시저 내에 지정한 변수는 @@SPID와 같은 시스템 변수이거나 사용자 정의 변수일 수 있습니다.  
   
  프로시저를 처음 실행하면 데이터 검색을 위한 최적 액세스 계획을 결정하기 위해 프로시저가 컴파일됩니다. 이후에 프로시저를 실행할 때는 이미 생성된 계획이 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 계획 캐시에 남아 있을 경우 해당 계획을 다시 사용할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 하나 이상의 프로시저를 자동으로 실행할 수 있습니다. 절차는 시스템 관리자가 만들어야는 **마스터** 데이터베이스에 있으며 실행는 **sysadmin** 백그라운드 프로세스로 고정된 서버 역할입니다. 프로시저에 입력 또는 출력 매개 변수는 사용할 수 없습니다. 자세한 내용은 참조 [저장 프로시저를 실행할](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 하나 이상의 프로시저를 자동으로 실행할 수 있습니다. 이러한 프로시저는 시스템 관리자가 **master** 데이터베이스에 만들어야 하며 **sysadmin** 고정 서버 역할에서 백그라운드 프로세스로 실행되어야 합니다. 프로시저에 입력 또는 출력 매개 변수는 사용할 수 없습니다. 자세한 내용은 [저장 프로시저 실행](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)을 참조하세요.  
   
  프로시저가 다른 프로시저를 호출하거나 CRL 루틴, 형식 또는 집계를 참조하여 관리 코드를 실행하는 경우에 프로시저가 중첩됩니다. 프로시저와 관리 코드 참조는 최대 32 수준까지 중첩될 수 있습니다. 호출된 프로시저나 관리 코드 참조의 실행이 시작되면 중첩 수준이 하나 증가하고 호출된 프로시저나 관리 참조 코드의 실행이 끝나면 중첩 수준이 하나 감소합니다. 관리 코드 내에서 호출된 메서드는 중첩 수준 제한에 따라 계산되지 않습니다. 그러나 CLR 저장 프로시저가 SQL Server 관리 공급자를 통해 데이터 액세스 작업을 수행하면 관리 코드에서 SQL로의 전환에 추가적인 중첩 수준이 더해집니다.  
   
- 최대 중첩 수준을 초과하려고 시도하면 전체 호출 체인이 끊어집니다. 사용할 수는 @@NESTLEVEL 함수를 현재 저장된 프로시저 실행의 중첩 수준을 반환 합니다.  
+ 최대 중첩 수준을 초과하려고 시도하면 전체 호출 체인이 끊어집니다. @@NESTLEVEL 함수를 사용하여 현재 저장 프로시저 실행에 대한 중첩 수준을 반환할 수 있습니다.  
   
 ## <a name="interoperability"></a>상호 운용성  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저를 만들거나 수정할 때 SET QUOTED_IDENTIFIER와 SET ANSI_NULLS의 설정을 저장합니다. 프로시저를 실행할 때는 이러한 원래 설정이 사용됩니다. 따라서 프로시저 실행 시 SET QUOTED_IDENTIFIER와 SET ANSI_NULLS에 대한 클라이언트 세션 설정은 모두 무시됩니다.  
@@ -407,7 +407,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
  SET SHOWPLAN_TEXT와 SET SHOWPLAN_ALL을 제외한 모든 SET 문을 프로시저 내에 지정할 수 있습니다. 이러한 문은 일괄 처리에서 유일한 문이어야 합니다. 선택된 SET 옵션은 프로시저가 실행되는 동안만 유지되고 다시 원래 설정으로 돌아갑니다.  
   
 > [!NOTE]  
->  프로시저 또는 사용자 정의 함수에 매개 변수를 전달할 때 또는 일괄 처리 문에서 변수를 선언하고 설정할 때 SET ANSI_WARNINGS는 인식되지 않습니다. 예를 들어, 변수로 정의 되 면 **char**(3) 하 고 다음 값으로 설정 된 3 자 보다 큰 데이터 잘리고 정의 된 크기는 INSERT 또는 UPDATE 문이 성공 합니다.  
+>  프로시저 또는 사용자 정의 함수에 매개 변수를 전달할 때 또는 일괄 처리 문에서 변수를 선언하고 설정할 때 SET ANSI_WARNINGS는 인식되지 않습니다. 예를 들어 변수가 **char**(3)으로 정의된 경우 3자보다 큰 값으로 설정하면 해당 데이터가 정의된 크기로 잘리고 INSERT 또는 UPDATE 문은 성공합니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  CREATE PROCEDURE 문은 단일 일괄 처리에서 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 함께 사용할 수 없습니다.  
@@ -418,11 +418,11 @@ SELECT DB_NAME(@ID) AS ThatDB;
 |-|-|-|  
 |CREATE AGGREGATE|CREATE SCHEMA|SET SHOWPLAN_TEXT|  
 |CREATE DEFAULT|CREATE 또는 ALTER TRIGGER|SET SHOWPLAN_XML|  
-|CREATE 또는 ALTER FUNCTION|CREATE 또는 ALTER VIEW|사용 하 여 *database_name*|  
+|CREATE 또는 ALTER FUNCTION|CREATE 또는 ALTER VIEW|USE *database_name*|  
 |CREATE 또는 ALTER PROCEDURE|SET PARSEONLY||  
 |CREATE RULE|SET SHOWPLAN_ALL||  
   
- 프로시저는 아직 존재하지 않는 테이블을 참조할 수 있습니다. 프로시저를 만들 때는 구문 검사만 수행되며 처음 실행할 때까지는 프로시저가 컴파일되지 않습니다. 컴파일 중에만 프로시저에서 참조되는 모든 개체가 확인됩니다. 존재 하지 않는 테이블을 참조 하는 올바른 구문의 프로시저를 성공적으로 만들 수 있습니다 따라서 그러나 참조 된 테이블이 존재 하지 않는 경우 프로시저 실행 시 실패 합니다.  
+ 프로시저는 아직 존재하지 않는 테이블을 참조할 수 있습니다. 프로시저를 만들 때는 구문 검사만 수행되며 처음 실행할 때까지는 프로시저가 컴파일되지 않습니다. 컴파일 중에만 프로시저에서 참조되는 모든 개체가 확인됩니다. 따라서 구문이 정확하면서 존재하지 않는 테이블을 참조하는 프로시저를 만들 수는 있지만 참조되는 테이블이 없을 경우 실행 시간에 오류가 발생합니다.  
   
  프로시저 실행 시 매개 변수의 기본값이나 매개 변수로 전달되는 값으로 함수 이름을 지정할 수 없습니다. 그러나 다음 예와 같이 함수를 변수로 전달할 수 있습니다.  
   
@@ -441,14 +441,14 @@ GO
   
 -   프로시저의 매개 변수 개수와 동일한 개수의 매개 변수를 받습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로시저에 있는 해당 매개 변수의 데이터 형식과 호환되는 매개 변수 형식을 사용합니다. 일치 하는 방법에 대 한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 형식을 참조 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로시저에 있는 해당 매개 변수의 데이터 형식과 호환되는 매개 변수 형식을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 일치하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 형식에 대한 자세한 내용은 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조하세요.  
   
 ## <a name="metadata"></a>메타데이터  
  다음 테이블에서는 저장 프로시저에 대한 정보를 반환하는 데 사용할 수 있는 카탈로그 뷰 및 동적 관리 뷰를 나열합니다.  
   
 |보기|Description|  
 |----------|-----------------|  
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저의 정의를 반환합니다. 사용 하 여 암호화 옵션을 사용 하 여 만든 프로시저의 텍스트를 볼 수 없습니다는 **sys.sql_modules** 카탈로그 뷰에 있습니다.|  
+|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저의 정의를 반환합니다. ENCRYPTION 옵션으로 만든 프로시저의 텍스트는 **sys.sql_modules** 카탈로그 뷰를 사용하여 볼 수 없습니다.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|CLR 프로시저 정보를 반환합니다.|  
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|프로시저에서 정의된 매개 변수 정보를 반환합니다.|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|프로시저에서 참조하는 개체를 반환합니다.|  
@@ -461,20 +461,20 @@ GO
 ||Cache Pages|  
 ||Cache Object Counts*|  
   
- * 이 카운터는 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)], 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)], 프로시저, 트리거 등 여러 종류의 캐시 개체에서 사용할 수 있습니다. 자세한 내용은 참조 [SQL Server, Plan Cache 개체](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)합니다.  
+ * 이 카운터는 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)], 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)], 프로시저, 트리거 등 여러 종류의 캐시 개체에서 사용할 수 있습니다. 자세한 내용은 [SQL Server, Plan Cache 개체](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)를 참조하세요.  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
- 필요한 **CREATE PROCEDURE** 데이터베이스의 권한 및 **ALTER** 프로시저를 만들고 또는의 멤버 자격이 필요 스키마에 대 한 권한이 **db_ddladmin** 고정된 데이터베이스 역할입니다.  
+### <a name="permissions"></a>사용 권한  
+ 데이터베이스에 대한 **CREATE PROCEDURE** 권한과 프로시저를 만들고 있는 스키마에 대한 **ALTER** 권한이 필요하거나 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
- CLR 저장 프로시저에 대 한 EXTERNAL NAME 절에 참조 된 어셈블리의 소유권을 요구 또는 **참조** 해당 어셈블리에 대 한 권한이 있습니다.  
+ CLR 저장 프로시저의 경우 EXTERNAL NAME 절에서 참조되는 어셈블리에 대한 소유권 또는 해당 어셈블리에 대한 **REFERENCES** 권한이 필요합니다.  
   
-##  <a name="mot"></a>CREATE PROCEDURE 및 메모리 액세스에 최적화 된 테이블  
- 메모리 액세스에 최적화 된 테이블을 기존 및 고유 하 게 컴파일된 저장된 프로시저를 통해 액세스할 수 있습니다. 기본 절차는 대부분의 경우에 더욱 효율적으로.
-자세한 내용은 참조 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)합니다.  
+##  <a name="mot"></a> CREATE PROCEDURE 및 메모리 최적화 테이블  
+ 메모리 최적화 테이블은 기존 및 고유하게 컴파일된 저장 프로시저를 통해 액세스할 수 있습니다. 네이티브 프로시저는 대부분의 경우에 효율적인 방법입니다.
+자세한 내용은 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.  
   
- 다음 샘플에서는 메모리 액세스에 최적화 된 테이블에 액세스 하는 고유 하 게 컴파일된 저장된 프로시저를 만드는 방법을 보여 줍니다. `dbo.Departments`:  
+ 다음 샘플은 메모리 최적화 테이블 `dbo.Departments`에 액세스하는 고유하게 컴파일된 저장 프로시저를 만드는 방법을 보여줍니다.  
   
 ```sql  
 CREATE PROCEDURE dbo.usp_add_kitchen @dept_id int, @kitchen_count int NOT NULL  
@@ -491,21 +491,21 @@ GO
   
  NATIVE_COMPILATION 없이 만든 프로시저는 고유하게 컴파일된 저장 프로시저로 변경할 수 없습니다. 
   
- 고유 하 게 컴파일된 저장된 프로시저의 프로그래밍 기능에 대 한 설명은에 대 한 쿼리 노출 영역을 지원 하 고 연산자 참조 [고유 하 게 컴파일된 T-SQL 모듈의 지원 되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)합니다.  
+ 고유하게 컴파일된 저장 프로시저, 지원되는 쿼리 노출 영역 및 연산자의 프로그래밍 기능에 대한 자세한 내용은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)을 참조하세요.  
   
 ## <a name="Examples"></a> 예  
   
 |범주|중요한 구문 요소|  
 |--------------|------------------------------|  
 |[기본 구문](#BasicSyntax)|CREATE PROCEDURE|  
-|[매개 변수 전달](#Parameters)|@parameter <br> &nbsp;&nbsp;• = 기본값 <br> &nbsp;&nbsp;• 출력 <br> &nbsp;&nbsp;• 테이블 반환 매개 변수 형식 <br> &nbsp;&nbsp;• CURSOR VARYING|  
-|[저장된 프로시저를 사용 하 여 데이터 수정](#Modify)|UPDATE|  
+|[매개 변수 전달](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • 테이블 반환 매개 변수 <br> &nbsp;&nbsp; • CURSOR VARYING|  
+|[저장 프로시저를 사용하여 데이터 수정](#Modify)|UPDATE|  
 |[오류 처리](#Error)|TRY…CATCH|  
 |[프로시저 정의 난독 처리](#Encrypt)|WITH ENCRYPTION|  
-|[프로시저의 다시 컴파일 강제 적용](#Recompile)|WITH RECOMPILE|  
-|[보안 컨텍스트를 설정합니다.](#Security)|EXECUTE AS|  
+|[프로시저의 다시 컴파일 강제 수행](#Recompile)|WITH RECOMPILE|  
+|[보안 컨텍스트 설정](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a>기본 구문  
+###  <a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 CREATE PROCEDURE 문의 기본 기능을 보여 줍니다.  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>1. 단순 Transact-SQL 프로시저 만들기  
@@ -522,7 +522,7 @@ GO
 SELECT * FROM HumanResources.vEmployeeDepartment;  
 ```  
   
- `uspGetEmployees` 다음과 같은 방법으로 프로시저를 실행할 수 있습니다.  
+ `uspGetEmployees` 프로시저는 다음과 같은 방법으로 실행할 수 있습니다.  
   
 ```sql  
 EXECUTE HumanResources.uspGetAllEmployees;  
@@ -546,9 +546,9 @@ GO
 ```  
   
 #### <a name="c-creating-a-clr-stored-procedure"></a>3. CLR 저장 프로시저 만들기  
- 다음 예제에서는 `GetPhotoFromDB` 참조 하는 프로시저는 `GetPhotoFromDB` 의 메서드는 `LargeObjectBinary` 클래스에 `HandlingLOBUsingCLR` 어셈블리입니다. 프로시저를 만들기 전에 `HandlingLOBUsingCLR` 어셈블리가 로컬 데이터베이스에 등록 됩니다.  
+ 다음 예에서는 `HandlingLOBUsingCLR`어셈블리에 있는 `LargeObjectBinary` 클래스의 `GetPhotoFromDB` 메서드를 참조하는 `GetPhotoFromDB` 프로시저를 만듭니다. 프로시저를 만들기 전에 `HandlingLOBUsingCLR` 어셈블리가 로컬 데이터베이스에 등록됩니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (에서 생성 된 어셈블리를 사용 하는 경우 *assembly_bits 합니다.*  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)](*assembly_bits*에서 생성된 어셈블리를 사용하는 경우)  
   
 ```sql  
 CREATE ASSEMBLY HandlingLOBUsingCLR  
@@ -564,7 +564,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a>매개 변수 전달  
+###  <a name="Parameters"></a> 매개 변수 전달  
  이 섹션의 예에서는 입력 및 출력 매개 변수를 통해 값을 저장 프로시저로 전달 및 저장 프로시저에서 값을 전달하는 방법을 보여 줍니다.  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>4. 입력 매개 변수가 있는 프로시저 만들기  
@@ -587,7 +587,7 @@ GO
   
 ```  
   
- `uspGetEmployees` 다음과 같은 방법으로 프로시저를 실행할 수 있습니다.  
+ `uspGetEmployees` 프로시저는 다음과 같은 방법으로 실행할 수 있습니다.  
   
 ```  
 EXECUTE HumanResources.uspGetEmployees N'Ackerman', N'Pilar';  
@@ -603,7 +603,7 @@ HumanResources.uspGetEmployees N'Ackerman', N'Pilar';
 ```  
   
 #### <a name="e-using-a-procedure-with-wildcard-parameters"></a>5. 프로시저에 와일드카드 매개 변수 사용  
- 다음 예에서는 직원의 성과 이름에 대한 전체 또는 일부 값을 전달하여 직원 정보를 반환하는 저장 프로시저를 만듭니다. 이 프로시저 패턴 전달 된 매개 변수와 일치 또는 사용 하 여 미리 설정 된 기본값을 제공 하지 않으면 (문자로 시작 하는 성이 `D`).  
+ 다음 예에서는 직원의 성과 이름에 대한 전체 또는 일부 값을 전달하여 직원 정보를 반환하는 저장 프로시저를 만듭니다. 이 프로시저는 전달된 매개 변수에 패턴 일치를 사용하고 매개 변수가 없으면 미리 설정된 기본값(`D`로 시작되는 성)을 사용합니다.  
   
 ```sql  
 IF OBJECT_ID ( 'HumanResources.uspGetEmployees2', 'P' ) IS NOT NULL   
@@ -664,10 +664,10 @@ SET @ComparePrice = @MaxPrice;
 GO  
 ```  
   
- `uspGetList`를 실행하여 가격이 `$700` 미만인 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 제품(자전거) 목록을 반환합니다. `OUTPUT` 매개 변수 `@Cost` 및 `@ComparePrices` 흐름 제어 언어와 함께 메시지를 반환 하는 데 사용 되는 **메시지** 창.  
+ `uspGetList`를 실행하여 가격이 `$700` 미만인 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 제품(자전거) 목록을 반환합니다. `OUTPUT` 매개 변수인 `@Cost`와 `@ComparePrices`는 **메시지** 창의 메시지를 반환하기 위해 흐름 제어 언어와 함께 사용됩니다.  
   
 > [!NOTE]  
->  프로시저가 만들어질 때뿐 아니라 변수가 사용될 때도 OUTPUT 변수를 정의해야 합니다. 매개 변수 이름과 변수 이름은; 일치 하지 않아도 그러나 데이터 형식 및 매개 변수 위치가 일치 해야 하지 않는 한 `@ListPrice`  =  *변수* 사용 됩니다.  
+>  프로시저가 만들어질 때뿐 아니라 변수가 사용될 때도 OUTPUT 변수를 정의해야 합니다. 매개 변수 이름과 변수 이름은 일치하지 않아도 되지만 `@ListPrice` = *variable*을 사용하지 않는 한 데이터 형식과 매개 변수 위치가 일치해야 합니다.  
   
 ```sql  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -772,11 +772,11 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a>저장 프로시저를 사용 하 여 데이터 수정  
+###  <a name="Modify"></a> 저장 프로시저를 사용하여 데이터 수정  
  이 섹션의 예에서는 프로시저 정의에 DML(데이터 조작 언어) 문을 포함해 테이블 또는 뷰에 있는 데이터를 삽입하거나 수정하는 방법을 보여 줍니다.  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>9. 저장 프로시저에 UPDATE 사용  
- 다음 예에서는 저장 프로시저에 UPDATE 문을 사용합니다. 이 프로시저에서는 `@NewHours`라는 입력 매개 변수 하나와 `@RowCount`라는 출력 매개 변수 하나를 사용합니다. `@NewHours` 매개 변수 값은 UPDATE 문이 열을 업데이트 사용 `VacationHours` 표에 `HumanResources.Employee`합니다. `@RowCount` 출력 매개 변수는 영향을 받는 행 수를 지역 변수에 반환하는 데 사용됩니다. CASE 식은 SET 절에서 `VacationHours`에 설정되는 값을 조건에 따라 결정하는 데 사용됩니다. 시간당 급여를 받는 직원(`SalariedFlag` = 0)의 경우 현재 시간 수에 `VacationHours`에 지정된 값을 더한 값으로 `@NewHours`가 설정되고, 그 외의 경우에는 `VacationHours`에 지정된 값으로 `@NewHours`가 설정됩니다.  
+ 다음 예에서는 저장 프로시저에 UPDATE 문을 사용합니다. 이 프로시저에서는 `@NewHours`라는 입력 매개 변수 하나와 `@RowCount`라는 출력 매개 변수 하나를 사용합니다. UPDATE 문에 사용된 `@NewHours` 매개 변수 값은 `HumanResources.Employee` 테이블의 `VacationHours` 열을 업데이트합니다. `@RowCount` 출력 매개 변수는 영향을 받는 행 수를 지역 변수에 반환하는 데 사용됩니다. CASE 식은 SET 절에서 `VacationHours`에 설정되는 값을 조건에 따라 결정하는 데 사용됩니다. 시간당 급여를 받는 직원(`SalariedFlag` = 0)의 경우 현재 시간 수에 `VacationHours`에 지정된 값을 더한 값으로 `@NewHours`가 설정되고, 그 외의 경우에는 `VacationHours`에 지정된 값으로 `@NewHours`가 설정됩니다.  
   
 ```sql  
 CREATE PROCEDURE HumanResources.Update_VacationHours  
@@ -796,7 +796,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a>오류 처리  
+###  <a name="Error"></a> 오류 처리  
  이 섹션의 예에서는 저장 프로시저가 실행될 때 발생할 수 있는 오류를 처리하는 방법을 보여 줍니다.  
   
 #### <a name="j-using-trycatch"></a>10. TRY…CATCH 사용  
@@ -871,13 +871,13 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a>프로시저 정의 난독 처리  
+###  <a name="Encrypt"></a> 프로시저 정의 난독 처리  
  이 섹션의 예에서는 저장 프로시저 정의를 난독 처리하는 방법을 보여 줍니다.  
   
 #### <a name="k-using-the-with-encryption-option"></a>11. WITH ENCRYPTION 옵션 사용  
  다음 예에서는 `HumanResources.uspEncryptThis` 프로시저를 만듭니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], SQL 데이터베이스입니다.  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, SQL Database  
   
 ```sql  
 CREATE PROCEDURE HumanResources.uspEncryptThis  
@@ -890,9 +890,9 @@ AS
 GO  
 ```  
   
- `WITH ENCRYPTION` 옵션 난독 처리 프로시저의 정의가 시스템 카탈로그 또는 메타 데이터를 사용 하 여 작동 하는 경우 다음 예에 표시 된 것 처럼 합니다.  
+ `WITH ENCRYPTION` 옵션은 다음 예에서 나타난 바와 같이 시스템 카탈로그를 쿼리하거나 메타데이터 함수를 사용할 때 프로시저 정의를 난독 처리합니다.  
   
- Run `sp_helptext`:  
+ `sp_helptext`를 실행합니다.  
   
 ```sql  
 EXEC sp_helptext 'HumanResources.uspEncryptThis';  
@@ -902,7 +902,7 @@ EXEC sp_helptext 'HumanResources.uspEncryptThis';
   
  `The text for object 'HumanResources.uspEncryptThis' is encrypted.`  
   
- 직접 쿼리 하는 `sys.sql_modules` 카탈로그 뷰:  
+ `sys.sql_modules` 카탈로그 뷰를 직접 쿼리합니다.  
   
 ```sql  
 SELECT definition FROM sys.sql_modules  
@@ -917,11 +917,11 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a>프로시저의 다시 컴파일 강제 적용  
+###  <a name="Recompile"></a> 프로시저의 다시 컴파일 강제 수행  
  이 섹션의 예에서는 WITH RECOMPILE 절을 사용하여 프로시저를 실행할 때마다 강제로 다시 컴파일되도록 합니다.  
   
 #### <a name="l-using-the-with-recompile-option"></a>12. WITH RECOMPILE 옵션 사용  
- `WITH RECOMPILE` 절은 프로시저에 제공 된 매개 변수는 일반적인 것 이며 및 새로운 실행 계획이 캐시 되거나 메모리에 저장 되지 않아야 하는 경우에 유용 합니다.  
+ `WITH RECOMPILE` 절은 프로시저에 제공되는 매개 변수가 일반적이지 않으며 새 실행 계획이 메모리에 캐시되거나 저장되지 않을 때 유용합니다.  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
@@ -940,11 +940,11 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a>보안 컨텍스트를 설정합니다.  
+###  <a name="Security"></a> 보안 컨텍스트 설정  
  이 섹션의 예에서는 EXECUTE AS 절을 사용하여 저장 프로시저가 실행되는 보안 컨텍스트를 설정합니다.  
   
 #### <a name="m-using-the-execute-as-clause"></a>13. EXECUTE AS 절 사용  
- 다음 예에서는 사용 하는 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 절 프로시저를 실행할 수 있는 보안 컨텍스트를 지정 합니다. 예제에서는 옵션 `CALLER` 프로시저를 호출 하는 사용자의 컨텍스트에서 실행 수 있도록 지정 합니다.  
+ 다음 예에서는 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 절을 사용하여 프로시저가 실행될 수 있는 보안 컨텍스트를 지정하는 방법을 보여줍니다. 이 예에서 `CALLER` 옵션은 프로시저를 호출하는 사용자 컨텍스트에서 프로시저가 실행될 수 있도록 지정합니다.  
   
 ```sql  
 CREATE PROCEDURE Purchasing.uspVendorAllInfo  
@@ -972,10 +972,10 @@ WITH EXECUTE AS SELF
 AS TRUNCATE TABLE MyDB..MyTable;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>15. SELECT 문을 실행 하는 저장 프로시저 만들기  
- 이 예제를 만들고 프로시저를 실행 하기 위한 기본 구문을 보여 줍니다. 일괄 처리를 실행할 때 CREATE PROCEDURE에는 첫 번째 문 이어야 합니다. 예를 들어 다음 저장 프로시저를 만들려면에서 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]먼저 데이터베이스 컨텍스트를 설정 하 고 다음 CREATE PROCEDURE 문을 실행 합니다.  
+### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>15. SELECT 문을 실행하는 저장 프로시저 만들기  
+ 이 예제는 프로시저를 만들고 실행하기 위한 기본 구문을 보여줍니다. 일괄 처리를 실행할 때 CREATE PROCEDURE가 첫 번째 명령문이어야 합니다. 예를 들어 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]에서 다음 저장 프로시저를 만들려면 먼저 데이터베이스 컨텍스트를 설정 한 다음, CREATE PROCEDURE 문을 실행합니다.  
   
 ```sql  
 -- Uses AdventureWorksDW database  
@@ -994,28 +994,28 @@ END
 EXEC Get10TopResellers;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
- [흐름 제어 언어 &#40; Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Control-of-Flow Language&#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [커서](../../relational-databases/cursors.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [DROP procedure&#40; Transact SQL &#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [실행 AS &#40; Transact SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [저장 프로시저&#40;데이터베이스 엔진&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [sp_procoption&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
- [sp_recompile &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   
+ [sp_procoption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
+ [sp_recompile&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   
  [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.parameters&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
  [sys.procedures&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.assembly_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
- [sys.numbered_procedures &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)   
- [sys.numbered_procedure_parameters &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)   
+ [sys.numbered_procedures&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)   
+ [sys.numbered_procedure_parameters&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)   
  [OBJECT_DEFINITION&#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [저장 프로시저 만들기](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [테이블 반환 매개 변수 사용 &#40; 데이터베이스 엔진 &#41;를 사용 하 여](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
+ [테이블 반환 매개 변수 사용&#40;데이터베이스 엔진&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
  [sys.dm_sql_referenced_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   

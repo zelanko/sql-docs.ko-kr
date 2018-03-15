@@ -1,5 +1,5 @@
 ---
-title: DROP EVENT NOTIFICATION (Transact SQL) | Microsoft Docs
+title: DROP EVENT NOTIFICATION(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>인수  
  *notification_name*  
- 제거할 이벤트 알림의 이름입니다. 이벤트 알림을 여러 개 지정할 수 있습니다. 현재 생성된 된 이벤트 알림 목록을 보려면 [sys.event_notifications&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ 제거할 이벤트 알림의 이름입니다. 이벤트 알림을 여러 개 지정할 수 있습니다. 현재 생성된 이벤트 알림 목록을 보려면 [sys.event_notifications&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)를 사용하세요.  
   
  SERVER  
  이벤트 알림의 범위가 현재 서버로 적용됨을 나타냅니다. 이벤트 알림이 생성될 때 SERVER를 지정한 경우 반드시 SERVER를 지정해야 합니다.  
@@ -61,13 +61,13 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  이벤트 알림의 범위가 현재 데이터베이스로 적용됨을 나타냅니다. 이벤트 알림이 생성될 때 DATABASE를 지정한 경우 반드시 DATABASE를 지정해야 합니다.  
   
- 큐 *queue_name*  
- 에 지정 된 큐에 적용 되는 이벤트 알림의 범위를 나타냅니다 *queue_name*합니다. 이벤트 알림이 생성될 때 QUEUE를 지정한 경우 반드시 QUEUE를 지정해야 합니다. *queue_name* 큐의 이름이 며도 지정 해야 합니다.  
+ QUEUE *queue_name*  
+ 이벤트 알림의 범위가 *queue_name*에 지정된 큐로 적용됨을 나타냅니다. 이벤트 알림이 생성될 때 QUEUE를 지정한 경우 반드시 QUEUE를 지정해야 합니다. *queue_name*은 큐의 이름이며 반드시 함께 지정해야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  트랜잭션 내에서 이벤트 알림이 발생하고 같은 트랜잭션 내에서 삭제되는 경우 이벤트 알림 인스턴스가 전달된 다음 이벤트 알림이 삭제됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스 수준 범위의 이벤트 알림을 삭제하려면 사용자는 최소한 해당 이벤트 알림의 소유자이거나 현재 데이터베이스에서 ALTER ANY DATABASE EVENT NOTIFICATION 권한을 가지고 있어야 합니다.  
   
  서버 수준 범위의 이벤트 알림을 삭제하려면 사용자는 최소한 해당 이벤트 알림의 소유자이거나 현재 서버에서 ALTER ANY EVENT NOTIFICATION 권한을 가지고 있어야 합니다.  
@@ -90,10 +90,10 @@ DROP EVENT NOTIFICATION NotifyALTER_T1
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [EVENT notification&#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CREATE EVENT NOTIFICATION&#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.event_notifications&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [sys.events &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.events&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   

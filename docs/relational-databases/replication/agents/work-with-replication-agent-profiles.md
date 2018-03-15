@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - agents [SQL Server replication], profiles
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6eab1c8e8a9a0d2b0a12c96a06fa67b3d8761add
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 88f10c5acea2106997a516aa968a8704b3bbcb7e
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="work-with-replication-agent-profiles"></a>복제 에이전트 프로필 작업
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 복제 에이전트 프로필로 작업하는 방법에 대해 설명합니다. 각 복제 에이전트의 동작은 에이전트 프로필을 통해 설정할 수 있는 매개 변수 집합으로 제어할 수 있습니다. 각 에이전트에는 기본 프로필이 있으며 일부 에이전트에는 미리 정의된 프로필이 추가되어 있습니다. 이러한 프로필은 에이전트에 대해 한 번에 하나만 활성화됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 복제 에이전트 프로필로 작업하는 방법에 대해 설명합니다. 각 복제 에이전트의 동작은 에이전트 프로필을 통해 설정할 수 있는 매개 변수 집합으로 제어할 수 있습니다. 각 에이전트에는 기본 프로필이 있으며 일부 에이전트에는 미리 정의된 프로필이 추가되어 있습니다. 이러한 프로필은 에이전트에 대해 한 번에 하나만 활성화됩니다.  
   
  **항목 내용**  
   
@@ -291,7 +293,7 @@ ms.lasthandoff: 01/18/2018
 5.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 메서드를 호출하여 이 개체가 나타내는 사용자 정의 프로필을 서버에서 제거합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 에이전트 매개 변수 변경 후  
- 에이전트 매개 변수에 대한 변경 사항은 다음에 에이전트가 시작될 때 적용됩니다. 에이전트가 연속적으로 실행되는 경우에는 에이전트를 중단했다가 다시 시작해야 합니다.  
+에이전트 매개 변수에 대한 변경 사항은 다음에 에이전트가 시작될 때 적용됩니다. 에이전트가 연속적으로 실행되는 경우에는 에이전트를 중단했다가 다시 시작해야 합니다. SQL Server 2017 CU3부터 일부 에이전트 매개 변수 변경 내용은 에이전트를 다시 시작할 필요 없이 적용됩니다. 
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)   

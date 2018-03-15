@@ -1,5 +1,5 @@
 ---
-title: DROP CREDENTIAL (TRANSACT-SQL) | Microsoft Docs
+title: DROP CREDENTIAL(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -54,15 +54,15 @@ DROP CREDENTIAL credential_name
  *credential_name*  
  서버에서 제거할 자격 증명의 이름입니다.  
   
-## <a name="remarks"></a>주의  
- 자격 증명 자체를 삭제 하지 않고 연결 된 자격 증명 암호를 삭제 하려면 사용 [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ 자격 증명 자체를 삭제하지 않고 자격 증명과 연결된 암호를 삭제하려면 [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md)을 사용합니다.  
   
- 자격 증명에 대 한 정보에 표시 됩니다는 **sys.credentials** 카탈로그 뷰에 있습니다.  
+ 자격 증명에 대한 정보는 **sys.credentials** 카탈로그 뷰에 표시됩니다.  
   
 > [!WARNING]  
->  프록시는 자격 증명과 연관됩니다. 프록시에 사용되는 자격 증명을 삭제하면 연관된 프록시가 사용할 수 없는 상태가 됩니다. 프록시에 의해 사용 되는 자격 증명을 삭제 하는 경우 삭제 하 고 (사용 하 여 [sp_delete_proxy &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md) 하 고 관련 된 프록시를 사용 하 여 다시 만드십시오. [sp_add_proxy &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md).  
+>  프록시는 자격 증명과 연관됩니다. 프록시에 사용되는 자격 증명을 삭제하면 연관된 프록시가 사용할 수 없는 상태가 됩니다. 프록시에 사용되는 자격 증명을 삭제할 때는 [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)를 사용하여 프록시를 삭제하고 [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)를 사용하여 연관된 프록시를 다시 만드세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER ANY CREDENTIAL 권한이 필요합니다. 시스템 자격 증명을 삭제하는 경우 CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -73,11 +73,11 @@ DROP CREDENTIAL Saddles;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [자격 증명 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a>참고 항목  
+ [자격 증명&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [ALTER CREDENTIAL &#40; Transact SQL &#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
- [DROP DATABASE SCOPED credential&#40; Transact SQL &#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+ [ALTER CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
+ [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   

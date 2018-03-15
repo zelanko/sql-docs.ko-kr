@@ -1,5 +1,5 @@
 ---
-title: DROP FULLTEXT STOPLIST (Transact SQL) | Microsoft Docs
+title: DROP FULLTEXT STOPLIST(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,11 +57,11 @@ DROP FULLTEXT STOPLIST stoplist_name
  *stoplist_name*  
  데이터베이스에서 삭제할 전체 텍스트 중지 목록의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  삭제 중인 전체 텍스트 중지 목록을 참조하는 전체 텍스트 인덱스가 있는 경우 DROP FULLTEXT STOPLIST가 실패합니다.  
   
-## <a name="permissions"></a>Permissions  
- 중지 목록을 삭제 한 중지 목록 또는의 멤버 자격에 대 한 DROP 권한이 필요는 **db_owner** 또는 **db_ddladmin** 고정 데이터베이스 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 중지 목록을 삭제하려면 중지 목록에 대한 DROP 권한이 있거나 **db_owner** 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `myStoplist`라는 전체 텍스트 중지 목록을 삭제합니다.  
@@ -70,10 +70,10 @@ DROP FULLTEXT STOPLIST stoplist_name
 DROP FULLTEXT STOPLIST myStoplist;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER FULLTEXT stoplist&#40; Transact SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [전체 텍스트 중지 목록 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [sys.fulltext_stoplists&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [sys.fulltext_stopwords&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
   
   

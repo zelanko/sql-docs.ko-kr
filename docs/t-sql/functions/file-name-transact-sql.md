@@ -1,5 +1,5 @@
 ---
-title: FILE_NAME (Transact SQL) | Microsoft Docs
+title: FILE_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ FILE_NAME ( file_id )
   
 ## <a name="arguments"></a>인수  
  *file_id*  
- 파일 이름을 반환할 해당 파일 ID입니다. *file_id* 은 **int**합니다.  
+ 파일 이름을 반환할 해당 파일 ID입니다. *file_id*는 **int**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>주의  
- *file_ID* sys.master_files 또는 sys.database_files 카탈로그 뷰의 file_id 열에 해당 합니다.  
+## <a name="remarks"></a>Remarks  
+ *file_ID*는 sys.master_files 또는 sys.database_files 카탈로그 뷰의 file_id 열과 일치합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 파일 이름을 반환 `file_ID 1` 및 `file_ID` 에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `file_ID 1` 및 `file_ID`에 대한 파일 이름을 반환합니다.  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
@@ -79,9 +79,9 @@ AdventureWorks2012_Data   AdventureWorks2012_Log
 (1 row(s) affected)
 ``` 
   
-## <a name="see-also"></a>관련 항목:  
- [FILE_IDEX &#40; Transact SQL &#41;](../../t-sql/functions/file-idex-transact-sql.md)   
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [FILE_IDEX&#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

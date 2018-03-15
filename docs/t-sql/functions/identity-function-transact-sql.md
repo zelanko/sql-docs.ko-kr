@@ -1,5 +1,5 @@
 ---
-title: "IDENTITY (함수) (Transact SQL) | Microsoft Docs"
+title: IDENTITY (Function) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identity-function-transact-sql"></a>IDENTITY(함수)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  에 INTO SELECT 문에서 사용 됩니다 *테이블* 절을 새 테이블에 id 열을 삽입 합니다. IDENTITY 함수는 CREATE TABLE 및 ALTER TABLE과 함께 사용되는 IDENTITY 속성과 비슷하지만 동일하지는 않습니다.  
+  ID 열을 새 테이블에 삽입하기 위해 INTO *테이블* 절과 함께 SELECT 문에서만 사용됩니다. IDENTITY 함수는 CREATE TABLE 및 ALTER TABLE과 함께 사용되는 IDENTITY 속성과 비슷하지만 동일하지는 않습니다.  
   
 > [!NOTE]  
 >  여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 응용 프로그램에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
@@ -54,21 +54,21 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
   
 ## <a name="arguments"></a>인수  
  *data_type*  
- ID 열의 데이터 형식입니다. Id 열에 대 한 유효한 데이터 형식을 제외 하 고 정수 데이터 형식 범주의 데이터 유형을는 **비트** 데이터 형식 또는 **10 진수** 데이터 형식입니다.  
+ ID 열의 데이터 형식입니다. ID 열의 유효한 데이터 형식은 **bit** 데이터 형식을 제외한 정수 데이터 형식 범주의 모든 데이터 형식 또는 **decimal** 데이터 형식입니다.  
   
- *시드*  
- 테이블의 첫 번째 행에 할당되는 정수 값입니다. 각 후속 행에 할당 것 마지막 ID 값과 같은 다음 id 값과 *증분* 값입니다. 모두 *시드* 나 *증분* 1 기본값은 모두 지정 된 합니다.  
+ *seed*  
+ 테이블의 첫 번째 행에 할당되는 정수 값입니다. 후속 행에는 각각 마지막 IDENTITY 값에 *증가*값을 더한 것과 같은 다음 ID 값이 할당됩니다. *초기값* 및 *증가값*을 모두 지정하지 않으면 기본값은 모두 1이 됩니다.  
   
- *증가값*  
- 정수 값을 추가 하는 *시드* 테이블의 연속 된 행에 대 한 값입니다.  
+ *increment*  
+ 테이블의 연속된 행에 대해 *초기*값에 추가되는 정수 값입니다.  
   
  *column_name*  
  새 테이블에 삽입될 열의 이름입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 와 동일 하 게 반환 *data_type*합니다.  
+ *data_type*과 같은 유형을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수는 테이블에 열을 만들기 때문에 다음 방법 중 하나를 사용하여 선택 목록에서 열 이름을 지정해야 합니다.  
   
 ```  
@@ -108,12 +108,12 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [@@IDENTITY&#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [선택 @local_variable &#40; Transact SQL &#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
+ [SELECT @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
  [DBCC CHECKIDENT&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [sys.identity_columns &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

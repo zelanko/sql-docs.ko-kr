@@ -1,5 +1,5 @@
 ---
-title: USER_NAME (Transact SQL) | Microsoft Docs
+title: USER_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,13 +52,13 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>인수  
  *id*  
- 데이터베이스 사용자와 연결된 ID 번호입니다. *id* 은 **int**합니다. 괄호가 필요합니다.  
+ 데이터베이스 사용자와 연결된 ID 번호입니다. *id*는 **int**입니다. 괄호가 필요합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(256)**  
   
-## <a name="remarks"></a>주의  
- 때 *id* 는 생략 하면 현재 컨텍스트에서 현재 사용자 가정 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다. 호출 하면 USER_NAME은 지정 하지 않고는 *id* EXECUTE 후 문으로 USER_NAME이 가장된 된 사용자의 이름을 반환 합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스하는 경우 USER_NAME은 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.  
+## <a name="remarks"></a>Remarks  
+ *id*를 생략하면 현재 컨텍스트의 현재 사용자로 가정하여 지정됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다. EXECUTE AS 문 다음에 *id*를 지정하지 않고 USER_NAME을 호출하면 USER_NAME은 가장된 사용자의 이름을 반환합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스하는 경우 USER_NAME은 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -129,7 +129,7 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-username-without-an-id"></a>5. ID 없이 USER_NAME 사용  
  다음 예에서는 ID를 지정하지 않고 현재 사용자의 이름을 찾습니다.  
@@ -138,7 +138,7 @@ DBO
 SELECT USER_NAME();  
 ```  
   
- 현재 로그인 한 사용자에 대 한 결과 집합은 다음과 같습니다.  
+ 현재 로그인한 사용자에 대한 결과 집합입니다.  
   
 ```  
 ------------------------------   
@@ -160,14 +160,14 @@ name
 User7                              
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40; Transact SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40; Transact SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SESSION_USER &#40; Transact SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SYSTEM_USER &#40; Transact SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
 

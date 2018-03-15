@@ -1,5 +1,5 @@
 ---
-title: LEAD (Transact SQL) | Microsoft Docs
+title: LEAD(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/02/2018
 # <a name="lead-transact-sql"></a>LEAD(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  동일한 결과 집합 자체 조인을 시작으로 사용 하지 않고에 있는 다음 행에서 데이터에 액세스 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다. LEAD 함수를 사용하면 현재 행 뒤에 나오는, 지정한 실제 오프셋에 있는 행에 액세스할 수 있습니다. SELECT 문에서 이 분석 함수를 사용하여 현재 행의 값을 다음 행의 값과 비교할 수 있습니다.  
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 자체 조인을 사용하지 않고 동일한 결과 집합에 있는 다음 행의 데이터에 액세스합니다. LEAD 함수를 사용하면 현재 행 뒤에 나오는, 지정한 실제 오프셋에 있는 행에 액세스할 수 있습니다. SELECT 문에서 이 분석 함수를 사용하여 현재 행의 값을 다음 행의 값과 비교할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [TRANSACT-SQL 구문 표기 규칙 &#40; Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,19 +48,19 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
   
 ## <a name="arguments"></a>인수  
  *scalar_expression*  
- 지정한 오프셋에 따라 반환할 값입니다. 단일(스칼라) 값을 반환하는 모든 유형의 식입니다. *scalar_expression* 분석 함수 일 수 없습니다.  
+ 지정한 오프셋에 따라 반환할 값입니다. 단일(스칼라) 값을 반환하는 모든 유형의 식입니다. *scalar_expression*은 분석 함수일 수 없습니다.  
   
- *오프셋*  
- 현재 행 뒤에 있는 행의 수로, 그 수만큼 뒤에 있는 행에서 값을 가져옵니다. 이 인수를 지정하지 않으면 기본값은 1입니다. *오프셋* 열, 하위 쿼리 또는 양의 정수로 계산 되는 기타 식일 수 있습니다 또는 암시적으로 변환할 수 **bigint**합니다. *오프셋* 은 음수 또는 분석 함수 일 수 없습니다.  
+ *offset*  
+ 현재 행 뒤에 있는 행의 수로, 그 수만큼 뒤에 있는 행에서 값을 가져옵니다. 이 인수를 지정하지 않으면 기본값은 1입니다. *offset*은 열, 하위 쿼리 또는 양의 정수로 계산되거나 암시적으로 **bigint**로 변환될 수 있는 기타 식일 수 있습니다. *offset*은 음수 또는 분석 함수일 수 없습니다.  
   
- *기본값*  
- 반환할 때 값을 *scalar_expression* 에서 *오프셋* 은 NULL입니다. 기본값이 지정되어 있지 않으면 NULL이 반환됩니다. *기본* 열, 하위 쿼리 또는 기타 식일 수 있지만 분석 함수 될 수 없습니다. *기본* 호환 되는 형식 이어야 합니다와 *scalar_expression*합니다.  
+ *default*  
+ *offset*의 *scalar_expression*이 NULL일 경우 반환할 값입니다. 기본값이 지정되어 있지 않으면 NULL이 반환됩니다. *default*는 열, 하위 쿼리 또는 기타 식일 수 있지만 분석 함수일 수는 없습니다. *default*는 *scalar_expression*과 호환되는 형식이어야 합니다.  
   
- 통해 **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* 함수가 적용 되는 파티션으로 FROM 절에서 생성 한 결과 집합을 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 함수를 적용 하기 전에 데이터의 순서를 결정 합니다. 때 *partition_by_clause* 지정 된, 각 파티션에 있는 데이터의 순서를 결정 합니다. *order_by_clause* 가 필요 합니다. 자세한 내용은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *partition_by_clause*가 지정되면 각 파티션 내의 데이터 순서를 결정합니다. *order_by_clause*가 필요합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
- 지정 된 데이터 형식을 *scalar_expression*합니다. NULL이 반환 됩니다 *scalar_expression* null을 허용 하거나 *기본* NULL로 설정 됩니다.  
+ 지정한 *scalar_expression*의 데이터 형식입니다. *scalar_expression*이 Null 값을 허용하거나 *default*가 NULL로 설정되어 있으면 NULL이 반환됩니다.  
   
  LEAD는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
   
@@ -143,10 +143,10 @@ b           c           i
 1           5           -2  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D: 분기 간 값 비교  
- 다음 예에서는 LEAD 함수를 보여 줍니다. 쿼리는 후속 달력 분기 동안 지정된 된 직원에 대 한 판매 할당량 값의 차이 가져옵니다. 확인 가능한 때문에 선행 값이 없는 마지막 행 뒤, 영 (0)의 기본값이 사용 됩니다.  
+### <a name="d-compare-values-between-quarters"></a>D: 분기별 값 비교  
+ 다음 예에서는 LEAD 함수를 보여줍니다. 쿼리는 이후의 분기 동안 지정된 직원에 대한 판매 할당량 값의 차이를 가져옵니다. 마지막 행 다음에 사용 가능한 선행(lead) 값이 없기 때문에 기본값인 0이 사용됩니다.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -172,8 +172,8 @@ Year Quarter  SalesQuota  NextQuota  Diff
 2002 4       154000.0000      0.0000  154000.0000
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [LAG &#40; Transact SQL &#41;](../../t-sql/functions/lag-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [LAG&#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
   
   
 

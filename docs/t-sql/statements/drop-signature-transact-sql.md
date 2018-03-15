@@ -1,5 +1,5 @@
 ---
-title: "DROP 서명 (Transact SQL) | Microsoft Docs"
+title: DROP SIGNATURE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,23 +56,23 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ```  
   
 ## <a name="arguments"></a>인수  
- *모듈*  
+ *module_name*  
  저장 프로시저, 함수, 어셈블리 또는 트리거의 이름입니다.  
   
  인증서 *cert_name*  
  저장 프로시저, 함수, 어셈블리 또는 트리거의 서명에 사용된 인증서의 이름입니다.  
   
- 비대칭 키 *Asym_key_name*  
+ ASYMMETRIC KEY *Asym_key_name*  
  저장 프로시저, 함수, 어셈블리 또는 트리거의 서명에 사용된 비대칭 키의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  서명 정보는 sys.crypt_properties 카탈로그 뷰에 표시됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  개체에 대한 ALTER 권한과 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다. 연결된 개인 키가 암호로 보호되어 있으면 사용자도 암호가 있어야 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 인증서의 서명을 제거 `HumanResourcesDP` 저장된 프로시저에서 `HumanResources.uspUpdateEmployeeLogin`합니다.  
+ 다음 예에서는 `HumanResourcesDP`저장된 프로시저에서`HumanResources.uspUpdateEmployeeLogin` 인증서의 서명을 제거합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -81,8 +81,8 @@ DROP SIGNATURE FROM HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [sys.crypt_properties &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [서명 추가 &#40; Transact SQL &#41;](../../t-sql/statements/add-signature-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [ADD SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/add-signature-transact-sql.md)  
   
   

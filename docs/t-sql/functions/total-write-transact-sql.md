@@ -1,5 +1,5 @@
 ---
-title: '@@TOTAL_WRITE (Transact SQL) | Microsoft Docs'
+title: '@@TOTAL_WRITE(Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40totalwrite-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact SQL)
+# <a name="x40x40totalwrite-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 마지막으로 시작된 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의한 디스크 쓰기 수를 반환합니다.  
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>반환 형식  
  **integer**  
   
-## <a name="remarks"></a>주의  
- 몇 가지를 포함 하는 보고서를 표시 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 읽기 및 쓰기 작업을 포함 한 실행 통계 **sp_monitor**합니다.  
+## <a name="remarks"></a>Remarks  
+ 읽기와 쓰기 작업을 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 들어 있는 보고서를 표시하려면 **sp_monitor**를 실행합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 날짜 및 시간을 기준으로 디스크 읽기 및 쓰기의 총 횟수를 반환하는 방법을 보여 줍니다.  
@@ -70,9 +70,9 @@ Reads       Writes      As of
 7760        97263       12/5/2006 10:23:00 PM   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [시스템 통계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
+ [시스템 통계 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
  [@@TOTAL_READ&#40;Transact-SQL&#41;](../../t-sql/functions/total-read-transact-sql.md)  
   
   

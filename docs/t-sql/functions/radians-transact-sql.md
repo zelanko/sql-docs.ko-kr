@@ -1,5 +1,5 @@
 ---
-title: RADIANS (Transact SQL) | Microsoft Docs
+title: RADIANS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -46,7 +46,7 @@ RADIANS ( numeric_expression )
   
 ## <a name="arguments"></a>인수  
  *numeric_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 정확한 수치 또는 근사치 숫자 데이터 형식 범주에서를 제외 하 고는 **비트** 데이터 형식입니다.  
+ **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  *numeric_expression*과 같은 유형을 반환합니다.  
@@ -125,13 +125,13 @@ The RADIANS of the angle is: 3.44022
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [CAST 및 convert&#40; Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [decimal 및 numeric&#40; Transact SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [float 및 real &#40; Transact SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [int, bigint, smallint 및 tinyint &#40; Transact SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
- [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [money 및 smallmoney &#40; Transact SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [decimal 및 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
+ [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [money 및 smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
   
   
 

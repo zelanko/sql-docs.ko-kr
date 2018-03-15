@@ -1,5 +1,5 @@
 ---
-title: "데이터베이스 만들기 (자습서) | Microsoft Docs"
+title: "데이터베이스 만들기(자습서) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-1---creating-a-database"></a>단원 1-1-데이터베이스 만들기
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]마찬가지로 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, CREATE DATABASE 문에 필수 매개 변수: 데이터베이스의 이름입니다. 또한 CREATE DATABASE에는 데이터베이스 파일을 저장할 디스크 위치와 같은 많은 선택적 매개 변수가 있습니다. 선택적 매개 변수 없이 CREATE DATABASE를 실행할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 이러한 여러 매개 변수에 기본값을 사용합니다. 이 자습서에서는 아주 약간의 선택적 구문 매개 변수만 사용합니다.  
+# <a name="lesson-1-1---creating-a-database"></a>1-1단원 - 데이터베이스 만들기
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 많은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 마찬가지로 CREATE DATABASE 문에는 필수 매개 변수로 데이터베이스 이름이 있습니다. 또한 CREATE DATABASE에는 데이터베이스 파일을 저장할 디스크 위치와 같은 많은 선택적 매개 변수가 있습니다. 선택적 매개 변수 없이 CREATE DATABASE를 실행할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 이러한 여러 매개 변수에 기본값을 사용합니다. 이 자습서에서는 아주 약간의 선택적 구문 매개 변수만 사용합니다.  
   
 ### <a name="to-create-a-database"></a>데이터베이스를 만들려면  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [테이블 만들기&#40;자습서&#41;](../t-sql/lesson-1-2-creating-a-table.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   

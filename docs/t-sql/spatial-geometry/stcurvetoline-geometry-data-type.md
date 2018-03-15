@@ -1,5 +1,5 @@
 ---
-title: "STCurveToLine (geometry 데이터 형식) | Microsoft Docs"
+title: "STCurveToLine(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-다각형 근사값을 반환 합니다.는 **geometry** 원호 세그먼트가 포함 된 인스턴스.
+원호 세그먼트가 포함된 **geometry** 인스턴스의 다각형 근사값을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -41,27 +41,27 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- 빈 반환 **GeometryCollection**인스턴스에 대해 빈 **geometry** 인스턴스 변수 및 반환 **NULL** 초기화 되지 않음에 대 한 **기하도형** 변수입니다.  
+## <a name="remarks"></a>Remarks  
+ 빈 **geometry** 인스턴스 변수에 대해 빈 **GeometryCollection** 인스턴스를 반환하고 초기화되지 않은 **geometry** 변수에 대해 **NULL**을 반환합니다.  
   
- 메서드가 반환 하는 다각형 근사값 의존는 **geometry** 메서드를 호출 하는 데 사용 하는 인스턴스:  
+ 메서드가 반환하는 다각형 근사값은 메서드 호출에 사용하는 **geometry** 인스턴스에 따라 다릅니다.  
   
--   반환 된 **LineString** 에 대 한 인스턴스는 **CircularString** 또는 **CompoundCurve** 인스턴스.  
+-   **CircularString** 또는 **CompoundCurve** 인스턴스에 대해 **LineString** 인스턴스를 반환합니다.  
   
--   반환 된 **다각형** 에 대 한 인스턴스는 **CurvePolygon** 인스턴스.  
+-   **CurvePolygon** 인스턴스에 대해 **다각형** 인스턴스를 반환합니다.  
   
--   복사본을 반환 된 **geometry** 해당 인스턴스가 아닌 경우 인스턴스는 **CircularString**, **CompoundCurve**, 또는 **CurvePolygon** 인스턴스 . 예를 들어는 `STCurveToLine` 메서드가 반환 되는 **지점** 에 대 한 인스턴스는 **geometry** 인스턴스에서 **지점** 인스턴스.  
+-   해당 인스턴스가 **CircularString**, **CompoundCurve**, 또는 **CurvePolygon** 인스턴스가 아닌 경우 **geometry** 인스턴스 복사본을 반환합니다. 예를 들어 `STCurveToLine` 메서드는 **점** 인스턴스인 **geometry** 인스턴스에 대해 **점** 인스턴스를 반환합니다.  
   
- SQL/MM 사양과 달리는 `STCurveToLine` 메서드는 다각형 근사값을 계산할 z 좌표 값을 사용 하지 않습니다. 메서드 호출에 있는 모든 z 좌표 값을 무시 **geometry** 인스턴스.  
+ SQL/MM 사양과 달리 `STCurveToLine` 메서드는 다각형 근사값을 계산할 때 z-좌표 값을 사용하지 않습니다. 이 메서드는 **geometry** 인스턴스를 호출할 때 제공되는 모든 z-좌표 값을 무시합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>1. 초기화되지 않은 Geometry 변수 및 빈 인스턴스 사용  
- 다음 예에서 첫 번째 **선택** 초기화 되지 않은 문에서 사용 하 여 **geometry** 호출 하는 인스턴스는 `STCurveToLine` 메서드와 두 번째 **선택** 사용 하 여 빈 **geometry** 인스턴스. 따라서 메서드가 반환 **NULL** 첫 번째 문으로 및 **GeometryCollection** 두 번째 문에 컬렉션입니다.  
+ 다음 예제에서는 첫 번째 **SELECT** 문이 초기화되지 않은 **geometry** 인스턴스를 사용하여 `STCurveToLine` 메서드를 호출하고 두 번째 **SELECT** 문이 빈 **geometry** 인스턴스를 사용합니다. 따라서 메서드는 첫 번째 문에 **NULL**을 반환하고 두 번째 문에 **GeometryCollection** 컬렉션을 반환합니다.  
   
 ```
  DECLARE @g geometry; 
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="b-using-a-linestring-instance"></a>2. LineString 인스턴스 사용  
- **선택** 문은 다음 예제에서 사용 하 여는 **LineString** 인스턴스 STCurveToLine 메서드를 호출 합니다. 따라서 메서드가 반환 된 **LineString** 인스턴스.  
+ 다음 예의 **SELECT** 문은 **LineString** 인스턴스를 사용하여 STCurveToLine 메서드를 호출합니다. 따라서 메서드는 **LineString** 인스턴스를 반환합니다.  
   
 ```
  DECLARE @g geometry; 
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>3. CircularString 인스턴스 사용  
- 첫 번째 **선택** 문은 다음 예제에서 사용 하 여는 **CircularString** 인스턴스 STCurveToLine 메서드를 호출 합니다. 따라서 메서드가 반환 된 **LineString** 인스턴스. 이 **선택** 문 또한 동일 약 요소인 두 인스턴스의 길이 비교 합니다.  마지막으로, 두 번째 **선택** 문이 각 인스턴스의 점 개수를 반환 합니다.  에 대 한 점을 5 개만 반환 된 **CircularString** 인스턴스 중 하나로 대해서는 65 개는 **LineString**인스턴스.  
+ 다음 예의 **SELECT** 문은 **CircularString** 인스턴스를 사용하여 STCurveToLine 메서드를 호출합니다. 따라서 메서드는 **LineString** 인스턴스를 반환합니다. 또한 이 **SELECT** 문은 거의 같은 두 인스턴스의 길이를 비교합니다.  마지막으로 두 번째 **SELECT** 문이 각 인스턴스의 점 개수를 반환합니다.  **CircularString** 인스턴스에 대해서는 점을 5개만 반환하지만 **LineString** 인스턴스에 대해서는 65개를 반환합니다.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>4. CurvePolygon 인스턴스 사용  
- **선택** 문은 다음 예제에서 사용 하 여는 **CurvePolygon** 인스턴스 STCurveToLine 메서드를 호출 합니다. 따라서 메서드가 반환 된 **다각형** 인스턴스.  
+ 다음 예의 **SELECT** 문은 **CurvePolygon** 인스턴스를 사용하여 STCurveToLine 메서드를 호출합니다. 따라서 메서드는 **다각형** 인스턴스를 반환합니다.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [STLength&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STNumPoints&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)   

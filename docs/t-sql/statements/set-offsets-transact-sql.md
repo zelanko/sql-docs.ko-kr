@@ -1,5 +1,5 @@
 ---
-title: "집합 오프셋 (Transact SQL) | Microsoft Docs"
+title: SET OFFSETS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ SET OFFSETS keyword_list { ON | OFF }
  *keyword_list*  
  SELECT, FROM, ORDER, TABLE, PROCEDURE, STATEMENT, PARAM 및 EXECUTE를 포함한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 쉼표로 구분한 목록입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET OFFSETS 옵션은 DB-Library 응용 프로그램에서만 사용됩니다.  
   
  SET OFFSETS 옵션은 구문 분석 시 설정되며, 실행 시 또는 런타임에는 설정되지 않습니다. 구문 분석 시에 설정되면 코드 실행이 실제로 해당 지점에 이르렀는지에 관계없이 SET 문이 일괄 처리나 저장 프로시저에 있으면 이 설정이 적용되고 문이 실행되기 전에 SET 문이 적용됩니다. 예를 들어, 실행 중 도달한 적이 없는 IF...ELSE 문 블록에 SET 문이 있어도, IF...ELSE 문 블록이 구문 분석되기 때문에 SET 문이 적용됩니다.  
@@ -66,11 +66,11 @@ SET OFFSETS keyword_list { ON | OFF }
   
  OFFSETS 옵션이 ON으로 설정되어 있고 오류가 발생하지 않으면 SET PARSEONLY가 오프셋을 반환합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET PARSEONLY &#40; Transact SQL &#41;](../../t-sql/statements/set-parseonly-transact-sql.md)  
+ [SET PARSEONLY &#40;Transact-SQL&#41;](../../t-sql/statements/set-parseonly-transact-sql.md)  
   
   

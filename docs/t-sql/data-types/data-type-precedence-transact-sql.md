@@ -1,5 +1,5 @@
 ---
-title: "데이터 형식 우선 순위 (Transact SQL) | Microsoft Docs"
+title: "데이터 형식 우선 순위(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-type-precedence-transact-sql"></a>데이터 형식 우선 순위 (TRANSACT-SQL)
+# <a name="data-type-precedence-transact-sql"></a>데이터 형식 우선 순위(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 연산자로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이때 변환이 암시적으로 지원되지 않으면 오류가 반환됩니다. 피연산자 식이 같은 데이터 형식일 경우에는 연산 결과도 같은 데이터 형식이 됩니다.
@@ -63,14 +63,14 @@ ms.lasthandoff: 11/21/2017
 1. **image**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. **nvarchar** (포함 하 여 **nvarchar (max)** )  
+1. **nvarchar**(**nvarchar(max)** 포함)  
 1. **nchar**  
-1. **varchar** (포함 하 여 **varchar (max)** )  
+1. **varchar** (**varchar(max)** 포함)  
 1. **char**  
-1. **varbinary** (포함 하 여 **varbinary (max)** )  
-1. **이진** (가장 낮음)  
+1. **varbinary** (**varbinary(max)** 포함)  
+1. **binary**(가장 낮음)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)

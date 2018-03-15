@@ -1,5 +1,5 @@
 ---
-title: "기본값 (Transact SQL) 만들기 | Microsoft Docs"
+title: CREATE DEFAULT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -58,21 +58,21 @@ AS constant_expression [ ; ]
  기본값이 속한 스키마의 이름입니다.  
   
  *default_name*  
- 기본값의 이름입니다. 기본 이름에 대 한 규칙을 따라야 합니다 [식별자](../../relational-databases/databases/database-identifiers.md)합니다. 기본 소유자 이름을 지정하는 것은 선택 사항입니다.  
+ 기본값의 이름입니다. 기본값 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 기본 소유자 이름을 지정하는 것은 선택 사항입니다.  
   
  *constant_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) (모든 열 또는 다른 데이터베이스 개체의 이름을 포함할 수 없습니다)만 상수 값을 포함 하는 합니다. 별칭 데이터 형식을 포함한 식을 제외하고 모든 종류의 상수, 기본 제공 함수 및 수치 연산 식을 사용할 수 있습니다. 사용자 정의 함수는 사용할 수 없습니다. 문자와 날짜 상수를 작은따옴표로 묶습니다 (**'**); 통화, 정수 및 부동 소수점 상수 필요 하지 않습니다 인용 부호 제외 합니다. 이진 데이터는 0x로 시작해야 하고 통화 데이터는 달러 기호($)로 시작해야 합니다. 기본값은 열 데이터 형식과 호환이 가능해야 합니다.  
+ 상수 값만 포함하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 열 이름이나 다른 데이터베이스 개체의 이름을 포함할 수 없습니다. 별칭 데이터 형식을 포함한 식을 제외하고 모든 종류의 상수, 기본 제공 함수 및 수치 연산 식을 사용할 수 있습니다. 사용자 정의 함수는 사용할 수 없습니다. 문자와 날짜 상수는 작은따옴표(**'**)로 묶어야 하지만 통화, 정수 및 부동 소수점 상수에는 따옴표가 필요 없습니다. 이진 데이터는 0x로 시작해야 하고 통화 데이터는 달러 기호($)로 시작해야 합니다. 기본값은 열 데이터 형식과 호환이 가능해야 합니다.  
   
-## <a name="remarks"></a>주의  
- 기본값 이름은 현재 데이터베이스에서만 만들 수 있습니다. 기본값 이름은 데이터베이스에서 스키마별로 고유해야 합니다. 기본값 만들어질 때 사용 하 여 **sp_bindefault** 열 또는 별칭 데이터 형식에 바인딩할 합니다.  
+## <a name="remarks"></a>Remarks  
+ 기본값 이름은 현재 데이터베이스에서만 만들 수 있습니다. 기본값 이름은 데이터베이스에서 스키마별로 고유해야 합니다. 기본값을 만들었으면 **sp_bindefault**를 사용하여 값을 열이나 별칭 데이터 형식에 바인딩합니다.  
   
- 기본값이 바인딩될 열과 호환되지 않으면 기본값을 삽입하려고 할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류 메시지가 나타납니다. 예를 들어 한 기본값을 n/A를 사용할 수 없습니다는 **숫자** 열입니다.  
+ 기본값이 바인딩될 열과 호환되지 않으면 기본값을 삽입하려고 할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류 메시지가 나타납니다. 예를 들어 N/A는 **numeric** 열의 기본값으로 사용할 수 없습니다.  
   
  기본값이 바인딩될 열에 비해 너무 길면 값이 잘립니다.  
   
  CREATE DEFAULT 문을 한 일괄 처리에서 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 결합할 수 없습니다.  
   
- 기본 이름이 같은 새 만들기 전에 삭제 하 고 실행 하 여 기본값을 바인딩 해제 해야 **sp_unbindefault** 중단 되기 전에 합니다.  
+ 같은 이름을 가진 기본값을 새로 만들려면 먼저 기존 기본값을 삭제해야 하며 기본값을 삭제하려면 먼저 **sp_unbindefault**를 실행하여 기본값을 바인딩 해제해야 합니다.  
   
  열에 기본값 및 연관된 규칙이 모두 있을 경우에는 해당 기본값이 규칙을 위반해서는 안 됩니다. 규칙을 위반하는 기본값은 삽입할 수 없으며 이러한 기본값을 삽입하려고 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류 메시지가 나타납니다.  
   
@@ -89,9 +89,9 @@ AS constant_expression [ ; ]
 |**NULL**|NULL|기본|NULL|NULL|  
 |**NOT NULL**|Error|기본|error|error|  
   
- 기본값의 이름을 바꾸려면 사용 **sp_rename**합니다. 에 대 한 보고서 기본값을 사용 하 여 **sp_help**합니다.  
+ 기본값의 이름을 바꾸려면 **sp_rename**을 사용합니다. 기본값에 대한 보고서를 보려면 **sp_help**를 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CREATE DEFAULT를 실행하려면 최소한 현재 데이터베이스에서 CREATE DEFAULT 권한과 기본값이 생성된 스키마에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -116,18 +116,18 @@ GO
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE&#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [기본 &#40; 삭제 Transact SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [DROP 규칙 &#40; Transact SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [DROP DEFAULT&#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [DROP RULE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [sp_bindefault &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindefault&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_help&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

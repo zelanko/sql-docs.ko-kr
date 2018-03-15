@@ -1,5 +1,5 @@
 ---
-title: '@@TOTAL_ERRORS (Transact SQL) | Microsoft Docs'
+title: '@@TOTAL_ERRORS(Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40totalerrors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact SQL)
+# <a name="x40x40totalerrors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 마지막으로 시작된 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발생한 디스크 쓰기 오류 수를 반환합니다.  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>반환 형식  
  **integer**  
   
-## <a name="remarks"></a>주의  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발생한 모든 쓰기 오류가 반환되는 것은 아닙니다. 사소한 쓰기 오류는 서버 자체에서 처리되며 오류로 처리되지 않는 경우도 있습니다. 몇 가지를 포함 하는 보고서를 표시 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 오류의 총 수를 포함 하 여 통계 **sp_monitor**합니다.  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발생한 모든 쓰기 오류가 반환되는 것은 아닙니다. 사소한 쓰기 오류는 서버 자체에서 처리되며 오류로 처리되지 않는 경우도 있습니다. 오류의 총 개수를 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계가 들어 있는 보고서를 표시하려면 **sp_monitor**를 사용합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 날짜 및 시간에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발생한 오류 수를 보여 줍니다.  
@@ -71,7 +71,7 @@ Errors      As of
 0           3/28/2003 12:32:11 PM   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [시스템 통계 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   

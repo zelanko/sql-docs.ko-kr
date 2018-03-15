@@ -1,5 +1,5 @@
 ---
-title: DATALENGTH (Transact SQL) | Microsoft Docs
+title: DATALENGTH(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ DATALENGTH ( expression )
   
 ## <a name="arguments"></a>인수  
 *expression*  
-이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 모든 데이터 형식의 합니다.
+임의 데이터 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
-**bigint** 경우 *식* 입니다는 **varchar (max)**, **nvarchar (max)** 또는 **varbinary (max)** 데이터 형식입니다. 그렇지 않으면 **int**합니다.
+*식*이 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터 유형이면 **bigint**, 그렇지 않으면 **int**입니다.
   
-## <a name="remarks"></a>주의  
-DATALENGTH은 특히 유용 **varchar**, **varbinary**, **텍스트**, **이미지**, **nvarchar**, 및 **ntext** 이러한 데이터 형식은 가변 길이 데이터를 저장할 수 때문에 데이터 형식입니다.
+## <a name="remarks"></a>Remarks  
+DATALENGTH는 가변 길이 데이터를 저장할 수 있는 **varchar**, **varbinary**, **text**, **image**, **nvarchar** 및 **ntext** 데이터 형식에서 특히 유용합니다.
   
 NULL의 DATALENGTH는 NULL입니다.
   
@@ -75,11 +75,11 @@ ORDER BY EnglishProductName;
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목
-[Len 함수 &#40; Transact SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
+## <a name="see-also"></a>관련 항목:
+[LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[시스템 함수 &#40; Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

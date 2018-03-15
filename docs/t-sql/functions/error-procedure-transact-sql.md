@@ -1,5 +1,5 @@
 ---
-title: ERROR_PROCEDURE (Transact SQL) | Microsoft Docs
+title: ERROR_PROCEDURE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
 ## <a name="return-value"></a>반환 값  
  CATCH 블록에서 호출된 경우 오류가 발생한 저장 프로시저 이름을 반환합니다.  
@@ -60,10 +60,10 @@ ERROR_PROCEDURE ( )
   
  CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  CATCH 블록 범위 내의 아무 위치에서나 ERROR_PROCEDURE를 호출할 수 있습니다.  
   
- ERROR_PROCEDURE는 호출 횟수나 CATCH 블록 범위 내에서 호출된 위치에 관계없이 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다. 이와 달리, 함수 등@ERROR를 바로 다음에 오류를 발생 시킨 문 또는 CATCH 블록의 첫 번째 문에서 오류 번호를 반환 하 합니다.  
+ ERROR_PROCEDURE는 호출 횟수나 CATCH 블록 범위 내에서 호출된 위치에 관계없이 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다. 이 함수는 오류가 발생한 함수 바로 다음에 오는 문이나 CATCH 블록의 첫 번째 문에서 오류 번호를 반환하는 @@ERROR과 같은 함수와는 대조됩니다.  
   
  중첩된 CATCH 블록에서 ERROR_PROCEDURE는 참조되는 CATCH 블록의 범위에 해당하는 저장 프로시저나 트리거의 이름을 반환합니다. 예를 들어 TRY…CATCH 구문의 CATCH 블록에 중첩된 TRY…CATCH를 사용할 수 있습니다. 중첩된 CATCH 블록 내에서 ERROR_PROCEDURE는 중첩된 CATCH 블록을 호출했으나 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다. ERROR_PROCEDURE가 외부 CATCH 블록에서 실행되는 경우 해당 CATCH 블록을 호출했으나 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다.  
   
@@ -128,7 +128,7 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorprocedure-in-a-catch-block"></a>3. CATCH 블록에서 ERROR_PROCEDURE 사용  
  다음 코드 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_PROCEDURE`는 오류가 발생한 저장 프로시저의 이름을 반환합니다.  
@@ -188,14 +188,14 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE&#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER&#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY&#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [Error_state &#40; Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

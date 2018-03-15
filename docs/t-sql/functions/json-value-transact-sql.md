@@ -1,5 +1,5 @@
 ---
-title: JSON_VALUE (Transact SQL) | Microsoft Docs
+title: JSON_VALUE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -31,12 +31,12 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2017
 ---
-# <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact SQL)
+# <a name="jsonvalue-transact-sql"></a>JSON_VALUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  JSON 문자열에서 스칼라 값을 추출 합니다.  
+  JSON 문자열에서 스칼라 값을 추출합니다.  
   
- 스칼라 값이 아닌 JSON 문자열에서 개체 또는 배열을 추출, 참조 [JSON_QUERY &#40; Transact SQL &#41; ](../../t-sql/functions/json-query-transact-sql.md). 간의 차이점에 대 한 정보에 대 한 **JSON_VALUE** 및 **JSON_QUERY**, 참조 [비교 JSON_VALUE 및 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)합니다.  
+ 스칼라 값 대신 JSON 문자열에서 개체 또는 배열을 추출하려면 [JSON_QUERY&#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)를 참조하세요. **JSON_VALUE**와 **JSON_QUERY**의 차이점에 대한 정보는, [JSON_VALUE 및 JSON_QUERY 비교](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)를 참조합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,31 +48,31 @@ JSON_VALUE ( expression , path )
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 식입니다. 일반적으로 JSON 텍스트를 포함 하는 열 또는 변수 이름입니다.  
+ 식입니다. 일반적으로 JSON 텍스트를 포함하는 변수 또는 열의 이름입니다.  
  
- 경우 **JSON_VALUE** JSON에 유효 하지 않은 찾습니다 *식* 로 식별 되는 값을 찾기 전에 *경로*, 함수는 오류를 반환 합니다. 하는 경우 **JSON_VALUE* 로 식별 되는 값을 찾지 못하면 *경로*, 전체 텍스트 검색 및 반환 하는 JSON 발견 되 면 오류가 아무 곳 이나 유효 하지 않습니다. *식*합니다.
+ **JSON_VALUE**가 *path*로 식별된 값을 찾기 전에 *expression*에서 유효하지 않은 JSON을 찾으면 함수는 오류를 반환합니다. **JSON_VALUE*가 *path*에 의해 식별된 값을 찾지 못하면, 전체 텍스트를 검사하고 JSON이 유효하지 않고 *expression*에 있는 경우 오류를 반환합니다.
   
- *경로*  
- 추출할 속성을 지정 하는 JSON 경로가 있습니다. 자세한 내용은 참조 하십시오. [JSON 경로 식 &#40; SQL Server &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ *path*  
+ 추출할 속성을 지정하는 JSON 경로입니다. 자세한 내용은 [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)을 참조하세요.  
  
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]의 값으로 변수를 제공할 수 있습니다 *경로*합니다.
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]과 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]에서 *path*의 값으로 변수를 제공할 수 있습니다.
   
- 경우 형식의 *경로* 유효 하지 **JSON_VALUE** 에서 오류를 반환 합니다.  
+ *path*의 형식이 유효하지 않으면 **JSON_VALUE**가 오류를 반환합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 형식 nvarchar (4000)의 단일 텍스트 값을 반환 합니다. 반환된 된 값의 데이터 정렬은 입력된 식의 데이터 정렬과 동일 합니다.  
+ nvarchar(4000) 형식의 단일 텍스트 값을 반환합니다. 반환된 값의 데이터 정렬은 입력된 식의 데이터 정렬과 동일합니다.  
   
- 값이 4000 자를 초과 합니다.  
+ 값이 4000자를 초과하는 경우:  
   
--   Lax 모드로 **JSON_VALUE** null을 반환 합니다.  
+-   lax 모드에서 **JSON_VALUE**는 null을 반환 합니다.  
   
--   Strict 모드에서는 **JSON_VALUE** 에서 오류를 반환 합니다.  
+-   strict 모드에서 **JSON_VALUE**는 오류를 반환합니다.  
   
- 4000 자 보다 큰 스칼라 값을 반환 해야 할 경우 사용 하 여 **OPENJSON** 대신 **JSON_VALUE**합니다. 자세한 내용은 [OPENJSON&#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)을 참조하세요.  
+ 4000자를 초과하는 스칼라 값을 반환해야 하는 경우 **JSON_VALUE** 대신 **OPENJSON**을 사용합니다. 자세한 내용은 [OPENJSON&#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
 
-### <a name="lax-mode-and-strict-mode"></a>Lax 모드와 strict 모드
+### <a name="lax-mode-and-strict-mode"></a>lax 모드와 strict 모드
 
  다음 JSON 텍스트를 살펴보십시오.  
   
@@ -93,25 +93,25 @@ SET @jsonInfo=N'{
  }'  
 ```  
   
- 다음 표에서 비교의 동작 **JSON_VALUE** lax 모드와 strict 모드에서. 선택적인 path 모드 사양 (lax 또는 strict)에 대 한 자세한 내용은 참조 하십시오. [JSON 경로 식 &#40; SQL Server &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ 다음 표에서는 lax 모드 및 strict 모드에서 **JSON_VALUE**의 동작을 비교합니다. 선택적 경로 모드 사양(lax 또는 strict)에 대한 자세한 내용은 [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)을 참조하세요.  
   
-|경로|Lax 모드에서 값을 반환 합니다.|Strict 모드에서는 반환 값|추가 정보|  
+|경로|lax 모드에서 값을 반환합니다.|strict 모드에서 값을 반환합니다.|추가 정보|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|NULL|오류|스칼라 된 값입니다.<br /><br /> 사용 하 여 **JSON_QUERY** 대신 합니다.|  
-|$. info.type|N '1'|N '1'|해당 사항 없음|  
-|$. info.address.town|N'Bristol'|N'Bristol'|해당 사항 없음|  
-|$.info입니다. " address "|NULL|오류|스칼라 된 값입니다.<br /><br /> 사용 하 여 **JSON_QUERY** 대신 합니다.|  
-|$. info.tags|NULL|오류|스칼라 된 값입니다.<br /><br /> 사용 하 여 **JSON_QUERY** 대신 합니다.|  
-|$. info.type[0]|NULL|오류|배열 되지 않습니다.|  
-|$. info.none|NULL|오류|속성이 존재 하지 않습니다.|  
+|$|NULL|Error|스칼라 값이 아닙니다.<br /><br /> **JSON_QUERY**를 대신 사용합니다.|  
+|$.info.type|N'1'|N'1'|해당 사항 없음|  
+|$.info.address.town|N'Bristol'|N'Bristol'|해당 사항 없음|  
+|$.info."address"|NULL|Error|스칼라 값이 아닙니다.<br /><br /> **JSON_QUERY**를 대신 사용합니다.|  
+|$.info.tags|NULL|Error|스칼라 값이 아닙니다.<br /><br /> **JSON_QUERY**를 대신 사용합니다.|  
+|$.info.type[0]|NULL|Error|배열이 아닙니다.|  
+|$.info.none|NULL|Error|속성이 없습니다.|  
   
 ## <a name="examples"></a>예  
   
-### <a name="example-1"></a>예제 1  
- 다음 예제에서는 JSON 속성의 값을 사용 하 여 `town` 및 `state` 쿼리 결과에 있습니다. 이후 **JSON_VALUE** 결과의 정렬 순서 원본의 데이터 정렬의 데이터 정렬에 의존 하는 전처리는 `jsonInfo` 열입니다. 
+### <a name="example-1"></a>예 1  
+ 다음 예에서는 쿼리 결과에서 JSON 속성 `town` 및 `state`의 값을 사용합니다. **JSON_VALUE**는 원본의 데이터 정렬을 유지하므로 결과의 정렬 순서는 `jsonInfo` 열의 데이터 정렬에 따라 다릅니다. 
 
 > [!NOTE]
-> (이 예에서는 라는 가정 `Person.Person` 포함 한 `jsonInfo` JSON 텍스트의 열과이 열에 lax 모드 및 strict 모드의 토론에서 이전에 표시 되는 구조입니다. AdventureWorks 예제 데이터베이스에는 `Person` 테이블에 실제로 없는 `jsonInfo` 열입니다.)
+> (이 예에서는 `Person.Person` 테이블에 JSON 텍스트의 `jsonInfo` 열이 있고, 이 열의 구조는 이전에 lax 모드 및 strict 모드에 대한 설명에 표시된 구조라고 가정합니다. AdventureWorks 샘플 데이터베이스에서 `Person` 테이블에는 실제로 `jsonInfo`열이 없습니다.)
   
 ```sql  
 SELECT FirstName, LastName,
@@ -122,7 +122,7 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ```  
   
 ### <a name="example-2"></a>예제 2  
- 다음 예제에서는 JSON 속성의 값을 추출 `town` 지역 변수에 합니다.  
+ 다음 예에서는 JSON 속성 `town`의 값을 로컬 변수로 추출합니다.  
   
 ```sql  
 DECLARE @jsonInfo NVARCHAR(MAX)
@@ -133,8 +133,8 @@ SET @jsonInfo=N'<array of address info>'
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
 ```  
   
-### <a name="example-3"></a>예 3  
- 다음 예제에서는 JSON 속성의 값을 기반으로 하는 계산된 열을 만듭니다.  
+### <a name="example-3"></a>예제 3  
+ 다음 예에서는 JSON 속성 값을 기반으로 계산된 열을 만듭니다.  
   
 ```sql  
 CREATE TABLE dbo.Store
@@ -147,8 +147,8 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [JSON 경로 식 &#40; SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON 데이터 &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a>참고 항목  
+ [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON Data&#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: OBJECT_DEFINITION (Transact SQL) | Microsoft Docs
+title: OBJECT_DEFINITION(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ OBJECT_DEFINITION ( object_id )
   
 ## <a name="arguments"></a>인수  
  *object_id*  
- 사용할 개체의 ID입니다. *object_id* 은 **int**, 및 현재 데이터베이스 컨텍스트에 개체가 있다고 가정 합니다.  
+ 사용할 개체의 ID입니다. *object_id*은 **int**이며 현재 데이터베이스 컨텍스트에 개체가 있다고 간주합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(max)**  
@@ -60,8 +60,8 @@ OBJECT_DEFINITION ( object_id )
   
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 OBJECT_DEFINITION과 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 있다고 가정 *object_id* 은 현재 데이터베이스 컨텍스트에서 실행 됩니다. 개체 정의의 데이터 정렬은 항상 호출하는 데이터베이스 컨텍스트의 데이터 정렬과 일치합니다.  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 *object_id*가 현재 데이터베이스 컨텍스트에 있다고 가정합니다. 개체 정의의 데이터 정렬은 항상 호출하는 데이터베이스 컨텍스트의 데이터 정렬과 일치합니다.  
   
  OBJECT_DEFINITION은 다음 개체 유형에 적용됩니다.  
   
@@ -85,7 +85,7 @@ OBJECT_DEFINITION ( object_id )
   
 -   V = 뷰  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  시스템 개체 정의는 공개적으로 표시됩니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여받은 사람은 사용자 개체의 정의를 볼 수 있습니다. 이 권한은 **db_owner**, **db_ddladmin**및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
   
 ## <a name="examples"></a>예  
@@ -110,10 +110,10 @@ SELECT OBJECT_DEFINITION (OBJECT_ID(N'sys.sp_columns')) AS [Object Definition];
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [OBJECT_NAME &#40; Transact SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [Object_id&#40; Transact SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [메타데이터 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [sp_helptext&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.server_sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-sql-modules-transact-sql.md)  

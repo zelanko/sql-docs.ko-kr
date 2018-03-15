@@ -1,5 +1,5 @@
 ---
-title: TYPE_ID (Transact SQL) | Microsoft Docs
+title: TYPE_ID(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
 ## <a name="arguments"></a>인수  
  *type_name*  
- 데이터 형식의 이름입니다. *type_name* 유형의 **nvarchar**합니다. *type_name* 시스템 또는 사용자 정의 데이터 형식입니다.  
+ 데이터 형식의 이름입니다. *type_name*은 **nvarchar** 형식입니다. *type_name*은 시스템 또는 사용자 정의 데이터 형식일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
@@ -59,7 +59,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 TYPE_ID와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  유형 이름이 잘못되었거나 호출자가 해당 유형을 참조할 수 있는 충분한 권한이 없는 경우 TYPE_ID는 NULL을 반환합니다.  
   
 ## <a name="examples"></a>예  
@@ -90,9 +90,9 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS [TYPE_NAME]
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: 시스템 데이터 형식의 TYPE ID를 조회  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>3. 시스템 데이터 형식의 TYPE ID 찾기  
  다음 예에서는 `TYPE ID` 시스템 데이터 형식의 `datetime`를 반환합니다.  
   
 ```  
@@ -100,11 +100,11 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,
     TYPE_ID('datetime') AS typeID FROM table1;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [TYPE_NAME &#40; Transact SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [TYPEPROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [메타데이터 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

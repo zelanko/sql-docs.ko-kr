@@ -1,5 +1,5 @@
 ---
-title: SIN (Transact SQL) | Microsoft Docs
+title: SIN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="sin-transact-sql"></a>SIN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  근사치에서 지정된 된 각도의 삼각 사인 라디안 단위로 반환 **float**, 식입니다.  
+  지정된 각도의 삼각 사인을 근사치 **float** 식에서 라디안으로 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ SIN ( float_expression )
 
 ## <a name="arguments"></a>인수  
  *float_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **float** 형식이 나 암시적으로 float로 변환할 수 있는 형식입니다.  
+ **float** 형식 또는 float로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
@@ -71,8 +71,8 @@ The SIN of the angle is: 0.929607
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 지정한 각도 대 한 사인을 계산 합니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 지정한 각도에 대해 사인을 계산합니다.  
   
 ```  
 SELECT SIN(45.175643);  
@@ -85,8 +85,8 @@ SELECT SIN(45.175643);
 0.929607
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

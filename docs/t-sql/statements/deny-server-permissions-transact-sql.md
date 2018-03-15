@@ -1,5 +1,5 @@
 ---
-title: "DENY 서버 사용 권한 (Transact SQL) | Microsoft Docs"
+title: DENY Server Permissions(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -62,13 +62,13 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>인수  
- *사용 권한*  
+ *permission*  
  서버에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  CASCADE  
  사용 권한이 거부된 보안 주체에게 사용 권한을 부여 받은 다른 보안 주체의 사용 권한도 거부됨을 나타냅니다.  
   
- \<server_principal >  
+ TO \<server_principal>  
  사용 권한이 거부된 보안 주체를 지정합니다.  
   
  AS \<grantor_principal >  
@@ -92,10 +92,10 @@ DENY permission [ ,...n ]
  *server_role*  
  서버 역할을 지정합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  현재 데이터베이스가 master인 경우에만 서버 범위의 사용 권한을 거부할 수 있습니다.  
   
- 서버 사용 권한 정보를 볼 수 있습니다는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 에서 카탈로그 뷰 및 서버 보안 주체에 대 한 정보를 볼 수 있습니다는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 있습니다. 서버 역할의 멤버 자격에 대 한 정보를 볼 수 있습니다는 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 카탈로그 뷰에 있습니다.  
+ 서버 사용 권한에 대한 정보는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰에 표시되고 서버 보안 주체에 대한 정보는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다. 서버 역할의 멤버 자격 정보는 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
   
  서버는 사용 권한 계층에서 가장 높은 수준입니다. 다음 표에는 서버에서 거부될 수 있는 가장 제한적인 특정 사용 권한이 나열되어 있습니다.  
   
@@ -136,19 +136,19 @@ DENY permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 세 가지 서버 사용 권한이 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 추가되었습니다.  
   
- **모든 데이터베이스를 연결** 사용 권한  
- 현재 있는 모든 데이터베이스와 향후 만들 수 있는 새로운 데이터베이스에 연결해야 하는 로그인에 **CONNECT ANY DATABASE** 를 부여합니다. 연결을 벗어나는 데이터베이스에서는 사용 권한을 부여하지 않습니다. 사용 권한과 결합할 **SELECT ALL USER SECURABLES** 또는 **VIEW SERVER STATE** 위한 감사 프로세스의 인스턴스에서 모든 데이터 또는 모든 데이터베이스 상태 보기를 허용 하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ **CONNECT ANY DATABASE** 권한  
+ 현재 있는 모든 데이터베이스와 향후 만들 수 있는 새로운 데이터베이스에 연결해야 하는 로그인에 **CONNECT ANY DATABASE** 를 부여합니다. 연결을 벗어나는 데이터베이스에서는 사용 권한을 부여하지 않습니다. **SELECT ALL USER SECURABLES** 또는 **VIEW SERVER STATE**와 결합하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 모든 데이터 또는 모든 데이터베이스 상태를 보기 위한 감사 프로세스를 허용합니다.  
   
- **모든 로그인을 가장** 사용 권한  
+ **IMPERSONATE ANY LOGIN** 권한  
  허용하면 데이터베이스에 연결할 때 중간 계층 프로세스가 클라이언트 계정을 가장하여 연결할 수 있습니다. 거부하면 높은 권한 로그인이 다른 로그인을 가장하지 못하도록 차단할 수 있습니다. 예를 들어, **CONTROL SERVER** 권한이 있는 로그인이 다른 로그인을 가장하지 못하도록 차단할 수 있습니다.  
   
- **ALL USER SECURABLES 선택** 사용 권한  
- 허용하면 감사자 등으로 로그인하여 사용자 연결이 가능한 모든 데이터베이스에서 데이터를 볼 수 있습니다. 거부 하면 액세스를 차단 개체에 있지 않는 한는 **sys** 스키마입니다.  
+ **SELECT ALL USER SECURABLES** 권한  
+ 허용하면 감사자 등으로 로그인하여 사용자 연결이 가능한 모든 데이터베이스에서 데이터를 볼 수 있습니다. 거부하면 개체가 **sys** 스키마에 있지 않는 한 개체에 대한 액세스를 차단합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한 또는 보안 개체의 소유권이 필요합니다. AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 보안 개체를 소유해야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -171,14 +171,14 @@ DENY CREATE ENDPOINT TO ArifS AS MandarP;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY&#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [DENY 서버 사용 권한 (Transact SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [REVOKE 서버 사용 권한 &#40; Transact SQL &#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [DENY 서버 사용 권한 (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOKE 서버 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40; Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

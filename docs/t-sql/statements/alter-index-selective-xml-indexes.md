@@ -1,5 +1,5 @@
 ---
-title: "ALTER INDEX (선택적 XML 인덱스) | Microsoft Docs"
+title: "ALTER INDEX(선택적 XML 인덱스) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/02/2018
   
 -   인덱스 옵션(WITH 절)  
   
- 보조 선택적 XML 인덱스는 변경할 수없습니다. 자세한 내용은 참조 [Create, Alter 및 보조 선택적 XML 인덱스 삭제](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)합니다.  
+ 보조 선택적 XML 인덱스는 변경할 수없습니다. 자세한 내용은 [보조 선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)를 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -120,7 +120,7 @@ identifier
  *index_name*  
  변경할 기존 인덱스의 이름입니다.  
   
- *\<table_object >*  
+ *\<table_object>*  
  인덱싱할 XML 열이 포함된 테이블입니다. 다음 형식 중 하나를 사용합니다.  
   
 -   `database_name.schema_name.table_name`  
@@ -131,27 +131,27 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list > **)**]  
- 인덱싱할 경로에서 사용하는 네임스페이스 목록입니다. WITH XMLNAMESPACES 절의 구문에 대 한 내용은 참조 하세요. [WITH XMLNAMESPACES &#40; Transact SQL &#41; ](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
+ 인덱싱할 경로에서 사용하는 네임스페이스 목록입니다. WITH XMLNAMESPACES 절의 구문에 대한 자세한 내용은 [WITH XMLNAMESPACES&#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)를 참조하세요.  
   
- 에 대 한 **(** \<promoted_node_path_action_list > **)**  
+ FOR **(** \<promoted_node_path_action_list> **)**  
  추가 또는 제거할 인덱싱된 경로의 목록입니다.  
   
--   **경로 추가 합니다.** 경로를 추가할 때는 CREATE SELECTIVE XML INDEX 문과 함께 경로를 만드는 데 사용되는 구문과 동일한 구문을 사용합니다. CREATE 또는 ALTER 문에 지정할 수 있는 경로 대 한 정보를 참조 하십시오. [지정 경로 및 선택적 XML 인덱스에 대 한 최적화 힌트](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)합니다.  
+-   **경로를 추가합니다.** 경로를 추가할 때는 CREATE SELECTIVE XML INDEX 문과 함께 경로를 만드는 데 사용되는 구문과 동일한 구문을 사용합니다. CREATE 또는 ALTER 문에 지정할 수 있는 경로에 대한 자세한 내용은 [선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)을 참조하세요.  
   
--   **경로 제거 합니다.** 경로를 제거할 때는 해당 경로를 만들 때 지정한 경로 이름을 제공합니다.  
+-   **경로를 제거합니다.** 경로를 제거할 때는 해당 경로를 만들 때 지정한 경로 이름을 제공합니다.  
   
- [와 **(** \<e x _ > **)**]  
- 만 지정할 수 있습니다 \<e x _ > FOR 절 없이 ALTER INDEX를 사용 합니다. ALTER INDEX를 사용하여 인덱스에서 경로를 추가 또는 제거할 때는 인덱스 옵션이 잘못된 인수가 아닙니다. 인덱스 옵션에 대 한 정보를 참조 하세요. [CREATE XML index&#40; 선택적 XML 인덱스 &#41; ](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ [WITH **(** \<index_options> **)**]  
+ FOR 절 없이 ALTER INDEX를 사용할 때는 \<index_options>만 지정할 수 있습니다. ALTER INDEX를 사용하여 인덱스에서 경로를 추가 또는 제거할 때는 인덱스 옵션이 잘못된 인수가 아닙니다. 인덱스 옵션에 대한 자세한 내용은 [CREATE XML INDEX&#40;선택적 XML 인덱스&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  ALTER INDEX 문을 실행하면 선택적 XML 인덱스가 항상 다시 작성됩니다. 이 프로세스가 서버 리소스에 미치는 영향을 고려해야 합니다.  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  ALTER INDEX를 실행하려면 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -175,9 +175,9 @@ ON Tbl
 PAD_INDEX = ON;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SXI&#40;선택적 XML 인덱스&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
- [만들기, 변경 및 선택적 XML 인덱스 삭제](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
+ [선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
  [선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "삭제 유형을 (Transact SQL) | Microsoft Docs"
+title: DROP TYPE (Transact-SQL)| Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -48,10 +48,10 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ```  
   
 ## <a name="arguments"></a>인수  
- *경우에 존재*  
+ *IF EXISTS*  
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- 조건에 따라 이미 있는 경우에 형식을 삭제 합니다.  
+ 이미 있는 경우에만 형식을 조건부로 삭제합니다.  
   
  *schema_name*  
  별칭 또는 사용자 정의 형식이 속한 스키마의 이름입니다.  
@@ -59,17 +59,17 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
  *type_name*  
  삭제하려는 별칭 데이터 형식 또는 사용자 정의 형식의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 사항 중 하나라도 해당하는 경우 DROP TYPE 문은 실행되지 않습니다.  
   
--   데이터베이스에 별칭 데이터 형식 또는 사용자 정의 형식의 열을 포함하는 테이블이 있는 경우. 쿼리하여 별칭 또는 사용자 정의 형식 열에 대 한 정보를 가져올 수 있습니다는 [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 또는 [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md) 카탈로그 뷰.  
+-   데이터베이스에 별칭 데이터 형식 또는 사용자 정의 형식의 열을 포함하는 테이블이 있는 경우. 별칭 또는 사용자 정의 형식 열에 관한 정보는 [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 또는 [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md) 카탈로그 뷰를 쿼리하여 얻을 수 있습니다.  
   
--   정의에서 별칭이나 사용자 정의 형식을 참조하는 계산 열, CHECK 제약 조건, 스키마 바운드 뷰 및 스키마 바운드 함수가 있는 경우. 쿼리하여 이러한 참조에 대 한 정보를 가져올 수 있습니다는 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 카탈로그 뷰에 있습니다.  
+-   정의에서 별칭이나 사용자 정의 형식을 참조하는 계산 열, CHECK 제약 조건, 스키마 바운드 뷰 및 스키마 바운드 함수가 있는 경우. 이러한 참조에 대한 정보는 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 카탈로그 뷰를 쿼리하여 얻을 수 있습니다.  
   
--   데이터베이스에 함수, 저장 프로시저 또는 생성된 트리거가 있고 이러한 루틴에서 별칭 또는 사용자 정의 형식의 변수 및 매개 변수를 사용하는 경우. 별칭 또는 사용자 정의 형식 매개 변수에 대 한 정보를 쿼리하여 얻을 수 있습니다는 [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) 또는 [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md) 카탈로그 뷰.  
+-   데이터베이스에 함수, 저장 프로시저 또는 생성된 트리거가 있고 이러한 루틴에서 별칭 또는 사용자 정의 형식의 변수 및 매개 변수를 사용하는 경우. 별칭 또는 사용자 정의 형식 매개 변수에 관한 정보는 [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) 또는 [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md) 카탈로그 뷰를 쿼리하여 얻을 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
- 에 대 한 CONTROL 권한 중 하나가 필요 *type_name* 에 대 한 ALTER 권한 또는 *schema_name*합니다.  
+## <a name="permissions"></a>사용 권한  
+ *type_name*에 관한 CONTROL 권한 또는 *schema_name*에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `ssn` 형식이 이미 현재 데이터베이스에서 생성된 것으로 가정합니다.  
@@ -78,7 +78,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 DROP TYPE ssn ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

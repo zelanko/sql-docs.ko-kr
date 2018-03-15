@@ -1,5 +1,5 @@
 ---
-title: SCHEMA_ID (Transact SQL) | Microsoft Docs
+title: SCHEMA_ID(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,14 +52,14 @@ SCHEMA_ID ( [ schema_name ] )
   
 |용어|정의|  
 |----------|----------------|  
-|*schema_name*|스키마 이름입니다. *schema_name* 는 **sysname**합니다. 경우 *schema_name* 를 지정 하지 않으면 SCHEMA_ID는 호출자의 기본 스키마의 ID가 반환 됩니다.|  
+|*schema_name*|스키마 이름입니다. *schema_name*은 **sysname**입니다. *schema_name*을 지정하지 않으면 SCHEMA_ID는 호출자의 기본 스키마 ID를 반환합니다.|  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
- 경우 NULL이 반환 됩니다 *schema_name* 유효한 스키마가 아닙니다.  
+ *schema_name*이 유효한 스키마가 아닌 경우 NULL이 반환됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SCHEMA_ID는 시스템 스키마 및 사용자 정의 스키마의 ID를 반환합니다. SCHEMA_ID는 선택 목록, WHERE 절 및 식이 사용되는 어디서나 호출할 수 있습니다.  
   
 ## <a name="examples"></a>예  
@@ -76,10 +76,10 @@ SELECT SCHEMA_ID();
 SELECT SCHEMA_ID('dbo');  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [SCHEMA_NAME &#40; Transact SQL &#41;](../../t-sql/functions/schema-name-transact-sql.md)   
- [sys.schemas &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
+## <a name="see-also"></a>참고 항목  
+ [메타데이터 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [SCHEMA_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/schema-name-transact-sql.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
   
   
 

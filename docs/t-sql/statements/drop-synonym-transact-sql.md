@@ -1,5 +1,5 @@
 ---
-title: DROP SYNONYM (TRANSACT-SQL) | Microsoft Docs
+title: DROP SYNONYM(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -50,23 +50,23 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ```  
   
 ## <a name="arguments"></a>인수  
- *경우에 존재*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ *IF EXISTS*  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- 조건에 따라 이미 있는 경우에 동의어를 삭제 합니다.  
+ 이미 있는 경우에만 동의어를 조건부로 삭제합니다.  
   
- *스키마*  
+ *schema*  
  동의어가 존재하는 스키마를 지정합니다. 스키마를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 현재 사용자의 기본 스키마를 사용합니다.  
   
  *synonym_name*  
  삭제할 동의어의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  동의어에 대한 참조는 스키마 바운드가 아니므로 언제든 동의어를 삭제할 수 있습니다. 삭제한 동의어에 대한 참조는 런타임에만 발견할 수 있습니다.  
   
  동의어는 동적 SQL에서 생성, 삭제 및 참조할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  동의어를 삭제하려면 사용자가 적어도 다음 조건 중 하나를 충족시켜야 합니다.  
   
 -   동의어의 현재 사용자  
@@ -92,8 +92,8 @@ DROP SYNONYM MyProduct;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [동의어 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: IS_MEMBER (Transact SQL) | Microsoft Docs
+title: IS_MEMBER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -55,36 +55,36 @@ IS_MEMBER ( { 'group' | 'role' } )
 ```  
   
 ## <a name="arguments"></a>인수  
- **'** *그룹* **'**  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **'** *group* **'**  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
- 검사할 Windows 그룹의 이름 형식에 있어야 *도메인*\\*그룹*합니다. *그룹* 은 **sysname**합니다.  
+ 검사할 Windows 그룹의 이름으로 *도메인*\\*그룹* 형식이어야 합니다. *그룹*은 **sysname**입니다.  
   
- **'** *역할* **'**  
- 이름인는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할 확인 하는 중입니다. *역할* 은 **sysname** 데이터베이스 역할 또는 사용자 정의 역할 있으 나 서버 역할 하지 고정 포함 될 수 있습니다.  
+ **'** *role* **'**  
+ 확인할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할의 이름입니다. *역할*은 **sysname**이며 데이터베이스 고정 역할이나 사용자 정의 역할은 포함할 수 있으나 서버 역할은 포함할 수 없습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  IS_MEMBER는 다음과 같은 값을 반환합니다.  
   
 |반환 값|Description|  
 |------------------|-----------------|  
-|0|현재 사용자의 구성원이 아닙니다. *그룹* 또는 *역할*합니다.|  
-|1.|현재 사용자가 멤버인 *그룹* 또는 *역할*합니다.|  
-|NULL|어느 *그룹* 또는 *역할* 올바르지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 응용 프로그램 역할을 사용하는 로그인에서 쿼리하는 경우 Windows 그룹에 대해 NULL을 반환합니다.|  
+|0|현재 사용자가 *그룹* 또는 *역할*의 멤버가 아닙니다.|  
+|1|현재 사용자가 *그룹* 또는 *역할*의 멤버입니다.|  
+|NULL|*그룹* 또는 *역할*이 유효하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 응용 프로그램 역할을 사용하는 로그인에서 쿼리하는 경우 Windows 그룹에 대해 NULL을 반환합니다.|  
   
  IS_MEMBER는 Windows에서 만든 액세스 토큰을 검사하여 Windows 그룹 멤버를 결정합니다. 액세스 토큰은 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결한 후에 변경된 그룹 멤버 변경 내용을 반영하지 않습니다. Windows 그룹 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램 역할에서 쿼리할 수 없습니다.  
   
- 추가 하 고 데이터베이스 역할에서 구성원 제거을 사용 하 여 [ALTER role&#40; Transact SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md). 추가 하 고 서버 역할에서 구성원 제거을 사용 하 여 [ALTER SERVER role&#40; Transact SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ 데이터베이스 역할에서 멤버를 추가하고 제거하려면 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)를 사용합니다. 모든 서버 역할에서 멤버를 추가하고 제거하려면 [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)를 사용합니다.  
   
- 이 함수는 기본 사용 권한이 아니라 역할 멤버 자격을 평가합니다. 예를 들어는 **db_owner** 고정된 데이터베이스 역할에는 **제어 데이터베이스** 권한. 사용자에 게 있으면는 **제어 데이터베이스** 권한에 포함 있지만 역할의 멤버는 아닌 경우이 함수는 잘못 보고 하 여 사용자의 구성원이 아닙니다는 **db_owner** 역할을 사용자에 게 동일한 경우에 사용 권한입니다.  
+ 이 함수는 기본 사용 권한이 아니라 역할 멤버 자격을 평가합니다. 예를 들어 **db_owner** 고정 데이터베이스 역할에는 **CONTROL DATABASE** 권한이 있습니다. 사용자가 **CONTROL DATABASE** 권한을 갖고 있지만 역할의 멤버는 아닌 경우 이 함수는 해당 사용자가 동일한 사용 권한을 갖고 있더라도 **db_owner** 역할의 멤버가 아닌 것으로 올바르게 보고합니다.  
   
- 멤버는 **sysadmin** 으로 모든 데이터베이스를 입력 하는 고정된 서버 역할의 **dbo** 사용자입니다. 멤버에 대 한 사용 권한을 확인 하는 **sysadmin** 고정된 서버 역할에 대 한 권한을 확인 **dbo**, 원래 로그인 하지 않습니다. 이후 **dbo** 데이터베이스 역할에 추가할 수 없습니다 및 Windows 그룹에 존재 하지 않는 **dbo** 0 또는 NULL 역할 존재 하지 않는 경우 항상 반환 됩니다.  
+ **sysadmin** 고정 서버 역할의 멤버는 모든 데이터베이스를 **dbo** 사용자로 입력합니다. **sysadmin** 고정 서버 역할의 멤버에 대한 사용 권한을 확인하려면 원래의 로그인이 아닌 **dbo**에 대한 사용 권한을 확인합니다. **dbo**는 데이터베이스 역할에 추가될 수 없으며 Windows 그룹에 존재하지 않으므로 **dbo**는 항상 0을 반환합니다.(또는 역할이 존재하지 않으면 NULL을 반환합니다)  
   
 ## <a name="related-functions"></a>관련 함수  
- 여부를 확인 하려면 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 데이터베이스 역할의 멤버를 사용 하 여 [IS_ROLEMEMBER &#40; Transact SQL &#41; ](../../t-sql/functions/is-rolemember-transact-sql.md). 확인 하려면 여부는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 서버 역할의 멤버를 사용 하 여 [IS_SRVROLEMEMBER &#40; Transact SQL &#41; ](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 데이터베이스 역할의 멤버인지 여부를 확인하려면 [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md)를 사용하고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 서버 역할의 멤버인지 여부를 확인하려면 [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)를 사용하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 사용자가 데이터베이스 역할 또는 Windows 도메인 그룹의 멤버인지 확인합니다.  
@@ -105,8 +105,8 @@ IF IS_MEMBER ('ADVWORKS\Shipping') = 1
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Is_srvrolemember&#40; Transact SQL &#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

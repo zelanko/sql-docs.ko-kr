@@ -1,5 +1,5 @@
 ---
-title: SET NOCOUNT (Transact SQL) | Microsoft Docs
+title: SET NOCOUNT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET NOCOUNT 옵션을 ON으로 설정하면 이 개수가 반환되지 않습니다. SET NOCOUNT 옵션을 OFF로 설정하면 이 수가 반환됩니다.  
   
- @@ROWCOUNT 함수는 SET NOCOUNT ON 일 경우에 업데이트 됩니다.  
+ SET NOCOUNT가 ON으로 설정되어 있을 때도 @@ROWCOUNT 함수는 업데이트됩니다.  
   
  SET NOCOUNT 옵션을 ON으로 설정하면 저장 프로시저의 각 문에 대해 클라이언트에게 DONE_IN_PROC 메시지를 보내지 않습니다. 실제 데이터를 많이 반환하지 않는 일부 문이 포함된 저장 프로시저 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 루프가 포함된 프로시저의 경우 SET NOCOUNT를 ON으로 설정하면 네트워크 트래픽이 크게 줄기 때문에 성능이 눈에 띄게 향상됩니다.  
   
@@ -69,7 +69,7 @@ SELECT @NOCOUNT AS NOCOUNT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -97,7 +97,7 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

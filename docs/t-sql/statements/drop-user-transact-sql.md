@@ -1,5 +1,5 @@
 ---
-title: DROP USER (TRANSACT-SQL) | Microsoft Docs
+title: DROP USER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -58,15 +58,15 @@ DROP USER user_name
 ```  
   
 ## <a name="arguments"></a>인수  
- *경우에 존재*  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- 조건에 따라 이미 있는 경우에 사용자를 삭제 합니다.  
+ 이미 있는 경우에만 사용자를 조건적으로 삭제합니다.  
   
  *user_name*  
  이 데이터베이스 내에서 사용자를 식별하는 이름을 지정합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  보안 개체를 소유하는 사용자는 데이터베이스에서 삭제할 수 없습니다. 보안 개체를 소유하는 데이터베이스 사용자를 삭제하려면 먼저 해당 보안 개체의 소유권을 삭제하거나 이전해야 합니다.  
   
  게스트 사용자는 삭제할 수 없지만 master 또는 tempdb 이외의 데이터베이스 내에서 REVOKE CONNECT FROM GUEST를 실행하면 게스트 사용자의 CONNECT 권한이 취소되므로 사용할 수 없게 됩니다.  
@@ -74,7 +74,7 @@ DROP USER user_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY USER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -85,7 +85,7 @@ DROP USER AbolrousHazem;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [ALTER USER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

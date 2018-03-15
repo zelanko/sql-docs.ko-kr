@@ -1,5 +1,5 @@
 ---
-title: GET_TRANSMISSION_STATUS (Transact SQL) | Microsoft Docs
+title: GET_TRANSMISSION_STATUS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
   
 ## <a name="arguments"></a>인수  
  *conversation_id*  
- 대화의 대화 핸들입니다. 이 매개 변수는 형식 **uniqueidentifier**합니다.  
+ 대화의 대화 핸들입니다. 이 매개 변수는 **uniqueidentifier** 형식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nchar**  
   
-## <a name="remarks"></a>주의  
- 지정한 대화에 대한 마지막 전송 시도의 상태를 설명하는 문자열을 반환합니다. 마지막 전송 시도가 성공 했거나 전송 시도가 아직 이루어지지 또는 경우 빈 문자열이 반환 되는 *conversation_handle* 존재 하지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ 지정한 대화에 대한 마지막 전송 시도의 상태를 설명하는 문자열을 반환합니다. 마지막 전송 시도가 성공했거나 전송 시도가 아직 이루어지지 않았거나 *conversation_handle*이 없으면 빈 문자열이 반환됩니다.  
   
  이 함수가 반환하는 정보는 sys.transmission_queue 관리 뷰의 last_transmission_error 열에 표시되는 정보와 동일합니다. 그러나 이 함수는 현재 전송 큐에 메시지가 없는 대화의 전송 상태를 검색하는 데 사용할 수 있습니다.  
   
@@ -86,8 +86,8 @@ SELECT Status =
   
  이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 네트워크에서 통신할 수 있도록 구성되지 않은 것입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [sys.conversation_endpoints&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.transmission_queue&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

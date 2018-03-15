@@ -1,5 +1,5 @@
 ---
-title: ALTER SYMMETRIC KEY (Transact SQL) | Microsoft Docs
+title: ALTER SYMMETRIC KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,31 +72,31 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  DROP ENCRYPTION BY  
  지정된 방법의 암호화를 삭제합니다. 대칭 키의 암호화를 모두 제거할 수는 없습니다.  
   
- 인증서 *Certificate_name*  
+ CERTIFICATE *Certificate_name*  
  대칭 키를 암호화하는 데 사용되는 인증서를 지정합니다. 이 인증서는 데이터베이스에 이미 있어야 합니다.  
   
- 암호 **='***암호***'**  
- 대칭 키를 암호화하는 데 사용되는 암호를 지정합니다. *암호* 의 인스턴스를 실행 하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ PASSWORD **='***password***'**  
+ 대칭 키를 암호화하는 데 사용되는 암호를 지정합니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 따라야 합니다.  
   
- 대칭 키 *Symmetric_Key_Name*  
+ SYMMETRIC KEY *Symmetric_Key_Name*  
  변경하려는 대칭 키를 암호화하는 데 사용되는 대칭 키를 지정합니다. 이 대칭 키는 데이터베이스에 이미 있어야 하며 열려 있어야 합니다.  
   
- 비대칭 키 *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  변경하려는 대칭 키를 암호화하는 데 사용되는 비대칭 키를 지정합니다. 이 비대칭 키는 데이터베이스에 이미 있어야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 > [!CAUTION]  
 >  데이터베이스 마스터 키의 공개 키 대신 암호를 사용하여 대칭 키를 암호화한 경우 TRIPLE_DES 암호화 알고리즘이 사용됩니다. 따라서 AES와 같은 강력한 암호화 알고리즘을 사용하여 만든 키는 더 약한 알고리즘으로 보호됩니다.  
   
  대칭 키의 암호화를 변경하려면 ADD ENCRYPTION 및 DROP ENCRYPTION 구를 사용합니다. 암호화 없이는 키를 절대로 사용할 수 없습니다. 이러한 이유로 인해 최선의 방법은 이전 암호화 형식을 제거하기 전에 새로운 암호화 형식을 추가하는 것입니다.  
   
- 대칭 키의 소유자를 변경 하려면 사용 하 여 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)합니다.  
+ 대칭 키의 소유자를 변경하려면 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)을 사용합니다.  
   
 > [!NOTE]  
 >  RC4 알고리즘은 이전 버전과의 호환성을 위해서만 지원됩니다. 데이터베이스의 호환성 수준이 90 또는 100인 경우 새 자료는 RC4 또는 RC4_128로만 암호화할 수 있습니다. 이 옵션은 사용하지 않는 것이 좋습니다. 대신 AES 알고리즘 중 하나와 같은 새 알고리즘을 사용하십시오. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 RC4 또는 RC4_128을 사용하여 암호화된 자료는 모든 호환성 수준에서 해독할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대칭 키에 대한 ALTER 권한이 필요합니다. 인증서 또는 비대칭 키를 통해 암호화를 추가하는 경우 해당 인증서 또는 비대칭 키에 대한 VIEW DEFINITION 권한이 필요합니다. 인증서 또는 비대칭 키를 통해 암호화를 삭제하는 경우 해당 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -117,10 +117,10 @@ ALTER SYMMETRIC KEY JanainaKey043
 CLOSE SYMMETRIC KEY JanainaKey043;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC key&#40; Transact SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

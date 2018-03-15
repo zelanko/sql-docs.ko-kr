@@ -1,5 +1,5 @@
 ---
-title: "자습서: TRANSACT-SQL 문 작성 | Microsoft Docs"
+title: "자습서: Transact-SQL 문 작성 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2016
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>자습서: Transact-SQL 문 작성
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]쓰기 시작 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 자습서입니다. 이 자습서는 SQL 문을 처음 작성하는 사용자를 위해 제공됩니다. 이 자습서는 새로운 사용자가 테이블을 만들고 데이터를 삽입하는 몇 가지 기본 문을 통해 작업을 시작하는 데 도움이 될 것입니다. 이 자습서에서는 [!INCLUDE[tsql](../includes/tsql-md.md)]가 구현하는 SQL 표준인 [!INCLUDE[msCoName](../includes/msconame-md.md)] 을 사용합니다. 이 자습서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 클래스를 대체하는 것이 아니라 [!INCLUDE[tsql](../includes/tsql-md.md)] 언어를 간략하게 소개하는 데 목적이 있습니다. 의도적으로 간단한 문을 이 자습서에서 사용하고 있으므로 일반적인 프로덕션 데이터베이스에서 볼 수 있는 복잡한 문은 다루지 않습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 문 작성 자습서를 시작합니다[!INCLUDE[tsql](../includes/tsql-md.md)]. 이 자습서는 SQL 문을 처음 작성하는 사용자를 위해 제공됩니다. 이 자습서는 새로운 사용자가 테이블을 만들고 데이터를 삽입하는 몇 가지 기본 문을 통해 작업을 시작하는 데 도움이 될 것입니다. 이 자습서에서는 [!INCLUDE[tsql](../includes/tsql-md.md)]가 구현하는 SQL 표준인 [!INCLUDE[msCoName](../includes/msconame-md.md)] 을 사용합니다. 이 자습서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 클래스를 대체하는 것이 아니라 [!INCLUDE[tsql](../includes/tsql-md.md)] 언어를 간략하게 소개하는 데 목적이 있습니다. 의도적으로 간단한 문을 이 자습서에서 사용하고 있으므로 일반적인 프로덕션 데이터베이스에서 볼 수 있는 복잡한 문은 다루지 않습니다.  
   
 >**참고:** 초보자라면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 문을 작성하는 대신 [!INCLUDE[tsql](../includes/tsql-md.md)] 를 사용하는 것이 더 쉬울 수 있습니다.  
   

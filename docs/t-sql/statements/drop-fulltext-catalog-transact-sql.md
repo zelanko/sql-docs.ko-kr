@@ -1,5 +1,5 @@
 ---
-title: DROP FULLTEXT CATALOG (Transact SQL) | Microsoft Docs
+title: DROP FULLTEXT CATALOG(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ DROP FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>인수  
  *catalog_name*  
- 제거할 카탈로그의 이름입니다. 경우 *catalog_name* 존재 하지 않는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 오류를 반환 하 고 DROP 작업을 수행 하지 않습니다. 명령을 제대로 수행하려면 전체 텍스트 카탈로그의 파일 그룹에 OFFLINE 또는 READONLY가 표시되지 않아야 합니다.  
+ 제거할 카탈로그의 이름입니다. *catalog_name*이 없는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환하고 DROP 작업을 수행하지 않습니다. 명령을 제대로 수행하려면 전체 텍스트 카탈로그의 파일 그룹에 OFFLINE 또는 READONLY가 표시되지 않아야 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 사용자는 전체 텍스트 카탈로그에 대해 DROP 권한이 있거나의 멤버는 **db_owner**, 또는 **db_ddladmin** 고정 데이터베이스 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 사용자는 전체 텍스트 카탈로그에 대해 DROP 사용 권한이 있거나**db_owner** 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [sys.fulltext_catalogs &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [전체 텍스트 카탈로그 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)  
   
   

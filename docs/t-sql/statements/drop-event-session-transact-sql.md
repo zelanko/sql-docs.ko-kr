@@ -1,5 +1,5 @@
 ---
-title: DROP EVENT SESSION (Transact SQL) | Microsoft Docs
+title: DROP EVENT SESSION(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ON SERVER
  *event_session_name*  
  기존 이벤트 세션의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이벤트 세션을 삭제하면 대상 및 세션 매개 변수와 같은 모든 구성 정보가 완전히 제거됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER ANY EVENT SESSION 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -65,7 +65,7 @@ DROP EVENT SESSION evt_spin_lock_diagnosis
 ON SERVER;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [sys.server_event_sessions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)  

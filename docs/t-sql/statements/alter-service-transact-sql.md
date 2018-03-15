@@ -1,5 +1,5 @@
 ---
-title: ALTER SERVICE (Transact SQL) | Microsoft Docs
+title: ALTER SERVICE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,22 +58,22 @@ ALTER SERVICE service_name
  *service_name*  
  변경할 서비스의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다.  
   
- ON 큐 [ *schema_name***합니다.** ] *queue_name*  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
  이 서비스의 새 큐를 지정합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 서비스에 대한 모든 메시지를 현재 큐에서 새 큐로 이동합니다.  
   
- 계약 추가 *contract_name*  
+ ADD CONTRACT *contract_name*  
  이 서비스에서 제공하는 계약 집합에 추가할 계약을 지정합니다.  
   
  DROP CONTRACT *contract_name*  
  이 서비스에서 제공하는 계약 집합에서 삭제할 계약을 지정합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 계약을 사용하는 이 서비스와의 기존 대화에 대해 오류 메시지를 보냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ALTER SERVICE 문이 서비스에서 계약을 삭제하면 이 서비스는 더 이상 해당 계약을 사용하는 대화의 대상이 될 수 없습니다. 따라서 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 해당 계약에 관한 새로운 대화를 이 서비스에 허용하지 않습니다. 계약을 사용하는 기존 대화는 영향을 받지 않습니다.  
   
  서비스에 대한 AUTHORIZATION을 변경하려면 ALTER AUTHORIZATION 문을 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
- 서비스 변경 권한은 기본적으로 서비스의 구성원의 소유자는 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버는 **sysadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 서비스 변경 권한은 기본적으로 서비스 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  
   
@@ -102,9 +102,9 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE SERVICE&#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP 서비스 &#40; Transact SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

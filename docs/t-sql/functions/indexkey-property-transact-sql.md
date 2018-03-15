@@ -1,5 +1,5 @@
 ---
-title: INDEXKEY_PROPERTY (Transact SQL) | Microsoft Docs
+title: INDEXKEY_PROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
   인덱스 키에 대한 정보를 반환합니다. XML 인덱스에 대해서는 NULL을 반환합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신를 사용 하 여 [sys.index_columns&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)를 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,20 +54,20 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
   
 ## <a name="arguments"></a>인수  
  *object_ID*  
- 테이블 또는 인덱싱된 뷰의 개체 ID입니다. *object_ID* 은 **int**합니다.  
+ 테이블 또는 인덱싱된 뷰의 개체 ID입니다. *object_ID* 는 **int**입니다.  
   
  *index_ID*  
- 인덱스 ID입니다. *index_ID* 은 **int**합니다.  
+ 인덱스 ID입니다. *index_ID*는 **int**입니다.  
   
  *key_ID*  
- 인덱스 키 열 위치입니다. *key_ID* 은 **int**합니다.  
+ 인덱스 키 열 위치입니다. *key_ID*는 **int**입니다.  
   
- *속성*  
- 정보를 반환할 속성의 이름입니다. *속성* 문자 문자열이 며 다음 값 중 하나일 수 있습니다.  
+ *property*  
+ 정보를 반환할 속성의 이름입니다. *property*는 문자열이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**ColumnId**|에 있는 열 ID는 *key_ID* 인덱스 위치입니다.|  
+|**ColumnId**|인덱스의 *key_ID*위치에 있는 열 ID입니다.|  
 |**IsDescending**|인덱스 열이 저장되는 순서<br /><br /> 1 = 내림차순 0 = 오름차순|  
   
 ## <a name="return-types"></a>반환 형식  
@@ -101,10 +101,10 @@ Column ID   Asc or Desc order
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [INDEX_COL &#40; Transact SQL &#41;](../../t-sql/functions/index-col-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [INDEX_COL&#40;Transact-SQL&#41;](../../t-sql/functions/index-col-transact-sql.md)   
  [INDEXPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [sys.objects &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "테이블 (자습서)의 데이터 읽기 | Microsoft Docs"
+title: "테이블의 데이터 읽기(자습서) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-4---reading-the-data-in-a-table"></a>단원 1-4-테이블의 데이터 읽기
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]테이블의 데이터를 읽는 SELECT 문을 사용 합니다. SELECT 문은 가장 중요한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 중 하나이며 구문은 다양하게 변형되어 사용됩니다. 이 자습서에서는 5개의 간단한 버전을 사용합니다.  
+# <a name="lesson-1-4---reading-the-data-in-a-table"></a>1-4단원 - 테이블의 데이터 읽기
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] SELECT 문을 사용하여 테이블의 데이터를 읽을 수 있습니다. SELECT 문은 가장 중요한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 중 하나이며 구문은 다양하게 변형되어 사용됩니다. 이 자습서에서는 5개의 간단한 버전을 사용합니다.  
   
 ### <a name="to-read-the-data-in-a-table"></a>테이블의 데이터를 읽으려면  
   
@@ -95,7 +95,7 @@ SELECT 문에서 데이터 작업을 수행하는 데 사용할 수 있는 일�
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [요약: 데이터베이스 개체 만들기](../t-sql/lesson-1-5-summary-creating-database-objects.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SELECT&#40;Transact-SQL&#41;](../t-sql/queries/select-transact-sql.md)  
   
   

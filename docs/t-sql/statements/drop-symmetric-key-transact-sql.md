@@ -1,5 +1,5 @@
 ---
-title: DROP SYMMETRIC KEY (Transact SQL) | Microsoft Docs
+title: DROP SYMMETRIC KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,14 +56,14 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  삭제할 대칭 키의 이름입니다.  
   
  REMOVE PROVIDER KEY  
- EKM(Extensible Key Management) 장치에서 EKM 키를 제거합니다. 확장 가능 키 관리에 대 한 자세한 내용은 참조 하세요. [확장 가능 키 관리 &#40; Ekm&#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ EKM(Extensible Key Management) 장치에서 EKM 키를 제거합니다. 외부 키 관리에 대한 자세한 내용은 [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  키가 현재 세션에 열려 있으면 문이 실패합니다.  
   
- 비대칭 키가 EKM 장치에서 EKM 확장 가능 키 관리 () 키에 매핑된 경우 및 **REMOVE PROVIDER KEY** 옵션 지정 하지 않으면, 키 장치가 아닌 되지만 데이터베이스에서 삭제 되 고 경고가 발생 합니다.  
+ EKM(Extensible Key Management) 장치의 EKM 키에 비대칭 키를 매핑하고 **REMOVE PROVIDER KEY** 옵션을 지정하지 않으면 데이터베이스에서는 키가 삭제되지만 장치에서는 삭제되지 않으며 경고가 발생합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -75,12 +75,12 @@ DROP SYMMETRIC KEY GailSammamishKey6;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [CLOSE SYMMETRIC key&#40; Transact SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

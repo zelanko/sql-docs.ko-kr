@@ -1,5 +1,5 @@
 ---
-title: "REVOKE 가용성 그룹 사용 권한 (Transact SQL) | Microsoft Docs"
+title: REVOKE Availability Group Permissions(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="revoke-availability-group-permissions-transact-sql"></a>가용성 그룹 사용 권한 취소(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Always On 가용성 그룹에 대 한 권한을 취소합니다. 
+  AlwaysOn 가용성 그룹에 대한 사용 권한을 취소합니다. 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,13 +56,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>인수  
- *사용 권한*  
+ *permission*  
  가용성 그룹에 대해 취소할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- 가용성 그룹에 **::***availability_group_name*  
- 사용 권한을 취소할 가용성 그룹을 지정합니다. 범위 한정자 (**::**)가 필요 합니다.  
+ ON AVAILABILITY GROUP **::***availability_group_name*  
+ 사용 권한을 취소할 가용성 그룹을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
   
- {에서 | (를) \<server_principal > 지정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 권한을 취소 되는 로그인입니다.  
+ { FROM | TO } \<server_principal>사용 권한을 취소할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
   
  *SQL_Server_login*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름을 지정합니다.  
@@ -91,10 +91,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  AS *SQL_Server_login*  
  이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
   
-## <a name="remarks"></a>주의  
- 현재 데이터베이스는 경우에 서버 범위의 사용 권한에 대해 취소할 수 **마스터**합니다.  
+## <a name="remarks"></a>Remarks  
+ 현재 데이터베이스가 **master**인 경우에만 서버 범위의 사용 권한을 취소할 수 있습니다.  
   
- 가용성 그룹에 대 한 정보는 [sys.availability_groups&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 카탈로그 뷰에 있습니다. 서버 사용 권한 정보에 표시 됩니다는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰 및 서버 보안 주체에 대 한 정보에 표시 되는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰.  
+ 가용성 그룹에 대한 정보는 [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 카탈로그 뷰에 표시됩니다. 서버 사용 권한 정보는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰에 표시되며 서버 보안 주체 정보는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
   
  가용성 그룹은 서버 수준의 보안 개체입니다. 다음 표에는 가용성 그룹에 대해 취소할 수 있는 가장 구체적이고 제한된 사용 권한과 함께 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한이 나열되어 있습니다.  
   
@@ -106,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  가용성 그룹에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY AVAILABILTIY GROUP 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>3. 이전에 부여한 WITH GRANT OPTION 절 취소  
- WITH GRANT OPTION을 사용 하 여 사용 권한을 부여 된 경우 REVOKE GRANT OPTION FOR 사용 함 WITH GRANT OPTION을 제거 합니다. 다음 예에서는 권한을 부여하고 권한의 WITH GRANT 부분을 제거합니다.  
+ WITH GRANT OPTION을 사용하여 권한을 부여한 경우 REVOKE GRANT OPTION FOR …를 사용하여 WITH GRANT OPTION을 제거합니다. 다음 예에서는 권한을 부여하고 권한의 WITH GRANT 부분을 제거합니다.  
   
 ```  
 USE master;  
@@ -143,11 +143,11 @@ CASCADE
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [GRANT 가용성 그룹 사용 권한 &#40; Transact SQL &#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
- [가용성 그룹 사용 권한 &#40; 거부 Transact SQL &#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [GRANT 가용성 그룹 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
+ [DENY 가용성 그룹 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [sys.availability_groups&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [AlwaysOn 가용성 그룹 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

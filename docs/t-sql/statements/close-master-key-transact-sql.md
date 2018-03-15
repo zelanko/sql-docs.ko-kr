@@ -1,5 +1,5 @@
 ---
-title: CLOSE MASTER KEY (Transact SQL) | Microsoft Docs
+title: CLOSE MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ CLOSE MASTER KEY
 ## <a name="arguments"></a>인수  
  인수가 필요하지 않습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 문은 OPEN MASTER KEY로 수행한 작업을 반대로 수행합니다. CLOSE MASTER KEY는 OPEN MASTER KEY 문을 사용하여 현재 세션에서 데이터베이스 마스터 키를 연 경우에만 성공합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한이 필요 없습니다.  
   
 ## <a name="examples"></a>예  
@@ -65,7 +65,7 @@ CLOSE MASTER KEY;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```  
 USE master;  
@@ -75,9 +75,9 @@ CLOSE MASTER KEY;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [MASTER key&#40; 열기 Transact SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

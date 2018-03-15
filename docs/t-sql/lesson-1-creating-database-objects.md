@@ -1,5 +1,5 @@
 ---
-title: "1 단원: 데이터베이스 개체 만들기 | Microsoft Docs"
+title: "1단원: 데이터베이스 개체 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-1-creating-database-objects"></a>1단원: 데이터베이스 개체 만들기
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]이 단원에서는 데이터베이스 만들기, 데이터베이스에 테이블을 만들려면 다음 액세스 하 고 변경 테이블의 데이터를 하는 방법을 보여 줍니다. 이 단원은 [!INCLUDE[tsql](../includes/tsql-md.md)]사용을 소개하는 데 목적이 있으므로 이러한 문에 사용 가능한 많은 옵션을 사용하거나 설명하지는 않습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 이 단원에서는 데이터베이스를 만들고 데이터베이스에서 테이블을 만든 다음, 테이블의 데이터에 액세스 및 변경하는 방법에 대해 보여 줍니다. 이 단원은 [!INCLUDE[tsql](../includes/tsql-md.md)]사용을 소개하는 데 목적이 있으므로 이러한 문에 사용 가능한 많은 옵션을 사용하거나 설명하지는 않습니다.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 다음과 같은 방법으로 작성하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 제출할 수 있습니다.  
   

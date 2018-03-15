@@ -1,5 +1,5 @@
 ---
-title: "시스템 함수 (Transact SQL) | Microsoft Docs"
+title: "시스템 함수(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 |[@@PACK_RECEIVED](../../t-sql/functions/pack-received-transact-sql.md)|[FORMATMESSAGE](../../t-sql/functions/formatmessage-transact-sql.md)|  
 |[@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)|[GET_FILESTREAM_TRANSACTION_CONTEXT](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)|  
 |[@@TRANCOUNT](../../t-sql/functions/trancount-transact-sql.md)|[GETANSINULL](../../t-sql/functions/getansinull-transact-sql.md)|  
-|[BINARY_CHECKSUM은](../../t-sql/functions/binary-checksum-transact-sql.md)|[HOST_ID](../../t-sql/functions/host-id-transact-sql.md)|  
+|[BINARY_CHECKSUM](../../t-sql/functions/binary-checksum-transact-sql.md)|[HOST_ID](../../t-sql/functions/host-id-transact-sql.md)|  
 |[CHECKSUM](../../t-sql/functions/checksum-transact-sql.md)|[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)|  
 |[COMPRESS](../../t-sql/functions/compress-transact-sql.md)|[ISNULL](../../t-sql/functions/isnull-transact-sql.md)|  
 |[CONNECTIONPROPERTY](../../t-sql/functions/connectionproperty-transact-sql.md)|[ISNUMERIC](../../t-sql/functions/isnumeric-transact-sql.md)|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |[ERROR_MESSAGE](../../t-sql/functions/error-message-transact-sql.md)|[SESSION_ID](../../t-sql/functions/session-id-transact-sql.md)|  
 |[ERROR_NUMBER](../../t-sql/functions/error-number-transact-sql.md)|[XACT_STATE](../../t-sql/functions/xact-state-transact-sql.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

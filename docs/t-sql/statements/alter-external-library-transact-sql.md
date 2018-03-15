@@ -1,7 +1,7 @@
 ---
-title: "외부 라이브러리 (Transact SQL) ALTER | Microsoft Docs"
+title: ALTER EXTERNAL LIBRARY(Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 10/05/2017
+ms.date: 02/25/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -14,18 +14,20 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL LIBRARY
 - ALTER_EXTERNAL_LIBRARY_TSQL
-dev_langs: TSQL
-helpviewer_keywords: ALTER EXTERNAL LIBRARY
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
-# <a name="alter-external-library-transact-sql"></a>ALTER 외부 라이브러리 (Transact SQL)  
+# <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY(Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="syntax"></a>구문
 
-```
+```text
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
 SET <file_spec>
@@ -59,85 +61,88 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-기존 패키지 라이브러리의 이름을 지정합니다. 라이브러리는 사용자에 게 범위가 지정 됩니다. 즉, 라이브러리 이름은 특정 사용자 또는 소유자의 컨텍스트 내에서 고유 간주 됩니다.
+기존 패키지 라이브러리의 이름을 지정합니다. 라이브러리는 사용자로 범위 지정됩니다. 즉, 라이브러리 이름은 특정 사용자 또는 소유자의 컨텍스트 내에서 고유한 것으로 간주됩니다.
+
+라이브러리 이름은 임의로 할당될 수 없습니다. 즉, 호출 런타임이 패키지를 로드할 때 예상하는 이름을 사용해야 합니다.
 
 **owner_name**
 
-사용자 또는 외부 라이브러리를 소유 하는 역할의 이름을 지정 합니다.
+외부 라이브러리를 소유하는 사용자 또는 역할의 이름을 지정합니다.
 
 **file_spec**
 
-특정 플랫폼에 대 한 패키지의 콘텐츠를 지정합니다. 플랫폼 마다 아티팩트 파일을 하나만 사용할 수 있습니다.
+특정 플랫폼에 대한 패키지의 콘텐츠를 지정합니다. 플랫폼당 한 개의 파일 아티팩트만 지원됩니다.
 
-로컬 경로 또는 네트워크 경로 형식의 파일을 지정할 수 있습니다. 데이터 원본 옵션을 지정 하는 경우 파일 이름은에서 참조 하는 컨테이너와 관련 하 여 상대 경로 수는 `EXTERNAL DATA SOURCE`합니다.
+파일은 로컬 경로 또는 네트워크 경로 형식으로 지정할 수 있습니다. 데이터 원본 옵션이 지정된 경우, 파일 이름은 `EXTERNAL DATA SOURCE`에 참조된 컨테이너에 대한 상대 경로일 수 있습니다.
 
-필요에 따라 파일에는 OS 플랫폼을 지정할 수 있습니다. 하나의 파일 아티팩트 또는 콘텐츠는 런타임 또는 특정 언어에 대 한 각 운영 체제 플랫폼에 대해 허용 됩니다.
+선택적으로 파일에 대한 OS 플랫폼을 지정할 수 있습니다. 특정 언어 또는 런타임에 대해 각 OS 플랫폼당 한 개의 파일 아티팩트 또는 콘텐츠만 허용됩니다.
 
-**DATA_SOURCE external_data_source_name =**
+**DATA_SOURCE = external_data_source_name**
 
-라이브러리 파일의 위치를 포함 하는 외부 데이터 원본의 이름을 지정 합니다. 이 위치는 Azure blob 저장소 경로 참조 해야 합니다. 사용 하 여 외부 데이터 원본을 만들려면 [외부 데이터 원본 만들기 (Transact SQL)](create-external-data-source-transact-sql.md)합니다.
+라이브러리 파일의 위치를 포함하는 외부 데이터 원본의 이름을 지정합니다. 이 위치는 Azure Blob Storage 경로를 참조해야 합니다. 외부 데이터 원본을 만들려면 [CREATE EXTERNAL DATA SOURCE(Transact-SQL)](create-external-data-source-transact-sql.md)를 사용합니다.
 
 > [!IMPORTANT] 
-> 현재 SQL Server 2017 릴리스에서 데이터 원본으로 blob 지원 되지 않습니다.
+> 현재 Blob는 SQL Server 2017 릴리스에서 데이터 원본으로 지원되지 않습니다.
 
 **library_bits**
 
-어셈블리에 유사한 16 진수 리터럴로 패키지의 콘텐츠를 지정합니다. 이 옵션에는 사용자가 필요한 권한이 없는 파일 경로 서버에서 액세스할 수 있는 임의의 폴더로 않지만 경우 라이브러리를 변경 하는 라이브러리를 만들 수 있습니다.
+패키지의 콘텐츠를 어셈블리와 유사한 16진수 리터럴로 지정합니다. 
 
-**플랫폼 = WINDOWS**
+이 옵션은 라이브러리를 변경하기 위해 필요한 권한을 가지고 있지만 서버에 대한 파일 액세스가 제한되어 콘텐츠를 서버에서 액세스할 수 있는 경로에 저장할 수 없는 경우 유용합니다.
 
-라이브러리의 콘텐츠에 대 한 플랫폼을 지정합니다. 다른 플랫폼을 추가 하려면 기존 라이브러리를 수정 하는 경우이 값이 필요 합니다. Windows가 지원 되는 유일한 플랫폼입니다.
+그 대신에 패키지 콘텐츠를 이진 형식의 변수로 전달할 수 있습니다.
 
-## <a name="remarks"></a>주의
+**PLATFORM = WINDOWS**
 
-R 언어에 대 한 패키지를 사용 하 여 압축 된 보관 파일의 형태로 준비 해야는 합니다. Windows 용 ZIP 확장입니다. 현재 Windows 플랫폼만 지원 됩니다.  
+라이브러리의 콘텐츠에 대한 플랫폼을 지정합니다. 이 값은 다른 플랫폼을 추가하기 위해 기존 라이브러리를 수정할 때 필요합니다. Windows 플랫폼만 지원됩니다.
 
-`ALTER EXTERNAL LIBRARY` 문이 데이터베이스에만 라이브러리 비트를 업로드 합니다. 실행 될 때까지 사용자는 외부 스크립트를 나중에 실행 하 여 수정 된 라이브러리 실제로 설치 되지 않습니다 [(Transact SQL) sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)합니다.
+## <a name="remarks"></a>Remarks
 
-## <a name="permissions"></a>Permissions
+R 언어의 경우 패키지를 Windows용 .ZIP 확장명의 압축된 보관 파일 형태로 준비해야 합니다. 현재 Windows 플랫폼만 지원됩니다.  
 
-필요는 `ALTER ANY EXTERNAL LIBRARY` 권한. 외부 라이브러리를 만든 사용자는 해당 외부 라이브러리를 변경할 수 있습니다.
+`ALTER EXTERNAL LIBRARY` 문은 라이브러리 비트를 데이터베이스에 업로드하기만 합니다. 수정된 라이브러리는 사용자가 라이브러리를 호출하는 [sp_execute_external_script(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)의 코드를 실행할 때 설치됩니다.
+
+## <a name="permissions"></a>사용 권한
+
+`ALTER ANY EXTERNAL LIBRARY` 권한이 필요합니다. 외부 라이브러리를 만든 사용자가 해당 외부 라이브러리를 변경할 수 있습니다.
 
 ## <a name="examples"></a>예
 
-다음 예에서는 라는 customPackage 외부 라이브러리를 수정 합니다.
+다음 예제에서는 `customPackage`라는 외부 라이브러리를 수정합니다.
 
-### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>1. 파일을 사용 하는 라이브러리의 내용을 대체합니다
+### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>1. 파일을 사용하여 라이브러리의 콘텐츠 바꾸기
 
-다음 예제에서는 업데이트 된 비트를 포함 하는 압축 된 파일을 사용 하 여 customPackage 라는 외부 라이브러리를 수정 합니다.
+다음 예제에서는 업데이트된 비트가 포함된 압축된 파일을 사용하여 `customPackage`라는 외부 라이브러리를 수정합니다.
 
 ```sql
 ALTER EXTERNAL LIBRARY customPackage 
 SET 
   (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
-```  
-
-업데이트 된 라이브러리를 설치 하려면 저장된 프로시저를 실행 `sp_execute_external_script`합니다.
-
-```sql   
-EXEC sp_execute_external_script 
-@language =N'R', 
-@script=N'
-# load customPackage
-library(customPackage)
-# call customPackageFunc
-OutputDataSet <- customPackageFunc()
-'
-WITH RESULT SETS (([result] int));
 ```
 
-### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>2. 바이트 스트림을 사용 하 여 기존 라이브러리를 변경 합니다.
+업데이트된 라이브러리를 설치하려면 저장 프로시저 `sp_execute_external_script`를 실행합니다.
 
-다음 예제에서는 새 비트 리터럴는 16 진수 값으로 전달 하 여 기존 라이브러리를 변경 합니다.
+```sql
+EXEC sp_execute_external_script 
+@language =N'R', 
+@script=N'library(customPackage)'
+;
+```
+
+### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>2. 바이트 스트림을 사용하여 외부 라이브러리 변경
+
+다음 예제는 새 비트를 16진수 리터럴로 전달하여 기존 라이브러리를 변경합니다.
 
 ```SQL
 ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-## <a name="see-also"></a>참고 항목  
+이 코드 샘플에서 변수 콘텐츠는 가독성을 위해 잘립니다.
 
-[외부 라이브러리 (Transact SQL) 만들기](create-external-library-transact-sql.md)
-[DROP 외부 라이브러리 (Transact SQL)](drop-external-library-transact-sql.md)  
+## <a name="see-also"></a>관련 항목:
+
+[CREATE EXTERNAL LIBRARY(Transact-SQL)](create-external-library-transact-sql.md)
+[DROP EXTERNAL LIBRARY(Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 

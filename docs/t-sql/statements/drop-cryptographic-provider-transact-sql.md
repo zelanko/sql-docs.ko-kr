@@ -1,5 +1,5 @@
 ---
-title: DROP CRYPTOGRAPHIC PROVIDER (Transact SQL) | Microsoft Docs
+title: DROP CRYPTOGRAPHIC PROVIDER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  *provider_name*  
  EKM(확장 가능 키 관리) 공급자의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  EKM(Extensible Key Management) 공급자를 삭제하려면 공급자를 사용하는 모든 세션을 중지해야 합니다.  
   
  EKM 공급자는 매핑된 자격 증명이 없는 경우에만 삭제할 수 있습니다.  
   
  EKM 공급자를 삭제할 때 EKM 공급자에 매핑된 키가 있으면 해당 키의 GUID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장됩니다. 공급자가 같은 키 GUID로 나중에 만들어진 경우 해당 키는 다시 사용됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -73,7 +73,7 @@ DROP CRYPTOGRAPHIC PROVIDER SecurityProvider;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [ALTER CRYPTOGRAPHIC PROVIDER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)   

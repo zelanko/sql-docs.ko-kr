@@ -1,5 +1,5 @@
 ---
-title: "STMLineFromWKB (geometry 데이터 형식) | Microsoft Docs"
+title: "STMLineFromWKB(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-반환 된 **geometryMultiLineString** Open Geospatial Consortium (OGC) wkb (WELL-KNOWN Binary) 표현의 인스턴스.
+OGC(Open Geospatial Consortium) WKB(WELL-KNOWN Binary) 표현에서 **geometryMultiLineString** 인스턴스를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -45,20 +45,20 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
 ## <a name="arguments"></a>인수  
  *WKB_multilinestring*  
- WKB 표현입니다는 **geometryMultiLineString** 인스턴스를 반환 합니다. *WKB_multilinestring* 는 **varbinary (max)** 식입니다.  
+ 반환할 **geometryMultiLineString** 인스턴스의 WKT 표현입니다. *WKB_multilinestring*은 **varbinary(max)** 식입니다.  
   
  *SRID*  
- **int** spatial 나타내는 식 참조의 ID (SRID)는 **geometryMultiLineString** 인스턴스를 반환 합니다.  
+ 반환할 **geometryMultiLineString** 인스턴스의 SRID(spatial reference ID)를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
  OGC 형식: **MultiLineString**  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 throw 된 **FormatException** 입력이 잘못 된 경우.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STMLineFromWKB()`를 사용하여 `geometry` 인스턴스를 만듭니다.  
@@ -69,7 +69,7 @@ SET @g = geometry::STMLineFromWKB(0x01050000000200000001020000000200000000000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OGC 정적 기하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

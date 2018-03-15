@@ -1,5 +1,5 @@
 ---
-title: '@@NESTLEVEL (Transact SQL) | Microsoft Docs'
+title: '@@NESTLEVEL(Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;Nestlevel은 (Transact SQL)
+# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   로컬 서버의 현재 저장 프로시저 실행의 중첩 수준을 반환합니다(초기값 0).  
@@ -49,14 +49,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  저장 프로시저가 다른 저장 프로시저를 호출하거나 CLR(공용 언어 런타임) 루틴, 유형 또는 집계를 참조하여 관리 코드를 실행할 때마다 중첩 수준이 증가합니다. 최대값 32를 초과하면 트랜잭션이 종료됩니다.  
   
- @ 때@NESTLEVEL 내에서 실행 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문자열을 반환 되는 값은 1 + 현재 중첩 수준입니다. @ 때@NESTLEVEL 실행 동적으로 sp_executesql을 사용 하 여 반환 값은 현재 중첩 수준 + 2입니다.  
+ @@NESTLEVEL이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문자열 내에서 실행되는 경우 현재 중첩 수준 + 1 값이 반환됩니다. @@NESTLEVEL이 sp_executesql을 사용하여 동적으로 실행되는 경우 현재 중첩 수준 + 2 값이 반환됩니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>1. 를 사용 하 여@NESTLEVEL 프로시저에서  
+### <a name="a-using-nestlevel-in-a-procedure"></a>1. 프로 시저에서 @@NESTLEVEL 사용  
  다음 예에서는 다른 프로시저를 호출하는 프로시저와 각각의 `@@NESTLEVEL` 설정을 표시하는 프로시저를 만듭니다.  
   
 ```  
@@ -91,8 +91,8 @@ Inner Level
 2
 ```  
   
-### <a name="b-calling-nestlevel"></a>2. 호출@NESTLEVEL  
- 다음 예제에서 반환 된 값의 차이 보여 줍니다. `SELECT`, `EXEC`, 및 `sp_executesql` 호출 각각 `@@NESTLEVEL`합니다.  
+### <a name="b-calling-nestlevel"></a>2. @@NESTLEVEL 호출  
+ 다음 예에서는 `SELECT`, `EXEC` 및 `sp_executesql`에서 각각 `@@NESTLEVEL`을 호출할 때 반환되는 값의 차이를 보여 줍니다.  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  
@@ -126,7 +126,7 @@ TwoGreater
 (1 row(s) affected)
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구성 함수&#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [저장 프로시저 만들기](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [@@TRANCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

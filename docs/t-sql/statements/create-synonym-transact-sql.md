@@ -1,5 +1,5 @@
 ---
-title: CREATE SYNONYM (Transact SQL) | Microsoft Docs
+title: CREATE SYNONYM(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -70,7 +70,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="arguments"></a>인수  
  *schema_name_1*  
- 동의어가 생성되는 스키마를 지정합니다. 경우 *스키마* 를 지정 하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 사용자의 기본 스키마를 사용 합니다.  
+ 동의어가 생성되는 스키마를 지정합니다. *schema*를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 현재 사용자의 기본 스키마를 사용합니다.  
   
  *synonym_name*  
  새 동의어의 이름입니다.  
@@ -81,17 +81,17 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  기준 개체가 있는 서버의 이름입니다.  
   
  *database_name*  
- 기준 개체가 있는 데이터베이스의 이름입니다. 경우 *database_name* 를 지정 하지 않으면 현재 데이터베이스의 이름이 사용 됩니다.  
+ 기준 개체가 있는 데이터베이스의 이름입니다. *database_name*을 지정하지 않으면 현재 데이터베이스의 이름이 사용됩니다.  
   
  *schema_name_2*  
- 기준 개체의 스키마 이름입니다. 경우 *schema_name* 지정 하지 않으면 현재 사용자의 기본 스키마가 사용 합니다.  
+ 기준 개체의 스키마 이름입니다. *schema_name*을 지정하지 않으면 현재 사용자의 기본 스키마가 사용됩니다.  
   
  *object_name*  
  동의어가 참조하는 기준 개체의 이름입니다.  
   
  database_name이 현재 데이터베이스이거나 database_name이 tempdb이고 object_name이 #으로 시작하는 경우 Microsoft Azure SQL Database는 세 부분으로 구성된 이름 형식 database_name.[schema_name].object_name을 지원합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  동의어를 만들 때 기준 개체가 존재해야 할 필요는 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 기준 개체의 존재 여부를 런타임에 검사합니다.  
   
  다음과 같은 유형의 개체에 대해 동의어를 만들 수 있습니다.  
@@ -103,15 +103,15 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 |복제 필터 프로시저|확장 저장 프로시저|  
 |SQL 스칼라 함수|SQL 테이블 반환 함수|  
 |SQL 인라인 테이블 반환 함수|SQL 저장 프로시저|  
-|보기|테이블<sup>1</sup> (사용자 정의 됨)|  
+|보기|테이블<sup>1</sup>(사용자 정의)|  
   
- <sup>1 로컬 및 전역 임시 테이블이 포함 됩니다.</sup>  
+ <sup>1 로컬 및 전역 임시 테이블이 포함됩니다</sup>  
   
  함수 기본 개체의 네 부분으로 된 이름은 지원되지 않습니다.  
   
  동의어는 동적 SQL에서 생성, 삭제 및 참조할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  지정된 스키마에서 동의어를 만들려면 사용자에게 CREATE SYNONYM 권한이 있어야 하며 스키마를 소유하거나 ALTER SCHEMA 권한이 있어야 합니다.  
   
  CREATE SYNONYM 권한은 부여할 수 있는 권한입니다.  
@@ -199,8 +199,8 @@ SET @Amt = 15;
 SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [DROP synonym&#40; Transact SQL &#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
  [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

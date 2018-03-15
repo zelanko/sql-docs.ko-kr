@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 설치 | Microsoft 문서"
 ms.custom: 
-ms.date: 08/31/2016
+ms.date: 02/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -14,17 +14,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 helpviewer_keywords:
 - PolyBase, installation
-ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4aefc608d16245a2cb28245a87beb6b165489fab
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="polybase-installation"></a>PolyBase 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 02/12/2018
   
 -   Microsoft .NET Framework 4.5  
   
--   Oracle Java SE RunTime Environment(JRE) 버전 7.51 이상(64비트)( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 또는 [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 작동). [Java SE 다운로드](http://www.oracle.com/technetwork/java/javase/downloads/index.html)로 이동합니다. JRE가 없으면 설치 관리자가 실패합니다.  
+-   Oracle Java SE RunTime Environment(JRE) 버전 7.51 또는 8이상(64비트) ([JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 또는 [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 작동). [Java SE 다운로드](http://www.oracle.com/technetwork/java/javase/downloads/index.html)로 이동합니다. JRE가 없으면 설치 관리자가 실패합니다. JRE 9 이상은 SQL Server 2017 누적 업데이트 4 이상이 있어야 작동합니다. JRE 8을 설치하고 PolyBase를 설치한 다음, JRE 9로 업그레이드할 수 있습니다. 
   
 -   최소 메모리: 4GB  
   

@@ -1,5 +1,5 @@
 ---
-title: DROP MASTER KEY (Transact SQL) | Microsoft Docs
+title: DROP MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ DROP MASTER KEY
 ## <a name="arguments"></a>인수  
  이 문에는 인수가 필요하지 않습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  데이터베이스의 개인 키가 마스터 키로 보호되면 삭제가 실패합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -68,8 +68,8 @@ DROP MASTER KEY;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 마스터 키를 제거 합니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 마스터 키를 제거합니다.  
   
 ```  
 USE master;  
@@ -77,12 +77,12 @@ DROP MASTER KEY;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [MASTER key&#40; 열기 Transact SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
- [CLOSE MASTER key&#40; Transact SQL &#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
- [BACKUP MASTER key&#40; Transact SQL &#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
- [RESTORE MASTER key&#40; Transact SQL &#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
  [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

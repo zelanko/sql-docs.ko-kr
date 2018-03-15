@@ -1,5 +1,5 @@
 ---
-title: ALTER AUTHORIZATION (TRANSACT-SQL) | Microsoft Docs
+title: ALTER AUTHORIZATION(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -127,43 +127,43 @@ ALTER AUTHORIZATION ON
 ```    
     
 ## <a name="arguments"></a>인수    
-\<class_type > 소유자가 변경 될 엔터티의 보안 개체 클래스입니다. OBJECT가 기본값입니다.    
+\<class_type> 소유자가 변경될 엔터티의 보안 개체 클래스입니다. OBJECT가 기본값입니다.    
     
 |||    
 |-|-|    
-|OBJECT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL 데이터 웨어하우스 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다.|    
-|ASSEMBLY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|    
-|ASYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|    
-|AVAILABILITY GROUP |**적용 대상**: SQL Server 2012 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.|
-|CERTIFICATE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|    
-|CONTRACT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.|    
-|DATABASE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다. 자세한 내용은 참조 [ALTER 권한 부여에 대 한 데이터베이스](#AlterDB) 아래 섹션.|    
-|ENDPOINT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.|    
-|FULLTEXT CATALOG|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|    
-|FULLTEXT STOPLIST|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|    
-|MESSAGE TYPE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.|    
-|REMOTE SERVICE BINDING|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.|    
-|ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|    
-|ROUTE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.|    
-|SCHEMA|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL 데이터 웨어하우스 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다.|    
-|SEARCH PROPERTY LIST|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|    
-|SERVER ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.|    
-|SERVICE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.|    
-|SYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|    
-|TYPE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|    
-|XML SCHEMA COLLECTION|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|    
+|OBJECT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]까지.|    
+|ASSEMBLY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
+|ASYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
+|AVAILABILITY GROUP |**적용 대상**: SQL Server 2012부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|
+|CERTIFICATE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
+|CONTRACT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
+|DATABASE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지. 자세한 내용은 아래의 [데이터베이스에 대한 ALTER AUTHORIZATION](#AlterDB) 섹션 참조하세요.|    
+|ENDPOINT|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
+|FULLTEXT CATALOG|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
+|FULLTEXT STOPLIST|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
+|MESSAGE TYPE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
+|REMOTE SERVICE BINDING|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
+|ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
+|ROUTE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
+|SCHEMA|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]까지.|    
+|SEARCH PROPERTY LIST|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
+|SERVER ROLE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
+|SERVICE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지.|    
+|SYMMETRIC KEY|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
+|TYPE|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
+|XML SCHEMA COLLECTION|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.|    
     
  *entity_name*    
  엔터티의 이름입니다.    
     
  *principal_name* | 스키마 소유자    
- 엔터티를 소유하게 될 보안 주체의 이름입니다. 데이터베이스 보안 주체 즉, 데이터베이스 사용자 또는 역할이 데이터베이스 개체를 소유해야 합니다. 서버 보안 주체(로그인)가 서버 개체(예: 데이터베이스)를 소유해야 합니다. 지정 **스키마 소유자** 으로 *principal_name* 를 나타내는 개체는 개체의 스키마를 소유 하는 사용자가 소유 해야 합니다.    
+ 엔터티를 소유하게 될 보안 주체의 이름입니다. 데이터베이스 보안 주체 즉, 데이터베이스 사용자 또는 역할이 데이터베이스 개체를 소유해야 합니다. 서버 보안 주체(로그인)가 서버 개체(예: 데이터베이스)를 소유해야 합니다. **스키마 소유자**를 *principal_name*으로 지정하여 개체의 스키마를 소유하는 보안 주체가 해당 개체를 소유하도록 표시합니다.    
     
-## <a name="remarks"></a>주의    
+## <a name="remarks"></a>Remarks    
  ALTER AUTHORIZATION을 사용하면 소유자가 있는 엔터티의 소유권을 변경할 수 있습니다. 데이터베이스 수준 엔터티의 소유권은 데이터베이스 수준의 모든 보안 주체에게 이전할 수 있습니다. 서버 수준 엔터티의 소유권은 서버 수준 보안 주체에게만 이전할 수 있습니다.    
     
 > [!IMPORTANT]    
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 사용자는 다른 데이터베이스 사용자가 소유한 스키마에 포함된 OBJECT 또는 TYPE을 소유할 수 있습니다. 이 동작은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경되었습니다. 자세한 내용은 참조 [OBJECTPROPERTY &#40; Transact SQL &#41; ](../../t-sql/functions/objectproperty-transact-sql.md) 및 [TYPEPROPERTY &#40; Transact SQL &#41; ](../../t-sql/functions/typeproperty-transact-sql.md).    
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 사용자는 다른 데이터베이스 사용자가 소유한 스키마에 포함된 OBJECT 또는 TYPE을 소유할 수 있습니다. 이 동작은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경되었습니다. 자세한 내용은 [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md) 및 [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)을 참조하세요.    
     
  "object" 형식의 스키마 수준 엔터티인 테이블, 뷰, 함수, 프로시저, 큐 및 동의어 엔터티의 소유권은 이전할 수 있습니다.    
     
@@ -181,7 +181,7 @@ ALTER AUTHORIZATION ON
  다음 사항도 유의해야 합니다.    
     
 > [!IMPORTANT]    
->  개체의 소유자를 확인 하는 신뢰할 수 있는 유일한 방법은 하는 쿼리는 **sys.objects** 카탈로그 뷰. 형식의 소유자를 확인하는 신뢰할 수 있는 유일한 방법은 TYPEPROPERTY 함수를 사용하는 것입니다.    
+>  개체의 소유자를 확인하는 신뢰할 수 있는 유일한 방법은 **sys.objects** 카탈로그 뷰를 쿼리하는 것입니다. 형식의 소유자를 확인하는 신뢰할 수 있는 유일한 방법은 TYPEPROPERTY 함수를 사용하는 것입니다.    
     
 ## <a name="special-cases-and-conditions"></a>특수 상황과 상태    
  다음 표에서는 인증 변경에 적용되는 특수 상황, 예외 및 상태를 보여 줍니다.    
@@ -196,47 +196,47 @@ ALTER AUTHORIZATION ON
 |CERTIFICATE 또는 ASYMMETRIC KEY|이러한 엔터티의 소유권을 역할이나 그룹에 이전할 수 없습니다.|    
 |ENDPOINT|보안 주체는 로그인이어야 합니다.|    
   
-## <a name="AlterDB"></a>데이터베이스에 대 한 ALTER 권한 부여  
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
-### <a name="for-sql-server"></a>SQL server:  
-**새 소유자에 대 한 요구 사항:**   
-새 소유자 보안 주체에는 다음 중 하나 여야 합니다.  
--   SQL Server 인증 로그인 합니다.  
--   Windows 사용자 (그룹이 아닌)를 나타내는 Windows 인증 로그인 합니다.  
--   Windows 그룹을 나타내는 Windows 인증 로그인을 통해 인증 하는 Windows 사용자입니다.  
+## <a name="AlterDB"></a> 데이터베이스에 대한 ALTER AUTHORIZATION  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+### <a name="for-sql-server"></a>SQL Server의 경우.  
+**새 소유자 요구 사항:**   
+새 소유자 보안 주체는 다음 중 하나여야 합니다.  
+-   SQL Server 인증 로그인입니다.  
+-   Windows 사용자(그룹이 아닌)를 나타내는 Windows 인증 로그인입니다.  
+-   Windows 그룹을 나타내는 Windows 인증 로그인을 통해 인증하는 Windows 사용자입니다.  
   
-**ALTER AUTHORIZATION 문을 실행 하는 사용자에 대 한 요구 사항:**  
-구성원이 아닌 경우는 **sysadmin** 고정 서버 역할 있어야 이상 데이터베이스에 대 한 TAKE OWNERSHIP 권한이 하 고 새 소유자 로그인에 대 한 IMPERSONATE 권한이 있어야 합니다.   
+**ALTER AUTHORIZATION 문을 실행하는 사용자 요구 사항:**  
+**sysadmin** 고정 서버 역할의 구성원이 아닌 경우 최소한 데이터베이스에 대한 TAKE OWNERSHIP 권한과 함께 새 소유자 로그인에 대한 IMPERSONATE 권한이 있어야 합니다.   
 
-### <a name="for-azure-sql-database"></a>Azure SQL 데이터베이스의 경우:  
-**새 소유자에 대 한 요구 사항:**   
-새 소유자 보안 주체에는 다음 중 하나 여야 합니다.  
--   SQL Server 인증 로그인 합니다.  
--   페더레이션된 사용자 (그룹이 아닌) Azure AD에 존재 합니다.  
--   관리 되는 사용자 (그룹이 아닌) 또는 Azure AD에 응용 프로그램입니다.    
+### <a name="for-azure-sql-database"></a>Azure SQL 데이터베이스의 경우.  
+**새 소유자 요구 사항:**   
+새 소유자 보안 주체는 다음 중 하나여야 합니다.  
+-   SQL Server 인증 로그인입니다.  
+-   Azure AD에 있는 페더레이션 사용자(그룹이 아닌)입니다.  
+-   Azure AD에 있는 응용 프로그램 또는 관리 사용자(그룹이 아닌)입니다.    
 
 > [!NOTE]  
-> 새 소유자는 Azure Active Directory 사용자 인 경우 여기서 새 소유자 새 DBO 될 데이터베이스에 사용자로 존재할 수 없습니다. 새 사용자에 게 데이터베이스 소유권을 변경 하는 ALTER AUTHORIZATION 문을 실행 하기 전에 데이터베이스에서 이러한 Azure AD 사용자를 먼저 제거 되어야 합니다. SQL 데이터베이스를 사용 하 여 Azure Active Directory 사용자를 구성 하는 방법에 대 한 자세한 내용은 참조 [SQL 데이터베이스 또는 SQL 데이터 웨어하우스를 사용 하 여 Azure Active Directory 인증 여 연결할](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)합니다.   
+> 새 소유자는 Azure Active Directory 사용자인 경우 새 소유자가 새 DBO가 될 데이터베이스에서 사용자로 존재할 수 없습니다. 이러한 Azure AD 사용자는 새 사용자에게 데이터베이스 소유권을 변경하는 ALTER AUTHORIZATION 문을 실행하기 전에 먼저 데이터베이스에서 제거되어야 합니다. SQL Database를 사용하여 Azure Active Directory 사용자 구성에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 또는 SQL Data Warehouse에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요.   
   
-**ALTER AUTHORIZATION 문을 실행 하는 사용자에 대 한 요구 사항:**  
-해당 데이터베이스의 소유자를 변경 하는 대상 데이터베이스에 연결 해야 합니다.  
+**ALTER AUTHORIZATION 문을 실행하는 사용자 요구 사항:**  
+해당 데이터베이스의 소유자를 변경하려면 대상 데이터베이스에 연결해야 합니다.  
 
 다음과 같은 형식의 계정이 데이터베이스의 소유자를 변경할 수 있습니다. 
-* 서비스 수준 보안 주체 로그인 합니다. (논리 서버를 만들 때 사용자를 프로 비전 SQL Azure 관리자입니다.)  
-* Azure SQL Server에 대 한 Azure Active Directory 관리자.   
-* 데이터베이스의 현재 소유자입니다.   
+* 서버 수준 보안 주체 로그인입니다. (논리 서버를 만들 때 SQL Azure 관리자가 프로비전합니다.)  
+* Azure SQL Server용 Azure Active Directory 관리자입니다.   
+* 현재 데이터베이스 소유자입니다.   
  
   
-다음 표에서 요구 사항을 요약 합니다.  
+다음 테이블은 요구 사항에 대한 요약입니다.  
   
-Executor  |대상  |결과    
+실행기  |대상  |결과    
 ---------|---------|---------  
 SQL Server 인증 로그인     |SQL Server 인증 로그인         |성공  
 SQL Server 인증 로그인     |Azure AD 사용자         |실패           
 Azure AD 사용자     |SQL Server 인증 로그인         |성공           
 Azure AD 사용자     |Azure AD 사용자         |성공           
   
-Azure AD의 소유자는 데이터베이스의 사용자 데이터베이스에서 다음 TRANSACT-SQL 명령을 실행 확인 하려면 (이 예제의 `testdb`).  
+데이터베이스의 Azure AD 소유자를 확인하려면 사용자 데이터베이스에서(이 예제의 `testdb`에서) 다음의 Transact-SQL 명령을 실행합니다.  
     
 ```    
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID   
@@ -244,8 +244,8 @@ FROM sys.databases
 WHERE name = 'testdb';  
 ```    
     
-출력에 할당 된 Azure AD ObjectID에 해당 하는 식별자 (예: 6D8B81F6-7C79-444C-8858-4AF896C03C67) 됩니다.`richel@cqclinic.onmicrosoft.com`  
-SQL Server 인증 로그인 사용자가 데이터베이스 소유자, 데이터베이스 소유자를 확인 하려면 master 데이터베이스에 다음 문을 실행 합니다.  
+출력은 `richel@cqclinic.onmicrosoft.com`에 할당된 Azure AD ObjectID에 해당하는 식별자(예, 6D8B81F6-7C79-444C-8858-4AF896C03C67) 입니다  
+SQL Server 인증 로그인 사용자가 데이터베이스 소유자인 경우 해당 데이터베이스 소유자를 확인하려면 마스터 데이터베이스에서 다음 명령문을 실행합니다.  
     
 ```    
 SELECT d.name, d.owner_sid, sl.name   
@@ -257,34 +257,34 @@ ON d.owner_sid = sl.sid;
   
 ### <a name="best-practice"></a>최선의 구현 방법  
   
-데이터베이스의 개별 소유자로 Azure AD 사용자가 사용 하는 대신 사용 하 여 Azure AD 그룹의 구성원으로는 **db_owner** 고정된 데이터베이스 역할입니다. 다음 단계에서는 데이터베이스 소유자로 비활성화 된 로그인을 구성 하 고 Azure Active Directory 그룹을 확인 하는 방법을 보여 줍니다 (`mydbogroup`)의 멤버는 **db_owner** 역할입니다. 
-1.  Azure AD 관리 및 사용할 수 없는 SQL Server 인증 로그인에 데이터베이스의 소유자 변경에 따라 SQL Server에 로그인 합니다. 예를 들어 사용자 데이터베이스에서 다음을 실행 합니다.  
+데이터베이스의 개별 소유자로 Azure AD 사용자를 사용하는 대신 **db_owner** 고정된 데이터베이스 역할의 구성원으로 Azure AD 그룹을 사용합니다. 다음 단계에서는 데이터베이스 소유자로 비활성화된 로그인을 구성하고 Azure Active Directory 그룹(`mydbogroup`)을 **db_owner** 역할의 멤버가 되게 하는 방법을 보여줍니다. 
+1.  Azure AD 관리자로서 SQL Server에 로그인해 데이터베이스의 소유자를 비활성화된 SQL Server 인증 로그인으로 변경합니다. 예를 들어 사용자 데이터베이스에서 다음을 실행 합니다.  
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  데이터베이스를 소유 하 고 사용자 데이터베이스에 대 한 사용자로 추가 해야 하는 Azure AD 그룹을 만듭니다. 예를 들어  
+2.  데이터베이스를 소유하고 사용자 데이터베이스에 사용자로서 추가해야 하는 Azure AD 그룹을 만듭니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  사용자 데이터베이스에서 Azure AD 그룹을 나타내는 사용자를 추가 **db_owner** 고정된 데이터베이스 역할입니다. 예를 들어  
+3.  사용자 데이터베이스에서 Azure AD 그룹을 나타내는 사용자를 **db_owner** 고정 데이터베이스 역할에 추가합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
-이제는 `mydbogroup` 구성원의 구성원으로 데이터베이스를 중앙에서 관리할 수는 **db_owner** 역할입니다.  
-- 이 그룹의 구성원은 Azure AD 그룹에서 제거 됩니다,이 데이터베이스 대 한 dbo 권한이 자동으로 손실 합니다.  
-- 마찬가지로에 새 멤버를 추가 하는 경우 `mydbogroup` Azure AD 그룹에 자동으로 수이 데이터베이스에 대 한 dbo 액세스 합니다.  
+이제 `mydbogroup` 구성원은 **db_owner** 역할의 구성원으로서 데이터베이스를 중앙 관리할 수 있습니다.  
+- 이 그룹의 구성원이 Azure AD 그룹에서 제거되는 경우 이 데이터베이스 대한 dbo 권한이 자동으로 해제됩니다.  
+- 마찬가지로 새 멤버가 `mydbogroup` Azure AD 그룹에 추가되는 경우 자동으로 데이터베이스에 대한 dbo 액세스 권한을 취득합니다.  
   
-특정 사용자에 효과적인 dbo 권한이 있는지를 확인 하려면 사용자가 다음 문을 실행 하 게 합니다.  
+특정 사용자에게 효과적인 dbo 권한이 있는지를 확인하려면 사용자가 다음 명령문을 실행하게 합니다.  
     
 ```    
 SELECT IS_MEMBER ('db_owner');  
 ```    
   
-반환 값이 1 사용자가 역할의 멤버를 나타냅니다.  
+반환 값 1은 사용자가 역할의 멤버라는 것을 나타냅니다.  
    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>사용 권한    
  엔터티에 대한 TAKE OWNERSHIP 권한이 필요합니다. 새 소유자가 이 문을 실행하는 사용자가 아니면 1) 새 소유자가 사용자이거나 로그인인 경우 새 소유자에 대한 IMPERSONATE 권한, 2) 새 소유자가 역할인 경우 역할의 멤버 자격이나 역할에 대한 ALTER 권한 또는 3) 새 소유자가 응용 프로그램 역할인 경우 응용 프로그램 역할에 대한 ALTER 권한도 필요합니다.    
     
 ## <a name="examples"></a>예    
@@ -304,7 +304,7 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- 개체 스키마는 문의 일부로 포함 되어 있지 않으면는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 사용자가 기본 스키마에서 개체를 찾습니다. 예를 들어    
+ 개체 스키마가 문의 일부로 포함되지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 사용자 기본 스키마에서 개체를 찾게 됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
@@ -337,8 +337,8 @@ ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;
 GO    
 ```    
     
-### <a name="e-changing-the-owner-of-a-table"></a>5. 테이블의 소유자를 변경합니다.    
- 소유자를 변경 하는 각 다음 예제는 `Sprockets` 테이블에 `Parts` 데이터베이스 사용자에 게 데이터베이스 `MichikoOsada`합니다.    
+### <a name="e-changing-the-owner-of-a-table"></a>5. 테이블의 소유자 변경    
+ 다음 각 예제는 `Parts` 데이터베이스에서 `Sprockets` 테이블의 소유자를 `MichikoOsada` 데이터베이스 사용자로 변경합니다.    
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON dbo.Sprockets TO MichikoOsada;    
@@ -346,27 +346,27 @@ ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;
 ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="f-changing-the-owner-of-a-database"></a>6. 데이터베이스의 소유자를 변경합니다.    
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]합니다.    
+### <a name="f-changing-the-owner-of-a-database"></a>6. 데이터베이스의 소유자 변경    
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]까지.    
     
- 다음 예제에서는 변경의 소유자는 `Parts` 데이터베이스에서 로그인 `MichikoOsada`합니다.    
+ 다음 예에서는 `Parts` 데이터베이스의 소유자를 로그인 `MichikoOsada`로 변경합니다.    
     
 ```    
 ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;    
 ```    
   
-### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>7. Azure AD 사용자에 게 SQL 데이터베이스의 소유자를 변경합니다.  
-다음 예제에서는 명명 된 active directory 조직에서 SQL Server 용 Azure Active Directory 관리자 `cqclinic.onmicrosoft.com`, 현재 데이터베이스의 소유권을 변경할 수 `targetDB` AAD 사용자를 확인 하 고 `richel@cqclinic.onmicorsoft.com` 새 데이터베이스 다음 명령을 사용 하 여 소유자:  
+### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>7. SQL 데이터베이스의 소유자를 Azure AD 사용자로 변경  
+다음 예에서는 `cqclinic.onmicrosoft.com` Active Directory로 지명된 조직에서 SQL Server용 Azure Active Directory 관리자가 현재 데이터베이스의 소유권을 `targetDB` 변경하고, 다음 명령을 사용해 AAD 사용자를 `richel@cqclinic.onmicorsoft.com` 새 데이터베이스 소유자로 만들 수 있습니다.  
     
 ```    
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];   
 ```    
     
- Note을 Azure AD 사용자에 대 한 사용자 이름 묶는 대괄호 사용 해야 합니다.  
+ Azure AD 사용자의 경우 사용자 이름을 묶는 대괄호가 사용돼야 함을 유의하십시오.  
   
     
-## <a name="see-also"></a>관련 항목:    
+## <a name="see-also"></a>참고 항목    
  [OBJECTPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)     
- [TYPEPROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)     
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)     
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
  

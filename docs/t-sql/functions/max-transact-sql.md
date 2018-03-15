@@ -1,5 +1,5 @@
 ---
-title: MAX (Transact SQL) | Microsoft Docs
+title: MAX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -55,17 +55,17 @@ MAX ( [ ALL | DISTINCT ] expression )
  각 고유 값을 고려하도록 지정합니다. DISTINCT는 MAX에서는 의미가 없으며 ISO 호환성을 위해서만 제공됩니다.  
   
  *expression*  
- 상수, 열 이름 또는 함수이며 산술, 비트 및 문자열 연산자의 조합입니다. MAX는 함께 사용할 수 있습니다 **숫자**, **문자**, **uniqueidentifier**, 및 **datetime** 열 익숙하지 않습니다 **비트**  열입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.  
+ 상수, 열 이름 또는 함수이며 산술, 비트 및 문자열 연산자의 조합입니다. MAX는 **숫자**, **문자**, **uniqueidentifier** 및 **datetime** 열과 함께 사용할 수 있지만 **비트** 열과는 사용할 수 없습니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.  
   
  자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
- 통해 **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* 함수가 적용 되는 파티션으로 FROM 절에서 생성 한 결과 집합을 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 작업이 수행 되는 논리적 순서를 결정 합니다. *order_by_clause* 가 필요 합니다. 자세한 내용은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause*가 필요합니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
- 반환 값과 동일 *식*합니다.  
+ *식*과 동일한 값을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  MAX는 Null 값을 무시합니다.  
   
  문자 열의 경우 MAX는 데이터 정렬 순서에 따라 가장 높은 값을 찾습니다.  
@@ -94,7 +94,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>2. OVER 절 사용  
- 다음 예제에서는 각 부서에 대해 집계 된 값을 제공할 OVER 절과 함께 MIN, MAX, AVG 및 COUNT 함수를 사용는 `HumanResources.Department` 테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다.  
+ 다음 예에서는 OVER 절과 함께 MIN, MAX, AVG 및 COUNT 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Department` 테이블에서 각 부서에 대한 집계 값을 제공합니다.  
   
 ```sql  
 SELECT DISTINCT Name  
@@ -136,16 +136,16 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-### <a name="c-using-max-with-character-data"></a>3. 최대 문자 데이터 사용   
-다음 예에서는 성을으로 사전순으로 정렬 하는 데이터베이스 이름을 반환 합니다. 이 예제에서는 사용 `WHERE database_id < 5`, 시스템 데이터베이스에만 고려해 야 합니다.  
+### <a name="c-using-max-with-character-data"></a>3. 문자 데이터에 MAX 사용하기   
+다음 예에서는 성을 사전순으로 정렬하는 데이터베이스 이름을 반환합니다. 이 예에서는 `WHERE database_id < 5`을 사용하여 시스템 데이터베이스만 고려합니다.  
 ```sql   
 SELECT MAX(name) FROM sys.databases WHERE database_id < 5;
 ```
-마지막 시스템 데이터베이스는 `tempdb`합니다.  
+마지막 시스템 데이터베이스는 `tempdb`입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [집계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [절 &#40; 조치 Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [집계 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

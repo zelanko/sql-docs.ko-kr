@@ -1,5 +1,5 @@
 ---
-title: MIN (Transact SQL) | Microsoft Docs
+title: MIN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="min-transact-sql"></a>MIN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  식의 최소값을 반환합니다. 가 올 수 있습니다는 [OVER 절](../../t-sql/queries/select-over-clause-transact-sql.md)합니다.  
+  식의 최소값을 반환합니다. [OVER 절](../../t-sql/queries/select-over-clause-transact-sql.md)이 뒤에 올 수도 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,17 +67,17 @@ MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )
  각 고유 값을 고려하도록 지정합니다. DISTINCT는 MIN에서는 의미가 없으며 ISO 호환성을 위해서만 제공됩니다.  
   
  *expression*  
- 상수, 열 이름 또는 함수이며 산술, 비트 및 문자열 연산자의 조합입니다. MIN은 함께 사용할 수 있습니다 **숫자**, **char**, **varchar**, **uniqueidentifier**, 또는 **datetime** 열, 익숙하지 않습니다 **비트** 열입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.  
+ 상수, 열 이름 또는 함수이며 산술, 비트 및 문자열 연산자의 조합입니다. MIN은 **숫자**, **char**, **varchar**, **uniqueidentifier** 또는 **datetime** 열과 함께 사용할 수 있지만 **bit** 열과 함께 사용할 수 없습니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.  
   
  자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
- 통해 **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* 함수가 적용 되는 파티션으로 FROM 절에서 생성 한 결과 집합을 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause* 작업이 수행 되는 논리적 순서를 결정 합니다. *order_by_clause* 가 필요 합니다. 자세한 내용은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause*가 필요합니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
- 반환 값과 동일 *식*합니다.  
+ *식*과 동일한 값을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  MIN은 모든 Null 값을 무시합니다.  
   
  문자 데이터 열에서 MIN은 정렬 순서에서 가장 낮은 값을 찾습니다.  
@@ -148,10 +148,10 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-min"></a>3. MIN을 사용 하 여  
- 다음 예제에서는 MIN 집계 함수를 사용 하 여 지정된 된 판매 주문 집합의 가장 저렴 하다 (최소) 제품의 가격을 반환 하 합니다.  
+### <a name="c-using-min"></a>3. MIN 사용  
+ 다음 예에서는 MIN 집계 함수를 사용하여 지정된 판매 주문 집합에서 가장 저렴한(최소) 제품 가격을 반환합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -168,8 +168,8 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
  5.1865
  ```  
   
-### <a name="d-using-min-with-over"></a>4. OVER MIN 사용  
- 다음 예에서는 각 판매 주문에서 가장 저렴 하다 제품의 가격을 반환 하려면 MIN OVER() 분석 함수를 사용 합니다. 결과 집합으로 분할 되는 `SalesOrderID` 열입니다.  
+### <a name="d-using-min-with-over"></a>4. OVER와 함께 MIN 사용하기  
+ 다음 예에서는 MIN OVER() 분석 함수를 사용하여 각 판매 주문에서 가장 저렴한 제품의 가격을 반환합니다. 결과 집합은 `SalesOrderID` 열을 기준으로 분할됩니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -191,10 +191,10 @@ LeastExpensiveProduct SalesOrderID
 28.8404               SO43664
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [집계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [최대 &#40; Transact SQL &#41;](../../t-sql/functions/max-transact-sql.md)   
- [절 &#40; 조치 Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [집계 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [MAX &#40;Transact-SQL&#41;](../../t-sql/functions/max-transact-sql.md)   
+ [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: SESSION_USER (Transact SQL) | Microsoft Docs
+title: SESSION_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,9 +50,9 @@ SESSION_USER
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SESSION_USER를 CREATE TABLE 또는 ALTER TABLE 문에서 DEFAULT 제약 조건으로 사용하거나 임의의 표준 함수로 사용합니다. 지정된 기본값이 없으면 SESSION_USER를 테이블에 삽입할 수 있습니다. 이 함수에는 인수가 필요하지 않습니다. SESSION_USER는 쿼리에서 사용할 수 있습니다.  
   
  컨텍스트 전환 후 SESSION_USER를 호출하면 가장된 컨텍스트의 사용자 이름이 반환됩니다.  
@@ -143,24 +143,24 @@ Order #   Customer #  When Delivered       Received By
 (5 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C: SESSION_USER를 사용 하 여 현재 세션의 사용자 이름을 반환 하는  
- 다음 예에서는 현재 세션에 대 한 세션 사용자를 반환 합니다.  
+### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>3. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
+ 다음 예에서는 현재 세션의 세션 사용자를 반환합니다.  
   
 ```  
 SELECT SESSION_USER;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40; Transact SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40; Transact SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SYSTEM_USER &#40; Transact SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)   
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [User&#40; Transact SQL &#41;](../../t-sql/functions/user-transact-sql.md)   
- [USER_NAME &#40; Transact SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
+ [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
   
   
 

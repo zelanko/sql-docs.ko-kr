@@ -33,14 +33,14 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="in-this-section"></a>섹션 내용
 [date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
-[날짜/시간 &#40; Transact SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)  
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
 [datetime2&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
 [datetimeoffset&#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[smalldatetime &#40; Transact SQL &#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
-[시간 &#40; Transact SQL &#41;](../../t-sql/data-types/time-transact-sql.md)
+[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
+[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)
   
-## <a name="see-also"></a>참고 항목
-[날짜 및 시간 데이터 형식 및 함수 &#40; Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-[표준 시간대 &AMP;#40; Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+## <a name="see-also"></a>관련 항목:
+[날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   

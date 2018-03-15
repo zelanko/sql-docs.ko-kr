@@ -1,5 +1,5 @@
 ---
-title: "수치 연산 함수 (Transact SQL) | Microsoft Docs"
+title: "수치 연산 함수(Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 |[COT](../../t-sql/functions/cot-transact-sql.md)|[RADIANS](../../t-sql/functions/radians-transact-sql.md)||  
   
 > [!NOTE]  
->  ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS, SIGN 등의 산술 함수는 입력 값과 동일한 데이터 형식의 값을 반환합니다. 삼각 및 다른 함수, EXP, 로그, LOG10, SQUARE 및 SQRT를 포함 하 여 해당 입력된 값을 캐스팅 **float** 다음 다시 돌아와 **float** 값입니다.  
+>  ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS, SIGN 등의 산술 함수는 입력 값과 동일한 데이터 형식의 값을 반환합니다. EXP, LOG, LOG10, SQUARE, SQRT를 포함하여 삼각 함수 등의 기타 함수는 입력 값을 **float**으로 캐스팅하고 **float** 값을 반환합니다.  
   
- RAND를 제외한 모든 산술 함수는 결정적 함수입니다. 이는 지정된 입력 값 집합을 사용하여 호출할 때마다 동일한 결과를 반환함을 의미합니다. RAND는 초기값 매개 변수가 지정된 경우에만 결정적입니다. 함수 결정성에 대 한 자세한 내용은 참조 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)합니다.  
+ RAND를 제외한 모든 산술 함수는 결정적 함수입니다. 이는 지정된 입력 값 집합을 사용하여 호출할 때마다 동일한 결과를 반환함을 의미합니다. RAND는 초기값 매개 변수가 지정된 경우에만 결정적입니다. 함수 결정성에 대한 자세한 내용은 [결정적 함수 및 비 결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
-  [산술 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+  [산술 연산자 &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
   [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "REVOKE 서버 사용 권한 (Transact SQL) | Microsoft Docs"
+title: "REVOKE 서버 사용 권한(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -62,12 +62,12 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>인수  
- *사용 권한*  
+ *permission*  
  서버에 대해 부여할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- {를 | FROM} \<grantee_principal > 있는 사용 권한을 취소할 보안 주체를 지정 합니다.  
+ { TO | FROM } \<grantee_principal> 사용 권한을 취소할 보안 주체를 지정합니다.  
   
- AS \<grantor_principal >이 쿼리를 실행 하는 보안 주체는 권한을 부여할 권한을 취소 파생 되는 보안 주체를 지정 합니다.  
+ AS \<grantor_principal> 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.  
   
  GRANT OPTION FOR  
  지정한 사용 권한을 다른 보안 주체에게 부여할 수 있는 권한이 취소됨을 나타냅니다. 사용 권한 자체는 취소되지 않습니다.  
@@ -99,14 +99,14 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  사용자 정의 서버 역할을 지정합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  현재 데이터베이스가 master인 경우에만 서버 범위의 사용 권한을 취소할 수 있습니다.  
   
  REVOKE는 GRANT 및 DENY 권한을 모두 제거합니다.  
   
  REVOKE GRANT OPTION FOR를 사용하여 지정된 사용 권한을 다시 부여할 권한을 취소합니다. 보안 주체에 이를 부여할 권한이 포함된 사용 권한이 있으면 사용 권한을 부여할 권한이 취소되고 사용 권한 자체는 취소되지 않습니다. 보안 주체에 GRANT 옵션 없이 지정된 사용 권한이 있는 경우에는 사용 권한 자체가 취소됩니다.  
   
- 서버 사용 권한 정보를 볼 수 있습니다는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 에서 카탈로그 뷰 및 서버 보안 주체에 대 한 정보를 볼 수 있습니다는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 있습니다. 서버 역할의 멤버 자격에 대 한 정보를 볼 수 있습니다는 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 카탈로그 뷰에 있습니다.  
+ 서버 사용 권한에 대한 정보는 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰에 표시되고 서버 보안 주체에 대한 정보는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다. 서버 역할의 멤버 자격에 대한 정보는 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
   
  서버는 사용 권한 계층에서 가장 높은 수준입니다. 다음 표에는 서버에서 취소될 수 있는 가장 제한적인 특정 사용 권한이 나열되어 있습니다.  
   
@@ -147,7 +147,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -172,14 +172,14 @@ GO
   
  로그인에는 CONNECT SQL 권한이 계속 있지만 이 권한을 더 이상 다른 보안 주체에 부여할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY&#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [서버 사용 권한 &#40; 거부 Transact SQL &#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [REVOKE 서버 사용 권한 (Transact SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [DENY 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOKE 서버 사용 권한(Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40; Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

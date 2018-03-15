@@ -1,5 +1,5 @@
 ---
-title: FILEPROPERTY (Transact SQL) | Microsoft Docs
+title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,11 +51,11 @@ FILEPROPERTY ( file_name , property )
 ```  
   
 ## <a name="arguments"></a>인수  
- *i l e _*  
- 속성 정보를 반환할 현재 데이터베이스에 관련된 파일 이름이 포함된 식입니다. *file_name* 은 **nchar(128)**합니다.  
+ *file_name*  
+ 속성 정보를 반환할 현재 데이터베이스에 관련된 파일 이름이 포함된 식입니다. *file_name*은 **nchar (128)**입니다.  
   
- *속성*  
- 반환할 파일 속성의 이름이 포함된 식입니다. *속성* 은 **varchar (128)**, 다음 값 중 하나가 될 수 있습니다.  
+ *property*  
+ 반환할 파일 속성의 이름이 포함된 식입니다. *속성*은 **varchar(128)**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|반환 값|  
 |-----------|-----------------|--------------------|  
@@ -67,8 +67,8 @@ FILEPROPERTY ( file_name , property )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>주의  
- *file_name* 에 해당 하는 **이름** 열에는 **sys.master_files** 또는 **sys.database_files** 카탈로그 뷰.  
+## <a name="remarks"></a>Remarks  
+ *file_name*은 **sys.master_files** 또는 **sys.database_files** 카탈로그 뷰의 **이름** 열에 해당됩니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `IsPrimaryFile` 데이터베이스에 있는 `AdventureWorks_Data` 파일 이름에 대한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 속성의 설정을 반환합니다.  
@@ -88,9 +88,9 @@ Primary File
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [FILEGROUPPROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [FILEGROUPPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
+ [메타데이터 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

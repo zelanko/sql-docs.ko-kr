@@ -1,5 +1,5 @@
 ---
-title: TRY_CONVERT (Transact SQL) | Microsoft Docs
+title: TRY_CONVERT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,26 +46,26 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ```  
   
 ## <a name="arguments"></a>인수  
- *data_type [(길이)]*  
- 캐스팅할 데이터 형식 *식*합니다.  
+ *data_type [ ( length ) ]*  
+ *expression*을 캐스팅할 데이터 형식입니다.  
   
  *expression*  
  캐스팅할 값입니다.  
   
- *스타일*  
- 지정 하는 선택적 정수 식 방법을 **TRY_CONVERT** 함수 변환 하는 *식*합니다.  
+ *style*  
+ **TRY_CONVERT** 함수가 *expression*을 변환하는 방법을 지정하는 선택적 정수 식입니다.  
   
- *스타일* 동일한 값을 받아들입니다는 *스타일* 의 매개 변수는 **변환** 함수입니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
+ *style*은 **CONVERT** 함수의 *style* 매개 변수와 동일한 값을 허용합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
   
- 허용 되는 값의 범위 값에 의해 결정 됩니다 *data_type*합니다. 경우 *스타일* 매개 변수가 null 이면 **TRY_CONVERT** null을 반환 합니다.  
+ 허용되는 값 범위는 *data_type* 값에 따라 결정됩니다. *style*이 Null이면 **TRY_CONVERT**는 Null을 반환합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  캐스트에 성공하면 지정한 데이터 형식으로 캐스팅된 값을 반환합니다. 그렇지 않으면 Null을 반환합니다.  
   
-## <a name="remarks"></a>주의  
- **TRY_CONVERT** 는 전달 된 값을 사용 하 고 지정 된 변환 하려고 *data_type*합니다. 캐스팅에 성공 하면 **TRY_CONVERT** 지정 된 값을 반환 *data_type*; 오류가 발생 하면 null이 반환 됩니다. 그러나 명시적으로 허용 되지 않는, 다음 변환을 요청 하는 경우 **TRY_CONVERT** 오류가 발생 하면서 실패 합니다.  
+## <a name="remarks"></a>Remarks  
+ **TRY_CONVERT** 함수는 전달된 값을 사용하여 지정된 *data_type*으로 변환을 시도합니다. 캐스팅에 성공하면 **TRY_CONVERT**는 지정된 *data_type*으로 값을 반환합니다. 오류가 발생하면 Null이 반환됩니다. 그러나 명시적으로 허용되지 않는 변환을 요청하면 오류와 함께 **TRY_CONVERT**가 실패합니다.  
   
- **TRY_CONVERT** 110 이상은 호환성 수준에서 예약된 된 키워드입니다.  
+ **TRY_CONVERT**는 호환성 수준 110 이상의 예약 키워드입니다.  
   
  이 함수는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전이 설치되어 있는 서버에 대해서는 원격으로 실행할 수 있지만 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전이 설치되어 있는 서버에 대해서는 원격으로 실행할 수 없습니다.  
   
@@ -144,7 +144,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

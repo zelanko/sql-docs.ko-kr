@@ -1,5 +1,5 @@
 ---
-title: "원격 서비스 바인딩 (Transact SQL) ALTER | Microsoft Docs"
+title: ALTER REMOTE SERVICE BINDING(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,17 +53,17 @@ ALTER REMOTE SERVICE BINDING binding_name
  *binding_name*  
  변경할 원격 서비스 바인딩의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다.  
   
- 사용자와 = \< *user_name >*  
+ WITH USER = \<*user_name>*  
  이 바인딩에 대한 원격 서비스에 연결된 인증서를 보유하고 있는 데이터베이스 사용자를 지정합니다. 이 인증서의 공개 키는 원격 서비스와 교환하는 메시지를 암호화하고 인증하는 데 사용됩니다.  
   
  ANONYMOUS  
  원격 서비스와 통신할 경우 익명 인증을 사용할지 여부를 지정합니다. ANONYMOUS = ON인 경우 익명 인증이 사용되며 로컬 사용자의 자격 증명이 원격 서비스로 전송되지 않습니다. ANONYMOUS = OFF인 경우 사용자 자격 증명이 전송됩니다. 이 절을 지정하지 않은 경우 기본값은 OFF입니다.  
   
-## <a name="remarks"></a>주의  
- 연결 된 인증서의 공개 키 *user_name* 원격 서비스에 전송 된 메시지를 인증 하 고 다음 대화를 암호화 하는 데 사용 되는 세션 키를 암호화 하는 데 사용 됩니다. 에 대 한 인증서 *user_name* 원격 서비스를 호스팅하는 데이터베이스의 로그인에 대 한 인증서와 일치 해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ *user_name*과 연관된 인증서에 있는 공개 키는 원격 서비스로 전달된 메시지 인증 및 대화를 암호화하는 데 사용되는 세션 키의 암호화에 사용됩니다. *user_name*에 대한 인증서는 원격 서비스를 호스팅하는 데이터베이스 로그인에 대한 인증서와 일치해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 원격 서비스 바인딩을 변경할 수 있는 권한은 기본적으로 원격 서비스 바인딩을의 구성원의 소유자는 **db_owner** 고정 데이터베이스 역할의 멤버는 **sysadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 원격 서비스 바인딩을 변경할 수 있는 권한은 기본적으로 원격 서비스 바인딩의 소유자, **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
  ALTER REMOTE SERVICE BINDING 문을 실행하는 사용자에게는 이 문에 지정된 사용자를 가장할 수 있는 권한이 있어야 합니다.  
   
@@ -77,9 +77,9 @@ ALTER REMOTE SERVICE BINDING APBinding
     WITH USER = SecurityAccount ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE REMOTE SERVICE BINDING&#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [DROP REMOTE SERVICE binding&#40; Transact SQL &#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
+ [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

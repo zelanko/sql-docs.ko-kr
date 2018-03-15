@@ -1,5 +1,5 @@
 ---
-title: ALTER CRYPTOGRAPHIC PROVIDER (Transact SQL) | Microsoft Docs
+title: ALTER CRYPTOGRAPHIC PROVIDER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  공급자를 설정하거나 해제합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  공급자 변경 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 EKM(확장 가능 키 관리)을 구현하는 데 사용되는 .dll 파일도 변경하려면 ALTER CRYPTOGRAPHIC PROVIDER 문을 사용해야 합니다.  
   
  ALTER CRYPTOGRAPHIC PROVIDER 문을 통해 .dll 파일 경로가 업데이트되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음 동작을 수행합니다.  
@@ -79,34 +79,34 @@ EKM 공급자 dll을 만드는 데 사용한 헤더 파일이 오래된 경우�
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  암호화 공급자에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 라는 암호화 공급자 변경 `SecurityProvider` 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],.dll 파일의 최신 버전으로 합니다. 새 버전의 이름은 `c:\SecurityProvider\SecurityProvider_v2.dll`이며 서버에 설치됩니다. 공급자의 인증서는 서버에 설치되어야 합니다.  
+ 다음 예에서는 `SecurityProvider`의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이라는 암호화 공급자를 새 버전의 .dll 파일로 변경합니다. 새 버전의 이름은 `c:\SecurityProvider\SecurityProvider_v2.dll`이며 서버에 설치됩니다. 공급자의 인증서는 서버에 설치되어야 합니다.  
   
-1. 업그레이드를 수행 하는 공급자를 사용 하지 않도록 설정 합니다. 이 암호화 열려 있는 모든 세션을 종료 합니다.  
+1. 공급자가 업그레이드를 수행하지 못하도록 설정합니다. 이렇게 하면 모든 열려 있는 암호화 세션이 종료됩니다.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
-2. 공급자의.dll 파일을 업그레이드 합니다. GUID와 이전 버전에서 동일 해야 하지만 버전 다를 수 있습니다.  
+2. 공급자 .dll 파일을 업그레이드합니다. GUID는 이전 버전과 동일해야 하지만 버전이 다를 수 있습니다.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
 GO  
 ```  
 
-3. 업그레이드 된 공급자를 사용 하도록 설정 합니다.   
+3. 업그레이드된 공급자를 사용 하도록 설정합니다.   
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 ENABLE;  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [DROP CRYPTOGRAPHIC PROVIDER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   

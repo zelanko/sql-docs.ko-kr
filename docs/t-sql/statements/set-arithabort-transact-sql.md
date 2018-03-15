@@ -1,5 +1,5 @@
 ---
-title: SET ARITHABORT (Transact SQL) | Microsoft Docs
+title: SET ARITHABORT (Transact-SQL)| Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -61,8 +61,8 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>주의  
- 로그온 세션에서 ARITHABORT를 항상 ON으로 설정해야 합니다. 부정적인 영향 쿼리 최적화 성능 문제 수 해제에 대 한 ARITHABORT 설정입니다.  
+## <a name="remarks"></a>Remarks  
+ 로그온 세션에서 ARITHABORT를 항상 ON으로 설정해야 합니다. ARITHABORT를 OFF로 설정하면 쿼리 최적화에 부정적인 영향을 주어 성능 문제가 발생할 수 있습니다.  
   
 > [!WARNING]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 기본 ARITHABORT 설정은 ON입니다. ARITHABORT를 OFF로 설정하는 클라이언트 응용 프로그램에서 다른 쿼리 계획을 받아 성능이 저조한 쿼리 문제를 해결하기 어려울 수 있습니다. 즉, 같은 쿼리가 Management Studio에서는 빨리 실행되지만, 응용 프로그램에서는 느리게 실행될 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]로 쿼리 문제를 해결할 때 항상 클라이언트 ARITHABORT 설정을 일치시키세요.  
@@ -82,13 +82,13 @@ SET ARITHABORT ON
   
  SET ARITHABORT 옵션이나 SET ARITHIGNORE 옵션 중 하나가 OFF이고 SET ANSI_WARNINGS 옵션이 ON이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 0으로 나누기 또는 오버플로 오류가 발생할 경우 여전히 오류 메시지를 반환합니다.  
   
- SET ARITHABORT가 OFF로 설정 하는 경우 IF 문의 부울 조건 평가 하는 동안 중단 오류가 발생 하면 FALSE 분기가 실행 됩니다.
+ SET ARITHABORT를 OFF로 설정한 경우 IF 문의 부울 조건을 평가하는 동안 중단 오류가 발생하면 FALSE 분기가 실행됩니다.
   
  계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET ARITHABORT 옵션을 ON으로 설정해야 합니다. SET ARITHABORT 옵션이 OFF면 계산 열의 인덱스가 있는 테이블이나 인덱싱된 뷰에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다.
   
  SET ARITHABORT 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
- 이 설정에 대 한 현재 설정을 보려면 다음 쿼리를 실행 합니다.
+ 이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -97,7 +97,7 @@ SELECT @ARITHABORT AS ARITHABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -196,9 +196,9 @@ DROP TABLE t2;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET arithignore 옵션 &#40; Transact SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ARITHIGNORE&#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
+ [SESSIONPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

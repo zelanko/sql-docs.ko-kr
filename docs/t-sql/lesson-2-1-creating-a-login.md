@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-1---creating-a-login"></a>단원 2-1-로그인 만들기
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]액세스는 [!INCLUDE[ssDE](../includes/ssde-md.md)], 사용자는 로그인이 필요 합니다. 로그인은 사용자의 ID를 Windows 계정 또는 Windows 그룹의 멤버로 나타내거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에만 존재하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로그인이 될 수 있습니다. 가능하면 Windows 인증을 사용해야 합니다.  
+# <a name="lesson-2-1---creating-a-login"></a>2-1단원 - 로그인 만들기
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]에 액세스하려면 사용자는 로그인이 필요합니다. 로그인은 사용자의 ID를 Windows 계정 또는 Windows 그룹의 멤버로 나타내거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에만 존재하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로그인이 될 수 있습니다. 가능하면 Windows 인증을 사용해야 합니다.  
   
 기본적으로 컴퓨터의 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 모든 액세스 권한을 가집니다. 따라서 낮은 권한의 사용자가 필요할 것이므로 컴퓨터에서 새로운 로컬 Windows 인증 계정을 만듭니다. 이 작업을 수행하려면 컴퓨터의 관리자여야 합니다. 그런 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 액세스 권한을 새 사용자에게 부여합니다.  
   

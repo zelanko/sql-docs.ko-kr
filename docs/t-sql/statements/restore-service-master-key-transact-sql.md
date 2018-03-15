@@ -1,5 +1,5 @@
 ---
-title: "서비스 마스터 키 복원 (Transact SQL) | Microsoft Docs"
+title: RESTORE SERVICE MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>인수  
- 파일 **='***path_to_file***'**  
- 저장된 서비스 마스터 키에 대해 파일 이름을 포함한 전체 경로를 지정합니다. *path_to_file* 로컬 경로 또는 UNC 경로를 네트워크 위치 일 수 있습니다.  
+ FILE **='***path_to_file***'**  
+ 저장된 서비스 마스터 키에 대해 파일 이름을 포함한 전체 경로를 지정합니다. *path_to_file*은 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다.  
   
- 암호 **='***암호***'**  
+ PASSWORD **='***password***'**  
  파일에서 가져올 서비스 마스터 키의 암호를 해독하는 데 필요한 암호를 지정합니다.  
   
  FORCE  
  데이터 손실 위험이 있는 경우에도 서비스 마스터 키를 강제로 교체합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  서비스 마스터 키가 복원되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 현재 서비스 마스터 키로 암호화된 모든 키 및 암호를 해독한 다음 백업 파일에서 로드된 서비스 마스터 키로 암호화합니다.  
   
  암호 해독 중 하나가 실패하면 복원이 실패합니다. 오류를 무시하기 위해 FORCE 옵션을 사용할 수 있지만 이 옵션을 사용하면 암호를 해독할 수 없는 데이터를 손실할 수 있습니다.  
@@ -72,7 +72,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
   
  암호화 계층을 다시 생성하는 작업에는 리소스가 많이 소비됩니다. 이 작업은 사용량이 적은 기간 동안에 실행하도록 예약해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -85,10 +85,10 @@ RESTORE SERVICE MASTER KEY
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [서비스 마스터 키](../../relational-databases/security/encryption/service-master-key.md)   
- [ALTER SERVICE MASTER key&#40; Transact SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
- [BACKUP SERVICE MASTER key&#40; Transact SQL &#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Service Master Key](../../relational-databases/security/encryption/service-master-key.md)   
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+ [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

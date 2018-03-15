@@ -1,5 +1,5 @@
 ---
-title: "STGeomCollFromText (geometry 데이터 형식) | Microsoft Docs"
+title: "STGeomCollFromText(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-반환 된 **geometry** Z (높이) 값 및 M (측정값) 값을 따르도록 Open Geospatial Consortium (OGC) wkt (WELL-KNOWN Text) 표현의 인스턴스는 인스턴스에서 얻어진 합니다.
+인스턴스에서 얻어진 Z(높이) 값 및 M(측정값) 값을 사용하여 보강된 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현의 **geometry** 인스턴스를 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -45,18 +45,18 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>인수  
  *geometrycollection_tagged_text*  
- WKT 표현에서 **기 하 도형** 반환할 인스턴스. *geometry_tagged_text* 는 **nvarchar (max)** 식입니다.  
+ 반환할 **geometry** 인스턴스의 WKT 표현입니다. *geometry_tagged_text*는 **nvarchar(max)** 식입니다.  
   
  *SRID*  
- 이 **int** spatial 나타내는 식 참조의 ID (SRID)는 **geometry** 반환할 인스턴스.  
+ 반환할 **geometry** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- OGC 형식은 **geometry** 에서 반환한 인스턴스 `STGeomCollFromText()` 해당 WKT 입력으로 설정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ `STGeomCollFromText()`에 의해 반환되는 **geometry** 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
   
  이 메서드는 입력이 잘못된 경우 예외를 throw합니다.  
   
@@ -69,7 +69,7 @@ SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION ( POLYGON((5 5, 10 5, 
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OGC 정적 기하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

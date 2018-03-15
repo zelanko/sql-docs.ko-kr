@@ -1,5 +1,5 @@
 ---
-title: BACKUP MASTER KEY (Transact SQL) | Microsoft Docs
+title: BACKUP MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,18 +54,18 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>인수  
- 파일 ='*path_to_file*'  
+ FILE ='*path_to_file*'  
  마스터 키를 내보낼 파일에 대한 파일 이름을 포함한 전체 경로를 지정합니다. 이 경로는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다.  
   
- 암호 ='*암호*'  
+ PASSWORD ='*password*'  
  파일의 마스터 키를 암호화하는 데 사용되는 암호입니다. 이 암호의 복잡성을 확인해야 합니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  마스터 키를 열어야 하기 때문에 백업하기 전에 암호를 해독해야 합니다. 서비스 마스터 키를 사용하여 암호화된 경우 마스터 키를 명시적으로 열 필요가 없습니다. 하지만 마스터 키가 암호로만 암호화된 경우 명시적으로 열어야 합니다.  
   
  마스터 키는 만들자 마자 백업하고 외부의 안전한 위치에 보관하는 것이 좋습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -79,13 +79,13 @@ BACKUP MASTER KEY TO FILE = 'c:\temp\exportedmasterkey'
 GO   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [MASTER key&#40; 열기 Transact SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
- [CLOSE MASTER key&#40; Transact SQL &#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
- [RESTORE MASTER key&#40; Transact SQL &#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
  [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
- [DROP MASTER key&#40; Transact SQL &#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [DROP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: FILE_IDEX (Transact SQL) | Microsoft Docs
+title: FILE_IDEX(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ FILE_IDEX ( file_name )
 ```  
   
 ## <a name="arguments"></a>인수  
- *i l e _*  
- 형식의 식 **sysname** 파일 ID를 반환 하려는 파일의 이름을 나타내는  
+ *file_name*  
+ 파일 ID를 반환할 파일의 이름을 나타내는 **sysname** 형식의 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
- **NULL** 오류 발생 시  
+ 오류 발생 시 **NULL**  
   
-## <a name="remarks"></a>주의  
- *file_name* 에 표시 되는 논리적 파일 이름에 해당 하는 **이름** 열에는 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 또는 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 카탈로그 뷰.  
+## <a name="remarks"></a>Remarks  
+ *file_name*은 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 또는 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 카탈로그 뷰의 **name** 열에 표시되는 논리적 파일 이름과 일치합니다.  
   
  FILE_IDEX는 SELECT 목록, WHERE 절 또는 식이 사용되는 곳은 어디에나 사용될 수 있습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
@@ -85,7 +85,7 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>2. 파일 이름이 알려지지 않은 경우 파일 ID 검색  
-파일 ID를 반환 하는 다음 예제는 `AdventureWorks` 에서 논리적 파일 이름을 선택 하 여 로그 파일의 `sys.database_files` 카탈로그 뷰에서 파일 유형이 같은 `1` (로그).  
+다음 예에서는 `sys.database_files` 카탈로그 뷰에서 파일 형식이 `1`(로그)인 논리적 파일 이름을 선택하여 `AdventureWorks` 로그 파일의 파일 ID를 반환합니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -103,15 +103,15 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>3. 전체 텍스트 카탈로그 파일의 파일 ID 검색  
-논리적 파일 이름을 선택 하 여 전체 텍스트 파일의 파일 ID를 반환 하는 다음 예제는 `sys.database_files` 카탈로그 뷰에서 파일 유형이 같은 `4` (전체 텍스트)입니다. 이 예에서는 전체 텍스트 카탈로그가 없을 경우 NULL을 반환합니다.  
+다음 예에서는 `sys.database_files` 카탈로그 뷰에서 파일 형식이 `4`(전체 텍스트)인 논리적 파일 이름을 선택하여 전체 텍스트 파일의 파일 ID를 반환합니다. 이 예에서는 전체 텍스트 카탈로그가 없을 경우 NULL을 반환합니다.  
   
 ```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
 AS 'File_ID';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [메타데이터 함수&#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

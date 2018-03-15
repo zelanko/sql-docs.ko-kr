@@ -1,5 +1,5 @@
 ---
-title: "문자열 함수 (Transact SQL) | Microsoft Docs"
+title: "문자열 함수(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2016
 ms.prod: sql-non-specified
@@ -52,11 +52,11 @@ ms.lasthandoff: 11/21/2017
 
 
   
- 모든 기본 제공 문자열 함수를 제외 하 고 `FORMAT` 결정적입니다. 이는 특정한 입력 값 집합으로 함수를 호출하면 일정한 값을 반환함을 의미합니다. 함수 결정성에 대 한 자세한 내용은 참조 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)합니다.  
+ `FORMAT`을 제외한 기본 제공 문자열 함수는 결정적입니다. 이는 특정한 입력 값 집합으로 함수를 호출하면 일정한 값을 반환함을 의미합니다. 함수 결정성에 대한 자세한 내용은 [결정적 함수 및 비 결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.  
   
- 문자열 함수에서 문자열 값이 아닌 인수를 전달하면 입력 형식은 암시적으로 텍스트 데이터 형식으로 변환됩니다. 자세한 내용은 참조 [데이터 형식 변환 &#40; 데이터베이스 엔진 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)합니다.  
+ 문자열 함수에서 문자열 값이 아닌 인수를 전달하면 입력 형식은 암시적으로 텍스트 데이터 형식으로 변환됩니다. 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

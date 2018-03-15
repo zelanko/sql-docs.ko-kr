@@ -1,5 +1,5 @@
 ---
-title: SESSIONPROPERTY (Transact SQL) | Microsoft Docs
+title: SESSIONPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ SESSIONPROPERTY (option)
   
 ## <a name="arguments"></a>인수  
  *옵션*  
- 이 세션에 대한 현재 옵션 설정입니다. *옵션* 다음 값 중 하나일 수 있습니다.  
+ 이 세션에 대한 현재 옵션 설정입니다. *옵션*은 다음 값 중 하나일 수 있습니다.  
   
 |옵션|Description|  
 |------------|-----------------|  
@@ -60,12 +60,12 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|연결된 결과를 null 값으로 다룰 것인지 또는 빈 문자열 값으로 다룰 것인지를 제어합니다.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|식에서 반올림하여 전체 자릿수 손실이 생길 때 오류 메시지 및 경고의 생성 여부를 지정합니다.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|식별자와 리터럴 문자열을 구분하는 따옴표의 사용 방법에 대한 ISO 규칙을 따를 것인지 여부를 지정합니다.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|\<다른 문자열 >|NULL = 입력이 잘못되었습니다.|  
+|\<다른 문자열>|NULL = 입력이 잘못되었습니다.|  
   
 ## <a name="return-types"></a>반환 형식  
  **sql_variant**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET 옵션은 서버 수준, 데이터베이스 수준 및 사용자 지정 옵션을 결합하여 구성됩니다.  
   
 ## <a name="examples"></a>예  
@@ -75,7 +75,7 @@ SESSIONPROPERTY (option)
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [sql_variant&#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   
  [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   

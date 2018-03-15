@@ -1,5 +1,5 @@
 ---
-title: "REVOKE 데이터베이스 범위 자격 증명 (Transact SQL) | Microsoft Docs"
+title: "REVOKE 데이터베이스 범위 자격 증명(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE 데이터베이스 범위 자격 증명 (Transact SQL)
+# <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE 데이터베이스 범위 자격 증명(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  데이터베이스 범위 자격 증명에 대 한 권한을 취소합니다.  
+  데이터베이스 범위 자격 증명에 대한 사용 권한을 철회합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,13 +57,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  보안 주체에 GRANT 옵션 없이 지정된 사용 권한이 있는 경우 사용 권한 자체가 취소됩니다.  
   
- *사용 권한*  
- 데이터베이스 범위 자격 증명에 취소할 수 있는 사용 권한을 지정 합니다. 아래와 같습니다.  
+ *permission*  
+ 데이터베이스 범위 자격 증명에 대해 철회할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON 인증서 **::***credential_name*  
- 사용 권한이 취소 되 고 데이터베이스 범위 자격 증명을 지정 합니다. 범위 한정자 "::"이 필요합니다.  
+ ON CERTIFICATE **::***credential_name*  
+ 사용 권한을 철회하는 데이터베이스 범위 자격 증명을 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
- *데이터베이스 _ 보안 주체*  
+ *database_principal*  
  사용 권한을 취소할 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
   
 -   데이터베이스 사용자  
@@ -107,10 +107,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   서버 보안 주체에 매핑되지 않은 데이터베이스 사용자  
   
-## <a name="remarks"></a>주의  
- 데이터베이스 범위 자격 증명은 데이터베이스 수준 보안 개체 사용 권한 계층에서 부모 데이터베이스에 포함 된 합니다. 데이터베이스 범위 자격 증명에 취소할 수 있는 가장 구체적이 고 제한 된 사용 권한은 암시적으로 포함 하는 보다 일반적인 사용 권한과 함께, 다음과 같습니다.  
+## <a name="remarks"></a>Remarks  
+ 데이터베이스 범위 자격 증명은 사용 권한 계층에서 해당 사용자의 부모인 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 아래에는 데이터베이스 범위 자격 증명에 대해 철회할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
   
-|데이터베이스 범위 자격 증명 사용 권한|포함 된 데이터베이스 범위 자격 증명 사용 권한|데이터베이스 사용 권한에 포함된 사용 권한|  
+|데이터베이스 범위 자격 증명 사용 권한|데이터베이스 범위 자격 증명 사용 권한에 포함된 사용 권한|데이터베이스 사용 권한에 포함된 사용 권한|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -118,13 +118,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
- 데이터베이스 범위 자격 증명에 대 한 CONTROL 권한이 필요합니다.  
+## <a name="permissions"></a>사용 권한  
+ 데이터베이스 범위 자격 증명에 대한 CONTROL 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [REVOKE (Transact SQL)](../../t-sql/statements/revoke-transact-sql.md)      
- [GRANT 데이터베이스 범위 자격 증명 (Transact SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [DENY 데이터베이스 범위 자격 증명 (Transact SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [REVOKE(Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
+ [GRANT 데이터베이스 범위 자격 증명(Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [DENY 데이터베이스 범위 자격 증명(Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
  [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  

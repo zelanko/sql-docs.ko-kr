@@ -1,5 +1,5 @@
 ---
-title: "역할 (Transact SQL) 만들기 | Microsoft Docs"
+title: CREATE ROLE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -57,11 +57,11 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  *role_name*  
  만들 역할의 이름입니다.  
   
- 권한 부여 *owner_name*  
+ AUTHORIZATION *owner_name*  
  새 역할을 소유할 데이터베이스 사용자나 역할입니다. 사용자를 지정하지 않으면 CREATE ROLE을 실행하는 사용자가 역할을 소유합니다.  
   
-## <a name="remarks"></a>주의  
- 역할은 데이터베이스 수준 보안 개체입니다. 역할을 만든 후 GRANT, DENY 및 REVOKE를 사용하여 역할의 데이터베이스 수준 사용 권한을 구성합니다. 데이터베이스 역할에 구성원을 추가 하려면 사용 하 여 [ALTER role&#40; Transact SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md). 자세한 내용은 참조 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ 역할은 데이터베이스 수준 보안 개체입니다. 역할을 만든 후 GRANT, DENY 및 REVOKE를 사용하여 역할의 데이터베이스 수준 사용 권한을 구성합니다. 데이터베이스 역할에 멤버를 추가하려면 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)를 사용합니다. 자세한 내용은 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  
   
  데이터베이스 역할은 sys.database_role_members 및 sys.database_principals 카탈로그 뷰에 표시됩니다.  
   
@@ -70,8 +70,8 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
- 필요한 **CREATE ROLE** 의 구성원 자격이 있거나 데이터베이스에 대 한 권한이 **db_securityadmin** 고정된 데이터베이스 역할입니다. 사용 하는 경우는 **권한 부여** 옵션을 다음 권한은 필요 합니다.  
+## <a name="permissions"></a>사용 권한  
+ 데이터베이스에 대한 **CREATE ROLE**이나 **db_securityadmin** 고정 데이터베이스 역할의 멤버 자격이 필요합니다. **AUTHORIZATION** 옵션을 사용할 경우 다음 권한도 필요합니다.  
   
 -   다른 사용자에게 역할의 소유권을 할당하려면 해당 사용자에 대한 IMPERSONATE 권한이 필요합니다.  
   
@@ -80,7 +80,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 -   응용 프로그램 역할에 역할의 소유권을 할당하려면 응용 프로그램 역할에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
-다음 예에서는 모두 AdventureWorks 데이터베이스를 사용 합니다.   
+다음 예에서는 모두 AdventureWorks 데이터베이스를 사용합니다.   
 
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>1. 데이터베이스 사용자가 소유하는 데이터베이스 역할 만들기  
  다음 예에서는 `buyers` 사용자가 소유하는 `BenMiller` 데이터베이스 역할을 만듭니다.  
@@ -98,10 +98,10 @@ CREATE ROLE auditors AUTHORIZATION db_securityadmin;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [ALTER role&#40; Transact SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [DROP role&#40; Transact SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "STAsText (geometry 데이터 형식) | Microsoft Docs"
+title: "STAsText(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stastext-geometry-data-type"></a>STAsText(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Open Geospatial Consortium (OGC) wkt (WELL-KNOWN Text) 표현을 반환는 **geometry** 인스턴스. 이 텍스트에는 인스턴스에서 얻어진 Z(높이) 값 또는 M(측정값) 값이 포함되지 않습니다.
+**geometry** 인스턴스의 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현을 반환합니다. 이 텍스트에는 인스턴스에서 얻어진 Z(높이) 값 또는 M(측정값) 값이 포함되지 않습니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ Open Geospatial Consortium (OGC) wkt (WELL-KNOWN Text) 표현을 반환는 **geo
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **nvarchar (max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **nvarchar(max)**  
   
  CLR 반환 형식: **SqlChars**  
   
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

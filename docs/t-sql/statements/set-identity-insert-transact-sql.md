@@ -1,5 +1,5 @@
 ---
-title: SET IDENTITY_INSERT (Transact SQL) | Microsoft Docs
+title: SET IDENTITY_INSERT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -60,14 +60,14 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  *table*  
  ID 열이 있는 테이블의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  언제든지 세션에서 한 테이블의 IDENTITY_INSERT 속성만 ON으로 설정할 수 있습니다. 한 테이블에 이 속성이 ON으로 설정되어 있는데 다른 테이블에 대해 SET IDENTITY_INSERT ON 문을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 SET IDENTITY_INSERT가 이미 ON으로 설정되어 있음을 알리고 ON으로 설정된 테이블을 보고하는 오류 메시지를 반환합니다.  
   
  테이블의 현재 ID 값보다 큰 값을 삽입하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 자동으로 새로 삽입한 값을 현재 ID 값으로 사용합니다.  
   
  SET IDENTITY_INSERT 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자는 테이블을 소유하거나 테이블에 대한 ALTER 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -119,7 +119,7 @@ DROP TABLE dbo.Tool;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   

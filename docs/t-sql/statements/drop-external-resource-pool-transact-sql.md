@@ -1,5 +1,5 @@
 ---
-title: "외부 리소스 풀 (Transact SQL) DROP | Microsoft Docs"
+title: DROP EXTERNAL RESOURCE POOL(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2016
 ms.prod: sql-non-specified
@@ -31,12 +31,12 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="drop-external-resource-pool-transact-sql"></a>DROP 외부 리소스 풀 (Transact SQL)
+# <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  외부 프로세스에 대 한 리소스를 정의 하는 데 사용 하는 리소스 관리자 외부 리소스 풀을 삭제 합니다. R 서비스에 대 한 외부 풀 제어 `rterm.exe`, `BxlServer.exe`, 및 생성 된 다른 프로세스입니다. 사용 하 여 외부 리소스 풀이 만들어집니다 [외부 리소스 풀 만들기 &#40; Transact SQL &#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 를 사용 하 여 수정할 [ALTER EXTERNAL RESOURCE pool&#40; Transact SQL &#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md).  
+  외부 프로세스에 대한 리소스를 정의하는 데 사용된 Resource Governor 외부 리소스 풀을 삭제합니다. R 서비스에 대해 외부 풀은 `rterm.exe`, `BxlServer.exe` 및 이들에 의해 생성된 기타 프로세스를 제어합니다. 외부 리소스 풀은 [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)를 사용하여 만들어지고 [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)를 사용하여 수정됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [TRANSACT-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)합니다.  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,23 +45,23 @@ DROP EXTERNAL RESOURCE POOL pool_name
 ```  
   
 ## <a name="arguments"></a>인수  
- *pool_name 이라*  
- 삭제할 외부 리소스 풀의 이름입니다.  
+ *pool_name*  
+ 삭제될 외부 리소스 풀 이름입니다.  
   
-## <a name="remarks"></a>주의  
- 작업 그룹을 포함 하는 경우에 외부 리소스 풀을 삭제할 수 없습니다.  
+## <a name="remarks"></a>Remarks  
+ 작업 그룹이 들어 있으면 해당 외부 리소스 풀을 삭제할 수 없습니다.  
   
  리소스 관리자 기본 풀 또는 내부 풀을 삭제할 수 없습니다.  
   
- 재구성이 않습니다 n  
+ 재구성이 n을 합니다  
   
- DDL 문을 실행할 경우 리소스 관리자 상태에 대해 잘 알고 있는 것이 좋습니다. 자세한 내용은 참조 [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)합니다.  
+ DDL 문을 실행할 경우 리소스 관리자 상태에 대해 잘 알고 있는 것이 좋습니다. 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  `CONTROL SERVER` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 이라는 외부 리소스 풀을 삭제 `ex_pool`합니다.  
+ 다음 예에서는 `ex_pool`이라는 외부 리소스 풀을 삭제합니다.  
   
 ```  
 DROP EXTERNAL RESOURCE POOL ex_pool;  
@@ -70,13 +70,13 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [external scripts enabled 서버 구성 옵션](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
+## <a name="see-also"></a>참고 항목  
+ [External Scripts Enabled 서버 구성 옵션](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)   
- [SQL Server R Services에 대 한 알려진된 문제](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)   
+ [SQL Server R Services의 알려진 문제](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)   
  [CREATE EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
- [외부 RESOURCE pool&#40; 변경 Transact SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
+ [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
  [DROP WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [DROP RESOURCE pool&#40; Transact SQL &#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)  
+ [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)  
   
   

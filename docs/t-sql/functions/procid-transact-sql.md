@@ -1,5 +1,5 @@
 ---
-title: '@@PROCID (Transact SQL) | Microsoft Docs'
+title: '@@PROCID(Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -38,10 +38,10 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (TRANSACT-SQL)
+# <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  현재 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈의 개체 식별자(ID)를 반환합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈은 저장 프로시저, 사용자 정의 함수 또는 트리거일 수 있습니다. @@PROCID CLR 모듈 또는 데이터 처리에에 지정할 수 액세스 공급자입니다.  
+  현재 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈의 개체 식별자(ID)를 반환합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈은 저장 프로시저, 사용자 정의 함수 또는 트리거일 수 있습니다. @@PROCID은 CLR 모듈 또는 처리 중인 데이터 액세스 공급자에서는 지정할 수 없습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -79,13 +79,13 @@ GO
 EXECUTE dbo.usp_FindName 'P%', 'A%';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [메타 데이터 함수 &#40; Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.objects &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [메타데이터 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [Raiserror&#40; Transact SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

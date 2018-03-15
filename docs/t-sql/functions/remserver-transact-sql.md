@@ -1,5 +1,5 @@
 ---
-title: '@@REMSERVER (Transact SQL) | Microsoft Docs'
+title: '@@REMSERVER(Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact SQL)
+# <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>주의  
- @@REMSERVER 은 프로시저가 실행 될 데이터베이스 서버의 이름을 확인 하는 저장된 프로시저를 사용 하도록 설정 합니다.  
+## <a name="remarks"></a>Remarks  
+ @@REMSERVER에서 저장 프로시저는 프로시저가 실행되는 데이터베이스 서버의 이름을 확인할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 원격 서버의 이름을 반환하는 `usp_CheckServer` 프로시저를 만듭니다.  
@@ -78,7 +78,7 @@ EXEC SEATTLE1...usp_CheckServer;
 LONDON2  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구성 함수&#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [원격 서버](../../database-engine/configure-windows/remote-servers.md)  
   

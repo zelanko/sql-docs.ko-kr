@@ -1,5 +1,5 @@
 ---
-title: "STConvexHull (geography 데이터 형식) | Microsoft Docs"
+title: "STConvexHull(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  네 점을 나타내는 개체를 반환 합니다.는 **geography** 인스턴스.  
+  **geography** 인스턴스의 볼록 집합(convex hull)을 나타내는 개체를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,21 +41,21 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>주의  
- 반환 된 `FullGlobe` 개체에 대 한 **geography** 봉투 각도가 90 보다 큰 인스턴스.  
+## <a name="remarks"></a>Remarks  
+ 봉투 각도가 90보다 큰 **geography** 인스턴스에 대해 `FullGlobe` 개체를 반환합니다.  
   
- 빈 반환 **geography** 빈에 대 한 컬렉션 **geography** 인스턴스.  
+ 빈 **geography** 인스턴스에 대해 빈 **geography** 컬렉션을 반환합니다.  
   
- 반환 **null** 초기화 되지 않은 항목에 대 한 **geography** 인스턴스.  
+ 초기화되지 않은 **geography** 인스턴스에 대해 **null**을 반환합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>1. 초기화되지 않은 인스턴스에 STConvexHull() 사용  
- 다음 예제에서는 `STConvexHull()` 초기화 되지 않은 **geography** 인스턴스.  
+ 다음 예에서는 초기화되지 않은 **geography** 인스턴스에 `STConvexHull()`을 사용합니다.  
   
 ```
  DECLARE @g geography;  
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>4. 봉투 각도가 90보다 큰 geography 인스턴스에서 볼록 집합 찾기  
- 다음 예제에서는 `STConvexHull()` 에 **geography** 봉투 각도가 90 보다 큰 인스턴스.  
+ 다음 예에서는 봉투 각도가 90도보다 큰 **geography** 인스턴스에 `STConvexHull()`을 사용합니다.  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

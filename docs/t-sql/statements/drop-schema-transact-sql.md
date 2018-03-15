@@ -1,5 +1,5 @@
 ---
-title: DROP SCHEMA (TRANSACT-SQL) | Microsoft Docs
+title: DROP SCHEMA(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -57,22 +57,22 @@ DROP SCHEMA schema_name
 ```  
   
 ## <a name="arguments"></a>인수  
- *경우에 존재*  
+ *IF EXISTS*  
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- 조건에 따라 이미 있는 경우에 스키마를 삭제 합니다.  
+ 이미 있는 경우에만 스키마를 조건부로 삭제합니다.  
   
  *schema_name*  
  데이터베이스 내에서 스키마를 식별하는 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  삭제할 스키마에는 개체가 포함되지 않아야 합니다. 스키마에 개체가 포함된 경우 DROP 문이 실패합니다.  
   
- 스키마에 대 한 정보는 [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md) 카탈로그 뷰에 있습니다.  
+ 스키마 정보는 [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md) 카탈로그 뷰에 표시됩니다.  
   
- **주의**[!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ **주의** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  스키마에 대한 CONTROL 권한 또는 데이터베이스에 대한 ALTER ANY SCHEMA 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -95,8 +95,8 @@ GO
 ```  
   
   
-## <a name="see-also"></a>관련 항목:  
- [스키마 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [스키마 &#40; 변경 Transact SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
- [DROP SCHEMA (Transact SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

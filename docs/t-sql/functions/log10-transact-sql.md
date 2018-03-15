@@ -1,5 +1,5 @@
 ---
-title: LOG10 (Transact SQL) | Microsoft Docs
+title: LOG10(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="log10-transact-sql"></a>LOG10(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  지정 된 밑이 10 인 로그 값을 반환 **float** 식입니다.  
+  지정된 **float** 식의 상용 로그를 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ LOG10 ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **float** 또는 암시적으로 변환할 수 있는 형식의 **float**합니다.  
+ **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
   
-## <a name="remarks"></a>주의  
- LOG10과 POWER 함수는 서로 역함수 관계에 있습니다. 예를 들어 10 ^ LOG10 (*n*) =  *n* 합니다.  
+## <a name="remarks"></a>Remarks  
+ LOG10과 POWER 함수는 서로 역함수 관계에 있습니다. 예를 들어 10 ^ LOG10(*n*) = *n*입니다.  
   
 ## <a name="examples"></a>예  
   
@@ -93,10 +93,10 @@ SELECT POWER (10, LOG10(5));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: 밑을 10으로 사용 하는 값에 대 한 계산 하는입니다.  
- 다음 예에서는 계산 된 `LOG10` 지정 된 값입니다.  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>3. 값에 대한 기본 10 로그 계산  
+ 다음 예에서는 지정된 값의 `LOG10`을 계산하는 방법을 보여 줍니다.  
   
 ```  
 SELECT LOG10(145.175642);  
@@ -109,10 +109,10 @@ SELECT LOG10(145.175642);
 2.16
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [전원 &#40; Transact SQL &#41;](../../t-sql/functions/power-transact-sql.md)   
- [로그 &#40; Transact SQL &#41;](../../t-sql/functions/log-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [POWER &#40;Transact-SQL&#41;](../../t-sql/functions/power-transact-sql.md)   
+ [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)  
   
   
 

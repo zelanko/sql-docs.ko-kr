@@ -1,5 +1,5 @@
 ---
-title: ALTER PARTITION FUNCTION (Transact SQL) | Microsoft Docs
+title: ALTER PARTITION FUNCTION(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -64,21 +64,21 @@ ALTER PARTITION FUNCTION partition_function_name()
  *partition_function_name*  
  수정할 파티션 함수의 이름입니다.  
   
- 범위 분할 ( *boundary_value* )  
- 하나의 파티션을 파티션 함수에 추가합니다. *boundary_value* 새 파티션의 범위를 결정 하며 파티션 함수의 기존 경계 범위와 달라 야 합니다. 에 따라 *boundary_value*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 기존 범위 중 하나를 두 개로 분할 합니다. 이러한 두 곳 새 *boundary_value* 있는 새 파티션으로 간주 됩니다.  
+ SPLIT RANGE ( *boundary_value* )  
+ 하나의 파티션을 파티션 함수에 추가합니다. *boundary_value*는 새 파티션의 범위를 결정하며 반드시 파티션 함수의 기존 경계 범위와 달라야 합니다. *boundary_value*에 따라 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 하나의 기존 범위를 둘로 나눕니다. 이들 중 새 *boundary_value*가 있는 범위가 새 파티션으로 간주됩니다.  
   
  파일 그룹은 온라인 상태로 존재해야 하며 새 파티션을 보유할 수 있도록 파티션 함수를 사용하는 파티션 스키마에 의해 NEXT USED로 표시되어야 합니다. 파일 그룹은 CREATE PARTITION SCHEME 문에서 파티션에 할당됩니다. CREATE PARTITION SCHEME 문이 필요한 수보다 많은 파일 그룹을 할당하는 경우(보유할 파일 그룹보다 적은 수의 파티션이 CREATE PARTITION FUNCTION 문에서 만들어짐) 할당되지 않은 파일 그룹이 있으며 이들 중 하나는 파티션 스키마에 의해 NEXT USED로 표시됩니다. 이 파일 그룹은 새 파티션을 보유하게 됩니다. 파티션 스키마가 NEXT USED로 표시한 파일 그룹이 없는 경우 ALTER PARTITION SCHEME를 사용하여 파일 그룹을 추가하거나 새 파티션을 보유할 기존 파일 그룹을 지정해야 합니다. 이미 파티션을 보유하고 있는 파일 그룹이 추가 파티션을 보유하도록 지정할 수 있습니다. 파티션 함수는 둘 이상의 파티션 스키마에 참여할 수 있으므로 파티션을 추가하는 파티션 함수를 사용하는 모든 파티션 스키마에는 NEXT USED 파일 그룹이 있어야 합니다. 그렇지 않으면 ALTER PARTITION FUNCTION은 NEXT USED 파일 그룹이 부족한 파티션 스키마 또는 스키마를 표시하는 오류를 일으키고 실패합니다.  
   
  동일한 파일 그룹에 모든 파티션을 만든 경우 파일 그룹은 초기에 자동으로 NEXT USED 파일 그룹이 되도록 할당됩니다. 그러나 분할 작업이 수행된 이후에는 더 이상 지정된 NEXT USED 파일 그룹이 없습니다. ALTER PARITION SCHEME을 사용하여 NEXT USED 파일 그룹이 되도록 명시적으로 파일 그룹을 할당해야 합니다. 그렇지 않으면 후속 분할 작업은 실패하게 됩니다.  
   
 > [!NOTE]  
->  Columnstore 인덱스의 제한 사항: 테이블에 columnstore 인덱스가 있는 경우에 빈 파티션만 분할할 수 있습니다. 삭제 하거나이 작업을 수행 하기 전에 columnstore 인덱스를 사용 하지 않도록 설정 해야 합니다.  
+>  columnstore 인덱스의 제한 사항: 테이블에 columnstore 인덱스가 있으면 빈 파티션만 분할할 수 있습니다. 이 작업을 수행하기 전에 columnstore 인덱스를 삭제하거나 사용하지 않도록 설정해야 합니다.  
   
- 병합 [범위 ( *boundary_value*)]  
- 파티션을 삭제하고 해당 파티션에 있는 모든 값을 남아 있는 파티션 중 하나로 병합합니다. 범위 (*boundary_value*)는 삭제 된 파티션의에서 값이 병합 되므로, 기존 경계 값 이어야 합니다. 원래 보관 된 파일 그룹 *boundary_value* 나머지 파티션이 사용 하거나 NEXT USED 속성으로 표시 된 파티션 구성표에서 제거 됩니다. 병합 된 파티션은 원래 보유 하지 않던 파일 그룹에 있는 *boundary_value*합니다. *boundary_value* 변수 (사용자 정의 형식 변수 포함) 또는 함수 (사용자 정의 함수 포함)을 참조할 수 있는 상수 식입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 식을 참조할 수 없습니다. *boundary_value* 해야 일치 또는 해당 분할 열의 데이터 형식을 암시적으로 변환할 수 있는 방식으로 암시적으로 변환 하는 동안 자를 수 없습니다 및 크기와 값의 배율 않습니다와 일치 하지 않음을 해당 해당 *input_parameter_type*합니다.  
+ MERGE [ RANGE ( *boundary_value*) ]  
+ 파티션을 삭제하고 해당 파티션에 있는 모든 값을 남아 있는 파티션 중 하나로 병합합니다. RANGE(*boundary_value*)는 삭제된 파티션의 값을 병합하는 기존의 경계 값이어야 합니다. 원래 *boundary_value*를 보유한 파일 그룹은 남은 파티션 그룹에서 사용되지 않을 경우 파티션 스키마에서 제거되거나 NEXT USED 속성으로 표시됩니다. 병합된 파티션은 원래 *boundary_value*를 보유하지 않던 파일 그룹에 있습니다. *boundary_value*는 변수(사용자 정의 형식 변수 포함) 또는 함수(사용자 정의 함수 포함)를 참조할 수 있는 상수 식입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 식을 참조할 수 없습니다. *boundary_value*는 해당 분할 열의 데이터 형식과 일치하거나 이 형식으로 암시적으로 변환할 수 있어야 하며, 암시적으로 변환하는 동안 해당하는 *input_parameter_type*과 일치하지 않는 값의 크기 및 소수 자릿수를 잘라낼 수 없습니다.  
   
 > [!NOTE]  
->  Columnstore 인덱스의 제한 사항: columnstore 인덱스를 포함 하는 두 개의 비어 있지 않은 파티션을 병합할 수 없습니다. 삭제 하거나이 작업을 수행 하기 전에 columnstore 인덱스를 사용 하지 않도록 설정 해야 합니다.  
+>  columnstore 인덱스의 제한 사항: columnstore 인덱스가 포함된 두 개의 비어 있지 않은 파티션은 병합할 수 없습니다. 이 작업을 수행하기 전에 columnstore 인덱스를 삭제하거나 사용하지 않도록 설정해야 합니다.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
  파티션 범위의 양 끝에 항상 빈 파티션을 유지하여 파티션 분할(새 데이터 로드 전) 및 파티션 병합(이전 데이터 언로드 후)으로 인해 데이터가 이동되지 않도록 합니다. 채워진 파티션은 분할되거나 병합되지 않도록 합니다. 채워진 파티션을 분할하거나 병합할 경우 로그 생성이 네 배 더 생성될 수 있으며 잠금이 과도하게 발생할 수 있습니다.  
@@ -105,7 +105,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 파티션 함수 수정을 위한 복제 지원을 제공하지 않습니다. 게시 데이터베이스 내의 파티션 함수에 대한 변경은 구독 데이터베이스에 수동으로 적용해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER PARTITION FUNCTION을 실행하려면 다음 중 하나의 권한이 필요합니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -152,20 +152,20 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 MERGE RANGE (100);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [분할 된 테이블 및 인덱스](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
+## <a name="see-also"></a>참고 항목  
+ [분할된 테이블 및 인덱스](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [CREATE PARTITION FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [DROP PARTITION function&#40; Transact SQL &#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [ALTER PARTITION scheme&#40; Transact SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [DROP PARTITION scheme&#40; Transact SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME&#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME&#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [sys.partition_functions &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [sys.partition_parameters &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
- [sys.partition_range_values &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
- [sys.partitions&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_functions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
+ [sys.partition_parameters&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
+ [sys.partition_range_values&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
+ [sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: CREATE VIEW (Transact SQL) | Microsoft Docs
+title: CREATE VIEW(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -95,10 +95,10 @@ AS <select_statement>
 ```  
   
 ## <a name="arguments"></a>인수
-또는 변경  
- **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).   
+OR ALTER  
+ **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터)   
   
- 조건에 따라 이미 있는 경우에 뷰를 변경 합니다. 
+ 이미 있는 경우에만 뷰를 조건부로 변경합니다. 
  
  *schema_name*  
  뷰가 속한 스키마의 이름입니다.  
@@ -106,13 +106,13 @@ AS <select_statement>
  *view_name*  
  뷰의 이름입니다. 뷰 이름은 반드시 식별자에 적용되는 규칙을 준수해야 합니다. 뷰 소유자 이름을 지정하는 것은 선택 사항입니다.  
   
- *열*  
+ *column*  
  뷰에 있는 열에 사용할 이름입니다. 열이 산술 식, 함수 또는 상수에서 파생된 경우, 일반적으로 조인 때문에 둘 이상의 열이 같은 이름을 갖는 경우, 뷰의 열이 파생된 열과 다른 이름을 갖는 경우에만 열 이름이 필요합니다. SELECT 문에서 열 이름을 할당할 수도 있습니다.  
   
- 경우 *열* 을 지정 하지 않으면 뷰 열에는 SELECT 문에 열과 동일한 이름을 획득 합니다.  
+ *column*을 지정하지 않으면 뷰 열의 이름과 SELECT 문에 있는 열의 이름이 같아집니다.  
   
 > [!NOTE]  
->  뷰에 대한 열에서 열 이름에 대한 사용 권한은 기본 데이터의 원본에 상관없이 CREATE VIEW 또는 ALTER VIEW 문에 적용할 수 있습니다. 예를 들어, 권한이 부여 된 경우는 **SalesOrderID** CREATE VIEW 문의 열 ALTER VIEW 문은 이름을 지정할 수는 **SalesOrderID** 등의다른열이름의열**OrderRef**를 사용 하 여 보기와 관련 된 권한은 계속 유지 하 고 **SalesOrderID**합니다.  
+>  뷰에 대한 열에서 열 이름에 대한 사용 권한은 기본 데이터의 원본에 상관없이 CREATE VIEW 또는 ALTER VIEW 문에 적용할 수 있습니다. 예를 들어 CREATE VIEW 문에서 **SalesOrderID** 열에 사용 권한이 부여된 경우 ALTER VIEW 문은 **SalesOrderID** 열에 **OrderRef** 등의 다른 이름을 지정할 수 있으며 여전히 **SalesOrderID**를 사용하는 뷰에 연결된 사용 권한을 가집니다.  
   
  AS  
  뷰가 수행할 동작을 지정합니다.  
@@ -137,23 +137,23 @@ AS <select_statement>
   
 -   임시 테이블 또는 테이블 변수 참조  
   
- 때문에 *select_statement* SELECT 문을 사용 하 여 사용 하는 데 유효한 \<알아서 > 및 \<테이블 힌트 > FROM 절에 지정 된 힌트입니다. 자세한 내용은 참조 [from&#40; Transact SQL &#41; ](../../t-sql/queries/from-transact-sql.md) 및 [select&#40; Transact SQL &#41; ](../../t-sql/queries/select-transact-sql.md). 
+ *select_statement*가 SELECT 문을 사용하므로 \<join_hint> 및 \<table_hint> 힌트를 FROM 절에서 지정된 대로 사용해야 합니다. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) 및 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요. 
   
- 함수와 여러 SELECT 문을 UNION 이나 UNION ALL로 구분에 사용할 수 *select_statement*합니다.  
+ *select_statement*에는 UNION 또는 UNION ALL로 구분된 함수 및 여러 SELECT 문을 사용할 수 있습니다.  
   
  CHECK OPTION  
- 설정 된 조건을 따르도록 보기에 대해 실행 되는 모든 데이터 수정 문이 *select_statement*합니다. 뷰를 통해 행을 수정한 경우에는 WITH CHECK OPTION을 사용하여 수정이 커밋된 후에도 계속 뷰를 통해 데이터를 볼 수 있도록 합니다.  
+ 뷰에 대해 실행된 모든 데이터 수정 명령문이 *select_statement* 내의 기준 집합을 준수하도록 설정합니다. 뷰를 통해 행을 수정한 경우에는 WITH CHECK OPTION을 사용하여 수정이 커밋된 후에도 계속 뷰를 통해 데이터를 볼 수 있도록 합니다.  
   
 > [!NOTE]  
 >  CHECK OPTION을 지정해도 뷰의 기본 테이블을 직접 업데이트한 결과는 뷰에서 확인되지 않습니다.  
   
  ENCRYPTION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 항목을 암호화 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) CREATE VIEW 문의 텍스트가 포함 된 합니다. WITH ENCRYPTION을 사용하면 뷰가 SQL Server 복제의 일부로 게시되지 않도록 할 수 있습니다.  
+ CREATE VIEW 문의 텍스트가 포함된 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md)의 항목을 암호화합니다. WITH ENCRYPTION을 사용하면 뷰가 SQL Server 복제의 일부로 게시되지 않도록 할 수 있습니다.  
   
  SCHEMABINDING  
- 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 미치는 방법으로 기본 테이블을 수정할 수 없습니다. 뷰 정의 자체를 먼저 수정하거나 삭제하여 수정할 테이블에 대해 종속성을 제거해야 합니다. SCHEMABINDING을 사용 하는 경우는 *select_statement* 는 두 부분으로 된 이름을 포함 해야 합니다 (*스키마***.** *개체*) 테이블, 뷰 또는 참조 되는 사용자 정의 함수입니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
+ 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 미치는 방법으로 기본 테이블을 수정할 수 없습니다. 뷰 정의 자체를 먼저 수정하거나 삭제하여 수정할 테이블에 대해 종속성을 제거해야 합니다. SCHEMABINDING을 사용하는 경우 *select_statement*에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(*schema***.***object*)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
   
  SCHEMABINDING 절로 만든 뷰에서 사용하는 뷰 또는 테이블은 뷰가 삭제되거나 변경되어 스키마 바인딩이 더 이상 존재하지 않는 경우에만 삭제할 수 있습니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생합니다. 또한 ALTER TABLE 문이 뷰 정의에 영향을 미치는 경우에는 스키마 바인딩이 있는 뷰에서 사용하는 테이블에서 이러한 문을 실행할 수 없습니다.  
   
@@ -162,20 +162,20 @@ AS <select_statement>
   
  VIEW_METADATA를 사용하여 만든 뷰의 경우 찾아보기 모드 메타데이터는 결과 집합의 뷰에서 열을 설명할 때 기본 테이블 이름 대신 뷰 이름을 반환합니다.  
   
- WITH VIEW_METADATA를 모든 열을 사용 하 여 뷰를 만들 때를 제외 하 고는 **타임 스탬프** 열을 업데이트할 수는 뷰에 INSTEAD OF INSERT 또는 INSTEAD OF UPDATE 트리거가 있으면 합니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 주의를 참조하세요.  
+ WITH VIEW_METADATA를 사용하여 뷰를 만드는 경우 뷰에 INSTEAD OF INSERT 또는 INSTEAD OF UPDATE 트리거가 있으면 **timestamp** 열을 제외한 모든 열을 업데이트할 수 있습니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 주의를 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  현재 데이터베이스에서만 뷰를 만들 수 있습니다. CREATE VIEW는 쿼리 일괄 처리에서 첫째 문이어야 합니다. 최대 1,024개의 열을 뷰에 포함시킬 수 있습니다.  
   
  뷰를 통해 쿼리할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 문에 참조된 모든 데이터베이스 개체가 존재하는지, 문의 컨텍스트 내에서 유효한지, 데이터 변경 문이 데이터 무결성 규칙을 위반하지 않는지 확인합니다. 확인이 실패하면 오류 메시지가 반환됩니다. 성공적으로 확인한 경우 작업이 기본 테이블에 대한 동작으로 변환됩니다.  
   
  뷰가 삭제된 테이블이나 뷰에 종속된 경우 뷰를 사용하려고 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류 메시지를 표시합니다. 새 테이블이나 뷰가 만들어지고 삭제된 테이블을 대체하기 위해 테이블 구조가 이전의 기본 테이블과 달라지지 않은 경우 뷰를 다시 사용할 수 있게 됩니다. 새 테이블이나 뷰 구조가 변경된 경우에는 뷰를 삭제하고 다시 만들어야 합니다.  
   
- 뷰는 SCHEMABINDING 절을 사용 하는 생성 되지 않는 경우 [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) 보기의 정의 영향을 주는 개체 뷰의 기반이 되며 변경 될 때만 적용 됩니다. 그렇지 않으면 뷰를 쿼리할 때 예기치 않은 결과가 발생할 수 있습니다.  
+ SCHEMABINDING 절을 사용하여 뷰를 만들지 않은 경우 뷰의 기반이 되는 개체에 대한 변경 내용이 뷰의 정의에 영향을 주면 [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)를 실행해야 합니다. 그렇지 않으면 뷰를 쿼리할 때 예기치 않은 결과가 발생할 수 있습니다.  
   
- 뷰를 만들 보기에 대 한 정보는 다음 카탈로그 뷰에 저장 됩니다: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), 및 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)합니다. CREATE VIEW 문의 텍스트가에 저장 됩니다는 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰에 있습니다.  
+ 뷰를 만들면 뷰에 대한 정보가 [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 및 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 카탈로그 뷰에 저장됩니다. CREATE VIEW 문의 텍스트는 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰에 저장됩니다.  
   
- 사용 하 여 뷰에 인덱스를 사용 하는 쿼리 정의 **숫자** 또는 **float** 식 결과 뷰에 인덱스를 사용 하지 않는 유사한 쿼리와 다른 있을 수 있습니다. 기본 테이블의 INSERT, DELETE 또는 UPDATE 동작 동안 발생하는 반올림 오류 때문에 이런 차이가 생길 수 있습니다.  
+ **numeric** 또는 **float** 식으로 정의된 뷰에 인덱스를 사용하는 쿼리의 결과는 뷰에 인덱스를 사용하지 않는 유사한 쿼리와 다를 수 있습니다. 기본 테이블의 INSERT, DELETE 또는 UPDATE 동작 동안 발생하는 반올림 오류 때문에 이런 차이가 생길 수 있습니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 뷰가 만들어질 때 SET QUOTED_IDENTIFIER 및 SET ANSI_NULLS의 설정을 저장합니다. 이러한 원래 설정은 뷰를 사용할 때 뷰를 구문 분석하기 위해 사용되므로 뷰에 액세스할 때 SET QUOTED_IDENTIFIER 및 SET ANSI_NULLS의 클라이언트 세션 설정은 뷰 정의에 영향을 미치지 않습니다.  
   
@@ -192,17 +192,17 @@ AS <select_statement>
   
 -   수정하는 열이 GROUP BY, HAVING 또는 DISTINCT 절의 영향을 받지 않습니다.  
   
--   위쪽에서 아무 곳 이나 사용 되지 않습니다는 *select_statement* WITH CHECK OPTION 절을 함께 보기의 합니다.  
+-   TOP는 위치에 관계없이 뷰의 *select_statement*에서 WITH CHECK OPTION 절과 함께 사용되지 않습니다.  
   
- 이전의 제한이 뷰 자체에 적용되는 것과 마찬가지로 뷰의 FROM 절 하위 쿼리에 적용됩니다. 일반적으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 뷰 정의에서 특정 기본 테이블에 대해 이루어진 수정을 분명하게 추적할 수 있어야 합니다. 자세한 내용은 참조 [수정 데이터 뷰를 통해](../../relational-databases/views/modify-data-through-a-view.md)합니다.  
+ 이전의 제한이 뷰 자체에 적용되는 것과 마찬가지로 뷰의 FROM 절 하위 쿼리에 적용됩니다. 일반적으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 뷰 정의에서 특정 기본 테이블에 대해 이루어진 수정을 분명하게 추적할 수 있어야 합니다. 자세한 내용은 [뷰를 통해 데이터 수정](../../relational-databases/views/modify-data-through-a-view.md)을 참조하세요.  
   
  이전의 제한으로 인해 뷰를 통해 직접 데이터를 수정할 수 없는 경우 다음 방법을 사용하세요.  
   
--   **Instead of 트리거**  
+-   **INSTEAD OF 트리거**  
   
-     뷰를 업데이트할 수 있도록 뷰에 INSTEAD OF 트리거를 만들 수 있습니다. INSTEAD OF 트리거는 정의된 지점에서 데이터 수정 문 대신 실행됩니다. 이 트리거를 사용하면 데이터 수정 문을 처리할 일련의 동작을 지정할 수 있습니다. 따라서 특정 데이터 수정 문(INSERT, UPDATE 또는 DELETE)의 뷰에 INSTEAD OF 트리거가 있을 경우 문을 통해 해당 뷰를 업데이트할 수 있습니다. Instead of 트리거에 대 한 자세한 내용은 참조 하십시오. [DML 트리거](../../relational-databases/triggers/dml-triggers.md)합니다.  
+     뷰를 업데이트할 수 있도록 뷰에 INSTEAD OF 트리거를 만들 수 있습니다. INSTEAD OF 트리거는 정의된 지점에서 데이터 수정 문 대신 실행됩니다. 이 트리거를 사용하면 데이터 수정 문을 처리할 일련의 동작을 지정할 수 있습니다. 따라서 특정 데이터 수정 문(INSERT, UPDATE 또는 DELETE)의 뷰에 INSTEAD OF 트리거가 있을 경우 문을 통해 해당 뷰를 업데이트할 수 있습니다. INSTEAD OF 트리거에 대한 자세한 내용은 [DML 트리거](../../relational-databases/triggers/dml-triggers.md)를 참조하세요.  
   
--   **분할 된 뷰**  
+-   **분할 뷰**  
   
      뷰가 분할 뷰일 경우 특정 제한에 따라 뷰를 업데이트할 수 있습니다. 필요할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 사용하고 있는 모든 테이블 및 뷰가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 로컬 분할 뷰, 그리고 뷰의 테이블 중 하나 이상이 다른 서버나 원격 서버에 있는 분산형 분할 뷰로 구분합니다.  
   
@@ -269,7 +269,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   제약 조건은 `<col>`의 지정된 값이 모두 `C1, ..., Cn` 제약 조건을 최대 하나까지 만족시켜 제약 조건이 결합되지 않거나 겹치지 않는 일련의 간격을 구성하도록 해야 합니다. 결합되지 않은 제약 조건이 정의된 `<col>` 열을 분할 열이라고 합니다. 분할 열 이름은 기본 테이블에 있는 이름과 다를 수 있습니다. 앞에서 언급한 분할 열의 조건을 만족시키려면 제약 조건이 활성화되어 트러스트된 상태여야 합니다. 제약 조건 검사 CHECK CONSTRAINT를 사용 하 여 다시 활성화 된 제약 조건을 해제 되어 있는 경우 *constraint_name* WITH CHECK 옵션을 사용 하 여 유효성을 검사 하 고 ALTER TABLE의 옵션입니다.  
+    -   제약 조건은 `<col>`의 지정된 값이 모두 `C1, ..., Cn` 제약 조건을 최대 하나까지 만족시켜 제약 조건이 결합되지 않거나 겹치지 않는 일련의 간격을 구성하도록 해야 합니다. 결합되지 않은 제약 조건이 정의된 `<col>` 열을 분할 열이라고 합니다. 분할 열 이름은 기본 테이블에 있는 이름과 다를 수 있습니다. 앞에서 언급한 분할 열의 조건을 만족시키려면 제약 조건이 활성화되어 트러스트된 상태여야 합니다. 제약 조건이 해제되면 ALTER TABLE의 CHECK CONSTRAINT *constraint_name* 옵션을 사용하고 WITH CHECK 옵션으로 제약 조건의 유효성을 검사하여 제약 조건 검사를 다시 설정하세요.  
   
          다음 예에서는 올바른 제약 조건 집합을 보여 줍니다.  
   
@@ -284,7 +284,7 @@ FROM Tn;
   
     -   분할 열은 테이블에 있는 PRIMARY KEY의 일부입니다.  
   
-    -   기본적으로 계산된 id가 될 수 없습니다 또는 **타임 스탬프** 열입니다.  
+    -   분할 열은 계산 열, ID 열, 기본 열 또는 **timestamp** 열이 될 수 없습니다.  
   
     -   멤버 테이블의 동일한 열에 제약 조건이 둘 이상 있는 경우에는 데이터베이스 엔진에서 뷰가 분할 뷰인지 여부를 결정할 때 모든 제약 조건을 고려하지 않고 무시합니다. 분할 뷰의 조건을 만족하려면 분할 열에 분할 제약 조건이 하나만 있어야 합니다.  
   
@@ -292,7 +292,7 @@ FROM Tn;
   
 3.  멤버 테이블 또는 기본 테이블 `T1, ..., Tn`  
   
-    -   테이블은 4부분으로 된 이름 또는 OPENDATASOURCE나 OPENROWSET 기반 이름을 통해 참조되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 다른 컴퓨터의 로컬 테이블 또는 테이블이 될 수 있습니다. OPENDATASOURCE 및 OPENROWSET 구문은 테이블 이름을 지정할 수 있으나 통과 쿼리는 지정할 수 없습니다. 자세한 내용은 참조 [OPENDATASOURCE &#40; Transact SQL &#41; ](../../t-sql/functions/opendatasource-transact-sql.md) 및 [OPENROWSET &#40; Transact SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
+    -   테이블은 4부분으로 된 이름 또는 OPENDATASOURCE나 OPENROWSET 기반 이름을 통해 참조되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 다른 컴퓨터의 로컬 테이블 또는 테이블이 될 수 있습니다. OPENDATASOURCE 및 OPENROWSET 구문은 테이블 이름을 지정할 수 있으나 통과 쿼리는 지정할 수 없습니다. 자세한 내용은 [OPENDATASOURCE&#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md) 및 [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)을 참조하세요.  
   
          하나 이상의 멤버 테이블이 원격이면 뷰를 분산형 분할 뷰라고 하며 추가 조건이 적용됩니다. 자세한 내용은 이 섹션의 뒷부분에서 설명합니다.  
   
@@ -302,7 +302,7 @@ FROM Tn;
   
     -   멤버 테이블은 같은 수의 열에 모두 PRIMARY KEY 제약 조건이 있어야 합니다.  
   
-    -   뷰에 있는 모든 멤버 테이블의 ANSI 패딩 설정이 같아야 합니다. 중 하나를 사용 하 여 설정할 수 있습니다는 **사용자 옵션** 옵션 **sp_configure** 또는 SET 문입니다.  
+    -   뷰에 있는 모든 멤버 테이블의 ANSI 패딩 설정이 같아야 합니다. **sp_configure**에 **user options** 옵션을 사용하거나 SET 문을 사용하여 설정할 수 있습니다.  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>분할된 뷰의 데이터를 수정하기 위한 조건  
  분할된 뷰의 데이터를 수정하는 문에는 다음 제한이 적용됩니다.  
@@ -315,13 +315,13 @@ FROM Tn;
   
 -   하나 이상의 멤버 테이블에 ID 열이 있는 뷰의 열은 INSERT 또는 UPDATE 문을 사용하여 수정할 수 없습니다.  
   
--   멤버 테이블 중 하나를 포함 하는 경우는 **타임 스탬프** 열에서 INSERT 또는 UPDATE 문을 사용 하 여 데이터를 수정할 수 없습니다.  
+-   멤버 테이블 중 하나에 **timestamp** 열이 포함되어 있으면 INSERT 또는 UPDATE 문을 사용하여 데이터를 수정할 수 없습니다.  
   
 -   멤버 테이블 중 하나에 트리거나 ON UPDATE CASCADE/SET NULL/SET DEFAULT 또는 ON DELETE CASCADE/SET NULL/SET DEFAULT 제약 조건이 있으면 뷰를 수정할 수 없습니다.  
   
 -   문에 멤버 테이블 또는 같은 뷰와 자체 조인이 있으면 분할 뷰에 대해 INSERT, UPDATE 및 DELETE 동작을 수행할 수 없습니다.  
   
--   지원 되지 않습니다 대량으로 분할 된 뷰로 데이터를 가져오는 **bcp** 또는 BULK INSERT 및 INSERT... SELECT * FROM OPENROWSET(BULK...) 문은 분할 뷰로 데이터를 대량 가져오는 것을 지원하지 않습니다. 그러나 삽입할 수 있습니다 여러 행 분할된 된 뷰를 사용 하 여는 [삽입](../../t-sql/statements/insert-transact-sql.md) 문.  
+-   **bcp** 또는 BULK INSERT 및 INSERT ... SELECT * FROM OPENROWSET(BULK...) 문은 분할 뷰로 데이터를 대량 가져오는 것을 지원하지 않습니다. 그러나 [INSERT](../../t-sql/statements/insert-transact-sql.md) 문을 사용하여 분할된 뷰에 여러 행을 삽입할 수 있습니다.  
   
     > [!NOTE]  
     >  분할 뷰를 업데이트하려면 사용자에게 멤버 테이블에 대한 INSERT, UPDATE 및 DELETE 권한이 있어야 합니다.  
@@ -333,9 +333,9 @@ FROM Tn;
   
 -   작업할 INSERT, UPDATE 또는 DELETE 문에 대해 XACT_ABORT SET 옵션이 ON으로 설정되어야 합니다.  
   
--   형식의 원격 테이블의 모든 열 **smallmoney** 분할 뷰에서 참조 되는으로 매핑되고 **money**합니다. 따라서 로컬 테이블의 해당 열 (select 목록의 동일한 서 수 위치)에 형식 이어야 합니다 **money**합니다.  
+-   분할 뷰에서 참조되는 **smallmoney** 형식의 원격 테이블 열은 **money**로 매핑됩니다. 따라서 로컬 테이블의 해당 열(SELECT 목록의 동일한 서수 위치에 있는 열)도 **money** 형식이어야 합니다.  
   
--   데이터베이스 호환성 수준 110 이상 형식의 원격 테이블의 모든 열 **smalldatetime** 분할 뷰에서 참조 되는으로 매핑되고 **smalldatetime**합니다. 로컬 테이블의 해당 열 (select 목록의 동일한 서 수 위치)에 있어야 **smalldatetime**합니다. 이 이전 버전의와 동작 변경 내용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식의 원격 테이블에 있는 모든 열에 **smalldatetime** 분할 뷰에서 참조 되는으로 매핑되고 **datetime** 및 로컬 테이블의 해당 열 형식 이어야 합니다 **datetime**합니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
+-   데이터베이스 호환성 수준 110 이상에서는 분할 뷰에서 참조되는 **smalldatetime** 형식의 원격 테이블 열이 **smalldatetime**으로 매핑됩니다. 로컬 테이블의 해당 열(SELECT 목록의 동일한 서수 위치에 있는 열)은 **smalldatetime**이어야 합니다. 이 동작은 분할 뷰에서 참조되는 **smalldatetime** 형식의 원격 테이블 열이 **datetime**으로 매핑되고 로컬 테이블의 해당 열이 **datetime** 형식이어야 하는 이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 동작에서 달라진 점입니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
 -   분할 뷰의 연결된 서버는 루프백 연결 서버가 될 수 없습니다. 이 서버는 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 가리키는 연결된 서버입니다.  
   
@@ -346,18 +346,18 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>복제 고려 사항  
  복제와 관련된 멤버 테이블에 분할 뷰를 만들려면 다음을 고려해야 합니다.  
   
--   기본 테이블이 업데이트 구독이 있는 트랜잭션 복제 또는 병합 복제에 포함 된 경우는 **uniqueidentifier** 열 선택 목록에도 포함 되어야 합니다.  
+-   기본 테이블이 업데이트 구독이 있는 트랜잭션 복제 또는 병합 복제와 관련된 경우에는 **uniqueidentifier** 열도 SELECT 목록에 포함되어야 합니다.  
   
-     분할 된 뷰 삽입 작업에 대 한 newid () 값을 제공 해야는 **uniqueidentifier** 열입니다. 에 대 한 모든 업데이트 작업은 **uniqueidentifier** DEFAULT 키워드를 사용할 수 없으므로 열 값으로 newid () 제공 해야 합니다.  
+     분할 뷰에 대한 INSERT 동작은 **uniqueidentifier** 열에 대해 NEWID() 값을 제공해야 합니다. **uniqueidentifier** 열에 대한 UPDATE 동작은 DEFAULT 키워드를 사용할 수 없으므로 NEWID()를 값으로 제공해야 합니다.  
   
 -   뷰를 사용하여 수행된 업데이트의 복제는 서로 다른 두 데이터베이스에서 테이블이 복제될 때와 동일합니다. 서로 다른 복제 에이전트에서 테이블을 제공하며 업데이트 순서는 보장되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에는 CREATE VIEW 권한이 필요하고 뷰를 만들 구성표에는 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
 
-다음 예에서는 AdventureWorks 2012 또는 AdventureWorksDW 데이터베이스를 사용 합니다.  
+이 예에서는 AdventureWorks 2012 또는 AdventureWorksDW 데이터베이스를 사용합니다.  
 
 ### <a name="a-using-a-simple-create-view"></a>1. 간단한 CREATE VIEW 사용  
  다음 예에서는 간단한 `SELECT` 문을 사용하여 뷰를 만듭니다. 간단한 뷰는 열 조합을 자주 쿼리할 때 유용합니다. 이 뷰의 데이터는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Employee` 및 `Person.Person` 테이블에 있습니다. 이 데이터는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]의 직원 이름과 채용 날짜 정보를 제공합니다. 입사일 추적 담당자에게 이 테이블의 모든 데이터에 액세스할 권한을 주지 않아도 해당 뷰를 만들 수 있습니다.  
@@ -375,7 +375,7 @@ GO
 ### <a name="b-using-with-encryption"></a>2. WITH ENCRYPTION 사용  
  다음 예에서는 `WITH ENCRYPTION` 옵션을 사용하여 계산 열, 이름이 바뀐 열 및 복수 열을 보여 줍니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 ```  
 CREATE VIEW Purchasing.PurchaseOrderReject  
@@ -469,10 +469,10 @@ SELECT supplyID, supplier
   FROM dbo.SUPPLY4;  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="f-creating-a-simple-view"></a>6. 간단한 보기를 만드는 방법  
- 다음 예제에서는 원본 테이블에서 일부 열을 선택 하 여 뷰를 만듭니다.  
+### <a name="f-creating-a-simple-view"></a>6. 간단한 뷰 만들기  
+ 다음 예는 원본 테이블에서 일부 열만 선택하여 뷰를 만듭니다.  
   
 ```  
 CREATE VIEW DimEmployeeBirthDates AS  
@@ -480,8 +480,8 @@ SELECT FirstName, LastName, BirthDate
 FROM DimEmployee;  
 ```  
   
-### <a name="g-create-a-view-by-joining-two-tables"></a>7. 두 테이블을 조인 하 여 보기 만들기  
- 다음 예에서는 뷰를 사용 하 여 만듭니다는 `SELECT` 문을 `OUTER JOIN`합니다. 조인 쿼리 결과 보기를 채웁니다.  
+### <a name="g-create-a-view-by-joining-two-tables"></a>7. 두 테이블을 조인하여 뷰 만들기  
+ 다음 예에서는 `OUTER JOIN`이 있는 `SELECT` 문을 사용하여 뷰를 만듭니다. 조인 쿼리의 결과가 뷰를 채웁니다.  
   
 ```  
 CREATE VIEW view1  
@@ -493,20 +493,20 @@ LEFT OUTER JOIN DimSalesTerritory AS dst
 ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/alter-view-transact-sql.md)   
  [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP view&#40; Transact SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
+ [DROP VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [저장 프로시저 만들기](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [sys.dm_sql_referenced_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sp_help&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_refreshview &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [sp_refreshview&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [sp_rename&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sys.views &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
+ [sys.views&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

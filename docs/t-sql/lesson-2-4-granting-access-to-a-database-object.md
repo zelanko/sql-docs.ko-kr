@@ -1,5 +1,5 @@
 ---
-title: "데이터베이스 개체에 대 한 액세스를 부여 | Microsoft Docs"
+title: "데이터베이스 개체에 대한 액세스 권한 부여"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-4---granting-access-to-a-database-object"></a>단원 2-4-데이터베이스 개체에 대 한 액세스 부여
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]관리자로 서 SELECT를 실행할 수 있습니다는 **제품** 테이블 및 **vw_Names** 보기 및 실행의 **pr_Names** 프로시저; 그러나 Mary 수 없습니다. Mary에게 필요한 사용 권한을 부여하려면 GRANT 문을 사용합니다.  
+# <a name="lesson-2-4---granting-access-to-a-database-object"></a>2-4단원 - 데이터베이스 개체에 대한 액세스 권한 부여
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 관리자는 **Products** 테이블 및 **vw_Names** 뷰에서 SELECT를 실행하고 **pr_Names** 프로시저를 실행할 수 있지만 Mary는 이러한 작업을 수행할 수 없습니다. Mary에게 필요한 사용 권한을 부여하려면 GRANT 문을 사용합니다.  
   
 ### <a name="procedure-title"></a>절차 제목  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [요약: 데이터베이스 개체에 대한 사용 권한 구성](../t-sql/lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [GRANT&#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)  
 [REVOKE&#40;Transact-SQL&#41;](../t-sql/statements/revoke-transact-sql.md)  
   

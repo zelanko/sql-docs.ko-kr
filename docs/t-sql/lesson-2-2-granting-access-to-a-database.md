@@ -1,5 +1,5 @@
 ---
-title: "데이터베이스에 대 한 액세스를 부여 | Microsoft Docs"
+title: "데이터베이스에 대한 액세스 권한 부여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-2---granting-access-to-a-database"></a>2-2-데이터베이스에 대 한 액세스 부여 단원
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]현재 mary의이 인스턴스에 대 한 액세스 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 있지만 데이터베이스에 액세스할 수 있는 권한이 없습니다. Mary에게 데이터베이스 사용자의 권한을 부여할 때까지 Mary는 자신의 기본 데이터베이스인 **TestData** 에도 액세스할 수 없습니다.  
+# <a name="lesson-2-2---granting-access-to-a-database"></a>2-2단원 - 데이터베이스에 대한 액세스 권한 부여
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 현재 Mary는 이 인스턴스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 액세스할 수 있지만 데이터베이스에 액세스할 수 있는 권한은 없습니다. Mary에게 데이터베이스 사용자의 권한을 부여할 때까지 Mary는 자신의 기본 데이터베이스인 **TestData** 에도 액세스할 수 없습니다.  
   
 Mary에게 액세스 권한을 부여하려면 **TestData** 데이터베이스로 전환한 다음 CREATE USER 문을 사용하여 Mary의 로그인을 Mary라는 사용자에게 매핑합니다.  
   

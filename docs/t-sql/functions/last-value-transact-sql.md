@@ -1,5 +1,5 @@
 ---
-title: LAST_VALUE (Transact SQL) | Microsoft Docs
+title: LAST_VALUE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -49,15 +49,15 @@ LAST_VALUE ( [scalar_expression )
   
 ## <a name="arguments"></a>인수  
  *scalar_expression*  
- 반환할 값입니다. *scalar_expression* 열, 하위 쿼리 또는 단일 값을 반환 하는 기타 식일 수 있습니다. 다른 분석 함수는 사용할 수 없습니다.  
+ 반환할 값입니다. *scalar_expression*은 열, 하위 쿼리 또는 결과로 반환되는 값이 하나뿐인 다른 식일 수 있습니다. 다른 분석 함수는 사용할 수 없습니다.  
   
- 통해 **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause* 함수가 적용 되는 파티션으로 FROM 절에서 생성 한 결과 집합을 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다.  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다.  
   
- *order_by_clause* 함수를 적용 하기 전에 데이터의 순서를 결정 합니다. *order_by_clause* 가 필요 합니다. *rows_range_clause* 시작점과 끝점을 지정 하 여 파티션 내에서 행을 추가로 제한 합니다. 자세한 내용은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *order_by_clause*는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *order_by_clause*가 필요합니다. *rows_range_clause*는 시작점 및 끝점을 지정하여 파티션 내에서 행을 추가로 제한합니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
- 와 동일한 형식이 *scalar_expression*합니다.  
+ *scalar_expression*과 같은 유형입니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  LAST_VALUE는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
@@ -108,7 +108,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>2. 계산된 식에서 FIRST_VALUE 및 LAST_VALUE 사용  
  다음 예에서는 계산된 식에서 FIRST_VALUE 및 LAST_VALUE 함수를 사용하여 지정된 직원들의 해당 연도 현재 분기 및 첫 분기와 마지막 분기의 분기별 판매 할당량 값의 차이를 각각 표시합니다. FIRST_VALUE  함수는 해당 연도의 첫 분기의 판매 할당량 값을 반환하고 현재 분기의 판매 할당량 값에서 이 값을 뺍니다. 값은 DifferenceFromFirstQuarter라는 파생 열에 반환됩니다. 해당 연도의 첫 번째 분기인 경우 DifferenceFromFirstQuarter 열의 값은 0입니다. LAST_VALUE 함수는 해당 연도의 마지막 분기에 대한 판매 할당량 값을 반환하고, 현재 분기의 판매 할당량 값에서 이 값을 뺍니다. 값은 DifferenceFromLastQuarter라는 파생 열에 반환됩니다. 연도의 마지막 분기의 경우 DifferenceFromLastQuarter  열의 값은 0입니다.  
   
- 아래와 같이 이 예에서는 DifferenceFromLastQuarter  열에 0이 아닌 값이 반환되도록 하기 위해서는 “RANGE  BETWEEN  CURRENT  ROW  AND  UNBOUNDED  FOLLOWING” 절이 필요합니다. 기본 범위는 “RANGE  BETWEEN  UNBOUNDED  PRECEDING  AND  CURRENT  ROW”입니다. 이 예에서는 기본 범위를 사용하여(또는 범위를 포함하지 않아 기본값이 사용되도록 함)  DifferenceFromLastQuarter  열에 0이 반환됩니다. 자세한 내용은 참조 [OVER 절 &#40; Transact SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ 아래와 같이 이 예에서는 DifferenceFromLastQuarter  열에 0이 아닌 값이 반환되도록 하기 위해서는 “RANGE  BETWEEN  CURRENT  ROW  AND  UNBOUNDED  FOLLOWING” 절이 필요합니다. 기본 범위는 “RANGE  BETWEEN  UNBOUNDED  PRECEDING  AND  CURRENT  ROW”입니다. 이 예에서는 기본 범위를 사용하여(또는 범위를 포함하지 않아 기본값이 사용되도록 함)  DifferenceFromLastQuarter  열에 0이 반환됩니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ```  
 USE AdventureWorks2012;  

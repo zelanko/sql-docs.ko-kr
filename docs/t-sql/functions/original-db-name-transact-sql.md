@@ -1,5 +1,5 @@
 ---
-title: ORIGINAL_DB_NAME (Transact SQL) | Microsoft Docs
+title: ORIGINAL_DB_NAME(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  사용자가 데이터베이스 연결 문자열에 지정한 데이터베이스 이름을 반환합니다. 이 사용 하 여 지정 된 데이터베이스는 **sqlcmd-d** 옵션 (사용 하 여 *데이터베이스*) 또는 ODBC 데이터 원본 식 (초기 카탈로그 =*databasename*).  
+  사용자가 데이터베이스 연결 문자열에 지정한 데이터베이스 이름을 반환합니다. 이것은 **sqlcmd-d** 옵션(USE *database*) 또는 ODBC 데이터 원본 식(초기 카탈로그 =*databasename*)을 사용하여 지정한 데이터베이스입니다.  
   
  이 데이터베이스는 기본 사용자 데이터베이스와 같습니다.  
   
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  초기 데이터베이스가 지정되지 않았으면 함수는 빈 문자열을 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
- [osql 유틸리티](../../tools/osql-utility.md)   
- [SQL Server Native Client &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [osql Utility](../../tools/osql-utility.md)   
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

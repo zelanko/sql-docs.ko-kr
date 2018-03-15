@@ -1,5 +1,5 @@
 ---
-title: SET ROWCOUNT (Transact SQL) | Microsoft Docs
+title: SET ROWCOUNT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ SET ROWCOUNT { number | @number_var }
 ```  
   
 ## <a name="arguments"></a>인수  
- *숫자* | @*number_var*  
+ *number* | @*number_var*  
  특정 쿼리를 중지하기 전에 처리된 행의 수(정수)입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  SQL Server의 다음 버전에서는 SET ROWCOUNT 옵션을 사용해도 DELETE, INSERT 및 UPDATE 문에 영향을 주지 않습니다. 새 개발 작업에서는 DELETE, INSERT 및 UPDATE 문에 SET ROWCOUNT 옵션을 사용하지 않도록 하고 현재 이 옵션을 사용하는 응용 프로그램은 수정하세요. 유사한 동작의 경우 TOP 구문을 사용합니다. 자세한 내용은 참조 [top&#40; Transact SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+>  SQL Server의 다음 버전에서는 SET ROWCOUNT 옵션을 사용해도 DELETE, INSERT 및 UPDATE 문에 영향을 주지 않습니다. 새 개발 작업에서는 DELETE, INSERT 및 UPDATE 문에 SET ROWCOUNT 옵션을 사용하지 않도록 하고 현재 이 옵션을 사용하는 응용 프로그램은 수정하세요. 유사한 동작의 경우 TOP 구문을 사용합니다. 자세한 내용은 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)를 참조하세요.  
   
  모든 행이 반환될 수 있도록 이 옵션을 해제하려면 SET ROWCOUNT 0을 지정하세요.  
   
@@ -70,7 +70,7 @@ SET ROWCOUNT { number | @number_var }
   
  SET ROWCOUNT 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -107,8 +107,8 @@ GO
 (4 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- SET ROWCOUNT는 지정한 행 수 이후에는 처리를 중지합니다. 다음 예제에서는 20 개 이상의 행의 조건을 충족 하는지 확인 `AccountType = 'Assets'`합니다. 그러나 SET ROWCOUNT를 적용한 후 일부 행이 반환되지 않은 것을 알 수 있습니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ SET ROWCOUNT는 지정한 행 수 이후에는 처리를 중지합니다. 다음 예에서는 20개를 초과한 행이 `AccountType = 'Assets'`의 기준을 충족한다는 것에 유의하십시오. 그러나 SET ROWCOUNT를 적용한 후 일부 행이 반환되지 않은 것을 알 수 있습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,7 +118,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
- 모든 행을 반환 하려면 행 개수를 0으로 설정 합니다.  
+ 모든 행을 반환하려면 ROWCOUNT를 0으로 설정합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -128,7 +128,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

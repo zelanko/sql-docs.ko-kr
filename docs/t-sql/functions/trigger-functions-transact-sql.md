@@ -1,5 +1,5 @@
 ---
-title: "트리거 함수 (Transact SQL) | Microsoft Docs"
+title: "트리거 함수(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/08/2017
 ms.prod: sql-non-specified

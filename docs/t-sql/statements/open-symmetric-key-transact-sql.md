@@ -1,5 +1,5 @@
 ---
-title: OPEN SYMMETRIC KEY (Transact SQL) | Microsoft Docs
+title: OPEN SYMMETRIC KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -59,38 +59,38 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  *Key_name*  
  열려는 대칭 키의 이름입니다.  
   
- 인증서 *certificate_name*  
+ CERTIFICATE *certificate_name*  
  대칭 키 해독에 사용할 개인 키를 가지고 있는 인증서의 이름입니다.  
   
- 비대칭 키 *asym_key_name*  
+ ASYMMETRIC KEY *asym_key_name*  
  대칭 키 해독에 사용할 개인 키를 가지고 있는 비대칭 키의 이름입니다.  
   
- 암호와 함께 ='*암호*'  
+ WITH PASSWORD ='*password*'  
  인증서나 비대칭 키의 개인 키를 암호화하는 데 사용된 암호입니다.  
   
- 대칭 키 *decrypting_key_name*  
+ SYMMETRIC KEY *decrypting_key_name*  
  열려는 대칭 키를 해독하는 데 사용할 대칭 키의 이름입니다.  
   
- 암호 ='*암호*'  
+ PASSWORD ='*password*'  
  대칭 키를 보호하는 데 사용된 암호입니다.  
   
-## <a name="remarks"></a>주의  
- 열린 대칭 키는 보안 컨텍스트가 아니라 세션에 바인딩됩니다. 열린 키는 명시적으로 닫히거나 세션이 종료될 때까지 계속 사용할 수 있습니다. 대칭 키를 연 후 컨텍스트를 전환하면 키가 계속 열려 있으며 가장된 컨텍스트에서 사용할 수 있습니다. 열린 대칭 키에 대 한 정보에 표시 됩니다는 [sys.openkeys &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 카탈로그 뷰에 있습니다.  
+## <a name="remarks"></a>Remarks  
+ 열린 대칭 키는 보안 컨텍스트가 아니라 세션에 바인딩됩니다. 열린 키는 명시적으로 닫히거나 세션이 종료될 때까지 계속 사용할 수 있습니다. 대칭 키를 연 후 컨텍스트를 전환하면 키가 계속 열려 있으며 가장된 컨텍스트에서 사용할 수 있습니다. 열린 대칭 키에 대한 정보는 [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
   
  대칭 키가 다른 키로 암호화되어 있으면 먼저 해당 키를 열어야 합니다.  
   
- 쿼리는 대칭 키를 이미 연 경우는 **NO_OP**합니다.  
+ 대칭 키가 이미 열려 있으면 쿼리가 **NO_OP**입니다.  
   
  대칭 키를 해독하기 위해 제공한 암호, 인증서 또는 키가 올바르지 않으면 쿼리가 실패합니다.  
   
- 암호화 공급자에서 만든 대칭 키는 열 수 없습니다. 없이 이러한 종류의 대칭 키를 사용 하 여 암호화 및 암호 해독 작업에 성공할는 **열려** 문 때문에 암호화 공급자는 중괄호와 닫는 키입니다.  
+ 암호화 공급자에서 만든 대칭 키는 열 수 없습니다. 암호화 공급자가 이런 키를 열고 닫으므로 이런 종류의 키를 사용한 암호화 및 해독 작업은 **OPEN** 문이 없어도 성공적으로 수행됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  호출자는 키에 대한 일부 사용 권한을 가지고 있어야 하며 키에 대한 VIEW DEFINITION 권한이 거부되지 않은 상태여야 합니다. 해독 메커니즘에 따라 추가 요구 사항이 따를 수도 있습니다.  
   
--   인증서에 개인 키를 암호화 하는 암호를 알고 BY 암호 해독 인증서: CONTROL 권한입니다.  
+-   인증서에 의한 암호 해독: 인증서에 대한 CONTROL 권한이 있어야 하고 인증서의 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
   
--   비대칭 키와 해당 개인 키를 암호화 하는 암호를 알고에 비대칭 키로 해독: CONTROL 권한입니다.  
+-   비대칭 키에 의한 암호 해독: 비대칭 키에 대한 CONTROL 권한이 있어야 하고 비대칭 키의 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
   
 -   DECRYPTION BY PASSWORD: 대칭 키를 암호화하는 데 사용된 암호 중 하나를 알고 있어야 합니다.  
   
@@ -120,10 +120,10 @@ OPEN SYMMETRIC KEY MarketingKey11
 GO   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC key&#40; Transact SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

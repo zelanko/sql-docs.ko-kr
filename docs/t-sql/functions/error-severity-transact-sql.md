@@ -1,5 +1,5 @@
 ---
-title: ERROR_SEVERITY (Transact SQL) | Microsoft Docs
+title: ERROR_SEVERITY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,10 +56,10 @@ ERROR_SEVERITY ( )
   
  CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ERROR_SEVERITY는 CATCH 블록 범위 내의 아무 위치에서나 호출할 수 있습니다.  
   
- ERROR_SEVERITY는 실행 횟수 또는 CATCH 블록 범위 내의 실행 위치에 관계 없이 오류 심각도를 반환합니다. 이 같은 함수와 대조 @@ERROR만 반환 하는 오류 번호 또는 CATCH 블록의 첫 번째 문에서 오류를 발생 시킨 바로 다음 문으로에서 합니다.  
+ ERROR_SEVERITY는 실행 횟수 또는 CATCH 블록 범위 내의 실행 위치에 관계 없이 오류 심각도를 반환합니다. 이 함수는 오류를 발생시킨 명령문 바로 다음 명령문에서 오류 번호만 반환하거나 CATCH 블록의 첫 번째 명령문에서 발생한 오류 번호만 반환하는 @@ERROR과 같은 함수와는 대조적입니다.  
   
  CATCH 블록이 중첩된 경우 ERROR_SEVERITY는 참조되는 CATCH 블록의 범위에 해당되는 오류 심각도를 반환합니다. 예를 들어 외부 TRY...CATCH 구문의 CATCH 블록에는 중첩된 TRY...CATCH 구문이 있을 수 있습니다. 중첩된 CATCH 블록 내에 있는 ERROR_LINE은 중첩된 CATCH 블록을 호출한 오류의 심각도를 반환합니다. 외부 CATCH 블록에서 ERROR_SEVERITY를 실행하면 해당 CATCH 블록을 호출한 오류의 심각도를 반환합니다.  
   
@@ -101,7 +101,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>3. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_SEVERITY 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 심각도와 함께 오류와 관련된 정보가 반환됩니다.  
@@ -123,14 +123,14 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE&#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER&#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [Error_state &#40; Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

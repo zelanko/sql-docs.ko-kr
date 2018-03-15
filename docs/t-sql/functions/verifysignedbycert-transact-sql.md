@@ -1,5 +1,5 @@
 ---
-title: VERIFYSIGNEDBYCERT (Transact SQL) | Microsoft Docs
+title: VERIFYSIGNEDBYCERT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,23 +53,23 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
 ## <a name="arguments"></a>인수  
  *Cert_ID*  
- 데이터베이스에 있는 인증서의 ID입니다. *Cert_ID* 은 **int**합니다.  
+ 데이터베이스에 있는 인증서의 ID입니다. *Cert_ID*는 **int**입니다.  
   
  *signed_data*  
- 형식의 변수는 **nvarchar**, **char**, **varchar**, 또는 **nchar** 인증서로 서명 된 데이터가 들어 있는입니다.  
+ 인증서로 서명된 데이터를 포함하는 **nvarchar**, **char**, **varchar** 또는 **nchar** 형식의 변수입니다.  
   
- *서명*  
- 서명된 데이터에 첨부된 서명입니다. *서명* 은 **varbinary**합니다.  
+ *signature*  
+ 서명된 데이터에 첨부된 서명입니다. *signature*는 **varbinary**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
  서명된 데이터가 변경되지 않았으면 1을, 변경되었으면 0을 반환합니다.  
   
-## <a name="remarks"></a>주의  
- **VerifySignedBycert** 지정된 된 인증서의 공개 키를 사용 하 여 데이터의 서명을 해독 하 고 암호 해독 된 데이터의 새로 계산 된 MD5 해시 값을 비교 합니다. 값이 일치하면 서명이 유효하게 됩니다.  
+## <a name="remarks"></a>Remarks  
+ **VerifySignedBycert**는 지정한 인증서의 공개 키를 사용하여 데이터의 서명을 해독하고 해독된 값을 데이터의 새로 계산된 MD5 해시와 비교합니다. 값이 일치하면 서명이 유효하게 됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  인증서에 대한 VIEW DEFINITION 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -96,12 +96,12 @@ AND Description = N'data signed by certificate ''Shipping04''';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [CERT_ID &#40; Transact SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)   
- [SIGNBYCERT &#40; Transact SQL &#41;](../../t-sql/functions/signbycert-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
+ [SIGNBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/signbycert-transact-sql.md)   
  [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP certificate&#40; Transact SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

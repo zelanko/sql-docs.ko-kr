@@ -1,5 +1,5 @@
 ---
-title: "DENY 유형 사용 권한 (Transact SQL) | Microsoft Docs"
+title: DENY Type Permissions(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -58,19 +58,19 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ```  
   
 ## <a name="arguments"></a>인수  
- *사용 권한*  
+ *permission*  
  유형에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- 형식에 **::** [ *schema_name***합니다.** ] *type_name*  
- 사용 권한을 거부할 유형을 지정합니다. 범위 한정자 (**::**)가 필요 합니다. 경우 *schema_name* 를 지정 하지 않으면 기본 스키마가 사용 됩니다. 경우 *schema_name* 지정 된 스키마 범위 한정자 (**.**)가 필요 합니다.  
+ ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ 사용 권한을 거부할 유형을 지정합니다. 범위 한정자(**::**)가 필요합니다. *schema_name*을 지정하지 않은 경우 기본 스키마가 사용됩니다. *schema_name*을 지정한 경우 스키마 범위 한정자(**.**)가 필요합니다.  
   
- \<데이터베이스 _ 보안 주체 >  
+ TO \<database_principal>  
  사용 권한을 거부할 보안 주체를 지정합니다.  
   
  CASCADE  
  사용 권한이 거부된 보안 주체에게 사용 권한을 부여 받은 다른 보안 주체의 사용 권한도 거부됨을 나타냅니다.  
   
- AS \<데이터베이스 _ 보안 주체 >  
+ AS \<database_principal>  
  이 쿼리를 실행하는 보안 주체가 사용 권한을 거부하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.  
   
  *Database_user*  
@@ -102,11 +102,11 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *Database_user_with_no_login*  
  해당 서버 수준의 보안 주체가 없는 데이터베이스 사용자를 지정합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  유형은 사용 권한 계층에서 해당 유형의 부모인 스키마에 포함된 스키마 수준 보안 개체입니다.  
   
 > [!IMPORTANT]  
->  **GRANT**, **DENY** 및 **해지** 권한은 시스템 형식에 적용 되지 않습니다. 사용자 정의 형식에는 권한을 부여할 수 있습니다. 사용자 정의 형식에 대 한 자세한 내용은 참조 [SQL Server의 사용자 정의 형식 작업](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)합니다.  
+>  **GRANT**, **DENY,** 및 **REVOKE** 권한은 시스템 형식에 적용되지 않습니다. 사용자 정의 형식에는 권한을 부여할 수 있습니다. 사용자 정의 형식에 대한 자세한 정보는 [SQL Server의 사용자 정의 형식 작업](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)을 참조합니다.  
   
  다음 표에는 유형에 대해 거부할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
   
@@ -118,7 +118,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  해당 유형에 대한 CONTROL 권한이 필요합니다. AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 유형을 소유해야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -130,9 +130,9 @@ DENY VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [GRANT 유형 사용 권한 &#40; Transact SQL &#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
- [REVOKE 유형 사용 권한 &#40; Transact SQL &#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [GRANT 형식 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
+ [REVOKE 형식 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
  [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   

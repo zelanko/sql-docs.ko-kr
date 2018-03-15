@@ -1,5 +1,5 @@
 ---
-title: "3 단원: 데이터베이스 개체를 삭제 하 | Microsoft Docs"
+title: "3단원: 데이터베이스 개체 삭제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-3-deleting-database-objects"></a>3단원: 데이터베이스 개체 삭제
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]이 1 단원 및 2 단원에서 만든 다음 데이터베이스를 삭제 하는 개체를 제거 합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 이 단원에서는 1단원과 2단원에서 만든 개체를 제거한 다음, 데이터베이스를 삭제합니다.  
   
 이 단원에서는 하나의 항목을 다룹니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: TAN (Transact SQL) | Microsoft Docs
+title: TAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ TAN ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **float** 또는 암시적으로 변환할 수 있는 형식의 **float**, 라디안의 수로 해석 됩니다.  
+ **float** 형식 또는 **float**로 암시적으로 변환될 수 있는 형식을 사용한 [식](../../t-sql/language-elements/expressions-transact-sql.md)이며 라디안의 수로 해석됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
@@ -66,8 +66,8 @@ SELECT TAN(PI()/2);
 1.6331778728383844E+16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제에서는.45의 탄젠트를 반환 합니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 45의 탄젠트를 반환합니다.  
   
 ```  
 SELECT TAN(.45);  
@@ -80,8 +80,8 @@ SELECT TAN(.45);
 0.48
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

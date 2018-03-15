@@ -1,5 +1,5 @@
 ---
-title: "AsGml (geometry 데이터 형식) | Microsoft Docs"
+title: "AsGml(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -36,9 +36,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="asgml-geometry-data-type"></a>AsGml(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-언어 GML (Geography Markup) 표현을 반환는 **geometry** 인스턴스.
+**geometry** 인스턴스의 GML(Geography Markup Language) 표현을 반환합니다.
   
-Geography Markup Language에 대 한 자세한 내용은 다음 Open Geospatial Consortium Specification을 참조 하십시오.:[OGC Specifications, Geography Markup Language입니다.](http://go.microsoft.com/fwlink/?LinkId=93629)
+Geography Markup Language에 대한 자세한 내용은 OGC(Open Geospatial Consortium) 사양: [OGC 사양, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -48,11 +48,11 @@ Geography Markup Language에 대 한 자세한 내용은 다음 Open Geospatial 
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **xml**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **xml**  
   
  CLR 반환 형식: **SqlXml**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `LineString` 인스턴스를 만들고 `AsGML()`을 사용하여 인스턴스의 GML 설명을 반환합니다.  
@@ -70,7 +70,7 @@ SELECT @g.AsGml();
 <posList>0 0 0 1 1 0</posList></LineString>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

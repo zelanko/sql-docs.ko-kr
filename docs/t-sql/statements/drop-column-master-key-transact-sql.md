@@ -1,5 +1,5 @@
 ---
-title: "열 마스터 키 (Transact SQL) | Microsoft Docs"
+title: DROP COLUMN MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2016
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  데이터베이스에서 열 마스터 키를 삭제합니다. 메타 데이터 작업입니다.  
+  데이터베이스에서 열 마스터 키를 삭제합니다. 메타데이터 작업입니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,26 +51,26 @@ DROP COLUMN MASTER KEY key_name;
  *key_name*  
  열 마스터 키의 이름입니다.  
   
-## <a name="remarks"></a>주의  
- 열 암호화 되지 않은 열 마스터 키로 암호화 된 키 값이 경우에 열 마스터 키를 삭제할 수 있습니다. 사용 하 여 열 암호화 키 값을 삭제 하려면는 [열 암호화 키 삭제](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 문.  
+## <a name="remarks"></a>Remarks  
+ 열 암호화 키를 사용해 암호화된 열 암호화 키 값이 없는 경우 열 마스터 키를 삭제할 수 있습니다. 열 암호화 키 값을 삭제하려면 [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 문을 사용하세요.  
   
-## <a name="permissions"></a>Permissions  
- 필요한 **ALTER ANY COLUMN MASTER KEY** 데이터베이스에 대 한 권한이 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 데이터베이스에 대한 **ALTER ANY COLUMN MASTER KEY** 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-a-column-master-key"></a>1. 열 마스터 키를 삭제 하는 중  
- 다음 예에서는 라는 열 마스터 키를 삭제 `MyCMK`합니다.  
+### <a name="a-dropping-a-column-master-key"></a>1. 열 마스터 키 삭제  
+ 다음 예에서는 `MyCMK`이라고 하는 열 마스터 키를 삭제합니다.  
   
 ```  
 DROP COLUMN MASTER KEY MyCMK;  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [CREATE COLUMN ENCRYPTION KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION key&#40; Transact SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [상시 암호화&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_master_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "REVOKE 데이터베이스 사용 권한 (Transact SQL) | Microsoft Docs"
+title: "REVOKE 데이터베이스 사용 권한(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ permission | ALL [ PRIVILEGES ]
 ```  
   
 ## <a name="arguments"></a>인수  
- *사용 권한*  
+ *permission*  
  데이터베이스에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  ALL  
@@ -82,7 +82,7 @@ permission | ALL [ PRIVILEGES ]
 > [!CAUTION]  
 >  WITH GRANT OPTION을 부여 받은 사용 권한이 연계되어 취소되면 해당 사용 권한의 GRANT 및 DENY가 모두 취소됩니다.  
   
- AS \<데이터베이스 _ 보안 주체 >이 쿼리를 실행 하는 보안 주체는 권한을 부여할 권한을 취소 파생 되는 보안 주체를 지정 합니다.  
+ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 사용 권한을 취소하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.  
   
  *Database_user*  
  데이터베이스 사용자를 지정합니다.  
@@ -91,34 +91,34 @@ permission | ALL [ PRIVILEGES ]
  데이터베이스 역할을 지정합니다.  
   
  *Application_role*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  응용 프로그램 역할을 지정합니다.  
   
  *Database_user_mapped_to_Windows_User*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
  Windows 사용자로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_Windows_Group*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
  Windows 그룹으로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_certificate*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
  인증서로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
  비대칭 키로 매핑된 데이터베이스 사용자를 지정합니다.  
   
  *Database_user_with_no_login*  
  해당 서버 수준의 보안 주체가 없는 데이터베이스 사용자를 지정합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  GRANT OPTION을 지정하여 사용 권한이 부여된 보안 주체의 사용 권한을 취소할 경우 CASCADE를 지정하지 않으면 문이 실패합니다.  
   
  데이터베이스는 사용 권한 계층에서 해당 데이터베이스의 부모인 서버에 포함된 보안 개체입니다. 다음 표에는 데이터베이스에 대해 취소할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
@@ -132,17 +132,17 @@ permission | ALL [ PRIVILEGES ]
 |ALTER ANY ASYMMETRIC KEY|ALTER|CONTROL SERVER|  
 |ALTER ANY CERTIFICATE|ALTER|CONTROL SERVER|  
 |ALTER ANY COLUMN ENCRYPTION KEY|ALTER|CONTROL SERVER|  
-|모든 열 마스터 키 정의 변경|ALTER|CONTROL SERVER|  
+|ALTER ANY COLUMN MASTER KEY DEFINITION|ALTER|CONTROL SERVER|  
 |ALTER ANY CONTRACT|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE AUDIT|ALTER|ALTER ANY SERVER AUDIT|  
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
 |ALTER ANY DATABASE EVENT SESSION<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|  
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.|CONTROL|CONTROL SERVER|  
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|  
-|외부 라이브러리를 변경 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |    
+|ALTER ANY EXTERNAL LIBRARY <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |    
 |ALTER ANY FULLTEXT CATALOG|ALTER|CONTROL SERVER|
 |ALTER ANY MASK|CONTROL|CONTROL SERVER|  
 |ALTER ANY MESSAGE TYPE|ALTER|CONTROL SERVER|  
@@ -186,7 +186,7 @@ permission | ALL [ PRIVILEGES ]
 |CREATE TYPE|ALTER|CONTROL SERVER|  
 |CREATE VIEW|ALTER|CONTROL SERVER|  
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|  
-|DELETE|CONTROL|CONTROL SERVER|  
+|Delete|CONTROL|CONTROL SERVER|  
 |CREATE 문을 실행하기 전에|CONTROL|CONTROL SERVER|  
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|   
 |INSERT|CONTROL|CONTROL SERVER|  
@@ -203,7 +203,7 @@ permission | ALL [ PRIVILEGES ]
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 문을 실행하는 보안 주체 또는 AS 옵션으로 지정된 보안 주체는 데이터베이스에 대한 CONTROL 권한 또는 데이터베이스에 대한 CONTROL 권한이 포함된 상위 사용 권한이 있어야 합니다.  
   
  AS 옵션을 사용하는 경우 지정한 보안 주체가 데이터베이스를 소유해야 합니다.  
@@ -213,7 +213,7 @@ permission | ALL [ PRIVILEGES ]
 ### <a name="a-revoking-permission-to-create-certificates"></a>1. 인증서를 만들기 위해 사용 권한 취소  
  다음 예에서는 사용자 `CREATE CERTIFICATE`에서 `AdventureWorks2012` 데이터베이스에 대한 `MelanieK` 사용 권한을 취소합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
 ```  
 USE AdventureWorks2012;  
@@ -224,7 +224,7 @@ GO
 ### <a name="b-revoking-references-permission-from-an-application-role"></a>2. 응용 프로그램 역할에서 REFERENCES 사용 권한 취소  
  다음 예에서는 응용 프로그램 역할 `REFERENCES`에서 `AdventureWorks2012` 데이터베이스에 대한 `AuditMonitor` 사용 권한을 취소합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```  
 USE AdventureWorks2012;  
@@ -241,11 +241,11 @@ REVOKE VIEW DEFINITION FROM CarmineEs CASCADE;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [sys.database_permissions&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [sys.database_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [GRANT 데이터베이스 사용 권한 &#40; Transact SQL &#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
- [데이터베이스 사용 권한 &#40; 거부 Transact SQL &#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)   
+ [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
+ [DENY 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)   
  [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
