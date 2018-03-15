@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6ed067a54cc867ed091dd27f5a4af91954045f1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>사용자 지정 구성 요소에서 멀티 타기팅 지원
  이제 SSDT(SQL Server Data Tools)에서 SSIS 디자이너를 사용하여 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로 하는 패키지를 만들고, 유지 관리하고, 실행할 수 있습니다. Visual Studio 2015용 SSDT를 다운로드하려면 [최신 SQL Server Data Tools 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요. 
@@ -104,7 +104,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **오류 메시지** 'System.__ComObject' 형식의 COM 개체를 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100' 인터페이스 유형으로 캐스트할 수 없습니다. 이 작업은 IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}'로 인터페이스에 대한 COM 구성 요소에 대한 QueryInterface 호출이 다음 오류: 지원되는 인터페이스 없음(HRESULT: 0x80004002(E_NOINTERFACE)에서 예외가 발생했습니다.)으로 인해 실패했으므로 실패했습니다. (Microsoft.SqlServer.DTSPipelineWrap).
 
-**해결 방법** 사용자 지정 확장이 Microsoft.SqlServer.DTSPipelineWrap 또는 Microsoft.SqlServer.DTSRuntimeWrap와 같은 SSIS interop 어셈블리를 참조하는 경우 **Embed Interop Types** 속성의 값을 **False"로 설정합니다.
+**해결 방법** 사용자 지정 확장이 Microsoft.SqlServer.DTSPipelineWrap 또는 Microsoft.SqlServer.DTSRuntimeWrap와 같은 SSIS interop 어셈블리를 참조하는 경우 **Embed Interop Types** 속성의 값을 **False**로 설정합니다.
 
 ![Interop 형식 포함](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

@@ -841,7 +841,7 @@ WAIT_AT_LOW_PRIORITY
  **ALTER ANY CONNECTION** 권한이 필요합니다.  
   
 IF EXISTS  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  이미 있는 열 또는 제약 조건을 조건부로 삭제합니다.  
   

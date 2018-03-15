@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f7d6b89f2605cfdbc2f16cc2983171640362eb5b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집
   CDC Service 구성 콘솔에서 새 Oracle CDC Windows 서비스를 만들고 편집합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/15/2018
   
  새 Oracle CDC Windows 서비스 대화 상자 또는 CDC Service 속성 대화 상자에 다음 정보를 입력합니다.  
   
-** 서비스 이름**  
+**서비스 이름**  
  새 Oracle CDC Windows 서비스의 이름을 입력합니다. 가급적이면 긴 이름을 사용하지 마십시오. / 및 \ 문자는 서비스 이름에 사용할 수 없습니다.  
   
 > [!NOTE]  

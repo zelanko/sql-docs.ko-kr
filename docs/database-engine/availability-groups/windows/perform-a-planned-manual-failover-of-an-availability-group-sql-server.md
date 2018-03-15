@@ -8,27 +8,30 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.availabilitygroup.manualfailover.f1
+f1_keywords:
+- sql13.swb.availabilitygroup.manualfailover.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4df88a913bd97cfdc632fe8e1fb365c5d8e81c2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f1523eff2118c8a451b13167510e204d039f84fa
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>가용성 그룹의 계획된 수동 장애 조치(Failover) 수행(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 데이터 손실 없이 수동 장애 조치(Failover)를 수행하는 방법(*계획된 수동 장애 조치(Failover)*)에 대해 설명합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. AlwaysOn 가용성 그룹 장애 조치(Failover)처럼 계획된 수동 장애 조치는 보조 복제본을 기본 역할로 전환합니다. 동시에 장애 조치(Failover)는 이전 주 복제본을 보조 역할로 전환합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 데이터 손실 없이 수동 장애 조치(failover)를 수행하는 방법(*계획된 수동 장애 조치(failover)*)에 대해 설명합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. AlwaysOn 가용성 그룹 장애 조치(Failover)처럼 계획된 수동 장애 조치는 보조 복제본을 기본 역할로 전환합니다. 동시에 장애 조치(Failover)는 이전 주 복제본을 보조 역할로 전환합니다.  
   
 계획된 수동 장애 조치(Failover)는 주 복제본과 대상 보조 복제본이 동기 커밋 모드에서 실행 중이고 현재 동기화된 경우에만 지원됩니다. 계획된 수동 장애 조치(Failover)는 대상 보조 복제본의 가용성 그룹에 조인된 보조 데이터베이스의 모든 데이터를 유지합니다. 이전 주 복제본이 보조 역할로 전환되면 해당 데이터베이스는 보조 데이터베이스가 됩니다. 그런 다음 새 기본 데이터베이스와 동기화되기 시작합니다. 데이터베이스가 모두 SYNCHRONIZED 상태로 전환된 후 새로운 보조 복제본은 향후 계획 수동 장애 조치(failover)의 대상 역할을 수행할 수 있습니다.  
   

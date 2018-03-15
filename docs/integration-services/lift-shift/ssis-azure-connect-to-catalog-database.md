@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98aed78b69a108ae5b0c8f914540b385403a60f9
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 218890a01c98c51c570255dce0ad2c34bc5c26db
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Azure에서 SSISDB 카탈로그 데이터베이스에 연결
 
@@ -55,14 +55,20 @@ Azure SQL Database 서버에서 호스트되는 SSISDB 카탈로그 데이터베
    | **로그인** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
    | **암호** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
 
+    ![SSMS를 사용하여 서버에 연결](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
+
 3. **SSISDB 데이터베이스에 연결합니다**. **옵션**을 선택하여 **서버에 연결** 대화 상자를 펼칩니다. 펼쳐진 **서버에 연결** 대화 상자에서 **연결 속성** 탭을 선택합니다. **데이터베이스에 연결** 필드에서 `SSISDB`를 선택하거나 입력합니다.
 
     > [!IMPORTANT]
     > 연결할 때 `SSISDB`를 선택하지 않으면 개체 탐색기에 SSIS 카탈로그가 표시되지 않을 수 있습니다.
 
+    ![연결할 SSISDB 데이터베이스 선택](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-2.png)
+
 4. 그런 다음 **연결**을 선택합니다.
 
 5. 개체 탐색기에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
+
+    ![SSMS의 개체 탐색기에서 SSISDB 데이터베이스 찾기](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 
 ## <a name="next-steps"></a>다음 단계
 - 패키지를 배포합니다. 자세한 내용은 [SSMS(SQL Server Management Studio)를 사용하여 SSIS 프로젝트 배포](../ssis-quickstart-deploy-ssms.md)를 참조하세요.

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Azure에서 SSIS 패키지 배포, 실행 및 모니터링
 이 자습서에서는 SQL Server Integration Services 프로젝트를 Azure SQL Database의 SSISDB 카탈로그 데이터베이스에 배포하고, Azure-SSIS Integration Runtime에서 패키지를 실행하고, 실행 중인 패키지를 모니터링하는 방법을 보여 줍니다.
@@ -29,9 +29,16 @@ ms.lasthandoff: 03/02/2018
 
 또한 SSISDB 데이터베이스를 설정하고 Azure-SSIS Integration Runtime을 프로비전했는지 확인합니다. Azure에서 SSIS를 프로비전하는 방법에 대한 정보는 [Azure에 SSIS 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)를 참조하세요.
 
+> [!NOTE]
+> 프로젝트 배포 모델만 Azure에 배포할 수 있습니다.
+
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB 데이터베이스에 연결
 
-SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS 카탈로그에 연결합니다. 자세한 내용은 [Azure에서 SSISDB 카탈로그 데이터베이스에 연결](ssis-azure-connect-to-catalog-database.md)을 참조하세요.
+SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS 카탈로그에 연결합니다. 자세한 내용과 스크린샷은 [Azure에서 SSISDB 카탈로그 데이터베이스에 연결](ssis-azure-connect-to-catalog-database.md)을 참조하세요.
+
+기억해야 할 중요한 두 가지 항목은 다음과 같습니다. 이러한 단계는 다음 절차에서 설명합니다.
+-   Azure SQL Database 서버의 정규화된 이름을 **mysqldbserver.database.windows.net** 형식으로 입력합니다.
+-   연결할 데이터베이스로 `SSISDB`을 선택합니다.
 
 > [!IMPORTANT]
 > Azure SQL Database 서버는 1433 포트에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
@@ -56,12 +63,18 @@ SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS �
 
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>배포 마법사를 사용하여 프로젝트 배포
 
+패키지 배포 및 배포 마법사에 대한 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../packages/deploy-integration-services-ssis-projects-and-packages.md) 및 [Integration Services 배포 마법사](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)를 참조하세요.
+
 ### <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 배포 마법사 시작
 1. **Integration Services 카탈로그** 노드와 **SSISDB** 노드가 펼쳐진 SSMS의 [개체 탐색기]에서 프로젝트 폴더를 펼칩니다.
 
 2.  **프로젝트** 노드를 선택합니다.
 
 3.  **프로젝트** 노드를 마우스 오른쪽 단추로 클릭하고 **프로젝트 배포**를 선택합니다. Integration Services 배포 마법사가 열립니다. SSIS 카탈로그 데이터베이스 또는 파일 시스템에서 프로젝트를 배포할 수 있습니다.
+
+    ![SSMS에서 프로젝트 배포](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project1.png)
+
+    ![SSIS 배포 마법사 대화 상자가 열립니다.](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project2.png)
 
 ### <a name="deploy-a-project-with-the-deployment-wizard"></a>배포 마법사를 사용하여 프로젝트 배포
 1. [배포 마법사]의 **소개** 페이지에서 소개를 검토합니다. **다음**을 선택하여 **원본 선택** 페이지를 엽니다.

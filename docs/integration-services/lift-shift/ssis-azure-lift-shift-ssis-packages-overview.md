@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 36a844cb2dcda45701c29066b825e64a864d5757
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
 이제 SSIS(SQL Server Integration Services) 패키지 및 워크로드를 Azure 클라우드로 이동할 수 있습니다.
@@ -91,6 +91,8 @@ SQL Database에서 프로젝트를 배포하고 패키지를 실행하려면 다
 -   명령줄 도구
 -   PowerShell
 -   C# 및 SSIS 관리 개체 모델
+
+시작하려면 [Azure에서 SSIS 패키지 배포, 실행 및 모니터링](ssis-azure-deploy-run-monitor-tutorial.md)을 참조하세요.
 
 ### <a name="monitor-packages"></a>패키지 모니터링
 SSMS에서 실행 중인 패키지를 모니터링하려면 SSMS에서 다음 보고 도구 중 하나를 사용할 수 있습니다.
