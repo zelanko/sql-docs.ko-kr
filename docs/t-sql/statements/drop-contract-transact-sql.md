@@ -1,5 +1,5 @@
 ---
-title: DROP CONTRACT (TRANSACT-SQL) | Microsoft Docs
+title: DROP CONTRACT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,12 +54,12 @@ DROP CONTRACT contract_name
  *contract_name*  
  삭제할 계약의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  서비스 또는 대화 우선 순위에서 참조하는 계약은 삭제할 수 없습니다.  
   
  계약을 삭제하면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 오류로 인해 이 계약을 사용하는 기존 대화가 종료됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  계약 삭제 권한은 기본적으로 계약 소유자, db_ddladmin 또는 db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  
@@ -70,12 +70,12 @@ DROP CONTRACT
     [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER BROKER PRIORITY &#40; Transact SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [서비스 &#40; 변경 Transact SQL &#41;](../../t-sql/statements/alter-service-transact-sql.md)   
- [계약 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [DROP BROKER PRIORITY &#40; Transact SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [DROP 서비스 &#40; Transact SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
+ [CREATE CONTRACT&#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

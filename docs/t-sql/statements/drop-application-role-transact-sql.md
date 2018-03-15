@@ -1,5 +1,5 @@
 ---
-title: DROP APPLICATION ROLE (Transact SQL) | Microsoft Docs
+title: DROP APPLICATION ROLE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ DROP APPLICATION ROLE rolename
 ```  
   
 ## <a name="arguments"></a>인수  
- *역할 이름*  
+ *rolename*  
  삭제할 응용 프로그램 역할의 이름을 지정합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  보안 개체를 소유한 응용 프로그램 역할은 삭제할 수 없습니다. 보안 개체를 소유한 응용 프로그램 역할을 삭제하려면 먼저 보안 개체의 소유권을 이전하거나 보안 개체를 삭제해야 합니다.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -70,10 +70,10 @@ DROP APPLICATION ROLE weekly_ledger;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [응용 프로그램 역할](../../relational-databases/security/authentication-access/application-roles.md)   
- [APPLICATION role&#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [ALTER APPLICATION role&#40; Transact SQL &#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

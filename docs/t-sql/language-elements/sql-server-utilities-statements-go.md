@@ -1,5 +1,5 @@
 ---
-title: GO (Transact SQL) | Microsoft Docs
+title: GO(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -35,12 +35,12 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-utilities-statements---go"></a>SQL Server 유틸리티 문-이동
+# <a name="sql-server-utilities-statements---go"></a>SQL Server 유틸리티 문 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]제공 되지 않은 명령 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 인식 되는 **sqlcmd** 및 **osql** 유틸리티 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기. 이러한 명령을 사용하면 일괄 처리 및 스크립트를 쉽게 읽고 실행할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **sqlcmd** 및 **osql** 유틸리티와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기에서 인식되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 아닌 명령을 제공합니다. 이러한 명령을 사용하면 일괄 처리 및 스크립트를 쉽게 읽고 실행할 수 있습니다.  
   
-  GO는 일괄 처리의 끝을 알리는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티입니다.  
+  GO는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 일괄 처리의 끝을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 알립니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,8 +55,8 @@ GO [count]
  *count*  
  양의 정수입니다. GO 앞의 일괄 처리가 지정된 횟수만큼 실행됩니다.  
   
-## <a name="remarks"></a>주의  
- Go는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문; 것에서 인식 하는 명령을 **sqlcmd** 및 **osql** 유틸리티 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기.  
+## <a name="remarks"></a>Remarks  
+ GO는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 아니라 **sqlcmd** 및 **osql** 유틸리티와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기에서 인식되는 명령입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 현재 일괄 처리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보내야 함을 나타내는 신호로 GO를 해석합니다. 문의 현재 일괄 처리는 첫 번째 GO의 경우 임시 세션이나 스크립트가 시작된 이후 또는 마지막 GO 이후에 입력된 모든 문으로 구성됩니다.  
   
@@ -88,7 +88,7 @@ GO
   
  GO 후에는 문 종결자로 세미콜론을 사용하지 마십시오.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  GO는 사용 권한이 필요 없는 유틸리티 명령입니다. 모든 사용자가 실행할 수 있습니다.  
   
 ```  
@@ -98,7 +98,7 @@ GO;
 ```  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 일괄 처리를 두 개 만듭니다. 첫 번째 일괄 처리만 포함 되어는 `USE``AdventureWorks2012` 문이 데이터베이스 컨텍스트를 설정 합니다. 나머지 문에는 지역 변수를 사용합니다. 따라서 모든 지역 변수 선언을 단일 일괄 처리로 그룹화해야 합니다. 변수를 참조하는 마지막 문 다음까지 `GO` 명령을 사용하지 않으면 됩니다.  
+ 다음 예에서는 일괄 처리를 두 개 만듭니다. 첫 번째 일괄 처리에는 데이터베이스 컨텍스트를 설정하는 `USE``AdventureWorks2012` 문만 있습니다. 나머지 문에는 지역 변수를 사용합니다. 따라서 모든 지역 변수 선언을 단일 일괄 처리로 그룹화해야 합니다. 변수를 참조하는 마지막 문 다음까지 `GO` 명령을 사용하지 않으면 됩니다.  
   
 ```  
 USE AdventureWorks2012;  

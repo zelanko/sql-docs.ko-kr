@@ -59,9 +59,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STCrosses](../../t-sql/spatial-geometry/stcrosses-geometry-data-type.md)  
   
--   [STCurveN &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
+-   [STCurveN&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
   
--   [STCurveToLine &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+-   [STCurveToLine&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geometry/stdifference-geometry-data-type.md)  
   
@@ -133,9 +133,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STY](../../t-sql/spatial-geometry/sty-geometry-data-type.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [Geometry 인스턴스의 확장된 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [OGC 정적 기 하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
+## <a name="see-also"></a>참고 항목  
+ [Geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [OGC 정적 기하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [확장 정적 기하 도형 메서드](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

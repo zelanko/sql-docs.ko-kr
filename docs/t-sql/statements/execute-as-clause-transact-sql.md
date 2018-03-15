@@ -1,5 +1,5 @@
 ---
-title: "EXECUTE AS 절 (Transact SQL) | Microsoft Docs"
+title: EXECUTE AS Clause(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -79,20 +79,20 @@ DDL Triggers with Database Scope
 ```  
   
 ## <a name="arguments"></a>인수  
- **호출자에 게**  
+ **CALLER**  
  모듈 내부의 문이 모듈 호출자의 컨텍스트에서 실행되도록 지정합니다. 모듈을 실행하는 사용자는 모듈 자체에 대한 알맞은 사용 권한뿐만 아니라 모듈에서 참조하는 모든 데이터베이스 개체에 대한 사용 권한도 갖고 있어야 합니다.  
   
  CALLER는 큐를 제외한 모든 모듈의 기본값이며 이것은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 동작과 동일합니다.  
   
  CREATE QUEUE 또는 ALTER QUEUE 문에서는 CALLER를 지정할 수 없습니다.  
   
- **자체**  
- EXECUTE AS SELF는 EXECUTE AS에 해당 *user_name*, 여기서 지정된 된 사용자가 만들거나 모듈을 변경 하는 사용자입니다. 만들기 또는 모듈을 수정 하는 사용자의 실제 사용자 ID에 저장 됩니다는 **execute_as_principal_id** 열에는 **sys.sql_modules** 또는 **sys.service_queues** 카탈로그 뷰입니다.  
+ **SELF**  
+ EXECUTE AS SELF는 EXECUTE AS *user_name*과 동일합니다. 여기에서 지정된 사용자는 모듈을 만들거나 변경하는 사용자입니다. 모듈을 만들거나 수정하는 사용자의 실제 ID는 **sys.sql_modules** 또는 **sys.service_queues** 카탈로그 뷰의 **execute_as_principal_id** 열에 저장됩니다.  
   
  SELF는 큐의 기본값입니다.  
   
 > [!NOTE]  
->  사용자의 ID를 변경 하는 **execute_as_principal_id** 에 **sys.service_queues** 카탈로그 뷰를 ALTER QUEUE 문에서 설정으로 EXECUTE를 명시적으로 지정 해야 합니다.  
+>  **sys.service_queues** 카탈로그 뷰에서 **execute_as_principal_id**의 사용자 ID를 변경하려면 ALTER QUEUE 문에서 명시적으로 EXECUTE AS를 설정해야 합니다.  
   
  OWNER  
  모듈 내부의 문이 현재 모듈 소유자의 컨텍스트에서 실행되도록 지정합니다. 모듈에 지정된 소유자가 없으면 이 모듈의 스키마 소유자를 사용합니다. DDL 또는 로그온 트리거에 대해서는 OWNER를 지정할 수 없습니다.  
@@ -101,23 +101,23 @@ DDL Triggers with Database Scope
 >  OWNER는 단일 계정으로 매핑되어야 하며 역할이나 그룹이 될 수 없습니다.  
   
  **'** *user_name* **'**  
- 모듈 내부의 문이 지정 된 사용자의 컨텍스트에서 실행 되도록 지정 *user_name*합니다. 모듈 내의 모든 개체에 대 한 권한을 기준으로 확인 됩니다 *user_name*합니다. *user_name* 서버 범위 또는 로그온 트리거에 DDL 트리거에 대 한 지정할 수 없습니다. 사용 하 여 *login_name* 대신 합니다.  
+ 모듈 내부의 문이 *user_name*에 지정된 사용자의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *user_name*과 비교 검증됩니다. 서버 범위의 DDL 트리거 또는 로그온 트리거에는 *user_name*을 지정할 수 없습니다. 대신 *login_name*을 사용합니다.  
   
- *user_name* 현재 데이터베이스에 존재 해야 하며 단일 계정 이어야 합니다. *user_name* 그룹, 역할, 인증서, 키 또는 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem 같은 기본 제공 계정이 될 수 없습니다.  
+ *user_name*은 현재 데이터베이스에 있어야 하며 단일 계정이어야 합니다. *user_name*은 그룹, 역할, 인증서 또는 키이거나 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정이 될 수 없습니다.  
   
- 실행 컨텍스트의 사용자 ID 메타 데이터에 저장 되 고에서 볼 수는 **execute_as_principal_id** 열에는 **sys.sql_modules** 또는 **sys.assembly_modules** 카탈로그 뷰입니다.  
+ 실행 컨텍스트의 사용자 ID는 메타데이터에 저장되고 **sys.sql_modules** 또는 **sys.assembly_modules** 카탈로그 뷰의 **execute_as_principal_id** 열에 표시될 수 있습니다.  
   
  **'** *login_name* **'**  
- 모듈 내부의 문이 실행의 컨텍스트에서 지정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 지정 된 로그인 *login_name*합니다. 모듈 내의 모든 개체에 대 한 권한을 기준으로 확인 됩니다 *login_name*합니다. *login_name* DDL 트리거 서버 범위 또는 로그온 트리거에 대해서만 지정할 수 있습니다.  
+ 모듈 내부의 문이 *login_name*에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *login_name*과 비교 검증됩니다. *login_name*은 서버 범위의 DDL 트리거 또는 로그온 트리거에만 지정할 수 있습니다.  
   
- *login_name* 그룹, 역할, 인증서, 키 또는 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem 같은 기본 제공 계정이 될 수 없습니다.  
+ *login_name*은 그룹, 역할, 인증서 또는 키이거나 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정이 될 수 없습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 모듈이 참조하는 개체에 대한 사용 권한을 평가하는 방법은 호출 개체와 참조된 개체 간에 존재하는 소유권 체인에 따라 다릅니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호출 사용자에게 참조된 모든 개체에 대한 액세스 권한을 부여하지 않도록 하는 유일한 방법은 소유권 체인이었습니다.  
   
  소유권 체인에는 다음과 같은 제한 사항이 있습니다.  
   
--   DML 문은에 적용 됩니다: 선택, 삽입, 업데이트 및 삭제 합니다.  
+-   SELECT, INSERT, UPDATE 및 DELETE와 같은 DML 문에만 적용됩니다.  
   
 -   호출 개체의 소유자와 호출된 개체의 소유자가 동일해야 합니다.  
   
@@ -136,11 +136,11 @@ DDL Triggers with Database Scope
 ## <a name="specifying-a-user-or-login-name"></a>사용자 또는 로그인 이름 지정  
  모듈이 다른 컨텍스트에서 실행되도록 수정하기 전에는 모듈의 EXECUTE AS 절에 지정된 데이터베이스 사용자나 서버 로그인을 삭제할 수 없습니다.  
   
- EXECUTE AS 절에 지정 된 사용자 또는 로그인 이름은에서 보안 주체로 존재 해야 **sys.database_principals** 또는 **sys.server_principals**, 각각 또는 다른 만들기 또는 모듈 작업이 실패 하면 변경 . 또한 모듈을 만들거나 변경하는 사용자에게는 보안 주체에 대한 IMPERSONATE 권한이 있어야 합니다.  
+ EXECUTE AS 절에 지정된 사용자 또는 로그인 이름은 각각 **sys.database_principals** 또는 **sys.server_principals**에서 보안 주체로 존재해야 합니다. 그렇지 않으면 모듈을 만들거나 변경할 수 없습니다. 또한 모듈을 만들거나 변경하는 사용자에게는 보안 주체에 대한 IMPERSONATE 권한이 있어야 합니다.  
   
  사용자가 Windows 그룹 멤버 자격을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스나 인스턴스에 대한 암시적 액세스 권한을 갖고 있는 경우 다음 요구 사항 중 하나가 충족된다면 모듈이 생성될 때 EXECUTE AS 절에 지정된 사용자가 암시적으로 생성됩니다.  
   
--   지정 된 사용자 또는 로그인의 멤버인는 **sysadmin** 고정된 서버 역할입니다.  
+-   지정된 사용자 또는 로그인이 **sysadmin** 고정 서버 역할의 멤버입니다.  
   
 -   모듈을 만드는 사용자에게 보안 주체를 만들 사용 권한이 권한이 있습니다.  
   
@@ -151,9 +151,9 @@ DDL Triggers with Database Scope
   
  예를 들어 다음과 같은 조건을 가정해 보세요.  
   
--   **CompanyDomain\SQLUsers** 그룹에 대 한 액세스는 **Sales** 데이터베이스입니다.  
+-   **CompanyDomain\SQLUsers** 그룹에 **Sales** 데이터베이스에 대한 액세스 권한이 있습니다.  
   
--   **CompanyDomain\SqlUser1** 의 멤버인 **SQLUsers** 따라서에 대 한 액세스 권한이 **Sales** 데이터베이스입니다.  
+-   **CompanyDomain\SqlUser1**은 **SQLUsers**의 멤버이므로 **Sales** 데이터베이스에 대한 액세스 권한이 있습니다.  
   
 -   모듈을 만들거나 변경하는 사용자에게 보안 주체를 만들 사용 권한이 있습니다.  
   
@@ -189,19 +189,19 @@ GO
 ## <a name="using-execute-as-to-define-custom-permission-sets"></a>EXECUTE AS를 사용하여 사용자 지정 권한 집합 정의  
  사용자 지정 권한 집합을 정의할 때는 모듈의 실행 컨텍스트를 지정하면 편리합니다. 예를 들어 TRUNCATE TABLE과 같은 일부 동작에는 부여할 수 있는 사용 권한이 없습니다. 모듈 내에 TRUNCATE TABLE 문을 삽입하고 해당 모듈이 테이블을 변경할 수 있는 사용 권한이 부여된 사용자로 실행되도록 지정하면 모듈에 대한 EXECUTE 권한을 부여한 사용자에게 테이블을 자를 수 있는 사용 권한도 부여할 수 있습니다.  
   
- 지정된 된 실행 컨텍스트를 사용 하 여 모듈의 정의 보려면 사용 하 여는 [sys.sql_modules&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰에 있습니다.  
+ 지정된 실행 컨텍스트가 있는 모듈 정의를 보려면 [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰를 사용합니다.  
   
 ## <a name="best-practice"></a>최선의 구현 방법  
  모듈에 정의된 작업을 수행하는 데 필요한 최소한의 권한이 있는 로그인이나 사용자를 지정합니다. 예를 들어 데이터베이스 소유자 계정은 해당 권한이 필요한 경우에만 지정하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  EXECUTE AS로 지정된 모듈을 실행하려면 호출자에게 해당 모듈에 대한 EXECUTE 권한이 있어야 합니다.  
   
  다른 데이터베이스 또는 서버의 리소스에 액세스하는 EXECUTE AS로 지정된 CLR 모듈을 실행하려면 대상 데이터베이스나 서버가 모듈이 원래 속한 원본 데이터베이스의 인증자를 트러스트해야 합니다.  
   
  모듈을 만들거나 수정할 때 EXECUTE AS 절을 지정하려면 지정된 보안 주체에 대한 IMPERSONATE 권한과 모듈을 만들 수 있는 권한이 있어야 합니다. 사용자는 항상 자신을 가장할 수 있습니다. 실행 컨텍스트를 지정하지 않거나 EXECUTE AS CALLER를 지정한 경우에는 IMPERSONATE 권한이 필요하지 않습니다.  
   
- 지정 하는 *login_name* 또는 *user_name* Windows 그룹 멤버 자격을 통해 데이터베이스에 대 한 암시적 액세스를 데이터베이스에서 제어 권한이 있어야 합니다.  
+ Windows 그룹 멤버 자격을 통해 데이터베이스에 대한 암시적 액세스 권한이 있는 *login_name* 또는 *user_name*을 지정하려면 해당 데이터베이스에 대한 CONTROL 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 저장 프로시저를 만들고 실행 컨텍스트를 `OWNER`로 할당합니다.  
@@ -228,11 +228,11 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [sys.assembly_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.service_queues &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
- [되돌리기 &#40; Transact SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
- [실행 AS &#40; Transact SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)  
+ [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

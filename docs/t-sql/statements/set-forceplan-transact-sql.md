@@ -1,5 +1,5 @@
 ---
-title: SET FORCEPLAN (Transact SQL) | Microsoft Docs
+title: SET FORCEPLAN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,14 +51,14 @@ ms.lasthandoff: 11/21/2017
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET FORCEPLAN 옵션은 기본적으로 쿼리 최적화 프로그램이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리하는 데 사용하는 논리보다 우선 적용됩니다. 이 옵션 설정에 상관 없이 반환되는 데이터는 같습니다. 쿼리를 충족시키기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 테이블을 처리하는 방법에만 차이가 있습니다.  
   
  쿼리 최적화 프로그램 참고를 사용해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 SELECT 문을 처리하는 방법을 지정할 수도 있습니다.  
   
  SET FORCEPLAN 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  SET FORCEPLAN 권한은 기본적으로 모든 사용자로 설정됩니다.  
   
 ## <a name="examples"></a>예  
@@ -107,10 +107,10 @@ SET FORCEPLAN OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET showplan_all 옵션 &#40; Transact SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET showplan_text 옵션 &#40; Transact SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

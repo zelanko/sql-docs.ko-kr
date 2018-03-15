@@ -1,5 +1,5 @@
 ---
-title: "여기서 (Transact SQL) | Microsoft Docs"
+title: WHERE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>인수  
-\<*c h _ c* > 반환할 행에 대해 충족 되어야 하는 조건을 정의 합니다. 검색 조건에 포함시킬 수 있는 조건자의 개수에는 제한이 없습니다. 검색 조건과 조건자에 대 한 자세한 내용은 참조 [검색 조건 &#40; Transact SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\< *search_condition* > 행을 반환 하기 위해 충족될 조건을 정의합니다. 검색 조건에 포함시킬 수 있는 조건자의 개수에는 제한이 없습니다. 검색 조건 및 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `WHERE` 절에서 일부 일반 검색 조건을 사용하는 방법을 보여 줍니다.  
@@ -64,7 +64,7 @@ FROM DimEmployee
 WHERE LastName = 'Smith' ;  
 ```  
   
-### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>2. 문자열의 일부로 값을 포함 하는 행 찾기  
+### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>2. 값을 문자열의 일부로 포함하는 행 찾기  
   
 ```  
 -- Uses AdventureWorks  
@@ -124,10 +124,10 @@ FROM DimEmployee
 WHERE EmployeeKey Between 100 AND 200;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [조건자 &#40; Transact SQL &#41;](~/t-sql/queries/predicates.md)   
- [검색 조건 &#40; Transact SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)   
+ [조건자&#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
+ [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [MERGE&#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  

@@ -1,6 +1,6 @@
 ---
-title: "INSERT (SQL 그래프) | Microsoft Docs"
-description: "SQL 그래프 노드 또는 edge 테이블에 대 한 구문을 삽입 합니다."
+title: INSERT(SQL Graph) | Microsoft Docs
+description: "SQL 그래프 노드 또는 에지 테이블에 대한 INSERT 구문입니다."
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -30,18 +30,18 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="insert-sql-graph"></a>INSERT (SQL 그래프)
+# <a name="insert-sql-graph"></a>INSERT(SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  하나 이상의 행이 추가 `node` 또는 `edge` 테이블에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `node` 또는 `edge` 테이블에 새 행을 하나 이상 추가합니다. 
 
 > [!NOTE]   
->  표준 TRANSACT-SQL 문을 참조 하십시오. [표 삽입 (Transact SQL)](../../t-sql/statements/insert-transact-sql.md)합니다.
+>  표준 Transact-SQL 문의 경우 [INSERT TABLE(Transact SQL)](../../t-sql/statements/insert-transact-sql.md)을 참조하세요.
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="insert-into-node-table-syntax"></a>노드 테이블 구문에 삽입 
-노드 테이블에 삽입 하기 위한 구문은 일반 테이블의와 동일 합니다. 
+## <a name="insert-into-node-table-syntax"></a>노드 테이블 구문에 INSERT 
+노드 테이블에 삽입하기 위한 구문은 일반 테이블과 동일합니다. 
 
 ```  
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -107,43 +107,43 @@ INSERT
   
  
 ## <a name="arguments"></a>인수  
- 이 문서에서는 SQL 그래프와 관련 된 인수에 설명 합니다. 전체 목록과 설명은 INSERT 문에서 지원 되는 인수에 대 한 참조 [표 삽입 (Transact SQL)](../../t-sql/statements/insert-transact-sql.md)
+ 이 문서에서는 SQL 그래프와 관련된 인수를 설명합니다. INSERT 문에서 지원되는 인수에 대한 전체 목록과 설명은 [INSERT TABLE(Transact SQL)](../../t-sql/statements/insert-transact-sql.md)을 참조하세요.
 
  INTO  
- 간에 사용할 수 있는 선택적 키워드 `INSERT` 와 대상 테이블입니다.  
+ `INSERT`와 대상 테이블 사이에 사용할 수 있는 선택적 키워드입니다.  
   
  *search_condition_with_match*   
- `MATCH`노드 또는 edge 테이블에 삽입 하는 동안 절 하위 쿼리에 사용할 수 있습니다. 에 대 한 `MATCH` 문 구문 참조 [그래프 일치 (Transact SQL)](../../t-sql/queries/match-sql-graph.md)
+ `MATCH` 절은 노드 또는 에지 테이블에 삽입하는 동안 하위 쿼리에 사용할 수 있습니다. `MATCH` 문 구문의 경우 [GRAPH MATCH(Transact SQL)](../../t-sql/queries/match-sql-graph.md)를 참조하세요.
 
  *graph_search_pattern*   
- 제공 된 검색 패턴 `MATCH` 그래프 조건자의 일부로 절.
+ 그래프 조건자의 일부로 `MATCH` 절에 제공된 검색 패턴입니다.
 
  *edge_table_column_list*   
- 사용자에 대 한 값을 제공 해야 `$from_id` 및 `$to_id` 가장자리에 삽입 하는 중입니다. 값을 제공 하지 않으면 또는 Null이이 열에 삽입 하는 경우 오류가 반환 됩니다. 
+ 사용자는 에지에 삽입하는 동안 `$from_id` 및 `$to_id`에 대한 값을 제공해야 합니다. 값을 제공하지 않거나 NULL을 이러한 열에 삽입하는 경우 오류가 반환됩니다. 
   
 
-## <a name="remarks"></a>주의  
-노드를 삽입 하는 모든 관계형 테이블에 삽입 일치 합니다. $Node_id 열의 값을 자동으로 생성 됩니다.
+## <a name="remarks"></a>Remarks  
+노드에 삽입은 관계형 테이블에 삽입과 동일합니다. $node_id 열의 값은 자동으로 생성됩니다.
 
-Edge 테이블을 삽입 하는 동안 사용자에 대 한 값을 제공 해야 `$from_id` 및 `$to_id` 열입니다.   
+에지 테이블에 삽입하는 동안 사용자는 `$from_id` 및 `$to_id` 열에 대한 값을 제공해야 합니다.   
 
-대량 삽입 노드 테이블은 남아 있는 관계형 테이블의 동일한 있습니다.
+노드 테이블에 대한 BULK 삽입은 관계형 테이블과 동일합니다.
 
-Edge 테이블에 삽입 하는 대량, 전에 노드 테이블 가져와야 합니다. 에 대 한 값 `$from_id` 및 `$to_id` 에서 추출할 수 있습니다는 `$node_id` 노드 테이블의 열 및 가장자리도 삽입 합니다. 
+에지 테이블에 대량 삽입을 수행하기 전에 노드 테이블을 가져와야 합니다. 그런 다음, `$from_id` 및 `$to_id`에 대한 값을 노드 테이블의 `$node_id` 열에서 추출하여 에지로 삽입할 수 있습니다. 
 
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  대상 테이블에 대해 INSERT 권한이 필요합니다.  
   
- 멤버에 대 한 기본 권한을 삽입는 **sysadmin** 고정 서버 역할의 **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할 및 테이블 소유자입니다. 멤버는 **sysadmin**, **db_owner**, 및 **db_securityadmin** 역할 및 테이블 소유자 권한을 다른 사용자에 게 위임할 수 있습니다.  
+ **sysadmin** 고정 서버 역할, **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할의 멤버 및 테이블 소유자에게는 기본적으로 INSERT 권한이 부여됩니다. **sysadmin**, **db_owner** 및 **db_securityadmin** 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  
   
- INSERT OPENROWSET 함수의 BULK 옵션을 실행 하려면의 구성원 이어야는 **sysadmin** 고정된 서버 역할 또는 **bulkadmin** 고정된 서버 역할입니다.  
+ OPENROWSET 함수에 BULK 옵션을 사용하여 INSERT를 실행하려면 **sysadmin** 고정 서버 역할 또는 **bulkadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 
 ## <a name="examples"></a>예  
   
 #### <a name="a--insert-into-node-table"></a>1.  노드 테이블에 삽입  
- 다음 예에서는 Person 노드 테이블을 만들고 해당 테이블에 2 개의 행을 삽입 합니다.
+ 다음 예에서는 Person 노드 테이블을 만든 후 행 2개를 테이블에 삽입합니다.
 
  ```
  -- Create person node table
@@ -154,8 +154,8 @@ Edge 테이블에 삽입 하는 대량, 전에 노드 테이블 가져와야 합
  INSERT INTO dbo.Person VALUES (2,'John');
  ```
   
-#### <a name="b--insert-into-edge-table"></a>2.  Edge 테이블에 삽입  
- 다음 예제에서는 friend edge 테이블을 만들고 테이블에는 지를 삽입 합니다.
+#### <a name="b--insert-into-edge-table"></a>2.  에지 테이블에 삽입  
+ 다음 예에서는 친구 에지 테이블을 만든 후 에지를 테이블에 삽입합니다.
 
  ```
  -- Create friend edge table
@@ -167,8 +167,8 @@ Edge 테이블에 삽입 하는 대량, 전에 노드 테이블 가져와야 합
  ```
 
   
-## <a name="see-also"></a>관련 항목:  
- [테이블 삽입 &#40; Transact SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
- [SQL Server 2017을 사용 하 여 처리 하는 그래프](../../relational-databases/graphs/sql-graph-overview.md)  
+## <a name="see-also"></a>참고 항목  
+ [INSERT TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [SQL Server 2017의 그래프 처리](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

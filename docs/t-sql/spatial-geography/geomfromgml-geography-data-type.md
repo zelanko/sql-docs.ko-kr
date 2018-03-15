@@ -1,5 +1,5 @@
 ---
-title: "GeomFromGML (geography 데이터 형식) | Microsoft Docs"
+title: "GeomFromGML(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-생성 한 **geography** 표현이 지정 된 인스턴스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 집합의는 언어 GML (Geography Markup).
+GML(Geography Markup Language)의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 집합에 표현이 지정된 경우 **geography** 인스턴스를 생성합니다.
   
-GML에 대 한 자세한 내용은 다음 Open Geospatial Consortium Specifications를 참조 하십시오.: [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
+GML에 대한 자세한 내용은 [OGC 사양, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.
   
-이 **geography** 데이터 형식 메서드 지원 **FullGlobe** 인스턴스 또는 반구 보다 큰 공간 인스턴스.
+이 **geography** 데이터 형식 메서드는 **FullGlobe** 인스턴스 또는 반구보다 큰 공간 인스턴스를 지원합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -53,17 +53,17 @@ GeomFromGml ( GML_input, SRID )
  GML이 값을 반환하는 데 사용되는 XML 입력입니다.  
   
  *SRID*  
- **int** spatial 나타내는 식 참조의 ID (SRID)는 **geography** 인스턴스를 반환 합니다.  
+ 반환할 **geography** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>주의  
- 이 메서드에서 throw 한 **FormatException** 입력이 잘못 된 경우.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  
   
- 이 메서드는 throw **ArgumentException** 입력에 대척점 가장자리를 포함 하는 경우.  
+ 이 메서드는 입력에 대척점 끝이 있을 경우 **ArgumentException**을 throw합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `GeomFromGml()`를 사용하여 `geography` 인스턴스를 만듭니다.  
@@ -86,7 +86,7 @@ SET @g = geography::GeomFromGml(@x, 4326);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [확장 정적 지리 메서드](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

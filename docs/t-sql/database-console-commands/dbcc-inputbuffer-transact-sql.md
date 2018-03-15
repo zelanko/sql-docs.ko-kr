@@ -1,5 +1,5 @@
 ---
-title: DBCC INPUTBUFFER (Transact SQL) | Microsoft Docs
+title: DBCC INPUTBUFFER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-인스턴스를 클라이언트에서 보낸 마지막 문 표시 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
+클라이언트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 마지막으로 전송한 문을 표시합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -58,7 +58,7 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 *request_id*  
 현재 세션 내에서 검색할 정확한 요청(일괄 처리)입니다.  
 
-다음 쿼리에서 반환 *request_id*:  
+다음 쿼리에서는 *request_id*를 반환합니다.  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
@@ -75,9 +75,9 @@ DBCC INPUTBUFFER는 다음과 같은 열이 있는 행 집합을 반환합니다
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|이벤트 유형입니다. 이 수 **RPC 이벤트** 또는 **언어 이벤트**합니다. 출력 됩니다 **No Event** 마지막 이벤트가 발견 된 경우.|  
-|**매개 변수**|**smallint**|0 = 텍스트<br /><br /> 1-  *n*  = 매개 변수|  
-|**EventInfo**|**nvarchar(4000)**|에 대 한 프로그램 **EventType** RPC의 **EventInfo** 프로시저 이름만 포함 합니다. 에 대 한 프로그램 **EventType** 언어에서의 이벤트의 첫 4000 자만 표시 됩니다.|  
+|**EventType**|**nvarchar(30)**|이벤트 유형입니다. **RPC Event** 또는 **Language Event**를 사용할 수 있습니다. 마지막 이벤트가 감지되지 않으면 **No Event**가 출력됩니다.|  
+|**매개 변수**|**smallint**|0 = 텍스트<br /><br /> 1- *n* = 매개 변수|  
+|**EventInfo**|**nvarchar(4000)**|RPC의 **EventType**에서는 **EventInfo**에 프로시저 이름만 포함됩니다. Language의 **EventType**에서는 이벤트의 첫 4000자만 표시됩니다.|  
   
 예를 들어 DBCC INPUTBUFFER는 버퍼의 마지막 이벤트가 DBCC INPUTBUFFER(11)인 경우에 다음과 같은 결과 집합을 반환합니다.
   
@@ -92,19 +92,19 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
 
 > [!NOTE]
-> 부터는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] s p 2를 사용 하 여 [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) 의 인스턴스에 제출 된 문에 대 한 정보를 반환할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2로 시작되며, [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 제출된 문에 대한 정보를 반환합니다.
 
-## <a name="permissions"></a>Permissions  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 중 하나가 필요 합니다.
--   사용자의 구성원 이어야 합니다.는 **sysadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음 중 하나가 필요합니다.
+-   사용자는 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
 -   사용자에게 VIEW SERVER STATE 권한이 있어야 합니다.  
--   *session_id* 명령이 실행 되 고 세션 ID과 같아야 합니다. 세션 ID를 확인하려면 다음 쿼리를 실행합니다.  
+-   *session_id*는 명령이 실행되는 세션 ID과 같아야 합니다. 세션 ID를 확인하려면 다음 쿼리를 실행합니다.  
   
 ```sql
 SELECT @@spid;  
 ```
   
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층 데이터베이스에서 VIEW DATABASE STATE 권한이 필요 합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준 및 기본 계층 필요는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정.
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층에서 데이터베이스에 대한 VIEW DATABASE STATE 권한이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준 및 기본 계층에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정이 필요합니다.
   
 ## <a name="examples"></a>예  
 다음 예에서는 이전 연결에서 긴 트랜잭션이 실행되는 동안 두 번째 연결에서 `DBCC INPUTBUFFER`를 실행합니다.
@@ -125,9 +125,9 @@ COMMIT TRAN;
 DBCC INPUTBUFFER (52);  
 ```  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-[sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+[sys.dm_exec_input_buffer&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   

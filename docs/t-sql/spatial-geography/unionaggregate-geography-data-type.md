@@ -1,5 +1,5 @@
 ---
-title: "UnionAggregate (geography 데이터 형식) | Microsoft Docs"
+title: "UnionAggregate(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -45,21 +45,21 @@ UnionAggregate ( geography_operand )
   
 ## <a name="arguments"></a>인수  
  *geography_operand*  
- 이 **geography** 의 집합을 보유 하는 형식 테이블 열 **geography** 통합 연산을 수행할 개체입니다.  
+ 통합 연산을 수행할 **geography** 개체 집합을 보관하는 **geography** 형식 테이블 열입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
-## <a name="remarks"></a>주의  
- 메서드 반환 **null** 입력에 다른 srid가 하는 경우. 참조 [Spatial Reference Identifier &#40; Srid &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+## <a name="remarks"></a>Remarks  
+ 메서드가 입력에 다른 SRID가 있을 경우 **null**을 반환합니다. [공간 참조 식별자 &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)를 참조하세요.  
   
- 메서드는 무시 **null** 입력 합니다.  
+ 메서드가 **null** 입력을 무시합니다.  
   
 > [!NOTE]  
->  메서드 반환 **null** 경우는 모든 입력 값 **null**합니다.  
+>  메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 수행는 `UnionAggregate` 집합이 **geography** 도시 안의 위치 점입니다.  
+ 다음 예에서는 한 도시 안의 **geography** 위치 지점 집합에서 `UnionAggregate`를 수행합니다.  
   
  ```
  USE AdventureWorks2012  
@@ -71,7 +71,7 @@ UnionAggregate ( geography_operand )
  GROUP BY City;
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [확장 정적 지리 메서드](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

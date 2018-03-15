@@ -1,5 +1,5 @@
 ---
-title: "STIsClosed (geometry 데이터 형식) | Microsoft Docs"
+title: "STIsClosed(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-경우 1을 반환의 시작점 및 끝점은 주어진 **geometry** 인스턴스는 동일 합니다. 에 대 한 1 반환 **geometrycollection** 형식이 지정 된 포함 된 각 **geometry** 인스턴스가 닫혀 있습니다. 인스턴스가 닫혀 있지 않으면 0을 반환합니다.
+주어진 **geometry** 인스턴스의 시작점 및 끝점이 동일하면 1을 반환합니다. 포함된 각 **geometry** 인스턴스가 닫혀 있으면 **geometrycollection** 형식에 대해 1을 반환하고, 인스턴스가 닫혀 있지 않으면 0을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **비트**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>주의  
- 이 메서드가 있는 경우 0을 반환의 수치는 **기 하 도형** 인스턴스 요소가 이거나 인스턴스가 비어 있습니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 **geometry** 인스턴스의 도형이 점이거나 인스턴스가 비어 있으면 0을 반환합니다.  
   
- 모든 **다각형** 인스턴스는 닫혀 있다고 간주 됩니다.  
+ 모든 **Polygon** 인스턴스는 닫혀 있다고 간주됩니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `LineString` 인스턴스를 만들고 `STIsClosed()`를 사용하여 `LineString`이 닫혀 있는지 테스트합니다.  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

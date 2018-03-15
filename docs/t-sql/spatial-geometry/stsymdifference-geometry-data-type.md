@@ -1,5 +1,5 @@
 ---
-title: "STSymDifference (geometry 데이터 형식) | Microsoft Docs"
+title: STSymDifference(geometry Data Type) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  하나는 않은 모든 점을 나타내는 개체를 반환 **geometry** 인스턴스 또는 다른 **geometry** 인스턴스에 있지만 두 인스턴스에 점이 아님.  
+  특정 **geometry** 인스턴스 또는 다른 **geometry** 인스턴스에 있지만 두 인스턴스 모두에 있지는 않은 모든 점을 나타내는 개체를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- 다른 **geometry** 인스턴스 외에도 인스턴스 `STSymDistance()` 가 호출 되 합니다.  
+ `STSymDistance()`를 호출할 인스턴스 외의 다른 **geometry** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- 항상 null이 반환 하는 경우의 spatial reference Id (Srid)는 **geometry** 인스턴스 일치 하지 않습니다. 입력 인스턴스에 원호 세그먼트가 있을 경우에만 결과에 원호 세그먼트가 포함될 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 **geometry** 인스턴스의 SRID(spatial Reference IDs)가 일치하지 않으면 항상 Null을 반환합니다. 입력 인스턴스에 원호 세그먼트가 있을 경우에만 결과에 원호 세그먼트가 포함될 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -86,7 +86,7 @@ SELECT @g.STSymDifference(@h).ToString();
  SELECT @h.STSymDifference(@g).ToString();
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: FETCH (Transact SQL) | Microsoft Docs
+title: FETCH(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,17 +72,17 @@ FETCH
  LAST  
  커서의 마지막 행을 반환하며 그 행을 현재 행으로 만듭니다.  
   
- 절대 {  *n* | @*nvar*}  
- 경우  *n*  또는 @*nvar* 가 양수인 경우 행  *n*  커서 맨 앞 에서부터 행을 하 고 반환 된 행을 새 현재 행으로 만듭니다. 경우  *n*  또는 @*nvar* 가 음수인 경우 행  *n*  는 커서 맨 앞 번째 하며 반환 되는 행을 새 현재 행으로 만듭니다. 경우  *n*  또는 @*nvar* 가 0 이면 아무 행도 반환 합니다. *n*정수 상수 여야 및 @*nvar* 해야 **smallint**, **tinyint**, 또는 **int**합니다.  
+ ABSOLUTE { *n*| @*nvar*}  
+ *n* 또는 @*nvar*가 양수인 경우 커서 맨 앞에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 @*nvar*가 음수인 경우에는 커서 맨 뒤에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 @*nvar*가 0이면 행이 반환되지 않습니다. *n*은 정수 상수여야 하며 @*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
   
- 상대 {  *n* | @*nvar*}  
- 경우  *n*  또는 @*nvar* 가 양수인 경우 행  *n*  현재 행 에서부터 위로 번째 하며 반환 되는 행을 새 현재 행으로 만듭니다. 경우  *n*  또는 @*nvar* 가 음수인 경우 행  *n*  현재 행 에서부터 앞 번째 하며 반환 되는 행을 새 현재 행으로 만듭니다. 경우  *n*  또는 @*nvar* 가 0 이면 현재 행을 반환 합니다. FETCH RELATIVE가 지정 된 경우  *n*  또는 @*nvar* 음수 또는 커서에 대해 수행 하는 첫 번째 인출에 있는 0으로 설정 아무 행도 반환 됩니다. *n*정수 상수 여야 및 @*nvar* 해야 **smallint**, **tinyint**, 또는 **int**합니다.  
+ RELATIVE { *n*| @*nvar*}  
+ *n* 또는 @*nvar*가 양수인 경우에는 현재 행에서 위로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 @*nvar*가 음수인 경우에는 현재 행에서 앞으로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 @*nvar*가 0인 경우에는 현재 행을 반환합니다. *n* 또는 @*nvar*가 음수로 설정되거나 첫 번째 인출에 있는 0이 커서에 대해 수행되도록 FETCH RELATIVE가 지정된 경우 행이 반환되지 않습니다. *n*은 정수 상수여야 하며 @*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
   
  GLOBAL  
- 지정 하는 *cursor_name* 전역 커서를 참조 합니다.  
+ *cursor_name*이 전역 커서를 참조하도록 지정합니다.  
   
  *cursor_name*  
- 인출이 수행되는 열린 커서의 이름입니다. 전역 및 로컬 커서 함께 존재 하는 경우 *cursor_name* 해당 이름으로 *cursor_name* 전역 커서 GLOBAL이 지정 하 고 GLOBAL이 지정 되지 않으면 로컬 커서입니다.  
+ 인출이 수행되는 열린 커서의 이름입니다. 동일한 *cursor_name*을 가진 전역 커서와 지역 커서가 있을 경우 GLOBAL이 지정되면 *cursor_name*은 전역 커서를 참조하고 GLOBAL이 지정되지 않으면 지역 커서를 참조합니다.  
   
  @*cursor_variable_name*  
  수행할 인출에서 열린 커서를 참조하는 커서 변수의 이름입니다.  
@@ -90,7 +90,7 @@ FETCH
  INTO @*variable_name*[ ,...*n*]  
  인출하는 열에서 지역 변수로 데이터를 가져가도록 허용합니다. 목록의 각 변수는 왼쪽에서 오른쪽 순으로 커서 결과 집합의 해당 열과 연관됩니다. 각 변수의 데이터 형식은 반드시 해당 결과 집합 열의 데이터 형식과 일치하거나 암시적 변환이 지원되어야 합니다. 변수의 개수는 커서 선택 목록의 열 수와 일치해야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ISO 스타일 DECLARE CURSOR 문에 SCROLL 옵션이 지정되어 있지 않으면 NEXT FETCH 옵션만 지원됩니다. ISO 스타일 DECLARE CURSOR에 SCROLL이 지정되어 있으면 모든 FETCH 옵션이 지원됩니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE 커서 확장을 사용하는 경우에는 다음 규칙이 적용됩니다.  
@@ -99,11 +99,11 @@ FETCH
   
 -   DYNAMIC, FORWARD_ONLY 또는 FAST_FORWARD를 지정하지 않고 KEYSET, STATIC 또는 SCROLL 중 하나를 지정한 경우에는 모든 FETCH 옵션이 지원됩니다.  
   
--   동적 스크롤 커서는 ABSOLUTE 제외한 모든 인출 옵션을 지원합니다.  
+-   DYNAMIC SCROLL 커서는 ABSOLUTE를 제외한 모든 FETCH 옵션을 지원합니다.  
   
- @@FETCH_STATUS 함수는 마지막 FETCH 문의 상태를 보고 합니다. sp_describe_cursor에 의해 반환되는 커서의 fetch_status 열에도 동일한 정보가 기록됩니다. 해당 데이터에 대해 어떠한 작업을 수행하려고 시도하기 전에 반드시 이 상태 정보를 사용하여 FETCH 문이 반환하는 데이터의 유효성을 확인해야 합니다. 자세한 내용은 참조 [@@FETCH_STATUS &#40; Transact SQL &#41; ](../../t-sql/functions/fetch-status-transact-sql.md).  
+ @@FETCH_STATUS 함수는 마지막 FETCH 문의 상태를 보고합니다. sp_describe_cursor에 의해 반환되는 커서의 fetch_status 열에도 동일한 정보가 기록됩니다. 해당 데이터에 대해 어떠한 작업을 수행하려고 시도하기 전에 반드시 이 상태 정보를 사용하여 FETCH 문이 반환하는 데이터의 유효성을 확인해야 합니다. 자세한 내용은 [@@FETCH_STATUS&#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  FETCH 사용 권한은 모든 유효한 사용자에게 기본적으로 부여됩니다.  
   
 ## <a name="examples"></a>예  
@@ -214,10 +214,10 @@ DEALLOCATE contact_cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [닫기 &#40; Transact SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
- [할당 해제 &#40; Transact SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CLOSE&#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [DEALLOCATE&#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [열기 &#40; Transact SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [OPEN&#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

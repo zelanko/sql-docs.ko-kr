@@ -1,5 +1,5 @@
 ---
-title: "필터 (geography 데이터 형식) | Microsoft Docs"
+title: "Filter(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="filter-geography-data-type"></a>Filter(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  여부를 확인 하는 빠른 인덱스 전용 교차 방법을 제공 하는 메서드는 **geography** 다른 인스턴스와 교차 **geography** 인스턴스와 인덱스를 사용할 수 있습니다.  
+  인덱스를 사용할 수 있다고 가정하는 경우 **geography** 인스턴스가 다른 **geography** 인스턴스와 교차하는지 확인하는 빠른 인덱스 전용 교차법을 제공하는 메서드입니다.  
   
- 1을 반환는 **geography** 교차 될 가능성이 다른 **geography** 인스턴스. 이 메서드는 거짓 긍정 결과를 반환할 수 있으며 정확한 결과는 계획에 따라 다릅니다. 교차 부분이 있는 경우 정확한 0 값 (참 부정 결과)를 반환 **geography** 인스턴스를 찾을 수 있습니다.  
+ **geography** 인스턴스가 다른 **geography** 인스턴스와 잠재적으로 교차할 수 있는 경우 1을 반환합니다. 이 메서드는 거짓 긍정 결과를 반환할 수 있으며 정확한 결과는 계획에 따라 다릅니다. **geography** 인스턴스가 교차하지 않으면 정확한 0 값을 반환합니다(참 부정 반환).  
   
- 인덱스를 사용할 수 없거나는 사용 되지 않는 경우에서 메서드가 동일한 값으로 반환 됩니다 **stintersects ()** 동일한 매개 변수를 사용 하 여 호출 합니다.  
+ 인덱스를 사용할 수 없거나 사용하지 않는 경우 동일한 매개 변수로 호출되면 이 메서드에서 **STIntersects()**와 동일한 값을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,14 +50,14 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *other_geography*  
- 다른 **geography** Filter() 호출 된 인스턴스에 대해 비교할 인스턴스입니다.  
+ Filter()가 호출되는 인스턴스와 비교할 다른 **geography** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **비트**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 메서드는 비결정적이고 정확하지 않습니다.  
   
 ## <a name="examples"></a>예  
@@ -79,8 +79,8 @@ WHERE g.Filter(geography::Parse(
    'POLYGON((-120.1 44.9, -119.9 44.9, -119.9 45.1, -120.1 45.1, -120.1 44.9))')) = 1;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Geography 인스턴스의 확장된 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Stintersects&#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
+## <a name="see-also"></a>참고 항목  
+ [geography 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [STIntersects&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
   
   

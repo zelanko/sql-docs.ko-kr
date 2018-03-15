@@ -1,5 +1,5 @@
 ---
-title: "변수 (Transact SQL) | Microsoft Docs"
+title: "변수(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -29,14 +29,14 @@ ms.lasthandoff: 01/25/2018
 # <a name="variables-transact-sql"></a>변수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Transact SQL 지역 변수는 특정 유형의 단일 데이터 값을 보유할 수 있는 개체입니다. 일괄 처리 및 스크립트에 있는 변수는 일반적으로 다음과 같이 사용될 수 있습니다. 
+Transact-SQL 지역 변수는 특정 유형의 단일 데이터 값을 보유할 수 있는 개체입니다. 일괄 처리 및 스크립트에 있는 변수는 일반적으로 다음과 같이 사용될 수 있습니다. 
 
 * 루프가 수행되는 횟수를 세거나 제어하는 카운터로 사용됩니다.
 * 흐름 제어 문에서 테스트되는 데이터 값을 보유할 수 있습니다.
 * 저장 프로시저 반환 코드 또는 함수 반환 값으로 반환되는 데이터 값을 저장할 수 있습니다.
 
 > [!NOTE]
-> 일부 TRANSACT-SQL 시스템 함수의 이름은 두 개의로 시작 *에서* 기호 (@ @). 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], @@functions 참조 하려면 전역 변수로 변수 아니고 변수 처럼 동작 하지 않은 합니다. @@functions 는 시스템 함수 이며 구문 사용법이 함수에 대 한 규칙을 따릅니다.
+> 일부 Transact-SQL 시스템 함수의 이름은 두 *at* 기호(@@)로 시작합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 @@functions가 전역 변수로 간주되었지만 그것은 변수가 아니며 변수처럼 동작하지 않습니다. @@functions은 시스템 함수이며 구문 사용법이 함수 규칙을 따릅니다.
 
 다음 스크립트는 작은 테스트 테이블을 만들고 26개 행으로 채웁니다. 이 스크립트는 변수를 사용하여 다음 세 가지 작업을 수행합니다. 
 
@@ -86,23 +86,23 @@ GO
 ```
 
 ## <a name="declaring-a-transact-sql-variable"></a>Transact-SQL 변수 선언
-DECLARE 문의 하 여 TRANSACT-SQL 변수를 초기화합니다. 
+DECLARE 문은 다음을 통해 Transact-SQL 변수를 초기화합니다. 
 * 이름 할당. 이름에는 첫 문자로 @을 하나 사용해야 합니다.
 * 시스템 제공 또는 사용자 정의 데이터 형식 및 길이 할당. 숫자 변수에 대해 전체 자릿수 및 소수 자릿수도 할당됩니다. XML 형식의 변수에 대해서는 선택적 스키마 컬렉션이 할당될 수 있습니다.
 * 값을 NULL로 설정
 
-예를 들어, 다음 **DECLARE** 문은 라는 지역 변수를 만듭니다.  **@mycounter**  int 데이터 형식을 사용 합니다.  
+예를 들어 다음 **DECLARE** 문은 int 데이터 형식의 **@mycounter**라는 지역 변수를 만듭니다.  
 ```sql
 DECLARE @MyCounter int;
 ```
 둘 이상의 지역 변수를 선언하려면 정의된 첫 지역 변수 다음에 쉼표를 사용한 후 다음 지역 변수의 이름 및 데이터 형식을 지정합니다.
 
-예를 들어, 다음 **DECLARE** 문은 라는 세 지역 변수를 만듭니다.  **@LastName** ,  **@FirstName**  및  **@StateProvince** , 각각 NULL로 초기화 합니다.  
+예를 들어 다음 **DECLARE** 문은 **@LastName**, **@FirstName** 및 **@StateProvince**라는 세 지역 변수를 만들고 각각 NULL로 초기화합니다.  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-변수 범위 변수를 참조할 수 있는 범위의 TRANSACT-SQL 문입니다. 변수 범위는 선언된 시점부터 이를 선언했던 일괄 처리 또는 저장 프로시저가 끝날 때까지 계속됩니다. 예를 들어 다음 스크립트는 변수가 하나의 일괄 처리에서 선언되고 또 다른 일괄 처리에서 참조되므로 구문 오류를 일으킵니다.  
+변수 범위는 변수를 참조할 수 있는 Transact-SQL 문의 범위입니다. 변수 범위는 선언된 시점부터 이를 선언했던 일괄 처리 또는 저장 프로시저가 끝날 때까지 계속됩니다. 예를 들어 다음 스크립트는 변수가 하나의 일괄 처리에서 선언되고 또 다른 일괄 처리에서 참조되므로 구문 오류를 일으킵니다.  
 ```sql
 USE AdventureWorks2014;
 GO
@@ -152,7 +152,7 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-변수에는 또한 선택 목록에서 참조되어 할당된 값이 있을 수 있습니다. 변수가 선택 목록에서 참조되면 이 변수에 스칼라 값이 할당되거나 SELECT 문이 행을 하나만 반환해야 합니다. 예를 들어  
+변수에는 또한 선택 목록에서 참조되어 할당된 값이 있을 수 있습니다. 변수가 선택 목록에서 참조되면 이 변수에 스칼라 값이 할당되거나 SELECT 문이 행을 하나만 반환해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
 
 ```sql
 USE AdventureWorks2014;
@@ -167,7 +167,7 @@ GO
 > [!WARNING]
 > SELECT 문 하나에 할당 절이 여러 개 있을 경우 SQL Server에서는 식의 계산 순서를 보장하지 않습니다. 할당 간에 참조가 있을 경우에만 그 결과가 표시됩니다.
 
-SELECT 문에서 둘 이상의 행을 반환 하 고 변수가 스칼라가 아닌 식을 참조 하는 경우 변수는 결과 집합의 마지막 행에 식에 대 한 반환 값으로 설정 됩니다. 예를 들어 다음 일괄 처리에서에서  **@EmpIDVariable**  로 설정 되 고 **BusinessEntityID** 1 마지막 행의 값이 반환:  
+SELECT 문에서 행을 두 개 이상 반환하고 변수가 스칼라가 아닌 식을 참조하면 변수는 결과 집합의 마지막 행에 있는 식에 대해 반환된 값으로 설정됩니다. 예를 들어 다음 일괄 처리에서 **@EmpIDVariable**은 반환된 마지막 행의 **BusinessEntityID** 값인 1로 설정됩니다.  
 
 ```sql
 USE AdventureWorks2014;
@@ -182,11 +182,11 @@ SELECT @EmpIDVariable;
 GO
 ```
 
-## <a name="see-also"></a>관련 항목:  
- [선언@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Declare@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
  [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
  [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [복합 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
   

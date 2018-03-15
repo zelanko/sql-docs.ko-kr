@@ -1,5 +1,5 @@
 ---
-title: DBCC dllname (FREE) (Transact SQL) | Microsoft Docs
+title: DBCC dllname(FREE)(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname(FREE)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]지정 된 확장된 저장된 프로시저 DLL 메모리에서 언로드합니다.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 지정된 확장 저장 프로시저 DLL을 메모리에서 언로드합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,32 +57,32 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
  WITH NO_INFOMSGS  
  모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>주의
-확장 저장 프로시저를 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 로드한 DLL은 서버가 종료될 때까지 그대로 유지됩니다. 이 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 종료하지 않아도 메모리에서 DLL을 언로드할 수 있도록 허용합니다. 현재 로드 한 DLL 파일을 표시 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 실행 **sp_helpextendedproc**
+## <a name="remarks"></a>Remarks
+확장 저장 프로시저를 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 로드한 DLL은 서버가 종료될 때까지 그대로 유지됩니다. 이 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 종료하지 않아도 메모리에서 DLL을 언로드할 수 있도록 허용합니다. 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 로드한 DLL 파일을 표시하려면 **sp_helpextendedproc**를 실행하십시오.
   
 ## <a name="result-sets"></a>결과 집합  
-유효한 DLL을 지정 하면 DBCC *dllname* (FREE) 반환 합니다.
+유효한 DLL을 지정하면 DBCC *dllname*(FREE)이 다음을 반환합니다.
   
 ```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 가정 `xp_sample` xp_sample.dll로 구현 하 고 실행 합니다. DBCC \< *dllname*>과 연결 된 xp_sample.dll 파일 (FREE) 언로드는 `xp_sample` 확장 프로시저입니다.
+다음 예에서는 `xp_sample`을 xp_sample.dll로 구현하고 실행했다고 가정합니다. DBCC \<*dllname*>(FREE)은 `xp_sample` 확장 프로시저와 연결된 xp_sample.dll 파일을 언로드합니다.
   
 ```sql  
 DBCC xp_sample (FREE);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [확장 저장 프로시저의 실행 특징](../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-[sp_addextendedproc &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  
-[sp_dropextendedproc &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
-[sp_helpextendedproc &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)  
+[sp_addextendedproc&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  
+[sp_dropextendedproc&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
+[sp_helpextendedproc&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)  
 [확장 저장 프로시저 DLL 언로드](../../relational-databases/extended-stored-procedures-programming/unloading-an-extended-stored-procedure-dll.md)
   
   

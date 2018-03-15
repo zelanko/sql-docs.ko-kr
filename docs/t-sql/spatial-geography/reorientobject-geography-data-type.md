@@ -1,5 +1,5 @@
 ---
-title: "ReorientObject (geography 데이터 형식) | Microsoft Docs"
+title: "ReorientObject(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reorientobject-geography-data-type"></a>ReorientObject(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  반환 된 **geography** 내부 영역과 외부 영역이 서로 바뀐를 사용 하 여 인스턴스.  
+  내부 영역과 외부 영역이 서로 바뀐 **geography** 인스턴스를 반환합니다.  
   
- 이 **geography** 데이터 형식 메서드 지원 **FullGlobe** 인스턴스 또는 반구 보다 큰 공간 인스턴스.  
+ 이 **geography** 데이터 형식 메서드는 **FullGlobe** 인스턴스 또는 반구보다 큰 공간 인스턴스를 지원합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,17 +47,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *geography*  
- 다른 **geography** 인스턴스 `ReorientObject()` 가 호출 됩니다.  
+ `ReorientObject()`를 호출할 다른 **geography** 인스턴스입니다.  
   
 ## <a name="return-value"></a>반환 값  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 모두의 링 방향은 변경 **다각형** 에 **GeometryCollection** 제거 하거나 변경 하지 않는 있지만 **포인트** 또는 **Linestrings** 지정한 컬렉션에 있습니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 **GeometryCollection**에 있는 모든 **Polygons**의 링 방향을 변경하지만 지정된 컬렉션에서 **Points** 또는 **Linestrings**을 제거하거나 변경하지는 않습니다.  
   
- 경우는 **GeometryCollection** 전달이 메서드에 컬렉션의 각 인스턴스는 방향이 다시 지정 되지만 컬렉션 전체의 방향은 변경 되지 않습니다.  
+ **GeometryCollection**이 이 메서드에 전달된 경우 컬렉션에 포함된 각 인스턴스의 방향이 다시 지정되지만 컬렉션 전체의 방향은 변경되지 않습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -67,7 +67,7 @@ SELECT @R.ReorientObject().STAsText();
 --Result: POLYGON ((10 10, -10 10, -10 -10, 10 -10, 10 10))  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

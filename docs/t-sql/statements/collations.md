@@ -1,5 +1,5 @@
 ---
-title: "데이터 정렬은 | Microsoft Docs"
+title: "데이터 정렬 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ COLLATE { <collation_name> | database_default }
   
 ## <a name="arguments"></a>인수  
  *collation_name*  
- 식, 열 정의 또는 데이터베이스 정의에 적용할 데이터 정렬의 이름입니다. *데이터 정렬 이름* 수만 지정 *Windows_collation_name* 또는 *SQL_collation_name*합니다. *데이터 정렬 이름* 리터럴 값 이어야 합니다. *데이터 정렬 이름* 변수나 식으로 표현할 수 없습니다.  
+ 식, 열 정의 또는 데이터베이스 정의에 적용할 데이터 정렬의 이름입니다. *collation_name*에는 지정된 *Windows_collation_name* 또는 *SQL_collation_name*만 사용할 수 있습니다. *collation_name*은 리터럴 값이어야 합니다. 변수나 식으로 *collation_name*을 나타낼 수 없습니다.  
   
- *Windows_collation_name* 에 대 한 데이터 정렬 이름는 [Windows 데이터 정렬 이름](../../t-sql/statements/windows-collation-name-transact-sql.md)합니다.  
+ *Windows_collation_name*은 [Windows 데이터 정렬 이름](../../t-sql/statements/windows-collation-name-transact-sql.md)의 데이터 정렬 이름입니다.  
   
- *SQL_collation_name* 에 대 한 데이터 정렬 이름는 [SQL Server 데이터 정렬 이름](../../t-sql/statements/sql-server-collation-name-transact-sql.md)합니다.  
+ *SQL_collation_name*은 [SQL Server 데이터 정렬 이름](../../t-sql/statements/sql-server-collation-name-transact-sql.md)의 데이터 정렬 이름입니다.  
   
  데이터베이스 정의 수준에서 데이터 정렬을 적용하면 COLLATE 절에서 Windows 유니코드 전용 데이터 정렬을 사용할 수 없습니다.  
   
  **database_default**  
  COLLATE 절이 현재 데이터베이스의 데이터 정렬을 상속하도록 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  COLLATE 절은 여러 수준에서 지정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
   
 1.  데이터베이스 만들기 또는 변경  
@@ -68,13 +68,13 @@ COLLATE { <collation_name> | database_default }
      CREATE DATABASE 또는 ALTER DATABASE 문의 COLLATE 절을 사용하여 데이터베이스의 기본 데이터 정렬을 지정할 수 있습니다. 또한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스를 만들 때 데이터 정렬을 지정할 수 있습니다. 데이터 정렬을 지정하지 않은 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 데이터 정렬이 데이터베이스에 할당됩니다.  
   
     > [!NOTE]  
-    >  Windows 유니코드 전용 데이터 정렬은 사용 하 여 COLLATE 절에 데이터 정렬을 적용 하는 **nchar**, **nvarchar**, 및 **ntext** 열 수준에서 데이터 형식 및 식 수준 데이터; 데이터베이스 또는 서버 인스턴스의 데이터 정렬을 변경 하려면 COLLATE 절과 함께 사용할 수 없습니다.  
+    >  Windows 유니코드 전용 데이터 정렬은 COLLATE 절에서 열 수준 및 식 수준 데이터의 **nchar**, **nvarchar** 및 **ntext** 데이터 형식에 데이터 정렬을 적용하기 위해서만 사용할 수 있고 COLLATE 절에서 데이터베이스 또는 서버 인스턴스의 데이터 정렬을 변경하기 위해 사용할 수는 없습니다.  
   
 2.  테이블 열 만들기 또는 변경  
   
      CREATE TABLE 또는 ALTER TABLE 문의 COLLATE 절을 사용하여 각 문자열 열에 대한 데이터 정렬을 지정할 수 있습니다. 또한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 테이블을 만들 때 데이터 정렬을 지정할 수 있습니다. 데이터 정렬을 지정하지 않은 경우에는 데이터베이스의 기본 데이터 정렬이 열에 할당됩니다.  
   
-     사용할 수도 있습니다는 `database_default` COLLATE 절에서 임시 테이블의 열 대신 연결에 대 한 현재 사용자 데이터베이스의 데이터 정렬 기본값을 사용 하도록 지정 하려면 옵션 **tempdb**합니다.  
+     또한 COLLATE 절에서 `database_default` 옵션을 사용하여 임시 테이블의 열이 연결에 대해 **tempdb** 대신 현재 사용자 데이터베이스의 기본 데이터 정렬을 사용하도록 지정할 수 있습니다.  
   
 3.  식의 데이터 정렬 캐스팅  
   
@@ -84,13 +84,13 @@ COLLATE { <collation_name> | database_default }
   
  변수, GOTO 레이블, 임시 저장 프로시저 및 임시 테이블은 연결 컨텍스트를 한 데이터베이스와 연결한 경우에 만들 수 있으며 컨텍스트를 다른 데이터베이스로 전환한 경우에 참조할 수 있습니다. 변수, GOTO 레이블, 임시 저장 프로시저 및 임시 테이블의 식별자는 서버 인스턴스의 기본 데이터 정렬에 있습니다.  
   
- COLLATE 절에 대해서만 적용할 수는 **char**, **varchar**, **텍스트**, **nchar**, **nvarchar** 및 **ntext** 데이터 형식입니다.  
+ COLLATE 절은 **char**, **varchar**, **text**, **nchar**, **nvarchar** 및 **ntext** 데이터 형식에만 적용할 수 있습니다.  
   
- COLLATE 사용 하 여 *collate_name* SQL Server 데이터 정렬 또는 식, 열 정의 또는 데이터베이스 정의에 적용 될 Windows 데이터 정렬의 이름을 참조 하도록 합니다. *데이터 정렬 이름* 수만 지정 된 *Windows_collation_name* 또는 *SQL_collation_name* 하며 매개 변수는 리터럴 값을 포함 해야 합니다. *데이터 정렬 이름* 변수나 식으로 표현할 수 없습니다.  
+ COLLATE는 *collate_name*을 사용하여 식, 열 정의 또는 데이터베이스 정의에 적용할 SQL Server 데이터 정렬 또는 Windows 데이터 정렬의 이름을 참조합니다. *collation_name*에는 지정된 *Windows_collation_name* 또는 *SQL_collation_name*만 사용할 수 있으며 매개 변수에는 리터럴 값이 포함되어야 합니다. 변수나 식으로 *collation_name*을 나타낼 수 없습니다.  
   
- 데이터 정렬은 설치할 때를 제외하고 일반적으로 데이터 정렬 이름으로 식별됩니다. 설치 프로그램을 대신 Windows 데이터 정렬에 대 한 루트 데이터 정렬 지정자 (데이터 정렬 로캘)를 지정 하 고 감지 하거나 대/소문자 또는 악센트를 구분 하지 않는 정렬 옵션을 지정 합니다.  
+ 데이터 정렬은 설치할 때를 제외하고 일반적으로 데이터 정렬 이름으로 식별됩니다. 설치할 때는 Windows 데이터 정렬에 대해 루트 데이터 정렬 지정자(데이터 정렬 로캘)를 지정한 다음, 대소문자와 악센트를 구분하거나 구분하지 않는 정렬 옵션을 지정합니다.  
   
- 시스템 함수를 실행할 수 [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) Windows 데이터 정렬 및 SQL Server 데이터 정렬에 대 한 모든 유효한 데이터 정렬 이름의 목록을 검색 하려면:  
+ 시스템 함수인 [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)를 실행하여 Windows 데이터 정렬과 SQL Server 데이터 정렬에 대해 유효한 모든 데이터 정렬 이름의 목록을 검색할 수 있습니다.  
   
 ```sql  
 SELECT name, description  
@@ -103,13 +103,13 @@ FROM fn_helpcollations();
   
 -   테이블을 만들거나 변경할 때 열에 대한 데이터 정렬 지정  
   
--   복원 하거나 데이터베이스, 데이터베이스의 기본 데이터 정렬 및 모든 데이터 정렬에 연결할 때 **char**, **varchar**, 및 **텍스트** 열 또는 데이터베이스에 대 한 매개 변수 운영 체제에서 지원 되어야 합니다.  
+-   데이터베이스를 복원하거나 연결할 때 데이터베이스의 기본 데이터 정렬과 데이터베이스 내의 모든 **char**, **varchar** 및 **text** 열 또는 매개 변수의 데이터 정렬은 반드시 운영 체제에서 지원되는 것이어야 합니다.  
   
 > [!NOTE]
-> 코드 페이지 변환이 지원 되는 **char** 및 **varchar** 데이터 형식에 대 한 **텍스트** 데이터 형식입니다. 코드 페이지 변환 중 데이터가 손실되어도 보고되지 않습니다.  
+> **char** 및 **varchar** 데이터 형식에 대해서는 코드 페이지 변환이 지원되지만 **text** 데이터 형식에 대해서는 지원되지 않습니다. 코드 페이지 변환 중 데이터가 손실되어도 보고되지 않습니다.  
   
 > [!NOTE]
-> 지정 된 데이터 정렬 또는 참조 된 개체가 사용 되는 데이터 정렬에는 Windows에서 지원 되지 않습니다 코드 페이지를 사용 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류를 표시 합니다.  
+> 지정된 데이터 정렬 또는 참조된 개체가 사용하는 데이터 정렬에서 Windows가 지원하지 않는 코드 페이지를 사용하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류가 나타납니다.  
   
 ## <a name="examples"></a>예  
   
@@ -158,16 +158,16 @@ Chiapas
 ```  
   
 ### <a name="b-additional-examples"></a>2. 추가 예  
- 사용 하는 추가 예제를 보려면 **COLLATE**, 참조 [CREATE database&#40; SQL Server transact-sql&#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) 예제 **G. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정**, 및 [ALTER table&#40; Transact SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 예제 **열 데이터 정렬 변경 V.**합니다.  
+ **COLLATE**를 사용하는 추가 예는 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) 예제 **G. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정** 및 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 예제 **V. 열 데이터 정렬 변경**을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)    
  [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
- [상수 &#40; Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [상수&#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
- [테이블 &#40; Transact SQL &#41;](../../t-sql/data-types/table-transact-sql.md)     
+ [테이블&#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   

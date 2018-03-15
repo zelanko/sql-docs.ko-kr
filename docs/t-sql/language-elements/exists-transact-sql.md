@@ -1,5 +1,5 @@
 ---
-title: "있습니다 (Transact SQL) | Microsoft Docs"
+title: EXISTS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ EXISTS ( subquery )
   
 ## <a name="arguments"></a>인수  
  *subquery*  
- 제한된 SELECT 문입니다. INTO 키워드는 허용되지 않습니다. 자세한 내용은에서 하위 쿼리에 대 한 정보를 참조 하십시오. [select&#40; Transact SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+ 제한된 SELECT 문입니다. INTO 키워드는 허용되지 않습니다. 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)에서 하위 쿼리에 대한 내용을 참조하세요.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
@@ -119,7 +119,7 @@ Willis                                             Johnson
  ```  
   
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>3. EXISTS 및 = ANY를 사용하여 쿼리 비교  
- 다음 예에서는 공급업체와 이름이 동일한 상점을 찾는 두 개의 쿼리를 보여 줍니다. 첫 번째 쿼리에서 사용 하 여 `EXISTS` 및 두 번째 용도 `=``ANY`합니다.  
+ 다음 예에서는 공급업체와 이름이 동일한 상점을 찾는 두 개의 쿼리를 보여 줍니다. 첫 번째 쿼리에서는 `EXISTS`를 사용하고 두 번째 쿼리에서는 `=``ANY`를 사용합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -302,10 +302,10 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-using-exists"></a>6. EXISTS 사용  
- 다음 예제에서는 있는지 여부를 식별에 행이 `ProspectiveBuyer` 테이블의 행에 일치 하는 항목 수는 `DimCustomer` 테이블입니다. 쿼리는 행을 반환 하는 경우에만 둘 다는 `LastName` 및 `BirthDate` 일치 하는 두 테이블의에서 값입니다.  
+ 다음 예제에서는 `ProspectiveBuyer` 테이블의 행이 `DimCustomer` 테이블의 행과 일치하는지 여부를 식별합니다. 쿼리는 두 테이블의 `LastName` 및 `BirthDate` 값이 모두 일치하는 경우에만 행을 반환합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>7. NOT EXISTS 사용  
- NOT EXISTS는 EXISTS와 반대 작업으로 작동합니다. 하위 쿼리에서 반환되는 행이 없는 경우에는 NOT EXISTS의 WHERE 절 조건이 충족됩니다. 다음 예에서는 행을 찾습니다는 `DimCustomer` 테이블는 `LastName` 및 `BirthDate` 에서 모든 항목과 일치 하지 않습니다는 `ProspectiveBuyers` 테이블입니다.  
+ NOT EXISTS는 EXISTS와 반대됩니다. 하위 쿼리에서 반환되는 행이 없는 경우에는 NOT EXISTS의 WHERE 절 조건이 충족됩니다. 다음 예제에서는 `LastName` 및 `BirthDate`가 `ProspectiveBuyers` 테이블의 모든 항목에 일치하지 않는 행을 `DimCustomer` 테이블에서 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -332,10 +332,10 @@ WHERE NOT EXISTS
     WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

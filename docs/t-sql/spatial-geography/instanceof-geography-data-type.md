@@ -1,5 +1,5 @@
 ---
-title: "InstanceOf (geography 데이터 형식) | Microsoft Docs"
+title: "InstanceOf(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geography-data-type"></a>InstanceOf(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  테스트는 **geography** 인스턴스는 지정 된 형식과 동일 합니다.  
+  **geography** 인스턴스가 지정된 유형과 동일한지 여부를 테스트합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,19 +45,19 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *geography_type*  
- 이 **nvarchar (4000)** 문자열에 노출 하는 16 개의 형식 중 하나를 지정 하는 **geography** 형식 계층 구조입니다.  
+ **geography** 형식 계층에 노출되는 16개의 형식 중 하나를 지정하는 **nvarchar(4000)** 문자열입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **비트**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>주의  
- 1을 반환 형식의 **geography** 인스턴스는 지정된 된 형식으로 동일 또는 지정된 된 형식의 인스턴스 유형의 상위 항목이 면 그렇지 않으면 0을 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ **geography** 인스턴스의 유형이 지정된 유형과 동일하거나 지정된 유형이 인스턴스 유형의 상위 항목이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.  
   
- 이 **geography** 데이터 형식 메서드 지원 **FullGlobe** 인스턴스 또는 반구 보다 큰 공간 인스턴스.  
+ 이 **geography** 데이터 형식 메서드는 **FullGlobe** 인스턴스 또는 반구보다 큰 공간 인스턴스를 지원합니다.  
   
- 메서드에 대 한 입력은 다음 중 하나 여야 합니다: 기 하 도형, 요소, 곡선, LineString, CircularString, 화면, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**,  **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint**, 또는 **FullGlobe**합니다.  
+ 메서드에 대한 입력은 Geometry, Point, Curve, LineString,CircularString, Surface, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**, **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint** 또는 **FullGlobe** 중 하나여야 합니다.  
   
  이 메서드는 다른 문자열이 입력에 사용되면 `ArgumentException`을 발생시킵니다.  
   
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT(-122.360 47.656, -122.343 47.656)
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

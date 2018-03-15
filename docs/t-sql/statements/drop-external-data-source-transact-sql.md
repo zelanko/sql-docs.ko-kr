@@ -1,5 +1,5 @@
 ---
-title: "외부 데이터 원본 (Transact SQL) DROP | Microsoft Docs"
+title: DROP EXTERNAL DATA SOURCE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-data-source-transact-sql"></a>DROP 외부 데이터 원본 (Transact SQL)
+# <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   PolyBase 외부 데이터 원본을 제거합니다.  
@@ -46,30 +46,30 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
  삭제할 외부 데이터 원본의 이름입니다.  
   
 ## <a name="metadata"></a>메타데이터  
- 외부 데이터의 목록을 보려면 원본은 sys.external_data_sources 시스템 뷰를 사용 합니다.  
+ 외부 데이터 원본의 목록을 보려면 external_data_sources 시스템 뷰를 사용합니다.  
   
 ```  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
-## <a name="permissions"></a>Permissions  
- 필요한 모든 외부 데이터 소스를 변경 합니다.  
+## <a name="permissions"></a>사용 권한  
+ ALTER ANY EXTERNAL DATA SOURCE가 필요합니다.  
   
 ## <a name="locking"></a>잠금  
- 외부 데이터 원본 개체에 대 한 공유 잠금을 사용합니다.  
+ 외부 데이터 원본 개체에 대해 공유 잠금을 적용합니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 외부 데이터 원본을 삭제 해도 외부 데이터는 제거 되지 않습니다.  
+ 외부 데이터 원본을 삭제해도 외부 데이터는 제거되지 않습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-basic-syntax"></a>1. 기본 구문을 사용 하 여  
+### <a name="a-using-basic-syntax"></a>1. 기본 구문 사용  
   
 ```  
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE EXTERNAL DATA SOURCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   

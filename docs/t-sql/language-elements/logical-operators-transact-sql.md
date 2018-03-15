@@ -1,5 +1,5 @@
 ---
-title: "논리 연산자 (Transact SQL) | Microsoft Docs"
+title: "논리 연산자(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="logical-operators-transact-sql"></a>논리 연산자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  논리 연산자는 조건의 진위 여부를 테스트합니다. 논리 연산자도 비교 연산자 처럼 반환는 **부울** TRUE, FALSE 또는 UNKNOWN 값으로 데이터 형식입니다.  
+  논리 연산자는 조건의 진위 여부를 테스트합니다. 논리 연산자도 비교 연산자처럼 TRUE, FALSE 또는 UNKNOWN 값의 **Boolean** 데이터 형식을 반환합니다.  
   
 |연산자|의미|  
 |--------------|-------------|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
 |[OR](../../t-sql/language-elements/or-transact-sql.md)|하나의 부울 식이 TRUE인 경우 TRUE입니다.|  
 |[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|비교 집합 중 일부가 TRUE인 경우 TRUE입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [연산자 우선 순위 &#40; Transact SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [연산자 우선 순위&#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

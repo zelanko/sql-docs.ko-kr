@@ -1,5 +1,5 @@
 ---
-title: "MinDbCompatibilityLevel (geography 데이터 형식) | Microsoft Docs"
+title: "MinDbCompatibilityLevel(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  인식 하는 최소 데이터베이스 호환성을 반환 된 **geography** 데이터 형식입니다.  
+  **geography** 데이터 형식을 인식하는 최소 데이터베이스 호환성을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **int**  
   
  CLR 반환 형식: **int**  
   
-## <a name="remarks"></a>주의  
- 데이터베이스의 호환성 수준을 변경하기 전에 `MinDbCompatibilityLevel()`을 사용하여 공간 개체의 호환성을 테스트할 수 있습니다. 잘못 된 **geography** 110이 반환을 입력 합니다.  
+## <a name="remarks"></a>Remarks  
+ 데이터베이스의 호환성 수준을 변경하기 전에 `MinDbCompatibilityLevel()`을 사용하여 공간 개체의 호환성을 테스트할 수 있습니다. 잘못된 **geography** 형식은 110을 반환합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -96,8 +96,8 @@ END
   
  첫 번째 SELECT 문은 110을 반환하고 두 번째 SELECT 문은 100을 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [SQL Server 데이터베이스 엔진 이전 버전과 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+ [SQL Server 데이터베이스 엔진의 이전 버전과의 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

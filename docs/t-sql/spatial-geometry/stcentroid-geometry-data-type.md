@@ -1,5 +1,5 @@
 ---
-title: "STCentroid (geometry 데이터 형식) | Microsoft Docs"
+title: "STCentroid(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcentroid-geometry-data-type"></a>STCentroid(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-기 하 도형 중심을 반환 합니다.는 **geometry** 이상의 다각형으로 구성 된 인스턴스.
+한 개 이상의 다각형으로 구성된 **geometry** 인스턴스의 기하 도형 중심을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -44,19 +44,19 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
- 열기 Geospatial Consortium (OGC) 입력: **지점**  
+ OGC(Open Geospatial Consortium) 형식: **Point**  
   
-## <a name="remarks"></a>주의  
- `STCentroid()`경우 null을 반환은 **기 하 도형** 인스턴스가 않습니다는 **Polygon, CurvePolygon**, 또는 **MultiPolygon** 유형입니다.  
+## <a name="remarks"></a>Remarks  
+ `STCentroid()`는 **geometry** 인스턴스가 **Polygon, CurvePolygon** 또는 **MultiPolygon** 형식이 아니면 null을 반환합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>1. Polygon 인스턴스의 중심 계산  
- 다음 예제에서는 `STCentroid()` 중심을 계산 하는 `polygon``geometry` 인스턴스:  
+ 다음 예에서는 `STCentroid()`를 사용하여 `polygon``geometry` 인스턴스의 중심을 계산합니다.  
   
 ```  
 DECLARE @g geometry;  
@@ -72,7 +72,7 @@ SELECT @g.STCentroid().ToString();
  SELECT @g.STCentroid().ToString() AS Centroid
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

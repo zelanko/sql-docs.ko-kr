@@ -1,5 +1,5 @@
 ---
-title: "없습니다 (Transact SQL) | Microsoft Docs"
+title: NOT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *boolean_expression*  
- 유효한 부울 [식](../../t-sql/language-elements/expressions-transact-sql.md)합니다.  
+ 유효한 부울 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="result-value"></a>결과 값  
  NOT은 부울 식의 값을 역으로 표시합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  NOT을 사용하면 식을 부정합니다.  
   
  다음 표에서는 NOT 연산자를 사용하여 TRUE와 FALSE 값을 비교한 결과를 보여 줍니다.  
@@ -93,8 +93,8 @@ GO
  (6 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제에서는 결과 제한 `SalesOrderNumber` 로 시작 하는 값에 `SO6` 및 `ProductKeys` 400 보다 크거나 같은 경우입니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예제에서는 `SalesOrderNumber`에 대한 결과를 400보다 크거나 같은 `SO6` 및 `ProductKeys`로 시작하는 값으로 제한합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -104,12 +104,12 @@ FROM FactInternetSales
 WHERE SalesOrderNumber LIKE 'SO6%' AND NOT ProductKey < 400;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "정적 기 하 도형 집계 메서드 | Microsoft Docs"
+title: "정적 집계 기하 도형 메서드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,22 +42,22 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 - SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [OGC 사양, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [CollectionAggregate &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/collectionaggregate-geometry-data-type.md)  
+-   [CollectionAggregate &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/collectionaggregate-geometry-data-type.md)  
   
--   [ConvexHullAggregate &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/convexhullaggregate-geometry-data-type.md)  
+-   [ConvexHullAggregate &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/convexhullaggregate-geometry-data-type.md)  
   
--   [EnvelopeAggregate &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/envelopeaggregate-geometry-data-type.md)  
+-   [EnvelopeAggregate &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/envelopeaggregate-geometry-data-type.md)  
   
--   [UnionAggregate &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
+-   [UnionAggregate &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [Geometry 인스턴스의 확장된 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [확장 정적 기 하 도형 메서드](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)   
- [Geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+## <a name="see-also"></a>참고 항목  
+ [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [확장 정적 기하 도형 메서드](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)   
+ [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [OGC 정적 기하 도형 메서드](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

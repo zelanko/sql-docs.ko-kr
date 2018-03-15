@@ -1,5 +1,5 @@
 ---
-title: "또는 (Transact SQL) | Microsoft Docs"
+title: OR(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ boolean_expression OR boolean_expression
   
 ## <a name="arguments"></a>인수  
  *boolean_expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) TRUE, FALSE 또는 UNKNOWN을 반환 합니다.  
+ TRUE, FALSE 또는 UNKNOWN을 반환하는 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
@@ -56,7 +56,7 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>결과 값  
  OR는 조건 중의 하나가 TRUE이면 TRUE를 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 표에서는 OR 연산자의 결과를 보여 줍니다.  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -86,8 +86,8 @@ WHERE Department = 'Quality Assurance'
  Sootha       Charncherngkha   Night
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제 중 하나를 획득 하는 직원의 이름을 검색 한 `BaseRate` 20 수도 있고 한 `HireDate` 2001 년 1 월 1 일 이상.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예제에서는 20 미만인 `BaseRate`를 획득하거나 2001년 1월 1일 이후에 `HireDate`인 직원의 이름을 검색합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -97,12 +97,12 @@ FROM DimEmployee
 WHERE BaseRate < 10 OR HireDate >= '2001-01-01';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

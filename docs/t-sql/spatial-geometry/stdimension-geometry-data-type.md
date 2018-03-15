@@ -1,5 +1,5 @@
 ---
-title: "STDimension (geometry 데이터 형식) | Microsoft Docs"
+title: "STDimension(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geometry-data-type"></a>STDimension(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-최대 차원을 반환는 **geometry** 인스턴스.
+**geometry** 인스턴스의 최대 차원을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **int**  
   
  CLR 반환 형식: **SqlInt32**  
   
-## <a name="remarks"></a>주의  
- `STDimension()`-1을 반환 하는 경우는 **기 하 도형** 인스턴스가 비어 있습니다.  
+## <a name="remarks"></a>Remarks  
+ **geometry** 인스턴스가 비어 있으면 `STDimension()`은 1을 반환합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 보유 하는 테이블 변수 **기 하 도형** 인스턴스를 삽입 하는 `Point`, `LineString`, 및 `Polygon`합니다.  다음 사용 하 여 `STDimension()` 각각의 크기를 반환할 **geometry** 인스턴스.  
+ 다음 예에서는 테이블 변수를 만들어 **geometry** 인스턴스를 보관하고 `Point`, `LineString` 및 `Polygon`를 삽입합니다.  그런 다음, `STDimension()`을 사용하여 각 **geometry** 인스턴스의 차원을 반환합니다.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geometry);  
@@ -65,13 +65,13 @@ FROM @temp;
   
  그런 다음 이 예에서는 각 `geometry` 인스턴스의 차원을 반환합니다.  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |점|0|  
-|LineString|1.|  
-|다각형|2|  
+|LineString|1|  
+|Polygon|2|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

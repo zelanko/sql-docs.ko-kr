@@ -1,5 +1,5 @@
 ---
-title: "% (나머지) (Transact SQL) | Microsoft Docs"
+title: "%(모듈러스)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-modulus-transact-sql"></a>% (나머지) (Transact SQL)
+# <a name="-modulus-transact-sql"></a>%(모듈러스)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   한 숫자를 다른 숫자로 나눈 나머지를 반환합니다.  
@@ -53,21 +53,21 @@ dividend % divisor
   
 ## <a name="arguments"></a>인수  
  *dividend*  
- 나눌 숫자 식입니다. *피제수* 은 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) 정수 및 통화 데이터 형식 범주에 속하는 데이터 형식 중 하나 또는 **숫자** 데이터 형식입니다.  
+ 나눌 숫자 식입니다. *dividend*는 정수 및 통화 데이터 형식 범주에 속하는 데이터 형식 중 하나 또는 **numeric** 데이터 형식을 사용하는 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)이어야 합니다.  
   
  *divisor*  
- 피제수를 나눌 숫자 식입니다. *divisor* 정수 및 통화 데이터 형식 범주에 속하는 데이터 형식 중 하나는 유효한 식 이어야 합니다 또는 **숫자** 데이터 형식입니다.  
+ 피제수를 나눌 숫자 식입니다. *divisor*는 정수 및 통화 데이터 형식 범주에 속하는 데이터 형식 중 하나 또는 **numeric** 데이터 형식을 사용하는 유효한 식이어야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
  두 인수의 데이터 형식에 따라 결정됩니다.  
   
-## <a name="remarks"></a>주의  
- 사용할 수는 숫자 상수 또는 정수 및 통화 데이터의 모든 유효한 식 형식 범주 열 이름 조합이 들어 있는 SELECT 문의 선택 목록에 산술 연산자, 모듈로 또는 **숫자** 데이터 입력 합니다.  
+## <a name="remarks"></a>Remarks  
+ 열 이름, 숫자 상수 또는 정수 및 통화 데이터 형식 범주나 **numeric** 데이터 형식을 사용한 유효한 식의 모든 조합이 들어 있는 SELECT 문의 선택 목록에 모듈로 산술 연산자를 사용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-simple-example"></a>1. 간단한 예  
- 다음 예에서는 숫자 38을 5로 나눕니다. 결과의 정수 부분은 7에서 발생 하 고 시연이 어떻게 모듈로 3의 나머지를 반환 합니다.  
+ 다음 예에서는 숫자 38을 5로 나눕니다. 결과의 정수 부분은 7이며 나머지 3을 반환하는 모듈로를 보여 줍니다.  
   
 ```  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
@@ -86,10 +86,10 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-simple-example"></a>C: 간단한 예  
- 다음 예제에 대 한 결과 `%` 3을 2를 나눌 때 연산자입니다.  
+ 다음 예제에서는 3을 2로 나눌 때 `%` 연산자에 대한 결과를 보여 줍니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -104,13 +104,13 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
 1         
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [마찬가지로 &#40; Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [LIKE&#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [% = &#40; 모듈러스 대입 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
- [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [%=&#40;모듈러스 대입&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [복합 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

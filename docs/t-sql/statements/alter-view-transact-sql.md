@@ -1,5 +1,5 @@
 ---
-title: ALTER VIEW (Transact SQL) | Microsoft Docs
+title: ALTER VIEW(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -64,22 +64,22 @@ AS select_statement
  *view_name*  
  변경할 뷰입니다.  
   
- *열*  
+ *column*  
  지정된 뷰에 포함될 하나 이상의 열 이름을 쉼표로 구분하여 지정합니다.  
   
 > [!IMPORTANT]  
 >  열 사용 권한을 유지하려면 ALTER VIEW 실행 전후에 동일한 열 이름을 사용해야 합니다.  
   
 > [!NOTE]  
->  뷰에 대한 열에서 열 이름에 대한 사용 권한은 기본 데이터의 원본에 상관없이 CREATE VIEW 또는 ALTER VIEW 문에 적용할 수 있습니다. 예를 들어, 권한이 부여 된 경우는 **SalesOrderID** CREATE VIEW 문의 열 ALTER VIEW 문은 이름을 바꿀 수는 **SalesOrderID** 아래와 같은 열 **OrderRef**를 사용 하 여 보기와 관련 된 권한은 계속 유지 하 고 **SalesOrderID**합니다.  
+>  뷰에 대한 열에서 열 이름에 대한 사용 권한은 기본 데이터의 원본에 상관없이 CREATE VIEW 또는 ALTER VIEW 문에 적용할 수 있습니다. 예를 들어 CREATE VIEW 문에서 **SalesOrderID** 열에 사용 권한이 부여된 경우 ALTER VIEW 문에서 **SalesOrderID** 열의 이름을 **OrderRef**로 변경할 수 있으며 이때 **SalesOrderID**를 사용하는 뷰와 관련된 권한은 계속 유지됩니다.  
   
  ENCRYPTION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
- 항목을 암호화 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) ALTER VIEW 문의 텍스트가 포함 된 합니다. WITH ENCRYPTION은 뷰가 SQL Server 복제의 일부로 게시되는 것을 방지합니다.  
+ ALTER VIEW 문의 텍스트가 포함된 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 항목을 암호화합니다. WITH ENCRYPTION은 뷰가 SQL Server 복제의 일부로 게시되는 것을 방지합니다.  
   
  SCHEMABINDING  
- 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 줄 수 있는 경우에는 기본 테이블을 수정할 수 없습니다. 수정할 테이블의 종속성을 제거하려면 우선 뷰 정의 자체를 수정 또는 삭제해야 합니다. SCHEMABINDING을 사용 하는 경우는 *select_statement* 는 두 부분으로 된 이름을 포함 해야 합니다 (*스키마***.** *개체*) 테이블, 뷰 또는 참조 되는 사용자 정의 함수입니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
+ 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 줄 수 있는 경우에는 기본 테이블을 수정할 수 없습니다. 수정할 테이블의 종속성을 제거하려면 우선 뷰 정의 자체를 수정 또는 삭제해야 합니다. SCHEMABINDING을 사용하는 경우 *select_statement*에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(*schema***.***object*)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
   
  SCHEMABINDING 절로 만든 뷰에서 사용하는 뷰 또는 테이블은 뷰가 삭제되거나 변경되어 스키마 바인딩이 더 이상 존재하지 않는 경우에만 삭제할 수 있습니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생합니다. 또한 ALTER TABLE 문이 뷰 정의에 영향을 미치는 경우에 스키마 바인딩이 있는 뷰에서 사용하는 테이블에 ALTER TABLE 문을 실행하면 실패합니다.  
   
@@ -88,7 +88,7 @@ AS select_statement
   
  VIEW_METADATA를 사용하여 만든 뷰의 경우 찾아보기 모드 메타데이터는 결과 집합의 뷰에서 열을 설명할 때 기본 테이블 이름 대신 뷰 이름을 반환합니다.  
   
- WITH VIEW_METADATA를 모든 열을 사용 하 여 뷰를 만들 때를 제외 하 고는 **타임 스탬프** 열을 업데이트할 수는 뷰에 INSERT 또는 UPDATE INSTEAD OF 트리거가 있는 경우. 자세한 내용은 주의 섹션을 참조 하십시오. [CREATE view&#40; Transact SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ WITH VIEW_METADATA를 사용하여 뷰를 만든 경우 뷰에 INSERT 또는 UPDATE INSTEAD OF 트리거가 있으면 뷰의 모든 열(**timestamp** 제외)을 업데이트할 수 있습니다. 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)을 참조하세요.  
   
  AS  
  뷰가 수행할 동작입니다.  
@@ -97,10 +97,10 @@ AS select_statement
  뷰를 정의하는 SELECT 문입니다.  
   
  WITH CHECK OPTION  
- 설정 된 조건을 따르도록 뷰에 대해 실행 되는 모든 데이터 수정 문이 *select_statement*합니다.  
+ 뷰에 대해 실행된 모든 데이터 수정 명령문이 *select_statement* 내의 기준 집합을 준수하도록 설정합니다.  
   
-## <a name="remarks"></a>주의  
- ALTER VIEW에 대 한 자세한 내용은의 설명을 참조 [CREATE view&#40; Transact SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ ALTER TRIGGER에 대한 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)의 설명 부분을 참조하세요.  
   
 > [!NOTE]  
 >  이전 뷰 정의를 WITH ENCRYPTION 또는 CHECK OPTION을 사용하여 만든 경우 이러한 옵션은 ALTER VIEW에 포함된 경우에만 설정됩니다.  
@@ -109,7 +109,7 @@ AS select_statement
   
  인덱싱된 뷰에도 ALTER VIEW를 적용할 수 있지만 ALTER VIEW는 뷰에 대한 모든 인덱스를 무조건 삭제합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER VIEW를 실행하려면 최소 OBJECT에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -140,10 +140,10 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
- [DROP view&#40; Transact SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
+ [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [저장 프로시저 만들기](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "예제 (Transact SQL) | Microsoft Docs"
+title: "SELECT 예제(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-examples-transact-sql"></a>SELECT 예(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  이 항목에서는 사용 하는 예제는 [선택](../../t-sql/queries/select-transact-sql.md) 문.  
+  이 항목에서는 [SELECT](../../t-sql/queries/select-transact-sql.md) 문을 사용하는 예제를 제공합니다.  
   
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>1. SELECT를 사용하여 행 및 열 검색  
  다음 예에서는 세 개의 코드 예를 보여 줍니다. 첫 번째 코드 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `*` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 모든 열(`Product` 사용)을 반환합니다.  
@@ -204,19 +204,19 @@ GO
   
  [!code-sql[Select#SelectExamples51](../../t-sql/queries/codesnippet/tsql/select-examples-transact_29.sql)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [마찬가지로 &#40; Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [UNION &#40; Transact SQL &#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
- [제외 하 고 및 INTERSECT &#40; Transact SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [LIKE&#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [UNION&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
+ [EXCEPT 및 INTERSECT&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [경로 이름 &#40; Transact SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
- [절 &#40;에 Transact SQL &#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [PathName&#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [INTO Clause&#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
   
   

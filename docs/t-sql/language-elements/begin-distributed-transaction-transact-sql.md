@@ -1,5 +1,5 @@
 ---
-title: BEGIN DISTRIBUTED TRANSACTION (Transact SQL) | Microsoft Docs
+title: BEGIN DISTRIBUTED TRANSACTION(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/29/2016
 ms.prod: sql-non-specified
@@ -59,12 +59,12 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>인수  
  *transaction_name*  
- MS DTC 유틸리티에서 분산 트랜잭션을 추적하는 데 사용되는 사용자 정의 트랜잭션 이름입니다. *transaction_name* 식별자에 대 한 규칙을 따라야 하며 해야 \<32 자입니다.  
+ MS DTC 유틸리티에서 분산 트랜잭션을 추적하는 데 사용되는 사용자 정의 트랜잭션 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하며 \<=32자여야 합니다.  
   
  @*tran_name_variable*  
- MS DTC 유틸리티에서 분산 트랜잭션 추적에 사용되는 트랜잭션 이름이 포함된 사용자 정의 변수의 이름입니다. 변수를 사용 하 여 선언 해야 합니다는 **char**, **varchar**, **nchar**, 또는 **nvarchar** 데이터 형식입니다.  
+ MS DTC 유틸리티에서 분산 트랜잭션 추적에 사용되는 트랜잭션 이름이 포함된 사용자 정의 변수의 이름입니다. 변수는 **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식으로 선언해야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  BEGIN DISTRIBUTED TRANSACTION 문을 실행하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스는 트랜잭션 주관자로서 트랜잭션의 수행을 제어합니다. 이후 세션에 대해 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문을 실행하면 제어 인스턴스는 포함된 모든 인스턴스 간의 분산 트랜잭션 완료를 MS DTC에서 관리하도록 요청합니다.  
   
  트랜잭션 수준의 스냅숏 격리는 분산 트랜잭션을 지원하지 않습니다.  
@@ -75,15 +75,15 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션에 포함된 세션은 분산 트랜잭션에 명시적으로 참여하도록 다른 세션에 전달할 수 있는 트랜잭션 개체를 얻을 수 없습니다. 원격 서버가 트랜잭션에 참여하는 유일한 방법은 원격 저장 프로시저 호출이나 분산 쿼리의 대상이 되는 것입니다.  
   
- 로컬 트랜잭션에서 분산된 쿼리가 실행 되 면 대상 OLE DB 데이터 원본이 ITransactionLocal 지 원하는 경우 트랜잭션이 분산 트랜잭션으로 자동 승격 됩니다. 대상 OLE DB 데이터 원본 ITransactionLocal를 지원 하지 않는 경우 분산 쿼리에서 읽기 전용 작업만 허용 됩니다.  
+ 로컬 트랜잭션에서 분산 쿼리를 실행하면 대상 OLE DB 데이터 원본이 ITransactionLocal을 지원할 경우 해당 트랜잭션이 자동으로 분산 트랜잭션으로 승격됩니다.  대상 OLE DB 데이터 원본이 ITransactionLocal을 지원하지 않을 경우 분산 쿼리에서 읽기 전용 작업만 허용됩니다.  
   
  분산 트랜잭션에 이미 참여한 세션은 원격 서버를 참조하는 원격 저장 프로시저 호출을 수행합니다.  
   
- **sp_configure 원격 프로시저 트랜잭션** 옵션은 로컬 트랜잭션에서 원격 저장된 프로시저를 호출 하 고 로컬 트랜잭션이 MS DTC를 통해 관리 되는 분산 트랜잭션으로 승격 하면 자동으로 하는지 여부를 제어 합니다. 연결 수준의 SET 옵션 REMOTE_PROC_TRANSACTIONS에서 설정한 인스턴스 기본값을 재정의 하려면 사용할 수 **sp_configure 원격 프로시저 트랜잭션**합니다. 이 옵션을 on으로 설정하면 원격 저장 프로시저 호출에 의해 로컬 트랜잭션이 분산 트랜잭션으로 승격됩니다. MS DTC 트랜잭션을 만든 연결은 트랜잭션 주관자가 되며  COMMIT TRANSACTION은 MS DTC 통합 커밋을 시작합니다. 경우는 **sp_configure 원격 프로시저 트랜잭션** 옵션을 ON, 특히 문제에 대 한 응용 프로그램을 다시 작성할 필요 없이 분산 트랜잭션의 일부로 로컬 트랜잭션에서 원격 저장된 프로시저 호출은 자동으로 보호 BEGIN DISTRIBUTED TRANSACTION 대신 BEGIN TRANSACTION 합니다.  
+ **sp_configure remote proc trans** 옵션은 로컬 트랜잭션에서 원격 저장 프로시저를 호출하면 자동으로 로컬 트랜잭션이 MS DTC에서 관리되는 분산 트랜잭션으로 승격되도록 할지를 제어합니다. 연결 수준의 SET 옵션 REMOTE_PROC_TRANSACTIONS를 사용하여 **sp_configure remote proc trans**에서 설정한 인스턴스 기본값을 무시할 수 있습니다. 이 옵션을 on으로 설정하면 원격 저장 프로시저 호출에 의해 로컬 트랜잭션이 분산 트랜잭션으로 승격됩니다. MS DTC 트랜잭션을 만든 연결은 트랜잭션 주관자가 되며  COMMIT TRANSACTION은 MS DTC 통합 커밋을 시작합니다. **sp_configure remote proc trans** 옵션이 ON인 경우 BEGIN TRANSACTION 대신 BEGIN DISTRIBUTED TRANSACTION을 실행하도록 응용 프로그램을 다시 작성할 필요 없이 로컬 트랜잭션의 원격 저장 프로시저 호출이 분산 트랜잭션의 일부로 자동 보호됩니다.  
   
  분산 트랜잭션 환경 및 프로세스에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator 설명서를 참조하십시오.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -106,12 +106,12 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [BEGIN TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [커밋 작업 &#40; Transact SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [ROLLBACK WORK &#40; Transact SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

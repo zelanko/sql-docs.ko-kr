@@ -1,5 +1,5 @@
 ---
-title: "Z (geography 데이터 형식) | Microsoft Docs"
+title: "Z(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]형식: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
  CLR 형식: **SqlDouble**  
   
-## <a name="remarks"></a>주의  
- 이 속성의 값이 null 경우는 **geography** 인스턴스가 점이 아닌,도 모든 **가리킨** 인스턴스 설정 되지 않은에 대 한 합니다.  
+## <a name="remarks"></a>Remarks  
+ **geography** 인스턴스가 지점이 아닌 경우 및 해당 값이 설정되지 않은 모든 **Point** 인스턴스의 경우 이 속성의 값은 Null입니다.  
   
  이 속성은 읽기 전용입니다.  
   
@@ -64,9 +64,9 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100 10.3 12)', 4326);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Geography 인스턴스의 확장된 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+## <a name="see-also"></a>참고 항목  
+ [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
  [AsTextZM&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   
   

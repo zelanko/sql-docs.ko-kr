@@ -1,5 +1,5 @@
 ---
-title: "커서 (Transact SQL) | Microsoft Docs"
+title: "커서(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="cursors-transact-sql"></a>커서(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문은 완전 한 결과 집합을 만들지만 결과가 가장 좋은 시간은 한 번에 하나의 행을 처리 합니다. 결과 집합에서 커서를 열면 결과 집합을 한 번에 한 행씩 처리할 수 있습니다. 커서 변수 또는 매개 변수를 할당할 수 있습니다는 **커서** 데이터 형식입니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문은 완전한 결과 집합을 만들지만 한 번에 한 행씩 처리하는 편이 결과 처리에 더 효과적인 경우도 있습니다. 결과 집합에서 커서를 열면 결과 집합을 한 번에 한 행씩 처리할 수 있습니다. 커서는 **cursor** 데이터 형식의 변수 또는 매개 변수에 할당할 수 있습니다.  
   
  커서 작업은 다음과 같은 문에서 지원됩니다.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/25/2018
   
  [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [커서](../../relational-databases/cursors.md)  
   
   

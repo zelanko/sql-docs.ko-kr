@@ -46,18 +46,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [CollectionAggregate &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/collectionaggregate-geography-data-type.md)  
+-   [CollectionAggregate&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/collectionaggregate-geography-data-type.md)  
   
--   [ConvexHullAggregate &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/convexhullaggregate-geography-data-type.md)  
+-   [ConvexHullAggregate&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/convexhullaggregate-geography-data-type.md)  
   
--   [EnvelopeAggregate &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/envelopeaggregate-geography-data-type.md)  
+-   [EnvelopeAggregate&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/envelopeaggregate-geography-data-type.md)  
   
--   [UnionAggregate &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/unionaggregate-geography-data-type.md)  
+-   [UnionAggregate&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/unionaggregate-geography-data-type.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [Geography 인스턴스의 확장된 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>참고 항목  
+ [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [확장 정적 지리 메서드](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
- [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [OGC 정적 지리 메서드](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

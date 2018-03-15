@@ -1,5 +1,5 @@
 ---
-title: "&amp;(비트 AND) (Transact SQL) | Microsoft Docs"
+title: "&amp;(비트 AND)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="amp-bitwise-and-transact-sql"></a>&amp;(비트 AND) (Transact SQL)
+# <a name="amp-bitwise-and-transact-sql"></a>&amp;(비트 AND)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   두 정수 값 간에 비트 논리 AND 연산을 수행합니다.  
@@ -49,25 +49,25 @@ expression & expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) integer 데이터 형식 범주의 데이터 형식 중 또는 **비트**, 또는 **이진** 또는 **varbinary** 데이터 형식입니다. *식* 비트 연산을 위해 이진 숫자로 취급 됩니다.  
+ 정수 데이터 형식 범주에 속하는 데이터 형식, **bit**, **binary** 또는 **varbinary** 데이터 형식 중 하나인 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 비트 연산에서 이진 숫자로 취급됩니다.  
   
 > [!NOTE]  
->  하나의 비트 연산에서는 *식* 될 수 **이진** 또는 **varbinary** 데이터 형식입니다.  
+>  비트 연산에서는 하나의 *식*이 **binary** 또는 **varbinary** 데이터 형식이 될 수 있습니다.  
   
 ## <a name="result-types"></a>결과 형식  
- **int** 입력된 값이 **int**합니다.  
+ 입력된 값이 **int**인 경우 **int**입니다.  
   
- **smallint** 입력된 값이 **smallint**합니다.  
+ 입력된 값이 **smallint**인 경우 **smallint**입니다.  
   
- **tinyint** 입력된 값이 **tinyint** 또는 **비트**합니다.  
+ 입력된 값이 **tinyint** 또는 **bit**인 경우 **tinyint**입니다.  
   
-## <a name="remarks"></a>주의  
- **&**  비트 연산자를 각 해당 양쪽 식에 비트 받아서 두 식 간에 비트 논리 AND를 수행 합니다. 결과의 비트는 입력 식에 있는 양쪽 비트(확인 중인 현재 비트)의 값이 1이면 1로 설정되고 그렇지 않으면 0으로 설정됩니다.  
+## <a name="remarks"></a>Remarks  
+ **&** 비트 연산자는 두 식 간에 비트 논리 AND를 수행하고 양쪽 식에서 해당 비트를 취합니다. 결과의 비트는 입력 식에 있는 양쪽 비트(확인 중인 현재 비트)의 값이 1이면 1로 설정되고 그렇지 않으면 0으로 설정됩니다.  
   
- 왼쪽 및 오른쪽 식의 경우에 다른 정수 데이터 형식 (예를 들어 왼쪽 *식* 은 **smallint** 및 오른쪽 *식* 은  **int**), 더 작은 데이터 형식의 인수를 더 큰 데이터 형식으로 변환 합니다. 이 경우에 **smallint * * * 식* 변환할는 **int**합니다.  
+ 왼쪽과 오른쪽 식의 정수 데이터 형식이 서로 다르면(예: 왼쪽 *식*은 **smallint**이고 오른쪽 *식*은 **int**임) 더 작은 데이터 형식의 인수가 더 큰 데이터 형식으로 변환됩니다. 이 경우에 **smallint***식*이 **int**로 변환됩니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 사용 하 여 테이블을 만듭니다는 **int** 데이터 입력 값을 저장 하 고 한 행에 두 개의 값을 삽입 합니다.  
+ 다음 예에서는 값을 저장하기 위해 **int** 데이터 형식을 사용하여 테이블을 만들고 두 값을 한 행에 삽입하는 방법을 보여 줍니다.  
   
 ```  
 CREATE TABLE bitwise  
@@ -97,7 +97,7 @@ GO
 (1 row(s) affected)  
 ```  
   
- 170의 이진 표현 (`a_int_value` 또는 `A`)은 `0000 0000 1010 1010`합니다. 75의 이진 표현(`b_int_value` 또는 `B`)은 `0000 0000 0100 1011`입니다. 이 두 값에 대해 비트 AND 연산을 수행하면 이진수로 `0000 0000 0000 1010`이 산출되며 십진수로는 10입니다.  
+ 170의 이진 표현(`a_int_value` 또는 `A`)은 `0000 0000 1010 1010`입니다. 75의 이진 표현(`b_int_value` 또는 `B`)은 `0000 0000 0100 1011`입니다. 이 두 값에 대해 비트 AND 연산을 수행하면 이진수로 `0000 0000 0000 1010`이 산출되며 십진수로는 10입니다.  
   
 ```  
 (A & B)  
@@ -108,12 +108,12 @@ GO
 ```  
   
   
-## <a name="see-also"></a>관련 항목:  
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [비트 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [& = &#40; 비트 AND 대입 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
- [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [비트 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [&=&#40;비트 AND 대입&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+ [복합 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

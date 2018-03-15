@@ -1,5 +1,5 @@
 ---
-title: "STArea (geometry 데이터 형식) | Microsoft Docs"
+title: "STArea(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geometry-data-type"></a>STArea(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  전체 표면적 반환는 **geometry** 인스턴스.  
+  **geometry** 인스턴스의 전체 표면을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **float**  
   
  CLR 반환 형식: **SqlDouble**  
   
-## <a name="remarks"></a>주의  
- `STArea()`0을 반환는 **기 하 도형** 인스턴스가 0 및 1 차원 도형만 포함 하거나 비어 있는 경우 합니다. `STArea()`반환 **NULL** 경우는 **geometry** 인스턴스가 초기화 되지 않았습니다.  
+## <a name="remarks"></a>Remarks  
+ `STArea()`는 **geometry** 인스턴스가 0 및 1차원 도형만 포함하거나 비어 있으면 0을 반환합니다. **geometry** 인스턴스가 초기화되지 않은 경우 `STArea()`는 **NULL**을 반환합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-area-of-a-polygon-instance"></a>1. Polygon 인스턴스의 면적 계산  
- 다음 예제에서는 한 `Polygon``geometry` 인스턴스 선택한 다각형의 면적을 계산 합니다.  
+ 다음 예에서는 `Polygon``geometry` 인스턴스를 만들고 다각형의 면적을 계산합니다.  
   
 ```  
 DECLARE @g geometry;  
@@ -71,7 +71,7 @@ SELECT @g.STArea();
  SELECT @g.STArea() AS Area;
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

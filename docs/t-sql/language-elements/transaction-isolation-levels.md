@@ -44,22 +44,22 @@ ms.lasthandoff: 01/25/2018
   
 -   메타데이터 내보내기 기본 제공 함수  
   
--   **sp_help** 저장된 프로시저 그룹  
+-   저장 프로시저의 **sp_help** 그룹  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 카탈로그 프로시저  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 카탈로그 프로시저  
   
 -   동적 관리 뷰 및 함수  
   
- 격리 수준에 대 한 자세한 내용은 참조 [SET TRANSACTION ISOLATION LEVEL &#40; Transact SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 격리 수준에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
  다음 표에서는 다양한 격리 수준에서의 메타데이터 액세스에 대해 간략하게 보여 줍니다.  
   
 |격리 수준|지원됨|보장됨|  
 |---------------------|---------------|-------------|  
-|READ UNCOMMITTED|아니요|보장되지 않음|  
+|READ UNCOMMITTED|아니오|보장되지 않음|  
 |READ COMMITTED|예|예|  
-|REPEATABLE READ|아니요|아니요|  
-|SNAPSHOT ISOLATION|아니요|아니요|  
-|SERIALIZABLE|아니요|아니요|  
+|REPEATABLE READ|아니오|아니오|  
+|SNAPSHOT ISOLATION|아니오|아니오|  
+|SERIALIZABLE|아니오|아니오|  
   
   

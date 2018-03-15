@@ -1,5 +1,5 @@
 ---
-title: DROP ROUTE (Transact SQL) | Microsoft Docs
+title: DROP ROUTE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,12 +54,12 @@ DROP ROUTE route_name
  *route_name*  
  삭제할 경로의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다.  
   
-## <a name="remarks"></a>주의  
- 경로 저장 하는 라우팅 테이블은 카탈로그 뷰를 통해 읽을 수 있는 메타 데이터 테이블 **sys.routes**합니다. 라우팅 테이블은 CREATE ROUTE, ALTER ROUTE 및 DROP ROUTE 문으로만 업데이트할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ 경로를 저장하는 라우팅 테이블은 카탈로그 뷰 **sys.routes**를 통해 읽을 수 있는 메타데이터 테이블입니다. 라우팅 테이블은 CREATE ROUTE, ALTER ROUTE 및 DROP ROUTE 문으로만 업데이트할 수 있습니다.  
   
  대화에서 해당 경로를 사용하는지 여부에 상관없이 경로를 삭제할 수 있습니다. 그러나 원격 서비스에 대한 다른 경로가 없을 경우 원격 서비스의 경로가 생성되거나 대화 제한 시간을 초과할 때까지 해당 대화에 대한 메시지는 전송 큐에 유지됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  경로 삭제 권한은 기본적으로 경로 소유자, db_ddladmin 또는 db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  
@@ -69,10 +69,10 @@ DROP ROUTE route_name
 DROP ROUTE ExpenseRoute ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER ROUTE &#40; Transact SQL &#41;](../../t-sql/statements/alter-route-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER ROUTE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
  [CREATE ROUTE&#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.routes &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)  
+ [sys.routes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)  
   
   

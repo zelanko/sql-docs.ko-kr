@@ -1,5 +1,5 @@
 ---
-title: "테이블 잘라내기 (Transact SQL) | Microsoft Docs"
+title: TRUNCATE TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  개별 행 삭제를 기록 하지 않고 테이블 또는 테이블의 지정 된 파티션이에서 모든 행을 제거 합니다. TRUNCATE TABLE은 기능상으로 WHERE 절이 없는 DELETE 문과 동일하지만 더 빠르고 시스템 및 트랜잭션 로그 리소스를 덜 사용합니다.  
+  개별 행 삭제를 로깅하지 않고 테이블 또는 테이블의 지정된 파티션에서 모든 행을 제거합니다. TRUNCATE TABLE은 기능상으로 WHERE 절이 없는 DELETE 문과 동일하지만 더 빠르고 시스템 및 트랜잭션 로그 리소스를 덜 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,26 +76,26 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  테이블이 속한 스키마의 이름입니다.  
   
  *table_name*  
- 잘라내거나 모든 행을 제거할 테이블의 이름입니다. *table_name* 은 리터럴이어야 합니다. *table_name* 일 수 없습니다는 **OBJECT_ID** 함수 또는 변수입니다.  
+ 잘라내거나 모든 행을 제거할 테이블의 이름입니다. *table_name*은 리터럴이어야 합니다. *table_name*은 **OBJECT_ID()** 함수 또는 변수일 수 없습니다.  
   
- 와 (파티션 ({ \< *partition_number_expression*> | \< *범위*>} [,...n]))  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- 자를 파티션이나 모든 행이 제거되는 파티션을 지정합니다. 테이블이 분할 되지 않은 경우는 **와 파티션** 인수에는 오류가 생성 됩니다. 경우는 **와 파티션** 절을 제공 하지 않으면, 전체 테이블이 잘립니다.  
+ 자를 파티션이나 모든 행이 제거되는 파티션을 지정합니다. 테이블이 분할되지 않은 경우 **WITH PARTITIONS** 인수를 사용하면 오류가 발생합니다. **WITH PARTITIONS** 절을 지정하지 않으면 전체 테이블이 잘립니다.  
   
- *\<partition_number_expression >* 다음과 같은 방법으로 지정할 수 있습니다. 
+ *\<partition_number_expression>*은 다음과 같은 방법으로 지정할 수 있습니다. 
   
--   예를 들어의 파티션 번호를 제공 합니다.`WITH (PARTITIONS (2))`  
+-   파티션의 번호를 지정합니다. 예: `WITH (PARTITIONS (2))`  
   
--   예를 들어 쉼표로 구분 된 여러 개별 파티션의 파티션 번호를 제공 합니다.`WITH (PARTITIONS (1, 5))`  
+-   여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다. 예: `WITH (PARTITIONS (1, 5))`  
   
--   예를 들어 범위와 개별 파티션을 모두를 제공 합니다.`WITH (PARTITIONS (2, 4, 6 TO 8))`  
+-   범위와 개별 파티션을 모두 지정합니다. 예: `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<범위 >* 로 구분 된 파티션 번호로 지정할 수 있습니다 **TO**, 예:`WITH (PARTITIONS (6 TO 8))`  
+-   *\<range>*는 **TO**로 구분된 파티션 번호로 지정할 수 있습니다. 예: `WITH (PARTITIONS (6 TO 8))`  
   
- 분할된 된 테이블을 자를 테이블과 인덱스가 정렬 되어야 합니다 (동일한 파티션 함수에 분할).  
+ 분할된 테이블을 자르려면 테이블과 인덱스를 정렬해야 합니다(동일한 파티션 함수에 분할).  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  DELETE 문과 비교하여 TRUNCATE TABLE에는 다음과 같은 이점이 있습니다.  
   
 -   트랜잭션 로그 공간을 덜 사용합니다.  
@@ -127,17 +127,17 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  TRUNCATE TABLE은 개별 행 삭제를 기록하지 않기 때문에 트리거를 실행할 수 없습니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요. 
  
- [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+ [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[sspdw](../../includes/sspdw-md.md)]의 경우:
 
-- TRUNCATE TABLE 설명 문 내에서 허용 되지 않습니다.
+- TRUNCATE TABLE은 EXPLAIN 문 내에 허용되지 않습니다.
 
-- TRUNCATE TABLE 트랜잭션 내에서 실행 될 수 없습니다.
+- TRUNCATE TABLE은 트랜잭션 내부에서 실행할 수 없습니다.
   
 ## <a name="truncating-large-tables"></a>대형 테이블 잘라내기  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 삭제 또는 삭제에 필요한 모든 익스텐트에서 동시 잠금이 없는 한 128 익스텐트를 갖고 있는 테이블을 자를 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 삭제할 모든 익스텐트에 대한 동시 잠금이 없는 한 128개를 초과하는 익스텐트를 갖고 있는 테이블을 삭제하거나 잘라내는 기능이 추가되었습니다.  
   
-## <a name="permissions"></a>Permissions  
- 필요한 최소 사용 권한은 ALTER 켜져 *table_name*합니다. TRUNCATE TABLE 권한은 테이블 소유자, sysadmin 고정 서버 역할 멤버 및 db_owner 및 db_ddladmin 고정 데이터베이스 역할의 기본 권한이며 위임할 수 없습니다. 하지만 저장 프로시저와 같은 모듈 내에 TRUNCATE TABLE 문을 통합한 뒤 EXECUTE AS 절을 사용하여 적절한 권한을 모듈에 허용할 수 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 최소한 *table_name*에 대한 ALTER 권한이 필요합니다. TRUNCATE TABLE 권한은 테이블 소유자, sysadmin 고정 서버 역할 멤버 및 db_owner 및 db_ddladmin 고정 데이터베이스 역할의 기본 권한이며 위임할 수 없습니다. 하지만 저장 프로시저와 같은 모듈 내에 TRUNCATE TABLE 문을 통합한 뒤 EXECUTE AS 절을 사용하여 적절한 권한을 모듈에 허용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -159,7 +159,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>2. 테이블 파티션 자르기  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  다음 예에서는 분할된 테이블의 지정된 파티션을 자릅니다. `WITH (PARTITIONS (2, 4, 6 TO 8))` 구문은 파티션 번호 2, 4, 6, 7, 8이 잘리도록 합니다.  
   
@@ -169,9 +169,9 @@ WITH (PARTITIONS (2, 4, 6 TO 8));
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP table&#40; Transact SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

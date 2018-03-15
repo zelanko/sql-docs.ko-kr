@@ -1,5 +1,5 @@
 ---
-title: "GRANT 거부 REVOKE Perms-Azure SQL 데이터 및 병렬 데이터 웨어하우스 | Microsoft Docs"
+title: "GRANT-DENY-REVOKE Perms-Azure SQL 데이터 및 병렬 데이터 웨어하우스 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -26,22 +26,22 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE (Azure SQL 데이터 웨어하우스, 병렬 데이터 웨어하우스)
+# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  사용 하 여 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **GRANT** 및 **DENY** 는 권한을 부여 하거나 거부 하는 문을 (같은 **업데이트**) 보안 개체 (예: 데이터베이스, 테이블, 보기에 등입니다.) 보안 주체 (로그인, 데이터베이스 사용자 또는 데이터베이스 역할)에. 사용 하 여 **해지** 를 권한 부여를 제거 하거나 사용 권한 거부 합니다.  
+  보안 개체(예: 데이터베이스, 테이블, 뷰)에 보안 주체(로그인, 데이터베이스 사용자 또는 데이터베이스 역할)에 대한 사용 권한(예: **UPDATE**)을 부여 또는 거부하려면 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** 및 **DENY** 문을 사용합니다. **REVOKE**를 사용하여 권한 부여 또는 거부를 제거합니다.  
   
- 서버 수준 사용 권한은 로그인에 적용 됩니다. 데이터베이스 수준 사용 권한은 데이터베이스 사용자 및 데이터베이스 역할에 적용 됩니다.  
+ 서버 수준 사용 권한은 로그인에 적용됩니다. 데이터베이스 수준 사용 권한은 데이터베이스 사용자 및 데이터베이스 역할에 적용됩니다.  
   
- 사용 권한을 부여 및 거부 된을 보려면 sys.database_permissions 및 sys.server_permissions 뷰를 쿼리 합니다. 사용 권한을 가진 역할의 멤버 자격을 보유 하 여 명시적으로 부여 되거나 보안 주체에 대 한 거부 된 사용 권한은 상속할 수 있습니다. 고정된 데이터베이스 역할의 사용 권한을 변경할 수 없습니다 및 sys.database_permissions 및 sys.server_permissions 보기에 표시 되지 않습니다.  
+ 어떤 사용 권한이 부여 및 거부되었는지 보려면 sys.server_permissions 및 sys.database_permissions 뷰를 쿼리합니다. 보안 주체에 명시적으로 부여되거나 거부되지 않은 사용 권한은 사용 권한이 있는 역할의 멤버 자격을 가짐으로써 상속될 수 있습니다. 고정 데이터베이스 역할의 사용 권한은 변경할 수 없으며 sys.server_permissions 및 sys.database_permissions 뷰에 표시되지 않습니다.  
   
--   **GRANT** 명시적으로 하나 이상의 사용 권한을 부여 합니다.  
+-   **GRANT**는 하나 이상의 사용 권한을 명시적으로 부여합니다.  
   
--   **DENY** 에서 하나 이상의 권한을 가진 보안 주체의 권한이 명시적으로 거부 합니다.  
+-   **DENY**는 보안 주체가 하나 이상의 사용 권한을 갖지 못하도록 명시적으로 거부합니다.  
   
--   **해지** 기존 제거 **GRANT** 또는 **거부** 사용 권한.  
+-   **REVOKE**는 기존의 **GRANT** 또는 **DENY** 권한을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [TRANSACT-SQL 구문 표기 규칙 &#40; Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -83,63 +83,63 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>인수  
- \<사용 권한 > [ **,**... *n* ]  
- 하나 이상의 권한을 부여, 거부 또는 취소 합니다.  
+ \<permission>[ **,**...*n* ]  
+ 부여, 거부 또는 취소할 수있는 하나 이상의 사용 권한.  
   
- ON [ \<class_type >::] *보안* 는 **ON** 절에 권한을 부여, 거부 또는 사용 권한을 취소 하는 보안 개체 매개 변수를 설명 합니다.  
+ ON [ \<class_type> :: ] *securable* **ON** 절은 사용 권한을 부여, 거부 또는 취소하는 보안 개체 매개 변수를 설명합니다.  
   
- \<class_type > 보안 개체의 클래스 형식입니다. 이 수 **로그인**, **데이터베이스**, **개체**, **스키마**, **역할**, 또는 **사용자** . 에 사용 권한을 부여할 수도 있습니다는 **서버 * * * class_type*, 하지만 **서버** 이러한 사용 권한은 지정 되지 않았습니다. **데이터베이스** 권한을 단어를 포함 하는 시기를 지정 하지 않으면 **데이터베이스** (예를 들어 **ALTER ANY DATABASE**). No *class_type* 지정 된 사용 권한 유형을 서버 또는 데이터베이스 클래스에 제한 되지 않습니다, 클래스 것으로 간주 되 고 **개체**합니다.  
+ \< class_type> 보안 개체의 클래스 형식입니다. 이 형식으로는 **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, 또는 **USER**가 될 수 있습니다. 사용 권한은 또한 **SERVER*** class_type*에 부여될 수 있지만, 그런 사용 권한에는 **SERVER**가 지정되지 않습니다. 사용 권한에 **DATABASE**(예: **ALTER ANY DATABASE**)와 같은 단어가 포함되어 있으면 **DATABASE**는 지정되지 않습니다. *class_type*이 지정되지 권한 유형이 서버 또는 데이터베이스 클래스에 제한되지 않는 경우 클래스는 **OBJECT**로 간주됩니다.  
   
  *securable*  
- 로그인, 데이터베이스, 테이블, 뷰, 스키마, 프로시저, 역할 또는 사용자에 게 부여 하려면 이름, 거부 또는 사용 권한을 취소 합니다. 개체 이름에 설명 된의 세 부분으로 이루어진 명명 규칙을 지정할 수 있습니다 [TRANSACT-SQL 구문 표기 규칙 &#40; Transact SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ 사용 권한을 부여, 거부 또는 취소 할 로그인, 데이터베이스, 테이블, 뷰, 스키마, 프로시저, 역할 또는 사용자의 이름입니다. 개체 이름은 [Transact-SQL 구문 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)에서 설명된 세 부분 명명 규칙을 사용하여 지정할 수 있습니다.  
   
- *주* [ **,**... *n* ]  
- 하나 이상의 보안 주체 권한을 부여 하기 거부 또는 사용 권한을 취소 합니다. 보안 주체에는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다.  
+ TO *principal* [ **,**...*n* ]  
+ 사용 권한이 부여, 거부 또는 취소된 하나 이상의 보안 주체입니다. 보안 주체는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다.  
   
  FROM *principal* [ **,**...*n* ]  
- 사용 권한을 해지 하려면 하나 이상의 보안 주체입니다.  보안 주체에는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다. **에** 사용할 수는 **해지** 문. **함께** 사용할 수 있습니다 **GRANT** , **DENY** , 또는 **해지** 합니다.  
+ 사용 권한을 해지할 하나 이상의 보안 주체입니다.  보안 주체는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다. **FROM**은 오직 **REVOKE** 문과 함께 사용할 수 있습니다. **TO**는 **GRANT**, **DENY** 또한 **REVOKE**와 함께 사용할 수 있습니다.  
   
  WITH GRANT OPTION  
  지정된 사용 권한을 다른 보안 주체에게 부여할 수 있는 권한도 피부여자에게 제공됨을 나타냅니다.  
   
  CASCADE  
- 사용 권한을 거부 되었거나 지정된 된 보안 주체를 다른 보안 주체의 사용 권한을 부여 모든 보안 주체를 취소 되었음을 나타냅니다. 보안 주체에 권한이 있는 경우 필수 **GRANT OPTION**합니다.  
+ 지정된 보안 주체와 이 보안 주체가 사용 권한을 부여한 다른 모든 보안 주체에 대해 사용 권한이 거부됨 또는 취소됨을 나타냅니다. 보안 주체에 **GRANT OPTION** 권한이 있는 경우에 필요합니다.  
   
  GRANT OPTION FOR  
- 지정된 사용 권한을 부여할 수 있는 권한이 취소됨을 나타냅니다. 이 사용 하는 경우 필요는 **CASCADE** 인수입니다.  
+ 지정된 사용 권한을 부여할 수 있는 권한이 취소됨을 나타냅니다. **CASCADE** 인수를 사용할 경우 이 인수가 필요합니다.  
   
 > [!IMPORTANT]  
->  보안 주체에 없이 지정 된 사용 권한이 있는 경우는 **GRANT** 옵션을 사용 권한이 해지 됩니다.  
+>  보안 주체에 **GRANT** 옵션 없이 지정된 사용 권한이 있는 경우 사용 권한 자체가 취소됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 사용 권한을 부여할 grant 권한이 있어야 하거나 자체와 **WITH GRANT OPTION**, 부여할 사용 권한을 나타내는 상위 사용 권한이 있어야 합니다.  개체 소유자는 소유하고 있는 개체에 대한 사용 권한을 부여할 수 있습니다. 주체를 **제어** 에 보안 개체에 대 한 권한이 필요한 권한을 부여할 수 해당 보안 개체입니다.  멤버는 **db_owner** 및 **db_securityadmin** 고정된 데이터베이스 역할에는 데이터베이스에 대 한 사용 권한을 부여할 수 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 사용 권한을 부여하려면 grantor는 **WITH GRANT OPTION**이 갖춰진 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  개체 소유자는 소유하고 있는 개체에 대한 사용 권한을 부여할 수 있습니다. 보안 개체에 대한 **CONTROL** 사용 권한을 가진 보안 주체는 해당 보안 개체에 대한 사용 권한을 부여할 수 있습니다.  **db_owner** 및 **db_ddlowner** 고정 데이터베이스 역할의 멤버는 데이터베이스에서 어떤 사용 권한도 부여할 수 있습니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 보안 주체에 대 한 사용 권한을 취소 또는 거부 권한 부여를 통과 했는지를 현재 실행 중인 요청이 영향을 주지 않습니다. 액세스를 제한 하려면 즉시 활성 요청을 취소 하거나 해야 현재 세션을 중지 합니다.  
+ 보안 주체에 대한 사용 권한을 거부하거나 취소해도 권한 부여를 통과했고 현재 실행중인 요청에는 영향을 주지 않습니다. 액세스를 즉시 제한하려면 활성 요청을 취소하거나 현재 세션을 종료해야합니다.  
   
 > [!NOTE]  
->  가장 고정된 서버 역할이 릴리스에서 사용할 수 없는 경우입니다. 사용자 정의 데이터베이스 역할을 대신 사용 합니다. 에 로그인을 추가할 수 없습니다는 **sysadmin** 고정된 서버 역할입니다. 부여는 **제어 서버** 권한의 멤버 자격이 근사치로 계산 된 **sysadmin** 고정된 서버 역할입니다.  
+>  이 릴리스에서는 대부분의 고정 서버 역할을 사용할 수 없습니다. 사용자 정의 데이터베이스 역할을 대신 사용합니다. 로그인은 **sysadmin** 고정 서버 역할에 추가될 수 없습니다. **CONTROL SERVER** 사용 권한 부여는 **sysadmin** 고정 서버 역할의 멤버 자격을 갖는 것과 비슷합니다.  
   
- 일부 문을 여러 가지 권한이 있어야합니다. 예를 들어 테이블을 만들 필요는 **CREATE TABLE** 데이터베이스에 대 한 사용 권한 및 **ALTER SCHEMA** 는 테이블이 포함 될 테이블에 대 한 사용 권한입니다.  
+ 일부 문은 여러 사용 권한을 필요로 합니다. 예를 들어, 테이블을 만들려면 데이터베이스에서 **CREATE TABLE** 사용 권한 및 테이블을 포함할 테이블에 대한 **ALTER SCHEMA** 사용 권한이 필요합니다.  
   
- PDW 때때로 사용자 작업을 계산 노드를 배포 하는 저장된 프로시저를 실행 합니다. 전체 데이터베이스에 대 한 execute 권한을 거부할 수 없습니다. (예를 들어 `DENY EXECUTE ON DATABASE::<name> TO <user>;` 실패 합니다.) 해결 방법으로, 사용자 스키마 또는 특정 개체 (프로시저)에 execute 권한을 거부 합니다.  
+ PDW는 때때로 사용자 작업을 계산 노드에 배포하기 위해 저장된 프로시저를 실행합니다. 따라서 전체 데이터베이스에 대한 실행 권한을 거부 할 수 없습니다. (예를 들어 `DENY EXECUTE ON DATABASE::<name> TO <user>;`은 오류가 발생합니다.) 해결 방법으로 사용자 스키마 또는 특정 개체(프로시저)에 대한 실행 권한을 거부합니다.  
   
 ### <a name="implicit-and-explicit-permissions"></a>암시적 및 명시적 사용 권한  
- *명시적 사용 권한을* 는 **GRANT** 또는 **DENY** 권한에서 보안 주체에 부여는 **GRANT** 또는 **DENY**문입니다.  
+ *명시적 사용 권한*은 **GRANT** 또는 **DENY**문으로 보안 주체에게 주어진 **GRANT** 또는 **DENY** 사용 권한입니다.  
   
- *암시적 사용 권한이* 는 **GRANT** 또는 **거부** 보안 주체 (로그인, 사용자 또는 데이터베이스 역할)가 다른 데이터베이스 역할에서 상속 되며, 사용 권한입니다.  
+ *암시적 권한*은 보안 주체(로그인, 사용자 또는 데이터베이스 역할)가 다른 데이터베이스 역할에서 상속한 **GRANT** 또는 **DENY** 사용 권한입니다.  
   
- 하나의 암시적 사용 권한 포함 또는 상위 권한을 상속할 수 수도 있습니다. 예를 들어 **업데이트** 하도록 하 여 테이블에 대 한 권한이 상속 될 수 **업데이트** 테이블을 포함 하는 스키마에 대 한 권한 또는 **제어** 테이블에 대 한 합니다.  
+ 암시적 권한은 또한 포괄적 또는 상위 권한을 상속할 수도 있습니다. 예를 들어, 테이블에 대한 **UPDATE** 권한은 해당 테이블, 또는 해당 테이블의 **CONTROL** 권한을 포함하는 스키마의 **UPDATE** 권한을 가짐으로써 상속할 수 있습니다,  
   
 ### <a name="ownership-chaining"></a>소유권 체인  
- 시퀀스 라고 여러 데이터베이스 개체가 서로 순차적으로 액세스, 한 *체인*합니다. 이러한 체인이 독립적으로 존재하지는 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 체인에 있는 링크를 통과할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개체를 개별적으로 액세스할 때와는 달리 구성된 개체에 대한 사용 권한을 평가합니다. 소유권 체인에 보안을 관리 하기 위한 중요 한 이점이 있습니다. 소유권 체인에 대 한 자세한 내용은 참조 [소유권 체인](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) 및 [자습서: 소유권 체인 및 컨텍스트 전환](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx)합니다.  
+ 여러 데이터베이스 개체가 서로를 순차적으로 액세스하는 경우 이러한 시퀀스를 *체인*이라고 합니다. 이러한 체인이 독립적으로 존재하지는 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 체인에 있는 링크를 통과할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개체를 개별적으로 액세스할 때와는 달리 구성된 개체에 대한 사용 권한을 평가합니다. 소유권 체인은 보안 관리에 중요한 영향을 줍니다. 소유권 체인에 대한 자세한 내용은 [소유권 체인](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) 및 [지침: 소유권 체인 및 컨텍스트 스위칭 ](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx)을 참조하세요.  
   
-## <a name="permission-list"></a>사용 권한 목록  
+## <a name="permission-list"></a>허가 목록  
   
 ### <a name="server-level-permissions"></a>서버 수준 사용 권한  
- 서버 수준 사용 권한은 부여, 거부 하 고 로그인에서 해지 되었습니다 될 수 있습니다.  
+ 서버 수준 권한은 로그인에서 부여, 거부 및 취소할 수 있습니다.  
   
- **서버에 적용 되는 사용 권한**  
+ **서버에 적용되는 사용 권한**  
   
 -   CONTROL SERVER  
   
@@ -167,20 +167,20 @@ REVOKE
   
 -   VIEW SERVER STATE  
   
- **로그인에 적용 되는 권한**  
+ **로그인에 적용되는 권한**  
   
--   로그인에서 제어  
+-   CONTROL ON LOGIN  
   
--   로그인에 대 한 ALTER  
+-   ALTER ON LOGIN  
   
--   로그인에 대 한 가장  
+-   IMPERSONATE ON LOGIN  
   
 -   VIEW DEFINITION  
   
 ### <a name="database-level-permissions"></a>데이터베이스 수준 사용 권한  
- 데이터베이스 수준 사용 권한은 부여할 수 있습니다, denied 및 해지 된 데이터베이스 사용자 및 사용자 정의 데이터베이스 역할.  
+ 데이터베이스 수준 사용 권한은 데이터베이스 사용자 및 사용자 정의 데이터베이스 역할에서 부여, 거부 및 취소할 수 있습니다.  
   
- **모든 데이터베이스 클래스에 적용 되는 권한**  
+ **모든 데이터베이스 클래스에 적용되는 권한**  
   
 -   CONTROL  
   
@@ -188,15 +188,15 @@ REVOKE
   
 -   VIEW DEFINITION  
   
- **사용자를 제외한 모든 데이터베이스 클래스에 적용 되는 권한**  
+ **사용자를 제외한 모든 데이터베이스 클래스에 적용되는 권한**  
   
 -   TAKE OWNERSHIP  
   
- **데이터베이스에만 적용 되는 권한**  
+ **데이터베이스에만 적용되는 권한**  
   
 -   ALTER ANY DATABASE  
   
--   데이터베이스에 대 한 ALTER  
+-   ALTER ON DATABASE  
   
 -   ALTER ANY DATASPACE  
   
@@ -208,7 +208,7 @@ REVOKE
   
 -   BACKUP DATABASE  
   
--   데이터베이스에 연결  
+-   CONNECT ON DATABASE  
   
 -   CREATE PROCEDURE  
   
@@ -222,15 +222,15 @@ REVOKE
   
 -   SHOWPLAN  
   
- **한 사용자 에게만 적용 되는 권한**  
+ **사용자에게만 적용되는 권한**  
   
 -   IMPERSONATE  
   
- **데이터베이스, 스키마 및 개체에 적용 되는 사용 권한**  
+ **데이터베이스, 스키마 및 개체에 적용되는 권한**  
   
 -   ALTER  
   
--   DELETE  
+-   Delete  
   
 -   CREATE 문을 실행하기 전에  
   
@@ -240,38 +240,38 @@ REVOKE
   
 -   UPDATE  
   
--   참조  
+-   REFRENCES  
   
- 각 사용 권한 유형에 정의 참조 하십시오. [사용 권한 (데이터베이스 엔진)](http://msdn.microsoft.com/library/ms191291.aspx)합니다.  
+ 각 사용 권한 유형에 대한 정의는 [사용 권한(데이터베이스 엔진)](http://msdn.microsoft.com/library/ms191291.aspx)을 참조하세요.  
   
-### <a name="chart-of-permissions"></a>사용 권한 차트  
- 모든 사용 권한은이 포스터에 그래픽으로 표시 됩니다. 사용 권한 중첩 된 계층 구조를 볼 수는 가장 쉬운 방법은 이것이입니다. 예를 들어는 **ALTER ON LOGIN** 자체적으로 권한을 부여할 수 있습니다 하지만 포함 되어는 로그인에 부여 하는 경우는 **제어** 권한을 해당 로그인에는 로그인에 부여 하는 경우 또는 **ALTER ANY 로그인** 권한.  
+### <a name="chart-of-permissions"></a>권한 목록  
+ 모든 사용 권한은 이 포스터에 그래픽으로 표시됩니다. 이 방법이 사용 권한의 중첩된 계층 구조를 볼 수 있는 가장 쉬운 방법입니다. 예를 들어, **ALTER ON LOGIN** 권한은 자체적으로 부여될 수 있지만, 또한 로그인에 해당 로그인에 대한 **CONTROL** 권한이 부여되거나 또는 로그인에 **ALTER ANY LOGIN** 권한이 부여된다면 포함될 수 있습니다.  
   
  ![APS 보안 권한 포스터](../../t-sql/statements/media/aps-security-perms-poster.png "APS 보안 권한 포스터")  
   
- 이 포스터의 전체 크기 버전을 다운로드 하려면 참조 [SQL Server PDW 권한](http://go.microsoft.com/fwlink/?LinkId=244249)APS Yammer 사이트의 파일 섹션에 (또는에서 전자 메일을 통해 요청  **apsdoc@microsoft.com** 합니다.  
+ 이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](http://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 또는 **apsdoc@microsoft.com**에 이메일로 요청합니다.  
   
 ## <a name="default-permissions"></a>기본 사용 권한  
- 다음 목록에는 기본 사용 권한을 설명합니다.  
+ 다음 목록에서는 기본 사용 권한을 설명합니다.  
   
--   사용 하 여 로그인을 만들면는 **CREATE LOGIN** 새 로그인 수신 문에 **CONNECT SQL** 권한.  
+-   로그인이 **CREATE LOGIN** 문을 사용하여 만들어졌다면 새 로그인은 **CONNECT SQL** 권한을 받습니다.  
   
--   멤버인 모든 로그인은 **공용** 서버 역할에서 제거할 수 없습니다 및 **공용**합니다.  
+-   모든 로그인은 **public** 서버 역할의 멤버이며 **public**에서 제거할 수 없습니다.  
   
--   데이터베이스 사용자를 사용 하 여 만들어질 때는 **CREATE USER** 권한, 데이터베이스 사용자에 게는 **연결** 데이터베이스에는 권한이 있습니다.  
+-   데이터베이스 사용자가 **CREATE USER** 권한을 사용하여 만들어질 때 데이터베이스 사용자는 데이터베이스에서 **CONNECT** 권한을 받습니다.  
   
--   포함 한 모든 보안 주체는 **공용** 역할을 기본적으로 명시적 또는 암시적 사용 권한이 없는 합니다.  
+-   **public** 역할을 포함하여 모든 보안 주체는 기본적으로 명시적 또는 암시적 사용 권한이 없습니다.  
   
--   로그인 또는 사용자가 데이터베이스 또는 개체의 소유자, 로그인 또는 사용자 데이터베이스 또는 개체에 대 한 모든 권한을 항상에 있습니다. 소유권 권한을 변경할 수 없습니다 하며 명시적 사용 권한으로 표시 되지 않습니다. **GRANT**, **거부**, 및 **해지** 문을 소유자에 아무 영향도 있습니다.  
+-   로그인 또는 사용자가 데이터베이스 또는 개체의 소유자가 되면 로그인 또는 사용자는 항상 데이터베이스 또는 개체에 대한 모든 사용 권한을 가집니다. 소유권 사용 권한은 변경할 수 없으며 명시적 사용 권한으로 표시되지 않습니다. **GRANT**, **DENY** 및 **REVOKE** 문은 소유자에게 아무런 영향을 미치지 않습니다.  
   
--   **sa** 로그인 어플라이언스에서 모든 사용 권한을 갖습니다. 소유자 권한이 비슷합니다는 **sa** 사용 권한을 변경할 수 없습니다 하며 명시적 사용 권한으로 표시 되지 않습니다. **GRANT**, **DENY**, 및 **해지** 아무런 영향을 주지에 나타나 문을 **sa** 로그인 합니다. **sa** 로그인 이름을 바꿀 수 없습니다.  
+-    **sa**  로그인은 어플라이언스에 대한 모든 사용 권한을 가집니다. 소유권 사용 권한과 마찬가지로 **sa** 사용 권한도 변경할 수 없으며 명시적 사용 권한으로 표시되지 않습니다. **GRANT**, **DENY** 및 **REVOKE** 문은 **sa** 로그인에 아무런 영향을 미치지 않습니다. **sa** 로그인은 이름을 바꿀 수 없습니다.  
   
--   **사용** 문을 권한이 필요 하지 않습니다. 모든 보안 주체를 실행할 수는 **사용** 모든 데이터베이스에서 문입니다.  
+-   **USE** 문은 사용 권한이 필요하지 않습니다. 모든 보안 주체는 모든 데이터베이스에서 **USE** 문을 실행할 수 있습니다.  
   
-##  <a name="Examples"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="Examples"></a> 예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>1. 로그인에 서버 수준 사용 권한 부여  
- 다음 두 문이 로그인에 서버 수준 권한을 부여합니다.  
+ 다음 두 문은 로그인에 서버 수준 사용 권한을 부여합니다.  
   
 ```  
 GRANT CONTROL SERVER TO [Ted];  
@@ -282,40 +282,40 @@ GRANT ALTER ANY DATABASE TO Mary;
 ```  
   
 ### <a name="b-granting-a-server-level-permission-to-a-login"></a>2. 로그인에 서버 수준 사용 권한 부여  
- 다음 예에서는 서버 보안 주체일 (다른 로그인)에 대 한 로그인에 서버 수준 권한을 부여합니다.  
+ 다음 예에서는 서버 보안 주체(다른 로그인)에 하는 로그인에 서버 수준 사용 권한을 부여합니다.  
   
 ```  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
-### <a name="c-granting-a-database-level-permission-to-a-user"></a>3. 사용자에 게 데이터베이스 수준 사용 권한 부여  
- 다음 예제에서는 사용자에 게는 데이터베이스 보안 주체 (다른 사용자)는 데이터베이스 수준 사용 권한을 부여합니다.  
+### <a name="c-granting-a-database-level-permission-to-a-user"></a>3. 사용자에게 데이터베이스 수준 사용 권한 부여  
+ 다음 예에서는 데이터베이스 보안 주체(다른 사용자)의 사용자에게 데이터베이스 수준 사용 권한을 부여합니다.  
   
 ```  
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
-### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>4. 권한을 부여, 거부 및 스키마 사용 권한 취소  
- 다음 **GRANT** 문을 Yuen 테이블이 나 뷰 dbo 스키마에서에서 데이터를 선택할 수 있는 기능을 부여 합니다.  
+### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>4. 스키마 사용 권한 부여, 거부 및 취소  
+ 다음 **GRANT** 문은 Yuen에게 dbo 스키마 내의 모든 테이블 또는 뷰에서 데이터를 선택할 수 있는 기능을 부여합니다.  
   
 ```  
 GRANT SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
- 다음 **거부** 문은 테이블이 나 뷰 dbo 스키마에서에서 데이터를 선택에서 Yuen를 수 없도록 합니다. Yuen도 그 권한이 있으면 다른 방법으로과 같은 역할 멤버 자격을 통해 데이터를 읽을 수 없습니다.  
+ 다음 **DENY** 문은 Yuen에게 dbo 스키마 내의 모든 테이블 또는 뷰에서 데이터를 선택할 수 없도록 합니다. Yuen은 역할 멤버 자격과 같은 일부 다른 방법으로 사용 권한을 가졌다 하더라도 데이터를 읽을 수 없습니다.  
   
 ```  
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
- 다음 **해지** 문 제거는 **거부** 권한. 이제 Yuen의 명시적 사용 권한을 중립 됩니다. Yuen 몇 가지 다른 암시적 사용 권한 등 역할 멤버 자격을 통해 모든 테이블에서 데이터를 선택할 수 있습니다.  
+ 다음 **REVOKE** 문은 **DENY** 권한을 제거합니다. 현재 Yuen의 명시적 사용 권한은 중립적입니다. Yuen은 역할 멤버 자격과 같은 일부 다른 암시적 사용 권한을 통해 모든 테이블에서 데이터를 선택할 수 있습니다.  
   
 ```  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
-### <a name="e-demonstrating-the-optional-object-clause"></a>5. 선택적 개체를 보여 주는:: 절  
- 개체 사용 권한 문에 대 한 기본 클래스 이기 때문에 다음 두 문은 동일 합니다. **개체::** 절은 선택 사항입니다.  
+### <a name="e-demonstrating-the-optional-object-clause"></a>5. 선택적 OBJECT :: 절 표시  
+ OBJECT는 사용 권한 문에 대한 기본 클래스이므로 다음 두 명령문은 동일합니다. **OBJECT::** 절은 선택 사항입니다.  
   
 ```  
 GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];  

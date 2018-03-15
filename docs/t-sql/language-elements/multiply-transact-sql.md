@@ -1,5 +1,5 @@
 ---
-title: "* (곱하기) (Transact SQL) | Microsoft Docs"
+title: "* (곱하기)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-multiplication-transact-sql"></a>* (곱하기) (Transact SQL)
+# <a name="-multiplication-transact-sql"></a>*(곱하기)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   두 식을 곱합니다(산술 곱하기 연산자).  
@@ -48,7 +48,7 @@ expression * expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) 숫자 값의 데이터 형식 중 하나를 제외 하 고 데이터 형식 범주에서는 **datetime** 및 **smalldatetime** 데이터 형식입니다.  
+ 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
@@ -66,8 +66,8 @@ ORDER BY ProductID ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제에서 직원의 이름과 성을 검색는 `dimEmployee` 테이블을 마우스에 대 한 급여 계산 `VacationHours` 각각에 대해...  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예제에서는 `dimEmployee` 테이블에서 직원의 이름과 성을 검색하고 각각의 `VacationHours`에 대한 급여를 계산합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -77,15 +77,15 @@ FROM DimEmployee
 ORDER BY lastName ASC;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [&#42; = &#40; 곱하기 할당 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)   
- [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [&#42;=&#40;곱하기 대입&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)   
+ [복합 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

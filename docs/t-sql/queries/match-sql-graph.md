@@ -1,5 +1,5 @@
 ---
-title: "일치 항목 (SQL 그래프) | Microsoft Docs"
+title: MATCH (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="match-transact-sql"></a>일치 항목 (Transact SQL)
+# <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  그래프에 대 한 검색 조건을 지정합니다. 일치 하는 SELECT 문에서 WHERE 절의 일부로 그래프 노드와 edge 테이블에만 사용할 수 있습니다. 
+  그래프의 검색 조건을 지정합니다. MATCH는 WHERE 절의 일부로 SELECT 문에서 그래프 노드와 에지 테이블과 함께만 사용할 수 있습니다. 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,24 +63,24 @@ MATCH (<graph_search_pattern>)
 
 ## <a name="arguments"></a>인수  
 *graph_search_pattern*  
-검색 또는 그래프에서 이동 하는 경로를 지정 합니다. 이 패턴 ASCII 아트 구문을 사용 하 여 그래프의 경로 순회 하도록 합니다. 패턴 한 노드에서 다른 구독자로 이동 가장자리에서 제공 되는 화살표의 방향을 통해 합니다. 가장자리 이름이 나 별칭 parantheses 안에 제공 됩니다. 노드 이름 또는 별칭 화살표의 양쪽에 나타납니다. 화살표는 패턴의 양방향으로 이동할 수 있습니다.
+그래프에서 검색 패턴이나 이동하는 경로를 지정합니다. 이 패턴은 그래프의 경로를 이동하기 위해 ASCII art 구문을 사용합니다. 이 패턴은 제공된 화살표 방향으로 에지를 통해 한 노드에서 다른 노드로 이동합니다. 에지 이름 또는 별칭은 괄호에 묶어 제공합니다. 노드 이름 또는 별칭은 화살표의 양쪽 끝에 표시됩니다. 화살표는 패턴의 양방향으로 이동할 수 있습니다.
 
 *node_alias*  
-이름 또는 FROM 절에 제공 된 노드 테이블의 별칭입니다.
+FROM 절에 제공된 노드 테이블의 이름 또는 별칭입니다.
 
 *edge_alias*  
-이름 또는 FROM 절에 제공 된 edge 테이블의 별칭입니다.
+FROM 절에 제공된 에지 테이블의 이름 또는 별칭입니다.
 
 
-## <a name="remarks"></a>주의  
-일치 하는 노드 이름은 반복할 수 있습니다.  즉, 노드 수 있습니다는 임의 개수의 동일한 쿼리에서 한 번 통과 합니다.  
-일치 항목 내 가장자리 이름을 반복할 수 없습니다.  
-에 지 어느 방향으로든에서 가리킬 수 있지만 명시적 시계 반대 방향으로 있어야 합니다.  
-또는 NOT 연산자 일치 패턴에서 지원 되지 않습니다. 일치 하는 WHERE 절에 및를 사용 하 여 다른 식과 결합할 수 있습니다. 그러나를 사용 하 여 다른 식과 결합 OR 하지 지원 되지 않습니다. 
+## <a name="remarks"></a>Remarks  
+MATCH 내 노드 이름은 반복이 가능합니다.  즉 노드는 같은 쿼리에서 임의의 횟수 만큼 통과할 수 있습니다.  
+MATCH 내 에지 이름을 반복할 수 없습니다.  
+에지는 어느 방향이든 가리킬 수 있지만 명시적인 방향이어야 합니다.  
+OR 또는 NOT 연산자는 MATCH 패턴에서 지원되지 않습니다. MATCH는 WHERE 절에서 AND를 사용하여 다른 식과 결합할 수 있습니다. 그러나 OR나 NOT을 사용한 다른 식과의 결합은 지원되지 않습니다. 
 
 ## <a name="examples"></a>예  
-### <a name="a--find-a-friend"></a>1.  친구를 찾아 
- 다음 예에서는 Person 노드 테이블 및 친구 Edge 테이블을 만듭니다, 그리고 일부 데이터를 삽입 및 다음 일치 항목을 사용 하 여 그래프에 있는 사람은 Alice의 friend를 찾으려고 합니다.
+### <a name="a--find-a-friend"></a>1.  친구 찾기 
+ 다음 예에서는 Person 노드 테이블 및 친구 Edge 테이블을 만들고 일부 데이터를 삽입한 다음, MATCH를 사용하여 그래프에 있는 사람인 Alice라는 친구를 찾습니다.
 
  ```
  -- Create person node table
@@ -111,7 +111,7 @@ AND Person1.name = 'Alice';
  ```
 
  ### <a name="b--find-friend-of-a-friend"></a>2.  친구의 친구 찾기
- 다음 예제에서는 Alice의 친구의 친구 찾으려고 합니다. 
+ 다음 예제에서는 친구 Alice의 친구를 찾으려 합니다. 
 
  ```
 SELECT Person3.name AS FriendName 
@@ -121,8 +121,8 @@ AND Person1.name = 'Alice';
 
  ```
 
-### <a name="c--more-match-patterns"></a>3.  더 많은 `MATCH` 패턴
- 다음 몇 가지 더 많은 일치 항목 내 패턴을 지정할 수 있습니다는 합니다.
+### <a name="c--more-match-patterns"></a>3.  다른 `MATCH` 패턴
+ 다음은 MATCH 안에서 패턴을 지정하는 몇 가지 다른 방법입니다.
 
  ```
  -- Find a friend
@@ -152,7 +152,7 @@ AND Person1.name = 'Alice';
  ```
  
 
-## <a name="see-also"></a>관련 항목:  
- [테이블 &#40; 만들기 SQL 그래프 &#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL 그래프)](../../t-sql/statements/insert-sql-graph.md)]  
- [SQL Server 2017을 사용 하 여 처리 하는 그래프](../../relational-databases/graphs/sql-graph-overview.md)  
+## <a name="see-also"></a>참고 항목  
+ [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [SQL Server 2017의 그래프 처리](../../relational-databases/graphs/sql-graph-overview.md)  

@@ -1,5 +1,5 @@
 ---
-title: "STDimension (geography 데이터 형식) | Microsoft Docs"
+title: "STDimension(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geography-data-type"></a>STDimension(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  최대 차원을 반환는 **geography** 인스턴스.  
+  **geography** 인스턴스의 최대 차원을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **int**  
   
  CLR 반환 형식: **SqlInt32**  
   
-## <a name="remarks"></a>주의  
- STDimension()-1을 반환 하는 경우는 **geography** 인스턴스가 비어 있습니다.  
+## <a name="remarks"></a>Remarks  
+ STDimension()은 **geography** 인스턴스가 비어 있으면 -1을 반환합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 `STDimension()` 를 보유 하는 테이블 변수를 만들려면 `geography` 인스턴스와 삽입 한 `Point`, `LineString`, 및 `Polygon`합니다.  
+ 다음 예에서는 `STDimension()`을 사용하여 `geography`인스턴스를 저장할 table 변수를 만들고 `Point`, a `LineString` 및 `Polygon`을 삽입합니다.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geography);  
@@ -65,15 +65,15 @@ SELECT [name], [geom].STDimension() as [dim]
 FROM @temp;  
 ```  
   
- 이 예에서는 다음 각각의 크기를 반환 `geography`인스턴스.  
+ 그런 다음, 이 예에서는 각 `geography` 인스턴스의 차원을 반환합니다.  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |점|0|  
-|LineString|1.|  
-|다각형|2|  
+|LineString|1|  
+|Polygon|2|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

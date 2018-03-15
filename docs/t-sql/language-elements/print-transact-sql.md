@@ -1,5 +1,5 @@
 ---
-title: "인쇄 (Transact SQL) | Microsoft Docs"
+title: PRINT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ PRINT msg_str | @local_variable | string_expr
   
 ## <a name="arguments"></a>인수  
  *msg_str*  
- 문자열 또는 유니코드 문자열 상수입니다. 자세한 내용은 참조 [상수 &#40; Transact SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
+ 문자열 또는 유니코드 문자열 상수입니다. 자세한 내용은 [상수&#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)을 참조하세요.  
   
  **@** *local_variable*  
- 유효한 문자 데이터 형식의 변수입니다. **@ * * * local_variable* 해야 **char**, **nchar**, **varchar**, 또는 **nvarchar**, 될 수 있어야 하거나 이러한 데이터 형식으로 암시적으로 변환 합니다.  
+ 유효한 문자 데이터 형식의 변수입니다. **@***local_variable*은 **char**, **nchar**, **varchar** 또는 **nvarchar**이거나 이러한 데이터 형식으로 암시적으로 변환될 수 있어야합니다.  
   
  *string_expr*  
  문자열을 반환하는 식입니다. 연결된 리터럴 값, 함수 및 변수를 포함할 수 있습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
- 메시지 문자열은 비유니코드 문자열일 경우 최대 8,000자까지 가능하며 유니코드 문자열일 경우 최대 4,000자까지 가능합니다. 이보다 긴 문자열은 잘립니다. **varchar (max)** 및 **nvarchar (max)** 데이터 형식 보다 더 큰 데이터 형식으로 잘립니다 **varchar(8000)** 및 **nvarchar (4000)**.  
+## <a name="remarks"></a>Remarks  
+ 메시지 문자열은 비유니코드 문자열일 경우 최대 8,000자까지 가능하며 유니코드 문자열일 경우 최대 4,000자까지 가능합니다. 이보다 긴 문자열은 잘립니다. **varchar(max)** 및 **nvarchar(max)** 데이터 형식은 **varchar(8000)** 및 **nvarchar(4000)** 보다 크지 않은 데이터 형식으로 잘립니다.  
   
  RAISERROR를 사용하여 메시지를 반환할 수도 있습니다. RAISERROR는 PRINT에 비해 3가지 장점이 있습니다.  
   
@@ -104,9 +104,9 @@ PRINT @PrintMessage;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-conditionally-executing-print"></a>3. 조건에 따라 실행 되는 print  
+### <a name="c-conditionally-executing-print"></a>3. 조건에 따라 실행되는 PRINT 문  
  다음 예에서는 `PRINT` 문을 사용하여 조건에 따라 메시지를 반환합니다.  
   
 ```  
@@ -117,10 +117,10 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Raiserror&#40; Transact SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
 

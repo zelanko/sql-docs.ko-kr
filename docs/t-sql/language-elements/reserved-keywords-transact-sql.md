@@ -1,5 +1,5 @@
 ---
-title: "예약 된 키워드 (Transact SQL) | Microsoft Docs"
+title: "예약된 키워드 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
 |ADD|EXTERNAL|PROCEDURE|  
 |ALL|FETCH|PUBLIC|  
 |ALTER|FILE|RAISERROR|  
-|및|FILLFACTOR|READ|  
+|AND|FILLFACTOR|READ|  
 |ANY|FOR|READTEXT|  
 |AS|FOREIGN|RECONFIGURE|  
 |ASC|FREETEXT|REFERENCES|  
@@ -84,14 +84,14 @@ ms.lasthandoff: 01/25/2018
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|DELETE|ON|UNION|  
+|Delete|ON|UNION|  
 |DENY|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|USER|  
-|DROP|OR|VALUES|  
+|DOUBLE|OPTION|User|  
+|DROP|또는|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/25/2018
  또한 ISO 표준에서도 예약된 키워드 목록을 정의합니다. ISO 예약된 키워드를 개체 이름과 식별자에 사용하지 마십시오. 다음 표에 있는 ODBC 예약된 키워드 목록은 ISO 예약된 키워드 목록과 같습니다.  
   
 > [!NOTE]  
->  ISO 표준 예약된 키워드 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 더 제한적인 경우도 있고 덜 제한적인 경우도 있습니다. 예를 들어 ISO 예약 된 키워드 목록에 **INT**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이것을 예약된 키워드로 구분할 필요가 없습니다.  
+>  ISO 표준 예약된 키워드 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 더 제한적인 경우도 있고 덜 제한적인 경우도 있습니다. 예를 들어 ISO 예약된 키워드 목록에는 **INT**가 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이것을 예약된 키워드로 구분할 필요가 없습니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 예약된 키워드는 데이터베이스의 식별자나 이름 또는 데이터베이스 개체(예: 테이블, 열, 뷰 등)로 사용될 수 있습니다. 따옴표로 묶인 식별자나 구분 기호로 분리된 식별자를 사용합니다. 예약된 키워드를 변수 이름과 저장 프로시저 매개 변수로 사용하는 것은 제한되지 않습니다.  
   
@@ -118,84 +118,84 @@ ms.lasthandoff: 01/25/2018
 ||||  
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
-|**작업**|**EXECUTE**|**PAD**|  
-|**ADA**|**EXISTS**|**부분**|  
+|**ACTION**|**EXECUTE**|**PAD**|  
+|**ADA**|**EXISTS**|**PARTIAL**|  
 |**ADD**|**외부**|**PASCAL**|  
-|**ALL**|**EXTRACT**|**위치**|  
-|**ALLOCATE**|**FALSE**|**전체 자릿수**|  
-|**ALTER**|**FETCH**|**준비**|  
-|**및**|**FIRST**|**유지**|  
+|**ALL**|**EXTRACT**|**POSITION**|  
+|**ALLOCATE**|**FALSE**|**PRECISION**|  
+|**ALTER**|**FETCH**|**PREPARE**|  
+|**AND**|**FIRST**|**PRESERVE**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
-|**는**|**에 대 한**|**사전**|  
-|**AS**|**외부**|**권한**|  
-|**ASC**|**포트란**|**PROCEDURE**|  
-|**어설션**|**찾을 수합니다**|**PUBLIC**|  
+|**ARE**|**FOR**|**PRIOR**|  
+|**AS**|**FOREIGN**|**PRIVILEGES**|  
+|**ASC**|**FORTRAN**|**PROCEDURE**|  
+|**ASSERTION**|**FOUND**|**PUBLIC**|  
 |**AT**|**FROM**|**READ**|  
 |**AUTHORIZATION**|**FULL**|**REAL**|  
-|**AVG**|**GET**|**참조**|  
-|**BEGIN**|**GLOBAL**|**상대**|  
-|**BETWEEN**|**GO**|**제한**|  
+|**AVG**|**GET**|**REFERENCES**|  
+|**BEGIN**|**GLOBAL**|**RELATIVE**|  
+|**BETWEEN**|**GO**|**RESTRICT**|  
 |**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**BOTH**|**GROUP**|**롤백**|  
+|**BOTH**|**GROUP**|**ROLLBACK**|  
 |**BY**|**HAVING**|**ROWS**|  
 |**CASCADE**|**HOUR**|**SCHEMA**|  
 |**CASCADED**|**IDENTITY**|**SCROLL**|  
-|**CASE**|**IMMEDIATE**|**두 번째**|  
-|**CAST**|**IN**|**섹션**|  
+|**CASE**|**IMMEDIATE**|**SECOND**|  
+|**CAST**|**IN**|**SECTION**|  
 |**CATALOG**|**INCLUDE**|**SELECT**|  
-|**CHAR**|**INDEX**|**세션**|  
+|**CHAR**|**INDEX**|**SESSION**|  
 |**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
 |**CHARACTER**|**INITIALLY**|**SET**|  
 |**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
 |**CHECK**|**INPUT**|**SMALLINT**|  
-|**CLOSE**|**구분 안 함**|**SOME**|  
+|**CLOSE**|**INSENSITIVE**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
 |**COLLATE**|**INT**|**SQL**|  
-|**데이터 정렬**|**INTEGER**|**SQLCA**|  
+|**COLLATION**|**INTEGER**|**SQLCA**|  
 |**COLUMN**|**INTERSECT**|**SQLCODE**|  
 |**COMMIT**|**INTERVAL**|**SQLERROR**|  
 |**CONNECT**|**INTO**|**SQLSTATE**|  
-|**연결**|**은**|**SQLWARNING**|  
-|**CONSTRAINT**|**격리**|**SUBSTRING**|  
+|**CONNECTION**|**IS**|**SQLWARNING**|  
+|**CONSTRAINT**|**ISOLATION**|**SUBSTRING**|  
 |**CONSTRAINTS**|**JOIN**|**SUM**|  
 |**CONTINUE**|**KEY**|**SYSTEM_USER**|  
 |**CONVERT**|**LANGUAGE**|**TABLE**|  
-|**에 해당**|**LAST**|**임시**|  
-|**COUNT**|**앞에**|**그런 다음**|  
+|**CORRESPONDING**|**LAST**|**TEMPORARY**|  
+|**COUNT**|**LEADING**|**THEN**|  
 |**CREATE**|**LEFT**|**TIME**|  
-|**CROSS**|**LEVEL**|**타임 스탬프**|  
+|**CROSS**|**LEVEL**|**TIMESTAMP**|  
 |**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
 |**CURRENT_TIME**|**LOWER**|**TO**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
 |**CURRENT_USER**|**MAX**|**TRANSACTION**|  
 |**CURSOR**|**MIN**|**TRANSLATE**|  
-|**DATE**|**MINUTE**|**번역**|  
-|**DAY**|**모듈**|**TRIM**|  
+|**DATE**|**MINUTE**|**TRANSLATION**|  
+|**DAY**|**MODULE**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
-|**DEC**|**NAMES**|**공용 구조체**|  
-|**DECIMAL**|**NATIONAL**|**고유**|  
-|**선언**|**자연**|**UNKNOWN**|  
+|**DEC**|**NAMES**|**UNION**|  
+|**DECIMAL**|**NATIONAL**|**UNIQUE**|  
+|**DECLARE**|**NATURAL**|**UNKNOWN**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
-|**연기할 수**|**NEXT**|**UPPER**|  
-|**지연**|**NO**|**USAGE**|  
+|**DEFERRABLE**|**NEXT**|**UPPER**|  
+|**DEFERRED**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
 |**DESC**|**NOT**|**USING**|  
-|**설명**|**NULL**|**VALUE**|  
+|**DESCRIBE**|**NULL**|**VALUE**|  
 |**DESCRIPTOR**|**NULLIF**|**VALUES**|  
 |**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
-|**연결 끊기**|**OCTET_LENGTH**|**다양 한**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**VARYING**|  
 |**DISTINCT**|**OF**|**VIEW**|  
-|**도메인**|**ON**|**WHEN**|  
+|**DOMAIN**|**ON**|**WHEN**|  
 |**DOUBLE**|**ONLY**|**WHENEVER**|  
 |**DROP**|**OPEN**|**WHERE**|  
-|**ELSE**|**옵션**|**WITH**|  
-|**END**|**OR**|**작업**|  
+|**ELSE**|**OPTION**|**WITH**|  
+|**END**|**OR**|**WORK**|  
 |**END-EXEC**|**ORDER**|**WRITE**|  
 |**ESCAPE**|**OUTER**|**YEAR**|  
 |**EXCEPT**|**OUTPUT**|**ZONE**|  
-|**예외**|||  
+|**EXCEPTION**|||  
   
 ## <a name="future-keywords"></a>앞으로 사용될 키워드  
  다음은 앞으로 출시될 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 새 기능이 구현될 때 예약될 수 있는 키워드입니다. 다음 단어를 식별자로 사용하지 않는 것이 좋습니다.  
@@ -246,7 +246,7 @@ ms.lasthandoff: 01/25/2018
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|TIMESTAMP|  
+|CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|아니요|TIMEZONE_MINUTE|  
 |CURRENT_PATH|없음|TRAILING|  
@@ -260,7 +260,7 @@ ms.lasthandoff: 01/25/2018
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|VALUE|  
+|DEFERRED|OUTPUT|Value|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|매개 변수|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -280,7 +280,7 @@ ms.lasthandoff: 01/25/2018
 |EVERY|PRIVILEGES|XMLCONCAT|  
 |EXCEPTION|RANGE|XMLDOCUMENT|  
 |FALSE|READS|XMLELEMENT|  
-|FILTER|REAL|XMLEXISTS|  
+|FILTER|real|XMLEXISTS|  
 |FIRST|RECURSIVE|XMLFOREST|  
 |FLOAT|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
@@ -294,8 +294,8 @@ ms.lasthandoff: 01/25/2018
 |GROUPING|REGR_SXY|YEAR|  
 |HOLD|REGR_SYY|ZONE|  
   
-## <a name="see-also"></a>관련 항목:  
- [SET quoted_identifier&#40; Transact SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

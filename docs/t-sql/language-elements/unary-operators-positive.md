@@ -1,5 +1,5 @@
 ---
-title: "+ (단항 더하기) (Transact SQL) | Microsoft Docs"
+title: "+ (단항 더하기)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---positive"></a>단항 연산자-긍정
+# <a name="unary-operators---positive"></a>단항 연산자 - 양수
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 숫자 식(단항 연산자)의 값을 반환합니다. 단항 연산자는 숫자 데이터 형식 범주에 속하는 데이터 형식의 한 식에 대해서만 연산을 수행합니다.   
@@ -61,13 +61,13 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *numeric_expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) 의 유형 중 하나는 데이터는 숫자 데이터 형식 범주를 제외 하 고는 **datetime** 및 **smalldatetime** 데이터 형식입니다.  
+ 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  *numeric_expression*의 데이터 형식을 반환합니다.  
   
-## <a name="remarks"></a>주의  
- 단항 더하기는 숫자 식 앞에 올 수 있지만 해당 식에서 반환하는 값에 대해서는 연산을 수행하지 않습니다. 특히 단항 더하기는 음수 식에서 양수 값을 반환하지 않습니다. 음수 식의 양수 값을 반환 하려면 사용 된 [ABS](../../t-sql/functions/abs-transact-sql.md) 함수입니다.  
+## <a name="remarks"></a>Remarks  
+ 단항 더하기는 숫자 식 앞에 올 수 있지만 해당 식에서 반환하는 값에 대해서는 연산을 수행하지 않습니다. 특히 단항 더하기는 음수 식에서 양수 값을 반환하지 않습니다. 음수 식에서 양수 값을 반환하려면 [ABS](../../t-sql/functions/abs-transact-sql.md) 함수를 사용하세요.  
   
 ## <a name="examples"></a>예  
   
@@ -111,10 +111,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [ABS &#40; Transact SQL &#41;](../../t-sql/functions/abs-transact-sql.md)  
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ABS&#40;Transact-SQL&#41;](../../t-sql/functions/abs-transact-sql.md)  
   
   

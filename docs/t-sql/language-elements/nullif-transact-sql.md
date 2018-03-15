@@ -1,5 +1,5 @@
 ---
-title: NULLIF (Transact SQL) | Microsoft Docs
+title: NULLIF(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="nullif-transact-sql"></a>NULLIF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  지정된 두 식이 같으면 Null 값을 반환합니다. 예를 들어 `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` 두 입력된 값이 동일 하기 때문에 첫 번째 열 (4 및 4)에 대 한 NULL을 반환 합니다. 두 입력된 값이 다르기 때문에 두 번째 열의 첫 번째 값 (5)를 반환 합니다. 
+  지정된 두 식이 같으면 Null 값을 반환합니다. 예를 들어 `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;`는 두 입력 값이 동일하기 때문에 첫 번째 열(4 및 4)에 대해 NULL을 반환합니다. 두 번째 열은 두 입력 값이 다르기 때문에 첫 번째 값(5)을 반환합니다. 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +49,17 @@ NULLIF ( expression , expression )
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 유효한 스칼라 [식](../../t-sql/language-elements/expressions-transact-sql.md)합니다.  
+ 유효한 스칼라 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 첫 번째과 같은 유형을 반환 *식*합니다.  
+ 첫 번째 *식*과 동일한 형식을 반환합니다.  
   
- NULLIF는 첫 번째 개체가 반환 *식* 두 식이 같지 않으면 합니다. NULLIF는 첫 번째 형식의 null 값을 반환 식이 같으면 *식*합니다.  
+ NULLIF는 두 식이 같지 않으면 첫 번째 *식*을 반환합니다. 식이 같으면 NULLIF는 첫 번째 *식* 형식의 Null 값을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  NULLIF는 두 식이 동일하며 결과 식이 NULL인 검색된 CASE 식과 동일합니다.  
   
- NULLIF 함수 내에 RAND()와 같은 시간에 종속적인 함수를 사용하지 않는 것이 좋습니다. 이 인해 함수를 두 번 평가 하 고 두 호출에서 다른 결과 반환할 수 없습니다.  
+ NULLIF 함수 내에 RAND()와 같은 시간에 종속적인 함수를 사용하지 않는 것이 좋습니다. 이렇게 하면 함수가 두 번 평가되고 두 호출에서 다른 결과가 반환됩니다.  
   
 ## <a name="examples"></a>예  
   
@@ -117,8 +117,8 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C: 데이터가 없는 예산 반환  
- 다음 예제에서는 `budgets` 테이블 데이터를 로드 및 사용 하 여 `NULLIF` 모두 null을 반환 하려면 `current_year` 또는 `previous_year` 데이터를 포함 합니다.  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C. 데이터가 포함되지 않은 예산 반환  
+ 다음 예제에서는 `budgets` 테이블을 만들고, 데이터를 로드하고, `NULLIF`를 사용하여 `current_year` 또는 `previous_year`에 데이터가 포함되지 않는 경우 Null을 반환합니다.  
   
 ```sql  
 CREATE TABLE budgets (  
@@ -150,10 +150,10 @@ FROM budgets;
  5      null
  ```  
   
-## <a name="see-also"></a>관련 항목:  
- [대/소문자 &#40; Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [decimal 및 numeric&#40; Transact SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [시스템 함수 &#40; Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [10진수 및 숫자&#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

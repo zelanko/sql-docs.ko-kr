@@ -1,5 +1,5 @@
 ---
-title: KILL STATS JOB (Transact SQL) | Microsoft Docs
+title: KILL STATS JOB(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,26 +54,26 @@ KILL STATS JOB job_id
  *job_id*  
  작업의 sys.dm_exec_background_job_queue 동적 관리 뷰에 의해 반환된 job_id 필드입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  job_id는 KILL 문의 다른 형식에 사용되는 session_id 또는 작업 단위와 관련이 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자는 sys.dm_exec_background_job_queue 동적 관리 뷰에서 정보를 액세스할 수 있는 VIEW SERVER STATE 권한이 있어야 합니다.  
   
  KILL STATS JOB 권한은 sysadmin과 processadmin 고정 데이터베이스 역할의 멤버에게 기본적으로 부여되며 위임할 수 없습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 작업과 관련 된 통계 업데이트를 종료 하는 방법을 보여 줍니다. 여기서는 *job_id* = `53`합니다.  
+ 다음 예에서는 *job_id* = `53`인 작업과 관련된 통계 업데이트를 종료하는 방법을 보여 줍니다.  
   
 ```  
 KILL STATS JOB 53;  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Kill&#40; Transact SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION &#40; Transact SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
- [sys.dm_exec_background_job_queue &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [KILL&#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
+ [sys.dm_exec_background_job_queue&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   
  [통계](../../relational-databases/statistics/statistics.md)  
   
   

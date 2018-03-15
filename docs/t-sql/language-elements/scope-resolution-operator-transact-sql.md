@@ -1,5 +1,5 @@
 ---
-title: ":: (범위 결정) (Transact SQL) | Microsoft Docs"
+title: ":: (범위 결정)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-scope-resolution-transact-sql"></a>:: (범위 결정) (Transact SQL)
+# <a name="-scope-resolution-transact-sql"></a>:: (범위 결정) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  범위 결정 연산자 **::** 복합 데이터 형식의 정적 멤버에 대 한 액세스를 제공 합니다. 복합 데이터 형식은 여러 단순 데이터 유형 및 기본 제공 CLR 형식 및 사용자 지정 SQLCLR User-Defined 형식 (Udt)와 같은 메서드를 포함 합니다.  
+  범위 결정 연산자 **::**은 복합 데이터 형식의 정적 멤버에 대한 액세스를 제공합니다. 복합 데이터 형식은 기본 제공 CLR 형식 및 사용자 지정 SQLCLR UDT(User-Defined Types) 등과 같은 여러 단순 데이터 형식과 메서드를 포함하는 형식입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 범위 결정 연산자를 사용하여 `GetRoot()` 형식의 `hierarchyid` 멤버에 액세스하는 방법을 보여 줍니다.  
@@ -46,7 +46,7 @@ PRINT @hid.ToString();
   
  `/`  
   
-## <a name="see-also"></a>관련 항목:  
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

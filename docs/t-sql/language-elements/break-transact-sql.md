@@ -1,5 +1,5 @@
 ---
-title: "나누기 (Transact SQL) | Microsoft Docs"
+title: BREAK(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,9 +53,9 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [흐름 제어 언어 &#40; Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [반면 &#40; Transact SQL &#41;](../../t-sql/language-elements/while-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Control-of-Flow Language&#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [WHILE&#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [IF...ELSE&#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   
   

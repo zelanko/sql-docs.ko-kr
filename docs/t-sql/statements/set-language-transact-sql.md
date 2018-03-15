@@ -1,5 +1,5 @@
 ---
-title: "언어 설정 (Transact SQL) | Microsoft Docs"
+title: SET LANGUAGE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/05/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-language-transact-sql"></a>SET LANGUAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  세션에 대한 언어 환경을 지정합니다. 세션 언어에 따라 결정 된 **datetime** 형식과 시스템 메시지입니다.  
+  세션에 대한 언어 환경을 지정합니다. 세션 언어는 **datetime** 형식과 시스템 메시지를 결정합니다.  
   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -51,19 +51,19 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## <a name="arguments"></a>인수  
- [**N**]**'***언어***'**  |   **@**   *language_var*  
- 에 저장 되어 있는 언어의 이름인 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)합니다. 유니코드나 유니코드로 변환된 DBCS 중 하나가 될 수 있습니다. 유니코드로 언어를 지정 하려면 사용 **N'***언어***'**합니다. 변수를 지정 하는 경우 변수 이어야 합니다 **sysname**합니다.  
+ [**N**]**'***language***'** | **@***language_var*  
+ [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)에 저장된 언어의 이름입니다. 유니코드나 유니코드로 변환된 DBCS 중 하나가 될 수 있습니다. 유니코드로 언어를 지정하려면 **N'***language***'**를 사용합니다. 변수로 지정할 경우 변수는 **sysname**이어야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET LANGUAGE 옵션은 실행 시나 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
- 설정을 암시적으로 설정 하는 SET LANGUAGE [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)합니다.  
+ SET LANGUAGE는 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)을 암시적으로 설정합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 기본 언어 설정 `Italian`을 월 이름 표시 하 고 다음으로 다시 전환 `us_english` 월 이름을 다시 표시 합니다.  
+ 다음 예제에서는 기본 언어를 `Italian`으로 설정하고 월 이름을 표시한 다음, `us_english`로 다시 전환하고 월 이름을 다시 표시합니다.  
   
 ```  
 DECLARE @Today DATETIME;  
@@ -77,10 +77,10 @@ SELECT DATENAME(month, @Today) AS 'Month Name' ;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
- [sp_helplanguage &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   
+ [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

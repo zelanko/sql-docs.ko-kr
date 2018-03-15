@@ -1,5 +1,5 @@
 ---
-title: DBCC CLEANTABLE (Transact SQL) | Microsoft Docs
+title: DBCC CLEANTABLE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]테이블 또는 인덱싱된 뷰의 삭제 된 가변 길이 열에서 공간을 회수합니다.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 테이블 또는 인덱싱된 뷰의 삭제된 가변 길이 열에서 공간을 회수합니다.
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
@@ -59,7 +59,7 @@ DBCC CLEANTABLE
   
 ## <a name="arguments"></a>인수  
  *database_name* | *database_id* | 0  
- 정리될 테이블이 속한 데이터베이스입니다. 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름에 대 한 규칙을 따라야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
+ 정리될 테이블이 속한 데이터베이스입니다. 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름은 반드시 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
  *table_name* | *table_id* | *view_name*| *view_id*  
  정리될 테이블이나 인덱싱된 뷰입니다.  
@@ -70,8 +70,8 @@ DBCC CLEANTABLE
  WITH NO_INFOMSGS  
  모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>주의  
-DBCC CLEANTABLE은 가변 길이 열이 삭제된 후에 공간을 반환합니다. 가변 길이 열 데이터 형식 중 하나일 수 있습니다: **varchar**, **nvarchar**, **varchar (max)**, **nvarchar (max)**, **varbinary**, **varbinary (max)**, **텍스트**, **ntext**, **이미지**,  **sql_variant**, 및 **xml**합니다. 이 명령은 고정 길이 열이 삭제된 후에는 공간을 반환하지 않습니다.
+## <a name="remarks"></a>Remarks  
+DBCC CLEANTABLE은 가변 길이 열이 삭제된 후에 공간을 반환합니다. 가변 길이 열은 **varchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **varbinary**, **varbinary(max)**, **text**, **ntext**, **image**, **sql_variant** 및 **xml** 데이터 형식 중 하나일 수 있습니다. 이 명령은 고정 길이 열이 삭제된 후에는 공간을 반환하지 않습니다.
 삭제된 열이 행 내부에 저장된 경우 DBCC CLEANTABLE은 테이블의 IN_ROW_DATA 할당 단위에서 공간을 반환합니다. 열이 행 외부에 저장된 경우에는 삭제된 열의 데이터 형식에 따라 ROW_OVERFLOW_DATA 또는 LOB_DATA 할당 단위에서 공간이 반환됩니다. ROW_OVERFLOW_DATA 또는 LOB_DATA 페이지에서 공간을 반환하면 빈 페이지가 되고 DBCC CLEANTABLE이 해당 페이지를 제거합니다.
 DBCC CLEANTABLE은 하나 이상의 트랜잭션으로 실행됩니다. 일괄 처리 크기를 지정하지 않으면 명령은 한 트랜잭션에서 전체 테이블을 처리하며 이 테이블은 작업하는 동안 배타적으로 잠깁니다. 일부 대형 테이블의 경우 한 트랜잭션의 길이와 필요한 로그 공간이 너무 많을 수도 있습니다. 일괄 처리 크기를 지정하면 이 명령은 각기 지정한 행 수를 포함한 일련의 트랜잭션으로 실행됩니다. 다른 트랜잭션 내의 트랜잭션으로 DBCC CLEANTABLE을 실행할 수는 없습니다.
 이 작업은 모두 기록됩니다.
@@ -87,8 +87,8 @@ DBCC CLEANTABLE은 다음을 반환합니다.
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
- 호출자는 테이블 또는 인덱싱된 뷰를 소유 하거나의 멤버는 **sysadmin** 고정 서버 역할의 **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정된 데이터베이스 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 호출자는 테이블 또는 인덱싱된 뷰를 소유하거나, **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  
 ### <a name="a-using-dbcc-cleantable-to-reclaim-space"></a>1. DBCC CLEANTABLE을 사용하여 공간 반환  
@@ -165,8 +165,8 @@ FROM sys.dm_db_index_physical_stats(@db_id, @object_id, NULL, NULL , 'Detailed')
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [sys.allocation_units &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
+ [sys.allocation_units&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
   
   

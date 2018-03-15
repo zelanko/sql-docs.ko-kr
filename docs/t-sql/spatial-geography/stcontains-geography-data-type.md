@@ -1,5 +1,5 @@
 ---
-title: "STContains (geography 데이터 형식) | Microsoft Docs"
+title: "STContains(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="stcontains--geography-data-type"></a>STContains (geography 데이터 형식)
+# <a name="stcontains--geography-data-type"></a>STContains(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  지정 하는지 여부를 호출 하는 **geography** 인스턴스가 공간적으로 포함는 **geography** 인스턴스가 메서드에 전달 합니다.  
+  공간적인 **geography** 인스턴스 호출이 메서드로 전달된 **geography** 인스턴스를 포함하는지 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *other_geography*  
- 다른 **geography** 인스턴스와 비교할 인스턴스 `STContains()` 가 호출 됩니다.  
+ `STContains()`가 호출되는 인스턴스와 비교할 다른 **geography**인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **비트**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>주의  
- 1을 반환 호출 **geography** 인스턴스가 공간적으로 포함는 **geography** 인스턴스 메서드로 전달 하 고 그렇지 않은 경우 0을 반환 합니다. 반환 **null** 경우 두 SRID **geography** 인스턴스가 동일 하지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ 공간적으로 **geography** 인스턴스 호출이 인스턴스가 메서드에 전달된 **geography** 인스턴스를 포함할 경우 1을 반환하고, 그렇지 않으면 0을 반환합니다. 두 **geography** 인스턴스의 SRID가 같지 않을 경우 **null**을 반환합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STContains()`를 사용하여 두 `geography` 인스턴스를 테스트하여 첫 번째 인스턴스가 두 번째 인스턴스를 포함하는지 확인합니다.  

@@ -1,5 +1,5 @@
 ---
-title: OPENXML (Transact SQL) | Microsoft Docs
+title: OPENXML(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,47 +50,47 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
 ## <a name="arguments"></a>인수  
  *idoc*  
- XML 문서의 내부 표시 문서 핸들입니다. 호출 하 여 만든 XML 문서의 내부 표현을 **sp_xml_preparedocument**합니다.  
+ XML 문서의 내부 표시 문서 핸들입니다. XML 문서의 내부 표현은 **sp_xml_preparedocument**를 호출하여 만듭니다.  
   
  *rowpattern*  
- 노드를 식별 하는 데 사용 하는 XPath 패턴은 (해당 핸들을 전달 하는 XML 문서에는 *idoc* 매개 변수) 행으로 처리 합니다.  
+ *idoc* 매개 변수로 핸들이 전달되는 XML 문서에서 행으로 처리될 노드를 식별하는 데 사용되는 XPath 패턴입니다.  
   
  *flags*  
- XML 데이터와 관계형 행 집합 사이에 사용해야 하는 매핑과 남는 열을 채우는 방법을 나타냅니다. *플래그* 선택적 입력된 매개 변수 이며 다음 값 중 하나일 수 있습니다.  
+ XML 데이터와 관계형 행 집합 사이에 사용해야 하는 매핑과 남는 열을 채우는 방법을 나타냅니다. *flags*는 선택적 입력 매개 변수이며 다음 값 중 하나일 수 있습니다.  
   
 |바이트 값|Description|  
 |----------------|-----------------|  
-|**0**|기본적으로 **특성 중심** 매핑.|  
-|**1**|사용 하 여는 **특성 중심** 매핑. XML_ELEMENTS와 결합할 수 있습니다. 이 경우 **특성 중심** 매핑이 먼저 적용 한 다음 **요소 중심** 와 아직 처리 되지 않은 모든 열에 대 한 매핑이 적용 됩니다.|  
-|**2**|사용 하 여 **요소 중심** 매핑. XML_ATTRIBUTES와 결합할 수 있습니다. 이 경우 **특성 중심** 매핑이 먼저 적용 한 다음 **요소 중심** 처리 하지 않은 모든 열에 대 한 매핑이 적용 됩니다.|  
-|**8**|XML_ATTRIBUTES 또는 XML_ELEMENTS와 결합(논리적 OR 연산을 수행)할 수 있습니다. 검색 상황에서이 플래그 오버플로 속성에 소비 된 데이터를 복사 하지 해야 함을 나타냅니다  **@mp:xmltext** 합니다.|  
+|**0**|기본적으로 **특성 중심** 매핑을 사용합니다.|  
+|**1**|**특성 중심** 매핑을 사용합니다. XML_ELEMENTS와 결합할 수 있습니다. 이 경우 먼저 **특성 중심** 매핑이 적용된 다음, 아직 처리되지 않은 모든 열에 대해 **요소 중심** 매핑이 적용됩니다.|  
+|**2**|**요소 중심** 매핑을 사용합니다. XML_ATTRIBUTES와 결합할 수 있습니다. 이 경우 먼저 **특성 중심** 매핑이 적용된 다음, 아직 처리되지 않은 모든 열에 대해 **요소 중심** 매핑이 적용됩니다.|  
+|**8**|XML_ATTRIBUTES 또는 XML_ELEMENTS와 결합(논리적 OR 연산을 수행)할 수 있습니다. 검색 컨텍스트에서 이 플래그는 소비된 데이터가 **@mp:xmltext** 오버플로 속성에 복사되지 않아야 함을 나타냅니다.|  
   
  *SchemaDeclaration*  
- 폼의 스키마 정의: *ColName * * ColType* [*ColPattern* | *메타 속성*] [**, * * * ColNameColType* [*ColPattern * | *메타 속성*]...]  
+ *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [*ColPattern* | *MetaProperty*]...] 형식의 스키마 정의입니다.  
   
  *ColName*  
  행 집합의 열 이름입니다.  
   
  *ColType*  
- 행 집합에 있는 열의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다. 기본 열 형식이 다른 경우 **xml** 형식 강제 변환이 특성의 데이터 형식 발생 합니다.  
+ 행 집합에 있는 열의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다. 열 형식이 특성의 기본 **xml** 데이터 형식과 다른 경우 형식 강제 변환이 발생합니다.  
   
  *ColPattern*  
- 선택 사항이며 XML 노드를 열에 매핑하는 방법을 설명하는 일반 XPath 패턴입니다. 경우 *ColPattern* 를 지정 하지 않으면 기본 매핑이 (**특성 중심** 또는 **요소 중심** 에 지정 된 대로 매핑 *플래그* ) 수행 합니다.  
+ 선택 사항이며 XML 노드를 열에 매핑하는 방법을 설명하는 일반 XPath 패턴입니다. *ColPattern*을 지정하지 않으면 기본 매핑(*flags*에 지정된 대로 **특성 중심** 또는 **요소 중심** 매핑)이 수행됩니다.  
   
- 으로 지정 된 XPath 패턴 *ColPattern* 매핑 특성을 지정 하는 데 사용 됩니다 (의 경우 **특성 중심** 및 **요소 중심** 매핑)는 로 표시 된 기본 매핑을 개선 하거나 덮어쓰도록 *플래그*합니다.  
+ *ColPattern*으로 지정된 XPath 패턴은 *flags*로 표시된 기본 매핑을 덮어쓰거나 향상시키도록 매핑의 특수한 특성(**특성 중심** 및 **요소 중심** 매핑 경우)을 지정하는 데 사용합니다.  
   
- 으로 지정 된 일반 XPath 패턴 *ColPattern* 은 메타 속성도 지원 합니다.  
+ *ColPattern*으로 지정된 일반 XPath 패턴은 메타 속성도 지원합니다.  
   
  *MetaProperty*  
- OPENXML이 제공하는 메타 속성 중 하나입니다. 경우 *메타 속성* 지정, 열에 메타 속성이 제공 하는 정보를 포함 합니다. 메타 속성을 통해 상대적 위치 및 네임스페이스 정보 등 XML 노드에 대한 정보를 추출할 수 있습니다. 텍스트 형태로 표시되는 것보다 많은 정보를 제공합니다.  
+ OPENXML이 제공하는 메타 속성 중 하나입니다. *MetaProperty*가 지정되면 메타 속성이 제공하는 정보가 열에 포함됩니다. 메타 속성을 통해 상대적 위치 및 네임스페이스 정보 등 XML 노드에 대한 정보를 추출할 수 있습니다. 텍스트 형태로 표시되는 것보다 많은 정보를 제공합니다.  
   
  *TableName*  
- 제공할 수 있는 테이블 이름입니다 (대신 *SchemaDeclaration*) 하는 경우 원하는 스키마가 있는 테이블이 이미 존재 하 고 열 패턴은 필수입니다.  
+ 원하는 스키마가 있는 테이블이 이미 있고 열 패턴이 필요하지 않은 경우 *SchemaDeclaration* 대신 지정할 수 있는 테이블 이름입니다.  
   
-## <a name="remarks"></a>주의  
- WITH 절 중 하나를 사용 하 여 행 집합 서식이 (및 필요에 따라 추가 매핑 정보)을 제공 *SchemaDeclaration* 기존를 지정 하거나 *TableName*합니다. 선택적인 WITH 절을 지정 하지 않으면 결과에서 반환 됩니다는 **가장자리** 테이블 형식입니다. edge 테이블은 세부 수준의 XML 문서 구조(예: 요소/특성 이름, 문서 계층 구조, 네임스페이스, PI 등)를 단일 테이블로 표시합니다.  
+## <a name="remarks"></a>Remarks  
+ WITH 절은 *SchemaDeclaration*을 사용하거나 기존 *TableName*을 지정하여 행 집합 형식(및 필요한 경우 추가 매핑 정보)을 제공합니다. 선택적인 WITH 절을 지정하지 않으면 결과가 **edge** 테이블 형식으로 반환됩니다. edge 테이블은 세부 수준의 XML 문서 구조(예: 요소/특성 이름, 문서 계층 구조, 네임스페이스, PI 등)를 단일 테이블로 표시합니다.  
   
- 다음 표에서 설명의 구조는 **가장자리** 테이블입니다.  
+ 다음 표에서는 **edge** 테이블의 구조에 대해 설명합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -102,16 +102,16 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**namespaceuri**|**nvarchar**|노드의 네임스페이스 URI입니다. 값이 NULL이면 네임스페이스가 없는 것입니다.|  
 |**datatype**|**nvarchar**|요소 또는 특성 행의 실제 데이터 형식이며 데이터 형식이 아닐 경우에는 NULL입니다. 데이터 형식은 인라인 DTD 또는 인라인 스키마로부터 추정할 수 있습니다.|  
 |**prev**|**bigint**|이전의 형제 요소에 대한 XML ID입니다. 바로 이전의 형제가 없으면 NULL입니다.|  
-|**text**|**ntext**|특성 값 또는 텍스트 형식의 요소 내용이 포함 (경우 NULL이 고 **가장자리** 테이블 항목 값이 필요 하지 않습니다).|  
+|**text**|**ntext**|텍스트 형식의 특성 값 또는 요소 내용을 포함합니다. **edge** 테이블 항목에 값이 필요하지 않은 경우에는 NULL입니다.|  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>1. 단순 SELECT 문에 OPENXML 사용  
  다음 예는 `sp_xml_preparedocument`를 사용하여 XML 이미지의 내부 표현을 만듭니다. `SELECT` 행 집합 공급자를 사용하는 `OPENXML` 문은 XML 문서의 내부 표현에 대해 실행됩니다.  
   
- *플래그* 값으로 설정 되어 `1`합니다. 이 나타냅니다 **특성 중심** 매핑. 따라서 XML 특성이 행 집합의 열에 매핑됩니다. *rowpattern* 로 지정 된 `/ROOT/Customer` 식별 된 `<Customers>` 처리 될 노드를 합니다.  
+ *flag* 값이 `1`로 설정됩니다. 이 값은 **특성 중심** 매핑을 나타냅니다. 따라서 XML 특성이 행 집합의 열에 매핑됩니다. `/ROOT/Customer`로 지정된 *rowpattern*은 처리할 `<Customers>` 노드를 식별합니다.  
   
- 선택적 *ColPattern* XML 특성 이름과 일치 하는 열 이름이 없으므로 (열 패턴) 매개 변수를 지정 하지 않으면 합니다.  
+ 열 이름이 XML 특성 이름과 일치하므로 선택적인 *ColPattern*(열 패턴) 매개 변수는 지정되지 않습니다.  
   
  `OPENXML` 행 집합 공급자는 `CustomerID` 문이 필수 열(이 경우에는 모든 열)을 검색하는 두 열(`ContactName`와 `SELECT`)로 된 행 집합을 만듭니다.  
   
@@ -150,7 +150,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- 하는 경우 동일한 `SELECT` 문이 실행 되는 *플래그* 로 설정 `2`한다는 표시 이므로 **요소 중심** 의 값을 매핑할 `CustomerID` 및 `ContactName` 둘 다에 대해는 명명 된 요소가 있기 때문에 XML 문서에는 고객 NULL로 반환 됩니다 `CustomerID` 또는 `ContactName` XML 문서에 있습니다.  
+ *flags*가 `2`로 설정되고 **요소 중심** 매핑을 나타내는 동일한 `SELECT` 문이 실행되면, XML 문서에 `CustomerID` 또는 `ContactName` 이름의 요소가 없으므로 XML 문서의 두 고객 모두에 대한 `CustomerID` 및 `ContactName`의 값이 NULL로 반환됩니다.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -162,15 +162,15 @@ NULL       NULL
 ```  
   
 ### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>2. 열과 XML 특성 간의 매핑을 위해 ColPattern 지정  
- 다음 쿼리는 XML 문서에서 고객 ID, 주문 날짜, 제품 ID, 수량 특성을 반환합니다. *rowpattern* 식별 된 `<OrderDetails>` 요소입니다. `ProductID` 및 `Quantity`는 `<OrderDetails>` 요소의 특성입니다. 그러나 `OrderID`, `CustomerID` 및 `OrderDate`는 부모 요소 `<Orders>`의 특성입니다.  
+ 다음 쿼리는 XML 문서에서 고객 ID, 주문 날짜, 제품 ID, 수량 특성을 반환합니다. *rowpattern*은 `<OrderDetails>` 요소를 식별합니다. `ProductID` 및 `Quantity`는 `<OrderDetails>` 요소의 특성입니다. 그러나 `OrderID`, `CustomerID` 및 `OrderDate`는 부모 요소 `<Orders>`의 특성입니다.  
   
- 선택적 *ColPattern* 지정 됩니다. 이에 따라 다음과 같은 결과가 나타납니다.  
+ 선택적인 *ColPattern*이 지정됩니다. 이에 따라 다음과 같은 결과가 나타납니다.  
   
--   `OrderID`, `CustomerID`, 및 `OrderDate` 의해 식별 된 노드는 부모 특성에 대 한 행 집합 맵에서 *rowpattern* XML 문서에 있습니다.  
+-   행 집합의 `OrderID`, `CustomerID` 및 `OrderDate`는 XML 문서에서 *rowpattern*으로 식별된 노드의 부모 특성에 매핑됩니다.  
   
--   `ProdID` 행 집합의 열에 매핑되는 `ProductID` 특성을 및 `Qty` 행 집합의 열에 매핑되는 `Quantity` 에서 식별 된 노드는 특성 *rowpattern*합니다.  
+-   행 집합의 `ProdID` 열은 `ProductID` 특성에 매핑되며, 행 집합의 `Qty` 열은 *rowpattern*으로 식별된 노드의 `Quantity` 특성에 매핑됩니다.  
   
- 하지만 **요소 중심** 의해 매핑이 지정는 *플래그* 매개 변수에서 지정 된 매핑은 *ColPattern* 이 매핑을 덮어 씁니다.  
+ **요소 중심** 매핑이 *flags* 매개 변수에 지정되더라도 *ColPattern*에 지정된 매핑이 이 매핑을 덮어씁니다.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -216,11 +216,11 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
 ```  
   
 ### <a name="c-obtaining-results-in-an-edge-table-format"></a>3. edge 테이블 형식으로 결과 얻기  
- 다음 예의 예제 XML 문서는 `<Customers>`, `<Orders>`, `<Order_0020_Details>` 요소로 구성됩니다. 첫째, **sp_xml_preparedocument** 문서 핸들을 얻기 위해 호출 됩니다. 이 문서 핸들은 `OPENXML`에 전달됩니다.  
+ 다음 예의 예제 XML 문서는 `<Customers>`, `<Orders>`, `<Order_0020_Details>` 요소로 구성됩니다. 먼저 문서 핸들을 얻기 위해 **sp_xml_preparedocument**를 호출합니다. 이 문서 핸들은 `OPENXML`에 전달됩니다.  
   
- 에 `OPENXML` 문는 *rowpattern* (`/ROOT/Customers`) 식별는 `<Customers>` 노드를 처리 합니다. WITH 절은 제공 되지 않았으므로 `OPENXML` 에서 행 집합을 반환 된 **가장자리** 테이블 형식입니다.  
+ `OPENXML` 문에서 *rowpattern*(`/ROOT/Customers`)은 처리할 `<Customers>` 노드를 식별합니다. WITH 절이 제공되지 않았으므로 `OPENXML`에서 **edge** 테이블 형식의 행 집합을 반환합니다.  
   
- 마지막으로 `SELECT` 문은 검색의 모든 열은 **가장자리** 테이블입니다.  
+ 마지막으로 `SELECT` 문은 **edge** 테이블의 모든 열을 검색합니다.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -251,7 +251,7 @@ EXEC sp_xml_removedocument @idoc;
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [예제: OPENXML 사용](../../relational-databases/xml/examples-using-openxml.md)  
   
   

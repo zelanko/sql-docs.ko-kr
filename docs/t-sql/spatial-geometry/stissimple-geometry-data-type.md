@@ -1,5 +1,5 @@
 ---
-title: "STIsSimple (geometry 데이터 형식) | Microsoft Docs"
+title: "STIsSimple(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stissimple-geometry-data-type"></a>STIsSimple(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-1을 반환는 **geometry** 인스턴스는 여는 OGC Open Geospatial Consortium ()에 정의 된 대로 간단 합니다. 0을 반환 된 **geometry** 인스턴스가 단순 하지 않으면 합니다.
+OGC(Open Geospatial Consortium)에 의해 정의된 대로 **geometry** 인스턴스가 단순하면 1을 반환합니다. **geometry** 인스턴스가 비어 있지 않으면 0을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **비트**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>주의  
- 단순하게 만들려면는 **geometry** 인스턴스가 다음 요구 사항을 모두 충족 해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ **geometry** 인스턴스를 단순하게 만들려면 다음의 모든 요구 사항을 충족해야 합니다.  
   
 -   인스턴스의 각 도형은 끝점을 제외하고 자체 교차해서는 안 됩니다.  
   
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, 2 0)', 0);
 SELECT @g.STIsSimple();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

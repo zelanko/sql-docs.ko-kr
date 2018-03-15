@@ -1,5 +1,5 @@
 ---
-title: "RingN (geography 데이터 형식) | Microsoft Docs"
+title: "RingN(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ringn-geography-data-type"></a>RingN(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  지정된 된 링을 반환 된 **geography** 인스턴스: `1 ≤ n ≤ NumRings()`합니다.  
+  **geography** 인스턴스의 지정된 링 `1 ≤ n ≤ NumRings()`를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 이 **int** 1 링 개수 사이의 식은 **다각형** 인스턴스.  
+ 1부터 **polygon** 인스턴스의 링 개수 사이의 **int** 식입니다.  
   
 ## <a name="return-value"></a>반환 값  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>주의  
- 경우 링 인덱스 값  **n**  1 보다 작으면이 메서드에서 throw 된 **ArgumentOutOfRangeException 합니다.** 링 인덱스 값은 1 보다 크거나 이어야 하며 반환 하는 숫자 보다 작다고 `NumRings()`합니다.  
+## <a name="remarks"></a>Remarks  
+ 링 인덱스 **n** 값이 1보다 작으면 이 메서드는 **ArgumentOutOfRangeException**을 throw합니다. 링 인덱스 값은 1보다 크거나 같아야 하고 `NumRings()`로 반환된 숫자보다 작거나 같아야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 두 개의 링이 있는 `Polygon` 인스턴스를 만들고 두 번째 링을 반환합니다.  
@@ -64,8 +64,8 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.RingN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Geography 인스턴스의 확장된 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>참고 항목  
+ [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [NumRings&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
   

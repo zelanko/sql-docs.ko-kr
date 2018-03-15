@@ -1,5 +1,5 @@
 ---
-title: "순서 (Transact SQL) 만들기 | Microsoft Docs"
+title: CREATE SEQUENCE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   시퀀스 개체를 만들고 해당 속성을 지정합니다. 시퀀스는 시퀀스를 만들 때 사용된 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바운드 개체입니다. 숫자 값의 시퀀스는 정의된 간격에 따라 오름차순이나 내림차순으로 생성되며, 시퀀스가 모두 사용되면 다시 시작(순환)되도록 구성할 수 있습니다. ID 열과 달리 시퀀스는 특정 테이블과 연결되지 않습니다. 응용 프로그램에서는 시퀀스 개체를 참조하여 다음 값을 검색합니다. 시퀀스와 테이블 간의 관계는 응용 프로그램에서 제어합니다. 사용자 응용 프로그램에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에서 값을 조정합니다.  
   
- 행이 삽입 될 때 생성 되는 id 열 값과 달리 응용 프로그램 가져오려면 먼저 다음 시퀀스 번호를 호출 하 여 행을 삽입 하지 않고는 [NEXT VALUE FOR 함수](../../t-sql/functions/next-value-for-transact-sql.md)합니다. 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 를 사용합니다.  
+ 행을 삽입할 때 생성되는 ID 열 값과는 달리 응용 프로그램에서는 [NEXT VALUE FOR function](../../t-sql/functions/next-value-for-transact-sql.md)을 호출하여 행을 삽입하지 않고도 다음 시퀀스 번호를 가져올 수 있습니다. 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 를 사용합니다.  
   
  **CREATE SEQUENCE** 및 **NEXT VALUE FOR** 함수를 함께 사용하는 시나리오에 대한 자세한 내용은 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
@@ -63,57 +63,57 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
 ## <a name="arguments"></a>인수  
  *sequence_name*  
- 데이터베이스에서 시퀀스를 식별하는 고유 이름을 지정합니다. 형식이 **sysname**합니다.  
+ 데이터베이스에서 시퀀스를 식별하는 고유 이름을 지정합니다. 형식은 **sysname**입니다.  
   
  [ built_in_integer_type | user-defined_integer_type  
  시퀀스는 모든 정수 유형으로 정의할 수 있습니다. 다음 형식이 허용됩니다.  
   
--   **tinyint** -0에서 255 사이의 범위  
+-   **tinyint** - 0에서 255 사이의 범위  
   
--   **smallint** -32, 767 자로-32, 768 범위  
+-   **smallint** - -32,767에서 32,768 사이의 범위  
   
--   **int** --2147483648 ~ 2147483647 범위  
+-   **int** - -2,147,483,648에서 2,147,483,647 사이의 범위  
   
--   **bigint** -9223372036854775807에-9223372036854775808 범위  
+-   **bigint** - -9,223,372,036,854,775,808에서 9,223,372,036,854,775,807 사이의 범위  
   
--   **10 진수** 및 **숫자** 소수 자릿수가 0 인 합니다.  
+-   소수 자릿수가 0인 **decimal** 또는 **numeric**.  
   
 -   허용되는 형식 중 하나에 기반을 둔 사용자 정의 데이터 형식(별칭 유형)  
   
- 데이터 형식이 없는 경우는 **bigint** 데이터 형식이 기본적으로 사용 됩니다.  
+ 데이터 형식을 제공하지 않은 경우 **bigint** 데이터 형식이 기본값으로 사용됩니다.  
   
- START WITH \<상수 >  
- 시퀀스 개체가 반환하는 첫 번째 값입니다. **시작** 값 보다 작거나 같은 최대 및 보다 큰 값 이어야 하거나 시퀀스 개체의 최소 값과 일치 해야 합니다. 새 시퀀스 개체의 기본 시작 값은 오름차순 시퀀스 개체에 대해서는 최소값이고, 내림차순 시퀀스 개체에 대해서는 최대값입니다.  
+ START WITH \<constant>  
+ 시퀀스 개체가 반환하는 첫 번째 값입니다. **START** 값은 시퀀스 개체의 최대값보다 작거나 같고 최소값보다 크거나 같은 값이어야 합니다. 새 시퀀스 개체의 기본 시작 값은 오름차순 시퀀스 개체에 대해서는 최소값이고, 내림차순 시퀀스 개체에 대해서는 최대값입니다.  
   
- 단위로 증가 \<상수 >  
- 증가 시키거나 감소 시키는 (음수인 경우) 하는 데 사용 되는 값에 대 한 각 호출 시퀀스 개체의 값은 **NEXT VALUE FOR** 함수입니다. 증가값이 음수이면 시퀀스 개체가 내림차순이고, 그렇지 않으면 오름차순입니다. 증가값은 0일 수 없습니다. 새 시퀀스 개체의 기본 증가분은 1입니다.  
+ INCREMENT BY \<constant>  
+ 각각의 **NEXT VALUE FOR** 함수 호출에 대해 시퀀스 개체의 값을 증가시키거나 감소시키는(음수인 경우) 데 사용되는 값입니다. 증가값이 음수이면 시퀀스 개체가 내림차순이고, 그렇지 않으면 오름차순입니다. 증가값은 0일 수 없습니다. 새 시퀀스 개체의 기본 증가분은 1입니다.  
   
- [MINVALUE \<상수 > | **없습니다 MINVALUE** ]  
+ [ MINVALUE \<constant> | **NO MINVALUE** ]  
  시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최소값은 해당 시퀀스 개체의 데이터 형식에 대한 최소값입니다. **tinyint** 형식에 대해서는 0이고 다른 모든 데이터 형식에 대해서는 음수입니다.  
   
- [MAXVALUE \<상수 > | **MAXVALUE 없음**  
+ [ MAXVALUE \<constant> | **NO MAXVALUE**  
  시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최대값은 해당 시퀀스 개체의 데이터 형식에 대한 최대값입니다.  
   
- [주기 | **NO CYCLE** ]  
+ [ CYCLE | **NO CYCLE** ]  
  시퀀스 개체를 최소값 또는 최대값(내림차순 시퀀스 개체의 경우)에서 다시 시작해야 하는지, 아니면 최소값 또는 최대값을 초과하는 경우 예외를 발생시켜야 하는지를 지정하는 속성입니다. 새 시퀀스 개체의 기본 순환 옵션은 NO CYCLE입니다.  
   
  시작 값이 아니라 최소값 또는 최대값에서 순환이 다시 시작됩니다.  
   
- [ **캐시** [\<상수 >] | 캐시 없음]  
+ [ **CACHE** [\<constant> ] | NO CACHE ]  
  시스템 번호를 생성하는 데 필요한 디스크 IO 수를 최소화하여 시퀀스 개체를 사용하는 응용 프로그램의 성능을 향상시킵니다. 기본값으로 CACHE가 됩니다.  
   
- 예를 들어, 캐시 크기 50 선택 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 캐시 된 50 개의 개별 값을 유지 하지 않습니다. 현재 값 및 캐시에 남아 있는 값의 개수만 캐시합니다. 따라서 캐시 저장에 필요한 메모리 양은 항상 시퀀스 개체 데이터 형식의 인스턴스 두 개입니다.  
+ 예를 들어 캐시 크기 50을 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 50개의 개별 값을 캐시된 상태로 유지하지 않습니다. 현재 값 및 캐시에 남아 있는 값의 개수만 캐시합니다. 따라서 캐시 저장에 필요한 메모리 양은 항상 시퀀스 개체 데이터 형식의 인스턴스 두 개입니다.  
   
 > [!NOTE]  
 >  캐시 크기를 지정하지 않고 캐시 옵션을 설정하면 데이터베이스 엔진에서 크기를 선택합니다. 그러나 선택의 일관성이 보장되지 않습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 캐시 크기 계산 방법을 예고 없이 변경할 수 있습니다.  
   
- 사용 하 여 만든는 **캐시** 옵션을 예기치 않은 종료 (예: 정전) 캐시에 남아 있는 시퀀스 번호가 손실 될 수 있습니다.  
+ **CACHE** 옵션을 사용하여 만들 경우 전원 오류와 같은 예기치 않은 종료로 인해 캐시에 남아 있는 시퀀스 번호가 손실될 수 있습니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  시퀀스 번호는 현재 트랜잭션 범위 외부에서 생성되며, 시퀀스 번호를 사용하는 트랜잭션이 커밋되는지 또는 롤백되는지 여부에 관계없이 사용됩니다.  
   
 ### <a name="cache-management"></a>캐시 관리  
- 성능 향상을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 미리 시퀀스 번호를 지정 된 수를 할당 된 **캐시** 인수입니다.  
+ 성능 향상을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **CACHE** 인수로 지정된 수의 시퀀스 번호를 미리 할당합니다.  
   
  예를 들어 시작 값이 1이고 캐시 크기가 15인 새 시퀀스가 만들어집니다. 첫 번째 값이 필요한 경우 1에서 15 사이의 값을 메모리에서 사용할 수 있습니다. 마지막으로 캐시된 값(15)은 디스크의 시스템 테이블에 기록됩니다. 15개 번호를 모두 사용한 경우 다음 요청(16번) 시 캐시가 다시 할당됩니다. 마지막으로 캐시된 새 값(30)은 시스템 테이블에 기록됩니다.  
   
@@ -121,17 +121,17 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  SQL Server를 다시 시작한 후 시퀀스 번호가 필요하면 시스템 테이블에서 시작 번호(23)를 읽습니다. 15개 번호(23-38)의 캐시 양이 메모리에 할당되고 캐시되지 않은 다음 번호(39)가 시스템 테이블에 기록됩니다.  
   
- 경우는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] (39) 시스템 테이블에서 읽은 번호로 전원 오류와 같은 이벤트에 대 한 비정상적으로 중지 되는 시퀀스가 다시 시작 합니다. 모든 시퀀스 번호 (않음 사용자 또는 응용 프로그램에서 요청한 적이 없는) 메모리에 할당 된 손실 됩니다. 이 기능은 동일한 값 되지 발생 하는 두 번 단일 시퀀스 개체에 대 한로 정의 되어 있지 않으면 있지만 간격이 생길 수 **주기** 또는 수동으로 다시 시작 합니다.  
+ 전원 오류와 같은 상황에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 비정상적으로 중지된 경우에는 시스템 테이블에서 읽은 번호(39)로 시퀀스가 다시 시작됩니다. 메모리에 할당되었지만 사용자 또는 응용 프로그램에서 요청한 적이 없는 시퀀스 번호는 모두 손실됩니다. 이 기능은 간격이 생길 수는 있지만 단일 시퀀스 개체가 **CYCLE**로 정의되거나 수동으로 다시 시작되지 않은 경우 해당 개체에 대해 같은 값이 두 번 발생하지 않도록 합니다.  
   
  캐시는 현재 값(마지막으로 발생한 값) 및 캐시에 남아 있는 값의 개수에 대한 추적을 통해 메모리에서 유지 관리됩니다. 따라서 캐시에서 사용하는 메모리 양은 항상 시퀀스 개체 데이터 형식의 인스턴스 두 개입니다.  
   
- 캐시 인수를 설정 **NO CACHE** 현재 시퀀스 값이 시퀀스는 데 사용 될 때마다 시스템 테이블에 기록 합니다. 이로 인해 디스크 액세스가 증가하여 성능이 저하될 수는 있지만 의도하지 않은 간격이 발생할 수 있는 가능성은 줄어듭니다. 사용 하 여 번호를 요청한 경우에 간격이 발생할 수는 **NEXT VALUE FOR** 또는 **sp_sequence_get_range** 함수 하지만 숫자는 사용 되지 않거나 커밋되지 않은 트랜잭션에서 사용 되 합니다.  
+ 캐시 인수를 **NO CACHE**로 설정하면 시퀀스가 사용될 때마다 현재 시퀀스 값이 시스템 테이블에 기록됩니다. 이로 인해 디스크 액세스가 증가하여 성능이 저하될 수는 있지만 의도하지 않은 간격이 발생할 수 있는 가능성은 줄어듭니다. **NEXT VALUE FOR** 또는 **sp_sequence_get_range** 함수를 사용하여 번호를 요청한 경우에도 간격이 발생할 수 있지만 이 경우에는 번호가 사용되지 않거나 커밋되지 않은 트랜잭션에 사용됩니다.  
   
- 시퀀스 개체를 사용 하는 경우는 **캐시** 옵션, 시퀀스 개체를 다시 시작 하거나 변경 하는 경우는 **증분**, **주기**, **MINVALUE**, **MAXVALUE**, 되거나 캐시 크기 속성을 변경 발생 하기 전에 시스템 테이블에 기록할 캐시 발생 됩니다. 그런 다음 건너뛰는 번호 없이 현재 값부터 캐시가 다시 로드됩니다. 캐시 크기 변경은 즉시 적용됩니다.  
+ 시퀀스 개체에서 **CACHE** 옵션을 사용하는 경우 해당 시퀀스 개체를 다시 시작하거나 **INCREMENT**, **CYCLE**, **MINVALUE**, **MAXVALUE** 또는 캐시 크기 속성을 변경하면 변경 내용이 적용되기 전에 캐시가 시스템 테이블에 기록됩니다. 그런 다음 건너뛰는 번호 없이 현재 값부터 캐시가 다시 로드됩니다. 캐시 크기 변경은 즉시 적용됩니다.  
   
- **캐시 된 값을 사용할 수 없는 경우 캐시 옵션**  
+ **캐시된 값을 사용할 수 있는 경우의 CACHE 옵션**  
   
- 시퀀스 개체에 대 한 다음 값을 생성 하도록 요청 된 다음 프로세스가 될 때마다 발생 합니다.는 **캐시** 옵션을 선택 된 시퀀스 개체에 대 한 메모리 내 캐시에 사용 되지 않는 값이 있습니다.  
+ 다음 프로세스는 시퀀스 개체에 대한 메모리 내 캐시에 사용하지 않은 값이 있는 경우 **CACHE** 옵션의 다음 값을 생성하도록 시퀀스 개체를 요청할 때마다 발생합니다.  
   
 1.  시퀀스 개체의 다음 값이 계산됩니다.  
   
@@ -139,9 +139,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
 3.  문 호출 시 계산된 값이 반환됩니다.  
   
- **캐시가 모두 사용 하는 경우의 CACHE 옵션**  
+ **캐시가 모두 사용된 경우의 CACHE 옵션**  
   
- 시퀀스 개체는 다음 값을 생성 하도록 요청 될 때마다 다음 프로세스가 발생는 **캐시** 캐시를 모두 사용한 경우 옵션:  
+ 다음 프로세스는 캐시가 모두 사용된 경우 **CACHE** 옵션의 다음 값을 생성하도록 시퀀스 개체를 요청할 때마다 발생합니다.  
   
 1.  시퀀스 개체의 다음 값이 계산됩니다.  
   
@@ -151,7 +151,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  **NO CACHE 옵션**  
   
- 시퀀스 개체에 대 한 다음 값을 생성 하도록 요청 된 다음 프로세스가 될 때마다 발생 합니다.는 **NO CACHE** 옵션:  
+ 다음 프로세스는 **NO CACHE** 옵션의 다음 값을 생성하도록 시퀀스 개체를 요청할 때마다 발생합니다.  
   
 1.  시퀀스 개체의 다음 값이 계산됩니다.  
   
@@ -164,32 +164,32 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  SCHEMA에 대한 **CREATE SEQUENCE**, **ALTER**또는 **CONTROL** 권한이 필요합니다.  
   
--   Db_owner 및 db_ddladmin 고정 데이터베이스 역할의 멤버 만들고 하 고 변경 하 고 시퀀스 개체를 삭제할 수 있습니다.  
+-   db_owner 및 db_ddladmin 고정 데이터베이스 역할의 멤버는 시퀀스 개체를 생성, 변경 및 삭제할 수 있습니다.  
   
--   Db_owner 및 db_datawriter 고정 데이터베이스 역할의 멤버를 숫자를 생성 하도록 하 여 시퀀스 개체를 업데이트할 수 있습니다.  
+-   db_owner 및 db_datawriter 고정 데이터베이스 역할의 멤버는 번호를 생성하도록 하여 시퀀스 개체를 업데이트할 수 있습니다.  
   
- 다음 예에서는 테스트 스키마의 시퀀스를 만들 수 있는 한 AdventureWorks\Larry 권한이 사용자에 게 부여 합니다.  
+ 다음 예에서는 사용자 AdventureWorks\Larry에 대해 테스트 스키마의 시퀀스를 만들 수 있는 권한을 부여합니다.  
   
 ```  
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
- 사용 하 여 시퀀스 개체의 소유권은 이전할 수 있습니다는 **ALTER AUTHORIZATION** 문.  
+ **ALTER AUTHORIZATION** 문을 사용하여 시퀀스 개체의 소유권을 이전할 수 있습니다.  
   
  시퀀스에서 사용자 정의 데이터 형식을 사용하는 경우에는 시퀀스 작성자에게 해당 형식에 대한 REFERENCES 권한이 있어야 합니다.  
   
 ### <a name="audit"></a>감사  
- 감사 **CREATE SEQUENCE**, 모니터는 **SCHEMA_OBJECT_CHANGE_GROUP**합니다.  
+ **CREATE SEQUENCE**를 감사하려면 **SCHEMA_OBJECT_CHANGE_GROUP**을 모니터링합니다.  
   
 ## <a name="examples"></a>예  
- 시퀀스 만들기 및 사용에 대 한 예제는 **NEXT VALUE FOR** 함수 시퀀스 번호를 생성, 참조를 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)합니다.  
+ 시퀀스를 만들고 **NEXT VALUE FOR**함수를 사용하여 시퀀스 번호를 생성하는 방법에 대한 예는 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)을 참조하세요.  
   
- 대부분의 다음 예제는 Test 라는 스키마에 시퀀스 개체를 만듭니다.  
+ 다음 예에서는 대부분 테스트라는 스키마의 시퀀스 개체를 만듭니다.  
   
- 테스트 스키마를 만들려면 다음 문을 실행 합니다.  
+ 테스트 스키마를 만들려면 다음 명령문을 실행합니다.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -197,7 +197,7 @@ GO
 ```  
   
 ### <a name="a-creating-a-sequence-that-increases-by-1"></a>1. 1씩 증가하는 시퀀스 만들기  
- 다음 예에서는 thierry 라는 사용자가 사용할 때마다 1 씩 증가 하는 CountBy1 라는 시퀀스를 만듭니다.  
+ 다음 예에서는 Thierry라는 사용자가 사용할 때마다 1씩 증가하는 CountBy1이라는 시퀀스를 만듭니다.  
   
 ```  
 CREATE SEQUENCE Test.CountBy1  
@@ -262,7 +262,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 |`current_value`|`-9223372036854775808`|  
   
 ### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>6. 지정한 데이터 형식으로 시퀀스 만들기  
- 다음 예제에서는 사용 하 여 시퀀스는 **smallint** -32, 768에서 32,767 사이의 데이터 형식입니다.  
+ 다음 예에서는 **smallint** 데이터 형식을 사용하여 -32,768부터 32,767까지의 시퀀스를 만듭니다.  
   
 ```  
 CREATE SEQUENCE SmallSeq  
@@ -270,7 +270,7 @@ CREATE SEQUENCE SmallSeq
 ```  
   
 ### <a name="g-creating-a-sequence-using-all-arguments"></a>7. 모든 인수를 사용하여 시퀀스 만들기  
- 다음 예제에서는 DecSeq를 사용 하 여 라는 시퀀스는 **10 진수** 데이터 형식을 0에서 255 사이입니다. 시퀀스는 125부터 시작하여 번호가 생성될 때마다 25씩 증가합니다. 시퀀스가 순환하도록 구성되었기 때문에 값이 최대값 200을 초과하는 경우 최소값 100에서 시퀀스가 다시 시작됩니다.  
+ 다음 예에서는 **decimal** 데이터 형식을 사용하여 0부터 255 사이 범위의 DecSeq라는 시퀀스를 만듭니다. 시퀀스는 125부터 시작하여 번호가 생성될 때마다 25씩 증가합니다. 시퀀스가 순환하도록 구성되었기 때문에 값이 최대값 200을 초과하는 경우 최소값 100에서 시퀀스가 다시 시작됩니다.  
   
 ```  
 CREATE SEQUENCE Test.DecSeq  
@@ -302,10 +302,10 @@ FROM sys.sequences
 WHERE name = 'DecSeq' ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER sequence&#40; Transact SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP sequence&#40; Transact SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [다음 값을 &#40; Transact SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

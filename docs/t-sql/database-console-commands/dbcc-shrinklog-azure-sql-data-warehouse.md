@@ -1,5 +1,5 @@
 ---
-title: "DBCC SHRINKLOG (Azure SQL 데이터 웨어하우스) | Microsoft Docs"
+title: DBCC SHRINKLOG(Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -25,12 +25,12 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (Azure SQL 데이터 웨어하우스)
+# <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-트랜잭션 로그의 크기를 줄이는 *기기에서* 현재 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스입니다. 트랜잭션 로그를 축소 하기 위해 데이터 조각화를 방지 합니다. 시간이 지남에 따라 데이터베이스 트랜잭션 로그에는 조각화 하 고 비효율적인 될 수 있습니다. DBCC SHRINKLOG를 사용 하 여 조각화를 줄이고 로그 크기를 줄입니다.
+현재 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스에 대한 *어플라이언스에서* 트랜잭션 로그의 크기를 줄입니다. 트랜잭션 로그를 축소하기 위해 데이터를 조각 모음합니다. 시간이 지남에 따라 데이터베이스 트랜잭션 로그가 조각화되고 비효율적일 수 있습니다. DBCC SHRINKLOG를 사용하여 조각화를 줄이고 로그 크기를 줄입니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [TRANSACT-SQL 구문 표기 규칙 &#40; Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -42,25 +42,25 @@ DBCC SHRINKLOG
 ```  
   
 ## <a name="arguments"></a>인수  
-크기 = { *target_size* [MB | **GB** | TB]} | **기본**합니다.  
-*target_size* DBCC SHRINKLOG 완료 된 후 모든 계산 노드에 걸쳐 트랜잭션 로그에 대해 원하는 크기입니다. 0 보다 큰 정수입니다.  
-로그 크기 (mb), gb (기가바이트) 또는 tb (테라바이트) 단위로 측정 됩니다. 모든 계산 노드에 트랜잭션 로그의 결합 된 크기는  
-기본적으로 DBCC SHRINKLOG이 트랜잭션 로그는 데이터베이스에 대 한 메타 데이터에 저장 된 로그 크기를 줄입니다. 메타 데이터에는 로그 크기의 LOG_SIZE 매개 변수에 따라 사용자가 [CREATE database&#40; Azure SQL 데이터 웨어하우스 &#41; ](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 또는 [ALTER database&#40; Azure SQL 데이터 웨어하우스 &#41; ](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md). DBCC SHRINKLOG 기본값에 트랜잭션 로그 크기를 줄일 수 시 크기를 `SIZE=DEFAULT` 지정 된 경우 또는 `SIZE` 절을 생략 합니다.
+SIZE = { *target_size* [ MB | **GB** | TB ]  } | **DEFAULT**.  
+*target_size*는 DBCC SHRINKLOG 완료 후 모든 계산 노드에 있는 트랜잭션 로그에 대해 원하는 크기입니다. 0보다 큰 정수여야 합니다.  
+로그 크기는 MB(메가바이트), GB(기가바이트) 또는 TB(테라바이트) 단위로 측정됩니다. 모든 계산 노드의 트랜잭션 노드에 대한 결합된 크기입니다.  
+기본적으로 DBCC SHRINKLOG는 트랜잭션 로그를 데이터베이스에 대한 메타데이터에 저장된 로그 크기로 줄입니다. 메타데이터의 로그 크기는 [CREATE DATABASE&#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 또는 [ALTER DATABASE&#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)의 LOG_SIZE 매개 변수에 따라 결정됩니다. `SIZE=DEFAULT`가 지정되거나 `SIZE` 절이 생략된 경우, DBCC SHRINKLOG는 트랜잭션 로그 크기를 기본 크기로 줄입니다.
   
 WITH NO_INFOMSGS  
-정보 메시지는 DBCC SHRINKLOG 결과에 표시 되지 않습니다.  
+정보 메시지는 DBCC SHRINKLOG 결과에 표시되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 ALTER SERVER STATE 권한이 필요합니다.
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
-DBCC SHRINKLOG 데이터베이스에 대 한 메타 데이터에 저장 된 로그 크기를 변경 되지 않습니다. 메타 데이터에 CREATE DATABASE 또는 ALTER DATABASE 문에 지정 된 LOG_SIZE 매개 변수를 포함 하도록 계속 합니다.
+DBCC SHRINKLOG는 데이터베이스에 대한 메타데이터에 저장된 로그 크기를 변경하지 않습니다. 메타데이터는 CREATE DATABASE 또는 ALTER DATABASE 문에 지정된 LOG_SIZE 매개 변수를 계속 포함합니다.
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>1. CREATE DATABASE로 지정 된 원래 크기에 트랜잭션 로그를 축소 합니다.  
-주소 데이터베이스를 만들 때 주소 데이터베이스에 대 한 트랜잭션 로그 100MB로 설정 된 가정 합니다. 즉, 주소에 대 한 CREATE DATABASE 문의 했습니다 LOG_SIZE 100MB = 합니다. 이제, 150MB로 로그 증가 했으며 100MB로 다시 작게 축소 하려면 가정해 봅니다.
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>1. CREATE DATABASE로 지정된 원래 크기로 트랜잭션 로그를 축소합니다.  
+트랜잭션 로그에 대해 주소 데이터베이스를 만들 때 주소 데이터베이스를 100MB로 설정했다고 가정합니다. 즉, 주소에 대한 CREATE DATABASE 문이 LOG_SIZE = 100MB입니다. 이제, 로그가 150MB로 증가했으며 다시 100MB로 축소하려고 합니다.
   
-다음 문 중 각는 100MB의 기본 크기를 주소가 데이터베이스에 대 한 트랜잭션 로그를 축소 하려고 합니다. 100MB로 로그를 축소 하면 데이터가 손실 될, 하는 경우 DBCC SHRINKLOG는 데이터 손실 없이 로그를 가능한 가장 작은 크기를 100MB 보다 큰 축소 됩니다.
+다음 명령문들은 각각 주소 데이터베이스에 대한 트랜잭션 로그를 100MB의 기본 크기로 축소하려고 합니다. 로그를 100MB로 축소하여 데이터가 손실될 경우, DBCC SHRINKLOG는 데이터 손실 없이 로그를 100MB 이하의 가능한 가장 작은 크기로 축소합니다.
   
 ```sql
 USE Addresses;  

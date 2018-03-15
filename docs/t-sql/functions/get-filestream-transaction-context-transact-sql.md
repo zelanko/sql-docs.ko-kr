@@ -1,5 +1,5 @@
 ---
-title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact SQL) | Microsoft Docs
+title: GET_FILESTREAM_TRANSACTION_CONTEXT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  세션의 현재 트랜잭션 컨텍스트를 나타내는 토큰을 반환합니다. 응용 프로그램은 이 토큰을 사용하여 FILESTREAM 파일 시스템 스트리밍 작업을 트랜잭션에 바인딩합니다. FILESTREAM 항목 목록은 참조 [Binary Large Object &#40; Blob&#41; 데이터 &#40; SQL Server &#41; ](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  세션의 현재 트랜잭션 컨텍스트를 나타내는 토큰을 반환합니다. 응용 프로그램은 이 토큰을 사용하여 FILESTREAM 파일 시스템 스트리밍 작업을 트랜잭션에 바인딩합니다. FILESTREAM 토픽의 목록은 [Binary Large Object&#40;Blob&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>반환 값  
  트랜잭션이 시작되지 않았거나 취소 또는 커밋된 경우 NULL이 반환됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  트랜잭션은 명시적이어야 합니다. BEGIN TRANSACTION을 사용한 다음 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION을 사용합니다.  
   
  GET_FILESTREAM_TRANSACTION_CONTEXT를 호출하면 호출자에게 트랜잭션 기간 동안 트랜잭션에 대한 파일 시스템 액세스 권한이 부여됩니다. 다른 사용자가 파일 시스템을 통해 트랜잭션에 액세스할 수 있도록 하려면 EXECUTE AS를 사용하여 GET_FILESTREAM_TRANSACTION_CONTEXT를 다른 사용자로 실행합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 `GET_FILESTREAM_TRANSACTION_CONTEXT` 에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트랜잭션 컨텍스트를 가져올 트랜잭션.  
+ 다음 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트랜잭션에 `GET_FILESTREAM_TRANSACTION_CONTEXT`를 사용하여 트랜잭션 컨텍스트를 구합니다.  
   
 ```csharp  
 using System;  
@@ -282,8 +282,8 @@ Namespace ConsoleApplication
 End Namespace  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [경로 이름 &#40; Transact SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [PathName&#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

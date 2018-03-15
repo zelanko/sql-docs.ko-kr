@@ -1,5 +1,5 @@
 ---
-title: "외부 파일 형식 (Transact SQL) DROP | Microsoft Docs"
+title: DROP EXTERNAL FILE FORMAT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-file-format-transact-sql"></a>DROP 외부 파일 형식 (Transact SQL)
+# <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   PolyBase 외부 파일 형식을 제거합니다.  
@@ -43,33 +43,33 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
   
 ## <a name="arguments"></a>인수  
  *external_file_format_name*  
- 삭제 하는 외부 파일 형식의 이름입니다.  
+ 삭제할 외부 파일 형식의 이름입니다.  
   
 ## <a name="metadata"></a>메타데이터  
- 외부 파일 형식 사용 하 여의 목록을 보려면는 [sys.external_file_formats&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) 시스템 뷰.  
+ 외부 파일 형식 목록을 보려면 [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) 시스템보기를 사용합니다.  
   
 ```  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
-## <a name="permissions"></a>Permissions  
- 필요한 외부 파일 형식을 변경 합니다.  
+## <a name="permissions"></a>사용 권한  
+ ALTER ANY EXTERNAL FILE FORMAT  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 외부 파일 형식 삭제 해도 외부 데이터는 제거 되지 않습니다.  
+ 외부 파일 형식을 삭제해도 외부 데이터는 제거되지 않습니다.  
   
 ## <a name="locking"></a>잠금  
- 외부 파일 형식 개체에 대 한 공유 잠금을 사용합니다.  
+ 외부 파일 형식 개체에 대해 공유 잠금을 적용합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-basic-syntax"></a>1. 기본 구문을 사용 하 여  
+### <a name="a-using-basic-syntax"></a>1. 기본 구문 사용  
   
 ```  
 DROP EXTERNAL FILE FORMAT myfileformat;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE EXTERNAL FILE FORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
   

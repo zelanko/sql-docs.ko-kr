@@ -1,5 +1,5 @@
 ---
-title: SET ANSI_NULLS (Transact SQL) | Microsoft Docs
+title: SET ANSI_NULLS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 Null 값과 함께 사용될 경우 Equals(=)와 Not Equal To(<>) 비교 연산자의 ISO 호환 동작을 지정합니다.  
   
 > [!IMPORTANT]  
->  이후 버전에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS가 ON으로 명시적으로 OFF로 옵션을 설정 하는 모든 응용 프로그램 오류를 생성 합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 ON으로 설정되고 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -62,12 +62,12 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>주의  
- SET ANSI_NULLS가 ON, WHERE를 사용 하는 SELECT 문의 경우 *column_name* = **NULL** 에 null 값이 없는 경우에 0 행을 반환 *column_name*합니다. 위치를 사용 하는 SELECT 문은 *column_name* <> **NULL** 에 null이 아닌 값이 없는 경우에 0 행을 반환 *column_name*합니다.  
+## <a name="remarks"></a>Remarks  
+ SET ANSI_NULLS 옵션이 ON인 경우, WHERE *column_name* = **NULL**을 사용하는 SELECT 문은 *column_name*에 Null 값이 있어도 0행을 반환합니다. WHERE *column_name* <> **NULL**을 사용하는 SELECT 문은 *column_name*에 Null 이외의 값이 있어도 0행을 반환합니다.  
   
- SET ANSI_NULLS 옵션이 OFF면 Equals(=)와 Not Equal(<>) 비교 연산자가 ISO 표준을 따르지 않습니다. 위치를 사용 하는 SELECT 문은 *column_name* = **NULL** 에 null 값을 가진 행을 반환 *column_name*합니다. 위치를 사용 하는 SELECT 문은 *column_name* <> **NULL** 열에 null이 아닌 값을 가진 행을 반환 합니다. 위치를 사용 하는 SELECT 문은 또한 *column_name* <> *XYZ_value* 되지 않는 모든 행을 반환 *XYZ_value* 이 NULL입니다.  
+ SET ANSI_NULLS 옵션이 OFF면 Equals(=)와 Not Equal(<>) 비교 연산자가 ISO 표준을 따르지 않습니다. WHERE *column_name* = **NULL**을 사용하는 SELECT 문은 *column_name*에 Null 값이 있는 행을 반환합니다. WHERE *column_name* <> **NULL**을 사용하는 SELECT 문은 열에 Null 이외의 값이 있는 행을 반환합니다. 또한 WHERE *column_name* <> *XYZ_value*를 사용하는 SELECT 문은 *XYZ_value*가 아니고 NULL이 아닌 모든 행을 반환합니다.  
   
- SET ANSI_NULLS 옵션이 ON이면, NULL 값에 대한 모든 비교가 UNKNOWN이 됩니다. ANSI_NULLS 옵션이 OFF면 데이터 값이 NULL일 때 null 값에 대한 모든 데이터의 비교가 TRUE가 됩니다. SET ANSI_NULLS를 지정하지 않으면 현재 데이터베이스의 ANSI_NULLS 옵션 설정이 적용됩니다. ANSI_NULLS 데이터베이스 옵션에 대 한 자세한 내용은 참조 하세요. [ALTER database&#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
+ SET ANSI_NULLS 옵션이 ON이면, NULL 값에 대한 모든 비교가 UNKNOWN이 됩니다. ANSI_NULLS 옵션이 OFF면 데이터 값이 NULL일 때 null 값에 대한 모든 데이터의 비교가 TRUE가 됩니다. SET ANSI_NULLS를 지정하지 않으면 현재 데이터베이스의 ANSI_NULLS 옵션 설정이 적용됩니다. ANSI_NULLS 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
  SET ANSI_NULLS ON 옵션은 비교의 피연산자 중 하나가 NULL 변수 또는 리터럴 NULL 변수인 경우에만 해당 비교에 영향을 줍니다. 비교의 양쪽이 열 또는 복합 식인 경우에는 설정이 비교에 영향을 주지 않습니다.  
   
@@ -75,18 +75,18 @@ SET ANSI_NULLS ON
   
  분산 쿼리를 실행할 때는 SET ANSI_NULLS를 ON으로 설정해야 합니다.  
   
- 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET ANSI_NULLS 옵션도 ON으로 설정해야 합니다. SET ANSI_NULLS 옵션이 OFF면 계산 열의 인덱스가 있는 테이블이나 인덱싱된 뷰에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]필요한 값을 위반 하는 모든 SET 옵션이 나열 하는 오류를 반환 합니다. 또한를 실행 하면 SELECT 문에서 SET ANSI_NULLS 옵션이 OFF 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 계산된 열 이나 뷰의 인덱스 값을 무시 하 고 테이블이 나 뷰에 이러한 인덱스가 없는 있었습니다 하는 경우 select 작업을 해결 합니다.  
+ 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET ANSI_NULLS 옵션도 ON으로 설정해야 합니다. SET ANSI_NULLS 옵션이 OFF면 계산 열의 인덱스가 있는 테이블이나 인덱싱된 뷰에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 필요한 값을 위반하는 모든 SET 옵션이 나열된 오류를 반환합니다. 뿐만 아니라 SELECT 문 실행 시 SET ANSI_NULLS 옵션이 OFF면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 계산 열이나 뷰의 인덱스 값을 무시하고 테이블이나 뷰에 이러한 인덱스가 없는 것처럼 SELECT 작업을 처리합니다.  
   
 > [!NOTE]  
 >  ANSI_NULLS는 계산 열이나 인덱싱된 뷰의 인덱스를 처리할 때 필요한 값으로 설정해야 하는 7가지 SET 옵션 중 하나입니다. ANSI_PADDING, ANSI_WARNINGS, ARITHABORT, QUOTED_IDENTIFIER 및 CONCAT_NULL_YIELDS_NULL은 ON으로 설정해야 하지만 NUMERIC_ROUNDABORT는 OFF로 설정해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자동으로 연결 될 때 ANSI_NULLS를 ON으로 설정 합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하기 전에 응용 프로그램에 설정된 OLE DB 연결 속성에서 이 설정을 구성할 수 있습니다. SET ANSI_NULLS의 기본값은 OFF입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_NULLS를 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하기 전에 응용 프로그램에 설정된 OLE DB 연결 속성에서 이 설정을 구성할 수 있습니다. SET ANSI_NULLS의 기본값은 OFF입니다.  
   
  SET ANSI_DEFAULTS 옵션이 ON이면 SET ANSI_NULLS 옵션이 설정됩니다.  
   
  SET ANSI_NULLS 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
- 이 설정에 대 한 현재 설정을 보려면 다음 쿼리를 실행 합니다.
+ 이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.
   
 ```  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  
@@ -95,11 +95,11 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 Equals(`=`)와 Not Equal To(`<>`) 비교 연산자를 사용하여 테이블의 `NULL` 및 Null이 아닌 값에 비교를 수행합니다. 또한이 예제에서는 `IS NULL` 영향을 받지 않습니다는 `SET ANSI_NULLS` 설정 합니다.  
+ 다음 예에서는 Equals(`=`)와 Not Equal To(`<>`) 비교 연산자를 사용하여 테이블의 `NULL` 및 Null이 아닌 값에 비교를 수행합니다. 또한 `IS NULL`이 `SET ANSI_NULLS` 설정의 영향을 받지 않는다는 것을 보여 줍니다.  
   
 ```  
 -- Create table t1 and insert values.  
@@ -169,15 +169,15 @@ DROP TABLE dbo.t1;
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
- [= &#40; Equals &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/equals-transact-sql.md)   
- [다음과 같은 경우... 다른 &#40; Transact SQL &#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
- [&#60; &#62; &#40; 하지 같음 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)   
+ [SESSIONPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
+ [=&#40;같음&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/equals-transact-sql.md)   
+ [IF...ELSE&#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
+ [&#60;&#62; &#40;같지 않음&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
+ [SET ANSI_DEFAULTS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [WHILE&#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "OPTION 절 (Transact SQL) | Microsoft Docs"
+title: "OPTION 절(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>1. GROUP BY 절이 있는 OPTION 절을 사용 하 여  
+### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>1. GROUP BY 절과 함께 OPTION 절 사용  
  다음 예에서는 `OPTION` 절과 함께 `GROUP BY` 절을 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -89,10 +89,10 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>2. SELECT 문의 OPTION 절에는 레이블 사용  
- 다음 예제에서는 간단한 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 문의 OPTION 절에는 레이블 사용 합니다.  
+### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>2. OPTION 절에서 레이블을 사용하는 SELECT 문  
+ 다음 예제에서는 OPTION 절에서 레이블을 사용하는 간단한 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 문을 보여 줍니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -101,8 +101,8 @@ SELECT * FROM FactResellerSales
   OPTION ( LABEL = 'q17' );  
 ```  
   
-### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>3. SELECT 문의 OPTION 절에 쿼리 힌트와 함께  
- 다음 예에서는 OPTION 절에 HASH JOIN 쿼리 힌트를 사용 하는 SELECT 문을 보여 줍니다.  
+### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>3. OPTION 절에서 쿼리 힌트를 사용하는 SELECT 문  
+ 다음 예제에서는 OPTION 절에서 HASH JOIN 쿼리 힌트를 사용하는 SELECT 문을 보여 줍니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -113,8 +113,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>4. 레이블과 OPTION 절에 여러 개의 쿼리 힌트가 들어 있는 SELECT 문의  
- 다음 예제는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 레이블 및 여러 개의 쿼리 힌트가 들어 있는 SELECT 문의 합니다. 쿼리가 계산 노드에서 실행 될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해시 조인 또는 병합 조인 전략에 따라 적용 됩니다 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결정 하는 가장 적합 합니다.  
+### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>4. OPTION 절에서 레이블 및 여러 쿼리 힌트를 사용하는 SELECT 문  
+ 다음 예제는 레이블 및 여러 쿼리 힌트를 포함하는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 문입니다. 쿼리가 계산 노드에서 실행될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 결정하는 가장 적합한 전략에 따라 해시 조인 또는 병합 조인을 적용합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -125,8 +125,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);  
 ```  
   
-### <a name="e-using-a-query-hint-when-querying-a-view"></a>5. 뷰를 쿼리할 때는 쿼리 힌트를 사용 하 여  
- 다음 예제에서는 CustomerView 이라는 뷰를 만들고 HASH JOIN 쿼리 힌트를 사용 하 여 뷰와 테이블을 참조 하는 쿼리에서 합니다.  
+### <a name="e-using-a-query-hint-when-querying-a-view"></a>5. 뷰를 쿼리할 때 쿼리 힌트 사용  
+ 다음 예제에서는 CustomerView라는 뷰를 만든 다음, 뷰 및 테이블을 참조하는 쿼리에서 HASH JOIN 쿼리 힌트를 사용합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -144,8 +144,8 @@ DROP VIEW CustomerView;
   
 ```  
   
-### <a name="f-query-with-a-subselect-and-a-query-hint"></a>6. 하위 select 및 쿼리 힌트는 쿼리  
- 다음 예에서는 하위 select 및 쿼리 힌트를 모두 포함 하는 쿼리를 보여 줍니다. 쿼리 힌트는 전역적으로 적용 됩니다. 쿼리 힌트는 하위 select 문에서에 추가 되는 허용 되지 않습니다.  
+### <a name="f-query-with-a-subselect-and-a-query-hint"></a>6. 하위 select 및 쿼리 힌트가 있는 쿼리  
+ 다음 예제에서는 하위 select 및 쿼리 힌트 모두를 포함하는 쿼리를 보여 줍니다. 쿼리 힌트는 전역적으로 적용됩니다. 쿼리 힌트는 하위 select 문에 추가되도록 허용되지 않습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -160,8 +160,8 @@ ON ( a.CustomerKey = b.CustomerKey )) AS t
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>7. 조인 순서는 쿼리에서 순서와 일치 하도록을 강제 적용  
- 다음 예제에서는 FORCE ORDER 힌트를 사용 하 여를 사용 하는 쿼리로 지정 된 조인 순서 쿼리 계획을 적용 합니다. 일부 쿼리;에서 성능을 향상이 일부 쿼리 합니다.  
+### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>7. 쿼리의 순서와 일치하도록 조인 순서 강제 적용  
+ 다음 예제에서는 FORCE ORDER 힌트를 사용하여 쿼리에서 지정된 조인 순서를 사용하도록 쿼리 계획을 강제로 적용합니다. 모든 쿼리가 아닌 일부 쿼리에서 성능을 향상시킵니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -181,8 +181,8 @@ OPTION ( FORCE ORDER )
 ;  
 ```  
   
-### <a name="h-using-externalpushdown"></a>8. EXTERNALPUSHDOWN를 사용 하 여  
- 다음 예제에서는 외부 Hadoop 테이블에 MapReduce 작업을 WHERE 절 푸시 다운을 강제로 적용 합니다.  
+### <a name="h-using-externalpushdown"></a>8. EXTERNALPUSHDOWN 사용  
+ 다음 예제에서는 외부 Hadoop 테이블의 MapReduce 작업에 WHERE 절의 푸시다운을 강제로 적용합니다.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -190,7 +190,7 @@ WHERE ID < 1000000
 OPTION (FORCE EXTERNALPUSHDOWN);  
 ```  
   
- 다음 예제에서는 외부 Hadoop 테이블에 MapReduce 작업을 WHERE 절 푸시 다운을 방지합니다. PDW WHERE 절이 적용 되는 위치에 모든 행이 반환 됩니다.  
+ 다음 예제에서는 외부 Hadoop 테이블의 MapReduce 작업에 WHERE 절의 푸시다운을 강제로 방지합니다. WHERE 절이 적용되는 PDW에 모든 행이 반환됩니다.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -198,11 +198,11 @@ WHERE ID < 10
 OPTION (DISABLE EXTERNALPUSHDOWN);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [힌트 &#40; Transact SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [힌트&#40;Transact SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [MERGE &#40; Transact SQL &#41;](../../t-sql/statements/merge-transact-sql.md)   
+ [MERGE&#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)  
   
   

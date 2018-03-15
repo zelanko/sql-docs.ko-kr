@@ -1,5 +1,5 @@
 ---
-title: "Long (geography 데이터 형식) | Microsoft Docs"
+title: "Long(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="long-geography-data-type"></a>Long(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  경도 속성은 **geography** 인스턴스.  
+  **geography** 인스턴스의 경도 속성을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-value"></a>반환 값  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]형식: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
  CLR 형식: **SqlDouble**  
   
-## <a name="remarks"></a>주의  
- OpenGIS 모델에서 장기 정의 경우에 **geography** 인스턴스는 단일 지점으로 구성 합니다. 이 속성은 NULL이 반환 하는 경우 **geography** 인스턴스는 둘 이상의 단일 지점이 포함 합니다. 이 속성은 정확하며 읽기 전용입니다.  
+## <a name="remarks"></a>Remarks  
+ OpenGIS 모델에서는 하나의 점으로 구성된 **geography** 인스턴스에 대해서만 Long이 정의됩니다. **geography** 인스턴스에 둘 이상의 지점이 포함되어 있는 경우 이 속성은 NULL을 반환합니다. 이 속성은 정확하며 읽기 전용입니다.  
   
 ## <a name="examples"></a>예  
- 이 예제에서는 만듭니다는 **가리킨** 인스턴스 하 고 점의 경도 검색 합니다.  
+ 다음 예에서는 **Point** 인스턴스를 만들고 점의 경도를 검색합니다.  
   
 ```  
 DECLARE @g geography;  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Long;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

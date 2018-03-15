@@ -1,5 +1,5 @@
 ---
-title: CLOSE (Transact SQL) | Microsoft Docs
+title: CLOSE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,10 +49,10 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>인수  
  GLOBAL  
- 지정 하는 *cursor_name* 전역 커서를 참조 합니다.  
+ *cursor_name*이 전역 커서를 참조하도록 지정합니다.  
   
  *cursor_name*  
- 열린 커서의 이름입니다. 전역와 로컬 커서가 있는 경우 *cursor_name* 해당 이름으로 *cursor_name* GLOBAL이 고, 그렇지 않으면 지정 된 경우 전역 커서를 말합니다 *cursor_name* 로컬 커서를 참조 합니다.  
+ 열린 커서의 이름입니다. 동일한 *cursor_name*을 가진 전역 커서와 지역 커서가 있을 경우 GLOBAL이 지정되면 *cursor_name*은 전역 커서를 참조하고 GLOBAL이 지정되지 않으면 *cursor_name*은 지역 커서를 참조합니다.  
   
  *cursor_variable_name*  
  열린 커서와 연관된 커서 변수의 이름입니다.  
@@ -74,11 +74,11 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [커서](../../relational-databases/cursors.md)   
  [커서&#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
- [할당 해제 &#40; Transact SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [FETCH &#40; Transact SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [열기 &#40; Transact SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [DEALLOCATE&#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [FETCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN&#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

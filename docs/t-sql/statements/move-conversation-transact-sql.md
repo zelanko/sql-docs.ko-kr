@@ -1,5 +1,5 @@
 ---
-title: MOVE CONVERSATION (TRANSACT-SQL) | Microsoft Docs
+title: MOVE CONVERSATION(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -55,22 +55,22 @@ MOVE CONVERSATION conversation_handle
   
 ## <a name="arguments"></a>인수  
  *conversation_handle*  
- 이동할 대화의 대화 핸들을 포함하는 변수 또는 상수입니다. *conversation_handle* 형식 이어야 합니다 **uniqueidentifier**합니다.  
+ 이동할 대화의 대화 핸들을 포함하는 변수 또는 상수입니다. *conversation_handle*은 **uniqueidentifier** 형식이어야 합니다.  
   
  TO *conversation_group_id*  
- 대화가 이동될 대화 그룹의 식별자를 포함하는 변수 또는 상수입니다. *conversation_group_id* 형식 이어야 합니다 **uniqueidentifier**합니다.  
+ 대화가 이동될 대화 그룹의 식별자를 포함하는 변수 또는 상수입니다. *conversation_group_id*는 **uniqueidentifier** 형식이어야 합니다.  
   
-## <a name="remarks"></a>주의  
- MOVE CONVERSATION 문은 이동 하 여 지정 된 대화 *conversation_handle* 로 식별 되는 대화 그룹에 *conversation_group_id*합니다. 같은 큐와 연관된 대화 그룹 간에만 대화를 재지정할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ MOVE CONVERSATION 문은 *conversation_handle*로 지정된 대화를 *conversation_group_id*로 식별된 대화 그룹으로 이동합니다. 같은 큐와 연관된 대화 그룹 간에만 대화를 재지정할 수 있습니다.  
   
 > [!IMPORTANT]  
->  위의 문은 세미콜론으로 종료 해야 MOVE CONVERSATION 문이 일괄 처리 또는 저장된 프로시저의 첫 번째 문이 아닌 경우 (**;**), [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자입니다.  
+>  MOVE CONVERSATION 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자인 세미콜론(**;**)으로 종결되어야 합니다.  
   
- MOVE CONVERSATION 문은 연결 된 대화 그룹을 잠급니다 *conversation_handle* 및로 지정한 대화 그룹 *conversation_group_id* 트랜잭션이 될 때까지 문을 포함 하는 커밋 또는 롤백합니다.  
+ MOVE CONVERSATION 문은 명령문을 포함하는 트랜잭션이 커밋되거나 롤백될 때까지 *conversation_handle*과 연결된 대화 그룹 및 *conversation_group_id*에 의해 지정된 대화 그룹을 잠급니다.  
   
  MOVE CONVERSATION은 사용자 정의 함수에 유효하지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대화를 이동하려면 현재 사용자가 대화 및 대화 그룹의 소유자, sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -88,11 +88,11 @@ SET @conversation_group_id =
 MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [BEGIN DIALOG conversation&#40; Transact SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [GET CONVERSATION GROUP &#40; Transact SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [END CONVERSATION &#40; Transact SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [sys.conversation_groups&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
- [sys.conversation_endpoints&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [BEGIN DIALOG CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [GET CONVERSATION GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+ [END CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [sys.conversation_groups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
+ [sys.conversation_endpoints&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

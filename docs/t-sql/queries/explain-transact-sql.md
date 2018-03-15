@@ -1,5 +1,5 @@
 ---
-title: "(Transact SQL) 설명 | Microsoft Docs"
+title: EXPLAIN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="explain-transact-sql"></a>설명 (Transact SQL)
+# <a name="explain-transact-sql"></a>EXPLAIN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  에 대 한 쿼리 계획을 반환 된 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문을 실행 하지 않고 문입니다. 사용 하 여 **설명** 미리 보기는 작업에는 데이터 이동 필요 하 고 쿼리 작업의 예상된 비용을 볼 수 있습니다.  
+  명령문을 실행하지 않고 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문에 대한 쿼리 계획을 반환합니다. **EXPLAIN**을 사용하여 데이터 이동이 필요한 작업을 미리 보고 쿼리 작업의 예상 비용을 표시합니다.  
   
- 쿼리 계획에 대 한 자세한 내용은 "쿼리 계획 이해"를 참조는 [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)]합니다.  
+ 쿼리 계획에 대한 자세한 내용은 [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)]의 "쿼리 계획 이해"를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,15 +41,15 @@ EXPLAIN SQL_statement
   
 ## <a name="arguments"></a>인수  
  *SQL_statement*  
- [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 는에서 문 **설명** 실행 됩니다. *SQL_statement* 다음이 명령 중 하나가 될 수 있습니다: **선택**, **삽입**, **업데이트**, **삭제**,  **CREATE TABLE AS SELECT**, **원격 테이블 만들기**합니다.  
+ **EXPLAIN**이 실행되는 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문입니다. *SQL_statement*는 **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE** 명령 중 하나일 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
- 필요는 **SHOWPLAN** 사용 권한 및 실행할 수 있는 권한이 *SQL_statement*합니다. 참조 [사용 권한: GRANT, DENY, REVOKE 및 #40; Azure SQL 데이터 웨어하우스, 병렬 데이터 웨어하우스 &#41; ](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+## <a name="permissions"></a>사용 권한  
+ **SHOWPLAN** 권한 및 *SQL_statement*를 실행할 수 있는 권한이 필요합니다. [권한: GRANT, DENY, REVOKE&#40;Azure SQL Data Warehouse, 병렬 데이터 웨어하우스&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)를 참조하세요.  
   
 ## <a name="return-value"></a>반환 값  
- 반환 값은 **설명** 명령 아래에 표시 된 구조와 함께 XML 문서입니다. 이 XML 문서 지정된 쿼리에 대 한 쿼리 계획의 모든 작업에는, 묶어 각는 `<dsql_operation>` 태그입니다. 형식의 반환 값은 **nvarchar (max)**합니다.  
+ **EXPLAIN** 명령의 반환 값은 다음과 같은 구조의 XML 문서입니다. 이 XML 문서는 지정된 쿼리에 대한 쿼리 계획의 모든 작업을 나열하며, 각 작업은 `<dsql_operation>` 태그로 묶여 있습니다. 반환 값은 **nvarchar(max)** 형식입니다.  
   
- 반환 된 쿼리 계획은 SQL 문을 순차적; 보여 줍니다. 쿼리를 실행할 때에 표시 된 순차 문 중 일부 동시에 실행할 수 있도록 병렬된 작업을 포함 될 수 있습니다.  
+ 반환된 쿼리 계획은 순차적 SQL 문을 보여 줍니다. 쿼리가 실행되면 병렬 처리된 작업이 포함될 수 있으므로 표시된 순차적 명령문 중 일부가 동시에 실행될 수 있습니다.  
   
 ```  
 \<?xml version="1.0" encoding="utf-8"?>  
@@ -65,37 +65,37 @@ EXPLAIN SQL_statement
 </dsql_query>  
 ```  
   
- 이 정보를 포함 하는 XML 태그:  
+ XML 태그에 포함되는 정보는 다음과 같습니다.  
   
 |XML 태그|요약, 특성 및 콘텐츠|  
 |-------------|--------------------------------------|  
 |\<dsql_query>|최상위 수준/문서 요소입니다.|
-|\<sql>|에코 *SQL_statement*합니다.|  
-|\<params>|이 태그는이 이번에는 사용 되지 않습니다.|  
-|\<dsql_operations>|요약 하 고 쿼리 단계를 포함 하 고 쿼리에 대 한 비용 정보가 포함 됩니다. 또한 모든 포함 된 `<dsql_operation>` 블록. 이 태그에는 전체 쿼리에 대 한 개수 정보가 포함 됩니다.<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* ms에서 실행할 쿼리에 대 한 총 예상된 시간입니다.<br /><br /> *total_number_operations* 쿼리에 대 한 작업의 총 수입니다. 평행 화 되 고 여러 노드에서 실행 되는 작업은 한 번의 작업으로 간주 됩니다.|  
-|\<dsql_operation>|쿼리 계획 내 단일 작업에 설명합니다. \<dsql_operation > 태그에 특성으로 작업 유형을 포함 합니다.<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* 에 있는 값 중 하나는 [데이터 쿼리 (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)합니다.<br /><br /> 콘텐츠는 `\<dsql_operation>` 블록은 작업 유형에 따라 다릅니다.<br /><br /> 아래 표를 참조 합니다.|  
+|\<sql>|*SQL_statement*를 에코합니다.|  
+|\<params>|이 태그는 현재 사용되지 않습니다.|  
+|\<dsql_operations>|쿼리 단계를 요약하고, 포함하며 ,쿼리에 대한 비용 정보를 포함합니다. 또한 모든 `<dsql_operation>` 블록도 포함합니다. 이 태그에는 전체 쿼리에 대한 개수 정보가 포함됩니다.<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost*는 쿼리 실행에 대한 총 예상 시간(밀리초)입니다.<br /><br /> *total_number_operations*는 쿼리에 대한 총 작업 수입니다. 여러 노드에서 병렬 처리되고 실행되는 작업은 단일 작업으로 계산됩니다.|  
+|\<dsql_operation>|쿼리 계획 내에 있는 단일 작업을 설명합니다. \< dsql_operation> 태그에는 작업 유형이 특성으로 포함됩니다.<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type*은 [데이터 쿼리(SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)에 있는 값 중 하나입니다.<br /><br /> `\<dsql_operation>` 블록의 콘텐츠는 작업 유형에 따라 다릅니다.<br /><br /> 아래 표를 참조하세요.|  
   
 |작업 유형|콘텐츠|예제|  
 |--------------------|-------------|-------------|  
-|BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE, 및 TRIM_MOVE|`<operation_cost>`이러한 특성을 가진 요소입니다. 로컬 작업에만 반영 하는 값:<br /><br /> -   *비용* 로컬 연산자 비용 및 ms에서를 실행 하려면 작업에 대 한 예상된 시간을 보여 줍니다.<br />-   *accumulative_cost* ms에서 병렬 작업에 대 한 합계 값을 포함 하 여 계획에 표시 되는 모든 작업의 합계입니다.<br />-   *average_rowsize* 의 예상된 평균 행 크기 (바이트)의 행 검색 하 고 작업을 하는 동안 전달 됩니다.<br />-   *output_rows* 출력 (노드) 카디널리티가 출력 행의 수를 표시 합니다.<br /><br /> `<location>`: 노드 또는 배포 후 작업을 발생 합니다. 옵션은: "제어", "ComputeNode", "AllComputeNodes", "AllDistributions", "SubsetDistributions", "배포" 및 "SubsetNodes"입니다.<br /><br /> `<source_statement>`:의 원본 데이터의 순서 섞기를 이동합니다.<br /><br /> `<destination_table>`: 내부 임시 테이블 데이터는로 이동 됩니다.<br /><br /> `<shuffle_columns>`: (SHUFFLE_MOVE 작업에만 적용 가능). 임시 테이블에 대 한 배포 열으로 사용할 하나 이상의 열입니다.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`: 참조 `<operation_cost>` 위에 있습니다.<br /><br /> `<DestinationCatalog>`: 대상 노드 또는 노드입니다.<br /><br /> `<DestinationSchema>`: DestinationCatalog에 대상 스키마입니다.<br /><br /> `<DestinationTableName>`: "TableName" 또는 대상 테이블의 이름입니다.<br /><br /> `<DestinationDatasource>`: 대상 데이터 원본의 이름 또는 연결 정보입니다.<br /><br /> `<Username>`및 `<Password>`: 이러한 필드는 사용자 이름 및 대상에 대 한 암호 필요할 수 있습니다를 나타냅니다.<br /><br /> `<BatchSize>`: 복사 작업에 대 한 일괄 처리 크기입니다.<br /><br /> `<SelectStatement>`복사를 수행 하는 데 사용: select 문입니다.<br /><br /> `<distribution>`: 배포 복사가 수행 됩니다.|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
-|MetaDataCreate_Operation|`<source_table>`: 작업에 대 한 원본 테이블입니다.<br /><br /> `<destionation_table>`: 작업에 대 한 대상 테이블입니다.|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`: 참조 `<location>` 위에 있습니다.<br /><br /> `<sql_operation>`: 노드에서 수행할 수 있는 SQL 명령을 식별 합니다.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
-|RemoteOnOperation|`<DestinationCatalog>`: 대상 카탈로그입니다.<br /><br /> `<DestinationSchema>`: DestinationCatalog에 대상 스키마입니다.<br /><br /> `<DestinationTableName>`: "TableName" 또는 대상 테이블의 이름입니다.<br /><br /> `<DestinationDatasource>`: 대상 데이터 원본의 이름입니다.<br /><br /> `<Username>`및 `<Password>`: 이러한 필드는 사용자 이름 및 대상에 대 한 암호 필요할 수 있습니다를 나타냅니다.<br /><br /> `<CreateStatement>`테이블 만들기: 대상 데이터베이스에 대 한 문입니다.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
-|RETURN|`<resultset>`: 결과 집합에 대 한 식별자입니다.|`<resultset>RS_19</resultset>`|  
-|RND_ID|`<identifier>`: 생성 된 개체에 대 한 식별자입니다.|`<identifier>TEMP_ID_260</identifier>`|  
+|BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE 및 TRIM_MOVE|이러한 특성이 있는 `<operation_cost>` 요소입니다. 로컬 작업만 반영하는 값은 다음과 같습니다.<br /><br /> -   *cost*는 로컬 연산자 비용이며, 작업 실행에 대한 예상 시간(밀리초)을 표시합니다.<br />-   *accumulative_cost*는 병렬 작업에 대한 합계 값을 포함하여 계획에 표시된 모든 작업의 합계(밀리초)입니다.<br />-   *average_rowsize*는 작업 중에 검색되고 전달된 행의 예상 평균 행 크기(바이트)입니다.<br />-   *output_rows*는 출력(노드) 카디널리티이며, 출력 행 수를 표시합니다.<br /><br /> `<location>`: 작업이 발생할 노드 또는 배포입니다. 옵션은 "Control", "ComputeNode", "AllComputeNodes", "AllDistributions", "SubsetDistributions", "Distribution" 및 "SubsetNodes"입니다.<br /><br /> `<source_statement>`: 순서 섞기 이동에 대한 원본 데이터입니다.<br /><br /> `<destination_table>`: 데이터 이동의 대상이 되는 내부 임시 테이블입니다.<br /><br /> `<shuffle_columns>`: (SHUFFLE_MOVE 작업에만 적용 가능). 임시 테이블에 대한 배포 열로 사용할 하나 이상의 열입니다.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
+|CopyOperation|`<operation_cost>`: 위의 `<operation_cost>` 참조<br /><br /> `<DestinationCatalog>`: 대상 노드 또는 노드<br /><br /> `<DestinationSchema>`: DestinationCatalog의 대상 스키마<br /><br /> `<DestinationTableName>`: 대상 테이블의 이름 또는 "TableName"<br /><br /> `<DestinationDatasource>`: 대상 데이터 원본의 이름 또는 연결 정보<br /><br /> `<Username>` 및 `<Password>`: 대상에 대한 사용자 이름과 암호가 필요할 수 있음을 나타냅니다.<br /><br /> `<BatchSize>`: 복사 작업에 대한 일괄 처리 크기<br /><br /> `<SelectStatement>`: 복사를 수행하는 데 사용되는 select 문<br /><br /> `<distribution>`: 복사가 수행되는 배포|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
+|MetaDataCreate_Operation|`<source_table>`: 작업에 대한 원본 테이블<br /><br /> `<destionation_table>`: 작업에 대한 대상 테이블|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
+|ON|`<location>`: 위의 `<location>` 참조<br /><br /> `<sql_operation>`: 노드에서 수행할 SQL 명령을 식별합니다.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|RemoteOnOperation|`<DestinationCatalog>`: 대상 카탈로그<br /><br /> `<DestinationSchema>`: DestinationCatalog의 대상 스키마<br /><br /> `<DestinationTableName>`: 대상 테이블의 이름 또는 "TableName"<br /><br /> `<DestinationDatasource>`: 대상 데이터 원본의 이름<br /><br /> `<Username>` 및 `<Password>`: 대상에 대한 사용자 이름과 암호가 필요할 수 있음을 나타냅니다.<br /><br /> `<CreateStatement>`: 대상 데이터베이스에 대한 테이블 생성 문|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
+|RETURN|`<resultset>`: 결과 집합에 대한 식별자|`<resultset>RS_19</resultset>`|  
+|RND_ID|`<identifier>`: 만든 개체에 대한 식별자|`<identifier>TEMP_ID_260</identifier>`|  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
- **설명** 에 적용할 수 *최적화할 수 있는* 쿼리에만 개선 하거나 수정할 수 있는 쿼리는 결과에 따라는 **설명** 명령입니다. 지원 되는 **설명** 위에 명령이 나와 있습니다. 사용 하려고 하면 **설명** 유형 오류를 반환 하거나 쿼리 echo 지원 되지 않는 쿼리를 사용 합니다.  
+ **EXPLAIN**은 **EXPLAIN** 명령의 결과에 따라 향상되거나 수정될 수 있는 *최적화 가능* 쿼리에만 적용할 수 있습니다. 지원되는 **EXPLAIN** 명령은 위에 나와 있습니다. 지원되지 않는 쿼리 유형에서 **EXPLAIN**을 사용하려고 하면 오류를 반환하거나 쿼리를 에코합니다.  
   
- **설명** 사용자 트랜잭션에서 지원 되지 않습니다.  
+ **EXPLAIN**은 사용자 트랜잭션에서 지원되지 않습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제와 **설명** 에서 명령을 실행 한 **선택** 문 및 XML 결과입니다.  
+ 다음 예제에서는 **SELECT** 문에서 실행되는 **EXPLAIN** 명령과 XML 결과를 보여 줍니다.  
   
- **설명 문을 전송**  
+ **EXPLAIN 문 제출**  
   
- 이 예제에 대 한 전송 된 명령을 사용합니다.  
+ 이 예제에 대해 제출되는 명령은 다음과 같습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,21 +118,21 @@ EXPLAIN
 GO  
 ```  
   
- 사용 하 여 문을 실행 한 후의 **설명** 옵션, 메시지 탭 야기할 제목이 한 줄 **설명**, XML 텍스트로 시작 하 고 `\<?xml version="1.0" encoding="utf-8"?>` XML에 전체 텍스트 열을 클릭는 XML 창입니다. 다음 설명은 더 잘 이해 하려면 SSDT에 줄 번호의 표시 설정 해야 합니다.  
+ **EXPLAIN** 옵션을 사용하여 명령문이 실행되면, 메시지 탭에 **설명**이라는 제목의 한 줄이 표시되고 `\<?xml version="1.0" encoding="utf-8"?>` XML 텍스트로 시작합니다. XML을 클릭하여 XML 창에서 전체 텍스트를 엽니다. 다음 주석을 더 잘 이해하려면 SSDT에서 줄 번호 표시를 설정해야 합니다.  
   
-#### <a name="to-turn-on-line-numbers"></a>줄 번호를 설정 하려면  
+#### <a name="to-turn-on-line-numbers"></a>줄 번호를 설정하려면  
   
-1.  에 표시 되는 출력으로는 **설명** 탭에서 SSDT는 **도구** 메뉴를 선택 **옵션**합니다.  
+1.  **설명** 탭 SSDT에 출력이 표시되면 **도구** 메뉴에서 **옵션**을 선택합니다.  
   
-2.  확장은 **텍스트 편집기** 섹션에서 확장 **XML**, 클릭 하 고 **일반**합니다.  
+2.  **텍스트 편집기** 섹션을 펼치고, **XML**을 펼친 다음, **일반**을 클릭합니다.  
   
-3.  에 **디스플레이** 영역에서 확인 **줄 번호**합니다.  
+3.  **표시** 영역에서 **줄 번호**를 확인합니다.  
   
 4.  **확인**을 클릭합니다.  
   
- **설명 출력 예**  
+ **EXPLAIN 출력 예제**  
   
- XML 결과 **설명** 켜져 행 번호로 명령입니다.  
+ 행 번호가 켜져 있는 **EXPLAIN** 명령의 XML 결과는 다음과 같습니다.  
   
 ```  
 1  \<?xml version="1.0" encoding="utf-8"?>  
@@ -282,31 +282,31 @@ GO
   
 ```  
   
- **설명 출력의 의미**  
+ **EXPLAIN 출력의 의미**  
   
- 위의 출력 144 번호가 매겨진된 줄을 포함합니다. 이 쿼리의 출력 약간 다를 수 있습니다. 다음 목록에는 중요 한 섹션을 설명합니다.  
+ 위의 출력에는 번호가 매겨진 144개의 줄이 포함되어 있습니다. 이 쿼리의 출력은 약간 다를 수 있습니다. 다음 목록은 중요 섹션을 설명합니다.  
   
--   3-16 줄에는 분석 되는 쿼리에 대 한 설명을 제공 합니다.  
+-   3~16번 줄: 분석되는 쿼리에 대한 설명을 제공합니다.  
   
--   줄 17, 전체 작업 개수 9가 되도록 지정 합니다. 단어를 검색 하 여 각 작업의 시작을 찾을 수 있습니다 **dsql_operation**합니다.  
+-   17번 줄: 총 작업 수를 9개로 지정합니다. **dsql_operation** 단어를 찾아서 각 작업의 시작을 찾을 수 있습니다.  
   
--   18 줄 1 작업을 시작 합니다. 18, 19 줄 있음을 **RND_ID** 작업 개체 설명에 대 한 사용 될 ID 난수 만들어집니다. 위의 출력에 설명 된 개체는 **TEMP_ID_16893**합니다. 프로그램 번호가 달라질 수 있습니다.  
+-   18번 줄: 작업 1을 시작합니다. 18번 및 19번 줄: **RND_ID** 작업에서 개체 설명에 사용할 임의의 ID 번호를 생성함을 나타냅니다. 위의 출력에서 설명하는 개체는 **TEMP_ID_16893**입니다. 숫자가 다를 수도 있습니다.  
   
--   20 줄 2 작업을 시작합니다. 줄부터 25 21: 모든 계산 노드, 라는 임시 테이블을 만들어 **TEMP_ID_16893**합니다.  
+-   20번 줄: 작업 2를 시작합니다. 21~25번 줄: 모든 계산 노드에서 **TEMP_ID_16893**이라는 임시 테이블을 만듭니다.  
   
--   줄 26 3 작업을 시작 합니다. 줄 27 37-: 데이터를 이동 **TEMP_ID_16893** 브로드캐스트 move를 사용 하 여 합니다. 각 계산 노드에 전송 하는 쿼리 제공 됩니다. 대상 테이블은 줄 37 지정 **TEMP_ID_16893**합니다.  
+-   26번 줄: 작업 3을 시작합니다. 27~37번 줄: 브로드캐스트 이동을 사용하여 데이터를 **TEMP_ID_16893**으로 이동합니다. 각 계산 노드로 보낸 쿼리가 제공됩니다. 37번 줄: 대상 테이블이 **TEMP_ID_16893**임을 지정합니다.  
   
--   38 번째 줄에는 4 작업이 시작 됩니다. 39-40 줄: 테이블에 대 한 임의 ID를 만듭니다. **TEMP_ID_16894** 위의 예에서 ID 번호입니다. 프로그램 번호가 달라질 수 있습니다.  
+-   38번 줄: 작업 4를 시작합니다. 39~40번 줄: 테이블에 대한 임의 ID를 만듭니다. 위의 예제에서 **TEMP_ID_16894**는 ID 번호입니다. 숫자가 다를 수도 있습니다.  
   
--   줄 41 5 작업을 시작 합니다. 줄 46-42: 라는 임시 테이블을 만들어 모든 노드에서 **TEMP_ID_16894**합니다.  
+-   41번 줄: 작업 5를 시작합니다. 42~46번 줄: 모든 노드에서 **TEMP_ID_16894**라는 임시 테이블을 만듭니다.  
   
--   줄 47 6 작업을 시작 합니다. 48 91 사이의 줄: 다양 한 테이블에서 데이터를 이동 (포함 하 여 **TEMP_ID_16893**) 테이블에 **TEMP_ID_16894**, 한 순서 섞기를 사용 하 여 이동 작업을 수행 합니다. 각 계산 노드에 전송 하는 쿼리 제공 됩니다. 줄 90으로 대상 테이블을 지정 합니다. **TEMP_ID_16894**합니다. 줄 91 열을 지정합니다.  
+-   47번 줄: 작업 6을 시작합니다. 48~91번 줄: 순서 섞기 이동 작업을 사용하여 다양한 테이블(**TEMP_ID_16893** 포함)에서 **TEMP_ID_16894** 테이블로 데이터를 이동합니다. 각 계산 노드로 보낸 쿼리가 제공됩니다. 90번 줄: 대상 테이블을 **TEMP_ID_16894**로 지정합니다. 91번 줄: 열을 지정합니다.  
   
--   줄 92 7 작업을 시작 합니다. 97 통해 줄 93: 모든 계산 노드, 임시 테이블을 삭제 **TEMP_ID_16893**합니다.  
+-   92번 줄: 작업 7을 시작합니다. 93~97번 줄: 모든 계산 노드에서 **TEMP_ID_16893** 임시 테이블을 삭제합니다.  
   
--   줄 98 8 번 작업을 시작합니다. 135 통해 줄 99: 클라이언트에 결과 반환 합니다. 결과를 얻으려면 제공 된 쿼리를 사용 합니다.  
+-   98번 줄: 작업 8을 시작합니다. 99~135번 줄: 결과를 클라이언트로 반환합니다. 제공된 쿼리를 사용하여 결과를 가져옵니다.  
   
--   줄 136 9 작업을 시작 합니다. 줄 137 140-: 임시 테이블을 삭제할 모든 노드에서 **TEMP_ID_16894**합니다.  
+-   136번 줄: 작업 9를 시작합니다. 137~140번 줄: 모든 노드에서 **TEMP_ID_16894** 임시 테이블을 삭제합니다.  
   
   
 

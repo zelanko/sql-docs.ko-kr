@@ -1,5 +1,5 @@
 ---
-title: "모든 (Transact SQL) | Microsoft Docs"
+title: ANY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -38,6 +38,6 @@ ms.lasthandoff: 01/25/2018
 # <a name="any-transact-sql"></a>ANY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  스칼라 값을 단일 열 집합 값과 비교합니다. 자세한 내용은 참조 [일부 &#124; 모든 &#40; Transact SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
+  스칼라 값을 단일 열 집합 값과 비교합니다. 자세한 내용은 [SOME &#124; ANY&#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)을 참조하세요.  
   
   

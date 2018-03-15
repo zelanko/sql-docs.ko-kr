@@ -1,5 +1,5 @@
 ---
-title: DROP ENDPOINT (TRANSACT-SQL) | Microsoft Docs
+title: DROP ENDPOINT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,11 +53,11 @@ DROP ENDPOINT endPointName
  *endPointName*  
  제거할 끝점의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용자 트랜잭션 내에서 ENDPOINT DDL 문을 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
- 사용자의 구성원 이어야 합니다.는 **sysadmin** 고정 서버 역할, 끝점, 소유자 또는 해당 끝점에 대 한 CONTROL 권한이 부여 된 합니다.  
+## <a name="permissions"></a>사용 권한  
+ **sysadmin** 고정 서버 역할의 멤버 또는 끝점 소유자이거나 끝점에 대한 CONTROL 권한을 부여받아야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이전에 만든 `sql_endpoint`라는 끝점을 제거합니다.  
@@ -66,7 +66,7 @@ DROP ENDPOINT endPointName
 DROP ENDPOINT sql_endpoint;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

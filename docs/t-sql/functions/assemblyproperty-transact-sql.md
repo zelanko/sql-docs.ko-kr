@@ -1,5 +1,5 @@
 ---
-title: ASSEMBLYPROPERTY (Transact SQL) | Microsoft Docs
+title: ASSEMBLYPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -50,9 +50,9 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 어셈블리의 이름입니다.
   
 *property_name*  
-정보를 검색할 속성의 이름입니다. *property_name* 다음 값 중 하나일 수 있습니다.
+정보를 검색할 속성의 이름입니다. *property_name*은 다음 값 중 하나일 수 있습니다.
   
-|Value|Description|  
+|값|Description|  
 |---|---|
 |**CultureInfo**|어셈블리의 로캘입니다.|  
 |**PublicKey**|어셈블리의 공개 키 또는 공개 키 토큰입니다.|  
@@ -69,7 +69,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 **sql_variant**
   
 ## <a name="examples"></a>예  
-다음 예에서는 `HelloWorld` 어셈블리가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]데이터베이스에 등록되어 있다고 가정합니다. 자세한 내용은 참조 [Hello World 예제](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)합니다.
+다음 예에서는 `HelloWorld` 어셈블리가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]데이터베이스에 등록되어 있다고 가정합니다. 자세한 내용은 [Hello World 예제](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)를 참조하세요.
   
 ```sql
 USE AdventureWorks2012;  
@@ -77,7 +77,7 @@ GO
 SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [CREATE ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
 [DROP ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)
   

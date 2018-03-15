@@ -1,5 +1,5 @@
 ---
-title: "백분율 문자 (와일드 카드-하나 이상의 문자 일치) (Transact SQL) | Microsoft Docs"
+title: "백분율 문자(와일드카드 - 일치하는 문자)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ WHERE FirstName LIKE 'Dan%';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [마찬가지로 &#40; Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [LIKE&#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
- [&#91; &#93; (와일드 카드-하나 이상의 문자 일치)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; ^ &#93; (와일드 카드-일치 하지 않는 문자)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [&#91; &#93;(와일드카드 - 일치하는 문자)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+  [&#91;^&#93;(와일드카드 - 일치하지 않는 문자)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
  [_(와일드카드 - 문자 하나와 일치)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   

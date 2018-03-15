@@ -1,5 +1,5 @@
 ---
-title: "ToString (geometry 데이터 형식) | Microsoft Docs"
+title: "ToString(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -43,17 +43,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **nvarchar (max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **nvarchar(max)**  
   
  CLR 반환 형식: **SqlString**  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 메서드는 Null 인스턴스가 호출되면 문자열 "Null"을 반환합니다.  
   
  Null이 아닌 인스턴스에서 이 메서드는 `AsTextZM().`을 사용하는 것과 동일합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 만들기는 `LineString` 인스턴스 및 사용 하 여 `ToString()` 를 인스턴스의 텍스트 설명을 인출 합니다.  
+ 다음 예에서는 `LineString` 인스턴스를 만들고 `ToString()`을 사용하여 인스턴스의 텍스트 설명을 인출합니다.  
   
 ```  
 DECLARE @g geometry;  
@@ -61,8 +61,8 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Stastext&#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
+## <a name="see-also"></a>참고 항목  
+ [STAsText&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
  [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

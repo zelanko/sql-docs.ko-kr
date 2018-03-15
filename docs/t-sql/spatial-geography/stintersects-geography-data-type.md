@@ -1,5 +1,5 @@
 ---
-title: "STIntersects (geography 데이터 형식) | Microsoft Docs"
+title: "STIntersects(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersects-geography-data-type"></a>STIntersects(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  1을 반환는 **geography** 다른 인스턴스와 교차 **geography** 인스턴스. 그렇지 않으면 0을 반환합니다.  
+  **geography** 인스턴스가 다른 **geography** 인스턴스와 교차할 수 있는 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *other_geography*  
- 다른 **geography** 인스턴스와 비교할 인스턴스 `STIntersects()` 가 호출 됩니다.  
+ `STIntersects()`를 호출할 인스턴스와 비교할 다른 **geography** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **비트**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 항상 반환 **NULL** 경우의 spatial reference Id (Srid)는 **geography** 인스턴스 일치 하지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 **geography** 인스턴스의 SRID(spatial Reference IDs)가 일치하지 않으면 항상 **NULL**을 반환합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `STIntersects()`를 사용하여 두 `geography` 인스턴스가 서로 교차하는지 확인합니다.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  END;
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Z (geometry 데이터 형식) | Microsoft Docs"
+title: "Z(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]형식: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
  CLR 형식: **SqlDouble**  
   
-## <a name="remarks"></a>주의  
- 이 속성의 값 geometry 인스턴스는 지점 없으면 null이 됩니다 모든 **가리킨** 인스턴스에 대해 설정 되지 않은입니다.  
+## <a name="remarks"></a>Remarks  
+ geometry 인스턴스가 점이 아닌 경우 및 해당 값이 설정되지 않은 모든 **Point** 인스턴스의 경우 이 속성의 값은 Null입니다.  
   
  이 속성은 읽기 전용입니다.  
   
@@ -64,9 +64,9 @@ SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [M &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [Astextzm&#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
+## <a name="see-also"></a>참고 항목  
+ [M&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [AsTextZM&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
  [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STOverlaps (geography 데이터 형식) | Microsoft Docs"
+title: "STOverlaps(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  1을 반환는 **geography** 공간적으로 겹치면 다른 **geography** 인스턴스 또는 그렇지 않은 경우 0입니다.  
+  **geography** 인스턴스가 다른 **geography** 인스턴스와 공간적으로 겹치면 1을 반환하고 그렇지 않으면 0을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,18 +42,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *other_geography*  
- 다른 **geography** 인스턴스와 비교할 인스턴스 `STOverlaps()` 가 호출 됩니다.  
+ `STOverlaps()`가 호출되는 인스턴스와 비교할 다른 **geography** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **비트**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>주의  
- 항상 null이 반환 하는 경우의 spatial reference Id (Srid)는 **geography** 인스턴스 일치 하지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 **geography** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 `STOverlaps()` 두 테스트에 **geography** 겹쳐진 부분에 대 한 인스턴스.  
+ 다음 예에서는 `STOverlaps()`를 사용하여 두 **geography** 인스턴스가 겹치는지 테스트합니다.  
   
 ```  
 DECLARE @g geography;  

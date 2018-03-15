@@ -1,5 +1,5 @@
 ---
-title: "- (음수) (Transact SQL) | Microsoft Docs"
+title: "- (음수) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---negative"></a>단항 연산자-음수
+# <a name="unary-operators---negative"></a>단항 연산자 - 음수
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   숫자 식의 음수 값을 반환합니다(단항 연산자). 단항 연산자는 숫자 데이터 형식 범주에 속하는 데이터 형식의 한 식에 대해서만 연산을 수행합니다.   
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *numeric_expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) 시간 범주를 확인 하 고 날짜를 제외 하 고 숫자 데이터 형식 범주의 데이터 형식 중 하나입니다.  
+ 숫자 데이터 형식 범주에서 날짜 및 시간 범주를 제외한 임의의 데이터 형식으로 된 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
- 데이터 형식을 반환 *numeric_expression*한다는 점을 제외 하는 부호 없는 **tinyint** 식 승격 됩니다 부호 있는 **smallint** 결과입니다.  
+ *numeric_expression*의 데이터 형식을 반환합니다. 단, 부호 없는 **tinyint** 식은 부호 있는 **smallint** 결과로 승격됩니다.  
   
 ## <a name="examples"></a>예  
   
@@ -109,10 +109,10 @@ VariableValue NegativeValue
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-returning-the-negative-of-a-positive-constant"></a>3. 양의 상수의 음수를 반환합니다.  
- 다음 예에서는 양수 상수의 음수를 반환합니다.  
+### <a name="c-returning-the-negative-of-a-positive-constant"></a>3. 양의 상수의 음수 반환  
+ 다음 예제에서는 양의 상수의 음수를 반환합니다.  
   
 ```  
 USE ssawPDW;  
@@ -126,8 +126,8 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 -17  
 ```  
   
-### <a name="d-returning-the-positive-of-a-negative-constant"></a>4. 음수 상수의 양수를 반환합니다.  
- 다음 예에서는 음수 상수의 양수를 반환합니다.  
+### <a name="d-returning-the-positive-of-a-negative-constant"></a>4. 음의 상수의 양수 반환  
+ 다음 예제에서는 음의 상수의 양수를 반환합니다.  
   
 ```  
 USE ssawPDW;  
@@ -141,8 +141,8 @@ SELECT TOP (1) – ( - 17) FROM DimEmployee;
 17  
 ```  
   
-### <a name="e-returning-the-negative-of-a-column"></a>5. 열의 음수를 반환합니다.  
- 다음 예의 부정을 반환는 `BaseRate` 각 직원에 대 한 값은 `dimEmployee` 테이블입니다.  
+### <a name="e-returning-the-negative-of-a-column"></a>5. 열의 음수 반환  
+ 다음 예에서는 `dimEmployee` 테이블의 각 직원에 대해 `BaseRate` 값의 음수를 반환합니다.  
   
 ```  
 USE ssawPDW;  
@@ -150,10 +150,10 @@ USE ssawPDW;
 SELECT - BaseRate FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: DROP MESSAGE TYPE (Transact SQL) | Microsoft Docs
+title: DROP MESSAGE TYPE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,10 +54,10 @@ DROP MESSAGE TYPE message_type_name
  *message_type_name*  
  삭제할 메시지 유형의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  메시지 유형 삭제 권한은 기본적으로 메시지 유형의 소유자, db_ddladmin 또는 db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  계약이 메시지 유형을 참조하는 경우에는 메시지 유형을 삭제할 수 없습니다.  
   
 ## <a name="examples"></a>예  
@@ -67,9 +67,9 @@ DROP MESSAGE TYPE message_type_name
 DROP MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense] ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER MESSAGE type&#40; Transact SQL &#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [메시지 유형 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER MESSAGE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [CREATE MESSAGE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

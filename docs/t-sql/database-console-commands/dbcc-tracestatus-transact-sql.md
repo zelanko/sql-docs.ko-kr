@@ -1,5 +1,5 @@
 ---
-title: DBCC TRACESTATUS (Transact SQL) | Microsoft Docs
+title: DBCC TRACESTATUS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
   
 ## <a name="arguments"></a>인수  
 *trace#*  
-상태를 표시할 추적 플래그의 번호입니다. 경우 *trace #*, 및-1이 지정 되지 않은 경우 세션에 대해 사용할 수 있는 추적 플래그를 모두 표시 됩니다.
+상태를 표시할 추적 플래그의 번호입니다. *trace#* 및 -1을 지정하지 않으면 세션에 대해 설정된 모든 추적 플래그가 표시됩니다.
   
 *n*  
 여러 개의 추적 플래그를 지정할 수 있음을 나타내는 자리 표시자입니다.
   
 -1  
-전역으로 설정된 추적 플래그의 상태를 표시합니다. 없이-1을 지정 하면 *trace #*, 사용 하도록 설정 된 모든 전역 추적 플래그가 표시 됩니다.
+전역으로 설정된 추적 플래그의 상태를 표시합니다. *trace#*없이 -1을 지정하면 설정된 모든 전역 추적 플래그가 표시됩니다.
   
 WITH NO_INFOMSGS  
 심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.
@@ -75,12 +75,12 @@ WITH NO_INFOMSGS
 |**Global**|추적 플래그가 전역으로 설정되었는지 여부를 나타냅니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**세션**|추적 플래그가 해당 세션에 대해서만 설정되었는지 여부를 나타냅니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
   
-DBCC TRACESTATUS는 추적 플래그 번호에 대한 열과 상태에 대한 열을 반환하여 추적 플래그의 ON(1) 또는 OFF(0) 여부를 표시합니다. 추적 플래그 번호에 대 한 열 머리글 **전역 추적 플래그** 또는 **세션 추적 플래그**전역 또는 세션 추적 플래그의 상태를 확인 하는지 여부에 따라 합니다.
+DBCC TRACESTATUS는 추적 플래그 번호에 대한 열과 상태에 대한 열을 반환하여 추적 플래그의 ON(1) 또는 OFF(0) 여부를 표시합니다. 추적 플래그 번호의 열 머리글은 상태를 확인할 추적 플래그가 전역 추적 플래그인지 또는 세션 추적 플래그인지 여부에 따라 **Global Trace Flag** 또는 **Session Trace Flag**가 됩니다.
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 세션 및 전역이라는 두 가지 유형의 추적 플래그가 있습니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **public** 역할의 멤버 자격이 필요합니다.
   
 ## <a name="examples"></a>예  
@@ -112,7 +112,7 @@ DBCC TRACESTATUS();
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACEON&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  

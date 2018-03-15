@@ -1,5 +1,5 @@
 ---
-title: "제어 흐름 | Microsoft Docs"
+title: "흐름 제어 | Microsoft 문서 도구"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -42,13 +42,13 @@ ms.lasthandoff: 01/25/2018
 |[GOTO](../../t-sql/language-elements/goto-transact-sql.md) *label*|[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
 |[IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
   
-## <a name="see-also"></a>관련 항목:  
- [대/소문자 &#40; Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [슬래시 별 &#40; 블록 주석 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
- [-&#40; 설명 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [슬래시 별&#40;주석 블록&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
+ [--&#40;주석&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [PRINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [Raiserror&#40; Transact SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

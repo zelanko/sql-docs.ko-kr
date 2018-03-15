@@ -1,5 +1,5 @@
 ---
-title: "끝점 (Transact SQL) 만들기 | Microsoft Docs"
+title: CREATE ENDPOINT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  클라이언트 응용 프로그램에 사용할 수 있는 메서드를 포함하여 끝점을 만들고 속성을 정의합니다. 관련된 사용 권한 정보를 참조 하십시오. [GRANT 끝점 사용 권한 &#40; Transact SQL &#41; ](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+  클라이언트 응용 프로그램에 사용할 수 있는 메서드를 포함하여 끝점을 만들고 속성을 정의합니다. 관련 사용 권한에 대한 자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
   
  CREATE ENDPOINT의 구문은 논리적으로 다음과 같이 두 부분으로 나눌 수 있습니다.  
   
@@ -58,9 +58,9 @@ ms.lasthandoff: 01/25/2018
   
 -   두 번째 부분은 FOR 절로 시작합니다.  
   
-     이 부분에서는 끝점에서 지원되는 페이로드를 정의합니다. 페이로드는 지원 되는 여러 가지 유형 중 하나일 수 있습니다: [!INCLUDE[tsql](../../includes/tsql-md.md)], service broker, 미러링 데이터베이스. 또한 이 부분에는 언어별 정보도 포함됩니다.  
+     이 부분에서는 끝점에서 지원되는 페이로드를 정의합니다. 지원되는 페이로드 유형인 [!INCLUDE[tsql](../../includes/tsql-md.md)], Service Broker, 데이터베이스 미러링 중에서 하나를 정의할 수 있습니다. 또한 이 부분에는 언어별 정보도 포함됩니다.  
   
-> **참고:** 네이티브 XML 웹 서비스 (SOAP/HTTP 끝점)에서 제거 되었던 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다.  
+> **참고:**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 네이티브 XML 웹 서비스(SOAP/HTTP 엔드포인트)가 제거되었습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,14 +118,14 @@ FOR DATABASE_MIRRORING (
  *endPointName*  
  만들어지는 끝점에 할당할 이름입니다. 끝점을 업데이트하거나 삭제할 때 사용합니다.  
   
- 권한 부여 *로그인*  
+ AUTHORIZATION *로그인*  
  새로 만들어지는 끝점 개체의 소유권을 할당할 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Windows 로그인을 지정합니다. AUTHORIZATION이 지정되지 않은 경우 기본적으로 호출자가 새로 만들어지는 개체의 소유자가 됩니다.  
   
- 권한 부여를 지정 하 여 소유권을 할당 하려면 호출자에 게 있어야 대 한 IMPERSONATE 권한이 지정 된 *로그인*합니다.  
+ AUTHORIZATION을 지정하여 소유권을 할당하려면 호출자는 지정된 *login*에 대해 IMPERSONATE 권한이 있어야 합니다.  
   
- 소유권을 다시 할당 참조 [ALTER endpoint&#40; Transact SQL &#41; ](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ 소유권을 다시 할당하려면 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)를 참조하세요.  
   
- 상태  **=**  {시작 됨 | **STOPPED** | (를) 사용 안 함  
+ STATE **=** { STARTED | **STOPPED** | DISABLED }  
  끝점이 생성될 때의 끝점 상태입니다. 끝점을 만들 때 상태를 지정하지 않으면 STOPPED가 기본값이 됩니다.  
   
  STARTED  
@@ -134,10 +134,10 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  끝점이 해제되었습니다. 이 상태일 경우 서버는 포트 요청을 수신하지만 오류를 클라이언트에 반환합니다.  
   
- **중지 됨**  
+ **STOPPED**  
  끝점이 중지되었습니다. 이 상태에서 서버는 끝점 포트로의 수신을 대기하거나 끝점을 사용하기 위해 시도된 요청에 응답하지 않습니다.  
   
- 상태를 변경 하려면 사용 [ALTER endpoint&#40; Transact SQL &#41; ](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ 상태를 변경하려면 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)를 사용하세요.  
   
  AS { TCP }  
  사용할 전송 프로토콜을 지정합니다.  
@@ -159,14 +159,14 @@ FOR DATABASE_MIRRORING (
   
  정규화된 도메인 이름(`ALTER DATABASE SET PARTNER = partner_IP_address` 또는 `ALTER DATABASE SET WITNESS = witness_IP_address`) 대신 IP 주소를 사용하여 데이터베이스 미러링을 구성하는 경우 미러링 끝점을 만들 때 `LISTENER_IP =IP_address` 대신 `LISTENER_IP=ALL`를 지정해야 합니다.  
   
- **SERVICE_BROKER 및 DATABASE_MIRRORING 옵션**  
+ **SERVICE_BROKER and DATABASE_MIRRORING 옵션**  
   
  다음 AUTHENTICATION 및 ENCRYPTION 인수는 SERVICE_BROKER 및 DATABASE_MIRRORING 옵션에 사용할 수 있는 공통 인수입니다.  
   
 > [!NOTE]  
 >  SERVICE_BROKER와 관련된 옵션은 이 섹션 뒷부분의 "SERVICE_BROKER 옵션"을 참조하십시오. DATABASE_MIRRORING과 관련된 옵션은 이 섹션 뒷부분의 "DATABASE_MIRRORING 옵션"을 참조하십시오.  
   
- 인증  **=**  \<authentication_options >이 끝점에 대 한 연결에 대 한 TCP/IP 인증 요구 사항을 지정 합니다. 기본값은 WINDOWS입니다.  
+ AUTHENTICATION **=** \<authentication_options> 이 엔드포인트에 대한 연결의 TCP/IP 인증 요구 사항을 지정합니다. 기본값은 WINDOWS입니다.  
   
  지원되는 인증 방법에는 NTLM 또는 Kerberos가 있으며 둘 다 사용할 수도 있습니다.  
   
@@ -175,21 +175,21 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [{NTLM | KERBEROS | **NEGOTIATE** }]  
+ **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  끝점이 인증을 위해 Windows 인증 프로토콜을 사용하여 연결하도록 지정합니다. 기본값입니다.  
   
  인증 방법(NTLM 또는 KERBEROS)을 지정한 경우 항상 해당 방법이 인증 프로토콜로 사용됩니다. 기본값인 NEGOTIATE를 적용하면 끝점이 Windows 협상 프로토콜을 사용하여 NTLM이나 Kerberos를 선택합니다.  
   
- 인증서 *certificate_name*  
- 으로 지정 된 인증서를 사용 하 여 연결을 인증 하는 끝점 임을 지정 *certificate_name* 권한 부여에 대 한 id를 설정 합니다. 먼 끝점에는 지정된 인증서의 개인 키와 일치하는 공개 키를 가진 인증서가 있어야 합니다.  
+ CERTIFICATE *certificate_name*  
+ 엔드포인트가 *certificate_name*에 지정된 인증서를 사용하여 인증용 ID를 설정하고 연결을 인증하도록 지정합니다. 먼 끝점에는 지정된 인증서의 개인 키와 일치하는 공개 키를 가진 인증서가 있어야 합니다.  
   
- WINDOWS [{NTLM | KERBEROS | **NEGOTIATE** }] 인증서 *certificate_name*  
+ WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Windows 인증을 사용하여 끝점이 연결을 시도하고 이 시도가 실패하면 지정한 인증서를 사용하여 연결을 시도하도록 지정합니다.  
   
- 인증서 *certificate_name* WINDOWS [{NTLM | KERBEROS | **NEGOTIATE** }]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  지정한 인증서를 사용하여 끝점이 연결을 시도하고 이 시도가 실패하면 Windows 인증을 사용하여 연결을 시도하도록 지정합니다.  
   
- 암호화 = {사용 안 함 | 지원 | **REQUIRED** } [알고리즘 { **AES** | RC4 | AES R C 4 | RC4 AES}]  
+ ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
  프로세스에서 암호화를 사용할지 여부를 지정합니다. 기본값은 REQUIRED입니다.  
   
  DISABLED  
@@ -204,10 +204,10 @@ FOR DATABASE_MIRRORING (
  필요에 따라 다음과 같이 ALGORITHM 인수를 사용하여 끝점에 사용되는 암호화 형식을 지정할 수 있습니다.  
   
  **AES**  
- 끝점이 반드시 AES 알고리즘을 반드시 사용하도록 지정합니다. 이 대화 상자에서 기본 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.  
+ 끝점이 반드시 AES 알고리즘을 반드시 사용하도록 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상에서 기본값입니다.  
   
  RC4  
- 끝점이 반드시 RC4 알고리즘을 사용하도록 지정합니다. 이 통해 기본값 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]합니다.  
+ 끝점이 반드시 RC4 알고리즘을 사용하도록 지정합니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지 기본값입니다.  
   
 > [!NOTE]  
 >  RC4 알고리즘은 이전 버전과의 호환성을 위해서만 지원됩니다. 데이터베이스의 호환성 수준이 90 또는 100인 경우 새 자료는 RC4 또는 RC4_128로만 암호화할 수 있습니다. 이 옵션은 사용하지 않는 것이 좋습니다. 대신 AES 알고리즘 중 하나와 같은 새 알고리즘을 사용하십시오. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전에서 RC4 또는 RC4_128을 사용하여 암호화된 자료는 모든 호환성 수준에서 해독할 수 있습니다.  
@@ -227,7 +227,7 @@ FOR DATABASE_MIRRORING (
   
  다음은 SERVICE_BROKER 옵션에 대한 인수입니다.  
   
- MESSAGE_FORWARDING  **=**  {사용 | **비활성화** }  
+ MESSAGE_FORWARDING **=** { ENABLED | **DISABLED** }  
  끝점에서 수신한 메시지가 다른 위치에 있는 서비스에 관련된 것일 경우 이 메시지를 전달할지 여부를 결정합니다.  
   
  ENABLED  
@@ -243,7 +243,7 @@ FOR DATABASE_MIRRORING (
   
  다음은 DATABASE_MIRRORING 옵션에 대한 인수입니다.  
   
- 역할  **=**  {미러링 모니터 서버 | 파트너 | 모든}  
+ ROLE **=** { WITNESS | PARTNER | ALL }  
  데이터베이스 미러링 역할 또는 끝점이 지원하는 역할을 지정합니다.  
   
  WITNESS  
@@ -258,24 +258,24 @@ FOR DATABASE_MIRRORING (
  ALL  
  미러링 프로세스에서 끝점이 미러링 모니터 및 파트너 역할을 모두 수행하도록 지정합니다.  
   
- 이러한 역할에 대 한 자세한 내용은 참조 하십시오. [데이터베이스 미러링 &#40; SQL Server &#41; ](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ 이러한 역할에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
 > [!NOTE]  
 >  DATABASE_MIRRORING에 대한 기본 포트는 없습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ENDPOINT DDL 문은 사용자 트랜잭션 내에서 실행할 수 없습니다. 활성 스냅숏 격리 수준 트랜잭션이 변경되는 끝점을 사용하는 경우에도 ENDPOINT DDL 문은 실패하지 않습니다.  
   
  ENDPOINT에 대한 요청을 실행할 수 있는 사람은 다음과 같습니다.  
   
--   멤버 **sysadmin** 고정된 서버 역할  
+-   **sysadmin** 고정 서버 역할의 멤버  
   
 -   끝점의 소유자  
   
 -   끝점에 대한 CONNECT 권한이 부여된 사용자 또는 그룹  
   
-## <a name="permissions"></a>Permissions  
- CREATE ENDPOINT 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
+## <a name="permissions"></a>사용 권한  
+ CREATE ENDPOINT 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 끝점 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
   
@@ -293,10 +293,10 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [DROP endpoint&#40; Transact SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

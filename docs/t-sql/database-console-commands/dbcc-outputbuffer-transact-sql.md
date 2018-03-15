@@ -1,5 +1,5 @@
 ---
-title: DBCC OUTPUTBUFFER (Transact SQL) | Microsoft Docs
+title: DBCC OUTPUTBUFFER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-현재 출력 버퍼를 16 진수와 ASCII 형식으로 지정 된 반환 *session_id*합니다.
+지정된 *session_id*의 현재 출력 버퍼를 16진수와 ASCII 형식으로 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +54,7 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
   
  *request_id*  
  현재 세션 내에서 검색할 정확한 요청(일괄 처리)입니다.  
- 다음 쿼리에서 반환 *request_id*:  
+ 다음 쿼리에서는 *request_id*를 반환합니다.  
   
 ```sql
 SELECT request_id   
@@ -68,8 +68,8 @@ WHERE session_id = @@spid;
  NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>주의  
-DBCC OUTPUTBUFFER는 지정된 된 클라이언트에 보낸 결과 표시 (*session_id*). 출력 스트림이 포함되지 않은 프로세스의 경우 오류 메시지가 반환됩니다.
+## <a name="remarks"></a>Remarks  
+DBCC OUTPUTBUFFER는 지정된 클라이언트(*session_id*)로 보낸 결과를 표시합니다. 출력 스트림이 포함되지 않은 프로세스의 경우 오류 메시지가 반환됩니다.
   
 DBCC OUTPUTBUFFER가 표시한 결과를 반환하는 실행된 문을 표시하려면 DBCC INPUTBUFFER를 실행합니다.
   
@@ -90,7 +90,7 @@ Output Buffer
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.
   
 ## <a name="examples"></a>예  
@@ -100,7 +100,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 DBCC OUTPUTBUFFER (52);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

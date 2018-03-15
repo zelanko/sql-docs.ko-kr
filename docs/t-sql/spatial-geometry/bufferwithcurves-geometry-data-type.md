@@ -1,5 +1,5 @@
 ---
-title: "BufferWithCurves (geometry 데이터 형식) | Microsoft Docs"
+title: "BufferWithCurves(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  반환은 **기 하 도형** 모든 세트를 나타내는 인스턴스 호출에서 거리가 가리키는 **기 하 도형** 인스턴스 보다 작거나 같음는 *거리* 매개 변수입니다.  
+  호출하는 **geometry** 인스턴스와의 거리가 *distance* 매개 변수보다 작거나 같은 모든 점의 집합을 나타내는 **geometry** 인스턴스를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,23 +42,23 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *distance*  
- 이 **float** 에서 수를 버퍼로 점과 되는 최대 거리를 나타내는 **기 하 도형** 인스턴스.  
+ 버퍼를 구성하는 점과 **geometry** 인스턴스 사이에 허용되는 최대 거리를 나타내는 **float**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
-SQL Server 반환 형식: **기 하 도형**  
+SQL Server 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
 ## <a name="exceptions"></a>예외  
- 다음 조건을 발생 시킵니다는 **ArgumentException**합니다.  
+ 다음 조건에서 **ArgumentException**이 발생합니다.  
   
 -   메서드에 매개 변수가 전달되지 않는 경우(예: `@g.BufferWithCurves()`)  
   
 -   숫자가 아닌 매개 변수가 메서드에 전달되는 경우(예: `@g.BufferWithCurves('a')`)  
   
--   **NULL** 등 메서드로 전달 됩니다`@g.BufferWithCurves(NULL)`  
+-   **NULL**이 `@g.BufferWithCurves(NULL)`과 같은 메서드로 전달됩니다  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 그림에서는 이 메서드가 반환하는 geometry 인스턴스의 예를 보여 줍니다.  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -68,16 +68,16 @@ SQL Server 반환 형식: **기 하 도형**
 |거리 값|유형 차원|반환되는 공간 유형|  
 |--------------------|---------------------|---------------------------|  
 |거리 < 0|0 또는 1|빈 **GeometryCollection** 인스턴스|  
-|거리 < 0|2 이상|A **CurvePolygon** 또는 **GeometryCollection** 음수 버퍼가 인스턴스. **참고:** 버퍼가 음수 이면 빈을 만들 수 있습니다 **GeometryCollection**|  
-|거리 = 0|모든 차원|호출의 복사본 **geometry** 인스턴스|  
+|거리 < 0|2 이상|음수 버퍼가 있는 **CurvePolygon** 또는 **GeometryCollection** 인스턴스입니다. **참고:** 버퍼가 음수이면 빈 **GeometryCollection** 인스턴스가 생성될 수도 있습니다.|  
+|거리 = 0|모든 차원|호출하는 **geometry** 인스턴스의 복사본|  
 |distance > 0|모든 차원|**CurvePolygon** 또는 **GeometryCollection** 인스턴스|  
   
 > [!NOTE]  
->  이후 *거리* 는 **float**, 매우 작은 값을 0으로 계산 될 수 있습니다. 이 경우 호출의 복사본 **geometry** 인스턴스가 반환 됩니다. 참조 [float 및 real &#40; Transact SQL &#41; ](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  *거리*가 **float**이므로 매우 작은 값은 0으로 계산될 수 있습니다. 이 경우 호출 **geometry** 인스턴스의 복사본이 반환됩니다. [float 및 real&#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)을 참조하세요.  
   
  버퍼가 음수이면 기하 도형의 경계에서 지정된 거리 내에 있는 모든 요소가 제거됩니다. 다음 그림에서는 음수 버퍼를 원의 옅은 음영이 있는 영역으로 표시합니다. 점선은 원래 다각형의 경계이며 실선은 결과 다각형의 경계입니다.  
   
- 경우는 **문자열** 매개 변수가 전달 메서드를 다음으로 변환 됩니다는 **float** 함수 이거나 throw 것는 `ArgumentException`합니다.  
+ **string** 매개 변수가 메서드에 전달되면 **float**로 변환되거나 `ArgumentException`가 발생합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -98,17 +98,17 @@ SQL Server 반환 형식: **기 하 도형**
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>3. 빈 GeometryCollection을 반환하고 매개 변수 값 < 0인 BufferWithCurves() 호출  
- 다음 예제에서는 어떤 일이 발생 하면는 *거리* 매개 변수가-2 인:  
+ 다음 예에서는 *distance* 매개 변수가 -2와 같을 때 생기는 결과를 보여 줍니다.  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- 이 **선택** 문에서 반환`GEOMETRYCOLLECTION EMPTY`  
+ 이 **SELECT** 문은 `GEOMETRYCOLLECTION EMPTY`를 반환합니다.  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>4. 매개 변수 값 = 0인 BufferWithCurves() 호출  
- 다음 예제에서는 호출의 복사본을 반환 **geometry** 인스턴스:  
+ 다음 예에서는 호출 **geometry** 인스턴스의 복사본을 반환합니다.  
   
 ```
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
@@ -116,7 +116,7 @@ SQL Server 반환 형식: **기 하 도형**
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>5. 매우 작고 0이 아닌 매개 변수 값으로 BufferWithCurves() 호출  
- 다음 예제에서는 또한 호출의 복사본을 반환 **geometry** 인스턴스:  
+ 다음 예에서도 호출 **geometry** 인스턴스의 복사본을 반환합니다.  
   
 ```
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
@@ -160,8 +160,8 @@ SQL Server 반환 형식: **기 하 도형**
  SELECT @g.BufferWithCurves(1.6).ToString();
  ```  
   
- 처음 두 **선택** 문은 반환는 `GeometryCollection` 않았기 때문에 인스턴스에 매개 변수 *거리* 보다 작거나 1/2 둘 사이의 거리 요소 (1 1) 및 (1 4). 세 번째 **선택** 문에서 반환은 `CurvePolygon` 두의 버퍼링 된 인스턴스가 요소 (1 1) 때문에 인스턴스 (1 4) 및 중첩 합니다.  
+ 처음 두 **SELECT** 문은 매개 변수 *distance*가 두 요소(1 1)과(1 4) 사이 거리의 1/2보다 작거나 같기 때문에 `GeometryCollection` 인스턴스를 반환합니다. 세 번째 **SELECT** 문은 두 요소(1 1)과(1 4)의 버퍼링된 인스턴스가 겹치기 때문에 `CurvePolygon` 인스턴스를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  

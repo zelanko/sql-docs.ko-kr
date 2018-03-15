@@ -1,5 +1,5 @@
 ---
-title: SET NUMERIC_ROUNDABORT (Transact SQL) | Microsoft Docs
+title: SET NUMERIC_ROUNDABORT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET NUMERIC_ROUNDABORT 옵션을 ON으로 설정하면 식에서 정밀도 손실이 발생할 경우 오류가 생성됩니다. OFF로 설정하면 정밀도 손실이 발생해도 오류 메시지가 생성되지 않으며 결과가 열 또는 결과를 저장한 변수의 정밀도로 반올림됩니다.  
   
  고정 정밀도가 있는 값을 정밀도가 그보다 낮은 열이나 변수에 저장하려고 하면 정밀도 손실이 발생합니다.  
@@ -65,9 +65,9 @@ SET NUMERIC_ROUNDABORT { ON | OFF }
 
  SET NUMERIC_ROUNDABORT 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.
 
- 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET NUMERIC_ROUNDABORT 옵션을 OFF로 설정해야 합니다. SET NUMERIC_ROUNDABORT 옵션이 ON 이면 만들기, 계산된 열 이나 인덱싱된 뷰에서에 인덱스가 있는 테이블에 UPDATE, INSERT 및 DELETE 문이 실패 합니다. 계산된 열에 인덱스 및 인덱싱된 뷰에 필요한 SET 옵션 설정에 대 한 자세한 내용은 "고려 사항 때 설정 문 사용"의 참조 [SET 문 &#40; Transact SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).
+ 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET NUMERIC_ROUNDABORT 옵션을 OFF로 설정해야 합니다. SET NUMERIC_ROUNDABORT 옵션이 ON이면 계산 열에 인덱스가 있는 테이블이나 인덱싱된 뷰에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. 인덱싱된 뷰 및 계산 열의 인덱스에 사용되는 필수 SET 옵션 설정에 대한 자세한 내용은 [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)에서 "SET 문 사용 시 고려 사항"을 참조하세요.
   
- 이 설정에 대 한 현재 설정을 보려면 다음 쿼리를 실행 합니다.
+ 이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.
   
 ```  
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  
@@ -76,7 +76,7 @@ SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -146,9 +146,9 @@ SELECT @result;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET arithabort&#40; Transact SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT&#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   

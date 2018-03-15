@@ -1,5 +1,5 @@
 ---
-title: "메시지 유형 (Transact SQL) 만들기 | Microsoft Docs"
+title: CREATE MESSAGE TYPE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -64,10 +64,10 @@ CREATE MESSAGE TYPE message_type_name
   
 ## <a name="arguments"></a>인수  
  *message_type_name*  
- 생성할 메시지 유형의 이름입니다. 새 메시지 유형은 현재 데이터베이스에 생성되고 AUTHORIZATION 절에서 지정한 보안 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *message_type_name* 최대 128 자를 사용할 수 있습니다.  
+ 생성할 메시지 유형의 이름입니다. 새 메시지 유형은 현재 데이터베이스에 생성되고 AUTHORIZATION 절에서 지정한 보안 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *message_type_name*은 최대 128 자까지 사용할 수 있습니다.  
   
- 권한 부여 *owner_name*  
- 메시지 유형의 소유자를 지정한 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**, *owner_name* 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name* 현재 사용자의 이름, 현재 사용자에 게에 대 한 IMPERSONATE 권한이 있는 사용자의 이름 또는 현재 사용자가 속해 있는 역할의 이름 이어야 합니다. 이 절을 생략하면 메시지 유형이 현재 사용자에 속합니다.  
+ AUTHORIZATION *owner_name*  
+ 메시지 유형의 소유자를 지정한 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자에 IMPERSONATE 권한이 있는 사용자 이름 또는 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다. 이 절을 생략하면 메시지 유형이 현재 사용자에 속합니다.  
   
  VALIDATION  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 이 유형의 메시지 본문 유효성을 검사하는 방법을 지정합니다. 이 절을 지정하지 않으면 유효성 검사는 기본적으로 NONE으로 설정됩니다.  
@@ -82,19 +82,19 @@ CREATE MESSAGE TYPE message_type_name
  메시지 본문에 올바른 형식의 XML이 포함되도록 지정합니다.  
   
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
- 메시지 본문의 지정 된 스키마 컬렉션의에서 스키마를 준수 하는 XML에 포함 되도록 지정 된 *schema_collection_name* 기존 XML 스키마 컬렉션의 이름 이어야 합니다.  
+ 메시지 본문에 지정된 스키마 컬렉션의 스키마를 준수하는 XML이 포함되도록 지정합니다. *schema_collection_name*은 기존 XML 스키마 컬렉션의 이름이어야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 들어오는 메시지의 유효성을 검사합니다. 메시지에 지정된 유효성 검사 유형을 준수하지 않는 메시지 본문이 있으면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 잘못된 메시지를 삭제하고 메시지를 보낸 서비스로 오류 메시지를 반환합니다.  
   
  대화의 양 측면에 동일한 메시지 유형 이름을 정의해야 합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 대화의 양 측면에서 같은 유효성 검사를 사용하도록 요구하지는 않지만 일반적으로 문제 해결에 도움을 주기 위해 대화의 양 측면에서 메시지 유형에 대해 동일한 유효성 검사를 지정합니다.  
   
- 메시지 유형은 임시 개체가 아닐 수 있습니다. 메시지 유형 이름은 부터는  **#**  수 있지만 영구 개체입니다.  
+ 메시지 유형은 임시 개체가 아닐 수 있습니다. 메시지 유형 이름은 **#**으로 시작할 수 있지만 영구 개체입니다.  
   
-## <a name="permissions"></a>Permissions  
- 기본값의 구성원에 게 메시지 유형 생성 권한은 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 메시지 유형 생성 권한은 기본적으로 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
- 메시지 유형에 대 한 REFERENCES 권한은 기본적으로 멤버의 메시지 유형의 소유자는 **db_owner** 고정 데이터베이스 역할의 멤버는 **sysadmin** 고정된 서버 역할입니다.  
+ 메시지 유형에 대한 REFERENCES 권한은 기본적으로 메시지 유형의 소유자, **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
  CREATE MESSAGE TYPE 문에서 스키마 컬렉션을 지정하면 이 문을 실행하는 사용자는 지정된 스키마 컬렉션에 대해 REFERENCES 권한이 있어야 합니다.  
   
@@ -166,9 +166,9 @@ CREATE MESSAGE TYPE
     VALIDATION = NONE ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER MESSAGE type&#40; Transact SQL &#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [DROP MESSAGE type&#40; Transact SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER MESSAGE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

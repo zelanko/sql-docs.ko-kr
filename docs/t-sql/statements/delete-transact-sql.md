@@ -1,5 +1,5 @@
 ---
-title: DELETE (Transact SQL) | Microsoft Docs
+title: DELETE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  테이블 또는 뷰에서 하나 이상의 행을 제거 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 테이블 또는 뷰에서 하나 이상의 행을 제거합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -95,24 +95,24 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ```  
   
 ## <a name="arguments"></a>인수  
- 와 \<common_table_expression >  
+ WITH \<common_table_expression>  
  DELETE 문 범위 내에 정의되고 공통 테이블 식이라고도 하는 명명된 임시 결과 집합을 지정합니다. 결과 집합은 SELECT 문에서 파생됩니다.  
   
- 공통 테이블 식은 SELECT, INSERT, UPDATE 및 CREATE VIEW 문과 함께 사용될 수도 있습니다. 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ 공통 테이블 식은 SELECT, INSERT, UPDATE 및 CREATE VIEW 문과 함께 사용될 수도 있습니다. 자세한 내용은 [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
   
- TOP **(***식***)** [%]  
- 삭제될 임의 행의 개수 또는 백분율(%)을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다. INSERT, UPDATE 또는 DELETE와 함께 사용된 TOP 식에서 참조된 행은 어떠한 순서로도 정렬되지 않습니다. 자세한 내용은 참조 [top&#40; Transact SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+ TOP **(***expression***)** [ PERCENT ]  
+ 삭제될 임의 행의 개수 또는 백분율(%)을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다. INSERT, UPDATE 또는 DELETE와 함께 사용된 TOP 식에서 참조된 행은 어떠한 순서로도 정렬되지 않습니다. 자세한 내용은 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
   
  FROM  
- DELETE 키워드와 대상 간에 사용할 수 있는 선택적 키워드 *table_or_view_name*, 또는 *rowset_function_limited*합니다.  
+ DELETE 키워드와 대상 *table_or_view_name* 또한 *rowset_function_limited* 사이에서 선택적으로 사용할 수 있는 키워드입니다.  
   
  *table_alias*  
- FROM에 지정 된 별칭 *b l e _* 절 삭제 될 행이 있는 테이블 또는 뷰를 나타내는입니다.  
+ 행을 삭제할 테이블 또는 뷰를 나타내는 FROM *table_source* 절에 지정되는 별칭입니다.  
   
  *server_name*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 서버 이름 (연결 된 서버 이름을 사용 하 여 또는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 함수를 서버 이름으로)에 테이블이 나 뷰가 위치한 합니다. 경우 *server_name* 지정 된 *database_name* 및 *schema_name* 필요 합니다.  
+ 테이블이나 뷰가 위치한 서버의 이름입니다. 연결된 서버 이름 또는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 함수를 서버 이름으로 사용합니다. *server_name*이 지정되면 *database_name*과 *schema_name*이 필요합니다.  
   
  *database_name*  
  데이터베이스의 이름입니다.  
@@ -125,21 +125,21 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  테이블 변수는 해당 범위 내에서 DELETE 문의 테이블 원본으로도 사용될 수 있습니다.  
   
- 참조 되는 뷰 *table_or_view_name* 업데이트할 수 있도록 하 고 뷰 정의의 FROM 절에서 정확히 한 개의 기본 테이블을 참조 해야 합니다. 업데이트할 수 있는 뷰에 대 한 자세한 내용은 참조 하세요. [CREATE view&#40; Transact SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ *table_or_view_name*에서 참조되는 뷰는 업데이트가 가능해야 하며 해당 뷰 정의의 FROM 절에서 정확히 하나의 기본 테이블을 참조해야 합니다. 업데이트할 수 있는 뷰에 대한 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
   
  *rowset_function_limited*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 중 하나는 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 또는 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 공급자 기능에 따라 함수입니다.  
+ 공급자 기능에 관련된 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 또는 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 함수입니다.  
   
- 와 **(** \<table_hint_limited > [... *n*] **)**  
- 대상 테이블에 허용되는 하나 이상의 테이블 힌트를 지정합니다. WITH 키워드와 괄호가 필요합니다. NOLOCK 및 READUNCOMMITTED는 허용되지 않습니다. 테이블 힌트에 대 한 자세한 내용은 참조 [테이블 힌트 &#40; Transact SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+ WITH **(** \<table_hint_limited> [... *n*] **)**  
+ 대상 테이블에 허용되는 하나 이상의 테이블 힌트를 지정합니다. WITH 키워드와 괄호가 필요합니다. NOLOCK 및 READUNCOMMITTED는 허용되지 않습니다. 테이블 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
- \<OUTPUT_Clause >  
- 삭제된 행 또는 삭제된 행 기반의 식을 DELETE 작업의 일부로 반환합니다. OUTPUT 절은 뷰나 원격 테이블을 대상으로 하는 모든 DML 문에서 지원되지 않습니다. 자세한 내용은 참조 [OUTPUT 절 &#40; Transact SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
+ \<OUTPUT_Clause>  
+ 삭제된 행 또는 삭제된 행 기반의 식을 DELETE 작업의 일부로 반환합니다. OUTPUT 절은 뷰나 원격 테이블을 대상으로 하는 모든 DML 문에서 지원되지 않습니다. 자세한 내용은 [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.  
   
- *b l e _*  
- FROM 절을 추가로 지정합니다. 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 삭제 하는 확장의 데이터를 지정할 수 있습니다. \<b l e _ > 및 해당 행을 삭제할 테이블에서 첫 번째 FROM 절.  
+ FROM *table_source*  
+ FROM 절을 추가로 지정합니다. DELETE에 대한 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 확장을 사용하여 \<table_source>의 데이터를 지정하고 첫 번째 FROM 절에 있는 테이블에서 해당 행을 삭제할 수 있습니다.  
   
  조인을 지정하는 이 확장을 WHERE 절에서 하위 쿼리 대신 사용하여 제거될 행을 식별할 수 있습니다.  
   
@@ -150,32 +150,32 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  WHERE 절에 지정된 내용에 따라 두 가지 형식의 삭제 작업이 있습니다.  
   
--   검색 결과 삭제는 삭제할 행을 한정하는 검색 조건을 지정합니다. 예를 들어 여기서 *column_name* = *값*합니다.  
+-   검색 결과 삭제는 삭제할 행을 한정하는 검색 조건을 지정합니다. 예를 들어,WHERE *column_name* = *값*.  
   
--   위치 지정 삭제는 커서를 지정하는 CURRENT OF 절을 사용합니다. 이 경우 커서의 현재 위치에서 삭제 작업이 발생합니다. 이 WHERE를 사용 하는 검색 결과 DELETE 문은 보다 정확한 수 *c h _ c* 삭제 될 행을 한 정하는 데 절. 검색 결과 DELETE 문은 검색 조건이 한 행을 고유하게 식별하지 못할 경우 여러 행을 삭제할 수 있습니다.  
+-   위치 지정 삭제는 커서를 지정하는 CURRENT OF 절을 사용합니다. 이 경우 커서의 현재 위치에서 삭제 작업이 발생합니다. 이것은 WHERE *search_condition* 절을 사용하여 삭제될 행을 한정하는 검색 결과 DELETE 문보다 정확한 방법입니다. 검색 결과 DELETE 문은 검색 조건이 한 행을 고유하게 식별하지 못할 경우 여러 행을 삭제할 수 있습니다.  
   
-\<c h _ c >  
- 삭제될 행을 제한하는 조건을 지정합니다. 검색 조건에 포함시킬 수 있는 조건자의 개수에는 제한이 없습니다. 자세한 내용은 참조 [검색 조건 &#40; Transact SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\<search_condition>  
+ 삭제될 행을 제한하는 조건을 지정합니다. 검색 조건에 포함시킬 수 있는 조건자의 개수에는 제한이 없습니다. 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
   
  CURRENT OF  
  지정한 커서의 현재 위치에서 DELETE가 수행되도록 지정합니다.  
   
  GLOBAL  
- 지정 하는 *cursor_name* 전역 커서를 참조 합니다.  
+ *cursor_name*이 전역 커서를 참조하도록 지정합니다.  
   
  *cursor_name*  
- 인출이 수행되는 열린 커서의 이름입니다. 전역 및 로컬 커서 이름의 경우 *cursor_name* 존재, GLOBAL이 고, 그렇지 않으면 지정 된 경우이 인수는 전역 커서를, 로컬 커서를 참조 합니다. 커서는 업데이트될 수 있어야 합니다.  
+ 인출이 수행되는 열린 커서의 이름입니다. 이름이 *cursor_name*인 전역 커서와 로컬 커서가 모두 있는 경우 이 인수는 GLOBAL이 지정되면 전역 커서를 참조하고 그렇지 않으면 로컬 커서를 참조합니다. 커서는 업데이트될 수 있어야 합니다.  
   
  *cursor_variable_name*  
  커서 변수의 이름입니다. 커서 변수는 업데이트를 허용하는 커서를 참조해야 합니다.  
   
- 옵션 **(** \<쿼리 힌트 > [ **,**... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,**... *n*] **)**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 최적화 프로그램 힌트를 사용하여 문을 처리하는 방법을 사용자 지정한다는 것을 나타내는 키워드입니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
- 테이블의 모든 행을 삭제하려면 TRUNCATE TABLE을 사용합니다. TRUNCATE TABLE은 DELETE보다 더 빠르고 시스템 및 트랜잭션 로그 리소스를 더 적게 사용합니다. TRUNCATE TABLE은 테이블이 복제에 참여할 수 없는 등의 제한 사항이 있습니다. 자세한 내용은 참조 [TRUNCATE table&#40; Transact SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)  
+ 테이블의 모든 행을 삭제하려면 TRUNCATE TABLE을 사용합니다. TRUNCATE TABLE은 DELETE보다 더 빠르고 시스템 및 트랜잭션 로그 리소스를 더 적게 사용합니다. TRUNCATE TABLE은 테이블이 복제에 참여할 수 없는 등의 제한 사항이 있습니다. 자세한 내용은 [TRUNCATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)을 참조하세요.  
   
- 사용 된 @@ROWCOUNT 삭제 된 클라이언트 응용 프로그램에는 행의 수를 반환 하는 함수입니다. 자세한 내용은 참조 [@@ROWCOUNT &#40; Transact SQL &#41; ](../../t-sql/functions/rowcount-transact-sql.md).  
+ @@ROWCOUNT 함수를 사용하여 클라이언트 응용 프로그램에 삭제된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
   
 ## <a name="error-handling"></a>오류 처리  
  TRY…CATCH 구문에 문을 지정하여 DELETE 문에 대한 오류 처리를 구현할 수 있습니다.  
@@ -187,9 +187,9 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ## <a name="interoperability"></a>상호 운용성  
  수정할 개체가 테이블 변수인 경우 사용자 정의 함수의 본문에 DELETE를 사용할 수 있습니다.  
   
- FILESTREAM 열이 있는 행을 삭제하면 해당 내부 파일 시스템 파일도 삭제됩니다. 기본 파일은 FILESTREAM 가비지 수집기를 통해 제거됩니다. 자세한 내용은 참조 [TRANSACT-SQL를 사용 하 여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-transact-sql.md)합니다.  
+ FILESTREAM 열이 있는 행을 삭제하면 해당 내부 파일 시스템 파일도 삭제됩니다. 기본 파일은 FILESTREAM 가비지 수집기를 통해 제거됩니다. 자세한 내용은 [Access FILESTREAM Data with Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md)을 참조하세요.  
   
- INSTEAD OF 트리거가 정의된 뷰를 직접 또는 간접으로 참조하는 DELETE 문에 FROM 절을 지정할 수 없습니다. Instead of 트리거에 대 한 자세한 내용은 참조 하세요. [CREATE trigger&#40; Transact SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+ INSTEAD OF 트리거가 정의된 뷰를 직접 또는 간접으로 참조하는 DELETE 문에 FROM 절을 지정할 수 없습니다. INSTEAD OF 트리거에 대한 자세한 내용은 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)을 참조하세요.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  TOP을 DELETE와 함께 사용할 경우 참조된 행은 어떠한 순서로도 정렬되지 않으며 ORDER BY 절을 이 문에서 직접 지정할 수 없습니다. TOP을 사용하여 시간 순서로 행을 삭제해야 하는 경우에는 하위 SELECT 문에서 ORDER BY 절을 지정하는 방식으로 TOP을 사용해야 합니다. 이 항목의 뒷부분에 나오는 예 섹션을 참조하세요.  
@@ -203,31 +203,31 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  힙에서 행을 삭제하고 페이지 할당을 취소하려면 다음 방법 중 하나를 사용하세요.  
   
--   DELETE 문에 TABLOCK 힌트를 지정합니다. TABLOCK 힌트를 사용하면 삭제 작업이 행 또는 페이지 잠금 대신 배타적 잠금을 수행하므로 페이지 할당을 취소할 수 있습니다. TABLOCK 힌트에 대 한 자세한 내용은 참조 [테이블 힌트 &#40; Transact SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+-   DELETE 문에 TABLOCK 힌트를 지정합니다. TABLOCK 힌트를 사용하면 삭제 작업이 행 또는 페이지 잠금 대신 배타적 잠금을 수행하므로 페이지 할당을 취소할 수 있습니다. TABLOCK 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
 -   테이블에서 모든 행이 삭제되는 경우 TRUNCATE TABLE을 사용합니다.  
   
 -   행을 삭제하기 전에 힙에 클러스터형 인덱스를 만듭니다. 행이 삭제되고 나면 클러스터형 인덱스를 삭제할 수 있습니다. 이 방법은 앞의 두 방법보다 시간이 오래 걸리며 임시 리소스를 더 많이 사용합니다.  
   
 > [!NOTE]  
->  빈 페이지에서에서 제거할 수는 힙 언제 든 지 사용 하 여는 `ALTER TABLE <table_name> REBUILD` 문.  
+>  `ALTER TABLE <table_name> REBUILD` 문을 사용하여 언제든지 힙에서 빈 페이지를 제거할 수 있습니다.  
   
 ## <a name="logging-behavior"></a>로깅 동작  
  DELETE 문은 항상 전체 로깅됩니다.  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  대상 테이블에 DELETE 권한이 필요합니다. 문에 WHERE 절이 포함되어 있을 경우 SELECT 권한도 필요합니다.  
   
- 멤버에 대 한 기본 권한을 삭제는 **sysadmin** 고정 서버 역할의 **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할 및 테이블 소유자입니다. 멤버는 **sysadmin**, **db_owner**, 및 **db_securityadmin** 역할 및 테이블 소유자 권한을 다른 사용자에 게 위임할 수 있습니다.  
+ **sysadmin** 고정 서버 역할의 멤버, **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할의 멤버 및 테이블 소유자에게는 기본적으로 DELETE 권한이 부여됩니다. **sysadmin**, **db_owner** 및 the **db_securityadmin** 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
 |범주|중요한 구문 요소|  
 |--------------|------------------------------|  
-|[기본 구문](#BasicSyntax)|DELETE|  
-|[삭제 되는 행 제한](#LimitRows)|WHERE • FROM • 커서 •|  
+|[기본 구문](#BasicSyntax)|Delete|  
+|[삭제되는 행 제한](#LimitRows)|WHERE • FROM • 커서 •|  
 |[원격 테이블에서 행 삭제](#RemoteTables)|연결된 서버 • OPENQUERY 행 집합 함수 • OPENDATASOURCE 행 집합 함수|  
 |[DELETE 문의 결과 캡처](#CaptureResults)|OUTPUT 절|  
   
@@ -242,11 +242,11 @@ DELETE FROM Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-###  <a name="LimitRows"></a>삭제 되는 행 제한  
+###  <a name="LimitRows"></a>삭제되는 행 제한  
  이 섹션의 예에서는 삭제되는 행 수를 제한하는 방법을 보여 줍니다.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>2. WHERE 절을 사용하여 행 집합 삭제  
- 모든 행을 삭제 하는 다음 예제는 `ProductCostHistory` 테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 값에는 `StandardCost` 열이 이상 `1000.00`합니다.  
+ 다음 예에서는 `StandardCost` 열의 값이 `1000.00`을 초과하는 모든 행을 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductCostHistory`테이블에서 삭제합니다.  
   
 ```    
 DELETE FROM Production.ProductCostHistory  
@@ -254,7 +254,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- 다음 예서는 보다 복잡한 WHERE 절을 보여 줍니다. WHERE 절은 삭제할 행을 확인하기 위해 충족해야 하는 두 가지 조건을 정의합니다. `StandardCost` 열의 값은 `12.00` 에서 `14.00` 사이여야 하고, `SellEndDate` 열의 값은 Null이어야 합니다. 또한이 예제에서는 출력의 값은 **@@ROWCOUNT**  삭제 된 행의 수를 반환 하는 함수입니다.  
+ 다음 예서는 보다 복잡한 WHERE 절을 보여 줍니다. WHERE 절은 삭제할 행을 확인하기 위해 충족해야 하는 두 가지 조건을 정의합니다. `StandardCost` 열의 값은 `12.00` 에서 `14.00` 사이여야 하고, `SellEndDate` 열의 값은 Null이어야 합니다. 또한 이 예에서는 **@@ROWCOUNT** 함수 값을 인쇄하여 삭제된 행 수를 반환합니다.  
   
 ```  
 DELETE Production.ProductCostHistory  
@@ -264,7 +264,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>3. 커서를 사용하여 삭제할 행 확인  
- 한 행을 삭제 하는 다음 예제는 `EmployeePayHistory` 테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 라는 커서를 사용 하 여 데이터베이스 `my_cursor`합니다. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
+ 다음 예에서는 `my_cursor`이라는 커서를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `EmployeePayHistory` 테이블에서 단일 행을 삭제합니다. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
   
 ```  
 DECLARE complex_cursor CURSOR FOR  
@@ -284,7 +284,7 @@ GO
 ```  
   
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>4. 한 테이블의 데이터에 대한 조인 및 하위 쿼리를 사용하여 다른 테이블의 행 삭제  
- 다음 예에서는 한 테이블의 데이터를 기반으로 다른 테이블의 행을 삭제하는 두 가지 방법을 보여 줍니다. 두 예제 모두에서 행의 `SalesPersonQuotaHistory` 테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 저장 된 연간 누계 매출에 따라 삭제 됩니다는 `SalesPerson` 테이블입니다. 첫 번째 `DELETE` 문은 ISO 호환 하위 쿼리 솔루션 및 두 번째 표시 `DELETE` 문과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 두 테이블을 조인 확장 프로그램에서 제공 합니다.  
+ 다음 예에서는 한 테이블의 데이터를 기반으로 다른 테이블의 행을 삭제하는 두 가지 방법을 보여 줍니다. 두 예에서 모두 `SalesPerson` 테이블에 저장된 연누계 매출에 기반하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPersonQuotaHistory` 테이블에서 행을 삭제합니다. 첫 번째 `DELETE` 문은 ISO 호환 하위 쿼리 솔루션을 보여 주고 두 번째 `DELETE` 문은 두 테이블을 조인하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 확장을 보여 줍니다.  
   
 ```  
 -- SQL-2003 Standard subquery  
@@ -320,7 +320,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>5. TOP를 사용하여 삭제되는 행 수 제한  
- Top (*n*) 절을 DELETE 함께 사용할 임의로 선택 삭제 작업이 수행 되기  *n*  행의 수입니다. 다음 예에서는 삭제 `20` 행을 임의로 `PurchaseOrderDetail` 테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 기한이 2006 년 7 월 1 일 이전 날짜입니다.  
+ DELETE 문에 TOP(*n*) 절을 사용하면 *n*개의 행을 임의로 선택하여 삭제 작업이 수행됩니다. 다음 예에서는 `20` 데이터베이스의 `PurchaseOrderDetail` 테이블에서 기한이 2006년 7월 1일 이전인 행 중 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]개의 행을 임의로 선택하여 삭제합니다.  
   
 ```  
 DELETE TOP (20)   
@@ -340,13 +340,13 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a>원격 테이블에서 행 삭제  
- 이 섹션의 예를 사용 하 여 원격 테이블에서 행을 삭제 하는 방법을 보여 주기는 [연결 된 서버](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 또는 [행 집합 함수](../../t-sql/functions/rowset-functions-transact-sql.md) 원격 테이블을 참조 합니다. 원격 테이블은 SQL Server의 다른 서버 또는 인스턴스에 있습니다.  
+###  <a name="RemoteTables"></a> 원격 테이블에서 행 삭제  
+ 이 섹션의 예에서는 원격 테이블을 참조하는 [연결된 서버](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 또는 [행 집합 함수](../../t-sql/functions/rowset-functions-transact-sql.md) 를 사용하여 원격 테이블에서 행을 삭제하는 방법을 보여 줍니다. 원격 테이블은 SQL Server의 다른 서버 또는 인스턴스에 있습니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>6. 연결된 서버를 사용하여 원격 테이블에서 데이터 삭제  
- 다음 예에서는 원격 테이블에서 행을 삭제합니다. 사용 하 여 원격 데이터 원본에 대 한 링크 만들기 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)합니다. 연결 된 서버 이름 `MyLinkServer`, 형태로 네 부분으로 된 개체 이름의 일부로 지정 된 다음은 *server.catalog.schema.object*합니다.  
+ 다음 예에서는 원격 테이블에서 행을 삭제합니다. 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 원격 데이터 원본에 대한 링크를 만듭니다. 그런 다음, 연결된 서버 이름 `MyLinkServer`가 *server.catalog.schema.object*와 같이 네 부분으로 구성된 개체 이름의 일부로 지정됩니다.  
   
 ```  
 USE master;  
@@ -372,7 +372,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>7. OPENQUERY 함수를 사용하여 원격 테이블에서 데이터 삭제  
- 다음 예에서는 원격 테이블에서 지정 하 여 행을 삭제는 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 행 집합 함수입니다. 이 예에서는 이전 예에서 만든 연결된 서버 이름이 사용됩니다.  
+ 다음 예에서는 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블에서 행을 삭제합니다. 이 예에서는 이전 예에서 만든 연결된 서버 이름이 사용됩니다.  
   
 ```  
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -382,7 +382,7 @@ GO
 ```  
   
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>8. OPENDATASOURCE 함수를 사용하여 원격 테이블에서 데이터 삭제  
- 다음 예에서는 원격 테이블에서 지정 하 여 행을 삭제는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 행 집합 함수입니다. 형식을 사용 하 여 데이터 원본에 대 한 올바른 서버 이름을 지정 *server_name* 또는 *server_name\instance_name*합니다.  
+ 다음 예에서는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블에서 행을 삭제합니다. *server_name* 또는 *server_name\instance_name* 형식을 사용하여 데이터 원본에 대해 유효한 서버 이름을 지정해야 합니다.  
   
 ```  
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
@@ -391,10 +391,10 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a>DELETE 문의 결과 캡처  
+###  <a name="CaptureResults"></a> DELETE 문의 결과 캡처  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>9. DELETE에 OUTPUT 절 사용  
- 결과 저장 하는 방법을 보여 주는 다음 예제는 `DELETE` 의 테이블 변수로 문을 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다.  
+ 다음 예에서는 `DELETE` 문의 결과를 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 테이블 변수로 저장하는 방법을 보여 줍니다.  
   
 ```  
 DELETE Sales.ShoppingCartItem  
@@ -409,7 +409,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>10. DELETE 문에 OUTPUT 및 <from_table_name> 사용  
- 다음 예제에서 행을 삭제는 `ProductProductPhoto` 테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 정의 된 검색 조건에 따라는 `FROM` 절은 `DELETE` 문. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
+ 다음 예에서는 `DELETE` 문의 `FROM` 절에 정의된 검색 조건에 따라 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductProductPhoto` 테이블에서 행을 삭제합니다. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
   
 ```  
 DECLARE @MyTableVar table (  
@@ -436,25 +436,25 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="k-delete-all-rows-from-a-table"></a>11. 테이블에서 모든 행을 삭제 합니다.  
+### <a name="k-delete-all-rows-from-a-table"></a>11. 테이블에서 행을 삭제합니다.  
  다음 예에서는 삭제될 행 수를 제한하는 WHERE 절을 사용하지 않았기 때문에 `Table1` 테이블에서 모든 행을 삭제합니다.  
   
 ```  
 DELETE FROM Table1;  
 ```  
   
-### <a name="l-delete-a-set-of-rows-from-a-table"></a>12. 테이블에서 행 집합 삭제  
- 모든 행을 삭제 하는 다음 예제는 `Table1` 1000.00에 보다 큰 값이 있는 테이블의 `StandardCost` 열입니다.  
+### <a name="l-delete-a-set-of-rows-from-a-table"></a>12. 테이블에서 행 집합을 DELETE합니다.  
+ 다음 예에서는 `Table1` 테이블에서 `StandardCost` 열에 1000.00보다 큰 값을 가진 모든 행을 삭제합니다.  
   
 ```  
 DELETE FROM Table1  
 WHERE StandardCost > 1000.00;  
 ```  
   
-### <a name="m-using-label-with-a-delete-statement"></a>13. DELETE 문과 함께 레이블을 사용 하 여  
- 다음 예제에서는 DELETE 문을 사용 하 여 레이블을 사용합니다.  
+### <a name="m-using-label-with-a-delete-statement"></a>13. DELETE 문과 함께 LABEL 사용  
+ 다음 예제에서는 DELETE 문과 함께 레이블을 사용합니다.  
   
 ```  
 DELETE FROM Table1  
@@ -462,8 +462,8 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>14. DELETE 문을 사용 하 여 레이블 및 쿼리 힌트를 사용 하 여  
- 이 쿼리에서 DELETE 문을 사용 하 여 쿼리 조인 힌트를 사용 하기 위한 기본 구문을 보여 줍니다. 조인 힌트와 OPTION 절을 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [옵션 (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc)합니다.  
+### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>14. DELETE 문에 레이블 및 쿼리 힌트 사용  
+ 이 쿼리는 DELETE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [ OPTION(SQL Server PDW) ](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하십시오.  
   
 ```  
 -- Uses AdventureWorks  
@@ -477,13 +477,13 @@ WHERE ProductKey IN (
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [TRUNCATE table&#40; Transact SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [Common_table_expression &AMP;#40; Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
+ [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
   

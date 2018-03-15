@@ -1,5 +1,5 @@
 ---
-title: GOTO (Transact SQL) | Microsoft Docs
+title: GOTO(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -54,12 +54,12 @@ GOTO label
   
 ## <a name="arguments"></a>인수  
  *label*  
- GOTO의 대상이 해당 레이블인 경우 처리가 시작되는 지점입니다. 레이블에 대 한 규칙을 따라야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다. 레이블은 GOTO 사용 여부에 관계 없이 주석을 기록하는 방법으로 사용될 수 있습니다.  
+ GOTO의 대상이 해당 레이블인 경우 처리가 시작되는 지점입니다. 레이블은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다. 레이블은 GOTO 사용 여부에 관계 없이 주석을 기록하는 방법으로 사용될 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  GOTO는 조건부 흐름 제어 문, 문 블록 또는 프로시저 내에서 사용할 수 있지만 일괄 처리 밖에 있는 레이블로 이동할 수 없습니다. GOTO 분기는 GOTO 전후에 정의된 레이블로 이동할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  GOTO 권한은 모든 유효한 사용자에게 기본적으로 부여됩니다.  
   
 ## <a name="examples"></a>예  
@@ -84,13 +84,13 @@ Branch_Three:
     SELECT 'Jumping To Branch Three.';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [흐름 제어 언어 &#40; Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [시작 중... 최종 &#40; Transact SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [나누기 &#40; Transact SQL &#41;](../../t-sql/language-elements/break-transact-sql.md)   
- [계속 &#40; Transact SQL &#41;](../../t-sql/language-elements/continue-transact-sql.md)   
- [다음과 같은 경우... 다른 &#40; Transact SQL &#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
- [WAITFOR &#40; Transact SQL &#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Control-of-Flow Language&#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [BREAK&#40;Transact-SQL&#41;](../../t-sql/language-elements/break-transact-sql.md)   
+ [CONTINUE&#40;Transact-SQL&#41;](../../t-sql/language-elements/continue-transact-sql.md)   
+ [IF...ELSE&#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
+ [WAITFOR&#40;Transact-SQL&#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
  [WHILE&#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "외부 라이브러리 (Transact SQL) DROP | Microsoft Docs"
+title: DROP EXTERNAL LIBRARY(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-non-specified
@@ -27,7 +27,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-library-transact-sql"></a>DROP 외부 라이브러리 (Transact SQL)  
+# <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY(Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 기존 패키지 라이브러리를 삭제합니다.
@@ -45,40 +45,40 @@ DROP EXTERNAL LIBRARY library_name
 
 기존 패키지 라이브러리의 이름을 지정합니다.
 
-라이브러리는 사용자에 게 범위가 지정 됩니다. 즉, 라이브러리 이름은 특정 사용자 또는 소유자의 컨텍스트 내에서 고유 간주 됩니다.
+라이브러리 범위는 사용자로 지정됩니다. 즉, 라이브러리 이름은 특정 사용자 또는 소유자의 컨텍스트 내에서 고유한 것으로 간주됩니다.
 
 **owner_name**
 
-사용자 또는 외부 라이브러리를 소유 하는 역할의 이름을 지정 합니다.
+외부 라이브러리를 소유하는 사용자 또는 역할의 이름을 지정합니다.
 
 데이터베이스 소유자는 다른 사용자가 만든 라이브러리를 삭제할 수 있습니다.
 
 ### <a name="return-values"></a>반환 값
 
-정보 메시지는 문이 성공적으로 반환 됩니다.
+정보 메시지는 명령문이 성공한 경우 반환됩니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
 
-다른 달리 `DROP` SQL Server의 문을이 문에 지정할 선택적 권한 부여 절을 지정 합니다. 이 통해 **dbo** 또는 사용자에 게는 **db_owner** 패키지 라이브러리를 삭제 하는 역할은 데이터베이스에서 일반 사용자가 업로드 합니다.
+SQL Server의 `DROP` 문과 달리 이 명령문은 옵션 인증 절 지정을 지원합니다. 이를 통해 **dbo** 또는 **db_owner** 역할의 사용자는 데이터베이스의 일반 사용자가 업로드한 패키지 라이브러리를 삭제할 수 있습니다.
 
 ## <a name="examples"></a>예
 
-명명 된 사용자 지정 R 패키지를 추가 `customPackage`, 데이터베이스에:
+데이터베이스에 `customPackage`로 명명된 사용자 지정 R 패키지를 추가합니다.
 
 ```sql
 CREATE EXTERNAL LIBRARY customPackage 
 FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 ```
 
-삭제 된 `customPackage` 라이브러리입니다.
+`customPackage` 라이브러리를 삭제합니다.
 
 ```sql
 DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
-## <a name="see-also"></a>참고 항목  
-[외부 라이브러리 (Transact SQL) 만들기](create-external-library-transact-sql.md)  
-[ALTER 외부 라이브러리 (Transact SQL)](alter-external-library-transact-sql.md)  
+## <a name="see-also"></a>관련 항목:  
+[CREATE EXTERNAL LIBRARY(Transact-SQL)](create-external-library-transact-sql.md)  
+[ALTER EXTERNAL LIBRARY(Transact-SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
 

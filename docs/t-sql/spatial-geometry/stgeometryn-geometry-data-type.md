@@ -1,5 +1,5 @@
 ---
-title: "STGeometryN (geometry 데이터 형식) | Microsoft Docs"
+title: "STGeometryN(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-지정한 기 하 도형을 반환는 **기 하 도형 컬렉션**합니다.
+**기하 도형 컬렉션**에서 지정된 기하 도형을 반환합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 이 **int** 1과 수의 식 **기 하 도형** 인스턴스에 **geometrycollection**합니다.  
+ 1과 **geometrycollection**에 있는 **geometry** 인스턴스 수 사이의 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- 이 메서드가 반환 **null** 매개 변수가의 결과 보다 크면 `STNumGeometries()` throw 됩니다는 **ArgumentOutOfRangeException** 경우는 *식* 매개 변수가 1 보다 작은 경우  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 매개 변수가 `STNumGeometries()`의 결과보다 크면 **null**을 반환하고 *expression* 매개 변수가 1보다 작으면 **ArgumentOutOfRangeException**을 throw합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 한 `MultiPoint``geometry collection` 사용 하 여 `STGeometryN()` 두 번째 찾으려고 `geometry` 컬렉션의 인스턴스.  
+ 다음 예에서는 `MultiPoint``geometry collection`을 만들고 `STGeometryN()`을 사용하여 컬렉션의 두 번째 `geometry` 인스턴스를 찾습니다.  
   
 ```  
 DECLARE @g geometry;  
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
 SELECT @g.STGeometryN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

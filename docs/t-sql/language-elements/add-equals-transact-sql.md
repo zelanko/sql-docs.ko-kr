@@ -1,5 +1,5 @@
 ---
-title: "+ = (더하기 할당) (Transact SQL) | Microsoft Docs"
+title: "+=(더하기 대입)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-addition-assignment-transact-sql"></a>+ = (더하기 할당) (Transact SQL)
+# <a name="-addition-assignment-transact-sql"></a>+=(더하기 대입)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  두 숫자를 더하고 값을 연산 결과로 설정합니다. 예를 들어 변수 @x 35 일 후 equals @x + = 2는 원래 값의 @x, 2 및 집합 추가 @x 를 새 값 (37)입니다.  
+  두 숫자를 더하고 값을 연산 결과로 설정합니다. 예를 들어 @x 변수가 35일 경우 @x += 2는 원래 값 @x에서 2를 더하고 @x를 새 값(37)으로 설정합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,18 +49,18 @@ expression += expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) 모든 데이터 형식을 제외한 숫자 범주의 **비트** 데이터 형식입니다.  
+ 숫자 범주에서 **bit** 데이터 형식을 제외한 모든 데이터 형식 중 하나에 대한 올바른 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
- 자세한 내용은 참조 [+ &#40; 추가 &#41; &#40; Transact SQL &#41; ](../../t-sql/language-elements/add-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 자세한 내용은 [+&#40;더하기&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/add-transact-sql.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+ = &#40; 문자열 연결 할당 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [복합 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [+=&#40;문자열 연결 대입&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "M (geometry 데이터 형식) | Microsoft Docs"
+title: "M(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="m-geometry-data-type"></a>M(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **M** (측정값) 값은 **geometry** 인스턴스. 측정값의 의미 체계는 사용자가 정의합니다.  
+  **geometry** 인스턴스의 **M**(측정값) 값입니다. 측정값의 의미 체계는 사용자가 정의합니다.  
 
 ## <a name="syntax"></a>구문  
   
@@ -46,16 +46,16 @@ ms.lasthandoff: 01/25/2018
 ## <a name="arguments"></a>인수  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]형식: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
  CLR 형식: **SqlDouble**  
   
-## <a name="remarks"></a>주의  
- 이 속성의 값이 null 경우는 **기 하 도형** 인스턴스가 않습니다는 **지점**뿐만 아니라 모든 **지점** 인스턴스 설정 되지 않은에 대 한 합니다.  
+## <a name="remarks"></a>Remarks  
+ **geometry** 인스턴스가 **Point**이 아닌 경우 및 해당 값이 설정되지 않은 모든 **Point** 인스턴스의 경우 이 속성의 값은 Null입니다.  
   
  이 속성은 읽기 전용입니다.  
   
- **M** 값 어떠한 라이브러리 계산에 사용 되지 않는, 어떠한 라이브러리 계산을 통해 수행 되지 것입니다.  
+ **M** 값은 어떠한 라이브러리 계산에도 사용되지 않으며 어떠한 라이브러리 계산을 통해서도 얻을 수 없습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 Z(높이) 값과 M(측정값) 값이 있는 `Point` 인스턴스를 만들고 `M`을 사용하여 인스턴스의 M 값을 인출합니다.  
@@ -66,9 +66,9 @@ SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);
 SELECT @g.M;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Geometry 인스턴스의 확장된 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Z &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)   
+## <a name="see-also"></a>참고 항목  
+ [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [Z&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)   
  [AsTextZM&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)  
   
   

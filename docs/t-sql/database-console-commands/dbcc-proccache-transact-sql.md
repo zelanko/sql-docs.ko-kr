@@ -1,5 +1,5 @@
 ---
-title: DBCC PROCCACHE (Transact SQL) | Microsoft Docs
+title: DBCC PROCCACHE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 프로시저 캐시는 일괄 처리 실행 속도를 높이기 위해 컴파일된 계획 및 실행 계획을 캐시하는 데 사용합니다. 프로시저 캐시 내의 항목은 일괄 처리 수준으로 제어됩니다. 프로시저 캐시는 다음과 같은 항목을 포함합니다.
 -   컴파일된 계획  
 -   실행 계획  
@@ -67,17 +67,17 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
   
 |열 이름|Description|  
 |-----------------|-----------------|  
-|**num의 proc 마법 효과**|프로시저 캐시의 모든 항목에 사용되는 총 페이지 수입니다.|  
-|**num proc 마법 효과 사용**|현재 사용 중인 모든 항목에 사용되는 총 페이지 수입니다.|  
-|**활성 num proc 마법 효과**|이전 버전과의 호환성을 위해서만 지원됩니다. 현재 사용 중인 모든 항목에 사용되는 총 페이지 수입니다.|  
-|**프로시저 캐시 크기**|프로시저 캐시의 총 항목 수입니다.|  
-|**사용 되는 프로시저 캐시**|현재 사용 중인 총 항목 수입니다.|  
-|**활성 proc 캐시**|이전 버전과의 호환성을 위해서만 지원됩니다. 현재 사용 중인 총 항목 수입니다.|  
+|**num proc buffs**|프로시저 캐시의 모든 항목에 사용되는 총 페이지 수입니다.|  
+|**num proc buffs used**|현재 사용 중인 모든 항목에 사용되는 총 페이지 수입니다.|  
+|**num proc buffs active**|이전 버전과의 호환성을 위해서만 지원됩니다. 현재 사용 중인 모든 항목에 사용되는 총 페이지 수입니다.|  
+|**proc cache size**|프로시저 캐시의 총 항목 수입니다.|  
+|**proc cache used**|현재 사용 중인 총 항목 수입니다.|  
+|**proc cache active**|이전 버전과의 호환성을 위해서만 지원됩니다. 현재 사용 중인 총 항목 수입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

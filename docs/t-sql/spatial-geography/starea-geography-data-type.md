@@ -1,5 +1,5 @@
 ---
-title: "STArea (geography 데이터 형식) | Microsoft Docs"
+title: "STArea(geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geography-data-type"></a>STArea(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  전체 표면적 반환는 **geography** 인스턴스. Spatial reference identifier에 사용 되는 측정 단위의 제곱 STArea()에 대 한 결과가 반환 될는 **geography** 인스턴스; 예를 들어 인스턴스의 SRID 4326 이면 STArea() 결과 반환 제곱 미터입니다.  
+  **geography** 인스턴스의 전체 표면을 반환합니다. STArea()의 결과는 **geography** 인스턴스의 Spatial Reference Identifier에 사용되는 측정 단위의 제곱으로 반환됩니다. 예를 들어 인스턴스의 SRID가 4326이면 STArea()는 제곱 미터로 결과를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **float**  
   
  CLR 반환 형식: **SqlDouble**  
   
-## <a name="remarks"></a>주의  
- STArea() 경우 0을 반환 합니다는 **geography** 인스턴스가 0 및 1 차원 도형만 포함 하거나 비어 있는 경우.  
+## <a name="remarks"></a>Remarks  
+ STArea()는 **geography** 인스턴스가 0 및 1차원 도형만 포함하거나 비어 있으면 0을 반환합니다.  
   
 > [!NOTE]  
->  에 대 한 메서드는 **geography** 데이터 입력을 생성 하는 메트릭 반환 값은 메서드에서 사용 되는 인스턴스의 SRID에 따라 다른 결과 갖게 됩니다. Srid에 대 한 자세한 내용은 참조 하세요. [Spatial Reference Identifier &#40; Srid &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  메트릭 반환 값을 생성하는 **geography** 데이터 형식에 대한 메서드 결과는 메서드에서 사용되는 인스턴스의 SRID에 따라 달라집니다. SRID에 대한 자세한 내용은 [공간 참조 식별자 &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 `STArea()` 만들려는 `Polygon``geography` 인스턴스 선택한 다각형의 면적을 계산 합니다.  
+ 다음 예에서는 `STArea()`를 사용하여 `Polygon``geography` 인스턴스를 만들고 다각형의 영역을 계산합니다.  
   
 ```  
 DECLARE @g geography;  
@@ -63,7 +63,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.STArea();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지리 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

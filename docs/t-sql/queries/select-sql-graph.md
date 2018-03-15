@@ -1,5 +1,5 @@
 ---
-title: "선택 (SQL 그래프) | Microsoft Docs"
+title: SELECT(SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -44,11 +44,11 @@ SELECT
 
 ## <a name="arguments"></a>인수  
 
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
 ## <a name="examples"></a>예  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 

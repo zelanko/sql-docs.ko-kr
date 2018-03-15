@@ -1,5 +1,5 @@
 ---
-title: "| (비트 OR) (Transact SQL) | Microsoft Docs"
+title: "|(비트 OR)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -51,21 +51,21 @@ expression | expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) 정수 데이터 형식 범주 또는 **비트**, **이진**, 또는 **varbinary** 데이터 형식입니다. *식* 비트 연산을 위해 이진 숫자로 취급 됩니다.  
+ 정수 데이터 형식 범주나 **bit**, **binary** 또는 **varbinary** 데이터 형식의 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 비트 연산에서 이진 숫자로 취급됩니다.  
   
 > [!NOTE]  
->  하나의 *식* 될 수 **이진** 또는 **varbinary** 연산의 데이터 형식입니다.  
+>  비트 연산에서는 하나의 *expression*만 **binary** 또는 **varbinary** 데이터 형식이 될 수 있습니다.  
   
 ## <a name="result-types"></a>결과 형식  
- 반환 된 **int** 입력된 값이 **int**, **smallint** 입력된 값이 **smallint**, 또는 **tinyint** 입력된 값이 **tinyint**합니다.  
+ 입력 값이 **int**이면 **int**를, 입력 값이 **smallint**이면 **smallint**를, 입력 값이 **tinyint**이면 **tinyint**를 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  비트 | 연산자는 양쪽 식에 해당 비트를 취하면서 두 식 간에 비트 논리 OR를 수행합니다. 결과의 비트는 입력 식의 두 비트(확인 중인 현재 비트) 중 하나 또는 둘 모두의 값이 1이면 1로 설정됩니다. 입력 식에 값이 1인 비트가 없으면 결과의 비트는 0으로 설정됩니다.  
   
- 왼쪽 및 오른쪽 식의 경우에 다른 정수 데이터 형식 (예를 들어 왼쪽 *식* 은 **smallint** 및 오른쪽 *식* 은  **int**), 더 작은 데이터 형식의 인수를 더 큰 데이터 형식으로 변환 합니다. 이 예제에서는 **smallint * * * 식* 변환 되는 **int**합니다.  
+ 왼쪽과 오른쪽 식의 정수 데이터 형식이 서로 다르면(예: 왼쪽 *식*은 **smallint**이고 오른쪽 *식*은 **int**임) 더 작은 데이터 형식의 인수가 더 큰 데이터 형식으로 변환됩니다. 이 예제에서는 **smallint***식*이 **int**로 변환됩니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 있는 테이블 **int** 데이터 원래 값을 표시 하려면 형식 및 테이블에 하나의 행에 넣습니다.  
+ 다음 예에서는 원래 값을 표시하도록 **int** 데이터 형식의 테이블을 만들고 테이블을 하나의 행에 삽입합니다.  
   
 ```sql  
 CREATE TABLE bitwise  
@@ -78,7 +78,7 @@ INSERT bitwise VALUES (170, 75);
 GO  
 ```  
   
- 비트 OR 연산을 수행 하는 다음 쿼리는 **a_int_value** 및 **b_int_value** 열입니다.  
+ 다음 쿼리는 **a_int_value** 및 **b_int_value** 열에 대해 비트 OR를 수행합니다.  
   
 ```  
 SELECT a_int_value | b_int_value  
@@ -95,7 +95,7 @@ GO
 (1 row(s) affected)  
 ```  
   
- 170의 이진 표현 (**a_int_value** 또는 `A`아래)은 `0000 0000 1010 1010`합니다. 75의 이진 표현 (**b_int_value** 또는 `B`아래)은 `0000 0000 0100 1011`합니다. 이 두 값에 비트 OR 연산을 수행하면 10진수 235에 해당되는 이진 결과 `0000 0000 1110 1011`이 산출됩니다.  
+ 170(**a_int_value** 또는 아래 `A`)의 이진 표현은 `0000 0000 1010 1010`입니다. 75(**b_int_value** 또는 아래 `B`)의 이진 표현은 `0000 0000 0100 1011`입니다. 이 두 값에 비트 OR 연산을 수행하면 10진수 235에 해당되는 이진 결과 `0000 0000 1110 1011`이 산출됩니다.  
   
 ```  
 (A | B)  
@@ -105,11 +105,11 @@ GO
 0000 0000 1110 1011  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [비트 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [&#124; = &#40; 비트 OR 할당 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
- [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [비트 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [&#124;=&#40;비트 OR 대입&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+ [복합 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

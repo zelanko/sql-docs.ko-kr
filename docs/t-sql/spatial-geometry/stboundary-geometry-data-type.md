@@ -1,5 +1,5 @@
 ---
-title: "STBoundary (geometry 데이터 형식) | Microsoft Docs"
+title: STBoundary(geometry Data Type) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stboundary-geometry-data-type"></a>STBoundary(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  경계를 반환 된 **geometry** 인스턴스.  
+  **geometry** 인스턴스의 경계를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **기 하 도형**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
   
  CLR 반환 형식: **SqlGeometry**  
   
-## <a name="remarks"></a>주의  
- `STBoundary()`빈 반환 **GeometryCollection** 때에 대 한 끝점을 **LineString**, **CircularString**, 또는 **CompoundCurve** 인스턴스 동일합니다.  
+## <a name="remarks"></a>Remarks  
+ `STBoundary()`은 **LineString**, **CircularString** 또는 **CompoundCurve** 인스턴스의 끝점이 같을 때 빈 **GeometryCollection**을 반환합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>1. 끝점이 다른 LineString 인스턴스에 STBoundary() 사용  
- 다음 예제에서는 한 `LineString``geometry` 인스턴스. `STBoundary()`경계를 반환 된 `LineString`합니다.  
+ 다음 예에서는 `LineString``geometry` 인스턴스를 만듭니다. `STBoundary()`는 `LineString`의 경계를 반환합니다.  
   
 ```  
 DECLARE @g geometry;  
@@ -80,7 +80,7 @@ SELECT @g.STBoundary().ToString();
  SELECT @g.STBoundary().ToString();
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "(XML DML)의 값을 대체 | Microsoft Docs"
+title: replace value of(XML DML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -47,16 +47,16 @@ with Expression2
   
 ## <a name="arguments"></a>인수  
  *Expression1*  
- 업데이트할 값이 있는 노드를 식별합니다. 하나의 노드만 식별해야 합니다. 즉, *Expression1* 정적 단일 항목 이어야 합니다. XML이 형식화되는 경우 노드 유형은 단순 유형이어야 합니다. 노드를 여러 개 선택하면 오류가 발생합니다. 경우 *Expression1* 빈 시퀀스 이면 값이 대체 되지 발생을 반환 하 고 오류가 반환 됩니다. *Expression1* 단순히 유형의 콘텐츠 (목록 또는 원자성 유형), 텍스트 노드 또는 특성 노드에 있는 단일 요소를 반환 해야 합니다. *Expression1* 공용 구조체 유형, 복합 유형, 처리 명령, 문서 노드 또는 주석 노드 수 없습니다. 이들 중 하나인 경우 오류가 반환됩니다.  
+ 업데이트할 값이 있는 노드를 식별합니다. 하나의 노드만 식별해야 합니다. 즉, *Expression1*은 정적 단일 항목이어야 합니다. XML이 형식화되는 경우 노드 유형은 단순 유형이어야 합니다. 노드를 여러 개 선택하면 오류가 발생합니다. *Expression1*이 빈 시퀀스를 반환하면 값이 대체되지 않고 오류가 반환되지 않습니다. *Expression1*은 단순 유형의 콘텐츠(목록 또는 원자성 유형), 텍스트 노드 또는 특성 노드를 가진 단일 요소를 반환해야 합니다. 또한 *Expression1*은 공용 구조체 형식, 복합 형식, 처리 명령, 문서 노드 또는 주석 노드는 될 수 없습니다. 이들 중 하나인 경우 오류가 반환됩니다.  
   
  *Expression2*  
- 노드의 새 값을 식별합니다. 때문에 단순 유형의 노드를 반환 하는 식이 될 수 있습니다이 **data ()** 암시적으로 사용 됩니다. 값이 값의 목록에서 **업데이트** 문은 이전 값을 목록으로 대체 합니다. 형식화 된 XML 인스턴스를 수정 하는 *Expression2* 의 하위 형식 이거나 같은 형식 이어야 합니다 *식*1입니다. 그렇지 않으면 오류가 반환됩니다. 형식화 되지 않은 XML 인스턴스를 수정 하는 *Expression2* 원자화 될 수 있는 식 이어야 합니다. 그렇지 않으면 오류가 반환됩니다.  
+ 노드의 새 값을 식별합니다. **data()**를 암시적으로 사용하므로 단순 유형의 노드를 반환하는 식이 될 수 있습니다. 값이 값 목록일 경우 **update** 문은 이전 값을 목록으로 대체합니다. 형식화된 XML 인스턴스를 수정하는 경우 *Expression2*는 *Expression*1과 같은 유형이거나 그 하위 유형이어야 합니다. 그렇지 않으면 오류가 반환됩니다. 형식화되지 않은 XML 인스턴스를 수정할 경우 *Expression2*는 원자화될 수 있는 식이어야 합니다. 그렇지 않으면 오류가 반환됩니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제는 **replace value o f** XML DML 문은 XML 문서에서 노드를 업데이트 하는 방법을 보여 줍니다.  
+ **replace value of** XML DML 문의 다음 예제에서는 XML 문서에서 노드를 업데이트하는 방법을 보여줍니다.  
   
 ### <a name="a-replacing-values-in-an-xml-instance"></a>1. XML 인스턴스에서 값 바꾸기  
- 다음 예제에서는 문서 인스턴스를 먼저 변수에 할당 됩니다 **xml** 유형입니다. 그런 다음 **replace value o f** XML DML 문이 문서의 값을 업데이트 합니다.  
+ 다음 예제에서는 먼저 문서 인스턴스가 **xml** 형식의 변수에 할당됩니다. 그러면 **replace value of**XML DML 문이 문서의 값을 업데이트합니다.  
   
 ```  
 DECLARE @myDoc xml;  
@@ -87,7 +87,7 @@ SELECT @myDoc;
  업데이트될 대상은 경로 식에서 식 끝에 "[1]"을 추가하여 명시적으로 지정된 최대 하나의 노드여야 합니다.  
   
 ### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>2. if 식을 사용하여 대체 값 결정  
- 지정할 수는 **경우** 식의 Expression2에는 **XML DML의 값을 대체** 다음 예제와 같이 문을 합니다. Expression1은 첫 번째 작업 센터의 LaborHours 특성이 업데이트될 것임을 확인합니다. 사용 하 여 Expression2는 **경우** LaborHours 특성의 새 값을 확인 하는 식입니다.  
+ 아래 예에서 볼 수 있듯이 **replace value of XML DML** 문의 Expression2에서 **if** 식을 지정할 수 있습니다. Expression1은 첫 번째 작업 센터의 LaborHours 특성이 업데이트될 것임을 확인합니다. Expression2는 **if** 식을 사용하여 LaborHours 특성의 새 값을 확인합니다.  
   
 ```  
 DECLARE @myDoc xml  
@@ -197,12 +197,12 @@ select Instructions
 from T  
 ```  
   
- 사용 하 여 **캐스트** LotSize 값을 대체할 때. 값이 특정 유형인 경우 이렇게 해야 합니다. 이 예에서 값이 500인 경우 명시적 캐스트가 필요하지 않습니다.  
+ 참고로 LotSize 값을 대체할 경우 **cast**를 사용합니다. 값이 특정 유형인 경우 이렇게 해야 합니다. 이 예에서 값이 500인 경우 명시적 캐스트가 필요하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 데이터 인스턴스 만들기](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)   
- [XML 데이터 수정 언어 &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML 데이터 수정 언어 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

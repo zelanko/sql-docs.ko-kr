@@ -1,5 +1,5 @@
 ---
-title: DEALLOCATE (Transact SQL) | Microsoft Docs
+title: DEALLOCATE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="deallocate-transact-sql"></a>DEALLOCATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  커서 참조를 제거합니다. 커서를 구성 하는 데이터 구조에서 해제 하는 마지막 커서 참조가 할당 해제 된 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+  커서 참조를 제거합니다. 마지막 커서 참조가 할당 취소되면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 커서를 구성하는 데이터 구조의 할당을 취소합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +51,12 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>인수  
  *cursor_name*  
- 이미 선언된 커서의 이름입니다. 전역 및 로컬 커서 함께 존재 하는 경우 *cursor_name* 해당 이름으로 *cursor_name* GLOBAL이 지정 되지 않은 경우 GLOBAL이 지정 하는 경우 전역 커서와 로컬 커서를 참조 합니다.  
+ 이미 선언된 커서의 이름입니다. 전역 커서와 지역 커서에서 모두 해당 이름으로 *cursor_name*을 사용하는 경우 GLOBAL이 지정되면 *cursor_name*이 전역 커서를 참조하고, 그렇지 않으면 지역 커서를 참조합니다.  
   
  @*cursor_variable_name*  
- 이름인는 **커서** 변수입니다. @*cursor_variable_name* 형식 이어야 합니다 **커서**합니다.  
+ **cursor** 변수의 이름입니다. @*cursor_variable_name*은 **cursor** 형식이어야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  커서에서 실행되는 문은 커서 이름이나 커서 변수를 사용하여 커서를 참조합니다. DEALLOCATE는 커서와 커서 이름 또는 커서 변수 간의 관계를 제거합니다. 커서를 참조하는 마지막 이름이나 변수의 경우 커서가 할당 해제되고 해당 커서에서 사용하던 모든 리소스가 해제됩니다. DEALLOCATE를 실행하면 인출의 격리를 보호하는 데 사용되는 스크롤 잠금이 해제됩니다. 그러나 해당 커서를 통한 현재 위치 업데이트를 포함하여 업데이트를 보호하는 트랜잭션 잠금은 트랜잭션이 종료될 때까지 유지됩니다.  
   
  DECLARE CURSOR 문은 커서 이름을 사용하여 커서를 할당하고 연결합니다.  
@@ -85,7 +85,7 @@ SELECT * FROM Person.Person;
     SELECT * FROM Person.Person;  
     ```  
   
- DEALLOCATE @*cursor_variable_name* 문은 커서에 지정 된 변수 참조만 제거 합니다. 변수는 일괄 처리, 저장 프로시저, 트리거가 종료되어 범위를 벗어날 때까지 할당 해제되지 않습니다. DEALLOCATE @ 후*cursor_variable_name* 문, 변수와 연결할 수는 SET 문을 사용 하 여 다른 커서입니다.  
+ DEALLOCATE @*cursor_variable_name* 문은 커서에 명명된 변수의 참조만 제거합니다. 변수는 일괄 처리, 저장 프로시저, 트리거가 종료되어 범위를 벗어날 때까지 할당 해제되지 않습니다. DEALLOCATE @*cursor_variable_name* 문 뒤에 나오는 변수는 SET 문을 사용하여 다른 커서에 연결할 수 있습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -104,7 +104,7 @@ GO
   
  커서 변수는 명시적으로 할당 해제할 필요가 없으며 범위를 벗어나면 암시적으로 할당 해제됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  DEALLOCATE 권한은 기본적으로 모든 유효한 사용자에게 부여됩니다.  
   
 ## <a name="examples"></a>예  
@@ -147,11 +147,11 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [닫기 &#40; Transact SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CLOSE&#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [커서](../../relational-databases/cursors.md)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [FETCH &#40; Transact SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [열기 &#40; Transact SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [FETCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN&#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "연산자 우선 순위 (Transact SQL) | Microsoft Docs"
+title: "연산자 우선 순위(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -40,12 +40,12 @@ ms.lasthandoff: 01/25/2018
   
 |Level|연산자|  
 |-----------|---------------|  
-|1.|~ (비트 NOT)|  
-|2|* (곱하기) / (나누기), % (계수)|  
-|3|+ (양수),-(음수) + (더하기) + (연결),-(빼기), & (비트 AND), ^ (비트 배타적 OR), &#124; (비트 OR)|  
-|4|=, >, \<, > =, < =, <>,! =,! >,! < (비교 연산자)|  
+|1|~ (비트 NOT)|  
+|2|*(곱하기), /(나누기), %(계수)|  
+|3|+(양수), -(음수), +(더하기), +(연결), -(빼기), &(비트 AND), ^(비트 전용 OR), &#124;(비트 OR)|  
+|4|=, >, \<, >=, <=, <>, !=, !>, !< (비교 연산자)|  
 |5|NOT|  
-|6|및|  
+|6|AND|  
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
 |8|=(할당)|  
   
@@ -88,9 +88,9 @@ SET @MyNumber = 2 * (4 + (5 - 3) );
 SELECT @MyNumber;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [논리 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [논리 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

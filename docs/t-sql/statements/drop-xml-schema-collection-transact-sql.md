@@ -1,5 +1,5 @@
 ---
-title: XML SCHEMA COLLECTION (Transact SQL) | Microsoft Docs
+title: DROP XML SCHEMA COLLECTION(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
  *sql_identifier*  
  삭제할 XML 스키마 컬렉션의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  XML 스키마 컬렉션을 삭제하는 것은 트랜잭션 작업입니다. 즉, 트랜잭션 내부에서 XML 스키마 컬렉션을 삭제하고 나중에 트랜잭션을 롤백하는 경우 XML 스키마 컬렉션이 삭제되지 않습니다.  
   
  사용 중인 XML 스키마 컬렉션은 삭제할 수 없습니다. 즉, 다음과 같은 컬렉션은 삭제할 수 없습니다.  
   
--   와 연관 된 **xml** 매개 변수 또는 열을 입력 합니다.  
+-   **xml** 유형 매개 변수 또는 열과 연결된 컬렉션  
   
 -   테이블 제약 조건에 지정된 컬렉션  
   
@@ -80,7 +80,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     END;  
     ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  XML SCHEMA COLLECTION을 삭제하려면 이 컬렉션에 대한 DROP 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -91,9 +91,9 @@ DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [XML 스키마 컬렉션 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [ALTER XML SCHEMA collection&#40; Transact SQL &#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CREATE XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [ALTER XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

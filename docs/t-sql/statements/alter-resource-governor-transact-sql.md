@@ -1,5 +1,5 @@
 ---
-title: "리소스 관리자 변경 (Transact SQL) | Microsoft Docs"
+title: ALTER RESOURCE GOVERNOR(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -37,9 +37,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  이 문을 사용 하는 다음 리소스 관리자 작업을 수행할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  이 명령문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음 Resource Governor 동작을 수행하는 데 사용됩니다.  
   
--   경우에 지정 된 구성 변경 내용을 적용 만들기 | ALTER | DROP WORKLOAD GROUP 또는 CREATE | ALTER | DROP RESOURCE POOL 또는 CREATE | ALTER | DROP EXTERNAL RESOURCE POOL 문은 실행 합니다.  
+-   CREATE|ALTER|DROP WORKLOAD GROUP 또는 CREATE|ALTER|DROP RESOURCE POOL 또는 CREATE|ALTER|DROP EXTERNAL RESOURCE POOL 문이 발행될 때 지정된 구성 변경 내용을 적용합니다.  
   
 -   리소스 관리자를 사용하거나 사용하지 않도록 설정합니다.  
   
@@ -89,30 +89,30 @@ ALTER RESOURCE GOVERNOR
   
 -   리소스 관리자를 사용하도록 설정하기 전부터 있던 요청이 리소스 관리자가 사용되지 않을 때 수행된 구성 변경 내용의 영향을 받습니다.  
   
- RECONFIGURE는 구성이 적용 리소스 관리자를 실행할 때 변경 될 때 요청 된 만들기 | ALTER | DROP WORKLOAD GROUP 또는 CREATE | ALTER | DROP RESOURCE POOL 또는 CREATE | ALTER | DROP EXTERNAL RESOURCE POOL 문이 실행 됩니다.  
+ Resource Governor가 실행되고 있을 때 RECONFIGURE는 CREATE|ALTER|DROP WORKLOAD GROUP 또는 CREATE|ALTER|DROP RESOURCE POOL 또는 CREATE|ALTER|DROP EXTERNAL RESOURCE POOL 문이 실행될 때 요청된 구성 변경 내용을 적용합니다.  
   
 > [!IMPORTANT]  
 >  구성 변경 내용을 적용하려면 ALTER RESOURCE GOVERNOR RECONFIGURE를 실행해야 합니다.  
   
- CLASSIFIER_FUNCTION = { *schema_name***.*** function_name* | NULL}  
- 으로 지정한 분류 함수 등록 *schema_name.function_name*합니다. 이 함수는 모든 새 세션을 분류하고 세션 요청 및 쿼리를 작업 그룹에 할당합니다. NULL이 사용되면 새 세션이 기본 작업 그룹에 자동으로 할당됩니다.  
+ CLASSIFIER_FUNCTION = { *schema_name***.***function_name* | NULL }  
+ *schema_name.function_name*으로 지정한 분류 함수를 등록합니다. 이 함수는 모든 새 세션을 분류하고 세션 요청 및 쿼리를 작업 그룹에 할당합니다. NULL이 사용되면 새 세션이 기본 작업 그룹에 자동으로 할당됩니다.  
   
  RESET STATISTICS  
- 모든 작업 그룹 및 리소스 풀에 대한 통계를 다시 설정합니다. 자세한 내용은 참조 [sys.dm_resource_governor_workload_groups&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 및 [sys.dm_resource_governor_resource_pools &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+ 모든 작업 그룹 및 리소스 풀에 대한 통계를 다시 설정합니다. 자세한 내용은 [sys.dm_resource_governor_workload_groups&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 및 [sys.dm_resource_governor_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)를 참조하세요.  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 디스크 볼륨당 최대 지연 I/O 작업을 설정합니다. 모든 크기의 읽기 또는 쓰기가 여기에 해당합니다.  MAX_OUTSTANDING_IO_PER_VOLUME의 최대값은 100입니다. 비율이 아닙니다. 이 설정은 디스크 볼륨의 IO 특성에 맞게 IO 리소스 관리를 튜닝하도록 디자인되었습니다. 다른 값으로 시험 IOMeter, 같은 보정 도구를 사용 하는 것이 좋습니다 하는 것이 좋습니다 [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223), 또는 SQLIO (사용 되지 않음) 저장소 하위 시스템에 대 한 최대 값을 식별 합니다. 이 설정은 다른 풀의 MAX_IOPS_PER_VOLUME이 무제한으로 설정되어 있는 경우에도 SQL Server에서 리소스 풀의 최소 IOPS를 충족할 수 있도록 시스템 수준 안전 검사를 제공합니다. MAX_IOPS_PER_VOLUME에 대 한 자세한 내용은 참조 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)합니다.  
+ 디스크 볼륨당 최대 지연 I/O 작업을 설정합니다. 모든 크기의 읽기 또는 쓰기가 여기에 해당합니다.  MAX_OUTSTANDING_IO_PER_VOLUME의 최대값은 100입니다. 비율이 아닙니다. 이 설정은 디스크 볼륨의 IO 특성에 맞게 IO 리소스 관리를 튜닝하도록 디자인되었습니다. 여러 가지 값을 설정해 보고 IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223),     또는 SQLIO(사용되지 않음)와 같은 보정 도구를 사용하여 저장소 하위 시스템의 최댓값을 식별하는 것이 좋습니다. 이 설정은 다른 풀의 MAX_IOPS_PER_VOLUME이 무제한으로 설정되어 있는 경우에도 SQL Server에서 리소스 풀의 최소 IOPS를 충족할 수 있도록 시스템 수준 안전 검사를 제공합니다. MAX_IOPS_PER_VOLUME에 대한 자세한 내용은 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용자 트랜잭션 내에서는 ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE 및 ALTER RESOURCE GOVERNOR RESET STATISTICS를 사용할 수 없습니다.  
   
- RECONFIGURE 매개 변수와 리소스 관리자 구문의 일부 이며와 혼동 해서는 안 [재구성](../../t-sql/language-elements/reconfigure-transact-sql.md), 별도 DDL 문을 변수인 합니다.  
+ RECONFIGURE 매개 변수는 Resource Governor 구문의 일부이며 별도의 DLL 문인 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md)와 혼동해서는 안 됩니다.  
   
- DDL 문을 실행하기 전에 리소스 관리자 상태에 대해 잘 알고 있는 것이 좋습니다. 자세한 내용은 참조 [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)합니다.  
+ DDL 문을 실행하기 전에 리소스 관리자 상태에 대해 잘 알고 있는 것이 좋습니다. 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -193,18 +193,18 @@ ALTER RESOURCE GOVERNOR
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [CREATE EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
  [DROP EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
- [외부 RESOURCE pool&#40; 변경 Transact SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
+ [ALTER EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
- [sys.dm_resource_governor_workload_groups &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.dm_resource_governor_resource_pools &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
+ [관리](../../relational-databases/resource-governor/resource-governor.md)   
+ [sys.dm_resource_governor_workload_groups&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   
   

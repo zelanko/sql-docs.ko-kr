@@ -1,5 +1,5 @@
 ---
-title: SET QUOTED_IDENTIFIER (Transact SQL) | Microsoft Docs
+title: SET QUOTED_IDENTIFIER(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/03/2016
 ms.prod: sql-non-specified
@@ -59,20 +59,20 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 SET QUOTED_IDENTIFIER ON   
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET QUOTED_IDENTIFIER 옵션을 ON으로 설정하면 식별자를 큰따옴표로 구분할 수 있으며, 리터럴은 작은따옴표로 구분해야 합니다. SET QUOTED_IDENTIFIER 옵션을 OFF로 설정하면 식별자에 따옴표를 사용할 수 없으며 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙을 따라야 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요. 리터럴은 작은따옴표 또는 큰따옴표로 구분할 수 있습니다.  
   
- SET QUOTED_IDENTIFIER 옵션을 ON(기본값)으로 설정하면 큰따옴표로 구분된 모든 문자열이 개체 식별자로 해석됩니다. 따라서 따옴표 붙은 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙을 따르지 않아도 됩니다. 따옴표 붙은 식별자는 예약 키워드일 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자에서 일반적으로 허용되지 않는 문자를 포함할 수 있습니다. 큰따옴표로는 리터럴 문자열 식을 구분할 수 없습니다. 리터럴 문자열을 묶으려면 작은따옴표를 사용해야 합니다. 작은따옴표는 경우 (**'**) 일부인 리터럴 문자열의 두 개의 작은따옴표로 나타낼 수 있습니다 (**"**). 데이터베이스의 개체 이름에 예약된 키워드를 사용할 경우 SET QUOTED_IDENTIFIER를 ON으로 설정해야 합니다.  
+ SET QUOTED_IDENTIFIER 옵션을 ON(기본값)으로 설정하면 큰따옴표로 구분된 모든 문자열이 개체 식별자로 해석됩니다. 따라서 따옴표 붙은 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙을 따르지 않아도 됩니다. 따옴표 붙은 식별자는 예약 키워드일 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자에서 일반적으로 허용되지 않는 문자를 포함할 수 있습니다. 큰따옴표로는 리터럴 문자열 식을 구분할 수 없습니다. 리터럴 문자열을 묶으려면 작은따옴표를 사용해야 합니다. 작은따옴표(**'**)가 리터럴 문자열의 일부인 경우 두 개의 작은따옴표(**"**)로 나타낼 수 있습니다. 데이터베이스의 개체 이름에 예약된 키워드를 사용할 경우 SET QUOTED_IDENTIFIER를 ON으로 설정해야 합니다.  
   
  SET QUOTED_IDENTIFIER 옵션을 OFF로 설정하면 식의 리터럴 문자열을 작은따옴표나 큰따옴표로 구분할 수 있습니다. 리터럴 문자열을 큰따옴표로 구분할 때 아포스트로피와 같은 작은따옴표가 들어갈 수 있습니다.  
   
- 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET QUOTED_IDENTIFIER 옵션을 ON으로 설정해야 합니다. SET QUOTED_IDENTIFIER 옵션이 OFF면 계산 열에 인덱스가 있는 테이블이나 인덱싱된 뷰에서의 CREATE, UPDATE, INSERT 및 DELETE 문이 실패합니다. 계산된 열에 인덱스 및 인덱싱된 뷰에 필요한 SET 옵션 설정에 대 한 자세한 내용은 "고려 사항 때 설정 문 사용"의 참조 [SET 문 &#40; Transact SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
+ 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET QUOTED_IDENTIFIER 옵션을 ON으로 설정해야 합니다. SET QUOTED_IDENTIFIER 옵션이 OFF면 계산 열에 인덱스가 있는 테이블이나 인덱싱된 뷰에서의 CREATE, UPDATE, INSERT 및 DELETE 문이 실패합니다. 인덱싱된 뷰 및 계산 열의 인덱스에 사용되는 필수 SET 옵션 설정에 대한 자세한 내용은 [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)에서 "SET 문 사용 시 고려 사항"을 참조하세요.  
   
  필터링된 인덱스를 만들 때 SET QUOTED_IDENTIFIER가 ON이어야 합니다.  
   
  XML 데이터 형식 메서드를 호출할 때는 SET QUOTED_IDENTIFIER가 ON이어야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자동으로 연결할 때 QUOTED_IDENTIFIER를 ON으로 설정 합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는 OLE DB 연결 특성에서 이 옵션을 구성할 수 있습니다. DB-Library 응용 프로그램에서 연결하려면 SET QUOTED_IDENTIFIER의 기본값이 OFF여야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결할 때 QUOTED_IDENTIFIER를 자동으로 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는 OLE DB 연결 특성에서 이 옵션을 구성할 수 있습니다. DB-Library 응용 프로그램에서 연결하려면 SET QUOTED_IDENTIFIER의 기본값이 OFF여야 합니다.  
   
  테이블이 생성될 때 QUOTED IDENTIFIER 옵션이 OFF로 설정되어 있는 경우에도 해당 테이블의 메타데이터에는 항상 ON으로 저장됩니다.  
   
@@ -82,16 +82,16 @@ SET QUOTED_IDENTIFIER ON
   
  SET ANSI_DEFAULTS 옵션을 ON으로 설정하면 SET QUOTED_IDENTIFIER가 설정됩니다.  
   
- 또한 SET QUOTED_IDENTIFIER는 ALTER DATABASE의 QUOTED_IDENTIFIER 설정에 해당합니다. 데이터베이스 설정에 대 한 자세한 내용은 참조 [ALTER database&#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
+ 또한 SET QUOTED_IDENTIFIER는 ALTER DATABASE의 QUOTED_IDENTIFIER 설정에 해당합니다. 데이터베이스 설정에 대한 자세한 내용은 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)을 참조하세요.  
   
- SET QUOTED_IDENTIFIER 구문 분석 시 효과가 이며 구문 분석 하지 쿼리 실행만 영향을 줍니다.  
+ QUOTED_IDENTIFIER는 구문 분석 시 적용되며 쿼리 실행이 아닌 구문 분석에만 영향을 줍니다.  
   
- 최상위 애드혹에 대 한 일괄 처리 구문 분석을 시작 QUOTED_IDENTIFIER에 대 한 세션의 현재 설정을 사용 합니다.  일괄 처리를 구문 분석 하는 대로 SET QUOTED_IDENTIFIER의 모든 항목, 해당 시점에서 구문 분석 동작을 변경 하 고 세션에 대 한 해당 설정을 저장 됩니다.  따라서 일괄 처리 구문 분석 되 고, 실행, 세션의 QUOTED_IDENTIFER 설정 일괄 처리에서 SET QUOTED_IDENTIFIER의 마지막 항목에 따라 설정 됩니다.  
- 저장된 프로시저에서 정적 SQL 적용 생성 되거나 저장된 프로시저를 변경 하는 일괄 처리에 대 한 QUOTED_IDENTIFIER 설정을 사용 하 여 구문 분석 됩니다.  SET QUOTED_IDENTIFIER 정적 SQL 저장된 프로시저의 본문에 표시 되 면 아무 효과가 없습니다.  
+ 최상위 수준의 임시 일괄 처리를 위해 QUOTED_IDENTIFIER에 대한 세션의 현재 설정을 사용하여 구문 분석을 시작합니다.  일괄 처리가 SET QUOTED_IDENTIFIER의 모든 발생 경우를 구문 분석하여 그 지점부터 구문 분석 동작을 변경하고 해당 세션의 설정을 저장합니다.  따라서 일괄 처리가 구문 분석되고 실행된 후 세션의 QUOTED_IDENTIFER 설정은 일괄 처리에서 마지막으로 발생한 SET QUOTED_IDENTIFIER에 따라 설정됩니다.  
+ 저장 프로시저의 정적 SQL은 저장 프로시저를 만들거나 변경한 일괄 처리에 대해 유효한 QUOTED_IDENTIFIER 설정을 사용하여 구문 분석됩니다.  SET QUOTED_IDENTIFIER는 저장 프로시저 본문에 정적 SQL로 표시되면 아무 효과가 없습니다.  
   
- Sp_executesql 또는 exec ()를 사용 하 여 중첩 된 일괄 처리에 대 한 구문 분석 하는 사용 하 여 시작 된 세션의 QUOTED_IDENTIFIER 설정입니다.  중첩 된 일괄 처리 구문 분석 하는 저장 프로시저는 저장된 프로시저의 QUOTED_IDENTIFIER 설정을 사용 하 여 시작 됩니다.  중첩 된 일괄 처리를 구문 분석 하는 대로 SET QUOTED_IDENTIFIER의 모든 항목은, 해당 시점에서 구문 분석 동작을 변경 하지만 세션의 QUOTED_IDENTIFIER 설정이 업데이트 되지 않습니다.  
+ sp_executesql 또는 exec()를 사용하는 중첩된 일괄 처리의 경우 세션의 QUOTED_IDENTIFIER 설정을 사용하여 구문 분석이 시작됩니다.  중첩된 일괄 처리가 저장 프로시저 내부에 있으면 구문 분석은 저장 프로시저의 QUOTED_IDENTIFIER 설정을 사용하여 시작됩니다.  중첩된 일괄 처리가 구문 분석될 때 SET QUOTED_IDENTIFIER가 발생하면 해당 지점에서 구문 분석 동작이 변경되지만 세션의 QUOTED_IDENTIFIER 설정은 업데이트되지 않습니다.  
   
- 대괄호를 사용 하 여 **[** 및 **]**식별자를 구분 하는 QUOTED_IDENTIFIER 설정에 의해 영향을 받지 않습니다.  
+ 대괄호(**[** 및 **]**)를 사용하여 식별자를 구분하는 작업은 QUOTED_IDENTIFIER 설정의 영향을 받지 않습니다.  
   
  이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.  
   
@@ -102,7 +102,7 @@ SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -196,7 +196,7 @@ GO
  7           Text with a single ' quote
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE DEFAULT&#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
@@ -208,7 +208,7 @@ GO
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [sp_rename&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)  
   
   

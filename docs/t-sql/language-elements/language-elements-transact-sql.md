@@ -1,5 +1,5 @@
 ---
-title: "언어 요소 (Transact SQL) | Microsoft Docs"
+title: "언어 요소(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -32,15 +32,15 @@ ms.lasthandoff: 01/25/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음 언어 요소를 지원합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
-[-&#40; 설명 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)  
+[--&#40;주석&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)  
   
-[슬래시 별 &#40; 블록 주석 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
+[슬래시 별&#40;주석 블록&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
  
-[진단 세션 (Transact SQL) 만들기](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
+[CREATE DIAGNOSTICS SESSION(Transact-SQL)](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
 
-[NULL 및 알 수 없음 (Transact SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
+[NULL 및 UNKNOWN(Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
 
-[트랜잭션 (SQL 데이터 웨어하우스)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
+[트랜잭션(SQL Data Warehouse)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
   
 [USE&#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
   

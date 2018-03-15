@@ -1,5 +1,5 @@
 ---
-title: "(Transact SQL) 사이의 | Microsoft Docs"
+title: BETWEEN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/28/2017
 ms.prod: sql-non-specified
@@ -51,35 +51,35 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>인수  
  *test_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 으로 정의 된 범위 내에서에 있는지 테스트할 *begin_expression*및 *end_expression*합니다. *test_expression* 두 가지 모두 동일한 데이터 형식 이어야 합니다 *begin_expression* 및 *end_expression*합니다.  
+ *begin_expression* 및 *end_expression*에 정의된 범위에서 테스트할 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *test_expression*은 *begin_expression* 및 *end_expression* 모두와 동일한 데이터 형식이어야 합니다.  
   
  NOT  
  조건자의 결과를 부정합니다.  
   
  *begin_expression*  
- 유효한 식입니다. *begin_expression* 두 가지 모두 동일한 데이터 형식 이어야 합니다 *test_expression* 및 *end_expression*합니다.  
+ 유효한 식입니다. *begin_expression*은 *test_expression* 및 *end_expression* 모두와 동일한 데이터 형식이어야 합니다.  
   
  *end_expression*  
- 유효한 식입니다. *end_expression* 두 가지 모두 동일한 데이터 형식 이어야 합니다 *test_expression*및 *begin_expression*합니다.  
+ 유효한 식입니다. *end_expression*은 *test_expression* 및 *begin_expression* 모두와 동일한 데이터 형식이어야 합니다.  
   
- 및  
- 나타내는 자리 표시자로 사용 *test_expression* 가리키는 범위 내에 있어야 *begin_expression* 및 *end_expression*합니다.  
+ AND  
+ *test_expression*이 *begin_expression* 및 *end_expression*으로 표시된 범위 내에 있어야 함을 나타내는 자리 표시자 역할을 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- 반환 사이 **TRUE** 경우의 값 *test_expression* 의 값 보다 크거나 *begin_expression* 의값보다작거나*end_expression*합니다.  
+ *test_expression*의 값이 *begin_expression*의 값보다 크거나 같고 *end_expression*의 값보다 작거나 같으면, BETWEEN에서 **TRUE**를 반환합니다.  
   
- 반환 하는 사이 있지 않음 **TRUE** 경우의 값 *test_expression* 의 값 보다 작으면 *begin_expression* 의 값 보다 크거나 *end_expression* .  
+ *test_expression*의 값이 *begin_expression*의 값보다 작거나 *end_expression*의 값보다 크면, NOT BETWEEN에서 **TRUE**를 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  경계값이 포함되지 않는 범위를 지정하려면 보다 큼(>) 및 작음(<) 연산자를 사용하세요.  BETWEEN 또는 NOT BETWEEN 조건자에 입력한 값이 NULL이면 결과는 UNKNOWN이 됩니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-between"></a>1. BETWEEN 사용  
- 다음 예에서는 데이터베이스의 데이터베이스 역할에 대 한 정보를 반환 합니다. 첫 번째 쿼리에서 모든 역할을 반환합니다. 사용 하 여 두 번째 예제는 `BETWEEN` 절을 지정 된 역할을 제한 `database_id` 값입니다.  
+ 다음 예제에서는 데이터베이스의 데이터베이스 역할에 대한 정보를 반환합니다. 첫 번째 쿼리는 모든 역할을 반환합니다. 두 번째 예제에서는 `BETWEEN` 절을 사용하여 역할을 지정한 `database_id` 값으로 제한합니다.  
   
 ```sql  
 SELECT principal_id, name 
@@ -165,7 +165,7 @@ GO
 ```  
   
 ### <a name="d-using-between-with-datetime-values"></a>4. BETWEEN에 datetime 값 사용  
- 다음 예에서는 행을 검색 **datetime** 값은 사이 `'20011212'` 및 `'20020105'`(포함).  
+ 다음 예제에서는 **datetime** 값이 `'20011212'` 이상 및 `'20020105'` 이하인 행을 검색합니다.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -184,17 +184,17 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- 쿼리 날짜 값은 쿼리에서 하기 때문에 예상 되는 행을 검색 및 **datetime** 에 저장 된 값은 `RateChangeDate` 열 날짜의 시간 부분 없이 지정 합니다. 시간 부분을 지정하지 않으면 기본적으로 12:00 A.M.이 사용됩니다. 2002-01-05에서 12:00 A.M. 이후의 시간 부분이 포함된 행은 범위를 벗어났으므로 이 쿼리에서 반환되지 않습니다.  
+ 쿼리의 날짜 값과 `RateChangeDate` 열에 저장된 **datetime** 값을 날짜의 시간 부분이 없이 지정했으므로 쿼리에서 예상되는 행을 검색합니다. 시간 부분을 지정하지 않으면 기본적으로 12:00 A.M.이 사용됩니다. 2002-01-05에서 12:00 A.M. 이후의 시간 부분이 포함된 행은 범위를 벗어났으므로 이 쿼리에서 반환되지 않습니다.  
   
   
-## <a name="see-also"></a>관련 항목:  
- [&#62; &#40; 보다 큰 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
- [&#60; &#40; 보다 작거나 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [&#62;&#40;보다 큼&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
+ [&#60;&#40;보다 작음&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKALLOC (Transact SQL) | Microsoft Docs
+title: DBCC CHECKALLOC(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -69,15 +69,15 @@ DBCC CHECKALLOC
   
 ## <a name="arguments"></a>인수  
  *database_name* | *database_id* | 0   
- 이름 또는 할당 및 페이지 사용을 확인 하려는 데이터베이스의 ID입니다.
+ 할당 및 페이지 사용률을 검사할 데이터베이스의 이름 또는 ID입니다.
 아무 값도 지정하지 않거나 0을 지정하면 현재 데이터베이스가 사용됩니다.
-데이터베이스 이름에 대 한 규칙을 따라야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.
+데이터베이스 이름은 반드시 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 준수해야 합니다.
 
  NOINDEX  
  사용자 테이블의 비클러스터형 인덱스를 검사하지 않도록 지정합니다.<br>NOINDEX는 이전 버전과의 호환성을 위해서만 유지 관리되고 DBCC CHECKALLOC에는 영향을 주지 않습니다.
 
  REPAIR_ALLOW_DATA_LOSS \| REPAIR_FAST \| REPAIR_REBUILD  
- DBCC CHECKALLOC 실행 시 발견된 오류를 복구하도록 지정합니다. *a s e _* 단일 사용자 모드에 있어야 합니다.
+ DBCC CHECKALLOC 실행 시 발견된 오류를 복구하도록 지정합니다. *database_name*은 단일 사용자 모드여야 합니다.
 
  REPAIR_ALLOW_DATA_LOSS  
  발견된 오류를 복구하려고 시도합니다. 이러한 복구를 수행하면 일부 데이터가 손실될 수 있습니다. REPAIR_ALLOW_DATA_LOSS는 할당 오류를 복구하는 데 사용할 수 있는 유일한 옵션입니다.
@@ -102,20 +102,20 @@ DBCC CHECKALLOC
  DBCC 명령으로 데이터베이스에 대한 배타적 잠금을 얻습니다.
 
  ESTIMATE ONLY  
- 다른 모든 옵션이 지정 되 면 DBCC CHECKALLOC을 실행 하는 데 필요한 tempdb 공간의 예상된 크기를 표시 합니다.
+ 다른 모든 옵션이 지정되면 DBCC CHECKALLOC 실행에 필요한 tempdb 공간의 예상 크기를 표시합니다.
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKALLOC은 페이지가 속한 페이지 유형이나 개체 유형과 관계없이 데이터베이스에 있는 모든 페이지의 할당을 검사합니다. 또한 이러한 페이지와 페이지 간 관계를 추적하는 데 사용되는 다양한 내부 구조의 유효성을 검사합니다.
-NO_INFOMSGS가 지정되지 않은 경우 DBCC CHECKALLOC은 데이터베이스의 모든 개체에 대한 공간 사용률 정보를 수집합니다. 이 정보는 발견 된 오류와 함께 인쇄 됩니다.
+NO_INFOMSGS가 지정되지 않은 경우 DBCC CHECKALLOC은 데이터베이스의 모든 개체에 대한 공간 사용률 정보를 수집합니다. 이 정보는 발견된 오류와 함께 출력됩니다.
   
 > [!NOTE]  
-> DBCC CHECKALLOC 기능은에 포함 되어 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 및 [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)합니다. 따라서 이러한 문과 별도로 DBCC CHECKALLOC을 실행할 필요가 없습니다.   DBCC CHECKALLOC은 FILESTREAM 데이터를 검사하지 않습니다. FILESTREAM은 파일 시스템에 BLOB(Binary Large Object)을 저장합니다.  
+> DBCC CHECKALLOC 기능은 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 및 [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)에 포함되어 있습니다. 따라서 이러한 문과 별도로 DBCC CHECKALLOC을 실행할 필요가 없습니다.   DBCC CHECKALLOC은 FILESTREAM 데이터를 검사하지 않습니다. FILESTREAM은 파일 시스템에 BLOB(Binary Large Object)을 저장합니다.  
   
 ## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅숏  
 DBCC CHECKALLOC은 내부 데이터베이스 스냅숏을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 지원합니다. 스냅숏을 만들 수 없거나 TABLOCK이 지정되어 있는 경우 DBCC CHECKALLOC은 데이터베이스에 대한 배타(X) 잠금을 얻어 필요한 일관성을 확보하려고 합니다.
   
 > [!NOTE]  
-> Tempdb에 대 한 DBCC CHECKALLOC을 실행 해도 아무런 검사도 수행 하지 않습니다. 이것은 성능상의 이유로 tempdb의 데이터베이스 스냅숏을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. 중지 하 고 모든 tempdb 할당 문제를 해결 하려면 MSSQLSERVER 서비스를 시작 합니다. 이 작업을 삭제 하 고 다시 tempdb 데이터베이스를 만듭니다.  
+> tempdb에 대해 DBCC CHECKALLOC을 실행하면 모든 검사가 수행되지 않습니다. 이것은 성능상의 이유로 tempdb의 데이터베이스 스냅숏을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. tempdb 할당 문제를 해결하려면 MSSQLSERVER 서비스를 중지한 후 시작합니다. 이 동작을 수행하면 tempdb 데이터베이스가 삭제되고 다시 생성됩니다.  
   
 ## <a name="understanding-dbcc-error-messages"></a>DBCC 오류 메시지 이해  
 DBCC CHECKALLOC 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록됩니다. DBCC 명령이 성공적으로 실행되면 메시지에 실행 완료 및 명령이 실행된 소요 시간이 표시됩니다. 오류로 인해 DBCC 명령이 검사를 완료하기 전에 중지되면 메시지에 명령 종료, 상태 값 및 명령이 실행된 소요 시간이 표시됩니다. 다음 표에서는 메시지에 포함될 수 있는 상태 값을 나열하고 설명합니다.
@@ -123,15 +123,15 @@ DBCC CHECKALLOC 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ss
 |State|Description|  
 |---|---|  
 |0|오류 번호 8930이 발생했습니다. 메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|  
-|1.|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|  
+|1|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|  
 |2|응급 모드 데이터베이스 복구 중에 오류가 발생했습니다.|  
 |3|메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|  
 |4|어설션 또는 액세스 위반이 감지되었습니다.|  
 |5|알 수 없는 오류가 발생하여 DBCC 명령이 종료되었습니다.|  
   
 ## <a name="error-reporting"></a>오류 보고  
-미니 덤프 파일 (SQLDUMP*nnnn*.txt)에서 만든는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBCC checkalloc 명령에서 손상 오류가 검색 될 때마다 로그 디렉터리입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 기능 사용 데이터 수집 및 오류 보고 기능을 설정하면 이 파일이 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 자동으로 전달됩니다. 수집된 데이터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 향상시킬 수 있습니다.
-덤프 파일에는 DBCC CHECKALLOC 명령의 결과 및 추가 진단 출력이 포함됩니다. 이 파일에는 제한된 DACL(임의 액세스 제어 목록)이 있습니다. 액세스가 제한 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 sysadmin 역할의 멤버입니다. 기본적으로 sysadmin 역할에는 Windows BUILTIN\Administrators 그룹 및 로컬 관리자 그룹의 모든 멤버가 포함됩니다. 데이터 수집 프로세스가 실패해도 DBCC 명령은 실패하지 않습니다.
+DBCC CHECKALLOC 명령에서 손상 오류가 검색될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 디렉터리에 미니덤프 파일(SQLDUMP*nnnn*.txt)이 생성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 기능 사용 데이터 수집 및 오류 보고 기능을 설정하면 이 파일이 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 자동으로 전달됩니다. 수집된 데이터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 향상시킬 수 있습니다.
+덤프 파일에는 DBCC CHECKALLOC 명령의 결과 및 추가 진단 출력이 포함됩니다. 이 파일에는 제한된 DACL(임의 액세스 제어 목록)이 있습니다. 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 sysadmin 역할의 멤버로 제한됩니다. 기본적으로 sysadmin 역할에는 Windows BUILTIN\Administrators 그룹 및 로컬 관리자 그룹의 모든 멤버가 포함됩니다. 데이터 수집 프로세스가 실패해도 DBCC 명령은 실패하지 않습니다.
   
 ## <a name="resolving-errors"></a>오류 해결  
 DBCC CHECKALLOC이 오류를 보고하면 복구를 실행하는 대신 데이터베이스 백업으로 데이터베이스를 복원하는 것이 좋습니다. 백업이 없는 경우 복구를 실행하면 보고된 오류를 해결할 수 있지만 이렇게 하면 일부 페이지와 그 안의 데이터가 삭제될 수도 있습니다.
@@ -157,7 +157,7 @@ DBCC CHECKALLOC이 오류를 보고하면 복구를 실행하는 대신 데이�
 |Partition ID|내부적으로만 사용됩니다.|  
 |Alloc unit ID|내부적으로만 사용됩니다.|  
 |행 내부 데이터|페이지에 인덱스 또는 힙 데이터가 포함됩니다.|  
-|LOB 데이터|페이지에 포함 되어 **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **텍스트**, **ntext**, **xml**, 및 **이미지** 데이터입니다.|  
+|LOB 데이터|페이지에 **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **xml** 및 **image** 데이터가 포함됩니다.|  
 |행 오버플로 데이터|페이지에 행 외부로 밀어넣은 가변 길이 열 데이터가 포함됩니다.|  
   
 DBCC CHECKALLOC은 ESTIMATEONLY 또는 NO_INFOMSGS가 지정된 경우를 제외하고 다음 결과 집합(값은 변화 가능)을 반환합니다.
@@ -234,8 +234,8 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
-Sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.
+## <a name="permissions"></a>사용 권한  
+sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
 다음 예에서는 현재 데이터베이스 및 `DBCC CHECKALLOC` 데이터베이스에 대해 `AdventureWorks2012`을 실행합니다.
@@ -249,7 +249,7 @@ DBCC CHECKALLOC (AdventureWorks2012);
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

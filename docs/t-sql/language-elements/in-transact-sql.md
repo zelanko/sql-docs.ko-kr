@@ -1,5 +1,5 @@
 ---
-title: "(Transact SQL)에서 | Microsoft Docs"
+title: IN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/29/2016
 ms.prod: sql-non-specified
@@ -53,27 +53,27 @@ test_expression [ NOT ] IN
   
 ## <a name="arguments"></a>인수  
  *test_expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)합니다.  
+ 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *subquery*  
- 하나의 열로 구성된 결과 집합을 갖는 하위 쿼리입니다. 이 열에 동일한 데이터 형식으로 되어 있어야 *test_expression*합니다.  
+ 하나의 열로 구성된 결과 집합을 갖는 하위 쿼리입니다. 이 열은 *test_expression*과 데이터 형식이 같아야 합니다.  
   
  *식*[ **,**... *n* ]  
- 일치 여부를 검사할 식의 목록입니다. 모든 식은 같은 형식 이어야 합니다 *test_expression*합니다.  
+ 일치 여부를 검사할 식의 목록입니다. 모든 식은 *test_expression*과 형식이 같아야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- 경우의 값 *test_expression* 반환한 모든 값과 같은 *하위 쿼리* 과 일치 하는 또는 *식* 쉼표로 구분 된 목록에서 결과 값은 TRUE입니다. 그렇지 않으면 결과 값은 FALSE입니다.  
+ *test_expression*의 값이 *subquery*에서 반환된 값과 일치하거나 쉼표로 구분된 목록의 *식*과 일치하는 경우 결과 값은 TRUE입니다. 그렇지 않으면 결과 값은 FALSE입니다.  
   
- NOT IN을 사용 하 여 부정는 *하위 쿼리* 값 또는 *식*합니다.  
+ NOT IN을 사용하면 *하위 쿼리* 값 또는 *식*을 부정합니다.  
   
 > [!CAUTION]  
->  Null 값을 반환한 *하위 쿼리* 또는 *식* 비교할는 *test_expression* IN을 사용 하거나에 없는 UNKNOWN을 반환 합니다. IN 또는 NOT IN과 함께 Null 값을 사용하면 예기치 않은 결과가 발생할 수 있습니다.  
+>  IN 또는 NOT IN을 사용한 *test_expression*과 비교하여 *subquery* 또는 *expression*에서 반환되는 Null 값은 UNKNOWN을 반환합니다. IN 또는 NOT IN과 함께 Null 값을 사용하면 예기치 않은 결과가 발생할 수 있습니다.  
   
-## <a name="remarks"></a>주의  
- IN 절에는 괄호 안에 매우 많은 수의 값 (수천 개 쉼표로 구분 된 값의)을 명시적으로 포함 리소스가 소비 되 고 오류 8623 또는 8632가 반환 됩니다. 이 문제를 해결 하려면 테이블에서 목록의 항목을 저장 하 고 IN 절 내에서 SELECT 하위 쿼리를 사용 합니다.  
+## <a name="remarks"></a>Remarks  
+ IN 절에서 괄호 안에 너무 많은 값(콤마로 구분된 수천 개의 값)을 명시적으로 포함하면 리소스가 소비되고 오류 8623 또는 8632가 반환됩니다. 이 문제를 해결하려면 IN 목록의 항목을 테이블에 저장하고, IN 절 내에서 SELECT 하위 쿼리를 사용합니다.  
   
  오류 8623:  
   
@@ -177,10 +177,10 @@ WHERE p.BusinessEntityID NOT IN
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-in-and-not-in"></a>4. 및에 없는 사용 하 여  
- 다음 예제에서 모든 항목을 찾은 `FactInternetSales` 일치 하는 테이블 `SalesReasonKey` 값에 `DimSalesReason` 테이블입니다.  
+### <a name="d-using-in-and-not-in"></a>4. IN 및 NOT IN 사용  
+ 다음 예제에서는 `DimSalesReason` 테이블의 `SalesReasonKey` 값에 일치하는 모든 항목을 `FactInternetSales` 테이블에서 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -190,7 +190,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 다음 예제에서 모든 항목을 찾은 `FactInternetSalesReason` 일치 하지 않는 테이블 `SalesReasonKey` 값에 `DimSalesReason` 테이블입니다.  
+ 다음 예제에서는 `DimSalesReason` 테이블의 `SalesReasonKey` 값에 일치하지 않는 모든 항목을 `FactInternetSalesReason` 테이블에서 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -200,8 +200,8 @@ WHERE SalesReasonKey
 NOT IN (SELECT SalesReasonKey FROM DimSalesReason);  
 ```  
   
-### <a name="e-using-in-with-an-expression-list"></a>5. 식 목록을 사용 하 여 사용 하 여  
- 다음 예제에서는의 영업 사원에 대 한 모든 Id를 찾습니다는 `DimEmployee` 는 첫 번째 직원 이름 중 하나에 대 한 테이블 `Mike` 또는 `Michael`합니다.  
+### <a name="e-using-in-with-an-expression-list"></a>5. 식 목록과 함께 IN 사용  
+ 다음 예제에서는 이름이 `Mike` 또는 `Michael`인 직원을 위한 `DimEmployee` 테이블에서 영업 사원의 모든 ID를 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -211,15 +211,15 @@ FROM DimEmployee
 WHERE FirstName IN ('Mike', 'Michael');  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [대/소문자 &#40; Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [모든 &#40; Transact SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [일부 &#124; 모든 &#40; Transact SQL &#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [ALL&#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
+ [SOME &#124; ANY&#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
   
   
 

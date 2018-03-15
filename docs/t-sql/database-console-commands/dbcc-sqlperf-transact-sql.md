@@ -1,5 +1,5 @@
 ---
-title: DBCC SQLPERF (Transact SQL) | Microsoft Docs
+title: DBCC SQLPERF(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/07/2018
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-모든 데이터베이스의 트랜잭션 로그 공간 사용량 통계를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 및 래치 통계를 다시 설정에 사용할 수 있습니다.
+모든 데이터베이스의 트랜잭션 로그 공간 사용량 통계를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대기 및 래치 통계를 다시 설정하는데 사용할 수도 있습니다.
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([일부 지역에서는 미리 보기](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서 미리 보기](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,13 +59,13 @@ DBCC SQLPERF
   
 ## <a name="arguments"></a>인수  
 LOGSPACE  
-트랜잭션 로그의 현재 크기와 각 데이터베이스의 로그 공간 사용 비율을 반환합니다. 이 정보를 사용 하 여 트랜잭션 로그에 사용 되는 공간의 양을 모니터링 합니다.
+트랜잭션 로그의 현재 크기와 각 데이터베이스의 로그 공간 사용 비율을 반환합니다. 이 정보를 사용하여 트랜잭션 로그에 사용된 공간을 모니터링합니다.
 
 > [!IMPORTANT]
-> 로 시작 하는 트랜잭션 로그에 대 한 공간 사용 정보에 대 한 자세한 내용은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 참조는 [주의](#Remarks) 이 항목의 섹션입니다.
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]로 시작하는 트랜잭션 로그의 공간 사용 정보에 대한 자세한 내용은 이 항목의 [설명](#Remarks) 섹션을 참조하세요.
   
 **"sys.dm_os_latch_stats"**, CLEAR  
-래치 통계를 다시 설정합니다. 자세한 내용은 참조 [sys.dm_os_latch_stats &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 이 옵션을 사용할 수 없습니다.  
+래치 통계를 다시 설정합니다. 자세한 내용은 [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)을 참조하세요. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 이 옵션을 사용할 수 없습니다.  
   
 **"sys.dm_os_wait_stats"**, CLEAR  
 대기 통계를 다시 설정합니다. 자세한 내용은 [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조하세요. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 이 옵션을 사용할 수 없습니다.  
@@ -78,20 +78,20 @@ WITH NO_INFOMSGS
   
 |열 이름|정의|  
 |---|---|
-|**데이터베이스 이름**|로그 통계가 표시될 데이터베이스의 이름입니다.|  
-|**로그 크기 (MB)**|로그에 할당된 현재 크기입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부 헤더 정보용으로 적은 양의 디스크 공간을 예약하므로 이 값은 원래 로그 공간을 위해 할당된 크기보다 작습니다.|  
-|**Log Space Used (%)**|트랜잭션 로그 정보를 저장 하는 사용 중인 현재 로그 파일의 비율입니다.|  
+|**Database Name**|로그 통계가 표시될 데이터베이스의 이름입니다.|  
+|**Log Size (MB)**|로그에 할당된 현재 크기입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부 헤더 정보용으로 적은 양의 디스크 공간을 예약하므로 이 값은 원래 로그 공간을 위해 할당된 크기보다 작습니다.|  
+|**Log Space Used (%)**|현재 트랜잭션 로그 정보를 저장하는 데 사용 중인 로그 파일의 비율입니다.|  
 |**상태**|로그 파일의 상태이며 항상 0입니다.|  
   
 ## <a name="Remarks"></a> 주의  
-부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 사용 하 여는 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) 대신 DMV `DBCC SQLPERF(LOGSPACE)`, 데이터베이스 트랜잭션 로그에 대 한 공간 사용 정보를 반환 하 합니다.    
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작하여 `DBCC SQLPERF(LOGSPACE)` 대신에 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV를 사용하여 데이터베이스 당 트랜잭션 로그의 공간 사용 정보를 반환합니다.    
  
-트랜잭션 로그는 데이터베이스에서 수행된 각 트랜잭션을 기록합니다. 자세한 내용은 참조 하십시오. [트랜잭션 로그 &#40; SQL Server &#41; ](../../relational-databases/logs/the-transaction-log-sql-server.md) 및 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)합니다.
+트랜잭션 로그는 데이터베이스에서 수행된 각 트랜잭션을 기록합니다. 자세한 내용은 [트랜잭션 로그 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 및 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)을 참조하세요.
   
-## <a name="permissions"></a>Permissions  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 `DBCC SQLPERF(LOGSPACE)` 필요 `VIEW SERVER STATE` 서버에 대 한 권한이 있습니다. 대기 및 래치 통계를 다시 설정 하려면 필요 `ALTER SERVER STATE` 서버에 대 한 권한이 있습니다.
+## <a name="permissions"></a>사용 권한  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `DBCC SQLPERF(LOGSPACE)`를 실행하려면 서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다. 대기 및 래치 통계를 다시 설정하려면 서버에 대한 `ALTER SERVER STATE` 권한이 필요합니다.
   
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준 및 기본 계층 필요는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정. 대기 및 래치 통계 재설정은 지원되지 않습니다.
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준 및 기본 계층에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정이 필요합니다. 대기 및 래치 통계 재설정은 지원되지 않습니다.
   
 ## <a name="examples"></a>예  
   
@@ -122,12 +122,12 @@ AdventureWorks 19.554688    17.748701          0
 DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
-[sys.dm_os_latch_stats &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
-[sys.dm_os_wait_stats&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+[sys.dm_os_latch_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
+[sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
 [sp_spaceused&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
-[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
-[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
+[sys.dm_db_log_info&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_space_usage&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
+[sys.dm_db_log_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
 

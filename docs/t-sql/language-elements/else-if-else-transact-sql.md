@@ -1,5 +1,5 @@
 ---
-title: "ELSE (IF... 다른) (Transact SQL) | Microsoft Docs"
+title: ELSE(IF...ELSE)(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="else-ifelse-transact-sql"></a>ELSE(IF...ELSE)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하기 위한 조건을 설정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 (*sql_statement*) 다음의 *Boolean_expression*면 실행 되는 *Boolean_expression* TRUE로 평가 합니다. 선택적인 ELSE 키워드는는 대체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 때 실행 *Boolean_expression* FALSE 또는 NULL로 계산 합니다.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하기 위한 조건을 설정합니다. *Boolean_expression*이 TRUE로 평가되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문(*sql_statement*) 다음의 *Boolean_expression*가 실행됩니다. 선택적인 ELSE 키워드는 *Boolean_expression*이 FALSE 또는 NULL로 평가될 때 실행되는 대체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ IF Boolean_expression
   
 ## <a name="arguments"></a>인수  
  *Boolean_expression*  
- TRUE 또는 FALSE를 반환하는 식입니다. 경우는 *Boolean_expression* 는 SELECT 문이 SELECT 문을 괄호로 묶어야 합니다.  
+ TRUE 또는 FALSE를 반환하는 식입니다. *Boolean_expression*이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
   
  { *sql_statement* | *statement_block* }  
  문 블록에 정의된 유효한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 문 그룹입니다. 문 블록(일괄 처리)을 정의하려면 흐름 제어 언어 키워드인 BEGIN과 END를 사용합니다. BEGIN...END 블록 내의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 유효해도 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 동일한 일괄 처리(문 블록) 내에서 그룹화할 수 없습니다.  
@@ -123,7 +123,7 @@ GO
 ```  
   
 ### <a name="d-using-nested-ifelse-statements"></a>4. 중첩된 IF...ELSE 문 사용  
- 다음 예제 방식을 IF... ELSE 문 안에 다른 중첩할 수 있습니다. `@Number` 변수를 `5`, `50` 및 `500`으로 설정하여 각 문을 테스트해 보십시오.  
+ 다음 예에서는 IF... ELSE 문이 어떻게 다른 문에 중첩될 수 있는지를 보여 줍니다. `@Number` 변수를 `5`, `50` 및 `500`으로 설정하여 각 문을 테스트해 보십시오.  
   
 ```  
 DECLARE @Number int;  
@@ -140,10 +140,10 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: 부울 식의 일부로 쿼리를 사용 하 여  
- 다음 예제에서는 `IF…ELSE` 중에 사용자 표시에 대 한 두 개의 응답에 있는 항목의 가중치에 따라는 `DimProduct` 테이블입니다.  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. 쿼리를 부울 식의 일부로 사용  
+ 다음 예제에서는 `IF…ELSE`를 사용하여 `DimProduct` 테이블에 있는 항목의 가중치에 따라 두 응답 중 사용자를 표시할 응답을 결정합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -157,9 +157,9 @@ ELSE
     (SELECT @productKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' FROM DimProduct WHERE ProductKey=@productKey)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [흐름 제어 언어 &#40; Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Control-of-Flow Language&#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [IF...ELSE&#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   

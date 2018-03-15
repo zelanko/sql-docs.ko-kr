@@ -1,5 +1,5 @@
 ---
-title: "및 (Transact SQL) | Microsoft Docs"
+title: AND(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="and-transact-sql"></a>AND(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  두 부울 식 결합 하 고 반환 **TRUE** 두 식이 모두 경우 **TRUE**합니다. 하나 이상의 논리 연산자 한 문에 사용 되는 경우는 **AND** 연산자가 먼저 계산 됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.  
+  두 개의 부울 식을 결합하여 두 식이 모두 **TRUE**일 때만 **TRUE**를 반환합니다. 문에 두 개 이상의 논리 연산자가 사용될 경우 **AND** 연산자가 먼저 계산됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>인수  
  *boolean_expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) 부울 값을 반환 하는: **TRUE**, **FALSE**, 또는 **알 수 없는**합니다.  
+ **TRUE**, **FALSE** 또는 **UNKNOWN**의 부울 값을 반환하는 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
@@ -58,7 +58,7 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>결과 값  
  두 식이 모두 TRUE일 때 TRUE를 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 차트에서는 AND 연산자를 사용하여 TRUE와 FALSE 값을 비교한 결과를 보여 줍니다.  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -100,10 +100,10 @@ ELSE PRINT 'Second Example is FALSE' ;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

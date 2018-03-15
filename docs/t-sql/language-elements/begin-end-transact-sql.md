@@ -1,5 +1,5 @@
 ---
-title: "시작 중... 끝 (Transact SQL) | Microsoft Docs"
+title: BEGIN...END(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -56,7 +56,7 @@ END
  { *sql_statement* | *statement_block* }  
  문 블록을 사용하여 정의한 유효한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문 그룹입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  BEGIN...END 블록은 중첩될 수 있습니다.  
   
  BEGIN...END 블록 내의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 유효해도 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 동일한 일괄 처리 또는 문 블록 내에 그룹화할 수 없습니다.  
@@ -84,8 +84,8 @@ Rolled back the transaction.
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서 `BEGIN` 및 `END` 일련의 정의 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 함께 실행 되는 문입니다. 경우는 `BEGIN...END` 블록 포함 되지 않은 경우, 다음 예제에서는 연속 반복에 포함 됩니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서 `BEGIN` 및 `END`는 함께 실행되는 일련의 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문을 정의합니다. `BEGIN...END` 블록이 포함되지 않은 경우 다음 예제가 연속 반복에 포함됩니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -100,11 +100,11 @@ END;
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [흐름 제어 언어 &#40; Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Control-of-Flow Language&#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [최종 &#40; 시작 중... 최종 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
+ [END&#40;BEGIN...END&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
   
   
 

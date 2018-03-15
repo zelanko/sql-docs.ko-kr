@@ -1,5 +1,5 @@
 ---
-title: "! = (같지 않음) (Transact SQL) | Microsoft Docs"
+title: "!= (같지 않음)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,13 +35,13 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="not-equal-to-transact-sql---exclamation"></a>같지 (Transact SQL)-느낌표
+# <a name="not-equal-to-transact-sql---exclamation"></a>같지 않음(Transact SQL) - 느낌표
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  식이 다른 식과 같지 않은지 테스트합니다(비교 연산자). 피연산자 중 하나 또는 둘 다가 NULL이면 NULL이 반환됩니다. 동일 하 게 작동는 [(같지) <>](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md) 비교 연산자.  
+  식이 다른 식과 같지 않은지 테스트합니다(비교 연산자). 피연산자 중 하나 또는 둘 다가 NULL이면 NULL이 반환됩니다. [<>(같지 않음)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md) 비교 연산자와 기능이 같습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "설정 @local_variable (Transact SQL) | Microsoft Docs"
+title: SET @local_variable(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -31,10 +31,10 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-localvariable-transact-sql"></a>설정 @local_variable (Transact SQL)
+# <a name="set-localvariable-transact-sql"></a>SET @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  이전에 DECLARE @을 사용 하 여 만든 지정 된 로컬 변수를 설정 하는*local_variable* 문에 지정 된 값입니다.  
+  DECLARE @*local_variable* 문을 사용하여 이전에 만든 지정된 지역 변수를 지정된 값으로 설정합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -77,7 +77,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>인수  
  **@** *local_variable*  
- 제외한 모든 형식의 변수 이름 **커서**, **텍스트**, **ntext**, **이미지**, 또는 **테이블**합니다. 변수 이름을 기호로 시작 해야 합니다 (**@**). 변수 이름에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
+ **cursor**, **text**, **ntext**, **image** 또는 **table**을 제외한 모든 형식의 변수 이름입니다. 변수 이름은 기호(**@**)로 시작해야 합니다. 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
  *property_name*  
  사용자 정의 형식의 속성입니다.  
@@ -89,9 +89,9 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  CLR(공용 언어 런타임) 사용자 정의 형식의 이름입니다.  
   
  { **.** | **::** }  
- CLR 사용자 정의 형식의 메서드를 지정합니다. 인스턴스 (비정적) 메서드를 마침표를 사용 합니다. (**.**). 정적 메서드의 경우 콜론 두 개를 사용 하 여 (**::**). CLR 사용자 정의 형식의 메서드, 속성 또는 필드를 호출하려면 해당 형식에 대해 EXECUTE 권한이 있어야 합니다.  
+ CLR 사용자 정의 형식의 메서드를 지정합니다. 비정적 인스턴스 메서드의 경우 마침표(**.**)를 사용합니다. 정적 메서드의 경우 두 개의 콜론(**::**)을 사용합니다. CLR 사용자 정의 형식의 메서드, 속성 또는 필드를 호출하려면 해당 형식에 대해 EXECUTE 권한이 있어야 합니다.  
   
- *method_name* **(** *인수* [ **,**... *n* ] **)**  
+ *method_name* **(** *argument* [ **,**... *n* ] **)**  
  하나 이상의 인수를 사용하여 한 유형의 인스턴스 상태를 수정하는 사용자 정의 형식 메서드입니다. 정적 메서드는 공용이어야 합니다.  
   
  **@** *SQLCLR_local_variable*  
@@ -120,7 +120,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  |=               비트 OR 및 할당  
   
  *expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)합니다.  
+ 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *cursor_variable*  
  커서 변수의 이름입니다. 대상 커서 변수가 이전에 다른 커서를 참조한 경우 이전 참조가 제거됩니다.  
@@ -141,15 +141,15 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  커서에서 사용할 데이터를 임시로 복사해 주는 커서를 정의합니다. 커서에 대한 모든 요청은 tempdb의 임시 테이블에서 응답합니다. 따라서 기본 테이블에서 수정된 내용이 이 커서에 대한 인출에서 반환된 데이터에 반영되지 않아 이 커서를 수정할 수 없습니다.  
   
  KEYSET  
- 커서가 열릴 때 커서에 있는 행의 멤버 자격과 순서가 고정되도록 지정합니다. 행을 고유 하 게 식별 하는 키 집합이 tempdb에 keysettable 내장 됩니다. 커서 소유자나 다른 사용자가 기본 테이블에서 키가 아닌 값을 변경하면 그 내용이 커서 소유자가 커서를 스크롤할 때 표시됩니다. 그러나 다른 사용자가 삽입한 데이터는 표시되지 않으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서를 통해 데이터를 삽입할 수 없습니다.  
+ 커서가 열릴 때 커서에 있는 행의 멤버 자격과 순서가 고정되도록 지정합니다. 행을 고유하게 식별하는 키 집합이 tempdb의 keysettable 테이블에 작성됩니다. 커서 소유자나 다른 사용자가 기본 테이블에서 키가 아닌 값을 변경하면 그 내용이 커서 소유자가 커서를 스크롤할 때 표시됩니다. 그러나 다른 사용자가 삽입한 데이터는 표시되지 않으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서를 통해 데이터를 삽입할 수 없습니다.  
   
- 행을 인출 하려고 반환 하는 경우는 행이 삭제 되는 @@FETCH_STATUS -2입니다. 커서 외부에서 키 값을 업데이트하는 것은 이전 행을 삭제하고 새 행을 삽입하는 것과 비슷합니다. 새 값을 가진 행을 볼 수 있고 이전 값을 가진 행을 인출 하려고 반환는 @@FETCH_STATUS -2입니다. WHERE CURRENT OF 절을 지정하여 커서를 통해 업데이트를 수행한 경우에는 새 값을 볼 수 있습니다.  
+ 삭제된 행을 가져오려고 하면 -2인 @@FETCH_STATUS를 반환합니다. 커서 외부에서 키 값을 업데이트하는 것은 이전 행을 삭제하고 새 행을 삽입하는 것과 비슷합니다. 새 값이 있는 행이 표시되지 않고 이전 값이 있는 행을 가져오려고 하면 -2인 @@FETCH_STATUS를 반환합니다. WHERE CURRENT OF 절을 지정하여 커서를 통해 업데이트를 수행한 경우에는 새 값을 볼 수 있습니다.  
   
  DYNAMIC  
  커서 소유자가 커서를 스크롤할 때 결과 집합의 행에 모든 데이터 변경 내용이 반영되도록 커서를 정의합니다. 따라서 인출할 때마다 행의 데이터 값, 순서 및 멤버 자격이 변경될 수 있습니다. 동적 커서에는 절대 인출 및 상대 인출 옵션을 사용할 수 없습니다.  
   
  FAST_FORWARD  
- 지정 FORWARD_ONLY, READ_ONLY 커서 최적화를 사용할 수 있습니다. SCROLL도 지정된 경우에는 FAST_FORWARD를 지정할 수 없습니다.  
+ 최적화를 사용하도록 설정된 FORWARD_ONLY, READ_ONLY 커서를 지정합니다. SCROLL도 지정된 경우에는 FAST_FORWARD를 지정할 수 없습니다.  
   
  READ_ONLY  
  이 커서를 통해 업데이트할 수 없습니다. UPDATE 문 또는 DELETE 문의 WHERE CURRENT OF 절에서는 이 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다.  
@@ -163,43 +163,43 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  TYPE_WARNING  
  요청한 커서 형식이 다른 형식으로 암시적으로 변환된 경우 클라이언트에게 경고 메시지를 보내도록 지정합니다.  
   
- 에 대 한 *select_statement*  
- 커서의 결과 집합을 정의하는 표준 SELECT 문입니다. 내에서 FOR BROWSE 및 INTO 키워드를 사용할 수 없습니다는 *select_statement* 커서 선언 합니다.  
+ FOR *select_statement*  
+ 커서의 결과 집합을 정의하는 표준 SELECT 문입니다. FOR BROWSE 및 INTO 키워드는 커서 선언의 *select_statement* 내에서 허용되지 않습니다.  
   
- DISTINCT, UNION, GROUP BY 또는 HAVING 사용 하거나 집계 식에 포함 된 경우는 *select_list*, 커서는 정적으로 생성 됩니다.  
+ DISTINCT, UNION, GROUP BY 또는 HAVING을 사용하거나 집계 식이 *select_list*에 포함되면, 커서가 STATIC으로 만들어집니다.  
   
  각 기본 테이블에 고유 인덱스가 없고 ISO SCROLL 커서 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] KEYSET 커서가 요청되면 자동으로 STATIC 커서가 됩니다.  
   
- 경우 *select_statement* ORDER BY 절이 포함 되어 열 하지 않은 고유 행 식별자, 동적 커서는 변환 키 집합 커서 또는 정적 커서를 키 집합 커서를 열 수 없는 경우. STATIC 키워드를 사용하지 않고 ISO 구문을 사용해 정의한 커서의 경우도 마찬가지입니다.  
+ 열이 고유 행 식별자가 아닌 ORDER BY 절이 *select_statement* 문에 포함되면, DYNAMIC 커서가 KEYSET 커서로 변환되거나 KEYSET 커서를 열 수 없는 경우 STATIC 커서로 변환됩니다. STATIC 키워드를 사용하지 않고 ISO 구문을 사용해 정의한 커서의 경우도 마찬가지입니다.  
   
  READ ONLY  
  이 커서를 통해 업데이트할 수 없습니다. UPDATE 문 또는 DELETE 문의 WHERE CURRENT OF 절에서는 이 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다. 이 키워드는 READ와 ONLY 사이에 밑줄 대신 공백이 있어 앞의 READ_ONLY와는 다른 키워드입니다.  
   
- 업데이트 [OF *column_name*[ **,**... *n* ] ]  
- 커서 내에서 업데이트할 수 있는 열을 정의합니다. Of *column_name* [**,**...  *n* ]를 제공 하면만 나열 된 열 수정이 가능 합니다. 커서가 READ_ONLY로 정의되어 있지 않은 경우 목록을 제공하지 않으면 모든 열을 업데이트할 수 있습니다.  
+ UPDATE [OF *column_name*[ **,**... *n* ] ]  
+ 커서 내에서 업데이트할 수 있는 열을 정의합니다. OF *column_name* [**,**...*n*]이 제공되면 나열된 열만 수정할 수 있습니다. 커서가 READ_ONLY로 정의되어 있지 않은 경우 목록을 제공하지 않으면 모든 열을 업데이트할 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  변수를 선언하면 이 변수는 NULL로 초기화됩니다. SET 문을 사용하여 NULL이 아닌 값을 선언된 변수에 할당할 수 있습니다. 변수에 값을 할당한 SET 문은 단일 값을 반환합니다. 여러 변수를 초기화할 때는 지역 변수마다 별도의 SET 문을 사용합니다.  
   
  변수는 식에서만 사용할 수 있으며 개체 이름이나 키워드 대신 사용할 수 없습니다. 동적 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 생성하려면 EXECUTE를 실행합니다.  
   
- 구문 규칙 집합에 대 한 **@ * * * cursor_variable* LOCAL 및 GLOBAL 키워드가 포함 되지 않습니다. 때 집합 **@ * * * cursor_variable* = CURSOR... 구문을 사용를 기본값으로 로컬 커서 데이터베이스 옵션의 설정에 따라 커서가 GLOBAL 또는 LOCAL로 만들어집니다.  
+ SET **@***cursor_variable* 구문 규칙에는 LOCAL 및 GLOBAL 키워드가 없습니다. SET **@***cursor_variable* = CURSOR... 구문이 사용되면, 커서가 로컬 커서 데이터베이스 옵션의 기본 설정에 따라 GLOBAL 또는 LOCAL로 만들어집니다.  
   
  전역 커서를 참조하는 경우에도 커서 변수는 항상 지역 변수입니다. 커서 변수가 전역 커서를 참조하면 전역 커서 참조 및 로컬 커서 참조를 모두 가지게 됩니다. 자세한 내용은 예 3을 참조하세요.  
   
- 자세한 내용은 참조 [DECLARE CURSOR &#40; Transact SQL &#41; ](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ 자세한 내용은 [DECLARE CURSOR&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)를 참조하세요.  
   
  할당 연산자의 오른쪽에 변수가 포함된 식이 있고 UPDATE, SELECT 및 RECEIVE 문에 SET이 포함된 곳에는 어디에나 복합 할당 연산자를 사용할 수 있습니다.  
   
- 값을 연결하려면, 즉 집계 값을 계산하려면 SELECT 문에 변수를 사용하지 마세요. 사용할 경우 예기치 않은 쿼리 결과가 발생할 수 있습니다. 이는 SELECT 목록의 모든 식(할당 포함)이 각 출력 행에 대해 정확히 한 번씩 실행되도록 보장되지 않기 때문입니다. 자세한 내용은 참조 [이 KB 문서](http://support.microsoft.com/kb/287515)합니다.  
+ 값을 연결하려면, 즉 집계 값을 계산하려면 SELECT 문에 변수를 사용하지 마세요. 사용할 경우 예기치 않은 쿼리 결과가 발생할 수 있습니다. 이는 SELECT 목록의 모든 식(할당 포함)이 각 출력 행에 대해 정확히 한 번씩 실행되도록 보장되지 않기 때문입니다. 자세한 내용은 [이 KB 문서](http://support.microsoft.com/kb/287515)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
- public 역할의 멤버 자격이 필요합니다. 모든 사용자 집합을 사용할 수 **@ * * * local_variable*합니다.  
+## <a name="permissions"></a>사용 권한  
+ public 역할의 멤버 자격이 필요합니다. 모든 사용자는 SET **@***local_variable*을 사용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>1. SET을 사용하여 초기화된 변수 값 인쇄  
- 다음 예제에서는 `@myvar` 변수는 문자열 값을 변수에 넣습니다 및의 값을 출력에서 `@myvar` 변수입니다.  
+ 다음 예제에서는 `@myvar` 변수를 만들고, 문자열 값을 변수에 넣고, `@myvar` 변수 값을 출력합니다.  
   
 ```  
 DECLARE @myvar char(20);  
@@ -298,7 +298,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>8. 사용자 정의 형식의 메서드를 호출하여 사용자 정의 형식 변수에 값 할당  
- 다음 예제에서는 사용자 정의 형식에 대 한 값을 설정 **가리킨** 메서드를 호출 하 여 `SetXY` 형식입니다.  
+ 다음 예제에서는 형식의 `SetXY` 메서드를 호출하여 **point** 사용자 정의 형식의 값을 설정합니다.  
   
 ```  
 DECLARE @p Point;  
@@ -316,10 +316,10 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>10. SET을 사용하여 초기화된 변수 값 인쇄  
- 다음 예제에서는 `@myvar` 변수는 문자열 값을 변수에 넣습니다 및의 값을 출력에서 `@myvar` 변수입니다.  
+ 다음 예제에서는 `@myvar` 변수를 만들고, 문자열 값을 변수에 넣고, `@myvar` 변수 값을 출력합니다.  
   
 ```  
 DECLARE @myvar char(20);  
@@ -329,7 +329,7 @@ SELECT top 1 @myvar FROM sys.databases;
 ```  
   
 ### <a name="k-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>11. SELECT 문에서 SET을 사용하여 값이 할당된 지역 변수 사용  
- 다음 예제에서는 라는 지역 변수가 `@dept` 이 변수를 사용 하 여는 `SELECT` 문을에서 작업 하는 모든 직원의 성과 이름을 찾을 수는 `Marketing` 부서입니다.  
+ 다음 예제에서는 `@dept`라는 지역 변수를 만들고, 이 지역 변수를 `SELECT` 문에 사용하여 `Marketing` 부서에서 근무하는 모든 직원의 이름과 성을 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -368,8 +368,8 @@ SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [복합 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

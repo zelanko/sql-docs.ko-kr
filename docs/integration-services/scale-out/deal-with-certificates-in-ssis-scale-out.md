@@ -17,11 +17,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cda61336badec20e15cf0d0142e592ef63431254
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 682ab8eb2e55909d78e871c8624c82e8fd5c70c3
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>SQL Server Integration Services Scale Out의 인증서 관리
 
@@ -96,7 +96,7 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 
     Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new SSL certificate.
 
-c.  Scale Out 작업자 서비스를 다시 시작합니다.
+3.  Scale Out 작업자 서비스를 다시 시작합니다.
 
 ## <a name="scale-out-worker-certificate"></a>Scale Out 작업자 인증서
 
@@ -139,7 +139,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s WorkerMachine -a SSISScaleOutWorker
 #### <a name="4-update-the-scale-out-worker-service-configuration-file"></a>4. Scale Out 작업자 서비스 구성 파일 업데이트
 작업자 노드에서 Scale Out 작업자 서비스 구성 파일인 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`를 업데이트합니다. **WorkerHttpsCertThumbprint**를 새 인증서의 지문으로 업데이트합니다.
 
-#### <a name="5-install-the-client-certificate-to-the-root-store-of-the-local-computer-on-the-worker-node"></a>5. 작업자 노드에서 로컬 컴퓨터의 루트 저장소에 클라이언트 인증서 설치
+#### <a name="5-install-the-client-certificate-to-the-root-store-of-the-local-computer-on-the-master-node"></a>5. 마스터 노드에서 로컬 컴퓨터의 루트 저장소에 클라이언트 인증서 설치
 
 #### <a name="6-restart-the-scale-out-worker-service"></a>6. Scale Out 작업자 서비스 다시 시작
 

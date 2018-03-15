@@ -1,5 +1,5 @@
 ---
-title: UPDATETEXT (Transact SQL) | Microsoft Docs
+title: UPDATETEXT(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -37,10 +37,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="updatetext-transact-sql"></a>UPDATETEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  기존 업데이트 **텍스트**, **ntext**, 또는 **이미지** 필드입니다. UPDATETEXT를 사용 하 여의 일부를 변경 하는 **텍스트**, **ntext**, 또는 **이미지** 있던 열입니다. WRITETEXT를 사용 하 여 업데이트 하 고 전체 대체 **텍스트**, **ntext**, 또는 **이미지** 필드입니다.  
+  기존 **text**, **ntext** 또는 **image** 필드를 업데이트합니다. UPDATETEXT를 사용하여 **text**, **ntext** 또는 **image** 열의 일부만 변경할 수 있습니다. WRITETEXT를 사용하여 **text**, **ntext** 또는 **image** 필드 전체를 업데이트하고 바꿀 수 있습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]큰 값 데이터 형식을 사용 하 고 **.** WRITE 절을는 [업데이트](../../t-sql/queries/update-transact-sql.md) 문 대신 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 큰 값 데이터 형식 및 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 **.**WRITE 절을 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,48 +64,48 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 >  BULK 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반 응용 프로그램에서 사용하지 않는 것이 좋습니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 버전에서 변경 또는 제거될 수 있습니다.  
   
  *table_name* **.** *dest_column_name*  
- 테이블의 이름 및 **텍스트**, **ntext**, 또는 **이미지** 열을 업데이트할 수 있습니다. 테이블 이름, 열 이름에 대 한 규칙을 사용 하 여 따라야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다. 필요에 따라 데이터베이스 이름과 소유자 이름을 지정할 수 있습니다.  
+ 업데이트할 테이블 및 **text**, **ntext** 또는 **image** 열의 이름입니다. 테이블 이름과 열 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다. 필요에 따라 데이터베이스 이름과 소유자 이름을 지정할 수 있습니다.  
   
  *dest_text_ptr*  
- 텍스트 포인터를 가리키는 값 (TEXTPTR 함수에서 반환)는 **텍스트**, **ntext**, 또는 **이미지** 데이터를 업데이트 합니다. *dest_text_ptr* 해야 **이진 (**16**)**합니다.  
+ 업데이트할 **text**, **ntext** 또는 **image** 데이터를 가리키는 텍스트 포인터 값(TEXTPTR 함수에서 반환된 값)입니다. *text_ptr*은 **이진(**16**)**이여야 합니다.  
   
  *insert_offset*  
- 업데이트의 경우 0부터 시작하는 시작 위치입니다. 에 대 한 **텍스트** 또는 **이미지** 열 *insert_offset* 기존 열의 처음부터 새 데이터를 삽입 하기 전에 건너뛸 바이트 수입니다. 에 대 한 **ntext** 열 *insert_offset*문자 수가 됩니다 (각 **ntext** 2 바이트를 사용 하는 문자)입니다. 기존 **텍스트**, **ntext**, 또는 **이미지** 이 0부터 시작 위치에서 시작 하는 데이터는 새 데이터에 대 한 공간을 만들기 위해 오른쪽으로 이동 합니다. 값이 0이면 기존 데이터의 시작점에 새 데이터를 삽입합니다. 값이 NULL이면 기존의 데이터 값에 데이터를 새로 추가합니다.  
+ 업데이트의 경우 0부터 시작하는 시작 위치입니다. **text** 또는 **image** 열의 경우 *insert_offset*은 새 데이터를 삽입하기 전에 기존 열의 시작점에서부터 건너뛰어야 하는 바이트 수입니다. **ntext** 열의 경우 *insert_offset*는 문자 수입니다(각 **ntext** 문자는 2 바이트를 사용합니다). 0부터 시작하는 시작 위치에 있는 기존의 **text**, **ntext** 또는 **image** 데이터는 새 데이터에 필요한 공간을 만들기 위해 오른쪽으로 옮겨집니다. 값이 0이면 기존 데이터의 시작점에 새 데이터를 삽입합니다. 값이 NULL이면 기존의 데이터 값에 데이터를 새로 추가합니다.  
   
  *delete_length*  
- 기존 계획에서 삭제할 데이터의 길이 **텍스트**, **ntext**, 또는 **이미지** 에서 시작 하는 열은 *insert_offset* 위치입니다. *delete_length*바이트에 대 한에 값이 지정 **텍스트** 및 **이미지** 열 및 문자 수에 대 한 **ntext** 열입니다. 각 **ntext** 문자는 2 바이트를 사용 합니다. 값이 0이면 데이터를 삭제하지 않습니다. NULL 값에 데이터를 모두 삭제는 *insert_offset* 기존의 끝에 위치 **텍스트** 또는 **이미지** 열입니다.  
+ 기존의 **text**, **ntext** 또는 **image** 열에서 삭제할 데이터의 길이로, *insert_offset* 위치부터 삭제됩니다. *delete_length* 값은 **text** 및 **image** 열에서는 바이트로 그리고 **ntext** 열에서는 문자로 지정됩니다. 각 **ntext** 문자는 2바이트를 사용합니다. 값이 0이면 데이터를 삭제하지 않습니다. 값이 NULL이면 *insert_offset*위치에서 기존의 **text** 또는 **image** 열의 끝까지 데이터를 모두 삭제합니다.  
   
  WITH LOG  
  로깅은 데이터베이스에 영향을 주는 복구 모델에 의해 결정됩니다.  
   
  *inserted_data*  
- 기존에 삽입할 데이터가 **텍스트**, **ntext**, 또는 **이미지** 열에는 *insert_offset* 위치 합니다. 단일 **char**, **nchar**, **varchar**, **nvarchar**, **이진**,  **varbinary**, **텍스트**, **ntext**, 또는 **이미지** 값입니다. *inserted_data* 는 리터럴 또는 변수일 수 있습니다.  
+ *insert_offset* 위치에서 기존 **text**, **ntext** 또는 **image** 열로 삽입할 데이터입니다. 이것은 단일 **char**, **nchar**, **varchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext** 또는 **image** 값입니다. *inserted_data*는 리터럴 또는 변수일 수 있습니다.  
   
  *table_name.src_column_name*  
- 테이블의 이름 및 **텍스트**, **ntext**, 또는 **이미지** 삽입된 된 데이터의 원본으로 사용 되는 열입니다. 테이블 이름과 열 이름은 식별자 규칙을 따라야 합니다.  
+ 삽입된 데이터 원본으로 사용되는 **text**, **ntext** 또는 **image** 열 이름과 테이블의 이름입니다. 테이블 이름과 열 이름은 식별자 규칙을 따라야 합니다.  
   
  *src_text_ptr*  
- 텍스트 포인터를 가리키는 값 (TEXTPTR 함수에서 반환)는 **텍스트**, **ntext**, 또는 **이미지** 삽입된 된 데이터의 원본으로 사용 되는 열입니다.  
+ 삽입된 데이터 원본으로 사용되는 **text**, **ntext** 또는 **image** 열을 가리키는 텍스트 포인터 값(TEXTPTR 함수에서 반환되는 값)입니다.  
   
 > [!NOTE]  
->  *scr_text_ptr* 값 아니어야 동일 *dest_text_ptr*값입니다.  
+>  *scr_text_ptr* 값은 *dest_text_ptr* 값과 같아서는 안됩니다.  
   
-## <a name="remarks"></a>주의  
- 새로 삽입된 된 데이터는 단일 가능 *inserted_data* 상수, 테이블 이름, 열 이름 또는 텍스트 포인터입니다.  
+## <a name="remarks"></a>Remarks  
+ 새로 삽입되는 데이터는 단일 *inserted_data* 상수, 테이블 이름, 열 이름 또는 텍스트 포인터일 수 있습니다.  
   
 |업데이트 동작|UPDATETEXT 매개 변수|  
 |-------------------|---------------------------|  
-|기존 데이터를 바꾸려면|Null이 아닌 지정 *insert_offset* 값을 0이 아닌 *delete_length* 값 및 새 데이터를 삽입할 수 있습니다.|  
-|기존 데이터를 삭제하려면|Null이 아닌 지정 *insert_offset* 값과 0이 아닌 *delete_length*합니다. 삽입할 새 데이터를 지정하지 않습니다.|  
-|새 데이터를 삽입하려면|지정 된 *insert_offset* 값은 *delete_length* 0 및 삽입할 새 데이터.|  
+|기존 데이터를 바꾸려면|Null이 아닌 *insert_offset* 값, 0이 아닌 *delete_length* 값 및 삽입할 새 데이터를 지정합니다.|  
+|기존 데이터를 삭제하려면|Null이 아닌 *insert_offset* 값과 0이 아닌 *delete_length*를 지정합니다. 삽입할 새 데이터를 지정하지 않습니다.|  
+|새 데이터를 삽입하려면|*insert_offset* 값, 0의 *delete_length* 및 삽입할 새 데이터를 지정합니다.|  
   
- 최상의 성능을 위해 좋습니다 **텍스트**, **ntext** 및 **이미지** 데이터 삽입 하거나 업데이트 8, 040 바이트의 배수인 청크 크기로 합니다.  
+ 최고의 성능을 위해 **text**, **ntext** 및 **image** 데이터는 8,040바이트의 배수인 청크 크기로 삽입하거나 업데이트하는 것이 좋습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 행 내부 텍스트 포인터를 **텍스트**, **ntext**, 또는 **이미지** 데이터가 있을 수 있지만 올바르지 않을 수 있습니다. Text in row 옵션에 대 한 정보를 참조 하십시오. [sp_tableoption &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). 텍스트 포인터를 무효화 하는 방법에 대 한 정보를 참조 하십시오. [sp_invalidate_textptr &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **text**, **ntext** 또는 **image** 데이터에 대한 행 내부 텍스트 포인터가 있어도 유효하지 않을 수 있습니다. text in row 옵션에 대한 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하십시오. 텍스트 포인터를 무효화하는 방법은 [sp_invalidate_textptr&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)를 참조하십시오.  
   
- 초기화 **텍스트** WRITETEXT;를 사용 하 여 열을 NULL Updatetext **텍스트** 열을 빈 문자열로 합니다.  
+ **text** 열을 NULL로 초기화하려면 WRITETEXT를 사용합니다. UPDATETEXT는 **text** 열을 빈 문자열로 초기화합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  지정된 테이블에 대해 UPDATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -130,9 +130,9 @@ ALTER DATABASE pubs SET RECOVERY FULL;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Readtext&#40; Transact SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [TEXTPTR &#40; Transact SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [READTEXT&#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
+ [TEXTPTR&#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT&#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "MakeValid (geography 데이터 형식) | Microsoft Docs"
+title: MakeValid (geography Data Type) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,11 +31,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geography-data-type"></a>MakeValid(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  변환는 **geography** 을 유효한 유효 하지 않은 인스턴스 **geography** 유효한 Open Geospatial Consortium (OGC) 형식으로 인스턴스.  
+  잘못된 **geography** 인스턴스를 유효한 OGC(Open Geospatial Consortium) 형식의 **geography** 인스턴스로 변환합니다.  
   
- 입력된 개체 STIsValid()에 대 한 False를 반환 하는 경우 `MakeValid()` 올바른 인스턴스를 유효 하지 않은 인스턴스를 변환 합니다.  
+ 입력 개체가 STIsValid()에 대해 False를 반환하면 `MakeValid()`가 잘못된 인스턴스를 유효한 인스턴스로 변환합니다.  
   
- 이 geography 데이터 형식 메서드 지원 **FullGlobe** 인스턴스 또는 반구 보다 큰 공간 인스턴스.  
+ 이 geography 데이터 형식 메서드는 **FullGlobe** 인스턴스 또는 반구보다 큰 공간 인스턴스를 지원합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 유형의 변경 될 수 있습니다는 **geography** 인스턴스. 또한 요소는 **geography** 인스턴스 약간 이동할 수도 있습니다. NumPoint() 같은 몇 가지 방법 중에서 결과 변경할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 **geography** 인스턴스의 유형을 변경할 수 있습니다. 또한 **geography** 인스턴스의 지점이 약간 이동할 수도 있습니다. 이로 인해 NumPoint()와 같은 일부 메서드의 결과가 변경될 수 있습니다.  
   
- = 180 인 경우 여기서 잘못 된 공간 인스턴스가 적도 교차 되었으며는 EnvelopeAngle()는 **FullGlobe** 인스턴스가 반환 됩니다. `MakeValid()` **geography** 데이터 형식 메서드는 유효한 인스턴스가 반환에서 최적의 시도 하면 되지만 결과가 정확 하 게 또는 정확 하 게 되도록 정렬 되지 않습니다.  
+ 잘못된 공간 인스턴스가 적도를 교차하고 EnvelopeAngle() = 180인 경우 **FullGlobe** 인스턴스가 반환됩니다. `MakeValid()`**geography** 데이터 형식 메서드는 유효한 인스턴스가 반환되지만 결과의 정확성이 보장되지 않는 경우에 가장 적합합니다.  
   
 > [!NOTE]  
->  유효하지 않은 개체가 데이터베이스에 저장될 수 있습니다. 잘못 된 인스턴스에서 실행할 수 있는 메서드는 유효성을 검사 하거나 내보내기를 허용 하는 메서드는 (이러한 인스턴스는 STIsValid() False 반환): STIsValid(), makevalid (), stastext (), STAsBinary(), tostring (), AsTextZM(), 및 AsGml() 합니다.  
+>  유효하지 않은 개체가 데이터베이스에 저장될 수 있습니다. 잘못된 인스턴스(STIsValid()에서 False를 반환하는 인스턴스)에서 실행될 수 있는 메서드는 유효성을 검사하거나 내보내기를 허용하는 메서드로서, STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() 및 AsGml()이 해당합니다.  
   
  이 메서드는 정확하지 않습니다.  
   
@@ -87,7 +87,7 @@ SELECT @g.ToString();
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [STIsValid&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

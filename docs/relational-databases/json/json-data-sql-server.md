@@ -1,7 +1,7 @@
 ---
 title: "SQL Server에서 JSON 데이터 작업 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/31/2017
+ms.date: 02/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
@@ -20,16 +20,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a59a53bb9c279a8f66a4aa259212269179d477b1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ec68e7b254c10d4025b7cee61d47db033757516b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON은 최신 웹 및 모바일 응용 프로그램에서 데이터를 교환하는 데 사용되는 일반적인 텍스트 데이터 형식입니다. JSON은 로그 파일 또는 Microsoft Azure Cosmos DB와 같은 NoSQL 데이터베이스에 구조화되지 않은 데이터를 저장하는 데에도 사용됩니다. 많은 REST 웹 서비스에서 JSON 텍스트로 형식이 지정된 결과를 반환하거나 JSON으로 형식이 지정된 데이터를 허용합니다. 예를 들어 Azure Search, Azure Storage, Azure Cosmos DB 등 대부분의 Azure 서비스에는 JSON을 반환하거나 사용하는 REST 끝점이 있습니다. 또한 JSON은 AJAX 호출을 사용하여 웹 페이지와 웹 서버 간에 데이터를 교환하는 기본 형식입니다. 
+
+SQL Server의 JSON 함수를 사용하면 NoSQL과 관계형 개념을 동일한 데이터베이스에서 결합할 수 있습니다. 이제 기본 관계형 열을 동일한 테이블에서 JSON 텍스트로 형식이 지정된 문서를 포함하는 열과 결합하여 관계형 구조로 JSON 문서를 구문 분석하고 가져오거나 관계형 데이터를 JSON 텍스트로 형식을 지정할 수 있습니다. 다음 비디오에서 JSON 함수가 관계형 및 NoSQL 개념을 SQL Server 및 Azure SQL 데이터베이스에서 연결하는 방법을 볼 수 있습니다.
+
+*NoSQL과 관계형 간에 브리지인 JSON*
+> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
  
 JSON 텍스트의 예는 다음과 같습니다. 
  
@@ -53,7 +58,10 @@ SQL Server 기본 제공 함수 및 연산자를 사용하여 JSON 텍스트로 
 ![기본 제공 JSON 지원 개요](../../relational-databases/json/media/jsonslides1overview.png "기본 제공 JSON 지원 개요")  
   
 ## <a name="key-json-capabilities-of-sql-server-and-sql-database"></a>SQL Server 및 SQL Database의 주요 JSON 기능
-다음 섹션에서는 SQL Server에서 기본 제공 JSON 지원을 통해 제공하는 주요 기능을 설명합니다.
+다음 섹션에서는 SQL Server에서 기본 제공 JSON 지원을 통해 제공하는 주요 기능을 설명합니다. 다음 동영상에서 JSON 함수 및 연산자를 사용하는 방법을 볼 수 있습니다.
+
+*SQL Server 2016 및 JSON 지원*
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>JSON 텍스트에서 값을 추출하여 쿼리에서 사용
 데이터베이스 테이블에 저장된 JSON 텍스트가 있는 경우 다음과 같은 기본 제공 함수를 사용하여 JSON 텍스트의 값을 읽거나 수정할 수 있습니다.  
@@ -312,15 +320,12 @@ AdventureWorks 샘플 데이터베이스를 가져오려면 [Microsoft 다운로
 
 SQL Server 및 Azure SQL Database에서 기본 제공 JSON 지원에 대한 시각적 소개는 다음 비디오를 참조하세요.
 
-*SQL Server 2016 및 JSON 지원*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
-
 *SQL Server 2016 및 Azure SQL Database에서 JSON 사용*
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
-*NoSQL과 관계형 간에 브리지인 JSON*
-> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
-   
+*JSON 함수를 사용하여 SQL Server로 REST API 빌드하기*
+> [!VIDEO https://www.youtube.com/watch?v=0m6GXF3-5WI]
+
 ### <a name="reference-articles"></a>참조 문서  
   
 -   [FOR 절(Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)(FOR JSON)  
@@ -330,5 +335,3 @@ SQL Server 및 Azure SQL Database에서 기본 제공 JSON 지원에 대한 시�
     -   [JSON_VALUE(Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)  
     -   [JSON_QUERY(Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)  
     -   [JSON_MODIFY(Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)  
-  
-  

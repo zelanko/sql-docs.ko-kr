@@ -1,5 +1,5 @@
 ---
-title: "OUTPUT 절 (Transact SQL) | Microsoft Docs"
+title: "OUTPUT 절(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  OUTPUT 절이 있는 UPDATE, INSERT 또는 DELETE 문은 문에 오류가 발생하여 롤백되어도 클라이언트에 행을 반환합니다. 문을 실행할 때 오류가 발생하는 경우에는 해당 결과를 사용하면 안 됩니다.  
   
- **에 사용 합니다.**  
+ **사용 대상:**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -84,18 +84,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>인수  
  @*table_variable*  
- 지정 된 **테이블** 호출자에 게 반환 되는 대신 반환 된 행에 삽입 되는 변수입니다. @*table_variable* INSERT, UPDATE, DELETE 또는 MERGE 문 전에 선언 되어야 합니다.  
+ 반환된 행이 호출자에게 반환되는 대신 삽입되는 **table** 변수를 지정합니다. @*table_variable*은 INSERT, UPDATE, DELETE 또는 MERGE 문 앞에 선언해야 합니다.  
   
- 경우 *column_list* 를 지정 하지 않으면는 **테이블** 변수에 OUTPUT 결과 집합과 동일한 수의 열이 있어야 합니다. 단, ID 및 계산 열은 건너뛰므로 예외입니다. 경우 *column_list* 생략 된 모든 열에서 null 값 허용 하거나 기본값이 지정 된이 값을 할당 합니다.  
+ *column_list*가 지정되지 않으면 **table** 변수에 OUTPUT 결과 집합과 동일한 수의 열이 있어야 합니다. 단, ID 및 계산 열은 건너뛰므로 예외입니다. *column_list*가 지정되면 생략된 모든 열에 Null 값을 허용하거나 기본값을 할당해야 합니다.  
   
- 에 대 한 자세한 내용은 **테이블** 변수 참조 [table&#40; Transact SQL &#41; ](../../t-sql/data-types/table-transact-sql.md).  
+ **table** 변수에 대한 자세한 내용은 [table&#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)을 참조하세요.  
   
  *output_table*  
- 반환된 행을 호출자에 반환하는 대신 삽입할 테이블을 지정합니다. *output_table* 임시 테이블을 수 있습니다.  
+ 반환된 행을 호출자에 반환하는 대신 삽입할 테이블을 지정합니다. *output_table*은 임시 테이블일 수 있습니다.  
   
- 경우 *column_list* 을 지정 하지 않으면 해당 테이블에 출력 결과 집합으로 동일한 열 수 있어야 합니다. 단, ID 및 계산 열은 예외이며 이 열은 건너뛰어야 합니다. 경우 *column_list* 생략 된 모든 열에서 null 값 허용 하거나 기본값이 지정 된이 값을 할당 합니다.  
+ *output_table*가 지정되지 않으면 테이블에 OUTPUT 결과 집합과 동일한 수의 열이 있어야 합니다. 단, ID 및 계산 열은 예외이며 이 열은 건너뛰어야 합니다. *column_list*가 지정되면 생략된 모든 열에 Null 값을 허용하거나 기본값을 할당해야 합니다.  
   
- *output_table* cannot:  
+ *output_table*은 다음 작업을 수행할 수 없습니다.  
   
 -   활성화된 트리거를 정의할 수 없습니다.  
   
@@ -104,10 +104,10 @@ ms.lasthandoff: 01/25/2018
 -   CHECK 제약 조건 또는 활성화된 규칙을 가질 수 없습니다.  
   
 *column_list*  
- INTO 절에 지정되는 대상 테이블의 열 이름 목록입니다(옵션). 에 허용 되는 열 목록과 유사는 [삽입](../../t-sql/statements/insert-transact-sql.md) 문.  
+ INTO 절에 지정되는 대상 테이블의 열 이름 목록입니다(옵션). [INSERT](../../t-sql/statements/insert-transact-sql.md) 문에서 허용되는 열 목록과 비슷합니다.  
   
  *scalar_expression*  
- 단일 값으로 계산되는 기호 및 연산자의 조합입니다. 집계 함수에 허용 되지 않는 *scalar_expression*합니다.  
+ 단일 값으로 계산되는 기호 및 연산자의 조합입니다. 집계 함수는 *scalar_expression*에 허용되지 않습니다.  
   
  수정되는 테이블의 열에 대한 모든 참조는 INSERTED 또는 DELETED 접두사를 사용해 정규화되어야 합니다.  
   
@@ -140,20 +140,20 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 명시적 열 참조입니다. 변경 되는 테이블에 대 한 모든 참조 올바르게으로 한정는 INSERTED 또는 DELETED 접두사를 적절 하 게 예: INSERTED **. * * * column_name*합니다.  
+ 명시적 열 참조입니다. 수정되는 테이블에 대한 모든 참조는 INSERTED 또는 DELETED 접두사로 적절히 한정되어야 합니다(예: INSERTED**.***column_name*).  
   
  $action  
- MERGE 문에만 사용할 수 있습니다. 형식의 열을 지정 **nvarchar (10)** 각 행에 대해 3 개의 값 중 하나를 반환 하는 MERGE 문의 OUTPUT 절에서: 'INSERT', 'UPDATE' 또는 'DELETE' 해당 행에서 수행한 작업에 따라 합니다.  
+ MERGE 문에만 사용할 수 있습니다. 해당 행에서 수행된 작업에 따라 각 행에 대해 'INSERT', 'UPDATE' 또는 'DELETE' 값 중 하나를 반환하는 MERGE 문의 OUTPUT 절에 **nvarchar(10)** 형식의 열을 지정합니다.  
   
-## <a name="remarks"></a>주의  
- 출력 \<dml_select_list > 절과 출력 \<dml_select_list > INTO {**@ * * * table_variable* | *output_table* } 절을 정의할 수 있습니다 단일 INSERT, UPDATE, DELETE 또는 MERGE 문의 합니다.  
+## <a name="remarks"></a>Remarks  
+ OUTPUT \<dml_select_list> 절 및 OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
   
 > [!NOTE]  
 >  다르게 지정되지 않는 이상 OUTPUT 절에 대한 참조는 OUTPUT 절 및 OUTPUT INTO 절 모두를 참조합니다.  
   
  OUTPUT 절은 INSERT 또는 UPDATE 작업 후에 ID 또는 계산 열의 값을 가져오는 데 유용합니다.  
   
- 계산된 열에 포함 된 경우는 \<dml_select_list >, 출력 테이블 또는 테이블 변수에 해당 하는 열은 계산된 열이 없습니다. 새 열의 값은 문이 실행된 시점에 계산된 값입니다.  
+ 계산 열이 \<dml_select_list>에 포함되면 출력 테이블 또는 테이블 변수의 해당 열은 계산 열이 아닙니다. 새 열의 값은 문이 실행된 시점에 계산된 값입니다.  
   
  변경 사항이 테이블에 적용되는 순서 및 행이 출력 테이블 또는 테이블 변수에 삽입되는 순서가 일치할 것이라는 보장은 없습니다.  
   
@@ -185,7 +185,7 @@ DELETE Sales.ShoppingCartItem
   
     -   해당 정의에서 사용자 또는 시스템 데이터 액세스를 수행하는 사용자 정의 함수가 포함된 계산 열  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 OUTPUT 절에서 이러한 열을 감지하면 오류 4186이 발생합니다.   
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 OUTPUT 절에서 이러한 열을 감지하면 4186 오류가 발생합니다.   
   
 ## <a name="inserting-data-returned-from-an-output-clause-into-a-table"></a>OUTPUT 절에서 반환된 데이터를 테이블에 삽입  
  중첩된 INSERT, UPDATE, DELETE 또는 MERGE 문에서 OUTPUT 절의 결과를 캡처하고 그 결과를 대상 테이블에 삽입하는 경우 다음 사항을 고려하세요.  
@@ -206,22 +206,22 @@ DELETE Sales.ShoppingCartItem
   
     -   대상은 원격 테이블 또는 분할된 뷰일 수 없습니다.  
   
-    -   소스 자체를 포함할 수 없습니다는 \<dml_table_source > 절.  
+    -   원본 자체에는 \<dml_table_source> 절이 포함될 수 없습니다.  
   
--   포함 하는 INSERT 문에서 OUTPUT INTO 절이 지원 되지 않습니다는 \<dml_table_source > 절.  
+-   OUTPUT INTO 절은 \<dml_table_source> 절이 포함된 INSERT 문에서 지원되지 않습니다.  
   
--   @@ROWCOUNT 만 외부 INSERT 문에 의해 삽입 된 행을 반환 합니다.  
+-   @@ROWCOUNT는 외부 INSERT 문에서만 삽입된 행을 반환합니다.  
   
--   @@IDENTITY, SCOPE_IDENTITY 및 IDENT_CURRENT 하지 외부 INSERT 문에 의해 생성 된와 중첩된 된 DML 문에 의해 생성 된 id 값을 반환 합니다.  
+-   @@IDENTITY, SCOPE_IDENTITY 및 IDENT_CURRENT는 중첩된 DML 문에서만 생성된 ID 값만 반환하고, 외부 INSERT 문에서 생성된 ID 값은 반환하지 않습니다.  
   
 -   외부 INSERT 문 자체에서 크게 변경된 경우에도 쿼리 알림은 문을 단일 엔터티로 취급하며 작성되는 메시지의 유형은 중첩된 DML의 유형이 됩니다.  
   
--   에 \<dml_table_source > 절, SELECT 및 하위 쿼리, 집계 함수, 순위 함수, 전체 텍스트 조건자, 데이터 액세스를 수행 하는 사용자 정의 함수 또는 TEXTPTR 함수 절에 포함할 수 없습니다.  
+-   \<dml_table_source> 절에서 SELECT 및 WHERE 절에는 하위 쿼리, 집계 함수, 순위 함수, 전체 텍스트 조건자, 데이터 액세스를 수행하는 사용자 정의 함수 또는 TEXTPTR 함수가 포함될 수 없습니다.  
 
-## <a name="parallelism"></a>병렬 처리
- 클라이언트에 결과 반환 하는 OUTPUT 절에는 직렬 계획을 항상 사용 됩니다.
+## <a name="parallelism"></a>Parallelism
+ 결과를 클라이언트에 반환하는 OUTPUT 절은 항상 직렬 계획을 사용합니다.
 
-호환성 수준이 130 이상 insert 설정 된 데이터베이스의 컨텍스트에서... SELECT 문에 대해 WITH (TABLOCK) 힌트를 사용 하 여 하 고 마찬가지로 출력을 사용 하는 SELECT 작업 중... INTO를 사용 하는 삽입에 대 한 임시 사용 형식이 나 사용자 테이블을 다음 대상 테이블에 삽입... SELECT는 하위 트리 비용에 따라 병렬 처리를 사용할 수 있습니다.  OUTPUT INTO 절에서 참조 하는 대상 테이블 병렬 처리에 대 한 적격 되지 않습니다. 
+호환성 수준 130 이상으로 설정된 데이터베이스의 컨텍스트에서 INSERT...SELECT 작업이 SELECT 문에 WITH (TABLOCK) 힌트를 사용하고 OUTPUT…INTO를 사용하여 임시 또는 사용자 테이블에 삽입하는 경우, INSERT…SELECT에 대한 목표 테이블은 하위 트리 비용에 따라 병렬 처리에 적합합니다.  OUTPUT INTO 절에서 참조되는 목표 테이블은 병렬 처리에 적합하지 않습니다. 
  
 ## <a name="triggers"></a>트리거  
  OUTPUT에서 반환된 열에는 INSERT, UPDATE 또는 DELETE 문이 완료된 후, 그리고 트리거가 실행되기 전의 데이터가 반영됩니다.  
@@ -233,7 +233,7 @@ DELETE Sales.ShoppingCartItem
  sp_configure 옵션인 트리거에서 결과 반환 허용 안 함이 설정되어 있으면 INTO 절이 없는 OUTPUT 절이 트리거 내부에서 호출되었을 때 문이 실패합니다.  
   
 ## <a name="data-types"></a>데이터 형식  
- OUTPUT 절에는 큰 개체 데이터 형식을 지원: **nvarchar (max)**, **varchar (max)**, **varbinary (max)**, **텍스트**, **ntext**, **이미지**, 및 **xml**합니다. 사용 하는 경우는 합니다. WRITE 절을 수정 하려면 UPDATE 문에 **nvarchar (max)**, **varchar (max)**, 또는 **varbinary (max)** 열의 이전 및 이후 이미지는 값의 전체 됩니다 참조 되는 경우 반환 됩니다. TEXTPTR () 함수에는 식의 일부로 나타날 수 없습니다는 **텍스트**, **ntext**, 또는 **이미지** OUTPUT 절에서 열.  
+ OUTPUT 절은 큰 개체 데이터 형식, 즉 **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, **text**, **ntext**, **image** 및 **xml**을 지원합니다. UPDATE 문에서 .WRITE 절을 사용하여 **nvarchar(max)**, **varchar(max)** 또는 **varbinary(max)** 열을 수정하는 경우, 값의 이전 및 이후 이미지 전체가 참조되면 해당 이미지가 반환됩니다. TEXTPTR( ) 함수는 OUTPUT 절의 **text**, **ntext**또는 **image** 열에 대한 식의 일부로 나타날 수 없습니다.  
   
 ## <a name="queues"></a>큐  
  테이블을 큐 또는 중간 결과 집합의 저장을 위해 사용하는 응용 프로그램에서 OUTPUT을 사용할 수 있습니다. 이 경우 응용 프로그램은 지속적으로 테이블에 행을 추가하거나 제거합니다. 다음 예에서는 삭제된 행을 호출하는 응용 프로그램에 반환하기 위해 DELETE 문에 OUTPUT 절을 사용합니다.  
@@ -313,15 +313,15 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  여러 개의 응용 프로그램에서 한 테이블에 대해 파괴 읽기를 허용하는 경우 UPDATE 및 DELETE 문에서 READPAST 테이블 힌트를 사용하세요. 이렇게 하면 다른 응용 프로그램이 이미 테이블의 첫 번째 정규화 레코드를 읽고 있는 경우 발생할 수 있는 잠금 문제를 방지합니다.  
   
-## <a name="permissions"></a>Permissions  
- 통해 검색 한 모든 열에 대 한 SELECT 권한이 필요 \<dml_select_list >에서 사용 되는 또는 \<scalar_expression > 합니다.  
+## <a name="permissions"></a>사용 권한  
+ SELECT 권한은 \<dml_select_list>를 통해 검색되거나 \<scalar_expression>에서 사용되는 모든 열에 필요합니다.  
   
- 에 지정 된 모든 테이블에 대 한 INSERT 권한이 필요 \<output_table > 합니다.  
+ INSERT 권한은 \<output_table>에 지정된 모든 테이블에 필요합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>1. 간단한 INSERT 문과 함께 OUTPUT INTO 사용  
- 에 행을 삽입 하는 다음 예제는 `ScrapReason` 사용 하 여 테이블의 `OUTPUT` 문의 결과 반환 하는 절은 `@MyTableVar``table` 변수입니다. `ScrapReasonID` 열은 IDENTITY 속성을 사용해 정의되기 때문에 이 열의 값은 `INSERT` 문에서 지정되지 않습니다. 하지만 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 의해 생성된 해당 열의 값은 `OUTPUT` 열의 `inserted.ScrapReasonID` 절에서 반환됩니다.  
+ 다음 예제에서는 `ScrapReason` 테이블에 행을 삽입하고, `OUTPUT` 절을 사용하여 명령문의 결과를 `@MyTableVar``table` 변수에 반환합니다. `ScrapReasonID` 열은 IDENTITY 속성을 사용해 정의되기 때문에 이 열의 값은 `INSERT` 문에서 지정되지 않습니다. 하지만 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 의해 생성된 해당 열의 값은 `OUTPUT` 열의 `inserted.ScrapReasonID` 절에서 반환됩니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -360,7 +360,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>3. UPDATE 문과 함께 OUTPUT INTO 사용  
- 다음 예에서는 `VacationHours` 테이블에 있는 처음 10개 행의 `Employee` 열을 25% 업데이트합니다. `OUTPUT` 절을 반환는 `VacationHours` 적용 하기 전에 존재 하는 값의 `UPDATE` 열에는 문을 `deleted.VacationHours`, 열에서 업데이트 된 값을 `inserted.VacationHours` 에 `@MyTableVar``table` 변수.  
+ 다음 예에서는 `VacationHours` 테이블에 있는 처음 10개 행의 `Employee` 열을 25% 업데이트합니다. `OUTPUT` 절은 `deleted.VacationHours` 열에서 `UPDATE` 문을 적용하기 전에 있었던 `VacationHours` 값과 `inserted.VacationHours` 열에서 업데이트된 값을 `@MyTableVar``table` 변수에 반환합니다.  
   
  각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다.  
   
@@ -395,7 +395,7 @@ GO
 ```  
   
 ### <a name="d-using-output-into-to-return-an-expression"></a>4. OUTPUT INTO를 사용하여 식 반환  
- 예 3을 기반으로 만들어진 다음 예에서는 업데이트된 `OUTPUT` 값과 업데이트가 적용되기 이전의 `VacationHours` 값 간의 차이를 나타내는 식을 `VacationHours` 절에 정의합니다. 이 식의 값이 반환 된 `@MyTableVar``table` 열에서 변수 `VacationHoursDifference`합니다.  
+ 예 3을 기반으로 만들어진 다음 예에서는 업데이트된 `OUTPUT` 값과 업데이트가 적용되기 이전의 `VacationHours` 값 간의 차이를 나타내는 식을 `VacationHours` 절에 정의합니다. 이 식의 값은 `@MyTableVar``table` 열의 `VacationHoursDifference` 변수에 반환됩니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -429,7 +429,7 @@ GO
 ```  
   
 ### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>5. UPDATE 문에 from_table_name과 함께 OUTPUT INTO 사용  
- 다음 예에서는 업데이트 된 `ScrapReasonID` 열에는 `WorkOrder` 를 지정 된 모든 작업 순서에 대 한 테이블 `ProductID` 및 `ScrapReasonID`합니다. `OUTPUT INTO` 절은 업데이트되는 테이블인 `WorkOrder`의 값과 더불어 `Product` 테이블의 값을 반환합니다. 업데이트할 행을 지정하기 위해 `Product` 테이블이 `FROM` 절에 사용됩니다. `WorkOrder` 테이블에는 `AFTER UPDATE` 트리거가 정의되어 있으므로 `INTO` 키워드가 필요합니다.  
+ 다음 예제에서는 지정된 `ProductID` 및 `ScrapReasonID`가 있는 모든 작업 순서에 대해 `WorkOrder` 테이블의 `ScrapReasonID` 열을 업데이트합니다. `OUTPUT INTO` 절은 업데이트되는 테이블인 `WorkOrder`의 값과 더불어 `Product` 테이블의 값을 반환합니다. 업데이트할 행을 지정하기 위해 `Product` 테이블이 `FROM` 절에 사용됩니다. `WorkOrder` 테이블에는 `AFTER UPDATE` 트리거가 정의되어 있으므로 `INTO` 키워드가 필요합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -494,7 +494,7 @@ GO
 ```  
   
 ### <a name="g-using-output-into-with-a-large-object-data-type"></a>7. 큰 개체 데이터 형식과 함께 OUTPUT INTO 사용  
- 다음 예에서는 `DocumentSummary` 절을 사용해 `nvarchar(max)` 테이블의 `Production.Document` 열인 `.WRITE`의 부분 값을 업데이트합니다. 대체 단어, 기존 데이터에서 대체할 단어의 시작 위치(오프셋), 그리고 대체할 문자 수(길이)를 지정함으로써 `components`가 `features`로 대체됩니다. 이 예제에서는 사용는 `OUTPUT` 절 반환 하는 이전 및 이후 이미지는 `DocumentSummary` 열을는 `@MyTableVar``table` 변수 합니다. `DocumentSummary` 열의 이전 및 이후 이미지 전체가 반환됩니다.  
+ 다음 예에서는 `DocumentSummary` 절을 사용해 `nvarchar(max)` 테이블의 `Production.Document` 열인 `.WRITE`의 부분 값을 업데이트합니다. 대체 단어, 기존 데이터에서 대체할 단어의 시작 위치(오프셋), 그리고 대체할 문자 수(길이)를 지정함으로써 `components`가 `features`로 대체됩니다. 이 예제에서는 `OUTPUT` 절을 사용해 `DocumentSummary` 열의 이전 및 이후 이미지를 `@MyTableVar``table` 변수에 반환합니다. `DocumentSummary` 열의 이전 및 이후 이미지 전체가 반환됩니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -604,7 +604,7 @@ GO
 ```  
   
 ### <a name="j-using-output-and-output-into-in-a-single-statement"></a>10. 단일 문에서 OUTPUT 및 OUTPUT INTO 사용  
- 다음 예에서는 `ProductProductPhoto` 문의 `FROM` 절에 정의된 검색 조건에 따라 `DELETE` 테이블의 행을 삭제합니다. `OUTPUT INTO` 삭제 될 테이블에서 열을 반환 하는 절 (`deleted.ProductID`, `deleted.ProductPhotoID`) 및 열을는 `Product` 테이블는 `@MyTableVar``table` 변수입니다. `Product` 테이블은 `FROM` 절에서 삭제할 행을 지정하기 위해 사용됩니다. `OUTPUT` 절은 `deleted.ProductID` 및 `deleted.ProductPhotoID` 열, 그리고 `ProductProductPhoto` 테이블에서 행을 삭제한 날짜 및 시간을 호출하는 응용 프로그램에 반환합니다.  
+ 다음 예에서는 `ProductProductPhoto` 문의 `FROM` 절에 정의된 검색 조건에 따라 `DELETE` 테이블의 행을 삭제합니다. `OUTPUT INTO` 절은 삭제되는 테이블(`deleted.ProductID` 및 `deleted.ProductPhotoID`)의 열과 `Product` 테이블의 열을 `@MyTableVar``table` 변수에 반환합니다. `Product` 테이블은 `FROM` 절에서 삭제할 행을 지정하기 위해 사용됩니다. `OUTPUT` 절은 `deleted.ProductID` 및 `deleted.ProductPhotoID` 열, 그리고 `ProductProductPhoto` 테이블에서 행을 삭제한 날짜 및 시간을 호출하는 응용 프로그램에 반환합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -670,11 +670,11 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [테이블 &#40; Transact SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table&#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

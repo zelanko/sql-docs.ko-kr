@@ -1,5 +1,5 @@
 ---
-title: RETURN (TRANSACT-SQL) | Microsoft Docs
+title: RETURN(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ RETURN [ integer_expression ]
  반환되는 정수 값입니다. 저장 프로시저는 호출 프로시저나 응용 프로그램에 정수 값을 반환할 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 필요에 따라 반환 **int**합니다.  
+ **int**를 선택적으로 반환합니다.  
   
 > [!NOTE]  
 >  달리 설명하지 않는 한 모든 시스템 저장 프로시저는 0 값을 반환합니다. 이 값은 성공을 나타내며 0 이외의 값은 실패를 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  저장 프로시저와 함께 사용할 경우 RETURN은 null 값을 반환할 수 없습니다. 프로시저에서 Null 값을 반환하려는 경우(예: @status가 NULL일 때 RETURN @status 사용) 경고 메시지가 생성되고 값 0이 반환됩니다.  
   
  현재 프로시저를 실행한 일괄 처리나 프로시저에 있는 후속 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 반환 상태 값을 포함시킬 수 있지만 `EXECUTE @return_status = <procedure_name>` 형식으로 입력해야 합니다.  
@@ -159,7 +159,7 @@ GO
  2
  ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

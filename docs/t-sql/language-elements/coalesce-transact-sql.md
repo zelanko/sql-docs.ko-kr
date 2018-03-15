@@ -1,5 +1,5 @@
 ---
-title: COALESCE (TRANSACT-SQL) | Microsoft Docs
+title: COALESCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="coalesce-transact-sql"></a>COALESCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-인수를 순서 대로 평가 하 고 처음에 평가 되지 않는 첫 번째 식의 현재 값을 반환 `NULL`합니다. 예를 들어 `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` 세 번째 값은 null이 아닌 첫 번째 값 때문에 세 번째 값을 반환 합니다. 
+인수를 순서대로 평가하고 처음으로 `NULL`이 아닌 첫 번째 식의 현재 값을 반환합니다. 예를 들어 `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');`는 세 번째 값이 null이 아닌 첫 값이기 때문에 세 번째 값을 반환합니다. 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,16 +49,16 @@ COALESCE ( expression [ ,...n ] )
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 모든 종류의 합니다.  
+ 모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 데이터 형식을 반환 *식* 우선 순위가 가장 높은 데이터 형식입니다. 모든 식에서 Null을 허용하지 않으면 결과가 Null을 허용하지 않는 형식으로 처리됩니다.  
+ 데이터 형식 우선 순위가 가장 높은 *식*의 데이터 형식을 반환합니다. 모든 식에서 Null을 허용하지 않으면 결과가 Null을 허용하지 않는 형식으로 처리됩니다.  
   
-## <a name="remarks"></a>주의  
- 모든 인수가 `NULL`, `COALESCE` 반환 `NULL`합니다. Null 값 중 하나 이상 형식화 된 해야 `NULL`합니다.  
+## <a name="remarks"></a>Remarks  
+ 모든 인수가 `NULL`인 경우 `COALESCE`가 `NULL`를 반환합니다. Null 값 중 하나 이상이 `NULL` 형식이어야 합니다.  
   
 ## <a name="comparing-coalesce-and-case"></a>COALESCE 및 CASE 비교  
- `COALESCE` 식은 대 한 구문 바로 가기를 `CASE` 식입니다.  즉, 코드 `COALESCE`(*expression1*,*...n*)이 다음으로 쿼리 최적화 프로그램에서 다시 작성 `CASE` 식:  
+ `COALESCE` 식은 `CASE` 식의 구문 바로 가기입니다.  즉, 쿼리 최적화 프로그램에서는 `COALESCE`(*expression1*,*...n*) 코드를 다음과 같은 `CASE` 식으로 다시 작성합니다.  
   
  ```sql  
  CASE  
@@ -69,9 +69,9 @@ COALESCE ( expression [ ,...n ] )
  END  
  ```  
   
- 즉, 입력된 값 (*expression1*, *expression2*, *expressionN*등) 여러 번 평가 됩니다. 또한 SQL 표준에 따라 하위 쿼리가 포함된 값 식은 비결정적인 것으로 간주되어 하위 쿼리가 두 번 평가됩니다. 어느 경우에든 첫 번째 평가와 이후 평가 간에 서로 다른 결과가 반환될 수 있습니다.  
+ 즉, 입력 값(*expression1*, *expression2*, *expressionN*, 등)이 여러 번 평가 됩니다. 또한 SQL 표준에 따라 하위 쿼리가 포함된 값 식은 비결정적인 것으로 간주되어 하위 쿼리가 두 번 평가됩니다. 어느 경우에든 첫 번째 평가와 이후 평가 간에 서로 다른 결과가 반환될 수 있습니다.  
   
- 예를 들어 `COALESCE((subquery), 1)` 코드를 실행하면 하위 쿼리가 두 번 평가됩니다. 따라서 쿼리 격리 수준에 따라 다른 결과가 반환될 수 있습니다. 예를 들어 코드 반환할 수 있습니다 `NULL` 아래는 `READ COMMITTED` 다중 사용자 환경에서 격리 수준입니다. 결과가 반환 되도록 하려면 사용 하 여는 `SNAPSHOT ISOLATION` 격리 수준 또는 교체 `COALESCE` 와 `ISNULL` 함수입니다. 또는 다음 예제와 같이 하위 select 안에 들어가도록 쿼리를 다시 작성할 수 있습니다.  
+ 예를 들어 `COALESCE((subquery), 1)` 코드를 실행하면 하위 쿼리가 두 번 평가됩니다. 따라서 쿼리 격리 수준에 따라 다른 결과가 반환될 수 있습니다. 예를 들어 다중 사용자 환경의 `READ COMMITTED` 격리 수준에서는 이 코드에서 `NULL`을 반환할 수 있습니다. 일정한 결과가 반환되도록 하려면 `SNAPSHOT ISOLATION` 격리 수준을 사용하거나 `ISNULL` 함수로 `COALESCE`를 바꿔야 합니다. 또는 다음 예와 같이 하위 쿼리가 하위 선택 안에 들어가도록 쿼리를 다시 작성할 수 있습니다.  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -83,13 +83,13 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
 ```  
   
 ## <a name="comparing-coalesce-and-isnull"></a>COALESCE 및 ISNULL 비교  
- `ISNULL` 함수 및 `COALESCE` 식은 용도 비슷하지만 하지만 다르게 동작할 수 있습니다.  
+ `ISNULL` 함수와 `COALESCE` 식은 용도는 비슷하지만 동작은 다를 수 있습니다.  
   
-1.  때문에 `ISNULL` 는 함수를 한 번만 계산 됩니다.  입력 값에 대해 위에서 설명한 대로 `COALESCE` 식에 여러 번 계산 될 수 있습니다.  
+1.  `ISNULL`은 함수이므로 한 번만 평가됩니다.  위의 설명대로 `COALESCE` 식의 입력 값은 여러 번 평가될 수 있습니다.  
   
-2.  결과 식의 데이터 형식 결정 방법이 다릅니다. `ISNULL`첫 번째 매개 변수의 데이터 형식을 사용 하 여 `COALESCE` 뒤에 오는 `CASE` 및 식 규칙 우선 순위가 가장 높은 값의 데이터 형식을 반환 합니다.  
+2.  결과 식의 데이터 형식 결정 방법이 다릅니다. `ISNULL`은 첫 번째 매개 변수의 데이터 형식을 사용하고 `COALESCE`는 `CASE` 식 규칙에 따라 우선 순위가 가장 높은 값의 데이터 형식을 반환합니다.  
   
-3.  결과 식의 null 허용 여부는에 대 한 다른 `ISNULL` 및 `COALESCE`합니다. `ISNULL` 반환 값은 항상 않은 것으로 간주 (반환 값은 null이 아닌 한 가정) NULLable 반면 `COALESCE` null이 아닌 매개 변수가 있는 것으로 간주 됩니다 `NULL`합니다. 따라서 식 `ISNULL(NULL, 1)` 및 `COALESCE(NULL, 1)`동일 하지만, null 허용 여부가 다른 값이 있습니다. 이 계산된 열에서는 이러한 식을 사용 하 여 키 제약 조건을 만들거나 하거나 결정적 스칼라 UDF의 반환 값을 다음 예제에 나와 있는 것 처럼 인덱싱할 수 있도록 하는 경우 달라를 집니다.  
+3.  `ISNULL` 및 `COALESCE`는 결과 식에서의 NULL 허용 여부가 다릅니다. `ISNULL` 반환 값은 항상 Null을 허용하지 않는 것으로 간주(반환 값이 Null을 허용하지 않는 값이라고 가정)되는 반면 Null이 아닌 매개 변수가 있는 `COALESCE`는 `NULL`로 간주됩니다. 따라서 `ISNULL(NULL, 1)` 및 `COALESCE(NULL, 1)` 식은 동일하지만 Null 허용 여부 값이 다릅니다. 이 때문에 이러한 식을 계산 열에서 사용하거나, 키 제약 조건을 만들거나, 다음 예에서와 같이 인덱싱이 가능하도록 스칼라 UDF 결정적 식의 반환 값을 만드는 경우 차이가 발생합니다.  
   
     ```sql  
     USE tempdb;  
@@ -115,9 +115,9 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  에 대 한 `ISNULL` 및 `COALESCE` 도 다릅니다. 예를 들어는 `NULL` 값에 대 한 `ISNULL` 변환할 **int** 반면에 대 한 `COALESCE`, 데이터 형식을 제공 해야 합니다.  
+4.  `ISNULL` 및 `COALESCE`에 대한 유효성 검사도 다릅니다. 예를 들어 `ISNULL`에 대한 `NULL` 값이 **int**로 변환되는 반면 `COALESCE`의 경우 데이터 형식을 직접 제공해야 합니다.  
   
-5.  `ISNULL`반면에 두 개의 매개 변수를 사용 `COALESCE` 가변 개수의 매개 변수를 사용 합니다.  
+5.  `ISNULL`은 매개 변수를 두 개만 사용하는 반면 `COALESCE`가 사용하는 매개 변수의 수는 가변적입니다.  
   
 ## <a name="examples"></a>예  
   
@@ -196,7 +196,7 @@ GO
  ```  
   
 ### <a name="c-simple-example"></a>C: 간단한 예  
- 다음 예제에서는 어떻게 `COALESCE` null이 아닌 값을 갖는 첫 번째 열에서 데이터를 선택 합니다. 이 예제에 대 한 가정 하 고 `Products` 이 데이터를 포함 하는 테이블:  
+ 다음 예에서는 `COALESCE`가 Null 이외의 값이 있는 첫째 열에서 데이터를 선택하는 방법을 보여 줍니다. 이 예제에서는 `Products` 테이블이 이 데이터를 포함한다고 가정합니다.  
   
  ```  
  Name         Color      ProductNumber  
@@ -206,7 +206,7 @@ GO
  NULL         White      PN9876
  ```  
   
- 다음 다음 COALESCE 쿼리를 실행 했습니다.  
+ 이 후 다음 COALESCE 쿼리를 실행합니다.  
   
 ```sql  
 SELECT Name, Color, ProductNumber, COALESCE(Color, ProductNumber) AS FirstNotNull   
@@ -223,10 +223,10 @@ FROM Products ;
  NULL         White      PN9876         White
  ```  
   
- 첫 번째 행에서의 `FirstNotNull` 값은 `PN1278`이 아니라 `Socks, Mens`합니다. 때문에 이것이 `Name` 열에 대 한 매개 변수로 지정 하지 않은 `COALESCE` 예제에서입니다.  
+ 첫 번째 행에서의 `FirstNotNull` 값은 `Socks, Mens`가 아닌 `PN1278`입니다. 예제에서 `Name` 열이 `COALESCE`에 대한 매개 변수로 지정되지 않았기 때문입니다.  
   
-### <a name="d-complex-example"></a>D: 복잡 한 예  
- 다음 예제에서는 `COALESCE` 3 개의 열에 값을 비교 하는 열에 null이 아닌 값만 반환 합니다.  
+### <a name="d-complex-example"></a>D: 복잡한 예  
+ 다음 예제에서는 `COALESCE`를 사용하여 세 열의 값을 비교하고 열에서 찾은 Null이 아닌 값만 반환합니다.  
   
 ```sql  
 CREATE TABLE dbo.wages  
@@ -299,8 +299,8 @@ ORDER BY TotalSalary;
  120000.00
  ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ISNULL &#40; Transact SQL &#41;](../../t-sql/functions/isnull-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
  [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   

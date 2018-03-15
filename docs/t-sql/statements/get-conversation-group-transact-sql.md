@@ -1,5 +1,5 @@
 ---
-title: GET CONVERSATION GROUP (Transact SQL) | Microsoft Docs
+title: GET CONVERSATION GROUP(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -66,27 +66,27 @@ ms.lasthandoff: 01/25/2018
  현재 메시지가 없으면 메시지가 큐에 도착할 때까지 GET CONVERSATION GROUP 문이 대기하도록 지정합니다.  
   
  *@conversation_group_id*  
- GET CONVERSATION GROUP 문에서 반환한 대화 그룹 ID를 저장하는 데 사용되는 변수입니다. 변수 형식 이어야 합니다 **uniqueidentifier**합니다. 사용할 수 있는 대화 그룹이 없으면 변수가 NULL로 설정됩니다.  
+ GET CONVERSATION GROUP 문에서 반환한 대화 그룹 ID를 저장하는 데 사용되는 변수입니다. 변수는 **uniqueidentifier** 형식이어야 합니다. 사용할 수 있는 대화 그룹이 없으면 변수가 NULL로 설정됩니다.  
   
  FROM  
  대화 그룹을 가져올 큐를 지정합니다.  
   
  *database_name*  
- 대화 그룹을 가져올 큐를 포함하는 데이터베이스의 이름입니다. No *database_name* 제공 되는 현재 데이터베이스에 대 한 기본값입니다.  
+ 대화 그룹을 가져올 큐를 포함하는 데이터베이스의 이름입니다. *database_name*을 제공하지 않으면 기본값은 현재 데이터베이스입니다.  
   
  *schema_name*  
- 대화 그룹을 가져올 큐를 소유하는 스키마의 이름입니다. No *schema_name* 제공 되는 현재 사용자의 기본 스키마는 기본값입니다.  
+ 대화 그룹을 가져올 큐를 소유하는 스키마의 이름입니다. *schema_name*을 제공하지 않으면 기본값은 현재 사용자의 기본 스키마입니다.  
   
  *queue_name*  
  대화 그룹을 가져올 큐의 이름입니다.  
   
- 제한 시간 *제한 시간*  
- 메시지가 큐에 도착할 때까지 Service Broker에서 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. WAITFOR를 사용 하는 문이이 절이 포함 되지 않은 경우 또는 *제한 시간* -1 이면 대기 시간 제한 됩니다. 제한 시간이 만료 되 면 GET CONVERSATION GROUP 설정는  *@conversation_group_id*  변수를 NULL로 합니다.  
+ TIMEOUT *timeout*  
+ 메시지가 큐에 도착할 때까지 Service Broker에서 대기하는 시간(밀리초)을 지정합니다. 이 절은 WAITFOR 절에서만 사용할 수 있습니다. WAITFOR를 사용하는 문이 이 절을 포함하지 않거나 *timeout*이 -1이면 대기 시간에 제한이 없습니다. 제한 시간이 만료되면 GET CONVERSATION GROUP이 *@conversation_group_id* 변수를 NULL로 설정합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  위의 문은 세미콜론으로 종료 해야 GET CONVERSATION GROUP 문이 일괄 처리 또는 저장된 프로시저의 첫 번째 문이 아닌 경우 (**;**), [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자입니다.  
+>  GET CONVERSATION GROUP 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자인 세미콜론(**;**)으로 종결되어야 합니다.  
   
  GET CONVERSATION GROUP 문에 지정된 큐를 사용할 수 없으면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류가 발생하여 문이 실패합니다.  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
   
  GET CONVERSATION GROUP은 사용자 정의 함수에 유효하지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  큐에서 대화 그룹 식별자를 가져오려면 현재 사용자가 큐에 대한 RECEIVE 권한을 가져야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -143,8 +143,8 @@ GET CONVERSATION GROUP @conversation_group_id
 FROM AdventureWorks.dbo.ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [BEGIN DIALOG conversation&#40; Transact SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [MOVE CONVERSATION &#40; Transact SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [BEGIN DIALOG CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [MOVE CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
   
   

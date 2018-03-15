@@ -1,5 +1,5 @@
 ---
-title: "다음과 같은 경우... ELSE (Transact SQL) | Microsoft Docs"
+title: IF...ELSE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/11/2016
 ms.prod: sql-non-specified
@@ -59,7 +59,7 @@ IF Boolean_expression
   
  문 블록을 정의하려면 흐름 제어 키워드인 BEGIN 및 END를 사용하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  일괄 처리, 저장 프로시저 및 임시 쿼리 내에서 IF...ELSE 구문을 사용할 수 있습니다. 저장 프로시저에서는 일부 매개 변수의 존재 여부를 테스트하는 데 이 구문이 자주 사용됩니다.  
   
  IF 검사는 다른 IF 뒤에 중첩될 수 있으며 ELSE 뒤에 다른 IF가 올 수도 있습니다. 가능한 중첩 수준은 사용 가능한 메모리에 따라 달라집니다.  
@@ -73,10 +73,10 @@ ELSE
        SELECT 'Weekday';
 ```  
   
- 더 많은 예제를 참조 하십시오. [ELSE &#40; IF... 다른 &#41; &#40; Transact SQL &#41; ](../../t-sql/language-elements/else-if-else-transact-sql.md).  
+ 더 많은 예제를 보려면 [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md)을 참조하세요.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제에서는 `IF…ELSE` 중에 사용자 표시에 대 한 두 개의 응답에 있는 항목의 가중치에 따라는 `DimProduct` 테이블입니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예에서는 `IF…ELSE`를 사용하여 `DimProduct` 테이블에 있는 항목의 가중치에 따라 두 응답 중 사용자를 표시할 응답을 결정합니다.  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -97,13 +97,13 @@ ELSE
     FROM DimProduct WHERE ProductKey = @productKey);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [시작 중... 최종 &#40; Transact SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [최종 &#40; 시작 중... 최종 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [END&#40;BEGIN...END&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [반면 &#40; Transact SQL &#41;](../../t-sql/language-elements/while-transact-sql.md)   
- [대/소문자 &#40; Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [흐름 제어 언어 &#40; Transact SQL &#41; ](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; IF... 다른 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
+ [WHILE&#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
+ [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [흐름 제어 언어&#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   
 

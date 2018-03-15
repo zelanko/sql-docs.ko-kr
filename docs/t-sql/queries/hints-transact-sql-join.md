@@ -1,5 +1,5 @@
 ---
-title: "조인 힌트 (Transact SQL) | Microsoft Docs"
+title: "조인 힌트(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -36,13 +36,13 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---join"></a>조인 힌트 (Transact SQL)-
+# <a name="hints-transact-sql---join"></a>힌트 (Transact-SQL) - 조인
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  조인 힌트는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 쿼리 최적화 프로그램이 두 테이블 간의 조인 전략을 강제 적용하도록 지정합니다. 조인 및 조인 구문에 대 한 일반 정보를 참조 하십시오. [from&#40; Transact SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
+  조인 힌트는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 쿼리 최적화 프로그램이 두 테이블 간의 조인 전략을 강제 적용하도록 지정합니다. 조인 및 조인 구문에 대한 자세한 내용은 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 일반적으로 쿼리에 대해 최적의 실행 계획을 선택 하는 힌트를 포함 하는 것이 좋습니다, \<알아서 >, 숙련 된 개발자가 최후의 수단 으로만 사용할 수 및 데이터베이스 관리자입니다.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 일반적으로 쿼리에 대해 최적의 실행 계획을 선택하므로 \<join_hint>를 포함한 힌트는 숙련된 개발자나 데이터베이스 관리자가 마지막 수단으로만 사용하는 것이 좋습니다.
   
  **적용 대상:**  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
   
  REMOTE는 INNER JOIN 작업에 대해서만 사용할 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  조인 힌트는 쿼리의 FROM 절에서 지정됩니다. 조인 힌트는 두 테이블 간에 조인 전략을 강제 적용합니다. 두 테이블에 대해 조인 힌트가 지정된 경우 쿼리 최적화 프로그램이 ON 키워드의 위치를 기반으로 하여 쿼리에서 조인된 모든 테이블에 대해 조인 순서를 강제 적용합니다. CROSS JOIN이 ON 절 없이 사용된 경우 괄호를 사용하여 조인 순서를 나타낼 수 있습니다.  
   
 ## <a name="examples"></a>예  
@@ -114,7 +114,7 @@ INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [힌트 &#40; Transact SQL &#41;](../../t-sql/queries/hints-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [힌트 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   

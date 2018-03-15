@@ -1,5 +1,5 @@
 ---
-title: DBCC USEROPTIONS (Transact SQL) | Microsoft Docs
+title: DBCC USEROPTIONS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -77,10 +77,10 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 데이터베이스 옵션 READ_COMMITTED_SNAPSHOT을 ON으로 설정하고 트랜잭션 격리 수준을 '커밋된 읽기'로 설정하면 DBCC USEROPTIONS가 커밋된 읽기 스냅숏의 격리 수준을 보고합니다. 그러나 실제 격리 수준은 커밋된 읽기입니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **public** 역할의 멤버 자격이 필요합니다.
   
 ## <a name="examples"></a>예  
@@ -90,7 +90,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 DBCC USEROPTIONS;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)

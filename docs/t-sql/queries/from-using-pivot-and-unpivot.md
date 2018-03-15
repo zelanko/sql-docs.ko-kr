@@ -37,15 +37,15 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="from---using-pivot-and-unpivot"></a>-PIVOT 및 UNPIVOT 사용
+# <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT 및 UNPIVOT 사용
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  사용할 수는 `PIVOT` 및 `UNPIVOT` 테이블 반환 식을 다른 테이블로 변경 하려면 관계 연산자입니다. `PIVOT`출력에서 여러 열에 식에서 한 열에서 고유 값을 설정 하 여 테이블 반환 식을 회전 하 고 최종 출력에서 원하는 모든 남은 열 값에 필요한 위치에 집계를 수행 합니다. `UNPIVOT`열의 열 값에는 테이블 반환 식 회전 하 여 피벗 작업을 수행 합니다.  
+  `PIVOT` 및 `UNPIVOT` 관계 연산자를 사용하여 테이블 반환 식을 다른 테이블로 변경할 수 있습니다. `PIVOT`은 식의 한 열에 포함된 여러 고유 값을 출력에서 여러 열로 변환하여 테이블 반환 식을 회전하고 최종 출력에서 남은 열 값 중 원하는 값에 대해 필요에 따라 집계를 수행합니다. `UNPIVOT`은 테이블 반환 식의 열을 열 값으로 회전하여 PIVOT과 반대되는 연산을 수행합니다.  
   
- 에 대 한 구문 `PIVOT` 제공 더 간단 하 고 보다 복잡 한 일련의 지정 될 수 있는 구문 보다 읽기 쉬운 `SELECT...CASE` 문. 에 대 한 구문에 대 한 전체 설명은 `PIVOT`, 참조 [(TRANSACT-SQL)에서](../../t-sql/queries/from-transact-sql.md)합니다.  
+ `PIVOT`에 대한 구문은 복잡한 일련의 `SELECT...CASE` 문에서 지정할 수 있는 구문과 달리 단순하고 읽기 쉬운 구문을 제공합니다. `PIVOT` 구문에 대한 자세한 내용은 [FROM(Transact-SQL)](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
   
 ## <a name="syntax"></a>구문  
- 다음 구문을 사용 하는 방법을 요약 한 것은 `PIVOT` 연산자입니다.  
+ 다음 구문은 `PIVOT` 연산자의 사용 방법을 요약합니다.  
   
 ```  
 SELECT <non-pivoted column>,  
@@ -67,8 +67,8 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>주의  
-열 식별자는 `UNPIVOT` 카탈로그 데이터 정렬에 따라 절. 에 대 한 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 데이터 정렬은 항상 `SQL_Latin1_General_CP1_CI_AS`합니다. 에 대 한 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 부분적으로 포함 된 데이터베이스를 데이터 정렬은 항상 `Latin1_General_100_CI_AS_KS_WS_SC`합니다. 열은 다른 열을 다음 collate 절과 결합 되어 있으면 (`COLLATE DATABASE_DEFAULT`) 충돌을 방지 하려면 필요 합니다.  
+## <a name="remarks"></a>Remarks  
+`UNPIVOT` 절의 열 식별자는 카탈로그 데이터 정렬을 따릅니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]의 경우 데이터 정렬은 항상 `SQL_Latin1_General_CP1_CI_AS`입니다. 부분적으로 포함된 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 데이터베이스의 경우 데이터 정렬은 항상 `Latin1_General_100_CI_AS_KS_WS_SC`입니다. 열이 다른 열과 결합되면 충돌을 피하기 위해 collate 절(`COLLATE DATABASE_DEFAULT`)이 필요합니다.  
 
   
 ## <a name="basic-pivot-example"></a>기본 PIVOT 예  
@@ -162,9 +162,9 @@ FROM PurchaseOrderHeader;
  이는 `EmployeeID` 열에서 반환하는 각 고유 값이 최종 결과 집합의 필드가 됨을 의미합니다. 이에 따라 피벗 절에 지정된 각 `EmployeeID` 번호에 대해 열이 제공되며 여기서는 직원 `164`, `198`, `223`, `231` 및 `233`에 대해 열이 하나씩 제공됩니다. `PurchaseOrderID` 열은 최종 출력에 반환되는 열(그룹화 열)을 그룹화하는 기준 값 열로 사용됩니다. 이 경우 그룹화 열은 `COUNT` 함수로 집계됩니다. `PurchaseOrderID` 열에 표시되는 Null 값이 각 직원에 대한 `COUNT` 계산 시 사용되지 않았다는 경고 메시지가 나타납니다.  
   
 > [!IMPORTANT]  
->  집계 함수가 사용 됩니다 때 `PIVOT`를 집계 하는 경우 값 열에 null 값의 존재 여부 고려 되지 않습니다.  
+>  집계 함수에 `PIVOT`을 사용하면 집계 계산 시 값 열의 모든 NULL 값이 사용되지 않습니다.  
   
- `UNPIVOT`반대 작업을 거의 수행 `PIVOT`, 열을 행으로 회전 하 여 합니다. 위의 예에서 생성된 테이블이 데이터베이스에 `pvt`로 저장되어 있는 상태에서 `Emp1`, `Emp2`, `Emp3`, `Emp4` 및 `Emp5` 열 식별자를 특정 공급업체에 해당하는 행 값으로 회전하려고 한다고 가정합니다. 이는 추가로 두 열을 식별해야 함을 의미합니다. 회전하는 열 값(`Emp1`, `Emp2`,...)이 포함될 열을 `Employee`라고 하며 회전할 열 아래의 현재 값이 포함될 열을 `Orders`라고 합니다. 이러한 열에 해당 하는 *pivot_column* 및 *value_column*각각에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의 합니다. 쿼리는 다음과 같습니다.  
+ `UNPIVOT`은 열을 행으로 회전하여 `PIVOT`과 거의 반대되는 연산을 수행합니다. 위의 예에서 생성된 테이블이 데이터베이스에 `pvt`로 저장되어 있는 상태에서 `Emp1`, `Emp2`, `Emp3`, `Emp4` 및 `Emp5` 열 식별자를 특정 공급업체에 해당하는 행 값으로 회전하려고 한다고 가정합니다. 이는 추가로 두 열을 식별해야 함을 의미합니다. 회전하는 열 값(`Emp1`, `Emp2`,...)이 포함될 열을 `Employee`라고 하며 회전할 열 아래의 현재 값이 포함될 열을 `Orders`라고 합니다. 이 두 열은 각각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의에서 *pivot_column*과 *value_column*에 해당합니다. 쿼리는 다음과 같습니다.  
   
 ```  
 -- Create the table and insert values as portrayed in the previous example.  
@@ -207,12 +207,12 @@ VendorID    Employee    Orders
 ...
 ```
   
- 다음에 유의 `UNPIVOT` 의 정반대 않습니다 `PIVOT`합니다. `PIVOT`집계를 수행 하 고 따라서 출력에 행으로 가능한 여러 행 병합 합니다. `UNPIVOT`행이 병합 되었기 때문에 원래 테이블 반환 식의 결과 재현 되지 않습니다. 게다가 입력의 값이 null `UNPIVOT` 반면 있었다는 원래 null 값 하기 전에 입력에서 출력에 나타나지 않지만 `PIVOT` 작업 합니다.  
+ `UNPIVOT`이 `PIVOT`의 정반대는 아닙니다. `PIVOT`은 집계를 수행하고 출력에서 가능한 여러 행을 단일 행으로 병합합니다. 행이 병합되었기 때문에 `UNPIVOT`은 원래 테이블 반환 식 결과를 다시 생성하지 않습니다. 또한 `UNPIVOT` 입력의 NULL 값은 출력에 나타나지 않지만 `PIVOT` 연산 전 입력에 원래 NULL 값이 있을 수 있습니다.  
   
- `Sales.vSalesPersonSalesByFiscalYears` 의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 샘플 데이터베이스에서는 `PIVOT` 을 각 회계 연도 대 한 각 영업 사원의 총 매출액을 반환 합니다. 뷰를 스크립팅하려면를 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 **개체 탐색기**에서 뷰를 찾습니다는 **뷰** 에 대 한 폴더는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스입니다. 뷰 이름을 마우스 오른쪽 단추로 클릭 한 다음 선택 **뷰 스크립팅**합니다.  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스의 `Sales.vSalesPersonSalesByFiscalYears` 뷰는 `PIVOT`을 사용하여 각 영업 사원의 총 매출액을 회계 연도별로 반환합니다. 뷰를 스크립팅하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **개체 탐색기**에 있는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 **뷰** 폴더에서 뷰를 찾습니다. 뷰 이름을 마우스 오른쪽 단추로 클릭한 다음, **뷰 스크립팅**을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [FROM (TRANSACT-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [대/소문자 (Transact SQL)](../../t-sql/language-elements/case-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [FROM(Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+ [CASE(Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   

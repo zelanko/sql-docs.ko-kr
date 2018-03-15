@@ -1,5 +1,5 @@
 ---
-title: "| = (비트 또는 할당) (Transact SQL) | Microsoft Docs"
+title: "|= (비트 OR 대입)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-bitwise-or-assignment-transact-sql"></a>| = (비트 또는 할당) (Transact SQL)
+# <a name="-bitwise-or-assignment-transact-sql"></a>|= (비트 OR 대입)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 이진 식으로 변환되는 두 개의 지정된 정수 값 간에 비트 논리 OR 연산을 수행하고 값을 연산 결과로 설정합니다.  
@@ -49,18 +49,18 @@ expression |= expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) 의 유형 중 하나는 데이터를 제외 하 고 숫자 범주는 **비트** 데이터 형식입니다.  
+ 숫자 범주에서 **bit** 데이터 형식을 제외한 모든 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
- 자세한 내용은 참조 [&#124; &#40; 비트 OR &#41; &#40; Transact SQL &#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 자세한 내용은 [&#124;&#40;비트 OR&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [비트 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [복합 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [비트 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   

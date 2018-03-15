@@ -1,5 +1,5 @@
 ---
-title: WITH XMLNAMESPACES (Transact SQL) | Microsoft Docs
+title: WITH XMLNAMESPACES(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -70,12 +70,12 @@ DEFAULT <xml_namespace_uri>
   
 ## <a name="arguments"></a>인수  
  *xml_namespace_uri*  
- 선언할 XML 네임스페이스를 식별하는 URI(Uniform Resource Identifier)입니다. *xml_namespace_uri* 는 SQL 문자열입니다.  
+ 선언할 XML 네임스페이스를 식별하는 URI(Uniform Resource Identifier)입니다. *xml_namespace_uri*는 SQL 문자열입니다.  
   
  *xml_namespace_prefix*  
- 에 지정 된 네임 스페이스 URI 값과 관련 된과 매핑하여 접두사 지정 *xml_namespace_uri*합니다. *xml_namespace_prefix* 이어야 합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자입니다.  
+ *xml_namespace_uri*에 지정된 네임스페이스 URI 값과 매핑하여 연결할 접두어를 지정합니다. *xml_namespace_prefix*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자이어야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  공통 테이블 식이 포함된 문에 WITH XMLNAMESPACES 절을 사용하는 경우 문에서 WITH XMLNAMESPACES 절이 공통 테이블 식 앞에 와야 합니다.  
   
  다음은 WITH XMLNAMESPACES 절을 사용할 때 적용되는 일반 구문 규칙입니다.  
@@ -96,7 +96,7 @@ DEFAULT <xml_namespace_uri>
   
 -   URI 문자열 값은 현재 데이터베이스 데이터 정렬 코드 페이지에 따라 인코딩되며 내부적으로 유니코드로 변환됩니다.  
   
--   XML 네임 스페이스 URI 됩니다 공백 뒤 XSD 공백 축소 규칙에 사용 되는 축소 **xs: anyuri**합니다. 또한 XML 네임스페이스 URI 값에 대해서는 유효화 또는 비유효화가 수행되지 않습니다.  
+-   XML 네임스페이스 URI는 **xs:anyURI**에 사용되는 XSD 공백 축소 규칙에 따라 공백이 축소됩니다. 또한 XML 네임스페이스 URI 값에 대해서는 유효화 또는 비유효화가 수행되지 않습니다.  
   
 -   XML 네임스페이스 URI는 유효하지 않은 XML 1.0 문자에 대해 검사되며 U+0007 같은 유효하지 않은 문자가 있을 경우 오류가 발생합니다.  
   
@@ -105,9 +105,9 @@ DEFAULT <xml_namespace_uri>
 -   XMLNAMESPACES 키워드는 WITH 절의 컨텍스트에서 예약됩니다.  
   
 ## <a name="examples"></a>예  
- 예제를 보려면 [WITH XMLNAMESPACES를 사용 하 쿼리에 네임 스페이스 추가](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)합니다.  
+ 예를 들어 [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [XQuery 언어 참조&#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SET ANSI_WARNINGS (Transact SQL) | Microsoft Docs
+title: SET ANSI_WARNINGS(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -57,28 +57,28 @@ SET ANSI_WARNINGS { ON | OFF }
 SET ANSI_WARNINGS ON
 ```
 
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET ANSI_WARNINGS는 다음 조건에 적용됩니다.  
   
 -   ON으로 설정한 경우 SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP, COUNT 등의 집계 함수에 NULL 값이 있으면 경고 메시지가 생성됩니다. OFF로 설정한 경우에는 경고가 발생하지 않습니다.  
   
--   ON으로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 문이 롤백되고 오류 메시지가 생성됩니다. OFF로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 NULL 값이 반환됩니다. 0으로 나누기 또는 산술 오버플로 오류가 발생 하면 인해 null 값이 반환 될 삽입 또는 업데이트 작업을 하려고 하는 경우에 발생 한 **문자**, 유니코드, 또는 **이진** 열 길이 새 값 열의 최대 크기를 초과합니다. SET ANSI_WARNINGS 옵션이 ON이면 ISO 표준에 지정된 대로 INSERT나 UPDATE가 취소됩니다. 문자 열에 대해서는 후행 공백이, 이진 열에 대해서는 후행 NULL 값이 무시됩니다. 이 옵션이 OFF이면 열의 크기에 맞게 데이터가 잘리고 문이 성공적으로 실행됩니다.  
+-   ON으로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 문이 롤백되고 오류 메시지가 생성됩니다. OFF로 설정한 경우 0으로 나누기 및 산술 오버플로 오류가 발생하면 NULL 값이 반환됩니다. 새 값의 길이가 열의 최대 크기를 초과하는 **character**, Unicode 또는 **binary** 열에 INSERT나 UPDATE를 시도하면 0으로 나누기 또는 산술 오버플로 오류로 인해 Null 값이 반환될 수 있습니다. SET ANSI_WARNINGS 옵션이 ON이면 ISO 표준에 지정된 대로 INSERT나 UPDATE가 취소됩니다. 문자 열에 대해서는 후행 공백이, 이진 열에 대해서는 후행 NULL 값이 무시됩니다. 이 옵션이 OFF이면 열의 크기에 맞게 데이터가 잘리고 문이 성공적으로 실행됩니다.  
   
     > [!NOTE]  
-    >  에서 잘림이 일어날 때는 변수와 간에 **이진** 또는 **varbinary** SET 옵션에 관계 없이 데이터를 경고 또는 오류 없이 실행 합니다.  
+    >  **binary** 또는 **varbinary** 데이터로 또는 그 역으로의 변환에서 잘림이 일어날 때는 SET 옵션에 상관없이 경고나 오류가 생성되지 않습니다.  
   
     > [!NOTE]  
-    >  저장 프로시저 또는 사용자 정의 함수에 매개 변수를 전달할 때 또는 일괄 처리 문에서 변수를 선언하고 설정할 때 ANSI_WARNINGS는 인식되지 않습니다. 예를 들어, 변수로 정의 되 면 **char (3)**를 하 고 다음 값으로 설정 된 3 자 보다 큰 데이터 잘리고 정의 된 크기는 INSERT 또는 UPDATE 문이 성공 합니다.  
+    >  저장 프로시저 또는 사용자 정의 함수에 매개 변수를 전달할 때 또는 일괄 처리 문에서 변수를 선언하고 설정할 때 ANSI_WARNINGS는 인식되지 않습니다. 예를 들어 변수가 **char(3)**로 정의된 경우 3자보다 큰 값으로 설정하면 해당 데이터가 정의된 크기로 잘리고 INSERT 또는 UPDATE 문은 성공합니다.  
   
  sp_configure의 user options를 사용하여 서버의 모든 연결에 대해 ANSI_WARNINGS의 기본값을 설정할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다.  
   
- 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 SET ANSI_WARNINGS 옵션을 ON으로 설정해야 합니다. SET ANSI_WARNINGS 옵션이 OFF이면 인덱싱된 뷰나 계산 열에 인덱스가 있는 테이블에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. 계산된 열에 인덱스 및 인덱싱된 뷰에 필요한 SET 옵션 설정에 대 한 자세한 내용은 "고려 사항 때 설정 문 사용"의 참조 [SET 문 &#40; Transact SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
+ 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 SET ANSI_WARNINGS 옵션을 ON으로 설정해야 합니다. SET ANSI_WARNINGS 옵션이 OFF이면 인덱싱된 뷰나 계산 열에 인덱스가 있는 테이블에서 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. 인덱싱된 뷰 및 계산 열의 인덱스에 사용되는 필수 SET 옵션 설정에 대한 자세한 내용은 [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)에서 "SET 문 사용 시 고려 사항"을 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 ANSI_WARNINGS 데이터베이스 옵션이 포함되어 있습니다. 이 옵션은 SET ANSI_WARNINGS와 같습니다. SET ANSI_WARNINGS 옵션이 ON이면, 0으로 나누기나 데이터베이스 열에 대해 너무 큰 문자열에서 오류나 경고가 발생하고, 기타 유사한 오류가 발생합니다. SET ANSI_WARNINGS 옵션이 OFF이면 이러한 오류나 경고가 발생하지 않습니다. model 데이터베이스에서 SET ANSI_WARNINGS의 기본값은 OFF입니다. 이 옵션을 지정하지 않으면 ANSI_WARNINGS 설정이 적용됩니다. SET ANSI_WARNINGS 옵션이 OFF 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is_ansi_warnings_on 열 값을 사용 하는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 ANSI_WARNINGS 데이터베이스 옵션이 포함되어 있습니다. 이 옵션은 SET ANSI_WARNINGS와 같습니다. SET ANSI_WARNINGS 옵션이 ON이면, 0으로 나누기나 데이터베이스 열에 대해 너무 큰 문자열에서 오류나 경고가 발생하고, 기타 유사한 오류가 발생합니다. SET ANSI_WARNINGS 옵션이 OFF이면 이러한 오류나 경고가 발생하지 않습니다. model 데이터베이스에서 SET ANSI_WARNINGS의 기본값은 OFF입니다. 이 옵션을 지정하지 않으면 ANSI_WARNINGS 설정이 적용됩니다. SET ANSI_WARNINGS를 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰에 있는 is_ansi_warnings_on 열의 값을 사용합니다.  
   
  분산 쿼리를 실행할 때는 ANSI_WARNINGS를 ON으로 설정해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자동으로 연결할 때 ANSI_WARNINGS를 ON으로 설정 합니다. 이 옵션은 연결하기 전에 응용 프로그램에 설정된 ODBC 데이터 원본과 ODBC 연결 특성에서 구성할 수 있습니다. DB-Library 응용 프로그램으로부터 연결할 때 SET ANSI_WARNINGS의 기본값은 OFF입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_WARNINGS를 ON으로 설정합니다. 이 옵션은 연결하기 전에 응용 프로그램에 설정된 ODBC 데이터 원본과 ODBC 연결 특성에서 구성할 수 있습니다. DB-Library 응용 프로그램으로부터 연결할 때 SET ANSI_WARNINGS의 기본값은 OFF입니다.  
   
  SET ANSI_DEFAULTS 옵션이 ON이면 SET ANSI_WARNINGS 옵션이 설정됩니다.  
   
@@ -94,7 +94,7 @@ IF ( (8 & @@OPTIONS) = 8 ) SET @ANSI_WARN = 'ON';
 SELECT @ANSI_WARN AS ANSI_WARNINGS;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -179,11 +179,11 @@ GO
 DROP TABLE T1  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ANSI_DEFAULTS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SESSIONPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

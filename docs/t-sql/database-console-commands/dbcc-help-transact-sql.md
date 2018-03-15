@@ -1,5 +1,5 @@
 ---
-title: DBCC HELP (Transact SQL) | Microsoft Docs
+title: DBCC HELP(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -59,7 +59,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ## <a name="result-sets"></a>결과 집합  
 DBCC HELP는 지정한 DBCC 명령의 구문을 보여 주는 결과 집합을 반환합니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.
   
 ## <a name="examples"></a>예  
@@ -81,7 +81,7 @@ DBCC HELP ('?');
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

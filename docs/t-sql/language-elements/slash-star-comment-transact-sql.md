@@ -1,5 +1,5 @@
 ---
-title: "슬래시 별 (블록 주석) (Transact SQL) | Microsoft Docs"
+title: "슬래시 별(주석 블록)(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="slash-star-block-comment-transact-sql"></a>슬래시 별 (블록 주석) (Transact SQL)
+# <a name="slash-star-block-comment-transact-sql"></a>슬래시 별(주석 블록)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 
-  사용자가 제공하는 텍스트를 나타냅니다. 사이의 텍스트는 / * 및 \*/ 서버에서 평가 되지 않습니다.  
+  사용자가 제공하는 텍스트를 나타냅니다. /* 및 \*/ 사이의 텍스트는 서버에서 평가되지 않습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,12 +56,12 @@ text_of_comment
  *text_of_comment*  
  주석 텍스트입니다. 한 개 이상의 문자열로 구성됩니다.  
   
-## <a name="remarks"></a>주의  
- 주석은 별도의 줄 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 삽입될 수 있습니다. 여러 줄로 이루어진 주석은로 표시 되어야 합니다 / * 및 \*/ 합니다. 첫 번째 줄을 시작 하는 여러 줄로 이루어진 주석에 주로 사용 되는 스타일 규칙 /\*후속 줄은 \* \*, 하 고 끝나야 \*/ 합니다.  
+## <a name="remarks"></a>Remarks  
+ 주석은 별도의 줄 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 삽입될 수 있습니다. 여러 줄로 이루어진 주석은 /* 및 \*/로 표시되어야 합니다. 여러 줄로 이루어진 주석에 자주 사용되는 스타일 규칙은 첫 번째 줄을 /\*로 시작하고, 후속 줄은 \*\*로 시작하며, \*/로 끝나는 것입니다.  
   
  주석의 길이에는 제한이 없습니다.  
   
- 주석의 중첩도 가능합니다. 경우는 / * 문자 패턴이 기존 주석 내에서 발생 하면 중첩 된 주석의 시작으로 처리 하 고, 따라서 닫는 데, \*/ 주석 표시가 있습니다. 닫는 주석 표시가 없으면 오류가 생성됩니다.  
+ 주석의 중첩도 가능합니다. /* 문자 패턴이 기존 주석 내의 아무 곳에서 발생하면 중첩된 주석의 시작으로 처리되므로 \*/(주석 닫기 표시)가 필요합니다. 닫는 주석 표시가 없으면 오류가 생성됩니다.  
   
  예를 들면 다음 코드는 오류를 생성합니다.  
   
@@ -108,9 +108,9 @@ JOIN Person.Address AS a ON ea.AddressID = a.AddressID;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [-&#40; 설명 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)   
- [흐름 제어 언어 &#40; Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+## <a name="see-also"></a>참고 항목  
+ [--&#40;주석&#41;&#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
+ [흐름 제어 언어&#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
 

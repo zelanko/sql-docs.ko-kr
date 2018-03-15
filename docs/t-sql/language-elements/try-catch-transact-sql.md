@@ -1,5 +1,5 @@
 ---
-title: "시도 중... CATCH (Transact SQL) | Microsoft Docs"
+title: TRY...CATCH(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -68,7 +68,7 @@ END CATCH
  *statement_block*  
  일괄 처리나 BEGIN...END 블록으로 묶은 임의의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  TRY...CATCH 구문은 심각도가 10을 넘으며 데이터베이스 연결을 닫지 않는 모든 실행 오류를 catch합니다.  
   
  TRY 블록 다음에는 곧바로 연결된 CATCH 블록이 이어져야 합니다. END TRY와 BEGIN CATCH 문 사이에 다른 문을 포함시키면 구문 오류가 발생합니다.  
@@ -96,17 +96,17 @@ END CATCH
 ## <a name="retrieving-error-information"></a>오류 정보 검색  
  CATCH 블록의 범위에서 다음 시스템 함수를 사용하여 CATCH 블록을 실행하도록 만든 오류에 대한 정보를 얻을 수 있습니다.  
   
--   [Error_number ()](../../t-sql/functions/error-number-transact-sql.md) 의 오류 번호를 반환 합니다.  
+-   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md)는 오류 번호를 반환합니다.  
   
--   [Error_severity ()](../../t-sql/functions/error-severity-transact-sql.md) 심각도 반환 합니다.  
+-   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md)는 심각도를 반환합니다.  
   
--   [Error_state ()](../../t-sql/functions/error-state-transact-sql.md) 오류 상태 번호를 반환 합니다.  
+-   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md)는 오류 상태 번호를 반환합니다.  
   
--   [Error_procedure ()](../../t-sql/functions/error-procedure-transact-sql.md) 오류가 발생 한 저장된 프로시저 또는 트리거의 이름을 반환 합니다.  
+-   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md)는 오류가 발생한 저장 프로시저 또는 트리거의 이름을 반환합니다.  
   
--   [Error_line ()](../../t-sql/functions/error-line-transact-sql.md) 오류를 발생 시킨 루틴 내의 줄 번호를 반환 합니다.  
+-   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md)은 오류를 발생시킨 루틴 내의 줄 번호를 반환합니다.  
   
--   [Error_message ()](../../t-sql/functions/error-message-transact-sql.md) 오류 메시지의 전체 텍스트를 반환 합니다. 이 텍스트는 길이, 개체 이름 또는 시간과 같은 대체 가능한 매개 변수에 제공된 값을 포함합니다.  
+-   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md)는 오류 메시지의 전체 텍스트를 반환합니다. 이 텍스트는 길이, 개체 이름 또는 시간과 같은 대체 가능한 매개 변수에 제공된 값을 포함합니다.  
   
  CATCH 블록의 범위를 벗어나서 이러한 함수를 호출하면 NULL이 반환됩니다. CATCH 블록의 범위 내 어디에서나 이들 함수를 사용하여 오류 정보를 검색할 수 있습니다. 예를 들어 다음 스크립트는 오류 처리 함수를 포함하는 저장 프로시저를 보여 줍니다. `CATCH` 구문의 `TRY…CATCH` 블록에서 이 저장 프로시저를 호출하면 오류에 대한 정보가 반환됩니다.  
   
@@ -138,7 +138,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- 오류\_ \* 작업 에서도 함수는 `CATCH` 블록 내부는 [고유 하 게 컴파일된 저장된 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)합니다.  
+ ERROR\_\* 함수는 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) 안의 `CATCH` 블록에서도 작동합니다.  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>TRY...CATCH 구문의 영향을 받지 않는 오류  
  TRY...CATCH 구문은 다음과 같은 조건에서 오류를 포착하지 않습니다.  
@@ -206,7 +206,7 @@ END CATCH;
 ## <a name="uncommittable-transactions-and-xactstate"></a>커밋 불가능 트랜잭션 및 XACT_STATE  
  TRY 블록에서 생성된 오류로 인해 현재 트랜잭션의 상태가 무효화되는 경우 그 트랜잭션은 커밋 불가능 트랜잭션으로 분류됩니다. 일반적으로 TRY 블록 바깥에서 트랜잭션을 종료하게 만드는 오류가 TRY 블록 내부에서 발생하면 트랜잭션이 커밋 불가능 상태가 됩니다. 커밋 불가능 트랜잭션은 읽기 작업 또는 ROLLBACK TRANSACTION만 수행할 수 있습니다. 커밋할 수 없는 트랜잭션은 쓰기 작업 또는 COMMIT TRANSACTION을 생성하는 어떤 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문도 실행할 수 없습니다. 어떤 트랜잭션이 커밋 불가능 트랜잭션으로 분류된 경우 XACT_STATE 함수는 -1 값을 반환합니다. 일괄 처리가 완료되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 커밋 불가능 활성 트랜잭션을 모두 롤백합니다. 트랜잭션이 커밋할 수 없는 상태가 되었을 때 오류 메시지가 전송되지 않은 경우 일괄 처리가 완료되면 오류 메시지가 클라이언트 응용 프로그램으로 전송됩니다. 이 메시지는 커밋 불가능 트랜잭션이 검색되어 롤백되었음을 보여 줍니다.  
   
- 커밋 불가능 트랜잭션과 XACT_STATE 함수에 대 한 자세한 내용은 참조 [XACT_STATE &#40; Transact SQL &#41; ](../../t-sql/functions/xact-state-transact-sql.md).  
+ 커밋 불가능 트랜잭션과 XACT_STATE 함수에 대한 자세한 내용은 [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   
@@ -326,7 +326,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-trycatch"></a>4. TRY…CATCH 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 이 오류로 인해 연결된 `CATCH` 블록으로 실행이 이동합니다.  
@@ -347,21 +347,21 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Throw&#40; Transact SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [데이터베이스 엔진 오류 심각도](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE&#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER&#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY&#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [Error_state &#40; Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
- [GOTO &#40; Transact SQL &#41;](../../t-sql/language-elements/goto-transact-sql.md)   
- [시작 중... 최종 &#40; Transact SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [XACT_STATE &#40; Transact SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)   
- [SET XACT_ABORT &#40; Transact SQL &#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
 

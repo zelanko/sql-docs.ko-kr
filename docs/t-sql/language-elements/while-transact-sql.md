@@ -1,5 +1,5 @@
 ---
-title: "(Transact SQL) 하는 동안 | Microsoft Docs"
+title: WHILE(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -62,7 +62,7 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>인수  
  *Boolean_expression*  
- 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 반환 하는 **TRUE** 또는 **FALSE**합니다. 부울 식이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
+ **TRUE** 또는 **FALSE**를 반환하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 부울 식이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
   
  {*sql_statement* | *statement_block*}  
  문 블록에 정의된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 문 그룹입니다. 문 블록을 정의하려면 흐름 제어 키워드인 BEGIN 및 END를 사용하세요.  
@@ -73,7 +73,7 @@ WHILE Boolean_expression
  CONTINUE  
  CONTINUE 키워드 다음의 모든 문을 무시하고 WHILE 루프가 다시 시작되도록 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  둘 이상의 WHILE 루프가 중첩된 경우 내부 루프에 BREAK가 있으면 현재 루프를 종료하고 한 단계 바깥쪽 루프로 이동합니다. 먼저 내부 루프의 끝 이후에 있는 모든 문이 실행된 다음 바깥쪽 루프가 다시 시작됩니다.  
   
 ## <a name="examples"></a>예  
@@ -116,10 +116,10 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C: While 루프 간단한  
- 다음 예에서는 제품의 평균 정가가 `$300` 미만인 경우 `WHILE` 루프가 가격을 두 배로 한 다음 최대 가격을 선택합니다. 최대 가격이 `$500` 이하인 경우 `WHILE` 루프가 다시 시작되어 가격을 다시 두 배로 만듭니다. 이 루프가 계속 최대 가격 보다 크면 될 때까지 가격을 두 배로 만든 `$500`, 한 다음 종료는 `WHILE` 루프입니다.  
+### <a name="c-simple-while-loop"></a>C: 단순 While 루프  
+ 다음 예에서는 제품의 평균 정가가 `$300` 미만인 경우 `WHILE` 루프가 가격을 두 배로 한 다음 최대 가격을 선택합니다. 최대 가격이 `$500` 이하인 경우 `WHILE` 루프가 다시 시작되어 가격을 다시 두 배로 만듭니다. 최대 가격이 `$500`를 초과할 때까지 이 루프는 가격을 계속 두 배로 늘린 다음, `WHILE` 루프를 종료합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -135,12 +135,12 @@ END
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [흐름 제어 언어 &#40; Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [흐름 제어 언어&#40;Transact SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [커서&#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
- [SELECT &#40;TRANSACT-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+ [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   
 

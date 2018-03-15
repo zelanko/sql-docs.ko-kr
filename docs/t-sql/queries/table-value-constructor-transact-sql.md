@@ -1,5 +1,5 @@
 ---
-title: "테이블 값 생성자 (Transact SQL) | Microsoft Docs"
+title: "테이블 값 생성자(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="table-value-constructor-transact-sql"></a>테이블 값 생성자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  테이블에 생성할 행 값 식의 집합을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자를 사용하면 단일 DML  문에 여러 데이터 행을 지정할 수 있습니다. 사용에서 INSERT 문의 VALUES 절에서 테이블 값 생성자를 지정할 수 있습니다 \<원본 테이블 > FROM 절의 파생된 테이블의 정의 및 MERGE 문의 절.  
+  테이블에 생성할 행 값 식의 집합을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자를 사용하면 단일 DML  문에 여러 데이터 행을 지정할 수 있습니다. INSERT 문의 VALUES 절, MERGE 문의 USING \<source table> 절 및 FROM 절의 파생 테이블 정의에 테이블 값 생성자를 지정할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,13 +64,13 @@ VALUES ( <row value expression list> ) [ ,...n ]
  상수,  변수 또는 식입니다. 식은 EXECUTE  문을 포함할 수 없습니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
- 두 가지 방법 중 하나에서 테이블 값 생성자를 사용할 수 있습니다: INSERT VALUES 목록에서 직접... 문, 값 또는 파생 테이블로 원격 테이블을 파생는 사용할 수 있습니다. 행 수가 최대값을 초과 하는 경우 오류 10738이 반환 됩니다. 허용 되는 제한 보다 더 많은 행을 삽입 하려면 다음 방법 중 하나를 사용 합니다.  
+ 테이블 값 생성자는 두 가지 방법 중 하나로 사용할 수 있습니다. 즉 INSERT … VALUES 문의 VALUES 목록에서 직접 사용하거나, 파생 테이블이 허용되는 모든 위치에서 파생 테이블로 사용합니다. 행 수가 최대값을 초과하면 오류 10738이 반환됩니다. 제한에서 허용하는 것보다 많은 행을 삽입하려면 다음 방법 중 하나를 사용합니다.  
   
 -   다중 INSERT  문 만들기  
   
 -   파생 테이블 사용  
   
--   사용 하 여 여 데이터 대량 가져오기를 **bcp** 유틸리티 또는 BULK INSERT 문  
+-   **bcp** 유틸리티 또는 BULK INSERT 문을 사용하여 데이터를 대량 가져오기  
   
  단일 스칼라 값만 행 값 식으로 사용할 수 있습니다. 여러 열을 포함하는 하위 쿼리는 행 값 식으로 사용할 수 없습니다. 예를 들어 다음 코드에서는 세 번째 행 값 식 목록에 여러 열을 포함하는 하위 쿼리가 있으므로 구문 오류가 발생합니다.  
   
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="data-types"></a>데이터 형식  
- 다중 행 INSERT  문에 지정되는 값은 UNION  ALL  구문의 데이터 형식 변환 속성에 따릅니다. 이 인해 높은 유형과 일치 하지 않는 형식의 암시적으로 변환에서 [선행](../../t-sql/data-types/data-type-precedence-transact-sql.md)합니다. 이때 변환이 암시적으로 지원되지 않으면 오류가 반환됩니다. 다음 문은 형식의 열에는 정수 값과 문자 값을 삽입 예를 들어 **char**합니다.  
+ 다중 행 INSERT  문에 지정되는 값은 UNION  ALL  구문의 데이터 형식 변환 속성에 따릅니다. 그 결과 일치하지 않는 형식은 [우선 순위](../../t-sql/data-types/data-type-precedence-transact-sql.md)가 높은 형식으로 암시적으로 변환됩니다. 이때 변환이 암시적으로 지원되지 않으면 오류가 반환됩니다. 예를 들어 다음 명령문은 **char** 형식의 열에 정수 값과 문자 값을 하나씩 삽입합니다.  
   
 ```  
 CREATE TABLE dbo.t (a int, b char);  
@@ -149,7 +149,7 @@ SELECT * FROM Sales.MySalesReason;
 ```  
   
 ### <a name="c-specifying-multiple-values-as-a-derived-table-in-a-from-clause"></a>3. FROM 절에 여러 값을 파생 테이블로 지정  
- 다음 예에서는 테이블 값 생성자를 사용 하 여 SELECT 문의 FROM 절에 여러 값을 지정 합니다.  
+ 다음 예에서는 테이블 값 생성자를 사용하여 SELECT 문의 FROM 절에 여러 값을 지정합니다.  
   
 ```  
 SELECT a, b FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);  
@@ -188,9 +188,9 @@ GROUP BY Change;
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [MERGE &#40; Transact SQL &#41;](../../t-sql/statements/merge-transact-sql.md)   
+ [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
   

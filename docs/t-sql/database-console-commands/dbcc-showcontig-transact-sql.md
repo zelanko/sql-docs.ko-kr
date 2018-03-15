@@ -1,5 +1,5 @@
 ---
-title: DBCC SHOWCONTIG (Transact SQL) | Microsoft Docs
+title: DBCC SHOWCONTIG(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 지정한 테이블이나 뷰의 데이터와 인덱스에 대한 조각화 정보를 표시합니다.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]사용 하 여 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 대신 합니다.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)를 대신 사용합니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -71,10 +71,10 @@ DBCC SHOWCONTIG
   
 ## <a name="arguments"></a>인수  
  *table_name* | *table_id* | *view_name* | *view_id*  
- 조각화 정보를 검사할 테이블이나 뷰입니다. 이 인수를 지정하지 않으면 현재 데이터베이스의 모든 테이블과 인덱싱된 뷰를 검사합니다. 테이블을 얻거나 ID를 보려면를 사용 하 여는 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 함수입니다.  
+ 조각화 정보를 검사할 테이블이나 뷰입니다. 이 인수를 지정하지 않으면 현재 데이터베이스의 모든 테이블과 인덱싱된 뷰를 검사합니다. 테이블이나 뷰 ID를 구하려면 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 함수를 사용합니다.  
   
  *index_name* | *index_id*  
- 조각화 정보를 검사할 인덱스입니다. 이 인수를 지정하지 않으면 지정한 테이블이나 뷰의 기본 인덱스를 처리합니다. 인덱스 ID를 가져오려면는 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰에 있습니다.  
+ 조각화 정보를 검사할 인덱스입니다. 이 인수를 지정하지 않으면 지정한 테이블이나 뷰의 기본 인덱스를 처리합니다. 인덱스 ID를 가져오려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰를 사용합니다.  
   
  의 모든 멘션을  
  DBCC 문에서 반환되는 정보 유형에 대한 옵션을 지정합니다.  
@@ -99,20 +99,20 @@ DBCC SHOWCONTIG
   
 |통계|Description|  
 |---|---|
-|**검색 한 페이지**|테이블이나 인덱스의 페이지 수입니다.|  
-|**검색 한 익스텐트**|테이블이나 인덱스의 익스텐트 수입니다.|  
+|**검색한 페이지**|테이블이나 인덱스의 페이지 수입니다.|  
+|**검색한 익스텐트**|테이블이나 인덱스의 익스텐트 수입니다.|  
 |**익스텐트 스위치**|DBCC 문이 테이블이나 인덱스의 페이지를 이동한 동안 익스텐트 간에 이동한 횟수입니다.|  
-|**Avg. 익스텐트당 페이지**|페이지 체인에서 익스텐트당 페이지 수입니다.|  
-|**검색 밀도 [최적: 실제]**|백분율입니다. 비율 **최적 카운트** 를 **실제 카운트**합니다. 모든 데이터가 인접한 경우 이 값은 100이고 이 값이 100보다 작으면 일부 데이터가 조각화된 것입니다.<br /><br /> **최적** 모든 데이터가 인접해 서 연결 되어 있는 경우 이상적인 익스텐트 변경 수는 있습니다. **실제 카운트** 실제 익스텐트 변경 수입니다.|  
-|**논리 검색 조각화 상태**|인덱스의 리프 페이지 검색에서 반환된 순서가 잘못된 페이지의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가의 페이지를 인덱스에 할당 된 다음 물리적 페이지가 잘못 된 다음 pag 가리키는 페이지는*e* 현재 리프 페이지에 대 한 포인터입니다.|  
-|**익스텐트 검색 조각화 상태**|인덱스의 리프 페이지 검색에서 순서가 잘못된 익스텐트의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 익스텐트란 인덱스의 현재 페이지가 들어 있는 익스텐트가 실제로 인덱스의 이전 페이지가 들어 있는 익스텐트의 다음 익스텐트가 아닌 경우입니다.<br /><br /> 참고:이 값은 인덱스가 여러 파일에 걸쳐 때 의미가 없습니다.|  
-|**Avg. 페이지당 사용 가능한 바이트**|검색된 페이지에서 사용 가능한 평균 바이트 수입니다. 이 값이 클수록 페이지의 사용률이 낮습니다. 인덱스의 임의 삽입 횟수가 적은 경우 이 값이 작은 것이 좋습니다. 이 값은 행 크기에 따라 달라지며 행 크기가 크면 값이 커집니다.|  
-|**Avg. 페이지 밀도 (전체)**|평균 페이지 밀도입니다(백분율). 이 값은 행 크기의 영향을 받습니다. 따라서 이 값은 페이지의 꽉 찬 정도를 보다 정확하게 반영합니다. 이 백분율 값이 클수록 좋습니다.|  
+|**Avg. Pages per Extent**|페이지 체인에서 익스텐트당 페이지 수입니다.|  
+|**검색 밀도[최적:실제]**|백분율입니다. **Best Count** 대 **Actual Count**의 비율입니다. 모든 데이터가 인접한 경우 이 값은 100이고 이 값이 100보다 작으면 일부 데이터가 조각화된 것입니다.<br /><br /> **최적**은 모든 데이터가 인접해서 연결되어 있는 경우 이상적인 익스텐트 변경 횟수이고 **실제**는 실제 익스텐트 변경 횟수입니다.|  
+|**논리 검색 조각화 상태**|인덱스의 리프 페이지 검색에서 반환된 순서가 잘못된 페이지의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지 포인터가 가리키는 페이지와 다른 경우를 나타냅니다.|  
+|**익스텐트 검색 조각화 상태**|인덱스의 리프 페이지 검색에서 순서가 잘못된 익스텐트의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 익스텐트란 인덱스의 현재 페이지가 들어 있는 익스텐트가 실제로 인덱스의 이전 페이지가 들어 있는 익스텐트의 다음 익스텐트가 아닌 경우입니다.<br /><br /> 인덱스가 여러 파일에 걸쳐 있을 경우 이 값은 의미가 없습니다.|  
+|**Avg. Bytes Free per Page**|검색된 페이지에서 사용 가능한 평균 바이트 수입니다. 이 값이 클수록 페이지의 사용률이 낮습니다. 인덱스의 임의 삽입 횟수가 적은 경우 이 값이 작은 것이 좋습니다. 이 값은 행 크기에 따라 달라지며 행 크기가 크면 값이 커집니다.|  
+|**Avg. Page density (full)**|평균 페이지 밀도입니다(백분율). 이 값은 행 크기의 영향을 받습니다. 따라서 이 값은 페이지의 꽉 찬 정도를 보다 정확하게 반영합니다. 이 백분율 값이 클수록 좋습니다.|  
   
-때 *table_id* 빠른 및 지정 된 경우 DBCC SHOWCONTIG가 다음 열만 가진 결과 집합을 반환 합니다.
--   **검색 한 페이지**  
+*table_id*와 FAST를 지정하면 DBCC SHOWCONTIG가 다음 열만 가진 결과 집합을 반환합니다.
+-   **검색한 페이지**  
 -   **익스텐트 스위치**  
--   **검색 밀도 [최적: 실제]**  
+-   **검색 밀도[최적:실제]**  
 -   **익스텐트 검색 조각화 상태**  
 -   **논리 검색 조각화 상태**  
   
@@ -120,7 +120,7 @@ TABLERESULTS를 지정하면 DBCC SHOWCONTIG가 다음 열을 반환하고 이�
   
 |통계|Description|  
 |---|---|
-|**Object Name**|처리되는 테이블 또는 뷰의 이름입니다.|  
+|**개체 이름**|처리되는 테이블 또는 뷰의 이름입니다.|  
 |**ObjectId**|개체 이름의 ID입니다.|  
 |**IndexName**|처리되는 인덱스 이름입니다. 힙의 경우 NULL입니다.|  
 |**IndexId**|인덱스의 ID입니다. 힙의 경우 0입니다.|  
@@ -131,15 +131,15 @@ TABLERESULTS를 지정하면 DBCC SHOWCONTIG가 다음 열을 반환하고 이�
 |**MaximumRecordSize**|인덱스 또는 전체 힙의 해당 수준에 있는 최대 레코드 크기입니다.|  
 |**AverageRecordSize**|인덱스 또는 전체 힙의 해당 수준에 있는 평균 레코드 크기입니다.|  
 |**ForwardedRecords**|인덱스 또는 전체 힙의 해당 수준에 있는 전달된 레코드 수입니다.|  
-|**익스텐트**|인덱스 또는 전체 힙의 해당 수준에 있는 익스텐트 수입니다.|  
+|**Extents**|인덱스 또는 전체 힙의 해당 수준에 있는 익스텐트 수입니다.|  
 |**ExtentSwitches**|DBCC 문이 테이블이나 인덱스의 페이지를 이동한 동안 익스텐트 간에 이동한 횟수입니다.|  
 |**AverageFreeBytes**|검색된 페이지에서 사용 가능한 평균 바이트 수입니다. 이 값이 클수록 페이지의 사용률이 낮습니다. 인덱스의 임의 삽입 횟수가 적은 경우 이 값이 작은 것이 좋습니다. 이 값은 행 크기에 따라 달라지며 행 크기가 크면 값이 커집니다.|  
 |**AveragePageDensity**|평균 페이지 밀도입니다(백분율). 이 값은 행 크기의 영향을 받습니다. 따라서 이 값은 페이지의 꽉 찬 정도를 보다 정확하게 반영합니다. 이 백분율 값이 클수록 좋습니다.|  
-|**ScanDensity**|백분율입니다. 비율 **BestCount** 를 **ActualCount**합니다. 모든 데이터가 인접한 경우 이 값은 100이고 이 값이 100보다 작으면 일부 데이터가 조각화된 것입니다.|  
+|**ScanDensity**|백분율입니다. **BestCount** 대 **ActualCount** 비율입니다. 모든 데이터가 인접한 경우 이 값은 100이고 이 값이 100보다 작으면 일부 데이터가 조각화된 것입니다.|  
 |**BestCount**|모든 데이터가 인접해서 연결되어 있는 경우 이상적인 익스텐트 변경 횟수가 됩니다.|  
 |**ActualCount**|실제 익스텐트 변경 횟수입니다.|  
-|**LogicalFragmentation**|인덱스의 리프 페이지 검색에서 반환된 순서가 잘못된 페이지의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가의 페이지를 인덱스에 할당 된 다음 물리적 페이지가 잘못 된 다음 pag 가리키는 페이지는*e* 현재 리프 페이지에 대 한 포인터입니다.|  
-|**ExtentFragmentation**|인덱스의 리프 페이지 검색에서 순서가 잘못된 익스텐트의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 익스텐트란 인덱스의 현재 페이지가 들어 있는 익스텐트가 실제로 인덱스의 이전 페이지가 들어 있는 익스텐트의 다음 익스텐트가 아닌 경우입니다.<br /><br /> 참고:이 값은 인덱스가 여러 파일에 걸쳐 때 의미가 없습니다.|  
+|**LogicalFragmentation**|인덱스의 리프 페이지 검색에서 반환된 순서가 잘못된 페이지의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지 포인터가 가리키는 페이지와 다른 경우를 나타냅니다.|  
+|**ExtentFragmentation**|인덱스의 리프 페이지 검색에서 순서가 잘못된 익스텐트의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 익스텐트란 인덱스의 현재 페이지가 들어 있는 익스텐트가 실제로 인덱스의 이전 페이지가 들어 있는 익스텐트의 다음 익스텐트가 아닌 경우입니다.<br /><br /> 인덱스가 여러 파일에 걸쳐 있을 경우 이 값은 의미가 없습니다.|  
   
 WITH TABLERESULTS와 FAST를 지정할 때의 결과 집합은 다음 열이 Null 값을 가진다는 점을 제외하면 WITH TABLERESULTS를 지정할 때와 동일합니다.
 
@@ -150,18 +150,18 @@ WITH TABLERESULTS와 FAST를 지정할 때의 결과 집합은 다음 열이 Nul
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>주의  
-지정 된 리프 수준 페이지 체인을 이동 하는 DBCC SHOWCONTIG 문을 경우 인덱스 *index_id* 지정 됩니다. 경우에 *table_id* 지정 된 경우 *index_id* 가 0 이면 지정된 된 테이블의 데이터 페이지 검색 됩니다. 이 작업에는 내재된 공유(IS) 테이블 잠금만 필요합니다. 이런 방법으로 배타적(X) 테이블 잠금이 필요한 경우를 제외하고 모든 업데이트와 삽입을 수행할 수 있으므로 실행 속도 및 동시성의 유지 그리고 반환되는 통계 데이터 수 사이에서 절충점을 찾을 수 있습니다. 그러나 조각화를 평가하는 데만 이 명령을 사용하는 경우에는 최상의 성능을 얻으려면 WITH FAST 옵션을 사용하는 것이 좋습니다. 고속 검색은 인덱스의 리프 또는 데이터 수준 페이지를 읽지 않습니다. WITH FAST 옵션은 힙에 적용되지 않습니다.
+## <a name="remarks"></a>Remarks  
+DBCC SHOWCONTIG 문은 *index_id*를 지정했을 때 지정된 인덱스의 리프 수준에서 페이지 체인을 검색하고, *table_id*만 지정하거나 *index_id*가 0인 경우에는 지정한 테이블의 데이터 페이지를 검색합니다. 이 작업에는 내재된 공유(IS) 테이블 잠금만 필요합니다. 이런 방법으로 배타적(X) 테이블 잠금이 필요한 경우를 제외하고 모든 업데이트와 삽입을 수행할 수 있으므로 실행 속도 및 동시성의 유지 그리고 반환되는 통계 데이터 수 사이에서 절충점을 찾을 수 있습니다. 그러나 조각화를 평가하는 데만 이 명령을 사용하는 경우에는 최상의 성능을 얻으려면 WITH FAST 옵션을 사용하는 것이 좋습니다. 고속 검색은 인덱스의 리프 또는 데이터 수준 페이지를 읽지 않습니다. WITH FAST 옵션은 힙에 적용되지 않습니다.
   
-## <a name="restrictions"></a>제한 사항  
-DBCC SHOWCONTIG와 데이터를 표시 하지 않는 **ntext**, **텍스트**, 및 **이미지** 데이터 형식입니다. 이것은 텍스트와 이미지 데이터를 저장하는 텍스트 인덱스가 더 이상 존재하지 않기 때문입니다.
+## <a name="restrictions"></a>Restrictions  
+DBCC SHOWCONTIG는 **ntext**, **text** 및 **image** 데이터 형식에 데이터를 표시하지 않습니다. 이것은 텍스트와 이미지 데이터를 저장하는 텍스트 인덱스가 더 이상 존재하지 않기 때문입니다.
   
-또한 DBCC SHOWCONTIG는 일부 새로운 기능을 지원하지 않습니다. 예를 들어
+또한 DBCC SHOWCONTIG는 일부 새로운 기능을 지원하지 않습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 -   지정된 테이블이나 인덱스가 분할되는 경우 DBCC SHOWCONTIG는 지정된 테이블이나 인덱스의 첫 번째 파티션만 표시합니다.  
--   DBCC SHOWCONTIG 및 표시 되지 않습니다 행 오버플로 저장소 정보와 다른 새 행 외부 데이터 형식, 같은 **nvarchar (max)**, **varchar (max)**, **varbinary (max)**, 및 **xml**합니다.  
+-   DBCC SHOWCONTIG는 행 오버플로 저장소 정보와 **nvarchar(max)**, **varchar(max)**, **varbinary(max)** 및 **xml**과 같은 새로운 행 외부 데이터 형식을 표시하지 않습니다.  
 -   공간 인덱스는 DBCC SHOWCONTIG에서 지원되지 않습니다.  
   
-새로운 기능을 모두에서 완전히 지원 되는 [sys.dm_db_index_physical_stats&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰.
+모든 새로운 기능은 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰에서 완전히 지원됩니다.
   
 ## <a name="table-fragmentation"></a>테이블 조각화  
 DBCC SHOWCONTIG는 테이블의 조각화 여부를 확인합니다. 테이블 조각화는 테이블에서 INSERT, UPDATE, DELETE 문 등의 데이터 수정 문을 처리할 때 발생합니다. 이러한 수정 사항은 테이블의 행에서 균등하게 분산되지 않으므로 각 페이지의 사용률 수준이 시간에 따라 달라지게 됩니다. 테이블의 일부 또는 전부를 검색하는 쿼리의 경우 이런 테이블 조각화로 인해 읽어야 하는 페이지의 수가 늘어날 수 있으며 이는 데이터의 병렬 검색에 방해가 됩니다.
@@ -174,26 +174,26 @@ DBCC SHOWCONTIG는 테이블의 조각화 여부를 확인합니다. 테이블 �
 -   인덱스를 다시 작성합니다.  
      ALTER INDEX에 REBUILD를 사용하여 인덱스를 다시 작성합니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요.  
   
-임의 삽입이 많지 않은 인덱스의 경우 **Avg. 페이지당 사용 가능한 바이트** 및 **avg. 밀도 (전체) 페이지** 결과 집합에 대 한 통계는 인덱스 페이지의 사용률을 나타냅니다. 임의 삽입이 많지 않은 인덱스의 경우 **Avg. 페이지당 사용 가능한 바이트** 수는 낮은 수 및 **avg. 밀도 (전체) 페이지** 임의로 삽입 된 항목이 많지 않은 인덱스에 대 한 높은 수는 같아야 합니다. 인덱스를 삭제하고 FILLFACTOR 옵션을 지정하여 다시 만들면 통계 결과를 개선할 수 있습니다. 또한 FILLFACTOR를 고려하여 ALTER INDEX에 REORGANIZE를 사용하면 인덱스가 압축되어 통계 결과가 개선됩니다.
+임의 삽입이 많지 않은 인덱스의 경우 **Avg. Bytes free per page** 및 **Avg. Page density (full)** 통계는 인덱스 페이지의 사용률을 나타냅니다. 임의 삽입이 많지 않은 인덱스의 경우 **Avg. Bytes free per page** 수는 낮고 **Avg. Page density (full)** 수는 임의 삽입이 많지 않은 인덱스에 대해 높아야 합니다. 인덱스를 삭제하고 FILLFACTOR 옵션을 지정하여 다시 만들면 통계 결과를 개선할 수 있습니다. 또한 FILLFACTOR를 고려하여 ALTER INDEX에 REORGANIZE를 사용하면 인덱스가 압축되어 통계 결과가 개선됩니다.
   
 > [!NOTE]  
 >  임의 삽입이 많고 페이지 사용률이 매우 높은 인덱스에서는 페이지 분할의 횟수가 증가하므로 더 많은 조각이 생깁니다.  
   
 인덱스의 조각화 수준은 다음 방법으로 확인할 수 있습니다.
--   값을 비교 하 여 **익스텐트 스위치** 및 **검색 한 익스텐트**합니다.  
-     값 **익스텐트 스위치** 근접해 야 최대한의 **검색 한 익스텐트**합니다. 이 비율은로 계산 되는 **검색 밀도** 값입니다. 이 값은 높을수록 좋으며 인덱스 조각화를 줄여 개선할 수 있습니다.  
+-   **익스텐트 스위치**와 **검색한 익스텐트**의 값을 비교합니다.  
+     **익스텐트 스위치**의 값은 **검색한 익스텐트**의 값에 가능한 근접해야 합니다. 이 비율은 **검색 밀도** 값으로 계산됩니다. 이 값은 높을수록 좋으며 인덱스 조각화를 줄여 개선할 수 있습니다.  
   
     > [!NOTE]  
     >  인덱스가 여러 파일에 걸쳐 있으면 이 방법을 사용할 수 없습니다.  
   
--   이해 하면 **논리 검색 조각화 상태** 및 **익스텐트 검색 조각화 상태** 값입니다.  
-     **논리 검색 조각화 상태** 및 어느 정도 **익스텐트 검색 조각화 상태** 값은 테이블의 조각화 수준은의 가장 잘 나타내는 지표입니다. 이 두 값은 모두 0%부터 10%까지의 값이 될 수 있지만 가능한 0에 가까워야 합니다.  
+-   **논리 검색 조각화 상태**와 **익스텐트 검색 조각화 상태** 값을 파악하는 방법입니다.  
+     **논리 검색 조각화 상태**와 그 정도는 덜하지만 **익스텐트 검색 조각화 상태** 값은 테이블의 조각화를 가장 잘 나타내는 지표입니다. 이 두 값은 모두 0%부터 10%까지의 값이 될 수 있지만 가능한 0에 가까워야 합니다.  
   
     > [!NOTE]  
-    >  **익스텐트 검색 조각화 상태** 값이 높은 인덱스가 여러 파일에 걸쳐 있으면 됩니다. 이 값을 줄이려면 인덱스 조각화를 줄여야 합니다.  
+    >  인덱스가 여러 파일에 걸쳐 있으면 **익스텐트 검색 조각화 상태** 값이 높아집니다. 이 값을 줄이려면 인덱스 조각화를 줄여야 합니다.  
   
-## <a name="permissions"></a>Permissions  
-사용자는 테이블을 소유 하거나의 멤버는 **sysadmin** 고정 서버 역할의 **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정된 데이터베이스 역할입니다.
+## <a name="permissions"></a>사용 권한  
+사용자는 테이블을 소유하거나 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
 ### <a name="a-displaying-fragmentation-information-for-a-table"></a>1. 테이블의 조각화 정보 표시  
@@ -207,7 +207,7 @@ GO
 ```  
   
 ### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>2. OBJECT_ID를 사용한 테이블 ID 가져오기 및 sys.indexes를 사용한 인덱스 ID 가져오기  
-다음 예제에서는 `OBJECT_ID` 및 `sys.indexes` 카탈로그 뷰를 테이블 ID를 확인 하 고 인덱스에 대 한 ID는 `AK_Product_Name` 의 인덱스는 `Production.Product` 테이블에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스입니다.
+다음 예에서는 `OBJECT_ID` 및 `sys.indexes` 카탈로그 뷰를 사용하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]데이터베이스의 `Production.Product`테이블에서 `AK_Product_Name` 인덱스의 테이블 ID 및 인덱스 ID를 가져옵니다.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -223,7 +223,7 @@ GO
 ```  
   
 ### <a name="c-displaying-an-abbreviated-result-set-for-a-table"></a>3. 테이블에 대한 생략된 결과 집합 표시  
-생략된 된 결과 대 한 집합을 반환 하는 다음 예제는 `Product` 테이블에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스입니다.
+다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]데이터베이스의 `Product`테이블에 대해 생략된 결과 집합을 반환합니다.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -349,12 +349,12 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DROP INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
-[sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [OBJECT_ID&#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)  
 [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
   

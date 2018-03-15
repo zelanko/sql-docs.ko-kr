@@ -1,5 +1,5 @@
 ---
-title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact SQL) | Microsoft Docs
+title: KILL QUERY NOTIFICATION SUBSCRIPTION(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,17 +54,17 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  인스턴스에서 모든 구독을 제거합니다.  
   
  *subscription_id*  
- 구독 id로 구독을 제거 *subscription_id*합니다.  
+ 구독 ID가 *subscription_id*인 구독을 제거합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  KILL QUERY NOTIFICATION SUBSCRIPTION 문은 알림 메시지를 표시하지 않고 쿼리 알림 구독을 제거합니다.  
   
- *subscription_id* 동적 관리 뷰에 표시 되는 구독에 대 한 id [sys.dm_qn_subscriptions &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
+ *subscription_id*는 [sys.dm_qn_subscriptions&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) 동적 관리 뷰에 표시되는 구독 ID입니다.  
   
  지정된 구독 ID가 존재하지 않으면 문에서 오류가 발생합니다.  
   
-## <a name="permissions"></a>Permissions  
- 이 문을 실행할 수 있는 권한이의 멤버로 제한 되는 **sysadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 이 명령문을 실행할 수 있는 권한은 **sysadmin** 고정 서버 역할의 멤버에게만 부여됩니다.  
   
 ## <a name="examples"></a>예  
   
@@ -82,7 +82,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION ALL ;
 KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [sys.dm_qn_subscriptions &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
+## <a name="see-also"></a>참고 항목  
+ [sys.dm_qn_subscriptions&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
   
   

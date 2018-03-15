@@ -1,5 +1,5 @@
 ---
-title: "STIsRing (geometry 데이터 형식) | Microsoft Docs"
+title: "STIsRing(geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisring-geometry-data-type"></a>STIsRing(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-1을 반환는 **geometry** 인스턴스가 다음 요구 사항을 충족 합니다.
--   한 **LineString** 인스턴스.  
+**geometry** 인스턴스가 다음 요구 사항을 충족하면 1을 반환합니다.
+-   해당 인스턴스가 **LineString** 인스턴스입니다.  
 -   해당 인스턴스가 닫혀 있습니다.  
 -   해당 인스턴스가 단순합니다.  
--   0을 반환 된 **LineString** 인스턴스가 요구 사항을 충족 하지 않습니다.  
+-   **LineString**인스턴스가 해당 요구 사항을 충족하지 못하면 0을 반환합니다.  
 
- 에 대 한는 **geometry** 인스턴스가 닫히고 단순, 둘 다 [stisclosed ()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md) 및 [stissimple ()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md) 해당 인스턴스에서 호출 하는 경우 1을 반환 해야 합니다. 인스턴스 형식을 확인 하는 **geometry**를 사용 하 여 [stgeometrytype ()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)합니다.  
+ **geometry** 인스턴스가 닫히고 단순하려면 [STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)와 [STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)이 해당 인스턴스에서 호출될 때 1을 반환해야 합니다. **geometry**의 인스턴스 형식을 확인하려면 [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)을 사용하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,12 +50,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 형식: **비트**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  
   
  CLR 반환 형식: **SqlBoolean**  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 인스턴스가 아닌 경우 null을 반환 합니다는 **LineString**합니다.  
+## <a name="remarks"></a>Remarks  
+ 이 메서드는 인스턴스가 **LineString**이 아니면 Null을 반합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `LineString` 인스턴스를 만들고 `STIsRing()`을 사용하여 인스턴스가 링인지 테스트합니다.  
@@ -66,10 +66,10 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0, 0 0)', 0);
 SELECT @g.STIsRing();  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [STIsClosed&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
- [Stgeometrytype&#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
- [STIsSimple &#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)   
+ [STGeometryType&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
+ [STIsSimple&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)   
  [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

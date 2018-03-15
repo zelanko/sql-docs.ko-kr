@@ -1,5 +1,5 @@
 ---
-title: DBCC INDEXDEFRAG (Transact SQL) | Microsoft Docs
+title: DBCC INDEXDEFRAG(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
 지정된 테이블 또는 뷰의 인덱스를 조각 모음합니다.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]사용 하 여 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 대신 합니다.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)를 사용합니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)까지)
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ DBCC INDEXDEFRAG
   
 ## <a name="arguments"></a>인수  
  *database_name* | *database_id* | 0  
- 조각 모음할 인덱스가 들어 있는 데이터베이스입니다. 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
+ 조각 모음할 인덱스가 들어 있는 데이터베이스입니다. 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
  *table_name* | *table_id* | *view_name* | *view_id*  
  조각 모음할 인덱스가 들어 있는 테이블 또는 뷰입니다. 테이블 및 뷰 이름은 식별자 규칙을 따라야 합니다.  
@@ -77,7 +77,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 DBCC INDEXDEFRAG는 인덱스 검색 성능을 향상시키기 위해 페이지의 물리적 순서가 왼쪽에서 오른쪽으로 리프 노드의 논리적 순서와 일치하도록 인덱스 리프 수준의 조각을 모읍니다.
   
 > [!NOTE]  
@@ -93,7 +93,7 @@ DBCC DBREINDEX나 일반적인 인덱스 작성 작업과 달리 DBCC INDEXDEFRA
   
 조각 모음은 데이터베이스 복구 모델 설정에 관계없이 항상 전체 로깅됩니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요. 심하게 조각난 인덱스를 조각 모음할 경우 인덱스 작성을 전체 로깅하는 것보다 더 큰 로그가 생성될 수 있습니다. 그러나 조각 모음은 일련의 짧은 트랜잭션으로 수행되므로 로그 백업을 자주 하거나 복구 모델 설정이 SIMPLE인 경우에는 큰 로그가 필요하지 않습니다.
   
-## <a name="restrictions"></a>제한 사항  
+## <a name="restrictions"></a>Restrictions  
 DBCC INDEXDEFRAG는 인덱스 리프 페이지를 섞어 놓습니다. 따라서 인덱스가 디스크의 다른 인덱스와 인터리브된 경우 해당 인덱스에 대해 DBCC INDEXDEFRAG를 실행해도 인덱스의 모든 리프 페이지가 연결되지는 않습니다. 페이지의 클러스터링을 향상시키려면 인덱스를 다시 작성하십시오.
 DBCC INDEXDEFRAG는 다음 인덱스를 조각 모음하는 데 사용할 수 없습니다.
 -   비활성화된 인덱스입니다.  
@@ -115,12 +115,12 @@ Pages Scanned Pages Moved Pages Removed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
-호출자에 게 테이블을 소유 하거나의 멤버는 **sysadmin** 고정 서버 역할의 **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정된 데이터베이스 역할입니다.
+## <a name="permissions"></a>사용 권한  
+호출자는 테이블을 소유하거나, **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>1. DBCC INDEXDEFRAG를 사용하여 인덱스 조각 모음 수행  
-다음 예제에는의 모든 파티션을 조각 모음는 `PK_Product_ProductID` 인덱스는 `Production.Product` 테이블에 `AdventureWorks` 데이터베이스입니다.
+다음 예제에서는 `AdventureWorks` 데이터베이스의 `Production.Product` 테이블에서 `PK_Product_ProductID` 인덱스의 모든 파티션을 조각 모음합니다.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  
@@ -234,9 +234,9 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)

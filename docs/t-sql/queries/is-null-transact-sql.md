@@ -1,5 +1,5 @@
 ---
-title: NULL (Transact SQL) | Microsoft Docs
+title: IS NULL(Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="is-null-transact-sql"></a>NULL (Transact SQL)
+# <a name="is-null-transact-sql"></a>IS NULL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   지정된 식이 NULL인지 여부를 확인합니다.  
@@ -60,7 +60,7 @@ expression IS [ NOT ] NULL
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)합니다.  
+ 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  NOT  
  부울 결과가 유효하지 않음을 지정합니다. 조건자는 반환 값을 반대로 변경하여 값이 NULL이 아니면 TRUE를 반환하고 NULL이면 FALSE를 반환합니다.  
@@ -69,11 +69,11 @@ expression IS [ NOT ] NULL
  **Boolean**  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 하는 경우의 값 *식* NULL, IS NULL TRUE를 반환 합니다. 이며 그렇지 않으면 FALSE를 반환 합니다.  
+ *expression*의 값이 NULL인 경우에는 IS NULL이 TRUE를 반환하고 그렇지 않은 경우에는 FALSE를 반환합니다.  
   
- 하는 경우의 값 *식* NULL, IS NOT NULL FALSE를 반환 합니다. 이며 그렇지 않으면 TRUE를 반환 합니다.  
+ *expression*의 값이 NULL인 경우에는 IS NOT NULL이 FALSE를 반환하고 그렇지 않은 경우에는 TRUE를 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  식이 NULL인지 확인하려면 = 또는 != 등의 비교 연산자 대신 IS NULL 또는 IS NOT NULL을 사용합니다. 비교 연산자는 두 인수 중 하나 또는 둘 다 NULL인 경우에 UNKNOWN을 반환합니다.  
   
 ## <a name="examples"></a>예  
@@ -89,8 +89,8 @@ ORDER BY Name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제에서는 중간 이니셜 가진 모든 직원의 전체 이름을 반환합니다.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 다음 예제에서는 중간 이니셜이 있는 모든 직원의 전체 이름을 반환합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -101,20 +101,20 @@ WHERE MiddleName IS NOT NULL
 ORDER BY LastName DESC;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [대/소문자 &#40; Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [마찬가지로 &#40; Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [논리 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [LIKE&#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [논리 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_help&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

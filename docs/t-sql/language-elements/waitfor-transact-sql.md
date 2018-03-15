@@ -1,5 +1,5 @@
 ---
-title: WAITFOR (Transact SQL) | Microsoft Docs
+title: WAITFOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -65,36 +65,36 @@ WAITFOR
  일괄 처리, 저장 프로시저 또는 트랜잭션을 실행하기 전에 대기하도록 지정된 시간으로 최대 24시간이 될 수 있습니다.  
   
  '*time_to_pass*'  
- 대기할 총 시간입니다. *time_to_pass* 에 사용 가능한 형식 중 하나에 지정할 수 있습니다 **datetime** 이거나 데이터를 지역 변수로 지정할 수 있습니다. 날짜를 지정할 수 없습니다. 따라서의 날짜 부분에서 **datetime** 값은 허용 되지 않습니다.  
+ 대기할 총 시간입니다. *time_to_pass*는 **datetime** 데이터로 사용할 수 있는 형식 중 하나를 사용하여 지정하거나 지역 변수로 지정할 수 있습니다. 날짜를 지정할 수 없으므로 **datetime** 값의 날짜 부분은 허용되지 않습니다.  
   
  TIME  
  일괄 처리, 저장 프로시저 또는 트랜잭션을 실행하도록 지정된 시간입니다.  
   
  '*time_to_execute*'  
- WAITFOR 문이 종료되는 시간입니다. *time_to_execute* 에 사용 가능한 형식 중 하나에 지정할 수 있습니다 **datetime** 이거나 데이터를 지역 변수로 지정할 수 있습니다. 날짜를 지정할 수 없습니다. 따라서의 날짜 부분에서 **datetime** 값은 허용 되지 않습니다.  
+ WAITFOR 문이 종료되는 시간입니다. *time_to_execute*는 **datetime** 데이터로 사용할 수 있는 형식 중 하나를 사용하여 지정하거나 지역 변수로 지정할 수 있습니다. 날짜를 지정할 수 없으므로 **datetime** 값의 날짜 부분은 허용되지 않습니다.  
   
  *receive_statement*  
  유효한 RECEIVE 문입니다.  
   
 > [!IMPORTANT]  
->  있는 WAITFOR는 *receive_statement* 에 적용 될 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지입니다. 자세한 내용은 참조 [수신 &#40; Transact SQL &#41; ](../../t-sql/statements/receive-transact-sql.md).  
+>  *receive_statement*가 있는 WAITFOR는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지에만 적용됩니다. 자세한 내용은 [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)을 참조하세요.  
   
  *get_conversation_group_statement*  
  유효한 GET CONVERSATION GROUP 문입니다.  
   
 > [!IMPORTANT]  
->  있는 WAITFOR는 *get_conversation_group_statement* 에 적용 될 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지입니다. 자세한 내용은 참조 [GET CONVERSATION GROUP &#40; Transact SQL &#41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  *get_conversation_group_statement*가 있는 WAITFOR는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지에만 적용됩니다. 자세한 내용은 [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)을 참조하세요.  
   
- 제한 시간 *제한 시간*  
+ TIMEOUT *제한 시간*  
  메시지가 큐에 도착하기를 대기할 시간(밀리초)을 지정합니다.  
   
 > [!IMPORTANT]  
->  TIMEOUT이 있는 WAITFOR는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지에만 적용됩니다. 자세한 내용은 참조 [수신 &#40; Transact SQL &#41; ](../../t-sql/statements/receive-transact-sql.md) 및 [GET CONVERSATION GROUP &#40; Transact SQL &#41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  TIMEOUT이 있는 WAITFOR는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지에만 적용됩니다. 자세한 내용은 [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md) 및 [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  WAITFOR 문을 실행하는 동안 트랜잭션이 실행되며 같은 트랜잭션에서 다른 요청을 실행할 수 없습니다.  
   
- 에 지정 된 시간 으로부터 실제 시간 지연은 다를 수 있습니다 *time_to_pass*, *time_to_execute*, 또는 *timeout* 서버의 작업 수준에 따라 달라 집니다. 시간 카운터는 WAITFOR 문과 연결된 스레드가 예약된 시간에 시작합니다. 서버가 사용 중이면 스레드가 즉시 예약되지 않을 수도 있으므로 시간 지연이 지정된 시간보다 길어질 수 있습니다.  
+ 실제 시간 지연은 *time_to_pass*, *time_to_execute* 또는 *timeout*에 지정된 시간과 다를 수 있으며 서버의 작업 수준에 따라 달라집니다. 시간 카운터는 WAITFOR 문과 연결된 스레드가 예약된 시간에 시작합니다. 서버가 사용 중이면 스레드가 즉시 예약되지 않을 수도 있으므로 시간 지연이 지정된 시간보다 길어질 수 있습니다.  
   
  WAITFOR는 쿼리의 기능을 변경하지 않습니다. 쿼리가 행을 반환할 수 없을 경우 WAITFOR는 계속 대기하거나 TIMEOUT(지정된 경우)에 도달할 때까지 대기합니다.  
   
@@ -102,7 +102,7 @@ WAITFOR
   
  WAITFOR 문에서는 뷰를 정의할 수 없습니다.  
   
- 쿼리가 query wait 옵션을 초과하면 WAITFOR 문 인수를 실행하지 않고 완료할 수 있습니다. 구성 옵션에 대 한 자세한 내용은 참조 [query wait 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)합니다. 활성 및 대기 프로세스를 보려면 사용 [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)합니다.  
+ 쿼리가 query wait 옵션을 초과하면 WAITFOR 문 인수를 실행하지 않고 완료할 수 있습니다. 자세한 내용은 [query wait 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)을 참조하세요. 활성 및 대기 프로세스를 보려면 [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)를 사용합니다.  
   
  각 WAITFOR 문에는 연결된 스레드가 있습니다. 같은 서버에 많은 WAITFOR 문이 지정된 경우 많은 스레드가 이러한 문의 실행을 대기하느라 정체될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 WAITFOR 문과 연결된 스레드의 수를 모니터링하고 서버에 스레드 부족이 발생하기 시작할 경우 이러한 스레드 중 일부를 임의로 선택하여 종료합니다.  
   
@@ -175,9 +175,9 @@ GO
   
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
-## <a name="see-also"></a>관련 항목:  
- [흐름 제어 언어 &#40; Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [날짜/시간 &#40; Transact SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [흐름 제어 언어 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   
