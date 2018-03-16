@@ -1,4 +1,4 @@
----
+﻿---
 title: "RxSqlServerData (SQL과 R 심층 분석)를 사용 하 여 SQL Server 데이터 개체를 만들 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/14/2017
@@ -41,9 +41,9 @@ ms.lasthandoff: 02/11/2018
 원격 테이블을 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터, 호출 된 **RxSqlServerData** 함수입니다.
 
 > [!TIP]
-> R Tools for Visual Studio를 사용하는 도구 모음에서 **R 도구** 를 선택하고 **Windows** 를 클릭하여 R 변수 디버깅 및 보기에 대한 옵션을 표시하세요.
+> R Tools for Visual Studio를 사용하는 경우, 도구 모음에서 **R Tools**를 선택하고 **Windows** 를 클릭하여 R 변수 디버깅 및 보기에 대한 옵션을 표시하세요.
 
-### <a name="create-the-training-data-table"></a>학습 데이터 테이블 만들기
+### <a name="create-the-training-data-table"></a>훈련 데이터 테이블 만들기
 
 1. 데이터베이스 연결 문자열이 R 변수에 저장 합니다. 다음은 SQL Server에 대 한 유효한 ODBC 연결 문자열의 두 가지 예제: Windows 통합된 인증에 대 한 개와 SQL 로그인을 사용 하 여 합니다.
 
@@ -79,7 +79,7 @@ ms.lasthandoff: 02/11/2018
   
     이 연습에 정의 된 기본 일괄 처리 프로세스 크기를 사용 합니다.는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 각 청크에서 행의 수를 제어 합니다. 해당 값을 변수에 저장 `sqlRowsPerRead`합니다.
   
-4.  마지막으로, 새 데이터 원본 개체에 대 한 변수를 정의 하 고 RxSqlServerData 생성자에 이전에 정의 된 인수를 전달 합니다. 이렇게 하면 데이터 원본 개체가 만들어지기만 하고 채워지지는 않습니다.
+4.  마지막으로, 새 데이터 원본 개체에 대한 변수를 정의하고 이전에 정의한 인수를 RxSqlServerData 생성자에 전달합니다. 이렇게 하면 데이터 원본 개체가 만들어지기만 하고 채워지지는 않습니다.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -87,17 +87,17 @@ ms.lasthandoff: 02/11/2018
        rowsPerRead = sqlRowsPerRead)
     ```
 
-#### <a name="to-create-the-scoring-data-table"></a>점수 매기기 데이터 테이블을 만들려면
+#### <a name="to-create-the-scoring-data-table"></a>채점 데이터 테이블 만드는 방법
 
 동일한 단계를 사용 하 여 동일한 프로세스를 사용 하 여 점수 매기기 데이터를 보관 하는 테이블을 만듭니다.
 
-1. 새 R 변수 *sqlScoreTable*을 만들어 점수 매기기에 사용되는 테이블의 이름을 저장합니다.
+1. 새 R 변수 *sqlScoreTable*을 만들어 채점에 사용되는 테이블의 이름을 저장합니다.
   
     ```R
     sqlScoreTable <- "ccFraudScoreSmall"
     ```
   
-2. 두 번째 데이터 원본 개체를 정의 하기 RxSqlServerData 함수에 대 한 인수로 해당 변수를 제공 *sqlScoreDS*합니다.
+2. 이 변수를 RxSqlServerData 함수의 인수로 제공해서 두 번째 데이터 원본 개체인 *sqlScoreDS*를 정의합니다.
   
     ```R
     sqlScoreDS \<- RxSqlServerData(connectionString = sqlConnString,
@@ -118,9 +118,9 @@ ms.lasthandoff: 02/11/2018
 > [!NOTE]
 > 이 섹션에 대 한 있어야 **DDL 실행** 데이터베이스에 대 한 권한이 있습니다.
 
-### <a name="load-data-into-the-training-table"></a>학습 테이블에 데이터를 로드 합니다.
+### <a name="load-data-into-the-training-table"></a>학습 테이블에 데이터 로드하기
 
-1. R 변수 만들기 *ccFraudCsv*, 샘플 데이터를 포함 하는 CSV 파일에 대 한 파일 경로를 변수에 할당 합니다.
+1. R 변수 *ccFraudCsv*를 만들고 샘플 데이터를 포함하는 CSV 파일의 경로를 변수에 할당합니다.
   
     ```R
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
@@ -143,7 +143,7 @@ ms.lasthandoff: 02/11/2018
   
     *colClasses* 인수가 중요합니다. 이 인수를 사용하여 텍스트 파일에서 로드된 데이터의 각 열에 할당할 데이터 형식을 나타냅니다. 이 예제에서는 정수로 처리되는 명명된 열을 제외하고 모든 열이 텍스트로 처리됩니다.
   
-3. 이 시점에서 일시 중지 하려면 수는 곧에서 데이터베이스를 볼 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  데이터베이스의 테이블 목록을 새로 고칩니다.
+3. 이 시점에서 잠시 멈추고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 볼 수 있습니다. 데이터베이스의 테이블 목록을 새로 고칩니다.
   
     즉, 로컬 작업 영역에서 R 데이터 개체를 만든 있지만 테이블 만들지 않은에서 볼 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 또한, R 변수에 데이터가 없는 텍스트 파일에서 로드 않았습니다.
   
@@ -159,9 +159,9 @@ ms.lasthandoff: 02/11/2018
 
       *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
   
-5. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 테이블 목록을 새로 고칩니다. 되었는지 확인 하려면 각 변수에 올바른 데이터 형식 및 성공적으로 가져왔습니다.에서 테이블을 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 선택 **상위 1000 개 행 선택**합니다.
+5. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 테이블 목록을 새로 고칩니다. 각 변수가 올바른 데이터 형식을 갖고 성공적으로 가져왔는지 확인하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 테이블을 마우스 오른쪽 단추로 클릭하고 **상위 1000개 행 선택**을 선택합니다.
 
-### <a name="load-data-into-the-scoring-table"></a>점수 매기기 테이블에 데이터를 로드 합니다.
+### <a name="load-data-into-the-scoring-table"></a>채점 테이블에 데이터 로드하기
 
 1. 데이터베이스에 대 한 평가에 사용 되는 데이터 집합을 로드 하는 단계를 반복 합니다.
   
@@ -199,7 +199,7 @@ ms.lasthandoff: 02/11/2018
 
 *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.456 seconds*
 
-## <a name="more-about-rxdatastep"></a>RxDataStep에 대한 자세한 정보
+## <a name="more-about-rxdatastep"></a>RxDataStep에 대한 추가 정보
 
 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) R 데이터 프레임에서 여러 변환을 수행할 수 있는 강력한 함수입니다. 데이터를 대상에 필요한 표현으로 변환 rxDataStep을 사용할 수도 있습니다:이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
 
@@ -211,4 +211,4 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="previous-step"></a>이전 단계
 
-[R을 사용 하 여 SQL Server 데이터 작업](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
+[R을 사용하여 SQL Server 데이터 작업](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
