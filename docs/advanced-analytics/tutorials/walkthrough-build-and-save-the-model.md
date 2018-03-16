@@ -31,7 +31,7 @@ ms.lasthandoff: 02/19/2018
 
 이 단계에서는 머신 러닝 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 그 모델을 저장하는 방법을 학습합니다.
 
-## <a name="create-a-classification-model-using-rxlogit"></a>RxLogit를 사용 하 여 분류 모델 만들기
+## <a name="create-a-classification-model-using-rxlogit"></a>rxLogit을 사용해서 분류모델(classification model) 만들기
 
 이번에 만들 모델은 이진분류기(binary classifier)로서, 택시운전사가 승객의 목적지에 도착한 후 승객으로부터 팁을 받을 수 있는지를 예측하는 모델입니다. 지난 과정(lesson)에서 만들었던 데이터 소스(data source)를  사용하여 이 팁 예측 모델을 학습하고, 이때 로지스틱 회귀(logistic regression)를 사용합니다.
 
@@ -85,7 +85,7 @@ ms.lasthandoff: 02/19/2018
   
     + 예측 결과 테이블에 저장 됩니다 _taxiscoreOutput_합니다. 이 테이블에 대 한 스키마 rxSqlServerData를 사용 하 여 만들 때 정의 되어 있지 확인 합니다. RxPredict 출력에서 스키마를 가져옵니다.
   
-    + 예측된 값을 저장하는 테이블을 만들려면 rxSqlServer 데이터 함수를 실행하는 SQL 로그인에 데이터베이스의 DDL 권한이 있어야 합니다. 로그인이 테이블을 만들 수 없는 경우 문이 실패합니다.
+    + 예측된 값을 저장하기 위한 테이블을 만들려면, RxSqlServerData 함수를 실행하는 SQL 데이터베이스의 계정에 DDL 권한이 있어야 합니다. 만약 지금 로그인 되어있는 계정이 테이블을 만들 수 없는 경우 실행문은 실패하게 됩니다.
 
 2. [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 함수를 호출하여 결과를 생성합니다.
 
