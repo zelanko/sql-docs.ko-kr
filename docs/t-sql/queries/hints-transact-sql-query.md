@@ -257,7 +257,7 @@ ms.lasthandoff: 01/25/2018
  이러한 계획이 불가능할 경우 쿼리 최적화 프로그램은 쿼리 실행 시 오류를 검색하도록 지연시키지 않고 오류를 반환합니다. 행에는 가변 길이 열이 포함될 수 있으며 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 처리할 수 있는 범위 이상의 잠재적 최대 크기를 가진 행을 정의하도록 허용합니다. 그러나 대개 응용 프로그램은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 처리할 수 있는 한도 내의 실제 크기를 가진 행을 저장합니다. 너무 긴 행이 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 실행 오류를 반환합니다.  
  
 <a name="use_hint"></a> USE HINT ( **'***hint_name***'** )  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]로 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 적용됩니다.
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]로 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 적용됩니다.
  
  힌트 이름 **작은 따옴표 안**에서 지정한 대로 쿼리 프로세서에 하나 이상의 추가 힌트를 제공합니다. 
 

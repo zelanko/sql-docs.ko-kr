@@ -471,7 +471,7 @@ ONLINE = { ON | **OFF** }
 -   뷰의 초기 고유 클러스터형 인덱스  
 -   해제된 클러스터형 인덱스  
 -   기본 테이블이 LOB 데이터 형식 **image**, **ntext**, **text** 및 공간 유형을 포함하는 경우 클러스터형 인덱스입니다.  
--   **varchar(max)** 및 **varbinary(max)** 열은 인덱스의 일부일 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터) 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서 테이블에 **varchar(max)** 또는 **varbinary(max)** 열이 포함된 경우 **ONLINE** 옵션을 사용하여 다른 열을 포함하는 클러스터형 인덱스를 작성하거나 다시 작성할 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 기본 테이블에 **varchar(max)** 또는 **varbinary(max)** 열이 포함된 경우 **ONLINE** 옵션을 허용하지 않습니다.  
+-   **varchar(max)** 및 **varbinary(max)** 열은 인덱스의 일부일 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터) 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서 테이블에 **varchar(max)** 또는 **varbinary(max)** 열이 포함된 경우 **ONLINE** 옵션을 사용하여 다른 열을 포함하는 클러스터형 인덱스를 작성하거나 다시 작성할 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 기본 테이블에 **varchar(max)** 또는 **varbinary(max)** 열이 포함된 경우 **ONLINE** 옵션을 허용하지 않습니다.  
   
 자세한 내용은 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.  
   
