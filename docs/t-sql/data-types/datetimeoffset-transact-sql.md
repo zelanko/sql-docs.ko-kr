@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b1b8fba166243143cd9ab8c03303fcfd7448e7a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8121c4b5054bcf8f3144fee3c05e6979f2252293
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,6 +115,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="converting-date-and-time-data"></a>date 및 time 데이터 변환
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜 및 시간 데이터 형식을 변환할 때 날짜나 시간으로 인식되지 않는 값은 모두 무시됩니다. 날짜 및 시간 데이터에 CAST 및 CONVERT 함수를 사용하는 방법은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.
+  
+### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>datetimeoffset 데이터 형식을 다른 날짜 및 시간 형식으로 변환
+이 섹션에서는 **datetimeoffset** 데이터 형식이 다른 날짜 및 시간 데이터 형식으로 변환될 때 어떤 상황이 발생하는지를 설명합니다.
   
 **date**으로 변환하는 경우 년, 월, 일이 복사됩니다. 다음 코드에서는 `datetimeoffset(4)` 값을 `date` 값으로 변환한 결과를 보여 줍니다.  
   
@@ -198,9 +201,6 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
   
 --(1 row(s) affected)  
 ```  
-  
-### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>datetimeoffset 데이터 형식을 다른 날짜 및 시간 형식으로 변환
-다음 표에서는 **datetimeoffset** 데이터 형식을 다른 날짜 및 시간 데이터 형식으로 변환하면 어떤 일이 발생하는지를 설명합니다.
   
 ### <a name="converting-string-literals-to-datetimeoffset"></a>문자열 리터럴을 datetimeoffset으로 변환
 문자열에 포함된 모든 부분의 형식이 올바른 경우 문자열 리터럴에서 날짜/시간 유형으로 변환할 수 있습니다. 그렇지 않으면 런타임 오류가 발생합니다. 날짜/시간 유형에서 문자열 리터럴로의 암시적 변환 또는 명시적 변환에 스타일을 지정하지 않은 경우 현재 세션의 기본 형식이 지정됩니다. 다음 표에서는 문자열 리터럴을 **datetimeoffset** 데이터 형식으로 변환하는 규칙을 보여 줍니다.

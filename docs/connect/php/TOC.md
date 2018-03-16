@@ -54,6 +54,7 @@
 ### [방법: SQLSRV 드라이버를 사용하여 SQL Server 데이터 형식 지정](how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)
 ### [방법: PHP 데이터 형식 지정](how-to-specify-php-data-types.md)
 ### [방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+### [방법: Linux 및 macOS에서 ASCII 데이터 전송 및 검색](how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 ## [오류 및 경고 처리](handling-errors-and-warnings.md)
 ### [방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 구성](how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 ### [방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리](how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)

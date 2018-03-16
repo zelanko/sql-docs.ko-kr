@@ -52,6 +52,7 @@
 ### [Channel 9의 SQL](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
 
 ## 피드백 및 도움말
+### [SQL 설명서에 참여하세요!](sql-server-docs-contribute.md)
 ### [UserVoice - SQL Server 개선 제안](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)

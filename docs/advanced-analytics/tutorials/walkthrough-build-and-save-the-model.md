@@ -1,5 +1,5 @@
 ---
-title: "R 모델을 작성하고 SQL Server에 저장하기 | Microsoft Docs"
+title: "R 모델을 만들고 SQL Server에 저장하기 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2017
 ms.reviewer: 
@@ -26,24 +26,24 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/19/2018
 ---
-# <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 작성하고 SQL Server에 저장하기
+# <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 만들고 SQL Server에 저장하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 단계에서는 머신 러닝 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 그 모델을 저장하는 방법을 학습합니다.
 
 ## <a name="create-a-classification-model-using-rxlogit"></a>RxLogit를 사용 하 여 분류 모델 만들기
 
-작성하는 모델은 택시 운전사가 특정 승차에 대해 팁을 받을 수 있는지를 예측하는 이진 분류기입니다. 이전 단원에서 만든 데이터 원본을 사용하여 팁 분류기를 학습하며 로지스틱 회귀를 사용합니다.
+이번에 만들 모델은 이진분류기(binary classifier)로서, 택시운전사가 승객의 목적지에 도착한 후 승객으로부터 팁을 받을 수 있는지를 예측하는 모델입니다. 지난 과정(lesson)에서 만들었던 데이터 소스(data source)를  사용하여 이 팁 예측 모델을 학습하고, 이때 로지스틱 회귀(logistic regression)를 사용합니다.
 
-1. [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 패키지에 포함된 **rxLogit** 함수를 호출하여 로지스틱 회귀 모델을 만듭니다. 
+1. [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 패키지에 들어있는 **rxLogit** 함수를 호출하여 로지스틱 회귀 모델을 만들어 봅시다.  
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = sql_feature_ds));
     ```
 
-    모델을 작성하는 호출은 system.time 함수로 묶여 있습니다. 이것으로 모델을 작성하는 데 필요한 시간을 구할 수 있습니다.
+    모델을 빌드하는 호출은 system.time 함수 내에 포함되어 있습니다. 이것으로 모델을 빌드하는 데 필요한 시간을 구할 수 있습니다.
 
-2. 모델을 작성한 후에 `summary` 함수를 사용하여 모델을 조사하고 계수를 관찰할 수 있습니다.
+2. 모델을 빌드한 후에 `summary` 함수를 사용해서 모델을 점검하고 계수를 확인할 수 있습니다.
 
     ```R
     summary(logitObj);
@@ -73,7 +73,7 @@ ms.lasthandoff: 02/19/2018
 
 이제 모델이 작성되었으므로 모델을 사용하여 기사가 특정 여정에서 팁을 받을 가능성이 있는지 여부를 예측할 수 있습니다.
 
-1. 우선 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 함수를 사용해서 채점 결과를 저장하기 위한 데이터 원본 개체를 정의합니다. (역주. 원본에 “scoring resul” 이라는 단어로 끝나는 문장을 가지고 있으며 이를 역자는 “scoring result” 라고 판단해 해석에 적용했습니다.)
+1. 우선 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 함수를 사용해서 점수 결과를 저장하기 위한 데이터 저장 객체를 정의합니다.
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/19/2018
       table = "taxiScoreOutput"  )
     ```
 
-    + 예제를 더 간단하게 만들기 위해 로지스틱 회귀 모델의 입력은 모델 훈련에 사용했던 같은 특성 데이터 원본(`sql_feature_ds`)입니다.  보다 일반적으로는 채점을 위해 새로운 데이터를 가지고 있거나 혹은 검증용(test)과 훈련용(training)으로 일부 데이터를 따로 준비했을 것입니다. 
+    + 예제를 간단하게 하기 위해, 로지스틱 회귀 모델의 입력값은 모델을 학습시키는 데에 사용되었던 특성값 데이터(`sql_feature_ds`)를 그대로 사용할 것입니다.  하지만 테스트 때에 사용하는 데이터는 학습 때와는 다른 새로운 데이터인 경우가 대부분이며, 테스트용 데이터와 학습용 테이터를 따로 준비해서 사용하는 것이 보다 일반적입니다.
   
     + 예측 결과 테이블에 저장 됩니다 _taxiscoreOutput_합니다. 이 테이블에 대 한 스키마 rxSqlServerData를 사용 하 여 만들 때 정의 되어 있지 확인 합니다. RxPredict 출력에서 스키마를 가져옵니다.
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 02/19/2018
 
 + 데이터를 R 클라이언트 컴퓨터로 가져온 후 다른 R 그리기 함수를 사용하여 성능 그래프를 만들 수도 있습니다.
 
-이 절에서는 두 가지 방법을 모두 시험합니다.
+이 절에서는 두 가지 방법을 모두 시도해 봅니다.
 
 ### <a name="execute-a-plot-in-the-remote-sql-server-compute-context"></a>원격(SQL Server) 계산 컨텍스트에서 플롯 실행
 

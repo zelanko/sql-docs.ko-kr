@@ -1,13 +1,8 @@
-# [시작](getting-started-with-machine-learning-services.md)
-
 # 개요
-## [Microsoft Machine Learning Services란?](r/r-services.md)
-## [기계 학습의 새로운 기능](what-s-new-in-sql-server-machine-learning-services.md)
-## [새로운 또는 업데이트 된 문서](new-updated-advanced-analytics.md)
-## [아키텍처 및 개요](architecture-overview-machine-learning.md)
-## [SQL Server 버전 간 기계 학습 기능의 차이점](r/differences-in-r-features-between-editions-of-sql-server.md)
-
-## [Azure SQL Database에서 R 사용](r/using-r-in-azure-sql-database.md)
+## [SQL Server Machine Learning Services란?](what-is-sql-server-machine-learning.md)
+## [새로운 기능](what-s-new-in-sql-server-machine-learning-services.md)
+## [아키텍처 개요](architecture-overview-machine-learning.md)
+## [버전별 기능](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)
 
@@ -97,8 +92,6 @@
 #### [모델 학습 및 저장](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [모델 운영화](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: 독립 실행형 서버를 사용하여 모델 배포 및 사용](../advanced-analytics/python/publish-consume-python-code.md)
-
 # [Machine Learning Server - 독립 실행형](r/r-server-standalone.md)
 ## [시작](r/getting-started-with-microsoft-r-server-standalone.md)
 ## [독립 실행형 Machine Learning Server 설정](r/create-a-standalone-r-server.md)
@@ -165,7 +158,7 @@
 ### [기계 학습 솔루션 관리 및 모니터링](r/managing-and-monitoring-r-solutions.md)
 ### [Machine Learning Services를 위한 리소스 거버넌스](r/resource-governance-for-r-services.md)
 ### [기계 학습을 위한 리소스 풀 만들기](r/how-to-create-a-resource-pool-for-r.md)
-### [Machine Learning Services에 대한 확장 이벤트](r/extended-events-for-sql-server-r-services.md)
+### [Machine Learning Services를 위한 확장 이벤트](r/extended-events-for-sql-server-r-services.md)
 ### [PREDICT 문 모니터링에 대한 확장 이벤트](xe-event-predict-tsql.md)
 ### [Machine Learning Services용 DMV](r/dmvs-for-sql-server-r-services.md)
 ### [R 코드 프로파일링 함수 사용](r/using-r-code-profiling-functions.md)
@@ -175,6 +168,8 @@
 
 ## [알려진 문제](known-issues-for-sql-server-machine-learning-services.md)
 ## [릴리스 정보](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [새로운 또는 업데이트 된 문서](new-updated-advanced-analytics.md)
+## [Azure SQL Database에서 R 사용](r/using-r-in-azure-sql-database.md)
 
 ## [설치 및 문제 해결 팁](machine-learning-troubleshooting-faq.md)
 ### [문제 해결을 위한 데이터 컬렉션](data-collection-ml-troubleshooting-process.md)
