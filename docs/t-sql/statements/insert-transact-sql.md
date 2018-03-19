@@ -39,16 +39,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9c1d8692b634c1f6f71c112be59eb9e5ff84ea5e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블 또는 뷰에 새 행을 하나 이상 추가합니다. 예제를 보려면 [예](#InsertExamples)를 참조하세요.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블 또는 뷰에 새 행을 하나 이상 추가합니다. 예제를 보려면 [예제](#InsertExamples)를 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -140,10 +140,10 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
 ## <a name="arguments"></a>인수  
  WITH \<common_table_expression>  
- INSERT 문의 범위 내에 정의되는 임시로 명명된 결과 집합(공통 테이블 식이라고도 함)을 지정합니다. 결과 집합은 SELECT 문에서 파생됩니다. 자세한 내용은 [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
+ INSERT 문의 범위 내에 정의되는 임시로 명명된 결과 집합(공통 테이블 식이라고도 함)을 지정합니다. 결과 집합은 SELECT 문에서 파생됩니다. 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
   
  TOP (*expression*) [ PERCENT ]  
- 삽입할 임의 행의 수 또는 비율을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다. 자세한 내용은 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)를 참조하세요.  
+ 삽입할 임의 행의 수 또는 비율을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다. 자세한 내용은 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
   
  INTO  
  INSERT와 대상 테이블 사이에 사용할 수 있는 선택적 키워드입니다.  
@@ -205,7 +205,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
 OUTPUT Clause  
  삽입 작업의 일부로 삽입된 행을 반환합니다. 결과는 처리 중인 응용 프로그램에 반환되거나 다음 처리를 위해 테이블 또는 테이블 변수에 삽입될 수 있습니다.  
   
- 로컬 분할 뷰, 분산형 분할 뷰 또는 원격 테이블을 참조하는 DML 문이나 *execute_statement*를 포함하는 INSERT 문에서는 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)이 지원되지 않습니다. \<dml_table_source> 절을 포함하는 INSERT 문에서는 OUTPUT INTO 절이 지원되지 않습니다. 
+ 로컬 분할 뷰, 분산형 분할 뷰 또는 원격 테이블을 참조하는 DML 문이나 *execute_statement*를 포함하는 INSERT 문에서는 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)이 지원되지 않습니다. OUTPUT INTO 절은 \<dml_table_source> 절이 포함된 INSERT 문에서 지원되지 않습니다. 
   
  VALUES  
  삽입할 데이터 값의 목록을 표시합니다. *column_list*(지정된 경우) 또는 테이블의 각 열에 대해 하나의 데이터 값이 있어야 합니다. 값 목록은 괄호로 묶어야 합니다.  
@@ -251,7 +251,7 @@ OUTPUT Clause
   
 -   트랜잭션 복제에 대한 병합 복제 또는 업데이트할 수 있는 구독에 참여할 수 없습니다.  
   
- 데이터베이스의 호환성 수준이 100 이상으로 설정되어야 합니다. 자세한 내용은 [OUTPUT 절&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.  
+ 데이터베이스의 호환성 수준이 100 이상으로 설정되어야 합니다. 자세한 내용은 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)를 참조하세요.  
   
  \<select_list>  
  OUTPUT 절에서 반환된 열 중 삽입할 열을 지정하는 쉼표로 구분된 목록입니다. \<select_list>의 열은 값이 삽입되는 열과 호환되어야 합니다. \<select_list>는 집계 함수 또는 TEXTPTR을 참조할 수 없습니다. 
@@ -305,7 +305,7 @@ OUTPUT Clause
 SQL 그래프 테이블에 데이터를 삽입하는 방법에 대한 자세한 내용은 [INSERT(SQL Graph)](../../t-sql/statements/insert-sql-graph.md)를 참조하세요. 
 
 ## <a name="best-practices"></a>최선의 구현 방법  
- @@ROWCOUNT 함수를 사용하여 클라이언트 응용 프로그램에 삽입된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)를 참조하세요.  
+ @@ROWCOUNT 함수를 사용하여 클라이언트 응용 프로그램에 삽입된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
   
 ### <a name="best-practices-for-bulk-importing-data"></a>데이터 대량 가져오기에 대한 최선의 구현 방법  
   
@@ -398,7 +398,9 @@ MERGE 문의 삽입 동작 결과로 힙에 삽입되는 행도 최소 로깅이
   
  TOP을 INSERT와 함께 사용할 경우 참조된 행은 어떠한 순서로도 정렬되지 않으며 ORDER BY 절을 이 문에서 직접 지정할 수 없습니다. TOP을 사용하여 시간 순서로 행을 삽입해야 할 경우 하위 SELECT 문에서 지정된 ORDER BY 절과 함께 TOP을 사용해야 합니다. 이 항목의 뒷부분에 나오는 예 섹션을 참조하세요.
  
-SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID 값을 계산하는 방법을 보장하지만 행이 삽입되는 순서는 보장하지 않습니다.    
+SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID 값을 계산하는 방법을 보장하지만 행이 삽입되는 순서는 보장하지 않습니다.
+
+병렬 데이터 웨어하우스에서 TOP을 함께 지정하지 않는 한 VIEWS, CREATE TABLE AS SELECT, INSERT SELECT, 인라인 함수, 파생 테이블, 하위 쿼리 및 공통 테이블 식에서 ORDER BY 절을 사용할 수 없습니다.
   
 ## <a name="logging-behavior"></a>로깅 동작  
  INSERT 문은 OPENROWSET 함수에 BULK 키워드를 사용하는 경우 또는 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`을 사용하는 경우를 제외하고 항상 모두 기록됩니다. 이러한 작업을 최소한으로 기록할 수 있습니다. 자세한 내용은 이 항목의 앞부분에 나오는 "데이터 대량 로드를 위한 최선의 구현 방법" 섹션을 참조하세요.  
@@ -720,7 +722,7 @@ GO
  이 섹션의 예에서는 [연결된 서버](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 또는 [행 집합 함수](../../t-sql/functions/rowset-functions-transact-sql.md)를 사용하여 원격 테이블을 참조하여 원격 대상 테이블에 행을 삽입하는 방법을 보여줍니다.  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>13. 연결된 서버를 사용하여 원격 테이블에 데이터 삽입  
- 다음 예에서는 원격 테이블에 행을 삽입합니다. 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 원격 데이터 원본에 대한 링크를 만듭니다. 그런 다음, 연결된 서버 이름인 `MyLinkServer`가 *server.catalog.schema.object* 형식의 네 부분으로 구성된 개체 이름의 일부로 지정됩니다.  
+ 다음 예에서는 원격 테이블에 행을 삽입합니다. 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 원격 데이터 원본에 대한 링크를 만듭니다. 그런 다음, 연결된 서버 이름 `MyLinkServer`가 *server.catalog.schema.object*와 같이 네 부분으로 구성된 개체 이름의 일부로 지정됩니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
@@ -762,7 +764,7 @@ GO
 ```  
   
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>15. OPENDATASOURCE 함수를 사용하여 원격 테이블에 데이터 삽입  
- 다음 예에서는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블에 행을 삽입합니다. *server_name* 또는 *server_name\instance_name* 형식을 사용하여 데이터 원본에 유효한 서버 이름을 지정합니다.  
+ 다음 예에서는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블에 행을 삽입합니다. *server_name* 또는 *server_name\instance_name* 형식을 사용하여 데이터 원본에 대해 유효한 서버 이름을 지정해야 합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
@@ -1001,7 +1003,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. INSERT 문에 레이블 및 쿼리 힌트 사용  
- 이 쿼리는 INSERT 문에 레이블 및 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 쿼리가 제어 노드에 제출된 후 계산 노드에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 계획을 생성할 때 해시 조인 전략을 적용합니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [OPTION(SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하세요.  
+ 이 쿼리는 INSERT 문에 레이블 및 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 쿼리가 제어 노드에 제출된 후 계산 노드에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 계획을 생성할 때 해시 조인 전략을 적용합니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [ OPTION(SQL Server PDW) ](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하십시오.  
   
 ```  
 -- Uses AdventureWorks  
@@ -1025,7 +1027,7 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN);
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [MERGE&#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
- [OUTPUT 절&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
+ [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
  [inserted 및 deleted 테이블 사용](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
   
   
