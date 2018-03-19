@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY(Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,11 +21,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: e2fb628e2f832b7d1b73a2e3fefae1fb1d6b8e2b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY(Transact-SQL)  
 
@@ -61,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-기존 패키지 라이브러리의 이름을 지정합니다. 라이브러리는 사용자로 범위 지정됩니다. 즉, 라이브러리 이름은 특정 사용자 또는 소유자의 컨텍스트 내에서 고유한 것으로 간주됩니다.
+기존 패키지 라이브러리의 이름을 지정합니다. 라이브러리 범위는 사용자로 지정됩니다. 라이브러리 이름은 특정 사용자 또는 소유자의 컨텍스트 내에서 고유해야 합니다.
 
 라이브러리 이름은 임의로 할당될 수 없습니다. 즉, 호출 런타임이 패키지를 로드할 때 예상하는 이름을 사용해야 합니다.
 
@@ -76,13 +76,6 @@ WITH ( LANGUAGE = 'R' )
 파일은 로컬 경로 또는 네트워크 경로 형식으로 지정할 수 있습니다. 데이터 원본 옵션이 지정된 경우, 파일 이름은 `EXTERNAL DATA SOURCE`에 참조된 컨테이너에 대한 상대 경로일 수 있습니다.
 
 선택적으로 파일에 대한 OS 플랫폼을 지정할 수 있습니다. 특정 언어 또는 런타임에 대해 각 OS 플랫폼당 한 개의 파일 아티팩트 또는 콘텐츠만 허용됩니다.
-
-**DATA_SOURCE = external_data_source_name**
-
-라이브러리 파일의 위치를 포함하는 외부 데이터 원본의 이름을 지정합니다. 이 위치는 Azure Blob Storage 경로를 참조해야 합니다. 외부 데이터 원본을 만들려면 [CREATE EXTERNAL DATA SOURCE(Transact-SQL)](create-external-data-source-transact-sql.md)를 사용합니다.
-
-> [!IMPORTANT] 
-> 현재 Blob는 SQL Server 2017 릴리스에서 데이터 원본으로 지원되지 않습니다.
 
 **library_bits**
 
@@ -104,11 +97,11 @@ R 언어의 경우 패키지를 Windows용 .ZIP 확장명의 압축된 보관 �
 
 ## <a name="permissions"></a>사용 권한
 
-`ALTER ANY EXTERNAL LIBRARY` 권한이 필요합니다. 외부 라이브러리를 만든 사용자가 해당 외부 라이브러리를 변경할 수 있습니다.
+기본적으로 **dbo** 사용자 또는 **db_owner** 역할의 멤버는 ALTER EXTERNAL LIBRARY를 실행할 수 있는 권한이 있습니다. 또한 외부 라이브러리를 만든 사용자가 해당 외부 라이브러리를 변경할 수 있습니다.
 
 ## <a name="examples"></a>예
 
-다음 예제에서는 `customPackage`라는 외부 라이브러리를 수정합니다.
+다음 예제에서는 `customPackage`라는 외부 라이브러리를 변경합니다.
 
 ### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>1. 파일을 사용하여 라이브러리의 콘텐츠 바꾸기
 
@@ -135,10 +128,12 @@ EXEC sp_execute_external_script
 다음 예제는 새 비트를 16진수 리터럴로 전달하여 기존 라이브러리를 변경합니다.
 
 ```SQL
-ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+ALTER EXTERNAL LIBRARY customLibrary 
+SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-이 코드 샘플에서 변수 콘텐츠는 가독성을 위해 잘립니다.
+> [!NOTE]
+> 이 코드 샘플은 구문만 보여줍니다. `CONTENT =`의 이진 값은 읽기 쉽도록 잘렸으며, 작업 중인 라이브러리를 생성하지 않습니다. 이진 변수의 실제 콘텐츠는 훨씬 더 깁니다.
 
 ## <a name="see-also"></a>관련 항목:
 
