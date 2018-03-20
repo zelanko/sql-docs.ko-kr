@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>부록 b: ODBC 상태 전환 테이블
 이 부록의 표에서 ODBC 함수 환경, 연결, 문 및 설명자 상태 전환을 발생 하는 방법을 보여줍니다. 환경, 연결, 문 또는 설명자의 상태는 일반적으로 해당 형식의 핸들 (환경, 연결, 문 또는 설명자)를 사용 하는 함수를 호출할 수 있습니다 결정 합니다. 환경, 연결, 문 및 설명자 상태는 다음 그림에 나와 있는 것 처럼 대략 겹칩니다. 예를 들어 연결의 정확한 겹치는 C5 내용과 C6 하 문 S12 통해 S1을 데이터 원본 – 종속 트랜잭션이 서로 다른 데이터 원본에 대해 서로 다른 시간에 시작 하 고 D1i (암시적으로 할당 된 설명자) 설명자 상태에 따라 달라 집니다. 설명자와 관련 된 문의 상태 state D1e (명시적으로 할당 된 설명자)는 모든 문은의 상태와 무관입니다. 각 상태에 대 한 참조 [환경이 전환](../../../odbc/reference/appendixes/environment-transitions.md), [연결 전환](../../../odbc/reference/appendixes/connection-transitions.md), [문을 전환](../../../odbc/reference/appendixes/statement-transitions.md), 및 [설명자 전환 ](../../../odbc/reference/appendixes/descriptor-transitions.md)이 부록의 뒷부분에 나오는 합니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/15/2018
 -   **--** -함수를 실행 한 후 상태 변경 되지 않습니다.  
   
 -   **E**  
-     ***n*** **C*n * * *, **S*n***, 또는 **D * n***  -이동 환경, 연결, 문 또는 설명자 상태는 지정 된 상태입니다.  
+     ***n*** , **C*n * * *, **S*n * **, 또는 **D * n***  -이동 환경, 연결, 문 또는 설명자 상태는 지정 된 상태입니다.  
   
 -   **(면)**  -잘못 된 핸들이 함수에 전달 되었습니다. 핸들이 핸들을 null 이거나 잘못 된 형식의 유효한 핸들 경우-문 핸들을 필요한 경우에 연결 핸들 전달 된 예를 들어-함수에서 SQL_INVALID_HANDLE;을 반환 그렇지 않으면 동작이 정의 되지 않은 및 아마도 치명적있지 않습니다. 이 오류는 지정된 된 상태에는 함수 호출의 가능한 결과 경우에 표시 됩니다. 이 오류 상태를 변경 하지 않으며는 괄호로 표시 된 대로 드라이버 관리자에 의해 항상 검색 됩니다.  
   

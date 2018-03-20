@@ -29,10 +29,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 역할(SSIS 서비스)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지에 대한 액세스를 보호하는 데 사용할 수 있는 특정 고정 데이터베이스 수준 역할을 제공합니다. 사용 가능한 역할은 패키지를 SSIS 카탈로그 데이터베이스(SSISDB)에 저장하는지 아니면 msdb 데이터베이스에 저장하는지에 따라 달라집니다.  

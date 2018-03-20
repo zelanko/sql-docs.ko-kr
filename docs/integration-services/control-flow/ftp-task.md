@@ -25,10 +25,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 3613462b45121d9d9042724a3dbf693060cc0c10
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="ftp-task"></a>FTP 태스크
   FTP 태스크는 데이터 파일을 다운로드 및 업로드하고 서버의 디렉터리를 관리합니다. 예를 들어 패키지는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 워크플로의 일부로 원격 서버 또는 인터넷 위치에서 데이터 파일을 다운로드할 수 있습니다. FTP 태스크는 다음 용도로 사용할 수 있습니다.  
