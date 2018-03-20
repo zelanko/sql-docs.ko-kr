@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7cbfb4ef-1e61-4e65-9fe0-ed5adfb43415
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 9179b95331ddcad4a704feadae2aa3f9211f8dff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4688b3ebaf7f25bf37fb471c698d287f1e9792ed
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>SQL Server 기능 및 특성의 WideWorldImportersDW 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW는 다양 한 데이터 웨어하우스 및 분석에 적합 한 SQL Server의 주요 기능을 보여 주기 위해 설계 되었습니다. 다음 목록은 SQL Server 기능 및 기능과 WideWorldImportersDW에서 사용 되는 방법을 설명 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+WideWorldImportersDW는 다양 한 데이터 웨어하우스 및 분석에 적합 한 SQL Server의 주요 기능을 보여 주기 위해 설계 되었습니다. 다음 목록은 SQL Server 기능 및 기능과 WideWorldImportersDW에서 사용 되는 방법을 설명 합니다.
 
 ## <a name="polybase"></a>PolyBase
 

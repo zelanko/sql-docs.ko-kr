@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6d87a24e91f96957170671303af641c6bacc6599
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d458bc15530aa87bfa922787558fff3f07645f7
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 데이터베이스 카탈로그
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters 데이터베이스 모든는 트랜잭션 정보 및 판매 및 구매에 대 한 일별 데이터도 차량 및 콜드 방 센서 데이터를 포함합니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WideWorldImporters 데이터베이스 모든는 트랜잭션 정보 및 판매 및 구매에 대 한 일별 데이터도 차량 및 콜드 방 센서 데이터를 포함합니다.
 
 ## <a name="schemas"></a>스키마
 
@@ -101,7 +103,7 @@ ms.lasthandoff: 12/05/2017
 
 |테이블|Description|
 |-----------------------------|---------------------|
-|고객|고객 (조직이 나 개인)에 대 한 주 엔터티 테이블|
+|Customers|고객 (조직이 나 개인)에 대 한 주 엔터티 테이블|
 |CustomerCategories|고객 (ie 새로 움 저장소, 슈퍼마켓 등)에 대 한 범주|
 |BuyingGroups|고객 조직에는 강력한 구매를 실행 하는 그룹의 일부가 될 수 있습니다.|
 |CustomerTransactions|고객 관련 (송장을 지불) 되는 모든 금융 거래|
@@ -170,7 +172,7 @@ WideWorldImporters 적은 수의 스키마를 사용 하므로 데이터베이�
 |절차|용도|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|사용자 허용 (에서 `Application.People`) 웹 사이트에 액세스할 수 있어야 합니다.|
-|암호 변경|(사용자에 대 한 외부 인증 메커니즘을 사용 하지 않는) 사용자의 암호를 변경 합니다.|
+|ChangePassword|(사용자에 대 한 외부 인증 메커니즘을 사용 하지 않는) 사용자의 암호를 변경 합니다.|
 |InsertCustomerOrders|(주문 라인 포함)에 대 한 하나 이상의 고객 주문을 삽입할 수 있습니다.|
 |InvoiceCustomerOrders|목록이 며 송장 발급을 주문 하 고는 청구서를 처리 합니다.|
 |RecordColdRoomTemperatures|테이블 반환 매개 변수 (TVP) 센서 데이터 목록 변수로 및 데이터를 적용 하는 `Warehouse.ColdRoomTemperatures` 임시 테이블입니다.|

@@ -9,23 +9,25 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: " database-engine "
+ms.technology:
+- " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 49674a1edbec00a650af036297adacec3bdc150d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 20db5f20256fb4b545482b29b0c5cc41c6ba231e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 데이터 생성
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]이러한 데이터베이스에서 생성 된 하루 최대 년 1 월 1 일부 터 2013을 시작 하는 데이터를 포함 하는 WideWorldImporters 및 WideWorldImportersDW 데이터베이스의 릴리스 버전.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+이러한 데이터베이스에서 생성 된 하루 최대 년 1 월 1 일부 터 2013을 시작 하는 데이터를 포함 하는 WideWorldImporters 및 WideWorldImportersDW 데이터베이스의 릴리스 버전.
 
 예제 데이터베이스 데모 또는 그림에서는 나중에 사용 되는 경우 데이터베이스의 최신 샘플 데이터를 포함 하는 데 특히 도움이 수도 있습니다.
 
@@ -79,7 +81,7 @@ Wide World Importers 다운로드 크기는 배포 가능한 제공 되지만 SQ
 
 #### <a name="parameters"></a>매개 변수:
 
-  `@EstimatedRowsFor2012`**bigint** (이며 12000000의 기본값)
+  `@EstimatedRowsFor2012` **bigint** (이며 12000000의 기본값)
 
 #### <a name="result"></a>결과:
 

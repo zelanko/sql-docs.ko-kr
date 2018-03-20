@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d07ffb9a-ac4f-4295-9aeb-ecfb97600134
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6df15e0b16a8b3988da616106c6a29fe88f8debc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a4d1f7c55112efe127e2435d84fc1efadd954495
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 설치 및 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW 데이터베이스에 대 한 설치 및 구성 지침은 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+WideWorldImportersDW 데이터베이스에 대 한 설치 및 구성 지침은 합니다.
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (또는 이상) 또는 [Azure SQL 데이터베이스](https://azure.microsoft.com/services/sql-database/)합니다. 이 샘플의 전체 버전을 사용 하려면 SQL Server 평가/개발자/Enterprise Edition을 사용 합니다.
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md). 2016 년 6 월 릴리스를 사용 하는 최상의 결과 대 한 이후 버전입니다.
@@ -34,15 +36,15 @@ ms.lasthandoff: 12/05/2017
 
 샘플의 최신 버전:
 
-[wide world-가져오기 도구 릴리스](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Bacpac를 다운로드 샘플 WideWorldImportersDW 데이터베이스 백업/해당 하는 SQL Server 또는 Azure SQL 데이터베이스의 버전입니다.
 
 샘플 데이터베이스를 다시 만드는 소스 코드를 다음 위치에서 사용할 수 있습니다. (WideWorldImporters) OLTP 데이터베이스에서 ETL에 데이터 채우기가 기반 하는 참고:
 
-[wide world-importers 소스](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>설치
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -56,7 +58,7 @@ SQL Server 인스턴스를 백업을 복원 하려면 Management Studio를 사�
 5. 필요한 경우 데이터에 대 한 대상 위치를 변경 하 고 로그 파일에는 **파일** 창. 데이터 배치 및 로그 파일은 서로 다른 드라이브에 가장 좋은 방법은 임을 note 합니다.
 6. **확인**을 클릭합니다. 그러면 데이터베이스 복원을 시작 합니다. 완료 되 면 SQL Server 인스턴스에 설치 된 WideWorldImporters 데이터베이스를 해야 합니다.
 
-### <a name="azure-sql-database"></a>Azure SQL 데이터베이스
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 새 SQL 데이터베이스를 bacpac로 가져오려면 Management Studio를 사용할 수 있습니다.
 
@@ -77,4 +79,4 @@ SQL Server 인스턴스를 백업을 복원 하려면 Management Studio를 사�
 1. SQL Server Management Studio에서 WideWorldImportersDW 데이터베이스에 연결 하 고 새 쿼리 창을 엽니다.
 2. 데이터베이스에 PolyBase 사용 하도록 설정 하려면 다음 T-SQL 명령을 실행 합니다.
 
-   [응용 프로그램]을 실행 합니다. [Configuration_ApplyPolyBase]
+   EXECUTE [Application].[Configuration_ApplyPolyBase]

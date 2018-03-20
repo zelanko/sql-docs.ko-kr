@@ -19,19 +19,19 @@ helpviewer_keywords:
 - ClientNetLibInfo class
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93d8b5374a8112d4d2ab5fa48f94831d0c3dbdf5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f5d68c7270e712004e41e207c1fb28cf2ae4cd45
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="clientnetlibinfo-class"></a>ClientNetLibInfo 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-[ClientNetLibInfo 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 는 클라이언트 네트워크 라이브러리에 대한 정보를 나타냅니다.  
+  [ClientNetLibInfo 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 는 클라이언트 네트워크 라이브러리에 대한 정보를 나타냅니다.  
   
  클라이언트 네트워크 라이브러리 파일을 통해 클라이언트 인스턴스는 특정 네트워크 프로토콜을 사용하여 네트워크를 통해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스와 통신할 수 있습니다.  
   

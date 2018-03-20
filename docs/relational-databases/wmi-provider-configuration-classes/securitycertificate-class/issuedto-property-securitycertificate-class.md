@@ -21,19 +21,19 @@ helpviewer_keywords:
 - IssuedTo property
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e8f79f7fe876198158da2cc26d67388e73d9e76
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 648f3e588061557a8a5b5d8079d46aee5781f598
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>IssuedTo 속성(SecurityCertificate 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-보안 인증서가 발급된 개체를 가져옵니다.  
+  보안 인증서가 발급된 개체를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

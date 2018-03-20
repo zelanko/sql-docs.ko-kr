@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ee64562b-a6d7-420c-b9da-75b5223cf8ab
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 345f66d4fc47598ddfb253259c3ad055f534282b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b902451c77568c492e09be47f2a537b0b388621
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wide-world-importers-data-warehousing-and-analytics-database"></a>Wide World Importers 데이터 웨어하우징 및 분석 데이터베이스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Wide World Importers 데이터 웨어하우징 및 분석 데이터베이스에 대 한 설명서입니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Wide World Importers 데이터 웨어하우징 및 분석 데이터베이스에 대 한 설명서입니다.
 
 **WideWorldImportersDW 설치 및 구성**
 
@@ -35,7 +37,7 @@ OLAP의 구성과 설치에 대 한 지침 WideWorldImportersDW 데이터베이�
 
 스키마와 데이터 웨어하우징 및 분석 처리 (OLAP)에 대 한 예제 데이터베이스인 WideWorldImportersDW 데이터베이스에 사용 되는 테이블의 설명입니다.
 
-**WideWorldImporters ETL 워크플로**
+**WideWorldImporters ETL Workflow**
 
 데이터 웨어하우스에 WideWorldImportersDW WideWorldImporters 트랜잭션 데이터베이스에서 데이터를 마이그레이션합니다는 ETL (추출, 변환, 로드) 프로세스를 위한 워크플로.
 

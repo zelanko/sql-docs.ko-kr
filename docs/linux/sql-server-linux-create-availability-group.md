@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 97ec3cd688f69995f4d907d305ce4d14d4724efc
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들기 및 Linux에서 SQL Server에 대 한 가용성 그룹 구성
 
@@ -426,7 +426,7 @@ sudo systemctl restart mssql-server
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
     
     GO
-    ```
+   ```
 
 #### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>예제 2-3 개의 복제본이 읽기 전용 라우팅 (외부 클러스터 유형) 함께
 

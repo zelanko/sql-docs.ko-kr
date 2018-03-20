@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 967755e34b397f2dfac98277d34cb799655f5165
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: add5788063cdc5026d343061b8111cbec42e5a4d
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="installation-and-configuration"></a>설치 및 구성
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers OLTP 데이터베이스 설치 및 구성 지침입니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wide World Importers OLTP 데이터베이스 설치 및 구성 지침입니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -36,15 +38,15 @@ ms.lasthandoff: 12/05/2017
 
 샘플의 최신 버전:
 
-[wide world-가져오기 도구 릴리스](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Bacpac를 다운로드 샘플 WideWorldImporters 데이터베이스 백업/해당 하는 SQL Server 또는 Azure SQL 데이터베이스의 버전입니다.
 
 샘플 데이터베이스를 다시 만드는 소스 코드를 다음 위치에서 사용할 수 있습니다. 샘플을 다시 만드는 발생 않을 것임 데이터에서 약간의 차이가 데이터 생성에는 임의 요인을 이므로 참고:
 
-[wide world-importer](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>설치
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -58,7 +60,7 @@ SQL Server 인스턴스를 백업을 복원 하려면 Management Studio를 사�
 5. 필요한 경우 데이터에 대 한 대상 위치를 변경 하 고 로그 파일에는 **파일** 창. 데이터 배치 및 로그 파일은 서로 다른 드라이브에 가장 좋은 방법은 임을 note 합니다.
 6. **확인**을 클릭합니다. 그러면 데이터베이스 복원을 시작 합니다. 완료 되 면 SQL Server 인스턴스에 설치 된 WideWorldImporters 데이터베이스를 해야 합니다.
 
-### <a name="azure-sql-database"></a>Azure SQL 데이터베이스
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 새 SQL 데이터베이스를 bacpac로 가져오려면 Management Studio를 사용할 수 있습니다.
 
@@ -77,7 +79,7 @@ SQL Server 인스턴스를 백업을 복원 하려면 Management Studio를 사�
 예제 데이터베이스의 전체 텍스트 인덱싱을 사용 하 여 만들 수 있습니다. 그러나 해당 기능이 SQL Server와 함께 기본적으로 설치 되어 있지은-(Azure SQL DB에서 기본적으로 사용은)는 SQL Server 설치 도중 선택 해야 합니다. 따라서 사후 설치 단계는 필요 합니다.
 
 1. SQL Server Management Studio에서 WideWorldImporters 데이터베이스에 연결 하 고 새 쿼리 창을 엽니다.
-2. 데이터베이스 전체 텍스트 인덱싱을 사용 하도록 설정 하려면 다음 T-SQL 명령을 실행 합니다.`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. 데이터베이스 전체 텍스트 인덱싱을 사용 하도록 설정 하려면 다음 T-SQL 명령을 실행 합니다.  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit

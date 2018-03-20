@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b4ca524507ba0dbe54ec692d19332d870e48a87
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1794dbe361236c114ad425b9c938216e4c044d88
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>ProtocolName 속성(ServerNetworkProtocolIPAddress 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-IP 주소를 참조하는 서버 네트워크 프로토콜의 이름을 가져옵니다.  
+  IP 주소를 참조하는 서버 네트워크 프로토콜의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

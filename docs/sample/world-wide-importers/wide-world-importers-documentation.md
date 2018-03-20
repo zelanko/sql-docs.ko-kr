@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 17cabd9d-cb2f-436c-ad9c-ce02225808b7
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: a2510ee889f57f7ab51c0f45574a8fa6e86abb47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99d3bf3913b620a34e284b8277e4c639ba20727a
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wide-world-importers-documentation"></a>방법 설명서
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers는 SQL Server 2016에 대 한 새 예제 데이터베이스 및 Azure SQL 데이터베이스는 합니다. 트랜잭션 처리 (OLTP), 데이터 웨어하우징 및 분석 (OLAP) 워크 로드도 하이브리드 트랜잭션 및 분석 처리 (HTAP) 워크 로드에 대 한 SQL Server 2016 및 Azure SQL 데이터베이스의 핵심 기능을 보여 줍니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wide World Importers는 SQL Server 2016에 대 한 새 예제 데이터베이스 및 Azure SQL 데이터베이스는 합니다. 트랜잭션 처리 (OLTP), 데이터 웨어하우징 및 분석 (OLAP) 워크 로드도 하이브리드 트랜잭션 및 분석 처리 (HTAP) 워크 로드에 대 한 SQL Server 2016 및 Azure SQL 데이터베이스의 핵심 기능을 보여 줍니다.
 
 ## <a name="about-this-sample"></a>이 샘플에 대 한
 

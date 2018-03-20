@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale;barbkess
+ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 887ac78e70d529c404ee2ed3088f088ed53e4a54
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL 그래프 아키텍처  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ Edge 테이블의 암시적 열
 |CREATE TABLE |[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` AS 노드 또는 AS EDGE 테이블 만들기를 지원 하도록 확장 이제 됩니다. 정의 된 특성을 참고 하 edge 테이블 되거나 모든 사용자를 사용할 수 없습니다.  |
 |ALTER TABLE    |[ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|노드 및 가장자리 테이블에 관계형 테이블을 사용 하 여 동일한 방식으로 변경할 수는 `ALTER TABLE`합니다. 사용자가 추가 또는 사용자 정의 된 열, 인덱스 또는 제약 조건을 수정할 수 있습니다. 그러나 같은 내부 graph 열 변경 `$node_id` 또는 `$edge_id`, 오류가 발생 합니다.  |
 |CREATE  INDEX   |[CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |의사 열과 노드 및 가장자리 테이블의 사용자 정의 된 열에 인덱스를 만들 수 있습니다. 클러스터형 및 비클러스터형 columnstore 인덱스를 포함 하 여 모든 인덱스 유형에 지원 됩니다.  |
-|DROP TABLE |[DROP table&#40; Transact SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)  |노드 및 가장자리 테이블에 관계형 테이블을 사용 하 여 동일한 방식으로 삭제할 수는 `DROP TABLE`합니다. 그러나이 릴리스에서 제약 조건이 없는 없는 가장자리 삭제 된 노드를 가리키도록 하 고 가장자리는 노드 또는 노드 테이블을 삭제 하기 연계 삭제는 지원 되지 않습니다. 노드 테이블이 삭제 되 면 사용자가 수동으로 그래프의 무결성을 유지 하려면 해당 노드 테이블의 노드에 연결 된 모든 가장자리를 삭제 하는 것이 좋습니다.  |
+|DROP TABLE |[DROP TABLE &#40;Transact SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |노드 및 가장자리 테이블에 관계형 테이블을 사용 하 여 동일한 방식으로 삭제할 수는 `DROP TABLE`합니다. 그러나이 릴리스에서 제약 조건이 없는 없는 가장자리 삭제 된 노드를 가리키도록 하 고 가장자리는 노드 또는 노드 테이블을 삭제 하기 연계 삭제는 지원 되지 않습니다. 노드 테이블이 삭제 되 면 사용자가 수동으로 그래프의 무결성을 유지 하려면 해당 노드 테이블의 노드에 연결 된 모든 가장자리를 삭제 하는 것이 좋습니다.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>데이터 조작 언어 (DML) 문
@@ -159,7 +159,7 @@ Edge 테이블의 암시적 열
 |태스크   |관련된 항목  |참고
 |---  |---  |---  |
 |SELECT |[SELECT &#40;TRANSACT-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|대부분의 SQL Server 또는 Azure SQL 데이터베이스 테이블에서 지원 되는 작업의 노드 및 가장자리 테이블에 사용할 수 있으므로, 노드 및 가장자리 내부 테이블로 저장 됩니다.  |
-|MATCH  | [일치 하는 항목 &#40; Transact SQL &#41;](../../t-sql/queries/match-sql-graph.md)|기본 제공 일치 하는 패턴 일치 및 그래프를 통해 통과 지원 하기 위해 도입 되었습니다.  |
+|MATCH  | [일치 &#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)|기본 제공 일치 하는 패턴 일치 및 그래프를 통해 통과 지원 하기 위해 도입 되었습니다.  |
 
 
 

@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ServiceName property
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3af55be1227be99c7c36026e0013569c5f40813a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 78ee870cc5143ba4c1ab8cb2988b553006247bfd
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName 속성(SqlServiceAdvancedProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-고급 속성과 연결된 관리되는 서비스의 이름을 가져옵니다.  
+  고급 속성과 연결된 관리되는 서비스의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

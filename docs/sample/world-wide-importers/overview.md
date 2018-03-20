@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 658c1b3ffd44cd2194c75d6ad45888e24e0772c1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4d22aada117e3230e36aa52e911f31eea53439e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wide-world-importers-overview"></a>방법 개요
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]이것이 회사인 Wide World Importers 및 SQL Server 및 Azure SQL 데이터베이스에 대 한 WideWorldImporters 예제 데이터베이스에 주소가 지정 된 워크플로에 대 한 개요입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+이것이 회사인 Wide World Importers 및 SQL Server 및 Azure SQL 데이터베이스에 대 한 WideWorldImporters 예제 데이터베이스에 주소가 지정 된 워크플로에 대 한 개요입니다.  
 
 Wide World Importers (WWI)은 도매 새로 움 상품 가져오기 및 배포자 샌프란시스코 베이 영역에서 작동 합니다.
 
@@ -71,4 +73,4 @@ SQL Server Analysis Services 차원 데이터를 모델의 데이터에서 분�
 
 예제 데이터베이스와 예제 코드에 대 한 라이선스 여기에 설명 된: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-샘플 데이터베이스 data.gov 및 자연 EarthData에서 로드 된 공용 데이터를 포함 합니다. 사용 약관에는 여기: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+샘플 데이터베이스 data.gov 및 자연 EarthData에서 로드 된 공용 데이터를 포함 합니다. 사용 약관 여기 있습니다. [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)

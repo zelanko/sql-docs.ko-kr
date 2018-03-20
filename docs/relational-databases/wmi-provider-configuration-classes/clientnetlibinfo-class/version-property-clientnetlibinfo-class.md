@@ -21,19 +21,19 @@ helpviewer_keywords:
 - Version property
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 075c7d34ffedbac6792cad1ac480470cfc699f7b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 298c5271cca6c0a888b5b14282bbe3648dc677b0
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version 속성(ClientNetLibInfo 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-클라이언트 네트워크 라이브러리 파일의 버전을 가져옵니다.  
+  클라이언트 네트워크 라이브러리 파일의 버전을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
