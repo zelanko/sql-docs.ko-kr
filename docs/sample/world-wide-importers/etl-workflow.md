@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: bbda77b86b4c804ae0cf261f54f51fc487090e1d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a9ccfb4f49e490cb681561aeaa5a0e9a8e86ad0
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 워크플로
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WWI_Integration ETL 패키지에서에서 데이터를 마이그레이션하도록 WideWorldImporters 데이터베이스 WideWorldImportersDW 데이터베이스에 데이터 변경 내용으로 사용 됩니다. 패키지를 정기적으로 실행 (가장 일반적으로 매일)입니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WWI_Integration ETL 패키지에서에서 데이터를 마이그레이션하도록 WideWorldImporters 데이터베이스 WideWorldImportersDW 데이터베이스에 데이터 변경 내용으로 사용 됩니다. 패키지를 정기적으로 실행 (가장 일반적으로 매일)입니다.
 
 ## <a name="overview"></a>개요
 
@@ -55,15 +57,15 @@ ms.lasthandoff: 12/05/2017
 
 샘플의 최신 버전:
 
-[wide world-가져오기 도구 릴리스](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 SSIS 패키지 파일을 다운로드 **매일 ETL.ispac**합니다.
 
 샘플 데이터베이스를 다시 만드는 소스 코드를 다음 위치에서 사용할 수 있습니다.
 
-[wide world-importer](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
 
-## <a name="install"></a>Install
+## <a name="install"></a>설치
 
 1. SSIS 패키지를 배포 합니다.
    - Windows 탐색기에서 "매일 ETL.ispac" 패키지를 엽니다. Integration Services 배포 마법사 시작 됩니다.

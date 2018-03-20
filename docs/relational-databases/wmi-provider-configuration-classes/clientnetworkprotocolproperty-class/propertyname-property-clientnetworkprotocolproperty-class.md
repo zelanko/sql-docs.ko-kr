@@ -21,19 +21,19 @@ helpviewer_keywords:
 - PropertyName property
 ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ef53fb99e113a5c2109c0b5ff1e9c6e2c6b527e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 8f7a87931101732571331cc2f7304c8440eb66f3
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>PropertyName 속성(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-[PropertyIdx 속성(ClientNetworkProtocolProperty 클래스)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) 값에서 참조하는 현재 속성의 이름을 가져옵니다.  
+  [PropertyIdx 속성(ClientNetworkProtocolProperty 클래스)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) 값에서 참조하는 현재 속성의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

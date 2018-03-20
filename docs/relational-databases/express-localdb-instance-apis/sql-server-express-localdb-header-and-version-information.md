@@ -15,19 +15,19 @@ apilocation:
 - sqluserinstance.dll
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09b0bc0bb6e65799db8d0767d24a14a59304248d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 10c1f1bf09aa4c98a3345c427e37e972ccca1362
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 헤더 및 버전 정보
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-SQL Server Express LocalDB 인스턴스 API에 대한 별도의 헤더 파일이 없습니다. LocalDB 함수 서명 및 오류 코드는 SQL Server Native Client 헤더 파일(sqlncli.h)에 정의됩니다. LocalDB 인스턴스 API를 사용하려면 프로젝트에 sqlncli.h 헤더 파일을 포함해야 합니다.  
+  SQL Server Express LocalDB 인스턴스 API에 대한 별도의 헤더 파일이 없습니다. LocalDB 함수 서명 및 오류 코드는 SQL Server Native Client 헤더 파일(sqlncli.h)에 정의됩니다. LocalDB 인스턴스 API를 사용하려면 프로젝트에 sqlncli.h 헤더 파일을 포함해야 합니다.  
   
 ## <a name="localdb-versioning"></a>LocalDB 버전 관리  
  LocalDB 설치에서는 SQL Server 주 버전당 단일 이진 파일 집합을 사용합니다. 이러한 LocalDB 버전은 독립적으로 유지되고 패치됩니다. 따라서 사용자가 사용할 LocalDB 기준선 릴리스(주 SQL Server 버전)를 직접 지정해야 합니다. .NET Framework에서 정의 된 표준 버전 형식에 지정 된 버전은 **System.Version** 클래스:  

@@ -55,7 +55,6 @@
 ### [PowerShell을 사용하여 관리](sql-server-linux-manage-powershell.md)
 ### [로그 전달 사용](sql-server-linux-use-log-shipping.md)
 ### [DB 메일 및 메일 알림 사용](sql-server-linux-db-mail-sql-agent.md)
-### [가용성을 위해 다중 서브넷 구성](sql-server-linux-configure-multiple-subnet.md)
 
 ## [마이그레이션](sql-server-linux-migrate-overview.md)
 ### [Windows에서 BACPAC 내보내기 및 가져오기](sql-server-linux-migrate-ssms.md)
@@ -85,6 +84,7 @@
 ##### [Ubuntu에서 구성](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [장애 조치](sql-server-linux-availability-group-failover-ha.md)
 ##### [운영](sql-server-linux-availability-group-operate-ha.md)
+##### [가용성을 위해 다중 서브넷 구성](sql-server-linux-configure-multiple-subnet.md)
 #### [읽기 배율 전용으로 만들기]()
 ##### [AG 구성](sql-server-linux-availability-group-configure-rs.md)
 #### [플랫폼 간(Windows 및 Linux) 구성](sql-server-linux-availability-group-cross-platform.md)

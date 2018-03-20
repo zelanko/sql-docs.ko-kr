@@ -22,19 +22,19 @@ helpviewer_keywords:
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a81f11f9c28fe19b02890c665cf4ce1e4b6f4a94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: df9bbccadc0abb2ea1c8ca26093b8bdd0b893179
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>구성 관리용 WMI 공급자 작업
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-컴퓨터 관리용 WMI 공급자를 사용하여 프로그래밍하기 전에 다음을 고려합니다.  
+  컴퓨터 관리용 WMI 공급자를 사용하여 프로그래밍하기 전에 다음을 고려합니다.  
   
 ## <a name="binding"></a>Binding  
  구성 관리용 WMI 공급자는 COM 개체 모델이며 초기 바인딩과 런타임에 바인딩을 지원합니다. 런타임에 바인딩의 경우 VBScript와 같은 스크립트 언어를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스, 네트워크 설정 및 별칭을 프로그래밍 방식으로 조작할 수 있습니다.  

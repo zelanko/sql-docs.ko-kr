@@ -17,19 +17,19 @@ helpviewer_keywords:
 - WMI Provider for Server Events, about WMI Provider for Server Events
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68916b90c9b8312f02f75f5911a7871d350d4d5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a7f710e54927b01ddcbdf0bb7890d992087bc51f
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자 이해
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-서버 이벤트용 WMI 공급자는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이벤트를 모니터링할 수 있도록 합니다. 이 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리 WMI 개체로 전환하여 작동됩니다. WMI에서는 이 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이벤트 알림을 생성할 수 있는 모든 이벤트를 사용할 수 있습니다. 또한 WMI와 상호 작용하는 관리 응용 프로그램인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 이러한 이벤트에 응답할 수 있기 때문에 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 처리하던 이벤트보다 다양한 이벤트를 처리할 수 있습니다.  
+  서버 이벤트용 WMI 공급자는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이벤트를 모니터링할 수 있도록 합니다. 이 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리 WMI 개체로 전환하여 작동됩니다. WMI에서는 이 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이벤트 알림을 생성할 수 있는 모든 이벤트를 사용할 수 있습니다. 또한 WMI와 상호 작용하는 관리 응용 프로그램인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 이러한 이벤트에 응답할 수 있기 때문에 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 처리하던 이벤트보다 다양한 이벤트를 처리할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트와 같은 관리 응용 프로그램에서는 서버 이벤트용 WMI 공급자를 통해 WQL(WMI Query Language) 문을 실행하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트에 액세스할 수 있습니다. WQL은 몇 가지 WMI 관련 확장 기능이 포함된 SQL(구조적 쿼리 언어)의 단순화된 일부입니다. WQL을 사용할 경우 응용 프로그램에서는 특정 데이터베이스나 데이터베이스 개체에 대해 이벤트 유형을 검색합니다. 서버 이벤트용 WMI 공급자는 쿼리를 이벤트 알림으로 변환하여 대상 데이터베이스의 이벤트 알림을 효율적으로 생성합니다. 이벤트 알림이 작동 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [서버 이벤트 개념에 대 한 WMI 공급자](http://technet.microsoft.com/library/ms180560.aspx)합니다. 쿼리할 수 있는 이벤트에 나열 됩니다 [서버 이벤트 클래스 및 속성에 대 한 WMI 공급자](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)합니다.  
   

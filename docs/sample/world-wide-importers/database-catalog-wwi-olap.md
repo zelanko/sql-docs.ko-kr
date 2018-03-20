@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 10/31/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ed65e42-527a-45e7-9a91-7179e892652e
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: d6b43b590e7a5e6117f6752e1eb1dec701ca645e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3957abef7fb70698c04fd22d390d96ac4cd17b
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 데이터베이스 카탈로그
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]스키마, 테이블 및 WideWorldImportersDW 데이터베이스의 저장된 프로시저에 대 한 설명입니다. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+스키마, 테이블 및 WideWorldImportersDW 데이터베이스의 저장된 프로시저에 대 한 설명입니다. 
 
 WideWorldImportersDW 데이터베이스는 데이터 웨어하우징 및 분석 처리에 사용 됩니다. 판매 및 구매에 대 한 트랜잭션 데이터 WideWorldImporters 데이터베이스에 생성 되 고 사용 하 여 WideWorldImportersDW 데이터베이스에 로드 한 **일별 ETL 프로세스**합니다.
 
@@ -97,7 +99,7 @@ WideWorldImportersDW 다음 팩트 테이블에 있습니다. 설명은 WideWorl
 ETL 프로세스에 사용 되는 프로시저는 이러한 범주에 속합니다.
 - ETL 패키지-모든 Get * 프로시저에 대 한 도우미 프로시저입니다.
 - 모든 마이그레이션 * 프로시저-DW 테이블로 데이터를 준비 하는 ETL 패키지에서 마이그레이션하는 데 사용 되는 프로시저입니다.
-- `PopulateDateDimensionForYear`-1 년을 사용 하 고 해당 연도의 모든 날짜에 채워지도록 보장는 `Dimension.Date` 테이블입니다.
+- `PopulateDateDimensionForYear` -1 년을 사용 하 고 해당 연도의 모든 날짜에 채워지도록 보장는 `Dimension.Date` 테이블입니다.
 
 ### <a name="sequences-schema"></a>시퀀스 스키마
 

@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SystemStore property
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 987bb76b29f3f7e6f373aa904b9f7c1870c250b0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e43b660eb9fd19aa61f341dbd3a51c1f63c1e0f2
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>SystemStore 속성(SecurityCertificate 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-보안 인증서용 시스템 저장소를 가져옵니다.  
+  보안 인증서용 시스템 저장소를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

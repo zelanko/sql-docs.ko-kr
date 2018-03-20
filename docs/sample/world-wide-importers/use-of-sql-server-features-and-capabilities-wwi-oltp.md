@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 9a76e8c2bb70be5accc28d65de7f86db86dacd29
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34535db5b43311e13d21fd663f5302327b24978e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server 기능 및 기능 사용
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]OLTP 데이터베이스의 기능 및 SQL Server 기능의 WideWorldImporters 사용합니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+OLTP 데이터베이스의 기능 및 SQL Server 기능의 WideWorldImporters 사용합니다.
 
 WideWorldImporters는 다양 한 SQL Server 2016에 도입 된 최신 기능을 포함 하 여 SQL Server의 주요 기능을 보여 주기 위해 설계 되었습니다. 다음 목록은 SQL Server 기능 및 기능과 WideWorldImporters에서 사용 되는 방법을 설명 합니다.
 
@@ -42,7 +44,7 @@ WideWorldImporters는 다양 한 SQL Server 2016에 도입 된 최신 기능을 
 |동적 데이터 마스킹|데이터베이스 스키마의 데이터 마스킹에 적용 된 은행 세부 정보에는 테이블에서에서 공급 업체에 대 한 유지 `Purchasing.Suppliers`합니다. Non-admin 인 직원에 체계가이 정보에 액세스할 수 없습니다.|
 |항상 암호화|상시 암호화에 대 한 데모 ´ â 포함 되어 있는 다운로드 가능한 samples.zip의는 [샘플의 릴리스](http://go.microsoft.com/fwlink/?LinkID=800630)... 이 데모는 암호화 키를 암호화를 사용 하 여 중요 한 데이터 및 데이터 테이블에 삽입 하는 작은 샘플 응용 프로그램에 대 한 테이블을 만듭니다.|
 |스트레치 데이터베이스|`Warehouse.ColdRoomTemperatures` 테이블을 임시 테이블로 구현 및 예제 데이터베이스의 전체 버전에서 메모리 최적화 합니다. 보관 테이블은 디스크 기반 및 Azure로 확장할 수 있습니다.|
-|전체 텍스트 인덱스|전체 텍스트 인덱스에는 사용자, 고객 및 StockItems 검색 향상 시킵니다. 전체 텍스트 인덱싱에 SQL Server 인스턴스에 설치 되어 있는 경우에 인덱스 쿼리에 적용 됩니다. 비 영구적인 계산된 열이 전체 텍스트 인덱싱된 StockItems 테이블에 있는 데이터를 만들기 위해 사용 됩니다.<br/><br/>`CONCAT`전체 텍스트 인덱스는 SearchData 만들려는 필드를 연결 하는 데 사용 됩니다.<br/>샘플에 전체 텍스트 인덱스의 사용을 사용 하도록 설정 하려면 데이터베이스에 다음 문을 실행 합니다.<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>프로시저는 만듭니다 기본 전체 텍스트 카탈로그 하나 존재 하지 않는 한 다음 그 뷰의 전체 텍스트 버전 검색 뷰를 대체 하는 경우).<br/><br/>참고 SQL Server에서 전체 텍스트 인덱스를 사용 해야 한다는 설치 하는 동안 전체 텍스트 옵션을 선택 합니다. Azure SQL 데이터베이스 필요 하지 않습니다 및 전체 텍스트 인덱스를 활성화 하려면 특정 구성입니다.|
+|전체 텍스트 인덱스|전체 텍스트 인덱스에는 사용자, 고객 및 StockItems 검색 향상 시킵니다. 전체 텍스트 인덱싱에 SQL Server 인스턴스에 설치 되어 있는 경우에 인덱스 쿼리에 적용 됩니다. 비 영구적인 계산된 열이 전체 텍스트 인덱싱된 StockItems 테이블에 있는 데이터를 만들기 위해 사용 됩니다.<br/><br/>`CONCAT` 전체 텍스트 인덱스는 SearchData 만들려는 필드를 연결 하는 데 사용 됩니다.<br/>샘플에 전체 텍스트 인덱스의 사용을 사용 하도록 설정 하려면 데이터베이스에 다음 문을 실행 합니다.<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>프로시저는 만듭니다 기본 전체 텍스트 카탈로그 하나 존재 하지 않는 한 다음 그 뷰의 전체 텍스트 버전 검색 뷰를 대체 하는 경우).<br/><br/>참고 SQL Server에서 전체 텍스트 인덱스를 사용 해야 한다는 설치 하는 동안 전체 텍스트 옵션을 선택 합니다. Azure SQL 데이터베이스 필요 하지 않습니다 및 전체 텍스트 인덱스를 활성화 하려면 특정 구성입니다.|
 |인덱싱된 지속형된 계산된 열|SupplierTransactions 및 CustomerTransactions에 사용 되는 지속형된 계산된 열 인덱스입니다.|
 |CHECK 제약 조건|상대적으로 복잡 한 check 제약 조건을 중인 `Sales.SpecialDeals`합니다. 이렇게 하면 둘 중 하나만 DiscountAmount, DiscountPercentage, 및 UnitPrice 구성 됩니다.|
 |Unique 제약 조건|많은 생성 (및 unique 제약 조건)에 게 다 Warehouse.StockItemStockGroups'에 대 한 설정 되어 있습니다.|

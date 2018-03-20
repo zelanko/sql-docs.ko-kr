@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SetOrderValue method
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1663a40671e6d5df2c407c1a99aa70751f587fbc
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 26da8fd19277dd1170b811e4337785a3fb7557cd
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 메서드(ClientNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-지정된 순서 값을 가진 프로토콜을 클라이언트 프로토콜 목록에서 선택합니다.  
+  지정된 순서 값을 가진 프로토콜을 클라이언트 프로토콜 목록에서 선택합니다.  
   
 ## <a name="syntax"></a>구문  
   

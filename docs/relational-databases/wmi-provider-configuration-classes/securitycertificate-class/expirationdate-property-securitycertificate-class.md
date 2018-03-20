@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ExpirationDate property
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af97f773be7008163378603e7a7fd6ae4b1c6dd2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: ef4e8c44c52436d57a312fd8dd50e515956414e6
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>ExpirationDate 속성(SecurityCertificate 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-보안 인증서의 유효 기간 끝 날짜를 가져옵니다.  
+  보안 인증서의 유효 기간 끝 날짜를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

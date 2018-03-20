@@ -19,19 +19,19 @@ apilocation:
 apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 352574084c92b76e62269bdde6751fde2982494e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: aa3f06c06decc0c731627a506f09c275ea0115db
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-컴퓨터에서 사용할 수 있는 모든 SQL Server Express LocalDB 버전을 반환합니다.  
+  컴퓨터에서 사용할 수 있는 모든 SQL Server Express LocalDB 버전을 반환합니다.  
   
  **헤더 파일:** sqlncli.h  
   

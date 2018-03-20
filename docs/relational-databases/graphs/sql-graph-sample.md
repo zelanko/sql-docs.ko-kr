@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale;barbkess
+ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d570be772eefec569c59e01a3501a18c1f33d536
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>그래프 데이터베이스를 만들고 일부 패턴 일치 T-SQL을 사용 하 여 쿼리를 실행 합니다.
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -175,4 +175,4 @@ go
 |---  |---  |
 |[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |그래프 노드 또는 edge 테이블 만들기  |
 |[INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |노드 또는 edge 테이블에 삽입  |
-|[일치 하는 항목 &#40; Transact SQL &#41;](../../t-sql/queries/match-sql-graph.md)  |MATCH를 사용 하 여 패턴을 검색 하거나 그래프를 통과  |
+|[일치 &#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |MATCH를 사용 하 여 패턴을 검색 하거나 그래프를 통과  |

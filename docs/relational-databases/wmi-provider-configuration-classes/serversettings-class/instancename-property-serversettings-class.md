@@ -21,19 +21,19 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86f99936717dad2f25c3c40377a266017db34288
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 819af6c85739c7e47a495c6249ecc8abefd632cb
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="instancename-property-serversettings-class"></a>InstanceName 속성(ServerSettings 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-인스턴스의 이름을 가져옵니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 설정이 적용 되는에 있습니다.  
+  인스턴스의 이름을 가져옵니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 설정이 적용 되는에 있습니다.  
   
 ## <a name="syntax"></a>구문  
   

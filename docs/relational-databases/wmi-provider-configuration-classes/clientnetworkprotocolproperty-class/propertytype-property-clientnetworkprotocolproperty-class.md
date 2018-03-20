@@ -21,19 +21,19 @@ helpviewer_keywords:
 - PropertyType property
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31169bdfb3f604fa834cdbab77b95cce651fee36
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 81d19be50d4a053ed6030936e5fec149edf66105
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>PropertyType 속성(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-참조 하는 속성의 형식을 가져옵니다는 [PropertyIdx 속성 (ClientNetworkProtocolProperty 클래스)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) 값입니다.  
+  참조 하는 속성의 형식을 가져옵니다는 [PropertyIdx 속성 (ClientNetworkProtocolProperty 클래스)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) 값입니다.  
   
 ## <a name="syntax"></a>구문  
   

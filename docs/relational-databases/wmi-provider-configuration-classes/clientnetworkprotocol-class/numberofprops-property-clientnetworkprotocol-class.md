@@ -21,19 +21,19 @@ helpviewer_keywords:
 - NumberOfProps property
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b3ee4120259cb80755b1148e3d771487ce13866
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 82e77ba43d4df292f069e92ed1d777d0dc6ff103
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps 속성(ClientNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-가져옵니다는 다양 한 클라이언트의 속성에 지정 된 프로토콜 네트워크는 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md)합니다.  
+  가져옵니다는 다양 한 클라이언트의 속성에 지정 된 프로토콜 네트워크는 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   

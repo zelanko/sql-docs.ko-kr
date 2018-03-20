@@ -21,19 +21,19 @@ helpviewer_keywords:
 - HostName property
 ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a07221e8e0993d3dacce6a6400aeac58a7f3693d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 018e8fccf9122bf03d78087643371e8ca0259f5c
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="hostname-property-sqlservice-class"></a>HostName 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-서비스의 호스트 이름을 가져옵니다.  
+  서비스의 호스트 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
