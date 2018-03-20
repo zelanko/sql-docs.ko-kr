@@ -20,19 +20,19 @@ helpviewer_keywords:
 - AcceptStop property
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a06daf009aea6af26f2ba70fa654d14fe952f4c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e7790ad93e9eaf06374b5520a196c924f38d6d84
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-서비스를 중지할 수 있는지 여부를 지정하는 부울 속성 값을 가져옵니다.  
+  서비스를 중지할 수 있는지 여부를 지정하는 부울 속성 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
