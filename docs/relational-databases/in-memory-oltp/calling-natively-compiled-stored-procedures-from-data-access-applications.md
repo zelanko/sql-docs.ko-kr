@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9965ea8ab6c5b1492a57cfd20b03bd17167bd6d2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 9111de789fad1ef59d2d1785d44e686a0993c956
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-이 항목에서는 데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저를 호출하는 방법에 대한 지침을 설명합니다.  
+  이 항목에서는 데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저를 호출하는 방법에 대한 지침을 설명합니다.  
   
  커서는 고유하게 컴파일된 저장 프로시저를 반복할 수 없습니다.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/12/2018
  SqlClient는 고유하게 컴파일된 저장 프로시저(CommandType.SchemaOnly)에서 반환되는 결과 집합에 대한 스키마 전용 정보 검색(메타데이터 검색)을 지원하지 않습니다. 대신 [sp_describe_first_result_set&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)를 사용하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client는 고유하게 컴파일된 저장 프로시저에서 반환되는 결과 집합에 대한 스키마 전용 정보 검색(메타데이터 검색)을 지원하지 않습니다. 대신 [sp_describe_first_result_set&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)를 사용하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보다 이전 버전의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client는 고유하게 컴파일된 저장 프로시저에서 반환되는 결과 집합에 대한 스키마 전용 정보 검색(메타데이터 검색)을 지원하지 않습니다. 대신 [sp_describe_first_result_set&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)를 사용하세요.  
   
  다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 고유하게 컴파일된 저장 프로시저를 호출할 때 적용되는 권장 사항입니다.  
   

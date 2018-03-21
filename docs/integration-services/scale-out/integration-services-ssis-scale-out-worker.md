@@ -18,11 +18,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cd80620f668e87eba8a77f1ac6a9e5faa2378da
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0e3fdf8e84b12315ef3ce500b933c4b4d6580f13
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services(SSIS) 규모 확장 작업자
 
@@ -43,8 +43,8 @@ StoreName|해당 작업자 인증서가 있는 저장소 이름입니다.|My
 AgentHeartbeatInterval|규모 확장 작업자 하트비트의 간격입니다.|00:01:00         
 TaskHeartbeatInterval|규모 확장 작업자의 작업 상태 보고 간격입니다.|00:00:10         
 HeartbeatErrorTollerance|마지막으로 성공한 작업 하트비트의 이 기간 이후 하트비트의 오류 응답이 수신되면 작업이 종료됩니다.|00:10:00      
-TaskRequestMaxCPU|규모 확장 작업자가 작업을 요청할 수 있는 CPU의 상한입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|70.0         
-TaskRequestMinMemory|규모 확장 작업자가 작업을 요청할 수 있는 메모리의 하한(MB)입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|100.0         
+TaskRequestMaxCPU|규모 확장 작업자가 작업을 요청할 수 있는 CPU의 상한입니다.|70.0         
+TaskRequestMinMemory|규모 확장 작업자가 작업을 요청할 수 있는 메모리의 하한(MB)입니다.|100.0         
 MaxTaskCount|규모 확장 작업자가 보유할 수 있는 최대 작업 수입니다.|10         
 LeaseInternval|규모 확장 작업자가 보유하고 있는 작업의 임대 간격입니다.|00:01:00         
 TasksRootFolder|작업 로그의 폴더입니다. 값이 비어 있는 경우 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 폴더 경로가 사용됩니다. [account]는 규모 확장 작업자 서비스를 실행하는 계정입니다. 기본적으로 이 계정은 SSISScaleOutWorker140입니다.|비어 있음         

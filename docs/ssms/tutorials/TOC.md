@@ -1,4 +1,5 @@
 # [자습서: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+## [SSMS를 사용하여 SQL Server 연결 및 쿼리](connect-query-sql-server.md)
 
 # 단원
 ## [1단원: SQL Server Management Studio의 기본 탐색](lesson-1-basic-navigation-in-sql-server-management-studio.md)  

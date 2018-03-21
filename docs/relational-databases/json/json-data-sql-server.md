@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ce81acc4134e1b8b9570d2eb871e1beb5565673
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 92bac08a5168cb60477f8d253a9fee1f0fb5caef
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -324,7 +324,7 @@ SQL Server 및 Azure SQL Database에서 기본 제공 JSON 지원에 대한 시�
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
 *JSON 함수를 사용하여 SQL Server로 REST API 빌드하기*
-> [!VIDEO https://www.youtube.com/watch?v=0m6GXF3-5WI]
+> [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]
 
 ### <a name="reference-articles"></a>참조 문서  
   

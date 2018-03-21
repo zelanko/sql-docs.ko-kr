@@ -17,19 +17,19 @@ helpviewer_keywords:
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8590e3177aefa3889743069c8b69b63ec5f93953
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 06ab0b9dda2c2bad6287c19d35a1d59e03774baa
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="event-notifications"></a>이벤트 알림
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이벤트 알림은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스에 이벤트 정보를 보냅니다. 이벤트 알림은 다양한 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL(데이터 언어 정의) 문과 SQL 추적 이벤트에 대한 응답으로 실행되어 이러한 이벤트에 대한 정보를 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스로 보냅니다.  
+  이벤트 알림은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스에 이벤트 정보를 보냅니다. 이벤트 알림은 다양한 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL(데이터 언어 정의) 문과 SQL 추적 이벤트에 대한 응답으로 실행되어 이러한 이벤트에 대한 정보를 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스로 보냅니다.  
   
  이벤트 알림을 사용하여 다음을 수행할 수 있습니다.  
   

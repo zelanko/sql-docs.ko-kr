@@ -1,7 +1,7 @@
 ---
 title: "LOGON 트리거 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -23,15 +23,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 123a1456150d99f47b6f524d76f0afa0d79ba86b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a22d0170dfe776207ca5fe9ecb79cbce3684e797
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="logon-triggers"></a>LOGON 트리거
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-LOGON 트리거는 LOGON 이벤트에 대한 응답으로 저장 프로시저를 실행합니다. 이 이벤트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 사용자 세션이 설정된 경우 발생합니다. LOGON 트리거는 로그인의 인증 단계가 완료되었지만 사용자 세션이 실제로 설정되기 전에 발생합니다. 따라서 오류 메시지 및 PRINT 문의 메시지와 같이 일반적으로 사용자에게 전달되는 모든 트리거 내 발생 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그로 전달됩니다. 인증에 실패할 경우 LOGON 트리거는 실행되지 않습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  LOGON 트리거는 LOGON 이벤트에 대한 응답으로 저장 프로시저를 실행합니다. 이 이벤트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 사용자 세션이 설정된 경우 발생합니다. LOGON 트리거는 로그인의 인증 단계가 완료되었지만 사용자 세션이 실제로 설정되기 전에 발생합니다. 따라서 오류 메시지 및 PRINT 문의 메시지와 같이 일반적으로 사용자에게 전달되는 모든 트리거 내 발생 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그로 전달됩니다. 인증에 실패할 경우 LOGON 트리거는 실행되지 않습니다.  
   
  LOGON 트리거를 사용하면 로그인 작업 추적, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 로그인 제한, 특정 로그인에 대한 세션 수 제한 등의 작업을 수행하여 서버 세션을 감사하고 제어할 수 있습니다. 예를 들어 다음 코드에서 LOGON 트리거는 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login_test *가 이미 3개의 사용자 세션을 만든 상태에서* 에 대한 로그인을 시도하면 해당 요청을 거부합니다.  
   

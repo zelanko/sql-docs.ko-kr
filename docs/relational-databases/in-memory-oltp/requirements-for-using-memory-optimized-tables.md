@@ -14,15 +14,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3482d6e097e77966be39e33b6eb31b7d941c7624
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 50d2fc5af283489b8f02d2a7e7aa54dc76d14e59
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,8 @@ ms.lasthandoff: 02/12/2018
     > [!NOTE]
     > 메모리 내 OLTP에는 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 필요합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 메모리 최적화 테이블에 데이터를 저장하기에 충분한 메모리 및 온라인 작업을 지원하기 위한 추가 메모리가 필요합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 을 참조하세요.  
+-   
+            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 메모리 최적화 테이블 및 인덱스에 데이터를 저장하기에 충분한 메모리와 온라인 워크로드를 지원하기 위한 추가 메모리가 필요합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 을 참조하세요.  
 
 -   VM(가상 컴퓨터)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행하는 경우 메모리 최적화 테이블 및 인덱스에 필요한 메모리를 지원하기에 충분한 메모리가 VM에 할당되었는지 확인합니다. VM 호스트 응용 프로그램에 따라 VM에 대한 메모리 할당을 보장하는 구성 옵션을 메모리 예약 또는 동적 메모리를 사용하는 경우 최소 RAM이라고 할 수 있습니다. 이러한 설정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스 요구에 충분한지 확인합니다.
   

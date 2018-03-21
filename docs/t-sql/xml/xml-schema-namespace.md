@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19f4701bc26e115c7f6b78d01feef876665763df
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0df9cf1a8106242e740637e2e59b5f905f99bbe2
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xmlschemanamespace"></a>xml_schema_namespace
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  이 함수는 **sys.sys** XML 스키마 컬렉션에서 XML 스키마 문서를 생성하는 데 사용할 수 없습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `ProductDescriptionSchemaCollection` 데이터베이스의 production 관계형 스키마에서 XML 스키마 컬렉션인 `AdventureWorks2012`을 검색합니다.  
+ 다음 예에서는 `ProductDescriptionSchemaCollection` 데이터베이스의 production 관계형 스키마에서 XML 스키마 컬렉션인 `AdventureWorks`을 검색합니다.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
 SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection');  
 GO  

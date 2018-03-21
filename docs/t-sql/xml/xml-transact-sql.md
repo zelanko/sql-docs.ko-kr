@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6b9d3c8c512611ea9d8d0482acb7fd848c04629b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a74f389ee9e1c45e8de36c2430fa13c98d03b2d7
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-transact-sql"></a>xml(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,16 +65,16 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
 ## <a name="examples"></a>예  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
-DECLARE @y xml (Sales.IndividualSurveySchemaCollection);  
-SET @y =  (SELECT TOP 1 Demographics FROM Sales.Individual);  
-SELECT @y;  
+DECLARE @DemographicData xml (Person.IndividualSurveySchemaCollection);  
+SET @DemographicData =  (SELECT TOP 1 Demographics FROM Person.Person);  
+SELECT @DemographicData;  
 GO  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [데이터 형식 변환&#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)   
  [XQuery 언어 참조&#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
