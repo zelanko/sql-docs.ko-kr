@@ -1,5 +1,5 @@
 ---
-title: "ADO 프로그래머 &#39; s 참조 | Microsoft Docs"
+title: "ADO 프로그래머&#39;s 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,12 +20,12 @@ ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7632d4bed6a963e1015c4ae07adf4fbf7b034a37
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="ado-programmer39s-reference"></a>ADO 프로그래머 &#39; s 참조
+# <a name="ado-programmer39s-reference"></a>ADO 프로그래머&#39;s 참조
 이 섹션에서는 다음 항목을 다룹니다.  
   
 -   [ADO API 참조](../../ado/reference/ado-api/ado-api-reference.md)  
