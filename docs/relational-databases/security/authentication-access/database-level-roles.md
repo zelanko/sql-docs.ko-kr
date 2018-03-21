@@ -45,11 +45,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96a567e1fe27c5302d9adf3857539af2336d5d6f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fe700c3dc23125b21b24a749ca5ae5238d6a02c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 
 사용자 정의 데이터베이스 역할에 부여된 권한은 GRANT, DENY 및 REVOKE 문을 사용하여 사용자 지정할 수 있습니다. 자세한 내용은 [사용 권한(데이터베이스 엔진)](../../../relational-databases/security/permissions-database-engine.md)을 참조하세요.
 
-모든 사용 권한 목록을 보려면 [데이터베이스 엔진 권한](http://go.microsoft.com/fwlink/?LinkId=229142) 포스터를 참조하세요. (서버 수준 사용 권한은 데이터베이스 역할에 부여할 수 없습니다. 로그인 및 기타 서버 수준 보안 주체(예: 서버 역할)는 데이터베이스 역할에 추가할 수 없습니다. [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]의 서버 수준 보안을 위해서는 대신 [서버 역할](../../../relational-databases/security/authentication-access/server-level-roles.md) 을 사용하세요. 서버 수준 사용 권한은 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]에서 역할을 통해 부여할 수 없습니다.
+모든 사용 권한 목록을 보려면 [데이터베이스 엔진 권한](https://aka.ms/sql-permissions-poster) 포스터를 참조하세요. (서버 수준 사용 권한은 데이터베이스 역할에 부여할 수 없습니다. 로그인 및 기타 서버 수준 보안 주체(예: 서버 역할)는 데이터베이스 역할에 추가할 수 없습니다. [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]의 서버 수준 보안을 위해서는 대신 [서버 역할](../../../relational-databases/security/authentication-access/server-level-roles.md) 을 사용하세요. 서버 수준 사용 권한은 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]에서 역할을 통해 부여할 수 없습니다.
 
 ## <a name="fixed-database-roles"></a>고정 데이터베이스 역할
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/21/2017
   
 |msdb 역할 이름|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|이러한 데이터베이스 역할의 멤버는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]를 관리 및 사용할 수 있습니다. 이전 버전에서 업그레이드된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 대신 DTS(데이터 변환 서비스)를 사용하여 명명된 이전 버전의 역할이 포함될 수 있습니다. 자세한 내용은 [Integration Services 역할&#40;SSIS Service&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md)을 참조하세요.|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|이러한 데이터베이스 역할의 멤버는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]를 관리 및 사용할 수 있습니다. 이전 버전에서 업그레이드된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 대신 DTS(데이터 변환 서비스)를 사용하여 명명된 이전 버전의 역할이 포함될 수 있습니다. 자세한 내용은 [Integration Services 경로&#40;SSIS Service&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md)를 참조하세요.|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|이러한 데이터베이스 역할의 멤버는 데이터 수집기를 관리 및 사용할 수 있습니다. 자세한 내용은 [Data Collection](../../../relational-databases/data-collection/data-collection.md)을 참조하세요.|  
 |**PolicyAdministratorRole**|**db_ PolicyAdministratorRole** 데이터베이스 역할의 멤버는 정책 기반 관리 정책 및 조건의 모든 구성 및 유지 관리 작업을 수행할 수 있습니다. 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|이러한 데이터베이스 역할의 멤버는 등록된 서버 그룹을 관리 및 사용할 수 있습니다.|  
@@ -132,7 +132,7 @@ R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관
 ## <a name="working-with-database-level-roles"></a>데이터베이스 수준 역할 작업  
  다음 표에서는 데이터베이스 수준 역할 작업을 위한 명령, 뷰 및 함수에 대해 설명합니다.  
   
-|기능|유형|Description|  
+|기능|형식|Description|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|메타데이터|고정 데이터베이스 역할의 목록을 반환합니다.|  
 |[sp_dbfixedrolepermission&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|메타데이터|고정 데이터베이스 역할에 대한 사용 권한을 표시합니다.|  
@@ -145,11 +145,11 @@ R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관
 |[DROP ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Command|데이터베이스에서 역할을 제거합니다.|  
 |[sp_addrole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Command|현재 데이터베이스에 새 데이터베이스 역할을 만듭니다.|  
 |[sp_droprole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|현재 데이터베이스에서 데이터베이스 역할을 제거합니다.|  
-|[sp_addrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|현재 데이터베이스의 데이터베이스 역할에 데이터베이스 사용자, 데이터베이스 역할, Windows 로그인 또는 Windows 그룹을 추가합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)]를 제외한 모든 플랫폼에서 대신 `ALTER ROLE`을 사용해야 합니다.|  
+|[sp_addrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|현재 데이터베이스의 데이터베이스 역할에 데이터베이스 사용자, 데이터베이스 역할, Windows 로그인 또는 Windows 그룹을 추가합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 를 제외한 모든 플랫폼에서 대신 `ALTER ROLE` 을 사용해야 합니다.|  
 |[sp_droprolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|현재 데이터베이스의 SQL Server 역할에서 보안 계정을 제거합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 를 제외한 모든 플랫폼에서 대신 `ALTER ROLE` 을 사용해야 합니다.|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | 역할에 권한을 추가합니다.
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | 역할에 대한 권한을 거부합니다.
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | 이전에 부여하거나 거부한 사용 권한을 제거합니다.
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| 사용 권한 | 역할에 권한을 추가합니다.
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| 사용 권한 | 역할에 대한 권한을 거부합니다.
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| 사용 권한 | 이전에 부여하거나 거부한 사용 권한을 제거합니다.
   
   
 ## <a name="public-database-role"></a>public 데이터베이스 역할  

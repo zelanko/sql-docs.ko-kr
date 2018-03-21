@@ -18,18 +18,19 @@ helpviewer_keywords:
 - space [SQL Server], SQL Server Profiler
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da917dce9297e934bbaa0fd2236d1c2d17c08795
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: cb5a2c53aad0f396ade67d974ed6cfb2c5919913
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="improve-access-to-trace-data"></a>추적 데이터에 대한 액세스 향상
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 추적 데이터에 대한 액세스를 향상시키기 위해 **temp** 디렉터리의 공간을 사용합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에는 적어도 10MB의 사용 가능한 공간이 필요합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하는 동안 여유 공간이 10MB 이하로 내려가면 모든 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 기능이 중지됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 추적 데이터에 대한 액세스를 향상시키기 위해 **temp** 디렉터리의 공간을 사용합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에는 적어도 10MB의 사용 가능한 공간이 필요합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하는 동안 여유 공간이 10MB 이하로 내려가면 모든 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 기능이 중지됩니다.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 **temp** 디렉터리의 공간을 사용할 경우 이 공간 사용으로 인해 **temp** 디렉터리가 급격하게 커질 수 있습니다. TEMP 환경 변수의 값을 변경하여 **temp** 디렉터리를 시스템 드라이브가 아닌 드라이브에 두면 파일 증가 문제를 방지할 수 있습니다.  
   

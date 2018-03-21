@@ -18,15 +18,15 @@ helpviewer_keywords:
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: b604f834bbc1e3f08c30f3feae06d637036610d6
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>트랜잭션 로그 파일의 크기 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,9 +103,9 @@ ms.lasthandoff: 02/23/2018
   
       |버전 옵션|기본값|  
       |-------------|--------------------|  
-      |다음으로 시작 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|데이터는 64MB입니다. 로그 파일은 64MB입니다.|  
-      |다음으로 시작 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|데이터는 1MB입니다. 로그 파일은 10%입니다.|  
-      |다음 이전 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|데이터는 10%입니다. 로그 파일은 10%입니다.|  
+      |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]로 시작|데이터는 64MB입니다. 로그 파일은 64MB입니다.|  
+      |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 시작|데이터는 1MB입니다. 로그 파일은 10%입니다.|  
+      |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전|데이터는 10%입니다. 로그 파일은 10%입니다.|  
 
 -   작은 확장 증분은 너무 많은 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)가 생성되어 성능이 저하될 수 있습니다. 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포 및 필수 크기를 수행할 필수 성장 증분을 결정하려면 이 [스크립트](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요.
 

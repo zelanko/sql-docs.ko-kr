@@ -19,18 +19,19 @@ helpviewer_keywords:
 - renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 
-author: sstein
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b389a635dceb2af0e8457f72ae56013edb1065c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 414515b7c9c2d6b9c3fe3319979a5987594fb5dd
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="modify-views"></a>뷰 수정
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
-뷰를 정의한 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 해당 뷰를 삭제하고 다시 만들지 않고 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 해당 정의를 수정할 수 있습니다.  
+  뷰를 정의한 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 해당 뷰를 삭제하고 다시 만들지 않고 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 해당 정의를 수정할 수 있습니다.  
   
  **항목 내용**  
   

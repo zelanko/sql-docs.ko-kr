@@ -30,19 +30,19 @@ helpviewer_keywords:
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b46508013b66ab14175b0edc2710c9c98ed901a9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7c82c775f808b1747261f3ce33d46ca467d8bca1
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-*검사점* 은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 예기치 않은 종료 또는 충돌 후 복구하는 과정에서 로그에 포함된 변경 내용의 적용을 시작할 수 있는 알려진 올바른 지점을 만듭니다.  
+ *검사점* 은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 예기치 않은 종료 또는 충돌 후 복구하는 과정에서 로그에 포함된 변경 내용의 적용을 시작할 수 있는 알려진 올바른 지점을 만듭니다.  
  
   
 ##  <a name="Overview"></a> 개요   

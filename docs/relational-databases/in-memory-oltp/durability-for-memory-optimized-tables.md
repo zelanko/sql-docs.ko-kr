@@ -14,20 +14,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 206337e355352ce6b1f1a13cd36f90f18937de91
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7a1f8dc5d75cb3a9422f67a7d4b55f96534bdbfa
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="durability-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 내구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 메모리 최적화 테이블에 대한 완전한 내구성을 제공합니다. 메모리 최적화 테이블을 변경한 트랜잭션을 커밋할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하면 (디스크 기반 테이블과 마찬가지로) 기본 저장소를 사용할 수 있는 경우 변경 내용이 영구적이 됩니다(데이터베이스 다시 시작 유지). 내구성의 두 가지 주요 구성 요소는 트랜잭션 로깅 및 디스크상 저장소에 데이터 변경 내용 저장입니다.  
+  
+            [!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 메모리 최적화 테이블에 대한 완전한 내구성을 제공합니다. 메모리 최적화 테이블을 변경한 트랜잭션을 커밋할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하면 (디스크 기반 테이블과 마찬가지로) 기본 저장소를 사용할 수 있는 경우 변경 내용이 영구적이 됩니다(데이터베이스 다시 시작 유지). 내구성의 두 가지 주요 구성 요소는 트랜잭션 로깅 및 디스크상 저장소에 데이터 변경 내용 저장입니다.  
   
  내구성이 있는 테이블의 크기 제한에 대한 자세한 내용은 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)을 참조하세요. 
   

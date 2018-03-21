@@ -15,22 +15,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 caps.latest.revision: 
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c63c70bdd99e31466aa94f72d765e50e0db78779
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 50ae258437afb40cd2b427048dfe24330676f94f
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>SQL Server Business Intelligence 기능 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Microsoft Business Intelligence 플랫폼에 속하는 SQL Server 기능에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 분석 데이터를 만들거나 사용하는 데 사용되는 일부 클라이언트 응용 프로그램이 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 이러한 기능을 설치하는 방법에 대해 설명합니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 독립 실행형 서버로 설치하거나, 확장 구성으로 설치하거나, SharePoint 팜의 공유 서비스 응용 프로그램으로 설치할 수 있습니다. 팜에 서비스를 설치하면 SharePoint에서만 사용 가능한 BI 기능을 사용할 수 있는데, 여기에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 테이블 형식 model 데이터베이스에서 실행되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 임시 대화형 보고서 디자이너인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 SharePoint용 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 이 포함됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 독립 실행형 서버로 설치하거나, 확장 구성으로 설치하거나, SharePoint 팜의 공유 서비스 응용 프로그램으로 설치할 수 있습니다. 팜에 서비스를 설치하면 SharePoint에서만 사용 가능한 BI 기능을 사용할 수 있는데, 여기에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 테이블 형식 model 데이터베이스에서 실행되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 임시 대화형 보고서 디자이너인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 SharePoint용 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 이 포함됩니다.  
   
 ## <a name="sql-server-bi-features"></a>SQL Server BI 기능  
  BI 구성 요소를 포함한 모든 SQL Server 기능은 SQL Server 설치 프로그램을 통해 설치됩니다. 다음 링크는 각 BI 기능에 관련된 추가 정보를 제공합니다.  

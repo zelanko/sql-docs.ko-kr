@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0f54b24d7395584a8182b607bfc491179e314336
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 25ab48e5b7b0ea6a8696c9ab03a9a7b08172ba53
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="control-transaction-durability"></a>트랜잭션 내구성 제어
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 커밋은 완전 내구성([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값)이 있거나 지연된 내구성(느린 커밋이라고도 함)이 있습니다.    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 커밋은 완전 내구성( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값)이 있거나 지연된 내구성(느린 커밋이라고도 함)이 있습니다.    
     
  완전 내구성이 있는 트랜잭션 커밋은 동기적이므로 트랜잭션에 대한 로그 레코드가 디스크에 기록된 후에만 커밋을 성공으로 보고하고 클라이언트에 컨트롤을 반환합니다. 지연된 내구성이 있는 트랜잭션 커밋은 비동기적이므로 트랜잭션에 대한 로그 레코드가 디스크에 기록되기 전에 커밋을 성공으로 보고합니다. 트랜잭션이 내구성을 가지려면 디스크에 트랜잭션 로그 항목을 기록해야 합니다. 지연된 내구성이 있는 트랜잭션은 트랜잭션 로그 항목을 디스크에 플러시한 경우에 내구성을 가집니다.    
     

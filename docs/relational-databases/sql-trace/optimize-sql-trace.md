@@ -19,18 +19,19 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04c90ac8025d4939c6c9606d63c5d35c5d68aabe
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: a60c387a8e863b864cbbbd5665686f7ffc3643d3
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="optimize-sql-trace"></a>SQL 추적 최적화
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL 추적을 실행하면 데이터 수집을 위해 시스템 리소스가 사용되기 때문에 성능 비용이 발생하지만 여러 가지 방법으로 이 비용을 최소화할 수 있습니다. 추적으로 인한 성능 비용을 최적화하려면 다음을 시도하십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  SQL 추적을 실행하면 데이터 수집을 위해 시스템 리소스가 사용되기 때문에 성능 비용이 발생하지만 여러 가지 방법으로 이 비용을 최소화할 수 있습니다. 추적으로 인한 성능 비용을 최적화하려면 다음을 시도하십시오.  
   
 -   명령 프롬프트를 사용하여 추적을 실행해 봅니다. 그래픽 사용자 인터페이스를 사용하면 성능이 저하됩니다. 자세한 내용은 [sp_trace_create&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)를 참조하세요.  
   

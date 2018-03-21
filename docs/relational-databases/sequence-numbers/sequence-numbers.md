@@ -20,19 +20,19 @@ helpviewer_keywords:
 - sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4369c402254e0b0de8082c1670171b834585b2d5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2d85101a01723fed67e90f1d891634d74b44dde2
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sequence-numbers"></a>시퀀스 번호
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-시퀀스는 시퀀스를 만들 때 지정한 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바인딩된 개체입니다. 숫자 값의 시퀀스는 지정된 간격으로 올림차순 또는 내림차순으로 생성되며 요청된 경우 순환(반복)할 수 있습니다. ID 열과 달리 시퀀스는 테이블에 연결되어 있지 않습니다. 응용 프로그램은 다음 값을 가져오기 위해 시퀀스 개체를 참조합니다. 시퀀스와 테이블 간의 관계는 응용 프로그램에서 제어합니다. 사용자 응용 프로그램에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에 걸쳐 값 키를 조정할 수 있습니다.  
+  시퀀스는 시퀀스를 만들 때 지정한 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바인딩된 개체입니다. 숫자 값의 시퀀스는 지정된 간격으로 올림차순 또는 내림차순으로 생성되며 요청된 경우 순환(반복)할 수 있습니다. ID 열과 달리 시퀀스는 테이블에 연결되어 있지 않습니다. 응용 프로그램은 다음 값을 가져오기 위해 시퀀스 개체를 참조합니다. 시퀀스와 테이블 간의 관계는 응용 프로그램에서 제어합니다. 사용자 응용 프로그램에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에 걸쳐 값 키를 조정할 수 있습니다.  
   
  시퀀스는 **CREATE SEQUENCE** 문을 사용하여 테이블과 독립적으로 만들어집니다. 옵션을 통해 증분, 최대값 및 최소값, 시작 지점, 자동 다시 시작 기능, 성능 개선을 위한 캐싱을 제어할 수 있습니다. 옵션에 대한 자세한 내용은 [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)를 참조하십시오.  
   
@@ -395,7 +395,7 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용하는 `SELECT *` 문은 새 열을 첫 번째 열이 아니라 마지막 열로 받습니다. 이렇게 되지 않도록 하려면 완전히 새로운 테이블을 만들고 데이터를 이 테이블로 이동한 다음 새 테이블에서 사용 권한을 다시 만들어야 합니다.  
+ `SELECT *`를 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 새 열을 첫 번째 열이 아니라 마지막 열로 받습니다. 이렇게 되지 않도록 하려면 완전히 새로운 테이블을 만들고 데이터를 이 테이블로 이동한 다음 새 테이블에서 사용 권한을 다시 만들어야 합니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  

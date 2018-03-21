@@ -22,19 +22,19 @@ helpviewer_keywords:
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e7aa56db8223c76b3d597da5c00ffe5be250aae7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 5f0ea9dba2803d981b5e259105d1e699e08611f1
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>꽉 찬 트랜잭션 로그 문제 해결(SQL Server 오류 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 트랜잭션 로그가 꽉 찼을 때 알맞은 대처 방법에 대해 설명하고 앞으로 이런 상황을 방지하기 위한 방법을 제시합니다. 
+  이 항목에서는 트랜잭션 로그가 꽉 찼을 때 알맞은 대처 방법에 대해 설명하고 앞으로 이런 상황을 방지하기 위한 방법을 제시합니다. 
   
   트랜잭션 로그가 꽉 차면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 **9002 오류**가 발생합니다. 로그는 데이터베이스가 온라인 상태이거나 복구 중일 때 꽉 찰 수 있습니다. 데이터베이스가 온라인 상태일 때 로그가 꽉 차면 계속 온라인 상태로 유지되지만 데이터베이스를 읽을 수만 있고 업데이트할 수 없습니다. 복구 중에 로그가 꽉 차면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 데이터베이스를 RESOURCE PENDING으로 표시합니다. 두 경우 모두 사용자 동작을 통해 사용 가능한 로그 공간을 만들어야 합니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: OPENXML(Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -27,14 +27,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 402e6ae54aec485500252e284b9557afc86efe96
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   OPENXML은 XML 문서에 대한 행 집합 뷰를 제공합니다. OPENXML이 행 집합 공급자이므로 테이블, 뷰 또는 OPENROWSET 함수 등의 행 집합 공급자가 있을 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 OPENXML을 사용할 수 있습니다.  
   

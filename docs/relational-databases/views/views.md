@@ -16,18 +16,19 @@ helpviewer_keywords:
 - views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 caps.latest.revision: 
-author: sstein
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ba650c638d855556ec2afe992f26ff3f6ad2460
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: de1be71afd708fab6f380daf4b60a0aeb87b2665
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="views"></a>뷰
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
-뷰는 쿼리에 의해 내용이 정의되는 가상 테이블입니다. 테이블과 같이 뷰는 데이터의 명명된 열과 행 집합으로 구성됩니다. 인덱싱하지 않을 경우 뷰는 데이터베이스에 저장된 데이터 값 집합으로 존재하지 않습니다. 데이터 행과 열은 뷰를 정의하는 쿼리에서 참조하는 테이블에 있으며 뷰가 참조될 때 동적으로 생성됩니다.  
+  뷰는 쿼리에 의해 내용이 정의되는 가상 테이블입니다. 테이블과 같이 뷰는 데이터의 명명된 열과 행 집합으로 구성됩니다. 인덱싱하지 않을 경우 뷰는 데이터베이스에 저장된 데이터 값 집합으로 존재하지 않습니다. 데이터 행과 열은 뷰를 정의하는 쿼리에서 참조하는 테이블에 있으며 뷰가 참조될 때 동적으로 생성됩니다.  
   
  뷰는 뷰에서 참조하는 기본 테이블에 대한 필터 역할을 합니다. 뷰를 정의하는 쿼리는 현재 또는 다른 데이터베이스의 다른 뷰나 하나 이상의 테이블을 기반으로 할 수 있습니다. 분산 쿼리를 사용하면 유형이 다른 여러 원본의 데이터를 사용하는 뷰를 정의할 수도 있습니다. 예를 들어 이 기능은 각각 다른 지역의 데이터가 저장되는 여러 서버에서 구조가 비슷한 데이터를 결합할 때 유용합니다.  
   

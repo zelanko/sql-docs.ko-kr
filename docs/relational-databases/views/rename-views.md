@@ -17,18 +17,19 @@ helpviewer_keywords:
 - renaming views
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 caps.latest.revision: 
-author: sstein
-manager: craigg
+author: stevestein
+ms.author: sstein
+ms.manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5009d1f083a9d66f08ffa7e7d356d38054402694
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7eb75bd74da621bfa48e511ea9d60fc19d0d4b4d
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="rename-views"></a>뷰 이름 바꾸기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 뷰 이름을 바꿀 수 있습니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 뷰 이름을 바꿀 수 있습니다.  
   
 > [!WARNING]  
 >  뷰의 이름을 바꾸면 해당 뷰와 관련된 코드와 응용 프로그램에 문제가 발생할 수 있습니다. 여기에는 기타 뷰, 쿼리, 저장 프로시저, 사용자 정의 함수, 클라이언트 응용 프로그램 등이 포함됩니다. 이러한 문제는 연쇄적인 파급 효과를 가져올 수 있습니다.  

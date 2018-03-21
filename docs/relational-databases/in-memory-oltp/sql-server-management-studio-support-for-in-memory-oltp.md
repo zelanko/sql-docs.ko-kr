@@ -14,15 +14,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 420c0a1dfd43a55dfda4c2e6dc612c2e49538e93
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4ffa05afa1625b6f8560c7586b08ceb1cf8bb96a
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Management Studio 지원
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,8 @@ ms.lasthandoff: 02/12/2018
             **메모리 최적화 개체가 사용하는 메모리** 속성에 대한 값은 데이터베이스에 있는 메모리 최적화 개체가 사용하는 메모리를 나타냅니다.  
   
 ## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>다음에서 지원되는 기능 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 메모리 최적화 데이터 파일 그룹, 메모리 최적화 테이블, 인덱스 및 고유하게 컴파일된 저장 프로시저가 포함된 데이터베이스에서 데이터베이스 엔진이 지원하는 기능과 작업을 지원합니다.  
+ 
+            [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 메모리 최적화 데이터 파일 그룹, 메모리 최적화 테이블, 인덱스 및 고유하게 컴파일된 저장 프로시저가 포함된 데이터베이스에서 데이터베이스 엔진이 지원하는 기능과 작업을 지원합니다.  
   
  데이터베이스, 테이블, 저장 프로시저, 사용자 정의 테이블 형식 또는 인덱스 개체에 대해 다음 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 기능이 메모리 내 OLTP를 지원하도록 업데이트되었거나 확장되었습니다.  
   

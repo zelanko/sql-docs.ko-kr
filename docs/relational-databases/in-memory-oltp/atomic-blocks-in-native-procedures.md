@@ -14,15 +14,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cadb8454b9d9470afc7b0add40e21fd9f1346b00
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f70a9c85cf6a4341f6c92674a046bff11c7a077a
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>기본 프로시저의 Atomic 블록
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

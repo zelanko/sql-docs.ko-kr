@@ -21,18 +21,19 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 
-author: sstein
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dc562d47b04c20a3878bc0e1b8c63bf5d1151e09
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 505c016f769a76c2908f607617db99a04e857ef1
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-이 항목에서는 뷰에서 인덱스를 만드는 방법에 대해 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.  
+  이 항목에서는 뷰에서 인덱스를 만드는 방법에 대해 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  다음 단계는 인덱싱된 뷰를 만들고 성공적으로 구현하는 데 필요합니다.  

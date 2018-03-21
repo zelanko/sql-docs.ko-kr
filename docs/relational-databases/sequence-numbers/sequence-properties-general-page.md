@@ -16,19 +16,19 @@ f1_keywords:
 - sql13.swb.sequence.general.f1
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7867babbca7d6481033c6d882445390b643b6114
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2ddb3a7567c8229e8fbea45dc0f8c49fbcc6bcf7
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sequence-properties-general-page"></a>시퀀스 속성(일반 페이지)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-시퀀스 개체를 만들고 해당 속성을 지정합니다. 시퀀스는 시퀀스를 만들 때 사용된 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바운드 개체입니다. 숫자 값의 시퀀스는 정의된 간격에 따라 오름차순이나 내림차순으로 생성되며, 시퀀스가 모두 사용되면 다시 시작(순환)되도록 구성할 수 있습니다. ID 열과 달리 시퀀스는 특정 테이블과 연결되지 않습니다. 응용 프로그램에서는 시퀀스 개체를 참조하여 다음 값을 검색합니다. 시퀀스와 테이블 간의 관계는 응용 프로그램에서 제어합니다. 사용자 응용 프로그램에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에서 값을 조정합니다.  
+  시퀀스 개체를 만들고 해당 속성을 지정합니다. 시퀀스는 시퀀스를 만들 때 사용된 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바운드 개체입니다. 숫자 값의 시퀀스는 정의된 간격에 따라 오름차순이나 내림차순으로 생성되며, 시퀀스가 모두 사용되면 다시 시작(순환)되도록 구성할 수 있습니다. ID 열과 달리 시퀀스는 특정 테이블과 연결되지 않습니다. 응용 프로그램에서는 시퀀스 개체를 참조하여 다음 값을 검색합니다. 시퀀스와 테이블 간의 관계는 응용 프로그램에서 제어합니다. 사용자 응용 프로그램에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에서 값을 조정합니다.  
   
  행을 삽입할 때 생성되는 ID 열 값과는 달리 응용 프로그램에서는 [NEXT VALUE FOR 함수](../../t-sql/functions/next-value-for-transact-sql.md)를 호출하여 행을 삽입하지 않고도 다음 시퀀스 번호를 가져올 수 있습니다. 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 를 사용합니다.  
   
