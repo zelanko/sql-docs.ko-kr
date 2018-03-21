@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2143b576e3104ba2cf707e8fada75471a007a987
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 0e9f4351e74e73453182ff8e8f840f50f0085537
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>컴퓨터 학습 서비스의 알려진된 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ Azure 가상 컴퓨터 수가 제한 된 SQL Server와 함께 포함 되어야 �
 
 **적용 대상:** python 2017 SQL Server
 
-### <a name="bkmk_sqlbindr"></a>사용 하 여 클라이언트는 이전 버전의 SQL Server R Services에 연결 하는 경우 호환 되지 않는 버전의 경고[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a> 사용 하 여 클라이언트는 이전 버전의 SQL Server R Services에 연결 하는 경우 호환 되지 않는 버전의 경고 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 R 코드를 실행 하면 SQL Server 2016 계산 컨텍스트, 다음과 같은 오류가 표시 될 수 있습니다.
 
@@ -117,7 +117,7 @@ R 코드를 실행 하면 SQL Server 2016 계산 컨텍스트, 다음과 같은 
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-최신 설치 관리자를 가져오려는 참조 [인터넷 연결 되지 않은 컴퓨터 학습 구성 요소를 설치](r/installing-ml-components-without-internet-access.md)합니다.
+최신 설치 관리자를 가져오려는 참조 [인터넷 연결 되지 않은 컴퓨터 학습 구성 요소를 설치](install/sql-ml-component-install-without-internet-access.md)합니다.
 
 **적용 대상:** R server 9.0.0 버전 SQL Server 2016 R Services 또는 이전 버전
 
@@ -155,7 +155,7 @@ Windows 통합 인증을 사용 하 여 원격 데이터 과학 워크스테이�
 
 예를 들어 SQL Server의 Enterprise 버전을 사용 하는 경우에 외부 도구를 사용 하 여 R 코드를 실행 하는 경우 단일 스레드 모드에서 R 실행 합니다. SQL Server의 성능 이점을 얻으려면 SQL Server의 연결을 시작 및 사용 하 여 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 를 외부 스크립트 런타임을 호출 합니다.
 
-일반적으로 기계 학습 외부 도구에서 SQL Server에서 사용 되는 라이브러리를 호출 하지 마십시오. 디버그 R Python 코드를 해야 하는 경우 SQL Server 외부에서 이렇게 하려면 일반적으로 쉽습니다. SQL Server에 있는 동일한 라이브러리를 가져오려면 Microsoft R 클라이언트를 설치할 수 있습니다 또는 [컴퓨터 학습 서버](r/create-a-standalone-r-server.md)합니다.
+일반적으로 기계 학습 외부 도구에서 SQL Server에서 사용 되는 라이브러리를 호출 하지 마십시오. 디버그 R Python 코드를 해야 하는 경우 SQL Server 외부에서 이렇게 하려면 일반적으로 쉽습니다. SQL Server에 있는 동일한 라이브러리를 가져오려면 Microsoft R 클라이언트를 설치할 수 있습니다 [SQL Server 2017 컴퓨터 학습 서버 (독립 실행형)](install/sql-machine-learning-standalone-windows-install.md), 또는 [SQL Server 2016 R 서버 (독립 실행형)](install/sql-r-standalone-windows-install.md)합니다.
 
 ### <a name="sql-server-data-tools-does-not-support-permissions-required-by-external-scripts"></a>SQL Server Data Tools 외부 스크립트에 필요한 사용 권한을 지원 하지 않습니다.
 
@@ -264,7 +264,7 @@ R 명령 개체의 작업 영역에서 R 코드를 실행 하는 동안 선택�
 
 R을 실행 하는 동안 문제를 해결 변수 및 기타 개체를 무분별 하 게 삭제를 방지 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 가질 수 있습니다는 R 콘솔에서 작업할 때 작업 영역을 선택 취소 하는 것은 일반적인, 있지만 의도 하지 않은 결과입니다.
 
-* 특정 변수를 삭제 하려면 R을 사용 하 여 `remove` 함수: 예를 들어`remove('name1', 'name2', ...)`
+* 특정 변수를 삭제 하려면 R을 사용 하 여 `remove` 함수: 예를 들어 `remove('name1', 'name2', ...)`
 * 삭제할 변수가 여러 개인 경우 임시 변수 이름을 목록에 저장하고 주기적 가비지 수집을 수행합니다.
 
 ### <a name="restrictions-on-data-that-can-be-provided-as-input-to-an-r-script"></a>R 스크립트의 입력으로 제공될 수 있는 데이터에 대한 제한
@@ -305,7 +305,7 @@ R에 문자열 데이터를 보낼 때 ASCII 표현으로 가능 하면 변환 �
 
 이러한 제한도 SQL Server와 Python 간에 전달 되는 데이터에 적용 됩니다. 멀티 바이트 문자를 u t F-8로 전달 하 고 유니코드로 저장 해야 합니다.
 
-### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>형식의 값을 하나만 `raw` 에서 반환 될 수`sp_execute_external_script`
+### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>형식의 값을 하나만 `raw` 에서 반환 될 수 `sp_execute_external_script`
 
 경우는 binary 데이터 형식 (R **원시** 데이터 형식)의 값을 출력 데이터 프레임에서 전송 해야 R에서 반환 됩니다.
 
@@ -436,7 +436,7 @@ SQL Server 2017 CU2부터, 그렇지 않으면 Python 코드가 성공적으로 
 
 > *외부 스크립트의 STDERR 메시지:*
 > **~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
-> *SyntaxWarning: telemetry_state 전역 선언 앞에 사용*
+> *SyntaxWarning: telemetry_state은 전역 선언 앞에 사용*
 
 
 이 문제는 SQL Server 2017 누적 업데이트 3 (CU3)에서 해결 되었습니다. 

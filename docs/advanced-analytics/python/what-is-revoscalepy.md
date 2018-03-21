@@ -13,11 +13,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2649596abecfd92d40a860e743c867e0ff80ed26
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="introducing-revoscalepy"></a>Revoscalepy 소개
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,12 +84,12 @@ SQL Server 및 Python에 따라서는 다른 데이터 형식을 사용합니다
 
 | 함수| Description|참고|
 | ------ | ------ |------ |
-|`rx_btrees` | 적합된 한 추계 그라데이션 승격 된 의사 결정 트리|`rx_btrees_ex`CTP 2.0|
-|`rx_dforest` | 적합된 한 분류 및 회귀 의사 결정 포리스트|`rx_dforest_ex`CTP 2.0|
-|`rx_dtree` | 적합된 한 분류 및 회귀 트리 |`rx_dtree_ex`CTP 2.0|
-|`rx_lin_mod` | 선형 모델 만들기|`rx_lin_mod_ex`CTP 2.0|
-|`rx_logit` | 로지스틱 회귀 모델 만들기|`rx_logit_ex`CTP 2.0|
-|`rx_predict` | 학습된 된 모델에서 예측을 생성 합니다.|`rx_predict_ex`CTP 2.0|
+|`rx_btrees` | 적합된 한 추계 그라데이션 승격 된 의사 결정 트리|`rx_btrees_ex` CTP 2.0|
+|`rx_dforest` | 적합된 한 분류 및 회귀 의사 결정 포리스트|`rx_dforest_ex` CTP 2.0|
+|`rx_dtree` | 적합된 한 분류 및 회귀 트리 |`rx_dtree_ex` CTP 2.0|
+|`rx_lin_mod` | 선형 모델 만들기|`rx_lin_mod_ex` CTP 2.0|
+|`rx_logit` | 로지스틱 회귀 모델 만들기|`rx_logit_ex` CTP 2.0|
+|`rx_predict` | 학습된 된 모델에서 예측을 생성 합니다.|`rx_predict_ex` CTP 2.0|
 |`rx_summary` | 모델의 요약을 생성 합니다.||
 
 새 기계 학습 알고리즘의 Python 버전도 제공 됩니다 [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
@@ -108,7 +108,7 @@ SQL Server 및 Python에 따라서는 다른 데이터 형식을 사용합니다
 
 Python 용 MicrosoftML도 다양 한 변환 및 도우미 함수를 같은 포함:
 
-+ `rx_predict`학습된 된 모델에서 예측을 생성 하 고 실시간 점수 매기기에 사용할 수 있습니다
++ `rx_predict` 학습된 된 모델에서 예측을 생성 하 고 실시간 점수 매기기에 사용할 수 있습니다
 + 이미지 기능 생성 함수
 + 텍스트 처리 및 정서 추출에 대 한 함수
 
@@ -157,7 +157,7 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 SQL Server에서 Python 코드를 실행 하려면 먼저 설치 해야 SQL Server 2017를 기능과 함께 **컴퓨터 학습 서비스**, Python 언어를 사용 하도록 설정 합니다. 이전 버전의 SQL Server는 Python 통합을 지원 하지 않습니다.
 
 > [!NOTE]
-> Python의 오픈 소스 배포에서 SQL Server 계산 컨텍스트를 지원 하지 않습니다. 그러나 게시 하 고 Windows에서 Python 응용 프로그램을 사용 해야 할 경우 SQL Server를 설치 하지 않고 Microsoft 컴퓨터 학습 서버를 설치할 수 있습니다. 자세한 내용은 참조 [독립 실행형 R Server 만들기](../r/create-a-standalone-r-server.md)
+> Python의 오픈 소스 배포에서 SQL Server 계산 컨텍스트를 지원 하지 않습니다. 그러나 게시 하 고 Windows에서 Python 응용 프로그램을 사용 해야 할 경우 SQL Server를 설치 하지 않고 Microsoft 컴퓨터 학습 서버를 설치할 수 있습니다. 자세한 내용은 참조 [SQL Server 2017 컴퓨터 학습 서버 설치 (독립 실행형)](../install/sql-machine-learning-standalone-windows-install.md)합니다.
 
 ## <a name="get-more-help"></a>자세한 도움말 보기
 

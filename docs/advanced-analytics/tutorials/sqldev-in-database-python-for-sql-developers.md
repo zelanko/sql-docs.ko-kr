@@ -20,11 +20,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: dab1a9648865f13d1741917bd389eae287afd7f2
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 개발자를 위해 데이터베이스에서 Python 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/11/2018
 
 ### <a name="prerequisites"></a>필수 구성 요소
 
-+ 컴퓨터 학습 서비스 및 Python 사용 하도록 설정 된 SQL Server 2017의 인스턴스를 설치 합니다. 자세한 내용은 참조 [python SQL Server 컴퓨터 학습 서비스 설정](../python/setup-python-machine-learning-services.md)합니다.
++ 컴퓨터 학습 서비스 및 Python 사용 하도록 설정 된 SQL Server 2017의 인스턴스를 설치 합니다. 자세한 내용은 참조 [설치할 SQL Server 2017 컴퓨터 학습 Services (In-database)](../install/sql-machine-learning-services-windows-install.md)합니다.
 + 이 연습에 사용하는 로그인에 데이터베이스 및 기타 개체를 만들고, 데이터를 업로드하고, 데이터를 선택하고, 저장 프로시저를 실행할 수 있는 권한이 있어야 합니다.
 
 ### <a name="experience-level"></a>환경 수준

@@ -15,10 +15,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Python 컴퓨터 학습 Services (In-database) 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/11/2018
 
 무인된 설치를 수행 하려면 SQL Server 설치 프로그램 및 Python 특정 인수에 대 한 명령줄 옵션을 사용 합니다. 자세한 내용은 참조 [Unattended Python 컴퓨터 학습 서비스를 사용 하 여 SQL server 설치](unattended-installs-of-sql-server-python-services.md)합니다.
 
-##  <a name="bkmk_installPythonInDatabase"></a>1 단계: 기계 학습에서 SQL Server Services (In-database) 설치
+##  <a name="bkmk_installPythonInDatabase"></a> 1 단계: 기계 학습에서 SQL Server Services (In-database) 설치
 
 1. SQL Server 2017에 대 한 설치 마법사를 실행 합니다.
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/11/2018
 
 6. 설치가 완료되면 컴퓨터를 다시 시작합니다.
 
-##  <a name="bkmk_enableFeature"></a>2 단계: Python 스크립트 실행을 사용 하도록 설정
+##  <a name="bkmk_enableFeature"></a> 2 단계: Python 스크립트 실행을 사용 하도록 설정
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 
 
@@ -168,7 +168,7 @@ ms.lasthandoff: 02/11/2018
 > [!NOTE]
 > 열 또는 Python 스크립트에 사용 되는 머리글은을 반환 하지를 디자인 합니다. 출력에 대 한 열 이름을 추가 하려면 반환 된 데이터 집합에 대 한 스키마를 지정 해야 합니다. 이 작업을 수행 하 여 열 이름을 지정 하 고 SQL 데이터 형식 지정, 저장된 프로시저의 결과와 매개 변수를 사용 합니다.
 > 
-> 예를 들어 임의의 열 이름을 생성 하려면 다음 줄을 추가할 수 있습니다.`WITH RESULT SETS ((Col1 AS int))`
+> 예를 들어 임의의 열 이름을 생성 하려면 다음 줄을 추가할 수 있습니다. `WITH RESULT SETS ((Col1 AS int))`
 
 ## <a name="step-4-additional-configuration"></a>4 단계: 추가 구성
 
@@ -180,7 +180,7 @@ ms.lasthandoff: 02/11/2018
 > 
 > 나열 된 모든 변경 내용이 필요 하 고 none 필요할 수 있습니다. 요구 사항은 보안 스키마를 설치한 SQL Server 및 데이터베이스에 연결 하 고 외부 스크립트를 실행 하는 사용자를 예상 하는 방법에 따라 달라 집니다.
 
-###  <a name="bkmk_configureAccounts"></a>실행 패드 계정 그룹에 대 한 묵시적된 인증을 사용 하도록 설정
+###  <a name="bkmk_configureAccounts"></a> 실행 패드 계정 그룹에 대 한 묵시적된 인증을 사용 하도록 설정
 
 설치하는 동안 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스의 보안 토큰으로 태스크를 실행하기 위해 많은 새 Windows 사용자 계정이 생성됩니다. 외부 클라이언트에서 Python 또는 R 스크립트를 보낼 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 가능한 작업자 계정을 활성화 합니다. 다음 호출 하는 사용자의 id로 매핑합니다 하 고 사용자를 대신 하 여 스크립트를 실행 합니다.
 

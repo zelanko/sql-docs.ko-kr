@@ -22,10 +22,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
 ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>SQL Server 컴퓨터 학습 Services (In-database) 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/11/2018
 
 **적용 대상:** SQL Server 2016, SQL Server 2017
 
-## <a name="bkmk_prereqs"></a> 사전 설치 검사 목록
+## <a name="bkmk_prereqs"> </a> 사전 설치 검사 목록
 
 + 데이터베이스에서 시스템 학습에는 SQL Server 2016 이상 필요합니다. 
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/11/2018
 
 + 기계 학습 프레임 워크는 설치가 완료 된 후 추가 구성이 필요 합니다. 정확한 단계는 조직 및 보안 정책, 서버 구성 및 사용자가에 따라 달라 집니다. 모든 단계를 검토 하 고 사용자 환경의 추가 구성이 필요할 수 있는 결정 하는 것이 좋습니다.
 
-## <a name="bkmk2016top"></a>SQL Server 2016 R Services (In-database) 설치
+## <a name="bkmk2016top"></a> SQL Server 2016 R Services (In-database) 설치
 
 > [!div class="checklist"]
 > * 데이터베이스 엔진 및 기계 학습 기능 설치
@@ -119,7 +119,7 @@ ms.lasthandoff: 02/11/2018
 7. 설치가 완료 되 면 컴퓨터를 다시 시작 합니다.
 
 
-## <a name="bkmk2017top"></a>SQL Server 2017 기계 학습 Services (In-database) 설치
+## <a name="bkmk2017top"></a> SQL Server 2017 기계 학습 Services (In-database) 설치
 
 > [!div class="checklist"]
 > * 데이터베이스 엔진 및 기계 학습 기능 설치
@@ -240,7 +240,7 @@ ms.lasthandoff: 02/11/2018
     + [선택적 사후 설치 단계: 서비스 및 권한 구성](#bkmk_FollowUp) 
     + [SQL Server의 기계 학습 문제 해결](upgrade-and-installation-faq-sql-server-r-services.md)
 
-## <a name="bkmk_FollowUp"></a>선택적 설치 후 단계
+## <a name="bkmk_FollowUp"></a> 선택적 설치 후 단계
 
 기계 학습에 사용 사례에 따라 서버, 방화벽, 서비스 또는 데이터베이스 사용 권한을 사용 하는 계정에 대 한 추가 변경을 해야 할 수 있습니다. 대/소문자에 따라 다른 변경 해야 합니다.
 

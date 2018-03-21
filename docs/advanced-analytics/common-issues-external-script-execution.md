@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: af9896e9e0baa2899b9e9c95795907ca46463504
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>일반적인 문제를 SQL Server의 외부 스크립트 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -161,7 +161,7 @@ R 사용자 (Python에도 사용)에 대 한 Windows 그룹 R 서비스를 실�
 
     * *NT 서비스 계정에 로그온 할 수 없음을 나타내는 보안 로그*
 
-이 사용자 그룹에 필요한 권한을 부여 하는 방법에 대 한 정보를 참조 하십시오. [SQL Server R Services 설치](r/set-up-sql-server-r-services-in-database.md)합니다.
+이 사용자 그룹에 필요한 권한을 부여 하는 방법에 대 한 정보를 참조 하십시오. [SQL Server 2016 R Services 설치](install/sql-r-services-windows-install.md)합니다.
 
 > [!NOTE]
 > SQL 로그인을 사용하여 원격 워크스테이션에서 R 스크립트를 실행하는 경우에는 이 제한이 적용되지 않습니다.
@@ -233,7 +233,7 @@ R 사용자 (Python에도 사용)에 대 한 Windows 그룹 R 서비스를 실�
 
 가질 수 있습니다는 R 콘솔에서 작업할 때 작업 영역을 선택 취소 하는 것은 일반적인, 계산 컨텍스트는 SQL에서 의도 하지 않은 결과입니다.
 
-`revoScriptConnection`SQL Server에서 호출 되는 R 세션에 대 한 정보를 포함 하는 R 작업 영역에서 개체가입니다. 그러나 R 코드의 작업 영역을 선택 취소 하는 명령을 포함 하는 경우 (예: `rm(list=ls())`), 세션 및 기타 개체는 R 작업 영역에 대 한 모든 정보의 선택도 취소 됩니다.
+`revoScriptConnection` SQL Server에서 호출 되는 R 세션에 대 한 정보를 포함 하는 R 작업 영역에서 개체가입니다. 그러나 R 코드의 작업 영역을 선택 취소 하는 명령을 포함 하는 경우 (예: `rm(list=ls())`), 세션 및 기타 개체는 R 작업 영역에 대 한 모든 정보의 선택도 취소 됩니다.
 
 이 문제를 해결 SQL Server에서 R을 실행 하는 동안 변수 및 기타 개체를 무분별 하 게 삭제를 하지 마십시오. 사용 하 여 특정 변수를 삭제할 수는 **제거** 함수:
 

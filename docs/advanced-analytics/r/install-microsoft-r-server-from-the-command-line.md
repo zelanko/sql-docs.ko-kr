@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>명령줄에서 컴퓨터 학습 Server (독립 실행형) 또는 Microsoft R Server (독립 실행형) 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ SQL Server의 명령줄 설치를 수행 하 고 스크립팅 인수를 잘 알�
 인터넷 액세스가 없는 컴퓨터에서 컴퓨터 학습 서버 또는 Microsoft R Server (독립 실행형)를 설치 하는 경우에 필요한 R (또는 Python) 구성 요소를 사전에 다운로드 하 고 로컬 폴더를 복사 해야 합니다. 다운로드 위치에 대 한 참조 [인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치](installing-ml-components-without-internet-access.md)합니다.
 
 
-## <a name="bkmk_mls2017"></a>Microsoft 컴퓨터 학습 Server (독립 실행형) 설치
+## <a name="bkmk_mls2017"></a> Microsoft 컴퓨터 학습 Server (독립 실행형) 설치
 
 **적용 대상: SQL Server 2017**
 

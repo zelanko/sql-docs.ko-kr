@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f25aa61329742373cff9fcbb38b893500d5baa12
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 8e23264905c2a8b706b32a906d7dbf2dc3dd165b
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>시스템 요구 사항, 설치 및 드라이버 파일
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -101,6 +101,7 @@ BCP 함수를 사용 하는 응용 프로그램은 헤더 파일 및 응용 프�
 |구성 요소|Description|  
 |---------------|-----------------|  
 |msodbcsql17.dll or <br> msodbcsql13.dll 또는 <br> msodbcsql11.dll|드라이버 기능이 모두 포함된 DLL(동적 연결 라이브러리) 파일입니다. 이 파일은 %SYSTEMROOT%\System32에서 설치 됩니다.|  
+|msodbcdiag17.dll 또는 <br> msodbcdiag13.dll 또는 <br> msodbcdiag11.dll|드라이버의 진단 (추적) 인터페이스를 포함 하는 동적 연결 라이브러리 (DLL) 파일입니다. 이 파일은 %SYSTEMROOT%\System32에서 설치 됩니다.|
 |msodbcsqlr17.rll 또는 <br> msodbcsqlr13.rll 또는 <br> msodbcsqlr11.rll|드라이버 라이브러리에 대한 해당 리소스 파일입니다. 이 파일은 %SYSTEMROOT%\System32\1033에서 설치 됩니다.| 
 |s13ch_msodbcsql.chm or <br> s11ch_msodbcsql.chm |드라이버에 대 한 데이터 원본을 만드는 방법을 문서화 하는 데이터 원본 마법사 도움말 파일입니다. 이 파일은 %SYSTEMROOT%\System32\1033에 설치 됩니다. <br /> <br /> **참고:** ODBC 드라이버 17에 대해 chm 파일이 없습니다. |  
 |msodbcsql.h|모든 드라이버를 사용 하는 데 필요한 새 정의 포함 하는 헤더 파일입니다.<br /><br /> **참고:**  동일한 프로그램에서 msodbcsql.h 및 odbcss.h를 참조할 수 없습니다.<br /><br /> ODBC 드라이버 17 또는 13 msodbcsql.h는 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK에에서 설치 됩니다. <br /> ODBC Driver 11에 대 한 msodbcsql.h는 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK에에서 설치 되어 있습니다.| 

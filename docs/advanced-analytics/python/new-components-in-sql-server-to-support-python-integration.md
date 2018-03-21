@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6f948473c51d6212d432ddb179d7a61fcfdef117
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Python 통합을 지원 하도록 SQL Server의 구성 요소
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ SQL Server 2017 Python 스크립트 실행을 허용 하도록 구성 하려면 
 
 원격 스크립트 실행을 지원 하려면 추가 단계를 수행 해야 할 수 있습니다.
 
-자세한 내용은 참조 [컴퓨터 학습 서비스 설정](setup-python-machine-learning-services.md)
+자세한 내용은 참조 [설치할 SQL Server 2017 컴퓨터 학습 Services (In-database)](../install/sql-machine-learning-services-windows-install.md)합니다.
 
 ### <a name="launchpad"></a>실행 패드
 
@@ -105,7 +105,7 @@ SQL 위성 windows 확장 이벤트 (Xevent)를 사용 하 여 모니터링할 �
   + 테이블에 데이터를 쓸: 예를 들어 때 저장 결과 테이블
   + 데이터베이스 개체 만들기: 새 저장된 프로시저의 일환으로 외부 스크립트를 저장 하는 경우 등입니다.
 
-  때 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 원격 클라이언트에서 Python 스크립트 실행 하 고 외부 원본에서 데이터를 검색 해야 Python 실행 파일에 대 한 계산 컨텍스트 기호로 사용 하 고, ODBC는 쓰기 저장에 사용 됩니다. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]현재 인스턴스에 대 한 사용자의 id로 원격 명령을 실행 하는 사용자의 id를 매핑하고 해당 사용자의 자격 증명을 사용 하 여 ODBC 명령을 실행 합니다. 이 ODBC 호출을 수행하는 데 필요한 연결 문자열은 클라이언트 코드에서 가져옵니다.
+  때 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 원격 클라이언트에서 Python 스크립트 실행 하 고 외부 원본에서 데이터를 검색 해야 Python 실행 파일에 대 한 계산 컨텍스트 기호로 사용 하 고, ODBC는 쓰기 저장에 사용 됩니다. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 현재 인스턴스에 대 한 사용자의 id로 원격 명령을 실행 하는 사용자의 id를 매핑하고 해당 사용자의 자격 증명을 사용 하 여 ODBC 명령을 실행 합니다. 이 ODBC 호출을 수행하는 데 필요한 연결 문자열은 클라이언트 코드에서 가져옵니다.
 
 ## <a name="interaction-of-components"></a>구성 요소와의 상호 작용
 
@@ -125,7 +125,7 @@ Python "내부"를 실행 하는 경우 [!INCLUDE[ssNoVersion_md](../../includes
 4. BxlServer 데이터 교환 및 작업 결과의 저장소를 관리 하는 Python 런타임의 협력 합니다.
 5. SQL 위성 관련된 작업에 대 한 통신을 관리 하 고와 처리 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]합니다.
 6. BxlServer는 SQL Satellite를 사용하여 상태 및 결과를 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]로 전달합니다.
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 결과 가져오고 관련된 작업 및 프로세스를 닫습니다.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 결과를 얻고 관련 작업과 프로세스를 닫습니다.
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>원격 클라이언트에서 실행 하는 Python 스크립트
 
@@ -146,7 +146,7 @@ Python "내부"를 실행 하는 경우 [!INCLUDE[ssNoVersion_md](../../includes
 6. PythonLauncher Python에 설치 된 인스턴스에 대 한 호출에서 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 컴퓨터입니다.
 7. 결과가 BxlServer로 반환됩니다.
 8. SQL Satellite가 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]와의 통신 및 관련 작업 개체의 정리를 관리합니다.
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 클라이언트에 결과 전달합니다.
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]가 클라이언트에 결과를 다시 전달합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

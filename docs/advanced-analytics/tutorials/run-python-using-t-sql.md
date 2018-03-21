@@ -18,11 +18,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 5c6145d3af6918a5f3daa954aae5522ffffebb89
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 3cff0d963dc365b60404893c1b15eb7733dbdfeb
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL을 사용 하 여 Python 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 03/08/2018
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 자습서를 완료 하려면 먼저 SQL Server 2017 설치 하며에서 설명한 대로 컴퓨터 학습 서비스 인스턴스의 활성화 [이 여기서](../python/setup-python-machine-learning-services.md)합니다. 
+이 자습서를 완료 하려면 먼저 SQL Server 2017 설치 하며에서 설명한 대로 컴퓨터 학습 서비스 인스턴스의 활성화 [설치할 SQL Server 2017 컴퓨터 학습 Services (In-database)](../install/sql-machine-learning-services-windows-install.md)합니다. 
 
 또한 설치 해야 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다. 또는 서버 및 데이터베이스를 연결할 수 있고 T-SQL 쿼리 또는 저장된 프로시저를 실행 한다면 다른 데이터베이스 관리 또는 쿼리 도구를 사용할 수 있습니다.
 
@@ -388,7 +388,7 @@ SQL Server에서 Python 사용 **팬더** 테이블 형식 데이터로 작업 �
 
 + 저장된 프로시저를 찾을 수 없습니다 `sp_execute_external_script`? 아마도 완료 하지 않았습니다 외부 스크립트 실행을 지원 하도록 인스턴스를 구성 하는 것이 것입니다. SQL Server 2017 설치 프로그램을 실행 하 기계 학습 언어도 Python을 선택한 후 명시적으로 설정 해야 사용 하 여 기능 `sp_configure`, 한 다음 인스턴스를 다시 시작 합니다. 
 
-    자세한 내용은 참조 [python 설치 컴퓨터 학습 서비스](../python/setup-python-machine-learning-services.md)합니다.
+    자세한 내용은 참조 [설치할 SQL Server 2017 컴퓨터 학습 Services (In-database)](../install/sql-machine-learning-services-windows-install.md)합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5ae4298fabb7147846b5ee87f391c1a0707cde3a
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: a54400e73c7789dcea15cbd4929c2a7878297df5
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>SQL Server에서 기계 학습 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ Microsoft은 온-프레미스와 클라우드 모두에 대 한 기계 학습 �
   SQL Server 2017 부터는 SQL Server에서 Python 코드를 지금 사용할 수 있습니다. 로 변경 되었습니다 (더 포함 된 상태가 될 때까지!), 여러 언어 및 이름을 솔루션에 대 한 광범위 한 지원이 반영 되도록 [!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]합니다. 이제 Python 또는 R 코드를 실행할 SQL 도구를 사용 하 여 기계 학습 작업을 자동화할 수 있습니다. 또는와 SQL Server 컴퓨터를 사용 하는 여는 _계산 컨텍스트_ 원격 개발 환경에서 실행 된 작업에 대 한 합니다.
 
     + [SQL Server에서 Python에 대 한 아키텍처 개요](../advanced-analytics/python/architecture-overview-sql-server-python.md)
-    + [SQL Server R Services 또는 시스템 학습 서비스 설정](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
+    + [SQL Server 2017 컴퓨터 학습 Services 설치](install/sql-machine-learning-services-windows-install.md)
 
 + SQL Server 2016
 
@@ -47,7 +47,7 @@ Microsoft은 온-프레미스와 클라우드 모두에 대 한 기계 학습 �
   이러한 통합 데이터에 대 한 보안을 제공 하 고 오른쪽에 사용 되는 리소스를 분산 하 고 관리할 수
 
     + [Getting Started 제품 SQL Server R Services](r/getting-started-with-sql-server-r-services.md)
-    + [SQL Server R Services 또는 시스템 학습 서비스 설정](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
+    + [SQL Server 2016 R Services 설치](install/sql-r-services-windows-install.md)
 
 ## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>Microsoft 기계 서버 (Microsoft R Server)를 학습 합니다.
 
@@ -66,7 +66,7 @@ SQL Server 2016에서 설치 하는 옵션을 사용 [!INCLUDE[rsql-platform-md]
 > [!IMPORTANT]
 > R 서버를 사용 하 여 Python을 실행 하려는 경우 사용할 최신 버전을 설치 해야 [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]을 통해서만 사용할 수 [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] 설치:
 > 
->    + [Microsoft R Server 또는 서버를 학습 하는 컴퓨터 설정](../advanced-analytics/r/create-a-standalone-r-server.md)
+>    + [SQL Server 2017 컴퓨터 학습 Server (독립 실행형) 설치](install/sql-machine-learning-standalone-windows-install.md) 또는 [SQL Server 2016 R Server (독립 실행형) 설치](install/sql-r-standalone-windows-install.md)합니다.
 
 ## <a name="related-products"></a>관련된 제품
 
