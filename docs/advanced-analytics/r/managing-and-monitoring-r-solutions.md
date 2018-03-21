@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 248b3b27a8df1320eb809c4cd537a12cefe4eacb
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 65398ab522f7a39aae08b1f438d2fa59291e4e8f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>시스템 학습 솔루션 관리 및 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,5 @@ ms.lasthandoff: 02/11/2018
 자세한 내용은 다음 리소스를 참조하십시오.
 
 + [R 서비스에 대 한 리소스 관리](../r/resource-governance-for-r-services.md)
-
-+ [R Services 모니터링](../r/monitoring-r-services.md)
 
 + [고급 분석 확장 구성 및 관리](../r/configure-and-manage-advanced-analytics-extensions.md)

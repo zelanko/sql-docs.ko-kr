@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2d15f47fd148cb7b1f0edf399e94502c3570eabd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8631ebd8cee2eb5f94fd1c28bee71f9fcfee192f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -111,8 +111,8 @@ Microsoft 데이터 과학 팀은 일반적인 시나리오에 대 한 솔루션
 
 이 자습서를 실행 하려면 다운로드 하 고 여기에 설명 된 대로 SQL Server 기계 학습 구성 요소를 설치 해야 합니다.
 
-+ [SQL Server 2017 컴퓨터 학습 Services 또는 SQL Server 2016 R 서비스 설정](../r/set-up-sql-server-r-services-in-database.md)
-+ [SQL Server 2017 Python 서비스 설정](../python/setup-python-machine-learning-services.md)
++ [SQL Server 2017 기계 학습 Services (In-database) 설치](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 2016 R Services (In-database) 설치](../install/sql-r-services-windows-install.md)
 
 SQL Server 2017 년 R, Python, 또는 둘 다 설치할 수 있습니다. 그렇지 않으면 전체 설치 과정, 아키텍처 및 요구 사항이 동일합니다.
 

@@ -16,11 +16,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: 
-ms.openlocfilehash: 5e718755aeae67ba55165770dc323cad8d6a54a9
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: ccba60d0a3e0fe45f82215a045e53a265d6c0a92
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 Services 란?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,12 +31,12 @@ SQL Server 컴퓨터 학습 서비스는 포함 된, 예측 분석 및 데이터
 
 SQL Server에서 컴퓨터 학습 기능을 사용 하기 위한 두 가지가 있습니다. 
 
-+ **SQL Server 컴퓨터 학습 Services (In-database)** 는 데이터베이스 엔진와 완전히 통합 하는 계산 엔진 여기서는 데이터베이스 엔진 인스턴스 내에서 작동 합니다. 대부분 설치의 경우가이 옵션은 있습니다.
-+ **SQL Server 컴퓨터 학습 서버 (독립 실행형)** 비 SQL 설치입니다. 서버를 설치 하려면 SQL Server 설치 프로그램을 사용 하지만 SQL Server에서 완전히 분리 됩니다.
++ [**SQL Server 컴퓨터 학습 Services (In-database)** ](r/sql-server-r-services.md) 는 데이터베이스 엔진와 완전히 통합 하는 계산 엔진 여기서는 데이터베이스 엔진 인스턴스 내에서 작동 합니다. 대부분 설치의 경우가이 옵션은 있습니다.
++ [**SQL Server 컴퓨터 학습 서버 (독립 실행형)** ](r/r-server-standalone.md) 비 SQL 설치입니다. 서버를 설치 하려면 SQL Server 설치 프로그램을 사용 하지만 SQL Server에서 완전히 분리 됩니다. 기능적으로 같습니다 비 SQL [Windows 용 Microsoft 컴퓨터 학습 서버](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)합니다.
 
 ## <a name="r-and-python-packages"></a>R 및 Python 패키지
 
-만들기 및 다양 한 유형의 데이터를 평가 하 고 기본 시스템 리소스를 사용 하 여 병렬로 처리 모델 학습에 사용 된 소유 Microsoft 패키지 통해 각 언어에 대해 지원이 됩니다.
+만들기 및 데이터 및 기본 시스템 리소스를 사용 하 여 병렬 처리 점수 매기기는 다양 한 형식의 모델 학습에 사용 된 소유 Microsoft 패키지 통해 각 언어에 대해 지원이 됩니다.
 
 소유 패키지 오픈 소스 R 및 Python 분포에서 빌드되므로 스크립트 또는 SQL Server에서 실행 하는 코드 수 기본 함수를 호출할 수 있고 SQL Server에 제공 된 언어 버전이 호환 타사 패키지를 사용 하 여 (Python 3.5 및 최신 버전의 R 현재 3.3.3).
 
@@ -84,12 +84,24 @@ SQL Server 2017 컴퓨터 학습 Services는 차세대 SQL Server 2016 R 서비�
 
 SQL Server 설명서의 최신 릴리스에 버전에 적용할 수 있습니다. SQL Server 컴퓨터 학습 서비스에 대 한 Python 에서만 사용 가능 2017 이상 버전에서는 모든 버전에는 R 지원 합니다. 달리 언급 하지 않는 한 2016 및 2017 버전에 적용 되는 R 설명서 가정할 수 있습니다.
 
+
+## <a name="related-machine-learning-products"></a>관련된 시스템 제품 학습
+
+ +  [Azure 가상 컴퓨터를 프로 비전](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+  
+  Azure 마켓플레이스 R 서버나 컴퓨터 학습 서버를 포함 하는 여러 가상 컴퓨터 이미지를 포함 합니다. 예측 모델의 개발 및 배포를 시작 하는 가장 빠른 방법은 Microsoft Azure에서 가상 컴퓨터를 만드는 중입니다. 이미지 크기 조정 및 이미 구성 된 공유에 쉽게 응용 프로그램 분석을 포함 하 고 백 엔드 시스템과 통합 하는 기능 제공 됩니다.
+
++ [데이터 과학 가상 컴퓨터](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
+
+  컴퓨터 학습 서버, SQL Server를 포함 하는 데이터 과학 가상 컴퓨터의 최신 버전 뿐만 아니라 기계 학습에 가장 인기 있는 도구의 배열 모든 사전 설치 및 테스트 합니다. Jupyter 노트북, 만들고, Julia에서 솔루션을 개발 MXNet, CNTK, 및 TensorFlow과 같은 심층 학습 GPU 사용이 가능한 라이브러리를 사용 합니다.
+
 <a name="next-steps"></a>
+
 ## <a name="next-steps"></a>다음 단계
 
 **1 단계:** 설치 및 소프트웨어를 구성 합니다. 
 
-+ [SQL Server 2017 기계 학습 Services (In-database) 설치](python/setup-python-machine-learning-services.md#bkmk_installPythonInDatabase)
++ [SQL Server 2017 기계 학습 Services (In-database) 설치](install/sql-machine-learning-services-windows-install.md)
 
 **2 단계:** 이러한 자습서 중 하나를 사용 하 여 코드로 시작 하려면:
 

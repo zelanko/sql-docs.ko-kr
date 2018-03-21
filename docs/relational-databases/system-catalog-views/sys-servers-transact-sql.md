@@ -27,28 +27,29 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 858fe45f817572eea387ce3971a52e72cc23f045
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc6dcb18c9961bffcf65db5f918ad54f19ca78ae
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   연결 된 서버나 원격 서버 등록 당 행과 로컬 서버에 대 한 행을 포함 **server_id** = 0.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|연결된 서버의 로컬 ID입니다.|  
 |**name**|**sysname**|때 **server_id** = 0, 서버 이름입니다.<br /><br /> 때 **server_id** > 0, 연결 된 서버는 로컬 이름입니다.|  
 |**product**|**sysname**|연결된 서버의 제품 이름입니다. "SQL Server"일 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스임을 나타냅니다.|  
-|**공급자**|**sysname**|연결된 서버에 연결하기 위한 OLE DB 공급자 이름입니다.|  
+|**provider**|**sysname**|연결된 서버에 연결하기 위한 OLE DB 공급자 이름입니다.|  
 |**data_source**|**nvarchar(4000)**|OLE DB 데이터 원본 연결 속성입니다.|  
-|**위치**|**nvarchar(4000)**|OLE DB 위치 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
+|**location**|**nvarchar(4000)**|OLE DB 위치 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 공급자 문자열 연결 속성입니다.<br /><br /> 호출자에게 ALTER ANY LINKED SERVER 권한이 없으면 NULL이 됩니다.|  
-|**카탈로그**|**sysname**|OLEDB 카탈로그 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
+|**catalog**|**sysname**|OLEDB 카탈로그 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
 |**connect_timeout**|**int**|연결 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
 |**query_timeout**|**int**|쿼리 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
 |**is_linked**|**bit**|0 =은 사용 하 여 추가 하는 이전 스타일 서버 **sp_addserver**, 다른 RPC 및 분산 트랜잭션 동작 사용 합니다.<br /><br /> 1 = 표준 연결된 서버입니다.|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 |**is_data_access_enabled**|**bit**|서버에서 분산 쿼리 사용이 가능합니다.|  
 |**is_collation_compatible**|**bit**|사용할 수 있는 데이터 정렬 정보가 없을 경우 원격 데이터의 데이터 정렬이 로컬 데이터와 호환되는 것으로 가정합니다.|  
 |**uses_remote_collation**|**bit**|1인 경우 원격 서버에 의해 보고된 데이터 정렬을 사용하고, 그렇지 않으면 다음 열에 의해 지정된 데이터 정렬을 사용합니다.|  
-|**데이터 정렬 이름**|**sysname**|사용할 데이터 정렬의 이름입니다. 로컬 데이터 정렬을 사용하는 경우에는 NULL입니다.|  
+|**collation_name**|**sysname**|사용할 데이터 정렬의 이름입니다. 로컬 데이터 정렬을 사용하는 경우에는 NULL입니다.|  
 |**lazy_schema_validation**|**bit**|값이 1인 경우 쿼리를 시작할 때 스키마 유효성 검사를 하지 않습니다.|  
 |**is_system**|**bit**|이 서버는 내부 시스템에 의해서만 액세스할 수 있습니다.|  
 |**is_publisher**|**bit**|서버가 복제 게시자입니다.|  
@@ -82,8 +83,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [연결 된 서버 카탈로그 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedsrvlogin&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [연결 된 서버 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

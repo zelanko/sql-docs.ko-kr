@@ -1,7 +1,7 @@
 ---
-title: "SQL Server 인스턴스의 컴퓨터 학습 구성 요소를 업그레이드 | Microsoft Docs"
+title: "SQL Server에서 Microsoft 컴퓨터 학습 서버에 컴퓨터 학습 구성 요소를 바인딩 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/31/2017
+ms.date: 03/15/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,19 +12,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 applies_to:
 - SQL Server (starting with 2016 CTP3)
-ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c67d0accb7ac7be46105e5148028fac3f67aa0f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>SQL Server 인스턴스의 컴퓨터 학습 구성 요소 업그레이드
+# <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Microsoft 컴퓨터 학습 서버에 SQL Server에서 컴퓨터 학습 구성 요소 바인딩
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는의 과정을 설명 합니다. _바인딩_, 기계 학습 SQL Server에서 사용 되는 구성 요소를 업그레이드 하는 데 사용할 수 있습니다. 바인딩 프로세스 서버 기반으로 컴퓨터 학습 서버의 릴리스에서 업데이트 흐름으로, SQL Server를 사용 하는 대신 릴리스를 잠그고 일정을 업데이트 합니다.
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/11/2018
 > 
 > SqlBindR.exe를 찾을 수 없나요? 아마도 위에 나열 된 구성 요소 다운로드 하지 않은 합니다. 이 유틸리티는 학습 서버 컴퓨터에 대 한 Windows installer에만 사용할 수 있습니다.
 
-1. 관리자 권한으로 명령 프롬프트를 열고 sqlbindr.exe가 포함된 폴더로 이동합니다. 기본 위치는`C:\Program Files\Microsoft\MLServer\Setup`
+1. 관리자 권한으로 명령 프롬프트를 열고 sqlbindr.exe가 포함된 폴더로 이동합니다. 기본 위치는 `C:\Program Files\Microsoft\MLServer\Setup`
 
 2. 다음 명령을 입력하여 사용 가능한 인스턴스 목록을 표시합니다. `SqlBindR.exe /list`
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/11/2018
 
 3. 실행 된 **SqlBindR.exe** 명령에 *바인딩/* 인수를 하 고 이전 단계에서 반환 된 인스턴스 이름을 사용 하 여를 업그레이드 하려면 인스턴스의 이름을 지정 합니다.
 
-   예를 들어 기본 인스턴스를 업그레이드 하려면 다음을 입력 합니다.`SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
+   예를 들어 기본 인스턴스를 업그레이드 하려면 다음을 입력 합니다.  `SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
 
 4. 업그레이드가 완료 되 면 수정 된 인스턴스와 관련 된 실행 패드 서비스를 다시 시작 합니다.
 
@@ -135,7 +135,7 @@ ms.lasthandoff: 02/11/2018
 
     자세한 내용은 [Windows 용 컴퓨터 학습 서버 제거](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-uninstall)합니다. 
 
-### <a name="bkmk_wizunbind"></a>마법사를 사용 하 여 바인딩 해제
+### <a name="bkmk_wizunbind"></a> 마법사를 사용 하 여 바인딩 해제
 
 1. 서버를 학습 하는 컴퓨터에 대 한 설치 관리자를 찾습니다. 설치 프로그램을 제거한 경우 다시 다운로드 하거나 다른 컴퓨터에서 복사를 할 수 있습니다.
 2. 바인딩 해제 하려는 인스턴스가 있는 컴퓨터에서 설치 프로그램을 실행 해야 합니다.
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/11/2018
 4. 사용권 계약에 동의 합니다. 설치 하는 경우에 사용 조건 수락을 지정 해야 합니다.
 5. **마침**을 클릭합니다. 프로세스 시간이 걸립니다.
 
-### <a name="bkmk_cmdunbind"></a>명령줄을 사용 하 여 바인딩 해제
+### <a name="bkmk_cmdunbind"></a> 명령줄을 사용 하 여 바인딩 해제
 
 1. 이전 섹션에 설명된 대로 명령 프롬프트를 열고 **sqlbindr.exe**가 포함된 폴더로 이동합니다.
 
@@ -178,7 +178,7 @@ Microsoft R Server 9.1.0에 대 한 새 설치 관리자를 실행 하면 SQL Se
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>바인딩 또는 바인딩 해제 여러 임시 폴더에 둡니다.
 
 경우에 따라 바인딩 및 바인딩 해제 작업이 임시 폴더를 정리 하려면 실패 합니다.
-다음과 같은 이름의 폴더를 찾을 경우 설치가 완료 된 후 제거할 수 있습니다.`R_SERVICES_<guid>`
+다음과 같은 이름의 폴더를 찾을 경우 설치가 완료 된 후 제거할 수 있습니다. `R_SERVICES_<guid>`
 
 > [!NOTE]
 > 설치가 완료 될 때까지 대기 해야 합니다. 하나의 버전과 관련 된 R 라이브러리를 제거한 다음 새 R 라이브러리를 추가 하는 데 시간이 오래 걸릴 수 있습니다. 작업이 완료 되 면 임시 폴더 제거 됩니다.

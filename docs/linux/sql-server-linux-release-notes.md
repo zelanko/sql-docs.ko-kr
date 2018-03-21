@@ -4,7 +4,7 @@ description: "이 문서는 릴리스 정보를 포함 하 고 SQL Server 2017 L
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: dea9cde5674dd684998894691c56e21e728bfe28
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
 
@@ -49,6 +49,7 @@ ms.lasthandoff: 02/24/2018
 
 | 릴리스 | 버전 | 릴리스 날짜 |
 |-----|-----|-----|
+| [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
 | [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
 | [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
@@ -66,9 +67,23 @@ ms.lasthandoff: 02/24/2018
 - [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 - [SQL Server 에이전트를 사용 하도록 설정](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU5"></a> CU5 (2018 년 3 월)
+
+이 SQL Server 2017의 누적 업데이트 5 (CU5) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3023.8입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [ https://support.microsoft.com/help/4092643 ](https://support.microsoft.com/help/4092643)합니다.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프 라인 패키지 설치의 경우 다음 표의 정보를 사용 하 여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 14.0.3023.8-4 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3023.8-4.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3023.8-4.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3023.8-4.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 패키지 | 14.0.3023.8-4 | [mssql 서버 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3023.8-4.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3023.8-4.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3023.8-4.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 패키지 | 14.0.3023.8-4 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3023.8-4_amd64.deb)</br>[높은 가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3023.8-4_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3023.8-4_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU4"></a> CU4 (2 월 2018)
 
-이 SQL Server 2017의 누적 업데이트 4 (CU4) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3022.28입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [https://support.microsoft.com/en-us/help/4056498](https://support.microsoft.com/en-us/help/4056498)합니다.
+이 SQL Server 2017의 누적 업데이트 4 (CU4) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3022.28입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [ https://support.microsoft.com/en-us/help/4056498 ](https://support.microsoft.com/en-us/help/4056498)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -85,7 +100,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a id="CU3"></a> C u 3 (1 월 2018)
 
-이 SQL Server 2017의 누적 업데이트 3 (CU3) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3015.40입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987)합니다.
+이 SQL Server 2017의 누적 업데이트 3 (CU3) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3015.40입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [ https://support.microsoft.com/en-us/help/4052987 ](https://support.microsoft.com/en-us/help/4052987)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -99,7 +114,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a id="CU2"></a> CU2 (2017 년 11 월)
 
-이 SQL Server 2017의 누적 업데이트 2 (CU2) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3008.27입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)합니다.
+이 SQL Server 2017의 누적 업데이트 2 (CU2) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3008.27입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [ https://support.microsoft.com/help/4052574 ](https://support.microsoft.com/help/4052574)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -113,7 +128,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a id="CU1"></a> CU1 (2017 년 10 월)
 
-이 SQL Server 2017의 누적 업데이트 1 (CU1) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3006.16입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634)합니다.
+이 SQL Server 2017의 누적 업데이트 1 (CU1) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3006.16입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [ https://support.microsoft.com/help/KB4053439 ](https://support.microsoft.com/help/4038634)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 

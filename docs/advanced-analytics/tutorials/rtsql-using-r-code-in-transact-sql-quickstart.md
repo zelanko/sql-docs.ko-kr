@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 488661c917690c2ec5af6db40a135c8eb3927db1
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Transact-SQL에서 R 코드 사용하기(SQL에서 R 빠른 시작)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,7 +84,7 @@ R 스크립트를 포함한 SQL 쿼리를 실행하려면 데이터베이스에 
 
 ## <a name="troubleshooting"></a>문제 해결
 
-+ 이 쿼리에서 오류가 발생한다면 설치가 완료되지 않았을 수 있습니다. SQL Server 설치 마법사를 사용하여 기능을 추가한 후 외부 코드 라이브러리를 사용할 수 있도록 몇 가지 추가 단계를 수행해야 합니다.  [SQL Server R Services 설치](../r/set-up-sql-server-r-services-in-database.md)를 참조하세요.
++ 이 쿼리에서 오류가 발생한다면 설치가 완료되지 않았을 수 있습니다. SQL Server 설치 마법사를 사용하여 기능을 추가한 후 외부 코드 라이브러리를 사용할 수 있도록 몇 가지 추가 단계를 수행해야 합니다.  참조 [학습 서비스는 SQL Server 2017 컴퓨터 설치](../install/sql-machine-learning-services-windows-install.md) 또는 [SQL Server 2016 R Services 설치](../install/sql-r-services-windows-install.md)합니다.
 
 + Launchpad 서비스가 실행 중인지 확인합니다. 환경에 따라 SQL Server에 연결할 R 작업자 계정을 사용하도록 설정하거나, 추가 네트워크 라이브러리를 설치하거나, 원격 코드 실행을 사용하도록 설정하거나, 구성이 완료된 후 인스턴스를 다시 시작해야 할 수 있습니다. [R Services 설치 및 업그레이드 FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)를 참조하세요.
 

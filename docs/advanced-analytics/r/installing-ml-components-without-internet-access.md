@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: d7d218dcb5efeddf248230abff85b46da23d389a
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

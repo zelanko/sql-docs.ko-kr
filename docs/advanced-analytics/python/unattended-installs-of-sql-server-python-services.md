@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Python 컴퓨터 학습 services (In-database) 무인된 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/11/2018
 
     > [!NOTE]
     > 
-    > Python에 대 한 새 설치 플래그는: `SQL_INST_MPY` 및`IACCEPTPYTHONLICENSETERMS`
+    > Python에 대 한 새 설치 플래그는: `SQL_INST_MPY` 및 `IACCEPTPYTHONLICENSETERMS`
 
 2. 지정 된 대로 서버를 다시 시작 합니다.
 3. 에 설명 된 대로 설치 후 구성 단계를 수행 [이 여기서](#bkmk_PostInstall)합니다. SQL Server 서비스의 또 다른 다시 시작 해야 합니다.

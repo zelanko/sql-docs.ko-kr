@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f9ac8a72618cb432134d8fd87b0664b720085730
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 8509556cd886f90dbac2211bc0282e8656bdc03e
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server에 새 Python 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-+ Python 언어 옵션으로 컴퓨터 학습 Services (In-database) 설치 해야 합니다. 자세한 내용은 [Python 컴퓨터 학습 서비스 설정](setup-python-machine-learning-services.md)합니다.
++ Python 언어 옵션으로 컴퓨터 학습 Services (In-database) 설치 해야 합니다. 자세한 내용은 [설치할 SQL Server 2017 컴퓨터 학습 Services (In-database)](../install/sql-machine-learning-services-windows-install.md)합니다.
 
 + 각 서버 인스턴스에 대해 별도 패키지의 복사본을 설치 해야 합니다. 패키지는 인스턴스 간에 공유할 수 없습니다.
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/28/2018
 
 + 인터넷에 연결 된 서버에서 Python 패키지를 설치 하는 경우에 다른 컴퓨터로 WHL 파일을 다운로드 하 고 서버에 복사 해야 합니다.
 
-    예를 들어 별도 컴퓨터에 다운로드할 수 있습니다 WHL 파일이이 사이트에서 [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), 다음 파일을 복사 하 고 `cntk-2.1-cp35-cp35m-win_amd64.whl` SQL Server 컴퓨터에 로컬 폴더에 있습니다.
+    예를 들어 별도 컴퓨터에 다운로드할 수 있습니다 WHL 파일이이 사이트에서 [ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), 다음 파일을 복사 하 고 `cntk-2.1-cp35-cp35m-win_amd64.whl` SQL Server 컴퓨터에 로컬 폴더에 있습니다.
 
 + SQL Server 2017 Python 3.5를 사용합니다. 
 

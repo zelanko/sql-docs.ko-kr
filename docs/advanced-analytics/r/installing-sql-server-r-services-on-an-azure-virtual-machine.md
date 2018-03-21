@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 572aeffdc0d3c06a4c3bda17e3f3d438b2819183
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Azure 가상 컴퓨터에서 기능을 학습 하는 SQL Server 컴퓨터 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="create-a-new-sql-server-2017-virtual-machine"></a>새 SQL Server 2017 가상 컴퓨터 만들기
 
-Python 또는 R에서 SQL Server 2017을 사용 하려면 Windows 기반 가상 컴퓨터를 구입 해야 합니다. [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)]linux 지원 빠른 [기본 점수 매기기](../sql-native-scoring.md) 사용할 수 없는 기능을 학습 하는 다른 컴퓨터에서 T-SQL 예측 함수를 사용 하 여이 버전에서는 아직 합니다.
+Python 또는 R에서 SQL Server 2017을 사용 하려면 Windows 기반 가상 컴퓨터를 구입 해야 합니다. [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] linux 지원 빠른 [기본 점수 매기기](../sql-native-scoring.md) 사용할 수 없는 기능을 학습 하는 다른 컴퓨터에서 T-SQL 예측 함수를 사용 하 여이 버전에서는 아직 합니다.
 
 SQL Server VM 제품 목록은이 문서를 참조: [개요 SQL Server의 Azure 가상 컴퓨터 (Windows)에서](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)합니다.
 
@@ -74,11 +74,10 @@ SQL Server VM 제품 목록은이 문서를 참조: [개요 SQL Server의 Azure 
 기계 학습 하지 않고 SQL Server를 포함 하는 Azure 가상 컴퓨터를 만든 경우 다음이 단계를 수행 하 여 기능을 추가할 수 있습니다.
 
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 다시 실행하고 마법사의 **서버 구성** 페이지에서 기능을 추가합니다.
-2. 외부 스크립트 실행을 사용하도록 설정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작합니다. 자세한 내용은 참조 [SQL Server R Services 설치](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)합니다.
+2. 외부 스크립트 실행을 사용하도록 설정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작합니다. 자세한 내용은 참조 [SQL Server 2016 R Services 설치](../install/sql-r-services-windows-install.md)합니다.
 3. (선택 사항) 원격 스크립트 실행에 필요한 경우 R 작업자 계정에 대한 데이터베이스 액세스를 구성합니다.
-   자세한 내용은 [SQL Server R Services 설정](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)을 참조하세요.
-3. (선택 사항) 원격 데이터 과학 클라이언트에서 R 스크립트 실행을 허용하려면 Azure 가상 컴퓨터에서 방화벽 규칙을 수정합니다. 자세한 내용은 [방화벽 차단 해제](#firewall)를 참조하세요.
-4. 필요한 네트워크 라이브러리를 설치하거나 사용하도록 설정합니다. 자세한 내용은 [네트워크 프로토콜 추가](#network)를 참조하세요.
+4. (선택 사항) 원격 데이터 과학 클라이언트에서 R 스크립트 실행을 허용하려면 Azure 가상 컴퓨터에서 방화벽 규칙을 수정합니다. 자세한 내용은 [방화벽 차단 해제](#firewall)를 참조하세요.
+5. 필요한 네트워크 라이브러리를 설치하거나 사용하도록 설정합니다. 자세한 내용은 [네트워크 프로토콜 추가](#network)를 참조하세요.
 
 ## <a name="additional-steps"></a>추가 단계
 
@@ -101,13 +100,13 @@ SQL Server VM 제품 목록은이 문서를 참조: [개요 SQL Server의 Azure 
 ### <a name="enable-odbc-callbacks-for-remote-clients"></a>원격 클라이언트에 대한 ODBC 콜백 사용
 
 예상 되는 서버를 호출 하는 클라이언트 솔루션을 학습 하는 컴퓨터의 일부로 ODBC 쿼리를 실행 해야 합니다는 실행 패드 원격 클라이언트를 대신 하 여 ODBC 호출을 수행할 수 있는지 확인 해야 합니다. 이 작업을 하려면 실행 패드에서 사용되는 SQL 작업자 계정이 인스턴스에 로그인하도록 허용해야 합니다.
-자세한 내용은 [SQL Server R Services 설정](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)을 참조하세요.
+자세한 내용은 참조 [SQL Server 2016 R Services 설치](../install/sql-r-services-windows-install.md)합니다.
 
 ### <a name="network"></a>네트워크 프로토콜 추가
 
 + 명명된 파이프 사용
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 클라이언트와 서버 컴퓨터 간의 연결에 대 한 및 일부 내부 연결에 명명 된 파이프 프로토콜을 사용합니다. 명명된 파이프를 사용하지 않는 경우 Azure 가상 컴퓨터 및 서버에 연결된 데이터 과학 클라이언트에서 둘 다 명명된 파이프를 설치하고 사용하도록 설정해야 합니다.
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]는 클라이언트와 서버 컴퓨터 간의 연결 및 일부 인터넷 연결을 위해 명명된 파이프 프로토콜을 사용합니다. 명명된 파이프를 사용하지 않는 경우 Azure 가상 컴퓨터 및 서버에 연결된 데이터 과학 클라이언트에서 둘 다 명명된 파이프를 설치하고 사용하도록 설정해야 합니다.
   
 + TCP/IP 사용
 

@@ -1,7 +1,7 @@
 ---
 title: "문제 해결 및 SQL Server의 기계 학습에 대 한 FAQ | Microsoft Docs"
 ms.custom: 
-ms.date: 06/16/2017
+ms.date: 03/16/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -11,20 +11,20 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 5b9a5c6497781ef67d9d2ef9b9032a4d9ee250e5
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>기계 학습 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 SQL Server의 컴퓨터 학습 기능의 설정 및 구성 관련 문제 해결 정보를 제공 합니다. 정보에는 설치 가이드를, 알려진된 문제 및 릴리스 정보 링크가 포함 됩니다. 다른 문서는이 문서에서 SQL Server의 시스템 학습 솔루션에 대 한 성능 최적화에 대 한 조언을 제공에 연결 합니다.
+이 문서는 설치 가이드를, 알려진된 문제 및 릴리스 정보에 문제 해결 링크를 제공합니다. 다른 문서는이 문서에서 SQL Server의 시스템 학습 솔루션에 대 한 성능 최적화에 대 한 조언을 제공에 연결 합니다.
 
 문제 해결을 위한 알려진된 문제, 일반적인 설치 질문 및 프로시저를 찾기 위한 시작 지점으로이 페이지를 사용 합니다.
 
@@ -50,32 +50,18 @@ ms.lasthandoff: 02/11/2018
 
 SQL server에서는 기계 학습을 설정 하지 않은 경우 또는 기능을 추가 하려는 경우 여기에서 시작 합니다.
 
-+ [R Services 또는 R 사용 하 여 컴퓨터 학습 서비스 설정](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
-+ [Python 컴퓨터 학습 서비스 설정](../advanced-analytics/python/setup-python-machine-learning-services.md)
-+ [설치 프로그램 FAQ](../advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md)
-+ [SqlBindR를 사용 하 여 R services의 인스턴스를 업그레이드 하려면](../advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
-
-다음 문서는 SQL Server의 컴퓨터 학습 기능의 오프 라인 설치에 필요한 추가 단계를 설명 합니다.
-
-+ [R services 무인된 설치](../advanced-analytics/r/unattended-installs-of-sql-server-r-services.md) 
-+ [Python 학습 서비스 컴퓨터의 무인된 설치](../advanced-analytics/python/unattended-installs-of-sql-server-python-services.md)
-
-기계 학습 인터넷 연결 없이 컴퓨터에서 기능을 설치 해야 하는 경우 설치 프로그램을 시작 하기 전에 R 및 Python 구성 요소를 다운로드 하려면이 문서의 링크 사용:
-
-+ [인터넷에 액세스하지 않고 기계 학습 구성 요소 설치](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [SQL Server 2017 기계 학습 Services (In-database) 설치](install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 2017 컴퓨터 학습 Server (독립 실행형) 설치](install/sql-machine-learning-standalone-windows-install.md)
++ [SQL Server 2016 R Services (In-database) 설치](install/sql-r-services-windows-install.md)
++ [SQL Server 2016R Server (독립 실행형) 설치](install/sql-r-standalone-windows-install.md)
++ [명령 프롬프트 설치](install/sql-ml-component-commandline-install.md)
++ [오프 라인 설치 (인터넷 없음)](install/sql-ml-component-install-without-internet-access.md)
 
 ### <a name="configuration"></a>Configuration
 
 다음 문서는 기본값에 대 한 정보 및 기계 학습에서 인스턴스 구성을 사용자 지정 하는 방법에 들어 있습니다.
 
-+ [SQL Server R Services에 대 한 사용자 계정 풀 수정](../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)  
-+ [고급 분석 확장 구성 및 관리](../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)  
++ [SQL Server R Services에 대 한 사용자 계정 풀 수정](r/modify-the-user-account-pool-for-sql-server-r-services.md)  
++ [고급 분석 확장 구성 및 관리](r/configure-and-manage-advanced-analytics-extensions.md)  
 + [리소스 풀을 만드는 방법](r/how-to-create-a-resource-pool-for-r.md)
 + [R 작업을 위해 최적화](r/operationalizing-your-r-code.md)
-
-## <a name="related-tools-and-services"></a>관련된 도구 및 서비스
-
-+ [Microsoft 컴퓨터 학습 서버 독립 실행형 설정](../advanced-analytics/r/create-a-standalone-r-server.md)
-+ [Azure VM에서 R 서버 설정](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-+ [Windows 용 R 서버 설치](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
-+ [R Tools for Visual Studio 가져오기](https://www.visualstudio.com/vs/rtvs/)

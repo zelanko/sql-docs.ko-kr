@@ -15,11 +15,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 160dae2d84c84aeaecaa07ec16be681fabde5534
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>SQL Server와 함께 사용 하기 위해 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,13 +38,13 @@ ms.lasthandoff: 02/11/2018
 
 + Microsoft R Server (SQL Server 2016) 용
 
-    - SQL Server 설치 프로그램에서 설치 하려면 참조 [독립 실행형 R Server 만들기](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - SQL Server 설치 프로그램에서 설치 하려면 참조 [Install SQL Server 2016 R Server (독립 실행형)](../install/sql-r-standalone-windows-install.md)
 
     - 별도 Windows 기반 설치 관리자를 사용 하려면 참조 [Windows 용 컴퓨터 학습 서버 설치](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
 + (SQL Server 2017) 용 서버를 학습 하는 컴퓨터
 
-    - SQL Server 설치 프로그램에서 설치 하려면 참조 [독립 실행형 R Server 만들기](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - SQL Server 설치 프로그램에서 설치 하려면 참조 [SQL Server 2017 컴퓨터 학습 서버 설치 (독립 실행형)](../install/sql-machine-learning-standalone-windows-install.md)
 
     - 별도 Windows 기반 설치 관리자를 사용 하려면 참조 [Windows 용 R 서버 9.1 설치](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 

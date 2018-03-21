@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 컴퓨터 학습 서비스 버전 간 기능 가용성 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/07/2018
+ms.date: 03/17/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,55 +12,55 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 16ca6c44b15c9fb7c1983d5a04175ebbade57895
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스의 버전 간 기능 가용성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  컴퓨터 학습 기능은 SQL Server 2016 및 SQL Server 2017에서 사용할 수 있습니다. 이 문서 기능을 제공 하는 버전을 나열 하 고, 특정 버전에 적용 되는 제한 사항을 설명, 특정 버전에만 사용할 수 있는 기능을 나열 합니다.
 
+
+## <a name="sql-server-2017-machine-learning-features"></a>SQL Server 2017 기계 학습 기능
+
+Enterprise 및 Developer 버전의 동일한 기능 범위를 추가 하는 동일한 비용이 발생 하지 않고 엔터프라이즈 설치에 대 한 솔루션을 빌드할 수 있습니다 됩니다. 버전 equivlanet 기능적으로 하지만, Developer Edition을 사용 하 여 프로덕션 환경에 대해 지원 되지 않습니다.
+
+기본 및 고급 통합 간의 차이점은 배율입니다. 고급 integration 컴퓨터를 수용할 수 있는 모든 크기로 데이터 집합의 병렬 처리에 대 한 모든 사용 가능한 코어를 사용할 수 있습니다. 기본 통합은 메모리에 맞는 데이터 집합 2 개의 코어로 제한 합니다. 
+
+기본 및 고급 통합 (In-database) 인스턴스에 적용 됩니다. 독립 실행형 서버는 데이터베이스 엔진 인스턴스 기능 아니며 Developer 및 Enterprise edition에만 설치 옵션으로 제공 됩니다.
+
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express 
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|기본 R 통합|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|아니요|   
+|고급 R 통합|예|아니요|아니오|아니오|아니요| 
+|기본 Python 통합|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|아니요|
+|고급 Python 통합|예|아니요|아니오|아니오|아니요| 
+|Machine Learning Server(독립 실행형)|예|아니요|아니오|아니오|아니요|   
+
  > [!NOTE]
- > 일반적으로 SQL Server 기계 학습 (In-database) 포함 하지 않습니다는 [해결해줍니다](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) 독립 실행형 R 서버 또는 컴퓨터 학습 서버 설치에에서 포함 된 기능을 합니다. 해결해줍니다 웹 서비스 배포 및 호스팅, 포함 되어 있으며 다른 SQL Server 작업과와 동일한 리소스에 대 한 경합 때문입니다.
- > 
- > 이러한 이유로 웹 서비스로 예측 모델의 배포를 지원 하기 위해 다른 실제 서버에 SQL Server 2016 R 서버 (독립 실행형) 또는 SQL Server 2017 컴퓨터 학습 서버 (독립 실행형) 설치 하는 것이 좋습니다. 
+ > (독립 실행형) 서버 한 대만 제공는 [해결해줍니다](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) Microsoft (SQL-브랜드가 지정 되지 않은) R 서버 또는 컴퓨터 학습 서버 설치에 포함 된 기능을 합니다. 해결해줍니다 웹 서비스 배포 및 호스팅 기능을 포함 합니다.
+>
+> (In-database) 설치의 경우 솔루션 작업 활용 하는 해당 하는 방법은 활용 하 여 데이터베이스 엔진의 기능 저장된 프로시저에서 실행할 수 있는 함수에 코드를 변환할 때.
 
-## <a name="sql-server-2017-machine-learning-services-in-database-and-standalone"></a>SQL Server 2017 컴퓨터 학습 Services (In-database) 및 (독립 실행형)
 
-Developer Edition Enterprise Edition의 것과 동일한 성능을 제공합니다. Developer Edition을 사용 하 여 프로덕션 환경에 대해 지원 되지 않습니다.
+## <a name="sql-server-2016-r-features"></a>SQL Server 2016 R 기능
 
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express| 
-|-------|----------|--------|---|------------------------------|-------|
-| R 인터프리터 & 독점 패키지 | 예 | 사용자 계정 컨트롤 | 아니요 | 아니오 | 아니요 | 
-| Python 인터프리터 & 클라이언트 라이브러리 | 예 | 사용자 계정 컨트롤 | 아니요 | 아니오 | 아니요 | 
-| 데이터 청크 <br/>(처리 많은 양의 데이터를 메모리에 적합 하는 한도 초과 하지 않음) | 예 | 아니요 | 아니오 | 아니오 | 아니요 |
-| 수직 처리 <br/>(2 개 이상 프로세서) | 예 | 아니요 | 아니오 | 아니오 | 아니요 |
-| 화 | 예 | 아니요 | 아니오 | 아니오 | 아니요 |
-| [예측](../../t-sql/queries/predict-transact-sql.md) 함수 <br/>(수행 [기본 점수 매기기](../sql-native-scoring.md) 필요한 이진 형식으로 이전에 저장 된 미리 학습 된 모델에 대해) | 예 | 사용자 계정 컨트롤 | 사용자 계정 컨트롤 | 사용자 계정 컨트롤 | 예 |
-| R 클라이언트 호환성 | 예 | 사용자 계정 컨트롤 | 아니요 | 아니오 | 아니요 | 
-| Microsoft R Open | 예 | 사용자 계정 컨트롤 | 아니요 | 아니오 | 아니요 | 
-| Anaconda Python 3.5 | 예 | 사용자 계정 컨트롤 | 아니요 | 아니오 | 아니요 | 
-
-## <a name="sql-server-2016-r-services-in-database-and-r-server-standalone"></a>SQL Server 2016 R Services (In-database) 및 R Server (독립 실행형)
-
-기능 가용성 2017 년 1 2016 처음 릴리스에 속하지는 Python 지원 빼기와 같습니다.
+SQL Server 2016 R 통합만 포함 되어 있습니다. SQL Server 2016의 기본 및 고급 R 통합 SQL Server 2017와 동일 합니다.
 
 ## <a name="r-feature-availability-in-azure-sql-database"></a>Azure SQL 데이터베이스에서 지원 되는 R 기능
   
-초기 테스트 릴리스 후 R 서비스는 현재 **하지** 이후 개발 보류 중인 Azure SQL 데이터베이스에서 사용할 수 있습니다. 
+초기 테스트 릴리스 후 추가 개발 보류 중인 R 서비스는 Azure SQL 데이터베이스에서 제거 되었습니다. 
 
 ## <a name="performance-expectations-for-enterprise-edition"></a>Enterprise Edition에 대 한 성능 기대
 
 컴퓨터 학습 솔루션의 성능을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 초과 하는 동일한 하드웨어를 지정 된 기존 R을 사용 하 여 이전에 일반적으로 사용할 수 있습니다. SQL Server에서 R 솔루션 수 실행할 수 때문에 서버 리소스를 사용 하 여이 하 고 경우에 따라 사용 하 여 여러 프로세스에 배포 하는 **RevoScaleR** 함수입니다. 
-
-기능은 아직 개발 중인 되지만 적용 것으로 예상 되는 동일한 이점 성능 Python 솔루션에 대 한 평가 된가 합니다.
 
 또한 사용자가 성능 및 학습 솔루션 vs Enterprise Edition에서에서 실행 되는 경우 동일한 컴퓨터에 대 한 확장성에 상당한 차이가 있음을 확인할 예상할 수 있습니다. 확인할 수 있습니다. 이유는 RevoScaleR 함수를 메모리에 맞출 수 있는 양보다 더 많은 데이터를 처리할 수 있는 병렬 기계 학습에 사용할 수 있는 증가 된 스레드를 처리 하 고 스트리밍 또는 (청크)에 대 한 지원이 포함 됩니다. 
 
