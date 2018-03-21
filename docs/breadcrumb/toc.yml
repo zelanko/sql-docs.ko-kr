@@ -125,12 +125,21 @@
         - name: Linux의 SQL Server
           href: /sql/linux/
           homepage: /sql/linux/sql-server-linux-overview
-        - name: SQL Server에 대한 고급 분석
+        - name: SQL Server Machine Learning 서비스
           href: /sql/advanced-analytics/
-          homepage: /sql/advanced-analytics/getting-started-with-machine-learning-services
-        - name: SQL Server의 R Services
+          homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
+        - name: R
           href: /sql/advanced-analytics/r/
           homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
+        - name: Python
+          href: /sql/advanced-analytics/python/
+          homepage: /sql/advanced-analytics/python/sql-server-python-services
+        - name: 설치 및 구성
+          href: /sql/advanced-analytics/install/
+          homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
+        - name: 자습서
+          href: /sql/advanced-analytics/tutorials/
+          homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
         - name: SQL Server
           href: /sql/sql-server/
           homepage: /sql/sql-server/sql-server-technical-documentation
@@ -210,7 +219,7 @@
                         - name: 클라이언트
                           href: /sql/analysis-services/multidimensional-models-adomd-net-client/
                           homepage: /sql/analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-functionality
-                        - name: Server
+                        - name: 서버
                           href: /sql/analysis-services/multidimensional-models-adomd-net-server/
                           homepage: /sql/analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality
                     - name: Analysis Management Object
@@ -309,7 +318,7 @@
                 - name: 로그 전달
                   href: /sql/database-engine/log-shipping/
                   homepage: /sql/database-engine/log-shipping/about-log-shipping-sql-server
-            - name: Data Quality Services
+            - name: 데이터베이스 엔진 서비스
               href: /sql/data-quality-services/
               homepage: /sql/data-quality-services/data-quality-services
               items:
@@ -645,7 +654,7 @@
                 - name: 트랜잭션
                   href: /sql/relational-databases/replication/transactional/
                   homepage: /sql/relational-databases/replication/transactional/transactional-replication
-            - name: 리소스 관리자
+            - name: 관리
               href: /sql/relational-databases/resource-governor/
               homepage: /sql/relational-databases/resource-governor/resource-governor
             - name: 스크립팅
@@ -828,7 +837,7 @@
                     - name: In-process ADO.NET
                       href: /sql/relational-databases/clr-integration-data-access-in-process-ado-net/
                       homepage: /sql/relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net
-                    - name: 트랜잭션
+                    - name: 의
                       href: /sql/relational-databases/clr-integration-data-access-transactions/
                       homepage: /sql/relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions
                 - name: 보안
@@ -882,7 +891,7 @@
                     - name: 날짜 시간
                       href: /sql/relational-databases/native-client-ole-db-date-time/
                       homepage: /sql/relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db
-                    - name: 트랜잭션
+                    - name: 의
                       href: /sql/relational-databases/native-client-ole-db-transactions/
                       homepage: /sql/relational-databases/native-client-ole-db-transactions/transactions
                     - name: 오류
@@ -1065,7 +1074,7 @@
                 - name: 메뉴 도움말
                   href: /sql/ssms/menu-help/
                   homepage: /sql/ssms/menu-help/sql-server-management-studio-menu-help
-                - name: 개체
+                - name: Object
                   href: /sql/ssms/object/
                   homepage: /sql/ssms/object/object-explorer
                 - name: 서버 등록
