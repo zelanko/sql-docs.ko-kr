@@ -1,16 +1,16 @@
 ---
-title: "책갈피 속성 (ADO) | Microsoft Docs"
+title: 책갈피 속성 (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 59cc184403fff8b152ee7eabbdf823abd6c3d4bc
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bookmark-property-ado"></a>책갈피 속성 (ADO)
 현재 레코드를 고유 하 게 식별 하는 책갈피를 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에 현재 레코드를 설정 하거나는 **레코드 집합** 유효한 책갈피로 식별 되는 레코드에는 개체입니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
  열 때는 **레코드 집합** 개체 이면 각 레코드의 고유 책갈피입니다. 현재 레코드에 대 한 책갈피를 저장 하려면 형식의 값을 할당할는 **책갈피** 변수에 속성입니다. 언제 든 지 다른 레코드로 이동한 후에 해당 레코드를 신속 하 게 반환 하려면 설정는 **레코드 집합** 개체의 **책갈피** 속성을 해당 변수의 값입니다.  
   
- 사용자는 책갈피의 값을 보려면 못할 수 있습니다. 또한 사용자가 직접 비교할 기대 하지??? 동일한 레코드를 참조 하는 두 책갈피 값이 다 수 있습니다.  
+ 사용자는 책갈피의 값을 보려면 못할 수 있습니다. 또한 사용자가 기대 하지 수 같은 레코드를 참조 하는 두 책갈피 서로 다른 값을 가질 수 있기 때문에 직접 비교할 책갈피입니다.  
   
  사용 하는 경우는 [복제](../../../ado/reference/ado-api/clone-method-ado.md) 의 복사본을 만드는 메서드는 **레코드 집합** 개체는 **책갈피** 원본 데이터베이스와 복제에 대 한 속성 설정을 **레코드 집합**  개체는 동일 하며 같은 의미로 사용할 수 있습니다. 그러나 다른 책갈피를 사용할 수 없습니다 **레코드 집합** 동일한 원본이 나 명령에서 생성 된 경우에 서로 교체 하 여 개체입니다.  
   
