@@ -4,18 +4,20 @@
 ## [아키텍처 개요](architecture-overview-machine-learning.md)
 ## [버전별 기능](r/differences-in-r-features-between-editions-of-sql-server.md)
 
+# Install 
+## [Machine Learning Services(데이터베이스 내)](install/sql-machine-learning-services-windows-install.md)
+## [Machine Learning Server(독립 실행형)](install/sql-machine-learning-standalone-windows-install.md)
+## SQL Server 2016
+### [R Services(In-Database)](install/sql-r-services-windows-install.md)
+### [R 서버(독립 실행형)](install/sql-r-standalone-windows-install.md)
+## [명령 프롬프트 설치](install/sql-ml-component-commandline-install.md)
+## [오프라인 설치(인터넷 없음)](install/sql-ml-component-install-without-internet-access.md)
+
 # [Machine Learning Services - R](r/sql-server-r-services.md)
-
-## [시작](r/getting-started-with-sql-server-r-services.md)
-### [SQL Server Machine Learning Services 설정(데이터베이스 내)](r/set-up-sql-server-r-services-in-database.md)
-### [Machine Learning Services의 무인 설치](r/unattended-installs-of-sql-server-r-services.md)
-
 ## [아키텍처](r/architecture-overview-sql-server-r.md)
 ### [R 상호 운용성](r/r-interoperability-in-sql-server.md)
 ### [R 통합을 지원하는 구성 요소](r/new-components-in-sql-server-to-support-r.md)
 ### [R에 대한 보안](r/security-overview-sql-server-r.md)
-
-## [모니터링](r/monitoring-r-services.md)
 
 ## [SQL Server용 R 자습서](tutorials/sql-server-r-tutorials.md)
 
@@ -64,13 +66,10 @@
 
 # [Machine Learning Services - Python](python/sql-server-python-services.md)
 
-## [시작](python/setup-python-machine-learning-services.md)
-
 ## [아키텍처](python/architecture-overview-sql-server-python.md)
 ### [Python 상호 운용성](python/python-interoperability.md)
 ### [Python을 지원하는 구성 요소](python/new-components-in-sql-server-to-support-python-integration.md)
 ### [Python 보안](python/security-overview-sql-server-python-services.md)
-## [모니터링](python/managing-and-monitoring-python-solutions.md)
 <!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
 <!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
@@ -93,10 +92,6 @@
 #### [모델 운영화](tutorials/sqldev-py6-operationalize-the-model.md)
 
 # [Machine Learning Server - 독립 실행형](r/r-server-standalone.md)
-## [시작](r/getting-started-with-microsoft-r-server-standalone.md)
-## [독립 실행형 Machine Learning Server 설정](r/create-a-standalone-r-server.md)
-### [명령줄에서 Microsoft Machine Learning Server 설치](r/install-microsoft-r-server-from-the-command-line.md)
-### [데이터 과학 가상 컴퓨터 프로비저닝](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
 # [방법](r/sql-server-machine-learning-tasks.md)
 
@@ -155,7 +150,7 @@
 
 ### [웹 서비스를 사용하여 모델 배포 및 사용](operationalization-with-mrsdeploy.md)
 
-### [기계 학습 솔루션 관리 및 모니터링](r/managing-and-monitoring-r-solutions.md)
+### [관리 및 모니터링 솔루션](r/managing-and-monitoring-r-solutions.md
 ### [Machine Learning Services를 위한 리소스 거버넌스](r/resource-governance-for-r-services.md)
 ### [기계 학습을 위한 리소스 풀 만들기](r/how-to-create-a-resource-pool-for-r.md)
 ### [Machine Learning Services를 위한 확장 이벤트](r/extended-events-for-sql-server-r-services.md)
@@ -172,18 +167,14 @@
 ## [Azure SQL Database에서 R 사용](r/using-r-in-azure-sql-database.md)
 
 ## [설치 및 문제 해결 팁](machine-learning-troubleshooting-faq.md)
+### [데이터 과학 가상 컴퓨터 프로비저닝](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [문제 해결을 위한 데이터 컬렉션](data-collection-ml-troubleshooting-process.md)
 ### [업그레이드 및 설치 FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
-
 ### [외부 스크립트 실행에 대한 일반적인 문제](common-issues-external-script-execution.md)
-### [인터넷에 액세스하지 않고 기계 학습 구성 요소 설치](r/installing-ml-components-without-internet-access.md)
-### [Azure 가상 컴퓨터에 SQL Server Machine Learning Services 설치](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [기존 Azure 가상 컴퓨터에 R 추가](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [sqlBindR.exe를 사용하여 인스턴스 업그레이드](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
-### [명령줄에서 R Server 설치](r/install-microsoft-r-server-from-the-command-line.md)
-### [엔터프라이즈 데이터 과학 가상 컴퓨터 프로비전](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-### [데이터 과학 도구 설정](r/setup-or-configure-r-tools.md)
-### [데이터 과학 클라이언트 설정](r/set-up-a-data-science-client.md)
+## [Microsoft ML 서버에 바인딩](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+## [데이터 과학 도구 설정](r/setup-or-configure-r-tools.md)
+## [데이터 과학 클라이언트 설정](r/set-up-a-data-science-client.md)
+## [가상 머신 설정](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 
 ## 블로그
 
@@ -198,15 +189,12 @@
 # [참조](r/machine-learning-services-r-reference.md)
 ## [MicrosoftML](using-the-microsoftml-package.md)
 ## [RevoScaleR](r/revoscaler-overview.md)
-### [SQL Server 데이터를 위한 ScaleR 함수](r/scaler-functions-for-working-with-sql-server-data.md)
+### [SQL Server 데이터를 위한 RevoScaleR 함수](r/scaler-functions-for-working-with-sql-server-data.md)
 ## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 ## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
 ## [RevoScalePy](python/what-is-revoscalepy.md)
 
-# [자습서 및 예제](tutorials/machine-learning-services-tutorials.md)
-
-## [SQL Server용 Python 자습서](tutorials/sql-server-python-tutorials.md)
-## [SQL Server용 R 자습서](tutorials/sql-server-r-tutorials.md)
+# [템플릿 및 예제](tutorials/machine-learning-services-tutorials.md)
 
 ## [데이터 과학 솔루션 템플릿](tutorials/data-science-scenarios-and-solution-templates.md)
 ## [SQL Server 예제](https://github.com/Microsoft/sql-server-samples)
