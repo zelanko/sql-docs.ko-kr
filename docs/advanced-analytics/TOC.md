@@ -101,6 +101,8 @@
 
 ### [SQL Server에 새로운 Python 패키지 설치](python/install-additional-python-packages-on-sql-server.md)
 
+### [SQL Server에 사용할 Python 도구 구성](python/setup-python-client-tools-sql.md)
+
 ### [SQL Server 인스턴스에 대해 R 패키지 관리 사용](r/r-package-how-to-enable-or-disable.md)
 
 ### [SQL Server에 설치된 패키지 확인](r/determine-which-packages-are-installed-on-sql-server.md)
