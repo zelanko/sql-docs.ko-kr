@@ -1,25 +1,25 @@
 ---
-title: "SQL Server 2017 linux에 대 한 설치 지침 | Microsoft Docs"
-description: "설치, 업데이트 및 Linux에서 SQL Server를 제거 합니다. 이 문서에서는 온라인, 오프 라인 및 무인 시나리오에 설명 합니다."
+title: SQL Server 2017 linux에 대 한 설치 지침 | Microsoft Docs
+description: 설치, 업데이트 및 Linux에서 SQL Server를 제거 합니다. 이 문서에서는 온라인, 오프 라인 및 무인 시나리오에 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/08/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 설치 지침
 
@@ -47,12 +47,10 @@ SQL Server 2017 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (S
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 가져오기](http://www.ubuntu.com/download/server)
 | **Docker 엔진** | 1.8+ | [Docker 가져오기](http://www.docker.com/products/overview)
 
+Microsoft는 또한 배포 하 고 OpenShift 및 Kubernetes 사용 하 여 SQL Server 컨테이너 관리를 지원 합니다.
+
 > [!NOTE]
-> 설치 하 고 다른 밀접 하 게 관련 Linux 플랫폼에서 SQL Server를 실행 하는 경우도 있지만 SQL Server을만 테스트 하 고 앞의 표에 나열 된 플랫폼에서 지원 됩니다.
-
-Microsoft는 배포 하 고 OpenShift 및 Kubernetes 사용 하 여 SQL Server 컨테이너 관리를 지원 합니다.
-
-SQL Server 2017에 대 한 최신 지원 정책에 대 한 참조 [Microsoft SQL Server에 대 한 기술 지원 정책을](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)합니다.
+> SQL Server는 테스트 하 고 앞에서 나열 된 분포에 대 한 Linux에서 지원 합니다. SQL Server는 지원 되지 않는 운영 체제에 설치 하려는 경우를 검토 하십시오는 **지원 정책** 의 섹션은 [Microsoft SQL Server에 대 한 기술 지원 정책을](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) 지원을 이해 하려면 영향을 줍니다.
 
 ## <a id="system"></a> 시스템 요구 사항
 
@@ -170,7 +168,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 ## <a id="offline"></a> 오프 라인 설치
 
-Linux 컴퓨터에 없는 경우 액세스에 사용 되는 온라인 저장소에는 [빠른 시작](#platforms), 패키지 파일을 직접 다운로드할 수 있습니다. 이러한 패키지는 Microsoft 리포지토리([https://packages.microsoft.com](https://packages.microsoft.com))에 있습니다.
+Linux 컴퓨터에 없는 경우 액세스에 사용 되는 온라인 저장소에는 [빠른 시작](#platforms), 패키지 파일을 직접 다운로드할 수 있습니다. 이러한 패키지는 Microsoft 저장소에 있는 [ https://packages.microsoft.com ](https://packages.microsoft.com)합니다.
 
 > [!TIP]
 > 빠른 시작의 단계와 성공적으로 설치를 다운로드 하거나 수동으로 SQL Server 패키지를 설치할 필요가 없습니다. 이 섹션은 오프 라인 시나리오에 대해서만 합니다.

@@ -1,24 +1,24 @@
 ---
 title: SQL Server linux FAQ | Microsoft Docs
-description: "이 문서 Linux에서 실행 중인 SQL Server에 대 한 질문과 대답을 제공 합니다."
+description: 이 문서 Linux에서 실행 중인 SQL Server에 대 한 질문과 대답을 제공 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 3fad3fb2892e5a91e42eefb5f00932c39d00064f
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 6fdf6679230141dd2dedb35a9ae7e9cc0fb1b9cb
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux에서 SQL Server가 질문과 대답 (FAQ)
 
@@ -30,11 +30,11 @@ ms.lasthandoff: 02/24/2018
 
 1. **Linux 플랫폼 지원 되나요?**
 
-   SQL Server는 현재 Red Hat Enterprise Server, SUSE Linux Enterprise Server 및 Ubuntu에서 지원 됩니다. 또한 Docker가 있는 컨테이너에서 실행 됩니다. 지원 되는 버전에 대 한 최신 정보를 참조 하십시오. [지원 되는 플랫폼](sql-server-linux-setup.md#supportedplatforms)합니다.
+   SQL Server는 현재 Red Hat Enterprise Server, SUSE Linux Enterprise Server 및 Ubuntu에서 지원 됩니다. Docker가 있는 컨테이너의 실행도 지원 합니다. 지원 되는 버전에 대 한 최신 정보를 참조 하십시오. [지원 되는 플랫폼](sql-server-linux-setup.md#supportedplatforms)합니다.
 
 1. **다른 플랫폼에서 사용할 수 Linux에서 SQL Server**?
 
-   설치 하 고 Linux의 다른 배포에서 SQL Server를 실행 되었을 수 있습니다. 예를 들어 CentOS는 밀접 하 Red Hat Enterprise Server RPM SQL Server 패키지를 설치할 수 있도록 합니다. 이 다른 밀접 한 관련이 분포도 발생할 수 있습니다. 주요 문제 테스트 및 지원 됩니다. SQL Server 에서만 테스트 및 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu 에서만 지원 됩니다.
+   SQL Server는 테스트 하 고 앞에서 나열 된 분포에 대 한 Linux에서 지원 합니다. 다른 Linux 배포판 밀접 한 관련이 및 SQL Server를 실행할 수 있습니다 (예를 들어 CentOS는 밀접 한 관련이 Red Hat Enterprise Server). 하지만 지원 되지 않는 운영 체제에서 SQL Server를 설치 하기로 선택한 경우을 검토 하십시오는 **지원 정책** 섹션은 [Microsoft SQL Server에 대 한 기술 지원 정책을](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) 지원을 이해 하려면 영향을 줍니다. 또한 일부 커뮤니티-유지 관리 되도록 Linux 배포판 정식 기본 운영 체제 문제 이면 지원을 받을 수 없는 note 합니다.
 
 1. **Linux에서 지원 되는 SQL Server 기능**
 

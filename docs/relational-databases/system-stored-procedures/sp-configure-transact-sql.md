@@ -1,16 +1,16 @@
 ---
 title: sp_configure (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_configure
@@ -20,24 +20,26 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d6ff78066f307e70f37880eb57e2430774c242ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 63ab5d253d26375b3f53cb0f38ffa96f56e0a93d
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
 
-  현재 서버에 대한 전역 구성 설정을 표시하거나 변경합니다.  
+  현재 서버에 대한 전역 구성 설정을 표시하거나 변경합니다.
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
->  데이터베이스 수준 구성 옵션에 대 한 참조 [ALTER DATABASE SCOPED configuration&#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). 소프트 NUMA를 구성 하려면 참조 [소프트 NUMA &#40; SQL Server &#41; ](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  데이터베이스 수준 구성 옵션에 대 한 참조 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)합니다. 소프트 NUMA를 구성 하려면 참조 [소프트 NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +71,7 @@ RECONFIGURE
  [ **@configname=** ] **'***option_name***'**  
  구성 옵션의 이름입니다. *option_name* 은 **varchar(35)**이며 기본값은 NULL입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 구성 이름의 일부인 고유 문자열을 모두 인식합니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
   
- 사용 가능한 구성 옵션 및 해당 설정에 대 한 정보를 참조 하십시오. [서버 구성 옵션 &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ 사용 가능한 구성 옵션 및 해당 설정에 대 한 정보를 참조 하십시오. [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)합니다.  
   
  [ **@configvalue=** ] **'***value***'**  
  새로운 구성 설정입니다. *value* 는 **int**이며 기본값은 NULL입니다. 최대값은 개별 옵션에 따라 달라집니다.  
@@ -89,8 +91,8 @@ RECONFIGURE
 |**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
 |**minimum**|**int**|구성 옵션의 최소값입니다.|  
 |**maximum**|**int**|구성 옵션의 최대값입니다.|  
-|**config_value**|**int**|에 구성 옵션 사용 하 여 설정 된 값 **sp_configure** (값 **sys.configurations.value**). 이러한 옵션에 대 한 자세한 내용은 참조 [서버 구성 옵션 &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 및 [sys.configurations&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**int**|현재 구성 옵션의 값을 실행 (값 **sys.configurations.value_in_use**).<br /><br /> 자세한 내용은 참조 [sys.configurations&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**config_value**|**int**|에 구성 옵션 사용 하 여 설정 된 값 **sp_configure** (값 **sys.configurations.value**). 이러한 옵션에 대 한 자세한 내용은 참조 [서버 구성 옵션 &#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 및 [sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)합니다.|  
+|**run_value**|**int**|현재 구성 옵션의 값을 실행 (값 **sys.configurations.value_in_use**).<br /><br /> 자세한 내용은 참조 [sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)합니다.|  
   
 ## <a name="remarks"></a>주의  
  사용 하 여 **sp_configure** 를 표시 하거나 서버 수준의 설정을 변경 합니다. 데이터베이스 수준의 설정을 변경하려면 ALTER DATABASE를 사용합니다. 현재 사용자 세션에만 적용되는 설정을 변경하려면 SET 문을 사용합니다.  
@@ -110,12 +112,12 @@ RECONFIGURE
 > [!NOTE]  
 >  지정 된 경우 *값* 는 옵션에 대해 너무 높기는 **run_value** 열 사실을 반영 하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 유효 하지 않은 설정을 사용 하지 않고 하지 못했습니다. 동적 메모리 합니다.  
   
- 자세한 내용은 참조 [reconfigure&#40; Transact SQL &#41; ](../../t-sql/language-elements/reconfigure-transact-sql.md).  
+ 자세한 내용은 참조 [재구성 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)합니다.  
   
 ## <a name="advanced-options"></a>고급 옵션  
  와 같은 일부 구성 옵션 **선호도 마스크** 및 **복구 간격**, 고급 옵션으로 지정 합니다. 기본적으로 이 옵션은 보거나 변경할 수 없습니다. 설정에서 사용할 수 있게,는 **ShowAdvancedOptions** 옵션을 1로 구성 합니다.  
   
- 구성 옵션 및 해당 설정에 대 한 자세한 내용은 참조 [서버 구성 옵션 &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ 구성 옵션 및 해당 설정에 대 한 자세한 내용은 참조 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)합니다.  
   
 ## <a name="permissions"></a>Permissions  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 실행할 **sp_configure** 구성 옵션을 변경 하거나 RECONFIGURE 문을 실행 하려면 두 매개 변수를 받아야 합니다 ALTER SETTINGS 서버 수준 사용 권한. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
@@ -150,7 +152,7 @@ EXEC sp_configure 'recovery interval', '3';
 RECONFIGURE WITH OVERRIDE;  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
   
 ### <a name="c-list-all-available-configuration-settings"></a>3. 모든 사용 가능한 구성 설정 나열  
  다음 예에서는 모든 구성 옵션을 나열하는 방법을 보여 줍니다.  
@@ -168,10 +170,10 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>5. Hadoop 연결 설정  
- Hadoop 연결 설정 하려면 sp_configure를 실행 하는 것 외에도 몇 가지 추가 단계가 필요 합니다. 전체 프로시저에 대 한 참조 [외부 데이터 원본 만들기 &#40; Transact SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ Hadoop 연결 설정 하려면 sp_configure를 실행 하는 것 외에도 몇 가지 추가 단계가 필요 합니다. 전체 프로시저에 대 한 참조 [외부 데이터 원본 만들기 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [RECONFIGURE&#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [Reconfigure&#40; Transact SQL &#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

@@ -1,16 +1,16 @@
 ---
 title: sp_spaceused (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_spaceused_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 670fc2eaf7d6e5c4e499ff57c3a5564bec903ac1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ef8781d5c6ab68b90aefcc9c7d01e0cb9f070a02
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,7 +50,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>인수  
 
-에 대 한 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 및 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spacedused` 명명 된 매개 변수를 지정 해야 합니다 (예를 들어 `sp_spacedused (@objname= N'Table1');` 매개 변수의 서 수 위치에 사용 하는 대신 합니다. 
+에 대 한 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 및 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` 명명 된 매개 변수를 지정 해야 합니다 (예를 들어 `sp_spaceused (@objname= N'Table1');` 매개 변수의 서 수 위치에 사용 하는 대신 합니다. 
 
  [ **@objname=**] **'***objname***'** 
    
@@ -58,7 +58,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 경우 *objname* 를 지정 하지 않으면 전체 데이터베이스에 대 한 결과가 반환 됩니다.  
 *objname* 은 **nvarchar(776)**, 기본값은 NULL입니다.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]및 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 만 데이터베이스 및 테이블 개체를 지원 합니다.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 및 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 만 데이터베이스 및 테이블 개체를 지원 합니다.
   
  [ **@updateusage=**] **'***updateusage***'**  
  공간 사용 정보를 업데이트하려면 DBCC UPDATEUSAGE를 실행해야 함을 나타냅니다. 때 *objname* 는 명령문을 실행 하는 전체 데이터베이스에 지정 되지 않으면 명령문을 실행 하는 그렇지 않은 경우 *objname*합니다. 값은 가능 **true** 또는 **false**합니다. *updateusage* 은 **varchar(5)**, 기본값은 **false**합니다.  
@@ -81,8 +81,8 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |Value|설명|  
 |-----------|-----------------|  
-|0|때  *@objname*  null 이거나 지정 하지 않으면 두 개의 결과 집합이 반환 됩니다. 두 개의 결과 집합은 기본 동작입니다.|  
-|1.|때  *@objname*  아니거나 = null을 지정 하지는 단일 결과 집합이 반환 됩니다.|  
+|0|때 *@objname* null 이거나 지정 하지 않으면 두 개의 결과 집합이 반환 됩니다. 두 개의 결과 집합은 기본 동작입니다.|  
+|1.|때 *@objname* 아니거나 = null을 지정 하지는 단일 결과 집합이 반환 됩니다.|  
   
  *oneresultset* 은 **비트**, 기본값은 **0**합니다.  
 
@@ -174,7 +174,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_pending_truncation**|**varchar(18)**|KB 단위로 WAITING_FOR_LOG_TRUNCATION 상태와 검사점 파일의 총 크기입니다. 로그 잘림이 발생 한 후 정리를 대기 하는 검사점 파일에 사용 되는 디스크 공간입니다. 데이터베이스에 하나 이상의 컨테이너와 memory_optimized_data 파일 그룹이 없는 경우 NULL을 반환 합니다. 이 열은만 포함 된 if `@include_total_xtp_storage=1`합니다.|
 
 ## <a name="remarks"></a>주의  
- **database_size** 의 합계 보다 항상 큽니다 **예약** + **할당 되지 않은 공간** 로그 파일의 크기를 포함 하기 때문에 있지만 **예약** 및 **unallocated_space** 데이터 페이지만 고려 합니다.  
+ **database_size** 의 합계 보다 항상 큽니다 **예약** + **할당 되지 않은 공간** 로그 파일의 크기를 포함 하기 때문에 있지만 **예약**및 **unallocated_space** 데이터 페이지만 고려 합니다.  
   
  XML 인덱스 및 전체 텍스트 인덱스에서 사용 되는 페이지에 포함 된 **index_size** 두 결과 집합에 대 한 합니다. 때 *objname* 지정, XML 인덱스 및 개체에 대 한 전체 텍스트 인덱스에 대 한 페이지 합계에도 계산 됩니다 **예약** 및 **index_size** 결과입니다.  
   
@@ -211,7 +211,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>3. 스트레치 사용 테이블을와 연결 된 원격 테이블에 대 한 공간 사용 정보를 표시 합니다.  
- 스트레치 사용 테이블을 사용 하 여 연관 된 원격 테이블에서 사용 하는 공간을 요약 하는 다음 예제는  **@mode**  원격 대상을 지정 하는 인수입니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
+ 스트레치 사용 테이블을 사용 하 여 연관 된 원격 테이블에서 사용 하는 공간을 요약 하는 다음 예제는 **@mode** 원격 대상을 지정 하는 인수입니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
   
 ```sql  
 USE StretchedAdventureWorks2016  
@@ -256,13 +256,13 @@ GO
 ## <a name="see-also"></a>관련 항목:  
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC UPDATEUSAGE &#40; Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [DBCC UPDATEUSAGE &#40;Transact SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [sys.allocation_units &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.objects &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.partitions&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

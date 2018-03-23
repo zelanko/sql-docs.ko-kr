@@ -1,16 +1,16 @@
 ---
 title: sysssispackagefolders (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdtspackagefolders90
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysssispackagefolders system table
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-caps.latest.revision: 
-author: spelluru
-ms.author: spelluru
-manager: erikre
+caps.latest.revision: ''
+author: douglasl
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec206dc0111235044ff7ea742548463db556ea23
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2c623e7e486022804b8b9722c1ec5201dd64c8a1
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ ms.lasthandoff: 11/17/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**폴더 id**|**uniqueidentifier**|폴더의 GUID입니다.|  
+|**folderid**|**uniqueidentifier**|폴더의 GUID입니다.|  
 |**parentfolderid**|**uniqueidentifier**|부모 폴더의 GUID입니다.|  
-|**폴더 이름**|**sysname**|폴더 이름입니다. 이 이름은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 폴더 계층 구조에 나타납니다.|  
+|**foldername**|**sysname**|폴더 이름입니다. 이 이름은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 폴더 계층 구조에 나타납니다.|  
   
   
