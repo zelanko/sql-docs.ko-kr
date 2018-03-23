@@ -4,7 +4,7 @@ description: 이 문서는 릴리스 정보를 포함 하 고 SQL Server 2017 Li
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/21/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 22c0bd360cd7b5cb6ac9dcc058a417d243b0fb3f
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: b6f6f6b19b145dfcaf4a59e8cf871bc1cb0c214a
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
 
@@ -70,6 +70,24 @@ ms.lasthandoff: 03/22/2018
 ## <a id="CU5"></a> CU5 (2018 년 3 월)
 
 이 SQL Server 2017의 누적 업데이트 5 (CU5) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3023.8입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [ https://support.microsoft.com/help/4092643 ](https://support.microsoft.com/help/4092643)합니다.
+
+### <a name="known-upgrade-issue"></a>알려진된 업그레이드 문제
+
+이전 릴리스에서 CU5를 업그레이드 하면 SQL Server는 다음 오류로 시작에 실패할 수 있습니다.
+
+```
+Error: 4860, Severity: 16, State: 1.
+Cannot bulk load. The file "C:\Install\SqlTraceCollect.dtsx" does not exist or you don't have file access rights.
+Error: 912, Severity: 21, State: 2.
+Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 200, state
+```
+
+이 오류를 해결 하려면 SQL Server 에이전트를 사용 하도록 설정 하 고 다음 명령을 사용 하 여 SQL Server를 다시 시작 합니다.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
+sudo systemctl start mssql-server
+```
 
 ### <a name="package-details"></a>패키지 세부 정보
 
