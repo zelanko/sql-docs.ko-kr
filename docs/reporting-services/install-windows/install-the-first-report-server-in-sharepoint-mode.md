@@ -1,25 +1,25 @@
 ---
-title: "SharePoint 모드에서 첫 번째 보고서 서버 설치 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 모드에서 첫 번째 보고서 서버 설치 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b266fbdf4801a4b2433590cc3ee2403250702666
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 796eed171b40234af4ab00877a5e73121b49368e
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/09/2018
   
  **Reporting Services 서비스 응용 프로그램 만들기**  
   
--   Reporting Services 서비스를 설치하고 등록하여 하나 이상의 Reporting Services 서비스 응용 프로그램을 만드세요. "SharePoint 팜 서비스 계정"이 일시적으로 로컬 관리자 그룹의 멤버여야 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다. SharePoint 2013 계정 권한에 대한 자세한 내용은 [SharePoint 2013에서의 계정 권한 및 보안 설정](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx)을 참조하세요. SharePoint 2016의 경우 [SharePoint 2016에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)을 참조하세요.  
+-   Reporting Services 서비스를 설치하고 등록하여 하나 이상의 Reporting Services 서비스 응용 프로그램을 만드세요. "SharePoint 팜 서비스 계정"이 일시적으로 로컬 관리자 그룹의 멤버여야 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다. SharePoint 2013 계정 권한에 대한 자세한 내용은 [SharePoint 2013에서의 계정 권한 및 보안 설정](http://technet.microsoft.com/library/cc678863.aspx)을 참조하세요. (http://technet.microsoft.com/library/cc678863.aspx) 또는 SharePoint 2016의 경우 [SharePoint 2016에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)을 참조하세요.)  
   
      SharePoint 팜 관리자 계정이 또한 로컬 운영 체제 관리자 계정이 아닌 것이 가장 좋은 보안 방법입니다. 설치 프로세스의 일부로 로컬 관리자 그룹에 팜 관리자 계정을 추가하는 경우 설치가 완료된 후 로컬 관리자 그룹에서 계정을 제거하는 것이 좋습니다.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/09/2018
  > SharePoint 2016의 경우 Reporting Services가 설치되는 SharePoint 서버에 **사용자 지정** 서버 역할이 있어야 합니다. Reporting Services는 **사용자 지정** 역할이 없는 SharePoint 서버에 성공적으로 배포되지만, SharePoint 통합 모드에서 Reporting Services는 다른 SharePoint 서버 역할을 지원하지 않으므로 다음번 SharePoint 유지 관리 기간 동안 MinRole이 Reporting Services 서비스를 중지합니다. Reporting Services 서비스 응용 프로그램은 **사용자 지정** 역할만 지원합니다.
  
  > [!NOTE]
- > 마찬가지로 SharePoint 2016에서 파워 피벗 서비스를 설치하려는 경우 Reporting Services 설치 전에 먼저 설치합니다. 파워 피벗 서비스는 **사용자 지정** 역할의 SharePoint 서버에 설치할 수 없습니다. 따라서 역할을 여러 번 전환하지 않아도 됩니다.
+ > 마찬가지로 SharePoint 2016에서 파워 피벗 서비스를 설치하려는 경우 Reporting Services 설치 전에 먼저 설치합니다. 파워 피벗 서비스는 **사용자 지정** 역할의 SharePoint 서버에만 설치할 수 있습니다.
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>SharePoint 2016 서버에 사용자 지정 서버 역할 적용
  

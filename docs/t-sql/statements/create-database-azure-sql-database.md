@@ -1,16 +1,16 @@
 ---
 title: CREATE DATABASE(Azure SQL Datebase) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/13/2018
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVICE_OBJECTIVE
@@ -29,22 +29,24 @@ helpviewer_keywords:
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c61660015eb2f613148ad58b72386e42eb797db9
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: 6d06fb220e8ec0df0ba5aab4fe5983c928d6a732
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   새 데이터베이스를 만듭니다.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 ## <a name="syntax"></a>구문  
   
 ``` 
@@ -159,7 +161,7 @@ CREATE DATABASE database_name
  *source_database_name*  
  복사할 데이터베이스의 이름입니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] `CREATE DATABASE` 문 사용시 다음 인수 및 옵션을 지원하지 않습니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]은 `CREATE DATABASE` 문 사용시 다음 인수 및 옵션을 지원하지 않습니다.  
   
 -   \<filespec> 및 \<filegroup> 등 파일의 물리적 위치와 관련된 매개 변수  
   

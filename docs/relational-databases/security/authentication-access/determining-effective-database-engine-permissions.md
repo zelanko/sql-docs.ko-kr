@@ -1,36 +1,36 @@
 ---
-title: "효과적인 데이터베이스 엔진 사용 권한 결정 | Microsoft 문서"
-ms.custom: 
+title: 효과적인 데이터베이스 엔진 사용 권한 결정 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>효과적인 데이터베이스 엔진 사용 권한 결정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-이 항목에서는 SQL Server 데이터베이스 엔진의 다양한 개체에 대한 사용 권한이 있는 사용자를 결정하는 방법을 설명합니다. SQL Server는 데이터베이스 엔진에 대한 두 개의 사용 권한 시스템을 구현합니다. 고정된 역할의 이전 시스템은 사용 권한이 미리 구성되었습니다. SQL Server 2005부터 보다 유연하고 정확한 시스템을 사용할 수 있습니다. (이 항목의 정보는 SQL Server 2005부터 적용됩니다. SQL Server의 일부 버전에서는 일부 사용 권한 유형을 사용할 수 없습니다.)
+이 문서에서는 SQL Server 데이터베이스 엔진의 다양한 개체에 대한 사용 권한이 있는 사용자를 결정하는 방법을 설명합니다. SQL Server는 데이터베이스 엔진에 대한 두 개의 사용 권한 시스템을 구현합니다. 고정된 역할의 이전 시스템은 사용 권한이 미리 구성되었습니다. SQL Server 2005부터 보다 유연하고 정확한 시스템을 사용할 수 있습니다. (이 문서의 정보는 SQL Server 2005부터 적용됩니다. SQL Server의 일부 버전에서는 일부 사용 권한 유형을 사용할 수 없습니다.)
 
 >  [!IMPORTANT] 
 >  * 유효 사용 권한은 두 권한 시스템을 집계한 것입니다. 
@@ -89,11 +89,11 @@ SELECT DP1.name AS DatabaseRoleName,
 
 ## <a name="newer-granular-permission-system"></a>세분화된 최신 사용 권한 시스템
 
-이 시스템은 매우 유연하여 아주 정확하게 설정하려고 하면 복잡해질 수 있습니다. 복잡한 것이 반드시 나쁘지는 않습니다. 금융 기관은 정확한 것이 좋습니다. 문제를 단순화하려면 역할을 만들고 역할에 사용 권한을 할당한 다음 역할에 사용자 그룹을 추가하는 것이 좋습니다. 또한 데이터베이스 개발 팀에서 스키마로 작업을 구분한 후 개별 테이블이나 프로시저 대신 전체 스키마에 역할 사용 권한을 부여하는 경우에는 더 용이합니다. 하지만 실제로 복잡하고 비즈니스는 예기치 않은 보안 요구 사항을 필요로 한다는 사실을 가정해야 합니다.   
+이 시스템은 유연하여 정확하게 설정하려고 하면 복잡해질 수 있습니다. 문제를 단순화하려면 역할을 만들고 역할에 사용 권한을 할당한 다음 역할에 사용자 그룹을 추가하는 것이 좋습니다. 또한 데이터베이스 개발 팀에서 스키마로 작업을 구분한 후 개별 테이블이나 프로시저 대신 전체 스키마에 역할 사용 권한을 부여하는 경우에는 더 용이합니다. 실제 시나리오는 복잡하며 비즈니스 요구 사항은 예기치 않은 보안 요구 사항을 만들 수 있습니다.   
 
-다음 그래픽에서는 권한과 각 권한의 상호 관계를 보여 줍니다. 일부 높은 수준의 권한(예: `CONTROL SERVER`)은 여러 번 나열되어 있습니다. 이 항목에서는 포스터가 너무 작아 읽기 어렵습니다. 이미지를 클릭하여 **데이터베이스 엔진 사용 권한 포스터**를 pdf 형식으로 다운로드합니다.  
+다음 그래픽에서는 권한과 각 권한의 상호 관계를 보여 줍니다. 일부 높은 수준의 권한(예: `CONTROL SERVER`)은 여러 번 나열되어 있습니다. 이 문서에서는 포스터가 너무 작아 읽기 어렵습니다. 이미지를 클릭하여 **데이터베이스 엔진 사용 권한 포스터**를 pdf 형식으로 다운로드합니다.  
   
- [![데이터베이스 사용 엔진 권한](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![데이터베이스 사용 엔진 권한](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 ### <a name="security-classes"></a>보안 클래스
 

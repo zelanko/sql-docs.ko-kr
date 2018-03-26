@@ -1,16 +1,16 @@
 ---
-title: "데이터 정렬 | Microsoft Docs"
-ms.custom: 
+title: 데이터 정렬 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COLLATE
@@ -21,21 +21,23 @@ helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.openlocfilehash: a59320941ecd488abbaa728968a1326525682839
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="collations"></a>데이터 정렬
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스 정의 또는 열 정의에 적용하여 데이터 정렬을 정의하거나 문자열 식에 적용하여 데이터 정렬 캐스트를 적용하기 위한 절입니다.  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -105,6 +107,9 @@ FROM fn_helpcollations();
   
 -   데이터베이스를 복원하거나 연결할 때 데이터베이스의 기본 데이터 정렬과 데이터베이스 내의 모든 **char**, **varchar** 및 **text** 열 또는 매개 변수의 데이터 정렬은 반드시 운영 체제에서 지원되는 것이어야 합니다.  
   
+> [!NOTE]
+> Azure SQL Database 관리되는 인스턴스 서버 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**이며 변경될 수 없습니다.
+
 > [!NOTE]
 > **char** 및 **varchar** 데이터 형식에 대해서는 코드 페이지 변환이 지원되지만 **text** 데이터 형식에 대해서는 지원되지 않습니다. 코드 페이지 변환 중 데이터가 손실되어도 보고되지 않습니다.  
   

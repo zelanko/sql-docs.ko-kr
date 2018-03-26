@@ -1,16 +1,16 @@
 ---
 title: FROM(Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2017
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JOIN
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c1abc4a060dd275ba2f8500e88d634a5ba9244ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a78b022ae6b344531130c55fb08bfc3684f8e23
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,11 +137,15 @@ FROM { <table_source> [ ,...n ] }
   
 <table_source> ::=   
 {  
-    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [<tablesample_clause>]  
     | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
     | <joined_table>  
 }  
   
+<tablesample_clause> ::=
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+ 
 <joined_table> ::=   
 {  
     <table_source> <join_type> <table_source> ON search_condition   
@@ -188,7 +192,7 @@ FROM { <table_source> [ ,...n ] }
   
  *rowset_function*  
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
 
   
  테이블 참조 대신 사용할 수 있는 개체를 반환하는 행 집합 함수 중 하나(예: OPENROWSET)를 지정합니다. 행 집합 함수의 목록에 자세한 내용은 [행 집합 함수&#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)를 참조하세요.  
@@ -197,7 +201,7 @@ FROM { <table_source> [ ,...n ] }
   
  *bulk_column_alias*  
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
 
   
  결과 집합의 열 이름을 대체할 선택적인 별칭입니다. 열의 별칭은 BULK 옵션과 함께 OPENROWSET 함수를 사용하는 SELECT 문에서만 허용됩니다. *bulk_column_alias*를 사용하는 경우 파일의 열과 동일한 순서로 모든 테이블 열에 대한 별칭을 지정합니다.  
@@ -210,7 +214,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
 
   
  XML 문서를 통해 행 집합 뷰를 제공합니다. 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요.  
@@ -230,8 +234,10 @@ FROM { <table_source> [ ,...n ] }
   
  지정된 임시 테이블 및 연결된 해당 시스템 버전 관리 기록 테이블에서 특정 버전의 데이터가 반환되도록 지정합니다.  
   
-\<tablesample_clause>  
- 테이블의 데이터 샘플이 반환되도록 지정합니다. 샘플은 근사치일 수 있습니다. 이 절은 SELECT, UPDATE 또는 DELETE 문에서 기본 테이블 또는 조인된 테이블에 사용될 수 있습니다. 뷰를 대상으로 TABLESAMPLE을 지정할 수는 없습니다.  
+### <a name="tablesample-clause"></a>Tablesample 절
+**적용 대상:** SQL Server, SQL Database 
+ 
+ 테이블의 데이터 샘플이 반환되도록 지정합니다. 샘플은 근사치일 수 있습니다. 이 절은 SELECT 또는 UPDATE 문에서 기본 테이블 또는 조인된 테이블에 사용될 수 있습니다. 뷰를 대상으로 TABLESAMPLE을 지정할 수는 없습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드된 데이터베이스에 대해 TABLESAMPLE을 사용할 때는 데이터베이스의 호환성 수준을 110 이상으로 설정해야 합니다. PIVOT이 CTE(공통 테이블 식) 쿼리에서 허용되지 않습니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
@@ -254,13 +260,22 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  난수를 생성하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 상수 식입니다. *repeat_seed*는 **bigint**입니다. *repeat_seed*를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 임의로 값을 할당합니다. 테이블에 변경내용이 적용되지 않은 경우 특정 *repeat_seed* 값에 대한 샘플링 결과는 항상 동일합니다. *repeat_seed* 식은 0보다 큰 정수로 계산되어야 합니다.  
   
- \<joined_table>  
- 두 개 이상의 테이블을 곱한 결과 집합입니다. 여러 조인이 있을 경우 괄호를 사용하여 조인의 기본 순서를 바꿀 수 있습니다.  
+### <a name="tablesample-clause"></a>Tablesample 절
+**적용 대상:** SQL Data Warehouse
+
+ 테이블의 데이터 샘플이 반환되도록 지정합니다. 샘플은 근사치일 수 있습니다. 이 절은 SELECT 또는 UPDATE 문에서 기본 테이블 또는 조인된 테이블에 사용될 수 있습니다. 뷰를 대상으로 TABLESAMPLE을 지정할 수는 없습니다. 
+
+ PERCENT  
+ 테이블에서 테이블 행의 *sample_number*%를 검색하도록 지정합니다. PERCENT를 지정하면 SQL Data Warehouse는 지정된 비율에 가장 가까운 결과를 반환합니다. PERCENT가 지정되면 *sample_number* 식은 0부터 100까지의 값으로 계산되어야 합니다.  
+
+
+### <a name="joined-table"></a>조인된 테이블 
+조인된 테이블은 두 개 이상의 테이블을 곱한 결과 집합입니다. 여러 조인이 있을 경우 괄호를 사용하여 조인의 기본 순서를 바꿀 수 있습니다.  
   
-\<join_type>  
- 조인 작업의 유형을 지정합니다.  
+### <a name="join-type"></a>조인 유형
+조인 작업의 유형을 지정합니다.  
   
- **INNER**  
+ INNER  
  일치하는 모든 행의 쌍이 반환되도록 지정합니다. 양 테이블에서 서로 일치하지 않는 행은 제외됩니다. 조인 유형을 지정하지 않는 경우 이것이 기본값입니다.  
   
  FULL [OUTER]  
@@ -272,8 +287,8 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  오른쪽 테이블에서 조인 조건에 맞지 않는 모든 행을 결과 집합에 포함하고 내부 조인에서 반환된 모든 행과 다른 테이블에 해당되는 출력 열을 NULL로 설정하도록 지정합니다.  
   
-\<join_hint>  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 쿼리의 FROM 절에 지정된 조인마다 하나의 조인 힌트 또는 실행 알고리즘을 사용하도록 지정합니다. 자세한 내용은 [조인 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md)를 참조하세요.  
+### <a name="join-hint"></a>조인 힌트  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 쿼리의 FROM 절에 지정된 조인마다 하나의 조인 힌트 또는 실행 알고리즘을 사용하도록 지정합니다. 자세한 내용은 [조인 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md)를 참조하세요.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]의 경우 이러한 조인 힌트는 호환되지 않는 두 개의 배포 열에 대한 INNER 조인에 적용됩니다. 쿼리 처리 중에 발생하는 데이터 이동의 양을 제한하여 쿼리 성능을 향상시킬 수 있습니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 허용되는 조인 힌트는 다음과 같습니다.  
   
@@ -324,6 +339,8 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  이전 인수에 정의된 테이블 원본입니다. 자세한 내용은 주의 섹션을 참조하세요.  
   
+### <a name="pivot-clause"></a>PIVOT 절
+
  *table_source* PIVOT \<pivot_clause>  
  *table_source*가 *pivot_column*에 따라 피벗되도록 지정합니다. *table_source*는 테이블 또는 테이블 식입니다. 출력은 *pivot_column* 및 *value_column*을 제외한 *table_source*의 모든 열을 포함하는 테이블입니다. *pivot_column* 및 *value_column*을 제외한 *table_source*의 열은 PIVOT 연산자의 그룹화 열이라고 합니다. PIVOT 및 UNPIVOT에 대한 자세한 내용은 [PIVOT 및 UNPIVOT 사용](../../t-sql/queries/from-using-pivot-and-unpivot.md)을 참조하세요.  
   
@@ -357,7 +374,7 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
 
   
  과거의 지정된 시간에 실제(현재)였던 값이 포함된 각 행에 대한 단일 레코드를 포함하는 테이블을 반환합니다. 내부적으로 임시 테이블과 해당 기록 테이블 간에 합집합이 계산되고, 결과가 필터링되어 *\<date_time>* 매개 변수로 지정된 시점에 유효했던 행의 값을 반환합니다. *system_start_time_column_name* 값이 *\<date_time>* 매개 변수 값보다 작거나 같고, *system_end_time_column_name* 값이 *\<date_time>* 매개 변수 값보다 큰 경우 행에 대한 값이 유효한 것으로 간주됩니다.   
@@ -377,7 +394,7 @@ ON (p.ProductID = v.ProductID);
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
 
   
  CONTAINED IN 인수에 대한 두 개의 datetime 값으로 정의된 지정된 시간 범위 내에 열리고 닫힌 모든 레코드 버전의 값을 포함하는 테이블을 반환합니다. 정확히 하위 경계에서 활성화되거나 상위 경계에서 활성 상태가 중단된 행이 포함됩니다.  
@@ -854,6 +871,14 @@ FROM DimProduct AS dp
 INNER REDISTRIBUTE JOIN FactInternetSales AS fis  
     ON dp.ProductKey = fis.ProductKey;  
 ```  
+
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>22. TABLESAMPLE을 사용하여 테이블의 행 샘플 데이터 읽기  
+ 다음 예에서는 `TABLESAMPLE` 절에 `FROM`을 사용하여 `10` 테이블에 있는 모든 행 중 대략 `Customer` 퍼센트를 반환합니다.  
+  
+```sql    
+SELECT *  
+FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
+```
   
 ## <a name="see-also"></a>참고 항목  
  [CONTAINSTABLE&#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   

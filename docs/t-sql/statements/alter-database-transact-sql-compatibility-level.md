@@ -1,16 +1,16 @@
 ---
-title: "ALTER DATABASE 호환성 수준(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: ALTER DATABASE 호환성 수준(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
@@ -26,22 +26,24 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 750578d028077079b051a08cc2a0ed4276983cda
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d22ee796f75c4c4736c983801a63293b8a44e7cb
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 특정 데이터베이스 동작이 지정된 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환되도록 설정합니다. 다른 ALTER DATABASE 옵션은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
@@ -155,7 +157,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 | 수준 120의 경우 통계는 *단일* 스레드 프로세스를 통해 샘플링됩니다. | 수준 130의 경우 통계는 *다중* 스레드 프로세스를 통해 샘플링됩니다. |  
 | 253 들어오는 외래 키는 제한입니다. | 최대 10,000개의 들어오는 외래 키 또는 유사한 참조로 지정된 테이블을 참조할 수 있습니다. 제한 사항에 대해서는 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)를 참조하세요. |  
 |사용되지 않는 MD2, MD4, MD5, SHA 및 SHA1 해시 알고리즘이 허용됩니다.|SHA2_256 및 SHA2_512 해시 알고리즘만 허용됩니다.|
-||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 일부 데이터 형식 변환 및 일부(주로 드문) 작업에서 향상된 기능을 포함합니다. 자세한 내용은 [일부 데이터 형식 및 일반적이지 않은 작업 처리 시 SQL Server 2016의 향상된 기능](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)을 참조하세요.|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]는 일부 데이터 형식 변환 및 일부(주로 드문) 작업에서 향상된 기능을 포함합니다. 자세한 내용은 [일부 데이터 형식 및 일반적이지 않은 작업 처리 시 SQL Server 2016의 향상된 기능](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)을 참조하세요.|
   
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전에서 추적 플래그 4199의 수정 사항이 이제 기본적으로 활성화됩니다. 호환성 모드 130 사용 추적 플래그 4199는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이후에 릴리스되는 새로운 쿼리 최적화 프로그램 수정에 적용됩니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 이전 쿼리 최적화 프로그램을 사용하려면 호환성 수준 110을 선택해야 합니다. 추적 플래그 4199에 대한 자세한 내용은 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)를 참조하세요.  
   
@@ -164,7 +166,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
   
 |호환성 수준 설정 110 이하|호환성 수준 설정 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|이전 쿼리 최적화 프로그램이 사용됩니다.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 쿼리 계획을 만들고 최적화하는 구성 요소에 대한 향상된 기능을 포함합니다. 이러한 새로운 쿼리 최적화 프로그램 기능은 데이터베이스 호환성 수준 120의 사용에 따라 달라집니다. 이러한 향상된 기능을 활용하려면 데이터베이스 호환성 수준 120을 사용하여 새 데이터베이스 응용 프로그램을 개발해야 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 마이그레이션된 응용 프로그램의 경우 좋은 성능이 유지되거나 향상되었는지 확인하려면 신중하게 테스트해야 합니다. 성능이 저하되면 데이터베이스 호환성 수준을 110 이하로 설정하여 이전 쿼리 최적화 프로그램 방법을 사용할 수 있습니다.<br /><br /> 데이터베이스 호환성 수준 120은 최신 데이터 웨어하우징 및 OLTP 작업에 대해 조정된 새로운 카디널리티 평가기를 사용합니다. 성능 문제 때문에 데이터베이스 호환성 수준을 110으로 설정하려면 먼저 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [데이터베이스 엔진의 새로운 기능](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) 항목의 쿼리 계획 섹션에서 권장 사항을 참조하세요.|  
+|이전 쿼리 최적화 프로그램이 사용됩니다.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 쿼리 계획을 만들고 최적화하는 구성 요소에 대한 향상된 기능을 포함합니다. 이러한 새로운 쿼리 최적화 프로그램 기능은 데이터베이스 호환성 수준 120의 사용에 따라 달라집니다. 이러한 향상된 기능을 활용하려면 데이터베이스 호환성 수준 120을 사용하여 새 데이터베이스 응용 프로그램을 개발해야 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 마이그레이션된 응용 프로그램의 경우 좋은 성능이 유지되거나 향상되었는지 확인하려면 신중하게 테스트해야 합니다. 성능이 저하되면 데이터베이스 호환성 수준을 110 이하로 설정하여 이전 쿼리 최적화 프로그램 방법을 사용할 수 있습니다.<br /><br /> 데이터베이스 호환성 수준 120은 최신 데이터 웨어하우징 및 OLTP 작업에 대해 조정된 새로운 카디널리티 평가기를 사용합니다. 성능 문제 때문에 데이터베이스 호환성 수준을 110으로 설정하려면 먼저 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [데이터베이스 엔진의 새로운 기능](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) 항목의 쿼리 계획 섹션에서 권장 사항을 참조하세요.|  
 |120 미만의 호환성 수준에서는 **date** 값을 문자열 값으로 변환할 때 언어 설정이 무시됩니다. 이 동작은 **date** 유형에만 한정됩니다. 아래에 있는 예제 섹션에서 예제 B를 참조하세요.|**date** 값을 문자열 값으로 변환할 때 언어 설정이 무시되지 않습니다.|  
 |`EXCEPT` 절의 오른쪽에 있는 재귀 참조는 무한 루프를 만듭니다. 아래 예제 섹션의 예제 C는 이 동작을 보여 줍니다.|`EXCEPT` 절에 있는 재귀 참조는 ANSI SQL 표준에 따라 오류를 생성합니다.|  
 |재귀 CTE(공통 테이블 식)는 중복된 열 이름을 허용합니다.|재귀적 CTE에서 중복 열 이름을 허용하지 않습니다.|  

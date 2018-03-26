@@ -1,16 +1,16 @@
 ---
-title: "자습서: 소유권 체인 및 컨텍스트 전환 | Microsoft 문서"
-ms.custom: 
+title: '자습서: 소유권 체인 및 컨텍스트 전환 | Microsoft 문서'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - context switching [SQL Server], tutorials
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b473f9f36e66de356c92e627114c934022b37838
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1ec6c4b013fabd008d2de3388ea163eae0428dcb
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
-GRANT 문에 대한 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)를 참조하세요. 저장 프로시저에 대한 자세한 내용은 [저장 프로시저&#40;데이터베이스 엔진&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md)를 참조하세요. 모든 [!INCLUDE[ssDE](../includes/ssde-md.md)] 권한에 대한 포스터는 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)를 참조하세요.  
+GRANT 문에 대한 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)를 참조하세요. 저장 프로시저에 대한 자세한 내용은 [저장 프로시저&#40;데이터베이스 엔진&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md)를 참조하세요. 모든 [!INCLUDE[ssDE](../includes/ssde-md.md)] 사용 권한에 대한 포스터는 [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster)를 참조하세요.  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. 데이터에 액세스하는 저장 프로시저 만들기  
 데이터베이스 내에서 컨텍스트를 전환 하려면 EXECUTE AS 문을 사용합니다. EXECUTE AS를 사용하려면 IMPERSONATE 권한이 있어야 합니다.  

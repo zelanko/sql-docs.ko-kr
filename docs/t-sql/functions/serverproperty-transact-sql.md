@@ -1,16 +1,16 @@
 ---
 title: SERVERPROPERTY(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVERPROPERTY_TSQL
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f619623b90b784d9d44bc76c99daf3d9802cb8a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be72828789c74d599c003100c98db93b1ec937e4
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   서버 인스턴스에 대한 속성 정보를 반환합니다.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
@@ -75,7 +77,7 @@ SERVERPROPERTY ( 'propertyname' )
 |IsLocalDB|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 서버가 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB의 인스턴스입니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.|  
 |IsPolybaseInstalled|**적용 대상**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 서버 인스턴스에 PolyBase 기능이 설치되어 있는지 여부를 반환합니다.<br /><br /> 0 = PolyBase가 설치되어 있지 않습니다.<br /><br /> 1 = PolyBase가 설치되어 있습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsSingleUser|서버가 단일 사용자 모드입니다.<br /><br /> 1 = 단일 사용자 모드입니다.<br /><br /> 0 = 단일 사용자 모드가 아닙니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
-|IsXTPSupported|**적용 대상**: SQL Server([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 적용됩니다.<br /><br /> 서버에서 메모리 OLTP를 지원합니다.<br /><br /> 1= 서버에서 메모리 OLTP를 지원합니다.<br /><br /> 0 = 서버에서 메모리 OLTP를 지원하지 않습니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
+|IsXTPSupported|**적용 대상**: SQL Server([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 서버에서 메모리 OLTP를 지원합니다.<br /><br /> 1= 서버에서 메모리 OLTP를 지원합니다.<br /><br /> 0 = 서버에서 메모리 OLTP를 지원하지 않습니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |LCID|데이터 정렬의 Windows LCID(로캘 ID)입니다.<br /><br /> 기본 데이터 형식: **int**|  
 |LicenseType|사용되지 않습니다. 라이선스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품에서 보존 또는 유지 관리되지 않습니다. 항상 DISABLED를 반환합니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |MachineName|서버 인스턴스가 실행 중인 Windows 컴퓨터 이름입니다.<br /><br /> Microsoft Cluster Service의 가상 서버에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터형 인스턴스인 경우에는 가상 서버의 이름을 반환합니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
