@@ -1,16 +1,16 @@
 ---
 title: OPENROWSET(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
@@ -27,24 +27,26 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ee158cdc30d1c083151bc07c58ba7ddea515a308
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   OLE DB 데이터 원본에서 원격 데이터를 액세스하는 데 필요한 모든 연결 정보를 포함합니다. 이 방법은 OLE DB를 사용하여 원격 데이터에 연결하고 액세스하는 일회성의 임시 방법이며 연결된 서버에서 테이블을 액세스하는 방법의 대안입니다. OLE DB 데이터 원본을 자주 참조하려면 연결된 서버를 사용합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요. `OPENROWSET` 함수는 쿼리의 FROM 절에서 테이블 이름인 것처럼 참조될 수 있습니다. `OPENROWSET` 함수는 OLE DB 공급자의 기능에 따라 `INSERT`, `UPDATE` 또는 `DELETE` 문의 대상 테이블로 참조될 수도 있습니다. 쿼리는 여러 결과 집합을 반환할 수 있지만 `OPENROWSET`은 첫 번째 결과 집합만 반환할 수 있습니다.  
   
  `OPENROWSET`은 파일의 데이터를 읽어서 행 집합으로 반환할 수 있는 기본 제공 BULK 공급자를 통해 대량 작업을 지원합니다.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
@@ -228,7 +230,7 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
   
  원격 OLE DB 데이터 원본에 액세스할 때 트러스트된 연결의 로그인 ID는 클라이언트가 쿼리 중인 서버에 연결되어 있는 서버에서 자동으로 위임되지 않습니다. 이 경우 인증 위임을 구성해야 합니다.  
   
- OLE DB 공급자가 지정된 데이터 원본에서 여러 카탈로그와 스키마를 지원하는 경우에는 카탈로그 이름과 스키마 이름이 필요합니다. OLE DB 공급자가 카탈로그와 스키마를 지원하지 않는 경우에는 *catalog* 및 *schema*에 대한 값을 생략할 수 있습니다. 공급자가 스키마 이름만 지원하는 경우에는 *schema***.***object*형식의 두 부분으로 된 이름을 반드시 지정해야 합니다. 공급자가 카탈로그 이름만 지원하는 경우에는*catalog***.***schema***.***object* 형식의 세 부분으로 된 이름을 반드시 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 통과 쿼리의 경우 세 부분으로 된 이름을 반드시 지정해야 합니다. 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.  
+ OLE DB 공급자가 지정된 데이터 원본에서 여러 카탈로그와 스키마를 지원하는 경우에는 카탈로그 이름과 스키마 이름이 필요합니다. OLE DB 공급자가 카탈로그와 스키마를 지원하지 않는 경우에는 *catalog* 및 *schema*에 대한 값을 생략할 수 있습니다. 공급자가 스키마 이름만 지원하는 경우에는 *schema***.***object* 형식의 두 부분으로 된 이름을 반드시 지정해야 합니다. 공급자가 카탈로그 이름만 지원하는 경우에는 *catalog***.***schema***.***object* 형식의 세 부분으로 된 이름을 반드시 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 통과 쿼리의 경우 세 부분으로 된 이름을 반드시 지정해야 합니다. 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.  
   
  `OPENROWSET`는 변수를 인수로 받아들이지 않습니다.  
   

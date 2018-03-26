@@ -1,29 +1,29 @@
 ---
 title: TDE - BYOK(Bring Your Own Key) - Azure SQL | Microsoft Docs
-description: "SQL Database 및 데이터 웨어하우스용 Azure Key Vault를 사용하여 TDE(투명한 데이터 암호화)를 위한 BYOK(Bring Your Own Key) 지원에 대해 간략히 설명합니다. BYOK 기반 TDE 개요, 이점, 작동 방법, 고려 사항 및 권장 사항입니다."
-keywords: 
+description: SQL Database 및 데이터 웨어하우스용 Azure Key Vault를 사용하여 TDE(투명한 데이터 암호화)를 위한 BYOK(Bring Your Own Key) 지원에 대해 간략히 설명합니다. BYOK 기반 TDE 개요, 이점, 작동 방법, 고려 사항 및 권장 사항입니다.
+keywords: ''
 services: sql-database
-documentationcenter: 
+documentationcenter: ''
 author: aliceku
 manager: craigg
-ms.prod: 
-ms.reviewer: 
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: 
+ms.custom: ''
 ms.component: security
 ms.workload: On Demand
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 01/31/2018
+ms.date: 03/16/2018
 ms.author: aliceku
-ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 및 데이터 웨어하우스에 대한 Bring Your Own Key(미리 보기) 지원으로 투명한 데이터 암호화
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -69,10 +69,10 @@ TDE가 Key Vault의 TDE 보호기를 사용하도록 처음 구성되면, 서버
 - 키 또는 키 자격 증명 모음이 우발적으로 삭제되는 경우 데이터 손실을 방지하기 위해 [일시 삭제](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)가 설정된 키 자격 증명 모음을 사용합니다.  
   - 일시 삭제된 리소스는 복구되거나 제거되지 않는 한 설정된 기간인 90일 동안 보존됩니다.
   - **복구** 및 **제거** 작업에는 키 자격 증명 모음 액세스 정책과 연결된 고유 권한이 있습니다. 
-- AAD(Azure Active Directory) ID를 사용하여 키 자격 증명 모음에 대한 논리 서버 액세스 권한을 부여합니다.  포털 UI를 사용하는 경우 AAD ID가 자동으로 생성되며 키 자격 증명 모음 액세스 권한이 서버에 부여됩니다.  PowerShell을 사용하여 BYOK 기반 TDE를 구성하면 AAD ID가 생성되어야 하며 완료를 확인해야 합니다. PowerShell을 사용하는 경우 자세한 단계별 지침은 [BYOK 기반 TDE 구성](transparent-data-encryption-byok-azure-sql-configure.md)을 참조하세요.
+- Azure AD(Azure Active Directory) ID를 사용하여 키 자격 증명 모음에 대한 논리 서버 액세스 권한을 부여합니다.  포털 UI를 사용하는 경우 Azure AD ID가 자동으로 생성되며 키 자격 증명 모음 액세스 권한이 서버에 부여됩니다.  PowerShell을 사용하여 BYOK 기반 TDE를 구성하면 Azure AD ID가 생성되어야 하며 완료를 확인해야 합니다. PowerShell을 사용하는 경우 자세한 단계별 지침은 [BYOK 기반 TDE 구성](transparent-data-encryption-byok-azure-sql-configure.md)을 참조하세요.
 
   >[!NOTE]
-  >AAD ID가 **실수로 삭제되거나 키 자격 증명 모음의 액세스 정책을 사용하여 서버의 권한이 철회되면** 키 저장소에 대한 서버의 액세스 권한이 손실됩니다.
+  >Azure AD ID가 **실수로 삭제되거나 키 자격 증명 모음의 액세스 정책을 사용하여 서버의 권한이 철회되면** 키 저장소에 대한 서버의 액세스 권한이 손실됩니다.
   >
   
 - 모든 암호화 키에 대한 감사 및 보고 사용: Key Vault는 다른 SIEM(보안 정보 및 이벤트 관리) 도구에 쉽게 삽입되는 로그를 제공합니다. OMS(Operations Management Suite) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault)는 이미 통합되어 있는 한 가지 예제 서비스입니다.
@@ -115,6 +115,12 @@ Azure Key Vault로 고가용성을 구성하는 방법은 데이터베이스 및
 
 장애 조치(failover) 중 Azure Key Vault의 TDE 보호기에 계속 액세스할 수 있도록 하려면 데이터베이스가 보조 서버에 복제되거나 장애 조치(failover)되기 전에 구성되어야 합니다. 주 서버와 보조 서버 모두 TDE 보호기 복사본을 다른 모든 Azure Key Vault에 저장해야 합니다. 여기 예에서는 두 키 자격 증명 모음에 동일한 키가 저장됩니다.
 
+Geo-dr 시나리오에서 중복성을 위해 보조 키 자격 증명 모음이 있는 보조 데이터베이스가 필요하며 최대 4개의 보조가 지원됩니다.  보고에 대한 보조를 만드는 것을 의미하는 체인은 지원되지 않습니다.  초기 설정 시간 동안 서비스는 사용 권한이 기본 및 보조 키 자격 증명 모음에 대해 올바로 설정되었는지 확인합니다.  이러한 사용 권한을 유지하고 여전히 준비되어 있는지 정기적으로 테스트하는 것이 중요합니다.
+
+>[!NOTE]
+>기본 및 보조 서버에 서버 ID를 할당할 때 ID를 보조 서버에 먼저 할당해야 합니다.
+>
+
 한 키 자격 증명 모음의 기존 키를 다른 키 자격 증명 모음에 추가하려면 [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) cmdlet을 사용합니다.
 
  ```powershell
@@ -149,4 +155,7 @@ Key Vault의 TDE 보호기로 암호화된 백업을 복원하려면 해당 키 
    ```
 SQL Database에 대한 백업 복구에 대해 자세히 알아보려면 [Azure SQL Database 복구](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)를 참조하세요. SQL Data Warehouse 백업 복구에 대해 자세히 알아보려면 [Azure SQL Data Warehouse 복구](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview)를 참조하세요.
 
-백업된 로그 파일에 대한 추가 고려 사항: TDE 보호기가 회전되었고 데이터베이스에서 이제 새 TDE 보호기를 사용할지라도 백업된 로그 파일은 원래 TDE 암호기로 암호화된 상태를 유지됩니다.  복원 시 데이터베이스를 복원하려면 두 키가 모두 필요합니다.  로그 파일이 Azure Key Vault에 저장된 TDE 보호기를 사용하는 경우 서비스 관리 TDE를 사용하도록 데이터베이스가 변경된 경우에도 복원 시 이 키가 필요합니다.   
+
+백업된 로그 파일에 대한 추가 고려 사항: TDE 보호기가 회전되었고 데이터베이스에서 이제 새 TDE 보호기를 사용할지라도 백업된 로그 파일은 원래 TDE 암호기로 암호화된 상태를 유지됩니다.  복원 시 데이터베이스를 복원하려면 두 키가 모두 필요합니다.  로그 파일이 Azure Key Vault에 저장된 TDE 보호기를 사용하는 경우 서비스 관리 TDE를 사용하도록 데이터베이스가 변경된 경우에도 복원 시 이 키가 필요합니다.
+
+

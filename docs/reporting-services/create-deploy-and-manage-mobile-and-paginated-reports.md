@@ -1,16 +1,16 @@
 ---
 title: Reporting Services(SSRS) | Microsoft Docs
-description: "온-프레미스에서 모바일 및 페이지가 매겨진 Reporting Services 보고서와 Power BI 보고서에 대한 도구 및 서비스에 대해 알아봅니다."
-ms.custom: 
+description: 온-프레미스에서 모바일 및 페이지가 매겨진 Reporting Services 보고서와 Power BI 보고서에 대한 도구 및 서비스에 대해 알아봅니다.
+ms.custom: ''
 ms.date: 07/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - reports [Reporting Services]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: 
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 85377a9d96bbaa8d7d94dacafc0989d3089ff7dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6deaece7d2dd01ebf831820c2e026044f80651de
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)란?
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/09/2018
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SSRS(SQL Server Reporting Services) 및 Power BI에서 제공하는 즉시 사용 가능한 폭넓은 도구 및 서비스를 통해 온-프레미스에서 모바일 및 페이지가 매겨진 Reporting Services 보고서 및 Power BI 보고서를 만들고 배포하고 관리합니다.
+SSRS(SQL Server Reporting Services)에서 제공하는 즉시 사용 가능한 폭넓은 도구 및 서비스를 통해 프레미스에서 모바일 보고서 및 페이지를 매긴 Reporting Services 보고서를 만들고 배포하고 관리할 수 있습니다.
 
 ![SQL Server Reporting Services 모두 함께](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 모두 함께")
 
@@ -48,7 +48,7 @@ SQL Server 2016의 Reporting Services에서는 업데이트된 제품군을 제�
 
 * **"기존" 페이지를 매긴 보고서** 최신 상태로 전환되므로 보고서를 만드는 업데이트된 도구 및 새 기능을 사용하여 현대적인 모양의 보고서를 만들 수 있습니다.
 * **새 모바일 보고서** 보고서를 보유하는 다양한 장치 및 다양한 방식에 맞게 조정되는 반응형 레이아웃을 사용합니다.
-* **최신 웹 포털** 모든 최신 브라우저에서 볼 수 있습니다. 새 포털에서 모바일 및 페이지가 매겨진 Reporting Services 보고서 및 KPI뿐만 아니라 Power BI Desktop 보고서를 구성하고 표시할 수 있습니다. 포털에서 Excel 통합 문서를 저장할 수도 있습니다.
+* **최신 웹 포털** 모든 최신 브라우저에서 볼 수 있습니다. 새 포털에서 모바일 및 페이지가 매겨진 Reporting Services 보고서 및 KPI를 구성하고 표시할 수 있습니다. 포털에서 Excel 통합 문서를 저장할 수도 있습니다.
 
 각각에 대한 자세한 내용은 계속 읽어보세요.
 
@@ -90,13 +90,13 @@ Reporting Services는 "기존"의 페이지를 매긴 문서 스타일 보고서
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
-기본 모드 Reporting Services의 최종 사용자에게 현관은 모든 최신 브라우저에서 볼 수 있는 최신 웹 포털입니다. 새 포털에서 모든 Reporting Services 모바일 및 페이지가 매겨진 보고서 및 KPI뿐만 아니라 Power BI Desktop 보고서에 액세스할 수 있습니다. [Reporting Services의 Power BI 보고서](../reporting-services/power-bi-reports-in-reporting-services.md)에 대해 자세히 알아봅니다.  
+기본 모드 Reporting Services의 최종 사용자에게 현관은 모든 최신 브라우저에서 볼 수 있는 최신 웹 포털입니다. 새 포털에서 모든 Reporting Services 모바일 및 페이지가 매겨진 보고서 및 KPI에 액세스할 수 있습니다.
 
 고유한 사용자 지정 브랜딩을 웹 포털에 적용할 수 있습니다. 또한 웹 포털에서 바로 KPI를 만들 수 있습니다. KPI는 보고서를 열지 않고도 주요 비즈니스 메트릭을 한번에 브라우저에 표시할 수 있습니다. 
 
 새 웹 포털은 보고서 관리자를 완전히 다시 작성한 것입니다. 이제 이 웹 포털은 Microsoft Edge, Internet Explorer 10 및 11, Chrome, Firefox, Safari, 모든 주요 브라우저 등 최신 브라우저가 최적화된 단일 페이지의 표준 기반 HTML5 앱입니다.
 
-웹 포털의 콘텐츠는 Reporting Services 모바일 및 페이지를 매긴 보고서 및 KPI뿐만 아니라 보고서의 문서 블록으로 사용할 Power BI Desktop 보고서, Excel 통합 문서, 공유 데이터 집합 및 공유 데이터 원본 등 종류별로 구성됩니다. 여기, 기존 폴더 계층 구조에서 안전하게 저장하고 관리할 수 있습니다. 즐겨찾기에 태그를 지정할 수 있으며, 해당 역할이 있는 경우 콘텐츠를 관리할 수 있습니다.
+웹 포털의 콘텐츠는 Reporting Services 모바일 및 페이지를 매긴 보고서 및 KPI, Excel 통합 문서, 공유 데이터 집합 및 보고서의 문서 블록으로 사용할 공유 데이터 원본 등 종류별로 구성됩니다. 여기, 기존 폴더 계층 구조에서 안전하게 저장하고 관리할 수 있습니다. 즐겨찾기에 태그를 지정할 수 있으며, 해당 역할이 있는 경우 콘텐츠를 관리할 수 있습니다.
 
 또한 보고서 처리를 예약하고, 필요할 때 보고서에 액세스하며, 새 웹 포털에서 게시된 보고서를 구독할 수 있습니다.
 
@@ -119,6 +119,5 @@ SharePoint 통합 모드의 Repoorting Services에 보고서를 게시합니다.
 * [Reporting Services 설치](../reporting-services/install-windows/install-reporting-services.md)  
 * [보고서 작성기 설치](../reporting-services/install-windows/install-report-builder.md)   
 * [SSDT(SQL Server Data Tools) 다운로드](http://go.microsoft.com/fwlink/?LinkID=616714)  
-* [Reporting Services의 Power BI 보고서](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

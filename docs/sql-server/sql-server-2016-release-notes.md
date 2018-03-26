@@ -1,35 +1,35 @@
 ---
-title: "SQL Server 2016 릴리스 정보 | Microsoft 문서"
-ms.date: 02/27/2018
+title: SQL Server 2016 릴리스 정보 | Microsoft 문서
+ms.date: 03/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - build notes
 - release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6485ef83b940ab9d04b9406e461517d5254aec7f
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 1a6d422098fdacb3a7bc6392b99fe63bb25c2c36
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-이 문서에서는 SQL Server 2016 릴리스 관련 제한 사항 및 문제에 대해 설명합니다. 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)을 참조하세요.
+  이 문서는 서비스 팩을 포함하여 SQL Server 2016 릴리스 관련 제한 사항 및 문제를 설명합니다. 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)을 참조하세요.
 
 > [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**에서 SQL Server 2016 다운로드
 >
@@ -37,12 +37,51 @@ ms.lasthandoff: 02/28/2018
 >
 > [![SSMS 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)**를 참조하세요.
 
-## <a name="bkmk_2016sp1"></a>사용 가능한 SQL Server 2016 서비스 팩 1(SP1)
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1은 SQL Server 2016의 모든 버전 및 서비스 수준을 SQL Server 2016 SP1로 업그레이드합니다. 이 문서에 나열된 수정 사항 외에 SQL Server 2016 SP1에는 SQL Server 2016 누적 업데이트 1(CU1)부터 SQL Server 2016 CU3에 포함된 핫픽스가 들어 있습니다.
+## <a name="bkmk_2016sp1"></a>SQL Server 2016 서비스 팩 1(SP1)
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1은 보안 업데이트 MS16-136을 포함하여 SQL Server 2016 RTM CU3에 대한 모든 수정 사항을 포함합니다. SQL Server 2016 최신 누적 업데이트에서 제공하는 솔루션의 롤업을 포함하며 최신 누적 업데이트(CU3 및 2016년 11월 8일에 릴리스된 보안 업데이트 MS16-136)를 포함합니다. 
 
-- [SQL Server 2016 SP1 다운로드 페이지](https://www.microsoft.com/download/details.aspx?id=54276)
-- [SQL Server 2016 서비스 팩 1 릴리스 정보](https://support.microsoft.com/kb/3182545) SP1에서 수정되거나 변경된 개별 버그 및 문제를 나열합니다.
- - ![info_tip](../sql-server/media/info-tip.png) 다음 서비스 팩을 포함하여 지원되는 모든 버전에 대한 링크 및 자세한 내용은 [SQL Server 업데이트 센터](https://msdn.microsoft.com/library/ff803383.aspx)를 참조하세요. [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+다음 기능은 SQL Server SP1의 Standard, Web, Express 및 Local DB 버전에서 사용할 수 있습니다(언급한 것과 같이).
+- 상시 암호화
+- 변경된 데이터 캡처(Express에서 사용할 수 없음)
+- columnstore
+- 압축
+- 동적 데이터 마스킹
+- 미세 감사
+- 메모리 내 OLTP(로컬 DB에서 사용할 수 없음)
+- 여러 파일 스트림 컨테이너(Local DB에서 사용할 수 없음)
+- 분할
+- Polybase
+- 행 수준 보안
+
+다음 표에는 SQL Server 2016 SP1에서 제공하는 주요 향상 기능이 요약되어 있습니다.
+
+|기능|Description|참조 항목|
+|---|---|---|
+|TF 715에서 자동 TABLOCK을 사용하여 힙으로 대량 삽입| 추적 플래그 715는 대량 로드 작업에 대한 테이블 잠금을 비클러스터형 인덱스가 없는 힙에 사용하도록 설정합니다.|[2.5x배 더 빠르게 SQL Server로 SAP 워크로드 마이그레이션](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|CREATE OR ALTER|저장 프로시저, 트리거, 사용자 정의 함수 및 뷰와 같은 개체를 배포합니다.|[SQL Server 데이터베이스 엔진 블로그](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|복제에 대한 DROP TABLE 지원|복제 아티클을 삭제하도록 복제에 대한 DROP TABLE DDL 지원|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
+|파일 스트림 RsFx 드라이버 서명|파일 스트림 RsFx 드라이버는 SQL Server 2016 SP1 파일 스트림 RsFx 드라이버를 문제 없이 Windows Server 2016/Windows 10에 설치하도록 하는 Windows 하드웨어 개발자 센터 대시보드 포털(개발자 포털)을 사용하여 서명 및 인증됩니다.|[2.5x배 더 빠르게 SQL Server로 SAP 워크로드 마이그레이션](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|LPIM에서 SQL 서비스 계정 - 프로그래밍 방식으로 식별|LPIM(메모리의 페이지 잠금) 권한이 서비스 시작 시간에 적용되는 경우 DBA에서 프로그래밍 방식으로 식별하도록 허용합니다.|[개발자 선택 사항: SQL Server에서 LPIM 및 IFI 권한을 프로그래밍 방식으로 식별](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|수동 변경 내용 추적 정리|새 저장 프로시저는 요청 시 변경 내용 추적 내부 테이블을 정리합니다.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
+|로컬 임시 테이블에 대한 병렬 INSERT..SELECT 변경 내용|INSERT..SELECT 작업에서 새 병렬 INSERT|[SQL Server 고객 자문 팀](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
+|Showplan XML|권한 부여 경고 최대 메모리를 포함하는 확장된 진단은 쿼리, 활성화된 추적 플래그에 대해 활성화되었으며 다른 진단 정보를 제공합니다. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
+|저장소 클래스 메모리|크기 순서대로 트랜잭션 커밋 시간을 가속화하는 기능을 발생시키는 Windows Server 2016에서 저장소 클래스 메모리를 사용하여 트랜잭션 처리를 증가시킵니다.|[SQL Server 데이터베이스 엔진 블로그](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
+|USE HINT|쿼리 옵션, `OPTION(USE HINT('<option>'))`을 사용하여 지원되는 쿼리 수준 힌트를 통해 쿼리 최적화 프로그램 동작을 변경합니다. QUERYTRACEON과 달리 USE HINT 옵션은 sysadmin 권한이 필요하지 않습니다.|[개발자 선택 사항: USE HINT 쿼리 힌트](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|XEvent 추가|새로운 Xevent 및 Perfmon 진단 기능은 대기 시간 문제 해결을 개선합니다.|[확장 이벤트](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
+
+또한 다음 수정 사항을 참조하세요.
+- DBA와 SQL 커뮤니티의 피드백에 따라 SQL 2016 SP1부터 Hekaton 로깅 메시지가 최소로 줄어듭니다.
+- 새 [추적 플래그](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)를 검토합니다.
+- 전체 버전의 WideWorldImporters 샘플 데이터베이스는 이제 SQL Server 2016 SP1부터 Standard Edition 및 Express Edition을 사용하며 [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)에서 사용 가능합니다. 샘플에서 변경이 필요하지 않습니다. Enterprise 버전에 대한 RTM에서 만든 데이터베이스 백업은 SP1에서 Standard 및 Express를 사용합니다. 
+
+SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모범 사례로, SQL Server 2016 SP1의 설치를 따라 다시 부팅을 계획 및 수행하는 것이 좋습니다.
+
+### <a name="download-pages-and-more-information"></a>다운로드 페이지 및 추가 정보
+
+- [Microsoft SQL Server 2016용 서비스 팩 1 다운로드](https://www.microsoft.com/download/details.aspx?id=54276)
+- [SQL Server 2016 서비스 팩 1(SP1) 출시](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
+- [SQL Server 2016 서비스 팩 1 릴리스 정보](https://support.microsoft.com/kb/3182545)
+- ![info_tip](../sql-server/media/info-tip.png) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]의 서비스 팩을 포함하여 지원되는 모든 버전에 대한 링크 및 자세한 내용은 [SQL Server 업데이트 센터](https://msdn.microsoft.com/library/ff803383.aspx)를 참조하세요. 
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 릴리스 - GA (일반 공급)
 -   [데이터베이스 엔진(GA)](#bkmk_ga_instalpatch) 

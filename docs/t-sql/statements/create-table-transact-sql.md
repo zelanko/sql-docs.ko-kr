@@ -1,16 +1,16 @@
 ---
 title: CREATE TABLE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -49,28 +49,30 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 33705d53cf51fa0aa32c386ff5cdf3fae54383ff
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 새 테이블을 만듭니다.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]   
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 구문은 [CREATE TABLE(Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)를 참조하세요.
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>구문  
+## <a name="simple-syntax"></a>간단한 구문  
   
 ```  
 --Simple CREATE TABLE Syntax (common if not using options)  
@@ -80,7 +82,7 @@ CREATE TABLE
 [ ; ]  
 ```  
   
-## <a name="syntax"></a>구문  
+## <a name="full-syntax"></a>전체 구문  
   
 ```  
 --Disk-Based CREATE TABLE Syntax  
@@ -456,7 +458,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
  *전체 자릿수*  
  지정된 데이터 형식의 전체 자릿수입니다. 유효한 전체 자릿수 값에 대한 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  
   
- *소수 자릿수*  
+ *scale*  
  지정된 데이터 형식의 소수 자릿수입니다. 유효한 소수 자릿수 값에 대한 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  
   
  **max**  
@@ -517,7 +519,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
  INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )  
    
   
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지
   
  테이블에 비클러스터형 columnstore 인덱스를 만들도록 지정합니다. 기본 테이블은 rowstore 힙 또는 클러스터형 인덱스이거나 클러스터형 columnstore 인덱스일 수 있습니다. 모든 경우 테이블에 비클러스터형 columnstore 인덱스를 만들면 인덱스 열에 대한 데이터의 두 번째 복사본이 저장됩니다.  
   
@@ -734,7 +736,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
 >  분할된 테이블 및 ALTER TABLE...SWITCH 작업의 원본이나 대상인 분할되지 않은 테이블의 분할 열에 NOT NULL을 지정하는 것이 좋습니다. 이렇게 하면 분할 열의 CHECK 제약 조건에서 Null 값을 확인하지 않아도 됩니다.  
   
  WITH FILLFACTOR **=***fillfactor*  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 인덱스 데이터를 저장하는 데 사용하는 각 인덱스 페이지를 채우는 정도를 지정합니다. 사용자 지정 *fillfactor* 값은 1에서 100 사이일 수 있습니다. 값을 지정하지 않으면 기본값 0이 사용됩니다. 채우기 비율 값 0과 100은 모든 면에서 동일합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 인덱스 데이터를 저장하는 데 사용하는 각 인덱스 페이지를 채우는 정도를 지정합니다. 사용자가 지정한 *fillfactor* 값은 1에서 100 사이일 수 있습니다. 값을 지정하지 않으면 기본값 0이 사용됩니다. 채우기 비율 값 0과 100은 모든 면에서 동일합니다.  
   
 > [!IMPORTANT]  
 >  현재 WITH FILLFACTOR = *fillfactor*가 PRIMARY KEY 또는 UNIQUE 제약 조건에 적용되는 유일한 인덱스 옵션으로 기술되어 있는 것은 이전 버전과의 호환성을 위한 것이며 이후 릴리스에서는 이런 식으로 기술되지 않을 것입니다.  
@@ -777,14 +779,14 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  COLUMNSTORE  
    
   
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지
   
  클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE는 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
   
  COLUMNSTORE_ARCHIVE  
    
   
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE_ARCHIVE는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 보다 적은 저장소 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
   
@@ -903,7 +905,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  **테이블에 대해 Stretch Database 활성화**  
   
- 테이블에 대해 `ON`을 지정하여 Stretch를 활성화한 경우 선택적으로 `MIGRATION_STATE = OUTBOUND`를 지정하여 데이터 마이그레이션을 즉시 시작하거나 `MIGRATION_STATE = PAUSED`를 지정하여 데이터 마이그레이션을 연기할 수 있습니다. 기본값은 `MIGRATION_STATE = OUTBOUND`입니다. 테이블에 대한 Stretch 활성화에 대한 자세한 내용은 [테이블에 대한 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)를 참조하세요.  
+ 테이블에 대해 `ON`을 지정하여 Stretch를 활성화한 경우 선택적으로 `MIGRATION_STATE = OUTBOUND`를 지정하여 데이터 마이그레이션을 즉시 시작하거나 `MIGRATION_STATE = PAUSED`를 지정하여 데이터 마이그레이션을 연기할 수 있습니다. 기본값은 `MIGRATION_STATE = OUTBOUND`입니다. 테이블의 Stretch 활성화에 대한 자세한 내용은 [테이블에 대한 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)를 참조하세요.  
   
  **필수 구성 요소**. 테이블에 대해 Stretch를 활성화하기 전에 서버 및 데이터베이스에서 Stretch를 활성화해야 합니다. 자세한 내용은 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)를 참조하십시오.  
   
@@ -934,12 +936,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
      이 작업으로 인해 데이터 전송 비용이 발생하며 이 작업은 취소할 수 없습니다.  
   
--   `PAUSED`를 지정하여 데이터 마이그레이션을 일시 중지하거나 연기합니다. 자세한 내용은 [데이터 마이그레이션 일시 중지 및 다시 계속 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)을 참조하세요.  
+-   `PAUSED`를 지정하여 데이터 마이그레이션을 일시 중지하거나 연기합니다. 자세한 내용은 [데이터 마이그레이션 일시 중지 및 다시 계속&#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)을 참조하세요.  
   
  MEMORY_OPTIMIZED  
    
   
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.  
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  값 ON은 테이블이 메모리 최적화된 형식임을 나타냅니다. 메모리 최적화된 테이블은 트랜잭션 처리의 성능을 최적화하기 위해 사용되는 메모리 내 OLTP 기능의 일부입니다. 메모리 내 OLTP를 시작하려면 [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)을 참조하세요. 메모리 최적화 테이블에 대한 더 심층적인 내용은 [메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)을 참조하세요.  
   
@@ -948,7 +950,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  DURABILITY  
    
   
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.   
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지   
   
  SCHEMA_AND_DATA의 값은 테이블이 내구성이 있다는 것, 즉 변경 내용이 디스크에 유지되고 다시 시작 또는 장애 조치 시에 존속된다는 것을 나타냅니다.  SCHEMA_AND_DATA는 기본값입니다.  
   
@@ -960,23 +962,23 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  BUCKET_COUNT  
    
   
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지. 
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지 
   
- 해시 인덱스에서 만들어야 하는 버킷 수를 나타냅니다. 해시 인덱스에서 BUCKET_COUNT의 최대값은 1,073,741,824입니다. 버킷 수에 대한 자세한 내용은 [메모리 최적화 테이블에 대한 인덱스](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)를 참조하세요.  
+ 해시 인덱스에서 만들어야 하는 버킷 수를 나타냅니다. 해시 인덱스에서 BUCKET_COUNT의 최대값은 1,073,741,824입니다. 메모리 최적화 테이블의 인덱스에 대한 자세한 내용은 [Memory-Optimized Tables에 대한 인덱스](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)를 참조하세요.  
   
  Bucket_count는 필수 인수입니다.  
   
  INDEX  
    
   
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지. 
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지 
   
 CREATE TABLE 문의 일부로 열 및 테이블 인덱스를 지정할 수 있습니다. 메모리 최적화 테이블에서 인덱스 추가 및 제거에 대한 자세한 내용은 [메모리 최적화 테이블 변경](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)을 참조하세요.
   
  HASH  
    
   
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지. 
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지 
   
  HASH 인덱스가 만들어졌음을 나타냅니다.  
   
@@ -1650,7 +1652,7 @@ GO
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [sys.dm_sql_referenced_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE PARTITION FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   

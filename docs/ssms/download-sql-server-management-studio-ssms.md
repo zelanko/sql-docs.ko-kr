@@ -1,19 +1,19 @@
 ---
-title: "SSMS(SQL Server Management Studio) 다운로드 | Microsoft 문서"
-ms.custom: 
-ms.date: 02/21/2018
+title: SSMS(SQL Server Management Studio) 다운로드 | Microsoft 문서
+ms.custom: ''
+ms.date: 03/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "ssms 설치, ssms 다운로드, 최신 ssms"
+- ssms 설치, ssms 다운로드, 최신 ssms
 - SQL Server Management Studio
 - ssms.exe
 - sql man studio
@@ -26,16 +26,16 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: de6d0b4d679dab1f008ef53afef4a173311ea20e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 7b64f3d78ceafd5e1eac62e1e3dd1155827e8c61
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,9 +47,15 @@ SSMS는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기
 
 SSMS 17.X는 *SQL Server Management Studio*의 최신 세대이며 SQL Server 2017을 지원합니다.
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.5 다운로드](https://go.microsoft.com/fwlink/?linkid=867670)**
+**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.6 다운로드](https://go.microsoft.com/fwlink/?linkid=870039)**
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.5 업그레이드 패키지 다운로드(17.x에서 17.5로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=867672)**
+**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.6 업그레이드 패키지 다운로드(17.x에서 17.6으로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=870041)**
+
+**버전 정보**
+
+릴리스 번호: 17.6<br>
+빌드 번호: 14.0.17230.0<br>
+릴리스 날짜: 2018년 3월 20일
 
 SSMS 17.x 설치는 SSMS 16.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 17.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다.
 컴퓨터에 SSMS가 병렬로 설치되어 있으면 특정 요구에 맞는 올바른 버전을 시작해야 합니다. 최신 버전에는 *Microsoft SQL Server Management Studio 17* 레이블이 지정되며 새 아이콘이 추가됩니다. 
@@ -65,46 +71,49 @@ SSMS 17.x 설치는 SSMS 16.x 이전 버전을 업그레이드 또는 대체하�
 
 이 SSMS 릴리스는 다음 언어로 설치할 수 있습니다.
 
-SQL Server Management Studio 17.5:<br>
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
+SQL Server Management Studio 17.6:<br>
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
-SQL Server Management Studio 17.5 업그레이드 패키지(17.x에서 17.5로 업그레이드):<br>
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40a)
+SQL Server Management Studio 17.6 업그레이드 패키지(17.x에서 17.6으로 업그레이드):<br>
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 모듈은 이제 PowerShell 갤러리를 통해 별도로 설치됩니다. 자세한 내용은 [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)를 참조하세요.
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-**버전 정보**
-
-릴리스 번호: 17.5
-
-이 릴리스에 대한 빌드 번호: 14.0.17224.0
-
-릴리스 날짜: 2018년 2월 15일
 
 ## <a name="new-in-this-release"></a>이 릴리스의 새로운 기능
 
-SSMS 17.5는 최신 버전의 SQL Server Management Studio입니다. 17.X 세대의 SSMS는 SQL Server 2017을 통해 SQL Server 2008의 거의 모든 기능 영역을 지원합니다. 버전 17.x는 SQL Analysis Service PaaS도 지원합니다.
+SSMS 17.6은 최신 버전의 SQL Server Management Studio입니다. 17.X 세대의 SSMS는 SQL Server 2017을 통해 SQL Server 2008의 거의 모든 기능 영역을 지원합니다. 버전 17.x는 SQL Analysis Service PaaS도 지원합니다.
 
-17.5 버전에는 다음이 포함됩니다.
+17.6 버전에는 다음이 포함됩니다.
 
-데이터 검색 및 분류:
+**일반 SSMS**
 
-- 데이터베이스에서 중요한 데이터를 검색, 분류, 레이블 지정 및 보고하는 새 SQL 데이터 검색 및 분류 기능이 추가되었습니다. 
-- 가장 중요한 데이터(비즈니스, 재무, 보건, PII 등)를 자동 검색하고 분류하면 조직 정보 보호 수준에서 중요한 역할을 담당할 수 있습니다.
-- [SQL 데이터 검색 및 분류](../relational-databases/security/sql-data-discovery-and-classification.md)에서 자세히 알아보세요.
+SQL Database 관리되는 인스턴스:
 
-쿼리 편집기:
+- [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에 대한 지원을 추가했습니다. Azure SQL Database 관리되는 인스턴스(미리 보기)는 SQL Server 온-프레미스로 100%에 가까운 호환성, 일반적인 보안 문제를 해결하는 네이티브 [VNet(가상 네트워크)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) 구현 및 온-프레미스 SQL Server 고객에 대한 편리한 [비즈니스 모델](https://azure.microsoft.com/pricing/details/sql-database/)을 제공하는 Azure SQL Database의 새로운 특성입니다.
+- 다음과 같은 일반적인 관리 시나리오에 대한 지원:
+   - 데이터베이스 만들기 및 변경
+   - 데이터베이스 백업 및 복원
+   - 데이터 계층 응용 프로그램 가져오기, 내보내기, 추출 및 게시
+   - 서버 속성 보기 및 변경
+   - 전체 개체 탐색기 지원
+   - 데이터베이스 개체 스크립팅
+   - SQL 에이전트 작업에 대한 지원
+   - 연결된 서버에 대한 지원
+- [여기에서](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/) 관리되는 인스턴스에 대해 자세히 알아봅니다.
 
-- Azure SQL DW의 텍스트 외부 파일 형식에 SkipRows 옵션에 대한 지원이 추가되었습니다. 이 기능을 사용하면 사용자가 SQL DW로 구분된 텍스트 파일을 로드할 때 지정된 수의 행을 건너뛸 수 있습니다. 또한 FIRST_ROW 키워드에 해당하는 intellisense/SMO 지원이 추가되었습니다. 
 
-실행 계획:
+개체 탐색기:
+- 개체 탐색기에서 쿼리 창으로 끌어다 놓을 때 이름 주변에 괄호를 적용하지 않도록 추가된 설정 (사용자 제안 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) 및 [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051))
 
-- SQL Data Warehouse에 예상된 계획 단추를 표시하도록 설정되었습니다.
-- 새 실행 계획 특성 *EstimateRowsWithoutRowGoal*이 추가되었습니다. *QueryTimeStats*에 새 실행 계획 특성 *UdfCpuTime* 및  *UdfElapsedTime*이 추가되었습니다. 자세한 내용은 [SQL Server 2017 CU3에 추가된 쿼리 실행 계획에서 최적화 프로그램 행 목표 정보](http://support.microsoft.com/help/4051361)를 참조하세요.
+데이터 분류:
+- 일반 개선 사항 및 버그 수정
 
+**IS(Integration Services)**
 
+- [SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)로 패키지 배포에 대한 추가된 지원
 
 ## <a name="supported-sql-offerings"></a>지원되는 SQL 서비스
 
@@ -141,11 +150,9 @@ SSMS 17.5는 최신 버전의 SQL Server Management Studio입니다. 17.X 세대
 
 ## <a name="release-notes"></a>릴리스 정보
 
-다음은 이 17.5 릴리스의 문제 및 제한 사항입니다.
+다음은 이 17.6 릴리스의 문제 및 제한 사항입니다.
 
-데이터 분류:
-- 분류를 제거한 다음, 같은 열에 새로운 분류를 수동으로 추가하면 이전 정보 형식 및 민감도 레이블이 기본 보기에서 열에 할당됩니다.<br>
-*해결 방법*: 주 보기에 분류를 다시 추가한 후에 저장하기 전에 새 정보 형식 및 민감도 레이블을 할당합니다.  
+현재 알려진 문제가 없습니다.
 
 
 ## <a name="previous-releases"></a>이전 릴리스
