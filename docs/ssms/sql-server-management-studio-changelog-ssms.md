@@ -1,38 +1,124 @@
 ---
-title: "SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서"
-ms.custom: 
-ms.date: 02/15/2018
+title: SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서
+ms.custom: ''
+ms.date: 03/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a87476c668bcbf8226348349d6886c39ce8563bf
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 9865ff96b084d70b3dcd067ad8d57c7cece01a62
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [아래의 이전 SSMS 버전](#previous-ssms-releases)을 다운로드하세요.
 
 
+## <a name="ssms-176download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.6](download-sql-server-management-studio-ssms.md)
 
-## <a name="ssms-175download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.5](download-sql-server-management-studio-ssms.md)
+릴리스 번호: 17.6<br>
+빌드 번호: 14.0.17230.0<br>
+릴리스 날짜: 2018년 3월 20일
 
+### <a name="whats-new"></a>새로운 기능
+
+**일반 SSMS**
+
+SQL Database 관리되는 인스턴스:
+
+- [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에 대한 지원을 추가했습니다. Azure SQL Database 관리되는 인스턴스(미리 보기)는 SQL Server 온-프레미스로 100%에 가까운 호환성, 일반적인 보안 문제를 해결하는 네이티브 [VNet(가상 네트워크)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) 구현 및 온-프레미스 SQL Server 고객에 대한 편리한 [비즈니스 모델](https://azure.microsoft.com/pricing/details/sql-database/)을 제공하는 Azure SQL Database의 새로운 특성입니다.
+- 다음과 같은 일반적인 관리 시나리오에 대한 지원:
+   - 데이터베이스 만들기 및 변경
+   - 데이터베이스 백업 및 복원
+   - 데이터 계층 응용 프로그램 가져오기, 내보내기, 추출 및 게시
+   - 서버 속성 보기 및 변경
+   - 전체 개체 탐색기 지원
+   - 데이터베이스 개체 스크립팅
+   - SQL 에이전트 작업에 대한 지원
+   - 연결된 서버에 대한 지원
+- [여기에서](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/) 관리되는 인스턴스에 대해 자세히 알아봅니다.
+
+
+개체 탐색기:
+- 개체 탐색기에서 쿼리 창으로 끌어다 놓을 때 이름 주변에 괄호를 적용하지 않도록 추가된 설정 (사용자 제안 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) 및 [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051))
+
+데이터 분류:
+- 일반 개선 사항 및 버그 수정
+
+**IS(Integration Services)**
+
+- [SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)로 패키지 배포에 대한 추가된 지원
+
+### <a name="bug-fixes"></a>버그 수정
+
+**일반 SSMS**
+
+데이터 분류:
+
+- 부실한 *정보 유형* 및 *민감도 레이블*로 표시되는 새롭게 추가된 분류를 야기한 *데이터 분류*의 문제를 해결했습니다.
+- 대/소문자 구분 데이터 정렬로 설정된 서버를 대상으로 하는 경우 *데이터 분류*가 작동하지 않는 문제를 해결했습니다.
+        
+Always On:
+
+- *대기 시간 데이터 수집*을 클릭할 때 서버가 대/소문자 구분 데이터 정렬로 설정된 경우 오류가 발생할 수 있는 AG 보기 대시보드의 문제를 해결했습니다.
+- SSMS에서 클러스터 서비스가 종료될 때 *분산*으로 AG를 잘못 보고하는 문제를 해결했습니다.
+- *가용성 그룹 만들기* 대화 상자를 사용하여 AG를 만들 때 *ReadOnlyRoutingUrl*이 필요한 오류를 수정했습니다.
+- 주 서버가 다운되고 보조 서버로 수동으로 장애 조치(failover)할 때 NullReferenceException이 throw되는 오류를 해결했습니다.
+- 데이터베이스를 초기화하는 백업/복원을 사용하여 가용성 그룹을 만들 때 보조 복제본에서 기본 디렉터리에 데이터베이스 파일이 생성되는 문제가 해결되었습니다. 수정 사항은 다음을 포함합니다.
+   - 데이터/로그 디렉터리 유효성 검사기를 추가합니다.
+   - 복제본이 다른 OS에 있는 경우 주 복제본으로만 파일 재배치를 수행합니다.
+- SSMS 마법사가 보조 조인 실패를 발생시키는 *CLUSTER_TYPE* 옵션을 생성하지 않는 문제를 해결했습니다.
+
+설치:
+- "업그레이드 패키지"를 설치하여 SSMS 업그레이드 시도가 SSMS가 기본이 아닌 위치에 설치되었을 때 실패되는 문제를 해결했습니다.
+
+SMO:
+- SQL Server 2016 이상의 테이블 스크립팅에 최대 30초가 걸릴 수 있는 성능 문제를 해결했습니다(이제, 1초 이하로 단축됨).
+
+개체 탐색기:
+- SSMS가 개체 탐색기에서 *관리* 노드를 확장하려고 할 때 "DBNull에서 다른 형식으로 개체를 캐스트할 수 없음"과 같은 예외를 throw할 수 있는 문제를 해결했습니다.
+- 사용자 정의 PS 프로필에서 출력을 내보냈을 때 *PowerShell 시작*이 SQLServer 모듈을 검색하지 않는 문제를 해결했습니다.
+- 개체 탐색기에서 테이블 또는 인덱스 노드를 마우스 오른쪽 단추로 클릭하는 경우 발생할 수 있는 일시적 중단을 수정했습니다.
+
+데이터베이스 메일:
+- 16개 이상의 프로필을 표시/관리하려고 할 때 *데이터베이스 메일 구성 마법사*에서 예외를 throw하는 문제를 해결했습니다.
+
+
+**AS(Analysis Services)**
+
+- 변경 내용이 서버에 저장되지 않는 SSMS의 1400 호환성 수준 모델의 데이터 원본을 수정하는 문제를 해결했습니다.
+
+**IS(Integration Services)**
+
+- SQL Database 관리되는 인스턴스에 연결한 경우 SSMS에서 SSIS 카탈로그 노드 및 보고서를 표시하지 않는 문제를 해결했습니다.
+
+### <a name="known-issues"></a>알려진 문제
+
+현재 이 릴리스에서 알려진 문제가 없습니다.
+
+## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
+
+다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
+
+## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>[SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 14.0.17224.0
+
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -78,10 +164,10 @@ SMO:
 
 템플릿: 
 
-- "데이터베이스 메일": 몇 가자 오타가 수정되었습니다[(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).  
+- "데이터베이스 메일": 몇 가지 오타 수정 [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).  
 
 개체 탐색기:
-- 관리 압축이 인덱스에서 실패하는 문제가 해결되었습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o).
+- 관리되는 압축이 인덱스에 대해 실패하는 문제를 해결했습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o).
 
 감사:
 - *감사 파일 병합* 기능과 관련된 문제가 해결되었습니다.
@@ -92,14 +178,6 @@ SMO:
 데이터 분류:
 - 분류를 제거한 다음, 같은 열에 새로운 분류를 수동으로 추가하면 이전 정보 형식 및 민감도 레이블이 기본 보기에서 열에 할당됩니다.<br>
 *해결 방법*: 주 보기에 분류를 다시 추가한 후에 저장하기 전에 새 정보 형식 및 민감도 레이블을 할당합니다.
-
-
-
-## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
-
-다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
-
-
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>[SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329) ![다운로드](../ssdt/media/download.png)
@@ -377,7 +455,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 텍스트 형식의 쿼리 결과를 인쇄할 때의 문제 해결.  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
 - SQL Azure 데이터베이스에서 개체 삭제를 스크립팅할 때 SSMS가 테이블 및 그러한 개체를 잘못 끌어오는 문제 해결.
 - “하나 이상의 구성 요소를 찾을 수 없습니다. 응용 프로그램을 다시 설치하세요.”와 같은 오류로 SSMS가 가끔 시작을 거부하는 문제 해결.
-- SSMS UI의 SPID가 부실하고 동기화되지 않는 문제가 해결되었습니다. https://connect.microsoft.com/SQLServer/feedback/details/1898875
+- SSMS UI의 SPID가 부실하고 동기화되지 않는 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - SSMS(자동) 설치 프로그램에서 /passive 인수가 /quiet으로 처리되는 문제 해결.
 - SSMS를 시작할 때 가끔 “개체 참조가 개체의 인스턴스로 설정되지 않았습니다.” 오류가 발생하는 문제 해결. http://connect.microsoft.com/SQLServer/feedback/details/3134698
 - "데이터 압축 마법사"의 그래프 테이블에서 ‘Calculate’를 누를 때 SSMS가 충돌을 일으켰던 문제 해결.
@@ -404,7 +482,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - "데이터베이스 다이어그램"에서 SSMS가 “인덱스가 배열의 범위 밖에 있습니다.” 오류를 throw하고 사용자가 "테이블 보기"를 표준이 아닌 것으로 변경할 수 없었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3133792 및 http://connect.microsoft.com/SQLServer/feedback/details/3135326
 - "URL에 백업/복원"에서 SSMS가 클래식 저장소 계정을 열거하지 않았던 문제 해결.
 - 스키마 바운드 보안 개체를 DB 역할에 추가하려고 할 때 예외가 throw되었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3118143
-- 테이블 노드 http://connect.microsoft.com/SQLServer/feedback/details/3136283를 확장할 때 SSMS가 "데이터는 Null입니다. 이 메서드 또는 속성은 Null 값에 호출될 수 없습니다." 오류를 간헐적으로 표시했던 문제 해결.
+- 테이블 노드 http://connect.microsoft.com/SQLServer/feedback/details/3136283를 확장할 때 SSMS가 "데이터는 Null입니다. 이 메서드 또는 속성은 Null 값에 호출될 수 없습니다." 테이블 노드를 확장하는 경우 http://connect.microsoft.com/SQLServer/feedback/details/3136283
 - DTA: 특정 경계 값으로 파티션 함수를 평가할 때 DTAEngine.exe가 힙 손상으로 종료되는 문제 해결.
 
 
@@ -422,10 +500,10 @@ The connection is broken and recovery is not possible. The client driver attempt
 - SSISDB 카탈로그의 실행 정보 보고서를 표시할 수 없는 문제 해결
 - SSMS에서 수많은 프로젝트/패키지의 성능 저하와 관련된 문제 해결
 
-## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid799832"></a>[SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=799832) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>[SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819) ![다운로드](../ssdt/media/download.png)
 출시 | 빌드 번호: 14.0.17119.0
 
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
 
 ### <a name="enhancements"></a>개선 사항
 
@@ -449,10 +527,10 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 스크립팅: 해당 옵션을 사용하지 않도록 설정하여 삭제를 스크립팅하려고 할 때 SSMS가 Azure 데이터베이스 개체를 실수로 삭제하지 않도록 일시적으로 제한함.  향후 SSMS 릴리스에서 적절한 수정이 제공될 예정입니다.
 - 개체 탐색기: AS COPY를 사용하여 만든 Azure 데이터베이스에 연결할 때 “데이터베이스” 노드가 확장되지 않는 문제를 해결함
 
-## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid799832"></a>[SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=799832) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>[SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722) ![다운로드](../ssdt/media/download.png)
 출시 | 빌드 번호: 14.0.17099.0
 
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
 
 ### <a name="enhancements"></a>개선 사항 
 
@@ -576,7 +654,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 루트 노드를 새로 고치고 나면 등록된 서버에서 아이콘을 표시하지 않음.
 - Azure v12 서버에서 [데이터베이스 만들기]에 대한 스크립트 단추를 누르면 스크립트가 실행된 후 "No action to be scripted"(스크립팅할 동작이 없습니다.) 메시지를 표시함.
 - SSMS [서버에 연결] 대화 상자에서 새로운 각 연결에 대해 "추가 속성" 탭을 지우지 않음.
-- [Generate Tasks](작업 생성) 스크립트에서 Azure SQL DB에 대한 [데이터베이스 만들기] 스크립트를 생성하지 않음.
+- [Generate Tasks] (작업 생성) 스크립트에서 Azure SQL DB에 대한 [데이터베이스 만들기] 스크립트를 생성하지 않음.
 - 뷰 디자이너의 스크롤 막대가 사용하지 않도록 설정된 것으로 보임.
 - Always Encrypted AVK 키 경로에 버전 ID가 포함되지 않음.
 - 쿼리 창의 엔진 버전 쿼리 수 줄임. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3113387)
@@ -658,11 +736,11 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 * 쿼리 계획 XML을 클릭할 때 올바른 SSMS UI가 열리지 않는 문제를 해결했습니다.
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid799832"></a>[SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=799832) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid832812"></a>[SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=832812) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 13.0.16000.28
 
 
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
 
 * ";:"을 포함하는 테이블 이름이 있는 데이터베이스를 클릭했을 때 충돌이 발생하는 문제를 해결했습니다.
 * AS 테이블 형식 데이터베이스 속성 창에서 모델 페이지를 변경하면 원래 정의가 스크립팅되는 문제를 해결했습니다. 
@@ -685,10 +763,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 * 응용 프로그램을 닫거나 오류 대화 상자를 표시하려는 경우 SSMS 충돌이 발생하는 문제를 해결했습니다.
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid799832"></a>[SSMS 16.4.1(2016년 9월)](http://go.microsoft.com/fwlink/?LinkID=799832) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid828615"></a>[SSMS 16.4.1(2016년 9월)](http://go.microsoft.com/fwlink/?LinkID=828615) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 13.0.15900.1
 
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
 
 *  저장 프로시저를 변경/수정하려는 동안 실패하는 경우 문제 해결  
 [Microsoft Connect 항목 #3103831](https://connect.microsoft.com/SQLServer/feedback/details/3103831)
@@ -749,11 +827,11 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid799832"></a>[SSMS 16.3(2016년 8월)](http://go.microsoft.com/fwlink/?LinkID=799832) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid824938"></a>[SSMS 16.3(2016년 8월)](http://go.microsoft.com/fwlink/?LinkID=824938) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 버전 번호: 13.0.15700.28
 
 
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
 
 * SSMS 월별 릴리스는 이제 번호로 브랜딩됩니다.
 
@@ -807,10 +885,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 
 ---
-## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid799832"></a>[SSMS 2016년 7월 핫픽스 업데이트](http://go.microsoft.com/fwlink/?LinkID=799832) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid822301"></a>[SSMS 2016년 7월 핫픽스 업데이트](http://go.microsoft.com/fwlink/?LinkID=822301) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 버전 번호: 13.0.15600.2
 
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
 
 * **누락된 오른쪽 클릭 메뉴 항목을 사용하도록 설정하기 위한 SSMS의 버그 수정**  
 *연결된 고객 버그 요청:*  
@@ -819,7 +897,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 [Microsoft Connect 항목 #2924345](https://connect.microsoft.com/SQLServer/feedback/details/2924345/some-ssms-object-explorer-right-click-menu-options-missing-in-july-update)
 
 ---
-## <a name="ssms-july-2016"></a>SSMS 2016년 7월 
+## <a name="ssms-july-2016-install-the-july-2016-hotfix"></a>SSMS 2016년 7월(2016년 7월 핫픽스 설치)
 일반 공급 | 버전 번호: 13.0.15500.91
 
 * *편집(7월 5일):* [Analysis Services 처리] 대화 상자 및 Analysis Services 배포 마법사의 SQL Server 2016(호환성 수준 1200) 테이블 형식 데이터베이스에 대해 향상된 지원.
