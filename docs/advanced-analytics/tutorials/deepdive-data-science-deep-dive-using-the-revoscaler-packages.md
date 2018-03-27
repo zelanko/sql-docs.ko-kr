@@ -1,13 +1,13 @@
-﻿---
-title: "데이터 과학 심층 분석: RevoScaleR 패키지를 사용 하 여 SQL server | Microsoft Docs"
+---
+title: '데이터 과학 심층 분석: RevoScaleR 패키지를 사용 하 여 SQL server | Microsoft Docs'
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
@@ -15,7 +15,7 @@ applies_to:
 dev_langs:
 - R
 ms.assetid: c2efb3f2-cad5-4188-b889-15d68b742ef5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
@@ -29,13 +29,13 @@ ms.lasthandoff: 02/11/2018
 # <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>데이터 과학 심층 분석: RevoScaleR 패키지를 사용 하 여 SQL Server와 함께
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 자습서에는 고성능 빅 데이터 분석을 위한 계산 컨텍스트로 서버를 사용함으로써 R Services(In-Database)에서 제공하는 향상된 R 패키지를 사용하여 SQL Server 데이터를 작업하고 확장 가능한 R 솔루션을 만드는 방법을 보여줍니다.
+이 자습서에는 고성능 빅 데이터 분석을 위한 계산 컨텍스트로 서버를 사용함으로써 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 에서 제공하는 향상된 R 패키지를 사용하여 SQL Server 데이터를 작업하고 확장 가능한 R 솔루션을 만드는 방법을 보여줍니다.
 
-로컬 및 원격 계산 컨텍스트 간에 데이터를 이동 하는 원격 계산 컨텍스트를 만드는 방법을 배웁니다 하 고 원격 SQL Server에서 R 코드를 실행 합니다. 또한 분석 하 고 로컬 및 원격 서버에서 데이터를 표시 하는 방법과 만들고 모델을 배포 하는 방법을 알아봅니다.
+로컬 및 원격 계산 컨텍스트 간에 데이터를 이동하는 원격 계산 컨텍스트를 만들고 원격 SQL Server에서 R 코드를 실행하는 방법을 학습합니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 표시하는 방법과 모델을 만들고 배포하는 방법을 학습합니다.
 
 > [!NOTE]
 > 
-> 이 자습서에서는 Windows의 SQL Server 데이터를 사용하여 작업하고 데이터베이스 내 계산 컨텍스트를 사용합니다. Teradata, Linux, Hadoop과 같은 다른 환경에서 R를 사용하려면 다음 Microsoft R Server 자습서를 참조합니다.
+> 이 자습서에서는 Windows의 SQL Server 데이터를 사용하여 작업하고 데이터베이스 내 계산 컨텍스트를 사용합니다. Teradata, Linux, Hadoop과 같은 다른 환경에서 R를 사용하려면 다음 Microsoft R Server 자습서를 참조합니다. 
 > + [R 서버 sparklyr와 함께 사용](https://docs.microsoft.com/machine-learning-server/r/tutorial-sparklyr-revoscaler)
 > + [Explore R and ScaleR in 25 Functions](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)(25개 함수에서 R 및 ScaleR 알아보기)
 > + [Hadoop MapReduce에 ScaleR 시작](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-hadoop)
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/11/2018
 
 구현 하려면 유연성 및 처리는 RevoScaleR 패키지를이 자습서에서는 데이터 및 스왑 계산 컨텍스트 자주 이동 합니다. 을 설명 하기 위해 다음은 일부의 작업이이 자습서에서:
 
-+ 데이터는 처음에 CSV 파일 또는 XDF 파일에서 가져온 것입니다. 데이터를 가져오면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RevoScaleR 패키지에서 함수를 사용 합니다.
++ 데이터는 초기에 CSV 파일 또는 XDF 파일에서 가져온 것입니다 RevoScaleR 패키지에서 함수를 사용해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 가져옵니다.
 + 모델 학습 및 점수 매기기를 사용 하 여 수행 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컨텍스트를 계산 합니다. 
 + RevoScaleR 함수를 사용 하 여 새로 만드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 점수 매기기 결과 저장 하는 테이블입니다.
 + 서버에서 모두 플롯을 만들고 로컬에서 계산 컨텍스트 합니다.
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/11/2018
 
 ### <a name="article-list-and-time-required"></a>필요한 시간 및 항목 목록
 
-이 자습서는 설치를 제외하고 약 75분 정도 소요됩니다. 
+이 자습서는 설치를 제외하고 약 75분 정도 소요됩니다.
 
 1. [R을 사용하여 SQL Server 데이터 작업하기](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
 2. [RxSqlServerData를 사용하여 SQL Server 데이터 개체 만들기](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/11/2018
 8. [새 데이터 채점하기](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
 9. [R을 사용하여 데이터 변환](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
 10. [rxImport를 사용하여 메모리에 데이터 로드하기](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
-11. [rxDataStep을 사용하여 새 SQL Server 테이블 만들기](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md) 
+11. [RxDataStep를 사용 하 여 새 SQL Server 테이블 만들기](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
 12. [rxDataStep을 사용하여 청크 분석 수행](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
 13. [로컬 계산 컨텍스트에서 데이터 분석](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
 14. [XDF 파일을 사용 하 여 SQL Server에서 데이터를 이동 합니다.](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
@@ -107,10 +107,9 @@ ms.lasthandoff: 02/11/2018
   
 -   **추가 R 패키지**
   
-    이 자습서에서는 다음 패키지 설치: **dplyr**, **ggplot2**, **ggthemes**, **reshape2**, 및 **e1071** . 지침은 자습서에 설명되어 있습니다.
+    이 자습서에서는 다음 패키지 설치: **dplyr**, **ggplot2**, **ggthemes**, **reshape2**, 및 **e1071** . 설명서는 자습서의 일부로 제공됩니다.
   
     두 장소에 모든 패키지를 설치 해야: R 솔루션 개발을 위해 사용 하는 컴퓨터에 R 스크립트를 실행 하는 SQL Server 컴퓨터에 있습니다. 서버 컴퓨터에서 패키지를 설치할 수 있는 권한이 없는 경우 관리자에 게 요청 합니다. 
-    **사용자 라이브러리에 패키지를 설치하지 마세요.** 패키지는 SQL Server 인스턴스에서 사용되는 R 패키지 라이브러리에 설치되어야 합니다.
     
     **사용자 라이브러리에 패키지를 설치하지 마세요.** 패키지는 SQL Server 인스턴스에서 사용 되는 R 패키지 라이브러리에 설치 되어야 합니다.
 
@@ -118,5 +117,5 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="next-step"></a>다음 단계
 
-[R을 사용하여 SQL Server 데이터 작업](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
+[R을 사용하여 SQL Server 데이터 작업하기](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
 
