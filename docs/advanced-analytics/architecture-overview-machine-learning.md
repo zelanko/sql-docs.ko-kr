@@ -1,34 +1,34 @@
 ---
-title: "SQL Server 컴퓨터 학습 서비스에 대 한 아키텍처 개요 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 컴퓨터 학습 서비스에 대 한 아키텍처 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7993a93eec3bd657f4d37fbbbfbb16dd514453fa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 아키텍처 개요 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 항목에서는 SQL Server에서 Python 및 R 스크립트 실행을 지 원하는 확장 프레임 워크의 목표를 설명 합니다.
+이 문서에서는 SQL Server에서 Python 및 R 스크립트 실행을 지 원하는 확장 프레임 워크의 목표를 설명 합니다.
 
 또한 이러한 목표를 충족 하기 위해 아키텍처를 디자인 하는 방식에 대해 간략하게 제공 R 및 Python 지원 및 SQL Server, 및 통합의 장점에 의해 실행 방법입니다.
 
-전반적으로 확장성 프레임 워크는 약간의 차이가 호출 되는 아이콘의 세부 정보, 구성 옵션 등의 R 및 Python에 대 한 거의 동일 합니다. 특정 언어에 대 한 구현에 대 한 자세한 내용은 다음이 항목을 참조 합니다.
+전반적으로 확장성 프레임 워크는 약간의 차이가 호출 되는 아이콘의 세부 정보, 구성 옵션 등의 R 및 Python에 대 한 거의 동일 합니다. 특정 언어에 대 한 구현에 대 한 자세한 내용은 다음이 문서를 참조 합니다.
 
 - [SQL Server R Services에 대 한 아키텍처 개요](r/architecture-overview-sql-server-r.md)
 - [SQL Server에서 Python에 대 한 아키텍처 개요](python/architecture-overview-sql-server-python.md)

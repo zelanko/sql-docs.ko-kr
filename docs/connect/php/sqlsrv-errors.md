@@ -1,33 +1,35 @@
 ---
 title: sqlsrv_errors | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_errors
+apiname:
+- sqlsrv_errors
 apitype: NA
 helpviewer_keywords:
 - API Reference, sqlsrv_errors
 - sqlsrv_errors
 - errors and warnings
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f75b6e72c4678de0e24bab58de7a159ee173cfa4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 439ea8c2730f777bc531d03a2db00b3ba54021e3
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,7 +64,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 #### <a name="parameters"></a>매개 변수  
 *$errorsAndOrWarnings*[선택 사항]: 미리 정의 된 상수입니다. 이 매개 변수는 다음 표에 나열된 값 중 하나를 사용할 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|마지막 **sqlsrv** 함수 호출 시 생성된 오류 및 경고가 반환됩니다.|  
 |SQLSRV_ERR_ERRORS|마지막 **sqlsrv** 함수 호출 시 생성된 오류가 반환됩니다.|  
@@ -73,16 +75,16 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ## <a name="return-value"></a>반환 값  
 배열의 **배열** 또는 **null**입니다. 각 **배열** 반환 된 **배열** 세 가지 키-값 쌍을 포함 합니다. 다음 표에는 각 키와 해당 설명이 나와 있습니다.  
   
-|Key|설명|  
+|Key|Description|  
 |-------|---------------|  
-|SQLSTATE|ODBC 드라이버에서 발생하는 오류의 경우 ODBC 드라이버에서 반환한 SQLSTATE입니다. ODBC의 SQLSTATE 값에 대한 자세한 내용은 [ODBC 오류 코드](http://go.microsoft.com/fwlink/?linkid=119618)를 참조하세요.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 오류의 경우 IMSSP의 SQLSTATE입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 경고의 경우 01SSP의 SQLSTATE입니다.|  
+|SQLSTATE|ODBC 드라이버에서 발생하는 오류의 경우 ODBC 드라이버에서 반환한 SQLSTATE입니다. SQLSTATE 값에 대 한 ODBC에 대 한 정보를 참조 하십시오. [ODBC 오류 코드](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)합니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 오류의 경우 IMSSP의 SQLSTATE입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 경고의 경우 01SSP의 SQLSTATE입니다.|  
 |코드|SQL Server에서 발생하는 오류의 경우 네이티브 SQL Server 오류 코드입니다.<br /><br />ODBC 드라이버에서 발생하는 오류의 경우 ODBC 드라이버에서 반환된 오류 코드입니다.<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 발생하는 오류의 경우 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 오류 코드입니다. 자세한 내용은 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)을 참조하세요.|  
 |message|오류에 대한 설명입니다.|  
   
 배열 값은 숫자 키 0, 1 및 2를 사용하여 액세스할 수도 있습니다. 오류나 경고가 발생하지 않는 경우 **null** 이 반환됩니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 실패한 문을 실행하는 동안 발생하는 오류를 표시합니다. (때문에 문이 실패 **InvalidColumName** 지정된 된 테이블의 유효한 열 이름이 아닙니다.) 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 실패한 문을 실행하는 동안 발생하는 오류를 표시합니다. (때문에 문이 실패 **InvalidColumName** 지정된 된 테이블의 유효한 열 이름이 아닙니다.) 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -121,7 +123,8 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
+## <a name="see-also"></a>관련 항목:  
+[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
+
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
   

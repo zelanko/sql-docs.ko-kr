@@ -1,29 +1,29 @@
 ---
-title: "SQL Server와의 상호 운용성 Python | Microsoft Docs"
-ms.custom: 
+title: SQL Server와의 상호 운용성 Python | Microsoft Docs
+ms.custom: ''
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 3477c941d81f860996776cf89bfc3ffe7dbc81af
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>SQL Server와 Python의 상호 운용성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 항목의 기능을 사용 하면 설치 된 Python 구성 요소를 설명 **컴퓨터 학습 Services (In-database)** Python를 언어로 선택 합니다.
+이 문서는 기능을 설정 하는 경우 설치 된 Python 구성 요소를 설명 **컴퓨터 학습 Services (In-database)** Python를 언어로 선택 합니다.
 
 ## <a name="python-components"></a>Python 구성 요소
 

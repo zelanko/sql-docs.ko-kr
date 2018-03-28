@@ -1,33 +1,35 @@
 ---
-title: "방법: SQLSRV 드라이버를 사용 하 여 경고 및 오류 처리 | Microsoft Docs"
-ms.custom: 
+title: '방법: SQLSRV 드라이버를 사용 하 여 경고 및 오류 처리 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: errors and warnings
+helpviewer_keywords:
+- errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 02aa17ddd031d351510f600f60dcd99b42a5d6e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 4b7e2c9157cf37ab35987ebc9bb6a4d6615f80ba
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-기본적으로 SQLSRV 드라이버는 경고를 오류로 처리합니다. 오류 또는 경고를 생성하는 **sqlsrv** 함수를 호출하면 **false**가 반환됩니다. 이 항목에서는 이 기본 동작을 해제하는 방법과 경고를 오류와 별도로 처리하는 방법을 보여 줍니다.  
+기본적으로 SQLSRV 드라이버는 경고를 처리 오류가 있습니다. 에 대 한 호출을 **sqlsrv** 오류 또는 경고를 생성 하는 함수 반환 **false**합니다. 이 항목에서는 이 기본 동작을 해제하는 방법과 경고를 오류와 별도로 처리하는 방법을 보여 줍니다.  
   
 > [!NOTE]  
 > 경고를 오류로 처리하는 기본 동작에는 몇 가지 예외가 있습니다. SQLSTATE 값 01000, 01001, 01003 및 01S02에 해당하는 경고는 오류로 처리되지 않습니다.  
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/18/2017
   
 또한 **sqlsrv** 함수에 대한 각 호출 이후 예제 코드가 오류를 확인합니다. 권장 방법입니다.  
   
-이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다. 예제가 AdventureWorks 데이터베이스의 새 설치에 대해 실행될 때 세 가지 경고 및 두 가지 오류를 생성합니다. 처음 두 가지 경고는 데이터베이스에 연결할 때 발생하는 표준 경고입니다. 세 번째 경고는 직원의 사용 가능한 휴가 시간이 0보다 작은 값으로 업데이트되므로 발생합니다. 직원의 사용 가능한 휴가 시간이 -40시간보다 작은 값으로 업데이트되기 때문에(테이블의 제약 조건 위반) 오류가 발생합니다.  
+이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다. 예제가 AdventureWorks 데이터베이스의 새 설치에 대해 실행될 때 세 가지 경고 및 두 가지 오류를 생성합니다. 처음 두 가지 경고는 데이터베이스에 연결할 때 발생하는 표준 경고입니다. 세 번째 경고는 직원의 사용 가능한 휴가 시간이 0보다 작은 값으로 업데이트되므로 발생합니다. 직원의 사용 가능한 휴가 시간이 -40시간보다 작은 값으로 업데이트되기 때문에(테이블의 제약 조건 위반) 오류가 발생합니다.  
   
 ```  
 <?php  
@@ -205,6 +207,7 @@ function DisplayWarnings()
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
-[방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 구성](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)  
+[방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 구성](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
+
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
   

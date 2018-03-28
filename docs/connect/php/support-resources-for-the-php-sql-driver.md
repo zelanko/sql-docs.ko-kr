@@ -1,30 +1,32 @@
 ---
-title: "PHP SQL 드라이버에 대 한 지원 리소스 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: 지원 리소스에 대해 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: support
+helpviewer_keywords:
+- support
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2b2225256554828dfd749280ed5b401fb181972
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: de9154bc6b863da818d086e1e8614bb83b6463a9
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="support-resources-for-the-php-sql-driver"></a>PHP SQL 드라이버에 대한 지원 리소스
+# <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>지원 리소스에 대해 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 이 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하는 응용 프로그램을 개발할 때 유용할 수 있는 리소스를 나열합니다.  
@@ -34,30 +36,30 @@ ms.lasthandoff: 11/18/2017
   
 피어 투 피어 지원을 방문는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp)합니다.  
   
-피드백 제공, 질문하기 또는 개발 팀이 고려하고 있는 내용에 대해 알아보려면 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [팀 블로그](http://go.microsoft.com/fwlink/?LinkID=108675)를 방문하세요.  
+피드백 제공, 질문 하거나 개발 팀이 고려 되는 내용에 대해 알아봅니다을 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [팀 블로그](https://blogs.msdn.microsoft.com/sqlphp/)합니다.  
   
-[Github의 Microsoft PHP Driver for SQL Server 소스 코드](https://github.com/azure/msphpsql)  
+[Microsoft PHP driver for SQL Server 소스 코드 Github에서](https://github.com/Microsoft/msphpsql)  
   
 ## <a name="sql-servertransact-sql-support-resources"></a>SQL Server/Transact-SQL 지원 리소스  
-SQL Server 및 TRANSACT-SQL 설명서에서 찾을 수 있습니다 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?LinkID=62618)합니다.  
+SQL Server 및 TRANSACT-SQL 설명서에서 찾을 수 있습니다 [SQL Server 설명서](../../sql-server/sql-server-technical-documentation.md)합니다.  
   
 피어 투 피어 지원을 방문는 [MSDN SQL Server 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home)합니다.  
   
 ## <a name="internet-information-services-iis-support-resources"></a>IIS(인터넷 정보 서비스) 지원 리소스  
-최신 IIS 뉴스를 보려면 [IIS 홈](http://go.microsoft.com/fwlink/?LinkId=108763)을 방문하세요.  
+최신 IIS 뉴스를 방문 [IIS 홈](https://www.iis.net/)합니다.  
   
-피어 투 피어 지원을 방문는 [IIS 포럼](http://go.microsoft.com/fwlink/?LinkId=108765)합니다.  
+피어 투 피어 지원을 방문는 [IIS 포럼](https://forums.iis.net/)합니다.  
   
 ## <a name="php-support-resources"></a>PHP 지원 리소스  
 [Windows용 PHP 설명서](http://windows.php.net/)  
   
-PHP에 대 한 최신 정보에 대 한 방문 [http:/ www.php.net/](http://go.microsoft.com/fwlink/?LinkId=108766)합니다.  
+PHP에 대 한 최신 정보에 대 한 방문 [ http://www.php.net/ ](http://www.php.net)합니다.  
   
-PHP 설명서 방문 [http://www.php.net/docs.php](http://go.microsoft.com/fwlink/?LinkId=108767)합니다.  
+PHP 설명서 방문 [ http://www.php.net/docs.php ](http://www.php.net/docs.php)합니다.  
   
 ## <a name="microsoft-customer-support"></a>Microsoft 고객 지원  
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]관련 지원에 대한 질문은 Microsoft 고객 서비스 및 지원 센터에 문의하세요. 자세한 내용은 [Microsoft 고객 서비스 및 지원 센터 문의 방법 및 시기](http://go.microsoft.com/fwlink/?LinkId=122302)를 참조하세요.  
+에 관련 된 지원 질문은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 문의할 수 있습니다 [Microsoft 지원](https://support.microsoft.com/contactus/)에 요청 또는 [Github 프로젝트 페이지](https://github.com/Microsoft/msphpsql/issues)합니다.  
   
-## <a name="see-also"></a>참고 항목  
-[PHP SQL 드라이버 개요](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a>관련 항목:  
+[Microsoft Drivers for PHP for SQL Server의 개요](../../connect/php/overview-of-the-php-sql-driver.md)
   

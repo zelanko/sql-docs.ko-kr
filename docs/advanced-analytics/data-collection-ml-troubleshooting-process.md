@@ -1,28 +1,28 @@
 ---
-title: "기계 학습-에 대 한 데이터 수집 SQL Server 문제 해결"
-ms.custom: 
+title: 기계 학습-에 대 한 데이터 수집 SQL Server 문제 해결
+ms.custom: ''
 ms.date: 06/16/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 95b70a2992b5c43ebaefb8faa729ec16ac3c84f7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>기계 학습에 대 한 데이터 수집 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +51,7 @@ SQL Server 2017는 Python 언어 지원이 확장 됩니다. 이전 릴리스에
 
 사용 중인 SQL Server의 버전에 따라 기능을 익히는 일부 컴퓨터에 사용할 수 없는 경우 또는 제한 된 수 있습니다.
 
-Enterprise, Developer, Standard 및 Express edition 시스템 학습 기능 목록은 다음 항목을 참조 하십시오.
+Enterprise, Developer, Standard 및 Express edition 시스템 학습 기능 목록에 대 한 다음 문서를 참조 하십시오.
 
 * [버전 및 SQL Server의 지원 되는 기능](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
 * [R 기능에 SQL Server의 버전 차이](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
@@ -146,7 +146,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 컴퓨터 학습 서비스를 실행 하지 않는 경우 pythonlauncher.config 파일 확인 하 여 설치 된 Python 버전을 확인할 수 있습니다. 확인 파일의 복사본을 열어 속성을 실수로 변경 하지 않으면 되도록 하는 것이 좋습니다.
 
-1. SQL server 2017만:`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. SQL server 2017만: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
 2. 값을 가져오려면 **PYTHONHOME**합니다.
 3. 현재 작업 디렉터리의 값을 가져옵니다.
 
@@ -262,7 +262,7 @@ SQL Server 외부 스크립트 언어 런타임에 대 한 별도 로그를 생�
 
 예를 들어 다음 메시지는 SQL Server 확장 프레임 워크 관련 된 일반적인 시스템 오류: 
 
-* *SQL Server 실행 패드 (MSSQLSERVER) 서비스가 다음 오류로 인해 시작 하지 못했습니다.<text>*
+* *SQL Server 실행 패드 (MSSQLSERVER) 서비스가 다음 오류로 인해 시작 하지 못했습니다.  <text>*
 
 * *서비스가 적시에 시작 또는 제어 요청에 응답 하지 않았습니다.* 
 

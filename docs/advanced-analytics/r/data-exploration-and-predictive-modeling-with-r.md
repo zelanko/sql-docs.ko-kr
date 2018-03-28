@@ -1,32 +1,32 @@
 ---
-title: "데이터 탐색 및 R을 통한 예측 모델링 | Microsoft 문서"
+title: 데이터 탐색 및 R을 통한 예측 모델링 | Microsoft 문서
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d7c5430e585d7324e94ebe64e5138246e26049c4
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 09f3ec8f5171050082ab4bc5ede085387682a33e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>데이터 탐색 및 R을 통한 예측 모델링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server와의 통합을 통해 사용할 수 있는 데이터 과학 프로세스에 향상 된 기능에 설명 합니다.
+이 문서에서는 가능한 SQL Server와의 통합을 통해 데이터 과학 프로세스에 향상 된 기능을 설명 합니다.
 
 적용 대상: SQL Server 2016 R Services, SQL Server 2017 컴퓨터 Learnign 서비스
 

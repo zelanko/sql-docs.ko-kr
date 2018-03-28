@@ -1,31 +1,31 @@
 ---
-title: "기계 학습에 대 한 리소스 풀 만들기 | Microsoft Docs"
-ms.custom: 
+title: 기계 학습에 대 한 리소스 풀 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/13/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 449b9b46b3f371ef7eca89a488201cdad05c232d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>기계 학습에 대 한 리소스 풀 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 항목에서는 방법을 구체적으로 컴퓨터 학습 작업을 SQL Server의 관리를 위해 리소스 풀을 만들 수 있습니다. 이미 설치 하 고 기계 학습 기능을 사용 하도록 설정 가정 더 세분화 된 R, Python 같은 외부 프로세스에서 사용 하는 리소스 관리를 지원 하기 위해 인스턴스를 다시 구성 하 고 있습니다.
+SQL Server의 컴퓨터 학습 작업 관리를 위해 특별히 리소스 풀을 만들 수는 방법을 설명 합니다. 이미 설치 하 고 기계 학습 기능을 사용 하도록 설정 가정 더 세분화 된 R, Python 같은 외부 프로세스에서 사용 하는 리소스 관리를 지원 하기 위해 인스턴스를 다시 구성 하 고 있습니다.
 
 프로세스에는 여러 단계가 포함 됩니다.
 
@@ -175,7 +175,7 @@ ms.lasthandoff: 02/11/2018
     |2|기본|보통|25|0|0|0|0|2|2|
     |256|ds_wg|보통|25|0|0|0|0|2|256|
   
-2.  새 카탈로그 뷰를 사용 하 여 [sys.resource_governor_external_resource_pools&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)모든 외부 리소스 풀을 볼 수 있습니다.
+2.  새 카탈로그 뷰를 사용 하 여 [sys.resource_governor_external_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)모든 외부 리소스 풀을 볼 수 있습니다.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
@@ -203,7 +203,7 @@ ms.lasthandoff: 02/11/2018
 관리 서버 리소스에 대 한 자세한 내용은 다음을 참조 합니다.
 
 +  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md) 
-+ [리소스 관리자 관련 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [리소스 관리자 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 기계 학습에 대 한 리소스 관리의 개요를 참조 하세요.
 

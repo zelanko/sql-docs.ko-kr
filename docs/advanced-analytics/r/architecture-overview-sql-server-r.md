@@ -1,33 +1,33 @@
 ---
-title: "아키텍처 개요(SQL Server R Services) | Microsoft 문서"
-ms.custom: 
+title: 아키텍처 개요(SQL Server R Services) | Microsoft 문서
+ms.custom: ''
 ms.date: 07/11/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7ef5e5efd0e1efb1817e4b9d1577d3b0a8a82051
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server의 R에 대 한 아키텍처 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 섹션에서는 SQL Server 2017 컴퓨터 학습 서비스 및 SQL Server 2016 R Services의 아키텍처의 개요를 제공 합니다.
 
-확장성 아키텍처에 대 한 아키텍처는 동일 하거나 SQL Server 2016에 대 한 매우 유사한 및 SQL Server 2017 릴리스도 R 및 Python 유사 합니다. 그러나 토론을 단순화 하려면이 항목에서는 설명만 R 구성 요소, 외부 스크립트 실행, 보안, R 라이브러리 및 오픈 소스 오른쪽와의 상호 운용성을 지원 하기 위해 SQL Server 데이터베이스 엔진에 추가 된 새 구성 요소를 포함 하 여
+확장성 아키텍처에 대 한 아키텍처는 동일 하거나 SQL Server 2016에 대 한 매우 유사한 및 SQL Server 2017 릴리스도 R 및 Python 유사 합니다. 그러나 토론을 간소화 하기 위해이 문서에서는 설명만 R 구성 요소, 외부 스크립트 실행, 보안, R 라이브러리 및 오픈 소스 오른쪽와의 상호 운용성을 지원 하기 위해 SQL Server 데이터베이스 엔진에 추가 된 새 구성 요소를 포함 하 여
 
 자세한 내용은 각 섹션에 대 한 링크에 제공 됩니다.
 

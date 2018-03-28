@@ -1,33 +1,35 @@
 ---
-title: "방법: SQLSRV 드라이버를 사용 하 여 매개 변수 방향 지정 | Microsoft Docs"
-ms.custom: 
+title: '방법: SQLSRV 드라이버를 사용 하 여 매개 변수 방향 지정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 692d1cd432a7d156a4bb9d8cc2c3bfcf57c02d6d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b4004fa498c01e73c99204bb0d36ac4bded66a9b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 매개 변수 방향 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-이 항목에서는 SQLSRV 드라이버를 사용하여 저장 프로시저를 호출할 때 매개 변수 방향을 지정하는 방법을 설명합니다. 매개 변수를 생성할 때 매개 변수 방향 지정 됩니다 (3 단계)에 전달 되는 배열 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 또는 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)합니다.  
+이 항목에서는 SQLSRV 드라이버를 사용하여 저장 프로시저를 호출할 때 매개 변수 방향을 지정하는 방법을 설명합니다. 매개 변수 방향에 전달 되는 매개 변수 배열 (3 단계)를 생성할 때 지정 된 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 또는 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)합니다.  
   
 ### <a name="to-specify-parameter-direction"></a>매개 변수 방향을 지정하려면  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/18/2017
     ```  
   
     > [!NOTE]  
-    > 권장되는 방법은 정식 구문을 사용하여 저장 프로시저를 호출하는 것입니다. 정식 구문에 대한 자세한 내용은 [저장 프로시저 호출](http://go.microsoft.com/fwlink/?linkid=119517)을 참조하세요.  
+    > 권장되는 방법은 정식 구문을 사용하여 저장 프로시저를 호출하는 것입니다. 정식 구문에 대 한 자세한 내용은 참조 [저장 프로시저 호출](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)합니다.  
   
 2.  Transact-SQL 쿼리의 자리 표시자에 해당하는 PHP 변수를 초기화하거나 업데이트합니다. 예를 들어 다음 코드는 UpdateVacationHours 저장 프로시저에 대한 두 개의 매개 변수를 초기화합니다.  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/18/2017
   
     일반적으로 매개 변수 방향을 지정하는 구문을 이해하기 위해 *$var1*, *$var2*및 *$var3* 이 각각 입력, 출력, 양방향 매개 변수에 해당한다고 가정합니다. 다음 방법 중 하나로 매개 변수 방향을 지정할 수 있습니다.  
   
-    -   입력 매개 변수를 암시적으로 지정하고 출력 매개 변수 및 양방향 매개 변수를 명시적으로 지정합니다.  
+    -   입력된 매개 변수를 암시적으로 지정 하 고, 출력 매개 변수 및 양방향 매개 변수를 명시적으로 지정:  
   
         ```  
         array(   
@@ -71,7 +73,7 @@ ms.lasthandoff: 11/18/2017
                );  
         ```  
   
-    -   입력 매개 변수와 출력 매개 변수 및 양방향 매개 변수를 모두 명시적으로 지정합니다.  
+    -   입력된 매개 변수를 명시적으로 지정 하 고, 출력 매개 변수 및 양방향 매개 변수를 명시적으로 지정:  
   
         ```  
         array(   
@@ -87,7 +89,8 @@ ms.lasthandoff: 11/18/2017
     sqlsrv_query($conn, $tsql, $params);  
     ```  
   
-## <a name="see-also"></a>참고 항목  
-[방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+## <a name="see-also"></a>관련 항목:  
+[방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

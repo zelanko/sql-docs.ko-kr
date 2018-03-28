@@ -1,28 +1,28 @@
 ---
-title: "JDBC 드라이버와 함께 상시 암호화를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: JDBC 드라이버와 함께 상시 암호화를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 3/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC 드라이버와 함께 상시 암호화를 사용 하 여
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -408,7 +408,7 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 이 속성에 대 한 자세한 내용은 참조 하십시오. [구성 방법을 java.sql.Time 값에는 서버에 보내집니다](configuring-how-java-sql-time-values-are-sent-to-the-server.md)합니다.
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>서버에 문자열 값은 전송 하는 방법을 구성 합니다.
-**sendStringParametersAsUnicode** 연결 속성은 문자열 값을 SQL Server로 보내는 방법을 구성 하는 데 사용 합니다. 하면 문자열 매개 변수를 true로 설정 된 서버에 유니코드 형식으로 전송 됩니다. 하면 문자열 매개 변수를 false로 설정 ASCII 또는 유니코드 대신 MBCS 등의 비 유니코드 형식으로 전송 됩니다. 이 속성에 대 한 기본값은 true입니다. 상시 암호화 사용은 시점과 char/varchar/varchar(max) 열이 암호화의 가치 **sendStringParametersAsUnicode** true (또는 기본값으로 유지)로 설정 되어야 합니다. 이 속성을 false로 설정 하는 경우 드라이버는 암호화 된 char/varchar/varchar(max) 열에 데이터를 삽입할 때 예외가 throw 됩니다. 이 속성에 대 한 자세한 내용은 참조 하십시오. [연결 속성을 설정할](../../connect/jdbc/setting-the-connection-properties.md)합니다.
+**sendStringParametersAsUnicode** 연결 속성은 문자열 값을 SQL Server로 보내는 방법을 구성 하는 데 사용 합니다. 하면 문자열 매개 변수를 true로 설정 된 서버에 유니코드 형식으로 전송 됩니다. 하면 문자열 매개 변수를 false로 설정 ASCII 또는 유니코드 대신 MBCS 등의 비 유니코드 형식으로 전송 됩니다. 이 속성에 대 한 기본값은 true입니다. 상시 암호화 사용은 시점과 char/varchar/varchar(max) 열이 암호화의 가치 **sendStringParametersAsUnicode** false로 설정 해야 합니다. 이 속성이 true 이면 드라이버 예외가 throw 됩니다 유니코드 문자가 있는 char/varchar/varchar(max) 암호화 된 열에서 데이터를 암호 해독할 때. 이 속성에 대 한 자세한 내용은 참조 하십시오. [연결 속성을 설정할](../../connect/jdbc/setting-the-connection-properties.md)합니다.
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>암호화 된 열에 데이터 검색 및 수정
 응용 프로그램 쿼리에 대해 상시 암호화를 설정 하면 암호화 된 데이터베이스 열에 데이터를 검색 하거나 수정할 표준 JDBC Api를 사용할 수 있습니다. 응용 프로그램에 필요한 데이터베이스 권한이 열 마스터 키에 액세스할 수는 경우 드라이버는 암호화 된 열을 대상 및 암호화 된 열에서 검색 된 데이터를 해독 하는 모든 쿼리 매개 변수를 암호화 합니다.

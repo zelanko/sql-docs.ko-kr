@@ -1,26 +1,26 @@
 ---
-title: "SQL Server 컴퓨터 학습 서비스 버전 간 기능 가용성 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 컴퓨터 학습 서비스 버전 간 기능 가용성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 50c9f2c8f1039ce0bba25ed9c6b7c5564c1d10d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스의 버전 간 기능 가용성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,9 @@ ms.lasthandoff: 03/21/2018
  컴퓨터 학습 기능은 SQL Server 2016 및 SQL Server 2017에서 사용할 수 있습니다. 이 문서 기능을 제공 하는 버전을 나열 하 고, 특정 버전에 적용 되는 제한 사항을 설명, 특정 버전에만 사용할 수 있는 기능을 나열 합니다.
 
 
-## <a name="sql-server-2017-machine-learning-features"></a>SQL Server 2017 기계 학습 기능
+## <a name="sql-server-2017-features"></a>SQL Server 2017 기능
 
-Enterprise 및 Developer 버전의 동일한 기능 범위를 추가 하는 동일한 비용이 발생 하지 않고 엔터프라이즈 설치에 대 한 솔루션을 빌드할 수 있습니다 됩니다. 버전 equivlanet 기능적으로 하지만, Developer Edition을 사용 하 여 프로덕션 환경에 대해 지원 되지 않습니다.
+Enterprise 및 Developer 버전의 동일한 기능 범위를 추가 하는 동일한 비용이 발생 하지 않고 엔터프라이즈 설치에 대 한 솔루션을 빌드할 수 있습니다 됩니다. 버전 영역은 기능적으로 동일 하지만 Developer Edition을 사용 하 여 프로덕션 환경에 대해 지원 되지 않습니다.
 
 기본 및 고급 통합 간의 차이점은 배율입니다. 고급 integration 컴퓨터를 수용할 수 있는 모든 크기로 데이터 집합의 병렬 처리에 대 한 모든 사용 가능한 코어를 사용할 수 있습니다. 기본 통합은 메모리에 맞는 데이터 집합 2 개의 코어로 제한 합니다. 
 

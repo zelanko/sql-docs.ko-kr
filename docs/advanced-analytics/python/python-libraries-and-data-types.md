@@ -1,40 +1,40 @@
 ---
-title: "Python 라이브러리 | Microsoft Docs"
-ms.custom: 
+title: Python 라이브러리 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6292b9139f4ad43a0bdd8de4b1d849cb0caaa627
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 14691885d6dcdb91558ddc9566f4320c8119a9dd
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="python-libraries-and-data-types"></a>Python 라이브러리 및 데이터 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 항목에서는 다음 제품에 포함 된 Python 라이브러리를 설명 합니다.
+이 문서에서는 다음 제품에 포함 된 Python 라이브러리를 설명 합니다.
 
 + SQL Server 컴퓨터 학습 Services (In-database)
 + Microsoft 기계 Server (독립 실행형)를 학습 합니다.
 
-이 항목에는 또한 지원 되지 않는 데이터 형식을 나열 하 고 목록에서 데이터 형식 변환 Python 및 SQL Server 간에 데이터를 전달 하는 경우 암시적으로 수행할 수 있는 합니다.
+이 문서에는 또한 지원 되지 않는 데이터 형식을 나열 하 고 목록에서 데이터 형식 변환 Python 및 SQL Server 간에 데이터를 전달 하는 경우 암시적으로 수행할 수 있는 합니다.
 
 ## <a name="python-version"></a>Python 버전
 
 SQL Server 2017 CTP 2.0 Anaconda 배포 및 Python 3.6의 일부를 포함합니다.
 
-RevoScaleR 기능의 하위 집합 (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, 어쩌면 몇 가지 다른) 새 Python 패키지를 사용 하 여 Python API를 사용 하 여 제공 됩니다 **RevoScalePy**합니다. 팬더 데이터 프레임을 사용 하 여 데이터를 작성 하려면이 패키지를 사용할 수 있습니다. XDF 파일이 나 SQL 데이터 쿼리 합니다.
+RevoScaleR 기능의 하위 집합 (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, 어쩌면 몇 가지 다른) 새 Python 패키지를 사용 하 여 Python Api를 사용 하 여 제공 됩니다 **revoscalepy**합니다. 팬더 데이터 프레임, XDF 파일 또는 SQL 데이터 쿼리를 사용 하 여 데이터를 작성 하려면이 패키지를 사용할 수 있습니다.
 
 자세한 내용은 참조 [revoscalepy 란?](what-is-revoscalepy.md)합니다.
 

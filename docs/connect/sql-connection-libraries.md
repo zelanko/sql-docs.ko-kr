@@ -1,23 +1,23 @@
 ---
-title: "Microsoft SQL 데이터베이스에 대 한 연결 라이브러리 | Microsoft Docs"
-description: "다양 한 클라이언트 프로그래밍 언어의 Microsoft SQL Server 및 Azure SQL 데이터베이스에 연결 하는 모듈에 대 한 다운로드 링크를 제공 합니다."
+title: Microsoft SQL 데이터베이스에 대 한 연결 라이브러리 | Microsoft Docs
+description: 다양 한 클라이언트 프로그래밍 언어의 Microsoft SQL Server 및 Azure SQL 데이터베이스에 연결 하는 모듈에 대 한 다운로드 링크를 제공 합니다.
 author: MightyPen
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: 
+ms.custom: ''
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: 9c85a5e40ca7d3b6e35cdb09fc4becbe5c9c65c3
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 데이터베이스에 대 한 연결 모듈
 
@@ -60,7 +60,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Node.js 드라이버, 설치 지침](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *운영 체제:*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Github에서 Ubuntu 또는 MacOS PHP 드라이버](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
+| PHP      | *운영 체제:*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Github에서 Linux 또는 macOS PHP driver](http://github.com/Microsoft/msphpsql/) |
 | Python   | [pyodbc, 설치 지침](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[ODBC를 다운로드 합니다.](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Ruby 드라이버, 설치 지침](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Ruby 다운로드 페이지](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
@@ -90,7 +90,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 ## <a name="build-an-app-webpages"></a>웹 페이지 응용 프로그램 빌드
 
 
-[http://aka.ms/sqldev](http://aka.ms/sqldev) 집합이로 이동 *응용 프로그램 빌드* 웹 페이지입니다. 웹 페이지 프로그래밍 언어, 운영 체제 및 SQL 연결 드라이버의 다양 한 조합에 대 한 정보를 제공 합니다. 응용 프로그램 빌드 웹 페이지에서 제공 하는 정보는 다음 항목:
+[http://aka.ms/sqldev](http://aka.ms/sqldev) 집합으로 이동 *응용 프로그램 빌드* 웹 페이지입니다. 웹 페이지 프로그래밍 언어, 운영 체제 및 SQL 연결 드라이버의 다양 한 조합에 대 한 정보를 제공 합니다. 응용 프로그램 빌드 웹 페이지에서 제공 하는 정보는 다음 항목:
 
 - 운영 체제 언어 + 드라이버의 각 조합에 대해를 맨 처음부터 시작 하는 방법에 대 한 세부 정보입니다.
     - 최신 SQL 연결 드라이버를 설치 하기 위한 지침입니다.

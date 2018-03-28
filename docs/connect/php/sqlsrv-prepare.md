@@ -1,33 +1,35 @@
 ---
 title: sqlsrv_prepare | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_prepare
+apiname:
+- sqlsrv_prepare
 apitype: NA
 helpviewer_keywords:
 - executing queries
 - API Reference, sqlsrv_prepare
 - sqlsrv_prepare
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-caps.latest.revision: "52"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56dbdc5aad9e0c9362ee7d5f9ddb5650a920130d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: dbfcece545b5fb66dbc8c2e8fd8afb1bcb9f9336
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -63,16 +65,16 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     다음 표에서는 이러한 배열 요소를 설명합니다.  
   
-    |요소|설명|  
+    |요소|Description|  
     |-----------|---------------|  
     |*&$value*|PHP 변수에 대한 리터럴 값 또는 참조입니다.|  
-    |*$direction*[선택 사항]|다음 중 하나 **SQLSRV_PARAM_\***  매개 변수 방향을 나타내기 위해 사용 되는 상수: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**합니다. 기본값은 **SQLSRV_PARAM_IN**합니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40; Microsoft Drivers for PHP for SQL server&#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[선택 사항]|A **SQLSRV_PHPTYPE_\***  반환된 된 값의 PHP 데이터 형식을 지정 하는 상수입니다.|  
-    |*$sqlType*[선택 사항]|A **SQLSRV_SQLTYPE_\***  입력된 값의 SQL Server 데이터 형식을 지정 하는 상수입니다.|  
+    |*$direction*[선택 사항]|다음 중 하나 **SQLSRV_PARAM_\***  매개 변수 방향을 나타내기 위해 사용 되는 상수: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**합니다. 기본값은 **SQLSRV_PARAM_IN**합니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다.|  
+    |*$phpType*[OPTIONAL]|A **SQLSRV_PHPTYPE_\***  반환된 된 값의 PHP 데이터 형식을 지정 하는 상수입니다.|  
+    |*$sqlType*[OPTIONAL]|A **SQLSRV_SQLTYPE_\***  입력된 값의 SQL Server 데이터 형식을 지정 하는 상수입니다.|  
   
 *$options* [선택 사항]: 쿼리 속성을 설정 하는 결합형 배열입니다. 다음 표에서 지원 되는 키와 해당 값을 나열합니다.  
   
-|Key|지원되는 값|설명|  
+|Key|지원되는 값|Description|  
 |-------|--------------------|---------------|  
 |QueryTimeout|양의 정수 값입니다.|쿼리 시간 제한(초)을 설정합니다. 기본적으로 드라이버가 결과 얻으려면 무기한 대기합니다.|  
 |SendStreamParamsAtExec|**true** 또는 **false**<br /><br />기본값은 **true**입니다.|실행 시 모든 스트림 데이터를 보내려고 드라이버를 구성 합니다 (**true**), 또는 스트림 데이터를 청크로 보내도록 (**false**). 기본적으로 이 값은 **true**로 설정되어 있습니다. 자세한 내용은 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)을 참조하세요.|  
@@ -86,12 +88,12 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 조합의 **sqlsrv_prepare** 및 **sqlsrv_execute** 함수 호출 및 매개 변수가 있는 쿼리를 실행 하는 데 사용 될 구분 문 준비와 문 두 개를 실행 합니다. 이 함수는 각 실행에 다른 매개 변수 값을 사용하여 문을 여러 번 실행하는 데 이상적입니다.  
   
-많은 양의 정보를 읽고 쓰기 위한 대체 전략은 [SQL 문 일괄 처리](http://go.microsoft.com/fwlink/?LinkId=104225) 및 [BULK INSERT](http://go.microsoft.com/fwlink/?LinkId=104226)를 참조하세요.  
+많은 양의 정보를 읽고 쓰기 위한 대체 전략에 대 한 참조 [SQL 문 일괄 처리](../../odbc/reference/develop-app/batches-of-sql-statements.md) 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)합니다.  
   
 자세한 내용은 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 문을 준비하고 실행합니다. 문을 실행 하면 (참조 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), 필드를 업데이트 하는 *Sales.SalesOrderDetail* AdventureWorks 데이터베이스의 테이블입니다. 이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 문을 준비하고 실행합니다. 문을 실행 하면 (참조 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), 필드를 업데이트 하는 *Sales.SalesOrderDetail* AdventureWorks 데이터베이스의 테이블입니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -138,7 +140,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 문을 준비한 다음 다른 매개 변수 값으로 다시 실행하는 방법을 보여 줍니다. 예제에서는 AdventureWorks 데이터베이스의 *Sales.SalesOrderDetail* 테이블에 있는 *OrderQty* 열을 업데이트합니다. 업데이트가 발생한 후 업데이트가 성공했는지 확인하기 위해 데이터베이스가 쿼리됩니다. 이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 문을 준비한 다음 다른 매개 변수 값으로 다시 실행하는 방법을 보여 줍니다. 예제에서는 AdventureWorks 데이터베이스의 *Sales.SalesOrderDetail* 테이블에 있는 *OrderQty* 열을 업데이트합니다. 업데이트가 발생한 후 업데이트가 성공했는지 확인하기 위해 데이터베이스가 쿼리됩니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -251,11 +253,17 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>관련 항목:  
-[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
-[방법: 매개 변수가 있는 쿼리 수행](../../connect/php/how-to-perform-parameterized-queries.md)  
-[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
-[방법: 데이터를 스트림으로 전송](../../connect/php/how-to-send-data-as-a-stream.md)  
-[방향 매개 변수 사용](../../connect/php/using-directional-parameters.md)  
-[데이터 검색](../../connect/php/retrieving-data.md)  
-[데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-  
+[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[방법: 매개 변수가 있는 쿼리 수행](../../connect/php/how-to-perform-parameterized-queries.md)
+
+[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[방법: 데이터를 스트림으로 전송](../../connect/php/how-to-send-data-as-a-stream.md)
+
+[방향 매개 변수 사용](../../connect/php/using-directional-parameters.md)
+
+[데이터 검색](../../connect/php/retrieving-data.md)
+
+[데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+

@@ -1,28 +1,30 @@
 ---
-title: "방법: 트랜잭션을 수행 | Microsoft Docs"
-ms.custom: 
+title: '방법: 트랜잭션을 수행 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: transaction support
+helpviewer_keywords:
+- transaction support
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a759dbf523ff275f20436919b5f093225b2693e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 15f4ba792e7657125c6964f098c6c1f7a9fe83f0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-transactions"></a>방법: 트랜잭션 수행
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +60,7 @@ PDO_SQLSRV 드라이버는 트랜잭션을 수행하기 위해 세 가지 메서
   
     기본적으로는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 자동 커밋 모드에 있습니다. 즉, **sqlsrv_begin_transaction**을 사용하여 트랜잭션을 시작합니다.  
   
-    명시적 트랜잭션이 **sqlsrv_commit**으로 커밋되지 않는 경우 스크립트의 연결을 끊거나 종료할 때 롤백됩니다.  
+    명시적 트랜잭션을으로 커밋되지 않는 경우 **sqlsrv_commit**, 연결 또는 스크립트의 종료 시 다시 롤백됩니다.  
   
     포함된 Transact-SQL을 사용하여 트랜잭션을 수행하지 마세요. 예를 들어 트랜잭션을 시작하는 Transact-SQL 쿼리로 "BEGIN TRANSACTION"을 사용하여 문을 실행하지 마세요. 포함된 Transact-SQL을 사용하여 트랜잭션을 수행하는 경우 예상 트랜잭션 동작을 보장할 수 없습니다.  
   
@@ -66,7 +68,7 @@ PDO_SQLSRV 드라이버는 트랜잭션을 수행하기 위해 세 가지 메서
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
 다음 예제는 트랜잭션의 일부로 여러 개의 쿼리를 실행합니다. 모든 쿼리가 성공하면 트랜잭션이 커밋됩니다. 쿼리 중 하나라도 실패하면 트랜잭션이 롤백됩니다.  
   
 이 예제에서는 *Sales.SalesOrderDetail* 테이블에서 판매 주문을 삭제하고 판매 주문의 각 제품에 대해 *Product.ProductInventory* 테이블에서 제품 재고 수준을 조정합니다. 두 쿼리 모두 성공해야 데이터베이스에 주문 및 제품 가용성 상태가 정확하게 반영되므로 이러한 쿼리가 트랜잭션에 포함되어 있습니다.  
@@ -75,7 +77,7 @@ PDO_SQLSRV 드라이버는 트랜잭션을 수행하기 위해 세 가지 메서
   
 뒤이은 쿼리(판매 주문의 삭제 또는 제품 재고 수량 업데이트)는 트랜잭션의 일부입니다.  
   
-이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ### <a name="code"></a>코드  
   
@@ -154,11 +156,13 @@ function perform_trans_ops($conn, $orderId)
 ?>  
 ```  
   
-### <a name="comments"></a>주석  
-트랜잭션 동작에 중점을 두기 위해 몇 가지 권장 오류 처리 방법은 이전 예제에 포함되지 않았습니다. 프로덕션 응용 프로그램에서는 **sqlsrv** 함수 호출에 오류가 있는지 확인하여 적절하게 처리하는 것이 좋습니다.  
+### <a name="comments"></a>설명  
+트랜잭션 동작에 중점을 두기 위해 몇 가지 권장 오류 처리 방법은 이전 예제에 포함되지 않았습니다. 프로덕션 응용 프로그램에 대 한 모든 호출에 검사 권장는 **sqlsrv** 오류에 대 한 함수를 그에 따라 처리 합니다.
   
-## <a name="see-also"></a>참고 항목  
-[데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[트랜잭션 (데이터베이스 엔진)](http://go.microsoft.com/fwlink/?LinkId=105862)  
+## <a name="see-also"></a>관련 항목:  
+[데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[트랜잭션 (데이터베이스 엔진)](https://msdn.microsoft.com/library/ms190612.aspx)
+
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
   

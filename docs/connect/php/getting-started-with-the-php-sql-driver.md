@@ -1,29 +1,30 @@
 ---
-title: "PHP SQL 드라이버 시작 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: 시작 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bf4b5eee7fbeb00aa477e7769ca9ebaaa84e7d4c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 48811b32eaaf76b586fce57d4d1592704dfe1dc3
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="getting-started-with-the-php-sql-driver"></a>PHP SQL 드라이버 시작
+# <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>시작 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 이 섹션에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하고 드라이버를 PHP 프로세스 공간으로 로드하기 위한 시스템 요구 사항에 대한 정보를 제공합니다.  
@@ -34,8 +35,10 @@ ms.lasthandoff: 11/18/2017
 * [3단계: PHP를 사용하는 SQL과 연결된 개념 증명](../../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [4단계: PHP를 사용하여 탄력적으로 SQL에 연결](../../connect/php/step-4-connect-resiliently-to-sql-with-php.md)  
   
-## <a name="see-also"></a>참고 항목  
-[예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-[PHP SQL 드라이버 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
+## <a name="see-also"></a>관련 항목:  
+[예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+
+[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
+
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
   

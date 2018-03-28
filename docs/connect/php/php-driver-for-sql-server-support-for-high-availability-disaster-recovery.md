@@ -1,29 +1,30 @@
 ---
-title: "PHP Driver for SQL Server 고가용성, 재해 복구 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: 고가용성 Microsoft Drivers for PHP for SQL Server에 대 한 재해 복구에 대 한 지원 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4777aa2ffac5b3932815dee65eb237337d95784
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>PHP Driver for SQL Server Support for High Availability, Disaster Recovery(PHP Driver for SQL Server의 고가용성, 재해 복구 지원)
+# <a name="support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구 지원
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 이 항목에서는 설명 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 고가용성, 재해 복구를 위한 지원 (버전 3.0에서에서 추가) [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]합니다.  [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 지원은 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]에서 추가되었습니다. [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서를 참조하십시오.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover로 연결  
 **MultiSubnetFailover** 가용성 그룹 또는 장애 조치 클러스터 인스턴스 및 사용 하는 응용 프로그램은 배포 되는 연결 속성 나타냅니다는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 주데이터베이스에연결하려고합니다[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 모든 IP에 연결 하려고 시도 하 여 인스턴스 주소입니다. 때 **MultiSubnetFailover = true** 연결에 대해 지정 된 클라이언트 운영 체제의 기본 TCP 재전송 간격 보다 빠르게 TCP 연결 시도 다시 시도 합니다. 이렇게 하면 AlwaysOn 가용성 그룹 또는 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스의 장애 조치(Failover) 후 더 빠르게 다시 연결할 수 있습니다. 이 설정은 단일/다중 서브넷 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 모두 적용됩니다.  
   
-항상 지정 **MultiSubnetFailover = True** SQL Server 2012 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치 클러스터 인스턴스에 연결할 때. **MultiSubnetFailover**를 사용하면 SQL Server 2012에서 모든 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 대한 장애 조치(Failover)를 빠르게 수행하고 단일 및 다중 서브넷 AlwaysOn 토폴로지에 대한 장애 조치(Failover) 시간을 크게 줄일 수 있습니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷 장애 조치 동안는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] TCP 연결을 공격적으로 재시도 합니다.  
+항상 지정 **MultiSubnetFailover = True** SQL Server 2012 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치 클러스터 인스턴스에 연결할 때. **MultiSubnetFailover** 모든 가용성 그룹 및 SQL Server 2012에서 장애 조치 클러스터 인스턴스에 대 한 보다 빠르게 장애 조치할 수 있도록 하 고 단일 및 다중 서브넷 AlwaysOn 토폴로지에 대 한 장애 조치 시간을 크게 줄여 줍니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷 장애 조치 동안는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] TCP 연결을 공격적으로 재시도 합니다.  
   
 연결 문자열 키워드에 대 한 자세한 내용은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], 참조 [연결 옵션](../../connect/php/connection-options.md)합니다.  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/18/2017
 **ApplicationIntent** 키워드는 읽기 전용 라우팅을 설정하는 데 사용됩니다.  
   
 ## <a name="read-only-routing"></a>읽기 전용 라우팅  
-읽기 전용 라우팅은 데이터베이스의 읽기 전용 복사본의 가용성을 유지할 수 있는 기능입니다. 읽기 전용 라우팅을 활성화하려면:  
+읽기 전용 라우팅은 데이터베이스의 읽기 전용 복제 가용성을 보장할 수 있는 기능입니다. 읽기 전용 라우팅을 활성화하려면:  
   
 1.  AlwaysOn 가용성 그룹의 가용성 그룹 수신기에 연결해야 합니다.  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/18/2017
   
 읽기 전용 라우팅을 사용하는 여러 연결 중 일부가 동일한 읽기 전용 복사본에 연결되지 않을 수 있습니다. 데이터베이스 동기화를 변경하거나 서버 라우팅 구성을 변경하면 클라이언트를 다른 읽기 전용 복사본에 연결할 수 있습니다. 모든 읽기 전용 요청을 동일한 읽기 전용 복제본에 연결하려면 가용성 그룹 수신기를 **Server** 연결 문자열 키워드에 전달하지 마세요. 대신, 읽기 전용 인스턴스의 이름을 지정합니다.  
   
-읽기 전용 라우팅은 먼저 주 데이터베이스에 연결한 후 사용 가능한 최선의 읽기 가능한 보조 데이터베이스를 검색하기 때문에 주 데이터베이스에 연결할 때보다 시간이 더 많이 걸릴 수 있습니다. 따라서 로그인 제한 시간을 늘려야 합니다.  
+읽기 전용 라우팅은 먼저 기본 복제에 연결한 다음 가장 사용 가능한 읽기 가능 보조 복제를 찾으므로 읽기 전용 라우팅은 기본 복제에 연결하는 것보다 시간이 오래 걸릴 수 있습니다. 이 경우 로그인 제한 시간을 증가 되어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)  

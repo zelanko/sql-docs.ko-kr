@@ -1,61 +1,62 @@
 ---
-title: "미리 학습 된 기계 학습 모델을 SQL Server에 설치 | Microsoft Docs"
+title: 미리 학습 된 기계 학습 모델을 SQL Server에 설치 | Microsoft Docs
 ms.date: 03/14/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: fd02766e4020e6f522d50bbd471c5f84c66a998b
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: a1228597a1781ca13952a249f554bdea0a990a4d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="install-pretrained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 컴퓨터를 설치 합니다.
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 컴퓨터를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에는 어떻게 인스턴스에 SQL Server의 미리 학습 된 모델을 추가할 이미 R 서비스 또는 컴퓨터 학습 서비스 설치 설명 합니다.
+이 문서에는 어떻게 인스턴스에 SQL Server의 미리 학습 된 모델을 추가할 이미 R 서비스 또는 설치 된 SQL Server 컴퓨터 학습 서비스 설명 합니다. 
 
-감성 분석 이나 이미지 기능 생성 등의 작업 수행을 해야 하는 하지만 큰 데이터 집합을 구하거 나 복잡 한 모델을 학습 하는 리소스 없는 고객에 게 유용한 MicrosoftML에 포함 된 미리 학습 된 모델을 만들었습니다. 컴퓨터 학습 서버 팀 생성 하 고 텍스트와 이미지 프로세스를 효율적으로 시작할 수 있도록 이러한 모델을 학습 합니다. 자세한 내용은 참조는 [리소스](#bkmk_resources) 이 문서의 섹션.
+미리 학습 된 모델을 감성 분석 이나 이미지 기능 생성 등의 작업을 수행 해야 하는 하지만 큰 데이터 집합을 구하거 나 복잡 한 모델을 학습 하는 리소스 없는 고객에 게 유용한 존재 합니다. 컴퓨터 학습 서버 팀 생성 하 고 텍스트와 이미지 프로세스를 효율적으로 시작할 수 있도록 이러한 모델을 학습 합니다. 자세한 내용은 참조는 [리소스](#bkmk_resources) 이 문서의 섹션.
 
-SQL Server 데이터를 미리 학습 된 모델을 사용 하는 방법의 예는 SQL Server 기계 학습 팀이 블로그를 참조:
+SQL Server 데이터를 미리 학습 된 모델을 사용 하는 방법의 예는 SQL Server 기계 학습 팀이 블로그를 참조: [SQL Server 컴퓨터 학습 서비스에서 python 감정 분석](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
-+ [SQL Server 컴퓨터 학습 서비스에서 python 감정 분석](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
+## <a name="pre-trained-model-availability"></a>미리 학습 된 모델 가용성
 
-## <a name="install-the-pre-trained-models"></a>미리 학습 된 모델을 설치 합니다.
+미리 학습 된 모델은 Microsoft 컴퓨터 학습 서버 (또는 Microsoft R Server를 SQL Server 2016 설치에 모델을 추가 하는 경우)의 설치 미디어를 사용 하 여 설치 됩니다. 모델을 설치 하려면 무료 개발자 버전을 사용할 수 있습니다. 추가 모델을 설치와 관련 된 비용입니다. 
 
-다음 제품과 미리 학습 된 모델을 사용할 수 있습니다.
+미리 학습 된 모델에서 다음 제품 및 언어와 작동 합니다. 설치 프로그램 언어 통합, MicrosoftML 또는 microsoftml 라이브러리를 검색 한 다음 해당 라이브러리에 미리 학습 된 모델을 삽입 합니다. 모델 설치가 완료 되 면 라이브러리 함수를 통해 모델 액세스.
 
-+ SQL Server 2016 R Services (In-database)
-+ SQL Server 2017 컴퓨터 학습 Services (In-database)
-+ Machine Learning Server(독립 실행형)
++ SQL Server 2016 R Services (In-database)-R만,와 [MicrosoftML 라이브러리](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2016 R 서버 (독립 실행형)-R만,와 [MicrosoftML 라이브러리](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 컴퓨터 학습 Services (In-database)-R [MicrosoftML 라이브러리]와 (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python는 [microsoftml 라이브러리](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 컴퓨터 학습 Server (독립 실행형)-R [MicrosoftML 라이브러리]와 (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python는 [microsoftml 라이브러리](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 설치 프로세스는 SQL Server의 버전에 따라 약간 다릅니다. 각 버전에 대 한 지침은 다음 섹션을 참조 합니다.
 
 > [!NOTE]
-> 수 없으면를 읽거나 수정할 미리 학습 된 모델을 네이티브 형식을 사용 하 여 성능 향상을 위해 압축 때문에 있습니다.
+> 읽기 또는 미리 학습 된 모델을 수정 하는 것이 불가능 합니다. 네이티브 형식을 사용 하 여 성능 향상을 위해 압축 합니다.
 
-### <a name="obtain-files-for-an-offline-installation"></a>오프 라인 설치에 대 한 파일 가져오기
+## <a name="obtain-files-for-an-offline-installation"></a>오프 라인 설치에 대 한 파일 가져오기
 
 미리 학습 된 모델을 인터넷에 연결 되지 않은 서버에 설치 하려면 사전에 적절 한 설치 관리자를 다운로드 하 고 서버에서 로컬 폴더에 설치 관리자를 복사 해야 합니다. 
 
 모든 R 서버와 컴퓨터 학습 서버 설치 관리자에 대 한 다운로드 링크에 대 한이 페이지를 참조 하십시오: [오프 라인 설치](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 
-### <a name="install-pretrained-models-with-sql-server-2016-r-services"></a>미리 학습 된 모델을 SQL Server 2016 R services 설치
+## <a name="install-pre-trained-models-on-sql-server-2016-r-services"></a>SQL Server 2016 R Services에 미리 학습 된 모델을 설치 합니다.
 
 SQL Server 2016 설치 및 기계 학습 이라는 프로세스에서 구성 요소를 먼저 업그레이드 하는 경우에 미리 학습 된 R 모델을 사용 하 여 수 **바인딩**합니다. 
 
-Microsoft R Server 또는 컴퓨터 학습 서버에 대 한 별도 Windows installer를 실행 하 고 인스턴스 또는 인스턴스를 선택 하 여이 작업을 수행 **바인딩할**합니다. 오른쪽에 좀 더 자주 업데이트를 허용 하도록 변경 될 지원 정책 인스턴스와 연결 된 하는 인스턴스 방법을 바인딩 
+이렇게 하려면가 SQL Server 2016 R Services 설치와 인스턴스 또는 인스턴스를 선택 하는 컴퓨터에서 Microsoft R Server 또는 서버를 학습 하는 컴퓨터에 대 한 별도 Windows installer를 실행 **바인딩할**합니다. 오른쪽에 좀 더 자주 업데이트를 허용 하도록 변경 될 지원 정책 인스턴스와 연결 된 하는 인스턴스 방법을 바인딩 
 
 1. 실행에 대 한 별도 Windows 기반 설치 시작 [R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server) 또는 [컴퓨터 학습 서버](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)합니다.
 
@@ -113,7 +114,7 @@ SQL Server 2016에서는 SQL Server 2016 인스턴스 라이브러리와 모델�
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-### <a name="install-pretrained-models-on-sql-server-2017"></a>SQL Server 2017에 미리 학습 된 모델을 설치 합니다.
+## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>SQL Server 컴퓨터 학습 Services (In-database)에 미리 학습 된 모델을 설치 합니다.
 
 SQL Server 2017 이미 설치한 경우에 두 가지 방법으로 미리 학습 된 모델을 얻을 수 있습니다.
 
@@ -140,7 +141,7 @@ SQL Server 2017와 추가 구성은 필요 하지 않습니다.
 > 
 > Python 모델에 대 한 모델 파일에서 Python 코드를 호출할 때 오류가 발생할 수 있습니다. 이 현재 Python 구현에서 제한으로 인해 모델 파일에 대 한 경로의 길이 제한 하는입니다. 이 문제 해결 및 향후 서비스 릴리스에서 사용할 수 있습니다.
 
-### <a name="installing-pretrained-models-with-r-server-standalone"></a>미리 학습 된 모델 R server (독립 실행형) 설치
+## <a name="install-pre-trained-models-with-sql-server-standalone-r-server"></a>SQL Server 독립 실행형 R 서버와 미리 학습 된 모델을 설치 합니다.
 
 SQL Server 2016 설치를 사용 하는 이전 버전의 R Server (독립 실행형)를 설치한 경우에 최신 Windows 기반 설치 관리자를 사용 하 여 R 서버를 업그레이드 하 여 미리 학습 된 모델을 사용 하는 기능을 추가할 수 있습니다. 
 
@@ -183,7 +184,7 @@ SQL Server 2016 설치를 사용 하는 이전 버전의 R Server (독립 실행
 
     `RSetup.exe /install /component MLM /version 9.3.0 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
 
-### <a name="installing-pretrained-models-with-machine-learning-server-standalone"></a>미리 학습 된 모델 학습 Server 컴퓨터 (독립 실행형)를 사용 하 여 설치
+## <a name="install-pre-trained-models-with-sql-server-2017-standalone-server"></a>미리 학습 된 모델 SQL Server 2017 독립 실행형 서버 설치
 
 SQL Server 2017 설치 프로그램을 사용 하 여 컴퓨터 학습 서버를 설치한 경우 Windows 기반 설치 프로그램을 실행 하 여 미리 학습 된 모델을 추가 합니다. Python 또는 R 구성 요소를 업그레이드 하는 옵션을 선택할 수 있으며 동시에 미리 학습 된 모델을 추가 합니다. 
 
@@ -200,19 +201,19 @@ SQL Server 2017 설치 프로그램을 사용 하 여 컴퓨터 학습 서버를
 + ResNet-101
 + AlexNet
 
-이 딥 ere 구현 하는 방법 CNTK를 사용 하 여 학습 및 모델을 학습에 사용 된 알고리즘에 대 한 자세한 내용은 다음이 문서를 참조 합니다.
+구현 하는 방법 및 이러한 심층 학습 모델에 사용 된 알고리즘에 대 한 자세한 내용은 다음이 문서를 참조 CNTK를 사용 하 여 학습, 및:
 
 + [Microsoft 연구원 알고리즘 ImageNet 챌린지 마일스 톤 설정](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
 + [네트워크 도구 키트를 계산 하는 Microsoft 제공 정도의 계산 성능을 학습 하는 가장 효율적인 분산된 딥](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-### <a name="how-to-use-pre-trained-models-for-text-analysis"></a>텍스트 분석을 위해 미리 학습 된 모델을 사용 하는 방법
+## <a name="how-to-use-pre-trained-models-for-text-analysis"></a>텍스트 분석을 위해 미리 학습 된 모델을 사용 하는 방법
 
 텍스트 분류에 대 한 미리 학습 된 텍스트 기능 생성 모델을 사용 하는 방법 보여 주는 다음 예제를 참조 하십시오.
 
 [텍스트 Featurizer를 사용 하 여 의미 분석](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
-### <a name="how-to-use-pretrained-models-for-image-detection"></a>이미지 검색에 대 한 미리 학습 된 모델을 사용 하는 방법
+## <a name="how-to-use-pre-trained-models-for-image-detection"></a>이미지 검색에 대 한 미리 학습 된 모델을 사용 하는 방법
 
 이미지에 대 한 미리 학습 된 모델 기능 제공 하는 이미지의 생성을 지원 합니다. 모델을 사용 하려면 호출는 **featurizeImage** 변환 합니다. 이미지가 로드 될 크기를 조정 하 고 학습 된 모델에 들어가지 않고 기능화 합니다. DNN featurizer 출력 이미지 분류에 대 한 선형 모델 학습에 사용 됩니다.
 

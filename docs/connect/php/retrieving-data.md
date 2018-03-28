@@ -1,27 +1,28 @@
 ---
-title: "데이터 검색 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: 데이터 검색 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54cd9cef5cf2d0c7a1af40028adfb5340823e94b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 8f7482d5980d1e7a51479d9884623390b3e20fa5
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="retrieving-data"></a>데이터 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -75,7 +76,7 @@ PDO_SQLSRV 드라이버는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |---------|---------------|  
 |[데이터를 스트림으로 검색](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|서버에서 데이터를 스트리밍하는 방법의 개요를 제공하고 특정 사용 사례에 대한 링크를 제공합니다.|  
 |[방향 매개 변수 사용](../../connect/php/using-directional-parameters.md)|저장 프로시저를 호출할 때 방향 매개 변수를 사용하는 방법을 설명합니다.|  
@@ -85,7 +86,8 @@ PDO_SQLSRV 드라이버는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.
 ## <a name="related-sections"></a>관련 단원  
 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)  
   
-## <a name="see-also"></a>참고 항목  
-[PHP SQL 드라이버 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
+## <a name="see-also"></a>관련 항목:  
+[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
+
 [데이터 검색](../../connect/php/retrieving-data.md)  
   

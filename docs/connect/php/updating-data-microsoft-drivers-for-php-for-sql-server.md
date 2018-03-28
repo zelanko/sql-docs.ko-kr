@@ -1,27 +1,28 @@
 ---
-title: "데이터 업데이트 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: 데이터 업데이트 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94ba634fe2d52f2871214ace0890cc27fa5cb1c9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b34df07ff8c95f4ec08cc853f5a18ba8675ed016
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>데이터 업데이트(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,13 +39,14 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |---------|---------------|  
 |[방법: 매개 변수가 있는 쿼리 수행](../../connect/php/how-to-perform-parameterized-queries.md)|매개 변수가 있는 쿼리를 수행하는 방법을 설명합니다.|  
 |[방법: 데이터를 스트림으로 전송](../../connect/php/how-to-send-data-as-a-stream.md)|서버에 데이터를 스트림하는 방법을 설명합니다.|  
 |[방법: 트랜잭션 수행](../../connect/php/how-to-perform-transactions.md)|**sqlsrv** 함수를 사용하여 트랜잭션을 수행하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>참고 항목  
-[예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-[PHP SQL 드라이버 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
+## <a name="see-also"></a>관련 항목:  
+[예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+
+[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
   
