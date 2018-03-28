@@ -1,14 +1,14 @@
 ---
-title: "RxSqlServerData (SQL과 R 심층 분석)를 사용 하 여 SQL Server 데이터 개체를 만들 | Microsoft Docs"
-ms.custom: 
+title: RxSqlServerData (SQL과 R 심층 분석)를 사용 하 여 SQL Server 데이터 개체를 만들 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
@@ -16,7 +16,7 @@ applies_to:
 dev_langs:
 - R
 ms.assetid: bcf5f7ff-795b-4815-b163-bcddd496efce
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
@@ -113,7 +113,7 @@ ms.lasthandoff: 02/11/2018
 
 이제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 만들었으므로 적절한 **Rx** 함수를 사용하여 해당 테이블에 데이터를 로드할 수 있습니다.
 
-**RevoScaleR** 패키지 함수가 포함 된 다양 한 데이터 원본 지원: 텍스트 데이터를 사용 하 여 [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) 데이터 원본 개체를 생성 합니다. Hadoop 데이터, ODBC 데이터 등에서 데이터 원본 개체를 만들기 위한 추가 함수가 있습니다.
+**RevoScaleR** 패키지에는 다양한 데이터 원본을 지원하는 함수가 있습니다. 텍스트 데이터의 경우 [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) 를 사용해서 데이터 원본 개체를 생성합니다. Hadoop 데이터, ODBC 데이터 등에서 데이터 원본 개체를 만들기 위한 추가 함수들이 있습니다.
 
 > [!NOTE]
 > 이 섹션에 대 한 있어야 **DDL 실행** 데이터베이스에 대 한 권한이 있습니다.

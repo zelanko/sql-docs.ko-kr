@@ -1,25 +1,25 @@
 ---
-title: "Azure 기계 학습에 대 한 가상 컴퓨터를 프로 비전 | Microsoft Docs"
-ms.custom: 
+title: Azure 기계 학습에 대 한 가상 컴퓨터를 프로 비전 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Azure 기계 학습에 대 한 가상 컴퓨터를 프로 비전
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,7 +130,7 @@ RevoScaleR을 사용 하 여 webHDFS를 사용 하 여 동일한는 HDFS 하듯�
 
 RevoScaleR 또는 MicrosoftML 같은 패키지를 사용 하려는 경우에 추가 구성이 필요 하지 않습니다.
 
-## <a name="bkmk_list"></a>가상 컴퓨터의 목록
+## <a name="bkmk_list"></a> 가상 컴퓨터의 목록
 
 현재 가상 컴퓨터는 SQL Server와 함께 기계 학습에 사용할 수 있습니다.
 

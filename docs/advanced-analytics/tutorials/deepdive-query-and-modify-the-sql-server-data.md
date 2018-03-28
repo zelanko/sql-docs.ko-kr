@@ -1,14 +1,14 @@
-﻿---
-title: "쿼리 및 수정 (SQL과 R 심층 분석)에서 SQL Server 데이터 | Microsoft Docs"
-ms.custom: 
+---
+title: 쿼리 및 수정 (SQL과 R 심층 분석)에서 SQL Server 데이터 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
@@ -16,7 +16,7 @@ applies_to:
 dev_langs:
 - R
 ms.assetid: 8c7007a9-9a8f-4dcd-8068-40060d4f6444
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
@@ -71,11 +71,11 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="modify-metadata"></a>메타 데이터를 수정 합니다.
 
-모든 변수가 정수로 저장되었지만 일부 변수는 범주형 데이터를 나타내며 R에서는 *요인(factor) 변수*라고 합니다. 예를 들어 *state* 열에는 50개 주와 콜롬비아 특별구에 대한 식별자로 사용되는 숫자가 포함되어 있습니다. 데이터를 더 쉽게 이해하기 위해 숫자를 주 약어 목록으로 바꿉니다.
+모든 변수가 정수로 저장되었지만 일부 변수는 범주형 데이터를 나타내며 R에서는 *요인(factor) 변수* 라고 합니다. 예를 들어 *state* 열에는 50개 주와 콜롬비아 특별구에 대한 식별자로 사용되는 숫자가 포함되어 있습니다.   데이터를 더 쉽게 이해하기 위해 숫자를 주 약어 목록으로 바꿉니다.
 
 이 단계에서는 약어를 포함 하는 문자열 벡터 만들고 원래 정수 식별자에 이러한 범주 값을 매핑합니다. 다음에서 새 변수를 사용 하 여는 *colInfo* 인수를 추가 하는이 열이 처리는 비율을 지정 합니다. 데이터를 분석 하거나 이동할 때마다 약어가 사용 되 고 열을 인수로 처리 됩니다.
 
-열을 요소로 사용하기 전에 열을 약어에 매핑하면 실제로 성능도 향상됩니다. 자세한 내용은 참조 [R 및 데이터 최적화](..\r\r-and-data-optimization-r-services.md)합니다.
+을 요소로 사용하기 전에 열을 약어에 매핑하면 실제로 성능도 향상됩니다. 자세한 내용은 [R 및 데이터 최적화](..\r\r-and-data-optimization-r-services.md)를 참조하세요.
 
 1. 먼저 R 변수 *stateAbb*를 만들고 다음과 같이 추가할 문자열 벡터를 정의합니다.
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 02/11/2018
 
 2. 다음으로, 범주 수준(주 약어)과 기존 정수 값 간의 매핑을 지정하는 *ccColInfo*라는 열 정보 개체를 만듭니다.
   
-    이 문은 성별 및 카드 소유자에 대한 요인 변수도 만듭니다.
+    이 문은 성별 및 카드 소유자에 대한 요인 변수도 만듭니다.
   
     ```R
     ccColInfo <- list(
@@ -120,8 +120,8 @@ ms.lasthandoff: 02/11/2018
     rowsPerRead = sqlRowsPerRead)
     ```
   
-    - *table* 매개변수에 대해 앞에서 만든 데이터 원본을 포함하는 *sqlFraudTable*변수를 전달합니다.
-    - 열을 요소로 사용하기 전에 열을 약어에 매핑하면 실제로 성능도 향상됩니다. 
+    - *table* 매개 변수에 대해 앞에서 만든 데이터 원본을 포함하는 *sqlFraudTable*변수를 전달합니다.
+    - *colInfo* 매개 변수에 대해 열 데이터 형식 및 요소 수준을 포함하는 *ccColInfo* 변수를 전달합니다.
 
 4.  이제 **rxGetVarInfo** 함수를 사용하여 새 데이터 원본의 변수를 확인할 수 있습니다.
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 02/11/2018
     
     *Var 2: gender 2 factor levels: Male Female*
     
-    *Var 3: state 51 factor levels: AK AL AR AZ CA ... VT WA WI WV WY*
+    *Var 3: state 51 factor levels: AK AL AR AZ CA ...  VT WA WI WV WY*
     
     *Var 4: cardholder 2 factor levels: Principal Secondary*
     
@@ -148,8 +148,6 @@ ms.lasthandoff: 02/11/2018
     *Var 8: creditLine, Type: integer*
     
     *Var 9: fraudRisk, Type: integer*
-    
-
 
 이제 지정한 변수 3개(_gender_, _state_, _cardholder_)가 요인으로 처리됩니다.
 

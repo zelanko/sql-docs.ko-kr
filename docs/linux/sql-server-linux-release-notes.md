@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2017 linux에 대 한 릴리스 정보 | Microsoft Docs
-description: 이 문서는 릴리스 정보를 포함 하 고 SQL Server 2017 Linux에서 실행 중인 지원 되는 기능. 릴리스 정보는 최신 버전 및 몇 가지 이전 릴리스에 포함 되어 있습니다.
+title: SQL Server 2017 on Linux에 대한 릴리스 정보 | Microsoft Docs
+description: 이 항목에서는 Linux에서 동작하는 SQL Server 2017에 대한 릴리스 정보 및 지원하는 기능을 포함합니다. 릴리스 정보는 가장 최신 릴리스 및 몇 가지 이전 릴리스를 포함합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
