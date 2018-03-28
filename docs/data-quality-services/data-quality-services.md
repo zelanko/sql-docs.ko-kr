@@ -1,27 +1,28 @@
 ---
 title: Data Quality Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/12/2013
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: "67"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a437f93e76b78a9d335ab846c83a9765eb1b4d5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 648620fc2da4fd3e033feec89531fea3ec7dceae
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="data-quality-services"></a>데이터베이스 엔진 서비스
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)](DQS)는 지식 기반 데이터 품질 제품입니다. DQS를 사용하면 기술 자료를 작성한 다음 해당 기술 자료를 사용하여 데이터 수정, 강화, 표준화 및 중복 제거를 포함한 다양한 핵심 데이터 품질 태스크를 수행할 수 있습니다. DQS를 통해 참조 데이터 공급자가 제공하는 클라우드 기반 참조 데이터 서비스를 사용하여 데이터 정리를 수행할 수 있습니다. DQS는 또한 데이터 품질 태스크에 통합된 프로파일링을 제공하여 데이터의 무결성을 분석할 수 있게 해줍니다.  

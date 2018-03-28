@@ -1,31 +1,32 @@
 ---
-title: "일치 정책 만들기 | Microsoft Docs"
-ms.custom: 
+title: 일치 정책 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.kbmatchingmap.f1
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: "43"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cffe1699c221e37e353cad1269f675aac89db15
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 5c9fe7a9614c1b389362edd0b40284508329fc1b
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-matching-policy"></a>일치 정책 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 일치 정책을 만드는 방법에 대해 설명합니다. 예제 데이터에서 일치 정책 작업을 실행하여 DQS에서 일치 프로세스를 준비할 수 있습니다. 이 작업에서는 정책에서 하나 이상의 일치 규칙을 만들고 테스트한 다음 일치 규칙을 공개적으로 사용할 수 있도록 기술 자료를 게시합니다. 기술 자료에는 하나의 일치 정책만 있을 수 있지만 해당 정책에 여러 일치 규칙이 포함되어 있을 수 있습니다.  

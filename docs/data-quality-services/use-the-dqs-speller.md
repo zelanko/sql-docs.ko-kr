@@ -1,27 +1,28 @@
 ---
-title: "DQS 맞춤법 검사기 사용 | Microsoft Docs"
-ms.custom: 
+title: DQS 맞춤법 검사기 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e336447f1719999505d03fff77d0343ff5adf5ef
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 0a362ebc450559580430a952b99fb0aebe93e97a
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="use-the-dqs-speller"></a>DQS 맞춤법 검사기 사용
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 맞춤법 검사기는 도메인에서 문자열 값의 구문, 맞춤법 및 문장 구조를 검사합니다. 맞춤법 검사기는 서버 쪽 엔진에 통합되지 않고 현재 흐름이나 상태에 영향을 주지 않는 독립 실행형의 클라이언트 쪽 기능입니다. 맞춤법 검사기는 잠재적 오류로 간주되는 문자열 값을 식별한 다음 사용자가 도메인 값을 수동으로 변경하는 위치와 동일한 위치에 빨간색 밑줄로 표시합니다. 이러한 위치에는 다음이 포함됩니다.  

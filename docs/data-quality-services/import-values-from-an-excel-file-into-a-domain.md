@@ -1,31 +1,32 @@
 ---
-title: "Excel 파일에서 도메인으로 값 가져오기 | Microsoft Docs"
-ms.custom: 
+title: Excel 파일에서 도메인으로 값 가져오기 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d4e8bb9372d6e9e19e674160f9039422cd87ebc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c6331f1f695bb2e1c9974d27d8af76e03da55315
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Excel 파일에서 도메인으로 값 가져오기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 Excel 파일의 값을 도메인으로 가져오는 방법에 대해 설명합니다. Excel 파일을 사용하여 도메인 값을 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램으로 가져오면 기술 자료 생성 프로세스가 간소화되어 시간과 노력을 절감할 수 있습니다. 이 방법을 사용하면 Excel 파일이나 텍스트 파일로 올바른 데이터 값 목록을 가진 사용자가 해당 값을 도메인으로 가져올 수 있습니다. Excel 파일에서 도메인이나 기술 자료로 도메인 값을 가져올 수 있습니다. (기술 자료로 도메인 가져오기에 대한 자세한 내용은 [기술 자료 검색 시 Excel 파일에서 도메인 가져오기](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)를 참조하세요.) Excel 파일로의 내보내기는 지원되지 않습니다.  
@@ -109,7 +110,7 @@ ms.lasthandoff: 01/19/2018
   
 -   각 행은 도메인 값을 나타냅니다.  
   
--   첫 번째 행은 **첫 번째 행을 헤더로 사용하세요** 확인란의 설정에 따라 도메인 이름을 나타내거나 첫 번째 데이터 값 또는 레코드입니다. .xslx 파일이나 .xls 파일을 사용할 때 **Use First Row as header** 를 선택할 경우 null인 열 이름은 F*n*으로 자동 변환되며 중복되는 열에는 번호가 추가됩니다.  
+-   첫 번째 행은 **첫 번째 행을 헤더로 사용하세요** 확인란의 설정에 따라 도메인 이름을 나타내거나 첫 번째 데이터 값 또는 레코드입니다. .xslx 파일이나 .xls 파일을 사용할 때 **첫 번째 행을 헤더로 사용하세요.** 를 선택할 경우 null인 열 이름은 F*n*으로 자동 변환되며 중복되는 열에는 번호가 추가됩니다.  
   
 -   완료 전에 가져오기 작업을 취소하면 작업이 롤백되고 데이터를 가져오지 않습니다.  
   
