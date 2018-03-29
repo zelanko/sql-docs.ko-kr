@@ -1,31 +1,38 @@
 ---
-title: "프록시 편집기 - 보안 주체 추가 | Microsoft 문서"
-ms.custom: 
+title: 프록시 편집기 - 보안 주체 추가 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.ag.proxy.editor.f1
+f1_keywords:
+- sql13.ag.proxy.editor.f1
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10de0e6db82097912ec531a60513186faaf47785
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 85a94ec5b951378def074d712a4e5dd42786d7f9
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="proxy-editor---add-principal"></a>프록시 편집기 - 보안 주체 추가
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 서버 보안 주체에 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 프록시 계정에 대한 액세스 권한을 부여할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
+이 페이지를 사용하여 서버 보안 주체에 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 프록시 계정에 대한 액세스 권한을 부여할 수 있습니다.  
   
 ## <a name="options"></a>변수  
 **보안 주체 유형**  

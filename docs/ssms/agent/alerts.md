@@ -1,15 +1,16 @@
 ---
-title: "경고 | Microsoft 문서"
-ms.custom: 
+title: 경고 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent alerts, event types
@@ -24,19 +25,24 @@ helpviewer_keywords:
 - SQL Server Agent alerts, about alerts
 - alerts [SQL Server], names
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64de30ec59f69764c5f4fe0a1f28570da2b4d0a0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 928b489e882671b74ceacbf22a99a85e677bf58c
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="alerts"></a>,
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이벤트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에서 생성되어 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 응용 프로그램 로그에 입력됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에서 응용 프로그램 로그를 판독하고 기록된 이벤트와 사용자가 정의한 경고를 비교합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 일치하는 내용을 찾으면 이벤트에 대해 자동화된 응답으로 경고가 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이벤트를 모니터링할 뿐 아니라 성능 조건 및 WMI(Windows Management Instrumentation) 이벤트도 모니터링할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
+이벤트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에서 생성되어 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 응용 프로그램 로그에 입력됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에서 응용 프로그램 로그를 판독하고 기록된 이벤트와 사용자가 정의한 경고를 비교합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 일치하는 내용을 찾으면 이벤트에 대해 자동화된 응답으로 경고가 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이벤트를 모니터링할 뿐 아니라 성능 조건 및 WMI(Windows Management Instrumentation) 이벤트도 모니터링할 수 있습니다.  
   
 경고를 정의하려면 다음을 지정하십시오.  
   

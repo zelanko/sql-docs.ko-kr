@@ -1,33 +1,36 @@
 ---
-title: "SQL Server Analysis Services 테이블 형식 모델에서 지원 되는 데이터 원본 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/22/2018
+title: SQL Server Analysis Services 테이블 형식 1200 모델에서 지원 되는 데이터 원본 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/28/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 14aa6597e533000c259f513c503825e7993da77c
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/29/2018
 ---
-# <a name="data-sources-supported-in-tabular-models"></a>테이블 형식 모델에서 지원 되는 데이터 원본
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>테이블 형식 1200 모델 SQL Server Analysis Services에서 데이터 원본 지원
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Azure Analysis Services에 대 한 참조 [Azure Analysis Services에서 지원 되는 데이터 원본](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)합니다.
+  
+이 문서는 1200에서 테이블 형식 모델 SQL Server Analysis Services 및 호환성 수준이 이보다 낮지와 함께 사용할 수 있는 데이터 원본 유형에 대해 설명 합니다. 
 
-  이 문서에 테이블 형식 모델과 함께 사용할 수 있는 데이터 원본 유형에 대해 설명 합니다.  
+1400 호환성 수준에서 모델에 대 한 참조 [SQL Server Analysis Services 테이블 형식 1400 모델에서 지원 되는 데이터 원본](data-sources-supported-ssas-tabular-1400.md)합니다.
+
+Azure Analysis Services에 대 한 참조 [Azure Analysis Services에서 지원 되는 데이터 원본](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)합니다.
   
 ##  <a name="bkmk_supported_ds"></a> 메모리 내 테이블 형식 모델에 대 한 지원 되는 데이터 원본  
 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치할 경우 각 데이터 원본에 대해 나열된 공급자는 설치되지 않습니다. 일부 공급자는 컴퓨터에 다른 응용 프로그램을 설치할 수 있습니다. 다른 경우를 다운로드 하 여 공급자를 설치 해야 합니다.  
@@ -73,3 +76,9 @@ Teradata 관계형 데이터베이스    |  Teradata V2R6 이상     | .Net Data
 여러 데이터 원본의 유사 데이터를 포함하는 열은 모델 디자이너에서 관계를 만들 때 기반이 됩니다. 다른 유형의 데이터 원본을 사용하는 경우 동일하거나 비슷한 데이터가 포함되어 있는 다른 데이터 원본의 테이블에 매핑할 수 있는 열이 있는 테이블을 선택하십시오.  
   
 OLE DB 공급자는 대규모 데이터에 대 한 빠른 성능을 제공할 경우에 따라 수 있습니다. 동일한 데이터 원본에 대해 여러 공급자 중에서 하나를 선택하는 경우 OLE DB 공급자를 먼저 사용해 보는 것이 좋습니다.  
+
+## <a name="see-also"></a>참고 항목
+
+[테이블 형식 1400 모델 SQL Server Analysis Services에서 데이터 원본 지원](data-sources-supported-ssas-tabular-1400.md)
+
+[Azure Analysis Services에서 지원 되는 데이터 원본](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

@@ -1,15 +1,15 @@
 ---
-title: "처리 옵션을 지정 하 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
+title: 처리 옵션을 지정 하 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Analysis Services deployments, processing options
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - modifying processing options
 - Analysis Services Deployment Wizard, processing options
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37535b41f5ae5e7c68a47d18a4b91253c7f54d81
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ea99b1af6a5c99e4416c84ef0f2253a457b5322c
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>배포 스크립트 파일-처리 옵션 지정
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 처리 옵션을 읽습니다는 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]빌드할 때이 파일을 만듭니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에 지정 된 처리 옵션을 사용 하 여는 **배포** 페이지  *\<프로젝트 이름 >* **속성 페이지** 대화 상자를 만들는 \< *프로젝트 이름을*>.deploymentoptions 파일입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 처리 옵션을 읽습니다는 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]빌드할 때이 파일을 만듭니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에 지정 된 처리 옵션을 사용 하 여는 **배포** 페이지  *\<프로젝트 이름 >* **속성 페이지** 대화 상자를 만들는 \< *프로젝트 이름을*>.deploymentoptions 파일입니다.  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>배포를 위한 처리 옵션 검토  
  에 저장 된 구성 설정은 \< *프로젝트 이름을*>.deploymentoptions 파일은 다음과 같습니다.  

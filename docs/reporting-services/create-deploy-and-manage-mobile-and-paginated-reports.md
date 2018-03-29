@@ -1,8 +1,8 @@
 ---
-title: Reporting Services(SSRS) | Microsoft Docs
-description: 온-프레미스에서 모바일 및 페이지가 매겨진 Reporting Services 보고서와 Power BI 보고서에 대한 도구 및 서비스에 대해 알아봅니다.
+title: SSRS(SQL Server Reporting Services)란? | Microsoft Docs
+description: 온-프레미스에서 모바일 및 페이지가 매겨진 Reporting Services 보고서에 대한 도구 및 서비스에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 07/01/2017
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: ''
@@ -24,17 +24,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 6deaece7d2dd01ebf831820c2e026044f80651de
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 8f7c8f1fb8e72ba3861df9b4ac015468dc143459
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)란?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]Power BI Report Server를 찾고 있나요? [Power BI Report Server 시작](https://powerbi.microsoft.com/documentation/reportserver-get-started/)을 참조하세요.
 
 SSRS(SQL Server Reporting Services)에서 제공하는 즉시 사용 가능한 폭넓은 도구 및 서비스를 통해 프레미스에서 모바일 보고서 및 페이지를 매긴 Reporting Services 보고서를 만들고 배포하고 관리할 수 있습니다.
 
@@ -51,9 +51,6 @@ SQL Server 2016의 Reporting Services에서는 업데이트된 제품군을 제�
 * **최신 웹 포털** 모든 최신 브라우저에서 볼 수 있습니다. 새 포털에서 모바일 및 페이지가 매겨진 Reporting Services 보고서 및 KPI를 구성하고 표시할 수 있습니다. 포털에서 Excel 통합 문서를 저장할 수도 있습니다.
 
 각각에 대한 자세한 내용은 계속 읽어보세요.
-
-> [!NOTE]
-> Power BI Report Server를 찾고 있나요? [Power BI Report Server 시작](https://powerbi.microsoft.com/documentation/reportserver-get-started/)을 참조하세요.
 
 ### <a name="whats-new-in-reporting-services"></a>Reporting Services의 새로운 기능
 

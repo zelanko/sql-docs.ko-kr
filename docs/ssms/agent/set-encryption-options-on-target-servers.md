@@ -1,35 +1,39 @@
 ---
-title: "대상 서버의 암호화 옵션 설정 | Microsoft 문서"
-ms.custom: 
+title: 대상 서버의 암호화 옵션 설정 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent, encryption
 - target servers [SQL Server], encryption
 - multiserver environments [SQL Server], setting encryption options on target servers
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7a7204e78c23ef6a4c5309f0c8f45d756f740fb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 605078d66a1ee247df8d977a190316c340d9a1f9
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="set-encryption-options-on-target-servers"></a>대상 서버의 암호화 옵션 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
 마스터 서버와 대상 서버 중 일부 또는 모두 간의 SSL(Secure Sockets Layer) 암호화 통신을 위해 인증서를 사용할 수는 없지만 마스터 서버와 대상 서버 간의 채널을 암호화하려는 경우 대상 서버에서 필요한 보안 수준을 사용하도록 구성합니다.  
   
 특정 마스터 서버/대상 서버 통신 채널에 필요한 적절한 보안 수준을 구성하려면 대상 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 레지스트리 하위 키 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*instance_name*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)**를 다음 값 중 하나로 설정합니다. \<*instance_name*>의 값은 **MSSQL.***n*입니다. 예를 들어 **MSSQL.1** 또는 **MSSQL.3**입니다.  

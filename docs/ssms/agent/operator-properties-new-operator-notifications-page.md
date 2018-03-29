@@ -1,31 +1,38 @@
 ---
-title: "운영자 속성 - 새 운영자(알림 페이지) | Microsoft 문서"
-ms.custom: 
+title: 운영자 속성 - 새 운영자(알림 페이지) | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.ag.operator.notifications.f1
+f1_keywords:
+- sql13.ag.operator.notifications.f1
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9602398493c0e24d23d56b603da0bbc0c02af1af
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 55460ca7096cb5e2a9fa02bed888675931d8cd43
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>운영자 속성 - 새 운영자(알림 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 운영자에게 알릴 경고 및 작업을 설정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
+이 페이지를 사용하여 운영자에게 알릴 경고 및 작업을 설정할 수 있습니다.  
   
 ## <a name="options"></a>변수  
 **경고**  

@@ -1,31 +1,38 @@
 ---
-title: "WMI 이벤트 경고 만들기 | Microsoft 문서"
-ms.custom: 
+title: WMI 이벤트 경고 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: WMI event alerts [SQL Server Management Studio]
+helpviewer_keywords:
+- WMI event alerts [SQL Server Management Studio]
 ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 389caca69e621c979c53e45d4289d72fe17fb3ff
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4a877b67b93c8acd52548c2404de2f8375ca301d
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-wmi-event-alert"></a>WMI 이벤트 경고 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql_md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]의 서버 이벤트에 대해 WMI 공급자가 모니터링하는 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이벤트가 발생할 때 발생하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 경고에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
+이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 에서 서버 이벤트용 WMI 공급자가 모니터링하여 특정 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 이벤트가 발생할 때 [!INCLUDE[tsql](../../includes/tsql_md.md)]에이전트 경고를 만드는 방법에 대해 설명합니다.  
   
 WMI 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이벤트를 모니터링하는 방법에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자 클래스 및 속성](http://msdn.microsoft.com/en-us/80767fe0-32ac-406a-81a0-8212cd6ce7e4)을 참조하세요. WMI 이벤트 경고 알림을 받는 데 필요한 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 서비스의 계정 선택](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)을 참조하세요. WQL에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자에 WQL 사용](http://msdn.microsoft.com/en-us/58b67426-1e66-4445-8e2c-03182e94c4be)을 참조하세요.  
   

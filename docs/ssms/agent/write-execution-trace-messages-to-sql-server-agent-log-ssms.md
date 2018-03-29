@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 에이전트 오류 로그에 실행 추적 메시지 작성 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 에이전트 오류 로그에 실행 추적 메시지 작성 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -19,19 +19,23 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19c834e42cd6b2a9526b6ab894a33e4ef9aafc95
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 462926695b8e7fcf772a928949e060fd9457d4d7
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>SQL Server 에이전트 오류 로그에 실행 추적 메시지 작성(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]에서 해당 오류 로그에 실행 추적 메시지를 포함하도록 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 구성하는 방법에 대해 설명합니다.  
   
 **항목 내용**  

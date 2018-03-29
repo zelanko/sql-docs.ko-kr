@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 에이전트 고정 데이터베이스 역할 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 에이전트 고정 데이터베이스 역할 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -22,20 +22,24 @@ helpviewer_keywords:
 - fixed database roles [SQL Server]
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 02a76ac743e89269296cdb04e9eb27ec5faca66f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e0420ff4be2260855e1f15f9d1711df2a906ac0b
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 에이전트 고정 데이터베이스 역할
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 관리자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에 대한 보다 세부적인 액세스 제어 기능을 제공하는 다음과 같은 **msdb** 데이터베이스 고정 데이터베이스 역할을 제공합니다. 다음 역할은 액세스 권한이 적은 것부터 순서대로 나열되어 있습니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 관리자에게 **에이전트에 대한 보다 세부적인 액세스 제어 기능을 제공하는 다음과 같은** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 고정 데이터베이스 역할을 제공합니다. 다음 역할은 액세스 권한이 적은 것부터 순서대로 나열되어 있습니다.  
   
 -   **SQLAgentUserRole**  
   
@@ -52,7 +56,7 @@ ms.lasthandoff: 01/17/2018
 **SQLAgentUserRole** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 고정 데이터베이스 역할 중 가장 사용 권한이 적은 역할입니다. 이 역할에는 운영자, 로컬 작업 및 작업 일정에 대한 사용 권한만 있습니다. **SQLAgentUserRole** 의 멤버는 자신이 소유하는 로컬 작업 및 작업 일정에 대한 사용 권한만 갖습니다. 이 역할의 멤버는 다중 서버 작업(마스터 및 대상 서버 작업)을 사용할 수 없으며 자신이 소유하지 않는 작업에 대한 액세스를 얻기 위해 작업 소유권을 변경할 수 없습니다. **SQLAgentUserRole** 멤버는 **의** 작업 단계 속성 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]대화 상자에서만 사용 가능한 프록시 목록을 볼 수 있습니다. **SQLAgentUserRole** 멤버에게는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 개체 탐색기의 **작업**노드만 표시됩니다.  
   
 > [!IMPORTANT]  
-> ****[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**Agentdatabaseroles**멤버에 프록시 액세스 권한을 부여하기 전에 보안 문자를 신중히 고려해야 합니다. **SQLAgentReaderRole** 및 **SQLAgentOperatorRole** 은 자동으로 **SQLAgentUserRole**의 멤버가 됩니다. 즉, **SQLAgentReaderRole** 및 **SQLAgentOperatorRole** 의 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **에 부여된 모든** 에이전트 프록시에 대한 액세스를 가지며 이러한 프록시를 사용할 수 있습니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**Agentdatabaseroles** 멤버에 프록시 액세스 권한을 부여하기 전에 보안 문자를 신중히 고려해야 합니다**.** **SQLAgentReaderRole** 및 **SQLAgentOperatorRole** 은 자동으로 **SQLAgentUserRole**의 멤버가 됩니다. 즉, **SQLAgentReaderRole** 및 **SQLAgentOperatorRole** 의 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **에 부여된 모든** 에이전트 프록시에 대한 액세스를 가지며 이러한 프록시를 사용할 수 있습니다.  
   
 다음 표에서는 **에이전트 개체에 대한** SQLAgentUserRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용 권한을 요약합니다.  
   
@@ -71,7 +75,7 @@ ms.lasthandoff: 01/17/2018
 **SQLAgentReaderRole** 에는 모든 **SQLAgentUserRole** 사용 권한 뿐만 아니라 사용 가능한 다중 서버 작업, 해당 속성 및 해당 기록 목록을 볼 수 있는 권한이 포함됩니다. 이 역할의 멤버는 또한 자신이 소유하는 작업과 작업 일정뿐만 아니라 사용 가능한 모든 작업과 작업 일정 및 해당 속성 목록을 볼 수 있습니다. **SQLAgentReaderRole** 멤버는 자신이 소유하지 않는 작업에 대한 액세스를 얻기 위해 작업 소유권을 변경할 수 없습니다. **SQLAgentReaderRole** 멤버에게는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 개체 탐색기의 **작업**노드만 표시됩니다.  
   
 > [!IMPORTANT]  
-> ****[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**Agentdatabaseroles**멤버에 프록시 액세스 권한을 부여하기 전에 보안 문자를 신중히 고려해야 합니다. **SQLAgentReaderRole** 의 멤버는 자동으로 **SQLAgentUserRole**의 멤버가 됩니다. 즉, **SQLAgentReaderRole** 의 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **에 부여된 모든** 에이전트 프록시에 대한 액세스를 가지며 이러한 프록시를 사용할 수 있습니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**Agentdatabaseroles** 멤버에 프록시 액세스 권한을 부여하기 전에 보안 문자를 신중히 고려해야 합니다**.** **SQLAgentReaderRole** 의 멤버는 자동으로 **SQLAgentUserRole**의 멤버가 됩니다. 즉, **SQLAgentReaderRole** 의 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **에 부여된 모든** 에이전트 프록시에 대한 액세스를 가지며 이러한 프록시를 사용할 수 있습니다.  
   
 다음 표에서는 **에이전트 개체에 대한** SQLAgentReaderRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용 권한을 요약합니다.  
   
@@ -95,7 +99,7 @@ ms.lasthandoff: 01/17/2018
 **개체 탐색기의**작업 **,**경고 **,**운영자 **및** 프록시 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 는 **SQLAgentOperatorRole**의 멤버에게 표시됩니다. 이 역할의 멤버에게는 **오류 로그** 노드만 표시되지 않습니다.  
   
 > [!IMPORTANT]  
-> ****[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**Agentdatabaseroles**멤버에 프록시 액세스 권한을 부여하기 전에 보안 문자를 신중히 고려해야 합니다. **SQLAgentOperatorRole** 의 멤버는 자동으로 **SQLAgentUserRole** 및 **SQLAgentReaderRole**의 멤버가 됩니다. 즉, **SQLAgentOperatorRole** 의 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **또는** SQLAgentReaderRole **에 부여된 모든** 에이전트 프록시에 대한 액세스를 가지며 이러한 프록시를 사용할 수 있습니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**Agentdatabaseroles** 멤버에 프록시 액세스 권한을 부여하기 전에 보안 문자를 신중히 고려해야 합니다**.** **SQLAgentOperatorRole** 의 멤버는 자동으로 **SQLAgentUserRole** 및 **SQLAgentReaderRole**의 멤버가 됩니다. 즉, **SQLAgentOperatorRole** 의 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **또는** SQLAgentReaderRole **에 부여된 모든** 에이전트 프록시에 대한 액세스를 가지며 이러한 프록시를 사용할 수 있습니다.  
   
 다음 표에서는 **에이전트 개체에 대한** SQLAgentOperatorRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용 권한을 요약합니다.  
   

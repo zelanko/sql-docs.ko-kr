@@ -1,15 +1,16 @@
 ---
-title: "SQL Server 에이전트 보안 구현 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 에이전트 보안 구현 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -17,19 +18,23 @@ helpviewer_keywords:
 - security [SQL Server Agent]
 - security [SQL Server], SQL Server Agent
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c6553a91a0e089c48512dbc2446c3694fb9885c3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1e86b733db8bc2fcb17fc10264a0e2b9069e5323
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="implement-sql-server-agent-security"></a>SQL Server 에이전트 보안 구현
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 사용하면 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 프록시에 의해 결정된 각 작업 단계를 수행하는 데 필요한 사용 권한만 있는 보안 컨텍스트에서 각 작업 단계를 실행할 수 있습니다. 특정 작업 단계의 사용 권한을 설정하려면 필요 사용 권한을 가진 프록시를 만든 다음 해당 프록시를 작업 단계에 할당하십시오. 프록시는 둘 이상의 작업 단계에 대해 지정할 수 있습니다. 동일 사용 권한이 필요한 작업 단계에 대해서는 동일한 프록시를 사용합니다.  
   
 다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 사용하여 작업을 만들거나 실행할 수 있도록 사용자에게 부여해야 하는 데이터베이스 역할에 대해 설명합니다.  

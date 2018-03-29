@@ -1,15 +1,16 @@
 ---
-title: "작업 단계 성공 또는 실패 흐름 설정 | Microsoft 문서"
-ms.custom: 
+title: 작업 단계 성공 또는 실패 흐름 설정 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent jobs, action flow logic
@@ -17,19 +18,24 @@ helpviewer_keywords:
 - failed jobs [SQL Server]
 - jobs [SQL Server Agent], action flow logic
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da1f795a7f31a39550e1833fcd4e51021aba4c5a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8d288fbf118cba166eb62708d11c5f91f21bdc4c
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업을 만들 때 작업 실행 중에 오류가 발생할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]가 수행해야 할 동작을 지정할 수 있습니다. 각 작업 단계의 성공이나 실패에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 수행해야 할 동작을 결정합니다. 그런 후에 다음 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 통해 작업 단계 동작 흐름 논리를 구성합니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업을 만들 때 작업 실행 중에 오류가 발생할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 수행해야 할 동작을 지정할 수 있습니다. 각 작업 단계의 성공이나 실패에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 수행해야 할 동작을 결정합니다. 그런 후에 다음 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 통해 작업 단계 동작 흐름 논리를 구성합니다.  
   
 -   **시작하기 전 주의 사항:**  
   

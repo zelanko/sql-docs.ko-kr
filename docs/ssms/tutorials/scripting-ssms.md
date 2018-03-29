@@ -19,19 +19,21 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 2ee56bc26c22f91af7bf156ea967c19b61eab881
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: bc20cc573c6b0890e5b16f4876636534f9fbb916
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>자습서: SQL Server Management Studio에서 개체 스크립팅
 이 자습서에서는 SQL Server Management Studio 내에서 발견되는 다양한 개체에 대한 T-SQL(Transact-SQL) 스크립트를 생성하는 방법을 설명합니다.  이 자습서에서는 다음 개체를 스크립팅하는 방법의 예제를 찾을 수 있습니다. 
- - GUI 내에서 작업을 수행할 때 쿼리
- - 두 가지 방법의 데이터베이스("스크립팅" 및 "스크립트 생성")
- - 테이블
- - 저장 프로시저
- - 확장 이벤트
+
+> [!div class="checklist"]
+> * GUI 내에서 작업을 수행할 때 쿼리
+> * 두 가지 방법의 데이터베이스("스크립팅" 및 "스크립트 생성")
+> * 테이블
+> * 저장 프로시저
+> * 확장 이벤트
 
 이 자습서의 요약은 **개체 탐색기**의 모든 개체를 마우스 오른쪽 단추로 클릭하고 **개체 스크립팅** 옵션을 선택하여 스크립팅할 수 있다는 것입니다. 
 
@@ -41,14 +43,13 @@ ms.lasthandoff: 03/21/2018
 
 - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. 
-    - SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에서 찾을 수 있습니다. 
+- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에서 찾을 수 있습니다. 
 
 
 ## <a name="script-queries-from-gui"></a>GUI에서 쿼리 스크립팅
 언제든지 SSMS에서 GUI를 사용하여 작업을 수행할 때 해당 작업과 관련된 T-SQL 코드를 생성할 수도 있습니다. 다음 예제는 데이터베이스의 백업을 수행하고 트랜잭션 로그를 축소하는 경우 수행하는 방법을 보여줍니다.  이러한 동일한 단계를 GUI를 통해 완료한 모든 작업에도 적용할 수 있습니다. 
 
-### <a name="scriptt-sql-when-backing-up-a-database"></a>데이터베이스를 백업할 때 ScriptT-SQL
+### <a name="script-t-sql-when-backing-up-a-database"></a>데이터베이스를 백업할 때 T-SQL 스크립팅
 1. SQL Server에 연결합니다.
 2. **데이터베이스** 노드를 확장합니다.
 3. 데이터베이스 > **작업** > **백업**을 마우스 오른쪽 단추로 클릭합니다.

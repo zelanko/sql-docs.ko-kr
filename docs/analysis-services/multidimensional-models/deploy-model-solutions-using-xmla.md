@@ -1,15 +1,15 @@
 ---
-title: "XMLA를 사용 하 여 모델 솔루션 배포 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
+title: XMLA를 사용 하 여 모델 솔루션 배포 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML scripts [Analysis Services]
@@ -17,20 +17,21 @@ helpviewer_keywords:
 - deploying [Analysis Services], XML scripts
 - Analysis Services deployments, XML scripts
 ms.assetid: a8cb1837-fcac-4730-bea4-a72cf94d9f7c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1f274e076ad0a7e3a9fcfe5cdee83fdf9a913d07
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 03ee5d6d70e7020fe1ef465d075be45cca433ff4
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deploy-model-solutions-using-xmla"></a>XMLA를 사용하여 모델 솔루션 배포
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **데이터베이스 스크립팅** 명령의 **CREATE** 옵션은 전체 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 또는 해당 구성 개체 중 하나에 대해 XML 스크립트를 만듭니다. 그런 다음 결과로 얻은 스크립트를 다른 컴퓨터에서 실행하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 스키마(메타데이터)를 다시 만들 수 있습니다. 이 스크립트는 전체 데이터베이스를 생성합니다. 스크립트 사용 시 이미 배포된 개체를 증분 업데이트하는 메커니즘은 없습니다. 스크립트를 실행하고 데이터베이스를 배포한 후에는 새로 만든 데이터베이스를 처리해야만 사용자가 해당 데이터베이스를 찾아볼 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **데이터베이스 스크립팅** 명령의 **CREATE** 옵션은 전체 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 또는 해당 구성 개체 중 하나에 대해 XML 스크립트를 만듭니다. 그런 다음 결과로 얻은 스크립트를 다른 컴퓨터에서 실행하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 스키마(메타데이터)를 다시 만들 수 있습니다. 이 스크립트는 전체 데이터베이스를 생성합니다. 스크립트 사용 시 이미 배포된 개체를 증분 업데이트하는 메커니즘은 없습니다. 스크립트를 실행하고 데이터베이스를 배포한 후에는 새로 만든 데이터베이스를 처리해야만 사용자가 해당 데이터베이스를 찾아볼 수 있습니다.  
   
  **데이터베이스 스크립팅** 명령에 대한 자세한 내용은 [Analysis Services 데이터베이스 문서화 및 스크립트](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)를 참조하세요.  
   

@@ -1,28 +1,45 @@
 ---
-title: "Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보 | Microsoft Docs"
-description: "Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보"
+title: Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보 | Microsoft Docs
+description: Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보
 ms.custom: tools|sos
-ms.date: 02/15/2018
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: ba86403e791af25de4f7bcd8b1cbd7b5f188897b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 작업 Studio (미리 보기) 릴리스 정보
 
-**[2 월 공개 미리 보기 다운로드](download.md)**
+**[년 3 월 공개 미리 보기 다운로드](download.md)**
+
+## <a name="march-2018-march-public-preview"></a>년 3 월 2018 (공개 미리 보기 3 월)
+
+릴리스 날짜: 2018 년 3 월 28,  
+버전: 0.27.3
+
+*공개 미리 보기 3 월* 은 계속 상위 GitHub 문제를 해결 하 고 확장성 이야기 향상에 포커스가 있습니다. 특히 확장 관리자를 사용 하도록 설정, 올바른 대시보드 관리 및 SQL 에이전트 및 insights 확장을 제공 합니다. 이 릴리스에 다음과 같은 향상 기능이 포함 되어 있습니다.
+
+- Insights 탭된 및 창 구성 지원 하기 위해 대시보드 확장성 모델을 향상 시킵니다.
+   - 확장 관리자에서 확장의 간단한 취득이 있습니다.
+   - sp_whoisactive에 대 한 대시보드 확장 [whoisactive.com](http://www.whoisactive.com)합니다.
+   - 자세한 내용은 참조 [SQL 작업 Studio의 기능을 확장할](extensions.md)합니다.
+- 더 추가 [연결 및 개체 탐색기에 대 한 확장성 Api](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) 관리 합니다.
+- 영향을 미치는 중요 한 고객을 해결 하려면 계속 [GitHub 문제](https://github.com/Microsoft/sqlopsstudio/issues)합니다.
+
+자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)합니다.
+
 
 ## <a name="february-2018-february-public-preview"></a>2 월 2018 (공개 미리 보기 2 월)
 
@@ -63,8 +80,6 @@ ms.lasthandoff: 02/19/2018
 - 끌어서 놓기 주요 스크립팅 버그를 수정 합니다.
 - 잘못 된 고정 된 시작 메뉴 아이콘을 수정 합니다.
 - 누락 된 Azure 계정 브랜딩 아이콘을 수정 합니다.
-
-자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)합니다.
 
 
 ## <a name="december-2017-december-public-preview"></a>2017 년 12 월 (공개 미리 보기 년 12 월)

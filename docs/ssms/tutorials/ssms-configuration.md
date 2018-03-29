@@ -10,21 +10,22 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: c9ede90c1232469797f85af353c7e3fced6851b5
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 8cdb4f258f62b425be78e9f6b4628d69e304c7ba
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>자습서: SQL Server Management Studio 구성 요소 및 구성
 이 자습서에서는 SSMS(SQL Server Management Studio) 내의 다양한 창 구성 요소 및 작업 영역에 대한 몇 가지 기본 구성 옵션을 설명합니다. 이 문서에서는 다음을 알아봅니다. 
-- SSMS 환경을 구성하는 다양한 구성 요소
-- 환경 레이아웃 변경 및 기본값으로 다시 설정
-- 쿼리 편집기 최대화
-- 다음과 같은 몇 가지 기본 설정 변경
-    - 글꼴 변경
-    - 시작 옵션 구성
-    - 구성을 기본값으로 다시 설정
+
+> [!div class="checklist"]
+> * SSMS 환경을 구성하는 다양한 구성 요소
+> * 환경 레이아웃 변경 및 기본값으로 다시 설정
+> * 쿼리 편집기 최대화
+> * 글꼴 변경 
+> * 시작 옵션 구성 
+> * 구성을 기본값으로 다시 설정 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 이 자습서를 완료하려면 SQL Server Management Studio가 필요합니다.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 03/21/2018
 
     
 
-## <a name="changing-the-environmental-layout"></a>환경 레이아웃 변경 
+## <a name="change-the-environmental-layout"></a>환경 레이아웃 변경 
 이 섹션에서는 다양한 창 이동과 같은 환경 레이아웃 조작을 설명합니다. 
 
 -  제목을 누른 채로 창을 끌어 각 창 구성 요소를 이동할 수 있습니다. 
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/21/2018
  
     ![창 레이아웃 복원](media/ssms-configuration/resetwindowlayout.png)
     
-## <a name="maximizing-query-editor"></a>쿼리 편집기 화면 크기
+## <a name="maximize-query-editor"></a>쿼리 편집기 최대화
 쿼리 편집기를 전체 화면 모드로 최대화할 수 있습니다.
 
 1. 쿼리 편집기 창 내의 아무 곳이나 클릭합니다.
@@ -100,7 +101,7 @@ ms.lasthandoff: 03/21/2018
 
 
 
-## <a name="changing-basic-settings"></a>기본 설정 변경
+## <a name="change-basic-settings"></a>기본 설정 변경
 이 섹션에서는 SSMS 내의 몇 가지 기본 설정을 수정하는 방법을 설명합니다. 이러한 옵션은 **도구** 메뉴 옵션 내에 있습니다.
 
   ![도구 메뉴](media/ssms-configuration/tools.png)
@@ -110,18 +111,32 @@ ms.lasthandoff: 03/21/2018
 
     ![도구 모음 사용자 지정](media/ssms-configuration/toolbar.png)
 
+### <a name="change-the-font"></a>글꼴 변경
 - 메뉴: **도구** > **옵션** > **글꼴 및 색**에서 글꼴을 변경할 수 있습니다.
 
      ![글꼴 및 색](media/ssms-configuration/fontsandcolors.png)
 
+### <a name="change-the-startup-options"></a>시작 옵션 변경
 - 시작 옵션은 SSMS를 처음 시작할 때 작업 영역의 모양을 결정합니다. 메뉴: **도구** > **옵션** > **시작**에서 구성할 수 있습니다.
  
     ![시작 옵션](media/ssms-configuration/startup.png)
 
+### <a name="reset-settings-to-default"></a>설정을 기본값으로 다시 설정
 - 메뉴: **도구** > **설정 가져오기 및 내보내기**에서 이러한 모든 설정을 내보내고 가져올 수 있습니다. 
 
     ![가져오기 + 내보내기 설정](media/ssms-configuration/settings.png)
     - 여기에서 모든 설정을 기본값으로 다시 설정할 수도 있습니다. 
+
+
+## <a name="next-steps"></a>다음 단계
+다음 아티클에서는 SQL Server 오류 로그 및 SQL 인스턴스 이름 찾기 등 SSMS를 사용하는 몇 가지 추가 팁과 요령을 설명합니다. 
+
+자세히 알아보려면 다음 문서로 진행합니다.
+> [!div class="nextstepaction"]
+> [다음 단계 단추](ssms-tricks.md)
+ 
+ 
+
 
 
 

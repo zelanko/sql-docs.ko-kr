@@ -1,16 +1,16 @@
 ---
-title: "작업 범주에 작업 할당 | Microsoft 문서"
-ms.custom: 
+title: 작업 범주에 작업 할당 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - jobs [SQL Server Agent], assigning
@@ -20,19 +20,23 @@ helpviewer_keywords:
 - SQL Server Agent jobs, assigning
 - assigning job to category
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 924c9c2c5ab1f18907f48528ab4043b6899d77cb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: a9797d1e11ba13c845e1dece1f23ccc3b2c17ef6
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="assign-a-job-to-a-job-category"></a>작업 범주에 작업 할당
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업을 작업 범주에 할당하는 방법에 대해 설명합니다.  
   
 작업 범주를 사용하면 작업을 쉽게 필터링하고 그룹화할 수 있게 구성할 수 있습니다. 예를 들어 데이터베이스 유지 관리 범주에 있는 모든 데이터베이스 백업 작업을 구성할 수 있습니다. 작업을 기본 제공 작업 범주에 할당하거나 사용자 정의 작업 범주를 만든 다음 여기에 작업을 할당할 수 있습니다.  
