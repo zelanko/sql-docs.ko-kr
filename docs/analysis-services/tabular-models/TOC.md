@@ -1,6 +1,7 @@
 # [개요](tabular-models-ssas.md)  
 
 # [테이블 형식 모델 만들기](tabular-model-solutions-ssas-tabular.md)  
+## [테이블 형식 1400 모델에서 지원되는 데이터 원본](data-sources-supported-ssas-tabular-1400.md)  
 ## [테이블 형식 1200 모델에서 지원되는 데이터 원본](data-sources-supported-ssas-tabular.md)  
 ## [지원되는 데이터 형식](data-types-supported-ssas-tabular.md)  
 ## [테이블 형식 모델 디자이너](tabular-model-designer-ssas.md)  
@@ -23,6 +24,8 @@
 ### [기본 데이터 모델링 및 배포 속성 구성](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
 
 ## 데이터 가져오기
+
+### [테이블 형식 1400 모델에서 지원되는 데이터 원본](data-sources-supported-ssas-tabular-1400.md)  
 ### [테이블 형식 1200 모델에서 지원되는 데이터 원본](data-sources-supported-ssas-tabular.md)  
 ### [지원되는 데이터 형식](data-types-supported-ssas-tabular.md)  
 ### [가장](impersonation-ssas-tabular.md)  
