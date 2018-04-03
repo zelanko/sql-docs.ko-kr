@@ -1,30 +1,32 @@
 ---
-title: "SQLDriverConnect (Visual FoxPro ODBC 드라이버) | Microsoft Docs"
-ms.custom: 
+title: SQLDriverConnect (Visual FoxPro ODBC 드라이버) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLDriverConnect function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords:
+- SQLDriverConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95587af8044ec6485729233ebff378ceac064c40
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 67961f2d5b02bf203e67c82ed1406739aba914a1
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Visual FoxPro ODBC 드라이버)
+# <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보입니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하십시오. [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 |단독|"Yes" 또는 "No"|  
 |SourceDB|정규화 된 경로를 포함 하는 디렉터리 0 개 이상의 [테이블 있음](../../odbc/microsoft/visual-foxpro-terminology.md), 또는 대 한 절대 경로 파일 이름을 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md)합니다.|  
 |SourceType|"Dbc 입니다" 또는 "DBF"|  
-|버전 옵션||  
+|버전||  
   
  드라이버 관리자는 정보에 대 한 사용자 요청 데이터 원본 이름을 지정 하지 않으면 (의 설정에 따라는 *fDriverCompletion* 인수) 하 고 계속 합니다. 자세한 정보가 필요한 경우 Visual FoxPro ODBC 드라이버는 메시지 대화 상자를 표시 합니다.  
   

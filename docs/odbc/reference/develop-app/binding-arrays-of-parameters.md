@@ -1,31 +1,32 @@
 ---
-title: "바인딩 매개 변수 배열을 | Microsoft Docs"
-ms.custom: 
+title: 바인딩 매개 변수 배열을 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad5bb4e2281802c231b4dc7abcfd356c8ca4b72c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09b3a3c732b34a5a1a7a1d98e2ebe9740069f72e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="binding-arrays-of-parameters"></a>바인딩 매개 변수 배열
 응용 프로그램의 매개 변수 배열을 사용 하는 SQL 문의 매개 변수를 배열을 바인딩합니다. 두 바인딩 스타일 가지가 있습니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  열 단위 바인딩은 기본값입니다. 응용 프로그램 수에서 변경할 수도 행 단위 바인딩은 열 단위 바인딩을를 SQL_ATTR_PARAM_BIND_TYPE 문 특성을 설정 하 여 합니다. 다음 그림에서는 어떻게 열 단위 바인딩의 작동 보여 줍니다.  
   
- ![표시 방법을 열 &#45; 단위 바인딩의 작동](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![표시 방법을 열&#45;바인딩의 동작이 것이 좋습니다.](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
  예를 들어 다음 코드는 10 개 요소 배열 PartID, 설명 및 Price 열에 대 한 매개 변수를 바인딩하고 10 개의 행을 삽입 하는 문을 실행 합니다. 열 단위 바인딩을 사용합니다.  
   
@@ -59,9 +60,9 @@ SQLINTEGER     PartIDIndArray[ARRAY_SIZE], DescLenOrIndArray[ARRAY_SIZE],
 SQLUSMALLINT   i, ParamStatusArray[ARRAY_SIZE];  
 SQLULEN ParamsProcessed;  
   
-memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray);  
-memset(PartIDIndArray, 0, sizeof(PartIDIndArray);  
-memset(PriceIndArray, 0, sizeof(PriceIndArray);  
+memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray));  
+memset(PartIDIndArray, 0, sizeof(PartIDIndArray));  
+memset(PriceIndArray, 0, sizeof(PriceIndArray));  
   
 // Set the SQL_ATTR_PARAM_BIND_TYPE statement attribute to use  
 // column-wise binding.  
@@ -134,7 +135,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset
   
  여기서 행은 매개 변수 집합의 크기에 1부터 매겨집니다. 오프셋을 정의 하는 경우에 SQL_ATTR_PARAM_BIND_OFFSET_PTR 문 특성에서 가리키는 값입니다. 다음 그림에서는 어떻게 행 단위 바인딩의 작동 보여 줍니다. 매개 변수 순서에 관계 없이 구조에 배치할 수 있습니다 하지만 쉽게 구별할 수 있도록 순서 대로 표시 됩니다.  
   
- ![행에 미치는 표시 &#45; 단위 바인딩의 작동](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![행에 미치는 표시&#45;바인딩의 동작이 것이 좋습니다.](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
  다음 코드는 PartID, 설명 및 Price 열에 저장 하는 값에 대 한 요소와 구조를 만듭니다. 그런 다음 이러한 구조의 요소가 10 개인 배열을 할당 하 고 행 단위 바인딩을 사용 하 여 PartID, 설명 및 Price 열에 대 한 매개 변수를 바인딩합니다. 그런 다음 10 개의 행을 삽입 하는 문을 실행 합니다.  
   

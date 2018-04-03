@@ -1,28 +1,29 @@
 ---
-title: "Analysis Services 테이블 형식 모델에 호환성 수준이 | Microsoft Docs"
-ms.custom: 
-ms.date: 10/16/2017
+title: Analysis Services 테이블 형식 모델에 호환성 수준이 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.versioncompat.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4dcc372bb9eac9887a06923cf517e4375ec1bbcb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6fbd08b52c50e8ea010f4fcc6664176935457322
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 테이블 형식 모델에 대 한 호환성 수준
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 1400 호환성 수준에서 주요 기능은 다음과 같습니다.
 
 *  TOM Api 및 TMSL 스크립트를 지 원하는 데이터 연결 및 테이블 형식 모델에 가져오기에 대 한 새로운 인프라입니다. 이 통해 Azure Blob 저장소와 같은 추가 데이터 원본에 대 한 지원. 추가 데이터 원본을 사용할 수는 향후 업데이트를 포함 합니다.
-*  데이터 변환 및 데이터 가져오기 및 M 식을 사용 하 여 데이터 매시업 기능입니다.
+*  데이터 변환 및 SSDT에서 데이터 가져오기 및 M 식을 사용 하 여 데이터 매시업 기능입니다.
 *  측정값 집계 된 보고서에서 자세한 데이터를 드릴 다운 하는 Microsoft Excel과 같은 BI 도구를 사용 하도록 설정 하는 DAX 식 사용 하 여 정보 행 속성을 지원 합니다. 예를 들어 최종 사용자가 보는 지역 및 월에 대 한 총 판매액을 관련된 주문 세부 정보를 볼 수 있습니다. 
 *  내 데이터 외에도 테이블 및 열 이름에 대 한 개체 수준 보안 합니다.
 *  비정형된 계층 구조에 대 한 향상 된 지원 합니다.
@@ -47,11 +48,11 @@ ms.lasthandoff: 01/08/2018
 |-|-|- 
 |**호환성 수준**|**서버 버전**| 
 |1400|Azure Analysis Services, SQL Server 2017 |  
-|1200|Azure Analysis Services, SQL Server 2017 년 1 SQL Server 2016| 
-|1103|SQL Server 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
-|1100|SQL Server 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
+|1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
+|1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
+|1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
-\*1100 및 1103 호환성 수준은 SQL Server 2017에서는 사용 되지 않습니다.
+\* 1100 및 1103 호환성 수준은 SQL Server 2017에서는 사용 되지 않습니다.
   
 ## <a name="set-compatibility-level"></a>호환성 수준을 설정 
  새 테이블 형식 모델 프로젝트를 SQL Server Data Tools (SSDT)를 만들 때에 호환성 수준을 지정할 수 있습니다는 **테이블 형식 모델 디자이너** 대화 상자. 
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
  이 속성에는 서버에서 실행 되는 데이터베이스의 가장 높은 호환성 수준을 지정 합니다. 지원되는 호환성 수준은 읽기 전용이며 변경할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [다차원 데이터베이스의 호환성 수준](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Analysis Services의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)   
  [새 테이블 형식 모델 프로젝트 만들기](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  
