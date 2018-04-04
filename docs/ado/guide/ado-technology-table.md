@@ -1,29 +1,29 @@
 ---
-title: "ADO 기술 테이블 | Microsoft Docs"
-ms.custom: 
+title: ADO 기술 테이블 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6ab214b72913118e12d1ce1a7db67e0e00dc118
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ab203bab4b9fd5d83a9ca71a1e32ae97577172c6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="products-and-technologies-table"></a>제품 및 기술 테이블
 다음 표에서 Microsoft 제품, 도구 및 ADO Programmer's Guide에 설명 된 기술을 나열 합니다. 가능한 경우이 가이드의 관련 항목에 링크를 제공 합니다.

@@ -1,31 +1,31 @@
 ---
-title: "데이터 마이닝 솔루션 관련 프로젝트 | Microsoft Docs"
-ms.custom: 
+title: 데이터 마이닝 솔루션 관련 프로젝트 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7eebc2ae561e47481734c80dbc8f77ad381f4193
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>데이터 마이닝 솔루션 관련 프로젝트
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝 솔루션에 필요한 최소 사항은 데이터 원본, 데이터 원본 뷰, 마이닝 구조 및 마이닝 모델을 정의하는 데이터 마이닝 프로젝트입니다. 하지만 일상적인 의사 결정 과정에서 데이터 마이닝 모델을 사용하는 경우 데이터 마이닝이 예측 분석 솔루션의 다른 부분과 통합되어야 하는데 여기에는 다음과 같은 프로세스와 구성 요소가 포함될 수 있습니다.  
+  데이터 마이닝 솔루션에 필요한 최소 사항은 데이터 원본, 데이터 원본 뷰, 마이닝 구조 및 마이닝 모델을 정의하는 데이터 마이닝 프로젝트입니다. 하지만 일상적인 의사 결정 과정에서 데이터 마이닝 모델을 사용하는 경우 데이터 마이닝이 예측 분석 솔루션의 다른 부분과 통합되어야 하는데 여기에는 다음과 같은 프로세스와 구성 요소가 포함될 수 있습니다.  
   
 -   데이터 및 변수 준비 및 선택. 데이터 정리, 여러 데이터 원본의 통합 및 메타데이터 관리, 데이터를 데이터 웨어하우스로 변환, 병합 및 업로드하는 작업이 여기에 포함됩니다.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/23/2018
  [의미 체계 인덱싱](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 마이닝 프로젝트의 데이터 준비 및 학습 단계에 필요한 구성 요소 및 기능을 제공합니다. 스크립트와 같은 다른 도구를 사용하여 데이터 정리 및 준비 태스크를 수행할 수도 있지만 데이터 마이닝에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하면 다음과 같은 이점이 있습니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]구성 요소 및 데이터 준비 및 데이터 마이닝 프로젝트의 학습 단계에 필요한 기능을 제공 합니다. 스크립트와 같은 다른 도구를 사용하여 데이터 정리 및 준비 태스크를 수행할 수도 있지만 데이터 마이닝에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하면 다음과 같은 이점이 있습니다.  
   
 -   태스크를 반복, 자동화, 분기 및 확장이 가능한 워크플로의 일부로 표현할 수 있습니다.  
   
@@ -209,6 +209,6 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [다차원 모델 솔루션 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [테이블 형식 모델 솔루션](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [테이블 형식 모델 솔루션](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

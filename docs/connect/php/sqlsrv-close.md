@@ -1,32 +1,34 @@
 ---
 title: sqlsrv_close | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_close
+apiname:
+- sqlsrv_close
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_close
 - API Reference, sqlsrv_close
 ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7e86837cabb40eda586ac7147e5559084d651d6d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: cb772c02196c2c47dd0c5f8542fdb23ef3745fdb
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvclose"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,7 +76,8 @@ echo "Connection closed.\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
+## <a name="see-also"></a>관련 항목:  
+[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
+
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
   

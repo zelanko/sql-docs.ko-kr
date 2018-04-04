@@ -13,6 +13,7 @@
 ## [백업 및 복원](tutorial-backup-restore-sql-server.md)
 # 방법 가이드
 ## [대시보드 및 정보 위젯](insight-widgets.md)
+## [확장](extensions.md)
 ## [코드 조각](code-snippets.md)
 ## [통합된 터미널(PowerShell, Bash)](integrated-terminal.md)
 ## [바로 가기 키](keyboard-shortcuts.md)

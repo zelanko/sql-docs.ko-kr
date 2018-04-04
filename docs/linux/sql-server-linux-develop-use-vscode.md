@@ -1,6 +1,6 @@
 ---
-title: "SQL Server에 대 한 Visual Studio Code mssql 확장을 사용 하 여 | Microsoft Docs"
-description: "이 자습서에서는 VS Code에 mssql 확장명을 사용 하는 방법을 보여 줍니다. 이 확장을 사용 하면 편집 하 고 VS Code에서 Transact SQL 스크립트를 실행할 수 있습니다."
+title: SQL Server에 대 한 Visual Studio Code mssql 확장을 사용 하 여 | Microsoft Docs
+description: 이 자습서에서는 VS Code에 mssql 확장명을 사용 하는 방법을 보여 줍니다. 이 확장을 사용 하면 편집 하 고 VS Code에서 Transact SQL 스크립트를 실행할 수 있습니다.
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio 코드를 사용 하 여 만들고 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 합니다.
 
@@ -97,7 +97,7 @@ Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그
 
    | 설정 | Description |
    |-----|-----|
-   | **서버 이름** | SQL Server 인스턴스 이름입니다. 이 자습서에서 사용 하 여 **localhost** 컴퓨터에 로컬 SQL Server 인스턴스에 연결할 수 있습니다. 원격 SQL Server에 연결 된 경우에 대상 SQL Server 컴퓨터 또는 IP 주소 이름을 입력 합니다. |
+   | **서버 이름** | SQL Server 인스턴스 이름입니다. 이 자습서에서 사용 하 여 **localhost** 컴퓨터에 로컬 SQL Server 인스턴스에 연결할 수 있습니다. 원격 SQL Server에 연결 된 경우에 대상 SQL Server 컴퓨터 또는 IP 주소 이름을 입력 합니다. SQL Server 인스턴스에 대 한 포트를 지정 해야 할 경우 이름에서 구분 하려면 쉼표를 사용 합니다. 예를 들어 1401 포트에서 실행 하는 로컬 서버에 대 한 입력 **localhost, 1401**합니다. |
    | **[선택 사항] 데이터베이스 이름** | 이 데이터베이스에 사용 하려는입니다. 이 자습서에는 데이터베이스와 키를 눌러 지정 하지 않으면 **ENTER** 를 계속 합니다. |
    | **사용자 이름** | 서버에서 데이터베이스에 액세스할 수 있는 사용자의 이름을 입력 합니다. 이 자습서에서는 기본값을 사용 하 여 **SA** SQL Server 설치를 사용 하는 동안 만든 계정. |
    | **암호(SQL 로그인)** | 지정된 사용자의 암호를 입력합니다. | 

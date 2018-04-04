@@ -1,16 +1,16 @@
 ---
-title: "Windows 서비스 계정 및 권한 구성 | Microsoft Docs"
-ms.custom: 
+title: Windows 서비스 계정 및 권한 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - startup service states [SQL Server]
@@ -53,16 +53,16 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
-ms.author: MikeRayMSFT
+ms.author: MikeRay
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 32412d70d3dcf52fb467c5c4854526feb2fafe9d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4f037130b00871303648aefd3d35553e702091a8
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,8 +140,8 @@ ms.lasthandoff: 02/23/2018
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)*|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed  Replay  Controller|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed  Replay  Client|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)*|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)*|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[네트워크 서비스](#Network_Service)|[가상 계정](#VA_Desc)*|  
 |전체 텍스트 검색 FD 표시 아이콘|[로컬 서비스](#Local_Service)|[가상 계정](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저|[로컬 서비스](#Local_Service)|[로컬 서비스](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[로컬 시스템](#Local_System)|[로컬 시스템](#Local_System)|  
@@ -207,7 +207,7 @@ ms.lasthandoff: 02/23/2018
     |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스의 기본 인스턴스|**NT SERVICE\MSSQLSERVER**|  
     |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 로 이름이 지정된 **로 이름이 지정된**서비스의 명명된 인스턴스|**NT SERVICE\MSSQL$PAYROLL**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스(기본 인스턴스: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
-    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 이름이 지정된 **인스턴스의**에이전트 서비스|**NT SERVICE\SQLAGENT$PAYROLL**|  
+    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PAYROLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 이름이 지정된 **로 이름이 지정된**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
  관리 서비스 계정 및 가상 계정에 대한 자세한 내용은 **서비스 계정 단계별 가이드** 의 [관리 서비스 계정 및 가상 계정 개념](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) 섹션과 [관리 서비스 계정 FAQ(질문과 대답)](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx)를 참조하세요.  
   
@@ -236,8 +236,8 @@ ms.lasthandoff: 02/23/2018
 |MSSQLServerOLAPService|ASSVCACCOUNT, ASSVCPASSWORD, ASSVCSTARTUPTYPE|  
 |ReportServer|RSSVCACCOUNT, RSSVCPASSWORD, RSSVCSTARTUPTYPE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed  Replay  Controller|DRU_CTLR, CTLRSVCACCOUNT,CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed  Replay  Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT,CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
 |[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS***|
 |PolyBase 엔진| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
@@ -362,7 +362,7 @@ ms.lasthandoff: 02/23/2018
 ||130\dts\binn|읽기, 실행|  
 ||130\shared|읽기, 실행|  
 ||130\shared\Errordumps|읽기, 쓰기|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|130\shared\ASConfig|읽기|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저|130\shared\ASConfig|읽기|  
 ||130\shared|읽기, 실행|  
 ||130\shared\Errordumps|읽기, 쓰기|  
 |SQLWriter|해당 없음(로컬 시스템으로 실행)||  
@@ -379,14 +379,14 @@ ms.lasthandoff: 02/23/2018
 ||80\tools|읽기, 실행|  
 ||130\sdk|읽기|  
 ||Microsoft SQL Server\130\Setup Bootstrap|읽기, 실행|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed  Replay  Controller|\<ToolsDir>\DReplayController\Log\(빈 디렉터리)|읽기, 실행, 폴더 내용 보기|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\DReplayController\Log\(빈 디렉터리)|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayController\resources\|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayController\\{모든 dll}|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayController\DReplayController.config|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayController\IRTemplate.tdf|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|읽기, 실행, 폴더 내용 보기|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed  Replay  Client|\<ToolsDir>\DReplayClient\Log\|R읽기, 실행, 폴더 내용 보기|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\DReplayClient\Log\|R읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayClient\resources\|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayClient\(모든 dll)|읽기, 실행, 폴더 내용 보기|  

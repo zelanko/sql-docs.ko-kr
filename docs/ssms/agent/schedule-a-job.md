@@ -1,34 +1,40 @@
 ---
-title: "작업 예약 | Microsoft 문서"
-ms.custom: 
+title: 작업 예약 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scheduling jobs [SQL Server]
 - SQL Server Agent jobs, scheduling
 - jobs [SQL Server Agent], scheduling
 ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 608a92150a2115021b0ed6e996c3b5e22abc40cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5d3e4ba8f64464355c21ade4fb38b40ee70c4eda
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업을 예약하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
+이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업을 예약하는 방법에 대해 설명합니다.  
   
 -   **시작하기 전 주의 사항:** ,  
   

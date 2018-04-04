@@ -1,24 +1,24 @@
----
+﻿---
 title: "Microsoft SQL Operations Studio(미리 보기) 다운로드 및 설치 | Microsoft Docs"
 description: "Microsoft SQL Operations Studio(미리 보기)를 Windows, macOS, 또는 Linux에 다운로드 및 설치합니다."
 ms.custom: tools|sos
-ms.date: 03/05/2018
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cb41e1824fc157932e2cb08292608bb97e46712
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 2c5abc032936bb63b50becd9f37300f294e14eb9
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio(미리 보기) 다운로드 및 설치
 

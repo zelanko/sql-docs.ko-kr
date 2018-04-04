@@ -2,34 +2,36 @@
 title: Microsoft OLE DB Provider for SQL Server | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 69e32ae7ddb254e18d0789f22bb6471da17a0c5e
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 개요
 Microsoft OLE DB Provider for SQL Server, SQLOLEDB Microsoft SQL Server에 액세스 하는 ADO 수 있습니다.
+
+**참고:** 새로운 개발에이 드라이버를 사용 하지는 것입니다. 새 OLE DB 공급자가 호출 됩니다는 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 앞으로 가장 최근의 서버 기능으로 업데이트 됩니다.
 
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
  이 공급자에 연결할 설정는 *공급자* 인수에는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을:

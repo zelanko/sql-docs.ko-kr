@@ -1,35 +1,36 @@
 ---
-title: "기존 계층적 데이터로 테이블 채우기 | Microsoft 문서"
-ms.custom: 
+title: 기존 계층적 데이터로 테이블 채우기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09e5072fb37f7791f3f597ab3d2a6e382e302e47
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: e2582323d122a3b8cd8042fc028d8da73fb8a1a1
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>1-2단원 - 기존 계층적 데이터로 테이블 채우기
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 이 태스크에서는 새 테이블을 만들고 이를 **EmployeeDemo** 테이블의 데이터로 채웁니다. 이 태스크의 단계는 다음과 같습니다.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+이 태스크에서는 새 테이블을 만들고 이를 **EmployeeDemo** 테이블의 데이터로 채웁니다. 이 태스크의 단계는 다음과 같습니다.  
   
 -   **hierarchyid** 열이 포함된 새 테이블을 만듭니다. 이 열로 기존 **EmployeeID** 및 **ManagerID** 열을 대체할 수도 있지만 여기서는 해당 열을 유지합니다. 이는 기존 응용 프로그램에서 해당 열을 참조할 수 있으며 해당 열을 유지하는 것이 전송 후에 데이터를 이해하는 데 도움이 되기 때문입니다. 테이블 정의에서 **OrgNode** 를 기본 키로 지정하므로 해당 열에 고유 값을 포함해야 합니다. **OrgNode** 열의 클러스터형 인덱스는 **OrgNode** 시퀀스의 날짜를 저장합니다.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 -   쿼리 편집기 창에서 다음 코드를 실행하여 **HumanResources.NewOrg**라는 새 테이블을 만듭니다.  
   
     ```  
-    CREATE TABLE NewOrg  
+    CREATE TABLE HumanResources.NewOrg  
     (  
       OrgNode hierarchyid,  
       EmployeeID int,  
@@ -83,9 +84,8 @@ ms.lasthandoff: 01/18/2018
     INSERT #Children (EmployeeID, ManagerID, Num)  
     SELECT EmployeeID, ManagerID,  
       ROW_NUMBER() OVER (PARTITION BY ManagerID ORDER BY ManagerID)   
-    FROM EmployeeDemo  
-    GO  
-  
+    FROM HumanResources.EmployeeDemo  
+    GO 
     ```  
   
 2.  **#Children** 테이블을 검토합니다. **Num** 열에 각 관리자에 대한 일련 번호가 포함되는 방식을 확인합니다.  
@@ -97,31 +97,24 @@ ms.lasthandoff: 01/18/2018
     ```  
   
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-    `EmployeeID ManagerID Num`  
-  
-    `---------- --------- ---`  
-  
-    `1        NULL       1`  
-  
-    `2         1         1`  
-  
-    `3         1         2`  
-  
-    `4         2         1`  
-  
-    `5         2         2`  
-  
-    `6         2         3`  
-  
-    `7         3         1`  
-  
-    `8         3         2`  
-  
-    `9         4         1`  
-  
-    `10        4         2`  
-  
+
+    ```
+    EmployeeID  ManagerID   Num
+    1   NULL    1
+    2   1   1
+    16  1   2
+    25  1   3
+    234 1   4
+    263 1   5
+    273 1   6
+    3   2   1
+    4   3   1
+    5   3   2
+    6   3   3
+    7   3   4
+    ```
+
+
 3.  **NewOrg** 테이블을 채웁니다. GetRoot 및 ToString 메서드를 사용하여 **Num** 값을 **hierarchyid** 형식에 연결한 다음 **OrgNode** 열을 결과 계층 값으로 업데이트합니다.  
   
     ```  
@@ -131,7 +124,7 @@ ms.lasthandoff: 01/18/2018
     SELECT hierarchyid::GetRoot() AS OrgNode, EmployeeID   
     FROM #Children AS C   
     WHERE ManagerID IS NULL   
-  
+
     UNION ALL   
     -- This section provides values for all nodes except the root  
     SELECT   
@@ -141,23 +134,21 @@ ms.lasthandoff: 01/18/2018
     JOIN paths AS p   
        ON C.ManagerID = P.EmployeeID   
     )  
-    INSERT NewOrg (OrgNode, O.EmployeeID, O.LoginID, O.ManagerID)  
+    INSERT HumanResources.NewOrg (OrgNode, O.EmployeeID, O.LoginID, O.ManagerID)  
     SELECT P.path, O.EmployeeID, O.LoginID, O.ManagerID  
-    FROM EmployeeDemo AS O   
+    FROM HumanResources.EmployeeDemo AS O   
     JOIN Paths AS P   
        ON O.EmployeeID = P.EmployeeID  
-    GO  
-  
+    GO 
     ```  
   
 4.  **hierarchyid** 열을 문자 형식으로 변환하면 이해하기가 더 쉬워집니다. **OrgNode** 열의 두 가지 표현이 포함된 다음 코드를 실행하여 **NewOrg** 테이블의 데이터를 검토합니다.  
   
     ```  
     SELECT OrgNode.ToString() AS LogicalNode, *   
-    FROM NewOrg   
+    FROM HumanResources.NewOrg   
     ORDER BY LogicalNode;  
     GO  
-  
     ```  
   
     **LogicalNode** 열은 계층을 나타내는 보다 읽기 쉬운 텍스트 형식으로 **hierarchyid** 열을 변환합니다. 나머지 태스크에서는 `ToString()` 메서드를 사용하여 **hierarchyid** 열의 논리 형식을 표시합니다.  

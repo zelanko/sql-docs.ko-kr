@@ -10,21 +10,23 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 7b389c5b58dc0afde077f70e2fd8bec7c6cac4d0
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>자습서:: SQL Server Management Studio를 사용하여 SQL Server 연결 및 쿼리
+# <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>자습서: SQL Server Management Studio를 사용하여 SQL Server 연결 및 쿼리
 이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결하고 몇 가지 기본 T-SQL(Transact-SQL) 명령을 실행하는 방법을 알려 줍니다. 이 문서에서는 다음을 수행하는 방법을 보여줍니다.
-    - [SQL Server에 연결](#connect-to-a-sql-server)
-    - [새 데이터베이스 만들기(**TutorialDB**)](#create-a-database)
-    - [새 데이터베이스에서 테이블(**고객**) 만들기](#create-a-table)
-    - [새 **고객** 테이블에 행 삽입](#insert-rows)
-    - [**고객** 테이블 쿼리 및 결과 보기](#view-query-results)
-    - [쿼리 창 테이블을 사용하여 연결 속성 확인](#verify-your-query-window-connection-properties)
-    - [쿼리 창이 연결된 서버 변경](#change-server-connection-within-query-window)
+
+> [!div class="checklist"]
+> * [SQL Server에 연결](#connect-to-a-sql-server)
+> * [새 데이터베이스 만들기(**TutorialDB**)](#create-a-database)
+> * [새 데이터베이스에서 테이블(**고객**) 만들기](#create-a-table)
+> * [새 **고객** 테이블에 행 삽입](#insert-rows)
+> * [**고객** 테이블 쿼리 및 결과 보기](#view-query-results)
+> * [쿼리 창 테이블을 사용하여 연결 속성 확인](#verify-your-query-window-connection-properties)
+> * [쿼리 창이 연결된 서버 변경](#change-server-connection-within-query-window)
 
 
 ## <a name="prerequisites"></a>사전 요구 사항

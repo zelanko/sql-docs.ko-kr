@@ -1,15 +1,16 @@
 ---
-title: "SQL Server 에이전트 오류 로그 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 에이전트 오류 로그 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -17,19 +18,23 @@ helpviewer_keywords:
 - errors [SQL Server], logs
 - SQL Server Agent, errors
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eb8fbd2ad4327e55bc9447e6ebb2de1141c385b3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4a35300608e7f0e7ef8e72fc29399d3f7eeb1e80
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server 에이전트 오류 로그
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 기본적으로 경고 및 오류를 기록하는 오류 로그를 만듭니다. 이 로그에는 다음 경고 및 오류가 표시됩니다.  
   
 -   "\<*job_name*> 작업이 실행 중에 삭제되었습니다."와 같은 잠재적 문제에 대한 정보를 제공하는 경고 메시지  

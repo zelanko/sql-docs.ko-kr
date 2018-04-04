@@ -1,16 +1,16 @@
 ---
-title: "백업 복원, 복구 및 관리를 위한 RESTORE 문(Transact-SQL) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/17/2017
+title: 백업 복원, 복구 및 관리를 위한 RESTORE 문(Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,22 +24,24 @@ helpviewer_keywords:
 - file restores [SQL Server], RESTORE statement
 - transaction log backups [SQL Server], RESTORE statement
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-caps.latest.revision: 
+caps.latest.revision: 15
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d756c4fb9f299abe88ef46c14726f613e8f66497
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fb1072cbbf427633248c765506de9742021030ab
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>백업 복원, 복구 및 관리를 위한 RESTORE 문(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   이 섹션에서는 백업을 위한 RESTORE 문에 대해 설명합니다. 백업을 복원 및 복구하기 위한 주 RESTORE {DATABASE | LOG} 문 외에도 여러 가지 보조 RESTORE 문을 사용하여 백업을 관리하고 복원 시퀀스를 계획할 수 있습니다. 이 보조 RESTORE 명령에는 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY가 포함됩니다.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!IMPORTANT]  
 >  이전 버전의 SQL Server에서는 모든 사용자가 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY 및 RESTORE VERIFYONLY Transact-SQL 문을 사용하여 백업 세트 및 백업 장치에 대한 정보를 검색할 수 있었습니다. 여기에는 백업 파일의 내용에 대한 정보도 포함되므로 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 이러한 문을 사용하려면 CREATE DATABASE 권한이 필요합니다. 이 요구 사항을 통해 이전 버전보다 더욱 백업 파일의 보안을 유지하고 백업 정보를 보호할 수 있습니다. 이 사용 권한에 대한 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 01/25/2018
 |[RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|RESTORE FILELISTONLY Transact-SQL 문에 대해 설명합니다. 이 문은 백업 세트에 포함된 데이터베이스와 로그 파일의 목록이 포함된 결과 집합을 반환하는 데 사용됩니다.|  
 |[RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|RESTORE HEADERONLY Transact-SQL 문에 대해 설명합니다. 이 문은 특정 백업 장치에서 모든 백업 세트에 대한 백업 헤더 정보가 모두 포함된 결과 집합을 반환하는 데 사용됩니다.|  
 |[RESTORE LABELONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|RESTORE LABELONLY Transact-SQL 문에 대해 설명합니다. 이 문은 지정된 백업 장치가 식별하는 백업 미디어에 대한 정보가 포함된 결과 집합을 반환하는 데 사용됩니다.|  
-|[RESTORE REWINDONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|RESTORE REWINDONLY Transact-SQL 문에 대해 설명합니다. 이 문은 NOREWIND 옵션으로 실행된 BACKUP 또는 RESTORE 문에 의해 열려 있던 테이프 장치를 되감고 닫는 데 사용됩니다.|  
+|[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|RESTORE REWINDONLY Transact-SQL 문에 대해 설명합니다. 이 문은 NOREWIND 옵션으로 실행된 BACKUP 또는 RESTORE 문에 의해 열려 있던 테이프 장치를 되감고 닫는 데 사용됩니다.|  
 |[RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|RESTORE VERIFYONLY Transact-SQL 문에 대해 설명합니다. 이 문은 백업을 확인하지만 복원하지는 않으며 백업 세트가 완성되었고 전체 백업을 읽을 수 있는지 확인합니다. 또한 데이터 구조를 확인하려고 시도하지 않습니다.|  
   
 ## <a name="see-also"></a>참고 항목  

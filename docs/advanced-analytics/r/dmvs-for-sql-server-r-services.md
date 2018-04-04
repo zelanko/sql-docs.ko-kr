@@ -1,31 +1,31 @@
 ---
-title: "SQL Server 컴퓨터 학습 서비스에 대 한 Dmv | Microsoft Docs"
-ms.custom: 
+title: SQL Server 컴퓨터 학습 서비스에 대 한 Dmv | Microsoft Docs
+ms.custom: ''
 ms.date: 07/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d3c90457c7d55071520546e6362a451427503a52
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e51f5229eb085eb4b92a4f6f53cc7b28ebb7485
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 Dmv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-항목에서는 시스템 카탈로그 뷰 및 Dmv 관련 된 SQL Server의 기계 학습을 나열 합니다.
+시스템 카탈로그 뷰 및 Dmv는 기계 학습에서 SQL Server 관련 된 문서를 나열 합니다.
 
 확장된 이벤트에 대 한 정보를 참조 하십시오. [기계 학습의 확장 이벤트](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)합니다.
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/11/2018
   인스턴스별로 이 DMV에서 외부 스크립트에 대해 보고되는 카운터는 다음과 같습니다.
 
   + **총 실행**: 로컬 또는 원격 호출에 의해 시작 되는 외부 프로세스의 수
-  + **병렬 실행**: 스크립트를 포함 하는  _@parallel_  사양과 하 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 을 생성 하는 병렬 쿼리 계획을 사용 하 여 수
+  + **병렬 실행**: 스크립트를 포함 하는 _@parallel_ 사양과 하 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 을 생성 하는 병렬 쿼리 계획을 사용 하 여 수
   + **실행 될 때 스트리밍**: 스트리밍 기능은 호출 된 횟수
   + **SQL CC 실행**: 수가 외부 스크립트 실행 호출을 원격으로 인스턴스화한 하 고 SQL Server를 사용 하 여 계산 컨텍스트로 써 있는
   + **묵시적 인증. 로그인**: 묵시적 인증을 사용하여 ODBC 루프백 호출이 수행된 횟수, 즉 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 스크립트 요청을 보내는 사용자를 대신하여 호출을 실행한 횟수입니다.

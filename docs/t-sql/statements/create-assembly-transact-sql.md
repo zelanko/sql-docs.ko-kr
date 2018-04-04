@@ -1,16 +1,16 @@
 ---
 title: CREATE ASSEMBLY(Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 8/07/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASSEMBLY
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - CREATE ASSEMBLY statement
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-caps.latest.revision: 
+caps.latest.revision: 94
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 62fb31b65d89180fa14d75670a7c4bdbf7e9942c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   클래스 메타데이터와 관리 코드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 개체로 포함하는 관리되는 응용 프로그램 모듈을 만듭니다. 이 모듈을 참조하여 데이터베이스에서 CLR(공용 언어 런타임) 함수, 저장 프로시저, 트리거, 사용자 정의 집계 및 사용자 정의 형식을 만들 수 있습니다.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 >  [!WARNING]
 >  CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `clr strict security`라는 `sp_configure` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. 자세한 내용은 [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)를 참조하세요.  
   
@@ -88,7 +90,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
  >  [!IMPORTANT]  
- >  `PERMISSION_SET` 옵션은 시작 경고에서 설명된 `clr strict security` 옵션의 영향을 받습니다. `clr strict security`을 사용할 수 있는 경우 모든 어셈블리는 `UNSAFE`처럼 처리됩니다.
+ >  `PERMISSION_SET` 옵션은 시작 경고에서 설명된 `clr strict security` 옵션의 영향을 받습니다. `clr strict security`을 사용하면 모든 어셈블리가 `UNSAFE`로 처리됩니다.
  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 어셈블리에 액세스할 때 이 어셈블리에 부여된 코드 액세스 권한 집합을 지정합니다. 지정하지 않으면 기본적으로 SAFE가 적용됩니다.  
   
@@ -111,7 +113,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 >   
 >  UNSAFE를 지정하면 어셈블리의 코드를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 공간에서 모든 작업을 자유롭게 수행할 수 있게 되므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 취약해질 가능성이 있습니다. UNSAFE 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 공용 언어 런타임 중 하나의 보안 시스템을 손상시킬 수도 있습니다. 따라서 UNSAFE 권한은 가장 높은 수준의 트러스트된 어셈블리에만 부여해야 합니다. **sysadmin** 고정 서버 역할의 멤버만 UNSAFE 어셈블리를 만들고 변경할 수 있습니다.  
   
- 어셈블리 권한 집합에 대한 자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)을 참조하십시오.  
+ 어셈블리 권한 집합에 대한 자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)를 참조하십시오.  
   
 ## <a name="remarks"></a>Remarks  
  CREATE ASSEMBLY는 관리 코드에서 .dll 파일로 미리 컴파일된 어셈블리를 SQL Server 인스턴스 내부에서 사용할 수 있도록 업로드합니다.  
@@ -158,7 +160,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  업로드할 어셈블리에서 참조하는 어셈블리가 이미 데이터베이스에 있는 경우 사용자는 해당 어셈블리의 소유자여야 합니다. 파일 경로를 사용하여 어셈블리를 업로드하려면 현재 사용자가 Windows 인증 로그인이거나 **sysadmin** 고정 서버 역할의 멤버여야 합니다. CREATE ASSEMBLY를 실행하는 사용자의 Windows 로그인에는 문에서 로드할 공유와 파일에 대한 읽기 권한이 있어야 합니다.  
 
-### <a name="permissions-with-clr-strict-security"></a>CLR 엄격한 보안에 대한 사용 권한    
+### <a name="permissions-with-clr-strict-security"></a>엄격한 CLR 보안 사용 권한    
 `CLR strict security`를 사용할 때 CLR 어셈블리를 만드는 데 필요한 권한은 다음과 같습니다.
 
 - 사용자에게 `CREATE ASSEMBLY` 권한이 있어야 합니다.  
@@ -166,7 +168,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   - 어셈블리는 서버에 대한 `UNSAFE ASSEMBLY` 권한이 있는 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명됩니다. 어셈블리에 서명하는 것이 좋습니다.  
   - 데이터베이스는 `ON`으로 설정된 `TRUSTWORTHY` 속성을 가지고 있고 서버에 대한 `UNSAFE ASSEMBLY` 권한이 있는 로그인으로 소유됩니다. 이 방법은 권장되지 않습니다.  
   
- 어셈블리 권한 집합에 대한 자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)을 참조하십시오.  
+ 어셈블리 권한 집합에 대한 자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)를 참조하십시오.  
   
 ## <a name="examples"></a>예  
   
@@ -174,7 +176,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 다음 예에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 예제를 로컬 컴퓨터의 기본 위치에 설치하고 HelloWorld.csproj 예제 응용 프로그램을 컴파일했다고 가정합니다. 자세한 내용은 [Hello World 예제](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)를 참조합니다.  
+ 다음 예에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 예제를 로컬 컴퓨터의 기본 위치에 설치하고 HelloWorld.csproj 예제 응용 프로그램을 컴파일했다고 가정합니다. 자세한 내용은 [Hello World 예제](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)를 참조하세요.  
   
 ```  
 CREATE ASSEMBLY HelloWorld   
@@ -195,13 +197,13 @@ WITH PERMISSION_SET = SAFE;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
- [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
+ [ALTER ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
+ [DROP ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
- [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+ [CREATE AGGREGATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   

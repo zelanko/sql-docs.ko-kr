@@ -1,32 +1,41 @@
 ---
-title: "경고 속성(기록 페이지) | Microsoft 문서"
-ms.custom: 
+title: 경고 속성(기록 페이지) | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.ag.alert.history.f1
+f1_keywords:
+- sql13.ag.alert.history.f1
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58d89f50254bbdb9a0e7bf620252a9b3640d9103
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3abf8ef423858ee50d81160882f27ccfb829a404
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="alert-properties-history-page"></a>경고 속성(기록 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 경고의 기록을 확인하고 수정할 수 있습니다.  
-  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
+
+이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 경고의 기록을 확인하고 수정할 수 있습니다.  
+
 ## <a name="options"></a>변수  
 **마지막 경고 날짜**  
 지정한 이벤트가 마지막으로 발생한 날짜를 표시하거나, 경고가 생성된 이후로 이벤트가 발생한 적이 없으면 **(발생한 적 없음)** 을 표시합니다.  

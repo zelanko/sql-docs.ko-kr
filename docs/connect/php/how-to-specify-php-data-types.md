@@ -1,30 +1,31 @@
 ---
-title: "방법: PHP 데이터 형식을 지정 | Microsoft Docs"
-ms.custom: 
+title: '방법: PHP 데이터 형식을 지정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a0374a32d2798a28cfe3e27ab557921763eea36
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b12a1042d4090a9e2369f602010199dea54431ed
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-php-data-types"></a>방법: PHP 데이터 형식 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,14 +38,14 @@ PDO_SQLSRV 드라이버를 사용하는 경우 서버에서 데이터를 검색�
   
 2.  데이터 행을 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md)에서 읽을 수 있도록 만듭니다.  
   
-3.  원하는 PHP 데이터 형식을 선택적인 세 번째 매개 변수로 지정한 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 를 사용하여 반환된 행에서 필드 데이터를 검색합니다. 선택적인 세 번째 매개 변수를 지정하지 않으면 데이터가 기본 PHP 형식에 따라 반환됩니다. 기본 PHP 반환 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요.  
+3.  원하는 PHP 데이터 형식을 선택적인 세 번째 매개 변수로 지정한 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 를 사용하여 반환된 행에서 필드 데이터를 검색합니다. 선택적인 세 번째 매개 변수를 지정 하지 않으면 데이터가 기본 PHP 형식에 따라 반환 됩니다. 기본 PHP 반환 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요.  
   
-    PHP 데이터 형식을 지정 하는 데 사용 하는 상수에 대 한 내용은의 Phptype 섹션을 참조 하십시오. [상수 &#40; Microsoft Drivers for PHP for SQL server&#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    PHP 데이터 형식을 지정 하는 데 사용 하는 상수에 대 한 내용은의 Phptype 섹션을 참조 하십시오. [상수 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 AdventureWorks 데이터베이스의 *Production.ProductReview* 테이블에서 행을 검색합니다. 반환된 각 행에서 *ReviewDate* 필드는 문자열로 검색되고 *Comments* 필드는 스트림으로 검색됩니다. 스트림 데이터는 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 함수를 사용하여 표시됩니다.  
+다음 예제에서는 AdventureWorks 데이터베이스의 *Production.ProductReview* 테이블에서 행을 검색합니다. 반환 된 각 행에는 *ReviewDate* 필드는 문자열로 검색 되 고 *주석* 필드는 스트림으로 검색 됩니다. 스트림 데이터는 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 함수를 사용하여 표시됩니다.  
   
-이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -110,9 +111,12 @@ sqlsrv_close( $conn);
 > [!NOTE]  
 > [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) 함수는 쿼리를 실행하기 전에 형식 정보를 포함하여 필드 정보를 얻는 방법을 제공합니다.  
   
-## <a name="see-also"></a>참고 항목  
-[데이터 검색](../../connect/php/retrieving-data.md)  
-[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
-[방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+## <a name="see-also"></a>관련 항목:  
+[데이터 검색](../../connect/php/retrieving-data.md)
+
+[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

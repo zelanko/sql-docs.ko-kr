@@ -1,16 +1,16 @@
 ---
 title: sys.fn_get_audit_file (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_audit_file_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b7a7d79b8cbaf65e803d042efd86a790e2eeb1d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 982113b9acc85b0dd340e2850ad6efb463a500cb
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ fn_get_audit_file ( file_pattern,
  
       - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\> /**  -특정 데이터베이스에 대 한 모든 감사 파일 (blob)을 수집 합니다.    
       
-      - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\> / \<AuditName\>/\<CreationDate\>/\<FileName\>.xel** -특정 감사 파일 (blob)을 수집 합니다.
+      - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>.xel** -특정 감사 파일 (blob)을 수집 합니다.
   
 > [!NOTE]  
 >  파일 이름 패턴 없이 경로를 전달하면 오류가 생성됩니다.  
@@ -119,16 +119,18 @@ fn_get_audit_file ( file_pattern,
 |additional_information|**nvarchar(4000)**|단일 이벤트에만 적용되는 고유 정보가 XML로 반환됩니다. 감사 가능한 적은 수의 동작에 이 종류의 정보가 포함되어 있습니다.<br /><br /> TSQL 스택이 연결되어 있는 동작에 대해 단일 TSQL 스택 수준이 XML 형식으로 표시됩니다. 이 XML 형식은 다음과 같습니다.<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> 프레임 nest_level은 프레임의 현재 중첩 수준을 나타냅니다. 모듈 이름은 세 부분(database_name, schema_name, object_name)으로 된 형식으로 표시됩니다.  모듈 이름 처럼 잘못 된 xml 문자를 이스케이프 처리를 구문 분석 됩니다 `'\<'`, `'>'`, `'/'`, `'_x'`합니다. 로 이스케이프 됩니다 `_xHHHH\_`합니다. HHHH는 해당 문자에 대한 4자리 16진수 UCS-2 코드를 나타냅니다.<br /><br /> Null을 허용합니다. 이벤트에서 보고한 추가 정보가 없으면 NULL을 반환합니다.|  
 |file_name|**varchar(260)**|레코드를 가져온 감사 로그 파일의 경로 및 이름입니다. Null을 허용하지 않습니다.|  
 |audit_file_offset|**bigint**|감사 레코드가 포함된 파일의 버퍼 오프셋입니다. Null을 허용하지 않습니다.|  
-|user_defined_event_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자 정의 이벤트 id에 대 한 인수로 전달 된 **sp_audit_write**합니다. **NULL** 시스템 이벤트 (기본값)에 대 한 및 0이 아닌 사용자 정의 이벤트에 대 한 합니다. 자세한 내용은 참조 [sp_audit_write &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
+|user_defined_event_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자 정의 이벤트 id에 대 한 인수로 전달 된 **sp_audit_write**합니다. **NULL** 시스템 이벤트 (기본값)에 대 한 및 0이 아닌 사용자 정의 이벤트에 대 한 합니다. 자세한 내용은 참조 [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)합니다.|  
 |user_defined_information|**nvarchar(4000)**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자가을에 기록 하려는 추가 정보를 기록 하는 데 사용 |사용 하 여 감사 로그는 **sp_audit_write** 저장 프로시저입니다.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | SQL Server만 (2016부터 시작) |  
-|transaction_id |**bigint** | SQL Server만 (2016부터 시작) |  
-|client_ip |**nvarchar(128)** | Azure SQL DB + SQL Server (2017부터 시작) |  
-|application_name |**nvarchar(128)** | Azure SQL DB + SQL Server (2017부터 시작) |  
-|duration_milliseconds |**bigint** | Azure SQL DB에만 |  
-|response_rows |**bigint** | Azure SQL DB에만 |  
-|affected_rows |**bigint** | Azure SQL DB에만 |  
+|sequence_group_id |**varbinary** | **적용 대상**: SQL Server만 (2016부터 시작) |  
+|transaction_id |**bigint** | **적용 대상**: SQL Server만 (2016부터 시작) |  
+|client_ip |**nvarchar(128)** | **적용 대상**: Azure SQL DB + SQL Server (2017부터 시작) |  
+|application_name |**nvarchar(128)** | **적용 대상**: Azure SQL DB + SQL Server (2017부터 시작) |  
+|duration_milliseconds |**bigint** | **적용 대상**: Azure SQL DB에만 |  
+|response_rows |**bigint** | **적용 대상**: Azure SQL DB에만 |  
+|affected_rows |**bigint** | **적용 대상**: Azure SQL DB에만 |  
+|connection_id |GUID | **적용 대상**: Azure SQL DB에만 |
+|data_sensitivity_information |nvarchar(4000) | **적용 대상**: Azure SQL DB에만 |
   
 ## <a name="remarks"></a>주의  
  경우는 *file_pattern* 인수에 전달 된 **fn_get_audit_file** 존재 하지 않는 파일 또는 경로 참조 하거나 파일이 감사 파일이 없으면는 **MSG_INVALID_AUDIT_FILE**오류 메시지가 반환 됩니다.  
@@ -176,29 +178,29 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```
 
-감사를 만드는 방법에 대 한 전체 예제를 보려면 [SQL Server Audit &#40; 데이터베이스 엔진 &#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)합니다.
+감사를 만드는 방법에 대한 전체 예에 대해서는 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)를 참조하십시오.
 
 Azure SQL 데이터베이스 감사를 설정에 대 한 자세한 내용은 참조 하십시오. [SQL 데이터베이스 감사 시작](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing)합니다.
   
 ## <a name="see-also"></a>관련 항목:  
- [서버 감사 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER audit&#40; Transact SQL &#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER audit&#40; Transact SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [SERVER AUDIT specification&#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT specification&#40; Transact SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT specification&#40; Transact SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [DATABASE AUDIT specification&#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT specification&#40; Transact SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [DROP DATABASE AUDIT specification&#40; Transact SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER authorization&#40; Transact SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.server_audits&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys.database_audit_specifications&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [서버 감사 및 서버 감사 사양 만들기](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   

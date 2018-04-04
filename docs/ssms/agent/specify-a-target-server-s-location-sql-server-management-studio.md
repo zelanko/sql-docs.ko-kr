@@ -1,33 +1,39 @@
 ---
-title: "대상 서버 위치 지정 | Microsoft 문서"
-ms.custom: 
+title: 대상 서버 위치 지정 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], location
 ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d85bf015d8ec1f61f913c97b4aa681ed05982e5
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ae9161b1f1481cfd0b98ead3fc30253ac10ad48b
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>대상 서버 위치 지정(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql_md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]에서 다중 서버 관리 구성에서 대상 서버의 위치를 지정하는 방법을 설명합니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
+이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql_md.md)]에서 다중 서버 관리 구성에서 대상 서버의 위치를 지정하는 방법을 설명합니다.  
   
 **항목 내용**  
   

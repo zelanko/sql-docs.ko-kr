@@ -102,8 +102,8 @@
 ## [데이터 마이닝](data-mining-tutorials-analysis-services.md)  
 
 # 방법
-## [테이블 형식 모델링](../analysis-services/tabular-models/tabular-models-ssas.md)
-## [다차원 모델링](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
+## [테이블 형식 모델](../analysis-services/tabular-models/tabular-models-ssas.md)
+## [다차원 모델](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
 ## [데이터 마이닝](../analysis-services/data-mining/data-mining-ssas.md)
 ## [SharePoint용 PowerPivot](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)
 ## [서버 관리](../analysis-services/instances/analysis-services-instance-management.md)

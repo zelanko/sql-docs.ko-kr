@@ -1,15 +1,15 @@
 ---
-title: "배포 스크립트를 만드는 데 입력된 파일 이해 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
+title: 배포 스크립트를 만드는 데 입력된 파일 이해 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - input files [Analysis Services]
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - Analysis Services deployments, input files
 - modifying input files
 ms.assetid: 20e080cd-6a0e-4591-b022-ea4cd3638e36
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: affa6ce1f6ac586ea59607da196b6a4d2dc0f666
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3f9e27cd5e11dd75fcdf0271e3a4bccf14f2bef2
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deployment-script-files---input-used-to-create-deployment-script"></a>배포 스크립트 파일-입력은 배포 스크립트를 만드는 데 사용
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-작성 하는 경우는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트 파일을 생성 합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 이러한 파일의 출력 폴더에 배치 된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트. 기본 결과는 \Bin 폴더에 출력됩니다. 다음 표에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 만드는 XML 파일을 나열합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  작성 하는 경우는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트 파일을 생성 합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 이러한 파일의 출력 폴더에 배치 된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트. 기본 결과는 \Bin 폴더에 출력됩니다. 다음 표에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 만드는 XML 파일을 나열합니다.  
   
 |파일|Description|  
 |---------------|-----------------|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 02/15/2018
 |\<*프로젝트 이름을*>.deploymentoptions|배포가 트랜잭션인지 여부와 배포된 개체가 배포 후 처리되어야 하는지 여부와 같은 배포 옵션이 포함됩니다.|  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 해당 프로젝트 파일에 암호를 저장하지 않습니다.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 해당 프로젝트 파일에 암호를 저장하지 않습니다.  
   
 ## <a name="modifying-the-input-files"></a>입력 파일 수정  
  전체를 편집 하지 않고 배포 옵션 및 배포 대상, 구성 설정을 변경할 수 있도록 입력된 파일에서 검색 된 값 이나 입력된 파일에서 값을 수정 \< *프로젝트 이름*>.asdatabase 파일 (또는 기존 스크립트를 생성 하는 경우 전체 스크립트 파일 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스). 개별 파일을 수정할 수 있으면 다른 용도의 다른 배포 스크립트를 쉽게 만들 수 있습니다.  

@@ -1,27 +1,28 @@
 ---
-title: "복합 도메인의 데이터 정리 | Microsoft Docs"
-ms.custom: 
+title: 복합 도메인의 데이터 정리 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b823b710ca928769db6ecc64b60abc714f41de5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 91d4c9da464b19edc803f7b8b2ff4e8995ed91fb
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>복합 도메인의 데이터 정리
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 복합 도메인 정리에 대한 정보를 제공합니다. 복합 도메인은 둘 이상의 단일 도메인으로 구성되며 여러 관련 용어로 구성된 데이터 필드에 매핑됩니다. 복합 도메인의 개별 도메인은 서로 공통된 정보 영역이 있어야 합니다. 복합 도메인에 대한 자세한 내용은 [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md)를 참조하세요.  

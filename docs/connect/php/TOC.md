@@ -1,11 +1,11 @@
 
-# [Microsoft PHP Driver for SQL Server](microsoft-php-driver-for-sql-server.md)
+# [Microsoft Drivers for PHP for SQL Server](microsoft-php-driver-for-sql-server.md)
 
 # [시작](getting-started-with-the-php-sql-driver.md)
 ## [1단계: PHP 개발을 위한 개발 환경 구성](step-1-configure-development-environment-for-php-development.md)
 ## [2단계: PHP 개발을 위한 SQL 데이터베이스 만들기](step-2-create-a-sql-database-for-php-development.md)
-## [3단계: PHP를 사용하여 SQL에 연결하는 개념 증명](step-3-proof-of-concept-connecting-to-sql-using-php.md)
-## [4단계: PHP를 사용하여 탄력적으로 SQL에 연결](step-4-connect-resiliently-to-sql-with-php.md)
+## [3단계: PHP를 사용하여 SQL Server에 연결하는 개념 증명](step-3-proof-of-concept-connecting-to-sql-using-php.md)
+## [4단계: PHP를 사용하여 탄력적으로 SQL Server에 연결](step-4-connect-resiliently-to-sql-with-php.md)
 
 # [개요](overview-of-the-php-sql-driver.md)
 ## [시스템 요구 사항](system-requirements-for-the-php-sql-driver.md)
@@ -15,6 +15,7 @@
 ## [릴리스 정보](release-notes-for-the-php-sql-driver.md)
 ## [지원 리소스](support-resources-for-the-php-sql-driver.md)
 ## [코드 샘플 정보](about-code-examples-in-the-documentation.md)
+## [Microsoft Drivers for PHP for SQL Server에 대한 지원 행렬](microsoft-php-drivers-for-sql-server-support-matrix.md)
 
 # [프로그래밍 가이드](programming-guide-for-php-sql-driver.md)
 ## [서버에 연결](connecting-to-the-server.md)
@@ -25,8 +26,8 @@
 ### [연결 풀링](connection-pooling-microsoft-drivers-for-php-for-sql-server.md)
 ### [방법: MARS(Multiple Active Result Set)를 사용하지 않도록 설정](how-to-disable-multiple-active-resultsets-mars.md)
 ### [연결 옵션](connection-options.md)
-### [SQL Server용 PHP 드라이버의 LocalDB 지원](php-driver-for-sql-server-support-for-localdb.md)
-### [SQL Server용 PHP 드라이버의 고가용성, 재해 복구 지원](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)
+### [LocalDB 지원](php-driver-for-sql-server-support-for-localdb.md)
+### [고가용성, 재해 복구 지원](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)
 ### [Microsoft Azure SQL Database에 연결](connecting-to-microsoft-azure-sql-database.md)
 ### [연결 복원력](connection-resiliency.md)
 ## [함수 실행 비교](comparing-execution-functions.md)
@@ -59,6 +60,7 @@
 ### [방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 구성](how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 ### [방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리](how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)
 ## [작업 로깅](logging-activity.md)
+## [SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용](using-always-encrypted-php-drivers.md)
 ## [상수(Microsoft Drivers for PHP for SQL Server)](constants-microsoft-drivers-for-php-for-sql-server.md)
 ## [SQLSRV 드라이버 API 참조](sqlsrv-driver-api-reference.md)
 ### [sqlsrv_begin_transaction](sqlsrv-begin-transaction.md)

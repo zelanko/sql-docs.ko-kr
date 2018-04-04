@@ -1,31 +1,32 @@
 ---
-title: "참조 데이터를 사용하도록 DQS 구성 | Microsoft Docs"
-ms.custom: 
+title: 참조 데이터를 사용하도록 DQS 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.administration.rdsconfiguration.f1
 - sql13.dqs.administration.configuration.createDirectRDS.f1
 - sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5be1119a1c6796c864bce4d0ea5ca3358894f8ba
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 6d83e0d7cee787614832c94c75f6948ab0c00c84
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>참조 데이터를 사용하도록 DQS 구성
   이 항목에서는 데이터를 정리하는 데 참조 데이터를 사용하도록 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 구성하는 방법에 대해 설명합니다. Windows Azure Marketplace 또는 다이렉트 온라인 타사 참조 데이터 공급자의 참조 데이터를 사용할 수 있습니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
- Marketplace의 참조 데이터를 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 방법은 [계정 만들기](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936)를 참조하세요. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리** 에서 **구성** 을 클릭한 다음 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 참조 데이터 **탭에서** DataMarket 계정 ID 만들기 **를 클릭하여** 내에서 Marketplace 계정 키를 만들 수도 있습니다.  
+ Marketplace의 참조 데이터를 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 방법은 [계정 만들기](http://go.microsoft.com/fwlink/?LinkId=212936)(http://go.microsoft.com/fwlink/?LinkId=212936))를 참조하세요. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리** 에서 **구성** 을 클릭한 다음 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 참조 데이터 **탭에서** DataMarket 계정 ID 만들기 **를 클릭하여** 내에서 Marketplace 계정 키를 만들 수도 있습니다.  
   
 ###  <a name="Security"></a> 보안  
   

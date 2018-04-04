@@ -1,18 +1,18 @@
 ---
-title: "Kerberos 제한 위임에 대해 Analysis Services 구성 | Microsoft Docs"
-ms.custom: 
+title: Kerberos 제한 위임에 대해 Analysis Services 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -91,7 +91,7 @@ Kerberos 인증에 대해 Analysis Services를 구성하는 경우 데이터를 
   
 4.  사용자 또는 컴퓨터 선택 페이지에서 Analysis  Services  테이블 형식 model 데이터베이스에 데이터를 제공하는 SQL  Server  인스턴스를 실행하는 데 사용되는 계정을 입력합니다. **확인** 을 클릭하여 서비스 계정을 적용합니다.  
   
-     원하는 계정을 선택할 수 없는 경우 SQL  Server가 실행 중이고 해당 계정에 대한 SPN이 등록되어 있는지 확인합니다. 데이터베이스 엔진의 SPN에 대한 자세한 내용은 [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)을 참조하십시오.  
+     원하는 계정을 선택할 수 없는 경우 SQL  Server가 실행 중이고 해당 계정에 대한 SPN이 등록되어 있는지 확인합니다. 데이터베이스 엔진의 SPN에 대한 자세한 내용은 [Kerberos 연결의 서비스 사용자 이름 등록](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)을 참조하십시오.  
   
      ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   

@@ -1,31 +1,34 @@
 ---
-title: "배포 마법사 Services 분석 실행 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
+title: 배포 마법사 Services 분석 실행 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Analysis Services Deployment Wizard, running
+helpviewer_keywords:
+- Analysis Services Deployment Wizard, running
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d6a1102ed83493e25e3e73a0b77d035c2e299d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 61a2c558fca710d9fa6df37b998cddca6125c3c6
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Analysis Services 배포 마법사 실행
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 하는 경우는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 하려면 배포 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 다음과 같은 방법으로 마법사를 실행할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 다음과 같은 방법으로 실행할 수 있습니다.  
   
 -   **대화형으로** 대화형으로 실행 하면는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 사용자 입력에 따라 변경 되는 입력된 파일을 기반으로 배포 스크립트를 생성 합니다. 모든 사용자 수정 내용은 배포 스크립트에만 적용됩니다. 마법사가 입력 파일을 수정하지는 않습니다. 입력 파일에 대한 자세한 내용은 [배포 스크립트를 만드는 데 사용하는 입력 파일 이해](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)를 참조하세요.  
   
@@ -41,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-interactively"></a>대화형으로 Analysis Services 배포 마법사를 실행하려면  
   
--   **시작**메뉴에서 **모든 프로그램**, **Microsoft SQL Server**, **Analysis Services**를 차례로 가리키고 **배포 마법사**를 클릭합니다.  
+-   클릭 **시작** > **Microsoft SQL Server** > **배포 마법사**합니다.  
   
      —또는—  
   
@@ -73,12 +76,12 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>명령 프롬프트에서 Analysis Services 배포 마법사를 실행하려면  
   
-1.  명령 프롬프트를 열고 C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio 폴더로 이동합니다.  
+1.  명령 프롬프트를 열고 C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio 이동  
   
 2.  **Microsoft.AnalysisServices.Deployment.exe** 를 입력하고 뒤에 마법사를 실행하려는 모드에 해당하는 스위치를 추가합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services 배포 스크립트 이해](../../analysis-services/multidimensional-models/understanding-the-analysis-services-deployment-script.md)   
- [배포 마법사를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [배포 마법사를 사용 하 여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

@@ -1,17 +1,19 @@
 ---
 title: sqlsrv_connect | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_connect
+apiname:
+- sqlsrv_connect
 apitype: NA
 helpviewer_keywords:
 - connecting to the server
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - connection pooling support
 - sqlsrv_connect
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
-caps.latest.revision: "67"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f87b73eee57279a1f3b8bd39abb8f8986076b653
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ae4132e7235ced3ab6863093a043365d91f2aa49
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,11 +45,11 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-*$serverName*: 연결이 설정되는 서버의 이름을 지정하는 문자열입니다. 인스턴스 이름(예: "myServer\instanceName") 또는 포트 번호(예: "myServer 1521")가 이 문자열의 일부로 포함될 수 있습니다. 이 매개 변수에 사용할 수 있는 옵션에 대한 자세한 내용은 [USQL Native Client에서 연결 문자열 키워드 사용](http://go.microsoft.com/fwlink/?LinkId=105504)의 ODBC 드라이버 연결 문자열 키워드 섹션에서 서버 키워드를 참조하세요.  
+*$serverName*: 연결이 설정되는 서버의 이름을 지정하는 문자열입니다. 인스턴스 이름(예: "myServer\instanceName") 또는 포트 번호(예: "myServer 1521")가 이 문자열의 일부로 포함될 수 있습니다. 설명과이 매개 변수에 대해 사용할 수 있는 옵션에 대 한 참조의 ODBC 드라이버 연결 문자열 키워드 섹션에서 서버 키워드 [SQL Native Client와 함께 연결 문자열 키워드를 사용 하 여](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)합니다.  
   
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3.0부터는 `"(localdb)\instancename"`을 사용하여 LocalDB 인스턴스를 지정할 수도 있습니다. 자세한 내용은 [PHP Driver for SQL Server Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)을 참조하세요.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3.0부터는 `"(localdb)\instancename"`을 사용하여 LocalDB 인스턴스를 지정할 수도 있습니다. 자세한 내용은 참조 [LocalDB에 대 한 지원을](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)합니다.  
   
-또한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3.0부터 AlwaysOn 가용성 그룹에 연결하기 위해 가상 네트워크 이름을 지정할 수 있습니다. [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 사용에 필요한 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]지원에 대한 자세한 내용은 [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)(PHP Driver for SQL Server의 고가용성, 재해 복구 지원)를 참조하세요.  
+또한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3.0부터 AlwaysOn 가용성 그룹에 연결하기 위해 가상 네트워크 이름을 지정할 수 있습니다. 에 대 한 자세한 내용은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 에 대 한 지원 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], 참조 [고가용성, 재해 복구에 대 한 지원](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.  
   
 *$connectionInfo* [선택 사항]: 결합형 **배열** 연결 특성을 포함 하는 (예를 들어 **배열**("Database" = > "AdventureWorks")). 배열에 대해 지원되는 키 목록은 [Connection Options](../../connect/php/connection-options.md) 을 참조하세요.  
   
@@ -92,8 +94,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
+## <a name="see-also"></a>관련 항목:  
+[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Connecting to the Server](../../connect/php/connecting-to-the-server.md)
+
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
   

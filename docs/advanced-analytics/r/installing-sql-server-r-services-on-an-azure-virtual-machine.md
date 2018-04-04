@@ -1,52 +1,38 @@
 ---
-title: "Azure 가상 컴퓨터에서 SQL Server 컴퓨터 학습 기능을 설치 합니다. | Microsoft Docs"
-ms.custom: 
-ms.date: 10/31/2017
-ms.reviewer: 
+title: Azure 가상 컴퓨터에서 SQL Server 컴퓨터 학습 기능을 설치 합니다. | Microsoft Docs
+ms.custom: ''
+ms.date: 03/21/2018
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.assetid: ''
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 572aeffdc0d3c06a4c3bda17e3f3d438b2819183
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: d2f0f38086c7725e14261afa9a40f29b212b748f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Azure 가상 컴퓨터에서 기능을 학습 하는 SQL Server 컴퓨터 설치
+# <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Azure 가상 컴퓨터에서 기능을 학습 하는 SQL Server 컴퓨터 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-포함 된 Azure 가상 컴퓨터를 배포 하는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], 기계 학습의 VM이 만들어지면 인스턴스에 추가할 기능으로 선택할 수 있습니다.
+사용 하는 것이 좋습니다는 [데이터 과학 가상 컴퓨터](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), SQL Server 2017 컴퓨터 학습 서비스 또는 SQL Server 2016 R Services만 있는 VM을 하려는 경우이 문서의 단계를 안내 합니다는 하지만 합니다.
 
-+ [SQL Server 2016 및 R 서비스를 포함 하는 새 VM 만들기](#new)
-+ [SQL Server 2016으로 기존 가상 컴퓨터에 시스템 학습 기능을 추가 합니다.](#existing)
+## <a name="create-a-virtual-machine-on-azure"></a>Azure에서 가상 컴퓨터 만들기
 
-> [!NOTE]
-> 가상 컴퓨터를 이제 SQL Server 2017 수! 참조 [이 알림은](https://azure.microsoft.com/blog/announcing-new-azure-vm-images-sql-server-2017-on-linux-and-windows/) 대 한 자세한 내용은 합니다.
-> 
-> R에서 Azure SQL 데이터베이스 미리 보기 기능으로 사용할 수도 있습니다. 자세한 내용은 참조 [Azure SQL 데이터베이스에서 사용 하 여 R](../r/using-r-in-azure-sql-database.md)합니다.
-
-## <a name="create-a-new-sql-server-2017-virtual-machine"></a>새 SQL Server 2017 가상 컴퓨터 만들기
-
-Python 또는 R에서 SQL Server 2017을 사용 하려면 Windows 기반 가상 컴퓨터를 구입 해야 합니다. [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] linux 지원 빠른 [기본 점수 매기기](../sql-native-scoring.md) 사용할 수 없는 기능을 학습 하는 다른 컴퓨터에서 T-SQL 예측 함수를 사용 하 여이 버전에서는 아직 합니다.
-
-SQL Server VM 제품 목록은이 문서를 참조: [개요 SQL Server의 Azure 가상 컴퓨터 (Windows)에서](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)합니다.
-
-### <a name="new"></a>기계 학습에서 새로운 SQL Server Enterprise VM 만들기
-
-1. Azure 포털에서 가상 컴퓨터를 클릭 한 다음 새로 만들기를 클릭 합니다.
-2. SQL Server 2017 Enterprise Edition을 선택 합니다.
+1. 왼쪽 목록에서 Azure 포털에서 클릭 **가상 컴퓨터** 클릭 하 고 **추가**합니다.
+2. SQL Server 2017 Enterprise Edition 또는 SQL Server 2016 Enterprise Edition을 검색 합니다.
 3. 서버 이름 및 계정 권한을 구성하고 요금제를 선택합니다.
-4. **SQL Server 설정** (VM 설치 마법사의 단계 4)를 찾을 **컴퓨터 학습 서비스 (고급 분석)** 클릭 **사용**합니다.
+4. **SQL Server 설정** (VM 설치 마법사의 단계 4)를 찾을 **컴퓨터 학습 서비스 (고급 분석)** (또는 **R Services** SQL Server 2016 용) 클릭 **사용 하도록 설정**합니다.
 5. 유효성 검사를 위해 제공된 요약을 검토하고 **확인**을 클릭합니다.
 6. 가상 컴퓨터가 준비되면 가상 컴퓨터에 연결하고 미리 설치된 SQL Server Management Studio를 엽니다. 기계 학습을 실행 하도록 준비 합니다.
 7. 이를 확인하려면 새 쿼리 창을 열고 R을 사용하여 1~10의 숫자 시퀀스를 생성하는 다음과 같은 간단한 문을 실행합니다.
@@ -113,7 +99,3 @@ SQL Server VM 제품 목록은이 문서를 참조: [개요 SQL Server의 Azure 
   TCP/IP는 루프백 연결에 필요 합니다. 다음과 같은 오류가 발생할 경우 인스턴스를 지 원하는 가상 컴퓨터에서 TCP/IP를 설정 합니다.
 
   "DBNETLIB; SQL Server가 없거나 액세스가 거부 되었습니다 "
-
-## <a name="related-resources"></a>관련 리소스
-
-[Azure SQL 데이터베이스에서 R을 사용 하 여](../r/using-r-in-azure-sql-database.md)

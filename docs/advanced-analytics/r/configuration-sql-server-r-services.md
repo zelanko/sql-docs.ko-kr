@@ -1,26 +1,26 @@
 ---
-title: "구성 및 관리 | Microsoft Docs"
-ms.custom: 
+title: 구성 및 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 63448281d0e1d135a52bc1c9d0c8afa097a87596
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f130f4a300351bb8384362affddc595aadf92148
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuration-and-management"></a>구성 및 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="r-package-management"></a>R 패키지 관리
 
-이 항목에서는 SQL Server 인스턴스에서 새 R 패키지를 설치, R 패키지 라이브러리를 관리 하 고, 데이터베이스 복원 후 패키지 라이브러리를 복원 하는 방법을 설명 합니다.
+이러한 문서, SQL Server 인스턴스에서 새 R 패키지를 설치 하 고, R 패키지 라이브러리를 관리 하 고, 데이터베이스 복원 후 패키지 라이브러리를 복원 하는 방법을 설명 합니다.
 
 + [R 패키지 설치 및 관리](installing-and-managing-r-packages.md)
 + [새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="service-configuration"></a>서비스 구성
 
-이러한 항목에는 기본 서비스 아키텍처를 변경 하는 방법 및 확장성 서비스와 연결 된 보안 주체를 관리 하는 방법을 설명 합니다.
+다음이 문서를 기본 서비스 아키텍처를 변경 하는 방법 및 확장성 서비스와 연결 된 보안 주체를 관리 하는 방법에 설명 합니다.
 
 + [Security Considerations](security-considerations-for-the-r-runtime-in-sql-server.md)
 + [SQL Server R Services용 사용자 계정 풀 수정](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="resource-governance"></a>리소스 관리
 
-이 항목에서는 리소스 관리자 기능이 사용 가능한 Enterprise Edition에서 사용 하 여 Python 또는 R 작업에 대 한 리소스 관리를 구현 하는 방법을 설명 합니다.
+이러한 문서에는 리소스 관리자 기능이 사용 가능한 Enterprise Edition에서 사용 하 여 Python 또는 R 작업에 대 한 리소스 관리를 구현 하는 방법을 설명 합니다.
 
 + [R Services에 대한 리소스 관리](../../advanced-analytics/r/resource-governance-for-r-services.md)
 + [R에 대 한 리소스 풀을 만드는 방법](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
@@ -73,7 +73,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="initial-setup"></a>초기 설치
 
-이 항목의 초기 설치 및 구성 관련 추가 도움말을 찾을 수 있습니다.
+초기 설치 및 구성 관련 추가 도움말은이 문서에서 찾을 수 있습니다.
 
 + [업그레이드 및 설치 FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 + [Security Considerations](../r/security-considerations-for-the-r-runtime-in-sql-server.md)

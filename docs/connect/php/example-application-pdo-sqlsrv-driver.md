@@ -1,27 +1,28 @@
 ---
-title: "예제 응용 프로그램 (PDO_SQLSRV 드라이버) | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: 예제 응용 프로그램 (PDO_SQLSRV 드라이버) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a20885a414ac330f4e4421e5769fce5352574d47
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1dd0cdfbc217900ae4a4bfb618bafc9307e9e0c5
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>예제 응용 프로그램 (PDO_SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,17 +31,17 @@ AdventureWorks 제품 검토 예제 응용 프로그램은 웹 응용 프로그�
   
 ### <a name="running-the-example-application"></a>예제 응용 프로그램 실행  
   
-1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 설치합니다. 자세한 내용은 참조 [PHP SQL 드라이버 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 설치합니다. 자세한 내용은 참조 [Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  이 문서의 뒷부분에 나열된 코드를 adventureworks_demo.php 및 photo.php 두 파일에 복사합니다.  
 3.  adventureworks_demo.php 및 photo.php 파일을 웹 서버의 루트 디렉터리에 배치합니다.  
-4.  브라우저에서 http://localhost/adventureworks_demo.php를 시작하여 응용 프로그램을 실행합니다.  
+4.  응용 프로그램을 시작 하 여 실행 http://localhost/adventureworks_demo.php 브라우저에서 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
 AdventureWorks 제품 검토 예제 응용 프로그램을 실행하려면 해당 컴퓨터에 대해 다음 조건을 만족해야 합니다.  
   
--   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 [PHP SQL 드라이버 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)을 참조하세요.  
+-   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 참조 [Microsoft Drivers for PHP for SQL Server에 대 한 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)합니다.  
  -   adventureworks_demo.php 및 photo.php 파일이 웹 서버의 루트 디렉터리에 있어야 합니다. 파일에 이 문서 뒷부분에 나열된 코드가 있어야 합니다.  
--   [AdventureWorks2008](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 연결된 SQL Server 2005 또는 SQL Server 2008이 로컬 컴퓨터에 설치되어 있어야 합니다.  
+-   SQL Server 2005 또는 SQL Server 2008와는 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 연결 된 로컬 컴퓨터에 설치 합니다.  
 -   웹 브라우저가 설치됩니다.  
   
 ## <a name="demonstrates"></a>데모  
@@ -510,9 +511,13 @@ die( print_r( $e->getMessage() ) );
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
-[서버에 연결](../../connect/php/connecting-to-the-server.md)  
-[함수 실행 비교](../../connect/php/comparing-execution-functions.md)  
-[데이터 검색](../../connect/php/retrieving-data.md)  
-[데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[서버에 연결](../../connect/php/connecting-to-the-server.md)
+
+[함수 실행 비교](../../connect/php/comparing-execution-functions.md)
+
+[데이터 검색](../../connect/php/retrieving-data.md)
+
+[데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
   

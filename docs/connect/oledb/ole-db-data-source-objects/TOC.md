@@ -1,0 +1,7 @@
+# [데이터 원본 개체(OLE DB)](data-source-objects-ole-db.md)
+# [데이터 원본 정보 속성](data-source-information-properties.md)
+# [데이터 원본 속성(OLE DB)](data-source-properties-ole-db.md)
+# [초기화 및 권한 부여 속성](initialization-and-authorization-properties.md)
+# [지속형 데이터 원본 개체](persisted-data-source-objects.md)
+# [세션 속성 - SQL Server용 OLE DB 드라이버](session-properties-oledb-driver-for-sql-server.md)
+# [세션](sessions.md)

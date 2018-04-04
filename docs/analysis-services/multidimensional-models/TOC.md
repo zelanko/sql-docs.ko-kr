@@ -1,4 +1,4 @@
-# [개요](multidimensional-models-ssas.md)
+# [다차원 모델](multidimensional-models-ssas.md)
  
 # [다차원 솔루션](multidimensional-model-solutions-ssas.md)  
 ## [SSDT(SQL Server Data Tools)를 사용하여 다차원 모델 만들기](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  

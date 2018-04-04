@@ -1,30 +1,31 @@
 ---
-title: "방법: 매개 변수가 있는 쿼리를 수행 합니다. | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: '방법: 매개 변수가 있는 쿼리를 수행 합니다. | Microsoft Docs'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 946380fdce8f3ac0d976840e569e35db077a4202
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 23660f3d7ddbaf45ac39674c4eba23092e3ae2d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-parameterized-queries"></a>방법: 매개 변수가 있는 쿼리 수행
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/18/2017
   
 2.  Transact-SQL 쿼리의 자리 표시자에 해당하는 PHP 변수를 초기화하거나 업데이트합니다.  
   
-3.  2단계의 PHP 변수를 사용하여 Transact-SQL 문자열의 매개 변수 자리 표시자에 순서대로 해당 매개 변수 값의 배열을 만들거나 업데이트합니다.  
+3.  2 단계의 PHP 변수를 사용 하 여 만들거나 TRANSACT-SQL 문자열의 매개 변수 자리 표시자에 해당 하는 매개 변수 값의 배열을 업데이트 합니다. 배열에 매개 변수 값을 나타내기 위한 자리 표시자와 동일한 순서로 이어야 합니다.
   
 4.  다음 쿼리를 실행합니다.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/18/2017
   
 다음 예제에서는 데이터베이스를 쿼리하여 수량이 올바르게 업데이트되었는지 확인합니다. 제품 ID는 SELECT 쿼리의 매개 변수입니다.  
   
-이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -121,7 +122,7 @@ sqlsrv_close( $conn);
 ## <a name="example"></a>예제  
 다음 예제에서는 **sqlsrv_prepare** 함수를 사용할 때 변수의 암시적 바인딩을 보여 줍니다. 예제에서는 *Sales.SalesOrderDetail* 테이블에 여러 개의 판매 주문을 삽입합니다. *$params* 배열 문에 바인딩된 (*$stmt*) 때 **sqlsrv_prepare** 호출 됩니다. 테이블에 새 판매 주문을 삽입하는 각 쿼리를 실행하기 전에 *$params* 배열이 판매 주문 세부 사항에 해당하는 새 값으로 업데이트됩니다. 후속 쿼리를 실행할 때는 새 매개 변수 값을 사용합니다.  
   
-이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -193,9 +194,12 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-[데이터 형식 변환](../../connect/php/converting-data-types.md)  
-[PHP SQL 드라이버 보안 고려 사항](../../connect/php/security-considerations-for-php-sql-driver.md)
-[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
+## <a name="see-also"></a>관련 항목:  
+[데이터 형식 변환](../../connect/php/converting-data-types.md)
+
+[보안 고려 사항 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+
+[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)
+
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   

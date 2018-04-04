@@ -1,30 +1,30 @@
 ---
-title: "T-SQL 언어 요소 분석 플랫폼 시스템 병렬 데이터 웨어하우스 | Microsoft Docs"
+title: T-SQL 언어 요소 분석 플랫폼 시스템 병렬 데이터 웨어하우스 | Microsoft Docs
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW)."
+description: TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
 services: sql-data-warehouse
 documentationcenter: NA
-editor: 
+editor: ''
 ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 0fa153859632739fe626a92dbf8d741a879dd74f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="language-elements"></a>언어 요소
 TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
@@ -61,7 +61,7 @@ TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL S
 * [-(음수)](../t-sql/language-elements/unary-operators-negative.md)
 * [-(빼기)](../t-sql/language-elements/subtract-transact-sql.md)
 * [*(곱하기)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/ (나누기)](../t-sql/language-elements/divide-transact-sql.md)
+* [/(나누기)](../t-sql/language-elements/divide-transact-sql.md)
 * [나머지](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>일치 하는 와일드 카드 문자
@@ -71,7 +71,7 @@ TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL S
 * [> = (좋은 보다 크거나 같음)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = (작거나 같음)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> (같지 않음)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
-* [! = (같지 않음)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
+* [\!= (같지 않음)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
@@ -271,7 +271,7 @@ TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL S
 * [SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
 * [SET ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
 * [SET ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
-* [SET ARITHIGNORE 옵션](../t-sql/statements/set-arithignore-transact-sql.md)
+* [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
 * [SET CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
 * [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)

@@ -1,27 +1,28 @@
 ---
-title: 'Pdo:: errorinfo | Microsoft Docs'
-ms.custom: 
+title: PDO::errorInfo | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1bd62c1914bf77a9e274fa04a953f5c9579a7699
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 41051d4425903e1a59392187e48c5defef4620c5
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +45,7 @@ array PDO::errorInfo();
   
 -   드라이버별 오류 메시지입니다.  
   
-오류가 없거나 SQLSTATE가 설정되지 않은 경우 드라이버 관련 필드는 NULL입니다.  
+오류가 없거나 SQLSTATE가 설정 되지 않은 경우 드라이버 관련 필드는 NULL입니다.  
   
 ## <a name="remarks"></a>주의  
 PDO::errorInfo는 데이터베이스에서 직접 수행된 작업에 대한 오류 정보만 검색합니다. PDO::prepare 또는 PDO::query를 사용하여 PDOStatement 인스턴스가 만들어질 때 PDOStatement::errorInfo를 사용합니다.  
@@ -67,6 +68,7 @@ print_r ($conn->errorInfo());
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
-[PDO 클래스](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO 클래스](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

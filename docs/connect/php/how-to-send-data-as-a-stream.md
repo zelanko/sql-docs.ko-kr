@@ -1,42 +1,43 @@
 ---
-title: "방법: 데이터를 스트림으로 전송 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: '방법: 데이터를 스트림으로 전송 | Microsoft Docs'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - streaming data
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
-caps.latest.revision: "30"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe89454453e105ca264f5e04aacb8581dfb81cac
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b1821f922e9c45340365abf680f5f46a61d6eb1e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-send-data-as-a-stream"></a>방법: 데이터를 스트림으로 전송
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] PHP는 대형 개체를 서버로 보내기 위해 PHP 스트림을 활용합니다. 이 항목의 예제에서는 데이터를 스트림으로 전송하는 방법을 보여 줍니다. 첫 번째 예제는 SQLSRV 드라이버를 사용하여 기본 동작을 나타내며 이는 쿼리를 실행할 때 모든 스트림 데이터를 보내기 위한 것입니다. 두 번째 예제는 SQLSRV 드라이버를 사용하여 서버에 한 번에 최대 8K(킬로바이트)의 데이터를 보내는 방법을 보여 줍니다.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] PHP는 대형 개체를 서버로 보내기 위해 PHP 스트림을 활용합니다. 이 항목의 예제에서는 데이터를 스트림으로 전송하는 방법을 보여 줍니다. 첫 번째 예제는 SQLSRV 드라이버를 사용하여 기본 동작을 나타내며 이는 쿼리를 실행할 때 모든 스트림 데이터를 보내기 위한 것입니다. 서버에 한 번에 스트림 데이터의 최대 8 킬로바이트 (8kb)를 전송 하는 방법을 보여 주기 위해 SQLSRV 드라이버를 사용 하는 두 번째 예제입니다.  
   
 세 번째 예제는 PDO_SQLSRV 드라이버를 사용하여 서버에 스트림 데이터를 전송하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example-sending-stream-data-at-execution"></a>예: 실행 시 스트림 데이터를 보내기
 다음 예제는 AdventureWorks 데이터베이스의 *Production.ProductReview* 테이블에 한 행을 삽입합니다. 고객의 의견 (*$comments*) php 스트림으로 열린 [fopen](http://php.net/manual/en/function.fopen.php) 작동 하 고 다음 쿼리를 실행할 때 서버에 스트림 됩니다.  
   
-이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 콘솔에 기록됩니다.  
+이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -89,10 +90,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>예제  
-다음 예제는 위 예제와 동일하지만 실행 시 모든 스트림 데이터를 보내는 기본 동작이 해제됩니다. 이 예제에서는 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) 를 사용하여 스트림 데이터를 서버에 보냅니다. 최대 8 킬로바이트 (8k)의 데이터를 호출할 때마다와 함께 보내집니다 **sqlsrv_send_stream_data**합니다. 스크립트는 **sqlsrv_send_stream_data** 에서 수행한 호출의 수를 계산해서 해당 횟수를 콘솔에 표시합니다.  
+## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>예: sqlsrv_send_stream_data 사용 하 여 스트림 데이터 보내기
+다음 예제는 앞의 예제와 동일 하지만 실행 시 모든 스트림 데이터를 보내는 기본 동작이 해제 됩니다. 이 예제에서는 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) 를 사용하여 스트림 데이터를 서버에 보냅니다. 최대 8 킬로바이트 (8kb)의 데이터를 호출할 때마다와 함께 보내집니다 **sqlsrv_send_stream_data**합니다. 스크립트는 **sqlsrv_send_stream_data** 에서 수행한 호출의 수를 계산해서 해당 횟수를 콘솔에 표시합니다.  
   
-이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 콘솔에 기록됩니다.  
+이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -156,7 +157,7 @@ sqlsrv_close( $conn);
   
 이 항목의 예제는 문자 데이터를 서버에 보내기는 하지만 모든 형식의 데이터를 스트림을 보낼 수 있습니다. 예를 들어 이 항목에 나타난 기술을 사용하여 이진 형식의 이미지를 스트림을 보낼 수도 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example-sending-an-image-as-a-stream"></a>예: 이미지를 스트림으로 전송 
   
 ```  
 <?php  
@@ -175,8 +176,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-[데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[SQLSRV 드라이버를 사용하여 스트림으로 데이터 검색](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
+## <a name="see-also"></a>관련 항목:  
+[데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[SQLSRV 드라이버를 사용하여 스트림으로 데이터 검색](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
   

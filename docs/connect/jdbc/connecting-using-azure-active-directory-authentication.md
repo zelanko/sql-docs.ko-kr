@@ -1,28 +1,28 @@
 ---
-title: "Azure Active Directory 인증을 사용 하 여 연결 | Microsoft Docs"
-ms.custom: 
+title: Azure Active Directory 인증을 사용 하 여 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
 ms.technology:
 - drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 28c8e53032cacb6620aeb304c228c35deec9e7a6
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: a0cbb8a2b6eff8e3a612039616f9b497a2ea2737
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용 하 여 연결
 이 문서에서는 SQL Server 용 Microsoft JDBC Driver 6.0 (또는 이상)과 Azure Active Directory 인증 기능을 사용 하는 Java 응용 프로그램을 개발 하는 방법을 설명 합니다.
@@ -212,16 +212,15 @@ You have successfully logged on as: <your user name>
 1.  서비스에 대 한 Azure Active Directory에 응용 프로그램 계정을 만듭니다.
     1. Azure 관리 포털에 로그인
     2. 왼쪽 탐색 창에서에서 Azure Active Directory 클릭
-    3. 샘플 응용 프로그램을 등록 하려면 디렉터리 테 넌 트를 클릭 합니다. 이 데이터베이스 (데이터베이스를 호스트 하는 서버)와 연결 된 동일한 디렉터리 여야 합니다.
-    4. 응용 프로그램 탭을 클릭 합니다.
-    5. 서랍을에서 추가 클릭 합니다.
-    6. "내 조직에서 개발 중인 응용 프로그램을 추가 하는 경우"를 클릭 합니다.
-    7. Mytokentest 응용 프로그램에 대 한 이름으로 입력 하 고 "웹 응용 프로그램 및/또는 웹 API"를 선택한 다음 클릭 합니다.
-    8. 이 응용 프로그램은 데몬/서비스 및 웹 응용 프로그램이 아닌을 가정할 수 없는 로그인 URL 또는 앱 ID URI입니다. 이 두 필드에 대 한 입력 http://mytokentest
-    9. Azure 포털에서 계속 하는 동안 응용 프로그램의 구성 탭을 클릭
-    10. 클라이언트 ID 값을 찾아 복사 제외 하 고, 지정 해야이 나중에 응용 프로그램 (예를 들어 a4bbfe26-dbaa-4fec-8ef5-223d229f647d)을 구성 합니다. 스냅숏을 참조 합니다.
-    11. "키" 섹션에서 키의 기간을 선택 하 여 구성을 저장 및 나중에 사용할 키를 복사 합니다. 클라이언트 암호입니다.
-    12. 아래쪽에 "끝점 보기"를 클릭 하 고 나중에 사용할 "OAUTH 2.0 권한 부여 끝점" 아래에서 URL을 복사 합니다. STS URL입니다.
+    3. "응용 프로그램 등록" 탭을 클릭 합니다.
+    4. 서랍을에서 "새 응용 프로그램 등록"을 클릭 합니다.
+    5. 응용 프로그램에 대 한 알기 쉬운 이름으로 mytokentest를 입력 하 고 "웹 응용 프로그램/API"를 선택 합니다.
+    6. 우리는 로그온 URL 필요 하지 않습니다. 아무 것도 제공 하는 것: "http://mytokentest"입니다.
+    7. 맨 아래에 "만들기"를 클릭 합니다.
+    9. Azure 포털에서 계속 하는 동안 응용 프로그램의 "설정" 탭을 클릭 하 고 "속성" 탭을 엽니다.
+    10. "응용 프로그램 ID" 즉, 클라이언트 ID () 값을 찾아 복사 제외 하 고, 지정 해야이 나중에 응용 프로그램 (예를 들어 1846943b-ad04-4808-aa13-4702d908b5c1)을 구성 합니다. 스냅숏을 참조 합니다.
+    11. "앱 ID URL" 값을 찾아 복사, STS URL입니다.
+    12. "키" 섹션에서 이름 필드에 입력, 키의 기간을 선택 하 고 (값 필드를 비워 둠) 구성을 저장 하 여 키를 만듭니다. 값 필드 여야 합니다 저장 한 후 자동으로 가득 차면 생성 되는 값을 복사 합니다. 클라이언트 암호입니다.
 
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Azure Active Directory 관리자 및 주 응용 프로그램에 대 한 포함된 된 데이터베이스 사용자 T-SQL 명령 프로 비전을 사용 하 여 Azure SQL Server의 사용자 데이터베이스에 로그온 합니다. 참조는 [SQL 데이터베이스 또는 SQL 데이터 웨어하우스를 사용 하 여 Azure Active Directory 인증 여 연결할](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) Azure Active Directory 관리자 및 포함된 된 데이터베이스 사용자를 만드는 방법에 대 한 자세한 내용은 합니다.
@@ -253,8 +252,8 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
-        String clientId = "a4bbfe26-dbaa-4fec-8ef5-223d229f647d"; // Replace with your client ID.
+        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
         AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));

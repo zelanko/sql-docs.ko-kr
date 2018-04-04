@@ -1,27 +1,28 @@
 ---
-title: "3 단계: PHP를 사용 하 여 SQL에 연결 하는 개념 증명 | Microsoft Docs"
-ms.custom: 
+title: '3 단계: PHP를 사용 하 여 SQL에 연결 하는 개념 증명 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: deb18077283a1512c09aa223f9790079bdae5855
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3ea9f1bce66da904f5587a9c21bd672818bc4423
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>3단계: PHP를 사용하는 SQL과 연결된 개념 증명
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -171,4 +172,5 @@ ms.lasthandoff: 11/18/2017
 ## <a name="additional-examples"></a>추가 예  
   
 [예제 응용 프로그램(SQLSRV 드라이버)](../../connect/php/example-application-sqlsrv-driver.md)  
+
 [예제 응용 프로그램(PDO_SQLSRV 드라이버)](../../connect/php/example-application-pdo-sqlsrv-driver.md)

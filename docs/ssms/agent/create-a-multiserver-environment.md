@@ -1,15 +1,16 @@
 ---
-title: "다중 서버 환경 만들기 | Microsoft 문서"
-ms.custom: 
+title: 다중 서버 환경 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
@@ -17,19 +18,24 @@ helpviewer_keywords:
 - target servers [SQL Server], about target servers
 - multiserver environments [SQL Server]
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d880677059d8263ae7df35f4c2471e3413f57197
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: a32a243f03f85fcc432c3a84cf31f82cf2e70c69
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 다중 서버 관리를 위해서는 마스터 서버(MSX)와 하나 이상의 대상 서버(TSX)를 설치해야 합니다. 모든 대상 서버에서 처리되는 작업은 먼저 마스터 서버에서 정의된 다음 대상 서버로 다운로드됩니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
+다중 서버 관리를 위해서는 마스터 서버(MSX)와 하나 이상의 대상 서버(TSX)를 설치해야 합니다. 모든 대상 서버에서 처리되는 작업은 먼저 마스터 서버에서 정의된 다음 대상 서버로 다운로드됩니다.  
   
 마스터 서버와 대상 서버 간 연결은 기본적으로 전체 SSL(Secure Sockets Layer) 암호화 및 인증서 확인을 사용할 수 있도록 설정됩니다. 자세한 내용은 [대상 서버의 암호화 옵션 설정](../../ssms/agent/set-encryption-options-on-target-servers.md)을 참조하세요.  
   

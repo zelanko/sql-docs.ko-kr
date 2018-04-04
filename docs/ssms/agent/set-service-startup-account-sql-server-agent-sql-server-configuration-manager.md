@@ -1,35 +1,39 @@
 ---
-title: "SQL Server 에이전트의 서비스 시작 계정 설정 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 에이전트의 서비스 시작 계정 설정 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent, service accounts
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bcd26feceb6ecd2fc0b776a5ceec80756cd2e110
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 37582f52b59a254c12b7b8981b1298d525fa31fa
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>SQL Server 에이전트의 서비스 시작 계정 설정(SQL Server 구성 관리자)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스 시작 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 실행되는 Windows 계정과 해당 네트워크 권한을 정의합니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 구성 관리자를 통해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에이전트 서비스 계정을 설정하는 방법에 대해 설명합니다.  
   
 **항목 내용**  

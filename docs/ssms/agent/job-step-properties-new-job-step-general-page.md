@@ -1,31 +1,38 @@
 ---
-title: "작업 단계 속성 - 새 작업 단계(일반 페이지) | Microsoft 문서"
-ms.custom: 
+title: 작업 단계 속성 - 새 작업 단계(일반 페이지) | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.ag.job.stepgeneral.f1
+f1_keywords:
+- sql13.ag.job.stepgeneral.f1
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ccb7a7e5a01257dac0449d351d7a4a56a1f7f200
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fcdf8a1b07293b6d468ded316fb753a873349e74
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>작업 단계 속성 - 새 작업 단계(일반 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 단계의 속성을 확인하고 변경하거나 새 작업 단계를 정의할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> 현재 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database 관리되는 인스턴스 T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
+이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 단계의 속성을 확인하고 변경하거나 새 작업 단계를 정의할 수 있습니다.  
   
 이 페이지로 이동하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 확장한 다음 **작업**을 마우스 오른쪽 단추로 클릭하고 **새 작업**을 클릭한 다음 **단계** 페이지를 선택하고 **새로 만들기**를 클릭합니다. 개체 탐색기에서 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **단계** 를 선택하고 **새로 만들기**, **삽입**또는 **편집**을 클릭하여 이 페이지로 이동할 수도 있습니다.  
   

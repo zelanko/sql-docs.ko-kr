@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef8781d5c6ab68b90aefcc9c7d01e0cb9f070a02
-ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
+ms.openlocfilehash: de4b451166e7b17b92ae996eddeef87b4dd8722b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -87,7 +87,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
  *oneresultset* 은 **비트**, 기본값은 **0**합니다.  
 
 [ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
-**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)]합니다.  
+**적용 대상:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)]합니다.  
   
  때 @oneresultset= 1, 매개 변수 @include_total_xtp_storage MEMORY_OPTIMIZED_DATA 저장소에 대 한 열이 단일 결과 집합에 포함 되어 있는지 여부를 결정 합니다. 기본값은 0, 즉, 기본적으로 (매개 변수는 생략 됨) 하는 경우 XTP 열 결과 집합에 포함 되지 않습니다.  
 

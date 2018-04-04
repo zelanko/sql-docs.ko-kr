@@ -29,16 +29,16 @@ helpviewer_keywords:
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: ''
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d06fb220e8ec0df0ba5aab4fe5983c928d6a732
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: de82cfb595559b738ca8db7d72acd620101d3995
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -136,6 +136,7 @@ CREATE DATABASE database_name
 |1024GB에서 최대 4096GB(256 GB*로 증분) |해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|√|√|  
   
  \* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다.  P11 및 P15는 추가 비용없이 최대 4TB가 포함된 저장소를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과의 MAXSIZE는 현재 미국 동부2, 미국 서부, 미국 버지니아 주 정부, 서부 유럽, 독일 중앙, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중앙 및 캐나다 동부에서 사용할 수 있습니다. 현재 제한 사항은 [단일 데이터베이스](https://docs.microsoft.com/azure/sql-database-single-database-resources)를 참조하세요.  
+<!---Loc Comment: Link [Single databases] is not working---> 
   
  MAXSIZE 및 EDITION 인수에는 다음과 같은 규칙이 적용됩니다.  
   

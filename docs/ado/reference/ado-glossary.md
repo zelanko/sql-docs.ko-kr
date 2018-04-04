@@ -1,28 +1,28 @@
 ---
-title: "ADO 용어 | Microsoft Docs"
-ms.custom: 
+title: ADO 용어 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-glossary"></a>ADO 용어집
 이 항목에서는 ADO와 관련 된 용어를 정의 합니다.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
  테이블의 필드와 변수 간의 매핑. ADO Visual c + + 확장에 **레코드 집합** 필드는 C/c + + 변수에 매핑됩니다.  
   
  bitmask  
- 숫자 값을 위한 다른 숫자 값을 비트 단위로 값 비교 일반적으로 매개 변수 또는 반환 값의 옵션 플래그를 설정 하려면. 일반적으로이 비교 작업을 완료 비트 논리 연산자와 같은 **및** 및 **또는** Visual Basic의  **&**  및 **&#124;** c + +입니다.  
+ 숫자 값을 위한 다른 숫자 값을 비트 단위로 값 비교 일반적으로 매개 변수 또는 반환 값의 옵션 플래그를 설정 하려면. 일반적으로이 비교 작업을 완료 비트 논리 연산자와 같은 **및** 및 **또는** Visual Basic의 **&** 및 **&#124;** c + +에서입니다.  
   
  예를 들어 ADO **파생** 필드의 특성을 결정 하로 나타내는 비트 마스크 값을 사용할 수 있습니다. 필드를 업데이트할 수 있는지 확인 하 고 한다고 가정 합니다. Visual Basic에서 다음 식을 사용 하 여이 테스트할 수 있습니다.`Field.Attributes AND adFldUpdatable`  
   
@@ -165,7 +165,7 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="e"></a>E  
  열거형  
- 목록 명명 된 상수입니다. 열거 값이 고유할 필요가 있습니다. 그러나 각 값의 이름을 열거형 정의 된 범위 내에서 고유 해야 합니다. Ado에서 열거형 숫자 매개 변수에 대해 사용 되 고 반환 값, ADO 코드에 의미를 추가 하 고 개발자는 숫자 값 (버전 간에 변경 될 수 있습니다). 예를 들어, 정적 열려는 **레코드 집합**를 사용 하 여는 **adOpenStatic** 열거형 값:`Recordset.Open ,,adOpenStatic`  
+ 목록 명명 된 상수입니다. 열거 값이 고유할 필요가 있습니다. 그러나 각 값의 이름을 열거형 정의 된 범위 내에서 고유 해야 합니다. Ado에서 열거형 숫자 매개 변수에 대해 사용 되 고 반환 값, ADO 코드에 의미를 추가 하 고 개발자는 숫자 값 (버전 간에 변경 될 수 있습니다). 예를 들어, 정적 열려는 **레코드 집합**를 사용 하 여는 **adOpenStatic** 열거형 값: `Recordset.Open ,,adOpenStatic`  
   
  라고도 *열거형된 상수*합니다. 참고 항목 *상수*합니다.  
   

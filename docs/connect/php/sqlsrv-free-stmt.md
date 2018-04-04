@@ -1,32 +1,34 @@
 ---
 title: sqlsrv_free_stmt | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_free_stmt
+apiname:
+- sqlsrv_free_stmt
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_free_stmt
 - API Reference, sqlsrv_free_stmt
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
-caps.latest.revision: "21"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 74a114457d5f4ce3c65af6583f6ed08c0b85d007
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2debeb602c6432a273ae194dd2715a8e8d5239bd
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +52,7 @@ sqlsrv_free_stmt( resource $stmt)
 > **Null** 은 이 함수에 대해 유효한 매개 변수입니다. 그러면 스크립트에서 함수가 여러 번 호출될 수 있습니다. 예를 들어 오류 조건에서 문을 해제 하 고 스크립트의 끝에서 다시 해제 하는 경우 두 번째 호출에서를 **sqlsrv_free_stmt** 돌아갑니다 **true** 에 첫 번째 호출 하므로 **sqlsrv_ free_stmt** (오류 조건) 문 리소스를 설정 **null**합니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 문 리소스를 만들어 간단한 쿼리를 실행하고 **sqlsrv_free_stmt** 를 호출하여 문과 연결된 모든 리소스를 해제합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 문 리소스를 만들어 간단한 쿼리를 실행하고 **sqlsrv_free_stmt** 를 호출하여 문과 연결된 모든 리소스를 해제합니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -86,8 +88,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)  
   

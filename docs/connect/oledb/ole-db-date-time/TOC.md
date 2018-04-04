@@ -1,0 +1,11 @@
+# [날짜 및 시간 기능 향상(OLE DB)](date-and-time-improvements-ole-db.md)
+
+# [향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB)](bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md)
+# [IRowsetFind 비교](comparability-for-irowsetfind.md)
+# [변환(OLE DB)](conversions-ole-db.md)
+# [클라이언트에서 서버로 수행되는 변환](conversions-performed-from-client-to-server.md)
+# [서버에서 클라이언트로 수행되는 변환](conversions-performed-from-server-to-client.md)
+# [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](data-type-support-for-ole-db-date-and-time-improvements.md)
+# [메타데이터 - 날짜 및 시간과 스키마 행 집합](metadata-date-and-time-and-schema-rowsets.md)
+# [메타데이터 - 매개 변수 및 행 집합](metadata-parameter-and-rowset.md)
+# [날짜 및 시간 기능 향상을 위한 OLE DB API 지원](ole-db-api-support-for-date-and-time-enhancements.md)

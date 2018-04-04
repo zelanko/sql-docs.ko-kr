@@ -1,39 +1,39 @@
 ---
-title: "sqlrutils를 사용하여 저장 프로시저를 만드는 방법 | Microsoft 문서"
-ms.custom: 
+title: sqlrutils를 사용하여 저장 프로시저를 만드는 방법 | Microsoft 문서
+ms.custom: ''
 ms.date: 12/16/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ad0cf99c59bcd3295acf0e1c29b14c8523f6f925
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fe1e05ee854fb6a094a66d88981d74287aa96beb
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>저장 프로시저를 사용 하 여 sqlrutils 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 항목에서는 R 코드를 변환하여 T-SQL 저장 프로시저로 실행하는 단계에 대해 설명합니다. 최상의 결과를 얻으려면 모든 입력을 매개 변수화할 수 있도록 코드를 약간 수정해야 할 수 있습니다.
+이 문서는 R 코드를 T-SQL 저장 프로시저 실행을 변환 하기 위한 단계를 설명 합니다. 최상의 결과를 얻으려면 모든 입력을 매개 변수화할 수 있도록 코드를 약간 수정해야 할 수 있습니다.
 
 ## <a name="bkmk_rewrite"></a>1단계. R 스크립트를 다시 작성
 
 최상의 결과 단일 함수로 캡슐화 하 여 R 코드를 다시 작성 해야 합니다.
 
-함수에서 사용 되는 모든 변수는 함수 내에 정의 되어야 합니다 또는 입력된 매개 변수로 정의 되어야 합니다. 이 항목의 [샘플 코드](#samples) 를 참조하세요.
+함수에서 사용 되는 모든 변수는 함수 내에 정의 되어야 합니다 또는 입력된 매개 변수로 정의 되어야 합니다. 참조는 [샘플 코드](#samples) 이 문서의 내용입니다.
 
 또한 R 함수에 대 한 입력된 매개 변수 될 때문에 SQL의 입력된 매개 변수 저장 프로시저를 입 / 출력 준수 다음 형식 요구 사항을 확인 해야 합니다.
 
@@ -69,8 +69,8 @@ R 코드 그룹이 정리 되 고 단일 함수로 호출할 수 있습니다, �
 
 사용자 함수는 입력을 사용 하는 경우 각 입력에 대해 다음 함수를 호출 합니다.
 
-- `setInputData`입력이 데이터 프레임
-- `setInputParameter`다른 모든 입력된 형식에 대 한
+- `setInputData` 입력이 데이터 프레임
+- `setInputParameter` 다른 모든 입력된 형식에 대 한
 
 나중에 인수로 전달 합니다 R 개체를 만들 각 함수 호출을 수행 하면 `StoredProcedure`, 전체 저장된 프로시저를 만듭니다.
 
@@ -82,8 +82,8 @@ R 코드 그룹이 정리 되 고 단일 함수로 호출할 수 있습니다, �
 
 때 목록을 변환 하거나 목록에서 특정 항목을 가져오기 이러한 함수를 선택 합니다.
 
-- `setOutputData`변수를 목록에서 가져올 데이터 프레임인 경우
-- `setOutputParameter`목록의 다른 모든 멤버에 대 한
+- `setOutputData` 변수를 목록에서 가져올 데이터 프레임인 경우
+- `setOutputParameter` 목록의 다른 모든 멤버에 대 한
 
 나중에 인수로 전달 합니다 R 개체를 만들 각 함수 호출을 수행 하면 `StoredProcedure`, 전체 저장된 프로시저를 만듭니다.
 
