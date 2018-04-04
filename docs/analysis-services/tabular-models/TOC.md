@@ -1,19 +1,19 @@
-# [개요](tabular-models-ssas.md)  
-
-# [테이블 형식 모델 만들기](tabular-model-solutions-ssas-tabular.md)  
+# [테이블 형식 모델](tabular-models-ssas.md)  
+## [호환성 수준](compatibility-level-for-tabular-models-in-analysis-services.md)  
 ## [테이블 형식 1400 모델에서 지원되는 데이터 원본](data-sources-supported-ssas-tabular-1400.md)  
 ## [테이블 형식 1200 모델에서 지원되는 데이터 원본](data-sources-supported-ssas-tabular.md)  
 ## [지원되는 데이터 형식](data-types-supported-ssas-tabular.md)  
+
+# 테이블 형식 모델 만들기
 ## [테이블 형식 모델 디자이너](tabular-model-designer-ssas.md)  
 ## [작업 영역 데이터베이스](workspace-database-ssas-tabular.md)  
-## [호환성 수준](compatibility-level-for-tabular-models-in-analysis-services.md)  
 
 ## [테이블 형식 모델 프로젝트](tabular-model-projects-ssas-tabular.md)  
 ### [새 테이블 형식 모델 프로젝트 만들기](create-a-new-tabular-model-project-analysis-services.md)  
 ### [Analysis Services에서 가져오기](import-from-analysis-services-ssas-tabular.md)  
 ### [파워 피벗에서 가져오기](import-from-power-pivot-ssas-tabular.md)  
 
-## [Properties](properties-ssas-tabular.md)  
+## 속성
 ### [파워 뷰 - 보고 속성](power-view-reporting-properties-ssas-tabular.md)  
 ### [파워 뷰 - 기본 필드 집합 구성](power-view-configure-default-field-set-for-reports.md)  
 ### [파워 뷰 - 테이블 동작 속성 구성](power-view-configure-table-behavior-properties-for-reports.md)  
