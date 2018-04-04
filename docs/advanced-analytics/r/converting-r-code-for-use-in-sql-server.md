@@ -1,27 +1,25 @@
 ---
-title: "R Services에서 사용할 R 코드 변환 | Microsoft 문서"
+title: R Services에서 사용할 R 코드 변환 | Microsoft 문서
 ms.date: 12/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 802ad1ee49920db65eadccfb29650c649c339d48
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 669f52d499b9479e23266af91c04e6bc084bb8ea
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="converting-r-code-for-execution-in-database"></a>데이터베이스에서 실행에 대 한 R 코드 변환
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +32,7 @@ SQL server R Studio 또는 다른 환경에서 R 코드를 이동 하면 가장 
 
 + R 라이브러리는 네트워크에 액세스 하거나 SQL Server에 설치할 수 없습니다 사용.
 + 코드에서는 Excel 워크시트, 공유에 파일 및 다른 데이터베이스와 같은 SQL Server, 외부 데이터 원본에 대 한 별도 호출 합니다. 
-+ 코드를 실행 하려는  *@script*  의 매개 변수 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 및 저장된 프로시저를 매개 변수화 할 수도 있습니다.
++ 코드를 실행 하려는 *@script* 의 매개 변수 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 및 저장된 프로시저를 매개 변수화 할 수도 있습니다.
 + 원래 솔루션의 여러 단계 데이터 준비 작업이 나 모델을 학습, 점수 매기기, 또는 보고 및 기능 엔지니어링 같은 독립적으로 실행 하는 경우 프로덕션 환경에서 더 효율적일 수 있습니다를 포함 합니다.
 + 개선 하려면 라이브러리 변경, 병렬 실행을 사용 하 여 또는 SQL Server에 일부 처리 작업 오프 로드 하 여 성능을 최적화 합니다. 
 
@@ -70,7 +68,7 @@ SQL server R Studio 또는 다른 환경에서 R 코드를 이동 하면 가장 
 
 + 예를 들어 rowid r:에서 사용할 수 없는 데이터에 대 한 종속성을 제거 하는 것이 좋습니다. 및 SQL Server의 GUID 데이터 형식을 R에서 사용할 수 없습니다 및 오류를 생성 합니다.
 
-    자세한 내용은 참조 [R 라이브러리 및 데이터 형식](../r/r-libraries-and-data-types.md)합니다.
+    자세한 내용은 [R 라이브러리 및 데이터 형식](../r/r-libraries-and-data-types.md) 을 참조합니다.
 
 ## <a name="step-2-convert-or-repackage-code"></a>2단계. 으로 변환 하거나 코드를 다시 패키지
 

@@ -1,28 +1,26 @@
 ---
-title: "OlapR를 사용 하 여 만드는 MDX 쿼리 하는 방법 | Microsoft Docs"
-ms.custom: 
+title: OlapR를 사용 하 여 만드는 MDX 쿼리 하는 방법 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9d917316a9d25b0634605e0f55eae3eda93f8669
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>OlapR를 사용 하 여 MDX 쿼리를 만드는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 02/11/2018
 + 새 OLAP 개체 만들기
 + 측정값 또는 합계를 포함 하 여 파티션 쓰기 저장이 가능한
 
-## <a name="buildMDX"></a>R에서 MDX 쿼리 작성
+## <a name="buildMDX"></a> R에서 MDX 쿼리 작성
 
 1. OLAP 데이터 원본(SSAS 인스턴스) 및 MSOLAP 공급자를 지정하는 연결 문자열을 정의합니다.
 
@@ -51,8 +49,8 @@ ms.lasthandoff: 02/11/2018
 4. 다음과 같은 도우미 함수를 사용하여 MDX 쿼리에 포함할 차원 및 측정값에 대한 자세한 정보를 제공합니다.
 
      + `cube()` SSAS 데이터베이스의 이름을 지정합니다. 명명 된 인스턴스에 연결 하는 경우 컴퓨터 이름과 인스턴스 이름을 제공 합니다. 
-     + `columns()`사용할 측정값의 이름을 제공는 **ON COLUMNS** 인수입니다.
-     + `rows()`사용할 측정값의 이름을 제공는 **ON 행** 인수입니다.
+     + `columns()` 사용할 측정값의 이름을 제공는 **ON COLUMNS** 인수입니다.
+     + `rows()` 사용할 측정값의 이름을 제공는 **ON 행** 인수입니다.
      + `slicers()` 슬라이서로 사용할 필드 또는 멤버를 지정합니다. 슬라이서는 모든 MDX 쿼리 데이터에 적용되는 필터와 유사합니다.
      
      + `axis()` 쿼리에서 사용할 추가 축의 이름을 지정합니다. 
@@ -66,7 +64,7 @@ ms.lasthandoff: 02/11/2018
   + `executeMD` 다차원 배열을 반환합니다.
   + `execute2D` 2차원(테이블 형식) 데이터 프레임을 반환합니다.
 
-## <a name="executeMDX"></a>R에서 유효한 MDX 쿼리를 실행 합니다.
+## <a name="executeMDX"></a> R에서 유효한 MDX 쿼리를 실행 합니다.
 
 1. OLAP 데이터 원본(SSAS 인스턴스) 및 MSOLAP 공급자를 지정하는 연결 문자열을 정의합니다.
 
@@ -191,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>지정된 차원 및 계층의 모든 멤버를 반환하려면
 
-원본을 정의하고 핸들을 만든 후 반환할 큐브, 차원 및 계층을 지정합니다. 반환 결과 접두사로 사용 하는 항목에에서  **->**  이전 멤버의 자식 항목을 나타냅니다.
+원본을 정의하고 핸들을 만든 후 반환할 큐브, 차원 및 계층을 지정합니다. 반환 결과 접두사로 사용 하는 항목에에서 **->** 이전 멤버의 자식 항목을 나타냅니다.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"

@@ -1,31 +1,29 @@
 ---
-title: "R 모델 (SQL과 R 심층 분석)을 만들고 | Microsoft Docs"
-ms.custom: 
+title: R 모델 (SQL과 R 심층 분석)을 만들고 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: a195d5e2-72e2-4dd6-bf43-947312e4a52a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: a076c6b1bdc06709d14cb8e98be1d01b59cb935e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 97a773634bb4fd0fa5a78b57b2d8c182d2c66241
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-r-models-sql-and-r-deep-dive"></a>R 모델 (SQL과 R 심층 분석)을 만들으십시오
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -137,7 +135,7 @@ Number of iterations: 15
 
 ## <a name="next-step"></a>다음 단계
 
-[새 데이터 점수](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
+[새 데이터 채점하기](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
 
 ## <a name="previous-step"></a>이전 단계
 

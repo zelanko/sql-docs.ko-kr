@@ -1,28 +1,26 @@
 ---
-title: "기본 SQL Server에 대 한 기계 학습에 대 한 패키지 라이브러리 | Microsoft Docs"
-ms.custom: 
+title: 기본 SQL Server에 대 한 기계 학습에 대 한 패키지 라이브러리 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/19/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: d871795effaace791541b4a1f751f8f9e3845b82
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 97dc375dcee9dab2eb38c568b410e8ea2084842f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="default-package-libraries-for-machine-learning-on-sql-server"></a>기본 SQL Server에 대 한 기계 학습에 대 한 패키지 라이브러리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,30 +1,29 @@
 ---
-title: "SQL Server R 자습서 | Microsoft Docs"
+title: SQL Server R 자습서 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a2fd60a40950710972c6e9507b3c9545e86840ff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 34fee91978a27e38fca6092a98596c701cfd32eb
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server R 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +112,7 @@ ms.lasthandoff: 02/11/2018
 
 SQL Server 설치 프로그램을 실행 한 후 이러한 중요 한 단계를 잊지 마십시오.
 
-+ 실행 하 여 외부 스크립트 실행 기능을 사용 하도록 설정`sp_configure 'external scripts enabled', 1`
++ 실행 하 여 외부 스크립트 실행 기능을 사용 하도록 설정 `sp_configure 'external scripts enabled', 1`
 + 서버 다시 시작
 + 외부 런타임을 호출 하는 서비스에 필요한 권한이 있는지 확인
 + SQL 로그인 이나 Windows 사용자 계정에 데이터를 읽을 수 및 샘플에 필요한 모든 데이터베이스 개체를 만들려면 서버에 연결 하는 데 필요한 권한이 있는지 확인 하십시오.

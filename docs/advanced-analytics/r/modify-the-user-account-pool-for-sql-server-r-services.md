@@ -1,25 +1,23 @@
 ---
-title: "SQL Server 기계 학습에 대 한 사용자 계정 풀 수정 | Microsoft Docs"
+title: SQL Server 기계 학습에 대 한 사용자 계정 풀 수정 | Microsoft Docs
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c1efa87fef881a8b88b0967716ec062cf95e64f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>SQL Server 기계 학습에 대 한 사용자 계정 풀 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +41,7 @@ Windows 계정 그룹이 만들어집니다 [!INCLUDE[ssNoVersion](../../include
 
 둘 이상의 인스턴스가 기계 학습을 하는 경우 컴퓨터에 여러 개의 사용자 그룹 해야 합니다. 그룹은 인스턴스 간에 공유할 수 없습니다.
 
-### <a name = "HowToChangeGroup"></a>작업자 계정의 수를 변경 하는 방법
+### <a name = "HowToChangeGroup"> </a>작업자 계정의 수를 변경 하는 방법
 
 계정 풀에서 사용자 수를 수정하려면 아래 설명된 대로 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 서비스의 속성을 편집해야 합니다.
 

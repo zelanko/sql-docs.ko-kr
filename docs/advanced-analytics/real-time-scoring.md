@@ -1,25 +1,25 @@
 ---
-title: "실시간 점수 매기기 | Microsoft Docs"
-ms.custom: 
+title: 실시간 점수 매기기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: a8a37b57e5704136280360258223927c7d960eea
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f8473280725732f92d1156a65ea087677b3af170
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="realtime-scoring"></a>실시간 점수 매기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,7 +118,7 @@ SQL Server에서 기능을 미리 점수 매기기 실시간 사용 하도록 �
 
 ### <a name="known-issues"></a>알려진 문제
 
-+ `sp_rxPredict`모델과 NULL 값이 전달 되는 정확 하지 않은 메시지를 반환 합니다.: "System.Data.SqlTypes.SqlNullValueException:Data에서 Null"입니다.
++ `sp_rxPredict` 모델과 NULL 값이 전달 되는 정확 하지 않은 메시지를 반환 합니다.: "System.Data.SqlTypes.SqlNullValueException:Data에서 Null"입니다.
 
 ## <a name="next-steps"></a>다음 단계
 

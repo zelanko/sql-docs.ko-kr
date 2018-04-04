@@ -1,27 +1,25 @@
 ---
-title: "사용자 라이브러리에 설치 된 R 패키지에서 오류를 방지 | Microsoft Docs"
+title: 사용자 라이브러리에 설치 된 R 패키지에서 오류를 방지 | Microsoft Docs
 titleSuffix: SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 02/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: b7f640cc33cb61ab8dffc57edb3b522808129880
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: a3498ca0940384dacf9f67ac916d78eee939f829
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>사용자 라이브러리에 설치 된 R 패키지에서 오류를 방지 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

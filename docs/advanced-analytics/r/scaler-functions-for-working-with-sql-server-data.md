@@ -1,28 +1,26 @@
 ---
-title: "SQL Server 데이터 작업을 위한 RevoScaleR 함수 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 데이터 작업을 위한 RevoScaleR 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: b1567bd6e4a419b293a963a7b3afe96c24409bcc
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 70591237d61d81dd78b09a5ce0c7d251a1b29796
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>SQL Server 데이터 작업을 위한 RevoScaleR 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +41,7 @@ ScaleR 함수 및 사용 하는 방법의 전체 목록에 대 한 참조는 [Mi
 
 인스턴스 및 데이터베이스에 대해 필요한 권한이 있는 경우 R에서 DDL 문을 실행할 수 있습니다. 다음 함수는 DDL 문을 실행 하거나 데이터베이스 스키마를 검색할 ODBC 호출을 사용 합니다.
 
-+ `rxSqlServerTableExists`및 [rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) -Drop는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 테이블을 쿼리하거나 데이터베이스 테이블 또는 개체의 존재 여부 확인
++ `rxSqlServerTableExists` 및 [rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) -Drop는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 테이블을 쿼리하거나 데이터베이스 테이블 또는 개체의 존재 여부 확인
 
 + [rxExecuteSQLDDL](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexecutesqlddl) -정의 또는 데이터베이스 개체를 조작 하는 데이터 정의 언어 (DDL) 명령을 실행 합니다. 이 함수는 데이터를 반환할 수 없습니다 하며 검색 하거나 수정할 개체 스키마 또는 메타 데이터에만 사용 됩니다.
 
@@ -55,7 +53,7 @@ ScaleR 함수 및 사용 하는 방법의 전체 목록에 대 한 참조는 [Mi
 
 + [rxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) - **ScaleR** 함수를 SQL Server R Services에서 실행하는 데 사용되는 SQL Server 계산 컨텍스트를 생성합니다. 이 계산 컨텍스트는 현재 Windows의 SQL Server 인스턴스에 대해서만 지원됩니다.
 
-+ `rxGetComputeContext`및 [rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) -Get 또는 활성 계산 컨텍스트를 설정 합니다.
++ `rxGetComputeContext` 및 [rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) -Get 또는 활성 계산 컨텍스트를 설정 합니다.
 
 ## <a name="move-data-and-transform-data"></a>데이터 이동 하 고 데이터 변환
 

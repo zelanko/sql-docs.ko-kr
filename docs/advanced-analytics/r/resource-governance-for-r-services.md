@@ -1,26 +1,24 @@
 ---
-title: "SQL Server의 기계 학습에 대 한 리소스 관리 | Microsoft Docs"
-ms.custom: 
+title: SQL Server의 기계 학습에 대 한 리소스 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d1eb0f1cce23d084516b5446d39274ac3078b0b8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 11cfaba5f645824158e0c25103ec355e513fa075
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server의 기계 학습에 대 한 리소스 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +26,7 @@ ms.lasthandoff: 02/11/2018
 이 문서를 할당 하 고 R 및 Python 스크립트를 사용 하는 리소스를 분산 하는 SQL Server의 기능 리소스 관리에 대 한 개요를 제공 합니다.
 
 **적용 대상:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
- [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 및 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 및 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 
 ## <a name="goals-of-resource-governance-for-machine-learning"></a>기계 학습에 대 한 리소스 거 버 넌 스의 목표
 
@@ -90,7 +88,7 @@ SQL Server에서는 세 가지 유형의 기본 리소스 풀을 지원합니다
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 외부 스크립트 지원은 선택 사항입니다. 기계 학습 기능을 설치한 후에 기본적으로 외부 스크립트를 실행 하는 기능은 OFF이 고 수동으로 속성을 다시 구성 하 고 스크립트 실행을 활성화 하려면 인스턴스를 다시 시작 해야 합니다.
 
-따라서 즉시 완화 되어야 하는 리소스 문제 또는 보안 문제가 있는 경우 관리자가 즉시 해제할 수 있는 외부 스크립트 실행을 사용 하 여 [sp_configure &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 속성을 설정 하 고 `external scripts enabled` FALSE 또는 0입니다.
+따라서 즉시 완화 되어야 하는 리소스 문제 또는 보안 문제가 있는 경우 관리자가 즉시 해제할 수 있는 외부 스크립트 실행을 사용 하 여 [sp_configure &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 속성을 설정 하 고 `external scripts enabled` FALSE 또는 0입니다.
   
 ## <a name="see-also"></a>참고 항목
 
