@@ -1,16 +1,16 @@
 ---
 title: sp_execute_external_script (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283db0150613d9d956cf5b0ec6b6fd295bc4444b
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/23/2018
 
 ```
 sp_execute_external_script   
-    @language = N'language,   
+    @language = N'language',   
     @script = N'script'  
     [ , @input_data_1 = N'input_data_1' ]   
     [ , @input_data_1_name = N'input_data_1_name' ]   
@@ -55,7 +55,7 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>인수
- @language= N'*언어*'  
+ @language = N'*언어*'  
  스크립트 언어를 나타냅니다. *언어* 은 **sysname**합니다.  
 
  유효한 값은 `Python` 또는 `R`합니다. 
@@ -103,7 +103,7 @@ sp_execute_external_script
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 와 함께 설치 하는 서버 구성 요소 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 워크스테이션 도구 및 데이터 과학자의 고성능 환경에 연결 하는 연결 라이브러리 집합이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 기계 학습 하는 동안 구성 요소를 설치 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부 스크립트를 실행할 수 있도록 설정 하려면. 자세한 내용은 참조 [SQL Server 컴퓨터 학습 서비스 설정](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)합니다.  
   
-외부 리소스 풀을 구성 하 여 외부 스크립트 사용 하는 리소스를 제어할 수 있습니다. 자세한 내용은 [CREATE EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)을 참조하세요. 리소스 관리자 카탈로그 뷰, DMV, 및 카운터에서 작업 하는 방법에 대 한 정보를 가져올 수 있습니다. 자세한 내용은 참조 [리소스 관리자 카탈로그 뷰 &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [리소스 관리자 관련 동적 관리 뷰 &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), 및 [SQL Server, 외부 스크립트 개체](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)합니다.  
+외부 리소스 풀을 구성 하 여 외부 스크립트 사용 하는 리소스를 제어할 수 있습니다. 자세한 내용은 [CREATE EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)을 참조하세요. 리소스 관리자 카탈로그 뷰, DMV, 및 카운터에서 작업 하는 방법에 대 한 정보를 가져올 수 있습니다. 자세한 내용은 참조 [리소스 관리자 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [리소스 관리자 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), 및 [ SQL Server, 외부 스크립트 개체](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)합니다.  
 
 사용 하 여 모니터 스크립트 실행 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 및 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)합니다. 
 
@@ -208,19 +208,19 @@ END;
 GO
 ```
 
-언어 식별자에서 Python을 사용 하 여 비슷한 모델을 생성 하려면 변경 `@language=N'R'` 를 `@language = N'Python'`, 구성에 필요한 수정 하 고는 `@script` 인수입니다. 그렇지 않으면 모든 매개 변수 작동 오른쪽의 경우와 동일
+Python을 사용하여 비슷한 모델을 생성하려면 언어 식별자를 `@language=N'R'`에서 `@language = N'Python'`으로 변경하고 `@script` 인수를 필요한 대로 수정합니다. 그렇지 않으면 모든 매개 변수가 R과 똑같이 작동합니다.
 
 ### <a name="c-create-a-python-model-and-generate-scores-from-it"></a>3. Python 모델을 만들고 여기에서 점수를 생성 합니다.
 
-Sp를 사용 하는 방법을 보여 주는이 예제\_실행\_외부\_간단한 Python 모델에 대 한 점수를 생성 하는 스크립트입니다. 
+이 예제에서는 sp\_execute\_external\_script를 사용하여 간단한 Python 모델에서 점수를 생성하는 방법을 보여줍니다. 
 
 ```sql
 CREATE PROCEDURE [dbo].[py_generate_customer_scores]
 AS
 BEGIN
 
-## Input query to generate the customer data
-DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+-- Input query to generate the customer data
+DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders'
 
 EXEC sp_execute_external_script @language = N'Python', @script = N'
 import pandas as pd
@@ -244,9 +244,9 @@ END;
 GO
 ```
 
-Python 코드에 열 머리글이 없는 출력을 SQL Server; 따라서 결과와 문을 사용 하 여 열 이름과 sql에서 사용할 데이터 형식을 지정 하려면.
+Python 코드에 사용된 열 머리글은 SQL Server로 출력되지 않으므로 WITH RESULTS 문을 사용하여 사용할 SQL의 열 이름과 데이터 형식을 지정합니다.
 
-점수 매기기를 사용할 수도 있습니다는 네이티브 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 함수 Python 또는 R 런타임을 호출을 방지 하기 때문에 일반적으로 빠릅니다.
+점수 매기기의 경우 네이티브 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 함수를 사용할 수도 있으며, 이 함수는 Python 또는 R 런타임 호출을 방지하기 때문에 일반적으로 더 빠릅니다.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -255,10 +255,10 @@ Python 코드에 열 머리글이 없는 출력을 SQL Server; 따라서 결과�
  [R 라이브러리 및 R 데이터 형식](../../advanced-analytics/r/r-libraries-and-data-types.md)  
  [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
  [SQL Server 컴퓨터 학습 서비스에 대 한 알려진된 문제](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
- [외부 라이브러리 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
- [sp_prepare &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
+ [외부 라이브러리를 만들 &#40;Transact SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
+ [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [external scripts enabled 서버 구성 옵션](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
+ [External Scripts Enabled 서버 구성 옵션](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [SERVERPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
  [SQL Server, External Scripts 개체](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  

@@ -1,6 +1,6 @@
 ---
-title: "Linux에서 SQL Server에 대 한 active Directory 인증 자습서 | Microsoft Docs"
-description: "이 자습서는 Linux에서 SQL Server에 대 한 AAD 인증에 대 한 구성 단계를 제공합니다."
+title: Linux에서 SQL Server에 대 한 active Directory 인증 자습서 | Microsoft Docs
+description: 이 자습서는 Linux에서 SQL Server에 대 한 AAD 인증에 대 한 구성 단계를 제공합니다.
 author: meet-bhagdev
 ms.date: 02/23/2018
 ms.author: meetb
@@ -8,19 +8,19 @@ manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: f6acfbf1138507100a0b5b5a486d0e6288f8b372
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Linux에서 SQL Server와 함께 사용 하 여 Active Directory 인증 자습서:
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/24/2018
 AD 인증을 구성 하기 전에 해야 합니다.
 
 * 네트워크에서 AD 도메인 컨트롤러 (Windows) 설정  
-* 설치 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -51,7 +51,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
 
 다음 단계를 사용 하 여 연결할는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory 도메인에 호스트:
 
-1. 사용 하 여  **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**  AD 도메인에 호스트 컴퓨터를 가입 합니다. 아직 하지 않는 경우에 realmd와 Kerberos 클라이언트 패키지가 설치는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux 배포판의 패키지 관리자를 사용 하 여 호스트 컴퓨터:
+1. 사용 하 여 **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** AD 도메인에 호스트 컴퓨터를 가입 합니다. 아직 하지 않는 경우에 realmd와 Kerberos 클라이언트 패키지가 설치는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux 배포판의 패키지 관리자를 사용 하 여 호스트 컴퓨터:
 
    ```bash
    # RHEL
@@ -137,6 +137,8 @@ AD 인증을 구성 하기 전에 해야 합니다.
    > 오류 표시, "필요한 패키지가 설치 되지 않은" 경우 실행 하기 전에 Linux 배포판의 패키지 관리자를 사용 하 여 이러한 패키지를 설치 해야는 `realm join` 명령을 다시 합니다.
    >
    > "에 도메인 가입 권한이" 오류가 발생 하는 경우는 도메인 관리자와 함께 Linux 컴퓨터를 도메인에 연결 하려면 충분 한 권한이 있는지 확인 하십시오 해야 합니다.
+   >
+   > "KDC 회신 기대를 일치 하지 않습니다" 오류가 발생 하는 경우 다음 수 하지 지정 했습니다 사용자에 대 한 올바른 영역 이름. 영역 이름은 대/소문자, 대문자 일반적으로 및 명령을 사용 하 여 식별할 수 있습니다 `realm discover contoso.com`합니다.
    
    > SQL Server 사용자 계정 및 그룹 보안 식별자 (SID)에 매핑하기 위한 SSSD 및 NSS를 사용 합니다. 구성 하 고 성공적으로 AD 로그인을 만들려는 SQL Server에 대 한 순서 대로 실행 SSSD 이어야 합니다. Realmd 일반적으로이 도메인 가입의 일환으로 자동으로 않지만 일부 경우에 이렇게 해야 별도로 있습니다.
    >
@@ -145,7 +147,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
   
 5. 도메인에서 사용자에 대 한 정보를 수집할 이제 수 및 해당 사용자로 Kerberos 티켓을 얻을 수 있습니다를 확인 합니다.
 
-   다음 예제에서는 **id**,  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, 및  **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**  이 대 한 명령입니다.
+   다음 예제에서는 **id**,  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, 및 **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** 이 대 한 명령입니다.
 
    ```bash
    id user@contoso.com
@@ -170,7 +172,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
 ## <a id="createuser"></a> 에 대 한 AD 사용자를 만들고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SPN을 설정 하 고
 
   > [!NOTE]
-  > 다음 단계를 사용 하 여 [정규화 된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)합니다. 사용 중인 **Azure**, 해야  **[만드세요](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  계속 진행 하기 전에.
+  > 다음 단계를 사용 하 여 [정규화 된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)합니다. 사용 중인 **Azure**, 해야 **[만드세요](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** 계속 진행 하기 전에.
 
 1. 도메인 컨트롤러에서 실행 하는 [New-aduser](https://technet.microsoft.com/library/ee617253.aspx) 만료 되지 않는 암호를 사용 하 여 새 AD 사용자를 만들려면 PowerShell 명령입니다. 이 예에서는 "mssql," 계정 이름이 되지만 필요 하면 계정 이름이 될 수 있습니다. 계정의 새 암호를 입력 하 라는 메시지가 표시 됩니다.
 
@@ -206,7 +208,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. 으로 keytab 파일 만들기  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**  이전 단계에서 만든 AD 사용자에 대 한 합니다. 메시지가 표시 되 면 해당 AD 계정의 암호를 입력 합니다.
+2. 으로 keytab 파일 만들기 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 이전 단계에서 만든 AD 사용자에 대 한 합니다. 메시지가 표시 되 면 해당 AD 계정의 암호를 입력 합니다.
 
    ```bash
    sudo ktutil

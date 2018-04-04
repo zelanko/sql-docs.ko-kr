@@ -1,27 +1,28 @@
 ---
-title: "SQLSRV 드라이버 API 참조 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: SQLSRV 드라이버 API 참조 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 48d43c13a850e057d675d3abaaec612bc51723e1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e8055aee892d75a9dc7f5b4c9ac4248184578f9b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 드라이버 API 참조
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -61,11 +62,14 @@ SQLSRV 드라이버에는 다음과 같은 함수가 포함되어 있습니다.
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|서버에 대한 정보를 제공합니다.|  
   
 ## <a name="reference"></a>참조  
-[PHP 매뉴얼](http://go.microsoft.com/fwlink/?LinkId=105500)  
+[PHP 매뉴얼](http://php.net/manual)  
   
 ## <a name="see-also"></a>관련 항목:  
-[PHP SQL 드라이버 개요](../../connect/php/overview-of-the-php-sql-driver.md)
-[상수 &#40; Microsoft Drivers for PHP for SQL server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[PHP SQL 드라이버 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
-[PHP SQL 드라이버 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server의 개요](../../connect/php/overview-of-the-php-sql-driver.md)
+
+[상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

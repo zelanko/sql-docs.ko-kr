@@ -1,32 +1,34 @@
 ---
 title: sqlsrv_field_metadata | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_field_metadata
+apiname:
+- sqlsrv_field_metadata
 apitype: NA
 helpviewer_keywords:
 - API Reference, sqlsrv_field_metadata
 - sqlsrv_field_metadata
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
-caps.latest.revision: "34"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1d4688874e09a91a0aaaa1395278572b5cd4520
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 077296607e78b8a0a4d77a174c96abb47a0545d3
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,10 +48,10 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>반환 값  
 배열의 **array** 또는 **false**입니다. 배열은 결과 집합의 각 필드에 대한 하나의 배열로 구성됩니다. 각 하위 배열에는 아래 표에 설명된 키가 있습니다. 필드 메타데이터 검색 중 오류가 발생하면 **false** 가 반환됩니다.  
   
-|Key|설명|  
+|Key|Description|  
 |-------|---------------|  
 |이름|필드에 해당하는 열의 이름입니다.|  
-|유형|SQL 형식에 해당하는 숫자 값입니다.|  
+|형식|SQL 형식에 해당하는 숫자 값입니다.|  
 |크기|문자 형식 필드(char(n), varchar(n), nchar(n), nvarchar(n), XML)의 문자 수입니다. 이진 형식 필드(binary(n), varbinary(n), UDT)의 바이트 수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
 |전체 자릿수|가변 전체 자릿수 형식(real, numeric, decimal, datetime2, datetimeoffset, time)의 전체 자릿수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
 |소수 자릿수|가변 소수 자릿수 형식(numeric, decimal, datetime2, datetimeoffset, time)의 소수 자릿수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
@@ -60,7 +62,7 @@ sqlsrv_field_metadata( resource $stmt)
 |SQL Server 2008 데이터 형식|형식|최소/최대 전체 자릿수|최소/최대 소수 자릿수|크기|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |bigint|SQL_BIGINT(-5)|||8|  
-|binary|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
+|BINARY|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT(-7)||||  
 |char|SQL_CHAR(1)|||0 < *n* < 8000 <sup>1</sup>|  
 |date|SQL_TYPE_DATE(91)|10/10|0/0||  
@@ -72,7 +74,7 @@ sqlsrv_field_metadata( resource $stmt)
 |image|SQL_LONGVARBINARY(-4)|||2GB|  
 |int|SQL_INTEGER(4)||||  
 |money|SQL_DECIMAL(3)|19/19|4/4||  
-|nchar|SQL_WCHAR(-8)|||0 < *n* < 4000 <sup>1</sup>|  
+|NCHAR|SQL_WCHAR(-8)|||0 < *n* < 4000 <sup>1</sup>|  
 |ntext|SQL_WLONGVARCHAR(-10)|||1GB|  
 |numeric|SQL_NUMERIC(2)|1/38|0/전체 자릿수 값||  
 |nvarchar|SQL_WVARCHAR(-9)|||0 < *n* < 4000 <sup>1</sup>|  
@@ -95,7 +97,7 @@ sqlsrv_field_metadata( resource $stmt)
 Null을 허용하는 키는 yes 또는 no입니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 문 리소스를 만든 다음 필드 메타데이터를 검색 및 표시합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 문 리소스를 만든 다음 필드 메타데이터를 검색 및 표시합니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -133,8 +135,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
   

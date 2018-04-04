@@ -1,16 +1,16 @@
 ---
 title: BINARY_CHECKSUM(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BINARY_CHECKSUM
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - BINARY_CHECKSUM function
 - binary [SQL Server], checksum values
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c5fd777c7ce4ecc4530c47a2e8eb8bb1e14ce2d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ff8368877b3fb2153685554f1484b5fbbcc7c3a
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -50,7 +50,10 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 테이블의 모든 열에 대해 계산하도록 지정합니다. BINARY_CHECKSUM은 계산에서 비교할 수 없는 데이터 형식의 열을 무시합니다. 비교할 수 없는 데이터 형식에는 **text**, **ntext**, **image**, **cursor**, **xml** 및 비교할 수 없는 CLR(공용 언어 런타임) 사용자 정의 형식이 있습니다.
   
 *expression*  
-모든 형식의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. BINARY_CHECKSUM은 계산에서 비교할 수 없는 데이터 형식의 식을 무시합니다.
+모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. BINARY_CHECKSUM은 계산에서 비교할 수 없는 데이터 형식의 식을 무시합니다.
+
+## <a name="return-types"></a>반환 형식  
+ **int**
   
 ## <a name="remarks"></a>Remarks  
 테이블의 행에 대해 계산한 BINARY_CHECKSUM(*)은 이후에 행을 수정하지 않은 경우 같은 값을 반환합니다. BINARY_CHECKSUM은 해시 함수의 속성을 만족시킵니다. 식의 두 목록에 대해 적용되는 BINARY_CHECKSUM은 두 목록의 해당 요소가 동일한 형식이고 등호(=) 연산자를 사용하여 비교할 때 동일한 경우 같은 값을 반환합니다. 이러한 정의에 대해 지정한 유형의 Null 값은 비교할 때 동일한 것으로 간주됩니다. 식 목록에 있는 값을 하나라도 변경하면 일반적으로 목록의 체크섬도 바뀝니다. 그러나 체크섬이 바뀌지 않는 경우도 가끔 있습니다. 이 때문에 응용 프로그램에서 변경 내용 누락이 있어서는 안 될 경우 BINARY_CHECKSUM을 사용하여 값의 변경 여부를 확인하는 것은 좋지 않습니다. 대신 HashBytes를 사용하세요. MD5 해시 알고리즘을 지정하면 HashBytes에서 두 개의 다른 입력에 대해 같은 결과를 반환할 가능성이 BINARY_CHECKSUM보다 훨씬 낮습니다.

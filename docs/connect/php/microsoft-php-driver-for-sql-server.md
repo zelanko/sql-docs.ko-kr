@@ -1,33 +1,33 @@
 ---
-title: Microsoft PHP Driver for SQL Server | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+title: Microsoft Drivers for PHP for SQL Server | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1b9464f25551d391004275fcb6dda33fc9b89e2f
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a7a78c55a54c5e020b26cee82e2e5a08ff09f5e0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="microsoft-php-driver-for-sql-server"></a>Microsoft PHP Driver for SQL Server
+# <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server
 
 ![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[SQL 용 PHP 드라이버를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-SQL Server Driver for PHP에 PHP 응용 프로그램에 대 한 SQL Server와 통합할 수 있습니다. 드라이버는 읽기 및 쓰기의 PHP 스크립트 내에서 SQL Server 데이터를 허용 하는 PHP 확장입니다. Azure SQL 데이터베이스 데이터 액세스를 위한 모든 버전의 SQL Server 2005 및 나중에 (Express Edition 포함) 드라이버 인터페이스를 제공 합니다. 드라이버에서 PHP 활용 큰 개체 읽기 및 쓰기를 위한 PHP 스트림을 비롯 한 기능을 합니다.  
+Microsoft Drivers for PHP for SQL Server는 PHP 응용 프로그램에 대 한 SQL Server와의 통합을 설정 합니다. 드라이버는 읽기 및 쓰기 PHP 스크립트 내에서 SQL Server 데이터를 허용 하는 PHP 확장입니다. 드라이버는 모든 버전의 SQL Server 2005 및 나중에 (Express Edition 포함) 및 Azure SQL 데이터베이스의 데이터에 액세스 하기 위한 인터페이스를 제공 합니다. 드라이버는 PHP 스트림을 비롯 한 읽기 및 쓰기 큰 개체, 한 PHP 기능을 사용 하 여 확인 합니다.  
   
 ## <a name="getting-started"></a>시작  
 * [1단계: PHP 개발을 위한 개발 환경 구성](step-1-configure-development-environment-for-php-development.md)  
@@ -42,13 +42,13 @@ SQL Server Driver for PHP에 PHP 응용 프로그램에 대 한 SQL Server와 �
 * [Security Considerations](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>커뮤니티  
-* [PHP SQL 드라이버에 대 한 지원 리소스](support-resources-for-the-php-sql-driver.md)
+* [지원 리소스에 대해 Microsoft Drivers for PHP for SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>다운로드  
 * ![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[SQL 용 PHP 드라이버를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
   
 ## <a name="samples"></a>샘플  
-* [PHP SQL 드라이버에 대 한 코드 샘플](code-samples-for-php-sql-driver.md)
+* [Microsoft Drivers for PHP for SQL Server에 대 한 코드 샘플](code-samples-for-php-sql-driver.md)
 * [Windows에서 PHP를 시작 하기](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [PHP macOS on 시작](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [Ubuntu에서 PHP를 시작 하기](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

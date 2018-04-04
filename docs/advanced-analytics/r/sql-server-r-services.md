@@ -1,32 +1,32 @@
 ---
-title: "SQL Server 컴퓨터 학습 및 R Services (In-database) | Microsoft Docs"
+title: SQL Server 컴퓨터 학습 및 R Services (In-database) | Microsoft Docs
 ms.date: 03/16/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0d5bb56717eefa50a219db051eb611a82974a0bc
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: f84f61721bca14a78694a9df6c7af8b7f7d74ea7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server 컴퓨터 학습 및 R Services (In-database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 기계 학습의 데이터베이스에 설치 된 SQL Server 인스턴스에 상주 데이터에 대 한 R 및 Python 외부 스크립트 지원을 제공 하는 SQL Server 데이터베이스 엔진 인스턴스 컨텍스트 내에서 작동 합니다. 기계 학습 통합 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 분석 데이터에 가까이 유지 하 고 비용 및 데이터 이동과 관련 된 보안 위험을 제거할 수 있습니다.
 
-데이터베이스 엔진 다중 인스턴스 이기 때문에 둘 이상의 인스턴스가 데이터베이스에서 분석 또는 심지어 이전 및 최신 버전-나란히 설치할 수 있습니다. 선택 항목을 포함 하거나 [SQL Server 2017 컴퓨터 학습 Services (In-database)](../install/sql-machine-learning-standalone-windows-install.md) R과 Python 또는 [SQL Server 2016 R Services (데이터베이스에서)](../install/sql-r-standalone-windows-install.md) 바로 오른쪽으로 
+데이터베이스 엔진 다중 인스턴스 이기 때문에 둘 이상의 인스턴스가 데이터베이스에서 분석 또는 심지어 이전 및 최신 버전-나란히 설치할 수 있습니다. 선택 항목을 포함 하거나 [SQL Server 2017 컴퓨터 학습 Services (In-database)](../install/sql-machine-learning-standalone-windows-install.md) R과 Python 또는 [SQL Server 2016 R Services (In-database)](../install/sql-r-standalone-windows-install.md) 바로 오른쪽으로 
 
 인스턴스를 알 수 없는으로 컴퓨터 학습 구성 요소를 설치할 수도 있습니다 [독립 실행형 서버](r-server-standalone.md)합니다. 일반적으로 것이 좋습니다 (독립 실행형)를 처리 하는 (In-database) 설치와 함께 사용할 수 있지만 충분 한 리소스가 있는 경우 리소스 경합을 방지 하려면 배타적는 모두 동일한 물리적 컴퓨터에서 설치에 대 한 금지 없습니다.
 

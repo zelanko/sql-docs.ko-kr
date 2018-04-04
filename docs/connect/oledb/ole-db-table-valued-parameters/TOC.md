@@ -1,0 +1,10 @@
+# [테이블 반환 매개 변수(OLE DB)](table-valued-parameters-ole-db.md)
+
+# [테이블 반환 매개 변수가 포함된 명령 실행](executing-commands-containing-table-valued-parameters.md)
+# [테이블 반환 매개 변수에 데이터 삽입](inserting-data-into-table-valued-parameters.md)
+# [OLE DB 테이블 반환 매개 변수 형식 지원(메서드)](ole-db-table-valued-parameter-type-support-methods.md)
+# [OLE DB 테이블 반환 매개 변수 형식 지원(속성)](ole-db-table-valued-parameter-type-support-properties.md)
+# [OLE DB 테이블 반환 매개 변수 형식 지원](ole-db-table-valued-parameter-type-support.md)
+# [OLE DB 테이블 반환 매개 변수에 대해 변경된 스키마 행 집합](schema-rowsets-changed-for-ole-db-table-valued-parameters.md)
+# [테이블 반환 매개 변수 행 집합 만들기](table-valued-parameter-rowset-creation.md)
+# [테이블 반환 매개 변수 형식 검색](table-valued-parameter-type-discovery.md)

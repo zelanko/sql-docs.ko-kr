@@ -1,16 +1,16 @@
 ---
-title: "서버 감사 및 데이터베이스 감사 사양 만들기 | Microsoft 문서"
-ms.custom: 
+title: 서버 감사 및 데이터베이스 감사 사양 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.sqlaudit.dbaudit.general.f1
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - audits [SQL Server], creating database specification
 - database audit [SQL Server]
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  개체 탐색기에서 **보안** 폴더를 확장합니다.  
   
-2.  **감사** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 감사...**를 선택합니다. 자세한 내용은 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)을 참조하세요.  
+2.  **감사** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 감사...**를 선택합니다. 자세한 내용은 [서버 감사 및 서버 감사 사양 만들기](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)을 참조하세요.  
   
 3.  옵션 선택을 마쳤으면 **확인**을 클릭합니다.  
   

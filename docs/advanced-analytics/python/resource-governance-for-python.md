@@ -1,24 +1,24 @@
 ---
-title: "Python 용 리소스 관리 | Microsoft Docs"
-ms.custom: 
+title: Python 용 리소스 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: c1bf3fb84629310c09f0dc181f6b7eaa6707fa88
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="resource-governance-for-python"></a>Python 용 리소스 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ Python을 통해 설정 되었기 때문에 SQL Server 2016에서는 R 언어에
 
 ## <a name="resource-management-using-resource-governor"></a>리소스 관리자를 사용한 리소스 관리
 
-리소스 관리자를 처음 사용하는 경우 인스턴스 기본 리소스를 수정하고 새 외부 리소스 풀을 만드는 방법에 대한 간단한 연습을 확인하려면 [방법: R에 대한 리소스 풀 만들기](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md) 항목을 참조하세요.
+리소스 관리자를 처음 이라면 인스턴스 기본 리소스를 수정 하 고 새 외부 리소스 풀을 만들어 하는 방법에 대 한 간략 한 설명이이 문서를 참조 하세요.: [How To: R에 대 한 리소스 풀 만들기](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 사용할 수는 *외부 리소스 풀* 다음 지원 되는 실행 파일에서 사용 하는 리소스를 관리 하는 메커니즘.
 

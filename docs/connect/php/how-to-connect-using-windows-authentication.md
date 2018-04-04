@@ -1,33 +1,35 @@
 ---
-title: "방법: Windows 인증을 사용 하 여 연결 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: '방법: Windows 인증을 사용 하 여 연결 | Microsoft Docs'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connecting to the server, Windows Authentication
+helpviewer_keywords:
+- connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: "35"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7032726897facd93e88007a879e94c40dda809c2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7b82c96b78bb81e1b8749f6a0d3899662c54d780
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>방법: Windows 인증을 사용하여 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-기본적으로 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 Windows 인증을 사용하여 SQL Server에 연결합니다. 대부분의 시나리오에서 이는 서버에 연결하기 위해 최종 사용자의 ID가 아닌 웹 서버의 프로세스 ID 또는 스레드 ID(웹 서버가 가장을 사용하는 경우)가 사용된다는 것을 의미합니다.  
+기본적으로 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 Windows 인증을 사용하여 SQL Server에 연결합니다. 이 대부분의 시나리오에서 웹 서버의 프로세스 id 또는 스레드 id (웹 서버에서 가장 사용) 하는 경우는 최종 사용자의 id가 아닌 서버에 연결 하는 데 사용 되는 의미를 확인 하는 것이 유용 합니다.  
   
 Windows 인증을 사용하여 SQL Server에 연결할 때 다음 사항을 고려해야 합니다.  
   
@@ -49,7 +51,7 @@ Windows 인증이 실제 옵션이 아니면 [How to: Connect Using SQL Server A
 ## <a name="example"></a>예제  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 SQLSRV 드라이버를 사용하는 경우 다음 예제에서는 Windows 인증을 사용하여 SQL Server의 로컬 인스턴스에 연결합니다. 연결이 설정된 후 데이터베이스에 액세스하는 사용자의 로그인에 대해 서버가 쿼리됩니다.  
   
-이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
+이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
   
 ```  
 <?php  
@@ -110,12 +112,19 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[PHP SQL 드라이버 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
-[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
-[방법: SQL Server 로그인 만들기](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[방법: 데이터베이스 사용자 만들기](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[사용자, 역할 및 로그인 관리](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[사용자와 스키마 분리](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[Grant 개체 사용 권한 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+[방법: SQL Server 인증을 사용하여 연결](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[방법: SQL Server 로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[방법: 데이터베이스 사용자 만들기](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[사용자, 역할 및 로그인 관리](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[사용자와 스키마 분리](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Grant 개체 사용 권한 (Transact SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

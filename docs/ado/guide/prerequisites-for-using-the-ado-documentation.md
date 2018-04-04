@@ -1,29 +1,29 @@
 ---
-title: "ADO 설명서를 사용 하기 위한 필수 구성 요소 | Microsoft Docs"
-ms.custom: 
+title: ADO 설명서를 사용 하기 위한 필수 구성 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, prerequisites
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99d44aac8ce764c7d7220cf1c2cd32b267d7a230
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 79fec8a8bee91b13aad6c8634a178a6622616493
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>ADO 설명서를 사용 하기 위한 필수 구성 요소
 이 설명서를 사용 하려면 있어야, 여기에 최소한 경험을 대부분의 가이드의 예제는이 언어에 기록 되기 때문에 Microsoft Visual Basic로 응용 프로그램을 개발 합니다. Microsoft Visual c + +, Java, Visual Basic Scripting Edition (VBScript) 및 Microsoft JScript로 작성 된 몇 가지 예도 있습니다.  

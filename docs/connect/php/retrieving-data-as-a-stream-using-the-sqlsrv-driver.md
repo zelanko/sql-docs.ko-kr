@@ -1,27 +1,28 @@
 ---
-title: "SQLSRV 드라이버를 사용 하 여 스트림으로 데이터 검색 | Microsoft Docs"
-ms.custom: 
+title: SQLSRV 드라이버를 사용 하 여 스트림으로 데이터 검색 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53ff9f5cc78e1ccaec74425a47ac39bfca996aae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fa2d15dde596b9fb8ccd4d170281ef6fa4b2646f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>SQLSRV 드라이버를 사용하여 스트림으로 데이터 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,13 +49,14 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |---------|---------------|  
 |[SQLSRV 드라이버를 사용하여 스트림으로 데이터 형식 지원](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|스트림으로 검색할 수 있는 SQL Server 데이터 유형을 나열합니다.|  
 |[방법: SQLSRV 드라이버를 사용하여 스트림으로 문자 데이터 가져오기](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|스트림으로 문자 데이터를 검색하는 방법을 보여 줍니다.|  
 |[방법: SQLSRV 드라이버를 사용하여 스트림으로 이진 데이터 검색](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|스트림으로 이진 데이터를 검색하는 방법을 보여 줍니다.|  
   
-## <a name="see-also"></a>참고 항목  
-[데이터 검색](../../connect/php/retrieving-data.md)  
+## <a name="see-also"></a>관련 항목:  
+[데이터 검색](../../connect/php/retrieving-data.md)
+
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
   

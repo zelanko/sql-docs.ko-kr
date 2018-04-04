@@ -1,24 +1,24 @@
 ---
-title: "Services (In-database) Windows에서 학습 하는 SQL Server 2017 컴퓨터 설치 | Microsoft Docs"
-ms.custom: 
+title: Services (In-database) Windows에서 학습 하는 SQL Server 2017 컴퓨터 설치 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1904517351a23bfa736549a249d77be2932b3c07
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a620e7ede1976fbbc50c0c81a595f002410403c8
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Services (In-database) Windows에서 학습 하는 SQL Server 2017 컴퓨터 설치 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ SQL Server의 컴퓨터 학습 서비스 구성 요소는 데이터베이스에�
 
 ## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
 
-+ SQL Server 2017가 필요 합니다. SQL Server 2016를 설정한 경우 설치 하십시오 [SQL Server 2016 R Services (In-database)](sql-r-services-windows-install.md) 대신 합니다.
++ SQL Server 2017 설치가 R, Python, 또는 둘 다에 대 한 언어 지원으로 컴퓨터 학습 서비스를 설치 하려는 경우 필요 합니다. 설치할 수 대신 SQL Server 2016 설치 미디어를 있으면 [SQL Server 2016 R Services (In-database)](sql-r-services-windows-install.md) R 언어 지원을 받을 수 있습니다.
 
 + 데이터베이스 엔진 인스턴스는 필수입니다. 방금 R을 설치할 수 없습니다 또는 Python 기능으로, 있지만 추가할 수 있습니다 증분 방식으로 기존 인스턴스.
 
@@ -67,7 +67,7 @@ SQL Server의 컴퓨터 학습 서비스 구성 요소는 데이터베이스에�
   
          R 및 Python에서을 사용 하려면 SQL Server 데이터베이스 엔진의 인스턴스를 설치 해야 합니다. 기본 인스턴스나 명명 된 인스턴스를 사용할 수 있습니다.
   
-    -   **기계 학습 Services (In-database)**
+    -   **Machine Learning Services(데이터베이스 내)**
   
          이 옵션을 지 원하는 R 데이터베이스 서비스를 설치 하 고 Python 스크립트 실행.
 

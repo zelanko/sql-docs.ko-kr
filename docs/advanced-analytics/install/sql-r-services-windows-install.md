@@ -1,31 +1,31 @@
 ---
-title: "SQL Server 2016 R Services (In-database) 설치 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2016 R Services (In-database) 설치 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "SQL Server R Services 설치"
-- "SQL Server 컴퓨터 학습 Services 설치"
-- "R 서비스 설정"
-- "SQL 기계 학습 설치"
-ms.assetid: 
-caps.latest.revision: 
+- SQL Server R Services 설치
+- SQL Server 컴퓨터 학습 Services 설치
+- R 서비스 설정
+- SQL 기계 학습 설치
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0012b48101085b7ccb18695fbda1f25c10a6b90b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 7a00eb7f3151ad95818feee1d981170164f44345
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>SQL Server 2016 R Services(In-Database) 설치 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/21/2018
 
 ## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
 
-+ SQL Server 2016가 필요 합니다. SQL Server 2016를 설정한 경우 설치 하십시오 [SQL Server 2017 컴퓨터 학습 Services (In-database)](sql-machine-learning-services-windows-install.md) 대신 합니다.
++ SQL Server 2016 설치 프로그램이 R 서비스를 설치 하려는 경우에 필요 합니다. 설치 해야 대신 SQL Server 2017 설치 미디어를 있으면 [SQL Server 2017 컴퓨터 학습 Services (In-database)](sql-machine-learning-services-windows-install.md) 해당 버전의 SQL Server에 대 한 R 통합을 얻으려고 합니다.
 
 + 데이터베이스 엔진 인스턴스는 필수입니다. 방금 R, 기존 인스턴스에 증분 방식으로 추가할 수 있지만 설치할 수 없습니다.
 

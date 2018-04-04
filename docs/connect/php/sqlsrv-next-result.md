@@ -1,17 +1,19 @@
 ---
 title: sqlsrv_next_result | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_next_result
+apiname:
+- sqlsrv_next_result
 apitype: NA
 helpviewer_keywords:
 - multiple result sets
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - stored procedure support
 - API Reference, sqlsrv_next_result
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb34a1e134bf13f797157fbe49d1cb210fb4f036
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1158706ba73a97a358e43bbe32e84bd85f926409
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,9 +57,9 @@ sqlsrv_next_result( resource $stmt )
 다음 예제는 제품 검토를 *Production.ProductReview* 테이블에 삽입하는 저장 프로시저를 만들고 실행한 다음 지정된 제품에 대해 모든 검토를 선택합니다. 저장된 프로시저의 실행 후 첫 번째 결과 (저장된 프로시저의 INSERT 쿼리에 의해 영향을 받는 행 수)는 호출 하지 않아도 사용 **sqlsrv_next_result**합니다. 다음 결과 (저장된 프로시저의 SELECT 쿼리에서 반환 되는 행)를 호출 하 여 사용할 수는 **sqlsrv_next_result** 사용 및 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)합니다.  
   
 > [!NOTE]  
-> 권장되는 방법은 정식 구문을 사용하여 저장 프로시저를 호출하는 것입니다. 정식 구문에 대한 자세한 내용은 [저장 프로시저 호출](http://go.microsoft.com/fwlink/?linkid=119517)을 참조하세요.  
+> 권장되는 방법은 정식 구문을 사용하여 저장 프로시저를 호출하는 것입니다. 정식 구문에 대 한 자세한 내용은 참조 [저장 프로시저 호출](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)합니다.  
   
-이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -190,7 +192,7 @@ sqlsrv_close( $conn );
 > [!NOTE]  
 > 일괄 처리 쿼리 또는 저장된 프로시저에서 반환 되는 첫 번째 (또는 유일한) 결과에 대 한 호출 하지 않아도 활성화 됩니다. **sqlsrv_next_result**합니다.  
   
-예제는 *AdventureWorks* 데이터베이스의 [Purchasing.ProductReview](http://go.microsoft.com/fwlink/?linkid=67739) 테이블을 사용하며 이 데이터베이스가 서버에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+이 예제에서는 사용는 *Purchasing.ProductReview* 목차는 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스 및이 데이터베이스 서버에 설치 되어 있다고 가정 합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -269,10 +271,15 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
-[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
-[데이터 검색](../../connect/php/retrieving-data.md)  
-[데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+## <a name="see-also"></a>관련 항목:  
+[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[데이터 검색](../../connect/php/retrieving-data.md)
+
+[데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+
   

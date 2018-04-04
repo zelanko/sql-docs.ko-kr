@@ -1,29 +1,29 @@
 ---
-title: "실시간 점수 매기기 또는 SQL Server의 기본 점수 매기기를 수행 하는 방법 | Microsoft Docs"
-ms.custom: 
+title: 실시간 점수 매기기 또는 SQL Server의 기본 점수 매기기를 수행 하는 방법 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/09/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2a79ab351f109959a743fecfb4cb6a0d186c6892
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>실시간 점수 매기기 또는 SQL Server의 기본 점수 매기기를 수행 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 항목에서는 실시간 점수 매기기를 실행 하는 방법 및 SQL Server 2017 및 SQL Server 2016에서 네이티브 점수 매기기 기능에 대 한 지침 및 샘플 코드를 제공 합니다. 작은 규모로 일괄 처리 점수 매기기 작업의 성능을 개선 하기 위해 실시간 점수 매기기와 기본 점수 매기기의 목표가입니다.
+이 문서에서는 실시간 점수 매기기를 실행 하는 방법 및 SQL Server 2017 및 SQL Server 2016에서 네이티브 점수 매기기 기능에 대 한 지침 및 샘플 코드를 제공 합니다. 작은 규모로 일괄 처리 점수 매기기 작업의 성능을 개선 하기 위해 실시간 점수 매기기와 기본 점수 매기기의 목표가입니다.
 
 실시간 점수 매기기와 기본 점수 매기기 모두 기계 학습 모델을 오른쪽을 설치할 필요 없이 사용할 수 있도록 설계 하기만 하면 호환 형식으로 미리 학습 된 모델을 가져와서 SQL Server 데이터베이스에 저장 됩니다.
 
@@ -178,7 +178,7 @@ go
 
 이 섹션에서는를 설정 하는 데 필요한 단계를 설명 **실시간** 예측, T-SQL에서 함수를 호출 하는 방법의 예제를 제공 합니다.
 
-### <a name ="bkmk_enableRtScoring"></a>1 단계입니다. 프로시저 점수 매기기 실시간을 사용 하도록 설정
+### <a name ="bkmk_enableRtScoring"></a> 1 단계입니다. 프로시저 점수 매기기 실시간을 사용 하도록 설정
 
 점수 매기기에 사용 하려는 각 데이터베이스에 대해이 기능을 사용 하도록 설정 해야 합니다. 서버 관리자, RevoScaleR 패키지에 포함 되어 있는 명령줄 유틸리티 RegisterRExt.exe를 실행 해야 합니다.
 
@@ -202,7 +202,7 @@ go
 3. RegisterRExt.exe 다음 개체를 만듭니다.
 
     + 신뢰할 수 있는 어셈블리
-    + 저장된 프로시저`sp_rxPredict`
+    + 저장된 프로시저 `sp_rxPredict`
     + 새 데이터베이스 역할, `rxpredict_users`합니다. 데이터베이스 관리자는 실시간 점수 매기기 기능을 사용 하는 사용자에 게 권한을 부여 하려면이 역할을 사용할 수 있습니다.
 
 4. 실행 해야 하는 모든 사용자 추가 `sp_rxPredict` 새 역할을 합니다.
@@ -221,7 +221,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>3단계. Call sp_rxPredict
 
-Sp 호출\_rxPredict와는 다른 저장 프로시저입니다. 현재 릴리스에서 저장된 프로시저는 두 개의 매개 변수를 사용:  _@model_  이진 형식으로 모델에 대 한 및  _@inputData_  상태 평가에 사용 하는 데이터에 대 한 유효한 SQL 쿼리로 정의 .
+Sp 호출\_rxPredict와는 다른 저장 프로시저입니다. 현재 릴리스에서 저장된 프로시저는 두 개의 매개 변수를 사용: _@model_ 이진 형식으로 모델에 대 한 및 _@inputData_ 상태 평가에 사용 하는 데이터에 대 한 유효한 SQL 쿼리로 정의 .
 
 이진 형식 PREDICT 함수에서 사용 되는 동일한 이기 때문에 앞의 예제에서 모델 및 데이터 테이블을 사용할 수 있습니다.
 
@@ -246,7 +246,7 @@ EXEC sp_rxPredict
 
 ## <a name="disable-realtime-scoring"></a>실시간 점수 매기기를 사용 하지 않도록 설정
 
-실시간 점수 매기기 기능을 해제 하려면 관리자 권한 명령 프롬프트를 열고 다음 명령을 실행 합니다.`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
+실시간 점수 매기기 기능을 해제 하려면 관리자 권한 명령 프롬프트를 열고 다음 명령을 실행 합니다. `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>Microsoft R Server 또는 서버를 학습 하는 컴퓨터에 점수 매기기 실시간
 

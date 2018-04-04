@@ -104,7 +104,9 @@
 
 # [데이터 가져오기 및 내보내기](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [변경 데이터 캡처](../integration-services/change-data-capture/change-data-capture-ssis.md)
+# [Excel에서 또는 Excel로 데이터 로드](load-data-to-from-excel-with-ssis.md)
+
+# [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
 
 # [Microsoft Connector for SAP BW](microsoft-connector-for-sap-bw.md)
 ## [Microsoft Connector for SAP BW 설치](installing-the-microsoft-connector-for-sap-bw.md)

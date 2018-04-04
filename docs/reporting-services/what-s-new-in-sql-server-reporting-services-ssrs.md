@@ -1,25 +1,25 @@
 ---
-title: "Reporting Services(SSRS)의 새로운 기능 | Microsoft Docs"
-ms.date: 10/10/2017
+title: Reporting Services(SSRS)의 새로운 기능 | Microsoft Docs
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f739af4e274a8d9ccdb4ccb3bc4ab3de3776d8a8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ecbce2bb1fa67b2a3db6bd01f5a4a371486cf531
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
@@ -33,7 +33,9 @@ SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 새로�
 
 - SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=55252)**로 이동하세요.
 
-현재 릴리스 정보에 대한 자세한 내용은 [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md) 또는 [Power BI Report Server 릴리스 정보](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)를 참조하세요. Power BI Report Server에 대한 정보는 [Power BI Report Server 시작](https://powerbi.microsoft.com/documentation/reportserver-get-started/)을 참조하세요.
+현재 릴리스 정보는 [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)를 참조하세요. 
+
+Power BI Report Server에 대한 정보는 [Power BI Report Server 시작](https://powerbi.microsoft.com/documentation/reportserver-get-started/)을 참조하세요.
 
 ## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 
@@ -78,7 +80,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 새로�
  #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   브랜딩 팩을 사용하여 조직의 로고 및 색상으로 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 을 사용자 지정할 수 있습니다.  
   
-  사용자 지정 브랜딩에 대한 자세한 내용은 [웹 포털 브랜딩](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1)을 참조하세요.
+  사용자 지정 브랜딩에 대한 자세한 내용은 [웹 포털 브랜딩](http://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)을 참조하세요.
  
  #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -86,7 +88,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 새로�
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- 자세한 내용은 [웹 포털에서 KPI 사용](http://msdn.microsoft.com/en-us/a28cf500-6d47-4268-a248-04837e7a09eb)을 참조하세요.
+ 자세한 내용은 [웹 포털에서 KPI 사용](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)을 참조하세요.
   
  
  ### <a name="mobile-reports"></a>모바일 보고서
@@ -189,13 +191,11 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ## <a name="next-steps"></a>다음 단계
 
-[Analysis Services의 새로운 기능](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[SSRS의 Power BI 기술 미리 보기 보고서 - 릴리스 정보](../reporting-services/reporting-services-release-notes.md)  
+[Analysis Services의 새로운 기능](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)   
-[이전 버전과의 호환성](http://msdn.microsoft.com/en-us/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
-[SQL Server 2016 버전에서 지원하는 Reporting Services 기능](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[이전 버전과의 호환성](http://msdn.microsoft.com/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
+[SQL Server 2016 버전에서 지원하는 Reporting Services 기능](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Reporting Services 업그레이드 및 마이그레이션](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-[Power BI 보고서 서버](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

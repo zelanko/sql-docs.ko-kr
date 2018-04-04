@@ -1,0 +1,59 @@
+---
+title: SQL Server 응용 프로그램에 대 한 OLE DB 드라이버 만들기 | Microsoft Docs
+description: OLE DB Driver for SQL Server 응용 프로그램 만들기
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: ''
+ms.component: oledb-driver-for-sql-server
+ms.reviewer: ''
+ms.suite: sql
+ms.technology:
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- OLE DB Driver for SQL Server, application creation
+- applications [OLE DB Driver for SQL Server]
+- OLE DB, creating applications
+author: pmasl
+ms.author: Pedro.Lopes
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: e54bdee09a64cd1393a41109207d42a598cb31fa
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/30/2018
+---
+# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>SQL Server 응용 프로그램에 대 한 OLE DB 드라이버 만들기
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  OLE DB Driver for SQL Server 응용 프로그램을 만드는 다음 단계를 따르십시오.  
+  
+1.  데이터 원본에 대한 연결 설정  
+  
+2.  명령 실행  
+  
+3.  결과 처리  
+  
+> [!NOTE]  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 사용 하 여 암호화 해야 자격 증명을 유지 해야 하는 경우 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)합니다.  
+  
+## <a name="in-this-section"></a>섹션 내용  
+  
+-   [데이터 원본에 대 한 연결을 설정합니다.](../../oledb/ole-db-driver/establishing-a-connection-to-a-data-source.md)  
+  
+-   [명령 실행](../../oledb/ole-db-driver/executing-a-command.md)  
+  
+-   [결과 처리](../../oledb/ole-db-driver/processing-results.md)  
+  
+-   [OLE DB 속성 정보](../../oledb/ole-db-driver/about-ole-db-properties.md)  
+  
+-   [SQL Server 용 OLE db에서 OLE DB 드라이버 OUTPUT 절 사용](../../oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)  
+  
+## <a name="see-also"></a>관련 항목:  
+ [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+  
+  

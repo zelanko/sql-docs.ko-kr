@@ -106,6 +106,66 @@
                     - name: 구문
                       href: /sql/odbc/reference/syntax/
                       homepage: /sql/odbc/reference/syntax/odbc-reference
+            - name: OLE DB
+              href: /sql/connect/oledb/
+              homepage: /sql/connect/oledb/oledb-driver-for-sql-server-programming
+              items:
+                - name: 기능
+                  href: /sql/connect/oledb/features/
+                  homepage: /sql/connect/oledb/features/oledb-driver-for-sql-server-features
+                - name: 응용 프로그램
+                  href: /sql/connect/oledb/applications/
+                  homepage: /sql/connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server
+                - name: OLE DB
+                  href: /sql/connect/oledb/ole-db/
+                  homepage: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-ole-db
+                  items:
+                    - name: 드라이버
+                      href: /sql/connect/oledb/ole-db-driver/
+                      homepage: /sql/connect/oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application
+                    - name: 데이터 원본 개체
+                      href: /sql/connect/oledb/ole-db-data-source-objects/
+                      homepage: /sql/connect/oledb/ole-db-data-source-objects/data-source-objects-ole-db
+                    - name: 명령
+                      href: /sql/connect/oledb/ole-db-commands/
+                      homepage: /sql/connect/oledb/ole-db-commands/commands
+                    - name: 행 집합
+                      href: /sql/connect/oledb/ole-db-rowsets/
+                      homepage: /sql/connect/oledb/ole-db-rowsets/rowsets
+                    - name: BLOB
+                      href: /sql/connect/oledb/ole-db-blobs/
+                      homepage: /sql/connect/oledb/ole-db-blobs/blobs-and-ole-objects
+                    - name: 테이블 및 인덱스
+                      href: /sql/connect/oledb/ole-db-tables-indexes/
+                      homepage: /sql/connect/oledb/ole-db-tables-indexes/tables-and-indexes
+                    - name: 데이터 형식
+                      href: /sql/connect/oledb/ole-db-data-types/
+                      homepage: /sql/connect/oledb/ole-db-data-types/data-types-ole-db
+                    - name: 테이블 반환 매개 변수
+                      href: /sql/connect/oledb/ole-db-table-valued-parameters/
+                      homepage: /sql/connect/oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db
+                    - name: 날짜 시간
+                      href: /sql/connect/oledb/ole-db-date-time/
+                      homepage: /sql/connect/oledb/ole-db-date-time/date-and-time-improvements-ole-db
+                    - name: 의
+                      href: /sql/connect/oledb/ole-db-transactions/
+                      homepage: /sql/connect/oledb/ole-db-transactions/transactions
+                    - name: 오류
+                      href: /sql/connect/oledb/ole-db-errors/
+                      homepage: /sql/connect/oledb/ole-db-errors/errors
+                    - name: 인터페이스
+                      href: /sql/connect/oledb/ole-db-interfaces/
+                      homepage: /sql/connect/oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces
+                    - name: 방법
+                      href: /sql/connect/oledb/ole-db-how-to/
+                      homepage: /sql/connect/oledb/ole-db-how-to/ole-db-how-to-topics
+                      items:
+                        - name: 결과
+                          href: /sql/connect/oledb/ole-db-how-to/results/
+                          homepage: /sql/connect/oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db
+                        - name: FileStream
+                          href: /sql/connect/oledb/ole-db-how-to/filestream/
+                          homepage: /sql/connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db
             - name: PHP
               href: /sql/connect/php/
               homepage: /sql/connect/php/microsoft-php-driver-for-sql-server

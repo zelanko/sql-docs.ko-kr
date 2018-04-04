@@ -1,30 +1,31 @@
 ---
-title: "기본 SQL Server 데이터 형식 | Microsoft Docs"
-ms.custom: 
+title: 기본 SQL Server 데이터 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b81f0a84c40fc7d184beccf1532386b4284fafd
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: c1facac748e24d465144f93d2e4ccdf38608e6b3
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="default-sql-server-data-types"></a>기본 SQL Server 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/18/2017
 |Boolean|bit|bit|  
 |정수|int|int|  
 |부동|float(24)|지원되지 않음|  
-|String(8000바이트보다 작은 길이)|varchar (<string length>)|varchar (<string length>)|  
+|String(8000바이트보다 작은 길이)|varchar(<string length>)|varchar(<string length>)|  
 |문자열(8,000바이트를 초과하는 길이)|varchar(max)|varchar(max)|  
 |리소스|지원되지 않습니다.|지원되지 않습니다.|  
 |Stream(인코딩: 이진 아님)|varchar(max)|varchar(max)|  
@@ -46,10 +47,14 @@ ms.lasthandoff: 11/18/2017
 |개체|지원되지 않습니다.|지원되지 않습니다.|  
 |DateTime(1)|datetime|지원되지 않습니다.|  
   
-## <a name="see-also"></a>참고 항목  
-[상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
-[PHP 형식](http://go.microsoft.com/fwlink/?LinkId=109071)  
-[데이터 형식 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=109068)  
+## <a name="see-also"></a>관련 항목:  
+[상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[데이터 형식 변환](../../connect/php/converting-data-types.md)
+
+[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)
+
+[PHP 형식](http://php.net/manual/language.types.php)
+
+[데이터 형식 (Transact SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
   

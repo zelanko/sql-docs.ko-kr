@@ -67,7 +67,7 @@ ms.lasthandoff: 02/11/2018
 8. [새 데이터 채점하기](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
 9. [R을 사용하여 데이터 변환](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
 10. [rxImport를 사용하여 메모리에 데이터 로드하기](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
-11. [RxDataStep를 사용 하 여 새 SQL Server 테이블 만들기](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
+11. [rxDataStep을 사용하여 새 SQL Server 테이블 만들기](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
 12. [rxDataStep을 사용하여 청크 분석 수행](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
 13. [로컬 계산 컨텍스트에서 데이터 분석](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
 14. [XDF 파일을 사용 하 여 SQL Server에서 데이터를 이동 합니다.](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
@@ -90,7 +90,7 @@ ms.lasthandoff: 02/11/2018
 
 - **R을 지원하는 SQL Server**
   
-    SQL Server 2016을 설치 하 고 R Services (In-database)를 사용 하도록 설정 합니다. 또는, SQL Server 2017을 설치 하 고 컴퓨터 학습 서비스를 사용 하도록 설정 하 고 R 언어를 선택 합니다.
+    SQL Server 2016을 설치하고 R Services(In-database)를 사용하도록 설정합니다. 또는 SQL Server 2017을 설치하고 Machine Learning Services를 사용하도록 설정하고 R 언어를 선택합니다.
   
 -  **데이터베이스 사용 권한**
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 02/11/2018
     
     **사용자 라이브러리에 패키지를 설치하지 마세요.** 패키지는 SQL Server 인스턴스에서 사용 되는 R 패키지 라이브러리에 설치 되어야 합니다.
 
-자세한 내용은 참조 [데이터 과학 연습에 대 한 필수 구성 요소](../../advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)합니다.
+자세한 내용은 [데이터 과학 연습에 대한 필수 구성 요소](../../advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)를 참조하십시오.
 
 ## <a name="next-step"></a>다음 단계
 

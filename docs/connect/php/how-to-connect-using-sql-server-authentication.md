@@ -1,28 +1,30 @@
 ---
-title: "방법: SQL Server 인증을 사용 하 여 연결 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: '방법: SQL Server 인증을 사용 하 여 연결 | Microsoft Docs'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connecting to the server, SQL Server Authentication
+helpviewer_keywords:
+- connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: "34"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5802ddf79f53fda9e03c842ce21def20cb99f6e3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7885d3d2be29b2ad8de9c4f576c7441b43b37726
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>방법: SQL Server 인증을 사용하여 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,7 +59,7 @@ SQL Server 인증을 사용하여 SQL Server에 연결할 때 다음 예방 조�
 ## <a name="example"></a>예제  
 다음 예제에서는 SQL Server 인증이 포함된 SQLSRV 드라이버를 사용하여 SQL Server의 로컬 인스턴스에 연결합니다. 필요한 값 *UID* 및 *PWD* 응용 프로그램별 텍스트 파일에서 연결 특성 가져옵니다 *uid.txt* 및 *pwd.txt*에 *C:\AppData* 디렉터리입니다. 연결이 설정된 후 사용자 로그인을 확인하기 위해 서버가 쿼리됩니다.  
   
-이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
+이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
   
 ```  
 <?php  
@@ -135,13 +137,21 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[PHP SQL 드라이버 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
-[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
-[SUSER_SNAME (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=106382)  
-[방법: SQL Server 로그인 만들기](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[방법: 데이터베이스 사용자 만들기](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[사용자, 역할 및 로그인 관리](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[사용자와 스키마 분리](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[Grant 개체 사용 권한 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+[방법: SQL Server 인증을 사용하여 연결](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[SUSER_SNAME (Transact SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+
+[방법: SQL Server 로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[방법: 데이터베이스 사용자 만들기](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[사용자, 역할 및 로그인 관리](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[사용자와 스키마 분리](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Grant 개체 사용 권한 (Transact SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

@@ -1,6 +1,7 @@
 ##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) 도움말 보기 
 - [UserVoice-SQL Server를 개선 하기 위해 제안?](https://feedback.azure.com/forums/908035-sql-server)
-- [Stack Overflow(태그 sql-server) - SQL 개발 관련 문의 사항](http://stackoverflow.com/questions/tagged/sql-server)
+- [DBA 스택 Exchange (태그 sql 서버)-SQL Server 질문](https://dba.stackexchange.com/questions/tagged/sql-server)
+    - [오버플로 (태그 sql 서버)을 쌓습니다-역시 SQL 개발에 대 한 일부 답변](http://stackoverflow.com/questions/tagged/sql-server) 
 - [설치 및 업그레이드-MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools-MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
 - [Reddit - SQL Server에 대한 일반 토론](https://www.reddit.com/r/SQLServer/)

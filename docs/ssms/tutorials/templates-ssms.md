@@ -18,18 +18,20 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 05a9883ff436991e5ee830ce1561ecced0fa9b60
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a01586f4ab3d002e33b7679f6fe2e5a165f260e1
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-using-templates-within-sql-server-management-studio"></a>자습서: SQL Server Management Studio 내에서 템플릿 사용
 이 자습서에서는 SSMS(SQL Server Management Studio) 내에서 사용할 수 있는 미리 빌드된 T-SQL(Transact-SQL) 템플릿을 소개합니다. 이 문서에서는 다음 작업 방법을 배웁니다.
-    - 템플릿 탐색기를 사용하여 T-SQL 스크립트 생성
-    - 기존 템플릿 편집 
-    - 디스크에서 템플릿 찾기
-    - 새 템플릿 만들기
+
+> [!div class="checklist"]
+> * 템플릿 탐색기를 사용하여 T-SQL 스크립트 생성
+> * 기존 템플릿 편집 
+> * 디스크에서 템플릿 찾기
+> * 새 템플릿 만들기
    
 
 ## <a name="prerequisites"></a>사전 요구 사항
@@ -87,12 +89,12 @@ ms.lasthandoff: 03/21/2018
 **템플릿 탐색기** 내에서 새 템플릿을 만들 수도 있습니다. 이러한 단계는 새 폴더를 만든 다음, 해당 폴더 내에 새 템플릿을 만드는 방법을 설명합니다. 그러나 이 단계를 사용하여 기존 폴더 내에서 사용자 지정 템플릿을 만들 수도 있습니다. 
 
 1. **템플릿 탐색기**를 엽니다.
-2. 마우스 오른쪽 단추로 SQL Server 템플릿 > **새로 만들기** > **폴더**를 클릭합니다. 
+2. 마우스 오른쪽 단추로 SQL Server 템플릿 > **새로 만들기** > **폴더**를 클릭합니다.
 3. 이 폴더의 이름을 **사용자 지정 템플릿**으로 지정합니다.
 
     ![사용자 지정 템플릿 만들기](media/templates-ssms/creatingcustomtemplate.png)
 
-4. 마우스 오른쪽 단추로 새로 만든 **사용자 지정 템플릿** 폴더 > **새로 만들기** > **템플릿** > 템플릿 이름 지정을 클릭합니다. 
+4. 마우스 오른쪽 단추로 새로 만든 **사용자 지정 템플릿** 폴더 > **새로 만들기** > **템플릿** > 템플릿 이름 지정을 클릭합니다.
  
     ![사용자 지정 템플릿 만들기](media/templates-ssms/createnewtemplate.png)
    
@@ -108,4 +110,4 @@ ms.lasthandoff: 03/21/2018
 
 자세히 알아보려면 다음 문서로 진행합니다.
 > [!div class="nextstepaction"]
-> [다음 단계 단추](ssms-tricks.md))
+> [다음 단계 단추](ssms-tricks.md)

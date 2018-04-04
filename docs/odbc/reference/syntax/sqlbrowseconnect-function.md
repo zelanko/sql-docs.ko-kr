@@ -1,32 +1,37 @@
 ---
-title: "SQLBrowseConnect 함수 | Microsoft Docs"
-ms.custom: 
+title: SQLBrowseConnect 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLBrowseConnect
-apilocation: sqlsrv32.dll
+apiname:
+- SQLBrowseConnect
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLBrowseConnect
-helpviewer_keywords: SQLBrowseConnect function [ODBC]
+f1_keywords:
+- SQLBrowseConnect
+helpviewer_keywords:
+- SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10470316e18dcedd1c3cd36c6f837a7deb4ceba3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 90c872da50c2d637f79bcc086bea4aaab95608b1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 함수
 **규칙**  
@@ -75,12 +80,12 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="diagnostics"></a>진단  
  때 **SQLBrowseConnect** SQL_ERROR, SQL_SUCCESS_WITH_INFO 또는 관련된 된 SQLSTATE 값 sql_need_data가 반환 되는 호출 하 여 경우가 **SQLGetDiagRec** 와 *HandleType* 여의 및 *ConnectionHandle의 핸들*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLBrowseConnect** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *OutConnectionString* 충분히 문자열이 잘렸습니다 하므로 전체 검색 결과 연결 문자열을 반환할 수 없습니다. 버퍼 **StringLength2Ptr* 잘리지 않은 찾아보기 결과 연결 문자열의 길이 포함 합니다. (함수는 SQL_NEED_DATA를 반환합니다.)|  
 |01S00|잘못 된 연결 문자열 특성입니다.|잘못 된 특성 키워드 찾아보기 요청 연결 문자열에 지정 된 (*InConnectionString*). (함수는 SQL_NEED_DATA를 반환합니다.)<br /><br /> 특성 키워드 찾아보기 요청 연결 문자열에 지정 된 (*InConnectionString*) 현재 연결 수준에 적용 되지 않습니다. (함수는 SQL_NEED_DATA를 반환합니다.)|  
-|01 S 02|값이 변경 됨|드라이버의 지정된 된 값을 지원 하지 않았습니다 고 *ValuePtr* 인수에 **SQLSetConnectAttr** 유사한 값을 대체 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01S02|값이 변경 됨|드라이버의 지정된 된 값을 지원 하지 않았습니다 고 *ValuePtr* 인수에 **SQLSetConnectAttr** 유사한 값을 대체 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08001|클라이언트 연결을 설정할 수 없습니다.|드라이버는 데이터 원본과 연결을 설정할 수 없습니다.|  
 |08002|사용 중인 연결 이름|(DM) 지정된 된 연결 이미를 사용한 데이터 원본과 연결을 설정 하 고 연결 되어 있는 합니다.|  
 |08004|서버 연결을 거부 했습니다.|데이터 원본 구현에서 정의 된 이유로 연결 만들기를 거부 했습니다.|  
@@ -113,7 +118,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 인수  
  찾아보기 요청 연결 문자열에는 다음 구문을 가집니다.  
   
- *연결 문자열* :: = *특성*[;] &#124; *특성*; *연결 stringattribute* :: = *특성 키워드*=*특성-값* &#124; 드라이버 [{}] =*특성-값 [*}]*특성 키워드* :: = DSN &#124; UID &#124; PWD &#124; *드라이버-정의 된 특성-keywordattribute-값* :: = *문자-stringdriver-정의-속성-키워드* :: = *식별자*  
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
+ *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
+ *attribute-value* ::= *character-string*<br>
+ *driver-defined-attribute-keyword* ::= *identifier*<br>
   
  여기서 *문자열* 에 0 개 이상의 문자가; *식별자* 에 하나 이상의 문자가; *특성 키워드*  /소문자를 구분 하지 않습니다 *특성-값* 대/소문자 구분; 수 있습니다의 값은 **DSN** 키워드 공백의로 구성 되어 있지 않습니다. 연결 문자열 및 초기화 파일 문법, 키워드 및 특성 값이 문자를 포함 하는 **{} (),? \*=! @** 피해 야 합니다. 시스템 정보에 대 한 문법, 인해 키워드 및 데이터 원본 이름은 백슬래시를 포함할 수 없습니다 (\\) 문자. Odbc 2. *x* 드라이버를 중괄호로 묶어야 DRIVER 키워드에 대 한 특성 값입니다.  
   
@@ -124,7 +133,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 인수  
  찾아보기 결과 연결 문자열은 연결 특성의 목록. 연결 특성 특성 키워드와 해당 특성 값으로 구성 됩니다. 찾아보기 결과 연결 문자열에는 다음 구문을 가집니다.  
   
- *연결 문자열* :: = *특성*[;] &#124; *특성*; *연결 stringattribute* :: = [\*]*특성 키워드 특성 valueattribute 키워드가 =* :: = *ODBC 특성-키워드* &#124; *driver-defined-attribute-keywordODBC-attribute-keyword* = {UID &#124; PWD} [:*지역화 식별자*]*드라이버-정의-속성-키워드* :: = *식별자*[:*지역화 id*]*특성-값* :: = {*특성 값 목록*} &#124;? (중괄호는 리터럴, 드라이버에 의해 반환 됩니다.) *특성 값 목록* :: = *문자열* [:*지역화 된 문자열*] &#124; *문자열* [:*지역화 된 문자열*], *특성-값-목록*  
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
+ *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
+ *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
+ *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  여기서 *문자열* 및 *지역화 된 문자열* 0 개 이상의 문자가; *식별자* 및 *지역화 식별자* 하나 이상의 문자가; *특성 키워드* 를 구분 하 고 *특성-값* 대/소문자 구분 될 수 있습니다. 연결으로 인해 문자열 및 초기화 파일 문법, 키워드, 지역화 된 식별자 및 특성 값을 문자를 포함 하는 **{} (),? \*=! @** 피해 야 합니다. 시스템 정보에 대 한 문법, 인해 키워드 및 데이터 원본 이름은 백슬래시를 포함할 수 없습니다 (\\) 문자.  
   

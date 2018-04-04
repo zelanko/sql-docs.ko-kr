@@ -1,27 +1,27 @@
 ---
-title: "R을 사용 하 여 BI 워크플로 만들기 | Microsoft Docs"
+title: R을 사용 하 여 BI 워크플로 만들기 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: bd006f20f65b386a4351534e639b3b60db7e76de
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>R을 사용 하 여 BI 워크플로 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,9 +30,9 @@ ms.lasthandoff: 02/11/2018
 
 반면, 일반적으로 R 솔루션 일반적으로 했었다면 대개 CSV 형식의 데이터 탐색 및 모델링을 수행할에 다양 한 원본에서 데이터 가져오기. 그러한 작업은 비효율적일 뿐만 아니라 안전하지 않습니다.
 
-이 항목에서는 일반적인 실수 및이 데이터베이스 외부의 시스템 학습 솔루션은 개발 하는 경우 발생할 수 있는 보안 위험을 방지 하는 SQL Server와 함께 R에 대 한 통합 시나리오를 설명 합니다.
+이 문서에서는 일반적인 실수 및이 데이터베이스 외부의 시스템 학습 솔루션은 개발 하는 경우 발생할 수 있는 보안 위험을 방지 하는 SQL Server와 함께 R에 대 한 통합 시나리오를 설명 합니다.
 
-비즈니스 인텔리전스 응용 프로그램, 특히 Integration Services 및 Reportng 서비스 R 코드와 상호 작용 및 데이터 또는 그래픽 오른쪽에 의해 생성 된 사용할 수 있는 방법을 예에 대해서도 설명
+비즈니스 인텔리전스 응용 프로그램, 특히 Integration Services 및 Reporting Services R 코드와 상호 작용 및 데이터 또는 그래픽 오른쪽에 의해 생성 된 사용할 수 있는 방법을 예제에 대해서도 설명
 
 적용 대상: SQL Server 2016 R Services, SQL Server 2017 기계 학습 서비스
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/11/2018
 
 + 속도. 데이터베이스는 집합 기반 작업에 최적화됩니다. 데이터 과학에 완벽 한 보완 메모리 내 테이블의 같은 데이터베이스의 최근 혁신 기호와 요약 및 집계를 매우를 확인 하십시오.
 
-+ 배포 및 통합의 용이해 집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다른 여러 데이터 관리 작업 및 응용 프로그램에 대 한 작업의 중앙 지점이입니다. 보고 웨어하우스는 데이터베이스에 있는 데이터를 사용 하 여 기계 학습 솔루션에서 사용 하는 데이터 일관성 있고 최신 인지 확인 합니다. 
++ 배포 및 통합의 용이해 집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다른 여러 데이터 관리 작업 및 응용 프로그램에 대 한 작업의 중앙 지점이입니다. 보고 웨어하우스는 데이터베이스에 있는 데이터를 사용 하 여 기계 학습 솔루션에서 사용 하는 데이터 일관성 있고 최신 인지 확인 합니다. 
 
 + 클라우드 및 온-프레미스에서 효율성입니다. R에서 데이터를 처리하는 대신 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 Azure Data Factory를 비롯한 엔터프라이즈 데이터 파이프라인을 사용할 수 있습니다. Power BI 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 통해 결과 또는 분석을 쉽게 보고할 수 있습니다.
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/11/2018
 
 Transact-SQL 및 저장 프로시저를 통해 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]을 사용하여 R로 복잡한 작업을 실행할 수 있기 때문에 다시 개발하는 작업을 최소화하여 R 작업과 기존 ETL 프로세스를 통합할 수 있습니다. 대신 R에서 메모리 집중형 작업의 체인을 수행 하는 보다 데이터 준비 최적화할 수 등 가장 효율적인 도구를 사용 하 여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. 
 
-데이터는 dmodeling 처리를 자동화 하는 방법을 사용 하 여 파이프라인에 대 한 몇 가지 ideass 같습니다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
+데이터 처리를 자동화할 수는 방법에 대 한 몇 가지 및 모델링을 사용 하 여 파이프라인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
 + 사용 하 여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 기능을 만들기 위해 필요한 데이터는 SQL 데이터베이스에 대 한 작업
 + 조건부 분기를 사용하여 R 작업에 대한 계산 컨텍스트 전환
@@ -75,13 +75,13 @@ Transact-SQL 및 저장 프로시저를 통해 [!INCLUDE[rsql_productname](../..
 
 + 스크립트 태스크 및 SQL 실행 태스크를 사용하여 모델에서 점수 매기기 수행
 
-##  <a name="bkmk_ssrs"></a>시각화에 대 한 Reporting Services를 사용 하 여
+##  <a name="bkmk_ssrs"></a> 시각화에 대 한 Reporting Services를 사용 하 여
 
 R로 차트와 흥미로운 시각화를 만들 수 있지만, 외부 데이터 원본과 잘 통합되지 않기 때문에 각 차트와 그래프를 개별적으로 생성해야 합니다. 공유도 어려울 수 있습니다.
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]을 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 통해 R로 복잡한 작업을 실행할 수 있기 때문에, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 Power BI를 비롯한 다양한 엔터프라이즈 보고 도구에서 쉽게 사용할 수 있습니다.
 
-+ 사용 하 여 R 스크립트에서 반환 된 그래픽 개체 시각화 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 + Power BI에서 테이블 사용
 
 ### <a name="examples"></a>예

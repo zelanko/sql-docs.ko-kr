@@ -1,30 +1,30 @@
 ---
-title: "SQL Server에서 JSON 데이터 작업 | Microsoft Docs"
-ms.custom: 
+title: SQL Server에서 JSON 데이터 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 92bac08a5168cb60477f8d253a9fee1f0fb5caef
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1e4e9f4a26b2d5ad3ee12975fa16d0442766f7e9
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -172,7 +172,31 @@ FOR JSON PATH
 ```  
   
 자세한 내용은 [FOR JSON을 사용하여 쿼리 결과 서식을 JSON으로 지정(SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) 및 [FOR 절(Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)을 참조하세요.  
-  
+
+## <a name="use-cases-for-json-data-in-sql-server"></a>SQL Server에서 JSON 데이터에 대한 사용 사례
+
+SQL Server 및 Azure SQL Database의 JSON 지원을 통해 관계형 및 NoSQL 개념을 결합할 수 있습니다. 관계형을 반구조화된 데이터로 쉽게 변환하거나 반대로 변환할 수 있습니다. 하지만 JSON은 기존 관계형 모델에 대한 대체입니다. SQL Server와 SQL Database의 JSON 지원을 활용하는 몇 가지 특정 사용 사례는 다음과 같습니다. 자세한 내용은 [SQL Server의 JSON – 사용 사례](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)를 참조하세요.
+
+### <a name="simplify-complex-data-models"></a>복잡한 데이터 모델 간소화
+
+여러 자식 테이블 대신 JSON 필드를 사용하여 데이터 모델을 비정규화하는 것이 좋습니다. 자세한 내용은 [비정규화된 모델을 사용하여 데이터 액세스 간소화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/24/simplify-data-access-using-de-normalized-models/)를 참조하세요.
+
+### <a name="store-retail-and-e-commerce-data"></a>소매 및 전자 상거래 데이터 저장
+
+유연성을 위해 정규화되지 않은 모델에서 다양한 범위의 변수 특성을 사용하여 제품에 대한 정보를 저장합니다. 자세한 내용은 [JSON을 사용하여 SQL Server에서 제품 카탈로그 디자인](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/designing-product-catalogs-in-sql-server-2016-using-json/) 및 [JSON 제품 카탈로그에서 데이터 인덱싱](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/indexing-data-in-json-product-catalogs/)을 참조하세요.
+
+### <a name="process-log-and-telemetry-data"></a>로그 및 원격 분석 데이터 처리
+
+Transact-SQL 언어의 모든 기능을 사용하여 JSON 파일로 저장된 로그 데이터를 로드, 쿼리 및 분석합니다. 자세한 내용은 [SQL Server의 JSON – 사용 사례](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)에서 *로그 및 원격 분석 데이터 분석* 섹션을 참조하세요.
+
+### <a name="store-semi-structured-iot-data"></a>반구조화된 IoT 데이터 저장
+
+IoT 데이터의 실시간 분석이 필요할 때 들어오는 데이터를 저장소 위치에 준비하는 대신 데이터베이스에 직접 로드합니다. 자세한 내용은 [Azure SQL Database에서 Azure IoT 데이터로 작업](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/23/working-with-azure-iot-data-in-azure-sql-database/)을 참조하세요.
+
+### <a name="simplify-rest-api-development"></a>REST API 개발 간소화
+
+데이터베이스의 관계형 데이터를 웹 사이트 지원 REST API에서 사용하는 JSON 형식으로 쉽게 변환합니다. 자세한 내용은 [SQL Server를 사용하여 최신 단일 페이지 앱에 대한 REST API 개발 간소화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/29/simplify-rest-api-development-modern-single-page-apps-sql-server/)를 참조하세요.
+
 ## <a name="combine-relational-and-json-data"></a>관계형 및 JSON 데이터 결합
 SQL Server는 표준 Transact-SQL 언어를 사용하여 관계형 및 JSON 데이터를 저장하고 처리할 수 있는 하이브리드 모델을 제공합니다. JSON 문서 컬렉션을 테이블 단위로 구성하고, 둘 간의 관계를 설정하고, 테이블에 저장된 강력한 형식의 스칼라 열을 JSON 열에 저장된 유연한 키/값 쌍과 결합하고, 전체 Transact-SQL을 사용하여 하나 이상의 테이블에서 스칼라 값과 JSON 값을 모두 쿼리할 수 있습니다.
  
