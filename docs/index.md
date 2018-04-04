@@ -1,8 +1,8 @@
 ---
 layout: HubPage
-hide_bc: 
-title: "Microsoft SQL 문서 | Microsoft 문서"
-description: "SQL에 대한 자세한 정보"
+hide_bc: true
+title: Microsoft SQL 문서 | Microsoft 문서
+description: SQL에 대한 자세한 정보
 author: barbkess
 ms.author: barbkess
 ms.topic: article
