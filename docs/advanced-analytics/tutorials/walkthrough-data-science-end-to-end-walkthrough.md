@@ -1,29 +1,27 @@
 ---
-title: "R 및 SQL Server에 대 한 종단 간 데이터 과학 연습 | Microsoft Docs"
-ms.custom: 
+title: R 및 SQL Server에 대 한 종단 간 데이터 과학 연습 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/22/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: eee99c95b17438fa810501b653a83538e658b205
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: 4ea795cfd3b6fba4d2559399a837eb90b7075eb0
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R및 SQL Server용 데이터 과학 전체 과정 연습
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +44,7 @@ ms.lasthandoff: 02/11/2018
 |항목 목록|예상 시간|
 |-|------------------------------|
 |[R 연습 데이터 준비](../tutorials/walkthrough-prepare-the-data.md) <br /><br />모델 작성에 사용되는 데이터를 가져옵니다. 공용 데이터 집합을 다운로드하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  데이터베이스에 로드합니다.|30분|
-|[SQL을 사용하여 데이터 탐색](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />SQL 도구와 요약을 사용하여 데이터를 이해합니다.|10분|
+|[SQL을 사용한 데이터 탐색](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />SQL 도구와 요약을 사용하여 데이터를 이해합니다.|10분|
 |[R을 사용하여 데이터 요약](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />R을 사용 하 여 데이터를 탐색 하 고 요약을 생성 합니다.|10분|
 |[SQL Server에서 R을 사용하여 plot 만들기](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />R및 SQL을 혼합하여 로컬 및 원격 계산 컨텍스트에서 plot을 만듭니다.|10분|
 |[R과 T-SQL을 사용하여 데이터 기능을 만들기](../tutorials/walkthrough-create-data-features.md) <br /><br />R과 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 지정 함수를 사용하여 특성 공학(feature engineering)을 수행합니다. 특성 공학 작업에서의 R및 T-SQL의 성능을 비교하십시오. |10분|

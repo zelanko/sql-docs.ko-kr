@@ -1,27 +1,28 @@
 ---
-title: "SQL Server PowerShell | Microsoft 문서"
-ms.custom: 
+title: SQL Server PowerShell | Microsoft 문서
+ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-non-specified
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab19a8a86bba6cbdacbc0c7de1b44d42a263b692
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: d9dc11888ffd63ad97031e666d4e63893dc2db3e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ SQL PowerShell 업데이트를 제공하기 위해 SQL PowerShell 모듈의 ID�
 
 **SQLPS 모듈을 가져오는 PowerShell 스크립트를 업데이트하세요.**
 
-`Import-Module -Name SQLPS`를 실행하는 PowerShell 스크립트가 있다면 새로운 공급자 기능과 새로운 cmdlet을 활용하는 것이 좋으며 이를 `Import-Module -Name SqlServer`로 변경해야 합니다. 새 모듈은 `%Program Files\WindowsPowerShell\Modules\SqlServer`에 설치됩니다. 따라서 $env:PSModulePath 변수를 업데이트할 필요가 없습니다. **SqlServer**라는 타사 또는 커뮤니티 버전의 모듈을 사용하는 스크립트가 있다면 Prefix 매개 변수를 사용하여 이름 충돌을 방지하세요. SQL Server 에이전트에서 사용하는 모듈에 대한 변경 사항은 없습니다. 
+`Import-Module -Name SQLPS`를 실행하는 PowerShell 스크립트가 있다면 새로운 공급자 기능과 새로운 cmdlet을 활용하는 것이 좋으며 이를 `Import-Module -Name SqlServer`로 변경해야 합니다. 새 모듈은 `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` 폴더에 설치됩니다. 따라서 $env:PSModulePath 변수를 업데이트할 필요가 없습니다. **SqlServer**라는 타사 또는 커뮤니티 버전의 모듈을 사용하는 스크립트가 있다면 Prefix 매개 변수를 사용하여 이름 충돌을 방지하세요. SQL Server 에이전트에서 사용하는 모듈에 대한 변경 사항은 없습니다. 
 
   
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell 구성 요소  
