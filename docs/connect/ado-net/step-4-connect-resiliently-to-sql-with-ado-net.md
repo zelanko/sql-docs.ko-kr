@@ -1,19 +1,21 @@
 ---
-title: "4 단계: ado.net SQL 탄력적 연결할 | Microsoft Docs"
-ms.custom: 
+title: '4 단계: ado.net SQL 탄력적 연결할 | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado-net
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: CSharp
+dev_langs:
+- CSharp
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,29 +1,45 @@
 ---
-title: "릴리스 정보-Microsoft ODBC Driver for Linux와 macOS에서 SQL Server | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: 릴리스 정보-Microsoft ODBC Driver for Linux와 macOS에서 SQL Server | Microsoft Docs
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: f193f7e58fa2cf24d02a345d60ca6c74e211fc7e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Microsoft ODBC Driver for Linux와 macOS에서 SQL Server에 대 한 릴리스 정보
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>새로운 기능에 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Windows에서
+
+**추가 된 기능**:
+
+에 대 한 지원 `SQL_COPT_SS_CEKCACHETTL` 및 `SQL_COPT_SS_TRUSTEDCMKPATHS` 연결 특성 (자세한 내용은 참조 [ODBC Driver for SQL Server와 상시 암호화를 사용 하 여](../using-always-encrypted-with-the-odbc-driver.md))
+- `SQL_COPT_SS_CEKCACHETTL` 열 암호화 키의 로컬 캐시 존재 하는 시간을 제어 뿐만 아니라이 플러시 있도록 허용
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` 열 마스터 키의 지정 된 목록에만 사용 하도록 AE 작업을 제한 하면 응용 프로그램
+
+
+
+로드에 대 한 지원의 `.rll` 기본 위치에서 (자세한 내용은 참조 [설치 문서에 ' 리소스 파일 로드 ' 섹션](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading))
+
+[버그 수정](../bug-fixes.md)
+
+
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>에 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux와 macOS에서
 

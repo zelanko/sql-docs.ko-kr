@@ -1,27 +1,28 @@
 ---
-title: "SQL Server에 대 한 ODBC 드라이버를 사용 하 여 항상 암호화를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: SQL Server에 대 한 ODBC 드라이버를 사용 하 여 항상 암호화를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: "3"
+caps.latest.revision: 3
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -333,10 +334,16 @@ SQL Server 매개 변수는 암호화 하지 않아도 되는 드라이버, 메�
 
 ### <a name="column-encryption-key-caching"></a>열 암호화 키 캐싱
 
-열 암호화 키를 해독 하는 열 마스터 키 저장소에 대 한 호출의 수를 줄이려면 드라이버 메모리에 일반 텍스트 Cek를 캐시 합니다. ECEK에서 데이터베이스 메타 데이터를 받은 후 드라이버는 먼저 일반 텍스트 CEK에 해당 하는 캐시에 사용할 수 있는 암호화 된 키 값을 찾으려고 시도 합니다. 드라이버는 CMK를 캐시에 해당 일반 텍스트 CEK를 찾을 수 없는 경우에 포함 하는 키 저장소를 호출 합니다.
+열 암호화 키를 해독 하는 열 마스터 키 저장소에 대 한 호출의 수를 줄이려면 드라이버 메모리에 일반 텍스트 Cek를 캐시 합니다. CEK 캐시 드라이버에 전역적 이며 한 모든 연결과 연결 되지 않습니다. ECEK에서 데이터베이스 메타 데이터를 받은 후 드라이버는 먼저 일반 텍스트 CEK에 해당 하는 캐시에 사용할 수 있는 암호화 된 키 값을 찾으려고 시도 합니다. 드라이버는 CMK를 캐시에 해당 일반 텍스트 CEK를 찾을 수 없는 경우에 포함 하는 키 저장소를 호출 합니다.
 
 > [!NOTE]
 > ODBC Driver for SQL Server에에서 두 시간의 시간 초과 이후 캐시의 항목이 제거 됩니다. 즉, 주어진된 ECEK에 대 한 드라이버 또는 2 시간 마다 응용 프로그램의 수명 동안 키 저장소를 한 번만 연결 더 작은 쪽입니다.
+
+SQL Server 용 ODBC 드라이버 17.1부터, CEK 캐시 시간 제한은 조정할 수는 `SQL_COPT_SS_CEKCACHETTL` CEK 캐시에 유지 됩니다 (초)을 지정 하는 연결 특성입니다. 캐시의 전역 특성을 드라이버에 대해 유효한 모든 연결 핸들에서이 특성을 조정할 수 있습니다. 경우 TTL은 감소 캐시 ttl의 새 크기를 초과 하 게 하는 기존 Cek 제거 됩니다. 0 이면 없습니다 Cek 캐시 됩니다.
+
+### <a name="trusted-key-paths"></a>신뢰할 수 있는 키 경로
+
+SQL Server 용 ODBC 드라이버 17.1부터는 `SQL_COPT_SS_TRUSTEDCMKPATHS` 연결 특성을 사용 하면 응용 프로그램을 항상 암호화 작업만 지정된 된 목록에 해당 키 경로 의해 식별 된 Cmk 사용 해야 합니다. 기본적으로이 특성은 NULL 이며 드라이버 모든 키 경로 수락 함을 의미이 있습니다. 이 기능을 사용 하려면 설정 `SQL_COPT_SS_TRUSTEDCMKPATHS` 허용 된 키 경로 나열 하는 null로 끝나는, null 구분 와이드 문자 문자열을 가리키도록 합니다. 이 특성에서 가리키는 메모리 유효한 상태로 유지 되어야 하는 동안 연결 핸들에 드는---는 드라이버는 CMK 경로 서버 메타 데이터에 지정 된 대로 인지 확인 대 소문자를 구분이 사용 하 여 암호화 또는 암호 해독 작업 목록입니다. CMK 경로 목록에 없는 경우 작업이 실패 합니다. 응용 프로그램의 특성을 다시 설정 하지 않고 신뢰할 수 있는 Cmk의 해당 목록을 변경 하려면이 특성이 가리키는 메모리 내용을 변경할 수 있습니다.
 
 ## <a name="working-with-column-master-key-stores"></a>열 마스터 키 저장소 작업
 
@@ -430,7 +437,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`CE203`|라이브러리에 내보낸 "CEKeyStoreProvider" 기호를 찾지 못했습니다.|
 |`CE203`|라이브러리에 하나 이상의 공급자가 이미 로드 됩니다.|
 
-`SQLSetConnectAttr`표준 ODBC 진단 메커니즘을 통해 발생 한 모든 오류에 사용할 수는 일반적인 오류 또는 성공 값을 추가 정보를 반환 합니다.
+`SQLSetConnectAttr` 표준 ODBC 진단 메커니즘을 통해 발생 한 모든 오류에 사용할 수는 일반적인 오류 또는 성공 값을 추가 정보를 반환 합니다.
 
 > [!NOTE]
 > 응용 프로그램 프로그래머는 것을 요구 하는 모든 쿼리는 모든 연결을 통해 전송 되기 전에 사용자 지정 공급자 로드 되었는지 확인 해야 합니다. 이렇게 하지 않으면 오류가 발생 합니다.
@@ -567,8 +574,8 @@ SQLPutData 사용 하 여 파트의 삽입 또는 비교에 대 한 데이터를
 
 |이름|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|사용 가능한 값은 `Enabled` / `Disabled`합니다.<br>`Enabled`-연결에 대해 항상 암호화 기능을 사용 하도록 설정 합니다.<br>`Disabled`-연결에 대해 항상 암호화 기능을 사용 하지 않도록 설정 합니다. <br><br>기본값은 `Disabled`입니다.|  
-|`KeyStoreAuthentication` | 유효한 값: `KeyVaultPassword`,`KeyVaultClientSecret` |
+|`ColumnEncryption`|사용 가능한 값은 `Enabled` / `Disabled`합니다.<br>`Enabled` -연결에 대해 항상 암호화 기능을 사용 하도록 설정 합니다.<br>`Disabled` -연결에 대해 항상 암호화 기능을 사용 하지 않도록 설정 합니다. <br><br>기본값은 `Disabled`입니다.|  
+|`KeyStoreAuthentication` | 유효한 값: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 때 `KeyStoreAuthentication`  =  `KeyVaultPassword`, 유효한 Azure Active Directory 사용자 계정 이름으로이 값을 설정 합니다. <br>때 `KeyStoreAuthetication`  =  `KeyVaultClientSecret` 유효한 Azure Active Directory 응용 프로그램 클라이언트 ID를이 값을 설정 합니다. |
 |`KeyStoreSecret` | 때 `KeyStoreAuthentication`  =  `KeyVaultPassword` 이 값을 해당 사용자 이름의 암호를 설정 합니다. <br>때 `KeyStoreAuthentication`  =  `KeyVaultClientSecret` 이 값을 유효한 Azure Active Directory 응용 프로그램 클라이언트 ID와 연결 된 응용 프로그램 암호 설정|
 
@@ -576,15 +583,17 @@ SQLPutData 사용 하 여 파트의 삽입 또는 비교에 대 한 데이터를
 
 |이름|유형|Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|연결 전|`SQL_COLUMN_ENCRYPTION_DISABLE`(0)-상시 암호화 사용 안 함 <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1)--상시 암호화 사용|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|연결 전|`SQL_COLUMN_ENCRYPTION_DISABLE` (0)-상시 암호화 사용 안 함 <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1)--상시 암호화 사용|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|연결 후|[설정] CEKeystoreProvider 로드 하려고 합니다.<br>[가져오기] CEKeystoreProvider 이름 반환|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|연결 후|[설정] 데이터를 CEKeystoreProvider 기록<br>[가져오기] CEKeystoreProvider에서 데이터 읽기|
+|`SQL_COPT_SS_CEKCACHETTL`|연결 후|[설정] CEK 캐시 TTL 설정<br>[가져오기] 현재 CEK 캐시 TTL 가져오기|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|연결 후|[설정] 신뢰할 수 있는 CMK 경로 포인터를 설정 합니다.<br>[가져오기] 현재 신뢰할 수 있는 CMK 경로 포인터를 가져옵니다.|
 
 ### <a name="statement-attributes"></a>문 특성
 
 |이름|Description|  
 |----------|-----------------|  
-|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED`(0)-문에 대 한 상시 암호화 사용 하지 않도록 설정 <br>`SQL_CE_RESULTSETONLY`(1)--만 암호 해독 합니다. 결과 집합 및 반환 값을 해독 되 고 매개 변수는 암호화 되지 않습니다. <br>`SQL_CE_ENABLED`(3)-항상 암호화 됨을 활성화 하 고 매개 변수 및 결과 모두 사용|
+|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0)-문에 대 한 상시 암호화 사용 하지 않도록 설정 <br>`SQL_CE_RESULTSETONLY` (1)--만 암호 해독 합니다. 결과 집합 및 반환 값을 해독 되 고 매개 변수는 암호화 되지 않습니다. <br>`SQL_CE_ENABLED` (3)-항상 암호화 됨을 활성화 하 고 매개 변수 및 결과 모두 사용|
 
 ### <a name="descriptor-fields"></a>설명자 필드
 

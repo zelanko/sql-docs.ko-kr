@@ -1,19 +1,20 @@
 ---
-title: "다차원 데이터베이스 속성 (Analysis Services) 설정 | Microsoft Docs"
-ms.custom: 
+title: 다차원 데이터베이스 속성 (Analysis Services) 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: properties [Analysis Services], databases
+helpviewer_keywords:
+- properties [Analysis Services], databases
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile

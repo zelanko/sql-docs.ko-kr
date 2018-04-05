@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_workers (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_workers_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_workers dynamic management view
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb27268dbfb21cf2fed3b1b7b728cd9eeb4ee495
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ce7582dc2c432ee0cfaf0dc04d47d59db9d2aff3
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/03/2018
 |is_in_cc_exception|**bit**|1 = 작업자가 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예외가 아닌 다른 예외를 처리하고 있습니다.|  
 |is_fatal_exception|**bit**|이 작업자에 치명적인 예외가 발생했는지 지정합니다.|  
 |is_inside_catch|**bit**|1 = 작업자가 현재 예외를 처리하고 있습니다.|  
-|is_in_polling_io_completion_routine|**bit**|1 = 작업자가 현재 보류 중인 I/O에 대해 I/O 완료 루틴을 실행하고 있습니다. 자세한 내용은 참조 [sys.dm_io_pending_io_requests &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
+|is_in_polling_io_completion_routine|**bit**|1 = 작업자가 현재 보류 중인 I/O에 대해 I/O 완료 루틴을 실행하고 있습니다. 자세한 내용은 참조 [sys.dm_io_pending_io_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md)합니다.|  
 |context_switch_count|**int**|이 작업자가 수행한 스케줄러 컨텍스트 전환 횟수입니다.|  
 |pending_io_count|**int**|이 작업자가 수행한 실제 I/O 수입니다.|  
 |pending_io_byte_count|**bigint**|이 작업자에 대해 보류 중인 모든 실제 I/O의 총 바이트 수입니다.|  
@@ -63,22 +63,22 @@ ms.lasthandoff: 02/03/2018
 |exception_num|**int**|이 작업자에 마지막으로 발생한 예외의 오류 번호입니다.|  
 |exception_severity|**int**|이 작업자에 마지막으로 발생한 예외의 심각도입니다.|  
 |exception_address|**varbinary(8)**|예외가 발생한 코드 주소입니다.|  
-|affinity|**bigint**|작업자의 스레드 선호도입니다. 스레드 선호도 일치 [sys.dm_os_threads&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|affinity|**bigint**|작업자의 스레드 선호도입니다. 스레드 선호도 일치 [sys.dm_os_threads &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)합니다.|  
 |state|**nvarchar(60)**|작업자 상태입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> INIT = 작업자가 현재 초기화되고 있습니다.<br /><br /> RUNNING = 작업자가 현재 선점형 모드나 비선점형 모드로 실행되고 있습니다.<br /><br /> RUNNABLE = 스케줄러에서 작업자를 실행할 준비가 되었습니다.<br /><br /> SUSPENDED = 작업자가 현재 일시 중지되어 이벤트에서 신호를 보낼 때까지 기다리고 있습니다.|  
 |start_quantum|**bigint**|이 작업자의 현재 실행이 시작된 시간(밀리초)입니다.|  
 |end_quantum|**bigint**|이 작업자의 현재 실행이 종료된 시간(밀리초)입니다.|  
-|last_wait_type|**nvarchar(60)**|마지막 대기의 유형입니다. 대기 유형 목록은 참조 [sys.dm_os_wait_stats&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|last_wait_type|**nvarchar(60)**|마지막 대기의 유형입니다. 대기 유형 목록은 참조 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)합니다.|  
 |return_code|**int**|마지막 대기에서 반환된 값입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> 0 = 성공<br /><br /> 3 = 교착<br /><br /> 4 = 중간 시작<br /><br /> 258 = 시간 초과|  
 |quantum_used|**bigint**|내부적으로만 사용됩니다.|  
 |max_quantum|**bigint**|내부적으로만 사용됩니다.|  
 |boost_count|**int**|내부적으로만 사용됩니다.|  
 |tasks_processed_count|**int**|이 작업자가 처리한 태스크 수입니다.|  
 |fiber_address|**varbinary(8)**|이 작업자와 연관된 파이버의 메모리 주소입니다.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 경량 풀링을 사용하도록 구성되지 않았습니다.|  
-|task_address|**varbinary(8)**|현재 태스크의 메모리 주소입니다. 자세한 내용은 참조 [sys.dm_os_tasks &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
-|memory_object_address|**varbinary(8)**|작업자 메모리 개체의 메모리 주소입니다. 자세한 내용은 참조 [sys.dm_os_memory_objects &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
-|thread_address|**varbinary(8)**|이 작업자와 연관된 스레드의 메모리 주소입니다. 자세한 내용은 참조 [sys.dm_os_threads&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|task_address|**varbinary(8)**|현재 태스크의 메모리 주소입니다. 자세한 내용은 참조 [sys.dm_os_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)합니다.|  
+|memory_object_address|**varbinary(8)**|작업자 메모리 개체의 메모리 주소입니다. 자세한 내용은 참조 [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)합니다.|  
+|thread_address|**varbinary(8)**|이 작업자와 연관된 스레드의 메모리 주소입니다. 자세한 내용은 참조 [sys.dm_os_threads &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)합니다.|  
 |signal_worker_address|**varbinary(8)**|이 개체에 마지막으로 신호를 보낸 작업자의 메모리 주소입니다. 자세한 내용은 참조 [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)합니다.|  
-|scheduler_address|**varbinary(8)**|스케줄러의 메모리 주소입니다. 자세한 내용은 참조 [sys.dm_os_schedulers &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|scheduler_address|**varbinary(8)**|스케줄러의 메모리 주소입니다. 자세한 내용은 참조 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)합니다.|  
 |processor_group|**smallint**|이 스레드에 할당된 프로세서 그룹 ID를 저장합니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
@@ -87,10 +87,11 @@ ms.lasthandoff: 02/03/2018
   
  이벤트를 기다리고 있는 작업자가 신호를 받으면 해당 작업자가 실행 가능한 큐의 맨 처음에 배치됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 작업이 연속해서 1,000회 발생할 수 있습니다. 그런 다음 작업자가 큐 끝에 배치됩니다. 작업자를 큐 끝으로 이동하면 성능에 약간 영향을 줍니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층 필요는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정.  
-  
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+
 ## <a name="examples"></a>예  
  다음 쿼리를 사용하여 SUSPENDED 또는 RUNNABLE 상태에서 작업자가 실행된 시간을 확인할 수 있습니다.  
   
@@ -142,7 +143,7 @@ SELECT
  출력에서 `w_runnable`과 `w_suspended`가 같으면 작업자가 SUSPENDED 상태에 있는 시간을 나타냅니다. 그렇지 않으면 `w_runnable`은 작업자가 RUNNABLE 상태에서 소요한 시간을 나타냅니다. 출력에서 세션 `52`는 `SUSPENDED` 밀리초 동안 `35,094`됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 운영 체제 관련 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 
