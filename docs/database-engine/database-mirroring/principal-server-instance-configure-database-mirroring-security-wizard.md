@@ -1,19 +1,21 @@
 ---
-title: "주 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사) | Microsoft Docs"
-ms.custom: 
+title: 주 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.configdbmsecurwiz.principalsrvr.f1
+f1_keywords:
+- sql13.swb.configdbmsecurwiz.principalsrvr.f1
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
