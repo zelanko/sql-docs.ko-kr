@@ -29,19 +29,19 @@ ms.lasthandoff: 02/11/2018
 # <a name="sql-server-r-tutorials"></a>SQL Server R 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 자습서 및 SQL Server 2016 또는 SQL Server 2017 R의 사용을 보여 주는 샘플의 목록을 제공 합니다. 이러한 샘플 및 데모를 통해에 대해 설명 합니다.
+이 문서에서는 SQL Server 2016 또는 SQL Server 2017에서 R을 사용하는 방법과 그 샘플을 제공합니다. 이러한 샘플 및 데모를 통해 다음을 배우게 됩니다.
 
 + T-SQL에서 R을 실행 하는 방법
-+ 원격 및 로컬 컴퓨팅 컨텍스트 및 SQL Server 컴퓨터를 사용 하 여 R 코드를 실행할 수 있습니다 어떻게 이란
++ 원격 및 로컬 컴퓨팅 컨텍스트가 무엇인지, 그리고 SQL Server 컴퓨터를 사용하여 R 코드를 실행하는 방법
 + 저장된 프로시저에서 R 코드의 래핑 방법
-+ SQL 프로덕션 환경에 대 한 R 코드를 최적화합니다.
-+ 기계 학습 응용 프로그램에 포함 하기 위한 실제 시나리오
++ SQL 프로덕션 환경에 대한 R 코드 최적화
++ 응용 프로그램에서 기계 학습을 위한 실제 시나리오
 
-요구 사항 및 설치 하는 방법에 대 한 정보를 참조 하십시오. [필수 구성 요소](#bkmk_Prerequisites)합니다.
+요구 사항 및 설치 방법은 [필수 구성 요소](#bkmk_Prerequisites)를 참고합니다.
 
 ## <a name="bkmk_sqltutorials"></a>R 자습서
 
-지정 하지 않을 경우 자습서 SQL Server 2016 R Services 용으로 개발 된와 중요 변경 없이 SQL Server 2017 컴퓨터 학습 서비스에서 작동 하도록 합니다.
+별도로 명시되지 않는 한, 자습서는 SQL Server 2016 R Services 용으로 개발되었고, 중요한 변경 없이 SQL Server 2017 기계 학습 Service에서 작동합니다.
 
 모든 자습서는 광범위 한 기능의 사용 RevoScaleR 패키지에서 SQL Server에 대 한 계산 컨텍스트를 확인 합니다.
 
