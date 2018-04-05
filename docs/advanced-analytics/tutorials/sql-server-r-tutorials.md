@@ -35,13 +35,13 @@ ms.lasthandoff: 02/11/2018
 + 원격 및 로컬 컴퓨팅 컨텍스트가 무엇인지, 그리고 SQL Server 컴퓨터를 사용하여 R 코드를 실행하는 방법
 + 저장된 프로시저에서 R 코드의 래핑 방법
 + SQL 프로덕션 환경에 대한 R 코드 최적화
-+ 기계 학습 응용을 위한 실제 시나리오
++ 응용 프로그램에서 기계 학습을 위한 실제 시나리오
 
 요구 사항 및 설치 방법은 [필수 구성 요소](#bkmk_Prerequisites)를 참고합니다.
 
 ## <a name="bkmk_sqltutorials"></a>R 자습서
 
-별도로 명시하지 않는 한, 자습서는 SQL Server 2016 R Services 용으로 개발되었고, 중요한 변경 없이 SQL Server 2017 기계 학습 Service에서 작동합니다.
+별도로 명시되지 않는 한, 자습서는 SQL Server 2016 R Services 용으로 개발되었고, 중요한 변경 없이 SQL Server 2017 기계 학습 Service에서 작동합니다.
 
 모든 자습서는 광범위 한 기능의 사용 RevoScaleR 패키지에서 SQL Server에 대 한 계산 컨텍스트를 확인 합니다.
 
