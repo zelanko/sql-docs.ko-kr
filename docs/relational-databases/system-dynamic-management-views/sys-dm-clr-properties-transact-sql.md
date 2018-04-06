@@ -1,16 +1,16 @@
 ---
 title: sys.dm_clr_properties (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_clr_properties
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77f8652347f0093b84be4853880bb504defc3b6c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1f26f5870db7794bb52da665a17a3f70198fc341
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/03/2018
   
  **Mscoree가 로드 되지 않았습니다.** 및 **Mscoree가 로드** 상태 서버 시작 시 호스팅된 CLR 초기화의 진행 상황을 표시 및 표시 될 가능성은 거의 없습니다.  
   
- **mscoree와 잠긴 CLR 버전** 상태로 나타날 수 있는 호스팅된 CLR 되 고 사용 되지 않으며, 따라서 초기화 되지 않은 아직 되었습니다. 호스팅된 CLR 초기화 되는 처음으로 DDL 문 (같은 [CREATE assembly&#40; Transact SQL &#41; ](../../t-sql/statements/create-assembly-transact-sql.md)) 관리 되는 데이터베이스 개체가 실행 되는지 또는 합니다.  
+ **mscoree와 잠긴 CLR 버전** 상태로 나타날 수 있는 호스팅된 CLR 되 고 사용 되지 않으며, 따라서 초기화 되지 않은 아직 되었습니다. 호스팅된 CLR 초기화 되는 처음으로 DDL 문 (같은 [CREATE ASSEMBLY &#40;Transact SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) 관리 되는 데이터베이스 개체가 실행 되는지 또는 합니다.  
   
  **CLR이 초기화** 상태는 호스팅된 CLR 성공적으로 초기화 되었음을 나타냅니다. 사용자 CLR 코드 실행이 설정되었는지 여부는 나타내지 않습니다. 사용자 CLR 코드의 실행이 처음 사용 하 고 다음 사용 하 여 사용 하지 않도록 설정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 저장된 프로시저, 상태 값 계속 됩니다 **CLR이 초기화 되**합니다.  
   
@@ -78,10 +78,10 @@ ms.lasthandoff: 02/03/2018
  속성 및 값이이 보기의 나중 버전의에서 변경 될 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 통합 기능의 향상 된 기능으로 인해 합니다.  
   
 ## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 대 한 VIEW SERVER STATE 권한이 필요 합니다.  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층 데이터베이스에서 VIEW DATABASE STATE 권한이 필요 합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준 및 기본 계층 필요는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정.  
-  
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+
 ## <a name="examples"></a>예  
  다음 예에서는 호스팅된 CLR에 대한 정보를 검색합니다.  
   
@@ -92,6 +92,6 @@ FROM sys.dm_clr_properties;
   
 ## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [공용 언어 런타임 관련 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+ [공용 언어 런타임 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

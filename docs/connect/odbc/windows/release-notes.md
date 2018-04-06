@@ -1,32 +1,46 @@
 ---
-title: "릴리스 정보 (ODBC Driver for SQL Server) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
+title: 릴리스 정보 (ODBC Driver for SQL Server) | Microsoft Docs
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: 2b0846781a17fdad4c8cf9e39cab743595a20e7e
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 3bf3ac3b378cc5e3c55892860c45e5e5d6463cce
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="release-notes"></a>릴리스 정보
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Windows 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보입니다.  
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>새로운 기능에 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Windows에서
+
+**추가 된 기능**:
+
+에 대 한 지원 `SQL_COPT_SS_CEKCACHETTL` 및 `SQL_COPT_SS_TRUSTEDCMKPATHS` 연결 특성 (자세한 내용은 참조 [ODBC Driver for SQL Server와 상시 암호화를 사용 하 여](../using-always-encrypted-with-the-odbc-driver.md))
+- `SQL_COPT_SS_CEKCACHETTL` 열 암호화 키의 로컬 캐시 존재 하는 시간을 제어 뿐만 아니라이 플러시 있도록 허용
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` 열 마스터 키의 지정 된 목록에만 사용 하도록 AE 작업을 제한 하면 응용 프로그램
+
+
+Azure Active Directory 대화형 인증 지원
+
+[버그 수정](../bug-fixes.md)
+
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>새로운 기능에 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Windows에서
 

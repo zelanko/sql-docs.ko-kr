@@ -1,27 +1,28 @@
 ---
-title: "데이터 원본 마법사 화면 2 (ODBC Driver for SQL Server) | Microsoft Docs"
-ms.custom: 
-ms.date: 09/27/2017
+title: 데이터 원본 마법사 화면 2 (ODBC Driver for SQL Server) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 624888902e260baa03ad30aee8608f921deb73a4
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>데이터 원본 마법사 화면 2
 
@@ -47,9 +48,13 @@ Azure Active Directory를 사용 하 여 SQL server 드라이버를 인증 한�
 
 드라이버는 Azure Active Directory 로그인 ID와 암호를 사용 하 여 SQL Server를 인증 한다는 것을 지정 합니다.
 
+### <a name="with-active-directory-interactive-authentication"></a>Active Directory 대화형 인증
+
+드라이버 로그인 ID를 제공 하 여 Azure Active Directory 대화형 모드를 사용 하 여 SQL Server에 인증 함을 지정 합니다. 이렇게 하면 Windows Azure 인증 프롬프트 대화 상자가 트리거됩니다.
+
 ### <a name="login-id"></a>로그인 ID
 
-드라이버가 사용 하는 경우 SQL Server에 연결할 때 로그인 ID를 지정 **는 SQL Server 인증 로그인 ID와 사용자가 입력 한 암호를 사용 하 여** 또는 **로그인 ID를 사용 하 여 Active Directory 암호와 인증 사용자가 입력 한 암호 및** 을 선택 합니다. 이 옵션은 서버 기본 설정을 확인하기 위한 연결에만 적용되며, 데이터 원본이 만들어진 후 이 데이터 원본을 사용하여 설정된 후속 연결에는 적용되지 않습니다.
+드라이버가 사용 하는 경우 SQL Server에 연결할 때 로그인 ID를 지정 **는 SQL Server 인증 로그인 ID와 사용자가 입력 한 암호를 사용 하 여** 또는 **로그인 ID를 사용 하 여 Active Directory 암호와 인증 사용자가 입력 한 암호 및** 또는 **와 Active Directory 대화형 인증 로그인 ID를 사용 하 여 사용자가 입력** 을 선택 합니다. 이 옵션은 서버 기본 설정을 확인하기 위한 연결에만 적용되며, 데이터 원본이 만들어진 후 이 데이터 원본을 사용하여 설정된 후속 연결에는 적용되지 않습니다.
 
 ### <a name="password"></a>암호
 
