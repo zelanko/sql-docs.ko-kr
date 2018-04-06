@@ -1,27 +1,25 @@
 ---
-title: "고급 컴퓨터 학습 서비스에 대 한 구성 옵션 | Microsoft Docs"
+title: 고급 컴퓨터 학습 서비스에 대 한 구성 옵션 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>컴퓨터 학습 서비스에 대 한 고급 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +28,7 @@ ms.lasthandoff: 02/11/2018
 
 **적용 대상:** SQL Server 2016 R Services, SQL Server 2017 기계 학습 서비스
 
-##  <a name="bkmk_Provisioning"></a>프로 비전 추가 사용자 계정을 컴퓨터에 대 한 학습
+##  <a name="bkmk_Provisioning"></a> 프로 비전 추가 사용자 계정을 컴퓨터에 대 한 학습
 
 외부 스크립트의 프로세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 권한이 낮은 로컬 사용자 계정의 컨텍스트에서 실행 됩니다. 개별 낮은 권한 계정에서 실행 중인 이러한 프로세스는 다음과 같은 이점이 있습니다.
 
@@ -45,13 +43,13 @@ Protext 중요 한 리소스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 + 사용자 계정 풀은 특정 인스턴스에 연결됩니다. 학습에 설정 되는 대상 컴퓨터에서 각 인스턴스는 별도 풀 작업자 계정의 필요 합니다. 인스턴스 간에 계정을 공유할 수 없습니다.
 
-+ 풀의 사용자 계정 이름은 SQLInstanceName*nn*와(과) 관련된 기타 서비스에 사소한 변경 내용을 만들 수 있습니다. 예를 들어 기계 학습에 대 한 기본 인스턴스를 사용 하는 경우 사용자 계정 풀은 MSSQLSERVER01, mssqlserver02 등과 같은 계정 이름을 지원 합니다.
++ 풀의 사용자 계정 이름은 SQLInstanceName*nn*의 형식입니다. 예를 들어 기계 학습에 대 한 기본 인스턴스를 사용 하는 경우 사용자 계정 풀은 MSSQLSERVER01, mssqlserver02 등과 같은 계정 이름을 지원 합니다.
 
 + 사용자 계정 풀의 크기는 정적이고 기본값은 20입니다. 이 사용자 계정 풀의 크기에 따라 동시에 시작 될 수 있는 외부 런타임 세션 수 제한 됩니다. 이 제한을 변경 하려면 관리자가 SQL Server 구성 관리자를 사용 해야 합니다.
 
 사용자 계정 풀을 변경 하는 방법에 대 한 자세한 내용은 참조 [SQL Server 컴퓨터 학습 서비스에 대 한 사용자 계정 풀 수정](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)합니다.
 
-##  <a name="bkmk_ManagingMemory"></a>외부 스크립트 프로세스에 사용 되는 메모리 관리
+##  <a name="bkmk_ManagingMemory"></a> 외부 스크립트 프로세스에 사용 되는 메모리 관리
 
 기본적으로 기계 학습에 대 한 외부 스크립트 런타임 총 컴퓨터 메모리의 20%로 제한 됩니다. 시스템에 따라 달라 집니다 하지만 일반적으로 알게 될 것이 한도 모델의 학습 데이터의 행 수를 예측 등 심각한 기계 학습 작업에 대 한 부족 합니다. 
 
@@ -75,7 +73,7 @@ Protext 중요 한 리소스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 SQL Server 서비스를 실행하는 데 필요한 권한에 대한 자세한 내용은 [Windows 서비스 계정 및 권한 구성](https://msdn.microsoft.com/library/ms143504.aspx#Windows)을 참조하세요.
 
-##  <a name="bkmk_ChangingConfig"></a>고급 서비스 옵션 변경
+##  <a name="bkmk_ChangingConfig"></a> 고급 서비스 옵션 변경
 
 SQL Server 2016 R Services의 초기 버전에서을 편집 하 여 서비스의 일부 속성을 변경할 수 있습니다는 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 구성 파일입니다. 
 
@@ -93,7 +91,7 @@ SQL Server 2016 R Services의 초기 버전에서을 편집 하 여 서비스의
 
 **디버그 설정을 수정 하려면**
 
-만 제한 된 경우, 디버깅 등에서 유용할 수 있는 실행 패드의 구성 파일을 사용 하 여 몇 가지 속성을 변경할 수 있습니다. 구성 파일 중 만들어집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설정 하 고 기본적으로 다음 위치에 일반 텍스트 파일로 저장 됩니다.`<instance path>\binn\rlauncher.config`
+만 제한 된 경우, 디버깅 등에서 유용할 수 있는 실행 패드의 구성 파일을 사용 하 여 몇 가지 속성을 변경할 수 있습니다. 구성 파일 중 만들어집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설정 하 고 기본적으로 다음 위치에 일반 텍스트 파일로 저장 됩니다. `<instance path>\binn\rlauncher.config`
 
 이 파일을 변경하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 실행 중인 컴퓨터의 관리자여야 합니다. 파일을 편집하는 경우 변경 내용을 저장하기 전에 백업 복사본을 만드는 것이 좋습니다.
 

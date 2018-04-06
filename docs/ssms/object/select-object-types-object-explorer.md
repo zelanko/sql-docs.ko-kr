@@ -1,19 +1,21 @@
 ---
-title: "개체 유형 선택(개체 탐색기) | Microsoft 문서"
-ms.custom: 
+title: 개체 유형 선택(개체 탐색기) | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.common.selectobjecttypes.f1
+f1_keywords:
+- sql13.swb.common.selectobjecttypes.f1
 ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

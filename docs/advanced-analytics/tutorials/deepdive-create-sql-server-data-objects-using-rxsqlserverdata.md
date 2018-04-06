@@ -15,17 +15,15 @@ applies_to:
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: bcf5f7ff-795b-4815-b163-bcddd496efce
-caps.latest.revision: ''
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 4690f7bd66b17643d7d58b10663debd4becbdac7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 84413df820a415ede57a029b24e16abf4181e54f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-and-r-deep-dive"></a>RxSqlServerData (SQL과 R 심층 분석)를 사용 하 여 SQL Server 데이터 개체 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="create-the-sql-server-data-objects"></a>SQL Server 데이터 개체 만들기
 
-이 단계에서의 함수를 사용 하는 **RevoScaleR** 패키지를 만들고 두 개의 테이블을 채웁니다. 한 테이블은 모델 학습에 사용되고 다른 테이블은 점수 매기기에 사용됩니다. 두 테이블에 모두 시뮬레이트된 신용 카드 사기 데이터가 포함됩니다.
+이 단계에서의 함수를 사용 하는 **RevoScaleR** 패키지를 만들고 두 개의 테이블을 채웁니다. 두 테이블 모두 시뮬레이션된 신용 카드 사기 데이터를 포함합니다. 한 테이블은 모델 훈련에 사용하고 다른 테이블은 채점에 사용합니다.
 
 원격 테이블을 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터, 호출 된 **RxSqlServerData** 함수입니다.
 
@@ -73,9 +71,9 @@ ms.lasthandoff: 02/11/2018
     sqlRowsPerRead = 5000
     ```
   
-    이 매개 변수는 선택 사항이지만 메모리 사용량 및 효율적인 계산을 처리하는 데 중요합니다.  대부분의 고급 분석 기능에 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 청크로 데이터를에서 처리 하 고 최종 계산 모든 데이터의 읽은 반환 하는 중간 결과 저장 합니다.
+    이 매개 변수는 선택 사항이지만 메모리 사용 및 효율적인 계산을 처리하는 데 중요합니다.  대부분의 고급 분석 기능에 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 청크로 데이터를에서 처리 하 고 최종 계산 모든 데이터의 읽은 반환 하는 중간 결과 저장 합니다.
   
-    이 매개 변수의 값이 너무 크면 큰 데이터 청크를 효율적으로 처리할 수 있는 메모리가 없기 때문에 데이터 액세스 속도가 느려질 수 있습니다.  일부 시스템에서는 *rowsPerRead* 값이 너무 작은 경우 성능이 느려질 수 있습니다. 따라서 실험는이 설정을 사용 하 여 시스템에서 큰 데이터 집합으로 작업 하는 것이 좋습니다.
+    이 매개 변수의 값이 너무 크면 큰 데이터 청크를 효율적으로 처리할 수 있는 메모리가 없기 때문에 데이터 액세스 속도가 느려질 수 있습니다.  일부 시스템에서는 *rowsPerRead* 값이 너무 작은 경우 성능이 느려질 수 있습니다. 따라서 대량 데이터 세트로 작업하는 경우엔 시스템에서 이 설정값을 시험하는 것이 좋습니다. 따라서 실험는이 설정을 사용 하 여 시스템에서 큰 데이터 집합으로 작업 하는 것이 좋습니다.
   
     이 연습에 정의 된 기본 일괄 처리 프로세스 크기를 사용 합니다.는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 각 청크에서 행의 수를 제어 합니다. 해당 값을 변수에 저장 `sqlRowsPerRead`합니다.
   
@@ -145,7 +143,7 @@ ms.lasthandoff: 02/11/2018
   
 3. 이 시점에서 잠시 멈추고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 볼 수 있습니다. 데이터베이스의 테이블 목록을 새로 고칩니다.
   
-    즉, 로컬 작업 영역에서 R 데이터 개체를 만든 있지만 테이블 만들지 않은에서 볼 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 또한, R 변수에 데이터가 없는 텍스트 파일에서 로드 않았습니다.
+    즉, 로컬 작업 영역에서 R 데이터 개체를 만든 있지만 테이블 만들지 않은에서 볼 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 또한, 텍스트 파일에서 R 변수에 데이터가 로드되지 않았습니다.
   
 4. 이제 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 함수를 호출하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 데이터를 삽입합니다.
   

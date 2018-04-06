@@ -1,30 +1,28 @@
 ---
-title: "R 및 SQL (연습)를 사용 하 여 데이터 기능 만들기 | Microsoft Docs"
-ms.custom: 
+title: R 및 SQL (연습)를 사용 하 여 데이터 기능 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/23/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ecbdc28ac530dcee1ba9f5a3820d999ad4e0fcd9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>R 및 SQL (연습)를 사용 하 여 데이터 기능 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 02/11/2018
 이 단계에서는 데이터로부터 특성을 만들기 위한 두 가지 다른 방법을 비교합니다. 
 
 - 사용자 지정 R 함수 사용하기
-- 사용자 지정 T-SQL 함수를 사용하기 [!INCLUDE[tsql](../../includes/tsql-md.md)]
+- 사용자 지정 T-SQL 함수를 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 목표는 원본 열과 더불어 새로운 numeric 특성인  *direct_distance*를 포함하는 새로운[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 집합을 만드는 것입니다. 
 
@@ -242,7 +240,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 네트워크 속도와 하드웨어 구성 등에 따라서 시간이 크게 차이날 수 있습니다. 우리가 시험한 구성에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 방식이 사용자 지정 R 함수보다 더 빨랐음으로 이후 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용합니다.
 
 > [!TIP]
-> [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용한 특성 엔지니어링이 R의 경우보다 더 빠를 것입니다. 예를 들어 T-SQL에는 이동 평균과  *n-tile* 같은 공통적인 데이터 과학 계산에 적용할 수 있는 빠른 윈도우 및 순위 함수를 포함하고 있습니다. 실제 데이터와 작업에 기반해서 가장 효율적인 방법을 선택하세요. 해당 데이터와 태스크에 따라 가장 효율적인 방법을 선택합니다.
+> 자주 사용 하 여 엔지니어링 기능 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오른쪽 보다 빠를 수 있습니다 T-SQL 빠른 windowing 및 이동 평균을 롤링 같은 일반적인 데이터 과학 계산에 적용할 수 있는 순위 함수를 포함 하는 예를 들어 및 *n*-타일입니다. 해당 데이터와 태스크에 따라 가장 효율적인 방법을 선택합니다.
 
 ## <a name="next-lesson"></a>다음 단원
 

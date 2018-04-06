@@ -1,26 +1,24 @@
 ---
-title: "R 지원 하도록 SQL Server의 구성 요소 | Microsoft Docs"
-ms.custom: 
+title: R 지원 하도록 SQL Server의 구성 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/05/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: cc9f600d6bfce5d522abb8452800c35f41069b92
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>R 지원 하도록 SQL Server의 구성 요소
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,7 +110,7 @@ SQL Satellite는 확장 이벤트를 사용하여 모니터링할 수 있습니�
 4. BxlServer는 R 런타임과 함께 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]과 데이터 교환 및 작업 결과 저장소를 관리합니다.
 5. SQL 위성 관련된 작업에 대 한 통신을 관리 하 고와 처리 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]합니다.
 6. BxlServer는 SQL Satellite를 사용하여 상태 및 결과를 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]로 전달합니다.
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 결과 가져오고 관련된 작업 및 프로세스를 닫습니다.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 결과를 얻고 관련 작업과 프로세스를 닫습니다.
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>원격 클라이언트에서 실행되는 R 스크립트
 
@@ -128,7 +126,7 @@ SQL Satellite는 확장 이벤트를 사용하여 모니터링할 수 있습니�
 6. RLauncher가 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 컴퓨터에 설치된 R 런타임의 인스턴스를 호출합니다.
 7. 결과가 BxlServer로 반환됩니다.
 8. SQL Satellite가 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]와의 통신 및 관련 작업 개체의 정리를 관리합니다.
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 클라이언트에 결과 전달합니다.
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]가 클라이언트에 결과를 다시 전달합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

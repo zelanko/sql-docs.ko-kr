@@ -1,26 +1,24 @@
 ---
-title: "R 코드 프로파일링 함수 사용 | Microsoft 문서"
-ms.custom: 
+title: R 코드 프로파일링 함수 사용 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/29/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 3aecbcf80a76fdfd84cca277f5f0de0f8dc7bb4e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 13ee1c64cf5caf9618fd8515aa467706eed331fe
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-r-code-profiling-functions"></a>R 코드 프로파일링 함수 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +72,7 @@ help("Sys.time")
 
 기본적으로 설치되는 Microsoft R Open에 대한 설명서에는 프로파일링 및 디버그를 자세히 설명하는 R 언어에 대한 확장 개발 매뉴얼이 포함됩니다.
 
-해당 장은 온라인으로 제공됩니다. [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
+장은 온라인도 사용할 수 있습니다: [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
 
 ### <a name="location-of-r-help-files"></a>R 도움말 파일 위치
 

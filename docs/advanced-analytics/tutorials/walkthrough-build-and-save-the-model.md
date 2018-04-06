@@ -1,35 +1,34 @@
 ---
-title: "R 모델을 만들고 SQL Server에 저장하기 | Microsoft Docs"
-ms.custom: 
+title: R 모델을 만들고 SQL Server에 저장하기 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 71ad6a35d28a3d7975f03e6b7e7589ffee4e18ca
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 만들고 SQL Server에 저장하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 단계에서는 머신 러닝 모델을 작성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 그 모델을 저장하는 방법을 학습합니다.
+이 단계에서는 기계 학습 모델을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 그 모델을 저장하는 방법에 대해 알아보겠습니다.
 
 ## <a name="create-a-classification-model-using-rxlogit"></a>rxLogit을 사용해서 분류모델(classification model) 만들기
 
@@ -83,7 +82,7 @@ ms.lasthandoff: 02/19/2018
 
     + 예제를 간단하게 하기 위해, 로지스틱 회귀 모델의 입력값은 모델을 학습시키는 데에 사용되었던 특성값 데이터(`sql_feature_ds`)를 그대로 사용할 것입니다.  하지만 테스트 때에 사용하는 데이터는 학습 때와는 다른 새로운 데이터인 경우가 대부분이며, 테스트용 데이터와 학습용 테이터를 따로 준비해서 사용하는 것이 보다 일반적입니다.
   
-    + 예측 결과 테이블에 저장 됩니다 _taxiscoreOutput_합니다. 이 테이블에 대 한 스키마 rxSqlServerData를 사용 하 여 만들 때 정의 되어 있지 확인 합니다. RxPredict 출력에서 스키마를 가져옵니다.
+    + 예측 결과는 _taxiscoreOutput_ 테이블에 저장됩니다. 이 테이블의 스키마는 이 테이블이 RxSqlServerData 함수를 통해 생성될 때 만들어지는 것이 아니라 rxPredict의 출력값으로부터 오는 것입니다.이 부분을 눈여겨 보세요.
   
     + 예측된 값을 저장하기 위한 테이블을 만들려면, RxSqlServerData 함수를 실행하는 SQL 데이터베이스의 계정에 DDL 권한이 있어야 합니다. 만약 지금 로그인 되어있는 계정이 테이블을 만들 수 없는 경우 실행문은 실패하게 됩니다.
 
@@ -106,7 +105,7 @@ ms.lasthandoff: 02/19/2018
 
 + rxRoc 함수를 사용하여 원격 계산 컨텍스트에서 플롯을 실행한 다음 로컬 클라이언트에 플롯을 반환합니다.
 
-+ 데이터를 R 클라이언트 컴퓨터로 가져온 후 다른 R 그리기 함수를 사용하여 성능 그래프를 만들 수도 있습니다.
++ 데이터를 R환경의 로컬 클라이언트 컴퓨터로 불러온 후 다른 종류의 R 그래프 함수를 사용해서 성능 그래프를 만들 수도 있습니다.
 
 이 절에서는 두 가지 방법을 모두 시도해 봅니다.
 
@@ -237,5 +236,5 @@ ms.lasthandoff: 02/19/2018
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[R과 SQL을 사용 하 여 데이터 기능 만들기](walkthrough-create-data-features.md)
+[R과 SQL을 사용하여 데이터 특성 만들기](walkthrough-create-data-features.md)
 

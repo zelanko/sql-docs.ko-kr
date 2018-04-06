@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_memory_clerks (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_memory_clerks
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_clerks dynamic management view
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 042afaa050206507b09508ce43900ec7c993d707
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7405da41209372e42754be61c45e611286dcf93a
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,13 +57,13 @@ ms.lasthandoff: 02/03/2018
 |**shared_memory_committed_kb**|**bigint**|메모리 클럭이 커밋한 공유 메모리의 양을 지정합니다. Null을 허용하지 않습니다.|  
 |**page_size_in_bytes**|**bigint**|이 메모리 클럭에 대한 페이지 할당의 세분성을 지정합니다. Null을 허용하지 않습니다.|  
 |**page_allocator_address**|**varbinary(8)**|페이지 할당자의 주소를 지정합니다. 이 주소는 메모리 클럭에 대 한 고유 및에서 사용할 수 있습니다 **sys.dm_os_memory_objects** 이 클럭에 바인딩된 메모리 개체를 찾을 수 있습니다. Null을 허용하지 않습니다.|  
-|**host_address**|**varbinary(8)**|이 메모리 클럭에 대한 호스트의 메모리 주소를 지정합니다. 자세한 내용은 참조 [sys.dm_os_hosts &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). 구성 요소와 같은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호스트 인터페이스를 통해 메모리 리소스입니다.<br /><br /> 0x00000000 = 메모리 클럭이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 속합니다.<br /><br /> Null을 허용하지 않습니다.|  
+|**host_address**|**varbinary(8)**|이 메모리 클럭에 대한 호스트의 메모리 주소를 지정합니다. 자세한 내용은 참조 [sys.dm_os_hosts &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)합니다. 구성 요소와 같은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호스트 인터페이스를 통해 메모리 리소스입니다.<br /><br /> 0x00000000 = 메모리 클럭이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 속합니다.<br /><br /> Null을 허용하지 않습니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions 
+
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층 필요는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정.  
-    
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
   
 ## <a name="remarks"></a>주의  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자의 계층 구조는 세 계층으로 이루어져 있습니다. 계층 구조의 맨 아래에는 메모리 노드가 있습니다. 중간 수준은 메모리 클럭, 메모리 캐시 및 메모리 풀로 구성됩니다. 맨 위 계층은 메모리 개체로 구성됩니다. 이러한 개체는 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 메모리를 할당하는 데 사용됩니다.  
@@ -72,11 +72,11 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>관련 항목:  
 
- [SQL Server 운영 체제 관련 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_requests &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_query_plan &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_query_memory_grants &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   
   

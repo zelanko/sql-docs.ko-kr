@@ -1,24 +1,24 @@
 ---
-title: "기본 점수 매기기 | Microsoft Docs"
-ms.custom: 
+title: 기본 점수 매기기 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/19/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 449773e8ca4f2e396dca4f8aed5299effb7aa49a
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-scoring"></a>기본 점수 매기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -99,7 +99,7 @@ _점수 매기기_ 은 두 단계로 이루어집니다. 먼저, 미리 학습 �
 + 사전에 지원 되는 중 하나를 사용 하 여 모델을 학습 해야 **rx** 알고리즘입니다. 자세한 내용은 참조 [알고리즘 지원](#bkmk_native_supported_algos)합니다.
 + Microsoft R Server 9.1.0에에서 제공 된 새 serialization 함수를 사용 하 여 모델을 저장 해야 합니다. 직렬화 함수가 빠른 점수 매기기를 지원 하도록 최적화 됩니다.
 
-### <a name="bkmk_native_supported_algos"></a>지 원하는 기본 점수 매기기 알고리즘
+### <a name="bkmk_native_supported_algos"></a> 지 원하는 기본 점수 매기기 알고리즘
 
 + RevoScaleR 모델
 

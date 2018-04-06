@@ -1,30 +1,28 @@
 ---
-title: "6 단계: SQL Server를 사용 하 여 Python 모델을 운용 | Microsoft Docs"
-ms.custom: 
+title: '6 단계: SQL Server를 사용 하 여 Python 모델을 운용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 10/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 18d90dfca8af630a129e03e73d3c3a4ee4681e18
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: a93461ee03122a3bf70dc37cc2d0f639531d1bcf
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>6 단계: SQL Server를 사용 하 여 Python 모델을 운용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,7 +47,7 @@ ms.lasthandoff: 02/11/2018
 |PredictTipSingleModeRxPy|단일 행| revoscalepy 모델|
 |PredictTipSingleModeSciKitPy|단일 행| scikit-모델을 배우기|
 
-## <a name="batch-scoring"></a>일괄 처리 점수 매기기
+## <a name="batch-scoring"></a>일괄 처리 채점
 
 처음 두 개의 저장된 프로시저는 저장된 프로시저에 대 한 Python 예측 호출을 배치 하기 위한 기본 구문을 보여 줍니다. 두 저장된 프로시저는 데이터 테이블을 입력으로 필요합니다.
 
@@ -354,16 +352,16 @@ GO
 
 두 절차 모두에서 출력은 지정 된 매개 변수 또는 기능으로 택시 여행에 대 한 비용을 지불 하지 팁의 확률.
 
-### <a name="changes"></a>변경 내용
+### <a name="changes"></a> 변경 내용
 
 이 섹션에서는이 자습서에 사용 되는 코드 변경 내용을 나열 합니다. 최신 값을 반영 하는 변경 **revoscalepy** 버전입니다. API 도움말 참조 [Python 함수 라이브러리 참조](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)합니다.
 
 | 세부 정보를 변경 합니다. | 참고|
 | ----|----|
 | 삭제 `import pandas` 모든 샘플의| 이제 기본적으로 로드 팬더|
-| 함수 `rx_predict_ex` 로 변경`rx_predict`| RTM 및 시험판 버전 필요`rx_predict_ex`|
-| 함수 `rx_logit_ex` 로 변경`rx_logit`| RTM 및 시험판 버전 필요`rx_logit_ex`|
-| ` probList.append(probArray._results["tipped_Pred"])`로 변경`prob_list = prob_array["tipped_Pred"].values`| API에 대 한 업데이트|
+| 함수 `rx_predict_ex` 로 변경 `rx_predict`| RTM 및 시험판 버전 필요 `rx_predict_ex`|
+| 함수 `rx_logit_ex` 로 변경 `rx_logit`| RTM 및 시험판 버전 필요 `rx_logit_ex`|
+| ` probList.append(probArray._results["tipped_Pred"])` 로 변경 `prob_list = prob_array["tipped_Pred"].values`| API에 대 한 업데이트|
 
 시험판 버전의 SQL Server 2017를 사용 하 여 Python 서비스를 설치한 경우 업그레이드 하는 것이 좋습니다. 또한 학습 서버 컴퓨터의 최신 릴리스를 사용 하 여 방금 Python 및 R 구성 요소를 업그레이드할 수 있습니다. 자세한 내용은 참조 [바인딩을 사용 하 여 SQL Server의 인스턴스를 업그레이드 하려면](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
 

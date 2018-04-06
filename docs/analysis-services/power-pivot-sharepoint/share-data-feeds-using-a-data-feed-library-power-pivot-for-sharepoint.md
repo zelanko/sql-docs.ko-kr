@@ -1,19 +1,20 @@
 ---
-title: "데이터 피드 라이브러리 (SharePoint 용 파워 피벗)를 사용 하 여 데이터 피드 공유 | Microsoft Docs"
-ms.custom: 
+title: 데이터 피드 라이브러리 (SharePoint 용 파워 피벗)를 사용 하 여 데이터 피드 공유 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: data feeds [Analysis Services with SharePoint]
+helpviewer_keywords:
+- data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile

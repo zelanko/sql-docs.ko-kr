@@ -1,27 +1,25 @@
 ---
-title: "R 데이터 형식 사용 | Microsoft 문서"
+title: R 데이터 형식 사용 | Microsoft 문서
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 977d358981e3382a0ea8ee224362098627424e88
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 58728d89907666cbfc6a12e4d850143eb1314493
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 라이브러리 및 R 데이터 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +37,7 @@ R 서비스 및 컴퓨터 학습 서비스 R와 두 제품 특정 버전의 Micr
 
 SQL Server의 특정 인스턴스와 연결 된 R 버전을 보려면 관리자 권한을 엽니다.
 
-1. 기본 인스턴스에 대 한 경로 다음과 같이 됩니다.`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+1. 기본 인스턴스에 대 한 경로 다음과 같이 됩니다. `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 2. 메시지에는 R 배포 및 Microsoft R Open 버전 번호를 나열 하는 표시 됩니다.
 
 Microsoft R Server의 특정 버전에 포함 된 R 버전을 찾으려면 참조 [R 서버-새로운](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)합니다.

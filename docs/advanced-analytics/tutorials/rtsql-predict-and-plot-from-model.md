@@ -1,29 +1,27 @@
-﻿---
-title: "모델에서 예측 및 플롯(SQL에서 R 빠른 시작) | Microsoft Docs"
-ms.custom: 
+---
+title: 모델에서 예측 및 플롯(SQL에서 R 빠른 시작) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 dev_langs:
 - R
 - SQL
-ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 835e7d4901fc3d58edfedaea4474e9b523b71620
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b30c2443b8b1532d008e717e1b86fdb62adbe0a1
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>모델에서 예측 및 플롯 (SQL에서 R 빠른 시작)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +54,7 @@ VALUES (40),  (50),  (60), (70), (80), (90), (100)
 2. 새 입력 데이터를 가져옵니다.
 3. 해당 모델과 호환되는 R 예측 함수를 호출합니다.
 
-이 예제에서는 **RevoScaleR** 패키지의 일부로 제공되는 **rxLinMod** 알고리즘에 기반한 모델이므로 일반 R의 [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 함수 대신 rxPredict 함수를 호출합니다.
+이 예제에서는 **RevoScaleR** 패키지의 일부로 제공되는 **rxLinMod** 알고리즘에 기반한 모델이므로 일반 R의 [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 함수 대신 `predict` 함수를 호출합니다.
 
 ```sql
 DECLARE @speedmodel varbinary(max) = (SELECT model FROM [dbo].[stopping_distance_models] WHERE model_name = 'latest model');
@@ -80,9 +78,9 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 +  테이블에서 모델을 검색한 후 모델에서 `unserialize` 함수를 호출합니다.
 
     > [!TIP] 
-    > [실시간 점수 매기기](../../advanced-analytics/real-time-scoring.md)를 지원하는 RevoScaleR의 [serialization 함수](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)도 확인해보세요.
-+ 모델에 필요한 인수들로  `rxPredict` 함수를 적용하고 새 입력 데이터를 제공합니다.
-+ 예제에서 추가된 `str` 함수는 테스트 단계에 R에서 반환되는 데이터의 스키마를 확인하기 위한 용도입니다. 나중에 제거할 수 있습니다.
+    > [실시간 점수 매기기](../../advanced-analytics/real-time-scoring.md)를 지원하는 RevoScaleR의 [serialization 함수](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)도 확인해보세요.
++  모델에 필요한 인수들로 `rxPredict` 함수를 적용하고 새 입력 데이터를 제공합니다.
++  예제에서 추가된 `str` 함수는 테스트 단계에 R에서 반환되는 데이터의 스키마를 확인하기 위한 용도입니다. 나중에 제거할 수 있습니다.
 + R 스크립트에 사용된 열 이름은 저장 프로시저 출력으로 반드시 전달되지는 않습니다. 새 열 이름을 정의하는 WITH RESULTS 절을 사용했습니다.
 
 **결과**
@@ -91,7 +89,7 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 
 ## <a name="perform-scoring-in-parallel"></a>병렬로 평가 수행
 
-작은 데이터 집합에서는 예측이 상당히 빠르게 반환됩니다. 하지만 많은 예측을 매우 빠르게 해야 한다고 가정해 보겠습니다. SQL Server에서 처리 속도를 높이는 방법은 여러 가지가 있으며, 작업을 병렬로 처리할 수 있다면 더 많이 있습니다. 특히 채점(scoring)을 하기 위해서는 `sp_execute_external_script`에 *@parallel* 매개변수를 추가하고 값을 **1**로 설정합니다.
+작은 데이터 집합에서는 예측이 상당히 빠르게 반환됩니다. 하지만 많은 예측을 매우 빠르게 해야 한다고 가정해 보겠습니다. QL Server에서 처리 속도를 높이는 방법은 여러 가지가 있으며, 작업을 병렬로 처리할 수 있다면 더 많이 있습니다. 특히 채점(scoring)을 하기 위해서는 `sp_execute_external_script`에 *@parallel* 매개변수를 추가하고 값을 **1**로 설정합니다.
 
 수십만 개의 값이 들어있는 자동차 속도에 대한 훨씬 더 큰 테이블을 가지고 있다고 가정해 보겠습니다. 숫자 테이블을 생성하도록 도와주는 커뮤니티의 많은 샘플 T-SQL 스크립트가 있으므로 여기서는 그러한 스크립트를 재현하지 않겠습니다. 많은 정수가 포함된 열이 있고 모델에 `speed`에 대한 입력으로 이 열을 사용하는 경우를 고려해 보겠습니다.
 
@@ -121,7 +119,7 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 
 + *채점(scoring)* 대신 *훈련* 을 시키는 경우엔 이 매개변수가 효과가 없을 수도 있습니다. 모델 유형에 따라 모델 생성 시 요약을 만들기 전에 모든 행을 읽어야 할 수 있습니다.
 
-+ 모델을 훈련할 때 병렬 처리 이득을 취하기 위해서 RevoScaleR 알고리즘 중의 하나를 사용하기를 권장합니다. 이 알고리즘은 `sp_execute_external_script`에 <code>@parallel =1</code>을 지정하지 않더라도 자동으로 분산 처리하도록 설계되었습니다. RevoScaleR 알고리즘의 최적 성능을 얻기 위한 방법에 관한 지침으로 [분산 및 Microsoft R에서 ScaleR와 병렬 컴퓨팅](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)을 참조하십시오.
++ 모델을 훈련할 때 병렬 처리 이득을 취하기 위해서 **RevoScaleR** 알고리즘 중의 하나를 사용하기를 권장합니다. 이 알고리즘은 `sp_execute_external_script`에<code>@parallel =1</code>을 지정하지 않더라도 자동으로 분산 처리하도록 설계되었습니다. RevoScaleR 알고리즘의 최적 성능을 얻기 위한 방법에 관한 지침으로 [분산 및 Microsoft R에서 ScaleR와 병렬 컴퓨팅](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)을 참조하십시오.
 
 ## <a name="create-an-r-plot-of-the-model"></a>모델의 R 플롯 만들기
 
@@ -153,7 +151,7 @@ SQL Server Management Studio를 비롯한 많은 클라이언트는 [sp_execute_
 + `jpeg` 함수는 지정된 매개 변수로 R 장치를 만듭니다.
 + 플롯을 만든 후에 더 많은 시각적 기능을 추가할 수 있습니다. 이번 경우엔 `abline`을 사용해서 회귀선을 추가합니다.
 + 플롯 기능 추가를 완료하면 `dev.off()` 함수를 사용하여 그래픽 장치를 닫아야 합니다.
-+ `readBin` 함수는 읽을 파일, 파일 형식 사양 및 레코드 수를 가집니다. `rb`* * ' 파일이 텍스트가 아닌 이진임을 나타냅니다.
++ `readBin` 함수는 읽을 파일, 파일 형식 사양 및 레코드 수를 가집니다. `rb`**' 파일이 텍스트가 아닌 이진임을 나타냅니다.
 
 **결과**
 

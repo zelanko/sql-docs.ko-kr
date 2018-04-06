@@ -1,16 +1,16 @@
 ---
 title: sp_addmergepublication (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,7 +20,7 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -123,7 +123,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  병합 게시에서 매개 변수가 있는 행 필터를 사용하도록 설정합니다. *dynamic_filters* 은 **nvarchar (5)**, 기본값은 FALSE입니다.  
   
 > [!NOTE]  
->  이 매개 변수를 직접 지정하기보다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 매개 변수가 있는 행 필터를 사용할지 여부를 자동으로 결정할 수 있도록 허용해야 합니다. 값을 지정 하면 **true** 에 대 한 *dynamic_filters*, 문서에 대 한 매개 변수가 있는 행 필터를 정의 해야 합니다. 자세한 내용은 [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
+>  이 매개 변수를 직접 지정하기보다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 매개 변수가 있는 행 필터를 사용할지 여부를 자동으로 결정할 수 있도록 허용해야 합니다. 값을 지정 하면 **true** 에 대 한 *dynamic_filters*, 문서에 대 한 매개 변수가 있는 행 필터를 정의 해야 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
  [  **@snapshot_in_defaultfolder =** ] **'***snapshot_in_default_folder***'**  
  스냅숏 파일을 기본 폴더에 저장하는지 여부를 지정합니다. *snapshot_in_default_folder* 은 **nvarchar (5)**, 기본값은 TRUE입니다. 경우 **true**, 스냅숏 파일이 기본 폴더에 있습니다. 경우 **false**, 스냅숏 파일을로 지정한 대체 위치에 저장 됩니다 *alternate_snapshot_folder*합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(예, CD-ROM 또는 이동식 디스크)가 될 수 있습니다. 또한 구독자가 나중에 검색할 수 있도록 FTP(파일 전송 프로토콜) 사이트에 스냅숏 파일을 저장할 수도 있습니다. 이 매개 변수 true 일 수 있으며로 지정 된 위치에 아직 *alt_snapshot_folder*합니다. 이 조합은 스냅숏 파일이 기본 위치 및 대체 위치 양쪽 모두에 저장되도록 지정합니다.  
@@ -138,7 +138,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *post_snapshot_script* 은 **nvarchar (255)**, 기본값은 NULL입니다. 병합 에이전트는 초기 동기화 동안 복제된 다른 모든 개체 스크립트와 데이터를 적용한 후에 포스트 스냅숏 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 병합 에이전트에 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다. 포스트 스냅숏 스크립트에서 실행 되지 않으므로 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자입니다.  
   
  [  **@compress_snapshot =** ] **'***compress_snapshot***'**  
- 에 작성 한 스냅숏을 지정는  **@alt_snapshot_folder**  위치는으로 압축 되도록는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식입니다. *compress_snapshot* 은 **nvarchar (5)**, 기본값은 FALSE입니다. **false** 는 스냅숏이 압축 되지; 지정 합니다. **true** 스냅숏이 압축 되도록 지정 합니다. 2GB 이상의 스냅숏 파일은 압축할 수 없습니다. 압축된 스냅숏 파일은 병합 에이전트가 실행되는 위치에 풀립니다. 압축 스냅숏은 구독자에서 압축 파일을 풀 수 있도록 일반적으로 끌어오기 구독과 함께 사용됩니다. 기본 폴더에 있는 스냅숏은 압축할 수 없습니다. 지원 하기 위해 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 지정 해야 하는 구독자를 **false**합니다.  
+ 에 작성 한 스냅숏을 지정는 **@alt_snapshot_folder** 위치는으로 압축 되도록는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식입니다. *compress_snapshot* 은 **nvarchar (5)**, 기본값은 FALSE입니다. **false** 는 스냅숏이 압축 되지; 지정 합니다. **true** 스냅숏이 압축 되도록 지정 합니다. 2GB 이상의 스냅숏 파일은 압축할 수 없습니다. 압축된 스냅숏 파일은 병합 에이전트가 실행되는 위치에 풀립니다. 압축 스냅숏은 구독자에서 압축 파일을 풀 수 있도록 일반적으로 끌어오기 구독과 함께 사용됩니다. 기본 폴더에 있는 스냅숏은 압축할 수 없습니다. 지원 하기 위해 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 지정 해야 하는 구독자를 **false**합니다.  
   
  [  **@ftp_address =** ] **'***ftp_address***'**  
  배포자용 FTP 서비스의 네트워크 주소입니다. *ftp_address* 은 **sysname**, 기본값은 NULL입니다. 구독자의 병합 에이전트가 선택할 게시 스냅숏 파일의 위치를 지정합니다. 이 속성은 각 게시에 대해 저장, 되므로 각 게시에는 서로 다른 *ftp_address*합니다. 게시는 FTP를 사용하여 스냅숏 전파를 지원해야 합니다.  
@@ -219,11 +219,11 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@replicate_ddl =** ] *replicate_ddl*  
  게시에 대해 스키마 복제가 지원되는지 여부를 나타냅니다. *replicate_ddl* 은 **int**, 기본값은 1입니다. **1** 게시자에서 실행 하는 데이터 정의 언어 (DDL) 문을, 복제 됨 및 **0** DDL 문이 복제 되지 않음을 나타냅니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
- *@replicate_ddl*  매개 변수는 DDL 문이 열을 추가 하는 경우에 적용 됩니다. *@replicate_ddl*  DDL 문을 변경 하거나 다음과 같은 이유로 열을 삭제할 때 매개 변수는 무시 됩니다.  
+ *@replicate_ddl* 매개 변수는 DDL 문이 열을 추가 하는 경우에 적용 됩니다. *@replicate_ddl* DDL 문을 변경 하거나 다음과 같은 이유로 열을 삭제할 때 매개 변수는 무시 됩니다.  
   
--   열을 삭제 하면 배포 에이전트가 실패으 리라 예상 되는 삭제 된 열을 포함 하 여 새 DML 문에 방지 하기 위해 sysarticlecolumns 업데이트 되어야 합니다. *@replicate_ddl*  복제 스키마 변경 복제 항상 해야 하기 때문에 매개 변수가 무시 됩니다.  
+-   열을 삭제 하면 배포 에이전트가 실패으 리라 예상 되는 삭제 된 열을 포함 하 여 새 DML 문에 방지 하기 위해 sysarticlecolumns 업데이트 되어야 합니다. *@replicate_ddl* 복제 스키마 변경 복제 항상 해야 하기 때문에 매개 변수가 무시 됩니다.  
   
--   열이 변경될 경우 원본 데이터 형식 또는 Null 허용 여부가 변경되었을 수 있으므로 DML 문에 구독자에 있는 테이블과 호환되지 않는 값이 포함될 수 있습니다. 이러한 DML 문으로 인해 배포 에이전트가 실패할 수 있습니다. *@replicate_ddl*  복제 스키마 변경 복제 항상 해야 하기 때문에 매개 변수가 무시 됩니다.  
+-   열이 변경될 경우 원본 데이터 형식 또는 Null 허용 여부가 변경되었을 수 있으므로 DML 문에 구독자에 있는 테이블과 호환되지 않는 값이 포함될 수 있습니다. 이러한 DML 문으로 인해 배포 에이전트가 실패할 수 있습니다. *@replicate_ddl* 복제 스키마 변경 복제 항상 해야 하기 때문에 매개 변수가 무시 됩니다.  
   
 -   DDL 문은 새 열을 추가 하는 경우 sysarticlecolumns 새 열을 포함 되지 않습니다. DML 문은 새 열에 대해 데이터 복제를 시도하지 않습니다. DDL을 복제하거나 복제하지 않는 경우가 모두 허용되므로 매개 변수가 인식됩니다.  
   
@@ -256,7 +256,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  하나의 생성에 포함되는 변경 내용 수를 지정합니다. 생성은 게시자 또는 구독자에 배달되는 변경 내용 모음입니다. *generation_leveling_threshold* 은 **int**, 기본값은 1000입니다.  
   
  [  **@automatic_reinitialization_policy =** ] *automatic_reinitialization_policy*  
- 여기서 값의 게시 변경에 필요한 자동 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드할지 여부를 지정 **1** 에 대해 지정 된  **@force_reinit_subscription** 합니다. *automatic_reinitialization_policy* 는 bit 이며 기본값은 0입니다. **1** 자동 다시 초기화가 발생 하기 전에 구독자에서 변경 내용이 업로드 됨을 의미 합니다.  
+ 여기서 값의 게시 변경에 필요한 자동 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드할지 여부를 지정 **1** 에 대해 지정 된 **@force_reinit_subscription**합니다. *automatic_reinitialization_policy* 는 bit 이며 기본값은 0입니다. **1** 자동 다시 초기화가 발생 하기 전에 구독자에서 변경 내용이 업로드 됨을 의미 합니다.  
   
 > [!IMPORTANT]  
 >  매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
@@ -277,7 +277,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="remarks"></a>주의  
  **sp_addmergepublication** 병합 복제에 사용 됩니다.  
   
- 목록에 게시 개체를 사용 하 여 Active Directory는  **@add_to_active_directory**  매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 Active Directory에 이미 만들어져 있어야 합니다.  
+ 목록에 게시 개체를 사용 하 여 Active Directory는 **@add_to_active_directory** 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 Active Directory에 이미 만들어져 있어야 합니다.  
   
  동일한 데이터베이스 개체를 사용 하는 게시에 게시 하는 게시가 여러 개 있으면 한 *replicate_ddl* 값 **1** 는 ALTER TABLE, ALTER VIEW, ALTER PROCEDURE, ALTER FUNCTION 복제 및 ALTER TRIGGER DDL 문입니다. 그러나 ALTER TABLE DROP COLUMN DDL 문은 삭제된 열을 게시하는 모든 게시에 의해 복제됩니다.  
   

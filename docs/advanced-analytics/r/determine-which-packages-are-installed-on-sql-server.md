@@ -1,26 +1,24 @@
 ---
-title: "SQL Server에 설치 된 Python 패키지 또는 R 보기 | Microsoft Docs"
-ms.custom: 
+title: SQL Server에 설치 된 Python 패키지 또는 R 보기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/19/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 9a7f7e43-b568-406c-9434-5a2ec64ec5f5
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 0a9be77fc7d7a61761a91d231aba2eaf36af8f56
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: e57c22301f69039ad2aa9466a87cce37762691e3
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewing-r-or-python-packages-installed-on-sql-server"></a>SQL Server에 설치 된 Python 패키지 또는 R 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -67,7 +65,7 @@ OutputDataSet <- as.data.frame(NameOnly);'
 WITH RESULT SETS ((PackageName nvarchar(250) ))
 ```
 
-자세한 선택적에 대 한 정보 및 R 패키지 DESCRIPTION 필드에 대 한 기본 필드를 참조 하세요. [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)합니다.
+자세한 선택적에 대 한 정보 및 R 패키지 DESCRIPTION 필드에 대 한 기본 필드를 참조 하세요. [ https://cran.r-project.org ](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)합니다.
 
 ### <a name="python"></a>Python
 

@@ -1,26 +1,24 @@
 ---
-title: "R Services-데이터 최적화에 대 한 성능 | Microsoft Docs"
-ms.custom: 
+title: R Services-데이터 최적화에 대 한 성능 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/12/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6b320357d8978a97878d31943b48accee8898f9f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-데이터 최적화에 대 한 성능
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +37,7 @@ SQL Server 2016 및 2017에서 사용할 수 있습니다는 **로컬** 또는 *
 
 ## <a name="factors"></a>요소
 
-R 언어에는 범주 데이터에 대 한 특별 한 변수는 "요소" 개념이 있습니다. 데이터 과학자 often의 수식에 인수 변수를 사용, 데이터 확인 요소로 범주 변수를 처리 하기 때문에 컴퓨터 학습 함수로 올바르게 처리 됩니다. 자세한 내용은 참조 하십시오. [for Dummies R: 비율 변수] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+R 언어에는 범주 데이터에 대 한 특별 한 변수는 "요소" 개념이 있습니다. 데이터 과학자 often의 수식에 인수 변수를 사용, 데이터 확인 요소로 범주 변수를 처리 하기 때문에 컴퓨터 학습 함수로 올바르게 처리 됩니다. 자세한 내용은 참조 하십시오. [for Dummies R: 비율 변수] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)합니다.
 
 기본적으로 정수 및 저장소 또는 처리를 위해 다시 백 비율 변수 문자열에서 변환할 수 있습니다. R `data.frame` 하지 않는 한 함수 인수 변수로 모든 문자열을 처리 인수 *stringsAsFactors* 로 설정 된 **False**합니다. 따라서 처리를 위해 정수로 변환 되 고 원래 문자열에 다시 매핑될 다음 문자열은 자동으로.
 
@@ -139,7 +137,7 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree`지원 된 `maxDepth` 매개 변수는 의사 결정 트리의 깊이 제어 합니다. 로 `maxDepth` 은 증가 하면 성능이 저하 될 수 있습니다, 성능을 저하 시키는 비교 깊이가 증가의 혜택을 분석 하는 것이 중요 되기 때문입니다.
+    `rxDTree` 지원 된 `maxDepth` 매개 변수는 의사 결정 트리의 깊이 제어 합니다. 로 `maxDepth` 은 증가 하면 성능이 저하 될 수 있습니다, 성능을 저하 시키는 비교 깊이가 증가의 혜택을 분석 하는 것이 중요 되기 때문입니다.
 
     와 같은 매개 변수를 조정 하 여 시간 복잡성 및 예측 정확도 간의 균형을 제어할 수 있습니다 `maxNumBins`, `maxDepth`, `maxComplete`, 및 `maxSurrogate`합니다. 깊이를 10 또는 15 이상으로 늘리면 계산에 비용이 매우 많이 들 수 있습니다.
 

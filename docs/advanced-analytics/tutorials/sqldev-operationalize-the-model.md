@@ -1,31 +1,29 @@
 ---
-title: "6 단원: R 모델을 운용 | Microsoft Docs"
-ms.custom: 
+title: '6 단원: R 모델을 운용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/10/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 - TSQL
-ms.assetid: 52b05828-11f5-4ce3-9010-59c213a674d1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: ec610a6276c51611dc470693d25b12b239baf333
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 98a87ccb29b69fbb31d6e8bf6f064fb005fce71d
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="lesson-6-operationalize-the-r-model"></a>6 단원: R 모델을 운용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -76,7 +74,7 @@ GO
   
 + 반환한 값은 `rxPredict` 함수는는 **float** 드라이버 시간 관계의 끝을 가져옴을 확률을 나타내는입니다.
 
-## <a name="batch-scoring"></a>일괄 처리 점수 매기기
+## <a name="batch-scoring"></a>일괄 처리 채점
 
 이제 일괄 처리 점수 매기기의 작동 방식을 살펴보겠습니다.
 

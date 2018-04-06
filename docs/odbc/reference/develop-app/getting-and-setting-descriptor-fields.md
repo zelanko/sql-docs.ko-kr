@@ -1,19 +1,21 @@
 ---
-title: "가져오기 및 설명자 필드를 설정 합니다. | Microsoft Docs"
-ms.custom: 
+title: 가져오기 및 설명자 필드를 설정 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: descriptors [ODBC], retrieving or setting field values
+helpviewer_keywords:
+- descriptors [ODBC], retrieving or setting field values
 ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
