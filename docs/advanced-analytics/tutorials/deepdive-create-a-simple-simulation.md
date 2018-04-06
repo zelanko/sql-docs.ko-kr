@@ -1,31 +1,29 @@
 ---
-title: "만들기 (SQL과 R 심층 분석)에 대해 간단한 시뮬레이션 | Microsoft Docs"
-ms.custom: 
+title: 만들기 (SQL과 R 심층 분석)에 대해 간단한 시뮬레이션 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: cc613d303fa3200c3460face71399223e00272e6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ca76aef56ef731d9190a8f40d8b4af2e9b04ca00
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>간단한 시뮬레이션 (SQL과 R 심층 분석) 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -133,8 +131,8 @@ R에서 사용자 지정 함수를 만든 다음 여러 번 실행하면 게임�
 이 연습에서는 더 큰 데이터 파일을 다시 사용 하려면 데이터를 다운로드 하 고 각 데이터 원본 다음과 같이 수정 합니다.
 
 1. 변수 수정 `ccFraudCsv` 및 `ccScoreCsv` 새 데이터 파일을 가리키도록
-2. 참조 하는 테이블의 이름을 변경 *sqlFraudTable* 를`ccFraud10`
-3. 참조 하는 테이블의 이름을 변경 *sqlScoreTable* 를`ccFraudScore10`
+2. 참조 하는 테이블의 이름을 변경 *sqlFraudTable* 를 `ccFraud10`
+3. 참조 하는 테이블의 이름을 변경 *sqlScoreTable* 를 `ccFraudScore10`
 
 ## <a name="additional-samples"></a>추가 예제
 

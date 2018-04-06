@@ -1,30 +1,28 @@
 ---
-title: "2 단계: PowerShell을 사용 하 여 SQL Server로 데이터 가져오기 | Microsoft Docs"
-ms.custom: 
+title: '2 단계: PowerShell을 사용 하 여 SQL Server로 데이터 가져오기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 10/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 1c97a15d3b70d42337d3054f97e2e695813ca6f8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: daab014c33deb382adcb436a67f24e05be714c50
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>2 단계: PowerShell을 사용 하 여 SQL Server로 데이터 가져오기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 02/11/2018
 
 PowerShell 스크립트를 다운로드 한 파일 중에서 나타나야 `RunSQL_SQL_Walkthrough.ps1`합니다. 이 스크립트의 목적은 연습에 대 한 환경을 준비 하는 것입니다.
 
-스크립트는 다음과 같은 작업을 수행합니다.
+이 스크립트는 다음 작업을 수행합니다.
 
 - 아직 설치 되지 않은 경우는 SQL Native Client 및 SQL 명령줄 유틸리티를 설치 합니다. 이 유틸리티는 **bcp**를 사용하여 데이터베이스에 데이터를 대량 로드하는 데 필요합니다.
 

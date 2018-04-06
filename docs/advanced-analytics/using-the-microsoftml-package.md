@@ -1,29 +1,27 @@
 ---
-title: "SQL Server와 함께 MicrosoftML 패키지를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: SQL Server와 함께 MicrosoftML 패키지를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8d3cec4401f23e4cf7f187b1a937eb10b60dbcd0
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>SQL Server MicrosoftML 패키지 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +50,7 @@ MicrosoftML 다양 한 기계 학습 알고리즘 및 성능을 위해 최적화
 
 - 의사 결정 트리 및 의사 결정 포리스트 모델: `rxFastTree` 은 승격 된 의사 결정 트리 알고리즘 FastRank Bing에서 사용 하기 위해 개발 된 원래 라고 합니다. 가장 빠르고 가장 인기 있는 학습자 중 하나입니다. 이진 분류 및 회귀를 지원합니다.
 
-  `rxFastForest`로지스틱 회귀 모델은 임의 포리스트 방법에 따라. 이 모델은 RevoScaleR의 `rxLogit` 함수와 유사하지만 L1 및 L2 정규화를 지원합니다. 이진 분류 및 회귀를 지원합니다.
+  `rxFastForest` 로지스틱 회귀 모델은 임의 포리스트 방법에 따라. 이 모델은 RevoScaleR의 `rxLogit` 함수와 유사하지만 L1 및 L2 정규화를 지원합니다. 이진 분류 및 회귀를 지원합니다.
 
 - 로지스틱 회귀: `rxLogisticRegression` 로지스틱 회귀 모델은 비슷합니다는 `rxLogit` L1 및 L2 정규화에 대 한 추가 지원으로, RevoScaleR 함수입니다. 이진 또는 다중 클래스 분류를 지원합니다.
 

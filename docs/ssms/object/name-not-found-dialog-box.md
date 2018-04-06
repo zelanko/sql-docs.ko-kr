@@ -1,20 +1,23 @@
 ---
-title: "찾을 수 없는 이름 대화 상자 | Microsoft 문서"
-ms.custom: 
+title: 찾을 수 없는 이름 대화 상자 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.common.namenotfound.f1
-helpviewer_keywords: Name Not Found dialog box
+f1_keywords:
+- sql13.swb.common.namenotfound.f1
+helpviewer_keywords:
+- Name Not Found dialog box
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

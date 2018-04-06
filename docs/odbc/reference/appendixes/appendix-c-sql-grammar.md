@@ -1,19 +1,21 @@
 ---
-title: "부록 c: SQL 문법을 | Microsoft Docs"
-ms.custom: 
+title: '부록 c: SQL 문법을 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQL grammar [ODBC], about SQL grammar
+helpviewer_keywords:
+- SQL grammar [ODBC], about SQL grammar
 ms.assetid: 0ee36f09-59e7-4b94-88ca-7ebc0952a3be
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,29 +1,29 @@
 ---
-title: "DSN 및 연결 문자열 키워드 및 SQL Server 용 ODBC 드라이버에서 사용 되는 특성 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/24/2018
+title: DSN 및 연결 문자열 키워드 및 SQL Server 용 ODBC 드라이버에서 사용 되는 특성 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
 - DSN
 - Connection String Keywords
 - Connection Attributes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: v-jizho2
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 09af03a1f7f9389bbbc86bc5f9f1a5a358aaf885
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 641d0cf4134dc488436f981df1d4bee2c089acd2
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 및 연결 문자열 키워드 및 특성
 
@@ -166,6 +166,7 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정 합니다. 참조 
 |SqlPassword|SQL_AU_PASSWORD|SQL Server 인증 사용자 이름 및 암호입니다.|
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 통합 인증입니다.|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory 암호 인증입니다.|
+|ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 대화형 인증입니다.|
 | |SQL_AU_RESET|설정 되지 않은 경우. 모든 DSN 또는 연결 문자열 설정을 재정의합니다.|
 
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION

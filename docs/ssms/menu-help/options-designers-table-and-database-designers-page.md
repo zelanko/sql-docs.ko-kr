@@ -1,19 +1,21 @@
 ---
-title: "옵션(디자이너 - 테이블 및 데이터베이스 디자이너 페이지) | Microsoft 문서"
-ms.custom: 
+title: 옵션(디자이너 - 테이블 및 데이터베이스 디자이너 페이지) | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: VS.ToolsOptionsPages.Designers.Table_Designer
+f1_keywords:
+- VS.ToolsOptionsPages.Designers.Table_Designer
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg

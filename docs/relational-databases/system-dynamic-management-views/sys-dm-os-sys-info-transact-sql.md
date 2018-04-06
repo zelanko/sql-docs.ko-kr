@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_sys_info (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_sys_info_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: 
+caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d5284112257c5d1c2d23f354ec7690fab6abb90b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
 |**deadlock_monitor_serial_number**|**int**|현재 교착 상태 모니터 시퀀스의 ID를 지정합니다. Null을 허용하지 않습니다.|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|나타냅니다는 **의 ms_tick** 번호 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마지막으로 시작 합니다. 현재 ms_ticks 열과 비교됩니다. Null을 허용하지 않습니다.|  
 |**sqlserver_start_time**|**datetime**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 마지막으로 시작된 날짜와 시간을 지정합니다. Null을 허용하지 않습니다.|  
-|**affinity_type**|**int**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**  통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br /><br /> 현재 사용 중인 서버 CPU 프로세스 선호도의 유형을 지정합니다. Null을 허용하지 않습니다. 자세한 내용은 참조 [ALTER SERVER configuration&#40; Transact SQL &#41; ](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
+|**affinity_type**|**int**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**  통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br /><br /> 현재 사용 중인 서버 CPU 프로세스 선호도의 유형을 지정합니다. Null을 허용하지 않습니다. 자세한 내용은 참조 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)합니다.<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> 설명의 **affinity_type** 열입니다. Null을 허용하지 않습니다.<br /><br /> MANUAL = 하나 이상의 CPU에 선호도가 설정되었습니다.<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CPU 간에 스레드를 자유롭게 이동할 수 있습니다.|  
 |**process_kernel_time_ms**|**bigint**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통해 [! INCLUDE [ssCurrent]**(... /Token/ssCurrent_md.md)].<br /><br /> 커널 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드에 걸린 총 시간(밀리초)입니다. 이 값은 서버에 있는 모든 프로세서의 시간을 포함하므로 단일 프로세서 클럭보다 클 수 있습니다. Null을 허용하지 않습니다.|  
 |**process_user_time_ms**|**bigint**|**적용 대상: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 합니다.<br /><br /> 사용자 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드에 걸린 총 시간(밀리초)입니다. 이 값은 서버에 있는 모든 프로세서의 시간을 포함하므로 단일 프로세서 클럭보다 클 수 있습니다. Null을 허용하지 않습니다.|  
@@ -81,19 +81,19 @@ ms.lasthandoff: 02/03/2018
 |**process_physical_affinity**|**nvarchar(3072)** |**적용 대상: 부터는 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]** 합니다.<br /><br />정보 아직 제공 합니다. |
 |**sql_memory_model**|**int**|**적용 대상: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 및부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**합니다.<br /><br />SQL Server에서 메모리를 할당할 사용 하는 메모리 내 모델을 지정 합니다. Null을 허용하지 않습니다.<br /><br />1 = 기본 메모리 모델<br />2 = 메모리의 페이지 잠금<br /> 3 = 메모리의 큰 페이지|
 |**sql_memory_model_desc**|**nvarchar(120)**|**적용 대상: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 및부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**합니다.<br /><br />SQL Server에서 메모리를 할당할 사용 하는 메모리 내 모델을 지정 합니다. Null을 허용하지 않습니다.<br /><br />**규칙에 따른** = SQL Server 기본 메모리 모델을 사용 하는 메모리를 할당 합니다. SQL Server 서비스 계정에 없을 때 페이지 잠금 메모리 권한에서 시작 하는 동안 기본 sql 메모리 모델입니다.<br />**LOCK_PAGES** = SQL server 메모리를 할당할 메모리의 페이지 잠금에 사용은 합니다. SQL Server 서비스 계정 SQL Server 시작 하는 동안 Lock Pages in Memory 권한 소유 하는 경우 기본 sql 메모리 관리자입니다.<br /> **LARGE_PAGES** = SQL Server 메모리를 할당할 메모리의 큰 페이지에 사용 됩니다. SQL Server SQL Server 서비스 계정을 보유 하 고 Lock Pages in Memory 권한 서버 시작 시와 추적 플래그 834 상태에서 Enterprise edition에만 메모리를 할당 하는 큰 페이지 할당자를 사용 합니다.|
-|**pdw_node_id**|**int**|**적용 대상: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
 |**socket_count** |**int** | **적용 대상: 부터는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]** 합니다.<br /><br />시스템에서 사용할 수 있는 프로세서 소켓 수를 지정합니다. |  
 |**cores_per_socket** |**int** | **적용 대상: 부터는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**합니다.<br /><br />시스템에서 사용 가능한 소켓 당 프로세서의 수를 지정합니다. |  
 |**numa_node_count** |**int** | **적용 대상: 부터는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**합니다.<br /><br />시스템에서 사용할 수 있는 numa 노드 수를 지정합니다. 이 열에는 소프트 numa 노드 뿐만 아니라 물리적 numa 노드에 포함 됩니다. |  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 필요 `VIEW SERVER STATE` 서버에 대 한 권한이 있습니다.  
-  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준 및 기본 계층 필요는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정.  
-  
+## <a name="permissions"></a>Permissions
+
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+
 ## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server 운영 체제 관련 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -1,16 +1,16 @@
 ---
 title: sys.dm_tran_transactions_snapshot (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_tran_transactions_snapshot
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_transactions_snapshot dynamic management view
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f73b2955b25e17cd9c4aea963acb277f11bc3351
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 41eb79c5469a41e93f3fc5ae9564f031e1b24e51
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,10 +79,10 @@ dm_tran_transactions_snapshot
 |**snapshot_id**|**int**|행 버전 관리를 사용하여 커밋된 읽기 스냅숏으로 시작된 각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 스냅숏 ID입니다. 이 값은 행 버전 관리를 사용하여 커밋된 읽기로 실행되는 각 쿼리를 지원하는 트랜잭션이 일관된 데이터베이스 뷰를 생성하는 데 사용됩니다.|  
 |**snapshot_sequence_num**|**bigint**|스냅숏 트랜잭션 시작 당시 활성화된 트랜잭션의 트랜잭션 시퀀스 번호입니다.|  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 대 한 VIEW SERVER STATE 권한이 필요 합니다.  
-  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층 데이터베이스에서 VIEW DATABASE STATE 권한이 필요 합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준 및 기본 계층 필요는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정.  
+## <a name="permissions"></a>Permissions
+
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
   
 ## <a name="remarks"></a>주의  
  스냅숏 트랜잭션이 시작될 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 해당 시점에 활성 상태인 모든 트랜잭션을 기록합니다. **sys.dm_tran_transactions_snapshot** 모든 현재 활성 스냅숏 트랜잭션에 대 한이 정보를 보고 합니다.  

@@ -1,26 +1,24 @@
 ---
-title: "SQL Server 컴퓨터 학습 서비스에 대 한 확장 이벤트 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 컴퓨터 학습 서비스에 대 한 확장 이벤트 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/21/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e16c8c468b4e82847e65e808f357e6eefb811f7
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 확장된 이벤트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +51,7 @@ AND p.name = 'SQLSatellite';
 
 이 작업을 수행 하는 방법에 대 한 자세한 내용은 섹션을 참조 [외부 프로세스에서 이벤트 수집](#bkmk_externalevents)합니다.
 
-##  <a name="bkmk_xeventtable"></a>확장된 이벤트 테이블
+##  <a name="bkmk_xeventtable"></a> 확장된 이벤트 테이블
 
 |이벤트|Description|참고|  
 |-----------|-----------------|---------|  
@@ -88,7 +86,7 @@ AND p.name = 'SQLSatellite';
 |satellite_data_chunk_sent|위성 연결이 단일 데이터 청크 보내기를 마칠 때 실행됩니다.|열의 수, 행의 수, 패킷 수, 청크를 보내면서 경과한 시간에 대한 정보를 포함합니다.|  
 |satellite_sessionId_mismatch|메시지의 세션 ID가 예상한 것과 다릅니다.||  
   
-###  <a name="bkmk_externalevents"></a>외부 프로세스에서 이벤트 수집
+###  <a name="bkmk_externalevents"></a> 외부 프로세스에서 이벤트 수집
 
 SQL Server 컴퓨터 학습 서비스는 SQL Server 프로세스 외부에서 실행 되는 일부 서비스를 시작 합니다. 외부 프로세스와 관련 된 이벤트를 캡처하려면 이벤트 추적 구성 파일을 만들고 프로세스의 실행 파일과 동일한 디렉터리에 파일을 배치 합니다.  
   

@@ -1,19 +1,21 @@
 ---
-title: "장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책 | Microsoft 문서"
-ms.custom: 
+title: 장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: flexible failover policy
+helpviewer_keywords:
+- flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard

@@ -1,16 +1,16 @@
 ---
 title: sys.dm_fts_index_population (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_index_population
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f118b1be30119e7328ee20477a0c18808fbdc3e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0cfb07b67f17deeba2c0995ceace90335082cccb
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/03/2018
 |**is_clustered_index_scan**|**bit**|채우기에 클러스터형 인덱스에 대한 스캔이 수반되는지 여부를 나타냅니다.|  
 |**range_count**|**int**|이 채우기가 병렬 처리된 하위 범위 수입니다.|  
 |**completed_range_count**|**int**|처리가 완료된 범위 수입니다.|  
-|**outstanding_batch_count**|**int**|이 채우기에 대해 현재 처리 중인 일괄 처리 수입니다. 자세한 내용은 참조 [sys.dm_fts_outstanding_batches&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
+|**outstanding_batch_count**|**int**|이 채우기에 대해 현재 처리 중인 일괄 처리 수입니다. 자세한 내용은 참조 [sys.dm_fts_outstanding_batches &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)합니다.|  
 |**상태**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 채우기의 상태입니다. 참고: 일부 상태는 일시적입니다. 다음 중 하나일 수 있습니다.<br /><br /> 3 = 시작 중<br /><br /> 5 = 정상적으로 처리 중<br /><br /> 7 = 처리가 중지됨<br /><br /> 예를 들어 자동 병합이 진행 중일 때 이 상태가 될 수 있습니다.<br /><br /> 11 = 채우기 중단됨<br /><br /> 12 = 의미 유사 추출 처리|  
 |**status_description**|**nvarchar(120)**|채우기 상태에 대한 설명입니다.|  
 |**completion_type**|**int**|이 채우기의 완료 상태입니다.|  
@@ -64,9 +64,10 @@ ms.lasthandoff: 02/03/2018
  전체 텍스트 인덱싱뿐 아니라 통계 의미 인덱싱을 사용하도록 설정하면 전체 텍스트 인덱싱에서 키 구의 의미 추출 및 채우기와 문서 유사 데이터의 추출이 동시에 발생합니다. 문서 유사 인덱스의 채우기는 나중에 두 번째 단계에서 발생합니다. 자세한 내용은 참조 [검색 관리 및 모니터링 의미 체계](../../relational-databases/search/manage-and-monitor-semantic-search.md)합니다.  
   
 ## <a name="permissions"></a>Permissions  
+
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층 필요는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정.  
- 
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+  
 ## <a name="physical-joins"></a>물리적 조인  
  ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "이 동적 관리 뷰의 유효 조인")  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

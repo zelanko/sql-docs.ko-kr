@@ -1,27 +1,28 @@
 ---
-title: "SQL Server 로그인 대화 상자 (ODBC) | Microsoft Docs"
-ms.custom: 
-ms.date: 09/27/2017
+title: SQL Server 로그인 대화 상자 (ODBC) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5671f5213633d7efbb7693425a711db1e980d078
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 367559719da374be358f93821572df4365a278d7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>SQL Server 로그인 대화 상자(ODBC)
 
@@ -44,6 +45,7 @@ SQL Server와 동일한 컴퓨터를 사용 하는 경우 "(local)"를 입력할
 - **Windows 통합** 현재 로그인 한 사용자의 계정을 사용 하 여 인증
 - **Active Directory 암호** 로그인 ID 및 암호
 - **Active Directory 통합** 현재 로그인 한 사용자의 계정을 사용 하 여 인증
+- **Active Directory 대화형** 로그인 ID로 인증
 
 참조 [데이터 원본 마법사 화면 2](../../../connect/odbc/windows/dsn-wizard-2.md) 인증 모드에 대 한 자세한 내용은 합니다.
 
@@ -53,7 +55,7 @@ SQL Server와 동일한 컴퓨터를 사용 하는 경우 "(local)"를 입력할
 
 ### <a name="login-id"></a>로그인 ID
 
-경우에 연결에 사용할 SQL Server 또는 Azure Active Directory 로그인 ID를 지정 **인증 모드** 로 설정 된 **SQL Server** 또는 **Active Directory 암호**합니다. 그렇지 않은 경우는 **로그인 ID** 상자는 비활성화 됩니다.
+경우에 연결에 사용할 SQL Server 또는 Azure Active Directory 로그인 ID를 지정 **인증 모드** 로 설정 된 **SQL Server** 또는 **Active Directory 암호** 또는 **대화형 active Directory**합니다. 그렇지 않은 경우는 **로그인 ID** 상자는 비활성화 됩니다.
 
 ### <a name="password"></a>암호
 

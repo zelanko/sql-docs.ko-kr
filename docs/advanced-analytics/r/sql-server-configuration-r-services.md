@@ -1,26 +1,24 @@
 ---
-title: "SQL Server 구성(R Services) | Microsoft 문서"
-ms.custom: 
+title: SQL Server 구성(R Services) | Microsoft 문서
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 794a15c6673a06ea261f66129035ea62ea31cb0e
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R로 사용 하기 위한 SQL Server 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -126,7 +124,7 @@ SQL Server에서 리소스 관리를 사용 하면 중앙 집중화 하 고 오�
 
 외부 스크립트를 통해 메모리 사용에 대 한 기본 값 자체 SQL Server에 사용할 수 있는 총 메모리의 20%로 제한 됩니다. 데이터베이스 서버를 사용 하는 모든 작업은 심각 하 게 장기 실행 R 작업에 저하 되지 않도록 기본적으로이 제한이 적용 됩니다. 하지만 이 제한은 데이터베이스 관리자가 변경할 수 있습니다. 대부분의 경우에서 20% 제한이 심각한 시스템 작업 부하를 학습을 지원 하도록 적합 하지 않습니다.
 
-지원 되는 구성 옵션은 **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, 및 **MAX_PROCESSES**합니다. 현재 설정을 보려면이 문을 사용 합니다.`SELECT * FROM sys.resource_governor_external_resource_pools`
+지원 되는 구성 옵션은 **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, 및 **MAX_PROCESSES**합니다. 현재 설정을 보려면이 문을 사용 합니다. `SELECT * FROM sys.resource_governor_external_resource_pools`
 
 -  R 서비스에 대 한 서버는 주로 40% 또는 60%까지 MAX_CPU_PERCENT 증가할 것이 도움이 수도 있습니다.
 
@@ -134,11 +132,11 @@ SQL Server에서 리소스 관리를 사용 하면 중앙 집중화 하 고 오�
 
 할당 된 리소스 값을 변경 하려면 T-SQL 문을 사용 합니다.
 
-+ 이 문은 40%로 메모리 사용을 설정합니다.`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
++ 이 문은 40%로 메모리 사용을 설정합니다. `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
 
-+ 이 문은 세 가지 구성 가능 값을 설정합니다.`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
++ 이 문은 세 가지 구성 가능 값을 설정합니다. `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
 
-+ 메모리, CPU, 또는 최대 프로세스 설정을 변경 하 고 즉시 설정을 적용 하려면이 문을 실행 합니다.`ALTER RESOURCE GOVERNOR RECONFIGURE`
++ 메모리, CPU, 또는 최대 프로세스 설정을 변경 하 고 즉시 설정을 적용 하려면이 문을 실행 합니다. `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
 ## <a name="soft-numa-hardware-numa-and-cpu-affinity"></a>소프트 NUMA, NUMA, 하드웨어 및 CPU 선호도
 

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_resource_stats (Azure SQL 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: sys.dm_db_resource_stats (Azure SQL 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,20 +58,17 @@ ms.lasthandoff: 02/03/2018
  이 뷰에는 VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="remarks"></a>주의  
- 반환한 데이터 **sys.dm_db_resource_stats** 은 Basic, Standard 및 Premium 데이터베이스에 대 한 실행 중인 서비스 계층/성능 수준에 대 한 DTU 제한 허용 되는 최대의 백분율로 표현 됩니다. 웹 및 비즈니스 계층의 경우, 이 숫자는 Standard S2 성능 계층에 대한 비율을 나타냅니다. 예를 들어 웹 또는 비즈니스 데이터베이스에 대해 실행할 때 avg_cpu_percent가 70%를 반환한다면 S2 계층 한도의 70%를 나타내는 것입니다. 또한 웹 및 비즈니스 계층의 경우, 비율은 S2 계층 한도를 기준으로 100% 이상의 숫자를 반영할 수 있습니다.  
-  
+ 반환한 데이터 **sys.dm_db_resource_stats** 은 Basic, Standard 및 Premium 데이터베이스에 대 한 실행 중인 서비스 계층/성능 수준에 대 한 DTU 제한 허용 되는 최대의 백분율로 표현 됩니다.
+ 
  데이터베이스가 지난 60분 안에 다른 서버로 장애 조치된 경우 이 뷰는 해당 장애 조치 이후 주 데이터베이스였던 시간에 대해서만 데이터를 반환합니다.  
   
- 이 데이터의 덜 세분화 된 뷰를 사용 하 여 **sys.resource_stats** 카탈로그 뷰는 **마스터** 데이터베이스입니다. 이 뷰는 5분마다 데이터를 캡처하고 14일 동안 기록 데이터를 유지합니다.  자세한 내용은 참조 [sys.resource_stats &#40; Azure SQL 데이터베이스 &#41; ](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ 이 데이터의 덜 세분화 된 뷰를 사용 하 여 **sys.resource_stats** 카탈로그 뷰는 **마스터** 데이터베이스입니다. 이 뷰는 5분마다 데이터를 캡처하고 14일 동안 기록 데이터를 유지합니다.  자세한 내용은 참조 [sys.resource_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)합니다.  
   
  탄력적 풀의 멤버 데이터베이스가 있는 경우 백분율 값으로 표시 되는 리소스 통계 탄력적 풀 구성에 설정 된 대로 데이터베이스에 대 한 최대 DTU 제한의 백분율로 표현 됩니다.  
   
 ## <a name="example"></a>예제  
   
-> [!NOTE]  
->  웹 및 비즈니스 계층의 경우, 이 숫자는 Standard S2 성능 계층에 대한 비율을 나타냅니다. 예를 들어 웹 또는 비즈니스 데이터베이스에 대해 실행할 때 avg_cpu_percent가 70%를 반환한다면 S2 계층 한도의 70%를 나타내는 것입니다. 또한 웹 및 비즈니스 계층의 경우, 비율은 S2 계층 한도를 기준으로 100% 이상의 숫자를 반영할 수 있습니다.  
-  
- 다음 예에서는 현재 연결된 데이터베이스에 대해 가장 최근 시간 순서로 리소스 사용 데이터를 반환합니다.  
+다음 예에서는 현재 연결된 데이터베이스에 대해 가장 최근 시간 순서로 리소스 사용 데이터를 반환합니다.  
   
 ```  
 SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;  
@@ -106,7 +103,7 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sys.resource_stats &#40; Azure SQL 데이터베이스 &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys.resource_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [서비스 계층](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [서비스 계층 기능 및 제한](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

@@ -1,27 +1,25 @@
 ---
-title: "R 코드 (컴퓨터 학습 서비스)를 운영 화 | Microsoft Docs"
+title: R 코드 (컴퓨터 학습 서비스)를 운영 화 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/26/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: f15696b1-2479-4e5f-ac5e-4beaf958a043
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: c982c62fbe79fffc878465a48ca993b8b720dc41
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 460605c8cd9040cbf9586ab91227c5e09ec526cf
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>R 코드 (컴퓨터 학습 서비스)를 운영 화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

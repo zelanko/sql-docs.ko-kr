@@ -1,6 +1,6 @@
 ﻿---
-title: "Microsoft SQL Operations Studio(미리 보기) 다운로드 및 설치 | Microsoft Docs"
-description: "Microsoft SQL Operations Studio(미리 보기)를 Windows, macOS, 또는 Linux에 다운로드 및 설치합니다."
+title: Microsoft SQL Operations Studio(미리 보기) 다운로드 및 설치 | Microsoft Docs
+description: Microsoft SQL Operations Studio(미리 보기)를 Windows, macOS, 또는 Linux에 다운로드 및 설치합니다.
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c5abc032936bb63b50becd9f37300f294e14eb9
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: 31b4ee5f9bef46f6b3e654d1cf16a7abbd2cbac8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio(미리 보기) 다운로드 및 설치
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]는 Windows, macOS, Linux에서 실행됩니다.
 
-*2월 공개 미리 보기*에서 최신 릴리스를 다운로드 및 설치합니다.
+*2월 공개 미리 보기* 에서 최신 릴리스를 다운로드 및 설치합니다.
 
 |플랫폼|다운로드|릴리스 날짜| 버전 |
 |:---|:---|:---|:---|
-|Windows|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=867998)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=867997)|2018년 2월 15일 |0.26.7|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=867999)|2018년 2월 15일 |0.26.7|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=868002)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=868001)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=868000)|2018년 2월 15일 |0.26.7|
+|Windows|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=870837)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=870838)|2018년 3월 28일 |0.27.3|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=870839)|2018년 3월 28일 |0.27.3|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=870842)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=870841)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)|2018년 3월 28일 |0.27.3|
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes.md)를 참조하십시오.
 
@@ -40,35 +40,53 @@ ms.lasthandoff: 03/28/2018
 
 **설치 관리자**
 
-1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=867998)를 다운로드한 다음 실행합니다.
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=870837)를 다운로드한 다음 실행합니다.
 1. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.
 
 
 **.zip 파일**
 
-1. [ Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=867997)을 다운로드합니다.
+1. [ Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=870838)을 다운로드합니다.
 2. 다운로드한 파일을 찾은 다음 압축을 풉니다.
 3. `\sqlops-windows\sqlops.exe`를 실행합니다.
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS용 SQL Operations Studio(미리 보기) 얻기
 
-1. [ macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=867999)를 다운로드합니다.
+1. [ macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=870839)를 다운로드합니다.
 2. zip 내용을 확장하기 위해 두 번 클릭합니다.
 3. [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 *Launchpad*에서 사용할 수 있게 하려면 *sqlops.app*을 *응용 프로그램* 폴더에 드래그합니다.
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux용 SQL Operations Studio(미리 보기) 얻기
 
-1. [ Linux용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=868000)를 다운로드합니다.
+1. [ Linux용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=870840)를 다운로드합니다.
 1. 파일을 추출하고 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 실행하기 위해 새 터미널 창을 열고 다음 명령을 입력합니다.
 
+   **Debian 설치:**
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
 
    sqlops
    ```
+
+   **rpm 설치:**
+   ```bash
+   cd ~
+   yum install ./Downloads/sqlops-linux-<version string>.rpm
+
+   sqlops
+   ```
+
+   **tar.gz 설치:**
+   ```bash 
+   cd ~ 
+   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
+   tar -xvf ~/sqlops-linux-<version string>.tar.gz 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc source ~/.bashrc 
+   sqlops 
+   ``` 
 
    > [!NOTE]
    > Debian, Redhat 및 Ubuntu에서는 누락된 종속성이 있을 수 있습니다. 다음 명령을 사용하여 Linux 버전에 따라 해당 종속성을 설치합니다.
@@ -104,6 +122,7 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]는 Windows, macOS 및 Linux에서 실행되며 다음 플랫폼에서 지원됩니다.
 
+
 ### <a name="windows"></a>Windows
 - Windows 10(64 비트)
 - Windows 8.1(64 비트)
@@ -116,6 +135,7 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
 ### <a name="macos"></a>macOS
 - macOS 10.13 High Sierra
+
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux

@@ -1,30 +1,28 @@
 ---
-title: "PowerShell를 사용한 데이터 준비(연습) | Microsoft Docs"
-ms.custom: 
+title: PowerShell를 사용한 데이터 준비(연습) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/10/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fbe74b101642ecabe0478a9d5b459e59f277da04
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell를 사용한 데이터 준비(연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +92,7 @@ ms.lasthandoff: 02/11/2018
     
     일부 패키지는 필요한 패키지도 설치합니다. 모두 약 32개의 패키지가 필요합니다.
 
-### <a name="install-required-packages-on-the-server"></a>서버에 필수 패키지 설치
+### <a name="install-required-packages-on-the-server"></a>서버에 필요한 패키지 설치
 
 SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니다. 예를 들어 SQL Server는 데이터베이스 관리자가 패키지 리포지토리를 만들고 사용자가 자신의 패키지를 설치할 수 있도록 권한을 할당할 수 있는 [패키지 관리](../r/installing-and-managing-r-packages.md) 기능을 제공합니다. 그런데 컴퓨터 관리자의 경우 R을 사용해서 새로운 패키지를 설치할 수도 있습니다.
 
@@ -112,7 +110,7 @@ SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 이 예제에서는 R grep 함수로 사용 가능한 경로의 벡터를 검색하고 그 중 "Program Files"를 포함하는 경로를 찾습니다. 자세한 내용은 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep) 을 참조하세요.
+    - 이 예제에서는 R grep 함수로 사용 가능한 경로의 벡터를 검색하고 그 중 "Program Files"를 포함하는 경로를 찾습니다. 자세한 내용은 참조 [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep)합니다.
 
     - 패키지가 이미 설치되었다고 생각되면 `installed.packages()` 를 실행하여 설치된 패키지 목록을 확인하십시오.
 
@@ -275,11 +273,11 @@ GitHub 리포지토리에서 파일을 다운로드하면 다음과 같습니다
 
 ### <a name="bkmk_data"></a>데이터 학습 및 채점
 
-데이터는 뉴욕 시 택시 데이터 집합의 견본 샘플로, 2017년에 각 여행에서 지불한 요금과 팁을 포함해 1억 7300만 건의 개별 여행 기록을 포함합니다. 데이터를 보다 쉽게 사용하기 위해 Microsoft 데이터 과학 팀이 다운샘플링을 수행하여 데이터의 1%만 얻었습니다.  이 데이터는 Azure의 공용 Blob 저장소 컨테이너에 .CSV 형식으로 공유됩니다. 원본 데이터에는 350MB 이하의 압축되지 않은 파일입니다.
+데이터는 각 여정의 요금 및 지불된 팁 금액을 비롯하여 2013년 17,300만 개별 여정의 레코드를 포함하는 뉴욕시 택시 데이터 집합의 대표 샘플링입니다. 데이터를 보다 쉽게 사용하기 위해 Microsoft 데이터 과학 팀이 다운샘플링을 수행하여 데이터의 1%만 얻었습니다.  이 데이터는 Azure의 공용 Blob 저장소 컨테이너에 .CSV 형식으로 공유됩니다. 원본 데이터에는 350MB 이하의 압축되지 않은 파일입니다.
 
 + 공용 데이터 집합: [NYC 택시 및 Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [뉴욕 택시 데이터 집합에서 Azure ML 모델 만들기] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [NYC 택시 데이터 집합에 대해 Azure ML 모델을 작성합니다.] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 
 ### <a name="powershell-and-r-script-files"></a>PowerShell 및 R 스크립트 파일
 
