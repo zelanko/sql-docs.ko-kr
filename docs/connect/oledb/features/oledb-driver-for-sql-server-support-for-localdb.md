@@ -10,18 +10,18 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 28238586191b72011b11271af4ae76f47098343d
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: d6c15dfca7184b556298d8b96cd4220353fce6ee
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>SQL Server Support for LocalDB에 대 한 OLE DB 드라이버
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,6 +50,6 @@ SERVER=(localdb)\v11.0
  필요한 경우 sqllocaldb.exe를 사용하여 LocalDB 인스턴스를 만들 수 있습니다. 또한 sqlcmd.exe를 사용하여 LocalDB 인스턴스에서 데이터베이스를 추가하고 수정할 수 있습니다. **sqlcmd -S (localdb)\v11.0**).  
   
 ## <a name="see-also"></a>관련 항목:  
- [OLE DB Driver for SQL Server 기능](../../oledb/features/oledb-driver-for-sql-server-features.md)  
+ [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

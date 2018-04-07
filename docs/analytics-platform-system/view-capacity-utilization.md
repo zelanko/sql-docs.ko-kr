@@ -1,26 +1,26 @@
 ---
-title: "용량 사용률 보기 (분석 플랫폼 시스템)"
+title: 용량 사용률 보기 (분석 플랫폼 시스템)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: "9"
-ms.openlocfilehash: 9bf391d92b29acc057fad1170f878bfb47bccd23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: 03da2fa3295153c08de1f844866a45ab0ca8ea8c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="view-capacity-utilization"></a>용량 사용률 보기
 이 항목에는 SQL Server PDW 어플라이언스의 용량 사용률을 보는 방법에 설명 합니다.  
@@ -111,5 +111,5 @@ ORDER BY [db_name], [pdw_node_id];
   
 ## <a name="see-also"></a>관련 항목:  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[어플라이언스 모니터링 &#40; 분석 플랫폼 시스템 &#41;](appliance-monitoring.md)  
+[어플라이언스 모니터링 &#40;분석 플랫폼 시스템&#41;](appliance-monitoring.md)  
   

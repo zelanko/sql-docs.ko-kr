@@ -1,30 +1,31 @@
 ---
-title: "액세스 콘솔 (AccessToSQL) 용 SSMA 시작 | Microsoft Docs"
+title: 액세스 콘솔 (AccessToSQL) 용 SSMA 시작 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc7b11e4317eb6f982a31bdd1fee17b9c54cbe04
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad49cf3dacefb44e86d7b752382dca62baf35827
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>액세스 콘솔 (AccessToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 액세스 콘솔 응용 프로그램을 시작 하는 절차를 설명 합니다. 또한 나열 된 여기에 규칙이 사용 일반적인 SSMA 콘솔 출력 창에.  
@@ -41,13 +42,13 @@ SSMA 콘솔 응용 프로그램을 시작 하려면 다음 단계를 사용 합�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA 콘솔을 사용 하기 위한 절차  
 Windows 시스템에 콘솔이 성공적으로 시작 후에 작업을 다음 단계를 사용할 수 있습니다.  
   
-1.  SSMA 콘솔 스크립트 파일을 통해 구성 합니다. 이 섹션에 대 한 자세한 내용은 참조 하세요. [스크립트 파일 만들기 &#40; AccessToSQL &#41; ](../../ssma/access/creating-script-files-accesstosql.md).  
+1.  SSMA 콘솔 스크립트 파일을 통해 구성 합니다. 이 섹션에 대 한 자세한 내용은 참조 하십시오. [스크립트 파일 만들기 &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)합니다.  
   
-2.  [변수 값 파일 &#40; 만들기 AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
+2.  [변수 값 파일을 만드는 &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
-3.  [서버 연결 파일 &#40; 만들기 AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+3.  [서버 연결 파일 만들기 &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-4.  [SSMA 콘솔 &#40; 실행 AccessToSQL &#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md) 프로젝트 요구 사항에 따라  
+4.  [SSMA 콘솔 실행 &#40;AccessToSQL&#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md) 프로젝트 요구 사항에 따라  
   
 추가 기능:  
   

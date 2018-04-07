@@ -21,13 +21,13 @@ ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eb96fb924a26d691db1ba6577d0b6f9c93e49ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4926712b260fe20dc42518ed1bccb70bb0ab306c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 콘솔 (SybaseToSQL)의 명령줄 옵션
 Microsoft는 강력한 집합 실행 및 제어 SSMA 활동 명령줄 옵션을 제공 합니다. 마샬링과 이후 섹션에서 자세히 설명 동일 합니다.  
@@ -95,7 +95,7 @@ Microsoft는 강력한 집합 실행 및 제어 SSMA 활동 명령줄 옵션을 
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 출력 옵션:-x / xmloutput [xmloutputfile]  
 이 명령은 콘솔 이나 xml 파일에 xml 형식에서 명령 출력 메시지를 출력 하는 중에 사용 됩니다.  
   
-두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz.. 하십시오:  
+두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz 하십시오..,:  
   
 -   Filepath xmloutput 전환 된 후 제공 된 경우 출력 파일에 리디렉션됩니다.  
   
@@ -165,21 +165,21 @@ SSMA 콘솔 옵션의 구문 요약 정보를 표시합니다.
   
 `C:\>SSMAforSybaseConsole.EXE -?`  
   
-SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40; SybaseToSQL &#41; ](../../ssma/sybase/appendix-1-sybasetosql.md).  
+SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)합니다.  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Securepassword – SecurePassword 도움말 옵션:-? / h  
 SSMA 콘솔 옵션의 구문 요약 정보를 표시합니다.  
   
 `C:\>SSMAforSybaseConsole.EXE -securepassword -?`  
   
-SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40; SybaseToSQL &#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
+SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
   
 ### <a name="next-step"></a>다음 단계  
 다음 단계에서는 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   암호 또는 내보내기 지정 하기 위한 암호 가져오기 /를 참조 하십시오 [암호 관리 &#40; SybaseToSQL &#41; ](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   암호 또는 내보내기 지정 하기 위한 암호 가져오기 /를 참조 하십시오 [암호 관리 &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)합니다.  
   
--   보고서를 생성 하는 것에 대 한 참조 [보고서 생성 &#40; SybaseToSQL &#41; ](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   보고서를 생성 하는 것에 대 한 참조 [보고서 생성 &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)합니다.  
   
--   콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40; SybaseToSQL &#41; ](../../ssma/sybase/troubleshooting-sybasetosql.md).  
+-   콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)합니다.  
   

@@ -1,33 +1,33 @@
 ---
-title: "원격 테이블 복사본 (PDW)을 받을 수 외부 SMP SQL Server 구성"
+title: 원격 테이블 복사본 (PDW)을 받을 수 외부 SMP SQL Server 구성
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6bbd2ed6-064e-4b45-b67b-608dc0f2b2bc
-caps.latest.revision: "13"
-ms.openlocfilehash: 18b61d60e8ca771feab84b24a9ff53cc7bdfc193
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 13
+ms.openlocfilehash: 94b62dbae331c19fa97c1625a53804f4cd96bfa5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a>원격 테이블 복사본을 받을 수는 외부 SMP SQL Server 구성
 SQL Server PDW에서 원격 테이블 복사본을 받을 수 외부 SQL Server 인스턴스를 구성 하는 방법에 설명 합니다.  
   
 이 항목에서는 원격 테이블 복사본을 구성 하기 위한 구성 단계 중 하나. 목록이 모든 구성 단계에 대 한 참조 [원격 테이블 복사](remote-table-copy.md)합니다.  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
 외부 SQL Server를 구성 하려면 먼저 다음을 수행 해야 합니다.  
   
 -   사용 하는 Windows 시스템 SQL Server 2008 Enterprise Edition 또는 이후 버전을 설치 하거나 이미 설치 되어 준비 합니다. Windows 시스템의 지침에 따라 이미 구성 되어 있어야 [는 외부 Windows 시스템에 수신 원격 테이블 복사본을 사용 하 여 InfiniBand 구성](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)합니다.  

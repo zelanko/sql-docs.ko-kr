@@ -1,30 +1,31 @@
 ---
-title: "프로젝트 설정 (Azure SQL DB) (SybaseToSQL) | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 설정 (Azure SQL DB) (SybaseToSQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6d39a4ceb167746ffe1f47528ac8e042f45715a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb155079bc318e9b23944fb2830a64454d3a76de
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>프로젝트 설정 (Azure SQL DB) (SybaseToSQL)
 Azure SQL DB 프로젝트 설정에 연결 대화 상자에 추가 되 고 또한 Azure SQL DB 연결에서 하트 비트 메커니즘을 구현할 수 있게 하려면 Azure SQL DB 데이터베이스 접미사를 구성할 수 있습니다.  
@@ -44,7 +45,7 @@ Azure SQL DB에서 제공 되는 **프로젝트 설정** 및 **기본 프로젝�
   
 값을 지정 해야에 am: ss' 형식 (예를 들어, ' 4:45 ' 또는 ' 0:50 ').  
   
-**Azure SQL DB 서버 접미사**  
+**Azure SQL DB Server Suffix**  
   
 Azure SQL DB 서버 접미사를 지정합니다.  
   

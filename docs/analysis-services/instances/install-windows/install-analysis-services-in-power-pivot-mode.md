@@ -1,33 +1,31 @@
 ---
-title: "파워 피벗 모드에서 Analysis Services를 설치 합니다. | Microsoft Docs"
-ms.custom: 
+title: 파워 피벗 모드에서 Analysis Services를 설치 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology:
-- setup-install
-- setup-install
-ms.tgt_pltfrm: 
+ms.technology: setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2f7c09094c0a55337e2bb64b58e2ea14d6f2973f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>파워 피벗 모드에서 Analysis Services 설치
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-이 항목의 절차에서는 SharePoint를 배포하기 위한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버의 단일 서버 설치 단계를 안내합니다. 이 단계에는 SharePoint 중앙 관리를 사용하는 구성 태스크 및 SQL Server 설치 마법사의 실행이 포합됩니다.  
+  이 항목의 절차에서는 SharePoint를 배포하기 위한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버의 단일 서버 설치 단계를 안내합니다. 이 단계에는 SharePoint 중앙 관리를 사용하는 구성 태스크 및 SQL Server 설치 마법사의 실행이 포합됩니다.  
   
 ##  <a name="bkmk_background"></a> 배경  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] (SharePoint용)은 SharePoint 2016 또는 SharePoint 2013 팜에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스를 제공하는 중간 계층 및 백 엔드 서비스의 모음입니다.  
@@ -294,6 +292,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>관련 항목:  
  [SharePoint 2013으로 파워 피벗 마이그레이션](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [통합 문서 및 예약 된 데이터 새로 고침 &#40; 업그레이드 SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [통합 문서 및 예약 된 데이터 새로 고침 & #40; 업그레이드 SharePoint 2013 & #41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

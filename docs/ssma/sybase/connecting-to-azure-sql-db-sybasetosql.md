@@ -1,30 +1,31 @@
 ---
-title: "Azure SQL DB (SybaseToSQL)에 연결 | Microsoft Docs"
-ms.custom: 
+title: Azure SQL DB (SybaseToSQL)에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74be54cbdac01197d4756ae1f30b6285e8c2fa90
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 823532a0107db9bcbc6781f25466fb135ffeeefe
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Azure SQL DB (SybaseToSQL)에 연결
 Azure SQL DB에 Sybase 데이터베이스를 마이그레이션하려면 Azure SQL DB의 대상 인스턴스에 연결 해야 합니다. 에 연결할 때 SSMA는 Azure SQL DB 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 Azure SQL DB 메타 데이터 탐색기에서 데이터베이스 메타 데이터를 표시 합니다. SSMA는 Azure SQL DB에 연결 되어 있지만 암호를 저장 하지 않는 인스턴스 정보를 저장 합니다.  
@@ -43,7 +44,7 @@ Azure SQL DB에 연결 하는 데 사용 되는 계정에는 계정 수행 하�
 ## <a name="establishing-a-azure-sql-db-connection"></a>Azure SQL DB 연결을 설정  
 Sybase 데이터베이스 개체를 Azure SQL DB 구문으로 변환 하기 전에 Azure SQL DB Sybase 데이터베이스 또는 데이터베이스를 마이그레이션할 하려는 인스턴스에 대 한 연결을 설정 해야 합니다.  
   
-연결 속성을 정의할 때도 데이터베이스 개체와 데이터 마이그레이션할 수를 지정 합니다. Azure SQL DB에 연결한 다음 Sybase 스키마 수준에서이 매핑을 사용자 지정할 수 있습니다. 자세한 내용은 참조 [SQL Server 스키마 &#40; Sybase ASE 스키마 매핑 SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
+연결 속성을 정의할 때도 데이터베이스 개체와 데이터 마이그레이션할 수를 지정 합니다. Azure SQL DB에 연결한 다음 Sybase 스키마 수준에서이 매핑을 사용자 지정할 수 있습니다. 자세한 내용은 참조 [Sybase ASE 스키마를 SQL Server 스키마로 매핑 &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
   
 > [!WARNING]  
 > Azure SQL DB에 연결 하려고 하기 전에 Azure SQL DB의 인스턴스가 실행 되 고 연결을 허용할 수 있는지 확인 합니다.  
@@ -85,14 +86,14 @@ Azure SQL DB 데이터베이스에 대 한 메타 데이터를 자동으로 업�
 ## <a name="next-step"></a>다음 단계  
 다음 단계는 마이그레이션에서 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   Sybase 스키마 및 Azure SQL DB 데이터베이스 및 스키마 간의 매핑을 사용자 지정, 하려면 참조 [SQL Server 스키마 &#40; Sybase ASE 스키마 매핑 SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
+-   Sybase 스키마 및 Azure SQL DB 데이터베이스 및 스키마 간의 매핑을 사용자 지정, 하려면 참조 [매핑 Sybase ASE 스키마를 SQL Server 스키마로 &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
   
--   참조 프로젝트에 대 한 구성 옵션을 사용자 지정 하려면 [프로젝트 옵션 설정 &#40; SybaseToSQL &#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)  
+-   참조 프로젝트에 대 한 구성 옵션을 사용자 지정 하려면 [프로젝트 옵션 설정 &#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)  
   
--   원본 및 대상 데이터 형식 매핑, 사용자 지정 하려면 참조 [매핑 Sybase ASE 및 SQL Server 데이터 형식 &#40; SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)  
+-   원본 및 대상 데이터 형식 매핑, 사용자 지정 하려면 참조 [매핑 Sybase ASE 및 SQL Server 데이터 형식 &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)  
   
--   이러한 작업을 수행 해야 하는 경우 Azure SQL DB 개체 정의를 Sybase 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 참조 [Sybase ASE 데이터베이스 개체 변환 &#40; SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
+-   이러한 작업을 수행 해야 하는 경우 Azure SQL DB 개체 정의를 Sybase 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 참조 [Sybase ASE 데이터베이스 개체 변환 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB &#40; SQL Server-Sybase ASE 데이터베이스 마이그레이션 SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server-Azure SQL DB Sybase ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

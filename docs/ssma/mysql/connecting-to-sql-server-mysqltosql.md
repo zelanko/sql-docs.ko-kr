@@ -1,15 +1,16 @@
 ---
-title: "SQL Server (MySQLToSQL)에 연결 | Microsoft Docs"
+title: SQL Server (MySQLToSQL)에 연결 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed92b4a6b8b54e797f6dd623153ea677743a6c7b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d35db5eb35e4e27a2ea9724cdc2d5d017a8e02e8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server (MySQLToSQL)에 연결
 SQL Server에 MySQL 데이터베이스를 마이그레이션하려면 대상 SQL Server 인스턴스에 연결 해야 합니다. 에 연결할 때 SSMA의 SQL Server 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Server 메타 데이터 탐색기에서 데이터베이스 메타 데이터를 표시 합니다. SSMA에 연결 되어 있지만 암호를 저장 하지 않는 SQL Server의 인스턴스 정보를 저장 합니다.  
@@ -46,7 +47,7 @@ SQL Server에 연결 하는 데 사용 되는 계정에는 계정 수행 하는 
 ## <a name="establishing-a-sql-server-connection"></a>SQL Server 연결 설정  
 MySQL 데이터베이스 개체를 SQL Server 구문으로 변환 하기 전에 MySQL 데이터베이스 또는 데이터베이스를 마이그레이션할 하려는 SQL Server의 인스턴스에 대 한 연결을 설정 해야 합니다.  
   
-연결 속성을 정의할 때도 데이터베이스 개체와 데이터 마이그레이션할 수를 지정 합니다. SQL Server에 연결 하면 MySQL 스키마 수준에서이 매핑을 사용자 지정할 수 있습니다. 자세한 내용은 참조 [MySQL 데이터베이스를 SQL Server 스키마 &#40;에 매핑 MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+연결 속성을 정의할 때도 데이터베이스 개체와 데이터 마이그레이션할 수를 지정 합니다. SQL Server에 연결 하면 MySQL 스키마 수준에서이 매핑을 사용자 지정할 수 있습니다. 자세한 내용은 참조 [MySQL 데이터베이스를 SQL Server 스키마로 매핑 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 > [!IMPORTANT]  
 > SQL Server에 연결 하려고 하기 전에 SQL Server의 인스턴스가 실행 되 고 연결을 허용할 수 있는지 확인 합니다.  
@@ -90,9 +91,9 @@ MySQL 데이터베이스 개체를 SQL Server 구문으로 변환 하기 전에 
 ||||||||  
 |-|-|-|-|-|-|-|  
 |**프로젝트 형식 및 대상 서버 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005<br /> (버전: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008<br /> (버전: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016<br />(Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|예|예|예|예|예||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||예|예|예|예||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||예|예|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||예|사용자 계정 컨트롤|사용자 계정 컨트롤|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||예|사용자 계정 컨트롤|예||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014||||예|예||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016|||||예||  
 |SQL Azure||||||예|  
@@ -116,14 +117,14 @@ SQL Server 데이터베이스에 대 한 메타 데이터를 자동으로 업데
 ## <a name="next-step"></a>다음 단계  
 다음 단계는 마이그레이션에서 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   MySQL 스키마 및 SQL Server 데이터베이스 및 스키마 간의 매핑을 사용자 지정, 하려면 참조 [SQL Server 스키마 &#40; 매핑 MySQL 데이터베이스 MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   MySQL 스키마 및 SQL Server 데이터베이스 및 스키마 간의 매핑을 사용자 지정, 하려면 참조 [매핑 MySQL 데이터베이스를 SQL Server 스키마로 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
--   참조 프로젝트에 대 한 구성 옵션을 사용자 지정 하려면 [프로젝트 옵션 설정 &#40; MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
+-   참조 프로젝트에 대 한 구성 옵션을 사용자 지정 하려면 [프로젝트 옵션 설정 &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   
--   원본 및 대상 데이터 형식 매핑, 사용자 지정 하려면 참조 [매핑 MySQL 및 SQL Server 데이터 형식 &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   원본 및 대상 데이터 형식 매핑, 사용자 지정 하려면 참조 [매핑 MySQL 및 SQL Server 데이터 형식 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   이러한 작업을 수행 해야 하는 경우에 SQL Server 개체 정의에 MySQL 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 참조 [MySQL 데이터베이스 변환 &#40; MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   이러한 작업을 수행 해야 하는 경우에 SQL Server 개체 정의에 MySQL 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 참조 [MySQL 데이터베이스 변환 &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB &#40; SQL Server-MySQL 데이터베이스 마이그레이션 MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server-SQL Azure DB로 데이터베이스 마이그레이션 MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

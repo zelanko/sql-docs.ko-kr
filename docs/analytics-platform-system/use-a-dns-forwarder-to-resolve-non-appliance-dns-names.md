@@ -1,36 +1,36 @@
 ---
-title: "DNS 전달자를 사용 하 여 비 어플라이언스 DNS 이름 (APS)를 해결 하려면"
+title: DNS 전달자를 사용 하 여 비 어플라이언스 DNS 이름 (APS)를 해결 하려면
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
-caps.latest.revision: "21"
-ms.openlocfilehash: 6538ec32f141592b6cf21a325b74f3e451e73092
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 21
+ms.openlocfilehash: 1d94319bd4d9ad3c25f74ca3393031d7ab916ee2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>비 어플라이언스 DNS 이름을 확인 하기 위해 DNS 전달자를 사용 합니다.
-Active Directory 도메인 서비스 노드에서 DNS 전달자를 구성할 수 있습니다 (***appliance_domain*-AD01** 및  ***appliance_domain*-AD02**) 분석 플랫폼 시스템 어플라이언스 스크립트와 소프트웨어 응용 프로그램 외부 서버에 액세스할 수 있도록 합니다.  
+Active Directory 도메인 서비스 노드에서 DNS 전달자를 구성할 수 있습니다 (***appliance_domain *-AD01** 및 ***appliance_domain *-AD02**) 수 있도록 분석 플랫폼 시스템 어플라이언스의 스크립트와 소프트웨어 응용 프로그램 외부 서버에 액세스할 수 있습니다.  
   
 ## <a name="ResolveDNS"></a>DNS 전달자를 사용 하 여  
 분석 플랫폼 시스템 어플라이언스 어플라이언스에 없는 서버의 DNS 이름 확인을 방지 하도록 구성 됩니다. 예: 소프트웨어 업데이트 서비스 WSUS (Windows), 일부 프로세스 어플라이언스에 외부 서버에 액세스 해야 합니다. 분석 플랫폼 시스템 DNS이 사용 시나리오를 지원 하기 위해 분석 플랫폼 시스템 호스트 및 가상 컴퓨터 (Vm) 어플라이언스에 외부 이름을 확인 하기 위해 외부 DNS 서버를 사용할 수 있는 외부 이름 전달자를 지원 하도록 구성할 수 있습니다. 사용자 지정 DNS 접미사의 구성할 수 없습니다, 즉, 비 어플라이언스 서버의 이름을 확인 하려면 정규화 된 도메인 이름을 사용 해야 합니다.  
   
 **DNS GUI를 사용 하 여 DNS 전달자를 만들려면**  
   
-1.  로그온 하는  ***appliance_domain*-AD01** 노드.  
+1.  로그온 하는 ***appliance_domain *-AD01** 노드.  
   
 2.  DNS 관리자를 엽니다 (**dnsmgmt.msc**).  
   
@@ -42,13 +42,13 @@ Active Directory 도메인 서비스 노드에서 DNS 전달자를 구성할 수
   
 6.  이름 확인을 제공 하는 외부 DNS 서버에 대 한 IP 주소를 입력 합니다. Vm 및 기기에서 (호스트) 서버는 정규화 된 도메인 이름을 사용 하 여 외부 서버에 연결 됩니다.  
   
-7.  1-6 단계를 반복은  ***appliance_domain*-AD02** 노드  
+7.  1-6 단계를 반복은 ***appliance_domain *-AD02** 노드  
   
 **Windows PowerShell을 사용 하 여 DNS 전달자를 만들려면**  
   
-1.  로그온 하는  ***appliance_domain*-AD01**노드.  
+1.  로그온 하는 ***appliance_domain *-AD01**노드.  
   
-2.  다음 Windows PowerShell 스크립트를 실행 하는  ***appliance_domain*-AD01** 노드. Windows PowerShell 스크립트를 실행 하기 전에 비 어플라이언스 DNS 서버의 IP 주소와 IP 주소를 대체 합니다.  
+2.  다음 Windows PowerShell 스크립트를 실행 하는 ***appliance_domain *-AD01** 노드. Windows PowerShell 스크립트를 실행 하기 전에 비 어플라이언스 DNS 서버의 IP 주소와 IP 주소를 대체 합니다.  
   
     ```  
     $DNS=Get-WmiObject -class "MicrosoftDNS_Server"  -Namespace "root\microsoftdns"  
@@ -56,7 +56,7 @@ Active Directory 도메인 서비스 노드에서 DNS 전달자를 구성할 수
     $DNS.put()  
     ```  
   
-3.  동일한 명령을 실행 하는  ***appliance_domain*-AD02** 노드.  
+3.  동일한 명령을 실행 하는 ***appliance_domain *-AD02** 노드.  
   
 ## <a name="configuring-dns-resolution-for-wsus"></a>WSUS에 대 한 DNS 확인 구성  
 SQL Server PDW 2012 통합 서비스 및 패치 기능을 제공 합니다. SQL Server PDW Microsoft Update와 다른 Microsoft 서비스 기술을 사용 합니다. 업데이트할 수 있도록 어플라이언스에 Microsoft 공용 WSUS 리포지토리 또는 회사 WSUS 저장소에 연결할 수 있어야 합니다.  

@@ -1,26 +1,26 @@
 ---
-title: "트랙 기기 경고 (분석 플랫폼 시스템)"
+title: 트랙 기기 경고 (분석 플랫폼 시스템)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: "14"
-ms.openlocfilehash: a780aa34667280d9e079dad4f44954ba919275d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 14
+ms.openlocfilehash: 825617eb8ff8d1e6c20bd891a53e85aba71f6100
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="track-appliance-alerts"></a>기기 경고 추적
 이 경고는 SQL Server PDW 어플라이언스를 추적 하는 관리 콘솔 및 시스템 뷰를 사용 하는 방법을 설명 합니다.  
@@ -78,5 +78,5 @@ ORDER BY
   
 ## <a name="see-also"></a>관련 항목:  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[어플라이언스 모니터링 &#40; 분석 플랫폼 시스템 &#41;](appliance-monitoring.md)  
+[어플라이언스 모니터링 &#40;분석 플랫폼 시스템&#41;](appliance-monitoring.md)  
   

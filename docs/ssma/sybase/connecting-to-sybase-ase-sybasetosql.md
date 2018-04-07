@@ -21,13 +21,13 @@ ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc01dc51a4c3b50e77a719d9b3bab08def84f879
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7ab617555d71bb2067b1c2d2c8e073e74af6e908
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Sybase ASE (SybaseToSQL)에 연결
 Sybase 적응형 Server Enterprise (ASE) 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure는 마이그레이션할 데이터베이스를 포함 하는 적응형 서버에 연결 해야 합니다. 에 연결할 때 SSMA 적응 서버의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 Sybase 메타 데이터 탐색기 창에서 데이터베이스 메타 데이터를 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지 않습니다.  
@@ -107,7 +107,7 @@ ASE에 연결 하는 데 사용 되는 계정은 적어도 있어야 **공용** 
   
         `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   
-    자세한 내용은 참조 [Sybase &#40;에 연결 SybaseToSQL &#41; ](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
+    자세한 내용은 참조 [Sybase 연결할 &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)합니다.  
   
 ## <a name="reconnecting-to-sybase-ase"></a>Sybase ASE에 다시 연결  
 데이터베이스 서버에 연결 된 프로젝트를 닫을 때까지 활성 상태를 유지 합니다. 프로젝트를 다시 열 때 적응 서버에 연결 되어 하려는 경우 다시 연결 해야 합니다. 메타 데이터를 업데이트, 데이터베이스 개체를 로드 하려면 될 때까지 오프 라인으로 작업할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터를 마이그레이션합니다.  
@@ -130,5 +130,5 @@ ASE 데이터베이스에 대 한 메타 데이터는 자동으로 새로 고쳐
 -   마이그레이션 프로세스의 다음 단계에서는 [SQL Server의 인스턴스에 연결](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [SQL Azure의 인스턴스에 연결](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB &#40; SQL Server-Sybase ASE 데이터베이스 마이그레이션 SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server-Azure SQL DB Sybase ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

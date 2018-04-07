@@ -10,7 +10,7 @@ ms.component: ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9fca7c816a0bb094a666b1f1533e8327d9453c39
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 2dde354b8a148266ac871fb091019bc3eab040a3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>결과 처리 방법 도움말 항목(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ ms.lasthandoff: 03/30/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [저장된 프로시저 &#40; 실행 ODBC CALL 구문 &#41;를 사용 하 여 처리 반환 코드 및 출력 매개 변수 사용 &#40; OLE db&#41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [저장된 프로시저 & #40; 실행 ODBC CALL 구문 & #41;를 사용 하 여 처리 반환 코드 및 출력 매개 변수 사용 & #40; OLE db& #41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [저장된 프로시저 &#40; 실행 RPC 구문 &#41;를 사용 하 여 처리 반환 코드 및 출력 매개 변수 사용 &#40; OLE db&#41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [저장된 프로시저 & #40; 실행 RPC 구문 & #41;를 사용 하 여 처리 반환 코드 및 출력 매개 변수 사용 & #40; OLE db& #41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [사용자 정의 함수를 실행 하 고 반환 코드 &#40; OLE db&#41;를 처리 합니다.](../../../oledb/ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [사용자 정의 함수를 실행 하 고 반환 코드 & #40; OLE db& #41;를 처리 합니다.](../../../oledb/ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [결과 집합 &#40; OLE db&#41;에서 행 인출](../../../oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
+-   [결과 집합 & #40; OLE db& #41;에서 행 인출](../../../oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [OLE DB 방법 도움말 항목](../../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

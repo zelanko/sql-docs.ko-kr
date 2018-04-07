@@ -1,25 +1,25 @@
 ---
-title: "Analytics Platform System (APS)의 InfiniBand 네트워크 어댑터 구성"
+title: Analytics Platform System (APS)의 InfiniBand 네트워크 어댑터 구성
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "SQL Server 병렬 데이터 웨어하우스 (PDW) 제어 노드에 연결 하려면 비 어플라이언스 클라이언트 서버에 InfiniBand 네트워크 어댑터를 구성 하는 방법에 설명 합니다."
+description: SQL Server 병렬 데이터 웨어하우스 (PDW) 제어 노드에 연결 하려면 비 어플라이언스 클라이언트 서버에 InfiniBand 네트워크 어댑터를 구성 하는 방법에 설명 합니다.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: 
-ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 15
+ms.openlocfilehash: 5724f5e61d458d19e8fc52d77fbff1401ca2afd3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 InfiniBand 네트워크 어댑터 구성
 SQL Server 병렬 데이터 웨어하우스 (PDW) 제어 노드에 연결 하려면 비 어플라이언스 클라이언트 서버에 InfiniBand 네트워크 어댑터를 구성 하는 방법에 설명 합니다. 로드, 백업, 및 기타 프로세스 활성 InfiniBand 네트워크에 자동으로 연결 해 되도록 하 고 고가용성을 위해 기본 연결에 대 한 다음이 지침을 사용 합니다.  

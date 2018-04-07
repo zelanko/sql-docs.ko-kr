@@ -10,7 +10,7 @@ ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbfdaf039668820a108c3f261ca7162c17cd4c09
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 336665f67245911fa560c8ac54cad77dc9c661c6
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상에 대 한 데이터 형식 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -188,6 +188,6 @@ enum SQLVARENUM {
  응용 프로그램에 대 한 DBTYPE_DBTIMESTAMP를 지정 하는 경우 *wType*, 스트림에 대 한 매핑을 재정의할 수 있습니다 **datetime2** 의 형식 이름을 제공 해야만 *pwszTypeName*합니다. 경우 **datetime** 지정 된 *bScale* 3 이어야 합니다. 경우 **smalldatetime** 지정 된 *bScale* 0 이어야 합니다. 경우 *bScale* 와 일치 하지 않습니다 *wType* 및 *pwszTypeName*, DB_E_BADSCALE이 반환 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [날짜 및 시간 기능 향상 &#40; OLE db&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상 & #40; OLE db& #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

@@ -21,13 +21,13 @@ ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41a22720524b4105bff9eec3dcf38e7183f01cc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 089bd7e6fe013f3cd590ff0c3e23929c367e67c8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>테스트 사례 준비 (SybaseToSQL)를 완료합니다.
 마법사의 마지막 페이지에는 테스트 사례 설명 및 테스트에 관련 된 개체에 대 한 정보가 표시 됩니다. 또한이 페이지에서 설정할 수 있습니다는 테스트 실행 옵션.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/21/2017
 -   선택 하면 **아니요**, 모든 데이터 변경 내용이 저장 되는 실행을 테스트 합니다.  
   
 ### <a name="auxiliary-tables-saving-mode"></a>보조 테이블 절약 모드  
-테스트 실행 중 생성 된 보조 테이블에 대 한 저장 모드를 정의 합니다. 보조 테이블에 대 한 설명을 참조는 [테스트 사례 실행 &#40; SybaseToSQL &#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) 항목입니다.  
+테스트 실행 중 생성 된 보조 테이블에 대 한 저장 모드를 정의 합니다. 보조 테이블에 대 한 설명을 참조는 [테스트 사례 실행 &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) 항목입니다.  
   
 -   선택 하는 경우 **항상 저장**, 보조 테이블 데이터는 나중에 사용할 항상 저장 됩니다.  
   
@@ -66,10 +66,10 @@ ms.lasthandoff: 12/21/2017
   
 -   선택 하는 경우 **테이블 비교에 실패 한 경우 사용자에 게 요청**, 오류가 발생 하는 경우 사용자가 필요한 작업을 선택할 수 있습니다.  
   
-클릭는 **마침** 에 준비 된 테스트 사례를 저장 하려면 단추 [테스트 리포지토리를 사용 하 여 &#40; SybaseToSQL &#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+클릭는 **마침** 에 준비 된 테스트 사례를 저장 하려면 단추 [테스트 리포지토리를 사용 하 여 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[테스트 저장소 &#40;를 사용 하 여 SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[테스트 사례 &#40; 실행 SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[데이터베이스 개체 &#40; 마이그레이션 테스트 SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[테스트 리포지토리를 사용 하 여 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[테스트 사례 실행 &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[데이터베이스 개체를 마이그레이션할 테스트 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

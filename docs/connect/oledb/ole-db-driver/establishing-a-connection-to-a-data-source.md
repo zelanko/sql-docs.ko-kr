@@ -10,7 +10,7 @@ ms.component: oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10e80f6f9669059f749d4d96b72c7cc69743f6b4
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 8c3b21e8271ab0a9a8d5f88f8fea3012cd81f956
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>데이터 원본에 대한 연결 설정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,6 +111,6 @@ void InitializeAndEstablishConnection() {
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 응용 프로그램에 대 한 OLE DB 드라이버 만들기](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
+ [SQL Server 응용 프로그램용 OLE DB 드라이버 만들기](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
   

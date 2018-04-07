@@ -1,49 +1,50 @@
 ---
-title: "Azure SQL DB (MySQLToSQL)에 연결 | Microsoft Docs"
+title: Azure SQL DB (MySQLToSQL)에 연결 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3f0572426b6c90aa7b56c1f81e077f05f01caae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 21b24f9b46490f0eb83a0b9508b8b5b2213cd7a9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB (MySQLToSQL)에 연결
 SQL Azure 대화 상자에 연결을 사용 하 여 마이그레이션할 SQL Azure 데이터베이스에 연결 합니다.  
   
 이 대화 상자에 액세스 하는 **파일** 메뉴 선택 **SQL Azure에 연결**합니다. 이 명령은 이전에 연결한 경우 **SQL Azure에 다시 연결 합니다.**  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **서버 이름**  
   
 선택 하거나 SQL Azure에 연결 하기 위한 서버 이름을 입력 합니다.  
   
-**데이터베이스 백업**  
+**데이터베이스**  
   
 선택, 입력 또는 **찾아보기** 데이터베이스 이름입니다.  
   
 > [!IMPORTANT]  
 > MySQL 용 SSMA는 SQL Azure에서 master 데이터베이스에 연결을 지원 하지 않습니다.  
   
-**User name**  
+**사용자 이름**  
   
 SSMA는 SQL Azure 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 하십시오  
   
@@ -51,7 +52,7 @@ SSMA는 SQL Azure 데이터베이스에 연결 하는 데 사용할 사용자 �
   
 사용자 이름에 대한 암호를 입력합니다.  
   
-**암호화**  
+**Encrypt**  
   
 SSMA는 SQL Azure에 암호화 된 연결을 권장합니다.  
   

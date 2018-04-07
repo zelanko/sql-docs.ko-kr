@@ -1,26 +1,26 @@
 ---
-title: "PDW 및 어플라이언스 패브릭 물리적 구성 요소 (분석 플랫폼 시스템)"
+title: PDW 및 어플라이언스 패브릭 물리적 구성 요소 (분석 플랫폼 시스템)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: "17"
-ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 17
+ms.openlocfilehash: 64a594c84d7be91939362ff0886a994147b76d93
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-and-appliance-fabric-physical-components"></a>PDW 및 어플라이언스 패브릭 물리적 구성 요소
 이름 및 PDW 및 어플라이언스 패브릭 물리적 구성 요소에 대 한 설명입니다. PDW 영역 이러한 모든 구성이 요소를 포함합니다.  
@@ -87,6 +87,6 @@ PDW 클러스터 WFOHST01 라고 합니다. 모든 물리적 호스트 및 PDW�
   
 ## <a name="see-also"></a>관련 항목:  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[어플라이언스 구성 &#40; 분석 플랫폼 시스템 &#41;](appliance-configuration.md)  
-[어플라이언스 관리 작업 &#40; 분석 플랫폼 시스템 &#41;](appliance-management-tasks.md)  
+[어플라이언스 구성 &#40;분석 플랫폼 시스템&#41;](appliance-configuration.md)  
+[어플라이언스 관리 작업 &#40;분석 플랫폼 시스템&#41;](appliance-management-tasks.md)  
   

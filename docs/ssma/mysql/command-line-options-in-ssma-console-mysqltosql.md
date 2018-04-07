@@ -1,15 +1,16 @@
 ---
-title: "SSMA 콘솔 (MySQLToSQL)의 명령줄 옵션 | Microsoft Docs"
+title: SSMA 콘솔 (MySQLToSQL)의 명령줄 옵션 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa2e0210a3d59e41b9adf9d44b593e3bc83e9aef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 747d4fcd7825d718ee7216b0ff364954cc121059
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA 콘솔 (MySQLToSQL)의 명령줄 옵션
 Microsoft은 SSMA 작업을 제어를 실행 하는 강력한 집합 명령줄 옵션을 제공 합니다. 마샬링과 이후 섹션에서 자세히 설명 동일 합니다.  
@@ -102,7 +103,7 @@ Microsoft은 SSMA 작업을 제어를 실행 하는 강력한 집합 명령줄 �
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 출력 옵션:-x / xmloutput [xmloutputfile]  
 이 명령은 콘솔 이나 xml 파일에 xml 형식에서 명령 출력 메시지를 출력 하는 중에 사용 됩니다.  
   
-두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz.. 하십시오:  
+두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz 하십시오..,:  
   
 -   Filepath xmloutput 전환 된 후 제공 된 경우 출력 파일에 리디렉션됩니다.  
   
@@ -172,21 +173,21 @@ SSMA 콘솔 옵션의 구문 요약 정보를 표시합니다.
   
 `C:\>SSMAforMySQLConsole.EXE -?`  
   
-SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40; MySQLToSQL &#41; ](../../ssma/mysql/appendix-1-mysqltosql.md).  
+SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md)합니다.  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Securepassword – SecurePassword 도움말 옵션:-? / h  
 SSMA 콘솔 옵션의 구문 요약 정보를 표시합니다.  
   
 `C:\>SSMAforMySQLConsole.EXE -securepassword -?`  
   
-SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40; MySQLToSQL &#41;](../../ssma/mysql/appendix-1-mysqltosql.md)  
+SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md)  
   
 ### <a name="next-step"></a>다음 단계  
 다음 단계에서는 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   암호 또는 내보내기 지정 하기 위한 암호 가져오기 /를 참조 하십시오 [암호 관리 &#40; MySQLToSQL &#41; ](../../ssma/mysql/managing-passwords-mysqltosql.md).  
+-   암호 또는 내보내기 지정 하기 위한 암호 가져오기 /를 참조 하십시오 [암호 관리 &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)합니다.  
   
--   보고서를 생성 하는 것에 대 한 참조 [보고서 생성 &#40; MySQLToSQL &#41; ](../../ssma/mysql/generating-reports-mysqltosql.md).  
+-   보고서를 생성 하는 것에 대 한 참조 [보고서 생성 &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)합니다.  
   
--   콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40; MySQLToSQL &#41; ](../../ssma/mysql/troubleshooting-mysqltosql.md).  
+-   콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)합니다.  
   

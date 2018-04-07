@@ -1,15 +1,16 @@
 ---
-title: "Sybase ASE 및 SQL Server 데이터 형식 (SybaseToSQL) 매핑 | Microsoft Docs"
-ms.custom: 
+title: Sybase ASE 및 SQL Server 데이터 형식 (SybaseToSQL) 매핑 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,22 +19,22 @@ helpviewer_keywords:
 - Mapping Sybase ASE Schemas to SQL Server Schemas
 - Type Mapping Settings
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11a73d901763591930c485020f52d525a6163a41
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7ab2eafaeeb355d2f3f3ecd8045b0cf3ce638ad
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Sybase ASE 및 SQL Server 데이터 형식 (SybaseToSQL) 매핑
 Sybase 적응형 Server Enterprise (ASE) 데이터베이스 형식에서 다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스 유형입니다. ASE 데이터베이스 개체를 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 개체를 ASE의 데이터 형식을 매핑하는 방법을 지정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. 기본 데이터 형식 매핑을 사용할 수도 있고 다음 섹션에 나와 있는 것 처럼 매핑을 사용자 지정할 수 있습니다.  
   
 ## <a name="default-mappings"></a>기본 매핑  
-SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록이 참조 [프로젝트 설정 &#40; 형식 매핑 &#41; &#40; SybaseToSQL &#41; ](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
+SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록이 참조 [프로젝트 설정 &#40;유형 매핑&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)합니다.  
   
 ## <a name="type-mapping-inheritance"></a>형식 상속 매핑  
 프로젝트 수준, (예: 모든 저장된 프로시저), 범주 수준 개체 또는 개체 수준에서 형식 매핑을 사용자 지정할 수 있습니다. 설정은 낮은 수준에서 재정의 되지 않는 한 상위 수준에서 상속 됩니다. 예를 들어, 매핑하는 경우 **smallmoney** 를 **money** 프로젝트 수준에서 프로젝트의 모든 개체 범주 수준 개체 또는 개체 수준에서 매핑을 사용자 지정 하지 않으면이 매핑을 사용 합니다.  
@@ -97,9 +98,9 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
   
         상속 된 매핑을 제거할 수 없습니다. 그러나 상속 된 매핑은 특정 개체 또는 개체 범주에 대 한 사용자 지정 매핑에 의해 무시 됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계 중 하나로 [평가 보고서를 만들](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) 또는 [Sybase ASE 변환 데이터베이스 개체를 SQL Server 또는 SQL Azure 구문](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3)합니다. 평가 보고서를 만드는 경우 Sybase ASE 개체는 자동으로 평가 하는 동안 변환 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB &#40; SQL Server-Sybase ASE 데이터베이스 마이그레이션 SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server-Azure SQL DB Sybase ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

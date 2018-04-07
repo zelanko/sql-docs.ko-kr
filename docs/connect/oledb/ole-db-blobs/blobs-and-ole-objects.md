@@ -10,7 +10,7 @@ ms.component: ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,18 +23,18 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2afff6a5d9f19c0db2063ab0e0c486cc7460e971
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 6bc3707dca715ec5b6bee83d181c4792aea6c949
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   OLE DB Driver for SQL Server 노출 된 **ISequentialStream** 소비자에 대 한 액세스를 지원 하기 위해 인터페이스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **텍스트**, **이미지** , **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, 형식과 xml 데이터 형식으로 이진 대형 개체 (Blob). **읽기** 메서드를 **ISequentialStream** 소비자를 관리 하기 쉬운 청크로 많은 데이터를 검색할 수 있습니다.  
   
- 이 기능을 보여 주는 샘플을 보려면 [대형 데이터 설정 &#40; OLE DB &#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)합니다.  
+ 이 기능을 보여 주는 샘플을 보려면 [대형 데이터 설정 & #40; OLE DB & #41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)합니다.  
   
  OLE DB Driver for SQL Server 소비자가 구현한 צ ְ ײ **IStorage** 인터페이스 소비자는 접근자에서 인터페이스 포인터를 제공 하는 경우 데이터 수정을 위해 바인딩한 합니다.  
   

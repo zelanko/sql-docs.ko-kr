@@ -1,30 +1,31 @@
 ---
-title: "SQL Server (DB2ToSQL)에 SSMA 구성 요소 설치 | Microsoft Docs"
+title: SQL Server (DB2ToSQL)에 SSMA 구성 요소 설치 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 160be4a7704b159a9445fc5a1f48ed2a6c9d8e84
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d246bba231c8a1e42102f73db9f5b9376b402e06
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>SQL Server (DB2ToSQL)에 SSMA 구성 요소 설치
 이 버전의 SSMA은 없어도 별도 설치를 위한에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSMA 확장 팩 서버 간 연결을 허용 하도록 DB2 공급자 및 데이터 마이그레이션을 지원 합니다.  
@@ -33,6 +34,6 @@ ms.lasthandoff: 12/21/2017
 SSMA 확장 팩에에서 스키마를 추가 데이터베이스의 지정된 된 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. **sysdb** 테이블 및 데이터를 마이그레이션하는 데 필요한 저장된 프로시저 및 사용자 정의 함수를 DB2 시스템 함수를 에뮬레이트하는 스키마에 포함 되어 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[DB2 클라이언트 &#40; DB2ToSQL &#41; 용 SSMA를 설치합니다.](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
-[SQL Server &#40; DB2ToSQL &#41; DB2 데이터베이스 마이그레이션](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SSMA DB2 클라이언트에 대 한 설치 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
+[SQL Server로 데이터베이스 마이그레이션 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

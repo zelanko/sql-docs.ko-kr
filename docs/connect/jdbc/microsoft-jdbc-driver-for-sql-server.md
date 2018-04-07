@@ -1,31 +1,31 @@
 ---
 title: Microsoft JDBC Driver for SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0f9ec204daf3c0e0130be3fc1e4a44bf2982cb68
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a7ccbec6a54b6709f04d39659517aeae5415127d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver
 
-![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[JDBC 드라이버를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 지속적인된 노력의 상호 운용성, Microsoft SQL Server 및 Azure SQL 데이터베이스와 함께 사용할 데이터베이스 JDBC (Java Connectivity) 드라이버를 제공합니다. 이 드라이버는 추가 비용 없이 사용할 수 있으며 모든 Java 응용 프로그램, 응용 프로그램 서버 또는 Java 사용 애플릿에서의 Java 데이터베이스 연결을 제공합니다. 이 드라이버는 표준 JDBC API(응용 프로그램 인터페이스)를 통해 데이터베이스 연결을 제공하는 Type 4 JDBC 드라이버입니다.
 

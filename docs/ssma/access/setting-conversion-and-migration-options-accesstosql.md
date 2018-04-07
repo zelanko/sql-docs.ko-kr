@@ -1,15 +1,16 @@
 ---
-title: "변환 및 마이그레이션 옵션 (AccessToSQL) 설정 | Microsoft Docs"
+title: 변환 및 마이그레이션 옵션 (AccessToSQL) 설정 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - project settings
 - schemas
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40be8e3f52464e7c6ae6f024d8c29f3d0acd04b9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 747a70560aaa3710429bb8708699dfa2dff9234b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>변환 및 마이그레이션 옵션 (AccessToSQL) 설정
 각 SSMA 프로젝트에 대해 프로젝트 수준의 옵션을 설정할 수 있습니다. 이러한 옵션에는 개체를 변환 하는 방법을, 데이터가 마이그레이션되는 방식 및 원본 데이터 형식이 대상 데이터 형식으로 매핑되는 방법을 지정 합니다. 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure에 데이터를 마이그레이션하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure, 구성 옵션은 프로젝트에 대 한 적절 한지 확인 하십시오.  
@@ -85,7 +86,7 @@ SSMA를 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니�
   
 3.  클릭 **확인** 설정을 저장할 수 있습니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 다음 단계는 마이그레이션에서 프로젝트 요구 사항에 따라 달라 집니다.  
   
 -   원본 및 대상 데이터 형식 매핑, 사용자 지정 하려면 참조 [매핑 소스 및 대상 데이터 형식](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  

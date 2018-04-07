@@ -1,26 +1,26 @@
 ---
-title: "APS 도메인 관리자 (APS) 만들기"
+title: APS 도메인 관리자 (APS) 만들기
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
-caps.latest.revision: 
-ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 7
+ms.openlocfilehash: 6842992931ba35f450d49d6db9beb803dce6b73a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>APS 도메인 관리자 만들기
 일부 작업에는 분석 플랫폼 시스템 도메인 관리자 권한이 필요 합니다. 이 추가 기기 도메인 관리자를 만드는 방법을 설명 합니다.  
@@ -54,5 +54,5 @@ APS 노드를 모두 실행 하는 사용자를 구성할 수 있는 충분 한 
     이렇게 하면 새 사용자를 추가 **Domain Admins** 그룹 및 **PdwControlNodeAccess** 그룹입니다. **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[구성 관리자 &#40; 시작 분석 플랫폼 시스템 &#41;](launch-the-configuration-manager.md)  
+[구성 관리자를 시작 &#40;분석 플랫폼 시스템&#41;](launch-the-configuration-manager.md)  
   

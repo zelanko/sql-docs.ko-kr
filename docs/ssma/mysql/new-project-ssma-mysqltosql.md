@@ -1,35 +1,36 @@
 ---
-title: "새 프로젝트 (SSMA) (MySQLToSQL) | Microsoft Docs"
+title: 새 프로젝트 (SSMA) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5607f0d2cbcfb01cd7aa5846f114d07d8020b557
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ff23e86cd80c6aeba2a78f778511ef8f288d092
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="new-project-ssma-mysqltosql"></a>새 프로젝트 (SSMA) (MySQLToSQL)
 사용 하 여는 **새 프로젝트** 대화 상자를 새 SSMA 프로젝트를 만듭니다. 에 액세스 하려면는 **새 프로젝트** 대화 상자의 **파일** 메뉴를 클릭 하 여 **새 프로젝트**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **이름**  
   
 프로젝트의 이름을 입력 합니다. SSMA는 파일 확장명을 추가 합니다.  

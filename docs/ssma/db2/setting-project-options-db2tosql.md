@@ -1,30 +1,31 @@
 ---
-title: "프로젝트 옵션 (DB2ToSQL) 설정 | Microsoft Docs"
+title: 프로젝트 옵션 (DB2ToSQL) 설정 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2ffdaea48e85e53a6ba170ab34251a1d26e193f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2688a05f0875bc279d993c500a48ca7b6d9f4894
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="setting-project-options-db2tosql"></a>프로젝트 옵션 설정 (DB2ToSQL)
 각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션에는 변환 개체, 개체 로드, 사용자 인터페이스 및 데이터 마이그레이션 설정을 지정합니다. 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터를 마이그레이션하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 구성 옵션은 프로젝트에 대 한 적절 한지 확인 하십시오.  
@@ -46,7 +47,7 @@ SSMA는 프로젝트 설정의 5 개 세트:
   
 구성이 설정에 대 한 네 가지 모드에 있습니다.  
   
--   Default  
+-   기본값  
   
 -   Optimistic  
   
@@ -58,15 +59,15 @@ SSMA는 프로젝트 설정의 5 개 세트:
   
 설정과 각 모드에서 설정이 적용 되는 방식을 대 한 자세한 내용은 다음 항목을 참조 합니다.  
   
--   [프로젝트 설정 &#40; 변환 &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)  
+-   [프로젝트 설정 &#40;변환&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)  
   
--   [프로젝트 설정 &#40; 마이그레이션 &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-migration-db2tosql.md)  
+-   [프로젝트 설정 &#40;마이그레이션&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)  
   
--   [프로젝트 설정 &#40; 동기화 &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)  
+-   [프로젝트 설정&#40;동기화&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)  
   
--   [프로젝트 설정 &#40; GUI &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
+-   [프로젝트 설정 &#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
   
--   [프로젝트 설정 &#40; 형식 매핑 &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
+-   [프로젝트 설정 &#40;형식 매핑&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
   
 ## <a name="setting-project-options"></a>프로젝트 옵션 설정  
 SSMA를 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니다. 이러한 설정은 SSMA 구성 파일에 저장 되며 만드는 모든 새 프로젝트에 적용 됩니다.  
@@ -99,13 +100,13 @@ SSMA를 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니�
   
 3.  클릭 **확인** 설정을 저장할 수 있습니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 다음 단계는 마이그레이션에서 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   원본 및 대상 데이터 형식 매핑, 사용자 지정 하려면 참조 [매핑 DB2 및 SQL Server 데이터 형식 &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)합니다.  
+-   원본 및 대상 데이터 형식 매핑, 사용자 지정 하려면 참조 [매핑 DB2 및 SQL Server 데이터 형식 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)합니다.  
   
--   그렇지 않은 경우에 DB2 데이터베이스 개체 정의 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체 정의 합니다. 자세한 내용은 참조 [DB2 스키마로 변환 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)합니다.  
+-   그렇지 않은 경우에 DB2 데이터베이스 개체 정의 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체 정의 합니다. 자세한 내용은 참조 [DB2 스키마 변환 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[매핑 DB2 및 SQL Server 데이터 형식 &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
+[DB2 및 SQL Server 데이터 형식 매핑 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   

@@ -1,30 +1,31 @@
 ---
-title: "법적 고 지 사항 (SSMA for Sybase) | Microsoft Docs"
-ms.custom: 
+title: 법적 고 지 사항 (SSMA for Sybase) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c83fb5dbce7542f565db03741aee8dd93ad73835
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2068c36555f77833025dc1ab56a1012d2f4c5033
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>법적 고 지 사항 (SSMA for Sybase)
 포함된 예제 응용 프로그램을 포함하여 이 설명서는 정보 제공의 목적으로만 제공되며 Microsoft 및 그 공급자는 이 설명서에 대해서 어떠한 명시적이거나 묵시적인 보증도 하지 않습니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여, 이 설명서의 내용은 예고 없이 변경될 수 있습니다. 이 설명서의 사용이나 사용 결과에 따른 책임은 전적으로 사용자에게 있습니다.  

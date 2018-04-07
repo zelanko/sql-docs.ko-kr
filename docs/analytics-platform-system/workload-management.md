@@ -1,26 +1,26 @@
 ---
-title: "작업 관리 (SQL Server PDW)"
+title: 작업 관리 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/12/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 
-ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 11
+ms.openlocfilehash: 6dde6c1af7b704e5bd1ed0e03516ad94f191ad9d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="workload-management"></a>작업 관리
 SQL Server PDW 작업 관리 기능에는 사용자와 관리자가 미리 메모리 및 동시성의 구성 설정에 대 한 요청을 할당 하려면 허용 합니다. 작업 관리를 사용 하 여 모든 요청을 무기한 함으로써 적절 한 리소스에 요청을 허용 하 여 일관 된 또는 혼합 워크 로드의 성능을 향상 합니다.  

@@ -1,30 +1,31 @@
 ---
-title: "프로젝트 설정 (변환) (MySQLToSQL) | Microsoft Docs"
+title: 프로젝트 설정 (변환) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9062c61ad2a799a20370c8b406843e0e4a209869
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>프로젝트 설정 (변환) (MySQLToSQL)
 변환 페이지는 **프로젝트 설정** 대화 상자 SSMA MySQL 구문을 SQL Server 또는 SQL Azure 구문으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   에 현재 프로젝트에 대 한 설정을 지정 하려면는 **도구** 메뉴 클릭 **프로젝트 설정**, 클릭 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **변환**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 ### <a name="collate-clause"></a>Collate 절  
   
@@ -96,10 +97,10 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |**용어**|**정의**|  
-|**기본 {XMAX &#124; 경계 상자 XMIN &#124; YMAX &#124; YMIN} 공간 인덱스에 대 한**|{XMAX &#124;에 대 한 기본값을 정의합니다. XMIN &#124; YMAX &#124; 경계 상자 공간 인덱스에 사용 된 YMIN} 매개 변수입니다.<br /><br />**기본 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**최적 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**전체 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**경계 상자 기본 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 공간 인덱스에 대 한**|에 대 한 기본값을 정의 합니다. {XMAX&#124;XMIN&#124;YMAX&#124;YMIN}의 경계 상자가 공간 인덱스에 사용 된 매개 변수입니다.<br /><br />**기본 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**최적 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**전체 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**공간 인덱스에 대 한 기본 표 밀도**|LEVEL_1, LEVEL_2, LEVEL_3, 및 공간 인덱스에 사용 되는 표 밀도의 LEVEL_4에 대 한 기본값을 정의 합니다.<br /><br />**기본 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**최적 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**전체 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값|  
   
-### <a name="transactions"></a>의  
+### <a name="transactions"></a>트랜잭션  
   
 |||  
 |-|-|  
@@ -121,5 +122,5 @@ ms.lasthandoff: 12/21/2017
 |**NOT NULL 열에 0-날짜**|지정 NOT NULL 열 0-날짜의 날짜에 0 또는 잘못 된 날짜/시간 값에 대 한 할당을 처리 하는 방법입니다.<br /><br />**기본 모드**: getdate)<br /><br />**최적 모드**: getdate)<br /><br />**전체 모드**: getdate)|  
   
 ## <a name="see-also"></a>관련 항목:  
-[사용자 인터페이스 참조 &#40; MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
+[사용자 인터페이스 참조 &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

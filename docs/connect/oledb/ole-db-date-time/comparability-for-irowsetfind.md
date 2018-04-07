@@ -10,7 +10,7 @@ ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63f7625014822e063eb4ca8b91dd3411fc7d788c
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 5428ea87f6a580da02e55de2052a21951c221cbd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="comparability-for-irowsetfind"></a>IRowsetFind 비교
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,6 +47,6 @@ ms.lasthandoff: 03/30/2018
  다른 비교를 시도하면 DB_E_BADCOMPAREOP가 반환됩니다. 이것은 OLE DB 사양에 따른 것입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [날짜 및 시간 기능 향상 &#40; OLE db&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상 & #40; OLE db& #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

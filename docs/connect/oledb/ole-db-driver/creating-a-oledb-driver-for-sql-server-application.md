@@ -10,7 +10,7 @@ ms.component: oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e54bdee09a64cd1393a41109207d42a598cb31fa
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: bbd9dafbd44b83d5e33c41980ca4c4fb9dc63e0e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>SQL Server 응용 프로그램에 대 한 OLE DB 드라이버 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/30/2018
   
 -   [OLE DB 속성 정보](../../oledb/ole-db-driver/about-ole-db-properties.md)  
   
--   [SQL Server 용 OLE db에서 OLE DB 드라이버 OUTPUT 절 사용](../../oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)  
+-   [SQL Server용 OLE DB 드라이버에서 OLE DB와 함께 OUTPUT 절 사용](../../oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  

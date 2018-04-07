@@ -1,26 +1,26 @@
 ---
-title: "PDW 서비스 상태 (분석 플랫폼 시스템)"
+title: PDW 서비스 상태 (분석 플랫폼 시스템)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3fc9bee2-c372-4c4a-956c-fb54215d8918
-caps.latest.revision: "14"
-ms.openlocfilehash: 7a6b1a1f9a6ef922833930abf00ca10482648141
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 14
+ms.openlocfilehash: 727adf27c5118130682d8d63eb120c67380ac20d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-services-status"></a>PDW 서비스 상태
 병렬 데이터 웨어하우스 **서비스 상태** 페이지 Microsoft 분석 플랫폼 시스템 구성 관리자에서 모든 SQL Server PDW 서비스의 현재 상태를 표시 하 고 PDW 서비스 중지 및 시작 하는 기능을 제공 합니다. 이것이 PDW 서비스 시작 및 중지에 대 한 지원 되는 유일한 방법입니다. 개별 구성 요소 또는 서비스를 시작할 수 없습니다 독립적으로 확인 합니다.  
@@ -39,5 +39,5 @@ ms.lasthandoff: 12/21/2017
 > PDW 영역을 중지 HDInsight 지역이의 노드에서 PDW 에이전트 (sqldwagent) 중지 됩니다. HDInsight 지역은 여전히 작동 상태 모니터링은 사용할 수 없습니다. (PDW 에이전트 PDW 제어 노드 상태 모니터링을 보고 하기 위해 필요 합니다.)  
   
 ## <a name="see-also"></a>관련 항목:  
-[APS 어플라이언스 또는 해제 &#40; 전원 분석 플랫폼 시스템 &#41;](power-the-aps-appliance-on-or-off.md)  
+[APS 기기를 켜거나 전원을 &#40;분석 플랫폼 시스템&#41;](power-the-aps-appliance-on-or-off.md)  
   

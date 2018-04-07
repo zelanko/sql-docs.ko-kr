@@ -10,7 +10,7 @@ ms.component: ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b76f06a3e1eff17bd1aafb7da06d00feb7da1280
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: e14bb0a5154101c8d7bc90db91e0c1d0d34f1ccf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db"></a>OLE DB Driver for SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ ms.lasthandoff: 03/30/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [SQL Server 응용 프로그램에 대 한 OLE DB 드라이버 만들기](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
+-   [SQL Server 응용 프로그램용 OLE DB 드라이버 만들기](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [데이터 원본 개체 &#40; OLE db&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [데이터 원본 개체 & #40; OLE db& #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [도구](../../oledb/ole-db-commands/commands.md)  
   
@@ -55,13 +55,13 @@ ms.lasthandoff: 03/30/2018
   
 -   [테이블 및 인덱스](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [데이터 형식 &#40; OLE db&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [데이터 형식 & #40; OLE db& #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [스키마 행 집합 지원 &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
 -   [테이블 반환 매개 변수 &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [날짜 및 시간 기능 향상 &#40; OLE db&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [날짜 및 시간 기능 향상 & #40; OLE db& #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [큰 CLR 사용자 정의 형식 &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
@@ -80,6 +80,6 @@ ms.lasthandoff: 03/30/2018
 -   [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -1,15 +1,16 @@
 ---
-title: "매핑 소스 및 대상 데이터 형식 (AccessToSQL) | Microsoft Docs"
+title: 매핑 소스 및 대상 데이터 형식 (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - source data types
 - target data types
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4de8ef23dae7d51e63742caf30ccc2a79361ae0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a76e26e753ae431d1f4649b05c159d4526358d4a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>매핑 소스 및 대상 데이터 형식 (AccessToSQL)
 액세스 데이터베이스 형식이 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 유형입니다. Access 데이터베이스 개체를 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체에 대 한 액세스의 데이터 형식을 매핑하는 방법을 지정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 기본 데이터 형식 매핑을 그대로 사용 하거나 다음 절차에 나와 있는 것 처럼 매핑을 사용자 지정할 수 있습니다.  
@@ -97,7 +98,7 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
   
     2.  **제거**를 클릭합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [SQL Server 개체에 액세스 데이터베이스 개체를 변환 합니다.](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>관련 항목:  

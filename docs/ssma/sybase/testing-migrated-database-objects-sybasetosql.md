@@ -1,30 +1,31 @@
 ---
-title: "데이터베이스 개체 (SybaseToSQL) 마이그레이션 테스트 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 개체 (SybaseToSQL) 마이그레이션 테스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a20ba21c0e142db53579500cf7e9f87f15fa556
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9ec259e9f7849a84d02de12b22dae622060677d6
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>데이터베이스 개체 (SybaseToSQL) 마이그레이션 테스트
 Microsoft SQL Server Migration Assistant (SSMA 테스터) Sybase 테스터를 위한 자동으로 데이터베이스 개체를 변환 및 테스트 데이터 마이그레이션 SSMA 수행 합니다. 모든 SSMA 마이그레이션 단계가 완료 되 면 SSMA 테스터를 사용 하 여 변환 된 개체가 같은 방식으로 작동 하는지 되 고 모든 데이터가 제대로 전송 되었습니다.  
@@ -55,7 +56,7 @@ SSMA 테스터 Sybase와 SQL Server의 해당 항목에서 테스트를 위해 �
 > [!NOTE]  
 > 주의! 프로덕션 시스템에서 SSMA 테스터를 사용 하지 마십시오. 테스터 실행 하는 동안 소스 스키마와 데이터 수정 됩니다. 한편, 원래 상태로의 전체 restoring 일부 유형의 테스트 된 코드에 대 한 가능한 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 SSMA 테스터를 사용 하려는 경우와 SSMA Sybase 확장 팩을 설치는 **테스터 데이터베이스 설치** 옵션을 설정 합니다.  
   
 또한 다음을 확인 합니다.  
@@ -67,9 +68,9 @@ SSMA 테스터를 사용 하려는 경우와 SSMA Sybase 확장 팩을 설치는
 Note SSMA 테스터의 현재 버전 동일한 원본 또는 대상 서버에 여러 사용자가 병렬 실행을 지원 하지 않습니다.  
   
 ## <a name="getting-started"></a>시작  
-[테스트 사례 &#40; 만들기 SybaseToSQL &#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
+[테스트 사례 만들기 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[SSMA 구성 요소에 SQL Server &#40; 설치 SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-[프로젝트 설정 &#40; 변환 &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+[SQL Server에 SSMA 구성 요소 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+[프로젝트 설정 &#40;변환&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   

@@ -10,7 +10,7 @@ ms.component: ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef6131045d461cf84c4f1162f921327184c46e31
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: ed09bdcb3e61eaa7759c30df1901ad4954dca489
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters"></a>OLE DB 테이블 반환 매개 변수에 대해 변경된 스키마 행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,6 +40,6 @@ ms.lasthandoff: 03/30/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [테이블 반환 매개 변수 &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [테이블 반환 매개 변수 사용 &#40; OLE db&#41;를 사용 하 여](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [테이블 반환 매개 변수 사용 & #40; OLE db& #41;를 사용 하 여](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

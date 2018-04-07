@@ -13,18 +13,21 @@ ms.technology:
 - drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a0cbb8a2b6eff8e3a612039616f9b497a2ea2737
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+ms.openlocfilehash: ed4b2623b7a80358622b8153d316428b742ef31e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용 하 여 연결
+
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
 이 문서에서는 SQL Server 용 Microsoft JDBC Driver 6.0 (또는 이상)과 Azure Active Directory 인증 기능을 사용 하는 Java 응용 프로그램을 개발 하는 방법을 설명 합니다.
 
 Azure SQL 데이터베이스 v 12에 연결 하는 메커니즘은 Azure Active Directory (AAD) 인증을 사용할 수 있습니다 Azure Active Directory에서 id를 사용 합니다. Azure Active Directory 인증을 사용 하 여 중앙에서 데이터베이스 사용자 및 SQL Server 인증 하는 대신 id를 관리 하 합니다. JDBC 드라이버를 사용 하면 Azure SQL DB에 연결 하는 데 JDBC 연결 문자열에 Azure Active Directory 자격 증명을 지정할 수 있습니다. Azure Active Directory 인증을 구성 하는 방법에 대 한 내용은 방문 [SQL 데이터베이스에서 사용 하 여 Azure Active Directory 인증 연결할](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)합니다. 
@@ -101,7 +104,7 @@ You have successfully logged on as: <your domain user name>
 
 현재 사용자는 Windows 도메인 계정에 연결 하는 Kerberos 티켓을 설정 해야 합니다. 주요 단계를 요약 한 아래에 포함 되어 있습니다.
 
-#### <a name="windows"></a>창
+#### <a name="windows"></a>Windows
 JDK와 함께 제공 `kinit` 가입 된 도메인에 KDC (키 배포 센터)에서 TGT를 가져오는 데 사용할 수 있는 Azure Active Directory와 페더레이션 하는 컴퓨터입니다.
 
 ##### <a name="step-1-ticket-granting-ticket-retrieval"></a>1 단계: 티켓 허용 티켓 검색

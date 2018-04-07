@@ -1,15 +1,16 @@
 ---
-title: "추가 및 제거 Access 데이터베이스 파일 (AccessToSQL) | Microsoft Docs"
+title: 추가 및 제거 Access 데이터베이스 파일 (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - scanning for database files
 - searching for database files
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64e1bc5dd6b78df1f24ee03b65cfdf6b796c0e39
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9553d01b1fb8c96281fd108d84645d785bd9f028
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Access 데이터베이스 파일 (AccessToSQL) 추가 및 제거
 로 Access 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL Azure SSMA 프로젝트에 하나 이상의 Access 데이터베이스를 추가 해야 합니다. 이러한 데이터베이스는 Access 97 또는 이후 버전 이어야 합니다. 데이터베이스를 이전 버전의 Access가 최신 버전으로 데이터베이스를 변환 해야 합니다. 열고 SSMA를 추가 하기 전에 Access 97 또는 이후 버전에서 데이터베이스를 저장 하 여이 작업을 수행 합니다.  

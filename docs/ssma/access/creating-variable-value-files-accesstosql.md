@@ -1,37 +1,38 @@
 ---
-title: "변수 값 파일 (AccessToSQL) 만들기 | Microsoft Docs"
+title: 변수 값 파일 (AccessToSQL) 만들기 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d19975c619dcbcbf2b0c99b26d6065940d7414f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2c9e2d86d94c8e49c2aa54e431e5b2c2c4a1ba43
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>변수 값 파일 (AccessToSQL) 만들기
 변수는 값 파일은 서버 마이그레이션을 통해 자주 변경 하는 명령 (예: 소스 또는 대상 서버 이름)의 매개 변수 값을 구성 하는 XML 파일입니다. 데이터베이스 마이그레이션 다 수 발생 하는 경우 원본 서버의 각 값을 저장 하기 위한 여러 변수 파일 만들고 포함 하는 마스터 스크립트 파일에서 참조 되는 **– v** 명령줄에서 전환 합니다. 이 동작은 여러 변수 파일에서 변수 값이 포함 된 몇 가지 스크립트 파일에 정적 값을 유지 관리에 보호할 수 있습니다.  
   
 > [!NOTE]  
 > -  변수 이름은 접두사를 $ (달러) 기호 접미사. 변수에 변수 값 파일의 값이 할당 되지 않은 경우 스크립트 파일의 구문 분석 하는 동안 오류가 발생 합니다, 정지 콘솔 실행 프로세스의 결과입니다.  
-> -  The escape character for **$** is **$$**. 매개 변수 또는 정적 값의 값을 포함 하는 경우는  **$**  (달러) 기호를 다음  **$$**  변수 대신 문자로 취급 되도록 지정 해야 합니다.  
+> -  The escape character for **$** is **$$**. 매개 변수 또는 정적 값의 값을 포함 하는 경우는 **$** (달러) 기호를 다음 **$$** 변수 대신 문자로 취급 되도록 지정 해야 합니다.  
 > -  유지 관리 용이성을 위해 변수를 선언할 수 내부 `‘variable-group’` 사용자 정의 변수의 논리적 분리에 대 한 요소입니다.  사용 현황이 요소는 필수입니다.  
   
 **예:**  
@@ -101,8 +102,8 @@ ms.lasthandoff: 12/21/2017
 사용자는 스키마 정의 파일에 대해 자신의 변수 값 파일 유효성을 검사할 쉽게 수 **ConsoleScriptVariablesSchema.xsd** '스키마' 폴더에서 사용할 수 있습니다.  
   
 ## <a name="next-step"></a>다음 단계  
-운영 콘솔에 다음 단계는 [서버 연결 파일 &#40; 만들기 AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+운영 콘솔에 다음 단계는 [서버 연결 파일을 만드는 &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [서버 연결 파일 (Access) 만들기](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

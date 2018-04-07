@@ -1,31 +1,31 @@
 ---
-title: "PDW 인증서 (분석 플랫폼 시스템) 프로비저닝"
+title: PDW 인증서 (분석 플랫폼 시스템) 프로비저닝
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: "22"
-ms.openlocfilehash: 9abee9638492368fe407f98a81beea2a48148971
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: a08a739c490f0cbd49f615441f557d5200107443
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-certificate-provisioning"></a>PDW 인증서 프로 비전
 **PDW 인증서 프로 비전이** 분석 플랫폼 시스템의 페이지**Configuration Manager** 가져오거나 PDW 영역에 사용 된 인증서를 제거 합니다. 를 사용 하 여 연결을 암호화할 인증서를 도와 보안 통신 하는 제어 노드에 SQL Server 클라이언트에는 SQL Server PDW 드라이버를 사용 하는 도구를 통해는 [관리 콘솔](monitor-the-appliance-by-using-the-admin-console.md), Integration Services를 로드 합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 인증서를 설치 하기 전에 다음을 수행 합니다.  
   
 1.  보안 인증서를 가져옵니다. 보안 인증서를 얻는 방법에 대 한 자세한 내용은 Microsoft 지원에 문의 합니다.  
@@ -51,7 +51,7 @@ SQL Server PDW는 제어 노드에;에 대 한 연결을 암호화 하는 인증
   
 ### <a name="to-import-the-certificate"></a>인증서를 가져오려면  
   
-1.  시작 된 **Configuration Manager**합니다. 자세한 내용은 참조 [구성 관리자 &#40; 시작 분석 플랫폼 시스템 &#41; ](launch-the-configuration-manager.md).  
+1.  시작 된 **Configuration Manager**합니다. 자세한 내용은 참조 [구성 관리자를 시작 &#40;분석 플랫폼 시스템&#41;](launch-the-configuration-manager.md)합니다.  
   
 2.  왼쪽된 창에는 **Configuration Manager**, 확장 **병렬 데이터 웨어하우스 토폴로지**, 클릭 하 고 **인증서**합니다.  
   
@@ -65,7 +65,7 @@ SQL Server PDW 가져온된 인증서를 사용 하 여 현재 연결을 암호�
   
 ### <a name="to-remove-the-previously-imported-certificate"></a>이전에 가져온된 인증서를 제거 하려면  
   
-1.  시작 된 **Configuration Manager**합니다. 자세한 내용은 참조 [구성 관리자 &#40; 시작 분석 플랫폼 시스템 &#41; ](launch-the-configuration-manager.md).  
+1.  시작 된 **Configuration Manager**합니다. 자세한 내용은 참조 [구성 관리자를 시작 &#40;분석 플랫폼 시스템&#41;](launch-the-configuration-manager.md)합니다.  
   
 2.  왼쪽된 창에는 **Configuration Manager**, 확장 **병렬 데이터 웨어하우스 토폴로지**, 클릭 하 고 **인증서**합니다.  
   
@@ -78,6 +78,6 @@ SQL Server PDW는 현재 연결을 암호화 하려면 계속 하지만 새 연�
 ![DWConfig 어플라이언스 PDW 인증서](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
 ## <a name="see-also"></a>관련 항목:  
-[구성 관리자 &#40; 시작 분석 플랫폼 시스템 &#41;](launch-the-configuration-manager.md)  
+[구성 관리자를 시작 &#40;분석 플랫폼 시스템&#41;](launch-the-configuration-manager.md)  
 <!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   

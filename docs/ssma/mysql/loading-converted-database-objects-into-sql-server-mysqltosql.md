@@ -1,30 +1,31 @@
 ---
-title: "데이터베이스 개체를 SQL Server (MySQLToSQL)로 변환 된 로드 | Microsoft Docs"
+title: 데이터베이스 개체를 SQL Server (MySQLToSQL)로 변환 된 로드 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a635fd98723c8a878d07db06787f8e91cf7a5e86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5baee887f8c3392c25a3bd683f6eb5850d33d78
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>데이터베이스 개체를 SQL Server (MySQLToSQL)로 변환 된 로드
 MySQL 데이터베이스를 변환한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL Azure가 결과 데이터베이스 개체를 로드할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. 개체를 만들 SSMA를 포함할 수 있고 개체를 스크립팅 합니다 스크립트를 실행할 수 있습니다. 또한 SSMA로 업데이트할 수 대상 메타 데이터의 실제 내용이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스입니다.  
@@ -111,8 +112,8 @@ SQL Server Management Studio에서 스크립트 또는 개별 문을 실행할 �
 SQL Server로 변환 된 데이터베이스 개체를 로드 하면 부여 하거나 이러한 개체에 대 한 권한을 거부할 수 있습니다. 마이그레이션하기 전에이 작업을 수행 하는 것이 좋습니다 데이터를 SQL Server. SQL Server에서 개체를 보호 하는 방법에 대 한 내용은 "보안 고려 사항에 대 한 데이터베이스 및 데이터베이스 응용 프로그램"에서 SQL Server 온라인 설명서를 참조 하십시오.  
   
 ## <a name="next-step"></a>다음 단계  
-마이그레이션 프로세스의 다음 단계는 [를 Azure SQL DB &#40; SQL Server-MySQL 데이터 마이그레이션 MySQLToSQL &#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+마이그레이션 프로세스의 다음 단계는 [SQL Server-Azure SQL DB에 MySQL 데이터 마이그레이션 &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB &#40; SQL Server-MySQL 데이터베이스 마이그레이션 MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server-SQL Azure DB로 데이터베이스 마이그레이션 MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

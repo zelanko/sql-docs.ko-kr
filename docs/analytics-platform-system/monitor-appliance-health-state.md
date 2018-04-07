@@ -1,26 +1,26 @@
 ---
-title: "모니터 어플라이언스 상태 (분석 플랫폼 시스템)"
+title: 모니터 어플라이언스 상태 (분석 플랫폼 시스템)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: "12"
-ms.openlocfilehash: d83c3d35c4cf65ebf714b44bc9db7db36b11f818
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 12
+ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-appliance-health-state"></a>모니터 어플라이언스 상태
 이 SQL Server PDW 동적 관리 뷰를 직접 쿼리하여 또는 관리 콘솔을 사용 하 여 SQL Server PDW 어플라이언스의 상태를 모니터링 하는 방법을 설명 합니다.  
@@ -77,7 +77,7 @@ Status 속성에 대해 반환 되는 가능한 값은 같습니다.
   
 -   확인  
   
--   치명적이 지 않음  
+-   NonCritical  
   
 -   심각  
   
@@ -98,5 +98,5 @@ Status 속성에 대해 반환 되는 가능한 값은 같습니다.
   
 ## <a name="see-also"></a>관련 항목:  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[어플라이언스 모니터링 &#40; 분석 플랫폼 시스템 &#41;](appliance-monitoring.md)  
+[어플라이언스 모니터링 &#40;분석 플랫폼 시스템&#41;](appliance-monitoring.md)  
   

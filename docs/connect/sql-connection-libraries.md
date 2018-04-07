@@ -13,11 +13,11 @@ ms.workload: data-management
 ms.topic: article
 ms.date: 03/29/2018
 ms.author: genemi
-ms.openlocfilehash: c1f0f197fbc01863ab06164282d2d007c2bd8214
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: c6c459949c63dc11308ac5bf042149775950882d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 데이터베이스에 대 한 연결 모듈
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 04/03/2018
 
 - Linux (Ubuntu)
 - MacOS
-- 창
+- Windows
 
 #### <a name="oop-to-relational-mismatch"></a>OOP-관계형 일치 하지 않습니다.
 
@@ -55,7 +55,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET Core, for Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[Windows 용.NET core](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
-| Java | [JDBC](./jdbc/microsoft-jdbc-driver-for-sql-server.md) |
+| Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js 드라이버, 설치 지침](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | *운영 체제:*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Github에서 Linux 또는 macOS PHP driver](http://github.com/Microsoft/msphpsql/) |
 | Python | [pyodbc, 설치 지침](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[ODBC를 다운로드 합니다.](./odbc/download-odbc-driver-for-sql-server.md) |

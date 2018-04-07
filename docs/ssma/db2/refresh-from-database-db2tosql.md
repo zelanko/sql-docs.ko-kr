@@ -1,30 +1,31 @@
 ---
-title: "(DB2ToSQL) 데이터베이스에서 새로 고침 | Microsoft Docs"
+title: (DB2ToSQL) 데이터베이스에서 새로 고침 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c62364a5dae70a00624cceddc87e9673466212fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 421c86c9b8b61c95d5221c7ca28af9762a530778
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="refresh-from-database-db2tosql"></a>(DB2ToSQL) 데이터베이스에서 새로 고침
 **데이터베이스에서 새로 고침** 대화 상자에서는 DB2 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자에 있는 행은 코딩 된 색 메타 데이터의 상태에 따라:  
@@ -37,11 +38,11 @@ ms.lasthandoff: 12/21/2017
   
 -   DB2 데이터베이스에서 새 개체가 있으면 해당 행은 분홍색.  
   
-기본 개체 새로 고침 설정을 지정할 수는 **프로젝트 설정** 대화 상자. 자세한 내용은 참조 [프로젝트 설정 &#40; 동기화 &#41; &#40; DB2ToSQL &#41; ](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
+기본 개체 새로 고침 설정을 지정할 수는 **프로젝트 설정** 대화 상자. 자세한 내용은 참조 [프로젝트 설정&#40;동기화&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)합니다.  
   
 액세스는 **데이터베이스에서 새로 고침** 대화 상자에서 마우스 오른쪽 단추로 클릭 하 고 DB2 메타 데이터 탐색기에서 개체 **데이터베이스에서 새로 고침**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **축소 (-)**  
 개별 개체를 숨기려면 모든 개체 그룹을 축소 합니다.  
   

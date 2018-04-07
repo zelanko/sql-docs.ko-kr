@@ -21,13 +21,13 @@ ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a62d9803867f6b1d7ea86e027426f28c893b860
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a397b48e4c55cee98fd12cb7f1954ba17100854
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>테스트 사례 (SybaseToSQL)를 초기화합니다.
 이 단계에서 새 테스트 사례에 대 한 초기 정보를 지정합니다.  
@@ -46,8 +46,8 @@ ms.lasthandoff: 12/21/2017
 테스트 사례의 용도 식별 하는 추가 정보를 입력 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[선택 하 고 테스트 &#40; 개체를 구성 합니다. SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
+[선택 하 고 테스트 하는 개체 구성 &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 개체 &#40; 마이그레이션 테스트 SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[데이터베이스 개체를 마이그레이션할 테스트 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

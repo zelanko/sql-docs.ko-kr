@@ -1,30 +1,31 @@
 ---
-title: "암호 (AccessToSQL) 관리 | Microsoft Docs"
+title: 암호 (AccessToSQL) 관리 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f939dc06c04f0c2fb00022a688b8a2cc86e8a0b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 52b9f120a7025905630ffcf9762f4ce46b6abf52
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-passwords-accesstosql"></a>암호 (AccessToSQL) 관리
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보안에 대 한이 섹션은:  
@@ -42,7 +43,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
 1.  **일반 텍스트로:** 'password' 노드의 value 속성에 데이터베이스 암호를 입력 합니다. 스크립트 파일 또는 서버 연결 파일의 서버 섹션에서 서버 정의 노드 아래에서 발견 되었습니다.  
   
-    일반 텍스트로 암호가 안전 하지 않습니다. 콘솔 출력에 다음과 같은 경고 메시지가 발생 합니다 따라서: *"서버 &lt;서버 id&gt; 암호가 제공 SSMA 콘솔 응용 프로그램에 안전 하지 않은 일반 텍스트 형식 암호화를 통해 암호를 보호, SSMA 도움말 파일에 대 한 자세한 내용은의 – securepassword 옵션을 참조 하십시오는 옵션을 제공 합니다."*  
+    일반 텍스트로 암호가 안전 하지 않습니다. 콘솔 출력에 다음과 같은 경고 메시지가 발생 합니다 따라서: *"서버 &lt;서버 id&gt; 암호 SSMA 콘솔 응용 프로그램에 안전 하지 않은 일반 텍스트 형식 보호 하는 옵션을 제공 하는 제공 되는 암호화를 통해 암호 참조 하세요 도움말 파일에 대 한 자세한 내용은 SSMA에서 – securepassword 옵션. "*  
   
     **암호화 된 암호:** 이 경우 지정 된 암호가 ProtectedStorage.ssma에서 로컬 컴퓨터에 암호화 된 형태로 저장 됩니다.  
   

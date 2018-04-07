@@ -1,24 +1,24 @@
 ---
-title: "사용 권한 부여"
+title: 사용 권한 부여
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: d7d685d15eb0e5704698ebd2b79c20589f49ee16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="grant-permissions"></a>사용 권한 부여
 
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 -->
 
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>어플라이언스를 모니터링 하는 권한 부여
-관리 콘솔 또는 SQL Server PDW 시스템 뷰를 사용 하 여 SQL Server PDW 어플라이언스를 모니터링할 수 있습니다. 로그인은 서버 수준 필요 **VIEW SERVER STATE** 기기를 모니터링할 수 있는 합니다. 로그인 필요는 **ALTER ANY CONNECTION** 관리 콘솔을 사용 하 여 연결을 끊을 수 있는 권한을 또는 **KILL** 명령입니다. 관리 콘솔을 사용 하는 데 필요한 사용 권한에 대 한 자세한 내용은 참조 하십시오. [관리 콘솔 &#40; 사용 하도록 권한 부여 SQL Server PDW &#41; ](#grant-permissions-to-use-the-admin-console).  
+관리 콘솔 또는 SQL Server PDW 시스템 뷰를 사용 하 여 SQL Server PDW 어플라이언스를 모니터링할 수 있습니다. 로그인은 서버 수준 필요 **VIEW SERVER STATE** 기기를 모니터링할 수 있는 합니다. 로그인 필요는 **ALTER ANY CONNECTION** 관리 콘솔을 사용 하 여 연결을 끊을 수 있는 권한을 또는 **KILL** 명령입니다. 관리 콘솔을 사용 하는 데 필요한 사용 권한에 대 한 자세한 내용은 참조 하십시오. [관리 콘솔을 사용할 수 있는 권한을 부여 &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console)합니다.  
   
 ### <a name="PermsAdminConsole"></a>시스템 뷰를 사용 하 여 어플라이언스에 모니터링 하는 권한 부여  
 다음 SQL 문은 이라는 로그인을 만듭니다 `monitor_login` 하 고 권한을 부여는 **VIEW SERVER STATE** 권한을 `monitor_login` 로그인 합니다.  
@@ -248,7 +248,7 @@ GO
   
 참조 관리자 로그인을 만들려는 [고정 서버 역할](pdw-permissions.md#fixed-server-roles)합니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [로그인 만들기](../t-sql/statements/create-login-transact-sql.md)  
 [사용자 만들기](../t-sql/statements/create-user-transact-sql.md)  
 [역할 만들기](../t-sql/statements/create-role-transact-sql.md)  

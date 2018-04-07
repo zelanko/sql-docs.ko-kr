@@ -1,30 +1,31 @@
 ---
-title: "SSMA 콘솔 (DB2ToSQL) 실행 | Microsoft Docs"
+title: SSMA 콘솔 (DB2ToSQL) 실행 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55415d575aac34cdee2ed2acdb8c9ceaade6465c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f491f5afc0beea80943e976c64785afba200ad7c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>SSMA 콘솔 (DB2ToSQL)를 실행합니다.
 Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강력한 집합 제공 합니다. 마샬링과 이후 섹션에서 자세히 설명 동일 합니다. 콘솔 응용 프로그램은이 섹션의 열거형으로 특정 표준 스크립트 파일 명령을 사용합니다.  
@@ -34,15 +35,15 @@ Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강�
   
 **Command**  
   
--새-프로젝트 만들기  
+create-new-project  
   
 새 SSMA 프로젝트를 만듭니다.  
   
 **스크립트**  
   
--   `project-folder`만든 가져오기 프로젝트의 폴더를 나타냅니다.  
+-   `project-folder` 만든 가져오기 프로젝트의 폴더를 나타냅니다.  
   
--   `project-name`프로젝트의 이름을 나타냅니다. {string}  
+-   `project-name` 프로젝트의 이름을 나타냅니다. {string}  
   
 -   `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어써야 하는 경우를 나타냅니다. {부울}  
   
@@ -75,9 +76,9 @@ Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강�
   
 **스크립트**  
   
--   `project-folder`만든 가져오기 프로젝트의 폴더를 나타냅니다. 이 명령은 지정 된 폴더가 존재 하지 않는 경우 실패 합니다.  {string}  
+-   `project-folder` 만든 가져오기 프로젝트의 폴더를 나타냅니다. 이 명령은 지정 된 폴더가 존재 하지 않는 경우 실패 합니다.  {string}  
   
--   `project-name`프로젝트의 이름을 나타냅니다. 이 명령은 지정 된 프로젝트가 존재 하지 않는 경우 실패 합니다.  {string}  
+-   `project-name` 프로젝트의 이름을 나타냅니다. 이 명령은 지정 된 프로젝트가 존재 하지 않는 경우 실패 합니다.  {string}  
   
 **구문 예제:**  
   
@@ -94,7 +95,7 @@ SSMA DB2 콘솔 응용 프로그램에 대 한 이전 버전과 호환성을 지
   
 **Command**  
   
-프로젝트 저장  
+save-project  
   
 마이그레이션 프로젝트를 저장합니다.  
   
@@ -128,11 +129,11 @@ SSMA DB2 콘솔 응용 프로그램에 대 한 이전 버전과 호환성을 지
   
 -   **찾아보기** UI의 기능을 콘솔에서 지원 되지 않습니다.  
   
--   스크립트 파일 만들기 '에 대 한 자세한 내용은 참조 하십시오. [스크립트 파일 만들기 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md)합니다.  
+-   스크립트 파일 만들기 '에 대 한 자세한 내용은 참조 하십시오. [스크립트 파일 만들기 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)합니다.  
   
 **Command**  
   
--소스-데이터베이스 연결  
+connect-source-database  
   
 -   원본 데이터베이스에 수행 하 고 원본 데이터베이스에만 메타 데이터의 높은 수준의 메타 데이터를 로드 합니다.  
   
@@ -149,7 +150,7 @@ SSMA DB2 콘솔 응용 프로그램에 대 한 이전 버전과 호환성을 지
 ```  
 **Command**  
   
-force-부하-원본/대상 데이터베이스  
+force-load-source/target-database  
   
 -   원본 메타 데이터를 로드합니다.  
   
@@ -168,7 +169,7 @@ force-부하-원본/대상 데이터베이스
   
   metabase="<source/target>"/>  
 ```  
-로 구분하거나 여러  
+또는  
   
 ```xml  
 <force-load>  
@@ -179,7 +180,7 @@ force-부하-원본/대상 데이터베이스
 ```  
 **Command**  
   
-다시 연결-소스-데이터베이스  
+reconnect-source-database  
   
 -   원본 데이터베이스에 다시 연결 되지만 원본 데이터베이스 연결 명령과 달리 모든 메타 데이터를 로드 하지 않습니다.  
   
@@ -194,7 +195,7 @@ force-부하-원본/대상 데이터베이스
 ```  
 **Command**  
   
-대상 연결-데이터베이스  
+connect-target-database  
   
 -   대상 SQL Server 데이터베이스에 연결 하 고 대상 데이터베이스의 높은 수준의 메타 데이터는 있지만 메타 데이터가 아니라를 완전히 로드 합니다.  
   
@@ -211,7 +212,7 @@ force-부하-원본/대상 데이터베이스
 ```  
 **Command**  
   
-대상 다시 연결-데이터베이스  
+reconnect-target-database  
   
 -   대상 데이터베이스에 다시 연결 되지만 연결 대상 데이터베이스 명령과 달리 모든 메타 데이터를 로드 하지 않습니다.  
   
@@ -230,7 +231,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 **Command**  
   
--평가-보고서 생성  
+generate-assessment-report  
   
 -   원본 데이터베이스에서 평가 보고서를 생성합니다.  
   
@@ -240,25 +241,25 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 **스크립트**  
   
--   `conversion-report-folder:`평가 보고서 저장을 수행할 수 있는 폴더를 지정 합니다. (선택 사항 특성)  
+-   `conversion-report-folder:` 평가 보고서 저장을 수행할 수 있는 폴더를 지정 합니다. (선택 사항 특성)  
   
--   `object-name:`평가 보고서 생성 (은 indivdual 개체 이름이 나 그룹 개체 이름)에 대 한 것으로 간주 하는 개체를 지정 합니다.  
+-   `object-name:` 평가 보고서 생성 (은 indivdual 개체 이름이 나 그룹 개체 이름)에 대 한 것으로 간주 하는 개체를 지정 합니다.  
   
--   `object-type:`지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
+-   `object-type:` 지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
   
--   `conversion-report-overwrite:`이미 있는 경우 평가 보고서 폴더를 덮어쓸 것인지 지정 합니다.  
+-   `conversion-report-overwrite:` 이미 있는 경우 평가 보고서 폴더를 덮어쓸 것인지 지정 합니다.  
   
     **기본값:** false입니다. (선택 사항 특성)  
   
--   `write-summary-report-to:`요약 보고서가 생성 하는 위치 경로 지정 합니다.  
+-   `write-summary-report-to:` 요약 보고서가 생성 하는 위치 경로 지정 합니다.  
   
     폴더 경로 지정 된 경우에 다음 이름으로 파일 **AssessmentReport&lt;n&gt;합니다. XML** 만들어집니다. (선택 사항 특성)  
   
     보고서를 만드는 두 가지 추가 하위 범주에 있습니다.  
   
-    -   `report-errors`(= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
+    -   `report-errors` (= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
   
-    -   `verbose`(= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
+    -   `verbose` (= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
   
 **구문 예제:**  
   
@@ -281,7 +282,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-로 구분하거나 여러  
+또는  
   
 ```xml  
 <generate-assessment-report  
@@ -304,7 +305,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 **Command**  
   
-스키마 변환  
+convert-schema  
   
 -   소스에서 대상 스키마로 스키마 변환을 수행합니다.  
   
@@ -312,25 +313,25 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 **스크립트**  
   
--   `conversion-report-folder:`평가 보고서 저장을 수행할 수 있는 폴더를 지정 합니다. (선택 사항 특성)  
+-   `conversion-report-folder:` 평가 보고서 저장을 수행할 수 있는 폴더를 지정 합니다. (선택 사항 특성)  
   
--   `object-name:`스키마 (은 indivdual 개체 이름이 나 그룹 개체 이름)을 변환 하기 위한 것으로 간주 원본 개체를 지정 합니다.  
+-   `object-name:` 스키마 (은 indivdual 개체 이름이 나 그룹 개체 이름)을 변환 하기 위한 것으로 간주 원본 개체를 지정 합니다.  
   
--   `object-type:`지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
+-   `object-type:` 지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
   
--   `conversion-report-overwrite:`이미 있는 경우 평가 보고서 폴더를 덮어쓸 것인지 지정 합니다.  
+-   `conversion-report-overwrite:` 이미 있는 경우 평가 보고서 폴더를 덮어쓸 것인지 지정 합니다.  
   
     **기본값:** false입니다. (선택 사항 특성)  
   
--   `write-summary-report-to:`요약 보고서가 생성 하는 위치 경로 지정 합니다.  
+-   `write-summary-report-to:` 요약 보고서가 생성 하는 위치 경로 지정 합니다.  
   
     폴더 경로 지정 된 경우에 다음 이름으로 파일 **SchemaConversionReport&lt;n&gt;합니다. XML** 만들어집니다. (선택 사항 특성)  
   
     보고서를 만드는 두 가지 추가 하위 범주에 있습니다.  
   
-    -   `report-errors`(= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
+    -   `report-errors` (= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
   
-    -   `verbose`(= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
+    -   `verbose` (= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
   
 **구문 예제:**  
   
@@ -353,7 +354,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-로 구분하거나 여러  
+또는  
   
 ```xml  
 <convert-schema  
@@ -374,25 +375,25 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 **스크립트**  
   
--   `conversion-report-folder:`평가 보고서 저장을 수행할 수 있는 폴더를 지정 합니다. (선택 사항 특성)  
+-   `conversion-report-folder:` 평가 보고서 저장을 수행할 수 있는 폴더를 지정 합니다. (선택 사항 특성)  
   
--   `object-name:`마이그레이션에 대 한 것으로 간주 원본 개체를 지정 합니다 (이 있을 수 있음 indivdual 개체 이름이 나 그룹 개체 이름)는 데이터입니다.  
+-   `object-name:` 마이그레이션에 대 한 것으로 간주 원본 개체를 지정 합니다 (이 있을 수 있음 indivdual 개체 이름이 나 그룹 개체 이름)는 데이터입니다.  
   
--   `object-type:`지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
+-   `object-type:` 지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
   
--   `conversion-report-overwrite:`이미 있는 경우 평가 보고서 폴더를 덮어쓸 것인지 지정 합니다.  
+-   `conversion-report-overwrite:` 이미 있는 경우 평가 보고서 폴더를 덮어쓸 것인지 지정 합니다.  
   
     **기본값:** false입니다. (선택 사항 특성)  
   
--   `write-summary-report-to:`요약 보고서가 생성 하는 위치 경로 지정 합니다.  
+-   `write-summary-report-to:` 요약 보고서가 생성 하는 위치 경로 지정 합니다.  
   
     폴더 경로 지정 된 경우에 다음 이름으로 파일 **DataMigrationReport&lt;n&gt;합니다. XML** 만들어집니다. (선택 사항 특성)  
   
     보고서를 만드는 두 가지 추가 하위 범주에 있습니다.  
   
-    -   `report-errors`(= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
+    -   `report-errors` (= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
   
-    -   `verbose`(= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
+    -   `verbose` (= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로)  
   
 **구문 예제:**  
   
@@ -419,7 +420,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 </migrate-data>  
 ```  
-로 구분하거나 여러  
+또는  
   
 ```xml  
 <migrate-data  
@@ -440,15 +441,15 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 **Command**  
   
-스키마 맵  
+map-schema  
   
 원본 데이터베이스와 대상 스키마의 스키마 매핑.  
   
 **스크립트**  
   
--   `source-schema`마이그레이션할를 소스 스키마를 지정 합니다.  
+-   `source-schema` 마이그레이션할를 소스 스키마를 지정 합니다.  
   
--   `sql-server-schema`대상 스키마를 원하는 위치로 마이그레이션할 수를 지정 합니다.  
+-   `sql-server-schema` 대상 스키마를 원하는 위치로 마이그레이션할 수를 지정 합니다.  
   
 **구문 예제:**  
   
@@ -461,15 +462,15 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
 ```  
 **Command**  
   
-스키마 맵  
+map-schema  
   
 원본 데이터베이스와 대상 스키마의 스키마 매핑.  
   
 **스크립트**  
   
-`source-schema`마이그레이션할를 소스 스키마를 지정 합니다.  
+`source-schema` 마이그레이션할를 소스 스키마를 지정 합니다.  
   
-`sql-server-schema`대상 스키마를 원하는 위치로 마이그레이션할 수를 지정 합니다.  
+`sql-server-schema` 대상 스키마를 원하는 위치로 마이그레이션할 수를 지정 합니다.  
   
 **구문 예제:**  
   
@@ -498,19 +499,19 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 **스크립트**  
   
--   `object-name:`대상 데이터베이스 (은 indivdual 개체 이름이 나 그룹 개체 이름)와 동기화 할 대상으로 고려 대상 개체를 지정 합니다.  
+-   `object-name:` 대상 데이터베이스 (은 indivdual 개체 이름이 나 그룹 개체 이름)와 동기화 할 대상으로 고려 대상 개체를 지정 합니다.  
   
--   `object-type:`지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
+-   `object-type:` 지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
   
--   `on-error:`동기화 오류 경고 또는 오류로 지정할 것인지 지정 합니다. 오류에 대 한 사용 가능한 옵션:  
+-   `on-error:` 동기화 오류 경고 또는 오류로 지정할 것인지 지정 합니다. 오류에 대 한 사용 가능한 옵션:  
   
-    -   경고로 보고서 합계  
+    -   report-total-as-warning  
   
-    -   보고서-each-으로-경고  
+    -   report-each-as-warning  
   
-    -   스크립트 실패  
+    -   fail-script  
   
--   `report-errors-to:`에 대 한 동기화 작업 (특성 선택 사항) 폴더 경로 지정 하는 경우에 다음 파일 이름으로 오류 보고서의 위치를 지정 **TargetSynchronizationReport.XML** 만들어집니다.  
+-   `report-errors-to:` 에 대 한 동기화 작업 (특성 선택 사항) 폴더 경로 지정 하는 경우에 다음 파일 이름으로 오류 보고서의 위치를 지정 **TargetSynchronizationReport.XML** 만들어집니다.  
   
 **구문 예제:**  
   
@@ -529,7 +530,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-로 구분하거나 여러  
+또는  
   
 ```xml  
 <synchronize-target  
@@ -538,7 +539,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
    object-type="<object-category>"/>  
 ```  
-로 구분하거나 여러  
+또는  
   
 ```xml  
 <synchronize-target>  
@@ -553,7 +554,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
 ```  
 **Command**  
   
-데이터베이스에서 새로 고침  
+refresh-from-database  
   
 -   데이터베이스의 원본 개체를 새로 고칩니다.  
   
@@ -563,19 +564,19 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 하나 또는 여러 메타 베이스 노드 명령줄 매개 변수로 필요합니다.  
   
--   `object-name:`(이 있을 수 있음 indivdual 개체 이름이 나 그룹 개체 이름)는 원본 데이터베이스에서 새로 고침에 대 한 것으로 간주 원본 개체를 지정 합니다.  
+-   `object-name:` (이 있을 수 있음 indivdual 개체 이름이 나 그룹 개체 이름)는 원본 데이터베이스에서 새로 고침에 대 한 것으로 간주 원본 개체를 지정 합니다.  
   
--   `object-type:`지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
+-   `object-type:` 지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
   
--   `on-error:`경고 또는 오류도 새로 고침 오류를 지정할 것인지 지정 합니다. 오류에 대 한 사용 가능한 옵션:  
+-   `on-error:` 경고 또는 오류도 새로 고침 오류를 지정할 것인지 지정 합니다. 오류에 대 한 사용 가능한 옵션:  
   
-    -   경고로 보고서 합계  
+    -   report-total-as-warning  
   
-    -   보고서-each-으로-경고  
+    -   report-each-as-warning  
   
-    -   스크립트 실패  
+    -   fail-script  
   
--   `report-errors-to:`에 대 한 새로 고침 작업 (특성 선택 사항) 폴더 경로 지정 하는 경우에 다음 파일 이름으로 오류 보고서의 위치를 지정 **SourceDBRefreshReport.XML** 만들어집니다.  
+-   `report-errors-to:` 에 대 한 새로 고침 작업 (특성 선택 사항) 폴더 경로 지정 하는 경우에 다음 파일 이름으로 오류 보고서의 위치를 지정 **SourceDBRefreshReport.XML** 만들어집니다.  
   
 **구문 예제:**  
   
@@ -594,7 +595,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-로 구분하거나 여러  
+또는  
   
 ```xml  
 <refresh-from-database  
@@ -603,7 +604,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
    object-type="<object-category>"/>  
 ```  
-로 구분하거나 여러  
+또는  
   
 ```xml  
 <refresh-from-database>  
@@ -618,7 +619,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 **Command**  
   
-스크립트로 저장  
+save-as-script  
   
 개체의 스크립트 때 언급 된 파일에 저장 하는 데 사용 메타 베이스 = 대상, 여기서에서는 스크립트 하 고 대상 데이터베이스에서 실행 하는 동일한 동기화 명령에 대 한 대안입니다.  
   
@@ -626,15 +627,15 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 하나 또는 여러 메타 베이스 노드 명령줄 매개 변수로 필요합니다.  
   
--   `object-name:`해당 스크립트를 저장할는 개체를 지정 합니다. (은 개별 개체 이름이 나 그룹 개체 이름)  
+-   `object-name:` 해당 스크립트를 저장할는 개체를 지정 합니다. (은 개별 개체 이름이 나 그룹 개체 이름)  
   
--   `object-type:`지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
+-   `object-type:` 지정 하는 경우 개체 범주는 개체 유형 "범주"이 됩니다 개체 이름 특성에 지정 된 개체의 유형을 지정 합니다.  
   
--   `metabase:`원본 인지를 지정 하거나 메타 베이스를 대상 지정 합니다.  
+-   `metabase:` 원본 인지를 지정 하거나 메타 베이스를 대상 지정 합니다.  
   
--   `destination:`경로나 파일 이름이 제공 되지 않으면 다음 파일 이름 (object_name 특성 값) 형식.out에 스크립트 저장 되도록에 있는 폴더를 지정 합니다.  
+-   `destination:` 경로나 파일 이름이 제공 되지 않으면 다음 파일 이름 (object_name 특성 값) 형식.out에 스크립트 저장 되도록에 있는 폴더를 지정 합니다.  
   
--   `overwrite:`true 인 경우 다음 덮어씁니다 파일 이름이 같은 존재 합니다. (True/false) 값을 가질 수 있습니다.  
+-   `overwrite:` true 인 경우 다음 덮어씁니다 파일 이름이 같은 존재 합니다. (True/false) 값을 가질 수 있습니다.  
   
 **구문 예제:**  
   
@@ -653,7 +654,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-로 구분하거나 여러  
+또는  
   
 ```xml  
 <save-as-script  
@@ -670,27 +671,27 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
 ```  
 **Command**  
   
-convert sql 문  
+convert-sql-statement  
   
--   `context`스키마 이름을 지정합니다.  
+-   `context` 스키마 이름을 지정합니다.  
   
--   `destination`출력 파일에 저장할지 여부를 지정 합니다.  
+-   `destination` 출력 파일에 저장할지 여부를 지정 합니다.  
   
     이 특성을 지정 하지 않으면 변환된 된 T-SQL 문이 콘솔에 표시 됩니다. (선택 사항 특성)  
   
--   `conversion-report-folder`평가 보고서 저장을 수행할 수 있는 폴더를 지정 합니다. (선택 사항 특성)  
+-   `conversion-report-folder` 평가 보고서 저장을 수행할 수 있는 폴더를 지정 합니다. (선택 사항 특성)  
   
--   `conversion-report-overwrite`이미 있는 경우 평가 보고서 폴더를 덮어쓸 것인지 지정 합니다.  
+-   `conversion-report-overwrite` 이미 있는 경우 평가 보고서 폴더를 덮어쓸 것인지 지정 합니다.  
   
     **기본값:** false입니다. (선택 사항 특성)  
   
--   `write-converted-sql-to`파일 (또는) 변환 된 T-SQL 저장 될 여기서는 폴더 경로 지정 합니다. 폴더 경로와 함께 지정 된 경우는 `sql-files` 특성을 각 소스 파일에는 해당 대상 지정된 된 폴더 아래에 생성 되는 T-SQL 파일 포함 됩니다. 폴더 경로와 함께 지정 된 경우는 `sql` 특성을 변환 된 T-SQL 라는 파일에 기록 됩니다 **Result.out** 지정 된 폴더입니다.  
+-   `write-converted-sql-to` 파일 (또는) 변환 된 T-SQL 저장 될 여기서는 폴더 경로 지정 합니다. 폴더 경로와 함께 지정 된 경우는 `sql-files` 특성을 각 소스 파일에는 해당 대상 지정된 된 폴더 아래에 생성 되는 T-SQL 파일 포함 됩니다. 폴더 경로와 함께 지정 된 경우는 `sql` 특성을 변환 된 T-SQL 라는 파일에 기록 됩니다 **Result.out** 지정 된 폴더입니다.  
   
--   `sql`변환 될 DB2 sql 문을 지정 하나 이상의 문을 사용 하 여 구분할 수 있습니다는 ";"  
+-   `sql` 변환 될 DB2 sql 문을 지정 하나 이상의 문을 사용 하 여 구분할 수 있습니다는 ";"  
   
--   `sql-files`T-SQL 코드를 변환할 수 있는 sql 파일의 경로 지정 합니다.  
+-   `sql-files` T-SQL 코드를 변환할 수 있는 sql 파일의 경로 지정 합니다.  
   
--   `write-summary-report-to`보고서를 생성할 수는 경로 지정 합니다. 폴더 경로 지정 된 경우에 다음 이름으로 파일 **ConvertSQLReport.XML** 만들어집니다. (선택 사항 특성)  
+-   `write-summary-report-to` 보고서를 생성할 수는 경로 지정 합니다. 폴더 경로 지정 된 경우에 다음 이름으로 파일 **ConvertSQLReport.XML** 만들어집니다. (선택 사항 특성)  
   
     보고서 작성에 2 viz 하위 범주를 추가 합니다..,:  
   
@@ -729,7 +730,7 @@ convert sql 문
   
 </convert-sql-statement>  
 ```  
-로 구분하거나 여러  
+또는  
   
 ```  
 <convert-sql-statement  
@@ -752,7 +753,7 @@ convert sql 문
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-로 구분하거나 여러  
+또는  
   
 ```  
 <convert-sql-statement  
@@ -767,15 +768,15 @@ convert sql 문
 ```  
   
 ## <a name="next-step"></a>다음 단계  
-명령줄 옵션에 대 한 자세한 내용은 참조 하십시오. [SSMA 콘솔 &#40; DB2ToSQL &#41; Command Line Options](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md) 합니다.  
+명령줄 옵션에 대 한 자세한 내용은 참조 하십시오. [SSMA 콘솔에서 명령줄 옵션 &#40;DB2ToSQL&#41; ](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md) 합니다.  
   
-샘플 콘솔 스크립트 파일에 대 한 자세한 내용은 참조 하세요. [작업 콘솔 스크립트 파일 샘플 &#40; DB2ToSQL &#41;](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)  
+샘플 콘솔 스크립트 파일에 대 한 자세한 내용은 참조 하십시오. [샘플 콘솔 스크립트 파일을 작업할 &#40;DB2ToSQL&#41;](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)  
   
 다음 단계에서는 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   암호 또는 내보내기 지정 하기 위한 암호 가져오기 /를 참조 하십시오 [암호 관리 &#40; DB2ToSQL &#41;](../../ssma/db2/managing-passwords-db2tosql.md)합니다.  
+-   암호 또는 내보내기 지정 하기 위한 암호 가져오기 /를 참조 하십시오 [암호 관리 &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)합니다.  
   
--   보고서를 생성 하는 것에 대 한 참조 [보고서 생성 &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)합니다.  
+-   보고서를 생성 하는 것에 대 한 참조 [보고서 생성 &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)합니다.  
   
--   콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md)합니다.  
+-   콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)합니다.  
   

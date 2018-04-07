@@ -1,30 +1,31 @@
 ---
-title: "DB2 스키마 (DB2ToSQL) 변환에 대 한 평가 | Microsoft Docs"
+title: DB2 스키마 (DB2ToSQL) 변환에 대 한 평가 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ee5825c7a7df208baeccd27a463defb2c6e250c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 96c437f34bbe4b45c33082a18536aef33dd4b218
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>DB2 스키마 (DB2ToSQL) 변환에 대 한 평가
 개체를 로드 하 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 복잡 한 정도 마이그레이션 되 고 시간을 결정 해야 마이그레이션 걸립니다. SSMA는 성공적으로 변환 하는 개체의 비율을 보여주는 평가 보고서를 만들 수 있습니다. 또한 SSMA 변환 오류가 발생 하는 특정 문제를 볼 수 있습니다.  
@@ -82,13 +83,13 @@ SSMA 변환 선택한 DB2 데이터베이스 개체를이 평가 보고서를 �
   
     -   SSMA는 DB2 구문을 업데이트 합니다. 프로시저, 함수, 트리거, 패키지 함수 및 패키지 된 프로시저에 대 한 구문을 업데이트할 수 있습니다. 구문을 업데이트 하려면 DB2 메타 데이터 탐색기 창에서 개체를 선택, 클릭는 **SQL** 탭을 선택한 다음 SQL 코드를 수정 합니다. 항목 벗어나 탐색 하면 업데이트 된 구문 저장할 묻는 메시지가 나타납니다. 개체에 대해 보고 된 오류를 볼 수 있습니다는 **보고서** 탭 합니다.  
   
-    -   D b 2에서는 DB2 개체를 제거 하거나 수정 하는 문제가 있는 코드를 수정할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [DB2 데이터베이스 &#40; DB2ToSQL &#41;에 연결](../../ssma/db2/connecting-to-db2-database-db2tosql.md)합니다.  
+    -   D b 2에서는 DB2 개체를 제거 하거나 수정 하는 문제가 있는 코드를 수정할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [DB2 데이터베이스에 연결 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)합니다.  
   
     -   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기 및 DB2 메타 데이터 탐색기 확인란의 선택을 취소 항목 옆에 개체를 로드 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] d b 2에서 데이터를 마이그레이션합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[변환 하는 동안 DB2 스키마 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
+[DB2 스키마 변환 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[SQL Server &#40; DB2ToSQL &#41; DB2 데이터베이스 마이그레이션](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server로 데이터베이스 마이그레이션 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

@@ -1,26 +1,26 @@
 ---
-title: "분석 플랫폼 시스템을 모니터링 하는 SCOM 구성"
+title: 분석 플랫폼 시스템을 모니터링 하는 SCOM 구성
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4dba9b50-1447-45fc-b219-b9fc99d47d8d
-caps.latest.revision: "10"
-ms.openlocfilehash: 435bbae75548d1959d509b9833bd9a6f7ec658e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 10
+ms.openlocfilehash: 53fc0bce73f2fd30553e2a834122e86cdb0a65fc
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-scom-to-monitor-analytics-platform-system"></a>분석 플랫폼 시스템을 모니터링 하는 SCOM 구성
 분석 플랫폼 시스템에 대 한 System Center Operations Manager (SCOM) 관리 팩을 구성 하려면 다음이 단계를 수행 합니다. 관리 팩은 SCOM에서 분석 플랫폼 시스템을 모니터링 해야 합니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 System Center Operations Manager 2007 r 2는 설치 되어 실행 중 이어야 합니다.  
   
-관리 팩을 설치 하 고 구성 해야 합니다. 참조 [SCOM 관리 팩 &#40; 설치 분석 플랫폼 시스템 &#41; ](install-the-scom-management-packs.md) 및 [PDW &#40;에 대 한 SCOM 관리 팩 가져오기 분석 플랫폼 시스템 &#41; ](import-the-scom-management-pack-for-pdw.md).  
+관리 팩을 설치 하 고 구성 해야 합니다. 참조 [SCOM 관리 팩을 설치 &#40;분석 플랫폼 시스템&#41; ](install-the-scom-management-packs.md) 및 [PDW에 대 한 SCOM 관리 팩을 가져올 &#40;분석 플랫폼 시스템&#41;](import-the-scom-management-pack-for-pdw.md)합니다.  
   
 ## <a name="ConfigureRunAsProfile"></a>시스템 센터에서 실행 프로필을 구성 합니다.  
 System Center 구성 하려면 다음 단계를 수행 해야 합니다.  
@@ -121,7 +121,7 @@ System Center 구성 하려면 다음 단계를 수행 해야 합니다.
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## <a name="next-step"></a>다음 단계  
-관리 팩을 구성 했으므로 어플라이언스에 모니터링을 시작할 준비가 된 것입니다. 자세한 내용은 참조 [종료 하거나 다시 사용 하 여 System Center Operations Manager &#40; 모니터링 분석 플랫폼 시스템 &#41; ](monitor-the-appliance-by-using-system-center-operations-manager.md).  
+관리 팩을 구성 했으므로 어플라이언스에 모니터링을 시작할 준비가 된 것입니다. 자세한 내용은 참조 [System Center Operations Manager를 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)합니다.  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

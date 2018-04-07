@@ -1,29 +1,29 @@
 ---
-title: "T-SQL 문을 분석 플랫폼 시스템 병렬 데이터 웨어하우스 | Microsoft Docs"
+title: T-SQL 문을 분석 플랫폼 시스템 병렬 데이터 웨어하우스 | Microsoft Docs
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW)."
+description: TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
 documentationcenter: NA
-editor: 
+editor: ''
 ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 54613765219912b7ad0db5d4dfd36478f6e5e3b3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2109e1aaa48fb95da2b4d8b36aee7bbc86ea4ef4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="t-sql-topics"></a>T-SQL 항목
 TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
@@ -82,11 +82,11 @@ TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병�
 * [EXPLAIN](../t-sql/queries/explain-transact-sql.md)
 * [FROM](../t-sql/queries/from-transact-sql.md)
 * [PIVOT 및 UNPIVOT 사용](../t-sql/queries/from-using-pivot-and-unpivot.md)
-* [기준으로 그룹화](../t-sql/queries/select-group-by-transact-sql.md)
-* [필요](../t-sql/queries/select-having-transact-sql.md)
+* [GROUP BY](../t-sql/queries/select-group-by-transact-sql.md)
+* [HAVING](../t-sql/queries/select-having-transact-sql.md)
 * [ORDER BY](../t-sql/queries/select-order-by-clause-transact-sql.md)
-* [옵션](../t-sql/queries/option-clause-transact-sql.md)
-* [공용 구조체](../t-sql/language-elements/set-operators-union-transact-sql.md)
+* [OPTION](../t-sql/queries/option-clause-transact-sql.md)
+* [UNION](../t-sql/language-elements/set-operators-union-transact-sql.md)
 * [WHERE](../t-sql/queries/where-transact-sql.md)
 * [TOP](../t-sql/queries/top-transact-sql.md)
 * [별칭 지정](../t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md)

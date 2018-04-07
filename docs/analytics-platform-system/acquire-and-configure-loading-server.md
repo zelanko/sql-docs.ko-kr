@@ -1,25 +1,25 @@
 ---
-title: "획득 한 서버 및 구성 로드 (SQL Server PDW)"
+title: 획득 한 서버 및 구성 로드 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "획득 하 고 SQL Server 병렬 데이터 웨어하우스에 데이터 로드를 전송 하기 위한 기기 비 Windows 시스템으로 로드 하는 서버를 구성 합니다."
+description: 획득 하 고 SQL Server 병렬 데이터 웨어하우스에 데이터 로드를 전송 하기 위한 기기 비 Windows 시스템으로 로드 하는 서버를 구성 합니다.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: "19"
-ms.openlocfilehash: d4a91dc3216945b3f473e1b5b131333ad8d210d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 19
+ms.openlocfilehash: 566153d95f2affa5b8c5857d45f53c6b43a80a39
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="acquire-and-configure-a-loading-server"></a>획득 하 고 로드 하는 서버를 구성 합니다.
 이 항목에서는 획득 하 고 데이터 로드를 SQL Server 병렬 데이터 웨어하우스 (PDW)를 전송 하기 위한 기기 비 Windows 시스템으로 로드 서버를 구성 하는 방법을 설명 합니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Windows Server 2012 또는 Windows Server 2012 r 2입니다. 이러한 운영 체제 FDR 네트워크 어댑터에 필요 합니다.  
   
--   Windows Server 2008 r 2입니다. 이 운영 체제에는 DDR 네트워크 어댑터가 필요합니다.  
+-   Windows Server 2008 R2. 이 운영 체제에는 DDR 네트워크 어댑터가 필요합니다.  
   
 서버는 dwloader 로드 하는 명령줄 도구를 사용 하려면 EN-US 로캘을 사용 해야 합니다. dwloader 다른 로캘을 지원 하지 않습니다.  
   

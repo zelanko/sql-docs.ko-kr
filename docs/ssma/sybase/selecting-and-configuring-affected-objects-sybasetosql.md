@@ -21,13 +21,13 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a9871370dc3e6e8ca9d148a4df2435ce94286903
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>영향을 받는 개체 (SybaseToSQL) 선택 및 구성
 이 페이지에서 테이블을 선택할 수 있습니다 및 SSMA 이전 단계에서 선택한 개체에 대 한 실행의 결과 확인 하는 경우 비교 외래 키를 변경 해야 합니다. 또한 확인 매개 변수를 사용자 지정할 수 있습니다.  
@@ -37,7 +37,7 @@ Sybase 개체 트리에서 창의 왼쪽에 있는 테이블과 외래 키를 �
   
 레이블이 링크 표시는 SSMA 테스터는 이러한 개체 중 하나를 확인할 수 없는, **일부 선택 된 개체에 오류가 포함 되어** 개체 트리 아래 합니다. 이러한 개체를 비교할 수 없는 이유는 이유를 표시 하 고 잘못 된 개체의 선택을 취소 하려면이 링크를 클릭 합니다.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>테이블  
 테이블 탭 선택한 테이블의 표 뷰를 포함 합니다. 표에서 선택한 테이블에 대 한 다음과 같은 정보가 포함 되어 있습니다.  
   
 -   열 이름  
@@ -50,7 +50,7 @@ Sybase 개체 트리에서 창의 왼쪽에 있는 테이블과 외래 키를 �
   
 -   규칙  
   
--   Default  
+-   기본값  
   
 -   ID  
   
@@ -59,7 +59,7 @@ Sybase 개체 트리에서 창의 왼쪽에 있는 테이블과 외래 키를 �
 ## <a name="sql"></a>Sql  
 SQL 탭에 "Create table" 선택한 테이블의 SQL 합니다.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Data  
 데이터 탭에는 선택한 테이블에 데이터가 표시 됩니다.  
   
 ## <a name="properties"></a>속성  
@@ -126,9 +126,9 @@ SSMA 테스터에서 생성 된 SELECT 문의 볼 수는 **비교 SQL** 페이�
 사용자 지정 확인 기능을 제공 하는 SELECT 문을 편집할 수 있습니다. Sybase 및 변경 내용을 저장 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 문을 사용 하 여는 **적용** 원본 및 대상 SQL, 아래까지 단추입니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[호출 순서 &#40; 사용자 지정 SybaseToSQL &#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
+[호출 순서 사용자 지정 &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[테스트 사례 &#40; 실행 SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[데이터베이스 개체 &#40; 마이그레이션 테스트 SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[테스트 사례 실행 &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[데이터베이스 개체를 마이그레이션할 테스트 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

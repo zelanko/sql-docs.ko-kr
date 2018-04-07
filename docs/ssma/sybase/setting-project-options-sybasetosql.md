@@ -21,13 +21,13 @@ ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 750be041907417b0683633fbe59f88fdb5b53ead
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 57954b06479e041772200fbb05ba823607a02ad5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="setting-project-options-sybasetosql"></a>프로젝트 옵션 설정 (SybaseToSQL)
 각 SSMA 프로젝트에 대 한 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션에는 변환 개체, 개체 로드, SQL azure, 사용자 인터페이스 및 데이터 마이그레이션 설정을 지정합니다. 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure에 데이터를 마이그레이션하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure, 구성 옵션은 프로젝트에 대 한 적절 한지 확인 하십시오.  
@@ -49,7 +49,7 @@ SSMA는 프로젝트 설정의 5 개 세트:
   
 구성이 설정에 대 한 네 가지 모드에 있습니다.  
   
-1.  Default  
+1.  기본값  
   
 2.  Optimistic  
   
@@ -61,17 +61,17 @@ SSMA는 프로젝트 설정의 5 개 세트:
   
 설정은이 설명서의 사용자 인터페이스 참조 섹션에 설명 되어 있습니다. 설정과 각 모드에서 설정이 적용 되는 방식을 대 한 자세한 내용은 다음 항목을 참조 합니다.  
   
--   [프로젝트 설정 &#40; 변환 &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+-   [프로젝트 설정 &#40;변환&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   
--   [프로젝트 설정 &#40; 마이그레이션 &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)  
+-   [프로젝트 설정 &#40;마이그레이션&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)  
   
--   [프로젝트 설정 &#40; 동기화 &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)  
+-   [프로젝트 설정 &#40;동기화&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)  
   
--   [프로젝트 설정 &#40; GUI &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)  
+-   [프로젝트 설정 &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)  
   
--   [프로젝트 설정 &#40; 형식 매핑 &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)  
+-   [프로젝트 설정 &#40;형식 매핑&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)  
   
--   [프로젝트 설정 &#40; Azure SQL DB &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)  
+-   [프로젝트 설정 &#40;Azure SQL DB &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)  
   
 ## <a name="setting-project-options"></a>프로젝트 옵션 설정  
 SSMA를 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니다. 이러한 설정은 SSMA 구성 파일에 저장 되며 만드는 모든 새 프로젝트에 적용 됩니다.  
@@ -104,13 +104,13 @@ SSMA를 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니�
   
 3.  클릭 **확인** 설정을 저장할 수 있습니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 다음 단계는 마이그레이션에서 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   사용자 지정으로 소스 및 대상 데이터 형식 매핑, 참조 [매핑 Sybase ASE 및 SQL Server 데이터 형식 &#40; SybaseToSQL &#41; ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
+-   사용자 지정으로 소스 및 대상 데이터 형식 매핑, 참조 [매핑 Sybase ASE 및 SQL Server 데이터 형식 &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)합니다.  
   
--   그렇지 않으면 Sybase 데이터베이스 개체 정의로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 개체를 정의 합니다. 자세한 내용은 참조 [Sybase ASE 데이터베이스 개체 변환 &#40; SybaseToSQL &#41; ](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
+-   그렇지 않으면 Sybase 데이터베이스 개체 정의로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 개체를 정의 합니다. 자세한 내용은 참조 [Sybase ASE 데이터베이스 개체 변환 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB &#40; SQL Server-Sybase ASE 데이터베이스 마이그레이션 SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server-Azure SQL DB Sybase ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -1,25 +1,25 @@
 ---
-title: "Integration Services 사용 하 여 데이터를 로드 합니다."
+title: Integration Services 사용 하 여 데이터를 로드 합니다.
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "SQL Server Integration Services (SSIS) 패키지를 사용 하 여 데이터를 SQL Server 병렬 데이터 웨어하우스에 로드 하기 위한 참조 및 배포 정보를 제공 합니다."
+description: SQL Server Integration Services (SSIS) 패키지를 사용 하 여 데이터를 SQL Server 병렬 데이터 웨어하우스에 로드 하기 위한 참조 및 배포 정보를 제공 합니다.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 69
+ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-data-with-integration-services"></a>Integration Services를 사용 하 여 데이터를 로드 합니다.
 SQL Server Integration Services (SSIS) 패키지를 사용 하 여 데이터를 SQL Server 병렬 데이터 웨어하우스에 로드 하기 위한 참조 및 배포 정보를 제공 합니다.  
@@ -59,14 +59,14 @@ BIDS는 기본적으로 64 비트 이진 파일을 사용 하 여 패키지를 �
 SQL Server 데이터 도구 내에서 패키지를 실행 하려면 패키지를 마우스 오른쪽 단추로 클릭 하 고 선택 **패키지 실행**합니다.  
   
 ### <a name="run-from-powershell"></a>PowerShell에서 실행  
-Windows PowerShell에서 패키지를 실행 하려면를 사용 하 여 **dtexec** 유틸리티:`dtexec /FILE <packagePath>`  
+Windows PowerShell에서 패키지를 실행 하려면를 사용 하 여 **dtexec** 유틸리티: `dtexec /FILE <packagePath>`  
   
-예를 들어 IPv4 주소를 사용하는 경우 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+예를 들면 다음과 같습니다. `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Windows에서 실행 명령 프롬프트 
-Windows 명령 프롬프트에서 패키지를 실행 하려면를 사용 하 여 **dtexec** 유틸리티:`dtexec /FILE <packagePath>`  
+Windows 명령 프롬프트에서 패키지를 실행 하려면를 사용 하 여 **dtexec** 유틸리티: `dtexec /FILE <packagePath>`  
   
-예: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+예를 들어 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>데이터 형식  
 Integration Services를 사용 하 여 SQL Server PDW 데이터베이스에 데이터 원본에서 데이터 로드를 데이터에 먼저 매핑됩니다 원본 데이터에서 Integration Services 데이터 형식입니다. 이를 통해 여러 데이터 원본의 데이터가 데이터 형식의 공통 집합에 매핑될 수 있습니다.  
@@ -89,7 +89,7 @@ Integration Services를 사용 하 여 SQL Server PDW 데이터베이스에 데�
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -156,7 +156,7 @@ Integration Services를 사용 하 여 데이터를 로드할 때 SQL ServerPDW 
   
 ## <a name="Examples"></a>예제  
   
-### <a name="Walkthrough"></a>1. 플랫 파일에서 간단한 부하  
+### <a name="Walkthrough"></a>A. 플랫 파일에서 간단한 부하  
 다음 연습에는 Integration Services를 사용 하 여 SQL Server PDW 어플라이언스에 플랫 파일 데이터를 로드 하는 간단한 데이터 로드를 보여 줍니다.  이 예에서는 위에 설명 된 대로 클라이언트 컴퓨터에 이미 설치 된 Integration Services 및 SQL Server PDW 대상 설치가 완료 된 후 가정 합니다.  
   
 이 예제에서는으로 로드 된 `Orders` DDL 테이블입니다. `Orders` 테이블의 일부인는 `LoadExampleDB` 데이터베이스입니다.  

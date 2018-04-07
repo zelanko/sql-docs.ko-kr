@@ -1,15 +1,16 @@
 ---
-title: "원본 및 대상 데이터베이스 (AccessToSQL) 매핑 | Microsoft Docs"
+title: 원본 및 대상 데이터베이스 (AccessToSQL) 매핑 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -23,22 +24,22 @@ helpviewer_keywords:
 - source database
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48e87d2b6c84db3534a3c52ee6176e29fd34257f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eed81b1bf2d9f3f2e70f30a6744c4d7ad9bf33d3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>원본 및 대상 데이터베이스 (AccessToSQL) 매핑
 에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 마이그레이션에 대상 데이터베이스를 지정 해야 합니다. Access 데이터베이스를 여러 개 있는 경우를 다중 매핑할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 (또는 스키마) 또는 연결 된 SQL Azure 데이터베이스에서 여러 스키마입니다.  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server 또는 SQL Azure 데이터베이스 스키마  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]데이터베이스는 스키마의 개념을 사용 하 여 데이터베이스 내의 개체를 논리 그룹으로 구분 합니다. 예를 들어, 라이브러리 데이터베이스 라는 세 개의 스키마를 사용할 수 **설명서**, **오디오**, 및 **비디오** 서로 책, 오디오 및 비디오 개체를 구분 하 합니다. 기본적으로 access 데이터베이스에 매핑되어 **마스터** 데이터베이스 및 **dbo** 스키마에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 와 연결 된 데이터베이스 및 **dbo** SQL Azure의 스키마입니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스는 스키마의 개념을 사용 하 여 데이터베이스 내의 개체를 논리 그룹으로 구분 합니다. 예를 들어, 라이브러리 데이터베이스 라는 세 개의 스키마를 사용할 수 **설명서**, **오디오**, 및 **비디오** 서로 책, 오디오 및 비디오 개체를 구분 하 합니다. 기본적으로 access 데이터베이스에 매핑되어 **마스터** 데이터베이스 및 **dbo** 스키마에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 와 연결 된 데이터베이스 및 **dbo** SQL Azure의 스키마입니다.  
   
 각 Access 데이터베이스 간의 매핑을 사용자 지정 하지 않으면 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스와 스키마를 스키마와 매핑된 기본 데이터베이스를 access 데이터베이스와 관련 된 데이터를 모든 SSMA 마이그레이션됩니다.  
   

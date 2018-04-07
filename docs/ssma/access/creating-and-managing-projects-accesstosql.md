@@ -1,15 +1,16 @@
 ---
-title: "프로젝트 (AccessToSQL) 만들기 및 관리 | Microsoft Docs"
+title: 프로젝트 (AccessToSQL) 만들기 및 관리 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - saving metadata
 - saving projects
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89cab1239b3465f4add8ceb265a621e2ebac5d87
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 520d845124e2b176376bf6ece38e75e11bc58667
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>프로젝트 (AccessToSQL) 만들기 및 관리
 Access 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure를 먼저 만들어야 SSMA 프로젝트. 프로젝트는로 마이그레이션하려는 Access 데이터베이스에 대 한 메타 데이터가 포함 된 파일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure로의 대상 인스턴스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure에 마이그레이션된 개체 및 데이터를 받을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 연결 정보 및 프로젝트 설정 합니다.  

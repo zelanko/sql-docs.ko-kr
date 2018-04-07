@@ -1,26 +1,26 @@
 ---
-title: "잠금 동작 (SQL Server PDW)"
+title: 잠금 동작 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
-caps.latest.revision: "27"
-ms.openlocfilehash: c1cb1b0ec346ff18d40a3ac03e7ba45b37666c98
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 27
+ms.openlocfilehash: db8b05abe5d3eea3a927cdf410e7aa8df5ed2032
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="locking-behavior"></a>잠금 동작
 SQL Server PDW에서 트랜잭션 무결성을 보장 하 고 여러 사용자가 동시에 데이터에 액세스 하는 데이터베이스의 일관성을 유지 하기 위해 잠금을 사용 합니다.  
@@ -33,13 +33,13 @@ SQL Server PDW는 4 개의 잠금 모드를 지원합니다.
 단독  
 배타적 잠금에 쓰거나 완료 배타적 잠금을 보유 하는 트랜잭션으로까지 잠긴된 개체에서 읽는 금지 합니다. 모드의 다른 잠금이 없는 한 배타적 잠금이 적용 되는 동안 허용 됩니다. 예를 들어 DROP TABLE 및 CREATE DATABASE 배타적 잠금을 사용합니다.  
   
-Shared  
+공유됨  
 공유 잠금 영향을 받는 개체의 단독 잠금의 시작 금지 하지만 다른 모든 잠금 모드를 허용 합니다. 예를 들어 SELECT 문의 공유 잠금을 시작 하 고 따라서 선택한 데이터를 동시에 액세스할 수 있는 여러 쿼리를 사용 하면 있지만 SELECT 문이 완료 될 때까지 읽혀질 레코드를 업데이트할 수 없습니다.  
   
 ExclusiveUpdate  
 ExclusiveUpdate 잠금 잠겨 있는 개체에 쓰기 금지 되지만 공유 잠금을 통해 읽을 수 있습니다. 다른 잠금 없음 ExclusiveUpdate 잠금이 적용 되는 동안 허용 됩니다. 예를 들어 BACKUP DATABASE 및 RESTORE DATABASE 배타 업데이트 잠금을 사용합니다.  
   
-대 한 SharedUpdate  
+SharedUpdate  
 대 한 SharedUpdate 잠금 ExclusiveUpdate 및 배타 잠금 모드를 금지 하 고 개체에 공유 및 대 한 SharedUpdate 잠금 모드를 허용 합니다. 대 한 SharedUpdate 개체를 수정 하지만 수정 하는 중에 대 한 읽기 액세스를 제한 하지 않습니다. 예를 들어, 삽입 및 업데이트에 대 한 SharedUpdate 잠금 사용 합니다.  
   
 **리소스 클래스**  
@@ -81,7 +81,7 @@ SQL Server에는 다음과 같은 유형의 잠금 지원합니다. 모든 잠�
   
 -   UIX (업데이트 의도 배타)입니다. 잠금 계층 구조의 하위 리소스에 대한 배타적 잠금을 획득하기 위해 리소스에 업데이트 잠금을 보유함을 표시합니다.  
   
--   BU 합니다. 대량 작업에 사용합니다.  
+-   BU. 대량 작업에 사용합니다.  
   
 -   RangeS_S (공유 키 범위 및 공유 리소스 잠금). 직렬화 가능 범위 검색을 표시합니다.  
   
@@ -89,13 +89,13 @@ SQL Server에는 다음과 같은 유형의 잠금 지원합니다. 모든 잠�
   
 -   RangeI_N (삽입 키 범위 및 Null 리소스 잠금). 새 키를 인덱스에 삽입하기 전에 범위를 테스트하는 데 사용됩니다.  
   
--   RangeI_S 합니다. RangeI_N 잠금과 S 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
+-   RangeI_S. RangeI_N 잠금과 S 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
--   RangeI_U 합니다. RangeI_N 잠금과 U 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
+-   RangeI_U. RangeI_N 잠금과 U 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
--   RangeI_X 합니다. RangeI_N 잠금과 X 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
+-   RangeI_X. RangeI_N 잠금과 X 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
--   RangeX_S 합니다. RangeI_N 잠금과 RangeS_S 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
+-   RangeX_S. RangeI_N 잠금과 RangeS_S 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
 -   RangeX_U 합니다. RangeI_N 잠금과 RangeS_U 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   

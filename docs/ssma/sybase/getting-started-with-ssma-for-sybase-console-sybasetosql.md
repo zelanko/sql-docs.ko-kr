@@ -1,15 +1,16 @@
 ---
-title: "SSMA는 Sybase 콘솔 (SybaseToSQL)에 대 한 시작 | Microsoft Docs"
-ms.custom: 
+title: SSMA는 Sybase 콘솔 (SybaseToSQL)에 대 한 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Sybase Console,Output Conventions
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 689cd4339d926cd4f8e20c799a0c074adb29b81f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d63e1c4e3ecf3cd5f2537ec54db24be59a4d8ad5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>SSMA는 Sybase 콘솔 (SybaseToSQL)에 대 한 시작
 이 섹션에서는를 시작 하 고 SSMA Sybase 콘솔 응용 프로그램에 대 한 시작 프로시저가 설명 합니다. 또한 여기에 나열 된 규칙에에서 사용 됩니다 일반적인 SSMA 콘솔 출력 창.  
@@ -45,13 +46,13 @@ SSMA 콘솔 응용 프로그램을 시작 하려면 다음 단계를 사용 합�
 ## <a name="using-the-ssma-console"></a>SSMA 콘솔을 사용 하 여  
 Windows 시스템에 콘솔이 성공적으로 시작 후에 작업을 다음 단계를 사용할 수 있습니다.  
   
-1.  SSMA 콘솔 스크립트 파일을 통해 구성 합니다. 이 섹션에 대 한 자세한 내용은 참조 하세요. [스크립트 파일 만들기 &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-script-files-sybasetosql.md).  
+1.  SSMA 콘솔 스크립트 파일을 통해 구성 합니다. 이 섹션에 대 한 자세한 내용은 참조 하십시오. [스크립트 파일 만들기 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)합니다.  
   
-2.  [변수 값 파일 &#40; 만들기 SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+2.  [변수 값 파일을 만드는 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   
-3.  [서버 연결 파일 &#40; 만들기 SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
+3.  [서버 연결 파일 만들기 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
-4.  [SSMA 콘솔 &#40; 실행 SybaseToSQL &#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md) 프로젝트 요구 사항에 기반 합니다. 
+4.  [SSMA 콘솔 실행 &#40;SybaseToSQL&#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md) 프로젝트 요구 사항에 기반 합니다. 
   
 추가 기능:  
   
@@ -75,5 +76,5 @@ SSMA 스크립트 명령 및 옵션을 실행 시 콘솔 프로그램 결과 및
 |녹색|사용자 입력에 대 한 프롬프트|  
 |녹청|시작, 완료 및 작업의 결과|  
   
-## <a name="see-also"></a>관련 항목:  
-[SAP ASE &#40; 용 SSMA를 설치합니다. SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+## <a name="see-also"></a>참고 항목  
+[SAP ASE 용 SSMA를 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

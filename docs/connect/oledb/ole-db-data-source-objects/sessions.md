@@ -10,7 +10,7 @@ ms.component: ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3c0d94c31c298fa9840067c15c169cfb4e56b92
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 93bc1dfd43cd0f049c335ea3d17812f4b38939ab
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sessions"></a>세션
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -194,6 +194,6 @@ EXIT:
 >  앞의 예제에는 **IDBCreateCommand** 때문에 인터페이스를 사용는 **ICommand** 구현는 **GetDBSession** 메서드, 개체가 작성 된 세션을 확인할 수 있도록 하는 명령 또는 행 집합 범위 내의 유일한 메서드입니다. 따라서 명령 개체를 사용해야만 응용 프로그램이 추가 세션을 만들 수 있는 데이터 원본 개체 포인터를 검색할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 원본 개체 &#40; OLE db&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [데이터 원본 개체 & #40; OLE db& #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

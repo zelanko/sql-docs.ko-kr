@@ -21,13 +21,13 @@ ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73019709b3ce9b40dc05f678cc64d33305504213
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 13035f6ca6e0a2dc95b3b0f7907b066abdbda716
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>변환 (MySQLToSQL)에 대 한 MySQL 데이터베이스를 평가합니다.
 개체를 로드 하 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 복잡 한 정도 마이그레이션 되 고 시간 결정 해야 SQL Azure 마이그레이션 걸립니다. SSMA는 성공적으로 변환 하는 개체의 비율을 보여주는 평가 보고서를 만들 수 있습니다. 또한 SSMA 변환 오류가 발생 하는 특정 문제를 볼 수 있습니다.  
@@ -85,13 +85,13 @@ SSMA 변환 선택한 MySQL 데이터베이스 개체를이 평가 보고서를 
   
 -   SSMA는 MySQL 구문을 업데이트 합니다. 프로시저 및 함수에 대해서만 구문을 업데이트할 수 있습니다. 구문을 업데이트 하려면 MySQL 메타 데이터 탐색기 창에서 개체를 선택, 클릭는 **SQL** 탭을 선택한 다음 SQL 코드를 수정 합니다. 항목 벗어나 탐색 하면 업데이트 된 구문 저장할 묻는 메시지가 나타납니다. 개체에 대해 보고 된 오류를 볼 수 있습니다는 **보고서** 탭 합니다.  
   
--   MySQL을 제거 하거나 문제가 있는 코드를 수정 하려면 MySQL 개체를 수정할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [MySQL &#40;에 연결 MySQLToSQL &#41; ](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).  
+-   MySQL을 제거 하거나 문제가 있는 코드를 수정 하려면 MySQL 개체를 수정할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [MySQL에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)합니다.  
   
 -   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL Azure 메타 데이터 탐색기 및 MySQL 메타 데이터 탐색기 확인란의 선택을 취소 항목 옆에 개체를 로드 하기 전에 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL Azure 또는 MySQL의 데이터를 마이그레이션합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[MySQL 데이터베이스 &#40; 변환 MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+[MySQL 데이터베이스 변환 &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB &#40; SQL Server-MySQL 데이터베이스 마이그레이션 MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server-SQL Azure DB로 데이터베이스 마이그레이션 MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

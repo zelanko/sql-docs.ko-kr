@@ -1,25 +1,25 @@
 ---
-title: "dwloader 병렬 데이터 웨어하우스에 대 한 명령줄 로더"
+title: dwloader 병렬 데이터 웨어하우스에 대 한 명령줄 로더
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "**dwloader** 는 기존 테이블에 대량으로 테이블 행을 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다."
+description: '**dwloader** 는 기존 테이블에 대량으로 테이블 행을 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다.'
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 
-ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 90
+ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader 명령줄 로더
 **dwloader** 는 기존 테이블에 대량으로 테이블 행을 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다. 행을 로드할 때 테이블의 끝에 모든 행을 추가할 수 있습니다 (*추가 모드* 또는 *fastappend 모드*), 새 행이 추가 및 기존 행을 업데이트 (*upsert 모드*)을 모두 삭제 하거나 행 로드 하기 전에 기존 한 다음 빈 테이블에 모든 행을 삽입 (*모드를 다시 로드*).  
@@ -140,7 +140,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 매개 변수 파일을 사용 하 여 *parameter_file_name*, 명령줄 매개 변수 대신 합니다. *parameter_file_name* 제외한 모든 명령줄 매개 변수를 포함할 수 있습니다 *user_name* 및 *암호*합니다. 명령줄에서 및 매개 변수 파일에는 형식이 지정 하는 경우 명령줄 file 매개 변수를 재정의 합니다.  
   
-매개 변수 파일 없이 하나의 매개 변수가 포함 되어는  **-**  줄당 접두사입니다.  
+매개 변수 파일 없이 하나의 매개 변수가 포함 되어는 **-** 줄당 접두사입니다.  
   
 예:  
   

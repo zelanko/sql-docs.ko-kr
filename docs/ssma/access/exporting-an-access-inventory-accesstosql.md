@@ -1,15 +1,16 @@
 ---
-title: "액세스 인벤토리 (AccessToSQL) 내보내기 | Microsoft Docs"
+title: 액세스 인벤토리 (AccessToSQL) 내보내기 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1ca36e752e0df28ca4b1fb3dcc7dff6f8895cf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 834b8d2b1be548a8be1114d6b536475eb52d4441
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>액세스 인벤토리 (AccessToSQL) 내보내기
 Access 데이터베이스를 여러 개 있고로 마이그레이션할 수 있는 대상을 확실 하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 프로젝트에서 모든 Access 데이터베이스의 인벤토리를 내보낼 수 있습니다. 그런 다음 검토 및 쿼리할 수 있습니다 인벤토리 메타 데이터를 마이그레이션하려면 해당 데이터베이스 내의 개체 및 데이터베이스를 결정 합니다. 이 인벤토리 하면 신속 하 게 다음과 같은 질문에 답변 찾기:  
@@ -124,7 +125,7 @@ SSMA는 Access 데이터베이스, 테이블, 열, 인덱스, 외래 키, 쿼리
   
 5.  에 **인증** 드롭 다운 메뉴에서 선택 된 연결에 사용할 인증 유형을 합니다. 현재 Windows 계정을 사용 하려면 선택 **Windows 인증**합니다. 사용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로그인을 **SQL Server 인증**, 사용자 이름 및 암호를 제공 합니다.  
   
-에 연결 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 참조 [SQL Server &#40;에 연결 AccessToSQL &#41; ](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
+에 연결 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 참조 [SQL Server에 연결 &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md)합니다.  
   
 **인벤토리 정보를 내보내려면**  
   

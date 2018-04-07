@@ -1,32 +1,32 @@
 ---
-title: "관리 콘솔 (분석 플랫폼 시스템)를 사용 하 여 어플라이언스에 모니터링"
+title: 관리 콘솔 (분석 플랫폼 시스템)를 사용 하 여 어플라이언스에 모니터링
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: "26"
-ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>관리 콘솔을 사용 하 여 어플라이언스에 모니터
 관리 콘솔 어플라이언스 상태, 상태 및 성능 정보를 표시 하는 SQL Server PDW 웹 응용 프로그램은 합니다. 사용자가 Internet Explorer를 통해 관리 콘솔에 연결 합니다.  
   
 ## <a name="About"></a>관리 콘솔 정보  
-![어플라이언스 콘솔 홈](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+![Appliance Console Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **어플라이언스**  
 홈  
@@ -53,7 +53,7 @@ PDW 상태 요약을 제공합니다.
 로드  
 표시 합니다. 있는 경우 계획, PDW 부하 및 관련된 오류의 현재 상태를 로드 합니다.  
   
-백업/복원  
+Backups/Restores  
 백업 및 복원 작업을 PDW의 로그를 표시 합니다.  
   
 상태  
@@ -112,12 +112,12 @@ HDInsight 저장소 사용을 요약합니다.
 |-|-|  
 |**정보 유형**|**관리 콘솔에 액세스 하는 방법**|  
 |어플라이언스의 전체 상태|클릭 **기기 상태** 위쪽 메뉴에서 또는 **홈**합니다.|  
-|,|클릭 **경고**합니다. 자세한 내용은 참조 [관리 콘솔 경고 이해 &#40; 분석 플랫폼 시스템 &#41; ](understanding-admin-console-alerts.md).|  
+|경고|클릭 **경고**합니다. 자세한 내용은 참조 [관리 콘솔 경고 이해 &#40;분석 플랫폼 시스템&#41;](understanding-admin-console-alerts.md)합니다.|  
 |어플라이언스 구성 요소 및 해당 상태|클릭 **기기 상태** 위쪽 메뉴에서 또는 **홈**합니다.|  
 |모니터 요청 (쿼리, 로드, 백업 및 복원 포함)|클릭 **세션** 현재 활성 또는 최근에 사용한 세션을 볼 수 있습니다.<br /><br />클릭 **쿼리** 현재 활성 또는 최근 쿼리를 볼 수 있습니다. 쿼리에 대 한 표시 되는 정보에 로드, 백업 및 복원에 포함 됩니다.<br /><br />클릭 **잠금** 활성 잠금 볼 수 있습니다.|  
 |부하, 백업 및 복원에 대 한 추가 정보를 모니터링 합니다.|클릭 **로드** 또는 **백업/복원**합니다.|  
 |성능 정보|클릭 **성능 모니터**합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
-[어플라이언스 모니터링 &#40; 분석 플랫폼 시스템 &#41;](appliance-monitoring.md)  
+[어플라이언스 모니터링 &#40;분석 플랫폼 시스템&#41;](appliance-monitoring.md)  
   
