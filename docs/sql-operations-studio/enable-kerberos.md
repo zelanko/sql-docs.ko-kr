@@ -1,6 +1,6 @@
 ---
-title: "SQL 작업 Studio (미리 보기)로 연결 시 Active Directory 인증 (Kerberos)을 사용 하 여 | Microsoft Docs"
-description: "SQL 작업 Studio (미리 보기)에 대 한 Active Directory 인증을 사용 하는 Kerberos를 설정 하는 방법을 알아봅니다"
+title: SQL 작업 Studio (미리 보기)로 연결 시 Active Directory 인증 (Kerberos)을 사용 하 여 | Microsoft Docs
+description: SQL 작업 Studio (미리 보기)에 대 한 Active Directory 인증을 사용 하는 Kerberos를 설정 하는 방법을 알아봅니다
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,21 +8,21 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcc9e91255317d53a63dd9867f6060af591f36e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dbd229a0106506f744074df760ee10f871474ebb
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>연결 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 을 Windows 인증-Kerberos를 사용 하 여 SQL Server 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]Kerberos를 사용 하 여 SQL Server에 연결을 지원 합니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] Kerberos를 사용 하 여 SQL Server에 연결을 지원 합니다.
 
 Linux 또는 macOS에서 통합 인증 (Windows 인증)을 사용 하려면 설정 해야는 **Kerberos 티켓** Windows 도메인 계정에 현재 사용자를 연결 합니다. 
 
@@ -35,7 +35,7 @@ Linux 또는 macOS에서 통합 인증 (Windows 인증)을 사용 하려면 설�
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Sql Server가 Kerberos 설정 하는 경우 확인 하는 중
 
 Sql Server의 호스트 컴퓨터에 로그인 합니다. Windows 명령 프롬프트에서 사용 하 여는 `setspn -L %COMPUTERNAME%` 호스트에 대 한 모든 서비스 사용자 이름을 나열 합니다. 즉, Sql Server가 등록 한 SPN은 Kerberos 인증을 받을 준비가 MSSQLSvc/HostName.Domain.com로 시작 하는 항목이 표시 되어야 합니다. 
-- Sql Server의 호스트에 액세스할 수 없는 경우 모든 다른 Windows OS에서 같은 Active Directory에 가입 된, 명령을 사용할 수 있습니다 `setspn -L <SQLSERVER_NETBIOS>` < SQLSERVER_NETBIOS >은 Sql Server의 hsot의 컴퓨터 이름입니다.
+- Sql Server의 호스트에 액세스할 수 없는 경우 모든 다른 Windows OS에서 같은 Active Directory에 가입 된, 명령을 사용할 수 있습니다 `setspn -L <SQLSERVER_NETBIOS>` < SQLSERVER_NETBIOS >은 Sql Server의 호스트의 컴퓨터 이름입니다.
 
 
 ## <a name="get-the-kerberos-key-distribution-center"></a>Kerberos 키 배포 센터 가져오기
@@ -62,7 +62,7 @@ The command completed successfully
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-편집 된 `/etc/network/interfaces` 파일 AD 도메인 컨트롤러의 IP 주소는 dns 이름 서버 목록이 표시 됩니다. 예를 들어 다음과 같이 사용할 수 있습니다. 
+편집 된 `/etc/network/interfaces` 파일 AD 도메인 컨트롤러의 IP 주소는 dns 이름 서버 목록이 표시 됩니다. 예를 들어: 
 
 ```/etc/network/interfaces
 <...>
@@ -126,9 +126,9 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-- 이 단계에 따라 [다음] 프로그램 macOS Active Directory 도메인 컨트롤러에 조인 (https://support.apple.com/kb/PH26282?viewlocale=en_US & 로캘 en_US =) 합니다.
+- 이 단계에 따라 [다음] 프로그램 macOS Active Directory 도메인 컨트롤러에 조인 (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US)합니다.
 
 
 
@@ -170,7 +170,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>사용 하 여 연결[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>사용 하 여 연결 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 * 새 연결 프로필 만들기
 

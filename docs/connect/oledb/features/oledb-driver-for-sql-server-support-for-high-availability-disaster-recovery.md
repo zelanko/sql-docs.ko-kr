@@ -2,7 +2,7 @@
 title: OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery | Microsoft Docs
 description: OLE DB Driver for SQL Server 고가용성, 재해 복구에 대 한 지원
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -17,9 +17,9 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: HT
+ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/06/2018
 ---
@@ -72,29 +72,11 @@ ms.lasthandoff: 04/06/2018
 OLE DB Driver for SQL Server 응용 프로그램 현재 사용 하 여 데이터베이스 미러링 다중 서브넷 시나리오를 업그레이드 하는 경우, 제거 해야는 **에서 Failover_Partner** 연결 속성 및 사용 하 여 바꾸기  **MultiSubnetFailover** 로 설정 **예** 연결 문자열에서 서버 이름을 가용성 그룹 수신기로 바꿉니다. 연결 문자열에서 **Failover_Partner** 및 **MultiSubnetFailover=Yes**를 사용하는 경우 드라이버에서 오류가 발생합니다. 그러나 연결 문자열에서 **Failover_Partner** 및 **MultiSubnetFailover=No**(또는 **ApplicationIntent=ReadWrite**)를 사용하면 응용 프로그램에서 데이터베이스 미러링을 사용합니다.  
   
 가용성 그룹의 주 데이터베이스에서 데이터베이스 미러링이 사용되고 가용성 그룹 수신기가 아닌 주 데이터베이스에 연결하는 연결 문자열에 **MultiSubnetFailover=Yes**가 사용될 경우 드라이버에서 오류를 반환합니다.  
-  
-## <a name="specifying-application-intent"></a>응용 프로그램 의도 지정  
-때 **ApplicationIntent = ReadOnly**, 클라이언트 설정에 항상 데이터베이스에 연결할 때 읽기 작업을 요청 합니다. 서버 연결 시 및 시 의도 적용 합니다는 `USE` 문 사용에 항상 데이터베이스에만 데이터베이스입니다.  
-  
-**ApplicationIntent** 키워드는 레거시 읽기 전용 데이터베이스에 적용되지 않습니다.  
-  
-데이터베이스 허용 하거나 차단할 수는 대상된 Alwayson 데이터베이스에 대 한 읽기 작업입니다. 이 작업은 **PRIMARY_ROLE** 및 **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 **ALLOW_CONNECTIONS** 절로 수행됩니다.  
-  
-**ApplicationIntent** 키워드는 읽기 전용 라우팅을 설정하는 데 사용됩니다.  
-  
-## <a name="read-only-routing"></a>읽기 전용 라우팅  
-읽기 전용 라우팅은 데이터베이스의 읽기 전용 복제 가용성을 보장할 수 있는 기능입니다. 읽기 전용 라우팅을 활성화하려면:  
-  
-1.  AlwaysOn 가용성 그룹의 가용성 그룹 수신기에 연결해야 합니다.  
-  
-2.  **ApplicationIntent** 연결 문자열 키워드는 **ReadOnly**로 설정해야 합니다.  
-  
-3.  Always On 가용성 그룹을 읽기 전용 라우팅을 사용 하려면 데이터베이스 관리자가 구성 되어야 합니다.  
-  
-읽기 전용 라우팅을 사용하는 여러 연결 중 일부가 동일한 읽기 전용 복사본에 연결되지 않을 수 있습니다. 데이터베이스 동기화를 변경하거나 서버 라우팅 구성을 변경하면 클라이언트를 다른 읽기 전용 복사본에 연결할 수 있습니다. 모든 읽기 전용 요청이 동일한 읽기 전용 복제본에 연결 되도록 하는 Always On 가용성 그룹 수신기를 통과 하지 못한는 **서버** 연결 문자열 키워드입니다. 대신, 읽기 전용 인스턴스의 이름을 지정합니다.  
-  
-읽기 전용 라우팅은 먼저 기본 복제에 연결한 다음 가장 사용 가능한 읽기 가능 보조 복제를 찾으므로 읽기 전용 라우팅은 기본 복제에 연결하는 것보다 시간이 오래 걸릴 수 있습니다. 따라서 로그인 제한 시간을 늘려야 합니다.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="ole-db"></a>OLE DB  
 OLE DB Driver for SQL Server 모두를 지원 합니다.는 **ApplicationIntent** 및 **MultiSubnetFailover** 키워드입니다.   
   
@@ -169,7 +151,7 @@ hr = pIDBInitialize->QueryInterface(IID_IDBProperties, (void **)&pIDBProperties)
 pIDBProperties->SetProperties(1, &PropSet);
 ```
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE DB Driver for SQL Server 기능](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
   

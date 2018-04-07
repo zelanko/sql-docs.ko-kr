@@ -1,27 +1,28 @@
 ---
-title: "고가용성, 재해 복구에 대 한 JDBC 드라이버 지원 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: 고가용성, 재해 복구에 대 한 JDBC 드라이버 지원 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 621f31fbeddee6ec3705396b5d049f5496f4ae04
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1e41503e9b319d1e4372d93d835c4791563fd2da
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구를 위한 JDBC 드라이브 지원
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -63,7 +64,7 @@ Microsoft JDBC Driver 4.2를 사용 하 여 (또는 경우를 줄이려면) SQL 
   
  지정 **multiSubnetFailover = true** 때 가용성 그룹 수신기 또는 장애 조치 클러스터 인스턴스 이외의 대상에 연결할 성능에 부정적인 영향이 있으며 지원 되지 않습니다.  
   
- 보안 관리자가 설치되지 않은 경우 Java Virtual Machine은 기본적으로 JDK 구현 및 Java 속성 networkaddress.cache.ttl 및 networkaddress.cache.negative.ttl에 정의된 제한 시간 동안 VIP(가상 IP 주소)를 캐시합니다. JDK 보안 관리자가 설치된 경우 Java Virtual Machine은 VIP를 캐시하고 기본적으로 캐시를 새로 고치지 않습니다. Java Virtual Machine 캐시에 대해 "TTL(time-to-live)"(networkaddress.cache.ttl)을 1일로 설정해야 합니다. 기본값을 1일(정도)로 변경하지 않으면 VIP를 추가하거나 업데이트할 때 Java Virtual Machine 캐시에서 기존 값이 삭제되지 않습니다. Networkaddress.cache.ttl 및 networkaddress.cache.negative.ttl에 대 한 자세한 내용은 참조 [http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)합니다.  
+ 보안 관리자가 설치되지 않은 경우 Java Virtual Machine은 기본적으로 JDK 구현 및 Java 속성 networkaddress.cache.ttl 및 networkaddress.cache.negative.ttl에 정의된 제한 시간 동안 VIP(가상 IP 주소)를 캐시합니다. JDK 보안 관리자가 설치된 경우 Java Virtual Machine은 VIP를 캐시하고 기본적으로 캐시를 새로 고치지 않습니다. Java Virtual Machine 캐시에 대해 "TTL(time-to-live)"(networkaddress.cache.ttl)을 1일로 설정해야 합니다. 기본값을 1일(정도)로 변경하지 않으면 VIP를 추가하거나 업데이트할 때 Java Virtual Machine 캐시에서 기존 값이 삭제되지 않습니다. Networkaddress.cache.ttl 및 networkaddress.cache.negative.ttl에 대 한 자세한 내용은 참조 [ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)합니다.  
   
  다음 지침에 따라 장애 조치(Failover) 클러스터 인스턴스 또는 가용성 그룹의 서버에 연결하십시오.  
   
@@ -93,29 +94,11 @@ Microsoft JDBC Driver 4.2를 사용 하 여 (또는 경우를 줄이려면) SQL 
  업그레이드 하는 경우는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 제거 해야 하는 다중 서브넷 시나리오에 데이터베이스 미러링을 사용 중인 응용 프로그램의 **failoverPartner** 연결 속성이로 바꿉니다 **multiSubnetFailover**  로 설정 **true** 가용성 그룹 수신기를 연결 문자열에서 서버 이름을 바꿉니다. 연결 문자열을 사용 하는 경우 **failoverPartner** 및 **multiSubnetFailover = true**, 드라이버에서 오류가 발생 합니다. 그러나 연결 문자열을 사용 하는 경우 **failoverPartner** 및 **multiSubnetFailover = false** (또는 **ApplicationIntent = ReadWrite**), 응용 프로그램에서는 데이터베이스를 사용 합니다. 미러링입니다.  
   
  드라이버는 AG의 주 데이터베이스에서 데이터베이스 미러링이 사용 되 고 오류가 반환 됩니다 **multiSubnetFailover = true** 대신 가용성 그룹에 주 데이터베이스에 연결 하는 연결 문자열에 사용 됩니다 수신기 수 있습니다.  
-  
-## <a name="specifying-application-intent"></a>응용 프로그램 의도 지정  
- 때 **applicationIntent = ReadOnly**, 클라이언트는 AlwaysOn 사용 데이터베이스에 연결할 때 읽기 전용 작업을 요청 합니다. 서버는 연결 시간 및 USE 데이터베이스 문 동안 AlwaysOn이 활성화된 데이터베이스에만 의도를 시행합니다.  
-  
- **applicationIntent** 키워드는 레거시, 읽기 전용 데이터베이스와 함께 작동 하지 않습니다.  
-  
- 데이터베이스는 대상 AlwaysOn 데이터베이스에 대한 읽기 작업을 허용하거나 허용하지 않을 수 있습니다. 이 작업은 **PRIMARY_ROLE** 및 **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)] 문의 **ALLOW_CONNECTIONS** 절로 수행됩니다.  
-  
- **applicationIntent** 키워드는 읽기 전용 라우팅을 사용 하도록 설정 하는 데 사용 됩니다.  
-  
-## <a name="read-only-routing"></a>읽기 전용 라우팅  
- 읽기 전용 라우팅은 데이터베이스의 읽기 전용 복제 가용성을 보장할 수 있는 기능입니다. 읽기 전용 라우팅을 활성화하려면:  
-  
-1.  AlwaysOn 가용성 그룹 가용성 그룹 수신기에 연결해야 합니다.  
-  
-2.  **applicationIntent** 연결 문자열 키워드도 설정 되어 있어야 **ReadOnly**합니다.  
-  
-3.  읽기 전용 라우팅을 설정하려면 데이터베이스 관리자가 가용성 그룹을 구성해야 합니다.  
-  
- 읽기 전용 라우팅을 사용하는 여러 연결 중 일부가 동일한 읽기 전용 복사본에 연결되지 않을 수 있습니다. 데이터베이스 동기화를 변경하거나 서버 라우팅 구성을 변경하면 클라이언트를 다른 읽기 전용 복사본에 연결할 수 있습니다. 모든 읽기 전용 요청이 동일한 읽기 전용 복제본에 연결 되도록 전달 하지 마십시오 가용성 그룹 수신기 또는 가상 IP 주소는 **serverName** 연결 문자열 키워드입니다. 대신, 읽기 전용 인스턴스의 이름을 지정합니다.  
-  
- 읽기 전용 라우팅은 먼저 기본 복제에 연결한 다음 가장 사용 가능한 읽기 가능 보조 복제를 찾으므로 읽기 전용 라우팅은 기본 복제에 연결하는 것보다 시간이 오래 걸릴 수 있습니다. 따라서 로그인 제한 시간을 늘려야 합니다.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>multiSubnetFailover 및 applicationIntent를 지원하는 새 메서드  
  다음 방법에 대 한 프로그래밍 방식의 액세스를 제공 된 **multiSubnetFailover**, **applicationIntent** 및 **transparentNetworkIPResolution** 연결 문자열 키워드:  
   
@@ -136,9 +119,9 @@ Microsoft JDBC Driver 4.2를 사용 하 여 (또는 경우를 줄이려면) SQL 
  **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** 및 **setTransparentNetworkIPResolution** 메서드를 추가 [SQLServerDataSource 클래스](../../connect/jdbc/reference/sqlserverdatasource-class.md), [ SQLServerConnectionPoolDataSource 클래스](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), 및 [SQLServerXADataSource 클래스](../../connect/jdbc/reference/sqlserverxadatasource-class.md)합니다.  
   
 ## <a name="ssl-certificate-validation"></a>SSL 인증서의 유효성 검사  
- 가용성 그룹은 여러 물리적 서버로 구성되어 있습니다. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에 대 한 지원을 추가 **주체 대체 이름** 여러 호스트가 같은 인증서와 연결 될 수 있도록 SSL 인증서에 있습니다. SSL에 대 한 자세한 내용은 참조 하십시오. [SSL 지원 이해](../../connect/jdbc/understanding-ssl-support.md)합니다.  
+ 가용성 그룹은 여러 물리적 서버로 구성되어 있습니다. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 에 대 한 지원을 추가 **주체 대체 이름** 여러 호스트가 같은 인증서와 연결 될 수 있도록 SSL 인증서에 있습니다. SSL에 대 한 자세한 내용은 참조 하십시오. [SSL 지원 이해](../../connect/jdbc/understanding-ssl-support.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [JDBC 드라이버와 함께 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
  [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)  
   

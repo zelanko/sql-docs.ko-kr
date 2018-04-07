@@ -1,7 +1,7 @@
 ---
 title: 고가용성 Microsoft Drivers for PHP for SQL Server에 대 한 재해 복구에 대 한 지원 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: ''
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 6cb7f145f14861720d11401a3d60db0ce0efcfd9
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구 지원
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,29 +73,11 @@ ms.lasthandoff: 03/28/2018
 업그레이드 하는 경우는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 제거 해야 하는 다중 서브넷 시나리오에 데이터베이스 미러링을 사용 중인 응용 프로그램의 **에서 Failover_Partner** 연결 속성이로 바꿉니다 **MultiSubnetFailover**  로 설정 **예** 연결 문자열에서 서버 이름을 가용성 그룹 수신기로 바꿉니다. 연결 문자열을 사용 하는 경우 **에서 Failover_Partner** 및 **MultiSubnetFailover = true**, 드라이버에서 오류가 발생 합니다. 그러나 연결 문자열을 사용 하는 경우 **에서 Failover_Partner** 및 **MultiSubnetFailover = false** (또는 **ApplicationIntent = ReadWrite**), 응용 프로그램에서는 데이터베이스를 사용 합니다. 미러링입니다.  
   
 드라이버는 AG의 주 데이터베이스에서 데이터베이스 미러링이 사용 되 고 오류가 반환 됩니다 **MultiSubnetFailover = true** 대신 가용성 그룹에 주 데이터베이스에 연결 하는 연결 문자열에 사용 됩니다 수신기 수 있습니다.  
-  
-## <a name="specifying-application-intent"></a>응용 프로그램 의도 지정  
-**ApplicationIntent=ReadOnly**인 경우 클라이언트는 AlwaysOn이 설정된 데이터베이스에 연결할 때 읽기 작업을 요청합니다. 서버는 연결 시 그리고 USE 데이터베이스 문 중에 AlwaysOn이 설정된 데이터베이스에 한하여 의도를 강제 적용합니다.  
-  
-**ApplicationIntent** 키워드는 레거시 읽기 전용 데이터베이스에 적용되지 않습니다.  
-  
-데이터베이스는 대상 AlwaysOn 데이터베이스에 대한 읽기 작업을 허용하거나 허용하지 않을 수 있습니다. 이 작업은 **PRIMARY_ROLE** 및 **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)] 문의 **ALLOW_CONNECTIONS** 절로 수행됩니다.  
-  
-**ApplicationIntent** 키워드는 읽기 전용 라우팅을 설정하는 데 사용됩니다.  
-  
-## <a name="read-only-routing"></a>읽기 전용 라우팅  
-읽기 전용 라우팅은 데이터베이스의 읽기 전용 복제 가용성을 보장할 수 있는 기능입니다. 읽기 전용 라우팅을 활성화하려면:  
-  
-1.  AlwaysOn 가용성 그룹의 가용성 그룹 수신기에 연결해야 합니다.  
-  
-2.  **ApplicationIntent** 연결 문자열 키워드는 **ReadOnly**로 설정해야 합니다.  
-  
-3.  읽기 전용 라우팅을 설정하려면 데이터베이스 관리자가 가용성 그룹을 구성해야 합니다.  
-  
-읽기 전용 라우팅을 사용하는 여러 연결 중 일부가 동일한 읽기 전용 복사본에 연결되지 않을 수 있습니다. 데이터베이스 동기화를 변경하거나 서버 라우팅 구성을 변경하면 클라이언트를 다른 읽기 전용 복사본에 연결할 수 있습니다. 모든 읽기 전용 요청을 동일한 읽기 전용 복제본에 연결하려면 가용성 그룹 수신기를 **Server** 연결 문자열 키워드에 전달하지 마세요. 대신, 읽기 전용 인스턴스의 이름을 지정합니다.  
-  
-읽기 전용 라우팅은 먼저 기본 복제에 연결한 다음 가장 사용 가능한 읽기 가능 보조 복제를 찾으므로 읽기 전용 라우팅은 기본 복제에 연결하는 것보다 시간이 오래 걸릴 수 있습니다. 이 경우 로그인 제한 시간을 증가 되어야 합니다.  
-  
-## <a name="see-also"></a>관련 항목:  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
+## <a name="see-also"></a>관련 항목  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)  
   

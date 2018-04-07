@@ -1,35 +1,35 @@
 ---
-title: "설치 및 구성 | Microsoft Docs"
+title: 설치 및 구성 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: samples
 ms.technology:
 - samples
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: 
+caps.latest.revision: 4
 author: BarbKess
 ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
 ms.openlocfilehash: add5788063cdc5026d343061b8111cbec42e5a4d
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/07/2018
 ---
 # <a name="installation-and-configuration"></a>설치 및 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wide World Importers OLTP 데이터베이스 설치 및 구성 지침입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (또는 이상) 또는 [Azure SQL 데이터베이스](https://azure.microsoft.com/services/sql-database/)합니다. 샘플의 전체 버전에 대 한 SQL Server 평가/개발자/Enterprise Edition을 사용 합니다.
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md). 2016 년 6 월 릴리스를 사용 하는 최상의 결과 대 한 이후 버전입니다.
