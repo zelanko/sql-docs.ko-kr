@@ -10,23 +10,23 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05275a1f770ce4a01f583dda768872a26b5e3725
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  이 항목에서는 SQL Server 지원에 대 한 OLE DB Driver 설명 (에 추가 된 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)])에 대 한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(Failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 및 [활성 보조: 읽기 가능한 보조 복제본&#40;AlwaysOn 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+  이 문서에서는 SQL Server 지원에 대 한 OLE DB Driver 설명 (에 추가 된 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)])에 대 한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(Failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 및 [활성 보조: 읽기 가능한 보조 복제본&#40;AlwaysOn 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
  연결 문자열에서 특정 AG(가용성 그룹)에 대한 가용성 그룹 수신기를 지정할 수 있습니다. OLE DB Driver for SQL Server 응용 프로그램 장애 조치 되 가용성 그룹의 데이터베이스에 연결 되 면 원래 연결이 끊어지고, 및 응용 프로그램 장애 조치 후 작업을 계속 하려면 새 연결을 열어야 합니다.  
   
@@ -83,7 +83,7 @@ OLE DB Driver for SQL Server 응용 프로그램 현재 사용 하 여 데이터
 **ApplicationIntent** 키워드는 읽기 전용 라우팅을 설정하는 데 사용됩니다.  
   
 ## <a name="read-only-routing"></a>읽기 전용 라우팅  
-읽기 전용 라우팅은 데이터베이스의 읽기 전용 복사본의 가용성을 유지할 수 있는 기능입니다. 읽기 전용 라우팅을 활성화하려면:  
+읽기 전용 라우팅은 데이터베이스의 읽기 전용 복제 가용성을 보장할 수 있는 기능입니다. 읽기 전용 라우팅을 활성화하려면:  
   
 1.  AlwaysOn 가용성 그룹의 가용성 그룹 수신기에 연결해야 합니다.  
   
@@ -93,7 +93,7 @@ OLE DB Driver for SQL Server 응용 프로그램 현재 사용 하 여 데이터
   
 읽기 전용 라우팅을 사용하는 여러 연결 중 일부가 동일한 읽기 전용 복사본에 연결되지 않을 수 있습니다. 데이터베이스 동기화를 변경하거나 서버 라우팅 구성을 변경하면 클라이언트를 다른 읽기 전용 복사본에 연결할 수 있습니다. 모든 읽기 전용 요청이 동일한 읽기 전용 복제본에 연결 되도록 하는 Always On 가용성 그룹 수신기를 통과 하지 못한는 **서버** 연결 문자열 키워드입니다. 대신, 읽기 전용 인스턴스의 이름을 지정합니다.  
   
-읽기 전용 라우팅은 먼저 주 데이터베이스에 연결한 후 사용 가능한 최선의 읽기 가능한 보조 데이터베이스를 검색하기 때문에 주 데이터베이스에 연결할 때보다 시간이 더 많이 걸릴 수 있습니다. 따라서 로그인 제한 시간을 늘려야 합니다.  
+읽기 전용 라우팅은 먼저 기본 복제에 연결한 다음 가장 사용 가능한 읽기 가능 보조 복제를 찾으므로 읽기 전용 라우팅은 기본 복제에 연결하는 것보다 시간이 오래 걸릴 수 있습니다. 따라서 로그인 제한 시간을 늘려야 합니다.  
   
 ## <a name="ole-db"></a>OLE DB  
 OLE DB Driver for SQL Server 모두를 지원 합니다.는 **ApplicationIntent** 및 **MultiSubnetFailover** 키워드입니다.   
@@ -113,18 +113,15 @@ OLE DB Driver for SQL Server 모두를 지원 합니다.는 **ApplicationIntent*
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-OLE DB Driver for SQL Server OLE DB 응용 프로그램 방법 중 하나를 사용 하 여 응용 프로그램 의도 지정할 수 있습니다.  
+OLE DB Driver for SQL Server 응용 프로그램 방법 중 하나를 사용 하 여 응용 프로그램 의도 지정 수 있습니다.  
   
- **Idbinitialize:: Initialize**  
+ -   **Idbinitialize:: Initialize**  
  **IDBInitialize::Initialize**는 이전에 구성한 속성 집합을 사용하여 데이터 원본을 초기화하고 데이터 원본 개체를 만듭니다. 응용 프로그램 의도를 공급자 속성 또는 확장 속성 문자열의 일부로 지정합니다.  
   
- **Idatainitialize:: Getdatasource**  
+ -   **Idatainitialize:: Getdatasource**  
  **IDataInitialize::GetDataSource**는 **응용 프로그램 의도** 키워드를 포함할 수 있는 입력 연결 문자열을 사용합니다.  
   
- **IDBProperties::GetProperties**  
- **IDBProperties::GetProperties**는 현재 데이터 원본에 설정된 속성의 값을 검색합니다.  DBPROP_INIT_PROVIDERSTRING 속성과 SSPROP_INIT_APPLICATIONINTENT 속성을 통해 **응용 프로그램 의도** 값을 검색할 수 있습니다.  
-  
- **IDBProperties::SetProperties**  
+ -   **IDBProperties::SetProperties**  
  **ApplicationIntent** 속성 값을 설정하려면 값이 "**ReadWrite**" 또는 "**ReadOnly**"인 **SSPROP_INIT_APPLICATIONINTENT** 속성이나 값이 "**ApplicationIntent=ReadOnly**" 또는 "**ApplicationIntent=ReadWrite**"를 포함하는 **DBPROP_INIT_PROVIDERSTRING** 속성을 전달하여 **IDBProperties::SetProperties**를 호출합니다.  
   
 **데이터 연결 속성** 대화 상자의 모두 탭에 있는 응용 프로그램 의도 속성 필드에서 응용 프로그램 의도를 지정할 수 있습니다.  
@@ -133,13 +130,22 @@ OLE DB Driver for SQL Server OLE DB 응용 프로그램 방법 중 하나를 사
   
 ### <a name="multisubnetfailover"></a>MultiSubnetFailover
 
-해당 하는 연결 속성은:  
+해당하는 연결 속성은 다음과 같습니다.  
   
 -   **SSPROP_INIT_MULTISUBNETFAILOVER**  
+  
+-   **DBPROP_INIT_PROVIDERSTRING**  
 
-SSPROP_INIT_MULTISUBNETFAILOVER 속성은 부울 형식입니다. 속성이 VARIANT_TRUE 또는 VARIANT_FALSE 값을 허용합니다.
+OLE DB Driver for SQL Server 응용 프로그램 MultiSubnetFailover 옵션을 설정 하려면 다음 방법 중 하나를 사용할 수 있습니다.  
 
-MultiSubnetFailover 속성 값을 설정 하려면 호출 **idbproperties:: Setproperties** SSPROP_INIT_MULTISUBNETFAILOVER 속성을 값으로 전달 **VARIANT_TRUE** 또는 **VARIANT_ FALSE**합니다. 
+ -   **Idbinitialize:: Initialize**  
+ **IDBInitialize::Initialize**는 이전에 구성한 속성 집합을 사용하여 데이터 원본을 초기화하고 데이터 원본 개체를 만듭니다. 응용 프로그램 의도를 공급자 속성 또는 확장 속성 문자열의 일부로 지정합니다.  
+  
+ -   **Idatainitialize:: Getdatasource**  
+ **Idatainitialize:: Getdatasource** 포함 될 수 있는 입력된 연결 문자열은 **MultiSubnetFailover** 키워드입니다.  
+
+-   **IDBProperties::SetProperties**  
+설정 하는 **MultiSubnetFailover** 속성 값, 호출 **idbproperties:: Setproperties** 전달는 **SSPROP_INIT_MULTISUBNETFAILOVER** 값을갖는속성 **VARIANT_TRUE** 또는 **VARIANT_FALSE** 또는 **DBPROP_INIT_PROVIDERSTRING** 속성 들어 있는 값을 "**MultiSubnetFailover = Yes** "또는"**MultiSubnetFailover = No**"입니다.
 
 #### <a name="example"></a>예제
 

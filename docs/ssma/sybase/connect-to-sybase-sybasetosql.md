@@ -1,37 +1,38 @@
 ---
-title: "Sybase (SybaseToSQL)에 연결 | Microsoft Docs"
-ms.custom: 
+title: Sybase (SybaseToSQL)에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebf5f7f5c12a8a2e3af85ba2901e2348da92c30b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 85cc0d5c5dbea4526afd86fb4efb4b4ec65d7ac9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Sybase (SybaseToSQL)에 연결
 사용 하 여는 **Sybase 연결할** 마이그레이션하려는 Sybase 적응형 Server Enterprise (ASE) 인스턴스를 연결 하는 대화 상자.  
   
 이 대화 상자에 액세스 하려면는 **파일** 메뉴 선택 **Sybase 연결할**합니다. 이 명령은 이전에 연결한 경우 **Sybase 다시 연결**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **공급자**  
 Sybase 서버에 연결 하기 위한 컴퓨터에 설치 되어 있는 공급자 중 하나를 선택 합니다.  
   
@@ -44,7 +45,7 @@ Sybase 서버에 연결 하기 위한 컴퓨터에 설치 되어 있는 공급�
 **서버 포트**  
 기본이 아닌 포트 ASE에 대 한 연결을 사용 하는 경우에 포트 번호를 입력 합니다. 기본 포트 번호는 5000입니다. 표준 모드 옵션입니다.  
   
-**User name**  
+**사용자 이름**  
 ASE에 연결 하는 데 사용 되는 사용자 이름을 입력 합니다. 표준 모드 옵션입니다.  
   
 **암호**  
@@ -61,7 +62,7 @@ ASE에는 연결에 대 한 전체 연결 문자열을 입력 합니다.
   
     |설정|Sybase 12.5 매개 변수|Sybase 15 매개 변수|  
     |-----------|-------------------------|-----------------------|  
-    |서버 이름|서버 이름|서버|  
+    |서버 이름|서버 이름|Server|  
     |포트|서버 포트 주소|포트|  
     |사용자 이름|사용자 ID|사용자 ID|  
     |암호|암호|암호|  
@@ -80,7 +81,7 @@ ASE에는 연결에 대 한 전체 연결 문자열을 입력 합니다.
     |설정|Sybase 12.5/15 매개 변수|  
     |-----------|-----------------------------|  
     |드라이버 이름|드라이버|  
-    |서버 이름|서버|  
+    |서버 이름|Server|  
     |사용자 이름|uid|  
     |암호|Pwd|  
     |포트 번호|포트|  
@@ -93,7 +94,7 @@ ASE에는 연결에 대 한 전체 연결 문자열을 입력 합니다.
   
     |설정|Sybase 12.5/15 매개 변수|  
     |-----------|-----------------------------|  
-    |서버 이름|서버|  
+    |서버 이름|Server|  
     |사용자 이름|uid|  
     |암호|Pwd|  
     |포트 번호|포트|  

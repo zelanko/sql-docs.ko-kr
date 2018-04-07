@@ -1,30 +1,31 @@
 ---
-title: "SAP ASE 데이터베이스 개체 (SybaseToSQL) 변환에 대 한 평가 | Microsoft Docs"
-ms.custom: 
+title: SAP ASE 데이터베이스 개체 (SybaseToSQL) 변환에 대 한 평가 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e22710f19c00a846c33e1dd378e7b0de5b8526e9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 99342797792c8b57eff144e8c5a611bbace2776d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>변환 (SybaseToSQL)에 SAP ASE 데이터베이스 개체를 평가합니다.
 개체를 로드 하 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 결정 해야 Azure SQL 또는 어떻게 마이그레이션 복잡성 및 걸리는 시간입니다. SSMA 개체 및를 성공적으로 변환 되는 프로시저의 비율을 표시 하는 평가 보고서를 만들 수 [!INCLUDE[tsql](../../includes/tsql_md.md)]합니다. 또한 SSMA 변환 실패를 일으킬 수 있는 특정 문제를 볼 수 있습니다.  
@@ -79,13 +80,13 @@ SSMA 변환 선택한 SAP 적응형 Server Enterprise (ASE) 데이터베이스 �
   
     -   SSMA는 ASE 구문을 업데이트 합니다. 저장된 프로시저 및 트리거에 대해서만 구문을 업데이트할 수 있습니다. 구문을 업데이트 하려면 Sybase 메타 데이터 탐색기 창에서 개체를 선택, 클릭는 **SQL** 탭을 선택한 다음 SQL 코드를 편집 합니다. 항목에서 이동할 때 업데이트 된 구문 저장 하 라는 메시지가 표시 됩니다. 개체에 대해 보고 된 오류를 볼는 **보고서** 탭 합니다.  
   
-    -   ASE를 제거 하거나 문제가 있는 코드를 수정 하려면 ASE 개체를 변경할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [Sybase ASE &#40;에 연결 SybaseToSQL &#41; ](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+    -   ASE를 제거 하거나 문제가 있는 코드를 수정 하려면 ASE 개체를 변경할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [Sybase ASE 연결할 &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)합니다.  
   
     -   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Azure SQL 메타 데이터 탐색기와 Sybase 메타 데이터 탐색기 확인란의 선택을 취소 항목 옆에 개체를 로드 하기 전에 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 데이터 ASE를 마이그레이션합니다.
   
 ## <a name="next-steps"></a>다음 단계  
-[SAP ASE 데이터베이스 개체 &#40; 변환 SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
+[SAP ASE 데이터베이스 개체를 변환 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB &#40; SQL Server-SAP ASE 데이터베이스 마이그레이션 SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server-Azure SQL DB에 SAP ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

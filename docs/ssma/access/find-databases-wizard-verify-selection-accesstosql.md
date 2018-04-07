@@ -21,20 +21,20 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f105882bee69488970c986e77cd61db4f0844b0d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 915cc8c97e05489fb72a7193ce764faf55ed0b62
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>찾기 데이터베이스 마법사 (선택을 확인) (AccessToSQL)
 데이터베이스 검색 마법사의 선택 확인 페이지 SSMA에 추가할 파일을 나열 합니다. 파일 목록이 올바르지 않으면 클릭 **다시** 목록을 수정할 수 있습니다. 그렇지 않으면 클릭 **마침** 파일을 추가 합니다.  
   
 찾을 데이터베이스 마법사를 열려면는 **파일** 메뉴를 클릭 **찾을 데이터베이스**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **파일 이름**  
 SSMA에 추가 하려면 Access 데이터베이스 파일의 이름을 표시 합니다.  
   

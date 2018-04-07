@@ -10,7 +10,7 @@ ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f6bff4cdd5ea1a6b2fef3283ba9c0413e3d26842
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 67c60756f004d339ebd466ce8835c6f549cc7d2a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="conversions-ole-db"></a>변환 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,6 +77,6 @@ ms.lasthandoff: 04/03/2018
  사이 수행 하는 날짜/시간 변환에 설명 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (또는 이상) SQL Server 용 OLE DB Driver로 작성 된 클라이언트 응용 프로그램 및입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [날짜 및 시간 기능 향상 &#40; OLE db&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상 & #40; OLE db& #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

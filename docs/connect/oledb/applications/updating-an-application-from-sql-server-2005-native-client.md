@@ -10,7 +10,7 @@ ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ddeedf937de12337e8882bfa132461dd2c5f7a8
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: e583abd0a5d84d4842a441fcb8093bbfcf6b9b26
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client에서 응용 프로그램 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,4 +52,4 @@ ms.lasthandoff: 03/30/2018
 |트리거가 실행될 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 다른 결과를 반환할 수 있습니다.|에 도입 된 변경 내용은 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 응용 프로그램 트리거를 실행할 때 발생 하는 문에서 반환 하는 다른 결과가 발생할 수 있습니다 **NOCOUNT OFF** 가 적용 됩니다. 이 경우 응용 프로그램에서 오류가 발생할 수 있습니다. 이 오류를 해결 하려면 설정 **NOCOUNT ON** 트리거 또는 SQLMoreResults 호출 하 여 다음 결과로 이동 합니다.|  
 
 ## <a name="see-also"></a>관련 항목:   
- [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server-programming.md)
+ [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server-programming.md)

@@ -1,32 +1,32 @@
 ---
-title: "PDW 인증서 (분석 플랫폼 시스템) 프로비저닝"
+title: PDW 인증서 (분석 플랫폼 시스템) 프로비저닝
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "분석 플랫폼 시스템 Configuration Manager의 PDW 인증서 프로 비전 페이지를 가져오거나 PDW에서 사용 하는 인증서를 제거 합니다."
+description: 분석 플랫폼 시스템 Configuration Manager의 PDW 인증서 프로 비전 페이지를 가져오거나 PDW에서 사용 하는 인증서를 제거 합니다.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: "22"
-ms.openlocfilehash: c6cbaf559e51103648a4238245d44425c4d5af77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 13e4f6ba3aeb105813ae53eee3a15ce41616273a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-certificate-provisioning"></a>PDW 인증서 프로 비전
 **PDW 인증서 프로 비전이** 분석 플랫폼 시스템의 페이지**Configuration Manager** 가져오거나 PDW에서 사용 하는 인증서를 제거 합니다. 
 
 를 사용 하 여 연결을 암호화할 인증서를 도와 보안 통신 하는 제어 노드에 SQL Server 클라이언트에는 SQL Server PDW 드라이버를 사용 하는 도구를 통해는 [관리 콘솔](monitor-the-appliance-by-using-the-admin-console.md), Integration Services를 로드 합니다. 
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 인증서를 설치 하기 전에 다음을 수행 합니다.  
   
 1.  보안 인증서를 가져옵니다. 보안 인증서를 얻는 방법에 대 한 자세한 내용은 Microsoft 지원에 문의 합니다.  
@@ -53,7 +53,7 @@ SQL Server PDW는 제어 노드에;에 대 한 연결을 암호화 하는 인증
 ### <a name="to-import-the-certificate"></a>인증서를 가져오려면  
   
 1.  시작 된 **Configuration Manager**합니다.  
-자세한 내용은 참조 [구성 관리자 &#40; 시작 분석 플랫폼 시스템 &#41; ](launch-the-configuration-manager.md).  
+자세한 내용은 참조 [구성 관리자를 시작 &#40;분석 플랫폼 시스템&#41;](launch-the-configuration-manager.md)합니다.  
 
 2.  왼쪽된 창에는 **Configuration Manager**, 확장 **병렬 데이터 웨어하우스 토폴로지**, 클릭 하 고 **인증서**합니다.  
   
@@ -84,4 +84,4 @@ SQL Server PDW는 현재 연결을 암호화 하려면 계속 하지만 새 연�
 ![DWConfig 어플라이언스 PDW 인증서](media/dwconfig-appl-pdw-cert.png "DWConfig 어플라이언스 PDW 인증서")  
   
 ## <a name="see-also"></a>관련 항목:  
-[구성 관리자 &#40; 시작 분석 플랫폼 시스템 &#41;](launch-the-configuration-manager.md)  
+[구성 관리자를 시작 &#40;분석 플랫폼 시스템&#41;](launch-the-configuration-manager.md)  

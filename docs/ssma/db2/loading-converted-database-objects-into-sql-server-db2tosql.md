@@ -1,30 +1,31 @@
 ---
-title: "데이터베이스 개체를 SQL Server (DB2ToSQL)로 변환 된 로드 | Microsoft Docs"
+title: 데이터베이스 개체를 SQL Server (DB2ToSQL)로 변환 된 로드 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d662bcab0fe8c804b75f7908ca6fc04f2e96a650
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3997b2e1284513d92c76aefbb582f6cbebb81c7b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>데이터베이스 개체를 SQL Server (DB2ToSQL)로 변환 된 로드
 DB2 스키마를 변환한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 결과 데이터베이스 개체를 로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 개체를 만들 SSMA를 포함할 수 있고 개체를 스크립팅 합니다 스크립트를 실행할 수 있습니다. 또한 SSMA로 업데이트할 수 대상 메타 데이터의 실제 내용이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다.  
@@ -99,7 +100,7 @@ SSMA를 만드는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 
   
 1.  에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **파일** 메뉴에서 **열려**, 클릭 하 고 **파일**합니다.  
   
-2.  **열려** 대화 상자에서 스크립트 파일을 선택 하 고 다음[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+2.  **열려** 대화 상자에서 스크립트 파일을 선택 하 고 다음 [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 3.  전체 스크립트를 실행 하려면는 **F5** 키입니다.  
   
@@ -116,5 +117,5 @@ SSMA를 만드는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 
 마이그레이션 프로세스의 다음 단계에서는 [DB2 데이터를 SQL Server로 마이그레이션](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SQL Server &#40; DB2ToSQL &#41;를 DB2 데이터 마이그레이션](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[DB2 데이터를 SQL Server로 마이그레이션 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

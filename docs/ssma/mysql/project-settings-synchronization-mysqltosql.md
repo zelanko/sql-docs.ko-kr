@@ -1,35 +1,36 @@
 ---
-title: "프로젝트 설정 (동기화) (MySQLToSQL) | Microsoft Docs"
+title: 프로젝트 설정 (동기화) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc7bd0c7dce1c8ad2b70cdaa6b66ed7872c5062d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3a53e15a5bdadae9b0ca67980419fd9ae299e258
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>프로젝트 설정 (동기화) (MySQLToSQL)
 동기화 **프로젝트 설정** MySQL 데이터베이스 개체 SQL Server 데이터베이스 개체와 동기화 되는 방식을 구성할 수 있습니다.  
   
-MySQL 데이터베이스에서 개체를 새로 고치기 위한 및 SQL Server 데이터베이스와 개체의 동기화에 대 한 기본 설정을 지정 하는 기본 동작입니다. 자세한 내용은 참조 [데이터베이스 &#40;에서 새로 고침 MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
+MySQL 데이터베이스에서 개체를 새로 고치기 위한 및 SQL Server 데이터베이스와 개체의 동기화에 대 한 기본 설정을 지정 하는 기본 동작입니다. 자세한 내용은 참조 [데이터베이스에서 새로 고침 &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
   
 동일한 설정을 포함 하는 두 개의 다른 동기화 페이지에 액세스할 수 있습니다.  
   
@@ -37,7 +38,7 @@ MySQL 데이터베이스에서 개체를 새로 고치기 위한 및 SQL Server 
   
 -   에 현재 프로젝트에 대 한 설정을 지정 하려면는 **도구** 메뉴를 클릭 **프로젝트 설정**, 클릭 하 고 **동기화** 왼쪽 창의 맨 아래에 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 ##### <a name="misc"></a>기타  
   

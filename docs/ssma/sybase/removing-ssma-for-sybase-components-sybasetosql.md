@@ -1,30 +1,31 @@
 ---
-title: "SSMA Sybase 구성 요소 (SybaseToSQL)에 대 한 제거 | Microsoft Docs"
-ms.custom: 
+title: SSMA Sybase 구성 요소 (SybaseToSQL)에 대 한 제거 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b10969b1335ed8ba3d46303f15cbc68a34cc4b7b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5dc160074b3134576cb4177e95cad95940c63a69
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>SSMA Sybase 구성 요소 (SybaseToSQL)에 대 한 제거
 완료 했을 때에서 Sybase 적응형 Server Enterprise (ASE)에 데이터베이스를 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 구성 요소를 제거 해야 할 경우가 있습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있지만 데이터베이스 엔진이 제거해 서는 안 확장 팩에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 마이그레이션된 데이터베이스의 함수를 더 이상 사용 하는 경우가 아니면는 **ssma_syb** 의 스키마는 **sysdb** 데이터베이스입니다.  
@@ -64,6 +65,6 @@ SSMA를 사용 하 여 제거할 수 있습니다 **프로그램 추가 / 제거
 를 제거한 후 되는지 확인할 수 있습니다는 **sysdb.ssma_syb** 스키마 및 전체 **sysdb** , 데이터베이스를 사용 하 여 제거 된 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]합니다. 그러나 다른 SSMA 제품을 사용 하는 경우 사용 된 **sysdb** 데이터베이스입니다. 데이터베이스가 존재 하는 경우 다른 데이터베이스가이 데이터베이스에서 개체를 참조 하는지 확인 했으면 데이터베이스를 분리할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SSMA for Sybase 클라이언트 &#40; 설치 SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[SSMA 구성 요소에 SQL Server &#40; 설치 SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+[SSMA Sybase 클라이언트에 대 한 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
+[SQL Server에 SSMA 구성 요소 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
   

@@ -1,15 +1,16 @@
 ---
-title: "평가 보고서 (AccessToSQL) | Microsoft Docs"
+title: 평가 보고서 (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,23 +19,23 @@ helpviewer_keywords:
 - Assessment Report dialog box
 - Conversion Report dialog box
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a171fdf7f717ba5af9e0ecf73f5aca17923e155
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5202655839821515939ea920779041d6f39db28f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessment-report-accesstosql"></a>평가 보고서 (AccessToSQL)
 데이터베이스 개체를 변환의 결과 표시 하는 평가 보고서 창 [!INCLUDE[tsql](../../includes/tsql_md.md)] 구문, 복잡성과 비용이 마이그레이션 프로젝트를 예상할 수 있습니다.  
   
 원본 메타 데이터 탐색기에서 변환 하려면 객체 선택 평가 보고서를 만드는 마우스 오른쪽 단추로 클릭 **데이터베이스**를 선택한 후 **보고서 만들기**합니다. 스키마를 변환한 후 자동으로이 보고서를 표시할 수 수도 있습니다. 그러나 보고서 이름을 변환 보고서 됩니다. 자세한 내용은 참조 [프로젝트 설정 (GUI) (SSMA 공통)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **탐색기 창**  
 평가 보고서에 있는 개체의 계층 구조를 포함합니다. 개별 개체 및 하위 구성 요소를 표시할 폴더를 확장 합니다. 범주 또는 개체를 클릭할 때 해당 범주 또는 개체에 대 한 변환 통계 세부 정보 창에 나타납니다.  
   

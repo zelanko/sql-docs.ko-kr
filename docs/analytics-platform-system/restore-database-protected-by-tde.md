@@ -1,25 +1,25 @@
 ---
-title: "병렬 데이터 웨어하우스에서 TDE로 보호 되는 데이터베이스를 복원 합니다."
+title: 병렬 데이터 웨어하우스에서 TDE로 보호 되는 데이터베이스를 복원 합니다.
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 하려면 다음 단계를 사용 합니다."
+description: 투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 하려면 다음 단계를 사용 합니다.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: "4"
-ms.openlocfilehash: 5df3843a3e329901f8f77b65e5f6d4ff69cf6dbf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 4
+ms.openlocfilehash: 2421b618f9f1d736b90fd882aad9e3ab9aae82f5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="restore-a-database-protected-by-tde"></a>TDE로 보호 되는 데이터베이스를 복원 합니다.
 투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 하려면 다음 단계를 사용 합니다.  

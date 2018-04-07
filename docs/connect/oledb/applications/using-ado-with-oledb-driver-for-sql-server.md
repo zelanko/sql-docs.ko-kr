@@ -10,7 +10,7 @@ ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 31dfd17d0e5f12cfddf88030e2b3516ea3ada0e6
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 3003fd77624f7e304f8e3f493148475c1187a86b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>SQL Server 용 OLE DB 드라이버와 함께 ADO를 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -171,4 +171,4 @@ Set con = Nothing
  이전 버전의 OLE DB 공급자에서는 단일 연결당 하나의 활성 결과 집합만 열 수 있었으므로 이 코드를 두 번째로 실행하면 암시적 연결이 만들어집니다. 암시적 연결은 OLE DB 연결 풀에서 풀링되지 않았으므로 이로 인해 추가 오버헤드가 발생했습니다. SQL Server 용 OLE DB 드라이버에 의해 표시 MARS 기능을 사용 하면 하나의 연결에서 여러 활성 결과를 가져옵니다.  
 
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 용 OLE DB 드라이버 빌딩 응용 프로그램](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

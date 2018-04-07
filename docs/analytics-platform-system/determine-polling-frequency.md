@@ -1,26 +1,26 @@
 ---
-title: "폴링 빈도 (분석 플랫폼 시스템)를 결정 합니다."
+title: 폴링 빈도 (분석 플랫폼 시스템)를 결정 합니다.
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 062c0e3d-f7d0-44f1-aeab-a9bd17dc6fdd
-caps.latest.revision: "7"
-ms.openlocfilehash: 1dce371320f42df646e861b1323b352966ae9916
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 7
+ms.openlocfilehash: e67ab38c12000f3d78a9179a177ce5f673b8eaa2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="determine-polling-frequency"></a>폴링 빈도 결정 합니다.
 이 항목에서는 SQL Server PDW 어플라이언스에 경고에 대 한 폴링 빈도 결정 하는 방법에 설명 합니다.  
@@ -42,5 +42,5 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>관련 항목:  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[어플라이언스 모니터링 &#40; 분석 플랫폼 시스템 &#41;](appliance-monitoring.md)  
+[어플라이언스 모니터링 &#40;분석 플랫폼 시스템&#41;](appliance-monitoring.md)  
   

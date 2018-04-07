@@ -1,30 +1,31 @@
 ---
-title: "프로젝트 설정 (마이그레이션) (SybaseToSQL) | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 설정 (마이그레이션) (SybaseToSQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b032cb4f1453a3b9a2986e5d554d21c62e606001
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23e575ca7b7094ee835ff8432cfbdb906c875ce9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-sybasetosql"></a>프로젝트 설정 (마이그레이션) (SybaseToSQL)
 마이그레이션 페이지는 **프로젝트 설정** 대화 상자 SSMA가 마이그레이션하는 방법을 데이터에서 Sybase 적응형 Server Enterprise (ASE)를 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 |용어|정의|  
 |--------|--------------|  
-|**지원 되지 않는 날짜를 대체 합니다.**|SSMA 가능한 한 빨리 이전의 날짜를 수정 해야 하는지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime** 날짜 (1753 01 년 1 월).<br /><br />현재 날짜 값을 유지 하기 위해 선택 **아무 작업도 수행 하지**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime 열에는 1753 년 1 월 1 일 이전의 날짜를 수락 하지 않습니다. 오래 된 날짜를 사용 하 여 문자 값을 날짜/시간 값을 변환 해야 합니다.<br /><br />1753 년 1 월 1 일 이전의 날짜를 NULL로 변환 하려면 선택 **NULL로 대체**합니다.<br /><br />1753 년 1 월 1 일 이전 날짜는 지원 되는 날짜를 바꾸려면 선택 **지원 되는 날짜에 가장 가까운 바꿉니다**합니다.<br /><br />**기본 모드**: 아무 작업도 하지 않음<br /><br />**최적 모드**: 아무 작업도 하지 않음<br /><br />**전체 모드**: 지원 되는 날짜에 가장 가까운으로 대체 합니다.|  
+|**지원 되지 않는 날짜를 대체 합니다.**|SSMA 가능한 한 빨리 이전의 날짜를 수정 해야 하는지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime** 날짜 (1753 01 년 1 월).<br /><br />현재 날짜 값을 유지 하기 위해 선택 **아무 작업도 수행 하지**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 열에는 1753 년 1 월 1 일 이전의 날짜를 수락 하지 않습니다. 오래 된 날짜를 사용 하 여 문자 값을 날짜/시간 값을 변환 해야 합니다.<br /><br />1753 년 1 월 1 일 이전의 날짜를 NULL로 변환 하려면 선택 **NULL로 대체**합니다.<br /><br />1753 년 1 월 1 일 이전 날짜는 지원 되는 날짜를 바꾸려면 선택 **지원 되는 날짜에 가장 가까운 바꿉니다**합니다.<br /><br />**기본 모드**: 아무 작업도 하지 않음<br /><br />**최적 모드**: 아무 작업도 하지 않음<br /><br />**전체 모드**: 지원 되는 날짜에 가장 가까운으로 대체 합니다.|  
   
 ## <a name="migration-engine"></a>마이그레이션 엔진  
   

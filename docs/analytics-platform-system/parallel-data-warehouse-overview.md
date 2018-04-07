@@ -1,25 +1,25 @@
 ---
-title: "병렬 데이터 웨어하우스 개요"
+title: 병렬 데이터 웨어하우스 개요
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "이 항목에서는 원격 클라이언트 컴퓨터 및 분석 플랫폼 시스템의 비 어플라이언스 소프트웨어 구성 요소를 설명 합니다."
+description: 이 항목에서는 원격 클라이언트 컴퓨터 및 분석 플랫폼 시스템의 비 어플라이언스 소프트웨어 구성 요소를 설명 합니다.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: "20"
-ms.openlocfilehash: f2b6708f6e82340c971bdd3a6cc0cdb7e67f2d65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 42fb92c30c0487603f2ad8e870886f25b4c1655a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="parallel-data-warehouse-overview"></a>병렬 데이터 웨어하우스 개요
 이 항목에서는 원격 클라이언트 컴퓨터 및 분석 플랫폼 시스템의 비 어플라이언스 소프트웨어 구성 요소를 설명 합니다.  
@@ -248,15 +248,15 @@ For more information, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw
 ### <a name="admin-console"></a>관리 사용자  
 관리 콘솔을 사용 하면 어플라이언스 상태에 대 한 현재 상태를 볼 수 있습니다. 이 컨트롤 노드에서 웹 응용 프로그램으로 실행 되며은 https를 통해 액세스할 수 있습니다.  
   
-자세한 내용은 참조 [관리 콘솔 &#40;를 사용 하 여 어플라이언스에 모니터링 분석 플랫폼 시스템 &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+자세한 내용은 참조 [관리 콘솔을 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 
 ### <a name="system-views"></a>시스템 뷰  
 관리 콘솔은 시스템 뷰 쿼리를 기반으로 합니다. 개별적으로 특정 개수의 필요한 정보를 가져오려는 시스템 뷰를 쿼리할 수 있습니다.  
 
-자세한 내용은 참조 [종료 하거나 다시 사용 하 여 시스템 뷰 &#40; 모니터링 분석 플랫폼 시스템 &#41;](monitor-the-appliance-by-using-system-views.md) 
+자세한 내용은 참조 [시스템 뷰를 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-system-views.md) 
   
 ### <a name="system-center-operations-manager"></a>System Center Operations Manager  
 SQL Server PDW 용 관리 팩을 System Center Operations Manager (SCOM) 있습니다. 
 
-SCOM에 대 한 어플라이언스를 구성 하려면 참조 [종료 하거나 다시 사용 하 여 System Center Operations Manager &#40; 모니터링 분석 플랫폼 시스템 &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+SCOM에 대 한 어플라이언스를 구성 하려면 참조 [System Center Operations Manager를 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   

@@ -1,30 +1,31 @@
 ---
-title: "프로젝트 설정 (마이그레이션) (MySQLToSQL) | Microsoft Docs"
+title: 프로젝트 설정 (마이그레이션) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97ea6eb0162b544f3c0666042b0ae70a5783fe43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d6616502c370733bf0efa19eed97e6e2f022c5a0
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-mysqltosql"></a>프로젝트 설정 (마이그레이션) (MySQLToSQL)
 마이그레이션 페이지는 **프로젝트 설정** 대화 상자 SSMA가 마이그레이션하는 방법을 데이터 MySQL에서 SQL Server에 사용자 지정 하는 설정이 포함 되어 있습니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   에 현재 프로젝트에 대 한 설정을 지정 하려면는 **도구** 메뉴 선택 **프로젝트 설정**, 클릭 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **마이그레이션**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 ### <a name="bulk-copy"></a>대량 복사  
   

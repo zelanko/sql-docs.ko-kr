@@ -1,26 +1,26 @@
 ---
-title: "프로그램 IHV (분석 플랫폼 시스템)에서 얻을 수 있는 정보"
+title: 프로그램 IHV (분석 플랫폼 시스템)에서 얻을 수 있는 정보
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bce301a-704c-4236-a0a1-851bd17e2b6c
-caps.latest.revision: "11"
-ms.openlocfilehash: 2a86384f79c169048cc02e25e0178fa5fb12a391
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 11
+ms.openlocfilehash: 384a4051df1596dc334a78a751cb7954f512e8d5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="information-to-obtain-from-your-ihv"></a>사용자 IHV를 가져올 정보
 새 SQL Server PDW 어플라이언스를 제공 하는 독립 하드웨어 공급 업체 (IHV) 때 어플라이언스 수행한 어플라이언스 하드웨어 및 구성에 대 한 정보를 수행할 수도 됩니다. 어플라이언스를 관리 하려면이 정보가 필요 합니다.  

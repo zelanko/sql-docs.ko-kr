@@ -21,13 +21,13 @@ ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7f9b549716ed85abe6e2fdfbc7e3b5739286afe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe87892c50992968da7ada9b5a3b33a34442fbe6
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>테스트 사례 (SybaseToSQL) 보고서 보기
 테스트 사례 보고서에서는 테스트 확인 결과 및 일반 테스트 정보를 보여 줍니다. 테스트 실패 시 확인 된 개체의 모든 일치 하지 않는 데이터에 대 한 정보가 표시 됩니다.  
@@ -56,6 +56,6 @@ ms.lasthandoff: 12/21/2017
 으로 실행의 상태를 표시 **성공** 또는 **오류**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[테스트 사례 &#40; 실행 SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[데이터베이스 개체 &#40; 마이그레이션 테스트 SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[테스트 사례 실행 &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[데이터베이스 개체를 마이그레이션할 테스트 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

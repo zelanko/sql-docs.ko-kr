@@ -10,7 +10,7 @@ ms.component: ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 96f21a14b48e0cc5df2042149679f9bd848d38e6
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 4e89b51abc13d346ef0ed6d0ef77a5cb218157da
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="stored-procedures---calling"></a>저장된 프로시저-호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ ms.lasthandoff: 03/30/2018
 {rpc SalesByCategory}  
 ```  
   
- RPC 이스케이프 시퀀스를 보여 주는 샘플 응용 프로그램을 참조 하세요. [저장 프로시저 &#40; 실행 RPC 구문 &#41;를 사용 하 여 처리 반환 코드 및 출력 매개 변수 사용 &#40; OLE db&#41; ](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ RPC 이스케이프 시퀀스를 보여 주는 샘플 응용 프로그램을 참조 하세요. [저장 프로시저 & #40; 실행 RPC 구문 & #41;를 사용 하 여 처리 반환 코드 및 출력 매개 변수 사용 & #40; OLE db& #41; ](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 문  
  ODBC CALL 이스케이프 시퀀스와 RPC 이스케이프 시퀀스는 저장된 프로시저를 호출 하기 위한 기본 메서드 대신 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 문. OLE DB Driver for SQL Server의 RPC 메커니즘을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 명령 처리를 최적화 합니다. 이 RPC 프로토콜은 서버에서 수행되는 매개 변수 처리와 문 구문 분석의 대부분을 제거하여 성능을 향상시킵니다.  

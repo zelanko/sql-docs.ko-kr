@@ -1,15 +1,16 @@
 ---
-title: "SQL Server Migration Assistant for Access (AccessToSQL) 설치 | Microsoft Docs"
+title: SQL Server Migration Assistant for Access (AccessToSQL) 설치 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -28,26 +29,26 @@ helpviewer_keywords:
 - uninstalling SSMA
 - upgrading SSMA
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ed2247057865624d0e365a5cac24e390295975a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0b60003c1d9c7c266d57f6c0fc583b977561be72
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) 설치
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 액세스를 위해 Windows Installer 기반 마법사를 사용 하 여 설치 됩니다. 이 항목의 SSMA 최신 버전에 대 한 링크 설치 필수 구성 요소에 대 한 정보 및 설치, 라이선스, 제거 및 SSMA 업그레이드에 대 한 지침을 제공 합니다.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 액세스를 위해 Windows Installer 기반 마법사를 사용 하 여 설치 됩니다. 이 항목의 SSMA 최신 버전에 대 한 링크 설치 필수 구성 요소에 대 한 정보 및 설치, 라이선스, 제거 및 SSMA 업그레이드에 대 한 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 SSMA를 설치 하기 전에 시스템에는 다음 요구 사항을 충족 하는지 확인 합니다.  
   
 -   Windows 7 또는 이후 버전 또는 Windows Server 2008 또는 이상 버전  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 또는 이후 버전입니다.  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 또는 이후 버전입니다.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 버전 4.0 또는 이후 버전입니다. .NET Framework 버전 4.0에서 사용할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 제품 디스크에서 정보를 사용 하 여는 [Microsoft.NET 가이드](https://docs.microsoft.com/en-us/dotnet/framework/)합니다.
   
@@ -69,7 +70,7 @@ SSMA를 설치 하기 전에 최신 버전을 다운로드 한 후의 설치 파
   
 **SSMA를 설치 하려면**  
   
-1.  Access 용 SSMA를 두 번 클릭  *n* .msi, 여기서  *n*  는 빌드 번호입니다.  
+1.  Access 용 SSMA를 두 번 클릭 *n*.msi, 여기서 *n* 는 빌드 번호입니다.  
   
 2.  시작 페이지에서 클릭 **다음**합니다.  
   
@@ -97,7 +98,7 @@ Access 용 SSMA의 이후 버전으로 업그레이드 하려면 먼저 Access �
   
 Access 용 SSMA의 이전 버전에서 만든 프로젝트를 열면 프로젝트를 최신 버전으로 변환 하려면 SSMA 묻습니다. 클릭 **예** SSMA의 최신 버전의 프로젝트와 함께 작동 하도록 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [Access 데이터베이스 마이그레이션을 준비](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [SQL Server에 대 한 액세스 응용 프로그램 연결](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  

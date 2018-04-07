@@ -21,13 +21,13 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3aaec0d6811369af2ab4b5c52591af95fd944b57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9de9ab5f01b0d6b5bf46c45d091e93430cfb8067
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="setting-project-options-mysqltosql"></a>프로젝트 옵션 설정 (MySQLToSQL)
 각 SSMA 프로젝트에 대해 프로젝트 수준의 옵션을 설정할 수 있습니다. 이러한 옵션에는 개체를 변환 하는 방법을, 데이터가 마이그레이션되는 방식 및 원본 데이터 형식이 대상 데이터 형식으로 매핑되는 방법을 지정 합니다.  SQL Server 또는 SQL Azure에 개체를 변환 하거나 SQL Server 또는 SQL Azure로 데이터를 마이그레이션하려면 하기 전에 구성 옵션은 프로젝트에 적절 한지 확인 합니다.  
@@ -49,7 +49,7 @@ SSMA는 프로젝트 설정의 5 개 세트:
   
 프로젝트 설정 네 가지 방법으로 구성할 수 있습니다.  
   
--   Default  
+-   기본값  
   
 -   Optimistic  
   
@@ -61,17 +61,17 @@ SSMA는 프로젝트 설정의 5 개 세트:
   
 설정과 각 모드에서 설정이 적용 되는 방식을 대 한 자세한 내용은 다음 항목을 참조 합니다.  
   
--   [프로젝트 설정 &#40; 변환 &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+-   [프로젝트 설정 &#40;변환&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
--   [프로젝트 설정 &#40; 마이그레이션 &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
+-   [프로젝트 설정 &#40;마이그레이션&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
 -   [프로젝트 설정 (GUI) (SSMA 공통)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [프로젝트 설정 &#40; 형식 매핑 &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
+-   [프로젝트 설정 &#40;형식 매핑&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
--   [프로젝트 설정 &#40; 동기화 &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+-   [프로젝트 설정 &#40;동기화&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [프로젝트 설정 &#40; Azure SQL DB &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [프로젝트 설정 &#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>프로젝트 옵션 설정  
 SSMA를 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니다. 이러한 설정은 SSMA 구성 파일에 저장 되며 만드는 모든 새 프로젝트에 적용 됩니다.  
@@ -107,10 +107,10 @@ SSMA를 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니�
 ## <a name="next-step"></a>다음 단계  
 다음 단계는 마이그레이션에서 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   원본 및 대상 데이터 형식 매핑, 사용자 지정 하려면 참조 [매핑 MySQL 및 SQL Server 데이터 형식 &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   원본 및 대상 데이터 형식 매핑, 사용자 지정 하려면 참조 [매핑 MySQL 및 SQL Server 데이터 형식 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   그렇지 않으면 SQL Server 또는 SQL Azure 개체 정의에 MySQL 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 참조 [MySQL 데이터베이스 변환 &#40; MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   그렇지 않으면 SQL Server 또는 SQL Azure 개체 정의에 MySQL 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 참조 [MySQL 데이터베이스 변환 &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[MySQL 및 SQL Server 데이터 형식 &#40; 매핑 MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+[MySQL 및 SQL Server 데이터 형식 매핑 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

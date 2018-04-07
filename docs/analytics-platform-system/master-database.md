@@ -1,27 +1,27 @@
 ---
-title: "master 데이터베이스 (SQL Server PDW)"
+title: master 데이터베이스 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c71617c0-6689-4f52-81c6-58f4cf7c7377
-caps.latest.revision: "8"
+caps.latest.revision: 8
 ms.workload: not set
-ms.openlocfilehash: 1fde1a329703ed833a9fdeb6686b1a63c04aea79
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0031e4720c7fbcf7e60b7e35a59d16ad31a24103
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="master-database"></a>master 데이터베이스
 SQL Server PDW 마스터 데이터베이스 수준의 어플라이언스에 로그인 정보 및 데이터베이스 카탈로그에 저장합니다. 제어 노드에 있는 SQL Server 마스터 데이터베이스. 따라서 SQL Server에 제공 하는 마스터 SQL Server PDW에 유사한 기능을 제공 합니다.  

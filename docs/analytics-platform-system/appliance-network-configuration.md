@@ -1,26 +1,26 @@
 ---
-title: "어플라이언스 네트워크 구성 (분석 플랫폼 시스템)"
+title: 어플라이언스 네트워크 구성 (분석 플랫폼 시스템)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: "27"
-ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 27
+ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="appliance-network-configuration"></a>어플라이언스 네트워크 구성
 SQL Server PDW 어플라이언스에 작성 및 수정 프로그램 집합의 모든 서버 및 IHV의 공장 현장에서 적용 가능한 장치 전체에서 IP 주소를 사용 하 여 구성 합니다. 어플라이언스의 배달에는 특정 고객의 데이터 센터 요구 사항에 맞게 (이더넷) 외부 IP 주소를 구성 해야 합니다.  
@@ -30,7 +30,7 @@ SQL Server PDW 어플라이언스에 작성 및 수정 프로그램 집합의 �
   
 **네트워크 구성** 페이지 분석 플랫폼 시스템 어플라이언스에 노드에 대 한 외부와 접한 네트워크 설정을 볼 수 있습니다. 이 페이지는 읽기 전용입니다.  
   
-![DWConfig 어플라이언스 네트워크](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>어플라이언스 네트워크 구성을 업데이트 하려면  
 HDInsight 도메인 패브릭 도메인 및 작업 도메인의 IP 주소를 편집 하 여 변경에서 **AplianceInfo.xml** 파일과 다음 설치 프로그램을 실행 합니다. 이 작업은 오프 라인 작업입니다. HDInsight (있는 경우)와 PDW 영역 IP 주소가 변경 될 때 자동으로 중지 됩니다.  
@@ -65,5 +65,5 @@ Dell 어플라이언스에 대 한 자세한 내용은 다음을 참조 하세�
 -   PDU의 **Dell 랙 PDU 요금**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
 ## <a name="see-also"></a>관련 항목:  
-[구성 관리자 &#40; 시작 분석 플랫폼 시스템 &#41;](launch-the-configuration-manager.md)  
+[구성 관리자를 시작 &#40;분석 플랫폼 시스템&#41;](launch-the-configuration-manager.md)  
   

@@ -10,7 +10,7 @@ ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -27,11 +27,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2411e95fe2e31da8ba0d51e82a70cd265a0b9448
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 932a5c8d272bf975e4931326b96bea495e927a08
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>OLE DB 드라이버를 사용 하 여 SQL Server 헤더 및 라이브러리 파일
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,6 +84,6 @@ include "msoledbsql.h";
  자세한 내용은 참조 공연 [대량 복사 작업 수행](../../oledb/features/performing-bulk-copy-operations.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 용 OLE DB 드라이버 빌딩 응용 프로그램](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   

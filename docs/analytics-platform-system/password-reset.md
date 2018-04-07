@@ -1,26 +1,26 @@
 ---
-title: "암호 재설정 (분석 플랫폼 시스템)"
+title: 암호 재설정 (분석 플랫폼 시스템)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
-caps.latest.revision: "26"
-ms.openlocfilehash: 5b342aca4498816e59e0fafcb882c5c039fed501
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 0574cf85dc4baaf6d92159aa423a0b1771042c59
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="password-reset"></a>암호 다시 설정
 **암호 재설정** 페이지 분석 플랫폼 시스템에서 사용 하는 관리자 계정에 대 한 암호를 변경할 수 있습니다.  
@@ -30,10 +30,10 @@ ms.lasthandoff: 12/21/2017
   
 분석 플랫폼 시스템 암호 어플라이언스에 배달 될 때 제공 됩니다. 항상 장치에 대 한 책임을 져야 때 암호를을 새 값으로 변경 합니다. 업데이트 하려면 세 개의 암호 있습니다. 암호는 서로와 동일할 필요가 없습니다.  
   
-**F <*xxxx*> \Administrator**  
+**F<*xxxx*>\Administrator**  
 **관리자** 기기 도메인의 합니다.  
   
-**. \Administrator**  
+**.\Administrator**  
 로컬 **관리자** 가상 컴퓨터를 호스팅하는 컴퓨터에는 계정입니다.  
   
 > [!IMPORTANT]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="to-reset-a-password"></a>암호를 재설정 하려면  
   
-1.  시작 및 제어 노드가에 연결 된 **Configuration Manager** (**dwconfig.exe**). 자세한 내용은 참조 [구성 관리자 &#40; 시작 분석 플랫폼 시스템 &#41; ](launch-the-configuration-manager.md).  
+1.  시작 및 제어 노드가에 연결 된 **Configuration Manager** (**dwconfig.exe**). 자세한 내용은 참조 [구성 관리자를 시작 &#40;분석 플랫폼 시스템&#41;](launch-the-configuration-manager.md)합니다.  
   
 2.  왼쪽된 창에는 **Configuration Manager**, 클릭 **암호 재설정**합니다.  
   
@@ -61,6 +61,6 @@ ms.lasthandoff: 12/21/2017
     ![SQL Server DWConfig 암호](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
 ## <a name="see-also"></a>관련 항목:  
-[디렉터리 서비스에 노드가 AD에 로그인 하기 위해 관리자 암호 설정 복원 모드 &#40; DSRM &#41; &#40; 분석 플랫폼 시스템 &#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
-[구성 관리자 &#40; 시작 분석 플랫폼 시스템 &#41;](launch-the-configuration-manager.md)  
+[디렉터리 서비스 복원 모드로 AD 노드에 로그인 하기 위해 관리자 암호 설정 &#40;DSRM&#41; &#40;분석 플랫폼 시스템&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
+[구성 관리자를 시작 &#40;분석 플랫폼 시스템&#41;](launch-the-configuration-manager.md)  
   

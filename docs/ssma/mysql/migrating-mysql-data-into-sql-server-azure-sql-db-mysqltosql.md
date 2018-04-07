@@ -1,15 +1,16 @@
 ---
-title: "MySQL 데이터를 Azure SQL DB (MySQLToSQL)-SQL Server로 마이그레이션 | Microsoft Docs"
+title: MySQL 데이터를 Azure SQL DB (MySQLToSQL)-SQL Server로 마이그레이션 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Data Migration, server side data migration
 - Data Migration,client side data migration
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0887825cf16986b78cad5d1889a04d73dacf222a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5bef9d72e855f70d520323950b789c1c330bcde4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>MySQL 데이터를 Azure SQL DB (MySQLToSQL)-SQL Server로 마이그레이션
 으로 변환 된 개체를 성공적으로 동기화 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL Azure에서 MySQL에 데이터를 마이그레이션할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다.  
@@ -106,11 +107,11 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > MySQL 확장 팩 용 SSMA의 SQL Server 인스턴스에 설치 되어 있지 않으면 및 경우 **서버 쪽 데이터 마이그레이션 엔진** 을 선택 하면 데이터베이스에서 대상 데이터베이스로 데이터를 마이그레이션하는 동안 다음 오류가 발생 한 후: ' SSMA 데이터 마이그레이션 구성 요소를 찾을 수 없습니다 SQL Server, 서버 쪽 데이터 마이그레이션 지원 되지 것입니다. 확장 팩 올바르게 설치 되어 있는지를 확인 하십시오. '. 클릭 **취소** 데이터 마이그레이션을 종료 하 합니다.  
   
-5.  에 **MySQL에 연결** 대화 상자에서 연결 자격 증명을 입력 한 다음 클릭 **연결**합니다. MySQL에 연결 하는 방법에 대 한 자세한 내용은 참조 하십시오. [MySQL &#40;에 연결 MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+5.  에 **MySQL에 연결** 대화 상자에서 연결 자격 증명을 입력 한 다음 클릭 **연결**합니다. MySQL에 연결 하는 방법에 대 한 자세한 내용은 참조 하십시오. [MySQL에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
     대상 데이터베이스가 SQL Server 인 경우에 연결 자격 증명을 입력 한 다음,는 **SQL Server에 연결** 대화 상자와 클릭 **연결**합니다. SQL Server에 연결 하는 방법에 대 한 자세한 내용은 참조 하십시오. [SQL Server에 연결](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
-    SQL Azure 데이터베이스에서 대상 데이터베이스로 사용 하는 경우의 연결 자격 증명을 입력 한 다음는 **SQL Azure에 연결** 대화 상자와 클릭 **연결**합니다. SQL Azure에 연결 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Azure SQL DB &#40;에 연결 MySQLToSQL &#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
+    SQL Azure 데이터베이스에서 대상 데이터베이스로 사용 하는 경우의 연결 자격 증명을 입력 한 다음는 **SQL Azure에 연결** 대화 상자와 클릭 **연결**합니다. SQL Azure에 연결 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Azure SQL DB에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
   
     메시지에 표시 됩니다는 **출력** 창. 마이그레이션이 완료 되는 **데이터 마이그레이션 보고서** 나타납니다. 모든 데이터 마이그레이션하지 않은 경우 오류를 포함 하는 행을 클릭 한 다음 클릭 **세부 정보**합니다. 보고서와 함께 완료 했으면 클릭 **닫기**합니다. 데이터 마이그레이션 보고서에 대 한 자세한 내용은 참조 하십시오. [(SSMA 공통) 데이터 마이그레이션 보고서](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
@@ -118,5 +119,5 @@ ms.lasthandoff: 12/21/2017
 > SQL Express edition으로 대상 데이터베이스를 사용 하면 클라이언트 쪽 데이터 마이그레이션에만 사용할 수 및 서버 쪽 데이터 마이그레이션이 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB &#40; SQL Server-MySQL 데이터베이스 마이그레이션 MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server-SQL Azure DB로 데이터베이스 마이그레이션 MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

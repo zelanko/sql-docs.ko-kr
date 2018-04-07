@@ -1,26 +1,26 @@
 ---
-title: "다운로드 하 여 Microsoft 업데이트 (분석 플랫폼 시스템)를 적용 합니다."
+title: 다운로드 하 여 Microsoft 업데이트 (분석 플랫폼 시스템)를 적용 합니다.
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: "51"
-ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 51
+ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="download-and-apply-microsoft-updates"></a>다운로드 하 여 Microsoft 업데이트 적용
 이 항목에서는 Windows Server Update Services (WSUS)를 Microsoft Update 카탈로그에서 업데이트를 다운로드 하 고 분석 플랫폼 시스템 기기 서버 해당 업데이트를 적용 하는 방법에 설명 합니다. Microsoft 업데이트를 통해 Windows 및 SQL Server에 대 한 모든 적용 가능한 업데이트를 설치 합니다. WSUS는 어플라이언스의 VMM 가상 컴퓨터에 설치 됩니다.  
@@ -32,22 +32,22 @@ ms.lasthandoff: 12/21/2017
 >   
 > 어플라이언스에 사용 중인 동안에 Microsoft 업데이트를 적용 하지 마십시오. 업데이트를 적용 하면 어플라이언스 노드를 다시 부팅 될 수 있습니다. 어플라이언스를 사용 하는 경우 유지 관리 기간 동안 업데이트를 적용 되어야 합니다.  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>필수 구성 요소  
 다음이 단계를 수행 하기 전에 해야 합니다.  
   
--   지침에 따라 WSUS 어플라이언스 구성 [Windows Server Update Services 구성 &#40; WSUS &#41; &#40; 분석 플랫폼 시스템 &#41; ](configure-windows-server-update-services-wsus.md).  
+-   지침에 따라 WSUS 어플라이언스 구성 [Windows Server Update Services 구성 &#40;WSUS&#41; &#40;분석 플랫폼 시스템&#41;](configure-windows-server-update-services-wsus.md)합니다.  
   
 -   패브릭 도메인 관리자 계정 로그인 정보를 알고 있어야 합니다.  
   
 -   분석 플랫폼 시스템 관리 콘솔에 액세스 하 고 어플라이언스 상태 정보를 볼 수 있는 권한이 있는 로그인이 있어야 합니다.  
   
--   대부분의 경우에서 WSUS 어플라이언스에 외부 서버에 액세스 해야 합니다. 분석 플랫폼 시스템 DNS 외부의 분석 플랫폼 시스템 호스트 및 가상 컴퓨터 (Vm) 이름을 확인 하기 위해 외부 DNS 서버를 사용할 수 있는 외부 이름 전달자를 지원 하도록 구성할 수 있습니다이 사용 시나리오를 지원 하기 위해는 구성할 수 있습니다. 자세한 내용은 참조 [해결 비 어플라이언스 DNS 이름 &#40; DNS 전달자를 사용 하 여 분석 플랫폼 시스템 &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   대부분의 경우에서 WSUS 어플라이언스에 외부 서버에 액세스 해야 합니다. 분석 플랫폼 시스템 DNS 외부의 분석 플랫폼 시스템 호스트 및 가상 컴퓨터 (Vm) 이름을 확인 하기 위해 외부 DNS 서버를 사용할 수 있는 외부 이름 전달자를 지원 하도록 구성할 수 있습니다이 사용 시나리오를 지원 하기 위해는 구성할 수 있습니다. 자세한 내용은 참조 [비 어플라이언스 DNS 이름 확인에 DNS 전달자를 사용 하 여 &#40;분석 플랫폼 시스템&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)합니다.  
   
 ## <a name="bkmk_ImportUpdates"></a>다운로드 하 여 Microsoft 업데이트 적용  
   
 #### <a name="verify-the-appliance-state-indicators"></a>어플라이언스 상태 표시기를 확인 합니다.  
   
-1.  관리 콘솔을 열고 기기 상태 페이지로 이동 합니다. 자세한 내용은 참조 [관리 콘솔 &#40;를 사용 하 여 어플라이언스에 모니터링 분석 플랫폼 시스템 &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+1.  관리 콘솔을 열고 기기 상태 페이지로 이동 합니다. 자세한 내용은 참조 [관리 콘솔을 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
 2.  어플라이언스 상태에서 모든 노드에 대 한 상태 표시기를 확인 합니다.  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/21/2017
   
     ![모든 업데이트를 적용 하 고 승인을 클릭을 선택 합니다. ] (./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  만든 기기 서버 그룹을 선택 [Windows Server Update Services 구성 &#40; WSUS &#41; &#40; 분석 플랫폼 시스템 &#41; ](configure-windows-server-update-services-wsus.md).  
+4.  만든 기기 서버 그룹을 선택 [Windows Server Update Services 구성 &#40;WSUS&#41; &#40;분석 플랫폼 시스템&#41;](configure-windows-server-update-services-wsus.md)합니다.  
   
 5.  클릭 **설치 승인**, 클릭 하 고 **확인**합니다.  
   
@@ -111,9 +111,9 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="apply-microsoft-updates"></a>Microsoft 업데이트 적용  
   
-1.  시작 하기 전에 열에서 [관리 콘솔 &#40;를 사용 하 여 어플라이언스에 모니터링 분석 플랫폼 시스템 &#41; ](monitor-the-appliance-by-using-the-admin-console.md), 클릭는 **기기 상태** 탭을 확인 하는 **클러스터** 및 **네트워크** 모든 노드에 대 한 열 녹색 표시 (또는 NA). 경고 이러한 열 중 하나에 있으면 기기 제대로 업데이트를 설치 하지 못할 수 있습니다. 주소에서 모든 기존 경고는 **클러스터** 및 **네트워크** 계속 진행 하기 전에 열입니다.  
+1.  시작 하기 전에 열는 [관리 콘솔을 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md), 클릭는 **기기 상태** 탭을 확인 하는  **클러스터** 및 **네트워크** 모든 노드에 대 한 열 녹색 표시 (또는 NA). 경고 이러한 열 중 하나에 있으면 기기 제대로 업데이트를 설치 하지 못할 수 있습니다. 주소에서 모든 기존 경고는 **클러스터** 및 **네트워크** 계속 진행 하기 전에 열입니다.  
   
-2.  로그온 하는 *< i n _ >***-HST01** 패브릭 도메인 관리자로 노드.  
+2.  로그온 하는 *< i n _ > * * *-HST01** 패브릭 도메인 관리자로 노드.  
   
 3.  WSUS에 대 한 승인 된 모든 업데이트를 적용 하려면 업데이트 프로그램을 실행 합니다. 참조 [업데이트 프로그램 실행](#RunUpdateWizard) 아래 지침에 대 한 합니다.  
   
@@ -125,11 +125,11 @@ ms.lasthandoff: 12/21/2017
   
 3.  확장 **모든 컴퓨터**합니다.  
   
-4.  만든 기기 서버 그룹을 선택 [Windows Server Update Services 구성 &#40; WSUS &#41; &#40; 분석 플랫폼 시스템 &#41; ](configure-windows-server-update-services-wsus.md).  
+4.  만든 기기 서버 그룹을 선택 [Windows Server Update Services 구성 &#40;WSUS&#41; &#40;분석 플랫폼 시스템&#41;](configure-windows-server-update-services-wsus.md)합니다.  
   
 5.  에 **상태** 드롭 다운 메뉴 **모든** 클릭 **새로 고침**합니다.  
   
-6.  확장 **서비스 업데이트**,  *<appliance name>* -VMM에서는 **업데이트**, **모든 업데이트**여기서  *<appliance name>*  기기 이름입니다.  
+6.  확장 **서비스 업데이트**, *<appliance name>*-VMM에서는 **업데이트**, **모든 업데이트**여기서 *<appliance name>* 기기 이름입니다.  
   
 7.  에 **모든 업데이트** 창 집합 **승인** 를 **모든 예외 거부 됨**합니다.  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="ensure-there-are-no-critical-alerts-in-the-sql-server-pdw-admin-console"></a>SQL Server PDW 관리 콘솔에서 중요 한 알림이 있는 있는지 확인 하십시오  
   
-1.  관리 콘솔을 열고, 기기 상태 탭을 클릭 합니다. 참조 [관리 콘솔 &#40;를 사용 하 여 어플라이언스에 모니터링 분석 플랫폼 시스템 &#41; ](monitor-the-appliance-by-using-the-admin-console.md).  
+1.  관리 콘솔을 열고, 기기 상태 탭을 클릭 합니다. 참조 [관리 콘솔을 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)합니다.  
   
 2.  확인 된 **클러스터** 및 **네트워크** 모든 노드에 대 한 열 녹색 표시 (또는 NA). 경고 이러한 열 중 하나에 있으면 기기 제대로 업데이트를 설치 하지 못할 수 있습니다. 모든 중요 한 경고가 지원에 문의 합니다.  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  HST01 노드 패브릭 도메인 관리자가에 로그인 되어 있는지 확인 합니다.  
   
-2.  명령 프롬프트 창을 열고 다음 명령을 입력 합니다. 대체  *<parameter>*  지정된 정보를 사용 합니다.  
+2.  명령 프롬프트 창을 열고 다음 명령을 입력 합니다. 대체 *<parameter>* 지정된 정보를 사용 합니다.  
   
 **실행 하려면 Microsoft 업데이트:**  
   
@@ -168,8 +168,8 @@ C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAd
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
-[Microsoft 업데이트 &#40; 제거 분석 플랫폼 시스템 &#41;](uninstall-microsoft-updates.md)  
-[분석 플랫폼 시스템 핫픽스 &#40; 적용 분석 플랫폼 시스템 &#41;](apply-analytics-platform-system-hotfixes.md)  
-[분석 플랫폼 시스템 핫픽스 &#40; 제거 분석 플랫폼 시스템 &#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[소프트웨어 설치 &#40; 분석 플랫폼 시스템 &#41;](software-servicing.md)  
+[업데이트 제거 &#40;분석 플랫폼 시스템&#41;](uninstall-microsoft-updates.md)  
+[분석 플랫폼 시스템 핫픽스를 적용 &#40;분석 플랫폼 시스템&#41;](apply-analytics-platform-system-hotfixes.md)  
+[분석 플랫폼 시스템 핫픽스 제거 &#40;분석 플랫폼 시스템&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+[소프트웨어 서비스 &#40;분석 플랫폼 시스템&#41;](software-servicing.md)  
   

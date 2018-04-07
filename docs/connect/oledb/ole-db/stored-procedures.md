@@ -10,7 +10,7 @@ ms.component: ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,16 +22,16 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b3b294bb410423688f94521b857ca3062e02c4e
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: bbae7466e59e16be3195637987ce0b6724078934
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="stored-procedures"></a>저장 프로시저
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  저장된 프로시저 ([저장 프로시저 &#40; 데이터베이스 엔진 &#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md))는 실행 개체는 데이터베이스에 저장 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 다음과 같은 프로시저를 지원합니다.  
+  저장된 프로시저 ([저장 프로시저 & #40; 데이터베이스 엔진 & #41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md))는 실행 개체는 데이터베이스에 저장 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 다음과 같은 프로시저를 지원합니다.  
   
 -   저장 프로시저  
   
@@ -43,9 +43,9 @@ ms.lasthandoff: 03/30/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [실행 저장 프로시저 &#40; OLE db&#41;](../../oledb/ole-db/stored-procedures-running.md)  
+-   [실행 저장 프로시저 & #40; OLE db& #41;](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [호출 하는 저장된 프로시저 &#40; OLE db&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [호출 하는 저장된 프로시저 & #40; OLE db& #41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  

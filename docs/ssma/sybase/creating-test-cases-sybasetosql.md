@@ -21,13 +21,13 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8028f170d5f3154b9874cda16cc18bd7b36a84b8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0647f807a6a28eb1dc450d3e38b2e591f1b51dd2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-test-cases-sybasetosql"></a>테스트 사례 (SybaseToSQL) 만들기
 테스트 사례 마법사를 사용 하 여 테스트를 만들려고 합니다. 이 마법사를 사용 하면 테스트 매개 변수를 지정 하 고 테스트 하 고 확인할 개체를 선택 하 여 테스트 사례를 만들 수 있습니다.  
@@ -42,16 +42,16 @@ ms.lasthandoff: 12/21/2017
 ## <a name="overview-of-creating-test-cases-using-the-wizard"></a>마법사를 사용 하 여 테스트 사례 만들기 개요  
 테스트 사례를 만드는 과정 5 단계로 구성 됩니다.  
   
-1.  [테스트 사례 &#40; 초기화 SybaseToSQL &#41; ](../../ssma/sybase/initializing-test-cases-sybasetosql.md).  
+1.  [테스트 사례 초기화 &#40;SybaseToSQL&#41;](../../ssma/sybase/initializing-test-cases-sybasetosql.md)합니다.  
   
-2.  [선택 하 고 테스트 &#40; 개체를 구성 합니다. SybaseToSQL &#41; ](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md).  
+2.  [선택 하 고 테스트 하는 개체 구성 &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)합니다.  
   
-3.  [선택 하 고 영향을 받는 개체 &#40; 구성 합니다. SybaseToSQL &#41; ](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md).  
+3.  [영향을 받는 개체 선택 및 구성 &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)합니다.  
   
-4.  [호출 순서 &#40; 사용자 지정 SybaseToSQL &#41; ](../../ssma/sybase/customizing-calls-order-sybasetosql.md).  
+4.  [호출 순서 사용자 지정 &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)합니다.  
   
-5.  [테스트 사례 준비 &#40; 마치는 중 SybaseToSQL &#41; ](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md).  
+5.  [테스트 사례 준비를 마친 &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 개체 &#40; 마이그레이션 테스트 SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[데이터베이스 개체를 마이그레이션할 테스트 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

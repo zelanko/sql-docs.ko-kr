@@ -1,30 +1,31 @@
 ---
-title: "DB2 콘솔 (DB2ToSQL) 용 SSMA 시작 | Microsoft Docs"
+title: DB2 콘솔 (DB2ToSQL) 용 SSMA 시작 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cfffdb6df256ed0ee591965b1d1ac98cf3c1d721
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec1529fcf61472119612062819a16190b7fe3dfd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>DB2 콘솔 (DB2ToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 DB2 콘솔 응용 프로그램을 시작 하는 절차를 설명 합니다. 또한 나열 된 여기에 규칙이 사용 일반적인 SSMA 콘솔 출력 창에.  
@@ -41,13 +42,13 @@ SSMA 콘솔 응용 프로그램을 시작 하려면 다음 단계를 사용 합�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA 콘솔을 사용 하기 위한 절차  
 Windows 시스템에 콘솔이 성공적으로 시작 후에 작업을 다음 단계를 사용할 수 있습니다.  
   
-1.  SSMA 콘솔 스크립트 파일을 통해 구성 합니다. 이 섹션에 대 한 자세한 내용은 참조 하십시오. [스크립트 파일 만들기 &#40; DB2ToSQL &#41;](../../ssma/db2/creating-script-files-db2tosql.md) 합니다.  
+1.  SSMA 콘솔 스크립트 파일을 통해 구성 합니다. 이 섹션에 대 한 자세한 내용은 참조 하십시오. [스크립트 파일 만들기 &#40;DB2ToSQL&#41; ](../../ssma/db2/creating-script-files-db2tosql.md) 합니다.  
   
-2.  [만드는 변수 값 파일 &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+2.  [변수 값 파일을 만드는 &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   
-3.  [서버 연결 파일 &#40; DB2ToSQL &#41; 만들기](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+3.  [서버 연결 파일 만들기 &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
-4.  [SSMA 콘솔 &#40; DB2ToSQL &#41;를 실행합니다. ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) 프로젝트 요구 사항에 따라  
+4.  [SSMA 콘솔 실행 &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) 프로젝트 요구 사항에 따라  
   
 추가 기능:  
   

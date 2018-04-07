@@ -1,25 +1,25 @@
 ---
-title: "백업 및 복원"
+title: 백업 및 복원
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "데이터 백업 및 복원에 대 한 SQL Server 병렬 데이터 웨어하우스 (PDW)을 작동 방법을 설명 합니다."
+description: 데이터 백업 및 복원에 대 한 SQL Server 병렬 데이터 웨어하우스 (PDW)을 작동 방법을 설명 합니다.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 
-ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 50
+ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="backup-and-restore"></a>백업 및 복원
 데이터 백업 및 복원에 대 한 SQL Server 병렬 데이터 웨어하우스 (PDW)을 작동 방법을 설명 합니다. 백업 및 복원 작업은 재해 복구에 사용 됩니다. 백업 및 복원 다른 어플라이언스에 하나의 기기에서 데이터베이스를 복사 하려면 사용할 수 있습니다.  
@@ -35,7 +35,7 @@ The [master database](master-database.md) is a SMP SQL Server database. It is ba
 
 -->
   
-PDW는 어플라이언스 데이터베이스 백업 및 복원에 SQL Server 백업 기술을 사용 합니다. SQL Server 백업 옵션은 백업 압축을 사용 하도록 미리 구성 합니다. 압축, 체크섬, 블록 크기 버퍼 개수 등의 백업 옵션을 설정할 수 없습니다.  
+PDW는 어플라이언스 데이터베이스 백업 및 복원에 SQL Server 백업 기술을 사용 합니다. SQL Server 백업 옵션은 백업 압축을 사용 하도록 미리 구성 합니다. 압축, 체크섬, 블록 크기 및 버퍼 개수 등의 백업 옵션을 설정할 수 없습니다.  
   
 데이터베이스 백업은 하나 이상의 백업 하는 서버에 고유한 고객 네트워크에 저장 됩니다.  PDW는 사용자 데이터베이스 백업을 동시에 계산 노드에서 직접 단일 백업 서버로 쓰고는 계산 노드 백업 서버에서 직접 동시에 사용자 데이터베이스 백업을 복원 합니다.  
   
@@ -46,7 +46,7 @@ PDW는 어플라이언스 데이터베이스 백업 및 복원에 SQL Server 백
   
 전체 데이터베이스 백업에 전체 PDW 데이터베이스의 백업이입니다. 기본 백업 형식입니다. 데이터베이스 사용자 및 데이터베이스 역할에 사용자 데이터베이스의 전체 백업에 포함 되어 있습니다. 백업 마스터의 로그인이 포함 됩니다.  
   
-차등 백업은 마지막 전체 백업 이후 모든 변경 내용을 포함합니다. 일반적으로 차등 백업은 전체 백업 보다 시간 하며 더 자주 수행 될 수 있습니다. 각 차등을 여러 차등 백업 전체를 같은 백업을 기반으로 이전 차등에 모든 변경 내용을 포함 합니다.  
+차등 백업은 마지막 전체 백업 이후 모든 변경 내용을 포함합니다. 차등 백업은 일반적으로 전체 백업보다 시간이 적게 들며 더 자주 수행할 수 있습니다. 각 차등을 여러 차등 백업 전체를 같은 백업을 기반으로 이전 차등에 모든 변경 내용을 포함 합니다.  
   
 예를 들어 매주 전체 백업 및 차등 백업은 매일 만들 수 있습니다. 사용자 데이터베이스, 전체 백업 및 마지막 복원 하려면 차등 (있는 경우)를 복원 해야 합니다.  
   
@@ -123,11 +123,11 @@ PDW는 어플라이언스 데이터베이스 백업 및 복원에 SQL Server 백
   
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>계산 노드 수가 많으면 어플라이언스에 복원  
   
-할당 된 데이터베이스 크기 계산 노드 수에 비례하여 증가 계산 노드 수가 많으면 어플라이언스에 백업을 복원 합니다.  
+계산 노드 수가 많은 어플라이언스로 백업을 복원하면 계산 노드 수에 비례하여 할당된 데이터베이스 크기가 커집니다.  
   
 예를 들어 2 노드 기기 (30GB 노드당)에서 6 개 노드 어플라이언스에 60GB 데이터베이스를 복원, SQL Server PDW 6 개 노드 어플라이언스에 180 GB 데이터베이스 (6 노드 30GB 노드당)를 만듭니다. SQL Server PDW 처음 2 노드 소스 구성과 일치 하도록 데이터베이스를 복원 하 고 6 노드 모두에 데이터를 다시 배포 합니다.  
   
-재배포 한 후 각 계산 노드가 더 적은 실제 데이터와 더 많은 여유 공간 보다 작은 원본 어플라이언스의 각 계산 노드가 포함 됩니다. 데이터베이스에 더 많은 데이터를 추가 하는 추가 공간을 사용 합니다. 복원 된 데이터베이스 크기가 필요한 것 보다 더 큰 경우 사용할 수 있습니다 [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) 데이터베이스 파일 크기를 축소 합니다.  
+재배포 후 각 계산 노드는 더 작은 원본 어플라이언스에서 각 계산 노드에 비해 더 적은 실제 데이터와 더 많은 여유 공간을 포함하게 됩니다. 데이터베이스에 더 많은 데이터를 추가하려면 추가 공간을 사용합니다. 복원 된 데이터베이스 크기가 필요한 것 보다 더 큰 경우 사용할 수 있습니다 [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) 데이터베이스 파일 크기를 축소 합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   

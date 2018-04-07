@@ -21,13 +21,13 @@ ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 222e32803e197a18d47c7bf65b76de3f8d24fa15
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8b45f4df847ac7fee3b69c147040355cea514587
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>SQL Server (SybaseToSQL)에 연결
 Sybase 적응형 Server Enterprise (ASE) 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 대상 인스턴스 중 하나에 연결 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. SSMA는 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오며 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에서 데이터베이스 메타 데이터를 표시 하 고는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기입니다. SSMA는의 인스턴스에 대 한 정보를 저장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 연결 되어 있지만 암호를 저장 하지 않습니다.  
@@ -52,7 +52,7 @@ Sybase 적응형 Server Enterprise (ASE) 데이터베이스를 마이그레이�
 ## <a name="establishing-a-sql-server-connection"></a>SQL Server 연결 설정  
 ASE 데이터베이스 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구문의 인스턴스에 대 한 연결을 설정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ASE 데이터베이스 또는 데이터베이스를 마이그레이션할 하려는 합니다.  
   
-연결 속성을 정의할 때도 데이터베이스 개체와 데이터 마이그레이션할 수를 지정 합니다. 에 연결한 후 ASE 스키마 수준에서이 매핑을 사용자 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 자세한 내용은 참조 [SQL Server 스키마 &#40; Sybase ASE 스키마 매핑 SybaseToSQL &#41; ](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md).  
+연결 속성을 정의할 때도 데이터베이스 개체와 데이터 마이그레이션할 수를 지정 합니다. 에 연결한 후 ASE 스키마 수준에서이 매핑을 사용자 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 자세한 내용은 참조 [Sybase ASE 스키마를 SQL Server 스키마로 매핑 &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)합니다.  
   
 > [!IMPORTANT]  
 > 에 연결 하려고 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 있는지 확인 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 실행 중이 고 연결을 허용할 수 있습니다.  
@@ -96,9 +96,9 @@ ASE 데이터베이스 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](../
 ||||||||
 |-|-|-|-|-|-|-|
 |**프로젝트 형식 및 대상 서버 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005<br /> (버전: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008<br /> (버전: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|SQL Azure|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|예|예|예|예|예||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||예|예|예|예||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||예|예|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||예|사용자 계정 컨트롤|사용자 계정 컨트롤|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||예|사용자 계정 컨트롤|예||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||||예|예|| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016|||||예||  
 |SQL Azure||||||예|  
@@ -127,14 +127,14 @@ ASE 데이터베이스 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](../
 ## <a name="next-step"></a>다음 단계  
 다음 단계는 마이그레이션에서 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   ASE 데이터베이스 및 스키마 간의 매핑을 사용자 지정 하려는 경우 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 및 스키마 참조 [SQL Server 스키마 &#40; Sybase ASE 스키마 매핑 SybaseToSQL &#41; ](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md).  
+-   ASE 데이터베이스 및 스키마 간의 매핑을 사용자 지정 하려는 경우 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 및 스키마 참조 [매핑 Sybase ASE 스키마를 SQL Server 스키마로 &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)합니다.  
   
--   참조 프로젝트에 대 한 구성 옵션을 사용자 지정 하려는 경우 [프로젝트 옵션 설정 &#40; SybaseToSQL &#41; ](../../ssma/sybase/setting-project-options-sybasetosql.md).  
+-   참조 프로젝트에 대 한 구성 옵션을 사용자 지정 하려는 경우 [프로젝트 옵션 설정 &#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)합니다.  
   
--   사용자 지정으로 소스 및 대상 데이터 형식 매핑, 참조 [매핑 Sybase ASE 및 SQL Server 데이터 형식 &#40; SybaseToSQL &#41; ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
+-   사용자 지정으로 소스 및 대상 데이터 형식 매핑, 참조 [매핑 Sybase ASE 및 SQL Server 데이터 형식 &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)합니다.  
   
--   이 중 하나를 수행 해야 하는 경우에 Sybase ASE 데이터베이스 개체 정의 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체 정의 합니다. 자세한 내용은 참조 [Sybase ASE 데이터베이스 개체 변환 &#40; SybaseToSQL &#41; ](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
+-   이 중 하나를 수행 해야 하는 경우에 Sybase ASE 데이터베이스 개체 정의 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체 정의 합니다. 자세한 내용은 참조 [Sybase ASE 데이터베이스 개체 변환 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB &#40; SQL Server-Sybase ASE 데이터베이스 마이그레이션 SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SQL Server-Azure SQL DB Sybase ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

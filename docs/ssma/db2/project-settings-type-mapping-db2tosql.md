@@ -1,31 +1,31 @@
 ---
-title: "프로젝트 설정 (형식 매핑) (DB2ToSQL) | Microsoft Docs"
+title: 프로젝트 설정 (형식 매핑) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ab07bb5ad3932c45dacb7aa1b359083f05ec9bf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a268c4a080248028d8eeb399db68f0de57412b01
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>프로젝트 설정 (형식 매핑) (DB2ToSQL)
 형식 매핑 페이지는 **프로젝트 설정** 대화 상자 SSMA DB2 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/15/2018
 **원본 형식**  
 매핑된 DB2 데이터 형식입니다.  
   
-대상 유형  
+**대상 유형**  
 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 지정된 된 DB2 데이터 형식에 대 한 데이터 형식입니다.  
   
 DB2 형식 매핑에 대 한 기본 SSMA 한 다음 섹션의 표를 참조 하십시오.  
@@ -276,5 +276,5 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |Xmltype|xml|  
   
 ## <a name="see-also"></a>관련 항목:  
-[사용자 인터페이스 참조 &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[사용자 인터페이스 참조 &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

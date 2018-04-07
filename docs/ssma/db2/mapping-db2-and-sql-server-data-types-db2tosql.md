@@ -1,36 +1,37 @@
 ---
-title: "매핑 DB2 및 SQL Server 데이터 형식 (DB2ToSQL) | Microsoft Docs"
+title: 매핑 DB2 및 SQL Server 데이터 형식 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88d98ac264e853a2bc94be002c2c2e4eeadee9ff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bb4f2a1e09861a701a83ef4cd66c6a5e979bc0fa
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>DB2 및 SQL Server 데이터 형식 (DB2ToSQL) 매핑
 DB2 데이터베이스 형식에서 다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 유형입니다. DB2 데이터베이스 개체를 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체를 d b 2에서 데이터 형식을 매핑하는 방법을 지정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 기본 데이터 형식 매핑을 사용할 수도 있고 다음 섹션에 나와 있는 것 처럼 매핑을 사용자 지정할 수 있습니다.  
   
 ## <a name="default-mappings"></a>기본 매핑  
-SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록이 참조 [프로젝트 설정 &#40; 형식 매핑 &#41; &#40; DB2ToSQL &#41; ](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
+SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록이 참조 [프로젝트 설정 &#40;유형 매핑&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)합니다.  
   
 ## <a name="type-mapping-inheritance"></a>형식 상속 매핑  
 프로젝트 수준, (예: 모든 저장된 프로시저), 범주 수준 개체 또는 개체 수준에서 형식 매핑을 사용자 지정할 수 있습니다. 낮은 수준에서 재정의 되지 않으면 설정은 상위 수준에서 상속 됩니다. 예를 들어, 매핑하는 경우 **smallmoney** 를 **money** 프로젝트 수준에서 프로젝트의 모든 개체 범주 또는 개체 수준에서 매핑을 사용자 지정 하지 않으면이 매핑을 사용 합니다.  
@@ -84,7 +85,7 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
   
     4.  아래 **대상 유형**, 대상을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
   
-        일부 형식은 대상 데이터 형식의 길이가 필요합니다. 필요한 경우 입력에 새 데이터 길이 **바꿉니다** 상자, 한 다음[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        일부 형식은 대상 데이터 형식의 길이가 필요합니다. 필요한 경우 입력에 새 데이터 길이 **바꿉니다** 상자, 한 다음 [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 4.  사용자 지정 데이터 형식 매핑을 제거 하려면 다음을 수행 합니다.  
   
@@ -94,9 +95,9 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
   
         상속 된 매핑을 제거할 수 없습니다. 그러나 상속 된 매핑은 특정 개체 또는 개체 범주에 대 한 사용자 지정 매핑에 의해 무시 됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
-마이그레이션 프로세스의 다음 단계 중 하나로 [평가 보고서 &#40; DB2ToSQL &#41;](../../ssma/db2/assessment-report-db2tosql.md) 또는 [DB2 스키마로 변환 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)합니다. 평가 보고서를 만드는 경우 DB2 개체는 자동으로 평가 하는 동안 변환 됩니다.  
+## <a name="next-steps"></a>다음 단계  
+마이그레이션 프로세스의 다음 단계 중 하나로 [평가 보고서 &#40;DB2ToSQL&#41; ](../../ssma/db2/assessment-report-db2tosql.md) 또는 [DB2 스키마 변환 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)합니다. 평가 보고서를 만드는 경우 DB2 개체는 자동으로 평가 하는 동안 변환 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SQL Server &#40; DB2ToSQL &#41; DB2 데이터베이스 마이그레이션](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server로 데이터베이스 마이그레이션 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

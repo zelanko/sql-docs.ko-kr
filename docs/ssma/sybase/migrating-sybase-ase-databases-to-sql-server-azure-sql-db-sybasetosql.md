@@ -1,30 +1,31 @@
 ---
-title: "SQL Server-Azure SQL DB에 Sybase ASE 데이터베이스 마이그레이션 | Microsoft Docs"
-ms.custom: 
+title: SQL Server-Azure SQL DB에 Sybase ASE 데이터베이스 마이그레이션 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c72fb7a884a7cf87f50327a2e653493cdc3522f3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 36019a97ab90eac654e0dba90a1cacaa381b88ab
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>SQL Server-Azure SQL 데이터베이스 (SybaseToSQL)로 SAP ASE 데이터베이스 마이그레이션
 SQL Server Migration Assistant (SSMA)에 대 한 SAP 적응형 Server Enterprise (ASE)은 SAP ASE 데이터베이스를 신속 하 게 마이그레이션할 수 있는 통합 환경을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 데이터베이스입니다. SSMA에 SAP ASE를 사용 하 여 있습니다 수 데이터베이스 개체와 데이터를 검토, 평가 마이그레이션할 데이터베이스, 데이터베이스 개체를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 데이터베이스 및 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 데이터베이스입니다.  
@@ -34,7 +35,7 @@ SAP ASE 데이터베이스에서 개체 및 데이터를 성공적으로 마이�
   
 1.  [새 SSMA 프로젝트 만들기](http://msdn.microsoft.com/en-us/11091d95-c488-48c3-891a-743cac94ac93)합니다.  
   
-    프로젝트를 만든 후에 프로젝트 변환, 마이그레이션 및 유형 매핑 옵션을 설정할 수 있습니다. 프로젝트 설정에 대 한 정보를 참조 하십시오. [프로젝트 옵션 설정 &#40; SybaseToSQL &#41; ](../../ssma/sybase/setting-project-options-sybasetosql.md). 데이터 형식 매핑 사용자 지정 하는 방법에 대 한 정보를 참조 하세요. [Sybase ASE 매핑 및 SQL Server 데이터 형식 &#40; SybaseToSQL &#41; ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
+    프로젝트를 만든 후에 프로젝트 변환, 마이그레이션 및 유형 매핑 옵션을 설정할 수 있습니다. 프로젝트 설정에 대 한 정보를 참조 하십시오. [프로젝트 옵션 설정 &#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)합니다. 데이터 형식 매핑 사용자 지정 하는 방법에 대 한 정보를 참조 하십시오. [Sybase ASE 매핑 및 SQL Server 데이터 형식 &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)합니다.  
   
 2.  [SAP ASE 데이터베이스 서버에 연결](http://msdn.microsoft.com/en-us/a45a2330-9175-4c9e-af38-ef920e350614)합니다.  
   
@@ -54,7 +55,7 @@ SAP ASE 데이터베이스에서 개체 및 데이터를 성공적으로 마이�
   
 9. 필요한 경우 데이터베이스 응용 프로그램을 업데이트 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
-[SAP ASE &#40; 용 SSMA를 설치합니다. SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
-[SSMA SAP ASE &#40;에 대 한 시작 SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
+## <a name="see-also"></a>참고 항목  
+[SAP ASE 용 SSMA를 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+[SAP ASE 용 SSMA 시작 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   

@@ -21,13 +21,13 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38cd19ee1684b52aa7e98d4e9cd30897098e3b4e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7f906350096e57c5be0f238dabdfd838d050080a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE 데이터베이스 개체 (SybaseToSQL) 변환
 에 연결 하려면 SAP 적응형 Server Enterprise (ASE)에 연결한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SAP 적응형 Server Enterprise (ASE) 데이터베이스 개체를 Azure SQL 및 집합 프로젝트 및 데이터 매핑 옵션을 변환할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 데이터베이스 개체입니다.  
@@ -38,7 +38,7 @@ ASE에서 개체 정의 가져와 데이터베이스 개체를 변환, 유사로
 SSMA 변환 중에 출력 창 및 오류 메시지를 출력 메시지를 인쇄는 **오류 목록** 창. 출력 및 오류 정보를 사용 하 여 ASE 데이터베이스 또는 원하는 변환 결과를 얻으려면 변환 프로세스를 수정할 수 있는지 확인 합니다.  
   
 ## <a name="setting-conversion-options"></a>변환 옵션 설정  
-개체를 변환 하기 전에 프로젝트 변환 옵션을 검토는 **프로젝트 설정** 대화 상자. 이 대화 상자를 사용 하 여 SSMA 함수 및 전역 변수를 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 참조 [프로젝트 설정 &#40; 변환 &#41; &#40; SybaseToSQL &#41; ](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
+개체를 변환 하기 전에 프로젝트 변환 옵션을 검토는 **프로젝트 설정** 대화 상자. 이 대화 상자를 사용 하 여 SSMA 함수 및 전역 변수를 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 참조 [프로젝트 설정 &#40;변환&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)합니다.  
   
 ## <a name="converting-ase-database-objects"></a>ASE 데이터베이스 개체를 변환합니다.  
 ASE 데이터베이스 개체를 변환 하려면 먼저, 변환할 개체를 선택 한 다음 SSMA는 변환을 수행 합니다. 변환 중에 출력 메시지를 볼 수는 **보기** 메뉴 선택 **출력**합니다.  
@@ -129,13 +129,13 @@ ASE 데이터베이스 개체를 변환 하려면 먼저, 변환할 개체를 �
   
 -   프로시저와 트리거의 원본 코드를 편집할 수는 **SQL** 탭 합니다.  
   
--   제거 하거나 문제가 있는 코드를 수정 하려면 SAP ASE 개체를 변경할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [SAP ASE &#40;에 연결 SybaseToSQL &#41; ](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+-   제거 하거나 문제가 있는 코드를 수정 하려면 SAP ASE 개체를 변경할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [SAP ASE 연결할 &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)합니다.  
   
 -   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Azure SQL 메타 데이터 탐색기와 Sybase 메타 데이터 탐색기가 개체를 로드 하기 전에 항목 옆에 있는 확인란의 선택을 취소 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Azure SQL 및 SAP ASE에서 데이터를 마이그레이션 또는 합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [를 SQL Server로 변환 된 데이터베이스 개체를 로드 / SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
-[SAP ASE로 데이터베이스 마이그레이션 SQL Server-Azure SQL 데이터베이스 &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>참고 항목  
+[SQL Server-Azure SQL 데이터베이스에 SAP ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

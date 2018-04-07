@@ -1,25 +1,25 @@
 ---
-title: "획득 및 AP PDW에 대 한 백업 서버를 구성 합니다."
+title: 획득 및 AP PDW에 대 한 백업 서버를 구성 합니다.
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Backup과 함께 사용 하기 위해 백업 서버로 기기 비 Windows 시스템을 구성 하 고 Analytics Platform System (APS) 및 SQL Server 병렬 데이터 웨어하우스 (PDW)의 기능을 복원 합니다."
+description: Backup과 함께 사용 하기 위해 백업 서버로 기기 비 Windows 시스템을 구성 하 고 Analytics Platform System (APS) 및 SQL Server 병렬 데이터 웨어하우스 (PDW)의 기능을 복원 합니다.
 ms.date: 10/20/2016
 ms.topic: article
-caps.latest.revision: "20"
+caps.latest.revision: 20
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>획득 하 고 백업 서버를 구성 합니다.
 이 항목에서는 Analytics Platform System (APS)의 백업 및 복원 기능을 통해 사용 하기 위해 백업 서버 및 SQL Server 병렬 데이터 웨어하우스 (PDW)와 비 어플라이언스 Windows 시스템을 구성 하는 방법에 설명 합니다.  
@@ -94,7 +94,7 @@ PDW는 UNC 파일 공유를 통해 백업 서버를 액세스 합니다. 파일 
   
 5.  PDW에 백업 도메인 계정 자격 증명을 추가 합니다.  
   
-    예를 들어 다음과 같이 사용할 수 있습니다.  
+    예를 들어  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -114,7 +114,7 @@ PDW는 UNC 파일 공유를 통해 백업 서버를 액세스 합니다. 파일 
 > [!IMPORTANT]  
 > 백업 서버의 InfiniBand IP 주소를 사용 해야 합니다. 그렇지 않으면 데이터 over Ethernet InfiniBand 대신 복사 됩니다.  
   
-예를 들어 다음과 같이 사용할 수 있습니다.  
+예를 들어  
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  
@@ -136,12 +136,12 @@ PDW 백업 어플라이언스에 저장 되지 않은, 이후 IT 팀은 백업 �
   
 ### <a name="manage-network-credentials"></a>네트워크 자격 증명 관리  
   
-백업 디렉터리에 대 한 네트워크 액세스 보안을 공유 하는 표준 Windows 파일을 기반으로 합니다. 백업을 수행 하기 전에 만들거나 PDW 백업 디렉터리에 인증 하기 위해 사용할 수 있는 Windows 계정을 지정 해야 합니다. 이 windows 계정에 액세스, 작성 및 백업 디렉터리에 쓸 수 있는 권한이 있어야 합니다.  
+백업 디렉터리에 대한 네트워크 액세스는 표준 Windows 파일 공유 보안을 기반으로 합니다. 백업을 수행 하기 전에 만들거나 PDW 백업 디렉터리에 인증 하기 위해 사용할 수 있는 Windows 계정을 지정 해야 합니다. 이 Windows 계정에는 백업 디렉토리에 액세스, 작성 및 쓰기할 수 있는 권한이 있어야 합니다.  
   
 > [!IMPORTANT]  
-> 데이터와 함께 보안 위험을 줄이기 위해 백업을 실행 하는 목적 으로만 Windows 계정 하나를 지정 하 고 복원 작업 하는 것이 좋습니다. 백업 위치와 다른 위치에 권한을 보유 하도록이 계정을 사용할 수 있음  
+> 데이터의 보안 위험을 줄이려면 Windows 계정 하나를 전적으로 백업 및 복원 작업을 수행할 목적으로 지정하는 것이 좋습니다. 이 계정에 전적으로 백업 위치에 대해서만 권한을 갖도록 허용합니다.  
   
-PDW에서 사용자 이름 및 암호를 저장 하려면 사용 된 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 저장 프로시저입니다. PDW는 Windows 자격 증명 관리자를 사용 하 여를 저장 하는 제어 노드에 사용자 이름 및 암호를 암호화 하는 계산 노드. 자격 증명 BACKUP DATABASE 명령을 사용 하 여 백업 하지 않습니다.  
+PDW에서 사용자 이름 및 암호를 저장 하려면 사용 된 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 저장 프로시저입니다. PDW는 Windows 자격 증명 관리자를 사용 하 여를 저장 하는 제어 노드에 사용자 이름 및 암호를 암호화 하는 계산 노드. 자격 증명은 BACKUP DATABASE 명령으로 백업되지 않습니다.  
   
 PDW에서 네트워크 자격 증명을 제거 하려면 사용 하 여는 [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) 저장 프로시저입니다.  
   

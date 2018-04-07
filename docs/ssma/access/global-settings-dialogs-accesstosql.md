@@ -1,37 +1,38 @@
 ---
-title: "전역 설정 (대화 상자) (AccessToSQL) | Microsoft Docs"
+title: 전역 설정 (대화 상자) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4493656a3b7e86a9d023edc7cbed1a5387ddf760
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a486cdaa42c4938242fc8a4c6e354f69b406334
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>전역 설정 (대화 상자) (AccessToSQL)
 대화 상자 페이지를 사용 하는 **전역 설정** 대화 상자는 기본 사용자 작업 및 SSMA에 대 한 경고 설정을 지정 합니다.  
   
 대화 상자 설정에 액세스 하려면는 **도구** 메뉴 선택 **전역 설정**, 클릭 **GUI** 선택 고 왼쪽된 창 맨 아래에 **대화 상자의**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **마이그레이션 마법사를 다시 시작할 때 표시**  
 옵션을 사용 하거나 사용 하지 않도록 설정 해야 Access 용 SSMA를 **마이그레이션 마법사** SSMA 응용 프로그램의 시작 합니다. 이 옵션은 기본적으로 **True**합니다.  
   

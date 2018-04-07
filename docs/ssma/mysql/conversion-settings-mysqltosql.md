@@ -1,30 +1,31 @@
 ---
-title: "변환 설정 (MySQLToSQL) | Microsoft Docs"
+title: 변환 설정 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d19688f630a71ff111a755b6810379b06fd129d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3a37482bec4c033c9098d3ae285ee3f7598baaaf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="conversion-settings-mysqltosql"></a>변환 설정 (MySQLToSQL)
 **'설정'** 탭 노드 수준 설정을 지정 하려면 사용자 수 있습니다. 탭에서 메타 베이스에 있는 다음 노드에서 사용할 수 있습니다.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
         -   예  
   
-        -   아니오  
+        -   아니요  
   
         -   프로젝트 설정에 따라 변환  
   

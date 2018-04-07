@@ -1,30 +1,31 @@
 ---
-title: "(AccessToSQL) 데이터베이스에서 새로 고침 | Microsoft Docs"
+title: (AccessToSQL) 데이터베이스에서 새로 고침 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9a312f8aef6485c880be227295cde48e2787d6a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eff823289c1d28bab1d009eb9fffdb3d7fa88b21
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="refresh-from-database-accesstosql"></a>(AccessToSQL) 데이터베이스에서 새로 고침
 **데이터베이스에서 새로 고침** 대화 상자에서는 Access 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자에 있는 행은 코딩 된 색 메타 데이터의 상태에 따라:  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Access 데이터베이스의 새 개체가 있으면 해당 행은 분홍색.  
   
-기본 개체 새로 고침 설정을 지정할 수는 **프로젝트 설정** 대화 상자. 자세한 내용은 참조 [프로젝트 설정 &#40; 로드 개체 &#41; &#40; AccessToSQL &#41;](../../ssma/access/project-settings-loading-objects-accesstosql.md)  
+기본 개체 새로 고침 설정을 지정할 수는 **프로젝트 설정** 대화 상자. 자세한 내용은 참조 [프로젝트 설정 &#40;개체 로드&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-loading-objects-accesstosql.md)  
   
 액세스는 **데이터베이스에서 새로 고침** 대화 상자에서 마우스 오른쪽 단추로 클릭 **데이터베이스** 액세스 메타 데이터 탐색기 및 클릭에서 노드 **데이터베이스에서 새로 고침**합니다.  
   

@@ -18,11 +18,11 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: fbe74b101642ecabe0478a9d5b459e59f277da04
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: a9edd0ba1b6a52dd7ce6ed36b8528283b42d8914
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell를 사용한 데이터 준비(연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/04/2018
   
     ![PowerShell 스크립트 완료 후](media/rsql-e2e-psscriptresults.PNG "PowerShell 스크립트 완료 후")
   
-5.  PowerShell 콘솔에서 `ls` 명령을 실행하여 *DestDir*에 다운로드된 파일 목록을 확인할 수 있습니다.  파일에 대한 설명은 [샘플에 포함된 내용](#What-the-Download-Includes) 을 참조합니다.
+5.  PowerShell 콘솔에서 `ls` 명령을 실행하여 *DestDir*에 다운로드된 파일 목록을 확인할 수 있습니다.  파일에 대한 설명은 [샘플에 포함된 내용](#whats-included-in-the-sample) 을 참조합니다.
 
 ## <a name="2-install-required-r-packages"></a>2. 필수 R 패키지 설치
 

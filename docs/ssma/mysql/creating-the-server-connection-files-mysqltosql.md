@@ -1,15 +1,16 @@
 ---
-title: "서버 연결 파일 (MySQLToSQL) 만들기 | Microsoft Docs"
+title: 서버 연결 파일 (MySQLToSQL) 만들기 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Server connection file validation
 - Server connection files
 ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58e675e00fd5dd3088cbb3837e0e2a412e18b047
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 195d4e04b0af4285c6de7c07111fa203937343ec
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>서버 연결 파일 (MySQLToSQL) 만들기
 별도 서버 연결 파일 또는 스크립트 파일의 서버 섹션에 서버 정보를 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트 파일 및 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/21/2017
 사용자가 서버 연결 파일 스키마 정의 파일에 대해 유효성을 검사할 쉽게 수 **'M2SSConsoleScriptServersSchema.xsd'** '스키마' 폴더에서 사용할 수 있습니다.  
   
 ## <a name="next-step"></a>다음 단계  
-운영 콘솔에 다음 단계는 [SSMA 콘솔 &#40; 실행 MySQLToSQL &#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
+운영 콘솔에 다음 단계는 [SSMA 콘솔 실행 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
 [SSMA 콘솔 (MySQL)를 실행합니다.](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  

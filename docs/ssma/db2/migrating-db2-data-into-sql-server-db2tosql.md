@@ -1,30 +1,31 @@
 ---
-title: "DB2 데이터를 SQL Server (DB2ToSQL)로 마이그레이션 | Microsoft Docs"
+title: DB2 데이터를 SQL Server (DB2ToSQL)로 마이그레이션 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7249a757ecc1c7c8fb88687953eed93e98890d45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0714e217aff8f6aa728bbc401472b9b538add968
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>DB2 데이터를 SQL Server (DB2ToSQL)로 마이그레이션
 으로 변환 된 개체를 성공적으로 동기화 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 d b 2에서 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > DB2 확장 팩 용 SSMA의 인스턴스에 설치 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 쓰고 **서버 쪽 데이터 마이그레이션 엔진** 을 선택한 경우 대상 데이터베이스에 데이터를 마이그레이션하는 동안 다음 오류가 발생: ' SSMA 데이터 마이그레이션 구성 요소를 찾을 수 없습니다 SQL Server, 서버 쪽 데이터 마이그레이션 지원 되지 것입니다. 확장 팩 올바르게 설치 되어 있는지를 확인 하십시오. '. 클릭 **취소** 데이터 마이그레이션을 종료 하 합니다.  
   
-5.  에 **d b 2에 연결** 대화 상자에서 연결 자격 증명을 입력 한 다음 클릭 **연결**합니다. D b 2에 연결 하는 방법에 대 한 자세한 내용은 참조 하세요. [DB2 데이터베이스 &#40; DB2ToSQL &#41;에 연결](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
+5.  에 **d b 2에 연결** 대화 상자에서 연결 자격 증명을 입력 한 다음 클릭 **연결**합니다. D b 2에 연결 하는 방법에 대 한 자세한 내용은 참조 하십시오. [DB2 데이터베이스에 연결 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
     대상 데이터베이스에 연결 하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 연결 자격 증명을 입력의 **SQL Server에 연결** 대화 상자와 클릭 **연결**합니다. 연결에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 참조 [SQL Server에 연결](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
@@ -108,5 +109,5 @@ ms.lasthandoff: 12/21/2017
 > SQL Express edition으로 대상 데이터베이스를 사용 하면 클라이언트 쪽 데이터 마이그레이션에만 사용할 수 및 서버 쪽 데이터 마이그레이션이 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SQL Server &#40; DB2ToSQL &#41;를 DB2 데이터 마이그레이션](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[DB2 데이터를 SQL Server로 마이그레이션 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

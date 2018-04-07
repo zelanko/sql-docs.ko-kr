@@ -1,31 +1,31 @@
 ---
-title: "Windows Server Update Services (WSUS) (분석 플랫폼 시스템) 구성"
+title: Windows Server Update Services (WSUS) (분석 플랫폼 시스템) 구성
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 
-ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+caps.latest.revision: 41
+ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS)를 구성 합니다.
 이 지침에서는 Windows Server Update Services (WSUS) 구성 마법사를 사용 하 여 분석 플랫폼 시스템에 대 한 WSUS를 구성 하는 단계를 안내 합니다. 어플라이언스로 소프트웨어 업데이트를 적용 하려면 먼저 WSUS를 구성 해야 합니다. WSUS는 어플라이언스의 VMM 가상 컴퓨터에 이미 설치 되었습니다.  
   
-WSUS 구성에 대 한 자세한 내용은 참조는 [WSUS 단계별 설치 가이드](http://go.microsoft.com/fwlink/?LinkId=202417) WSUS 웹 사이트에 있습니다. WSUS를 구성 했으면 참조 [다운로드 하 고 Microsoft 업데이트 적용 &#40; 분석 플랫폼 시스템 &#41; ](download-and-apply-microsoft-updates.md) 에 대해 업데이트를 시작 합니다.  
+WSUS 구성에 대 한 자세한 내용은 참조는 [WSUS 단계별 설치 가이드](http://go.microsoft.com/fwlink/?LinkId=202417) WSUS 웹 사이트에 있습니다. WSUS를 구성 했으면 참조 [다운로드 하 고 Microsoft 업데이트 적용 &#40;분석 플랫폼 시스템&#41; ](download-and-apply-microsoft-updates.md) 에 대해 업데이트를 시작 합니다.  
   
 > [!WARNING]  
 > 이 구성 프로세스 중 오류가 발생 하면 중지 하 고 지원에 문의 하십시오. 오류를 무시 하거나 오류가 수신 된 후 프로세스에서 계속 하지 마십시오.  
@@ -41,7 +41,7 @@ WSUS를 구성 하려면:
   
 -   어플라이언스 사용 경우 프록시 서버를 업스트림 서버 또는 Microsoft Update에 액세스할 프록시 서버의 IP 주소를 알고 있습니다.  
   
--   대부분의 경우에서 WSUS 어플라이언스에 외부 서버에 액세스 해야 합니다. 분석 플랫폼 시스템 DNS 외부의 분석 플랫폼 시스템 호스트 및 가상 컴퓨터 (Vm) 이름을 확인 하기 위해 외부 DNS 서버를 사용할 수 있는 외부 이름 전달자를 지원 하도록 구성할 수 있습니다이 사용 시나리오를 지원 하기 위해는 구성할 수 있습니다. 자세한 내용은 참조 [해결 비 어플라이언스 DNS 이름 &#40; DNS 전달자를 사용 하 여 분석 플랫폼 시스템 &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   대부분의 경우에서 WSUS 어플라이언스에 외부 서버에 액세스 해야 합니다. 분석 플랫폼 시스템 DNS 외부의 분석 플랫폼 시스템 호스트 및 가상 컴퓨터 (Vm) 이름을 확인 하기 위해 외부 DNS 서버를 사용할 수 있는 외부 이름 전달자를 지원 하도록 구성할 수 있습니다이 사용 시나리오를 지원 하기 위해는 구성할 수 있습니다. 자세한 내용은 참조 [비 어플라이언스 DNS 이름 확인에 DNS 전달자를 사용 하 여 &#40;분석 플랫폼 시스템&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)합니다.  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS)를 구성 하려면  
   
@@ -67,7 +67,7 @@ WSUS를 구성 하려면:
   
         ![서버 관리자 대시보드 메뉴](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  이 처음으로 WSUS 마법사를 실행 한 경우 업데이트를 저장 하기 위한 디렉터리를 구성 하 라는 메시지가 표시 될 수 있습니다. `C:\wsus`적절 한 위치입니다. 그러나 다른 경로 제공할 수 있습니다.  
+    4.  이 처음으로 WSUS 마법사를 실행 한 경우 업데이트를 저장 하기 위한 디렉터리를 구성 하 라는 메시지가 표시 될 수 있습니다. `C:\wsus` 적절 한 위치입니다. 그러나 다른 경로 제공할 수 있습니다.  
   
         ![WSUS 경로](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
@@ -179,7 +179,7 @@ WSUS를 구성 하려면:
 분석 플랫폼 시스템에 대 한 WSUS를 구성 했으면 기기 서버 그룹화 하는 다음 단계가입니다. 모든 기기 서버에는 그룹에 추가 하 여 WSUS 어플라이언스의 모든 서버에 소프트웨어 업데이트를 적용할 수 됩니다.  
   
 > [!NOTE]  
-> WSUS 시스템은 비동기적으로 실행 되도록 설계 되었습니다. 활동 시작 항상 내보내지지 않습니다는 즉시 업데이트 합니다. 따라서 컴퓨터가 WSUS 대화 상자에 표시 될 때까지 잠시 기다려야 할 수 있습니다. 실행 된 `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` 항목의 끝에 설명 된 명령과 [다운로드 하 고 Microsoft 업데이트 적용 &#40; 분석 플랫폼 시스템 &#41; ](download-and-apply-microsoft-updates.md) 대화 상자를 새로 고침 하는 데 도움이 됩니다.  
+> WSUS 시스템은 비동기적으로 실행 되도록 설계 되었습니다. 활동 시작 항상 내보내지지 않습니다는 즉시 업데이트 합니다. 따라서 컴퓨터가 WSUS 대화 상자에 표시 될 때까지 잠시 기다려야 할 수 있습니다. 실행 되는 `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` 항목의 끝에 설명 된 명령과 [다운로드 하 고 Microsoft 업데이트 적용 &#40;분석 플랫폼 시스템&#41; ](download-and-apply-microsoft-updates.md) 대화 상자를 새로 고침 하는 데 도움이 됩니다.  
   
 #### <a name="to-group-the-appliance-servers"></a>어플라이언스 서버를 그룹화 하려면  
   

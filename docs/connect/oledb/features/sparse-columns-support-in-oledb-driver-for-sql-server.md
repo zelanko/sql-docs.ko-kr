@@ -10,7 +10,7 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a501daca74470e7df9e08fc329e956301417b4ca
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>SQL Server 용 OLE DB 드라이버에서 스파스 열 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.lasthandoff: 03/30/2018
  그러나 경우 **queryout** 사용 내보내기와 하면 스파스 열 이름으로 집합의 멤버인 스파스 열을 참조에 대 한 구조가 비슷한 테이블에 직접 가져올을 수행할 수 없습니다. BCP 사용 메타 데이터와 일치 하기 때문에 이것이 **선택 \***  가져오기에 대 한 작업 되어 일치 시킬 수 없는 **column_set** 이 메타 데이터와 멤버 열입니다. 가져오려는 **column_set** 멤버 열 원하는 참조 하는 테이블에 대 한 뷰를 정의 해야 하는 개별적으로 **column_set** 열을 보기를 사용 하 여 가져오기 작업을 수행 해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   

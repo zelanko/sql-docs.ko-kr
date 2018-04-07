@@ -1,35 +1,36 @@
 ---
-title: "프로젝트 설정 (개체 로드) (AccessToSQL) | Microsoft Docs"
+title: 프로젝트 설정 (개체 로드) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da86fe46153ede299a41a2b4e308f1b5b51f6947
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 16d21bbe8cb2d3bc2e2d069c12fe53607774373e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>프로젝트 설정 (개체 로드) (AccessToSQL)
 개체를 로드 프로젝트 설정에는 SQL Server 데이터베이스 개체와 Access 데이터베이스 개체가 동기화 되는 방식을 구성할 수 있습니다.  
   
-Access 데이터베이스에서 개체를 새로 고치에 대 한 SQL Server 데이터베이스와 개체의 동기화 기본 설정을 지정 하는 기본 동작입니다. 자세한 내용은 참조 [데이터베이스 &#40;에서 새로 고침 AccessToSQL &#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
+Access 데이터베이스에서 개체를 새로 고치에 대 한 SQL Server 데이터베이스와 개체의 동기화 기본 설정을 지정 하는 기본 동작입니다. 자세한 내용은 참조 [데이터베이스에서 새로 고침 &#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
   
 동일한 설정을 포함 하는 두 개의 다른 동기화 페이지에 액세스할 수 있습니다.  
   
@@ -37,7 +38,7 @@ Access 데이터베이스에서 개체를 새로 고치에 대 한 SQL Server �
   
 -   에 현재 프로젝트에 대 한 설정을 지정 하려면는 **도구** 메뉴에서 클릭 **프로젝트 설정**, 클릭 하 고 **개체 로드** 왼쪽 창의 맨 아래에 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 ##### <a name="misc"></a>기타  
   

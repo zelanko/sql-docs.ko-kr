@@ -1,15 +1,16 @@
 ---
-title: "MySQL (MySQLToSQL)에 연결 | Microsoft Docs"
+title: MySQL (MySQLToSQL)에 연결 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Connecting to MySQL, MySQL permission
 - Connecting to MySQL,reconnecting
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 291f10d4f045747266297287903ba4cf900c09c5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5b36b626d611896a5af496a0ae02d25dcf44ac83
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>MySQL (MySQLToSQL)에 연결
 SQL Server 또는 SQL Azure에 MySQL 데이터베이스를 마이그레이션하려면 마이그레이션할 MySQL 데이터베이스에 연결 해야 합니다. 에 연결할 때 SSMA 모든 MySQL 스키마에 대 한 메타 데이터를 가져오고 MySQL 메타 데이터 탐색기 창에 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지 않습니다.  
@@ -90,7 +91,7 @@ MySQL 데이터베이스에 연결 하는 데 사용 되는 계정은 적어도 
     > -   **확인** 필요한 정보를 제공한 경우 단추를 사용할 수 있습니다. 유효 하지 않으면 파일 경로 있는 "확인" 단추가 비활성화 된 상태로 유지 됩니다.  
     > -   **취소** 단추 대화 상자를 닫습니다 및 **해제** 기본 연결 폼에서 SSL 옵션입니다.  
   
-7.  자세한 내용은 참조 [MySQL &#40;에 연결 MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+7.  자세한 내용은 참조 [MySQL에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
 ## <a name="reconnecting-to-mysql"></a>MySQL에 다시 연결  
 데이터베이스 서버에 연결 된 프로젝트를 닫을 때까지 활성 상태를 유지 합니다. 프로젝트를 다시 열 때 데이터베이스에 활성 연결 하려는 경우 다시 연결 해야 합니다. , 메타 데이터를 업데이트 하 고, SQL Server 또는 SQL Azure에 데이터베이스 개체를 로드 하 고, 데이터를 마이그레이션할 때까지 오프 라인으로 작업 합니다.  
@@ -121,8 +122,8 @@ MySQL 데이터베이스에 대 한 메타 데이터는 자동으로 새로 고�
 5.  **확인**을 클릭합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-마이그레이션 프로세스의 다음 단계는 [SQL Server &#40;에 연결 MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+마이그레이션 프로세스의 다음 단계는 [SQL Server에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB &#40; SQL Server-MySQL 데이터베이스 마이그레이션 MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server-SQL Azure DB로 데이터베이스 마이그레이션 MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

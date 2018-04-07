@@ -1,30 +1,31 @@
 ---
-title: "(MySQLToSQL) 데이터베이스에서 새로 고침 | Microsoft Docs"
+title: (MySQLToSQL) 데이터베이스에서 새로 고침 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18656f8929e52d23e10ccc5fafe8139544bf44a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1881df93e8b26463b4f7a638e5b1e94674442013
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="refresh-from-database-mysqltosql"></a>(MySQLToSQL) 데이터베이스에서 새로 고침
 **데이터베이스에서 새로 고침** 대화 상자를 사용 하면 MySQL 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자에 있는 행은 코딩 된 색 메타 데이터의 상태에 따라:  
@@ -37,11 +38,11 @@ ms.lasthandoff: 12/21/2017
   
 -   새 MySQL 데이터베이스에 개체가 있으면 해당 행은 분홍색.  
   
-기본 개체 새로 고침 설정을 지정할 수는 **프로젝트 설정** 대화 상자. 자세한 내용은 참조 [프로젝트 설정 &#40; 동기화 &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+기본 개체 새로 고침 설정을 지정할 수는 **프로젝트 설정** 대화 상자. 자세한 내용은 참조 [프로젝트 설정 &#40;동기화&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
 액세스는 **데이터베이스에서 새로 고침** 대화 상자에서 마우스 오른쪽 단추로 클릭 하 고 MySQL 메타 데이터 탐색기에서 개체 **데이터베이스에서 새로 고침**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 |||  
 |-|-|  

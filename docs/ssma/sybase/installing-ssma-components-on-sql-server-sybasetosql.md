@@ -1,30 +1,31 @@
 ---
-title: "SQL Server (SybaseToSQL)에 SSMA 구성 요소 설치 | Microsoft Docs"
-ms.custom: 
+title: SQL Server (SybaseToSQL)에 SSMA 구성 요소 설치 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d27ca7f0bc45c1d81118f0441d2ee4ff751d4c95
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 97c0e5dc529a6563212dc3ddedce5014ccfd463a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL Server (SybaseToSQL)에 SSMA 구성 요소 설치
 서버 쪽 데이터 마이그레이션을 사용 하 여에 대 한 SSMA를 설치 하는 것 외에도 설치 해야 구성 요소를 실행 하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 이러한 구성 요소를 지 원하는 데이터 마이그레이션 및 서버 간 연결을 허용 하도록 Sybase 공급자 SSMA 확장 팩을 포함 합니다.  
@@ -42,9 +43,9 @@ ms.lasthandoff: 12/21/2017
   
 **확장 팩을 설치 하려면**  
   
-1.  SSMA for Sybase 확장 팩 복사 합니다. *n*. Install.exe 여기서  *n*  실행 중인 컴퓨터에 있는 빌드 번호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+1.  SSMA for Sybase 확장 팩 복사 합니다. *n*합니다. Install.exe 여기서 *n* 실행 중인 컴퓨터에 있는 빌드 번호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
   
-2.  Sybase 확장 팩 SSMA를 두 번 클릭 합니다. *n*. Install.exe 합니다.  
+2.  Sybase 확장 팩 SSMA를 두 번 클릭 합니다. *n*합니다. Install.exe 합니다.  
   
 3.  시작 페이지에서 클릭 **다음**합니다.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 12/21/2017
   
     Windows 인증 Windows 자격 증명을 사용 하 여 인스턴스의에 로그온 하려고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 입력 해야 인증을 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로그인 이름 및 암호.  
   
-10. 서버 관리 페이지에서 선택 **설치 유틸리티 데이터베이스**  *n* 여기서  *n*  버전 번호 이며 클릭 **다음**합니다.  
+10. 서버 관리 페이지에서 선택 **설치 유틸리티 데이터베이스** *n*여기서 *n* 버전 번호 이며 클릭 **다음**합니다.  
   
     **sysdb** 데이터베이스가 만들어지고 저장된 프로시저는 해당 데이터베이스에 만들어집니다.  
   
@@ -117,6 +118,6 @@ ASE에에서 데이터를 마이그레이션할 때 [!INCLUDE[ssNoVersion](../..
 4.  선택한 기능을 확인 한 다음 클릭 **마침** 데이터 공급자를 설치 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SSMA for Sybase 클라이언트 &#40; 설치 SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[Azure SQL DB &#40; SQL Server-Sybase ASE 데이터베이스 마이그레이션 SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SSMA Sybase 클라이언트에 대 한 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
+[SQL Server-Azure SQL DB Sybase ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -1,30 +1,31 @@
 ---
-title: "프로젝트 설정 (변환) (SybaseToSQL) | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 설정 (변환) (SybaseToSQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64845d9450c412ca975d541f1171a725271ec502
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6822c6f320bf7057eb05f75719bf19edfb4d24e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>프로젝트 설정 (변환) (SybaseToSQL)
 변환 페이지는 **프로젝트 설정** 대화 상자 SSMA Sybase 적응형 Server Enterprise (ASE) 구문을 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 구문이 있습니다.  
@@ -271,7 +272,7 @@ ASE 프록시 테이블을 변환 하는 경우 지정 [!INCLUDE[ssNoVersion](..
 **기본/Optimistic/전체 모드:** 오류로 표시  
   
 **RAISERROR 기본 메시지 번호**  
-ASE 사용자 메시지는 각 데이터베이스에 저장 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]사용자 메시지 중앙 집중식으로 저장 되 고를 통해 사용할 수는 **sys.messages** 카탈로그 뷰에 있습니다. ASE 사용자 메시지 20000에서 뿐만 아니라 시작 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 오류 메시지 50001에서 시작 합니다.  
+ASE 사용자 메시지는 각 데이터베이스에 저장 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용자 메시지 중앙 집중식으로 저장 되 고를 통해 사용할 수는 **sys.messages** 카탈로그 뷰에 있습니다. ASE 사용자 메시지 20000에서 뿐만 아니라 시작 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 오류 메시지 50001에서 시작 합니다.  
   
 이 설정은 지정 변환할 ASE 사용자 메시지 번호에 추가할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용자 메시지입니다. 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용자 메시지에는 **sys.messages** 카탈로그 뷰를 큰 값으로이 번호를 변경 해야 할 수 있습니다. 되므로 변환 된 메시지 번호 기존 메시지 번호와 충돌 하지 않습니다.  
   
@@ -334,7 +335,7 @@ ASE, CHARINDEX 모든 입력된 식은 null 일 경우에 NULL을 반환 합니�
 **전체 모드:** Replace 함수  
   
 **DATALENGTH 함수**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ 값이 공백 하나로 DATALENGTH 함수에서 반환한 값 SQL Azure 및 ASE 다릅니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ 0을 반환 하는 SQL Azure 및 ASE 1을 반환 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] / 값이 공백 하나로 DATALENGTH 함수에서 반환한 값 SQL Azure 및 ASE 다릅니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ 0을 반환 하는 SQL Azure 및 ASE 1을 반환 합니다.  
   
 -   ASE 동작을 사용 하려면 선택 **Replace 함수**합니다. DATALENGTH 함수에 대 한 모든 호출을 Sybase ASE 동작을 에뮬레이션 하기 위해 CASE 식을 사용 하 여 대체 됩니다.  
   
@@ -455,5 +456,5 @@ ASE를 함수에 `SUBSTRING(expression, start, length)` 길이 0과 같을 경�
 > SQL Azure에 연결 되어 있을 때 True 기본적입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[사용자 인터페이스 참조 &#40; SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+[사용자 인터페이스 참조 &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

@@ -1,26 +1,26 @@
 ---
-title: "Microsoft (SQL Server PDW) 원격 분석 피드백 보내기"
+title: Microsoft (SQL Server PDW) 원격 분석 피드백 보내기
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: "18"
-ms.openlocfilehash: f78a9e7c1e66085dd84ba71e8e7b5f517131e18a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 18
+ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="send-telemetry-feedback-to-microsoft"></a>Microsoft 원격 분석 피드백 보내기
 분석 플랫폼 시스템에 관리 콘솔 데이터를 Microsoft로 전송 하는 선택적 원격 분석 기능이 있습니다. 이 제품을 개선 하기 위한 필드를 사용 하는 것이 좋습니다.  
@@ -39,11 +39,11 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-enable-feedback"></a>피드백을 사용 하도록 설정 하려면  
   
-1.  어플라이언스 도메인 관리자 계정을 사용 하 여 하는 제어 노드에 연결 (***appliance_domain*-CTL01**) 및 Windows 관리자 자격 증명을 사용 하 여 명령 프롬프트를 엽니다.  
+1.  어플라이언스 도메인 관리자 계정을 사용 하 여 하는 제어 노드에 연결 (***appliance_domain *-CTL01**) 및 Windows 관리자 자격 증명을 사용 하 여 명령 프롬프트를 엽니다.  
   
 2.  다음 디렉터리로 이동: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`합니다.  
   
-3.  모듈 가져오기`Configure-RemoteMonitoring.ps1`  
+3.  모듈 가져오기 `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > 사용자를 가져오려면 명령에 마침표 두 개 사용 해야 합니다.  
@@ -89,11 +89,11 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-disable-telemetry"></a>원격 분석을 사용 하지 않도록 설정 하려면  
   
-1.  어플라이언스 도메인 관리자 계정을 사용 하 여 하는 제어 노드에 연결 (***appliance_domain*-CTL01**) 하 고 관리자 권한으로 PowerShell 창을 엽니다.  
+1.  어플라이언스 도메인 관리자 계정을 사용 하 여 하는 제어 노드에 연결 (***appliance_domain *-CTL01**) 하 고 관리자 권한으로 PowerShell 창을 엽니다.  
   
 2.  다음 디렉터리로 이동: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`합니다.  
   
-3.  모듈 가져오기`Configure-RemoteMonitoring.ps1`  
+3.  모듈 가져오기 `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > 사용자를 가져오려면 명령에 마침표 두 개 사용 해야 합니다.  
@@ -117,8 +117,8 @@ ms.lasthandoff: 12/21/2017
 실행 하더라도 피해는는 `Disable-RemoteMonitoring` 여러 번 명령입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[관리 콘솔 &#40;를 사용 하 여 어플라이언스에 모니터링 분석 플랫폼 시스템 &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[시스템 뷰 &#40;를 사용 하 여 어플라이언스에 모니터링 분석 플랫폼 시스템 &#41;](monitor-the-appliance-by-using-system-views.md)  
-[System Center Operations Manager &#40;를 사용 하 여 어플라이언스에 모니터링 분석 플랫폼 시스템 &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[비 어플라이언스 DNS 이름 &#40;를 사용 하는 DNS 전달자 분석 플랫폼 시스템 &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+[관리 콘솔을 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[시스템 뷰를 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-system-views.md)  
+[System Center Operations Manager를 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+[비 어플라이언스 DNS 이름을 확인 하는 DNS 전달자를 사용 하 여 &#40;분석 플랫폼 시스템&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

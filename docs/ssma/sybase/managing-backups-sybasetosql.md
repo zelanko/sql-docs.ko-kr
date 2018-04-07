@@ -21,13 +21,13 @@ ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89df7322e4025ffb79f3ae2aecb2ef67fa52c8d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 122cc3c70f69a6c6037484b499a85480b16792ef
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-backups-sybasetosql"></a>백업 (SybaseToSQL) 관리
 백업 및 복원 하기 전에 또는 테스트를 실행 한 후 데이터를 테이블 Sybase 백업 관리는 수 있습니다. 백업 내용 관리 대화 상자와 백업 콘텐츠를 관리할 수 있습니다.  
@@ -104,5 +104,5 @@ SQL Server 백업 관리는 테스터 선택 된 위치에 백업 대화 상자�
 -   클릭는 **닫습니다** 단추는 대화 상자를 닫습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 개체 &#40; 마이그레이션 테스트 SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[데이터베이스 개체를 마이그레이션할 테스트 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

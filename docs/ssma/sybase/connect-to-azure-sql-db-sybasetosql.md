@@ -1,49 +1,50 @@
 ---
-title: "Azure SQL DB (SybaseToSQL)에 연결 | Microsoft Docs"
-ms.custom: 
+title: Azure SQL DB (SybaseToSQL)에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1267aecb68c344b6de0fad2c7c129a0b6ab2205c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c1656e76e6452c4394aad5eadb5d5b4073de9aac
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Azure SQL DB (SybaseToSQL)에 연결
 Azure SQL DB 대화 상자에 연결을 사용 하 여 마이그레이션할 Azure SQL DB 데이터베이스에 연결 합니다.  
   
 이 대화 상자에 액세스 하는 **파일** 메뉴 선택 **Azure SQL DB에 연결**합니다. 이 명령은 이전에 연결한 경우 **Azure SQL DB에 다시 연결 합니다.**  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **서버 이름**  
   
 선택 하거나 Azure SQL DB에 연결 하기 위한 서버 이름을 입력 합니다.  
   
-**데이터베이스 백업**  
+**데이터베이스**  
   
 선택, 입력 또는 **찾아보기** 데이터베이스 이름입니다.  
   
 > [!IMPORTANT]  
 > SSMA for Sybase Azure SQL DB에서 master 데이터베이스에 연결을 지원 하지 않습니다.  
   
-**User name**  
+**사용자 이름**  
   
 SSMA Azure SQL DB 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
   
@@ -51,7 +52,7 @@ SSMA Azure SQL DB 데이터베이스에 연결 하는 데 사용할 사용자 �
   
 사용자 이름에 대한 암호를 입력합니다.  
   
-**암호화**  
+**Encrypt**  
   
 SSMA는 Azure SQL DB에 암호화 된 연결을 권장합니다.  
   

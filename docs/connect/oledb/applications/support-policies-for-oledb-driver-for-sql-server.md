@@ -10,18 +10,18 @@ ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 250b0dce301190454a911f5409425f486286047b
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 374660fdba66e5c445ae441d988a3701de548427
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server에 대 한 지원 정책
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,4 +47,4 @@ ms.lasthandoff: 03/30/2018
 응용 프로그램은 Windows 운영 체제에 포함 된 OLE DB 공급자 (SQLOLEDB)를 사용할 수 있습니다. 그러나 유지 관리 모드에 하 고 더 이상 업데이트 합니다. 대신 사용 해야 OLE DB Driver SQL Server (MSOLEDBSQL)에 대 한 합니다.
 
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 용 OLE DB 드라이버 빌딩 응용 프로그램](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

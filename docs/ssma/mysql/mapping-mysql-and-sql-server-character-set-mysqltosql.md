@@ -1,30 +1,31 @@
 ---
-title: "(MySQLToSQL) 설정 MySQL 및 SQL Server 문자 매핑 | Microsoft Docs"
+title: (MySQLToSQL) 설정 MySQL 및 SQL Server 문자 매핑 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>(MySQLToSQL) 설정 MySQL 및 SQL Server 문자 매핑
 MySQL 문자 데이터 형식, 식 및 리터럴을 대 한 문자 집합 (문자 집합)을 지정할 수 있습니다.  
@@ -117,10 +118,10 @@ MySQL 문자 데이터 형식, 식 및 리터럴을 대 한 문자 집합 (문�
     |macce|Mac 중앙 유럽|CHAR/VARCHAR (기본값)|  
     |macroman|Mac 서 부 유럽|CHAR/VARCHAR (기본값)|  
     |cp852|DOS 중앙 유럽|CHAR/VARCHAR (기본값)|  
-    |latin7|ISO 8859-13 발트어|CHAR/VARCHAR (기본값)|  
-    |cp 1251|Windows 키릴 자모|CHAR/VARCHAR (기본값)|  
+    |latin7|ISO 8859-13 Baltic|CHAR/VARCHAR (기본값)|  
+    |cp 1251|Windows Cyrillic|CHAR/VARCHAR (기본값)|  
     |cp 1256|Windows 아랍어|CHAR/VARCHAR (기본값)|  
-    |cp 1257|Windows 발트어|CHAR/VARCHAR (기본값)|  
+    |cp 1257|Windows Baltic|CHAR/VARCHAR (기본값)|  
     |BINARY|이진 의사 문자 집합|CHAR/VARCHAR (기본값)|  
     |geostd8|GEOSTD8 그루지야어|CHAR/VARCHAR (기본값)|  
     |cp932|Windows 일본어 SJIS|NCHAR/NVARCHAR (기본값)|  

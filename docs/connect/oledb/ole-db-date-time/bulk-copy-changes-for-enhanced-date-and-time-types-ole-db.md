@@ -10,7 +10,7 @@ ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01bdcb939413fb0ff917d7e037a3ab5124bb4075
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 61d04588991764edb1d470f190ebd9b3ce08636c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>향상 된 날짜 및 시간 형식 (OLE DB)에 대 한 대량 복사 변경 사항
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -134,6 +134,6 @@ ms.lasthandoff: 03/30/2018
 |해당 사항 없음|기존 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 및 이전 동작이 유지됩니다.|  
   
 ## <a name="see-also"></a>관련 항목:     
- [날짜 및 시간 기능 향상 &#40; OLE db&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상 & #40; OLE db& #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

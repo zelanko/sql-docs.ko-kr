@@ -1,15 +1,16 @@
 ---
-title: "선택 하 고 테스트 (SybaseToSQL)에 개체를 구성 | Microsoft Docs"
-ms.custom: 
+title: 선택 하 고 테스트 (SybaseToSQL)에 개체를 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,22 +19,22 @@ helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23c5a636c3031fce08294de4640799fde34362d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ee6efee5172d5261c5f8fa5e23507b9bb2b931b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>선택 하 고 테스트 (SybaseToSQL)에 개체를 구성 합니다.
 이 단계를 테스트 하 고 프로시저의 및 함수 출력 매개 변수 뿐만 아니라 함수의 반환 값을 비교 하기 위한 설정을 구성 하는 개체를 선택 합니다.  
   
 ## <a name="selection-of-objects-to-test"></a>테스트를 위해 선택한 개체  
-창의 왼쪽에 있는 Sybase 개체 트리에서 테스트 프로세스 중 호출 하려는 개체를 확인 합니다. 에 있는 테스트 가능한 개체의 전체 목록을 보려면는 [테스트 마이그레이션된 데이터베이스 개체 &#40; SybaseToSQL &#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) 항목입니다.  
+창의 왼쪽에 있는 Sybase 개체 트리에서 테스트 프로세스 중 호출 하려는 개체를 확인 합니다. 에 있는 테스트 가능한 개체의 전체 목록을 보려면는 [마이그레이션된 데이터베이스 개체 테스트 &#40;SybaseToSQL&#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) 항목입니다.  
   
 레이블이 링크 표시는 SSMA 테스터가 테스트를 위해 선택한 개체를 지원 하지 않는 경우 **일부 선택 된 개체에 오류가 포함 되어** 개체 트리 아래 합니다. 이러한 개체를 테스트할 수 없는 이유에 이유를 표시 하 고 잘못 된 개체의 선택을 취소 하려면이 링크를 클릭 합니다.  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="use-during-comparisons"></a>비교 하는 동안 사용  
 테스트 결과 비교에서 선택한 매개 변수를 사용 하 여 사용 하도록 설정 합니다.  
   
--   선택 하면 **True**, SSMA에 해당 값과 Sybase에서 프로시저를 실행 한 후이 매개 변수의 출력 값을 비교 합니다[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   선택 하면 **True**, SSMA에 해당 값과 Sybase에서 프로시저를 실행 한 후이 매개 변수의 출력 값을 비교 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   선택 하면**False**, 매개 변수는 결과 확인에서 제외 됩니다.  
   
@@ -90,8 +91,8 @@ ms.lasthandoff: 12/21/2017
 입력된 매개 변수 값을 지정할 수 있습니다는 **호출 값** 페이지. **호출 추가** 단추 빈 매개 변수 값이 포함 된 새로운 호출을 추가 합니다. **호출 제거** 단추는 현재 호출을 제거 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[선택 하 고 영향을 받는 개체 &#40; 구성 합니다. SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[영향을 받는 개체 선택 및 구성 &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 개체 &#40; 마이그레이션 테스트 SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[데이터베이스 개체를 마이그레이션할 테스트 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

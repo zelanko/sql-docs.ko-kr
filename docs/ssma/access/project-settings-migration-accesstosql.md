@@ -1,15 +1,16 @@
 ---
-title: "프로젝트 설정 (마이그레이션) (AccessToSQL) | Microsoft Docs"
+title: 프로젝트 설정 (마이그레이션) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3ffb7f8fe3a50fc940bb3030fd2bed518006b01
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 83f7ad0fbda7ead76a24e40f971e9589719fb788
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-accesstosql"></a>프로젝트 설정 (마이그레이션) (AccessToSQL)
 마이그레이션 프로젝트 설정으로 데이터가 마이그레이션되는 방식을 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   사용 하 여 **기본 프로젝트 설정** 모든 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 마이그레이션 설정에 액세스 하려면는 **도구** 메뉴 선택 **기본 프로젝트 설정**, 라는 프로젝트 형식을 선택 **마이그레이션 대상 버전** 콤보 상자 설정에 액세스를 클릭 합니다. 원하는는 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **마이그레이션**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **CHECK 제약 조건**  
 테이블에 데이터를 추가할 때 SSMA 제약 조건을 확인 해야 하는지 여부를 지정 합니다.  
   
@@ -87,7 +88,7 @@ SSMA 데이터 마이그레이션 중에 테이블에 데이터를 추가할 때
 **지원 되지 않는 날짜를 대체 합니다.**  
 SSMA 이전 가장 빠른 버전의 액세스 날짜를 수정 해야 하는지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 날짜 (1753 01 년 1 월).  
   
--   현재 날짜 값을 유지 하기 위해 선택 **아무 작업도 수행 하지**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime 열에는 1753 년 1 월 1 일 이전의 날짜를 수락 하지 않습니다. 오래 된 날짜를 사용 하 여 문자 값을 날짜/시간 값을 변환 해야 합니다.  
+-   현재 날짜 값을 유지 하기 위해 선택 **아무 작업도 수행 하지**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 열에는 1753 년 1 월 1 일 이전의 날짜를 수락 하지 않습니다. 오래 된 날짜를 사용 하 여 문자 값을 날짜/시간 값을 변환 해야 합니다.  
   
 -   1753 년 1 월 1 일 이전의 날짜를 NULL로 변환 하려면 선택 **NULL로 대체**합니다.  
   

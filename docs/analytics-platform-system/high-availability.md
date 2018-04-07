@@ -1,25 +1,25 @@
 ---
-title: "분석 플랫폼 시스템에 대 한 고가용성 정보"
+title: 분석 플랫폼 시스템에 대 한 고가용성 정보
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Analytics Platform System (APS)의 고가용성을 위해 구성 하는 방법을 설명 합니다."
+description: Analytics Platform System (APS)의 고가용성을 위해 구성 하는 방법을 설명 합니다.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
-caps.latest.revision: "9"
-ms.openlocfilehash: 11733b45ba25f625ea2d3d601939973e9137b15d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: 9fd057a4cd673f06034e0093ca93be7ceaf345ea
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="analytics-platform-system-high-availability"></a>분석 플랫폼 시스템에 대 한 고가용성 정보
 Analytics Platform System (APS)의 고가용성을 위해 구성 하는 방법을 설명 합니다.  

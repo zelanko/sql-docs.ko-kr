@@ -1,37 +1,37 @@
 ---
-title: "Configuration Manager (분석 플랫폼 시스템)를 시작 합니다."
+title: Configuration Manager (분석 플랫폼 시스템)를 시작 합니다.
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
-caps.latest.revision: "22"
-ms.openlocfilehash: 2ead82cd226a585d261eac2779cacb72cd5edbb6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 0ea02f539633233b462cc6c4cc3cc7ba5d452da9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="launch-the-configuration-manager"></a>구성 관리자를 시작
 시작 하기 위한 지침을 제공 하는이 항목의 **Configuration Manager** 분석 플랫폼 시스템 어플라이언스에 대 한 합니다.  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
   
-### <a name="prerequisites"></a>사전 요구 사항  
-분석 플랫폼 시스템**Configuration Manager** 기기 도메인 관리자만 실행할 수 있습니다. 이 도구를 실행 하려면 기기 도메인 관리자에 대 한 암호가 필요 합니다. 참조 추가 APS 관리자 만들려고 [APS 도메인 관리자 &#40; 만들기 APS &#41; ](create-an-aps-domain-administrator-aps.md).  
+### <a name="prerequisites"></a>필수 구성 요소  
+분석 플랫폼 시스템**Configuration Manager** 기기 도메인 관리자만 실행할 수 있습니다. 이 도구를 실행 하려면 기기 도메인 관리자에 대 한 암호가 필요 합니다. 참조 추가 APS 관리자 만들려고 [프로그램 APS 도메인 관리자를 만듭니다 &#40;APS&#41;](create-an-aps-domain-administrator-aps.md)합니다.  
   
 ## <a name="Accessing"></a>구성 관리자 도구를 시작 합니다.  
-구성 관리자를 실행 하려면 원격 데스크톱을 사용 하는 PDW 제어 노드에 연결 (***PDW_region*-CTL01**) 노드를 및로 로그인 *appliance_domain* **\Administrator**합니다. 시작할 때의 **Configuration Manager** 프로그램에서 사용 하 여는 **관리자 권한으로 실행** 옵션을 관리자 자격 증명이 사용 됩니다.  
+구성 관리자를 실행 하려면 원격 데스크톱을 사용 하는 PDW 제어 노드에 연결 (***PDW_region *-CTL01**) 노드를 및로 로그인 * appliance_domain ***\Administrator**합니다. 시작할 때의 **Configuration Manager** 프로그램에서 사용 하 여는 **관리자 권한으로 실행** 옵션을 관리자 자격 증명이 사용 됩니다.  
   
 #### <a name="to-launch-from-a-browser-window"></a>브라우저 창에서를 시작 하려면  
   
@@ -54,5 +54,5 @@ ms.lasthandoff: 12/21/2017
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>관련 항목:  
-[관리 콘솔 &#40;를 사용 하 여 어플라이언스에 모니터링 분석 플랫폼 시스템 &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[관리 콘솔을 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

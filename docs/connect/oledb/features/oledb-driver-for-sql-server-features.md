@@ -10,7 +10,7 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bda748c764d49044a76638ebd2e87a6d831ae66f
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 6c56a145ecfbb986c7ec0124202ff61e89036657
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>OLE DB Driver for SQL Server 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/30/2018
  [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결의 지원](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)  
  모든 프로토콜에서 상호 인증을 지원하기 위해 SPN(서비스 사용자 이름)이 어떻게 확장되었는지 설명합니다.  
   
- [SQL Server 용 OLE DB 드라이버에서 스파스 열 지원](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
+ [SQL Server용 OLE DB 드라이버에서 스파스 열 지원](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
  스파스 열에 대 한 SQL Server 지원에 대 한 OLE DB Driver를 설명합니다.  
   
  [날짜 및 시간 기능 향상](../../oledb/features/date-and-time-improvements.md)  
@@ -87,21 +87,21 @@ ms.lasthandoff: 03/30/2018
  [메타데이터 검색](../../oledb/features/metadata-discovery.md)  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서의 메타데이터 검색 개선 사항을 설명합니다.  
   
- [SQL Server 용 OLE DB 드라이버의 utf-16 지원](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
+ [SQL Server용 OLE DB 드라이버에서 UTF-16 지원](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 도입된 동작 변경 사항에 대해 설명합니다. 열 결과 또는 출력 매개 변수를 바인딩할 때 고정 길이 버퍼를 제공 하는 경우는 **wchar** 문자 버퍼에 기록 하는 경우 및 종결 문자에 서로게이트 쌍의 상위 서로게이트 코드 포인트 크기를 다음 **wchar** 문자 하위 서로게이트 코드 포인트는, OLE DB Driver for SQL Server 버퍼를 상위 서로게이트 코드 포인트를 추가 하지 것입니다.  
   
- [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
+ [SQL Server용 OLE DB 드라이버의 고가용성, 재해 복구 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  고가용성, 재해 복구에 추가 된 기능을 활용 하도록 응용 프로그램을 구성할 수 있는 방법을 설명 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]합니다.  
   
  [확장 이벤트 로그의 진단 정보 액세스](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  SQL Server 및 링 버퍼 및 XEvents 로그의 진단 정보에 액세스할 수 있는 데이터 추적에 대 한 향상 된 OLE DB 드라이버 기능에 설명 합니다.  
   
- [SQL Server Support for LocalDB에 대 한 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
+ [SQL Server용 OLE DB 드라이버의 LocalDB 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  SQL Server에서 지 원하는 LocalDB 기능에 대 한 OLE DB Driver를 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server-programming.md)      
  [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
- [OLE DB Driver for SQL Server 설치](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
+ [SQL Server용 OLE DB 드라이버 설치](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   
   

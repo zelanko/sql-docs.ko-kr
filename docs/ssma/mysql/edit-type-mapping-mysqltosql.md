@@ -1,30 +1,31 @@
 ---
-title: "형식 매핑 (MySQLToSQL) 편집 | Microsoft Docs"
+title: 형식 매핑 (MySQLToSQL) 편집 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8db4278a82968a5bd147f5fcb984af3fa104022e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8a504400ffe402f3066404538f17d840c44cc04d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>형식 매핑 (MySQLToSQL) 편집
 **형식 매핑 편집** 대화 상자를 사용 하면 원본 및 대상 데이터베이스 개체 간의 형식이 매핑되는 방법을 지정할 수 있습니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   테이블 관련 형식 매핑을는 프로젝트 형식 매핑 및 데이터베이스를 재정의 합니다. 데이터베이스 관련 매핑을 프로젝트 매핑을 재정의합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 ##### <a name="source-type"></a>원본 유형  
 SQL Server 데이터 형식에 매핑할 소스 데이터 유형을 선택 합니다.  

@@ -1,15 +1,16 @@
 ---
-title: "변환, 로드 및 마이그레이션 (AccessToSQL) | Microsoft Docs"
+title: 변환, 로드 및 마이그레이션 (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - migrating databases, one-click
 - one-click migration
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44683ae2b0650a86c04c5a184417f17e5b3acbef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 33b560de98751eec68916e5efe648d17262135f9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>변환, 로드 및 (AccessToSQL) 마이그레이션
 **변환, 로드 및 마이그레이션** 변환, 로드 및 마이그레이션 단추 또는 마이그레이션 마법사를 사용 하는 경우 대화 상자 마이그레이션 상태를 보고 합니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 **선택한 개체에 대 한 데이터를 마이그레이션할** 페이지의 섹션도 포함 되어는 **보고서** 단추입니다. 데이터 마이그레이션 보고서를 보려면이 단추를 클릭 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **보고서**  
 관련된 된 변환 및 마이그레이션 보고서를 보여 줍니다.  
   

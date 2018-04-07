@@ -1,26 +1,26 @@
 ---
-title: "외부 데이터 (분석 플랫폼 시스템) PolyBase 연결 구성"
+title: 외부 데이터 (분석 플랫폼 시스템) PolyBase 연결 구성
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 
-ms.openlocfilehash: d9777fb2bbfd9af2598a422fc072877ff0b78959
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+caps.latest.revision: 43
+ms.openlocfilehash: 42dc008855ea9de61c67365ac81927808491de13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>외부 데이터 연결 PolyBase 구성
 Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연결 하려면 SQL Server PDW에서 PolyBase를 구성 하는 방법에 설명 합니다. PolyBase를 사용 하 여 Hadoop, Azure blob 저장소, SQL Server PDW를 비롯 한 여러 원본의 데이터를 통합 하는 쿼리를 실행 합니다.  
@@ -121,7 +121,7 @@ Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연�
   
     PolyBase HDInsight 지역 및 외부 Hadoop 2.0 클러스터 모두에 대해를 실행 하려면 외부 Hadoop 클러스터에 yarn-site.xml 기본 설정을 사용 합니다.  
   
-6.  PDW 영역 다시 시작 합니다. 이 작업을 수행 하려면 구성 관리자 도구를 사용 합니다. 참조 [구성 관리자 &#40; 시작 분석 플랫폼 시스템 &#41; ](launch-the-configuration-manager.md).  
+6.  PDW 영역 다시 시작 합니다. 이 작업을 수행 하려면 구성 관리자 도구를 사용 합니다. 참조 [구성 관리자를 시작 &#40;분석 플랫폼 시스템&#41;](launch-the-configuration-manager.md)합니다.  
   
 7.  Hadoop 연결에 대 한 보안 설정을 확인 합니다. 경우는 **약한 인증** Hadoop에서 쪽을 사용 하 여 사용 하도록 설정 `dfs.permission = true`, Hadoop 사용자를 만들어야 합니다 **pdw_user** 전체 읽기 권한을 부여 하 고이 사용자에 게 쓰기 권한이 있습니다. SQL Server PDW 및 SQL Server PDW에서 해당 호출은 항상으로 발급 **pdw_user**합니다.  고정 된 사용자 이름 이므로이 Hadoop 연결 및 SQL Server PDW 릴리스이 버전을 변경할 수 없습니다. 사용 하 여 Hadoop에서 보안을 해제 하는 경우 `dfs.permission = false`, 더 이상 매크로 수행 해야 합니다.  
   
@@ -129,12 +129,12 @@ Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연�
   
 9. Hadoop 연결에 대 한 Hadoop에 외부 데이터 원본을 만들 수 있는 사용자를 결정 합니다. 이러한 사용자의 각 노드의 각 Hadoop 이름, IP 주소와 포트 번호를 지정 하 고 제공 **ALTER ANY EXTERNAL DATA SOURCE** 또는 **제어 서버** 권한.  
   
-10. WASB에 연결 하려면 DNS 전달 기기에서 구성할도 필요 합니다. DNS 전달 구성 하려면 참조 [해결 비 어플라이언스 DNS 이름 &#40; DNS 전달자를 사용 하 여 분석 플랫폼 시스템 &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+10. WASB에 연결 하려면 DNS 전달 기기에서 구성할도 필요 합니다. DNS 전달 구성 하려면 참조 [비 어플라이언스 DNS 이름 확인에 DNS 전달자를 사용 하 여 &#40;분석 플랫폼 시스템&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)합니다.  
   
 이제 권한이 있는 사용자가 외부 데이터 원본, 외부 파일 형식을 외부 테이블을 만들 수 있습니다. 사용 하 여 이러한 Hadoop, 포함 하 여 여러 원본의 데이터를에서 통합할 Microsoft Azure blob 저장소 및 SQL Server PDW 합니다.  
 
 ## <a name="kerberos-configuration"></a>Kerberos 구성  
-Note를 PolyBase를 인증 하는 Kerberos 보안된 클러스터로 hadoop.rpc.protection 설정을 인증으로 설정 해야 합니다. 이 암호화 되지 않은 Hadoop 노드 간 데이터 통신을 남습니다. 
+Note를 PolyBase를 인증 하는 Kerberos 보안된 클러스터로 hadoop.rpc.protection 설정을 인증으로 설정 해야 합니다. 이렇게 하면 암호화되지 않은 Hadoop 노드 간의 데이터 통신이 유지됩니다. 
 
  [MIT KDC를 사용 하 여] Kerberos 보안 Hadoop 클러스터에 연결 합니다.
    
@@ -161,9 +161,9 @@ Note를 PolyBase를 인증 하는 Kerberos 보안된 클러스터로 hadoop.rpc.
   
 4. 데이터베이스 범위 자격 증명 개체를 만들어 각 Hadoop 사용자에 대해 인증 정보를 지정합니다. [PolyBase T-SQL 개체](../relational-databases/polybase/polybase-t-sql-objects.md)를 참조하세요.  
 
-5. PDW 영역 다시 시작 합니다. 이 작업을 수행 하려면 구성 관리자 도구를 사용 합니다. 참조 [구성 관리자 &#40; 시작 분석 플랫폼 시스템 &#41; ](launch-the-configuration-manager.md).
+5. PDW 영역 다시 시작 합니다. 이 작업을 수행 하려면 구성 관리자 도구를 사용 합니다. 참조 [구성 관리자를 시작 &#40;분석 플랫폼 시스템&#41;](launch-the-configuration-manager.md)합니다.
  
 ## <a name="see-also"></a>관련 항목:  
-[어플라이언스 구성 &#40; 분석 플랫폼 시스템 &#41;](appliance-configuration.md)  
+[어플라이언스 구성 &#40;분석 플랫폼 시스템&#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

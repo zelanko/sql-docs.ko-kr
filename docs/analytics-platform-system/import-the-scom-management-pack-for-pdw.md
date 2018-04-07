@@ -1,26 +1,26 @@
 ---
-title: "PDW (분석 플랫폼 시스템)에 대 한 SCOM 관리 팩 가져오기"
+title: PDW (분석 플랫폼 시스템)에 대 한 SCOM 관리 팩 가져오기
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
-caps.latest.revision: "6"
-ms.openlocfilehash: 179395b7befdf934fcc44532944f4b535b9d3c5a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: d8accd7106cce2274e60793e123779e87b8dfd49
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="import-the-scom-management-pack-for-pdw"></a>PDW에 대 한 SCOM 관리 팩 가져오기
 SQL Server PDW에 대 한 System Center Operations Manager (SCOM) 관리 팩을 가져오려면 다음이 단계를 수행 합니다. 관리 팩은 SCOM에서 SQL Server PDW 모니터링 해야 합니다.  
@@ -30,7 +30,7 @@ SQL Server PDW에 대 한 System Center Operations Manager (SCOM) 관리 팩을 
   
 System Center Operations Manager 2007 r 2는 설치 되어 실행 중 이어야 합니다.  
   
-관리 팩이 설치 해야 합니다. 참조 [SCOM 관리 팩 &#40; 설치 분석 플랫폼 시스템 &#41; ](install-the-scom-management-packs.md).  
+관리 팩이 설치 해야 합니다. 참조 [SCOM 관리 팩을 설치 &#40;분석 플랫폼 시스템&#41;](install-the-scom-management-packs.md)합니다.  
   
 ## <a name="Step1"></a>1 단계: SQL Server 어플라이언스 기본 관리 팩 가져오기  
   
@@ -83,7 +83,7 @@ System Center Operations Manager 2007 r 2는 설치 되어 실행 중 이어야 
     ![닫기를 클릭](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
 ## <a name="next-step"></a>다음 단계  
-관리 팩을 가져온 했으므로 다음 단계를 계속: [분석 플랫폼 시스템 모니터 &#40; SCOM 구성 분석 플랫폼 시스템 &#41; ](configure-scom-to-monitor-analytics-platform-system.md).  
+관리 팩을 가져온 했으므로 다음 단계를 계속: [모니터 분석 플랫폼 시스템에 구성 SCOM &#40;분석 플랫폼 시스템&#41;](configure-scom-to-monitor-analytics-platform-system.md)합니다.  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
