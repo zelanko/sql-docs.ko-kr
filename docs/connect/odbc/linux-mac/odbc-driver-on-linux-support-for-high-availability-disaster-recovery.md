@@ -1,27 +1,28 @@
 ---
-title: "MacOS-고가용성 및 재해 복구 및 Linux 기반 ODBC 드라이버 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: MacOS-고가용성 및 재해 복구 및 Linux 기반 ODBC 드라이버 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>MacOS 고가용성 및 재해 복구에 대 한 지원 및 Linux 기반 ODBC 드라이버
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,29 +75,11 @@ Linux와 macOS에서 ODBC 드라이버는 가용성 그룹 수신기에 연결 �
 2.  응용 프로그램에서 **ApplicationIntent=ReadWrite** 를 사용하고 보조 복제본 위치가 읽기 전용 액세스용으로 구성되어 있는 경우  
   
 주 복제본이 읽기 전용 작업을 거부하도록 구성되어 있고 연결 문자열에 **ApplicationIntent=ReadOnly**가 포함되어 있으면 연결이 실패합니다.  
-  
-## <a name="specifying-application-intent"></a>응용 프로그램 의도 지정  
-**ApplicationIntent=ReadOnly**인 경우 클라이언트는 AlwaysOn이 설정된 데이터베이스에 연결할 때 읽기 작업을 요청합니다. 서버 연결 시 및 USE 데이터베이스 문 동안 되지만 AlwaysOn이 설정 된 데이터베이스에만 의도 적용합니다.
 
-**ApplicationIntent** 키워드는 레거시 읽기 전용 데이터베이스에 적용되지 않습니다.  
 
-데이터베이스는 대상 AlwaysOn 데이터베이스에 대한 읽기 작업을 허용하거나 허용하지 않을 수 있습니다. (사용 하 여는 **ALLOW_CONNECTIONS** 절은 **PRIMARY_ROLE** 및 **SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql_md.md)] 문.)  
-  
-**ApplicationIntent** 키워드는 읽기 전용 라우팅을 설정하는 데 사용됩니다.  
-  
-## <a name="read-only-routing"></a>읽기 전용 라우팅  
-읽기 전용 라우팅은 데이터베이스의 읽기 전용 복제 가용성을 보장할 수 있는 기능입니다. 읽기 전용 라우팅을 활성화하려면:  
-  
-1.  AlwaysOn 가용성 그룹의 가용성 그룹 수신기에 연결합니다.  
-  
-2.  **ApplicationIntent** 연결 문자열 키워드는 **ReadOnly**로 설정해야 합니다.  
-  
-3.  읽기 전용 라우팅을 설정하려면 데이터베이스 관리자가 가용성 그룹을 구성해야 합니다.  
-  
-읽기 전용 라우팅을 사용하는 여러 연결이 여러 읽기 전용 복제본에 연결될 수 있습니다. 데이터베이스 동기화를 변경하거나 서버 라우팅 구성을 변경하면 클라이언트를 다른 읽기 전용 복사본에 연결할 수 있습니다. 모든 읽기 전용 요청을 동일한 읽기 전용 복제본에 연결하려면 가용성 그룹 수신기를 **Server** 연결 키워드에 전달하지 마세요. 대신, 읽기 전용 인스턴스의 이름을 지정합니다.  
-  
-읽기 전용 라우팅을 사용하면 주 복제본에 연결할 때보다 연결하는 데 시간이 더 걸립니다. 따라서 로그인 시간 제한을 늘립니다. 읽기 전용 라우팅은 먼저 주 복제본에 연결한 다음 가장 잘 읽을 수 있는 보조 복제본을 찾습니다.  
-  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc-syntax"></a>ODBC 구문
 
 두 개의 ODBC 연결 문자열 키워드가 지원 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
@@ -109,7 +92,7 @@ ODBC 연결 문자열 키워드에 대한 자세한 내용은 [SQL Server Native
   
 해당 하는 연결 특성은 합니다.
   
--   **된 SQL_COPT_SS_APPLICATION_INTENT**  
+-   **SQL_COPT_SS_APPLICATION_INTENT**  
   
 -   **SQL_COPT_SS_MULTISUBNET_FAILOVER**  
   
@@ -122,7 +105,7 @@ ODBC 연결 특성에 대 한 자세한 내용은 참조 [SQLSetConnectAttr](htt
 |[SQLConnect 함수](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** 모두 지원 **ApplicationIntent** 및 **MultiSubnetFailover** 데이터 원본 이름 (DSN) 또는 연결 특성을 통해.|  
 |[SQLDriverConnect 함수](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** 지원 **ApplicationIntent** 및 **MultiSubnetFailover** DSN, 연결 문자열 키워드 또는 연결 특성을 통해.|
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 
 [연결 문자열 키워드 및 DSN(데이터 원본 이름)](../../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 
