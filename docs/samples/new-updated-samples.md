@@ -1,6 +1,6 @@
 ---
-title: 업데이트 됨-SQL Server 문서에 대 한 ODBC | Microsoft Docs
-description: 코드 조각에 최근에 변경 된 설명서, Microsoft SQL Server에 대 한 ODBC (Open Database Connectivity)에 대 한 업데이트 된 콘텐츠를 표시 합니다.
+title: 업데이트 된-SQL Server 문서에 대 한 샘플 | Microsoft Docs
+description: 코드 조각에 대 한 Microsoft SQL Server에 대 한 예제에서 최근에 변경된 된 설명서에 대 한 업데이트 된 콘텐츠를 표시 합니다.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -8,15 +8,15 @@ ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: odbc
+ms.component: samples
 ms.date: 02/03/2018
-ms.openlocfilehash: d5c8f3ffac0a14c6cd0090b2b248a08acc52066c
+ms.openlocfilehash: 758ce1d48b6a8dc961635ee7dcb4023867d727d1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-odbc-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL Server 용 ODBC
+# <a name="new-and-recently-updated-samples-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL Server에 대 한 샘플
 
 
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/08/2018
 
 
 - *업데이트 날짜 범위:*  &nbsp; **2017-12-03** &nbsp;부터 &nbsp; **2018-02-03**까지
-- *주제 영역:* &nbsp; **SQL Server에 대 한 ODBC (Open Database Connectivity)**합니다.
+- *주제 영역:* &nbsp; **SQL Server에 대 한 샘플**합니다.
 
 
 
