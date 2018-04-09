@@ -4,7 +4,7 @@ description: 설치, 업데이트 및 Linux에서 SQL Server를 제거 합니다
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
+ms.date: 04/06/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 98f7f19bbcf7ba83d74c2d4aa1e54409c2434147
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 설치 지침
 
@@ -179,7 +179,7 @@ Linux 컴퓨터에 없는 경우 액세스에 사용 되는 온라인 저장소�
 
 1. **데이터베이스 엔진 패키지 설치**합니다. 해당 플랫폼에 따라 다음 명령 중 하나를 사용 합니다. 이 예제 패키지 파일 이름을 다운로드 한 정확한 이름으로 바꿉니다.
 
-   | 플랫폼 | 패키지 제거 명령 |
+   | 플랫폼 | 패키지 설치 명령 |
    |-----|-----|
    | RHEL | `sudo yum localinstall mssql-server_versionnumber.x86_64.rpm` |
    | SLES | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |

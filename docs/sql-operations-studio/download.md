@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31b4ee5f9bef46f6b3e654d1cf16a7abbd2cbac8
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio(미리 보기) 다운로드 및 설치
 
@@ -60,7 +60,10 @@ ms.lasthandoff: 04/05/2018
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux용 SQL Operations Studio(미리 보기) 얻기
 
-1. [ Linux용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=870840)를 다운로드합니다.
+1. 다운로드 [! 포함[이름 sos](../includes/name-sos-short.md) 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용 하 여 Linux 용:
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
 1. 파일을 추출하고 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 실행하기 위해 새 터미널 창을 열고 다음 명령을 입력합니다.
 
    **Debian 설치:**
@@ -84,7 +87,8 @@ ms.lasthandoff: 04/05/2018
    cd ~ 
    cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
    tar -xvf ~/sqlops-linux-<version string>.tar.gz 
-   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc source ~/.bashrc 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
+   source ~/.bashrc 
    sqlops 
    ``` 
 

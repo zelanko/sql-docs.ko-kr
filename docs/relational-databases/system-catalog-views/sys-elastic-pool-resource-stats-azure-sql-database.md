@@ -1,16 +1,16 @@
 ---
-title: "sys.elastic_pool_resource_stats (Azure SQL 데이터베이스) | Microsoft Docs"
-ms.custom: 
-ms.date: 09/30/2016
-ms.prod: 
+title: sys.elastic_pool_resource_stats (Azure SQL 데이터베이스) | Microsoft Docs
+ms.custom: ''
+ms.date: 04/06/2018
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - Azure SQL Database
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - elastic_pool_resource_stats_TSQL
 - elastic_pool_resource_stats
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7af69bdd1f98560d3a6ae9699551b4f3062f68c6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c1e77bcfcfd4e27981f63fd2802fd6b76c18fe1f
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ORDER BY end_time DESC;
 ## <a name="see-also"></a>관련 항목:  
  [탄력적 데이터베이스와 함께 해소 폭발적 증가](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
  [만들기 및 관리 (미리 보기)는 SQL 데이터베이스 탄력적 데이터베이스 풀](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [sys.resource_stats &#40; Azure SQL 데이터베이스 &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [sys.dm_db_resource_stats &#40; Azure SQL 데이터베이스 &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
+ [sys.resource_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys.dm_db_resource_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
   

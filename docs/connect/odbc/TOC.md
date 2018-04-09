@@ -7,3 +7,6 @@
 # [SQL Server용 ODBC 드라이버 다운로드](download-odbc-driver-for-sql-server.md)
 
 # [DSN 연결 문자열 키워드 및 특성](dsn-connection-string-attribute.md)
+# [ODBC 드라이버에서 Azure Active Directory 사용](using-azure-active-directory.md)
+
+# [버그 수정](bug-fixes.md)
