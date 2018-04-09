@@ -30,7 +30,7 @@ ms.lasthandoff: 04/04/2018
 
 이 문서에서는 SQL Server 2016 또는 SQL Server 2017에서 R을 사용하는 방법과 그 샘플을 제공합니다. 이러한 샘플 및 데모를 통해 다음을 배우게 됩니다.
 
-+ T-SQL에서 R을 실행 하는 방법
++ T-SQL에서 R을 실행하는 방법
 + 원격 및 로컬 컴퓨팅 컨텍스트가 무엇인지, 그리고 SQL Server 컴퓨터를 사용하여 R 코드를 실행하는 방법
 + 저장된 프로시저에서 R 코드의 래핑 방법
 + SQL 프로덕션 환경에 대한 R 코드 최적화
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/04/2018
 
 별도로 명시되지 않는 한, 자습서는 SQL Server 2016 R Services 용으로 개발되었고, 중요한 변경 없이 SQL Server 2017 기계 학습 Service에서 작동합니다.
 
-모든 자습서는 광범위 한 기능의 사용 RevoScaleR 패키지에서 SQL Server에 대 한 계산 컨텍스트를 확인 합니다.
+모든 자습서에서는 SQL Server 컴퓨팅 컨텍스트를 위해 RevoScaleR 패키지의 많은 기능을 사용합니다.
 
 + [R과 SQL Server 데이터 과학 심층 분석](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 
