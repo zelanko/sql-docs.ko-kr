@@ -13,11 +13,11 @@ ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: f54d131868caf332351d7806881ea89238843236
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 21d4ea90d5ee29c68161f9cf2d59ed2d31002d0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Revoscalepy로 Python을 사용 하 여 모델을 만들려면
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,6 @@ ms.lasthandoff: 04/04/2018
 ## <a name="prerequisites"></a>필수 구성 요소
 
 + 이 단원에서는 이전 단원 보다 다양 한 데이터를 사용 합니다. 먼저 이전 단원을 완료 하려면 필요가 없습니다. 그러나 이전 단원을 완료 Python을 실행 하도록 구성 하는 서버가 있어야 하는 경우 해당 서버 및 데이터베이스도 사용할 한 계산 컨텍스트.
-
 + 계산으로 SQL Server를 사용 하 여 Python 코드를 실행 하려면 상황에 맞는 SQL Server 2017 이상이 필요 합니다. 명시적으로 설치 하 고 다음 기능을 활성화 해야 또한 **컴퓨터 학습 서비스**, Python 언어 옵션을 선택 합니다.
 
     SQL Server 2017의 시험판 버전을 설치한 경우 업데이트 해야에 적어도 RTM 버전. 서비스 릴리스 이후 계속 해 서에 확장 하 고 Python 기능을 향상 합니다. 초기 시험판 버전의이 자습서의 일부 기능은 작동 하지 않을 수 있습니다.
@@ -52,9 +51,9 @@ SQL Server에서 Python 코드를 실행 하려면 필요는 **revoscalepy** 패
 
     ```sql
     CREATE DATABASE sqlpy;
-    GO;
+    GO
     USE sqlpy;
-    GO;
+    GO
     ```
 
     > [!IMPORTANT]

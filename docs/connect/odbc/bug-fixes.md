@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: dc71f74ca8e81f370037b82e42fd78957e096775
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="list-of-bugs-fixed"></a>수정 된 버그의 목록
 
@@ -38,10 +38,10 @@ ms.lasthandoff: 04/05/2018
 - 소수점 수는 정수를 부동으로 변환 하는 경우 32 비트 Windows에서 드문 버그가 수정
 - 문제가 해결 되었습니다. 여기서는에서 항상 암호화 된 10 진수 필드에 double 삽입 반환 데이터 잘림 오류가 발생 하지
 - MacOS 설치 관리자에서 경고 수정
+- 연결 복원 력 및 연결 풀링을 모두 설정 되 면 서버에서 삭제할 세션을 일으키는 세션 복구를 시도 하는 동안 잘못 된 상태가 SQL Server로 보내기 고정
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>버그 수정에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- 연결 복원 력 및 연결 풀링을 모두 설정 되 면 서버에서 삭제할 세션을 일으키는 세션 복구를 시도 하는 동안 잘못 된 상태가 SQL Server로 보내기 고정
 - 버그를 수정 합니다. 대량 삽입 "액세스 거부" 오류와 함께 실패할 수 있습니다 때 Kerberos 인증을 사용 하는 경우
 - 버전 2.3.1 아래에 있는 unixODBC 버그에 대 한 제거 해결 (드라이버 unixODBC에 전달 된 특정 버퍼의 크기를 두 배로 사용)
 - 연결 복원 력 고정 ColumnEncryption를 사용 하는 경우 중단 (다시) = 사용

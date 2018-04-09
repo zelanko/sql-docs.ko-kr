@@ -1,26 +1,26 @@
 ---
-title: "PDW 사용 권한 (SQL Server PDW)"
+title: PDW 사용 권한 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: "23"
-ms.openlocfilehash: 49bcb7cf5e8d4bb03acd9db5de87716ec2462191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 23
+ms.openlocfilehash: 95843be163714be27e6eeb7f28825e98a5371e19
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-permissions"></a>PDW 사용 권한
 이 항목에서는 요구 사항 및 SQL Server PDW에 대 한 데이터베이스 권한을 관리 하기 위한 옵션에 설명 합니다.  
@@ -64,11 +64,11 @@ SQL Server PDW에서 데이터베이스 엔진 권한, 로그인을 통해 서�
 사용자 및 데이터베이스 역할은 데이터베이스 수준 개체 이며 확인 하 여 나열 될 수 있습니다 [sys.database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)합니다. 만 데이터베이스 수준 사용 권한은 데이터베이스 보안 주체에 부여할 수 있습니다.  
   
 ## <a name="BackupTypes"></a>기본 사용 권한  
-다음 목록에는 기본 사용 권한을 설명합니다.  
+다음 목록에서는 기본 사용 권한을 설명합니다.  
   
 -   Using 하 여 로그인을 만들면 **CREATE LOGIN** 문, 로그인 수신는 **CONNECT SQL** SQL Server PDW에 연결할 수 있는 로그인을 허용 합니다.  
   
--   데이터베이스 사용자를 사용 하 여 만들어질 때는 **사용자 만들기** 문, 사용자에 게는 **ON 데이터베이스 연결::***< s e _ >* 권한, 허용 된 사용자로 해당 데이터베이스에 연결에 로그인 합니다.  
+-   데이터베이스 사용자를 사용 하 여 만들어질 때는 **CREATE USER** 문, 사용자에 게는 **ON 데이터베이스 연결:: * * * < s e _ >* 권한, 해당 데이터베이스에 연결 하려면 로그인을 허용 합니다. 사용자입니다.  
   
 -   PUBLIC 역할을 포함 한 모든 보안 주체는 명시적 사용 권한에서의 암시적 사용 권한 상속 되기 때문에 기본적으로 명시적 또는 암시적 사용 권한 없음를 갖습니다. 따라서 명시적 사용 권한 없음 있을 때 있을 수 있습니다도 암시적 권한이 없습니다.  
   
@@ -80,7 +80,7 @@ SQL Server PDW에서 데이터베이스 엔진 권한, 로그인을 통해 서�
   
 -   트랜잭션을 권한이 필요 하지 않습니다. 모든 보안 주체를 실행할 수는 **BEGIN TRANSACTION**, **커밋**, 및 **롤백** 트랜잭션 명령입니다. 그러나 보안 주체에는 트랜잭션 내의 각 문을 실행 하려면 적절 한 권한이 있어야 합니다.  
   
--   **사용** 문을 권한이 필요 하지 않습니다. 모든 보안 주체를 실행할 수는 **사용** 모든 데이터베이스에 데이터베이스에 액세스할 수 있어야 사용자 계정 데이터베이스에서 또는 게스트 사용자를 사용 하도록 설정 되지만 합니다.  
+-   **USE** 문은 사용 권한이 필요하지 않습니다. 모든 보안 주체를 실행할 수는 **사용** 모든 데이터베이스에 데이터베이스에 액세스할 수 있어야 사용자 계정 데이터베이스에서 또는 게스트 사용자를 사용 하도록 설정 되지만 합니다.  
   
 ### <a name="the-public-role"></a>PUBLIC 역할  
 자동으로 모든 새 어플라이언스에 로그인 PUBLIC 역할에 속해야 합니다. PUBLIC 서버 역할에는 다음과 같은 특징이 있습니다.  
@@ -95,7 +95,7 @@ SQL Server PDW에서 데이터베이스 엔진 권한, 로그인을 통해 서�
 로그인에 특정 작업을 수행할 수 있는 권한이 여부 로그인, 사용자 및 사용자가 멤버인 역할에 부여 하거나 거부 한 사용 권한에 따라 달라 집니다. 서버 수준 사용 권한을 (같은 **CREATE LOGIN** 및 **VIEW SERVER STATE**) 서버 수준 보안 주체 (로그인)에 사용할 수 있습니다. 데이터베이스 수준 사용 권한 (같은 **선택** 테이블에서 또는 **EXECUTE** 프로시저에) 데이터베이스 수준의 보안 주체 (사용자 및 데이터베이스 역할)에 사용할 수 있습니다.  
   
 ### <a name="implicit-and-explicit-permissions"></a>암시적 및 명시적 사용 권한  
-*명시적 사용 권한을* 는 **GRANT** 또는 **DENY** 권한에서 보안 주체에 부여는 **GRANT** 또는 **DENY**문입니다. 데이터베이스 수준 사용 권한을에 나열 됩니다는 [sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 보기. 에 서버 수준 사용 권한을 나열 됩니다는 [sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 보기.  
+*명시적 사용 권한*은 **GRANT** 또는 **DENY**문으로 보안 주체에게 주어진 **GRANT** 또는 **DENY** 사용 권한입니다. 데이터베이스 수준 사용 권한을에 나열 됩니다는 [sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 보기. 에 서버 수준 사용 권한을 나열 됩니다는 [sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 보기.  
   
 *암시적 사용 권한이* 는 **GRANT** 또는 **거부** 권한을 보안 주체 (로그인 또는 서버 역할)가 상속 합니다. 다음과 같은 방법으로 권한을 상속할 수 있습니다.  
   
@@ -103,7 +103,7 @@ SQL Server PDW에서 데이터베이스 엔진 권한, 로그인을 통해 서�
   
 -   보안 주체는 보안 주체 개체 부모 범위 (예: 테이블 또는 전체 데이터베이스에 대 한 스키마) 중 하나에 대해 권한이 하위 개체 (예: 테이블)에 대 한 권한을 상속할 수 있습니다.  
   
--   보안 주체 하위 사용 권한을 포함 하는 권한을 사용 함으로써 사용 권한을 상속할 수 있습니다. 예를 들어는 **ALTER ANY USER** 권한이 모두 포함 된 **사용자 만들기** 및 **ALTER ON USER::**  *<name>*  사용 권한입니다.  
+-   보안 주체 하위 사용 권한을 포함 하는 권한을 사용 함으로써 사용 권한을 상속할 수 있습니다. 예를 들어는 **ALTER ANY USER** 권한이 모두 포함는 **CREATE USER** 및 **ALTER ON USER:: * * *<name>*  사용 권한.  
   
 ### <a name="determining-permissions-when-performing-actions"></a>작업을 수행할 때 사용 권한 결정  
 보안 주체에 게 할당할 수 있는 권한을 결정 하는 과정은 복잡 합니다. 복잡 한 개체에는 여러 역할의 구성원이 될 수 및 사용 권한을 역할 계층 구조의 여러 수준에 전달할 수 때문에 암시적 사용 권한을 결정할 때 발생 합니다.  
@@ -225,7 +225,7 @@ SQL Server는 서버에 대 한 권한을 관리할 수 있도록 미리 구성 
 고정된 서버 역할은 SQL Server에서 자동으로 생성 됩니다. SQL Server PDW에 SQL Server 고정 서버 역할의 제한 된 구현이 있습니다. 만 **sysadmin** 및 **공용** 구성원으로 사용자 로그인이 포함 되어 있습니다. **setupadmin** 및 **dbcreator** SQL Server PDW에서 내부적으로 사용 됩니다. 추가 멤버 추가 또는 모든 역할에서 제거할 수 있습니다.  
   
 ### <a name="sysadmin-fixed-server-role"></a>sysadmin 고정 서버 역할  
-**sysadmin** 고정 서버 역할의 멤버는 서버에서 모든 작업을 수행할 수 있습니다. **sa** 로그인의 유일한 구성원은는 **sysadmin** 고정된 서버 역할입니다. 로그인을 추가로에 추가할 수 없습니다는 **sysadmin** 고정된 서버 역할입니다. 부여는 **제어 서버** 권한의 멤버 자격이 근사치로 계산 된 **sysadmin** 고정된 서버 역할입니다. 다음 예제에서는 부여는 **제어 서버** fay에 게를 라는 로그인에 사용 합니다.  
+**sysadmin** 고정 서버 역할의 멤버는 서버에서 모든 작업을 수행할 수 있습니다. **sa** 로그인의 유일한 구성원은는 **sysadmin** 고정된 서버 역할입니다. 로그인을 추가로에 추가할 수 없습니다는 **sysadmin** 고정된 서버 역할입니다. **CONTROL SERVER** 사용 권한 부여는 **sysadmin** 고정 서버 역할의 멤버 자격을 갖는 것과 비슷합니다. 다음 예제에서는 부여는 **제어 서버** fay에 게를 라는 로그인에 사용 합니다.  
   
 ```sql  
 USE master;  

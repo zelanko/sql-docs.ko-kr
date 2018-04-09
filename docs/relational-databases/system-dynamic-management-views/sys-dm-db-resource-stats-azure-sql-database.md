@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (Azure SQL 데이터베이스) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2016
+ms.date: 04/06/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: f09cea24068fe63dd1609e26c7835662369d8f0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,8 @@ ms.lasthandoff: 04/05/2018
 |xtp_storage_percent|**10 진수 (5,2)**|저장소 사용률이 메모리 내 OLTP에 대 한 서비스 계층 한도의 비율로 (보고 간격의 끝). 여기에 다음 메모리 내 OLTP 개체의 저장에 사용 된 메모리: 메모리 액세스에 최적화 된 테이블, 인덱스 및 테이블 변수입니다. ALTER TABLE 작업을 처리 하기 위해 사용 되는 메모리 포함 됩니다.<br /><br /> 데이터베이스에 메모리 내 OLTP를 사용 하지 않는 경우 0을 반환 합니다.|  
 |max_worker_percent|**10 진수 (5,2)**|데이터베이스의 서비스 계층 한도의 비율로 최대 동시 작업자 (요청 수)입니다.|  
 |max_session_percent|**10 진수 (5,2)**|데이터베이스의 서비스 계층 한도의 비율로 최대 동시 세션|  
-|dtu_limit|**int**|현재 최대 데이터베이스 DTU 설정이이 데이터베이스에 대 한이 간격 동안입니다.|  
+|dtu_limit|**int**|현재 최대 데이터베이스 DTU 설정이이 데이터베이스에 대 한이 간격 동안입니다. |
+|||
   
 > [!TIP]  
 >  이러한 제한 및 서비스 계층에 대 한 더 많은 컨텍스트 항목을 참조 하십시오. [서비스 계층](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) 및 [서비스 계층 기능 및 제한](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)합니다.  
@@ -58,13 +59,13 @@ ms.lasthandoff: 04/05/2018
  이 뷰에는 VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="remarks"></a>주의  
- 반환한 데이터 **sys.dm_db_resource_stats** 은 Basic, Standard 및 Premium 데이터베이스에 대 한 실행 중인 서비스 계층/성능 수준에 대 한 DTU 제한 허용 되는 최대의 백분율로 표현 됩니다.
+ 반환한 데이터 **sys.dm_db_resource_stats** 은 실행 중인 서비스 계층/성능 수준에 대 한 제한은 허용 되는 최대의 백분율로 표현 됩니다.
  
  데이터베이스가 지난 60분 안에 다른 서버로 장애 조치된 경우 이 뷰는 해당 장애 조치 이후 주 데이터베이스였던 시간에 대해서만 데이터를 반환합니다.  
   
  이 데이터의 덜 세분화 된 뷰를 사용 하 여 **sys.resource_stats** 카탈로그 뷰는 **마스터** 데이터베이스입니다. 이 뷰는 5분마다 데이터를 캡처하고 14일 동안 기록 데이터를 유지합니다.  자세한 내용은 참조 [sys.resource_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)합니다.  
   
- 탄력적 풀의 멤버 데이터베이스가 있는 경우 백분율 값으로 표시 되는 리소스 통계 탄력적 풀 구성에 설정 된 대로 데이터베이스에 대 한 최대 DTU 제한의 백분율로 표현 됩니다.  
+ 탄력적 풀의 멤버 데이터베이스가 있는 경우 백분율 값으로 표시 되는 리소스 통계 탄력적 풀 구성에 설정 된 대로 데이터베이스에 대 한 최대 한계의 %로 표현 됩니다.  
   
 ## <a name="example"></a>예제  
   
