@@ -43,7 +43,7 @@ ms.lasthandoff: 02/11/2018
 
 별도로 명시되지 않는 한, 자습서는 SQL Server 2016 R Services 용으로 개발되었고, 중요한 변경 없이 SQL Server 2017 기계 학습 Service에서 작동합니다.
 
-모든 자습서에서는 SQL Server의 계산 컨텍스트를 위해 RevoScaleR의 많은 기능을 사용합니다.
+모든 자습서에서는 SQL Server 컴퓨팅 컨텍스트를 위해 RevoScaleR 패키지의 많은 기능을 사용합니다.
 
 + [R과 SQL Server 데이터 과학 심층 분석](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 
