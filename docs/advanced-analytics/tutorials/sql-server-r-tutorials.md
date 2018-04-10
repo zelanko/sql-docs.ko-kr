@@ -30,7 +30,7 @@ ms.lasthandoff: 04/04/2018
 
 이 문서에서는 SQL Server 2016 또는 SQL Server 2017에서 R을 사용하는 방법과 그 샘플을 제공합니다. 이러한 샘플 및 데모를 통해 다음을 배우게 됩니다.
 
-+ T-SQL에서 R을 실행 하는 방법
++ T-SQL에서 R을 실행하는 방법
 + 원격 및 로컬 컴퓨팅 컨텍스트가 무엇인지, 그리고 SQL Server 컴퓨터를 사용하여 R 코드를 실행하는 방법
 + 저장된 프로시저에서 R 코드의 래핑 방법
 + SQL 프로덕션 환경에 대한 R 코드 최적화
@@ -42,19 +42,19 @@ ms.lasthandoff: 04/04/2018
 
 별도로 명시되지 않는 한, 자습서는 SQL Server 2016 R Services 용으로 개발되었고, 중요한 변경 없이 SQL Server 2017 기계 학습 Service에서 작동합니다.
 
-모든 자습서는 광범위 한 기능의 사용 RevoScaleR 패키지에서 SQL Server에 대 한 계산 컨텍스트를 확인 합니다.
+모든 자습서에서는 SQL Server 컴퓨팅 컨텍스트를 위해 RevoScaleR 패키지의 많은 기능을 사용합니다.
 
 + [R과 SQL Server 데이터 과학 심층 분석](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 
-  RevoScaleR 패키지에서 함수를 사용 하는 방법을 알아봅니다. R 및 SQL Server 및 스위치 간 데이터 이동에 맞게 특정 작업 컨텍스트를 계산 합니다. 모델 및 플롯을 만들고 개발 환경의 데이터베이스 서버 간에 이동 합니다.
+  RevoScaleR 패키지에서 함수를 사용하는 방법을 알아봅니다. R 및 SQL Server 및 스위치 간 데이터 이동에 맞게 특정 작업 컨텍스트를 계산합니다. 모델 및 플롯을 만들고 개발 환경의 데이터베이스 서버 간에 이동합니다.
 
-  **대상:** 데이터 과학자 또는 개발자는 R 언어에 잘 알고 있고 고급 R 패키지 및 Microsoft R Revolution Analytics에서의 함수에 대 한 자세한 내용은 합니다.
+  **대상:** R 언어에 익숙한 데이터 과학자 또는 개발자, 그리고 Microsoft의 Revolution Analytics의 강력한 R 패키지와 기능에 대해 배우고 싶은 사람들 
 
-  **요구 사항:** 기본 R 지식이 합니다. SQL Server R Services 또는 오른쪽으로 컴퓨터 학습 서비스를 사용 하 여 서버에 대 한 액세스 설치 도움말에 대 한 참조 [필수 구성 요소](#bkmk_Prerequisites)합니다.
+  **요구 사항:** R에 대한 기본적인 지식과, SQL Server R Service 또는 Machine Learning Services with R을 이용한 서버 접속이 필요합니다. [필수 구성 요소](#bkmk_Prerequisites)를 참고하세요.
 
 + [SQL 개발자를 위해 데이터베이스에서 R 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-  만 사용 하 여 전체 R 솔루션을 빌드하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 도구입니다.
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용해서 R 솔루션을 빌드하고 배포하세요.
 
   프로덕션 환경에 솔루션을 이동에 초점을 맞춥니다. R 코드를 저장 프로시저에 래핑하고, R 모델을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장하고, 예측을 위해 매개 변수가 있는 R 모델 호출을 수행하는 방법을 알아봅니다.
 
