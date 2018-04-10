@@ -17,13 +17,13 @@ ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 03/16/2018
+ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 및 데이터 웨어하우스에 대한 Bring Your Own Key(미리 보기) 지원으로 투명한 데이터 암호화
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -109,33 +109,64 @@ Azure Key Vault로 고가용성을 구성하는 방법은 데이터베이스 및
 
 ![단일 서버 HA 및 Geo-DR 없음](./media/transparent-data-encryption-byok-azure-sql/SingleServer_HA_Config.PNG)
 
-두 번째 경우, Azure Key Vault에서 TDE 보호기의 고가용성을 유지하려면 데이터베이스의 활성 지역 복제 복사본 또는 기존 SQL Database 장애 조치(failover) 그룹을 기반으로 중복 Azure Key Vault를 구성해야 합니다.  지리적으로 복제된 각 서버에는 별도의 키 자격 증명 모음이 필요하며 서버와 동일한 Azure 지역에 함께 배치하는 것이 이상적입니다. 한 지역의 정전으로 인해 기본 데이터베이스에 액세스할 수 없게 되어 장애 조치(failover)가 트리거되면, 보조 데이터베이스가 보조 키 자격 증명 모음을 사용하여 인수할 수 있습니다.  
+## <a name="how-to-configure-geo-dr-with-azure-key-vault"></a>Azure Key Vault로 Geo-DR을 구성하는 방법
+
+암호화된 데이터베이스에서 TDE 보호기의 고가용성을 유지하려면 기존 또는 원하는 SQL Database 장애 조치(failover) 그룹이나 활성 지역 복제 인스턴스를 기반으로 중복 Azure Key Vault를 구성해야 합니다.  지리적으로 복제된 각 서버에는 별도의 키 자격 증명 모음이 필요하며 동일한 Azure 지역의 서버와 함께 배치해야 합니다. 한 지역의 정전으로 인해 기본 데이터베이스에 액세스할 수 없게 되어 장애 조치(failover)가 트리거되면, 보조 데이터베이스가 보조 키 자격 증명 모음을 사용하여 인수할 수 있습니다. 
+ 
+지리적으로 복제된 Azure SQL Databases의 경우 다음 Azure Key Vault 구성이 필요합니다.
+- 지역에서 키 자격 증명 모음을 사용하는 하나의 기본 데이터베이스, 지역에서 키 자격 증명 모음을 사용하는 하나의 보조 데이터베이스. 
+- 보조 데이터베이스가 하나 이상 필요하며 최대 4개의 보조 데이터베이스가 지원됩니다. 
+- 보조의 보조(체인)는 지원되지 않습니다.
+
+다음 섹션에서는 설치 및 구성 단계를 자세히 살펴봅니다. 
+
+### <a name="azure-key-vault-configuration-steps"></a>Azure Key Vault 구성 단계
+
+- [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) 설치 
+- [“일시 삭제” 속성을 활성화하는 PowerShell](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell)을 사용하여 다른 두 지역에 두 개의 Azure Key Vault를 만듭니다(이 옵션은 아직 AKV 포털에서 사용할 수 없으나 SQL에서 필요함). 
+- 첫 번째 키 자격 증명 모음에서 새 키를 만듭니다.  
+  - RSA/RSA-HSA 2048 키 
+  - 만료 날짜 없음 
+  - 키가 활성화되어 있고 가져오기, 키 래핑 및 키 래핑 해제 작업을 수행할 권한이 있어야 합니다. 
+- 기본 키를 백업하고 두 번째 키 자격 증명 모음으로 키를 복원합니다.  [BackupAzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1) 및 [복원 - AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/restore-azurekeyvaultkey?view=azurermps-5.5.0)를 참조하세요. 
+
+### <a name="azure-sql-database-configuration-steps"></a>Azure SQL Database 구성 단계
+
+다음 구성 단계는 새 SQL 배포로 시작하는지 여부 또는 이미 기존 SQL Geo-DR 배포를 사용하는지 여부에 따라 다릅니다.  먼저 새 배포에 대한 구성 단계를 간략하게 설명한 다음, Azure Key Vault에 저장된 TDE 보호기를 이미 Geo-DR 링크가 설정되어 있는 기존 배포에 할당하는 방법에 대해 설명합니다. 
+
+새 배포를 위한 단계:
+- 이전에 만든 키 자격 증명 모음과 동일한 두 지역에 두 개의 논리 SQL 서버를 만듭니다. 
+- 논리 서버 TDE 창을 선택하고 각 논리 SQL Server에 대해 다음을 수행합니다.  
+   - 동일한 지역에서 AKV를 선택합니다. 
+   - TDE 보호기로 사용할 키를 선택합니다. 각 서버는 TDE 보호기의 로컬 복사본을 사용합니다. 
+   - 포털에서 이 작업을 수행하면 논리 SQL Server에 대한 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)가 만들어집니다. 이는 키 자격 증명 모음에 액세스하도록 논리 SQL Server 권한을 할당하는 데 사용되므로 이 ID는 삭제하지 마세요.  대신 Azure Key Vault에서 사용 권한을 제거하면 액세스가 해지될 수 있습니다. 논리 SQL Server의 경우 키 자격 증명 모음에 액세스하도록 논리 SQL Server 권한을 할당하는 데 사용되므로 이 ID는 삭제하지 마세요.  대신 Azure Key Vault에서 사용 권한을 제거하면 액세스가 해지될 수 있습니다. 
+- 기본 데이터베이스를 만듭니다. 
+- [활성 지역 복제 지침](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview)에 따라 시나리오를 완료합니다. 이 단계에서는 보조 데이터베이스를 만듭니다.
 
 ![장애 조치(failover) 그룹 및 Geo-DR](./media/transparent-data-encryption-byok-azure-sql/Geo_DR_Config.PNG)
 
-장애 조치(failover) 중 Azure Key Vault의 TDE 보호기에 계속 액세스할 수 있도록 하려면 데이터베이스가 보조 서버에 복제되거나 장애 조치(failover)되기 전에 구성되어야 합니다. 주 서버와 보조 서버 모두 TDE 보호기 복사본을 다른 모든 Azure Key Vault에 저장해야 합니다. 여기 예에서는 두 키 자격 증명 모음에 동일한 키가 저장됩니다.
-
-Geo-dr 시나리오에서 중복성을 위해 보조 키 자격 증명 모음이 있는 보조 데이터베이스가 필요하며 최대 4개의 보조가 지원됩니다.  보고에 대한 보조를 만드는 것을 의미하는 체인은 지원되지 않습니다.  초기 설정 시간 동안 서비스는 사용 권한이 기본 및 보조 키 자격 증명 모음에 대해 올바로 설정되었는지 확인합니다.  이러한 사용 권한을 유지하고 여전히 준비되어 있는지 정기적으로 테스트하는 것이 중요합니다.
-
 >[!NOTE]
->기본 및 보조 서버에 서버 ID를 할당할 때 ID를 보조 서버에 먼저 할당해야 합니다.
+>데이터베이스 간에 지리적 연결을 설정하기 전에 동일한 TDE 보호기가 두 키 자격 증명 모음에 모두 있는지 확인하는 것이 중요합니다.
 >
 
-한 키 자격 증명 모음의 기존 키를 다른 키 자격 증명 모음에 추가하려면 [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) cmdlet을 사용합니다.
+Geo-DR 배포를 사용한 기존 SQL DB를 위한 단계:
 
- ```powershell
-   <# Include the version guid in the KeyId #>
-   Add-AzureRmSqlServerKeyVaultKey `
-   -KeyId <KeyVaultKeyId> `
-   -ServerName <LogicalServerName> `
-   -ResourceGroup <SQLDatabaseResourceGroupName>
-   ```
+논리 SQL Server가 이미 존재하고 주 데이터베이스와 보조 데이터베이스가 이미 할당되어 있기 때문에 Azure Key Vault를 구성하는 단계는 다음 순서대로 수행해야 합니다. 
+- 보조 데이터베이스를 호스팅하는 논리 SQL Server를 시작합니다. 
+   - 동일한 지역에 있는 키 자격 증명 모음에 할당 
+   - TDE 보호기 할당 
+- 이제 주 데이터베이스를 호스팅하는 논리 SQL Server로 이동합니다. 
+   - 보조 DB에 사용한 것과 동일한 TDE 보호기 선택
+   
+![장애 조치(failover) 그룹 및 Geo-DR](./media/transparent-data-encryption-byok-azure-sql/geo_DR_ex_config.PNG)
 
 >[!NOTE]
->키 자격 증명 모음 이름 및 키 이름의 조합 문자 길이는 94자를 초과할 수 없습니다.
+>키 자격 증명 모음을 서버를 할당할 때 보조 서버를 시작하는 것이 중요합니다.  두 번째 단계에서는 키 자격 증명 모음을 주 서버에 할당하고 TDE 보호기를 업데이트합니다. 이 시점에서 복제된 데이터베이스에서 사용하는 TDE 보호기는 두 서버에서 모두 사용할 수 있으므로 Geo-DR 링크는 계속 작동합니다.
 >
+
+SQL Database Geo-DR 시나리오에 대해 Azure Key Vault에서 고객 관리되는 키를 이용하여 TDE를 활성화하기 전에, SQL Database 지리적 복제에 사용될 것과 동일한 지역의 동일한 콘텐츠로 두 Azure Key Vaults를 만들고 유지 관리하는 것이 중요합니다.  “동일한 콘텐츠”는 특별히 두 서버가 모든 데이터베이스에서 사용하는 TDE 보호기에 대한 액세스 권한을 갖도록 두 키 자격 증명 모음이 동일한 TDE 보호기의 복제본을 포함해야 함을 의미합니다.  앞으로 두 키 자격 증명 모음을 동기적으로 유지해야 합니다. 즉, 키 회전 후에 동일한 TDE 보호기의 복제본을 포함해야 하며, 로그 파일 또는 백업에 사용된 이전 키 버전을 유지해야 하고, TDE 보호기는 동일한 키 속성을 유지 관리해야 하고, 키 자격 증명 모음은 SQL에 대한 동일한 액세스 권한을 유지 관리해야 합니다.  
  
-[활성 지리적 복제 개요](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)의 단계에 따라 이러한 서버로 활성 지리적 복제를 구성하고 장애 조치(failover)를 트리거합니다. 
+[활성 지리적 복제 개요](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)의 단계에 따라 장애 조치(failover)를 테스트하고 트리거합니다. 이는 두 키 자격 증명 모음이 모두 유지 관리되도록 SQL에 대한 액세스 권한을 확인하기 위해 정기적으로 수행해야 합니다. 
 
 
 ### <a name="backup-and-restore"></a>Backup 및 Restore 메서드

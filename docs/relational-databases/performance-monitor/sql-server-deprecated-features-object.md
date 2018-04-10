@@ -1,16 +1,16 @@
 ---
-title: "SQL Server, Deprecated Features 개체 | Microsoft 문서"
-ms.custom: 
+title: SQL Server, Deprecated Features 개체 | Microsoft 문서
+ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 
+caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a9a674bac91e77945fd7493cee22a11f44639a75
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |------------------------------------------------------|-----------------|  
 |임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'|# 외에 다른 문자를 포함하지 않는 식별자가 발견되었습니다. 적어도 하나 이상의 추가 문자를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |'::' 함수 호출 구문|테이블 반환 함수에 대해 :: 함수 호출 구문이 발견되었습니다. `SELECT column_list FROM` *<function_name>*`()`으로 바꿉니다. 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다. 컴파일마다 한 번씩 발생합니다.|  
-|'@' 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 '@@'으로 시작하는 이름|@ 또는 @@으로 시작하는 식별자가 발견되었습니다. @@ 식별자로 시작하는 이름, @@ 또는 @은 사용할 수 없습니다. 컴파일마다 한 번씩 발생합니다.|  
+|‘\@’ 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 ‘\@\@’으로 시작하는 이름|\@ 또는 \@\@으로 시작하는 식별자가 발견되었습니다. \@\@ 식별자로 시작하는 이름, \@ 또는 \@v@은 사용할 수 없습니다. 컴파일마다 한 번씩 발생합니다.|  
 |ADDING TAPE DEVICE|사용되지 않는 기능인 sp_addumpdevice'**tape**'가 발견되었습니다. 대신 sp_addumpdevice'**disk**'를 사용하세요. 사용할 때마다 한 번씩 발생합니다.|  
 |ALL 권한|GRANT ALL, DENY ALL 또는 REVOKE ALL 구문이 발견된 총 횟수입니다. 특정 권한을 거부하도록 구문을 수정해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|서버 인스턴스가 시작된 이후로 ALTER DATABASE에서 사용되지 않는 기능인 TORN_PAGE_DETECTION 옵션이 사용된 총 횟수입니다. 대신 PAGE_VERIFY 구문을 사용해야 합니다. DDL 문에서 사용할 때마다 한 번씩 발생합니다.|  
@@ -99,7 +99,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |EXT_soap_endpoints|sys.soap_endpoints가 발견되었습니다. 네이티브 XML 웹 서비스는 사용되지 않습니다. 대신 WCF(Windows Communications Foundation) 또는 ASP.NET을 사용해야 합니다.|  
 |EXTPROP_LEVEL0TYPE|level0type에서 TYPE이 발견되었습니다. SCHEMA를 level0type으로 사용하고 TYPE을 level1type으로 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |EXTPROP_LEVEL0USER|level1type이 지정된 경우 level0type USER입니다. 사용자에 대한 직접 확장 속성에 대해서만 USER를 level0type으로 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|FASTFIRSTROW|FASTFIRSTROW 구문이 발견되었습니다. OPTION(FAST *n*) 구문을 사용하도록 문을 다시 작성합니다. 컴파일마다 한 번씩 발생합니다.|  
+|FASTFIRSTROW|FASTFIRSTROW 구문이 발견되었습니다. OPTION(FAST *n*) 구문을 사용하도록 문을 다시 작성하세요. 컴파일마다 한 번씩 발생합니다.|  
 |FILE_ID|FILE_ID 구문이 발견되었습니다. FILE_IDEX를 사용하도록 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |fn_get_sql|fn_get_sql 함수가 컴파일되었습니다. sys.dm_exec_sql_text를 대신 사용하십시오. 컴파일마다 한 번씩 발생합니다.|  
 |fn_servershareddrives|fn_servershareddrives 함수가 컴파일되었습니다. 대신 sys.dm_io_cluster_shared_drives를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
@@ -193,7 +193,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_defaultlanguage|sp_defaultlanguage 프로시저가 발견되었습니다. 대신 ALTER LOGIN을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_denylogin|sp_denylogin 프로시저가 발견되었습니다. 대신 ALTER LOGIN DISABLE을 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |sp_depends|sp_depends 프로시저가 발견되었습니다. 대신 sys.dm_sql_referencing_entities 및 sys.dm_sql_referenced_entities를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|sp_detach_db @keepfulltextindexfile|sp_detach_db 문에서 @keepfulltextindexfile 인수가 발견되었습니다. 이 인수는 사용할 수 없습니다.|  
+|sp_detach_db \@keepfulltextindexfile|sp_detach_db 문에서 \@keepfulltextindexfile 인수가 발견되었습니다. 이 인수는 사용할 수 없습니다.|  
 |sp_dropalias|sp_dropalias 프로시저가 발견되었습니다. 별칭을 사용자 계정 및 데이터베이스 역할의 조합으로 대체해야 합니다. 업그레이드된 데이터베이스에서 sp_dropalias를 사용하여 별칭을 제거해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_dropapprole|sp_dropapprole 프로시저가 발견되었습니다. 대신 DROP APPLICATION ROLE을 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |sp_dropextendedproc|sp_dropextendedproc 프로시저가 발견되었습니다. 대신 CLR을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
@@ -206,10 +206,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_fulltext_catalog|sp_fulltext_catalog 프로시저가 발견되었습니다. 대신 CREATE/ALTER/DROP FULLTEXT CATALOG를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_fulltext_column|sp_fulltext_column 프로시저가 발견되었습니다. 대신 ALTER FULLTEXT INDEX를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_fulltext_database|sp_fulltext_database 프로시저가 발견되었습니다. 대신 ALTER DATABASE를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|sp_fulltext_service @action=clean_up|sp_fulltext_service 프로시저의 clean_up 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
-|sp_fulltext_service @action=connect_timeout|sp_fulltext_service 프로시저의 connect_timeout 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
-|sp_fulltext_service @action=data_timeout|sp_fulltext_service 프로시저의 data_timeout 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
-|sp_fulltext_service @action=resource_usage|sp_fulltext_service 프로시저의 resource_usage 옵션이 발견되었습니다. 이 옵션은 아무런 기능을 수행하지 않습니다. 쿼리마다 한 번씩 발생합니다.|  
+|sp_fulltext_service \@action=clean_up|sp_fulltext_service 프로시저의 clean_up 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
+|sp_fulltext_service \@action=connect_timeout|sp_fulltext_service 프로시저의 connect_timeout 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
+|sp_fulltext_service \@action=data_timeout|sp_fulltext_service 프로시저의 data_timeout 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
+|sp_fulltext_service \@action=resource_usage|sp_fulltext_service 프로시저의 resource_usage 옵션이 발견되었습니다. 이 옵션은 아무런 기능을 수행하지 않습니다. 쿼리마다 한 번씩 발생합니다.|  
 |sp_fulltext_table|sp_fulltext_table 프로시저가 발견되었습니다. 대신 CREATE/ALTER/DROP FULLTEXT INDEX를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_getbindtoken|sp_getbindtoken 프로시저가 발견되었습니다. 대신 MARS(Multiple Active Result Sets) 또는 분산 트랜잭션을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_grantdbaccess|sp_grantdbaccess 프로시저가 발견되었습니다. 대신 CREATE USER를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  

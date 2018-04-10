@@ -1,16 +1,16 @@
 ---
-title: "Integration Services 업그레이드 | Microsoft Docs"
-ms.custom: 
+title: Integration Services 업그레이드 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: 56b70314f149d8eb2f8a9a0143ac43aae3d31afc
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 이상이 현재 컴퓨터에 설치되어 있으면 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]로 업그레이드할 수 있습니다.  
@@ -43,12 +43,12 @@ ms.lasthandoff: 03/20/2018
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 먼저 업그레이드 관리자를 실행하는 것이 좋습니다. 업그레이드 관리자는 기존 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 사용되는 새로운 패키지 형식으로 마이그레이션하는 경우 발생할 수 있는 문제를 보고합니다.  
   
 > [!NOTE]  
->  DTS(데이터 변환 서비스) 패키지의 마이그레이션 또는 실행은 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]릴리스에서 더 이상 지원되지 않습니다. 다음 DTS 기능이 더 이상 사용되지 않습니다.  
+>  DTS(데이터 변환 서비스) 패키지의 마이그레이션 또는 실행을 지원하는 기능은 SQL Server 2012에서 더 이상 사용되지 않습니다. 다음 DTS 기능이 더 이상 사용되지 않습니다.  
 >   
 >  -   DTS 런타임  
 > -   DTS API  
-> -   DTS 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 다음 버전으로 마이그레이션하기 위한 패키지 마이그레이션 마법사  
-> -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 DTS 패키지 유지 관리 지원  
+> -   DTS 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+> -   다음 DTS 패키지 유지 관리 지원: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   DTS 2000 패키지 실행 태스크  
 > -   DTS 패키지의 업그레이드 관리자 검색입니다.  
 >   
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/20/2018
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램을 실행하고 **SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 업그레이드** 옵션을 선택합니다.  
   
--   명령 프롬프트에서 **setup.exe**를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 의 "용 설치 스크립트" 섹션을 참조하세요.  
+-   명령 프롬프트에서 **setup.exe**를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)의 "[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]용 설치 스크립트" 섹션을 참조하세요.  
   
  다음 동작은 업그레이드를 사용하여 수행할 수 없습니다.  
   

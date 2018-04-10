@@ -1,26 +1,26 @@
 ---
-title: "Excel에서 SQL로 데이터 가져오기 | Microsoft Docs"
-ms.custom: 
-ms.date: 08/02/2017
+title: Excel에서 SQL로 데이터 가져오기 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 158a6c72c0c172b061d79bb52a276bacc22c0fcd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b935bd332e5cbfa481f9400968a7c8188e2bc603
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ Excel 파일에서 SQL Server 또는 Azure SQL Database로 데이터를 가져�
     -   BCP
     -   Azure Data Factory
 
+SSIS 또는 Azure Data Factory와 같은 복잡한 도구 및 서비스에 대한 자세한 설명은 개요 범위에 포함되지 않습니다. 관심 있는 솔루션에 대한 자세한 내용을 알아보려면 제공된 링크로 이동하세요.
+
 > [!IMPORTANT]
-> SSIS 또는 Azure Data Factory와 같은 복잡한 도구 및 서비스에 대한 자세한 설명은 개요 범위에 포함되지 않습니다. 관심 있는 솔루션에 대한 자세한 내용을 알아보려면 제공된 링크로 이동하세요.
+> Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대한 자세한 내용은 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../../integration-services/load-data-to-from-excel-with-ssis.md)를 참조하세요.
 
 ## <a name="sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사
 
@@ -209,6 +211,5 @@ Azure Data Factory를 사용해 데이터를 복사하는 방법을 알아보려
 -   [복사 활동을 사용하여 데이터 이동](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
 -   [자습서: Azure Portal을 사용하여 복사 활동으로 파이프라인 만들기](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
-## <a name="next-steps"></a>다음 단계
-
-관심 있는 솔루션에 대한 자세한 내용을 알아보려면 제공된 링크로 이동하세요.
+## <a name="see-also"></a>참고 항목
+[SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드](../../integration-services/load-data-to-from-excel-with-ssis.md)

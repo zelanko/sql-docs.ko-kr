@@ -1,15 +1,16 @@
 ---
-title: "가용성 모드(Always On 가용성 그룹) | Microsoft Docs"
-ms.custom: 
+title: 가용성 모드(Always On 가용성 그룹) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7f1e90e1892eae4763b8afd1af575cc6b3ef16a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fd0254134d929dd14b1bddab09cae409b999b21d
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>가용성 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/18/2018
 -   [관련 내용](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> 지원되는 가용성 모드  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 아래 설명되어 있는 비동기-커밋 모드 및 동기-커밋 모드라는 두 가지 가용성 모드를 지원합니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 아래 설명되어 있는 비동기-커밋 모드 및 동기-커밋 모드 및 구성 전용 모드라는 세 가지 가용성 모드를 지원합니다.  
   
 -   *비동기-커밋 모드* 는 여러 가용성 복제본이 상당한 거리를 두고 분산되어 있는 경우에 적합한 재해 복구 솔루션입니다. 모든 보조 복제본이 비동기-커밋 모드로 실행될 경우 주 복제본은 보조 복제본이 로그를 확정할 때까지 기다리지 않습니다. 대신 주 복제본은 로그 레코드를 로컬 로그 파일에 쓴 후 곧바로 트랜잭션 확인을 클라이언트로 보냅니다. 주 복제본은 비동기-커밋 모드로 구성된 보조 복제본에 비해 최소한의 트랜잭션 대기 시간으로 실행됩니다.  현재 주 복제본이 비동기 커밋 가용성 모드로 구성되어 있는 경우 주 복제본은 보조 복제본 각각의 가용성 모드 설정에 관계없이 모든 보조 복제본에 대해 비동기로 트랜잭션을 커밋합니다.  
   

@@ -1,28 +1,28 @@
 ---
-title: "가져오기 및 내보내기 마법사의 간단한 예제 시작 | Microsoft Docs"
-ms.custom: 
+title: 가져오기 및 내보내기 마법사의 간단한 예제 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: a684f719495083d5ca4e79a2fbc0213ab83a95a6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>가져오기 및 내보내기 마법사의 간단한 예제 시작
 Excel 스프레드시트에서 SQL Server 데이터베이스로 데이터를 가져오는 일반적인 시나리오를 살펴봄으로써 SQL Server 가져오기 및 내보내기 마법사에서 기대할 수 있는 작업을 알아봅니다. 다른 원본과 대상을 사용하려는 경우에도 이 항목에서는 마법사를 실행하는 방법에 대해 알아야 할 사항을 대부분 보여 줍니다.
@@ -62,9 +62,12 @@ Windows 시작 메뉴의 Microsoft SQL Server 2016 그룹에서 마법사를 시
 ## <a name="step-3---pick-excel-as-your-data-source"></a>3단계 - 데이터 원본으로 Excel 선택
 다음 페이지의 **데이터 원본 선택**에서 Microsoft Excel을 데이터 원본으로 선택합니다. 그런 다음 Excel 파일을 찾아서 선택합니다. 마지막으로 파일을 만드는 데 사용한 Excel 버전을 지정합니다.
 
+> [!IMPORTANT]
+> Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대한 자세한 내용은 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../load-data-to-from-excel-with-ssis.md)를 참조하세요.
+
 ![Excel 데이터 원본 선택](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 
-Excel에 연결하는 방법에 대한 자세한 내용은 [Excel 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)을 참조하세요. 마법사의 이 페이지에 대한 자세한 내용은 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.
+마법사의 이 페이지에 대한 자세한 내용은 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.
 
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>4단계 - 대상으로 SQL Server 선택
 다음 페이지의 **대상 선택**에서 SQL Server에 연결하는 목록에서 데이터 공급자 중 하나를 선택하여 Microsoft SQL Server를 대상으로 선택합니다. 이 예에서는 **.Net Framework Data Provider for SQL Server**를 선택합니다.
@@ -160,6 +163,6 @@ SQL Server Management Studio에서 마법사가 SQL Server에 만든 새 대상 
 
 -   **마법사의 단계에 대해 자세히 알아보기** - 마법사의 단계에 대한 정보를 찾으려면 [SQL Server 가져오기 및 내보내기 마법사의 단계](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)의 목록에서 원하는 페이지를 선택하세요. 또한 마법사의 각 페이지마다 별도의 설명서 페이지가 있습니다.
 
--   **데이터 원본 및 대상에 연결하는 방법에 대해 자세히 알아보기** - 데이터에 연결하는 방법에 대한 정보를 찾으려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)의 목록에서 원하는 페이지를 선택하세요. 일반적으로 사용되는 몇 가지 데이터 원본마다 별도의 설명서 페이지가 있습니다.
+-   **데이터 원본 및 대상에 연결하는 방법에 대해 자세히 알아보기** - 데이터에 연결하는 방법에 대한 정보를 찾으려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)의 목록에서 원하는 페이지를 선택하세요. 주로 사용되는 각 데이터 원본에 대한 개별 설명서 페이지도 있습니다.
 
-
+-   **Excel에서 데이터를 로드하는 방법을 자세히 알아봅니다.** Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대해 알아보려면 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../load-data-to-from-excel-with-ssis.md)를 참조하세요.

@@ -1,16 +1,16 @@
 ---
 title: RESTORE(Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2016
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE DATABASE
@@ -42,19 +42,19 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 
+caps.latest.revision: 248
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ff7514b66515dbeac88a3506723f1cdb8a2279bd
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   BACKUP 명령을 사용하여 만든 백업을 복원합니다. 이 명령을 사용하면 다음과 같은 복원 시나리오를 수행할 수 있습니다.  
   
@@ -70,6 +70,8 @@ ms.lasthandoff: 01/25/2018
   
 -   데이터베이스 스냅숏에서 캡처한 지점으로 데이터베이스를 되돌립니다.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복원 시나리오에 대한 자세한 내용은 [복원 및 복구 개요 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)를 참조하세요.  인수 설명에 대한 자세한 내용은 [RESTORE 인수 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)을 참조하세요.   다른 인스턴스에서 데이터베이스를 복원할 때 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리(SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)의 정보를 참조하세요.
   
 > **참고:** Windows Azure Blob Storage 서비스에서 복원에 대한 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
@@ -132,7 +134,7 @@ RESTORE DATABASE { database_name | @database_name_var }
 [;]  
   
 --To Restore a Transaction Log:  
-RESTORE LOG { database_name | @database_name_var }   
+RESTORE LOG { database_name | @database_name_var }  -- Does not apply to SQL Database Managed Instance 
  [ <file_or_filegroup_or_pages> [ ,...n ] ]  
  [ FROM <backup_device> [ ,...n ] ]   
  [ WITH   
@@ -155,7 +157,10 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
- | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
+ | { DISK    -- Does not apply to SQL Database Managed Instance
+     | TAPE  -- Does not apply to SQL Database Managed Instance
+     | URL   -- Applies to SQL Server and SQL Database Managed Instance
+   } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
 Note: URL is the format used to specify the location and the file name for the Windows Azure Blob. Although Windows Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
@@ -194,7 +199,7 @@ Note: URL is the format used to specify the location and the file name for the W
 --Monitoring Options  
  | STATS [ = percentage ]   
   
---Tape Options  
+--Tape Options. Does not apply to SQL Database Managed Instance
  | { REWIND | NOREWIND }   
  | { UNLOAD | NOUNLOAD }   
   
@@ -334,7 +339,32 @@ Note: URL is the format used to specify the location and the file name for the W
  데이터베이스를 복원하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시가 지워집니다. 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "데이터베이스 유지 관리 또는 재구성 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.  
   
  가용성 데이터베이스를 복원하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 데이터베이스를 복원한 다음 데이터베이스를 가용성 그룹에 추가합니다.  
-  
+
+## <a name="general-remarks---sql-database-managed-instance"></a>일반적인 주의 사항 - SQL Database 관리되는 인스턴스
+
+비동기 복원의 경우 클라이언트 연결을 중단하는 경우에도 복원은 계속됩니다. 사용자 연결을 드롭하는 경우 복원 작업의 상태에 대한 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 보기를 확인할 수 있습니다(데이터베이스의 CREATE 및 DROP 경우 포함). 
+
+다음 데이터베이스 옵션은 설정/재정의되며 나중에 변경할 수 없습니다.
+
+- NEW_BROKER(broker가 .bak 파일에서 활성화되지 않은 경우)
+- ENABLE_BROKER(broker가 .bak 파일에서 활성화되지 않은 경우)
+- AUTO_CLOSE=OFF(.bak 파일의 데이터베이스에 AUTO_CLOSE=ON이 있는 경우)
+- RECOVERY FULL(.bak 파일의 데이터베이스에 SIMPLE 또는 BULK_LOGGED 복구 모드가 있는 경우)
+- 메모리에 최적화된 파일 그룹이 추가되고 원본 .bak 파일에 없는 경우 XTP를 호출합니다. 모든 기존 메모리에 최적화된 파일 그룹은 XTP로 이름이 변경됩니다.
+- SINGLE_USER 및 RESTRICTED_USER 옵션은 MULTI_USER로 변환됩니다.
+
+## <a name="limitations---sql-database-managed-instance"></a>제한 사항 - SQL Database 관리되는 인스턴스
+다음과 같은 제한이 적용됩니다.
+
+- 여러 백업 세트를 포함하는 .BAK 파일은 복원할 수 없습니다.
+- 여러 로그 파일을 포함하는 .BAK 파일은 복원할 수 없습니다.
+- .bak에 FILESTREAM 데이터가 포함된 경우 복원이 실패합니다.
+- 활성 메모리 내 개체가 있는 데이터베이스를 포함하는 백업은 현재 복원할 수 없습니다.
+- 어느 지점에 메모리 내 개체가 있는 데이터베이스를 포함하는 백업은 현재 복원할 수 없습니다.
+- 읽기 전용 모드인 데이터베이스를 포함하는 백업은 현재 복원할 수 없습니다. 이 제한 사항은 곧 삭제될 예정입니다.
+
+자세한 내용은 [관리되는 인스턴스](/azure/sql-database/sql-database-managed-instance)를 참조하세요.
+
 ## <a name="interoperability"></a>상호 운용성  
   
 ### <a name="database-settings-and-restoring"></a>데이터베이스 설정 및 복원  

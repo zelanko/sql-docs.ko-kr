@@ -1,30 +1,30 @@
 ---
-title: "FINDSTRING(SSIS 식) | Microsoft Docs"
-ms.custom: 
+title: FINDSTRING(SSIS 식) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2787fdb4663ea8c1495a811b44f878b896498eb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 56520a56a70622e23e7c407ed788f8f8f0ba3dc6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING(SSIS 식)
   문자 식에서 지정한 문자열 발생 위치를 반환합니다. 반환 결과는 항목의 인덱스(1부터 시작)입니다. 문자열 매개 변수는 문자 식으로 계산되고 발생 빈도 매개 변수는 정수여야 합니다. 문자열을 찾을 수 없는 경우 반환 값은 0입니다. 문자열이 발생 인수에 지정된 횟수보다 적게 발생하는 경우에도 반환 값이 0입니다.  
@@ -71,10 +71,10 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- 이 예에서는 **Name** 열을 사용합니다. **Name** 열에서 값 n의 위치가 반환됩니다. 반환 결과는 **Name**열의 값에 따라 달라집니다. **Name** 열에 Anderson이 포함된 경우 함수는 8을 반환합니다.  
+ 이 예에서는 **Name** 열을 사용합니다. **Name** 열에서 두 번째 “n”의 위치가 반환됩니다. 반환 결과는 **Name**열의 값에 따라 달라집니다. **Name** 열에 Anderson이 포함된 경우 함수는 8을 반환합니다.  
   
 ```  
-FINDSTRING(Name,"n", 2)   
+FINDSTRING(Name, "n", 2)   
 ```  
   
  이 예에서는 **Name** 열과 **Size** 열을 사용합니다. **Name** 열에서 **Size** 값의 가장 왼쪽 문자 위치가 반환됩니다. 반환 결과는 열 값에 따라 달라집니다. **Name** 이 Mountain,500Red,42이고 **Size** 가 42이면 반환 결과는 17입니다.  

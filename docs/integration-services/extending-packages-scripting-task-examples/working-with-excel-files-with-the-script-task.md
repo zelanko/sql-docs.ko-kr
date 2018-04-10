@@ -1,15 +1,15 @@
 ---
-title: "스크립트 태스크를 사용한 Excel 파일 작업 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/17/2017
+title: 스크립트 태스크를 사용한 Excel 파일 작업 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-task-examples
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,39 +20,30 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfbe8efdeab1af1ba6c802d69abdce4b1b4696fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a533795d6d6017c885b887e35b8e996ab82493df
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>스크립트 태스크를 사용한 Excel 파일 작업
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 파일 형식으로 스프레드시트에 저장된 데이터를 작업하기 위한 Excel 연결 관리자, Excel 원본 및 Excel 대상을 제공합니다. 이 항목에서는 스크립트 태스크를 사용하여 사용 가능한 Excel 데이터베이스(통합 문서 파일) 및 테이블(워크시트 및 명명된 범위)에 대한 정보를 가져오는 기술을 설명합니다. 이러한 예제는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 공급자가 지원하는 다른 파일 기반 데이터 원본에도 사용할 수 있도록 쉽게 수정할 수 있습니다.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 파일 형식으로 스프레드시트에 저장된 데이터를 작업하기 위한 Excel 연결 관리자, Excel 원본 및 Excel 대상을 제공합니다. 이 항목에서는 스크립트 태스크를 사용하여 사용 가능한 Excel 데이터베이스(통합 문서 파일) 및 테이블(워크시트 및 명명된 범위)에 대한 정보를 가져오는 기술을 설명합니다.
   
- [예제를 테스트하기 위한 패키지 구성](#configuring)  
-  
- [예 1: Excel 파일의 존재 여부 확인](#example1)  
-  
- [예 2: Excel 테이블의 존재 여부 확인](#example2)  
-  
- [예 3: 폴더의 Excel 파일 목록 가져오기](#example3)  
-  
- [예 4: Excel 파일의 테이블 목록 가져오기](#example4)  
-  
- [예제 결과 표시](#testing)  
-  
-> [!NOTE]  
->  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
-  
+> [!TIP]  
+>  여러 패키지에서 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
+
+> [!IMPORTANT]
+> Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대한 자세한 내용은 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../load-data-to-from-excel-with-ssis.md)를 참조하세요.
+ 
 ##  <a name="configuring"></a> 예제를 테스트하기 위한 패키지 구성  
  단일 패키지에서 이 항목의 모든 예제를 테스트할 수 있도록 구성할 수 있습니다. 이 항목의 예제에서는 대개 동일한 여러 패키지 변수와 동일한 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스를 사용합니다.  
   
-#### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>패키지를 이 항목의 예에 사용할 수 있도록 구성하려면  
+### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>패키지를 이 항목의 예에 사용할 수 있도록 구성하려면  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 새 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트를 만들고 편집을 위해 기본 패키지를 엽니다.  
   
@@ -85,7 +76,7 @@ ms.lasthandoff: 01/25/2018
 ##  <a name="example1"></a> 예 1 설명: Excel 파일의 존재 여부 확인  
  이 예에서는 `ExcelFile` 변수에 지정된 Excel 통합 문서 파일이 존재하는지 확인한 다음 `ExcelFileExists` 변수의 부울 값을 이 결과로 설정합니다. 이 부울 값은 패키지의 워크플로에서 분기하는 데 사용할 수 있습니다.  
   
-#### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
+### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
 1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **ExcelFileExists**로 바꿉니다.  
   
@@ -155,7 +146,7 @@ public class ScriptMain
 ##  <a name="example2"></a> 예 2 설명: Excel 테이블의 존재 여부 확인  
  이 예에서는 `ExcelTable` 변수에 지정된 Excel 워크시트 또는 명명된 범위가 `ExcelFile` 변수에 지정된 Excel 통합 문서 파일에 있는지 여부를 확인한 다음 `ExcelTableExists` 변수의 부울 값을 이 결과로 설정합니다. 이 부울 값은 패키지의 워크플로에서 분기하는 데 사용할 수 있습니다.  
   
-#### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
+### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
 1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **ExcelTableExists**로 바꿉니다.  
   
@@ -262,7 +253,7 @@ public class ScriptMain
 ##  <a name="example3"></a> 예 3 설명: 폴더의 Excel 파일 목록 가져오기  
  이 예에서는 `ExcelFolder` 변수 값에 지정된 폴더에 있는 Excel 파일의 목록으로 배열을 채운 다음 이 배열을 `ExcelFiles` 변수에 복사합니다. Foreach from Variable 열거자를 사용하여 배열의 파일을 반복할 수 있습니다.  
   
-#### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
+### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
 1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **GetExcelFiles**로 바꿉니다.  
   
@@ -337,7 +328,7 @@ public class ScriptMain
 > [!NOTE]  
 >  Excel 통합 문서의 테이블 목록에는 워크시트($ 접미사를 가짐)와 명명된 범위가 모두 포함됩니다. 워크시트만 포함하거나 명명된 범위 목록만 포함하도록 목록을 필터링해야 하는 경우에는 이를 위한 다른 코드를 추가해야 합니다.  
   
-#### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
+### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
 1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **GetExcelTables**로 바꿉니다.  
   
@@ -446,7 +437,7 @@ public class ScriptMain
 ##  <a name="testing"></a> 예제 결과 표시  
  이 항목의 각 예를 동일한 패키지에서 구성한 경우 모든 스크립트 태스크를 모든 예의 출력을 표시하는 추가 스크립트 태스크에 연결할 수 있습니다.  
   
-#### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>이 항목의 예 출력을 표시하도록 스크립트 태스크를 구성하려면  
+### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>이 항목의 예 출력을 표시하도록 스크립트 태스크를 구성하려면  
   
 1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **DisplayResults**로 바꿉니다.  
   
@@ -550,7 +541,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드](../load-data-to-from-excel-with-ssis.md)  
  [Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

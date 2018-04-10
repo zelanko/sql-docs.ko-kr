@@ -1,16 +1,16 @@
 ---
 title: RESTORE FILELISTONLY(Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/15/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE FILELISTONLY
@@ -24,22 +24,25 @@ helpviewer_keywords:
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: 
+caps.latest.revision: 83
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 29cc42e61ff88ee1d7b1d61a2a4ed214d72b3e1d
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 문 - FILELISTONLY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 세트에 포함된 로그 파일과 데이터베이스의 목록을 결과 집합으로 반환합니다.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  인수에 대한 자세한 설명은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  
   
@@ -93,7 +96,7 @@ FROM <backup_device>
 |LogicalName|**nvarchar(128)**|파일의 논리적 이름입니다.|  
 |PhysicalName|**nvarchar(260)**|물리적 파일 이름 또는 운영 체제 이름입니다.|  
 |형식|**char(1)**|다음 중 하나에 해당하는 파일 유형입니다.<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일<br /><br /> **F** = 전체 텍스트 카탈로그<br /><br /> **S** = FileStream, FileTable 또는 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 컨테이너|  
-|FileGroupName|**nvarchar(128)**|파일이 있는 파일 그룹의 이름입니다.|  
+|FileGroupName|**nvarchar(128)** NULL|파일이 있는 파일 그룹의 이름입니다.|  
 |크기|**numeric(20,0)**|현재 크기(바이트)입니다.|  
 |MaxSize|**numeric(20,0)**|허용되는 최대 크기(바이트)입니다.|  
 |FileID|**bigint**|데이터베이스 내에서 고유한 파일 식별자입니다.|  
@@ -105,13 +108,13 @@ FROM <backup_device>
 |BackupSizeInBytes|**bigint**|이 파일의 백업의 크기(바이트)입니다.|  
 |SourceBlockSize|**int**|백업 장치를 제외한 해당 파일이 포함된 물리적 장치의 블록 크기(바이트)입니다.|  
 |FileGroupID|**int**|파일 그룹의 ID입니다.|  
-|LogGroupGUID|**uniqueidentifier NULL**|NULL|  
+|LogGroupGUID|**uniqueidentifier** NULL|NULL|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|차등 백업의 경우 로그 시퀀스 번호가 **DifferentialBaseLSN**보다 크거나 같은 변경 내용이 포함됩니다.<br /><br /> 다른 백업 유형의 경우 값은 NULL입니다.|  
-|DifferentialBaseGUID|**uniqueidentifier**|차등 백업의 경우 차등 기반의 고유 식별자입니다.<br /><br /> 다른 백업 유형의 경우 값은 NULL입니다.|  
+|DifferentialBaseGUID|**uniqueidentifier** NULL|차등 백업의 경우 차등 기반의 고유 식별자입니다.<br /><br /> 다른 백업 유형의 경우 값은 NULL입니다.|  
 |IsReadOnly|**bit**|**1** = 파일이 읽기 전용입니다.|  
 |IsPresent|**bit**|**1** = 파일이 백업에 있습니다.|  
-|TDEThumbprint|**varbinary(32)**|데이터베이스 암호화 키의 지문을 표시합니다. 암호기 지문은 키 암호화에 사용되는 인증서의 SHA-1 해시입니다. 데이터 암호화에 대한 자세한 내용은 [투명한 데이터 암호화&#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.|  
-|SnapshotURL|**nvarchar(360)**|FILE_SNAPSHOT 백업에 포함된 데이터베이스 파일의 Azure 스냅숏에 대한 URL입니다. FILE_SNAPSHOT 백업이 없는 경우 NULL을 반환합니다.|  
+|TDEThumbprint|**varbinary(32)** NULL|데이터베이스 암호화 키의 지문을 표시합니다. 암호기 지문은 키 암호화에 사용되는 인증서의 SHA-1 해시입니다. 데이터 암호화에 대한 자세한 내용은 [투명한 데이터 암호화&#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.|  
+|SnapshotURL|**nvarchar(360)** NULL|FILE_SNAPSHOT 백업에 포함된 데이터베이스 파일의 Azure 스냅숏에 대한 URL입니다. FILE_SNAPSHOT 백업이 없는 경우 NULL을 반환합니다.|  
   
 ## <a name="security"></a>보안  
  백업 작업은 미디어 세트, 백업 세트 또는 이 둘 모두에 대해 암호를 지정할 수 있습니다. 미디어 세트나 백업 세트에 암호가 정의되어 있는 경우 RESTORE 문에서 정확한 암호를 지정해야 합니다. 이러한 암호를 지정하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 무단으로 복원 작업을 수행하거나 미디어에 백업 세트를 무단으로 추가하는 작업을 방지할 수 있습니다. 하지만 암호를 사용해도 BACKUP 문의 FORMAT 옵션을 사용하여 미디어를 덮어쓰는 작업은 수행됩니다.  

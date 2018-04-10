@@ -1,16 +1,16 @@
 ---
 title: CREATE TRIGGER(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: mathoma
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE TRIGGER
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - triggers [SQL Server], creating
 - database-scoped triggers [SQL Server]
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: 
+caps.latest.revision: 140
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21d9fd7428af28eec0d739da212887973592401c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 23cb33dffcc9753200d24116b4a6d279c8fe8db5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -81,7 +81,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
   
 ```  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a 
 -- table (DML Trigger on memory-optimized tables)  
@@ -100,7 +100,7 @@ AS { sql_statement  [ ; ] [ ,...n ] }
   
 ```  
   
-```  
+```sql  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE or UPDATE statement (DDL Trigger)  
   
@@ -116,7 +116,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-```  
+```sql  
 -- Trigger on a LOGON event (Logon Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER trigger_name   
@@ -133,7 +133,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ## <a name="syntax"></a>구문  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -149,7 +149,7 @@ ON { table | view }
   
 ```  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE, or UPDATE STATISTICS statement (DDL Trigger)   
@@ -255,7 +255,7 @@ OR ALTER
   
  DML 트리거는 deleted 및 inserted 논리(개념) 테이블을 사용합니다. 이러한 테이블은 구조적으로 트리거가 정의되어 있는 테이블(사용자 동작이 수행되는 테이블)과 유사합니다. deleted 및 inserted 테이블에는 사용자 동작으로 변경될 수 있는 행의 이전 값과 새 값이 유지됩니다. 예를 들어, `deleted` 테이블의 모든 값을 검색하려면 다음을 사용합니다.  
   
-```  
+```sql  
 SELECT * FROM deleted;  
 ```  
   
@@ -277,7 +277,7 @@ SELECT * FROM deleted;
 > [!NOTE]  
 >  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CLR 코드 실행 기능은 해제됩니다. 관리 코드 모듈을 참조하는 데이터베이스 개체를 만들고 변경하고 삭제할 수 있지만, 이러한 참조는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정하지 않는 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 실행되지 않습니다.  
   
-## <a name="remarks-dml-triggers"></a>DML 트리거 설명  
+## <a name="remarks-for-dml-triggers"></a>DML 트리거 설명  
  DML 트리거는 비즈니스 규칙 및 데이터 무결성을 적용하는 데 자주 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 ALTER TABLE 및 CREATE TABLE 문을 통해 DRI(선언적 참조 무결성)를 제공하지만 DRI는 데이터베이스 간 참조 무결성은 제공하지 않습니다. 참조 무결성은 테이블의 기본 키와 외래 키 간의 관계에 대한 규칙을 말합니다. 참조 무결성을 강제 적용하려면 ALTER TABLE 및 CREATE TABLE에서 PRIMARY KEY 및 FOREIGN KEY 제약 조건을 사용하세요. 제약 조건이 트리거 테이블에 있는 경우에는 INSTEAD OF 트리거가 실행된 후와 AFTER 트리거가 실행되기 전에 제약 조건이 확인됩니다. 제약 조건을 위반하면 INSTEAD OF 트리거 동작이 롤백되고 AFTER 트리거가 실행되지 않습니다.  
   
  sp_settriggerorder를 사용하여 테이블에서 실행할 처음 및 마지막 AFTER 트리거를 지정할 수 있습니다. 테이블에서 각각의 INSERT, UPDATE 및 DELETE 작업에 대해 처음 및 마지막 AFTER 트리거를 각각 하나만 정의할 수 있습니다. 동일한 테이블에 다른 AFTER 트리거가 있는 경우 임의로 실행됩니다.  
@@ -293,7 +293,7 @@ SELECT * FROM deleted;
  예를 들어, 트리거가 뷰에 대해 INSTEAD OF UPDATE 트리거로 정의되고 트리거가 같은 뷰를 참조하는 UPDATE 문을 실행하면 INSTEAD OF 트리거가 실행하는 UPDATE 문은 트리거를 다시 호출하지 않습니다. 트리거가 실행하는 UPDATE는 뷰에 대해 뷰에 INSTEAD OF 트리거가 없는 것처럼 처리됩니다. UPDATE에 의해 변경된 열은 단일 기준 테이블로 확인되어야 합니다. 원본으로 사용하는 기준 테이블을 수정할 때마다 제약 조건 적용 및 테이블에 대해 정의된 AFTER 트리거 시작 체인을 시작합니다.  
   
 ### <a name="testing-for-update-or-insert-actions-to-specific-columns"></a>특정 열에 대한 UPDATE 또는 INSERT 동작 테스트  
- 특정 열에 대한 UPDATE 또는 INSERT 수정 사항을 기반으로 특정 동작을 수행하도록 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거를 디자인할 수 있습니다. 이를 위해서는 트리거 본문에 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) 또는 [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md)를 사용합니다. UPDATE()는 열 하나에 대한 UPDATE 또는 INSERT 작업을 테스트하고, COLUMNS_UPDATED는 여러 열에 수행되는 UPDATE 또는 INSERT 동작을 테스트한 다음 삽입되거나 업데이트된 열을 나타내는 비트 패턴을 반환합니다.  
+ 특정 열에 대한 UPDATE 또는 INSERT 수정 사항을 기반으로 특정 동작을 수행하도록 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거를 디자인할 수 있습니다. 이를 위해서는 트리거 본문에 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) 또는 [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md)를 사용합니다. UPDATE()는 열 하나에 대한 UPDATE 또는 INSERT 시도를 테스트하고, COLUMNS_UPDATED는 여러 열에 수행되는 UPDATE 또는 INSERT 동작을 테스트한 다음 삽입되거나 업데이트된 열을 나타내는 비트 패턴을 반환합니다.  
   
 ### <a name="trigger-limitations"></a>트리거 제한  
  CREATE TRIGGER는 일괄 처리의 첫 번째 문이어야 하며 한 테이블에만 적용될 수 있습니다.  
@@ -330,9 +330,22 @@ SELECT * FROM deleted;
 |다음 용도로 사용하는 ALTER TABLE<br /><br /> 열 추가, 수정 또는 삭제<br /><br /> 파티션 전환<br /><br /> PRIMARY KEY 또는 UNIQUE 제약 조건 추가 또는 삭제|||  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 시스템 테이블에 대한 사용자 정의 트리거를 지원하지 않기 때문에 시스템 테이블에 대한 사용자 정의 트리거를 만들지 않는 것이 좋습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 시스템 테이블에 대한 사용자 정의 트리거를 지원하지 않기 때문에 시스템 테이블에 대한 사용자 정의 트리거를 만들지 않는 것이 좋습니다. 
+
+### <a name="optimizing-dml-triggers"></a>DML 트리거 최적화
+ 트랜잭션(묵시적, 또는 그 외)에서 작업을 트리거하고, 열려 있는 동안 리소스를 잠급니다. 트랜잭션이 확인(COMMIT 사용)되거나 거부(ROLLBACK 사용)될 때까지 잠금 상태가 유지됩니다. 트리거 실행 기간이 길수록 다른 프로세스가 차단될 가능성이 높아집니다. 따라서 가능하면 해당 기간을 줄이는 방법으로 트리거를 작성해야 합니다. 이 작업을 수행하는 한 가지 방법은 DML 문이 0개 행을 변경할 때 트리거를 해제하는 것입니다. 
+
+행을 변경하지 않는 명령에 대해 트리거를 해제하려면 [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql) 시스템 변수를 사용합니다. 
+
+이는 다음 T-SQL 코드 조각을 사용하여 수행할 수 있으며, 각 DML 트리거의 시작에 표시되어야 합니다.
+
+```sql
+IF (@@ROWCOUNT_BIG = 0)
+RETURN;
+```
   
-## <a name="remarks-ddl-triggers"></a>DDL 트리거 설명  
+  
+## <a name="remarks-for-ddl-triggers"></a>DDL 트리거에 대한 설명  
  DDL 트리거는 표준 트리거와 마찬가지로 이벤트에 대한 응답으로 저장 프로시저를 실행합니다. 하지만 표준 트리거와 달리 테이블이나 뷰의 UPDATE, INSERT 또는 DELETE 문에 대한 응답으로 실행되는 것이 아니라 기본적으로 DDL(데이터 정의 언어) 문에 대한 응답으로 실행됩니다. 이러한 DDL 문에는 CREATE, ALTER, DROP, GRANT, DENY, REVOKE 및 UPDATE STATISTICS 문이 포함됩니다. DDL과 같은 작업을 수행하는 특정 시스템 저장 프로시저에서 DDL 트리거가 발생할 수도 있습니다.  
   
 > [!IMPORTANT]  
@@ -392,7 +405,7 @@ SELECT * FROM deleted;
 ### <a name="nested-triggers"></a>중첩 트리거  
  트리거는 최대 32 수준까지 중첩될 수 있습니다. 트리거가 있는 테이블을 다른 트리거가 변경하는 경우에는 두 번째 트리거가 활성화되고 이어서 세 번째 트리거가 호출되는 방식으로 진행됩니다. 체인 내의 한 트리거가 무한 루프를 시작하면 중첩 수준이 초과되고 트리거가 취소됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거에서 CLR 루틴, 유형 또는 집계를 참조하여 관리 코드를 실행하는 경우 이러한 참조는 32 수준 중첩 제한에서 한 수준으로 계산됩니다. 관리 코드 내에서 호출된 메서드는 이 제한에 따라 계산되지 않습니다.  
   
- 중첩 트리거를 비활성화하려면 sp_configure의 nested triggers 옵션을 0(off)으로 설정하십시오. 기본 구성은 중첩 트리거를 허용합니다. 중첩 트리거가 해제된 경우 ALTER DATABASE를 사용하여 설정된 RECURSIVE_TRIGGERS 설정에 관계없이 재귀 트리거도 비활성화됩니다.  
+ 중첩 트리거를 비활성화하려면 sp_configure의 nested triggers 옵션을 0(off)으로 설정하십시오. 기본 구성은 중첩 트리거를 허용합니다. 중첩된 트리거가 해제된 경우 ALTER DATABASE를 사용하여 설정된 RECURSIVE_TRIGGERS 설정에 관계없이 재귀 트리거도 비활성화됩니다.  
   
  INSTEAD OF 트리거 내부에 중첩된 첫 번째 AFTER 트리거는 **중첩된 트리거** 서버 구성 옵션이 0으로 설정되어 있는 경우에도 실행됩니다. 그러나 이 설정에서는 이후의 AFTER 트리거는 발생하지 않습니다. 중첩 트리거에 대한 응용 프로그램을 검토하여 **중첩된 트리거** 서버 구성 옵션이 0으로 설정된 경우 이 새 동작과 관련된 비즈니스 규칙을 응용 프로그램이 여전히 준수하는지 확인한 다음, 적절하게 수정하는 것이 좋습니다.  
   
@@ -409,7 +422,7 @@ SELECT * FROM deleted;
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>1. 미리 알림 메시지로 DML 트리거 사용  
  다음 DML 트리거는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Customer` 테이블에 데이터를 추가하거나 변경하려고 할 때 클라이언트에 메시지를 출력합니다.  
   
-```  
+```sql  
 CREATE TRIGGER reminder1  
 ON Sales.Customer  
 AFTER INSERT, UPDATE   
@@ -420,7 +433,7 @@ GO
 ### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>2. 미리 알림 전자 메일 메시지로 DML 트리거 사용  
  다음 예에서는 `MaryM` 테이블이 변경될 때 지정한 사람(`Customer`)에게 전자 메일 메시지를 보냅니다.  
   
-```  
+```sql  
 CREATE TRIGGER reminder2  
 ON Sales.Customer  
 AFTER INSERT, UPDATE, DELETE   
@@ -438,13 +451,15 @@ GO
   
  다음 예에서는 AdventureWorks2012 데이터베이스에서 DML 트리거를 만듭니다. 이 트리거는 `PurchaseOrderHeader` 테이블에 새 구매 주문을 삽입하려고 할 때 공급업체의 신용 등급이 양호한지(5가 아닌지) 확인합니다. 공급업체의 신용 등급을 가져오려면 `Vendor` 테이블을 참조해야 합니다. 신용 등급이 너무 낮으면 메시지가 표시되고 삽입이 실행되지 않습니다.  
   
-```  
+```sql  
 -- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
 -- table when the credit rating of the specified vendor is set to 5 (below average).  
   
 CREATE TRIGGER Purchasing.LowCredit ON Purchasing.PurchaseOrderHeader  
 AFTER INSERT  
 AS  
+IF (@@ROWCOUNT_BIG  = 0)
+RETURN;
 IF EXISTS (SELECT *  
            FROM Purchasing.PurchaseOrderHeader AS p   
            JOIN inserted AS i   
@@ -485,11 +500,13 @@ GO
 ### <a name="d-using-a-database-scoped-ddl-trigger"></a>4. 데이터베이스 범위 DDL 트리거 사용  
  다음 예에서는 DDL 트리거를 사용하여 데이터베이스에서 동의어가 삭제되지 않도록 방지합니다.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_SYNONYM  
 AS   
+IF (@@ROWCOUNT = 0)
+RETURN;
    RAISERROR ('You must disable Trigger "safety" to drop synonyms!',10, 1)  
    ROLLBACK  
 GO  
@@ -503,7 +520,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
-```  
+```sql  
 CREATE TRIGGER ddl_trig_database   
 ON ALL SERVER   
 FOR CREATE_DATABASE   
@@ -521,7 +538,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE LOGIN login_test WITH PASSWORD = '3KHJ6dhx(0xVYsdf' MUST_CHANGE,  
@@ -546,14 +563,16 @@ END;
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>7. 트리거를 발생시킨 이벤트 보기  
  다음 예에서는 `sys.triggers` 및 `sys.trigger_events` 카탈로그 뷰를 쿼리하여 `safety` 트리거를 발생시킨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트를 확인합니다. `safety`는 이전 예에서 만들었습니다.  
   
-```  
+```sql  
 SELECT TE.*  
 FROM sys.trigger_events AS TE  
 JOIN sys.triggers AS T ON T.object_id = TE.object_id  
 WHERE T.parent_class = 0 AND T.name = 'safety';  
 GO  
 ```  
-  
+
+    
+
 ## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
