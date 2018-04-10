@@ -41,7 +41,7 @@ ms.lasthandoff: 02/11/2018
 > + [Hadoop MapReduce에 ScaleR 시작](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-hadoop)
 
 ## <a name="overview"></a>개요
-RevoScaleR 패키지의 유연성과 처리 능력을 확인하기 위해, 이 자습서에서 당신은 주기적으로 데이터를 옮기고 계산 컨텍스트를 변경합니다. 이를 하기 위해 이 자습서에서 다음을 진행합니다: 
+RevoScaleR 패키지의 유연성과 처리 능력 확인을 위해, 이 자습서에서 주기적으로 데이터를 옮기고 계산 컨텍스트를 변경합니다. 이를 하기 위해 이 자습서에서 다음을 진행합니다:
 
 + 데이터는 초기에 CSV 파일 또는 XDF 파일에서 가져온 것입니다 RevoScaleR 패키지에서 함수를 사용해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 가져옵니다.
 + 모델 학습 및 점수 매기기를 사용하여 수행 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컨텍스트를 계산합니다. 
