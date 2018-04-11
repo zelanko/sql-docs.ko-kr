@@ -1,28 +1,28 @@
 ---
-title: "비즈니스 규칙의 예(Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 비즈니스 규칙의 예(Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-caps.latest.revision: 
+caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e01b4c5141011209f5fdf314711e9cc26595c5f5
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 3e10456b5254bc007420eb6850f00ede131f31aa
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="business-rule-examples-master-data-services"></a>비즈니스 규칙의 예(Master Data Services)
 이 문서에서는 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 대한 비즈니스 규칙의 예를 보여 줍니다. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]설치에 포함된 샘플 모델에서 이러한 예를 찾을 수 있습니다.   
@@ -160,8 +160,7 @@ Else
 3. 위의 표에 나열된 규칙이 적용되는 엔터티를 클릭한 다음 **비즈니스 규칙**을 클릭합니다.  
 4. 보려는 비즈니스 규칙의 이름을 클릭합니다. UI가 확장되고 **If**, **Then** 및 **Else** 문이 표시됩니다.  
   
-## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.   
-어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com)에 대한 비즈니스 규칙의 예를 보여 줍니다.   
+ 
   
   
   

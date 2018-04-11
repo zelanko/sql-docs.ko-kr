@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 07f71e7efd6d2c43160cb7d6a0066ad8e57e5c69
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 30fee63cd25509d56bd2c55cd682ae31fc801691
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |원격 서버|SET REMOTE_PROC_TRANSACTIONS|연결된 서버를 사용하여 원격 서버를 대체합니다.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Set 옵션|**SET ROWCOUNT** , **INSERT**및 **UPDATE**문에 대한 **DELETE**|TOP 키워드|SET ROWCOUNT|109|  
 |테이블 힌트|괄호가 없는 HOLDLOCK 테이블 힌트|HOLDLOCK에 괄호를 사용합니다.|괄호가 없는 HOLDLOCK 테이블 힌트|167|  
-|Tools|sqlmaint 유틸리티|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유지 관리 계획 기능을 사용합니다.|InclusionThresholdSetting|InclusionThresholdSetting|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>이후 버전의 SQL Server에서 지원되지 않는 기능  
  아래의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 기능은 다음 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지만 이후 버전에서는 제거될 예정입니다. 어떤 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 제거될지는 결정되지 않았습니다.  

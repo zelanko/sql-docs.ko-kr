@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: performance
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Performance (SQL Server)
@@ -23,27 +23,24 @@ helpviewer_keywords:
 - performance (SQL Database)
 - database performance (SQL Database)
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f17dd20a0a6c3ffd93cc89dd97140341ed893383
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+ms.openlocfilehash: 1e3b52ab64122fab76182d355cbd5c54d2b72c39
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 성능 센터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 페이지에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]의 성능에 대해 필요한 정보를 찾는 데 도움이 되는 링크를 제공합니다.  
+  이 페이지에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]의 성능에 대해 필요한 정보를 찾는 데 도움이 되는 링크를 제공합니다.  
   
  **범례**  
   
  ![security-center-legend](../../relational-databases/performance/media/security-center-legend.PNG "security-center-legend")  
-  
-## <a name="this-is-a-work-in-process-does-this-performance-center-help-you-how-can-we-improve-it"></a>진행 중인 작업입니다. 이 성능 센터가 도움이 되나요? 어떻게 하면 개선할 수 있을까요?  
- 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 어떤 정보가 누락되었나요? 여기에 어떤 정보가 표시되기를 원하세요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## <a name="configuration-options-for-performance"></a>성능에 대한 구성 옵션  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 수준의 다양한 구성 옵션을 통해 데이터베이스 엔진 성능에 영향을 줄 수 있는 기능을 제공합니다. [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]을 사용할 경우 Microsoft에서 전부는 아니지만 이러한 최적화를 대부분 자동으로 수행합니다.  

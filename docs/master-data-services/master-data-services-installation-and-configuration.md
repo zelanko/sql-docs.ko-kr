@@ -1,28 +1,28 @@
 ---
-title: "Master Data Services 설치 및 구성 | Microsoft Docs"
-ms.custom: 
+title: Master Data Services 설치 및 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-caps.latest.revision: 
+caps.latest.revision: 44
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e539d5a06f53fd4b79530031c8f1dec9dd493aae
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: debbf608daac6d95527939808b620d34fe1e4c31
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
   이 문서에서는 Windows Server 2012 R2 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 를 설치하고, MDS 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델 및 데이터를 배포하는 방법을 설명합니다. MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )를 사용하면 조직에서 신뢰할 수 있는 버전의 데이터를 관리할 수 있습니다.   
@@ -284,10 +284,7 @@ ms.lasthandoff: 03/05/2018
  데이터에 대한 새 모델 및 엔터티를 만듭니다. [모델 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md) 및 [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)를 참조하세요.  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 및 엔터티를 사용하여 데이터 구조를 작성하는 방법에 대한 개요는 [Master Data Services 개요&#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
-  
-## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
- 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
-  
+    
 ## <a name="see-also"></a>참고 항목  
  [Master Data Services 데이터베이스](../master-data-services/master-data-services-database.md)   
  [마스터 데이터 관리자 웹 응용 프로그램](../master-data-services/master-data-manager-web-application.md)   

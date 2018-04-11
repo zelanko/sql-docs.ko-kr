@@ -1,16 +1,14 @@
 ---
-title: "행 수준 보안 | Microsoft 문서"
-ms.custom: 
+title: 행 수준 보안 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: security
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: security
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - access control predicates
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - row level security described
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d039c1e5bb76fb9b994e9d5fc2a89df64e320c3b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b150fa58725e157834c202224c679ee5119cdb8a
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="row-level-security"></a>행 수준 보안
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,7 +104,7 @@ ms.lasthandoff: 11/21/2017
  더 공식적인 용어로는, RLS는 조건자 기반 액세스 제어를 말합니다. 여기에는 유연하고, 중앙 집중적이며, 조건자 기반 평가가 있어 메타데이터 또는 관리자가 적절히 판단한 기타 기준을 고려할 수 있습니다. 조건자는 사용자 특성에 따라 사용자가 데이터에 적절하게 액세스하는지의 여부를 결정하는 기준으로 사용됩니다. 조건자 기반 액세스 제어를 사용하여 레이블 기반 액세스 제어를 구현할 수 있습니다.  
   
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> Permissions  
  보안 정책을 만들거나, 변경하거나, 삭제하는 데에는 **ALTER ANY SECURITY POLICY** 권한이 필요합니다. 보안 정책을 만들거나 삭제하려면 스키마에 대한 **ALTER** 권한이 필요합니다.  
   
  또한 추가된 각 조건자에는 다음 권한이 필요합니다.  

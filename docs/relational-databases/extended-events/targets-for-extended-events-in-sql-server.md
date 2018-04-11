@@ -5,12 +5,9 @@ ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: ''
-ms.component: extended-events
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
+ms.technology: xevents
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
@@ -19,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e75149107c4576a51737f77cf49679c62a2a0d42
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 06ac9f1d58fef9a2c8344de8e56e9bccb7024a31
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

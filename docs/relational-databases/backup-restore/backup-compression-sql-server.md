@@ -1,16 +1,16 @@
 ---
-title: "백업 압축(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 백업 압축(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - log shipping [SQL Server], backup compression
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - backing up [SQL Server], backup compression
 - backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
-caps.latest.revision: 
+caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36e6a2f449d649da1137947b5255d025646f43b9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d6b872e7f53e28ae0261a2672ae977218d174492
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="backup-compression-sql-server"></a>백업 압축(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 제한 사항, 백업 압축이 성능에 미치는 영향, 백업 압축의 구성 및 압축 비율을 비롯하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 압축에 대해 설명합니다.  백업 압축은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전: Enterprise, Standard 및 Developer에서 지원됩니다.  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 모든 버전에서는 압축된 백업을 복원할 수 있습니다. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 제한 사항, 백업 압축이 성능에 미치는 영향, 백업 압축의 구성 및 압축 비율을 비롯하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 압축에 대해 설명합니다.  백업 압축은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전: Enterprise, Standard 및 Developer에서 지원됩니다.  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 모든 버전에서는 압축된 백업을 복원할 수 있습니다. 
  
   
 ##  <a name="Benefits"></a> 이점  
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/18/2018
   
  예를 들어 3:1 압축 비율은 디스크 공간을 약 66% 절약할 수 있음을 나타냅니다. 이러한 열에 대해 쿼리하려면 다음 Transact-SQL 문을 사용하면 됩니다.  
   
-```  
+```sql  
 SELECT backup_size/compressed_backup_size FROM msdb..backupset;  
 ```  
   

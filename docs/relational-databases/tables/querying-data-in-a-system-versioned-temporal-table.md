@@ -1,28 +1,28 @@
 ---
-title: "시스템 버전 임시 테이블의 데이터 쿼리 | Microsoft 문서"
-ms.custom: 
+title: 시스템 버전 임시 테이블의 데이터 쿼리 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/28/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
-caps.latest.revision: 
+caps.latest.revision: 7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5bd4678f0a17e570f089f3c532df5a32e284787d
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 10063cd9d3345393abb56b1beedbdb2ac70eab62
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블의 데이터 쿼리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -138,9 +138,6 @@ FROM [dbo].[Department] FOR SYSTEM_TIME ALL
 ORDER BY [DeptID], [SysStartTime] Desc  
   
 ```  
-  
-## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
- 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Queryinging%20a%20System-Versioned%20Temporal%20Table%20page)  
   
 ## <a name="see-also"></a>참고 항목  
  [임시 테이블](../../relational-databases/tables/temporal-tables.md)   

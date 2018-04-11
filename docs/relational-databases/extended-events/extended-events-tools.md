@@ -1,32 +1,29 @@
 ---
-title: "확장 이벤트 도구 | Microsoft 문서"
-ms.custom: 
+title: 확장 이벤트 도구 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
+ms.technology: xevents
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cff6cc262957d8bffbdc0955a3d276b92b1094f6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 5c7fb3b7b92cd58299b06ab5beb53e78dc64c67d
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="extended-events-tools"></a>확장 이벤트 도구
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 02/12/2018
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자: 확장 이벤트 세션을 생성, 변경 및 관리하는 데 사용할 수 있는 강력한 도구입니다. 자세한 내용은 [확장 이벤트에 PowerShell 공급자 사용](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)을 참조하세요.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 확장 이벤트 항목에 제공된 코드 예제를 만들고 실행할 수 있습니다. 자세한 내용은 [개체 탐색기](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)를 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 참조하세요. 확장 이벤트 항목에 제공된 코드 예제를 만들고 실행할 수 있습니다. 자세한 내용은 [개체 탐색기](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)를 참조하세요.  
   
  서버에는 사용자가 만드는 세션 외에도 기본 시스템 상태 세션이 있습니다. 이 세션은 성능 문제를 해결하는 데 사용할 수 있는 시스템 데이터를 수집합니다. 자세한 내용은 [system_health 세션 사용](../../relational-databases/extended-events/use-the-system-health-session.md)을 참조하세요.  
   

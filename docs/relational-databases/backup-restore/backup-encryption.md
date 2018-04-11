@@ -1,31 +1,32 @@
 ---
-title: "백업 암호화 | Microsoft 문서"
-ms.custom: 
+title: 백업 암호화 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4618510f90d373aaba8a602b3f473cd6ed3a4a7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9d43a5ea36baae2e0015406c4f012fb0d86ed974
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="backup-encryption"></a>백업 암호화
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 암호화 옵션에 대해 간략하게 설명합니다. 여기에서는 백업 중의 암호화에 대한 사용법, 이점 및 권장 방법을 살펴봅니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 암호화 옵션에 대해 간략하게 설명합니다. 여기에서는 백업 중의 암호화에 대한 사용법, 이점 및 권장 방법을 살펴봅니다.  
   
   
 ##  <a name="Overview"></a> 개요  
@@ -100,7 +101,7 @@ ms.lasthandoff: 01/18/2018
 ### <a name="using-transact-sql"></a>Transact-SQL 사용  
  다음은 백업 파일을 암호화하는 예제 Transact-SQL 문입니다.  
   
-```  
+```sql  
 BACKUP DATABASE [MYTestDB]  
 TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
 WITH  
