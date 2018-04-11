@@ -22,7 +22,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 8a73ca9c3e77d73ea885ecb70e25fc2018663690
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/10/2018
 ---
@@ -121,7 +121,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>열 이름이 @ 기호로 시작하지 않고 슬래시 기호(/)를 포함하는 경우  
- 열 이름이 @ 기호로 시작하지 않지만 슬래시 기호(/)를 포함할 경우 열 이름은 XML 계층을 나타냅니다. 예를 들어 열 이름이 "Name1/Name2/Name3.../Name***n*** "이면 각 Name***i*** 는 현재 행 요소(i=1인 경우)에 중첩된 요소 이름을 나타내거나 이름이 Name***i-1***인 요소 아래의 요소 이름을 나타냅니다. Namen***n*** 이 '@'으로 시작하는 경우 Name***n-1*** 요소의 특성에 매핑됩니다.  
+ 열 이름이 @ 기호로 시작하지 않지만 슬래시 기호(/)를 포함할 경우 열 이름은 XML 계층을 나타냅니다. 예를 들어 열 이름이 "Name1/Name2/Name3.../Name***n*** "이면 각 Name***i*** 는 현재 행 요소(i=1인 경우)에 중첩된 요소 이름을 나타내거나 이름이 Name***i-1***인 요소 아래의 요소 이름을 나타냅니다. Namen***n*** 이 “@” 으로 시작하는 경우 Name***n-1*** 요소의 특성에 매핑됩니다.  
   
  예를 들어 다음 쿼리는 이름, 중간 이름 및 성을 포함하는 복잡한 요소 EmpName으로 표현되는 직원 ID와 이름을 반환합니다.  
   
