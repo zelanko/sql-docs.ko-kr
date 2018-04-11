@@ -1,16 +1,16 @@
 ---
 title: sp_executesql (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_executesql
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_executesql
 - dynamic SQL
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b6dec48efa27a14443e69158ed9e9fffb55eba29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,18 +55,18 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @stmt=] *문*  
- 포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 합니다. @stmt유니코드 상수 또는 유니코드 변수 여야 합니다. + 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하는 경우 그 앞에 **N**합니다. 예를 들어 유니코드 상수 **N'sp_who '** 유효 하지만 **'sp_who'** 않습니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버에서 문자열의 크기는 최대 크기인 2GB로 제한 **nvarchar (max)**합니다.  
+ [ @stmt= ] *statement*  
+ 포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 합니다. @stmt 유니코드 상수 또는 유니코드 변수 여야 합니다. + 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하는 경우 그 앞에 **N**합니다. 예를 들어 유니코드 상수 **N'sp_who '** 유효 하지만 **'sp_who'** 않습니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버에서 문자열의 크기는 최대 크기인 2GB로 제한 **nvarchar (max)**합니다.  
   
 > [!NOTE]  
->  @stmt예를 들어 변수 이름으로 같은 형식 발생 하는 매개 변수를 포함할 수 있습니다.`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  @stmt 예를 들어 변수 이름으로 같은 형식 발생 하는 매개 변수를 포함할 수 있습니다. `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  @stmt에 포함된 각 매개 변수에는 @params 매개 변수 정의 목록과 매개 변수 값 목록 모두에 해당되는 항목이 있어야 합니다.  
   
- [ @params=] N'@*p a r a**data_type* [,... *n* ] '  
- @stmt에 포함된 모든 매개 변수의 정의를 포함하는 하나의 문자열입니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n*추가 매개 변수 정의 나타내는 자리 표시자가입니다. 에 지정 된 모든 매개 변수에 @stmtmust 에 정의 되어야 @params합니다. @stmt의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없으면 @params가 필요 없습니다. 이 매개 변수의 기본값은 NULL입니다.  
+ [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
+ @stmt에 포함된 모든 매개 변수의 정의를 포함하는 하나의 문자열입니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의 나타내는 자리 표시자입니다. 에 지정 된 모든 매개 변수에 @stmtmust 에 정의 되어야 @params합니다. @stmt의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없으면 @params가 필요 없습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
- [ @param1=] '*value1*'  
+ [ @param1= ] '*value1*'  
  매개 변수 문자열에 정의된 첫 번째 매개 변수의 값입니다. 값은 유니코드 상수 또는 유니코드 변수가 될 수 있습니다. @stmt에 포함된 모든 매개 변수에 대해 제공되는 매개 변수 값이 있어야 합니다. @stmt의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없으면 값이 필요 없습니다.  
   
  [ OUT | OUTPUT ]  
@@ -240,7 +240,7 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-executing-a-simple-select-statement"></a>4. 단순 SELECT 문 실행  
  다음은 `SELECT`이라는 포함 매개 변수를 포함한 단순 `@level` 문을 만들고 실행하는 예입니다.  

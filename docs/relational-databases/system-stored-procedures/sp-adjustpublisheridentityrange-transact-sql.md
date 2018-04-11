@@ -1,16 +1,16 @@
 ---
 title: sp_adjustpublisheridentityrange (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c2f0214309eb060bbc02c7c05bf5243444ed5796
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ ** @publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  새 ID 범위가 다시 할당되는 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 NULL입니다.  
   
- [ ** @table_name=**] **'***table_name***'**  
+ [ **@table_name=**] **'***table_name***'**  
  새 ID 범위가 다시 할당되는 테이블의 이름입니다. *table_name* 은 **sysname**, 기본값은 NULL입니다.  
   
- [ ** @table_owner=**] **'***table_owner***'**  
+ [ **@table_owner=**] **'***table_owner***'**  
  게시자에서 테이블의 소유자입니다. *table_owner* 은 **sysname**, 기본값은 NULL입니다. 경우 *table_owner* 를 지정 하지 않으면 현재 사용자의 이름이 사용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

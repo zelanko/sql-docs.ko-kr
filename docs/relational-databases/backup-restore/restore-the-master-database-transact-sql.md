@@ -1,30 +1,30 @@
 ---
-title: "master 데이터베이스 복원(Transact-SQL) | Microsoft 문서"
-ms.custom: 
+title: master 데이터베이스 복원(Transact-SQL) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master database [SQL Server], restoring
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: bdcb8f41a3eb6abd20f905f573f84fb1b426f014
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="restore-the-master-database-transact-sql"></a>master 데이터베이스 복원(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  **master**의 전체 데이터베이스 백업을 복원하려면 다음 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
   
-     `RESTORE DATABASE master FROM`  *<backup_device>*  `WITH REPLACE`  
+     `RESTORE DATABASE master FROM`  *&lt;backup_device&gt;*  `WITH REPLACE`  
   
      REPLACE 옵션은 동일한 이름을 가진 데이터베이스가 이미 있는 경우에도 지정된 데이터베이스를 복원하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 지시합니다. 이 경우 기존 데이터베이스는 삭제됩니다. 단일 사용자 모드에서는 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)에 RESTORE DATABASE 문을 입력하는 것이 좋습니다. 자세한 내용은 [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 02/23/2018
 2> GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [전체 데이터베이스 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [분리된 사용자 문제 해결&#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   

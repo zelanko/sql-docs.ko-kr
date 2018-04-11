@@ -1,16 +1,16 @@
 ---
-title: "UNIQUE 제약 조건 수정 | Microsoft 문서"
-ms.custom: 
+title: UNIQUE 제약 조건 수정 | Microsoft 문서
+ms.custom: ''
 ms.date: 10/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - modifying constraints
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - constraints [SQL Server], modifying
 - constraints [SQL Server], unique
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 2168a7ab85373f45b6e536900cfa5cbf65a41826
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="modify-unique-constraints"></a>UNIQUE 제약 조건 수정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/23/2018
   
  **항목 내용**  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
      [보안](#Security)  
   
@@ -46,11 +46,11 @@ ms.lasthandoff: 02/23/2018
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

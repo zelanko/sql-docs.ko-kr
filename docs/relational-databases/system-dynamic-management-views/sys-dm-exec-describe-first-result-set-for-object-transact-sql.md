@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_describe_first_result_set_for_object (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set_for_object_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bcdb3bd85543ae5feeb4b224350a5b72a2d95f7b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   이 동적 관리 함수는 @object_id 매개 변수로 ID 가진 모듈에 대 한 첫 번째 결과 메타 데이터를 설명 하 고 @object_id 지정 된 수의 ID는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거. 그 밖에 다른 개체(예: 뷰, 테이블, 함수 또는 CLR 프로시저)의 ID인 경우에는 결과의 오류 열에 오류가 지정됩니다.  
   
- **sys.dm_exec_describe_first_result_set_for_object** 가 동일한 결과 집합 정의가 [sys.dm_exec_describe_first_result_set&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 와 유사 [sp_describe_first_result_set &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.dm_exec_describe_first_result_set_for_object** 가 동일한 결과 집합 정의가 [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 와 유사 [sp_ describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +50,10 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>인수  
  *@object_id*  
- @object_id 의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거. @object_id형식이 **int**합니다.  
+ @object_id 의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거. @object_id 형식이 **int**합니다.  
   
  *@include_browse_information*  
- @include_browse_information형식이 **비트**합니다. 1로 설정되면 쿼리에 FOR BROWSE 옵션이 있는 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보를 반환합니다.  
+ @include_browse_information 형식이 **비트**합니다. 1로 설정되면 쿼리에 FOR BROWSE 옵션이 있는 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보를 반환합니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
  이 공통 메타데이터는 결과 메타데이터의 각 열에 대한 하나의 행이 포함된 결과 집합으로 반환됩니다. 각 행은 다음 섹션에 설명된 형식으로 열의 유형과 Null 허용 여부를 설명합니다. 모든 제어 경로에 대해 첫 번째 문이 없을 경우 행이 0개인 결과 집합이 반환됩니다.  
@@ -103,7 +103,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type_desc**|**nvarchar(60)**|반환할 오류를 나타내는 간단한 대문자 문자열을 포함합니다. error_type에 매핑됩니다. 주의 아래의 목록을 참조하세요.|  
   
 ## <a name="remarks"></a>주의  
- 이 함수와 동일한 알고리즘을 사용 하 여 **sp_describe_first_result_set**합니다. 자세한 내용은 참조 [sp_describe_first_result_set &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ 이 함수와 동일한 알고리즘을 사용 하 여 **sp_describe_first_result_set**합니다. 자세한 내용은 참조 [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)합니다.  
   
  다음 표에서는 오류 유형 및 설명을 나열합니다.  
   
@@ -158,8 +158,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_describe_first_result_set &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

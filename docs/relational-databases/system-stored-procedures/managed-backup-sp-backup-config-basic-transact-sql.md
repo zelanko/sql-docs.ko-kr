@@ -1,16 +1,16 @@
 ---
 title: managed_backup.sp_backup_config_basic (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_basic_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_basic
 - sp_backup_config_basic
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 51507869caef7a8738381881f22f6cf9f1005144
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/03/2018
   구성에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 특정 데이터베이스 또는 인스턴스에 대 한 기본 설정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 > [!NOTE]  
->  이 프로시저 호출 될 수 자체 관리 되는 기본 백업 구성을 만들 수 있습니다. 그러나 고급 기능 또는 사용자 지정 일정을 추가 하려는 경우 먼저 해당 설정을 구성를 사용 하 여 [managed_backup.sp_backup_config_advanced&#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) 및 [managed_backup.sp_backup_config_schedule&#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) 이 절차를 사용 하 여 관리 되는 백업을 사용 하기 전에.  
+>  이 프로시저 호출 될 수 자체 관리 되는 기본 백업 구성을 만들 수 있습니다. 그러나 고급 기능 또는 사용자 지정 일정을 추가 하려는 경우 먼저 해당 설정을 구성를 사용 하 여 [managed_backup.sp_backup_config_advanced &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) 및 [managed_backup.sp_ backup_config_schedule &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) 이 절차를 사용 하 여 관리 되는 백업을 사용 하기 전에.  
    
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,10 +69,10 @@ EXEC managed_backup.sp_backup_config_basic
  백업 파일의 보존 기간(일)입니다. @storage_url 정수입니다. 이 필수 매개 변수를 구성할 때 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 인스턴스에 처음으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 변경 하는 동안는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성에서는이 매개 변수는 선택 사항입니다. 지정하지 않은 경우 기존 구성 값이 유지됩니다.  
   
  @credential_name  
- Windows Azure 저장소 계정 인증에 사용되는 SQL 자격 증명의 이름입니다. @credentail_name**SYSNAME**합니다. 을 지정 하면 백업 페이지 blob에 저장 됩니다. 이 매개 변수가 NULL 인 경우 백업 블록 blob으로 저장 됩니다. 이 새 블록 blob의 백업 기능을 사용 하도록 기본 설정 되므로 페이지 blob에 대 한 백업에 사용 되지 않습니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 변경에 사용하는 경우 이 매개 변수는 선택 사항입니다. 지정 하지 않으면 기존 구성 값이 유지 됩니다.  
+ Windows Azure 저장소 계정 인증에 사용되는 SQL 자격 증명의 이름입니다. @credentail_name **SYSNAME**합니다. 을 지정 하면 백업 페이지 blob에 저장 됩니다. 이 매개 변수가 NULL 인 경우 백업 블록 blob으로 저장 됩니다. 이 새 블록 blob의 백업 기능을 사용 하도록 기본 설정 되므로 페이지 blob에 대 한 백업에 사용 되지 않습니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 변경에 사용하는 경우 이 매개 변수는 선택 사항입니다. 지정 하지 않으면 기존 구성 값이 유지 됩니다.  
   
 > [!WARNING]  
->  **@credential_name**  이 이번에 매개 변수를 사용할 수 없습니다. 이 매개 변수를 NULL로 필요한 blob를 차단 하도록만 백업이 지원 됩니다.  
+>  **@credential_name** 이 이번에 매개 변수를 사용할 수 없습니다. 이 매개 변수를 NULL로 필요한 blob를 차단 하도록만 백업이 지원 됩니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -116,7 +116,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [managed_backup.sp_backup_config_advanced&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [managed_backup.sp_backup_config_advanced &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

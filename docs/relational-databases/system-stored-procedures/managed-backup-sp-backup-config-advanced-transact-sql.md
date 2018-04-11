@@ -1,16 +1,16 @@
 ---
 title: managed_backup.sp_backup_config_advanced (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_optional
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sp_backup_config_optional
 - managed_backup.sp_backup_config_optional
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bf54d4db6494fb370306292a785ad7291644d9b5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ EXEC managed_backup.sp_backup_config_advanced
  @encryptor_name  
  백업 암호화에 사용되는 비대칭 키 또는 기존 인증서의 이름입니다. @encryptor_name 은 **SYSNAME**합니다. 비대칭 키를 사용하는 경우 EKM(확장 키 관리)와 함께 구성해야 합니다. 이 매개 변수는 선택 사항에 대 한 NO_ENCRYPTION을 지정한 경우는 @encryption_algorithm 매개 변수입니다.  
   
- 자세한 내용은 참조 [확장 가능 키 관리 &#40; Ekm&#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ 자세한 내용은 [EKM&#40;확장 가능 키 관리&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)을 참조하세요.  
   
  @local_cache_path  
  이 매개 변수를 아직 지원 되지 않습니다.  

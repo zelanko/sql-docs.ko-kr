@@ -1,16 +1,16 @@
 ---
-title: "XQuery 및 정적 입력 | Microsoft Docs"
-ms.custom: 
+title: XQuery 및 정적 입력 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - checking static types
 - inference [XQuery]
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 41c21d1689e97b3939d4c479395e5af217e39897
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 및 정적 형식 지정
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="static-type-inference"></a>정적 형식 유추  
  정적 형식 유추를 통해 식의 반환 형식이 결정됩니다. 즉, 입력 매개 변수의 정적 형식과 연산의 정적 의미 체계를 사용하고 해당 결과에 대한 정적 형식을 유추하여 결정됩니다. 예를 들어 식 1 + 2.3의 정적 형식은 다음과 같은 방법으로 결정됩니다.  
   
--   1의 정적 형식이 **xs: integer** 와 2.3의 정적 형식을 **xs: decimal**합니다. 동적 의미 체계의 정적 의미 체계에 따라는  **+**  작업을 10 진수로 변환 하는 정수 및 10 진수를 반환 합니다. 정적 형식 유추 된 것 **xs: decimal**합니다.  
+-   1의 정적 형식이 **xs: integer** 와 2.3의 정적 형식을 **xs: decimal**합니다. 동적 의미 체계의 정적 의미 체계에 따라는 **+** 작업을 10 진수로 변환 하는 정수 및 10 진수를 반환 합니다. 정적 형식 유추 된 것 **xs: decimal**합니다.  
   
  형식화되지 않은 XML 인스턴스의 경우 해당 데이터가 형식화되지 않았음을 나타내는 특수한 형식이 있습니다. 이 정보는 정적 형식을 확인하는 동안 특정한 암시적 캐스트를 수행하는 데 사용됩니다.  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 02/09/2018
   
  하위 유형은 XML 스키마의 제한이나 확장을 통해 파생을 사용하기 위한 하위 유형 지정 규칙에 따라 정의됩니다. 예를 들어 형식 S의 모든 값이 형식 T의 인스턴스라면 형식 S는 형식 T의 하위 유형입니다.  
   
- 또한 XML 스키마 형식 계층에 따라 모든 정수 값은 10진수 값도 됩니다. 그러나 모든 10진수 값이 정수는 아닙니다. 따라서 정수는 10진수의 하위 유형이지만 10진수는 정수의 하위 유형이 아닙니다. 예를 들어는  **+**  작업에 숫자 형식과 같은 특정 유형의 값만 허용 **xs: integer**, **xs: decimal**, **xs: float**, 및 **xs: double**합니다. 와 같은 다른 값 형식은 경우 **xs: string**은, 전달 작업을 통해 유형 오류가 발생 합니다. 이를 강한 형식 지정이라고 합니다. 형식화되지 않은 XML을 나타내는 데 사용되는 원자성 유형과 같은 다른 형식의 값은 해당 연산에서 허용하는 형식의 값으로 암시적으로 변환될 수 있습니다. 이를 약한 형식 지정이라고 합니다.  
+ 또한 XML 스키마 형식 계층에 따라 모든 정수 값은 10진수 값도 됩니다. 그러나 모든 10진수 값이 정수는 아닙니다. 따라서 정수는 10진수의 하위 유형이지만 10진수는 정수의 하위 유형이 아닙니다. 예를 들어는 **+** 작업에 숫자 형식과 같은 특정 유형의 값만 허용 **xs: integer**, **xs: decimal**, **xs: float**, 및 **xs: double**합니다. 와 같은 다른 값 형식은 경우 **xs: string**은, 전달 작업을 통해 유형 오류가 발생 합니다. 이를 강한 형식 지정이라고 합니다. 형식화되지 않은 XML을 나타내는 데 사용되는 원자성 유형과 같은 다른 형식의 값은 해당 연산에서 허용하는 형식의 값으로 암시적으로 변환될 수 있습니다. 이를 약한 형식 지정이라고 합니다.  
   
- 암시적 변환 이후에 약한 형식 지정이 필요한 경우 정적 형식 확인을 통해 올바른 카디널리티를 가진 허용되는 형식의 값만 연산으로 전달되도록 합니다. "String" + 1에 대 한 "string"의 정적 형식의 임을 인식 **xs: string**합니다. 에 대 한 허용 되는 형식이 아니기 때문에  **+**  작업 유형 오류가 발생 합니다.  
+ 암시적 변환 이후에 약한 형식 지정이 필요한 경우 정적 형식 확인을 통해 올바른 카디널리티를 가진 허용되는 형식의 값만 연산으로 전달되도록 합니다. "String" + 1에 대 한 "string"의 정적 형식의 임을 인식 **xs: string**합니다. 에 대 한 허용 되는 형식이 아니기 때문에 **+** 작업 유형 오류가 발생 합니다.  
   
- 임의의 식 E1의 결과를 임의의 식 E2(E1 + E2)에 추가하는 경우 정적 형식 유추를 통해 먼저 E1과 E2의 정적 형식을 확인한 다음 이러한 정적 형식을 해당 연산에 허용되는 형식과 대조합니다. 예를 들어 e 1의 정적 형식을 수 있습니다는 **xs: string** 또는 **xs: integer**, 정적 형식 확인에서 유형 오류가 발생, 시 일부 값에 런타임에 정수를 수 있습니다. 같은 오류가 발생할 수 e 1의 정적 형식이 되었으면 **xs: integer\***합니다. 때문에  **+**  작업에 정확히 하나의 정수 값만 허용 하 고 E1 0이 반환 될 수 또는 1 개 이상의 정적 형식 확인에서 오류가 발생 합니다.  
+ 임의의 식 E1의 결과를 임의의 식 E2(E1 + E2)에 추가하는 경우 정적 형식 유추를 통해 먼저 E1과 E2의 정적 형식을 확인한 다음 이러한 정적 형식을 해당 연산에 허용되는 형식과 대조합니다. 예를 들어 e 1의 정적 형식을 수 있습니다는 **xs: string** 또는 **xs: integer**, 정적 형식 확인에서 유형 오류가 발생, 시 일부 값에 런타임에 정수를 수 있습니다. 같은 오류가 발생할 수 e 1의 정적 형식이 되었으면 **xs: integer\***합니다. 때문에 **+** 작업에 정확히 하나의 정수 값만 허용 하 고 E1 0이 반환 될 수 또는 1 개 이상의 정적 형식 확인에서 오류가 발생 합니다.  
   
  앞에서도 설명한 대로 형식 유추를 통해 전달될 데이터의 형식에 대해 사용자가 알고 있는 것보다 폭넓은 형식을 유추하기도 합니다. 이러한 경우 사용자는 쿼리를 다시 작성해야 합니다. 그러한 경우를 몇 가지 예로 들면 다음과 같습니다.  
   

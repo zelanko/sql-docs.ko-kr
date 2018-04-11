@@ -19,16 +19,16 @@ helpviewer_keywords:
 - displaying alerts
 - status information [SQL Server], alerts
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: edd9053514a593ea946a15d3d3071ad2b6e27093
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/22/2018
   
 **항목 내용**  
   
--   **시작하기 전 주의 사항:**  
+-   **시작하기 전에:**  
   
     [보안](#Security)  
   

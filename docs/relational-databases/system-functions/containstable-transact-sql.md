@@ -1,16 +1,16 @@
 ---
 title: CONTAINSTABLE (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONTAINSTABLE
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a9f4ab666351984b62e47d664d17d9e2769337cd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/03/2018
   
  CONTAINSTABLE은 같은 유형의 일치에 유용는 [CONTAINS 조건자](../../t-sql/queries/contains-transact-sql.md) CONTAINS와 같은 검색 조건을 사용 하 고 있습니다.  
   
- 그러나 CONTAINS와 달리, CONTAINSTABLE을 사용한 쿼리는 각 행에 대해 적절한 등급 값(RANK) 및 전체 텍스트 키(KEY)를 반환합니다.  전체 텍스트 검색에서 지원 되는 형식에 대 한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)합니다.  
+ 그러나 CONTAINS와 달리, CONTAINSTABLE을 사용한 쿼리는 각 행에 대해 적절한 등급 값(RANK) 및 전체 텍스트 키(KEY)를 반환합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 전체 텍스트 검색 형식에 대한 자세한 내용은 [전체 텍스트 검색이 있는 쿼리](../../relational-databases/search/query-with-full-text-search.md)를 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -125,35 +125,35 @@ CONTAINSTABLE
  *테이블* 서버 이름을 지정할 수 없습니다 및 연결 된 서버에 대 한 쿼리에서 사용할 수 없습니다.  
   
  *column_name*  
- 전체 텍스트 검색용으로 인덱싱된 하나 이상의 열 이름입니다. 열 형식이 될 수 있습니다 **char**, **varchar**, **nchar**, **nvarchar**, **텍스트**, **ntext**, **이미지**, **xml**, **varbinary**, 또는 **varbinary (max)**합니다.  
+ 전체 텍스트 검색용으로 인덱싱된 하나 이상의 열 이름입니다. 열은 **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** 또는 **varbinary(max)** 형식이 될 수 있습니다.  
   
  *column_list*  
- 여러 개의 열을 쉼표로 구분하여 지정할 수 있음을 나타냅니다. *column_list* 괄호로 묶어야 합니다. 하지 않는 한 *language_term* 지정 된 언어의 모든 열 *column_list* 동일 해야 합니다.  
+ 여러 개의 열을 쉼표로 구분하여 지정할 수 있음을 나타냅니다. *column_list*는 괄호로 묶어야 합니다. *language_term*을 지정하지 않을 경우 *column_list*에 있는 모든 열의 언어가 같아야 합니다.  
   
  \*  
- 지정 된 모든 전체 텍스트 인덱싱에 열 *테이블* 주어진된 검색 조건에 대 한 검색을 사용 해야 합니다. 하지 않는 한 *language_term* 지정, 테이블의 모든 열의 언어가 동일 해야 합니다.  
+ 지정 된 모든 전체 텍스트 인덱싱에 열 *테이블* 주어진된 검색 조건에 대 한 검색을 사용 해야 합니다. *language_term*을 지정하지 않을 경우 테이블에 있는 모든 열의 언어가 같아야 합니다.  
   
  LANGUAGE *language_term*  
- 리소스가 단어 분리, 형태소 분석, 동의어 사전 및 의미 없는 단어에 사용할 언어 (또는 [중지 단어](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md))는 쿼리의 일환으로 제거 합니다. 이 매개 변수는 선택적이며 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. 경우 *language_term* , 지정한 언어는 검색 조건의 모든 요소에 적용 됩니다. 값을 지정하지 않으면 열의 전체 텍스트 언어가 사용됩니다.  
+ 리소스가 단어 분리, 형태소 분석, 동의어 사전 및 의미 없는 단어에 사용할 언어 (또는 [중지 단어](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md))는 쿼리의 일환으로 제거 합니다. 이 매개 변수는 선택적이며 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. *language_term*을 지정할 경우 해당 언어는 검색 조건의 모든 요소에 적용됩니다. 값을 지정하지 않으면 열의 전체 텍스트 언어가 사용됩니다.  
   
- 언어가 다른 문서가 단일 열에 BLOB(Binary Large Object)으로 함께 저장된 경우 지정된 문서의 LCID(로캘 ID)에 따라 해당 내용을 인덱싱하는 데 사용할 언어가 결정됩니다. 이러한 열을 쿼리할 때 지정 *언어 * * language_term* 가장 잘 맞는의 확률을 높일 수 있습니다.  
+ 언어가 다른 문서가 단일 열에 BLOB(Binary Large Object)으로 함께 저장된 경우 지정된 문서의 LCID(로캘 ID)에 따라 해당 내용을 인덱싱하는 데 사용할 언어가 결정됩니다. 이러한 열을 쿼리할 때 LANGUAGE** *language_term*을 지정하면 검색 확률을 높일 수 있습니다.  
   
- 문자열로 지정 하는 경우 *language_term* 에 해당 하는 **별칭** 열 값에는 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 보기.  와 같이 하나의 따옴표로 묶어야 합니다 문자열 '*language_term*'. 정수로 지정 된 경우 *language_term* 는 언어를 식별 하는 실제 LCID입니다. 16 진수 값으로 지정 하는 경우 *language_term* 된 LCID의 16 진수 값은 0x 시작 합니다. 16진수 값은 선행 0을 포함하여 8자리 수를 초과할 수 없습니다.  
+ 문자열로 지정 하는 경우 *language_term* 에 해당 하는 **별칭** 열 값에는 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 보기.  문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 선행 0을 포함하여 8자리 수를 초과할 수 없습니다.  
   
- 더블 바이트 문자 집합 (DBCS) 형식인 경우에 값이 있으면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 유니코드로 변환 됩니다.  
+ 값이 DBCS(더블바이트 문자 집합) 형식인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 유니코드로 변환합니다.  
   
- 지정된 언어가 잘못되었거나 해당 언어에 해당하는 리소스가 설치되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. 중립 언어 리소스를 사용 하려면 0x0 지정 *language_term*합니다.  
+ 지정된 언어가 잘못되었거나 해당 언어에 해당하는 리소스가 설치되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오류를 반환합니다. 중립 언어 리소스를 사용하려면 0x0을 *language_term*으로 지정합니다.  
   
  *top_n_by_rank*  
- 만 지정 된  *n*  내림차순으로 최고 등급된 일치 항목 반환 됩니다. 정수 값을 경우에 적용 됩니다.  *n* 를 지정 합니다. *top_n_by_rank* 를 다른 매개 변수와 함께 사용하면 실제로 모든 조건자와 일치하는 행 수보다 적은 수의 행이 반환될 수 있습니다. *top_n_by_rank* 가장 관련성이 높은 항목만 회수 하 여 쿼리 성능을 높일 수 있습니다.  
+ 만 지정 된 *n* 내림차순으로 최고 등급된 일치 항목 반환 됩니다. 정수 값을 경우에 적용 됩니다. *n*를 지정 합니다. *top_n_by_rank* 를 다른 매개 변수와 함께 사용하면 실제로 모든 조건자와 일치하는 행 수보다 적은 수의 행이 반환될 수 있습니다. *top_n_by_rank* 가장 관련성이 높은 항목만 회수 하 여 쿼리 성능을 높일 수 있습니다.  
   
  <contains_search_condition>  
- 검색할 텍스트를 지정 *column_name* 과 일치 하는 항목에 대 한 상태입니다. 검색 조건에 대 한 정보를 참조 하십시오. [contains&#40; Transact SQL &#41; ](../../t-sql/queries/contains-transact-sql.md).  
+ *column_name*에서 검색할 텍스트와 일치 조건을 지정합니다. 검색 조건에 대 한 정보를 참조 하십시오. [CONTAINS &#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)합니다.  
   
 ## <a name="remarks"></a>주의  
  전체 텍스트 조건자와 함수는 단일 테이블에서 작동합니다. 이 사실은 FROM 조건자에 표시됩니다. 여러 테이블을 검색하려면 FROM 절에 조인된 테이블을 사용하여 두 개 이상의 테이블을 합한 결과 집합을 대상으로 검색 작업을 수행합니다.  
   
- 반환 되는 테이블에 명명 된 열 **키** 전체 텍스트 키 값이 들어 있는입니다. 전체 텍스트 인덱싱된 각 테이블에는 고유 값을 가진 열 및에 반환 된 값의 **키** 는에 지정 된 선택 조건과 일치 하는 행의 전체 텍스트 키 값이 열은 포함 검색 조건입니다. **TableFulltextKeyColumn** OBJECTPROPERTYEX 함수에서 가져온 속성의 고유 키 열이 id를 제공 합니다. 전체 텍스트 인덱스의 전체 텍스트 키와 연결 된 열의 ID를 가져오려면 **sys.fulltext_indexes**합니다. 자세한 내용은 참조 [sys.fulltext_indexes&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ 반환 되는 테이블에 명명 된 열 **키** 전체 텍스트 키 값이 들어 있는입니다. 전체 텍스트 인덱싱된 각 테이블에는 고유 값을 가진 열 및에 반환 된 값의 **키** 는에 지정 된 선택 조건과 일치 하는 행의 전체 텍스트 키 값이 열은 포함 검색 조건입니다. **TableFulltextKeyColumn** OBJECTPROPERTYEX 함수에서 가져온 속성의 고유 키 열이 id를 제공 합니다. 전체 텍스트 인덱스의 전체 텍스트 키와 연결 된 열의 ID를 가져오려면 **sys.fulltext_indexes**합니다. 자세한 내용은 참조 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)합니다.  
   
  원래 테이블에서 원하는 행을 얻으려면 CONTAINSTABLE 행과 조인을 지정합니다. 일반적인 SELECT 문의 FROM 절에서 CONTAINSTABLE을 사용한 예는 다음과 같습니다.  
   

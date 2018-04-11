@@ -1,31 +1,31 @@
 ---
-title: "메모리 관리 아키텍처 가이드 | Microsoft 문서"
-ms.custom: 
+title: 메모리 관리 아키텍처 가이드 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 
+caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/09/2018
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 아키텍처
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리를 필요에 따라 동적으로 확보하고 해제합니다. 일반적으로 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 할당해야 하는 메모리의 양을 지정할 필요가 없습니다. 해당 옵션이 계속 유지되고 일부 환경에서는 필요할 경우에도 마찬가지입니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 메모리를 필요에 따라 동적으로 확보하고 해제합니다. 일반적으로 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 할당해야 하는 메모리의 양을 지정할 필요가 없습니다. 해당 옵션이 계속 유지되고 일부 환경에서는 필요할 경우에도 마찬가지입니다.
 
 디스크 읽기 및 쓰기가 리소스를 가장 많이 소모하는 작업이기 때문에 모든 데이터베이스 소프트웨어의 주요 설계 목표 중 하나는 디스크 입/출력을 최소화하는 것입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 데이터베이스에서 읽은 페이지를 보관하도록 메모리에 버퍼 풀을 만듭니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 코드 중 상당수가 디스크와 버퍼 풀 간의 물리적 읽기 횟수와 쓰기 횟수를 최소화하는 데 사용됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 다음 두 가지 목표를 균형 있게 유지하려고 합니다.
 
@@ -91,13 +91,13 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 다음 표는 특정 유형의 메모리 할당이 *max server memory(MB)* 및 *min server memory(MB)* 구성 옵션으로 제어되는지 여부를 나타냅니다.
 
-|메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 다음으로 시작 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
 |단일 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
-|다중 페이지 할당|아니오|예, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|아니오|예|
-|스레드 스택 메모리|아니오|아니오|
-|Windows에서 직접 할당|아니오|아니오|
+|다중 페이지 할당|아니요|예, "임의 크기" 페이지 할당에 통합됨|
+|CLR 할당|아니요|예|
+|스레드 스택 메모리|아니요|아니요|
+|Windows에서 직접 할당|아니요|아니요|
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 max server memory 설정에 지정된 값보다 많은 메모리를 할당할 수 있습니다. 이 동작은 ***Total Server Memory(KB)*** 값이 이미 max server memory에 지정된 ***Target Server Memory(KB)*** 설정에 도달했을 때 발생할 수 있습니다. 메모리 조각화로 인해 다중 페이지 메모리 요청(8KB 이상)의 요구를 충족시키기에 연속 여유 메모리가 충분하지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 메모리 요청을 거부하는 대신 과도한 커밋을 수행할 수 있습니다. 
 
@@ -113,15 +113,15 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **Multi-Page Allocator(MPA)**, **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택**에 대한 메모리 할당, **Direct Windows 할당(DWA)**으로 사용하기 위해 프로세스 가상 주소 공간(VAS)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
 
-이러한 할당을 위해 예약된 가상 주소 공간은 ***memory_to_reserve*** 구성 옵션에 의해 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 사용하는 기본값은 256MB입니다. 기본값을 재정의하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  *-g*  시작 매개 변수를 사용합니다. *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요.
+이러한 할당을 위해 예약된 가상 주소 공간은 ***memory_to_reserve*** 구성 옵션에 의해 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 사용하는 기본값은 256MB입니다. 기본값을 재정의하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 시작 매개 변수를 사용합니다. *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요.
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 새 "임의 크기" 페이지 할당자는 8KB보다 큰 할당을 처리하기 때문에 *memory_to_reserve* 값은 다중 페이지 할당을 포함하지 않습니다. 이 변경 사항을 제외하고 나머지는 이 구성 옵션과 함께 동일하게 유지됩니다.
 
 다음 표는 특정 유형의 메모리 할당이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스의 가상 주소 공간의 *memory_to_reserve* 영역에 속하는지 여부를 나타냅니다.
 
-|메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 다음으로 시작 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
-|단일 페이지 할당|아니오|아니요, "임의 크기" 페이지 할당에 통합됨|
+|단일 페이지 할당|아니요|아니요, "임의 크기" 페이지 할당에 통합됨|
 |다중 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
 |CLR 할당|예|예|
 |스레드 스택 메모리|예|예|
@@ -167,7 +167,7 @@ FROM sys.dm_os_process_memory;
 
 <sup>2</sup> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 CLR 메모리는 max_server_memory 할당에서 관리됩니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 알림 API **QueryMemoryResourceNotification**을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Memory Manager가 메모리를 할당하고 해제하는 시기를 결정합니다.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 메모리 알림 API **QueryMemoryResourceNotification**을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Memory Manager가 메모리를 할당하고 해제하는 시기를 결정합니다.  
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 시작되면 시스템에 있는 실제 메모리 양 등의 여러 매개 변수, 서버 스레드 수 및 다양한 시작 매개 변수를 기준으로 버퍼 풀의 가상 주소 공간 크기를 계산합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 버퍼 풀에 사용할 해당 프로세스 가상 주소 공간 크기를 계산하여 예약하지만 현재 로드에 필요한 실제 메모리 양만 확보합니다(커밋).
 
@@ -180,7 +180,7 @@ FROM sys.dm_os_process_memory;
 min server memory 및 max server memory 구성 옵션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진의 버퍼 풀 및 기타 캐시에서 사용하는 메모리 양의 상한 및 하한을 설정합니다. 버퍼 풀은 min server memory에 지정된 메모리의 양을 즉시 확보하지 않습니다. 버퍼 풀은 초기화하는 데 필요한 메모리만으로 시작합니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 작업이 증가할  때 버퍼 풀에서는 작업을 지원하는 데 필요한 메모리를 계속 확보합니다. 버퍼 풀은 min server memory에 지정된 양에 도달할 때까지 확보한 메모리를 해제하지 않습니다. min server memory에 도달하면 버퍼 풀은 표준 알고리즘을 사용하여 필요할 때 메모리를 확보하고 해제합니다. 유일한 차이점은 버퍼 풀이 min server memory에 지정된 수준 아래로 메모리 할당량을 떨어뜨리지 않고 max server memory에 지정된 수준보다 더 많은 메모리를 절대로 확보하지 않는다는 것입니다.
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스로서 max server memory 옵션이 지정한 것 보다 더 많은 메모리를 확보합니다. 내부 및 외부 구성 요소 모두 추가 메모리를 사용하는 버퍼 풀 외부로 메모리를 할당할 수 있지만 일반적으로 버퍼 풀에 할당된 메모리가 여전히 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용하는 메모리의 가장 큰 부분을 차지합니다.
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 프로세스로서 max server memory 옵션이 지정한 것 보다 더 많은 메모리를 확보합니다. 내부 및 외부 구성 요소 모두 추가 메모리를 사용하는 버퍼 풀 외부로 메모리를 할당할 수 있지만 일반적으로 버퍼 풀에 할당된 메모리가 여전히 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용하는 메모리의 가장 큰 부분을 차지합니다.
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 확보한 메모리 양은 인스턴스에 배치된 작업에 따라 완전히 달라집니다. 많은 요청을 처리하지 않은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스는 min server memory에 절대로 도달할 수 없습니다.
 
@@ -261,7 +261,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 ### <a name="error-detection"></a>오류 검색  
 데이터베이스 페이지는 페이지를 디스크에 쓸 때부터 다시 읽을 때까지의 페이지 무결성을 보장하는 두 가지 선택적 메커니즘인 조각난 페이지 보호와 체크섬 보호 중 하나를 사용할 수 있습니다. 이러한 메커니즘을 사용하면 데이터 저장소뿐만 아니라 컨트롤러, 드라이버, 케이블, 심지어는 운영 체제를 비롯한 하드웨어 구성 요소의 정확성을 확인하는 독자적인 방법을 활용할 수 있습니다. 이러한 보호는 페이지를 디스크에 쓰기 바로 전에 페이지에 추가되며 디스크에서 읽은 후 확인됩니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 체크섬, 조각난 페이지 또는 기타 I/O 오류로 읽기가 실패할 경우 4번 다시 시도합니다. 다시 시도 중에 한 번이라도 읽기가 성공하면 오류 로그에 메시지가 기록되고 해당 읽기를 트리거한 명령이 계속 수행됩니다. 다시 시도가 실패하면 824 오류 메시지와 함께 명령이 실패합니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 체크섬, 조각난 페이지 또는 기타 I/O 오류로 읽기가 실패할 경우 4번 다시 시도합니다. 다시 시도 중에 한 번이라도 읽기가 성공하면 오류 로그에 메시지가 기록되고 해당 읽기를 트리거한 명령이 계속 수행됩니다. 다시 시도가 실패하면 824 오류 메시지와 함께 명령이 실패합니다. 
 
 사용되는 페이지 보호 유형은 페이지를 포함하는 데이터베이스의 특성입니다. 체크섬 보호는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 이상 버전에서 생성된 데이터베이스의 기본 보호 메커니즘입니다. 페이지 보호 메커니즘은 데이터베이스 생성 시 지정하며 ALTER DATABASE SET를 사용하여 변경할 수 있습니다. [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 *page_verify_option* 열 또는 [DATABASEPROPERTYEX](../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 *IsTornPageDetectionEnabled* 속성을 쿼리하여 현재 페이지 보호 설정을 확인할 수 있습니다. 
 
@@ -280,9 +280,9 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 
 ## <a name="understanding-non-uniform-memory-access"></a>NUMA(Non-Uniform Memory Access) 이해
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] NUMA(Non-Uniform Memory Access)를 인식하며 특수한 구성 없이 NUMA 하드웨어에서 원활하게 작동합니다. 클럭 속도와 프로세서 수가 증가할수록 이러한 추가 처리 능력을 사용하는 데 필요한 메모리 대기 시간을 줄이기가 더 어려워집니다. 이러한 문제를 피하기 위해 하드웨어 공급업체에서는 대용량의 L3 캐시를 제공하지만 이는 제한적인 해결책입니다. NUMA 아키텍처는 확장성 있는 솔루션으로 이 문제를 해결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 응용 프로그램을 변경할 필요 없이 NUMA 기반 컴퓨터를 활용하도록 설계되었습니다. 자세한 내용은 [방법: 소프트 NUMA를 사용하도록 SQL Server 구성](../database-engine/configure-windows/soft-numa-sql-server.md)을 참조하세요.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 NUMA(Non-Uniform Memory Access)를 인식하며 특수한 구성 없이 NUMA 하드웨어에서 원활하게 작동합니다. 클럭 속도와 프로세서 수가 증가할수록 이러한 추가 처리 능력을 사용하는 데 필요한 메모리 대기 시간을 줄이기가 더 어려워집니다. 이러한 문제를 피하기 위해 하드웨어 공급업체에서는 대용량의 L3 캐시를 제공하지만 이는 제한적인 해결책입니다. NUMA 아키텍처는 확장성 있는 솔루션으로 이 문제를 해결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 응용 프로그램을 변경할 필요 없이 NUMA 기반 컴퓨터를 활용하도록 설계되었습니다. 자세한 내용은 [방법: 소프트 NUMA를 사용하도록 SQL Server 구성](../database-engine/configure-windows/soft-numa-sql-server.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [서버 메모리 서버 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [페이지 읽기](../relational-databases/reading-pages.md)   
 [페이지 쓰기](../relational-databases/writing-pages.md)   

@@ -1,16 +1,16 @@
 ---
 title: sp_add_job (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@job_name =** ] **'***job_name***'**  
  작업의 이름입니다. 이름은 고유 해야 하며 퍼센트를 포함할 수 없습니다 (**%**) 문자. *job_name*은 **nvarchar (128)**, 기본값은 없습니다.  
   
- [  **@enabled =** ] *사용 하도록 설정*  
+ [ **@enabled =** ] *enabled*  
  추가된 작업의 상태를 나타냅니다. *활성화*은 **tinyint**, 기본값은 1 (사용). 그러나 경우 **0**, 실행할 수 있습니다 수동으로; 작업이 사용 되지 않으며 일정에 따라 실행 되지 않습니다.  
   
  [ **@description =** ] **'***description***'**  
@@ -80,7 +80,7 @@ sp_add_job [ @job_name = ] 'job_name'
  작업 범주를 지정하는 데 필요한 언어 독립 메커니즘입니다. *category_id*은 **int**, 기본값은 NULL입니다.  
   
  [ **@owner_login_name =** ] **'***login***'**  
- 작업을 소유하는 로그인의 이름입니다. *로그인*은 **sysname**, 기본값은 NULL로 현재 로그인 이름으로 해석 됩니다. 구성원만는 **sysadmin** 고정된 서버 역할 설정 하거나 값을 변경할 수  **@owner_login_name** 합니다. 경우 멤버가 아닌 사용자의는 **sysadmin** 역할 설정 하거나 값을 변경  **@owner_login_name** 이 저장된 프로시저의 실행이 실패 하 고 오류가 반환 됩니다.  
+ 작업을 소유하는 로그인의 이름입니다. *로그인*은 **sysname**, 기본값은 NULL로 현재 로그인 이름으로 해석 됩니다. 구성원만는 **sysadmin** 고정된 서버 역할 설정 하거나 값을 변경할 수 **@owner_login_name**합니다. 경우 멤버가 아닌 사용자의는 **sysadmin** 역할 설정 하거나 값을 변경 **@owner_login_name**이 저장된 프로시저의 실행이 실패 하 고 오류가 반환 됩니다.  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
  Microsoft Windows 응용 프로그램 로그에 이 작업에 대한 항목을 저장할 시간을 나타내는 값입니다. *eventlog_level*은 **int**, 다음이 값 중 하나일 수 있습니다.  
@@ -126,7 +126,7 @@ sp_add_job [ @job_name = ] 'job_name'
  InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
- **@originating_server**에 있는 **sp_add_job** 되지만 인수에서 표시 되지 않으면 합니다. **@originating_server**내부 용도로 예약 되어 있습니다.  
+ **@originating_server** 에 있는 **sp_add_job** 되지만 인수에서 표시 되지 않으면 합니다. **@originating_server** 내부 용도로 예약 되어 있습니다.  
   
  후 **sp_add_job** 를 실행 한 작업을 추가할 **sp_add_jobstep** 는 작업에 대 한 작업을 수행 하는 단계를 추가 하는 데 사용할 수 있습니다. **sp_add_jobschedule** 하는 데 사용할 수는 일정을 만들는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 사용 하 여 작업을 실행 합니다. 사용 하 여 **sp_add_jobserver** 설정 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 작업이 실행 되는 인스턴스 및 **sp_delete_jobserver** 에서 작업을 제거 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스.  
   
@@ -145,7 +145,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  이러한 각 고정 연관 된 특정 사용 권한에 대 한 정보에 대 한 데이터베이스 역할, 참조 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)합니다.  
   
- 구성원만는 **sysadmin** 고정된 서버 역할 설정 하거나 값을 변경할 수  **@owner_login_name** 합니다. 경우 멤버가 아닌 사용자의는 **sysadmin** 역할 설정 하거나 값을 변경  **@owner_login_name** 이 저장된 프로시저의 실행이 실패 하 고 오류가 반환 됩니다.  
+ 구성원만는 **sysadmin** 고정된 서버 역할 설정 하거나 값을 변경할 수 **@owner_login_name**합니다. 경우 멤버가 아닌 사용자의는 **sysadmin** 역할 설정 하거나 값을 변경 **@owner_login_name**이 저장된 프로시저의 실행이 실패 하 고 오류가 반환 됩니다.  
   
 ## <a name="examples"></a>예  
   
@@ -188,16 +188,16 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_add_schedule&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_add_jobstep&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_add_jobserver &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_apply_job_to_targets &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_job &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_delete_jobserver &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_remove_job_from_targets &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
- [sp_help_job&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobstep &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_update_job &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_add_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

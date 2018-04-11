@@ -1,16 +1,16 @@
 ---
-title: "유형의 이벤트 | Microsoft Docs"
+title: 유형의 이벤트 | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - EventComplete event [ADO]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 52d78d1a6ae1fc2ccb34ee6b8d810f1ca5ba1c22
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="types-of-events"></a>이벤트 유형
 이벤트의 두 기본 유형이 있습니다. "이벤트에 는" 작업이 시작 되기 전에 호출 되는, 일반적으로 이름에 "는"를 포함-예를 들어 **WillChangeRecordset** 또는 **WillConnect**합니다. 이벤트가 완료 된 후 일반적으로 호출 된 이벤트에 이름에 "Complete"는 포함-예를 들어 **RecordChangeComplete** 또는 **ConnectComplete**합니다. 예외가-와 같은 **InfoMessage** -하지만 연결된 작업이 완료 된 후 발생 합니다.  

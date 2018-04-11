@@ -1,16 +1,16 @@
 ---
-title: "XML 편집기(SQL Server Management Studio) | Microsoft 문서"
-ms.custom: 
+title: XML 편집기(SQL Server Management Studio) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.editor.xml.f1
@@ -20,19 +20,20 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f434c04ccf8d15d5bddd9c91ffe06bb9c6f69b40
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 편집기(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] XML 스키마, ADO.NET 데이터 집합 및 XML 문서 작업에 사용할 수 있는 다양한 시각적 도구를 제공합니다. XML 디자이너는 WC3(World Wide Web Consortium)에서 정의한 XSD(XML 스키마 정의) 언어를 지원합니다. DTD(문서 유형 정의)나 XDR(XML-Data Reduced)와 같은 다른 XML 스키마 언어는 지원하지 않습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  XML 스키마, ADO.NET 데이터 집합 및 XML 문서 작업에 사용할 수 있는 다양한 시각적 도구를 제공합니다. XML 디자이너는 WC3(World Wide Web Consortium)에서 정의한 XSD(XML 스키마 정의) 언어를 지원합니다. DTD(문서 유형 정의)나 XDR(XML-Data Reduced)와 같은 다른 XML 스키마 언어는 지원하지 않습니다.  
   
  디자이너를 표시하려면 데이터 집합, XML 스키마 또는 XML 파일을 프로젝트에 추가하거나 아래 표에 나오는 파일 형식을 여십시오.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/24/2018
   
  XML 디자이너는 XML 파일, XML 스키마 및 데이터 집합 작업에 다음 세 가지 뷰(또는 모드)를 제공합니다.  
   
-|보기|Description|지원되는 파일 형식|  
+|보기|설명|지원되는 파일 형식|  
 |----------|-----------------|--------------------------|  
 |**스키마**|XML 스키마 및 ADO.NET 데이터 집합을 시각적으로 만들고 수정할 때 사용|.xsd|  
 |**데이터**|구조화된 데이터 표에서 XML 데이터 파일을 시각적으로 수정할 때 사용|.xml|  

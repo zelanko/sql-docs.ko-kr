@@ -1,31 +1,31 @@
 ---
-title: "문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 09/29/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-caps.latest.revision: 
+caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c3eff449d858ce95e1df141363571f73c0c5813d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

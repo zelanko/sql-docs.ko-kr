@@ -1,16 +1,16 @@
 ---
-title: "Source 속성 (ADO 오류) | Microsoft Docs"
+title: Source 속성 (ADO 오류) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5a4b3e69feaada6c11504a1c5c2c834060be5b04
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="source-property-ado-error"></a>Source 속성 (ADO 오류)
 개체 또는 원래 오류를 생성 한 응용 프로그램의 이름을 나타냅니다.  

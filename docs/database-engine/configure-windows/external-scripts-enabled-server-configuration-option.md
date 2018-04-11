@@ -24,14 +24,14 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 8d92fc9873ffd3fded2e0f614b0f633895d6a715
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>External Scripts Enabled 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-** ** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]에 적용됩니다.
+**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 **external scripts enabled** 옵션을 사용하면 특정 원격 언어 확장을 사용하여 스크립트를 실행하도록 설정할 수 있습니다. 이 속성은 기본적으로 해제되어 있습니다. **고급 분석 서비스**가 설치되어 있으면 이 속성을 true로 설정할 수 있습니다.
 
@@ -68,7 +68,7 @@ RECONFIGURE WITH OVERRIDE;
 
 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 
-[RECONFIGURE&#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
+[Reconfigure& #40; Transact SQL & #41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
 
 [sp_execute_external_script&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 

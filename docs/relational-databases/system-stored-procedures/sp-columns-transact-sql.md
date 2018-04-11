@@ -1,16 +1,16 @@
 ---
 title: sp_columns (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_columns_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7ea208a7c7c5c1cb969bfa556a5be27b32e5a856
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,25 +51,25 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@table_name=**] *개체*  
+ [ **@table_name=**] *object*  
  카탈로그 정보를 반환하는 데 사용되는 개체의 이름입니다. *개체* 테이블, 뷰 또는 테이블 반환 함수 같은 열이 있는 다른 개체 일 수 있습니다. *개체* 은 **nvarchar(384)**, 기본값은 없습니다. 와일드카드 패턴 일치가 지원됩니다.  
   
- [  **@table_owner* * * =**] *소유자*  
+ [ **@table_owner****=**] *owner*  
  카탈로그 정보를 반환하는 데 사용되는 개체의 개체 소유자입니다. *소유자* 은 **nvarchar(384)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 경우 *소유자* 을 지정 하지 않으면 기본 DBMS의 기본 개체 표시 규칙이 적용 됩니다.  
   
  현재 사용자가 지정된 이름의 개체를 소유한 경우 해당 개체의 열이 반환됩니다. 경우 *소유자* 지정 하지 않으면 현재 사용자가 지정 된 개체를 소유 하지 및 *개체*, **sp_columns** 지정 된 개체를 찾습니다  *개체* 데이터베이스 소유자가 소유 합니다. 개체가 있으면 개체의 열이 반환됩니다.  
   
- [  **@table_qualifier* * * =**] *한정자*  
- 개체 한정자의 이름입니다. *한정자* 은 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 개체에 대 한 세 부분으로 구성 된 이름 (*한정자***.** *소유자***.** *이름*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 개체 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ [ **@table_qualifier****=**] *qualifier*  
+ 개체 한정자의 이름입니다. *한정자* 은 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 개체에 대 한 세 부분으로 구성 된 이름 (*한정자***.*** 소유자***.*** 이름*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 개체 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
- [  **@column_name=**] *열*  
+ [ **@column_name=**] *column*  
  카탈로그 정보 중 한 열만을 사용하고자 할 때 지정하는 단일 열입니다. *열* 은 **nvarchar(384)**, 기본값은 NULL입니다. 경우 *열* 은 지정 하지 않으면 모든 열 반환 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *열* 에 나열 된 열 이름을 나타냅니다는 **syscolumns** 테이블입니다. 와일드카드 패턴 일치가 지원됩니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트가 SQL-92 표준 패턴 일치(% 및 _ 와일드카드 문자)만을 사용해야 합니다.  
   
- [  **@ODBCVer=**] *ODBCVer*  
+ [ **@ODBCVer=**] *ODBCVer*  
  사용하고 있는 ODBC의 버전입니다. *ODBCVer* 은 **int**, 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타내며 유효한 값은 2 또는 3입니다. ODBC 버전 2와 3 간의 동작 차이, 참조 **SQLColumns** 사양입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>결과 집합  
  **sp_columns** 카탈로그 저장 프로시저는 **SQLColumns** ODBC의 합니다. 반환 결과으로 정렬 **TABLE_QUALIFIER**, **TABLE_OWNER**, 및 **TABLE_NAME**합니다.  
@@ -82,12 +82,12 @@ sp_columns [ @table_name = ] object
 |**COLUMN_NAME**|**sysname**|각 열에 대 한 열 이름에서 **TABLE_NAME** 반환 합니다. 이 필드는 항상 값을 반환합니다.|  
 |**DATA_TYPE**|**smallint**|ODBC 데이터 형식을 나타내는 정수 코드입니다. ODBC 형식에 매핑될 수 없는 데이터 형식인 경우에는 NULL이 됩니다. 네이티브 데이터 형식 이름이 반환 됩니다는 **TYPE_NAME** 열입니다.|  
 |**TYPE_NAME**|**sysname**|데이터 형식을 나타내는 문자열입니다. 이 이름은 기본 DBMS에서 제공합니다.|  
-|**전체 자릿수**|**int**|유효 자릿수입니다. 에 대 한 반환 값은 **정밀도** 열이 정수는 10에서입니다.|  
+|**PRECISION**|**int**|유효 자릿수입니다. 에 대 한 반환 값은 **정밀도** 열이 정수는 10에서입니다.|  
 |**LENGTH**|**int**|데이터의 크기를 전송 합니다. <sup>1</sup>|  
 |**크기 조정**|**smallint**|소수점 오른쪽 자릿수입니다.|  
-|**기 수**|**smallint**|숫자 데이터 형식의 기수입니다.|  
-|**NULL 허용**|**smallint**|NULL 허용 여부를 지정합니다.<br /><br /> 1 = NULL을 사용할 수 있습니다.<br /><br /> 0 = NULL을 사용할 수 없습니다.|  
-|**설명**|**varchar(254)**|이 필드는 항상 NULL을 반환합니다.|  
+|**RADIX**|**smallint**|숫자 데이터 형식의 기수입니다.|  
+|**NULLABLE**|**smallint**|NULL 허용 여부를 지정합니다.<br /><br /> 1 = NULL을 사용할 수 있습니다.<br /><br /> 0 = NULL을 사용할 수 없습니다.|  
+|**REMARKS**|**varchar(254)**|이 필드는 항상 NULL을 반환합니다.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|열의 기본값입니다.|  
 |**SQL_DATA_TYPE**|**smallint**|설명자의 TYPE 필드에 표시되는 SQL 데이터 형식의 값입니다. 이 열은 동일는 **DATA_TYPE** 열을 제외 하 고는 **datetime** 및 sql-92 **간격** 데이터 형식입니다. 이 열은 항상 값을 반환합니다.|  
 |**SQL_DATETIME_SUB**|**smallint**|하위 형식에 대 한 코드 **datetime** 및 sql-92 **간격** 데이터 형식입니다. 이 열은 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
@@ -114,7 +114,7 @@ EXEC sp_columns @table_name = N'Department',
    @table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 지정된 테이블의 열 정보를 반환합니다.  
   
 ```  
@@ -125,8 +125,8 @@ EXEC sp_columns @table_name = N'DimEmployee',
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_tables &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
- [카탈로그 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [sp_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [카탈로그 저장된 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

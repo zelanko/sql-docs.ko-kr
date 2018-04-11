@@ -1,16 +1,16 @@
 ---
 title: TOP(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TOP_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - TOP clause, about TOP clause
 - queries [SQL Server], results
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="top-transact-sql"></a>TOP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/19/2018
 ## <a name="interoperability"></a>상호 운용성  
  TOP 식은 트리거로 인해 실행될 수 있는 문에 영향을 주지 않습니다. 트리거에서 **inserted** 및 **deleted** 테이블은 INSERT, UPDATE, MERGE 또는 DELETE 문의 영향을 받는 행만 반환합니다. 예를 들어 TOP 절이 사용된 INSERT 문으로 인해 INSERT TRIGGER가 실행된 경우  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보기를 통해 행을 업데이트할 수 있습니다. TOP 절은 뷰 정의에 포함될 수 있으므로 행이 TOP 식의 요구 사항을 더 이상 충족하지 않는 경우에는 업데이트로 인해 특정 행이 뷰에서 사라질 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 뷰를 통해 행을 업데이트할 수 있습니다. TOP 절은 뷰 정의에 포함될 수 있으므로 행이 TOP 식의 요구 사항을 더 이상 충족하지 않는 경우에는 업데이트로 인해 특정 행이 뷰에서 사라질 수 있습니다.  
   
  MERGE 문에 지정되는 경우 TOP 절은 전체 원본 테이블과 전체 대상 테이블이 조인되고 삽입, 업데이트 또는 삭제 동작에 적합하지 않은 조인된 행이 제거된 *후에* 적용됩니다. TOP 절은 조인된 행 수를 지정된 값으로 더 줄이며, 삽입, 업데이트 또는 삭제 동작은 나머지 조인된 행에 순서 없이 적용됩니다. 즉, 행은 WHEN 절에 정의된 동작에 순서 없이 분산됩니다. 예를 들어 TOP (10)을 지정하면 10개 행이 영향을 받습니다. 이 10개의 행 중 7개가 업데이트되고 3개가 삽입되거나, 1개가 삭제되고 5개가 업데이트되고 4개가 삽입될 수 있습니다. MERGE 문은 원본과 대상 테이블 모두에 전체 테이블 검색을 수행하므로 큰 테이블을 수정하기 위해 TOP 절을 사용하여 다중 일괄 처리를 생성하는 경우에는 I/O 성능에 영향을 줄 수 있습니다. 이러한 시나리오에서 연속된 모든 일괄 처리는 새로운 행을 대상으로 해야 합니다.  
   
@@ -234,7 +234,7 @@ GO
 ###  <a name="DML"></a>DELETE, INSERT 또는 UPDATE의 영향을 받는 행 제한  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>1. TOP를 사용하여 삭제되는 행 수 제한  
- DELETE 문과 함께 TOP(*n*) 절을 사용하면 임의로 선택된 *n*개의 행에 대해 삭제 작업이 수행됩니다. 즉, DELETE 문이 WHERE 절에 정의된 조건을 충족하는 행의 수(*n*)를 선택합니다. 다음 예에서는 `20` 테이블에서 기한이 2002년 7월 1일 이전인 행 중 `PurchaseOrderDetail`개의 행을 삭제합니다.  
+ Top (*n*)로 DELETE 절을 사용 하면 임의로 선택에서 삭제 작업이 수행 됩니다, *n* 행의 수입니다. DELETE 문은 즉, 선택 (*n*) WHERE 절에 정의 된 조건을 충족 하는 행의 수입니다. 다음 예에서는 `20` 테이블에서 기한이 2002년 7월 1일 이전인 행 중 `PurchaseOrderDetail`개의 행을 삭제합니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +300,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>3. TOP를 사용하여 업데이트되는 행 수 제한  
- 다음 예에서는 TOP 절을 사용하여 테이블의 행을 업데이트합니다. UPDATE 문과 함께 TOP(*n*) 절을 사용하면 정의되지 않은 수의 행에 대해 업데이트 작업이 수행됩니다. 즉, UPDATE 문이 WHERE 절에 정의된 조건을 충족하는 행의 수(*n*)를 선택합니다. 다음 예에서는 한 영업 직원의 고객 10명을 다른 영업 직원에게 지정합니다.  
+ 다음 예에서는 TOP 절을 사용하여 테이블의 행을 업데이트합니다. Top (*n*) 절을 사용 하 여 업데이트, 하면 정의 되지 않은 수의 행에서 업데이트 작업이 수행 됩니다. UPDATE 문 선택, 즉 (*n*) WHERE 절에 정의 된 조건을 충족 하는 행의 수입니다. 다음 예에서는 한 영업 직원의 고객 10명을 다른 영업 직원에게 지정합니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -342,7 +342,7 @@ FROM DimEmployee ORDER BY LastName;
   
  결과: Brown이라는 3명의 직원이 31행에 대해 동률이기 때문에 33개 행이 반환됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

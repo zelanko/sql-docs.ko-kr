@@ -1,16 +1,16 @@
 ---
 title: sp_add_schedule (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_schedule_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_schedule
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
-caps.latest.revision: 
+caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: df04306671a8e2a0f0ded0fc7482e56955102a83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@schedule_name =** ] **'***schedule_name***'**  
  일정의 이름입니다. *schedule_name*은 **sysname**, 기본값은 없습니다.  
   
- [  **@enabled =** ] *사용 하도록 설정*  
+ [ **@enabled =** ] *enabled*  
  일정의 현재 상태를 나타냅니다. *활성화*은 **tinyint**, 기본값은 **1** (사용). 경우 **0**, 일정을 사용할 수 없습니다. 일정을 사용할 수 없는 경우 이 일정에 따라 어떠한 작업도 실행되지 않습니다.  
   
  [ **@freq_type =** ] *freq_type*  
@@ -89,7 +89,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**4** (매일)|모든 *freq_interval* 일 수 있습니다.|  
 |**8** (매주)|*freq_interval* (OR 논리 연산자와 결합) 다음 중 하나 이상의:<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **4** = 화요일<br /><br /> **8** = 수요일<br /><br /> **16** = 목요일<br /><br /> **32** = 금요일<br /><br /> **64** = 토요일|  
 |**16** (매월)|에 *freq_interval* 해당 월의 일 합니다.|  
-|**32** (매월 상대적)|*freq_interval* 다음 중 하나입니다.<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **3** = 화요일<br /><br /> **4** = 수요일<br /><br /> **5** = 목요일<br /><br /> **6** = 금요일<br /><br /> **7** = 토요일<br /><br /> **8** = 일<br /><br /> **9** = Weekday<br /><br /> **10** = 주말|  
+|**32** (매월 상대적)|*freq_interval* 다음 중 하나입니다.<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **3** = 화요일<br /><br /> **4** = 수요일<br /><br /> **5** = 목요일<br /><br /> **6** = 금요일<br /><br /> **7** = 토요일<br /><br /> **8** = Day<br /><br /> **9** = 평일<br /><br /> **10** = 주말|  
 |**64** (SQLServerAgent 서비스가 시작할 때)|*freq_interval* 는 사용 되지 않습니다.|  
 |**128**|*freq_interval* 는 사용 되지 않습니다.|  
   
@@ -139,7 +139,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@owner_login_name**= ] **'***owner_login_name***'**  
  일정을 소유하는 서버 보안 주체의 이름입니다. *owner_login_name* 은 **sysname**, 기본값은 NULL, 만든이가 일정을 소유 나타냅니다.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] *schedule_uid * * * 출력**  
  일정의 고유 식별자입니다. *schedule_uid* 형식의 변수는 **uniqueidentifier**합니다.  
   
  [ **@schedule_id**= ] *schedule_id***OUTPUT**  
@@ -217,11 +217,11 @@ GO
  [만들기 및 작업에 일정 연결](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
  [작업 예약](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [일정 만들기](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
- [SQL Server 에이전트 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_jobschedule &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
- [sp_update_schedule &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_help_schedule &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [SQL Server 에이전트 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_jobschedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
+ [sp_update_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

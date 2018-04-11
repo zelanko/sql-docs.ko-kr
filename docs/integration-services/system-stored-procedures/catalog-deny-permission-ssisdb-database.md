@@ -1,28 +1,28 @@
 ---
-title: "catalog.deny_permission(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.deny_permission(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a04ae959af4c0a23b3a954e590df424aa1536949
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="result-sets"></a>결과 집합  
  InclusionThresholdSetting  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   개체에 대한 MANAGE_PERMISSIONS 권한  
@@ -76,7 +76,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   **sysadmin** 서버 역할에 대한 멤버 자격  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>주의  
  이 저장 프로시저를 통해 다음 표에 설명된 사용 권한 유형을 거부할 수 있습니다.  
   
 |permission_type 값|사용 권한 이름|사용 권한 설명|적용할 수 있는 개체 유형|  

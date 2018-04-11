@@ -16,10 +16,10 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
 ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio 코드를 사용 하 여 만들고 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 합니다.
 

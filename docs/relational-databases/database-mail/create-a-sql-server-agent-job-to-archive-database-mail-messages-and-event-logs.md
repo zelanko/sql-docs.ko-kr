@@ -1,16 +1,16 @@
 ---
-title: "데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - archiving mail messages and attachments [SQL Server]
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Database Mail [SQL Server], archiving
 - saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8823296f7fd9a64fdc0d5b978a22e89e8b415d37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-데이터베이스 메일 및 첨부 파일의 복사본은 데이터베이스 메일 이벤트 로그와 함께 **msdb** 테이블에 보관됩니다. 정기적으로 테이블의 크기를 축소하고 더 이상 필요하지 않은 메시지와 이벤트를 보관할 수 있습니다. 다음 절차에서는 SQL Server 에이전트 작업을 만들어 이 프로세스를 자동화합니다.  
+  데이터베이스 메일 및 첨부 파일의 복사본은 데이터베이스 메일 이벤트 로그와 함께 **msdb** 테이블에 보관됩니다. 정기적으로 테이블의 크기를 축소하고 더 이상 필요하지 않은 메시지와 이벤트를 보관할 수 있습니다. 다음 절차에서는 SQL Server 에이전트 작업을 만들어 이 프로세스를 자동화합니다.  
   
 -   **시작하기 전에:**  , [필수 구성 요소](#Prerequisites), [권장 사항](#Recommendations), [권한](#Permissions)  
   
@@ -39,14 +39,14 @@ ms.lasthandoff: 02/12/2018
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  데이터를 저장하고 보관할 새 테이블은 특수한 보관 데이터베이스에 위치할 수 있습니다. 행을 텍스트 파일로 내보낼 수도 있습니다.  
    
 ###  <a name="Recommendations"></a> 권장 사항  
  프로덕션 환경에서 오류 검사를 추가하고 작업이 실패할 경우 운영자에게 전자 메일 메시지를 보낼 수 있습니다.  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 권한  
  이 항목에서 설명하는 저장 프로시저를 실행하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
   
