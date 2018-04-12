@@ -1,16 +1,16 @@
 ---
-title: "XQuery 언어 참조 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: XQuery 언어 참조 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - XML [SQL Server], XQuery
 - queries [XML in SQL Server], XQuery
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -82,7 +82,7 @@ WHERE ProductModelID=7
 |-----------|-----------------|  
 |[XQuery 기초](../xquery/xquery-basics.md)|XQuery 개념에 대한 기본 개여는 물론 식 평가(정적 및 동적 컨텍스트), 원자화, 효율적인 부울 값, XQuery 유형 시스템, 시퀀스 유형 일치 및 오류 처리 등을 제공합니다.|  
 |[XQuery 식](../xquery/xquery-expressions.md)|XQuery 기본 식, 경로 식, 시퀀스 식, 산술 비교 및 논리 식, XQuery 구성, FLWOR 식, 조건 및 한정 식, 시퀀스 유형의 여러 식에 대해 설명합니다.|  
-|[모듈 및 프롤로그 &#40; XQuery &#41;](../xquery/modules-and-prologs-xquery.md)|XQuery 프롤로그에 대해 설명합니다.|  
+|[모듈 및 프롤로그 &#40;XQuery&#41;](../xquery/modules-and-prologs-xquery.md)|XQuery 프롤로그에 대해 설명합니다.|  
 |[xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)|지원되는 XQuery 함수 목록에 대해 설명합니다.|  
 |[xml 데이터 형식에 대한 XQuery 연산자](../xquery/xquery-operators-against-the-xml-data-type.md)|지원되는 XQuery 연산자에 대해 설명합니다.|  
 |[xml 데이터 형식에 대한 추가 예제 XQuery](../xquery/additional-sample-xqueries-against-the-xml-data-type.md)|추가 XQuery 예제를 제공합니다.|  
