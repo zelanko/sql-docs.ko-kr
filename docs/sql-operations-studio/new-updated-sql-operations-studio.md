@@ -1,6 +1,6 @@
 ---
-title: 업데이트 됨-SQL 작업 Studio docs | Microsoft Docs
-description: 가져온 조각을 SQL 작업 Studio에 대 한 최근에 변경 된 설명서에 대 한 업데이트 된 콘텐츠를 표시 합니다.
+title: 업데이트 됨-SQL Operations Studio docs | Microsoft Docs
+description: 가져온 조각을 SQL Operations Studio에 대 한 최근에 변경 된 설명서에 대 한 업데이트 된 콘텐츠를 표시 합니다.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -16,7 +16,7 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>신규 / 최근에 업데이트: SQL 작업 Studio docs
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>신규 / 최근에 업데이트: SQL Operations Studio docs
 
 
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/08/2018
 
 
 - *업데이트 날짜 범위:*  &nbsp; **2017-12-03** &nbsp;부터 &nbsp; **2018-02-03**까지
-- *주제 영역:* &nbsp; **SQL 작업 Studio**합니다.
+- *주제 영역:* &nbsp; **SQL Operations Studio**합니다.
 
 
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/08/2018
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-1. [SQL 작업 Studio (미리 보기) 릴리스 정보](release-notes.md)
+1. [SQL Operations Studio (preview) 릴리스 정보](release-notes.md)
 
 
 
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/08/2018
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
-1. [다운로드 하 고 SQL 작업 Studio (미리 보기) 설치](#TitleNum_1)
+1. [다운로드 하 고 SQL Operations Studio (preview) 설치](#TitleNum_1)
 
 
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/08/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [다운로드 하 고 SQL 작업 Studio (미리 보기) 설치](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [다운로드 하 고 SQL Operations Studio (preview) 설치](download.md)
 
 *업데이트됨: 2018-01-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
@@ -99,20 +99,20 @@ ms.lasthandoff: 04/08/2018
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes.md)를 참조하십시오.
 
-**Windows에 대 한 SQL 작업 Studio (미리 보기) 가져오기**
+**Windows에 대 한 SQL Operations Studio (preview) 가져오기**
 
 
-이 버전의 SQL 작업 Studio (미리 보기)는 표준 Windows 설치 관리자 환경 및.zip 포함합니다.
+이 버전의 SQL Operations Studio (preview) 는 표준 Windows 설치 관리자 환경 및.zip 포함합니다.
 
 **설치 관리자**
 
-1. 다운로드 및 실행 된 [SQL 작업 Studio (미리 보기) 설치 프로그램을 실행](https://go.microsoft.com/fwlink/?linkid=866480)합니다.
-1. SQL 작업 (미리 보기) Studio 응용 프로그램을 시작 합니다.
+1. 다운로드 및 실행 된 [SQL Operations Studio (preview) 설치 프로그램을 실행](https://go.microsoft.com/fwlink/?linkid=866480)합니다.
+1. SQL Operations Studio (preview) 응용 프로그램을 시작 합니다.
 
 
 **.zip 파일**
 
-1. 다운로드 [Windows에 대 한 SQL 작업 Studio (미리 보기).zip](https://go.microsoft.com/fwlink/?linkid=866479)합니다.
+1. 다운로드 [Windows에 대 한 SQL Operations Studio (preview).zip](https://go.microsoft.com/fwlink/?linkid=866479)합니다.
 
 
 
@@ -137,7 +137,7 @@ ms.lasthandoff: 04/08/2018
 - [새로 추가되었거나 업데이트됨(15+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
 - [새로 추가되었거나 업데이트됨(2+9):&nbsp; **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
 - [새로 추가되었거나 업데이트됨(1+0):&nbsp; **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **SQL 작업 Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **SQL Operations Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
 - [새로 추가되었거나 업데이트됨(1+1):&nbsp; **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
 - [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
 - [새로 추가되었거나 업데이트됨(1+2):&nbsp; **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)

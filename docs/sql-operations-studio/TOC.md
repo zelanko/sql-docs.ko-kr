@@ -1,4 +1,4 @@
-# [SQL Operations Studio(미리 보기)](what-is.md)
+# [SQL Operations Studio (preview)](what-is.md)
 # [설치](download.md)
 # [릴리스 정보](release-notes.md)
 # 빠른 시작
@@ -24,7 +24,7 @@
 ## [사용 데이터 수집](usage-data-collection.md)
 # 리소스
 ## [Transact-SQL 참조](../t-sql/language-reference.md)
-## [SQL Operations Studio(미리 보기) GitHub 리포지토리](https://www.github.com/Microsoft/SqlOpsStudio)
+## [SQL Operations Studio (preview) GitHub 리포지토리](https://www.github.com/Microsoft/SqlOpsStudio)
 ## [SQL Server 블로그](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ## [새로운 또는 업데이트 된 문서](new-updated-sql-operations-studio.md)
 # [FAQ](faq.md)

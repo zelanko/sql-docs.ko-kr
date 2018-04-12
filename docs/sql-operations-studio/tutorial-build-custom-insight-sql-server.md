@@ -1,6 +1,6 @@
 ---
-title: "자습서: SQL 작업 Studio (미리 보기)에서 사용자 지정 통찰력 위젯을 빌드할 | Microsoft Docs"
-description: "이 자습서에는 사용자 지정 통찰력은 widget을 작성할 SQL 작업 Studio (미리 보기)의 데이터베이스 및 서버 대시보드에 추가 하는 방법을 보여 줍니다."
+title: '자습서: SQL Operations Studio (preview) 에서 사용자 지정 통찰력 위젯을 빌드할 | Microsoft Docs'
+description: 이 자습서에는 사용자 지정 통찰력은 widget을 작성할 SQL Operations Studio (preview) 의 데이터베이스 및 서버 대시보드에 추가 하는 방법을 보여 줍니다.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

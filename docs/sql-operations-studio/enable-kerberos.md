@@ -1,6 +1,6 @@
 ---
-title: SQL 작업 Studio (미리 보기)로 연결 시 Active Directory 인증 (Kerberos)을 사용 하 여 | Microsoft Docs
-description: SQL 작업 Studio (미리 보기)에 대 한 Active Directory 인증을 사용 하는 Kerberos를 설정 하는 방법을 알아봅니다
+title: SQL Operations Studio (preview) 로 연결 시 Active Directory 인증 (Kerberos)을 사용 하 여 | Microsoft Docs
+description: SQL Operations Studio (preview) 에 대 한 Active Directory 인증을 사용 하는 Kerberos를 설정 하는 방법을 알아봅니다
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified

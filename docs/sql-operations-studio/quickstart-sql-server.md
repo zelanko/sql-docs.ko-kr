@@ -1,6 +1,6 @@
 ---
-title: "빠른 시작: 연결 및 SQL 작업 Studio (미리 보기)를 사용 하 여 SQL Server에 쿼리할 | Microsoft Docs"
-description: "이 빠른 시작에서는 SQL 작업 Studio (미리 보기)를 사용 하 여 SQL Server에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다."
+title: '빠른 시작: 연결 및 SQL Operations Studio (preview) 를 사용 하 여 SQL Server에 쿼리할 | Microsoft Docs'
+description: 이 빠른 시작에서는 SQL Operations Studio (preview) 를 사용 하 여 SQL Server에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다.
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -38,8 +38,8 @@ SQL Server에 액세스할 수 없으면 다음 링크에서 플랫폼을 선택
 ## <a name="connect-to-a-sql-server"></a>SQL Server에 연결
 
    
-1. 시작  **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 합니다.
-1. 처음으로 실행 하면  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  는 **연결** 대화 상자가 열립니다. 경우는 **연결** 대화 상자를 열고 하지 않습니다는 **새 연결** 아이콘에는 **서버** 페이지:
+1. 시작 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**합니다.
+1. 처음으로 실행 하면 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 는 **연결** 대화 상자가 열립니다. 경우는 **연결** 대화 상자를 열고 하지 않습니다는 **새 연결** 아이콘에는 **서버** 페이지:
    
    ![새 연결 상태 아이콘](media/quickstart-sql-server/new-connection-icon.png)
 

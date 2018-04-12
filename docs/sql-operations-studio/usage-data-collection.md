@@ -1,6 +1,6 @@
 ---
-title: "사용 또는 사용 현황 데이터 수집을 사용 하지 않도록 설정 하 고 크래시 SQL 작업 Studio (미리 보기)에 대 한 보고 | Microsoft Docs"
-description: "이 문서에는 사용 및 충돌 보고 데이터를 수집 하 고 Microsoft로 전송 하는 경우를 제어 하는 방법을 설명 합니다."
+title: 사용 또는 사용 현황 데이터 수집을 사용 하지 않도록 설정 하 고 크래시 SQL Operations Studio (preview) 에 대 한 보고 | Microsoft Docs
+description: 이 문서에는 사용 및 충돌 보고 데이터를 수집 하 고 Microsoft로 전송 하는 경우를 제어 하는 방법을 설명 합니다.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

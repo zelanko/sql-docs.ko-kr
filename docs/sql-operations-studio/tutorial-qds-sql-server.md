@@ -1,6 +1,6 @@
 ---
-title: "자습서: 가장 느린 쿼리 5 개의 사용 샘플 위젯-SQL 작업 Studio (미리 보기) | Microsoft Docs"
-description: "이 자습서에서는 5 개의 가장 느린 쿼리 샘플 위젯 데이터베이스 대시보드를 사용 하도록 설정 하는 방법을 설명 합니다."
+title: '자습서: 가장 느린 쿼리 5 개의 사용 샘플 위젯-SQL Operations Studio (preview) | Microsoft Docs'
+description: 이 자습서에서는 5 개의 가장 느린 쿼리 샘플 위젯 데이터베이스 대시보드를 사용 하도록 설정 하는 방법을 설명 합니다.
 ms.custom: tools|sos
 ms.date: 03/15/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

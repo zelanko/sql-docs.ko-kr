@@ -1,6 +1,6 @@
 ---
-title: Microsoft SQL Operations Studio(미리 보기) 다운로드 및 설치 | Microsoft Docs
-description: Microsoft SQL Operations Studio(미리 보기)를 Windows, macOS, 또는 Linux에 다운로드 및 설치합니다.
+title: Microsoft SQL Operations Studio (preview) 다운로드 및 설치 | Microsoft Docs
+description: Microsoft SQL Operations Studio (preview) 를 Windows, macOS, 또는 Linux에 다운로드 및 설치합니다.
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio(미리 보기) 다운로드 및 설치
+# <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio (preview) 다운로드 및 설치
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]는 Windows, macOS, Linux에서 실행됩니다.
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/08/2018
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes.md)를 참조하십시오.
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>Windows용 SQL Operations Studio(미리 보기) 얻기
+## <a name="get-sql-operations-studio-preview-for-windows"></a>Windows용 SQL Operations Studio (preview) 얻기
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 릴리스에는 표준 Windows 설치 관리자 경험 및 .zip을 포함합니다. 
 
@@ -51,14 +51,14 @@ ms.lasthandoff: 04/08/2018
 3. `\sqlops-windows\sqlops.exe`를 실행합니다.
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS용 SQL Operations Studio(미리 보기) 얻기
+## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS용 SQL Operations Studio (preview) 얻기
 
 1. [ macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=870839)를 다운로드합니다.
 2. zip 내용을 확장하기 위해 두 번 클릭합니다.
 3. [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 *Launchpad*에서 사용할 수 있게 하려면 *sqlops.app*을 *응용 프로그램* 폴더에 드래그합니다.
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux용 SQL Operations Studio(미리 보기) 얻기
+## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux용 SQL Operations Studio (preview) 얻기
 
 1. 다운로드 [! 포함[이름 sos](../includes/name-sos-short.md) 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용 하 여 Linux 용:
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
@@ -116,7 +116,7 @@ ms.lasthandoff: 04/08/2018
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>SQL Operations Studio (미리 보기) 제거
+## <a name="uninstall-sql-operations-studio-preview"></a>SQL Operations Studio (preview) 제거
 
 Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 설치한 경우 Windows 응용 프로그램을 제거하는 방식과 동일한 방식으로 제거합니다.
 

@@ -1,6 +1,6 @@
 ---
-title: "자습서: SQL 작업 (미리 보기) Studio TRANSACT-SQL 편집기를 사용 하 여 데이터베이스 개체를 만드는 | Microsoft Docs"
-description: "이 자습서에서는 T-SQL을 사용 하 여 단순화 하는 SQL 작업 Studio (미리 보기)의 주요 기능에 설명 합니다."
+title: '자습서: SQL Operations Studio (preview) TRANSACT-SQL 편집기를 사용 하 여 데이터베이스 개체를 만드는 | Microsoft Docs'
+description: 이 자습서에서는 T-SQL을 사용 하 여 단순화 하는 SQL Operations Studio (preview)의 주요 기능에 설명 합니다.
 ms.custom: tools|sos
 ms.date: 03/13/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
@@ -57,13 +57,13 @@ ms.lasthandoff: 03/15/2018
 
    ![빠른 검색 위젯](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 편집 된 **전자 메일** 첫 번째 행 형식에서에서 열  *orlando0@adventure-works.com* , 한 키를 누릅니다 **Enter** 의 변경 내용을 저장 합니다.
+1. 편집 된 **전자 메일** 첫 번째 행 형식에서에서 열 *orlando0@adventure-works.com*, 한 키를 누릅니다 **Enter** 의 변경 내용을 저장 합니다.
 
    ![데이터 편집](./media/tutorial-sql-editor/edit-data.png)
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>저장된 프로시저를 만들 T-SQL 코드 조각을 사용합니다
 
-SQL 작업 Studio 문을 빠르게 만들기에 대 한 기본 제공 되는 많은 T-SQL 조각이 제공 합니다.
+SQL Operations Studio 문을 빠르게 만들기에 대 한 기본 제공 되는 많은 T-SQL 조각이 제공 합니다.
 
 
 1. 키를 눌러 새 쿼리 편집기를 열고 **Ctrl + N**합니다.
@@ -117,7 +117,7 @@ SQL 작업 Studio 문을 빠르게 만들기에 대 한 기본 제공 되는 많
 
 ## <a name="use-peek-definition"></a>정의 피킹 사용 
 
-SQL 작업 Studio peek 정의 기능을 사용 하는 개체 정의 볼 수 있는 기능을 제공 합니다. 이 섹션 두 번째 저장된 프로시저를 만들고 신속 하 게 저장된 프로시저의 본문을 만들 수 있도록 테이블에 있는 열을 미리 보기 정의 사용 하 여 합니다.
+SQL Operations Studio peek 정의 기능을 사용 하는 개체 정의 볼 수 있는 기능을 제공 합니다. 이 섹션 두 번째 저장된 프로시저를 만들고 신속 하 게 저장된 프로시저의 본문을 만들 수 있도록 테이블에 있는 열을 미리 보기 정의 사용 하 여 합니다.
 
 1. 키를 눌러 새 편집기를 열고 **Ctrl + N**합니다. 
 
@@ -185,7 +185,7 @@ SQL 작업 Studio peek 정의 기능을 사용 하는 개체 정의 볼 수 있�
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>사용 하 여 setCustomer 저장 프로시저를 테스트 하는 JSON으로 쿼리 결과 저장
 
-*setCustomer* 이전 섹션에서 만든 저장된 프로시저에는 JSON 필요한 데이터를 전달할 수는  *@json_val*  매개 변수입니다. 이 섹션에는 저장된 프로시저를 테스트할 수 있도록를 매개 변수로 전달 하는 JSON의 형식이 올바르게 지정 된 비트를 가져오는 방법을 보여 줍니다.
+*setCustomer* 이전 섹션에서 만든 저장된 프로시저에는 JSON 필요한 데이터를 전달할 수는 *@json_val* 매개 변수입니다. 이 섹션에는 저장된 프로시저를 테스트할 수 있도록를 매개 변수로 전달 하는 JSON의 형식이 올바르게 지정 된 비트를 가져오는 방법을 보여 줍니다.
 
 1. 에 **서버** 사이드바 단추로 클릭 하 고는 *dbo입니다. 고객* 테이블 마우스 클릭 **상위 1000 개 행 선택**합니다.
 
