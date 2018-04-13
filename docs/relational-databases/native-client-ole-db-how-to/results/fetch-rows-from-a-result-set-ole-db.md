@@ -1,20 +1,20 @@
 ---
-title: "결과 집합 (OLE DB)에서 행 인출 | Microsoft Docs"
-ms.custom: 
+title: 결과 집합 (OLE DB)에서 행 인출 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rows [OLE DB]
 ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -385,6 +385,6 @@ int ProcessResultSet() {
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [처리 결과 방법 도움말 항목 &#40; OLE db&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [처리 결과 방법 도움말 항목 & #40; OLE db& #41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   
