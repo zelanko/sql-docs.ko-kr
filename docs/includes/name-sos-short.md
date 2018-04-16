@@ -1,1 +1,1 @@
-<Token>SQL 작업 Studio (미리 보기)</Token>
+<Token>SQL Operations Studio (preview)</Token>

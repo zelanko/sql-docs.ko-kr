@@ -1,1 +1,1 @@
-<Token>Microsoft SQL 작업 Studio (미리 보기)</Token>
+<Token>Microsoft SQL Operations Studio (미리 보기)</Token>
