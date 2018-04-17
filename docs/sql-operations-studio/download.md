@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft SQL Operations Studio (preview) 다운로드 및 설치 | Microsoft Docs
 description: Microsoft SQL Operations Studio (preview) 를 Windows, macOS, 또는 Linux에 다운로드 및 설치합니다.
 ms.custom: tools|sos
@@ -128,14 +128,14 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
 
 ### <a name="windows"></a>Windows
-- Windows 10(64비트)
-- Windows 8.1(64비트)
-- Windows 8(64비트)
+- Windows 10(64 비트)
+- Windows 8.1(64 비트)
+- Windows 8(64 비트)
 - Windows 7 (SP1) (64 비트) - [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767) 필요
 - Windows Server 2016
-- Windows Server 2012 R2(64비트)
-- Windows Server 2012(64비트)
-- Windows Server 2008 R2(64비트)
+- Windows Server 2012 R2(64 비트)
+- Windows Server 2012(64 비트)
+- Windows Server 2008 R2(64 비트)
 
 ### <a name="macos"></a>macOS
 - macOS 10.13 High Sierra
@@ -153,7 +153,7 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
 ## <a name="next-steps"></a>다음 단계
 
-시작 하려면 다음 퀵 스타트 중 하나를 참조 합니다.
+시작하려면 다음 퀵 스타트 중 하나를 참조합니다.
 - [SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 - [Azure SQL 데이터베이스 연결 및 쿼리](quickstart-sql-database.md)
 - [Azure 데이터 웨어하우스 연결 및 쿼리](quickstart-sql-dw.md)
