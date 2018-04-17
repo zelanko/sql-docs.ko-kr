@@ -1,16 +1,16 @@
 ---
 title: sp_table_validation (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd5182a0e742db6ef535a30e94ddb2b4da5f669a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e4d146cdd2620af70d2fafb6de06341a7bfabf6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_table_validation [ @table = ] 'table'
  [  **@expected_checksum=**] *expected_checksum*출력  
  테이블에 대해 예상된 체크섬을 반환할 것인지 지정합니다. *expected_checksum* 은 **숫자**, 기본값은 NULL입니다. NULL인 경우, 실제 체크섬이 출력 매개 변수로 반환됩니다. 값을 제공한 경우에는 해당 값을 실제 체크섬과 비교하여 차이를 확인합니다.  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
+ [ **@rowcount_only=**] *type_of_check_requested*  
  어떤 유형의 체크섬 또는 행 개수 작업을 수행할 것인지 지정합니다. *type_of_check_requested* 은 **smallint**, 기본값은 **1**합니다.  
   
  경우 **0**, 수행할 행 개수 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬.  
@@ -76,7 +76,7 @@ sp_table_validation [ @table = ] 'table'
  [  **@full_or_fast=**] *full_or_fast*  
  행 개수를 계산하는 데 사용하는 방법입니다. *full_or_fast* 은 **tinyint**, 기본값은 **2**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|COUNT(*)를 사용하여 전체 개수를 계산합니다.|  
 |**1**|빠른 계산 **sysindexes.rows**합니다. 행 개수 계산 **sysindexes** 실제 테이블에서의 행 계산 보다 훨씬 빠릅니다. 그러나 때문에 **sysindexes** 는 늦게 업데이트 행 개수가 아닐 정확 하 게 합니다.|  
@@ -86,9 +86,9 @@ sp_table_validation [ @table = ] 'table'
  배포 에이전트가 실행 되는 경우 **sp_table_validation**, 배포 에이전트가 종료 되어야 하는지를 즉시 유효성 검사의 완료 되 면을 지정 합니다. *shutdown_agent* 은 **비트**, 기본값은 **0**합니다. 경우 **0**, 복제 에이전트가 종료 되지는 않습니다. 경우 **1**, 20578 오류가 발생 하 고 복제 에이전트가 종료 하도록 신호가 됩니다. 이 매개 변수는 무시 됩니다 때 **sp_table_validation** 사용자가 직접 실행 됩니다.  
   
  [  **@table_name =**] *table_name*  
- 출력 메시지에 사용되는 뷰의 테이블 이름입니다. *table_name* 은 **sysname**, 기본값은  **@table** 합니다.  
+ 출력 메시지에 사용되는 뷰의 테이블 이름입니다. *table_name* 은 **sysname**, 기본값은 **@table**합니다.  
   
- [  **@column_list** =] **'***column_list***'**  
+ [ **@column_list**=] **'***column_list***'**  
  checksum 함수에서 사용해야 하는 열의 목록입니다. *column_list* 은 **nvarchar (4000)**, 기본값은 NULL입니다. 계산 열 및 타임스탬프 열을 제외한 열 목록을 지정하려면 병합 아티클의 유효성 검사를 사용할 수 있도록 설정하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -109,10 +109,10 @@ sp_table_validation [ @table = ] 'table'
  실행할 **sp_table_validation**, 유효성 검사 중인 테이블에 대 한 SELECT 권한이 있어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [체크섬 &#40; Transact SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)   
+ [체크섬 &#40;Transact SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sp_article_validation &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_publication_validation &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_publication_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "cdc입니다. &lt;capture_instance&gt;_CT (Transact SQL) | Microsoft Docs"
-ms.custom: 
+title: cdc입니다. &lt;capture_instance&gt;_CT (Transact SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cdc
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53f2078f3894d5db7c398b2470b4a3625320e948
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: deb54a835c5c163061b371e8629b95ed0bfcdce9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc입니다. &lt;capture_instance&gt;_CT (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 |**__$seqval**|**binary(10)**|트랜잭션 내 행 변경을 정렬하는 데 사용되는 시퀀스 값입니다.|  
 |**__$operation**|**int**|변경과 연관된 DML(데이터 조작 언어) 작업을 식별합니다. 다음 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 3 = 업데이트(이전 값)<br /><br /> 열 데이터는 update 문을 실행하기 전의 행 값을 가집니다.<br /><br /> 4 = 업데이트(새 값)<br /><br /> 열 데이터는 update 문을 실행한 후의 행 값을 가집니다.|  
 |**__$update_mask**|**varbinary(128)**|변경된 열을 식별하는 변경 테이블의 열 서수를 기준으로 하는 비트 마스크입니다.|  
-|*\<캡처된 원본 테이블 열 >*|다양함|변경 테이블의 나머지 열은 캡처 인스턴스가 생성될 때 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 아무 열도 지정하지 않으면 원본 테이블의 모든 열이 이 테이블에 포함됩니다.|  
+|*\<captured source table columns>*|다양함|변경 테이블의 나머지 열은 캡처 인스턴스가 생성될 때 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 아무 열도 지정하지 않으면 원본 테이블의 모든 열이 이 테이블에 포함됩니다.|  
 |**__ $ command_id** |**int** |트랜잭션 내에서 작업 순서를 추적합니다. |  
   
 ## <a name="remarks"></a>주의  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/21/2017
  삽입 및 삭제 작업의 경우 업데이트 마스크에 있는 모든 비트가 설정됩니다. 업데이트 작업의 경우 업데이트 이전 행 및 업데이트 이후 행에서 업데이트 마스크가 수정되어 업데이트 중 변경된 열을 반영합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sys.sp_cdc_enable_table &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_get_ddl_history &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

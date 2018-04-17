@@ -2,7 +2,7 @@
 title: sp_update_alert (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 64a669e37edf07ff897c94122e7e49d5899c1b6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ sp_update_alert
  [ **@job_name =**] **'***job_name***'**  
  해당 경고에 대한 응답으로 실행되는 작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다. 경우 *job_name* 지정 된 *job_id* 생략 해야 합니다.  
   
- [ **@occurrence_count =** ] *occurrence_count*  
+ [  **@occurrence_count =** ] *occurrence_count*  
  경고가 발생한 횟수를 다시 설정합니다. *occurrence_count* 은 **int**, 기본값은 NULL 이며에 설정할 수 있습니다 **0**합니다.  
   
  [ **@count_reset_date =**] *count_reset_date*  

@@ -1,16 +1,16 @@
 ---
 title: sp_replmonitorhelpmergesession (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 111c25448a3c9699451b22e1513e217988b475f6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 759b8e15635d31df3319db51b5ad860e4b15cc32
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,30 +51,30 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@agent_name**  =] **'***agent_name***'**  
+ [ **@agent_name** =] **'***agent_name***'**  
  에이전트의 이름입니다. *agent_name* 은 **nvarchar (100)** 이며 기본값은 없습니다.  
   
- [  **@hours**  =] *시간*  
+ [ **@hours** =] *시간*  
  기록 에이전트 세션 정보를 반환할 시간 범위(시간)입니다. *시간* 은 **int**, 다음 범위 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |< **0**|이전에 실행된 에이전트 세션에 대한 정보를 최대 100개까지 반환합니다.|  
 |**0** (기본값)|이전에 실행된 모든 에이전트 세션에 대한 정보를 반환합니다.|  
 |> **0**|에 정보를 반환 에이전트에서 발생 한 실행 마지막 *시간* 시간 수입니다.|  
   
- [  **@session_type**  =] *session_type*  
+ [ **@session_type** =] *session_type*  
  세션 종료 결과를 기준으로 결과 집합을 필터링합니다. *session_type* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (기본값)|다시 시도 또는 성공한 에이전트 세션입니다.|  
 |**0**|실패한 에이전트 세션입니다.|  
   
- [  **@publisher**  =] **'***게시자***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 NULL입니다. 실행할 때이 매개 변수는 **sp_replmonitorhelpmergesession** 구독자에 있습니다.  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  게시 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 NULL입니다. 실행할 때이 매개 변수는 **sp_replmonitorhelpmergesession** 구독자에 있습니다.  
   
  [  **@publication=** ] **'***게시***'**  
@@ -96,7 +96,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**PercentageDone**|**decimal**|활성 세션에서 이미 전달된 전체 변경 내용의 예상 비율(%)입니다.|  
 |**TimeRemaining**|**int**|활성 세션에서 남은 예상 시간(초)입니다.|  
 |**CurrentPhase**|**int**|활성 세션의 현재 단계이며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 업로드<br /><br /> **2** = 다운로드|  
-|**LastMessage**|**nvarchar (500)**|세션 중에 병합 에이전트에서 기록한 마지막 메시지입니다.|  
+|**LastMessage**|**nvarchar(500)**|세션 중에 병합 에이전트에서 기록한 마지막 메시지입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

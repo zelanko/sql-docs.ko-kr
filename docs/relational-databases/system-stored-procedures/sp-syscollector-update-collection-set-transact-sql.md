@@ -1,16 +1,16 @@
 ---
 title: sp_syscollector_update_collection_set (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9863651eca95bcd4eafd263b205ddeef5ba4e438
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7f3e7d92f5412c07c128c1225a95b6a4616e97d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,16 +65,16 @@ sp_syscollector_update_collection_set
  [ **@collection_set_id =** ] *collection_set_id*  
  컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 경우 값이 있어야 하 고 *이름* 은 NULL입니다.  
   
- [ **@name =** ] '*name*'  
+ [  **@name =** ] '*이름*'  
  컬렉션 집합의 이름입니다. *이름* 은 **sysname** 경우 값이 있어야 하 고 *collection_set_id* 은 NULL입니다.  
   
  [ **@new_name =** ] '*new_name*'  
  컬렉션 집합의 새 이름입니다. *new_name* 은 **sysname**를 사용 하는 경우 빈 문자열일 수 없습니다. *new_name* 고유 해야 합니다. 현재 컬렉션 집합 이름의 목록을 보려면 syscollector_collection_sets 시스템 뷰를 쿼리합니다.  
   
- [ **@target =** ] '*target*'  
+ [  **@target =** ] '*대상*'  
  나중에 사용하도록 예약되어 있습니다.  
   
- [ **@collection_mode =** ] *collection_mode*  
+ [  **@collection_mode =** ] *collection_mode*  
  사용할 데이터 컬렉션의 유형입니다. *collection_mode* 은 **smallint** 다음 값 중 하나일 수 있습니다.  
   
  0 - 캐시된 모드. 데이터 컬렉션과 업로드가 별도의 일정에 속해 있습니다. 연속 컬렉션을 위해 캐시된 모드를 지정합니다.  
@@ -92,17 +92,17 @@ sp_syscollector_update_collection_set
  [ **@proxy_name =** ] '*proxy_name*'  
  프록시 이름입니다. *proxy_name* 은 **sysname** 이며 null을 허용 합니다.  
   
- [  **@schedule_uid**  =] '*schedule_uid*'  
+ [ **@schedule_uid** =] '*schedule_uid*'  
  일정을 가리키는 GUID입니다. *schedule_uid* 은 **uniqueidentifier**합니다.  
   
  얻으려고 *schedule_uid*, sysschedules 시스템 테이블을 쿼리 합니다.  
   
  때 *collection_mode* 0으로 설정 *schedule_uid* 또는 *schedule_name* 지정 해야 합니다. 때 *collection_mode* 1로 설정 되어 *schedule_uid* 또는 *schedule_name* 지정 해도 무시 됩니다.  
   
- [ **@schedule_name =** ] '*schedule_name*'  
+ [  **@schedule_name =** ] '*schedule_name*'  
  일정의 이름입니다. *schedule_name* 은 **sysname** 이며 null을 허용 합니다. 를 지정 하는 경우 *schedule_uid* NULL 이어야 합니다. 얻으려고 *schedule_name*, sysschedules 시스템 테이블을 쿼리 합니다.  
   
- [ **@logging_level =** ] *logging_level*  
+ [  **@logging_level =** ] *logging_level*  
  로깅 수준입니다. *logging_level* 은 **smallint** 다음 값 중 하나를 사용 합니다.  
   
  0 - 실행 정보 및 다음 항목을 추적하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 이벤트 기록  
@@ -119,7 +119,7 @@ sp_syscollector_update_collection_set
   
 -   지속적으로 실행되는 컬렉션 프로세스  
   
--   경고 이벤트 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 경고 이벤트  
   
  2 - 수준 1 로깅 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 세부 이벤트 정보  
   
@@ -200,7 +200,7 @@ GO
 ## <a name="see-also"></a>관련 항목:  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [dbo.sysschedules &#40; Transact SQL &#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [syscollector_collection_sets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [dbo.sysschedules &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

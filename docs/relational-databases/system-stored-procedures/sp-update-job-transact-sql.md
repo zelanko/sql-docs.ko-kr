@@ -1,16 +1,16 @@
 ---
 title: sp_update_job (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 03171bfdee98063c9bf460b9555c1a7c5d02568d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f9b2702c847457fec32085efec94b0d25e840fa8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,15 +64,15 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 ## <a name="arguments"></a>인수  
  [ **@job_id =**] *job_id*  
- 업데이트할 작업의 ID입니다. *job_id*is **uniqueidentifier**.  
+ 업데이트할 작업의 ID입니다. *job_id*은 **uniqueidentifier**합니다.  
   
  [ **@job_name =**] **'***job_name***'**  
- 작업의 이름입니다. *job_name*is **nvarchar(128)**.  
+ 작업의 이름입니다. *job_name*은 **nvarchar (128)**합니다.  
   
 > **참고:** 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@new_name =**] **'***new_name***'**  
- 작업의 새 이름입니다. *new_name*is **nvarchar(128)**.  
+ 작업의 새 이름입니다. *new_name*은 **nvarchar (128)**합니다.  
   
  [ **@enabled =**] *enabled*  
  작업이 사용 되는지 여부를 지정 합니다 (**1**) 또는 사용 안 함 (**0**). *활성화*은 **tinyint**합니다.  
@@ -84,7 +84,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  작업을 실행하기 위한 첫 단계의 ID입니다. *step_id*은 **int**합니다.  
   
  [ **@category_name =**] **'***category***'**  
- 작업 범주입니다. *category*is **nvarchar(128)**.  
+ 작업 범주입니다. *범주*은 **nvarchar (128)**합니다.  
   
  [ **@owner_login_name =**] **'***login***'**  
  작업을 소유하는 로그인의 이름입니다. *로그인*은 **nvarchar (128)** 의 구성원만는 **sysadmin** 고정된 서버 역할 작업 소유권을 변경할 수 있습니다.  
@@ -161,8 +161,8 @@ GO
   
 ## <a name="see-also"></a>관련 항목:  
  [sp_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

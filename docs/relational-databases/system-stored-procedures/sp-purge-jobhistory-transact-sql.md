@@ -1,16 +1,16 @@
 ---
 title: sp_purge_jobhistory (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_jobhistory_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7f50228e089d71a6cf3a8d74225e1e26f42844fd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5ca210be5b062f7e09c3010597a37294f71379ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,9 +57,9 @@ sp_purge_jobhistory
 >  멤버는 **sysadmin** 고정 서버 역할의 멤버 또는 **SQLAgentOperatorRole** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_purge_jobhistory** 는 지정하지않고*job_name* 또는 *job_id*합니다. 때 **sysadmin** 사용자가 이러한 인수를 지정 하지 않으면, 지정 된 시간 내에서 모든 로컬 및 다중 서버 작업에 대 한 작업 기록이 삭제 됩니다 *oldest_date*합니다. 때 **SQLAgentOperatorRole** 사용자가 이러한 인수를 지정 하지 않으면, 지정 된 시간 내에서 모든 로컬 작업에 대 한 작업 기록이 삭제 됩니다 *oldest_date*합니다.  
   
  [ **@job_id=** ] *job_id*  
- 레코드를 삭제할 작업의 ID입니다. *job_id*은 **uniqueidentifier**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 에 대 한 설명에 나와 있는 참고를 참조 하십시오.  **@job_name**  방법에 대 한 정보에 대 한 **sysadmin** 또는 **SQLAgentOperatorRole** 사용자는이 인수를 사용할 수 있습니다.  
+ 레코드를 삭제할 작업의 ID입니다. *job_id*은 **uniqueidentifier**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 에 대 한 설명에 나와 있는 참고를 참조 하십시오. **@job_name** 방법에 대 한 정보에 대 한 **sysadmin** 또는 **SQLAgentOperatorRole** 사용자는이 인수를 사용할 수 있습니다.  
   
- [ **@oldest_date** = ] *oldest_date*  
+ [ **@oldest_date** =] *oldest_date*  
  기록에 보존할 가장 오래된 레코드입니다. *oldest_date* 은 **datetime**, 기본값은 NULL입니다. 때 *oldest_date* 지정 된 **sp_purge_jobhistory** 만 지정 된 값 보다 오래 된 레코드를 제거 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -107,9 +108,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_help_job&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobhistory &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
+ [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobhistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [GRANT 개체 사용 권한 &#40; Transact SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+ [GRANT 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   
   

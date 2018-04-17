@@ -24,13 +24,13 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc773e1770b907b6eba5e4d09372f0654054d47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ac5a80100f76b63286d0744503427f9f58bc0750
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>xml 데이터 형식에 대한 XQuery 연산자
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ ms.lasthandoff: 12/05/2017
   
 -   일반 비교 연산자 (=,! =, \<, >, \<=, > =)  
   
- 이러한 연산자에 대 한 자세한 내용은 참조 하십시오. [비교 식 &#40; XQuery &#41;](../xquery/comparison-expressions-xquery.md)  
+ 이러한 연산자에 대 한 자세한 내용은 참조 [비교 식 &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-general-operators"></a>1. 일반 연산자 사용  
  다음 쿼리는 시퀀스에 적용되고 시퀀스를 비교하는 일반 연산자를 사용하는 방법을 보여 줍니다. 각 고객에 대 한 일련의 전화 번호를 검색 하는 쿼리는 **AdditionalContactInfo** 의 열은 **연락처** 테이블입니다. 그런 다음 이 번호를 두 개의 전호 번호("111-111-1111", "222-2222")와 비교합니다.  
   
- 쿼리에서 사용 된  **=**  비교 연산자. 오른쪽에 있는 시퀀스의 각 노드는  **=**  연산자 왼쪽에 있는 시퀀스의 각 노드를 비교 합니다. 노드가 일치 하는 경우 노드 비교는 **TRUE**합니다. 그런 다음 int로 변환되고 1과 비교되어 쿼리가 고객 ID를 반환합니다.  
+ 쿼리에서 사용 된 **=** 비교 연산자. 오른쪽에 있는 시퀀스의 각 노드는 **=** 연산자 왼쪽에 있는 시퀀스의 각 노드를 비교 합니다. 노드가 일치 하는 경우 노드 비교는 **TRUE**합니다. 그런 다음 int로 변환되고 1과 비교되어 쿼리가 고객 ID를 반환합니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -100,7 +100,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 때문에 두 피연산자는 **eq** 연산자는 원자 값, 값이 연산자는 쿼리에서 사용 됩니다. 일반 비교 연산자를 사용 하 여 동일한 쿼리를 작성할 수 있습니다 (  **=**  ).  
+ 때문에 두 피연산자는 **eq** 연산자는 원자 값, 값이 연산자는 쿼리에서 사용 됩니다. 일반 비교 연산자를 사용 하 여 동일한 쿼리를 작성할 수 있습니다 ( **=** ).  
   
 ## <a name="see-also"></a>관련 항목:  
  [Xml 데이터 형식에 대 한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)   

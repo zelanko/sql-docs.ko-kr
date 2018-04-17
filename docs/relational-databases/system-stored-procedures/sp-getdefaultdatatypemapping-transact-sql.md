@@ -1,16 +1,16 @@
 ---
 title: sp_getdefaultdatatypemapping (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getdefaultdatatypemapping
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db6ba2bdd02ed4ce9fe7b93132669d4f46ce40b9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 398ed7c0cfb5123b649901b91ef95b7c7282ab6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@source_dbms** =] **'***source_dbms***'**  
+ [ **@source_dbms**=] **'***source_dbms***'**  
  데이터 형식이 매핑된 DBMS의 이름입니다. *source_dbms* 은 **sysname**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|원본은 Oracle 데이터베이스입니다.|  
@@ -73,7 +73,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@source_version=** ] **'***source_version***'**  
  원본 DBMS의 버전 번호입니다. *source_version* 은 **varchar (10)**, 기본값은 NULL입니다.  
   
- [  **@source_type** =] **'***source_type***'**  
+ [ **@source_type**=] **'***source_type***'**  
  원본 DBMS의 데이터 형식입니다. *source_type* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@source_length=** ] *source_length*  
@@ -88,10 +88,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@source_nullable=** ] *source_nullable*  
  원본 DBMS의 데이터 형식이 NULL 값을 지원하는지 여부입니다. *source_nullable* 은 **비트**의 기본값은 **1**, 즉, NULL 값이 지원 됩니다.  
   
- [  **@destination_dbms**  =] **'***destination_dbms***'**  
+ [ **@destination_dbms** =] **'***destination_dbms***'**  
  대상 DBMS의 이름입니다. *destination_dbms* 은 **sysname**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|대상은 Oracle 데이터베이스입니다.|  
@@ -100,10 +100,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  이 매개 변수를 지정해야 합니다.  
   
- [  **@destination_version** =] **'***destination_version***'**  
+ [ **@destination_version**=] **'***destination_version***'**  
  대상 DBMS의 제품 버전입니다. *destination_version* 은 **varchar (10)**, 기본값은 NULL입니다.  
   
- [  **@destination_type** =] **'***destination_type***'** 출력  
+ [ **@destination_type**=] **'***destination_type***'** 출력  
  대상 DBMS에 나열된 데이터 형식입니다. *destination_type* 은 **sysname**, 기본값은 NULL입니다.  
   
  [  **@destination_length=** ] *destination_length* 출력  
@@ -112,13 +112,13 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@destination_precision=** ] *destination_precision* 출력  
  대상 DBMS에서 해당 데이터 형식의 전체 자릿수입니다. *destination_precision* 은 **bigint**, 기본값은 NULL입니다.  
   
- [  **@destination_scale=** ] *destination_scale***출력**  
+ [  **@destination_scale=** ] *destination_scale * * * 출력**  
  대상 DBMS에서 해당 데이터 형식의 소수 자릿수입니다. *destination_scale* 은 **int**, 기본값은 NULL입니다.  
   
- [  **@destination_nullable=** ] *destination_nullable***출력**  
+ [  **@destination_nullable=** ] *destination_nullable * * * 출력**  
  대상 DBMS의 데이터 형식이 NULL 값을 지원하는지 여부입니다. *destination_nullable* 은 **비트**, 기본값은 NULL입니다. **1** NULL 값이 지원 됨을 의미 합니다.  
   
- [  **@dataloss=** ] *dataloss***출력**  
+ [  **@dataloss=** ] *dataloss * * * 출력**  
  매핑에서 데이터가 손실될 가능성이 있는지 여부입니다. *dataloss* 은 **비트**, 기본값은 NULL입니다. **1** 데이터 손실 가능성이 있다는 것을 의미 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -133,8 +133,8 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_getdefaultdatatypemapping**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_helpdatatypemap &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
+ [sp_helpdatatypemap &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
  [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
  [Oracle 구독자](../../relational-databases/replication/non-sql/oracle-subscribers.md)  

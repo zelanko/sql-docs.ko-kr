@@ -1,16 +1,16 @@
 ---
-title: "복제 테이블 (Transact SQL) | Microsoft Docs"
-ms.custom: 
+title: 복제 테이블 (Transact SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - system tables [SQL Server], replication
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da1d0ec4572c89ace6dd0849228842611822d60d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 937fa9cf8981250714a1c19055a7fa11ecf54592
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="replication-tables-transact-sql"></a>복제 테이블(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  복제 시스템 테이블은 복제 토폴로지를 지원합니다. 사용자 데이터베이스가 게시자 또는 구독자로 구성되는 경우 복제는 데이터베이스에 시스템 테이블을 추가합니다. 이러한 테이블은 사용자 데이터베이스가 복제 토폴로지에서 제거될 때 제거됩니다. 일반 규칙에 대 한 관련 시스템 테이블을 사용 하 여 참조 [시스템 테이블 &#40; Transact SQL &#41; ](../../relational-databases/system-tables/system-tables-transact-sql.md).  
+  복제 시스템 테이블은 복제 토폴로지를 지원합니다. 사용자 데이터베이스가 게시자 또는 구독자로 구성되는 경우 복제는 데이터베이스에 시스템 테이블을 추가합니다. 이러한 테이블은 사용자 데이터베이스가 복제 토폴로지에서 제거될 때 제거됩니다. 일반 규칙에 대 한 관련 항목 참조 시스템 테이블을 사용 하 여, [시스템 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)합니다.  
   
 ## <a name="replication-tables"></a>복제 테이블  
  다음은 복제에서 사용되고 데이터베이스에서 그룹화되는 시스템 테이블의 목록입니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|[MSreplication_options &#40; Transact SQL &#41;](../../relational-databases/system-tables/msreplication-options-transact-sql.md)||  
+|[MSreplication_options &#40;Transact SQL&#41;](../../relational-databases/system-tables/msreplication-options-transact-sql.md)||  
   
 ### <a name="replication-tables-in-the-msdb-database"></a>msdb 데이터베이스에 있는 복제 테이블  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/21/2017
 |-|-|  
 |[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)|[MSmerge_settingshistory](../../relational-databases/system-tables/msmerge-settingshistory-transact-sql.md)|  
 |[MSdynamicsnapshotviews](../../relational-databases/system-tables/msdynamicsnapshotviews-transact-sql.md)|[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)|  
-|[MSmerge_altsyncpartners](../../relational-databases/system-tables/msmerge-altsyncpartners-transact-sql.md)|[MSpeer_lsns &#40; Transact SQL &#41;](../../relational-databases/system-tables/mspeer-lsns-transact-sql.md)|  
+|[MSmerge_altsyncpartners](../../relational-databases/system-tables/msmerge-altsyncpartners-transact-sql.md)|[MSpeer_lsns &#40;Transact SQL&#41;](../../relational-databases/system-tables/mspeer-lsns-transact-sql.md)|  
 |[MSmerge_conflicts_info](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)|[MSrepl_queuedtraninfo](../../relational-databases/system-tables/msrepl-queuedtraninfo-transact-sql.md)|  
 |[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)|[MSsnapshotdeliveryprogress](../../relational-databases/system-tables/mssnapshotdeliveryprogress-transact-sql.md)|  
 |[MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md)|[MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)|  

@@ -1,16 +1,16 @@
 ---
 title: sp_trace_create (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_create_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d370ebe5730f9b87d7303c067b9edc1a14d27509
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 39bdde1095f5780fac2f27a9da1e834e6c3af968
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  [ **@traceid=** ] *trace_id*  
  가 할당 한 번호는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 추적 합니다. 모든 사용자 제공 입력은 무시됩니다. *trace_id* 은 **int**, 기본값은 NULL입니다. 사용자가 사용 된 *trace_id* 식별, 수정 및이 저장된 프로시저에 의해 정의 된 추적을 제어 하는 값입니다.  
   
- [ **@options=** ] *option_value*  
+ [  **@options=** ] *option_value*  
  추적에 대한 옵션 집합을 지정합니다. *option_value* 은 **int**, 기본값은 없습니다. 선택한 옵션 값의 합계를 지정하여 이러한 옵션의 조합을 선택할 수 있습니다. 예를 들어 TRACE_FILE_ROLLOVER와 shutdown_on_error 두 두 옵션을 설정 하려면 지정 **6** 에 대 한 *option_value*합니다.  
   
  다음 표에서는 옵션, 설명 및 해당 값을 나열합니다.  
@@ -71,7 +71,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  [ **@tracefile=** ] *'**trace_file**'*  
  추적을 기록할 위치와 파일 이름을 지정합니다. *trace_file* 은 **nvarchar(245)** 이며 기본값은 없습니다. *trace_file* 로컬 디렉터리 (예: N 'C:\MSSQL\Trace\trace.trc') 또는 공유 또는 경로의 UNC 일 수 있습니다 (N'\\\\*Servername*\\*Sharename* \\ *디렉터리*\trace.trc').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추가 되 고 한 **.trc** 모든 추적 파일 이름에는 확장 합니다. 경우 TRACE_FILE_ROLLOVER 옵션 및 *max_file_size* 지정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원래 추적 파일의 최대 크기에 이르면 새 추적 파일을 만듭니다. 새 파일에 원본 파일을 하지만 _와 같은 이름이 *n*  부터 순서를 나타내는 추가 **1**합니다. 예를 들어, 첫 번째 추적 파일 이름이 **filename.trc**, 두 번째 추적 파일 이름이 **filename_1.trc**합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추가 되 고 한 **.trc** 모든 추적 파일 이름에는 확장 합니다. 경우 TRACE_FILE_ROLLOVER 옵션 및 *max_file_size* 지정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원래 추적 파일의 최대 크기에 이르면 새 추적 파일을 만듭니다. 새 파일에 원본 파일을 하지만 _와 같은 이름이*n* 부터 순서를 나타내는 추가 **1**합니다. 예를 들어, 첫 번째 추적 파일 이름이 **filename.trc**, 두 번째 추적 파일 이름이 **filename_1.trc**합니다.  
   
  TRACE_FILE_ROLLOVER 옵션을 사용하는 경우 원래 추적 파일 이름에 밑줄 문자를 사용하지 않는 것이 좋습니다. 밑줄을 사용할 경우 다음 동작이 발생합니다.  
   
@@ -130,7 +130,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  에 대 한 **sp_trace_create**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 추적 파일 폴더에 대 한 쓰기 권한이 있어야 합니다. 추적 파일이 있는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정이 관리자가 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 명시적으로 쓰기 권한을 부여해야 합니다.  
   
 > [!NOTE]  
->  자동으로 사용 하 여 만든 추적 파일을 로드할 수 **sp_trace_create** 를 사용 하 여 테이블에는 **fn_trace_gettable** 시스템 함수입니다. 이 시스템 함수를 사용 하는 방법에 대 한 정보를 참조 하십시오. [sys.fn_trace_gettable &#40; Transact SQL &#41; ](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md).  
+>  자동으로 사용 하 여 만든 추적 파일을 로드할 수 **sp_trace_create** 를 사용 하 여 테이블에는 **fn_trace_gettable** 시스템 함수입니다. 이 시스템 함수를 사용 하는 방법에 대 한 정보를 참조 하십시오. [sys.fn_trace_gettable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)합니다.  
   
  추적 저장 프로시저 사용에 대한 예는 [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)를 참조하세요.  
   
@@ -160,7 +160,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_trace_generateevent&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   

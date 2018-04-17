@@ -1,16 +1,16 @@
 ---
 title: MSmerge_agents (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,33 +22,33 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 301961fe3940105c7acdf29fcb30fc734c67fece
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: af15441a6b827a31145579d90182d6249ba26de2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msmergeagents-transact-sql"></a>MSmerge_agents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_agents** 테이블 구독자에서 실행 하는 각 병합 에이전트당 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|병합 에이전트의 ID입니다.|  
-|**name**|**nvarchar (100)**|병합 에이전트의 이름입니다.|  
+|**name**|**nvarchar(100)**|병합 에이전트의 이름입니다.|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
 |**게시**|**sysname**|게시의 이름입니다.|  
 |**subscriber_id**|**smallint**|구독자의 ID입니다.|  
 |**subscriber_db**|**sysname**|구독 데이터베이스의 이름입니다.|  
 |**local_job**|**bit**|로컬 배포자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 있는지 여부를 나타냅니다.|  
-|**job_id**|**binary (16)**|작업 ID입니다.|  
+|**job_id**|**binary(16)**|작업 ID입니다.|  
 |**profile_id**|**int**|구성 ID는 **MSagent_profiles** 테이블입니다.|  
 |**anonymous_subid**|**uniqueidentifier**|익명 에이전트의 ID입니다.|  
 |**subscriber_name**|**sysname**|구독자 이름입니다.|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 |**job_step_uid**|**uniqueidentifier**|에이전트가 시작되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 고유 ID입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

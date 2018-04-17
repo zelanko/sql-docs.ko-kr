@@ -1,16 +1,16 @@
 ---
 title: dbo.sysjobactivity (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobactivity_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0edab9e591470a0100bde529f53cee44a016dab
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c42bdaf9a9905e7ccd945bee2132242fa6e79f13
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/03/2018
 |**session_id**|**int**|에 저장 된 세션의 ID는 **syssessions** 테이블에 **msdb** 데이터베이스입니다.|  
 |**job_id**|**uniqueidentifier**|작업의 ID입니다.|  
 |**run_requested_date**|**datetime**|작업 실행을 요청한 날짜와 시간입니다.|  
-|**run_requested_source**|**sysname(nvarchar(128))**|작업 실행을 요청한 사람입니다.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** SOURCE_ALERTER =<br /><br /> **3** SOURCE_BOOT =<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname(nvarchar(128))**|작업 실행을 요청한 사람입니다.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** SOURCE_ALERTER =<br /><br /> **3** SOURCE_BOOT =<br /><br /> **4** SOURCE_USER =<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|이 작업이 대기한 날짜와 시간입니다. 작업이 바로 실행된 경우 이 열은 NULL입니다.|  
 |**start_execution_date**|**datetime**|작업을 실행하도록 예약된 날짜와 시간입니다.|  
 |**last_executed_step_id**|**int**|마지막으로 실행된 작업 단계의 ID입니다.|  
@@ -69,6 +69,6 @@ WHERE session_id = (
 ```
   
 ## <a name="see-also"></a>관련 항목:  
- [dbo.sysjobhistory &#40; Transact SQL &#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
+ [dbo.sysjobhistory &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

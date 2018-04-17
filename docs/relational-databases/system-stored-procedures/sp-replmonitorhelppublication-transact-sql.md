@@ -1,16 +1,16 @@
 ---
 title: sp_replmonitorhelppublication (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublication
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 581bfbad00edf6797f2bc21b15a17421d8217d73
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 880ceb504a2ad8fba418374db362fa0574dfa9c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher**  =] **'***게시자***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  상태를 모니터링할 게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 NULL입니다. 경우 **null**, 배포자를 사용 하는 모든 게시자에 대 한 정보가 반환 됩니다.  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  게시된 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 NULL입니다. NULL인 경우 게시자에 게시된 모든 데이터베이스에 대한 정보가 반환됩니다.  
   
- [  **@publication**  =] **'***게시***'**  
+ [ **@publication** =] **'***게시***'**  
  모니터링할 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@publication_type**  =] *publication_type*  
+ [ **@publication_type** =] *publication_type*  
  게시의 유형입니다. *publication_type* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|트랜잭션 게시|  
 |**1**|스냅숏 게시|  
@@ -85,7 +85,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**best_latency**|**int**|트랜잭션 게시에 대해 로그 판독기 또는 배포 에이전트가 전파하는 데이터 변경에 대한 최소 대기 시간(초)입니다.|  
 |**average_latency**|**int**|트랜잭션 게시에 대해 로그 판독기 또는 배포 에이전트가 전파하는 데이터 변경에 대한 평균 대기 시간(초)입니다.|  
 |**last_distsync**|**datetime**|배포 에이전트를 실행한 마지막 날짜/시간입니다.|  
-|**보존**|**int**|게시의 보존 기간입니다.|  
+|**retention**|**int**|게시의 보존 기간입니다.|  
 |**latencythreshold**|**int**|트랜잭션 게시에 대해 설정된 대기 시간 임계값입니다.|  
 |**expirationthreshold**|**int**|병합 게시인 경우 게시에 대해 설정된 만료 임계값입니다.|  
 |**agentnotrunningthreshold**|**int**|에이전트를 실행하지 않을 가장 긴 시간에 대해 설정된 임계값입니다.|  

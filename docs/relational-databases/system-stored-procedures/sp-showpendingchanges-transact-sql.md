@@ -1,16 +1,16 @@
 ---
 title: sp_showpendingchanges (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a80816191ac9ad2cd9a210c59268b23f4ea3a093
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 54a87a2162049fe6e3ec450a60836afffa406973
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @destination_server  **=**  ] **'***destination_server***'**  
+ [ @destination_server **=** ] **'***destination_server***'**  
  복제된 변경 내용을 적용할 서버의 이름입니다. *destination_server* 은 **sysname**, 기본값은 NULL입니다.  
   
- [ @publication  **=**  ] **'***게시***'**  
+ [ @publication **=** ] **'***게시***'**  
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 NULL입니다. 때 *게시* 지정, 결과 지정된 된 게시에만 제한 됩니다.  
   
- [ @article  **=**  ] **'***문서***'**  
+ [ @article **=** ] **'***문서***'**  
  아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 NULL입니다. 때 *문서* 지정, 결과 지정 된 문서에만 제한 됩니다.  
   
- [ @show_rows  **=**  ] *show_rows*  
+ [ @show_rows **=** ] *show_rows*  
  들어 있는지 여부를 결과 집합의 보다 구체적인 정보에 대 한 보류 중인 변경 내용을의 기본값은 **0**합니다. 값 **1** 지정, 열 is_delete 및 rowguid 결과 집합에 포함 합니다.  
   
 ## <a name="result-set"></a>결과 집합  

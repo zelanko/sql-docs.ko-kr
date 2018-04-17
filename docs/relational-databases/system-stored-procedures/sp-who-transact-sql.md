@@ -1,16 +1,16 @@
 ---
 title: sp_who (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_who_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_who
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 99f8ff7ccfee468c0e9b3598167d6d9823e2bd61
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a46a146e022eb7ce0caa0cdb28579580bc789e93
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spwho-transact-sql"></a>sp_who(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@loginame =** ] **'***로그인***'** | *세션 ID*  |  **'ACTIVE'**  
+ [  **@loginame =** ] **'***로그인***'** | *세션 ID* | **'ACTIVE'**  
  결과 세트를 필터링하는 데 사용됩니다.  
   
  *로그인* 은 **sysname** 특정 로그인에 속하는 프로세스로 하 게 식별 합니다.  
@@ -66,13 +66,13 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|세션 ID입니다.|  
-|**ecid**|**smallint**|특정 세션 ID와 연결된 지정된 스레드의 실행 컨텍스트 ID입니다.<br /><br /> ECID = {0, 1, 2, 3,...  *n* } 이며 여기서 0은 항상 주 또는 부모 스레드 및 {1, 2, 3,...  *n* }는 의미입니다.|  
-|**상태**|**nchar(30)**|프로세스 상태입니다. 가능한 값은 아래와 같습니다.<br /><br /> **유휴**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 세션을 다시 설정하고 있습니다.<br /><br /> **실행**합니다. 세션에서 일괄 처리를 하나 이상 실행하고 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 참조 [Multiple Active Result Sets를 사용 하 여 &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **배경**합니다. 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행하고 있습니다.<br /><br /> **롤백**합니다. 세션에서 트랜잭션 롤백을 진행하고 있습니다.<br /><br /> **보류 중인**합니다. 세션이 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **실행 가능한**합니다. 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop**합니다. 세션의 태스크가 spinlock을 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **일시 중단**합니다. 세션이 I/O와 같은 이벤트가 완료되기를 기다리고 있습니다.|  
+|**ecid**|**smallint**|특정 세션 ID와 연결된 지정된 스레드의 실행 컨텍스트 ID입니다.<br /><br /> ECID = {0, 1, 2, 3,... *n*} 이며 여기서 0은 항상 주 또는 부모 스레드 및 {1, 2, 3,... *n*}는 의미입니다.|  
+|**상태**|**nchar(30)**|프로세스 상태입니다. 가능한 값은 아래와 같습니다.<br /><br /> **유휴**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 세션을 다시 설정하고 있습니다.<br /><br /> **실행**합니다. 세션에서 일괄 처리를 하나 이상 실행하고 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 참조 [Multiple Active Result Sets를 사용 하 여 & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **배경**합니다. 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행하고 있습니다.<br /><br /> **롤백**합니다. 세션에서 트랜잭션 롤백을 진행하고 있습니다.<br /><br /> **보류 중인**합니다. 세션이 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **실행 가능한**합니다. 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop**합니다. 세션의 태스크가 spinlock을 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **일시 중단**합니다. 세션이 I/O와 같은 이벤트가 완료되기를 기다리고 있습니다.|  
 |**loginame**|**nchar(128)**|특정 프로세스와 연결된 로그인 이름입니다.|  
 |**호스트 이름**|**nchar(128)**|각 프로세스의 호스트 또는 컴퓨터 이름입니다.|  
 |**blk**|**char (5)**|프로세스를 차단하기 위한 세션 ID입니다(존재하는 경우). 없는 경우 이 열은 0이 됩니다.<br /><br /> 분리된 분산 트랜잭션이 지정된 세션 ID와 연결된 트랜잭션을 차단하는 경우 이 열은 분리된 트랜잭션을 차단하기 위한 값으로 '-2'를 반환합니다.|  
 |**dbname**|**nchar(128)**|프로세스가 사용하는 데이터베이스입니다.|  
-|**cmd**|**nchar(16)**|프로세스에 대해 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 명령([!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 내부 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스 등)입니다.|  
+|**Cmd**|**nchar(16)**|프로세스에 대해 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 명령([!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 내부 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스 등)입니다.|  
 |**request_id**|**int**|특정 세션에서 실행 중인 요청에 대한 ID입니다.|  
   
  병렬 처리의 경우 특정 세션 ID에 대해 하위 스레드가 생성됩니다. 주 스레드는 `spid = <xxx>` 및 `ecid =0`으로 표시됩니다. 다른 하위 스레드의 같으면 `spid = <xxx>`, 하면서도 **ecid** > 0입니다.  
@@ -128,8 +128,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_lock&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys.sysprocesses&#40; Transact SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

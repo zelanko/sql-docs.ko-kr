@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 에이전트 저장 프로시저 (Transact SQL) | Microsoft Docs"
-ms.custom: 
+title: SQL Server 에이전트 저장 프로시저 (Transact SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], SQL Server Agent
 - SQL Server Agent, stored procedures
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd5c3618c0aa44e538a614248a8d0eb76f0c758e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 93d62f3ad3709b1aa315cc7fc7b817724c845cf7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>SQL Server 에이전트 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음과 같은 시스템 저장 프로시저에서 사용 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 예약 된 이벤트 구동 활동을 관리 하는 에이전트입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 예약된 작업 및 이벤트 기반 작업을 관리하는 데 사용하는 다음과 같은 시스템 저장 프로시저를 지원합니다.  
   
 |||  
 |-|-|  

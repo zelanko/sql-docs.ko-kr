@@ -1,16 +1,16 @@
 ---
 title: sp_server_diagnostics (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_diagnostics
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a3bd7cf97a37e2e01cb1d593ee1370c3d5430162
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@repeat_interval**  =] **'***repeat_interval_in_seconds***'**  
+ [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
  저장 프로시저가 상태 정보를 보내기 위해 반복적으로 실행되는 시간 간격을 나타냅니다.  
   
  *repeat_interval_in_seconds* 은 **int** 의 기본값은 0입니다. 올바른 매개 변수 값은 0 또는 5보다 크거나 같은 값입니다. 전체 데이터를 반환하려면 저장 프로시저가 적어도 5초 간격으로 실행되어야 합니다. 반복 모드에서 실행되는 저장 프로시저의 최소값은 5초입니다.  
@@ -64,12 +64,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>결과 집합  
 **sp_server_diagnostics** 다음 정보를 반환 합니다.  
   
-|Column|데이터 형식|Description|  
+|열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|행 만들기의 타임스탬프를 나타냅니다. 단일 행 집합의 각 행은 타임스탬프가 같습니다.|  
 |**component_type**|**sysname**|행에 대 한 정보를 포함 하는지 여부를 나타냅니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹:<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|구성 요소의 이름이나 가용성 그룹의 이름을 나타냅니다.<br /><br /> 시스템<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 이벤트<br /><br /> *\<가용성 그룹의 이름 >*|  
-|**state**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**상태**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1.<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|state 열을 설명합니다. state 열의 값에 해당하는 설명은 다음과 같습니다.<br /><br /> 0: 알 수 없음<br /><br /> 1: 정리<br /><br /> 2: 경고<br /><br /> 3: 오류|  
 |**data**|**varchar (max)**|구성 요소와 관련된 데이터를 지정합니다.|  
   
@@ -92,7 +92,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 다음 표에서는 각 구성 요소와 관련 상태를 보여 줍니다.  
   
-|구성 요소|정상(1)|경고(2)|오류(3)|알 수 없음(0)|  
+|Components|정상(1)|경고(2)|오류(3)|알 수 없음(0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |시스템|x|x|x||  
 |resource|x|x|x||  

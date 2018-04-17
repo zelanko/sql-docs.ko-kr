@@ -1,16 +1,16 @@
 ---
 title: sp_repladdcolumn (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d638619d087d43b0820fdf21650a9b8db1f7cf63
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e7457c7829662d5716db9e794836f12e3a785564
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  새 열을 추가할 게시의 이름입니다. *publication_to_add* 은 **nvarchar (4000)**, 기본값은 **모든**합니다. 경우 **모든**, 다음이 테이블이 포함 된 모든 게시에 적용 됩니다. 경우 *publication_to_add* 를 지정 하면이 게시에만 새 열이 추가 됩니다.  
   
  [ @from_agent =] *from_agent*  
- 복제 에이전트에서 저장 프로시저를 실행하는 경우 *from_agent* 은 **int**, 기본값은 **0**여기서 값, **1** 및 복제 에이전트가이 저장된 프로시저를 실행할 때 사용 됩니다 다른 모든 경우의 기본값 **0**사용 해야 합니다.  
+ 복제 에이전트에서 저장 프로시저를 실행하는 경우 *from_agent* 은 **int**, 기본값은 **0**여기서 값, **1** 및 복제 에이전트가이 저장된 프로시저를 실행할 때 사용 되는 모든 다른 경우의 기본값 **0**사용 해야 합니다.  
   
  [ @schema_change_script =] '*schema_change_script*'  
  시스템 생성 사용자 지정 저장 프로시저를 수정하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트의 이름과 경로를 지정합니다. *schema_change_script* 은 **nvarchar (4000)**, 기본값은 NULL입니다. 복제를 사용하면 트랜잭션 복제에서 사용되는 하나 이상의 기본 프로시저를 사용자 정의 사용자 지정 저장 프로시저로 바꿀 수 있습니다. *schema_change_script* 스키마 변경 복제 된 테이블 아티클에 sp_repladdcolumn을 사용 하 여 하 고 다음 중 하나를 수행 하는 데 사용 될 후 실행 됩니다.  

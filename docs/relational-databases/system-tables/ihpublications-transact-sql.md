@@ -1,16 +1,16 @@
 ---
 title: IHpublications (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - IHpublications system table
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93678262e3201e9fff338abb5a978771415609b8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8041914733509d89ed6d17084ae30df5817e3505
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,24 +70,24 @@ ms.lasthandoff: 11/21/2017
 |**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 게시에 게시 되어 올바른 전역 고유 식별자 (GUID)를 지정 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 및 GUID는 해당 Active Directory 게시 개체인 **objectGUID**합니다. NULL인 경우 게시는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시되지 않습니다. *SQL 이외 게시자에 대해 지원 되지 않습니다.*|  
 |**backward_comp_level**|**int**|데이터베이스 호환성 수준으로 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *SQL 이외 게시자에 대해 지원 되지 않습니다.*|  
 |**설명**|**nvarchar(255)**|게시에 대한 설명 항목입니다.|  
-|**독립 에이전트**|**bit**|해당 게시에 독립 실행형 배포 에이전트가 있는지 여부를 지정합니다.<br /><br /> **0** = 게시는 공유 배포 에이전트를 사용 하며 각 게시자 데이터베이스/구독자 데이터베이스 쌍에는 공유 에이전트가 있습니다.<br /><br /> **1** =이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다.|  
+|**independent_agent**|**bit**|해당 게시에 독립 실행형 배포 에이전트가 있는지 여부를 지정합니다.<br /><br /> **0** = 게시는 공유 배포 에이전트를 사용 하며 각 게시자 데이터베이스/구독자 데이터베이스 쌍에는 공유 에이전트가 있습니다.<br /><br /> **1** =이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다.|  
 |**immediate_sync**|**bit**|동기화 파일이 생성 되거나 스냅숏 에이전트가 실행 될 때마다 다시 생성 여부를 나타내는 여기서 **1** 의미는 에이전트가 실행 될 때마다 생성 됩니다.|  
 |**allow_push**|**bit**|게시에서 밀어넣기 구독을 허용 하는지 여부를 나타냅니다. 여기서 **1** 는 사용할 수 있다는 것을 의미 합니다.|  
 |**allow_pull**|**bit**|게시에서 끌어오기 구독이 허용 되는지 여부를 나타냅니다. 여기서 **1** 는 사용할 수 있다는 것을 의미 합니다.|  
-|**보존**|**int**|지정한 게시에 대해 저장할 변화량(시간)입니다.|  
+|**retention**|**int**|지정한 게시에 대해 저장할 변화량(시간)입니다.|  
 |**allow_subscription_copy**|**bit**|해당 게시를 구독하는 구독 데이터베이스를 복사하는 기능이 활성화되었는지 여부를 지정합니다. **1** 복사가 허용 됨을 의미 합니다.|  
 |**allow_initialize_from_backup**|**bit**|구독자가 초기 스냅숏 대신 백업으로부터 이 게시에 대한 구독을 초기화할 수 있는지 여부를 나타냅니다. **1** 백업에서 구독을 초기화 해야 한다는 것을 의미 하 고 **0** 변환할 수 없는 있다는 것을 의미 합니다. 자세한 내용은 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다. *SQL 이외 게시자에 대해 지원 되지 않습니다.*|  
 |**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|게시에 대해 스키마 복제가 지원되는지 여부를 나타냅니다. **1** 는 게시자에서 실행 된 DDL 문이 복제 됨을 및 **0** DDL 문이 복제 되지 않음을 나타냅니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요. *SQL 이외 게시자에 대해 지원 되지 않습니다.*|  
-|**옵션**|**int**|추가 게시 옵션을 지정하는 비트맵입니다. 이때 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 사용할 수 있습니다.<br /><br /> **0x2** -로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** -SQL Server 이외 구독자에 사용할 수 있습니다.|  
+|**options**|**int**|추가 게시 옵션을 지정하는 비트맵입니다. 이때 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 사용할 수 있습니다.<br /><br /> **0x2** -로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** -SQL Server 이외 구독자에 사용할 수 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [복제 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addpublication &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [syspublications &#40; 시스템 뷰 &#41; &#40; Transact SQL &#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   
- [syspublications &#40; Transact SQL &#41;](../../relational-databases/system-tables/syspublications-transact-sql.md)  
+ [syspublications &#40;시스템 뷰&#41; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   
+ [syspublications &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/syspublications-transact-sql.md)  
   
   

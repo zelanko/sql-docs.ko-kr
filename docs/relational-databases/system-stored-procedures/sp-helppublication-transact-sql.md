@@ -1,16 +1,16 @@
 ---
 title: sp_helppublication (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa78ce2aa9ed1ba80a7ee733a2e458ba231d968f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7160c358f0969c967cb0995e410f7e75427285bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,12 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>인수  
  [  **@publication =** ] **'***게시***'**  
- 보려는 게시의 이름입니다. *게시* 은 sysname 이며 기본값은  **%** , 모든 게시에 대 한 정보를 반환 하는 합니다.  
+ 보려는 게시의 이름입니다. *게시* 은 sysname 이며 기본값은 **%**, 모든 게시에 대 한 정보를 반환 하는 합니다.  
   
  [  **@found =** ] **'***발견***'** 출력  
  행을 반환하는지 여부를 나타내는 플래그입니다. *찾을*은 **int** 는 출력 매개 변수 이며 기본값은 **23456**합니다. **1** 은 게시를 찾았음을 나타냅니다. **0** 게시를 찾지 못했음을 나타냅니다.  
   
- [  **@publisher**  =] **'***게시자***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 는 sysname 이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
@@ -81,7 +81,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|스냅숏 에이전트가 새 구독에서 사용할 수 있는 스냅숏을 생성했는지 여부를 나타냅니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅숏을 사용할 수 있도록 설정된 경우에만 정의됩니다.|  
 |allow_sync_tran|**bit**|게시에서 즉시 업데이트 구독이 허용되는지 여부를 나타냅니다.|  
 |autogen_sync_procs|**bit**|즉시 업데이트 구독을 지원하는 저장 프로시저를 자동으로 생성하는지 여부를 나타냅니다.|  
-|snapshot_jobid|**binary (16)**|예약된 태스크 ID입니다.|  
+|snapshot_jobid|**binary(16)**|예약된 태스크 ID입니다.|  
 |retention|**int**|지정한 게시에 대해 저장할 변경 내용의 양을 시간으로 나타낸 것입니다.|  
 |has subscription|**bit**|게시에 활성 구독이 있는지 여부를 나타냅니다. **1** 게시에 활성 구독이 의미 및 **0** 게시에 구독이 없는 것을 의미 합니다.|  
 |allow_queued_tran|**bit**|활성화된 게시자에 변경 내용을 적용할 수 있을 때까지 구독자에서 변경 내용 지연을 비활성화할지 여부를 지정합니다. 경우 **0**, 구독자의 변경 내용이 지연 되지 않습니다.|  
@@ -109,7 +109,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_het_sub|**int**|게시에서 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자를 지원하는지 여부를 지정합니다. 값이 **1** 의미 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자가 지원 됩니다. 값이 **0** 방법만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자가 지원 됩니다. 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.|  
 |enabled_for_p2p_conflictdetection|**int**|피어 투 피어 복제에 게시가 사용되도록 설정된 경우 배포 에이전트에서 충돌을 검색할지 여부를 지정합니다. 값이 **1** 충돌이 감지 될 것을 의미 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을(를) 참조하세요.|  
 |originator_id|**int**|피어 투 피어 토폴로지에 있는 노드의 ID를 지정합니다. 충돌 검색에이 ID를 사용 하는 경우 **enabled_for_p2p_conflictdetection** 로 설정 된 **1**합니다. 이미 사용된 ID 목록을 보려면 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 시스템 테이블을 쿼리하십시오.|  
-|p2p_continue_onconflict|**int**|충돌이 검색되면 배포 에이전트에서 변경 내용을 계속 처리할지 여부를 지정합니다. 값이 **1** 있는지 에이전트 변경 내용을 계속 처리할지를 의미 합니다.<br /><br /> **\*\*주의 \* \***  의 기본값을 사용 하는 것이 좋습니다 **0**합니다. 이 옵션 설정 된 경우 **1**, 배포 에이전트에서 가장 높은 송신자 ID를 가집니다. 노드에서 충돌 행을 적용 하 여 토폴로지의 데이터를 일치 시킵니다. 이 방법으로 데이터가 일치하게 되지 않는 경우도 있습니다. 충돌이 검색된 후 토폴로지의 일관성을 확인해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)의 "충돌 처리"를 참조하십시오.|  
+|p2p_continue_onconflict|**int**|충돌이 검색되면 배포 에이전트에서 변경 내용을 계속 처리할지 여부를 지정합니다. 값이 **1** 있는지 에이전트 변경 내용을 계속 처리할지를 의미 합니다.<br /><br /> **\*\* 주의 \* \***  의 기본값을 사용 하는 것이 좋습니다 **0**합니다. 이 옵션 설정 된 경우 **1**, 배포 에이전트에서 가장 높은 송신자 ID를 가집니다. 노드에서 충돌 행을 적용 하 여 토폴로지의 데이터를 일치 시킵니다. 이 방법으로 데이터가 일치하게 되지 않는 경우도 있습니다. 충돌이 검색된 후 토폴로지의 일관성을 확인해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)의 "충돌 처리"를 참조하십시오.|  
 |alllow_partition_switch|**int**|ALTER TABLE…SWITCH 문을 게시된 데이터베이스에 대해 실행할 수 있는지 여부를 지정합니다. 자세한 내용은 [분할 테이블 및 인덱스 복제](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)를 참조하세요.|  
 |replicate_partition_switch|**int**|게시된 데이터베이스에 대해 실행되는 ALTER TABLE…SWITCH 문을 구독자에 복제해야 하는지 여부를 지정합니다. 이 옵션은 사용할 경우에만 *allow_partition_switch* 로 설정 된 **1**합니다.|  
   
@@ -131,9 +131,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>관련 항목:  
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_tableoption (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tableoption_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-caps.latest.revision: 
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b468d62444bd3c9217cc7f931a2786034baec12
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c6bfbbed0bdb29be74871fcc62a76fce2f3555d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,13 +59,13 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*'  
  테이블 옵션 이름입니다. *option_name* 은 **varchar (35)**, null 기본값은 없습니다. *option_name* 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |table lock on bulk load|기본값이 해제되면 사용자 정의 테이블에 대량 로드 처리를 수행하여 행 잠금을 얻습니다. 기본값이 설정되면 사용자 정의 테이블에 대량 로드 처리를 수행하여 대량 업데이트 잠금을 얻습니다.|  
 |insert row lock|더 이상 지원되지 않습니다.<br /><br /> 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 잠금 동작에 영향을 주지 않으며 기존 스크립트 및 프로시저와의 호환성을 위해 포함됩니다.|  
 |text in row|OFF 또는 0(해제, 기본값)이면 현재 동작을 바꾸지 않으며 행에 BLOB이 없습니다.<br /><br /> 지정 된 경우 및 @OptionValue on (설정) 또는 24에서 7000 새 까지의 정수 값 **텍스트**, **ntext**, 또는 **이미지** 문자열이 데이터 행에 직접 저장 됩니다. 기존의 모든 BLOB (이진 대형 개체: **텍스트**, **ntext**, 또는 **이미지** 데이터)는 BLOB 값이 업데이트 될 때 text in row 형식으로 변경 됩니다. 자세한 내용은 설명 부분을 참조하세요.|  
-|large value types out of row|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** 테이블의 큰 사용자 정의 형식 (UDT) 열에 저장 됩니다 및 out of row 루트에 대 한 16 바이트 포인터입니다.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** 및 큰 UDT 값까지 데이터 행에 직접 저장 됩니다 최대 8000 바이트 한 정하는 값이 레코드에 맞출 수 있습니다. 값이 레코드에 맞지 않으면 포인터는 행 내부에 저장되고 나머지는 행 외부 LOB 저장 공간에 저장됩니다. 0의 기본값입니다.<br /><br /> 큰 사용자 정의 형식 (UDT)에 적용: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다. <br /><br /> TEXTIMAGE_ON 옵션을 사용 하 여 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 큰 데이터 형식의 저장소 위치를 지정 합니다. |  
-|vardecimal storage format|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> TRUE, ON 또는 1이면 지정된 테이블을 VarDecimal 저장소 형식에 사용할 수 있습니다. FALSE, OFF 또는 0이면 지정된 테이블을 VarDecimal 저장소 형식에 사용할 수 없습니다. Vardecimal 저장소 형식을 사용 하 여 vardecimal 저장소 형식에는 데이터베이스에 설정 된 경우에 사용할 수 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 **vardecimal** 저장소 형식을 사용 하는 사용 되지 않습니다. 대신 ROW 압축을 사용하세요. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요. 0의 기본값입니다.|  
+|large value types out of row|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** 테이블의 큰 사용자 정의 형식 (UDT) 열에 저장 됩니다 및 out of row 루트에 대 한 16 바이트 포인터입니다.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** 및 큰 UDT 값까지 데이터 행에 직접 저장 됩니다 최대 8000 바이트 한 정하는 값이 레코드에 맞출 수 있습니다. 값이 레코드에 맞지 않으면 포인터는 행 내부에 저장되고 나머지는 행 외부 LOB 저장 공간에 저장됩니다. 0이 기본값입니다.<br /><br /> 큰 사용자 정의 형식 (UDT)에 적용: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다. <br /><br /> TEXTIMAGE_ON 옵션을 사용 하 여 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 큰 데이터 형식의 저장소 위치를 지정 합니다. |  
+|vardecimal storage format|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> TRUE, ON 또는 1이면 지정된 테이블을 VarDecimal 저장소 형식에 사용할 수 있습니다. FALSE, OFF 또는 0이면 지정된 테이블을 VarDecimal 저장소 형식에 사용할 수 없습니다. Vardecimal 저장소 형식을 사용 하 여 vardecimal 저장소 형식에는 데이터베이스에 설정 된 경우에 사용할 수 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 **vardecimal** 저장소 형식을 사용 하는 사용 되지 않습니다. 대신 ROW 압축을 사용하세요. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요. 0이 기본값입니다.|  
   
  [ @OptionValue =] '*값*'  
  여부는 *option_name* 사용 (TRUE, ON 또는 1) 또는 해제 (FALSE, OFF 또는 0). *값* 은 **varchar(12)**, 기본값은 없습니다. *값* 는 대/소문자를 구분 합니다.  
@@ -85,7 +86,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   text in row가 설정된 경우  
   
--   문자열의 길이에 지정 된 제한 보다 짧습니다.@OptionValue  
+-   문자열의 길이에 지정 된 제한 보다 짧습니다. @OptionValue  
   
 -   데이터 행에 사용할 수 있는 충분한 공간이 있을 경우  
   
@@ -143,6 +144,6 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
  [sys.tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터베이스 엔진 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

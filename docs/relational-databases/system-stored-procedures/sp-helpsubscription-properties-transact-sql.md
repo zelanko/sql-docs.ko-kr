@@ -1,16 +1,16 @@
 ---
 title: sp_helpsubscription_properties (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription_properties
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 060aad04898e9ce47c91cf835b107e4c2efc39e3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 78637041673509151652fd1e6d4125c8e41e2aa2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +49,19 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=**] **'***게시자***'**  
- 게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은  **%** , 모든 게시자에 정보를 반환 하는 합니다.  
+ [ **@publisher=**] **'***publisher***'**  
+ 게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 **%**, 모든 게시자에 정보를 반환 하는 합니다.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은  **%** , 모든 게시자 데이터베이스에 정보를 반환 하는 합니다.  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ 게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 **%**, 모든 게시자 데이터베이스에 정보를 반환 하는 합니다.  
   
- [  **@publication=**] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은  **%** , 모든 게시에 정보를 반환 하는 합니다.  
+ [ **@publication=**] **'***publication***'**  
+ 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%**, 모든 게시에 정보를 반환 하는 합니다.  
   
  [  **@publication_type=**] *publication_type*  
  게시의 유형이입니다. *publication_type* 은 **int**, 기본값은 NULL입니다. 제공 된 경우 *publication_type* 다음 값 중 하나 여야 합니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|트랜잭션 게시|  
 |**1**|스냅숏 게시|  
@@ -96,12 +96,12 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**offload_server**|**sysname**|원격 활성화에 사용하는 서버의 네트워크 이름을 지정합니다.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|스냅숏 파일을 저장한 폴더의 경로를 지정합니다.|  
 |**use_web_sync**|**bit**|여기서 값 HTTPS를 통해 구독을 동기화 할 경우 지정 **1** 이 기능이 설정 되어 있음을 의미 합니다.|  
-|**internet_url**|**nvarchar (260)**|웹 동기화를 위한 복제 수신기의 위치를 나타내는 URL입니다.|  
-|**internet_login**|**nvarchar (128)**|기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인입니다.|  
+|**internet_url**|**nvarchar(260)**|웹 동기화를 위한 복제 수신기의 위치를 나타내는 URL입니다.|  
+|**internet_login**|**nvarchar(128)**|기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인입니다.|  
 |**internet_password**|**nvarchar (524)**|기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인 암호입니다.|  
 |**internet_security_mode**|**int**|여기서 값에는 웹 동기화를 호스팅하는 웹 서버에 연결할 때 사용 되는 인증 모드 **1** Windows 인증을 나타내고 값이 **0** 기본 인증을 의미 합니다.|  
 |**internet_timeout**|**int**|웹 동기화 요청이 만료되기 전까지의 시간(초)입니다.|  
-|**호스트 이름**|**nvarchar (128)**|WHERE 절 매개 변수가 있는 행 필터에서 HOST_NAME() 함수를 사용할 때 이 함수에 필요한 값을 지정합니다.|  
+|**호스트 이름**|**nvarchar(128)**|WHERE 절 매개 변수가 있는 행 필터에서 HOST_NAME() 함수를 사용할 때 이 함수에 필요한 값을 지정합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

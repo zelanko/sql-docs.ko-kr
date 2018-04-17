@@ -1,16 +1,16 @@
 ---
 title: xp_logininfo (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logininfo_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_logininfo
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b77eb07126cc739908713d8172695db9098d20d9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: eba6f4d759844c9ac7e48f8ffccc9888fbf81b95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 액세스할 수 있는 Windows 사용자 또는 그룹의 이름입니다. *account_name* 은 **sysname**, 기본값은 NULL입니다. 경우 *account_name* 을 지정 하지 않으면에 로그인 권한을 부여 받은 모든 Windows 그룹 및 Windows 사용자가 명시적으로 보고 됩니다. *account_name* 정규화 되어야 합니다. 정규화된 이름이어야 합니다.  
   
  **'all'** | **'members'**  
- 계정에 대한 모든 사용 권한 경로에 관한 정보를 보고할 것인지 Windows 그룹의 멤버에 관한 정보를 보고할 것인지 지정합니다. **@option****varchar (10)**, 기본값은 NULL입니다. 하지 않는 한 **모든** 지정, 첫 번째 사용 권한 경로만 표시 됩니다.  
+ 계정에 대한 모든 사용 권한 경로에 관한 정보를 보고할 것인지 Windows 그룹의 멤버에 관한 정보를 보고할 것인지 지정합니다. **@option** **varchar (10)**, 기본값은 NULL입니다. 하지 않는 한 **모든** 지정, 첫 번째 사용 권한 경로만 표시 됩니다.  
   
  [  **@privilege =** ] *variable_name*  
  지정한 Windows 계정의 사용 권한 수준을 반환하는 출력 매개 변수입니다. *variable_name* 은 **varchar (10)**는 기본값은 ' Not w'를 사용 합니다. 권한 수준을 반환은 **사용자**, **admin**, 또는 **null**합니다.  
@@ -68,8 +68,8 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**계정 이름**|**sysname**|정규화된 Windows 계정 이름입니다.|  
-|**유형**|**char(8)**|Windows 계정의 유형입니다. 유효한 값은 **사용자** 또는 **그룹**합니다.|  
-|**권한**|**char (9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한입니다. 유효한 값은 **admin**, **사용자**, 또는 **null**합니다.|  
+|**type**|**char(8)**|Windows 계정의 유형입니다. 유효한 값은 **사용자** 또는 **그룹**합니다.|  
+|**권한**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한입니다. 유효한 값은 **admin**, **사용자**, 또는 **null**합니다.|  
 |**매핑된 로그인 이름**|**sysname**|사용자 권한이 있는 사용자 계정에 대 한 **매핑된 로그인 이름을** 매핑된 로그인 이름의 보여 줍니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전에 추가 된 도메인 이름에 따른 매핑된 규칙을 사용 하 여이 계정으로 로그인 하는 경우 사용 하려고 합니다.|  
 |**사용 권한 경로**|**sysname**|계정 액세스 권한을 부여한 그룹 멤버 자격입니다.|  
   
@@ -99,6 +99,6 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
  [sp_grantlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [일반 확장 저장된 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [일반 확장 저장된 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

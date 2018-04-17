@@ -29,13 +29,13 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a3f85d368fa842f0e43eb8b0168c2d30741bfb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4bc059b4e7da83f69180f93a8ac4b514767b2e69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-construction-xquery"></a>XML 생성(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -553,7 +553,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>그 밖의 직접 XML 생성자  
  처리 명령과 XML 주석에 대한 생성자는 해당 XML 구문에서와 같은 구문을 사용합니다. 텍스트 노드의 계산된 생성자도 지원되지만 이는 기본적으로 XML DML에 사용되어 텍스트 노드를 생성합니다.  
   
- **참고** 명시적 텍스트 노드 생성자 사용의 예를 들어 특정 예제를 참조 [insert&#40; XML DML &#41; ](../t-sql/xml/insert-xml-dml.md).  
+ **참고** 명시적 텍스트 노드 생성자 사용의 예를 들어 특정 예제를 참조 [삽입 &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)합니다.  
   
  다음 쿼리에서 생성된 XML에는 요소, 특성 두 개, 주석 및 처리 명령이 포함됩니다. 시퀀스를 생성 중이므로 <`FirstLocation`> 앞에 쉼표를 사용합니다.  
   

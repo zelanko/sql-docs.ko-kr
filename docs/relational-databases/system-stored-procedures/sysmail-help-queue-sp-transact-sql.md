@@ -1,16 +1,16 @@
 ---
 title: sysmail_help_queue_sp (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e83aba8601f4329a496229eca329035a95b283c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7ba3b42c0ac095d4f8c0ad8f4819cd341097aef4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  데이터베이스 메일에는 메일 큐와 상태 큐의 두 가지 큐가 있습니다. 메일 큐는 전송 대기 중인 메일 항목을 저장합니다. 상태 큐는 이미 전송된 항목의 상태를 저장합니다. 이 저장 프로시저를 사용하여 메일 또는 상태 큐의 상태를 볼 수 있습니다. 경우 매개 변수  **@queue_type**  를 지정 하지 않으면 저장된 프로시저가 각 큐에 대 한 하나의 행을 반환 합니다.  
+  데이터베이스 메일에는 메일 큐와 상태 큐의 두 가지 큐가 있습니다. 메일 큐는 전송 대기 중인 메일 항목을 저장합니다. 상태 큐는 이미 전송된 항목의 상태를 저장합니다. 이 저장 프로시저를 사용하여 메일 또는 상태 큐의 상태를 볼 수 있습니다. 경우 매개 변수 **@queue_type** 를 지정 하지 않으면 저장된 프로시저가 각 큐에 대 한 하나의 행을 반환 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,8 +59,8 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |**queue_type**|**nvarchar(6)**|큐의 유형입니다. 가능한 값은 **메일** 및 **상태**합니다.|  
 |**length**|**int**|지정된 큐의 메일 항목 수입니다.|  
 |**상태**|**nvarchar(64)**|모니터의 상태입니다. 가능한 값은 **비활성** (큐가 비활성 상태인), **NOTIFIED** (큐 되었습니다 되려면 확인 메일 알림을), 및 **RECEIVES_OCCURRING** (큐 수신) 합니다.|  
-|**last_empty_rowset_time**|**DATETIME**|쿼리가 마지막으로 비워진 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
-|**last_activated_time**|**DATETIME**|큐가 마지막으로 활성화된 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
+|**last_empty_rowset_time**|**날짜/시간**|쿼리가 마지막으로 비워진 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
+|**last_activated_time**|**날짜/시간**|큐가 마지막으로 활성화된 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
   
 ## <a name="remarks"></a>주의  
  데이터베이스 메일 문제를 해결할 때 사용 하 여 **sysmail_help_queue_sp** 마지막 및 큐의 상태 큐에 있는 항목 수를 보려면 활성화 합니다.  

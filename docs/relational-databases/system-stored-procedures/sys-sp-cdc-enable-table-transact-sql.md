@@ -1,16 +1,16 @@
 ---
 title: sys.sp_cdc_enable_table (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_enable_table_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43e2866c70c60e8b7c7b7f1eaffabebf53a98ebe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9a60ff831a77a5b557d22d00b79d4b936167a628
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sys.sp_cdc_enable_table
   
  이 이름은 형식에서 원본 테이블 이름을 붙인 원본 스키마 이름에서 파생은 지정 하지 않으면 *schemaname_sourcename*합니다. *capture_instance* 100 자를 초과할 수 없습니다 하며 데이터베이스 내에서 고유 해야 합니다. 지정 된 파생 이름이 든 *capture_instance* 문자열의 오른쪽에 있는 모든 공백은 잘립니다.  
   
- 원본 테이블은 최대 두 개의 캡처 인스턴스를 가질 수 있습니다. 자세한 내용은 참조 하십시오 [sys.sp_cdc_help_change_data_capture &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
+ 원본 테이블은 최대 두 개의 캡처 인스턴스를 가질 수 있습니다. 자세한 내용은 참조 하십시오 [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)합니다.  
   
  [  **@supports_net_changes =** ] *supports_net_changes*  
  이 캡처 인스턴스에서 순 변경 쿼리에 대한 지원이 사용할 수 있도록 설정되어 있는지 여부를 나타냅니다. *supports_net_changes* 은 **비트** 1 테이블에 기본 키 또는 테이블에 고유 인덱스를 사용 하 여 식별 하는 경우의 기본값은 @index_name 매개 변수입니다. 그렇지 않으면 이 매개 변수의 기본값은 0입니다.  
@@ -90,7 +90,7 @@ sys.sp_cdc_enable_table
   
  경우 *supports_net_changes* 1로 설정 되어 *index_name* 지정 해야 합니다 또는 원본 테이블에 정의 된 기본 키가 있어야 합니다.  
   
- [  **@index_name =** ] **'***index_name*'  
+ [  **@index_name =** ] **' * * * index_name*'  
  원본 테이블의 행을 고유하게 식별하는 데 사용되는 고유 인덱스의 이름입니다. *index_name* 은 **sysname** NULL 일 수 있습니다. 를 지정 하는 경우 *index_name* 원본 테이블의 유효한 고유 인덱스 여야 합니다. 경우 *index_name* 식별된 된 열 보다 우선 정의 된 기본 키 열은 테이블에 대 한 고유한 행 식별자로 지정 됩니다.  
   
  [  **@captured_column_list =** ] **'***captured_column_list***'**  
@@ -100,7 +100,7 @@ sys.sp_cdc_enable_table
   
  *captured_column_list* 열 이름의 쉼표로 구분 된 목록입니다. 목록에 있는 각 열 이름은 필요에 따라 큰따옴표("")나 대괄호([])를 사용하여 묶을 수 있습니다. 열 이름에 포함된 쉼표가 있으면 열 이름을 따옴표로 묶어야 합니다.  
   
- *captured_column_list* 다음 예약 된 열 이름을 사용할 수 없습니다: **__ $start_lsn**, **__ $end_lsn**, **__ $seqval**, **__ $operation**, 및 **__ $update_mask**합니다.  
+ *captured_column_list* 다음 예약 된 열 이름을 사용할 수 없습니다: **__ $start_lsn**, **__ $end_lsn**, **__ $seqval**, **__ $ 작업**, 및 **__ $update_mask**합니다.  
   
  [  **@filegroup_name =** ] **'***filegroup_name***'**  
  캡처 인스턴스에 대해 생성된 변경 테이블에 사용할 파일 그룹입니다. *filegroup_name* 은 **sysname** NULL 일 수 있습니다. 를 지정 하는 경우 *filegroup_name* 현재 데이터베이스에 대해 정의 되어야 합니다. NULL이면 기본 파일 그룹이 사용됩니다.  
@@ -119,7 +119,7 @@ sys.sp_cdc_enable_table
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  테이블에서 변경 데이터 캡처를 사용할 수 있도록 설정하려면 먼저 데이터베이스에서 변경 데이터 캡처를 사용할 수 있도록 설정해야 합니다. 데이터베이스에 변경 데이터 캡처 사용 되는지 여부를 확인 하려면 쿼리는 **is_cdc_enabled** 열에는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰에 있습니다. 데이터베이스를 사용 하려면 사용 된 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) 저장 프로시저입니다.  
@@ -172,10 +172,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sys.sp_cdc_disable_table &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60; capture_instance& &#62;  &#40; Transact SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60; capture_instance& &#62; &#40; Transact SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys.sp_cdc_help_jobs &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+ [sys.sp_cdc_disable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.sp_cdc_help_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

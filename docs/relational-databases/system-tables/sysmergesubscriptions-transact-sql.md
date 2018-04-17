@@ -1,16 +1,16 @@
 ---
 title: sysmergesubscriptions (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd713b90c4d295eee99953c6561e9a7d057fc39b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1cc4216c383ee387b495e7933fd5da7a4832479e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 |cleanedup_unsent_changes|**bit**|보내지 않은 변경 사항에 대한 메타데이터가 구독자에서 정리되었음을 식별합니다.|  
 |replica_version|**int**|구독이 속한 구독자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 식별합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |supportability_mode|**int**|내부적으로만 사용됩니다.|  
-|application_name|**nvarchar (128)**|내부적으로만 사용됩니다.|  
+|application_name|**nvarchar(128)**|내부적으로만 사용됩니다.|  
 |subscriber_number|**int**|내부적으로만 사용됩니다.|  
 |last_makegeneration_datetime|**datetime**|마지막 **datetime** makegeneration 프로세스가 게시자에 대해 실행 된 합니다. 자세한 내용은의-MakeGenerationInterval 매개 변수를 참조 하십시오. [복제 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)합니다.|  
   

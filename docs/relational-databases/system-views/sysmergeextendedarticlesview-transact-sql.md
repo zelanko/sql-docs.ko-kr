@@ -1,16 +1,16 @@
 ---
 title: sysmergeextendedarticlesview (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergeextendedarticlesview view
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c517abaa4c5ffdc5e0d84ac6d4c6268ddd524ac9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a7d5d6047fad60544f8a0047a08011940fcf08d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/03/2018
 |**insert_proc**|**sysname**|동기화 동안 기본 충돌 해결 프로그램이 행을 삽입하기 위해 사용하는 프로시저입니다.|  
 |**update_proc**|**sysname**|동기화 동안 기본 충돌 해결 프로그램이 행을 업데이트하기 위해 사용하는 프로시저입니다.|  
 |**select_proc**|**sysname**|병합 에이전트가 잠금을 수행하고 아티클에 대한 열 및 행을 찾기 위해 사용하는 자동 생성 저장 프로시저의 이름입니다.|  
-|**schema_option**|**binary(8)**|지원 되는 값에 대 한 *schema_option*, 참조 [sp_addmergearticle &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**binary(8)**|지원 되는 값에 대 한 *schema_option*, 참조 [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)합니다.|  
 |**destination_object**|**sysname**|구독자에서 생성되는 테이블의 이름입니다.|  
 |**resolver_clsid**|**nvarchar(50)**|사용자 지정 충돌 해결 프로그램의 ID입니다.|  
 |**subset_filterclause**|**nvarchar(1000)**|해당 아티클에 대한 필터 절입니다.|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 02/03/2018
 |**identity_support**|**int**|자동 ID 범위 처리가 설정되었는지 여부를 지정합니다. **1** id 범위 처리가 활성화 되어 있는지를 의미 하 고 **0** 의미는 없는 id 범위 처리를 지원 합니다.|  
 |**destination_owner**|**sysname**|대상 개체의 소유자 이름입니다.|  
 |**before_image_objid**|**int**|추적 테이블의 개체 ID입니다. 파티션 변경 최적화를 활성화하도록 게시를 구성하면 추적 테이블에 특정 키 열 값이 포함됩니다.|  
-|**before_view_objid**|**int**|뷰 테이블의 개체 ID입니다. 뷰는 행이 삭제 또는 업데이트되기 전에 특정 구독자에 속했는지를 추적하는 테이블에 있습니다. 게시를으로 만든 경우에 적용 됩니다.  *@keep_partition_changes*   =  **true**합니다.|  
+|**before_view_objid**|**int**|뷰 테이블의 개체 ID입니다. 뷰는 행이 삭제 또는 업데이트되기 전에 특정 구독자에 속했는지를 추적하는 테이블에 있습니다. 게시를으로 만든 경우에 적용 됩니다. *@keep_partition_changes*  =  **true**합니다.|  
 |**verify_resolver_signature**|**int**|해결 프로그램을 병합 복제에 사용하기 전에 디지털 서명을 확인할지 여부를 지정합니다.<br /><br /> **0** = 서명을 확인 하지 않습니다.<br /><br /> **1** = 서명을 확인 하는 출처를 신뢰할 수 있는지 여부를 확인 합니다.|  
 |**allow_interactive_resolver**|**bit**|아티클에 대화형 해결 프로그램을 사용할지 여부를 지정합니다. **1** 아티클에서 대화형 해결 프로그램이 사용 되도록 지정 합니다.|  
 |**fast_multicol_updateproc**|**bit**|병합 에이전트를 사용하도록 설정하여 한 UPDATE 문에서 같은 행의 여러 열에 변경 사항을 적용했는지 여부를 지정합니다.<br /><br /> **0** = 각 열에 대해 별도 업데이트로 변경 하는 문제입니다.<br /><br /> **1** = 하나의 문에서 여러 열에 대 한 업데이트는 UPDATE 문에서 대 한 발급 합니다.|  
@@ -98,11 +98,11 @@ ms.lasthandoff: 02/03/2018
 |**preserve_rowguidcol**|**bit**|복제에 기존 rowguid 열이 사용될지 여부를 나타냅니다. 값이 **1** 기존 ROWGUIDCOL 열 사용 됨을 의미 합니다. **0** 복제가 ROWGUIDCOL 열을 추가 합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [복제 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergearticle &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
- [sysmergearticles &#40; Transact SQL &#41;](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)  
+ [sysmergearticles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: MSmerge_replinfo (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_replinfo system table
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5dfda378d9d5327ab62803d07316c12e0eb9d3a9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6539fc9334ba9f53a1332d216d8700039f4d1196
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.lasthandoff: 11/21/2017
 |**resync_gen**|**bigint**|구독을 다시 동기화하는 데 사용되는 생성 번호입니다. 값이 **– 1** 구독이 다시 동기화에 대 한 표시 되지 않도록 나타냅니다.|  
 |**login_name**|**sysname**|구독을 만든 사용자의 이름입니다.|  
 |**호스트 이름**|**sysname**|구독에 대한 파티션을 생성할 때 매개 변수가 있는 행 필터에서 사용되는 값입니다.|  
-|**merge_jobid**|**binary (16)**|이 구독에 대한 병합 작업 ID입니다.|  
+|**merge_jobid**|**binary(16)**|이 구독에 대한 병합 작업 ID입니다.|  
 |**sync_info**|**int**|내부적으로만 사용됩니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

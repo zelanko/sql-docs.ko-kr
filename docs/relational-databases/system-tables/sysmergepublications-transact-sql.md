@@ -1,16 +1,16 @@
 ---
 title: sysmergepublications (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95059187ddd567212027d73dbd361e1ee9d2e7a7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a359e3b0da52dcbd9e0fd3feea88b494432a0419
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 |**publisher_db**|**sysname**|기본 게시자 데이터베이스의 이름입니다.|  
 |**name**|**sysname**|게시의 이름입니다.|  
 |**설명**|**nvarchar(255)**|게시에 대한 간단한 설명입니다.|  
-|**보존**|**int**|보존 기간 단위 값으로 나타난 위치 전체 게시 집합에 대 한는 **retention_period_unit** 열입니다.|  
+|**retention**|**int**|보존 기간 단위 값으로 나타난 위치 전체 게시 집합에 대 한는 **retention_period_unit** 열입니다.|  
 |**publication_type**|**tinyint**|게시가 필터링되었음을 나타냅니다.<br /><br /> **0** = 필터링 안 됩니다.<br /><br /> **1** = 필터링 합니다.|  
 |**pubid**|**uniqueidentifier**|이 게시의 고유한 ID입니다. 게시를 추가할 때 생성됩니다.|  
 |**designmasterid**|**uniqueidentifier**|나중에 사용하도록 예약되어 있습니다.|  
@@ -72,13 +72,13 @@ ms.lasthandoff: 11/21/2017
 |**keep_before_values**|**int**|해당 게시에 대해 동기화가 최적화되는지 여부를 지정합니다.<br /><br /> **0** = 동기화가 최적화 되지 및 모든 구독자에 게 보낸 파티션은 파티션에서 데이터가 변경 될 때 확인 됩니다.<br /><br /> **1** = 동기화가 최적화 되 고 변경된 된 파티션에 행을 가진 구독자만 영향을 받습니다.|  
 |**allow_subscription_copy**|**bit**|구독 데이터베이스 복사 기능의 사용 여부를 지정합니다. **0** 복사가 허용 되지 않음을 의미 합니다.|  
 |**allow_synctoalternate**|**bit**|대체 동기화 파트너가 해당 게시자와 동기화될 수 있는지 여부를 지정합니다. **0** 동기화 파트너가 허용 되지 않음을 의미 합니다.|  
-|**validate_subscriber_info**|**nvarchar (500)**|구독자 정보를 검색하고 구독자에서 매개 변수가 있는 행 필터링 조건의 유효성을 검사하는 데 사용하는 함수를 나열합니다.|  
+|**validate_subscriber_info**|**nvarchar(500)**|구독자 정보를 검색하고 구독자에서 매개 변수가 있는 행 필터링 조건의 유효성을 검사하는 데 사용하는 함수를 나열합니다.|  
 |**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 유효한 GUID는 Active Directory에 게시 하 고 GUID는 해당 Active Directory 게시 개체인 지정 **objectGUID**합니다. NULL인 경우 게시는 Active Directory에 게시되지 않습니다.|  
 |**backward_comp_level**|**int**|데이터베이스 호환성 수준이며 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**max_concurrent_merge**|**int**|최대 동시 병합 프로세스 수입니다. 값이 **0** 에이 속성이 지정된 된 시간에 실행 중인 동시 병합 프로세스 수에 제한이 없음이 있다는 것을 의미 합니다. 이 속성은 병합 게시에 대해 한 번에 실행할 수 있는 동시 병합 프로세스의 수를 제한합니다. 실행하도록 허용된 값보다 많은 스냅숏 프로세스를 동시에 실행하도록 예약할 경우 초과 작업은 큐에 두고 현재 실행 중인 병합 프로세스가 완료될 때까지 기다립니다.|  
 |**max_concurrent_dynamic_snapshots**|**int**|병합 게시에 대해 동시에 실행할 수 있는 필터링된 동시 데이터 스냅숏 세션의 최대 수입니다. 경우 **0**, 지정된 된 시간에 게시에 대해 동시에 실행할 수 있는 필터링 된 동시 데이터 스냅숏 세션의 최대 수에 대 한 제한은 없습니다. 이 속성은 병합 게시에 대해 한 번에 실행할 수 있는 동시 스냅숏 프로세스의 수를 제한합니다. 실행하도록 허용된 값보다 많은 스냅숏 프로세스를 동시에 실행하도록 예약할 경우 초과 작업은 큐에 두고 현재 실행 중인 병합 프로세스가 완료될 때까지 기다립니다.|  
 |**use_partition_groups**|**smallint**|게시에서 사전 계산 파티션을 사용하는지 여부를 지정합니다.|  
-|**dynamic_filters_function_list**|**nvarchar (500)**|게시의 매개 변수가 있는 행 필터에 사용되는 함수의 목록으로서 세미콜론으로 구분됩니다.|  
+|**dynamic_filters_function_list**|**nvarchar(500)**|게시의 매개 변수가 있는 행 필터에 사용되는 함수의 목록으로서 세미콜론으로 구분됩니다.|  
 |**partition_id_eval_proc**|**sysname**|할당된 파티션 ID를 확인하기 위해 구독자의 병합 에이전트가 실행하는 프로시저의 이름을 지정합니다.|  
 |**publication_number**|**smallint**|에 대 한 2 바이트 매핑을 제공 하는 id 열을 지정 **pubid**합니다. **pubid** 는 게시에 대 한 전역 고유 식별자 이지만 게시 번호는 지정 된 데이터베이스 에서만 고유 합니다.|  
 |**replicate_ddl**|**int**|게시에 대해 스키마 복제가 지원될지 여부를 나타냅니다.<br /><br /> **0** = DDL 문이 복제 되지 않습니다.<br /><br /> **1** DDL = 게시자에서 실행 하는 문이 복제 됩니다.<br /><br /> 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.|  
@@ -86,20 +86,20 @@ ms.lasthandoff: 11/21/2017
 |**dynamic_snapshot_queue_timeout**|**int**|매개 변수가 있는 필터를 사용할 때 스냅숏 생성 프로세스가 시작될 때까지 구독자가 큐에서 대기하는 시간(분)을 지정합니다.|  
 |**dynamic_snapshot_ready_timeout**|**int**|매개 변수가 있는 필터를 사용할 때 스냅숏 생성 프로세스가 완료될 때까지 구독자가 대기하는 시간(분)을 지정합니다.|  
 |**배포자**|**sysname**|게시 배포자의 이름입니다.|  
-|**snapshot_jobid**|**binary (16)**|구독자가 스냅숏 생성 프로세스를 시작할 수 있을 때 스냅숏을 생성하는 에이전트 작업을 식별합니다.|  
+|**snapshot_jobid**|**binary(16)**|구독자가 스냅숏 생성 프로세스를 시작할 수 있을 때 스냅숏을 생성하는 에이전트 작업을 식별합니다.|  
 |**allow_web_synchronization**|**bit**|게시가 웹 동기화에 사용 되는지 여부를 지정 합니다. 여기서 **1** 웹 동기화는 게시에 대해 사용할 수 있음을 의미 합니다.|  
-|**web_synchronization_url**|**nvarchar (500)**|웹 동기화에 사용되는 인터넷 URL의 기본값을 지정합니다.|  
-|**allow_partition_realignment**|**bit**|게시자의 행 수정으로 인해 파티션이 변경된 경우 구독자에게 삭제 내용을 보낼지 여부를 나타냅니다.<br /><br /> **0** = 데이터는 이전에서 파티션을 여기서이 데이터는 게시자에 변경 내용이 구독자로 복제 되지 것입니다 되지만 구독자의 변경 내용을 게시자로 복제는 구독자에 남게 됩니다.<br /><br /> **1** = 긴 구독자의 파티션에 속하지 않는 데이터를 제거 하 여 파티션 변경 결과 반영 하기 위해 구독자에 게 삭제 합니다.<br /><br /> 자세한 내용은 참조 [sp_addmergepublication &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> 그러나 참고: 남은 데이터는 구독자에서이 값이 **0** 엄격 하 게 적용 되지 복제 시스템에 의해; 읽기 전용인 것 처럼 처리 되어야 합니다.|  
+|**web_synchronization_url**|**nvarchar(500)**|웹 동기화에 사용되는 인터넷 URL의 기본값을 지정합니다.|  
+|**allow_partition_realignment**|**bit**|게시자의 행 수정으로 인해 파티션이 변경된 경우 구독자에게 삭제 내용을 보낼지 여부를 나타냅니다.<br /><br /> **0** = 데이터는 이전에서 파티션을 여기서이 데이터는 게시자에 변경 내용이 구독자로 복제 되지 것입니다 되지만 구독자의 변경 내용을 게시자로 복제는 구독자에 남게 됩니다.<br /><br /> **1** = 긴 구독자의 파티션에 속하지 않는 데이터를 제거 하 여 파티션 변경 결과 반영 하기 위해 구독자에 게 삭제 합니다.<br /><br /> 자세한 내용은 참조 [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)합니다.<br /><br /> 그러나 참고: 남은 데이터는 구독자에서이 값이 **0** 엄격 하 게 적용 되지 복제 시스템에 의해; 읽기 전용인 것 처럼 처리 되어야 합니다.|  
 |**retention_period_unit**|**tinyint**|정의할 때 사용할 단위 *보존*, 이러한 값 중 하나일 수 있습니다.<br /><br /> **0** = 일 합니다.<br /><br /> **1** = 주입니다.<br /><br /> **2** = 월.<br /><br /> **3** = 연도입니다.|  
 |**decentralized_conflicts**|**int**|충돌을 발생시킨 구독자에 충돌 레코드가 저장되는지 여부를 지정합니다.<br /><br /> **0** = 충돌 레코드가 구독자에 저장 되지 않습니다.<br /><br /> **1** = 충돌 레코드가 구독자에 저장 됩니다.|  
 |**generation_leveling_threshold**|**int**|하나의 생성에 포함되는 변경 내용 수를 지정합니다. 생성은 게시자 또는 구독자에 배달되는 변경 내용 모음입니다.|  
 |**automatic_reinitialization_policy**|**bit**|자동 다시 초기화가 발생하기 전에 구독자에서 변경 사항을 업로드할지 여부를 나타냅니다.<br /><br /> **1** = 자동 다시 초기화가 발생 하기 전에 구독자에서 변경 내용이 업로드 됩니다.<br /><br /> **0** = 자동 다시 초기화 하기 전에 변경 내용이 업로드 되지 않습니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [복제 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepublication &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
+ [sp_helpmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

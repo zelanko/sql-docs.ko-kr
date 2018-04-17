@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft SQL Operations Studio (preview) 다운로드 및 설치 | Microsoft Docs
 description: Microsoft SQL Operations Studio (preview) 를 Windows, macOS, 또는 Linux에 다운로드 및 설치합니다.
 ms.custom: tools|sos
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 836d34cdb019b7defd16736b21485a32474a8757
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio (preview) 다운로드 및 설치
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/08/2018
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux용 SQL Operations Studio (preview) 얻기
 
-1. 다운로드 [! 포함[이름 sos](../includes/name-sos-short.md) 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용 하 여 Linux 용:
+1. 다운로드 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용 하 여 Linux 용:
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
@@ -128,14 +128,14 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
 
 ### <a name="windows"></a>Windows
-- Windows 10(64 비트)
-- Windows 8.1(64 비트)
-- Windows 8(64 비트)
+- Windows 10(64비트)
+- Windows 8.1(64비트)
+- Windows 8(64비트)
 - Windows 7 (SP1) (64 비트) - [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767) 필요
 - Windows Server 2016
-- Windows Server 2012 R2(64 비트)
-- Windows Server 2012(64 비트)
-- Windows Server 2008 R2(64 비트)
+- Windows Server 2012 R2(64비트)
+- Windows Server 2012(64비트)
+- Windows Server 2008 R2(64비트)
 
 ### <a name="macos"></a>macOS
 - macOS 10.13 High Sierra
@@ -153,7 +153,7 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
 ## <a name="next-steps"></a>다음 단계
 
-시작하려면 다음 퀵 스타트 중 하나를 참조합니다.
+시작 하려면 다음 퀵 스타트 중 하나를 참조 합니다.
 - [SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 - [Azure SQL 데이터베이스 연결 및 쿼리](quickstart-sql-database.md)
 - [Azure 데이터 웨어하우스 연결 및 쿼리](quickstart-sql-dw.md)
